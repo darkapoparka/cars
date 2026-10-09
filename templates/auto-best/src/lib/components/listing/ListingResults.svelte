@@ -10,6 +10,7 @@
   import { activeFilterCount, listingHiddenFields, type ListingFilters } from '$data/listing';
   import { cleanListingFormData, listingDraftFromFilters } from '$data/listing-draft';
   import ListingChoicePicker from './ListingChoicePicker.svelte';
+  import DesktopAppliedListingFilters from './DesktopAppliedListingFilters.svelte';
   import type { Vehicle } from '$data/inventory';
 
   let { filters, vehicles, draftFilters, openFilters, filtersOpen }: {
@@ -45,6 +46,7 @@
           <Icon name="adjustments" size={18} /><span>{i18n.t("m_546ebb8eb993")}</span>
           {#if activeCount}<span class="dn-listing-results__filter-count">{activeCount}</span>{/if}
         </button>
+        <DesktopAppliedListingFilters {filters} />
       <form bind:this={sortForm} class="dn-listing-sort" method="GET" action={i18n.href(resolve('/cars'))} onformdata={event => cleanListingFormData(event.formData)}>
         {#each hiddenFields(filters) as [name, value], index (`${name}-${value}-${index}`)}
           <input type="hidden" {name} {value} />
@@ -108,7 +110,11 @@
   }
 
   @media (min-width: 992px) {
-    .dn-listing-results__heading { margin-bottom: var(--dn-space-4); }
+    .dn-listing-results__heading { min-height: var(--dn-control-height-default); margin-bottom: var(--dn-space-4); }
+    .dn-listing-results__tools { display: flex; width: 100%; min-width: 0; gap: var(--dn-space-2); padding: 0; border: 0; background: transparent; box-shadow: none; }
+    .dn-listing-results__filters { flex: none; background: var(--dn-ink); }
+    .dn-listing-results__filters:hover { background: var(--dn-ink-hover); }
+    .dn-listing-results__tools .dn-listing-sort { margin-left: auto; border: 1px solid var(--dn-line); }
   }
 
   .dn-listing-sort {
@@ -147,7 +153,7 @@
     pointer-events: none;
   }
 
-  .dn-listing-sort :global(.dn-identity-trigger) { height: 44px; padding: 0 14px 0 38px; border: 0; border-radius: var(--dn-pill); background: transparent; }
+  .dn-listing-sort :global(.dn-identity-field.compact .dn-identity-trigger) { height: 44px; padding: 0 14px 0 38px; border: 0; border-radius: var(--dn-pill); background: transparent; }
 
   .dn-listing-results__grid {
     display: grid;

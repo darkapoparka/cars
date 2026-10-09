@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-09",
+  "tool": "Built-in image_gen (edit)",
+  "purpose": "Remove halftone dots from decorative About and Contact campaign artwork while retaining the existing vehicles. These images do not depict verified dealer inventory or premises.",
+  "export": "Generated 2172x724 PNGs encoded to 2160x720 WebP quality 88, retaining the 3:1 aspect ratio without cropping. Source PNGs and all older WebP versions remain preserved.",
+  "assets": [
+    {
+      "scene": "about",
+      "input": "static/assets/images/lead/auto-best-desktop-home-v3.webp",
+      "generated": "C:/Users/radev/.codex/generated_images/01a12033-9e92-7d20-923e-63dd255abe48/exec-0f3ac784-4919-4fda-9f0e-d6744614224d.png",
+      "output": "static/assets/images/template/company-about-studio-v4.webp",
+      "prompt": "Use case: precise automotive website banner edit. The attached image is the actual edit target. Preserve its ultrawide 3:1 canvas, camera, perspective, original vehicle positions, crops and proportions. Keep the existing silver performance estate on the far left and the existing graphite performance coupe on the far right, with identical grilles, lights, mirrors, tyres, wheel geometry and paint. Do not enlarge, shrink, relocate or distort either car. Polish ONLY the backdrop: remove ALL of the white/grey halftone dot patterns behind and beside the cars and replace those areas seamlessly with a clean quiet deep charcoal studio backdrop. Top and center negative space should be matte charcoal close to #15181d, with only very subtle natural lighting, no decorative effects. Retain believable soft grounding shadows and subtle restrained floor reflections beneath the cars, fading gently into the same charcoal. Retain original photographic detail and natural red brake calipers. Keep a wide empty center for existing website text. No new objects, people, buildings, branding, text, logos, light streaks, patterns, decorative arcs, UI or watermarks. This is decorative campaign imagery, not a real dealer property or inventory photo. Output one finished 3:1 banner, ideally 2160 by 720 pixels.",
+      "width": 2160,
+      "height": 720,
+      "bytes": 68164,
+      "sha256": "fe90ada64da8e177a722b31bad5be659660b61bac0746257c42d8667c49faa42"
+    },
+    {
+      "scene": "contact and service entries",
+      "input": "static/assets/images/lead/auto-best-desktop-inventory-v3.webp",
+      "generated": "C:/Users/radev/.codex/generated_images/01a12033-9e92-7d20-923e-63dd255abe48/exec-1646939f-56fe-44ea-8fe6-7eb9a65b0c60.png",
+      "output": "static/assets/images/template/company-contact-studio-v4.webp",
+      "prompt": "Use case: precise automotive website banner edit. The attached image is the actual edit target. Preserve its ultrawide 3:1 canvas, camera, perspective, original vehicle positions, crops and proportions. Keep the existing deep metallic blue performance saloon on the far left and the existing pearl white performance SUV on the far right, with identical grilles, lights, mirrors, tyres, wheel geometry and paint. Do not enlarge, shrink, relocate or distort either car. Polish ONLY the backdrop: remove ALL of the white/grey halftone dot patterns behind and beside the cars and replace those areas seamlessly with a clean quiet deep charcoal studio backdrop. Top and center negative space should be matte charcoal close to #15181d, with only very subtle natural lighting, no decorative effects. Retain believable soft grounding shadows and subtle restrained floor reflections beneath the cars, fading gently into the same charcoal. Retain original photographic detail and natural red brake calipers. Keep a wide empty center for existing website text. No new objects, people, buildings, branding, text, logos, light streaks, patterns, decorative arcs, UI or watermarks. This is decorative campaign imagery, not a real dealer property or inventory photo. The backdrop and floor should feel consistent with the recently polished About banner: restrained dark studio, quiet negative space and natural reflections. Output one finished 3:1 banner, ideally 2160 by 720 pixels.",
+      "width": 2160,
+      "height": 720,
+      "bytes": 58936,
+      "sha256": "93d76ce3d194650b14f43d1b2cd33a5f9fa712fd32bb8e379becb074f6a75dee"
+    }
+  ]
+}

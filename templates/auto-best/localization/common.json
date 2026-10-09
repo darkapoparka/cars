@@ -1,4 +1,12 @@
 {
+  "inventory.applied.all": {
+    "en": "All ({count})",
+    "bg": "Всички ({count})"
+  },
+  "inventory.modal.applied": {
+    "en": "Selected filters",
+    "bg": "Избрани филтри"
+  },
   "inventory.search.placeholder": {
     "en": "Search makes, models or filters…",
     "bg": "Търси марка, модел или филтър…"

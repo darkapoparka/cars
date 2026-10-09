@@ -7,7 +7,7 @@
   const discoveryBackground = $derived(artwork.kind === 'vehicles' && (scene === 'home' || scene === 'inventory' || scene === 'blog'));
 </script>
 
-<div class="dn-desktop-hero-scene" class:dn-desktop-hero-scene--discovery={discoveryBackground}
+<div class="dn-desktop-hero-scene" class:dn-desktop-hero-scene--discovery={discoveryBackground} class:dn-desktop-hero-scene--image={artwork.kind === 'image'}
   data-scene={scene} data-artwork={artwork.kind} aria-hidden="true">
   {#if artwork.kind === 'image'}
     <picture>
@@ -30,12 +30,23 @@
       background-position: center;
       background-repeat: no-repeat;
     }
+    .dn-desktop-hero-scene--image { background: var(--dn-theme-hero-surface-deep); }
     picture { display: contents; }
-    img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    /* Anchor the scene's floor instead of recropping the cars to the hero height. */
+    img {
+      position: absolute;
+      top: calc(100% - 50px);
+      left: 50%;
+      width: max(100%, 1200px);
+      max-width: none;
+      height: auto;
+      transform: translate(-50%, -86%);
+      mask-image: linear-gradient(to bottom, transparent, #000 var(--dn-space-6));
+    }
   }
 
   /* Below wide desktop, use the space below navigation to keep the scene's edges in view. */
   @media (min-width: 992px) and (max-width: 1199px) {
-    .dn-desktop-hero-scene { top: 140px; }
+    .dn-desktop-hero-scene:not(.dn-desktop-hero-scene--image) { top: 140px; }
   }
 </style>

@@ -1,0 +1,5164 @@
+{
+  "passed": true,
+  "base": "http://127.0.0.1:6461",
+  "cases": 56,
+  "errors": [],
+  "comparisons": [
+    {
+      "locale": "bg",
+      "width": 320,
+      "state": "empty",
+      "layoutPreserved": true,
+      "screenshotIdentical": false
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "state": "applied",
+      "layoutPreserved": true,
+      "screenshotIdentical": false
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "state": "overflow",
+      "layoutPreserved": true,
+      "screenshotIdentical": false
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "state": "zero",
+      "layoutPreserved": true,
+      "screenshotIdentical": false
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "state": "empty",
+      "layoutPreserved": true,
+      "screenshotIdentical": false
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "state": "applied",
+      "layoutPreserved": true,
+      "screenshotIdentical": false
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "state": "overflow",
+      "layoutPreserved": true,
+      "screenshotIdentical": false
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "state": "zero",
+      "layoutPreserved": true,
+      "screenshotIdentical": false
+    },
+    {
+      "locale": "bg",
+      "width": 992,
+      "state": "empty",
+      "layoutPreserved": true
+    },
+    {
+      "locale": "bg",
+      "width": 992,
+      "state": "applied",
+      "layoutPreserved": true
+    },
+    {
+      "locale": "bg",
+      "width": 992,
+      "state": "overflow",
+      "layoutPreserved": true
+    },
+    {
+      "locale": "bg",
+      "width": 992,
+      "state": "zero",
+      "layoutPreserved": true
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "state": "empty",
+      "layoutPreserved": true
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "state": "applied",
+      "layoutPreserved": true
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "state": "overflow",
+      "layoutPreserved": true
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "state": "zero",
+      "layoutPreserved": true
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "state": "empty",
+      "layoutPreserved": true
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "state": "applied",
+      "layoutPreserved": true
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "state": "overflow",
+      "layoutPreserved": true
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "state": "zero",
+      "layoutPreserved": true
+    }
+  ],
+  "interactions": [
+    {
+      "locale": "bg",
+      "width": 992,
+      "allOverflowFiltersRemovable": true,
+      "removalRetainsOtherValues": true
+    },
+    {
+      "locale": "bg",
+      "removalRetainsOtherFiltersAndSort": true,
+      "sortRetainsFilters": true,
+      "clearRetainsSort": true,
+      "filterAndSearchOpen": true,
+      "focusRestored": true,
+      "stickyCount": true
+    },
+    {
+      "locale": "en",
+      "width": 992,
+      "allOverflowFiltersRemovable": true,
+      "removalRetainsOtherValues": true
+    },
+    {
+      "locale": "en",
+      "removalRetainsOtherFiltersAndSort": true,
+      "sortRetainsFilters": true,
+      "clearRetainsSort": true,
+      "filterAndSearchOpen": true,
+      "focusRestored": true,
+      "stickyCount": true
+    }
+  ],
+  "rows": [
+    {
+      "locale": "bg",
+      "width": 320,
+      "name": "empty",
+      "state": {
+        "overflow": -15,
+        "heading": null,
+        "filter": null,
+        "sort": null,
+        "clear": null,
+        "count": null,
+        "oldCount": false,
+        "chips": [],
+        "review": null,
+        "cards": 7,
+        "searchLabel": "Марка, модел или ключова дума · 7 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "name": "applied",
+      "state": {
+        "overflow": -15,
+        "heading": null,
+        "filter": null,
+        "sort": null,
+        "clear": null,
+        "count": null,
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        ],
+        "review": null,
+        "cards": 2,
+        "searchLabel": "Марка, модел или ключова дума · 2 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "name": "overflow",
+      "state": {
+        "overflow": -15,
+        "heading": null,
+        "filter": null,
+        "sort": null,
+        "clear": null,
+        "count": null,
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        ],
+        "review": null,
+        "cards": 0,
+        "searchLabel": "Марка, модел или ключова дума · 0 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "name": "zero",
+      "state": {
+        "overflow": -15,
+        "heading": null,
+        "filter": null,
+        "sort": null,
+        "clear": null,
+        "count": null,
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        ],
+        "review": null,
+        "cards": 0,
+        "searchLabel": "no-matching-car · 0 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "name": "empty",
+      "state": {
+        "overflow": -15,
+        "heading": null,
+        "filter": null,
+        "sort": null,
+        "clear": null,
+        "count": null,
+        "oldCount": false,
+        "chips": [],
+        "review": null,
+        "cards": 7,
+        "searchLabel": "Марка, модел или ключова дума · 7 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "name": "applied",
+      "state": {
+        "overflow": -15,
+        "heading": null,
+        "filter": null,
+        "sort": null,
+        "clear": null,
+        "count": null,
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        ],
+        "review": null,
+        "cards": 2,
+        "searchLabel": "Марка, модел или ключова дума · 2 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "name": "overflow",
+      "state": {
+        "overflow": -15,
+        "heading": null,
+        "filter": null,
+        "sort": null,
+        "clear": null,
+        "count": null,
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        ],
+        "review": null,
+        "cards": 0,
+        "searchLabel": "Марка, модел или ключова дума · 0 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "name": "zero",
+      "state": {
+        "overflow": -15,
+        "heading": null,
+        "filter": null,
+        "sort": null,
+        "clear": null,
+        "count": null,
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        ],
+        "review": null,
+        "cards": 0,
+        "searchLabel": "no-matching-car · 0 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 768,
+      "name": "empty",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 14,
+            "y": 710,
+            "width": 725,
+            "height": 54,
+            "right": 739,
+            "bottom": 764
+          },
+          "text": "Филтри\nСортирайте автомобилите\nПрепоръчани\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 223.25,
+            "y": 715,
+            "width": 117.40625,
+            "height": 44,
+            "right": 340.65625,
+            "bottom": 759
+          },
+          "text": "Филтри"
+        },
+        "sort": {
+          "box": {
+            "x": 344.65625,
+            "y": 715,
+            "width": 185.078125,
+            "height": 44,
+            "right": 529.734375,
+            "bottom": 759
+          },
+          "text": "Сортирайте автомобилите\nПрепоръчани\nПриложете сортирането"
+        },
+        "clear": null,
+        "count": {
+          "box": {
+            "x": 381.421875,
+            "y": 451.59375,
+            "width": 20.65625,
+            "height": 20.796875,
+            "right": 402.078125,
+            "bottom": 472.390625
+          },
+          "text": "(7)"
+        },
+        "oldCount": false,
+        "chips": [],
+        "review": null,
+        "cards": 7,
+        "searchLabel": "Марка, модел или ключова дума · 7 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 768,
+      "name": "applied",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 14,
+            "y": 710,
+            "width": 725,
+            "height": 54,
+            "right": 739,
+            "bottom": 764
+          },
+          "text": "Филтри\n2\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 200.421875,
+            "y": 715,
+            "width": 145.40625,
+            "height": 44,
+            "right": 345.828125,
+            "bottom": 759
+          },
+          "text": "Филтри\n2"
+        },
+        "sort": {
+          "box": {
+            "x": 349.828125,
+            "y": 715,
+            "width": 202.75,
+            "height": 44,
+            "right": 552.578125,
+            "bottom": 759
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": null,
+        "count": {
+          "box": {
+            "x": 381.421875,
+            "y": 451.59375,
+            "width": 21.390625,
+            "height": 20.796875,
+            "right": 402.8125,
+            "bottom": 472.390625
+          },
+          "text": "(2)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        ],
+        "review": null,
+        "cards": 2,
+        "searchLabel": "Марка, модел или ключова дума · 2 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 768,
+      "name": "overflow",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 14,
+            "y": 710,
+            "width": 725,
+            "height": 54,
+            "right": 739,
+            "bottom": 764
+          },
+          "text": "Филтри\n11\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 199.859375,
+            "y": 715,
+            "width": 146.53125,
+            "height": 44,
+            "right": 346.390625,
+            "bottom": 759
+          },
+          "text": "Филтри\n11"
+        },
+        "sort": {
+          "box": {
+            "x": 350.390625,
+            "y": 715,
+            "width": 202.75,
+            "height": 44,
+            "right": 553.140625,
+            "bottom": 759
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": null,
+        "count": {
+          "box": {
+            "x": 381.421875,
+            "y": 451.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 403.3125,
+            "bottom": 472.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        ],
+        "review": null,
+        "cards": 0,
+        "searchLabel": "Марка, модел или ключова дума · 0 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 768,
+      "name": "zero",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 14,
+            "y": 710,
+            "width": 725,
+            "height": 54,
+            "right": 739,
+            "bottom": 764
+          },
+          "text": "Филтри\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 214.421875,
+            "y": 715,
+            "width": 117.40625,
+            "height": 44,
+            "right": 331.828125,
+            "bottom": 759
+          },
+          "text": "Филтри"
+        },
+        "sort": {
+          "box": {
+            "x": 335.828125,
+            "y": 715,
+            "width": 202.75,
+            "height": 44,
+            "right": 538.578125,
+            "bottom": 759
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": null,
+        "count": {
+          "box": {
+            "x": 235.390625,
+            "y": 451.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 257.28125,
+            "bottom": 472.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        ],
+        "review": null,
+        "cards": 0,
+        "searchLabel": "no-matching-car · 0 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 991,
+      "name": "empty",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 108,
+            "y": 710,
+            "width": 760,
+            "height": 54,
+            "right": 868,
+            "bottom": 764
+          },
+          "text": "Филтри\nСортирайте автомобилите\nПрепоръчани\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 334.75,
+            "y": 715,
+            "width": 117.40625,
+            "height": 44,
+            "right": 452.15625,
+            "bottom": 759
+          },
+          "text": "Филтри"
+        },
+        "sort": {
+          "box": {
+            "x": 456.15625,
+            "y": 715,
+            "width": 185.078125,
+            "height": 44,
+            "right": 641.234375,
+            "bottom": 759
+          },
+          "text": "Сортирайте автомобилите\nПрепоръчани\nПриложете сортирането"
+        },
+        "clear": null,
+        "count": {
+          "box": {
+            "x": 475.421875,
+            "y": 451.59375,
+            "width": 20.65625,
+            "height": 20.796875,
+            "right": 496.078125,
+            "bottom": 472.390625
+          },
+          "text": "(7)"
+        },
+        "oldCount": false,
+        "chips": [],
+        "review": null,
+        "cards": 7,
+        "searchLabel": "Марка, модел или ключова дума · 7 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 991,
+      "name": "applied",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 108,
+            "y": 710,
+            "width": 760,
+            "height": 54,
+            "right": 868,
+            "bottom": 764
+          },
+          "text": "Филтри\n2\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 311.921875,
+            "y": 715,
+            "width": 145.40625,
+            "height": 44,
+            "right": 457.328125,
+            "bottom": 759
+          },
+          "text": "Филтри\n2"
+        },
+        "sort": {
+          "box": {
+            "x": 461.328125,
+            "y": 715,
+            "width": 202.75,
+            "height": 44,
+            "right": 664.078125,
+            "bottom": 759
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": null,
+        "count": {
+          "box": {
+            "x": 475.421875,
+            "y": 451.59375,
+            "width": 21.390625,
+            "height": 20.796875,
+            "right": 496.8125,
+            "bottom": 472.390625
+          },
+          "text": "(2)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        ],
+        "review": null,
+        "cards": 2,
+        "searchLabel": "Марка, модел или ключова дума · 2 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 991,
+      "name": "overflow",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 108,
+            "y": 710,
+            "width": 760,
+            "height": 54,
+            "right": 868,
+            "bottom": 764
+          },
+          "text": "Филтри\n11\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 311.359375,
+            "y": 715,
+            "width": 146.53125,
+            "height": 44,
+            "right": 457.890625,
+            "bottom": 759
+          },
+          "text": "Филтри\n11"
+        },
+        "sort": {
+          "box": {
+            "x": 461.890625,
+            "y": 715,
+            "width": 202.75,
+            "height": 44,
+            "right": 664.640625,
+            "bottom": 759
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": null,
+        "count": {
+          "box": {
+            "x": 475.421875,
+            "y": 451.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 497.3125,
+            "bottom": 472.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        ],
+        "review": null,
+        "cards": 0,
+        "searchLabel": "Марка, модел или ключова дума · 0 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 991,
+      "name": "zero",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 108,
+            "y": 710,
+            "width": 760,
+            "height": 54,
+            "right": 868,
+            "bottom": 764
+          },
+          "text": "Филтри\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 325.921875,
+            "y": 715,
+            "width": 117.40625,
+            "height": 44,
+            "right": 443.328125,
+            "bottom": 759
+          },
+          "text": "Филтри"
+        },
+        "sort": {
+          "box": {
+            "x": 447.328125,
+            "y": 715,
+            "width": 202.75,
+            "height": 44,
+            "right": 650.078125,
+            "bottom": 759
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": null,
+        "count": {
+          "box": {
+            "x": 329.390625,
+            "y": 451.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 351.28125,
+            "bottom": 472.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        ],
+        "review": null,
+        "cards": 0,
+        "searchLabel": "no-matching-car · 0 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 992,
+      "name": "empty",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 929,
+            "height": 44,
+            "right": 953,
+            "bottom": 600
+          },
+          "text": "Филтри\nСортирайте автомобилите\nПрепоръчани\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 117.40625,
+            "height": 44,
+            "right": 141.40625,
+            "bottom": 600
+          },
+          "text": "Филтри"
+        },
+        "sort": {
+          "box": {
+            "x": 765.921875,
+            "y": 556,
+            "width": 187.078125,
+            "height": 44,
+            "right": 953,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nПрепоръчани\nПриложете сортирането"
+        },
+        "clear": null,
+        "count": {
+          "box": {
+            "x": 391.421875,
+            "y": 377.59375,
+            "width": 20.65625,
+            "height": 20.796875,
+            "right": 412.078125,
+            "bottom": 398.390625
+          },
+          "text": "(7)"
+        },
+        "oldCount": false,
+        "chips": [],
+        "review": null,
+        "cards": 7,
+        "searchLabel": "Марка, модел или ключова дума · 7 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 992,
+      "name": "applied",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 929,
+            "height": 44,
+            "right": 953,
+            "bottom": 600
+          },
+          "text": "Филтри\n2\nAudi\nОт 2020 г.\nИзчисти\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 145.40625,
+            "height": 44,
+            "right": 169.40625,
+            "bottom": 600
+          },
+          "text": "Филтри\n2"
+        },
+        "sort": {
+          "box": {
+            "x": 748.25,
+            "y": 556,
+            "width": 204.75,
+            "height": 44,
+            "right": 953,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": {
+          "box": {
+            "x": 403.296875,
+            "y": 556,
+            "width": 81.5,
+            "height": 44,
+            "right": 484.796875,
+            "bottom": 600
+          },
+          "text": "Изчисти"
+        },
+        "count": {
+          "box": {
+            "x": 391.421875,
+            "y": 377.59375,
+            "width": 21.390625,
+            "height": 20.796875,
+            "right": 412.8125,
+            "bottom": 398.390625
+          },
+          "text": "(2)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 177.40625,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 260.03125,
+            "bottom": 598
+          },
+          {
+            "x": 268.03125,
+            "y": 558,
+            "width": 127.265625,
+            "height": 40,
+            "right": 395.296875,
+            "bottom": 598
+          }
+        ],
+        "review": null,
+        "cards": 2,
+        "searchLabel": "Марка, модел или ключова дума · 2 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 992,
+      "name": "overflow",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 929,
+            "height": 44,
+            "right": 953,
+            "bottom": 600
+          },
+          "text": "Филтри\n11\nAudi\nBMW\nMercedes-Benz\nSUV\nБензин\nАвтоматик\nОт 2020 г.\nДо 2025 г.\nОт 1000 €\nДо 200 000 €\nДо 100 000 км\nВсички (11)\nИзчисти\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 146.53125,
+            "height": 44,
+            "right": 170.53125,
+            "bottom": 600
+          },
+          "text": "Филтри\n11"
+        },
+        "sort": {
+          "box": {
+            "x": 748.25,
+            "y": 556,
+            "width": 204.75,
+            "height": 44,
+            "right": 953,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": {
+          "box": {
+            "x": 658.75,
+            "y": 556,
+            "width": 81.5,
+            "height": 44,
+            "right": 740.25,
+            "bottom": 600
+          },
+          "text": "Изчисти"
+        },
+        "count": {
+          "box": {
+            "x": 391.421875,
+            "y": 377.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 413.3125,
+            "bottom": 398.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 178.53125,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 261.15625,
+            "bottom": 598
+          },
+          {
+            "x": 269.15625,
+            "y": 558,
+            "width": 88.984375,
+            "height": 40,
+            "right": 358.140625,
+            "bottom": 598
+          },
+          {
+            "x": 366.140625,
+            "y": 558,
+            "width": 169.34375,
+            "height": 40,
+            "right": 535.484375,
+            "bottom": 598
+          },
+          {
+            "x": 543.484375,
+            "y": 558,
+            "width": 81.359375,
+            "height": 40,
+            "right": 624.84375,
+            "bottom": 598
+          },
+          {
+            "x": 632.84375,
+            "y": 558,
+            "width": 104.234375,
+            "height": 40,
+            "right": 737.078125,
+            "bottom": 598
+          },
+          {
+            "x": 745.078125,
+            "y": 558,
+            "width": 133.078125,
+            "height": 40,
+            "right": 878.15625,
+            "bottom": 598
+          },
+          {
+            "x": 886.15625,
+            "y": 558,
+            "width": 127.265625,
+            "height": 40,
+            "right": 1013.421875,
+            "bottom": 598
+          },
+          {
+            "x": 1021.421875,
+            "y": 558,
+            "width": 129.53125,
+            "height": 40,
+            "right": 1150.953125,
+            "bottom": 598
+          },
+          {
+            "x": 1158.953125,
+            "y": 558,
+            "width": 124.484375,
+            "height": 40,
+            "right": 1283.4375,
+            "bottom": 598
+          },
+          {
+            "x": 1291.4375,
+            "y": 558,
+            "width": 155.4375,
+            "height": 40,
+            "right": 1446.875,
+            "bottom": 598
+          },
+          {
+            "x": 1454.875,
+            "y": 558,
+            "width": 162.8125,
+            "height": 40,
+            "right": 1617.6875,
+            "bottom": 598
+          }
+        ],
+        "review": {
+          "box": {
+            "x": 520.890625,
+            "y": 556,
+            "width": 129.859375,
+            "height": 44,
+            "right": 650.75,
+            "bottom": 600
+          },
+          "text": "Всички (11)"
+        },
+        "cards": 0,
+        "searchLabel": "Марка, модел или ключова дума · 0 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 992,
+      "name": "zero",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 929,
+            "height": 44,
+            "right": 953,
+            "bottom": 600
+          },
+          "text": "Филтри\nТърсете: no-matching-car\nИзчисти\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 117.40625,
+            "height": 44,
+            "right": 141.40625,
+            "bottom": 600
+          },
+          "text": "Филтри"
+        },
+        "sort": {
+          "box": {
+            "x": 748.25,
+            "y": 556,
+            "width": 204.75,
+            "height": 44,
+            "right": 953,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": {
+          "box": {
+            "x": 397.40625,
+            "y": 556,
+            "width": 81.5,
+            "height": 44,
+            "right": 478.90625,
+            "bottom": 600
+          },
+          "text": "Изчисти"
+        },
+        "count": {
+          "box": {
+            "x": 245.390625,
+            "y": 377.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 267.28125,
+            "bottom": 398.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 149.40625,
+            "y": 558,
+            "width": 240,
+            "height": 40,
+            "right": 389.40625,
+            "bottom": 598
+          }
+        ],
+        "review": null,
+        "cards": 0,
+        "searchLabel": "no-matching-car · 0 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1024,
+      "name": "empty",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 961,
+            "height": 44,
+            "right": 985,
+            "bottom": 600
+          },
+          "text": "Филтри\nСортирайте автомобилите\nПрепоръчани\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 117.40625,
+            "height": 44,
+            "right": 141.40625,
+            "bottom": 600
+          },
+          "text": "Филтри"
+        },
+        "sort": {
+          "box": {
+            "x": 797.921875,
+            "y": 556,
+            "width": 187.078125,
+            "height": 44,
+            "right": 985,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nПрепоръчани\nПриложете сортирането"
+        },
+        "clear": null,
+        "count": {
+          "box": {
+            "x": 391.921875,
+            "y": 377.59375,
+            "width": 20.65625,
+            "height": 20.796875,
+            "right": 412.578125,
+            "bottom": 398.390625
+          },
+          "text": "(7)"
+        },
+        "oldCount": false,
+        "chips": [],
+        "review": null,
+        "cards": 7,
+        "searchLabel": "Марка, модел или ключова дума · 7 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1024,
+      "name": "applied",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 961,
+            "height": 44,
+            "right": 985,
+            "bottom": 600
+          },
+          "text": "Филтри\n2\nAudi\nОт 2020 г.\nИзчисти\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 145.40625,
+            "height": 44,
+            "right": 169.40625,
+            "bottom": 600
+          },
+          "text": "Филтри\n2"
+        },
+        "sort": {
+          "box": {
+            "x": 780.25,
+            "y": 556,
+            "width": 204.75,
+            "height": 44,
+            "right": 985,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": {
+          "box": {
+            "x": 403.296875,
+            "y": 556,
+            "width": 81.5,
+            "height": 44,
+            "right": 484.796875,
+            "bottom": 600
+          },
+          "text": "Изчисти"
+        },
+        "count": {
+          "box": {
+            "x": 391.921875,
+            "y": 377.59375,
+            "width": 21.390625,
+            "height": 20.796875,
+            "right": 413.3125,
+            "bottom": 398.390625
+          },
+          "text": "(2)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 177.40625,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 260.03125,
+            "bottom": 598
+          },
+          {
+            "x": 268.03125,
+            "y": 558,
+            "width": 127.265625,
+            "height": 40,
+            "right": 395.296875,
+            "bottom": 598
+          }
+        ],
+        "review": null,
+        "cards": 2,
+        "searchLabel": "Марка, модел или ключова дума · 2 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1024,
+      "name": "overflow",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 961,
+            "height": 44,
+            "right": 985,
+            "bottom": 600
+          },
+          "text": "Филтри\n11\nAudi\nBMW\nMercedes-Benz\nSUV\nБензин\nАвтоматик\nОт 2020 г.\nДо 2025 г.\nОт 1000 €\nДо 200 000 €\nДо 100 000 км\nВсички (11)\nИзчисти\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 146.53125,
+            "height": 44,
+            "right": 170.53125,
+            "bottom": 600
+          },
+          "text": "Филтри\n11"
+        },
+        "sort": {
+          "box": {
+            "x": 780.25,
+            "y": 556,
+            "width": 204.75,
+            "height": 44,
+            "right": 985,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": {
+          "box": {
+            "x": 690.75,
+            "y": 556,
+            "width": 81.5,
+            "height": 44,
+            "right": 772.25,
+            "bottom": 600
+          },
+          "text": "Изчисти"
+        },
+        "count": {
+          "box": {
+            "x": 391.921875,
+            "y": 377.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 413.8125,
+            "bottom": 398.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 178.53125,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 261.15625,
+            "bottom": 598
+          },
+          {
+            "x": 269.15625,
+            "y": 558,
+            "width": 88.984375,
+            "height": 40,
+            "right": 358.140625,
+            "bottom": 598
+          },
+          {
+            "x": 366.140625,
+            "y": 558,
+            "width": 169.34375,
+            "height": 40,
+            "right": 535.484375,
+            "bottom": 598
+          },
+          {
+            "x": 543.484375,
+            "y": 558,
+            "width": 81.359375,
+            "height": 40,
+            "right": 624.84375,
+            "bottom": 598
+          },
+          {
+            "x": 632.84375,
+            "y": 558,
+            "width": 104.234375,
+            "height": 40,
+            "right": 737.078125,
+            "bottom": 598
+          },
+          {
+            "x": 745.078125,
+            "y": 558,
+            "width": 133.078125,
+            "height": 40,
+            "right": 878.15625,
+            "bottom": 598
+          },
+          {
+            "x": 886.15625,
+            "y": 558,
+            "width": 127.265625,
+            "height": 40,
+            "right": 1013.421875,
+            "bottom": 598
+          },
+          {
+            "x": 1021.421875,
+            "y": 558,
+            "width": 129.53125,
+            "height": 40,
+            "right": 1150.953125,
+            "bottom": 598
+          },
+          {
+            "x": 1158.953125,
+            "y": 558,
+            "width": 124.484375,
+            "height": 40,
+            "right": 1283.4375,
+            "bottom": 598
+          },
+          {
+            "x": 1291.4375,
+            "y": 558,
+            "width": 155.4375,
+            "height": 40,
+            "right": 1446.875,
+            "bottom": 598
+          },
+          {
+            "x": 1454.875,
+            "y": 558,
+            "width": 162.8125,
+            "height": 40,
+            "right": 1617.6875,
+            "bottom": 598
+          }
+        ],
+        "review": {
+          "box": {
+            "x": 552.890625,
+            "y": 556,
+            "width": 129.859375,
+            "height": 44,
+            "right": 682.75,
+            "bottom": 600
+          },
+          "text": "Всички (11)"
+        },
+        "cards": 0,
+        "searchLabel": "Марка, модел или ключова дума · 0 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1024,
+      "name": "zero",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 961,
+            "height": 44,
+            "right": 985,
+            "bottom": 600
+          },
+          "text": "Филтри\nТърсете: no-matching-car\nИзчисти\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 117.40625,
+            "height": 44,
+            "right": 141.40625,
+            "bottom": 600
+          },
+          "text": "Филтри"
+        },
+        "sort": {
+          "box": {
+            "x": 780.25,
+            "y": 556,
+            "width": 204.75,
+            "height": 44,
+            "right": 985,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": {
+          "box": {
+            "x": 397.40625,
+            "y": 556,
+            "width": 81.5,
+            "height": 44,
+            "right": 478.90625,
+            "bottom": 600
+          },
+          "text": "Изчисти"
+        },
+        "count": {
+          "box": {
+            "x": 245.890625,
+            "y": 377.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 267.78125,
+            "bottom": 398.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 149.40625,
+            "y": 558,
+            "width": 240,
+            "height": 40,
+            "right": 389.40625,
+            "bottom": 598
+          }
+        ],
+        "review": null,
+        "cards": 0,
+        "searchLabel": "no-matching-car · 0 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1199,
+      "name": "empty",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 1136,
+            "height": 44,
+            "right": 1160,
+            "bottom": 600
+          },
+          "text": "Филтри\nСортирайте автомобилите\nПрепоръчани\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 117.40625,
+            "height": 44,
+            "right": 141.40625,
+            "bottom": 600
+          },
+          "text": "Филтри"
+        },
+        "sort": {
+          "box": {
+            "x": 972.921875,
+            "y": 556,
+            "width": 187.078125,
+            "height": 44,
+            "right": 1160,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nПрепоръчани\nПриложете сортирането"
+        },
+        "clear": null,
+        "count": {
+          "box": {
+            "x": 479.421875,
+            "y": 377.59375,
+            "width": 20.65625,
+            "height": 20.796875,
+            "right": 500.078125,
+            "bottom": 398.390625
+          },
+          "text": "(7)"
+        },
+        "oldCount": false,
+        "chips": [],
+        "review": null,
+        "cards": 7,
+        "searchLabel": "Марка, модел или ключова дума · 7 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1199,
+      "name": "applied",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 1136,
+            "height": 44,
+            "right": 1160,
+            "bottom": 600
+          },
+          "text": "Филтри\n2\nAudi\nОт 2020 г.\nИзчисти\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 145.40625,
+            "height": 44,
+            "right": 169.40625,
+            "bottom": 600
+          },
+          "text": "Филтри\n2"
+        },
+        "sort": {
+          "box": {
+            "x": 955.25,
+            "y": 556,
+            "width": 204.75,
+            "height": 44,
+            "right": 1160,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": {
+          "box": {
+            "x": 403.296875,
+            "y": 556,
+            "width": 81.5,
+            "height": 44,
+            "right": 484.796875,
+            "bottom": 600
+          },
+          "text": "Изчисти"
+        },
+        "count": {
+          "box": {
+            "x": 479.421875,
+            "y": 377.59375,
+            "width": 21.390625,
+            "height": 20.796875,
+            "right": 500.8125,
+            "bottom": 398.390625
+          },
+          "text": "(2)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 177.40625,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 260.03125,
+            "bottom": 598
+          },
+          {
+            "x": 268.03125,
+            "y": 558,
+            "width": 127.265625,
+            "height": 40,
+            "right": 395.296875,
+            "bottom": 598
+          }
+        ],
+        "review": null,
+        "cards": 2,
+        "searchLabel": "Марка, модел или ключова дума · 2 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1199,
+      "name": "overflow",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 1136,
+            "height": 44,
+            "right": 1160,
+            "bottom": 600
+          },
+          "text": "Филтри\n11\nAudi\nBMW\nMercedes-Benz\nSUV\nБензин\nАвтоматик\nОт 2020 г.\nДо 2025 г.\nОт 1000 €\nДо 200 000 €\nДо 100 000 км\nВсички (11)\nИзчисти\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 146.53125,
+            "height": 44,
+            "right": 170.53125,
+            "bottom": 600
+          },
+          "text": "Филтри\n11"
+        },
+        "sort": {
+          "box": {
+            "x": 955.25,
+            "y": 556,
+            "width": 204.75,
+            "height": 44,
+            "right": 1160,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": {
+          "box": {
+            "x": 865.75,
+            "y": 556,
+            "width": 81.5,
+            "height": 44,
+            "right": 947.25,
+            "bottom": 600
+          },
+          "text": "Изчисти"
+        },
+        "count": {
+          "box": {
+            "x": 479.421875,
+            "y": 377.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 501.3125,
+            "bottom": 398.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 178.53125,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 261.15625,
+            "bottom": 598
+          },
+          {
+            "x": 269.15625,
+            "y": 558,
+            "width": 88.984375,
+            "height": 40,
+            "right": 358.140625,
+            "bottom": 598
+          },
+          {
+            "x": 366.140625,
+            "y": 558,
+            "width": 169.34375,
+            "height": 40,
+            "right": 535.484375,
+            "bottom": 598
+          },
+          {
+            "x": 543.484375,
+            "y": 558,
+            "width": 81.359375,
+            "height": 40,
+            "right": 624.84375,
+            "bottom": 598
+          },
+          {
+            "x": 632.84375,
+            "y": 558,
+            "width": 104.234375,
+            "height": 40,
+            "right": 737.078125,
+            "bottom": 598
+          },
+          {
+            "x": 745.078125,
+            "y": 558,
+            "width": 133.078125,
+            "height": 40,
+            "right": 878.15625,
+            "bottom": 598
+          },
+          {
+            "x": 886.15625,
+            "y": 558,
+            "width": 127.265625,
+            "height": 40,
+            "right": 1013.421875,
+            "bottom": 598
+          },
+          {
+            "x": 1021.421875,
+            "y": 558,
+            "width": 129.53125,
+            "height": 40,
+            "right": 1150.953125,
+            "bottom": 598
+          },
+          {
+            "x": 1158.953125,
+            "y": 558,
+            "width": 124.484375,
+            "height": 40,
+            "right": 1283.4375,
+            "bottom": 598
+          },
+          {
+            "x": 1291.4375,
+            "y": 558,
+            "width": 155.4375,
+            "height": 40,
+            "right": 1446.875,
+            "bottom": 598
+          },
+          {
+            "x": 1454.875,
+            "y": 558,
+            "width": 162.8125,
+            "height": 40,
+            "right": 1617.6875,
+            "bottom": 598
+          }
+        ],
+        "review": {
+          "box": {
+            "x": 727.890625,
+            "y": 556,
+            "width": 129.859375,
+            "height": 44,
+            "right": 857.75,
+            "bottom": 600
+          },
+          "text": "Всички (11)"
+        },
+        "cards": 0,
+        "searchLabel": "Марка, модел или ключова дума · 0 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1199,
+      "name": "zero",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 1136,
+            "height": 44,
+            "right": 1160,
+            "bottom": 600
+          },
+          "text": "Филтри\nТърсете: no-matching-car\nИзчисти\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 117.40625,
+            "height": 44,
+            "right": 141.40625,
+            "bottom": 600
+          },
+          "text": "Филтри"
+        },
+        "sort": {
+          "box": {
+            "x": 955.25,
+            "y": 556,
+            "width": 204.75,
+            "height": 44,
+            "right": 1160,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": {
+          "box": {
+            "x": 397.40625,
+            "y": 556,
+            "width": 81.5,
+            "height": 44,
+            "right": 478.90625,
+            "bottom": 600
+          },
+          "text": "Изчисти"
+        },
+        "count": {
+          "box": {
+            "x": 333.390625,
+            "y": 377.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 355.28125,
+            "bottom": 398.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 149.40625,
+            "y": 558,
+            "width": 240,
+            "height": 40,
+            "right": 389.40625,
+            "bottom": 598
+          }
+        ],
+        "review": null,
+        "cards": 0,
+        "searchLabel": "no-matching-car · 0 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1200,
+      "name": "empty",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 1137,
+            "height": 44,
+            "right": 1161,
+            "bottom": 600
+          },
+          "text": "Филтри\nСортирайте автомобилите\nПрепоръчани\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 117.40625,
+            "height": 44,
+            "right": 141.40625,
+            "bottom": 600
+          },
+          "text": "Филтри"
+        },
+        "sort": {
+          "box": {
+            "x": 973.921875,
+            "y": 556,
+            "width": 187.078125,
+            "height": 44,
+            "right": 1161,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nПрепоръчани\nПриложете сортирането"
+        },
+        "clear": null,
+        "count": {
+          "box": {
+            "x": 479.921875,
+            "y": 377.59375,
+            "width": 20.65625,
+            "height": 20.796875,
+            "right": 500.578125,
+            "bottom": 398.390625
+          },
+          "text": "(7)"
+        },
+        "oldCount": false,
+        "chips": [],
+        "review": null,
+        "cards": 7,
+        "searchLabel": "Марка, модел или ключова дума · 7 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1200,
+      "name": "applied",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 1137,
+            "height": 44,
+            "right": 1161,
+            "bottom": 600
+          },
+          "text": "Филтри\n2\nAudi\nОт 2020 г.\nИзчисти\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 145.40625,
+            "height": 44,
+            "right": 169.40625,
+            "bottom": 600
+          },
+          "text": "Филтри\n2"
+        },
+        "sort": {
+          "box": {
+            "x": 956.25,
+            "y": 556,
+            "width": 204.75,
+            "height": 44,
+            "right": 1161,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": {
+          "box": {
+            "x": 403.296875,
+            "y": 556,
+            "width": 81.5,
+            "height": 44,
+            "right": 484.796875,
+            "bottom": 600
+          },
+          "text": "Изчисти"
+        },
+        "count": {
+          "box": {
+            "x": 479.921875,
+            "y": 377.59375,
+            "width": 21.390625,
+            "height": 20.796875,
+            "right": 501.3125,
+            "bottom": 398.390625
+          },
+          "text": "(2)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 177.40625,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 260.03125,
+            "bottom": 598
+          },
+          {
+            "x": 268.03125,
+            "y": 558,
+            "width": 127.265625,
+            "height": 40,
+            "right": 395.296875,
+            "bottom": 598
+          }
+        ],
+        "review": null,
+        "cards": 2,
+        "searchLabel": "Марка, модел или ключова дума · 2 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1200,
+      "name": "overflow",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 1137,
+            "height": 44,
+            "right": 1161,
+            "bottom": 600
+          },
+          "text": "Филтри\n11\nAudi\nBMW\nMercedes-Benz\nSUV\nБензин\nАвтоматик\nОт 2020 г.\nДо 2025 г.\nОт 1000 €\nДо 200 000 €\nДо 100 000 км\nВсички (11)\nИзчисти\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 146.53125,
+            "height": 44,
+            "right": 170.53125,
+            "bottom": 600
+          },
+          "text": "Филтри\n11"
+        },
+        "sort": {
+          "box": {
+            "x": 956.25,
+            "y": 556,
+            "width": 204.75,
+            "height": 44,
+            "right": 1161,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": {
+          "box": {
+            "x": 866.75,
+            "y": 556,
+            "width": 81.5,
+            "height": 44,
+            "right": 948.25,
+            "bottom": 600
+          },
+          "text": "Изчисти"
+        },
+        "count": {
+          "box": {
+            "x": 479.921875,
+            "y": 377.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 501.8125,
+            "bottom": 398.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 178.53125,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 261.15625,
+            "bottom": 598
+          },
+          {
+            "x": 269.15625,
+            "y": 558,
+            "width": 88.984375,
+            "height": 40,
+            "right": 358.140625,
+            "bottom": 598
+          },
+          {
+            "x": 366.140625,
+            "y": 558,
+            "width": 169.34375,
+            "height": 40,
+            "right": 535.484375,
+            "bottom": 598
+          },
+          {
+            "x": 543.484375,
+            "y": 558,
+            "width": 81.359375,
+            "height": 40,
+            "right": 624.84375,
+            "bottom": 598
+          },
+          {
+            "x": 632.84375,
+            "y": 558,
+            "width": 104.234375,
+            "height": 40,
+            "right": 737.078125,
+            "bottom": 598
+          },
+          {
+            "x": 745.078125,
+            "y": 558,
+            "width": 133.078125,
+            "height": 40,
+            "right": 878.15625,
+            "bottom": 598
+          },
+          {
+            "x": 886.15625,
+            "y": 558,
+            "width": 127.265625,
+            "height": 40,
+            "right": 1013.421875,
+            "bottom": 598
+          },
+          {
+            "x": 1021.421875,
+            "y": 558,
+            "width": 129.53125,
+            "height": 40,
+            "right": 1150.953125,
+            "bottom": 598
+          },
+          {
+            "x": 1158.953125,
+            "y": 558,
+            "width": 124.484375,
+            "height": 40,
+            "right": 1283.4375,
+            "bottom": 598
+          },
+          {
+            "x": 1291.4375,
+            "y": 558,
+            "width": 155.4375,
+            "height": 40,
+            "right": 1446.875,
+            "bottom": 598
+          },
+          {
+            "x": 1454.875,
+            "y": 558,
+            "width": 162.8125,
+            "height": 40,
+            "right": 1617.6875,
+            "bottom": 598
+          }
+        ],
+        "review": {
+          "box": {
+            "x": 728.890625,
+            "y": 556,
+            "width": 129.859375,
+            "height": 44,
+            "right": 858.75,
+            "bottom": 600
+          },
+          "text": "Всички (11)"
+        },
+        "cards": 0,
+        "searchLabel": "Марка, модел или ключова дума · 0 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1200,
+      "name": "zero",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 1137,
+            "height": 44,
+            "right": 1161,
+            "bottom": 600
+          },
+          "text": "Филтри\nТърсете: no-matching-car\nИзчисти\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 117.40625,
+            "height": 44,
+            "right": 141.40625,
+            "bottom": 600
+          },
+          "text": "Филтри"
+        },
+        "sort": {
+          "box": {
+            "x": 956.25,
+            "y": 556,
+            "width": 204.75,
+            "height": 44,
+            "right": 1161,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": {
+          "box": {
+            "x": 397.40625,
+            "y": 556,
+            "width": 81.5,
+            "height": 44,
+            "right": 478.90625,
+            "bottom": 600
+          },
+          "text": "Изчисти"
+        },
+        "count": {
+          "box": {
+            "x": 333.890625,
+            "y": 377.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 355.78125,
+            "bottom": 398.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 149.40625,
+            "y": 558,
+            "width": 240,
+            "height": 40,
+            "right": 389.40625,
+            "bottom": 598
+          }
+        ],
+        "review": null,
+        "cards": 0,
+        "searchLabel": "no-matching-car · 0 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "name": "empty",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 32.5,
+            "y": 556,
+            "width": 1360,
+            "height": 44,
+            "right": 1392.5,
+            "bottom": 600
+          },
+          "text": "Филтри\nСортирайте автомобилите\nПрепоръчани\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 32.5,
+            "y": 556,
+            "width": 117.40625,
+            "height": 44,
+            "right": 149.90625,
+            "bottom": 600
+          },
+          "text": "Филтри"
+        },
+        "sort": {
+          "box": {
+            "x": 1205.421875,
+            "y": 556,
+            "width": 187.078125,
+            "height": 44,
+            "right": 1392.5,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nПрепоръчани\nПриложете сортирането"
+        },
+        "clear": null,
+        "count": {
+          "box": {
+            "x": 599.921875,
+            "y": 377.59375,
+            "width": 20.65625,
+            "height": 20.796875,
+            "right": 620.578125,
+            "bottom": 398.390625
+          },
+          "text": "(7)"
+        },
+        "oldCount": false,
+        "chips": [],
+        "review": null,
+        "cards": 7,
+        "searchLabel": "Марка, модел или ключова дума · 7 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "name": "applied",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 32.5,
+            "y": 556,
+            "width": 1360,
+            "height": 44,
+            "right": 1392.5,
+            "bottom": 600
+          },
+          "text": "Филтри\n2\nAudi\nОт 2020 г.\nИзчисти\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 32.5,
+            "y": 556,
+            "width": 145.40625,
+            "height": 44,
+            "right": 177.90625,
+            "bottom": 600
+          },
+          "text": "Филтри\n2"
+        },
+        "sort": {
+          "box": {
+            "x": 1187.75,
+            "y": 556,
+            "width": 204.75,
+            "height": 44,
+            "right": 1392.5,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": {
+          "box": {
+            "x": 411.796875,
+            "y": 556,
+            "width": 81.5,
+            "height": 44,
+            "right": 493.296875,
+            "bottom": 600
+          },
+          "text": "Изчисти"
+        },
+        "count": {
+          "box": {
+            "x": 599.921875,
+            "y": 377.59375,
+            "width": 21.390625,
+            "height": 20.796875,
+            "right": 621.3125,
+            "bottom": 398.390625
+          },
+          "text": "(2)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 185.90625,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 268.53125,
+            "bottom": 598
+          },
+          {
+            "x": 276.53125,
+            "y": 558,
+            "width": 127.265625,
+            "height": 40,
+            "right": 403.796875,
+            "bottom": 598
+          }
+        ],
+        "review": null,
+        "cards": 2,
+        "searchLabel": "Марка, модел или ключова дума · 2 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "name": "overflow",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 32.5,
+            "y": 556,
+            "width": 1360,
+            "height": 44,
+            "right": 1392.5,
+            "bottom": 600
+          },
+          "text": "Филтри\n11\nAudi\nBMW\nMercedes-Benz\nSUV\nБензин\nАвтоматик\nОт 2020 г.\nДо 2025 г.\nОт 1000 €\nДо 200 000 €\nДо 100 000 км\nВсички (11)\nИзчисти\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 32.5,
+            "y": 556,
+            "width": 146.53125,
+            "height": 44,
+            "right": 179.03125,
+            "bottom": 600
+          },
+          "text": "Филтри\n11"
+        },
+        "sort": {
+          "box": {
+            "x": 1187.75,
+            "y": 556,
+            "width": 204.75,
+            "height": 44,
+            "right": 1392.5,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": {
+          "box": {
+            "x": 1098.25,
+            "y": 556,
+            "width": 81.5,
+            "height": 44,
+            "right": 1179.75,
+            "bottom": 600
+          },
+          "text": "Изчисти"
+        },
+        "count": {
+          "box": {
+            "x": 599.921875,
+            "y": 377.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 621.8125,
+            "bottom": 398.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 187.03125,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 269.65625,
+            "bottom": 598
+          },
+          {
+            "x": 277.65625,
+            "y": 558,
+            "width": 88.984375,
+            "height": 40,
+            "right": 366.640625,
+            "bottom": 598
+          },
+          {
+            "x": 374.640625,
+            "y": 558,
+            "width": 169.34375,
+            "height": 40,
+            "right": 543.984375,
+            "bottom": 598
+          },
+          {
+            "x": 551.984375,
+            "y": 558,
+            "width": 81.359375,
+            "height": 40,
+            "right": 633.34375,
+            "bottom": 598
+          },
+          {
+            "x": 641.34375,
+            "y": 558,
+            "width": 104.234375,
+            "height": 40,
+            "right": 745.578125,
+            "bottom": 598
+          },
+          {
+            "x": 753.578125,
+            "y": 558,
+            "width": 133.078125,
+            "height": 40,
+            "right": 886.65625,
+            "bottom": 598
+          },
+          {
+            "x": 894.65625,
+            "y": 558,
+            "width": 127.265625,
+            "height": 40,
+            "right": 1021.921875,
+            "bottom": 598
+          },
+          {
+            "x": 1029.921875,
+            "y": 558,
+            "width": 129.53125,
+            "height": 40,
+            "right": 1159.453125,
+            "bottom": 598
+          },
+          {
+            "x": 1167.453125,
+            "y": 558,
+            "width": 124.484375,
+            "height": 40,
+            "right": 1291.9375,
+            "bottom": 598
+          },
+          {
+            "x": 1299.9375,
+            "y": 558,
+            "width": 155.4375,
+            "height": 40,
+            "right": 1455.375,
+            "bottom": 598
+          },
+          {
+            "x": 1463.375,
+            "y": 558,
+            "width": 162.8125,
+            "height": 40,
+            "right": 1626.1875,
+            "bottom": 598
+          }
+        ],
+        "review": {
+          "box": {
+            "x": 960.390625,
+            "y": 556,
+            "width": 129.859375,
+            "height": 44,
+            "right": 1090.25,
+            "bottom": 600
+          },
+          "text": "Всички (11)"
+        },
+        "cards": 0,
+        "searchLabel": "Марка, модел или ключова дума · 0 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "name": "zero",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 32.5,
+            "y": 556,
+            "width": 1360,
+            "height": 44,
+            "right": 1392.5,
+            "bottom": 600
+          },
+          "text": "Филтри\nТърсете: no-matching-car\nИзчисти\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 32.5,
+            "y": 556,
+            "width": 117.40625,
+            "height": 44,
+            "right": 149.90625,
+            "bottom": 600
+          },
+          "text": "Филтри"
+        },
+        "sort": {
+          "box": {
+            "x": 1187.75,
+            "y": 556,
+            "width": 204.75,
+            "height": 44,
+            "right": 1392.5,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": {
+          "box": {
+            "x": 405.90625,
+            "y": 556,
+            "width": 81.5,
+            "height": 44,
+            "right": 487.40625,
+            "bottom": 600
+          },
+          "text": "Изчисти"
+        },
+        "count": {
+          "box": {
+            "x": 453.890625,
+            "y": 377.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 475.78125,
+            "bottom": 398.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 157.90625,
+            "y": 558,
+            "width": 240,
+            "height": 40,
+            "right": 397.90625,
+            "bottom": 598
+          }
+        ],
+        "review": null,
+        "cards": 0,
+        "searchLabel": "no-matching-car · 0 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1920,
+      "name": "empty",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 272.5,
+            "y": 556,
+            "width": 1360,
+            "height": 44,
+            "right": 1632.5,
+            "bottom": 600
+          },
+          "text": "Филтри\nСортирайте автомобилите\nПрепоръчани\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 272.5,
+            "y": 556,
+            "width": 117.40625,
+            "height": 44,
+            "right": 389.90625,
+            "bottom": 600
+          },
+          "text": "Филтри"
+        },
+        "sort": {
+          "box": {
+            "x": 1445.421875,
+            "y": 556,
+            "width": 187.078125,
+            "height": 44,
+            "right": 1632.5,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nПрепоръчани\nПриложете сортирането"
+        },
+        "clear": null,
+        "count": {
+          "box": {
+            "x": 799.921875,
+            "y": 377.59375,
+            "width": 20.65625,
+            "height": 20.796875,
+            "right": 820.578125,
+            "bottom": 398.390625
+          },
+          "text": "(7)"
+        },
+        "oldCount": false,
+        "chips": [],
+        "review": null,
+        "cards": 7,
+        "searchLabel": "Марка, модел или ключова дума · 7 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1920,
+      "name": "applied",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 272.5,
+            "y": 556,
+            "width": 1360,
+            "height": 44,
+            "right": 1632.5,
+            "bottom": 600
+          },
+          "text": "Филтри\n2\nAudi\nОт 2020 г.\nИзчисти\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 272.5,
+            "y": 556,
+            "width": 145.40625,
+            "height": 44,
+            "right": 417.90625,
+            "bottom": 600
+          },
+          "text": "Филтри\n2"
+        },
+        "sort": {
+          "box": {
+            "x": 1427.75,
+            "y": 556,
+            "width": 204.75,
+            "height": 44,
+            "right": 1632.5,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": {
+          "box": {
+            "x": 651.796875,
+            "y": 556,
+            "width": 81.5,
+            "height": 44,
+            "right": 733.296875,
+            "bottom": 600
+          },
+          "text": "Изчисти"
+        },
+        "count": {
+          "box": {
+            "x": 799.921875,
+            "y": 377.59375,
+            "width": 21.390625,
+            "height": 20.796875,
+            "right": 821.3125,
+            "bottom": 398.390625
+          },
+          "text": "(2)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 425.90625,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 508.53125,
+            "bottom": 598
+          },
+          {
+            "x": 516.53125,
+            "y": 558,
+            "width": 127.265625,
+            "height": 40,
+            "right": 643.796875,
+            "bottom": 598
+          }
+        ],
+        "review": null,
+        "cards": 2,
+        "searchLabel": "Марка, модел или ключова дума · 2 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1920,
+      "name": "overflow",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 272.5,
+            "y": 556,
+            "width": 1360,
+            "height": 44,
+            "right": 1632.5,
+            "bottom": 600
+          },
+          "text": "Филтри\n11\nAudi\nBMW\nMercedes-Benz\nSUV\nБензин\nАвтоматик\nОт 2020 г.\nДо 2025 г.\nОт 1000 €\nДо 200 000 €\nДо 100 000 км\nВсички (11)\nИзчисти\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 272.5,
+            "y": 556,
+            "width": 146.53125,
+            "height": 44,
+            "right": 419.03125,
+            "bottom": 600
+          },
+          "text": "Филтри\n11"
+        },
+        "sort": {
+          "box": {
+            "x": 1427.75,
+            "y": 556,
+            "width": 204.75,
+            "height": 44,
+            "right": 1632.5,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": {
+          "box": {
+            "x": 1338.25,
+            "y": 556,
+            "width": 81.5,
+            "height": 44,
+            "right": 1419.75,
+            "bottom": 600
+          },
+          "text": "Изчисти"
+        },
+        "count": {
+          "box": {
+            "x": 799.921875,
+            "y": 377.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 821.8125,
+            "bottom": 398.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 427.03125,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 509.65625,
+            "bottom": 598
+          },
+          {
+            "x": 517.65625,
+            "y": 558,
+            "width": 88.984375,
+            "height": 40,
+            "right": 606.640625,
+            "bottom": 598
+          },
+          {
+            "x": 614.640625,
+            "y": 558,
+            "width": 169.34375,
+            "height": 40,
+            "right": 783.984375,
+            "bottom": 598
+          },
+          {
+            "x": 791.984375,
+            "y": 558,
+            "width": 81.359375,
+            "height": 40,
+            "right": 873.34375,
+            "bottom": 598
+          },
+          {
+            "x": 881.34375,
+            "y": 558,
+            "width": 104.234375,
+            "height": 40,
+            "right": 985.578125,
+            "bottom": 598
+          },
+          {
+            "x": 993.578125,
+            "y": 558,
+            "width": 133.078125,
+            "height": 40,
+            "right": 1126.65625,
+            "bottom": 598
+          },
+          {
+            "x": 1134.65625,
+            "y": 558,
+            "width": 127.265625,
+            "height": 40,
+            "right": 1261.921875,
+            "bottom": 598
+          },
+          {
+            "x": 1269.921875,
+            "y": 558,
+            "width": 129.53125,
+            "height": 40,
+            "right": 1399.453125,
+            "bottom": 598
+          },
+          {
+            "x": 1407.453125,
+            "y": 558,
+            "width": 124.484375,
+            "height": 40,
+            "right": 1531.9375,
+            "bottom": 598
+          },
+          {
+            "x": 1539.9375,
+            "y": 558,
+            "width": 155.4375,
+            "height": 40,
+            "right": 1695.375,
+            "bottom": 598
+          },
+          {
+            "x": 1703.375,
+            "y": 558,
+            "width": 162.8125,
+            "height": 40,
+            "right": 1866.1875,
+            "bottom": 598
+          }
+        ],
+        "review": {
+          "box": {
+            "x": 1200.390625,
+            "y": 556,
+            "width": 129.859375,
+            "height": 44,
+            "right": 1330.25,
+            "bottom": 600
+          },
+          "text": "Всички (11)"
+        },
+        "cards": 0,
+        "searchLabel": "Марка, модел или ключова дума · 0 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1920,
+      "name": "zero",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 272.5,
+            "y": 556,
+            "width": 1360,
+            "height": 44,
+            "right": 1632.5,
+            "bottom": 600
+          },
+          "text": "Филтри\nТърсете: no-matching-car\nИзчисти\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 272.5,
+            "y": 556,
+            "width": 117.40625,
+            "height": 44,
+            "right": 389.90625,
+            "bottom": 600
+          },
+          "text": "Филтри"
+        },
+        "sort": {
+          "box": {
+            "x": 1427.75,
+            "y": 556,
+            "width": 204.75,
+            "height": 44,
+            "right": 1632.5,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": {
+          "box": {
+            "x": 645.90625,
+            "y": 556,
+            "width": 81.5,
+            "height": 44,
+            "right": 727.40625,
+            "bottom": 600
+          },
+          "text": "Изчисти"
+        },
+        "count": {
+          "box": {
+            "x": 653.890625,
+            "y": 377.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 675.78125,
+            "bottom": 398.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 397.90625,
+            "y": 558,
+            "width": 240,
+            "height": 40,
+            "right": 637.90625,
+            "bottom": 598
+          }
+        ],
+        "review": null,
+        "cards": 0,
+        "searchLabel": "no-matching-car · 0 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 2560,
+      "name": "empty",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 592.5,
+            "y": 556,
+            "width": 1360,
+            "height": 44,
+            "right": 1952.5,
+            "bottom": 600
+          },
+          "text": "Филтри\nСортирайте автомобилите\nПрепоръчани\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 592.5,
+            "y": 556,
+            "width": 117.40625,
+            "height": 44,
+            "right": 709.90625,
+            "bottom": 600
+          },
+          "text": "Филтри"
+        },
+        "sort": {
+          "box": {
+            "x": 1765.421875,
+            "y": 556,
+            "width": 187.078125,
+            "height": 44,
+            "right": 1952.5,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nПрепоръчани\nПриложете сортирането"
+        },
+        "clear": null,
+        "count": {
+          "box": {
+            "x": 1119.921875,
+            "y": 377.59375,
+            "width": 20.65625,
+            "height": 20.796875,
+            "right": 1140.578125,
+            "bottom": 398.390625
+          },
+          "text": "(7)"
+        },
+        "oldCount": false,
+        "chips": [],
+        "review": null,
+        "cards": 7,
+        "searchLabel": "Марка, модел или ключова дума · 7 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 2560,
+      "name": "applied",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 592.5,
+            "y": 556,
+            "width": 1360,
+            "height": 44,
+            "right": 1952.5,
+            "bottom": 600
+          },
+          "text": "Филтри\n2\nAudi\nОт 2020 г.\nИзчисти\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 592.5,
+            "y": 556,
+            "width": 145.40625,
+            "height": 44,
+            "right": 737.90625,
+            "bottom": 600
+          },
+          "text": "Филтри\n2"
+        },
+        "sort": {
+          "box": {
+            "x": 1747.75,
+            "y": 556,
+            "width": 204.75,
+            "height": 44,
+            "right": 1952.5,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": {
+          "box": {
+            "x": 971.796875,
+            "y": 556,
+            "width": 81.5,
+            "height": 44,
+            "right": 1053.296875,
+            "bottom": 600
+          },
+          "text": "Изчисти"
+        },
+        "count": {
+          "box": {
+            "x": 1119.921875,
+            "y": 377.59375,
+            "width": 21.390625,
+            "height": 20.796875,
+            "right": 1141.3125,
+            "bottom": 398.390625
+          },
+          "text": "(2)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 745.90625,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 828.53125,
+            "bottom": 598
+          },
+          {
+            "x": 836.53125,
+            "y": 558,
+            "width": 127.265625,
+            "height": 40,
+            "right": 963.796875,
+            "bottom": 598
+          }
+        ],
+        "review": null,
+        "cards": 2,
+        "searchLabel": "Марка, модел или ключова дума · 2 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 2560,
+      "name": "overflow",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 592.5,
+            "y": 556,
+            "width": 1360,
+            "height": 44,
+            "right": 1952.5,
+            "bottom": 600
+          },
+          "text": "Филтри\n11\nAudi\nBMW\nMercedes-Benz\nSUV\nБензин\nАвтоматик\nОт 2020 г.\nДо 2025 г.\nОт 1000 €\nДо 200 000 €\nДо 100 000 км\nВсички (11)\nИзчисти\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 592.5,
+            "y": 556,
+            "width": 146.53125,
+            "height": 44,
+            "right": 739.03125,
+            "bottom": 600
+          },
+          "text": "Филтри\n11"
+        },
+        "sort": {
+          "box": {
+            "x": 1747.75,
+            "y": 556,
+            "width": 204.75,
+            "height": 44,
+            "right": 1952.5,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": {
+          "box": {
+            "x": 1658.25,
+            "y": 556,
+            "width": 81.5,
+            "height": 44,
+            "right": 1739.75,
+            "bottom": 600
+          },
+          "text": "Изчисти"
+        },
+        "count": {
+          "box": {
+            "x": 1119.921875,
+            "y": 377.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 1141.8125,
+            "bottom": 398.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 747.03125,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 829.65625,
+            "bottom": 598
+          },
+          {
+            "x": 837.65625,
+            "y": 558,
+            "width": 88.984375,
+            "height": 40,
+            "right": 926.640625,
+            "bottom": 598
+          },
+          {
+            "x": 934.640625,
+            "y": 558,
+            "width": 169.34375,
+            "height": 40,
+            "right": 1103.984375,
+            "bottom": 598
+          },
+          {
+            "x": 1111.984375,
+            "y": 558,
+            "width": 81.359375,
+            "height": 40,
+            "right": 1193.34375,
+            "bottom": 598
+          },
+          {
+            "x": 1201.34375,
+            "y": 558,
+            "width": 104.234375,
+            "height": 40,
+            "right": 1305.578125,
+            "bottom": 598
+          },
+          {
+            "x": 1313.578125,
+            "y": 558,
+            "width": 133.078125,
+            "height": 40,
+            "right": 1446.65625,
+            "bottom": 598
+          },
+          {
+            "x": 1454.65625,
+            "y": 558,
+            "width": 127.265625,
+            "height": 40,
+            "right": 1581.921875,
+            "bottom": 598
+          },
+          {
+            "x": 1589.921875,
+            "y": 558,
+            "width": 129.53125,
+            "height": 40,
+            "right": 1719.453125,
+            "bottom": 598
+          },
+          {
+            "x": 1727.453125,
+            "y": 558,
+            "width": 124.484375,
+            "height": 40,
+            "right": 1851.9375,
+            "bottom": 598
+          },
+          {
+            "x": 1859.9375,
+            "y": 558,
+            "width": 155.4375,
+            "height": 40,
+            "right": 2015.375,
+            "bottom": 598
+          },
+          {
+            "x": 2023.375,
+            "y": 558,
+            "width": 162.8125,
+            "height": 40,
+            "right": 2186.1875,
+            "bottom": 598
+          }
+        ],
+        "review": {
+          "box": {
+            "x": 1520.390625,
+            "y": 556,
+            "width": 129.859375,
+            "height": 44,
+            "right": 1650.25,
+            "bottom": 600
+          },
+          "text": "Всички (11)"
+        },
+        "cards": 0,
+        "searchLabel": "Марка, модел или ключова дума · 0 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 2560,
+      "name": "zero",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 592.5,
+            "y": 556,
+            "width": 1360,
+            "height": 44,
+            "right": 1952.5,
+            "bottom": 600
+          },
+          "text": "Филтри\nТърсете: no-matching-car\nИзчисти\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "filter": {
+          "box": {
+            "x": 592.5,
+            "y": 556,
+            "width": 117.40625,
+            "height": 44,
+            "right": 709.90625,
+            "bottom": 600
+          },
+          "text": "Филтри"
+        },
+        "sort": {
+          "box": {
+            "x": 1747.75,
+            "y": 556,
+            "width": 204.75,
+            "height": 44,
+            "right": 1952.5,
+            "bottom": 600
+          },
+          "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането"
+        },
+        "clear": {
+          "box": {
+            "x": 965.90625,
+            "y": 556,
+            "width": 81.5,
+            "height": 44,
+            "right": 1047.40625,
+            "bottom": 600
+          },
+          "text": "Изчисти"
+        },
+        "count": {
+          "box": {
+            "x": 973.890625,
+            "y": 377.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 995.78125,
+            "bottom": 398.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 717.90625,
+            "y": 558,
+            "width": 240,
+            "height": 40,
+            "right": 957.90625,
+            "bottom": 598
+          }
+        ],
+        "review": null,
+        "cards": 0,
+        "searchLabel": "no-matching-car · 0 автомобила",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "en",
+      "width": 992,
+      "name": "empty",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 929,
+            "height": 44,
+            "right": 953,
+            "bottom": 600
+          },
+          "text": "Filters\nSort cars\nRecommended\nApply sorting"
+        },
+        "filter": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 104.765625,
+            "height": 44,
+            "right": 128.765625,
+            "bottom": 600
+          },
+          "text": "Filters"
+        },
+        "sort": {
+          "box": {
+            "x": 759.34375,
+            "y": 556,
+            "width": 193.65625,
+            "height": 44,
+            "right": 953,
+            "bottom": 600
+          },
+          "text": "Sort cars\nRecommended\nApply sorting"
+        },
+        "clear": null,
+        "count": {
+          "box": {
+            "x": 309.125,
+            "y": 377.59375,
+            "width": 20.65625,
+            "height": 20.796875,
+            "right": 329.78125,
+            "bottom": 398.390625
+          },
+          "text": "(7)"
+        },
+        "oldCount": false,
+        "chips": [],
+        "review": null,
+        "cards": 7,
+        "searchLabel": "Make, model or keyword · 7 cars",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "en",
+      "width": 992,
+      "name": "applied",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 929,
+            "height": 44,
+            "right": 953,
+            "bottom": 600
+          },
+          "text": "Filters\n2\nAudi\nFrom 2020\nClear\nSort cars\nLowest price\nApply sorting"
+        },
+        "filter": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 132.765625,
+            "height": 44,
+            "right": 156.765625,
+            "bottom": 600
+          },
+          "text": "Filters\n2"
+        },
+        "sort": {
+          "box": {
+            "x": 776.375,
+            "y": 556,
+            "width": 176.625,
+            "height": 44,
+            "right": 953,
+            "bottom": 600
+          },
+          "text": "Sort cars\nLowest price\nApply sorting"
+        },
+        "clear": {
+          "box": {
+            "x": 394.296875,
+            "y": 556,
+            "width": 56.28125,
+            "height": 44,
+            "right": 450.578125,
+            "bottom": 600
+          },
+          "text": "Clear"
+        },
+        "count": {
+          "box": {
+            "x": 309.125,
+            "y": 377.59375,
+            "width": 21.390625,
+            "height": 20.796875,
+            "right": 330.515625,
+            "bottom": 398.390625
+          },
+          "text": "(2)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 164.765625,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 247.390625,
+            "bottom": 598
+          },
+          {
+            "x": 255.390625,
+            "y": 558,
+            "width": 130.90625,
+            "height": 40,
+            "right": 386.296875,
+            "bottom": 598
+          }
+        ],
+        "review": null,
+        "cards": 2,
+        "searchLabel": "Make, model or keyword · 2 cars",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "en",
+      "width": 992,
+      "name": "overflow",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 929,
+            "height": 44,
+            "right": 953,
+            "bottom": 600
+          },
+          "text": "Filters\n11\nAudi\nBMW\nMercedes-Benz\nSUV\nPetrol\nAutomatic\nFrom 2020\nTo 2025\nFrom 1,000 €\nUp to 200,000 €\nUp to 100,000 km\nAll (11)\nClear\nSort cars\nLowest price\nApply sorting"
+        },
+        "filter": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 133.890625,
+            "height": 44,
+            "right": 157.890625,
+            "bottom": 600
+          },
+          "text": "Filters\n11"
+        },
+        "sort": {
+          "box": {
+            "x": 776.375,
+            "y": 556,
+            "width": 176.625,
+            "height": 44,
+            "right": 953,
+            "bottom": 600
+          },
+          "text": "Sort cars\nLowest price\nApply sorting"
+        },
+        "clear": {
+          "box": {
+            "x": 712.09375,
+            "y": 556,
+            "width": 56.28125,
+            "height": 44,
+            "right": 768.375,
+            "bottom": 600
+          },
+          "text": "Clear"
+        },
+        "count": {
+          "box": {
+            "x": 309.125,
+            "y": 377.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 331.015625,
+            "bottom": 398.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 165.890625,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 248.515625,
+            "bottom": 598
+          },
+          {
+            "x": 256.515625,
+            "y": 558,
+            "width": 88.984375,
+            "height": 40,
+            "right": 345.5,
+            "bottom": 598
+          },
+          {
+            "x": 353.5,
+            "y": 558,
+            "width": 169.34375,
+            "height": 40,
+            "right": 522.84375,
+            "bottom": 598
+          },
+          {
+            "x": 530.84375,
+            "y": 558,
+            "width": 81.359375,
+            "height": 40,
+            "right": 612.203125,
+            "bottom": 598
+          },
+          {
+            "x": 620.203125,
+            "y": 558,
+            "width": 92.203125,
+            "height": 40,
+            "right": 712.40625,
+            "bottom": 598
+          },
+          {
+            "x": 720.40625,
+            "y": 558,
+            "width": 125.40625,
+            "height": 40,
+            "right": 845.8125,
+            "bottom": 598
+          },
+          {
+            "x": 853.8125,
+            "y": 558,
+            "width": 130.90625,
+            "height": 40,
+            "right": 984.71875,
+            "bottom": 598
+          },
+          {
+            "x": 992.71875,
+            "y": 558,
+            "width": 110.34375,
+            "height": 40,
+            "right": 1103.0625,
+            "bottom": 598
+          },
+          {
+            "x": 1111.0625,
+            "y": 558,
+            "width": 147.40625,
+            "height": 40,
+            "right": 1258.46875,
+            "bottom": 598
+          },
+          {
+            "x": 1266.46875,
+            "y": 558,
+            "width": 172.90625,
+            "height": 40,
+            "right": 1439.375,
+            "bottom": 598
+          },
+          {
+            "x": 1447.375,
+            "y": 558,
+            "width": 182,
+            "height": 40,
+            "right": 1629.375,
+            "bottom": 598
+          }
+        ],
+        "review": {
+          "box": {
+            "x": 611.9375,
+            "y": 556,
+            "width": 92.15625,
+            "height": 44,
+            "right": 704.09375,
+            "bottom": 600
+          },
+          "text": "All (11)"
+        },
+        "cards": 0,
+        "searchLabel": "Make, model or keyword · 0 cars",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "en",
+      "width": 992,
+      "name": "zero",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 929,
+            "height": 44,
+            "right": 953,
+            "bottom": 600
+          },
+          "text": "Filters\nSearch: no-matching-car\nClear\nSort cars\nLowest price\nApply sorting"
+        },
+        "filter": {
+          "box": {
+            "x": 24,
+            "y": 556,
+            "width": 104.765625,
+            "height": 44,
+            "right": 128.765625,
+            "bottom": 600
+          },
+          "text": "Filters"
+        },
+        "sort": {
+          "box": {
+            "x": 776.375,
+            "y": 556,
+            "width": 176.625,
+            "height": 44,
+            "right": 953,
+            "bottom": 600
+          },
+          "text": "Sort cars\nLowest price\nApply sorting"
+        },
+        "clear": {
+          "box": {
+            "x": 383.765625,
+            "y": 556,
+            "width": 56.28125,
+            "height": 44,
+            "right": 440.046875,
+            "bottom": 600
+          },
+          "text": "Clear"
+        },
+        "count": {
+          "box": {
+            "x": 245.390625,
+            "y": 377.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 267.28125,
+            "bottom": 398.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 136.765625,
+            "y": 558,
+            "width": 239,
+            "height": 40,
+            "right": 375.765625,
+            "bottom": 598
+          }
+        ],
+        "review": null,
+        "cards": 0,
+        "searchLabel": "no-matching-car · 0 cars",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "name": "empty",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 32.5,
+            "y": 556,
+            "width": 1360,
+            "height": 44,
+            "right": 1392.5,
+            "bottom": 600
+          },
+          "text": "Filters\nSort cars\nRecommended\nApply sorting"
+        },
+        "filter": {
+          "box": {
+            "x": 32.5,
+            "y": 556,
+            "width": 104.765625,
+            "height": 44,
+            "right": 137.265625,
+            "bottom": 600
+          },
+          "text": "Filters"
+        },
+        "sort": {
+          "box": {
+            "x": 1198.84375,
+            "y": 556,
+            "width": 193.65625,
+            "height": 44,
+            "right": 1392.5,
+            "bottom": 600
+          },
+          "text": "Sort cars\nRecommended\nApply sorting"
+        },
+        "clear": null,
+        "count": {
+          "box": {
+            "x": 517.625,
+            "y": 377.59375,
+            "width": 20.65625,
+            "height": 20.796875,
+            "right": 538.28125,
+            "bottom": 398.390625
+          },
+          "text": "(7)"
+        },
+        "oldCount": false,
+        "chips": [],
+        "review": null,
+        "cards": 7,
+        "searchLabel": "Make, model or keyword · 7 cars",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "name": "applied",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 32.5,
+            "y": 556,
+            "width": 1360,
+            "height": 44,
+            "right": 1392.5,
+            "bottom": 600
+          },
+          "text": "Filters\n2\nAudi\nFrom 2020\nClear\nSort cars\nLowest price\nApply sorting"
+        },
+        "filter": {
+          "box": {
+            "x": 32.5,
+            "y": 556,
+            "width": 132.765625,
+            "height": 44,
+            "right": 165.265625,
+            "bottom": 600
+          },
+          "text": "Filters\n2"
+        },
+        "sort": {
+          "box": {
+            "x": 1215.875,
+            "y": 556,
+            "width": 176.625,
+            "height": 44,
+            "right": 1392.5,
+            "bottom": 600
+          },
+          "text": "Sort cars\nLowest price\nApply sorting"
+        },
+        "clear": {
+          "box": {
+            "x": 402.796875,
+            "y": 556,
+            "width": 56.28125,
+            "height": 44,
+            "right": 459.078125,
+            "bottom": 600
+          },
+          "text": "Clear"
+        },
+        "count": {
+          "box": {
+            "x": 517.625,
+            "y": 377.59375,
+            "width": 21.390625,
+            "height": 20.796875,
+            "right": 539.015625,
+            "bottom": 398.390625
+          },
+          "text": "(2)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 173.265625,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 255.890625,
+            "bottom": 598
+          },
+          {
+            "x": 263.890625,
+            "y": 558,
+            "width": 130.90625,
+            "height": 40,
+            "right": 394.796875,
+            "bottom": 598
+          }
+        ],
+        "review": null,
+        "cards": 2,
+        "searchLabel": "Make, model or keyword · 2 cars",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "name": "overflow",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 32.5,
+            "y": 556,
+            "width": 1360,
+            "height": 44,
+            "right": 1392.5,
+            "bottom": 600
+          },
+          "text": "Filters\n11\nAudi\nBMW\nMercedes-Benz\nSUV\nPetrol\nAutomatic\nFrom 2020\nTo 2025\nFrom 1,000 €\nUp to 200,000 €\nUp to 100,000 km\nAll (11)\nClear\nSort cars\nLowest price\nApply sorting"
+        },
+        "filter": {
+          "box": {
+            "x": 32.5,
+            "y": 556,
+            "width": 133.890625,
+            "height": 44,
+            "right": 166.390625,
+            "bottom": 600
+          },
+          "text": "Filters\n11"
+        },
+        "sort": {
+          "box": {
+            "x": 1215.875,
+            "y": 556,
+            "width": 176.625,
+            "height": 44,
+            "right": 1392.5,
+            "bottom": 600
+          },
+          "text": "Sort cars\nLowest price\nApply sorting"
+        },
+        "clear": {
+          "box": {
+            "x": 1151.59375,
+            "y": 556,
+            "width": 56.28125,
+            "height": 44,
+            "right": 1207.875,
+            "bottom": 600
+          },
+          "text": "Clear"
+        },
+        "count": {
+          "box": {
+            "x": 517.625,
+            "y": 377.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 539.515625,
+            "bottom": 398.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 174.390625,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 257.015625,
+            "bottom": 598
+          },
+          {
+            "x": 265.015625,
+            "y": 558,
+            "width": 88.984375,
+            "height": 40,
+            "right": 354,
+            "bottom": 598
+          },
+          {
+            "x": 362,
+            "y": 558,
+            "width": 169.34375,
+            "height": 40,
+            "right": 531.34375,
+            "bottom": 598
+          },
+          {
+            "x": 539.34375,
+            "y": 558,
+            "width": 81.359375,
+            "height": 40,
+            "right": 620.703125,
+            "bottom": 598
+          },
+          {
+            "x": 628.703125,
+            "y": 558,
+            "width": 92.203125,
+            "height": 40,
+            "right": 720.90625,
+            "bottom": 598
+          },
+          {
+            "x": 728.90625,
+            "y": 558,
+            "width": 125.40625,
+            "height": 40,
+            "right": 854.3125,
+            "bottom": 598
+          },
+          {
+            "x": 862.3125,
+            "y": 558,
+            "width": 130.90625,
+            "height": 40,
+            "right": 993.21875,
+            "bottom": 598
+          },
+          {
+            "x": 1001.21875,
+            "y": 558,
+            "width": 110.34375,
+            "height": 40,
+            "right": 1111.5625,
+            "bottom": 598
+          },
+          {
+            "x": 1119.5625,
+            "y": 558,
+            "width": 147.40625,
+            "height": 40,
+            "right": 1266.96875,
+            "bottom": 598
+          },
+          {
+            "x": 1274.96875,
+            "y": 558,
+            "width": 172.90625,
+            "height": 40,
+            "right": 1447.875,
+            "bottom": 598
+          },
+          {
+            "x": 1455.875,
+            "y": 558,
+            "width": 182,
+            "height": 40,
+            "right": 1637.875,
+            "bottom": 598
+          }
+        ],
+        "review": {
+          "box": {
+            "x": 1051.4375,
+            "y": 556,
+            "width": 92.15625,
+            "height": 44,
+            "right": 1143.59375,
+            "bottom": 600
+          },
+          "text": "All (11)"
+        },
+        "cards": 0,
+        "searchLabel": "Make, model or keyword · 0 cars",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "name": "zero",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 32.5,
+            "y": 556,
+            "width": 1360,
+            "height": 44,
+            "right": 1392.5,
+            "bottom": 600
+          },
+          "text": "Filters\nSearch: no-matching-car\nClear\nSort cars\nLowest price\nApply sorting"
+        },
+        "filter": {
+          "box": {
+            "x": 32.5,
+            "y": 556,
+            "width": 104.765625,
+            "height": 44,
+            "right": 137.265625,
+            "bottom": 600
+          },
+          "text": "Filters"
+        },
+        "sort": {
+          "box": {
+            "x": 1215.875,
+            "y": 556,
+            "width": 176.625,
+            "height": 44,
+            "right": 1392.5,
+            "bottom": 600
+          },
+          "text": "Sort cars\nLowest price\nApply sorting"
+        },
+        "clear": {
+          "box": {
+            "x": 392.265625,
+            "y": 556,
+            "width": 56.28125,
+            "height": 44,
+            "right": 448.546875,
+            "bottom": 600
+          },
+          "text": "Clear"
+        },
+        "count": {
+          "box": {
+            "x": 453.890625,
+            "y": 377.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 475.78125,
+            "bottom": 398.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 145.265625,
+            "y": 558,
+            "width": 239,
+            "height": 40,
+            "right": 384.265625,
+            "bottom": 598
+          }
+        ],
+        "review": null,
+        "cards": 0,
+        "searchLabel": "no-matching-car · 0 cars",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1920,
+      "name": "empty",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 272.5,
+            "y": 556,
+            "width": 1360,
+            "height": 44,
+            "right": 1632.5,
+            "bottom": 600
+          },
+          "text": "Filters\nSort cars\nRecommended\nApply sorting"
+        },
+        "filter": {
+          "box": {
+            "x": 272.5,
+            "y": 556,
+            "width": 104.765625,
+            "height": 44,
+            "right": 377.265625,
+            "bottom": 600
+          },
+          "text": "Filters"
+        },
+        "sort": {
+          "box": {
+            "x": 1438.84375,
+            "y": 556,
+            "width": 193.65625,
+            "height": 44,
+            "right": 1632.5,
+            "bottom": 600
+          },
+          "text": "Sort cars\nRecommended\nApply sorting"
+        },
+        "clear": null,
+        "count": {
+          "box": {
+            "x": 717.625,
+            "y": 377.59375,
+            "width": 20.65625,
+            "height": 20.796875,
+            "right": 738.28125,
+            "bottom": 398.390625
+          },
+          "text": "(7)"
+        },
+        "oldCount": false,
+        "chips": [],
+        "review": null,
+        "cards": 7,
+        "searchLabel": "Make, model or keyword · 7 cars",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1920,
+      "name": "applied",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 272.5,
+            "y": 556,
+            "width": 1360,
+            "height": 44,
+            "right": 1632.5,
+            "bottom": 600
+          },
+          "text": "Filters\n2\nAudi\nFrom 2020\nClear\nSort cars\nLowest price\nApply sorting"
+        },
+        "filter": {
+          "box": {
+            "x": 272.5,
+            "y": 556,
+            "width": 132.765625,
+            "height": 44,
+            "right": 405.265625,
+            "bottom": 600
+          },
+          "text": "Filters\n2"
+        },
+        "sort": {
+          "box": {
+            "x": 1455.875,
+            "y": 556,
+            "width": 176.625,
+            "height": 44,
+            "right": 1632.5,
+            "bottom": 600
+          },
+          "text": "Sort cars\nLowest price\nApply sorting"
+        },
+        "clear": {
+          "box": {
+            "x": 642.796875,
+            "y": 556,
+            "width": 56.28125,
+            "height": 44,
+            "right": 699.078125,
+            "bottom": 600
+          },
+          "text": "Clear"
+        },
+        "count": {
+          "box": {
+            "x": 717.625,
+            "y": 377.59375,
+            "width": 21.390625,
+            "height": 20.796875,
+            "right": 739.015625,
+            "bottom": 398.390625
+          },
+          "text": "(2)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 413.265625,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 495.890625,
+            "bottom": 598
+          },
+          {
+            "x": 503.890625,
+            "y": 558,
+            "width": 130.90625,
+            "height": 40,
+            "right": 634.796875,
+            "bottom": 598
+          }
+        ],
+        "review": null,
+        "cards": 2,
+        "searchLabel": "Make, model or keyword · 2 cars",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1920,
+      "name": "overflow",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 272.5,
+            "y": 556,
+            "width": 1360,
+            "height": 44,
+            "right": 1632.5,
+            "bottom": 600
+          },
+          "text": "Filters\n11\nAudi\nBMW\nMercedes-Benz\nSUV\nPetrol\nAutomatic\nFrom 2020\nTo 2025\nFrom 1,000 €\nUp to 200,000 €\nUp to 100,000 km\nAll (11)\nClear\nSort cars\nLowest price\nApply sorting"
+        },
+        "filter": {
+          "box": {
+            "x": 272.5,
+            "y": 556,
+            "width": 133.890625,
+            "height": 44,
+            "right": 406.390625,
+            "bottom": 600
+          },
+          "text": "Filters\n11"
+        },
+        "sort": {
+          "box": {
+            "x": 1455.875,
+            "y": 556,
+            "width": 176.625,
+            "height": 44,
+            "right": 1632.5,
+            "bottom": 600
+          },
+          "text": "Sort cars\nLowest price\nApply sorting"
+        },
+        "clear": {
+          "box": {
+            "x": 1391.59375,
+            "y": 556,
+            "width": 56.28125,
+            "height": 44,
+            "right": 1447.875,
+            "bottom": 600
+          },
+          "text": "Clear"
+        },
+        "count": {
+          "box": {
+            "x": 717.625,
+            "y": 377.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 739.515625,
+            "bottom": 398.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 414.390625,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 497.015625,
+            "bottom": 598
+          },
+          {
+            "x": 505.015625,
+            "y": 558,
+            "width": 88.984375,
+            "height": 40,
+            "right": 594,
+            "bottom": 598
+          },
+          {
+            "x": 602,
+            "y": 558,
+            "width": 169.34375,
+            "height": 40,
+            "right": 771.34375,
+            "bottom": 598
+          },
+          {
+            "x": 779.34375,
+            "y": 558,
+            "width": 81.359375,
+            "height": 40,
+            "right": 860.703125,
+            "bottom": 598
+          },
+          {
+            "x": 868.703125,
+            "y": 558,
+            "width": 92.203125,
+            "height": 40,
+            "right": 960.90625,
+            "bottom": 598
+          },
+          {
+            "x": 968.90625,
+            "y": 558,
+            "width": 125.40625,
+            "height": 40,
+            "right": 1094.3125,
+            "bottom": 598
+          },
+          {
+            "x": 1102.3125,
+            "y": 558,
+            "width": 130.90625,
+            "height": 40,
+            "right": 1233.21875,
+            "bottom": 598
+          },
+          {
+            "x": 1241.21875,
+            "y": 558,
+            "width": 110.34375,
+            "height": 40,
+            "right": 1351.5625,
+            "bottom": 598
+          },
+          {
+            "x": 1359.5625,
+            "y": 558,
+            "width": 147.40625,
+            "height": 40,
+            "right": 1506.96875,
+            "bottom": 598
+          },
+          {
+            "x": 1514.96875,
+            "y": 558,
+            "width": 172.90625,
+            "height": 40,
+            "right": 1687.875,
+            "bottom": 598
+          },
+          {
+            "x": 1695.875,
+            "y": 558,
+            "width": 182,
+            "height": 40,
+            "right": 1877.875,
+            "bottom": 598
+          }
+        ],
+        "review": {
+          "box": {
+            "x": 1291.4375,
+            "y": 556,
+            "width": 92.15625,
+            "height": 44,
+            "right": 1383.59375,
+            "bottom": 600
+          },
+          "text": "All (11)"
+        },
+        "cards": 0,
+        "searchLabel": "Make, model or keyword · 0 cars",
+        "sortPadding": "38px"
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1920,
+      "name": "zero",
+      "state": {
+        "overflow": -15,
+        "heading": {
+          "box": {
+            "x": 272.5,
+            "y": 556,
+            "width": 1360,
+            "height": 44,
+            "right": 1632.5,
+            "bottom": 600
+          },
+          "text": "Filters\nSearch: no-matching-car\nClear\nSort cars\nLowest price\nApply sorting"
+        },
+        "filter": {
+          "box": {
+            "x": 272.5,
+            "y": 556,
+            "width": 104.765625,
+            "height": 44,
+            "right": 377.265625,
+            "bottom": 600
+          },
+          "text": "Filters"
+        },
+        "sort": {
+          "box": {
+            "x": 1455.875,
+            "y": 556,
+            "width": 176.625,
+            "height": 44,
+            "right": 1632.5,
+            "bottom": 600
+          },
+          "text": "Sort cars\nLowest price\nApply sorting"
+        },
+        "clear": {
+          "box": {
+            "x": 632.265625,
+            "y": 556,
+            "width": 56.28125,
+            "height": 44,
+            "right": 688.546875,
+            "bottom": 600
+          },
+          "text": "Clear"
+        },
+        "count": {
+          "box": {
+            "x": 653.890625,
+            "y": 377.59375,
+            "width": 21.890625,
+            "height": 20.796875,
+            "right": 675.78125,
+            "bottom": 398.390625
+          },
+          "text": "(0)"
+        },
+        "oldCount": false,
+        "chips": [
+          {
+            "x": 385.265625,
+            "y": 558,
+            "width": 239,
+            "height": 40,
+            "right": 624.265625,
+            "bottom": 598
+          }
+        ],
+        "review": null,
+        "cards": 0,
+        "searchLabel": "no-matching-car · 0 cars",
+        "sortPadding": "38px"
+      }
+    }
+  ]
+}

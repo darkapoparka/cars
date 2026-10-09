@@ -23,7 +23,7 @@ const staticRoot = path.join(root, 'static');
 // The mobile vehicle detail finance card adds one optimized transparent cutout.
 // Three background-only plates support the requested desktop comparison.
 // Five client choices retain a photographic kerb plate and smaller mobile encodings.
-const guardedMediaCount = 366;
+const guardedMediaCount = 368;
 // Preserve the two earlier local Home scene options for provenance.
 const homeScenePrototypes = ['/assets/images/template/home-sell-handover-v1.webp', '/assets/images/template/home-finance-scene-v1.webp'];
 // Preserve source identity/artwork for provenance; the default logo and icon are Auto Best.
@@ -51,8 +51,8 @@ for (const name of ['home', 'inventory', 'contact']) retainedSourceAssets.add(`/
 // These proposals were rejected for warm colour or distorted props. Reuse reviewed cutouts instead.
 retainedSourceAssets.add('/assets/images/lead/auto-best-desktop-about-v1.webp');
 for (const name of ['blog', 'contact']) retainedSourceAssets.add(`/assets/images/lead/auto-best-desktop-${name}-v2.webp`);
-// Keep the original red-curve scenes; the runtime uses their cleaned v3 editions.
-for (const name of ['home', 'inventory']) retainedSourceAssets.add(`/assets/images/lead/auto-best-desktop-${name}-v2.webp`);
+// Keep both previous campaign editions; company heroes now use the clean studio v4 images.
+for (const name of ['home', 'inventory']) for (const version of [2, 3]) retainedSourceAssets.add(`/assets/images/lead/auto-best-desktop-${name}-v${version}.webp`);
 for (const asset of homeScenePrototypes) retainedSourceAssets.add(asset);
 // Rejected desktop section images remain available as source history, without runtime requests.
 for (const name of ['inventory', 'body', 'brands', 'guides']) retainedSourceAssets.add(`/assets/images/template/home-section-${name}-v1.webp`);

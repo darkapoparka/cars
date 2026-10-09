@@ -1,0 +1,1014 @@
+[
+  {
+    "surface": "about",
+    "width": 390,
+    "state": {
+      "overflow": -15,
+      "hero": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 375,
+          "height": 244,
+          "right": 375,
+          "bottom": 244
+        },
+        "position": "relative",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "margin": "0px",
+        "padding": "40px 0px 0px"
+      },
+      "scene": null,
+      "title": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "position": "static",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "30px",
+        "lineHeight": "36px",
+        "margin": "0px",
+        "padding": "0px"
+      },
+      "images": [
+        {
+          "box": {
+            "x": 27.5,
+            "y": 40,
+            "width": 320,
+            "height": 212.984375,
+            "right": 347.5,
+            "bottom": 252.984375
+          },
+          "position": "static",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "transform": "none",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "margin": "0px",
+          "padding": "0px",
+          "src": "http://127.0.0.1:6461/assets/images/lead/day-night-showroom-color-v1.webp",
+          "naturalWidth": 1537,
+          "naturalHeight": 1023
+        }
+      ],
+      "layout": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "position": "relative",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "margin": "0px auto",
+        "padding": "96px 24px 80px"
+      },
+      "actions": []
+    }
+  },
+  {
+    "surface": "contact",
+    "width": 390,
+    "state": {
+      "overflow": -15,
+      "hero": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 375,
+          "height": 244,
+          "right": 375,
+          "bottom": 244
+        },
+        "position": "relative",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "margin": "0px",
+        "padding": "0px"
+      },
+      "scene": null,
+      "title": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "position": "static",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "30px",
+        "lineHeight": "36px",
+        "margin": "0px",
+        "padding": "0px"
+      },
+      "images": [
+        {
+          "box": {
+            "x": 12,
+            "y": 56,
+            "width": 351,
+            "height": 135.28125,
+            "right": 363,
+            "bottom": 191.28125
+          },
+          "position": "static",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "transform": "none",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "margin": "0px",
+          "padding": "0px",
+          "src": "http://127.0.0.1:6461/assets/images/template/contact-showroom-banner-v1-480.webp",
+          "naturalWidth": 360,
+          "naturalHeight": 138
+        }
+      ],
+      "layout": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "position": "relative",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "margin": "0px auto",
+        "padding": "96px 24px 80px"
+      },
+      "actions": []
+    }
+  },
+  {
+    "surface": "about",
+    "width": 992,
+    "state": {
+      "overflow": -15,
+      "hero": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 977,
+          "height": 540,
+          "right": 977,
+          "bottom": 540
+        },
+        "position": "relative",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "margin": "0px",
+        "padding": "0px"
+      },
+      "scene": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 977,
+          "height": 540,
+          "right": 977,
+          "bottom": 540
+        },
+        "position": "absolute",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "margin": "0px",
+        "padding": "0px"
+      },
+      "title": {
+        "box": {
+          "x": 108.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 100.78125,
+          "right": 868.5,
+          "bottom": 332.796875
+        },
+        "position": "static",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "48px",
+        "lineHeight": "50.4px",
+        "margin": "0px",
+        "padding": "0px"
+      },
+      "images": [
+        {
+          "box": {
+            "x": -111.5,
+            "y": 146,
+            "width": 1200,
+            "height": 400,
+            "right": 1088.5,
+            "bottom": 546
+          },
+          "position": "absolute",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "transform": "matrix(1, 0, 0, 1, -600, -344)",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "margin": "0px",
+          "padding": "0px",
+          "src": "http://127.0.0.1:6461/assets/images/template/company-about-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        }
+      ],
+      "layout": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 977,
+          "height": 540,
+          "right": 977,
+          "bottom": 540
+        },
+        "position": "relative",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "margin": "0px",
+        "padding": "200px 24px 24px"
+      },
+      "actions": [
+        {
+          "box": {
+            "x": 290.046875,
+            "y": 340.796875,
+            "width": 420.890625,
+            "height": 27,
+            "right": 710.9375,
+            "bottom": 367.796875
+          },
+          "position": "static",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "transform": "none",
+          "fontSize": "18px",
+          "lineHeight": "27px",
+          "margin": "0px",
+          "padding": "0px"
+        },
+        {
+          "box": {
+            "x": 379.875,
+            "y": 391.796875,
+            "width": 217.234375,
+            "height": 44,
+            "right": 597.109375,
+            "bottom": 435.796875
+          },
+          "position": "static",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "transform": "none",
+          "fontSize": "16px",
+          "lineHeight": "20.8px",
+          "margin": "24px 0px 0px",
+          "padding": "0px 24px"
+        }
+      ]
+    }
+  },
+  {
+    "surface": "contact",
+    "width": 992,
+    "state": {
+      "overflow": -15,
+      "hero": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 977,
+          "height": 540,
+          "right": 977,
+          "bottom": 540
+        },
+        "position": "relative",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "margin": "0px",
+        "padding": "0px"
+      },
+      "scene": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 977,
+          "height": 540,
+          "right": 977,
+          "bottom": 540
+        },
+        "position": "absolute",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "margin": "0px",
+        "padding": "0px"
+      },
+      "title": {
+        "box": {
+          "x": 108.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 100.78125,
+          "right": 868.5,
+          "bottom": 332.796875
+        },
+        "position": "static",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "48px",
+        "lineHeight": "50.4px",
+        "margin": "0px",
+        "padding": "0px"
+      },
+      "images": [
+        {
+          "box": {
+            "x": -111.5,
+            "y": 146,
+            "width": 1200,
+            "height": 400,
+            "right": 1088.5,
+            "bottom": 546
+          },
+          "position": "absolute",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "transform": "matrix(1, 0, 0, 1, -600, -344)",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "margin": "0px",
+          "padding": "0px",
+          "src": "http://127.0.0.1:6461/assets/images/template/company-contact-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        }
+      ],
+      "layout": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 977,
+          "height": 540,
+          "right": 977,
+          "bottom": 540
+        },
+        "position": "relative",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "margin": "0px",
+        "padding": "200px 24px 24px"
+      },
+      "actions": [
+        {
+          "box": {
+            "x": 324.34375,
+            "y": 391.796875,
+            "width": 173.46875,
+            "height": 44,
+            "right": 497.8125,
+            "bottom": 435.796875
+          },
+          "position": "static",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "transform": "none",
+          "fontSize": "16px",
+          "lineHeight": "20.8px",
+          "margin": "0px",
+          "padding": "0px 20px"
+        },
+        {
+          "box": {
+            "x": 509.8125,
+            "y": 391.796875,
+            "width": 142.828125,
+            "height": 44,
+            "right": 652.640625,
+            "bottom": 435.796875
+          },
+          "position": "static",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "transform": "none",
+          "fontSize": "16px",
+          "lineHeight": "20.8px",
+          "margin": "0px",
+          "padding": "0px 20px"
+        }
+      ]
+    }
+  },
+  {
+    "surface": "about",
+    "width": 1440,
+    "state": {
+      "overflow": -15,
+      "hero": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "position": "relative",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "margin": "0px",
+        "padding": "0px"
+      },
+      "scene": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "position": "absolute",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "margin": "0px",
+        "padding": "0px"
+      },
+      "title": {
+        "box": {
+          "x": 332.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 117.59375,
+          "right": 1092.5,
+          "bottom": 349.609375
+        },
+        "position": "static",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "56px",
+        "lineHeight": "58.8px",
+        "margin": "0px",
+        "padding": "0px"
+      },
+      "images": [
+        {
+          "box": {
+            "x": 0,
+            "y": 81.5,
+            "width": 1425,
+            "height": 475,
+            "right": 1425,
+            "bottom": 556.5
+          },
+          "position": "absolute",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "transform": "matrix(1, 0, 0, 1, -712.5, -408.5)",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "margin": "0px",
+          "padding": "0px",
+          "src": "http://127.0.0.1:6461/assets/images/template/company-about-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        }
+      ],
+      "layout": {
+        "box": {
+          "x": 8.5,
+          "y": 0,
+          "width": 1408,
+          "height": 540,
+          "right": 1416.5,
+          "bottom": 540
+        },
+        "position": "relative",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "margin": "0px 8.5px",
+        "padding": "200px 24px 24px"
+      },
+      "actions": [
+        {
+          "box": {
+            "x": 514.046875,
+            "y": 357.609375,
+            "width": 420.890625,
+            "height": 27,
+            "right": 934.9375,
+            "bottom": 384.609375
+          },
+          "position": "static",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "transform": "none",
+          "fontSize": "18px",
+          "lineHeight": "27px",
+          "margin": "0px",
+          "padding": "0px"
+        },
+        {
+          "box": {
+            "x": 603.875,
+            "y": 408.609375,
+            "width": 217.234375,
+            "height": 44,
+            "right": 821.109375,
+            "bottom": 452.609375
+          },
+          "position": "static",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "transform": "none",
+          "fontSize": "16px",
+          "lineHeight": "20.8px",
+          "margin": "24px 0px 0px",
+          "padding": "0px 24px"
+        }
+      ]
+    }
+  },
+  {
+    "surface": "contact",
+    "width": 1440,
+    "state": {
+      "overflow": -15,
+      "hero": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "position": "relative",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "margin": "0px",
+        "padding": "0px"
+      },
+      "scene": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "position": "absolute",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "margin": "0px",
+        "padding": "0px"
+      },
+      "title": {
+        "box": {
+          "x": 332.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 117.59375,
+          "right": 1092.5,
+          "bottom": 349.609375
+        },
+        "position": "static",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "56px",
+        "lineHeight": "58.8px",
+        "margin": "0px",
+        "padding": "0px"
+      },
+      "images": [
+        {
+          "box": {
+            "x": 0,
+            "y": 81.5,
+            "width": 1425,
+            "height": 475,
+            "right": 1425,
+            "bottom": 556.5
+          },
+          "position": "absolute",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "transform": "matrix(1, 0, 0, 1, -712.5, -408.5)",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "margin": "0px",
+          "padding": "0px",
+          "src": "http://127.0.0.1:6461/assets/images/template/company-contact-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        }
+      ],
+      "layout": {
+        "box": {
+          "x": 8.5,
+          "y": 0,
+          "width": 1408,
+          "height": 540,
+          "right": 1416.5,
+          "bottom": 540
+        },
+        "position": "relative",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "margin": "0px 8.5px",
+        "padding": "200px 24px 24px"
+      },
+      "actions": [
+        {
+          "box": {
+            "x": 548.34375,
+            "y": 408.609375,
+            "width": 173.46875,
+            "height": 44,
+            "right": 721.8125,
+            "bottom": 452.609375
+          },
+          "position": "static",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "transform": "none",
+          "fontSize": "16px",
+          "lineHeight": "20.8px",
+          "margin": "0px",
+          "padding": "0px 20px"
+        },
+        {
+          "box": {
+            "x": 733.8125,
+            "y": 408.609375,
+            "width": 142.828125,
+            "height": 44,
+            "right": 876.640625,
+            "bottom": 452.609375
+          },
+          "position": "static",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "transform": "none",
+          "fontSize": "16px",
+          "lineHeight": "20.8px",
+          "margin": "0px",
+          "padding": "0px 20px"
+        }
+      ]
+    }
+  },
+  {
+    "surface": "about",
+    "width": 1920,
+    "state": {
+      "overflow": -15,
+      "hero": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 1905,
+          "height": 540,
+          "right": 1905,
+          "bottom": 540
+        },
+        "position": "relative",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "margin": "0px",
+        "padding": "0px"
+      },
+      "scene": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 1905,
+          "height": 540,
+          "right": 1905,
+          "bottom": 540
+        },
+        "position": "absolute",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "margin": "0px",
+        "padding": "0px"
+      },
+      "title": {
+        "box": {
+          "x": 572.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 117.59375,
+          "right": 1332.5,
+          "bottom": 349.609375
+        },
+        "position": "static",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "56px",
+        "lineHeight": "58.8px",
+        "margin": "0px",
+        "padding": "0px"
+      },
+      "images": [
+        {
+          "box": {
+            "x": 0,
+            "y": -56.0999755859375,
+            "width": 1905,
+            "height": 635,
+            "right": 1905,
+            "bottom": 578.9000244140625
+          },
+          "position": "absolute",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "transform": "matrix(1, 0, 0, 1, -952.5, -546.1)",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "margin": "0px",
+          "padding": "0px",
+          "src": "http://127.0.0.1:6461/assets/images/template/company-about-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        }
+      ],
+      "layout": {
+        "box": {
+          "x": 248.5,
+          "y": 0,
+          "width": 1408,
+          "height": 540,
+          "right": 1656.5,
+          "bottom": 540
+        },
+        "position": "relative",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "margin": "0px 248.5px",
+        "padding": "200px 24px 24px"
+      },
+      "actions": [
+        {
+          "box": {
+            "x": 754.046875,
+            "y": 357.609375,
+            "width": 420.890625,
+            "height": 27,
+            "right": 1174.9375,
+            "bottom": 384.609375
+          },
+          "position": "static",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "transform": "none",
+          "fontSize": "18px",
+          "lineHeight": "27px",
+          "margin": "0px",
+          "padding": "0px"
+        },
+        {
+          "box": {
+            "x": 843.875,
+            "y": 408.609375,
+            "width": 217.234375,
+            "height": 44,
+            "right": 1061.109375,
+            "bottom": 452.609375
+          },
+          "position": "static",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "transform": "none",
+          "fontSize": "16px",
+          "lineHeight": "20.8px",
+          "margin": "24px 0px 0px",
+          "padding": "0px 24px"
+        }
+      ]
+    }
+  },
+  {
+    "surface": "contact",
+    "width": 1920,
+    "state": {
+      "overflow": -15,
+      "hero": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 1905,
+          "height": 540,
+          "right": 1905,
+          "bottom": 540
+        },
+        "position": "relative",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "margin": "0px",
+        "padding": "0px"
+      },
+      "scene": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 1905,
+          "height": 540,
+          "right": 1905,
+          "bottom": 540
+        },
+        "position": "absolute",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "margin": "0px",
+        "padding": "0px"
+      },
+      "title": {
+        "box": {
+          "x": 572.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 117.59375,
+          "right": 1332.5,
+          "bottom": 349.609375
+        },
+        "position": "static",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "56px",
+        "lineHeight": "58.8px",
+        "margin": "0px",
+        "padding": "0px"
+      },
+      "images": [
+        {
+          "box": {
+            "x": 0,
+            "y": -56.0999755859375,
+            "width": 1905,
+            "height": 635,
+            "right": 1905,
+            "bottom": 578.9000244140625
+          },
+          "position": "absolute",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "transform": "matrix(1, 0, 0, 1, -952.5, -546.1)",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "margin": "0px",
+          "padding": "0px",
+          "src": "http://127.0.0.1:6461/assets/images/template/company-contact-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        }
+      ],
+      "layout": {
+        "box": {
+          "x": 248.5,
+          "y": 0,
+          "width": 1408,
+          "height": 540,
+          "right": 1656.5,
+          "bottom": 540
+        },
+        "position": "relative",
+        "objectFit": "fill",
+        "objectPosition": "50% 50%",
+        "transform": "none",
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "margin": "0px 248.5px",
+        "padding": "200px 24px 24px"
+      },
+      "actions": [
+        {
+          "box": {
+            "x": 788.34375,
+            "y": 408.609375,
+            "width": 173.46875,
+            "height": 44,
+            "right": 961.8125,
+            "bottom": 452.609375
+          },
+          "position": "static",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "transform": "none",
+          "fontSize": "16px",
+          "lineHeight": "20.8px",
+          "margin": "0px",
+          "padding": "0px 20px"
+        },
+        {
+          "box": {
+            "x": 973.8125,
+            "y": 408.609375,
+            "width": 142.828125,
+            "height": 44,
+            "right": 1116.640625,
+            "bottom": 452.609375
+          },
+          "position": "static",
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "transform": "none",
+          "fontSize": "16px",
+          "lineHeight": "20.8px",
+          "margin": "0px",
+          "padding": "0px 20px"
+        }
+      ]
+    }
+  }
+]

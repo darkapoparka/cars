@@ -1,0 +1,2370 @@
+[
+  {
+    "locale": "bg",
+    "width": 320,
+    "name": "empty",
+    "state": {
+      "overflow": -15,
+      "hero": null,
+      "search": null,
+      "keyword": null,
+      "heading": null,
+      "filter": null,
+      "sort": null,
+      "summary": null,
+      "clear": null,
+      "firstCard": {
+        "box": {
+          "x": 12,
+          "y": 112,
+          "width": 281,
+          "height": 135,
+          "right": 293,
+          "bottom": 247
+        },
+        "text": "Audi\n\nRS 6 Avant\n68 804 €\n2024\n99 701 km\nБензин\nБензин\nАвтомат\nАвтоматик\nКомби",
+        "label": null
+      },
+      "cardCount": 7,
+      "chips": []
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 320,
+    "name": "applied",
+    "state": {
+      "overflow": -15,
+      "hero": null,
+      "search": null,
+      "keyword": null,
+      "heading": null,
+      "filter": null,
+      "sort": null,
+      "summary": null,
+      "clear": null,
+      "firstCard": {
+        "box": {
+          "x": 12,
+          "y": 112,
+          "width": 281,
+          "height": 135,
+          "right": 293,
+          "bottom": 247
+        },
+        "text": "Audi\n\nRS Q8\n57 480 €\n2021\n94 709 km\nБензин\nБензин\nАвтомат\nАвтоматик\nSUV",
+        "label": null
+      },
+      "cardCount": 2,
+      "chips": [
+        {
+          "text": "Audi",
+          "href": "http://127.0.0.1:6461/cars?year_min=2020&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "text": "От 2020 г.",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      ]
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 320,
+    "name": "overflow",
+    "state": {
+      "overflow": -15,
+      "hero": null,
+      "search": null,
+      "keyword": null,
+      "heading": null,
+      "filter": null,
+      "sort": null,
+      "summary": null,
+      "clear": null,
+      "firstCard": null,
+      "cardCount": 0,
+      "chips": [
+        {
+          "text": "Audi",
+          "href": "http://127.0.0.1:6461/cars?make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "text": "BMW",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "text": "Mercedes-Benz",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "text": "SUV",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "text": "Бензин",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "text": "Автоматик",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "text": "От 2020 г.",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "text": "До 2025 г.",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "text": "От 1000 €",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "text": "До 200 000 €",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "text": "До 100 000 км",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      ]
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 320,
+    "name": "zero",
+    "state": {
+      "overflow": -15,
+      "hero": null,
+      "search": null,
+      "keyword": null,
+      "heading": null,
+      "filter": null,
+      "sort": null,
+      "summary": null,
+      "clear": null,
+      "firstCard": null,
+      "cardCount": 0,
+      "chips": [
+        {
+          "text": "Търсете: no-matching-car",
+          "href": "http://127.0.0.1:6461/cars?sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      ]
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 390,
+    "name": "empty",
+    "state": {
+      "overflow": -15,
+      "hero": null,
+      "search": null,
+      "keyword": null,
+      "heading": null,
+      "filter": null,
+      "sort": null,
+      "summary": null,
+      "clear": null,
+      "firstCard": {
+        "box": {
+          "x": 12,
+          "y": 112,
+          "width": 351,
+          "height": 135,
+          "right": 363,
+          "bottom": 247
+        },
+        "text": "Audi\n\nRS 6 Avant\n68 804 €\n2024\n99 701 km\nБензин\nБензин\nАвтомат\nАвтоматик\nКомби",
+        "label": null
+      },
+      "cardCount": 7,
+      "chips": []
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 390,
+    "name": "applied",
+    "state": {
+      "overflow": -15,
+      "hero": null,
+      "search": null,
+      "keyword": null,
+      "heading": null,
+      "filter": null,
+      "sort": null,
+      "summary": null,
+      "clear": null,
+      "firstCard": {
+        "box": {
+          "x": 12,
+          "y": 112,
+          "width": 351,
+          "height": 135,
+          "right": 363,
+          "bottom": 247
+        },
+        "text": "Audi\n\nRS Q8\n57 480 €\n2021\n94 709 km\nБензин\nБензин\nАвтомат\nАвтоматик\nSUV",
+        "label": null
+      },
+      "cardCount": 2,
+      "chips": [
+        {
+          "text": "Audi",
+          "href": "http://127.0.0.1:6461/cars?year_min=2020&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "text": "От 2020 г.",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      ]
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 390,
+    "name": "overflow",
+    "state": {
+      "overflow": -15,
+      "hero": null,
+      "search": null,
+      "keyword": null,
+      "heading": null,
+      "filter": null,
+      "sort": null,
+      "summary": null,
+      "clear": null,
+      "firstCard": null,
+      "cardCount": 0,
+      "chips": [
+        {
+          "text": "Audi",
+          "href": "http://127.0.0.1:6461/cars?make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "text": "BMW",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "text": "Mercedes-Benz",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "text": "SUV",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "text": "Бензин",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "text": "Автоматик",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "text": "От 2020 г.",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "text": "До 2025 г.",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "text": "От 1000 €",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "text": "До 200 000 €",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "text": "До 100 000 км",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      ]
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 390,
+    "name": "zero",
+    "state": {
+      "overflow": -15,
+      "hero": null,
+      "search": null,
+      "keyword": null,
+      "heading": null,
+      "filter": null,
+      "sort": null,
+      "summary": null,
+      "clear": null,
+      "firstCard": null,
+      "cardCount": 0,
+      "chips": [
+        {
+          "text": "Търсете: no-matching-car",
+          "href": "http://127.0.0.1:6461/cars?sort=price-asc",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      ]
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 992,
+    "name": "empty",
+    "state": {
+      "overflow": -15,
+      "hero": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 977,
+          "height": 540,
+          "right": 977,
+          "bottom": 540
+        },
+        "text": "Намерете следващия си автомобил",
+        "label": null
+      },
+      "search": {
+        "box": {
+          "x": 42,
+          "y": 358,
+          "width": 893,
+          "height": 60,
+          "right": 935,
+          "bottom": 418
+        },
+        "text": "Марка, модел или ключова дума",
+        "label": null
+      },
+      "keyword": {
+        "box": {
+          "x": 48,
+          "y": 364,
+          "width": 825,
+          "height": 48,
+          "right": 873,
+          "bottom": 412
+        },
+        "text": "Марка, модел или ключова дума",
+        "label": "Марка, модел или ключова дума"
+      },
+      "heading": {
+        "box": {
+          "x": 24,
+          "y": 556,
+          "width": 929,
+          "height": 44,
+          "right": 953,
+          "bottom": 600
+        },
+        "text": "7 автомобила\nФилтри\nСортирайте автомобилите\nПрепоръчани\nПриложете сортирането",
+        "label": null
+      },
+      "filter": {
+        "box": {
+          "x": 668.515625,
+          "y": 556,
+          "width": 117.40625,
+          "height": 44,
+          "right": 785.921875,
+          "bottom": 600
+        },
+        "text": "Филтри",
+        "label": null
+      },
+      "sort": {
+        "box": {
+          "x": 793.921875,
+          "y": 556,
+          "width": 159.078125,
+          "height": 44,
+          "right": 953,
+          "bottom": 600
+        },
+        "text": "Сортирайте автомобилите\nПрепоръчани\nПриложете сортирането",
+        "label": null
+      },
+      "summary": {
+        "box": {
+          "x": 24,
+          "y": 567.59375,
+          "width": 620.515625,
+          "height": 20.796875,
+          "right": 644.515625,
+          "bottom": 588.390625
+        },
+        "text": "7 автомобила",
+        "label": null
+      },
+      "clear": null,
+      "firstCard": {
+        "box": {
+          "x": 24,
+          "y": 616,
+          "width": 297.65625,
+          "height": 355.25,
+          "right": 321.65625,
+          "bottom": 971.25
+        },
+        "text": "99 701 km\n2024\n\nAudi\n\nRS 6 Avant\n68 804 €\nБензин\nБензин\nАвтоматик\nАвтоматик",
+        "label": null
+      },
+      "cardCount": 7,
+      "chips": []
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 992,
+    "name": "applied",
+    "state": {
+      "overflow": -15,
+      "hero": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 977,
+          "height": 540,
+          "right": 977,
+          "bottom": 540
+        },
+        "text": "Намерете следващия си автомобил",
+        "label": null
+      },
+      "search": {
+        "box": {
+          "x": 42,
+          "y": 358,
+          "width": 893,
+          "height": 60,
+          "right": 935,
+          "bottom": 418
+        },
+        "text": "Марка, модел или ключова дума",
+        "label": null
+      },
+      "keyword": {
+        "box": {
+          "x": 48,
+          "y": 364,
+          "width": 825,
+          "height": 48,
+          "right": 873,
+          "bottom": 412
+        },
+        "text": "Марка, модел или ключова дума",
+        "label": "Марка, модел или ключова дума"
+      },
+      "heading": {
+        "box": {
+          "x": 24,
+          "y": 556,
+          "width": 929,
+          "height": 44,
+          "right": 953,
+          "bottom": 600
+        },
+        "text": "Audi\nОт 2020 г.\nИзчисти\nФилтри\n2\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането",
+        "label": null
+      },
+      "filter": {
+        "box": {
+          "x": 622.84375,
+          "y": 556,
+          "width": 145.40625,
+          "height": 44,
+          "right": 768.25,
+          "bottom": 600
+        },
+        "text": "Филтри\n2",
+        "label": null
+      },
+      "sort": {
+        "box": {
+          "x": 776.25,
+          "y": 556,
+          "width": 176.75,
+          "height": 44,
+          "right": 953,
+          "bottom": 600
+        },
+        "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането",
+        "label": null
+      },
+      "summary": {
+        "box": {
+          "x": 24,
+          "y": 556,
+          "width": 574.84375,
+          "height": 44,
+          "right": 598.84375,
+          "bottom": 600
+        },
+        "text": "Audi\nОт 2020 г.\nИзчисти",
+        "label": null
+      },
+      "clear": {
+        "box": {
+          "x": 517.34375,
+          "y": 556,
+          "width": 81.5,
+          "height": 44,
+          "right": 598.84375,
+          "bottom": 600
+        },
+        "text": "Изчисти",
+        "label": null
+      },
+      "firstCard": {
+        "box": {
+          "x": 24,
+          "y": 616,
+          "width": 297.65625,
+          "height": 355.25,
+          "right": 321.65625,
+          "bottom": 971.25
+        },
+        "text": "94 709 km\n2021\n\nAudi\n\nRS Q8\n57 480 €\nБензин\nБензин\nАвтоматик\nАвтоматик",
+        "label": null
+      },
+      "cardCount": 2,
+      "chips": [
+        {
+          "text": "Audi",
+          "href": "http://127.0.0.1:6461/cars?year_min=2020&sort=price-asc",
+          "box": {
+            "x": 24,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 106.625,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "От 2020 г.",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&sort=price-asc",
+          "box": {
+            "x": 114.625,
+            "y": 558,
+            "width": 127.265625,
+            "height": 40,
+            "right": 241.890625,
+            "bottom": 598
+          }
+        }
+      ]
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 992,
+    "name": "overflow",
+    "state": {
+      "overflow": -15,
+      "hero": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 977,
+          "height": 540,
+          "right": 977,
+          "bottom": 540
+        },
+        "text": "Намерете следващия си автомобил",
+        "label": null
+      },
+      "search": {
+        "box": {
+          "x": 42,
+          "y": 358,
+          "width": 893,
+          "height": 60,
+          "right": 935,
+          "bottom": 418
+        },
+        "text": "Марка, модел или ключова дума",
+        "label": null
+      },
+      "keyword": {
+        "box": {
+          "x": 48,
+          "y": 364,
+          "width": 825,
+          "height": 48,
+          "right": 873,
+          "bottom": 412
+        },
+        "text": "Марка, модел или ключова дума",
+        "label": "Марка, модел или ключова дума"
+      },
+      "heading": {
+        "box": {
+          "x": 24,
+          "y": 556,
+          "width": 929,
+          "height": 44,
+          "right": 953,
+          "bottom": 600
+        },
+        "text": "Audi\nBMW\nMercedes-Benz\nSUV\nБензин\nАвтоматик\nОт 2020 г.\nДо 2025 г.\nОт 1000 €\nДо 200 000 €\nДо 100 000 км\nИзчисти\nФилтри\n11\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането",
+        "label": null
+      },
+      "filter": {
+        "box": {
+          "x": 621.71875,
+          "y": 556,
+          "width": 146.53125,
+          "height": 44,
+          "right": 768.25,
+          "bottom": 600
+        },
+        "text": "Филтри\n11",
+        "label": null
+      },
+      "sort": {
+        "box": {
+          "x": 776.25,
+          "y": 556,
+          "width": 176.75,
+          "height": 44,
+          "right": 953,
+          "bottom": 600
+        },
+        "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането",
+        "label": null
+      },
+      "summary": {
+        "box": {
+          "x": 24,
+          "y": 556,
+          "width": 573.71875,
+          "height": 44,
+          "right": 597.71875,
+          "bottom": 600
+        },
+        "text": "Audi\nBMW\nMercedes-Benz\nSUV\nБензин\nАвтоматик\nОт 2020 г.\nДо 2025 г.\nОт 1000 €\nДо 200 000 €\nДо 100 000 км\nИзчисти",
+        "label": null
+      },
+      "clear": {
+        "box": {
+          "x": 516.21875,
+          "y": 556,
+          "width": 81.5,
+          "height": 44,
+          "right": 597.71875,
+          "bottom": 600
+        },
+        "text": "Изчисти",
+        "label": null
+      },
+      "firstCard": null,
+      "cardCount": 0,
+      "chips": [
+        {
+          "text": "Audi",
+          "href": "http://127.0.0.1:6461/cars?make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 24,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 106.625,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "BMW",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 114.625,
+            "y": 558,
+            "width": 88.984375,
+            "height": 40,
+            "right": 203.609375,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "Mercedes-Benz",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 211.609375,
+            "y": 558,
+            "width": 169.34375,
+            "height": 40,
+            "right": 380.953125,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "SUV",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 388.953125,
+            "y": 558,
+            "width": 81.359375,
+            "height": 40,
+            "right": 470.3125,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "Бензин",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 478.3125,
+            "y": 558,
+            "width": 104.234375,
+            "height": 40,
+            "right": 582.546875,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "Автоматик",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 590.546875,
+            "y": 558,
+            "width": 133.078125,
+            "height": 40,
+            "right": 723.625,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "От 2020 г.",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 731.625,
+            "y": 558,
+            "width": 127.265625,
+            "height": 40,
+            "right": 858.890625,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "До 2025 г.",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 866.890625,
+            "y": 558,
+            "width": 129.53125,
+            "height": 40,
+            "right": 996.421875,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "От 1000 €",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 1004.421875,
+            "y": 558,
+            "width": 124.484375,
+            "height": 40,
+            "right": 1128.90625,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "До 200 000 €",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 1136.90625,
+            "y": 558,
+            "width": 155.4375,
+            "height": 40,
+            "right": 1292.34375,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "До 100 000 км",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&sort=price-asc",
+          "box": {
+            "x": 1300.34375,
+            "y": 558,
+            "width": 162.8125,
+            "height": 40,
+            "right": 1463.15625,
+            "bottom": 598
+          }
+        }
+      ]
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 992,
+    "name": "zero",
+    "state": {
+      "overflow": -15,
+      "hero": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 977,
+          "height": 540,
+          "right": 977,
+          "bottom": 540
+        },
+        "text": "Намерете следващия си автомобил",
+        "label": null
+      },
+      "search": {
+        "box": {
+          "x": 42,
+          "y": 358,
+          "width": 893,
+          "height": 60,
+          "right": 935,
+          "bottom": 418
+        },
+        "text": "no-matching-car",
+        "label": null
+      },
+      "keyword": {
+        "box": {
+          "x": 48,
+          "y": 364,
+          "width": 825,
+          "height": 48,
+          "right": 873,
+          "bottom": 412
+        },
+        "text": "no-matching-car",
+        "label": "Марка, модел или ключова дума"
+      },
+      "heading": {
+        "box": {
+          "x": 24,
+          "y": 556,
+          "width": 929,
+          "height": 44,
+          "right": 953,
+          "bottom": 600
+        },
+        "text": "Търсете: no-matching-car\nИзчисти\nФилтри\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането",
+        "label": null
+      },
+      "filter": {
+        "box": {
+          "x": 650.84375,
+          "y": 556,
+          "width": 117.40625,
+          "height": 44,
+          "right": 768.25,
+          "bottom": 600
+        },
+        "text": "Филтри",
+        "label": null
+      },
+      "sort": {
+        "box": {
+          "x": 776.25,
+          "y": 556,
+          "width": 176.75,
+          "height": 44,
+          "right": 953,
+          "bottom": 600
+        },
+        "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането",
+        "label": null
+      },
+      "summary": {
+        "box": {
+          "x": 24,
+          "y": 556,
+          "width": 602.84375,
+          "height": 44,
+          "right": 626.84375,
+          "bottom": 600
+        },
+        "text": "Търсете: no-matching-car\nИзчисти",
+        "label": null
+      },
+      "clear": {
+        "box": {
+          "x": 545.34375,
+          "y": 556,
+          "width": 81.5,
+          "height": 44,
+          "right": 626.84375,
+          "bottom": 600
+        },
+        "text": "Изчисти",
+        "label": null
+      },
+      "firstCard": null,
+      "cardCount": 0,
+      "chips": [
+        {
+          "text": "Търсете: no-matching-car",
+          "href": "http://127.0.0.1:6461/cars?sort=price-asc",
+          "box": {
+            "x": 24,
+            "y": 558,
+            "width": 240,
+            "height": 40,
+            "right": 264,
+            "bottom": 598
+          }
+        }
+      ]
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 1440,
+    "name": "empty",
+    "state": {
+      "overflow": -15,
+      "hero": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "text": "Намерете следващия си автомобил",
+        "label": null
+      },
+      "search": {
+        "box": {
+          "x": 250.5,
+          "y": 358,
+          "width": 924,
+          "height": 60,
+          "right": 1174.5,
+          "bottom": 418
+        },
+        "text": "Марка, модел или ключова дума",
+        "label": null
+      },
+      "keyword": {
+        "box": {
+          "x": 256.5,
+          "y": 364,
+          "width": 856,
+          "height": 48,
+          "right": 1112.5,
+          "bottom": 412
+        },
+        "text": "Марка, модел или ключова дума",
+        "label": "Марка, модел или ключова дума"
+      },
+      "heading": {
+        "box": {
+          "x": 32.5,
+          "y": 556,
+          "width": 1360,
+          "height": 44,
+          "right": 1392.5,
+          "bottom": 600
+        },
+        "text": "7 автомобила\nФилтри\nСортирайте автомобилите\nПрепоръчани\nПриложете сортирането",
+        "label": null
+      },
+      "filter": {
+        "box": {
+          "x": 1080.015625,
+          "y": 556,
+          "width": 117.40625,
+          "height": 44,
+          "right": 1197.421875,
+          "bottom": 600
+        },
+        "text": "Филтри",
+        "label": null
+      },
+      "sort": {
+        "box": {
+          "x": 1205.421875,
+          "y": 556,
+          "width": 187.078125,
+          "height": 44,
+          "right": 1392.5,
+          "bottom": 600
+        },
+        "text": "Сортирайте автомобилите\nПрепоръчани\nПриложете сортирането",
+        "label": null
+      },
+      "summary": {
+        "box": {
+          "x": 32.5,
+          "y": 567.59375,
+          "width": 1023.515625,
+          "height": 20.796875,
+          "right": 1056.015625,
+          "bottom": 588.390625
+        },
+        "text": "7 автомобила",
+        "label": null
+      },
+      "clear": null,
+      "firstCard": {
+        "box": {
+          "x": 32.5,
+          "y": 616,
+          "width": 259.1875,
+          "height": 329.609375,
+          "right": 291.6875,
+          "bottom": 945.609375
+        },
+        "text": "99 701 km\n2024\n\nAudi\n\nRS 6 Avant\n68 804 €\nБензин\nБензин\nАвтоматик\nАвтоматик",
+        "label": null
+      },
+      "cardCount": 7,
+      "chips": []
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 1440,
+    "name": "applied",
+    "state": {
+      "overflow": -15,
+      "hero": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "text": "Намерете следващия си автомобил",
+        "label": null
+      },
+      "search": {
+        "box": {
+          "x": 250.5,
+          "y": 358,
+          "width": 924,
+          "height": 60,
+          "right": 1174.5,
+          "bottom": 418
+        },
+        "text": "Марка, модел или ключова дума",
+        "label": null
+      },
+      "keyword": {
+        "box": {
+          "x": 256.5,
+          "y": 364,
+          "width": 856,
+          "height": 48,
+          "right": 1112.5,
+          "bottom": 412
+        },
+        "text": "Марка, модел или ключова дума",
+        "label": "Марка, модел или ключова дума"
+      },
+      "heading": {
+        "box": {
+          "x": 32.5,
+          "y": 556,
+          "width": 1360,
+          "height": 44,
+          "right": 1392.5,
+          "bottom": 600
+        },
+        "text": "Audi\nОт 2020 г.\nИзчисти\nФилтри\n2\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането",
+        "label": null
+      },
+      "filter": {
+        "box": {
+          "x": 1062.34375,
+          "y": 556,
+          "width": 145.40625,
+          "height": 44,
+          "right": 1207.75,
+          "bottom": 600
+        },
+        "text": "Филтри\n2",
+        "label": null
+      },
+      "sort": {
+        "box": {
+          "x": 1215.75,
+          "y": 556,
+          "width": 176.75,
+          "height": 44,
+          "right": 1392.5,
+          "bottom": 600
+        },
+        "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането",
+        "label": null
+      },
+      "summary": {
+        "box": {
+          "x": 32.5,
+          "y": 556,
+          "width": 1005.84375,
+          "height": 44,
+          "right": 1038.34375,
+          "bottom": 600
+        },
+        "text": "Audi\nОт 2020 г.\nИзчисти",
+        "label": null
+      },
+      "clear": {
+        "box": {
+          "x": 956.84375,
+          "y": 556,
+          "width": 81.5,
+          "height": 44,
+          "right": 1038.34375,
+          "bottom": 600
+        },
+        "text": "Изчисти",
+        "label": null
+      },
+      "firstCard": {
+        "box": {
+          "x": 32.5,
+          "y": 616,
+          "width": 259.1875,
+          "height": 329.609375,
+          "right": 291.6875,
+          "bottom": 945.609375
+        },
+        "text": "94 709 km\n2021\n\nAudi\n\nRS Q8\n57 480 €\nБензин\nБензин\nАвтоматик\nАвтоматик",
+        "label": null
+      },
+      "cardCount": 2,
+      "chips": [
+        {
+          "text": "Audi",
+          "href": "http://127.0.0.1:6461/cars?year_min=2020&sort=price-asc",
+          "box": {
+            "x": 32.5,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 115.125,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "От 2020 г.",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&sort=price-asc",
+          "box": {
+            "x": 123.125,
+            "y": 558,
+            "width": 127.265625,
+            "height": 40,
+            "right": 250.390625,
+            "bottom": 598
+          }
+        }
+      ]
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 1440,
+    "name": "overflow",
+    "state": {
+      "overflow": -15,
+      "hero": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "text": "Намерете следващия си автомобил",
+        "label": null
+      },
+      "search": {
+        "box": {
+          "x": 250.5,
+          "y": 358,
+          "width": 924,
+          "height": 60,
+          "right": 1174.5,
+          "bottom": 418
+        },
+        "text": "Марка, модел или ключова дума",
+        "label": null
+      },
+      "keyword": {
+        "box": {
+          "x": 256.5,
+          "y": 364,
+          "width": 856,
+          "height": 48,
+          "right": 1112.5,
+          "bottom": 412
+        },
+        "text": "Марка, модел или ключова дума",
+        "label": "Марка, модел или ключова дума"
+      },
+      "heading": {
+        "box": {
+          "x": 32.5,
+          "y": 556,
+          "width": 1360,
+          "height": 44,
+          "right": 1392.5,
+          "bottom": 600
+        },
+        "text": "Audi\nBMW\nMercedes-Benz\nSUV\nБензин\nАвтоматик\nОт 2020 г.\nДо 2025 г.\nОт 1000 €\nДо 200 000 €\nДо 100 000 км\nИзчисти\nФилтри\n11\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането",
+        "label": null
+      },
+      "filter": {
+        "box": {
+          "x": 1061.21875,
+          "y": 556,
+          "width": 146.53125,
+          "height": 44,
+          "right": 1207.75,
+          "bottom": 600
+        },
+        "text": "Филтри\n11",
+        "label": null
+      },
+      "sort": {
+        "box": {
+          "x": 1215.75,
+          "y": 556,
+          "width": 176.75,
+          "height": 44,
+          "right": 1392.5,
+          "bottom": 600
+        },
+        "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането",
+        "label": null
+      },
+      "summary": {
+        "box": {
+          "x": 32.5,
+          "y": 556,
+          "width": 1004.71875,
+          "height": 44,
+          "right": 1037.21875,
+          "bottom": 600
+        },
+        "text": "Audi\nBMW\nMercedes-Benz\nSUV\nБензин\nАвтоматик\nОт 2020 г.\nДо 2025 г.\nОт 1000 €\nДо 200 000 €\nДо 100 000 км\nИзчисти",
+        "label": null
+      },
+      "clear": {
+        "box": {
+          "x": 955.71875,
+          "y": 556,
+          "width": 81.5,
+          "height": 44,
+          "right": 1037.21875,
+          "bottom": 600
+        },
+        "text": "Изчисти",
+        "label": null
+      },
+      "firstCard": null,
+      "cardCount": 0,
+      "chips": [
+        {
+          "text": "Audi",
+          "href": "http://127.0.0.1:6461/cars?make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 32.5,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 115.125,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "BMW",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 123.125,
+            "y": 558,
+            "width": 88.984375,
+            "height": 40,
+            "right": 212.109375,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "Mercedes-Benz",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 220.109375,
+            "y": 558,
+            "width": 169.34375,
+            "height": 40,
+            "right": 389.453125,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "SUV",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 397.453125,
+            "y": 558,
+            "width": 81.359375,
+            "height": 40,
+            "right": 478.8125,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "Бензин",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 486.8125,
+            "y": 558,
+            "width": 104.234375,
+            "height": 40,
+            "right": 591.046875,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "Автоматик",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 599.046875,
+            "y": 558,
+            "width": 133.078125,
+            "height": 40,
+            "right": 732.125,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "От 2020 г.",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 740.125,
+            "y": 558,
+            "width": 127.265625,
+            "height": 40,
+            "right": 867.390625,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "До 2025 г.",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 875.390625,
+            "y": 558,
+            "width": 129.53125,
+            "height": 40,
+            "right": 1004.921875,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "От 1000 €",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 1012.921875,
+            "y": 558,
+            "width": 124.484375,
+            "height": 40,
+            "right": 1137.40625,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "До 200 000 €",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 1145.40625,
+            "y": 558,
+            "width": 155.4375,
+            "height": 40,
+            "right": 1300.84375,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "До 100 000 км",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&sort=price-asc",
+          "box": {
+            "x": 1308.84375,
+            "y": 558,
+            "width": 162.8125,
+            "height": 40,
+            "right": 1471.65625,
+            "bottom": 598
+          }
+        }
+      ]
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 1440,
+    "name": "zero",
+    "state": {
+      "overflow": -15,
+      "hero": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "text": "Намерете следващия си автомобил",
+        "label": null
+      },
+      "search": {
+        "box": {
+          "x": 250.5,
+          "y": 358,
+          "width": 924,
+          "height": 60,
+          "right": 1174.5,
+          "bottom": 418
+        },
+        "text": "no-matching-car",
+        "label": null
+      },
+      "keyword": {
+        "box": {
+          "x": 256.5,
+          "y": 364,
+          "width": 856,
+          "height": 48,
+          "right": 1112.5,
+          "bottom": 412
+        },
+        "text": "no-matching-car",
+        "label": "Марка, модел или ключова дума"
+      },
+      "heading": {
+        "box": {
+          "x": 32.5,
+          "y": 556,
+          "width": 1360,
+          "height": 44,
+          "right": 1392.5,
+          "bottom": 600
+        },
+        "text": "Търсете: no-matching-car\nИзчисти\nФилтри\nСортирайте автомобилите\nНай-ниска цена\nПриложете сортирането",
+        "label": null
+      },
+      "filter": {
+        "box": {
+          "x": 1090.34375,
+          "y": 556,
+          "width": 117.40625,
+          "height": 44,
+          "right": 1207.75,
+          "bottom": 600
+        },
+        "text": "Филтри",
+        "label": null
+      },
+      "sort": {
+        "box": {
+          "x": 1215.75,
+          "y": 556,
+          "width": 176.75,
+          "height": 44,
+          "right": 1392.5,
+          "bottom": 600
+        },
+        "text": "Сортирайте автомобилите\nНай-ниска цена\nПриложете сортирането",
+        "label": null
+      },
+      "summary": {
+        "box": {
+          "x": 32.5,
+          "y": 556,
+          "width": 1033.84375,
+          "height": 44,
+          "right": 1066.34375,
+          "bottom": 600
+        },
+        "text": "Търсете: no-matching-car\nИзчисти",
+        "label": null
+      },
+      "clear": {
+        "box": {
+          "x": 984.84375,
+          "y": 556,
+          "width": 81.5,
+          "height": 44,
+          "right": 1066.34375,
+          "bottom": 600
+        },
+        "text": "Изчисти",
+        "label": null
+      },
+      "firstCard": null,
+      "cardCount": 0,
+      "chips": [
+        {
+          "text": "Търсете: no-matching-car",
+          "href": "http://127.0.0.1:6461/cars?sort=price-asc",
+          "box": {
+            "x": 32.5,
+            "y": 558,
+            "width": 240,
+            "height": 40,
+            "right": 272.5,
+            "bottom": 598
+          }
+        }
+      ]
+    }
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "name": "empty",
+    "state": {
+      "overflow": -15,
+      "hero": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "text": "Find your next car",
+        "label": null
+      },
+      "search": {
+        "box": {
+          "x": 250.5,
+          "y": 358,
+          "width": 924,
+          "height": 60,
+          "right": 1174.5,
+          "bottom": 418
+        },
+        "text": "Make, model or keyword",
+        "label": null
+      },
+      "keyword": {
+        "box": {
+          "x": 256.5,
+          "y": 364,
+          "width": 856,
+          "height": 48,
+          "right": 1112.5,
+          "bottom": 412
+        },
+        "text": "Make, model or keyword",
+        "label": "Make, model or keyword"
+      },
+      "heading": {
+        "box": {
+          "x": 32.5,
+          "y": 556,
+          "width": 1360,
+          "height": 44,
+          "right": 1392.5,
+          "bottom": 600
+        },
+        "text": "7 cars\nFilters\nSort cars\nRecommended\nApply sorting",
+        "label": null
+      },
+      "filter": {
+        "box": {
+          "x": 1114.078125,
+          "y": 556,
+          "width": 104.765625,
+          "height": 44,
+          "right": 1218.84375,
+          "bottom": 600
+        },
+        "text": "Filters",
+        "label": null
+      },
+      "sort": {
+        "box": {
+          "x": 1226.84375,
+          "y": 556,
+          "width": 165.65625,
+          "height": 44,
+          "right": 1392.5,
+          "bottom": 600
+        },
+        "text": "Sort cars\nRecommended\nApply sorting",
+        "label": null
+      },
+      "summary": {
+        "box": {
+          "x": 32.5,
+          "y": 567.59375,
+          "width": 1057.578125,
+          "height": 20.796875,
+          "right": 1090.078125,
+          "bottom": 588.390625
+        },
+        "text": "7 cars",
+        "label": null
+      },
+      "clear": null,
+      "firstCard": {
+        "box": {
+          "x": 32.5,
+          "y": 616,
+          "width": 259.1875,
+          "height": 329.609375,
+          "right": 291.6875,
+          "bottom": 945.609375
+        },
+        "text": "99,701 km\n2024\n\nAudi\n\nRS 6 Avant\n€68,804\nPetrol\nPetrol\nAutomatic\nAutomatic",
+        "label": null
+      },
+      "cardCount": 7,
+      "chips": []
+    }
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "name": "applied",
+    "state": {
+      "overflow": -15,
+      "hero": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "text": "Find your next car",
+        "label": null
+      },
+      "search": {
+        "box": {
+          "x": 250.5,
+          "y": 358,
+          "width": 924,
+          "height": 60,
+          "right": 1174.5,
+          "bottom": 418
+        },
+        "text": "Make, model or keyword",
+        "label": null
+      },
+      "keyword": {
+        "box": {
+          "x": 256.5,
+          "y": 364,
+          "width": 856,
+          "height": 48,
+          "right": 1112.5,
+          "bottom": 412
+        },
+        "text": "Make, model or keyword",
+        "label": "Make, model or keyword"
+      },
+      "heading": {
+        "box": {
+          "x": 32.5,
+          "y": 556,
+          "width": 1360,
+          "height": 44,
+          "right": 1392.5,
+          "bottom": 600
+        },
+        "text": "Audi\nFrom 2020\nClear\nFilters\n2\nSort cars\nLowest price\nApply sorting",
+        "label": null
+      },
+      "filter": {
+        "box": {
+          "x": 1103.109375,
+          "y": 556,
+          "width": 132.765625,
+          "height": 44,
+          "right": 1235.875,
+          "bottom": 600
+        },
+        "text": "Filters\n2",
+        "label": null
+      },
+      "sort": {
+        "box": {
+          "x": 1243.875,
+          "y": 556,
+          "width": 148.625,
+          "height": 44,
+          "right": 1392.5,
+          "bottom": 600
+        },
+        "text": "Sort cars\nLowest price\nApply sorting",
+        "label": null
+      },
+      "summary": {
+        "box": {
+          "x": 32.5,
+          "y": 556,
+          "width": 1046.609375,
+          "height": 44,
+          "right": 1079.109375,
+          "bottom": 600
+        },
+        "text": "Audi\nFrom 2020\nClear",
+        "label": null
+      },
+      "clear": {
+        "box": {
+          "x": 1022.828125,
+          "y": 556,
+          "width": 56.28125,
+          "height": 44,
+          "right": 1079.109375,
+          "bottom": 600
+        },
+        "text": "Clear",
+        "label": null
+      },
+      "firstCard": {
+        "box": {
+          "x": 32.5,
+          "y": 616,
+          "width": 259.1875,
+          "height": 329.609375,
+          "right": 291.6875,
+          "bottom": 945.609375
+        },
+        "text": "94,709 km\n2021\n\nAudi\n\nRS Q8\n€57,480\nPetrol\nPetrol\nAutomatic\nAutomatic",
+        "label": null
+      },
+      "cardCount": 2,
+      "chips": [
+        {
+          "text": "Audi",
+          "href": "http://127.0.0.1:6461/cars?year_min=2020&sort=price-asc",
+          "box": {
+            "x": 32.5,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 115.125,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "From 2020",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&sort=price-asc",
+          "box": {
+            "x": 123.125,
+            "y": 558,
+            "width": 130.90625,
+            "height": 40,
+            "right": 254.03125,
+            "bottom": 598
+          }
+        }
+      ]
+    }
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "name": "overflow",
+    "state": {
+      "overflow": -15,
+      "hero": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "text": "Find your next car",
+        "label": null
+      },
+      "search": {
+        "box": {
+          "x": 250.5,
+          "y": 358,
+          "width": 924,
+          "height": 60,
+          "right": 1174.5,
+          "bottom": 418
+        },
+        "text": "Make, model or keyword",
+        "label": null
+      },
+      "keyword": {
+        "box": {
+          "x": 256.5,
+          "y": 364,
+          "width": 856,
+          "height": 48,
+          "right": 1112.5,
+          "bottom": 412
+        },
+        "text": "Make, model or keyword",
+        "label": "Make, model or keyword"
+      },
+      "heading": {
+        "box": {
+          "x": 32.5,
+          "y": 556,
+          "width": 1360,
+          "height": 44,
+          "right": 1392.5,
+          "bottom": 600
+        },
+        "text": "Audi\nBMW\nMercedes-Benz\nSUV\nPetrol\nAutomatic\nFrom 2020\nTo 2025\nFrom 1,000 €\nUp to 200,000 €\nUp to 100,000 km\nClear\nFilters\n11\nSort cars\nLowest price\nApply sorting",
+        "label": null
+      },
+      "filter": {
+        "box": {
+          "x": 1101.984375,
+          "y": 556,
+          "width": 133.890625,
+          "height": 44,
+          "right": 1235.875,
+          "bottom": 600
+        },
+        "text": "Filters\n11",
+        "label": null
+      },
+      "sort": {
+        "box": {
+          "x": 1243.875,
+          "y": 556,
+          "width": 148.625,
+          "height": 44,
+          "right": 1392.5,
+          "bottom": 600
+        },
+        "text": "Sort cars\nLowest price\nApply sorting",
+        "label": null
+      },
+      "summary": {
+        "box": {
+          "x": 32.5,
+          "y": 556,
+          "width": 1045.484375,
+          "height": 44,
+          "right": 1077.984375,
+          "bottom": 600
+        },
+        "text": "Audi\nBMW\nMercedes-Benz\nSUV\nPetrol\nAutomatic\nFrom 2020\nTo 2025\nFrom 1,000 €\nUp to 200,000 €\nUp to 100,000 km\nClear",
+        "label": null
+      },
+      "clear": {
+        "box": {
+          "x": 1021.703125,
+          "y": 556,
+          "width": 56.28125,
+          "height": 44,
+          "right": 1077.984375,
+          "bottom": 600
+        },
+        "text": "Clear",
+        "label": null
+      },
+      "firstCard": null,
+      "cardCount": 0,
+      "chips": [
+        {
+          "text": "Audi",
+          "href": "http://127.0.0.1:6461/cars?make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 32.5,
+            "y": 558,
+            "width": 82.625,
+            "height": 40,
+            "right": 115.125,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "BMW",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 123.125,
+            "y": 558,
+            "width": 88.984375,
+            "height": 40,
+            "right": 212.109375,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "Mercedes-Benz",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 220.109375,
+            "y": 558,
+            "width": 169.34375,
+            "height": 40,
+            "right": 389.453125,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "SUV",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 397.453125,
+            "y": 558,
+            "width": 81.359375,
+            "height": 40,
+            "right": 478.8125,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "Petrol",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 486.8125,
+            "y": 558,
+            "width": 92.203125,
+            "height": 40,
+            "right": 579.015625,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "Automatic",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&year_min=2020&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 587.015625,
+            "y": 558,
+            "width": 125.40625,
+            "height": 40,
+            "right": 712.421875,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "From 2020",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_max=2025&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 720.421875,
+            "y": 558,
+            "width": 130.90625,
+            "height": 40,
+            "right": 851.328125,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "To 2025",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&price_min=1000&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 859.328125,
+            "y": 558,
+            "width": 110.34375,
+            "height": 40,
+            "right": 969.671875,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "From 1,000 €",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_max=200000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 977.671875,
+            "y": 558,
+            "width": 147.40625,
+            "height": 40,
+            "right": 1125.078125,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "Up to 200,000 €",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&mileage_max=100000&sort=price-asc",
+          "box": {
+            "x": 1133.078125,
+            "y": 558,
+            "width": 172.90625,
+            "height": 40,
+            "right": 1305.984375,
+            "bottom": 598
+          }
+        },
+        {
+          "text": "Up to 100,000 km",
+          "href": "http://127.0.0.1:6461/cars?make=Audi&make=BMW&make=Mercedes-Benz&body=SUV&fuel=Petrol&transmission=Automatic&year_min=2020&year_max=2025&price_min=1000&price_max=200000&sort=price-asc",
+          "box": {
+            "x": 1313.984375,
+            "y": 558,
+            "width": 182,
+            "height": 40,
+            "right": 1495.984375,
+            "bottom": 598
+          }
+        }
+      ]
+    }
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "name": "zero",
+    "state": {
+      "overflow": -15,
+      "hero": {
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "text": "Find your next car",
+        "label": null
+      },
+      "search": {
+        "box": {
+          "x": 250.5,
+          "y": 358,
+          "width": 924,
+          "height": 60,
+          "right": 1174.5,
+          "bottom": 418
+        },
+        "text": "no-matching-car",
+        "label": null
+      },
+      "keyword": {
+        "box": {
+          "x": 256.5,
+          "y": 364,
+          "width": 856,
+          "height": 48,
+          "right": 1112.5,
+          "bottom": 412
+        },
+        "text": "no-matching-car",
+        "label": "Make, model or keyword"
+      },
+      "heading": {
+        "box": {
+          "x": 32.5,
+          "y": 556,
+          "width": 1360,
+          "height": 44,
+          "right": 1392.5,
+          "bottom": 600
+        },
+        "text": "Search: no-matching-car\nClear\nFilters\nSort cars\nLowest price\nApply sorting",
+        "label": null
+      },
+      "filter": {
+        "box": {
+          "x": 1131.109375,
+          "y": 556,
+          "width": 104.765625,
+          "height": 44,
+          "right": 1235.875,
+          "bottom": 600
+        },
+        "text": "Filters",
+        "label": null
+      },
+      "sort": {
+        "box": {
+          "x": 1243.875,
+          "y": 556,
+          "width": 148.625,
+          "height": 44,
+          "right": 1392.5,
+          "bottom": 600
+        },
+        "text": "Sort cars\nLowest price\nApply sorting",
+        "label": null
+      },
+      "summary": {
+        "box": {
+          "x": 32.5,
+          "y": 556,
+          "width": 1074.609375,
+          "height": 44,
+          "right": 1107.109375,
+          "bottom": 600
+        },
+        "text": "Search: no-matching-car\nClear",
+        "label": null
+      },
+      "clear": {
+        "box": {
+          "x": 1050.828125,
+          "y": 556,
+          "width": 56.28125,
+          "height": 44,
+          "right": 1107.109375,
+          "bottom": 600
+        },
+        "text": "Clear",
+        "label": null
+      },
+      "firstCard": null,
+      "cardCount": 0,
+      "chips": [
+        {
+          "text": "Search: no-matching-car",
+          "href": "http://127.0.0.1:6461/cars?sort=price-asc",
+          "box": {
+            "x": 32.5,
+            "y": 558,
+            "width": 239,
+            "height": 40,
+            "right": 271.5,
+            "bottom": 598
+          }
+        }
+      ]
+    }
+  }
+]

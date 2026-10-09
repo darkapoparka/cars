@@ -156,7 +156,8 @@ try {
                   assert(Math.abs(car.width / car.height - 1000 / 667) < .01, 'Vehicles keep their natural proportions');
                 }
               }
-              assert.equal(geometry.scene.height, geometry.hero.height - (width < 1200 ? 140 : 0), 'Laptop crop keeps scene edges below navigation');
+              const sceneInset = geometry.scene.artwork === 'image' ? 0 : width < 1200 ? 140 : 0;
+              assert.equal(geometry.scene.height, geometry.hero.height - sceneInset, 'Raster scenes retain their full floor anchor; cutouts keep the laptop navigation inset');
               assert.equal(geometry.scene.bottom, geometry.hero.bottom, 'Scene meets the banner baseline');
             }
             assert.equal(geometry.cutouts.length, hasScene && !imageScene ? 2 : 0, 'Cutouts appear only in their configured desktop scenes');
@@ -409,7 +410,7 @@ try {
             const geometry = await heroGeometry(page);
             assertDesktopFrame(geometry);
             assert.equal(geometry.scene.artwork, 'image', 'Service entries share the larger Contact car scene');
-            assert(geometry.scene.src.endsWith('auto-best-desktop-inventory-v3.webp'), 'Service entries use the approved Contact banner');
+            assert(geometry.scene.src.endsWith('company-contact-studio-v4.webp'), 'Service entries use the Contact studio banner');
             assert.equal(geometry.cutouts.length, 0, 'Service entries have one artwork layer');
             assert.equal(await page.locator('.dn-hero-vehicles__car').count(), 0, 'Service illustrations remain mobile only');
             assert(geometry.overflow <= 1, 'Service route has no horizontal overflow');

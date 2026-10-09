@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "head": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
+  "rows": [
+    {
+      "file": "src/lib/components/ui/DesktopHeroScene.svelte",
+      "warnings": 0,
+      "localeDependenciesCommitted": true
+    },
+    {
+      "file": "src/lib/components/listing/ListingResults.svelte",
+      "warnings": 0,
+      "localeDependenciesCommitted": true
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "warnings": 0,
+      "localeDependenciesCommitted": true
+    },
+    {
+      "file": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "warnings": 0,
+      "localeDependenciesCommitted": true
+    },
+    {
+      "file": "src/lib/components/listing/DesktopAppliedListingFilters.svelte",
+      "warnings": 0,
+      "localeDependenciesCommitted": true
+    }
+  ],
+  "newRailTokensAndImportsPresentInHead": true,
+  "localeMessages": 1115
+}

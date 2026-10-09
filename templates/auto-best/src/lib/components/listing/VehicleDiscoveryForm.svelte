@@ -2,6 +2,7 @@
   import { listingFacetTitle, listingFacetSummary, listingDraftFromFilters, type ListingFacetField } from '$data/listing-draft';
 
   import { getI18n } from '$lib/locale/context';
+  import { vehicleCount } from '$lib/locale/messages';
 
   const i18n = getI18n();
 
@@ -19,7 +20,8 @@
     listingFiltersFromDraft,
   } from '$data/listing-draft';
 
-  let { filters, openFilters, filtersOpen, onDraftChange, showFilterAction = true, enableSticky = true, keywordPlaceholder = 'Марка, модел или ключова дума', modalFacets = false }: {
+  let { filters, resultCount, openFilters, filtersOpen, onDraftChange, showFilterAction = true, enableSticky = true, keywordPlaceholder = 'Марка, модел или ключова дума', modalFacets = false }: {
+    resultCount?: number;
     modalFacets?: boolean;
     showFilterAction?: boolean;
     enableSticky?: boolean;
@@ -60,6 +62,7 @@
   });
   let activeCount = $derived(activeFilterCount(pending));
   let summary = $derived([pending.q, ...pending.make, ...pending.model].filter(Boolean).join(' · ') || i18n.text(keywordPlaceholder));
+  const resultLabel = $derived(resultCount === undefined ? '' : vehicleCount(i18n.locale, resultCount));
   let hiddenFields = $derived(listingHiddenFields(filters, ['type', 'make', 'model', 'body', 'price_max', 'year_min', 'mileage_max']));
   const facetFields = ['type', 'make', 'model', 'body', 'price', 'year', 'mileage_max'] satisfies readonly ListingFacetField[];
   const appliedDraft = $derived(listingDraftFromFilters(filters));
@@ -81,9 +84,10 @@
 <form id="dn-desktop-discovery" class="dn-discovery" {@attach observePanel} method="GET" action={i18n.href(resolve('/cars'))} onformdata={clean}>
   <div class="dn-discovery__toolbar">
     <div class="dn-discovery__search">
-      <button class="dn-discovery__keyword" type="button" aria-label={i18n.text(keywordPlaceholder)} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={event => openFilters(event, modalFacets ? 'search' : undefined)}>
+      <button class="dn-discovery__keyword" type="button" aria-label={[filters.q || i18n.text(keywordPlaceholder), resultLabel].filter(Boolean).join(' · ')} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={event => openFilters(event, modalFacets ? 'search' : undefined)}>
         <Icon name="search" size={20} />
         <span>{filters.q || i18n.text(keywordPlaceholder)}</span>
+        {#if resultCount !== undefined}<span class="dn-discovery__result-count" aria-hidden="true">({resultCount})</span>{/if}
       </button>
       {#if showFilterAction}
         <button class="dn-discovery__filters" type="button" title={i18n.t("m_3deeda2a1ebe")} aria-label={activeCount ? i18n.t("m_8a61a4d5543e", { p0: activeCount }) : i18n.t("m_3deeda2a1ebe")} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
@@ -115,8 +119,9 @@
 </form>
 
 <div class="dn-discovery-sticky" popover="manual" {@attach attachSticky} role="region" aria-label={i18n.t("m_8451d82f9587")}>
-  <button class="dn-discovery-sticky__keyword" type="button" aria-label={i18n.t("m_a6403c514411")} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={event => openFilters(event, modalFacets ? 'search' : undefined)}>
+  <button class="dn-discovery-sticky__keyword" type="button" aria-label={[i18n.t("m_a6403c514411"), resultLabel].filter(Boolean).join(' · ')} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={event => openFilters(event, modalFacets ? 'search' : undefined)}>
     <Icon name="search" size={20} /><span>{summary}</span>
+    {#if resultCount !== undefined}<span class="dn-discovery__result-count" aria-hidden="true">({resultCount})</span>{/if}
   </button>
   <button class="dn-discovery-sticky__filters" type="button" aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
     <Icon name="adjustments" size={20} /><span>{i18n.t("m_546ebb8eb993")}</span>{#if activeCount}<span class="dn-discovery-sticky__count">{activeCount}</span>{/if}
@@ -135,6 +140,8 @@
   .dn-discovery__search { display: flex; flex: 1; align-items: center; gap: 8px; min-width: 0; height: var(--dn-discovery-search-height, 60px); padding: 5px; border: 1px solid #dfe2e6; border-radius: var(--dn-pill); background: #f5f6f7; }
   .dn-discovery__keyword { display: flex; flex: 1; align-items: center; gap: 12px; min-width: 0; height: 48px; padding: 0 12px; border: 0; border-radius: var(--dn-pill); background: transparent; color: #68717d; text-align: left; font-size: var(--dn-text-lead); font-weight: var(--dn-weight-regular); line-height: var(--dn-leading-control); cursor: pointer; }
   .dn-discovery__keyword span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .dn-discovery__keyword .dn-discovery__result-count,
+  .dn-discovery-sticky__keyword .dn-discovery__result-count { flex: none; color: var(--dn-muted); font-size: var(--dn-text-body); font-weight: var(--dn-weight-medium); }
   .dn-discovery__keyword:hover { color: var(--dn-ink); background: #eceef1; }
   .dn-discovery__submit { display: inline-flex; flex: 0 0 48px; align-items: center; justify-content: center; width: 48px; height: 48px; padding: 0; border: 0; border-radius: var(--dn-pill); background: var(--dn-red); color: white; cursor: pointer; }
   .dn-discovery__submit:hover { background: var(--dn-red-hover); }

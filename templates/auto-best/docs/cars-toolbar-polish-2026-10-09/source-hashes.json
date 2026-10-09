@@ -1,0 +1,13 @@
+{
+  "capturedAt": "2026-10-09T16:33:38.769Z",
+  "source": "Shared working tree used for local QA; concurrent corner edits are excluded from this task commit.",
+  "files": {
+    "src/lib/components/ui/DesktopHeroScene.svelte": "f305be0044fa9d24431dcceccd6974fb9626f002dd05a38930ce032e653e1d76",
+    "src/lib/config/lead-site.ts": "68cf111ddcd687ea8004f1944848c9c92e0310eefba2bc07d8f98b70ba993560",
+    "src/lib/components/listing/DesktopAppliedListingFilters.svelte": "9319c5b81c686e9cdb48fec194041c6d0882811aec6c61bd22e1b4d506c46826",
+    "src/lib/components/listing/ListingResults.svelte": "10ff757c424ea60bfdea4ff74e4baea9ea38994d6fb42317d9277be0aef5abe7",
+    "src/lib/components/listing/ListingFilters.svelte": "04899c867218770527d5a4257c3922118776fb96ff9e65871d893ef4cc7ce678",
+    "src/lib/components/listing/VehicleDiscoveryForm.svelte": "a64d371bc7b57858c1511f42267d61ccc14d9d2cfdcf99b2609a3057b109162b",
+    "src/routes/cars/listing.css": "f6e9295701ea8c9b645f228b808c33f870304867f4b9c1beefedb5af64f1ed4a"
+  }
+}

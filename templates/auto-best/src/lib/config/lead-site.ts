@@ -182,9 +182,9 @@ export const leadSite = {
     desktopHeroScenes: {
       home: { kind: 'vehicles', pair: 'home' },
       inventory: { kind: 'vehicles', pair: 'inventory' },
-      about: { kind: 'image', src: '/assets/images/lead/auto-best-desktop-home-v3.webp' },
+      about: { kind: 'image', src: '/assets/images/template/company-about-studio-v4.webp' },
       blog: { kind: 'vehicles', pair: 'blog' },
-      contact: { kind: 'image', src: '/assets/images/lead/auto-best-desktop-inventory-v3.webp' }
+      contact: { kind: 'image', src: '/assets/images/template/company-contact-studio-v4.webp' }
     },
     contactHero: {
       desktop: '/assets/images/lead/day-night-contact-hero-v2.webp',
