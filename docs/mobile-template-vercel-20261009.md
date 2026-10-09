@@ -12,27 +12,32 @@ compact refresh published source `b8f52aeb7` as mirror `7e002f3a7`. The latest
 refresh below applies the owner's selected near-black colour to the six fact
 icons through the same source utilities.
 
+The final GitHub sync also preserves the previously uncommitted 8 October audit:
+18 screenshots, its report and two JSON evidence files. The report is explicitly
+marked historical. Application files are identical to the tested neutral-icon
+source `d7ced9114`; this final snapshot adds documentation and captured evidence.
+
 ## Exact source and deployment
 
 | Item | Verified value |
 | --- | --- |
 | Editable repository | `darkapoparka/cars` |
-| Cars source commit | `d7ced91144b83739bf8d3d7964748c76dcb620d1` |
+| Cars source commit | `9c933097a3147b47b219a431c2b23dbb1bbe4fc3` |
 | Source subtree | `templates/mobile` |
-| Source tree | `b0f9dc22956984c15228e6224b41f4d900cda79b` |
+| Source tree | `2a88d30ab728823ee1f708945de935d9f37bc6a4` |
 | Export policy | `cars-source-v1` |
-| Normalized source digest | `4d6b6600f6d126e7337e5a4dd1faee2924689e0078ad5ae93fa4f5fec716bf9f` |
+| Normalized source digest | `a1cb3525e58a826a3bc04e61296ae8ec29f5cf791fcac88d6683d0397a58cf0e` |
 | Publishing repository | `darkapoparka/cars-template-mobile` |
-| Publishing commit | `babe1b9b2e70c776b0d67681c175f3124dd7b52a` |
-| Previous publishing commit | `7e002f3a7dd1f87b0d4823377b5f556167faf8e1` |
+| Publishing commit | `f2345cebb82edba2770de071833c6d4fabe56b4c` |
+| Previous publishing commit | `babe1b9b2e70c776b0d67681c175f3124dd7b52a` |
 | Vercel project | `cars-template-mobile`, `prj_PsCXLysg0t3owguVyrnnXQXa7x1r` |
 | Team | `tyj5`, `team_RTNXBnClGWDdcYFFUW0BnqvJ` |
-| Production deployment | `dpl_HfoCuuw7XqeKLeFRDB6f79UFoYXL`, `READY` |
-| Immutable host | `cars-template-mobile-n0sioszla-tyj5.vercel.app` |
+| Production deployment | `dpl_7Aw2DBwSnyVxHozkAoBEpzyAw68L`, `READY` |
+| Immutable host | `cars-template-mobile-n4s22aj4g-tyj5.vercel.app` |
 | Public alias | `cars-template-mobile.vercel.app` |
 
 The publishing mirror had zero independent source drift from its recorded Cars
-baseline. Its history was preserved through a child commit. The 791 exported
+baseline. Its history was preserved through a child commit. The 812 exported
 source files match the tested Cars snapshot's normalized digest exactly.
 Publication receipts and superseded files are retained under `.template/`.
 The existing Git integration started the production build after the mirror push.
@@ -41,8 +46,11 @@ above; the public alias resolves to this final `READY` deployment.
 
 ## Verification
 
-The published source passed strict lint, TypeScript, all 156 domain tests,
-formatting and its Node 22.20.0 production build. Before publication, its focused
+The unchanged application passed strict lint, TypeScript, all 156 domain tests,
+formatting and its Node 22.20.0 production build on `d7ced9114`. Fresh TypeScript
+and workflow-documentation checks pass for this final sync, and the historical
+image dimensions and referenced evidence reports are verified. The final Vercel
+production build also passes. Before publication, the focused
 local production suite passed 12 PDP states and 12 interaction flows across
 Chromium/WebKit, Bulgarian/English and 320/390/1440px. Both engines also pass the
 390px dark-appearance check, with the icons following the light heading colour.
@@ -67,8 +75,8 @@ horizontal overflow or icon/text overlap. All six fact icon colours match the
 heading, and every recorded layout measurement matches the tested local build.
 
 All 24 hosted hero/detail captures are stable across repeated frames. Comparison
-with the tested local production build gives 19 pixel-identical pairs; the five
-remaining Chromium pairs differ by 6–74 pixels around control edges and small
+with the tested local production build gives 18 pixel-identical pairs; the six
+remaining Chromium pairs differ by 6–45 pixels around control edges and small
 rendering regions. All dimensions and measured layout properties match; all 12
 WebKit pairs are pixel-identical. The source screenshots below show the requested
 visual changes rather than claiming complete pixel parity between environments.
@@ -97,7 +105,12 @@ Unrelated dirty work and independently staged paths were preserved. The mirror
 commit was assembled with an isolated index rather than another editable source
 checkout. Export, drift, push, provider and browser evidence is under
 `runtime/mobile-pro-integration-20261009`, using `vercel-` and `pdp-vercel-`
-filenames. The latest receipts and captures use the `black-icons` names; earlier
-compact and initial receipts are preserved. The integration report also records
+filenames. The latest receipts and captures use the `complete-sync` names; earlier
+neutral-icon, compact and initial receipts are preserved. The integration report
+also records
 the retained initial development hydration timeout and dark WebKit capture
 instability, followed by successful checks.
+
+The separate active chat, "Polish desktop vehicle PDP", began a new draft during
+this publication. Its new `docs/desktop-pdp-polish-2026-10-09` captures are ongoing
+work and are preserved outside this completed snapshot.
