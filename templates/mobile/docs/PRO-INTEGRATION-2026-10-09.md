@@ -183,3 +183,38 @@ also retains single-line CTAs and readable fact values. Detailed checks and full
 captures are under the integration runtime directory with the `pdp-compact` and
 `pdp-vercel-after-compact` prefixes. Hosted publication is recorded in the
 [Vercel receipt](../../../docs/mobile-template-vercel-20261009.md).
+
+## Neutral PDP fact icons
+
+The owner's selected colour follow-up changes the six showroom fact icons from
+the inherited orange accent to the heading's themed text colour: near-black
+`#1b1b21` in the light appearance. The existing 40px icons, 36px calendar, 44px
+columns and Fuel's optical inset remain the same.
+
+Strict lint, TypeScript, all 156 domain tests, formatting and the Node 22.20.0
+production build pass. The focused production suite passes 12 PDP states and their
+section, specification-sheet and CTA flows across Chromium/WebKit, Bulgarian/
+English and 320/390/1440px. All 24 hero/detail frames are stable. All six icon
+colours match the heading, with no overflow or icon/text overlap. The recorded
+layout measurements match the previous published compact PDP in all 12 states.
+The corresponding development checks also pass after a transient initial
+hydration timeout during the build; the warm preview has no failed requests or
+runtime errors. The initial failure and diagnostics remain in runtime evidence.
+Both engines also pass the 390px dark-appearance check, where the icons follow
+the light heading colour. The first WebKit hero capture was unstable; its
+failure is retained alongside the successful repeat with stable frames.
+
+Matched captures retain the same listing, language, third photo, saved state,
+viewport and section scroll anchor:
+
+| Surface | Orange icons | Neutral icons |
+| --- | --- | --- |
+| Phone, 390 × 844 | [Before](pro-integration-2026-10-09/pdp-compact-details-after-390.png) | [After](pro-integration-2026-10-09/pdp-black-icons-after-390.png) |
+| Desktop, 1440 × 900 | [Before](pro-integration-2026-10-09/pdp-black-icons-before-1440.png) | [After](pro-integration-2026-10-09/pdp-black-icons-after-1440.png) |
+
+The [320px Bulgarian result](pro-integration-2026-10-09/pdp-black-icons-after-320-bg.png)
+records the narrow phone layout. Full captures, colour and layout measurements,
+checks and publication receipts use the `pdp-black-icons`,
+`pdp-vercel-after-black-icons` and `vercel-*-black-icons` runtime names. The
+[Vercel receipt](../../../docs/mobile-template-vercel-20261009.md) records the
+exact published source and hosting result.

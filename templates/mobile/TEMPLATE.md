@@ -253,7 +253,8 @@ dismissal, including pointer activation in Safari.
 Tab selection replaces the URL fragment and preserves router state and the
 inventory Back entry. Selected sections survive reload; the separate gallery
 returns to the selected section. Summary facts use semantic label/value pairs,
-accent icons centered in a 44px column and shorter registration/owner labels.
+near-black icons centered in a 44px column and shorter registration/owner labels.
+The six fact icons share the heading's themed text color.
 The fact icons use 40px boxes; the taller calendar uses 36px and Fuel has a small
 optical inset. The fact grid has no trailing padding before the section inset.
 Technical data uses a rounded inset table with alternating shaded rows; panel

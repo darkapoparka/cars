@@ -291,7 +291,7 @@ const s = stylex.create({
     minHeight: 44,
   },
   showroomSpecIcon: {
-    color: colors.accent,
+    color: colors.text,
     width: 44,
     height: 44,
     alignItems: 'center',
