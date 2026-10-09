@@ -4,6 +4,7 @@ import Link from 'next/link';
 import * as stylex from '@stylexjs/stylex';
 import type { Vehicle } from '@/lib/types';
 import { useLocale } from '@/lib/use-locale';
+import { defaultPaymentEstimate } from '@/lib/search';
 import { colors } from '@/styles/tokens.stylex';
 import { Icon } from './Icon';
 import { PriceRating } from './VehicleCard';
@@ -153,8 +154,8 @@ export function DesktopVehicleSummary({
   onPriceInfo: () => void;
   onContact: () => void;
 }) {
-  const { t, locale, money, number } = useLocale();
-  const monthly = v.financeMonthly || v.monthly || Math.round(v.price * 0.01061);
+  const { t, money, number } = useLocale();
+  const monthly = defaultPaymentEstimate(v.price);
   return (
     <aside
       data-vehicle-desktop-summary
@@ -180,7 +181,7 @@ export function DesktopVehicleSummary({
         <strong data-vehicle-desktop-price {...stylex.props(s.price)}>
           {money(leasing ? v.monthly || 0 : v.price)}
         </strong>
-        {!(leasing && v.leaseTerms) && (
+        {!(leasing && v.leaseTerms) && v.priceRating && (
           <button
             type="button"
             aria-label={t('Price rating details')}
@@ -191,7 +192,7 @@ export function DesktopVehicleSummary({
             }}
             {...stylex.props(s.rating)}
           >
-            <PriceRating veryGood={v.deal} detail />
+            <PriceRating veryGood={v.priceRating === 'very-good'} detail />
             <Icon name="info" size={14} />
           </button>
         )}
@@ -215,10 +216,7 @@ export function DesktopVehicleSummary({
               <span {...stylex.props(s.saving)}>−{money(v.previousPrice - v.price)}</span>
             </p>
           )}
-          <p {...stylex.props(s.note)}>
-            {v.priceNote ||
-              money(v.price / 1.19) + (locale === 'bg' ? ' без ДДС, 19% ДДС' : ' Net, 19.00% VAT')}
-          </p>
+          {v.priceNote && <p {...stylex.props(s.note)}>{v.priceNote}</p>}
         </>
       )}
       <button
@@ -236,7 +234,7 @@ export function DesktopVehicleSummary({
           {t(leasing ? 'Leasing details' : 'Financing ')}
         </span>
         <span {...stylex.props(s.financeValue)}>
-          {!leasing && t('from') + ' ' + money(monthly) + ' / ' + t('month')}
+          {!leasing && t('Estimate') + ' ' + money(monthly) + ' / ' + t('month')}
           <Icon name="right" size={18} />
         </span>
       </button>

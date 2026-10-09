@@ -210,16 +210,16 @@ Power and gearbox remain in the vehicle details. Vehicle names can wrap.
 Photo save actions use the outline-heart family, with a 36px face inside a
 48px button and an explicit pressed state.
 
-Vehicle detail uses a 24px title, a quieter 14px trim line and a 24px price.
-The retained price rating sits opposite the price, with slimmer bars and a 44px
-details target. The finance entry uses a neutral rounded row and shorter label;
-Contact and Enquire actions use 15px medium text, with 44px mobile targets and
-48px targets on larger screens. Enquire uses the existing near-black text token
-with white text and a visible outside focus ring. Price reductions use a small
-plain chip. One raised white information
-sheet overlaps the photo by 20px, with rounded top corners and a small handle.
-Three equal-width Details / Photos / Features underline tabs sit at the sheet's
-entrance, before the title and price, so they remain visible on short phone screens.
+Phone vehicle detail retains its compact 20px title, 18px advertised price,
+rounded trim pills and side-by-side Contact and Enquire actions. An explicitly
+supplied price rating sits beside the title. CSS grid lets long names wrap without
+hidden measurement elements or layout observers. Price notes appear only when
+supplied; sample disclosure remains below the detail content. Summary controls
+retain 44px targets. The finance entry shows the same illustrative estimate as
+the local calculator. Enquire uses the existing near-black text token with white
+text and a visible focus ring. One raised white information sheet overlaps the
+photo by 20px, with rounded top corners. The summary precedes the three equal-width
+Details / Features / Photos tabs.
 The selected detail tab uses the same neutral text token for its label and
 underline. The handle and tab rail stick beneath the header within the information section;
 the page retains one browser scroll.
@@ -246,7 +246,8 @@ The title wraps independently of save/share, which sit opposite the quieter trim
 line. Four captured vehicle facts share a grey strip underneath. The shorter right
 card groups the advertised price and rating, the labelled Financing row and contact
 actions. Features uses a two-column semantic checklist with leading checks. The
-phone and tablet retain their existing composition and feature table.
+phone and tablet retain their native composition. Features uses one responsive
+semantic list instead of separate mobile and desktop render trees.
 Desktop rating, finance and contact dialogs restore focus to their opener after
 dismissal, including pointer activation in Safari.
 Tab selection replaces the URL fragment and preserves router state and the
@@ -334,9 +335,9 @@ cars, without outer card frames. The mobile font and flat detail footer stay bel
 compact header and enquiry dock.
 
 From 1024px, vehicle detail uses the showroom logo header and a rounded Back to
-cars button with 28px of space above it. Compact Save and Share icons sit beside
-the vehicle title, aligned right within the purchase card; the title starts at
-the card's normal top padding, and the icons retain labels on hover and for
+cars button with 28px of space above it. The full-width vehicle heading and four
+quick facts sit above the gallery and purchase card. Save and Share align with
+the quieter trim line and retain 44px targets plus labels on hover and for
 assistive technology.
 Checklist remains available below the contact actions. A two-column layout pairs
 a 16:10 gallery, photo arrows and five preview thumbnails with a 360px purchase card. That card

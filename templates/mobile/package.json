@@ -31,7 +31,8 @@
     "qa:make-catalog": "node scripts/prepare-domain-tests.mjs && node scripts/qa-make-catalog.mjs",
     "qa:make-visual": "node scripts/qa-make-model-visual.mjs",
     "qa:make-release": "node scripts/qa-make-model-release.mjs",
-    "qa:architecture": "node scripts/qa-architecture.mjs"
+    "qa:architecture": "node scripts/qa-architecture.mjs",
+    "qa:final-pass": "node tests/final-pass.browser.mjs"
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "2.1.25",

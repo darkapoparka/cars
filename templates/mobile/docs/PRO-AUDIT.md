@@ -1,6 +1,12 @@
 # PRO architecture audit
 
-## Status: review branch, not release approval
+## Status: historical review branch audit
+
+This report records the original `918c7a962` handoff. The six boundary defects were
+fixed during the owner-requested integration on 9 October 2026. Later local data
+fixes were retained and the earlier PDP composition was restored. See
+[the integration review](PRO-INTEGRATION-2026-10-09.md) for current verification and
+remaining release limitations. Original results below are preserved as evidence.
 
 This refactor preserves the frontend polishing captured in commit `23ba02bb7e610d0eeb935c1eeeb2add7c29ceebe`, whose parent is `2eec07ee655baf0cbcf7d789b7e7e69b082f67e7`. Work is isolated on `PRO` in `C:\Users\radev\cars-mobile-PRO`; the original checkout remains on `main`. Later concurrent edits in the original checkout are not part of this snapshot.
 

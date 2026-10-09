@@ -238,9 +238,14 @@ export const capturedVehicles: Vehicle[] = baseVehicles.map((vehicle) => {
   const captured = (capturedListingDetails as unknown as Record<string, Partial<Vehicle>>)[
     vehicle.id
   ];
-  return captured
+  const listing = captured
     ? { ...vehicle, ...captured, attributes: { ...vehicle.attributes, ...captured.attributes } }
     : vehicle;
+  return {
+    ...listing,
+    sample: true,
+    priceRating: vehicle.deal ? 'very-good' : 'good',
+  };
 });
 
 /** Fictional stock for judging the showroom grid; these are not live offers. */
@@ -419,6 +424,7 @@ const demoStock = [
 export const demoVehicles: Vehicle[] = demoStock.map((vehicle) => ({
   ...common,
   ...vehicle,
+  sample: true,
   registration: '01/' + vehicle.year,
   dealer: 'Demo showroom',
   location: '',

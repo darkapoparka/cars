@@ -3,6 +3,8 @@ export const bgMessages: Record<string, string> = {
   Cars: 'Коли',
   Services: 'Услуги',
   Contact: 'Контакт',
+  'Sample vehicle': 'Примерен автомобил',
+  Estimate: 'Примерно',
   'Import, sell or look after your car.': 'Внос, продажба и грижа за автомобила ви.',
   'Ask about a car, a viewing or a service.': 'Попитайте за автомобил, оглед или услуга.',
   'Your showroom': 'Вашият автосалон',

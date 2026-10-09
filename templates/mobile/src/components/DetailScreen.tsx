@@ -14,6 +14,7 @@ import type { Vehicle } from '@/lib/types';
 import { markViewed, setVehiclePhoto, notify, togglePark, useAppState } from '@/lib/store';
 import { inventoryCanGoBack, inventoryReturnHref } from '@/lib/inventory-navigation';
 import { vehicleGalleryHref } from '@/lib/vehicle-detail-navigation';
+import { defaultPaymentEstimate } from '@/lib/search';
 import { VehicleSections } from './VehicleSections';
 import { VehicleDetailHeader } from './VehicleDetailHeader';
 import { MobileVehicleSummary } from './MobileVehicleSummary';
@@ -458,7 +459,7 @@ export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
   const leasing =
     !mobile && Boolean(v.leaseTerms) && (paymentOverride || filters.payment) === 'lease';
   const summaryLayout = !leasing || mobile;
-  const financeMonthly = v.financeMonthly || v.monthly || Math.round(v.price * 0.01061);
+  const financeMonthly = defaultPaymentEstimate(v.price);
 
   const [priceInfo, setPriceInfo] = useState(false);
   const [report, setReport] = useState(false);
@@ -536,21 +537,23 @@ export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
             </p>
           )}
         </div>
-        <button
-          type="button"
-          aria-label={t('Price rating details')}
-          aria-haspopup="dialog"
-          onClick={() => setPriceInfo(true)}
-          {...stylex.props(s.ratingButton, s.purchaseRating)}
-        >
-          <span {...stylex.props(s.desktopPriceRating)}>
-            <PriceRating veryGood={v.deal} detail />
-          </span>
-          <span {...stylex.props(s.mobilePriceRating)}>
-            {t(v.deal ? 'Very good price' : 'Good price')}
-          </span>
-          <Icon name="info" size={14} />
-        </button>
+        {v.priceRating && (
+          <button
+            type="button"
+            aria-label={t('Price rating details')}
+            aria-haspopup="dialog"
+            onClick={() => setPriceInfo(true)}
+            {...stylex.props(s.ratingButton, s.purchaseRating)}
+          >
+            <span {...stylex.props(s.desktopPriceRating)}>
+              <PriceRating veryGood={v.priceRating === 'very-good'} detail />
+            </span>
+            <span {...stylex.props(s.mobilePriceRating)}>
+              {t(v.priceRating === 'very-good' ? 'Very good price' : 'Good price')}
+            </span>
+            <Icon name="info" size={14} />
+          </button>
+        )}
       </div>
     </div>
   );
@@ -795,16 +798,16 @@ export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
                           </span>
                         </p>
                       )}
-                      <p
-                        {...stylex.props(
-                          s.priceNote,
-                          v.priceNote === t('may include delivery costs') && s.mobileDeliveryNote,
-                        )}
-                      >
-                        {v.priceNote ||
-                          money(v.price / 1.19) +
-                            (locale === 'bg' ? ' без ДДС, 19% ДДС' : ' Net, 19.00% VAT')}
-                      </p>
+                      {v.priceNote && (
+                        <p
+                          {...stylex.props(
+                            s.priceNote,
+                            v.priceNote === t('may include delivery costs') && s.mobileDeliveryNote,
+                          )}
+                        >
+                          {v.priceNote}
+                        </p>
+                      )}
                       <button
                         type="button"
                         aria-label={
@@ -820,7 +823,7 @@ export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
                         {...stylex.props(s.finance, s.purchaseControl)}
                       >
                         <span {...stylex.props(s.financeAmount)}>
-                          {t('from')}{' '}
+                          {t('Estimate')}{' '}
                           <strong {...stylex.props(s.financeValue)}>{money(financeMonthly)}</strong>{' '}
                           / {t('month')}
                         </span>
@@ -930,7 +933,7 @@ export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
       </Modal>
       <Modal open={priceInfo} onClose={() => setPriceInfo(false)} title={t('Price rating')}>
         <div {...stylex.props(ui.column)}>
-          <PriceRating veryGood={v.deal} />
+          <PriceRating veryGood={v.priceRating === 'very-good'} />
           <p>
             {t(
               'The rating and advertised price are reproduced from the captured reference listing. They are not a current market valuation.',

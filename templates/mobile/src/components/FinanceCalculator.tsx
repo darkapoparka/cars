@@ -3,7 +3,7 @@ import { useLocale } from '@/lib/use-locale';
 import { useState } from 'react';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
-import { paymentEstimate } from '@/lib/search';
+import { financeDefaults, paymentEstimate } from '@/lib/search';
 import type { Vehicle } from '@/lib/types';
 import { Button, ui } from './ui';
 const s = stylex.create({
@@ -26,9 +26,9 @@ export function FinanceCalculator({
   onClose?: () => void;
 }) {
   const { t, money } = useLocale();
-  const [deposit, setDeposit] = useState(Math.round(v.price * 0.2));
-  const [months, setMonths] = useState(60);
-  const [rate, setRate] = useState(7.9);
+  const [deposit, setDeposit] = useState(Math.round(v.price * financeDefaults.depositRatio));
+  const [months, setMonths] = useState<number>(financeDefaults.months);
+  const [rate, setRate] = useState<number>(financeDefaults.annualRate);
   const payment = paymentEstimate(v.price, deposit, months, rate);
   return (
     <div {...stylex.props(ui.column)}>
