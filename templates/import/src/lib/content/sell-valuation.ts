@@ -1,9 +1,10 @@
 export const sellValuationCopy = {
 	en: {
 		sellTitle: 'Sell your car',
-		sellAction: 'Start a valuation',
+		sellDescription: 'Start with the basics.',
+		sellAction: 'Get a valuation',
 		sellNote: 'VIN or details · Photos optional',
-		howTitle: 'How it works',
+		howTitle: 'Selling in 3 steps',
 		sellSteps: [
 			{ title: 'Tell us about your car', text: 'VIN or make, model, year and mileage.' },
 			{
@@ -15,9 +16,10 @@ export const sellValuationCopy = {
 	},
 	bg: {
 		sellTitle: 'Продай колата си',
+		sellDescription: 'Започни с данните.',
 		sellAction: 'Заяви оценка',
 		sellNote: 'VIN или данни · Снимки по желание',
-		howTitle: 'Как работи',
+		howTitle: 'Продажба в 3 стъпки',
 		sellSteps: [
 			{ title: 'Разкажи за автомобила', text: 'VIN или марка, модел, година и пробег.' },
 			{ title: 'Обсъдете го заедно', text: 'Уточняваме историята, състоянието и очакванията ти.' },

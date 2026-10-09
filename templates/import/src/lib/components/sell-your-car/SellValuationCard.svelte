@@ -29,12 +29,15 @@
 					fetchpriority="high"
 				/>
 			</picture>
-			<h2 id="sell-valuation-title" class="sell-valuation__title" lang={locale}>
-				{copy.sellTitle}
-			</h2>
-			<button type="button" aria-haspopup="dialog" aria-expanded={open} onclick={onstart}>
-				{copy.sellAction}<ArrowRight size={20} aria-hidden="true" />
-			</button>
+			<div class="sell-valuation__content">
+				<h2 id="sell-valuation-title" class="sell-valuation__title" lang={locale}>
+					{copy.sellTitle}
+				</h2>
+				<p class="sell-valuation__description">{copy.sellDescription}</p>
+				<button type="button" aria-haspopup="dialog" aria-expanded={open} onclick={onstart}>
+					{copy.sellAction}<ArrowRight size={16} aria-hidden="true" />
+				</button>
+			</div>
 		</div>
 		<small class="sell-valuation__note">{copy.sellNote}</small>
 	</div>
@@ -68,11 +71,17 @@
 		position: relative;
 		background: var(--bc-ink);
 	}
-	.sell-valuation .sell-valuation__title {
+	.sell-valuation__content {
 		position: absolute;
 		z-index: 1;
 		top: var(--bc-space-4);
 		left: var(--bc-space-4);
+		display: grid;
+		gap: 4px;
+		justify-items: start;
+		max-width: calc(100% - 32px);
+	}
+	.sell-valuation .sell-valuation__title {
 		color: var(--bc-white);
 		font: var(--bc-weight-heading) clamp(22px, 6.2vw, 26px)/1.15 var(--bc-font-body);
 		letter-spacing: -0.03em;
@@ -101,24 +110,33 @@
 		font-size: var(--bc-mobile-body);
 		line-height: var(--bc-mobile-body-leading);
 	}
+	.sell-valuation .sell-valuation__description {
+		max-width: 180px;
+		color: rgb(255 255 255 / 0.76);
+		font-size: 13px;
+		line-height: 18px;
+	}
 	.sell-valuation button {
-		position: absolute;
-		z-index: 1;
-		bottom: var(--bc-space-4);
-		left: var(--bc-space-4);
 		display: flex;
 		min-height: 44px;
-		padding: 0 var(--bc-space-4);
+		margin-top: 8px;
+		padding: 0 14px;
 		align-items: center;
 		justify-content: center;
-		gap: var(--bc-space-2);
-		border: 0;
+		gap: 6px;
+		border: 1px solid rgb(255 255 255 / 0.28);
 		border-radius: var(--bc-radius-pill);
-		background: var(--bc-white);
-		color: var(--bc-ink);
-		font: var(--bc-weight-control) var(--bc-text-control)/var(--bc-leading-control)
-			var(--bc-font-body);
+		background: rgb(17 17 17 / 0.78);
+		color: var(--bc-white);
+		font: var(--bc-weight-control) 14px/20px var(--bc-font-body);
 		cursor: pointer;
+	}
+	.sell-valuation button:hover {
+		background: rgb(34 34 34 / 0.92);
+	}
+	.sell-valuation button:focus-visible {
+		outline: 2px solid var(--bc-white);
+		outline-offset: 3px;
 	}
 	.sell-valuation small {
 		color: var(--bc-copy);
@@ -142,20 +160,22 @@
 	}
 	.sell-valuation li {
 		display: grid;
-		grid-template-columns: 24px minmax(0, 1fr);
+		grid-template-columns: 28px minmax(0, 1fr);
 		align-items: start;
 		gap: var(--bc-space-3);
 	}
 	.sell-valuation li > span {
 		display: grid;
-		width: 24px;
-		height: 24px;
+		width: 28px;
+		height: 28px;
 		place-items: center;
 		border-radius: var(--bc-radius-pill);
-		border: 1px solid var(--bc-border);
-		color: var(--bc-copy);
-		font-size: var(--bc-mobile-label);
-		font-weight: 600;
+		background: var(--bc-control);
+		color: var(--bc-ink);
+		font-size: 14px;
+		font-weight: var(--bc-weight-heading);
+		font-variant-numeric: tabular-nums;
+		line-height: 1;
 	}
 	.sell-valuation h3 {
 		margin: 0 0 4px;

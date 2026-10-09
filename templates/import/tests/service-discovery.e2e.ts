@@ -14,9 +14,9 @@ const copy = {
 		find: 'Find this car',
 		request: 'Import request',
 		close: 'Close',
-		valuation: 'Start a valuation',
+		valuation: 'Get a valuation',
 		noVin: 'No VIN?',
-		guide: 'How it works'
+		guide: 'Selling in 3 steps'
 	},
 	bg: {
 		country: 'Държава',
@@ -31,7 +31,7 @@ const copy = {
 		close: 'Затвори',
 		valuation: 'Заяви оценка',
 		noVin: 'Без VIN?',
-		guide: 'Как работи'
+		guide: 'Продажба в 3 стъпки'
 	}
 } as const;
 
