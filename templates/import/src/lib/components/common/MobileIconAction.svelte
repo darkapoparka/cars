@@ -8,8 +8,11 @@
 		target,
 		rel,
 		active = false,
+		pressed,
 		badge,
 		tone = 'light',
+		appearance = 'default',
+		class: className = '',
 		haspopup,
 		expanded,
 		onclick,
@@ -20,8 +23,11 @@
 		target?: string;
 		rel?: string;
 		active?: boolean;
+		pressed?: boolean;
 		badge?: string | number;
 		tone?: 'light' | 'dark';
+		appearance?: 'default' | 'overlay';
+		class?: string;
 		haspopup?: 'dialog' | 'menu' | 'listbox' | 'tree' | 'grid' | 'true' | 'false';
 		expanded?: boolean;
 		onclick?: (event: MouseEvent) => void;
@@ -33,9 +39,10 @@
 
 {#if href}
 	<a
-		class="bc-mobile-icon-action"
+		class={`bc-mobile-icon-action ${className}`.trim()}
 		class:active
 		class:dark={tone === 'dark'}
+		class:overlay={appearance === 'overlay'}
 		href={linkHref(href)}
 		{target}
 		{rel}
@@ -50,10 +57,12 @@
 {:else}
 	<button
 		type="button"
-		class="bc-mobile-icon-action"
+		class={`bc-mobile-icon-action ${className}`.trim()}
 		class:active
 		class:dark={tone === 'dark'}
+		class:overlay={appearance === 'overlay'}
 		aria-label={label}
+		aria-pressed={pressed}
 		aria-haspopup={haspopup}
 		aria-expanded={expanded}
 		{onclick}
@@ -93,6 +102,7 @@
 		background: var(--bc-mobile-icon-surface);
 		box-shadow: var(--bc-mobile-icon-border);
 		content: '';
+		pointer-events: none;
 		transition:
 			background-color var(--bc-motion-hover),
 			box-shadow var(--bc-motion-hover);
@@ -107,6 +117,11 @@
 		--bc-mobile-icon-surface: var(--bc-accent);
 		--bc-mobile-icon-border: none;
 		--bc-mobile-icon-ink: var(--bc-white);
+	}
+
+	.bc-mobile-icon-action.overlay {
+		--bc-mobile-icon-surface: rgb(255 255 255 / 0.94);
+		--bc-mobile-icon-border: 0 2px 8px rgb(0 0 0 / 0.1);
 	}
 
 	.bc-mobile-icon-action:focus-visible {
@@ -156,6 +171,13 @@
 	@media (prefers-reduced-motion: reduce) {
 		.bc-mobile-icon-action::before {
 			transition: none;
+		}
+	}
+	@media (max-width: 767.98px) {
+		.bc-mobile-icon-action :global(svg) {
+			width: var(--bc-mobile-icon-action-glyph-size);
+			height: var(--bc-mobile-icon-action-glyph-size);
+			stroke-width: var(--bc-mobile-icon-action-stroke);
 		}
 	}
 	@media (min-width: 768px) and (hover: hover) and (pointer: fine) {

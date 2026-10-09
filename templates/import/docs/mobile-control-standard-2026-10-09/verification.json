@@ -1,0 +1,94 @@
+{
+  "capturedAt": "2026-10-09T14:24:24.781Z",
+  "source": "Frozen production build with only the four scoped mobile source changes",
+  "runtime": "v24.21.0",
+  "qaDigest": "6f4d883b7d93d32abe0db0a10dae7ada4361ec31662919505dfd588bfeb4fefc",
+  "checks": [
+    {
+      "name": "sync",
+      "code": 0,
+      "durationMs": 66181
+    },
+    {
+      "name": "svelte-check",
+      "code": 0,
+      "durationMs": 154706
+    },
+    {
+      "name": "eslint",
+      "code": 0,
+      "durationMs": 45533
+    },
+    {
+      "name": "format",
+      "code": 0,
+      "durationMs": 8827
+    },
+    {
+      "name": "architecture",
+      "code": 0,
+      "durationMs": 2226
+    },
+    {
+      "name": "assets",
+      "code": 0,
+      "durationMs": 3246
+    },
+    {
+      "name": "build",
+      "code": 0,
+      "durationMs": 116555
+    }
+  ],
+  "browser": {
+    "startTime": "2026-10-09T14:16:04.983Z",
+    "duration": 70955.094,
+    "expected": 13,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "rendered": {
+    "cases": 4,
+    "states": 28,
+    "viewports": [
+      320,
+      390
+    ],
+    "locales": [
+      "bg",
+      "en"
+    ],
+    "base": "http://127.0.0.1:6794"
+  },
+  "desktop": [
+    {
+      "state": "home",
+      "count": 31,
+      "maxChannelDifference": 2,
+      "bounds": {
+        "minX": 323,
+        "maxX": 1059,
+        "minY": 392,
+        "maxY": 987
+      }
+    },
+    {
+      "state": "inventory",
+      "count": 51,
+      "maxChannelDifference": 2,
+      "bounds": {
+        "minX": 323,
+        "maxX": 1351,
+        "minY": 392,
+        "maxY": 980
+      }
+    },
+    {
+      "state": "pdp",
+      "count": 0,
+      "maxChannelDifference": 0,
+      "bounds": null
+    }
+  ]
+}

@@ -23,6 +23,7 @@
 	import { Drawer } from 'vaul-svelte';
 	import { templateInquiryCopy } from '$lib/data/template-settings';
 	import MobileSheet from '$lib/components/common/MobileSheet.svelte';
+	import MobileIconAction from '$lib/components/common/MobileIconAction.svelte';
 	import { trackKeyboardInset } from '$lib/utils/keyboard-inset';
 
 	let { detail }: { detail: AuxeroVehicleDetailData } = $props();
@@ -360,25 +361,29 @@
 		{/if}
 
 		<div class="daynight-mobile-pdp__topbar" data-mobile-pdp-topbar>
-			<button type="button" aria-label={detail.mobileDrawer.backLabel} onclick={goBack}>
+			<MobileIconAction label={detail.mobileDrawer.backLabel} appearance="overlay" onclick={goBack}>
 				<ArrowLeft size={20} strokeWidth={2} aria-hidden="true" />
-			</button>
+			</MobileIconAction>
 
 			<div class="daynight-mobile-pdp__topbar-actions">
-				<a href={resolve(compareHref)} aria-label={detail.copy.compare}>
-					<GitCompare size={18} strokeWidth={2} aria-hidden="true" />
-				</a>
-				<button
-					type="button"
-					aria-label={detail.copy.savePrefix}
-					aria-pressed={garage.isFavorite(detail.slug)}
+				<MobileIconAction href={compareHref} label={detail.copy.compare} appearance="overlay">
+					<GitCompare size={20} strokeWidth={2} aria-hidden="true" />
+				</MobileIconAction>
+				<MobileIconAction
+					label={detail.copy.savePrefix}
+					pressed={garage.isFavorite(detail.slug)}
+					appearance="overlay"
 					onclick={() => garage.toggleFavorite(detail.slug)}
 				>
-					<Heart size={18} strokeWidth={2} aria-hidden="true" />
-				</button>
-				<button type="button" aria-label={detail.mobileDrawer.shareLabel} onclick={shareVehicle}>
-					<Share2 size={18} strokeWidth={2} aria-hidden="true" />
-				</button>
+					<Heart size={20} strokeWidth={2} aria-hidden="true" />
+				</MobileIconAction>
+				<MobileIconAction
+					label={detail.mobileDrawer.shareLabel}
+					appearance="overlay"
+					onclick={shareVehicle}
+				>
+					<Share2 size={20} strokeWidth={2} aria-hidden="true" />
+				</MobileIconAction>
 			</div>
 		</div>
 
@@ -596,14 +601,14 @@
 		contentClass="daynight-mobile-pdp__viewer-sheet"
 	>
 		<div class="daynight-mobile-pdp__viewer" data-mobile-pdp-viewer>
-			<button
-				type="button"
+			<MobileIconAction
 				class="daynight-mobile-pdp__viewer-close"
-				aria-label={detail.mobileDrawer.closeLabel}
+				label={detail.mobileDrawer.closeLabel}
+				appearance="overlay"
 				onclick={closeImageViewer}
 			>
-				<X size={24} strokeWidth={2.35} aria-hidden="true" />
-			</button>
+				<X size={20} strokeWidth={2} aria-hidden="true" />
+			</MobileIconAction>
 
 			<p class="daynight-mobile-pdp__viewer-count">
 				{selectedImageIndex + 1} / {heroGalleryImages.length}
@@ -720,57 +725,6 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-		}
-
-		.daynight-mobile-pdp__topbar button,
-		.daynight-mobile-pdp__topbar a {
-			position: relative;
-			display: flex;
-			width: var(--bc-mobile-icon-action-hit-size);
-			height: var(--bc-mobile-icon-action-hit-size);
-			flex: 0 0 var(--bc-mobile-icon-action-hit-size);
-			align-items: center;
-			justify-content: center;
-			border: 0;
-			border-radius: 999px;
-			background: transparent;
-			color: #1c1c1c;
-			cursor: pointer;
-			isolation: isolate;
-			padding: 0;
-			text-decoration: none;
-		}
-
-		.daynight-mobile-pdp__topbar button::before,
-		.daynight-mobile-pdp__topbar a::before {
-			position: absolute;
-			z-index: -1;
-			width: var(--bc-control-height-compact);
-			height: var(--bc-control-height-compact);
-			border-radius: inherit;
-			background: rgba(255, 255, 255, 0.92);
-			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-			content: '';
-			pointer-events: none;
-		}
-
-		.daynight-mobile-pdp__topbar button:focus-visible,
-		.daynight-mobile-pdp__topbar a:focus-visible {
-			outline: 0;
-		}
-
-		.daynight-mobile-pdp__topbar button:focus-visible::before,
-		.daynight-mobile-pdp__topbar a:focus-visible::before {
-			background: #f3f4f6;
-			outline: 2px solid currentColor;
-			outline-offset: 2px;
-		}
-
-		@media (hover: hover) and (pointer: fine) {
-			.daynight-mobile-pdp__topbar button:hover::before,
-			.daynight-mobile-pdp__topbar a:hover::before {
-				background: #f3f4f6;
-			}
 		}
 
 		.daynight-mobile-pdp__topbar-actions {
@@ -1447,21 +1401,11 @@
 			background: #050505;
 		}
 
-		.daynight-mobile-pdp__viewer-close {
+		.daynight-mobile-pdp__viewer :global(.daynight-mobile-pdp__viewer-close) {
 			position: absolute;
 			top: calc(14px + env(safe-area-inset-top));
 			right: 14px;
 			z-index: 2;
-			display: flex;
-			width: 44px;
-			height: 44px;
-			align-items: center;
-			justify-content: center;
-			border: 0;
-			border-radius: 999px;
-			background: rgba(255, 255, 255, 0.94);
-			color: #111111;
-			cursor: pointer;
 		}
 
 		.daynight-mobile-pdp__viewer-count {
