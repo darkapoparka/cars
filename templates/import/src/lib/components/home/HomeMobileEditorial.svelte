@@ -55,7 +55,8 @@
 			<header>
 				<h2>{copy.guides}</h2>
 			</header>
-			<div class="guide-list">
+			<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
+			<div class="guide-list" tabindex="0" role="region" aria-label={copy.guides}>
 				{#each data.posts as post (post.slug)}
 					<ArticleCard {post} {english} compact mobileRow readLabel={mobileCopy.read} />
 				{/each}
@@ -114,7 +115,17 @@
 		}
 		.guide-list {
 			display: grid;
+			grid-auto-flow: column;
+			grid-auto-columns: 88%;
 			gap: 12px;
+			overflow-x: auto;
+			scroll-snap-type: x proximity;
+			overscroll-behavior-x: contain;
+			padding-block: 2px 8px;
+			scrollbar-width: none;
+		}
+		.guide-list :global(.article-card) {
+			scroll-snap-align: start;
 		}
 		.guide-section {
 			padding-bottom: 24px;

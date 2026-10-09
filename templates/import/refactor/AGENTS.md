@@ -6,7 +6,7 @@ This file applies to this `refactor/` documentation subtree. Its implementation 
 
 The initiating request authorizes an audit and written plan. Unchecked tasks are not authorization to rewrite application code, migrate databases, enable paid providers, contact leads, commit, push or deploy. Obtain the relevant implementation instruction before executing a phase. Preserve the current owner’s mobile work and existing untracked files.
 
-Use the existing `main` checkout. Do not create another branch or Git worktree unless explicitly requested. One task owns application writes and generated build output at a time. A temporary audit copy is not a release source or a new worktree. Do not overwrite an existing running preview’s output to obtain a convenient test result.
+Use the existing `main` checkout. Do not create another branch or Git worktree unless explicitly requested. Independent files may be edited concurrently; overlapping source and a shared generated build output need a single writer at a time. A temporary audit copy is not a release source or a new worktree. Do not overwrite an existing running preview’s output to obtain a convenient test result.
 
 ## Start of an implementation task
 

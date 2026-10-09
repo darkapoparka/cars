@@ -41,11 +41,12 @@
 					href={linkHref(site.contact.mapHref)}
 					target="_blank"
 					rel="noreferrer">{dealerCopy[english ? 'en' : 'bg'].address}</a
-				><a href={linkHref(site.contact.messageHref)}>{copy.message}</a>
+				><a class="site-footer__message" href={linkHref(site.contact.messageHref)}>{copy.message}</a
+				>
 			</address>
 		</div>
 		<div class="site-footer__legal">
-			<span>{site.identity.name}</span>
+			<span class="site-footer__legal-name">{site.identity.name}</span>
 			<nav aria-label={copy.policies}>
 				<a href={linkHref('/privacy')}>{copy.privacy}</a><a href={linkHref('/terms')}
 					>{copy.terms}</a
@@ -109,6 +110,26 @@
 	@media (max-width: 767.98px) {
 		.site-footer {
 			border-radius: 24px 24px 0 0;
+		}
+		.site-footer a.site-footer__message {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			align-self: flex-start;
+			min-height: var(--bc-control-height-primary);
+			padding: 8px 18px;
+			border: 1px solid var(--bc-footer-border);
+			border-radius: var(--bc-radius-pill);
+			background: var(--bc-control);
+			color: var(--bc-ink);
+			font-weight: var(--bc-weight-heading);
+			text-decoration: none;
+		}
+		.site-footer a.site-footer__message:hover {
+			background: var(--bc-surface-hover);
+		}
+		.site-footer__legal-name {
+			display: none;
 		}
 		.site-footer__main {
 			grid-template-columns: 1fr;

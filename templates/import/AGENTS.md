@@ -13,7 +13,7 @@ Read [Architecture](docs/ARCHITECTURE.md) for current source boundaries. Read [T
 
 ## Implementation and preservation
 
-Confirm physical checkout, remote, current branch/HEAD, relevant dirty paths and listener ownership. One writer owns the checkout/index/build output. Preserve unrelated staged, unstaged, untracked and unique branch work; no blanket staging, clean/reset, deletion of unmerged work or force-push. Keep existing lockfiles, runtime, licenses and provenance. Do not switch a working branch or overwrite another template or dealer merely to synchronize it.
+Confirm physical checkout, remote, current branch/HEAD, relevant dirty paths and listener ownership. Independent files may be edited concurrently. Coordinate only overlapping files and shared Git/index/build output. Preserve unrelated staged, unstaged, untracked and unique branch work; no blanket staging, clean/reset, deletion of unmerged work or force-push. Keep existing lockfiles, runtime, licenses and provenance. Do not switch a working branch or overwrite another template or dealer merely to synchronize it.
 
 Use the release-documented Node runtime and retained npm lockfile. Keep dealer configuration at `src/lib/config/dealer.ts` / `src/lib/config/site.ts`, public copy in `src/lib/content/`, and content compatibility at `src/lib/data/daynight.ts`, `src/lib/data/daynight-listings.json`, `src/lib/data/vehicles.ts`, `src/lib/styles/`, `static/`. Reuse actual components and data boundaries. Preserve the existing route and interaction contracts.
 
@@ -23,6 +23,6 @@ Commit only reviewed task-owned changes when authorized. Template polish does no
 
 ## Main is the working branch
 
-The owner chose a main-only workflow on 13 September 2026. Use the saved checkout on `main` for routine work. Do not create another branch or worktree unless the owner explicitly requests one. One task owns writes to a checkout; concurrent tasks may review read-only or work in a different repository. Fetch and inspect status before writing, preserve other tasks' work, and finish authorized implementation with scoped commits and a non-force push to main.
+The owner chose a main-only workflow on 13 September 2026. Use the saved checkout on `main` for routine work. Do not create another branch or worktree unless the owner explicitly requests one. Independent tasks may edit disjoint files in the same checkout. Coordinate overlapping files and serialize shared Git/index, configuration and build-output writes; continue unrelated work without waiting for acknowledgements. Inspect the relevant dirty state before editing and preserve other tasks' work. Fetch and review ancestry before integration/publication; commit and push when included in the authorized task.
 
 An explicitly requested temporary branch/worktree must be integrated, verified and removed before the task is called complete. If blocked, record its exact repository, ref, commit, paths and next action in the handoff. Do not leave unfinished source discoverable only through a task title or old branch. Source consolidation preserves work; template release, owner visual acceptance and dealer deployment keep their separate checks.

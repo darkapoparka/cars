@@ -134,12 +134,14 @@
 		</ul>
 		<p class="card-box__price daynight-card-price h6">
 			<span class="daynight-card-price__amount">{vehicle.priceLabel.replace('EUR', '€')}</span>
-			<a
-				href={resolve(`/financing?vehicle=${encodeURIComponent(vehicle.slug)}`)}
-				class="daynight-card-price__monthly daynight-card-price__finance-link"
-				aria-label={`${copy.finance}: ${vehicle.monthlyLabel}`}
-				>{vehicle.monthlyLabel.replace('EUR', '€')}</a
-			>
+			{#if vehicle.monthlyLabel}
+				<a
+					href={resolve(`/financing?vehicle=${encodeURIComponent(vehicle.slug)}`)}
+					class="daynight-card-price__monthly daynight-card-price__finance-link"
+					aria-label={`${copy.finance}: ${vehicle.monthlyLabel}`}
+					>{vehicle.monthlyLabel.replace('EUR', '€')}</a
+				>
+			{/if}
 		</p>
 
 		<div class="daynight-card-actions">

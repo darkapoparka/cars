@@ -98,4 +98,36 @@ for (const locale of ['bg', 'en'] as const) {
 			locale === 'en' ? 'Showing 0 of 0 cars' : 'Показани 0 от 0 автомобила'
 		);
 	});
+
+	test(`${locale}: a body type without stock survives the Home-to-Import handoff`, async ({
+		page
+	}, info) => {
+		await visit(page, `/${locale}`);
+		await page
+			.getByRole('link', { name: locale === 'en' ? 'Hatchback' : 'Хечбек', exact: true })
+			.filter({ visible: true })
+			.click();
+		if (info.project.name === 'mobile') {
+			await expect(page).toHaveURL((url) => url.searchParams.get('bodyType') === 'Hatchback');
+			await page
+				.getByRole('tab', { name: locale === 'en' ? 'Find a car' : 'Нямам линк', exact: true })
+				.click();
+			await page
+				.getByRole('button', {
+					name: locale === 'en' ? 'Describe the car' : 'Опиши автомобила',
+					exact: true
+				})
+				.click();
+			await expect(page.getByRole('dialog').locator('[id^="import-wizard-type-"]')).toContainText(
+				locale === 'en' ? 'Hatchback' : 'Хечбек'
+			);
+		} else {
+			const dialog = page.getByRole('dialog', {
+				name: locale === 'en' ? 'Import a car' : 'Внос на автомобил',
+				exact: true
+			});
+			await expect(dialog).toBeVisible();
+			await expect(dialog.locator('[id^="import-wizard-type-"]')).toHaveValue('Hatchback');
+		}
+	});
 }

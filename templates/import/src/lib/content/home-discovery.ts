@@ -46,7 +46,7 @@ export const homeDiscoveryCopy = {
 		browseTypes: 'Разгледай по тип',
 		mobileTypes: 'Типове',
 		all: 'Всички',
-		reviews: 'Клиентски отзиви',
+		reviews: 'Примерни отзиви',
 		customer: 'Клиент',
 		guides: 'Полезно за автомобила',
 		allGuides: editorialCopy.bg.allGuides
@@ -58,7 +58,7 @@ export const homeDiscoveryCopy = {
 		browseTypes: 'Browse by type',
 		mobileTypes: 'Browse by type',
 		all: 'All',
-		reviews: 'Customer reviews',
+		reviews: 'Sample reviews',
 		customer: 'Customer',
 		guides: 'Guides and advice',
 		allGuides: editorialCopy.en.allGuides

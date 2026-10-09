@@ -196,7 +196,7 @@ export type HomeFiveModalsData = {
 export type HomeFiveTypeCard = {
 	allTile?: boolean;
 	bodyType: string;
-	href: `/inventory${string}` | '/import';
+	href: `/inventory${string}` | `/import${string}`;
 	image: string;
 	label: string;
 };
@@ -857,7 +857,7 @@ export const homeFiveTypeCards: HomeFiveTypeCard[] = [
 		label: 'Electric',
 		image: '/assets/images/card/card-27.webp',
 		bodyType: 'Electric',
-		href: '/import'
+		href: `/import?intent=source&fuel=${encodeURIComponent('Електрически')}`
 	},
 	{
 		label: 'Sedan',
@@ -875,19 +875,19 @@ export const homeFiveTypeCards: HomeFiveTypeCard[] = [
 		label: 'Pickup Truck',
 		image: '/assets/images/card/card-30.webp',
 		bodyType: 'Pickup Truck',
-		href: '/import'
+		href: '/import?intent=source&bodyType=Pickup%20Truck'
 	},
 	{
 		label: 'Hatchback',
 		image: '/assets/images/card/card-31.webp',
 		bodyType: 'Hatchback',
-		href: '/import'
+		href: '/import?intent=source&bodyType=Hatchback'
 	},
 	{
 		label: 'Crossover',
 		image: '/assets/images/card/card-32.webp',
 		bodyType: 'Crossover',
-		href: '/import'
+		href: '/import?intent=source&bodyType=Crossover'
 	},
 	{
 		label: 'Cabriolet',
@@ -1418,7 +1418,9 @@ const compareVehicleFrom = (vehicle: Vehicle): HomeFiveCompareVehicle => ({
 const formatKm = (value: number) => `${value.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} km`;
 
 const formatMonthly = (value: number, locale: Locale) =>
-	`${value.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} ${locale === 'bg' ? '€/мес.' : '€/mo'}`;
+	value > 0
+		? `${value.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} ${locale === 'bg' ? '€/мес.' : '€/mo'}`
+		: '';
 
 const compactFuelLabel = (fuel: string, locale: Locale) => {
 	const normalizedFuel = fuel.toLowerCase();
