@@ -14,12 +14,22 @@ const numericKeys = new Set([
   'maxSeats',
   'radius',
 ]);
+// Dictionary keys identify catalog entries. Reject invalid keys instead of changing their identity.
+function validMapKey(name: string): boolean {
+  return (
+    name.length > 0 &&
+    name.length <= 100 &&
+    name === name.trim() &&
+    !['__proto__', 'constructor', 'prototype'].includes(name)
+  );
+}
 /** Validate URL and browser-storage values before they reach rendering or filtering. */
 export function normalizeFilters(input: unknown): Filters {
   const result = structuredClone(defaultFilters);
   if (!input || typeof input !== 'object' || Array.isArray(input)) return result;
   const record = input as Record<string, unknown>;
   for (const key of Object.keys(defaultFilters) as (keyof Filters)[]) {
+    if (!Object.hasOwn(record, key)) continue;
     const value = record[key];
     const fallback = defaultFilters[key];
     if (Array.isArray(fallback)) {
@@ -40,9 +50,7 @@ export function normalizeFilters(input: unknown): Filters {
       if (value && typeof value === 'object' && !Array.isArray(value)) {
         const listMap = key === 'makeModels' || key === 'excludedModels';
         const entries = Object.entries(value as Record<string, unknown>)
-          .filter(
-            ([name]) => name.trim() && !['__proto__', 'constructor', 'prototype'].includes(name),
-          )
+          .filter(([name]) => validMapKey(name))
           .slice(0, 100);
         Object.assign(result, {
           [key]: Object.fromEntries(
@@ -50,7 +58,7 @@ export function normalizeFilters(input: unknown): Filters {
               if (listMap && Array.isArray(choice))
                 return [
                   [
-                    name.slice(0, 100),
+                    name,
                     [
                       ...new Set(
                         choice
@@ -62,7 +70,7 @@ export function normalizeFilters(input: unknown): Filters {
                   ],
                 ];
               if (!listMap && typeof choice === 'string')
-                return [[name.slice(0, 100), choice.trim().slice(0, 200)]];
+                return [[name, choice.trim().slice(0, 200)]];
               return [];
             }),
           ),
@@ -93,25 +101,20 @@ export function normalizeFilters(input: unknown): Filters {
 /** Bounded, prototype-safe nested maps from persisted state or URL parameters. */
 function normalizeModelVariantMap(value: unknown): Record<string, Record<string, string>> {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return {};
-  const safe = (name: string) =>
-    Boolean(name.trim()) && !['__proto__', 'prototype', 'constructor'].includes(name.trim());
   return Object.fromEntries(
     Object.entries(value)
       .filter(
         ([make, models]) =>
-          safe(make) && models && typeof models === 'object' && !Array.isArray(models),
+          validMapKey(make) && models && typeof models === 'object' && !Array.isArray(models),
       )
       .slice(0, 100)
       .map(([make, models]) => [
-        make.trim().slice(0, 100),
+        make,
         Object.fromEntries(
           Object.entries(models as Record<string, unknown>)
-            .filter(([model, variant]) => safe(model) && typeof variant === 'string')
+            .filter(([model, variant]) => validMapKey(model) && typeof variant === 'string')
             .slice(0, 100)
-            .map(([model, variant]) => [
-              model.trim().slice(0, 100),
-              (variant as string).trim().slice(0, 200),
-            ]),
+            .map(([model, variant]) => [model, (variant as string).trim().slice(0, 200)]),
         ),
       ]),
   );

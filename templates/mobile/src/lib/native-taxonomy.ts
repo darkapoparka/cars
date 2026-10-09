@@ -31,26 +31,31 @@ export const truckResourceKeys: Record<string, keyof typeof makeData> = {
 export function nativeCategoryKey(
   filters: Pick<Filters, 'category' | 'details'>,
 ): keyof typeof makeData {
-  if (filters.category === 'truck')
-    return (
-      truckResourceKeys[
-        filters.details.find((value) => value.startsWith('truckCategory='))?.slice(14) ||
-          'Over 7.5 t'
-      ] || 'truck_over_7500'
-    );
+  if (filters.category === 'truck') {
+    const category =
+      filters.details.find((value) => value.startsWith('truckCategory='))?.slice(14) ||
+      'Over 7.5 t';
+    return Object.hasOwn(truckResourceKeys, category)
+      ? truckResourceKeys[category]
+      : 'truck_over_7500';
+  }
   const keys: Record<Exclude<VehicleCategory, 'truck'>, keyof typeof makeData> = {
     car: 'car',
     bike: 'motorbike',
     'electric-bike': 'ebike',
     motorhome: 'motorhome',
   };
-  return keys[filters.category];
+  return Object.hasOwn(keys, filters.category) ? keys[filters.category] : 'car';
 }
 export function nativeMakesFor(filters: Pick<Filters, 'category' | 'details'>): string[] {
   return makeData[nativeCategoryKey(filters)].map((make) => make.name);
 }
 export function modelGroupsFor(make: string): NativeModelGroup[] {
-  return make === 'BMW' ? bmwModelGroups : carModelGroups[make] || [];
+  return make === 'BMW'
+    ? bmwModelGroups
+    : Object.hasOwn(carModelGroups, make)
+      ? carModelGroups[make]
+      : [];
 }
 
 /** Some native families contain a leaf with exactly the same name (for example Continental). */

@@ -58,7 +58,7 @@ function canonical(value: string): string {
     'automatic climatisation, 3 zones': 'automatic air conditioning, 3 zones',
     'automatic climatisation, 2 zones': 'automatic air conditioning, 2 zones',
   };
-  return aliases[key] || key;
+  return Object.hasOwn(aliases, key) ? aliases[key] : key;
 }
 function hasFeature(vehicle: Vehicle, feature: string): boolean {
   return vehicle.features.some((value) => canonical(value) === canonical(feature));
@@ -85,7 +85,13 @@ function matchesDetails(v: Vehicle, selections: string[]): boolean {
   ]);
   return [...groups].every(([key, values]) => {
     const base = key.replace(/(?:From|To)$/, '');
-    const attr = base === 'rating' ? String(v.rating) : v.attributes?.[base];
+    const suppliedAttribute =
+      base === 'rating'
+        ? String(v.rating)
+        : v.attributes && Object.hasOwn(v.attributes, base)
+          ? v.attributes[base]
+          : undefined;
+    const attr = typeof suppliedAttribute === 'string' ? suppliedAttribute : undefined;
     if (key === 'description')
       return values.every((x) =>
         (v.make + ' ' + v.model + ' ' + v.variant + ' ' + v.features.join(' '))
@@ -164,7 +170,9 @@ export function sortVehicles(vehicles: Vehicle[], sort: string): Vehicle[] {
     power: (a, b) => b.power - a.power,
     standard: (a, b) => Number(Boolean(b.sponsored)) - Number(Boolean(a.sponsored)),
   };
-  return [...vehicles].sort(comparators[sort] || comparators.standard);
+  return [...vehicles].sort(
+    Object.hasOwn(comparators, sort) ? comparators[sort] : comparators.standard,
+  );
 }
 export function serializeFilters(input: Filters): string {
   const filters = normalizeFilters(input);
