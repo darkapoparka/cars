@@ -219,9 +219,9 @@ try {
             const box = card.getBoundingClientRect();
             const brands = document.querySelector('.dn-brand-section').getBoundingClientRect();
             const advice = document.querySelector('.dn-editorial').getBoundingClientRect();
-            return box.left >= 0 && box.right <= innerWidth && box.top >= advice.bottom;
+            return box.left >= 0 && box.right <= innerWidth && box.top >= brands.bottom && box.bottom <= advice.top;
           });
-          assert(placement, 'All services follows Buying guides without widening the page');
+          assert(placement, 'Services follows brand discovery and precedes Buying guides without widening the page');
           await capture('home');
           await page.locator('.dn-mobile-core-actions').scrollIntoViewIfNeeded();
           await capture('home-actions');
