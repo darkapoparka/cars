@@ -127,7 +127,7 @@ async function longCardCopy(page, locale, layout) {
         const content = card.querySelector('.dn-vehicle-card__content').getBoundingClientRect();
         const mileage = badges[1].querySelector('span');
         return {
-          expectedFacts: !card.classList.contains('dn-vehicle-card--listing') || card.clientWidth <= 24 * parseFloat(getComputedStyle(document.documentElement).fontSize) ? 3 : 5,
+          expectedFacts: !card.classList.contains('dn-vehicle-card--listing') ? 3 : card.clientWidth <= 24 * parseFloat(getComputedStyle(document.documentElement).fontSize) ? 4 : 5,
           lines: heading.getBoundingClientRect().height / parseFloat(headingStyle.lineHeight),
           title: heading.title, accessible: card.querySelector('a').getAttribute('aria-label'),
           bottomStrip: metadata.top >= photo.bottom && metadata.top >= content.bottom - 1,
@@ -147,7 +147,7 @@ async function longCardCopy(page, locale, layout) {
       assert.equal(geometry.accessible, title, 'Clamped copy retains the complete vehicle name for accessibility');
       assert(geometry.badges.every(badge => badge.whiteSpace === 'nowrap' && badge.height <= badge.lineHeight + badge.padding + 1 && badge.fits), `Every visible badge keeps a single line inside its surface: ${JSON.stringify(geometry)}`);
       assert(geometry.badges.every(badge => !badge.clipped), `Known compact fuel and transmission labels remain fully visible: ${JSON.stringify(geometry)}`);
-      assert.equal(geometry.badges.length, geometry.expectedFacts, 'Narrow listings prioritize year, mileage and fuel; roomy listings retain all five facts');
+      assert.equal(geometry.badges.length, geometry.expectedFacts, 'Narrow listings prioritize year, mileage, fuel and transmission; roomy listings retain all five facts');
       assert(geometry.bottomStrip && geometry.fullMileageFits, 'All mobile cards retain complete mileage in the strip after the title and price');
       assert(Math.max(...geometry.badges.map(badge => badge.top)) - Math.min(...geometry.badges.map(badge => badge.top)) <= 1, 'All mobile specifications share one row');
       assert(geometry.badges.some(badge => badge.full === fuel.full), 'Full fuel values remain available alongside compact copy');
@@ -363,7 +363,7 @@ try {
             const headingStyle = getComputedStyle(card.querySelector('.dn-vehicle-card__name'));
             const priceStyle = getComputedStyle(card.querySelector('.dn-vehicle-card__amount'));
             const facts = [...card.querySelectorAll('.dn-vehicle-card__fact')].filter(fact => fact.checkVisibility());
-            const expectedFacts = card.clientWidth <= 24 * parseFloat(getComputedStyle(document.documentElement).fontSize) ? 3 : 5;
+            const expectedFacts = card.clientWidth <= 24 * parseFloat(getComputedStyle(document.documentElement).fontSize) ? 4 : 5;
             const badgeBoxes = facts.map(fact => fact.getBoundingClientRect());
             const badgeTextFits = facts.every(fact => {
               const text = fact.querySelector('span:not(.dn-sr-only)');

@@ -563,9 +563,8 @@
       overflow-wrap: anywhere;
     }
 
-    /* Keep the three useful overview facts when the card itself is narrow. */
+    /* Keep four useful overview facts when the card itself is narrow. */
     @container (max-width: 24rem) {
-      .dn-vehicle-card--listing .dn-vehicle-card__fact--transmission,
       .dn-vehicle-card--listing .dn-vehicle-card__fact--body { display: none; }
     }
 
