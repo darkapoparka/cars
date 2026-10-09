@@ -1,4 +1,5 @@
 'use client';
+import {displayMake} from '@/lib/inventory-labels';
 import {assetPath} from '@/lib/paths';
 import {useCopy} from '@/lib/locale';
 import {useState} from 'react';
@@ -35,10 +36,10 @@ export default function InspectionReport({vehicle,capturedSections}: {vehicle: V
 
   const [enquiryOpen, setEnquiryOpen] = useState(false);
   const approved = Boolean(dealer.referenceClaimsApproved);
-  const vehicleTitle = `${vehicle.year} ${vehicle.make} ${vehicle.model}`;
+  const vehicleTitle = `${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}`;
   return <main {...stylex.props(s.page)}>
     <PageHeader title={tx("Inspection report")} backHref={`/cars/${vehicle.slug}`} backLabel={tx("Back to car")}/>
-    <div {...stylex.props(s.content)}><section {...stylex.props(s.intro)}><h2 {...stylex.props(s.vehicleTitle)}>{tx(vehicle.year)} {tx(vehicle.make.toUpperCase())} {tx(vehicle.model.toUpperCase())}</h2><p {...stylex.props(s.trim)}>{tx(vehicle.trim.split(' • ')[0])} {tx(" | ")}{tx(vehicle.engine)}</p><img src={assetPath(vehicle.image)} width={1155} height={651} alt={tx(vehicleTitle)} {...stylex.props(s.car)} /><div {...stylex.props(s.inspectionStatement)}><span {...stylex.props(s.inspectionIcon)}>{approved?<ShieldCheck size={43} fill="#50b67f" color="#fff" />:<Info size={32}/>}</span><p>{tx(approved?"Review the recorded condition details for this demo vehicle.":"No verified inspection report is available for this sample car.")}</p></div></section>
+    <div {...stylex.props(s.content)}><section {...stylex.props(s.intro)}><h2 {...stylex.props(s.vehicleTitle)}>{tx(vehicle.year)} {tx(displayMake(vehicle.make).toUpperCase())} {tx(vehicle.model.toUpperCase())}</h2><p {...stylex.props(s.trim)}>{tx(vehicle.trim.split(' • ')[0])} {tx(" | ")}{tx(vehicle.engine)}</p><img src={assetPath(vehicle.image)} width={1155} height={651} alt={tx(vehicleTitle)} {...stylex.props(s.car)} /><div {...stylex.props(s.inspectionStatement)}><span {...stylex.props(s.inspectionIcon)}>{approved?<ShieldCheck size={43} fill="#50b67f" color="#fff" />:<Info size={32}/>}</span><p>{tx(approved?"Review the recorded condition details for this demo vehicle.":"No verified inspection report is available for this sample car.")}</p></div></section>
       {approved?<><h2 {...stylex.props(s.reportHeading)}>{tx("YOUR CAR CONDITION REPORT")}</h2>{capturedSections.map(section => <InspectionSection key={section.title} section={section} />)}<p {...stylex.props(s.referenceNote)}>{tx("Archived inspection data for this demo vehicle. The recorded checkpoints and findings come from this vehicle’s captured listing. This application has not independently inspected or certified the vehicle.")}</p></>:null}
     </div>
     <footer data-desktop-page-bar {...stylex.props(s.footer)}><button type="button" onClick={() => setEnquiryOpen(true)} {...stylex.props(s.book)}>{tx("Ask about a viewing")}</button></footer>

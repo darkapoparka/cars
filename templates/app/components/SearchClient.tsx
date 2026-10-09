@@ -1,4 +1,5 @@
 'use client';
+import {displayMake} from '@/lib/inventory-labels';
 import {assetPath} from '@/lib/paths';
 import {useCopy} from '@/lib/locale';
 import {useEffect, useMemo, useRef, useState, type FormEvent, type KeyboardEvent} from 'react';
@@ -38,11 +39,11 @@ export default function SearchClient({initialQuery = '', overlay = false, formId
       const stock = vehicles.filter(vehicle => vehicle.make.trim().toLowerCase() === matchingMake.toLowerCase());
       const models = distinctNames(stock.map(vehicle => vehicle.model));
       const bodies = distinctNames(stock.map(vehicle => vehicle.body)).filter(body => body !== 'Not published');
-      return [{label: matchingMake, brand: matchingMake},
-        ...bodies.map(body => ({label: `${matchingMake} ${tx(body)}`, brand: matchingMake, body})),
-        ...models.slice(0, 5).map(model => ({label: `${matchingMake} ${model}`, brand: matchingMake, query: `${matchingMake} ${model}`}))];
+      return [{label: displayMake(matchingMake), brand: matchingMake},
+        ...bodies.map(body => ({label: `${displayMake(matchingMake)} ${tx(body)}`, brand: matchingMake, body})),
+        ...models.slice(0, 5).map(model => ({label: `${displayMake(matchingMake)} ${model}`, brand: matchingMake, query: `${matchingMake} ${model}`}))];
     }
-    return [...new Map(vehicles.filter(vehicle => `${vehicle.make} ${vehicle.model}`.toLowerCase().includes(value)).map(vehicle => [`${vehicle.make} ${vehicle.model}`.toLowerCase(), {label: `${vehicle.make} ${vehicle.model}`, brand: vehicle.make, query: `${vehicle.make} ${vehicle.model}`}])).values()].slice(0, 8);
+    return [...new Map(vehicles.filter(vehicle => `${vehicle.make} ${vehicle.model}`.toLowerCase().includes(value)).map(vehicle => [`${vehicle.make} ${vehicle.model}`.toLowerCase(), {label: `${displayMake(vehicle.make)} ${vehicle.model}`, brand: vehicle.make, query: `${vehicle.make} ${vehicle.model}`}])).values()].slice(0, 8);
   }, [query, tx]);
   useEffect(() => {if (!overlay) input.current?.focus({preventScroll: true});}, [overlay]);
   useEffect(() => {if (active >= 0) document.getElementById(`suggestion-${active}`)?.scrollIntoView({block: 'nearest', behavior: 'instant'});}, [active]);
@@ -78,7 +79,7 @@ export default function SearchClient({initialQuery = '', overlay = false, formId
       {!suggestions.length ? <button type="button" onClick={() => choose()} {...stylex.props(s.suggestion)}><span {...stylex.props(s.suggestionIcon)}><Search size={18} strokeWidth={1.8} aria-hidden="true"/></span><span {...stylex.props(s.suggestionText)}>{tx("Search for “")}{tx(query)}{tx("”")}</span><ChevronRight size={18} aria-hidden="true" {...stylex.props(s.suggestionArrow)}/></button> : null}
     </div> : <>
       {!overlay ? <Link href="/finance" {...stylex.props(s.loan)}><img src={assetPath("/reference-assets/loan-card.png")} width={30} height={28} alt="" /><span>{tx("Finance help")}</span><u>{tx("Explore")}</u><ChevronRight size={12} aria-hidden="true" /></Link> : null}
-      {popular.length ? <section {...stylex.props(s.popular)}><h2 {...stylex.props(s.title)}>{tx("Popular Brands")}</h2><div {...stylex.props(s.brands)}>{popular.map(brand => <button type="button" key={brand} onClick={() => choose({label: brand, brand})} aria-label={tx(`Search ${brand}`)} {...stylex.props(s.brand)}><BrandEmblem make={brand}/><span {...stylex.props(s.brandLabel)}>{brand === 'Mercedes-Benz' ? 'Mercedes' : brand}</span></button>)}</div></section> : null}
+      {popular.length ? <section {...stylex.props(s.popular)}><h2 {...stylex.props(s.title)}>{tx("Popular Brands")}</h2><div {...stylex.props(s.brands)}>{popular.map(brand => <button type="button" key={brand} onClick={() => choose({label: brand, brand})} aria-label={tx(`Search ${brand}`)} {...stylex.props(s.brand)}><BrandEmblem make={brand}/><span {...stylex.props(s.brandLabel)}>{tx(displayMake(brand))}</span></button>)}</div></section> : null}
       {!overlay && recent.length ? <section {...stylex.props(s.recent)}><h2 {...stylex.props(s.title)}>{tx("Recently viewed cars")}</h2><div {...stylex.props(s.recentRail)}>{recent.map(vehicle => <MiniVehicleCard key={vehicle.slug} vehicle={vehicle} />)}</div></section> : null}
     </>}
   </Content></>;

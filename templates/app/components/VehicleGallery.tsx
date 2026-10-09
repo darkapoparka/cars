@@ -1,4 +1,5 @@
 'use client';
+import {displayMake} from '@/lib/inventory-labels';
 import {assetPath, browserPath} from '@/lib/paths';
 import {useCopy, useLocale} from '@/lib/locale';
 import {useEffect, useMemo, useRef, useState} from 'react';
@@ -44,7 +45,7 @@ export default function VehicleGallery({vehicle, initialCategory = 'Exteriors',c
   async function share() {
     try {
       const url = `${location.origin}${browserPath(`/cars/${vehicle.slug}`, locale)}`;
-      if (navigator.share) await navigator.share({title: `${vehicle.year} ${vehicle.make} ${vehicle.model}`, url});
+      if (navigator.share) await navigator.share({title: `${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}`, url});
       else if (navigator.clipboard) {await navigator.clipboard.writeText(url); setMessage('Link copied');}
       else setMessage(url);
     } catch (error) {if (!(error instanceof DOMException && error.name === 'AbortError')) setMessage('Sharing is unavailable in this browser.');}
@@ -52,11 +53,11 @@ export default function VehicleGallery({vehicle, initialCategory = 'Exteriors',c
   return <main aria-label={tx("Vehicle photo gallery")} {...stylex.props(s.page)}>
     <PageHeader title={tx("Photos")} backHref={`/cars/${vehicle.slug}`} backLabel={tx("Back to vehicle details")} action={<IconButton icon={Share2} label={tx('Share car')} onClick={share}/>}/>
     <nav aria-label={tx("Vehicle photo categories")} {...stylex.props(s.tabs)}>{available.map(item => <button type="button" key={item} aria-pressed={item === category} onClick={() => choose(item)} {...stylex.props(s.tab, item === category && s.activeTab)}>{tx(captions[item])}</button>)}</nav>
-    <div ref={content} {...stylex.props(s.images)}>{photos.map((photo, index) => <button type="button" key={`${photo.src}-${index}`} data-photo-index={index} data-photo-category={photo.category} aria-label={tx(`Zoom ${photo.label} photo`)} onClick={() => setSelected(index)} {...stylex.props(s.photoButton)}><img src={assetPath(photo.src)} width={1200} height={625} alt={`${vehicle.make} ${vehicle.model}: ${tx(photo.label)}`} loading={index < 2 ? 'eager' : 'lazy'} {...stylex.props(s.photo, vehicle.imagePlaceholder && s.placeholderPhoto)} /><span {...stylex.props(s.photoCaption)}><Star size={12} fill="currentColor" />{tx(photo.label)}</span></button>)}</div>
+    <div ref={content} {...stylex.props(s.images)}>{photos.map((photo, index) => <button type="button" key={`${photo.src}-${index}`} data-photo-index={index} data-photo-category={photo.category} aria-label={tx(`Zoom ${photo.label} photo`)} onClick={() => setSelected(index)} {...stylex.props(s.photoButton)}><img src={assetPath(photo.src)} width={1200} height={625} alt={`${displayMake(vehicle.make)} ${vehicle.model}: ${tx(photo.label)}`} loading={index < 2 ? 'eager' : 'lazy'} {...stylex.props(s.photo, vehicle.imagePlaceholder && s.placeholderPhoto)} /><span {...stylex.props(s.photoCaption)}><Star size={12} fill="currentColor" />{tx(photo.label)}</span></button>)}</div>
     <footer data-desktop-page-bar {...stylex.props(s.footer)}><button type="button" onClick={() => setEnquiryOpen(true)} {...stylex.props(s.book)}>{tx("Ask about a viewing")}</button></footer>
     {message ? <button type="button" role="status" onClick={() => setMessage('')} {...stylex.props(s.message)}>{tx(message)}</button> : null}
     {selected !== null ? <VehiclePhotoViewer photos={photos} initialIndex={selected} onClose={() => setSelected(null)} /> : null}
-    <DealerEnquirySheet vehicleTitle={`${vehicle.year} ${vehicle.make} ${vehicle.model}`} open={enquiryOpen} onClose={() => setEnquiryOpen(false)} />
+    <DealerEnquirySheet vehicleTitle={`${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}`} open={enquiryOpen} onClose={() => setEnquiryOpen(false)} />
   </main>;
 }
 const s = stylex.create({

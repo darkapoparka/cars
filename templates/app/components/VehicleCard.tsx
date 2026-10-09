@@ -1,4 +1,5 @@
 'use client';
+import {displayMake} from '@/lib/inventory-labels';
 import {hasPublishedMileage, hasPublishedMonthlyPayment, vehicleDiscount} from '@/lib/vehicle-values';
 import {memo, useEffect, useRef, useState} from 'react';
 import {assetPath} from '@/lib/paths';
@@ -45,30 +46,30 @@ function VehicleCard({vehicle, showDiscount = false, desktopTile = false, financ
   const facts = [!hasPublishedMileage(vehicle) ? tx('Mileage on request') : `${formatPrice(vehicle.mileage)} ${tx('km')}`,
     vehicle.specifications || vehicle.transmission,
     vehicle.highlights[0] || (vehicle.fuel !== 'Not published' ? vehicle.fuel : vehicle.body)].filter(Boolean);
-  const importAction = `${tx('Import enquiry')}: ${vehicle.year} ${vehicle.make} ${vehicle.model}, ${importListing?.country || ''}`;
+  const importAction = `${tx('Import enquiry')}: ${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}, ${importListing?.country || ''}`;
   const photo = <>
-    <img src={assetPath(vehicle.image)} alt={vehicle.imagePlaceholder ? tx('Photo unavailable') : tx(`${vehicle.year} ${vehicle.make} ${vehicle.model}`)} loading="lazy" width={400} height={225} {...stylex.props(s.image, vehicle.imagePlaceholder && s.placeholderImage)} />
+    <img src={assetPath(vehicle.image)} alt={vehicle.imagePlaceholder ? tx('Photo unavailable') : tx(`${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}`)} loading="lazy" width={400} height={225} {...stylex.props(s.image, vehicle.imagePlaceholder && s.placeholderImage)} />
     {vehicle.imagePlaceholder ? <span {...stylex.props(s.placeholderLabel)}>{tx('Photo unavailable')}</span> : null}
     {importListing ? <span data-import-origin {...stylex.props(s.originBadge)}><Globe2 size={13} aria-hidden="true"/>{importListing.country}</span> : badge ? <span {...stylex.props(s.rate, /coming/i.test(badge) && s.coming)}>{tx(badge)}</span> : null}
   </>;
   const details = <>
-    <p data-vehicle-make {...stylex.props(s.make, desktopTile && s.tileText, importListing && s.importText)}>{tx(vehicle.make)}</p>
+    <p data-vehicle-make {...stylex.props(s.make, desktopTile && s.tileText, importListing && s.importText)}>{tx(displayMake(vehicle.make))}</p>
     <h3 title={`${tx(vehicle.year)} ${tx(vehicle.model)}`} {...stylex.props(s.title, desktopTile && s.tileTitle, importListing && s.importText)}>{tx(vehicle.year)} {tx(vehicle.model)}</h3>
     {vehicle.trim ? <p {...stylex.props(s.trim)}>{tx(vehicle.trim)}</p> : null}
     <div {...stylex.props(s.priceRow)}><strong {...stylex.props(s.price, vehicle.priceOnRequest && s.priceOnRequest)}>{vehicle.priceOnRequest ? tx('Price on request') : <><CurrencyLabel size={18} />{tx(formatPrice(vehicle.price))}</>}</strong>{showDiscount && discount > 0 ? <span {...stylex.props(s.discount)}>{tx(formatPrice(discount))} {tx(" OFF")}</span> : null}</div>
     {!finance && hasPublishedMonthlyPayment(vehicle) ? <p {...stylex.props(s.monthly)}><span {...stylex.props(s.monthlyPrice)}><CurrencyLabel size={11} />{tx(formatPrice(vehicle.monthly))}{tx("/mo*")}</span><span {...stylex.props(s.monthlyNote)}>{tx("est.")}</span></p> : null}
   </>;
-  return <article aria-label={tx(`${vehicle.year} ${vehicle.make} ${vehicle.model}`)} data-desktop-tile={desktopTile || undefined} data-price={vehicle.price} data-mileage={vehicle.mileage} data-monthly={vehicle.monthly} {...stylex.props(s.card)}>
+  return <article aria-label={tx(`${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}`)} data-desktop-tile={desktopTile || undefined} data-price={vehicle.price} data-mileage={vehicle.mileage} data-monthly={vehicle.monthly} {...stylex.props(s.card)}>
     <div {...stylex.props(s.main, desktopTile && s.tileMain)}>
-      {importListing ? <button type="button" aria-haspopup="dialog" aria-label={importAction} onClick={importListing.onEnquire} {...stylex.props(s.photo,desktopTile && s.tilePhoto,s.importAction)}>{photo}</button> : <Link href={href} aria-label={tx(`View ${vehicle.year} ${vehicle.make} ${vehicle.model}`)} {...stylex.props(s.photo,desktopTile && s.tilePhoto)}>{photo}</Link>}
+      {importListing ? <button type="button" aria-haspopup="dialog" aria-label={importAction} onClick={importListing.onEnquire} {...stylex.props(s.photo,desktopTile && s.tilePhoto,s.importAction)}>{photo}</button> : <Link href={href} aria-label={tx(`View ${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}`)} {...stylex.props(s.photo,desktopTile && s.tilePhoto)}>{photo}</Link>}
       <div {...stylex.props(s.info, desktopTile && s.tileInfo)}>
         {importListing ? <button type="button" data-import-listing-action aria-haspopup="dialog" aria-label={importAction} onClick={importListing.onEnquire} {...stylex.props(s.details,s.importAction)}>{details}</button> : <Link href={href} {...stylex.props(s.details)}>{details}</Link>}
         <div {...stylex.props(s.facts)}><div ref={factRow} data-vehicle-facts role="group" tabIndex={0} aria-label={tx('Specifications')} onScroll={event => setOverflow(factOverflow(event.currentTarget))} {...stylex.props(s.meta)}>{facts.map((item, index) => <span key={`${item}-${index}`} title={tx(factKeys[item] || item)} {...stylex.props(s.pill, index === 2 && s.equipment)}>{factKeys[item] ? <><span title={tx(factKeys[item])} {...stylex.props(s.phoneFact)}>{tx(factKeys[item])}</span><span {...stylex.props(s.wideFact)}>{tx(factKeys[item])}</span></> : index === 1 && item === 'Automatic' ? tx('Auto') : tx(item)}</span>)}</div>{overflow & 1 ? <span aria-hidden="true" {...stylex.props(s.factCue, s.factCueLeft)}/> : null}{overflow & 2 ? <span aria-hidden="true" {...stylex.props(s.factCue, s.factCueRight)}/> : null}</div>
         {benefits.length ? <div {...stylex.props(s.benefits)}><span {...stylex.props(s.benefitLabel)}>{tx('Example benefits')}</span><div {...stylex.props(s.benefitRow)}>{benefits.map(item => <span key={item} {...stylex.props(s.benefitChip)}>{tx(item)}</span>)}</div></div> : null}
       </div>
-      {!importListing ? <button type="button" onClick={toggle} aria-pressed={saved} aria-label={tx(saved ? `Remove ${vehicle.make} ${vehicle.model} from saved cars` : `Save ${vehicle.make} ${vehicle.model}`)} {...stylex.props(s.heart, desktopTile && s.tileHeart, saved && s.heartSaved)}><Heart size={22} strokeWidth={1.3} fill={saved ? 'currentColor' : '#fafafa'} /></button> : null}
+      {!importListing ? <button type="button" onClick={toggle} aria-pressed={saved} aria-label={tx(saved ? `Remove ${displayMake(vehicle.make)} ${vehicle.model} from saved cars` : `Save ${displayMake(vehicle.make)} ${vehicle.model}`)} {...stylex.props(s.heart, desktopTile && s.tileHeart, saved && s.heartSaved)}><Heart size={22} strokeWidth={1.3} fill={saved ? 'currentColor' : '#fafafa'} /></button> : null}
     </div>
-    {finance ? <button type="button" data-finance-car-payment aria-label={`${tx('Estimate payment')}: ${vehicle.year} ${vehicle.make} ${vehicle.model}`} onClick={finance.onCalculate} {...stylex.props(s.financeAction, t.control)}><Calculator size={20} aria-hidden="true"/><span><CurrencyLabel size={16}/>{formatPrice(Math.round(finance.monthly))}{tx('/mo*')}</span><ChevronRight size={18} aria-hidden="true" {...stylex.props(s.financeArrow)}/></button> : null}
+    {finance ? <button type="button" data-finance-car-payment aria-label={`${tx('Estimate payment')}: ${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}`} onClick={finance.onCalculate} {...stylex.props(s.financeAction, t.control)}><Calculator size={20} aria-hidden="true"/><span><CurrencyLabel size={16}/>{formatPrice(Math.round(finance.monthly))}{tx('/mo*')}</span><ChevronRight size={18} aria-hidden="true" {...stylex.props(s.financeArrow)}/></button> : null}
     {error ? <p role="alert" {...stylex.props(s.error)}>{tx(error)}</p> : null}
   </article>;
 }

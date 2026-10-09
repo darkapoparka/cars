@@ -58,6 +58,26 @@ describe('desktop model families', () => {
     assert.equal(groups.find(group => group.make === 'New Make')?.families[0].name, 'Unlisted Model');
     assert.equal(searchModelFamilyGroups(groups, 'c200', false)[0].make, 'Mercedes-Benz');
   });
+  it('keeps Audi model searches from showing unrelated Mercedes classes', () => {
+    const groups = buildModelFamilyGroups([
+      {make: 'Audi', model: 'A5 Sportback'}, {make: 'Mercedes-Benz', model: 'C 200'},
+    ]);
+    for (const query of ['A5', 'S3']) {
+      assert.deepEqual(searchModelFamilyGroups(groups, query, false).map(group => group.make), ['Audi']);
+    }
+    assert.equal(searchModelFamilyGroups(groups, 'A5', false)[0].families[0].count, 1);
+  });
+  it('recognizes both two-digit AMG and three-digit Mercedes model names', () => {
+    const [mercedes] = buildModelFamilyGroups([
+      {make: 'Mercedes-Benz', model: 'A 35 AMG'}, {make: 'Mercedes-Benz', model: 'C 63 AMG'},
+      {make: 'Mercedes-Benz', model: 'C 200'}, {make: 'Mercedes-Benz', model: 'E 53 AMG'},
+      {make: 'Mercedes-Benz', model: 'S 500'},
+    ]);
+    assert.deepEqual(mercedes.families.filter(family => family.count).map(family => [family.name, family.count]), [
+      ['A-Class', 1], ['C-Class', 2], ['E-Class', 1], ['S-Class', 1],
+    ]);
+    assert.equal(searchModelFamilyGroups([mercedes], 'C200', false)[0].families[0].name, 'C-Class');
+  });
   it('selects every stocked model in a family without losing other makes or refinements', () => {
     const filters = {...emptyFilters(), brands: ['BMW', 'Nissan'], fuel: ['Petrol'], models: ['Audi::A5']};
     const selected = toggleStockModels(filters, 'BMW', ['BMW::320d', 'BMW::M3']);

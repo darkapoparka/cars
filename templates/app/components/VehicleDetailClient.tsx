@@ -1,4 +1,5 @@
 'use client';
+import {displayMake} from '@/lib/inventory-labels';
 import {assetPath} from '@/lib/paths';
 import {useCopy} from '@/lib/locale';
 import {useEffect,useRef,useState,type TouchEvent} from 'react';
@@ -45,7 +46,7 @@ export default function VehicleDetailClient({vehicle,related,reference}: {vehicl
  const [informationVisible,setInformationVisible]=useState(true);
  const [enquiryIntent,setEnquiryIntent]=useState<DealerEnquiryIntent>('enquiry');
  const panel=useModal(overlay==='warranty',()=>setOverlay(null));
- const title=`${vehicle.year} ${vehicle.make.toUpperCase()} ${vehicle.model.toUpperCase()} ${vehicle.trim.split(' • ')[0]}`;
+ const title=`${vehicle.year} ${displayMake(vehicle.make).toUpperCase()} ${vehicle.model.toUpperCase()} ${vehicle.trim.split(' • ')[0]}`;
  const backToInventory=useInventoryBack();
  const priceLabel=vehicle.priceOnRequest?tx('Price on request'):`${tx(currency.symbol)} ${tx(formatPrice(vehicle.price))}`;
  const fee=approvedReference?.convenienceFee??0;

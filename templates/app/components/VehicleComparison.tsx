@@ -1,4 +1,5 @@
 'use client';
+import {displayMake} from '@/lib/inventory-labels';
 import {assetPath} from '@/lib/paths';
 import {useCopy} from '@/lib/locale';
 import {useRef, useState} from 'react';
@@ -35,9 +36,9 @@ export default function VehicleComparison({vehicle, related}: {vehicle: Vehicle;
         const element = event.currentTarget; const width = element.firstElementChild?.getBoundingClientRect().width ?? 1;
         setSlide(Math.min(cars.length - 1, Math.max(0, Math.round(element.scrollLeft / (width + 12)))));
       }} {...stylex.props(s.rail)}>{cars.map(car => <article key={car.slug} {...stylex.props(s.card)}>
-        <Link href={`/cars/${car.slug}`} aria-label={tx(`View similar ${car.year} ${car.make} ${car.model}`)} {...stylex.props(s.cardLink)}>
-          <h3 {...stylex.props(s.carTitle)}>{tx(car.year)} {tx(car.make.toUpperCase())} {tx(car.model.toUpperCase())}</h3>
-          <div {...stylex.props(s.carBody)}><div {...stylex.props(s.picture)}><img src={assetPath(car.image)} alt={tx(`${car.year} ${car.make} ${car.model}`)} width={384} height={216} {...stylex.props(s.carPhoto)} /><span {...stylex.props(s.interestBadge)}>{tx("1.99% INTEREST RATE*")}</span></div>
+        <Link href={`/cars/${car.slug}`} aria-label={tx(`View similar ${car.year} ${displayMake(car.make)} ${car.model}`)} {...stylex.props(s.cardLink)}>
+          <h3 {...stylex.props(s.carTitle)}>{tx(car.year)} {tx(displayMake(car.make).toUpperCase())} {tx(car.model.toUpperCase())}</h3>
+          <div {...stylex.props(s.carBody)}><div {...stylex.props(s.picture)}><img src={assetPath(car.image)} alt={tx(`${car.year} ${displayMake(car.make)} ${car.model}`)} width={384} height={216} {...stylex.props(s.carPhoto)} /><span {...stylex.props(s.interestBadge)}>{tx("1.99% INTEREST RATE*")}</span></div>
             <div {...stylex.props(s.carInfo)}><p {...stylex.props(s.trim)}>{tx(car.optionsType ?? 'Basic')} {tx(" • ")}{tx(car.trim.split(' • ')[0])}</p><p {...stylex.props(s.price)}><CurrencyLabel size={14}/><strong>{tx(formatPrice(car.price))}</strong>{car.previousPrice && car.previousPrice > car.price ? <span {...stylex.props(s.discount)}>{tx(formatPrice(car.previousPrice - car.price))} {tx(" OFF")}</span> : null}</p><p {...stylex.props(s.monthly)}>{tx("EMI ")}<strong>{tx(formatPrice(car.monthly))}</strong>{tx("/mo ")}<span {...stylex.props(s.monthlyTerms)}>{tx("| 5yrs, 0% downpay")}</span></p></div>
           </div>
           <div {...stylex.props(s.pills)}><span {...stylex.props(s.pill)}>{tx(formatPrice(Math.floor(car.mileage / 1000) * 1000))} {tx(" km")}</span><span {...stylex.props(s.pill)}>{tx("GCC")}</span>{native ? <span {...stylex.props(s.pill)}>{tx("Flood free")}</span> : null}<span {...stylex.props(s.pill,s.condition)}><ShieldCheck size={12} fill="currentColor"/><strong>{tx("Great condition")}</strong></span></div>
@@ -47,7 +48,7 @@ export default function VehicleComparison({vehicle, related}: {vehicle: Vehicle;
       <div aria-label={tx("Similar car slides")} {...stylex.props(s.dots)}>{cars.map((car,index)=><button key={car.slug} type="button" onClick={()=>select(index)} aria-label={tx(`Show similar car ${index+1}`)} aria-pressed={index===slide} {...stylex.props(s.dotButton)}><span {...stylex.props(s.dot,index===slide&&s.activeDot)}/></button>)}</div>
       <h2 {...stylex.props(s.heading,s.compareTitle)}>{tx("Similar Cars To Compare")}</h2>
       <div aria-hidden="true" {...stylex.props(s.labels)}><strong {...stylex.props(s.selectedLabel)}>{tx("Selected Car")}</strong><span {...stylex.props(s.otherLabel)}>{tx("Similar Cars")}</span></div>
-      <div {...stylex.props(s.compareCars)}>{columns.map((car,index)=><Link key={car.slug} href={`/cars/${car.slug}`} aria-label={tx(`${index===0?'Selected':'Compare'} ${car.year} ${car.make} ${car.model}`)} {...stylex.props(s.compareCar)}><img src={assetPath(car.image)} alt={tx("")} width={350} height={197} {...stylex.props(s.comparePhoto)}/><strong {...stylex.props(s.compareName)}>{tx(car.year)} {tx(car.make.toUpperCase())} {tx(car.model.toUpperCase())}</strong><span {...stylex.props(s.compareTrim)}>{tx(car.trim.split(' • ')[0])}</span></Link>)}</div>
+      <div {...stylex.props(s.compareCars)}>{columns.map((car,index)=><Link key={car.slug} href={`/cars/${car.slug}`} aria-label={tx(`${index===0?'Selected':'Compare'} ${car.year} ${displayMake(car.make)} ${car.model}`)} {...stylex.props(s.compareCar)}><img src={assetPath(car.image)} alt={tx("")} width={350} height={197} {...stylex.props(s.comparePhoto)}/><strong {...stylex.props(s.compareName)}>{tx(car.year)} {tx(displayMake(car.make).toUpperCase())} {tx(car.model.toUpperCase())}</strong><span {...stylex.props(s.compareTrim)}>{tx(car.trim.split(' • ')[0])}</span></Link>)}</div>
     </div>
     <table aria-label={tx("Vehicle specification comparison")} {...stylex.props(s.table)}><caption {...stylex.props(s.srOnly)}>{tx("Selected vehicle followed by ")}{tx(columns.slice(1).map(c=>`${c.year} ${c.make} ${c.model}`).join(' and '))}</caption><tbody>
       <tr><th colSpan={columns.length} {...stylex.props(s.rowHeading)}>{tx("Price")}</th></tr><tr>{columns.map(car=><td key={car.slug} data-comparison-price={car.price} {...stylex.props(s.value,s.priceValue)}><strong>{tx(formatPrice(car.price))} {tx(currency.code)}</strong><span {...stylex.props(s.emiValue)}>{tx("Or ")}{tx(currency.code)} {tx(car.monthly)} {tx(" /")}<br/>{tx("Month")}</span></td>)}</tr>

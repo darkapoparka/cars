@@ -1,4 +1,5 @@
 'use client';
+import {displayMake} from '@/lib/inventory-labels';
 import {useCopy} from '@/lib/locale';
 import * as stylex from '@stylexjs/stylex';
 import {X} from 'lucide-react';
@@ -13,7 +14,7 @@ export default function SimilarVehiclesSheet({vehicle,related,onClose}:{vehicle:
 
   const panel=useModal(true,onClose);
   const cars=vehicle.slug==='2024-toyota-fortuner-exr'?capturedRelatedVehicles:related;
-  return <div {...stylex.props(s.backdrop)} onMouseDown={event=>event.currentTarget===event.target&&onClose()}><section ref={panel} role="dialog" aria-modal="true" aria-label={tx("Similar vehicles")} tabIndex={-1} {...stylex.props(s.sheet)}><header {...stylex.props(s.header)}><div><h2 {...stylex.props(s.title)}>{tx("Similar Cars")}</h2><p {...stylex.props(s.subtitle)}>{vehicle.year} {vehicle.make} {vehicle.model}</p></div><button type="button" aria-label={tx("Close similar cars")} onClick={onClose} {...stylex.props(s.close)}><X size={22}/></button></header><div {...stylex.props(s.cars)}>{cars.map(car=><VehicleCard key={car.slug} vehicle={{...car,mileage:Math.floor(car.mileage/1000)*1000}}/>)}</div></section></div>;
+  return <div {...stylex.props(s.backdrop)} onMouseDown={event=>event.currentTarget===event.target&&onClose()}><section ref={panel} role="dialog" aria-modal="true" aria-label={tx("Similar vehicles")} tabIndex={-1} {...stylex.props(s.sheet)}><header {...stylex.props(s.header)}><div><h2 {...stylex.props(s.title)}>{tx("Similar Cars")}</h2><p {...stylex.props(s.subtitle)}>{vehicle.year} {tx(displayMake(vehicle.make))} {vehicle.model}</p></div><button type="button" aria-label={tx("Close similar cars")} onClick={onClose} {...stylex.props(s.close)}><X size={22}/></button></header><div {...stylex.props(s.cars)}>{cars.map(car=><VehicleCard key={car.slug} vehicle={{...car,mileage:Math.floor(car.mileage/1000)*1000}}/>)}</div></section></div>;
 }
 const s=stylex.create({
   backdrop:{position:'fixed',inset:0,zIndex:210,display:'flex',alignItems:{[media.mobile]:'flex-end',default:'center'},justifyContent:'center',backgroundColor:'rgba(0,0,0,.48)'},

@@ -1,4 +1,5 @@
 'use client';
+import {displayMake} from '@/lib/inventory-labels';
 import {assetPath} from '@/lib/paths';
 import {useCopy} from '@/lib/locale';
 import Link from '@/components/AppLink';
@@ -36,10 +37,11 @@ function ServiceTabArtwork({image, mobileImage, sell}: {image: string; mobileIma
   return <picture><source media="(max-width: 767px)" srcSet={mobile.srcSet} sizes={mobile.sizes}/><img {...desktop} alt="" {...stylex.props(s.tabArt, sell && s.tabArtSell)}/></picture>;
 }
 
-export function BrandEmblem({make}: {make: string}) {
+export function BrandEmblem({make,plain=false}: {make: string;plain?: boolean}) {
   const artwork = brandLogo(make);
-  const logo = artwork?.presentation === 'framed' ? <img data-brand-logo src={assetPath(artwork.src)} width={72} height={72} alt="" {...stylex.props(s.brandImageFramed)}/> : artwork ? <svg data-brand-logo viewBox={artwork.symbolViewBox} aria-hidden="true" focusable="false" {...stylex.props(s.brandImage, artwork.wide && s.brandImageWide, artwork.compact && s.brandImageCompact)}><image href={assetPath(artwork.src)} width={artwork.sourceSize?.[0]} height={artwork.sourceSize?.[1]}/></svg> : <span {...stylex.props(s.brandName)}>{make}</span>;
-  return <span aria-hidden="true" {...stylex.props(s.brandIcon, artwork?.presentation === 'framed' && s.brandIconFramed)}>{logo}</span>;
+  const framed = artwork?.presentation === 'framed' && !(plain && artwork.plainSymbolViewBox);
+  const logo = framed ? <img data-brand-logo src={assetPath(artwork.src)} width={72} height={72} alt="" {...stylex.props(s.brandImageFramed)}/> : artwork ? <svg data-brand-logo viewBox={plain ? artwork.plainSymbolViewBox ?? artwork.symbolViewBox : artwork.symbolViewBox} aria-hidden="true" focusable="false" {...stylex.props(s.brandImage, artwork.wide && s.brandImageWide, artwork.compact && s.brandImageCompact, plain && s.brandImagePlain, plain && artwork.compact && s.brandImagePlainCompact)}><image href={assetPath(artwork.src)} width={artwork.sourceSize?.[0]} height={artwork.sourceSize?.[1]}/></svg> : <span {...stylex.props(s.brandName)}>{make}</span>;
+  return <span aria-hidden="true" {...stylex.props(s.brandIcon, artwork?.presentation === 'framed' && s.brandIconFramed, plain && s.brandIconPlain)}>{logo}</span>;
 }
 
 export function BrandRow({title='Browse by brands',showTitle=true,onSelect,compact=false}: {title?:string;showTitle?:boolean;onSelect?:(brand:string)=>void;compact?:boolean}) {
@@ -48,7 +50,7 @@ export function BrandRow({title='Browse by brands',showTitle=true,onSelect,compa
   const stocked = [...new Map(vehicles.filter(vehicle => vehicle.make.trim()).map(vehicle => [vehicle.make.toLowerCase(), vehicle.make])).values()];
   if (!stocked.length) return null;
   return <section data-stocked-brands aria-label={tx(title)} {...stylex.props(s.brandSection,!showTitle&&s.brandSectionWithoutTitle)}>{showTitle?<h2 {...stylex.props(s.sectionTitle)}>{tx(title)}</h2>:null}<div {...stylex.props(s.brandRow,!showTitle&&s.brandRowWithoutTitle)}>{stocked.map(make=>{
-    const content=<><BrandEmblem make={make}/><span {...stylex.props(s.brandLabel,compact&&s.brandLabelCompact)}>{tx(make === 'Mercedes-Benz' ? 'Mercedes' : make)}</span></>;
+    const content=<><BrandEmblem make={make}/><span {...stylex.props(s.brandLabel,compact&&s.brandLabelCompact)}>{tx(displayMake(make))}</span></>;
     return onSelect?<button key={make} type="button" aria-label={tx(make)} onClick={()=>onSelect(make)} {...stylex.props(s.brand)}>{content}</button>:<Link key={make} aria-label={tx(make)} href={`/cars?brand=${encodeURIComponent(make)}`} {...stylex.props(s.brand)}>{content}</Link>;
   })}</div></section>;
 }
@@ -102,10 +104,13 @@ const s=stylex.create({
  brand:{display:'flex',flexShrink:0,alignItems:'center',flexDirection:'column',gap:8,width:{[media.mobile]:72,default:108},padding:0,textAlign:'center',color:$.text,borderWidth:0,backgroundColor:'transparent',cursor:'pointer'},
  brandIcon:{display:'grid',placeItems:'center',width:'100%',aspectRatio:'1',overflow:'hidden',borderWidth:1,borderStyle:'solid',borderColor:$.surfaceBorder,borderRadius:'50%',backgroundColor:$.surface},
  brandIconFramed:{borderWidth:0},
+ brandIconPlain:{borderWidth:0,borderRadius:0,backgroundColor:'transparent'},
  brandImage:{display:'block',width:'60%',height:'auto',maxHeight:'60%',overflow:'hidden'},
  brandImageWide:{width:'76%'},
  brandImageCompact:{width:'50%',maxHeight:'50%'},
  brandImageFramed:{display:'block',width:'100%',height:'100%',objectFit:'cover'},
+ brandImagePlain:{width:'100%',height:'100%',maxHeight:'100%',mixBlendMode:'multiply'},
+ brandImagePlainCompact:{width:'80%',height:'80%',maxHeight:'80%'},
  brandName:{maxWidth:'90%',fontSize:11,fontWeight:600,overflowWrap:'anywhere'},
  brandLabelCompact:{fontWeight:500},
  brandLabel:{fontSize:{[media.mobile]:12,default:15},fontWeight:400,lineHeight:'18px',maxWidth:'100%',overflowWrap:'anywhere'},

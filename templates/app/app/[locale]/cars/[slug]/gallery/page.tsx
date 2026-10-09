@@ -1,3 +1,4 @@
+import {displayMake} from '@/lib/inventory-labels';
 import type {Metadata} from 'next';
 import {notFound} from 'next/navigation';
 import VehicleGallery from '@/components/VehicleGallery';
@@ -9,7 +10,7 @@ export function generateStaticParams() {return vehicles.map(vehicle => ({slug: v
 export async function generateMetadata({params}: {params: Promise<{slug: string}>}): Promise<Metadata> {
   const {slug} = await params;
   const vehicle = getVehicle(slug);
-  return {title: vehicle ? `${vehicle.make} ${vehicle.model} photos` : 'Vehicle photos'};
+  return {title: vehicle ? `${displayMake(vehicle.make)} ${vehicle.model} photos` : 'Vehicle photos'};
 }
 export default async function GalleryPage({params, searchParams}: {params: Promise<{slug: string}>; searchParams: Promise<{category?: string | string[]}>}) {
   const {slug} = await params;

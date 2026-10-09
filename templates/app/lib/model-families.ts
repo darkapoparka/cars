@@ -19,7 +19,7 @@ const catalog: Record<string, FamilyDefinition[]> = {
   BMW: [...[1, 2, 3, 4, 5, 6, 7, 8].map(series), ...named('X1', 'X2', 'X3', 'X4', 'X5', 'X6', 'X7', 'i3', 'i4', 'i5', 'i7', 'iX', 'Z4')],
   Nissan: named('Altima', 'Juke', 'Kicks', 'Leaf', 'Magnite', 'Patrol', 'Pathfinder', 'Qashqai', 'X-Trail', 'X-Terra', 'Z', 'Urvan'),
   'Mercedes-Benz': [
-    ...['A', 'B', 'C', 'E', 'S', 'G', 'V'].map(letter => ({name: `${letter}-Class`, match: new RegExp(`^${letter.toLowerCase()}(?:class|\\d)`) })),
+    ...['A', 'B', 'C', 'E', 'S', 'G', 'V'].map(letter => ({name: `${letter}-Class`, match: new RegExp(`^${letter.toLowerCase()}(?:class|\\d{2,3}(?:$|[a-z]))`) })),
     ...named('CLA', 'CLE', 'GLA', 'GLB', 'GLC', 'GLE', 'GLS', 'EQA', 'EQB', 'EQE', 'EQS', 'SL', 'AMG GT'),
   ],
   Audi: [...[1, 3, 4, 5, 6, 7, 8].map(number => ({name: `A${number}`, match: new RegExp(`^(?:a|s|rs)${number}(?:$|[a-z])`), aliases: [`S${number}`, `RS${number}`]})), ...[2, 3, 4, 5, 6, 7, 8].map(number => ({name: `Q${number}`, match: new RegExp(`^(?:q|sq|rsq)${number}(?:$|[a-z])`)})), ...named('TT', 'R8', 'e-tron', 'e-tron GT')],

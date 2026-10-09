@@ -1,4 +1,5 @@
 'use client';
+import {displayMake} from '@/lib/inventory-labels';
 import {hasPublishedMileage} from '@/lib/vehicle-values';
 import {assetPath} from '@/lib/paths';
 import {useCopy} from '@/lib/locale';
@@ -91,7 +92,7 @@ export default function VehicleBelowFold({vehicle, onLogin,reference,equipment}:
       <RecordRow id="service-history" title="Service History" status={serviceHistory.isSample?'Sample records':serviceHistory.records.length?'View service records':'No records'} icon={serviceHistory.records.length&&!serviceHistory.isSample?<ClipboardCheck size={21}/>:<History size={21}/>} open={record==='service-history'} onOpen={()=>setRecord('service-history')}/>
     </div>
     {hasDetails?<VehicleFinanceSection vehicle={vehicle} onLogin={onLogin}/>:null}
-    {record?<VehicleRecordsSheet kind={record} vehicleTitle={`${vehicle.year} ${vehicle.make} ${vehicle.model}`} reference={reference} serviceHistory={serviceHistory} onClose={()=>setRecord(null)} onRequest={()=>{setRecord(null);onLogin(record);}}/>:null}
+    {record?<VehicleRecordsSheet kind={record} vehicleTitle={`${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}`} reference={reference} serviceHistory={serviceHistory} onClose={()=>setRecord(null)} onRequest={()=>{setRecord(null);onLogin(record);}}/>:null}
   </>;
 }
 const s=stylex.create({
