@@ -116,7 +116,7 @@
         <li class="dn-vehicle-card__fact"><span>{vehicle.year}</span></li>
         <li class="dn-vehicle-card__fact" title={formatMileage(vehicle.mileageKm, i18n.locale)}><span>{formatMileage(vehicle.mileageKm, i18n.locale)}</span></li>
         {#each specifications.filter(spec => layout === 'listing' || spec.icon === 'fuel') as spec (spec.icon)}
-          <li class="dn-vehicle-card__fact dn-vehicle-card__fact--spec" title={spec.label}><span aria-hidden="true">{spec.compactLabel}</span><span class="dn-sr-only">{spec.label}</span></li>
+          <li class="dn-vehicle-card__fact dn-vehicle-card__fact--spec" class:dn-vehicle-card__fact--transmission={spec.icon === 'transmission'} title={spec.label}><span aria-hidden="true">{spec.compactLabel}</span><span class="dn-sr-only">{spec.label}</span></li>
         {/each}
         {#if layout === 'listing'}
           <li class="dn-vehicle-card__fact dn-vehicle-card__fact--body" title={specificationLabel(vehicle.body, i18n.locale)}><span>{specificationLabel(vehicle.body, i18n.locale)}</span></li>
@@ -474,11 +474,11 @@
       min-width: 0;
       grid-area: content;
       grid-template-columns: minmax(0, 1fr);
-      grid-template-rows: auto auto;
+      grid-template-rows: auto 1fr;
       grid-template-areas: "identity" "price";
-      align-content: center;
+      align-content: stretch;
       gap: var(--dn-space-2);
-      padding: 0;
+      padding: var(--dn-space-half) 0;
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__identity {
@@ -498,6 +498,8 @@
 
     .dn-vehicle-card--listing .dn-vehicle-card__mobile-meta {
       grid-area: facts;
+      flex-wrap: wrap;
+      gap: var(--dn-space-1);
       margin: 0;
     }
 
@@ -518,6 +520,11 @@
       font-variant-numeric: tabular-nums;
       text-align: center;
       white-space: nowrap;
+    }
+
+    .dn-vehicle-card--listing .dn-vehicle-card__fact {
+      flex: 0 1 auto;
+      padding-inline: var(--dn-space-2);
     }
 
     .dn-vehicle-card__fact > span:not(.dn-sr-only) {
@@ -546,7 +553,7 @@
     .dn-vehicle-card--listing .dn-vehicle-card__amount {
       grid-area: price;
       justify-self: start;
-      align-self: start;
+      align-self: end;
       margin-top: 0;
       padding: 0;
       color: var(--dn-ink);
@@ -556,10 +563,25 @@
       overflow-wrap: anywhere;
     }
 
-  }
+    /* Keep the three useful overview facts when the card itself is narrow. */
+    @container (max-width: 24rem) {
+      .dn-vehicle-card--listing .dn-vehicle-card__fact--transmission,
+      .dn-vehicle-card--listing .dn-vehicle-card__fact--body { display: none; }
+    }
 
-  @media (max-width: 359px) {
-    .dn-vehicle-card--listing .dn-vehicle-card__fact { padding-inline: 0; }
+    /* Enlarged text needs a full-width identity and price instead of a tight side column. */
+    @container (max-width: 12rem) {
+      .dn-vehicle-card--listing .dn-vehicle-card__link {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "visual" "content" "facts";
+      }
+      .dn-vehicle-card--listing .dn-vehicle-card__visual { aspect-ratio: 3 / 2; }
+      .dn-vehicle-card--listing .dn-vehicle-card__content {
+        grid-template-rows: auto auto;
+        padding: 0;
+      }
+    }
   }
 
   /* Preserve the desktop narrow-card reflow independently of mobile title limits. */

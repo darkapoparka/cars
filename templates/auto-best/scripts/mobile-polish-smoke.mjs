@@ -121,12 +121,13 @@ async function longCardCopy(page, locale, layout) {
       const geometry = await fixture.evaluate(card => {
         const heading = card.querySelector('.dn-vehicle-card__name');
         const headingStyle = getComputedStyle(heading);
-        const badges = [...card.querySelectorAll('.dn-vehicle-card__fact')];
+        const badges = [...card.querySelectorAll('.dn-vehicle-card__fact')].filter(badge => badge.checkVisibility());
         const photo = card.querySelector('.dn-vehicle-card__visual').getBoundingClientRect();
         const metadata = card.querySelector('.dn-vehicle-card__mobile-meta').getBoundingClientRect();
         const content = card.querySelector('.dn-vehicle-card__content').getBoundingClientRect();
         const mileage = badges[1].querySelector('span');
         return {
+          expectedFacts: !card.classList.contains('dn-vehicle-card--listing') || card.clientWidth <= 24 * parseFloat(getComputedStyle(document.documentElement).fontSize) ? 3 : 5,
           lines: heading.getBoundingClientRect().height / parseFloat(headingStyle.lineHeight),
           title: heading.title, accessible: card.querySelector('a').getAttribute('aria-label'),
           bottomStrip: metadata.top >= photo.bottom && metadata.top >= content.bottom - 1,
@@ -144,9 +145,9 @@ async function longCardCopy(page, locale, layout) {
       assert(geometry.lines <= 2.05, `Long model copy stays within two lines: ${JSON.stringify(geometry)}`);
       assert.equal(geometry.title, title);
       assert.equal(geometry.accessible, title, 'Clamped copy retains the complete vehicle name for accessibility');
-      assert(geometry.badges.every(badge => badge.whiteSpace === 'nowrap' && badge.height <= badge.lineHeight + badge.padding + 1 && badge.fits), `Every badge keeps a single line inside its surface: ${JSON.stringify(geometry)}`);
+      assert(geometry.badges.every(badge => badge.whiteSpace === 'nowrap' && badge.height <= badge.lineHeight + badge.padding + 1 && badge.fits), `Every visible badge keeps a single line inside its surface: ${JSON.stringify(geometry)}`);
       assert(geometry.badges.every(badge => !badge.clipped), `Known compact fuel and transmission labels remain fully visible: ${JSON.stringify(geometry)}`);
-      assert.equal(geometry.badges.length, layout === 'listing' ? 5 : 3);
+      assert.equal(geometry.badges.length, geometry.expectedFacts, 'Narrow listings prioritize year, mileage and fuel; roomy listings retain all five facts');
       assert(geometry.bottomStrip && geometry.fullMileageFits, 'All mobile cards retain complete mileage in the strip after the title and price');
       assert(Math.max(...geometry.badges.map(badge => badge.top)) - Math.min(...geometry.badges.map(badge => badge.top)) <= 1, 'All mobile specifications share one row');
       assert(geometry.badges.some(badge => badge.full === fuel.full), 'Full fuel values remain available alongside compact copy');
@@ -361,7 +362,8 @@ try {
             const metadata = card.querySelector('.dn-vehicle-card__mobile-meta').getBoundingClientRect();
             const headingStyle = getComputedStyle(card.querySelector('.dn-vehicle-card__name'));
             const priceStyle = getComputedStyle(card.querySelector('.dn-vehicle-card__amount'));
-            const facts = [...card.querySelectorAll('.dn-vehicle-card__fact')];
+            const facts = [...card.querySelectorAll('.dn-vehicle-card__fact')].filter(fact => fact.checkVisibility());
+            const expectedFacts = card.clientWidth <= 24 * parseFloat(getComputedStyle(document.documentElement).fontSize) ? 3 : 5;
             const badgeBoxes = facts.map(fact => fact.getBoundingClientRect());
             const badgeTextFits = facts.every(fact => {
               const text = fact.querySelector('span:not(.dn-sr-only)');
@@ -373,25 +375,25 @@ try {
             const badgesMatch = facts.every(fact => getComputedStyle(fact).backgroundColor === badgeSurface);
             return { title: photograph.alt, loaded: photograph.complete && photograph.naturalWidth > 0, fits:
               getComputedStyle(photograph).objectFit === 'cover' && image.width >= 112 && image.width <= 157 &&
-              identity.top >= image.top - 1 && price.bottom <= image.bottom + 1 && image.bottom <= metadata.top &&
+              Math.abs(identity.top - image.top - 2) <= 1 && Math.abs(price.bottom - image.bottom + 2) <= 1 && image.bottom <= metadata.top &&
               image.left >= box.left && image.right <= content.left - 1 && image.bottom <= box.bottom &&
               make && card.querySelector('.dn-vehicle-card__name').innerText.trim() === model &&
-              Math.abs(price.left - identity.left) <= 1 && price.top >= identity.bottom + 7.5 && price.top <= identity.bottom + 9 &&
+              Math.abs(price.left - identity.left) <= 1 && price.top >= identity.bottom + 7.5 &&
               metadata.top >= content.bottom - 1 && Math.abs(metadata.left - image.left) <= 1 &&
               metadata.left >= box.left && metadata.right <= box.right && metadata.bottom <= box.bottom &&
               parseFloat(priceStyle.fontSize) > parseFloat(headingStyle.fontSize) &&
               parseFloat(priceStyle.fontWeight) > parseFloat(headingStyle.fontWeight) &&
-              facts.length === 5 && badgesMatch && badgeTextFits && badgeSurface !== 'rgba(0, 0, 0, 0)' &&
+              facts.length === expectedFacts && priceStyle.fontSize === '18px' && badgesMatch && badgeTextFits && badgeSurface !== 'rgba(0, 0, 0, 0)' &&
               badgeBoxes.every(badge => Math.abs(badge.height - badgeBoxes[0].height) <= 1) &&
               facts.every(fact => getComputedStyle(fact).borderRadius === '6px') &&
-              Math.abs(badgeBoxes[0].left - metadata.left) <= 1 && Math.abs(badgeBoxes[4].right - metadata.right) <= 1 &&
+              Math.abs(badgeBoxes[0].left - metadata.left) <= 1 && badgeBoxes.at(-1).right <= metadata.right + 1 &&
               badgeBoxes.every(badge => Math.abs(badge.top - badgeBoxes[0].top) <= 1) &&
               priceStyle.backgroundColor === 'rgba(0, 0, 0, 0)' };
           }));
           assert(photos.every(photo => photo.loaded && photo.fits),
             `Compact photos sit beside details, with a full-width strip below both: ${JSON.stringify(photos.filter(photo => !photo.loaded || !photo.fits))}`);
           const mileage = page.locator('.dn-vehicle-card__mobile-meta li:nth-child(2) span').first();
-          assert.equal(await page.locator('.dn-vehicle-card--listing .dn-vehicle-card__fact--spec').nth(1).locator('[aria-hidden="true"]').innerText(),
+          assert.equal(await page.locator('.dn-vehicle-card--listing .dn-vehicle-card__fact--transmission [aria-hidden="true"]').first().textContent(),
             locale === 'bg' ? 'Автомат' : 'Auto', 'Dense cards use a recognizable transmission label');
           assert.match(await mileage.innerText(), /\d.*(?:km|км)/,
             'Mobile mileage visibly retains formatting and its kilometer unit');
