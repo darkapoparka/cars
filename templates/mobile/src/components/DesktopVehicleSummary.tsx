@@ -93,28 +93,38 @@ const s = stylex.create({
   },
   financeLabel: { display: 'inline-flex', alignItems: 'center', gap: 4, fontWeight: 500 },
   financeValue: { display: 'inline-flex', alignItems: 'center', gap: 4 },
-  actions: { display: 'grid', gap: 10, marginTop: 20 },
+  actions: { display: 'grid', gap: 8, marginTop: 16 },
   action: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    minHeight: 44,
+    paddingBlock: 2,
+    paddingInline: 0,
+    borderWidth: 0,
+    backgroundColor: 'transparent',
+    color: colors.text,
+    fontSize: 14,
+    lineHeight: '20px',
+    fontWeight: 500,
+    textDecoration: 'none',
+    cursor: 'pointer',
+    outlineColor: colors.accent,
+    outlineOffset: 3,
+  },
+  actionFace: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     gap: 8,
-    minHeight: 48,
-    paddingBlock: 12,
+    width: '100%',
+    height: 40,
     paddingInline: 16,
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.line,
     borderRadius: 24,
     backgroundColor: { default: colors.background, ':hover': colors.controlSurface },
-    color: colors.text,
-    fontSize: 14,
-    lineHeight: '22px',
-    fontWeight: 500,
-    textDecoration: 'none',
-    cursor: 'pointer',
-    outlineColor: colors.accent,
-    outlineOffset: 3,
   },
   primary: {
     backgroundColor: { default: colors.text, ':hover': colors.text },
@@ -242,10 +252,12 @@ export function DesktopVehicleSummary({
         <Link
           href={'/contact?vehicle=' + v.id}
           aria-label={t('Enquire about this car') + ': ' + v.make + ' ' + v.model}
-          {...stylex.props(s.action, s.primary)}
+          {...stylex.props(s.action)}
         >
-          <Icon name="mail" size={18} />
-          {t('Enquire')}
+          <span data-vehicle-action-face {...stylex.props(s.actionFace, s.primary)}>
+            <Icon name="mail" size={16} />
+            {t('Enquire')}
+          </span>
         </Link>
         <button
           type="button"
@@ -256,8 +268,10 @@ export function DesktopVehicleSummary({
           }}
           {...stylex.props(s.action)}
         >
-          <Icon name="phone" size={18} />
-          {t('Contact')}
+          <span data-vehicle-action-face {...stylex.props(s.actionFace)}>
+            <Icon name="phone" size={16} />
+            {t('Contact')}
+          </span>
         </button>
       </div>
       <Link href={'/vehicle/' + v.id + '/checklist'} {...stylex.props(s.checklist)}>

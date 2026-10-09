@@ -253,10 +253,13 @@ dismissal, including pointer activation in Safari.
 Tab selection replaces the URL fragment and preserves router state and the
 inventory Back entry. Selected sections survive reload; the separate gallery
 returns to the selected section. Summary facts use semantic label/value pairs,
-48px accent icons and shorter registration/owner labels. Technical data uses a
-rounded inset table with alternating shaded rows; panel footers use 48px
-controls. Buying/Leasing uses native pressed buttons, and the lease entry opens
-the captured terms. Ratings, prices and finance terms remain sample data requiring
+accent icons centered in a 44px column and shorter registration/owner labels.
+The fact icons use 40px boxes; the taller calendar uses 36px and Fuel has a small
+optical inset. The fact grid has no trailing padding before the section inset.
+Technical data uses a rounded inset table with alternating shaded rows; panel
+footers use 48px controls. Summary CTA faces are 36px on mobile and 40px on desktop
+inside 44px targets. Buying/Leasing uses native pressed buttons, and the lease
+entry opens the captured terms. Ratings, prices and finance terms remain sample data requiring
 dealer verification. The integration report records source and rendered browser checks.
 
 Services has three equal-width All / Import / Sell tabs that fill the viewport.

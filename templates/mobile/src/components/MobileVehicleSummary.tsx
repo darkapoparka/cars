@@ -114,29 +114,39 @@ const s = stylex.create({
     display: 'grid',
     gridTemplateColumns: 'repeat(2,minmax(0,1fr))',
     gap: 8,
-    marginTop: 12,
+    marginTop: 8,
   },
   action: {
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 8,
     minHeight: 44,
-    paddingBlock: 10,
+    paddingBlock: 4,
+    paddingInline: 0,
+    borderWidth: 0,
+    backgroundColor: 'transparent',
+    color: colors.text,
+    fontSize: 14,
+    fontWeight: 500,
+    lineHeight: '20px',
+    textDecoration: 'none',
+    whiteSpace: 'nowrap',
+    outlineColor: colors.accent,
+    outlineOffset: 3,
+  },
+  actionFace: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 6,
+    width: '100%',
+    height: 36,
     paddingInline: 8,
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.line,
     borderRadius: controlShape.pill,
     backgroundColor: { default: colors.background, ':hover': colors.controlSurface },
-    color: colors.text,
-    fontSize: 16,
-    fontWeight: 500,
-    lineHeight: '24px',
-    textDecoration: 'none',
-    whiteSpace: 'nowrap',
-    outlineColor: colors.accent,
-    outlineOffset: 3,
   },
   primary: {
     backgroundColor: { default: colors.text, ':hover': colors.text },
@@ -216,11 +226,13 @@ export function MobileVehicleSummary({
         </div>
       </div>
       <div ref={actions} data-mobile-vehicle-actions {...stylex.props(s.actions)}>
-        <Link href={'/contact?vehicle=' + v.id} {...stylex.props(s.action, s.primary)}>
-          <span {...stylex.props(s.icon)}>
-            <Icon name="mail" size={18} />
+        <Link href={'/contact?vehicle=' + v.id} {...stylex.props(s.action)}>
+          <span data-vehicle-action-face {...stylex.props(s.actionFace, s.primary)}>
+            <span {...stylex.props(s.icon)}>
+              <Icon name="mail" size={16} />
+            </span>
+            {t('Enquire')}
           </span>
-          {t('Enquire')}
         </Link>
         <button
           type="button"
@@ -228,10 +240,12 @@ export function MobileVehicleSummary({
           onClick={onContact}
           {...stylex.props(s.action)}
         >
-          <span {...stylex.props(s.icon)}>
-            <Icon name="phone" size={18} />
+          <span data-vehicle-action-face {...stylex.props(s.actionFace)}>
+            <span {...stylex.props(s.icon)}>
+              <Icon name="phone" size={16} />
+            </span>
+            {t('Contact')}
           </span>
-          {t('Contact')}
         </button>
       </div>
     </section>

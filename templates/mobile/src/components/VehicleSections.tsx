@@ -278,6 +278,8 @@ const s = stylex.create({
   value: { fontSize: 14, lineHeight: '20px', fontWeight: 700 },
   showroomSpecs: {
     padding: 0,
+    paddingTop: 0,
+    paddingBottom: 0,
     gap: { default: 16, '@media (max-width: 359px)': 8, '@media (min-width: 1024px)': 20 },
     gridTemplateColumns: {
       default: 'repeat(2,minmax(0,1fr))',
@@ -285,10 +287,17 @@ const s = stylex.create({
     },
   },
   showroomSpec: {
-    paddingLeft: { default: 56, '@media (max-width: 359px)': 52 },
-    minHeight: 48,
+    paddingLeft: { default: 52, '@media (max-width: 359px)': 48 },
+    minHeight: 44,
   },
-  showroomSpecIcon: { color: colors.accent },
+  showroomSpecIcon: {
+    color: colors.accent,
+    width: 44,
+    height: 44,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  showroomFuelIcon: { left: 2 },
   specIcon: {
     display: 'inline-flex',
     position: 'absolute',
@@ -636,9 +645,14 @@ export function VehicleSections({
                   <div key={label} {...stylex.props(s.spec, showroomMode && s.showroomSpec)}>
                     <dt {...stylex.props(s.label, showroomMode && s.showroomLabel)}>
                       <span
-                        {...stylex.props(ui.orange, s.specIcon, showroomMode && s.showroomSpecIcon)}
+                        {...stylex.props(
+                          ui.orange,
+                          s.specIcon,
+                          showroomMode && s.showroomSpecIcon,
+                          showroomMode && icon === 'fuel' && s.showroomFuelIcon,
+                        )}
                       >
-                        <Icon name={icon} size={showroomMode ? 48 : 28} />
+                        <Icon name={icon} size={showroomMode ? (icon === 'date' ? 36 : 40) : 28} />
                       </span>
                       <span {...stylex.props(showroomMode && s.fullSpecification)}>{t(label)}</span>
                       {showroomMode && (

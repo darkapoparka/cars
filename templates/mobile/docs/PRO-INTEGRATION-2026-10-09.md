@@ -100,14 +100,14 @@ and recovery receipts are under Cars `runtime/mobile-pro-integration-20261009`.
 The original handoff remains [PRO-AUDIT.md](PRO-AUDIT.md). No Mobile release lock,
 dealer variants or hosting configuration were changed by this integration.
 
-## Final PDP detail treatment
+## Initial PDP detail treatment
 
 The owner-requested follow-up restores alternating shaded technical-data rows
 inside a rounded inset container. The complete specifications dialog uses the
 same row shading. Vehicle condition, category and the other captured facts keep
 their existing values and localization.
 
-The six summary icons now use 48px boxes on both phone and desktop, aligned with
+The initial follow-up used 48px boxes on both phone and desktop, aligned with
 the two-line label/value pairs. Below 360px, tighter column spacing and slightly
 smaller text keep Bulgarian owner and gearbox labels readable without isolated
 final characters. The earlier PDP composition is retained.
@@ -138,3 +138,48 @@ The [320px Bulgarian capture](pro-integration-2026-10-09/pdp-details-after-320-b
 shows the narrow-width spacing and multiline technical values. Follow-up logs,
 full captures and geometry reports are retained under the integration runtime
 directory with the `pdp-finish` prefix.
+
+## Final PDP sizing and spacing
+
+After inspecting the first hosted follow-up, the owner requested smaller,
+better-aligned fact icons, more compact CTAs and less space above Technical data.
+The fact icons now use 40px boxes centered in a 44px column. The taller calendar
+uses 36px and Fuel has a 2px optical inset to align its tank with the other icons.
+Labels and values remain vertically centered beside the icons.
+
+The summary CTA faces are 36px on phones and 40px on desktop, with 44px clickable
+targets on both. Phone labels use 14px text, and both summaries use 16px CTA icons.
+Action spacing is slightly tighter. Browser checks activate both controls in the
+outer padding: Contact opens its existing sheet and Enquire reaches the correct
+vehicle-context Contact page.
+
+The inherited fact grid still applied 8px top and 24px bottom padding despite the
+showroom's zero-padding shorthand. Explicit longhand overrides remove both.
+On phones, the gearbox icon box is now 18px from the technical-data separator,
+compared with 40px in the first hosted follow-up. The rounded technical table and
+captured sample data remain intact.
+
+The final source passes strict lint, TypeScript, all 156 domain tests, formatting
+and the Node 22.20.0 production build. On the frozen production build, the route
+suite passes 168 rendered states and 12 interaction flows with zero errors or
+application submissions. The focused PDP suite passes all 12 states and their
+section, specification-sheet and CTA flows across Chromium/WebKit, BG/EN and
+320/390/1440px. All 24 hero/detail frames are stable across repeated captures;
+controls measure 44px and there is no overflow or icon/text overlap. Repository
+workflow validation passes.
+
+Matched captures use the same listing, language, saved state, third photo,
+viewport and section scroll anchor. The earlier 390px detail image is byte-identical
+to its capture on the first hosted follow-up.
+
+| Surface | Before the final sizing | After the final sizing |
+| --- | --- | --- |
+| Phone summary, 390 × 844 | [Before](pro-integration-2026-10-09/pdp-compact-before-390.png) | [After](pro-integration-2026-10-09/pdp-compact-after-390.png) |
+| Phone facts and technical data, 390 × 844 | [Before](pro-integration-2026-10-09/pdp-details-after-390.png) | [After](pro-integration-2026-10-09/pdp-compact-details-after-390.png) |
+| Desktop summary, 1440 × 900 | [Before](pro-integration-2026-10-09/pdp-compact-before-1440.png) | [After](pro-integration-2026-10-09/pdp-compact-after-1440.png) |
+
+The [320px Bulgarian result](pro-integration-2026-10-09/pdp-compact-after-320-bg.png)
+also retains single-line CTAs and readable fact values. Detailed checks and full
+captures are under the integration runtime directory with the `pdp-compact` and
+`pdp-vercel-after-compact` prefixes. Hosted publication is recorded in the
+[Vercel receipt](../../../docs/mobile-template-vercel-20261009.md).
