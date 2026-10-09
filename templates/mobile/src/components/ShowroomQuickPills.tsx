@@ -84,9 +84,13 @@ const s = stylex.create({
       '@media (min-width: 1024px)': { default: colors.background, ':hover': colors.stripe },
     },
     color: colors.text,
-    fontSize: { default: 14, '@media (max-width: 699px)': 16 },
+    fontSize: { default: 14, '@media (max-width: 699px)': 16, '@media (min-width: 1024px)': 16 },
     fontWeight: 500,
-    lineHeight: { default: '20px', '@media (max-width: 699px)': '22px' },
+    lineHeight: {
+      default: '20px',
+      '@media (max-width: 699px)': '22px',
+      '@media (min-width: 1024px)': '22px',
+    },
     whiteSpace: 'nowrap',
   },
   active: {
@@ -134,14 +138,14 @@ const s = stylex.create({
   secondaryFace: {
     minHeight: { default: 36, '@media (min-width: 1024px)': 38 },
     paddingBlock: 6,
-    fontSize: 14,
-    lineHeight: '20px',
+    fontSize: { default: 14, '@media (min-width: 1024px)': 16 },
+    lineHeight: { default: '20px', '@media (min-width: 1024px)': '22px' },
   },
   secondaryPhoneFace: {
     minHeight: { default: 36, '@media (min-width: 1024px)': 38 },
     paddingBlock: { default: 6, '@media (min-width: 1024px)': 8 },
-    fontSize: 14,
-    lineHeight: '20px',
+    fontSize: { default: 14, '@media (min-width: 1024px)': 16 },
+    lineHeight: { default: '20px', '@media (min-width: 1024px)': '22px' },
   },
   secondarySurface: {
     borderColor: {

@@ -17,6 +17,8 @@ export const bgMessages: Record<string, string> = {
   Menu: 'Меню',
   'Open menu': 'Отвори менюто',
   'Your menu': 'Вашето меню',
+  'Demo account': 'Демо профил',
+  'Saved on this device': 'Запазено на това устройство',
   'Open profile menu': 'Отвори менюто на профила',
   'Close profile menu': 'Затвори менюто на профила',
   Guest: 'Гост',

@@ -54,23 +54,37 @@ and work locally without an account. Vehicle Back retains the inventory filters,
 sort and scroll position. The native make/model picker and range controls remain.
 
 At 1024px and wider, Cars, Services, Contact and Saved cars use a 72px logo header
-with an avatar menu for Saved cars, Settings and language plus a separate
-hamburger menu on the right. The bottom dock is hidden at this breakpoint.
-The 260px navigation dropdown has exactly three destinations:
-Cars, Services and Contact, using the same navigation data as the phone dock.
+with centered Cars / Services / Contact navigation, an avatar menu for Saved cars,
+Settings and language, plus a separate hamburger menu on the right. Cars is home;
+the navigation uses compact 34px tab faces with 10px corners, a subtle active
+fill, 48px click targets, visible keyboard focus and `aria-current`. The bottom
+dock is hidden at this breakpoint. Header navigation uses the same destination
+data as the phone dock and retains inventory filters and sort on return to Cars.
+The 280px hamburger dropdown is labelled Demo account, shows the local saved-car
+count and links to Saved cars and Settings. It introduces no authentication or
+account transmission. Legacy donor profile routes are not exposed by this menu.
 It sits 6px below its trigger, with a small pointer centered on the Menu button
 and a restrained shadow to make the header attachment clear.
-Individual service choices remain on the Services page. The menu retains the
-current inventory filters and sort when returning to Cars. Links
+Individual service choices remain on the Services page. Links
 remain native navigation, with arrow-key shortcuts, Home/End, Escape and focus
 return. Outside clicks, focus leaving the menu and the phone breakpoint dismiss it.
 Phones keep their floating dock, spacing and navigation behavior.
-The desktop page frame is capped at 1280px with at least 24px outer gutters.
-`showroom-desktop-tokens.stylex.ts` owns the frame width, gutters and three-column
-inventory layout. Home and Saved cars share that grid; vehicle and enquiry action
-bars use the same frame bounds. Cards use 18px titles, 14px facts and 22px prices
-with distinct weights. These choices apply from 1024px; smaller screens retain
-their existing composition. Responsive listing image sizes follow the wider grid.
+The desktop page frame is capped at 1400px with at least 24px outer gutters.
+`showroom-desktop-tokens.stylex.ts` owns the frame width and gutters.
+Home and Saved cars share the listing grid: four columns from 1024px.
+Vehicle and enquiry action bars use the same frame bounds.
+Cards use 16px semibold desktop titles, 13px facts and 18px prices.
+Smaller screens retain
+their existing composition. Responsive listing image sizes follow the photo bounds.
+Cars, Services and Contact share a 300px desktop hero below the 72px header,
+aligned headings, and the same 28px content-drawer overlap. Hero copy takes its
+natural height, with 24px before controls rather than a reserved description
+slot. Shared hero tokens own the height, gap and padding. Desktop navigation
+retains its compact 34px faces with 16px text; supporting Services and Contact
+copy uses 16px text.
+Utility headers use 24px titles on desktop. Settings supporting copy and language
+options use 16px desktop text; their phone typography remains unchanged.
+Escape also closes desktop filter popovers when focus remains on their trigger.
 In desktop All filters, keyword search spans the modal body beneath the title
 and close control. Two quiet surfaces group make/model and numeric ranges, then
 fuel, gearbox, body type and condition. From/To share one outlined field; checkbox
@@ -78,7 +92,7 @@ options use plain rows within their group. These compact styles apply only to
 All filters; phone editors and desktop quick popovers retain their presentation.
 The fixed footer applies the draft; Escape cancels and restores the opener.
 Desktop Services uses three equal glass segments in a compact 48px rail with
-14px labels, 44px targets, uniform translucent edges and a stable width across selection.
+16px labels, 44px targets, uniform translucent edges and a stable width across selection.
 The rail stays smaller than the 60px search field. The phone Services tabs retain their
 underline composition.
 
@@ -114,10 +128,9 @@ active underline. Quick-filter pills use the existing stronger line token below
 700px, separating their white faces from the white rail without a gray fill.
 Tablet and desktop controls retain their existing geometry and styling.
 White vehicle cards use a faint 1px `colors.cardLine` edge and a low-opacity
-neutral shadow, retaining their geometry while separating each listing from the
-white canvas. Year, mileage and fuel appear as separate specification badges with
-6px corners, a neutral `colors.badgeSurface` fill and a 1px `colors.cardLine` edge. Their existing text sizes
-and wrapping remain; dot separators are removed between the badges.
+neutral shadow on larger screens. Year, mileage and fuel share a quiet 14px
+text row with decorative dot separators. Facts can wrap without becoming controls.
+Inventory, Saved and related vehicles use the same card composition.
 On phones, a `colors.background` results sheet sits beneath the
 quick pills with 16px before the first card. Cars uses a continuous white canvas;
 Services also uses a continuous white canvas without raised upper corners. The list retains the page's natural scroll; the pill row stays sticky above
@@ -199,16 +212,25 @@ Desktop content has 24px gutters and a 240px apply action with 16px text.
 The native backdrop uses an 8px blur with a light 22% dim on desktop.
 Phones retain the full-screen editor, scrolling tabs, stacked settings and
 full-width apply action.
-Inventory and import cards share 16:10 photo frames, 16px corners and compact
-12px body padding. Inventory photos sit inside a 12px white frame with 10px
-inner corners. Showroom cards place the name above a quiet row of year, mileage
-and fuel, with the price below. Specs stay compact across inventory, Saved and
-related cars at normal text size and can wrap when text is enlarged.
-Phone prices use 20px, weight 700 beneath 18px semibold vehicle names. A quiet
-14px trim line appears when available, followed by higher-contrast 14px specs.
-Power and gearbox remain in the vehicle details. Vehicle names can wrap.
-Photo save actions use the outline-heart family, with a 36px face inside a
-48px button and an explicit pressed state.
+Inventory and Saved use a desktop tile with a rounded 3:2 photo from 1024px.
+The 16px semibold model and 18px price share a row below the photo, followed by
+one row of year/mileage/fuel facts. At card widths of 280px or less, a compact
+white price label in the photo leaves the full caption width for the model.
+Desktop cards omit the trim line, separate price footer, Details control,
+outer border, shadow and photo gradient. Related cards use the same layout.
+BMW X6, 540 and X3 desktop covers use selected existing exterior gallery photos;
+phones retain their original images through the picture's media source.
+The 540 cover is framed around the vehicle to reduce embedded donor graphics.
+Known photos with built-in letterboxing use the existing crop helper on desktop.
+The grid aligns prices within each row without a fixed height. The full card opens the vehicle,
+including its photo, facts and price, and has an inset keyboard focus ring.
+Phone titles remain 18px and prices 20px; phone facts retain their compact badges.
+Phone photos retain 16:10 cropping. Prices use weight 700. The compact desktop
+price label uses 16px text. Power remains in the vehicle details.
+Desktop names use one line with the full name available in the title tooltip.
+Facts use 12px text when the actual desktop card is under 250px wide.
+Photo save actions use the outline-heart family, with a 36px white face inside a
+48px button and an explicit pressed state. Import cards retain their 12px padding.
 
 Phone vehicle detail retains its compact 20px title, 18px advertised price,
 rounded trim pills and side-by-side Contact and Enquire actions. An explicitly
@@ -422,7 +444,8 @@ dropdown follows the shadcn menu pattern in the existing StyleX design system.
 Saved cars links to the existing saved inventory and displays the local count.
 Bulgarian and English choices use the shared locale store; Settings opens the
 same working language preference at `/settings`. Desktop also retains its separate
-hamburger button for Cars, Services and Contact; phones retain their bottom navigation.
+hamburger button for the local Demo account menu. Desktop destinations are visible
+in the centered header navigation; phones retain their bottom navigation.
 
 The portrait at `public/images/demo/profile-avatar-20261008.webp` was generated
 for this demonstration and depicts a fictional person. The menu is labelled

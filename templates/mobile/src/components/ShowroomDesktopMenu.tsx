@@ -3,15 +3,18 @@
 import { useId, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ChevronRight, Menu, X } from 'lucide-react';
+import { ChevronRight, Heart, Menu, Settings, UserRound, X } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import { controlShape } from '@/styles/control-tokens.stylex';
 import { useLocale } from '@/lib/use-locale';
 import { useAppState } from '@/lib/store';
-import { showroomInventoryHref } from '@/lib/showroom';
 import { colors } from '@/styles/tokens.stylex';
 import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
-import { showroomNavigation } from './showroom-navigation';
+
+const accountNavigation = [
+  ['/car-park', 'Saved cars', Heart],
+  ['/settings', 'Settings', Settings],
+] as const;
 
 const s = stylex.create({
   root: {
@@ -74,7 +77,7 @@ const s = stylex.create({
     position: 'absolute',
     top: 'calc(100% + 6px)',
     right: 0,
-    width: 260,
+    width: 280,
     maxWidth: 'calc(100vw - 48px)',
     maxHeight: 'calc(100dvh - 92px)',
     overflowY: 'auto',
@@ -89,6 +92,35 @@ const s = stylex.create({
     backgroundColor: colors.background,
     color: colors.text,
     boxShadow: '0 12px 32px rgba(20, 24, 32, .12)',
+  },
+  heading: { display: 'flex', alignItems: 'center', gap: 12, padding: 12 },
+  avatar: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 40,
+    height: 40,
+    flexShrink: 0,
+    borderRadius: controlShape.circle,
+    color: colors.muted,
+    backgroundColor: colors.controlSurface,
+  },
+  headingText: { display: 'grid', gap: 2, minWidth: 0 },
+  title: { fontSize: 15, lineHeight: '22px', fontWeight: 600 },
+  note: { fontSize: 12, lineHeight: '18px', color: colors.muted },
+  separator: { height: 1, marginInline: 8, marginBottom: 4, backgroundColor: colors.cardLine },
+  count: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    minWidth: 24,
+    height: 24,
+    paddingInline: 6,
+    borderRadius: controlShape.pill,
+    backgroundColor: colors.controlSurface,
+    fontSize: 12,
+    fontWeight: 600,
+    lineHeight: '18px',
   },
   link: {
     display: 'flex',
@@ -116,8 +148,8 @@ const s = stylex.create({
 });
 
 export function ShowroomDesktopMenu({ overHero = false }: { overHero?: boolean }) {
-  const { t } = useLocale();
-  const { filters, inventorySort } = useAppState();
+  const { t, number } = useLocale();
+  const { parked } = useAppState();
   const pathname = usePathname();
   const id = useId();
   const [open, setOpen] = useState(false);
@@ -145,7 +177,7 @@ export function ShowroomDesktopMenu({ overHero = false }: { overHero?: boolean }
       if (root.current?.contains(document.activeElement)) {
         trigger.current
           ?.closest('header')
-          ?.querySelector<HTMLAnchorElement>('a[href="/car-park"]')
+          ?.querySelector<HTMLButtonElement>('[data-profile-menu-trigger]')
           ?.focus({ preventScroll: true });
       }
       close();
@@ -210,7 +242,7 @@ export function ShowroomDesktopMenu({ overHero = false }: { overHero?: boolean }
           ref={panel}
           id={id}
           data-desktop-navigation
-          aria-label={t('Main navigation')}
+          aria-label={t('Demo account')}
           onKeyDown={(event) => {
             const links = [...event.currentTarget.querySelectorAll<HTMLAnchorElement>('a')];
             const index = links.indexOf(document.activeElement as HTMLAnchorElement);
@@ -230,10 +262,20 @@ export function ShowroomDesktopMenu({ overHero = false }: { overHero?: boolean }
           }}
           {...stylex.props(s.panel)}
         >
-          {showroomNavigation.map(([href, label, NavigationIcon]) => (
+          <div {...stylex.props(s.heading)}>
+            <span {...stylex.props(s.avatar)}>
+              <UserRound size={20} strokeWidth={1.8} aria-hidden="true" />
+            </span>
+            <span {...stylex.props(s.headingText)}>
+              <span {...stylex.props(s.title)}>{t('Demo account')}</span>
+              <span {...stylex.props(s.note)}>{t('Saved on this device')}</span>
+            </span>
+          </div>
+          <div role="separator" {...stylex.props(s.separator)} />
+          {accountNavigation.map(([href, label, NavigationIcon]) => (
             <Link
               key={href}
-              href={href === '/' ? showroomInventoryHref(filters, inventorySort) : href}
+              href={href}
               prefetch={false}
               aria-current={pathname === href ? 'page' : undefined}
               onClick={() => setOpen(false)}
@@ -246,6 +288,9 @@ export function ShowroomDesktopMenu({ overHero = false }: { overHero?: boolean }
                 {...stylex.props(s.icon, pathname === href && s.currentIcon)}
               />
               <span {...stylex.props(s.linkLabel)}>{t(label)}</span>
+              {href === '/car-park' && (
+                <span {...stylex.props(s.count)}>{number(parked.length)}</span>
+              )}
               <ChevronRight size={16} aria-hidden="true" {...stylex.props(s.icon)} />
             </Link>
           ))}

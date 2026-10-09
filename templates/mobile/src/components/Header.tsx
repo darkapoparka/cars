@@ -11,6 +11,7 @@ import { useAppState } from '@/lib/store';
 import { showroom, showroomInventoryHref } from '@/lib/showroom';
 import { ShowroomProfileMenu } from './ShowroomProfileMenu';
 import { ShowroomDesktopMenu } from './ShowroomDesktopMenu';
+import { ShowroomDesktopNavigation } from './ShowroomDesktopNavigation';
 import { ShowroomBrandLogo } from './ShowroomBrandLogo';
 import { showroomPlaceholderLogo } from '@/lib/showroom-config';
 const s = stylex.create({
@@ -30,7 +31,8 @@ const s = stylex.create({
     zIndex: 30,
   },
   title: {
-    fontSize: 16,
+    fontSize: { default: 16, '@media (min-width: 1024px)': 24 },
+    lineHeight: { default: '24px', '@media (min-width: 1024px)': '32px' },
     fontWeight: 500,
     flex: '1',
     minWidth: 0,
@@ -47,10 +49,19 @@ const s = stylex.create({
     objectPosition: 'left center',
   },
   home: {
+    display: { default: 'flex', '@media (min-width: 1024px)': 'grid' },
+    gridTemplateColumns: 'minmax(0, 1fr) auto minmax(0, 1fr)',
+    columnGap: { default: 4, '@media (min-width: 1024px)': 16 },
     height: { default: 60, '@media (min-width: 1024px)': 72 },
     paddingLeft: 16,
     paddingRight: { default: 8, '@media (min-width: 1024px)': 16 },
     color: colors.text,
+  },
+  actions: {
+    display: { default: 'contents', '@media (min-width: 1024px)': 'flex' },
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    gap: 4,
   },
   overHero: {
     position: { default: 'static', '@media (min-width: 1024px)': 'relative' },
@@ -162,8 +173,11 @@ export function Header({
       )}
       {home ? (
         <>
-          <ShowroomProfileMenu overHero={overHeroDesktop} />
-          <ShowroomDesktopMenu overHero={overHeroDesktop} />
+          <ShowroomDesktopNavigation overHero={overHeroDesktop} />
+          <div {...stylex.props(s.actions)}>
+            <ShowroomProfileMenu overHero={overHeroDesktop} />
+            <ShowroomDesktopMenu overHero={overHeroDesktop} />
+          </div>
         </>
       ) : (
         children

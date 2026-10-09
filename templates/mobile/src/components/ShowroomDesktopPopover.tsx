@@ -114,9 +114,25 @@ export function ShowroomDesktopPopover({
       if (target.closest(filterTrigger)) return;
       onDismiss();
     }
+    function closeFromTrigger(event: KeyboardEvent) {
+      if (
+        event.key !== 'Escape' ||
+        !(event.target instanceof Element) ||
+        !trigger.current?.contains(event.target)
+      )
+        return;
+      event.preventDefault();
+      event.stopPropagation();
+      trigger.current.focus({ preventScroll: true });
+      onClose();
+    }
     document.addEventListener('pointerdown', dismiss);
-    return () => document.removeEventListener('pointerdown', dismiss);
-  }, [onDismiss]);
+    document.addEventListener('keydown', closeFromTrigger);
+    return () => {
+      document.removeEventListener('pointerdown', dismiss);
+      document.removeEventListener('keydown', closeFromTrigger);
+    };
+  }, [onDismiss, onClose]);
 
   if (typeof document === 'undefined') return null;
   return createPortal(

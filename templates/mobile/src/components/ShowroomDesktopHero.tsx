@@ -2,6 +2,7 @@
 import * as stylex from '@stylexjs/stylex';
 import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
+import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
 import { useLocale } from '@/lib/use-locale';
 import type { ShowroomFilterTab } from '@/lib/showroom-filter-editor';
 import type { VehicleCategory } from '@/lib/types';
@@ -15,15 +16,14 @@ const s = stylex.create({
     display: { default: 'contents', '@media (min-width: 1024px)': 'flex' },
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
-    gap: 24,
-    minHeight: { default: 280, '@media (min-width: 1024px)': 340 },
+    justifyContent: 'flex-start',
+    gap: { default: 24, '@media (min-width: 1024px)': showroomDesktop.heroGap },
+    minHeight: { default: 280, '@media (min-width: 1024px)': showroomDesktop.heroHeight },
     marginInline: { default: 16, '@media (min-width: 1024px)': 0 },
     marginTop: { default: 8, '@media (min-width: 1024px)': 0 },
     marginBottom: 0,
-    paddingTop: { default: 32, '@media (min-width: 1024px)': 40 },
-    // Balance the heading and search within the part above the overlapping results.
-    paddingBottom: { default: 32, '@media (min-width: 1024px)': 68 },
+    paddingTop: { default: 32, '@media (min-width: 1024px)': showroomDesktop.heroPaddingTop },
+    paddingBottom: { default: 32, '@media (min-width: 1024px)': showroomDesktop.heroPaddingBottom },
     paddingInline: { default: 24, '@media (min-width: 1200px)': 40 },
     borderRadius: { default: 20, '@media (min-width: 1024px)': 0 },
     color: '#fff',
@@ -31,32 +31,40 @@ const s = stylex.create({
   },
   copy: {
     display: { default: 'none', '@media (min-width: 1024px)': 'block' },
+    position: 'relative',
     textAlign: 'center',
-    maxWidth: 800,
+    width: '100%',
+    maxWidth: showroomDesktop.heroCopyWidth,
   },
   title: {
     fontFamily: 'var(--font-base), Arial, sans-serif',
-    fontSize: 'clamp(32px, 3vw, 40px)',
+    fontSize: {
+      default: 'clamp(32px, 3vw, 40px)',
+      '@media (min-width: 1024px)': showroomDesktop.heroTitleSize,
+    },
     fontWeight: 700,
     lineHeight: 1.12,
     letterSpacing: '-.02em',
     textWrap: 'balance',
   },
   location: {
+    position: { default: 'static', '@media (min-width: 1024px)': 'absolute' },
+    top: { default: 'auto', '@media (min-width: 1024px)': -28 },
+    insetInline: { default: 'auto', '@media (min-width: 1024px)': 0 },
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     gap: 6,
-    marginBottom: 12,
+    marginBottom: { default: 12, '@media (min-width: 1024px)': 0 },
     color: 'rgba(255, 255, 255, .82)',
-    fontSize: 13,
+    fontSize: { default: 13, '@media (min-width: 1024px)': 14 },
     fontWeight: 400,
     lineHeight: '20px',
   },
   searchPanel: {
     display: { default: 'contents', '@media (min-width: 1024px)': 'block' },
     width: '100%',
-    maxWidth: 780,
+    maxWidth: 880,
     borderRadius: controlShape.pill,
     color: colors.text,
     backgroundColor: colors.background,
@@ -70,10 +78,9 @@ const s = stylex.create({
     padding: 6,
     gap: 6,
   },
-  expandedSearchPanel: { maxWidth: 880 },
+  expandedSearchPanel: { maxWidth: 1040 },
   splitSearch: {
-    gridTemplateColumns:
-      'minmax(210px, 1.1fr) minmax(0, 1fr) minmax(0, 1.1fr) minmax(0, .85fr) auto',
+    gridTemplateColumns: 'minmax(210px, 1fr) minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, .85fr) auto',
   },
   disabledField: { opacity: 0.6, cursor: 'not-allowed' },
   submit: {

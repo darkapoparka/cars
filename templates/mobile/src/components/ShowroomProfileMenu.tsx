@@ -3,17 +3,14 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import { Check, ChevronRight, Heart, Settings } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import { validLocale } from '@/lib/locale';
-import { showroomInventoryHref } from '@/lib/showroom';
 import { useAppState } from '@/lib/store';
 import { useLocale } from '@/lib/use-locale';
 import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors, darkTheme } from '@/styles/tokens.stylex';
-import { showroomNavigation } from './showroom-navigation';
 
 const avatar = '/images/demo/profile-avatar-20261008.webp';
 const s = stylex.create({
@@ -114,7 +111,6 @@ const s = stylex.create({
     outlineOffset: -2,
     outlineStyle: { default: 'none', ':focus-visible': 'solid' },
   },
-  current: { backgroundColor: colors.stripe },
   icon: { flexShrink: 0, color: colors.muted },
   label: { flex: '1', minWidth: 0 },
   count: {
@@ -141,13 +137,11 @@ const s = stylex.create({
   },
   languageCode: { width: 20, fontSize: 11, fontWeight: 600, color: colors.muted },
   indicator: { display: 'flex', alignItems: 'center', width: 18, height: 18 },
-  desktopOnly: { display: { default: 'none', '@media (min-width: 1024px)': 'block' } },
 });
 
 export function ShowroomProfileMenu({ overHero = false }: { overHero?: boolean }) {
   const { t, locale, setLocale, number } = useLocale();
-  const { parked, filters, inventorySort, theme } = useAppState();
-  const pathname = usePathname();
+  const { parked, theme } = useAppState();
   const [open, setOpen] = useState(false);
 
   return (
@@ -250,30 +244,6 @@ export function ShowroomProfileMenu({ overHero = false }: { overHero?: boolean }
               </DropdownMenu.RadioItem>
             ))}
           </DropdownMenu.RadioGroup>
-          <div {...stylex.props(s.desktopOnly)}>
-            <DropdownMenu.Separator {...stylex.props(s.separator)} />
-            <DropdownMenu.Group aria-label={t('Main navigation')}>
-              {showroomNavigation.map(([href, label, NavigationIcon]) => (
-                <DropdownMenu.Item asChild key={href}>
-                  <Link
-                    href={href === '/' ? showroomInventoryHref(filters, inventorySort) : href}
-                    prefetch={false}
-                    aria-current={pathname === href ? 'page' : undefined}
-                    {...stylex.props(s.item, pathname === href && s.current)}
-                  >
-                    <NavigationIcon
-                      size={20}
-                      strokeWidth={1.8}
-                      aria-hidden="true"
-                      {...stylex.props(s.icon)}
-                    />
-                    <span {...stylex.props(s.label)}>{t(label)}</span>
-                    <ChevronRight size={16} aria-hidden="true" {...stylex.props(s.icon)} />
-                  </Link>
-                </DropdownMenu.Item>
-              ))}
-            </DropdownMenu.Group>
-          </div>
         </DropdownMenu.Content>
       </DropdownMenu.Portal>
     </DropdownMenu.Root>

@@ -137,12 +137,7 @@ export function ShowroomServicesScreen() {
     <>
       <ShowroomBanner>
         <Header home sticky={false} overHeroDesktop />
-        <ShowroomPageHero
-          {...showroomPageContent.services}
-          description={undefined}
-          compact
-          stackedControls
-        >
+        <ShowroomPageHero {...showroomPageContent.services} description={undefined}>
           <div {...stylex.props(s.serviceHeroControls)}>
             <div {...stylex.props(s.desktopServiceControls)}>
               <ShowroomTabs

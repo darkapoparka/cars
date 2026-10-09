@@ -25,7 +25,7 @@ const s = stylex.create({
     zIndex: { default: 'auto', '@media (min-width: 1024px)': 1 },
     backgroundColor: colors.background,
     marginInline: 0,
-    marginTop: { default: 0, '@media (min-width: 1024px)': -28 },
+    marginTop: { default: 0, '@media (min-width: 1024px)': showroomDesktop.drawerOverlap },
     paddingInline: { default: 0, '@media (min-width: 1024px)': showroomDesktop.gutter },
     paddingTop: { default: 0, '@media (min-width: 1024px)': 16 },
     borderTopLeftRadius: { default: 0, '@media (min-width: 1024px)': showroomDesktop.drawerRadius },
@@ -58,20 +58,19 @@ const s = stylex.create({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    minHeight: 340,
-    paddingTop: 52,
-    paddingBottom: 68,
+    minHeight: showroomDesktop.heroHeight,
+    paddingTop: showroomDesktop.heroPaddingTop,
+    paddingBottom: showroomDesktop.heroPaddingBottom,
     paddingInline: 40,
-    gap: 24,
+    gap: showroomDesktop.heroGap,
     color: '#fff',
     textAlign: 'center',
   },
-  compact: { minHeight: 280 },
-  stackedControls: {
-    paddingBottom: { default: 40, '@media (min-width: 1024px)': 48 },
-    gap: 20,
+  copy: {
+    display: { default: 'contents', '@media (min-width: 1024px)': 'block' },
+    width: '100%',
+    maxWidth: showroomDesktop.heroCopyWidth,
   },
-  copy: { display: { default: 'contents', '@media (min-width: 1024px)': 'block' } },
   title: {
     // One heading serves both sizes; it is visually hidden on the phone layout.
     position: { default: 'absolute', '@media (min-width: 1024px)': 'static' },
@@ -84,7 +83,10 @@ const s = stylex.create({
     whiteSpace: { default: 'nowrap', '@media (min-width: 1024px)': 'normal' },
     borderWidth: 0,
     fontFamily: 'var(--font-base), Arial, sans-serif',
-    fontSize: 'clamp(32px, 3vw, 40px)',
+    fontSize: {
+      default: 'clamp(32px, 3vw, 40px)',
+      '@media (min-width: 1024px)': showroomDesktop.heroTitleSize,
+    },
     fontWeight: 700,
     lineHeight: 1.12,
     letterSpacing: '-.02em',
@@ -93,11 +95,12 @@ const s = stylex.create({
   description: {
     display: { default: 'none', '@media (min-width: 1024px)': 'block' },
     marginTop: 12,
-    maxWidth: 620,
+    marginInline: 'auto',
+    maxWidth: 760,
     color: 'rgba(255, 255, 255, .82)',
-    fontSize: 16,
+    fontSize: { default: 16, '@media (min-width: 1024px)': 18 },
     fontWeight: 400,
-    lineHeight: '24px',
+    lineHeight: { default: '24px', '@media (min-width: 1024px)': '26px' },
     textWrap: 'balance',
   },
 });
@@ -148,25 +151,14 @@ export function ShowroomPageHero({
   title,
   description,
   children,
-  compact,
-  stackedControls = false,
 }: {
   title: string;
   description?: string;
   children?: ReactNode;
-  compact?: boolean;
-  stackedControls?: boolean;
 }) {
   const { t } = useLocale();
   return (
-    <div
-      data-showroom-page-hero
-      {...stylex.props(
-        s.hero,
-        (compact ?? !children) && s.compact,
-        stackedControls && s.stackedControls,
-      )}
-    >
+    <div data-showroom-page-hero {...stylex.props(s.hero)}>
       <div {...stylex.props(s.copy)}>
         <h1 {...stylex.props(s.title)}>{t(title)}</h1>
         {description && <p {...stylex.props(s.description)}>{t(description)}</p>}

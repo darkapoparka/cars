@@ -178,7 +178,7 @@ const s = stylex.create({
       default: 'minmax(0,1fr)',
       '@media (min-width: 700px)': 'repeat(2,minmax(0,1fr))',
       '@media (min-width: 1024px)': showroomDesktop.inventoryColumns,
-      '@media (min-width: 1280px)': showroomDesktop.wideInventoryColumns,
+      '@media (min-width: 1600px)': showroomDesktop.wideInventoryColumns,
     },
   },
   note: {

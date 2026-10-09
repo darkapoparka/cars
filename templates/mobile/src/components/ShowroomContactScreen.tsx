@@ -77,7 +77,7 @@ export function ShowroomContactScreen({
     <>
       <ShowroomBanner>
         <Header home overHeroDesktop />
-        <ShowroomPageHero {...showroomPageContent.contact} compact>
+        <ShowroomPageHero {...showroomPageContent.contact}>
           <Button
             href={showroom.phone ? 'tel:' + showroom.phone : undefined}
             xstyle={s.contactHeroAction}

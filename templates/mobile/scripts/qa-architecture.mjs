@@ -441,9 +441,7 @@ async function run(name, engine) {
           await profileLinks.evaluateAll((links) =>
             links.map((link) => new URL(link.href).pathname),
           ),
-          width >= 1024
-            ? ['/car-park', '/settings', '/', '/services', '/contact']
-            : ['/car-park', '/settings'],
+          ['/car-park', '/settings'],
         );
         assert.equal(await profileMenu.getByRole('menuitemradio').count(), 2);
         await page.keyboard.press('Escape');
@@ -482,7 +480,7 @@ async function run(name, engine) {
             await menuLinks.evaluateAll((links) =>
               links.map((link) => new URL(link.href).pathname),
             ),
-            ['/car-park', '/settings', '/', '/services', '/contact'],
+            ['/car-park', '/settings'],
           );
           // Safari does not focus every button after a pointer click. Escape
           // must also dismiss a pointer-opened menu while focus is elsewhere.

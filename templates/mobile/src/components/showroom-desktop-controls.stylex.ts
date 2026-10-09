@@ -50,11 +50,15 @@ export const desktopSearchStyles = stylex.create({
   },
   hideDivider: { '::after': { opacity: 0 } },
   copy: { flex: '1', minWidth: 0, display: 'flex', flexDirection: 'column', gap: 2 },
-  label: { color: colors.muted, fontSize: 12, lineHeight: '18px' },
+  label: {
+    color: colors.muted,
+    fontSize: { default: 12, '@media (min-width: 1024px)': 14 },
+    lineHeight: { default: '18px', '@media (min-width: 1024px)': '20px' },
+  },
   value: {
-    fontSize: 15,
+    fontSize: { default: 15, '@media (min-width: 1024px)': 16 },
     fontWeight: 500,
-    lineHeight: '22px',
+    lineHeight: { default: '22px', '@media (min-width: 1024px)': '24px' },
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
