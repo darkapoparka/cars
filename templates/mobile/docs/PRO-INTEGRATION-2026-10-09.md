@@ -99,3 +99,42 @@ Evidence, source snapshots, original Astra audit metadata, differing-region crop
 and recovery receipts are under Cars `runtime/mobile-pro-integration-20261009`.
 The original handoff remains [PRO-AUDIT.md](PRO-AUDIT.md). No Mobile release lock,
 dealer variants or hosting configuration were changed by this integration.
+
+## Final PDP detail treatment
+
+The owner-requested follow-up restores alternating shaded technical-data rows
+inside a rounded inset container. The complete specifications dialog uses the
+same row shading. Vehicle condition, category and the other captured facts keep
+their existing values and localization.
+
+The six summary icons now use 48px boxes on both phone and desktop, aligned with
+the two-line label/value pairs. Below 360px, tighter column spacing and slightly
+smaller text keep Bulgarian owner and gearbox labels readable without isolated
+final characters. The earlier PDP composition is retained.
+
+The follow-up passes `npm run check` on Node 22.20.0: zero lint warnings,
+TypeScript, all 156 domain tests and the production build. Formatting and the
+repository workflow check pass. The final browser suite was repeated on this
+production build: 168 rendered states and 12 interaction flows passed, with zero
+errors or application submissions. Twelve focused PDP states cover Chromium and
+WebKit, Bulgarian and English, at 320, 390 and 1440px; no horizontal overflow or
+icon/text overlap was found.
+
+All 24 hero/detail frames were stable across repeated captures within each build.
+Development and production were compared in matching states: 21 of 24 pairs were
+pixel-identical; the remaining three differ by 28–43 raster pixels, with matching
+dimensions. The earlier cold image-load capture is retained in runtime evidence;
+final captures wait for image decoding before recording the gallery.
+
+Matched detail-section screenshots use the same listing, language, photo and
+section scroll anchor:
+
+| Surface             | Before the detail adjustment                                     | After the detail adjustment                                    |
+| ------------------- | ---------------------------------------------------------------- | -------------------------------------------------------------- |
+| Phone, 390 × 844    | [Before](pro-integration-2026-10-09/pdp-details-before-390.png)  | [After](pro-integration-2026-10-09/pdp-details-after-390.png)  |
+| Desktop, 1440 × 900 | [Before](pro-integration-2026-10-09/pdp-details-before-1440.png) | [After](pro-integration-2026-10-09/pdp-details-after-1440.png) |
+
+The [320px Bulgarian capture](pro-integration-2026-10-09/pdp-details-after-320-bg.png)
+shows the narrow-width spacing and multiline technical values. Follow-up logs,
+full captures and geometry reports are retained under the integration runtime
+directory with the `pdp-finish` prefix.

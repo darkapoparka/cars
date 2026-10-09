@@ -253,10 +253,11 @@ dismissal, including pointer activation in Safari.
 Tab selection replaces the URL fragment and preserves router state and the
 inventory Back entry. Selected sections survive reload; the separate gallery
 returns to the selected section. Summary facts use semantic label/value pairs,
-smaller icons and shorter registration/owner labels; panel footers use 48px
+48px accent icons and shorter registration/owner labels. Technical data uses a
+rounded inset table with alternating shaded rows; panel footers use 48px
 controls. Buying/Leasing uses native pressed buttons, and the lease entry opens
 the captured terms. Ratings, prices and finance terms remain sample data requiring
-dealer verification. Owner visual acceptance and phone-browser checks remain pending.
+dealer verification. The integration report records source and rendered browser checks.
 
 Services has three equal-width All / Import / Sell tabs that fill the viewport.
 Import and Sell use white starter cards with the same thin border. Import puts

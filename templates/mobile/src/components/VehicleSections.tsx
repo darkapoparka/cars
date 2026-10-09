@@ -278,13 +278,16 @@ const s = stylex.create({
   value: { fontSize: 14, lineHeight: '20px', fontWeight: 700 },
   showroomSpecs: {
     padding: 0,
-    gap: { default: 16, '@media (min-width: 1024px)': 20 },
+    gap: { default: 16, '@media (max-width: 359px)': 8, '@media (min-width: 1024px)': 20 },
     gridTemplateColumns: {
       default: 'repeat(2,minmax(0,1fr))',
       '@media (min-width: 1280px)': 'repeat(3,minmax(0,1fr))',
     },
   },
-  showroomSpec: { paddingLeft: 36 },
+  showroomSpec: {
+    paddingLeft: { default: 56, '@media (max-width: 359px)': 52 },
+    minHeight: 48,
+  },
   showroomSpecIcon: { color: colors.accent },
   specIcon: {
     display: 'inline-flex',
@@ -294,11 +297,21 @@ const s = stylex.create({
     transform: 'translateY(-50%)',
   },
   showroomLabel: {
-    fontSize: { default: 12, '@media (max-width: 699px)': 14, '@media (min-width: 1024px)': 13 },
+    fontSize: {
+      default: 12,
+      '@media (max-width: 699px)': 14,
+      '@media (max-width: 359px)': 13,
+      '@media (min-width: 1024px)': 13,
+    },
     lineHeight: { default: '18px', '@media (max-width: 699px)': '20px' },
   },
   showroomValue: {
-    fontSize: { default: 14, '@media (max-width: 699px)': 16, '@media (min-width: 1024px)': 16 },
+    fontSize: {
+      default: 14,
+      '@media (max-width: 699px)': 16,
+      '@media (max-width: 359px)': 15,
+      '@media (min-width: 1024px)': 16,
+    },
     lineHeight: {
       default: '20px',
       '@media (max-width: 699px)': '24px',
@@ -346,14 +359,15 @@ const s = stylex.create({
     overflowWrap: 'anywhere',
   },
   key: { fontWeight: 700 },
-  showroomRow: {
-    backgroundColor: colors.background,
-    borderBottomWidth: 1,
-    borderBottomStyle: 'solid',
-    borderBottomColor: colors.cardLine,
+  showroomTechnicalTable: {
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: colors.cardLine,
+    borderRadius: 12,
+    overflow: 'hidden',
   },
-  showroomKey: { fontWeight: 400, color: colors.muted, paddingLeft: 0 },
-  showroomCell: { fontWeight: 500, paddingRight: 0 },
+  showroomKey: { fontWeight: 500, color: colors.muted, paddingInline: 12 },
+  showroomCell: { fontWeight: 500, paddingInline: 12 },
   check: { textAlign: 'right', color: colors.muted, width: '20%' },
   more: {
     width: '100%',
@@ -624,7 +638,7 @@ export function VehicleSections({
                       <span
                         {...stylex.props(ui.orange, s.specIcon, showroomMode && s.showroomSpecIcon)}
                       >
-                        <Icon name={icon} size={showroomMode ? (mobileView ? 32 : 24) : 28} />
+                        <Icon name={icon} size={showroomMode ? 48 : 28} />
                       </span>
                       <span {...stylex.props(showroomMode && s.fullSpecification)}>{t(label)}</span>
                       {showroomMode && (
@@ -694,37 +708,39 @@ export function VehicleSections({
                 <h2 {...stylex.props(s.title, showroomMode && s.showroomTitle)}>
                   {t('Technical data')}
                 </h2>
-                <table {...stylex.props(s.table)}>
-                  <tbody>
-                    {previewData.map(([label, value]) => (
-                      <tr key={label} {...stylex.props(s.row, showroomMode && s.showroomRow)}>
-                        <th
-                          scope="row"
-                          {...stylex.props(s.cell, s.key, showroomMode && s.showroomKey)}
-                        >
-                          <span {...stylex.props(showroomMode && s.fullSpecification)}>
-                            {t(label)}
-                          </span>
-                          {showroomMode && (
-                            <span {...stylex.props(s.compactSpecification)}>
-                              {compactVehicleSpecification(label, value, locale)[0]}
+                <div {...stylex.props(showroomMode && s.showroomTechnicalTable)}>
+                  <table {...stylex.props(s.table)}>
+                    <tbody>
+                      {previewData.map(([label, value]) => (
+                        <tr key={label} {...stylex.props(s.row)}>
+                          <th
+                            scope="row"
+                            {...stylex.props(s.cell, s.key, showroomMode && s.showroomKey)}
+                          >
+                            <span {...stylex.props(showroomMode && s.fullSpecification)}>
+                              {t(label)}
                             </span>
-                          )}
-                        </th>
-                        <td {...stylex.props(s.cell, showroomMode && s.showroomCell)}>
-                          <span {...stylex.props(showroomMode && s.fullSpecification)}>
-                            {localizeSpecification(value, locale)}
-                          </span>
-                          {showroomMode && (
-                            <span {...stylex.props(s.compactSpecification)}>
-                              {compactVehicleSpecification(label, value, locale)[1]}
+                            {showroomMode && (
+                              <span {...stylex.props(s.compactSpecification)}>
+                                {compactVehicleSpecification(label, value, locale)[0]}
+                              </span>
+                            )}
+                          </th>
+                          <td {...stylex.props(s.cell, showroomMode && s.showroomCell)}>
+                            <span {...stylex.props(showroomMode && s.fullSpecification)}>
+                              {localizeSpecification(value, locale)}
                             </span>
-                          )}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                            {showroomMode && (
+                              <span {...stylex.props(s.compactSpecification)}>
+                                {compactVehicleSpecification(label, value, locale)[1]}
+                              </span>
+                            )}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
               <button
                 type="button"
@@ -956,7 +972,7 @@ export function VehicleSections({
             <tbody>
               {data.map(([label, value]) => (
                 <Fragment key={label}>
-                  <tr {...stylex.props(s.row, showroomMode && s.showroomRow)}>
+                  <tr {...stylex.props(s.row)}>
                     <th
                       scope="row"
                       {...stylex.props(
