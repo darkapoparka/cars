@@ -17,7 +17,7 @@
 				<source
 					media="(max-width: 767px)"
 					srcset={`${assetHref(`${banner}-small.webp`)} 360w, ${assetHref(`${banner}.webp`)} 720w, ${assetHref(`${banner}-large.webp`)} 1080w`}
-					sizes="(max-width: 767px) min(calc(40vw - 30.4px), 144px), 1px"
+					sizes="(max-width: 767px) min(calc(30vw - 22.8px), 112px), 1px"
 					type="image/webp"
 				/>
 				<img
@@ -51,9 +51,13 @@
 			{/each}
 		</ol>
 		<div class="sell-valuation__contact">
-			<p>{copy.questions}</p>
 			<a href={resolve(site.contact.phoneHref)}>
-				<span><PhoneCall size={14} aria-hidden="true" />{copy.callAction}</span>
+				<span>
+					<PhoneCall size={14} aria-hidden="true" />
+					<span
+						><span class="sell-valuation__question">{copy.questions}</span> {copy.callAction}</span
+					>
+				</span>
 			</a>
 		</div>
 	</div>
@@ -75,7 +79,7 @@
 	}
 	.sell-valuation__banner {
 		display: grid;
-		grid-template-columns: minmax(0, 1fr) min(40%, 144px);
+		grid-template-columns: minmax(0, 1fr) min(30%, 112px);
 		gap: var(--bc-space-2);
 		padding: var(--bc-space-3);
 		border-radius: var(--bc-radius-card);
@@ -94,9 +98,10 @@
 		color: var(--bc-white);
 		font: var(--bc-weight-heading) 20px/24px var(--bc-font-body);
 		letter-spacing: -0.03em;
+		white-space: nowrap;
 	}
 	.sell-valuation .sell-valuation__title:lang(bg) {
-		font-size: clamp(18px, 5vw, 20px);
+		font-size: clamp(16px, 5vw, 20px);
 	}
 	.sell-valuation picture {
 		position: relative;
@@ -155,6 +160,10 @@
 	.sell-valuation__contact a:hover > span {
 		background: var(--bc-ink-soft);
 	}
+	.sell-valuation__question {
+		margin-inline-end: 2px;
+		color: rgb(255 255 255 / 0.76);
+	}
 	.sell-valuation__contact a:focus-visible > span {
 		outline: 2px solid var(--bc-ink);
 		outline-offset: 3px;
@@ -204,6 +213,6 @@
 		display: flex;
 		margin-top: var(--bc-space-3);
 		align-items: center;
-		gap: var(--bc-space-2);
+		justify-content: center;
 	}
 </style>
