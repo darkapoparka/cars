@@ -1,14 +1,15 @@
 'use client';
 
 import {useEffect, useRef} from 'react';
-import {restoreFilters, type Filters} from '@/lib/inventory-filters';
+import {type Filters} from '@/lib/inventory-filters';
+import {inventorySearch, readInventorySearch, restoreInventoryState, type InventoryState} from '@/lib/inventory-search';
+import {applicationHistoryState} from '@/lib/history-state';
 import {useRouter} from '@/lib/navigation';
 import {withoutLocale} from '@/lib/paths';
 import {primaryHomePath} from '@/lib/home-alternative';
 
-type State = {query: string; filters: Filters; sort: string; emiMax?: number};
+type State = InventoryState;
 type Controls = {setQuery: (value: string) => void; setFilters: (value: Filters) => void; setSort: (value: string) => void; setEmiMax: (value: number | undefined) => void};
-const validSorts = ['default', 'recent', 'price-asc', 'price-desc', 'kms-asc', 'kms-desc', 'discount', 'age-asc', 'age-desc'];
 let pendingReturn: {entry: string; detail: string; home?: boolean} | null = null;
 
 /** Remember which collection opened the car without changing its URL or scroll position. */
@@ -16,14 +17,13 @@ export function useVehicleReturn(home = false, enabled = true) {
   useEffect(() => {
     if (!enabled) return;
     pendingReturn = null;
-    const entry = `${location.pathname}${location.search}`;
     function rememberReturn(event: MouseEvent) {
       if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       const link = event.target instanceof Element ? event.target.closest<HTMLAnchorElement>('a[href]') : null;
       if (!link || link.target === '_blank' || link.hasAttribute('download')) return;
       const destination = new URL(link.href);
       pendingReturn = destination.origin === location.origin && /^\/cars\/[^/]+$/.test(withoutLocale(destination.pathname))
-        ? {entry, detail: destination.pathname, ...(home?{home:true}:{})} : null;
+        ? {entry: `${location.pathname}${location.search}`, detail: destination.pathname, ...(home?{home:true}:{})} : null;
     }
     document.addEventListener('click', rememberReturn, true);
     return () => document.removeEventListener('click', rememberReturn, true);
@@ -31,31 +31,45 @@ export function useVehicleReturn(home = false, enabled = true) {
 }
 
 /** Store list state on its own history entry, so Back from a car restores the list. */
-export function useInventoryHistory(state: State, controls: Controls, home = false) {
+export function useInventoryHistory(state: State, controls: Controls, home = false, overlayOpen = false) {
   useVehicleReturn(home);
+  const {query, filters, sort, emiMax} = state;
   const latest = useRef(state);
   const setters = useRef(controls);
   const ready = useRef(false);
   const entry = useRef('');
   useEffect(() => {setters.current = controls;});
   useEffect(() => {
-    latest.current = state;
+    const snapshot = {query, filters, sort, emiMax};
+    latest.current = snapshot;
     if (!ready.current || `${location.pathname}${location.search}` !== entry.current) return;
-    history.replaceState({...history.state, cars24Inventory: {version: 1, entry: entry.current, ...state}}, '');
-  }, [state.query, state.filters, state.sort, state.emiMax, state]);
+    // Commit a sheet's portable URL after dismissal so its Back step cannot discard live edits.
+    const nextEntry = `${location.pathname}${overlayOpen ? location.search : inventorySearch(location.search, snapshot)}`;
+    entry.current = nextEntry;
+    const previous = history.state?.cars24Inventory;
+    if (previous?.version === 1 && previous.entry === nextEntry && previous.query === query && previous.sort === sort && previous.emiMax === emiMax && JSON.stringify(previous.filters) === JSON.stringify(filters)) return;
+    history.replaceState({...applicationHistoryState(history.state), cars24Inventory: {version: 1, entry: nextEntry, ...snapshot}}, '', `${nextEntry}${location.hash}`);
+  }, [query, filters, sort, emiMax, overlayOpen]);
   useEffect(() => {
     entry.current = `${location.pathname}${location.search}`;
-    const stored = history.state?.cars24Inventory;
+    const pathname = location.pathname;
+    const initial = restoreInventoryState(history.state?.cars24Inventory, entry.current) ?? readInventorySearch(new URLSearchParams(location.search));
+    function restore(snapshot: State) {
+      latest.current = snapshot;
+      setters.current.setQuery(snapshot.query); setters.current.setFilters(snapshot.filters); setters.current.setSort(snapshot.sort); setters.current.setEmiMax(snapshot.emiMax);
+    }
     const frame = requestAnimationFrame(() => {
-      if (stored?.version === 1 && stored.entry === entry.current) {
-        const snapshot: State = {query: typeof stored.query === 'string' ? stored.query.slice(0, 200) : '', filters: restoreFilters(stored.filters), sort: validSorts.includes(stored.sort) ? stored.sort : 'default', emiMax: typeof stored.emiMax === 'number' && Number.isFinite(stored.emiMax) ? Math.max(0, stored.emiMax) : undefined};
-        latest.current = snapshot;
-        setters.current.setQuery(snapshot.query); setters.current.setFilters(snapshot.filters); setters.current.setSort(snapshot.sort); setters.current.setEmiMax(snapshot.emiMax);
-      }
+      restore(initial);
       ready.current = true;
     });
     function pop() {
-      if (`${location.pathname}${location.search}` === entry.current) history.replaceState({...history.state, cars24Inventory: {version: 1, entry: entry.current, ...latest.current}}, '');
+      if (location.pathname !== pathname) return;
+      const nextEntry = `${location.pathname}${location.search}`;
+      const stored = restoreInventoryState(history.state?.cars24Inventory, nextEntry);
+      // A sheet's Back step retains its live selections; another URL restores that entry's selections.
+      if (nextEntry === entry.current) return;
+      entry.current = nextEntry;
+      restore(stored ?? readInventorySearch(new URLSearchParams(location.search)));
     }
     window.addEventListener('popstate', pop);
     return () => {cancelAnimationFrame(frame); window.removeEventListener('popstate', pop); ready.current = false;};

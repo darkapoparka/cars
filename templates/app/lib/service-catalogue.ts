@@ -46,3 +46,5 @@ export const serviceOptions = [
     checks: ['Cooling check', 'Cabin filter', 'System inspection'],
   },
 ] as const;
+
+export type ServiceOption = (typeof serviceOptions)[number];

@@ -20,7 +20,7 @@ export function ServiceTabs({active,compact=false,onDark=false}: {active:Service
 
   return <nav aria-label={tx("Car services")} {...stylex.props(s.tabs)}>{showroom.services.map(tab => <Link key={tab.key} href={tab.href} aria-label={tx(tab.key === 'finance' ? 'Finance navigation' : tab.label)} aria-current={active===tab.key?'page':undefined} {...stylex.props(s.tab,active===tab.key&&s.tabActive,onDark&&active===tab.key&&s.tabOnDarkActive,compact&&s.tabCompact)}>
     <span {...stylex.props(s.tabTitle,t.navigation,active===tab.key&&s.tabTitleActive,compact&&s.tabTitleCompact,compact&&active===tab.key&&s.tabTitleCompactActive,compact&&onDark&&s.tabTitleOnDark,compact&&onDark&&active===tab.key&&s.tabTitleOnDarkActive)}>{tx(tab.key === 'finance' ? 'Finance navigation' : tab.label)}</span>
-    {!compact ? <span aria-hidden="true" {...stylex.props(s.tabArtworkBox)}><ServiceTabArtwork image={tab.image} mobileImage={tab.mobileImage} buy={tab.key === 'buy'}/></span> : null}
+    {!compact ? <span aria-hidden="true" {...stylex.props(s.tabArtworkBox)}><ServiceTabArtwork image={tab.image} mobileImage={tab.mobileTabImage} sell={tab.key === 'sell'}/></span> : null}
     {active===tab.key?<span aria-hidden="true" {...stylex.props(s.tabIndicator,compact&&s.tabIndicatorCompact)}/>:null}
   </Link>)}</nav>;
 }
@@ -29,11 +29,11 @@ export function ShowroomPromotion() {
   return <DealerHomeBanner/>;
 }
 
-function ServiceTabArtwork({image, mobileImage, buy}: {image: string; mobileImage: string; buy: boolean}) {
+function ServiceTabArtwork({image, mobileImage, sell}: {image: string; mobileImage: string; sell: boolean}) {
   const common = {alt: '', fill: true, sizes: '(max-width: 767px) 90px, 160px'};
   const {props: desktop} = getImageProps({...common, src: assetPath(image)});
   const {props: mobile} = getImageProps({...common, src: assetPath(mobileImage)});
-  return <picture><source media="(max-width: 767px)" srcSet={mobile.srcSet} sizes={mobile.sizes}/><img {...desktop} alt="" {...stylex.props(s.tabArt, buy && s.tabArtBuy)}/></picture>;
+  return <picture><source media="(max-width: 767px)" srcSet={mobile.srcSet} sizes={mobile.sizes}/><img {...desktop} alt="" {...stylex.props(s.tabArt, sell && s.tabArtSell)}/></picture>;
 }
 
 export function BrandEmblem({make}: {make: string}) {
@@ -79,19 +79,19 @@ export function BottomIcon({name,active}: {name:string;active:boolean}) {
 
 const s=stylex.create({
  tabs:{display:'grid',gridTemplateColumns:'repeat(4,minmax(0,1fr))',gap:{[media.mobile]:0,default:16}},
- tab:{display:{[media.mobile]:'flex',default:'block'},flexDirection:'column',alignItems:'center',justifyContent:'space-between',gap:4,position:'relative',height:{[media.mobile]:'auto',default:104},minHeight:{[media.mobile]:86,default:104},padding:{[media.mobile]:'7px 2px',default:0},minWidth:0,overflow:'hidden',color:$.ink,borderRadius:{[media.mobile]:0,default:16},borderWidth:{[media.mobile]:0,default:1},borderStyle:'solid',borderColor:'#eeeeef',backgroundColor:{[media.mobile]:'transparent',default:'#f4f4f5'}},
+ tab:{display:{[media.mobile]:'flex',default:'block'},flexDirection:'column',alignItems:'center',justifyContent:'space-between',gap:{[media.mobile]:3,default:4},position:'relative',height:{[media.mobile]:'auto',default:104},minHeight:{[media.mobile]:82,default:104},padding:{[media.mobile]:'5px 2px 11px',default:0},minWidth:0,overflow:'hidden',color:$.ink,borderRadius:{[media.mobile]:0,default:16},borderWidth:{[media.mobile]:0,default:1},borderStyle:'solid',borderColor:'#eeeeef',backgroundColor:{[media.mobile]:'transparent',default:'#f4f4f5'}},
  tabActive:{color:$.ink,backgroundColor:{[media.mobile]:'transparent',default:'#ececee'},borderColor:{[media.mobile]:'transparent',default:'#dedee1'},boxShadow:'none'},
  tabOnDarkActive:{backgroundColor:{[media.mobile]:'transparent',default:'#fff'},borderColor:{[media.mobile]:'transparent',default:'#fff'}},
- tabCompact:{aspectRatio:'auto',height:'auto',minHeight:44,justifyContent:'center',padding:0,borderWidth:0,borderRadius:{[media.mobile]:0,default:30},backgroundColor:'transparent',boxShadow:'none',overflow:'visible'},
+ tabCompact:{aspectRatio:'auto',height:'auto',minHeight:{[media.mobile]:48,default:44},justifyContent:'center',padding:{[media.mobile]:'0 0 4px',default:0},borderWidth:0,borderRadius:{[media.mobile]:0,default:30},backgroundColor:'transparent',boxShadow:'none',overflow:'visible'},
  tabIndicator:{position:'absolute',bottom:0,left:{[media.mobile]:0,default:'calc(50% - 10px)'},width:{[media.mobile]:'100%',default:20},height:3,borderTopLeftRadius:3,borderTopRightRadius:3,backgroundColor:$.ink},
  tabIndicatorCompact:{display:{[media.mobile]:'block',default:'none'}},
  tabTitleCompact:{position:'static',display:'grid',placeItems:'center',width:'100%',minHeight:32,padding:'6px 2px',whiteSpace:'normal',borderRadius:{[media.mobile]:0,default:30},backgroundColor:{[media.mobile]:'transparent',default:'#f4f4f5'}},
  tabTitleCompactActive:{color:{[media.mobile]:$.ink,default:'#fff'},backgroundColor:{[media.mobile]:'transparent',default:$.ink}},
  tabTitleOnDark:{color:{[media.mobile]:$.ink,default:'#dddde1'},backgroundColor:{[media.mobile]:'transparent',default:'#343438'}},
  tabTitleOnDarkActive:{color:$.ink,backgroundColor:{[media.mobile]:'transparent',default:'#fff'}},
- tabArtworkBox:{position:{[media.mobile]:'relative',default:'absolute'},flexShrink:0,left:{[media.mobile]:'auto',default:'50%'},transform:{[media.mobile]:'none',default:'translateX(-50%)'},bottom:{[media.mobile]:'auto',default:2},width:{[media.mobile]:'calc(100% - 8px)',default:'100%'},height:{[media.mobile]:48,default:'64%'},maxWidth:160},
+ tabArtworkBox:{position:{[media.mobile]:'relative',default:'absolute'},flexShrink:0,left:{[media.mobile]:'auto',default:'50%'},transform:{[media.mobile]:'translateY(-1px)',default:'translateX(-50%)'},bottom:{[media.mobile]:'auto',default:2},width:{[media.mobile]:64,default:'100%'},height:{[media.mobile]:42,default:'64%'},maxWidth:160},
  tabArt:{objectFit:'contain'},
- tabArtBuy:{transform:{[media.mobile]:'scale(1.12)',default:'none'}},
+ tabArtSell:{transform:{[media.mobile]:'scaleX(1.08)',default:'none'}},
  tabTitle:{position:{[media.mobile]:'static',default:'absolute'},top:16,left:0,right:0,maxWidth:'100%',textAlign:'center',zIndex:1,whiteSpace:'pre-line',overflowWrap:'anywhere',letterSpacing:0},
  tabTitleActive:{fontWeight:{[media.mobile]:500,default:400}},
  sectionTitle:{fontSize:{[media.mobile]:18,default:25},fontWeight:{[media.mobile]:600,default:500},lineHeight:1.35,color:$.text},
@@ -100,7 +100,7 @@ const s=stylex.create({
  brandRow:{display:'flex',gap:{[media.mobile]:10,default:12},overflowX:'auto',overscrollBehaviorX:'contain',marginTop:12,marginRight:{[media.mobile]:-12,default:0},paddingRight:{[media.mobile]:12,default:0},paddingBlock:4,scrollbarWidth:'none'},
  brandRowWithoutTitle:{marginTop:0},
  brand:{display:'flex',flexShrink:0,alignItems:'center',flexDirection:'column',gap:8,width:{[media.mobile]:72,default:108},padding:0,textAlign:'center',color:$.text,borderWidth:0,backgroundColor:'transparent',cursor:'pointer'},
- brandIcon:{display:'grid',placeItems:'center',width:'100%',aspectRatio:'1',overflow:'hidden',borderWidth:1,borderStyle:'solid',borderColor:'#e1e6ed',borderRadius:'50%',backgroundColor:'#fff'},
+ brandIcon:{display:'grid',placeItems:'center',width:'100%',aspectRatio:'1',overflow:'hidden',borderWidth:1,borderStyle:'solid',borderColor:$.surfaceBorder,borderRadius:'50%',backgroundColor:$.surface},
  brandIconFramed:{borderWidth:0},
  brandImage:{display:'block',width:'60%',height:'auto',maxHeight:'60%',overflow:'hidden'},
  brandImageWide:{width:'76%'},

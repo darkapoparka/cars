@@ -9,7 +9,7 @@ import {desktopHero as hero} from '@/components/desktop-hero.stylex';
 import {useCopy} from '@/lib/locale';
 import {useSearchParams} from '@/lib/navigation';
 import {serviceOptions} from '@/lib/service-catalogue';
-import {media} from '@/app/tokens.stylex';
+import {media, tokens as $} from '@/app/tokens.stylex';
 
 /** Both responsive search fields and the category strip share the URL state. */
 export function useServiceSearch() {
@@ -49,10 +49,10 @@ export default function ServiceSearchField({state, onDark = false, plainOnMobile
 
 const s = stylex.create({
   search: {minHeight: 48, outline: {default: 'none', ':focus-within': '2px solid #242428'}, outlineOffset: 2},
-  onDark: {minHeight: 44, backgroundColor: '#fff', outlineColor: {':focus-within': {[media.mobile]: '#242428', default: '#fff'}}, outlineOffset: 3},
+  onDark: {minHeight: 44, backgroundColor: $.surface, outlineColor: {':focus-within': {[media.mobile]: '#242428', default: '#fff'}}, outlineOffset: 3},
   heroIcon: {marginInlineStart: {[media.desktop]: 14, default: null}},
   heroClear: {marginRight: {[media.desktop]: 0, default: null}},
-  plainMobileSearch: {backgroundColor: {[media.mobile]: '#f7f7f8', default: '#fff'}, outlineColor: {':focus-within': {default: '#fff', [media.mobile]: '#242428'}}, outlineOffset: {[media.mobile]: 2, default: 3}},
+  plainMobileSearch: {backgroundColor: $.surface, outlineColor: {':focus-within': {default: '#fff', [media.mobile]: '#242428'}}, outlineOffset: {[media.mobile]: 2, default: 3}},
   input: {minHeight: 44, appearance: {default: 'auto', '::-webkit-search-cancel-button': 'none'}},
   compactInput: {minHeight: 40},
   clear: {width: 44, height: 44},

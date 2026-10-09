@@ -49,7 +49,7 @@ export default function VehicleDetailTabs({photos, children, onOpenPhoto, onInfo
         ref={element => {buttons.current[index] = element;}}
         type="button"
         role="tab"
-        aria-label={tx(tab)}
+        aria-label={tx(tab === 'Exteriors' ? 'Exterior' : tab === 'Interiors' ? 'Interior' : tab)}
         id={`${id}-tab-${index}`}
         aria-controls={`${id}-panel-${index}`}
         aria-selected={selected === tab}
@@ -57,7 +57,7 @@ export default function VehicleDetailTabs({photos, children, onOpenPhoto, onInfo
         onClick={() => select(tab)}
         onKeyDown={event => move(event, index)}
         {...stylex.props(s.tab, selected === tab && s.selected)}
-      ><span {...stylex.props(s.tabLabel, selected === tab && s.selectedLabel)}>{tab === 'Information' ? <><span {...stylex.props(s.mobileLabel)}>{tx('Info')}</span><span {...stylex.props(s.wideLabel)}>{tx(tab)}</span></> : tx(tab)}</span></button>)}
+      ><span {...stylex.props(s.tabLabel, selected === tab && s.selectedLabel)}>{tab === 'Information' ? <><span {...stylex.props(s.mobileLabel)}>{tx('Info')}</span><span {...stylex.props(s.wideLabel)}>{tx(tab)}</span></> : tx(tab === 'Exteriors' ? 'Exterior' : 'Interior')}</span></button>)}
     </div>
     <div role="tabpanel" id={`${id}-panel-0`} aria-labelledby={`${id}-tab-0`} hidden={selected !== 'Information'} tabIndex={0} {...stylex.props(s.panel)}>{children}</div>
     {tabs.slice(1).map((tab, index) => {
@@ -75,7 +75,7 @@ export default function VehicleDetailTabs({photos, children, onOpenPhoto, onInfo
               <img src={assetPath(photo.src)} alt="" width={680} height={384} loading="lazy" {...stylex.props(s.image)}/>
               <span aria-hidden="true" {...stylex.props(s.expand)}><Expand size={17}/></span>
             </span>
-            <span {...stylex.props(s.caption)}>{tx(photo.label)}</span>
+            <span title={tx(photo.label)} {...stylex.props(s.caption)}>{tx(photo.label)}</span>
           </button>)}</div> : <p {...stylex.props(s.empty)}>{tx('Photos in this category are not available for this car.')}</p>}
         </section> : null}
       </div>;
@@ -93,12 +93,12 @@ const s = stylex.create({
   mobileLabel: {display: {[media.mobile]: 'inline', default: 'none'}},
   wideLabel: {display: {[media.mobile]: 'none', default: 'inline'}},
   panel: {outlineOffset: 4},
-  photoPanel: {marginTop: 16},
-  photos: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', default: 'repeat(2,minmax(0,1fr))'}, gap: 12},
+  photoPanel: {marginTop: {[media.mobile]: 12, default: 16}},
+  photos: {display: 'grid', gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gap: {[media.mobile]: 8, default: 12}},
   photo: {display: 'flex', flexDirection: 'column', minWidth: 0, padding: 0, overflow: 'hidden', color: $.ink, textAlign: 'left', borderWidth: 0, borderRadius: 12, backgroundColor: $.surface, cursor: 'zoom-in'},
   imageFrame: {position: 'relative', width: '100%', aspectRatio: '16/9', overflow: 'hidden'},
   image: {display: 'block', width: '100%', height: '100%', objectFit: 'cover'},
   expand: {display: 'grid', placeItems: 'center', position: 'absolute', right: 10, bottom: 10, width: 32, height: 32, color: $.ink, borderRadius: '50%', backgroundColor: $.surface},
-  caption: {padding: '10px 12px', fontFamily: $.fontSans, fontSize: 14, lineHeight: '20px'},
+  caption: {display: 'block', minWidth: 0, padding: {[media.mobile]: 8, default: '10px 12px'}, fontFamily: $.fontSans, fontSize: {[media.mobile]: 13, default: 14}, lineHeight: {[media.mobile]: '18px', default: '20px'}, overflow: {[media.mobile]: 'hidden', default: 'visible'}, textOverflow: {[media.mobile]: 'ellipsis', default: 'clip'}, whiteSpace: {[media.mobile]: 'nowrap', default: 'normal'}, overflowWrap: 'anywhere'},
   empty: {color: $.muted, fontFamily: $.fontSans, fontSize: 14, lineHeight: '22px'},
 });

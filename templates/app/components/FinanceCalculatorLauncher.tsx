@@ -1,6 +1,6 @@
 'use client';
 
-import {useDeferredValue, useEffect, useId, useRef, useState} from 'react';
+import {useDeferredValue, useLayoutEffect, useId, useRef, useState} from 'react';
 import * as stylex from '@stylexjs/stylex';
 import {ArrowLeft, ChevronRight, Search, X} from 'lucide-react';
 import {useCopy} from '@/lib/locale';
@@ -31,14 +31,11 @@ export default function FinanceCalculatorLauncher({view, onViewChange: setView, 
   const panel = useModal(view !== null, close);
   const results = stock.filter(car => matchesInventory(car, defaultFilters, deferredQuery));
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!view) return;
-    const frame = requestAnimationFrame(() => {
-      content.current?.scrollTo({top: 0});
-      if (view === 'cars') input.current?.focus({preventScroll: true});
-      else panel.current?.focus({preventScroll: true});
-    });
-    return () => cancelAnimationFrame(frame);
+    content.current?.scrollTo({top: 0, behavior: 'instant'});
+    if (view === 'cars') input.current?.focus({preventScroll: true});
+    else panel.current?.focus({preventScroll: true});
   }, [view, panel]);
 
   function choose(car: Vehicle) {

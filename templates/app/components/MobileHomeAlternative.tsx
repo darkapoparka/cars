@@ -29,7 +29,7 @@ const navigation = [
   {href: '/', label: 'Home', icon: 'home'},
   {href: '/cars', label: 'Cars', icon: 'cars'},
   {href: '/services', label: 'Services', icon: 'service'},
-  {href: '/more', label: 'More', icon: 'more'},
+  {href: '/more', label: 'Menu', icon: 'more'},
 ] as const;
 
 const services = [
@@ -122,7 +122,7 @@ export function MobileAlternativeDiscovery() {
 export function MobileAlternativeDock({pathname}: {pathname: string}) {
   const tx = useCopy();
   return <nav data-alternative-dock aria-label={tx('App navigation')} {...stylex.props(compactDock.root, s.phoneDock)}>{navigation.map(item => {
-    const active = item.href === '/' ? pathname === '/' : item.href === '/services' ? ['/services', '/sell', '/finance', '/service'].includes(pathname) : pathname === item.href;
+    const active = item.href === '/' ? pathname === '/' : item.href === '/services' ? ['/services', '/sell', '/finance', '/service'].includes(pathname) : item.href === '/more' ? pathname === '/more' || pathname === '/saved' : pathname === item.href;
     return <Link key={item.href} href={item.href} aria-label={tx(item.label)} title={tx(item.label)} aria-current={active ? 'page' : undefined} {...stylex.props(compactDock.link, active && compactDock.active)}><ShowroomIcon name={item.icon} size={22} strokeWidth={active ? 2 : 1.65}/></Link>;
   })}</nav>;
 }

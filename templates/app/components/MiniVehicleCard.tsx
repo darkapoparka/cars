@@ -8,7 +8,7 @@ import {Heart} from 'lucide-react';
 import {CurrencyLabel} from '@/components/ReferenceUI';
 import {useSavedVehicle} from '@/components/useVehicleState';
 import {formatPrice, type Vehicle} from '@/lib/data';
-import {media} from '@/app/tokens.stylex';
+import {media, tokens as $} from '@/app/tokens.stylex';
 
 export default function MiniVehicleCard({vehicle, green = false, featured = false}: {vehicle: Vehicle; green?: boolean; featured?: boolean}) {
   const tx = useCopy();
@@ -36,7 +36,7 @@ export default function MiniVehicleCard({vehicle, green = false, featured = fals
   </article>;
 }
 const s = stylex.create({
-  card: {position: 'relative', flexShrink: 0, width: 192, alignSelf: 'start', overflow: 'hidden', borderColor: '#e3e3e3', borderStyle: 'solid', borderWidth: 1, borderRadius: 16, backgroundColor: '#fff', boxShadow: '0 3px 8px rgba(0,0,0,.06)'},
+  card: {position: 'relative', flexShrink: 0, width: 192, alignSelf: 'start', overflow: 'hidden', borderColor: $.surfaceBorder, borderStyle: 'solid', borderWidth: 1, borderRadius: 16, backgroundColor: $.surface, boxShadow: $.shadowSoft},
   featuredCard: {width: {[media.mobile]: 192, default: 210}},
   photo: {position: 'relative', display: 'block', height: 108, overflow: 'hidden'},
   featuredPhoto: {height: {[media.mobile]: 116, default: 126}},

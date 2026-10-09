@@ -9,7 +9,7 @@ import {media, tokens as $} from '@/app/tokens.stylex';
 import {showroom} from '@/lib/showroom';
 
 const defaultRecords = [
-  {date:'2026-07-28',distance:'50,005 km',location:'Mega Refurbishment Labs, Cars24'},
+  {date:'2026-07-28',distance:'50,005 km',location:'Independent workshop'},
   {date:'2026-01-12',distance:'39,649 km',location:'Non - Agency Service Center'},
 ];
 /** Reference snapshot for the captured Fortuner, not live service-history verification. */

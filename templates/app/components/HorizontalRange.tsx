@@ -5,24 +5,30 @@ import * as stylex from '@stylexjs/stylex';
 import {useCopy} from '@/lib/locale';
 import {currency} from '@/lib/currency';
 import {media, tokens as $} from '@/app/tokens.stylex';
+import NumberField from './NumberField';
 
 type Props = {label: string; minimum: number; maximum: number; low: number; high: number; step?: number; suffix?: string; onChange: (low: number, high: number) => void};
 
-function ValueField({value, label, minimum, maximum, suffix, onChange}: {value: number; label: string; minimum: number; maximum: number; suffix: string; onChange: (value: number) => void}) {
+/** Both desktop bounds share one track while retaining separate native keyboard controls. */
+export function DesktopRangeTrack({minimum, maximum, low, high, step = 1, minimumLabel, maximumLabel, format, onChange}: Omit<Props, 'label' | 'suffix'> & {minimumLabel: string; maximumLabel: string; format: (value: number) => string}) {
+  const percent = (value: number) => (value - minimum) / (maximum - minimum) * 100;
+  return <div data-desktop-range-track {...stylex.props(s.track)}><div aria-hidden="true" {...stylex.props(s.line)}><div style={{left: `${percent(low)}%`, right: `${100 - percent(high)}%`}} {...stylex.props(s.selection)}/></div><input type="range" className="cars24-horizontal-range" aria-label={minimumLabel} aria-valuetext={format(low)} min={minimum} max={maximum} step={step} value={low} onChange={event => onChange(Math.min(high, Number(event.target.value)), high)} style={{zIndex: low === maximum ? 2 : 0}}/><input type="range" className="cars24-horizontal-range" aria-label={maximumLabel} aria-valuetext={format(high)} min={minimum} max={maximum} step={step} value={high} onChange={event => onChange(low, Math.max(low, Number(event.target.value)))}/></div>
+}
+
+function ValueField({value, label, minimum, maximum, onChange}: {value: number; label: string; minimum: number; maximum: number; onChange: (value: number) => void}) {
   const [editing, setEditing] = useState(false);
   const [draft, setDraft] = useState('');
-  return <input type="text" inputMode="numeric" aria-label={label} value={editing ? draft : `${new Intl.NumberFormat(currency.locale).format(value)}${suffix}`} onFocus={event => {setDraft(String(value)); setEditing(true); event.currentTarget.select();}} onChange={event => setDraft(event.target.value)} onBlur={event => {const text = event.currentTarget.value.trim().replace(/[\s,]/g, ''); const next = Number(text); if (text && Number.isFinite(next)) onChange(Math.max(minimum, Math.min(maximum, next))); setEditing(false);}} onKeyDown={event => {if (event.key === 'Enter') {event.preventDefault(); event.currentTarget.blur();}}} {...stylex.props(s.input)}/>;
+  return <input type="text" data-focus-owner="field" inputMode="numeric" aria-label={label} value={editing ? draft : new Intl.NumberFormat(currency.locale).format(value)} onFocus={event => {setDraft(String(value)); setEditing(true); event.currentTarget.select();}} onChange={event => setDraft(event.target.value)} onBlur={event => {const text = event.currentTarget.value.trim().replace(/[\s,]/g, ''); const next = Number(text); if (text && Number.isFinite(next)) onChange(Math.max(minimum, Math.min(maximum, next))); setEditing(false);}} onKeyDown={event => {if (event.key === 'Enter') {event.preventDefault(); event.currentTarget.blur();}}} {...stylex.props(s.input)}/>;
 }
 
 /** The desktop mileage range; phone and tablet retain their original control. */
 export default function HorizontalRange({label, minimum, maximum, low, high, step = 1, suffix = '', onChange}: Props) {
   const tx = useCopy();
-  const percent = (value: number) => (value - minimum) / (maximum - minimum) * 100;
   const minimumLabel = `${tx('Minimum value')}: ${label}`;
   const maximumLabel = `${tx('Maximum value')}: ${label}`;
   return <div data-desktop-horizontal-range {...stylex.props(s.range)}>
-    <div {...stylex.props(s.fields)}><label {...stylex.props(s.field)}><span>{tx('From')}</span><ValueField value={low} label={minimumLabel} minimum={minimum} maximum={high} suffix={suffix} onChange={next => onChange(next, high)}/></label><label {...stylex.props(s.field)}><span>{tx('To')}</span><ValueField value={high} label={maximumLabel} minimum={low} maximum={maximum} suffix={suffix} onChange={next => onChange(low, next)}/></label></div>
-    <div {...stylex.props(s.track)}><div aria-hidden="true" {...stylex.props(s.line)}><div style={{left: `${percent(low)}%`, right: `${100 - percent(high)}%`}} {...stylex.props(s.selection)}/></div><input type="range" className="cars24-horizontal-range" aria-label={minimumLabel} aria-valuetext={`${low}${suffix}`} min={minimum} max={maximum} step={step} value={low} onChange={event => onChange(Math.min(high, Number(event.target.value)), high)} style={{zIndex: low === maximum ? 2 : 0}}/><input type="range" className="cars24-horizontal-range" aria-label={maximumLabel} aria-valuetext={`${high}${suffix}`} min={minimum} max={maximum} step={step} value={high} onChange={event => onChange(low, Math.max(low, Number(event.target.value)))}/></div>
+    <div {...stylex.props(s.fields)}><label {...stylex.props(s.field)}><NumberField inlineLabel label={tx('From')} suffix={suffix}><ValueField value={low} label={minimumLabel} minimum={minimum} maximum={high} onChange={next => onChange(next, high)}/></NumberField></label><label {...stylex.props(s.field)}><NumberField inlineLabel label={tx('To')} suffix={suffix}><ValueField value={high} label={maximumLabel} minimum={low} maximum={maximum} onChange={next => onChange(low, next)}/></NumberField></label></div>
+    <DesktopRangeTrack minimum={minimum} maximum={maximum} low={low} high={high} step={step} minimumLabel={minimumLabel} maximumLabel={maximumLabel} format={value => `${value}${suffix}`} onChange={onChange}/>
   </div>;
 }
 

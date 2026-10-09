@@ -1,10 +1,11 @@
 'use client';
 
-import {useEffect, useId, useRef, useState, type KeyboardEvent} from 'react';
+import {useLayoutEffect, useId, useRef, useState, type KeyboardEvent} from 'react';
 import {createPortal} from 'react-dom';
 import * as stylex from '@stylexjs/stylex';
 import {Check, ChevronDown} from 'lucide-react';
 import {useCopy} from '@/lib/locale';
+import {pillStyles as pill} from '@/components/pill.stylex';
 import {tokens as $} from '@/app/tokens.stylex';
 
 type Group = {readonly title: string; readonly items: readonly (readonly [string, string])[]};
@@ -44,9 +45,11 @@ export default function DesktopSortMenu({value, groups, onChange, onOpen}: Props
     onOpen();
     setOpen(true);
   }
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!open) return;
-    const frame = requestAnimationFrame(() => choices.current[initialFocus.current]?.focus({preventScroll: true}));
+    const initialChoice = choices.current[initialFocus.current];
+    initialChoice?.focus({preventScroll: true});
+    initialChoice?.scrollIntoView({block: 'nearest', inline: 'nearest', behavior: 'instant'});
     function outside(event: PointerEvent | FocusEvent) {
       if (event.target instanceof Node && !panel.current?.contains(event.target) && !trigger.current?.contains(event.target)) setOpen(false);
     }
@@ -61,7 +64,6 @@ export default function DesktopSortMenu({value, groups, onChange, onOpen}: Props
     window.addEventListener('resize', dismiss);
     window.addEventListener('popstate', dismiss);
     return () => {
-      cancelAnimationFrame(frame);
       document.removeEventListener('pointerdown', outside);
       document.removeEventListener('focusin', outside);
       document.removeEventListener('keydown', escape);
@@ -86,19 +88,22 @@ export default function DesktopSortMenu({value, groups, onChange, onOpen}: Props
       next = ordered.find(index => options[index].label.toLocaleLowerCase().startsWith(text)) ?? current;
     } else return;
     event.preventDefault();
-    choices.current[next]?.focus();
+    const choice = choices.current[next];
+    choice?.focus({preventScroll: true});
+    choice?.scrollIntoView({block: 'nearest', inline: 'nearest', behavior: 'instant'});
   }
 
   return <>
-    <button ref={trigger} type="button" data-desktop-sort aria-label={`${tx('Sort cars')}: ${options[selected].label}`} title={`${tx('Sort cars')}: ${options[selected].label}`} aria-haspopup="listbox" aria-expanded={open} aria-controls={open ? id : undefined} onClick={() => open ? close() : show()} onKeyDown={event => {if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {event.preventDefault(); if (!open) show();}}} {...stylex.props(s.trigger)}><span {...stylex.props(s.label)}>{options[selected].label}</span><ChevronDown size={14} aria-hidden="true"/></button>
+    <button ref={trigger} type="button" data-desktop-sort aria-label={`${tx('Sort cars')}: ${options[selected].label}`} title={`${tx('Sort cars')}: ${options[selected].label}`} aria-haspopup="listbox" aria-expanded={open} aria-controls={open ? id : undefined} onClick={() => open ? close() : show()} onKeyDown={event => {if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {event.preventDefault(); if (!open) show();}}} {...stylex.props(pill.control,s.trigger)}><span {...stylex.props(pill.surface,pill.soft,s.triggerSurface)}><span {...stylex.props(s.label)}>{options[selected].label}</span><ChevronDown size={14} aria-hidden="true"/></span></button>
     {open ? createPortal(<div ref={panel} id={id} role="listbox" aria-label={tx('Sort cars')} aria-orientation="vertical" data-desktop-sort-menu style={position} onKeyDown={move} {...stylex.props(s.panel)}>{options.map((option, index) => <button ref={element => {choices.current[index] = element;}} key={option.value} type="button" role="option" tabIndex={index === focused ? 0 : -1} aria-selected={option.value === value} onFocus={() => setFocused(index)} onClick={() => {onChange(option.value); close(true);}} {...stylex.props(s.option, option.value === value && s.selected)}><span>{option.label}</span>{option.value === value ? <Check size={16} aria-hidden="true"/> : null}</button>)}</div>, document.body) : null}
   </>;
 }
 
 const s = stylex.create({
-  trigger: {display: 'inline-flex', alignItems: 'center', gap: 8, flexShrink: 0, minHeight: 44, paddingInline: 12, color: $.ink, fontFamily: $.fontSans, fontSize: 14, fontWeight: 400, borderWidth: 0, borderRadius: 8, backgroundColor: {default: $.surfaceAlt, ':hover': $.line}, outline: {default: 'none', ':focus-visible': '2px solid #202024'}, outlineOffset: 2, cursor: 'pointer'},
+  trigger: {minWidth: 0, fontSize: 14, fontWeight: 400, outline: {default: 'none', ':focus-visible': '2px solid #202024'}, outlineOffset: -2},
+  triggerSurface: {paddingInline: 12, backgroundColor: {default: $.surfaceAlt, ':hover': $.line}},
   label: {maxWidth: 160, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap'},
-  panel: {position: 'fixed', zIndex: 135, width: 300, overflowY: 'auto', overscrollBehaviorY: 'contain', padding: 6, color: $.ink, fontFamily: $.fontSans, borderRadius: 14, backgroundColor: '#fff', boxShadow: $.shadowStrong, scrollbarWidth: 'thin'},
-  option: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, width: '100%', minHeight: 40, padding: '8px 10px', color: $.ink, fontFamily: $.fontSans, fontSize: 14, fontWeight: 400, lineHeight: '20px', textAlign: 'left', borderWidth: 0, borderRadius: 8, backgroundColor: {default: 'transparent', ':hover': $.surfaceAlt, ':focus': $.surfaceAlt}, outline: {default: 'none', ':focus-visible': '2px solid #202024'}, outlineOffset: -2, cursor: 'pointer'},
+  panel: {position: 'fixed', zIndex: 135, width: 300, overflowY: 'auto', overscrollBehaviorY: 'contain', padding: 6, color: $.ink, fontFamily: $.fontSans, borderWidth: 1, borderStyle: 'solid', borderColor: $.line, borderRadius: $.radiusMd, backgroundColor: '#fff', boxShadow: $.shadowStrong, scrollbarWidth: 'thin'},
+  option: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, width: '100%', minHeight: 44, padding: '8px 10px', color: $.ink, fontFamily: $.fontSans, fontSize: 14, fontWeight: 400, lineHeight: '20px', textAlign: 'left', borderWidth: 0, borderRadius: 8, backgroundColor: {default: 'transparent', ':hover': $.surfaceAlt, ':focus': $.surfaceAlt}, outline: {default: 'none', ':focus-visible': '2px solid #202024'}, outlineOffset: -2, cursor: 'pointer'},
   selected: {backgroundColor: $.surfaceAlt},
 });
