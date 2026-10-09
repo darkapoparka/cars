@@ -341,6 +341,25 @@ async function run(name, engine) {
     );
   }
   async function fixedFrameActions(page, label) {
+    const summary = page.locator('[data-vehicle-desktop-summary]:visible');
+    if (await summary.count()) {
+      const bounds = await summary.evaluate((element) => {
+        const shell = document.querySelector('[data-hydrated]').getBoundingClientRect();
+        const box = element.getBoundingClientRect();
+        return {
+          contained: box.left >= shell.left && box.right <= shell.right,
+          width: box.width,
+          position: getComputedStyle(element).position,
+          overflow: element.scrollWidth > element.clientWidth + 1,
+        };
+      });
+      assert.ok(bounds.contained && bounds.width >= 320, label + ' price panel bounds');
+      assert.equal(bounds.position, 'sticky', label + ' price panel stays available');
+      assert.equal(bounds.overflow, false, label + ' price panel reflow');
+      assert.ok(await summary.locator('a[href^="/contact?vehicle="]').isVisible());
+      check(label + ': sticky enquiry panel remains inside the desktop frame');
+      return;
+    }
     await page.locator('[data-vehicle-contact-dock], [data-message-actions]').waitFor();
     const failures = await page.locator('button, a').evaluateAll((actions) => {
       const shell = document.querySelector('[data-hydrated]').getBoundingClientRect();

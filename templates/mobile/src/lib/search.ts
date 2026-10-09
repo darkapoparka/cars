@@ -204,6 +204,18 @@ export function parseFilters(search: string): Filters {
   }
   return normalizeFilters(input);
 }
+export const financeDefaults = { depositRatio: 0.2, months: 60, annualRate: 7.9 } as const;
+
+/** Match the showroom's preview to the calculator's initial assumptions. */
+export function defaultPaymentEstimate(price: number): number {
+  return paymentEstimate(
+    price,
+    Math.round(price * financeDefaults.depositRatio),
+    financeDefaults.months,
+    financeDefaults.annualRate,
+  );
+}
+
 /** Illustrative amortizing-loan arithmetic; not a lender quote. */
 export function paymentEstimate(
   price: number,

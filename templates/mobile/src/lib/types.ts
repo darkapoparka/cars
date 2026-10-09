@@ -5,6 +5,10 @@ export type Vehicle = {
   model: string;
   variant: string;
   price: number;
+  /** Explicit sample stock; dealer vehicles keep their supplied copy and facts. */
+  sample?: boolean;
+  /** Supplied market appraisal, independent of the inventory's deal filter. */
+  priceRating?: 'good' | 'very-good';
   monthly?: number;
   financeMonthly?: number;
   leaseTerms?: { months: number; annualMileage: number; customer: string; deposit: number };

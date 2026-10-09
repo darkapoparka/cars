@@ -160,9 +160,9 @@ export function LoginScreen({
             </button>
           </div>
           <div {...stylex.props(s.content)}>
-            <h1 {...stylex.props(s.title)}>
+            <h2 {...stylex.props(s.title)}>
               {register ? 'Create your account' : 'Hello! Welcome back!'}
-            </h1>
+            </h2>
             <button
               type="button"
               onClick={() => setDialog('Sign in with Google')}

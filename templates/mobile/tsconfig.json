@@ -37,7 +37,11 @@
     ".next-review/types/**/*.ts",
     ".next-review/dev/types/**/*.ts",
     ".next-preview-6474/types/**/*.ts",
-    ".next-preview-6474/dev/types/**/*.ts"
+    ".next-preview-6474/dev/types/**/*.ts",
+    ".next-vehicle-types-dev-20261007/types/**/*.ts",
+    ".next-vehicle-types-dev-20261007/dev/types/**/*.ts",
+    ".next-review-local/types/**/*.ts",
+    ".next-review-local/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

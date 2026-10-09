@@ -54,8 +54,9 @@ and work locally without an account. Vehicle Back retains the inventory filters,
 sort and scroll position. The native make/model picker and range controls remain.
 
 At 1024px and wider, Cars, Services, Contact and Saved cars use a 72px logo header
-with one avatar menu for Saved cars, Settings and language on the right. The bottom dock is
-hidden at this breakpoint. The 260px dropdown has exactly three destinations:
+with an avatar menu for Saved cars, Settings and language plus a separate
+hamburger menu on the right. The bottom dock is hidden at this breakpoint.
+The 260px navigation dropdown has exactly three destinations:
 Cars, Services and Contact, using the same navigation data as the phone dock.
 It sits 6px below its trigger, with a small pointer centered on the Menu button
 and a restrained shadow to make the header attachment clear.
@@ -228,11 +229,26 @@ white surface with dividers instead of separate rounded cards. Once the contact
 actions pass beneath the pinned rail, a compact price + Enquire bar appears at
 the bottom, with safe-area spacing and vehicle context. Photos and Features keep
 this contact bar visible while their content replaces Details.
+On phones, its Enquire pill has a 36px visible face inside a 44px tap target,
+with a 120px minimum width. The compact scrolled header brings the title 8px
+closer to Back while retaining each icon's 44px target.
+Below the phone vehicle description, Financing uses an inset neutral banner with
+a calculator icon, the existing monthly amount and a chevron. The whole banner
+opens the local calculator and restores focus on dismissal. It appears below
+700px; tablet and desktop retain their existing finance entry.
 The resize-aware contact observer accounts for the pinned tab rail's actual height.
 All specifications still opens the existing dialog. Photos has an inline grid and
 the existing full-screen viewer. In this grid, browser Back closes the viewer,
 Forward reopens its last photo, and Escape returns focus to the opener. Features
 shows all equipment inline, including the retained highlight badges.
+From 1024px, the full-width vehicle heading sits above the gallery and price card.
+The title wraps independently of save/share, which sit opposite the quieter trim
+line. Four captured vehicle facts share a grey strip underneath. The shorter right
+card groups the advertised price and rating, the labelled Financing row and contact
+actions. Features uses a two-column semantic checklist with leading checks. The
+phone and tablet retain their existing composition and feature table.
+Desktop rating, finance and contact dialogs restore focus to their opener after
+dismissal, including pointer activation in Safari.
 Tab selection replaces the URL fragment and preserves router state and the
 inventory Back entry. Selected sections survive reload; the separate gallery
 returns to the selected section. Summary facts use semantic label/value pairs,
@@ -314,7 +330,24 @@ coverage and the retained license live in `public/fonts/inter-v4.1.json` and
 BG/EN header action has a transparent background and a 44px touch target. Mobile
 vehicle detail ends on a white surface with dividers around contact and related
 cars, without outer card frames. The mobile font and flat detail footer stay below
-700px; desktop retains its original typography and framed detail footer.
+700px. Below 1024px, vehicle detail retains its native gallery, summary, tabs,
+compact header and enquiry dock.
+
+From 1024px, vehicle detail uses the showroom logo header and a rounded Back to
+cars button with 28px of space above it. Compact Save and Share icons sit beside
+the vehicle title, aligned right within the purchase card; the title starts at
+the card's normal top padding, and the icons retain labels on hover and for
+assistive technology.
+Checklist remains available below the contact actions. A two-column layout pairs
+a 16:10 gallery, photo arrows and five preview thumbnails with a 360px purchase card. That card
+retains the existing price, reference rating, buying/leasing state, calculators
+and vehicle-specific enquiry routes. A quiet grey panel groups the four quick
+facts beneath the title; the price and reference rating share one row, with
+wrapping available for enlarged text. It stays visible while the left column's
+Details, Photos and Features panels scroll. Short desktop viewports use a normal
+flow card; enlarged text can scroll within a tall sticky card. Specifications,
+showroom contact and related vehicles use consistent framed sections. All new
+layout rules start at 1024px; the phone composition and behavior are preserved.
 
 Phone vehicle actions retain 44px tap targets; the header uses its original 24px
 icons inside 36px visible circles with a quiet shadow. The summary leaves 8px
@@ -382,8 +415,8 @@ Cars, Services and Contact share one avatar control on the right. Its Radix
 dropdown follows the shadcn menu pattern in the existing StyleX design system.
 Saved cars links to the existing saved inventory and displays the local count.
 Bulgarian and English choices use the shared locale store; Settings opens the
-same working language preference at `/settings`. Desktop navigation remains
-available inside the menu; phones retain their bottom navigation.
+same working language preference at `/settings`. Desktop also retains its separate
+hamburger button for Cars, Services and Contact; phones retain their bottom navigation.
 
 The portrait at `public/images/demo/profile-avatar-20261008.webp` was generated
 for this demonstration and depicts a fictional person. The menu is labelled

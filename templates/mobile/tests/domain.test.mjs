@@ -17,7 +17,34 @@ import {
   serializeFilters,
   sortVehicles,
   paymentEstimate,
+  financeDefaults,
+  defaultPaymentEstimate,
 } from '../.qa/domain/search.mjs';
+
+test('showroom financing previews match the calculator and scale with each vehicle', () => {
+  for (const price of [0, 27777, 73937, 99000]) {
+    assert.equal(
+      defaultPaymentEstimate(price),
+      paymentEstimate(
+        price,
+        Math.round(price * financeDefaults.depositRatio),
+        financeDefaults.months,
+        financeDefaults.annualRate,
+      ),
+    );
+  }
+  assert.ok(defaultPaymentEstimate(99000) > defaultPaymentEstimate(27777));
+});
+
+test('fictional stock has no market appraisal, tax note or invented owner count', () => {
+  for (const vehicle of demoVehicles) {
+    assert.equal(vehicle.sample, true);
+    assert.equal(vehicle.priceRating, undefined);
+    assert.equal(vehicle.priceNote, undefined);
+    assert.equal(vehicle.attributes.owners, undefined);
+  }
+  assert.ok(vehicles.every((vehicle) => vehicle.sample && vehicle.priceRating));
+});
 import { answerLocally } from '../.qa/domain/assistant.mjs';
 import { createInitialState, decodeState } from '../.qa/domain/persistence.mjs';
 import { showroomMakeOptions } from '../.qa/domain/make-picker-options.mjs';

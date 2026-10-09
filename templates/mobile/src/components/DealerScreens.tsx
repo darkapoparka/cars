@@ -140,7 +140,7 @@ export function CompareScreen() {
       {selected.length < 2 ? (
         <section {...stylex.props(ui.empty)}>
           <Icon name="car" size={56} />
-          <h1 {...stylex.props(ui.title)}>Park at least two vehicles</h1>
+          <h2 {...stylex.props(ui.title)}>Park at least two vehicles</h2>
           <p>Your first three parked vehicles can be compared here.</p>
           <Button href="/results">Browse vehicles</Button>
         </section>

@@ -10,6 +10,7 @@ import type { IconName } from './Icon';
 import { useAppState } from '@/lib/store';
 import { showroom, showroomInventoryHref } from '@/lib/showroom';
 import { ShowroomProfileMenu } from './ShowroomProfileMenu';
+import { ShowroomDesktopMenu } from './ShowroomDesktopMenu';
 import { ShowroomBrandLogo } from './ShowroomBrandLogo';
 import { showroomPlaceholderLogo } from '@/lib/showroom-config';
 const s = stylex.create({
@@ -88,6 +89,7 @@ export function Header({
   home = false,
   sticky = true,
   overHeroDesktop = false,
+  logoPriority = true,
   onBack,
   backIcon = 'back',
 }: {
@@ -97,6 +99,7 @@ export function Header({
   home?: boolean;
   sticky?: boolean;
   overHeroDesktop?: boolean;
+  logoPriority?: boolean;
   onBack?: () => void;
   backIcon?: IconName;
 }) {
@@ -140,7 +143,7 @@ export function Header({
                 width={176}
                 height={52}
                 sizes="(max-width: 699px) 128px, 176px"
-                priority
+                priority={logoPriority}
                 {...stylex.props(
                   s.logo,
                   generatedDesktopLogo && s.phoneLogo,
@@ -157,7 +160,14 @@ export function Header({
           {title ? t(title) : title}
         </h1>
       )}
-      {home ? <ShowroomProfileMenu overHero={overHeroDesktop} /> : children}
+      {home ? (
+        <>
+          <ShowroomProfileMenu overHero={overHeroDesktop} />
+          <ShowroomDesktopMenu overHero={overHeroDesktop} />
+        </>
+      ) : (
+        children
+      )}
     </header>
   );
 }

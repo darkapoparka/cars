@@ -11,6 +11,7 @@ import { colors } from '@/styles/tokens.stylex';
 import { compactVehicleSpecification, localizeSpecification } from '@/lib/vehicle-copy';
 import { vehicles } from '@/lib/catalog';
 import { showroom } from '@/lib/showroom';
+import { defaultPaymentEstimate } from '@/lib/search';
 import { vehicleDetailSections, type VehicleDetailSection } from '@/lib/vehicle-detail-navigation';
 import { Button, Modal, ui } from './ui';
 import { Icon, type IconName } from './Icon';
@@ -26,6 +27,16 @@ const mobileDetailSections = [
   vehicleDetailSections[2],
   vehicleDetailSections[1],
 ] as const;
+const showroomTechnicalFields = new Set([
+  'Vehicle condition',
+  'Category',
+  'Cubic Capacity',
+  'Number of Seats',
+  'Number of seats',
+  'Colour',
+  'Interior Design',
+  'Number of doors',
+]);
 const s = stylex.create({
   body: {
     backgroundColor: colors.surface,
@@ -37,36 +48,54 @@ const s = stylex.create({
     gap: 12,
   },
   showroomBody: {
-    backgroundColor: { default: colors.surface, '@media (max-width: 699px)': colors.background },
+    backgroundColor: {
+      default: colors.surface,
+      '@media (max-width: 699px)': colors.background,
+      '@media (min-width: 1024px)': colors.background,
+    },
     padding: 0,
-    paddingBottom: 'calc(100px + env(safe-area-inset-bottom))',
-    gap: 16,
+    paddingBottom: {
+      default: 'calc(100px + env(safe-area-inset-bottom))',
+      '@media (min-width: 1024px)': 24,
+    },
+    gap: { default: 16, '@media (min-width: 1024px)': 24 },
   },
   sheet: {
     position: 'relative',
-    marginTop: -20,
-    borderTopLeftRadius: 24,
-    borderTopRightRadius: 24,
+    marginTop: { default: -20, '@media (min-width: 1024px)': 0 },
+    borderTopLeftRadius: { default: 24, '@media (min-width: 1024px)': 0 },
+    borderTopRightRadius: { default: 24, '@media (min-width: 1024px)': 0 },
     backgroundColor: colors.background,
     boxShadow: {
       default: '0 -4px 16px #00000012',
       '@media (max-width: 699px)': '0 -2px 12px #0000000a',
+      '@media (min-width: 1024px)': 'none',
     },
   },
   sectionNav: {
     position: 'sticky',
-    top: 60,
+    top: { default: 60, '@media (min-width: 1024px)': 72 },
     zIndex: 25,
     backgroundColor: colors.background,
     borderTopLeftRadius: 24,
     borderTopRightRadius: 24,
-    scrollMarginTop: 60,
+    scrollMarginTop: { default: 60, '@media (min-width: 1024px)': 72 },
   },
   afterMobileSummary: {
-    borderTopLeftRadius: { default: 24, '@media (max-width: 699px)': 0 },
-    borderTopRightRadius: { default: 24, '@media (max-width: 699px)': 0 },
+    borderTopLeftRadius: {
+      default: 24,
+      '@media (max-width: 699px)': 0,
+      '@media (min-width: 1024px)': 0,
+    },
+    borderTopRightRadius: {
+      default: 24,
+      '@media (max-width: 699px)': 0,
+      '@media (min-width: 1024px)': 0,
+    },
   },
-  summaryGrip: { height: { default: 24, '@media (max-width: 699px)': 0 } },
+  summaryGrip: {
+    height: { default: 24, '@media (max-width: 699px)': 0, '@media (min-width: 1024px)': 0 },
+  },
   grip: {
     display: 'flex',
     height: { default: 24, '@media (max-width: 699px)': 8 },
@@ -74,7 +103,11 @@ const s = stylex.create({
     justifyContent: 'center',
   },
   gripBar: {
-    display: { default: 'block', '@media (max-width: 699px)': 'none' },
+    display: {
+      default: 'block',
+      '@media (max-width: 699px)': 'none',
+      '@media (min-width: 1024px)': 'none',
+    },
     width: 36,
     height: 4,
     borderRadius: 4,
@@ -84,6 +117,7 @@ const s = stylex.create({
   compactSpecification: { display: { default: 'none', '@media (max-width: 699px)': 'inline' } },
   mobileFinanceSection: {
     display: { default: 'none', '@media (max-width: 699px)': 'block' },
+    padding: 16,
   },
   financeAction: {
     display: 'flex',
@@ -91,16 +125,28 @@ const s = stylex.create({
     justifyContent: 'space-between',
     gap: 12,
     width: '100%',
-    minHeight: 72,
+    minHeight: 84,
     padding: 16,
     borderWidth: 0,
-    backgroundColor: { default: colors.background, ':hover': colors.controlSurface },
+    borderRadius: 16,
+    backgroundColor: { default: colors.controlSurface, ':hover': colors.surface },
     color: colors.text,
     textAlign: 'left',
     outlineColor: colors.accent,
     outlineOffset: -3,
   },
-  financeCopy: { display: 'flex', flexDirection: 'column', gap: 2, minWidth: 0 },
+  financeIcon: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexShrink: 0,
+    width: 44,
+    height: 44,
+    borderRadius: 12,
+    backgroundColor: colors.background,
+    color: colors.accent,
+  },
+  financeCopy: { display: 'flex', flexDirection: 'column', flex: '1', gap: 2, minWidth: 0 },
   financeLabel: { fontSize: 16, fontWeight: 500, lineHeight: '24px' },
   financeAmount: {
     fontSize: 14,
@@ -116,10 +162,13 @@ const s = stylex.create({
     outlineColor: colors.accent,
     outlineOffset: 2,
   },
-  showroomPanel: { gap: 0 },
+  showroomPanel: {
+    gap: { default: 0, '@media (min-width: 1024px)': 20 },
+    paddingTop: { default: 0, '@media (min-width: 1024px)': 20 },
+  },
   showroomSection: {
-    borderWidth: 0,
-    borderRadius: 0,
+    borderWidth: { default: 0, '@media (min-width: 1024px)': 1 },
+    borderRadius: { default: 0, '@media (min-width: 1024px)': 16 },
     overflow: 'visible',
   },
   showroomDivider: {
@@ -127,16 +176,22 @@ const s = stylex.create({
     borderTopStyle: 'solid',
     borderTopColor: colors.line,
   },
-  showroomTitle: { borderBottomWidth: 0, paddingBottom: 0, marginBottom: 12, fontSize: 18 },
+  showroomTitle: {
+    borderBottomWidth: 0,
+    paddingBottom: 0,
+    marginBottom: 12,
+    fontSize: { default: 18, '@media (min-width: 1024px)': 20 },
+    lineHeight: { default: '24px', '@media (min-width: 1024px)': '28px' },
+  },
   showroomFooter: {
-    marginInline: { default: 12, '@media (max-width: 699px)': 0 },
+    marginInline: { default: 12, '@media (max-width: 699px)': 0, '@media (min-width: 1024px)': 0 },
     borderWidth: { default: 1, '@media (max-width: 699px)': 0 },
     borderTopWidth: 1,
     borderRadius: { default: 16, '@media (max-width: 699px)': 0 },
   },
   showroomFooterTitle: {
     borderBottomWidth: { default: 1, '@media (max-width: 699px)': 0 },
-    fontSize: { default: 16, '@media (max-width: 699px)': 18 },
+    fontSize: { default: 16, '@media (max-width: 699px)': 18, '@media (min-width: 1024px)': 20 },
     marginBottom: { default: 8, '@media (max-width: 699px)': 0 },
   },
   showroomContactTitle: { paddingBottom: { default: 8, '@media (max-width: 699px)': 0 } },
@@ -147,6 +202,41 @@ const s = stylex.create({
   },
   featureValue: { fontWeight: 500 },
   featureTags: { marginBottom: 16 },
+  showroomFeatureTag: {
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: colors.cardLine,
+    backgroundColor: colors.badgeSurface,
+    color: colors.text,
+    borderRadius: 6,
+    paddingBlock: 4,
+    paddingInline: 8,
+    fontSize: 13,
+    lineHeight: '20px',
+  },
+  desktopFeatures: {
+    display: 'grid',
+    gridTemplateColumns: {
+      default: 'minmax(0,1fr)',
+      '@media (min-width: 1024px)': 'repeat(2,minmax(0,1fr))',
+    },
+    columnGap: 24,
+    margin: 0,
+    padding: 0,
+    listStyleType: 'none',
+  },
+  desktopFeature: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 10,
+    minHeight: 40,
+    minWidth: 0,
+    paddingBlock: 10,
+    fontSize: 14,
+    lineHeight: '20px',
+  },
+  desktopFeatureCheck: { display: 'inline-flex', flexShrink: 0, color: colors.muted },
+  desktopFeatureLabel: { minWidth: 0, overflowWrap: 'anywhere' },
   card: {
     backgroundColor: colors.background,
     borderWidth: 1,
@@ -155,7 +245,7 @@ const s = stylex.create({
     borderRadius: 16,
     overflow: 'hidden',
   },
-  pad: { padding: 16 },
+  pad: { padding: { default: 16, '@media (min-width: 1024px)': 24 } },
   title: {
     fontSize: 16,
     fontWeight: 700,
@@ -186,8 +276,16 @@ const s = stylex.create({
   },
   label: { fontSize: 12, lineHeight: '20px', color: colors.muted },
   value: { fontSize: 14, lineHeight: '20px', fontWeight: 700 },
-  showroomSpecs: { padding: 0, gap: 16 },
-  showroomSpec: { paddingLeft: { default: 34, '@media (max-width: 699px)': 44 } },
+  showroomSpecs: {
+    padding: 0,
+    gap: { default: 16, '@media (min-width: 1024px)': 20 },
+    gridTemplateColumns: {
+      default: 'repeat(2,minmax(0,1fr))',
+      '@media (min-width: 1280px)': 'repeat(3,minmax(0,1fr))',
+    },
+  },
+  showroomSpec: { paddingLeft: 36 },
+  showroomSpecIcon: { color: colors.muted },
   specIcon: {
     display: 'inline-flex',
     position: 'absolute',
@@ -196,12 +294,16 @@ const s = stylex.create({
     transform: 'translateY(-50%)',
   },
   showroomLabel: {
-    fontSize: { default: 12, '@media (max-width: 699px)': 14 },
+    fontSize: { default: 12, '@media (max-width: 699px)': 14, '@media (min-width: 1024px)': 13 },
     lineHeight: { default: '18px', '@media (max-width: 699px)': '20px' },
   },
   showroomValue: {
-    fontSize: { default: 14, '@media (max-width: 699px)': 16 },
-    lineHeight: { default: '20px', '@media (max-width: 699px)': '24px' },
+    fontSize: { default: 14, '@media (max-width: 699px)': 16, '@media (min-width: 1024px)': 16 },
+    lineHeight: {
+      default: '20px',
+      '@media (max-width: 699px)': '24px',
+      '@media (min-width: 1024px)': '24px',
+    },
     fontWeight: 500,
   },
   seller: {
@@ -236,7 +338,7 @@ const s = stylex.create({
     whiteSpace: 'pre-line',
     padding: 8,
     paddingBlock: 6,
-    height: 52,
+    height: { default: 52, '@media (min-width: 1024px)': 44 },
     fontWeight: 400,
     textAlign: 'left',
     verticalAlign: 'middle',
@@ -244,6 +346,14 @@ const s = stylex.create({
     overflowWrap: 'anywhere',
   },
   key: { fontWeight: 700 },
+  showroomRow: {
+    backgroundColor: colors.background,
+    borderBottomWidth: 1,
+    borderBottomStyle: 'solid',
+    borderBottomColor: colors.cardLine,
+  },
+  showroomKey: { fontWeight: 400, color: colors.muted, paddingLeft: 0 },
+  showroomCell: { fontWeight: 500, paddingRight: 0 },
   check: { textAlign: 'right', color: colors.muted, width: '20%' },
   more: {
     width: '100%',
@@ -290,6 +400,21 @@ const s = stylex.create({
     outlineOffset: -3,
   },
   modalScroll: { flex: '1', minHeight: 0, overflowY: 'auto', paddingTop: 4, marginBottom: 12 },
+  showroomSpecificationDialog: {
+    width: { default: 'calc(100% - 48px)', '@media (max-width: 699px)': '100%' },
+    maxWidth: 720,
+    height: { default: 'min(800px, calc(100dvh - 48px))', '@media (max-width: 699px)': '90dvh' },
+    maxHeight: { default: 'calc(100dvh - 48px)', '@media (max-width: 699px)': '90dvh' },
+    marginBottom: { default: 'auto', '@media (max-width: 699px)': 0 },
+    transform: 'none',
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 24,
+    borderBottomLeftRadius: { default: 24, '@media (max-width: 699px)': 0 },
+    borderBottomRightRadius: { default: 24, '@media (max-width: 699px)': 0 },
+    overflow: 'hidden',
+    paddingBottom: 'calc(16px + env(safe-area-inset-bottom))',
+    fontFamily: '"Mobile UI", Arial, sans-serif',
+  },
   modalCell: {
     paddingBlock: 0,
     borderBottomWidth: 4,
@@ -311,8 +436,12 @@ const s = stylex.create({
   tags: { display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 8 },
   description: {
     whiteSpace: 'pre-line',
-    fontSize: { default: 14, '@media (max-width: 699px)': 16 },
-    lineHeight: { default: '22px', '@media (max-width: 699px)': '24px' },
+    fontSize: { default: 14, '@media (max-width: 699px)': 16, '@media (min-width: 1024px)': 15 },
+    lineHeight: {
+      default: '22px',
+      '@media (max-width: 699px)': '24px',
+      '@media (min-width: 1024px)': '26px',
+    },
   },
   carousel: {
     display: 'flex',
@@ -322,7 +451,15 @@ const s = stylex.create({
     scrollSnapType: 'x mandatory',
   },
   featuresLabel: { width: '80%' },
-  showroomCar: { width: 281, flexShrink: 0, scrollSnapAlign: 'start' },
+  showroomCar: {
+    width: {
+      default: 281,
+      '@media (min-width: 1024px)': 260,
+      '@media (min-width: 1280px)': 'calc((100% - 32px) / 3)',
+    },
+    flexShrink: 0,
+    scrollSnapAlign: 'start',
+  },
 });
 export function VehicleSections({
   vehicle: v,
@@ -348,7 +485,7 @@ export function VehicleSections({
   const tabPrefix = 'vehicle-detail-tab-' + v.id + '-';
   const showDetails = !showroomMode || section === 'details';
   const showFeatures = !showroomMode || section === 'features';
-  const monthly = v.financeMonthly || v.monthly || Math.round(v.price * 0.01061);
+  const monthly = defaultPaymentEstimate(v.price);
   function selectSection(value: VehicleDetailSection) {
     if (value === section) return;
     const nav = navigation.current;
@@ -393,10 +530,10 @@ export function VehicleSections({
         ]
       : []),
     ['gauge', 'Power', Math.round(v.power / 1.36) + ' kW (' + v.power + ' ' + t('hp') + ')'],
-    ...(v.attributes?.hideOwners
+    ...(v.attributes?.hideOwners || !v.attributes?.owners
       ? []
       : [
-          ['user', showroomMode ? 'Owners' : 'Number of Owners', v.attributes?.owners || '1'] as [
+          ['user', showroomMode ? 'Owners' : 'Number of Owners', v.attributes.owners] as [
             IconName,
             string,
             string,
@@ -425,6 +562,9 @@ export function VehicleSections({
       ([key]) => !['modelRange', 'trimLine', 'origin', 'owners', 'description'].includes(key),
     ),
   ];
+  const previewData = showroomMode
+    ? data.filter(([label]) => showroomTechnicalFields.has(label)).slice(0, 6)
+    : data.slice(0, 6);
   return (
     <div {...stylex.props(s.body, showroomMode && s.showroomBody)}>
       <section
@@ -481,8 +621,10 @@ export function VehicleSections({
                 {spec.map(([icon, label, value]) => (
                   <div key={label} {...stylex.props(s.spec, showroomMode && s.showroomSpec)}>
                     <dt {...stylex.props(s.label, showroomMode && s.showroomLabel)}>
-                      <span {...stylex.props(ui.orange, s.specIcon)}>
-                        <Icon name={icon} size={showroomMode ? (mobileView ? 32 : 24) : 28} />
+                      <span
+                        {...stylex.props(ui.orange, s.specIcon, showroomMode && s.showroomSpecIcon)}
+                      >
+                        <Icon name={icon} size={showroomMode ? 24 : 28} />
                       </span>
                       <span {...stylex.props(showroomMode && s.fullSpecification)}>{t(label)}</span>
                       {showroomMode && (
@@ -554,9 +696,12 @@ export function VehicleSections({
                 </h2>
                 <table {...stylex.props(s.table)}>
                   <tbody>
-                    {data.slice(0, 6).map(([label, value]) => (
-                      <tr key={label} {...stylex.props(s.row)}>
-                        <th scope="row" {...stylex.props(s.cell, s.key)}>
+                    {previewData.map(([label, value]) => (
+                      <tr key={label} {...stylex.props(s.row, showroomMode && s.showroomRow)}>
+                        <th
+                          scope="row"
+                          {...stylex.props(s.cell, s.key, showroomMode && s.showroomKey)}
+                        >
                           <span {...stylex.props(showroomMode && s.fullSpecification)}>
                             {t(label)}
                           </span>
@@ -566,7 +711,7 @@ export function VehicleSections({
                             </span>
                           )}
                         </th>
-                        <td {...stylex.props(s.cell)}>
+                        <td {...stylex.props(s.cell, showroomMode && s.showroomCell)}>
                           <span {...stylex.props(showroomMode && s.fullSpecification)}>
                             {localizeSpecification(value, locale)}
                           </span>
@@ -612,7 +757,7 @@ export function VehicleSections({
                 {showroomMode && v.specialFeatures && v.specialFeatures.length > 0 && (
                   <div {...stylex.props(s.tags, s.featureTags)}>
                     {v.specialFeatures.map((feature) => (
-                      <span key={feature} {...stylex.props(ui.badge)}>
+                      <span key={feature} {...stylex.props(ui.badge, s.showroomFeatureTag)}>
                         {t(feature)}
                       </span>
                     ))}
@@ -621,28 +766,46 @@ export function VehicleSections({
                 {!v.features.length && (
                   <p {...stylex.props(ui.muted)}>{t('No features listed.')}</p>
                 )}
-                <table {...stylex.props(s.table)}>
-                  <tbody>
-                    {(showroomMode ? v.features : v.features.slice(0, 6)).map((feature) => (
-                      <tr key={feature} {...stylex.props(s.row)}>
-                        <th
-                          scope="row"
-                          {...stylex.props(
-                            s.cell,
-                            s.key,
-                            showroomMode && s.featureValue,
-                            s.featuresLabel,
-                          )}
-                        >
-                          {t(feature)}
-                        </th>
-                        <td {...stylex.props(s.cell, s.check)}>
+                {showroomMode && v.features.length > 0 && (
+                  <ul
+                    data-vehicle-desktop-features
+                    aria-label={t('Features')}
+                    {...stylex.props(s.desktopFeatures)}
+                  >
+                    {v.features.map((feature) => (
+                      <li key={feature} {...stylex.props(s.desktopFeature)}>
+                        <span aria-hidden="true" {...stylex.props(s.desktopFeatureCheck)}>
                           <Icon name="check" size={18} />
-                        </td>
-                      </tr>
+                        </span>
+                        <span {...stylex.props(s.desktopFeatureLabel)}>{t(feature)}</span>
+                      </li>
                     ))}
-                  </tbody>
-                </table>
+                  </ul>
+                )}
+                {!showroomMode && (
+                  <table {...stylex.props(s.table)}>
+                    <tbody>
+                      {(showroomMode ? v.features : v.features.slice(0, 6)).map((feature) => (
+                        <tr key={feature} {...stylex.props(s.row)}>
+                          <th
+                            scope="row"
+                            {...stylex.props(
+                              s.cell,
+                              s.key,
+                              showroomMode && s.featureValue,
+                              s.featuresLabel,
+                            )}
+                          >
+                            {t(feature)}
+                          </th>
+                          <td {...stylex.props(s.cell, s.check)}>
+                            <Icon name="check" size={18} />
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                )}
               </div>
               {!showroomMode && v.features.length > 6 && (
                 <button
@@ -703,15 +866,7 @@ export function VehicleSections({
             </section>
           )}
           {showroomMode && showDetails && onFinance && (
-            <section
-              data-mobile-vehicle-finance
-              {...stylex.props(
-                s.card,
-                s.showroomSection,
-                s.showroomDivider,
-                s.mobileFinanceSection,
-              )}
-            >
+            <section data-mobile-vehicle-finance {...stylex.props(s.mobileFinanceSection)}>
               <button
                 type="button"
                 data-mobile-monthly-payment
@@ -723,10 +878,13 @@ export function VehicleSections({
                 }}
                 {...stylex.props(s.financeAction)}
               >
+                <span aria-hidden="true" {...stylex.props(s.financeIcon)}>
+                  <Icon name="calculator" size={24} />
+                </span>
                 <span {...stylex.props(s.financeCopy)}>
                   <span {...stylex.props(s.financeLabel)}>{t('Financing')}</span>
                   <span {...stylex.props(s.financeAmount)}>
-                    {t('from')} {money(monthly)} / {locale === 'bg' ? 'мес.' : 'mo.'}
+                    {t('Estimate')} {money(monthly)} / {locale === 'bg' ? 'мес.' : 'mo.'}
                   </span>
                 </span>
                 <span {...stylex.props(s.financeChevron)}>
@@ -778,23 +936,39 @@ export function VehicleSections({
           Report this listing
         </Button>
       )}
-      <p {...stylex.props(ui.small, ui.muted, ui.center)}>
-        {showroomMode
-          ? t('Sample vehicle · Showroom template preview')
-          : 'Local reference · No live seller connection'}
-      </p>
-      <Modal table open={technical} onClose={() => setTechnical(false)} label={t('Technical data')}>
+      {(!showroomMode || v.sample) && (
+        <p {...stylex.props(ui.small, ui.muted, ui.center)}>
+          {showroomMode
+            ? t('Sample vehicle · Showroom template preview')
+            : 'Local reference · No live seller connection'}
+        </p>
+      )}
+      <Modal
+        table
+        open={technical}
+        onClose={() => setTechnical(false)}
+        label={t('Technical data')}
+        xstyle={showroomMode ? s.showroomSpecificationDialog : undefined}
+      >
         <h2 {...stylex.props(s.modalTitle)}>{t('Technical data')}</h2>
         <div {...stylex.props(s.modalScroll)}>
           <table {...stylex.props(s.table)}>
             <tbody>
               {data.map(([label, value]) => (
                 <Fragment key={label}>
-                  <tr {...stylex.props(s.row)}>
-                    <th scope="row" {...stylex.props(s.cell, s.modalCell, s.modalKey)}>
+                  <tr {...stylex.props(s.row, showroomMode && s.showroomRow)}>
+                    <th
+                      scope="row"
+                      {...stylex.props(
+                        s.cell,
+                        s.modalCell,
+                        s.modalKey,
+                        showroomMode && s.showroomKey,
+                      )}
+                    >
                       {t(label)}
                     </th>
-                    <td {...stylex.props(s.cell, s.modalCell)}>
+                    <td {...stylex.props(s.cell, s.modalCell, showroomMode && s.showroomCell)}>
                       {localizeSpecification(value, locale)}
                     </td>
                   </tr>
@@ -819,7 +993,7 @@ export function VehicleSections({
         <button
           type="button"
           onClick={() => setTechnical(false)}
-          {...stylex.props(s.more, s.modalClose)}
+          {...stylex.props(s.more, s.modalClose, showroomMode && s.showroomMore)}
         >
           {t('Close')}
         </button>

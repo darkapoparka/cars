@@ -43,6 +43,22 @@ test('localized display copy removes German ads without modifying captured facts
   assert.deepEqual(vehicles, original);
 });
 
+test('dealer copy and photos survive localization even when a captured ID is reused', () => {
+  const vehicle = {
+    ...structuredClone(vehicles[0]),
+    sample: false,
+    variant: 'Dealer supplied trim',
+    images: ['/images/x6-gallery-01.webp', '/dealer/interior.webp'],
+    attributes: { description: 'Dealer-written service history and condition.' },
+  };
+  for (const locale of ['bg', 'en']) {
+    const display = localizeVehicle(vehicle, locale);
+    assert.equal(display.variant, vehicle.variant);
+    assert.equal(display.attributes.description, vehicle.attributes.description);
+    assert.deepEqual(display.images, vehicle.images);
+  }
+});
+
 test('Bulgarian and English searches find the same showroom services', () => {
   for (const [bulgarian, english] of [
     ['внос', 'import'],

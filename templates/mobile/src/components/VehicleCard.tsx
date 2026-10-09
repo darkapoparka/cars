@@ -262,7 +262,7 @@ export function VehicleCard({
             <strong {...stylex.props(s.price)}>
               {lease && v.monthly ? v.monthly + ' € mth.' : money(v.price)}
             </strong>
-            {!lease && <PriceRating veryGood={v.deal} />}
+            {!lease && v.priceRating && <PriceRating veryGood={v.priceRating === 'very-good'} />}
           </div>
           {lease ? (
             <>
@@ -310,7 +310,9 @@ export function VehicleCard({
                       ) + ' mth. ¹'
                     : money(v.price)}
                 </strong>
-                {!lease && <PriceRating veryGood={v.deal} list />}
+                {!lease && v.priceRating && (
+                  <PriceRating veryGood={v.priceRating === 'very-good'} list />
+                )}
               </div>
               {lease && v.leaseTerms && (
                 <p {...stylex.props(s.leaseTerms)}>
@@ -329,7 +331,7 @@ export function VehicleCard({
           <p {...stylex.props(s.metadata)}>
             {v.mileage === 0
               ? 'New vehicle'
-              : v.id === 'bmw-x6'
+              : v.sample && v.id === 'bmw-x6'
                 ? "Employee's Car"
                 : 'Used vehicle'}{' '}
             •{' '}
@@ -363,7 +365,7 @@ export function VehicleCard({
               {saved ? 'Parked' : 'Park'}
             </Button>
           </div>
-          {v.id === 'bmw-x6' ? (
+          {v.sample && v.id === 'bmw-x6' ? (
             <RelatedPhotos />
           ) : (
             v.sponsored &&

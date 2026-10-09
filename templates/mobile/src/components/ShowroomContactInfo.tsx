@@ -109,7 +109,7 @@ export function ShowroomContactIntro() {
   const { t } = useLocale();
   return (
     <header data-mobile-contact-intro {...stylex.props(s.intro)}>
-      <h1 {...stylex.props(s.title)}>{t('Contact us')}</h1>
+      <h2 {...stylex.props(s.title)}>{t('Contact us')}</h2>
       <p {...stylex.props(s.description)}>{t('For a car, a viewing or a service.')}</p>
     </header>
   );

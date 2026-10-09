@@ -32,6 +32,7 @@ export function showroomPhotoHasLetterbox(src: string): boolean {
   return letterboxedPhotos.has(src);
 }
 export function showroomVehiclePhotos(vehicle: Vehicle): string[] {
+  if (!vehicle.sample) return vehicle.images;
   const photos = vehicle.images.filter((src) => !promotionalPhotos.has(src));
   return photos.length ? photos : vehicle.images;
 }
@@ -77,6 +78,7 @@ export function compactVehicleSpecification(
   }
   if (label === 'Fuel')
     shortValue = shortValue.replace(/,\s*(?:E10-enabled|съвместим с E10)$/i, '');
+  if (label === 'Category' && /^SUV\//.test(value)) shortValue = t('SUV');
   if (label === 'Origin' && (value === 'German edition' || value === t('German edition')))
     shortValue = t('Germany');
   const shortLabel = label.toLowerCase().startsWith('first regist')
@@ -93,14 +95,18 @@ export function compactVehicleSpecification(
 // Keep the reference intact; the showroom shows vehicle photos instead of seller adverts.
 export function localizeVehicle(vehicle: Vehicle, locale: Locale): Vehicle {
   const t = (message: string) => translate(message, locale);
-  const variant = (variants[vehicle.id] || vehicle.variant).replace('Automatic', t('Automatic'));
+  const variant = (
+    vehicle.sample ? variants[vehicle.id] || vehicle.variant : vehicle.variant
+  ).replace('Automatic', t('Automatic'));
   const facts = [
     vehicle.year,
     localeNumber(vehicle.mileage, locale) + ' ' + t('km'),
     t(vehicle.fuel),
     t(vehicle.transmission),
   ].join(' · ');
-  const description = `${vehicle.make} ${vehicle.model} · ${variant}\n${facts}\n\n${t('Features')}: ${vehicle.features.slice(0, 8).map(t).join(', ')}.`;
+  const description = vehicle.sample
+    ? `${vehicle.make} ${vehicle.model} · ${variant}\n${facts}\n\n${t('Features')}: ${vehicle.features.slice(0, 8).map(t).join(', ')}.`
+    : vehicle.attributes?.description;
   return {
     ...vehicle,
     images: showroomVehiclePhotos(vehicle),
@@ -109,7 +115,7 @@ export function localizeVehicle(vehicle: Vehicle, locale: Locale): Vehicle {
     specialFeatures: vehicle.specialFeatures?.map((feature) =>
       t(equipmentNames[feature] || feature),
     ),
-    attributes: { ...vehicle.attributes, description },
+    attributes: { ...vehicle.attributes, ...(description ? { description } : {}) },
     technicalData: vehicle.technicalData?.map(([label, value]) => [
       label,
       localizeSpecification(value, locale),
