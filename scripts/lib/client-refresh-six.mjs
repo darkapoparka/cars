@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { excluded, normalized, sha256, inside } from './workflow.mjs';
+import { signatureBusinessPreview, signaturePriceFacts, signatureMileageFacts, signatureNativeFactsContract } from './client-refresh-signature.mjs';
 
 export const EXTENDED_VARIANT_RECEIPTS = Object.freeze({
   mobile: '.cars-mobile.json',
@@ -203,35 +204,41 @@ function patchMobile(files, profile, logos) {
   return { contentPaths: [file,catalog,dealerFile,prefix+'src/lib/dealer-inventory.json',...[localeFile,searchFile].filter(name=>files.has(name)),...guardMobileFacts(files,profile)], inventory };
 }
 
-function signatureCard(listing, profile) {
+function signatureCard(listing, profile, nativeFacts=false) {
   const business = profile.business;
+  const priceFacts=signaturePriceFacts(listing),mileageFacts=signatureMileageFacts(listing);
+  const fuel=listing.fuel==='Not published'?'':listing.fuel,transmission=listing.transmission==='Not published'?'':listing.transmission;
   const price = Number.isFinite(listing.priceAmount) ? new Intl.NumberFormat(business.locale, {style:'currency',currency:listing.currency,maximumFractionDigits:0}).format(listing.priceAmount) : 'Price on request';
   return { sample: false, image: listing.image, imageAlt: listing.title,
     href: '/vehicle?id=' + encodeURIComponent(listing.id), title: listing.title, location: listing.location || business.city,
-    mileage: `${listing.mileageValue.toLocaleString('en-GB')} ${listing.mileageUnit}`,
-    transmission: listing.transmission, fuel: listing.fuel, seats: listing.raw?.seats ? String(listing.raw.seats) : '',
-    bodyType: listing.bodyType, price, pricePeriod: '', action: 'Enquire', rating: '', reviews: '' };
+    mileage: Number.isFinite(mileageFacts.mileageValue)?`${mileageFacts.mileageValue.toLocaleString(business.locale)} ${mileageFacts.mileageUnit}`:'',
+    transmission, fuel, seats: listing.raw?.seats ? String(listing.raw.seats) : '',
+    bodyType: listing.bodyType, price, pricePeriod: '', action: 'Enquire', rating: '', reviews: '',
+    ...(nativeFacts?{...priceFacts,...mileageFacts,...(fuel?{fuelType:listing.fuelType}:{}),...(transmission?{transmissionType:listing.transmissionType}:{})}:{}) };
 }
 
-function signatureDetail(listing, profile, logo) {
-  const card=signatureCard(listing,profile), business=profile.business;
-  const specification = (id,value) => ({id,icon:`/assets/imgs/page/car/${id}.svg`,value});
-  const specifications=[specification('km',card.mileage),specification('auto',card.transmission),specification('diesel',card.fuel)];
-  if (listing.powerHp) specifications.push(specification('lit',String(listing.powerHp)+' hp'));
-  const overview=unique([listing.description,business.inventoryNotice]);
+function signatureDetail(listing, profile, logo, nativeFacts=false) {
+  const card=signatureCard(listing,profile,nativeFacts), business=profile.business;
+  const specification = (id,value,facts={}) => ({id,icon:`/assets/imgs/page/car/${id}.svg`,value,...(nativeFacts?facts:{})});
+  const specifications=[];
+  if(card.mileage)specifications.push(specification('km',card.mileage,{labelKey:'vehicle.field.mileage',valueNumber:card.mileageValue,unit:card.mileageUnit}));
+  if(card.transmission&&card.transmission!=='Not published')specifications.push(specification('auto',card.transmission,{labelKey:'vehicle.field.transmission',valueKey:'transmission.'+listing.transmissionType}));
+  if(card.fuel&&card.fuel!=='Not published')specifications.push(specification('diesel',card.fuel,{labelKey:'vehicle.field.fuel',valueKey:'fuel.'+listing.fuelType}));
+  if (listing.powerHp>0) specifications.push(specification('lit',String(listing.powerHp)+' hp',{labelKey:'vehicle.field.power',valueNumber:listing.powerHp,unit:'hp'}));
+  const overview=unique([listing.description]).filter(value=>value!==business.inventoryNotice&&value!==business.previewNotice);
   const gallery={slides:listing.images.map(src=>({src,alt:listing.title})),thumbnails:listing.images.map(src=>({src,alt:listing.title}))};
   const content={overview,includedFeatures:listing.features,questions:[],loanFields:[],
-    loanSummary:{downPayment:'Not quoted',financed:'Not quoted',monthlyPayment:'Not quoted'},
-    reviewMetrics:[],reviewSummary:{rating:'No verified reviews supplied',count:''},reviews:[]};
+    loanSummary:{downPayment:'',financed:'',monthlyPayment:''},
+    reviewMetrics:[],reviewSummary:{rating:'',count:''},reviews:[]};
   return {id:listing.id,heading:{title:listing.title,mobileTitle:listing.title,location:card.location,fleetCode:listing.id,rating:'',reviewCount:''},
     specifications,gallery,content,
-    seller:{name:business.name,location:business.address,avatar:logo,mobile:business.phoneDisplay,email:business.email || 'Contact the dealership',whatsapp:'Not published',fax:'Not published'},
-    reservation:{title:'Vehicle enquiry',pickUp:'',dropOff:'',extras:[],subtotal:card.price,discount:'',total:card.price}};
+    seller:{name:business.name,location:business.address,avatar:logo,mobile:business.phoneDisplay,email:business.email || '',whatsapp:'',fax:''},
+    reservation:{title:'Vehicle enquiry',pickUp:'',dropOff:'',extras:[],subtotal:card.price,discount:'',total:card.price,...(nativeFacts?signaturePriceFacts(listing):{})}};
 }
 
-function bindSignatureDetail(files,profile,logos) {
+function bindSignatureDetail(files,profile,logos,nativeFacts=false) {
   const prefix='karento-best/',detailFile=prefix+'src/lib/data/vehicle-detail.ts';
-  const details=profile.listings.map(listing=>signatureDetail(listing,profile,logos[0])),first=details[0];
+  const details=profile.listings.map(listing=>signatureDetail(listing,profile,logos[0],nativeFacts)),first=details[0];
   let source=text(files,detailFile);
   for (const [name,value] of Object.entries({referenceSpecifications:first.specifications,referenceOverview:first.content.overview,
     referenceIncludedFeatures:first.content.includedFeatures,referenceQuestions:[],referenceReviewMetrics:[],referenceReviews:[],referenceSeller:first.seller,
@@ -241,11 +248,42 @@ function bindSignatureDetail(files,profile,logos) {
   put(files,detailFile,source);
   const derived=prefix+'src/lib/data/dealer-detail.ts';
   put(files,derived,`/** Generated from the dealer's dated fact pack; no live stock or finance approval. */\nimport type { DetailHeading, DetailSpecification, DetailSliderGallery, DetailContent, DetailSeller, DetailReservation } from './vehicle-detail.ts';\nexport interface DealerDetail { id: string; heading: DetailHeading; specifications: readonly DetailSpecification[]; gallery: DetailSliderGallery; content: DetailContent; seller: DetailSeller; reservation: DetailReservation }\nexport const dealerDetails: readonly DealerDetail[] = ${JSON.stringify(details,null,2)};\nexport function dealerDetailFor(id: string | null): DealerDetail | null {\n  return id === null ? dealerDetails[0] ?? null : dealerDetails.find(item => item.id === id) ?? null;\n}\n`);
+  const factualPagePaths=[],detailHostPaths=[];
   const enquiry=prefix+'src/lib/sections/VehicleEnquiryDetail.svelte';
-  let component=text(files,enquiry);
+  const mobileFile=prefix+'src/lib/components/vehicle-detail/MobileVehicleDetail.svelte';
+  let component=text(files,enquiry),mobile=text(files,mobileFile);
+  const localizedNotFound=nativeFacts&&files.has(prefix+'src/lib/components/vehicle-detail/DealerVehicleNotFound.svelte');
+  const nativeDetail=/specifications\?\s*:\s*readonly DetailSpecification\[\]/.test(component);
+  if(nativeDetail) {
+    if(!nativeFacts||!localizedNotFound)throw new Error('Signature typed detail needs its factual dealer and localized missing-vehicle boundaries');
+    const props={heading:'DetailHeading',gallery:'DetailSliderGallery',specifications:'readonly DetailSpecification\\[\\]',details:'DetailContent',reservation:'DetailReservation',seller:'DetailSeller'};
+    for(const [name,type]of Object.entries(props))for(const [label,source]of [['host',component],['mobile',mobile]]) {
+      if(!new RegExp('\\b'+name+'\\?\\s*:\\s*'+type+(name==='specifications'?'':'\\b')).test(source))
+        throw new Error(`Signature native ${label} detail must expose typed ${name}`);
+    }
+    const forwarded=(source,pattern,label)=>{
+      if([...source.matchAll(new RegExp(pattern,'g'))].length!==1)throw new Error('Signature native detail must forward '+label+' exactly once');
+    };
+    forwarded(component,'<MobileVehicleDetail\\s+\\{heading\\}\\s+\\{gallery\\}\\s+\\{specifications\\}\\s+\\{details\\}\\s+\\{reservation\\}\\s+\\{seller\\}\\s*\\/>','all six mobile props');
+    for(const source of [component,mobile])for(const [tag,prop]of [['VehicleHeading','heading'],['VehicleSpecifications','specifications'],['VehicleDetailPanels','details'],['VehicleReservationCard','reservation'],['DetailSellerCard','seller']])
+      forwarded(source,'<'+tag+'\\s+\\{'+prop+'\\}(?=\\s|\\/)','selected '+prop);
+    forwarded(component,'<VehicleSliderGallery\\s+\\{gallery\\}\\s*\\/>','desktop gallery');
+    if(!mobile.includes('slides={gallery.slides}')||!mobile.includes('thumbnails={gallery.thumbnails}'))throw new Error('Signature native mobile gallery must use its selected vehicle');
+  }
+  if(nativeFacts) {
+    const breadcrumb=prefix+'src/lib/sections/VehicleBreadcrumb.svelte';
+    if(!/\bvehicleTitle\?\s*:\s*string/.test(text(files,breadcrumb)))throw new Error('Signature native breadcrumb must expose its factual vehicle title');
+    const pageFile=prefix+'src/lib/pages/cars-details-3.svelte';
+    let page=text(files,pageFile);
+    page=replaceOne(page,'</script>','  import { page as dealerPage } from "$app/state";\n  import { dealerDetailFor } from "#lib/data/dealer-detail.ts";\n'+(nativeDetail?'  import DealerVehicleNotFound from "#lib/components/vehicle-detail/DealerVehicleNotFound.svelte";\n':'')+'  const dealerBreadcrumbDetail = $derived(dealerDetailFor(dealerPage.url.searchParams.get("id")));\n</script>','Signature dealer breadcrumb data');
+    page=replaceOne(page,'<VehicleBreadcrumb centered />','<VehicleBreadcrumb centered vehicleTitle={dealerBreadcrumbDetail?.heading.title} />','Signature selected vehicle breadcrumb');
+    if(nativeDetail)page=replaceOne(page,'<VehicleEnquiryDetail />','{#if dealerBreadcrumbDetail}<VehicleEnquiryDetail heading={dealerBreadcrumbDetail.heading} gallery={dealerBreadcrumbDetail.gallery} specifications={dealerBreadcrumbDetail.specifications} details={dealerBreadcrumbDetail.content} reservation={dealerBreadcrumbDetail.reservation} seller={dealerBreadcrumbDetail.seller} />{:else}<DealerVehicleNotFound />{/if}','Signature native factual six-prop detail');
+    put(files,pageFile,page);factualPagePaths.push(pageFile);
+  }
+  if(!nativeDetail) {
   const scriptEnd='</script>';
   if (component.split(scriptEnd).length!==2) throw new Error('Signature detail host changed; review the dealer binding');
-  component=component.replace(scriptEnd,`  import { page } from "$app/state";\n  import { dealerDetailFor } from "#lib/data/dealer-detail.ts";\n  const selected = $derived(dealerDetailFor(page.url.searchParams.get("id")));\n</script>`);
+  component=component.replace(scriptEnd,`  import { page } from "$app/state";\n  import { dealerDetailFor } from "#lib/data/dealer-detail.ts";\n${localizedNotFound?'  import DealerVehicleNotFound from "#lib/components/vehicle-detail/DealerVehicleNotFound.svelte";\n':''}  const selected = $derived(dealerDetailFor(page.url.searchParams.get("id")));\n</script>`);
   for (const [before,after] of [
     ['<MobileVehicleDetail />','<MobileVehicleDetail heading={selected.heading} gallery={selected.gallery} specifications={selected.specifications} details={selected.content} reservation={selected.reservation} seller={selected.seller} />'],
     ['<VehicleHeading />','<VehicleHeading heading={selected.heading} />'],
@@ -259,42 +297,56 @@ function bindSignatureDetail(files,profile,logos) {
   }
   const bodyStart=component.indexOf(scriptEnd)+scriptEnd.length;
   component=component.slice(0,bodyStart)+'\n{#if selected}'+component.slice(bodyStart)+
-    '\n{:else}<section class="box-section"><div class="container"><h1>Vehicle not found in this dated preview</h1><a href="/vehicles">Browse vehicles</a></div></section>{/if}\n';
+    `\n{:else}${localizedNotFound?'<DealerVehicleNotFound />':'<section class="box-section"><div class="container"><h1>Vehicle not found in this dated preview</h1><a href="/vehicles">Browse vehicles</a></div></section>'}{/if}\n`;
   put(files,enquiry,component);
-  const mobileFile=prefix+'src/lib/components/vehicle-detail/MobileVehicleDetail.svelte';
-  let mobile=text(files,mobileFile);
+  if(!/specifications\?\s*:\s*readonly DetailSpecification\[\]/.test(mobile)) {
   mobile=replaceOne(mobile,'type DetailSliderGallery,','type DetailSliderGallery,\n    referenceSpecifications, referenceDetailContent, referenceReservation, referenceSeller,\n    type DetailSpecification, type DetailContent, type DetailReservation, type DetailSeller,','Signature mobile detail data types');
   mobile=replaceOne(mobile,'gallery = referenceSliderGallery,','gallery = referenceSliderGallery,\n    specifications = referenceSpecifications, details = referenceDetailContent,\n    reservation = referenceReservation, seller = referenceSeller,','Signature mobile detail defaults');
   mobile=replaceOne(mobile,'{ heading?: DetailHeading; gallery?: DetailSliderGallery }','{ heading?: DetailHeading; gallery?: DetailSliderGallery; specifications?: readonly DetailSpecification[]; details?: DetailContent; reservation?: DetailReservation; seller?: DetailSeller }','Signature mobile detail prop types');
   for(const [before,after] of [['<VehicleSpecifications alignStart />','<VehicleSpecifications {specifications} alignStart />'],['<VehicleReservationCard />','<VehicleReservationCard {reservation} />'],['<DetailSellerCard />','<DetailSellerCard {seller} />'],['<VehicleDetailPanels />','<VehicleDetailPanels {details} />']])mobile=replaceOne(mobile,before,after,'Signature mobile '+before);
+  } else if(!/<VehicleSpecifications\s+\{specifications\}/.test(mobile)||!/<VehicleDetailPanels\s+\{details\}/.test(mobile)||!/<VehicleReservationCard\s+\{reservation\}/.test(mobile)||!/<DetailSellerCard\s+\{seller\}/.test(mobile)) {
+    throw new Error('Signature native mobile detail props must reach every selected-vehicle consumer');
+  }
   put(files,mobileFile,mobile);
+  detailHostPaths.push(enquiry,mobileFile);
+  }
   const reservationFile=prefix+'src/lib/components/vehicle-detail/VehicleReservationCard.svelte';
   let reservation=text(files,reservationFile);
+  const nativeReservation=nativeFacts&&reservation.includes('{#if dealer.businessPreview}')&&reservation.includes('locale.href("/contact#contact-enquiry")');
+  if(!nativeReservation) {
   const dates=/<ReservationDateField[\s\S]*?first\s*\/>\s*<ReservationDateField[\s\S]*?\/>/;
-  if (!dates.test(reservation)) throw new Error('Signature reservation date boundary changed');
-  reservation=reservation.replace(dates,match=>'{#if reservation.pickUp && reservation.dropOff}'+match+'{/if}');
+  if (!/\{#if\s+reservation\.pickUp\s*&&\s*reservation\.dropOff\}/.test(reservation)) {
+    if (!dates.test(reservation)) throw new Error('Signature reservation date boundary changed');
+    reservation=reservation.replace(dates,match=>'{#if reservation.pickUp && reservation.dropOff}'+match+'{/if}');
+  }
   reservation=reservation.replace(/<div class="item-line-booking last-item pb-0">\s*<strong class="text-md-medium neutral-1000">Sale discount<\/strong>[\s\S]*?<\/div>\s*<\/div>/,
     match=>'{#if reservation.discount}'+match+'{/if}').replaceAll('Total Payable','Advertised price').replaceAll('Book Now','Enquire');
   reservation=reservation.replaceAll('{extra.label}{" "}','{extra.label} ');
+  }
   put(files,reservationFile,reservation);
   const panelsFile=prefix+'src/lib/components/vehicle-detail/VehicleDetailPanels.svelte';
   let panels=text(files,panelsFile);
-  panels=replaceOne(panels,'{#if !product && mobile.current}','{#if !product && mobile.current && content.loanFields.length > 0}','Signature mobile verified finance fields');
-  panels=replaceOne(panels,'{#if !product && !mobile.current}','{#if !product && !mobile.current && content.loanFields.length > 0}','Signature desktop verified finance fields');
+  for(const condition of ['{#if !product && mobile.current}','{#if !product && !mobile.current}']) {
+    if(panels.includes(condition))panels=replaceOne(panels,condition,condition.slice(0,-1)+' && content.loanFields.length > 0}','Signature verified finance fields');
+    else if(!panels.includes(condition.slice(0,-1)+' && content.loanFields.length > 0}') &&
+      !(nativeFacts&&panels.includes('{#if !dealer.businessPreview && '+condition.slice(5))))throw new Error('Signature native detail must hide unpublished finance fields');
+  }
   put(files,panelsFile,panels);
-  return [detailFile,derived,enquiry,mobileFile,reservationFile,panelsFile];
+  return [detailFile,derived,...factualPagePaths,...detailHostPaths,reservationFile,panelsFile];
 }
 
 function personalizeSignatureCopy(files,profile) {
   const prefix='karento-best/',changed=[],b=profile.business;
   const footerFile=prefix+'src/lib/components/Footer.svelte';
   let footer=text(files,footerFile);
+  if(!footer.includes('businessPreview')) {
   footer=footer.replace('2356 Oakwood Drive, Suite 18, San Francisco, California 94111, US','{dealer.locations[0]?.address || "Contact the dealership"}')
     .replace('Hours: 8:00 - 17:00, Mon - Sat','{dealer.copy["contact.hours"] || "Contact before visiting"}')
     .replace('support@carento.com','{dealer.contacts.email || "Contact the dealership"}')
     .replace('aria-label="+1 222-555-33-99"','aria-label={dealer.contacts.phone || "Contact the dealership"}');
   footer=replaceOne(footer,'<div class="box-info-contact mt-0">','<div class="box-info-contact mt-0">\n            <p class="text-sm neutral-400">{dealer.copy["inventory.notice"]}</p>','Signature dated inventory footer');
   put(files,footerFile,footer);changed.push(footerFile);
+  }
   const editorialFile=prefix+'src/lib/data/editorial.ts';
   if(files.has(editorialFile)) {
     let editorial=text(files,editorialFile);
@@ -311,9 +363,9 @@ function personalizeSignatureCopy(files,profile) {
   for(const [name,bytes] of files) {
     if(!name.startsWith(prefix+'src/lib/') || !name.endsWith('.svelte')) continue;
     let component=bytes.toString('utf8');
-    if(name.endsWith('/VehicleHeading.svelte'))component=replaceOne(component,/<div class="tour-rate">[\s\S]*?<\/div>\s*<\/div>/,node=>'{#if heading.rating && heading.reviewCount}'+node+'{/if}','Signature PDP rating guard');
-    if(name.includes('/cards/')&&component.includes('{card.rating}'))component=replaceOne(component,/<span\s+class=[^>]*>\s*\{card\.rating\}[\s\S]*?<\/span\s*>\s*<\/span\s*>/,node=>'{#if card.rating && card.reviews}'+node+'{/if}','Signature card rating guard');
-    if(name.endsWith('/ReviewSummary.svelte'))component=replaceOne(component,/<FiveStarRating source="\/assets\/imgs\/page\/tour-detail\/star\.svg" \/>/,node=>'{#if summary.count}'+node+'{/if}','Signature verified review stars');
+    if(name.endsWith('/VehicleHeading.svelte')&&!/\{#if[^}]*heading\.rating[^}]*heading\.reviewCount/.test(component))component=replaceOne(component,/<div class="tour-rate">[\s\S]*?<\/div>\s*<\/div>/,node=>'{#if heading.rating && heading.reviewCount}'+node+'{/if}','Signature PDP rating guard');
+    if(name.includes('/cards/')&&component.includes('{card.rating}')&&!/\{#if[^}]*card\.rating[^}]*card\.reviews/.test(component))component=replaceOne(component,/<span\s+class=[^>]*>\s*\{card\.rating\}[\s\S]*?<\/span\s*>\s*<\/span\s*>/,node=>'{#if card.rating && card.reviews}'+node+'{/if}','Signature card rating guard');
+    if(name.endsWith('/ReviewSummary.svelte')&&!/\{#if[^}]*summary\.count/.test(component))component=replaceOne(component,/<FiveStarRating source="\/assets\/imgs\/page\/tour-detail\/star\.svg" \/>/,node=>'{#if summary.count}'+node+'{/if}','Signature verified review stars');
     if(/import \{ referenceBookingTestimonials \}/.test(component) && name.endsWith('/CustomerReviewCarousel.svelte')) {
       const end=component.indexOf('</script>')+9;
       component=component.slice(0,end)+'\n{#if referenceBookingTestimonials.length}'+component.slice(end)+'\n{/if}\n';
@@ -332,7 +384,9 @@ function personalizeSignatureCopy(files,profile) {
 function patchSignature(files, profile, logos) {
   const prefix = 'karento-best/', business = profile.business;
   const file = prefix + 'src/lib/content.ts';
-  const cards = profile.listings.map(listing => signatureCard(listing, profile));
+  const nativeFacts=signatureNativeFactsContract(text(files,file));
+  const facts=signatureBusinessPreview(profile);
+  const cards = profile.listings.map(listing => signatureCard(listing, profile,nativeFacts));
   const dealer = {name: business.name, locale: business.locale,
     logo: {light:logos[0],footer:logos.at(-1),archivedDark:logos.at(-1),alt:business.name,favicon:logos[0],monochromeOnDark:false},
     contacts: {phone:business.phoneE164,email:business.email},
@@ -342,7 +396,7 @@ function patchSignature(files, profile, logos) {
     // The actual collections below already contain dealer stock. A title-keyed
     // override would collapse different listings that happen to share a title.
     inventory:{},copy:{'home.hero':business.name,'home.hero.mobile':'Find your next car.','home.brandsIntro':'Explore our dated vehicle examples.','contact.agents':'Contact the dealership','contact.hours':business.hours,'inventory.notice':business.inventoryNotice},
-    contentStatus:'reference-demo'};
+    ...(nativeFacts?{businessPreview:facts}:{}),contentStatus:'reference-demo'};
   put(files,file,replaceExportInitializer(text(files,file),'dealer',dealer).replace(/^import referenceLocations from [^;]+;\s*/m,''));
   const homeData = prefix+'src/lib/data/vehicles.ts', listData = prefix+'src/lib/data/vehicle-listing.ts';
   const groups = (source) => unique([...source.matchAll(/^  ([A-Za-z][A-Za-z0-9]*): \[/gm)].map(match=>match[1]));
@@ -356,7 +410,7 @@ function patchSignature(files, profile, logos) {
   put(files,listData,personalizedListing);
   const detailData = prefix+'src/lib/data/dealer-vehicles.json';
   put(files,detailData,jsonText(profile.listings.map((listing,index)=>({ ...listing,raw:undefined,card:cards[index] }))));
-  return {contentPaths:[file,homeData,listData,detailData,...bindSignatureDetail(files,profile,logos),...personalizeSignatureCopy(files,profile)],inventory:cards};
+  return {contentPaths:[file,homeData,listData,detailData,...bindSignatureDetail(files,profile,logos,nativeFacts),...personalizeSignatureCopy(files,profile)],inventory:cards,nativeFacts};
 }
 
 /** Personalization operates on a derived pinned source map, never an editable master. */
@@ -371,14 +425,17 @@ export function applyExtendedRefreshAdapter({ files, key, profile, client }) {
 }
 
 export function sealExtendedVariant({files,key,manifest,profile,adaptation}) {
+  const profileDigest=sha256(JSON.stringify(profile));
+  if(adaptation.profileSha256&&adaptation.profileSha256!==profileDigest)throw new Error(`${key}: dealer facts changed after personalization; review the factual consumers before resealing`);
   const template = manifest.templateSources?.[key];
   if (!template || template.repository !== 'darkapoparka/cars' || template.path !== `templates/${key}` ||
     !/^[a-f0-9]{40}$/.test(template.revision || '') || template.revision !== manifest.templateRevisions?.[key] ||
     !/^[a-f0-9]{40}$/.test(template.tree || '') || !/^[a-f0-9]{64}$/.test(template.digest || '')) throw new Error(`${key}: exact reviewed Cars source is required`);
   const receipt = { schemaVersion:1,format:key==='mobile'?'mobile-preview-v1':'signature-preview-v1',
     dealer:profile.slug,name:profile.business.name,template,sourceDigest:extendedVariantSourceDigest(files,key),
-    inventory:{mode:'dated-listing-snapshot',count:profile.listings.length,observedAt:profile.business.observedAt},
-    personalization:{profileSha256:sha256(JSON.stringify(profile)),logoPaths:adaptation.logoPaths,mediaPaths:adaptation.mediaPaths,mediaMappings:adaptation.mediaMappings||[],contentPaths:adaptation.contentPaths},
+    inventory:{mode:profile.stockKind==='illustrative-not-dealer-stock'?'illustrative-not-dealer-stock':'dated-listing-snapshot',count:profile.listings.length,observedAt:profile.business.observedAt},
+    personalization:{profileSha256:profileDigest,logoPaths:adaptation.logoPaths,mediaPaths:adaptation.mediaPaths,mediaMappings:adaptation.mediaMappings||[],contentPaths:adaptation.contentPaths,
+      ...(key==='karento-best'?{nativeDealerFacts:adaptation.nativeFacts===true||adaptation.nativeDealerFacts===true}: {})},
     needsDealerQA:true,readyToPublish:false };
   put(files,EXTENDED_VARIANT_RECEIPTS[key],jsonText(receipt));
   return receipt;

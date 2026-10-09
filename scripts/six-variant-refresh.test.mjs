@@ -5,8 +5,11 @@ import path from 'node:path';
 import test from 'node:test';
 import { planSixDesignSelection } from './lib/six-design-release.mjs';
 import { selectPinnedRevisions, updateManifestPins, planDealerUpgrade, materializeUpgradeCandidate } from './dealer-updates/three-way-upgrade.mjs';
-import { updateSelection } from './dealer-updates/update-dealer-template.mjs';
+import { updateSelection, addLegacyDetailUpgrade } from './dealer-updates/update-dealer-template.mjs';
+import { LEGACY_DETAIL_FILE, legacyDetailArtifact } from './publishing/legacy-detail-routes.mjs';
 import { applyExtendedRefreshAdapter, extendedVariantSourceDigest, sealExtendedVariant, retainDealerVariantAssets } from './lib/client-refresh-six.mjs';
+import { signatureBusinessPreview, signaturePriceFacts, signatureMileageFacts } from './lib/client-refresh-signature.mjs';
+import { loadDealerProfile } from './lib/client-refresh-normalize.mjs';
 import { normalized, sha256, filesAt } from './lib/workflow.mjs';
 
 const previous = '1'.repeat(40), next = '2'.repeat(40);
@@ -82,9 +85,15 @@ test('Signature-only three-way candidate retains client customization, old Carwo
 function extendedFixture(t,key) {
   const client=fs.mkdtempSync(path.join(os.tmpdir(),'cars-extended-data-'));t.after(()=>fs.rmSync(client,{recursive:true,force:true}));
   for (const name of ['dealer-brand/light.webp','dealer-brand/dark.webp','dealer/vehicle.webp']) { const full=path.join(client,name);fs.mkdirSync(path.dirname(full),{recursive:true});fs.writeFileSync(full,Buffer.from([82,73,70,70,0,1,2,3])); }
-  const profile={slug:'fixture',business:{name:'Real Dealer',locale:'en-GB',countryCode:'AE',currency:'AED',country:'United Arab Emirates',phoneE164:'+971555123456',phoneHref:'tel:+971555123456',phoneDisplay:'+971 555 123456',email:'',address:'Verified Street',mapsUrl:'https://example.org/map',mapsEmbedUrl:'https://example.org/embed',socialLinks:{},hours:'Contact before visiting',logo:'/dealer-brand/light.webp',logoDark:'/dealer-brand/dark.webp',inventoryNotice:'Dated samples; confirm availability.',observedAt:'2026-09-09'},listings:[{id:'vehicle-1',title:'2020 Audi A3',make:'Audi',model:'A3',trim:'',year:2020,priceAmount:12500,currency:'AED',mileageValue:75000,mileageUnit:'km',powerHp:null,fuel:'Diesel',transmission:'Manual',body:'Hatchback',bodyType:'hatchback',color:'Blue',location:'Verified city',features:[],images:['/dealer/vehicle.webp'],image:'/dealer/vehicle.webp',description:'Dated source',availability:'Confirm availability',sourceUrl:'https://example.org/listing',observedAt:'2026-09-09',raw:{year:2020}}]};
+  const profile={slug:'fixture',business:{name:'Real Dealer',locale:'en-GB',countryCode:'AE',currency:'AED',country:'United Arab Emirates',phoneE164:'+971555123456',phoneHref:'tel:+971555123456',phoneDisplay:'+971 555 123456',email:'',address:'Verified Street',mapsUrl:'https://example.org/map',mapsEmbedUrl:'https://example.org/embed',socialLinks:{},hours:'Contact before visiting',logo:'/dealer-brand/light.webp',logoDark:'/dealer-brand/dark.webp',inventoryNotice:'Dated samples; confirm availability.',observedAt:'2026-09-09'},listings:[{id:'vehicle-1',title:'2020 Audi A3',make:'Audi',model:'A3',trim:'',year:2020,priceAmount:12500,currency:'AED',mileageValue:75000,mileageUnit:'km',powerHp:null,fuel:'Diesel',fuelType:'diesel',transmission:'Manual',transmissionType:'manual',body:'Hatchback',bodyType:'hatchback',color:'Blue',location:'Verified city',features:[],images:['/dealer/vehicle.webp'],image:'/dealer/vehicle.webp',description:'Dated source',availability:'Confirm availability',sourceUrl:'https://example.org/listing',observedAt:'2026-09-09',raw:{year:2020}}]};
   const files=new Map([[key+'/package.json',Buffer.from('{"name":"fixture"}')]]);
   return {client,profile,files};
+}
+
+function signatureFixture(t) {
+  const x=extendedFixture(t,'karento-best'),template=path.resolve('templates/karento-best');
+  for(const name of filesAt(template).filter(name=>name.startsWith('src/lib/')))x.files.set('karento-best/'+name,fs.readFileSync(path.join(template,name)));
+  return x;
 }
 
 test('Mobile adapter uses real identity/media, isolates saved data and removes captured dealer stock from the active feed',t=>{
@@ -129,11 +138,30 @@ test('new family media uses retained legacy mounted assets without depending on 
   assert.throws(()=>retainDealerVariantAssets(x.files,'mobile',x.profile,x.client),/Ambiguous retained media/);
 });
 
+test('Signature dealer facts preserve explicit offer currencies and distinguish unknown mileage from real zero',t=>{
+  const x=extendedFixture(t,'karento-best'),stock=x.profile.listings[0];
+  x.profile.business.currency='BGN';stock.currency='EUR';stock.raw={year:2020};
+  assert.equal(signatureBusinessPreview(x.profile).currency,'EUR','stale business defaults cannot relabel dated stock');
+  assert.deepEqual(signaturePriceFacts(stock),{priceAmount:12500,currency:'EUR'});
+  assert.deepEqual(signatureMileageFacts({...stock,mileageValue:0}),{},'normalizer zero is not proof of a zero-mileage car');
+  assert.deepEqual(signatureMileageFacts({...stock,mileageValue:0,raw:{mileageKm:0}}),{mileageValue:0,mileageUnit:'km'});
+  x.profile.listings.push({...stock,id:'different-currency',currency:'AED'});
+  assert.equal(signatureBusinessPreview(x.profile).currency,'','mixed feeds cannot invent one common currency');
+  assert.equal(signatureBusinessPreview(x.profile).inventoryCount,2);
+  assert.equal(signatureBusinessPreview({...x.profile,business:{...x.profile.business,observedAt:''},listings:[{...stock,observedAt:''}]}).observedAt,'','unknown source dates remain unknown');
+  assert.throws(()=>signatureBusinessPreview({...x.profile,business:{...x.profile.business,observedAt:'invented-date'}}),/observation date is invalid/);
+  assert.throws(()=>signatureBusinessPreview({...x.profile,listings:[stock,{...stock}]}),/unique/);
+  assert.throws(()=>signaturePriceFacts({...stock,priceAmount:-1}),/invalid stock price/);
+  assert.throws(()=>signaturePriceFacts({...stock,currency:'EUR 12500'}),/invalid stock price/);
+  assert.deepEqual(signaturePriceFacts({...stock,priceAmount:null}),{});
+  assert.throws(()=>signatureMileageFacts({...stock,mileageValue:-1,raw:{mileageKm:5}}),/invalid stock mileage/);
+});
+
 test('Signature dealer cards and PDP share exact dated source IDs/media without donor staff, reviews or rental quotes',t=>{
-  const x=extendedFixture(t,'karento-best');
-  const template=path.resolve('templates/karento-best');
-  for (const name of filesAt(template).filter(name=>name.startsWith('src/lib/'))) x.files.set('karento-best/'+name,fs.readFileSync(path.join(template,name)));
-  x.profile.listings.push({...x.profile.listings[0],id:'vehicle-2',priceAmount:15000});
+  const x=signatureFixture(t);
+  const originalHost=Buffer.from(x.files.get('karento-best/src/lib/sections/VehicleEnquiryDetail.svelte'));
+  const originalMobile=Buffer.from(x.files.get('karento-best/src/lib/components/vehicle-detail/MobileVehicleDetail.svelte'));
+  x.profile.listings.push({...x.profile.listings[0],id:'vehicle-2',priceAmount:15000,fuel:'Not published',fuelType:'other',transmission:'Not published',transmissionType:'other'});
   const adaptation=applyExtendedRefreshAdapter({...x,key:'karento-best'});
   const details=x.files.get('karento-best/src/lib/data/dealer-detail.ts').toString();
   assert.match(details,/dealerDetails\.find\(item => item\.id === id\) \?\? null/);
@@ -141,21 +169,120 @@ test('Signature dealer cards and PDP share exact dated source IDs/media without 
   assert.match(details,/"src": "\/dealer\/vehicle\.webp"/);
   assert.doesNotMatch(details,/672 reviews|Emily Rose|1-222|Rent This Vehicle/);
   const host=x.files.get('karento-best/src/lib/sections/VehicleEnquiryDetail.svelte').toString();
-  assert.match(host,/page\.url\.searchParams\.get\("id"\)/);
-  assert.match(host,/gallery=\{selected\.gallery\}/);
-  assert.match(host,/<MobileVehicleDetail heading=\{selected\.heading\} gallery=\{selected\.gallery\}/);
+  const nativeDetail=/specifications\?\s*:\s*readonly DetailSpecification\[\]/.test(originalHost.toString());
+  if(nativeDetail){
+    assert.deepEqual(x.files.get('karento-best/src/lib/sections/VehicleEnquiryDetail.svelte'),originalHost,'native host composition is retained byte for byte');
+    assert.deepEqual(x.files.get('karento-best/src/lib/components/vehicle-detail/MobileVehicleDetail.svelte'),originalMobile,'native mobile composition is retained byte for byte');
+    const page=x.files.get('karento-best/src/lib/pages/cars-details-3.svelte').toString();
+    for(const [prop,field]of [['heading','heading'],['gallery','gallery'],['specifications','specifications'],['details','content'],['reservation','reservation'],['seller','seller']])assert.ok(page.includes(`${prop}={dealerBreadcrumbDetail.${field}}`));
+    assert.match(page,/\{#if dealerBreadcrumbDetail\}<VehicleEnquiryDetail/);
+    assert.match(page,/\{:else\}<DealerVehicleNotFound \/>\{\/if\}/);
+    assert.equal(adaptation.contentPaths.includes('karento-best/src/lib/sections/VehicleEnquiryDetail.svelte'),false);
+  }else{
+    assert.match(host,/page\.url\.searchParams\.get\("id"\)/);
+    assert.match(host,/gallery=\{selected\.gallery\}/);
+    assert.match(host,/<MobileVehicleDetail heading=\{selected\.heading\} gallery=\{selected\.gallery\}/);
+  }
   assert.match(x.files.get('karento-best/src/lib/components/vehicle-detail/MobileVehicleDetail.svelte').toString(),/VehicleReservationCard \{reservation\}/);
-  assert.match(x.files.get('karento-best/src/lib/components/vehicle-detail/VehicleDetailPanels.svelte').toString(),/content\.loanFields\.length > 0/);
-  assert.match(host,/Vehicle not found in this dated preview/);
+  const panels=x.files.get('karento-best/src/lib/components/vehicle-detail/VehicleDetailPanels.svelte').toString();
+  if(panels.includes('!dealer.businessPreview')) {
+    assert.match(panels,/\{#if !dealer\.businessPreview && !product && mobile\.current\}/);
+    assert.match(panels,/\{#if !dealer\.businessPreview && !product && !mobile\.current\}/);
+  } else assert.match(panels,/content\.loanFields\.length > 0/);
+  if(adaptation.nativeFacts){
+    if(!nativeDetail)assert.match(host,/\{:else\}<DealerVehicleNotFound \/>/);
+    assert.match(x.files.get('karento-best/src/lib/components/vehicle-detail/DealerVehicleNotFound.svelte').toString(),/locale\.t\("dealer\.vehicle\.missing"\)/);
+    assert.match(x.files.get('karento-best/src/lib/pages/cars-details-3.svelte').toString(),/VehicleBreadcrumb centered vehicleTitle=\{dealerBreadcrumbDetail\?\.heading\.title\}/);
+    assert.match(x.files.get('karento-best/src/lib/pages/cars-details-3.svelte').toString(),/dealerDetailFor\(dealerPage\.url\.searchParams\.get\("id"\)\)/);
+  }else assert.match(host,/Vehicle not found in this dated preview/);
   const home=x.files.get('karento-best/src/lib/data/vehicles.ts').toString();
   assert.match(home,/\/vehicle\?id=vehicle-1/);
   assert.doesNotMatch(home,/672 reviews|Book Now|Hyundai Sonata/);
   assert.match(home,/\/vehicle\?id=vehicle-2/);
+  const cards=JSON.parse(x.files.get('karento-best/src/lib/data/dealer-vehicles.json'));
+  assert.equal(cards[1].card.fuel,'');assert.equal(cards[1].card.transmission,'');
+  assert.equal(Object.hasOwn(cards[1].card,'fuelType'),false,'absent fuel cannot become a published Other fact');
+  assert.equal(Object.hasOwn(cards[1].card,'transmissionType'),false,'absent transmission cannot become a published Other fact');
   assert.match(x.files.get('karento-best/src/lib/content.ts').toString(),/"inventory": \{\}/);
-  assert.ok(adaptation.contentPaths.some(name=>name.endsWith('/VehicleEnquiryDetail.svelte')));
+  assert.ok(adaptation.contentPaths.some(name=>name.endsWith(nativeDetail?'/cars-details-3.svelte':'/VehicleEnquiryDetail.svelte')));
+  if(adaptation.nativeFacts){
+    const generated=JSON.parse(details.split('export const dealerDetails: readonly DealerDetail[] = ')[1].split(';\nexport function')[0]);
+    assert.equal(generated[0].specifications.find(item=>item.id==='diesel').labelKey,'vehicle.field.fuel');
+    assert.equal(generated[0].specifications.find(item=>item.id==='auto').labelKey,'vehicle.field.transmission');
+  }
   assert.match(x.files.get('karento-best/src/lib/sections/FeaturedVehicleCarousel.svelte').toString(),/\{#if referenceVehicles\.featuredVehicleSlides\[7\]\}/);
   assert.doesNotMatch(x.files.get('karento-best/src/lib/data/home-stories.ts').toString(),/Sophia Moore|Sara Mohamed/);
   assert.doesNotMatch(x.files.get('karento-best/src/lib/data/editorial.ts').toString().split('export const teamMembers')[1],/Emily Rose/);
+});
+
+test('Signature native binding refuses disconnected typed consumers and retains the guarded older host adaptation',t=>{
+  const x=signatureFixture(t),hostPath='karento-best/src/lib/sections/VehicleEnquiryDetail.svelte';
+  const original=x.files.get(hostPath);
+  x.files.set(hostPath,Buffer.from(original.toString().replace('<MobileVehicleDetail {heading} {gallery} {specifications} {details} {reservation} {seller} />','<MobileVehicleDetail {heading} {gallery} {specifications} {details} {reservation} />')));
+  assert.throws(()=>applyExtendedRefreshAdapter({...x,key:'karento-best'}),/must forward all six mobile props exactly once/);
+  const older=signatureFixture(t);
+  older.files.set(hostPath,Buffer.from('<svelte:options runes={true} />\n<script lang="ts">\n</script>\n<MobileVehicleDetail /><VehicleHeading /><VehicleSliderGallery /><VehicleSpecifications alignStart /><VehicleDetailPanels /><VehicleReservationCard /><DetailSellerCard />\n'));
+  applyExtendedRefreshAdapter({...older,key:'karento-best'});
+  const adapted=older.files.get(hostPath).toString();
+  assert.match(adapted,/dealerDetailFor\(page\.url\.searchParams\.get\("id"\)\)/);
+  assert.match(adapted,/MobileVehicleDetail heading=\{selected\.heading\} gallery=\{selected\.gallery\}/);
+  assert.match(adapted,/\{:else\}<DealerVehicleNotFound \/>\{\/if\}/);
+});
+
+test('Al Reef authoritative illustrative pack remains illustrative in the native English and Bulgarian preview',async()=>{
+  const client=path.resolve('clients/al-reef-used-cars'),stockPath=path.join(client,'stock.json'),before=fs.readFileSync(stockPath);
+  const stock=JSON.parse(before),profile=loadDealerProfile(client,'al-reef-used-cars');
+  assert.equal(stock.kind,'illustrative-not-dealer-stock');
+  assert.equal(profile.stockKind,stock.kind);
+  assert.ok(profile.business.observedAt,'a business observation date cannot verify illustrative stock');
+  const preview=signatureBusinessPreview(profile);
+  assert.equal(preview.mode,'illustrative-not-dealer-stock');
+  assert.equal(preview.inventoryCount,stock.listings.length);
+  for(const listing of profile.listings){
+    const retained=stock.listings.find(item=>item.id===listing.id);
+    assert.ok(retained);assert.equal(listing.priceAmount,retained.priceAmount);assert.equal(listing.currency,retained.currency);
+    assert.deepEqual(listing.images,retained.images);
+  }
+  const [{stockSummary,stockNotice,stockFaqAnswer},{en},{bg}]=await Promise.all([
+    import('../templates/karento-best/src/lib/i18n/dealer.ts'),
+    import('../templates/karento-best/src/lib/i18n/catalogs/en.ts'),
+    import('../templates/karento-best/src/lib/i18n/catalogs/bg.ts')
+  ]);
+  for(const catalog of [en,bg]){
+    const keys=[],locale={number:String,date:()=>{throw new Error('An illustrative summary must not label examples with a stock observation date');},t:(key,params={})=>{
+      keys.push(key);assert.ok(catalog[key]);return catalog[key].replace(/\{(\w+)\}/g,(_,name)=>params[name]??'');
+    }};
+    assert.equal(stockSummary(preview,locale),catalog['dealer.stock.illustrativeCount'].replace('{count}',String(stock.listings.length)));
+    assert.equal(stockNotice(preview,locale),catalog['dealer.stock.illustrativeNotice']);
+    assert.equal(stockFaqAnswer('availability',preview,locale),catalog['dealer.faq.illustrativeAvailability']);
+    assert.equal(keys.some(key=>key==='dealer.stock.snapshotCount'),false);
+  }
+  const files=new Map([['karento-best/package.json',Buffer.from('{"name":"fixture"}')]]),manifest=manifestFor('modern',true);
+  const receipt=sealExtendedVariant({files,key:'karento-best',manifest,profile,adaptation:{nativeFacts:true,logoPaths:['/dealer-brand/logo-on-light.webp'],mediaPaths:[],contentPaths:[]}});
+  assert.equal(receipt.inventory.mode,'illustrative-not-dealer-stock','the install/publishing receipt cannot relabel sample inventory');
+  assert.deepEqual(fs.readFileSync(stockPath),before,'the independent dealer is never regenerated or edited');
+});
+
+test('six migration records exact preserved Carwow links and a Signature-only refresh preserves that artifact',t=>{
+  const x=extendedFixture(t,'karento-best'),old=manifestFor('modern'),nextManifest=manifestFor('modern',true);
+  fs.writeFileSync(path.join(x.client,'dealer.json'),JSON.stringify(old));
+  for(const relative of ['business-facts.json','stock.json','carwow/src/lib/data/daynight-current-inventory.ts','carwow/src/lib/data/daynight-vehicles.ts']){
+    const destination=path.join(x.client,relative);fs.mkdirSync(path.dirname(destination),{recursive:true});
+    fs.copyFileSync(path.join('clients/promosale-varna',relative),destination);
+  }
+  const files=new Map([['dealer.json',Buffer.from(JSON.stringify(nextManifest))]]);
+  const result=addLegacyDetailUpgrade({files,dealerRoot:x.client,manifest:nextManifest,pins:{import:{}}});
+  assert.equal(result.entries,6);assert.equal(result.retired,0);
+  const artifact=legacyDetailArtifact(files,nextManifest);
+  assert.equal(artifact.family,'import');
+  assert.ok(artifact.entries.every(entry=>entry.targetId===entry.sourceId));
+  const reviewed=Buffer.from(files.get(LEGACY_DETAIL_FILE)),reference=structuredClone(nextManifest.legacyDetailRoutes);
+  fs.writeFileSync(path.join(x.client,'dealer.json'),JSON.stringify(nextManifest));
+  assert.equal(addLegacyDetailUpgrade({files,dealerRoot:x.client,manifest:nextManifest,pins:{'karento-best':{}}}),null);
+  assert.deepEqual(nextManifest.legacyDetailRoutes,reference);
+  assert.deepEqual(files.get(LEGACY_DETAIL_FILE),reviewed);
+  files.set(LEGACY_DETAIL_FILE,Buffer.from('{}'));
+  assert.throws(()=>addLegacyDetailUpgrade({files,dealerRoot:x.client,manifest:nextManifest,pins:{'karento-best':{}}}),/artifact differs/);
 });
 
 test('extended input digest is stable across Windows newlines, excludes build/instructions and changes for any source/media edit',t=>{
@@ -168,8 +295,12 @@ test('extended input digest is stable across Windows newlines, excludes build/in
   x.files.set('karento-best/static/dealer.webp',Buffer.from([82,73,70,70,0,9]));
   assert.notEqual(extendedVariantSourceDigest(x.files,'karento-best'),before);
   const manifest=manifestFor('modern',true);manifest.templateRevisions['karento-best']=next;manifest.templateSources['karento-best']=source('karento-best');
-  const receipt=sealExtendedVariant({...x,key:'karento-best',manifest,adaptation:{logoPaths:['/dealer-brand/light.webp'],mediaPaths:[],contentPaths:['karento-best/src/config.ts']}});
+  const receipt=sealExtendedVariant({...x,key:'karento-best',manifest,adaptation:{nativeFacts:true,logoPaths:['/dealer-brand/light.webp'],mediaPaths:[],contentPaths:['karento-best/src/config.ts']}});
   assert.equal(receipt.needsDealerQA,true);assert.equal(receipt.readyToPublish,false);
   assert.equal(receipt.sourceDigest,extendedVariantSourceDigest(x.files,'karento-best'));
   assert.equal(receipt.personalization.profileSha256,sha256(JSON.stringify(x.profile)));
+  const again=sealExtendedVariant({...x,key:'karento-best',manifest,adaptation:receipt.personalization});
+  assert.equal(again.personalization.nativeDealerFacts,true,'selective resealing retains the native factual contract');
+  x.profile.listings[0].priceAmount=1;
+  assert.throws(()=>sealExtendedVariant({...x,key:'karento-best',manifest,adaptation:receipt.personalization}),/facts changed after personalization/);
 });

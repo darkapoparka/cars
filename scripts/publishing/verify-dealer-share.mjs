@@ -48,6 +48,16 @@ export async function verifyDealerShare({origin, paths, receipt, fetch: fetchPag
       const inspected = inspectDealerShareHtml(html, page.resolvedUrl);
       Object.assign(page, inspected);
       const resolved = new URL(page.resolvedUrl), originalQuery = new URLSearchParams(resolved.search); resolved.search = ''; resolved.hash = '';
+      for (const rule of Object.values(receipt?.canonicalLocaleIdentity ?? {})) if (resolved.pathname === rule.base || resolved.pathname.startsWith(rule.base + '/')) {
+        if (!rule.locales.includes(inspected.language)) page.problems.push('missing-or-unsupported-document-language');
+        else {
+          const requested = originalQuery.getAll(rule.key);
+          if (requested.length === 1 && rule.locales.includes(requested[0]) && requested[0] !== inspected.language) page.problems.push('document-language-does-not-match-request');
+          // SSR resolves query, cookie and dealer default through the native
+          // locale context. Sharing always makes that resolved language explicit.
+          resolved.searchParams.set(rule.key, inspected.language);
+        }
+      }
       for (const rule of Object.values(receipt?.canonicalQueryIdentity ?? {})) if (resolved.pathname.replace(/\/$/, '') === rule.pathname) {
         for (const key of rule.keys) if (originalQuery.get(key)) resolved.searchParams.set(key, originalQuery.get(key));
       }

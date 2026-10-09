@@ -337,6 +337,33 @@ test('Svelte 3 Windows Function handlers repair only a byte-matched generated en
   await assert.rejects(() => fixSvelteServiceOutput({ output, base: '/variant-6' }), /Unrecognized external/);
 });
 
+test('SvelteKit 2 and 3 Windows malformed drive-root handlers repair only their exact copied service entry', {skip:process.platform !== 'win32'}, async t => {
+  const directory=await fs.mkdtemp(path.join(os.tmpdir(),'cars-windows-function-'));
+  t.after(async()=>{
+    const relative=path.relative(path.resolve(os.tmpdir()),path.resolve(directory));
+    assert.ok(relative&&relative!=='..'&&!relative.startsWith('..'+path.sep)&&!path.isAbsolute(relative));
+    await fs.rm(directory,{recursive:true,force:true});
+  });
+  for(const [service,version,base] of [['import','2.70.3','/variant-2'],['signature','3.0.1','/variant-6']]){
+    const source=path.join(directory,service),output=path.join(source,'.vercel/output');
+    const functionRoot=path.join(output,'functions/![-]/catchall.func');
+    const handler='.svelte-kit/vercel-tmp/index.js';
+    const malformed='../'.repeat(16)+'Users/nonexistent/cars/'+service+'/'+handler;
+    const config={runtime:'nodejs24.x',handler:malformed,framework:{slug:'sveltekit',version}};
+    await put(source,handler,'export default { fetch() {} };\n');
+    await put(functionRoot,handler,'export default { fetch() {} };\n');
+    await put(output,'config.json',JSON.stringify({version:3,routes:[]}));
+    await put(functionRoot,'.vc-config.json',JSON.stringify(config));
+    assert.equal((await fixSvelteServiceOutput({output,base})).functionHandlers,1);
+    assert.equal(JSON.parse(await fs.readFile(path.join(functionRoot,'.vc-config.json'),'utf8')).handler,handler);
+    assert.equal((await fixSvelteServiceOutput({output,base})).functionHandlers,0);
+    await put(functionRoot,'.vc-config.json',JSON.stringify(config));
+    await put(functionRoot,handler,'different copied output');
+    await assert.rejects(()=>fixSvelteServiceOutput({output,base}),/Unrecognized external/);
+    assert.equal(JSON.parse(await fs.readFile(path.join(functionRoot,'.vc-config.json'),'utf8')).handler,malformed);
+  }
+});
+
 test('package text is normalized, origin-qualified assets stay mounted and tampering is rejected', async t => {
   const options=await fixture(t,'import');
   await packageDealer(options);

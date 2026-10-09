@@ -207,6 +207,40 @@ test('opt-in CLI keeps an external candidate separate and supports install retry
   assert.equal(fs.readFileSync(path.join(candidateDirectory, 'auto-best', 'src', 'ui.ts'), 'utf8'), 'export const title = "new template";\n');
 });
 
+test('opt-in CLI binds separate review and installation pools and reuses retained candidate binaries', async t => {
+  const value=await fixture(t),template=path.join(value.templateRoot,'cars-template-modern');
+  const newAsset='exact newly reviewed image';
+  fs.mkdirSync(path.join(template,'static'),{recursive:true});
+  fs.writeFileSync(path.join(template,'static','shared.webp'),newAsset);
+  runGit(template,['add','static/shared.webp']);runGit(template,['commit','-m','reviewed binary']);
+  const lock=JSON.parse(fs.readFileSync(value.lockFile));
+  lock.templates.modern.commit=runGit(template,['rev-parse','HEAD']);lock.templates.modern.digest=fingerprint(template).digest;
+  fs.writeFileSync(value.lockFile,JSON.stringify(lock)+'\n');
+  fs.writeFileSync(path.join(value.dealerRoot,'history-one.webp'),'preserved history');
+  fs.writeFileSync(path.join(value.dealerRoot,'history-two.webp'),'preserved history');
+  const sourceBefore=fingerprint(value.dealerRoot).digest;
+  const reviewPool=path.join(value.root,'review-assets'),installPool=path.join(value.root,'installation-assets');
+  const one=cli([...planArgs(value,'two-pool-one'),'--candidate-dir',path.join(value.root,'first-reviewed'),'--candidate-asset-pool',reviewPool,'--asset-pool',installPool]);
+  const two=cli([...planArgs(value,'two-pool-two'),'--candidate-dir',path.join(value.root,'second-reviewed'),'--candidate-asset-pool',reviewPool,'--asset-pool',installPool]);
+  const metadata=JSON.parse(fs.readFileSync(path.join(one.runDirectory,'run.json'))),again=JSON.parse(fs.readFileSync(path.join(two.runDirectory,'run.json')));
+  assert.equal(metadata.candidateAssetPool,path.resolve(reviewPool));assert.equal(metadata.assetPool,path.resolve(installPool));
+  assert.equal(metadata.candidateAssetPoolStats.filesLinked,3);assert.equal(metadata.candidateAssetPoolStats.objectsWritten,2);
+  assert.equal(again.candidateAssetPoolStats.filesLinked,3);assert.equal(again.candidateAssetPoolStats.objectsReused,3);
+  assert.equal(fs.existsSync(installPool),false,'planning does not populate the installation pool');
+  assert.equal(fingerprint(value.dealerRoot).digest,sourceBefore);
+  const candidateAsset=path.join(one.candidateDirectory,'modern/static/shared.webp');
+  assert.equal(fs.statSync(candidateAsset).ino,fs.statSync(path.join(two.candidateDirectory,'modern/static/shared.webp')).ino);
+  const installed=cli(['install','--run-dir',one.runDirectory]);
+  assert.equal(installed.candidateAssetPool,path.resolve(reviewPool));assert.equal(installed.assetPoolStats.pool,path.resolve(installPool));assert.equal(installed.assetPoolStats.filesLinked,1);
+  const installedAsset=path.join(value.dealerRoot,'modern/static/shared.webp');
+  assert.equal(fs.readFileSync(installedAsset,'utf8'),newAsset);
+  assert.notEqual(fs.statSync(installedAsset).ino,fs.statSync(candidateAsset).ino,'two pools never share an editable source inode');
+  cli(['rollback','--run-dir',one.runDirectory]);
+  assert.equal(fingerprint(value.dealerRoot).digest,sourceBefore);
+  assert.equal(fs.readFileSync(candidateAsset,'utf8'),newAsset);
+  for(const object of fs.readdirSync(installPool))assert.equal(fs.statSync(path.join(installPool,object)).mode&0o200,0);
+});
+
 test('opt-in CLI refuses candidate destinations overlapping a pinned template checkout', async t => {
   const value = await fixture(t);
   const result = spawnSync(process.execPath, [

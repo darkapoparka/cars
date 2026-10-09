@@ -14,6 +14,19 @@ export function nativeMountFor(key, base = NATIVE_MOUNTS[key]?.base) {
   if (!mount || !allowed.includes(base)) throw new Error(`Unsupported native mount: ${key}`);
   return { ...mount, base };
 }
+// The reviewed Modern path helpers already understand both dealer slots, but
+// its standalone source still guards the original slot2 build-time default.
+// Widen only that exact known guard in the generated slot3 source; visitor
+// input never selects a base and every other trust-boundary helper stays intact.
+export function configureModernMountGuard(text, base) {
+  if (base !== '/variant-3') return text;
+  const original = 'if (publicBasePath !== "" && publicBasePath !== "/variant-2") {';
+  const generated = 'if (publicBasePath !== "" && !["/variant-2", "/variant-3"].includes(publicBasePath)) {';
+  if (text.includes(generated)) return text;
+  if (!text.includes('/variant-2')) return text; // Existing unconstrained fixture/contract.
+  if (text.split(original).length !== 2) throw Error('Modern alternate-slot build guard changed; review its native basePath contract');
+  return text.replace(original, generated).replace('Modern supports the standalone or native /variant-2 base path', 'Modern supports the standalone or native /variant-2 and /variant-3 base paths');
+}
 function objectSegments(text, from) {
   const stack = ['{'], parts = []; let start = from + 1;
   for (let i = start; i < text.length; i++) {
@@ -91,6 +104,8 @@ export function applyNativeMounts(inputFiles, manifest) {
     if (key === 'modern') {
       if (!nativeText(files, 'modern/apps/web/next.config.ts').includes('nextConfig.basePath = publicBasePath') ||
           !nativeText(files, 'modern/packages/internationalization/paths.ts').includes('NEXT_PUBLIC_BASE_PATH')) throw new Error('Modern lacks its native build-time basePath contract');
+      const pathsName = 'modern/packages/internationalization/paths.ts';
+      nativeWrite(files, pathsName, configureModernMountGuard(nativeText(files, pathsName), base));
       const proxy = nativeText(files, 'modern/apps/web/proxy.ts');
       if (proxy.includes('x-dealer-locale-rewrite') || !proxy.includes('createLocaleRequestHandler')) throw new Error('Modern native request handling is missing or was replaced by legacy mounting');
       bindConfiguration(files, 'modern/apps/web/lib/locale-configuration.ts', 'localeConfiguration', contractMap, contract);

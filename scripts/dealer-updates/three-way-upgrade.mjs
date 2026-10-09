@@ -145,6 +145,11 @@ function atomicWriteFile(target, bytes, { exclusive = false, assetPool, expected
   }
 }
 
+/** Detach an immutable candidate alias before changing its bytes. */
+export function replaceCandidateFile(target, bytes, { assetPool, expectedPreviousSha256 } = {}) {
+  return atomicWriteFile(target, bytes, { assetPool, expectedPreviousSha256 });
+}
+
 function comparable(pathname, bytes) {
   if (bytes === null || bytes === undefined) return null;
   const text = TEXT_EXTENSIONS.has(path.extname(pathname).toLowerCase())
@@ -539,10 +544,12 @@ export function writeCandidateTree(plan, destination) {
 }
 
 /** Materialize the full buildable dealer source under runtime without touching its checkout. */
-export function materializeUpgradeCandidate({ source, plan, destination, assetPool }) {
+export function materializeUpgradeCandidate({ source, plan, destination, assetPool, assetPoolStats }) {
   if (!plan?.ready) throw new Error('Unresolved template conflicts block candidate materialization');
   const target = path.resolve(destination);
   assertOutsideSource(source, target, 'Candidate destination');
+  const pool=assetPool?assertOutsideSource(source,path.resolve(assetPool),'Candidate asset pool'):null;
+  if(pool&&(isInsidePath(pool,target)||isInsidePath(target,pool)))throw new Error('Candidate asset pool must remain separate from the candidate');
   fs.mkdirSync(target, { recursive: true });
   if (fs.readdirSync(target).length) throw new Error('Candidate destination must be empty');
   const finalFiles = mapOfFiles(source);
@@ -558,7 +565,12 @@ export function materializeUpgradeCandidate({ source, plan, destination, assetPo
   for (const [name, bytes] of finalFiles) {
     const file = path.join(target, safeRelative(name));
     fs.mkdirSync(path.dirname(file), { recursive: true });
-    writeDerivedFile(file, bytes, {assetPool});
+    const stored=writeDerivedFile(file, bytes, {assetPool:pool});
+    if(assetPoolStats&&stored.pooled){
+      assetPoolStats[stored.reused?'objectsReused':'objectsWritten']=(assetPoolStats[stored.reused?'objectsReused':'objectsWritten']||0)+1;
+      assetPoolStats[stored.linked?'filesLinked':'filesCopied']=(assetPoolStats[stored.linked?'filesLinked':'filesCopied']||0)+1;
+      if(stored.linked)assetPoolStats.bytesLinked=(assetPoolStats.bytesLinked||0)+stored.bytes;
+    }
   }
   return target;
 }
@@ -646,7 +658,7 @@ function reusableInstallReceipt({ source, runDir, plan }) {
 }
 
 /** Install only reviewed path changes; create a machine-produced byte backup. */
-export function installUpgrade({ source, plan, runDir, candidateDirectory, assetPool, beforeWrite, afterWrite }) {
+export function installUpgrade({ source, plan, runDir, candidateDirectory, assetPool, candidateAssetPool, beforeWrite, afterWrite }) {
   if (!plan?.ready) throw new Error('Unresolved template conflicts block installation');
   const root = path.resolve(source), candidateDir = assertOutsideSource(
     root,
@@ -656,6 +668,9 @@ export function installUpgrade({ source, plan, runDir, candidateDirectory, asset
   assertCandidateRunRelationship(runDir, candidateDir);
   const pool=assetPool?assertOutsideSource(root,path.resolve(assetPool),'Derived asset pool'):null;
   if(pool&&(isInsidePath(pool,candidateDir)||isInsidePath(candidateDir,pool)||isInsidePath(pool,path.resolve(runDir))||isInsidePath(path.resolve(runDir),pool)))throw new Error('Derived asset pool must remain separate from the candidate and update run');
+  const reviewPool=candidateAssetPool?assertOutsideSource(root,path.resolve(candidateAssetPool),'Candidate asset pool'):null;
+  if(reviewPool&&(isInsidePath(reviewPool,candidateDir)||isInsidePath(candidateDir,reviewPool)||isInsidePath(reviewPool,path.resolve(runDir))||isInsidePath(path.resolve(runDir),reviewPool)))throw new Error('Candidate asset pool must remain separate from the candidate and update run');
+  if(reviewPool&&pool&&reviewPool!==pool&&(isInsidePath(reviewPool,pool)||isInsidePath(pool,reviewPool)))throw new Error('Candidate and installation asset pools must not contain each other');
   const lock = path.join(runDir, '.upgrade-write-lock');
   fs.mkdirSync(lock);
   const original = mapOfFiles(root), applied = [], conflicts = [];
@@ -674,7 +689,7 @@ export function installUpgrade({ source, plan, runDir, candidateDirectory, asset
       }
     } else {
       if (candidateExists) fs.rmSync(candidateDir, { recursive: true, force: true });
-      materializeUpgradeCandidate({ source: root, plan, destination: candidateDir });
+      materializeUpgradeCandidate({ source: root, plan, destination: candidateDir, assetPool:reviewPool });
     }
     const existingReceipt = reusableInstallReceipt({ source: root, runDir, plan });
     if (existingReceipt) return existingReceipt;
@@ -707,6 +722,7 @@ export function installUpgrade({ source, plan, runDir, candidateDirectory, asset
       sourceAfterSha256: sha256(Buffer.from(JSON.stringify([...mapOfFiles(root)].sort(([a], [b]) => a.localeCompare(b)).map(([name, bytes]) => [name, sha256(bytes)])))),
       rollbackDirectory: backupDir,
       candidateDirectory: candidateDir,
+      candidateAssetPool: reviewPool,
       assetPoolStats,
       changes: changed
     };

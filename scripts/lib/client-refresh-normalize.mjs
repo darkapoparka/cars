@@ -163,21 +163,21 @@ function normalizeBusiness(client, slug, rawFacts) {
   };
 }
 function loadInventory(client, rawFacts, slug) {
-  if (Array.isArray(rawFacts?.vehicles)) return rawFacts.vehicles;
+  if (Array.isArray(rawFacts?.vehicles)) return {listings:rawFacts.vehicles,kind:asString(rawFacts.kind)};
   for (const name of ['stock.json', 'normalized-inventory.json', 'FACTS-AND-INVENTORY.json']) {
     const file = path.join(client, name);
     if (!exists(file)) continue;
     const value = readJson(file);
-    if (Array.isArray(value)) return value;
+    if (Array.isArray(value)) return {listings:value,kind:''};
     for (const key of ['records', 'vehicles', 'listings', 'inventory', 'stock']) {
-      if (Array.isArray(value?.[key])) return value[key];
+      if (Array.isArray(value?.[key])) return {listings:value[key],kind:asString(value.kind)};
     }
   }
   if (slug === 'eliqauto') {
     const value = readJson(path.join(client, 'auto-best/src/lib/data/eliq-source.json'));
-    return asArray(value.listings);
+    return {listings:asArray(value.listings),kind:asString(value.kind)};
   }
-  return [];
+  return {listings:[],kind:''};
 }
 
 function normalizedImages(item) {
@@ -304,12 +304,12 @@ export function loadDealerProfile(client, slug) {
   const business = normalizeBusiness(client, slug, rawFacts);
   const logoContract = loadLogoContract(client);
   if (logoContract) { business.logo = logoContract.assets.onLight.publicPath; business.logoLight = logoContract.assets.onLight.publicPath; business.logoDark = logoContract.assets.onDark.publicPath; }
-  const rawListings = loadInventory(client, rawFacts, slug);
+  const inventory = loadInventory(client, rawFacts, slug), rawListings = inventory.listings;
   const listings = rawListings.map((item, index) => normalizeListing(item, index, business))
     .filter((item) => item.title && item.image);
   if (!business.name) throw new Error(`Dealer ${slug} has no reusable business name.`);
   if (!listings.length) throw new Error(`Dealer ${slug} has no reusable inventory with imagery.`);
-  return { schemaVersion: 1, slug, business, listings, rawFacts, sourceCount: rawListings.length, logoContract };
+  return { schemaVersion: 1, slug, business, listings, rawFacts, sourceCount: rawListings.length, stockKind:inventory.kind, logoContract };
 }
 
 export const refreshNormalizeInternals = {

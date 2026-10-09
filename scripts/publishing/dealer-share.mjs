@@ -145,8 +145,11 @@ export function removeIdentityHeadTags(source) {
 }
 
 function svelteMetadata(identity, assets, key) {
-  const canonical = key === 'karento-best' ? "const canonical = $derived.by(() => {\n    const url = new URL(identity.publicOrigin + page.url.pathname);\n    const id = page.url.searchParams.get('id');\n    if (/\\/vehicle\\/?$/.test(page.url.pathname) && id) url.searchParams.set('id', id);\n    return url.href;\n  });" : 'const canonical = $derived(identity.publicOrigin + page.url.pathname);';
-  return `<script lang="ts">\n  import { page } from '$app/state';\n  const identity = ${JSON.stringify({name: identity.name, publicOrigin: identity.publicOrigin, description: identity.description})};\n  const directory = ${JSON.stringify(identity.publicOrigin + assets.publicDirectory)};\n  ${canonical}\n</script>\n\n<svelte:head>\n  <link rel="canonical" href={canonical} />\n  <link rel="icon" type="image/png" sizes="32x32" href={directory + '/icon-32.png'} />\n  <link rel="shortcut icon" href={directory + '/favicon.ico'} />\n  <link rel="apple-touch-icon" sizes="180x180" href={directory + '/icon-180.png'} />\n  <meta property="og:type" content="website" />\n  <meta property="og:site_name" content={identity.name} />\n  <meta property="og:title" content={identity.name} />\n  <meta property="og:description" content={identity.description} />\n  <meta property="og:url" content={canonical} />\n  <meta property="og:image" content={directory + '/social.png'} />\n  <meta property="og:image:secure_url" content={directory + '/social.png'} />\n  <meta property="og:image:type" content="image/png" />\n  <meta property="og:image:width" content="1200" />\n  <meta property="og:image:height" content="630" />\n  <meta property="og:image:alt" content={identity.name + ' dealer website preview'} />\n  <meta name="twitter:card" content="summary_large_image" />\n  <meta name="twitter:title" content={identity.name} />\n  <meta name="twitter:description" content={identity.description} />\n  <meta name="twitter:image" content={directory + '/social.png'} />\n  <meta name="twitter:image:alt" content={identity.name + ' dealer website preview'} />\n</svelte:head>\n`;
+  const signature = key === 'karento-best';
+  const canonical = signature ? "const canonical = $derived.by(() => {\n    const url = new URL(identity.publicOrigin + page.url.pathname);\n    url.searchParams.set('lang', locale.locale);\n    const id = page.url.searchParams.get('id');\n    if (/\\/vehicle\\/?$/.test(page.url.pathname) && id) url.searchParams.set('id', id);\n    return url.href;\n  });" : 'const canonical = $derived(identity.publicOrigin + page.url.pathname);';
+  const localeScript = signature ? "import { useLocale } from '$lib/i18n/context.svelte';\n  const locale = useLocale();\n  " : '';
+  const imageAlt = signature ? "locale.t('metadata.websitePreview', { dealer: identity.name })" : "identity.name + ' dealer website preview'";
+  return `<script lang="ts">\n  import { page } from '$app/state';\n  ${localeScript}const identity = ${JSON.stringify({name: identity.name, publicOrigin: identity.publicOrigin, description: identity.description})};\n  const directory = ${JSON.stringify(identity.publicOrigin + assets.publicDirectory)};\n  ${canonical}\n</script>\n\n<svelte:head>\n  <link rel="canonical" href={canonical} />\n  <link rel="icon" type="image/png" sizes="32x32" href={directory + '/icon-32.png'} />\n  <link rel="shortcut icon" href={directory + '/favicon.ico'} />\n  <link rel="apple-touch-icon" sizes="180x180" href={directory + '/icon-180.png'} />\n  <meta property="og:type" content="website" />\n  <meta property="og:site_name" content={identity.name} />\n  <meta property="og:title" content={identity.name} />\n  <meta property="og:description" content={identity.description} />\n  <meta property="og:url" content={canonical} />\n  <meta property="og:image" content={directory + '/social.png'} />\n  <meta property="og:image:secure_url" content={directory + '/social.png'} />\n  <meta property="og:image:type" content="image/png" />\n  <meta property="og:image:width" content="1200" />\n  <meta property="og:image:height" content="630" />\n  <meta property="og:image:alt" content={${imageAlt}} />\n  <meta name="twitter:card" content="summary_large_image" />\n  <meta name="twitter:title" content={identity.name} />\n  <meta name="twitter:description" content={identity.description} />\n  <meta name="twitter:image" content={directory + '/social.png'} />\n  <meta name="twitter:image:alt" content={${imageAlt}} />\n</svelte:head>\n`;
 }
 
 function removeUnusedSvelteImports(source, ts) {
@@ -278,6 +281,9 @@ function patchNext(files, variant, identity, assets, changed, ts) {
 export async function applyDealerShare(files, manifest, options = {}) {
   if (files.has('.cars-dealer-share.json')) throw Error('Dealer share metadata already applied; regenerate from reviewed source.');
   if (!manifest.variants?.some(variant => variant.key === 'auto-best' && variant.base === '')) throw Error('Shared dealer metadata requires the existing root Auto Best service.');
+  const signatureVariants = manifest.variants.filter(variant => variant.key === 'karento-best');
+  const enabledLocales = manifest.localization?.enabledLocales;
+  if (signatureVariants.length && (!Array.isArray(enabledLocales) || !enabledLocales.length || enabledLocales.some(locale => typeof locale !== 'string' || !/^[a-z]{2,3}(?:-[a-zA-Z0-9]{2,8})*$/.test(locale)) || new Set(enabledLocales).size !== enabledLocales.length)) throw Error('Signature share metadata requires the approved enabledLocales contract.');
   const identity = resolveShareIdentity(files, manifest);
   const assets = await createDealerShareAssets(identity, options);
   const before = new Map([...files].map(([name, bytes]) => [name, hash(bytes)]));
@@ -306,7 +312,7 @@ export async function applyDealerShare(files, manifest, options = {}) {
     }
   }
   const receipt = {schemaVersion: 1, version: DEALER_SHARE_VERSION, dealer: manifest.slug, identity: {name: identity.name, publicOrigin: identity.publicOrigin, description: identity.description, logo: {sourcePath: identity.logo.sourcePath, sha256: identity.logo.sha256}, ...(identity.icon ? {icon: {sourcePath: identity.icon.sourcePath, sha256: identity.icon.sha256}} : {})},
-    publicDirectory: assets.publicDirectory, assetHosting: 'shared-root-autobest', layout: assets.layout, metadataBoundaries: counts, canonicalQueryIdentity: Object.fromEntries(manifest.variants.filter(variant => variant.key === 'karento-best').map(variant => [variant.key, {pathname: variant.base + '/vehicle', keys: ['id']} ])), suppressedFileBasedMetadata: suppressed,
+    publicDirectory: assets.publicDirectory, assetHosting: 'shared-root-autobest', layout: assets.layout, metadataBoundaries: counts, canonicalQueryIdentity: Object.fromEntries(signatureVariants.map(variant => [variant.key, {pathname: variant.base + '/vehicle', keys: ['id']} ])), canonicalLocaleIdentity: Object.fromEntries(signatureVariants.map(variant => [variant.key, {base: variant.base, key: 'lang', locales: [...enabledLocales]}])), suppressedFileBasedMetadata: suppressed,
     assets: [...assets.outputs].map(([name, bytes]) => ({path: 'auto-best/static' + assets.publicDirectory + '/' + name, publicUrl: identity.publicOrigin + assets.publicDirectory + '/' + name, sha256: hash(bytes), bytes: bytes.length})),
     transformations: [...new Set(changed)].sort().map(name => ({path: name, inputSha256: before.get(name) ?? null, outputSha256: hash(files.get(name))})),
   };
@@ -317,6 +323,7 @@ export async function applyDealerShare(files, manifest, options = {}) {
 export function inspectDealerShareHtml(html, pageUrl) {
   const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)?.[1] ?? '';
   const decode = value => value.replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&#39;', "'");
+  const language = html.match(/<html\b[^>]*\blang\s*=\s*(?:"([^"]*)"|'([^']*)')/i);
   const metadata = {}, links = [];
   for (const match of head.matchAll(/<(meta|link)\b(?:[^>"']|"[^"]*"|'[^']*')*>/gi)) {
     const tag = match[0], attrs = Object.fromEntries([...tag.matchAll(/([\w:-]+)\s*=\s*(?:"([^"]*)"|'([^']*)')/g)].map(attribute => [attribute[1].toLowerCase(), decode(attribute[2] ?? attribute[3])]));
@@ -332,5 +339,5 @@ export function inspectDealerShareHtml(html, pageUrl) {
   if (!metadata['og:image']?.length) problems.push('missing-og-image');
   if (metadata['og:image']?.some(value => !value.startsWith(origin + '/'))) problems.push('non-absolute-or-foreign-og-image');
   if (!favicons.length) problems.push('missing-favicon');
-  return {canonical, favicons, metadata, problems};
+  return {canonical, favicons, metadata, language: language ? decode(language[1] ?? language[2]) : null, problems};
 }

@@ -42,13 +42,13 @@ async function functionHandlerRepairs(output) {
         if (handler !== config.handler) repairs.push({ file, config: { ...config, handler } });
         continue;
       }
-      // adapter-vercel 7's Windows NFT output can retain the build-source path
+      // adapter-vercel's SvelteKit 2/3 Windows NFT output can retain the build-source path
       // while copying this exact entry into the Function. Repair only that
       // recognized generated entry, after comparing both immutable copies.
       const expected = '.svelte-kit/vercel-tmp/index.js';
       const actual = path.join(root, ...expected.split('/'));
       let proof = original;
-      if (!await exists(proof) && process.platform === 'win32' && /^3\./.test(config.framework.version ?? '')
+      if (!await exists(proof) && process.platform === 'win32' && /^[23]\./.test(config.framework.version ?? '')
         && path.basename(output) === 'output' && path.basename(path.dirname(output)) === '.vercel'
         && handler.startsWith('../')) {
         const serviceRoot = path.dirname(path.dirname(output));

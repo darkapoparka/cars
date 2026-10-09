@@ -16,11 +16,12 @@ import { applyVercelAssets } from './publishing/vercel-asset-plan.mjs';
 import {writeDerivedFile} from './lib/derived-assets.mjs';
 import {assertSixDesignSelection} from './lib/six-design-release.mjs';
 import {SIX_PACKAGING_VERSION,assertExtendedVariantSources,applySixVariantMounts,sealSixVariantBuild} from './publishing/six-variant.mjs';
+import {LEGACY_DETAIL_FILE,legacyDetailArtifact,legacyDetailRedirects} from './publishing/legacy-detail-routes.mjs';
 
 export const PACKAGING_VERSION = '1';
 const ROOT = path.resolve(import.meta.dirname, '..');
 const OMITTED = new Set(['node_modules', '.git', '.vercel', '.netlify', '.agency-os', '.codex', '.claude', '.agents', '.openai', '.auth', '.template', '.qa', '.runtime', '.svelte-kit', '.turbo', '.cache', '.pnpm-store', 'build', 'dist', 'runtime', 'artifacts', 'audits', 'qa', 'qa-final', 'evidence', 'test-results', 'playwright-report', 'coverage']);
-const ROOT_FILES = new Set(['.gitignore', 'AGENTS.md', 'CLIENT.md', 'README.md', 'DEPLOYMENT.md', 'business-facts.json', 'stock.json', 'FACTS-AND-INVENTORY.json', '.cars-app.json', '.cars-mobile.json', '.cars-signature.json']);
+const ROOT_FILES = new Set(['.gitignore', 'AGENTS.md', 'CLIENT.md', 'README.md', 'DEPLOYMENT.md', 'business-facts.json', 'stock.json', 'FACTS-AND-INVENTORY.json', '.cars-app.json', '.cars-mobile.json', '.cars-signature.json', LEGACY_DETAIL_FILE]);
 const nativePackaging = version => [NATIVE_PACKAGING_VERSION, APP_PACKAGING_VERSION, SIX_PACKAGING_VERSION].includes(version);
 const json = (value) => `${JSON.stringify(value, null, 2)}\n`;
 const sha256 = (value) => createHash('sha256').update(value).digest('hex');
@@ -138,10 +139,10 @@ function retainedAtCommit(relative, manifest) {
     || (manifest.extraAssets ?? []).some(p => relative === p || relative.startsWith(p + '/'));
 }
 
-export function vercelConfiguration(manifest) {
+export function vercelConfiguration(manifest, legacyDetails) {
   if (manifest.packaging.version === SIX_PACKAGING_VERSION) {
     assertSixDesignSelection(manifest.variants);
-    const services = {}, rewrites = [], redirects = [];
+    const services = {}, rewrites = [], redirects = legacyDetailRedirects(manifest,legacyDetails);
     const names = { 'auto-best':'autobest',modern:'modern',import:'importer',app:'app',mobile:'mobile','karento-best':'signature' };
     for (const {key,base,entry} of manifest.variants) {
       const helper = key === 'modern' ? '../../../scripts/build-native-service.mjs' : '../scripts/build-native-service.mjs';
@@ -235,7 +236,7 @@ async function prepare({ source, manifest, sourceCommit, guidance, canonicalFile
   const ignore=(files.get('.gitignore')?.toString('utf8')||'').split(/\r?\n/).filter(Boolean);
   const generatedIgnores=['# Cars generated package exclusions','**/node_modules/','**/.vercel/','**/.svelte-kit/','**/.next*/','**/.turbo/','**/build/','**/dist/','**/.agency-os/','**/.auth/','**/.env*','!**/.env.example','!**/.env.sample','!**/.env.template','runtime/','*.log','*.tsbuildinfo'];
   files.set('.gitignore',Buffer.from([...new Set([...ignore,...generatedIgnores])].join('\n')+'\n'));
-  files.set('vercel.json', Buffer.from(json(vercelConfiguration(manifest))));
+  files.set('vercel.json', Buffer.from(json(vercelConfiguration(manifest,manifest.packaging.version === SIX_PACKAGING_VERSION ? legacyDetailArtifact(files,manifest) : undefined))));
   files.set('.vercelignore', Buffer.from('.git\n**/node_modules\n**/.next*\n**/.svelte-kit\n**/.vercel\n**/.turbo\n**/.env*\n**/*.log\n**/*.tsbuildinfo\n**/build\n**/dist\nruntime\nqa\nqa-final\nevidence\n'));
   files.set('scripts/fix-svelte-service-output.mjs', await fs.readFile(new URL('./publishing/fix-svelte-service-output.mjs', import.meta.url)));
   if (native) files.set('scripts/build-native-service.mjs', await fs.readFile(new URL('./publishing/build-native-service.mjs', import.meta.url)));

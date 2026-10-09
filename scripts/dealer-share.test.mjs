@@ -30,7 +30,7 @@ async function fixture() {
   files.set('mobile/src/app/layout.tsx', Buffer.from(`import type {Metadata} from 'next';export const metadata:Metadata={title:'Your showroom',description:'Website preview'};export default function Layout({children}:{children:React.ReactNode}){return <html><body>{children}</body></html>}`));
   files.set('mobile/src/app/contact/page.tsx', Buffer.from(`export const metadata={title:'Contact'};export default function Contact(){return <main/>}`));
   files.set('mobile/src/app/icon.svg', Buffer.from('<svg/>'));
-  const manifest = {slug:'reviewed-dealer',variants,shareIdentity:{name:'Reviewed Dealer',publicOrigin:'https://dealer.example',description:'Dealer proposal with sample inventory.',logo:{sourcePath:'dealer-brand/logo-on-light.png',sha256:sha(logo)}}};
+  const manifest = {slug:'reviewed-dealer',variants,localization:{defaultLocale:'bg',enabledLocales:['en','bg']},shareIdentity:{name:'Reviewed Dealer',publicOrigin:'https://dealer.example',description:'Dealer proposal with sample inventory.',logo:{sourcePath:'dealer-brand/logo-on-light.png',sha256:sha(logo)}}};
   return {files,manifest};
 }
 
@@ -94,6 +94,9 @@ test('all six package families use one asset set and dynamic metadata without ch
   assert.equal(files.has('mobile/src/app/icon.svg'),false);
   assert.match(files.get('karento-best/src/lib/CarsDealerShare.svelte').toString(),/searchParams.get\('id'\)/);
   assert.deepEqual(receipt.canonicalQueryIdentity['karento-best'],{pathname:'/variant-6/vehicle',keys:['id']});
+  assert.deepEqual(receipt.canonicalLocaleIdentity['karento-best'],{base:'/variant-6',key:'lang',locales:['en','bg']});
+  const signatureShare=files.get('karento-best/src/lib/CarsDealerShare.svelte').toString();
+  assert.match(signatureShare,/useLocale/);assert.match(signatureShare,/searchParams.set\('lang', locale.locale\)/);assert.match(signatureShare,/locale.t\('metadata.websitePreview'/);
   for(const key of ['auto-best','import','karento-best']){
     const source=files.get(`${key}/src/lib/CarsDealerShare.svelte`).toString();
     assert.match(source,/page.url.pathname/);assert.match(source,/og:image:width/);assert.match(source,/1200/);assert.doesNotMatch(source,/reference.example|template.svg/);
@@ -129,8 +132,8 @@ test('served HTML audit detects the concrete missing/foreign canonical and shari
 
 test('anonymous hosted verifier binds mounted page metadata and image bytes to the package receipt',async()=>{
   const {files,manifest}=await fixture();const receipt=await applyDealerShare(files,manifest);
-  const root=manifest.shareIdentity.publicOrigin,directory=root+receipt.publicDirectory,page=root+'/variant-6/bg/vehicle';
-  const html=`<html><head><link rel="canonical" href="${page}"/><link rel="icon" href="${directory}/icon-32.png"/><meta property="og:url" content="${page}"/><meta property="og:image" content="${directory}/social.png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta name="twitter:image" content="${directory}/social.png"/></head></html>`;
+  const root=manifest.shareIdentity.publicOrigin,directory=root+receipt.publicDirectory,page=root+'/variant-6/vehicle?lang=bg';
+  const html=`<html lang="bg"><head><link rel="canonical" href="${page}"/><link rel="icon" href="${directory}/icon-32.png"/><meta property="og:url" content="${page}"/><meta property="og:image" content="${directory}/social.png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta name="twitter:image" content="${directory}/social.png"/></head></html>`;
   let calls=0;
   const fetchPage=async(url,options)=>{
     assert.match(options.headers['User-Agent'],/facebookexternalhit/);assert.equal(options.headers.Authorization,undefined);calls++;
@@ -139,18 +142,18 @@ test('anonymous hosted verifier binds mounted page metadata and image bytes to t
     const bytes=isPage?Buffer.from(html):files.get(asset.path);
     return {ok:true,status:200,url,headers:new Headers({'content-type':isPage?'text/html':'image/png'}),text:async()=>bytes.toString(),arrayBuffer:async()=>bytes};
   };
-  const evidence=await verifyDealerShare({origin:root,paths:['/variant-6/bg/vehicle'],receipt,fetch:fetchPage});
+  const evidence=await verifyDealerShare({origin:root,paths:['/variant-6/vehicle?lang=bg'],receipt,fetch:fetchPage});
   assert.equal(evidence.passed,true);assert.equal(evidence.access,'anonymous-social-crawler-http');assert.equal(calls,3);
   const incorrect=structuredClone(receipt);incorrect.assets.find(entry=>entry.publicUrl.endsWith('/social.png')).sha256='0'.repeat(64);
-  const mismatch=await verifyDealerShare({origin:root,paths:['/variant-6/bg/vehicle'],receipt:incorrect,fetch:fetchPage});
+  const mismatch=await verifyDealerShare({origin:root,paths:['/variant-6/vehicle?lang=bg'],receipt:incorrect,fetch:fetchPage});
   assert.equal(mismatch.passed,false);assert.ok(mismatch.pages[0].problems.includes('unavailable-og-image'));assert.match(mismatch.assets.find(asset=>asset.url.endsWith('/social.png')).error,/bytes differ/);
 });
 
 test('Signature crawler verification preserves distinct vehicle IDs while dropping Facebook tracking',async()=>{
   const {files,manifest}=await fixture();const receipt=await applyDealerShare(files,manifest);
   const root=manifest.shareIdentity.publicOrigin,directory=root+receipt.publicDirectory;
-  const routes=['/variant-6/vehicle?id=stock-a&fbclid=facebook-a','/variant-6/vehicle?id=stock-b&fbclid=facebook-b'];
-  const expected=[root+'/variant-6/vehicle?id=stock-a',root+'/variant-6/vehicle?id=stock-b'];
+  const routes=['/variant-6/vehicle?lang=bg&id=stock-a&fbclid=facebook-a','/variant-6/vehicle?lang=en&id=stock-b&fbclid=facebook-b'];
+  const expected=[root+'/variant-6/vehicle?lang=bg&id=stock-a',root+'/variant-6/vehicle?lang=en&id=stock-b'];
   let collapseVehicles=false;
   const fetchPage=async(url,options)=>{
     assert.match(options.headers['User-Agent'],/facebookexternalhit/);
@@ -158,7 +161,7 @@ test('Signature crawler verification preserves distinct vehicle IDs while droppi
     const asset=receipt.assets.find(entry=>entry.publicUrl===url);
     assert.ok(index>=0||asset,'unexpected public request');
     const canonical=collapseVehicles?root+'/variant-6/vehicle':expected[index];
-    const html=`<html><head><link rel="canonical" href="${canonical}"/><link rel="icon" href="${directory}/icon-32.png"/><meta property="og:url" content="${canonical}"/><meta property="og:image" content="${directory}/social.png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta name="twitter:image" content="${directory}/social.png"/></head></html>`;
+    const html=`<html lang="${index===0?'bg':'en'}"><head><link rel="canonical" href="${canonical}"/><link rel="icon" href="${directory}/icon-32.png"/><meta property="og:url" content="${canonical}"/><meta property="og:image" content="${directory}/social.png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta name="twitter:image" content="${directory}/social.png"/></head></html>`;
     const bytes=index>=0?Buffer.from(html):files.get(asset.path);
     return {ok:true,status:200,url,headers:new Headers({'content-type':index>=0?'text/html':'image/png'}),text:async()=>bytes.toString(),arrayBuffer:async()=>bytes};
   };
@@ -169,4 +172,34 @@ test('Signature crawler verification preserves distinct vehicle IDs while droppi
   const collapsed=await verifyDealerShare({origin:root,paths:routes,receipt,fetch:fetchPage});
   assert.equal(collapsed.passed,false);
   assert.ok(collapsed.pages.every(page=>page.problems.includes('canonical-does-not-match-mounted-page')));
+});
+
+test('Signature shared URLs retain resolved language on every page and reject inconsistent document language',async()=>{
+  const {files,manifest}=await fixture();const receipt=await applyDealerShare(files,manifest);
+  const root=manifest.shareIdentity.publicOrigin,directory=root+receipt.publicDirectory;
+  const routes=['/variant-6/contact?lang=bg&fbclid=x','/variant-6/vehicles?lang=en&sort=price','/variant-6/?fbclid=x','/variant-6/?lang=unsupported','/variant-6/?lang=en&lang=bg'];
+  const languages=['bg','en','bg','bg','bg'];
+  const expected=[root+'/variant-6/contact?lang=bg',root+'/variant-6/vehicles?lang=en',root+'/variant-6/?lang=bg',root+'/variant-6/?lang=bg',root+'/variant-6/?lang=bg'];
+  let wrongLanguage=false;
+  const fetchPage=async(url)=>{
+    const index=routes.findIndex(route=>root+route===url);
+    const asset=receipt.assets.find(entry=>entry.publicUrl===url);
+    assert.ok(index>=0||asset,'unexpected public request');
+    const language=wrongLanguage?(index===0?'en':''):languages[index];
+    const html=`<html lang="${language}"><head><link rel="canonical" href="${expected[index]}"/><link rel="icon" href="${directory}/icon-32.png"/><meta property="og:url" content="${expected[index]}"/><meta property="og:image" content="${directory}/social.png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta name="twitter:image" content="${directory}/social.png"/></head></html>`;
+    const bytes=index>=0?Buffer.from(html):files.get(asset.path);
+    return {ok:true,status:200,url,headers:new Headers({'content-type':index>=0?'text/html':'image/png'}),text:async()=>bytes.toString(),arrayBuffer:async()=>bytes};
+  };
+  const result=await verifyDealerShare({origin:root,paths:routes,receipt,fetch:fetchPage});
+  assert.equal(result.passed,true);assert.deepEqual(result.pages.map(page=>page.canonical[0]),expected);
+  wrongLanguage=true;
+  const failed=await verifyDealerShare({origin:root,paths:routes,receipt,fetch:fetchPage});
+  assert.equal(failed.passed,false);assert.ok(failed.pages[0].problems.includes('document-language-does-not-match-request'));
+  assert.ok(failed.pages.slice(1).every(page=>page.problems.includes('missing-or-unsupported-document-language')));
+});
+
+test('Signature share identity requires its approved locale contract',async()=>{
+  const {files,manifest}=await fixture();
+  await assert.rejects(()=>applyDealerShare(new Map(files),{...manifest,localization:undefined}),/approved enabledLocales contract/);
+  await assert.rejects(()=>applyDealerShare(new Map(files),{...manifest,localization:{enabledLocales:['bg','bg']}}),/approved enabledLocales contract/);
 });

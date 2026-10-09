@@ -76,6 +76,13 @@ export function runNativeBuild(key, { packageRoot = path.resolve(import.meta.dir
   const plan = nativeBuildPlan(key, selected[0].base);
   if (['mobile', 'karento-best'].includes(key) && manifest.packaging.version !== '5') throw new Error('Extended service requires six-design packaging');
   const environment = { ...process.env, ...plan.environment };
+  // npm script shims resolve `node` from PATH. Keep their compiler/runtime on
+  // the same Node executable that owns this build, including local Windows
+  // qualification where the user's default shell may use another major.
+  const pathKey = process.platform === 'win32' ? 'Path' : 'PATH';
+  const inheritedPath = Object.entries(environment).find(([name]) => name.toLowerCase() === 'path')?.[1] ?? '';
+  for (const name of Object.keys(environment)) if (name.toLowerCase() === 'path') delete environment[name];
+  environment[pathKey] = path.dirname(process.execPath) + path.delimiter + inheritedPath;
   if (key === 'carwow') delete environment.DAY_PREVIEW_ADAPTER;
   const cwd = path.join(packageRoot, plan.root);
   if (installOnly && dependenciesInstalled) throw Error('Install and reuse phases are mutually exclusive');

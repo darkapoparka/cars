@@ -19,12 +19,14 @@ import {
   selectPinnedRevisions,
   upgradeReviewReport,
   reconcilePlanWithCandidate,
+  replaceCandidateFile,
   installUpgrade,
   rollbackUpgrade,
   updateManifestPins
 } from './three-way-upgrade.mjs';
 import { readPinnedTemplateTree } from './pinned-template-source.mjs';
 import { baseNativeManifest, APP_PACKAGING_VERSION, assertAppVariant } from '../publishing/app-variant.mjs';
+import { buildLegacyDetailRouteMap, legacyDetailArtifact, LEGACY_DETAIL_FILE } from '../publishing/legacy-detail-routes.mjs';
 
 const TEMPLATE_KEYS = ['auto-best', 'modern', 'carwow', 'import', 'app', 'mobile', 'karento-best'];
 const sha256 = value => crypto.createHash('sha256').update(value).digest('hex');
@@ -38,6 +40,7 @@ Opt in to a template update for one existing dealer.
   node update-dealer-template.mjs plan --dealer-root <path> [--cars-root <path>]
        [--template-root <path>] [--lock-file <path>] [--run-dir <path>]
        [--candidate-dir <path>] [--resolutions-file <json-path>]
+       [--candidate-asset-pool <path>] [--asset-pool <installation-path>]
        [--design-set six] [--variants karento-best]
   node update-dealer-template.mjs install --run-dir <path>
   node update-dealer-template.mjs rollback --run-dir <path> [--dealer-root <path>]
@@ -52,7 +55,7 @@ function parseCommand(argv) {
   const [action, ...rest] = argv;
   if (!['plan', 'install', 'rollback'].includes(action)) throw new Error(`Unknown action: ${action}\n${updateDealerTemplateUsage}`);
   const allowed = {
-    plan: new Set(['dealer-root', 'cars-root', 'template-root', 'lock-file', 'run-dir', 'candidate-dir', 'resolutions-file', 'asset-pool', 'design-set', 'variants']),
+    plan: new Set(['dealer-root', 'cars-root', 'template-root', 'lock-file', 'run-dir', 'candidate-dir', 'resolutions-file', 'asset-pool', 'candidate-asset-pool', 'design-set', 'variants']),
     install: new Set(['run-dir']),
     rollback: new Set(['run-dir', 'dealer-root'])
   }[action];
@@ -328,7 +331,7 @@ function readDirectoryTree(root) {
   return files;
 }
 
-function writeDirectoryTreeChanges(root, before, after) {
+function writeDirectoryTreeChanges(root, before, after, assetPool) {
   for (const name of new Set([...before.keys(), ...after.keys()])) {
     const oldBytes = before.get(name) ?? null;
     const newBytes = after.get(name) ?? null;
@@ -337,7 +340,7 @@ function writeDirectoryTreeChanges(root, before, after) {
     if (newBytes === null) fs.rmSync(target, { force: true });
     else {
       fs.mkdirSync(path.dirname(target), { recursive: true });
-      fs.writeFileSync(target, newBytes);
+      replaceCandidateFile(target,newBytes,{assetPool,expectedPreviousSha256:oldBytes===null?null:sha256(oldBytes)});
     }
   }
 }
@@ -404,7 +407,26 @@ async function personalizeAddedBases({ pins, newBases, dealerRoot, manifest }) {
   return adaptation;
 }
 
-async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {carsRoot, refreshedAt} = {}) {
+/** Preserve exact old Carwow links while the published third family changes. */
+export function addLegacyDetailUpgrade({ files, dealerRoot, manifest, pins }) {
+  if (manifest.packaging?.version !== SIX_DESIGN_PACKAGING_CANDIDATE) return null;
+  const original=readJson(path.join(dealerRoot,'dealer.json'));
+  const migration=original.variants?.some(variant=>variant.key==='carwow'&&variant.base==='/variant-3');
+  const third=manifest.variants.find(variant=>variant.base==='/variant-3');
+  if (!migration && !(manifest.legacyDetailRoutes && pins?.[third?.key])) {
+    // Signature-only refreshes retain the existing exact map byte for byte.
+    legacyDetailArtifact(files,manifest);
+    return null;
+  }
+  const profile=loadDealerProfile(dealerRoot,manifest.slug);
+  const mapping=buildLegacyDetailRouteMap({dealerRoot,profile,manifest});
+  manifest.legacyDetailRoutes=mapping.reference;
+  files.set(LEGACY_DETAIL_FILE,mapping.bytes);
+  files.set('dealer.json',Buffer.from(JSON.stringify(manifest,null,2)+'\n'));
+  return {entries:mapping.artifact.entries.length,retired:mapping.artifact.retired.length,reference:mapping.reference};
+}
+
+async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {carsRoot, refreshedAt, extendedAdaptations = {}, candidateAssetPool} = {}) {
   if (!['2', APP_PACKAGING_VERSION, SIX_DESIGN_PACKAGING_CANDIDATE].includes(plan.manifest.packaging.version)) {
     reconcilePlanWithCandidate({ source: dealerRoot, plan, candidateDirectory });
     return;
@@ -413,6 +435,8 @@ async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {ca
   const files = readDirectoryTree(candidateDirectory);
   const before = new Map([...files].map(([name, bytes]) => [name, Buffer.from(bytes)]));
   const candidateManifest = JSON.parse(files.get('dealer.json').toString('utf8').replace(/^\uFEFF/, ''));
+  addLegacyDetailUpgrade({files,dealerRoot,manifest:candidateManifest,pins:plan.pins});
+  plan.manifest=candidateManifest;
   validatePackagingManifest(candidateManifest);
   const baseManifest = baseNativeManifest(candidateManifest);
   const selectedNative = baseManifest.variants.some(({key})=>plan.pins[key]);
@@ -442,18 +466,18 @@ async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {ca
     for (const key of Object.keys(EXTENDED_VARIANT_RECEIPTS).filter(key=>plan.pins[key])) {
       const current = files.has(EXTENDED_VARIANT_RECEIPTS[key]) ? JSON.parse(files.get(EXTENDED_VARIANT_RECEIPTS[key]).toString()) : null;
       const p = current?.personalization;
-      const adaptation = p || {
+      const adaptation = extendedAdaptations[key] || (p ? {...p,nativeFacts:p.nativeDealerFacts===true} : {
         logoPaths: [...new Set([profile.business.logo,profile.business.logoDark].filter(Boolean))],
         mediaPaths:[...new Set(profile.listings.flatMap(car=>car.images))],
         contentPaths:key==='mobile' ? ['mobile/src/lib/showroom-config.ts','mobile/src/lib/catalog.ts','mobile/src/lib/dealer-inventory.json','mobile/src/lib/dealers.ts'] :
           ['karento-best/src/lib/content.ts','karento-best/src/lib/data/vehicles.ts','karento-best/src/lib/data/vehicle-listing.ts','karento-best/src/lib/data/dealer-vehicles.json']
-      };
+      });
       sealExtendedVariant({files:adopted,key,manifest:candidateManifest,profile,adaptation});
     }
   }
   // Retain excluded dealer work in source; it is not part of the publish seal.
   const diskFiles = new Map([...files, ...adopted]);
-  writeDirectoryTreeChanges(candidateDirectory, before, diskFiles);
+  writeDirectoryTreeChanges(candidateDirectory, before, diskFiles, candidateAssetPool);
   reconcilePlanWithCandidate({ source: dealerRoot, plan, candidateDirectory });
 }
 
@@ -516,7 +540,7 @@ async function validatePinnedBaseEvidence(metadata, manifest, lock, paths) {
     oldBases[key] = oldTree.tree;
     newBases[key] = targetTree.tree;
   }
-  await personalizeAddedBases({pins:metadata.pins,newBases,dealerRoot:metadata.dealerRoot,manifest});
+  const extendedAdaptations=await personalizeAddedBases({pins:metadata.pins,newBases,dealerRoot:metadata.dealerRoot,manifest});
   const targetManifest = metadata.targetManifest;
   validatePackagingManifest(targetManifest);
   if (sha256(Buffer.from(JSON.stringify(targetManifest))) !== metadata.targetManifestSha256) {
@@ -527,7 +551,7 @@ async function validatePinnedBaseEvidence(metadata, manifest, lock, paths) {
   if(sha256(Buffer.from(JSON.stringify(currentTarget)))!==metadata.targetManifestSha256)throw new Error('Dealer delivery identity changed after review; create a new update plan');
   const adapted = await adaptPinnedBases({ keys: Object.keys(metadata.pins), oldBases, newBases, manifest, targetManifest });
   if (adapted.adapter !== metadata.baseAdapter) throw new Error('Dealer source adapter changed after review; create a new update plan');
-  return adapted;
+  return {...adapted,extendedAdaptations};
 }
 
 function validateRepositoryPaths(pins, paths) {
@@ -593,20 +617,24 @@ async function runPlan(values) {
       target: { ...pin.targetSource, digest: targetTree.digest }
     };
   }
-  await personalizeAddedBases({pins,newBases,dealerRoot,manifest});
+  const extendedAdaptations=await personalizeAddedBases({pins,newBases,dealerRoot,manifest});
 
   const adapted = await adaptPinnedBases({ keys: Object.keys(pins), oldBases, newBases, manifest, targetManifest });
   const assetPool=values['asset-pool']?ensureCandidateDirectory({carsRoot,dealerRoot,repositoryPaths:paths,runDirectory,requested:values['asset-pool'],explicit:true}):null;
   if(assetPool&&pathsOverlap(assetPool,candidatePath))throw new Error('Derived asset pool must be separate from the candidate');
+  const candidateAssetPool=values['candidate-asset-pool']?ensureCandidateDirectory({carsRoot,dealerRoot,repositoryPaths:paths,runDirectory,requested:values['candidate-asset-pool'],explicit:true}):assetPool;
+  if(candidateAssetPool&&pathsOverlap(candidateAssetPool,candidatePath))throw new Error('Candidate asset pool must be separate from the candidate');
+  if(assetPool&&candidateAssetPool&&!samePath(assetPool,candidateAssetPool)&&pathsOverlap(assetPool,candidateAssetPool))throw new Error('Candidate and installation asset pools must not contain each other');
+  const candidateAssetPoolStats={pool:candidateAssetPool,objectsWritten:0,objectsReused:0,filesLinked:0,filesCopied:0,bytesLinked:0};
   const plan = planDealerUpgrade({ dealerRoot, lock, oldBases: adapted.oldBases, newBases: adapted.newBases, targetManifest: adapted.targetManifest, selectedKeys:selection.selectedKeys, resolutions });
   let candidateDirectory = null, candidateDigest = null;
   if (plan.ready) {
     candidateDirectory = materializeUpgradeCandidate({
       source: dealerRoot,
       plan,
-      destination: candidatePath, assetPool
+      destination: candidatePath, assetPool:candidateAssetPool, assetPoolStats:candidateAssetPoolStats
     });
-    await addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {carsRoot, refreshedAt: createdAt});
+    await addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {carsRoot, refreshedAt: createdAt, extendedAdaptations, candidateAssetPool});
     candidateDigest = fingerprint(candidateDirectory).digest;
   }
   const review = upgradeReviewReport(plan);
@@ -638,6 +666,8 @@ async function runPlan(values) {
     reviewDigest: sha256(Buffer.from(JSON.stringify(review))),
     candidateDirectory,
     assetPool,
+    candidateAssetPool,
+    candidateAssetPoolStats,
     candidateDigest
   };
   writeJsonExclusive(path.join(runDirectory, 'run.json'), metadata);
@@ -675,6 +705,7 @@ async function runInstall(values) {
   const paths = repositoryPaths(metadata.carsRoot, metadata.templateRoot);
   validateRepositoryPaths(metadata.pins, paths);
   if(metadata.assetPool)ensureCandidateDirectory({carsRoot:metadata.carsRoot,dealerRoot,repositoryPaths:paths,runDirectory,requested:metadata.assetPool,explicit:true});
+  if(metadata.candidateAssetPool)ensureCandidateDirectory({carsRoot:metadata.carsRoot,dealerRoot,repositoryPaths:paths,runDirectory,requested:metadata.candidateAssetPool,explicit:true});
   const candidateDirectory = ensureCandidateDirectory({
     carsRoot: metadata.carsRoot,
     dealerRoot,
@@ -704,7 +735,7 @@ async function runInstall(values) {
       source: dealerRoot,
       plan: { ready: true, changes: review.changes },
       runDir: runDirectory,
-      candidateDirectory,assetPool:metadata.assetPool
+      candidateDirectory,assetPool:metadata.assetPool,candidateAssetPool:metadata.candidateAssetPool
     });
     return { action: 'install', ...retried };
   }
@@ -725,8 +756,9 @@ async function runInstall(values) {
     fs.mkdirSync(path.dirname(candidateDirectory), { recursive: true });
     const validationCandidate = fs.mkdtempSync(path.join(path.dirname(candidateDirectory), '.cars-upgrade-validation-'));
     try {
-      materializeUpgradeCandidate({ source: dealerRoot, plan, destination: validationCandidate, assetPool: metadata.assetPool });
-      await addNativeAdoption(plan, validationCandidate, dealerRoot, lock, {carsRoot: metadata.carsRoot, refreshedAt: metadata.createdAt});
+      const candidateAssetPool=metadata.candidateAssetPool??metadata.assetPool;
+      materializeUpgradeCandidate({ source: dealerRoot, plan, destination: validationCandidate, assetPool:candidateAssetPool });
+      await addNativeAdoption(plan, validationCandidate, dealerRoot, lock, {carsRoot: metadata.carsRoot, refreshedAt: metadata.createdAt,extendedAdaptations:adapted.extendedAdaptations,candidateAssetPool});
       recomputedReview = upgradeReviewReport(plan);
     } finally {
       fs.rmSync(validationCandidate, { recursive: true, force: true });
@@ -735,7 +767,7 @@ async function runInstall(values) {
   if (sha256(Buffer.from(JSON.stringify(recomputedReview))) !== metadata.reviewDigest) {
     throw new Error('Current merge plan differs from the reviewed plan; create a new update plan');
   }
-  const installed = installUpgrade({ source: dealerRoot, plan, runDir: runDirectory, candidateDirectory,assetPool:metadata.assetPool });
+  const installed = installUpgrade({ source: dealerRoot, plan, runDir: runDirectory, candidateDirectory,assetPool:metadata.assetPool,candidateAssetPool:metadata.candidateAssetPool });
   return { action: 'install', ...installed };
 }
 

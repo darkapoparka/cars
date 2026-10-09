@@ -11,6 +11,8 @@ import { validateManifest } from './lib/workflow.mjs';
 import { packageDealer, validatePackagingManifest, vercelConfiguration } from './package-dealer.mjs';
 import { appSourceDigest, baseNativeManifest } from './publishing/app-variant.mjs';
 import { nativeBuildPlan, runNativeBuild } from './publishing/build-native-service.mjs';
+import { configureModernMountGuard } from './publishing/native-mounts.mjs';
+import vm from 'node:vm';
 import { applySixVariantMounts, assertExtendedVariantSources, extendedSourceDigest, mountSvelteUrlAttributes, sealSixVariantBuild } from './publishing/six-variant.mjs';
 import { applyVercelAssets } from './publishing/vercel-asset-plan.mjs';
 import { nativeFixture } from './test-fixtures/native-source.mjs';
@@ -89,6 +91,21 @@ test('generated mount helper is idempotent, preserves external/hash URLs and res
   for(const value of ['https://example.test/path','//example.test/path','#contact','tel:+359123456','/preview-switcher.js',undefined,null])assert.equal(carsMountPath(value),value);
   assert.equal(carsLocalPath('/variant-6/vehicles'),'/vehicles');assert.equal(carsLocalPath('/variant-6'),'/');assert.equal(carsLocalPath('/variant-60/vehicles'),'/variant-60/vehicles');
 });
+test('personalized JSON inventory and Signature detail modules mount copied dealer assets while preserving stock identity',()=>{
+  const files=mountedFixture();
+  files.set('mobile/public/assets/dealer/car.webp',bytes('car'));
+  files.set('mobile/public/dealer-brand/logo.webp',bytes('logo'));
+  files.set('mobile/src/lib/dealer-inventory.json',bytes([{id:'actual-stock-id',slug:'actual-stock-slug',image:'/assets/dealer/car.webp',logo:'/dealer-brand/logo.webp',url:'https://dealer.example/actual-stock-id'}]));
+  files.set('karento-best/static/assets/dealer/car.webp',bytes('car'));
+  files.set('karento-best/static/dealer-brand/logo.webp',bytes('logo'));
+  files.set('karento-best/src/lib/data/dealer-detail.ts',bytes('export const detail={id:"actual-stock-id",gallery:["/assets/dealer/car.webp"],logo:"/dealer-brand/logo.webp",route:"/vehicle?id=actual-stock-id"};'));
+  const mounted=applySixVariantMounts(files,manifest());
+  assert.deepEqual(JSON.parse(mounted.get('mobile/src/lib/dealer-inventory.json')),[{id:'actual-stock-id',slug:'actual-stock-slug',image:'/variant-5/assets/dealer/car.webp',logo:'/variant-5/dealer-brand/logo.webp',url:'https://dealer.example/actual-stock-id'}]);
+  const detail=mounted.get('karento-best/src/lib/data/dealer-detail.ts').toString();
+  assert.match(detail,/gallery:\["\/variant-6\/assets\/dealer\/car.webp"\]/);
+  assert.match(detail,/logo:"\/variant-6\/dealer-brand\/logo.webp"/);
+  assert.match(detail,/id:"actual-stock-id"/);assert.match(detail,/route:"\/vehicle\?id=actual-stock-id"/);
+});
 test('unknown or modified dependency/mount inputs are rejected before package installation',()=>{
   const changed=mountedFixture();changed.set('karento-best/package-lock.json',bytes('{}'));assert.throws(()=>applySixVariantMounts(changed,manifest()),/dependency inputs changed/);
   const hybrid=mountedFixture();hybrid.set('mobile/next.config.js',bytes("module.exports = {basePath:'/already-mounted'}"));assert.throws(()=>applySixVariantMounts(hybrid,manifest()),/unknown basePath/);
@@ -111,11 +128,27 @@ for(const key of ['modern','import'])test('native '+key+' build selects the revi
   fs.writeFileSync(path.join(root,'dealer.json'),JSON.stringify({packaging:{version:'5'},variants:[{key,base:'/variant-3'}]}));
   const calls=[];const result=runNativeBuild(key,{packageRoot:root,run:(program,args,options)=>{calls.push(options);return {status:0};}});
   assert.equal(result.base,'/variant-3');assert.equal(calls[0].env[key==='modern'?'NEXT_PUBLIC_BASE_PATH':'TEMPLATE_BASE_PATH'],'/variant-3');
+  for(const call of calls){
+    const paths=Object.entries(call.env).filter(([name])=>name.toLowerCase()==='path');
+    assert.equal(paths.length,1,'Windows child environments must not contain competing PATH keys');
+    assert.equal(paths[0][1].split(path.delimiter)[0],path.dirname(process.execPath),'npm script compilers must inherit the build Node runtime');
+  }
 });
 test('new native services use retained npm locks and the right compiler/environment',()=>{
   assert.deepEqual(nativeBuildPlan('mobile').steps,[['npm','ci','--include=dev'],['npm','run','build']]);assert.equal(nativeBuildPlan('mobile').environment.NEXT_DIST_DIR,'.next');
   assert.deepEqual(nativeBuildPlan('karento-best').steps.at(-1),['node','../scripts/fix-svelte-service-output.mjs','/variant-6']);
   assert.throws(()=>nativeBuildPlan('mobile','/variant-3'),/Unsupported native mount/);
+});
+
+test('derived Modern alternate slot widens only the reviewed build guard and rejects unknown bases',()=>{
+  const original='const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";\nif (publicBasePath !== "" && publicBasePath !== "/variant-2") {\nthrow new Error("Modern supports the standalone or native /variant-2 base path");\n}\nconst marker="trust-boundary-unchanged";';
+  assert.equal(configureModernMountGuard(original,'/variant-2'),original);
+  const generated=configureModernMountGuard(original,'/variant-3');
+  assert.equal(configureModernMountGuard(generated,'/variant-3'),generated);
+  assert.match(generated,/const marker="trust-boundary-unchanged"/);
+  for(const base of ['', '/variant-2','/variant-3'])assert.doesNotThrow(()=>vm.runInNewContext(generated,{process:{env:{NEXT_PUBLIC_BASE_PATH:base}}}));
+  for(const base of ['/variant-6','/variant-30','/visitor-selected'])assert.throws(()=>vm.runInNewContext(generated,{process:{env:{NEXT_PUBLIC_BASE_PATH:base}}}),/Modern supports/);
+  assert.throws(()=>configureModernMountGuard(original.replace('publicBasePath !== "/variant-2"','!allowed.includes(publicBasePath) /* /variant-2 */'),'/variant-3'),/build guard changed/);
 });
 
 test('six-family package integrates source receipts, common identity, final seals and one Services deployment deterministically', async t => {
@@ -166,6 +199,8 @@ test('six-family package integrates source receipts, common identity, final seal
   assert.equal(share.identity.name,'Fixture Dealer');
   assert.equal(Object.keys(share.metadataBoundaries).length,6);
   assert.deepEqual(share.canonicalQueryIdentity['karento-best'].keys,['id']);
+  assert.equal(share.canonicalLocaleIdentity['karento-best'].base,'/variant-6');
+  assert.equal(share.canonicalLocaleIdentity['karento-best'].key,'lang');
   assert.equal(share.assets.filter(asset=>asset.path.endsWith('/social.png')).length,1);
   assert.equal(share.assets.find(asset=>asset.path.endsWith('/social.png')).publicUrl.startsWith(m.shareIdentity.publicOrigin+'/dealer-share/'),true);
   const seal=JSON.parse(output.get('.cars-six-build.json'));
