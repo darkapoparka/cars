@@ -4,7 +4,7 @@
 	import { linkHref as resolve } from '$lib/utils/links';
 	import { site } from '$lib/config/site';
 	import { sellValuationCopy } from '$lib/content/sell-valuation';
-	import ArrowRight from '@lucide/svelte/icons/arrow-right';
+	import PhoneCall from '@lucide/svelte/icons/phone-call';
 	const locale = $derived(page.data.locale === 'en' ? 'en' : 'bg');
 	const copy = $derived(sellValuationCopy[locale]);
 	const banner = '/assets/daynight/services/sell-commerce';
@@ -50,12 +50,12 @@
 				</li>
 			{/each}
 		</ol>
-		<p class="sell-valuation__contact">
-			<span>{copy.questions}</span>
+		<div class="sell-valuation__contact">
+			<p>{copy.questions}</p>
 			<a href={resolve(site.contact.phoneHref)}>
-				{copy.callAction}<ArrowRight size={14} aria-hidden="true" />
+				<span><PhoneCall size={14} aria-hidden="true" />{copy.callAction}</span>
 			</a>
-		</p>
+		</div>
 	</div>
 </section>
 
@@ -134,21 +134,28 @@
 		line-height: 18px;
 	}
 	.sell-valuation__contact a {
-		display: flex;
+		display: inline-flex;
 		min-height: 44px;
 		align-items: center;
-		gap: 6px;
-		border-radius: 4px;
-		color: var(--bc-ink);
+		justify-content: center;
+		color: var(--bc-white);
 		font: var(--bc-weight-control) 14px/20px var(--bc-font-body);
 		text-decoration: none;
 		white-space: nowrap;
 	}
-	.sell-valuation__contact a:hover {
-		text-decoration: underline;
-		text-underline-offset: 3px;
+	.sell-valuation__contact a > span {
+		display: inline-flex;
+		min-height: 32px;
+		padding: 0 var(--bc-space-3);
+		align-items: center;
+		gap: 6px;
+		border-radius: var(--bc-radius-pill);
+		background: var(--bc-ink);
 	}
-	.sell-valuation__contact a:focus-visible {
+	.sell-valuation__contact a:hover > span {
+		background: var(--bc-ink-soft);
+	}
+	.sell-valuation__contact a:focus-visible > span {
 		outline: 2px solid var(--bc-ink);
 		outline-offset: 3px;
 	}
@@ -193,11 +200,10 @@
 		font-size: var(--bc-mobile-label);
 		line-height: var(--bc-mobile-label-leading);
 	}
-	.sell-valuation .sell-valuation__contact {
+	.sell-valuation__contact {
 		display: flex;
-		margin-top: var(--bc-space-2);
-		padding-inline-start: 40px;
+		margin-top: var(--bc-space-3);
 		align-items: center;
-		gap: 6px;
+		gap: var(--bc-space-2);
 	}
 </style>
