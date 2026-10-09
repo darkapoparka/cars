@@ -41,15 +41,61 @@ controls and rounded edges; this is not a claim of complete pixel identity.
 The original 13 discrepant full-page cases were recaptured separately. Repeating
 the same full-page screenshot on the unchanged baseline produced six unstable
 states; the unchanged refactor produced two. Four cross-build differences occupy
-the same top 66-pixel header strip. The full-page capture can change the observer
-state during capture. Ordinary viewport captures retain matching header states.
+the same top 66-pixel header strip. This is consistent with full-page capture
+altering the observer state, but does not prove the cause of every original
+difference. Ordinary viewport captures retain matching header states.
 Functional image/compact/image header transitions are checked separately in the
 final browser suite. Full-page pixel parity is not used as a release gate or
 presented as established by this review.
 
 ## Final verification
 
-Final build, browser results and main integration receipt will be recorded here
-after the maintained checkout is verified. Evidence and recovery material are
-under Cars `runtime/mobile-pro-integration-20261009`; the original handoff remains
-[PRO-AUDIT.md](PRO-AUDIT.md).
+Cars `main` was fast-forwarded to integration commit `c0762a0d7`. This includes
+the original PRO commits, the boundary fixes, the PDP restoration and concurrent
+App commit `8ac04243b`. The integration diff from that App commit contains only
+Mobile files. Unrelated dirty work was preserved.
+
+| Check                          | Result                                                                                      |
+| ------------------------------ | ------------------------------------------------------------------------------------------- |
+| `npm run check`, Node 22.20.0  | Passed: strict lint, TypeScript, 156 domain tests and production build                      |
+| `npm run format:check`         | Passed; four inherited formatting differences were normalized                               |
+| Architecture browser suite     | 852 checks passed, zero errors; Chromium/WebKit, BG/EN, eight widths from 320 to 1920       |
+| Final PDP and route suite      | 168 rendered states and 12 interaction flows passed, zero errors or application submissions |
+| Final viewport captures        | 12 stable captures; both engines at 320, 390 and 1440, PDP and services                     |
+| Repository workflow validation | Workflow check and all 391 workflow tests passed; none skipped                              |
+| Production dependency audit    | Zero reported advisories                                                                    |
+| Development dependency audit   | Seven high-severity dependency entries in one `braces` advisory chain                       |
+
+The final browser suites used the maintained checkout's frozen production build
+at port 6532. Header transitions were verified by scrolling past the gallery and
+returning to the top; full-page screenshots were not used to infer those states.
+The rendered PDP was inspected at all three required widths.
+
+Matched screenshots use English, the same BMW X6, the third gallery image, saved
+state, viewport height and scroll position:
+
+| Surface             | Before the restoration                                   | After the restoration                                  |
+| ------------------- | -------------------------------------------------------- | ------------------------------------------------------ |
+| Phone, 390 × 844    | [Before](pro-integration-2026-10-09/pdp-before-390.png)  | [After](pro-integration-2026-10-09/pdp-after-390.png)  |
+| Desktop, 1440 × 900 | [Before](pro-integration-2026-10-09/pdp-before-1440.png) | [After](pro-integration-2026-10-09/pdp-after-1440.png) |
+
+The [320-pixel phone capture](pro-integration-2026-10-09/pdp-after-320.png) also
+preserves readable facts and usable controls. These screenshots show the result
+of the requested restoration; owner visual acceptance remains separate.
+
+The fresh audit agrees with the [GitHub advisory](https://github.com/advisories/GHSA-vfj7-8cjw-p6xm):
+`braces` through 3.0.3 is affected and no patched release is listed as of this
+review. The installed production dependency tree is unaffected by this audit.
+The suggested incompatible downgrade of `eslint-config-next` was not applied.
+Dependency pins and the lockfile are retained.
+
+The old development module graph referenced the removed `ShowroomPages.tsx`.
+Its generated output was preserved on C: and the preview restarted with a fresh
+webpack cache. The recovery location is recorded in `dev-cache-recovery.json`.
+Ownerless Git index lock files were moved to recovery only after checking their
+age, content, exclusive access and active writers; none was deleted.
+
+Evidence, source snapshots, original Astra audit metadata, differing-region crops
+and recovery receipts are under Cars `runtime/mobile-pro-integration-20261009`.
+The original handoff remains [PRO-AUDIT.md](PRO-AUDIT.md). No Mobile release lock,
+dealer variants or hosting configuration were changed by this integration.

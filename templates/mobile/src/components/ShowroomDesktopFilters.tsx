@@ -196,10 +196,7 @@ export function ShowroomDesktopFilters({
                   ))}
               </div>
             </div>
-            <div
-              data-desktop-filter-group="specifications"
-              {...stylex.props(s.overviewOptions)}
-            >
+            <div data-desktop-filter-group="specifications" {...stylex.props(s.overviewOptions)}>
               {desktopFilterSections
                 .filter(({ key }) => ['fuel', 'transmission', 'body', 'condition'].includes(key))
                 .map(({ key, label }) => (

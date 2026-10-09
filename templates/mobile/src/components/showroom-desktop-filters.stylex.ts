@@ -219,7 +219,13 @@ export const desktopFilterStyles = stylex.create({
     backgroundColor: 'transparent',
     textDecoration: { default: 'none', ':hover': 'underline' },
   },
-  apply: { minHeight: 44, minWidth: 200, borderRadius: controlShape.pill, paddingInline: 24, fontSize: 14 },
+  apply: {
+    minHeight: 44,
+    minWidth: 200,
+    borderRadius: controlShape.pill,
+    paddingInline: 24,
+    fontSize: 14,
+  },
   group: { borderWidth: 0, padding: 0, margin: 0, minWidth: 0 },
   choices: { display: 'grid', gap: 8, gridTemplateColumns: 'repeat(2,minmax(0,1fr))' },
   choice: {

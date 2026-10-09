@@ -149,15 +149,23 @@ for (const [name, engine] of engines) {
         const headerState = () =>
           page.locator('[data-vehicle-mobile-header]').getAttribute('data-vehicle-mobile-header');
         assert.equal(await headerState(), 'image', 'Phone header starts over the gallery');
-        await page.locator('[data-vehicle-hero]').evaluate((element) =>
-          window.scrollTo(0, window.scrollY + element.getBoundingClientRect().bottom + 160),
-        );
-        await page.waitForFunction(() =>
-          document.querySelector('[data-vehicle-mobile-header]')?.getAttribute('data-vehicle-mobile-header') === 'compact',
+        await page
+          .locator('[data-vehicle-hero]')
+          .evaluate((element) =>
+            window.scrollTo(0, window.scrollY + element.getBoundingClientRect().bottom + 160),
+          );
+        await page.waitForFunction(
+          () =>
+            document
+              .querySelector('[data-vehicle-mobile-header]')
+              ?.getAttribute('data-vehicle-mobile-header') === 'compact',
         );
         await page.evaluate(() => window.scrollTo(0, 0));
-        await page.waitForFunction(() =>
-          document.querySelector('[data-vehicle-mobile-header]')?.getAttribute('data-vehicle-mobile-header') === 'image',
+        await page.waitForFunction(
+          () =>
+            document
+              .querySelector('[data-vehicle-mobile-header]')
+              ?.getAttribute('data-vehicle-mobile-header') === 'image',
         );
       }
       for (const section of ['Features', 'Photos', 'Details']) {

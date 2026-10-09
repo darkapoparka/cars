@@ -554,7 +554,10 @@ export function ShowroomDesktopMakeModel({
           )}
         </div>
       </section>
-      {dropdown && current && pickerFooter && onMoreFilters &&
+      {dropdown &&
+        current &&
+        pickerFooter &&
+        onMoreFilters &&
         createPortal(
           <button
             type="button"
