@@ -61,22 +61,32 @@ const s = stylex.create({
   rating: {
     display: 'flex',
     alignItems: 'center',
-    gap: 6,
     flexShrink: 0,
     minHeight: 44,
     width: 'fit-content',
     maxWidth: '100%',
-    paddingBlock: 8,
-    paddingInline: 10,
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: colors.cardLine,
-    borderRadius: 10,
-    backgroundColor: { default: colors.background, ':hover': colors.controlSurface },
+    padding: 0,
+    borderWidth: 0,
+    borderRadius: 8,
+    backgroundColor: 'transparent',
     color: colors.muted,
     cursor: 'pointer',
     outlineColor: colors.accent,
     outlineOffset: 3,
+  },
+  ratingFace: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: 6,
+    minHeight: 34,
+    maxWidth: '100%',
+    paddingBlock: 4,
+    paddingInline: 8,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: colors.cardLine,
+    borderRadius: 8,
+    backgroundColor: { default: colors.background, ':hover': colors.controlSurface },
   },
   financing: {
     display: 'flex',
@@ -150,14 +160,17 @@ const s = stylex.create({
     gap: 8,
     minHeight: 44,
     marginTop: 20,
-    paddingTop: 12,
-    borderTopWidth: 1,
-    borderTopStyle: 'solid',
-    borderTopColor: colors.cardLine,
-    color: colors.muted,
+    paddingBlock: 12,
+    paddingInline: 16,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: colors.cardLine,
+    borderRadius: 24,
+    backgroundColor: { default: colors.background, ':hover': colors.controlSurface },
+    color: colors.text,
     fontSize: 13,
     lineHeight: '20px',
-    textDecoration: { default: 'none', ':hover': 'underline' },
+    textDecoration: 'none',
     outlineColor: colors.accent,
     outlineOffset: 3,
   },
@@ -242,8 +255,10 @@ export function DesktopVehicleSummary({
             }}
             {...stylex.props(s.rating)}
           >
-            <PriceRating veryGood={v.priceRating === 'very-good'} detail />
-            <Icon name="info" size={14} />
+            <span data-vehicle-desktop-rating-face {...stylex.props(s.ratingFace)}>
+              <PriceRating veryGood={v.priceRating === 'very-good'} detail />
+              <Icon name="info" size={14} />
+            </span>
           </button>
         )}
       </div>
