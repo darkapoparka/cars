@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { assetHref } from '$lib/utils/assets';
+	import { linkHref as resolve } from '$lib/utils/links';
+	import { site } from '$lib/config/site';
 	import { sellValuationCopy } from '$lib/content/sell-valuation';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
-	let { onstart, open = false }: { onstart: () => void; open?: boolean } = $props();
 	const locale = $derived(page.data.locale === 'en' ? 'en' : 'bg');
 	const copy = $derived(sellValuationCopy[locale]);
 	const banner = '/assets/daynight/services/sell-commerce';
@@ -31,21 +32,11 @@
 			</picture>
 			<div class="sell-valuation__content">
 				<h2 id="sell-valuation-title" class="sell-valuation__title" lang={locale}>
-					{copy.sellTitle}
+					{copy.processTitle}
 				</h2>
-				<p class="sell-valuation__description">{copy.sellDescription}</p>
-				<button
-					type="button"
-					aria-haspopup="dialog"
-					aria-expanded={open}
-					aria-describedby="sell-valuation-note"
-					onclick={onstart}
-				>
-					{copy.sellAction}<ArrowRight size={14} aria-hidden="true" />
-				</button>
+				<p class="sell-valuation__description">{copy.processDescription}</p>
 			</div>
 		</div>
-		<small id="sell-valuation-note" class="sr-only">{copy.sellNote}</small>
 	</div>
 	<div class="sell-valuation__guide">
 		<ol aria-label={copy.howTitle}>
@@ -59,6 +50,12 @@
 				</li>
 			{/each}
 		</ol>
+		<p class="sell-valuation__contact">
+			<span>{copy.questions}</span>
+			<a href={resolve(site.contact.phoneHref)}>
+				{copy.callAction}<ArrowRight size={14} aria-hidden="true" />
+			</a>
+		</p>
 	</div>
 </section>
 
@@ -80,7 +77,7 @@
 		display: grid;
 		grid-template-columns: minmax(0, 1fr) min(40%, 144px);
 		gap: var(--bc-space-2);
-		padding: var(--bc-space-2) var(--bc-space-3);
+		padding: var(--bc-space-3);
 		border-radius: var(--bc-radius-card);
 		background: var(--bc-ink);
 	}
@@ -88,13 +85,14 @@
 		display: grid;
 		grid-column: 1;
 		grid-row: 1;
-		gap: 2px;
+		gap: 4px;
+		align-content: center;
 		justify-items: start;
 		min-width: 0;
 	}
 	.sell-valuation .sell-valuation__title {
 		color: var(--bc-white);
-		font: var(--bc-weight-heading) 22px/26px var(--bc-font-body);
+		font: var(--bc-weight-heading) 20px/24px var(--bc-font-body);
 		letter-spacing: -0.03em;
 	}
 	.sell-valuation .sell-valuation__title:lang(bg) {
@@ -107,6 +105,7 @@
 		grid-row: 1;
 		overflow: hidden;
 		min-width: 0;
+		min-height: 76px;
 		border-radius: var(--bc-radius-md);
 	}
 	.sell-valuation img {
@@ -134,27 +133,23 @@
 		font-size: 14px;
 		line-height: 18px;
 	}
-	.sell-valuation button {
+	.sell-valuation__contact a {
 		display: flex;
 		min-height: 44px;
-		margin: 0;
-		padding: 0;
 		align-items: center;
-		justify-content: center;
 		gap: 6px;
-		border: 0;
 		border-radius: 4px;
-		background: transparent;
-		color: var(--bc-white);
+		color: var(--bc-ink);
 		font: var(--bc-weight-control) 14px/20px var(--bc-font-body);
-		cursor: pointer;
+		text-decoration: none;
+		white-space: nowrap;
 	}
-	.sell-valuation button:hover {
+	.sell-valuation__contact a:hover {
 		text-decoration: underline;
 		text-underline-offset: 3px;
 	}
-	.sell-valuation button:focus-visible {
-		outline: 2px solid var(--bc-white);
+	.sell-valuation__contact a:focus-visible {
+		outline: 2px solid var(--bc-ink);
 		outline-offset: 3px;
 	}
 	.sell-valuation__guide {
@@ -197,5 +192,12 @@
 	.sell-valuation__guide p {
 		font-size: var(--bc-mobile-label);
 		line-height: var(--bc-mobile-label-leading);
+	}
+	.sell-valuation .sell-valuation__contact {
+		display: flex;
+		margin-top: var(--bc-space-2);
+		padding-inline-start: 40px;
+		align-items: center;
+		gap: 6px;
 	}
 </style>

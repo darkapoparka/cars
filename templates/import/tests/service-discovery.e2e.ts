@@ -14,7 +14,11 @@ const copy = {
 		find: 'Find this car',
 		request: 'Import request',
 		close: 'Close',
-		valuation: 'Get a valuation',
+		process: 'How selling works',
+		call: 'Call us',
+		contact: 'Contact',
+		headerCall: 'Call',
+		help: 'How it works',
 		noVin: 'No VIN?',
 		guide: 'Selling in 3 steps'
 	},
@@ -29,7 +33,11 @@ const copy = {
 		find: 'Намери този автомобил',
 		request: 'Заявка за внос',
 		close: 'Затвори',
-		valuation: 'Заяви оценка',
+		process: 'Как става продажбата',
+		call: 'Обади се',
+		contact: 'Контакти',
+		headerCall: 'Обади се',
+		help: 'Как работи',
 		noVin: 'Без VIN?',
 		guide: 'Продажба в 3 стъпки'
 	}
@@ -120,7 +128,9 @@ for (const width of [320, 390]) {
 			);
 		});
 
-		test(`Sell card opens both entry modes at ${width}px in ${locale}`, async ({ page }, info) => {
+		test(`Sell guide keeps both hero entry modes at ${width}px in ${locale}`, async ({
+			page
+		}, info) => {
 			test.skip(info.project.name !== 'mobile');
 			const c = copy[locale];
 			await page.setViewportSize({ width, height: 844 });
@@ -136,10 +146,26 @@ for (const width of [320, 390]) {
 			await expect(
 				page.locator('.sell-valuation__guide').getByRole('list', { name: c.guide, exact: true })
 			).toBeVisible();
+			const guide = page.locator('.sell-valuation');
+			await expect(guide.getByRole('heading', { name: c.process, exact: true })).toBeVisible();
+			await expect(guide.getByRole('button')).toHaveCount(0);
+			const call = guide.getByRole('link', { name: c.call, exact: true });
+			await expect(call).toHaveAttribute('href', /^tel:[+\d -]+$/);
+			await page.getByRole('button', { name: c.contact, exact: true }).click();
+			const contact = page.getByRole('dialog');
+			await expect(contact.getByRole('link', { name: c.headerCall, exact: true })).toHaveAttribute(
+				'href',
+				(await call.getAttribute('href'))!
+			);
+			await contact.getByRole('button', { name: c.close, exact: true }).click();
+			await page.getByRole('button', { name: c.help, exact: true }).click();
+			const help = page.getByRole('dialog');
+			await expect(help.getByRole('heading', { name: c.help, exact: true })).toBeVisible();
+			await help.getByRole('button', { name: c.close, exact: true }).click();
 			await accessible(page);
 			for (const manual of [false, true]) {
 				await page.getByRole('tab', { name: manual ? c.noVin : 'VIN', exact: true }).click();
-				await page.getByRole('button', { name: c.valuation, exact: true }).click();
+				await page.locator('#sell-entry-panel button').click();
 				const dialog = page.getByRole('dialog');
 				if (manual) {
 					await expect(dialog.locator('#sell-mobile-make')).toBeVisible();
@@ -149,6 +175,7 @@ for (const width of [320, 390]) {
 				}
 				await dialog.getByRole('button', { name: c.close, exact: true }).click();
 				await expect(dialog).not.toBeVisible();
+				await expect(page.locator('#sell-entry-panel button')).toBeFocused();
 			}
 			expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
 				true

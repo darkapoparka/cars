@@ -129,7 +129,7 @@
 			</div>
 		{/snippet}
 		{#snippet content()}
-			<SellValuationCard open={wizardOpen} onstart={() => openWizard(entryMode === 'manual')} />
+			<SellValuationCard />
 		{/snippet}
 	</MobileServiceEntry>
 
