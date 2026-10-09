@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {spawnSync} from 'node:child_process';
+import {assertSixDesignSelection} from './six-design-release.mjs';
 
 export const ROOT=path.resolve(import.meta.dirname,'../..');
 export const POLICY='cars-source-v1';
@@ -25,7 +26,7 @@ export function inside(root,relative,{mustExist=false}={}){
  if(mustExist&&!fs.existsSync(full))throw new Error(`Missing path: ${full}`);
  return full;
 }
-const omitted=new Set(['.git','.github','.vercel','.netlify','.agency-os','.auth','.codex','.claude','.agents','.openai','.template','.client','node_modules','.svelte-kit','.next','.turbo','.vite','.cache','.pnpm-store','dist','build','coverage','runtime','artifacts','audits','qa','test-results','playwright-report','blob-report','.vscode','.idea']);
+const omitted=new Set(['.git','.github','.vercel','.netlify','.agency-os','.auth','.codex','.claude','.agents','.openai','.template','.qa','.runtime','.client','node_modules','.svelte-kit','.next','.turbo','.vite','.cache','.pnpm-store','dist','build','coverage','runtime','artifacts','audits','qa','test-results','playwright-report','blob-report','.vscode','.idea']);
 export function excluded(relative){
  const parts=relative.replaceAll('\\','/').split('/'),name=parts.at(-1);
  // Reproducible Next.js/Prisma build outputs are not template source. Never exclude arbitrary generated source directories.
@@ -70,14 +71,16 @@ export function validateManifest(m,{allowLegacyPublishingReference=false}={}){
  if(m.schemaVersion!==1||!/^[a-z0-9][a-z0-9-]{0,63}$/.test(m.slug||''))throw new Error('Invalid dealer manifest identity.');
  // Inventory may represent an explicitly recorded legacy reference; publishing remains strict by default.
  const legacyReference=allowLegacyPublishingReference===true&&m.repository==='darkapoparka/cars'&&m.defaultBranch===`publish/${m.slug}`;
- if(!legacyReference&&!/^[\w.-]+\/(?:cars-[a-z0-9]+|excellent-cars|day-and-night-[\w-]+)$/.test(m.repository||''))throw new Error('Record the exact owner/repository identity.');
+ if(!legacyReference&&!/^[\w.-]+\/(?:cars-[a-z0-9]+(?:-[a-z0-9]+)*|excellent-cars|day-and-night-[\w-]+)$/.test(m.repository||''))throw new Error('Record the exact owner/repository identity.');
  const keys=m.variants?.map(v=>v.key)||[],standard=['auto-best','modern','carwow'],imported=['auto-best','import','carwow'];
+ const six=m.packaging?.version==='5';
+ if(six)assertSixDesignSelection(m.variants);
  const offered=m.packaging?.version==='3'?[...keys.slice(0,3)]:keys;
  if(m.packaging?.version==='3'&&(keys.length!==4||keys[3]!=='app'))throw new Error('Version 3 requires App as Design 4.');
- if(![standard,imported].some(a=>JSON.stringify(a)===JSON.stringify(offered)))throw new Error('Supported trios: auto-best,modern,carwow or auto-best,import,carwow (ordered).');
+ if(!six&&![standard,imported].some(a=>JSON.stringify(a)===JSON.stringify(offered)))throw new Error('Supported trios: auto-best,modern,carwow or auto-best,import,carwow (ordered).');
  const routes=keys[1]==='modern'?['/','/variant-2/cars','/variant-3/']:['/','/variant-2/','/variant-3/'];
  if(m.packaging?.version==='3')routes.push('/variant-4/');
- m.variants.forEach((v,i)=>{if(v.entry!==routes[i]||v.base!==['','/variant-2','/variant-3','/variant-4'][i])throw new Error(`Unexpected route for ${v.key}`);});
+ if(!six)m.variants.forEach((v,i)=>{if(v.entry!==routes[i]||v.base!==['','/variant-2','/variant-3','/variant-4'][i])throw new Error(`Unexpected route for ${v.key}`);});
  for(const asset of m.extraAssets||[])if(!/^[\w.-]+(?:\/[\w.-]+)*$/.test(asset)||asset.split('/').some(p=>p==='..'||p==='.'))throw new Error('Invalid extra asset path.');
  if(!/^[\w][\w/.-]*$/.test(m.defaultBranch||'main')||m.defaultBranch?.includes('..'))throw new Error('Invalid branch name.');return m;
 }

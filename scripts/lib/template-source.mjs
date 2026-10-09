@@ -10,7 +10,7 @@ export const isCarsTemplateSource = source => source?.repository === 'darkapopar
 export async function materializeTemplateSource({ root, key, release, source, destination, copy = copySource }) {
   source ||= release?.source || { repository: release?.repository, revision: release?.commit,
     path: '', tree: null, digest: release?.digest };
-  if (!['auto-best', 'modern', 'carwow', 'import'].includes(key) ||
+  if (!['auto-best', 'modern', 'carwow', 'import', 'app', 'mobile', 'karento-best'].includes(key) ||
       release?.snapshotPath !== `templates/${key}` || release?.exportPolicy !== POLICY ||
       !/^[a-f0-9]{64}$/.test(release?.digest || '')) {
     throw new Error(`${key}: invalid template release identity or export policy`);

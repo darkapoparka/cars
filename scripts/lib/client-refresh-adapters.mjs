@@ -355,40 +355,17 @@ function autoBestCompany(profile) {
       cta: english ? 'Arrange a viewing' : 'Уговорете оглед'
     });
   }
+  const topic = (id, label, title) => ({
+    id, label, title,
+    description: 'Contact {dealerName} to confirm availability, details, and the next step.'
+  });
   const topics = [
-  {
-    id: 'general',
-    label: 'Общ въпрос',
-    title: 'Разговор с екипа',
-    description: 'For availability, next steps or any other question about {dealerName}.'
-  },
-  {
-    id: 'inspection',
-    label: 'Оглед',
-    title: 'Viewing in {dealerCity}',
-    description: 'Уговорете посещение предварително, за да подготвим конкретния автомобил и да отделим нужното време.'
-  },
-  {
-    id: 'import',
-    label: 'Внос',
-    title: 'Внос по заявка',
-    description: 'Изпратете обява или задайте марка, модел, година и бюджет. След това уточняваме следващите стъпки с вас.',
-    mobileDescription: 'Изпратете обява или задайте модел и бюджет.'
-  },
-  {
-    id: 'leasing',
-    label: 'Лизинг',
-    title: 'Собствен лизинг',
-    description: 'Получете актуални условия според избрания автомобил и конкретната сделка.'
-  },
-  {
-    id: 'trade-in',
-    label: 'Бартер',
-    title: 'Бартер и оценка',
-    description: 'Разкажете ни за автомобила, който искате да предложите, и поискайте индивидуална оценка.',
-    mobileDescription: 'Поискайте оценка за продажба или бартер.'
-  }
-];
+    topic('general', english ? 'General question' : 'Общ въпрос', english ? 'Contact the dealer' : 'Разговор с екипа'),
+    topic('inspection', english ? 'Viewing' : 'Оглед', 'Оглед в {dealerCity}'),
+    topic('import', english ? 'Import' : 'Внос', 'Import enquiry demo'),
+    topic('leasing', english ? 'Financing' : 'Лизинг', 'Finance demo'),
+    topic('trade-in', english ? 'Trade-in' : 'Бартер', 'Trade-in enquiry demo')
+  ];
   const coordinates = b.coordinates && Number.isFinite(b.coordinates.latitude) &&
     Number.isFinite(b.coordinates.longitude)
     ? b.coordinates : { latitude: 0, longitude: 0 };

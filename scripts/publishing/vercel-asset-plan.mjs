@@ -3,9 +3,10 @@ import { planAssetRetention } from './public-asset-retention.mjs';
 
 export const PUBLIC_ROOTS = Object.freeze({
   'auto-best': 'auto-best/static/', modern: 'modern/apps/web/public/',
-  carwow: 'carwow/static/', import: 'import/static/', app: 'app/public/'
+  carwow: 'carwow/static/', import: 'import/static/', app: 'app/public/',
+  mobile: 'mobile/public/', 'karento-best': 'karento-best/static/'
 });
-export const SERVICE_NAMES = Object.freeze({ 'auto-best': 'autobest', modern: 'modern', carwow: 'carwow', import: 'importer', app: 'app' });
+export const SERVICE_NAMES = Object.freeze({ 'auto-best': 'autobest', modern: 'modern', carwow: 'carwow', import: 'importer', app: 'app', mobile: 'mobile', 'karento-best': 'signature' });
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const binaryMedia = /\.(?:png|jpe?g|webp|avif|gif|ico|woff2?|ttf|otf|mp4|webm)$/i;
 const text = /\.(?:svelte|[cm]?[jt]sx?|json|css|scss|html|svg|webmanifest)$/i;

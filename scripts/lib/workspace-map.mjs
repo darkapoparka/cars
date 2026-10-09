@@ -1,18 +1,16 @@
-// Shared workspace map validation. No filesystem writes or deployment actions.
+// Templates share Cars Git ownership; only real repositories get editor roots.
 import path from 'node:path';
 
 export function validateWorkspaceMap(config, editor) {
-  if (config?.schemaVersion !== 1 || config.workingBranch !== 'main') {
-    throw new Error('Expected workspace schemaVersion 1 and workingBranch main.');
+  if (config?.schemaVersion !== 2 || config.workingBranch !== 'main') {
+    throw new Error('Expected workspace schemaVersion 2 and workingBranch main.');
   }
   const expected = new Map([
     ['cars', ['darkapoparka/cars', 'integration']],
-    ...['auto-best', 'modern', 'carwow', 'import'].map(key =>
-      [key, [`darkapoparka/cars-template-${key}`, 'template-master']]),
     ['admin', ['darkapoparka/cars-admin', 'admin-demo']],
   ]);
   if (!Array.isArray(config.repositories) || config.repositories.length !== expected.size) {
-    throw new Error('Expected Cars, four template masters and shared Admin.');
+    throw new Error('Expected Cars and shared Admin repositories; templates belong inside Cars.');
   }
   const normalize = value => {
     if (typeof value !== 'string' || !value || path.win32.isAbsolute(value) || path.posix.isAbsolute(value)) {
@@ -28,11 +26,20 @@ export function validateWorkspaceMap(config, editor) {
     }
     keys.add(item.key);
     const directory = normalize(item.path);
-    const canonical = item.key === 'cars' ? '.' : item.key === 'admin'
-      ? '../cars-admin' : '../template-repos/cars-template-' + item.key;
+    const canonical = item.key === 'cars' ? '.' : '../cars-admin';
     if (directory !== canonical) throw new Error('Noncanonical workspace path: ' + item.key);
     return directory;
   });
+  const templateKeys = new Set(['auto-best', 'modern', 'carwow', 'import']);
+  if (!Array.isArray(config.templates) || config.templates.length !== templateKeys.size) {
+    throw new Error('Expected four editable templates inside Cars.');
+  }
+  for (const item of config.templates) {
+    if (!templateKeys.delete(item.key) || item.repository !== 'darkapoparka/cars' ||
+        item.role !== 'template-master' || normalize(item.path) !== 'templates/' + item.key) {
+      throw new Error('Invalid Cars template source: ' + item.key);
+    }
+  }
   const folders = editor?.folders?.map(folder => normalize(folder.path));
   if (!folders || JSON.stringify([...folders].sort()) !== JSON.stringify([...roots].sort())) {
     throw new Error('Cars.code-workspace and workspace.json identify different folders.');
@@ -40,5 +47,5 @@ export function validateWorkspaceMap(config, editor) {
   if (config.scratch !== 'runtime/' || config.registry !== 'docs/DEPLOYMENT-INVENTORY.json') {
     throw new Error('Scratch and registry must use the canonical Cars locations.');
   }
-  return { repositories: roots.length, workingBranch: 'main', editorMatches: true };
+  return { repositories: roots.length, templates: config.templates.length, workingBranch: 'main', editorMatches: true };
 }

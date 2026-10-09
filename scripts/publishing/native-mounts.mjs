@@ -8,6 +8,12 @@ export const NATIVE_MOUNTS = Object.freeze({
   import: { base: '/variant-2', environment: 'TEMPLATE_BASE_PATH' },
   carwow: { base: '/variant-3', environment: 'DAY_LOCALE_BASE' }
 });
+export function nativeMountFor(key, base = NATIVE_MOUNTS[key]?.base) {
+  const mount = NATIVE_MOUNTS[key];
+  const allowed = ['modern', 'import'].includes(key) ? ['/variant-2', '/variant-3'] : [mount?.base];
+  if (!mount || !allowed.includes(base)) throw new Error(`Unsupported native mount: ${key}`);
+  return { ...mount, base };
+}
 function objectSegments(text, from) {
   const stack = ['{'], parts = []; let start = from + 1;
   for (let i = start; i < text.length; i++) {
@@ -80,7 +86,7 @@ export function applyNativeMounts(inputFiles, manifest) {
   const files = new Map(inputFiles);
   const contract = nativeContract(manifest);
   for (const { key, base } of manifest.variants) {
-    if (NATIVE_MOUNTS[key]?.base !== base) throw new Error(`Unsupported native mount: ${key}`);
+    const mount = nativeMountFor(key, base);
     if (files.has(`${key}/src/lib/preview-paths.ts`)) throw new Error(`${key}: legacy mounting helper cannot be mixed with native v2`);
     if (key === 'modern') {
       if (!nativeText(files, 'modern/apps/web/next.config.ts').includes('nextConfig.basePath = publicBasePath') ||
@@ -95,7 +101,7 @@ export function applyNativeMounts(inputFiles, manifest) {
       bindInternationalizationDefaults(files, contract);
       headSwitcher(files, 'modern/apps/web/app/[locale]/layout.tsx', true);
     } else {
-      if (key !== 'auto-best' && !nativeText(files, `${key}/svelte.config.js`).includes(NATIVE_MOUNTS[key].environment)) throw new Error(`${key}: native build-time mount configuration is missing`);
+      if (key !== 'auto-best' && !nativeText(files, `${key}/svelte.config.js`).includes(mount.environment)) throw new Error(`${key}: native build-time mount configuration is missing`);
       if (key === 'auto-best') bindConfiguration(files, 'auto-best/src/lib/config/locale.ts', 'dealerLocaleConfiguration', contractMap, contract);
       if (key === 'carwow') bindConfiguration(files, 'carwow/src/lib/locale/config.ts', 'dealerLocaleConfiguration', contractMap, contract);
       if (key === 'import') {

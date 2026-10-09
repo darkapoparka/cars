@@ -1,41 +1,13 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "workingBranch": "main",
   "repositories": [
     {
       "key": "cars",
-      "name": "Cars - dealers and publishing",
+      "name": "Cars - templates and dealer tools",
       "path": ".",
       "repository": "darkapoparka/cars",
       "role": "integration"
-    },
-    {
-      "key": "auto-best",
-      "name": "Template - Auto Best",
-      "path": "../template-repos/cars-template-auto-best",
-      "repository": "darkapoparka/cars-template-auto-best",
-      "role": "template-master"
-    },
-    {
-      "key": "modern",
-      "name": "Template - Modern",
-      "path": "../template-repos/cars-template-modern",
-      "repository": "darkapoparka/cars-template-modern",
-      "role": "template-master"
-    },
-    {
-      "key": "carwow",
-      "name": "Template - Carwow",
-      "path": "../template-repos/cars-template-carwow",
-      "repository": "darkapoparka/cars-template-carwow",
-      "role": "template-master"
-    },
-    {
-      "key": "import",
-      "name": "Template - Import",
-      "path": "../template-repos/cars-template-import",
-      "repository": "darkapoparka/cars-template-import",
-      "role": "template-master"
     },
     {
       "key": "admin",
@@ -53,9 +25,46 @@
   "scratch": "runtime/",
   "registry": "docs/DEPLOYMENT-INVENTORY.json",
   "machinePaths": {
-    "win32": "J:/cars"
+    "win32": "L:/CODEX/cars"
   },
   "independentClientsRoot": {
-    "win32": "I:/cars-clients"
+    "win32": "L:/CODEX/cars/clients"
+  },
+  "templates": [
+    {
+      "key": "auto-best",
+      "name": "Template - Auto Best",
+      "path": "templates/auto-best",
+      "repository": "darkapoparka/cars",
+      "role": "template-master"
+    },
+    {
+      "key": "modern",
+      "name": "Template - Modern",
+      "path": "templates/modern",
+      "repository": "darkapoparka/cars",
+      "role": "template-master"
+    },
+    {
+      "key": "carwow",
+      "name": "Template - Carwow",
+      "path": "templates/carwow",
+      "repository": "darkapoparka/cars",
+      "role": "template-master"
+    },
+    {
+      "key": "import",
+      "name": "Template - Import",
+      "path": "templates/import",
+      "repository": "darkapoparka/cars",
+      "role": "template-master"
+    }
+  ],
+  "agencyOS": {
+    "workspace": "L:/CODEX/agency",
+    "controlProject": "L:/CODEX/agency/os",
+    "repository": "darkapoparka/agenzy",
+    "relationship": "independent-automotive-delivery-module",
+    "integration": "workspace-navigation-only; CRM/runtime integration is not changed"
   }
 }

@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
-import { gitRead, inspectRepository, repositoryIdentity, fetchCredentialArgs } from './workspace-doctor.mjs';
+import { gitRead, inspectRepository, inspectTemplateSource, inspectWorkspace, repositoryIdentity, fetchCredentialArgs } from './workspace-doctor.mjs';
 
 const expected = 'darkapoparka/cars';
 function fixture(t) {
@@ -81,4 +81,51 @@ test('Windows chooser resolution is per-command and respects other configured he
  assert.deepEqual(flags,['-c','credential.helper=','-c','credential.helper=manager','-c','credential.interactive=false']);
  for(const helper of ['manager','custom-helper','helper-selector\ncustom-helper',''])assert.deepEqual(fetchCredentialArgs('win32',helper),[]);
  assert.deepEqual(fetchCredentialArgs('linux','helper-selector'),[]);
+});
+
+function templateFixture(t) {
+  const f = fixture(t);
+  const source = path.join(f.dir, 'templates', 'carwow');
+  fs.mkdirSync(source, { recursive: true });
+  fs.writeFileSync(path.join(source, 'package.json'), '{}');
+  f.git('add', 'templates/carwow/package.json'); f.git('commit', '-m', 'template fixture');
+  f.git('update-ref', 'refs/remotes/origin/main', 'HEAD');
+  return { ...f, source, template: { key: 'carwow', path: 'templates/carwow', repository: expected, role: 'template-master' } };
+}
+
+test('template status scopes edits to its directory and shares Cars HEAD', t => {
+  const f = templateFixture(t);
+  fs.writeFileSync(path.join(f.dir, 'sample.txt'), 'unrelated pending work');
+  const index = fs.readFileSync(path.join(f.dir, '.git/index'));
+  const clean = inspectTemplateSource(f.dir, f.template);
+  assert.deepEqual(clean.issues, []);
+  assert.equal(clean.head, f.git('rev-parse', 'HEAD'));
+  fs.writeFileSync(path.join(f.source, 'package.json'), '{"name":"edited-template"}');
+  const dirty = inspectTemplateSource(f.dir, f.template);
+  assert.deepEqual(dirty.issues, ['uncommitted-work']);
+  assert.equal(dirty.changedEntries, 1);
+  assert.deepEqual(fs.readFileSync(path.join(f.dir, '.git/index')), index);
+});
+
+test('template checks reject nested Git ownership without changing it', t => {
+  const f = templateFixture(t);
+  execFileSync('git', ['-C', f.source, 'init', '--initial-branch=main'], { stdio: 'pipe' });
+  assert.deepEqual(inspectTemplateSource(f.dir, f.template).issues, ['nested-template-repository']);
+  assert.equal(fs.existsSync(path.join(f.source, '.git')), true);
+});
+
+test('workspace fetches Cars once and never fetches template subdirectories', t => {
+  const f = templateFixture(t);
+  fs.writeFileSync(path.join(f.dir, 'workspace.json'), JSON.stringify({ schemaVersion: 2,
+    repositories: [f.item], templates: [f.template] }));
+  const fetches = [];
+  const report = inspectWorkspace(f.dir, { fetch: true, readGit: (cwd, args) => {
+    if (args[0] === 'fetch') { fetches.push(cwd); return ''; }
+    return gitRead(cwd, args);
+  } });
+  assert.deepEqual(fetches, [f.dir]);
+  assert.equal(report.repositories.length, 1);
+  assert.equal(report.templates.length, 1);
+  assert.deepEqual(report.templates[0].issues, []);
+  assert.equal(report.templates[0].head, report.repositories[0].head);
 });

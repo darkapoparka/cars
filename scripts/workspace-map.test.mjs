@@ -5,21 +5,33 @@ import { validateWorkspaceMap } from './lib/workspace-map.mjs';
 function fixture() {
   const repositories = [
     { key: 'cars', path: '.', repository: 'darkapoparka/cars', role: 'integration' },
-    ...['auto-best', 'modern', 'carwow', 'import'].map(key => ({
-      key, path: '../template-repos/cars-template-' + key,
-      repository: 'darkapoparka/cars-template-' + key, role: 'template-master',
-    })),
     { key: 'admin', path: '../cars-admin', repository: 'darkapoparka/cars-admin', role: 'admin-demo' },
   ];
   return {
-    config: { schemaVersion: 1, workingBranch: 'main', repositories,
+    config: { schemaVersion: 2, workingBranch: 'main', repositories,
+      templates: ['auto-best', 'modern', 'carwow', 'import'].map(key => ({
+        key, path: 'templates/' + key, repository: 'darkapoparka/cars', role: 'template-master',
+      })),
       scratch: 'runtime/', registry: 'docs/DEPLOYMENT-INVENTORY.json' },
     editor: { folders: repositories.map(({ path }) => ({ path })) },
   };
 }
 
-test('the canonical six-repository workspace has one matching editor map', () => {
+test('four templates share Cars Git ownership through one editor root', () => {
   const f = fixture();
   assert.deepEqual(validateWorkspaceMap(f.config, f.editor),
-    { repositories: 6, workingBranch: 'main', editorMatches: true });
+    { repositories: 2, templates: 4, workingBranch: 'main', editorMatches: true });
+});
+
+test('rejects external masters, duplicate templates and a second editor master', () => {
+  for (const change of [
+    f => { f.config.templates[0].path = '../template-repos/cars-template-auto-best'; },
+    f => { f.config.templates[0].repository = 'darkapoparka/cars-template-auto-best'; },
+    f => { f.config.templates[0] = f.config.templates[1]; },
+    f => { f.editor.folders.push({ path: '../template-repos/cars-template-carwow' }); },
+    f => { f.config.templates[0].path = 'J:/cars/templates/auto-best'; },
+  ]) {
+    const f = fixture(); change(f);
+    assert.throws(() => validateWorkspaceMap(f.config, f.editor));
+  }
 });

@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import { excludeIndependentTarget } from './lib/dealer-source.mjs';
 import path from 'node:path';
 import { planNewClient, assertMainCheckout } from './new-client.mjs';
 import { copySource } from './copy-source.mjs';
@@ -11,7 +12,7 @@ import { verifyTemplate } from './template-release.mjs';
 import { materializeTemplateSource } from './lib/template-source.mjs';
 import { normalizeDealerLocale, readDealerLocale, planDealerLocale, assertLegacyLocaleCompatible, nativeLocaleSources, LocalePackagingError } from './lib/dealer-locale.mjs';
 
-const independentInputs = ['scripts/create-independent-dealer.mjs', 'scripts/lib/dealer-locale.mjs', 'scripts/package-dealer.mjs',
+const independentInputs = ['scripts/lib/dealer-source.mjs', 'scripts/create-independent-dealer.mjs', 'scripts/lib/dealer-locale.mjs', 'scripts/package-dealer.mjs',
   'scripts/publishing/mounts.mjs', 'scripts/publishing/preview-paths.ts.txt', 'scripts/publishing/preview-switcher.js', 'scripts/publishing/fix-svelte-service-output.mjs',
   'scripts/lib/catalog-literal.mjs', 'scripts/lib/native-localization.mjs', 'scripts/publishing/native-mounts.mjs', 'scripts/publishing/build-native-service.mjs', 'scripts/publishing/switcher-messages.json', 'scripts/export-dealer.mjs',
   'scripts/new-client.mjs', 'scripts/copy-source.mjs', 'scripts/template-release.mjs', 'scripts/lib/workflow.mjs', 'scripts/lib/template-source.mjs', 'scripts/lib/dealer-guidance.mjs',
@@ -55,7 +56,7 @@ export async function createIndependentDealer({ root = ROOT, client, repository,
   if (!write) return summary;
   if (requestedLocale ? !readiness.ready : nativeSources.length) throw new LocalePackagingError(readiness?.blockers || nativeSources);
   if (!requestedLocale) for (const item of plan.plans) assertLegacyLocaleCompatible({ manifest: plan.manifest, source: item.source });
-  const runtime = path.join(parent, '.runtime'); fs.mkdirSync(runtime, { recursive: true });
+  const runtime = path.join(root, 'runtime', 'independent-dealers'); fs.mkdirSync(runtime, { recursive: true });
   const lock = path.join(runtime, 'create-independent.lock');
   fs.mkdirSync(lock);
   fs.writeFileSync(path.join(lock, 'owner.json'), JSON.stringify({ pid: process.pid, client, startedAt: new Date().toISOString() }));
@@ -91,6 +92,7 @@ export async function createIndependentDealer({ root = ROOT, client, repository,
     verifyPackage(candidate);
     writeJson(path.join(candidate, 'docs/workflow/GENERATION.json'), { ...summary, createdAt: new Date().toISOString(), meaning: 'Approved template source and initial mount transformation, not a finished dealer build', packagingVersion: generated.packagingVersion, initialMountedDigest: generated.payloadDigest });
     fs.renameSync(path.join(candidate, '.cars-package.json'), path.join(candidate, 'docs/workflow/INITIAL-PACKAGE.json'));
+    excludeIndependentTarget(root, target);
     fs.renameSync(candidate, target);
     writeJson(path.join(stage, 'creation.json'), summary);
     return { ...summary, state: 'needs-personalization', receipt: path.join(stage, 'creation.json') };

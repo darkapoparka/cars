@@ -1,11 +1,8 @@
 name: Repair Auto Best contact localization across fleet
 
 on:
+  # Production publication and historical repair require explicit dispatch.
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - .github/workflows/fix-autobest-contact-localization.yml
 
 permissions:
   contents: write

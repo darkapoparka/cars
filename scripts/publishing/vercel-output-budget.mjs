@@ -9,7 +9,23 @@ export function auditVercelOutput(outputRoot, { maxBytes = 512 * 1024 * 1024, ma
   if (fs.lstatSync(root).isSymbolicLink()) throw Error('Do not follow linked output roots');
   const config = JSON.parse(fs.readFileSync(path.join(root, 'config.json'), 'utf8'));
   if (config.version !== 3) throw Error('Unsupported Vercel output schema');
-  const groups = new Map(); const unsafe = [], functionAliases = [];
+  const groups = new Map(); const unsafe = [], functionAliases = [], functionEntrypoints = [];
+  function auditFunctionHandler(directory, relative) {
+    const file = path.join(directory, '.vc-config.json');
+    if (!fs.existsSync(file)) return;
+    try {
+      const functionConfig = JSON.parse(fs.readFileSync(file, 'utf8'));
+      if (functionConfig.handler === undefined && !/^nodejs/.test(functionConfig.runtime ?? '')) return;
+      const handler = functionConfig.handler;
+      if (typeof handler !== 'string' || !handler || handler.includes('\\') || handler.includes('\0') || path.posix.isAbsolute(handler) || /^[a-z]:/i.test(handler)) throw Error('Invalid handler');
+      const target = path.resolve(directory, ...handler.split('/'));
+      const logical = path.relative(directory, target);
+      if (logical === '' || logical.startsWith(`..${path.sep}`) || logical === '..' || path.isAbsolute(logical) || !fs.existsSync(target) || !fs.statSync(target).isFile()) throw Error('Escaping or missing handler');
+      const real = path.relative(fs.realpathSync(directory), fs.realpathSync(target));
+      if (real === '' || real.startsWith(`..${path.sep}`) || real === '..' || path.isAbsolute(real)) throw Error('External handler');
+      functionEntrypoints.push({ function: relative, handler });
+    } catch { unsafe.push({ path: relative + '/.vc-config.json', reason: 'unsafe-or-missing-function-handler' }); }
+  }
   function walk(dir, group = 'metadata') {
     for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
       const full = path.join(dir, entry.name), relative = path.relative(root, full).replaceAll('\\', '/');
@@ -27,7 +43,10 @@ export function auditVercelOutput(outputRoot, { maxBytes = 512 * 1024 * 1024, ma
       const own = group !== 'metadata' ? group
         : parts.at(-1) === 'static' ? relative
         : relative.match(/^(.*?functions\/.*?\.func)(?:\/|$)/)?.[1] || group;
-      if (entry.isDirectory()) { walk(full, own); continue; }
+      if (entry.isDirectory()) {
+        if (own === relative && own.endsWith('.func')) auditFunctionHandler(full, relative);
+        walk(full, own); continue;
+      }
       if (!entry.isFile()) continue;
       const row = groups.get(own) || { name: own, files: 0, bytes: 0 };
       row.files++; row.bytes += fs.statSync(full).size; groups.set(own, row);
@@ -38,7 +57,7 @@ export function auditVercelOutput(outputRoot, { maxBytes = 512 * 1024 * 1024, ma
   const rows = [...groups.values()], totalBytes = rows.reduce((n, row) => n + row.bytes, 0);
   for (const alias of functionAliases) if (!rows.some(row => row.name === alias.target)) unsafe.push({path:alias.path,reason:'unaccounted-function-alias'});
   const oversizedFunctions = rows.filter(row => row.name.endsWith('.func') && row.bytes > maxFunctionBytes);
-  return { schemaVersion: 1, root, groups: rows, functionAliases, totalBytes, limits: { maxBytes, maxFunctionBytes }, unsafe, oversizedFunctions,
+  return { schemaVersion: 1, root, groups: rows, functionAliases, functionEntrypoints, totalBytes, limits: { maxBytes, maxFunctionBytes }, unsafe, oversizedFunctions,
     passed: totalBytes <= maxBytes && !oversizedFunctions.length && !unsafe.length,
     accounting: 'Logical bytes in final Vercel output only. Not a Vercel billing-meter measurement.' };
 }

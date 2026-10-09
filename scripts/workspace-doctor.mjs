@@ -65,11 +65,48 @@ export function inspectRepository(root, item, { fetch = false, readGit = gitRead
   return result;
 }
 
-export function inspectWorkspace(root, { fetch = false } = {}) {
+export function inspectTemplateSource(root, item, { readGit = gitRead, owner } = {}) {
+  const canonical = `templates/${item.key}`;
+  const directory = path.resolve(root, item.path);
+  const result = { key: item.key, role: 'template-master', path: directory,
+    repository: 'darkapoparka/cars', owner: 'cars', issues: [] };
+  if (!['auto-best', 'modern', 'carwow', 'import'].includes(item.key) ||
+      item.path?.replaceAll('\\', '/') !== canonical || item.repository !== result.repository) {
+    return { ...result, issues: ['invalid-template-source'] };
+  }
+  if (!fs.existsSync(directory)) return { ...result, issues: ['missing-template-source'] };
+  try {
+    const realRoot = fs.realpathSync(root), realDirectory = fs.realpathSync(directory);
+    const relative = path.relative(realRoot, realDirectory);
+    if (relative.startsWith('..') || path.isAbsolute(relative)) {
+      return { ...result, issues: ['template-outside-cars'] };
+    }
+    const top = fs.realpathSync(readGit(directory, ['rev-parse', '--show-toplevel']));
+    if (top !== realRoot || fs.existsSync(path.join(directory, '.git'))) {
+      return { ...result, issues: ['nested-template-repository'] };
+    }
+    if (!fs.existsSync(path.join(directory, 'package.json'))) result.issues.push('missing-package-json');
+    result.branch = owner?.branch ?? readGit(root, ['branch', '--show-current']);
+    result.head = owner?.head ?? readGit(root, ['rev-parse', 'HEAD']);
+    result.changedEntries = readGit(root, ['status', '--porcelain=v1', '--untracked-files=normal',
+      '--no-renames', '--', canonical]).split('\n').filter(Boolean).length;
+    if (result.changedEntries) result.issues.push('uncommitted-work');
+  } catch (error) {
+    result.issues.push('template-inspection-failed');
+    result.error = String(error.message).slice(0, 300);
+  }
+  return result;
+}
+
+export function inspectWorkspace(root, { fetch = false, readGit = gitRead } = {}) {
   const config = JSON.parse(fs.readFileSync(path.join(root, 'workspace.json'), 'utf8'));
-  if (config.schemaVersion !== 1 || !Array.isArray(config.repositories)) throw new Error('Unsupported workspace manifest');
-  const repositories = config.repositories.map(item => inspectRepository(root, item, { fetch }));
-  return { checkedAt: new Date().toISOString(), readOnlyWorkingTrees: true, repositories, safeForUnattendedWrites: repositories.every(item => item.issues.length === 0) };
+  if (![1, 2].includes(config.schemaVersion) || !Array.isArray(config.repositories) ||
+      (config.schemaVersion === 2 && !Array.isArray(config.templates))) throw new Error('Unsupported workspace manifest');
+  const repositories = config.repositories.map(item => inspectRepository(root, item, { fetch, readGit }));
+  const owner = repositories.find(item => item.key === 'cars');
+  const templates = (config.templates || []).map(item => inspectTemplateSource(root, item, { readGit, owner }));
+  return { checkedAt: new Date().toISOString(), readOnlyWorkingTrees: true, repositories, templates,
+    safeForUnattendedWrites: [...repositories, ...templates].every(item => item.issues.length === 0) };
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
@@ -89,6 +126,7 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
       else {
         console.log('Cars workspace: no working files changed. Tracking refs are ' + (args.includes('--fetch') ? 'requested for refresh; verify each repository below.' : 'cached; use --fetch before publishing.'));
         for (const item of report.repositories) console.log(item.key + ': ' + (item.issues.join(', ') || 'clean main') + ' | ahead=' + (item.ahead ?? '?') + ' behind=' + (item.behind ?? '?') + ' changed=' + (item.changedEntries ?? '?') + ' | freshness=' + (item.remoteFreshness ?? 'unknown') + ' | ' + item.path);
+        for (const item of report.templates) console.log(item.key + ': ' + (item.issues.join(', ') || 'clean source') + ' | owner=cars | changed=' + (item.changedEntries ?? '?') + ' | ' + item.path);
         if (!report.safeForUnattendedWrites) console.log('Preserve and reconcile the flagged checkout with its writer; do not reset, clean, mass-stage or move it.');
       }
       if (args.includes('--check') && !report.safeForUnattendedWrites) process.exitCode = 1;

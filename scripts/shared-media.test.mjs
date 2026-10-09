@@ -174,3 +174,34 @@ test('a new consumer protects cataloged media from an obsolete-asset policy', ()
   const catalog = { [digest]: { sha256: digest, bytes: mediaBytes.length, url: remoteUrl(digest), contentType: 'image/png' } };
   assert.equal(applySharedMedia(files, catalog).entries.length, 2);
 });
+
+test('Mobile and Signature preserve shared media routing with framework-specific prune order', async t => {
+  const variants=[{key:'mobile',base:'/variant-5',entry:'/variant-5/'},{key:'karento-best',base:'/variant-6',entry:'/variant-6/'}];
+  const files=packageFiles(variants),config=JSON.parse(files.get('vercel.json'));
+  config.services={mobile:{buildCommand:'build-mobile'},signature:{buildCommand:'build-signature'}};
+  files.set('vercel.json',Buffer.from(JSON.stringify(config)));
+  files.set('mobile/public/dealer/shared.png',Buffer.from(mediaBytes));
+  files.set('karento-best/static/dealer/shared.png',Buffer.from(mediaBytes));
+  const digest=sha256(mediaBytes);
+  const receipt=applySharedMedia(files,{[digest]:{sha256:digest,bytes:mediaBytes.length,url:remoteUrl(digest),contentType:'image/png'}});
+  const routed=JSON.parse(files.get('vercel.json'));
+  assert.equal(routed.services.mobile.buildCommand,'node ../scripts/prune-shared-media.mjs mobile && build-mobile');
+  assert.equal(routed.services.signature.buildCommand,'build-signature && node ../scripts/prune-shared-media.mjs karento-best');
+  assert.deepEqual(receipt.entries.map(entry=>entry.sourceUrlPath),['/variant-5/dealer/shared.png','/variant-6/dealer/shared.png']);
+  const packageRoot=await mkdtemp(path.join(os.tmpdir(),'cars-six-shared-media-'));
+  t.after(async()=>{
+    const relative=path.relative(path.resolve(os.tmpdir()),path.resolve(packageRoot));
+    assert.ok(relative&&relative!=='..'&&!relative.startsWith('..'+path.sep)&&!path.isAbsolute(relative));
+    await rm(packageRoot,{recursive:true,force:true});
+  });
+  await writeFile(path.join(packageRoot,'.cars-shared-media.json'),JSON.stringify(receipt));
+  await writeFile(path.join(packageRoot,'.cars-package.json'),JSON.stringify({manifest:{slug:'review-fixture'}}));
+  await writeFile(path.join(packageRoot,'dealer.json'),files.get('dealer.json'));
+  for(const [service,output] of [['mobile','mobile/public/dealer/shared.png'],['karento-best','karento-best/.vercel/output/static/variant-6/dealer/shared.png']]){
+    const file=path.join(packageRoot,output);
+    await mkdir(path.dirname(file),{recursive:true});
+    await writeFile(file,mediaBytes);
+    assert.equal((await pruneService(service,{packageRoot})).prunedFiles,1);
+    await assert.rejects(readFile(file),{code:'ENOENT'});
+  }
+});

@@ -5,10 +5,15 @@ import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 // Runs only inside a generated dealer package. No template checkout is rebuilt.
-export function nativeBuildPlan(key) {
+export function nativeBuildPlan(key, requestedBase) {
+  const bases = { 'auto-best': '', modern: '/variant-2', import: '/variant-2', carwow: '/variant-3', mobile: '/variant-5', 'karento-best': '/variant-6' };
+  if (!Object.hasOwn(bases, key)) throw new Error('Unknown native build service');
+  const base = requestedBase ?? bases[key];
+  const allowed = ['modern', 'import'].includes(key) ? ['/variant-2', '/variant-3'] : [bases[key]];
+  if (!allowed.includes(base)) throw new Error(`Unsupported native mount: ${key}`);
   if (key === 'modern') return {
-    key, root: 'modern', base: '/variant-2',
-    environment: { NEXT_PUBLIC_BASE_PATH: '/variant-2' },
+    key, root: 'modern', base,
+    environment: { NEXT_PUBLIC_BASE_PATH: base },
     steps: [
       ['npx', '--yes', '--package=node@22.23.2', '--package=pnpm@11.4.0', '--',
         'pnpm', 'install', '--frozen-lockfile', '--prod=false'],
@@ -18,19 +23,19 @@ export function nativeBuildPlan(key) {
         'pnpm', '--filter', 'web', 'build']
     ]
   };
-  const bases = { 'auto-best': '', import: '/variant-2', carwow: '/variant-3' };
-  if (!Object.hasOwn(bases, key)) throw new Error('Unknown native build service');
   const generatedLocaleStep = ['auto-best', 'carwow'].includes(key)
     ? [['node', 'scripts/build-locales.mjs']]
     : [];
-  return { key, root: key, base: bases[key],
-    environment: key === 'import' ? { TEMPLATE_BASE_PATH: bases[key] }
-      : key === 'carwow' ? { DAY_LOCALE_BASE: bases[key] } : {},
+  return { key, root: key, base,
+    environment: key === 'import' ? { TEMPLATE_BASE_PATH: base }
+      : key === 'carwow' ? { DAY_LOCALE_BASE: base }
+      : key === 'mobile' ? { NEXT_PUBLIC_BASE_PATH: base, NEXT_DIST_DIR: '.next' }
+      : key === 'karento-best' ? { CARS_SIGNATURE_BASE_PATH: base } : {},
     steps: [
       ['npm', 'ci', '--include=dev'],
       ...generatedLocaleStep,
       ['npm', 'run', 'build'],
-      ['node', '../scripts/fix-svelte-service-output.mjs', ...(bases[key] ? [bases[key]] : [])]
+      ...(key === 'mobile' ? [] : [['node', '../scripts/fix-svelte-service-output.mjs', ...(base ? [base] : [])]])
     ]
   };
 }
@@ -65,9 +70,11 @@ function dependencyInputs(packageRoot, key) {
 }
 
 export function runNativeBuild(key, { packageRoot = path.resolve(import.meta.dirname, '..'), run = spawnSync, dependenciesInstalled = false, installOnly = false } = {}) {
-  const plan = nativeBuildPlan(key);
   const manifest = JSON.parse(fs.readFileSync(path.join(packageRoot, 'dealer.json'), 'utf8'));
-  if (!['2', '3'].includes(manifest.packaging?.version) || !manifest.variants?.some(v => v.key === key && v.base === plan.base)) throw new Error('Build service differs from the native package manifest');
+  const selected = manifest.variants?.filter(v => v.key === key);
+  if (!['2', '3', '5'].includes(manifest.packaging?.version) || selected?.length !== 1) throw new Error('Build service differs from the native package manifest');
+  const plan = nativeBuildPlan(key, selected[0].base);
+  if (['mobile', 'karento-best'].includes(key) && manifest.packaging.version !== '5') throw new Error('Extended service requires six-design packaging');
   const environment = { ...process.env, ...plan.environment };
   if (key === 'carwow') delete environment.DAY_PREVIEW_ADAPTER;
   const cwd = path.join(packageRoot, plan.root);
@@ -80,7 +87,8 @@ export function runNativeBuild(key, { packageRoot = path.resolve(import.meta.dir
   if (installOnly && fs.existsSync(proofFile)) fs.unlinkSync(proofFile);
   if (dependenciesInstalled) {
     if (!fs.existsSync(proofFile) || JSON.stringify(JSON.parse(fs.readFileSync(proofFile, 'utf8'))) !== JSON.stringify(proof)) throw Error('Dependencies changed or no verified install phase; run install again');
-    const compiler = key === 'modern' ? 'apps/web/node_modules/next/dist/bin/next' : 'node_modules/vite/bin/vite.js';
+    const compiler = key === 'modern' ? 'apps/web/node_modules/next/dist/bin/next'
+      : key === 'mobile' ? 'node_modules/next/dist/bin/next' : 'node_modules/vite/bin/vite.js';
     if (!fs.existsSync(path.join(cwd, compiler))) throw Error('Installed compiler is missing; run install again');
   }
   const steps = installOnly ? plan.steps.slice(0, 1) : dependenciesInstalled ? plan.steps.slice(1) : plan.steps;
@@ -109,6 +117,6 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     if (args.length === 1) runNativeBuild(args[0]);
     else if (args.length === 2 && args[0] === 'install') runNativeBuild(args[1], {installOnly:true});
     else if (args.length === 2 && args[1] === '--installed') runNativeBuild(args[0], {dependenciesInstalled:true});
-    else throw new Error('Usage: node scripts/build-native-service.mjs [install] auto-best|modern|import|carwow [--installed]');
+    else throw new Error('Usage: node scripts/build-native-service.mjs [install] auto-best|modern|import|carwow|mobile|karento-best [--installed]');
   } catch (error) { console.error(error.message); process.exitCode = 1; }
 }

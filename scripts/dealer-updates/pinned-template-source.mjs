@@ -61,7 +61,7 @@ function assertExternalDestination(repositoryPath, destination, prefix = '', all
 export function exportPinnedTemplate({ repositoryPath, repository, revision, destination, expectedDigest, prefix = '' }) {
   const normalizedRepo = normalizedRepository(repository);
   if (normalizedRepo !== 'darkapoparka/cars' && !/^darkapoparka\/cars-template-[a-z0-9_.-]+$/i.test(normalizedRepo)) throw new Error('Expected a registered Cars template repository identity');
-  if (normalizedRepo === 'darkapoparka/cars' && !/^templates\/(?:auto-best|modern|carwow|import|app)$/.test(prefix)) throw new Error('Cars monorepo exports require one exact templates/<key> subtree');
+  if (normalizedRepo === 'darkapoparka/cars' && !/^templates\/(?:auto-best|modern|carwow|import|app|mobile|karento-best)$/.test(prefix)) throw new Error('Cars monorepo exports require one exact templates/<key> subtree');
   if (normalizedRepo !== 'darkapoparka/cars' && prefix !== '') throw new Error('Standalone template exports must use the repository root');
   if (!/^[a-f0-9]{40}$/.test(revision || '')) throw new Error('Pinned template export requires an immutable commit SHA');
   if (expectedDigest !== undefined && !/^[a-f0-9]{64}$/.test(expectedDigest || '')) throw new Error('Expected release digest must be SHA-256');
@@ -107,7 +107,7 @@ export function readRepositoryTreeMap({ repositoryPath, revision, prefix = '', f
  * for the template digest.
  */
 export function readPinnedTemplateTree({ key, repositoryPath, source, expectedDigest = source?.digest }) {
-  if (!['auto-best', 'modern', 'carwow', 'import', 'app'].includes(key)) throw new Error(`Unknown template key: ${key}`);
+  if (!['auto-best', 'modern', 'carwow', 'import', 'app', 'mobile', 'karento-best'].includes(key)) throw new Error(`Unknown template key: ${key}`);
   if (!source || typeof source !== 'object') throw new Error(`${key}: immutable source locator is required`);
   const repository = normalizedRepository(source.repository);
   const revision = source.revision || source.commit;

@@ -4,7 +4,7 @@ import path from 'node:path';
 import { createHash } from 'node:crypto';
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const normalize = bytes => { const text = bytes.toString('utf8'); return Buffer.from(text).equals(bytes) ? Buffer.from(text.replaceAll('\r\n', '\n')) : bytes; };
-const roots = { 'auto-best': 'auto-best/static', modern: 'modern/apps/web/public', carwow: 'carwow/static', import: 'import/static', app: 'app/public' };
+const roots = { 'auto-best': 'auto-best/static', modern: 'modern/apps/web/public', carwow: 'carwow/static', import: 'import/static', app: 'app/public', mobile:'mobile/public', 'karento-best':'karento-best/static' };
 const read = name => JSON.parse(fs.readFileSync(name, 'utf8'));
 function checkedFile(root, relative) {
   if (typeof relative !== 'string' || !relative || relative.startsWith('/') || relative.includes('\\') || relative.split('/').some(s => !s || s === '.' || s === '..' || s.includes(':'))) throw Error('Unsafe generated asset path');
@@ -48,7 +48,7 @@ function publicStats(root) {
 export function prepareServiceAssets(phase, key, { packageRoot = path.resolve(import.meta.dirname, '..') } = {}) {
   if (!['before', 'after'].includes(phase)) throw Error('Expected before or after');
   const { root, plan, variant } = loadPlan(packageRoot, key);
-  const isNext = key === 'modern' || key === 'app';
+  const isNext = ['modern','app','mobile'].includes(key);
   const entries = plan.removals.filter(e => e.service === key);
   const reportDir = path.join(root, '.cars-build-assets');
   if (fs.existsSync(reportDir) && fs.lstatSync(reportDir).isSymbolicLink()) throw Error('Linked report output');

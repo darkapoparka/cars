@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "encoding": "lossless-webp",
+  "evidence": [
+    {
+      "key": "auto-best",
+      "source": "templates/auto-best/static/assets/images/template/auto-best-logo-v2.webp",
+      "sourceSha256": "8e0c6057cd6c074e98db85b9e96cf542f159eac6c80975dcae3b6318a4c24e46",
+      "sha256": "0f2bbb154f81a232777f31faa21b0bd0eaffde4bb083b9447ffa8c0550b0b12a",
+      "width": 360,
+      "height": 45,
+      "bytes": 10372
+    },
+    {
+      "key": "modern",
+      "source": "templates/modern/apps/web/public/images/brand/modern-logo-v2.webp",
+      "sourceSha256": "0a5a47ce8a88dde68b6e0b86626445d5244351be4245b0f2c168c037521e9bee",
+      "sha256": "3571f6f93e7ec0cdbc36536d41019d9a3cb3b110ba3775ac9b6eca270f61123b",
+      "width": 360,
+      "height": 52,
+      "bytes": 10624
+    },
+    {
+      "key": "import",
+      "source": "templates/import/static/brand/import-logo-v2.webp",
+      "sourceSha256": "9983ef23aba5049fe69f11e21533d0946473a07935e19ceff7ce4de3eb7cdade",
+      "sha256": "bfe442422b720695a60fa435f3c5d02efa50b26dd904f1a6ab6e1de79dfa7295",
+      "width": 360,
+      "height": 98,
+      "bytes": 21886
+    },
+    {
+      "key": "app",
+      "source": "templates/app/public/identity/drive24/logo-light-v2.webp",
+      "sourceSha256": "64c4810700311f1736a085726bbfb9e6c64c35137cba6d894ed7ab1d4eb5de66",
+      "sha256": "0cba074fa7da806c9e427b8c14aaf2d566470c69fc42fcb6f7774734e71296c4",
+      "width": 360,
+      "height": 95,
+      "bytes": 28900
+    },
+    {
+      "key": "mobile",
+      "source": "templates/mobile/public/branding/showroom-compact-20261005.webp",
+      "sourceSha256": "e63cb26fa0084fb30be0d43346df7cfa3ed5d92bb104db9bf4e2f7ecf473c568",
+      "sha256": "d82d8279c296f823cededfb793b5d3fcfb38cf0fa7f90761aa6ecb562ba24e1d",
+      "width": 360,
+      "height": 88,
+      "bytes": 22578
+    },
+    {
+      "key": "karento-best",
+      "source": "templates/karento-best/static/brand/signature-logo-v1.webp",
+      "sourceSha256": "9425e36604c91627509faa9acb6a1968c88d1627b48108306c080bde84254985",
+      "sha256": "cc87efaaf8587fdb432110805998c6ddd78c347b1697483bb0b2a9b038d6b5c2",
+      "width": 360,
+      "height": 59,
+      "bytes": 14010
+    }
+  ]
+}

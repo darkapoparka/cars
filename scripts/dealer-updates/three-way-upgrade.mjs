@@ -4,13 +4,15 @@ import os from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import {writeDerivedFile} from '../lib/derived-assets.mjs';
+import { assertFiveDesignSelection } from '../lib/five-design-release.mjs';
+import { assertSixDesignSelection, planSixDesignSelection } from '../lib/six-design-release.mjs';
 
 const TEXT_EXTENSIONS = new Set([
   '.cjs', '.css', '.html', '.js', '.json', '.md', '.mjs', '.svelte', '.ts', '.tsx', '.txt', '.xml', '.yaml', '.yml'
 ]);
 const IGNORED_DIRECTORIES = new Set([
   '.git', '.vercel', '.netlify', 'node_modules', '.next', '.nuxt', '.svelte-kit', '.turbo', '.vite',
-  '.cache', '.pnpm-store', 'dist', 'build', 'out', 'coverage', 'runtime', 'test-results',
+  '.cache', '.pnpm-store', '.qa', '.runtime', 'dist', 'build', 'out', 'coverage', 'runtime', 'test-results',
   'playwright-report', 'blob-report'
 ]);
 function ignoredFile(name) {
@@ -101,17 +103,44 @@ function assertCandidateRunRelationship(runDirectory, candidateDirectory) {
   return physicalCandidate;
 }
 
-function atomicWriteFile(target, bytes, { exclusive = false } = {}) {
+function atomicWriteFile(target, bytes, { exclusive = false, assetPool, expectedPreviousSha256 } = {}) {
   const directory = path.dirname(target);
   const existing = exists(target) ? fs.statSync(target) : null;
   const temp = path.join(directory, `.${path.basename(target)}.cars-upgrade-${crypto.randomUUID()}.tmp`);
+  let previous = null, result;
   try {
-    fs.writeFileSync(temp, bytes, { flag: 'wx', ...(existing ? { mode: existing.mode & 0o777 } : {}) });
-    if (existing && process.platform !== 'win32') fs.chmodSync(temp, existing.mode & 0o777);
+    result = writeDerivedFile(temp, bytes, { assetPool, assetPath: target });
+    if (existing && !result.pooled && process.platform !== 'win32') fs.chmodSync(temp, existing.mode & 0o777);
+    if(expectedPreviousSha256 !== undefined) {
+      const current=exists(target)?sha256(fs.readFileSync(target)):null;
+      if(current!==expectedPreviousSha256)throw new Error(`Source changed before atomic replacement: ${target}`);
+    }
     if (exclusive || !existing) fs.linkSync(temp, target);
-    else fs.renameSync(temp, target);
+    else {
+      try { fs.renameSync(temp, target); }
+      catch(error) {
+        // Windows cannot rename over a read-only pool alias. Move that alias
+        // aside, then create the new name exclusively; never chmod or write
+        // through the shared inode. Retain an aside file if another writer wins.
+        if(process.platform!=='win32'||(existing.mode&0o200)||!['EPERM','EACCES'].includes(error.code))throw error;
+        previous=temp+'.previous';
+        fs.renameSync(target,previous);
+        try {
+          if(expectedPreviousSha256!==undefined&&sha256(fs.readFileSync(previous))!==expectedPreviousSha256)throw new Error(`Source changed during atomic replacement: ${target}`);
+          fs.linkSync(temp,target);
+          fs.unlinkSync(previous);previous=null;
+        } catch(replaceError) {
+          if(!exists(target)) {
+            try {fs.linkSync(previous,target);fs.unlinkSync(previous);previous=null;}
+            catch(restoreError){replaceError.message+=`; previous bytes retained at ${previous}: ${restoreError.message}`;}
+          } else replaceError.message+=`; concurrent target preserved, previous bytes retained at ${previous}`;
+          throw replaceError;
+        }
+      }
+    }
+    return result;
   } finally {
-    try { if (exists(temp)) fs.rmSync(temp, { force: true }); }
+    try { if (exists(temp)) fs.unlinkSync(temp); }
     catch { /* A stale temp does not affect the completed link or rename. */ }
   }
 }
@@ -197,17 +226,28 @@ function record(pathname, kind, before, after, extra = {}) {
 }
 
 /** Select immutable revisions from the current Cars approval lock, never from a floating branch label. */
-export function selectPinnedRevisions(manifest, lock) {
-  if (!Array.isArray(manifest?.variants) || ![3, 4].includes(manifest.variants.length)) {
-    throw new Error('Template update requires the dealer’s recorded three- or four-design manifest');
+export function selectPinnedRevisions(manifest, lock, { targetVariants = manifest?.variants, keys: selectedKeys } = {}) {
+  if (!Array.isArray(manifest?.variants) || ![3, 4, 5, 6].includes(manifest.variants.length)) {
+    throw new Error('Template update requires the dealer’s recorded three-, four-, five- or six-design manifest');
   }
   const keys = manifest.variants.map(({ key }) => key);
-  if (![['auto-best', 'modern', 'carwow'], ['auto-best', 'import', 'carwow'], ['auto-best', 'modern', 'carwow', 'app'], ['auto-best', 'import', 'carwow', 'app']]
+  if (keys.length === 6) assertSixDesignSelection(manifest.variants);
+  else if (keys.length === 5) assertFiveDesignSelection(manifest.variants);
+  else if (![['auto-best', 'modern', 'carwow'], ['auto-best', 'import', 'carwow'], ['auto-best', 'modern', 'carwow', 'app'], ['auto-best', 'import', 'carwow', 'app']]
     .some(allowed => JSON.stringify(allowed) === JSON.stringify(keys))) {
     throw new Error('Template update supports the standard trio or the Import trio in its recorded order');
   }
+  if (JSON.stringify(targetVariants) !== JSON.stringify(manifest.variants)) {
+    assertSixDesignSelection(targetVariants);
+    if (JSON.stringify(targetVariants) !== JSON.stringify(planSixDesignSelection(manifest.variants).variants)) throw new Error('A migration must preserve the existing second-family mount');
+  }
+  const targetKeys = targetVariants.map(({ key }) => key);
+  const wanted = selectedKeys ?? targetKeys;
+  if (!Array.isArray(wanted) || !wanted.length || new Set(wanted).size !== wanted.length || wanted.some(key => !targetKeys.includes(key))) throw new Error('Select distinct published template keys for this update');
+  if (targetKeys.some(key => !keys.includes(key) && !wanted.includes(key))) throw new Error('A design migration must include every newly added family');
   const pins = {};
-  for (const { key } of manifest.variants) {
+  for (const key of wanted) {
+    const added = !keys.includes(key);
     const previous = manifest.templateRevisions?.[key];
     const previousSource = manifest.templateSources?.[key];
     const approved = lock?.templates?.[key];
@@ -221,7 +261,7 @@ export function selectPinnedRevisions(manifest, lock) {
     const targetPath = source?.path ?? source?.prefix ?? '';
     const targetDigest = source?.digest || approved?.digest;
     const targetTree = source?.tree ?? null;
-    if (!/^[a-f0-9]{40}$/.test(previous || '')) throw new Error(`Missing recorded old template pin for ${key}`);
+    if (!added && !/^[a-f0-9]{40}$/.test(previous || '')) throw new Error(`Missing recorded old template pin for ${key}`);
     const previousRepository = previousSource?.repository || `darkapoparka/cars-template-${key}`;
     const previousRevision = previousSource?.revision || previousSource?.commit || previous;
     const previousPath = previousSource?.path ?? previousSource?.prefix ??
@@ -229,9 +269,9 @@ export function selectPinnedRevisions(manifest, lock) {
     const previousTree = previousSource?.tree ?? null;
     const validPreviousStandalone = previousRepository === `darkapoparka/cars-template-${key}` && previousPath === '';
     const validPreviousCarsSubtree = previousRepository === 'darkapoparka/cars' && previousPath === `templates/${key}`;
-    if ((!validPreviousStandalone && !validPreviousCarsSubtree) || previousRevision !== previous ||
+    if (!added && ((!validPreviousStandalone && !validPreviousCarsSubtree) || previousRevision !== previous ||
         (previousSource?.digest !== undefined && !/^[a-f0-9]{64}$/.test(previousSource.digest || '')) ||
-        (previousTree !== null && !/^[a-f0-9]{40}$/.test(previousTree || ''))) {
+        (previousTree !== null && !/^[a-f0-9]{40}$/.test(previousTree || '')))) {
       throw new Error(`Invalid recorded old template source for ${key}`);
     }
     const validStandalone = targetRepository === `darkapoparka/cars-template-${key}` && targetPath === '';
@@ -243,10 +283,10 @@ export function selectPinnedRevisions(manifest, lock) {
     }
     pins[key] = Object.freeze({
       repository: targetRepository,
-      from: previous,
+      from: added ? null : previous,
       to: targetRevision,
       digest: targetDigest,
-      fromSource: Object.freeze({
+      fromSource: added ? null : Object.freeze({
         repository: previousRepository,
         revision: previous,
         path: previousPath,
@@ -295,25 +335,25 @@ export function upgradeReviewReport(plan) {
 }
 
 /** Build one dealer-root plan for its exact recorded trio and an approved lock. */
-export function planDealerUpgrade({ dealerRoot, lock, oldBases, newBases, targetManifest, manifestPath = 'dealer.json', resolutions = {}, tempRoot = os.tmpdir() }) {
+export function planDealerUpgrade({ dealerRoot, lock, oldBases, newBases, targetManifest, selectedKeys, manifestPath = 'dealer.json', resolutions = {}, tempRoot = os.tmpdir() }) {
   const source = path.resolve(dealerRoot);
   const safeManifestPath = safeRelative(manifestPath);
   const manifestFile = path.join(source, safeManifestPath);
   const manifestBytes = fs.readFileSync(manifestFile);
   const manifest = JSON.parse(manifestBytes.toString('utf8').replace(/^\uFEFF/, ''));
-  const pins = selectPinnedRevisions(manifest, lock);
+  const pins = selectPinnedRevisions(manifest, lock, { targetVariants: targetManifest?.variants || manifest.variants, keys: selectedKeys });
   const candidate = new Map(), changes = [], conflicts = [], perDesign = {};
   for (const key of Object.keys(pins)) {
-    if (!oldBases?.[key] || !newBases?.[key]) throw new Error(`Missing exact old/new template trees for ${key}`);
-    const oldBase = mapOfFiles(oldBases[key]);
+    if ((!oldBases?.[key] && pins[key].from !== null) || !newBases?.[key]) throw new Error(`Missing exact old/new template trees for ${key}`);
+    const oldBase = pins[key].from === null ? new Map() : mapOfFiles(oldBases[key]);
     const newBase = mapOfFiles(newBases[key]);
-    if (!oldBase.has('package.json') || !newBase.has('package.json')) throw new Error(`${key}: pinned template tree must contain package.json`);
+    if ((pins[key].from !== null && !oldBase.has('package.json')) || !newBase.has('package.json')) throw new Error(`${key}: pinned template tree must contain package.json`);
     const designRoot = path.join(source, safeRelative(key));
-    if (!exists(path.join(designRoot, 'package.json'))) throw new Error(`${key}: dealer source is missing its design package.json`);
+    if (pins[key].from !== null && !exists(path.join(designRoot, 'package.json'))) throw new Error(`${key}: dealer source is missing its design package.json`);
     const planned = planThreeWayUpgrade({
       oldBase,
       newBase,
-      dealer: designRoot,
+      dealer: exists(designRoot) ? designRoot : new Map(),
       resolutions: Object.fromEntries(Object.entries(resolutions).filter(([name]) => name.startsWith(`${key}/`)).map(([name, value]) => [name.slice(key.length + 1), value])),
       tempRoot
     });
@@ -325,9 +365,9 @@ export function planDealerUpgrade({ dealerRoot, lock, oldBases, newBases, target
   const pinnedManifest = updateManifestPins(manifest, pins);
   const nextManifest = targetManifest ? structuredClone(targetManifest) : pinnedManifest;
   if (nextManifest.slug !== manifest.slug || nextManifest.repository !== manifest.repository ||
-      JSON.stringify(nextManifest.variants) !== JSON.stringify(manifest.variants) ||
-      JSON.stringify(nextManifest.templateRevisions) !== JSON.stringify(pinnedManifest.templateRevisions) ||
-      JSON.stringify(nextManifest.templateSources) !== JSON.stringify(pinnedManifest.templateSources)) {
+      JSON.stringify(nextManifest.variants) !== JSON.stringify(targetManifest?.variants || manifest.variants) ||
+      nextManifest.variants.some(({key}) => nextManifest.templateRevisions?.[key] !== pinnedManifest.templateRevisions?.[key] ||
+        JSON.stringify(nextManifest.templateSources?.[key]) !== JSON.stringify(pinnedManifest.templateSources?.[key]))) {
     throw new Error('Target dealer manifest differs from the reviewed identity, trio or exact source pins');
   }
   const nextManifestBytes = Buffer.from(`${JSON.stringify(nextManifest, null, 2)}\n`);
@@ -606,7 +646,7 @@ function reusableInstallReceipt({ source, runDir, plan }) {
 }
 
 /** Install only reviewed path changes; create a machine-produced byte backup. */
-export function installUpgrade({ source, plan, runDir, candidateDirectory, beforeWrite, afterWrite }) {
+export function installUpgrade({ source, plan, runDir, candidateDirectory, assetPool, beforeWrite, afterWrite }) {
   if (!plan?.ready) throw new Error('Unresolved template conflicts block installation');
   const root = path.resolve(source), candidateDir = assertOutsideSource(
     root,
@@ -614,10 +654,13 @@ export function installUpgrade({ source, plan, runDir, candidateDirectory, befor
     'Candidate directory'
   );
   assertCandidateRunRelationship(runDir, candidateDir);
+  const pool=assetPool?assertOutsideSource(root,path.resolve(assetPool),'Derived asset pool'):null;
+  if(pool&&(isInsidePath(pool,candidateDir)||isInsidePath(candidateDir,pool)||isInsidePath(pool,path.resolve(runDir))||isInsidePath(path.resolve(runDir),pool)))throw new Error('Derived asset pool must remain separate from the candidate and update run');
   const lock = path.join(runDir, '.upgrade-write-lock');
   fs.mkdirSync(lock);
   const original = mapOfFiles(root), applied = [], conflicts = [];
   let backupDir = null;
+  const assetPoolStats={pool,objectsWritten:0,objectsReused:0,filesLinked:0,filesCopied:0,bytesLinked:0};
   try {
     const candidateExists = exists(candidateDir);
     if (candidateExists && fs.readdirSync(candidateDir).length) {
@@ -650,7 +693,8 @@ export function installUpgrade({ source, plan, runDir, candidateDirectory, befor
         const bytes = fs.readFileSync(safeFileAt(candidateDir, item.path));
         if (sha256(bytes) !== item.afterSha256) throw new Error(`Candidate changed after review: ${item.path}`);
         fs.mkdirSync(path.dirname(target), { recursive: true });
-        atomicWriteFile(target, bytes);
+        const stored=atomicWriteFile(target,bytes,{assetPool:pool,expectedPreviousSha256:item.beforeSha256});
+        if(stored.pooled){assetPoolStats[stored.reused?'objectsReused':'objectsWritten']++;assetPoolStats[stored.linked?'filesLinked':'filesCopied']++;if(stored.linked)assetPoolStats.bytesLinked+=stored.bytes;}
       }
       applied.push(item);
       if (afterWrite) afterWrite(item);
@@ -663,6 +707,7 @@ export function installUpgrade({ source, plan, runDir, candidateDirectory, befor
       sourceAfterSha256: sha256(Buffer.from(JSON.stringify([...mapOfFiles(root)].sort(([a], [b]) => a.localeCompare(b)).map(([name, bytes]) => [name, sha256(bytes)])))),
       rollbackDirectory: backupDir,
       candidateDirectory: candidateDir,
+      assetPoolStats,
       changes: changed
     };
     atomicWriteFile(path.join(runDir, 'rollback.json'), Buffer.from(JSON.stringify(receipt, null, 2) + '\n'), { exclusive: true });

@@ -2,25 +2,23 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 
-// Read-only contract test. This test does not edit or execute the workflow.
-const workflow = fs.readFileSync(new URL('../.github/workflows/publish-champion-package.yml', import.meta.url), 'utf8');
-const normalized = workflow.replace(/\r\n/g, '\n');
+// Cars commits must not automatically publish dealer mirrors. The dealer's
+// own Git-to-Vercel connection remains its single deployment trigger.
+const directory = new URL('../.github/workflows/', import.meta.url);
+const publishers = [
+  'build-isauto-varna.yml', 'deploy-localized-fleet.yml',
+  'fix-isauto-modern-logo-contrast.yml', 'generate-navara-localized-package.yml',
+  'localize-isauto-varna.yml', 'patch-isauto-repair-script.yml',
+  'patch-isauto-social-normalizer.yml', 'patch-refresh-css-boundary.yml',
+  'promote-localization-boundaries.yml', 'publish-champion-package.yml',
+  'wire-isauto-logo-contrast-guard.yml',
+];
 
-test('dealer publication is manual-only and scoped to Champion Auto Pro', () => {
-  const triggerLines = normalized.split('\n');
-  assert.ok(triggerLines.includes('  workflow_dispatch:'));
-  assert.equal(triggerLines.includes('  push:'), false);
-
-  const sparseCheckout = normalized
-    .split('          sparse-checkout: |\n')[1]
-    ?.split('\n\n      - name: Build deterministic package')[0];
-  assert.ok(sparseCheckout);
-
-  const entries = sparseCheckout
-    .split('\n')
-    .map((line) => line.trim())
-    .filter(Boolean);
-  assert.ok(entries.includes('clients/champion-auto-pro'));
-  assert.equal(entries.filter((entry) => entry.startsWith('clients/')).length, 1);
-  assert.equal(sparseCheckout.includes('clients/**'), false);
-});
+for (const name of publishers) {
+  test(`${name} requires an explicit manual publishing run`, () => {
+    const workflow = fs.readFileSync(new URL(name, directory), 'utf8');
+    assert.match(workflow, /^  workflow_dispatch:/m);
+    assert.doesNotMatch(workflow, /^  (?:push|pull_request|pull_request_target|schedule|workflow_run):/m);
+    assert.match(workflow, /^jobs:/m);
+  });
+}

@@ -1,6 +1,7 @@
 import {readFileSync} from 'node:fs';
 import {applyVercelAssets, clearVercelAssetPlan} from './vercel-asset-plan.mjs';
 import {createHash} from 'node:crypto';
+import {assertSixDesignSelection} from '../lib/six-design-release.mjs';
 export const APP_PACKAGING_VERSION='3';
 export const APP_VARIANT=Object.freeze({key:'app',base:'/variant-4',entry:'/variant-4/'});
 export const sha256=bytes=>createHash('sha256').update(bytes).digest('hex');
@@ -8,12 +9,19 @@ const json=value=>Buffer.from(JSON.stringify(value,null,2)+'\n');
 const digest=files=>sha256(Buffer.from(JSON.stringify([...files].sort(([a],[b])=>a<b?-1:a>b?1:0).map(([name,bytes])=>[name,sha256(bytes)]))));
 export {digest as appSourceDigest};
 export function baseNativeManifest(manifest){
- const base=structuredClone(manifest);if(base.packaging?.version!==APP_PACKAGING_VERSION)return base;
+ const base=structuredClone(manifest);
+ if(base.packaging?.version==='5'){
+  assertSixDesignSelection(base.variants);
+  base.packaging.version='2';base.variants=base.variants.slice(0,3);
+  for(const key of ['app','mobile','karento-best']){delete base.templateRevisions?.[key];delete base.templateSources?.[key];}
+  delete base.appVariant;return base;
+ }
+ if(base.packaging?.version!==APP_PACKAGING_VERSION)return base;
  if(base.variants?.length!==4||JSON.stringify(base.variants[3])!==JSON.stringify(APP_VARIANT))throw Error('Invalid App extension manifest');
  base.packaging.version='2';base.variants=base.variants.slice(0,3);delete base.templateRevisions?.app;delete base.templateSources?.app;delete base.appVariant;return base;
 }
 export function appendAppService(config){
- const result=structuredClone(config);if(!result.services?.autobest||!result.services?.carwow)throw Error('Expected the existing dealer Services configuration');
+ const result=structuredClone(config);if(!result.services?.autobest)throw Error('Expected the existing dealer Services configuration');
  if(result.services.app)throw Error('App service already exists; use an explicit refresh');
  result.services.app={root:'app',framework:'nextjs',installCommand:'npm ci --include=dev',buildCommand:'node ../scripts/build-app-service.mjs'};
  if(!Array.isArray(result.rewrites))throw Error('Missing existing service routes');
@@ -22,7 +30,7 @@ export function appendAppService(config){
  return result;
 }
 export function assertAppVariant(files,manifest){
- if(manifest.packaging?.version!==APP_PACKAGING_VERSION)return;
+ if(![APP_PACKAGING_VERSION,'5'].includes(manifest.packaging?.version))return;
  baseNativeManifest(manifest);
  const receipt=JSON.parse(files.get('.cars-app.json')?.toString()||'null');
  if(receipt?.schemaVersion!==1||receipt.dealer!==manifest.slug||receipt.template.revision!==manifest.templateRevisions?.app)throw Error('App source receipt mismatch');
@@ -60,7 +68,7 @@ export function appendAppVariant({baseFiles,appFiles,template,sourceCommit,share
  if(service){
   const old="manifest.packaging?.version !== '2'", current="!['2', '3'].includes(manifest.packaging?.version)";
   if(service.includes(old)) files.set('scripts/build-native-service.mjs',Buffer.from(service.replace(old,current)));
-  else if(!service.includes(current)) throw Error('Unrecognized native build manifest check');
+  else if(!service.includes(current)&&!service.includes("!['2', '3', '5'].includes(manifest.packaging?.version)")) throw Error('Unrecognized native build manifest check');
  }
  files.set('scripts/build-app-service.mjs',Buffer.from("import {spawnSync} from 'node:child_process';\nimport path from 'node:path';\nconst cwd=path.resolve(import.meta.dirname,'../app');\nconst result=spawnSync(process.execPath,[path.join(cwd,'node_modules/next/dist/bin/next'),'build','--webpack'],{cwd,stdio:'inherit',env:{...process.env,NEXT_PUBLIC_BASE_PATH:'/variant-4'},windowsHide:true});\nif(result.error)throw result.error;process.exitCode=result.status??1;\n"));
  files.set('vercel.json',json(appendAppService(JSON.parse(files.get('vercel.json').toString()))));

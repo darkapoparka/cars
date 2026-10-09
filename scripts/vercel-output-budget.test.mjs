@@ -81,3 +81,20 @@ test('function-like public URL names remain static files, including nested stati
   assert.equal(report.groups.find(g => g.name === 'static').bytes, 5);
   assert.equal(report.groups.find(g => g.name === 'services/app/static').bytes, 4);
 });
+
+test('final Function entrypoints must exist inside their own bundle using portable relative paths', t => {
+  const root = fixture(t, { 'config.json': { version: 3 },
+    'functions/demo.func/.vc-config.json': { runtime: 'nodejs24.x', handler: '.svelte-kit/vercel-tmp/index.js' },
+    'functions/demo.func/.svelte-kit/vercel-tmp/index.js': 'runtime',
+    'outside.js': 'outside runtime' });
+  const config = path.join(root, 'functions/demo.func/.vc-config.json');
+  const accepted = auditVercelOutput(root);
+  assert.equal(accepted.passed, true);
+  assert.deepEqual(accepted.functionEntrypoints, [{ function: 'functions/demo.func', handler: '.svelte-kit/vercel-tmp/index.js' }]);
+  for (const handler of ['../../outside.js', '..\\..\\outside.js', '/outside.js', 'C:/outside.js', 'missing.js', undefined]) {
+    fs.writeFileSync(config, JSON.stringify({ runtime: 'nodejs24.x', handler }));
+    const rejected = auditVercelOutput(root);
+    assert.equal(rejected.passed, false, String(handler));
+    assert.ok(rejected.unsafe.some(row => row.reason === 'unsafe-or-missing-function-handler'));
+  }
+});

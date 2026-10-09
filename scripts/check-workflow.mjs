@@ -3,6 +3,20 @@ import path from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {ROOT,json} from './lib/workflow.mjs';
 import {validateWorkspaceMap} from './lib/workspace-map.mjs';
+import {isCarsTemplateSource} from './lib/template-source.mjs';
+
+export function inspectLockIdentities(lock) {
+ const failures=[],templates=lock?.templates||{},known=new Set(['auto-best','modern','carwow','import','app','mobile','karento-best']);
+ for(const key of new Set(['auto-best','modern','carwow','import',...Object.keys(templates)])) {
+  const e=templates[key],source=e?.source,snapshotPath=`templates/${key}`;
+  const carsSource=isCarsTemplateSource(source)&&source.path===snapshotPath&&source.path===e?.snapshotPath&&source.repository===e.repository&&source.revision===e.commit&&source.digest===e.digest;
+  const legacySource=!source&&e?.repository===`darkapoparka/cars-template-${key}`;
+  if(!known.has(key)||!(carsSource||legacySource)||e?.snapshotPath!==snapshotPath||e?.exportPolicy!=='cars-source-v1'||!/^[a-f0-9]{64}$/.test(e?.digest||''))failures.push('Invalid lock identity '+key);
+  if(e?.status==='approved'&&!/^[a-f0-9]{40}$/.test(e.commit||''))failures.push('Approved release lacks immutable commit '+key);
+  if(e?.legacySource?.repository&&e.legacySource.repository!==`darkapoparka/cars-template-${key}`)failures.push('Invalid legacy source identity '+key);
+ }
+ return failures;
+}
 
 export function checkLinks(file){
  const text=fs.readFileSync(file,'utf8').replace(/```[\s\S]*?```/g,'');const failures=[];
@@ -17,14 +31,7 @@ export function checkWorkflow(root=ROOT,{help=true}={}){
  const docs=['README.md','AGENTS.md','docs/README.md','docs/WORKFLOW.md','docs/TEMPLATE-PROMOTION.md','docs/LEAD-PUBLISHING.md','docs/QA.md','docs/COORDINATION.md','docs/REGISTRY.md','docs/LOCAL-SETUP.md','docs/WORKSPACE.md','docs/PREVIEW-ARCHITECTURE.md'];
  const workspace=validateWorkspaceMap(json(path.join(root,'workspace.json')),json(path.join(root,'Cars.code-workspace')));
  const skills=inspectSkills(root),failures=[...docs.map(f=>path.join(root,f)),...skills.map(s=>s.path)].flatMap(checkLinks);
- const lock=json(path.join(root,'templates.lock.json'));
- for(const key of ['auto-best','modern','carwow','import']){
-  const e=lock.templates[key],snapshotPath=`templates/${key}`,source=e?.source;
-  if(e?.repository!=='darkapoparka/cars'||e.snapshotPath!==snapshotPath||e.exportPolicy!=='cars-source-v1')failures.push('Invalid lock identity '+key);
-  if(e?.status==='approved'&&!/^[a-f0-9]{40}$/.test(e.commit||''))failures.push('Approved release lacks immutable commit '+key);
-  if(source?.repository!=='darkapoparka/cars'||source?.revision!==e?.commit||source?.path!==snapshotPath||!/^[a-f0-9]{40}$/.test(source?.tree||'')||!/^[a-f0-9]{64}$/.test(source?.digest||'')||source?.digest!==e?.digest)failures.push('Invalid Cars source locator '+key);
-  if(e?.legacySource?.repository&&e.legacySource.repository!==`darkapoparka/cars-template-${key}`)failures.push('Invalid legacy source identity '+key);
- }
+ failures.push(...inspectLockIdentities(json(path.join(root,'templates.lock.json'))));
  if(help)for(const script of ['new-client','template-release','package-dealer','export-dealer','index-deployments','verify-dealer-preview','workspace-doctor','check-live-fab']){const r=spawnSync(process.execPath,[path.join(root,'scripts',script+'.mjs'),'--help'],{encoding:'utf8',windowsHide:true,timeout:15000});if(r.status!==0||!r.stdout.includes('Usage:'))failures.push(`Command help failed: ${script}: ${r.stderr}`);}
  if(failures.length)throw new Error(failures.join('\n'));return{activeDocuments:docs.length,workspace,skills:skills.map(({name,path})=>({name,path})),commandHelp:help?'passed':'not-run',discovery:'Repository-scoped .agents/skills validated; app-server skills/list supplies host discovery proof.'};
 }

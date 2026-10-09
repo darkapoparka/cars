@@ -2,8 +2,8 @@ import {createHash} from 'node:crypto';
 import {familyRetention} from './vercel-asset-plan.mjs';
 
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
-const roots={'auto-best':'auto-best/static/',modern:'modern/apps/web/public/',import:'import/static/',carwow:'carwow/static/',app:'app/public/'};
-const services={'auto-best':'autobest',modern:'modern',import:'importer',carwow:'carwow',app:'app'};
+const roots={'auto-best':'auto-best/static/',modern:'modern/apps/web/public/',import:'import/static/',carwow:'carwow/static/',app:'app/public/',mobile:'mobile/public/','karento-best':'karento-best/static/'};
+const services={'auto-best':'autobest',modern:'modern',import:'importer',carwow:'carwow',app:'app',mobile:'mobile','karento-best':'signature'};
 const mime={png:'image/png',jpg:'image/jpeg',jpeg:'image/jpeg',webp:'image/webp',avif:'image/avif',gif:'image/gif',svg:'image/svg+xml',woff:'font/woff',woff2:'font/woff2',mp4:'video/mp4',webm:'video/webm'};
 const escaped=value=>value.replace(/[.*+?^${}()|[\]\\:]/g,'\\$&');
 
@@ -38,7 +38,7 @@ export function applySharedMedia(files,catalog){
    // Next's Vercel adapter captures public assets inside next build's completion
    // hook, before a shell post-build command runs. Remove generated public copies
    // first. Any future static import of a removed asset fails the build safely.
-   service.buildCommand=['modern','app'].includes(variant.key)?`${prune} && ${service.buildCommand}`:`${service.buildCommand} && ${prune}`;
+   service.buildCommand=['modern','app','mobile'].includes(variant.key)?`${prune} && ${service.buildCommand}`:`${service.buildCommand} && ${prune}`;
   }
  }
  if(new Set(rewrites.map(r=>r.source)).size!==rewrites.length)throw Error('Conflicting shared media routes');

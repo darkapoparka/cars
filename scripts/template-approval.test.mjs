@@ -6,10 +6,10 @@ import test from 'node:test';
 import { approveCarsTemplate } from './template-release.mjs';
 import { fingerprintCommit, git, POLICY, writeJson } from './lib/workflow.mjs';
 
-function fixture(t, { native = false } = {}) {
+function fixture(t, { native = false, key = 'auto-best', existing = true } = {}) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'cars-source-approval-'));
   t.after(() => fs.rmSync(root, { recursive: true, force: true }));
-  const prefix = 'templates/auto-best';
+  const prefix = `templates/${key}`;
   fs.mkdirSync(path.join(root, prefix), { recursive: true });
   fs.writeFileSync(path.join(root, prefix, 'package.json'), '{"name":"fixture"}\n');
   if (native) {
@@ -25,11 +25,11 @@ function fixture(t, { native = false } = {}) {
   const commit = git(root, ['rev-parse', 'HEAD']);
   git(root, ['update-ref', 'refs/remotes/origin/main', commit]);
   const lockFile = path.join(root, 'templates.lock.json');
-  writeJson(lockFile, { templates: { 'auto-best': {
+  writeJson(lockFile, { templates: existing ? { [key]: {
     status: 'approved', repository: 'darkapoparka/cars-template-auto-best', commit: 'a'.repeat(40),
     snapshotPath: prefix, digest: 'b'.repeat(64), exportPolicy: POLICY,
     qa: { evidence: 'docs/releases/previous.json' }
-  } } });
+  } } : {} });
   const evidence = path.join(root, 'docs/releases/current.json');
   const qa = { repository: 'darkapoparka/cars', commit, sourcePath: prefix,
     sourceTree: git(root, ['rev-parse', `${commit}:${prefix}`]),
@@ -81,4 +81,24 @@ test('unpublished source is not selectable as a dealer release', t => {
   const f = fixture(t);
   git(f.root, ['update-ref', '-d', 'refs/remotes/origin/main']);
   assert.throws(() => approveCarsTemplate({ root: f.root, key: 'auto-best', commit: f.commit }), /not published/);
+});
+
+test('new Mobile and Signature releases require exact evidence before adding their source entries', t => {
+  for (const key of ['mobile', 'karento-best']) {
+    const f = fixture(t, { key, existing: false }), before = fs.readFileSync(f.lockFile);
+    const options = { root: f.root, key, commit: f.commit };
+    assert.equal(approveCarsTemplate(options).ready, false);
+    assert.deepEqual(fs.readFileSync(f.lockFile), before);
+    assert.throws(() => approveCarsTemplate({ ...options, write: true }), /exact-source QA/);
+    writeJson(f.evidence, { ...f.qa, sourceDigest: 'f'.repeat(64) });
+    assert.throws(() => approveCarsTemplate({ ...options, evidence: f.evidence, write: true }), /Evidence must bind/);
+    assert.deepEqual(fs.readFileSync(f.lockFile), before);
+    writeJson(f.evidence, f.qa);
+    const result = approveCarsTemplate({ ...options, evidence: f.evidence, write: true });
+    assert.equal(result.release.source.path, f.prefix);
+    assert.equal(result.release.source.revision, f.commit);
+    assert.equal(result.release.legacySource, undefined);
+    assert.equal(JSON.parse(fs.readFileSync(f.lockFile)).templates[key].status, 'approved');
+    assert.equal(git(f.root, ['diff', '--name-only', '--', f.prefix]), '');
+  }
 });

@@ -11,8 +11,8 @@ export async function pruneService(service,{packageRoot=path.resolve(import.meta
  if(receipt.schemaVersion!==1||receipt.dealer!==dealer.slug||pkg.manifest.slug!==dealer.slug)throw Error('Expected a generated dealer media package');
  const variants=dealer.variants.filter(v=>v.key===service);if(variants.length!==1)throw Error('Unknown service');
  const base=variants[0].base.replace(/^\//,'');
- const next=service==='modern'||service==='app';
- const root=path.join(packageRoot,next?(service==='modern'?'modern/apps/web/public':'app/public'):`${service}/.vercel/output/static`);
+ const next=['modern','app','mobile'].includes(service);
+ const root=path.join(packageRoot,next?(service==='modern'?'modern/apps/web/public':`${service}/public`):`${service}/.vercel/output/static`);
  const entries=[];
  const retentionFile=path.join(packageRoot,service,'.svelte-kit/cars-public-assets/retention.json');
  const retention=!next?await fs.readFile(retentionFile,'utf8').then(JSON.parse,e=>{if(e.code==='ENOENT')return null;throw e;}):null;

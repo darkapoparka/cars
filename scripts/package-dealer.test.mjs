@@ -310,6 +310,33 @@ test('both packaging CLIs expose portable --help', () => {
   }
 });
 
+test('Svelte 3 Windows Function handlers repair only a byte-matched generated entry and remain idempotent', async t => {
+  const directory = await fs.mkdtemp(path.join(os.tmpdir(), 'cars-function-entry-'));
+  t.after(async () => {
+    const relative = path.relative(path.resolve(os.tmpdir()), path.resolve(directory));
+    assert.ok(relative && relative !== '..' && !relative.startsWith('..' + path.sep) && !path.isAbsolute(relative));
+    await fs.rm(directory, { recursive: true, force: true });
+  });
+  const output = path.join(directory, 'output');
+  const functionRoot = path.join(output, 'functions/![-]/catchall.func');
+  const handler = '.svelte-kit/vercel-tmp/index.js';
+  await put(directory, handler, 'export default { fetch() {} };\n');
+  await put(functionRoot, handler, 'export default { fetch() {} };\n');
+  const original = path.relative(functionRoot, path.join(directory, handler)).replaceAll(path.sep, '\\');
+  const config = { runtime: 'nodejs24.x', handler: original, framework: { slug: 'sveltekit', version: '3.0.1' } };
+  await put(output, 'config.json', JSON.stringify({ version: 3, routes: [] }));
+  await put(functionRoot, '.vc-config.json', JSON.stringify(config));
+  assert.equal((await fixSvelteServiceOutput({ output, base: '/variant-6' })).functionHandlers, 1);
+  assert.equal(JSON.parse(await fs.readFile(path.join(functionRoot, '.vc-config.json'), 'utf8')).handler, handler);
+  assert.equal((await fixSvelteServiceOutput({ output, base: '/variant-6' })).functionHandlers, 0);
+  await put(functionRoot, '.vc-config.json', JSON.stringify(config));
+  await put(functionRoot, handler, 'changed copied entry');
+  await assert.rejects(() => fixSvelteServiceOutput({ output, base: '/variant-6' }), /Unrecognized external/);
+  assert.equal(JSON.parse(await fs.readFile(path.join(functionRoot, '.vc-config.json'), 'utf8')).handler, original, 'rejected output is not rewritten');
+  await put(functionRoot, '.vc-config.json', JSON.stringify({ ...config, handler: '../unknown.js' }));
+  await assert.rejects(() => fixSvelteServiceOutput({ output, base: '/variant-6' }), /Unrecognized external/);
+});
+
 test('package text is normalized, origin-qualified assets stay mounted and tampering is rejected', async t => {
   const options=await fixture(t,'import');
   await packageDealer(options);

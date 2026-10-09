@@ -1,3 +1,4 @@
+import { assertCarsOwnedDealer } from './lib/dealer-source.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { copySource } from './copy-source.mjs';
@@ -11,6 +12,7 @@ import { assertTemplatePresentation } from './lib/client-refresh-presentation.mj
 import { applyDealerLogoContract } from './lib/client-logo-contract.mjs';
 import { refreshNativeClient, planNativeClientRefresh } from './lib/native-refresh.mjs';
 import { nativeLocaleSources } from './lib/dealer-locale.mjs';
+import { runUpdateDealerTemplate } from './dealer-updates/update-dealer-template.mjs';
 
 const TEMPLATE_KEYS = ['auto-best', 'modern', 'import', 'carwow'];
 const exists = (file) => fs.existsSync(file);
@@ -291,8 +293,17 @@ function dirtyClientPaths(root,slug){return git(root,['status','--porcelain=v1',
 
 export async function planClientRefresh(options){
   const {root=ROOT,slug,localeConfig}=options;
+  assertCarsOwnedDealer(root, slug);
   const manifestPath=inside(root,`clients/${slug}/dealer.json`);
   const selected=exists(manifestPath)?json(manifestPath):null;
+  if(options.designSet === 'six' || options.variants || selected?.packaging?.version === '5') {
+    return runUpdateDealerTemplate(['plan','--dealer-root',path.dirname(manifestPath),'--cars-root',root,
+      ...(options.designSet?['--design-set',options.designSet]:[]),
+      ...(options.variants?['--variants',Array.isArray(options.variants)?options.variants.join(','):options.variants]:[]),
+      ...(options.candidateDirectory?['--candidate-dir',options.candidateDirectory]:[]),
+      ...(options.assetPool?['--asset-pool',options.assetPool]:[]),
+      ...(options.resolutionsFile?['--resolutions-file',options.resolutionsFile]:[])]);
+  }
   if(localeConfig || selected?.packaging?.version==='2') return planNativeClientRefresh({...options,root,slug});
   const selectedKeys=selected?.variants.map(v=>v.key)||TEMPLATE_KEYS.filter(key=>exists(path.join(root,'clients',slug,key)));
   if(selectedKeys.some(key=>nativeLocaleSources(new Map(),path.join(root,'templates',key)).length)) throw new Error('Native template releases require explicit dealer locale configuration and reviewed native overlay');
@@ -310,8 +321,16 @@ export async function planClientRefresh(options){
 }
 export async function refreshClient(options) {
   const {root=ROOT,slug,write=false,localeConfig,overlayFile}=options;
+  assertCarsOwnedDealer(root, slug);
   const existingFile=inside(root,`clients/${slug}/dealer.json`);
   const existing=exists(existingFile)?json(existingFile):null;
+  if(options.designSet === 'six' || options.variants || options.reviewedRun || existing?.packaging?.version === '5') {
+    if(!write) return planClientRefresh(options);
+    if(!options.reviewedRun) throw new Error('Six-design refresh installs a reviewed candidate. Run the proposal and its dealer QA first, then use --reviewed-run RUN --write.');
+    const runFile=path.join(path.resolve(options.reviewedRun),'run.json'),run=json(runFile);
+    if(fs.realpathSync(run.dealerRoot)!==fs.realpathSync(path.dirname(existingFile)) || run.dealerSlug!==slug) throw new Error('Reviewed refresh run belongs to another dealer');
+    return runUpdateDealerTemplate(['install','--run-dir',path.resolve(options.reviewedRun)]);
+  }
   if(localeConfig || existing?.packaging?.version==='2') return refreshNativeClient({...options,root,slug,write});
   if(existing?.variants.some(({key})=>nativeLocaleSources(new Map(),path.join(root,'clients',slug,key)).length)) throw new Error('Native dealer source must use the native reviewed-overlay refresh path');
   const before=dirtyClientPaths(root,slug);
@@ -335,7 +354,7 @@ export async function refreshClient(options) {
     throw error;
   }
 }
-async function main(){if(process.argv.includes('--help')){console.log('Usage: node scripts/refresh-client.mjs --client SLUG [--locale-config JSON --native-overlay localization/dealer-overlay.json] [--write]\nRegenerates existing variants from approved Cars snapshots, reapplies only dealer identity/content/inventory/assets, keeps template UI/hero/artwork, and preserves publishing identity.');return;}const o=args(process.argv.slice(2),['client','locale-config','native-overlay','rollback-receipt'],['write']);if(!o.client)throw new Error('Use --client SLUG.');console.log(JSON.stringify(await refreshClient({slug:o.client,write:!!o.write,...(o['locale-config']?{localeConfig:json(path.resolve(o['locale-config']))}:{}),...(o['native-overlay']?{overlayFile:o['native-overlay']}:{}),...(o['rollback-receipt']?{rollbackReceipt:json(path.resolve(o['rollback-receipt']))}:{})}),null,2));}
+async function main(){if(process.argv.includes('--help')){console.log('Usage: node scripts/refresh-client.mjs --client SLUG [--design-set six] [--variants karento-best] [--candidate-dir PATH --asset-pool PATH] [--resolutions-file JSON] [--reviewed-run RUN --write]\nLegacy native refresh: [--locale-config JSON --native-overlay localization/dealer-overlay.json] [--write]\nSix-design migration and selective refresh use the existing preservation-aware plan/install workflow. The proposal copies exact approved sources, preserves custom edits and publication identity, and needs dealer QA before installation.');return;}const o=args(process.argv.slice(2),['client','locale-config','native-overlay','rollback-receipt','design-set','variants','candidate-dir','asset-pool','resolutions-file','reviewed-run'],['write']);if(!o.client)throw new Error('Use --client SLUG.');console.log(JSON.stringify(await refreshClient({slug:o.client,write:!!o.write,...(o['design-set']?{designSet:o['design-set']}:{}),...(o.variants?{variants:o.variants}:{}),...(o['candidate-dir']?{candidateDirectory:path.resolve(o['candidate-dir'])}:{}),...(o['asset-pool']?{assetPool:path.resolve(o['asset-pool'])}:{}),...(o['resolutions-file']?{resolutionsFile:path.resolve(o['resolutions-file'])}:{}),...(o['reviewed-run']?{reviewedRun:path.resolve(o['reviewed-run'])}:{}),...(o['locale-config']?{localeConfig:json(path.resolve(o['locale-config']))}:{}),...(o['native-overlay']?{overlayFile:o['native-overlay']}:{}),...(o['rollback-receipt']?{rollbackReceipt:json(path.resolve(o['rollback-receipt']))}:{})}),null,2));}
 if(process.argv[1]&&path.resolve(process.argv[1])===import.meta.filename)main().catch((error)=>{console.error(error.stack||error.message);process.exitCode=1;});
 
 export { copyDealerDirectories };

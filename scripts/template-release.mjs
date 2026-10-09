@@ -51,14 +51,14 @@ export function releaseStatus(root){
 
 // Select a reviewed commit already published from Cars. No template folder is copied or replaced.
 export function approveCarsTemplate({root=ROOT,key,commit,evidence,write=false}) {
- if(!['auto-best','modern','carwow','import','app'].includes(key))throw new Error('Select one of the five Cars templates.');
+ if(!['auto-best','modern','carwow','import','app','mobile','karento-best'].includes(key))throw new Error('Select a maintained Cars template source.');
  if(!/^[a-f0-9]{40}$/.test(commit||''))throw new Error('Supply an immutable 40-character Cars commit SHA.');
  const remote=git(root,['remote','get-url','origin']).replace(/\.git$/,'').replace(/^git@github.com:/,'https://github.com/');
  if(remote!=='https://github.com/darkapoparka/cars'||git(root,['branch','--show-current'])!=='main')throw new Error('Approve template releases from the Cars main checkout.');
  for(const ref of ['HEAD','refs/remotes/origin/main']) {
   if(git(root,['merge-base','--is-ancestor',commit,ref],{allowFailure:true})===null)throw new Error(`Template source is not published on Cars main: ${ref}`);
  }
- const lockFile=path.join(root,'templates.lock.json'),before=fs.readFileSync(lockFile),lock=JSON.parse(before),prior=lock.templates[key] || (key==='app' ? {snapshotPath:'templates/app'} : null);
+ const lockFile=path.join(root,'templates.lock.json'),before=fs.readFileSync(lockFile),lock=JSON.parse(before),prior=lock.templates[key] || (['app','mobile','karento-best'].includes(key) ? {snapshotPath:`templates/${key}`} : null);
  if(!prior)throw new Error(`No existing release entry for ${key}.`);
  const prefix=`templates/${key}`,actual=fingerprintCommit(root,commit,{prefix});
  if(!actual.files.some(f=>f.path==='package.json'))throw new Error(`${key}: missing template application at the selected commit.`);
@@ -84,7 +84,7 @@ export function approveCarsTemplate({root=ROOT,key,commit,evidence,write=false})
   runtime:qa.runtime,modes:qa.modes||{standalone:'verified',mounted:'requires-dealer-QA'},
   qa:{evidence:path.relative(root,evidenceFile).replaceAll('\\','/'),verifiedAt:qa.verifiedAt,
     checks:qa.checks,standalone:qa.standalone,...(qa.nativeLocalization?{nativeLocalization:qa.nativeLocalization}:{})}};
- if(!prior.source&&!prior.legacySource)entry.legacySource={...selectedTemplateSource(prior),
+ if(prior.repository&&prior.commit&&!prior.source&&!prior.legacySource)entry.legacySource={...selectedTemplateSource(prior),
   evidence:prior.qa?.evidence||null,nativeDeployment:prior.qa?.nativeLocalization?.deployment||null};
  const sourceFiles=new Map(gitFiles(root,commit,{prefix}).map(f=>[f.path,Buffer.alloc(0)]));
  if(nativeLocaleSources(sourceFiles).length||qa.nativeLocalization)validateNativeRelease(key,entry);

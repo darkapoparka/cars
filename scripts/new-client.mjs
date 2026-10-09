@@ -11,7 +11,7 @@ import { gitRead, repositoryIdentity } from './workspace-doctor.mjs';
 export function assertMainCheckout(root, { readGit = gitRead, platform = process.platform } = {}) {
   const config = json(path.join(root, 'workspace.json'));
   const declared = config.machinePaths?.[platform];
-  if (platform === 'win32' && !declared) throw new Error('Missing canonical Windows checkout in workspace.json; use J:/cars.');
+  if (platform === 'win32' && !declared) throw new Error('Missing canonical Windows checkout in workspace.json; resolve the registered Cars source before creating a dealer.');
   const physical = value => platform === 'win32' ? fs.realpathSync(value).toLowerCase() : fs.realpathSync(value);
   if (declared && physical(declared) !== physical(root)) throw new Error('Use the canonical Cars checkout: ' + declared);
   if (repositoryIdentity(readGit(root, ['config', '--get', 'remote.origin.url'])) !== 'darkapoparka/cars') throw new Error('Wrong Cars origin; use the canonical workspace.');

@@ -42,6 +42,19 @@ export function stripModernAlternateWordmark(text) {
   return next;
 }
 
+export function normalizeModernFinancingLogo(text) {
+  const start = text.indexOf('<span className="relative block aspect-[1780/512] w-28">');
+  const end = text.indexOf('</span>', start);
+  const extractedFinance = /import\s*\{\s*ListingFinanceCard\s*\}\s*from\s*["']\.\/listing-finance-card["']/.test(text)
+    && /<ListingFinanceCard(?:\s|\/?>)/.test(text)
+    && !/leadSite\.logo(?:Path|OnAccent)\b/.test(text);
+  // The current artwork card has no inline dealer wordmark to replace. Keep
+  // that reviewed composition, while retaining the older inline-logo adapter.
+  if (start < 0 && (text.includes('ListingCtaBanner') || extractedFinance)) return text;
+  if (start < 0 || end < 0) throw Error('Missing Modern financing logo anchor');
+  return text.slice(0, start) + '<span className="relative block aspect-[1780/512] w-28">\n                <Image alt={leadSite.name} className="h-full w-full object-contain" height={512} sizes="112px" src={leadSite.logoOnAccent} width={1780} />\n              </span>' + text.slice(end + 7);
+}
+
 export function applyDealerLogoContract({ key, oldVariant, candidate, profile }) {
   const contract = profile.logoContract ?? loadLogoContract(path.dirname(oldVariant));
   if (!contract) return [];
@@ -102,13 +115,7 @@ export function applyDealerLogoContract({ key, oldVariant, candidate, profile })
       if (/clipPath|brightness-0|\binvert\b/.test(text)) throw Error('Obsolete clipped Modern mobile logo survived');
       return text;
     });
-    edit('packages/marketplace-ui/components/listing-detail-content.tsx', text => {
-      const start = text.indexOf('<span className="relative block aspect-[1780/512] w-28">');
-      const end = text.indexOf('</span>', start);
-      if (start < 0 && text.includes('ListingCtaBanner')) return text;
-      if (start < 0 || end < 0) throw Error('Missing Modern financing logo anchor');
-      return text.slice(0, start) + '<span className="relative block aspect-[1780/512] w-28">\n                <Image alt={leadSite.name} className="h-full w-full object-contain" height={512} sizes="112px" src={leadSite.logoOnAccent} width={1780} />\n              </span>' + text.slice(end + 7);
-    });
+    edit('packages/marketplace-ui/components/listing-detail-content.tsx', normalizeModernFinancingLogo);
     for (const file of ['packages/marketplace-ui/components/seller-identity-card.tsx', 'apps/web/lib/public-marketplace-data.ts', 'apps/web/app/[locale]/layout.tsx']) {
       edit(file, text => text.replaceAll('leadSite.logoPath', 'leadSite.logoOnLight').replace('type: "image/png", url: leadSite.logoOnLight', 'type: "image/webp", url: leadSite.logoOnLight'));
     }

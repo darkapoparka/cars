@@ -1,3 +1,4 @@
+import { assertCarsOwnedDealer } from './lib/dealer-source.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {ROOT,args,json,writeJson,git,inside,filesAt,sha256,normalized,validateManifest} from './lib/workflow.mjs';
@@ -32,6 +33,7 @@ export function validateReview({review,remoteCommit,candidateDigest,changes}) {
   for (const p of changes) {const d=dispositions.get(p);if(!d || !['canonical-source','packaging-layer','obsolete-generated-metadata'].includes(d.resolution) || !d.reason?.trim()) throw new Error('Missing reviewed disposition for '+p);}
 }
 export function exportDealer({root=ROOT,slug,packageDir,reviewFile,write=false,targetBranch}) {
+  assertCarsOwnedDealer(root, slug);
   const client=inside(root,'clients/'+slug,{mustExist:true});
   const manifest=validateManifest(json(path.join(client,'dealer.json')));
   if(manifest.slug!==slug)throw new Error('Dealer manifest slug mismatch.');
@@ -73,6 +75,7 @@ export function exportDealer({root=ROOT,slug,packageDir,reviewFile,write=false,t
 }
 export function pushExport({root=ROOT,receiptFile}) {
   const r=json(receiptFile),url='https://github.com/'+r.repository+'.git';
+  assertCarsOwnedDealer(root, r.slug);
   const manifest=validateManifest(json(inside(root,'clients/'+r.slug+'/dealer.json',{mustExist:true})));
   if(manifest.repository!==r.repository)throw new Error('Receipt repository no longer matches canonical identity.');
   if(remoteHead(root,url,r.branch)!==r.targetHead || remoteHead(root,url,r.defaultBranch)!==r.baseHead)throw new Error('Remote advanced after review. Re-export; never force-push.');
