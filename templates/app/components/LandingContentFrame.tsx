@@ -13,12 +13,12 @@ export const landingContent = stylex.create({
   panel: {
     position: 'relative',
     paddingTop: 8,
-    borderTopLeftRadius: {[media.mobile]: 24, default: 32},
-    borderTopRightRadius: {[media.mobile]: 24, default: 32},
+    borderTopLeftRadius: {[media.desktop]: 0, [media.mobile]: 24, default: 32},
+    borderTopRightRadius: {[media.desktop]: 0, [media.mobile]: 24, default: 32},
     backgroundColor: $.surface,
   },
 });
 
 const s = stylex.create({
-  backdrop: {maxWidth: $.content, marginInline: 'auto', backgroundColor: {[media.mobile]: $.rail, default: '#202023'}},
+  backdrop: {maxWidth: $.content, marginInline: 'auto', backgroundColor: {[media.desktop]: $.surface, [media.mobile]: $.rail, default: '#202023'}},
 });

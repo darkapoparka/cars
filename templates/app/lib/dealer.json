@@ -17,6 +17,12 @@
   "mapsUrl": "",
   "website": "",
   "whatsappUrl": "",
+  "socialLinks": [
+    {"label": "Facebook", "url": ""},
+    {"label": "Instagram", "url": ""},
+    {"label": "Mobile.bg", "url": ""},
+    {"label": "Cars.bg", "url": ""}
+  ],
   "services": [],
   "referenceClaimsApproved": false,
   "observedAt": "",

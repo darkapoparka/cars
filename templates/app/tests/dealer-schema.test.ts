@@ -21,6 +21,15 @@ describe('public dealer contract', () => {
     assert.ok(publicAssetSchema.safeParse('/cars/photo.webp').success);
     assert.ok(publicAssetSchema.safeParse('https://images.example.test/car.webp').success);
   });
+  it('accepts optional public showroom copy, map and social profiles', () => {
+    assert.ok(dealerSchema.safeParse({...example, aboutText: 'Our showroom.', mapEmbedUrl: 'https://www.google.com/maps/embed?pb=example', socialLinks: [{label: 'Instagram', url: 'https://www.instagram.com/example/'}]}).success);
+    assert.ok(dealerSchema.safeParse({...example, mapEmbedUrl: 'https://www.openstreetmap.org/export/embed.html?bbox=23,42,24,43'}).success);
+    assert.ok(dealerSchema.safeParse({...example, socialLinks: [{label: 'Facebook', url: ''}, {label: 'Instagram', url: ''}, {label: 'Mobile.bg', url: ''}, {label: 'Cars.bg', url: ''}]}).success);
+  });
+  it('rejects unsafe or unrelated embeds and invalid social destinations', () => {
+    for (const mapEmbedUrl of ['not-a-url', 'javascript:alert(1)', 'https://example.com/embed', 'https://www.google.com.evil.test/maps/embed', 'https://user:password@www.google.com/maps/embed']) assert.equal(dealerSchema.safeParse({...example, mapEmbedUrl}).success, false);
+    for (const socialLinks of [[{label: 'Instagram', url: 'javascript:alert(1)'}], [{label: '', url: 'https://www.instagram.com/example/'}], [{label: 'Profile', url: 'https://user:password@example.com/'}]]) assert.equal(dealerSchema.safeParse({...example, socialLinks}).success, false);
+  });
   for (const patch of [{price: -1}, {monthly: Infinity}, {mileage: NaN}, {fuel: 'unknown'}, {transmission: 'robot'}, {slug: '../car'}, {price: 0, priceOnRequest: false}, {listedAt: 'not-a-date'}, {privateNotes: 'not public'}]) {
     it('rejects invalid vehicle data ' + Object.keys(patch).join(','), () => assert.equal(vehicleSchema.safeParse({...vehicles[0], ...patch}).success, false));
   }

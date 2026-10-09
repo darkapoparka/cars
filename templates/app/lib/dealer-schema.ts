@@ -11,6 +11,13 @@ const https = text.refine(value => {
   catch {return false;}
 }, 'Expected an HTTPS URL without embedded credentials');
 const optionalContact = https.or(z.literal(''));
+const mapEmbed = https.refine(value => {
+  try {
+    const url = new URL(value);
+    return url.hostname === 'www.google.com' && /^\/maps(?:\/embed)?\/?$/.test(url.pathname)
+      || url.hostname === 'www.openstreetmap.org' && url.pathname === '/export/embed.html';
+  } catch {return false;}
+}, 'Use a Google Maps or OpenStreetMap embed URL').or(z.literal(''));
 export const publicAssetSchema = text.refine(value => {
   if (https.safeParse(value).success) return true;
   if (!value.startsWith('/') || value.startsWith('//') || value.includes('\\')) return false;
@@ -30,6 +37,8 @@ export const dealerSchema = z.strictObject({
   phoneE164: text.regex(/^\+[1-9]\d{6,14}$/).or(z.literal('')),
   email: z.email().or(z.literal('')), mapsUrl: optionalContact, website: optionalContact,
   whatsappUrl: optionalContact, services: z.array(text), observedAt: date.or(z.literal('')),
+  aboutText: text.optional(), mapEmbedUrl: mapEmbed.optional(),
+  socialLinks: z.array(z.strictObject({label: nonempty, url: optionalContact})).optional(),
   inventoryNotice: text, previewNotice: text,
   referenceClaimsApproved: z.boolean().optional(), welcomeEnabled: z.boolean().optional(),
 }).superRefine((dealer, context) => {

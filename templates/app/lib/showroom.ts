@@ -76,7 +76,7 @@ export const showroom = {
       {href: '/service', label: 'Vehicle services', icon: 'service'},
     ]},
     {label: 'Your showroom', contacts: true, items: [
-      {href: '/stores', label: 'Visit showroom', icon: 'location'},
+      {href: '/stores', label: 'About us', icon: 'location'},
     ]},
   ] as readonly MenuGroup[],
 } as const;
