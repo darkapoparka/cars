@@ -28,6 +28,7 @@
 	import MobileSheet from '$lib/components/common/MobileSheet.svelte';
 	import MobileModeTabs from '$lib/components/common/MobileModeTabs.svelte';
 	import MobileSearchControl from '$lib/components/common/MobileSearchControl.svelte';
+	import MobileIconAction from '$lib/components/common/MobileIconAction.svelte';
 	import HeroFilterDialog from './HeroFilterDialog.svelte';
 
 	let { hero }: { hero?: HomeFiveHeroData } = $props();
@@ -517,14 +518,13 @@
 					<span class="daynight-home-search-drawer__title"
 						>{activeMobileAction.drawerTitle ?? mobileSearchDrawerTitle}</span
 					>
-					<button
-						type="button"
+					<MobileIconAction
 						class="daynight-home-search-overlay__close"
-						aria-label={mobileSearchDrawerClose}
+						label={mobileSearchDrawerClose}
 						onclick={closeMobileSearch}
 					>
-						<X size={20} strokeWidth={2.4} aria-hidden="true" />
-					</button>
+						<X size={20} strokeWidth={2} aria-hidden="true" />
+					</MobileIconAction>
 				</header>
 				<form
 					class="daynight-home-search-drawer__form"
@@ -611,16 +611,15 @@
 			<div class="site-container">
 				<nav class="daynight-mobile-home-quick__scroller bc-quick bc-quick--{mobileMode}">
 					{#if mobileMode === 'buy'}
-						<button
-							type="button"
+						<MobileIconAction
 							class="daynight-mobile-home-quick__filter"
-							aria-haspopup="dialog"
-							aria-expanded={mobileSearchOpen || inventorySearchOpen}
-							aria-label={isEnglish ? 'Open filters' : nt('ui62')}
+							haspopup="dialog"
+							expanded={mobileSearchOpen || inventorySearchOpen}
+							label={isEnglish ? 'Open filters' : nt('ui62')}
 							onclick={openMobileFilters}
 						>
-							<SlidersHorizontal size={18} strokeWidth={2.2} aria-hidden="true" />
-						</button>
+							<SlidersHorizontal size={20} strokeWidth={2} aria-hidden="true" />
+						</MobileIconAction>
 					{/if}
 					{#each activeMobileQuickLinks as filter (filter.href)}
 						<a href={resolve(filter.href as '/')}>{filter.label}</a>
@@ -1761,21 +1760,6 @@
 			padding: max(12px, env(safe-area-inset-top)) 16px 12px;
 		}
 
-		.daynight-home-search-overlay__close {
-			display: flex;
-			width: 40px;
-			height: 40px;
-			align-items: center;
-			justify-content: center;
-			flex: 0 0 40px;
-			border: 0;
-			border-radius: 999px;
-			background: var(--bc-white);
-			color: var(--bc-ink);
-			cursor: pointer;
-			padding: 0;
-		}
-
 		.daynight-home-search-overlay__scroll {
 			display: grid;
 			min-height: 0;
@@ -2050,21 +2034,13 @@
 			white-space: nowrap;
 		}
 
-		.daynight-mobile-home-quick__scroller .daynight-mobile-home-quick__filter {
-			width: var(--bc-control-height-chip);
-			min-width: var(--bc-control-height-chip);
-			padding: 0;
-		}
-
-		.daynight-mobile-home-quick__scroller a:focus-visible,
-		.daynight-mobile-home-quick__scroller button:focus-visible {
+		.daynight-mobile-home-quick__scroller a:focus-visible {
 			background: var(--bc-surface-hover);
 			box-shadow: none;
 			color: var(--bc-ink);
 		}
 
-		.daynight-mobile-home-quick__scroller a:focus-visible,
-		.daynight-mobile-home-quick__scroller button:focus-visible {
+		.daynight-mobile-home-quick__scroller a:focus-visible {
 			outline: 2px solid rgba(28, 28, 28, 0.7);
 			outline-offset: 3px;
 		}

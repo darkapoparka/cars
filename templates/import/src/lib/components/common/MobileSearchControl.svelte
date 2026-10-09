@@ -140,4 +140,19 @@
 		color: var(--bc-white);
 		stroke: var(--bc-white) !important;
 	}
+
+	@media (max-width: 767.98px) {
+		.mobile-search-control {
+			min-height: var(--bc-control-height-standard);
+			padding: 0 0 0 var(--bc-space-4);
+		}
+		.mobile-search-control__action {
+			border: 0 !important;
+		}
+		.mobile-search-control__action :global(svg) {
+			width: var(--bc-mobile-icon-action-glyph-size);
+			height: var(--bc-mobile-icon-action-glyph-size);
+			stroke-width: var(--bc-mobile-icon-action-stroke);
+		}
+	}
 </style>

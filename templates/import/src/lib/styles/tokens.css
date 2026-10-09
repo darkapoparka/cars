@@ -270,8 +270,8 @@
 	--bc-mobile-content-max: 480px;
 	--bc-mobile-nav-icon-size: 22px;
 	--bc-mobile-icon-action-hit-size: var(--bc-control-height-standard);
-	/* Compact visible utility circles retain a full-sized touch target. */
-	--bc-mobile-icon-action-surface-size: var(--bc-control-height-compact);
+	/* Mobile icon buttons share the standard visible size and touch target. */
+	--bc-mobile-icon-action-surface-size: var(--bc-control-height-standard);
 	--bc-mobile-icon-action-glyph-size: 20px;
 	--bc-mobile-icon-action-stroke: 2;
 	--bc-mobile-sheet-max-width: 520px;
@@ -442,7 +442,13 @@
 	}
 }
 
-/* Desktop actions are larger, not heavier. Mobile keeps its established scale. */
+@media (max-width: 767.98px) {
+	:root {
+		--bc-control-height-chip: var(--bc-control-height-standard);
+	}
+}
+
+/* Desktop retains its existing utility-button and typography scale. */
 @media (min-width: 768px) {
 	:root {
 		--bc-mobile-icon-action-surface-size: var(--bc-control-height-secondary);

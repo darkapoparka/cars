@@ -1068,6 +1068,21 @@
 		padding: 0;
 	}
 	@media (max-width: 767.98px) {
+		.sell-flow__header {
+			grid-template-columns:
+				var(--bc-control-height-standard) minmax(0, 1fr)
+				var(--bc-control-height-standard);
+		}
+		.sell-flow__close,
+		.sell-flow__header-spacer {
+			width: var(--bc-control-height-standard);
+			height: var(--bc-control-height-standard);
+		}
+		.sell-flow__close :global(svg) {
+			width: var(--bc-mobile-icon-action-glyph-size);
+			height: var(--bc-mobile-icon-action-glyph-size);
+			stroke-width: var(--bc-mobile-icon-action-stroke);
+		}
 		.sell-flow__back,
 		.sell-flow__next {
 			min-width: 0;
