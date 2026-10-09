@@ -7,6 +7,7 @@ import {formatPrice} from '@/lib/data';
 import {estimateFinance} from '@/lib/finance';
 import {useCopy} from '@/lib/locale';
 import LoanSliderFrame from './LoanSliderFrame';
+import NumberField from './NumberField';
 import {media, tokens as $} from '@/app/tokens.stylex';
 import {campaignTokens as campaign} from '@/app/campaign-theme.stylex';
 import {typography as t} from '@/app/typography.stylex';
@@ -18,7 +19,7 @@ function AmountInput({id, label, value, onChange, min, max, step = 1}: {id: stri
     setDraft(raw);
     if (raw.trim() && Number.isFinite(Number(raw))) onChange(Math.max(min, Math.min(max, Number(raw))));
   }
-  return <input id={id} aria-label={label} type="number" inputMode={step < 1 ? 'decimal' : 'numeric'} min={min} max={max} step={step} value={editing ? draft : value}
+  return <input id={id} data-focus-owner="field" aria-label={label} type="number" inputMode={step < 1 ? 'decimal' : 'numeric'} min={min} max={max} step={step} value={editing ? draft : value}
     onFocus={() => {setDraft(String(value)); setEditing(true);}} onChange={event => update(event.target.value)}
     onBlur={() => {onChange(Math.max(min, Math.min(max, Number(draft) || min))); setEditing(false);}}
     onKeyDown={event => {if (event.key === 'Enter') event.currentTarget.blur();}} {...stylex.props(s.number, t.input)}/>;
@@ -40,10 +41,10 @@ export default function FinanceCalculator({initialPrice = 25000, presentation = 
       {presentation === 'dialog' ? <p {...stylex.props(s.estimateNote)}>{tx('An estimate, not a finance offer.')}</p> : null}
     </div>
     <div {...stylex.props(s.fields)}>
-      <label htmlFor={id + '-price'} {...stylex.props(s.field, t.caption)}>{tx('Vehicle price')} ({currency.symbol})<AmountInput id={id + '-price'} label={`${tx('Vehicle price')} (${currency.symbol})`} min={1} max={10000000} value={price} onChange={setPrice}/></label>
+      <label htmlFor={id + '-price'} {...stylex.props(s.field, t.caption)}><NumberField label={<>{tx('Vehicle price')}<span {...stylex.props(s.outsideUnit)}> ({currency.symbol})</span></>} prefix={currency.symbol}><AmountInput id={id + '-price'} label={`${tx('Vehicle price')} (${currency.symbol})`} min={1} max={10000000} value={price} onChange={setPrice}/></NumberField></label>
       <div {...stylex.props(s.pairedFields)}>
-      <label htmlFor={id + '-rate'} {...stylex.props(s.field, t.caption)}><span><span {...stylex.props(s.desktopCopy)}>{tx('Annual interest')}</span><span {...stylex.props(s.mobileCopy)}>{tx('Annual rate')}</span> (%)</span><AmountInput id={id + '-rate'} label={`${tx('Annual interest')} (%)`} min={0} max={50} step={0.1} value={rate} onChange={setRate}/></label>
-      <label htmlFor={id + '-term'} {...stylex.props(s.field, t.caption)}><span><span {...stylex.props(s.desktopCopy)}>{tx('Repayment term')}</span><span {...stylex.props(s.mobileCopy)}>{tx('Term')}</span></span><select id={id + '-term'} aria-label={tx('Repayment term')} value={years} onChange={event => setYears(Number(event.target.value))} {...stylex.props(s.number, t.input)}>{[1, 2, 3, 4, 5, 6, 7].map(term => <option key={term} value={term}>{term} {tx(term === 1 ? 'year' : 'years')}</option>)}</select></label>
+      <label htmlFor={id + '-rate'} {...stylex.props(s.field, t.caption)}><NumberField label={<span><span {...stylex.props(s.desktopCopy)}>{tx('Annual interest')}</span><span {...stylex.props(s.mobileCopy)}>{tx('Annual rate')}</span><span {...stylex.props(s.outsideUnit)}> (%)</span></span>} suffix="%"><AmountInput id={id + '-rate'} label={`${tx('Annual interest')} (%)`} min={0} max={50} step={0.1} value={rate} onChange={setRate}/></NumberField></label>
+      <label htmlFor={id + '-term'} {...stylex.props(s.field, t.caption)}><NumberField label={<span><span {...stylex.props(s.desktopCopy)}>{tx('Repayment term')}</span><span {...stylex.props(s.mobileCopy)}>{tx('Term')}</span></span>}><select id={id + '-term'} data-focus-owner="field" aria-label={tx('Repayment term')} value={years} onChange={event => setYears(Number(event.target.value))} {...stylex.props(s.number, t.input)}>{[1, 2, 3, 4, 5, 6, 7].map(term => <option key={term} value={term}>{term} {tx(term === 1 ? 'year' : 'years')}</option>)}</select></NumberField></label>
       </div>
     </div>
     <div {...stylex.props(s.row, t.caption)}><label htmlFor={id + '-deposit'}><span {...stylex.props(s.desktopCopy)}>{tx('Deposit')}</span><span {...stylex.props(s.mobileCopy)}>{tx('Down payment')}</span></label><output>{currency.symbol} {formatPrice(Math.round(deposit))} · {depositPercent}%</output></div>
@@ -71,4 +72,5 @@ const s = stylex.create({
   detailsToggle: {minHeight: 44, paddingBlock: 12, cursor: 'pointer'},
   desktopCopy: {display: {[media.mobile]: 'none', default: 'inline'}},
   mobileCopy: {display: {[media.mobile]: 'inline', default: 'none'}},
+  outsideUnit: {display: {[media.desktop]: 'none', default: 'inline'}},
 });

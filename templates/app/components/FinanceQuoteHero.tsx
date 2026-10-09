@@ -1,6 +1,6 @@
 'use client';
 
-import {useEffect, useId, useRef, useState} from 'react';
+import {useLayoutEffect, useId, useRef, useState} from 'react';
 import * as stylex from '@stylexjs/stylex';
 import {ChevronDown, Search} from 'lucide-react';
 import {currency} from '@/lib/currency';
@@ -13,6 +13,7 @@ import {pillStyles} from './pill.stylex';
 import {searchField} from './search-field.stylex';
 import {desktopHero} from './desktop-hero.stylex';
 import DepositPresetMenu from './DepositPresetMenu';
+import NumberField from './NumberField';
 
 export type QuoteSelection = {car: Vehicle | null; custom: boolean};
 
@@ -41,13 +42,10 @@ export default function FinanceQuoteHero({selection, onChooseCar, pickerOpen}: {
   const deposit = price * depositPercent / 100;
   const estimate = estimateFinance(price, deposit, rate, years);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!selection.custom && !selection.car) return;
-    const frame = requestAnimationFrame(() => {
-      const control = selection.custom ? priceInput.current : chooseControl.current;
-      if (control?.getClientRects().length) control.focus({preventScroll: true});
-    });
-    return () => cancelAnimationFrame(frame);
+    const control = selection.custom ? priceInput.current : chooseControl.current;
+    if (control?.getClientRects().length) control.focus({preventScroll: true});
   }, [selection.car, selection.custom]);
 
   return <section data-finance-quote aria-label={tx('Illustrative finance calculator')} {...stylex.props(s.quote)}>
@@ -69,7 +67,7 @@ export default function FinanceQuoteHero({selection, onChooseCar, pickerOpen}: {
       </div>
     </div>
     <div {...stylex.props(s.assumptions)}>
-      <label htmlFor={id + '-rate'} {...stylex.props(s.rate)}>{tx('Annual interest')}<span {...stylex.props(s.rateInput)}><QuoteNumber id={id + '-rate'} label={`${tx('Annual interest')} (%)`} min={0} max={50} step={0.1} value={rate} onChange={setRate}/><span aria-hidden="true">%</span></span></label>
+      <label htmlFor={id + '-rate'} {...stylex.props(s.rate)}><NumberField label={tx('Annual interest')} suffix="%" onDark compact><QuoteNumber id={id + '-rate'} label={`${tx('Annual interest')} (%)`} min={0} max={50} step={0.1} value={rate} onChange={setRate}/></NumberField></label>
       <span {...stylex.props(s.estimateNote)}>{tx('An estimate, not a finance offer.')}</span>
       <details {...stylex.props(s.details)}><summary {...stylex.props(s.detailsToggle)}>{tx('About this estimate')}</summary><p {...stylex.props(s.detailCopy)}>{tx('Taxes, registration, insurance and additional fees are not included. Actual rates, eligibility and service availability must be confirmed with the dealer and lender.')}</p></details>
     </div>
@@ -99,9 +97,8 @@ const s = stylex.create({
   monthly: {display: 'flex', alignItems: 'baseline', flexWrap: 'wrap', gap: 6, fontSize: 24, fontWeight: 600, lineHeight: '28px', fontVariantNumeric: 'tabular-nums'},
   perMonth: {fontSize: 12, fontWeight: 400, lineHeight: '18px', color: $.muted},
   total: {fontSize: {[media.desktop]: $.desktopLabelSize, default: 11}, fontWeight: 400, lineHeight: {[media.desktop]: '18px', default: '16px'}, color: $.muted},
-  assumptions: {display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', flexWrap: 'wrap', columnGap: 16, rowGap: 4, marginTop: 8, paddingInline: 18, color: '#d8d8de', fontSize: 12, lineHeight: '18px'},
-  rate: {display: 'inline-flex', alignItems: 'baseline', gap: 6},
-  rateInput: {display: 'inline-flex', alignItems: 'center', width: 68, gap: 2, padding: '0 6px', color: '#fff', borderRadius: 8, backgroundColor: '#38383d', outline: {default: 'none', ':focus-within': '2px solid #fff'}, outlineOffset: 2},
+  assumptions: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', columnGap: 16, rowGap: 4, marginTop: 8, paddingInline: 18, color: '#d8d8de', fontSize: 12, lineHeight: '18px'},
+  rate: {display: 'grid', width: 164},
   estimateNote: {flexGrow: 1, textAlign: 'center'},
   details: {display: 'contents'},
   detailsToggle: {minHeight: 32, paddingBlock: 6, cursor: 'pointer', borderRadius: 4, outlineColor: '#fff'},

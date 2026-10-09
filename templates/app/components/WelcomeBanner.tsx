@@ -76,12 +76,12 @@ export default function WelcomeBanner() {
   </div>, document.body);
 }
 
-const rise = stylex.keyframes({from: {transform: 'translateY(100%)'}, to: {transform: 'translateY(0)'}});
+const rise = stylex.keyframes({from: {opacity: 0, transform: 'translateY(10px)'}, to: {opacity: 1, transform: 'translateY(0)'}});
 const fade = stylex.keyframes({from: {opacity: 0}, to: {opacity: 1}});
 
 const s = stylex.create({
   overlay: {position: 'fixed', inset: 0, width: '100vw', zIndex: 250, display: 'flex', alignItems: 'flex-end', justifyContent: 'center', padding: {[media.mobile]: 0, default: 24}, backgroundColor: 'rgba(12,12,16,.3)', animationName: {default: fade, '@media (prefers-reduced-motion: reduce)': 'none'}, animationDuration: '160ms'},
-  sheet: {position: 'relative', width: '100%', maxWidth: 440, maxHeight: '85dvh', overflowY: 'auto', padding: '12px 24px calc(24px + env(safe-area-inset-bottom))', color: $.ink, fontFamily: $.fontSans, textAlign: 'center', borderRadius: {[media.mobile]: '24px 24px 0 0', default: 24}, backgroundColor: $.surface, boxShadow: '0 -8px 32px rgba(12,12,16,.12)', outlineStyle: 'none', animationName: {default: rise, '@media (prefers-reduced-motion: reduce)': 'none'}, animationDuration: '240ms', animationTimingFunction: 'cubic-bezier(.22,1,.36,1)'},
+  sheet: {position: 'relative', width: '100%', maxWidth: 440, maxHeight: '85dvh', overflowY: 'auto', padding: '12px 24px calc(24px + env(safe-area-inset-bottom))', color: $.ink, fontFamily: $.fontSans, textAlign: 'center', borderRadius: {[media.mobile]: '24px 24px 0 0', default: 24}, backgroundColor: $.surface, boxShadow: '0 -8px 32px rgba(12,12,16,.12)', outlineStyle: 'none', animationName: {default: rise, '@media (prefers-reduced-motion: reduce)': 'none'}, animationDuration: '160ms', animationTimingFunction: 'cubic-bezier(.22,1,.36,1)'},
   handle: {width: 32, height: 4, margin: '0 auto 16px', borderRadius: 4, backgroundColor: $.line},
   close: {position: 'absolute', top: 10, right: 6, display: 'grid', placeItems: 'center', width: 44, height: 44, padding: 0, color: $.muted, borderWidth: 0, borderRadius: $.radiusPill, backgroundColor: {default: 'transparent', ':hover': $.surfaceAlt}, cursor: 'pointer', outlineOffset: -3},
   brand: {display: 'flex', alignItems: 'center', justifyContent: 'center', paddingInline: 24},

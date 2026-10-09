@@ -1,6 +1,6 @@
 'use client';
 
-import {useEffect, useRef} from 'react';
+import {useLayoutEffect, useRef} from 'react';
 
 const openModals: string[] = [];
 let initialOverflow = '';
@@ -35,8 +35,8 @@ export function useModal(active: boolean, onClose: () => void, options: {history
   const panel = useRef<HTMLDivElement>(null);
   const close = useRef(onClose);
   const manageHistory = options.history !== false;
-  useEffect(() => {close.current = onClose;}, [onClose]);
-  useEffect(() => {
+  useLayoutEffect(() => {close.current = onClose;}, [onClose]);
+  useLayoutEffect(() => {
     if (!active) return;
     const id = `cars24-modal-${++sequence}`;
     const previous = document.activeElement instanceof HTMLElement ? document.activeElement : null;
@@ -51,13 +51,13 @@ export function useModal(active: boolean, onClose: () => void, options: {history
       if (previousModal && !openModals.includes(previousModal)) history.replaceState(state, '');
       else history.pushState(state, '');
     }
-    const frame = requestAnimationFrame(() => panel.current?.focus({preventScroll: true}));
+    panel.current?.focus({preventScroll: true});
     const isTop = () => openModals.at(-1) === id;
     function popstate() {
       if (manageHistory && isTop() && history.state?.cars24Modal !== id) close.current();
     }
     function keydown(event: KeyboardEvent) {
-      if (!isTop()) return;
+      if (!isTop() || event.defaultPrevented) return;
       if (event.key === 'Escape') {event.preventDefault(); event.stopPropagation(); close.current(); return;}
       if (event.key !== 'Tab' || !panel.current) return;
       const controls = [...panel.current.querySelectorAll<HTMLElement>('button:not(:disabled),a[href],input:not(:disabled),select:not(:disabled),textarea:not(:disabled),summary,[tabindex="0"]')]
@@ -70,7 +70,6 @@ export function useModal(active: boolean, onClose: () => void, options: {history
     document.addEventListener('keydown', keydown);
     window.addEventListener('popstate', popstate);
     return () => {
-      cancelAnimationFrame(frame);
       const index = openModals.indexOf(id);
       if (index >= 0) openModals.splice(index, 1);
       if (!openModals.length) document.body.style.overflow = initialOverflow;

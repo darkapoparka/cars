@@ -41,7 +41,7 @@ const s = stylex.create({
   rail: {position: 'relative', display: {[media.mobile]: 'flex', default: 'grid'}, gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gap: 12, overflowX: 'auto', paddingBottom: 0, borderRadius: {[media.mobile]: 0, default: 20}, scrollbarWidth: 'none', scrollSnapType: 'x mandatory', overscrollBehaviorX: 'contain'},
   card: {position: 'relative', display: 'block', flexGrow: 0, flexShrink: 0, flexBasis: {[media.mobile]: '100%', default: 'calc((100% - 12px) / 2)'}, overflow: 'hidden', borderRadius: 20, scrollSnapAlign: 'start', color: '#fff', backgroundColor: campaign.surface, containerType: 'inline-size', outlineOffset: -4},
   artwork: {position: 'absolute', right: 0, bottom: 0, width: '100%', height: {[media.mobile]: 'auto', default: '100%'}, objectFit: 'cover', objectPosition: {[media.mobile]: 'right bottom', default: 'right 35%'}, maskImage: {[media.mobile]: 'linear-gradient(to bottom,transparent,rgba(0,0,0,.25) 65%,#000)', default: 'linear-gradient(to right,transparent,#000 60%)'}},
-  content: {position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: '100%', padding: {[media.mobile]: 16, default: 24}},
+  content: {position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: {[media.mobile]: 'center', default: 'flex-start'}, width: '100%', padding: {[media.mobile]: 16, default: 24}, textAlign: {[media.mobile]: 'center', default: 'left'}},
   heroRail: {gap: 0},
   heroCard: {borderRadius: 0, backgroundColor: 'transparent'},
   heroArtwork: {height: '100%', objectPosition: 'center 58%', maskImage: 'linear-gradient(90deg,rgba(0,0,0,.55),rgba(0,0,0,.18) 25%,rgba(0,0,0,.18) 75%,rgba(0,0,0,.55))'},

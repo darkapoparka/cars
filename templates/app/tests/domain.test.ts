@@ -5,13 +5,70 @@ import {homeAlternativeHref, isHomeAlternative, primaryHomePath} from '../lib/ho
 import {assetPath, browserPath, localePath, withoutLocale} from '../lib/paths';
 import {applicationHistoryState} from '../lib/history-state';
 import {decodeVehicleList, readVehicleList, updateVehicleList, vehicleStorageKeys} from '../lib/vehicle-storage';
-import {emptyFilters, hasActiveFilters, matchesInventory, restoreFilters} from '../lib/inventory-filters';
+import {emptyFilters, hasActiveFilters, matchesInventory, matchesMonthlyPayment, restoreFilters} from '../lib/inventory-filters';
+import {inventorySearch, readInventorySearch, restoreInventoryState} from '../lib/inventory-search';
 import {vehicles, getVehicle, formatPrice} from '../lib/data';
 import {currency} from '../lib/currency';
 import {estimateFinance} from '../lib/finance';
 
 const both = {defaultLocale: 'en', enabledLocales: ['en', 'bg']} as const;
 const english = {defaultLocale: 'en', enabledLocales: ['en']} as const;
+
+describe('portable inventory selections', () => {
+  const blank = () => ({query: '', filters: emptyFilters(), sort: 'default'});
+  it('keeps the stocked Suzuki make selected from Home', () => {
+    const state = readInventorySearch(new URLSearchParams('brand=Suzuki'));
+    const results = vehicles.filter(vehicle => matchesInventory(vehicle, state.filters, state.query));
+    assert.ok(results.length > 0);
+    assert.ok(results.every(vehicle => vehicle.make === 'Suzuki'));
+    assert.deepEqual(state.filters.brands, ['Suzuki']);
+  });
+  it('canonicalizes a make and preserves multiple selected makes', () => {
+    assert.deepEqual(readInventorySearch(new URLSearchParams('brand=suzuki&brand=Toyota&brand=Suzuki')).filters.brands, ['Suzuki', 'Toyota']);
+  });
+  it('preserves model, budget, fuel, mileage, gearbox, sorting and search on reload', () => {
+    const state = {...blank(), query: 'Suzuki', sort: 'price-asc', emiMax: 900, filters: {...emptyFilters(), models: ['Suzuki::Ciaz'], minimum: 15000, maximum: 60000, fuel: ['Petrol'], mileageMaximum: 120000, extra: {TRANSMISSION: ['Automatic']}}};
+    assert.deepEqual(readInventorySearch(new URLSearchParams(inventorySearch('', state))), state);
+  });
+  it('Clear all removes stale Home make and search parameters without dropping unrelated URL options', () => {
+    const search = inventorySearch('?brand=Suzuki&q=Ciaz&maxPrice=50000&emiMax=900&order=price-asc&campaign=demo', blank());
+    assert.equal(search, '?campaign=demo');
+    assert.deepEqual(readInventorySearch(new URLSearchParams(search)), {...blank(), emiMax: undefined});
+  });
+  it('removing one make retains the other make', () => {
+    const state = {...blank(), filters: {...emptyFilters(), brands: ['Toyota']}};
+    assert.equal(inventorySearch('?brand=Suzuki&brand=Toyota', state), '?brand=Toyota');
+  });
+  it('rejects malformed and oversized optional refinements', () => {
+    for (const selection of ['{bad', 'x'.repeat(6001)]) {
+      const params = new URLSearchParams({selection, brand: 'Suzuki', order: 'unknown'});
+      assert.deepEqual(readInventorySearch(params).filters, {...emptyFilters(), brands: ['Suzuki']});
+    }
+  });
+  it('ignores blank and non-finite monthly shortcuts', () => {
+    for (const value of ['', ' ', 'NaN', 'Infinity']) assert.equal(readInventorySearch(new URLSearchParams({emiMax: value})).emiMax, undefined);
+    assert.equal(readInventorySearch(new URLSearchParams('emiMax=-1')).emiMax, 0);
+  });
+  it('restores history only for its exact collection entry', () => {
+    const state = {...blank(), filters: {...emptyFilters(), brands: ['Suzuki']}};
+    const stored = {version: 1, entry: '/bg/2/cars?brand=Suzuki', ...state};
+    assert.deepEqual(restoreInventoryState(stored, stored.entry), {...state, emiMax: undefined});
+    assert.equal(restoreInventoryState(stored, '/bg/cars'), null);
+    assert.equal(restoreInventoryState(null, stored.entry), null);
+  });
+  it('sanitizes malformed history values', () => {
+    const restored = restoreInventoryState({version: 1, entry: '/en/cars', query: {}, filters: null, sort: 'invalid', emiMax: Infinity}, '/en/cars');
+    assert.deepEqual(restored, {...blank(), emiMax: undefined});
+  });
+  it('excludes unavailable monthly estimates from finance shortcut results', () => {
+    const vehicle = vehicles[0];
+    assert.equal(matchesMonthlyPayment({...vehicle, monthly: 0}, 1000), false);
+    assert.equal(matchesMonthlyPayment({...vehicle, monthly: NaN}, 1000), false);
+    assert.equal(matchesMonthlyPayment({...vehicle, monthly: 500, priceOnRequest: true}, 1000), false);
+    assert.equal(matchesMonthlyPayment({...vehicle, monthly: 500, priceOnRequest: false}, 1000), true);
+    assert.equal(matchesMonthlyPayment({...vehicle, monthly: 0}, undefined), true);
+  });
+});
 describe('locale routing', () => {
   it('recognizes only supported locale strings', () => {for (const value of [undefined, null, {}, 'fr', 'EN', '']) assert.equal(isAppLocale(value), false);});
   it('the explicit URL wins over a conflicting cookie', () => assert.deepEqual(resolveLocale('/bg/2/cars', 'en', both), {locale: 'bg', redirectPath: null}));

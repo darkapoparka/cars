@@ -1,1 +1,1 @@
-export {default, metadata} from '../../stores/page';
+export {default, generateMetadata} from '../../stores/page';

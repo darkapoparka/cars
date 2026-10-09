@@ -74,7 +74,7 @@ function VehicleCard({vehicle, showDiscount = false, desktopTile = false, financ
 export default memo(VehicleCard);
 
 const s = stylex.create({
-  card: {position: 'relative', minWidth: 0, overflow: 'hidden', borderColor: '#e7e7ea', borderStyle: 'solid', borderWidth: 1, borderRadius: 17, backgroundColor: '#fff', boxShadow: '0 3px 12px rgba(0,0,0,.035)'},
+  card: {position: 'relative', minWidth: 0, overflow: 'hidden', borderColor: $.surfaceBorder, borderStyle: 'solid', borderWidth: 1, borderRadius: 17, backgroundColor: $.surface, boxShadow: $.shadowSoft},
   main: {position: 'relative', display: 'grid', gridTemplateColumns: {[media.mobile]: '44% minmax(0,1fr)', default: 'minmax(140px,39%) minmax(0,1fr)'}, gap: 10, padding: {[media.mobile]: 10, default: 12}},
   photo: {position: 'relative', alignSelf: 'stretch', display: 'block', overflow: 'hidden', borderRadius: 10},
   tileMain: {gridTemplateColumns: {[media.mobile]: '44% minmax(0,1fr)', [media.desktop]: 'minmax(0,1fr)', default: 'minmax(140px,39%) minmax(0,1fr)'}, gap: {[media.desktop]: 0, default: 10}, padding: {[media.mobile]: 10, [media.desktop]: 0, default: 12}},
@@ -110,14 +110,14 @@ const s = stylex.create({
   heart: {position: 'absolute', top: 3, right: 1, display: {[media.mobile]: 'none', default: 'grid'}, placeItems: 'center', width: 44, height: 44, padding: 0, color: '#727272', borderWidth: 0, backgroundColor: 'transparent', cursor: 'pointer'},
   heartSaved: {color: $.ink},
   facts: {position: 'relative', minWidth: 0, marginTop: 8},
-  factCue: {display: {[media.mobile]: 'block', default: 'none'}, position: 'absolute', top: 0, bottom: 0, width: 14, pointerEvents: 'none'},
+  factCue: {display: {[media.mobile]: 'block', [media.desktop]: 'block', default: 'none'}, position: 'absolute', top: 0, bottom: 0, width: 14, pointerEvents: 'none'},
   factCueLeft: {left: 0, backgroundImage: 'linear-gradient(to right, #fff, rgba(255,255,255,0))'},
   factCueRight: {right: 0, backgroundImage: 'linear-gradient(to left, #fff, rgba(255,255,255,0))'},
   meta: {display: {[media.mobile]: 'flex', [media.desktop]: 'flex', default: 'grid'}, flexWrap: {[media.desktop]: 'wrap', default: 'nowrap'}, gridTemplateColumns: 'max-content minmax(0,1fr)', justifyItems: 'start', alignItems: 'stretch', minWidth: 0, maxWidth: '100%', gap: 4, overflowX: {[media.mobile]: 'auto', default: 'visible'}, overscrollBehaviorX: 'contain', scrollbarWidth: 'none'},
   equipment: {gridColumn: '1 / -1'},
   phoneFact: {display: {[media.mobile]: 'inline', default: 'none'}},
   wideFact: {display: {[media.mobile]: 'none', default: 'inline'}},
-  pill: {display: 'flex', alignItems: 'center', flexShrink: 0, minWidth: 0, maxWidth: {[media.mobile]: 'none', default: '100%'}, padding: '3px 4px', color: $.muted, fontSize: {[media.mobile]: 12, [media.desktop]: $.desktopLabelSize, default: 11}, fontWeight: 400, lineHeight: {[media.desktop]: '18px', default: '16px'}, whiteSpace: {[media.mobile]: 'nowrap', default: 'normal'}, overflowWrap: 'normal', borderRadius: 6, backgroundColor: '#f4f4f4'},
+  pill: {display: 'flex', alignItems: 'center', flexShrink: 0, minWidth: 0, maxWidth: {[media.mobile]: 'none', default: '100%'}, padding: '3px 4px', color: $.muted, fontSize: {[media.mobile]: 12, [media.desktop]: $.desktopLabelSize, default: 11}, fontWeight: 400, lineHeight: {[media.desktop]: '18px', default: '16px'}, whiteSpace: {[media.mobile]: 'nowrap', default: 'normal'}, overflowWrap: {[media.desktop]: 'anywhere', default: 'normal'}, borderRadius: 6, backgroundColor: '#f4f4f4'},
   error: {padding: '10px 12px', color: '#b42318', fontSize: 12, lineHeight: 1.4},
   financeAction: {display: 'flex', alignItems: 'center', gap: 8, width: '100%', minHeight: 44, padding: '8px 12px', color: $.ink, borderWidth: 0, backgroundColor: {default: '#f7f7f8', ':hover': '#efeff0'}, textAlign: 'left', cursor: 'pointer'},
   financeArrow: {marginLeft: 'auto', flexShrink: 0},

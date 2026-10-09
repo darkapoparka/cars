@@ -1,22 +1,48 @@
-# Dependencies and local environment
-/node_modules/
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
 /.pnp
 .pnp.js
 .yarn/install-state.gz
-.env*
-!.env.example
-*.pem
-.DS_Store
 
-# Generated builds, checks and reports
-/.next*/
-/next-check/
+# testing
+/coverage
+
+# next.js
+/.next/
 /out/
-/build/
-/runtime/
-/coverage/
-/reference/
-*.log
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
 *.tsbuildinfo
 next-env.d.ts
-.vercel/
+
+/.next-build-check/
+*.log
+
+# Installed reference packages are local inspection inputs, not release assets.
+/reference/**/*.apk
+
+# Imported local comparison evidence; application assets live in public/.
+/reference/
+
+.vercel
+.env*.local

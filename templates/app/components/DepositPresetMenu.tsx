@@ -1,6 +1,6 @@
 'use client';
 
-import {useEffect, useId, useRef, useState, type RefObject} from 'react';
+import {useLayoutEffect, useId, useRef, useState, type RefObject} from 'react';
 import {createPortal} from 'react-dom';
 import * as stylex from '@stylexjs/stylex';
 import {ChevronDown, Pencil} from 'lucide-react';
@@ -16,6 +16,7 @@ export default function DepositPresetMenu({value, onChange, inputRef}: {value: n
   const [position, setPosition] = useState({left: 0, top: 0, maxHeight: 240});
   const trigger = useRef<HTMLButtonElement>(null);
   const panel = useRef<HTMLDivElement>(null);
+  const restoreInputFocus = useRef(false);
 
   function show() {
     const anchor = trigger.current?.closest('[data-deposit-field]')?.getBoundingClientRect();
@@ -30,12 +31,18 @@ export default function DepositPresetMenu({value, onChange, inputRef}: {value: n
   }
   function choose(percentage?: number) {
     if (percentage !== undefined) onChange(percentage);
+    restoreInputFocus.current = true;
     setOpen(false);
-    requestAnimationFrame(() => {if (inputRef.current?.getClientRects().length) inputRef.current.focus({preventScroll: true});});
   }
-  useEffect(() => {
-    if (!open) return;
-    const frame = requestAnimationFrame(() => (panel.current?.querySelector<HTMLButtonElement>('[aria-pressed="true"]') ?? panel.current?.querySelector('button'))?.focus({preventScroll: true}));
+  useLayoutEffect(() => {
+    if (!open) {
+      if (restoreInputFocus.current) {
+        restoreInputFocus.current = false;
+        if (inputRef.current?.getClientRects().length) inputRef.current.focus({preventScroll: true});
+      }
+      return;
+    }
+    (panel.current?.querySelector<HTMLButtonElement>('[aria-pressed="true"]') ?? panel.current?.querySelector('button'))?.focus({preventScroll: true});
     function outside(event: PointerEvent | FocusEvent) {
       if (event.target instanceof Node && !panel.current?.contains(event.target) && !trigger.current?.contains(event.target)) setOpen(false);
     }
@@ -50,7 +57,6 @@ export default function DepositPresetMenu({value, onChange, inputRef}: {value: n
     window.addEventListener('resize', dismiss);
     window.addEventListener('popstate', dismiss);
     return () => {
-      cancelAnimationFrame(frame);
       document.removeEventListener('pointerdown', outside);
       document.removeEventListener('focusin', outside);
       document.removeEventListener('keydown', escape);
@@ -58,7 +64,7 @@ export default function DepositPresetMenu({value, onChange, inputRef}: {value: n
       window.removeEventListener('resize', dismiss);
       window.removeEventListener('popstate', dismiss);
     };
-  }, [open]);
+  }, [open, inputRef]);
 
   return <>
     <button ref={trigger} type="button" data-deposit-presets-trigger aria-label={tx('Choose deposit percentage')} aria-haspopup="dialog" aria-expanded={open} aria-controls={open ? id : undefined} onClick={() => open ? setOpen(false) : show()} onKeyDown={event => {if (event.key === 'ArrowDown' && !open) {event.preventDefault(); show();}}} {...stylex.props(s.trigger)}><ChevronDown size={14} aria-hidden="true"/></button>

@@ -1,20 +1,20 @@
 'use client';
 
+import {useState} from 'react';
 import {ArrowRight, Check} from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import Image from '@/components/AppImage';
-import Link from '@/components/AppLink';
+import ServiceDetailsSheet from '@/components/ServiceDetailsSheet';
 import type {ServiceSearchState} from '@/components/ServiceSearchField';
 import {useCopy} from '@/lib/locale';
-import {serviceOptions} from '@/lib/service-catalogue';
-import {useHomeAlternative} from '@/lib/home-alternative';
+import {serviceOptions, type ServiceOption} from '@/lib/service-catalogue';
 import {media, tokens as $} from '@/app/tokens.stylex';
 import {typography as t} from '@/app/typography.stylex';
 import FilterPill from '@/components/FilterPill';
 
 export default function ServiceCatalogue({searchState}: {searchState: ServiceSearchState}) {
   const tx = useCopy();
-  const alternative = useHomeAlternative();
+  const [selection, setSelection] = useState<{service: ServiceOption | null; initialView: 'details' | 'enquiry'} | null>(null);
   const {query, category, update, clear} = searchState;
   const search = query.trim().toLocaleLowerCase();
   const visible = serviceOptions.filter(option => {
@@ -28,29 +28,30 @@ export default function ServiceCatalogue({searchState}: {searchState: ServiceSea
     <div role="group" aria-label={tx('Service categories')} {...stylex.props(s.pills)}>
       {[{id: 'all', label: 'All'}, ...serviceOptions].map(option => <FilterPill key={option.id} label={option.label} tone="soft" pressed={category === option.id} onClick={() => update(query, option.id)}/>)}
     </div>
-    <Link href="/service/details" aria-label={tx('Book a service')} {...stylex.props(s.request, t.caption)}>{tx('Book a service')}<ArrowRight size={16} aria-hidden="true"/></Link>
+    <button type="button" aria-haspopup="dialog" onClick={() => setSelection({service: null, initialView: 'enquiry'})} {...stylex.props(s.request, t.caption)}>{tx('Enquire')}<ArrowRight size={16} aria-hidden="true"/></button>
     </div>
     <span role="status" {...stylex.props(s.srOnly)}>{visible.length} {tx('Service options')}</span>
-    {visible.length > 0 ? <div {...stylex.props(s.cards)}>{visible.map(option => <Link key={option.id} href={`/service/details?service=${option.id}`} aria-label={`${tx('Choose a service')}: ${tx(option.label)}`} data-service-card={option.id} {...stylex.props(s.card, alternative && s.compactCard)}>
-      <div {...stylex.props(s.artwork, alternative && s.compactArtwork)}>
-        <Image src={option.image} width={1200} height={800} sizes={alternative ? '(min-width: 1240px) 284px, (min-width: 1100px) 25vw, (max-width: 767px) 88px, 50vw' : '(min-width: 1240px) 284px, (min-width: 1100px) 25vw, (max-width: 767px) calc(100vw - 24px), 50vw'} alt="" {...stylex.props(s.image, alternative && s.compactImage)}/>
-        {option.demo ? <span {...stylex.props(s.demo, alternative && s.compactDemo)}>{tx('Demo service')}</span> : null}
+    {visible.length > 0 ? <div {...stylex.props(s.cards)}>{visible.map(option => <button key={option.id} type="button" aria-haspopup="dialog" onClick={() => setSelection({service: option, initialView: 'details'})} aria-label={`${tx('Choose a service')}: ${tx(option.label)}`} data-service-card={option.id} {...stylex.props(s.card, s.compactCard)}>
+      <div {...stylex.props(s.artwork, s.compactArtwork)}>
+        <Image src={option.image} width={1200} height={800} sizes="(min-width: 1240px) 284px, (min-width: 1100px) 25vw, (max-width: 767px) 88px, 50vw" alt="" {...stylex.props(s.image, s.compactImage)}/>
+        {option.demo ? <span {...stylex.props(s.demo, s.compactDemo)}>{tx('Demo service')}</span> : null}
       </div>
-      <div {...stylex.props(s.cardBody, alternative && s.compactBody)}>
-        <div {...stylex.props(s.cardHeading, alternative && s.compactHeading)}><h2 {...stylex.props(t.heading, s.title, alternative && s.compactTitle)}>{tx(option.label)}</h2><span {...stylex.props(s.arrow, alternative && s.compactArrow)}><ArrowRight size={20} aria-hidden="true"/></span></div>
-        <ul {...stylex.props(s.checks, alternative && s.compactChecks)}>{option.checks.map(check => <li key={check} {...stylex.props(t.body, s.check, alternative && s.compactCheck)}><span aria-hidden="true" {...stylex.props(s.icon, alternative && s.compactIcon)}><Check size={12} strokeWidth={2.25}/></span>{tx(check)}</li>)}</ul>
+      <div {...stylex.props(s.cardBody, s.compactBody)}>
+        <div {...stylex.props(s.cardHeading, s.compactHeading)}><h2 {...stylex.props(t.heading, s.title, s.compactTitle)}>{tx(option.label)}</h2><span {...stylex.props(s.arrow, s.compactArrow)}><ArrowRight size={20} aria-hidden="true"/></span></div>
+        <ul {...stylex.props(s.checks, s.compactChecks)}>{option.checks.map(check => <li key={check} {...stylex.props(t.body, s.check, s.compactCheck)}><span aria-hidden="true" {...stylex.props(s.icon, s.compactIcon)}><Check size={12} strokeWidth={2.25}/></span>{tx(check)}</li>)}</ul>
       </div>
-    </Link>)}</div> : <div {...stylex.props(s.empty)}><p {...stylex.props(t.title)}>{tx('No matching services.')}</p><button type="button" onClick={() => clear('all')} {...stylex.props(s.reset, t.control)}>{tx('Show all services')}<ArrowRight size={18} aria-hidden="true"/></button></div>}
+    </button>)}</div> : <div {...stylex.props(s.empty)}><p {...stylex.props(t.title)}>{tx('No matching services.')}</p><button type="button" onClick={() => clear('all')} {...stylex.props(s.reset, t.control)}>{tx('Show all services')}<ArrowRight size={18} aria-hidden="true"/></button></div>}
+    {selection ? <ServiceDetailsSheet key={selection.service?.id || 'service-enquiry'} {...selection} onClose={() => setSelection(null)}/> : null}
   </section>;
 }
 
 const s = stylex.create({
   catalogue: {marginTop: {[media.mobile]: $.mobilePillGap, [media.desktop]: 12, default: 24}},
   toolbar: {display: {[media.desktop]: 'flex', default: 'contents'}, alignItems: 'center', justifyContent: 'space-between', gap: 16},
-  request: {display: {[media.desktop]: 'inline-flex', default: 'none'}, alignItems: 'center', justifyContent: 'center', flexShrink: 0, gap: 8, minHeight: 44, paddingInline: 14, color: $.ink, borderRadius: 999, backgroundColor: {default: $.surfaceAlt, ':hover': '#ededf0'}, textDecoration: 'none'},
+  request: {display: {[media.desktop]: 'inline-flex', default: 'none'}, alignItems: 'center', justifyContent: 'center', flexShrink: 0, gap: 8, minHeight: 44, paddingBlock: 0, paddingInline: 14, color: $.ink, fontFamily: $.fontSans, borderWidth: 0, borderRadius: 999, backgroundColor: {default: $.surfaceAlt, ':hover': '#ededf0'}, cursor: 'pointer'},
   pills: {display: 'flex', minWidth: 0, gap: 8, overflowX: 'auto', marginTop: {[media.mobile]: 0, [media.desktop]: 0, default: 10}, paddingBlock: {[media.mobile]: 0, [media.desktop]: 0, default: 3}, scrollbarWidth: 'none'},
   cards: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', [media.desktop]: 'repeat(4,minmax(0,1fr))', default: 'repeat(2,minmax(0,1fr))'}, gap: {[media.mobile]: $.mobileSectionGap, [media.desktop]: 16, default: 20}, marginTop: {[media.mobile]: $.mobilePillGap, [media.desktop]: 12, default: 14}},
-  card: {display: 'flex', flexDirection: 'column', minWidth: 0, overflow: 'hidden', color: $.ink, textDecoration: 'none', borderRadius: {[media.desktop]: 14, default: 20}, backgroundColor: {default: $.surfaceAlt, ':hover': '#ededf0'}, outline: {default: 'none', ':focus-visible': '2px solid #242428'}, outlineOffset: 3},
+  card: {display: 'flex', flexDirection: 'column', alignItems: 'stretch', minWidth: 0, padding: 0, overflow: 'hidden', color: $.ink, fontFamily: $.fontSans, textAlign: 'left', borderWidth: 0, borderRadius: {[media.desktop]: 14, default: 20}, backgroundColor: {default: $.surfaceAlt, ':hover': '#ededf0'}, outline: {default: 'none', ':focus-visible': '2px solid #242428'}, outlineOffset: 3, cursor: 'pointer'},
   image: {display: 'block', width: '100%', height: {[media.desktop]: 120, default: 'auto'}, aspectRatio: {[media.desktop]: 'auto', default: '2 / 1'}, objectFit: 'cover', objectPosition: 'center 55%'},
   artwork: {position: 'relative'},
   demo: {position: 'absolute', top: 12, left: 12, padding: '4px 8px', borderRadius: 6, backgroundColor: '#fff', color: $.ink, fontSize: 12, lineHeight: '18px', fontWeight: 500},

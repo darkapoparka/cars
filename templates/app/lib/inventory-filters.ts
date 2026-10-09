@@ -52,6 +52,10 @@ export const emptyFilters = (): Filters => ({brands: [], models: [], budget: [],
 export const toggleFilter = (items: string[], value: string) => items.includes(value) ? items.filter(item => item !== value) : [...items, value];
 export const vehicleDiscount = (vehicle: Vehicle) => Math.max(0, (vehicle.previousPrice ?? vehicle.price) - vehicle.price);
 
+export function matchesMonthlyPayment(vehicle: Vehicle, maximum: number | undefined) {
+  return maximum === undefined || (!vehicle.priceOnRequest && Number.isFinite(vehicle.monthly) && vehicle.monthly > 0 && vehicle.monthly <= maximum);
+}
+
 export function hasActiveFilters(filters: Filters) {
   const defaults = emptyFilters();
   return Object.entries(filters).some(([key, value]) => {
@@ -116,7 +120,7 @@ export function matchesInventory(vehicle: Vehicle, filters: Filters, query: stri
   if (filters.year && vehicle.year < Number.parseInt(filters.year)) return false;
   if ((filters.mileageMinimum !== defaults.mileageMinimum || filters.mileageMaximum !== defaults.mileageMaximum) && (vehicle.mileageOnRequest || vehicle.mileage < filters.mileageMinimum || vehicle.mileage > filters.mileageMaximum)) return false;
   if (filters.mileage && (vehicle.mileageOnRequest || vehicle.mileage >= Number(filters.mileage.replace(/\D/g, '')))) return false;
-  if (filters.emiLimit !== null && (vehicle.priceOnRequest || vehicle.monthly <= 0 || vehicle.monthly > filters.emiLimit)) return false;
+  if (!matchesMonthlyPayment(vehicle, filters.emiLimit ?? undefined)) return false;
   if (filters.engineMinimum !== 0 || filters.engineMaximum !== 7) {
     const engine = Number.parseFloat(vehicle.engine);
     if (!Number.isFinite(engine) || engine < filters.engineMinimum || engine > filters.engineMaximum) return false;

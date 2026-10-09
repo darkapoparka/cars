@@ -4,8 +4,9 @@ import type {MouseEvent, ReactNode} from 'react';
 import Link from '@/components/AppLink';
 import {usePathname} from '@/lib/navigation';
 import * as stylex from '@stylexjs/stylex';
-import {Heart, Menu, Phone} from 'lucide-react';
+import {Heart, Phone} from 'lucide-react';
 import DealerBrand from '@/components/DealerBrand';
+import DesktopHeaderMenu from '@/components/DesktopHeaderMenu';
 import {MobileAlternativeDock, MobileAlternativeHeader} from '@/components/MobileHomeAlternative';
 import {HomeAlternativeProvider, isHomeAlternative, primaryHomePath} from '@/lib/home-alternative';
 import ShowroomIcon from '@/components/ShowroomIcon';
@@ -42,14 +43,14 @@ export default function AppShell({children}: {children:ReactNode}){
       <nav data-desktop-tools aria-label={tx("Primary navigation")} {...stylex.props(s.actions)}>
         <Link href="/saved" aria-label={tx("Saved cars")} title={tx("Saved cars")} {...stylex.props(s.iconButton,heroHeader&&s.heroIconButton)}><Heart size={21} aria-hidden="true"/></Link>
         {dealer.phoneE164 ? <a href={`tel:${dealer.phoneE164}`} aria-label={`${tx('Call')} · ${dealer.phoneDisplay || dealer.phoneE164}`} title={dealer.phoneDisplay || dealer.phoneE164} {...stylex.props(s.iconButton,heroHeader&&s.heroIconButton)}><Phone size={20} aria-hidden="true"/></a> : null}
-        <Link href="/more" aria-label={tx("Open menu")} title={tx("Open menu")} {...stylex.props(s.iconButton,heroHeader&&s.heroIconButton)}><Menu size={23} aria-hidden="true"/></Link>
+        <DesktopHeaderMenu key={currentPath} onDark={heroHeader}/>
       </nav>
     </div></header>
     {alternative&&pathname==='/'?<MobileAlternativeHeader onDark/>:null}
     <div id="app-content" {...stylex.props(s.main,hideMobileNav&&s.mainWithoutNav)}>{tx(children)}</div>
     </div>
     {!hideMobileNav?<nav aria-label={tx("App navigation")} {...stylex.props(compactDock.root,alternative&&s.standardAlternativeDock)}>{showroom.navigation.map(item=>{
-      const active=item.href==='/'?pathname==='/':pathname.startsWith(item.href);
+      const active=item.href==='/'?pathname==='/':item.href==='/more'?pathname==='/more'||pathname==='/saved':pathname.startsWith(item.href);
       return <Link key={item.label} href={item.href} aria-label={tx(item.label)} title={tx(item.label)} aria-current={active?'page':undefined} {...stylex.props(compactDock.link,active&&compactDock.active)}><ShowroomIcon name={item.icon} size={22} strokeWidth={active?2:1.65}/></Link>;
     })}</nav>:null}
     {alternative&&!hideMobileNav?<MobileAlternativeDock pathname={pathname}/>:null}
@@ -68,14 +69,14 @@ const s=stylex.create({
  wordmark:{display:'inline-flex',alignItems:'center',justifySelf:'start',minHeight:44,color:$.ink},
  heroWordmark:{color:'#fff',outlineColor:'#fff'},
  journeys:{display:'flex',alignItems:'center',gap:2},
- journey:{display:'inline-flex',alignItems:'center',justifyContent:'center',minHeight:44,paddingInline:2,color:$.muted,fontSize:$.desktopTextSize,fontWeight:400,lineHeight:'24px',whiteSpace:'nowrap',borderWidth:0,borderRadius:8,backgroundColor:'transparent'},
- journeyLabel:{display:'inline-flex',alignItems:'center',justifyContent:'center',minHeight:36,paddingInline:12,borderRadius:8,backgroundColor:{default:'transparent',':hover':$.surfaceAlt}},
+ journey:{display:'inline-flex',alignItems:'center',justifyContent:'center',minHeight:44,paddingInline:2,color:$.muted,fontSize:$.desktopTextSize,fontWeight:400,lineHeight:'24px',whiteSpace:'nowrap',borderWidth:0,borderRadius:$.radiusPill,backgroundColor:'transparent'},
+ journeyLabel:{display:'inline-flex',alignItems:'center',justifyContent:'center',minHeight:36,paddingInline:12,borderRadius:$.radiusPill,backgroundColor:{default:'transparent',':hover':$.surfaceAlt}},
  journeyActive:{color:$.ink,fontWeight:500,backgroundColor:{default:$.surfaceAlt,':hover':$.line}},
  heroJourney:{color:'#d8d8de',outlineColor:'#fff'},
  heroJourneyLabel:{backgroundColor:{default:'transparent',':hover':'#333337'}},
  heroJourneyActive:{color:'#fff',backgroundColor:{default:'#38383d',':hover':'#444449'}},
  actions:{display:'flex',alignItems:'center',justifySelf:'end',gap:8},
- iconButton:{display:'grid',placeItems:'center',width:44,height:44,color:$.ink,borderWidth:0,borderRadius:8,backgroundColor:{default:'transparent',':hover':$.surfaceAlt}},
+ iconButton:{display:'grid',placeItems:'center',width:44,height:44,color:$.ink,borderWidth:0,borderRadius:$.radiusPill,backgroundColor:{default:'transparent',':hover':$.surfaceAlt}},
  heroIconButton:{color:'#fff',backgroundColor:{default:'transparent',':hover':'#333337'},outlineColor:'#fff'},
  standardAlternativeDock:{display:{[media.mobile]:'none',[media.desktop]:'none',default:'grid'}},
 });
