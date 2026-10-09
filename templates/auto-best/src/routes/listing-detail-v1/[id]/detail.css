@@ -624,9 +624,9 @@
     place-items: center;
     border: 0;
     border-radius: 50%;
-    background: rgba(255,255,255,.94);
+    background-color: var(--dn-white);
     color: var(--dn-ink-strong);
-    box-shadow: 0 3px 12px rgba(10,13,18,.15);
+    box-shadow: none;
   }
   .dn-detail-mobile-back {
     position: absolute;
@@ -653,15 +653,15 @@
     grid-template-columns: 1fr;
     gap: 0;
     margin: -26px 0 0;
-    padding: 20px 20px 5px;
+    padding: var(--dn-space-5) var(--dn-space-5) var(--dn-space-2);
     border-radius: 26px 26px 0 0;
     background: #fff;
   }
 
   .dn-detail-title-card > a { display: none; }
   .dn-detail-title-card h1 {
-    font-size: var(--dn-text-subheading);
-    font-weight: var(--dn-weight-semibold);
+    font-size: var(--dn-text-card);
+    font-weight: var(--dn-weight-medium);
     line-height: var(--dn-leading-section);
   }
 

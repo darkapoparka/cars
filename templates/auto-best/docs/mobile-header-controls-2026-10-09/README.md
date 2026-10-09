@@ -12,4 +12,6 @@ The PDP previously used a 40px tap area and 24px icons. Its back, phone and shar
 
 `before.json` and `after.json` record 18 browser cases: Home/Cars/PDP at EN 320, 390, 767 and 1440px, plus BG 320 and 390px. Checks confirm the mobile dimensions, no horizontal clipping and unchanged desktop geometry. The PDP back action returns to Cars. `shared-role.json` checks all three routes at 390px after the Cars Sort/Filter controls were connected to the shared role.
 
+The original `after.json` and `shared-role.json` estimated visible width from padding. That missed the PDP phone/share background shorthand resetting `background-clip` and painting a 44px circle. The [follow-up pixel audit](../mobile-pdp-polish-2026-10-09/README.md) records the corrected 40px surfaces and title/price hierarchy. The original tap-area and icon measurements remain valid; their estimated paint measurements are superseded.
+
 Source, CSS/token/typography and production-build checks accompany these measurements. This is local verification; no dealer deployment or template release pin changes are included. Unrelated shared stylesheet and desktop-filter work remains outside this change.
