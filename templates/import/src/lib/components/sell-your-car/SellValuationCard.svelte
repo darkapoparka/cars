@@ -16,7 +16,7 @@
 				<source
 					media="(max-width: 767px)"
 					srcset={`${assetHref(`${banner}-small.webp`)} 360w, ${assetHref(`${banner}.webp`)} 720w, ${assetHref(`${banner}-large.webp`)} 1080w`}
-					sizes="(max-width: 767px) calc(100vw - 28px), 1px"
+					sizes="(max-width: 767px) calc(70vw - 19.6px), 1px"
 					type="image/webp"
 				/>
 				<img
@@ -66,45 +66,51 @@
 <style>
 	.sell-valuation {
 		display: grid;
-		gap: var(--bc-space-3);
-	}
-	.sell-valuation__card {
 		overflow: hidden;
 		border-radius: var(--bc-radius-card);
 		background: var(--bc-white);
 	}
+	.sell-valuation__card {
+		overflow: hidden;
+	}
 	.sell-valuation__banner {
 		position: relative;
+		min-height: 144px;
 		background: var(--bc-ink);
 	}
 	.sell-valuation__content {
-		position: absolute;
+		position: relative;
 		z-index: 1;
-		top: var(--bc-space-4);
-		left: var(--bc-space-4);
 		display: grid;
 		gap: 4px;
 		justify-items: start;
+		padding: var(--bc-space-4);
 		max-width: calc(100% - 32px);
 	}
 	.sell-valuation .sell-valuation__title {
 		color: var(--bc-white);
-		font: var(--bc-weight-heading) clamp(22px, 6.2vw, 26px)/1.15 var(--bc-font-body);
+		font: var(--bc-weight-heading) 20px/24px var(--bc-font-body);
 		letter-spacing: -0.03em;
 		white-space: nowrap;
 	}
 	.sell-valuation picture {
+		position: absolute;
+		inset: 0 0 0 auto;
 		display: block;
+		width: 70%;
+		height: 100%;
+		mask-image: linear-gradient(to right, transparent, #000 30%);
 	}
 	.sell-valuation img {
 		display: block;
 		width: 100%;
-		height: auto;
+		height: 100%;
 		object-fit: contain;
+		object-position: right center;
 	}
 	.sell-valuation h2 {
 		margin: 0;
-		font: var(--bc-weight-heading) 20px/24px var(--bc-font-heading);
+		font: var(--bc-weight-heading) 18px/22px var(--bc-font-heading);
 	}
 	.sell-valuation p {
 		margin: 0;
@@ -145,11 +151,10 @@
 		display: grid;
 		gap: var(--bc-space-4);
 		padding: var(--bc-space-4);
-		border-radius: var(--bc-radius-card);
-		background: var(--bc-white);
 	}
 	.sell-valuation ol {
 		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: var(--bc-space-3);
 		margin: 0;
 		padding: 0;
@@ -157,31 +162,31 @@
 	}
 	.sell-valuation li {
 		display: grid;
-		grid-template-columns: 28px minmax(0, 1fr);
-		align-items: start;
-		gap: var(--bc-space-3);
+		min-width: 0;
+		align-content: start;
+		gap: var(--bc-space-2);
 	}
 	.sell-valuation li > span {
 		display: grid;
-		width: 28px;
-		height: 28px;
+		width: 24px;
+		height: 24px;
 		place-items: center;
 		border-radius: var(--bc-radius-pill);
 		background: var(--bc-control);
 		color: var(--bc-ink);
-		font-size: 14px;
+		font-size: 13px;
 		font-weight: var(--bc-weight-heading);
 		font-variant-numeric: tabular-nums;
 		line-height: 1;
 	}
 	.sell-valuation h3 {
 		margin: 0 0 4px;
-		font-size: var(--bc-mobile-card-title);
+		font-size: 14px;
 		font-weight: var(--bc-weight-heading);
-		line-height: var(--bc-mobile-card-title-leading);
+		line-height: 20px;
 	}
 	.sell-valuation__guide p {
-		font-size: var(--bc-mobile-label);
-		line-height: var(--bc-mobile-label-leading);
+		font-size: 13px;
+		line-height: 18px;
 	}
 </style>

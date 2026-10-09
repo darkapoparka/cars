@@ -6,12 +6,9 @@ export const sellValuationCopy = {
 		sellNote: 'VIN or details · Photos optional',
 		howTitle: 'Selling in 3 steps',
 		sellSteps: [
-			{ title: 'Tell us about your car', text: 'VIN or make, model, year and mileage.' },
-			{
-				title: 'Review it together',
-				text: 'We discuss its history, condition and your expectations.'
-			},
-			{ title: 'Choose how to sell', text: 'Agree on an offer or a plan to find a buyer.' }
+			{ title: 'Your car', text: 'VIN or car details.' },
+			{ title: 'Review', text: 'History & condition.' },
+			{ title: 'Your plan', text: 'Offer or selling help.' }
 		]
 	},
 	bg: {
@@ -21,9 +18,9 @@ export const sellValuationCopy = {
 		sellNote: 'VIN или данни · Снимки по желание',
 		howTitle: 'Продажба в 3 стъпки',
 		sellSteps: [
-			{ title: 'Разкажи за автомобила', text: 'VIN или марка, модел, година и пробег.' },
-			{ title: 'Обсъдете го заедно', text: 'Уточняваме историята, състоянието и очакванията ти.' },
-			{ title: 'Избери как да продадеш', text: 'Уговаряме оферта или план да намерим купувач.' }
+			{ title: 'Данни', text: 'VIN или модел.' },
+			{ title: 'Преглед', text: 'История и състояние.' },
+			{ title: 'Решение', text: 'Оферта или помощ.' }
 		]
 	}
 } as const;
