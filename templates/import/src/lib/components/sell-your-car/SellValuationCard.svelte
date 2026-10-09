@@ -34,12 +34,18 @@
 					{copy.sellTitle}
 				</h2>
 				<p class="sell-valuation__description">{copy.sellDescription}</p>
-				<button type="button" aria-haspopup="dialog" aria-expanded={open} onclick={onstart}>
-					{copy.sellAction}<ArrowRight size={16} aria-hidden="true" />
+				<button
+					type="button"
+					aria-haspopup="dialog"
+					aria-expanded={open}
+					aria-describedby="sell-valuation-note"
+					onclick={onstart}
+				>
+					{copy.sellAction}<ArrowRight size={14} aria-hidden="true" />
 				</button>
 			</div>
 		</div>
-		<small class="sell-valuation__note">{copy.sellNote}</small>
+		<small id="sell-valuation-note" class="sr-only">{copy.sellNote}</small>
 	</div>
 	<div class="sell-valuation__guide">
 		<h2>{copy.howTitle}</h2>
@@ -96,10 +102,6 @@
 		height: auto;
 		object-fit: contain;
 	}
-	.sell-valuation__note {
-		display: block;
-		padding: var(--bc-space-3) var(--bc-space-4);
-	}
 	.sell-valuation h2 {
 		margin: 0;
 		font: var(--bc-weight-heading) 20px/24px var(--bc-font-heading);
@@ -119,30 +121,25 @@
 	.sell-valuation button {
 		display: flex;
 		min-height: 44px;
-		margin-top: 8px;
-		padding: 0 14px;
+		margin: 0;
+		padding: 0;
 		align-items: center;
 		justify-content: center;
 		gap: 6px;
-		border: 1px solid rgb(255 255 255 / 0.28);
-		border-radius: var(--bc-radius-pill);
-		background: rgb(17 17 17 / 0.78);
+		border: 0;
+		border-radius: 4px;
+		background: transparent;
 		color: var(--bc-white);
 		font: var(--bc-weight-control) 14px/20px var(--bc-font-body);
 		cursor: pointer;
 	}
 	.sell-valuation button:hover {
-		background: rgb(34 34 34 / 0.92);
+		text-decoration: underline;
+		text-underline-offset: 3px;
 	}
 	.sell-valuation button:focus-visible {
 		outline: 2px solid var(--bc-white);
 		outline-offset: 3px;
-	}
-	.sell-valuation small {
-		color: var(--bc-copy);
-		text-align: center;
-		font-size: var(--bc-mobile-label);
-		line-height: var(--bc-mobile-label-leading);
 	}
 	.sell-valuation__guide {
 		display: grid;
