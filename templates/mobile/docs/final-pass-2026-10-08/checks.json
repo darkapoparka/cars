@@ -1,0 +1,24 @@
+{
+  "completedAt": "2026-10-08T21:45:07.0295559Z",
+  "node": "22.20.0",
+  "sourceFiles": 180,
+  "routeFiles": 30,
+  "lint": "passed",
+  "typecheck": "passed including unused locals and parameters",
+  "domainTests": 155,
+  "productionBuild": "passed",
+  "productionRenderedStates": 168,
+  "productionFlowChecks": 12,
+  "productionArchitectureChecks": 832,
+  "runtimeErrors": 0,
+  "applicationSubmissions": 0,
+  "productionDependencyVulnerabilities": 0,
+  "developmentDependencyAdvisoryEntries": 7,
+  "sourceChangesDuringQA": 0,
+  "reports": {
+    "productionDependencyAudit": "L:/CODEX/cars/runtime/mobile-final-pass-20261008/runtime-dependency-audit.json",
+    "fullDependencyAudit": "L:/CODEX/cars/runtime/mobile-final-pass-20261008/dependency-audit.json",
+    "routes": "L:/CODEX/cars/runtime/mobile-final-pass-20261008/browser-production-final/report.json",
+    "architecture": "L:/CODEX/cars/runtime/mobile-final-pass-20261008/architecture-production-final/report.json"
+  }
+}
