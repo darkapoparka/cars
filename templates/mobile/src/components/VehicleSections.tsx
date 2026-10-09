@@ -291,7 +291,8 @@ const s = stylex.create({
   showroomSpec: {
     paddingLeft: {
       default: 52,
-      '@media (max-width: 359px)': 48,
+      '@media (max-width: 699px)': 44,
+      '@media (max-width: 359px)': 40,
       '@media (min-width: 1024px)': 40,
     },
     minHeight: 44,
@@ -304,6 +305,7 @@ const s = stylex.create({
     justifyContent: 'center',
     transform: {
       default: 'translateY(-50%)',
+      '@media (max-width: 699px)': 'translateY(-50%) scale(0.8)',
       '@media (min-width: 1024px)': 'translateY(-50%) scale(0.6)',
     },
     transformOrigin: 'left center',
