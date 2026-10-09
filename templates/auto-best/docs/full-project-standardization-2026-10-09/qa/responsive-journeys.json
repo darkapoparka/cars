@@ -1,0 +1,109 @@
+{
+  "generatedAt": "2026-10-09T17:12:39.220Z",
+  "base": "http://127.0.0.1:55690",
+  "results": [
+    {
+      "name": "URL sort and chip removal retain unrelated filters",
+      "passed": true,
+      "evidence": {
+        "url": "http://127.0.0.1:55690/bg/cars?fuel=%D0%94%D0%B8%D0%B7%D0%B5%D0%BB&sort=mileage-asc"
+      },
+      "durationMs": 1170
+    },
+    {
+      "name": "facet and outer filter drafts save or cancel at their owner",
+      "passed": true,
+      "evidence": {
+        "url": "http://127.0.0.1:55690/bg/cars?make=BMW&fuel=%D0%94%D0%B8%D0%B7%D0%B5%D0%BB&sort=price-asc"
+      },
+      "durationMs": 1740
+    },
+    {
+      "name": "Home desktop selector drafts save, cancel and reach filtered results",
+      "passed": true,
+      "evidence": {
+        "url": "http://127.0.0.1:55690/bg/cars?make=Audi&model=RS+6+Avant&body=Wagon&price_max=80000"
+      },
+      "durationMs": 9497
+    },
+    {
+      "name": "desktop mega menu keeps keyboard ownership",
+      "passed": true,
+      "evidence": {
+        "focusedTrigger": true
+      },
+      "durationMs": 1031
+    },
+    {
+      "name": "shell state stays correct across direct and client navigation",
+      "passed": true,
+      "evidence": {
+        "route": "about",
+        "url": "http://127.0.0.1:55690/bg/about-us"
+      },
+      "durationMs": 2264
+    },
+    {
+      "name": "responsive shell and discovery boundaries",
+      "passed": true,
+      "evidence": [
+        {
+          "width": 320,
+          "height": 677,
+          "passed": true
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "passed": true
+        },
+        {
+          "width": 430,
+          "height": 932,
+          "passed": true
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "passed": true
+        },
+        {
+          "width": 767,
+          "height": 900,
+          "passed": true
+        },
+        {
+          "width": 768,
+          "height": 900,
+          "passed": true
+        },
+        {
+          "width": 991,
+          "height": 900,
+          "passed": true
+        },
+        {
+          "width": 992,
+          "height": 900,
+          "passed": true
+        },
+        {
+          "width": 1024,
+          "height": 900,
+          "passed": true
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "passed": true
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "passed": true
+        }
+      ],
+      "durationMs": 19440
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "file": "src/lib/components/home/MobileServicesOverview.svelte",
+    "before": "a30fe9c25d05066115e1077b07a1706ddfe04c65cf0552e9b911ff4abfbeb94c",
+    "after": "1f3df2bed1f7c2ea2f6bac82c76130eb33750812afa101d4462d4a3dead6f08b"
+  },
+  {
+    "file": "src/lib/components/home/Editorial.svelte",
+    "before": "55308f3a5152d4c62267f91f9fe77d553aeec724c609b3271fd40f4a845413a6",
+    "after": "a8744242c6782b1c1bacb18c77090e096403f2eff98bb23425d41fd7066babb3"
+  }
+]

@@ -1,0 +1,287 @@
+{
+  "base": "http://127.0.0.1:57762",
+  "generatedAt": "2026-10-09T18:01:26.889Z",
+  "mode": "12px preview via one mobile card token; 16px default retained",
+  "results": [
+    {
+      "name": "home",
+      "route": "",
+      "width": 390,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "cars",
+      "route": "/cars",
+      "width": 390,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "about",
+      "route": "/about-us",
+      "width": 390,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "blog",
+      "route": "/blog",
+      "width": 390,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "article",
+      "route": "/blog-detail/1",
+      "width": 390,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "contact",
+      "route": "/contact",
+      "width": 390,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "sell",
+      "route": "/contact?topic=trade-in",
+      "width": 390,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "import",
+      "route": "/contact?topic=import",
+      "width": 390,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "vehicle",
+      "route": "/listing-detail-v1/1",
+      "width": 390,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "preferences",
+      "route": "/locale-settings",
+      "width": 390,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "home",
+      "route": "",
+      "width": 320,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "cars",
+      "route": "/cars",
+      "width": 320,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "about",
+      "route": "/about-us",
+      "width": 320,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "blog",
+      "route": "/blog",
+      "width": 320,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "article",
+      "route": "/blog-detail/1",
+      "width": 320,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "contact",
+      "route": "/contact",
+      "width": 320,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "sell",
+      "route": "/contact?topic=trade-in",
+      "width": 320,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "import",
+      "route": "/contact?topic=import",
+      "width": 320,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "vehicle",
+      "route": "/listing-detail-v1/1",
+      "width": 320,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "preferences",
+      "route": "/locale-settings",
+      "width": 320,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "home",
+      "route": "",
+      "width": 768,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "cars",
+      "route": "/cars",
+      "width": 768,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "about",
+      "route": "/about-us",
+      "width": 768,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "blog",
+      "route": "/blog",
+      "width": 768,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "article",
+      "route": "/blog-detail/1",
+      "width": 768,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "contact",
+      "route": "/contact",
+      "width": 768,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "sell",
+      "route": "/contact?topic=trade-in",
+      "width": 768,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "import",
+      "route": "/contact?topic=import",
+      "width": 768,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "vehicle",
+      "route": "/listing-detail-v1/1",
+      "width": 768,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "preferences",
+      "route": "/locale-settings",
+      "width": 768,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "home",
+      "route": "",
+      "width": 1440,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "cars",
+      "route": "/cars",
+      "width": 1440,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "about",
+      "route": "/about-us",
+      "width": 1440,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "blog",
+      "route": "/blog",
+      "width": 1440,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "article",
+      "route": "/blog-detail/1",
+      "width": 1440,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "contact",
+      "route": "/contact",
+      "width": 1440,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "sell",
+      "route": "/contact?topic=trade-in",
+      "width": 1440,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "import",
+      "route": "/contact?topic=import",
+      "width": 1440,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "vehicle",
+      "route": "/listing-detail-v1/1",
+      "width": 1440,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "preferences",
+      "route": "/locale-settings",
+      "width": 1440,
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    }
+  ]
+}

@@ -262,7 +262,7 @@ try {
               priceSize: price.fontSize, priceWeight: price.fontWeight,
               fuel: fuel.innerText, fits: fuel.scrollWidth <= fuel.clientWidth + 1 };
           });
-          assert.deepEqual(cardTypography, { titleSize: '16px', titleWeight: '500', priceSize: '24px', priceWeight: '600',
+          assert.deepEqual(cardTypography, { titleSize: '16px', titleWeight: '500', priceSize: '20px', priceWeight: '600',
             fuel: locale === 'bg' ? 'Бензин' : 'Petrol', fits: true }, 'Price has a clear hierarchy; Home retains three readable facts');
           const viewAll = page.locator('.dn-search__mobile-all:visible').first();
           await compactControl(viewAll, { icon: true });

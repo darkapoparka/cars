@@ -61,7 +61,7 @@
   .dn-showroom-map {
     overflow: hidden;
     border: 1px solid var(--dn-line);
-    border-radius: var(--dn-radius-lg);
+    border-radius: var(--dn-radius-content-card);
     background: var(--dn-surface-raised);
   }
   .dn-showroom-map__canvas {

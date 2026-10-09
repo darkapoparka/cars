@@ -112,7 +112,7 @@
     min-width: 0;
     padding: 12px 12px 14px;
     border: 0;
-    border-radius: 16px;
+    border-radius: var(--dn-radius-card);
     background: #f3f4f6;
     color: #24272c;
     text-align: center;
@@ -190,7 +190,7 @@
   @media (min-width: 992px) {
     .dn-body-types__panel {
       padding: 0;
-      border-radius: 20px;
+      border-radius: var(--dn-radius-lg);
       background: var(--dn-home-panel);
     }
 
@@ -316,7 +316,7 @@
       grid-template-rows: var(--dn-discovery-media-height) auto;
       gap: var(--dn-space-2);
       padding: var(--dn-discovery-tile-padding);
-      border-radius: 14px;
+      border-radius: var(--dn-radius-mobile-card);
       background: var(--dn-mobile-surface);
       text-align: left;
     }

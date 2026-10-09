@@ -166,7 +166,7 @@
     --dn-discovery-padding: 18px;
     --dn-discovery-gap: 14px;
     --dn-discovery-search-height: 60px;
-    --dn-discovery-radius: 16px;
+    --dn-discovery-radius: var(--dn-radius);
     position: absolute;
     z-index: 4;
     top: var(--dn-route-hero-control-top);
@@ -178,7 +178,7 @@
   .dn-listing-filter {
     position: relative;
     overflow: hidden;
-    border-radius: 16px;
+    border-radius: var(--dn-radius);
     background: #fff;
     box-shadow: 0 18px 44px rgba(18, 25, 38, 0.18);
   }
@@ -296,7 +296,7 @@
       min-height: 60px;
       padding: 5px 5px 5px 18px;
       border: 1px solid #dfe2e6;
-      border-radius: 14px;
+      border-radius: var(--dn-radius-compact);
       background: #f5f6f7;
       color: #6d737d;
     }

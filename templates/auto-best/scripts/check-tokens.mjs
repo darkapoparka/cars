@@ -1,4 +1,5 @@
 import { readdir, readFile } from 'node:fs/promises';
+import { radiusPolicyErrors } from './radius-policy.mjs';
 
 const tokenPath = 'src/lib/styles/tokens.css';
 const errors = [];
@@ -45,7 +46,17 @@ for (const [name, value] of expectedControlScale) {
   if (globalTokens.get(name) !== value) errors.push(`${tokenPath}: ${name} must remain ${value}.`);
 }
 
+for (const [name, value] of [['--dn-radius', '16px'], ['--dn-radius-xs', '6px'], ['--dn-radius-sm', '10px'], ['--dn-radius-control', '12px'], ['--dn-radius-sheet', '24px'], ['--dn-radius-mobile-card', '12px']]) {
+  if (globalTokens.get(name) !== value) errors.push(`${tokenPath}: ${name} must remain ${value}.`);
+}
+
 const expectedAliases = new Map([
+  ['--dn-radius-card', 'var(--dn-radius)'],
+  ['--dn-radius-entry-card', 'var(--dn-radius-lg)'],
+  ['--dn-radius-content-card', 'var(--dn-radius-lg)'],
+  ['--dn-radius-service-card', 'var(--dn-radius-sheet)'],
+  ['--dn-radius-discovery-card', 'var(--dn-radius-compact)'],
+  ['--dn-radius-showroom', 'var(--dn-radius-panel)'],
   ['--dn-compact-control-visual-height', 'var(--dn-control-height-compact)'],
   ['--dn-compact-control-inset', 'calc((var(--dn-control-height-default) - var(--dn-compact-control-visual-height)) / 2)'],
   ['--dn-control-height-editor', 'var(--dn-control-height-default)'],
@@ -121,7 +132,15 @@ const governedControlTokens = new Set([
 const controlAlias = /^var\(--dn-control-height-(?:compact|default|editor)\)$/;
 for (const [file, source] of sourceByFile) {
   if (file === tokenPath) continue;
+  const css = file.endsWith('.css') ? source : file.endsWith('.svelte')
+    ? [...source.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)].map(match => match[1]).join('\n') : '';
+  for (const violation of radiusPolicyErrors(css)) {
+    errors.push(`${file}: CSS line ${violation.line}: border radius must use a shared radius token, not ${violation.value}.`);
+  }
   for (const token of declarations(source)) {
+    if (/^--dn-(?:[\w-]*radius[\w-]*|pill)$/.test(token.name) && radiusPolicyErrors(`.corner { border-radius: ${token.value}; }`).length) {
+      errors.push(`${file}: ${token.name} must reference a shared radius token, not ${token.value}.`);
+    }
     const entryFieldHeight = token.name === '--dn-entry-height' && ['var(--dn-control-height-prominent)', 'var(--dn-control-height-entry-mobile)'].includes(token.value);
     if (governedControlTokens.has(token.name) && !controlAlias.test(token.value) && !entryFieldHeight) {
       errors.push(`${file}: ${token.name} must reference a shared control-height token, not ${token.value}.`);
@@ -133,4 +152,4 @@ if (errors.length) {
   console.error(errors.join('\n'));
   process.exit(1);
 }
-console.log(`Token check passed: ${globalTokens.size} global tokens, ${usageCount} source references, no unresolved aliases or cycles.`);
+console.log(`Token check passed: ${globalTokens.size} global tokens, ${usageCount} source references, no unresolved aliases, cycles or ungoverned corners.`);

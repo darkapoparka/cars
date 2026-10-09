@@ -1,0 +1,26 @@
+{
+  "generatedAt": "2026-10-09T16:59:36.050Z",
+  "base": "http://127.0.0.1:63095",
+  "results": [
+    {
+      "width": 320,
+      "height": 677,
+      "passed": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "passed": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "passed": true
+    },
+    {
+      "width": 700,
+      "height": 390,
+      "passed": true
+    }
+  ]
+}

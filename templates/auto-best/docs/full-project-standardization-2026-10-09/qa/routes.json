@@ -1,0 +1,1424 @@
+{
+  "generatedAt": "2026-10-09T16:51:01.157Z",
+  "base": "http://127.0.0.1:63095",
+  "results": [
+    {
+      "name": "390 /",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 2571
+    },
+    {
+      "name": "390 /cars",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 2,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 2097
+    },
+    {
+      "name": "390 /about-us",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 2,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 2508
+    },
+    {
+      "name": "390 /blog",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 2,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1880
+    },
+    {
+      "name": "390 /contact",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 2,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 7994
+    },
+    {
+      "name": "390 /contact?topic=inspection",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1839
+    },
+    {
+      "name": "390 /contact?topic=leasing",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1806
+    },
+    {
+      "name": "390 /contact?topic=trade-in",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1589
+    },
+    {
+      "name": "390 /contact?topic=import",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1380
+    },
+    {
+      "name": "390 /en/listing-detail-v1/1",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 4431
+    },
+    {
+      "name": "390 /bg/listing-detail-v1/1",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 2669
+    },
+    {
+      "name": "390 /en/listing-detail-v1/2",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 2518
+    },
+    {
+      "name": "390 /bg/listing-detail-v1/2",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 3291
+    },
+    {
+      "name": "390 /en/listing-detail-v1/3",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 3836
+    },
+    {
+      "name": "390 /bg/listing-detail-v1/3",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 3494
+    },
+    {
+      "name": "390 /en/listing-detail-v1/4",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 2981
+    },
+    {
+      "name": "390 /bg/listing-detail-v1/4",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 2800
+    },
+    {
+      "name": "390 /en/listing-detail-v1/6",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 2281
+    },
+    {
+      "name": "390 /bg/listing-detail-v1/6",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 2713
+    },
+    {
+      "name": "390 /en/listing-detail-v1/7",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 3138
+    },
+    {
+      "name": "390 /bg/listing-detail-v1/7",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 2731
+    },
+    {
+      "name": "390 /en/listing-detail-v1/8",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 2554
+    },
+    {
+      "name": "390 /bg/listing-detail-v1/8",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 2796
+    },
+    {
+      "name": "390 /en/blog-detail/1",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1493
+    },
+    {
+      "name": "390 /bg/blog-detail/1",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1680
+    },
+    {
+      "name": "390 /en/blog-detail/2",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1668
+    },
+    {
+      "name": "390 /bg/blog-detail/2",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1954
+    },
+    {
+      "name": "390 /en/blog-detail/3",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1817
+    },
+    {
+      "name": "390 /bg/blog-detail/3",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1896
+    },
+    {
+      "name": "390 /en/blog-detail/8",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1600
+    },
+    {
+      "name": "390 /bg/blog-detail/8",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1927
+    },
+    {
+      "name": "390 /en/blog-detail/4",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1930
+    },
+    {
+      "name": "390 /bg/blog-detail/4",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 8606
+    },
+    {
+      "name": "390 /en/blog-detail/5",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1640
+    },
+    {
+      "name": "390 /bg/blog-detail/5",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1512
+    },
+    {
+      "name": "390 /en/blog-detail/6",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1609
+    },
+    {
+      "name": "390 /bg/blog-detail/6",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1903
+    },
+    {
+      "name": "390 /en/blog-detail/7",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1747
+    },
+    {
+      "name": "390 /bg/blog-detail/7",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 2252
+    },
+    {
+      "name": "390 /en/blog-detail/9",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1715
+    },
+    {
+      "name": "390 /bg/blog-detail/9",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1875
+    },
+    {
+      "name": "390 /en/blog-detail/10",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1943
+    },
+    {
+      "name": "390 /bg/blog-detail/10",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1446
+    },
+    {
+      "name": "390 /en/blog-detail/11",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1756
+    },
+    {
+      "name": "390 /bg/blog-detail/11",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 2180
+    },
+    {
+      "name": "390 /en/blog-detail/12",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1624
+    },
+    {
+      "name": "390 /bg/blog-detail/12",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1469
+    },
+    {
+      "name": "390 /cars?q=no-match-xyz",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 2,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1505
+    },
+    {
+      "name": "390 /blog?q=no-match-xyz",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 2,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1539
+    },
+    {
+      "name": "390 /listing-detail-v1/999",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1410
+    },
+    {
+      "name": "390 /listing-detail-v1/01",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1253
+    },
+    {
+      "name": "390 /blog-detail/999",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1346
+    },
+    {
+      "name": "390 /missing-page",
+      "passed": true,
+      "evidence": {
+        "overflow": 0,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1397
+    },
+    {
+      "name": "1440 /",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1955
+    },
+    {
+      "name": "1440 /cars",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 2,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 2330
+    },
+    {
+      "name": "1440 /about-us",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 2,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 2749
+    },
+    {
+      "name": "1440 /blog",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 2,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1504
+    },
+    {
+      "name": "1440 /contact",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 2,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 4899
+    },
+    {
+      "name": "1440 /contact?topic=inspection",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1896
+    },
+    {
+      "name": "1440 /contact?topic=leasing",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1727
+    },
+    {
+      "name": "1440 /contact?topic=trade-in",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1519
+    },
+    {
+      "name": "1440 /contact?topic=import",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1617
+    },
+    {
+      "name": "1440 /en/listing-detail-v1/1",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1851
+    },
+    {
+      "name": "1440 /bg/listing-detail-v1/1",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 2275
+    },
+    {
+      "name": "1440 /en/listing-detail-v1/2",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1967
+    },
+    {
+      "name": "1440 /bg/listing-detail-v1/2",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 2400
+    },
+    {
+      "name": "1440 /en/listing-detail-v1/3",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1790
+    },
+    {
+      "name": "1440 /bg/listing-detail-v1/3",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1828
+    },
+    {
+      "name": "1440 /en/listing-detail-v1/4",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1639
+    },
+    {
+      "name": "1440 /bg/listing-detail-v1/4",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1670
+    },
+    {
+      "name": "1440 /en/listing-detail-v1/6",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1941
+    },
+    {
+      "name": "1440 /bg/listing-detail-v1/6",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1630
+    },
+    {
+      "name": "1440 /en/listing-detail-v1/7",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1651
+    },
+    {
+      "name": "1440 /bg/listing-detail-v1/7",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1573
+    },
+    {
+      "name": "1440 /en/listing-detail-v1/8",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1612
+    },
+    {
+      "name": "1440 /bg/listing-detail-v1/8",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": true,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1669
+    },
+    {
+      "name": "1440 /en/blog-detail/1",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1381
+    },
+    {
+      "name": "1440 /bg/blog-detail/1",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1502
+    },
+    {
+      "name": "1440 /en/blog-detail/2",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1488
+    },
+    {
+      "name": "1440 /bg/blog-detail/2",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1442
+    },
+    {
+      "name": "1440 /en/blog-detail/3",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1453
+    },
+    {
+      "name": "1440 /bg/blog-detail/3",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1434
+    },
+    {
+      "name": "1440 /en/blog-detail/8",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1574
+    },
+    {
+      "name": "1440 /bg/blog-detail/8",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1504
+    },
+    {
+      "name": "1440 /en/blog-detail/4",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1551
+    },
+    {
+      "name": "1440 /bg/blog-detail/4",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1507
+    },
+    {
+      "name": "1440 /en/blog-detail/5",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1522
+    },
+    {
+      "name": "1440 /bg/blog-detail/5",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1727
+    },
+    {
+      "name": "1440 /en/blog-detail/6",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1462
+    },
+    {
+      "name": "1440 /bg/blog-detail/6",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1507
+    },
+    {
+      "name": "1440 /en/blog-detail/7",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1553
+    },
+    {
+      "name": "1440 /bg/blog-detail/7",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1441
+    },
+    {
+      "name": "1440 /en/blog-detail/9",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1463
+    },
+    {
+      "name": "1440 /bg/blog-detail/9",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1518
+    },
+    {
+      "name": "1440 /en/blog-detail/10",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1466
+    },
+    {
+      "name": "1440 /bg/blog-detail/10",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1485
+    },
+    {
+      "name": "1440 /en/blog-detail/11",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1447
+    },
+    {
+      "name": "1440 /bg/blog-detail/11",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1479
+    },
+    {
+      "name": "1440 /en/blog-detail/12",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1428
+    },
+    {
+      "name": "1440 /bg/blog-detail/12",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1524
+    },
+    {
+      "name": "1440 /cars?q=no-match-xyz",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 2,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1777
+    },
+    {
+      "name": "1440 /blog?q=no-match-xyz",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 2,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1783
+    },
+    {
+      "name": "1440 /listing-detail-v1/999",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1519
+    },
+    {
+      "name": "1440 /listing-detail-v1/01",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1845
+    },
+    {
+      "name": "1440 /blog-detail/999",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1842
+    },
+    {
+      "name": "1440 /missing-page",
+      "passed": true,
+      "evidence": {
+        "overflow": -15,
+        "broken": [],
+        "headings": 1,
+        "main": 1,
+        "dock": false,
+        "token": "#0b57d0"
+      },
+      "durationMs": 1469
+    },
+    {
+      "name": "responsive 320x677",
+      "passed": true,
+      "durationMs": 6875
+    },
+    {
+      "name": "responsive 430x932",
+      "passed": true,
+      "durationMs": 17939
+    },
+    {
+      "name": "responsive 768x900",
+      "passed": true,
+      "durationMs": 6593
+    },
+    {
+      "name": "responsive 991x900",
+      "passed": true,
+      "durationMs": 7084
+    },
+    {
+      "name": "responsive 992x900",
+      "passed": true,
+      "durationMs": 12595
+    },
+    {
+      "name": "responsive 1024x900",
+      "passed": true,
+      "durationMs": 7836
+    },
+    {
+      "name": "responsive 1920x1080",
+      "passed": true,
+      "durationMs": 13492
+    },
+    {
+      "name": "responsive 844x390",
+      "passed": true,
+      "durationMs": 6050
+    }
+  ]
+}

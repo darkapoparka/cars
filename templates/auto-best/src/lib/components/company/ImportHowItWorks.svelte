@@ -223,7 +223,7 @@
   }
   .dn-import-info-sheet__header h2 { min-width: 0; white-space: nowrap; margin: 0; color: var(--dn-ink); font-size: var(--dn-text-subheading); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); }
   .dn-import-info-sheet__header h2:focus { outline: none; }
-  .dn-import-info-sheet__close { border: 0; border-radius: 50%; background: var(--dn-surface); color: var(--dn-ink); }
+  .dn-import-info-sheet__close { border: 0; border-radius: var(--dn-radius-circle); background: var(--dn-surface); color: var(--dn-ink); }
   .dn-import-info-sheet__body {
     display: grid;
     min-height: 0;
@@ -265,7 +265,7 @@
   .dn-import-info-actions button:hover { background: var(--dn-primary-action-surface-hover); }
   .dn-import-info-actions button:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 2px; }
 
-  .dn-import-info-prepare { padding: var(--dn-space-4); border-radius: var(--dn-radius); background: var(--dn-mobile-canvas); color: var(--dn-ink); gap: var(--dn-space-3); }
+  .dn-import-info-prepare { padding: var(--dn-space-4); border-radius: var(--dn-radius-card); background: var(--dn-mobile-canvas); color: var(--dn-ink); gap: var(--dn-space-3); }
   .dn-import-info-prepare h3 { color: var(--dn-ink); }
   .dn-import-info-prepare strong { color: var(--dn-ink); }
   .dn-import-info-prepare p > span { color: var(--dn-muted); }
@@ -285,7 +285,7 @@
       width: 100%;
       min-height: 52px;
       padding: var(--dn-space-4) var(--dn-space-4) var(--dn-space-2);
-      border-radius: var(--dn-radius) var(--dn-radius) 0 0;
+      border-radius: var(--dn-radius-card) var(--dn-radius-card) 0 0;
       border: 1px solid var(--dn-ink);
       border-bottom: 0;
       box-shadow: none;
@@ -306,11 +306,11 @@
       width: 100%;
       max-height: min(700px, calc(100dvh - max(84px, env(safe-area-inset-top))));
       margin: 0;
-      border-radius: var(--dn-radius-lg) var(--dn-radius-lg) 0 0;
+      border-radius: var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0;
     }
     .dn-import-info-sheet {
       max-height: min(700px, calc(100dvh - max(84px, env(safe-area-inset-top))));
-      border-radius: var(--dn-radius-lg) var(--dn-radius-lg) 0 0;
+      border-radius: var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0;
     }
     .dn-import-info-sheet__header { padding: var(--dn-space-1) var(--dn-space-4) var(--dn-space-3); }
     .dn-import-info-sheet__body { gap: var(--dn-space-4); padding: 0 var(--dn-space-4) max(var(--dn-space-4), env(safe-area-inset-bottom)); }
@@ -318,7 +318,7 @@
     .dn-import-info-list, .dn-import-info-steps { gap: var(--dn-space-3); }
     .dn-import-info-list > li { min-height: 0; }
     .dn-import-info-drawer--inline { position: static; width: 100%; margin: 0; transform: none; }
-    .dn-import-info-drawer--inline .dn-import-info-drawer__peek { display: flex; width: 100%; padding: var(--dn-space-4); border: 0; border-radius: var(--dn-radius-lg); background: var(--dn-white); color: var(--dn-ink); box-shadow: var(--dn-card-shadow); text-align: left; }
+    .dn-import-info-drawer--inline .dn-import-info-drawer__peek { display: flex; width: 100%; padding: var(--dn-space-4); border: 0; border-radius: var(--dn-radius-mobile-card); background: var(--dn-white); color: var(--dn-ink); box-shadow: var(--dn-card-shadow); text-align: left; }
     .dn-import-info-drawer--inline .dn-import-info-drawer__peek :global(svg) { transform: none; }
     .dn-import-info-dialog--inline .dn-import-info-sheet__header h2 { white-space: normal; }
     .dn-import-info-dialog--inline .dn-import-info-process { padding: 0; background: transparent; }
@@ -331,7 +331,7 @@
   }
 
   .dn-import-info-demo { margin: 0; color: var(--dn-muted); font-size: var(--dn-text-caption); line-height: var(--dn-leading-body); }
-  .dn-import-info-process { padding: var(--dn-space-4); border-radius: var(--dn-radius); background: var(--dn-ink); }
+  .dn-import-info-process { padding: var(--dn-space-4); border-radius: var(--dn-radius-card); background: var(--dn-ink); }
   .dn-import-info-process :is(h3, strong) { color: var(--dn-white); }
   .dn-import-info-process li > span { color: var(--dn-white); }
 

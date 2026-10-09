@@ -121,7 +121,7 @@
     .dn-about-partners__grid li {
       min-height: 72px;
       padding: 8px 12px;
-      border-radius: 12px;
+      border-radius: var(--dn-radius-control);
       background: #fff;
     }
 

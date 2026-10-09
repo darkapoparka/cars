@@ -214,8 +214,8 @@
     .presets button[aria-pressed=true] { border-color: var(--dn-line-emphasis); background: var(--dn-home-panel); color: var(--dn-ink); }
     .presets button:active { background: var(--dn-surface-hover); }
     .presets button:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
-    .choice input[type=radio] { display: grid; place-content: center; box-sizing: border-box; padding: 0; appearance: none; border: 1px solid var(--dn-line-strong); border-radius: 50%; background: var(--dn-white); cursor: pointer; }
-    .choice input[type=radio]::before { width: 8px; height: 8px; border-radius: 50%; background: var(--dn-ink); opacity: 0; content: ''; }
+    .choice input[type=radio] { display: grid; place-content: center; box-sizing: border-box; padding: 0; appearance: none; border: 1px solid var(--dn-line-strong); border-radius: var(--dn-radius-circle); background: var(--dn-white); cursor: pointer; }
+    .choice input[type=radio]::before { width: 8px; height: 8px; border-radius: var(--dn-radius-circle); background: var(--dn-ink); opacity: 0; content: ''; }
     .choice input[type=radio]:checked { border-color: var(--dn-ink); }
     .choice input[type=radio]:checked::before { opacity: 1; }
     .choice input:focus-visible { outline: none; }

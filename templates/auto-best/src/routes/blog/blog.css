@@ -33,7 +33,7 @@
   position: relative;
   width: 100%;
   padding: 18px;
-  border-radius: 16px;
+  border-radius: var(--dn-radius-card);
   background: #fff;
 }
 
@@ -147,7 +147,7 @@
   margin-top: 0;
   padding: 58px 30px;
   border: 1px solid #e1e4e9;
-  border-radius: 16px;
+  border-radius: var(--dn-radius-card);
   background: #fff;
   text-align: center;
 }

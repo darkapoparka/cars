@@ -1,0 +1,4100 @@
+{
+  "summary": {
+    "sourceFiles": 172,
+    "components": 99,
+    "stylesheets": 11,
+    "routes": [
+      "src/routes/+page.svelte",
+      "src/routes/about-us/+page.svelte",
+      "src/routes/blog-detail/[id]/+page.svelte",
+      "src/routes/blog/+page.svelte",
+      "src/routes/cars/+page.svelte",
+      "src/routes/contact/+page.svelte",
+      "src/routes/listing-detail-v1/[id]/+page.svelte",
+      "src/routes/locale-settings/+page.svelte"
+    ],
+    "radiusDeclarations": 464,
+    "governedDeclarations": 464,
+    "remaining": []
+  },
+  "declarations": [
+    {
+      "file": "src/lib/components/company/AboutPartners.svelte",
+      "line": 124,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-about-partners__grid li",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/AboutTeam.svelte",
+      "line": 63,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-about-team__panel",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/AboutTeam.svelte",
+      "line": 76,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-about-team__contact",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/AboutTeam.svelte",
+      "line": 89,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-about-team-card",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/ContactSocialChannels.svelte",
+      "line": 55,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-contact-channels",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/ContactSocialChannels.svelte",
+      "line": 87,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-contact-channels__profile",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/ContactSocialChannels.svelte",
+      "line": 92,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-contact-channels__icon",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/ContactVehicle.svelte",
+      "line": 23,
+      "property": "border-radius",
+      "value": "var(--dn-radius-media)",
+      "selector": ".dn-contact-vehicle img",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/ContactVehicle.svelte",
+      "line": 28,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-contact-vehicle--hero",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/DesktopShowroom.svelte",
+      "line": 70,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-desktop-showroom",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/DesktopShowroom.svelte",
+      "line": 134,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-desktop-showroom__actions a",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/DesktopShowroom.svelte",
+      "line": 164,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-desktop-showroom__map",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/DesktopSocialLinks.svelte",
+      "line": 42,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": "a",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/EnquiryEntryField.svelte",
+      "line": 124,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-entry-editor",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/EnquiryEntryField.svelte",
+      "line": 129,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-entry-editor-close",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/EnquiryEntryField.svelte",
+      "line": 134,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": "input, textarea",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/EnquiryEntryField.svelte",
+      "line": 136,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": "input",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/EnquiryEntryField.svelte",
+      "line": 141,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": "footer button",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/EnquiryEntryField.svelte",
+      "line": 148,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-entry-editor",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 165,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-import-info-drawer__peek",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 186,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-import-info-dialog",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 198,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-import-info-sheet",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 215,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-import-info-sheet__grabber span",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 226,
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "selector": ".dn-import-info-sheet__close",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 258,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-import-info-actions button",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 268,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-import-info-prepare",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 288,
+      "property": "border-radius",
+      "value": "var(--dn-radius) var(--dn-radius) 0 0",
+      "selector": ".dn-import-info-drawer__peek",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 300,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-import-info-drawer__handle",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 309,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0",
+      "selector": ".dn-import-info-dialog",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 313,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0",
+      "selector": ".dn-import-info-sheet",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 321,
+      "property": "border-radius",
+      "value": "var(--dn-radius-mobile-card)",
+      "selector": ".dn-import-info-drawer--inline .dn-import-info-drawer__peek",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 334,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-import-info-process",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/ServiceEntryField.svelte",
+      "line": 95,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-service-editor",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/ServiceEntryField.svelte",
+      "line": 100,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": "header button",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/ServiceEntryField.svelte",
+      "line": 104,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": "input, textarea",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/ServiceEntryField.svelte",
+      "line": 109,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": "footer button",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/ServiceLanding.svelte",
+      "line": 46,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": "details",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/ServiceLanding.svelte",
+      "line": 49,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": "summary:focus-visible",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/ServiceLanding.svelte",
+      "line": 55,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": "li span",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/ShowroomMap.svelte",
+      "line": 64,
+      "property": "border-radius",
+      "value": "var(--dn-radius-content-card)",
+      "selector": ".dn-showroom-map",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/ShowroomMap.svelte",
+      "line": 128,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-showroom-map__open",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 335,
+      "property": "border-radius",
+      "value": "var(--dn-radius-dialog)",
+      "selector": ".dn-tradein-dialog",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 342,
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "selector": ".dn-tradein-close",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 346,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-tradein-progress__bar",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 347,
+      "property": "border-radius",
+      "value": "inherit",
+      "selector": ".dn-tradein-progress__bar i",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 354,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-tradein-fields input, .dn-tradein-notes textarea",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 363,
+      "property": "border-radius",
+      "value": "var(--dn-radius-compact)",
+      "selector": ".dn-tradein-upload",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 371,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": ".dn-tradein-photo-grid img",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 372,
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "selector": ".dn-tradein-photo-grid button",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 376,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-tradein-review-card",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 378,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-tradein-review-top > span",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 386,
+      "property": "border-radius",
+      "value": "var(--dn-radius-media)",
+      "selector": ".dn-tradein-review-photos img",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 387,
+      "property": "border-radius",
+      "value": "calc(var(--dn-radius-control) + 1px)",
+      "selector": ".dn-tradein-next-step",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 390,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-tradein-copy, .dn-tradein-review-call",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 393,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": ".dn-tradein-feedback",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 396,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-tradein-primary",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 414,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-tradein-dialog",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 162,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-tradein-info-drawer__peek",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 183,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-tradein-info-dialog",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 195,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-tradein-info-sheet",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 212,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-tradein-info-sheet__grabber span",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 224,
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "selector": ".dn-tradein-info-sheet__close",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 247,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-tradein-info-prepare",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 262,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-tradein-info-actions button",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 289,
+      "property": "border-radius",
+      "value": "var(--dn-radius) var(--dn-radius) 0 0",
+      "selector": ".dn-tradein-info-drawer__peek",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 301,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-tradein-info-drawer__handle",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 310,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0",
+      "selector": ".dn-tradein-info-dialog",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 314,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0",
+      "selector": ".dn-tradein-info-sheet",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 322,
+      "property": "border-radius",
+      "value": "var(--dn-radius-mobile-card)",
+      "selector": ".dn-tradein-info-drawer--inline .dn-tradein-info-drawer__peek",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 335,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-tradein-info-process",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 327,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-enquiry-primary",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 330,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-enquiry-contact",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 336,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-enquiry",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 342,
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "selector": ".dn-enquiry-close",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 345,
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "selector": ".dn-enquiry-steps span",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 352,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-enquiry-fields input, textarea",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 359,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-enquiry-purpose label",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 363,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-enquiry-selected-link",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 369,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-enquiry-upload",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 376,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": ".dn-enquiry-photo-grid img",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 377,
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "selector": ".dn-enquiry-photo-grid button",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 382,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-enquiry-summary",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 384,
+      "property": "border-radius",
+      "value": "var(--dn-radius-media)",
+      "selector": ".dn-enquiry-review-photos img",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 388,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-enquiry-success",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 392,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-enquiry-copy",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 394,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": ".dn-enquiry-feedback",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 396,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-enquiry",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/WorkflowSupport.svelte",
+      "line": 27,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-workflow-support",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/company/WorkflowSupport.svelte",
+      "line": 33,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": "a:focus-visible",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/editorial/BlogCard.svelte",
+      "line": 52,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-blog-card",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/editorial/BlogCard.svelte",
+      "line": 64,
+      "property": "border-radius",
+      "value": "inherit",
+      "selector": ".dn-blog-card__link",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/editorial/BlogCard.svelte",
+      "line": 81,
+      "property": "border-radius",
+      "value": "var(--dn-radius-card-inset)",
+      "selector": ".dn-blog-card__link:focus-visible::after",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/editorial/BlogCard.svelte",
+      "line": 169,
+      "property": "border-radius",
+      "value": "var(--dn-radius-content-card)",
+      "selector": ".dn-blog-card",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/editorial/BlogCard.svelte",
+      "line": 170,
+      "property": "border-radius",
+      "value": "inherit",
+      "selector": ".dn-blog-card__link:focus-visible::after",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/editorial/BlogSearch.svelte",
+      "line": 145,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-blog-search-trigger",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/editorial/BlogSearch.svelte",
+      "line": 151,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-blog-search-dialog",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/editorial/BlogSearch.svelte",
+      "line": 158,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-blog-search-dialog__field",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/editorial/BlogSearch.svelte",
+      "line": 163,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-blog-search-dialog__categories button",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/editorial/BlogSearch.svelte",
+      "line": 168,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-blog-search-dialog__clear",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/editorial/BlogSearch.svelte",
+      "line": 172,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-blog-search-dialog__apply",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/BodyTypes.svelte",
+      "line": 115,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-body-type",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/BodyTypes.svelte",
+      "line": 146,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-body-type__image",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/BodyTypes.svelte",
+      "line": 193,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-body-types__panel",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/BodyTypes.svelte",
+      "line": 319,
+      "property": "border-radius",
+      "value": "var(--dn-radius-mobile-card)",
+      "selector": ".dn-body-type",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/BrandSection.svelte",
+      "line": 79,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-brand-shell",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/BrandSection.svelte",
+      "line": 84,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-brand-hero__cta",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/BrandSection.svelte",
+      "line": 85,
+      "property": "border-radius",
+      "value": "0 0 var(--dn-radius-lg) var(--dn-radius-lg)",
+      "selector": ".dn-brand-panel",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/BrandSection.svelte",
+      "line": 87,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-brand-card",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/BrandSection.svelte",
+      "line": 118,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-brand-shell",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/BrandSection.svelte",
+      "line": 125,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-brand-panel",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/BrandSection.svelte",
+      "line": 127,
+      "property": "border-radius",
+      "value": "var(--dn-radius-mobile-card)",
+      "selector": ".dn-brand-card",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/BrowseAllCard.svelte",
+      "line": 23,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-browse-all",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/BrowseAllCard.svelte",
+      "line": 24,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".mark",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/BrowseAllCard.svelte",
+      "line": 27,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".action",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/DiscoveryAllTile.svelte",
+      "line": 44,
+      "property": "border-radius",
+      "value": "var(--dn-radius-mobile-card)",
+      "selector": ".dn-discovery-toggle",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/DiscoveryAllTile.svelte",
+      "line": 50,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-discovery-all__glyph",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/DiscoveryAllTile.svelte",
+      "line": 51,
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "selector": ".dn-discovery-all__glyph span",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 90,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sheet)",
+      "selector": ".dn-editorial__banner",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 136,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-editorial__cta",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 167,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-editorial-item",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 180,
+      "property": "border-radius",
+      "value": "inherit",
+      "selector": ".dn-editorial-item__link",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 196,
+      "property": "border-radius",
+      "value": "inherit",
+      "selector": ".dn-editorial-item__link:focus-visible::after",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 207,
+      "property": "border-radius",
+      "value": "var(--dn-radius-card-inset) var(--dn-radius-card-inset) 0 0",
+      "selector": ".dn-editorial-item__media",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 226,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-editorial-item__badge",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 317,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-editorial__banner",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 347,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-editorial__banner",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 414,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-editorial-item",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 423,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-editorial-item__media",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 500,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg) var(--dn-radius-lg) 0 0",
+      "selector": ".dn-editorial__banner",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/HomeBrowseBox.svelte",
+      "line": 155,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-home-browse",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/HomeBrowseBox.svelte",
+      "line": 156,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ":global(.dn-home-browse__field)",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/HomeBrowseBox.svelte",
+      "line": 165,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-home-browse__search",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/HomeBrowseBox.svelte",
+      "line": 167,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ":global(.dn-home-browse-picker)",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/HomeBrowseBox.svelte",
+      "line": 172,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-home-browse-picker__presets button",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/HomeBrowseBox.svelte",
+      "line": 175,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-home-browse-picker__footer button",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/InventorySection.svelte",
+      "line": 49,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-inventory-panel",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/InventorySection.svelte",
+      "line": 82,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-inventory__all",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/InventorySection.svelte",
+      "line": 131,
+      "property": "border-radius",
+      "value": "inherit",
+      "selector": ".dn-inventory__all::before",
+      "contexts": [
+        "@media (min-width: 768px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/InventorySection.svelte",
+      "line": 183,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-inventory-panel",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/InventorySection.svelte",
+      "line": 295,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": ".dn-inventory__all",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/MobileCoreActions.svelte",
+      "line": 84,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-mobile-core-card",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/MobileCoreActions.svelte",
+      "line": 124,
+      "property": "border-radius",
+      "value": "var(--dn-radius-media)",
+      "selector": ".dn-mobile-core-card__art",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/MobileServicesOverview.svelte",
+      "line": 45,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-mobile-services__card",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/SearchBox.svelte",
+      "line": 129,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-search-wrap :global(.dn-search)",
+      "contexts": [
+        "@media (min-width: 768px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/SearchBox.svelte",
+      "line": 155,
+      "property": "border-radius",
+      "value": "var(--dn-radius-entry-card)",
+      "selector": ".dn-search-wrap :global(.dn-search)",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/TrustActions.svelte",
+      "line": 138,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-trust-card",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/TrustActions.svelte",
+      "line": 150,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-trust-card",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/TrustActions.svelte",
+      "line": 180,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-trust-card__action",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/TrustActions.svelte",
+      "line": 187,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-home-services .dn-trust-actions__panel",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/TrustActions.svelte",
+      "line": 195,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-home-services .dn-trust-actions__grid",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/TrustActions.svelte",
+      "line": 200,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-service-card",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/TrustActions.svelte",
+      "line": 222,
+      "property": "border-radius",
+      "value": "var(--dn-radius-discovery-card)",
+      "selector": ".dn-service-card",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/TrustActions.svelte",
+      "line": 231,
+      "property": "border-radius",
+      "value": "var(--dn-radius-discovery-card)",
+      "selector": ".dn-trust-card",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/TrustActions.svelte",
+      "line": 242,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-trust-card .dn-trust-card__action",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/TrustActions.svelte",
+      "line": 243,
+      "property": "border-radius",
+      "value": "inherit",
+      "selector": ".dn-trust-card .dn-trust-card__action::after",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/TrustActions.svelte",
+      "line": 260,
+      "property": "border-radius",
+      "value": "inherit",
+      "selector": ".dn-service-card h3 a::after",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/VehicleQuickSearch.svelte",
+      "line": 408,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-quick-search__dialog",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/VehicleQuickSearch.svelte",
+      "line": 451,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-quick-search__close",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/VehicleQuickSearch.svelte",
+      "line": 513,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-quick-search__dialog",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/VehicleQuickSearch.svelte",
+      "line": 525,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-quick-search__panel",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/VehicleQuickSearch.svelte",
+      "line": 546,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-quick-search__reset",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/VehicleQuickSearch.svelte",
+      "line": 558,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-quick-search__back",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 91,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-videos__panel",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 92,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-videos__heading",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 97,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-videos__channel",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 99,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-video-card",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 105,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-video-card__play-icon",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 107,
+      "property": "border-radius",
+      "value": "var(--dn-radius-badge)",
+      "selector": ".dn-video-card__duration",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 109,
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "selector": ".dn-video-card__close",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 128,
+      "property": "border-radius",
+      "value": "var(--dn-radius-mobile-card)",
+      "selector": ".dn-videos > .container",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 129,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-videos__panel",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 130,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-videos__heading",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 133,
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "selector": ".dn-videos__channel",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 138,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-video-card",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 139,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-videos__all-card",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 142,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-videos__all-arrow",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Footer.svelte",
+      "line": 109,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-footer-actions__grid > a",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/Footer.svelte",
+      "line": 115,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-footer-actions a:focus-visible",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/Footer.svelte",
+      "line": 119,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-footer-actions__panel",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Footer.svelte",
+      "line": 136,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg) var(--dn-radius-lg) 0 0",
+      "selector": ".dn-footer",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/Footer.svelte",
+      "line": 156,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-footer__call",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/Footer.svelte",
+      "line": 168,
+      "property": "border-radius",
+      "value": "var(--dn-radius-footer) var(--dn-radius-footer) 0 0",
+      "selector": ".dn-footer",
+      "contexts": [
+        "@media (min-width: 768px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Footer.svelte",
+      "line": 199,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0",
+      "selector": ".dn-footer",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Footer.svelte",
+      "line": 210,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": ".dn-footer__call",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 423,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-nav__list > li > a",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 426,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-header-actions :global(.dn-header-action)",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 431,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-mobile-toggle",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 435,
+      "property": "border-radius",
+      "value": "0 0 var(--dn-radius) var(--dn-radius)",
+      "selector": ".dn-header .dn-mega",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 447,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-mega__side-action > :global(.dn-mega__cta)",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 537,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-header",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 543,
+      "property": "border-radius",
+      "value": "var(--dn-radius) var(--dn-radius) 0 0",
+      "selector": ".dn-topbar",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 548,
+      "property": "border-radius",
+      "value": "0 0 var(--dn-radius) var(--dn-radius)",
+      "selector": ".dn-header__lower",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 552,
+      "property": "border-radius",
+      "value": "var(--dn-radius) var(--dn-radius) 0 0",
+      "selector": ".dn-header.dn-header--mega-open",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 557,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-header.dn-header--mega-open .dn-header__lower",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 561,
+      "property": "border-radius",
+      "value": "0 0 var(--dn-radius) var(--dn-radius)",
+      "selector": ".dn-mega",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 573,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-header-fixed--compact .dn-header",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 584,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-header--compact .dn-header__lower",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 615,
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "selector": ".dn-mobile-control",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 647,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-mobile-bottom-nav",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 672,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-mobile-bottom-nav a,\n    .dn-mobile-bottom-nav button",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 865,
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "selector": ".dn-mobile-control::before",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/HomeBannerPicker.svelte",
+      "line": 73,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-banner-picker-trigger",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/HomeBannerPicker.svelte",
+      "line": 74,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sheet)",
+      "selector": ".dn-banner-picker",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/HomeBannerPicker.svelte",
+      "line": 78,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-banner-picker__close",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/HomeBannerPicker.svelte",
+      "line": 80,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-banner-picker__options a",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/HomeBannerPicker.svelte",
+      "line": 82,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": ".dn-banner-picker__image",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/HomeBannerPicker.svelte",
+      "line": 88,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-banner-picker__mark",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/LocaleSettingsMenu.svelte",
+      "line": 53,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".locale-settings-menu > button",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/LocaleSettingsMenu.svelte",
+      "line": 56,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".locale-settings-menu__panel",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/MobileMenu.svelte",
+      "line": 78,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0",
+      "selector": ".dn-mobile-menu",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/MobileMenu.svelte",
+      "line": 81,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-mobile-menu::before",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/MobileMenu.svelte",
+      "line": 85,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-mobile-menu__close",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/MobileMenu.svelte",
+      "line": 93,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-mobile-menu__utilities :global(.cars-locale-trigger)",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/MobileMenu.svelte",
+      "line": 98,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": "nav a",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/MobileMenu.svelte",
+      "line": 108,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": ".dn-mobile-menu__social a",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/NavigationFeatureCard.svelte",
+      "line": 33,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-mega__feature",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/layout/NavigationFeatureCard.svelte",
+      "line": 52,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-mega__feature:hover .arrow",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopAppliedListingFilters.svelte",
+      "line": 66,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".filter-chip",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopAppliedListingFilters.svelte",
+      "line": 70,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": ".clear-filters, .review-clear",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopAppliedListingFilters.svelte",
+      "line": 73,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ":global(.dn-applied-review)",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopAppliedListingFilters.svelte",
+      "line": 76,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ":global(.dn-applied-popover)",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopFilterChoice.svelte",
+      "line": 22,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-desktop-choice",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopFilterChoice.svelte",
+      "line": 26,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-desktop-choice-mark",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopFilterChoice.svelte",
+      "line": 27,
+      "property": "border-radius",
+      "value": "var(--dn-radius-badge)",
+      "selector": ".dn-desktop-choice-mark[data-multiple='true']",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopFilterChoice.svelte",
+      "line": 30,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": "input:checked + [data-multiple='false']::after",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 205,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-desktop-filter-dialog",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 211,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": ".search-navigation button",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 217,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": ".navigation-group",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 218,
+      "property": "border-radius",
+      "value": "var(--dn-radius-xs)",
+      "selector": ".navigation-group button",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 221,
+      "property": "border-radius",
+      "value": "calc(var(--dn-radius-xs) - 1px)",
+      "selector": ".navigation-group small, .search-navigation small",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 222,
+      "property": "border-radius",
+      "value": "var(--dn-radius-compact)",
+      "selector": ".filter-pane",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 225,
+      "property": "border-radius",
+      "value": "var(--dn-radius-xs)",
+      "selector": ".pane-heading h3 small",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 227,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".section-clear",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 231,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": ".model-navigation button",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 233,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".keyword-search",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 236,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".keyword-search button",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 238,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".clear-all, .show-results",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 248,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".applied-filters button",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 251,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": ".range-error",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopModelGroups.svelte",
+      "line": 151,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".disclosure",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 275,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ":global(.dn-search-popover)",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 282,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ":global(.dn-search-popover) .dn-search-query",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 284,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ":global(.dn-search-popover) .dn-search-reset",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 286,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": ".dn-search-icon",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 292,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-search-query",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 296,
+      "property": "border-radius",
+      "value": "var(--dn-radius-xs)",
+      "selector": ".dn-search-query .dn-search-icon",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 303,
+      "property": "border-radius",
+      "value": "var(--dn-radius-xs)",
+      "selector": ".dn-search-empty button, .dn-search-reset",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 310,
+      "property": "border-radius",
+      "value": "var(--dn-radius-xs)",
+      "selector": "input[type='number']",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 317,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-search-presets button",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 324,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-search-apply",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 325,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ":global(.dn-search-popover) input[type='number']",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 344,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-search-presets button",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/FilterCloseButton.svelte",
+      "line": 13,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-picker-close",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/FilterPopoverHeader.svelte",
+      "line": 33,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".back",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingChoicePicker.svelte",
+      "line": 153,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ":global(.dn-identity-trigger)",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingChoicePicker.svelte",
+      "line": 159,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ":global(.dn-filter-picker)",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingChoicePicker.svelte",
+      "line": 160,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-picker-search",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 176,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".search-field",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 181,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".clear-search",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 186,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".desktop-choices .search-field",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 194,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".wide-panel .presets button",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 206,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".filter-panel .presets button",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 209,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": ".make-card",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 215,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": ".make-models",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 220,
+      "property": "border-radius",
+      "value": "var(--dn-overlay-row-radius)",
+      "selector": ".choice",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 233,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": "input[type=number]",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 243,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".presets button",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 247,
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "selector": ".choice input[type=radio]",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 248,
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "selector": ".choice input[type=radio]::before",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 181,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-listing-filter",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 216,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-listing-filter__keyword",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 254,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-listing-filter__toggle,\n  .dn-listing-filter__submit",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 267,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-listing-filter__count",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 299,
+      "property": "border-radius",
+      "value": "var(--dn-radius-compact)",
+      "selector": ".dn-listing-filter__search-field",
+      "contexts": [
+        "@media (min-width: 768px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 312,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-listing-filter__search-field .dn-listing-filter__keyword",
+      "contexts": [
+        "@media (min-width: 768px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 334,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-listing-filter__quick a",
+      "contexts": [
+        "@media (min-width: 768px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 347,
+      "property": "border-radius",
+      "value": "var(--dn-discovery-radius)",
+      "selector": ".dn-listing-filter",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 361,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-listing-filter",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 383,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-listing-filter__quick a,\n    .dn-listing-filter__quick button",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 394,
+      "property": "border-radius",
+      "value": "inherit",
+      "selector": ".dn-listing-filter__quick :is(a, button)::before",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 415,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-listing-filter__keyword",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 425,
+      "property": "border-radius",
+      "value": "inherit",
+      "selector": ".dn-listing-filter__keyword::before",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingResults.svelte",
+      "line": 87,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-listing-results__tools",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingResults.svelte",
+      "line": 91,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-listing-results__filters",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingResults.svelte",
+      "line": 94,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-listing-results__filter-count",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingResults.svelte",
+      "line": 131,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-listing-sort",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingResults.svelte",
+      "line": 156,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-listing-sort :global(.dn-identity-field.compact .dn-identity-trigger)",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingResults.svelte",
+      "line": 176,
+      "property": "border-radius",
+      "value": "var(--dn-radius-content-card)",
+      "selector": ".dn-listing-empty",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingResults.svelte",
+      "line": 218,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-listing-sort",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/MobileListingFilters.svelte",
+      "line": 174,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".clear-search",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/QuickFilterSheet.svelte",
+      "line": 116,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-quick-sheet",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/QuickFilterSheet.svelte",
+      "line": 124,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".close",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/QuickFilterSheet.svelte",
+      "line": 127,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".apply",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/QuickFilterSheet.svelte",
+      "line": 131,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-quick-sheet",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/QuickFilterSheet.svelte",
+      "line": 133,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0",
+      "selector": "form",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/QuickFilterSheet.svelte",
+      "line": 135,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".text-entry form",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "line": 140,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-discovery__search",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "line": 141,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-discovery__keyword",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "line": 146,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-discovery__submit",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "line": 151,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-discovery__facet-buttons button",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "line": 152,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-discovery__filters",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "line": 154,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-discovery__count",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "line": 156,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-discovery-sticky",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "line": 158,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-discovery-sticky__keyword",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "line": 161,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-discovery-sticky__filters",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "line": 163,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-discovery-sticky__count",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "line": 164,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-discovery-sticky__submit",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "line": 249,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": "input[type='search']",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "line": 285,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-listing-filter__dialog",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "line": 320,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-listing-filter__close--legacy",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "line": 363,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-listing-filter__dialog-search",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "line": 394,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-listing-filter__inline-submit",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "line": 459,
+      "property": "border-radius",
+      "value": "var(--dn-overlay-row-radius)",
+      "selector": ".dn-listing-filter__filter-group--equipment",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "line": 479,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-listing-filter__equipment-option",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "line": 517,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-listing-filter__dialog-submit",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/ui/CampaignVehiclePair.svelte",
+      "line": 71,
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "selector": ".dn-campaign-vehicles__arc",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/ui/HeroLocation.svelte",
+      "line": 36,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ":global(.dn-route-hero .dn-route-hero__copy) .dn-hero-location",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/ui/HeroLocation.svelte",
+      "line": 47,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ":global(.dn-route-hero .dn-route-hero__copy) .dn-hero-location--subtitle",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/ui/HeroLocation.svelte",
+      "line": 67,
+      "property": "border-radius",
+      "value": "var(--dn-radius-focus)",
+      "selector": "a:focus-visible",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/ui/entry/EntryCard.svelte",
+      "line": 10,
+      "property": "border-radius",
+      "value": "var(--dn-radius-entry-card)",
+      "selector": ".dn-entry-card",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleCard.svelte",
+      "line": 159,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-vehicle-card",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleCard.svelte",
+      "line": 167,
+      "property": "border-radius",
+      "value": "inherit",
+      "selector": ".dn-vehicle-card__link",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleCard.svelte",
+      "line": 186,
+      "property": "border-radius",
+      "value": "inherit",
+      "selector": ".dn-vehicle-card__link:focus-visible::after",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleCard.svelte",
+      "line": 217,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-vehicle-card__badge",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleCard.svelte",
+      "line": 315,
+      "property": "border-radius",
+      "value": "var(--dn-radius-media)",
+      "selector": ".dn-vehicle-card__spec",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleCard.svelte",
+      "line": 346,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-vehicle-card--listing",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleCard.svelte",
+      "line": 442,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-vehicle-card--listing",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleCard.svelte",
+      "line": 464,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": ".dn-vehicle-card--listing .dn-vehicle-card__visual",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleCard.svelte",
+      "line": 514,
+      "property": "border-radius",
+      "value": "var(--dn-radius-xs)",
+      "selector": ".dn-vehicle-card__fact",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleFinanceCalculator.svelte",
+      "line": 127,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": "input,\n  select",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleFinanceCalculator.svelte",
+      "line": 157,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": ".dn-finance-calculator__result div",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleFinanceCalculator.svelte",
+      "line": 189,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-finance-calculator > a",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleFinanceCalculator.svelte",
+      "line": 210,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ":global(.dn-detail-finance-dialog) :is(input, select)",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleFinanceCalculator.svelte",
+      "line": 212,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ":global(.dn-detail-finance-dialog) .dn-finance-calculator__result div",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/vehicles/VehiclePhoto.svelte",
+      "line": 100,
+      "property": "border-radius",
+      "value": "inherit",
+      "selector": ".dn-vehicle-photo",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/vehicles/VehiclePhoto.svelte",
+      "line": 125,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-vehicle-photo__hint",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/vehicles/VehiclePhoto.svelte",
+      "line": 144,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-vehicle-photo-dialog",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/components/vehicles/VehiclePhoto.svelte",
+      "line": 185,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": "button",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/locale/LocalePreferences.svelte",
+      "line": 127,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".cars-locale-dialog",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/locale/LocalePreferences.svelte",
+      "line": 128,
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "selector": ".cars-locale-close",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/locale/LocalePreferences.svelte",
+      "line": 129,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": ".cars-locale-dialog select",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/locale/LocalePreferences.svelte",
+      "line": 129,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": ".cars-locale-suggestion",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/locale/LocalePreferences.svelte",
+      "line": 130,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": ".cars-locale-actions button",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/locale/LocalePreferences.svelte",
+      "line": 131,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".cars-locale-dialog",
+      "contexts": [
+        "@media (max-width:390px)"
+      ]
+    },
+    {
+      "file": "src/lib/locale/LocalePreferences.svelte",
+      "line": 132,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg) var(--dn-radius-lg) 0 0",
+      "selector": ".cars-locale-dialog",
+      "contexts": [
+        "@media (max-width:639px)"
+      ]
+    },
+    {
+      "file": "src/lib/locale/LocalePreferences.svelte",
+      "line": 134,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0",
+      "selector": ".cars-locale-dialog",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/locale/LocalePreferences.svelte",
+      "line": 142,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".cars-locale-dialog select",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/locale/LocalePreferences.svelte",
+      "line": 144,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".cars-locale-suggestion",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/locale/LocalePreferences.svelte",
+      "line": 146,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".cars-locale-actions button",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/locale/LocaleTrigger.svelte",
+      "line": 19,
+      "property": "border-radius",
+      "value": "var(--dn-radius-locale-control)",
+      "selector": ".cars-locale-trigger",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 42,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-article-action",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 56,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-icon-button",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 69,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-app-shell :is(dialog, [role='dialog']) :is(.dn-overlay-footer, .dn-mobile-overlay-footer) :is(.dn-overlay-primary, .dn-overlay-secondary, .dn-mobile-overlay-action, .dn-mobile-overlay-clear)",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 74,
+      "property": "border-radius",
+      "value": "inherit",
+      "selector": ".dn-app-shell :is(dialog, [role='dialog']) :is(.dn-overlay-footer, .dn-mobile-overlay-footer) :is(.dn-overlay-primary, .dn-overlay-secondary, .dn-mobile-overlay-action, .dn-mobile-overlay-clear)::before",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 119,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-app-shell dialog :is(.dn-mobile-overlay-search, .dn-mobile-search-field)",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 126,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-app-shell dialog :is(input, select):not([type='checkbox'], [type='radio'], [type='range'], [type='file'], [type='hidden'])",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 127,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-app-shell dialog:is(.dn-service-editor, .dn-entry-editor, .dn-tradein-dialog, .dn-enquiry) textarea",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 131,
+      "property": "border-radius",
+      "value": "var(--dn-overlay-row-radius)",
+      "selector": ".dn-app-shell dialog :is(.dn-mobile-overlay-row, .dn-mobile-overlay-option, .dn-mobile-filter-choice)",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 135,
+      "property": "border-radius",
+      "value": "inherit",
+      "selector": ".dn-app-shell dialog :is(.dn-mobile-overlay-row, .dn-mobile-overlay-option)::before",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 146,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-app-shell dialog .dn-mobile-filter-check",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 160,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-app-shell dialog .dn-mobile-overlay-clear",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 162,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-app-shell dialog .dn-mobile-overlay-action",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 180,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-app-shell .dn-compact-control",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 181,
+      "property": "border-radius",
+      "value": "inherit",
+      "selector": ".dn-app-shell .dn-compact-control::before",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 191,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-segmented-control",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 192,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-segmented-control .dn-segmented-option",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 196,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-entry-field",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 197,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-entry-field--multiline",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 217,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-app-shell .dn-entry-field",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 237,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-app-shell .dn-entry-card .dn-entry-field--prominent",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/composition.css",
+      "line": 6,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-button",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/styles/composition.css",
+      "line": 22,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-route-hero",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/styles/composition.css",
+      "line": 84,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-app-shell .dn-social-profile-links .dn-social-profile-link",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/composition.css",
+      "line": 381,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-skip-link",
+      "contexts": []
+    },
+    {
+      "file": "src/lib/styles/composition.css",
+      "line": 406,
+      "property": "border-radius",
+      "value": "var(--dn-radius-content-card)",
+      "selector": ".dn-information-card",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/+error.svelte",
+      "line": 78,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-error__actions a",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/+page.svelte",
+      "line": 93,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-banner-preview",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/routes/+page.svelte",
+      "line": 105,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-banner-preview > button",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/routes/+page.svelte",
+      "line": 164,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-home-page :global(.dn-home-section-action)",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/routes/+page.svelte",
+      "line": 191,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg) var(--dn-radius-lg) 0 0",
+      "selector": ".dn-home-page :global(:is(.dn-home-section-heading--branded, .dn-home-section-heading--banner))",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/routes/+page.svelte",
+      "line": 287,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-home-page :global(.dn-home-section-panel)",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/routes/+page.svelte",
+      "line": 354,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-home-page :global(:is(.dn-vehicle-card, .dn-body-type, .dn-brand-card, .dn-discovery-toggle, .dn-editorial-item, .dn-browse-all))",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/+page.svelte",
+      "line": 376,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-home-page[data-mobile-banner='featured'] :global(.dn-inventory__heading)",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/about-us/about.css",
+      "line": 23,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-about-button",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/about-us/about.css",
+      "line": 49,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-about-process__panel",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/routes/about-us/about.css",
+      "line": 128,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-about-service-card",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/about-us/about.css",
+      "line": 172,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-about-service-card > a",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/about-us/about.css",
+      "line": 195,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sheet)",
+      "selector": ".dn-about-showroom__shell",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/about-us/about.css",
+      "line": 214,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-about-showroom__map .dn-showroom-map",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/about-us/about.css",
+      "line": 231,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-about-intro__services",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/about-us/about.css",
+      "line": 237,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-about-intro__socials a",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/about-us/about.css",
+      "line": 258,
+      "property": "border-radius",
+      "value": "var(--dn-radius-showroom)",
+      "selector": ".dn-about-showroom__shell",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/about-us/about.css",
+      "line": 277,
+      "property": "border-radius",
+      "value": "var(--dn-radius-service-card)",
+      "selector": ".dn-about-service-card",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/about-us/about.css",
+      "line": 282,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-about-service-card__icon",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/blog-detail/[id]/detail.css",
+      "line": 71,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-blog-detail__sheet",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/blog-detail/[id]/detail.css",
+      "line": 83,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-blog-detail__back",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/blog-detail/[id]/detail.css",
+      "line": 144,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-blog-detail__media",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/blog-detail/[id]/detail.css",
+      "line": 201,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-blog-detail__tags a,\n.dn-blog-widget--tags a",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/blog-detail/[id]/detail.css",
+      "line": 223,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-blog-widget",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/blog-detail/[id]/detail.css",
+      "line": 255,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-blog-widget--search input",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/blog-detail/[id]/detail.css",
+      "line": 277,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": ".dn-blog-widget--categories a",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/blog-detail/[id]/detail.css",
+      "line": 300,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-blog-widget__related-list > a",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/blog-detail/[id]/detail.css",
+      "line": 309,
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "selector": ".dn-blog-widget__related-list img",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/blog-detail/[id]/detail.css",
+      "line": 376,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-blog-widget__primary,\n.dn-blog-widget__secondary",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/blog/blog.css",
+      "line": 36,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-blog-search",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/blog/blog.css",
+      "line": 63,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-blog-search input[type='search']",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/blog/blog.css",
+      "line": 93,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-blog-categories a",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/blog/blog.css",
+      "line": 112,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-blog-toolbar",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/routes/blog/blog.css",
+      "line": 113,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-blog-search",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/routes/blog/blog.css",
+      "line": 115,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-blog-search input[type='search']",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/routes/blog/blog.css",
+      "line": 150,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-blog-empty",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/blog/blog.css",
+      "line": 169,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-blog-empty > a",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/blog/blog.css",
+      "line": 198,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-blog-search",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/blog/blog.css",
+      "line": 219,
+      "property": "border-radius",
+      "value": "inherit",
+      "selector": ".dn-blog-categories a::before",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 21,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-contact-button",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 87,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-contact-intent__main,\n.dn-contact-card",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 176,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-contact-social a",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 275,
+      "property": "border-radius",
+      "value": "var(--dn-radius-media)",
+      "selector": ".dn-contact-card__cue [role='tooltip']",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 321,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-contact-card__actions a",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 482,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-contact-intent__main",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 489,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-contact-card",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 566,
+      "property": "border-radius",
+      "value": "var(--dn-radius-entry-card)",
+      "selector": ".dn-contact-intent--workflow .dn-contact-intent__main",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 585,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-contact-section--workflow .dn-contact-intent--workflow .dn-enquiry-link-go",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 587,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-contact-intent--workflow .dn-enquiry-alternative",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 594,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-contact-intent--workflow .dn-contact-card",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 606,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-contact-intent--workflow .dn-contact-card__link",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 640,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-contact-section:not(.dn-contact-section--workflow) .dn-contact-intent__main",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 651,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-contact-hero .dn-contact-hero__action",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 673,
+      "property": "border-radius",
+      "value": "var(--dn-radius-content-card)",
+      "selector": ".dn-contact-section.dn-contact-section--general .dn-contact-intent__main.dn-information-card",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 691,
+      "property": "border-radius",
+      "value": "var(--dn-radius-content-card)",
+      "selector": ".dn-contact-section--general .dn-contact-card",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 720,
+      "property": "border-radius",
+      "value": "var(--dn-radius-content-card)",
+      "selector": ".dn-contact-section--general .dn-contact-location__card",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 725,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-contact-section--general .dn-contact-location__card .dn-showroom-map",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 744,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-contact-hero__desktop-actions .dn-contact-button",
+      "contexts": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 814,
+      "property": "border-radius",
+      "value": "var(--dn-radius-entry-card)",
+      "selector": ".dn-contact-section--import .dn-contact-intent--import .dn-contact-intent__main",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 42,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-detail-title-card > a",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 67,
+      "property": "border-radius",
+      "value": "var(--dn-radius-compact)",
+      "selector": ".dn-detail-gallery",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 104,
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "selector": ".dn-detail-gallery__count span::before",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 174,
+      "property": "border-radius",
+      "value": "calc(var(--dn-radius-xs) - 1px)",
+      "selector": ".dn-detail-tabs button:focus-visible",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 256,
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "selector": ".dn-detail-equipment li span",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 271,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".dn-detail-button",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 319,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-detail-card",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 423,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-detail-dealer-banner",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 449,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-detail-related",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 470,
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "selector": ".dn-detail-related-card",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 519,
+      "property": "border-radius",
+      "value": "inherit",
+      "selector": ".dn-detail-location-card .dn-showroom-map",
+      "contexts": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 547,
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "selector": ".dn-detail-finance-dialog",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 581,
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "selector": ".dn-detail-finance-sheet__header button",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 604,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-detail-media-card",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 609,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-detail-gallery",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 626,
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "selector": ".dn-detail-mobile-back,\n  .dn-detail-mobile-actions a,\n  .dn-detail-mobile-actions button",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 657,
+      "property": "border-radius",
+      "value": "var(--dn-radius-mobile-card) var(--dn-radius-mobile-card) 0 0",
+      "selector": ".dn-detail-title-card",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 672,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-detail-summary",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 692,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-detail-info-card",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 703,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-detail-tabs",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 712,
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "selector": ".dn-detail-tabs button",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 771,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".dn-detail-finance-card,\n  .dn-detail-dealer,\n  .dn-detail-location-card",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 798,
+      "property": "border-radius",
+      "value": "var(--dn-radius-mobile-card)",
+      "selector": ".dn-detail-finance-trigger",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 865,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-detail-related",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 903,
+      "property": "border-radius",
+      "value": "var(--dn-radius-mobile-card)",
+      "selector": ".dn-detail-related-card",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 930,
+      "property": "border-radius",
+      "value": "0",
+      "selector": ".dn-detail-finance-dialog",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/locale-settings/+page.svelte",
+      "line": 32,
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "selector": ".locale-settings",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/locale-settings/+page.svelte",
+      "line": 32,
+      "property": "border-radius",
+      "value": "var(--dn-radius-media)",
+      "selector": ".locale-settings select",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/locale-settings/+page.svelte",
+      "line": 32,
+      "property": "border-radius",
+      "value": "var(--dn-radius-media)",
+      "selector": ".locale-settings button",
+      "contexts": []
+    },
+    {
+      "file": "src/routes/locale-settings/+page.svelte",
+      "line": 34,
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "selector": ".locale-settings :is(select, button)",
+      "contexts": [
+        "@media (max-width: 767px)"
+      ]
+    }
+  ]
+}

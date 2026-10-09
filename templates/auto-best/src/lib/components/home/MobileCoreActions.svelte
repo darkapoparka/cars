@@ -81,7 +81,7 @@
       min-height: 148px;
       overflow: hidden;
       border: 1px solid var(--dn-line);
-      border-radius: var(--dn-radius);
+      border-radius: var(--dn-radius-card);
       background: var(--dn-mobile-surface);
       color: var(--dn-ink);
       box-shadow: var(--dn-card-shadow-subtle);
@@ -121,7 +121,7 @@
       display: flex;
       align-items: center;
       padding: 0;
-      border-radius: var(--dn-space-2);
+      border-radius: var(--dn-radius-media);
       background: var(--dn-surface-subtle);
       pointer-events: none;
     }

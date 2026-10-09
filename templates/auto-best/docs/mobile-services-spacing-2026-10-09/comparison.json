@@ -1,0 +1,357 @@
+{
+  "sourceUnchanged": true,
+  "results": [
+    {
+      "locale": "bg",
+      "width": 320,
+      "before": {
+        "card": {
+          "width": 296,
+          "height": 122.34375,
+          "radius": "12px"
+        },
+        "button": {
+          "width": 72.21875,
+          "height": 40,
+          "paintedHeight": 28,
+          "bottomGap": 23
+        },
+        "font": "600 16px / 19.2px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "dockRadius": "16px",
+        "image": {
+          "complete": true,
+          "naturalWidth": 800,
+          "src": "http://127.0.0.1:6461/assets/images/template/home-services-silver-v1.webp"
+        }
+      },
+      "preview": {
+        "card": {
+          "width": 296,
+          "height": 116,
+          "radius": "12px"
+        },
+        "button": {
+          "width": 72.21875,
+          "height": 40,
+          "paintedHeight": 28,
+          "bottomGap": 15.828125
+        },
+        "font": "600 16px / 19.2px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "dockRadius": "16px",
+        "image": {
+          "complete": true,
+          "naturalWidth": 800,
+          "src": "http://127.0.0.1:6461/assets/images/template/home-services-silver-v1.webp"
+        }
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "before": {
+        "card": {
+          "width": 366,
+          "height": 127.609375,
+          "radius": "12px"
+        },
+        "button": {
+          "width": 137.296875,
+          "height": 40,
+          "paintedHeight": 28,
+          "bottomGap": 23
+        },
+        "font": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "dockRadius": "16px",
+        "image": {
+          "complete": true,
+          "naturalWidth": 800,
+          "src": "http://127.0.0.1:6461/assets/images/template/home-services-silver-v1.webp"
+        }
+      },
+      "preview": {
+        "card": {
+          "width": 366,
+          "height": 119.609375,
+          "radius": "12px"
+        },
+        "button": {
+          "width": 137.296875,
+          "height": 40,
+          "paintedHeight": 28,
+          "bottomGap": 15
+        },
+        "font": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "dockRadius": "16px",
+        "image": {
+          "complete": true,
+          "naturalWidth": 800,
+          "src": "http://127.0.0.1:6461/assets/images/template/home-services-silver-v1.webp"
+        }
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 440,
+      "before": {
+        "card": {
+          "width": 416,
+          "height": 127.609375,
+          "radius": "12px"
+        },
+        "button": {
+          "width": 137.296875,
+          "height": 40,
+          "paintedHeight": 28,
+          "bottomGap": 23
+        },
+        "font": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "dockRadius": "16px",
+        "image": {
+          "complete": true,
+          "naturalWidth": 800,
+          "src": "http://127.0.0.1:6461/assets/images/template/home-services-silver-v1.webp"
+        }
+      },
+      "preview": {
+        "card": {
+          "width": 416,
+          "height": 119.609375,
+          "radius": "12px"
+        },
+        "button": {
+          "width": 137.296875,
+          "height": 40,
+          "paintedHeight": 28,
+          "bottomGap": 15
+        },
+        "font": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "dockRadius": "16px",
+        "image": {
+          "complete": true,
+          "naturalWidth": 800,
+          "src": "http://127.0.0.1:6461/assets/images/template/home-services-silver-v1.webp"
+        }
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 767,
+      "before": {
+        "card": {
+          "width": 743,
+          "height": 127.609375,
+          "radius": "12px"
+        },
+        "button": {
+          "width": 137.296875,
+          "height": 40,
+          "paintedHeight": 28,
+          "bottomGap": 23
+        },
+        "font": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "dockRadius": "16px",
+        "image": {
+          "complete": true,
+          "naturalWidth": 800,
+          "src": "http://127.0.0.1:6461/assets/images/template/home-services-silver-v1.webp"
+        }
+      },
+      "preview": {
+        "card": {
+          "width": 743,
+          "height": 119.609375,
+          "radius": "12px"
+        },
+        "button": {
+          "width": 137.296875,
+          "height": 40,
+          "paintedHeight": 28,
+          "bottomGap": 15
+        },
+        "font": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "dockRadius": "16px",
+        "image": {
+          "complete": true,
+          "naturalWidth": 800,
+          "src": "http://127.0.0.1:6461/assets/images/template/home-services-silver-v1.webp"
+        }
+      }
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "before": {
+        "card": {
+          "width": 296,
+          "height": 122.34375,
+          "radius": "12px"
+        },
+        "button": {
+          "width": 76.0625,
+          "height": 40,
+          "paintedHeight": 28,
+          "bottomGap": 23
+        },
+        "font": "600 16px / 19.2px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "dockRadius": "16px",
+        "image": {
+          "complete": true,
+          "naturalWidth": 800,
+          "src": "http://127.0.0.1:6461/assets/images/template/home-services-silver-v1.webp"
+        }
+      },
+      "preview": {
+        "card": {
+          "width": 296,
+          "height": 116,
+          "radius": "12px"
+        },
+        "button": {
+          "width": 76.0625,
+          "height": 40,
+          "paintedHeight": 28,
+          "bottomGap": 15.828125
+        },
+        "font": "600 16px / 19.2px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "dockRadius": "16px",
+        "image": {
+          "complete": true,
+          "naturalWidth": 800,
+          "src": "http://127.0.0.1:6461/assets/images/template/home-services-silver-v1.webp"
+        }
+      }
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "before": {
+        "card": {
+          "width": 366,
+          "height": 127.609375,
+          "radius": "12px"
+        },
+        "button": {
+          "width": 129.046875,
+          "height": 40,
+          "paintedHeight": 28,
+          "bottomGap": 23
+        },
+        "font": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "dockRadius": "16px",
+        "image": {
+          "complete": true,
+          "naturalWidth": 800,
+          "src": "http://127.0.0.1:6461/assets/images/template/home-services-silver-v1.webp"
+        }
+      },
+      "preview": {
+        "card": {
+          "width": 366,
+          "height": 119.609375,
+          "radius": "12px"
+        },
+        "button": {
+          "width": 129.046875,
+          "height": 40,
+          "paintedHeight": 28,
+          "bottomGap": 15
+        },
+        "font": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "dockRadius": "16px",
+        "image": {
+          "complete": true,
+          "naturalWidth": 800,
+          "src": "http://127.0.0.1:6461/assets/images/template/home-services-silver-v1.webp"
+        }
+      }
+    },
+    {
+      "locale": "en",
+      "width": 440,
+      "before": {
+        "card": {
+          "width": 416,
+          "height": 127.609375,
+          "radius": "12px"
+        },
+        "button": {
+          "width": 129.046875,
+          "height": 40,
+          "paintedHeight": 28,
+          "bottomGap": 23
+        },
+        "font": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "dockRadius": "16px",
+        "image": {
+          "complete": true,
+          "naturalWidth": 800,
+          "src": "http://127.0.0.1:6461/assets/images/template/home-services-silver-v1.webp"
+        }
+      },
+      "preview": {
+        "card": {
+          "width": 416,
+          "height": 119.609375,
+          "radius": "12px"
+        },
+        "button": {
+          "width": 129.046875,
+          "height": 40,
+          "paintedHeight": 28,
+          "bottomGap": 15
+        },
+        "font": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "dockRadius": "16px",
+        "image": {
+          "complete": true,
+          "naturalWidth": 800,
+          "src": "http://127.0.0.1:6461/assets/images/template/home-services-silver-v1.webp"
+        }
+      }
+    },
+    {
+      "locale": "en",
+      "width": 767,
+      "before": {
+        "card": {
+          "width": 743,
+          "height": 127.609375,
+          "radius": "12px"
+        },
+        "button": {
+          "width": 129.046875,
+          "height": 40,
+          "paintedHeight": 28,
+          "bottomGap": 23
+        },
+        "font": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "dockRadius": "16px",
+        "image": {
+          "complete": true,
+          "naturalWidth": 800,
+          "src": "http://127.0.0.1:6461/assets/images/template/home-services-silver-v1.webp"
+        }
+      },
+      "preview": {
+        "card": {
+          "width": 743,
+          "height": 119.609375,
+          "radius": "12px"
+        },
+        "button": {
+          "width": 129.046875,
+          "height": 40,
+          "paintedHeight": 28,
+          "bottomGap": 15
+        },
+        "font": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "dockRadius": "16px",
+        "image": {
+          "complete": true,
+          "naturalWidth": 800,
+          "src": "http://127.0.0.1:6461/assets/images/template/home-services-silver-v1.webp"
+        }
+      }
+    }
+  ]
+}

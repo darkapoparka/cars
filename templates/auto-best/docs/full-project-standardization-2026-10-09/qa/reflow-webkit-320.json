@@ -1,0 +1,1490 @@
+{
+  "generatedAt": "2026-10-09T17:11:09.032Z",
+  "base": "http://127.0.0.1:55690",
+  "results": [
+    {
+      "name": "en 320 / reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 3493
+    },
+    {
+      "name": "en 320 /cars reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 3980
+    },
+    {
+      "name": "en 320 /listing-detail-v1/1 reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 4842
+    },
+    {
+      "name": "en 320 /about-us reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 1838
+    },
+    {
+      "name": "en 320 /blog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 1759
+    },
+    {
+      "name": "en 320 /contact reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 4748
+    },
+    {
+      "name": "en 320 /contact?topic=trade-in reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 1983
+    },
+    {
+      "name": "en 320 /contact?topic=import reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 1834
+    },
+    {
+      "name": "en 320 /locale-settings reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 1679
+    },
+    {
+      "name": "en 320 filters dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 3943
+    },
+    {
+      "name": "en 320 home-make dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 2436
+    },
+    {
+      "name": "en 320 home-model dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 2996
+    },
+    {
+      "name": "en 320 home-price dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 3049
+    },
+    {
+      "name": "en 320 make dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 3449
+    },
+    {
+      "name": "en 320 listing-filters dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 4285
+    },
+    {
+      "name": "en 320 listing-transmission dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 3672
+    },
+    {
+      "name": "en 320 listing-price dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 2687
+    },
+    {
+      "name": "en 320 listing-equipment dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 2779
+    },
+    {
+      "name": "en 320 preferences dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 3993
+    },
+    {
+      "name": "en 320 import dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 2807
+    },
+    {
+      "name": "en 320 sell dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 3053
+    },
+    {
+      "name": "en 320 import-guide dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 3543
+    },
+    {
+      "name": "en 320 sell-guide dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 2663
+    },
+    {
+      "name": "bg 320 / reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 2397
+    },
+    {
+      "name": "bg 320 /cars reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 2713
+    },
+    {
+      "name": "bg 320 /listing-detail-v1/1 reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 3982
+    },
+    {
+      "name": "bg 320 /about-us reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 1432
+    },
+    {
+      "name": "bg 320 /blog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 1390
+    },
+    {
+      "name": "bg 320 /contact reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 3706
+    },
+    {
+      "name": "bg 320 /contact?topic=trade-in reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 1425
+    },
+    {
+      "name": "bg 320 /contact?topic=import reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 1770
+    },
+    {
+      "name": "bg 320 /locale-settings reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 1484
+    },
+    {
+      "name": "bg 320 filters dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 2610
+    },
+    {
+      "name": "bg 320 home-make dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 2868
+    },
+    {
+      "name": "bg 320 home-model dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 5534
+    },
+    {
+      "name": "bg 320 home-price dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 3139
+    },
+    {
+      "name": "bg 320 make dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 4027
+    },
+    {
+      "name": "bg 320 listing-filters dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 2963
+    },
+    {
+      "name": "bg 320 listing-transmission dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 2828
+    },
+    {
+      "name": "bg 320 listing-price dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 3267
+    },
+    {
+      "name": "bg 320 listing-equipment dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 5531
+    },
+    {
+      "name": "bg 320 preferences dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 2604
+    },
+    {
+      "name": "bg 320 import dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 1846
+    },
+    {
+      "name": "bg 320 sell dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 1972
+    },
+    {
+      "name": "bg 320 import-guide dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 1429
+    },
+    {
+      "name": "bg 320 sell-guide dialog reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "short": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 1646
+    }
+  ]
+}

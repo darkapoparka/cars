@@ -173,7 +173,7 @@
     align-content: center;
     gap: 10px;
     padding: 44px;
-    border-radius: 20px;
+    border-radius: var(--dn-radius-content-card);
     background: #fff;
     text-align: center;
   }

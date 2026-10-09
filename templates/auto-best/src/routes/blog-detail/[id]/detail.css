@@ -68,7 +68,7 @@
 .dn-blog-detail__sheet {
   min-width: 0;
   padding: 36px;
-  border-radius: 16px;
+  border-radius: var(--dn-radius-card);
   background: #fff;
 }
 
@@ -220,7 +220,7 @@
 .dn-blog-widget {
   margin: 0;
   padding: 24px;
-  border-radius: 16px;
+  border-radius: var(--dn-radius-card);
   background: #fff;
 }
 
@@ -274,7 +274,7 @@
   justify-content: space-between;
   gap: 16px;
   padding: 8px 12px;
-  border-radius: 10px;
+  border-radius: var(--dn-radius-sm);
   color: #454950;
   font-size: var(--dn-text-body);
   transition: background-color 160ms ease-out, color 160ms ease-out;
@@ -297,7 +297,7 @@
   align-items: center;
   gap: 14px;
   padding: 8px;
-  border-radius: 12px;
+  border-radius: var(--dn-radius-control);
   color: #24272c;
   transition: background-color 160ms ease-out;
 }
@@ -306,7 +306,7 @@
   width: 88px;
   height: 66px;
   display: block;
-  border-radius: 10px;
+  border-radius: var(--dn-radius-sm);
   object-fit: cover;
 }
 

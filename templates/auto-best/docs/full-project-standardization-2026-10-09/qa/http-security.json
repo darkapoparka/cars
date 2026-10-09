@@ -1,0 +1,51 @@
+{
+  "base": "http://127.0.0.1:63095",
+  "results": [
+    {
+      "name": "locale redirect",
+      "status": 307,
+      "pass": true
+    },
+    {
+      "name": "unsupported locale",
+      "status": 404,
+      "pass": true
+    },
+    {
+      "name": "localized document",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "name": "localized HEAD",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "name": "unknown route",
+      "status": 404,
+      "pass": true
+    },
+    {
+      "name": "read-only rejection",
+      "status": 403,
+      "pass": true
+    },
+    {
+      "name": "preferences method",
+      "status": 405,
+      "pass": true
+    },
+    {
+      "name": "preferences origin",
+      "status": 403,
+      "pass": true
+    },
+    {
+      "name": "legacy redirect",
+      "status": 308,
+      "pass": true
+    }
+  ],
+  "expectedCases": 9
+}

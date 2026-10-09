@@ -156,7 +156,7 @@
     overflow: hidden;
     flex-direction: column;
     border: 0;
-    border-radius: 16px;
+    border-radius: var(--dn-radius-card);
     background: #fff;
     box-shadow: var(--dn-vehicle-card-shadow, none);
     transition: background-color 160ms ease-out, box-shadow 180ms ease-out, transform 180ms ease-out;
@@ -312,7 +312,7 @@
     gap: var(--dn-vehicle-card-spec-icon-gap, 6px);
     padding: 0 var(--dn-vehicle-card-spec-padding, 10px);
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: var(--dn-radius-media);
     background: #f0f2f4;
     color: #5f6671;
     font-size: var(--dn-text-meta);
@@ -439,7 +439,7 @@
       display: flex;
       height: auto;
       min-height: 0;
-      border-radius: var(--dn-radius);
+      border-radius: var(--dn-radius-card);
       box-shadow: var(--dn-card-shadow);
     }
 

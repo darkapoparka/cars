@@ -1,0 +1,60 @@
+{
+  "base": "http://127.0.0.1:55690",
+  "engine": "webkit",
+  "results": [
+    {
+      "locale": "bg",
+      "width": 320,
+      "normalAppearanceUnchanged": true
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "normalAppearanceUnchanged": true
+    },
+    {
+      "locale": "bg",
+      "width": 768,
+      "normalAppearanceUnchanged": true
+    },
+    {
+      "locale": "bg",
+      "width": 992,
+      "normalAppearanceUnchanged": true
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "normalAppearanceUnchanged": true
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "normalAppearanceUnchanged": true
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "normalAppearanceUnchanged": true
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "normalAppearanceUnchanged": true
+    },
+    {
+      "locale": "en",
+      "width": 992,
+      "normalAppearanceUnchanged": true
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "normalAppearanceUnchanged": true
+    }
+  ],
+  "enlarged320": {
+    "fixed": true,
+    "originalWhitespaceReproducesClipping": true
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "generatedAt": "2026-10-09T17:13:25.157Z",
+  "base": "http://127.0.0.1:55690",
+  "results": [
+    {
+      "name": "en 320 / reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 1544
+    },
+    {
+      "name": "bg 320 / reflow",
+      "passed": true,
+      "evidence": {
+        "normal": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "spacing": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        },
+        "enlarged": {
+          "pageOverflow": false,
+          "dialogOverflow": false,
+          "clipped": [],
+          "cardHeightSpread": 0,
+          "headerFits": true
+        }
+      },
+      "durationMs": 1660
+    }
+  ]
+}

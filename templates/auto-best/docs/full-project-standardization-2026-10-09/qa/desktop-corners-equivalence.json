@@ -1,0 +1,542 @@
+[
+  {
+    "key": "bg-768-home",
+    "restoredDeclarations": 26,
+    "comparedElements": 422,
+    "equivalent": true
+  },
+  {
+    "key": "bg-768-/cars",
+    "restoredDeclarations": 14,
+    "comparedElements": 299,
+    "equivalent": true
+  },
+  {
+    "key": "bg-768-/listing-detail-v1/1",
+    "restoredDeclarations": 15,
+    "comparedElements": 179,
+    "equivalent": true
+  },
+  {
+    "key": "bg-768-/about-us",
+    "restoredDeclarations": 12,
+    "comparedElements": 133,
+    "equivalent": true
+  },
+  {
+    "key": "bg-768-/blog",
+    "restoredDeclarations": 10,
+    "comparedElements": 202,
+    "equivalent": true
+  },
+  {
+    "key": "bg-768-/blog-detail/1",
+    "restoredDeclarations": 6,
+    "comparedElements": 134,
+    "equivalent": true
+  },
+  {
+    "key": "bg-768-/contact",
+    "restoredDeclarations": 29,
+    "comparedElements": 122,
+    "equivalent": true
+  },
+  {
+    "key": "bg-768-/contact?topic=inspection",
+    "restoredDeclarations": 29,
+    "comparedElements": 135,
+    "equivalent": true
+  },
+  {
+    "key": "bg-768-/contact?topic=leasing",
+    "restoredDeclarations": 29,
+    "comparedElements": 134,
+    "equivalent": true
+  },
+  {
+    "key": "bg-768-/contact?topic=trade-in",
+    "restoredDeclarations": 29,
+    "comparedElements": 118,
+    "equivalent": true
+  },
+  {
+    "key": "bg-768-/contact?topic=import",
+    "restoredDeclarations": 29,
+    "comparedElements": 112,
+    "equivalent": true
+  },
+  {
+    "key": "bg-768-/locale-settings",
+    "restoredDeclarations": 8,
+    "comparedElements": 98,
+    "equivalent": true
+  },
+  {
+    "key": "bg-768-/cars?q=no-match-xyz",
+    "restoredDeclarations": 14,
+    "comparedElements": 150,
+    "equivalent": true
+  },
+  {
+    "key": "bg-768-/blog?q=no-match-xyz",
+    "restoredDeclarations": 10,
+    "comparedElements": 109,
+    "equivalent": true
+  },
+  {
+    "key": "bg-768-/missing-page",
+    "restoredDeclarations": 6,
+    "comparedElements": 91,
+    "equivalent": true
+  },
+  {
+    "key": "bg-992-home",
+    "restoredDeclarations": 26,
+    "comparedElements": 464,
+    "equivalent": true
+  },
+  {
+    "key": "bg-992-/cars",
+    "restoredDeclarations": 14,
+    "comparedElements": 300,
+    "equivalent": true
+  },
+  {
+    "key": "bg-992-/listing-detail-v1/1",
+    "restoredDeclarations": 15,
+    "comparedElements": 194,
+    "equivalent": true
+  },
+  {
+    "key": "bg-992-/about-us",
+    "restoredDeclarations": 12,
+    "comparedElements": 186,
+    "equivalent": true
+  },
+  {
+    "key": "bg-992-/blog",
+    "restoredDeclarations": 10,
+    "comparedElements": 255,
+    "equivalent": true
+  },
+  {
+    "key": "bg-992-/blog-detail/1",
+    "restoredDeclarations": 6,
+    "comparedElements": 133,
+    "equivalent": true
+  },
+  {
+    "key": "bg-992-/contact",
+    "restoredDeclarations": 29,
+    "comparedElements": 119,
+    "equivalent": true
+  },
+  {
+    "key": "bg-992-/contact?topic=inspection",
+    "restoredDeclarations": 29,
+    "comparedElements": 153,
+    "equivalent": true
+  },
+  {
+    "key": "bg-992-/contact?topic=leasing",
+    "restoredDeclarations": 29,
+    "comparedElements": 152,
+    "equivalent": true
+  },
+  {
+    "key": "bg-992-/contact?topic=trade-in",
+    "restoredDeclarations": 29,
+    "comparedElements": 131,
+    "equivalent": true
+  },
+  {
+    "key": "bg-992-/contact?topic=import",
+    "restoredDeclarations": 29,
+    "comparedElements": 125,
+    "equivalent": true
+  },
+  {
+    "key": "bg-992-/locale-settings",
+    "restoredDeclarations": 8,
+    "comparedElements": 107,
+    "equivalent": true
+  },
+  {
+    "key": "bg-992-/cars?q=no-match-xyz",
+    "restoredDeclarations": 14,
+    "comparedElements": 155,
+    "equivalent": true
+  },
+  {
+    "key": "bg-992-/blog?q=no-match-xyz",
+    "restoredDeclarations": 10,
+    "comparedElements": 126,
+    "equivalent": true
+  },
+  {
+    "key": "bg-992-/missing-page",
+    "restoredDeclarations": 6,
+    "comparedElements": 100,
+    "equivalent": true
+  },
+  {
+    "key": "bg-1440-home",
+    "restoredDeclarations": 26,
+    "comparedElements": 466,
+    "equivalent": true
+  },
+  {
+    "key": "bg-1440-/cars",
+    "restoredDeclarations": 14,
+    "comparedElements": 302,
+    "equivalent": true
+  },
+  {
+    "key": "bg-1440-/listing-detail-v1/1",
+    "restoredDeclarations": 15,
+    "comparedElements": 198,
+    "equivalent": true
+  },
+  {
+    "key": "bg-1440-/about-us",
+    "restoredDeclarations": 12,
+    "comparedElements": 188,
+    "equivalent": true
+  },
+  {
+    "key": "bg-1440-/blog",
+    "restoredDeclarations": 10,
+    "comparedElements": 257,
+    "equivalent": true
+  },
+  {
+    "key": "bg-1440-/blog-detail/1",
+    "restoredDeclarations": 6,
+    "comparedElements": 135,
+    "equivalent": true
+  },
+  {
+    "key": "bg-1440-/contact",
+    "restoredDeclarations": 29,
+    "comparedElements": 121,
+    "equivalent": true
+  },
+  {
+    "key": "bg-1440-/contact?topic=inspection",
+    "restoredDeclarations": 29,
+    "comparedElements": 155,
+    "equivalent": true
+  },
+  {
+    "key": "bg-1440-/contact?topic=leasing",
+    "restoredDeclarations": 29,
+    "comparedElements": 154,
+    "equivalent": true
+  },
+  {
+    "key": "bg-1440-/contact?topic=trade-in",
+    "restoredDeclarations": 29,
+    "comparedElements": 133,
+    "equivalent": true
+  },
+  {
+    "key": "bg-1440-/contact?topic=import",
+    "restoredDeclarations": 29,
+    "comparedElements": 127,
+    "equivalent": true
+  },
+  {
+    "key": "bg-1440-/locale-settings",
+    "restoredDeclarations": 8,
+    "comparedElements": 109,
+    "equivalent": true
+  },
+  {
+    "key": "bg-1440-/cars?q=no-match-xyz",
+    "restoredDeclarations": 14,
+    "comparedElements": 157,
+    "equivalent": true
+  },
+  {
+    "key": "bg-1440-/blog?q=no-match-xyz",
+    "restoredDeclarations": 10,
+    "comparedElements": 128,
+    "equivalent": true
+  },
+  {
+    "key": "bg-1440-/missing-page",
+    "restoredDeclarations": 6,
+    "comparedElements": 102,
+    "equivalent": true
+  },
+  {
+    "key": "en-768-home",
+    "restoredDeclarations": 26,
+    "comparedElements": 422,
+    "equivalent": true
+  },
+  {
+    "key": "en-768-/cars",
+    "restoredDeclarations": 14,
+    "comparedElements": 299,
+    "equivalent": true
+  },
+  {
+    "key": "en-768-/listing-detail-v1/1",
+    "restoredDeclarations": 15,
+    "comparedElements": 179,
+    "equivalent": true
+  },
+  {
+    "key": "en-768-/about-us",
+    "restoredDeclarations": 12,
+    "comparedElements": 133,
+    "equivalent": true
+  },
+  {
+    "key": "en-768-/blog",
+    "restoredDeclarations": 10,
+    "comparedElements": 202,
+    "equivalent": true
+  },
+  {
+    "key": "en-768-/blog-detail/1",
+    "restoredDeclarations": 6,
+    "comparedElements": 134,
+    "equivalent": true
+  },
+  {
+    "key": "en-768-/contact",
+    "restoredDeclarations": 29,
+    "comparedElements": 122,
+    "equivalent": true
+  },
+  {
+    "key": "en-768-/contact?topic=inspection",
+    "restoredDeclarations": 29,
+    "comparedElements": 135,
+    "equivalent": true
+  },
+  {
+    "key": "en-768-/contact?topic=leasing",
+    "restoredDeclarations": 29,
+    "comparedElements": 134,
+    "equivalent": true
+  },
+  {
+    "key": "en-768-/contact?topic=trade-in",
+    "restoredDeclarations": 29,
+    "comparedElements": 118,
+    "equivalent": true
+  },
+  {
+    "key": "en-768-/contact?topic=import",
+    "restoredDeclarations": 29,
+    "comparedElements": 112,
+    "equivalent": true
+  },
+  {
+    "key": "en-768-/locale-settings",
+    "restoredDeclarations": 8,
+    "comparedElements": 98,
+    "equivalent": true
+  },
+  {
+    "key": "en-768-/cars?q=no-match-xyz",
+    "restoredDeclarations": 14,
+    "comparedElements": 150,
+    "equivalent": true
+  },
+  {
+    "key": "en-768-/blog?q=no-match-xyz",
+    "restoredDeclarations": 10,
+    "comparedElements": 109,
+    "equivalent": true
+  },
+  {
+    "key": "en-768-/missing-page",
+    "restoredDeclarations": 6,
+    "comparedElements": 91,
+    "equivalent": true
+  },
+  {
+    "key": "en-992-home",
+    "restoredDeclarations": 26,
+    "comparedElements": 464,
+    "equivalent": true
+  },
+  {
+    "key": "en-992-/cars",
+    "restoredDeclarations": 14,
+    "comparedElements": 300,
+    "equivalent": true
+  },
+  {
+    "key": "en-992-/listing-detail-v1/1",
+    "restoredDeclarations": 15,
+    "comparedElements": 194,
+    "equivalent": true
+  },
+  {
+    "key": "en-992-/about-us",
+    "restoredDeclarations": 12,
+    "comparedElements": 186,
+    "equivalent": true
+  },
+  {
+    "key": "en-992-/blog",
+    "restoredDeclarations": 10,
+    "comparedElements": 255,
+    "equivalent": true
+  },
+  {
+    "key": "en-992-/blog-detail/1",
+    "restoredDeclarations": 6,
+    "comparedElements": 133,
+    "equivalent": true
+  },
+  {
+    "key": "en-992-/contact",
+    "restoredDeclarations": 29,
+    "comparedElements": 119,
+    "equivalent": true
+  },
+  {
+    "key": "en-992-/contact?topic=inspection",
+    "restoredDeclarations": 29,
+    "comparedElements": 153,
+    "equivalent": true
+  },
+  {
+    "key": "en-992-/contact?topic=leasing",
+    "restoredDeclarations": 29,
+    "comparedElements": 152,
+    "equivalent": true
+  },
+  {
+    "key": "en-992-/contact?topic=trade-in",
+    "restoredDeclarations": 29,
+    "comparedElements": 131,
+    "equivalent": true
+  },
+  {
+    "key": "en-992-/contact?topic=import",
+    "restoredDeclarations": 29,
+    "comparedElements": 125,
+    "equivalent": true
+  },
+  {
+    "key": "en-992-/locale-settings",
+    "restoredDeclarations": 8,
+    "comparedElements": 107,
+    "equivalent": true
+  },
+  {
+    "key": "en-992-/cars?q=no-match-xyz",
+    "restoredDeclarations": 14,
+    "comparedElements": 155,
+    "equivalent": true
+  },
+  {
+    "key": "en-992-/blog?q=no-match-xyz",
+    "restoredDeclarations": 10,
+    "comparedElements": 126,
+    "equivalent": true
+  },
+  {
+    "key": "en-992-/missing-page",
+    "restoredDeclarations": 6,
+    "comparedElements": 100,
+    "equivalent": true
+  },
+  {
+    "key": "en-1440-home",
+    "restoredDeclarations": 26,
+    "comparedElements": 466,
+    "equivalent": true
+  },
+  {
+    "key": "en-1440-/cars",
+    "restoredDeclarations": 14,
+    "comparedElements": 302,
+    "equivalent": true
+  },
+  {
+    "key": "en-1440-/listing-detail-v1/1",
+    "restoredDeclarations": 15,
+    "comparedElements": 198,
+    "equivalent": true
+  },
+  {
+    "key": "en-1440-/about-us",
+    "restoredDeclarations": 12,
+    "comparedElements": 188,
+    "equivalent": true
+  },
+  {
+    "key": "en-1440-/blog",
+    "restoredDeclarations": 10,
+    "comparedElements": 257,
+    "equivalent": true
+  },
+  {
+    "key": "en-1440-/blog-detail/1",
+    "restoredDeclarations": 6,
+    "comparedElements": 135,
+    "equivalent": true
+  },
+  {
+    "key": "en-1440-/contact",
+    "restoredDeclarations": 29,
+    "comparedElements": 121,
+    "equivalent": true
+  },
+  {
+    "key": "en-1440-/contact?topic=inspection",
+    "restoredDeclarations": 29,
+    "comparedElements": 155,
+    "equivalent": true
+  },
+  {
+    "key": "en-1440-/contact?topic=leasing",
+    "restoredDeclarations": 29,
+    "comparedElements": 154,
+    "equivalent": true
+  },
+  {
+    "key": "en-1440-/contact?topic=trade-in",
+    "restoredDeclarations": 29,
+    "comparedElements": 133,
+    "equivalent": true
+  },
+  {
+    "key": "en-1440-/contact?topic=import",
+    "restoredDeclarations": 29,
+    "comparedElements": 127,
+    "equivalent": true
+  },
+  {
+    "key": "en-1440-/locale-settings",
+    "restoredDeclarations": 8,
+    "comparedElements": 109,
+    "equivalent": true
+  },
+  {
+    "key": "en-1440-/cars?q=no-match-xyz",
+    "restoredDeclarations": 14,
+    "comparedElements": 157,
+    "equivalent": true
+  },
+  {
+    "key": "en-1440-/blog?q=no-match-xyz",
+    "restoredDeclarations": 10,
+    "comparedElements": 128,
+    "equivalent": true
+  },
+  {
+    "key": "en-1440-/missing-page",
+    "restoredDeclarations": 6,
+    "comparedElements": 102,
+    "equivalent": true
+  }
+]

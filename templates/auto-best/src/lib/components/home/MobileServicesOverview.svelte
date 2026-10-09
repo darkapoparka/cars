@@ -14,8 +14,7 @@
       <strong id="home-services-title">{i18n.t('home.services.title')}</strong>
       <small>{i18n.t('home.services.detail')}</small>
       <span class="dn-mobile-services__cta dn-compact-control dn-quick-pill">
-        <span class="dn-mobile-services__cta-full">{i18n.t('home.services.action')}</span>
-        <span class="dn-mobile-services__cta-short">{i18n.t('home.services.actionShort')}</span>
+        <span>{i18n.t('home.services.action')}</span>
         <MobileActionIcon name="arrow" size={15} />
       </span>
     </span>
@@ -42,7 +41,7 @@
       align-items: center;
       min-height: var(--dn-discovery-tile-height);
       border: 1px solid var(--dn-line);
-      border-radius: var(--dn-radius);
+      border-radius: var(--dn-radius-card);
       background: var(--dn-mobile-surface);
       box-shadow: var(--dn-card-shadow-subtle);
       color: var(--dn-ink);
@@ -55,7 +54,7 @@
       flex-direction: column;
       align-items: flex-start;
       gap: var(--dn-space-1);
-      padding: var(--dn-space-4) 0 var(--dn-space-4) var(--dn-space-3);
+      padding: var(--dn-space-4) 0 var(--dn-space-2) var(--dn-space-3);
       overflow-wrap: anywhere;
     }
 
@@ -83,16 +82,14 @@
       --dn-compact-control-font: var(--dn-weight-medium) var(--dn-text-meta) / var(--dn-leading-control) var(--dn-font);
       max-width: 100%;
       margin-top: var(--dn-space-1);
-      white-space: normal;
+      white-space: nowrap;
       text-align: left;
     }
 
     .dn-mobile-services__cta > span {
       min-width: 0;
-    }
-
-    .dn-mobile-services__cta-short {
-      display: none;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .dn-mobile-services__card:is(:hover, :focus-visible) .dn-mobile-services__cta {
@@ -118,14 +115,6 @@
 
       .dn-mobile-services__copy small {
         font-size: var(--dn-text-caption);
-      }
-
-      .dn-mobile-services__cta-full {
-        display: none;
-      }
-
-      .dn-mobile-services__cta-short {
-        display: inline;
       }
 
       .dn-mobile-services__art {

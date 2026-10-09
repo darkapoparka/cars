@@ -1,0 +1,54 @@
+{
+  "base": "http://127.0.0.1:49726",
+  "generatedAt": "2026-10-09T17:24:17.027Z",
+  "results": [
+    {
+      "width": 320,
+      "alias": "16px",
+      "radius": "0px",
+      "gutter": "auto",
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 390,
+      "alias": "16px",
+      "radius": "0px",
+      "gutter": "auto",
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 767,
+      "alias": "16px",
+      "radius": "0px",
+      "gutter": "auto",
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 768,
+      "alias": "16px",
+      "radius": "16px",
+      "gutter": "stable",
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 992,
+      "alias": "16px",
+      "radius": "16px",
+      "gutter": "stable",
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "alias": "16px",
+      "radius": "16px",
+      "gutter": "stable",
+      "overflow": false,
+      "passed": true
+    }
+  ]
+}

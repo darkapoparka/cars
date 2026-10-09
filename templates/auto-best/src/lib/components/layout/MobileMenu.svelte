@@ -78,14 +78,14 @@
   @media (max-width: 767px) {
     .dn-mobile-menu { --dn-primary-action-surface: var(--dn-ink); --dn-primary-action-surface-hover: var(--dn-ink-hover); }
   }
-  .dn-mobile-menu { position: fixed; inset: auto 0 0; width: 100%; max-width: none; max-height: calc(100dvh - 68px); margin: 0; padding: var(--dn-space-4) var(--dn-space-5) calc(var(--dn-space-5) + env(safe-area-inset-bottom)); overflow-y: auto; border: 0; border-radius: var(--dn-space-6) var(--dn-space-6) 0 0; background: var(--dn-white); color: var(--dn-ink); }
+  .dn-mobile-menu { position: fixed; inset: auto 0 0; width: 100%; max-width: none; max-height: calc(100dvh - 68px); margin: 0; padding: var(--dn-space-4) var(--dn-space-5) calc(var(--dn-space-5) + env(safe-area-inset-bottom)); overflow-y: auto; border: 0; border-radius: var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0; background: var(--dn-white); color: var(--dn-ink); }
   .dn-mobile-menu[open] { display: flex; flex-direction: column; }
   .dn-mobile-menu::backdrop { background: rgb(10 13 18 / .54); }
   .dn-mobile-menu::before { content: ''; width: 36px; height: var(--dn-space-1); flex-shrink: 0; margin: 0 auto var(--dn-space-3); border-radius: var(--dn-pill); background: var(--dn-line); }
   .dn-mobile-menu__header { position: relative; display: flex; flex-shrink: 0; align-items: center; justify-content: center; min-height: var(--dn-control-hit-height); }
   .dn-mobile-menu__brand { display: inline-flex; align-items: center; min-height: var(--dn-control-hit-height); }
   .dn-mobile-menu__brand img { display: block; width: 160px; height: 44px; object-fit: contain; }
-  .dn-mobile-menu__close { position: absolute; right: 0; border: 0; border-radius: var(--dn-pill); background: var(--dn-home-panel); color: var(--dn-ink); }
+  .dn-mobile-menu__close { position: absolute; right: 0; border: 0; border-radius: var(--dn-pill); background: transparent; color: var(--dn-ink); }
   .dn-mobile-menu__contact { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-3); margin-top: var(--dn-space-5); }
   .dn-mobile-menu__contact a { min-width: 0; padding: 0 var(--dn-space-2); text-align: center; white-space: normal; }
   .dn-mobile-menu__contact a span { min-width: 0; overflow-wrap: anywhere; }

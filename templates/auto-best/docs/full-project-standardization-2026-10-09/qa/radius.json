@@ -1,0 +1,4362 @@
+{
+  "generatedAt": "2026-10-09T17:12:02.624Z",
+  "base": "http://127.0.0.1:55690",
+  "results": [
+    {
+      "name": "bg 320 / shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card dn-search svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--blue svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--red svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--ice svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--dark svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-body-type svelte-djj1lf",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-body-type svelte-djj1lf",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-body-type svelte-djj1lf",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-discovery-toggle svelte-1255eud",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-brand-card svelte-iiazeg",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-brand-card svelte-iiazeg",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-brand-card svelte-iiazeg dn-brand-card--mobile-only",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-discovery-toggle svelte-1255eud",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-editorial-item svelte-11ysa33",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-editorial-item svelte-11ysa33",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-editorial-item svelte-11ysa33",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-services__card svelte-1iut3h9",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 847
+    },
+    {
+      "name": "bg 320 /cars shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 636
+    },
+    {
+      "name": "bg 320 /cars?q=no-match-xyz shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-listing-empty svelte-1nlv8ul",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 624
+    },
+    {
+      "name": "bg 320 /about-us shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-showroom-map svelte-2f5kl4",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 587
+    },
+    {
+      "name": "bg 320 /blog shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card dn-blog-search-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 558
+    },
+    {
+      "name": "bg 320 /blog-detail/1 shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-blog-detail__sheet",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-widget dn-blog-widget--related",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-widget dn-blog-widget--contact",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 570
+    },
+    {
+      "name": "bg 320 /contact shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-contact-intent__main svelte-omk1oe dn-information-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-contact-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-contact-location__card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 598
+    },
+    {
+      "name": "bg 320 /contact?topic=trade-in shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-tradein-info-drawer__peek svelte-ecogp8",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 576
+    },
+    {
+      "name": "bg 320 /contact?topic=import shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-import-info-drawer__peek svelte-w9or0i",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 549
+    },
+    {
+      "name": "bg 320 /listing-detail-v1/1 shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-detail-card dn-detail-title-card",
+            "radius": [
+              "16px",
+              "16px",
+              "0px",
+              "0px"
+            ]
+          },
+          {
+            "class": "dn-detail-finance-trigger",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-card dn-detail-location-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-related-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-related-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-related-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 621
+    },
+    {
+      "name": "bg 390 / shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card dn-search svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--blue svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--red svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--ice svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--dark svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-body-type svelte-djj1lf",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-body-type svelte-djj1lf",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-body-type svelte-djj1lf",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-discovery-toggle svelte-1255eud",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-brand-card svelte-iiazeg",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-brand-card svelte-iiazeg",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-brand-card svelte-iiazeg dn-brand-card--mobile-only",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-discovery-toggle svelte-1255eud",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-editorial-item svelte-11ysa33",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-editorial-item svelte-11ysa33",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-editorial-item svelte-11ysa33",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-services__card svelte-1iut3h9",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 728
+    },
+    {
+      "name": "bg 390 /cars shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 748
+    },
+    {
+      "name": "bg 390 /cars?q=no-match-xyz shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-listing-empty svelte-1nlv8ul",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 697
+    },
+    {
+      "name": "bg 390 /about-us shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-showroom-map svelte-2f5kl4",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 644
+    },
+    {
+      "name": "bg 390 /blog shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card dn-blog-search-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 576
+    },
+    {
+      "name": "bg 390 /blog-detail/1 shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-blog-detail__sheet",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-widget dn-blog-widget--related",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-widget dn-blog-widget--contact",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 551
+    },
+    {
+      "name": "bg 390 /contact shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-contact-intent__main svelte-omk1oe dn-information-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-contact-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-contact-location__card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 521
+    },
+    {
+      "name": "bg 390 /contact?topic=trade-in shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-tradein-info-drawer__peek svelte-ecogp8",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 620
+    },
+    {
+      "name": "bg 390 /contact?topic=import shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-import-info-drawer__peek svelte-w9or0i",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 612
+    },
+    {
+      "name": "bg 390 /listing-detail-v1/1 shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-detail-card dn-detail-title-card",
+            "radius": [
+              "16px",
+              "16px",
+              "0px",
+              "0px"
+            ]
+          },
+          {
+            "class": "dn-detail-finance-trigger",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-card dn-detail-location-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-related-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-related-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-related-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 761
+    },
+    {
+      "name": "bg 767 / shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card dn-search svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--blue svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--red svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--ice svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--dark svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-body-type svelte-djj1lf",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-body-type svelte-djj1lf",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-body-type svelte-djj1lf",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-discovery-toggle svelte-1255eud",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-brand-card svelte-iiazeg",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-brand-card svelte-iiazeg",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-brand-card svelte-iiazeg dn-brand-card--mobile-only",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-discovery-toggle svelte-1255eud",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-editorial-item svelte-11ysa33",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-editorial-item svelte-11ysa33",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-editorial-item svelte-11ysa33",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-services__card svelte-1iut3h9",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 830
+    },
+    {
+      "name": "bg 767 /cars shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 737
+    },
+    {
+      "name": "bg 767 /cars?q=no-match-xyz shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-listing-empty svelte-1nlv8ul",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 685
+    },
+    {
+      "name": "bg 767 /about-us shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-showroom-map svelte-2f5kl4",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 623
+    },
+    {
+      "name": "bg 767 /blog shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card dn-blog-search-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 589
+    },
+    {
+      "name": "bg 767 /blog-detail/1 shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-blog-detail__sheet",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-widget dn-blog-widget--related",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-widget dn-blog-widget--contact",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 803
+    },
+    {
+      "name": "bg 767 /contact shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-contact-intent__main svelte-omk1oe dn-information-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-contact-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-contact-location__card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 525
+    },
+    {
+      "name": "bg 767 /contact?topic=trade-in shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-tradein-info-drawer__peek svelte-ecogp8",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 613
+    },
+    {
+      "name": "bg 767 /contact?topic=import shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-import-info-drawer__peek svelte-w9or0i",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 581
+    },
+    {
+      "name": "bg 767 /listing-detail-v1/1 shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-detail-card dn-detail-title-card",
+            "radius": [
+              "16px",
+              "16px",
+              "0px",
+              "0px"
+            ]
+          },
+          {
+            "class": "dn-detail-finance-trigger",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-card dn-detail-location-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-related-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-related-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-related-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 526
+    },
+    {
+      "name": "en 320 / shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card dn-search svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--blue svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--red svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--ice svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--dark svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-body-type svelte-djj1lf",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-body-type svelte-djj1lf",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-body-type svelte-djj1lf",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-discovery-toggle svelte-1255eud",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-brand-card svelte-iiazeg",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-brand-card svelte-iiazeg",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-brand-card svelte-iiazeg dn-brand-card--mobile-only",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-discovery-toggle svelte-1255eud",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-editorial-item svelte-11ysa33",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-editorial-item svelte-11ysa33",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-editorial-item svelte-11ysa33",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-services__card svelte-1iut3h9",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 714
+    },
+    {
+      "name": "en 320 /cars shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 559
+    },
+    {
+      "name": "en 320 /cars?q=no-match-xyz shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-listing-empty svelte-1nlv8ul",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 556
+    },
+    {
+      "name": "en 320 /about-us shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-showroom-map svelte-2f5kl4",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 531
+    },
+    {
+      "name": "en 320 /blog shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card dn-blog-search-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 497
+    },
+    {
+      "name": "en 320 /blog-detail/1 shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-blog-detail__sheet",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-widget dn-blog-widget--related",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-widget dn-blog-widget--contact",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 504
+    },
+    {
+      "name": "en 320 /contact shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-contact-intent__main svelte-omk1oe dn-information-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-contact-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-contact-location__card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 467
+    },
+    {
+      "name": "en 320 /contact?topic=trade-in shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-tradein-info-drawer__peek svelte-ecogp8",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 543
+    },
+    {
+      "name": "en 320 /contact?topic=import shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-import-info-drawer__peek svelte-w9or0i",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 571
+    },
+    {
+      "name": "en 320 /listing-detail-v1/1 shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-detail-card dn-detail-title-card",
+            "radius": [
+              "16px",
+              "16px",
+              "0px",
+              "0px"
+            ]
+          },
+          {
+            "class": "dn-detail-finance-trigger",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-card dn-detail-location-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-related-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-related-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-related-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 538
+    },
+    {
+      "name": "en 390 / shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card dn-search svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--blue svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--red svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--ice svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--dark svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-body-type svelte-djj1lf",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-body-type svelte-djj1lf",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-body-type svelte-djj1lf",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-discovery-toggle svelte-1255eud",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-brand-card svelte-iiazeg",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-brand-card svelte-iiazeg",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-brand-card svelte-iiazeg dn-brand-card--mobile-only",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-discovery-toggle svelte-1255eud",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-editorial-item svelte-11ysa33",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-editorial-item svelte-11ysa33",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-editorial-item svelte-11ysa33",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-services__card svelte-1iut3h9",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 726
+    },
+    {
+      "name": "en 390 /cars shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 585
+    },
+    {
+      "name": "en 390 /cars?q=no-match-xyz shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-listing-empty svelte-1nlv8ul",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 445
+    },
+    {
+      "name": "en 390 /about-us shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-showroom-map svelte-2f5kl4",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 432
+    },
+    {
+      "name": "en 390 /blog shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card dn-blog-search-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 438
+    },
+    {
+      "name": "en 390 /blog-detail/1 shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-blog-detail__sheet",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-widget dn-blog-widget--related",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-widget dn-blog-widget--contact",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 323
+    },
+    {
+      "name": "en 390 /contact shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-contact-intent__main svelte-omk1oe dn-information-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-contact-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-contact-location__card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 421
+    },
+    {
+      "name": "en 390 /contact?topic=trade-in shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-tradein-info-drawer__peek svelte-ecogp8",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 435
+    },
+    {
+      "name": "en 390 /contact?topic=import shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-import-info-drawer__peek svelte-w9or0i",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 360
+    },
+    {
+      "name": "en 390 /listing-detail-v1/1 shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-detail-card dn-detail-title-card",
+            "radius": [
+              "16px",
+              "16px",
+              "0px",
+              "0px"
+            ]
+          },
+          {
+            "class": "dn-detail-finance-trigger",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-card dn-detail-location-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-related-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-related-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-related-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 443
+    },
+    {
+      "name": "en 767 / shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card dn-search svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--blue svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--red svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--ice svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-core-card dn-mobile-core-card--dark svelte-1u03d60",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-body-type svelte-djj1lf",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-body-type svelte-djj1lf",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-body-type svelte-djj1lf",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-discovery-toggle svelte-1255eud",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-brand-card svelte-iiazeg",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-brand-card svelte-iiazeg",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-brand-card svelte-iiazeg dn-brand-card--mobile-only",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-discovery-toggle svelte-1255eud",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-editorial-item svelte-11ysa33",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-editorial-item svelte-11ysa33",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-editorial-item svelte-11ysa33",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-mobile-services__card svelte-1iut3h9",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 708
+    },
+    {
+      "name": "en 767 /cars shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-vehicle-card svelte-1y8iuzo dn-vehicle-card--listing",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 444
+    },
+    {
+      "name": "en 767 /cars?q=no-match-xyz shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-listing-empty svelte-1nlv8ul",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 461
+    },
+    {
+      "name": "en 767 /about-us shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-about-service-card dn-about-service-card--illustrated svelte-4qfkei",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-showroom-map svelte-2f5kl4",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 457
+    },
+    {
+      "name": "en 767 /blog shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card dn-blog-search-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-card svelte-1tfm56k",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 613
+    },
+    {
+      "name": "en 767 /blog-detail/1 shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-blog-detail__sheet",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-widget dn-blog-widget--related",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-blog-widget dn-blog-widget--contact",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 437
+    },
+    {
+      "name": "en 767 /contact shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-contact-intent__main svelte-omk1oe dn-information-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-contact-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-contact-location__card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 437
+    },
+    {
+      "name": "en 767 /contact?topic=trade-in shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-tradein-info-drawer__peek svelte-ecogp8",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 480
+    },
+    {
+      "name": "en 767 /contact?topic=import shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-entry-card svelte-15co9xc",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-import-info-drawer__peek svelte-w9or0i",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 503
+    },
+    {
+      "name": "en 767 /listing-detail-v1/1 shared card corners",
+      "passed": true,
+      "evidence": {
+        "cards": [
+          {
+            "class": "dn-detail-card dn-detail-title-card",
+            "radius": [
+              "16px",
+              "16px",
+              "0px",
+              "0px"
+            ]
+          },
+          {
+            "class": "dn-detail-finance-trigger",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-card dn-detail-location-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-related-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-related-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          },
+          {
+            "class": "dn-detail-related-card",
+            "radius": [
+              "16px",
+              "16px",
+              "16px",
+              "16px"
+            ]
+          }
+        ],
+        "roles": {
+          "control": "12px",
+          "sheet": "24px",
+          "card": "16px",
+          "gutter": "auto"
+        }
+      },
+      "durationMs": 467
+    }
+  ]
+}

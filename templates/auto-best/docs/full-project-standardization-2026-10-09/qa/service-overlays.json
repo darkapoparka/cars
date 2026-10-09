@@ -1,0 +1,126 @@
+{
+  "generatedAt": "2026-10-09T17:11:09.007Z",
+  "base": "http://127.0.0.1:55690",
+  "results": [
+    {
+      "name": "bg 320 sell keyboard actions",
+      "passed": true,
+      "durationMs": 2380
+    },
+    {
+      "name": "bg 320 listing keyboard actions",
+      "passed": true,
+      "durationMs": 1545
+    },
+    {
+      "name": "bg 320 criteria keyboard actions",
+      "passed": true,
+      "durationMs": 1865
+    },
+    {
+      "name": "bg 390 sell keyboard actions",
+      "passed": true,
+      "durationMs": 1805
+    },
+    {
+      "name": "bg 390 listing keyboard actions",
+      "passed": true,
+      "durationMs": 1375
+    },
+    {
+      "name": "bg 390 criteria keyboard actions",
+      "passed": true,
+      "durationMs": 1468
+    },
+    {
+      "name": "bg 430 sell keyboard actions",
+      "passed": true,
+      "durationMs": 1466
+    },
+    {
+      "name": "bg 430 listing keyboard actions",
+      "passed": true,
+      "durationMs": 1482
+    },
+    {
+      "name": "bg 430 criteria keyboard actions",
+      "passed": true,
+      "durationMs": 1441
+    },
+    {
+      "name": "en 320 sell keyboard actions",
+      "passed": true,
+      "durationMs": 1457
+    },
+    {
+      "name": "en 320 listing keyboard actions",
+      "passed": true,
+      "durationMs": 1500
+    },
+    {
+      "name": "en 320 criteria keyboard actions",
+      "passed": true,
+      "durationMs": 1463
+    },
+    {
+      "name": "en 390 sell keyboard actions",
+      "passed": true,
+      "durationMs": 1421
+    },
+    {
+      "name": "en 390 listing keyboard actions",
+      "passed": true,
+      "durationMs": 1400
+    },
+    {
+      "name": "en 390 criteria keyboard actions",
+      "passed": true,
+      "durationMs": 1447
+    },
+    {
+      "name": "en 430 sell keyboard actions",
+      "passed": true,
+      "durationMs": 1429
+    },
+    {
+      "name": "en 430 listing keyboard actions",
+      "passed": true,
+      "durationMs": 1932
+    },
+    {
+      "name": "en 430 criteria keyboard actions",
+      "passed": true,
+      "durationMs": 1681
+    },
+    {
+      "name": "bg 320 service entry overlays",
+      "passed": true,
+      "durationMs": 5484
+    },
+    {
+      "name": "bg 390 service entry overlays",
+      "passed": true,
+      "durationMs": 5911
+    },
+    {
+      "name": "bg 430 service entry overlays",
+      "passed": true,
+      "durationMs": 6493
+    },
+    {
+      "name": "en 320 service entry overlays",
+      "passed": true,
+      "durationMs": 5761
+    },
+    {
+      "name": "en 390 service entry overlays",
+      "passed": true,
+      "durationMs": 6345
+    },
+    {
+      "name": "en 430 service entry overlays",
+      "passed": true,
+      "durationMs": 6215
+    }
+  ]
+}

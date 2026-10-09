@@ -70,8 +70,8 @@
 </dialog>
 
 <style>
-  .dn-banner-picker-trigger { display: flex; align-items: center; justify-content: center; min-height: var(--dn-control-hit-height); margin: var(--dn-space-3) auto 0; padding: var(--dn-space-2) var(--dn-space-6); border: 1px solid var(--dn-line); border-radius: var(--dn-pill); background: var(--dn-home-panel); color: var(--dn-ink); font: var(--dn-control-font); cursor: pointer; }
-  .dn-banner-picker { position: fixed; inset: 0; width: min(440px, calc(100% - var(--dn-space-8))); max-height: calc(100dvh - var(--dn-space-8)); margin: auto; padding: var(--dn-space-4); overflow-y: auto; border: 0; border-radius: var(--dn-space-6); background: var(--dn-surface-raised); color: var(--dn-ink); }
+  .dn-banner-picker-trigger { display: flex; align-items: center; justify-content: center; width: 100%; min-width: 0; min-height: var(--dn-control-hit-height); margin: 0; padding: var(--dn-space-2) var(--dn-space-3); border: 1px solid var(--dn-line); border-radius: var(--dn-pill); background: var(--dn-white); color: var(--dn-ink); font: var(--dn-overlay-action-font); white-space: nowrap; cursor: pointer; }
+  .dn-banner-picker { position: fixed; inset: 0; width: min(440px, calc(100% - var(--dn-space-8))); max-height: calc(100dvh - var(--dn-space-8)); margin: auto; padding: var(--dn-space-4); overflow-y: auto; border: 0; border-radius: var(--dn-radius-sheet); background: var(--dn-surface-raised); color: var(--dn-ink); }
   .dn-banner-picker::backdrop { background: rgb(10 13 18 / .54); }
   .dn-banner-picker__header { display: flex; align-items: center; justify-content: space-between; gap: var(--dn-space-3); margin-bottom: var(--dn-space-3); }
   .dn-banner-picker__header h2 { margin: 0; font-size: var(--dn-text-card); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); }
@@ -88,5 +88,6 @@
   .dn-banner-picker__mark { flex: 0 0 16px; height: 16px; border: 1px solid var(--dn-line-strong); border-radius: var(--dn-pill); }
   .dn-banner-picker__options a[aria-current='true'] .dn-banner-picker__mark { border: 4px solid var(--dn-surface-raised); background: var(--dn-ink); outline: 1px solid var(--dn-ink); }
   :is(a, button):focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
+  @media (max-width: 767px) { .dn-banner-picker__options a { border-radius: var(--dn-radius-card); } }
   @media (hover: hover) { .dn-banner-picker-trigger:hover, .dn-banner-picker__options a:hover { background: var(--dn-home-panel); } }
 </style>

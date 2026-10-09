@@ -41,14 +41,14 @@
       margin: 0;
       padding: var(--dn-discovery-tile-padding);
       border: 0;
-      border-radius: 14px;
+      border-radius: var(--dn-radius-mobile-card);
       background: var(--dn-mobile-surface);
       color: var(--dn-ink);
       text-align: center;
       cursor: pointer;
     }
-    .dn-discovery-all__glyph { display: grid; width: 54px; height: 54px; place-self: center; grid-template-columns: repeat(2, 1fr); gap: 7px; padding: 9px; border-radius: 16px; background: var(--dn-home-panel); }
-    .dn-discovery-all__glyph span { border-radius: 50%; background: #cdd2d8; }
+    .dn-discovery-all__glyph { display: grid; width: 54px; height: 54px; place-self: center; grid-template-columns: repeat(2, 1fr); gap: 7px; padding: 9px; border-radius: var(--dn-radius); background: var(--dn-home-panel); }
+    .dn-discovery-all__glyph span { border-radius: var(--dn-radius-circle); background: #cdd2d8; }
     strong { align-self: end; font: var(--dn-discovery-label-font); }
     .dn-discovery-toggle:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 3px; }
   }

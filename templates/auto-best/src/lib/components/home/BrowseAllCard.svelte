@@ -20,7 +20,7 @@
 <style>
   .dn-browse-all { display: none; }
   @media (max-width: 767px) {
-    .dn-browse-all { position: relative; display: flex; min-width: 0; min-height: 0; height: 100%; flex-direction: column; align-items: center; justify-content: center; gap: var(--dn-space-2); padding: var(--dn-space-4); border: 1px solid var(--dn-line); border-radius: var(--dn-radius); background: var(--dn-white); color: var(--dn-ink); text-align: center; scroll-snap-align: start; }
+    .dn-browse-all { position: relative; display: flex; min-width: 0; min-height: 0; height: 100%; flex-direction: column; align-items: center; justify-content: center; gap: var(--dn-space-2); padding: var(--dn-space-4); border: 1px solid var(--dn-line); border-radius: var(--dn-radius-card); background: var(--dn-white); color: var(--dn-ink); text-align: center; scroll-snap-align: start; }
     .mark { display: grid; flex-shrink: 0; width: var(--dn-control-height-compact); height: var(--dn-control-height-compact); place-items: center; border-radius: var(--dn-pill); background: var(--dn-surface-panel); color: var(--dn-ink); }
     strong { max-width: 100%; overflow-wrap: anywhere; font: var(--dn-mobile-card-title-font); }
     .detail { color: #626a75; font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }

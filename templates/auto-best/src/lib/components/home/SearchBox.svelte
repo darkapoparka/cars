@@ -153,7 +153,7 @@
 
     .dn-search-wrap :global(.dn-search) {
       padding: var(--dn-space-5);
-      border-radius: var(--dn-space-6);
+      border-radius: var(--dn-radius-entry-card);
       box-shadow: var(--dn-card-shadow-subtle);
     }
 

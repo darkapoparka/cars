@@ -351,7 +351,7 @@
 
     .dn-home-page :global(:is(.dn-vehicle-card, .dn-body-type, .dn-brand-card, .dn-discovery-toggle, .dn-editorial-item, .dn-browse-all)) {
       border: 1px solid var(--dn-line);
-      border-radius: var(--dn-space-6);
+      border-radius: var(--dn-radius-card);
       box-shadow: var(--dn-card-shadow-subtle);
     }
 
@@ -373,7 +373,7 @@
       justify-content: center;
       gap: var(--dn-space-half);
       padding: var(--dn-space-2) var(--dn-space-3);
-      border-radius: var(--dn-radius);
+      border-radius: var(--dn-radius-card);
       background-color: var(--dn-theme-hero-surface-deep);
       background-image: var(--dn-home-mobile-section-background);
       background-size: cover;

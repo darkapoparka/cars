@@ -432,7 +432,7 @@
   .dn-mobile-toggle > :global(svg) { display: block; margin: auto; }
 
   .dn-mega-backdrop { position: fixed; inset: 0; z-index: 999; border: 0; padding: 0; background: var(--dn-menu-backdrop); cursor: default; }
-  .dn-header .dn-mega { position: absolute; top: 100%; left: 0; right: 0; z-index: 30; display: grid; min-height: var(--dn-menu-panel-height); grid-template-columns: minmax(0,2.25fr) minmax(300px,.95fr); gap: 32px; padding: 16px max(32px, calc((100% - var(--dn-menu-content)) / 2)) 24px; border-radius: 0 0 16px 16px; background: var(--dn-white); }
+  .dn-header .dn-mega { position: absolute; top: 100%; left: 0; right: 0; z-index: 30; display: grid; min-height: var(--dn-menu-panel-height); grid-template-columns: minmax(0,2.25fr) minmax(300px,.95fr); gap: 32px; padding: 16px max(32px, calc((100% - var(--dn-menu-content)) / 2)) 24px; border-radius: 0 0 var(--dn-radius) var(--dn-radius); background: var(--dn-white); }
   .dn-mega__feature-panel { min-width: 0; container-type: inline-size; }
   .dn-mega__features { display: grid; height: 100%; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
   .dn-mega__side { min-width: 0; display: flex; flex-direction: column; container-type: inline-size; }
@@ -534,22 +534,22 @@
       left: 10px;
       width: auto;
       margin: 0;
-      border-radius: 16px;
+      border-radius: var(--dn-radius);
       background: #fff;
       box-shadow: 0 4px 18px rgba(0, 0, 0, 0.078);
     }
 
     .dn-topbar {
-      border-radius: 16px 16px 0 0;
+      border-radius: var(--dn-radius) var(--dn-radius) 0 0;
     }
 
     .dn-header__lower {
       border-bottom: 0;
-      border-radius: 0 0 16px 16px;
+      border-radius: 0 0 var(--dn-radius) var(--dn-radius);
     }
 
     .dn-header.dn-header--mega-open {
-      border-radius: 16px 16px 0 0;
+      border-radius: var(--dn-radius) var(--dn-radius) 0 0;
       box-shadow: none;
     }
 
@@ -558,7 +558,7 @@
     }
 
     .dn-mega {
-      border-radius: 0 0 16px 16px;
+      border-radius: 0 0 var(--dn-radius) var(--dn-radius);
     }
 
     .dn-header-fixed--compact {
@@ -612,7 +612,7 @@
       width: 44px;
       height: 44px;
       place-items: center;
-      border-radius: 50%;
+      border-radius: var(--dn-radius-circle);
       background: #f0f2f4;
       color: #202329;
     }
@@ -862,7 +862,7 @@
       z-index: -1;
       inset: var(--dn-compact-control-inset);
       border: 1px solid color-mix(in srgb, currentColor 24%, transparent);
-      border-radius: 50%;
+      border-radius: var(--dn-radius-circle);
       background: color-mix(in srgb, currentColor 6%, transparent);
       content: '';
       pointer-events: none;

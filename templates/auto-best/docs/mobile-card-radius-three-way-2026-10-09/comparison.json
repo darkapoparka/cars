@@ -1,0 +1,1087 @@
+{
+  "base": "http://127.0.0.1:49797",
+  "generatedAt": "2026-10-09T18:41:10.011Z",
+  "mode": "12px saved default; temporary 14px and 16px mobile token overrides",
+  "results": [
+    {
+      "name": "home",
+      "route": "",
+      "width": 390,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "home",
+      "route": "",
+      "width": 390,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "home",
+      "route": "",
+      "width": 390,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "cars",
+      "route": "/cars",
+      "width": 390,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "cars",
+      "route": "/cars",
+      "width": 390,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "cars",
+      "route": "/cars",
+      "width": 390,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "about",
+      "route": "/about-us",
+      "width": 390,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "about",
+      "route": "/about-us",
+      "width": 390,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "about",
+      "route": "/about-us",
+      "width": 390,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "blog",
+      "route": "/blog",
+      "width": 390,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "blog",
+      "route": "/blog",
+      "width": 390,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "blog",
+      "route": "/blog",
+      "width": 390,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "article",
+      "route": "/blog-detail/1",
+      "width": 390,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "article",
+      "route": "/blog-detail/1",
+      "width": 390,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "article",
+      "route": "/blog-detail/1",
+      "width": 390,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "contact",
+      "route": "/contact",
+      "width": 390,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "contact",
+      "route": "/contact",
+      "width": 390,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "contact",
+      "route": "/contact",
+      "width": 390,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "sell",
+      "route": "/contact?topic=trade-in",
+      "width": 390,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "sell",
+      "route": "/contact?topic=trade-in",
+      "width": 390,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "sell",
+      "route": "/contact?topic=trade-in",
+      "width": 390,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "import",
+      "route": "/contact?topic=import",
+      "width": 390,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "import",
+      "route": "/contact?topic=import",
+      "width": 390,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "import",
+      "route": "/contact?topic=import",
+      "width": 390,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "vehicle",
+      "route": "/listing-detail-v1/1",
+      "width": 390,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "vehicle",
+      "route": "/listing-detail-v1/1",
+      "width": 390,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "vehicle",
+      "route": "/listing-detail-v1/1",
+      "width": 390,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "preferences",
+      "route": "/locale-settings",
+      "width": 390,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "preferences",
+      "route": "/locale-settings",
+      "width": 390,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "preferences",
+      "route": "/locale-settings",
+      "width": 390,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "home",
+      "route": "",
+      "width": 320,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "home",
+      "route": "",
+      "width": 320,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "home",
+      "route": "",
+      "width": 320,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "cars",
+      "route": "/cars",
+      "width": 320,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "cars",
+      "route": "/cars",
+      "width": 320,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "cars",
+      "route": "/cars",
+      "width": 320,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "about",
+      "route": "/about-us",
+      "width": 320,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "about",
+      "route": "/about-us",
+      "width": 320,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "about",
+      "route": "/about-us",
+      "width": 320,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "blog",
+      "route": "/blog",
+      "width": 320,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "blog",
+      "route": "/blog",
+      "width": 320,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "blog",
+      "route": "/blog",
+      "width": 320,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "article",
+      "route": "/blog-detail/1",
+      "width": 320,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "article",
+      "route": "/blog-detail/1",
+      "width": 320,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "article",
+      "route": "/blog-detail/1",
+      "width": 320,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "contact",
+      "route": "/contact",
+      "width": 320,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "contact",
+      "route": "/contact",
+      "width": 320,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "contact",
+      "route": "/contact",
+      "width": 320,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "sell",
+      "route": "/contact?topic=trade-in",
+      "width": 320,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "sell",
+      "route": "/contact?topic=trade-in",
+      "width": 320,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "sell",
+      "route": "/contact?topic=trade-in",
+      "width": 320,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "import",
+      "route": "/contact?topic=import",
+      "width": 320,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "import",
+      "route": "/contact?topic=import",
+      "width": 320,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "import",
+      "route": "/contact?topic=import",
+      "width": 320,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "vehicle",
+      "route": "/listing-detail-v1/1",
+      "width": 320,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "vehicle",
+      "route": "/listing-detail-v1/1",
+      "width": 320,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "vehicle",
+      "route": "/listing-detail-v1/1",
+      "width": 320,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "preferences",
+      "route": "/locale-settings",
+      "width": 320,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "preferences",
+      "route": "/locale-settings",
+      "width": 320,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "preferences",
+      "route": "/locale-settings",
+      "width": 320,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": false
+    },
+    {
+      "name": "home",
+      "route": "",
+      "width": 768,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "home",
+      "route": "",
+      "width": 768,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "home",
+      "route": "",
+      "width": 768,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "cars",
+      "route": "/cars",
+      "width": 768,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "cars",
+      "route": "/cars",
+      "width": 768,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "cars",
+      "route": "/cars",
+      "width": 768,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "about",
+      "route": "/about-us",
+      "width": 768,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "about",
+      "route": "/about-us",
+      "width": 768,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "about",
+      "route": "/about-us",
+      "width": 768,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "blog",
+      "route": "/blog",
+      "width": 768,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "blog",
+      "route": "/blog",
+      "width": 768,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "blog",
+      "route": "/blog",
+      "width": 768,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "article",
+      "route": "/blog-detail/1",
+      "width": 768,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "article",
+      "route": "/blog-detail/1",
+      "width": 768,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "article",
+      "route": "/blog-detail/1",
+      "width": 768,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "contact",
+      "route": "/contact",
+      "width": 768,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "contact",
+      "route": "/contact",
+      "width": 768,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "contact",
+      "route": "/contact",
+      "width": 768,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "sell",
+      "route": "/contact?topic=trade-in",
+      "width": 768,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "sell",
+      "route": "/contact?topic=trade-in",
+      "width": 768,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "sell",
+      "route": "/contact?topic=trade-in",
+      "width": 768,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "import",
+      "route": "/contact?topic=import",
+      "width": 768,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "import",
+      "route": "/contact?topic=import",
+      "width": 768,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "import",
+      "route": "/contact?topic=import",
+      "width": 768,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "vehicle",
+      "route": "/listing-detail-v1/1",
+      "width": 768,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "vehicle",
+      "route": "/listing-detail-v1/1",
+      "width": 768,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "vehicle",
+      "route": "/listing-detail-v1/1",
+      "width": 768,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "preferences",
+      "route": "/locale-settings",
+      "width": 768,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "preferences",
+      "route": "/locale-settings",
+      "width": 768,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "preferences",
+      "route": "/locale-settings",
+      "width": 768,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "home",
+      "route": "",
+      "width": 1440,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "home",
+      "route": "",
+      "width": 1440,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "home",
+      "route": "",
+      "width": 1440,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "cars",
+      "route": "/cars",
+      "width": 1440,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "cars",
+      "route": "/cars",
+      "width": 1440,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "cars",
+      "route": "/cars",
+      "width": 1440,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "about",
+      "route": "/about-us",
+      "width": 1440,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "about",
+      "route": "/about-us",
+      "width": 1440,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "about",
+      "route": "/about-us",
+      "width": 1440,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "blog",
+      "route": "/blog",
+      "width": 1440,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "blog",
+      "route": "/blog",
+      "width": 1440,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "blog",
+      "route": "/blog",
+      "width": 1440,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "article",
+      "route": "/blog-detail/1",
+      "width": 1440,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "article",
+      "route": "/blog-detail/1",
+      "width": 1440,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "article",
+      "route": "/blog-detail/1",
+      "width": 1440,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "contact",
+      "route": "/contact",
+      "width": 1440,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "contact",
+      "route": "/contact",
+      "width": 1440,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "contact",
+      "route": "/contact",
+      "width": 1440,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "sell",
+      "route": "/contact?topic=trade-in",
+      "width": 1440,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "sell",
+      "route": "/contact?topic=trade-in",
+      "width": 1440,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "sell",
+      "route": "/contact?topic=trade-in",
+      "width": 1440,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "import",
+      "route": "/contact?topic=import",
+      "width": 1440,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "import",
+      "route": "/contact?topic=import",
+      "width": 1440,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "import",
+      "route": "/contact?topic=import",
+      "width": 1440,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "vehicle",
+      "route": "/listing-detail-v1/1",
+      "width": 1440,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "vehicle",
+      "route": "/listing-detail-v1/1",
+      "width": 1440,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "vehicle",
+      "route": "/listing-detail-v1/1",
+      "width": 1440,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "preferences",
+      "route": "/locale-settings",
+      "width": 1440,
+      "radius": 12,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "preferences",
+      "route": "/locale-settings",
+      "width": 1440,
+      "radius": 14,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    },
+    {
+      "name": "preferences",
+      "route": "/locale-settings",
+      "width": 1440,
+      "radius": 16,
+      "savedMobileDefault": "12px",
+      "layoutAndTypeUnchanged": true,
+      "desktopCornersUnchanged": true
+    }
+  ]
+}

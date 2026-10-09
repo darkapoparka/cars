@@ -53,6 +53,6 @@
   .locale-settings-menu > button { display: inline-grid; width: 44px; height: 44px; place-items: center; border: 1px solid transparent; border-radius: var(--dn-radius-control); background: transparent; color: inherit; cursor: pointer; }
   .locale-settings-menu > button:hover { background: var(--dn-surface); }
   .locale-settings-menu > button:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
-  .locale-settings-menu__panel { position: absolute; top: calc(100% + 8px); right: 0; z-index: 1000; width: min(18rem, calc(100vw - 2rem)); padding: 4px; border: 1px solid #d7dee6; border-radius: 12px; background: #fff; color: #172432; box-shadow: 0 16px 40px rgb(23 36 50 / 18%); }
+  .locale-settings-menu__panel { position: absolute; top: calc(100% + 8px); right: 0; z-index: 1000; width: min(18rem, calc(100vw - 2rem)); padding: 4px; border: 1px solid #d7dee6; border-radius: var(--dn-radius-control); background: #fff; color: #172432; box-shadow: 0 16px 40px rgb(23 36 50 / 18%); }
   .locale-settings-menu__panel :global(.cars-locale-trigger) { width: 100%; justify-content: flex-start; border-color: transparent; white-space: normal; }
 </style>

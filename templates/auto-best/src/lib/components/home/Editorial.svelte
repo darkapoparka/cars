@@ -87,7 +87,7 @@
     overflow: hidden;
     margin: 0 12px;
     padding: 82px 0 0;
-    border-radius: 24px;
+    border-radius: var(--dn-radius-sheet);
     background-image: var(--dn-editorial-banner);
     background-position: center 64%;
     background-repeat: no-repeat;
@@ -164,7 +164,7 @@
     min-width: 0;
     overflow: hidden;
     border: 0;
-    border-radius: 16px;
+    border-radius: var(--dn-radius-card);
     background: #fff;
     box-shadow: 0 2px 8px rgba(18, 25, 38, 0.08);
     transform: none;
@@ -204,7 +204,7 @@
     width: 100%;
     height: 220px;
     overflow: hidden;
-    border-radius: 15px 15px 0 0;
+    border-radius: var(--dn-radius-card-inset) var(--dn-radius-card-inset) 0 0;
     background: #eceff2;
   }
 
@@ -314,7 +314,7 @@
       min-height: 0;
       margin: 0 8px;
       padding: 72px 20px 160px;
-      border-radius: 20px;
+      border-radius: var(--dn-radius-lg);
       background-attachment: scroll;
     }
 
@@ -411,7 +411,7 @@
     .dn-editorial-item {
       scroll-snap-align: start;
       padding: calc(var(--dn-space-1) + var(--dn-space-half));
-      border-radius: 16px;
+      border-radius: var(--dn-radius-card);
       background: var(--dn-mobile-surface);
       box-shadow: none;
     }
@@ -420,14 +420,15 @@
       flex-shrink: 0;
       height: auto;
       aspect-ratio: 16 / 9;
-      border-radius: var(--dn-radius);
+      border-radius: var(--dn-radius-card);
     }
 
     .dn-editorial-item__content {
       display: flex;
       flex: 1;
       flex-direction: column;
-      padding: var(--dn-space-3) var(--dn-space-3) var(--dn-space-4);
+      /* The outer frame and action paint inset already supply 12px below the button. */
+      padding: var(--dn-space-3) var(--dn-space-3) var(--dn-space-half);
     }
 
     .dn-editorial-item__link {
@@ -497,7 +498,7 @@
       min-height: 0;
       margin-inline: auto;
       padding: 0;
-      border-radius: 20px 20px 0 0;
+      border-radius: var(--dn-radius-lg) var(--dn-radius-lg) 0 0;
       background: var(--dn-home-panel);
       background-attachment: scroll;
     }

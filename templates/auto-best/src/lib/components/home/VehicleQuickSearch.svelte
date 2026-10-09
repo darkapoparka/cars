@@ -392,7 +392,7 @@
     padding: 0;
     overflow: hidden;
     border: 0;
-    border-radius: 20px;
+    border-radius: var(--dn-radius-lg);
     background: #f6f7f8;
     color: #191c22;
     box-shadow: 0 32px 100px rgba(0, 0, 0, 0.32);
