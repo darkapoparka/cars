@@ -361,12 +361,12 @@
 
 		<div class="daynight-mobile-pdp__topbar" data-mobile-pdp-topbar>
 			<button type="button" aria-label={detail.mobileDrawer.backLabel} onclick={goBack}>
-				<ArrowLeft size={22} strokeWidth={2.35} aria-hidden="true" />
+				<ArrowLeft size={20} strokeWidth={2} aria-hidden="true" />
 			</button>
 
 			<div class="daynight-mobile-pdp__topbar-actions">
 				<a href={resolve(compareHref)} aria-label={detail.copy.compare}>
-					<GitCompare size={20} strokeWidth={2.35} aria-hidden="true" />
+					<GitCompare size={18} strokeWidth={2} aria-hidden="true" />
 				</a>
 				<button
 					type="button"
@@ -374,10 +374,10 @@
 					aria-pressed={garage.isFavorite(detail.slug)}
 					onclick={() => garage.toggleFavorite(detail.slug)}
 				>
-					<Heart size={20} strokeWidth={2.35} aria-hidden="true" />
+					<Heart size={18} strokeWidth={2} aria-hidden="true" />
 				</button>
 				<button type="button" aria-label={detail.mobileDrawer.shareLabel} onclick={shareVehicle}>
-					<Share2 size={21} strokeWidth={2.35} aria-hidden="true" />
+					<Share2 size={18} strokeWidth={2} aria-hidden="true" />
 				</button>
 			</div>
 		</div>
@@ -408,13 +408,13 @@
 			<Drawer.Handle class="daynight-mobile-pdp__handle" preventCycle={true} />
 
 			<div class="daynight-mobile-pdp__drawer-heading">
-				<div>
+				<Drawer.Title level={1} class="daynight-mobile-pdp__heading-title">
+					<span class="daynight-mobile-pdp__drawer-title" title={detail.title}>{detail.title}</span>
+				</Drawer.Title>
+				<div class="daynight-mobile-pdp__price-row">
 					<p>{detail.priceLabel}</p>
-					<Drawer.Title level={1}>
-						<span class="daynight-mobile-pdp__drawer-title">{detail.title}</span>
-					</Drawer.Title>
+					<span>{detail.monthlyLabel}</span>
 				</div>
-				<span>{detail.monthlyLabel}</span>
 			</div>
 
 			<div class="daynight-mobile-pdp__actions" aria-label={detail.copy.inquiryTitle}>
@@ -423,14 +423,14 @@
 					class="daynight-mobile-pdp__cta daynight-mobile-pdp__cta--primary"
 					onclick={openInquiry}
 				>
-					<Send size={17} strokeWidth={2.3} aria-hidden="true" />
+					<Send size={16} strokeWidth={2} aria-hidden="true" />
 					{detail.copy.inquiryCta}
 				</button>
 				<a
 					class="daynight-mobile-pdp__cta daynight-mobile-pdp__cta--call"
 					{...externalHref(detail.contact.primaryPhoneHref)}
 				>
-					<PhoneCall size={17} strokeWidth={2.3} aria-hidden="true" />
+					<PhoneCall size={16} strokeWidth={2} aria-hidden="true" />
 					{detail.copy.callCta}
 				</a>
 			</div>
@@ -724,38 +724,59 @@
 
 		.daynight-mobile-pdp__topbar button,
 		.daynight-mobile-pdp__topbar a {
+			position: relative;
 			display: flex;
-			width: 44px;
-			height: 44px;
+			width: var(--bc-mobile-icon-action-hit-size);
+			height: var(--bc-mobile-icon-action-hit-size);
+			flex: 0 0 var(--bc-mobile-icon-action-hit-size);
 			align-items: center;
 			justify-content: center;
 			border: 0;
 			border-radius: 999px;
-			background: rgba(255, 255, 255, 0.92);
+			background: transparent;
 			color: #1c1c1c;
 			cursor: pointer;
+			isolation: isolate;
+			padding: 0;
 			text-decoration: none;
-			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+		}
+
+		.daynight-mobile-pdp__topbar button::before,
+		.daynight-mobile-pdp__topbar a::before {
+			position: absolute;
+			z-index: -1;
+			width: var(--bc-control-height-compact);
+			height: var(--bc-control-height-compact);
+			border-radius: inherit;
+			background: rgba(255, 255, 255, 0.92);
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+			content: '';
+			pointer-events: none;
 		}
 
 		.daynight-mobile-pdp__topbar button:focus-visible,
 		.daynight-mobile-pdp__topbar a:focus-visible {
-			background: #f3f4f6;
 			outline: 0;
 		}
 
+		.daynight-mobile-pdp__topbar button:focus-visible::before,
+		.daynight-mobile-pdp__topbar a:focus-visible::before {
+			background: #f3f4f6;
+			outline: 2px solid currentColor;
+			outline-offset: 2px;
+		}
+
 		@media (hover: hover) and (pointer: fine) {
-			.daynight-mobile-pdp__topbar button:hover,
-			.daynight-mobile-pdp__topbar a:hover {
+			.daynight-mobile-pdp__topbar button:hover::before,
+			.daynight-mobile-pdp__topbar a:hover::before {
 				background: #f3f4f6;
-				outline: 0;
 			}
 		}
 
 		.daynight-mobile-pdp__topbar-actions {
 			display: flex;
 			align-items: center;
-			gap: 8px;
+			gap: 4px;
 		}
 
 		.daynight-mobile-pdp__photo-count {
@@ -891,11 +912,24 @@
 		}
 
 		.daynight-mobile-pdp__drawer-heading {
-			display: flex;
-			align-items: flex-start;
-			justify-content: space-between;
-			gap: 14px;
+			display: grid;
+			min-width: 0;
+			flex: 0 0 auto;
+			gap: 4px;
 			padding: 4px 0 8px;
+		}
+
+		.daynight-mobile-pdp__drawer-heading :global(.daynight-mobile-pdp__heading-title) {
+			min-width: 0;
+			margin: 0;
+			font: inherit;
+		}
+
+		.daynight-mobile-pdp__price-row {
+			display: flex;
+			align-items: baseline;
+			justify-content: space-between;
+			gap: 12px;
 		}
 
 		.daynight-mobile-pdp__drawer-heading p,
@@ -905,31 +939,28 @@
 		}
 
 		.daynight-mobile-pdp__drawer-heading p {
-			margin-bottom: 3px;
 			color: var(--bc-accent);
 			font-size: var(--bc-mobile-card-title);
-			font-weight: var(--bc-weight-heading);
+			font-weight: var(--bc-weight-body);
 			line-height: var(--bc-mobile-card-title-leading);
+			white-space: nowrap;
 		}
 
 		.daynight-mobile-pdp__drawer-title {
 			display: block;
+			max-width: 100%;
+			overflow: hidden;
 			color: #1c1c1c;
 			font-size: var(--bc-mobile-section-title);
 			font-weight: var(--bc-weight-heading);
 			line-height: var(--bc-mobile-section-title-leading);
-			overflow-wrap: anywhere;
+			text-overflow: ellipsis;
+			white-space: nowrap;
 		}
 
-		.daynight-mobile-pdp__drawer-heading > span {
-			display: inline-flex;
-			min-height: 34px;
-			align-items: center;
+		.daynight-mobile-pdp__price-row > span {
 			flex: 0 0 auto;
-			border-radius: 8px;
-			background: var(--bc-surface);
-			color: #1c1c1c;
-			padding: 0 10px;
+			color: var(--bc-muted);
 			font-size: var(--bc-mobile-meta);
 			font-weight: var(--bc-weight-body);
 			line-height: var(--bc-mobile-meta-leading);
@@ -965,7 +996,7 @@
 			align-items: flex-end;
 			justify-content: center;
 			border: 0;
-			border-radius: 0;
+			border-radius: 8px 8px 0 0;
 			background: transparent;
 			color: #1c1c1c;
 			cursor: pointer;
@@ -976,11 +1007,15 @@
 			white-space: nowrap;
 		}
 
-		.daynight-mobile-pdp__tab.active,
-		.daynight-mobile-pdp__tab:focus-visible {
+		.daynight-mobile-pdp__tab.active {
 			background: transparent;
 			color: #1c1c1c;
-			outline: 0;
+			font-weight: var(--bc-weight-heading);
+		}
+
+		.daynight-mobile-pdp__tab:focus-visible {
+			outline: 2px solid var(--bc-focus);
+			outline-offset: -4px;
 		}
 
 		.daynight-mobile-pdp__tab::after {
@@ -994,20 +1029,14 @@
 			content: '';
 		}
 
-		.daynight-mobile-pdp__tab.active::after,
-		.daynight-mobile-pdp__tab:focus-visible::after {
+		.daynight-mobile-pdp__tab.active::after {
 			background: var(--bc-accent);
 		}
 
 		@media (hover: hover) and (pointer: fine) {
-			.daynight-mobile-pdp__tab:hover {
-				background: transparent;
+			.daynight-mobile-pdp__tab:not(.active):hover {
+				background: var(--bc-surface-soft);
 				color: #1c1c1c;
-				outline: 0;
-			}
-
-			.daynight-mobile-pdp__tab:hover::after {
-				background: var(--bc-accent);
 			}
 		}
 
@@ -1044,10 +1073,6 @@
 		.daynight-mobile-pdp__description {
 			display: grid;
 			gap: 10px;
-			padding: 16px;
-			border: 1px solid #e4e7eb;
-			border-radius: var(--bc-radius-card);
-			background: #fff;
 		}
 
 		.daynight-mobile-pdp__body-copy {
@@ -1066,8 +1091,7 @@
 			gap: 10px;
 		}
 
-		.daynight-mobile-pdp__finance div,
-		.daynight-mobile-pdp__feature-groups section {
+		.daynight-mobile-pdp__finance div {
 			border-radius: 8px;
 			background: var(--bc-surface);
 			padding: 12px;
@@ -1110,6 +1134,15 @@
 			list-style: none;
 		}
 
+		.daynight-mobile-pdp__description,
+		.daynight-mobile-pdp__spec-list,
+		.daynight-mobile-pdp__feature-groups section {
+			border: 1px solid #e4e7eb;
+			border-radius: var(--bc-radius-card);
+			background: var(--bc-white);
+			padding: var(--bc-space-3);
+		}
+
 		.daynight-mobile-pdp__spec-list li {
 			display: grid;
 			grid-template-columns: minmax(0, 1fr) minmax(96px, auto);
@@ -1117,6 +1150,15 @@
 			align-items: center;
 			border-bottom: 1px solid var(--bc-border);
 			padding: 10px 0;
+		}
+
+		.daynight-mobile-pdp__spec-list li:first-child {
+			padding-top: 0;
+		}
+
+		.daynight-mobile-pdp__spec-list li:last-child {
+			border-bottom: 0;
+			padding-bottom: 0;
 		}
 
 		.daynight-mobile-pdp__spec-list span {
@@ -1187,8 +1229,8 @@
 			border: 0;
 			border-radius: var(--bc-radius-control);
 			padding: 6px var(--bc-space-3);
-			font-size: var(--bc-mobile-label);
-			font-weight: var(--bc-weight-heading);
+			font-size: 1.0625rem;
+			font-weight: var(--bc-weight-action);
 			line-height: var(--bc-leading-label);
 			text-align: center;
 			text-decoration: none;
@@ -1219,8 +1261,7 @@
 		}
 
 		.daynight-mobile-pdp__cta--call {
-			border: 1px solid var(--bc-border-strong);
-			background: var(--bc-white);
+			background: var(--bc-surface);
 			color: var(--bc-ink);
 		}
 
@@ -1500,8 +1541,8 @@
 			gap: 4px;
 		}
 
-		.daynight-mobile-pdp__drawer-heading > span {
-			display: none;
+		.daynight-mobile-pdp__spec-list li {
+			grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
 		}
 
 		.daynight-mobile-pdp__tabs {

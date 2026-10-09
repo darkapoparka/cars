@@ -1,0 +1,57 @@
+diff --git "a/L:\\CODEX\\cars\\runtime\\import-mobile-pdp-rail-20261009\\AuxeroVehicleMobilePdp.svelte.before" b/src/lib/components/detail/AuxeroVehicleMobilePdp.svelte
+index 4a6e3ce..d750511 100644
+--- "a/L:\\CODEX\\cars\\runtime\\import-mobile-pdp-rail-20261009\\AuxeroVehicleMobilePdp.svelte.before"
++++ b/src/lib/components/detail/AuxeroVehicleMobilePdp.svelte
+@@ -996,7 +996,7 @@
+ 			align-items: flex-end;
+ 			justify-content: center;
+ 			border: 0;
+-			border-radius: 0;
++			border-radius: 8px 8px 0 0;
+ 			background: transparent;
+ 			color: #1c1c1c;
+ 			cursor: pointer;
+@@ -1007,11 +1007,15 @@
+ 			white-space: nowrap;
+ 		}
+ 
+-		.daynight-mobile-pdp__tab.active,
+-		.daynight-mobile-pdp__tab:focus-visible {
+-			background: transparent;
++		.daynight-mobile-pdp__tab.active {
++			background: var(--bc-surface);
+ 			color: #1c1c1c;
+-			outline: 0;
++			font-weight: var(--bc-weight-heading);
++		}
++
++		.daynight-mobile-pdp__tab:focus-visible {
++			outline: 2px solid var(--bc-focus);
++			outline-offset: -4px;
+ 		}
+ 
+ 		.daynight-mobile-pdp__tab::after {
+@@ -1025,20 +1029,14 @@
+ 			content: '';
+ 		}
+ 
+-		.daynight-mobile-pdp__tab.active::after,
+-		.daynight-mobile-pdp__tab:focus-visible::after {
++		.daynight-mobile-pdp__tab.active::after {
+ 			background: var(--bc-accent);
+ 		}
+ 
+ 		@media (hover: hover) and (pointer: fine) {
+-			.daynight-mobile-pdp__tab:hover {
+-				background: transparent;
++			.daynight-mobile-pdp__tab:not(.active):hover {
++				background: var(--bc-surface-soft);
+ 				color: #1c1c1c;
+-				outline: 0;
+-			}
+-
+-			.daynight-mobile-pdp__tab:hover::after {
+-				background: var(--bc-accent);
+ 			}
+ 		}
+ 

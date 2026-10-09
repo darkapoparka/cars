@@ -1,0 +1,15 @@
+{
+  "sourceRoot": "L:\\CODEX\\cars\\templates\\import",
+  "branch": "main",
+  "head": "64197b8e45c78365003b3998c7d6b3c75054d8ef",
+  "workingTree": true,
+  "runtime": "24.21.0",
+  "pdpSha256": "EA5C6C81AD1235FA4A00D1A52AB5A01A7603632B24CF6E9BF1FA23AF9076D8A3",
+  "navSha256": "152AAD0B564246932E5FC1AB09A1092D2EE4C5FE2522946D61D83E9AFD8C9B02",
+  "buildSourceMatches": true,
+  "productionPreview": "http://127.0.0.1:6809",
+  "beforePreview": "http://127.0.0.1:6791",
+  "e2eMobilePassed": 11,
+  "e2eDesktopPassed": 3,
+  "browserGeometryCases": 16
+}

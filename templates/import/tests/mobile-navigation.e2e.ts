@@ -71,7 +71,7 @@ for (const width of [320, 390]) {
 			await expect(
 				page.getByRole('heading', {
 					name: service.heading,
-					level: service.link === 'Sell' ? 2 : 1,
+					level: 1,
 					exact: true
 				})
 			).toBeVisible();

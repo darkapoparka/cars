@@ -1,0 +1,127 @@
+diff --git "a/L:\\CODEX\\cars\\runtime\\import-mobile-pdp-controls-20261009\\AuxeroVehicleMobilePdp.svelte.before" b/src/lib/components/detail/AuxeroVehicleMobilePdp.svelte
+index 9666c55..21172a8 100644
+--- "a/L:\\CODEX\\cars\\runtime\\import-mobile-pdp-controls-20261009\\AuxeroVehicleMobilePdp.svelte.before"
++++ b/src/lib/components/detail/AuxeroVehicleMobilePdp.svelte
+@@ -361,12 +361,12 @@
+ 
+ 		<div class="daynight-mobile-pdp__topbar" data-mobile-pdp-topbar>
+ 			<button type="button" aria-label={detail.mobileDrawer.backLabel} onclick={goBack}>
+-				<ArrowLeft size={22} strokeWidth={2.35} aria-hidden="true" />
++				<ArrowLeft size={20} strokeWidth={2} aria-hidden="true" />
+ 			</button>
+ 
+ 			<div class="daynight-mobile-pdp__topbar-actions">
+ 				<a href={resolve(compareHref)} aria-label={detail.copy.compare}>
+-					<GitCompare size={20} strokeWidth={2.35} aria-hidden="true" />
++					<GitCompare size={18} strokeWidth={2} aria-hidden="true" />
+ 				</a>
+ 				<button
+ 					type="button"
+@@ -374,10 +374,10 @@
+ 					aria-pressed={garage.isFavorite(detail.slug)}
+ 					onclick={() => garage.toggleFavorite(detail.slug)}
+ 				>
+-					<Heart size={20} strokeWidth={2.35} aria-hidden="true" />
++					<Heart size={18} strokeWidth={2} aria-hidden="true" />
+ 				</button>
+ 				<button type="button" aria-label={detail.mobileDrawer.shareLabel} onclick={shareVehicle}>
+-					<Share2 size={21} strokeWidth={2.35} aria-hidden="true" />
++					<Share2 size={18} strokeWidth={2} aria-hidden="true" />
+ 				</button>
+ 			</div>
+ 		</div>
+@@ -423,14 +423,14 @@
+ 					class="daynight-mobile-pdp__cta daynight-mobile-pdp__cta--primary"
+ 					onclick={openInquiry}
+ 				>
+-					<Send size={17} strokeWidth={2.3} aria-hidden="true" />
++					<Send size={16} strokeWidth={2} aria-hidden="true" />
+ 					{detail.copy.inquiryCta}
+ 				</button>
+ 				<a
+ 					class="daynight-mobile-pdp__cta daynight-mobile-pdp__cta--call"
+ 					{...externalHref(detail.contact.primaryPhoneHref)}
+ 				>
+-					<PhoneCall size={17} strokeWidth={2.3} aria-hidden="true" />
++					<PhoneCall size={16} strokeWidth={2} aria-hidden="true" />
+ 					{detail.copy.callCta}
+ 				</a>
+ 			</div>
+@@ -724,38 +724,59 @@
+ 
+ 		.daynight-mobile-pdp__topbar button,
+ 		.daynight-mobile-pdp__topbar a {
++			position: relative;
+ 			display: flex;
+-			width: 44px;
+-			height: 44px;
++			width: var(--bc-mobile-icon-action-hit-size);
++			height: var(--bc-mobile-icon-action-hit-size);
++			flex: 0 0 var(--bc-mobile-icon-action-hit-size);
+ 			align-items: center;
+ 			justify-content: center;
+ 			border: 0;
+ 			border-radius: 999px;
+-			background: rgba(255, 255, 255, 0.92);
++			background: transparent;
+ 			color: #1c1c1c;
+ 			cursor: pointer;
++			isolation: isolate;
++			padding: 0;
+ 			text-decoration: none;
+-			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
++		}
++
++		.daynight-mobile-pdp__topbar button::before,
++		.daynight-mobile-pdp__topbar a::before {
++			position: absolute;
++			z-index: -1;
++			width: var(--bc-control-height-compact);
++			height: var(--bc-control-height-compact);
++			border-radius: inherit;
++			background: rgba(255, 255, 255, 0.92);
++			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
++			content: '';
++			pointer-events: none;
+ 		}
+ 
+ 		.daynight-mobile-pdp__topbar button:focus-visible,
+ 		.daynight-mobile-pdp__topbar a:focus-visible {
+-			background: #f3f4f6;
+ 			outline: 0;
+ 		}
+ 
++		.daynight-mobile-pdp__topbar button:focus-visible::before,
++		.daynight-mobile-pdp__topbar a:focus-visible::before {
++			background: #f3f4f6;
++			outline: 2px solid currentColor;
++			outline-offset: 2px;
++		}
++
+ 		@media (hover: hover) and (pointer: fine) {
+-			.daynight-mobile-pdp__topbar button:hover,
+-			.daynight-mobile-pdp__topbar a:hover {
++			.daynight-mobile-pdp__topbar button:hover::before,
++			.daynight-mobile-pdp__topbar a:hover::before {
+ 				background: #f3f4f6;
+-				outline: 0;
+ 			}
+ 		}
+ 
+ 		.daynight-mobile-pdp__topbar-actions {
+ 			display: flex;
+ 			align-items: center;
+-			gap: 8px;
++			gap: 4px;
+ 		}
+ 
+ 		.daynight-mobile-pdp__photo-count {
+@@ -1198,7 +1219,7 @@
+ 			border-radius: var(--bc-radius-control);
+ 			padding: 6px var(--bc-space-3);
+ 			font-size: var(--bc-mobile-label);
+-			font-weight: var(--bc-weight-heading);
++			font-weight: var(--bc-weight-action);
+ 			line-height: var(--bc-leading-label);
+ 			text-align: center;
+ 			text-decoration: none;

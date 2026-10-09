@@ -178,7 +178,7 @@
 
 	@media (max-width: 767.98px) {
 		:global(body) {
-			--bc-mobile-nav-height: max(58px, calc(3.5rem + 2px));
+			--bc-mobile-nav-height: max(52px, calc(3rem + 4px));
 			padding-bottom: calc(var(--bc-mobile-nav-height) + env(safe-area-inset-bottom));
 		}
 		:global(body:has(.mobile-bottom-nav[data-footer-visible='true'])) {
@@ -212,7 +212,7 @@
 		.mobile-bottom-nav__inner {
 			display: grid;
 			width: 100%;
-			height: var(--bc-mobile-nav-height);
+			height: 100%;
 			max-width: var(--bc-mobile-content-max);
 			grid-template-columns: repeat(5, minmax(0, 1fr));
 			margin: 0 auto;
@@ -228,7 +228,7 @@
 			align-items: center;
 			justify-content: center;
 			flex-direction: column;
-			gap: 3px;
+			gap: 2px;
 			border: 0;
 			border-radius: 0;
 			background: transparent;
@@ -245,8 +245,8 @@
 
 		.mobile-bottom-nav__icon {
 			display: grid;
-			width: 28px;
-			height: 28px;
+			width: 24px;
+			height: 24px;
 			place-items: center;
 			color: inherit;
 			line-height: 0;
@@ -256,11 +256,13 @@
 			display: block;
 			min-width: 0;
 			max-width: 100%;
-			overflow-wrap: anywhere;
+			overflow: hidden;
 			color: inherit;
 			font-size: 0.75rem;
 			font-weight: var(--bc-weight-body);
 			line-height: 1.3334;
+			text-overflow: ellipsis;
+			white-space: nowrap;
 		}
 
 		.mobile-bottom-nav a.active,
@@ -298,6 +300,8 @@
 		}
 
 		.mobile-bottom-nav :global(svg) {
+			width: 22px;
+			height: 22px;
 			color: currentColor;
 		}
 

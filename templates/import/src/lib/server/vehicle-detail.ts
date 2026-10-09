@@ -111,7 +111,7 @@ const mobileDrawer = (locale: Locale = 'en'): AuxeroVehicleDetailMobileDrawer =>
 			: [
 					{ id: 'info', label: 'Info' },
 					{ id: 'specs', label: 'Specs' },
-					{ id: 'features', label: 'Features' },
+					{ id: 'features', label: 'Extras' },
 					{ id: 'images', label: 'Images' },
 					{ id: 'contact', label: 'Contact' }
 				]

@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-09T11:00:03.853Z",
+  "repository": "https://github.com/darkapoparka/cars.git",
+  "branch": "main",
+  "head": "f23ff7d8595b2bd5887725a9d15e12c320a0b82b",
+  "file": "src/lib/components/detail/AuxeroVehicleMobilePdp.svelte",
+  "beforeSha256": "ea5c6c81ad1235fa4a00d1a52ab5a01a7603632b24cf6e9bf1fa23af9076d8a3",
+  "afterSha256": "e2dc5cb91cd1f5dba7534ea8d1510f86b33abe0f319c7228e41233f9e50b5361",
+  "buildSourceSha256": "e2dc5cb91cd1f5dba7534ea8d1510f86b33abe0f319c7228e41233f9e50b5361",
+  "runtime": "Node 24.21.0",
+  "dev": "http://127.0.0.1:6791/en/inventory/21754658377544573?lang=en",
+  "checks": {
+    "svelteCheck": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "scopedLint": true,
+    "prettier": true,
+    "diffCheck": true,
+    "existingMobileE2e": 5,
+    "edgeInteractionCases": 8,
+    "productionBuild": true
+  },
+  "buildLog": "L:/CODEX/cars/runtime/import-mobile-pdp-controls-20261009/build.log",
+  "state": "local uncommitted refinement; no template release or dealer publication"
+}

@@ -1,0 +1,739 @@
+{
+  "source": "canonical dev; no injected styles",
+  "results": [
+    {
+      "locale": "bg",
+      "width": 390,
+      "height": 844,
+      "tab": "Инфо",
+      "metrics": {
+        "card": {
+          "rect": {
+            "x": 14,
+            "y": 590.9599609375,
+            "width": 362,
+            "height": 200,
+            "top": 590.9599609375,
+            "right": 376,
+            "bottom": 790.9599609375,
+            "left": 14
+          },
+          "background": "rgb(255, 255, 255)",
+          "border": "1px",
+          "borderColor": "rgb(228, 231, 235)",
+          "radius": "12px",
+          "padding": "12px"
+        },
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 362,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 376,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "selectedWeight": "600",
+        "overflow": 0,
+        "content": "Описание Наличен в България. Закупен от дилър на Мерцедес в Европа. Без инциденти, пълна сервизна история. Предоставяме снимки от закупуване. Кодиран, преминал технотест и готов за регистрация без допълнителни такси. Повече информация по телефона.",
+        "lastContentReachable": true
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "height": 844,
+      "tab": "Данни",
+      "metrics": {
+        "card": {
+          "rect": {
+            "x": 14,
+            "y": 490.9599914550781,
+            "width": 362,
+            "height": 480.7499694824219,
+            "top": 490.9599914550781,
+            "right": 376,
+            "bottom": 971.7099609375,
+            "left": 14
+          },
+          "background": "rgb(255, 255, 255)",
+          "border": "1px",
+          "borderColor": "rgb(228, 231, 235)",
+          "radius": "12px",
+          "padding": "12px"
+        },
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 362,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 376,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "selectedWeight": "600",
+        "overflow": 0,
+        "content": "Пробег 79 000 км Година 2015 Гориво Бензин Цвят Сив Локация Пловдив, гр. Пловдив Интериор По запитване Двигател 2000 куб.см / 360 к.с. Скорости Автомат Складов № 21754658377544573",
+        "lastContentReachable": true
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "height": 844,
+      "tab": "Екстри",
+      "metrics": {
+        "card": {
+          "rect": {
+            "x": 14,
+            "y": 490.9599914550781,
+            "width": 362,
+            "height": 627,
+            "top": 490.9599914550781,
+            "right": 376,
+            "bottom": 1117.9599914550781,
+            "left": 14
+          },
+          "background": "rgb(255, 255, 255)",
+          "border": "1px",
+          "borderColor": "rgb(228, 231, 235)",
+          "radius": "12px",
+          "padding": "12px"
+        },
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 362,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 376,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "selectedWeight": "600",
+        "overflow": 0,
+        "content": "Оборудване  4(5) Врати 4x4 Функция Auto Start Stop Bluetooth / хендсфри система GPS система за проследяване LED фарове Steptronic Tiptronic USB Аудио/видео IN/AUX изводи Адаптивни предни светлини Аларма Антиблокираща система Безключово палене Бордкомпютър Въздушни възглавници - Задни Въздушни възглавници - Предни",
+        "lastContentReachable": true
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 844,
+      "tab": "Инфо",
+      "metrics": {
+        "card": {
+          "rect": {
+            "x": 14,
+            "y": 587.9599609375,
+            "width": 292,
+            "height": 272,
+            "top": 587.9599609375,
+            "right": 306,
+            "bottom": 859.9599609375,
+            "left": 14
+          },
+          "background": "rgb(255, 255, 255)",
+          "border": "1px",
+          "borderColor": "rgb(228, 231, 235)",
+          "radius": "12px",
+          "padding": "12px"
+        },
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 292,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 306,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "selectedWeight": "600",
+        "overflow": 0,
+        "content": "Описание Наличен в България. Закупен от дилър на Мерцедес в Европа. Без инциденти, пълна сервизна история. Предоставяме снимки от закупуване. Кодиран, преминал технотест и готов за регистрация без допълнителни такси. Повече информация по телефона.",
+        "lastContentReachable": true
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 844,
+      "tab": "Данни",
+      "metrics": {
+        "card": {
+          "rect": {
+            "x": 14,
+            "y": 490.9599914550781,
+            "width": 292,
+            "height": 555,
+            "top": 490.9599914550781,
+            "right": 306,
+            "bottom": 1045.9599914550781,
+            "left": 14
+          },
+          "background": "rgb(255, 255, 255)",
+          "border": "1px",
+          "borderColor": "rgb(228, 231, 235)",
+          "radius": "12px",
+          "padding": "12px"
+        },
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 292,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 306,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "selectedWeight": "600",
+        "overflow": 0,
+        "content": "Пробег 79 000 км Година 2015 Гориво Бензин Цвят Сив Локация Пловдив, гр. Пловдив Интериор По запитване Двигател 2000 куб.см / 360 к.с. Скорости Автомат Складов № 21754658377544573",
+        "lastContentReachable": true
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 844,
+      "tab": "Екстри",
+      "metrics": {
+        "card": {
+          "rect": {
+            "x": 14,
+            "y": 490.9599914550781,
+            "width": 292,
+            "height": 627,
+            "top": 490.9599914550781,
+            "right": 306,
+            "bottom": 1117.9599914550781,
+            "left": 14
+          },
+          "background": "rgb(255, 255, 255)",
+          "border": "1px",
+          "borderColor": "rgb(228, 231, 235)",
+          "radius": "12px",
+          "padding": "12px"
+        },
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 292,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 306,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "selectedWeight": "600",
+        "overflow": 0,
+        "content": "Оборудване  4(5) Врати 4x4 Функция Auto Start Stop Bluetooth / хендсфри система GPS система за проследяване LED фарове Steptronic Tiptronic USB Аудио/видео IN/AUX изводи Адаптивни предни светлини Аларма Антиблокираща система Безключово палене Бордкомпютър Въздушни възглавници - Задни Въздушни възглавници - Предни",
+        "lastContentReachable": true
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 540,
+      "tab": "Инфо",
+      "metrics": {
+        "card": {
+          "rect": {
+            "x": 14,
+            "y": 484.6000061035156,
+            "width": 292,
+            "height": 271.9999694824219,
+            "top": 484.6000061035156,
+            "right": 306,
+            "bottom": 756.5999755859375,
+            "left": 14
+          },
+          "background": "rgb(255, 255, 255)",
+          "border": "1px",
+          "borderColor": "rgb(228, 231, 235)",
+          "radius": "12px",
+          "padding": "12px"
+        },
+        "panel": {
+          "x": 14,
+          "y": 375.6000061035156,
+          "width": 292,
+          "height": 152.40621948242188,
+          "top": 375.6000061035156,
+          "right": 306,
+          "bottom": 528.0062255859375,
+          "left": 14
+        },
+        "selectedWeight": "600",
+        "overflow": 0,
+        "content": "Описание Наличен в България. Закупен от дилър на Мерцедес в Европа. Без инциденти, пълна сервизна история. Предоставяме снимки от закупуване. Кодиран, преминал технотест и готов за регистрация без допълнителни такси. Повече информация по телефона.",
+        "lastContentReachable": true
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 540,
+      "tab": "Данни",
+      "metrics": {
+        "card": {
+          "rect": {
+            "x": 14,
+            "y": 387.6000061035156,
+            "width": 292,
+            "height": 555,
+            "top": 387.6000061035156,
+            "right": 306,
+            "bottom": 942.6000061035156,
+            "left": 14
+          },
+          "background": "rgb(255, 255, 255)",
+          "border": "1px",
+          "borderColor": "rgb(228, 231, 235)",
+          "radius": "12px",
+          "padding": "12px"
+        },
+        "panel": {
+          "x": 14,
+          "y": 375.6000061035156,
+          "width": 292,
+          "height": 152.40621948242188,
+          "top": 375.6000061035156,
+          "right": 306,
+          "bottom": 528.0062255859375,
+          "left": 14
+        },
+        "selectedWeight": "600",
+        "overflow": 0,
+        "content": "Пробег 79 000 км Година 2015 Гориво Бензин Цвят Сив Локация Пловдив, гр. Пловдив Интериор По запитване Двигател 2000 куб.см / 360 к.с. Скорости Автомат Складов № 21754658377544573",
+        "lastContentReachable": true
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 540,
+      "tab": "Екстри",
+      "metrics": {
+        "card": {
+          "rect": {
+            "x": 14,
+            "y": 387.6000061035156,
+            "width": 292,
+            "height": 627,
+            "top": 387.6000061035156,
+            "right": 306,
+            "bottom": 1014.6000061035156,
+            "left": 14
+          },
+          "background": "rgb(255, 255, 255)",
+          "border": "1px",
+          "borderColor": "rgb(228, 231, 235)",
+          "radius": "12px",
+          "padding": "12px"
+        },
+        "panel": {
+          "x": 14,
+          "y": 375.6000061035156,
+          "width": 292,
+          "height": 152.40621948242188,
+          "top": 375.6000061035156,
+          "right": 306,
+          "bottom": 528.0062255859375,
+          "left": 14
+        },
+        "selectedWeight": "600",
+        "overflow": 0,
+        "content": "Оборудване  4(5) Врати 4x4 Функция Auto Start Stop Bluetooth / хендсфри система GPS система за проследяване LED фарове Steptronic Tiptronic USB Аудио/видео IN/AUX изводи Адаптивни предни светлини Аларма Антиблокираща система Безключово палене Бордкомпютър Въздушни възглавници - Задни Въздушни възглавници - Предни",
+        "lastContentReachable": true
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "height": 1000,
+      "desktopIdentical": true,
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "tab": "Info",
+      "metrics": {
+        "card": {
+          "rect": {
+            "x": 14,
+            "y": 590.9599609375,
+            "width": 362,
+            "height": 200,
+            "top": 590.9599609375,
+            "right": 376,
+            "bottom": 790.9599609375,
+            "left": 14
+          },
+          "background": "rgb(255, 255, 255)",
+          "border": "1px",
+          "borderColor": "rgb(228, 231, 235)",
+          "radius": "12px",
+          "padding": "12px"
+        },
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 362,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 376,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "selectedWeight": "600",
+        "overflow": 0,
+        "content": "Description Available in Bulgaria. Purchased from a Mercedes dealer in Europe. No accidents and a full service history. Purchase photos are provided. Coded, passed Technotest and ready for registration without additional fees. More information by phone.",
+        "lastContentReachable": true
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "tab": "Specs",
+      "metrics": {
+        "card": {
+          "rect": {
+            "x": 14,
+            "y": 490.9599914550781,
+            "width": 362,
+            "height": 480.7499694824219,
+            "top": 490.9599914550781,
+            "right": 376,
+            "bottom": 971.7099609375,
+            "left": 14
+          },
+          "background": "rgb(255, 255, 255)",
+          "border": "1px",
+          "borderColor": "rgb(228, 231, 235)",
+          "radius": "12px",
+          "padding": "12px"
+        },
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 362,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 376,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "selectedWeight": "600",
+        "overflow": 0,
+        "content": "Mileage 79,000 km Year 2015 Fuel Petrol Color Grey Location Пловдив, гр. Пловдив Interior On request Engine 2000 cc / 360 hp Transmission Automatic Stock No. 21754658377544573",
+        "lastContentReachable": true
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "tab": "Extras",
+      "metrics": {
+        "card": {
+          "rect": {
+            "x": 14,
+            "y": 490.9599914550781,
+            "width": 362,
+            "height": 627,
+            "top": 490.9599914550781,
+            "right": 376,
+            "bottom": 1117.9599914550781,
+            "left": 14
+          },
+          "background": "rgb(255, 255, 255)",
+          "border": "1px",
+          "borderColor": "rgb(228, 231, 235)",
+          "radius": "12px",
+          "padding": "12px"
+        },
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 362,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 376,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "selectedWeight": "600",
+        "overflow": 0,
+        "content": "Equipment  4(5) doors 4x4 Auto Start Stop function Bluetooth / hands-free system GPS tracking system LED headlights Steptronic Tiptronic USB Audio/video IN/AUX inputs Adaptive headlights Alarm Anti-lock braking system Keyless start Trip computer Rear airbags Front airbags",
+        "lastContentReachable": true
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 844,
+      "tab": "Info",
+      "metrics": {
+        "card": {
+          "rect": {
+            "x": 14,
+            "y": 587.9599609375,
+            "width": 292,
+            "height": 224,
+            "top": 587.9599609375,
+            "right": 306,
+            "bottom": 811.9599609375,
+            "left": 14
+          },
+          "background": "rgb(255, 255, 255)",
+          "border": "1px",
+          "borderColor": "rgb(228, 231, 235)",
+          "radius": "12px",
+          "padding": "12px"
+        },
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 292,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 306,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "selectedWeight": "600",
+        "overflow": 0,
+        "content": "Description Available in Bulgaria. Purchased from a Mercedes dealer in Europe. No accidents and a full service history. Purchase photos are provided. Coded, passed Technotest and ready for registration without additional fees. More information by phone.",
+        "lastContentReachable": true
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 844,
+      "tab": "Specs",
+      "metrics": {
+        "card": {
+          "rect": {
+            "x": 14,
+            "y": 490.9599914550781,
+            "width": 292,
+            "height": 555,
+            "top": 490.9599914550781,
+            "right": 306,
+            "bottom": 1045.9599914550781,
+            "left": 14
+          },
+          "background": "rgb(255, 255, 255)",
+          "border": "1px",
+          "borderColor": "rgb(228, 231, 235)",
+          "radius": "12px",
+          "padding": "12px"
+        },
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 292,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 306,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "selectedWeight": "600",
+        "overflow": 0,
+        "content": "Mileage 79,000 km Year 2015 Fuel Petrol Color Grey Location Пловдив, гр. Пловдив Interior On request Engine 2000 cc / 360 hp Transmission Automatic Stock No. 21754658377544573",
+        "lastContentReachable": true
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 844,
+      "tab": "Extras",
+      "metrics": {
+        "card": {
+          "rect": {
+            "x": 14,
+            "y": 490.9599914550781,
+            "width": 292,
+            "height": 627,
+            "top": 490.9599914550781,
+            "right": 306,
+            "bottom": 1117.9599914550781,
+            "left": 14
+          },
+          "background": "rgb(255, 255, 255)",
+          "border": "1px",
+          "borderColor": "rgb(228, 231, 235)",
+          "radius": "12px",
+          "padding": "12px"
+        },
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 292,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 306,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "selectedWeight": "600",
+        "overflow": 0,
+        "content": "Equipment  4(5) doors 4x4 Auto Start Stop function Bluetooth / hands-free system GPS tracking system LED headlights Steptronic Tiptronic USB Audio/video IN/AUX inputs Adaptive headlights Alarm Anti-lock braking system Keyless start Trip computer Rear airbags Front airbags",
+        "lastContentReachable": true
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 540,
+      "tab": "Info",
+      "metrics": {
+        "card": {
+          "rect": {
+            "x": 14,
+            "y": 484.6000061035156,
+            "width": 292,
+            "height": 223.99996948242188,
+            "top": 484.6000061035156,
+            "right": 306,
+            "bottom": 708.5999755859375,
+            "left": 14
+          },
+          "background": "rgb(255, 255, 255)",
+          "border": "1px",
+          "borderColor": "rgb(228, 231, 235)",
+          "radius": "12px",
+          "padding": "12px"
+        },
+        "panel": {
+          "x": 14,
+          "y": 375.6000061035156,
+          "width": 292,
+          "height": 152.40621948242188,
+          "top": 375.6000061035156,
+          "right": 306,
+          "bottom": 528.0062255859375,
+          "left": 14
+        },
+        "selectedWeight": "600",
+        "overflow": 0,
+        "content": "Description Available in Bulgaria. Purchased from a Mercedes dealer in Europe. No accidents and a full service history. Purchase photos are provided. Coded, passed Technotest and ready for registration without additional fees. More information by phone.",
+        "lastContentReachable": true
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 540,
+      "tab": "Specs",
+      "metrics": {
+        "card": {
+          "rect": {
+            "x": 14,
+            "y": 387.6000061035156,
+            "width": 292,
+            "height": 555,
+            "top": 387.6000061035156,
+            "right": 306,
+            "bottom": 942.6000061035156,
+            "left": 14
+          },
+          "background": "rgb(255, 255, 255)",
+          "border": "1px",
+          "borderColor": "rgb(228, 231, 235)",
+          "radius": "12px",
+          "padding": "12px"
+        },
+        "panel": {
+          "x": 14,
+          "y": 375.6000061035156,
+          "width": 292,
+          "height": 152.40621948242188,
+          "top": 375.6000061035156,
+          "right": 306,
+          "bottom": 528.0062255859375,
+          "left": 14
+        },
+        "selectedWeight": "600",
+        "overflow": 0,
+        "content": "Mileage 79,000 km Year 2015 Fuel Petrol Color Grey Location Пловдив, гр. Пловдив Interior On request Engine 2000 cc / 360 hp Transmission Automatic Stock No. 21754658377544573",
+        "lastContentReachable": true
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 540,
+      "tab": "Extras",
+      "metrics": {
+        "card": {
+          "rect": {
+            "x": 14,
+            "y": 387.6000061035156,
+            "width": 292,
+            "height": 627,
+            "top": 387.6000061035156,
+            "right": 306,
+            "bottom": 1014.6000061035156,
+            "left": 14
+          },
+          "background": "rgb(255, 255, 255)",
+          "border": "1px",
+          "borderColor": "rgb(228, 231, 235)",
+          "radius": "12px",
+          "padding": "12px"
+        },
+        "panel": {
+          "x": 14,
+          "y": 375.6000061035156,
+          "width": 292,
+          "height": 152.40621948242188,
+          "top": 375.6000061035156,
+          "right": 306,
+          "bottom": 528.0062255859375,
+          "left": 14
+        },
+        "selectedWeight": "600",
+        "overflow": 0,
+        "content": "Equipment  4(5) doors 4x4 Auto Start Stop function Bluetooth / hands-free system GPS tracking system LED headlights Steptronic Tiptronic USB Audio/video IN/AUX inputs Adaptive headlights Alarm Anti-lock braking system Keyless start Trip computer Rear airbags Front airbags",
+        "lastContentReachable": true
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "desktopIdentical": true,
+      "errors": []
+    }
+  ]
+}

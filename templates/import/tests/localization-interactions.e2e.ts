@@ -210,7 +210,7 @@ for (const width of [320, 390, 1440])
 				await expect(page.locator('.daynight-mobile-pdp__spec-list')).toContainText(
 					english ? '3000 cc / 340 hp' : '3000 куб.см / 340 к.с.'
 				);
-				await page.getByRole('tab', { name: english ? 'Features' : 'Екстри', exact: true }).click();
+				await page.getByRole('tab', { name: english ? 'Extras' : 'Екстри', exact: true }).click();
 				await expect(page.locator('.daynight-mobile-pdp__feature-groups')).toBeVisible();
 				await page.locator('.daynight-mobile-pdp__actions button').click();
 				const form = page.locator('.daynight-mobile-pdp__inquiry-form');
