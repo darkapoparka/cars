@@ -16,7 +16,9 @@ const numberFrom = (...values) => {
   for (const value of values) {
     if (typeof value === 'number' && Number.isFinite(value)) return value;
     if (typeof value !== 'string') continue;
+    if (/\b(?:p\.?\s*o\.?\s*a\.?|on\s+request|price\s+on\s+application|not\s+(?:published|provided|available|disclosed)|unpublished|unknown|tbc|tba)\b|^\s*n\/a(?:\b|\s*\()/i.test(value)) continue;
     const normalized = value.replace(/[^0-9.,-]/g, '').replace(/,(?=\d{3}(?:\D|$))/g, '').replace(',', '.');
+    if (!/\d/.test(normalized)) continue;
     const parsed = Number(normalized);
     if (Number.isFinite(parsed)) return parsed;
   }
@@ -210,14 +212,22 @@ function inferCurrency(item, business) {
 function inferPrice(item) {
   return numberFrom(item.priceEur, item.priceUsd, item.priceAmount, item.price, item.amount, item.rawPriceText, item.sourcePrice);
 }
-function inferMileage(item) {
-  return numberFrom(item.mileageKm, item.mileageMiles, item.mileageValue, item.km, item.mileage);
-}
-function inferMileageUnit(item, business) {
-  if (numberFrom(item.mileageMiles) !== null) return 'mi';
-  if (numberFrom(item.mileageKm, item.km) !== null) return 'km';
-  const direct = firstString(item.mileageUnit, item.distanceUnit, business.distanceUnit, 'km').toLowerCase();
-  return direct.startsWith('mi') ? 'mi' : 'km';
+function inferMileage(item, business) {
+  const fallbackUnit = firstString(item.mileageUnit, item.distanceUnit, business.distanceUnit, 'km');
+  const candidates = [
+    [item.mileageKm, 'km'], [item.km, 'km'], [item.mileageMiles, 'mi'],
+    [item.mileageValue, fallbackUnit],
+    [item.mileage?.value, firstString(item.mileage?.unit, fallbackUnit)],
+    [item.mileage, fallbackUnit]
+  ];
+  for (const [rawValue, rawUnit] of candidates) {
+    const value = numberFrom(rawValue);
+    if (value === null) continue;
+    const unit = String(rawUnit).trim().toLowerCase();
+    if (!/^(?:mi|mile|miles|km|kilometres?|kilometers?)$/.test(unit)) throw new Error('Unsupported source mileage unit: ' + rawUnit);
+    return { value, unit: unit.startsWith('mi') ? 'mi' : 'km' };
+  }
+  return { value: null, unit: business.distanceUnit || 'km' };
 }
 function inferYear(item) {
   const year = numberFrom(item.year, item.production, item.date);
@@ -261,8 +271,9 @@ function normalizeListing(item, index, business) {
   const title = firstString(item.title, item.fullTitle, `${year} ${make} ${model} ${trim}`.replace(/\s+/g, ' ').trim());
   const currency = inferCurrency(item, business);
   const priceAmount = inferPrice(item);
-  const mileageValue = inferMileage(item) ?? 0;
-  const mileageUnit = inferMileageUnit(item, business);
+  const mileage = inferMileage(item, business);
+  const mileageValue = mileage.value ?? 0;
+  const mileageUnit = mileage.unit;
   const images = normalizedImages(item);
   const id = firstString(item.id, item.sourceId, item.index, String(index + 1));
   const body = firstString(item.body, item.category, item.bodyType, 'Other');
@@ -284,6 +295,7 @@ function normalizeListing(item, index, business) {
     currency,
     mileageValue,
     mileageUnit,
+    mileageOnRequest: item.mileageOnRequest === true || mileage.value === null,
     body,
     bodyType: normalizeBody(body),
     fuel,

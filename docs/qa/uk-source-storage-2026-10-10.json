@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-10",
+  "scope": "Immutable template source accounting, deployable artifact comparison and existing derived-asset reuse; this is not a dealer deployment receipt.",
+  "measurement": {
+    "method": "git ls-tree/cat-file for immutable template subtrees, filtered by current scripts/lib/workflow.mjs excluded policy",
+    "bytesPerSixSourceSet": 1661899116,
+    "tenIdenticalSourceSetsBytes": 16618991160,
+    "docsBytesPerSet": 614066139,
+    "provenanceBytesPerSet": 58501147,
+    "publicStaticBytesPerSet": 952599845,
+    "publicStaticScope": "Upper bound; active runtime asset closure is not established.",
+    "sourceRevisions": {
+      "auto-best": "14b3cbe71f7d84d0e16a0140467899319e00d4be",
+      "modern": "fc267cef378316516258936ad4cac843e78df710",
+      "import": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
+      "app": "70c2b80671e217ab299549a938a537c0b9559611",
+      "mobile": "14def50af685f8ac5ec2659ba2f6b74c55bd1f30",
+      "karento-best": "513b07fa7369a5090e03a54202ec2118971eeb71"
+    },
+    "sourceApproval": "Candidate source measurements do not select releases. Mobile and Signature acceptance remains incomplete."
+  },
+  "theoreticalReuse": {
+    "uniqueContentBytesAcrossTen": 1557192875,
+    "nineRepeatedSameFamilySetsBytes": 14957092044,
+    "totalPotentialSavingsBytes": 15061798285,
+    "limitation": "All-file immutable content reuse upper bound. These are not demonstrated binary-pool savings; editable canonical source must remain independent."
+  },
+  "app": {
+    "referenceAssetsBytes": 472905931,
+    "videoFiles": 28,
+    "videoBytes": 189593027,
+    "largestPublicFileBytes": 15744649,
+    "policyCandidates": 51,
+    "policyCandidateBytes": 14843359,
+    "existingExactHashUnusedCandidates": 49,
+    "existingExactHashUnusedBytes": 14449598,
+    "retainedCandidates": [
+      {
+        "path": "brands/emblems/SOURCES.md",
+        "reason": "customized-or-updated"
+      },
+      {
+        "path": "services/finance.webp",
+        "reason": "runtime reference in lib/showroom-art.ts"
+      }
+    ],
+    "prospectiveUnreferencedCustomerVideosBytes": 67471414,
+    "prospectivePolicyCandidates": [
+      {
+        "path": "reference-assets/final-pass/customer-0.mp4",
+        "bytes": 15744649,
+        "sha256": "90a39ea6b39ebb4ed319aa14d0a1c62faae603590c724e7947bea033d39ad5aa"
+      },
+      {
+        "path": "reference-assets/final-pass/customer-1.mp4",
+        "bytes": 14913133,
+        "sha256": "027c57ff89e62baca86b323611f69edf532719f16e549ca41ad08957ad98183a"
+      },
+      {
+        "path": "reference-assets/final-pass/customer-2.mp4",
+        "bytes": 10154229,
+        "sha256": "af975f5dd561bd601cc02e7c5c572df584c2b27af3dba9e5745685c57db11733"
+      },
+      {
+        "path": "reference-assets/final-pass/customer-3.mp4",
+        "bytes": 12467219,
+        "sha256": "7713a3f4f57388d7261e21aa08ff51369a2fc504f6bfa32df10b21c9dc482141"
+      },
+      {
+        "path": "reference-assets/final-pass/customer-4.mp4",
+        "bytes": 14192184,
+        "sha256": "c77bfcda01c1b164a3e127ec0b20a3b58069a0fa6e8d4341b7c224ef8237aedf"
+      }
+    ],
+    "auditBoundary": "Uses exported runtime consumers; excluded recovery metadata is not a consumer. Referenced vehicle galleries, tours and StructuralSummary illustrations must remain.",
+    "implementedPruning": false,
+    "providerGap": "CFNext currently copies public through Vite without familyRetention. Reuse the existing hash/consumer planner on derived bytes before payload sealing; preserve immutable source and record omissions."
+  },
+  "deploymentComparison": {
+    "auto-best": {
+      "revision": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+      "staticAssetBytes": 20646407,
+      "workerBytes": 2241713,
+      "totalBytes": 22888120,
+      "scope": "Existing framework qualification on older approved source; not a current UK dealer."
+    },
+    "mobile": {
+      "revision": "876590474d01178413feccf3153a0859230158a1",
+      "workerBytes": 2278059,
+      "totalStaticBytes": null,
+      "scope": "Aggregate static bytes absent from retained receipt; do not infer a total."
+    }
+  },
+  "implemented": {
+    "path": "scripts/package-dealer.mjs",
+    "option": "--asset-pool PATH",
+    "helper": "scripts/lib/derived-assets.mjs",
+    "scope": "Immutable generated binary assets only, with independent editable source/text. Same-volume hardlinks; cross-volume copies.",
+    "cliSafety": "Pool resolved relative to Cars root; same containment guard for dry-run/write. Configured pool appears in CLI JSON. Dry run creates no pool/output.",
+    "verification": "2 CLI tests including ten overlap cases, 2 derived-pool behavior tests and 3 selected existing package checks passed."
+  },
+  "nextSteps": [
+    "Use one bounded sequential build/package owner and the existing shared binary pool.",
+    "Implement reviewed, versioned dealer export retention for historical evidence and unused donor assets through the existing workflow; preserve source provenance, installable code/locks/licenses and all six designs.",
+    "Qualify exact final template releases and all-family UK/Cloudflare behavior before the ten-dealer batch."
+  ],
+  "limitations": [
+    "Canonical source duplication is not resolved by this CLI change.",
+    "No master asset or historical evidence was deleted; no complete template reference folder was dropped.",
+    "No ten-dealer installation or branded Cloudflare origin is asserted."
+  ]
+}

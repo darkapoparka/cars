@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-10",
+  "scope": "Shared Cars workflow UK mileage and generated asset-pool integration; not a dealer build, template approval, Free-plan CPU qualification or hosted acceptance.",
+  "checkout": {
+    "branch": "main",
+    "baseAtRecord": "2aedade50352aa83eab498921e96e93a3710d891",
+    "sharedWorkingTree": true,
+    "foreignChangesPreserved": true
+  },
+  "sourceFiles": {
+    "scripts/lib/client-refresh-normalize.mjs": "1e1665d8c50e1f2a62da02077d0de2822cba72476000370c6af43c6973d05e13",
+    "scripts/refresh-client.test.mjs": "268ebe077c55c407355ac8444b06787023924339c2e64b44995cb4e6f79d2dbb",
+    "scripts/lib/client-refresh-adapters.mjs": "f806db93dfb9273bebe4597807be7e15a689fe05bb395003e7d3495e6b64b509",
+    "scripts/uk-svelte-personalization.test.mjs": "02a14943c0a2ec7566d40b5534090ef1ac1bd4ef3265d39361ce5c36337f2502",
+    "scripts/lib/app-dealer-adapter.mjs": "037ebfc5e2b8b718700e32301778401d6f820be89fc5487db58d126fe1a6044a",
+    "scripts/app-dealer-adapter.test.mjs": "19d61687895deb7763a069f3426dc96b4f548029b97616aa6ad781884ee3b320",
+    "scripts/package-dealer.mjs": "6d76676055d6c0f6b0f6c50792fcd6f5cfb4edcc2ab55e1b851a8cd966bab2d9",
+    "scripts/package-dealer-asset-pool-cli.test.mjs": "902684b5e617640886c2e4e51558af216dea9eab61e293688bd89970ae1a285d",
+    "scripts/six-variant-refresh.test.mjs": "50a08bfa6cff5e27b8d6d3f54d6f17fb4326e4fb605b6d5e31da50991715f3af"
+  },
+  "workflow": {
+    "node": "22.23.2",
+    "fullRun": {
+      "command": "node --test --test-concurrency=2 <all 66 scripts/**/*.test.mjs files>",
+      "files": 66,
+      "tests": 528,
+      "passed": 522,
+      "failed": 6,
+      "skipped": 0,
+      "durationMs": 959029.3281,
+      "logSha256": "8cf2939c414a31c9a7b5932c9ef2ab897288a7133f0acb5ac6c2b12036b7b0a3",
+      "failedNames": [
+        "Signature discovery retains dated dealer IDs, media and currency without inventing missing facts or template offers",
+        "Signature discovery removes currency comparisons for mixed feeds and discloses illustrative inventory",
+        "Signature Bulgarian dealer values work with the native mileage, decimal price and fuel/transmission filters",
+        "Signature dealer cards and PDP share exact dated source IDs/media without donor staff, reviews or rental quotes",
+        "Signature native binding refuses disconnected typed consumers and retains the guarded older host adaptation",
+        "Signature native mobile forwarding permits only the optional trailing shorthand loan-state binding"
+      ],
+      "cause": "All six failures read dirty ContactLocationCard markup rejected by the existing Signature optional-email boundary guard."
+    },
+    "focusedPhases": [
+      {
+        "command": "node --test scripts/refresh-client.test.mjs scripts/app-dealer-adapter.test.mjs",
+        "passed": 20,
+        "failed": 0,
+        "when": "Before full checkpoint; App had five cases."
+      },
+      {
+        "command": "node --test scripts/uk-svelte-personalization.test.mjs",
+        "passed": 8,
+        "failed": 0,
+        "checks": [
+          "Generated Svelte compiler",
+          "strict TypeScript",
+          "unit-consistent filtering",
+          "unknown mileage",
+          "unverified sample badges"
+        ],
+        "dependencies": "Reused active autobest-node_modules via CARS_SVELTE_QA_DEPS."
+      },
+      {
+        "command": "node --test scripts/derived-assets.test.mjs scripts/package-dealer.test.mjs scripts/package-dealer-asset-pool-cli.test.mjs",
+        "passed": 7,
+        "failed": 0
+      },
+      {
+        "command": "node --test scripts/six-variant-refresh.test.mjs",
+        "passed": 17,
+        "failed": 0,
+        "skipped": 0,
+        "when": "After narrow immutable candidate contact-fixture synchronization; production guard/master unchanged."
+      },
+      {
+        "command": "node --test scripts/app-dealer-adapter.test.mjs",
+        "passed": 6,
+        "failed": 0,
+        "when": "After final review repaired formatted published-zero input; includes actual normalizeListing to App pipeline."
+      },
+      {
+        "command": "node --test scripts/refresh-client.test.mjs scripts/app-dealer-adapter.test.mjs",
+        "passed": 21,
+        "failed": 0,
+        "skipped": 0,
+        "durationMs": 2077.4128,
+        "when": "Final normalization/App recheck after marker-bearing labels such as POA (stock 42) and Not published (2026) were kept unknown, while separate explicit numeric facts retain precedence.",
+        "logSha256": "b5f1921a044de15d1b08f8da9e669b8ee75788d9f0a58d8aa206f0e8f5735381"
+      }
+    ],
+    "resolution": {
+      "status": "passed",
+      "unresolvedFailures": 0,
+      "statement": "The original 528-test run is not relabeled as clean. The complete affected Signature test file and changed App suite passed focused rechecks; other passed suites were not rerun."
+    },
+    "fixture": {
+      "family": "karento-best",
+      "path": "src/lib/components/contact/ContactLocationCard.svelte",
+      "candidate": "513b07fa7369a5090e03a54202ec2118971eeb71",
+      "approved": false,
+      "productionGuardWeakened": false
+    },
+    "documentChecks": {
+      "command": "node scripts/check-workflow.mjs",
+      "status": "passed",
+      "activeDocuments": 12,
+      "skills": 3,
+      "commandHelp": "passed"
+    }
+  },
+  "gitScope": {
+    "mixedPaths": [
+      "scripts/package-dealer.mjs",
+      "scripts/six-variant-refresh.test.mjs"
+    ],
+    "isolation": "Commit only asset-pool CLI and immutable contact-fixture hunks; preserve foreign switcher and Signature/Mobile test additions in shared working tree.",
+    "boundary": "Full checkpoint validates the shared working tree, including concurrent foreign source. It is not an assertion that all foreign hunks are committed by this task."
+  },
+  "storage": {
+    "audit": "docs/qa/uk-source-storage-2026-10-10.json",
+    "sourceBytesPerSixSet": 1661899116,
+    "sourceBytesTenSets": 16618991160,
+    "feature": "Existing derived binary pool exposed through package-dealer --asset-pool PATH.",
+    "canonicalSourceReuseImplemented": false,
+    "noMasterOrDealerSourceHardlinks": true,
+    "olderAutoBestEmittedBytes": 22888120
+  },
+  "remaining": [
+    "Reviewed versioned source export retention and CFNext generated-public retention hook",
+    "Exact final six immutable release selection",
+    "Remaining UK currency/distance/localization consumers",
+    "Permitted dated stock/branding media and six-family pilot",
+    "Actual mounted hosted routes, visual checks and Free CPU qualification"
+  ],
+  "noCleanupOfUserData": true
+}

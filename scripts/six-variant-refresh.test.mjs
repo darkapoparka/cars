@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
+import { execFileSync } from 'node:child_process';
 import { planSixDesignSelection } from './lib/six-design-release.mjs';
 import { selectPinnedRevisions, updateManifestPins, planDealerUpgrade, materializeUpgradeCandidate } from './dealer-updates/three-way-upgrade.mjs';
 import { updateSelection, addLegacyDetailUpgrade } from './dealer-updates/update-dealer-template.mjs';
@@ -93,6 +94,9 @@ function extendedFixture(t,key) {
 function signatureFixture(t) {
   const x=extendedFixture(t,'karento-best'),template=path.resolve('templates/karento-best');
   for(const name of filesAt(template).filter(name=>name.startsWith('src/lib/')))x.files.set('karento-best/'+name,fs.readFileSync(path.join(template,name)));
+  // Pin this reviewed adapter boundary while contact polish is dirty; this candidate is not release approval.
+  const contact='src/lib/components/contact/ContactLocationCard.svelte';
+  x.files.set('karento-best/'+contact,execFileSync('git',['show','513b07fa7369a5090e03a54202ec2118971eeb71:templates/karento-best/'+contact]));
   return x;
 }
 

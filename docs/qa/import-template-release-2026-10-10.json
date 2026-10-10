@@ -1,0 +1,375 @@
+{
+  "repository": "darkapoparka/cars",
+  "commit": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
+  "sourcePath": "templates/import",
+  "sourceTree": "874b601a661045dd0e265bb14a9b0af762a17d0f",
+  "sourceDigest": "25cc87e3d71101be065333c5d5d8c124516a936281b1b3c81aba6e674253a4b1",
+  "approved": true,
+  "verifiedAt": "2026-10-09T17:15:00.520Z",
+  "release": "six-design-source-import-2026-10-09",
+  "runtime": {
+    "node": "24.21.0"
+  },
+  "checks": [
+    {
+      "name": "catalog-completeness",
+      "status": "passed",
+      "scope": "Fresh exact-source EN/BG catalog key and interpolation parity plus native59-test acceptance.",
+      "evidence": [
+        {
+          "path": "docs/releases/six-design-2026-10-09/native/import-a51-catalogs.json",
+          "sha256": "b410fe99cfe0eba6f4b96512b09c1737f907b54ce1b6ca1d0a37571b03b785d8"
+        },
+        {
+          "path": "docs/releases/six-design-2026-10-09/native/import-a51-native-tests.json",
+          "sha256": "233ed5dbd6f67b04b248de55b3a5308c6f949110f1a31dbfc74dc4277b1ece23"
+        }
+      ],
+      "evidenceSha256": "5d7ae80720104d2260481c818a43714ac686567800213fb2507899612b0a9421"
+    },
+    {
+      "name": "hardcoded-ui",
+      "status": "passed",
+      "scope": "Fresh source-copy audits and EN/BG route rendering for the selected completed UI cut.",
+      "evidence": [
+        {
+          "path": "docs/releases/six-design-2026-10-09/native/import-a51-native-tests.json",
+          "sha256": "233ed5dbd6f67b04b248de55b3a5308c6f949110f1a31dbfc74dc4277b1ece23"
+        },
+        {
+          "path": "docs/releases/six-design-2026-10-09/native/import-a51-public-qualified.json",
+          "sha256": "1de43b49485cb5dae8f9fa395f2cf5ed5065ed81e8944370478e1b1c6191eb66"
+        }
+      ],
+      "evidenceSha256": "fc4a1a540414e045eeb060315a238b0b97385995cd547c14b1e43e91732507fa"
+    },
+    {
+      "name": "native-routing",
+      "status": "passed",
+      "scope": "Fresh public and both-mount route/redirect/resource boundaries and client locale navigation.",
+      "evidence": [
+        {
+          "path": "docs/releases/six-design-2026-10-09/native/import-a51-native-tests.json",
+          "sha256": "233ed5dbd6f67b04b248de55b3a5308c6f949110f1a31dbfc74dc4277b1ece23"
+        },
+        {
+          "path": "docs/releases/six-design-2026-10-09/native/import-a51-public-qualified.json",
+          "sha256": "1de43b49485cb5dae8f9fa395f2cf5ed5065ed81e8944370478e1b1c6191eb66"
+        },
+        {
+          "path": "docs/releases/six-design-2026-10-09/native/import-a51-mounted.json",
+          "sha256": "1e91ac6b4a4e51660d57c2b71320e01a93f1abf9320848a9b155e4926fb1f3ce"
+        }
+      ],
+      "evidenceSha256": "35502910824545032ce0938c4f81445963ae87395a23c19029161f4b9b2d598e"
+    },
+    {
+      "name": "standalone-journeys",
+      "status": "passed",
+      "scope": "Fresh120 public route visits across EN/BG320/390/1440 within the twenty-test native suite.",
+      "evidence": [
+        {
+          "path": "docs/releases/six-design-2026-10-09/native/import-a51-public-qualified.json",
+          "sha256": "1de43b49485cb5dae8f9fa395f2cf5ed5065ed81e8944370478e1b1c6191eb66"
+        }
+      ],
+      "evidenceSha256": "6cbe044ad67035be10b88cbb5d69710f4626bbcb44adef0f1aa449168c1705bf"
+    },
+    {
+      "name": "mounted-journeys",
+      "status": "passed",
+      "scope": "Fresh exact Node24 builds, six journeys and eleven policy cases in each slot position; four mobile stock/filter/sort/PDP/gallery/share/back interactions.",
+      "evidence": [
+        {
+          "path": "docs/releases/six-design-2026-10-09/native/import-a51-mounted.json",
+          "sha256": "1e91ac6b4a4e51660d57c2b71320e01a93f1abf9320848a9b155e4926fb1f3ce"
+        }
+      ],
+      "evidenceSha256": "a81c5b03067639eca149294d2751acb99cc95ecd457bd6be9a3159b76653edfc"
+    },
+    {
+      "name": "public-journeys",
+      "status": "passed",
+      "scope": "Fresh20/20 native public tests bound to unchanged READYa51 alias before and after execution.",
+      "evidence": [
+        {
+          "path": "docs/releases/six-design-2026-10-09/native/import-a51-public-qualified.json",
+          "sha256": "1de43b49485cb5dae8f9fa395f2cf5ed5065ed81e8944370478e1b1c6191eb66"
+        },
+        {
+          "path": "docs/releases/six-design-2026-10-09/native/import-a51-public-provider-continuity.json",
+          "sha256": "972b79d0afb9b789ceee0e9c700026c6fc7ffcc53be24b0fd95f2cdc59891bbb"
+        }
+      ],
+      "evidenceSha256": "2e764d5a8e0e50a632ba8cae4f7d139ae8356afdecdb21c40146ad6b76c29125"
+    },
+    {
+      "name": "preferences-no-js",
+      "status": "passed",
+      "scope": "Actual JavaScript-disabled browser submits the native preference form and retains localized contact fallback.",
+      "evidence": [
+        {
+          "path": "docs/releases/six-design-2026-10-09/native/import-a51-public-qualified.json",
+          "sha256": "1de43b49485cb5dae8f9fa395f2cf5ed5065ed81e8944370478e1b1c6191eb66"
+        }
+      ],
+      "evidenceSha256": "6cbe044ad67035be10b88cbb5d69710f4626bbcb44adef0f1aa449168c1705bf"
+    },
+    {
+      "name": "preferences-storage-disabled",
+      "status": "passed",
+      "scope": "Actual storage denial and cookie rejection retain explicit locale and independent country choices.",
+      "evidence": [
+        {
+          "path": "docs/releases/six-design-2026-10-09/native/import-a51-public-qualified.json",
+          "sha256": "1de43b49485cb5dae8f9fa395f2cf5ed5065ed81e8944370478e1b1c6191eb66"
+        }
+      ],
+      "evidenceSha256": "6cbe044ad67035be10b88cbb5d69710f4626bbcb44adef0f1aa449168c1705bf"
+    },
+    {
+      "name": "preferences-races",
+      "status": "passed",
+      "scope": "Actual close/reopen stale-save and native focus/save/dismiss preference scenarios; race responses mocked as committed harness specifies.",
+      "evidence": [
+        {
+          "path": "docs/releases/six-design-2026-10-09/native/import-a51-public-qualified.json",
+          "sha256": "1de43b49485cb5dae8f9fa395f2cf5ed5065ed81e8944370478e1b1c6191eb66"
+        }
+      ],
+      "evidenceSha256": "6cbe044ad67035be10b88cbb5d69710f4626bbcb44adef0f1aa449168c1705bf"
+    },
+    {
+      "name": "request-isolation",
+      "status": "passed",
+      "scope": "Fresh conflicting hints/cookies, simultaneous locale requests and private error/cache behavior.",
+      "evidence": [
+        {
+          "path": "docs/releases/six-design-2026-10-09/native/import-a51-native-tests.json",
+          "sha256": "233ed5dbd6f67b04b248de55b3a5308c6f949110f1a31dbfc74dc4277b1ece23"
+        },
+        {
+          "path": "docs/releases/six-design-2026-10-09/native/import-a51-public-qualified.json",
+          "sha256": "1de43b49485cb5dae8f9fa395f2cf5ed5065ed81e8944370478e1b1c6191eb66"
+        },
+        {
+          "path": "docs/releases/six-design-2026-10-09/native/import-a51-mounted.json",
+          "sha256": "1e91ac6b4a4e51660d57c2b71320e01a93f1abf9320848a9b155e4926fb1f3ce"
+        }
+      ],
+      "evidenceSha256": "35502910824545032ce0938c4f81445963ae87395a23c19029161f4b9b2d598e"
+    },
+    {
+      "name": "security-write-blocking",
+      "status": "passed",
+      "scope": "Native input/origin/return/body guards plus business-form validation with no business write.",
+      "evidence": [
+        {
+          "path": "docs/releases/six-design-2026-10-09/native/import-a51-native-tests.json",
+          "sha256": "233ed5dbd6f67b04b248de55b3a5308c6f949110f1a31dbfc74dc4277b1ece23"
+        },
+        {
+          "path": "docs/releases/six-design-2026-10-09/native/import-a51-public-qualified.json",
+          "sha256": "1de43b49485cb5dae8f9fa395f2cf5ed5065ed81e8944370478e1b1c6191eb66"
+        },
+        {
+          "path": "docs/releases/six-design-2026-10-09/native/import-a51-mounted.json",
+          "sha256": "1e91ac6b4a4e51660d57c2b71320e01a93f1abf9320848a9b155e4926fb1f3ce"
+        }
+      ],
+      "evidenceSha256": "35502910824545032ce0938c4f81445963ae87395a23c19029161f4b9b2d598e"
+    },
+    {
+      "name": "assets-preserved",
+      "status": "passed",
+      "scope": "Exact publishing mirror closure for all3411 retained blobs/modes and fresh no-error image/script/font/stylesheet checks in public and mounted browsers.",
+      "evidence": [
+        {
+          "path": "docs/releases/six-design-2026-10-09/native/import-a51-exact-mirror.json",
+          "sha256": "26e76c7bd600109187f6a69fc795ad50156afb8ee0239701b8d1f2e560afad56"
+        },
+        {
+          "path": "docs/releases/six-design-2026-10-09/native/import-a51-public-qualified.json",
+          "sha256": "1de43b49485cb5dae8f9fa395f2cf5ed5065ed81e8944370478e1b1c6191eb66"
+        },
+        {
+          "path": "docs/releases/six-design-2026-10-09/native/import-a51-mounted.json",
+          "sha256": "1e91ac6b4a4e51660d57c2b71320e01a93f1abf9320848a9b155e4926fb1f3ce"
+        }
+      ],
+      "evidenceSha256": "647387dae84a021a1fb2839565ba31aba3936379bdbdf84fdbf0d25df45ad7e6"
+    }
+  ],
+  "standalone": {
+    "mobile": true,
+    "desktop": true
+  },
+  "modes": {
+    "standalone": "Fresh exact-source READY public master browser checks.",
+    "mounted": "Actual Node24 compiler output and EN/BG320/390/1440 journeys at both variant-2 and variant-3.",
+    "dealer": "Requires final individualized build and public alias verification."
+  },
+  "nativeLocalization": {
+    "schemaVersion": 1,
+    "adapter": "native-v1",
+    "repository": "darkapoparka/cars",
+    "commit": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
+    "sourcePath": "templates/import",
+    "sourceTree": "874b601a661045dd0e265bb14a9b0af762a17d0f",
+    "sourceDigest": "25cc87e3d71101be065333c5d5d8c124516a936281b1b3c81aba6e674253a4b1",
+    "verifiedAt": "2026-10-09T17:15:00.520Z",
+    "evidenceSha256": "921feeafdd79a639b4f56e92a9e7a2b6da4073854c8afd52e3ca248481f6ec1c",
+    "locales": [
+      "en",
+      "bg"
+    ],
+    "widths": [
+      320,
+      390,
+      1440
+    ],
+    "catalogs": [
+      {
+        "format": "typescript-pair",
+        "path": "src/lib/locale/messages.ts",
+        "en": "en",
+        "bg": "bg"
+      },
+      {
+        "format": "typescript-pair",
+        "path": "src/lib/i18n/native.ts",
+        "en": "nativeEn",
+        "bg": "nativeBg"
+      },
+      {
+        "format": "typescript-pair",
+        "path": "src/lib/content/localized.ts",
+        "en": "contentEn",
+        "bg": "contentBg"
+      },
+      {
+        "format": "typescript-rows",
+        "path": "src/lib/content/inventory-localized.ts",
+        "export": "inventoryCopy"
+      },
+      {
+        "format": "typescript-source-map",
+        "path": "src/lib/content/extra-localized.ts",
+        "export": "extraEnglish"
+      }
+    ],
+    "deployment": {
+      "id": "dpl_cNMRwaZ2hJAWq1HsV3unWk9SpLnj",
+      "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+      "state": "READY",
+      "sourceCommit": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
+      "publicAlias": "https://cars-template-import.vercel.app/",
+      "publishingRepository": "darkapoparka/cars-template-import",
+      "publishingCommit": "6a28273a84d75f7f157457e7e26be2030ce2de72",
+      "sourceMapping": {
+        "path": "docs/releases/six-design-2026-10-09/native/import-a51-exact-mirror.json",
+        "sha256": "26e76c7bd600109187f6a69fc795ad50156afb8ee0239701b8d1f2e560afad56"
+      }
+    },
+    "checks": [
+      {
+        "name": "catalog-completeness",
+        "status": "passed",
+        "evidenceSha256": "5d7ae80720104d2260481c818a43714ac686567800213fb2507899612b0a9421"
+      },
+      {
+        "name": "hardcoded-ui",
+        "status": "passed",
+        "evidenceSha256": "fc4a1a540414e045eeb060315a238b0b97385995cd547c14b1e43e91732507fa"
+      },
+      {
+        "name": "native-routing",
+        "status": "passed",
+        "evidenceSha256": "35502910824545032ce0938c4f81445963ae87395a23c19029161f4b9b2d598e"
+      },
+      {
+        "name": "standalone-journeys",
+        "status": "passed",
+        "evidenceSha256": "6cbe044ad67035be10b88cbb5d69710f4626bbcb44adef0f1aa449168c1705bf"
+      },
+      {
+        "name": "mounted-journeys",
+        "status": "passed",
+        "evidenceSha256": "a81c5b03067639eca149294d2751acb99cc95ecd457bd6be9a3159b76653edfc"
+      },
+      {
+        "name": "public-journeys",
+        "status": "passed",
+        "evidenceSha256": "2e764d5a8e0e50a632ba8cae4f7d139ae8356afdecdb21c40146ad6b76c29125"
+      },
+      {
+        "name": "preferences-no-js",
+        "status": "passed",
+        "evidenceSha256": "6cbe044ad67035be10b88cbb5d69710f4626bbcb44adef0f1aa449168c1705bf"
+      },
+      {
+        "name": "preferences-storage-disabled",
+        "status": "passed",
+        "evidenceSha256": "6cbe044ad67035be10b88cbb5d69710f4626bbcb44adef0f1aa449168c1705bf"
+      },
+      {
+        "name": "preferences-races",
+        "status": "passed",
+        "evidenceSha256": "6cbe044ad67035be10b88cbb5d69710f4626bbcb44adef0f1aa449168c1705bf"
+      },
+      {
+        "name": "request-isolation",
+        "status": "passed",
+        "evidenceSha256": "35502910824545032ce0938c4f81445963ae87395a23c19029161f4b9b2d598e"
+      },
+      {
+        "name": "security-write-blocking",
+        "status": "passed",
+        "evidenceSha256": "35502910824545032ce0938c4f81445963ae87395a23c19029161f4b9b2d598e"
+      },
+      {
+        "name": "assets-preserved",
+        "status": "passed",
+        "evidenceSha256": "647387dae84a021a1fb2839565ba31aba3936379bdbdf84fdbf0d25df45ad7e6"
+      }
+    ]
+  },
+  "qualification": {
+    "path": "docs/releases/six-design-2026-10-09/native/import-a51-native-qualification.json",
+    "sha256": "921feeafdd79a639b4f56e92a9e7a2b6da4073854c8afd52e3ca248481f6ec1c"
+  },
+  "limitations": [
+    "Older397 public run crossed a changing alias and remains diagnostic only; no cases or summaries are reused for this acceptance.",
+    "All original and derived harnesses, results, screenshots and logs remain at their hashed C paths.",
+    "Import-only both-order acceptance does not relabel sibling family builds.",
+    "No enquiries, outreach, billing, DNS or project protection changes occurred."
+  ],
+  "ownerVisualApproval": false,
+  "dealersDeployed": false,
+  "schemaVersion": 1,
+  "kind": "same-source-release-evidence-reconciliation",
+  "recordedAt": "2026-10-10T03:31:05.219Z",
+  "reconciliation": {
+    "recordedAt": "2026-10-10T03:31:05.219Z",
+    "original": {
+      "path": "docs/releases/six-design-2026-10-09/native/import-a51-release.json",
+      "sha256": "e01306a09e8ff75aec0b9b2ed1a6bb506c54fd391b198ce1f14c7e42723b71f4"
+    },
+    "reusedExactSource": true,
+    "originalVerifiedAt": "2026-10-09T17:15:00.520Z",
+    "currentDeploymentVerified": {
+      "id": "dpl_cNMRwaZ2hJAWq1HsV3unWk9SpLnj",
+      "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+      "state": "READY",
+      "publishingCommit": "6a28273a84d75f7f157457e7e26be2030ce2de72",
+      "publicAlias": "https://cars-template-import.vercel.app/",
+      "sourceCommit": "a51f329b0b9e8e4d21665e16abf2734505d02e07"
+    },
+    "ownerThread": {
+      "id": "01a12017-9271-76d2-a463-a22697bbbcbe",
+      "title": "Refine mobile PDP layout",
+      "status": "active"
+    },
+    "limitation": "Latest ongoing October10 Import UI work is uncommitted and not included. This is the existing reviewed a51 source, not a new final-polish release."
+  }
+}

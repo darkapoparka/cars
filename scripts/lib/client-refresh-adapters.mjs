@@ -176,6 +176,134 @@ function mileageKm(listing) {
     listing.mileageUnit === 'mi' ? listing.mileageValue * 1.609344 : listing.mileageValue
   ));
 }
+function originalMileageFacts(listing) {
+  if (listing.mileageOnRequest === true || listing.raw?.mileageOnRequest === true) return { mileageKnown: false };
+  const raw = listing.raw || {};
+  const supplied = ['mileageKm', 'mileageMiles', 'mileageValue', 'km', 'mileage'].some(key =>
+    raw[key] !== undefined && raw[key] !== null && raw[key] !== '');
+  if (!supplied) return { mileageKnown: false };
+  if (!Number.isFinite(listing.mileageValue) || listing.mileageValue < 0 || !['km', 'mi'].includes(listing.mileageUnit)) {
+    throw new Error('Invalid original stock mileage: ' + listing.id);
+  }
+  return { mileageKnown: true, mileageValue: listing.mileageValue, mileageUnit: listing.mileageUnit };
+}
+const mileageSourcePaths = {
+  'auto-best': ['src/lib/components/vehicles/VehicleCard.svelte', 'src/routes/listing-detail-v1/[id]/+page.svelte',
+    'src/lib/data/listing.ts', 'localization/catalog.reviewed.json', 'localization/common.json'],
+  import: ['src/lib/data/daynight.ts', 'src/lib/data/vehicles.ts', 'src/lib/types/vehicle.ts',
+    'src/lib/domain/vehicle-card.ts', 'src/lib/server/vehicle-detail.ts', 'src/lib/domain/vehicle-search.ts',
+    'src/lib/server/inventory-options.ts', 'src/lib/server/inventory-options-mobile.ts']
+};
+/** Existing adapter seam, applied only to generated UK dealers, never template masters. */
+function personalizeSvelteMileage(files, key, profile) {
+  if (profile.business.countryCode !== 'GB' || profile.business.distanceUnit !== 'mi') return [];
+  if (!mileageSourcePaths[key]) throw new Error('Unsupported UK Svelte mileage family: ' + key);
+  const output = new Map(files);
+  const get = name => {
+    if (!output.has(name)) throw new Error(key + ': UK mileage source missing ' + name);
+    return String(output.get(name)).replace(/\r\n/g, '\n');
+  };
+  const patch = (name, from, to, count = 1) => {
+    const source = get(name);
+    if (source.split(from).length !== count + 1) throw new Error(key + ': UK mileage boundary changed: ' + name);
+    output.set(name, source.split(from).join(to));
+  };
+  const addImport = (name, imports) => {
+    const source = get(name);
+    if (source.includes("from '$lib/data/dealer-mileage'")) throw new Error(key + ': UK mileage already personalized: ' + name);
+    output.set(name, `import { ${imports} } from '$lib/data/dealer-mileage';\n` + source);
+  };
+  output.set('src/lib/data/dealer-mileage.ts', `// Dealer-owned units; visitor language/country never changes stock facts.
+export type MileageFacts = { mileageKnown?: boolean; mileageValue?: number; mileageUnit?: 'km' | 'mi'; mileageKm?: number; mileage?: number | string };
+export const dealerDistanceUnit = 'mi' as const;
+const milesToKm = 1.609344;
+export function canonicalMileage(facts: MileageFacts): number {
+  if (facts.mileageKnown === false) return NaN;
+  if (typeof facts.mileageValue === 'number' && Number.isFinite(facts.mileageValue) && facts.mileageValue >= 0 && (facts.mileageUnit === 'mi' || facts.mileageUnit === 'km'))
+    return facts.mileageValue * (facts.mileageUnit === 'mi' ? milesToKm : 1);
+  return facts.mileageKm ?? (typeof facts.mileage === 'number' ? facts.mileage : NaN);
+}
+export const mileageLimitKm = (value: number): number => value * milesToKm;
+// Remove division noise at integer range boundaries; original stock facts stay untouched.
+export const mileageForDealer = (facts: MileageFacts): number => Number((canonicalMileage(facts) / milesToKm).toFixed(8));
+export function formatStockMileage(facts: MileageFacts, locale: string = 'en'): string {
+  if (!Number.isFinite(canonicalMileage(facts))) return '—';
+  const unit = facts.mileageUnit ?? 'km';
+  const value = facts.mileageValue ?? canonicalMileage(facts);
+  return new Intl.NumberFormat(locale === 'bg' ? 'bg-BG' : ${q(profile.business.locale || 'en-GB')}, { style: 'unit', unit: unit === 'mi' ? 'mile' : 'kilometer', unitDisplay: 'short' }).format(value);
+}
+export const formatDealerMileage = (value: number, locale: string = 'en'): string => formatStockMileage({ mileageValue: value, mileageUnit: dealerDistanceUnit }, locale);
+export const mileageSortValue = (facts: MileageFacts): number => Number.isFinite(canonicalMileage(facts)) ? canonicalMileage(facts) : Infinity;
+`);
+  if (key === 'auto-best') {
+    for (const [name, object, count] of [['src/lib/components/vehicles/VehicleCard.svelte', 'vehicle', 3],
+      ['src/routes/listing-detail-v1/[id]/+page.svelte', 'data.vehicle', 2]]) {
+      patch(name, '<script lang="ts">', '<script lang="ts">\n  import { formatStockMileage } from \'$lib/data/dealer-mileage\';');
+      patch(name, `formatMileage(${object}.mileageKm, i18n.locale)`, `formatStockMileage(${object}, i18n.locale)`, count);
+    }
+    addImport('src/lib/data/listing.ts', 'canonicalMileage, mileageLimitKm, mileageSortValue');
+    patch('src/lib/data/listing.ts', 'if (filters.mileageMax !== null && vehicle.mileageKm > filters.mileageMax) return false;',
+      'if (filters.mileageMax !== null && !(canonicalMileage(vehicle) <= mileageLimitKm(filters.mileageMax))) return false;');
+    patch('src/lib/data/listing.ts', "if (filters.sort === 'mileage-asc') return a.mileageKm - b.mileageKm;",
+      "if (filters.sort === 'mileage-asc') return mileageSortValue(a) - mileageSortValue(b);");
+    const name = 'localization/catalog.reviewed.json';
+    const rows = JSON.parse(get(name));
+    for (const [id, en, bg] of [['m_694bea758e96', 'Mileage, mi', 'Пробег, мили'],
+      ['m_ac9577848c3a', 'Maximum mileage (mi)', 'Максимален пробег (мили)'],
+      ['m_243dcf897937', 'Up to {p0} mi', 'До {p0} мили']]) {
+      const matching = rows.filter(row => row.key === id);
+      if (matching.length !== 1 || !/\bkm\b/.test(matching[0].en)) throw new Error(key + ': UK mileage catalog boundary changed: ' + id);
+      Object.assign(matching[0], { en, bg });
+    }
+    output.set(name, JSON.stringify(rows, null, 2) + '\n');
+    const common = JSON.parse(get('localization/common.json'));
+    if (common['inventory.search.kilometres']?.en !== 'km' || common['inventory.search.kilometres']?.bg !== 'км') throw new Error(key + ': UK mileage unit catalog boundary changed');
+    common['inventory.search.kilometres'] = { en: 'mi', bg: 'мили' };
+    output.set('localization/common.json', JSON.stringify(common, null, 2) + '\n');
+  } else {
+    const fields = "\n\tmileageKnown?: boolean;\n\tmileageValue?: number;\n\tmileageUnit?: 'km' | 'mi';";
+    patch('src/lib/data/daynight.ts', '\tmileage: string;', '\tmileage: string;' + fields, 2);
+    addImport('src/lib/data/daynight.ts', 'canonicalMileage, formatStockMileage');
+    patch('src/lib/data/daynight.ts', 'const mileageKm = parseMileage(listing.mileage);',
+      "const mileageFacts = listing.mileageKnown === false ? { mileageKnown: false } : { mileageKnown: true, mileageValue: listing.mileageValue ?? parseMileage(listing.mileage), mileageUnit: listing.mileageUnit ?? 'km' as const };\n\tconst mileageKm = Number.isFinite(canonicalMileage(mileageFacts)) ? canonicalMileage(mileageFacts) : 0;");
+    patch('src/lib/data/daynight.ts', "mileage: `${mileageKm.toLocaleString('fr-FR').replace(/\\u202f/g, ' ')} km`,",
+      'mileage: formatStockMileage(mileageFacts),\n\t\t...mileageFacts,');
+    patch('src/lib/types/vehicle.ts', '\tmileage: number;', '\tmileage: number;' + fields);
+    patch('src/lib/data/vehicles.ts', '\tmileage: vehicle.mileageKm,',
+      '\tmileage: vehicle.mileageKm,\n\tmileageKnown: vehicle.mileageKnown,\n\tmileageValue: vehicle.mileageValue,\n\tmileageUnit: vehicle.mileageUnit,');
+    addImport('src/lib/domain/vehicle-card.ts', 'formatStockMileage, type MileageFacts');
+    patch('src/lib/domain/vehicle-card.ts', "export const formatInventoryKm = (value: number, locale: Locale = 'en') =>\n\t`${formatNumber(value, locale)} ${vehicleUnits[locale].distance}`;",
+      "export const formatInventoryKm = (value: number, locale: Locale = 'en', facts?: MileageFacts) =>\n\tfacts ? formatStockMileage(facts, locale) : `${formatNumber(value, locale)} ${vehicleUnits[locale].distance}`;");
+    patch('src/lib/domain/vehicle-card.ts', 'formatInventoryKm(vehicle.mileage, locale)', 'formatInventoryKm(vehicle.mileage, locale, vehicle)');
+    patch('src/lib/server/vehicle-detail.ts', 'formatInventoryKm(vehicle.mileage, locale)', 'formatInventoryKm(vehicle.mileage, locale, vehicle)');
+    addImport('src/lib/domain/vehicle-search.ts', 'canonicalMileage, mileageLimitKm, mileageSortValue');
+    patch('src/lib/domain/vehicle-search.ts', '!(vehicle.mileage >= minMileage)', '!(canonicalMileage(vehicle) >= mileageLimitKm(minMileage))');
+    patch('src/lib/domain/vehicle-search.ts', '!(vehicle.mileage <= maxMileage)', '!(canonicalMileage(vehicle) <= mileageLimitKm(maxMileage))');
+    patch('src/lib/domain/vehicle-search.ts', "if (sort === 'mileage') return sorted.sort((a, b) => a.mileage - b.mileage);",
+      "if (sort === 'mileage') return sorted.sort((a, b) => mileageSortValue(a) - mileageSortValue(b));");
+    const options = 'src/lib/server/inventory-options.ts';
+    for (const amount of [50000, 80000, 100000, 150000]) {
+      const spaced = new Intl.NumberFormat('fr-FR').format(amount).replace(/\u202f/g, ' ');
+      patch(options, `{ label: { bg: 'До ${spaced} км', en: 'Up to ${spaced} km' }, value: '${amount}' }`,
+        `{ label: { bg: 'До ${spaced} мили', en: 'Up to ${new Intl.NumberFormat('en-GB').format(amount)} mi' }, value: '${amount}' }`);
+    }
+    const mobile = 'src/lib/server/inventory-options-mobile.ts';
+    patch(mobile, "import { formatMileage, formatPrice } from '$lib/utils/format';",
+      "import { formatPrice } from '$lib/utils/format';\nimport { formatDealerMileage as formatMileage, mileageForDealer } from '$lib/data/dealer-mileage';");
+    patch(mobile, 'matchesRange(vehicle.mileage, range.value)', 'matchesRange(mileageForDealer(vehicle), range.value)');
+    for (const [amount, count] of [[80000, 1], [120000, 1], [160000, 2]]) patch(mobile, `formatMileage(${amount})`, `formatMileage(${amount}, locale)`, count);
+  }
+  const changed = ['src/lib/data/dealer-mileage.ts', ...mileageSourcePaths[key]];
+  for (const name of changed) files.set(name, output.get(name));
+  return changed;
+}
+function patchSvelteMileage(candidate, key, profile) {
+  if (profile.business.countryCode !== 'GB' || profile.business.distanceUnit !== 'mi') return [];
+  const files = new Map(mileageSourcePaths[key].map(name => [name, read(path.join(candidate, name))]));
+  const changed = personalizeSvelteMileage(files, key, profile);
+  for (const name of changed) write(path.join(candidate, name), files.get(name));
+  return changed;
+}
 function autoBestBody(bodyType, rawBody = '') {
   const normalized = String(bodyType || '').toLowerCase();
   const raw = String(rawBody || '').toLowerCase();
@@ -265,7 +393,7 @@ function autoBestInventory(profile) {
   const records = profile.listings.map((item, index) => ({
     id: index + 1,
     type: autoBestVehicleType(item),
-    verification: 'verified',
+    verification: item.raw?.verification === 'verified' && item.raw?.ownerConfirmed === true ? 'verified' : 'sample',
     evidenceUrl: item.sourceUrl || b.inventoryUrl,
     image: item.image,
     category: item.body || item.bodyType,
@@ -274,10 +402,11 @@ function autoBestInventory(profile) {
     title: item.title,
     year: String(item.year),
     yearNumber: item.year,
-    mileage: item.mileageUnit === 'mi'
+    mileage: !originalMileageFacts(item).mileageKnown ? '' : item.mileageUnit === 'mi'
       ? `${new Intl.NumberFormat(b.locale || 'en-US').format(item.mileageValue)} mi`
       : `${new Intl.NumberFormat(b.locale || 'bg-BG').format(item.mileageValue)} км`,
     mileageKm: mileageKm(item),
+    ...originalMileageFacts(item),
     fuel: item.fuel,
     transmission: item.transmission,
     equipment: autoBestEquipment(item.features),
@@ -316,6 +445,9 @@ export type Vehicle = {
   yearNumber: number;
   mileage: string;
   mileageKm: number;
+  mileageKnown?: boolean;
+  mileageValue?: number;
+  mileageUnit?: 'km' | 'mi';
   fuel: string;
   transmission: string;
   equipment: readonly VehicleEquipment[];
@@ -467,6 +599,7 @@ function patchAutoBest({ oldVariant, candidate, profile }) {
   patchAutoBestMap(candidate, profile);
   const localeFiles = patchAutoBestLocale(candidate, profile);
   const identityFile = patchAutoBestIdentity(candidate);
+  const mileageFiles = patchSvelteMileage(candidate, 'auto-best', profile);
   return [
     'src/lib/config/brand.ts',
     ...localeFiles,
@@ -474,7 +607,8 @@ function patchAutoBest({ oldVariant, candidate, profile }) {
     'src/lib/data/company.ts',
     'src/lib/data/dealer-profile.json',
     'src/lib/components/company/ShowroomMap.svelte (address adapter)',
-    identityFile
+    identityFile,
+    ...mileageFiles
   ];
 }
 
@@ -1004,9 +1138,10 @@ function importListingFeed(profile) {
       id: item.sourceId || item.id,
       image: item.image,
       location: item.location || b.city,
-      mileage: item.mileageUnit === 'mi'
+      mileage: !originalMileageFacts(item).mileageKnown ? '' : item.mileageUnit === 'mi'
         ? `${spacing(item.mileageValue)} mi`
         : `${spacing(item.mileageValue)} км`,
+      ...originalMileageFacts(item),
       photoCount: String(item.images.length),
       power: raw.power || (item.powerHp ? `${item.powerHp} к.с.` : ''),
       price,
@@ -1285,6 +1420,7 @@ function patchImport({ oldVariant, candidate, profile }) {
   write(feedFile, `${JSON.stringify(importListingFeed(profile), null, 2)}\n`);
   patchImportDayNight(candidate, oldVariant, profile);
   patchImportVehicles(candidate, profile);
+  const mileageFiles = patchSvelteMileage(candidate, 'import', profile);
   patchImportDealers(candidate, profile);
   patchImportAgents(candidate);
   const safeContent = applyImportSafeContent({ candidate, profile });
@@ -1303,6 +1439,7 @@ function patchImport({ oldVariant, candidate, profile }) {
     'src/lib/data/vehicles.ts',
     'src/lib/data/dealers.ts',
     'src/lib/data/agents.ts',
+    ...mileageFiles,
     'src/lib/data/dealer-profile.json',
     ...safeContent,
     ...changed,
@@ -1320,6 +1457,8 @@ export const refreshAdapterInternals = {
   autoBestBody,
   autoBestEquipment,
   autoBestInventory,
+  originalMileageFacts,
+  personalizeSvelteMileage,
   modernListing,
   carwowInventory,
   importListingFeed,

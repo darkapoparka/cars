@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "kind": "exact-source-template-release-evidence",
+  "repository": "darkapoparka/cars",
+  "commit": "0f9c79d28665272bb0041c751ede597642347239",
+  "sourcePath": "templates/karento-best",
+  "sourceTree": "431b6dc5bbe06b682b1557d23fd2ce34b9e92539",
+  "sourceDigest": "61bc3dd2adf03488375da6c3a932054ee51508d97137782ddb8271bb00db2ea5",
+  "exportPolicy": "cars-source-v1",
+  "recordedAt": "2026-10-10T03:31:05.219Z",
+  "verifiedAt": "2026-10-10T03:31:05.219Z",
+  "approved": false,
+  "release": "signature-source-checkpoint-2026-10-10-incomplete",
+  "runtime": {
+    "node": "26.10.0",
+    "hostingNode": "24",
+    "adapter": "@sveltejs/adapter-vercel@7.0.0"
+  },
+  "standalone": {
+    "mobile": false,
+    "desktop": false
+  },
+  "checks": [
+    {
+      "name": "recorded-source-integration",
+      "status": "passed",
+      "scope": "Owner records102 tests,zero Svelte errors/warnings,typography/geometry guards,formatting,Node build and3137 resolving links for b01a integration. Latest0f9 adds the current HTTP validator; mirror checks102 tests and zero diagnostics are recorded separately.",
+      "evidence": [
+        {
+          "path": "templates/karento-best/docs/SOURCE-HANDOFF-2026-10-10.md",
+          "sha256": "ab2be16f329fbbaca8a009e0c6a424a8e556a697c49d664cb609fa9d70e29390"
+        },
+        {
+          "path": "templates/karento-best/.runtime/evidence/mobile-final-20261010/integration-tests.log",
+          "sha256": "7bb0c316b35ba321385ecc88f50606df275e37c29f7a1e0b7237f884738dc355"
+        },
+        {
+          "path": "templates/karento-best/.runtime/evidence/mobile-final-20261010/integration-check.log",
+          "sha256": "3238663db124626804c762086255ed2e05dc58f28c6d8a1ce65a828cd5f865a2"
+        },
+        {
+          "path": "runtime/karento-astra/.runtime/karento-final-tests-20261010.log",
+          "sha256": "e885cd6f113be0de990139e9638477005eb41ba4b402b0f4bce9e0dbe84cd9a8"
+        },
+        {
+          "path": "runtime/karento-astra/.runtime/karento-final-check-20261010.log",
+          "sha256": "21835772aaf651c655334c3f1936844b673277941934a18f74a1600dd2706f10"
+        }
+      ]
+    },
+    {
+      "name": "public-current-http-contract",
+      "status": "passed",
+      "scope": "Owner receipt127 requests:102canonical/aliases,9 Bulgarian canonical,7 locale-isolation,9 genuine404; does not claim full browser journeys or preserved pixel equivalence.",
+      "evidence": [
+        {
+          "path": "runtime/karento-astra/.runtime/hosted-release-20261010/current-http.json",
+          "sha256": "342a61132bda38bb3ff3468d21cfed66ca56ff90084dc3863688457c215738e2"
+        }
+      ]
+    },
+    {
+      "name": "complete-current-standalone-browser-acceptance",
+      "status": "pending",
+      "scope": "At snapshot owner is still verifying hosted mobile filters/language; complete exactsource mobile and desktop journey evidence is not yet recorded here."
+    }
+  ],
+  "sourceMirror": {
+    "source": {
+      "path": "runtime/karento-astra/provenance/standalone-source.json",
+      "sha256": "3d950899c9bc7b7c607660ff608649a7e9d96cf0e1e8c43dd97c727e796243e3"
+    },
+    "publishingRepository": "darkapoparka/cars-template-karento",
+    "publishingCommit": "0224ae76140715356c29e86e3861111c31f9207f",
+    "sourceCommit": "0f9c79d28665272bb0041c751ede597642347239",
+    "preservedReferenceFiles": 607,
+    "limitations": "Owner mirror manifest retains1060 files with guarded provider overrides and excludes experiment/intermediate evidence. This document has not independently certified complete source-to-mirror application closure."
+  },
+  "deployment": {
+    "state": "READY",
+    "id": "dpl_8BoaQKfo2rzUTUEP2NmVbxpVZdMu",
+    "projectId": "prj_l79mMMCI7onndJfgNTUdxIifOQ5r",
+    "publicAlias": "https://cars-template-karento.vercel.app/",
+    "publishingCommit": "0224ae76140715356c29e86e3861111c31f9207f",
+    "sourceCommit": "0f9c79d28665272bb0041c751ede597642347239"
+  },
+  "nativeReleaseValidation": {
+    "detectedSourcePaths": [],
+    "nativeLocalizationAcceptanceProvided": false,
+    "missingNativeChecks": [
+      "catalog-completeness",
+      "hardcoded-ui",
+      "native-routing",
+      "standalone-journeys",
+      "mounted-journeys",
+      "public-journeys",
+      "preferences-no-js",
+      "preferences-storage-disabled",
+      "preferences-races",
+      "request-isolation",
+      "security-write-blocking",
+      "assets-preserved"
+    ],
+    "explanation": "No nativeLocalization block is fabricated. READY and current HTTP checks do not establish these twelve complete acceptance categories."
+  },
+  "missingEvidence": [
+    "Exact current source-to-mirror closure including explicitly allowed provider overrides.",
+    "Complete current mobile and desktop standalone/browser acceptance, including declared EN/BG widths.",
+    "If required by six-design native acceptance: all12 categories with exact source/catalog/deployment binding."
+  ],
+  "limitations": [
+    "Concurrent desktop vehicle-detail/contact/footer/FAQ work remains outside this immutable checkpoint.",
+    "No Cloudflare/UK dealer build or hosted acceptance claimed."
+  ],
+  "ownerThread": {
+    "id": "01a123b2-0a58-7220-88c5-0b16a57f78d1",
+    "title": "Polish mobile overlays and headers",
+    "status": "active",
+    "lastMeaningfulStatus": "Production READY; checking public access,mobile filters,language behavior and404."
+  }
+}

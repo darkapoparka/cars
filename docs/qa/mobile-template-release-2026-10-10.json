@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "kind": "exact-source-template-release-evidence",
+  "repository": "darkapoparka/cars",
+  "commit": "14def50af685f8ac5ec2659ba2f6b74c55bd1f30",
+  "sourcePath": "templates/mobile",
+  "sourceTree": "ab214e5522ed03f7d501155b49ef8d099019c960",
+  "sourceDigest": "c62d0186e79c79567f30ee39a76cc8858ebfaf44b756476daa06940478f19f53",
+  "exportPolicy": "cars-source-v1",
+  "recordedAt": "2026-10-10T03:31:05.219Z",
+  "verifiedAt": "2026-10-10T03:31:05.219Z",
+  "approved": false,
+  "release": "mobile-source-checkpoint-2026-10-10-incomplete",
+  "runtime": {
+    "node": "22.20.0"
+  },
+  "standalone": {
+    "mobile": false,
+    "desktop": false
+  },
+  "checks": [
+    {
+      "name": "owner-source-integration",
+      "status": "passed",
+      "scope": "Recorded owner lint,156 domain tests,formatting,typecheck,production build124 static pages and preview HTTP200; these checks were not rerun by this reconciliation.",
+      "evidence": [
+        {
+          "path": "templates/mobile/docs/car-cards-reference-2026-10-10/INTEGRATION.md",
+          "sha256": "fb619f9f9af9e567d7f00c33bf5070b88d347ba61122b84b7f9c05230e0ffab6"
+        }
+      ]
+    },
+    {
+      "name": "recorded-card-visual-iteration",
+      "status": "passed",
+      "scope": "These earlier focused card/PDP iterations have retained passed receipts; they do not certify subsequent hero/Services/Contact changes.",
+      "evidence": [
+        {
+          "path": "templates/mobile/docs/car-cards-reference-2026-10-10/after-verification.json",
+          "sha256": "be646e5b9cb2c742d073de30d0a4a6177e0586ecd40aa71d2fae9289270b2684"
+        },
+        {
+          "path": "templates/mobile/docs/car-cards-reference-2026-10-10/pdp-save-verification.json",
+          "sha256": "e8c54f59426adb4957b997ccd97b6d44a20cdb1eb5b296bd058a466747b19363"
+        }
+      ]
+    },
+    {
+      "name": "latest-toolbar-rendered-verification",
+      "status": "incomplete",
+      "scope": "Retained toolbar harness fails on duplicate clear-filter locator before collecting views. Integration document explicitly says latest hero/Services/Contact rendered verification remains incomplete because local browser access was rejected.",
+      "evidence": [
+        {
+          "path": "templates/mobile/docs/car-cards-reference-2026-10-10/toolbar-verification.json",
+          "sha256": "59c31f1292f46fa025dec7b442bce04a9fc308084d494a023fbfe78b2f3dc339"
+        },
+        {
+          "path": "templates/mobile/docs/car-cards-reference-2026-10-10/INTEGRATION.md",
+          "sha256": "fb619f9f9af9e567d7f00c33bf5070b88d347ba61122b84b7f9c05230e0ffab6"
+        }
+      ]
+    }
+  ],
+  "deployment": {
+    "state": "READY",
+    "id": "dpl_8uPeecMSAMqgtciLMiub2M7PNEBi",
+    "projectId": "prj_PsCXLysg0t3owguVyrnnXQXa7x1r",
+    "publicAlias": "https://cars-template-mobile.vercel.app/",
+    "publishingCommit": "9c577c610f1b866d2c5d729f191609d1d5241ff4",
+    "sourceCommit": "876590474d01178413feccf3153a0859230158a1",
+    "matchesSelectedSource": false
+  },
+  "missingEvidence": [
+    "Complete exact14def rendered mobile and desktop QA for latest hero/Services/Contact/toolbar.",
+    "If approving hosted source: publish exact14def mirror and bind successful hosted journeys to it."
+  ],
+  "limitations": [
+    "The latest bottom-bar label adjustment is currently uncommitted in src/components/AppShell.tsx and excluded from this immutable source.",
+    "No Cloudflare/UK dealer mount acceptance is claimed."
+  ],
+  "ownerThread": {
+    "id": "01a121ca-b775-7421-85f7-da86e1f9d735",
+    "title": "Improve desktop car cards",
+    "status": "idle",
+    "lastMeaningfulStatus": "14def pushed with integration checks; subsequent local bottom-bar labels changed and fresh visual verification blocked."
+  },
+  "nativeReleaseValidation": {
+    "detectedSourcePaths": [],
+    "nativeLocalizationAcceptanceProvided": false
+  }
+}

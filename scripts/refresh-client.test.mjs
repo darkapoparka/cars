@@ -120,6 +120,49 @@ test('UK profile keeps explicit locale currency units and original tagged listin
   }
 });
 
+test('dated UK research mileage retains the original value and unit in the dealer profile', () => {
+  const business = refreshNormalizeInternals.normalizeBusiness('', 'uk-research', {countryCode: 'GB'});
+  const research = JSON.parse(fs.readFileSync(path.join(ROOT, 'leads/uk-2026-10-10-briefs/gb-stockport-broadbent-car-and-servicing/inventory-research.json'), 'utf8'));
+  for (const raw of research.records) {
+    const listing = refreshNormalizeInternals.normalizeListing(raw, 0, business);
+    assert.equal(listing.mileageValue, raw.mileage.value);
+    assert.equal(listing.mileageUnit, raw.mileage.unit);
+    assert.equal(listing.priceAmount, raw.price);
+    assert.equal(listing.currency, 'GBP');
+    assert.deepEqual(listing.raw.mileage, raw.mileage);
+  }
+  const km = refreshNormalizeInternals.normalizeListing({title: 'Source kilometre example', mileage: {value: 96560, unit: 'km'}}, 0, business);
+  assert.equal(km.mileageValue, 96560);
+  assert.equal(km.mileageUnit, 'km');
+  const paired = refreshNormalizeInternals.normalizeListing({title: 'Paired odometer fields', mileageKm: 96560, mileageMiles: 60000}, 0, business);
+  assert.equal(paired.mileageValue, 96560);
+  assert.equal(paired.mileageUnit, 'km');
+  const flat = refreshNormalizeInternals.normalizeListing({title: 'Flat value takes its own unit', mileageValue: 96560, mileage: {value: 60000, unit: 'mi'}}, 0, {...business, distanceUnit: 'km'});
+  assert.equal(flat.mileageValue, 96560);
+  assert.equal(flat.mileageUnit, 'km');
+  const tagged = refreshNormalizeInternals.normalizeListing({title: 'Tagged value takes its own unit', mileageUnit: 'mi', mileage: {value: 96560, unit: 'km'}}, 0, business);
+  assert.equal(tagged.mileageValue, 96560);
+  assert.equal(tagged.mileageUnit, 'km');
+  assert.equal(tagged.mileageOnRequest, false);
+  for (const mileage of ['Not published', 'Not published (2026)', 'Unknown (stock 42)', 'N/A (reference 2026)']) {
+    assert.equal(refreshNormalizeInternals.normalizeListing({title: 'Unpublished mileage', mileage}, 0, business).mileageOnRequest, true);
+  }
+  const explicitMiles = refreshNormalizeInternals.normalizeListing({title: 'Explicit published mileage', mileageMiles: 60000, mileage: 'Not published (2026)'}, 0, business);
+  assert.equal(explicitMiles.mileageValue, 60000);
+  assert.equal(explicitMiles.mileageOnRequest, false);
+  assert.equal(refreshNormalizeInternals.normalizeListing({title: 'Published zero', mileage: {value: 0, unit: 'mi'}}, 0, business).mileageOnRequest, false);
+  assert.throws(() => refreshNormalizeInternals.normalizeListing({title: 'Unsupported odometer', mileage: {value: 60000, unit: 'yards'}}, 0, business), /Unsupported source mileage unit/);
+});
+
+test('unpublished asking prices remain unknown rather than becoming free cars', () => {
+  const business = refreshNormalizeInternals.normalizeBusiness('', 'uk-price', {countryCode: 'GB'});
+  for (const price of ['', 'Price on request', 'POA', 'Not published', 'POA (stock 42)', 'P.O.A. (stock 42)', 'Price on request (2026)', 'Price on application (reference 42)', 'TBC (stock 42)', 'N/A (stock 42)']) {
+    assert.equal(refreshNormalizeInternals.normalizeListing({title: 'Dated sample', price}, 0, business).priceAmount, null);
+  }
+  assert.equal(refreshNormalizeInternals.normalizeListing({title: 'Known asking price', price: '£9,995'}, 0, business).priceAmount, 9995);
+  assert.equal(refreshNormalizeInternals.normalizeListing({title: 'Explicit known asking price', priceAmount: 9995, price: 'POA (stock 42)'}, 0, business).priceAmount, 9995);
+});
+
 test('UK profile converts complete domestic phone numbers to +44 without changing display or source', () => {
   for (const phone of ['07398 540293', '020 7946 0958', 'tel:020-7946-0958']) {
     const business = refreshNormalizeInternals.normalizeBusiness('', 'uk-fixture', {countryCode: 'GB', phone});

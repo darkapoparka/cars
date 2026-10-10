@@ -6,6 +6,40 @@ const text = value => typeof value === 'string' ? value.trim() : '';
 const url = (value, protocols = ['https:']) => {try {const u = new URL(value);return protocols.includes(u.protocol) && !u.username && !u.password ? u.href : '';} catch {return '';}};
 const label = (value, options, fallback) => options.find(option => option.toLowerCase() === text(value).toLowerCase()) || fallback;
 const number = (...values) => values.find(value => typeof value === 'number' && Number.isFinite(value));
+const mileageNumber = value => {
+ if(typeof value === 'string' && /^(?:\d+(?:\.\d+)?|\d{1,3}(?:,\d{3})+(?:\.\d+)?)$/.test(value.trim())) value=Number(value.trim().replaceAll(',',''));
+ return typeof value === 'number' && Number.isFinite(value) && value >= 0 ? value : undefined;
+};
+const mileageUnit = value => {
+ const unit=text(value).toLowerCase();
+ if(/^(?:mi|mile|miles)$/.test(unit))return 'mi';
+ if(/^(?:km|kilometres?|kilometers?)$/.test(unit))return 'km';
+ throw new Error('Unsupported App source mileage unit: '+unit);
+};
+/** Keep the selected value paired with its source unit; App inventory remains canonical km. */
+function dealerMileage(listing,business) {
+ const unknown={sourceValue:null,sourceUnit:null,canonicalKm:null};
+ if(listing.mileageOnRequest === true)return unknown;
+ const raw=listing.raw && typeof listing.raw === 'object' ? listing.raw : null;
+ const candidates=source=>[
+  [source.mileageKm,'km'],[source.km,'km'],[source.mileageMiles,'mi'],
+  [source.mileageValue,source.mileageUnit||source.distanceUnit||business.distanceUnit||'km',source===listing],
+  [source.mileage?.value,source.mileage?.unit||source.mileageUnit||source.distanceUnit||business.distanceUnit||'km'],
+  [source.mileage,source.mileageUnit||source.distanceUnit||business.distanceUnit||'km']
+ ];
+ const rawHasMileage=raw && candidates(raw).some(([value])=>mileageNumber(value)!==undefined);
+ for(const [value,unit,normalizedValue] of [...candidates(listing),...(raw?candidates(raw):[])]) {
+  const parsed=mileageNumber(value);
+  if(parsed===undefined)continue;
+  // Older normalized profiles used zero when no source mileage was published.
+  if(raw && !rawHasMileage && normalizedValue && parsed===0 && listing.mileageOnRequest !== false)continue;
+  const sourceUnit=mileageUnit(unit);
+  const canonicalKm=sourceUnit==='mi'?Math.round(parsed*1.609344):parsed;
+  if(!Number.isFinite(canonicalKm)||canonicalKm>Number.MAX_SAFE_INTEGER)throw new Error('App source mileage exceeds the supported numeric range');
+  return {sourceValue:parsed,sourceUnit,canonicalKm};
+ }
+ return unknown;
+}
 /** Existing dealer source is authoritative. readFile permits exact, hash-verified deployment inputs. */
 export async function prepareAppDealer(sourceRoot, manifest, {readFile} = {}) {
  const read = readFile || (name => fs.readFile(path.join(sourceRoot, name)));
@@ -32,7 +66,7 @@ export async function prepareAppDealer(sourceRoot, manifest, {readFile} = {}) {
  const currencies=[...new Set(profile.listings.map(l=>text(l.currency)).filter(c=>/^[A-Z]{3}$/.test(c)))];
  const currency=currencies.length===1?currencies[0]:text(business.currency)||manifest.localization?.inventoryCurrency;
  if(!/^[A-Z]{3}$/.test(currency||''))throw new Error('Missing recorded inventory currency');
- const names=new Set(),inventory=[];
+ const names=new Set(),inventory=[],mileageFacts=[];
  for(const listing of profile.listings){
   const slug=text(listing.slug);if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)||names.has(slug))throw new Error('Invalid or repeated vehicle slug: '+slug);names.add(slug);
   if(listing.currency && listing.currency!==currency)throw new Error('Mixed listing currencies require explicit per-listing treatment: '+slug);
@@ -41,13 +75,14 @@ export async function prepareAppDealer(sourceRoot, manifest, {readFile} = {}) {
   const images=await Promise.all(rasterSources.map(image=>retain(image,'vehicle')));
   const imagePlaceholder=images.length===0;
   if(imagePlaceholder)images.push('/cutouts/buy-sedan-v1.png');
-  const price=number(listing.priceAmount),mileage=number(listing.mileageKm,listing.mileageUnit==='km'?listing.mileageValue:undefined,listing.raw?.mileageKm);
+  const price=number(listing.priceAmount),mileage=dealerMileage(listing,business);
+  mileageFacts.push({slug,...mileage});
   const fuelKey=text(listing.fuelType).toLowerCase(),transmissionKey=text(listing.transmissionType||listing.transmission).toLowerCase();
   const make=text(listing.brand||listing.make), originalModel=text(listing.model)||text(listing.title);
   const model=make && originalModel.toLowerCase().startsWith(make.toLowerCase()+' ')?originalModel.slice(make.length+1):originalModel;
   inventory.push({slug,make,model,trim:text(listing.trim),year:number(listing.year)||0,
    price:price>0?price:0,priceOnRequest:!(price>0),monthly:0,image:images[0],images,
-   mileage:mileage??0,mileageOnRequest:mileage===undefined,
+   mileage:mileage.canonicalKm??0,mileageOnRequest:mileage.canonicalKm===null,
    fuel:({gasoline:'Petrol',petrol:'Petrol',diesel:'Diesel',hybrid:'Hybrid',electric:'Electric'})[fuelKey]||'Not published',
    transmission:({automatic:'Automatic',manual:'Manual'})[transmissionKey]||'Not published',
    body:label(listing.bodyType,['SUV','Sedan','Hatchback','Coupe','MPV','Convertible','Pickup'],'Other'),
@@ -71,6 +106,6 @@ export async function prepareAppDealer(sourceRoot, manifest, {readFile} = {}) {
  files.set('lib/dealer.json',Buffer.from(JSON.stringify(config,null,2)+'\n'));
  files.set('lib/dealer-inventory.json',Buffer.from(JSON.stringify(inventory,null,2)+'\n'));
  const provenance={schemaVersion:1,dealer:manifest.slug,profile:'auto-best/src/lib/data/dealer-profile.json',profileSha256:hash(profileBytes),
-  logoPolicy:'Preserve existing raster identities; no replacement logo was generated.',vehicles:inventory.length,currency,observedAt,assets};
+  logoPolicy:'Preserve existing raster identities; no replacement logo was generated.',vehicles:inventory.length,currency,observedAt,assets,mileageFacts};
  return {config,inventory,files,provenance};
 }

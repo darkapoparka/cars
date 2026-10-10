@@ -362,11 +362,11 @@ async function main(args) {
     const flag = args[index];
     if (flag === '--write') write = true;
     else if (flag === '--dry-run') write = false;
-    else if (['--client', '--out', '--source-commit', '--provider', '--cloudflare-locks'].includes(flag)) {
+    else if (['--client', '--out', '--source-commit', '--provider', '--cloudflare-locks', '--asset-pool'].includes(flag)) {
       if (!args[index + 1] || args[index + 1].startsWith('--')) throw new Error(`Missing value for ${flag}`);
       options[flag.slice(2)] = args[++index];
     } else if (flag === '--help') {
-      console.log('Usage: node scripts/package-dealer.mjs --client SLUG --out runtime/dealer-packages/SLUG [--provider vercel|cloudflare] [--cloudflare-locks JSON] [--source-commit SHA] [--write] (dry-run by default; retained source must match the commit)');
+      console.log('Usage: node scripts/package-dealer.mjs --client SLUG --out runtime/dealer-packages/SLUG [--provider vercel|cloudflare] [--cloudflare-locks JSON] [--asset-pool PATH] [--source-commit SHA] [--write] (dry-run by default; retained source must match the commit)');
       return;
     } else throw new Error(`Unknown argument: ${flag}`);
   }
@@ -375,6 +375,8 @@ async function main(args) {
   const destination = path.resolve(ROOT, options.out);
   const packagesRoot = path.join(ROOT, 'runtime', 'dealer-packages');
   if (!contained(packagesRoot, destination) || destination === packagesRoot) throw new Error('--out must be a new directory under runtime/dealer-packages');
+  const assetPool = options['asset-pool'] ? path.resolve(ROOT, options['asset-pool']) : undefined;
+  if (assetPool && (contained(source, assetPool) || contained(assetPool, source) || contained(destination, assetPool) || contained(assetPool, destination))) throw new Error('Derived asset pool must be separate from source and package');
   const manifest = JSON.parse(await fs.readFile(path.join(source, 'dealer.json'), 'utf8'));
   if (manifest.slug !== options.client) throw new Error('Requested client does not match dealer.json');
   const revision = spawnSync('git', ['-C', ROOT, 'rev-parse', 'HEAD'], { encoding: 'utf8', windowsHide: true });
@@ -382,8 +384,8 @@ async function main(args) {
   const sourceCommit = options['source-commit'] || revision.stdout.trim();
   const {canonicalFiles: retained, untrackedExcluded} = await committedDealerInputs({root: ROOT, source, manifest, sourceCommit, prefix:`clients/${options.client}`});
   const cloudflareLocks = options['cloudflare-locks'] ? JSON.parse(await fs.readFile(path.resolve(ROOT, options['cloudflare-locks']), 'utf8')) : undefined;
-  const result = await (write ? packageDealer : planDealerPackage)({ source, destination, manifest, sourceCommit, canonicalFiles:retained, provider:options.provider ?? 'vercel', cloudflareLocks, guidance: options.provider === 'cloudflare' ? fallbackGuidance(manifest, 'cloudflare') : dealerGuidance({slug:manifest.slug,variants:manifest.variants,workflowCommit:sourceCommit}) });
-  console.log(json({ mode: write ? 'write' : 'dry-run', ...result, fileCount: result.files.length, files: undefined,untrackedExcluded }).trim());
+  const result = await (write ? packageDealer : planDealerPackage)({ source, destination, manifest, sourceCommit, canonicalFiles:retained, provider:options.provider ?? 'vercel', cloudflareLocks, assetPool, guidance: options.provider === 'cloudflare' ? fallbackGuidance(manifest, 'cloudflare') : dealerGuidance({slug:manifest.slug,variants:manifest.variants,workflowCommit:sourceCommit}) });
+  console.log(json({ mode: write ? 'write' : 'dry-run', ...result, ...(assetPool ? { assetPool } : {}), fileCount: result.files.length, files: undefined,untrackedExcluded }).trim());
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {

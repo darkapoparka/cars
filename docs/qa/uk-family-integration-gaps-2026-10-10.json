@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "observedDate": "2026-10-10",
+  "scope": "Dealer-only UK integration audit; findings do not approve template releases, real inventory, or deployment.",
+  "sourceSelection": {
+    "auto-best": { "approvedRevision": "2afd974c23d4f4cfb290ed99a00f46074793be3a", "auditedLatestRevision": "14b3cbe71f7d84d0e16a0140467899319e00d4be", "latestApproved": false },
+    "import": { "approvedRevision": "a51f329b0b9e8e4d21665e16abf2734505d02e07", "auditedLatestRevision": "a51f329b0b9e8e4d21665e16abf2734505d02e07", "latestApproved": true },
+    "karento-best": { "approvedRevision": null, "auditedLatestRevision": "0f9c79d28665272bb0041c751ede597642347239", "runtimeExcerptRevision": "b01a053cbc537f523272c2ecf453fe6b904532e0", "runtimeExcerptUnchanged": true, "latestApproved": false }
+  },
+  "toolingInputsBeforeMileagePatch": {
+    "scripts/lib/client-refresh-adapters.mjs": "4c10ae35183d9fcc9fd13f493f45ee3a9211175819fae76901c1322408156ff2",
+    "scripts/lib/client-refresh-normalize.mjs": "f36a56c54b415d624ce06ac45ebb776dd4ec47f2968c51a0db3449d5977b36f5",
+    "scripts/lib/client-refresh-six.mjs": "7b2db18233a49fe7dfb6631c777a10de0c9f51e793fe7688bc84d86d27c7126a"
+  },
+  "dealerFacts": {
+    "requiredExplicitBusinessFields": ["countryCode=GB", "locale=en-GB", "currency=GBP", "distanceUnit=mi", "dated source URLs", "sourced phone"],
+    "requiredStockFields": ["sourceId", "sourceUrl", "observedAt", "availability", "priceAmount or null", "currency", "mileage value and original unit or unknown", "permitted media"],
+    "languageRouteTag": "en",
+    "currencyRule": "GBP is a stock fact, never a conversion inferred from visitor country. Mixed-currency records must preserve their own currency or fail before a family-wide formatter can relabel them.",
+    "distanceRule": "Preserve original value/unit; derived canonical km may serve comparisons only. Unknown mileage must not become a zero-mile claim.",
+    "phoneRule": "Existing normalizer turns a complete recorded UK domestic 11-digit number into +44 after dropping trunk zero; already international numbers remain as sourced.",
+    "inventoryRule": "No fabricated dealer stock, verified badges, current-year defaults, staff, testimonials, finance approval or successful mock enquiry. A sampled dated listing is not owner-confirmed current stock."
+  },
+  "workingBoundaries": [
+    { "family": "shared", "path": "scripts/lib/dealer-locale.mjs", "lines": [12, 30], "behavior": "Explicit locale contract accepts GB/GBP and enabled en/bg; en-GB belongs in formatter config, not a new route language." },
+    { "family": "auto-best", "path": "scripts/lib/client-refresh-adapters.mjs", "lines": [151, 171, 435, 456], "generatedPath": "src/lib/config/locale.ts", "behavior": "Existing adapter sets en default, GB dealer country, explicit business currency and en-GB formatting without replacing policy." },
+    { "family": "import", "path": "scripts/lib/client-refresh-adapters.mjs", "lines": [1032, 1151], "generatedPath": "src/lib/config/dealer.ts", "behavior": "Existing adapter sets dealerLocaleSettings en/GB/GBP/en-GB and replaces contacts through normalized business facts." },
+    { "family": "auto-best/import", "paths": ["templates/auto-best/src/lib/locale/policy.ts", "templates/import/src/lib/locale/policy.ts"], "lines": [[175, 201], [278, 313]], "behavior": "URL > saved cars_locale > weighted Accept-Language > trusted country suggestion > dealer default. Saved country and visitor language do not rewrite business country/currency." },
+    { "family": "auto-best/import", "path": "scripts/publishing/cloudflare-svelte.mjs", "lines": [72, 84], "behavior": "Generated-only trusted hint from event.platform.cf.country; fallback x-cars-country is safe only behind the internal service-boundary router which strips inbound spoofed country headers. Policy remains unchanged." },
+    { "family": "karento-best", "paths": ["templates/karento-best/src/lib/i18n/locales.ts", "templates/karento-best/src/lib/i18n/vehicle.ts", "scripts/lib/client-refresh-signature.mjs", "scripts/lib/client-refresh-six.mjs"], "lines": [[7, 33], [56, 63], [17, 34], [213, 232]], "behavior": "Native typed facts already retain price currency and original mileage unit. English uses en-GB. Unknown price/mileage can be omitted. Current locale precedence is one valid lang query > signature_locale cookie > dealer locale." }
+  ],
+  "gaps": [
+    {
+      "id": "AUTO_ORIGINAL_MILEAGE",
+      "severity": "blocking-uk-presentation",
+      "evidence": ["scripts/lib/client-refresh-adapters.mjs:277-280", "templates/auto-best/src/lib/locale/formatters.ts:18", "templates/auto-best/src/lib/components/vehicles/VehicleCard.svelte:57,123", "templates/auto-best/src/routes/listing-detail-v1/[id]/+page.svelte:89,100"],
+      "behavior": "Adapter retains original mi text but cards/detail/meta use derived mileageKm and the kilometre-only formatter.",
+      "proposedPatch": "Through the existing Auto Best adapter, add typed original value/unit beside canonical km, use a unit-aware presentation helper in existing card/detail consumers, keep unknown blank/request text and leave BG/km behavior intact.",
+      "tests": ["60000 mi shows 60,000 mi on card/detail/meta; canonical km is 96561", "60000 km remains 60,000 km", "unknown remains unknown", "language choice does not change odometer facts"]
+    },
+    {
+      "id": "IMPORT_ORIGINAL_MILEAGE",
+      "severity": "blocking-factual-mislabel",
+      "evidence": ["scripts/lib/client-refresh-adapters.mjs:1007-1009", "templates/import/src/lib/data/daynight.ts:95,140,153-154", "templates/import/src/lib/data/vehicles.ts:57", "templates/import/src/lib/domain/vehicle-card.ts:30-31,82", "templates/import/src/lib/i18n/vehicle-units.ts:4"],
+      "behavior": "Feed emits mi, native parser strips the unit, then labels the same numeric value km. Card helper also forces km.",
+      "proposedPatch": "Extend the existing generated feed with explicit original value/unit and canonical km. Use typed fields at native data boundary and unit-aware card/detail presentation, with exact source guards. Do not solve by changing all km labels to mi.",
+      "tests": ["60000 mi remains 60,000 mi and compares as 96561 km", "96560 km remains kilometre stock", "old BG feed without new fields remains supported", "null odometer not shown as zero"]
+    },
+    {
+      "id": "MILEAGE_FILTER_THRESHOLD",
+      "severity": "blocking-coherent-filter",
+      "evidence": ["templates/auto-best/src/lib/components/listing/ListingFacetEditor.svelte:123,127", "templates/auto-best/src/lib/locale/catalog.ts:579,848", "templates/import/src/lib/domain/vehicle-search.ts:109-110,150"],
+      "behavior": "Distance controls and numeric comparisons assume km. Showing mi alone leaves misleading thresholds.",
+      "proposedPatch": "Use dealer display unit for threshold labels/input; convert threshold to canonical km exactly once at comparison. Sorting uses canonical km. Preserve original record display even for mixed-unit stock. If a seam cannot be guarded, hold that family rather than silently relabel.",
+      "tests": ["60000 mi included at 60000-mi limit and excluded below it", "equivalent 96561-km record has equivalent comparison", "km dealer/filter unchanged", "numeric sort orders mixed units correctly"]
+    },
+    {
+      "id": "UNCONDITIONAL_VERIFIED",
+      "severity": "blocking-truthful-stock",
+      "evidence": ["scripts/lib/client-refresh-adapters.mjs:268", "templates/auto-best/src/lib/data/inventory.ts:20-22"],
+      "behavior": "Existing adapter marks every personalized record verified, including dated or unconfirmed research.",
+      "proposedPatch": "Use the native unconfirmed status unless the source explicitly supplies the existing owner-confirmed verification fact; preserve source URL/date and sample disclosure. Do not infer verification from having a URL.",
+      "tests": ["dated unconfirmed record has no verified claim", "explicit permitted verified fact remains intact", "sample stock remains clearly sample"]
+    },
+    {
+      "id": "PRICE_NATIVE_ALIAS_AND_MIXED_CURRENCY",
+      "severity": "prepublish-fact-gate",
+      "evidence": ["scripts/lib/client-refresh-adapters.mjs:285,991-993", "templates/import/src/lib/data/daynight.ts:78-85", "templates/import/src/lib/data/vehicles.ts:52-55"],
+      "behavior": "Legacy priceEur alias receives original amounts. Import textual price parser stamps EUR and rounds. Visible formatted price can still use dealer GBP; mixed currencies and fractional source values cannot safely pass this alias/text seam unchecked.",
+      "proposedPatch": "Reuse existing typed factual fields or extend the feed minimally for original nullable amount/currency. Reject unsupported mixed currencies before a dealer-wide formatter; never convert or relabel stock. Retain Price on request for null and exclude it from numeric price claims.",
+      "tests": ["GBP 12345 displays £12,345 without numeric conversion", "null remains Price on request", "fractional amount is not silently rounded", "USD record under GBP dealer remains USD or fails closed"]
+    },
+    {
+      "id": "NORMALIZER_UNKNOWN_FACTS",
+      "severity": "prepublish-fact-gate",
+      "evidence": ["scripts/lib/client-refresh-normalize.mjs:215-228,268", "scripts/refresh-client.test.mjs:123-140"],
+      "behavior": "Root-owned pending change now preserves tagged mileage, paired flat-field precedence and null request prices in live tests. Missing mileage still defaults to zero and missing year to current year; native consumers need absence provenance rather than adopting defaults as dealer facts.",
+      "proposedPatch": "Do not edit the root-owned normalizer here. At existing family adapters inspect supplied raw facts and omit unknown values, as Signature already does, or stop where native type cannot express unknown.",
+      "tests": ["no supplied mileage yields no zero-mile stock claim", "no supplied year yields no current-year stock claim", "original raw source fact remains available"]
+    },
+    {
+      "id": "SIGNATURE_LOCALE_HINT_PARITY",
+      "severity": "requested-feature-gap",
+      "evidence": ["templates/karento-best/src/lib/i18n/locales.ts:25-33", "templates/karento-best/src/hooks.server.ts:13-28", "scripts/publishing/cloudflare-svelte.mjs:73"],
+      "behavior": "Signature does not currently consume browser language or Cloudflare country; the publisher intentionally skips its hint patch.",
+      "proposedPatch": "If cross-family country detection is required, extend this existing resolver/hook in generated output only: valid lang query > saved signature_locale > weighted supported browser language > trusted country suggestion > normalized dealer locale. Use the same internal-only trust boundary; visitor hints cannot alter GBP, GB or original mi. Release approval remains a separate gate.",
+      "tests": ["URL/cookie/browser beat GB hint", "unsupported browser falls back to trusted hint then dealer", "spoofed inbound hint rejected at router", "GBP/mi unchanged", "one valid lang query persistence and mounted cookie path retained"]
+    }
+  ],
+  "verification": {
+    "mode": "read-only in-memory synthetic fixtures; no dependency install/build/deploy",
+    "runtime": "Node 22.23.2",
+    "policyChecks": "12 passed against immutable Auto Best and Import policy bytes: URL path/query, saved cookie, weighted browser, trusted country, unsupported country/default; GBP and GB contract remained fixed.",
+    "normalizerChecks": { "phoneHref": "tel:+441611234567", "formatLocale": "en-GB", "currency": "GBP", "unknownPrice": null, "taggedMileage": { "value": 60000, "unit": "mi" }, "fixture": "Synthetic only, not dealer inventory." },
+    "signature": "Read-only exact-source review with collaborating release-state auditor; no new runtime implementation or approval claimed.",
+    "nextWork": "Root requested focused Auto Best/Import generated mileage patches and tests in existing adapters; this document records their pre-patch baseline."
+  }
+}

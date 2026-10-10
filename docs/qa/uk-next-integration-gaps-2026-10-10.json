@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-10",
+  "scope": "Read-only UK dealer integration audit of immutable Next template candidates and existing personalization seams.",
+  "status": "audit-only; UK generated behavior and hosted acceptance remain unverified",
+  "sourceSelection": "Candidate pins below are evidence identities, not approval or a templates.lock.json update.",
+  "sources": {
+    "modern": {
+      "path": "templates/modern",
+      "revision": "fc267cef378316516258936ad4cac843e78df710",
+      "tree": "74a5dbcfcf48867021607aef427720f6f22888ab",
+      "retainedDigest": "61148ea16a11ca7cbe07f75008e5efcd0be8e7ca7a13cf0590f3bb195442751e",
+      "retainedFiles": 3979
+    },
+    "app": {
+      "path": "templates/app",
+      "revision": "70c2b80671e217ab299549a938a537c0b9559611",
+      "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
+      "retainedDigest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f",
+      "retainedFiles": 1639
+    },
+    "mobile": {
+      "path": "templates/mobile",
+      "revision": "14def50af685f8ac5ec2659ba2f6b74c55bd1f30",
+      "tree": "ab214e5522ed03f7d501155b49ef8d099019c960",
+      "retainedDigest": "c62d0186e79c79567f30ee39a76cc8858ebfaf44b756476daa06940478f19f53",
+      "retainedFiles": 863
+    },
+    "signatureContextOnly": {
+      "path": "templates/karento-best",
+      "revision": "b01a053cbc537f523272c2ecf453fe6b904532e0",
+      "tree": "85110a477ee8cad272ceebc2e33ad4a08ff3f46f",
+      "note": "Signature is a Svelte family and is outside this Next audit. Its repository path is karento-best."
+    }
+  },
+  "method": {
+    "sourceIdentity": "Existing scripts/lib/workflow.mjs fingerprintCommit using its retained-source exclusions and normalized-byte digest; immutable Git trees resolved directly.",
+    "workingEquality": "All 18 selected Next boundary files below matched their candidate Git bytes when inspected.",
+    "checks": [
+      "Immutable tree and source digest reads",
+      "Source consumer tracing",
+      "One in-memory App adapter reproduction without source writes or installation"
+    ],
+    "notPerformed": [
+      "Template edits",
+      "Release selection",
+      "Dealer generation",
+      "Dependency installation",
+      "Build",
+      "Deployment",
+      "Browser acceptance",
+      "Git mutation"
+    ]
+  },
+  "boundaryEvidence": {
+    "modern": [
+      "packages/marketplace-domain/site-config.ts",
+      "packages/marketplace-domain/taxonomy.ts",
+      "packages/marketplace-domain/types.ts",
+      "packages/marketplace-domain/search.ts",
+      "packages/internationalization/request.ts",
+      "packages/internationalization/policy.ts"
+    ],
+    "app": [
+      "lib/dealer-schema.ts",
+      "lib/currency.ts",
+      "lib/locale-policy.ts",
+      "proxy.ts",
+      "lib/inventory-filters.ts",
+      "components/NativeFilterPane.tsx"
+    ],
+    "mobile": [
+      "src/lib/locale.ts",
+      "src/lib/locale-store.ts",
+      "src/lib/search.ts",
+      "src/lib/filter-fields.ts",
+      "src/lib/native-filter-options.ts",
+      "src/lib/vehicle-copy.ts"
+    ]
+  },
+  "ukContract": {
+    "dealerCountry": "GB",
+    "defaultLocale": "en",
+    "formattingLocale": "en-GB",
+    "inventoryCurrency": "GBP only when supported by recorded price facts",
+    "displayDistanceUnit": "mi",
+    "currencyRule": "Visitor geography and language must not convert, relabel or replace recorded inventory currency.",
+    "distanceRule": "Preserve the original source value and unit; a known miles value is not kilometres. Existing Modern/Mobile canonical numeric inventory uses rounded kilometres, requiring conversion at display and input boundaries.",
+    "routeRule": "Keep released en/bg route identifiers. en-GB is a number/date formatting locale, not a new route language.",
+    "preferenceOrderTarget": [
+      "Explicit supported URL language",
+      "Saved manual preference",
+      "Supported browser language",
+      "Trusted Cloudflare country suggestion",
+      "Dealer default"
+    ],
+    "inventoryDisclosure": "Use dated listing snapshots or explicitly illustrative examples and existing preview disclosures; preserve unknown values and dealer confirmation."
+  },
+  "findings": [
+    {
+      "id": "normalization",
+      "paths": [
+        "scripts/lib/client-refresh-normalize.mjs",
+        "scripts/refresh-client.test.mjs"
+      ],
+      "behavior": "normalizeBusiness already defaults explicit GB to en-GB, GBP and mi; explicit locale/currency/unit overrides remain possible. The normalized dealer profile retains mileageValue, mileageUnit and raw source facts.",
+      "gap": "Unpublished mileage still becomes zero in normalizeListing at the inspected boundary. A zero must not imply a new or low-mileage vehicle. Tagged mileage and paired flat km/mi precedence need coordinated value/unit selection.",
+      "proposedPatch": "Use this existing normalizer and its tests. Root owns the pending tagged {value,unit}, paired flat-unit precedence and unknown-price-text fixes; do not duplicate them. Add or preserve explicit unknown-mileage state before Next family adaptation.",
+      "implementation": "pending owner integration; audit did not edit this seam"
+    },
+    {
+      "id": "modern-gbp-schema",
+      "paths": [
+        "templates/modern/packages/marketplace-domain/site-config.ts:161",
+        "templates/modern/packages/marketplace-domain/types.ts:21",
+        "templates/modern/packages/marketplace-domain/taxonomy.ts:66",
+        "templates/modern/packages/marketplace-domain/search.ts:65",
+        "templates/modern/packages/marketplace-domain/listing-input.ts:33",
+        "templates/modern/packages/marketplace/format.ts:128",
+        "scripts/lib/client-refresh-adapters.mjs"
+      ],
+      "behavior": "Money.currency is a string and Intl formatting can render recorded GBP. Site market currency currently permits AED/BGN/EUR/USD; PriceCurrency and priceCurrencies permit only BGN/EUR. Search catches an unsupported currency as undefined.",
+      "gap": "A GB/GBP dealer site fails its market schema, and a GBP currency query/input cannot retain its intended filter value.",
+      "proposedPatch": "Extend only generated Modern source through the existing Modern personalization seam with guarded GBP additions to the market schema, PriceCurrency type and shared priceCurrencies array. Reuse existing search/listing schemas and formatMoney; do not convert the amounts or add an independent feed generator.",
+      "implementation": "not implemented by this audit"
+    },
+    {
+      "id": "modern-mileage",
+      "paths": [
+        "scripts/lib/client-refresh-adapters.mjs:174",
+        "scripts/lib/client-refresh-adapters.mjs:512",
+        "templates/modern/packages/marketplace-domain/types.ts:148",
+        "templates/modern/packages/marketplace/format.ts:142",
+        "templates/modern/packages/marketplace-domain/testing/mock-data.ts:698",
+        "templates/modern/packages/marketplace-ui/lib/marketplace-filter-config.ts:53",
+        "templates/modern/packages/marketplace-ui/lib/marketplace-filter-summary.ts:57",
+        "templates/modern/packages/marketplace-ui/lib/desktop-filter-policy.ts:128",
+        "templates/modern/packages/marketplace-ui/components/marketplace-filter-options.tsx:213"
+      ],
+      "behavior": "modernListing converts mi to Math.round(mi * 1.609344), declares mileageUnit km, and the filter compares mileageValue directly to mileageMax. Cards, chips, summaries and range presets show km. Current range is 0..250000 with 50000/100000/150000/200000 presets.",
+      "gap": "Changing only the unit label would misstate the numeric fact and threshold. All desktop/mobile range inputs, preset values, saved/query state, applied chips and detail/card formatting need the same unit contract.",
+      "proposedPatch": "Retain canonical km in the existing domain/query boundary. Add a generated dealer distance presentation/input seam used by the existing formatMileage and filter consumers: km-to-mi display; mi-to-km threshold before domain comparison; canonical-to-mi controls on reload. Preserve exact original mi for source fact presentation when available. Bind any rounded conversion policy explicitly and test its boundary consistently. Do not reinterpret saved canonical URLs as miles.",
+      "implementation": "not implemented by this audit"
+    },
+    {
+      "id": "app-mileage-and-currency",
+      "paths": [
+        "scripts/lib/app-dealer-adapter.mjs:42",
+        "scripts/lib/client-refresh-adapters.mjs:466",
+        "templates/app/lib/dealer-schema.ts:36",
+        "templates/app/lib/dealer-schema.ts:56",
+        "templates/app/lib/currency.ts:3",
+        "templates/app/lib/inventory-filters.ts:29",
+        "templates/app/lib/inventory-filters.ts:121",
+        "templates/app/lib/inventory-settings.ts:8",
+        "templates/app/components/NativeFilterPane.tsx:126",
+        "templates/app/components/DesktopInventoryFilters.tsx:36"
+      ],
+      "behavior": "App accepts GBP in dealer config, uses dealer currency in price UI and en-GB English numbers. The symbol falls back to GBP rather than £. prepareAppDealer reads mileageKm, mileageValue only when unit=km, or raw.mileageKm; normalized source-mi facts are omitted. Auto Best writes the normalized profile directly; its separate inventory.ts mileageKm is not added to that profile. App filters compare canonical numeric mileage directly and hardcode km/kms labels.",
+      "reproduction": {
+        "input": {
+          "mileageValue": 10000,
+          "mileageUnit": "mi",
+          "priceAmount": 12000,
+          "currency": "GBP"
+        },
+        "actual": {
+          "mileage": 0,
+          "mileageOnRequest": true,
+          "price": 12000,
+          "priceOnRequest": false
+        },
+        "expectedCanonicalKm": 16093,
+        "mode": "Existing prepareAppDealer called with injected in-memory readFile; no generated files retained."
+      },
+      "proposedPatch": "Reuse prepareAppDealer to consume the same normalized tagged mileage contract and preserve mileageOnRequest for unknown facts. Add distanceUnit/formatting information via the existing generated dealer schema/config seam, with compatible defaults for existing dealers, and route existing mileage UI/presets/input comparisons through it. Derive the GBP symbol using Intl formatToParts or an explicit GBP branch. Do not relabel raw kilometres or parse formatted price labels as converted values.",
+      "implementation": "not implemented by this audit"
+    },
+    {
+      "id": "mobile-english-gbp",
+      "paths": [
+        "scripts/lib/client-refresh-six.mjs:174",
+        "templates/mobile/src/lib/locale.ts:3",
+        "templates/mobile/src/lib/locale.ts:23",
+        "templates/mobile/src/lib/filter-fields.ts:16",
+        "templates/mobile/src/lib/native-filter-options.ts:25",
+        "templates/mobile/src/lib/search.ts:242"
+      ],
+      "behavior": "patchMobile already personalizes showroom-config, dealer inventory and one explicit stock currency, rejects mixed currency, and patches the locale/search money formatter. It leaves defaultLocale bg and English money formatting en-IE. Independent filter metadata still contains € and Price (€).",
+      "gap": "A clean UK session initially renders Bulgarian, and a GBP formatter patch alone does not cover every price input label.",
+      "proposedPatch": "Extend existing patchMobile with guarded defaultLocale en and English en-GB formatting replacements for explicit GB dealer data. Replace active price/filter metadata from recorded currency using existing consumers. Preserve en/bg translation and URL/saved manual preference behavior; do not overwrite a saved Bulgarian choice.",
+      "implementation": "not implemented by this audit"
+    },
+    {
+      "id": "mobile-mileage",
+      "paths": [
+        "scripts/lib/client-refresh-six.mjs:108",
+        "templates/mobile/src/lib/search.ts:126",
+        "templates/mobile/src/lib/filter-fields.ts:19",
+        "templates/mobile/src/lib/native-filter-options.ts:33",
+        "templates/mobile/src/lib/vehicle-copy.ts:103",
+        "templates/mobile/src/components/ShowroomFilterSheet.tsx:392",
+        "templates/mobile/src/components/ShowroomInventoryScreen.tsx:394",
+        "templates/mobile/src/components/ShowroomVehicleCard.tsx:222",
+        "templates/mobile/src/components/VehicleCard.tsx:284",
+        "templates/mobile/src/components/VehicleSections.tsx:554",
+        "templates/mobile/src/components/ShowroomServiceRequest.tsx:681",
+        "templates/mobile/src/lib/service-requests.ts:168",
+        "templates/mobile/src/lib/enquiry.ts:44"
+      ],
+      "behavior": "showroomVehicle converts mi to rounded canonical km; Vehicle has numeric mileage without a unit. Search compares numeric min/max directly and sorts it. Active showroom range is 0..200000, step5000, unit km; summaries/cards/detail/service enquiry copy also show km.",
+      "gap": "Both the values and active input thresholds require UK distance adaptation. Reference capture files alone are not the active showroom range, and a global string replacement would leave numeric semantics inconsistent.",
+      "proposedPatch": "Extend patchMobile's existing generated dealer config/inventory seam with distance presentation and original mileage facts. Reuse one conversion contract across showroom and retained native filter controls, summaries, cards/details, compare and service/enquiry input copy. Keep canonical km for search/persistence, converting UK mi input before matching and canonical state back for display. Do not convert annual leasing allowances or service form values merely by relabelling their unit.",
+      "implementation": "not implemented by this audit"
+    },
+    {
+      "id": "trusted-country-and-preferences",
+      "paths": [
+        "scripts/publishing/cloudflare-router.mjs:48",
+        "scripts/publishing/cloudflare-next.mjs:60",
+        "templates/modern/packages/internationalization/policy.ts:182",
+        "templates/modern/packages/internationalization/request.ts:31",
+        "templates/app/lib/locale-policy.ts:7",
+        "templates/app/proxy.ts:13",
+        "templates/mobile/src/lib/locale-store.ts:26",
+        "templates/mobile/src/lib/use-locale.ts:15"
+      ],
+      "behavior": {
+        "providerBoundary": "Router deletes caller x-cars-country and x-vercel-ip-country, then sets a validated request.cf.country hint. Internal family Workers have workers_dev:false. Generated Modern request code consumes x-cars-country only under fixed CARS_CLOUDFLARE_PROVIDER=1; source retains its Vercel behavior.",
+        "modern": "URL route locale or valid lang query > saved cars_locale cookie > supported Accept-Language > trusted country suggestion > configured default. Saved cars_country wins over the country suggestion. Country preference does not rewrite inventoryCurrency.",
+        "app": "Explicit enabled route locale > saved cars-app-locale cookie > dealer.defaultLocale. No Accept-Language or trusted-country input currently reaches resolveLocale. Proxy writes its own x-cars-app-locale and the server consumes it.",
+        "mobile": "Hydration chooses valid lang query > saved namespaced localStorage language > defaultLocale. Manual set persists and updates lang in URL. Server snapshot always uses defaultLocale; there is no browser-language or trusted-country resolver."
+      },
+      "gap": "The provider's common countryHint receipt describes the intended order; only Modern currently implements that complete order in these Next families. The old Mobile runtime qualification is not proof of this latest candidate's UK detection behavior.",
+      "proposedPatch": "Keep the router trust boundary. Extend App's existing pure locale-policy/proxy to accept supported browser language and trusted-country suggestion only after explicit URL/cookie preferences. For Mobile, first set the dealer English default; if full detection is required, supply a server-derived request suggestion through its existing locale/store environment and use it only after URL/saved/browser preference. Preserve blocked-storage behavior and request isolation. Do not expose internal family Workers or accept a public request header as geography.",
+      "implementation": "Modern provider hook exists; App/Mobile full detection remains unimplemented"
+    },
+    {
+      "id": "unknown-facts",
+      "paths": [
+        "scripts/lib/client-refresh-adapters.mjs:499",
+        "scripts/lib/client-refresh-six.mjs:111",
+        "templates/app/lib/vehicle-values.ts:3",
+        "templates/app/lib/dealer-schema.ts:72"
+      ],
+      "behavior": "Modern currently emits amount0 with fixed price for missing price facts; Mobile rejects nonnumeric unpublished price but accepts numeric zero. App carries priceOnRequest/mileageOnRequest and excludes unpublished values from matching via vehicle-values.",
+      "gap": "A normalizer preserving null is necessary but insufficient: family adapters must not produce £0 offers or fictional zero mileage. Modern's PriceType currently has no dedicated on-request variant.",
+      "proposedPatch": "Preserve App's existing request flags. For Modern/Mobile, fail closed on unsupported unknown-price/mileage presentation or add a reviewed generated unknown-value consumer through the existing seam before permitting such rows. Do not fabricate a price/year/mileage to make a typed catalog build.",
+      "implementation": "normalizer fix pending; family behavior still requires focused integration"
+    }
+  ],
+  "implementationUpdates": [
+    {
+      "date": "2026-10-10",
+      "scope": "App mileage input only; the findings and reproduction above describe the pre-fix audited boundary.",
+      "files": {
+        "scripts/lib/app-dealer-adapter.mjs": "037ebfc5e2b8b718700e32301778401d6f820be89fc5487db58d126fe1a6044a",
+        "scripts/app-dealer-adapter.test.mjs": "19d61687895deb7763a069f3426dc96b4f548029b97616aa6ad781884ee3b320"
+      },
+      "result": "Known normalized/tagged/flat mi now converts to canonical km: 10000mi ->16093km, mileageOnRequest=false. Existing km values remain unchanged. Selected original value/unit/canonical conversion are retained in provenance.mileageFacts alongside the exact original profile hash. Missing mileage, explicit on-request and legacy inferred zero without raw source evidence remain unknown; published zero remains known. Final review also preserves normalized published formatted zero (0 miles) when mileageOnRequest=false, while legacy inferred zero without the explicit false flag remains unknown.",
+      "validation": {
+        "command": "Node 22.23.2 --test scripts/app-dealer-adapter.test.mjs",
+        "passed": 6,
+        "failed": 0
+      },
+      "limits": "This focused adapter fix does not implement UK mi display/filter controls, the remaining GBP consumers, App/Mobile browser/country detection, a build or hosted acceptance."
+    }
+  ],
+  "smallestCheckpoint": {
+    "existingWorkflow": [
+      "Resolve exact accepted release pins with existing template tools",
+      "Normalize recorded GB dealer facts once",
+      "Apply existing Modern/App/Mobile personalization seams",
+      "Apply existing native/six variant mount transformations",
+      "Apply Cloudflare provider adapter using reviewed frozen dependency locks",
+      "Seal existing package receipts only after generated source checks"
+    ],
+    "focusedChecks": [
+      "Extend scripts/refresh-client.test.mjs and scripts/app-dealer-adapter.test.mjs for 10000mi, explicit km/mi precedence, tagged input and unknown facts.",
+      "Extend scripts/six-variant-refresh.test.mjs and applicable existing native-refresh tests for GB/GBP, English Mobile default and guarded consumer replacements.",
+      "GBP site/query schema retains GBP and every relevant price label shows the same recorded currency.",
+      "A UK mi threshold includes the exact boundary car and excludes the next source mile, then survives reload, saved state, clear/apply and native mount URL serialization.",
+      "URL BG beats saved/browser/country EN; saved BG beats browser/country EN; unsupported or denied storage/header choices use the intended safe fallback.",
+      "Spoofed country headers cannot affect locale; public router country is trusted only at internal bindings and dealer currency remains GBP.",
+      "One bounded integration build per changed family, followed by mounted inventory/detail/filter/localization checks at 320/390/1440 as applicable and current hosted evidence."
+    ],
+    "acceptance": "No test/build/hosted readiness is claimed by this audit. No second dealer generator, master edit or release-lock mutation is proposed."
+  }
+}
