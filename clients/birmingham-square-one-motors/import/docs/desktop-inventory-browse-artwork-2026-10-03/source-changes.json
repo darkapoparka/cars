@@ -1,0 +1,31 @@
+{
+	"sourceDigest": "18f346b144f75221506af578925be95694da6b0e6b545577af2ce435e56355fd",
+	"paths": 1678,
+	"fullManifest": "C:/Users/radev/.codex/tmp/cars-import-inventory-browse-artwork-2026-10-03/evidence/source-manifest.json",
+	"changed": [
+		{
+			"path": "src/lib/auxero/home-five.ts",
+			"sha256": "a2e78351627e86c5964a108b2a77c678410d20fd70419b4c85ea0f061a90d9d3"
+		},
+		{
+			"path": "src/lib/components/common/HeroCars.svelte",
+			"sha256": "0ce980c6eb571ff7226b774233b5633e090fcc68c5e09e8ac616178d0ee30b24"
+		},
+		{
+			"path": "src/lib/components/home/HomeBrowseCard.svelte",
+			"sha256": "1d2ca770ea8c0344d8b00e99093e42623668c243c0c7f3fbf13182fd77ee97fa"
+		},
+		{
+			"path": "src/lib/components/home/HomePage.svelte",
+			"sha256": "bff57aa2f083b36d859b33e5459b8d6482a2071c00e954afadf6fb825842514c"
+		},
+		{
+			"path": "src/lib/content/home-discovery.ts",
+			"sha256": "8c1a9dd77a28896d8e08aae2cd940e5b1fc6360428d90f41ef9796923c6e997f"
+		},
+		{
+			"path": "src/lib/utils/assets.ts",
+			"sha256": "dcabf7c1ac466d3fdde63d126e54595b9f5acc9b5536d7c0700ea580110c9386"
+		}
+	]
+}

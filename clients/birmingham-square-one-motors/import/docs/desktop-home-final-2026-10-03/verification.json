@@ -1,0 +1,947 @@
+{
+	"sourceDigest": "923aae0d74951c327c71fb937d1b74c0437036f4f1914f6b55969e6346dd6233",
+	"paths": 1678,
+	"packageLockSha256": "aa596db7046c3f226ce50b488e283e30121eb49122d5006c60035ef57a952e1c",
+	"beforeStates": 40,
+	"afterStates": 100,
+	"productionStates": 20,
+	"overlayStates": 6,
+	"widths": [320, 390, 768, 1024, 1440, 1920],
+	"locales": ["bg", "en"],
+	"mobileViewportMatches": 20,
+	"mobileFull": [
+		{
+			"id": "full-home-bg-320",
+			"identicalPixels": true
+		},
+		{
+			"id": "full-home-bg-390",
+			"identicalPixels": true
+		},
+		{
+			"id": "full-home-en-320",
+			"identicalPixels": true
+		},
+		{
+			"id": "full-home-en-390",
+			"identicalPixels": false
+		}
+	],
+	"mobileImageDifference": {
+		"id": "full-home-en-390",
+		"pixels": 55857,
+		"box": [14, 2415, 375, 2617],
+		"dimensions": {
+			"format": "raw",
+			"width": 390,
+			"height": 3745,
+			"channels": 4,
+			"depth": "uchar",
+			"premultiplied": false,
+			"hasAlpha": true,
+			"size": 5842200
+		},
+		"overlappingElements": [
+			{
+				"tag": "SECTION",
+				"text": "Meet our team Book time",
+				"href": null,
+				"box": [0, 2414.63, 390, 203.63]
+			},
+			{
+				"tag": "A",
+				"text": "Meet our team Book time",
+				"href": "/en/contact?lang=en",
+				"box": [14, 2414.63, 362, 203.63]
+			},
+			{
+				"tag": "IMG",
+				"text": "",
+				"href": null,
+				"box": [14, 2414.63, 362, 203.63]
+			},
+			{
+				"tag": "H3",
+				"text": "Meet our team",
+				"href": null,
+				"box": [30, 2430.63, 135.3, 26.02]
+			}
+		]
+	},
+	"gates": [
+		{
+			"name": "verify",
+			"args": ["L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js", "run", "verify"],
+			"started": "2026-10-03T19:18:24.823Z",
+			"completed": "2026-10-03T19:19:09.301Z",
+			"exitCode": 1,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-home-final-2026-10-03\\qa/runtime/verify.log",
+			"logSha256": "ddfaef68d46a83fbe6bf788094de975f49588b1359b557f1afe543506a737b25"
+		},
+		{
+			"name": "scoped-format",
+			"args": [
+				"node_modules/prettier/bin/prettier.cjs",
+				"--check",
+				"src/lib/components/home/HomeBrowseCard.svelte",
+				"src/lib/components/home/HomePage.svelte",
+				"src/lib/components/common/Action.svelte",
+				"src/lib/components/common/Modal.svelte",
+				"src/lib/components/home/HeroFilterDialog.svelte",
+				"src/lib/components/inventory/InventoryFiltersDialog.svelte",
+				"src/lib/components/inventory/VehicleSearchDialog.svelte",
+				"src/lib/content/inventory-desktop-controls.ts",
+				"src/lib/styles/tokens.css",
+				"src/lib/styles/desktop-filters.css",
+				"tests/style-parity.e2e.ts",
+				"tests/desktop-search.e2e.ts",
+				"tests/visual-hierarchy.e2e.ts"
+			],
+			"started": "2026-10-03T19:19:09.302Z",
+			"completed": "2026-10-03T19:19:10.637Z",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-home-final-2026-10-03\\qa/runtime/scoped-format.log",
+			"logSha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+		},
+		{
+			"name": "scoped-lint",
+			"args": [
+				"node_modules/eslint/bin/eslint.js",
+				"src/lib/components/home/HomeBrowseCard.svelte",
+				"src/lib/components/home/HomePage.svelte",
+				"src/lib/components/common/Action.svelte",
+				"src/lib/components/common/Modal.svelte",
+				"src/lib/components/home/HeroFilterDialog.svelte",
+				"src/lib/components/inventory/InventoryFiltersDialog.svelte",
+				"src/lib/components/inventory/VehicleSearchDialog.svelte",
+				"src/lib/content/inventory-desktop-controls.ts",
+				"tests/style-parity.e2e.ts",
+				"tests/desktop-search.e2e.ts",
+				"tests/visual-hierarchy.e2e.ts"
+			],
+			"started": "2026-10-03T19:19:10.638Z",
+			"completed": "2026-10-03T19:19:21.469Z",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-home-final-2026-10-03\\qa/runtime/scoped-lint.log",
+			"logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+		},
+		{
+			"name": "architecture",
+			"args": [
+				"L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js",
+				"run",
+				"check:architecture"
+			],
+			"started": "2026-10-03T19:19:21.470Z",
+			"completed": "2026-10-03T19:19:22.200Z",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-home-final-2026-10-03\\qa/runtime/architecture.log",
+			"logSha256": "a13fae8e803a81d5f3a47374f6da51533f382d894ac89843c389f71eafd8dab7"
+		},
+		{
+			"name": "assets",
+			"args": ["L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js", "run", "check:assets"],
+			"started": "2026-10-03T19:19:22.201Z",
+			"completed": "2026-10-03T19:19:22.517Z",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-home-final-2026-10-03\\qa/runtime/assets.log",
+			"logSha256": "b98cbb4d013072e79e1bd8765db3905ed8c6f5fae74e56356eca4fd5a28ef995"
+		},
+		{
+			"name": "unit",
+			"args": [
+				"L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js",
+				"run",
+				"test:unit",
+				"--",
+				"--run"
+			],
+			"started": "2026-10-03T19:19:22.517Z",
+			"completed": "2026-10-03T19:19:27.495Z",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-home-final-2026-10-03\\qa/runtime/unit.log",
+			"logSha256": "b5352b70554facbb48758f3805b4c1f5e13fe1afbcd40fb0d5a54afb8ce67a70"
+		},
+		{
+			"name": "build",
+			"args": ["L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js", "run", "build"],
+			"started": "2026-10-03T19:19:27.496Z",
+			"completed": "2026-10-03T19:21:08.389Z",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-home-final-2026-10-03\\qa/runtime/build.log",
+			"logSha256": "ad5018a7ded82cd82e30ee55947d21eb5362a7b6e60e0e0669f50fe28c114add"
+		}
+	],
+	"fullLint": {
+		"exitCode": 0,
+		"log": "C:/Users/radev/.codex/tmp/cars-import-home-final-2026-10-03/qa/runtime/full-lint.log",
+		"logSha256": "464b95a7ca6fad4fe437a0615cd7c28475e1770222814d0300bfce4ba7d6e8c4"
+	},
+	"browser": {
+		"startTime": "2026-10-03T19:23:49.844Z",
+		"duration": 90979.35800000001,
+		"expected": 42,
+		"skipped": 16,
+		"unexpected": 0,
+		"flaky": 0
+	},
+	"browse": {
+		"startTime": "2026-10-03T19:23:49.869Z",
+		"duration": 21277.157000000003,
+		"expected": 3,
+		"skipped": 3,
+		"unexpected": 0,
+		"flaky": 0
+	},
+	"interactions": [
+		{
+			"locale": "bg",
+			"case": "search-shell-and-focus",
+			"close": {
+				"width": 48,
+				"height": 48,
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"font": "16px",
+				"radius": "8px",
+				"outline": "rgb(23, 25, 28)",
+				"outlineWidth": "3px",
+				"focusVisible": false
+			},
+			"title": "20px",
+			"tabFocusTrap": true,
+			"escapeRestore": true
+		},
+		{
+			"locale": "bg",
+			"case": "home-selection-hover-focus",
+			"selected": {
+				"width": 504,
+				"height": 48,
+				"background": "rgba(185, 22, 28, 0.12)",
+				"border": "rgba(0, 0, 0, 0)",
+				"font": "18px",
+				"radius": "8px",
+				"outline": "rgb(23, 25, 28)",
+				"outlineWidth": "3px",
+				"focusVisible": false
+			},
+			"hover": {
+				"width": 504,
+				"height": 48,
+				"background": "rgb(242, 244, 247)",
+				"border": "rgba(0, 0, 0, 0)",
+				"font": "18px",
+				"radius": "8px",
+				"outline": "rgb(23, 25, 28)",
+				"outlineWidth": "3px",
+				"focusVisible": false
+			},
+			"focused": {
+				"inside": true,
+				"visible": true,
+				"outline": "rgb(23, 25, 28)",
+				"width": "3px"
+			}
+		},
+		{
+			"locale": "bg",
+			"case": "inventory-selection-hover-and-close",
+			"selected": {
+				"width": 480,
+				"height": 56,
+				"background": "rgba(185, 22, 28, 0.12)",
+				"border": "rgb(185, 22, 28)",
+				"font": "20px",
+				"radius": "8px",
+				"outline": "rgb(23, 25, 28)",
+				"outlineWidth": "3px",
+				"focusVisible": false
+			},
+			"hover": {
+				"width": 480,
+				"height": 56,
+				"background": "rgb(238, 238, 240)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"font": "20px",
+				"radius": "8px",
+				"outline": "rgb(23, 25, 28)",
+				"outlineWidth": "3px",
+				"focusVisible": false
+			},
+			"close": {
+				"width": 48,
+				"height": 48,
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(52, 59, 67)",
+				"font": "16px",
+				"radius": "8px",
+				"outline": "rgb(52, 59, 67)",
+				"outlineWidth": "3px",
+				"focusVisible": false
+			},
+			"escapeRestore": true
+		},
+		{
+			"locale": "en",
+			"case": "search-shell-and-focus",
+			"close": {
+				"width": 48,
+				"height": 48,
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"font": "16px",
+				"radius": "8px",
+				"outline": "rgb(23, 25, 28)",
+				"outlineWidth": "3px",
+				"focusVisible": false
+			},
+			"title": "20px",
+			"tabFocusTrap": true,
+			"escapeRestore": true
+		},
+		{
+			"locale": "en",
+			"case": "home-selection-hover-focus",
+			"selected": {
+				"width": 504,
+				"height": 48,
+				"background": "rgba(185, 22, 28, 0.12)",
+				"border": "rgba(0, 0, 0, 0)",
+				"font": "18px",
+				"radius": "8px",
+				"outline": "rgb(23, 25, 28)",
+				"outlineWidth": "3px",
+				"focusVisible": false
+			},
+			"hover": {
+				"width": 504,
+				"height": 48,
+				"background": "rgb(242, 244, 247)",
+				"border": "rgba(0, 0, 0, 0)",
+				"font": "18px",
+				"radius": "8px",
+				"outline": "rgb(23, 25, 28)",
+				"outlineWidth": "3px",
+				"focusVisible": false
+			},
+			"focused": {
+				"inside": true,
+				"visible": true,
+				"outline": "rgb(23, 25, 28)",
+				"width": "3px"
+			}
+		},
+		{
+			"locale": "en",
+			"case": "inventory-selection-hover-and-close",
+			"selected": {
+				"width": 480,
+				"height": 56,
+				"background": "rgba(185, 22, 28, 0.12)",
+				"border": "rgb(185, 22, 28)",
+				"font": "20px",
+				"radius": "8px",
+				"outline": "rgb(23, 25, 28)",
+				"outlineWidth": "3px",
+				"focusVisible": false
+			},
+			"hover": {
+				"width": 480,
+				"height": 56,
+				"background": "rgb(238, 238, 240)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"font": "20px",
+				"radius": "8px",
+				"outline": "rgb(23, 25, 28)",
+				"outlineWidth": "3px",
+				"focusVisible": false
+			},
+			"close": {
+				"width": 48,
+				"height": 48,
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(52, 59, 67)",
+				"font": "16px",
+				"radius": "8px",
+				"outline": "rgb(52, 59, 67)",
+				"outlineWidth": "3px",
+				"focusVisible": false
+			},
+			"escapeRestore": true
+		}
+	],
+	"overlays": [
+		{
+			"id": "search",
+			"locale": "bg",
+			"metrics": {
+				"box": {
+					"x": 262.5,
+					"y": 50,
+					"width": 900,
+					"height": 800,
+					"top": 50,
+					"right": 1162.5,
+					"bottom": 850,
+					"left": 262.5
+				},
+				"title": [
+					{
+						"text": "Търсене на автомобили",
+						"font": "20px"
+					}
+				],
+				"controls": [
+					{
+						"text": "",
+						"label": "Затвори",
+						"size": [48, 48],
+						"font": "16px",
+						"radius": "8px",
+						"background": "rgba(0, 0, 0, 0)"
+					},
+					{
+						"text": "Изчисти",
+						"label": null,
+						"size": [107.53125, 48],
+						"font": "18px",
+						"radius": "8px",
+						"background": "rgb(242, 244, 247)"
+					},
+					{
+						"text": "Покажи автомобили (42)",
+						"label": null,
+						"size": [260.875, 48],
+						"font": "18px",
+						"radius": "8px",
+						"background": "rgb(185, 22, 28)"
+					}
+				]
+			},
+			"errors": []
+		},
+		{
+			"id": "home-make",
+			"locale": "bg",
+			"metrics": {
+				"box": {
+					"x": 432.5,
+					"y": 195,
+					"width": 560,
+					"height": 510,
+					"top": 195,
+					"right": 992.5,
+					"bottom": 705,
+					"left": 432.5
+				},
+				"title": [
+					{
+						"text": "Избери марка",
+						"font": "20px"
+					}
+				],
+				"controls": [
+					{
+						"text": "",
+						"label": "Затвори",
+						"size": [48, 48],
+						"font": "16px",
+						"radius": "8px",
+						"background": "rgba(0, 0, 0, 0)"
+					},
+					{
+						"text": "Изчисти",
+						"label": null,
+						"size": [107.53125, 48],
+						"font": "18px",
+						"radius": "8px",
+						"background": "rgb(242, 244, 247)"
+					},
+					{
+						"text": "Готово (1)",
+						"label": null,
+						"size": [116.65625, 48],
+						"font": "18px",
+						"radius": "8px",
+						"background": "rgb(185, 22, 28)"
+					}
+				]
+			},
+			"errors": []
+		},
+		{
+			"id": "inventory-make",
+			"locale": "bg",
+			"metrics": {
+				"box": {
+					"x": 192.5,
+					"y": 130,
+					"width": 1040,
+					"height": 640,
+					"top": 130,
+					"right": 1232.5,
+					"bottom": 770,
+					"left": 192.5
+				},
+				"title": [
+					{
+						"text": "Филтри",
+						"font": "20px"
+					}
+				],
+				"controls": [
+					{
+						"text": "",
+						"label": "Затвори",
+						"size": [48, 48],
+						"font": "16px",
+						"radius": "8px",
+						"background": "rgba(0, 0, 0, 0)"
+					},
+					{
+						"text": "Изчисти",
+						"label": null,
+						"size": [107.53125, 48],
+						"font": "18px",
+						"radius": "8px",
+						"background": "rgba(0, 0, 0, 0)"
+					},
+					{
+						"text": "Покажи автомобили15",
+						"label": null,
+						"size": [263.59375, 48],
+						"font": "18px",
+						"radius": "8px",
+						"background": "rgb(185, 22, 28)"
+					}
+				]
+			},
+			"errors": []
+		},
+		{
+			"id": "search",
+			"locale": "en",
+			"metrics": {
+				"box": {
+					"x": 262.5,
+					"y": 50,
+					"width": 900,
+					"height": 800,
+					"top": 50,
+					"right": 1162.5,
+					"bottom": 850,
+					"left": 262.5
+				},
+				"title": [
+					{
+						"text": "Find a car",
+						"font": "20px"
+					}
+				],
+				"controls": [
+					{
+						"text": "",
+						"label": "Close",
+						"size": [48, 48],
+						"font": "16px",
+						"radius": "8px",
+						"background": "rgba(0, 0, 0, 0)"
+					},
+					{
+						"text": "Clear",
+						"label": null,
+						"size": [74.28125, 48],
+						"font": "18px",
+						"radius": "8px",
+						"background": "rgb(242, 244, 247)"
+					},
+					{
+						"text": "Show cars (42)",
+						"label": null,
+						"size": [172.875, 48],
+						"font": "18px",
+						"radius": "8px",
+						"background": "rgb(185, 22, 28)"
+					}
+				]
+			},
+			"errors": []
+		},
+		{
+			"id": "home-make",
+			"locale": "en",
+			"metrics": {
+				"box": {
+					"x": 432.5,
+					"y": 195,
+					"width": 560,
+					"height": 510,
+					"top": 195,
+					"right": 992.5,
+					"bottom": 705,
+					"left": 432.5
+				},
+				"title": [
+					{
+						"text": "Choose make",
+						"font": "20px"
+					}
+				],
+				"controls": [
+					{
+						"text": "",
+						"label": "Close",
+						"size": [48, 48],
+						"font": "16px",
+						"radius": "8px",
+						"background": "rgba(0, 0, 0, 0)"
+					},
+					{
+						"text": "Clear",
+						"label": null,
+						"size": [96, 48],
+						"font": "18px",
+						"radius": "8px",
+						"background": "rgb(242, 244, 247)"
+					},
+					{
+						"text": "Done (1)",
+						"label": null,
+						"size": [96.21875, 48],
+						"font": "18px",
+						"radius": "8px",
+						"background": "rgb(185, 22, 28)"
+					}
+				]
+			},
+			"errors": []
+		},
+		{
+			"id": "inventory-make",
+			"locale": "en",
+			"metrics": {
+				"box": {
+					"x": 192.5,
+					"y": 130,
+					"width": 1040,
+					"height": 640,
+					"top": 130,
+					"right": 1232.5,
+					"bottom": 770,
+					"left": 192.5
+				},
+				"title": [
+					{
+						"text": "Filters",
+						"font": "20px"
+					}
+				],
+				"controls": [
+					{
+						"text": "",
+						"label": "Close",
+						"size": [48, 48],
+						"font": "16px",
+						"radius": "8px",
+						"background": "rgba(0, 0, 0, 0)"
+					},
+					{
+						"text": "Clear",
+						"label": null,
+						"size": [74.28125, 48],
+						"font": "18px",
+						"radius": "8px",
+						"background": "rgba(0, 0, 0, 0)"
+					},
+					{
+						"text": "Show cars15",
+						"label": null,
+						"size": [175.59375, 48],
+						"font": "18px",
+						"radius": "8px",
+						"background": "rgb(185, 22, 28)"
+					}
+				]
+			},
+			"errors": []
+		}
+	],
+	"changedSource": [
+		"src/lib/components/home/HomeBrowseCard.svelte",
+		"src/lib/components/home/HomePage.svelte",
+		"src/lib/components/common/Action.svelte",
+		"src/lib/components/common/Modal.svelte",
+		"src/lib/components/home/HeroFilterDialog.svelte",
+		"src/lib/components/inventory/InventoryFiltersDialog.svelte",
+		"src/lib/components/inventory/VehicleSearchDialog.svelte",
+		"src/lib/content/inventory-desktop-controls.ts",
+		"src/lib/styles/tokens.css",
+		"src/lib/styles/desktop-filters.css",
+		"tests/style-parity.e2e.ts",
+		"tests/desktop-search.e2e.ts",
+		"tests/visual-hierarchy.e2e.ts"
+	],
+	"screenshots": [
+		{
+			"filename": "before-home.png",
+			"sha256": "03fb396a8ca8207c754508d20e024670066616b2fb9aa0fa9c5eab03a45a4f58"
+		},
+		{
+			"filename": "after-home.png",
+			"sha256": "4b87eda0452f7d2e9bb2f7ca0d04d0b2b96fbb3931e49fa0f97c80a4e2945e7e"
+		},
+		{
+			"filename": "before-home-full.png",
+			"sha256": "f3a404fb28ec0106ea12307184024a8da8d8c1b32a0e1babe2c7868c1d170bd8"
+		},
+		{
+			"filename": "after-home-full.png",
+			"sha256": "cc5682d7ce0e156e25aa5628d059b914d4848be74fb359149a7253dd2acca4d3"
+		},
+		{
+			"filename": "before-search.png",
+			"sha256": "57477518209aa81b2932dca745c65fff3872bf6ac9506769441bdaad0679809d"
+		},
+		{
+			"filename": "after-search.png",
+			"sha256": "90650f9861b68b65f26bfdeb8d9eef0cd51f42d2b90c842647f0a120332e2a8b"
+		},
+		{
+			"filename": "before-home-make.png",
+			"sha256": "d079308d08ba47a578b87f47dde422349690d499235ce6babe76400af12b65ca"
+		},
+		{
+			"filename": "after-home-make.png",
+			"sha256": "c45811c0b1a4587a5e361e03052d55cb071e7e88d7fbd1f6e92bca9ea0e351ac"
+		},
+		{
+			"filename": "before-inventory-make.png",
+			"sha256": "a6881f1f644af7a2a791b31b83a457183bbea4747596234aad2b3c99c7e44bd1"
+		},
+		{
+			"filename": "after-inventory-make.png",
+			"sha256": "3d727d47e930d5fd86ed940d25d6a953555c3aaa5b506df6ac8814b6f1851314"
+		}
+	],
+	"screenshotOrigin": "Actual before source and frozen after production build; no injected styles",
+	"mapEmbedPixelsExcluded": true,
+	"scope": "Canonical Import master only; no promotion, mounted/dealer or hosted acceptance",
+	"gallery": {
+		"records": [
+			{
+				"width": 390,
+				"route": "home",
+				"mode": "compare",
+				"visible": 2,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "home",
+				"mode": "before",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "home",
+				"mode": "after",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "home-full",
+				"mode": "compare",
+				"visible": 2,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "home-full",
+				"mode": "before",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "home-full",
+				"mode": "after",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "search",
+				"mode": "compare",
+				"visible": 2,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "search",
+				"mode": "before",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "search",
+				"mode": "after",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "home-make",
+				"mode": "compare",
+				"visible": 2,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "home-make",
+				"mode": "before",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "home-make",
+				"mode": "after",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "inventory-make",
+				"mode": "compare",
+				"visible": 2,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "inventory-make",
+				"mode": "before",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "inventory-make",
+				"mode": "after",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "home",
+				"mode": "compare",
+				"visible": 2,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "home",
+				"mode": "before",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "home",
+				"mode": "after",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "home-full",
+				"mode": "compare",
+				"visible": 2,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "home-full",
+				"mode": "before",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "home-full",
+				"mode": "after",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "search",
+				"mode": "compare",
+				"visible": 2,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "search",
+				"mode": "before",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "search",
+				"mode": "after",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "home-make",
+				"mode": "compare",
+				"visible": 2,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "home-make",
+				"mode": "before",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "home-make",
+				"mode": "after",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "inventory-make",
+				"mode": "compare",
+				"visible": 2,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "inventory-make",
+				"mode": "before",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "inventory-make",
+				"mode": "after",
+				"visible": 1,
+				"overflow": 0
+			}
+		],
+		"failures": 0
+	},
+	"baselineHead": "629e23fead391fa3b0f853c19a988334f75bac2e",
+	"integrationParent": "5b111b173b058c8da9910833d93b6ecec490ddd5"
+}

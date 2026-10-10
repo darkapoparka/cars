@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "birmingham-square-one-motors",
+  "approvalStatus": "independent_design_proposal_not_dealer_approved",
+  "assets": {
+    "onLight": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "cad5a4c01d4881deb0320f25323ae598f3ca520e38a83eff7a41581e0dd7f8bf",
+      "width": 1024,
+      "height": 341,
+      "background": "opaque_white"
+    },
+    "onDark": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "cad5a4c01d4881deb0320f25323ae598f3ca520e38a83eff7a41581e0dd7f8bf",
+      "width": 1024,
+      "height": 341,
+      "background": "opaque_white"
+    },
+    "onAccent": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "cad5a4c01d4881deb0320f25323ae598f3ca520e38a83eff7a41581e0dd7f8bf",
+      "width": 1024,
+      "height": 341,
+      "background": "opaque_white"
+    }
+  },
+  "icon": {
+    "localPath": "assets/app-icon.png",
+    "sha256": "0feba4fe1d6307615bd0d58a211f78bce330668cd88c98e6c9d39519aa7a1236",
+    "width": 512,
+    "height": 512
+  },
+  "favicon": {
+    "localPath": "assets/favicon.ico",
+    "sha256": "5a8267aca2594ecc57790816049a0c7372e018002d83da17241beb899a75c791",
+    "sizes": [
+      16,
+      32,
+      48,
+      64,
+      128,
+      256
+    ],
+    "encoding": "ICO with PNG entries from the actual square icon"
+  },
+  "provenance": {
+    "creationMethod": "generated_proposal",
+    "date": "2026-10-10",
+    "sources": [
+      "generated_images/exec-2cd63a4a-f27f-4f2a-b234-b0a1c597ce64.png",
+      "generated_images/exec-99af87bf-0b7a-4001-ac8c-aff9bdbe9d6e.png"
+    ],
+    "publicReferenceUrls": [
+      "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456"
+    ],
+    "research": "docs/qa/uk-branding-visual-research-2026-10-10.md",
+    "deliveryEncoding": "Proportional size and delivery-format encoding only; no crop, recolouring or compositing.",
+    "visualInspection": "Original reference where available, full business-name spelling, emblem completeness, white surface and square icon checked in generated output. Application consumers await browser QA.",
+    "dealerApproval": false
+  }
+}

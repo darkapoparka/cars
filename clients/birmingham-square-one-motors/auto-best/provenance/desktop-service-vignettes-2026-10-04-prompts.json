@@ -1,0 +1,35 @@
+{
+  "generationMode": "built-in image_gen",
+  "intent": "showroom/import generation using composition references; leasing precise car orientation edit",
+  "showroom": {
+    "prompt": "Use case: product-mockup\nAsset type: transparent decorative cutout for desktop automotive service cards and a compact navigation menu.\nPrimary request: Create a refined photorealistic showroom reception vignette using the reference's glass entrance and reception counter composition.\nInput image 1: composition and material reference only. Its dark solid background must not be reproduced.\nSubject: a graphite reception counter with a brushed silver worktop and base, one restrained thin red inset detail, and a simple glass entrance wall behind it with one open glass door on the right. Show the reception space, not a whole standalone miniature showroom building. No car needed.\nStyle: realistic architectural product photography with physically plausible glass, satin metal and clean panel joints, natural proportions. Crisp main shapes that remain readable at 260 pixels wide. Match the reference's realism, not toy-like isometric illustration.\nComposition: landscape 3:2 canvas, eye-level slight three-quarter view; complete contained vignette, centered with approximately 10 percent transparent padding on every edge. Compact counter and entrance occupy a similar overall footprint. A small neutral floor base belongs to the vignette, with a soft contact shadow. No surrounding landscape or room background.\nLighting: soft neutral studio lighting with enough edge separation to work on both white and charcoal surfaces.\nPalette: graphite, brushed silver, clear glass and one subtle red detail.\nConstraints: genuinely transparent alpha background outside the vignette. Keep all object edges inside the canvas. No people, lettering, signs, logos, watermark, dots, floating symbols, colored backdrop, large roof, extra props, or decorative glow.",
+    "references": [
+      "static/assets/images/template/menu-showroom-v2.webp"
+    ],
+    "source": "C:/Users/radev/.codex/generated_images/01a0f637-14fa-7292-8291-55b0b4f0e12f/exec-d3804862-9711-466b-be10-343103782427.png",
+    "transparent_background": true
+  },
+  "import": {
+    "prompt": "Use case: product-mockup\nAsset type: transparent decorative cutout for desktop automotive service cards and a compact navigation menu.\nPrimary request: Generate a clean photorealistic import scene closely following the reference's one-car-with-open-container composition.\nInput image 1: composition and material reference only. Do not reproduce its red solid background.\nSubject: one realistic silver estate car emerging from a single open graphite shipping container, with its two doors open and a short metal loading ramp. The car is prominent in a front three-quarter view facing toward the lower right; container behind and left. Use natural vehicle proportions and a compact composition. Keep it as clear and direct as the reference. No cargo ship, crane, stacked crates, other vehicles, or extra symbols.\nStyle: realistic commercial product photography, believable silver automotive paint, glass reflections, tires and corrugated steel; no toy-like or cartoon render.\nComposition: landscape 3:2 canvas, full car and full compact container visible; centered with approximately 10 percent transparent padding around the entire vignette. All wheels, open doors and ramp remain inside the canvas. Soft contact shadow only.\nLighting: soft neutral studio lighting, crisp silhouette and enough edge contrast to work on white, charcoal and red cards.\nPalette: silver, graphite and neutral metal; no colored backdrop.\nConstraints: genuinely transparent alpha background outside the objects and contact shadow. No people, logos, badge lettering, registration text, other text, watermark, decorative dots, glow or scene background.",
+    "references": [
+      "static/assets/images/template/menu-import-v2.webp"
+    ],
+    "source": "C:/Users/radev/.codex/generated_images/01a0f637-14fa-7292-8291-55b0b4f0e12f/exec-6ee4ef30-7221-46b1-aa7e-0e6da05a040a.png",
+    "transparent_background": true
+  },
+  "leasing": {
+    "prompt": "Use case: precise-object-edit\nAsset type: transparent leasing illustration for desktop automotive service cards and navigation.\nInput image 1: edit target. Preserve this complete service illustration's materials, palette, props, padding and overall scale.\nInput image 2: reference for the car's viewing angle and direction only. Do not copy its magnifying glass.\nChange only the silver sedan's orientation in image 1: turn it to face the LOWER RIGHT in a front three-quarter view, matching the sedan in image 2. The front grille and bumper belong on the right side, and the rear extends left. Keep the same unbranded silver sedan body style, natural proportions, realistic paint, glass and tires.\nPreserve the graphite three-dimensional percentage symbol with restrained red edges behind the car. The percentage symbol must stay correctly oriented with its normal forward slash; do not mirror the whole image. Keep the closed light document folio with its graphite binding and red tab at the lower right, fully visible. Keep the scene centered at the same visual size, with approximately the same transparent padding and a soft neutral contact shadow.\nKeep the existing photorealistic product-render style and neutral studio lighting. Keep the whole car, percentage symbol and document inside the landscape 3:2 canvas.\nBackground must remain genuine alpha transparency. No new props, people, text, logos, watermark, backdrop, decorative dots, glow, or magnifying glass.",
+    "references": [
+      {
+        "path": "static/assets/images/template/desktop-service-leasing-v1.webp",
+        "role": "edit target"
+      },
+      {
+        "path": "static/assets/images/template/desktop-service-trade-in-v1.webp",
+        "role": "car orientation reference only"
+      }
+    ],
+    "source": "C:/Users/radev/.codex/generated_images/01a0f637-14fa-7292-8291-55b0b4f0e12f/exec-45b86ace-9cf5-4cb6-abc5-d8a32f30fb53.png",
+    "transparent_background": true
+  }
+}

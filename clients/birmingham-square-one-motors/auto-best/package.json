@@ -1,0 +1,52 @@
+{
+  "name": "day-and-night-autodeal",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
+  "packageManager": "npm@10.9.8",
+  "engines": {
+    "node": "^22.12.0"
+  },
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --fail-on-warnings",
+    "check:architecture": "node scripts/check-architecture.mjs",
+    "check:css-policy": "node scripts/check-css-policy.mjs",
+    "check:assets": "node scripts/check-assets.mjs",
+    "check:tokens": "node scripts/check-tokens.mjs",
+    "check:typography": "node scripts/check-typography.mjs",
+    "validate": "npm run check:architecture && npm run check:css-policy && npm run check:tokens && npm run check:typography && npm run check:assets && npm run check:domain && npm run check && npm run build",
+    "check:dependencies": "npm audit --audit-level=high",
+    "quality": "npm run validate && npm run check:dependencies && npm run smoke:preview",
+    "smoke": "node scripts/smoke.mjs",
+    "smoke:typography": "node scripts/typography-smoke.mjs",
+    "check:domain": "node scripts/check-domain.mjs && node --test scripts/enquiry-resources.test.mjs scripts/security.test.mjs && node scripts/check-overlay.mjs",
+    "smoke:phase4": "node scripts/phase4-smoke.mjs",
+    "locales:build": "node scripts/build-locales.mjs",
+    "check:locales": "node scripts/build-locales.mjs --check",
+    "test:locales": "node --test --test-concurrency=1 scripts/locale-policy.test.mjs scripts/locale-copy-audit.test.mjs scripts/locale-catalog.test.mjs scripts/locale-source-audit.test.mjs scripts/locale-mobile-copy.test.mjs",
+    "prebuild": "npm run check:locales && npm run check:locale-source",
+    "check:locale-source": "node scripts/locale-source-audit.mjs",
+    "smoke:locales": "node scripts/run-locale-qa.mjs",
+    "smoke:preview": "node scripts/smoke.mjs --preview"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-vercel": "6.3.4",
+    "@sveltejs/kit": "^2.70.3",
+    "@sveltejs/vite-plugin-svelte": "^7.3.0",
+    "@types/node": "22.20.1",
+    "playwright": "1.62.1",
+    "svelte": "^5.57.0",
+    "svelte-check": "^4.7.6",
+    "typescript": "^5.9.2",
+    "vite": "^8.2.2"
+  },
+  "overrides": {
+    "cookie@<0.7.0": "0.7.2"
+  },
+  "dependencies": {
+    "bits-ui": "2.19.5"
+  }
+}

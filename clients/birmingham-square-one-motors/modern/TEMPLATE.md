@@ -1,0 +1,62 @@
+# Template reference — Modern
+
+## Identity and source
+
+- Authoritative master: darkapoparka/cars, main, templates/modern.
+- Template key: modern. Position: minimal, inventory-first dealership showroom.
+- Stack: Next.js / React / TypeScript, complete pnpm / Turborepo workspace.
+- Public Home: /[locale]. Inventory and primary mobile entry: /[locale]/cars.
+- Listing detail: /[locale]/listing/[slug]. Legacy /cars negotiates locale.
+
+This is a reusable template master, not a sendable dealer demo. Its source/sample identity is intentionally retained for design fidelity. Every dealer copy requires a complete content, contact, metadata and asset sweep.
+
+## Preserved visual contract
+
+Architectural work must preserve the approved rendered mobile and desktop design. Do not use old audit screenshots or earlier composition notes as redesign instructions.
+
+From 1024 px, desktop pages use a full-width hero and a white content sheet with a shared 32 px overlap and rounded top corners. The inner content frame caps at 1400 px with 40 px minimum side margins. The shared hero owns this transition for Home, inventory, services and public pages; PDP retains its title and gallery composition. Services, Blog, About and Contact retain the same 352 px masthead height. Blog and Services use the same charcoal gradient, white search, refinement pills and fully visible side-profile cutouts as Home/Cars: silver BMW M4 for Blog and pearl-white Mercedes estate for Services. `artwork.desktopPageVehicles` configures each pair independently; explicit existing Services photos, page banners and shared dealer artwork remain authoritative unless a page pair is supplied. Cutouts and preloads are gated at 1200 px, with search alone on narrower desktop. About and Contact retain their own configured `artwork.desktopPageHeroes` photos, restrained overlays, white primary actions and outlined secondary actions. All artwork changes are desktop-only.
+
+Home/Cars use a discovery gradient derived from `leadSite.desktopAccent`, with the same accent driving primary controls. From 1200 px, Home uses matching Lamborghini Urus cutouts and Cars uses matching pearl-white Ferrari Purosangue cutouts around a centered search capsule whose width scales between 640 and 740 px; the left cutout is mirrored. The separate `artwork.desktopInventoryVehicles` role can override Cars alone; existing explicit `desktopDiscoveryVehicles` dealer pairs remain the fallback for both pages. Narrower desktop retains the centered 900 px maximum and hides the cutouts. Both pages put Type/Make/Model in that order in equal-width fields. Type contains the selected vehicle's existing 36 by 20 px cutout without changing the field size. Home has Price, Year, Mileage and Filters below; Cars additionally has Fuel and Gearbox. Budget presets live in Price rather than duplicating the search controls with brand/budget pills. The capsule is 64 px high; fields/search are 48 px and filter targets are 44 px. Cutouts fit the available space beside the capsule without clipping either car. Their equal scaling and aligned wheel baselines use shared desktop tokens; dealer artwork roles remain configurable.
+
+Desktop discovery places search and centered refinements together in the hero on Home and Cars; Services and Blog keep their primary category pills. Home and Cars retain their visible titles above the search capsule. Refinements share the existing rounded pill treatment. Type opens a compact four-option menu, displays the selected category and preserves compatible filters through the existing category policy. Shared controls use Home's local draft until Search or Cars' existing inventory URL state. Home reuses the full-filter dialog, discards cancelled edits and restores trigger focus; its category draft uses the matching taxonomy. Desktop dialogs and Type menus close when crossing the desktop breakpoint. The shared rhythm is 24 px from the title to search, 16 px from search to the lower controls, 8 px between controls and a 44 px target height. Cars keeps a visible result count, applied-filter chips and compact Sort/View controls together on one content line. Sort is a 32 px text trigger; View is a 32 px icon button with a localized accessible name and tooltip. Both utilities have white surfaces, quiet borders and subtle shadows so they remain visible on the grey collection panel. Applied chips retain their space while Sort is open; overlay accessibility hiding must not control visual visibility. Clear all remains a quiet dark text action. Result menus close when crossing the desktop breakpoint. Home, Cars, Services, Blog and the About gallery start their first section 32 px below the visible rounded sheet edge. The shared content offset subtracts the rounded overlap from the page gap so this space is not counted twice. Card grids use 24 px gaps. Shared desktop tokens own these values. Mobile keeps its existing pill rails and drawers.
+
+Home retains its four supplied preview cars without stock tabs. Featured vehicles, service links and journal previews use the same subtle grey collection panels, with 24 px padding/gaps, 16 px corners and white cards. Their headings and actions remain inside the panels. Shared showroom cards keep their image links, fact badges, separate Save control and quiet arrow in a 36 px grey square. Hero filter pills remain 44 px high; result utilities are secondary 32 px controls. View remains in the inventory toolbar with the existing Grid/List and master-preview Quick/Sidebar choices.
+
+Services and Blog keep the shared white page sheet and group their white cards on the existing subtle grey surface, with 24 px padding/gaps and 16 px container corners matching the inventory panel treatment. The rounded sheet overlap counts toward the 32 px spacing above the collection panel; do not add that spacing again below the hero. Cards begin 56 px below the visible sheet edge, including the panel's 24 px inner padding. Cars uses this collection panel in both Quick and Sidebar layouts, retaining its count, applied filters and Sort/View row. Its cards naturally sit below that row; Home cards sit below their section heading. Align the collection starts rather than forcing every card to the same vertical position. About keeps its gallery on white and its existing grey FAQ group; Contact and article reading sections retain their white surfaces. Blog keeps four columns from 1024 px upward; short card titles are limited visually to two lines, excerpts are omitted and Read actions stay aligned with full accessible article titles. Filtering must retain these card widths instead of stretching one result across the row. Empty Blog results omit the empty grid container. These collection rules are desktop-only.
+
+Desktop navigation keeps Home, Cars and Services visible, with enabled Blog/About/Contact links in a compact text-only, keyboard-accessible More menu. The menu marks the current secondary section and closes across the desktop breakpoint. Primary links and More use dark active text against muted inactive links, without underlines or changing label widths. Desktop CTAs and location/category badges use the existing pill radius; cards and panels keep their moderate corners. Blog and Home advice previews reuse the existing transparent automotive illustrations on a shared token-based neutral surface, with centered contained artwork. Blog desktop cards omit excerpts and use short display titles while retaining full accessible article titles and the existing searchable content. Mobile keeps its original article covers, titles and layout through a media-selected picture source.
+
+Preserve all mobile structure, drawers, navigation, typography, imagery and spacing below 1024 px. Preserve current BG/EN copy and charcoal configuration. Dealer branding and artwork remain configurable; never hardcode a new identity into shared components.
+
+Use [QA](docs/QA.md) for route/interaction checks. Current rendered source and owner-approved design take precedence over historical stage reports. Those reports are evidence of their dates, not instructions to restore earlier layouts.
+
+## Code and content boundaries
+
+[Architecture](docs/architecture.md) describes server/client ownership, browser preferences and public request handling. Primary personalization surfaces remain packages/marketplace/lead-site.ts, packages/marketplace/, apps/web/app/ and apps/web/public/. site-config.ts validates the adapted public site and preserves supported older artwork overrides.
+
+The source-bound desktopPreviewIdentity is only for the static master. Dealer adaptation changes the slug and restores that client's configured identity. Do not assume lead-site.ts is the only identity consumer; inspect routes, content, metadata and assets for inherited dealer material.
+
+Keep static-demo inventory distinct from live public inventory. Forms are demos until delivery is genuinely configured and verified; no simulated success or live enquiries during QA. Keep all workspace packages, runtime pins, lockfiles, licenses and provenance.
+
+## Install and run
+
+Use Node >=22.22.0 <23 and pnpm 11.4.0:
+
+```text
+corepack enable
+pnpm install --frozen-lockfile
+pnpm --filter @repo/database build
+pnpm --filter web exec next dev -H 127.0.0.1 -p 6462
+```
+
+Set the documented local static-demo environment in [QA](docs/QA.md); do not invent credentials. Use the actual active preview origin for browser checks. A successful local build is not mounted or public-release acceptance.
+
+## Source, dealer and release ownership
+
+[Cars integration](docs/CARS-INTEGRATION.md) owns the canonical source relationship, dealer-copy contract and standalone/mounted limits. Cars selects reviewed immutable releases and owns the current portfolio/hosting decision. Editing master main does not automatically update existing dealers.
+
+Historical split: this template was separated from the Cars working tree on 10 September 2026 and subsequently consolidated back into the Cars master. Legacy source instructions and artwork provenance remain historical; do not resume their old task queues.
+
+## QA artifacts
+
+Keep transient captures and logs in ignored runtime/ or existing Playwright output directories. Intentional visual test baselines remain under specs/*-snapshots. Loose E2E-root screenshots are not fixtures; retired captures remain recoverable from Git history. Keep concise reports rather than appending every implementation stage to this reference.
