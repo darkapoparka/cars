@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "packagingVersion": "5",
+  "dealer": "birmingham-trade-car-sales-grasmere",
+  "transformation": "six-design-cloudflare-v1",
+  "signature": {
+    "provider": "cloudflare",
+    "adapterReceipt": ".cars-cloudflare-svelte.json",
+    "buildVerified": false
+  },
+  "families": {
+    "app": {
+      "base": "/variant-4",
+      "digest": "40ee439ace0e91565f57ce017197350b2111b44f09d9765fcb55f35fff731140"
+    },
+    "mobile": {
+      "base": "/variant-5",
+      "digest": "297f07cdc9f7638bcdac16f89fe1c4e9b1d6a53301aabf0e81a96f4fa2c5a626"
+    },
+    "karento-best": {
+      "base": "/variant-6",
+      "digest": "cf976c2bb39bf6f040472ada05dd87d9b682c49d5809e705af4c5362044b8775"
+    }
+  },
+  "sourceReceipts": {
+    ".cars-app.json": "b4e9b672d051282365678f29ca2eef753132f0c91ea7b74e47e293338760fed2",
+    ".cars-mobile.json": "b64424b086b8668eb52be1404f329f803b1d770877ee04f9a7992c8cd5ee81e3",
+    ".cars-signature.json": "666ef46627dd833a28a95f13722d3aeea3d7262ee4904238055ac8047b831aae"
+  }
+}

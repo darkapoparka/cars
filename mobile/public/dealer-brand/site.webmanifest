@@ -1,0 +1,20 @@
+{
+  "id": "../",
+  "name": "Trade Car Sales",
+  "short_name": "Trade Car Sales",
+  "description": "Independent design preview for discussion, not an official dealership website. Forms do not send messages or create reservations.",
+  "lang": "en",
+  "start_url": "/variant-5/",
+  "scope": "/variant-5/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#9C1018",
+  "icons": [
+    {
+      "src": "https://cars-uk-birmingham-trade-car-sales-grasmere.darkapoparka1.workers.dev/dealer-share/39618e6d8195943daa8e/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
