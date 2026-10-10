@@ -294,5 +294,99 @@
     "identity": false,
     "contactPath": false
   },
-  "readyToPublish": false
+  "readyToPublish": false,
+  "repairs": [
+    {
+      "id": "gb-auto-best-inventory-contract-v1",
+      "at": "2026-10-10T11:19:39.907Z",
+      "workflowCommit": "27ef2e5e02b60662207289d73cfd42ede93bd417",
+      "previousSourceCommit": "4631f7182ca575faec140f00962542fe42e2eb9d",
+      "reason": "Restore the native inventory formatting API required by stock cards and detail pages while preserving every factual stock row.",
+      "contract": "Auto Best approved inventory public exports",
+      "changedFiles": [
+        {
+          "path": "auto-best/src/lib/data/inventory.ts",
+          "before": "d5b8af573a7037e82ffd1b5952014bd4d381d0a0044c28dcb60a8d53e619dbd8",
+          "after": "566a42b42ff5e9e51e315aa9d8ab8ce56d74039885eaf48c6d938c92f7c6427a"
+        },
+        {
+          "path": "localization/adoption.json",
+          "before": "d97d483cd9cd71a531bffb45dccf9926e25ac2888bff7d5941c6fe2874c2f629",
+          "after": "dcfd42f571b9a450f47df2cc1fc78773117ee7869edc4c34962d4d0ab38247f6"
+        }
+      ],
+      "sourceBefore": {
+        "files": 12245,
+        "sha256": "245a09df87208cbe892c11f1d87005ca4f5f4747d85a0eea2371dd4c5f38821a"
+      },
+      "sourceAfter": {
+        "files": 12245,
+        "sha256": "945aaeee650fa3294753c3e75ec1e2899b3e12f78ae8724d802aceb3b51fccb7"
+      },
+      "familiesBefore": {
+        "auto-best": {
+          "files": 1246,
+          "sha256": "fd3d7f758b81e69b36e4c2a8e0956c38fca728eccf70b96fa21e07e7c8ad60ea"
+        },
+        "modern": {
+          "files": 3979,
+          "sha256": "dca1e2caab64986ea64f4a37b0746c5f37f847562066fb8c9abd581d9efcea74"
+        },
+        "import": {
+          "files": 3398,
+          "sha256": "3e9e7c101c293b1881207d8652db62ed72fd841180d704de034cb3a2bc6176ab"
+        },
+        "app": {
+          "files": 1647,
+          "sha256": "d6c384dda1d27258da3e0266e6e2754ff6b178c81b88cd5e4ee435c922a7599c"
+        },
+        "mobile": {
+          "files": 833,
+          "sha256": "bea03ac9f8e1cbc7b0c868c6badcd3607747359b334089ad6d2076b32146d960"
+        },
+        "karento-best": {
+          "files": 1124,
+          "sha256": "8dacce7f9b67942449f98b7d315d22b55c633453dd89a6ecb2f9f750857b7350"
+        }
+      },
+      "familiesAfter": {
+        "auto-best": {
+          "files": 1246,
+          "sha256": "1ea1cf436b19f9f1b2c9db92bc8e8ae8ac02ac94cf7ccae81f13de96ab4676fb"
+        },
+        "modern": {
+          "files": 3979,
+          "sha256": "dca1e2caab64986ea64f4a37b0746c5f37f847562066fb8c9abd581d9efcea74"
+        },
+        "import": {
+          "files": 3398,
+          "sha256": "3e9e7c101c293b1881207d8652db62ed72fd841180d704de034cb3a2bc6176ab"
+        },
+        "app": {
+          "files": 1647,
+          "sha256": "d6c384dda1d27258da3e0266e6e2754ff6b178c81b88cd5e4ee435c922a7599c"
+        },
+        "mobile": {
+          "files": 833,
+          "sha256": "bea03ac9f8e1cbc7b0c868c6badcd3607747359b334089ad6d2076b32146d960"
+        },
+        "karento-best": {
+          "files": 1124,
+          "sha256": "8dacce7f9b67942449f98b7d315d22b55c633453dd89a6ecb2f9f750857b7350"
+        }
+      },
+      "nativeAdoptionBefore": "d97d483cd9cd71a531bffb45dccf9926e25ac2888bff7d5941c6fe2874c2f629",
+      "nativeAdoptionAfter": "dcfd42f571b9a450f47df2cc1fc78773117ee7869edc4c34962d4d0ab38247f6",
+      "verification": {
+        "originalSixSourceSeals": true,
+        "repairedSixSourceSeals": true,
+        "otherFiveFamiliesByteIdentical": true,
+        "factsAndSourcePinsUnchanged": true
+      },
+      "build": false,
+      "hosted": false,
+      "dealerQa": false,
+      "readyToPublish": false
+    }
+  ]
 }
