@@ -1,0 +1,431 @@
+{
+  "date": "2026-10-04",
+  "checks": [
+    {
+      "label": "BG home 390",
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "glyphs": [
+        {
+          "active": "true",
+          "current": "page",
+          "family": "fluent-system-regular",
+          "frame": [
+            24,
+            24,
+            793.40625
+          ],
+          "label": "Начало",
+          "labelFits": true,
+          "labelTop": 821.40625,
+          "state": "regular",
+          "target": [
+            70.1875,
+            51.59375
+          ],
+          "viewBox": "0 0 24 24"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "family": "fluent-system-regular",
+          "frame": [
+            24,
+            24,
+            793.40625
+          ],
+          "label": "Коли",
+          "labelFits": true,
+          "labelTop": 821.40625,
+          "state": "regular",
+          "target": [
+            70.203125,
+            51.59375
+          ],
+          "viewBox": "0 0 24 24"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "family": "fluent-system-regular",
+          "frame": [
+            24,
+            24,
+            793.40625
+          ],
+          "label": "Продай",
+          "labelFits": true,
+          "labelTop": 821.40625,
+          "state": "regular",
+          "target": [
+            70.203125,
+            51.59375
+          ],
+          "viewBox": "0 0 24 24"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "family": "fluent-system-regular",
+          "frame": [
+            24,
+            24,
+            793.40625
+          ],
+          "label": "Внос",
+          "labelFits": true,
+          "labelTop": 821.40625,
+          "state": "regular",
+          "target": [
+            70.203125,
+            51.59375
+          ],
+          "viewBox": "0 0 24 24"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "family": "fluent-system-regular",
+          "frame": [
+            24,
+            24,
+            793.40625
+          ],
+          "label": "Меню",
+          "labelFits": true,
+          "labelTop": 821.40625,
+          "state": "regular",
+          "target": [
+            70.1875,
+            51.59375
+          ],
+          "viewBox": "0 0 24 24"
+        }
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:6461/bg",
+      "visible": true,
+      "width": 390
+    },
+    {
+      "label": "BG home 320",
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "glyphs": [
+        {
+          "active": "true",
+          "current": "page",
+          "family": "fluent-system-regular",
+          "frame": [
+            24,
+            24,
+            793.40625
+          ],
+          "label": "Начало",
+          "labelFits": true,
+          "labelTop": 821.40625,
+          "state": "regular",
+          "target": [
+            56.1875,
+            51.59375
+          ],
+          "viewBox": "0 0 24 24"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "family": "fluent-system-regular",
+          "frame": [
+            24,
+            24,
+            793.40625
+          ],
+          "label": "Коли",
+          "labelFits": true,
+          "labelTop": 821.40625,
+          "state": "regular",
+          "target": [
+            56.203125,
+            51.59375
+          ],
+          "viewBox": "0 0 24 24"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "family": "fluent-system-regular",
+          "frame": [
+            24,
+            24,
+            793.40625
+          ],
+          "label": "Продай",
+          "labelFits": true,
+          "labelTop": 821.40625,
+          "state": "regular",
+          "target": [
+            56.203125,
+            51.59375
+          ],
+          "viewBox": "0 0 24 24"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "family": "fluent-system-regular",
+          "frame": [
+            24,
+            24,
+            793.40625
+          ],
+          "label": "Внос",
+          "labelFits": true,
+          "labelTop": 821.40625,
+          "state": "regular",
+          "target": [
+            56.203125,
+            51.59375
+          ],
+          "viewBox": "0 0 24 24"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "family": "fluent-system-regular",
+          "frame": [
+            24,
+            24,
+            793.40625
+          ],
+          "label": "Меню",
+          "labelFits": true,
+          "labelTop": 821.40625,
+          "state": "regular",
+          "target": [
+            56.203125,
+            51.59375
+          ],
+          "viewBox": "0 0 24 24"
+        }
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:6461/bg",
+      "visible": true,
+      "width": 320
+    },
+    {
+      "label": "BG sell 320",
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "glyphs": [
+        {
+          "active": "false",
+          "current": null,
+          "family": "fluent-system-regular",
+          "frame": [
+            24,
+            24,
+            793.40625
+          ],
+          "label": "Начало",
+          "labelFits": true,
+          "labelTop": 821.40625,
+          "state": "regular",
+          "target": [
+            59.1875,
+            51.59375
+          ],
+          "viewBox": "0 0 24 24"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "family": "fluent-system-regular",
+          "frame": [
+            24,
+            24,
+            793.40625
+          ],
+          "label": "Коли",
+          "labelFits": true,
+          "labelTop": 821.40625,
+          "state": "regular",
+          "target": [
+            59.203125,
+            51.59375
+          ],
+          "viewBox": "0 0 24 24"
+        },
+        {
+          "active": "true",
+          "current": "page",
+          "family": "fluent-system-regular",
+          "frame": [
+            24,
+            24,
+            793.40625
+          ],
+          "label": "Продай",
+          "labelFits": true,
+          "labelTop": 821.40625,
+          "state": "regular",
+          "target": [
+            59.203125,
+            51.59375
+          ],
+          "viewBox": "0 0 24 24"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "family": "fluent-system-regular",
+          "frame": [
+            24,
+            24,
+            793.40625
+          ],
+          "label": "Внос",
+          "labelFits": true,
+          "labelTop": 821.40625,
+          "state": "regular",
+          "target": [
+            59.203125,
+            51.59375
+          ],
+          "viewBox": "0 0 24 24"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "family": "fluent-system-regular",
+          "frame": [
+            24,
+            24,
+            793.40625
+          ],
+          "label": "Меню",
+          "labelFits": true,
+          "labelTop": 821.40625,
+          "state": "regular",
+          "target": [
+            59.203125,
+            51.59375
+          ],
+          "viewBox": "0 0 24 24"
+        }
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:6461/bg/contact?topic=trade-in",
+      "visible": true,
+      "width": 320
+    },
+    {
+      "label": "BG import 320",
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "glyphs": [
+        {
+          "active": "false",
+          "current": null,
+          "family": "fluent-system-regular",
+          "frame": [
+            24,
+            24,
+            793.40625
+          ],
+          "label": "Начало",
+          "labelFits": true,
+          "labelTop": 821.40625,
+          "state": "regular",
+          "target": [
+            59.1875,
+            51.59375
+          ],
+          "viewBox": "0 0 24 24"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "family": "fluent-system-regular",
+          "frame": [
+            24,
+            24,
+            793.40625
+          ],
+          "label": "Коли",
+          "labelFits": true,
+          "labelTop": 821.40625,
+          "state": "regular",
+          "target": [
+            59.203125,
+            51.59375
+          ],
+          "viewBox": "0 0 24 24"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "family": "fluent-system-regular",
+          "frame": [
+            24,
+            24,
+            793.40625
+          ],
+          "label": "Продай",
+          "labelFits": true,
+          "labelTop": 821.40625,
+          "state": "regular",
+          "target": [
+            59.203125,
+            51.59375
+          ],
+          "viewBox": "0 0 24 24"
+        },
+        {
+          "active": "true",
+          "current": "page",
+          "family": "fluent-system-regular",
+          "frame": [
+            24,
+            24,
+            793.40625
+          ],
+          "label": "Внос",
+          "labelFits": true,
+          "labelTop": 821.40625,
+          "state": "regular",
+          "target": [
+            59.203125,
+            51.59375
+          ],
+          "viewBox": "0 0 24 24"
+        },
+        {
+          "active": "false",
+          "current": null,
+          "family": "fluent-system-regular",
+          "frame": [
+            24,
+            24,
+            793.40625
+          ],
+          "label": "Меню",
+          "labelFits": true,
+          "labelTop": 821.40625,
+          "state": "regular",
+          "target": [
+            59.203125,
+            51.59375
+          ],
+          "viewBox": "0 0 24 24"
+        }
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:6461/bg/contact?topic=import",
+      "visible": true,
+      "width": 320
+    }
+  ],
+  "menu": {
+    "locale": "bg",
+    "width": 320,
+    "escapeClosed": true,
+    "focusReturnedToDock": true
+  }
+}

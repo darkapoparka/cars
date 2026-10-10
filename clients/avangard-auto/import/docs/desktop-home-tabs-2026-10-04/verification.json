@@ -1,0 +1,144 @@
+{
+	"date": "2026-10-04",
+	"responsive": {
+		"before": {
+			"states": 24,
+			"failures": 0,
+			"path": "L:/CODEX/cars/templates/import/runtime/desktop-home-tab-polish-2026-10-04/evidence/before-matrix.json",
+			"sha256": "b4b2e1322ef9f942a2fc16fe877eb8df33f5016fbf474343491bcf0b2be1917b"
+		},
+		"after": {
+			"states": 48,
+			"failures": 0,
+			"path": "L:/CODEX/cars/templates/import/runtime/desktop-home-tab-polish-2026-10-04/evidence/after-matrix.json",
+			"sha256": "6afb435affeabfbadeb222ba0fb0997fa7ca8c7669d008d6044fc9db300f9107"
+		},
+		"production": {
+			"states": 8,
+			"failures": 0,
+			"path": "L:/CODEX/cars/templates/import/runtime/desktop-home-tab-polish-2026-10-04/evidence/production-matrix.json",
+			"sha256": "608771981c1a59e0377858eda4d5608b41d3e450d6187801c89f3b15a7d5755a"
+		}
+	},
+	"mobile": {
+		"matched": 16,
+		"pixelsIdentical": true,
+		"presentationIdentical": true,
+		"routes": ["home", "sell-your-car", "import", "about"],
+		"widths": [320, 390],
+		"locales": ["bg", "en"],
+		"path": "L:/CODEX/cars/templates/import/runtime/desktop-home-tab-polish-2026-10-04/evidence/mobile-comparison.json",
+		"sha256": "3454d2e92bb36e575e290013ed5fa0f95a9b6d65d0726290bd2a16c31aa704b4"
+	},
+	"productionProbe": {
+		"modeStates": 32,
+		"keyboardCases": 32,
+		"accessibility": 8,
+		"noJavaScript": 2,
+		"failures": 0,
+		"path": "L:/CODEX/cars/templates/import/runtime/desktop-home-tab-polish-2026-10-04/evidence/probe.json",
+		"sha256": "dd0a459dbad59c4423f24632e2ba250a4a721c01e9b502ae162c929a79b4b87f"
+	},
+	"browser": {
+		"startTime": "2026-10-03T22:21:25.176Z",
+		"duration": 23377.564000000002,
+		"expected": 5,
+		"skipped": 3,
+		"unexpected": 0,
+		"flaky": 0
+	},
+	"gallery": {
+		"states": 36,
+		"failures": 0,
+		"path": "L:/CODEX/cars/templates/import/runtime/desktop-home-tab-polish-2026-10-04/evidence/gallery.json",
+		"sha256": "56d71a1d6922d99abb16d8906854326e57fe4238217d9a3ffab4571824885144"
+	},
+	"gates": [
+		{
+			"name": "svelte",
+			"exitCode": 0,
+			"log": "L:/CODEX/cars/templates/import/runtime/desktop-home-tab-polish-2026-10-04/qa/runtime/svelte.log",
+			"logSha256": "929510c7cf0ee1cf4a9d8e4e58bdcd49059301a6660aa75258b4929ed256e344"
+		},
+		{
+			"name": "scoped-format",
+			"exitCode": 0,
+			"log": "L:/CODEX/cars/templates/import/runtime/desktop-home-tab-polish-2026-10-04/qa/runtime/scoped-format.log",
+			"logSha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+		},
+		{
+			"name": "full-format",
+			"exitCode": 1,
+			"log": "L:/CODEX/cars/templates/import/runtime/desktop-home-tab-polish-2026-10-04/qa/runtime/full-format.log",
+			"logSha256": "f190e6f90f0c2369386737332d8993b118c41ef3f37fe55be3d9e268f13d28c2"
+		},
+		{
+			"name": "full-lint",
+			"exitCode": 0,
+			"log": "L:/CODEX/cars/templates/import/runtime/desktop-home-tab-polish-2026-10-04/qa/runtime/full-lint.log",
+			"logSha256": "ddefde2c1fec4a2f883d2deed235be018316249ceaa26b8412c8718b4e19fb56"
+		},
+		{
+			"name": "architecture",
+			"exitCode": 0,
+			"log": "L:/CODEX/cars/templates/import/runtime/desktop-home-tab-polish-2026-10-04/qa/runtime/architecture.log",
+			"logSha256": "8fa1e36a40640167c8c47f239147570688c88beec18cce162a4799d5d5a73a54"
+		},
+		{
+			"name": "assets",
+			"exitCode": 0,
+			"log": "L:/CODEX/cars/templates/import/runtime/desktop-home-tab-polish-2026-10-04/qa/runtime/assets.log",
+			"logSha256": "b98cbb4d013072e79e1bd8765db3905ed8c6f5fae74e56356eca4fd5a28ef995"
+		},
+		{
+			"name": "build",
+			"exitCode": 0,
+			"log": "L:/CODEX/cars/templates/import/runtime/desktop-home-tab-polish-2026-10-04/qa/runtime/build.log",
+			"logSha256": "bb59c5399e1c78bf099d8544b75ef4de0776117263175dc67ffd34f2162c7c15"
+		}
+	],
+	"screenshots": [
+		{
+			"path": "before-buy.png",
+			"source": "L:/CODEX/cars/templates/import/runtime/desktop-home-tab-polish-2026-10-04/evidence/before/box-buy-bg.png",
+			"sha256": "7a3c6763424153f1357f99ea30b5646a99bc73a725457c6a33e3f81490d63760"
+		},
+		{
+			"path": "after-buy.png",
+			"source": "L:/CODEX/cars/templates/import/runtime/desktop-home-tab-polish-2026-10-04/evidence/production/box-buy-bg.png",
+			"sha256": "aa785c2c94afd8cda756243f0df09e10984326bf63420c5f006bf10da7264d3d"
+		},
+		{
+			"path": "before-finance.png",
+			"source": "L:/CODEX/cars/templates/import/runtime/desktop-home-tab-polish-2026-10-04/evidence/before/box-finance-bg.png",
+			"sha256": "bb223ccd4a1ba6ff26add1322463608f84077b0a9ca046b80d096050e947a5c6"
+		},
+		{
+			"path": "after-finance.png",
+			"source": "L:/CODEX/cars/templates/import/runtime/desktop-home-tab-polish-2026-10-04/evidence/production/box-finance-bg.png",
+			"sha256": "69ea8e3e1194fcad4d3f0cf42f102ccbd7fadc39047cf4cba968e60045f745ba"
+		},
+		{
+			"path": "before-home.png",
+			"source": "L:/CODEX/cars/templates/import/runtime/desktop-home-tab-polish-2026-10-04/evidence/before/home-buy-bg-1440.png",
+			"sha256": "614084fc1e0e50333a73fcaac066b4faf334148376dfa740dcf98bddedec0885"
+		},
+		{
+			"path": "after-home.png",
+			"source": "L:/CODEX/cars/templates/import/runtime/desktop-home-tab-polish-2026-10-04/evidence/production/home-buy-bg-1440.png",
+			"sha256": "571aa5d7b729dacb112e11ad5b63026a0c2245c7e0bbdb13b331b578b334d797"
+		},
+		{
+			"path": "blog-current.png",
+			"source": "L:/CODEX/cars/templates/import/runtime/desktop-home-tab-polish-2026-10-04/evidence/production/blog-cards-bg.png",
+			"sha256": "0e09aa46de975ebdcfd9127fa27e9e6da163947db80f9966620d826cc8290a45"
+		}
+	],
+	"unitTests": "Not repeated for this icon/CSS/markup follow-up; domain/content/query rules are unchanged.",
+	"initialCorrection": {
+		"issue": "The first mode-switch check caught a removed HandCoins import used by the retained finance CTA. Restored before the frozen build and all successful reruns.",
+		"failedCapture": "L:/CODEX/cars/templates/import/runtime/desktop-home-tab-polish-2026-10-04/evidence/after-initial-matrix.json",
+		"sha256": "8dcc1d895306980da9d11eb702b8699c9bbc538dd4f471535c170d9078fed5af"
+	},
+	"qaRoot": "L:/CODEX/cars/templates/import/runtime/desktop-home-tab-polish-2026-10-04/qa"
+}

@@ -1,6 +1,7 @@
 <script lang="ts">
   import { blogPostTitle } from '$data/editorial';
   import { getI18n } from '$lib/locale/context';
+  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
 
   const i18n = getI18n();
 
@@ -33,8 +34,20 @@
           <h2>{i18n.t("m_54ae9e3a1eb0")}</h2>
           <p>{i18n.dealer('address')}</p>
           <p>{i18n.dealer('appointment')}.</p>
-          <a class="dn-blog-widget__primary" {...phoneLinkAttributes}>{i18n.t("m_fef151a35b62", { p0: brand.phone })}</a>
+          <a class="dn-blog-widget__primary" {...phoneLinkAttributes} aria-label={i18n.t("m_fef151a35b62", { p0: brand.phone })}>
+            <span class="dn-blog-call-desktop">{i18n.t("m_fef151a35b62", { p0: brand.phone })}</span>
+            <span class="dn-blog-call-mobile" aria-hidden="true"><MobileActionIcon name="phone" size={22} />{brand.phone}</span>
+          </a>
           <a class="dn-blog-widget__secondary" href={i18n.href(resolve('/contact'))}>{i18n.t("m_2b5c3d26721a")}</a>
         </section>
 
       </aside>
+
+<style>
+  .dn-blog-call-mobile { display: none; }
+  @media (max-width: 767px) {
+    .dn-blog-call-desktop { display: none; }
+    .dn-blog-call-mobile { display: inline-flex; align-items: center; justify-content: center; gap: var(--dn-space-2); white-space: nowrap; }
+    .dn-blog-widget__primary, .dn-blog-widget__secondary { min-height: var(--dn-control-height-entry-mobile); font: var(--dn-control-font); white-space: nowrap; }
+  }
+</style>

@@ -1,0 +1,1776 @@
+[
+  {
+    "locale": "en",
+    "width": 320,
+    "state": {
+      "banners": [
+        {
+          "card": {
+            "width": 0,
+            "height": 0
+          },
+          "title": "View the collectionCars",
+          "visible": false,
+          "copyVisible": false,
+          "copy": "Explore our collection and find the car that suits you. ",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 0,
+            "height": 0
+          },
+          "lines": [
+            {
+              "text": "Explore our collection and find ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            },
+            {
+              "text": "the car that suits you. ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 0,
+            "height": 0
+          },
+          "title": "Sell or trade inSell/Trade-in",
+          "visible": false,
+          "copyVisible": false,
+          "copy": "Get an appraisal for your car when selling or trading in. ",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 0,
+            "height": 0
+          },
+          "lines": [
+            {
+              "text": "Get an appraisal for your car ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            },
+            {
+              "text": "when selling or trading in. ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 0,
+            "height": 0
+          },
+          "title": "Import to orderImport to order",
+          "visible": false,
+          "copyVisible": false,
+          "copy": "Tell us your budget and the model to import. ",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 0,
+            "height": 0
+          },
+          "lines": [
+            {
+              "text": "Tell us your budget ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            },
+            {
+              "text": "and the model to import. ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 0,
+            "height": 0
+          },
+          "title": "In-house financingFinancing",
+          "visible": false,
+          "copyVisible": false,
+          "copy": "Ask about the deposit, term and conditions. ",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 0,
+            "height": 0
+          },
+          "lines": [
+            {
+              "text": "Ask about the deposit, ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            },
+            {
+              "text": "term and conditions. ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            }
+          ]
+        }
+      ],
+      "overflow": -15,
+      "featured": {
+        "heading": {
+          "width": 281,
+          "height": 90.796875
+        },
+        "action": {
+          "width": 86.40625,
+          "height": 44,
+          "y": 38.796875,
+          "fits": true,
+          "href": "/en/cars"
+        }
+      },
+      "cards": [
+        {
+          "width": 224,
+          "height": 258.625
+        },
+        {
+          "width": 224,
+          "height": 258.625
+        },
+        {
+          "width": 224,
+          "height": 258.625
+        },
+        {
+          "width": 224,
+          "height": 258.625
+        }
+      ],
+      "footerCount": 0,
+      "cta": {
+        "targetHeight": 44,
+        "paintHeight": 24,
+        "titleSize": 24,
+        "actionSize": 12,
+        "fits": true
+      }
+    },
+    "pass": true
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "state": {
+      "banners": [
+        {
+          "card": {
+            "width": 0,
+            "height": 0
+          },
+          "title": "View the collectionCars",
+          "visible": false,
+          "copyVisible": false,
+          "copy": "Explore our collection and find the car that suits you. ",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 0,
+            "height": 0
+          },
+          "lines": [
+            {
+              "text": "Explore our collection and find ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            },
+            {
+              "text": "the car that suits you. ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 0,
+            "height": 0
+          },
+          "title": "Sell or trade inSell/Trade-in",
+          "visible": false,
+          "copyVisible": false,
+          "copy": "Get an appraisal for your car when selling or trading in. ",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 0,
+            "height": 0
+          },
+          "lines": [
+            {
+              "text": "Get an appraisal for your car ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            },
+            {
+              "text": "when selling or trading in. ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 0,
+            "height": 0
+          },
+          "title": "Import to orderImport to order",
+          "visible": false,
+          "copyVisible": false,
+          "copy": "Tell us your budget and the model to import. ",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 0,
+            "height": 0
+          },
+          "lines": [
+            {
+              "text": "Tell us your budget ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            },
+            {
+              "text": "and the model to import. ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 0,
+            "height": 0
+          },
+          "title": "In-house financingFinancing",
+          "visible": false,
+          "copyVisible": false,
+          "copy": "Ask about the deposit, term and conditions. ",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 0,
+            "height": 0
+          },
+          "lines": [
+            {
+              "text": "Ask about the deposit, ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            },
+            {
+              "text": "term and conditions. ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            }
+          ]
+        }
+      ],
+      "overflow": -15,
+      "featured": {
+        "heading": {
+          "width": 351,
+          "height": 90.796875
+        },
+        "action": {
+          "width": 86.40625,
+          "height": 44,
+          "y": 38.796875,
+          "fits": true,
+          "href": "/en/cars"
+        }
+      },
+      "cards": [
+        {
+          "width": 250,
+          "height": 273.25
+        },
+        {
+          "width": 250,
+          "height": 273.25
+        },
+        {
+          "width": 250,
+          "height": 273.25
+        },
+        {
+          "width": 250,
+          "height": 273.25
+        }
+      ],
+      "footerCount": 0,
+      "cta": {
+        "targetHeight": 44,
+        "paintHeight": 24,
+        "titleSize": 24,
+        "actionSize": 12,
+        "fits": true
+      }
+    },
+    "pass": true
+  },
+  {
+    "locale": "en",
+    "width": 992,
+    "state": {
+      "banners": [
+        {
+          "card": {
+            "width": 452.5,
+            "height": 234
+          },
+          "title": "View the collection",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Explore our collection and find the car that suits you.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 240,
+            "height": 48
+          },
+          "lines": [
+            {
+              "text": "Explore our collection and find ",
+              "box": {
+                "width": 229.171875,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "the car that suits you. ",
+              "box": {
+                "width": 162.40625,
+                "height": 20
+              },
+              "y": 106
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 452.5,
+            "height": 234
+          },
+          "title": "Sell or trade in",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Get an appraisal for your car when selling or trading in.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 240,
+            "height": 48
+          },
+          "lines": [
+            {
+              "text": "Get an appraisal for your car ",
+              "box": {
+                "width": 214.171875,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "when selling or trading in. ",
+              "box": {
+                "width": 193.875,
+                "height": 20
+              },
+              "y": 106
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 452.5,
+            "height": 234
+          },
+          "title": "Import to order",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Tell us your budget and the model to import.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 240,
+            "height": 48
+          },
+          "lines": [
+            {
+              "text": "Tell us your budget ",
+              "box": {
+                "width": 148.40625,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "and the model to import. ",
+              "box": {
+                "width": 205,
+                "height": 44
+              },
+              "y": 82
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 452.5,
+            "height": 234
+          },
+          "title": "In-house financing",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Ask about the deposit, term and conditions.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 240,
+            "height": 48
+          },
+          "lines": [
+            {
+              "text": "Ask about the deposit, ",
+              "box": {
+                "width": 173.3125,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "term and conditions. ",
+              "box": {
+                "width": 208.03125,
+                "height": 44
+              },
+              "y": 82
+            }
+          ]
+        }
+      ],
+      "overflow": -15,
+      "featured": {
+        "heading": {
+          "width": 929,
+          "height": 164
+        },
+        "action": null
+      },
+      "cards": [
+        {
+          "width": 428.5,
+          "height": 460.46875
+        },
+        {
+          "width": 428.5,
+          "height": 460.46875
+        },
+        {
+          "width": 428.5,
+          "height": 460.46875
+        },
+        {
+          "width": 428.5,
+          "height": 460.46875
+        }
+      ],
+      "footerCount": 0,
+      "cta": {
+        "targetHeight": 44,
+        "paintHeight": 28,
+        "titleSize": 32,
+        "actionSize": 14,
+        "fits": true
+      }
+    },
+    "pass": true
+  },
+  {
+    "locale": "en",
+    "width": 1280,
+    "state": {
+      "banners": [
+        {
+          "card": {
+            "width": 596.5,
+            "height": 234
+          },
+          "title": "View the collection",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Explore our collection and find the car that suits you.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 276.890625,
+            "height": 48
+          },
+          "lines": [
+            {
+              "text": "Explore our collection and find ",
+              "box": {
+                "width": 233.5,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "the car that suits you. ",
+              "box": {
+                "width": 257.578125,
+                "height": 44
+              },
+              "y": 82
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 596.5,
+            "height": 234
+          },
+          "title": "Sell or trade in",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Get an appraisal for your car when selling or trading in.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 276.890625,
+            "height": 48
+          },
+          "lines": [
+            {
+              "text": "Get an appraisal for your car ",
+              "box": {
+                "width": 218.5,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "when selling or trading in. ",
+              "box": {
+                "width": 259.78125,
+                "height": 44
+              },
+              "y": 82
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 596.5,
+            "height": 234
+          },
+          "title": "Import to order",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Tell us your budget and the model to import.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 276.890625,
+            "height": 48
+          },
+          "lines": [
+            {
+              "text": "Tell us your budget ",
+              "box": {
+                "width": 148.40625,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "and the model to import. ",
+              "box": {
+                "width": 274.890625,
+                "height": 44
+              },
+              "y": 82
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 596.5,
+            "height": 234
+          },
+          "title": "In-house financing",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Ask about the deposit, term and conditions.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 276.890625,
+            "height": 48
+          },
+          "lines": [
+            {
+              "text": "Ask about the deposit, ",
+              "box": {
+                "width": 173.3125,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "term and conditions. ",
+              "box": {
+                "width": 240.546875,
+                "height": 44
+              },
+              "y": 82
+            }
+          ]
+        }
+      ],
+      "overflow": -15,
+      "featured": {
+        "heading": {
+          "width": 1217,
+          "height": 164
+        },
+        "action": null
+      },
+      "cards": [
+        {
+          "width": 274.25,
+          "height": 357.640625
+        },
+        {
+          "width": 274.25,
+          "height": 357.640625
+        },
+        {
+          "width": 274.25,
+          "height": 357.640625
+        },
+        {
+          "width": 274.25,
+          "height": 357.640625
+        }
+      ],
+      "footerCount": 0,
+      "cta": {
+        "targetHeight": 44,
+        "paintHeight": 28,
+        "titleSize": 32,
+        "actionSize": 14,
+        "fits": true
+      }
+    },
+    "pass": true
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "state": {
+      "banners": [
+        {
+          "card": {
+            "width": 668,
+            "height": 234
+          },
+          "title": "View the collection",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Explore our collection and find the car that suits you.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 314.078125,
+            "height": 48
+          },
+          "lines": [
+            {
+              "text": "Explore our collection and find ",
+              "box": {
+                "width": 233.5,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "the car that suits you. ",
+              "box": {
+                "width": 286.125,
+                "height": 44
+              },
+              "y": 82
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 668,
+            "height": 234
+          },
+          "title": "Sell or trade in",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Get an appraisal for your car when selling or trading in.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 314.078125,
+            "height": 48
+          },
+          "lines": [
+            {
+              "text": "Get an appraisal for your car ",
+              "box": {
+                "width": 218.5,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "when selling or trading in. ",
+              "box": {
+                "width": 312.75,
+                "height": 44
+              },
+              "y": 82
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 668,
+            "height": 234
+          },
+          "title": "Import to order",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Tell us your budget and the model to import.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 285.03125,
+            "height": 48
+          },
+          "lines": [
+            {
+              "text": "Tell us your budget ",
+              "box": {
+                "width": 148.40625,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "and the model to import. ",
+              "box": {
+                "width": 274.890625,
+                "height": 44
+              },
+              "y": 82
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 668,
+            "height": 234
+          },
+          "title": "In-house financing",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Ask about the deposit, term and conditions.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 285.03125,
+            "height": 48
+          },
+          "lines": [
+            {
+              "text": "Ask about the deposit, ",
+              "box": {
+                "width": 173.3125,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "term and conditions. ",
+              "box": {
+                "width": 240.546875,
+                "height": 44
+              },
+              "y": 82
+            }
+          ]
+        }
+      ],
+      "overflow": -15,
+      "featured": {
+        "heading": {
+          "width": 1360,
+          "height": 164
+        },
+        "action": null
+      },
+      "cards": [
+        {
+          "width": 310,
+          "height": 381.46875
+        },
+        {
+          "width": 310,
+          "height": 381.46875
+        },
+        {
+          "width": 310,
+          "height": 381.46875
+        },
+        {
+          "width": 310,
+          "height": 381.46875
+        }
+      ],
+      "footerCount": 0,
+      "cta": {
+        "targetHeight": 44,
+        "paintHeight": 28,
+        "titleSize": 32,
+        "actionSize": 14,
+        "fits": true
+      }
+    },
+    "pass": true
+  },
+  {
+    "locale": "bg",
+    "width": 320,
+    "state": {
+      "banners": [
+        {
+          "card": {
+            "width": 0,
+            "height": 0
+          },
+          "title": "Вижте колекциятаАвтомобили",
+          "visible": false,
+          "copyVisible": false,
+          "copy": "Разгледайте нашата колекция и открийте автомобила за вас. ",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 0,
+            "height": 0
+          },
+          "lines": [
+            {
+              "text": "Разгледайте нашата колекция ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            },
+            {
+              "text": "и открийте автомобила за вас. ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 0,
+            "height": 0
+          },
+          "title": "Продажба или бартерПродай/Бартер",
+          "visible": false,
+          "copyVisible": false,
+          "copy": "Свържете се с нас за оценка при продажба или бартер. ",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 0,
+            "height": 0
+          },
+          "lines": [
+            {
+              "text": "Свържете се с нас за оценка ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            },
+            {
+              "text": "при продажба или бартер. ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 0,
+            "height": 0
+          },
+          "title": "Внос по заявкаВнос по заявка",
+          "visible": false,
+          "copyVisible": false,
+          "copy": "Споделете своя бюджет и модел за внос. ",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 0,
+            "height": 0
+          },
+          "lines": [
+            {
+              "text": "Споделете своя бюджет ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            },
+            {
+              "text": "и модел за внос. ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 0,
+            "height": 0
+          },
+          "title": "Собствен лизингЛизинг",
+          "visible": false,
+          "copyVisible": false,
+          "copy": "Попитайте за вноска, срок и условия. ",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 0,
+            "height": 0
+          },
+          "lines": [
+            {
+              "text": "Попитайте за вноска, ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            },
+            {
+              "text": "срок и условия. ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            }
+          ]
+        }
+      ],
+      "overflow": -15,
+      "featured": {
+        "heading": {
+          "width": 281,
+          "height": 90.796875
+        },
+        "action": {
+          "width": 124.921875,
+          "height": 44,
+          "y": 38.796875,
+          "fits": true,
+          "href": "/bg/cars"
+        }
+      },
+      "cards": [
+        {
+          "width": 224,
+          "height": 258.625
+        },
+        {
+          "width": 224,
+          "height": 258.625
+        },
+        {
+          "width": 224,
+          "height": 258.625
+        },
+        {
+          "width": 224,
+          "height": 258.625
+        }
+      ],
+      "footerCount": 0,
+      "cta": {
+        "targetHeight": 44,
+        "paintHeight": 24,
+        "titleSize": 24,
+        "actionSize": 12,
+        "fits": true
+      }
+    },
+    "pass": true
+  },
+  {
+    "locale": "bg",
+    "width": 390,
+    "state": {
+      "banners": [
+        {
+          "card": {
+            "width": 0,
+            "height": 0
+          },
+          "title": "Вижте колекциятаАвтомобили",
+          "visible": false,
+          "copyVisible": false,
+          "copy": "Разгледайте нашата колекция и открийте автомобила за вас. ",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 0,
+            "height": 0
+          },
+          "lines": [
+            {
+              "text": "Разгледайте нашата колекция ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            },
+            {
+              "text": "и открийте автомобила за вас. ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 0,
+            "height": 0
+          },
+          "title": "Продажба или бартерПродай/Бартер",
+          "visible": false,
+          "copyVisible": false,
+          "copy": "Свържете се с нас за оценка при продажба или бартер. ",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 0,
+            "height": 0
+          },
+          "lines": [
+            {
+              "text": "Свържете се с нас за оценка ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            },
+            {
+              "text": "при продажба или бартер. ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 0,
+            "height": 0
+          },
+          "title": "Внос по заявкаВнос по заявка",
+          "visible": false,
+          "copyVisible": false,
+          "copy": "Споделете своя бюджет и модел за внос. ",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 0,
+            "height": 0
+          },
+          "lines": [
+            {
+              "text": "Споделете своя бюджет ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            },
+            {
+              "text": "и модел за внос. ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 0,
+            "height": 0
+          },
+          "title": "Собствен лизингЛизинг",
+          "visible": false,
+          "copyVisible": false,
+          "copy": "Попитайте за вноска, срок и условия. ",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 0,
+            "height": 0
+          },
+          "lines": [
+            {
+              "text": "Попитайте за вноска, ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            },
+            {
+              "text": "срок и условия. ",
+              "box": {
+                "width": 0,
+                "height": 0
+              },
+              "y": 0
+            }
+          ]
+        }
+      ],
+      "overflow": -15,
+      "featured": {
+        "heading": {
+          "width": 351,
+          "height": 90.796875
+        },
+        "action": {
+          "width": 124.921875,
+          "height": 44,
+          "y": 38.796875,
+          "fits": true,
+          "href": "/bg/cars"
+        }
+      },
+      "cards": [
+        {
+          "width": 250,
+          "height": 273.25
+        },
+        {
+          "width": 250,
+          "height": 273.25
+        },
+        {
+          "width": 250,
+          "height": 273.25
+        },
+        {
+          "width": 250,
+          "height": 273.25
+        }
+      ],
+      "footerCount": 0,
+      "cta": {
+        "targetHeight": 44,
+        "paintHeight": 24,
+        "titleSize": 24,
+        "actionSize": 12,
+        "fits": true
+      }
+    },
+    "pass": true
+  },
+  {
+    "locale": "bg",
+    "width": 992,
+    "state": {
+      "banners": [
+        {
+          "card": {
+            "width": 452.5,
+            "height": 234
+          },
+          "title": "Вижте колекцията",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Разгледайте нашата колекция и открийте автомобила за вас.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 240,
+            "height": 72
+          },
+          "lines": [
+            {
+              "text": "Разгледайте нашата колекция ",
+              "box": {
+                "width": 235.984375,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "и открийте автомобила за вас. ",
+              "box": {
+                "width": 204.546875,
+                "height": 44
+              },
+              "y": 106
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 452.5,
+            "height": 234
+          },
+          "title": "Продажба или бартер",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Свържете се с нас за оценка при продажба или бартер.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 240,
+            "height": 48
+          },
+          "lines": [
+            {
+              "text": "Свържете се с нас за оценка ",
+              "box": {
+                "width": 227.84375,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "при продажба или бартер. ",
+              "box": {
+                "width": 208.03125,
+                "height": 20
+              },
+              "y": 106
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 452.5,
+            "height": 234
+          },
+          "title": "Внос по заявка",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Споделете своя бюджет и модел за внос.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 240,
+            "height": 48
+          },
+          "lines": [
+            {
+              "text": "Споделете своя бюджет ",
+              "box": {
+                "width": 196.53125,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "и модел за внос. ",
+              "box": {
+                "width": 206.015625,
+                "height": 44
+              },
+              "y": 82
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 452.5,
+            "height": 234
+          },
+          "title": "Собствен лизинг",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Попитайте за вноска, срок и условия.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 240,
+            "height": 48
+          },
+          "lines": [
+            {
+              "text": "Попитайте за вноска, ",
+              "box": {
+                "width": 171.953125,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "срок и условия. ",
+              "box": {
+                "width": 222.90625,
+                "height": 44
+              },
+              "y": 82
+            }
+          ]
+        }
+      ],
+      "overflow": -15,
+      "featured": {
+        "heading": {
+          "width": 929,
+          "height": 164
+        },
+        "action": null
+      },
+      "cards": [
+        {
+          "width": 428.5,
+          "height": 460.46875
+        },
+        {
+          "width": 428.5,
+          "height": 460.46875
+        },
+        {
+          "width": 428.5,
+          "height": 460.46875
+        },
+        {
+          "width": 428.5,
+          "height": 460.46875
+        }
+      ],
+      "footerCount": 0,
+      "cta": {
+        "targetHeight": 44,
+        "paintHeight": 28,
+        "titleSize": 32,
+        "actionSize": 14,
+        "fits": true
+      }
+    },
+    "pass": true
+  },
+  {
+    "locale": "bg",
+    "width": 1280,
+    "state": {
+      "banners": [
+        {
+          "card": {
+            "width": 596.5,
+            "height": 234
+          },
+          "title": "Вижте колекцията",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Разгледайте нашата колекция и открийте автомобила за вас.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 276.890625,
+            "height": 48
+          },
+          "lines": [
+            {
+              "text": "Разгледайте нашата колекция ",
+              "box": {
+                "width": 240.3125,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "и открийте автомобила за вас. ",
+              "box": {
+                "width": 249.796875,
+                "height": 44
+              },
+              "y": 82
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 596.5,
+            "height": 234
+          },
+          "title": "Продажба или бартер",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Свържете се с нас за оценка при продажба или бартер.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 276.890625,
+            "height": 48
+          },
+          "lines": [
+            {
+              "text": "Свържете се с нас за оценка ",
+              "box": {
+                "width": 232.171875,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "при продажба или бартер. ",
+              "box": {
+                "width": 260.84375,
+                "height": 44
+              },
+              "y": 82
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 596.5,
+            "height": 234
+          },
+          "title": "Внос по заявка",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Споделете своя бюджет и модел за внос.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 276.890625,
+            "height": 48
+          },
+          "lines": [
+            {
+              "text": "Споделете своя бюджет ",
+              "box": {
+                "width": 196.53125,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "и модел за внос. ",
+              "box": {
+                "width": 260.453125,
+                "height": 44
+              },
+              "y": 82
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 596.5,
+            "height": 234
+          },
+          "title": "Собствен лизинг",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Попитайте за вноска, срок и условия.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 276.890625,
+            "height": 48
+          },
+          "lines": [
+            {
+              "text": "Попитайте за вноска, ",
+              "box": {
+                "width": 171.953125,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "срок и условия. ",
+              "box": {
+                "width": 222.90625,
+                "height": 44
+              },
+              "y": 82
+            }
+          ]
+        }
+      ],
+      "overflow": -15,
+      "featured": {
+        "heading": {
+          "width": 1217,
+          "height": 164
+        },
+        "action": null
+      },
+      "cards": [
+        {
+          "width": 274.25,
+          "height": 357.640625
+        },
+        {
+          "width": 274.25,
+          "height": 357.640625
+        },
+        {
+          "width": 274.25,
+          "height": 357.640625
+        },
+        {
+          "width": 274.25,
+          "height": 357.640625
+        }
+      ],
+      "footerCount": 0,
+      "cta": {
+        "targetHeight": 44,
+        "paintHeight": 28,
+        "titleSize": 32,
+        "actionSize": 14,
+        "fits": true
+      }
+    },
+    "pass": true
+  },
+  {
+    "locale": "bg",
+    "width": 1440,
+    "state": {
+      "banners": [
+        {
+          "card": {
+            "width": 668,
+            "height": 234
+          },
+          "title": "Вижте колекцията",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Разгледайте нашата колекция и открийте автомобила за вас.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 314.078125,
+            "height": 48
+          },
+          "lines": [
+            {
+              "text": "Разгледайте нашата колекция ",
+              "box": {
+                "width": 240.3125,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "и открийте автомобила за вас. ",
+              "box": {
+                "width": 249.796875,
+                "height": 44
+              },
+              "y": 82
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 668,
+            "height": 234
+          },
+          "title": "Продажба или бартер",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Свържете се с нас за оценка при продажба или бартер.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 314.078125,
+            "height": 48
+          },
+          "lines": [
+            {
+              "text": "Свържете се с нас за оценка ",
+              "box": {
+                "width": 232.171875,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "при продажба или бартер. ",
+              "box": {
+                "width": 260.84375,
+                "height": 44
+              },
+              "y": 82
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 668,
+            "height": 234
+          },
+          "title": "Внос по заявка",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Споделете своя бюджет и модел за внос.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 285.03125,
+            "height": 48
+          },
+          "lines": [
+            {
+              "text": "Споделете своя бюджет ",
+              "box": {
+                "width": 196.53125,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "и модел за внос. ",
+              "box": {
+                "width": 281.65625,
+                "height": 44
+              },
+              "y": 82
+            }
+          ]
+        },
+        {
+          "card": {
+            "width": 668,
+            "height": 234
+          },
+          "title": "Собствен лизинг",
+          "visible": true,
+          "copyVisible": true,
+          "copy": "Попитайте за вноска, срок и условия.",
+          "lineHeight": 24,
+          "copyBox": {
+            "width": 285.03125,
+            "height": 48
+          },
+          "lines": [
+            {
+              "text": "Попитайте за вноска, ",
+              "box": {
+                "width": 171.953125,
+                "height": 20
+              },
+              "y": 82
+            },
+            {
+              "text": "срок и условия. ",
+              "box": {
+                "width": 222.90625,
+                "height": 44
+              },
+              "y": 82
+            }
+          ]
+        }
+      ],
+      "overflow": -15,
+      "featured": {
+        "heading": {
+          "width": 1360,
+          "height": 164
+        },
+        "action": null
+      },
+      "cards": [
+        {
+          "width": 310,
+          "height": 381.46875
+        },
+        {
+          "width": 310,
+          "height": 381.46875
+        },
+        {
+          "width": 310,
+          "height": 381.46875
+        },
+        {
+          "width": 310,
+          "height": 381.46875
+        }
+      ],
+      "footerCount": 0,
+      "cta": {
+        "targetHeight": 44,
+        "paintHeight": 28,
+        "titleSize": 32,
+        "actionSize": 14,
+        "fits": true
+      }
+    },
+    "pass": true
+  }
+]

@@ -1,69 +1,39 @@
-# App dealer integration — 28 September 2026
+# Template contract
 
-The App master now provides native EN/BG routes, dealer identity/inventory configuration, mounted /variant-4 delivery, retained logo assets and non-submitting enquiry drafts. Cars packaging version 3 adds it to an existing verified trio; see ../../docs/APP-VARIANT.md. The historical candidate/import notes below document earlier stages, not current integration support. Exact source commits and deployment/browser evidence remain separate from owner acceptance.
+## Product and release boundary
 
-# App template
+The product is a single-dealer showroom with two responsive journey compositions, EN/BG locale support and mounted-preview support. The Cars `templates/app` subtree is canonical; the standalone repository carries review/publishing history. Source improvements do not update the Cars release lock, deploy a site or refresh existing clients automatically.
 
-Key: `app` · family: `dealer-webapp` · status: `reference-content-candidate`.
+A dealer release supplies verified identity, contacts, currency, stock and import listings. Runtime public files are validated by `lib/dealer-schema.ts` before development/build; private fields are rejected. Demo records stay separate from dealer stock. The reference comparison panel is template-only. Prices, inventory availability, service terms and finance examples are not commitments by a real dealer.
 
-## Ownership and current state
+## Preserve the accepted appearance
 
-Cars owns the editable candidate in `templates/app`. `L:/cars-app` is preserved as the source/reference project. This folder has no nested `.git`, so future template changes belong to the parent Cars repository on main.
+Use the existing StyleX tokens, compiled styles, assets and component composition. Do not introduce a second styling framework, regenerate dealer identity, replace manufacturer emblems with generic icons or restyle during architectural maintenance.
 
-The user requested a faithful copy first, then polishing for clients such as Day & Night. No UI redesign or dealer personalization was performed during import. Stores, Luxe, reference identity, fixture inventory and disconnected account/transaction flows remain as imported.
+On phones, retain the illustrated Buy/Sell/Finance/Services tabs, their active underline and compact scrolled state. Keep the configured proportional dealer logo and search entry, manufacturer rail, promotions and car feed in their existing positions. The dock remains Home, Cars, Services and Menu; the alternative journey retains its own Services hub. Saved cars remains available through Menu and secondary save controls.
 
-The app uses Next.js App Router, React, TypeScript, StyleX and a PWA manifest. It is not a packaged native mobile app. `package.json` retains the original internal name `cars-app` to preserve the package/lockfile pair.
+Mobile car cards keep the beside-photo composition, small make label, single-line year/model title, prominent price and horizontally scrollable facts in the text column. Preserve all fact text and accessible names. The card wishlist button stays hidden on phones without reserving its space. Compact pill, tab and photo labels stay on one line, truncating inside their slot while keeping adjacent icons/counts visible. Preserve 44px control targets and safe-area spacing.
 
-## Source boundaries
+Desktop starts at 1100px. Keep the bounded white shell, grey outer gutters, configured logo/header actions and Buy/Sell/Leasing/Services navigation. Buy keeps its existing graphite hero and Make/Model/Budget controls. Home uses four photo-first stock cards; Cars uses three cards beside its sidebar at 1100–1399px and four from 1400px. Keep result count, removable selections, Clear all and Sort in their existing shared row. Desktop filter categories use concise labels and restrained helper copy; retain the compact finance card below the budget controls and its existing calculator drawer. Preserve the buy box, detail/gallery split, Viewing/Save actions and hidden desktop dock. Desktop fact badges wrap only as needed.
 
-- `app/`: routes, metadata, manifest, global CSS and StyleX tokens.
-- `components/`: navigation, filters, cards, galleries, sheets and demo flows.
-- `lib/`: fixture inventory, captured detail records and interaction/domain helpers.
-- `public/`: runtime imagery, fonts, icons and media.
-- `scripts/`: imported checks and historical capture tools. Use current validation commands; historical rewrite scripts are not a work queue.
-- `.template/source-manifest.json`: source revision, dirty state and SHA-256 inventory at import.
+Home and Cars use the same search dialog: full-height and top-aligned on phones, centered on wider screens, with VisualViewport keyboard handling. Applying a suggestion preserves independent inventory criteria and ordering. Clear all removes owned URL refinements without dropping unrelated campaign parameters. Back from a vehicle returns to its exact collection entry.
 
-`lib/showroom.ts` now configures the home identity, location link, search prompt, promotion, service shortcuts and dock. This is a partial boundary: inventory, metadata, contacts and legacy journeys are not yet dealer-configured. Do not advertise one-file reskinning.
+Keep the shared modal boundary for initial focus, nested background isolation, scroll locking, keyboard containment, Escape, browser Back and focus restoration. Opening a filter starts at the selected category without an unsolicited pan. Service details keep their photograph, explanation, editable make/model details and enquiry draft in the existing drawer flow. Welcome remains optional and scoped to dealer/mount.
 
-## Showroom navigation pass
+PDP photo albums keep Exterior, Interior and Close-ups, with actual counts, current phone target sizes and the full-size viewer. Preserve the hero, muted facts, information tabs, record disclosures and current price/viewing panel. Missing facts must not become zero-price offers, low-mileage claims or fabricated finance discounts.
 
-**Neutral artwork refinement (28 September 2026):** The remaining PDP service, finance and video-tour banners and four Finance benefit cards use neutral generated artwork with the existing compositions and aspect ratios. Secondary PDP controls and service gradients retain light surfaces; dark fills are reserved for primary/selected actions. See [neutral theme evidence](docs/NEUTRAL-THEME-2026-09-28.md) and [asset prompts](public/showroom/black/PDP-THEME-PROMPTS.md).
+## Client configuration
 
-**Currency and PDP update (28 September 2026):** Buy uses a pearl-white sedan matching the Sell cutout's framing. Display currency is EUR through `lib/currency.ts`; demo fixture amounts are unchanged, not converted. Compact cards have no empty badge footer, and narrow inventory titles truncate on one line. PDP viewing information links to the showroom, and hardcoded blue controls and pale blue surfaces use neutral colors. See [EUR and PDP notes](docs/PDP-EUR-2026-09-27.md).
+Identity, contacts and locale policy: `lib/dealer.json`. Stock: `lib/dealer-inventory.json`. Imports: `lib/dealer-import-inventory.json`. Campaign/service copy and images have their own explicit configuration modules; see README. Preserve existing property meanings and use only public content.
 
-**Current visual contract (27 September 2026):** Black/charcoal campaign artwork is the default, with retained blue artwork selected through `branding.bannerTheme` in `lib/showroom.ts`. This supersedes the historical color notes below. Preserve the shared hero geometry. Home and Cars share `FilterPill`; service shortcut content is centered; the compact mobile dock is white. Home promotional cards align to the content gutters and keep their fixed image ratio. See [black banner verification](docs/BLACK-BANNERS-2026-09-27.md) and [shared controls](docs/CONTROLS-POLISH-2026-09-27.md) before further styling changes. The remaining Sell artwork, Services cards and contact tiles now follow the selected theme; see [theme completion](docs/THEME-COMPLETION-2026-09-27.md). The inventory visit banner uses a compact visual CTA within a full-card link. Shared violet/blue accent tokens now resolve to charcoal, including Saved, login and journey controls; Menu preserves its icons with neutral coloring. See [shared charcoal accents](docs/CHARCOAL-ACCENTS-2026-09-27.md).
+Numeric controls retain the reference bounds unless real dealer stock requires expansion. Classics, cheaper vehicles, high-mileage stock and newer model years must remain selectable. Recently added uses optional actual `listedAt` dates, with stable source ordering for unknown dates. Unknown numeric values sort last and remain visible in an unfiltered catalogue.
 
-**Latest Home correction:** Home now uses `home-hero-v3.png` and the same blue campaign treatment as Sell, Finance and Services. This supersedes the earlier instruction to retain the silver Home promotion. The location-page illustration is configured separately as `locationImage`.
+All enquiry flows remain drafts. Do not invent submission success, instant valuations, approved finance, completed reservations, verified inspection results or contact destinations. Real integrations require separate implementation, error handling, consent/data-retention decisions and end-to-end delivery checks.
 
-**Current correction (27 September 2026):** Keep the silver Home promotion, but preserve the reference template's colourful campaign language elsewhere. Sell, Finance and Services use original blue photographic artwork (`*-hero-v3.png`) with the shared banner geometry and editable copy. `FeatureContent` restores illustrated steps, lavender service packages and original Drive24 promotional panels. Inventory has a blue showroom promotion. Vehicle detail and information pages regain a green illustrated ownership panel. Violet/blue accent tokens again resolve to colour; the compact charcoal navigation remains. The earlier all-silver/generic-grey treatment described below is superseded by this correction. All seven generated assets and exact prompts are recorded in `public/showroom/COLOUR-CAMPAIGN-PROMPTS.md`. Generated scenes are illustrative and do not depict the actual dealer team or facilities.
+## Verification
 
-Home uses white and charcoal, four neutral shortcuts (Buy, Sell, Finance, Services), retained Buy/Sell car cutouts and generated Finance/Services illustrations. The current shortcut uses a subtle charcoal indicator; compact scrolled tabs use a dark selected surface. The promotion uses a generated studio scene with editable showroom copy. A compact icon-only Home / Cars / Saved / More dock stays consistent across top-level pages, including inventory, with accessible labels, 44px touch targets and a white active circle. Detail, search and full-screen journeys retain their focused navigation. The showroom link remains above the home shortcuts and in the desktop header.
+Run `npm run check`, production route checks and `npm run test:browser`. Compare affected pages and open dialogs at 320px, 390px, 1100px and 1440px in both locales. Browser emulation does not replace real iOS/Android keyboard and touch acceptance. Review client content and permissions before publishing.
 
-Generated originals and prompts live in `public/showroom/` (see `ASSET-PROVENANCE.md`). Next Image serves responsive derivatives. Legacy `violet` token names remain for compatibility but now resolve to the charcoal palette; red is retained in the photography and artwork. Hardcoded reference artwork and deeper reference journeys still require adaptation.
+Earlier contradictory polish instructions and dated QA narratives are historical, not an active work queue. Their original versions remain in canonical Cars history and the pre-refactor PRO snapshot. New evidence belongs in ignored runtime output; the current contract above governs architectural maintenance.
 
-The home return-guarantee raster and offer carousel are replaced with neutral showroom content. Home login/WhatsApp overlays and the inventory login bar are removed. Original fixtures, assets and deeper reference journeys are preserved for subsequent adaptation; this pass does not make their claims or transactions suitable for dealer release.
-
-`ShowroomBannerFrame` now shares the Home, Sell, Finance and Services banner gutters (12px on phones, 28px on wider screens) and 20px corner radius. All four landing banners use `ShowroomBanner` for shared height, text hierarchy and CTA placement over edge-to-edge artwork. All four use matching silver studio scenes with charcoal copy and CTAs. Sell, Finance and Services use original generated showroom scenes; public/showroom/SILVER-BANNER-PROMPTS.md records prompts and provenance. There are no inset image cards or monochrome filters. Brand grids remain alternate entry points without a duplicate primary button beneath them. All four banners have a two-line heading, short supporting sentence and 44px CTA over the banner artwork. Text uses consistent inner padding; Finance includes supporting text and no banner-only loan-volume claim. Artwork fills the banner without inset cards. Buy/Sell shortcut car images are contained at 88% width on phones with internal margins. Every banner sits immediately below the service shortcuts. Buy search and Saved links follow its banner, with quick filters below; the compact sticky filter offset follows the shorter shared header. Search remains exclusive to Buy. Top service shortcuts and the Home / Cars / Saved / More dock retain their current destinations; vehicle categories belong within inventory, not as replacements for the main service journeys.
-
-## Adaptation sequence
-
-1. Make navigation reseller-specific: replace the Stores bottom tab with Cars linking to `/cars`; retain a useful dealer location/contact entry elsewhere.
-2. Centralize dealer identity, contacts, locale/currency, navigation and enabled services. Adapt Cars24 branding, reference photos, claims, financing and sample data to approved or clearly neutral content.
-3. Simplify transaction language to actual dealer enquiry/viewing workflows. Configure and verify delivery before claiming a real submission succeeded.
-4. Polish small-screen controls, card text, fixed actions, galleries and desktop proportions at 320px, 390px, tablet and desktop widths.
-5. Add EN/BG localization and Cars dealer copy, mounted routing, shared design-switcher/admin-demo, release and publishing compatibility. Extend the existing Cars tools for that support.
-6. Validate an immutable source release through Cars QA and its release workflow before client selection.
-
-## Shared showroom shell and inventory
-
-Secondary screens use `PageHeader` for a 44px back target, 68px content row, common gutters and safe-area handling. Inventory uses a compact rounded silver showroom panel, charcoal controls, actual local result counts and an unobtrusive demo-inventory label. Search, filtering, sorting, saved cars and detail links remain functional. The header does not simulate a device status bar.
-
-Drive24 identity is used in metadata, the manifest, inventory badges and the primary showroom surfaces. Reference return/finance ads, floating account promotions, inherited dealer contact details and testimonial promotions are removed from the active showroom flow. Original fixtures, source artwork and legacy components remain preserved for provenance; this is not a certified dealer release or a connected enquiry service.
-
-Sell and Finance now use `sell-banner-v2.png` and `finance-banner-v2.png`, generated from the Home studio scene with the same vehicle position and scale. Services retains the matching technician scene. See `public/showroom/ALIGNED-BANNER-PROMPTS.md` for the exact built-in generation prompts.
-
-## Release boundary
-
-The catalog entry makes App discoverable for local development. It is not selected in `templates.lock.json`, does not join the default client trios, and is not yet supported by the dealer generator or shared preview launcher. Existing dealers are unaffected.
-
-Use port 6473 and the standalone commands in [README](README.md). Source QA reports in `docs/` and `reference/` describe the original project; new template checks must be recorded separately.
+Manufacturer emblems and dealer logos follow [App asset standards](../../docs/APP-ASSET-STANDARDS.md); master and client previews share the DealerBrand rendering path. Preserve original Drive24 or configured dealer identity and recorded asset provenance.

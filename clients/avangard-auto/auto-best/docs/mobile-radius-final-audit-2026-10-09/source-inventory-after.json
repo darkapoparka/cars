@@ -1,0 +1,4156 @@
+{
+  "files": 172,
+  "svelte": 99,
+  "css": 11,
+  "cornerDeclarations": 471,
+  "declarations": [
+    {
+      "file": "src/lib/components/company/AboutPartners.svelte",
+      "line": 124,
+      "selector": ".dn-about-partners__grid li",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/AboutTeam.svelte",
+      "line": 63,
+      "selector": ".dn-about-team__panel",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/AboutTeam.svelte",
+      "line": 76,
+      "selector": ".dn-about-team__contact",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/AboutTeam.svelte",
+      "line": 89,
+      "selector": ".dn-about-team-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/ContactSocialChannels.svelte",
+      "line": 55,
+      "selector": ".dn-contact-channels",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/ContactSocialChannels.svelte",
+      "line": 87,
+      "selector": ".dn-contact-channels__profile",
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/ContactSocialChannels.svelte",
+      "line": 92,
+      "selector": ".dn-contact-channels__icon",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/ContactVehicle.svelte",
+      "line": 23,
+      "selector": ".dn-contact-vehicle img",
+      "property": "border-radius",
+      "value": "var(--dn-radius-media)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/ContactVehicle.svelte",
+      "line": 28,
+      "selector": ".dn-contact-vehicle--hero",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/ContactVehicle.svelte",
+      "line": 30,
+      "selector": ".dn-contact-vehicle--hero",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/ContactVehicle.svelte",
+      "line": 31,
+      "selector": ".dn-contact-vehicle img",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/DesktopShowroom.svelte",
+      "line": 70,
+      "selector": ".dn-desktop-showroom",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/DesktopShowroom.svelte",
+      "line": 134,
+      "selector": ".dn-desktop-showroom__actions a",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/DesktopShowroom.svelte",
+      "line": 164,
+      "selector": ".dn-desktop-showroom__map",
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/DesktopSocialLinks.svelte",
+      "line": 42,
+      "selector": "a",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/EnquiryEntryField.svelte",
+      "line": 124,
+      "selector": ".dn-entry-editor",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/EnquiryEntryField.svelte",
+      "line": 129,
+      "selector": ".dn-entry-editor-close",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/EnquiryEntryField.svelte",
+      "line": 134,
+      "selector": "input, textarea",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/EnquiryEntryField.svelte",
+      "line": 136,
+      "selector": "input",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/EnquiryEntryField.svelte",
+      "line": 141,
+      "selector": "footer button",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/EnquiryEntryField.svelte",
+      "line": 148,
+      "selector": ".dn-entry-editor",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 165,
+      "selector": ".dn-import-info-drawer__peek",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 186,
+      "selector": ".dn-import-info-dialog",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 198,
+      "selector": ".dn-import-info-sheet",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 215,
+      "selector": ".dn-import-info-sheet__grabber span",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 226,
+      "selector": ".dn-import-info-sheet__close",
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 258,
+      "selector": ".dn-import-info-actions button",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 268,
+      "selector": ".dn-import-info-prepare",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 288,
+      "selector": ".dn-import-info-drawer__peek",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card) var(--dn-radius-card) 0 0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 300,
+      "selector": ".dn-import-info-drawer__handle",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 309,
+      "selector": ".dn-import-info-dialog",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 313,
+      "selector": ".dn-import-info-sheet",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 321,
+      "selector": ".dn-import-info-drawer--inline .dn-import-info-drawer__peek",
+      "property": "border-radius",
+      "value": "var(--dn-radius-mobile-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/ImportHowItWorks.svelte",
+      "line": 334,
+      "selector": ".dn-import-info-process",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/ServiceEntryField.svelte",
+      "line": 95,
+      "selector": ".dn-service-editor",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/ServiceEntryField.svelte",
+      "line": 100,
+      "selector": "header button",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/ServiceEntryField.svelte",
+      "line": 104,
+      "selector": "input, textarea",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/ServiceEntryField.svelte",
+      "line": 109,
+      "selector": "footer button",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/ServiceLanding.svelte",
+      "line": 46,
+      "selector": "details",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/ServiceLanding.svelte",
+      "line": 49,
+      "selector": "summary:focus-visible",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/ServiceLanding.svelte",
+      "line": 55,
+      "selector": "li span",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/ShowroomMap.svelte",
+      "line": 64,
+      "selector": ".dn-showroom-map",
+      "property": "border-radius",
+      "value": "var(--dn-radius-content-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/ShowroomMap.svelte",
+      "line": 128,
+      "selector": ".dn-showroom-map__open",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 335,
+      "selector": ".dn-tradein-dialog",
+      "property": "border-radius",
+      "value": "var(--dn-radius-dialog)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 342,
+      "selector": ".dn-tradein-close",
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 346,
+      "selector": ".dn-tradein-progress__bar",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 347,
+      "selector": ".dn-tradein-progress__bar i",
+      "property": "border-radius",
+      "value": "inherit",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 354,
+      "selector": ".dn-tradein-fields input, .dn-tradein-notes textarea",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 363,
+      "selector": ".dn-tradein-upload",
+      "property": "border-radius",
+      "value": "var(--dn-radius-compact)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 371,
+      "selector": ".dn-tradein-photo-grid img",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 372,
+      "selector": ".dn-tradein-photo-grid button",
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 376,
+      "selector": ".dn-tradein-review-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 378,
+      "selector": ".dn-tradein-review-top > span",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 386,
+      "selector": ".dn-tradein-review-photos img",
+      "property": "border-radius",
+      "value": "var(--dn-radius-media)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 387,
+      "selector": ".dn-tradein-next-step",
+      "property": "border-radius",
+      "value": "calc(var(--dn-radius-control) + 1px)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 390,
+      "selector": ".dn-tradein-copy, .dn-tradein-review-call",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 393,
+      "selector": ".dn-tradein-feedback",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 396,
+      "selector": ".dn-tradein-primary",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 408,
+      "selector": ".dn-tradein-next-step, .dn-tradein-feedback",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 409,
+      "selector": ".dn-tradein-review-photos img",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/TradeInEnquiry.svelte",
+      "line": 416,
+      "selector": ".dn-tradein-dialog",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 162,
+      "selector": ".dn-tradein-info-drawer__peek",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 183,
+      "selector": ".dn-tradein-info-dialog",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 195,
+      "selector": ".dn-tradein-info-sheet",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 212,
+      "selector": ".dn-tradein-info-sheet__grabber span",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 224,
+      "selector": ".dn-tradein-info-sheet__close",
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 247,
+      "selector": ".dn-tradein-info-prepare",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 262,
+      "selector": ".dn-tradein-info-actions button",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 289,
+      "selector": ".dn-tradein-info-drawer__peek",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card) var(--dn-radius-card) 0 0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 301,
+      "selector": ".dn-tradein-info-drawer__handle",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 310,
+      "selector": ".dn-tradein-info-dialog",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 314,
+      "selector": ".dn-tradein-info-sheet",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 322,
+      "selector": ".dn-tradein-info-drawer--inline .dn-tradein-info-drawer__peek",
+      "property": "border-radius",
+      "value": "var(--dn-radius-mobile-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "line": 335,
+      "selector": ".dn-tradein-info-process",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 327,
+      "selector": ".dn-enquiry-primary",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 330,
+      "selector": ".dn-enquiry-contact",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 336,
+      "selector": ".dn-enquiry",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 342,
+      "selector": ".dn-enquiry-close",
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 345,
+      "selector": ".dn-enquiry-steps span",
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 352,
+      "selector": ".dn-enquiry-fields input, textarea",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 359,
+      "selector": ".dn-enquiry-purpose label",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 363,
+      "selector": ".dn-enquiry-selected-link",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 369,
+      "selector": ".dn-enquiry-upload",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 376,
+      "selector": ".dn-enquiry-photo-grid img",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 377,
+      "selector": ".dn-enquiry-photo-grid button",
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 382,
+      "selector": ".dn-enquiry-summary",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 384,
+      "selector": ".dn-enquiry-review-photos img",
+      "property": "border-radius",
+      "value": "var(--dn-radius-media)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 388,
+      "selector": ".dn-enquiry-success",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 392,
+      "selector": ".dn-enquiry-copy",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 394,
+      "selector": ".dn-enquiry-feedback",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 396,
+      "selector": ".dn-enquiry-selected-link, .dn-enquiry-summary, .dn-enquiry-success, .dn-enquiry-feedback",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 397,
+      "selector": ".dn-enquiry-review-photos img",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/VehicleEnquiry.svelte",
+      "line": 398,
+      "selector": ".dn-enquiry",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/company/WorkflowSupport.svelte",
+      "line": 27,
+      "selector": ".dn-workflow-support",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/company/WorkflowSupport.svelte",
+      "line": 33,
+      "selector": "a:focus-visible",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/editorial/BlogCard.svelte",
+      "line": 52,
+      "selector": ".dn-blog-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/editorial/BlogCard.svelte",
+      "line": 64,
+      "selector": ".dn-blog-card__link",
+      "property": "border-radius",
+      "value": "inherit",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/editorial/BlogCard.svelte",
+      "line": 81,
+      "selector": ".dn-blog-card__link:focus-visible::after",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card-inset)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/editorial/BlogCard.svelte",
+      "line": 169,
+      "selector": ".dn-blog-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-content-card)",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/editorial/BlogCard.svelte",
+      "line": 170,
+      "selector": ".dn-blog-card__link:focus-visible::after",
+      "property": "border-radius",
+      "value": "inherit",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/editorial/BlogSearch.svelte",
+      "line": 145,
+      "selector": ".dn-blog-search-trigger",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/editorial/BlogSearch.svelte",
+      "line": 151,
+      "selector": ".dn-blog-search-dialog",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/editorial/BlogSearch.svelte",
+      "line": 158,
+      "selector": ".dn-blog-search-dialog__field",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/editorial/BlogSearch.svelte",
+      "line": 163,
+      "selector": ".dn-blog-search-dialog__categories button",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/editorial/BlogSearch.svelte",
+      "line": 168,
+      "selector": ".dn-blog-search-dialog__clear",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/editorial/BlogSearch.svelte",
+      "line": 172,
+      "selector": ".dn-blog-search-dialog__apply",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/BodyTypes.svelte",
+      "line": 115,
+      "selector": ".dn-body-type",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/BodyTypes.svelte",
+      "line": 146,
+      "selector": ".dn-body-type__image",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/BodyTypes.svelte",
+      "line": 193,
+      "selector": ".dn-body-types__panel",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/BodyTypes.svelte",
+      "line": 319,
+      "selector": ".dn-body-type",
+      "property": "border-radius",
+      "value": "var(--dn-radius-mobile-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/BrandSection.svelte",
+      "line": 79,
+      "selector": ".dn-brand-shell",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/BrandSection.svelte",
+      "line": 84,
+      "selector": ".dn-brand-hero__cta",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/BrandSection.svelte",
+      "line": 85,
+      "selector": ".dn-brand-panel",
+      "property": "border-radius",
+      "value": "0 0 var(--dn-radius-lg) var(--dn-radius-lg)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/BrandSection.svelte",
+      "line": 87,
+      "selector": ".dn-brand-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/BrandSection.svelte",
+      "line": 118,
+      "selector": ".dn-brand-shell",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/BrandSection.svelte",
+      "line": 125,
+      "selector": ".dn-brand-panel",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/BrandSection.svelte",
+      "line": 127,
+      "selector": ".dn-brand-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-mobile-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/BrowseAllCard.svelte",
+      "line": 23,
+      "selector": ".dn-browse-all",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/BrowseAllCard.svelte",
+      "line": 24,
+      "selector": ".mark",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/BrowseAllCard.svelte",
+      "line": 27,
+      "selector": ".action",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/DiscoveryAllTile.svelte",
+      "line": 44,
+      "selector": ".dn-discovery-toggle",
+      "property": "border-radius",
+      "value": "var(--dn-radius-mobile-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/DiscoveryAllTile.svelte",
+      "line": 50,
+      "selector": ".dn-discovery-all__glyph",
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/DiscoveryAllTile.svelte",
+      "line": 51,
+      "selector": ".dn-discovery-all__glyph span",
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 90,
+      "selector": ".dn-editorial__banner",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sheet)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 136,
+      "selector": ".dn-editorial__cta",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 167,
+      "selector": ".dn-editorial-item",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 180,
+      "selector": ".dn-editorial-item__link",
+      "property": "border-radius",
+      "value": "inherit",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 196,
+      "selector": ".dn-editorial-item__link:focus-visible::after",
+      "property": "border-radius",
+      "value": "inherit",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 207,
+      "selector": ".dn-editorial-item__media",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card-inset) var(--dn-radius-card-inset) 0 0",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 226,
+      "selector": ".dn-editorial-item__badge",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 317,
+      "selector": ".dn-editorial__banner",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 347,
+      "selector": ".dn-editorial__banner",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 414,
+      "selector": ".dn-editorial-item",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 423,
+      "selector": ".dn-editorial-item__media",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/Editorial.svelte",
+      "line": 500,
+      "selector": ".dn-editorial__banner",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg) var(--dn-radius-lg) 0 0",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/HomeBrowseBox.svelte",
+      "line": 155,
+      "selector": ".dn-home-browse",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/HomeBrowseBox.svelte",
+      "line": 156,
+      "selector": ":global(.dn-home-browse__field)",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/HomeBrowseBox.svelte",
+      "line": 165,
+      "selector": ".dn-home-browse__search",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/HomeBrowseBox.svelte",
+      "line": 167,
+      "selector": ":global(.dn-home-browse-picker)",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/HomeBrowseBox.svelte",
+      "line": 172,
+      "selector": ".dn-home-browse-picker__presets button",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/HomeBrowseBox.svelte",
+      "line": 175,
+      "selector": ".dn-home-browse-picker__footer button",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/InventorySection.svelte",
+      "line": 49,
+      "selector": ".dn-inventory-panel",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/InventorySection.svelte",
+      "line": 82,
+      "selector": ".dn-inventory__all",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/InventorySection.svelte",
+      "line": 131,
+      "selector": ".dn-inventory__all::before",
+      "property": "border-radius",
+      "value": "inherit",
+      "conditions": [
+        "@media (min-width: 768px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/InventorySection.svelte",
+      "line": 183,
+      "selector": ".dn-inventory-panel",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/InventorySection.svelte",
+      "line": 295,
+      "selector": ".dn-inventory__all",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/MobileCoreActions.svelte",
+      "line": 84,
+      "selector": ".dn-mobile-core-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/MobileCoreActions.svelte",
+      "line": 124,
+      "selector": ".dn-mobile-core-card__art",
+      "property": "border-radius",
+      "value": "var(--dn-radius-media)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/MobileServicesOverview.svelte",
+      "line": 45,
+      "selector": ".dn-mobile-services__card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/SearchBox.svelte",
+      "line": 129,
+      "selector": ".dn-search-wrap :global(.dn-search)",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (min-width: 768px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/SearchBox.svelte",
+      "line": 155,
+      "selector": ".dn-search-wrap :global(.dn-search)",
+      "property": "border-radius",
+      "value": "var(--dn-radius-entry-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/TrustActions.svelte",
+      "line": 138,
+      "selector": ".dn-trust-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/TrustActions.svelte",
+      "line": 150,
+      "selector": ".dn-trust-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/TrustActions.svelte",
+      "line": 180,
+      "selector": ".dn-trust-card__action",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/TrustActions.svelte",
+      "line": 187,
+      "selector": ".dn-home-services .dn-trust-actions__panel",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/TrustActions.svelte",
+      "line": 195,
+      "selector": ".dn-home-services .dn-trust-actions__grid",
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/TrustActions.svelte",
+      "line": 200,
+      "selector": ".dn-service-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/TrustActions.svelte",
+      "line": 222,
+      "selector": ".dn-service-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-discovery-card)",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/TrustActions.svelte",
+      "line": 231,
+      "selector": ".dn-trust-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-discovery-card)",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/TrustActions.svelte",
+      "line": 242,
+      "selector": ".dn-trust-card .dn-trust-card__action",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/TrustActions.svelte",
+      "line": 243,
+      "selector": ".dn-trust-card .dn-trust-card__action::after",
+      "property": "border-radius",
+      "value": "inherit",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/TrustActions.svelte",
+      "line": 260,
+      "selector": ".dn-service-card h3 a::after",
+      "property": "border-radius",
+      "value": "inherit",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/VehicleQuickSearch.svelte",
+      "line": 408,
+      "selector": ".dn-quick-search__dialog",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/VehicleQuickSearch.svelte",
+      "line": 451,
+      "selector": ".dn-quick-search__close",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/VehicleQuickSearch.svelte",
+      "line": 513,
+      "selector": ".dn-quick-search__dialog",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/VehicleQuickSearch.svelte",
+      "line": 525,
+      "selector": ".dn-quick-search__panel",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/VehicleQuickSearch.svelte",
+      "line": 546,
+      "selector": ".dn-quick-search__reset",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/VehicleQuickSearch.svelte",
+      "line": 558,
+      "selector": ".dn-quick-search__back",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 91,
+      "selector": ".dn-videos__panel",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 92,
+      "selector": ".dn-videos__heading",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 97,
+      "selector": ".dn-videos__channel",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 99,
+      "selector": ".dn-video-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 105,
+      "selector": ".dn-video-card__play-icon",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 107,
+      "selector": ".dn-video-card__duration",
+      "property": "border-radius",
+      "value": "var(--dn-radius-badge)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 109,
+      "selector": ".dn-video-card__close",
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 128,
+      "selector": ".dn-videos > .container",
+      "property": "border-radius",
+      "value": "var(--dn-radius-mobile-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 129,
+      "selector": ".dn-videos__panel",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 130,
+      "selector": ".dn-videos__heading",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 133,
+      "selector": ".dn-videos__channel",
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 138,
+      "selector": ".dn-video-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 139,
+      "selector": ".dn-videos__all-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/home/VideoSection.svelte",
+      "line": 142,
+      "selector": ".dn-videos__all-arrow",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Footer.svelte",
+      "line": 109,
+      "selector": ".dn-footer-actions__grid > a",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/Footer.svelte",
+      "line": 115,
+      "selector": ".dn-footer-actions a:focus-visible",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/Footer.svelte",
+      "line": 119,
+      "selector": ".dn-footer-actions__panel",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Footer.svelte",
+      "line": 136,
+      "selector": ".dn-footer",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg) var(--dn-radius-lg) 0 0",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/Footer.svelte",
+      "line": 156,
+      "selector": ".dn-footer__call",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/Footer.svelte",
+      "line": 168,
+      "selector": ".dn-footer",
+      "property": "border-radius",
+      "value": "var(--dn-radius-footer) var(--dn-radius-footer) 0 0",
+      "conditions": [
+        "@media (min-width: 768px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Footer.svelte",
+      "line": 199,
+      "selector": ".dn-footer",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Footer.svelte",
+      "line": 210,
+      "selector": ".dn-footer__call",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 423,
+      "selector": ".dn-nav__list > li > a",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 426,
+      "selector": ".dn-header-actions :global(.dn-header-action)",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 431,
+      "selector": ".dn-mobile-toggle",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 435,
+      "selector": ".dn-header .dn-mega",
+      "property": "border-radius",
+      "value": "0 0 var(--dn-radius) var(--dn-radius)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 447,
+      "selector": ".dn-mega__side-action > :global(.dn-mega__cta)",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 537,
+      "selector": ".dn-header",
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 543,
+      "selector": ".dn-topbar",
+      "property": "border-radius",
+      "value": "var(--dn-radius) var(--dn-radius) 0 0",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 548,
+      "selector": ".dn-header__lower",
+      "property": "border-radius",
+      "value": "0 0 var(--dn-radius) var(--dn-radius)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 552,
+      "selector": ".dn-header.dn-header--mega-open",
+      "property": "border-radius",
+      "value": "var(--dn-radius) var(--dn-radius) 0 0",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 557,
+      "selector": ".dn-header.dn-header--mega-open .dn-header__lower",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 561,
+      "selector": ".dn-mega",
+      "property": "border-radius",
+      "value": "0 0 var(--dn-radius) var(--dn-radius)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 573,
+      "selector": ".dn-header-fixed--compact .dn-header",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 584,
+      "selector": ".dn-header--compact .dn-header__lower",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 615,
+      "selector": ".dn-mobile-control",
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 647,
+      "selector": ".dn-mobile-bottom-nav",
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 672,
+      "selector": ".dn-mobile-bottom-nav a,\n    .dn-mobile-bottom-nav button",
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/Header.svelte",
+      "line": 865,
+      "selector": ".dn-mobile-control::before",
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/HomeBannerPicker.svelte",
+      "line": 73,
+      "selector": ".dn-banner-picker-trigger",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/HomeBannerPicker.svelte",
+      "line": 74,
+      "selector": ".dn-banner-picker",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sheet)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/HomeBannerPicker.svelte",
+      "line": 78,
+      "selector": ".dn-banner-picker__close",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/HomeBannerPicker.svelte",
+      "line": 80,
+      "selector": ".dn-banner-picker__options a",
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/HomeBannerPicker.svelte",
+      "line": 82,
+      "selector": ".dn-banner-picker__image",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/HomeBannerPicker.svelte",
+      "line": 88,
+      "selector": ".dn-banner-picker__mark",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/HomeBannerPicker.svelte",
+      "line": 91,
+      "selector": ".dn-banner-picker__options a",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/layout/LocaleSettingsMenu.svelte",
+      "line": 53,
+      "selector": ".locale-settings-menu > button",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/LocaleSettingsMenu.svelte",
+      "line": 56,
+      "selector": ".locale-settings-menu__panel",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/MobileMenu.svelte",
+      "line": 78,
+      "selector": ".dn-mobile-menu",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/MobileMenu.svelte",
+      "line": 81,
+      "selector": ".dn-mobile-menu::before",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/MobileMenu.svelte",
+      "line": 85,
+      "selector": ".dn-mobile-menu__close",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/MobileMenu.svelte",
+      "line": 93,
+      "selector": ".dn-mobile-menu__utilities :global(.cars-locale-trigger)",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/MobileMenu.svelte",
+      "line": 98,
+      "selector": "nav a",
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/MobileMenu.svelte",
+      "line": 108,
+      "selector": ".dn-mobile-menu__social a",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/NavigationFeatureCard.svelte",
+      "line": 33,
+      "selector": ".dn-mega__feature",
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/layout/NavigationFeatureCard.svelte",
+      "line": 52,
+      "selector": ".dn-mega__feature:hover .arrow",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopAppliedListingFilters.svelte",
+      "line": 66,
+      "selector": ".filter-chip",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopAppliedListingFilters.svelte",
+      "line": 70,
+      "selector": ".clear-filters, .review-clear",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopAppliedListingFilters.svelte",
+      "line": 73,
+      "selector": ":global(.dn-applied-review)",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopAppliedListingFilters.svelte",
+      "line": 76,
+      "selector": ":global(.dn-applied-popover)",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopFilterChoice.svelte",
+      "line": 22,
+      "selector": ".dn-desktop-choice",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopFilterChoice.svelte",
+      "line": 26,
+      "selector": ".dn-desktop-choice-mark",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopFilterChoice.svelte",
+      "line": 27,
+      "selector": ".dn-desktop-choice-mark[data-multiple='true']",
+      "property": "border-radius",
+      "value": "var(--dn-radius-badge)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopFilterChoice.svelte",
+      "line": 30,
+      "selector": "input:checked + [data-multiple='false']::after",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 205,
+      "selector": ".dn-desktop-filter-dialog",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 211,
+      "selector": ".search-navigation button",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 217,
+      "selector": ".navigation-group",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 218,
+      "selector": ".navigation-group button",
+      "property": "border-radius",
+      "value": "var(--dn-radius-xs)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 221,
+      "selector": ".navigation-group small, .search-navigation small",
+      "property": "border-radius",
+      "value": "calc(var(--dn-radius-xs) - 1px)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 222,
+      "selector": ".filter-pane",
+      "property": "border-radius",
+      "value": "var(--dn-radius-compact)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 225,
+      "selector": ".pane-heading h3 small",
+      "property": "border-radius",
+      "value": "var(--dn-radius-xs)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 227,
+      "selector": ".section-clear",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 231,
+      "selector": ".model-navigation button",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 233,
+      "selector": ".keyword-search",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 236,
+      "selector": ".keyword-search button",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 238,
+      "selector": ".clear-all, .show-results",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 248,
+      "selector": ".applied-filters button",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopListingFilters.svelte",
+      "line": 251,
+      "selector": ".range-error",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopModelGroups.svelte",
+      "line": 151,
+      "selector": ".disclosure",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 275,
+      "selector": ":global(.dn-search-popover)",
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 282,
+      "selector": ":global(.dn-search-popover) .dn-search-query",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 284,
+      "selector": ":global(.dn-search-popover) .dn-search-reset",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 286,
+      "selector": ".dn-search-icon",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 292,
+      "selector": ".dn-search-query",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 296,
+      "selector": ".dn-search-query .dn-search-icon",
+      "property": "border-radius",
+      "value": "var(--dn-radius-xs)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 303,
+      "selector": ".dn-search-empty button, .dn-search-reset",
+      "property": "border-radius",
+      "value": "var(--dn-radius-xs)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 310,
+      "selector": "input[type='number']",
+      "property": "border-radius",
+      "value": "var(--dn-radius-xs)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 317,
+      "selector": ".dn-search-presets button",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 324,
+      "selector": ".dn-search-apply",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 325,
+      "selector": ":global(.dn-search-popover) input[type='number']",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "line": 344,
+      "selector": ".dn-search-presets button",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/FilterCloseButton.svelte",
+      "line": 13,
+      "selector": ".dn-picker-close",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/FilterPopoverHeader.svelte",
+      "line": 33,
+      "selector": ".back",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingChoicePicker.svelte",
+      "line": 153,
+      "selector": ":global(.dn-identity-trigger)",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingChoicePicker.svelte",
+      "line": 159,
+      "selector": ":global(.dn-filter-picker)",
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingChoicePicker.svelte",
+      "line": 160,
+      "selector": ".dn-picker-search",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 176,
+      "selector": ".search-field",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 181,
+      "selector": ".clear-search",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 186,
+      "selector": ".desktop-choices .search-field",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 194,
+      "selector": ".wide-panel .presets button",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 206,
+      "selector": ".filter-panel .presets button",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 209,
+      "selector": ".make-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 215,
+      "selector": ".make-models",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 220,
+      "selector": ".choice",
+      "property": "border-radius",
+      "value": "var(--dn-overlay-row-radius)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 233,
+      "selector": "input[type=number]",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 243,
+      "selector": ".presets button",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 247,
+      "selector": ".choice input[type=radio]",
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "line": 248,
+      "selector": ".choice input[type=radio]::before",
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 181,
+      "selector": ".dn-listing-filter",
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 216,
+      "selector": ".dn-listing-filter__keyword",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 254,
+      "selector": ".dn-listing-filter__toggle,\n  .dn-listing-filter__submit",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 267,
+      "selector": ".dn-listing-filter__count",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 299,
+      "selector": ".dn-listing-filter__search-field",
+      "property": "border-radius",
+      "value": "var(--dn-radius-compact)",
+      "conditions": [
+        "@media (min-width: 768px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 312,
+      "selector": ".dn-listing-filter__search-field .dn-listing-filter__keyword",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (min-width: 768px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 334,
+      "selector": ".dn-listing-filter__quick a",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (min-width: 768px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 347,
+      "selector": ".dn-listing-filter",
+      "property": "border-radius",
+      "value": "var(--dn-discovery-radius)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 361,
+      "selector": ".dn-listing-filter",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 383,
+      "selector": ".dn-listing-filter__quick a,\n    .dn-listing-filter__quick button",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 394,
+      "selector": ".dn-listing-filter__quick :is(a, button)::before",
+      "property": "border-radius",
+      "value": "inherit",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 415,
+      "selector": ".dn-listing-filter__keyword",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingFilters.svelte",
+      "line": 425,
+      "selector": ".dn-listing-filter__keyword::before",
+      "property": "border-radius",
+      "value": "inherit",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/ListingResults.svelte",
+      "line": 87,
+      "selector": ".dn-listing-results__tools",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingResults.svelte",
+      "line": 91,
+      "selector": ".dn-listing-results__filters",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingResults.svelte",
+      "line": 94,
+      "selector": ".dn-listing-results__filter-count",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingResults.svelte",
+      "line": 131,
+      "selector": ".dn-listing-sort",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingResults.svelte",
+      "line": 156,
+      "selector": ".dn-listing-sort :global(.dn-identity-field.compact .dn-identity-trigger)",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingResults.svelte",
+      "line": 176,
+      "selector": ".dn-listing-empty",
+      "property": "border-radius",
+      "value": "var(--dn-radius-content-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/ListingResults.svelte",
+      "line": 218,
+      "selector": ".dn-listing-sort",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/MobileListingFilters.svelte",
+      "line": 174,
+      "selector": ".clear-search",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/QuickFilterSheet.svelte",
+      "line": 116,
+      "selector": ".dn-quick-sheet",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/QuickFilterSheet.svelte",
+      "line": 124,
+      "selector": ".close",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/QuickFilterSheet.svelte",
+      "line": 127,
+      "selector": ".apply",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/QuickFilterSheet.svelte",
+      "line": 131,
+      "selector": ".dn-quick-sheet",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/QuickFilterSheet.svelte",
+      "line": 133,
+      "selector": "form",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/QuickFilterSheet.svelte",
+      "line": 135,
+      "selector": ".text-entry form",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "line": 140,
+      "selector": ".dn-discovery__search",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "line": 141,
+      "selector": ".dn-discovery__keyword",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "line": 146,
+      "selector": ".dn-discovery__submit",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "line": 151,
+      "selector": ".dn-discovery__facet-buttons button",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "line": 152,
+      "selector": ".dn-discovery__filters",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "line": 154,
+      "selector": ".dn-discovery__count",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "line": 156,
+      "selector": ".dn-discovery-sticky",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "line": 158,
+      "selector": ".dn-discovery-sticky__keyword",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "line": 161,
+      "selector": ".dn-discovery-sticky__filters",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "line": 163,
+      "selector": ".dn-discovery-sticky__count",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
+      "line": 164,
+      "selector": ".dn-discovery-sticky__submit",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "line": 249,
+      "selector": "input[type='search']",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "line": 285,
+      "selector": ".dn-listing-filter__dialog",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "line": 320,
+      "selector": ".dn-listing-filter__close--legacy",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "line": 363,
+      "selector": ".dn-listing-filter__dialog-search",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "line": 394,
+      "selector": ".dn-listing-filter__inline-submit",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "line": 459,
+      "selector": ".dn-listing-filter__filter-group--equipment",
+      "property": "border-radius",
+      "value": "var(--dn-overlay-row-radius)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "line": 479,
+      "selector": ".dn-listing-filter__equipment-option",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "line": 517,
+      "selector": ".dn-listing-filter__dialog-submit",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/ui/CampaignVehiclePair.svelte",
+      "line": 71,
+      "selector": ".dn-campaign-vehicles__arc",
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/ui/entry/EntryCard.svelte",
+      "line": 10,
+      "selector": ".dn-entry-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-entry-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/ui/HeroLocation.svelte",
+      "line": 36,
+      "selector": ":global(.dn-route-hero .dn-route-hero__copy) .dn-hero-location",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/ui/HeroLocation.svelte",
+      "line": 47,
+      "selector": ":global(.dn-route-hero .dn-route-hero__copy) .dn-hero-location--subtitle",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/ui/HeroLocation.svelte",
+      "line": 67,
+      "selector": "a:focus-visible",
+      "property": "border-radius",
+      "value": "var(--dn-radius-focus)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleCard.svelte",
+      "line": 159,
+      "selector": ".dn-vehicle-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleCard.svelte",
+      "line": 167,
+      "selector": ".dn-vehicle-card__link",
+      "property": "border-radius",
+      "value": "inherit",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleCard.svelte",
+      "line": 186,
+      "selector": ".dn-vehicle-card__link:focus-visible::after",
+      "property": "border-radius",
+      "value": "inherit",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleCard.svelte",
+      "line": 217,
+      "selector": ".dn-vehicle-card__badge",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleCard.svelte",
+      "line": 315,
+      "selector": ".dn-vehicle-card__spec",
+      "property": "border-radius",
+      "value": "var(--dn-radius-media)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleCard.svelte",
+      "line": 346,
+      "selector": ".dn-vehicle-card--listing",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleCard.svelte",
+      "line": 442,
+      "selector": ".dn-vehicle-card--listing",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleCard.svelte",
+      "line": 464,
+      "selector": ".dn-vehicle-card--listing .dn-vehicle-card__visual",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleCard.svelte",
+      "line": 514,
+      "selector": ".dn-vehicle-card__fact",
+      "property": "border-radius",
+      "value": "var(--dn-radius-xs)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleFinanceCalculator.svelte",
+      "line": 127,
+      "selector": "input,\n  select",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleFinanceCalculator.svelte",
+      "line": 157,
+      "selector": ".dn-finance-calculator__result div",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleFinanceCalculator.svelte",
+      "line": 189,
+      "selector": ".dn-finance-calculator > a",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleFinanceCalculator.svelte",
+      "line": 210,
+      "selector": ":global(.dn-detail-finance-dialog) :is(input, select)",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/vehicles/VehicleFinanceCalculator.svelte",
+      "line": 212,
+      "selector": ":global(.dn-detail-finance-dialog) .dn-finance-calculator__result div",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/components/vehicles/VehiclePhoto.svelte",
+      "line": 100,
+      "selector": ".dn-vehicle-photo",
+      "property": "border-radius",
+      "value": "inherit",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/vehicles/VehiclePhoto.svelte",
+      "line": 125,
+      "selector": ".dn-vehicle-photo__hint",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/vehicles/VehiclePhoto.svelte",
+      "line": 144,
+      "selector": ".dn-vehicle-photo-dialog",
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/components/vehicles/VehiclePhoto.svelte",
+      "line": 185,
+      "selector": "button",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/locale/LocalePreferences.svelte",
+      "line": 127,
+      "selector": ".cars-locale-dialog",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/locale/LocalePreferences.svelte",
+      "line": 128,
+      "selector": ".cars-locale-close",
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/locale/LocalePreferences.svelte",
+      "line": 129,
+      "selector": ".cars-locale-dialog select",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/locale/LocalePreferences.svelte",
+      "line": 129,
+      "selector": ".cars-locale-suggestion",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/locale/LocalePreferences.svelte",
+      "line": 130,
+      "selector": ".cars-locale-actions button",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/locale/LocalePreferences.svelte",
+      "line": 131,
+      "selector": ".cars-locale-dialog",
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "conditions": [
+        "@media (max-width:390px)"
+      ]
+    },
+    {
+      "file": "src/lib/locale/LocalePreferences.svelte",
+      "line": 132,
+      "selector": ".cars-locale-dialog",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg) var(--dn-radius-lg) 0 0",
+      "conditions": [
+        "@media (max-width:639px)"
+      ]
+    },
+    {
+      "file": "src/lib/locale/LocalePreferences.svelte",
+      "line": 134,
+      "selector": ".cars-locale-dialog",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/locale/LocalePreferences.svelte",
+      "line": 142,
+      "selector": ".cars-locale-dialog select",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/locale/LocalePreferences.svelte",
+      "line": 144,
+      "selector": ".cars-locale-suggestion",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/locale/LocalePreferences.svelte",
+      "line": 146,
+      "selector": ".cars-locale-actions button",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/locale/LocaleTrigger.svelte",
+      "line": 19,
+      "selector": ".cars-locale-trigger",
+      "property": "border-radius",
+      "value": "var(--dn-radius-locale-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 42,
+      "selector": ".dn-article-action",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 56,
+      "selector": ".dn-icon-button",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 69,
+      "selector": ".dn-app-shell :is(dialog, [role='dialog']) :is(.dn-overlay-footer, .dn-mobile-overlay-footer) :is(.dn-overlay-primary, .dn-overlay-secondary, .dn-mobile-overlay-action, .dn-mobile-overlay-clear)",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 74,
+      "selector": ".dn-app-shell :is(dialog, [role='dialog']) :is(.dn-overlay-footer, .dn-mobile-overlay-footer) :is(.dn-overlay-primary, .dn-overlay-secondary, .dn-mobile-overlay-action, .dn-mobile-overlay-clear)::before",
+      "property": "border-radius",
+      "value": "inherit",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 119,
+      "selector": ".dn-app-shell dialog :is(.dn-mobile-overlay-search, .dn-mobile-search-field)",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 126,
+      "selector": ".dn-app-shell dialog :is(input, select):not([type='checkbox'], [type='radio'], [type='range'], [type='file'], [type='hidden'])",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 127,
+      "selector": ".dn-app-shell dialog:is(.dn-service-editor, .dn-entry-editor, .dn-tradein-dialog, .dn-enquiry) textarea",
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 131,
+      "selector": ".dn-app-shell dialog :is(.dn-mobile-overlay-row, .dn-mobile-overlay-option, .dn-mobile-filter-choice)",
+      "property": "border-radius",
+      "value": "var(--dn-overlay-row-radius)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 135,
+      "selector": ".dn-app-shell dialog :is(.dn-mobile-overlay-row, .dn-mobile-overlay-option)::before",
+      "property": "border-radius",
+      "value": "inherit",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 146,
+      "selector": ".dn-app-shell dialog .dn-mobile-filter-check",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 160,
+      "selector": ".dn-app-shell dialog .dn-mobile-overlay-clear",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 162,
+      "selector": ".dn-app-shell dialog .dn-mobile-overlay-action",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 180,
+      "selector": ".dn-app-shell .dn-compact-control",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 181,
+      "selector": ".dn-app-shell .dn-compact-control::before",
+      "property": "border-radius",
+      "value": "inherit",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 191,
+      "selector": ".dn-segmented-control",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 192,
+      "selector": ".dn-segmented-control .dn-segmented-option",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 196,
+      "selector": ".dn-entry-field",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 197,
+      "selector": ".dn-entry-field--multiline",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 219,
+      "selector": ".dn-app-shell .dn-entry-field",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/base.css",
+      "line": 239,
+      "selector": ".dn-app-shell .dn-entry-card .dn-entry-field--prominent",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/composition.css",
+      "line": 6,
+      "selector": ".dn-button",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/styles/composition.css",
+      "line": 22,
+      "selector": ".dn-route-hero",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/styles/composition.css",
+      "line": 84,
+      "selector": ".dn-app-shell .dn-social-profile-links .dn-social-profile-link",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/lib/styles/composition.css",
+      "line": 381,
+      "selector": ".dn-skip-link",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/lib/styles/composition.css",
+      "line": 406,
+      "selector": ".dn-information-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-content-card)",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/+error.svelte",
+      "line": 78,
+      "selector": ".dn-error__actions a",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/+page.svelte",
+      "line": 93,
+      "selector": ".dn-banner-preview",
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/routes/+page.svelte",
+      "line": 105,
+      "selector": ".dn-banner-preview > button",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/routes/+page.svelte",
+      "line": 164,
+      "selector": ".dn-home-page :global(.dn-home-section-action)",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/routes/+page.svelte",
+      "line": 191,
+      "selector": ".dn-home-page :global(:is(.dn-home-section-heading--branded, .dn-home-section-heading--banner))",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg) var(--dn-radius-lg) 0 0",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/routes/+page.svelte",
+      "line": 287,
+      "selector": ".dn-home-page :global(.dn-home-section-panel)",
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/routes/+page.svelte",
+      "line": 354,
+      "selector": ".dn-home-page :global(:is(.dn-vehicle-card, .dn-body-type, .dn-brand-card, .dn-discovery-toggle, .dn-editorial-item, .dn-browse-all))",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/+page.svelte",
+      "line": 376,
+      "selector": ".dn-home-page[data-mobile-banner='featured'] :global(.dn-inventory__heading)",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/about-us/about.css",
+      "line": 23,
+      "selector": ".dn-about-button",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/about-us/about.css",
+      "line": 49,
+      "selector": ".dn-about-process__panel",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/routes/about-us/about.css",
+      "line": 128,
+      "selector": ".dn-about-service-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/about-us/about.css",
+      "line": 172,
+      "selector": ".dn-about-service-card > a",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/about-us/about.css",
+      "line": 195,
+      "selector": ".dn-about-showroom__shell",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sheet)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/about-us/about.css",
+      "line": 214,
+      "selector": ".dn-about-showroom__map .dn-showroom-map",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/about-us/about.css",
+      "line": 231,
+      "selector": ".dn-about-intro__services",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/about-us/about.css",
+      "line": 237,
+      "selector": ".dn-about-intro__socials a",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/about-us/about.css",
+      "line": 258,
+      "selector": ".dn-about-showroom__shell",
+      "property": "border-radius",
+      "value": "var(--dn-radius-showroom)",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/about-us/about.css",
+      "line": 277,
+      "selector": ".dn-about-service-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-service-card)",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/about-us/about.css",
+      "line": 282,
+      "selector": ".dn-about-service-card__icon",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/blog/blog.css",
+      "line": 36,
+      "selector": ".dn-blog-search",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/blog/blog.css",
+      "line": 63,
+      "selector": ".dn-blog-search input[type='search']",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/blog/blog.css",
+      "line": 93,
+      "selector": ".dn-blog-categories a",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/blog/blog.css",
+      "line": 112,
+      "selector": ".dn-blog-toolbar",
+      "property": "border-radius",
+      "value": "var(--dn-radius)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/routes/blog/blog.css",
+      "line": 113,
+      "selector": ".dn-blog-search",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/routes/blog/blog.css",
+      "line": 115,
+      "selector": ".dn-blog-search input[type='search']",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/routes/blog/blog.css",
+      "line": 150,
+      "selector": ".dn-blog-empty",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/blog/blog.css",
+      "line": 169,
+      "selector": ".dn-blog-empty > a",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/blog/blog.css",
+      "line": 198,
+      "selector": ".dn-blog-search",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/blog/blog.css",
+      "line": 219,
+      "selector": ".dn-blog-categories a::before",
+      "property": "border-radius",
+      "value": "inherit",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/blog-detail/[id]/detail.css",
+      "line": 71,
+      "selector": ".dn-blog-detail__sheet",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/blog-detail/[id]/detail.css",
+      "line": 83,
+      "selector": ".dn-blog-detail__back",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/blog-detail/[id]/detail.css",
+      "line": 144,
+      "selector": ".dn-blog-detail__media",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/blog-detail/[id]/detail.css",
+      "line": 201,
+      "selector": ".dn-blog-detail__tags a,\n.dn-blog-widget--tags a",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/blog-detail/[id]/detail.css",
+      "line": 223,
+      "selector": ".dn-blog-widget",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/blog-detail/[id]/detail.css",
+      "line": 255,
+      "selector": ".dn-blog-widget--search input",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/blog-detail/[id]/detail.css",
+      "line": 277,
+      "selector": ".dn-blog-widget--categories a",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/blog-detail/[id]/detail.css",
+      "line": 300,
+      "selector": ".dn-blog-widget__related-list > a",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/blog-detail/[id]/detail.css",
+      "line": 309,
+      "selector": ".dn-blog-widget__related-list img",
+      "property": "border-radius",
+      "value": "var(--dn-radius-sm)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/blog-detail/[id]/detail.css",
+      "line": 376,
+      "selector": ".dn-blog-widget__primary,\n.dn-blog-widget__secondary",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 21,
+      "selector": ".dn-contact-button",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 87,
+      "selector": ".dn-contact-intent__main,\n.dn-contact-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 176,
+      "selector": ".dn-contact-social a",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 275,
+      "selector": ".dn-contact-card__cue [role='tooltip']",
+      "property": "border-radius",
+      "value": "var(--dn-radius-media)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 321,
+      "selector": ".dn-contact-card__actions a",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 482,
+      "selector": ".dn-contact-intent__main",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 489,
+      "selector": ".dn-contact-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 566,
+      "selector": ".dn-contact-intent--workflow .dn-contact-intent__main",
+      "property": "border-radius",
+      "value": "var(--dn-radius-entry-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 585,
+      "selector": ".dn-contact-section--workflow .dn-contact-intent--workflow .dn-enquiry-link-go",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 587,
+      "selector": ".dn-contact-intent--workflow .dn-enquiry-alternative",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 594,
+      "selector": ".dn-contact-intent--workflow .dn-contact-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 606,
+      "selector": ".dn-contact-intent--workflow .dn-contact-card__link",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 640,
+      "selector": ".dn-contact-section:not(.dn-contact-section--workflow) .dn-contact-intent__main",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 651,
+      "selector": ".dn-contact-hero .dn-contact-hero__action",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 673,
+      "selector": ".dn-contact-section.dn-contact-section--general .dn-contact-intent__main.dn-information-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-content-card)",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 691,
+      "selector": ".dn-contact-section--general .dn-contact-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-content-card)",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 720,
+      "selector": ".dn-contact-section--general .dn-contact-location__card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-content-card)",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 725,
+      "selector": ".dn-contact-section--general .dn-contact-location__card .dn-showroom-map",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 744,
+      "selector": ".dn-contact-hero__desktop-actions .dn-contact-button",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (min-width: 992px)"
+      ]
+    },
+    {
+      "file": "src/routes/contact/contact.css",
+      "line": 814,
+      "selector": ".dn-contact-section--import .dn-contact-intent--import .dn-contact-intent__main",
+      "property": "border-radius",
+      "value": "var(--dn-radius-entry-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 42,
+      "selector": ".dn-detail-title-card > a",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 67,
+      "selector": ".dn-detail-gallery",
+      "property": "border-radius",
+      "value": "var(--dn-radius-compact)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 104,
+      "selector": ".dn-detail-gallery__count span::before",
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 174,
+      "selector": ".dn-detail-tabs button:focus-visible",
+      "property": "border-radius",
+      "value": "calc(var(--dn-radius-xs) - 1px)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 256,
+      "selector": ".dn-detail-equipment li span",
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 271,
+      "selector": ".dn-detail-button",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 319,
+      "selector": ".dn-detail-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 423,
+      "selector": ".dn-detail-dealer-banner",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 449,
+      "selector": ".dn-detail-related",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 470,
+      "selector": ".dn-detail-related-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-control)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 519,
+      "selector": ".dn-detail-location-card .dn-showroom-map",
+      "property": "border-radius",
+      "value": "inherit",
+      "conditions": [
+        "@media (max-width: 991px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 547,
+      "selector": ".dn-detail-finance-dialog",
+      "property": "border-radius",
+      "value": "var(--dn-radius-lg)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 581,
+      "selector": ".dn-detail-finance-sheet__header button",
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 604,
+      "selector": ".dn-detail-media-card",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 609,
+      "selector": ".dn-detail-gallery",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 626,
+      "selector": ".dn-detail-mobile-back,\n  .dn-detail-mobile-actions a,\n  .dn-detail-mobile-actions button",
+      "property": "border-radius",
+      "value": "var(--dn-radius-circle)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 657,
+      "selector": ".dn-detail-title-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-mobile-card) var(--dn-radius-mobile-card) 0 0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 672,
+      "selector": ".dn-detail-summary",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 692,
+      "selector": ".dn-detail-info-card",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 703,
+      "selector": ".dn-detail-tabs",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 712,
+      "selector": ".dn-detail-tabs button",
+      "property": "border-radius",
+      "value": "var(--dn-pill)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 771,
+      "selector": ".dn-detail-finance-card,\n  .dn-detail-dealer,\n  .dn-detail-location-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 798,
+      "selector": ".dn-detail-finance-trigger",
+      "property": "border-radius",
+      "value": "var(--dn-radius-mobile-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 865,
+      "selector": ".dn-detail-related",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 903,
+      "selector": ".dn-detail-related-card",
+      "property": "border-radius",
+      "value": "var(--dn-radius-mobile-card)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/listing-detail-v1/[id]/detail.css",
+      "line": 930,
+      "selector": ".dn-detail-finance-dialog",
+      "property": "border-radius",
+      "value": "0",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    },
+    {
+      "file": "src/routes/locale-settings/+page.svelte",
+      "line": 32,
+      "selector": ".locale-settings",
+      "property": "border-radius",
+      "value": "var(--dn-radius-card)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/locale-settings/+page.svelte",
+      "line": 32,
+      "selector": ".locale-settings select",
+      "property": "border-radius",
+      "value": "var(--dn-radius-media)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/locale-settings/+page.svelte",
+      "line": 32,
+      "selector": ".locale-settings button",
+      "property": "border-radius",
+      "value": "var(--dn-radius-media)",
+      "conditions": []
+    },
+    {
+      "file": "src/routes/locale-settings/+page.svelte",
+      "line": 34,
+      "selector": ".locale-settings :is(select, button)",
+      "property": "border-radius",
+      "value": "var(--dn-radius-button)",
+      "conditions": [
+        "@media (max-width: 767px)"
+      ]
+    }
+  ]
+}

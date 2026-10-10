@@ -30,7 +30,7 @@ try {
      assert.equal(await page.locator(`${section} a[data-stock-count]:visible`).count(),count);
      await toggle.click(); assert.equal(await toggle.getAttribute('aria-expanded'),'false');
     } else {
-     assert((await toggle.getAttribute('href'))?.endsWith('/listing-grid'));
+     assert((await toggle.getAttribute('href'))?.endsWith('/cars'));
     }
    }
   }

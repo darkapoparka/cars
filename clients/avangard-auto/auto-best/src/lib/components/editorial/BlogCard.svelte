@@ -6,19 +6,19 @@
 
   import { withListReturn } from '$data/journeys';
   import { resolve } from '$app/paths';
-  import { brand } from '$config/brand';
+  import Icon from '$components/ui/Icon.svelte';
+  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
   import type { BlogPost } from '$data/editorial';
 
-  let { post, returnTo, priority = false }: { post: BlogPost; returnTo?: string; priority?: boolean } = $props();
+  let { post, returnTo, priority = false, imageSizes = '33vw', idPrefix = 'article', onselect }: { post: BlogPost; returnTo?: string; priority?: boolean; imageSizes?: string; idPrefix?: string; onselect?: (event: MouseEvent) => void } = $props();
 </script>
 
-<article id={`article-${post.id}`} class="dn-blog-card">
-  <a class="dn-blog-card__link" href={i18n.href(withListReturn(resolve('/blog-detail/[id]', { id: String(post.id) }), returnTo))} aria-label={blogPostTitle(post, i18n.locale)}>
-    <span class="dn-blog-card__media">
+<article id={`${idPrefix}-${post.id}`} class="dn-blog-card">
+  <a class="dn-blog-card__link" href={i18n.href(withListReturn(resolve('/blog-detail/[id]', { id: String(post.id) }), returnTo))} aria-label={blogPostTitle(post, i18n.locale)} onclick={onselect}>
+    <picture class="dn-blog-card__media">
+      <source media="(min-width: 992px)" srcset={imageSrcset(post.image) ?? post.image} sizes={imageSizes} />
       <img
-        src={post.image}
-        srcset={imageSrcset(post.image)}
-        sizes="(max-width: 767px) 108px, (max-width: 991px) 50vw, 33vw"
+        src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
         alt=""
         width="820"
         height="540"
@@ -26,14 +26,18 @@
         fetchpriority={priority ? 'high' : 'auto'}
         decoding="async"
       />
-    </span>
+    </picture>
     <span class="dn-blog-card__body">
       <span class="dn-blog-card__meta">
-        <span class="dn-blog-card__brand">{brand.name}</span>
         <span class="dn-blog-card__category">{i18n.text(post.category)}</span>
+        <span class="dn-blog-card__mobile-arrow"><MobileActionIcon name="arrow" size={18} /></span>
       </span>
       <h2>{blogPostTitle(post, i18n.locale)}</h2>
       <span class="dn-blog-card__text">{blogPostSummary(post, i18n.locale)}</span>
+      <span class="dn-blog-card__action dn-article-action">
+        {i18n.t('action.readArticle')}
+        <Icon name="arrow-right" size={16} />
+      </span>
     </span>
   </a>
 </article>
@@ -45,12 +49,11 @@
     height: 100%;
     overflow: hidden;
     border: 1px solid #e1e4e9;
-    border-radius: 16px;
+    border-radius: var(--dn-radius-card);
     background: #fff;
     transition: box-shadow 160ms ease, border-color 160ms ease;
   }
 
-  .dn-blog-card:hover,
   .dn-blog-card:focus-within {
     border-color: transparent;
     box-shadow: var(--dn-card-hover-shadow);
@@ -75,7 +78,7 @@
     inset: 0;
     z-index: 1;
     border: 3px solid var(--dn-focus);
-    border-radius: 15px;
+    border-radius: var(--dn-radius-card-inset);
     pointer-events: none;
     content: '';
   }
@@ -114,23 +117,9 @@
     line-height: var(--dn-leading-meta);
   }
 
-  .dn-blog-card__brand {
-    font-weight: var(--dn-weight-regular);
-  }
-
   .dn-blog-card__category {
     display: inline-flex;
     align-items: center;
-    padding-left: 8px;
-  }
-
-  .dn-blog-card__category::before {
-    width: 4px;
-    height: 4px;
-    margin-right: 8px;
-    border-radius: 50%;
-    background: #9da3ac;
-    content: '';
   }
 
   h2 {
@@ -143,9 +132,13 @@
     transition: color 180ms ease-out;
   }
 
-  .dn-blog-card:hover h2,
   .dn-blog-card:focus-within h2 {
     color: var(--dn-red);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .dn-blog-card:hover { border-color: transparent; box-shadow: var(--dn-card-hover-shadow); }
+    .dn-blog-card:hover h2 { color: var(--dn-red); }
   }
 
   .dn-blog-card__text {
@@ -160,22 +153,27 @@
     line-clamp: 2;
   }
 
+  .dn-blog-card__action { display: none; }
+  .dn-blog-card__mobile-arrow { display: none; }
+
   @media (min-width: 992px) {
-    .dn-blog-card__body { padding: var(--dn-space-5); }
-    h2 { font-size: var(--dn-text-card); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-card); }
+    .dn-blog-card__media { height: 160px; flex-basis: 160px; }
+    .dn-blog-card__media img { height: 100%; }
+    .dn-blog-card__body { padding: var(--dn-space-4); }
+    h2 { margin: var(--dn-space-1) 0 6px; font-size: var(--dn-text-card); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-card); }
+    .dn-blog-card__text { margin-top: 0; margin-bottom: var(--dn-space-2); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
+    .dn-blog-card__action { display: inline-flex; }
   }
 
-  @media (max-width: 767px) {
-    .dn-blog-card { border: 0; border-radius: 12px; }
-    .dn-blog-card__link { display: grid; grid-template-columns: 108px minmax(0, 1fr); }
-    .dn-blog-card__media { height: 100%; min-height: 132px; }
-    .dn-blog-card__media img { height: 100%; }
-    .dn-blog-card__body { min-height: 0; padding: 12px; }
-    .dn-blog-card__meta { min-height: 0; font-size: var(--dn-text-meta); line-height: var(--dn-leading-heading); }
-    .dn-blog-card__brand { display: none; }
-    .dn-blog-card__category { padding-left: 0; }
-    .dn-blog-card__category::before { display: none; }
-    h2 { margin: 5px 0 6px; font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); }
+  @media (max-width: 991px) {
+    .dn-blog-card { border: 1px solid var(--dn-line); border-radius: var(--dn-radius-content-card); box-shadow: var(--dn-card-shadow-subtle); }
+    .dn-blog-card__link:focus-visible::after { border-radius: inherit; }
+    .dn-blog-card__link { display: block; }
+    .dn-blog-card__media { display: none; }
+    .dn-blog-card__body { min-width: 0; min-height: 0; padding: var(--dn-space-4); }
+    .dn-blog-card__meta { min-height: var(--dn-space-5); justify-content: space-between; gap: var(--dn-space-3); font: var(--dn-mobile-card-meta-font); }
+    .dn-blog-card__mobile-arrow { display: inline-flex; flex-shrink: 0; color: var(--dn-ink); }
+    h2 { margin: var(--dn-space-1) 0 var(--dn-space-2); font: var(--dn-mobile-card-title-font); font-weight: var(--dn-weight-semibold); }
     .dn-blog-card__text { margin-top: 0; font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
   }
 

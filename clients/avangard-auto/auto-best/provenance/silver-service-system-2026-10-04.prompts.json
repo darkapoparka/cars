@@ -1,0 +1,21 @@
+{
+  "mode": "built-in ImageGen",
+  "reference": "static/assets/images/template/home-services-silver-v1.webp",
+  "prompts": [
+    {
+      "key": "sell",
+      "target": "desktop-service-trade-in-v1.webp",
+      "prompt": "Use case: precise-object-edit. Edit Image 1, the car valuation illustration. Image 1 is the edit target; Image 2 is the approved vehicle and paint reference. Replace ONLY the older sedan in Image 1 with the exact bright cool metallic silver estate/wagon from Image 2. Faithfully match the estate silhouette, grille, headlight design, wheels, front three-quarter camera view, clean silver paint brightness and soft neutral studio reflections. The body should read as light luminous silver, never graphite, charcoal, dark grey, white paint or chrome. Keep the large magnifying glass, its dark handle and restrained red collar, their geometry/placement/materials, soft contact shadows and overall canvas composition of Image 1. Keep the car at the existing car's footprint, entirely visible with all wheels and bumper intact. Do not add a showroom or any object from Image 2 other than the car. Do not redraw the car as a different sedan. Keep a genuinely transparent background and the complete landscape canvas. No logos, brand badges, text, numbers, plates with writing or watermark."
+    },
+    {
+      "key": "finance",
+      "target": "desktop-service-leasing-v2.webp",
+      "prompt": "Use case: precise-object-edit. Edit Image 1, the car leasing illustration. Image 1 is the edit target; Image 2 is the approved vehicle and paint reference. Replace ONLY the older sedan in Image 1 with the exact bright cool metallic silver estate/wagon from Image 2. Faithfully match the estate silhouette, grille, headlight design, wheels, front three-quarter camera view, clean silver paint brightness and soft neutral studio reflections. The body should read as light luminous silver, never graphite, charcoal, dark grey, white paint or chrome. Keep the graphite percentage symbol with restrained red edge, its complete shape, and the cream notebook with black/red band; keep their placement, proportions and materials and existing soft contact shadows. Keep the car at the existing car's footprint, entirely visible with all wheels and bumper intact. Do not add a showroom or any object from Image 2 other than the car. Do not redraw it as a different sedan. Keep a genuinely transparent background and the complete landscape canvas. No logos, brand badges, text, numbers, plates with writing or watermark."
+    },
+    {
+      "key": "car",
+      "target": "home-services-silver-v1.webp",
+      "prompt": "Use case: precise-object-edit / background-extraction. Image 1 is the edit target. Remove ONLY the glass showroom/building behind the car and its associated building shadows, leaving an isolated cutout of the EXACT SAME bright cool metallic silver estate/wagon already present. Preserve the car's design, silver paint brightness, neutral soft studio reflections, three-quarter camera angle, wheels, all edges, body proportions, orientation, position and full car footprint. Keep only its soft natural contact shadow. Do not invent another car, change its model, recolor the paint, add accessories, create text or logos, or leave any building visible. Preserve the complete landscape canvas and use genuine alpha transparency around the entire car and shadow. No checkerboard pixels or solid background."
+    }
+  ]
+}
