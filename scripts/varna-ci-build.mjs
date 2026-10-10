@@ -9,6 +9,7 @@ import {legacyDetailArtifact} from './publishing/legacy-detail-routes.mjs';
 import {applyDealerShare} from './publishing/dealer-share.mjs';
 import {applySharedMedia} from './publishing/shared-media.mjs';
 import {specializeDealerReferencePackage} from './publishing/dealer-reference-package.mjs';
+import {FAMILY_NODE,repairDealerTemplateContracts} from './publishing/dealer-template-contracts.mjs';
 import {applyVercelAssets,planVercelAssets,PUBLIC_ROOTS,SERVICE_NAMES} from './publishing/vercel-asset-plan.mjs';
 export const FAMILIES=['auto-best','modern','import','app','mobile','karento-best'];
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex'),encode=value=>Buffer.from(JSON.stringify(value,null,2)+'\n');
@@ -20,7 +21,7 @@ export function buildMatrix(request){
  if(request?.schemaVersion!==1||!Array.isArray(request.dealers)||!Array.isArray(request.families)||!request.dealers.length||!request.families.length)throw Error('Invalid build request');
  if(new Set(request.dealers).size!==request.dealers.length||new Set(request.families).size!==request.families.length)throw Error('Repeated requested builds');
  for(const slug of request.dealers)identity(slug);for(const key of request.families)if(!FAMILIES.includes(key))throw Error('Unknown family');
- return {include:request.dealers.flatMap(slug=>request.families.map(key=>({slug,key,node:key==='karento-best'?'24.21.0':'22.23.2'})))};
+ return {include:request.dealers.flatMap(slug=>request.families.map(key=>({slug,key,node:FAMILY_NODE[key]})))};
 }
 export async function assemble(slug,sourceCommit){
  identity(slug);if(!/^[a-f0-9]{40}$/.test(sourceCommit)||git(ROOT,['rev-parse','HEAD'])!==sourceCommit)throw Error('Build must use its exact checked-out commit');
@@ -33,6 +34,9 @@ export async function assemble(slug,sourceCommit){
  const profile=loadDealerProfile(source,slug),logoPath='branding/logo-on-light.png';
  manifest.shareIdentity={name:profile.business.name,publicOrigin:'https://'+manifest.repository.split('/')[1]+'.vercel.app',description:profile.business.name+' — демонстрационен автомобилен каталог. Наличността и условията се потвърждават с търговеца.',logo:{sourcePath:logoPath,sha256:hash(files.get(logoPath)),faviconSourcePath:'assets/app-icon.png',faviconSha256:hash(files.get('assets/app-icon.png'))}};
  files=applySixVariantMounts(files,manifest,{provider:'vercel'});
+ const contracts=repairDealerTemplateContracts(files);
+ files.set('.cars-dealer-template-contracts.json',encode(contracts));
+ writeJson(path.join(ROOT,'runtime/varna-ci-evidence',slug,'template-contracts.json'),contracts);
  const referenceSpecialization=specializeDealerReferencePackage(files,manifest);
  writeJson(path.join(ROOT,'runtime/varna-ci-evidence',slug,'reference-specialization.json'),referenceSpecialization);
  await applyDealerShare(files,manifest,{sharp:dependency('sharp'),typescript:dependency('typescript')});
@@ -52,7 +56,6 @@ export async function assemble(slug,sourceCommit){
  files.set('.cars-varna-candidate-package.json',encode({schemaVersion:1,kind:'build-only-six-design-candidate',sourceCommit,dealer:slug,sourceCandidate:candidate.candidateSourceDigest,nativeReleaseApproval:false,buildVerified:false,hostedVerified:false,outreachApproved:false,productionPublisherUntouched:true}));
  const payload=[...files].sort(([a],[b])=>a<b?-1:a>b?1:0).map(([name,bytes])=>({path:name,sha256:hash(normalized(bytes))}));
  files.set('.cars-package.json',encode({schemaVersion:1,manifest,sourceCommit,packagingVersion:'5',payloadDigest:hash(JSON.stringify(payload)),payload,candidate:true,approved:false}));
- // The existing asset build wrappers need a byte seal, not a made-up native approval.
  const plannedRoot=path.resolve(out);fs.mkdirSync(out,{recursive:true});
  for(const [name,bytes]of files){if(name.startsWith('/')||name.includes('\\')||name.split('/').some(p=>!p||p==='..'||p==='.'))throw Error('Unsafe derived file');const target=path.join(plannedRoot,name);fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,bytes);}
  const receipt={schemaVersion:1,dealer:slug,sourceCommit,sourceTree:git(ROOT,['rev-parse',sourceCommit+':clients/'+slug]),packageDigest:hash(JSON.stringify(payload)),families:FAMILIES,files:files.size,assetPlan:assetPlan.summary,switcher:config,nativeApproval:false,compiled:false,deployed:false};

@@ -1,17 +1,8 @@
 {
   "schemaVersion": 1,
-  "request": "pilot-six-presentation-contract-02",
-  "sourceCandidateCommit": "74f598df7c8a898d01d7c6e370487db4688da065",
-  "dealers": [
-    "dm-auto-varna"
-  ],
-  "families": [
-    "auto-best",
-    "modern",
-    "import",
-    "app",
-    "mobile",
-    "karento-best"
-  ],
-  "scope": "Real six-family compilation with dealer-mode reference-media specialization and complete App presentation defaults. No release approval or deployment."
+  "request": "pilot-six-native-contract-repair-03",
+  "sourceCandidateCommit": "0ee5393e7fb5feb2238d18518f2bbcf7112443cd",
+  "dealers": ["dm-auto-varna"],
+  "families": ["auto-best", "modern", "import", "app", "mobile", "karento-best"],
+  "scope": "Real six-family compilation after repairing the native price-label export, typed logo prop, and Import Node 24 engine. Stock, assets and source approvals are preserved. No release approval or deployment is implied."
 }
