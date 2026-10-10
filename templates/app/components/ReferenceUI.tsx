@@ -21,7 +21,7 @@ export function ServiceTabs({active,compact=false,onDark=false}: {active:Service
 
   return <nav aria-label={tx("Car services")} {...stylex.props(s.tabs)}>{showroom.services.map(tab => <Link key={tab.key} href={tab.href} aria-label={tx(tab.key === 'finance' ? 'Finance navigation' : tab.label)} aria-current={active===tab.key?'page':undefined} {...stylex.props(s.tab,active===tab.key&&s.tabActive,onDark&&active===tab.key&&s.tabOnDarkActive,compact&&s.tabCompact)}>
     <span {...stylex.props(s.tabTitle,t.navigation,active===tab.key&&s.tabTitleActive,compact&&s.tabTitleCompact,compact&&active===tab.key&&s.tabTitleCompactActive,compact&&onDark&&s.tabTitleOnDark,compact&&onDark&&active===tab.key&&s.tabTitleOnDarkActive)}>{tx(tab.key === 'finance' ? 'Finance navigation' : tab.label)}</span>
-    {!compact ? <span aria-hidden="true" {...stylex.props(s.tabArtworkBox)}><ServiceTabArtwork image={tab.image} mobileImage={tab.mobileTabImage} mobileViewBox={tab.mobileTabViewBox}/></span> : null}
+    {!compact ? <span aria-hidden="true" {...stylex.props(s.tabArtworkBox)}><ServiceTabArtwork image={tab.image} mobileImage={tab.mobileTabImage} mobileViewBox={tab.mobileTabViewBox} service={tab.key}/></span> : null}
     {active===tab.key?<span aria-hidden="true" {...stylex.props(s.tabIndicator,compact&&s.tabIndicatorCompact)}/>:null}
   </Link>)}</nav>;
 }
@@ -30,13 +30,13 @@ export function ShowroomPromotion() {
   return <DealerHomeBanner/>;
 }
 
-function ServiceTabArtwork({image, mobileImage, mobileViewBox}: {image: string; mobileImage: string; mobileViewBox: string}) {
+function ServiceTabArtwork({image, mobileImage, mobileViewBox, service}: {image: string; mobileImage: string; mobileViewBox: string; service: ServiceKey}) {
   const common = {alt: '', fill: true, sizes: '(max-width: 767px) 90px, 160px'};
   const {props: desktop} = getImageProps({...common, src: assetPath(image)});
   const {props: mobile} = getImageProps({alt: '', src: assetPath(mobileImage), width: 96, height: 64});
   // Frame the painted artwork, not each file's unequal transparent margins.
   // The 1536 x 1024 source coordinate system also fits the proportional WebP.
-  return <><img {...desktop} alt="" {...stylex.props(s.tabArt,s.tabDesktopArt)}/><svg viewBox={mobileViewBox} preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false" {...stylex.props(s.tabMobileArt)}><image href={mobile.src} width={1536} height={1024}/></svg></>;
+  return <><img {...desktop} alt="" {...stylex.props(s.tabArt,s.tabDesktopArt)}/><svg viewBox={mobileViewBox} preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false" {...stylex.props(s.tabMobileArt,service==='buy'&&s.tabMobileBuy)}><image href={mobile.src} width={1536} height={1024}/></svg></>;
 }
 
 export function BrandEmblem({make,plain=false}: {make: string;plain?: boolean}) {
@@ -98,6 +98,7 @@ const s=stylex.create({
  tabArt:{objectFit:'contain'},
  tabDesktopArt:{display:{[media.mobile]:'none',default:'block'}},
  tabMobileArt:{display:{[media.mobile]:'block',default:'none'},width:'100%',height:'100%'},
+ tabMobileBuy:{transform:{[media.mobile]:'scale(.86)',default:'none'},transformOrigin:'center bottom'},
  tabTitle:{position:{[media.mobile]:'static',default:'absolute'},top:16,left:0,right:0,maxWidth:'100%',textAlign:'center',zIndex:1,whiteSpace:'pre-line',overflowWrap:'anywhere',letterSpacing:0},
  tabTitleActive:{fontWeight:{[media.mobile]:500,default:400}},
  sectionTitle:{fontSize:{[media.mobile]:18,default:25},fontWeight:{[media.mobile]:600,default:500},lineHeight:1.35,color:$.text},

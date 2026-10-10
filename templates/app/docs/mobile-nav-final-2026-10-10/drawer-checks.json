@@ -1,0 +1,126 @@
+{
+  "passed": true,
+  "note": "All assertions passed. The console-summary formatter failed after the JSON was saved; optional controls handling has been corrected.",
+  "errors": [],
+  "results": [
+    {
+      "route": "Home",
+      "width": null,
+      "brands": {
+        "x": 12,
+        "y": 230.65625,
+        "width": 366,
+        "height": 114,
+        "top": 230.65625,
+        "right": 378,
+        "bottom": 344.65625,
+        "left": 12
+      },
+      "pill": null,
+      "target": null
+    },
+    {
+      "route": "Brand drawer",
+      "width": null,
+      "brands": null,
+      "pill": null,
+      "target": null
+    },
+    {
+      "route": "Model drawer",
+      "width": null,
+      "brands": null,
+      "pill": null,
+      "target": null
+    },
+    {
+      "route": "Model selection/reset",
+      "width": 320,
+      "brands": null,
+      "pill": {
+        "target": {
+          "x": 12.359375,
+          "y": 72,
+          "width": 65.71875,
+          "height": 44,
+          "top": 72,
+          "right": 78.078125,
+          "bottom": 116,
+          "left": 12.359375
+        },
+        "paint": {
+          "x": 12.359375,
+          "y": 76,
+          "width": 65.71875,
+          "height": 36,
+          "top": 76,
+          "right": 78.078125,
+          "bottom": 112,
+          "left": 12.359375
+        },
+        "font": "14px"
+      },
+      "target": null
+    },
+    {
+      "route": "Model selection/reset",
+      "width": 390,
+      "brands": null,
+      "pill": {
+        "target": {
+          "x": 12.359375,
+          "y": 72,
+          "width": 65.71875,
+          "height": 44,
+          "top": 72,
+          "right": 78.078125,
+          "bottom": 116,
+          "left": 12.359375
+        },
+        "paint": {
+          "x": 12.359375,
+          "y": 76,
+          "width": 65.71875,
+          "height": 36,
+          "top": 76,
+          "right": 78.078125,
+          "bottom": 112,
+          "left": 12.359375
+        },
+        "font": "14px"
+      },
+      "target": null
+    },
+    {
+      "route": "Service drawer",
+      "width": null,
+      "brands": null,
+      "pill": null,
+      "target": null
+    },
+    {
+      "route": "Last service pill selection/reset",
+      "width": 320,
+      "brands": null,
+      "pill": null,
+      "target": {
+        "x": 232.75,
+        "y": 248.796875,
+        "width": 75.03125,
+        "height": 44
+      }
+    },
+    {
+      "route": "Last service pill selection/reset",
+      "width": 390,
+      "brands": null,
+      "pill": null,
+      "target": {
+        "x": 302.75,
+        "y": 248.796875,
+        "width": 75.03125,
+        "height": 44
+      }
+    }
+  ]
+}
