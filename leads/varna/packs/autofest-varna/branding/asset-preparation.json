@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dealer": "autofest-varna",
+  "createdAt": "2026-10-10T16:40:40.949Z",
+  "original": {
+    "width": 100,
+    "height": 26,
+    "sha256": "70e6ffad547fbcf11eb4e640ff5c907391af39afb5c7e4498139c49c2512ccf4"
+  },
+  "method": "Lossless raster format conversion of the published logo; no AI refresh or creative replacement.",
+  "icon": {
+    "input": "assets/brand/logo.png",
+    "png": "assets/app-icon.png",
+    "ico": "assets/favicon.ico",
+    "originalIdentityRetained": true
+  },
+  "finalLogoRefresh": "required-image-tool-attempt-did-not-generate",
+  "visualQa": false
+}

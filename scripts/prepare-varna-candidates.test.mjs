@@ -1,0 +1,8 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {sourceManifest,FAMILIES} from './prepare-varna-candidates.mjs';
+const sources=Object.fromEntries(FAMILIES.map(key=>[key,{repository:'darkapoparka/cars',revision:'a'.repeat(40),tree:'b'.repeat(40),digest:'c'.repeat(64),path:'templates/'+key}]));
+const dealer={slug:'test-varna-dealer',proposedRepository:'darkapoparka/cars-test-varna-dealer'};
+const locale={schemaVersion:1,dealerId:dealer.slug,defaultLocale:'bg',enabledLocales:['bg','en'],dealerCountry:'BG',inventoryCurrency:'EUR'};
+test('retains all six real family identities and established mount order',()=>{const m=sourceManifest(dealer,sources,locale);assert.deepEqual(m.variants.map(v=>v.key),FAMILIES);assert.deepEqual(m.variants.map(v=>v.entry),['/','/variant-2/cars','/variant-3/','/variant-4/','/variant-5/','/variant-6/']);assert.equal(m.packaging.version,'5');});
+test('binds explicit Bulgarian locale and common Admin without claiming acceptance',()=>{const m=sourceManifest(dealer,sources,locale);assert.equal(m.localization.defaultLocale,'bg');assert.equal(m.candidate.admin,'https://cars-admin-blue.vercel.app/');for(const key of ['approved','nativeReleaseQualification','build','hosted'])assert.equal(m.candidate[key],false);assert.equal(m.sourceBranch,'varna');});
+test('rejects unsafe client and publishing identities',()=>{assert.throws(()=>sourceManifest({...dealer,slug:'../outside'},sources,locale));assert.throws(()=>sourceManifest({...dealer,proposedRepository:'darkapoparka/cars'},sources,locale));});
