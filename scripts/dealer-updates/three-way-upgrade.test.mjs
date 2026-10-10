@@ -482,3 +482,14 @@ test('large clean merges preserve complete output beyond the former 16 MiB limit
   assert.equal(plan.candidate.get('large.ts').toString(),local.replace('old template line','latest template line'));
   assert.match(plan.changes[0].diff,/Large text patch omitted/);
 });
+
+
+test('fast review hunks cover insertion, deletion, separated edits and final-newline changes', () => {
+  for(const [before,after] of [['','new\n'],['old\n',''],['one\ntwo\nthree\nfour\nfive\n','ONE\ntwo\nthree\nfour\nFIVE\n'],['same','same\n']]) {
+    const result=unifiedDiff(Buffer.from(before),Buffer.from(after));
+    assert.match(result,/^diff --git dealer candidate\n--- dealer\n\+\+\+ candidate\n@@/);
+    const lines=result.split('\n'),header=lines[3].match(/@@ -(\d+),(\d+) \+(\d+),(\d+) @@/);assert.ok(header);
+    let oldCount=0,newCount=0;for(const line of lines.slice(4)){if(line.startsWith(' ')||line.startsWith('-'))oldCount++;if(line.startsWith(' ')||line.startsWith('+'))newCount++;}
+    assert.equal(oldCount,Number(header[2]));assert.equal(newCount,Number(header[4]));
+  }
+});

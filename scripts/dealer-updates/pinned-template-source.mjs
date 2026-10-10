@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { exportCommit, fingerprintCommit, git, gitFiles } from '../lib/workflow.mjs';
+import { exportCommit, fingerprintCommit, git, gitFiles, normalized, sha256 } from '../lib/workflow.mjs';
 import {appSourceRetainsPath} from '../publishing/app-source.mjs';
 
 function normalizedRepository(value) {
@@ -79,8 +79,17 @@ export function readRepositoryTreeMap({ repositoryPath, revision, prefix = '', f
   if (!/^[a-f0-9]{40}$/.test(revision || '')) throw new Error('Repository tree reads require an immutable commit SHA');
   const entries = gitFiles(repositoryPath, revision, { prefix, ...(filter ? { filter } : {}) });
   const files = new Map();
-  for (let offset = 0; offset < entries.length; offset += 48) {
-    const batch = entries.slice(offset, offset + 48);
+  // Read sizes once and bound batches by bytes as well as file count.
+  // Small source files share one Git process; large assets do not overflow it.
+  const sizes = entries.length ? git(repositoryPath, ['cat-file', '--batch-check=%(objectsize)'], {
+    input: entries.map(item => item.blob).join('\n') + '\n'
+  }).split(/\r?\n/).filter(Boolean).map(Number) : [];
+  if (sizes.length !== entries.length || sizes.some(size => !Number.isSafeInteger(size) || size < 0)) throw new Error('Invalid pinned Git blob sizes');
+  for (let offset = 0; offset < entries.length;) {
+    let end = offset, batchBytes = 0;
+    while (end < entries.length && end - offset < 512 && (end === offset || batchBytes + sizes[end] <= 32 * 1024 * 1024)) batchBytes += sizes[end++];
+    const batch = entries.slice(offset, end);
+    offset = end;
     const bytes = git(repositoryPath, ['cat-file', '--batch'], {
       input: `${batch.map(item => item.blob).join('\n')}\n`,
       encoding: null
@@ -124,8 +133,10 @@ export function readPinnedTemplateTree({ key, repositoryPath, source, expectedDi
   if (actualRepository !== repository) throw new Error(`${key}: source repository identity mismatch; expected ${repository}`);
   const files = readRepositoryTreeMap({ repositoryPath, revision, prefix });
   if (!files.size) throw new Error(`${key}: pinned source tree is empty`);
-  const canonical = fingerprintCommit(repositoryPath, revision, { prefix });
-  if (canonical.files.length !== files.size) throw new Error(`${key}: canonical fingerprint and loaded source tree differ`);
+  // Same ordered, normalized fingerprint as fingerprintCommit, using the
+  // exact Git bytes just validated above instead of reading every blob twice.
+  const canonicalFiles = [...files].map(([name, bytes]) => ({path: name, sha256: sha256(normalized(bytes))}));
+  const canonical = {files: canonicalFiles, digest: sha256(JSON.stringify(canonicalFiles))};
   let digest = canonical.digest;
   // The first App release recorded the full committed subtree, before the
   // common Cars export policy excluded agent instructions and Next type output.

@@ -537,19 +537,33 @@ function computeUnifiedDiff(beforeBytes, afterBytes, labels) {
       + labels[0] + ': ' + beforeContent.length + ' bytes; sha256=' + sha256(beforeContent) + '\n'
       + labels[1] + ': ' + afterContent.length + ' bytes; sha256=' + sha256(afterContent) + '\n';
   }
-  const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'cars-upgrade-diff-'));
-  try {
-    const before = path.join(temp, 'before');
-    const after = path.join(temp, 'after');
-    fs.writeFileSync(before, beforeBytes ?? Buffer.alloc(0));
-    fs.writeFileSync(after, afterBytes ?? Buffer.alloc(0));
-    const result = spawnSync('git', ['diff', '--no-index', '--no-prefix', '--', 'before', 'after'], {
-      cwd: temp, encoding: 'utf8', maxBuffer: 8 * 1024 * 1024, windowsHide: true
-    });
-    if (result.error) throw result.error;
-    if (![0, 1].includes(result.status)) throw new Error(`git diff failed: ${result.stderr}`);
-    return result.stdout.replaceAll(before, labels[0]).replaceAll(after, labels[1]);
-  } finally { fs.rmSync(temp, { recursive: true, force: true }); }
+  // A single exact context hunk avoids thousands of short-lived Git processes
+  // on Windows. This is review text only; Git still performs real three-way
+  // merges and all original conflict/hash/installation gates remain intact.
+  const lines = bytes => {
+    const text = bytes.toString('utf8'), values = text.length ? text.split('\n') : [];
+    if (text.endsWith('\n')) values.pop();
+    return {values, finalNewline: text.endsWith('\n')};
+  };
+  const before = lines(beforeContent), after = lines(afterContent), a = before.values, b = after.values;
+  let prefix = 0, suffix = 0;
+  while (prefix < a.length && prefix < b.length && a[prefix] === b[prefix]) prefix++;
+  while (suffix < a.length - prefix && suffix < b.length - prefix && a[a.length - 1 - suffix] === b[b.length - 1 - suffix]) suffix++;
+  // Include a changed final-newline bit even when line content is identical.
+  if (prefix === a.length && prefix === b.length && prefix > 0) { prefix--; suffix = 0; }
+  const contextStart = Math.max(0, prefix - 3), aEnd = Math.min(a.length, a.length - suffix + 3), bEnd = Math.min(b.length, b.length - suffix + 3);
+  const aCount = aEnd - contextStart, bCount = bEnd - contextStart;
+  const range = (start, count) => (count ? start + 1 : start) + ',' + count;
+  let result = 'diff --git ' + labels[0] + ' ' + labels[1] + '\n--- ' + labels[0] + '\n+++ ' + labels[1] + '\n'
+    + '@@ -' + range(contextStart, aCount) + ' +' + range(contextStart, bCount) + ' @@\n';
+  const add = (sign, values, from, to, newline) => {
+    for (let i = from; i < to; i++) { result += sign + values[i] + '\n'; if (i === values.length - 1 && !newline) result += '\\ No newline at end of file\n'; }
+  };
+  add(' ', a, contextStart, prefix, before.finalNewline);
+  add('-', a, prefix, a.length - suffix, before.finalNewline);
+  add('+', b, prefix, b.length - suffix, after.finalNewline);
+  add(' ', b, b.length - suffix, bEnd, after.finalNewline);
+  return result;
 }
 
 export function writeCandidateTree(plan, destination) {
