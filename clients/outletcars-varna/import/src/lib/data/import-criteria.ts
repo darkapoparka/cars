@@ -19,7 +19,8 @@ export const importBodyTypes = [
 	'Wagon',
 	'Coupe',
 	'Cabriolet',
-	'Pickup Truck'
+	'Pickup Truck',
+	'Crossover'
 ];
 export const importMakes = [
 	'Audi',

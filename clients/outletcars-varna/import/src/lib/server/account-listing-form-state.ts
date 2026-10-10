@@ -9,6 +9,7 @@ import type {
 } from '$lib/auxero/account-listing-form';
 import { daynightContact } from '$lib/data/daynight';
 import { vehicles } from '$lib/data/vehicles';
+import { vehicleIntakeOptions } from '$lib/domain/vehicle-intake-options';
 import { accountContext, type AccountContext } from './account-dashboard-state';
 import { accountProfileMapEmbedUrl } from './account-profile-state';
 import type { AuxeroRenderOptions } from './auxero-listing-data';
@@ -222,6 +223,21 @@ export const accountListingFormData = (
 
 	return {
 		address,
+		intakeOptions: vehicleIntakeOptions(vehicles),
+		submission: editSubmission
+			? {
+					id: editSubmission.id,
+					status: editSubmission.status,
+					title: editSubmission.title,
+					expectedPrice: editSubmission.expectedPrice,
+					vin: editSubmission.vin,
+					mileage: editSubmission.mileage,
+					message: editSubmission.message,
+					previewImage: editSubmission.previewImage,
+					galleryImages: editSubmission.galleryImages,
+					documents: editSubmission.documents
+				}
+			: undefined,
 		attachments: [
 			{ icon: '/assets/icons/pdf.svg', label: 'Information', type: 'PDF' },
 			{ icon: '/assets/icons/doc.svg', label: 'Information', type: 'Doc' }

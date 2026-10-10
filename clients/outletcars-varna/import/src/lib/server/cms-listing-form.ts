@@ -70,6 +70,14 @@ export const readInventoryListingFields = (formData: FormData): InventoryListing
 	};
 };
 
+export const submissionDraftValues = (fields: InventoryListingInput) => ({
+	title: fields.title,
+	expectedPrice: fields.priceLabel ?? '',
+	mileage: String(fields.mileage ?? ''),
+	vin: fields.vin ?? '',
+	message: fields.description ?? ''
+});
+
 export const mergeListingUploads = async ({
 	existing,
 	formData,

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { AuxeroInventoryFilter } from '$lib/server/inventory-options';
 	import InventoryFilterChoice from './InventoryFilterChoice.svelte';
+	import { inventoryDialogCopy } from '$lib/content/inventory-desktop-controls';
 	let {
 		filter,
 		english = false,
@@ -15,6 +16,7 @@
 	let lower = $state<HTMLInputElement>();
 	let upper = $state<HTMLInputElement>();
 	const id = $props.id();
+	const copy = $derived(inventoryDialogCopy[english ? 'en' : 'bg']);
 	const subject = $derived(
 		filter.name === 'priceTo' ? (english ? 'price' : 'цена') : english ? 'mileage' : 'пробег'
 	);
@@ -81,19 +83,28 @@
 		/><span class="unit">{filter.numericInput?.unit}</span></label
 	>
 </div>
-<div class="range-presets filter-options">
-	{#each filter.options as option (option.value)}<InventoryFilterChoice
-			label={option.label}
-			checked={selection.includes(option.value)}
-			mode="single"
-			name={id + '-preset'}
-			form={id + '-detached'}
-			onchange={() => {
-				selection = [option.value];
-				clearValidity();
-			}}
-		/>{/each}
-</div>
+<section
+	class="filter-options-group filter-options-group--compact"
+	aria-labelledby={id + '-presets-heading'}
+>
+	<header class="filter-options-group__header">
+		<h3 id={id + '-presets-heading'}>{copy.quickChoices}</h3>
+		<span>{copy.optionCount(filter.options.length)}</span>
+	</header>
+	<div class="range-presets filter-options">
+		{#each filter.options as option (option.value)}<InventoryFilterChoice
+				label={option.label}
+				checked={selection.includes(option.value)}
+				mode="single"
+				name={id + '-preset'}
+				form={id + '-detached'}
+				onchange={() => {
+					selection = [option.value];
+					clearValidity();
+				}}
+			/>{/each}
+	</div>
+</section>
 
 <style>
 	.range-fields {

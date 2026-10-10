@@ -5,7 +5,7 @@ const root=path.resolve(import.meta.dirname,'..');
 const base=new URL(process.env.BASE_URL||process.env.DEALER_BASE_URL);
 const out=process.env.LOCALE_QA_OUT||path.join(root,'artifacts/localization/ssr');
 fs.mkdirSync(out,{recursive:true});
-const paths=['','/listing-grid','/contact','/contact?topic=trade-in','/contact?topic=import','/contact?topic=leasing','/contact?topic=inspection','/about-us','/blog','/locale-settings'];
+const paths=['','/cars','/contact','/contact?topic=trade-in','/contact?topic=import','/contact?topic=leasing','/contact?topic=inspection','/about-us','/blog','/locale-settings'];
 for(const [file,prefix] of [['inventory','/listing-detail-v1/'],['editorial','/blog-detail/']]) for(const match of fs.readFileSync(path.join(root,'src/lib/data/'+file+'.ts'),'utf8').matchAll(/\bid:\s*(\d+)/g)) paths.push(prefix+match[1]);
 const results=[];
 for(const locale of ['en','bg']) for(const route of [...new Set(paths)]) {

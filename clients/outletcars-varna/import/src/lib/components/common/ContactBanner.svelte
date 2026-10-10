@@ -9,27 +9,37 @@
 </script>
 
 <section class="contact-banner">
-	<img
-		src={assetHref('/assets/daynight/banners/commerce-visit.webp')}
-		srcset={`${assetHref('/assets/daynight/banners/commerce-visit-small.webp')} 360w, ${assetHref('/assets/daynight/banners/commerce-visit.webp')} 720w, ${assetHref('/assets/daynight/banners/commerce-visit-large.webp')} 1080w`}
-		sizes="(max-width: 767px) calc(100vw - 28px), 1080px"
-		alt=""
-		width="720"
-		height="405"
-		loading="lazy"
-	/>
+	<picture>
+		<source
+			media="(min-width: 768px)"
+			srcset={assetHref('/assets/daynight/banners/commerce-visit-desktop-v2.webp')}
+		/>
+		<img
+			src={assetHref('/assets/daynight/banners/contact-cta-mobile-v1.webp')}
+			srcset={`${assetHref('/assets/daynight/banners/contact-cta-mobile-v1-small.webp')} 360w, ${assetHref('/assets/daynight/banners/contact-cta-mobile-v1.webp')} 720w, ${assetHref('/assets/daynight/banners/contact-cta-mobile-v1-large.webp')} 1080w`}
+			sizes="(max-width: 767px) calc(100vw - 28px), 1080px"
+			alt=""
+			width="720"
+			height="405"
+			loading="lazy"
+		/>
+	</picture>
 	<div class="contact-banner__copy">
 		<h2>{title ?? (english ? 'Let’s discuss your car' : 'Нека обсъдим твоя автомобил')}</h2>
 		<p>
-			{dealerCopy[english ? 'en' : 'bg'].address}<br />{dealerCopy[english ? 'en' : 'bg']
-				.appointment}
+			<span class="contact-banner__address">{dealerCopy[english ? 'en' : 'bg'].address}<br /></span
+			>{dealerCopy[english ? 'en' : 'bg'].appointment}
 		</p>
 		<div class="contact-banner__actions">
 			<Action href={site.contact.phoneHref}
-				><Phone size={20} aria-hidden="true" />{site.contact.phone}</Action
+				><Phone size={20} aria-hidden="true" /><span class="site-desktop-only"
+					>{site.contact.phone}</span
+				><span class="site-mobile-only">{english ? 'Call us' : 'Обади се'}</span></Action
 			>
 			<Action href={site.contact.mapHref} variant="secondary" target="_blank" rel="noreferrer"
-				><MapPin size={20} aria-hidden="true" />{english ? 'Directions' : 'Как да стигнеш'}</Action
+				><MapPin size={20} aria-hidden="true" /><span class="site-desktop-only"
+					>{english ? 'Directions' : 'Как да стигнеш'}</span
+				><span class="site-mobile-only">{english ? 'Map' : 'Карта'}</span></Action
 			>
 		</div>
 	</div>
@@ -49,7 +59,13 @@
 		padding: var(--bc-space-8);
 		text-align: left;
 	}
-	.contact-banner > img {
+	.contact-banner picture {
+		display: contents;
+	}
+	.contact-banner source {
+		display: none;
+	}
+	.contact-banner img {
 		position: absolute;
 		inset: 0;
 		z-index: -2;
@@ -82,15 +98,44 @@
 		flex-wrap: wrap;
 		gap: var(--bc-space-3);
 	}
-	@media (max-width: 575px) {
+	@media (min-width: 768px) {
+		h2 {
+			font-family: var(--bc-font-body);
+			font-weight: var(--bc-desktop-title-weight);
+			line-height: var(--bc-desktop-section-leading);
+		}
+	}
+	@media (max-width: 767.98px) {
 		.contact-banner {
-			padding: var(--bc-space-6) var(--bc-space-4);
+			min-height: 0;
+			padding: var(--bc-space-5) var(--bc-space-4);
 		}
 		.contact-banner__copy {
 			max-width: 100%;
 		}
+		.contact-banner__address {
+			display: none;
+		}
 		.contact-banner::after {
-			background: rgb(9 10 11 / 0.62);
+			background: linear-gradient(90deg, rgb(9 10 11 / 0.75), rgb(9 10 11 / 0.25));
+		}
+		h2 {
+			font-size: var(--bc-text-h4);
+			line-height: var(--bc-leading-h4);
+			text-wrap: balance;
+		}
+		p {
+			margin: var(--bc-space-2) 0 var(--bc-space-4);
+			font-size: var(--bc-text-body);
+			line-height: var(--bc-leading-body);
+		}
+		.contact-banner__actions {
+			gap: var(--bc-space-2);
+		}
+		.contact-banner__actions :global(.site-action) {
+			padding-inline: var(--bc-space-3);
+			border-radius: var(--bc-radius-pill);
+			font-size: var(--bc-text-body);
 		}
 	}
 </style>

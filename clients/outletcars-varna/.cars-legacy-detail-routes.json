@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "dealer": "outletcars-varna",
+  "family": "modern",
+  "base": "/variant-3",
+  "defaultLocale": "bg",
+  "source": {
+    "inventory": {
+      "path": "carwow/src/lib/data/daynight-current-inventory.ts",
+      "sha256": "755eb40f77ca10bf6e99131f72316847ab5267302d4041478212b98566ed5be4"
+    },
+    "vehicles": {
+      "path": "carwow/src/lib/data/daynight-vehicles.ts",
+      "sha256": "58507cc762f0d0763f6d521a86d8474729fd6cf112b7dd072170f350a2c11d84"
+    },
+    "routeFactorySha256": "094d5128ad5e689e41486a228b1de6d11c54efbe051ce0e75c0170709d8571c9"
+  },
+  "profileSha256": "73e5643f546e09fde69c5f994bce6b3108709b33b00b4963695ea3564601b003",
+  "entries": [
+    {
+      "sourceId": "21780566866553359",
+      "slug": "audi-q5-553359",
+      "targetId": "audi-q5-mild-hybrid-s-line-quattro-1-2021-21780566866553359"
+    },
+    {
+      "sourceId": "11780668057655036",
+      "slug": "citroen-c3-1-2-655036",
+      "targetId": "citroen-c3-1-2-100hp-03-2027-2025-11780668057655036"
+    },
+    {
+      "sourceId": "11778766828983143",
+      "slug": "opel-corsa-edition-983143",
+      "targetId": "opel-corsa-edition-2024-11778766828983143"
+    },
+    {
+      "sourceId": "21779776692067869",
+      "slug": "vw-tiguan-1-5tsi-067869",
+      "targetId": "vw-tiguan-1-5tsi-150hp-04-2028-2023-21779776692067869"
+    },
+    {
+      "sourceId": "11782296205813235",
+      "slug": "vw-arteon-r-line-813235",
+      "targetId": "vw-arteon-r-line-04-2028-2023-11782296205813235"
+    },
+    {
+      "sourceId": "11782392995192464",
+      "slug": "peugeot-2008-gt-192464",
+      "targetId": "peugeot-2008-gt-2024-11782392995192464"
+    },
+    {
+      "sourceId": "21786715209008072",
+      "slug": "audi-q7-008072",
+      "targetId": "audi-q7-4-2-tdi-v8-340-800-nm-2010-21786715209008072"
+    },
+    {
+      "sourceId": "11785245019997658",
+      "slug": "vw-arteon-r-line-997658",
+      "targetId": "vw-arteon-r-line-2023-11785245019997658"
+    }
+  ],
+  "retired": []
+}

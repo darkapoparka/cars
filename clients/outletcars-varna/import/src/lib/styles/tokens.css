@@ -36,6 +36,8 @@
 	--bc-leading-control: 1.375;
 	--bc-text-filter: 1.125rem;
 	--bc-leading-filter: 1.333333;
+	--bc-text-quick-pill: 1.125rem;
+	--bc-leading-quick-pill: 1.333333;
 	--bc-text-search: 1.125rem;
 	--bc-text-search-trigger: 1.25rem;
 	--bc-leading-search: 1.333333;
@@ -45,6 +47,11 @@
 	--bc-weight-control: 400;
 	--bc-weight-action: 400;
 	--bc-text-mode-tab: 1.25rem;
+	--bc-mobile-tab-nav-text: 1.125rem;
+	--bc-mobile-tab-indicator-height: 5px;
+	--bc-mobile-tab-indicator-inset: 0px;
+	--bc-mobile-tab-indicator-radius: 5px 5px 0 0;
+	--bc-mode-tab-artwork-size: 48px;
 	--bc-text-entry: 1.25rem;
 	--bc-weight-heading: 600;
 	--bc-weight-emphasis: 700;
@@ -67,6 +74,7 @@
 	--bc-ink: #17191c;
 	--bc-ink-soft: #1c1c1c;
 	--bc-copy: #4f5965;
+	--bc-description-copy: #343b43;
 	--bc-muted: #626d7c;
 	--bc-muted-light: #9fa1a4;
 	--bc-subtle: #697078;
@@ -94,14 +102,15 @@
 	--bc-hover-accent-ink: #ffffff;
 	--bc-hover-quiet-ink: #1c1c1c;
 
-	--bc-accent: #b9161c;
-	--bc-accent-hover: #8f1016;
+	--bc-accent: var(--bc-ink);
+	--bc-accent-hover: #34383d;
 	--bc-brand: var(--bc-accent);
 	--bc-brand-hover: var(--bc-accent-hover);
 	--bc-z-header: 100;
 	--bc-z-popover: 1100;
 	--bc-z-overlay: 1400;
 	--bc-z-dialog: 1401;
+	--bc-backdrop: rgb(9 10 11 / 0.48);
 	--bc-desktop-header-height: 94px;
 	--bc-form-gap: 16px;
 	--bc-desktop-section-title: clamp(2rem, 2.5vw, 2.25rem);
@@ -109,7 +118,7 @@
 	--bc-accent-soft: var(--bc-surface);
 	--bc-accent-contrast: #ffffff;
 	--bc-accent-alt: var(--bc-accent-hover);
-	--bc-accent-bright: #ee1d24;
+	--bc-accent-bright: var(--bc-accent);
 	--bc-accent-bright-soft: var(--bc-surface);
 	--bc-accent-olive: var(--bc-accent);
 	--bc-focus: var(--bc-accent);
@@ -137,7 +146,7 @@
 	--bc-popover-border-hover: var(--bc-accent);
 	--bc-popover-accent: var(--bc-accent);
 	--bc-popover-accent-soft: #f3f4f6;
-	--bc-popover-accent-ring: rgb(227 6 47 / 0.18);
+	--bc-popover-accent-ring: color-mix(in srgb, var(--bc-accent) 18%, transparent);
 	--bc-popover-focus: var(--bc-accent-hover);
 	--bc-popover-muted: #5f5f5f;
 	--bc-popover-muted-strong: #7c7c7c;
@@ -159,7 +168,7 @@
 	--bc-filter-field-border: #e1e4e7;
 	--bc-filter-field-hover-border: var(--bc-accent);
 	--bc-filter-field-hover-bg: #ffffff;
-	--bc-filter-ring: rgb(227 6 47 / 0.16);
+	--bc-filter-ring: color-mix(in srgb, var(--bc-accent) 16%, transparent);
 	--bc-filter-label: #69717a;
 	--bc-filter-backdrop: rgb(13 19 26 / 0.58);
 	--bc-filter-panel-border: #dfe3e7;
@@ -220,10 +229,17 @@
 	   receive progressively more visual and physical weight. */
 	--bc-control-height-compact: 36px;
 	--bc-control-height-secondary: 40px;
-	--bc-control-height-chip: 44px;
+	--bc-control-height-chip: 42px;
 	--bc-control-height-standard: 44px;
 	--bc-control-height-primary: 48px;
 	--bc-control-height-hero: 56px;
+	/* Action glyphs occupy half their visible control height. */
+	--bc-control-icon-size-compact: calc(var(--bc-control-height-compact) / 2);
+	--bc-control-icon-size-secondary: calc(var(--bc-control-height-secondary) / 2);
+	--bc-control-icon-size-chip: calc(var(--bc-control-height-chip) / 2);
+	--bc-control-icon-size-standard: calc(var(--bc-control-height-standard) / 2);
+	--bc-control-icon-size-primary: calc(var(--bc-control-height-primary) / 2);
+	--bc-control-icon-size-hero: calc(var(--bc-control-height-hero) / 2);
 	--bc-mobile-entry-inset: 2px;
 	--bc-mobile-entry-gap: 10px;
 
@@ -238,6 +254,7 @@
 	--bc-space-7: 28px;
 	--bc-space-8: 32px;
 	--bc-mobile-gutter: 14px;
+	--bc-mobile-browse-top-inset: var(--bc-space-3);
 	--bc-mobile-dark: #090a0b;
 	--bc-dark-surface: #101113;
 	--bc-dark-border: #202326;
@@ -255,29 +272,36 @@
 	--bc-glass-hover: rgb(255 255 255 / 0.24);
 	--bc-glass-border: rgb(255 255 255 / 0.4);
 	--bc-mobile-appbar-height: 56px;
-	--bc-desktop-page-hero-height: 360px;
+	--bc-desktop-hero-title: clamp(2.5rem, 3.5vw, 3.25rem);
 	--bc-mobile-nav-height: 58px;
 	--bc-mobile-content-max: 480px;
 	--bc-mobile-nav-icon-size: 22px;
 	--bc-mobile-icon-action-hit-size: var(--bc-control-height-standard);
-	--bc-mobile-icon-action-surface-size: var(--bc-control-height-secondary);
+	/* Breakpoints choose the painted size independently of the standard touch target. */
+	--bc-mobile-icon-action-surface-size: var(--bc-control-height-standard);
+	--bc-mobile-icon-action-glyph-size: var(--bc-control-icon-size-standard);
+	--bc-mobile-icon-action-stroke: 2;
 	--bc-mobile-sheet-max-width: 520px;
 	--bc-mobile-sheet-max-height: 780px;
 	--bc-mobile-sheet-header-height: 52px;
 	--bc-mobile-menu-row-height: var(--bc-control-height-primary);
-	--bc-mobile-menu-icon-size: 24px;
+	--bc-mobile-menu-icon-size: var(--bc-control-icon-size-primary);
 	--bc-mobile-menu-feature-height: 68px;
 	--bc-mobile-stat-height: 30px;
 	--bc-mobile-page-title: 28px;
 	--bc-mobile-page-title-leading: 32px;
 	--bc-mobile-section-title: 22px;
 	--bc-mobile-section-title-leading: 28px;
+	/* Home section headings retain the approved prominence across discovery and editorial rails. */
+	--bc-mobile-home-section-font: var(--bc-weight-heading)
+		var(--bc-mobile-page-title)/var(--bc-mobile-page-title-leading) var(--bc-font-heading);
 	--bc-mobile-card-title: 1.125rem;
 	--bc-mobile-card-title-leading: 24px;
 	--bc-mobile-body: var(--bc-text-body);
 	--bc-mobile-body-leading: 24px;
 	--bc-mobile-label: var(--bc-text-label);
 	--bc-mobile-label-leading: 20px;
+	--bc-mobile-review-avatar-size: var(--bc-control-height-primary);
 	--bc-mobile-meta: var(--bc-text-meta);
 	--bc-mobile-meta-leading: 18px;
 	--bc-mobile-stat: 0.75rem;
@@ -285,7 +309,7 @@
 	--bc-mobile-card-price: 1.25rem;
 	--bc-mobile-price: 22px;
 	--bc-mobile-price-leading: 28px;
-	--bc-accent-tint: rgb(185 22 28 / 0.12);
+	--bc-accent-tint: color-mix(in srgb, var(--bc-accent) 12%, transparent);
 
 	--bc-radius-xs: 4px;
 	--bc-radius-sm: 6px;
@@ -304,6 +328,17 @@
 	--bc-shadow-panel: 0 12px 34px rgb(28 28 28 / 0.12);
 	--bc-shadow-modal: 0 24px 80px rgb(28 28 28 / 0.16);
 
+	/* Editorial surfaces shared by public desktop and the opt-in mobile About trial. */
+	--bc-editorial-canvas: #f6f6f7;
+	--bc-editorial-border: #e5e5e7;
+	--bc-editorial-border-strong: #c8c8cd;
+	--bc-editorial-muted: #66676b;
+	--bc-editorial-hover: #eeeef0;
+	--bc-editorial-radius: var(--bc-radius-modal);
+	--bc-editorial-photo-radius: var(--bc-radius-panel);
+	--bc-editorial-shadow: 0 1px 2px rgb(23 25 28 / 0.04), 0 8px 24px rgb(23 25 28 / 0.025);
+	--bc-editorial-hover-shadow: 0 2px 4px rgb(23 25 28 / 0.04), 0 10px 28px rgb(23 25 28 / 0.06);
+
 	--bc-motion-fast: 150ms ease;
 	--bc-motion-hover: 140ms ease;
 	--bc-motion-standard: 220ms ease;
@@ -311,14 +346,135 @@
 }
 
 @media (min-width: 768px) {
+	/* The public desktop theme also reaches public dialog portals. Mobile and
+	   the independently owned legacy/admin shells retain their existing values. */
+	.site-shell,
+	.site-dialog,
+	.desktop-home-filter__menu,
+	.site-nav-popover,
+	.site-language {
+		--bc-desktop-canvas: #fafbfc;
+		--bc-desktop-panel-surface: var(--bc-surface-raised);
+		--bc-desktop-control-surface: #f2f4f7;
+		--bc-desktop-hero-surface: #e5edf4;
+		/* Pointer hover changes the fill; selection and keyboard focus stay distinct. */
+		--bc-control-hover: color-mix(in srgb, var(--bc-ink) 5%, var(--bc-desktop-control-surface));
+		--bc-control-selected-surface: var(--bc-desktop-hero-surface);
+		--bc-control-selected-hover: color-mix(
+			in srgb,
+			var(--bc-ink) 5%,
+			var(--bc-control-selected-surface)
+		);
+		--bc-desktop-hero-ink: var(--bc-ink);
+		--bc-desktop-hero-copy: var(--bc-description-copy);
+		--bc-desktop-hero-hover: color-mix(in srgb, var(--bc-ink) 6%, var(--bc-desktop-hero-surface));
+		--bc-desktop-hero-quiet-surface: color-mix(
+			in srgb,
+			var(--bc-surface-raised) 20%,
+			var(--bc-desktop-hero-surface)
+		);
+		--bc-desktop-hero-quiet-hover: color-mix(
+			in srgb,
+			var(--bc-surface-raised) 40%,
+			var(--bc-desktop-hero-surface)
+		);
+		--bc-desktop-hero-quiet-border: color-mix(in srgb, var(--bc-ink) 30%, transparent);
+		--bc-desktop-control-radius: var(--bc-radius-lg);
+		--bc-bg: var(--bc-desktop-canvas);
+		--bc-bg-strong: var(--bc-desktop-canvas);
+		--bc-surface: var(--bc-desktop-control-surface);
+		--bc-surface-soft: var(--bc-desktop-panel-surface);
+		--bc-control: var(--bc-desktop-control-surface);
+		--bc-surface-hover: var(--bc-control-hover);
+		--bc-border: var(--bc-editorial-border);
+		--bc-border-strong: color-mix(
+			in srgb,
+			var(--bc-editorial-border-strong) 70%,
+			var(--bc-surface-raised)
+		);
+		--bc-copy: var(--bc-description-copy);
+		--bc-muted: var(--bc-description-copy);
+		--bc-card-bg: var(--bc-surface-raised);
+		--bc-shadow-subtle: var(--bc-editorial-shadow);
+		--bc-shadow-card: var(--bc-editorial-hover-shadow);
+		--bc-desktop-card-radius: var(--bc-editorial-radius);
+		--bc-desktop-media-radius: var(--bc-editorial-photo-radius);
+		--bc-desktop-card-heading: var(--bc-text-h5);
+		--desktop-discovery-radius: var(--bc-radius-panel);
+		--desktop-discovery-shadow: var(--bc-shadow-subtle);
+		--desktop-discovery-surface: var(--bc-desktop-panel-surface);
+		--desktop-discovery-ink: var(--bc-ink);
+		--desktop-discovery-copy: var(--bc-description-copy);
+		--desktop-discovery-border: var(--bc-editorial-border);
+	}
 	.site-shell {
 		--bc-text-meta: 0.875rem;
+		--bc-desktop-page-hero-height: 400px;
+		--bc-desktop-intake-hero-height: 240px;
+		--bc-desktop-search-height: 52px;
+		--bc-desktop-hero-title: clamp(2.5rem, 3.5vw, 3.25rem);
+		--bc-desktop-title-weight: var(--bc-weight-emphasis);
+		--bc-desktop-section-leading: 1.2;
+		--bc-desktop-hero-title-width: 32ch;
+		--bc-desktop-hero-padding-start: calc(var(--bc-space-8) + var(--bc-space-6));
+		--bc-desktop-hero-padding-end: var(--bc-space-6);
+		--bc-desktop-hero-gap: var(--bc-space-4);
+		--bc-desktop-section-title: var(--bc-desktop-editorial-title);
+		--bc-desktop-discovery-width: 880px;
+		--bc-desktop-service-search-width: 620px;
+		--bc-desktop-action-panel-width: var(--bc-desktop-editorial-action-width);
+		--bc-desktop-discovery-panel-height: 160px;
+		--bc-desktop-hero-panel-height: 228px;
+		--bc-desktop-card-title: 18px;
+		--bc-desktop-service-title: 22px;
+		--bc-desktop-card-price: 26px;
+		--bc-desktop-team-width: 1056px;
+		--bc-desktop-team-image-height: 220px;
+		/* About-compatible aliases for explicit framed desktop compositions. */
+		--bc-desktop-editorial-width: 1120px;
+		--bc-desktop-editorial-action-width: 560px;
+		--bc-desktop-editorial-canvas: var(--bc-desktop-canvas);
+		--bc-desktop-editorial-border: var(--bc-editorial-border);
+		--bc-desktop-editorial-muted: var(--bc-description-copy);
+		--bc-desktop-editorial-hover: var(--bc-editorial-hover);
+		--bc-desktop-editorial-radius: var(--bc-editorial-radius);
+		--bc-desktop-editorial-photo-radius: var(--bc-editorial-photo-radius);
+		--bc-desktop-editorial-portrait-height: 200px;
+		--bc-desktop-editorial-title: clamp(2rem, 2.5vw, 2.25rem);
+		--bc-desktop-editorial-shadow: var(--bc-editorial-shadow);
 	}
 }
 
-/* Desktop actions are larger, not heavier. Mobile keeps its established scale. */
+@media (min-width: 768px) and (max-width: 900px) {
+	.site-shell {
+		--bc-desktop-page-hero-height: 452px;
+		--bc-desktop-intake-hero-height: 260px;
+		--bc-desktop-hero-panel-height: 312px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	:root {
+		--bc-control-height-chip: var(--bc-control-height-standard);
+		--bc-mobile-control-surface-size: var(--bc-control-height-secondary);
+		--bc-mobile-control-hit-size: var(--bc-control-height-standard);
+		--bc-mobile-control-inset: calc(
+			(var(--bc-mobile-control-hit-size) - var(--bc-mobile-control-surface-size)) / 2
+		);
+		--bc-mobile-control-glyph-size: var(--bc-control-icon-size-secondary);
+		--bc-mobile-icon-action-surface-size: var(--bc-mobile-control-surface-size);
+		--bc-mobile-icon-action-glyph-size: var(--bc-mobile-control-glyph-size);
+		--bc-text-quick-pill: var(--bc-text-control);
+		--bc-text-search: var(--bc-text-entry);
+		--bc-text-cta: var(--bc-text-control);
+		--bc-control-placeholder: var(--bc-copy);
+	}
+}
+
+/* Desktop retains its existing utility-button and typography scale. */
 @media (min-width: 768px) {
 	:root {
+		--bc-mobile-icon-action-surface-size: var(--bc-control-height-secondary);
 		--bc-text-cta: 1.25rem;
 		--bc-text-mode-tab: 1.375rem;
 	}

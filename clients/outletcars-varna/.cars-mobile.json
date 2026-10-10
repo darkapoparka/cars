@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "format": "mobile-preview-v1",
+  "dealer": "outletcars-varna",
+  "name": "OUTLETCARS.BG — Варна",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+    "path": "templates/mobile",
+    "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d",
+    "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b"
+  },
+  "sourceDigest": "ad9bcc517f836d15e7a2519243038eb4e699730f1212db587742651e162d55aa",
+  "inventory": {
+    "mode": "dated-listing-snapshot",
+    "count": 8,
+    "observedAt": "2026-09-09T19:17:27.878450+00:00"
+  },
+  "personalization": {
+    "profileSha256": "73e5643f546e09fde69c5f994bce6b3108709b33b00b4963695ea3564601b003",
+    "logoPaths": [
+      "/dealer-brand/logo-on-light.webp",
+      "/dealer-brand/logo-on-dark.webp"
+    ],
+    "mediaPaths": [
+      "/dealer/inventory/21780566866553359-1.webp",
+      "/dealer/inventory/21780566866553359-2.webp",
+      "/dealer/inventory/21780566866553359-3.webp",
+      "/dealer/inventory/11780668057655036-1.webp",
+      "/dealer/inventory/11780668057655036-2.webp",
+      "/dealer/inventory/11780668057655036-3.webp",
+      "/dealer/inventory/11778766828983143-1.webp",
+      "/dealer/inventory/11778766828983143-2.webp",
+      "/dealer/inventory/11778766828983143-3.webp",
+      "/dealer/inventory/21779776692067869-1.webp",
+      "/dealer/inventory/21779776692067869-2.webp",
+      "/dealer/inventory/21779776692067869-3.webp",
+      "/dealer/inventory/11782296205813235-1.webp",
+      "/dealer/inventory/11782296205813235-2.webp",
+      "/dealer/inventory/11782296205813235-3.webp",
+      "/dealer/inventory/11782392995192464-1.webp",
+      "/dealer/inventory/11782392995192464-2.webp",
+      "/dealer/inventory/11782392995192464-3.webp",
+      "/dealer/inventory/21786715209008072-1.webp",
+      "/dealer/inventory/21786715209008072-2.webp",
+      "/dealer/inventory/21786715209008072-3.webp",
+      "/dealer/inventory/11785245019997658-1.webp",
+      "/dealer/inventory/11785245019997658-2.webp",
+      "/dealer/inventory/11785245019997658-3.webp"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "mobile/src/lib/showroom-config.ts",
+      "mobile/src/lib/catalog.ts",
+      "mobile/src/lib/dealers.ts",
+      "mobile/src/lib/dealer-inventory.json",
+      "mobile/src/lib/locale.ts",
+      "mobile/src/lib/search.ts",
+      "mobile/src/components/NativeDealerCards.tsx",
+      "mobile/src/components/DealerScreens.tsx",
+      "mobile/src/components/VehicleCard.tsx",
+      "mobile/src/components/ShowroomVehicleCard.tsx",
+      "mobile/src/components/VehicleSections.tsx"
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

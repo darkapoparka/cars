@@ -1,0 +1,25 @@
+{
+  "created": "2026-10-08T06:55:14.979Z",
+  "method": "OpenAI image_gen; transparent_background true",
+  "purpose": "Refined silver calculator and automotive key cutout for the mobile PDP finance trigger",
+  "source": {
+    "path": "C:/Users/radev/.codex/generated_images/01a1184a-6cd9-7552-a8f5-4d3cd8138e5b/exec-2ba70c37-8306-4100-bbb6-5fd808dc87c1.png",
+    "sha256": "5885136fd55538c0750dfe96c391d7b7e29c3f38ea108b7657fb00809aa89ac9",
+    "bytes": 1697294,
+    "width": 1254,
+    "height": 1254,
+    "hasAlpha": true
+  },
+  "delivery": {
+    "path": "static/assets/images/template/pdp-finance-calculator-key-v2.webp",
+    "sha256": "ad004af81519bb9ba9ddabe628c93ed2af9e2f58afa1421e77105728dc9ea1d4",
+    "bytes": 19756,
+    "width": 320,
+    "height": 320,
+    "hasAlpha": true
+  },
+  "conversion": "Resize the complete square canvas to 320px and encode alpha WebP. No cropping, recoloring or added graphics.",
+  "supersedes": "static/assets/images/template/pdp-finance-calculator-key-v1.webp; retained unchanged as source history",
+  "prompt": "Generate one premium automotive-finance product illustration for the right-hand 90 to 112 pixel artwork slot of a dark charcoal mobile website banner. This is an isolated asset, not a webpage or a banner with text. Create a refined satin-silver pocket calculator, with a slim brushed-aluminium body, softly rounded precise corners, dark graphite square tactile keys with rounded corners, and a wide blank glossy-black display. Pair it with a small elegant unbranded black automotive key fob with a restrained silver edge, lying beside and slightly in front of the calculator. The calculator is the dominant form; the key is a supporting automotive detail, not an oversized key ring. Compact balanced three-quarter studio product composition, realistic materials, crisp silhouette and controlled pale edge highlights for clear contrast on a #171a20 surface. Mostly neutral silver, graphite and black, with one very small muted burgundy calculator key. Sophisticated photographic realism, not a plush toy or chunky clay render. Fill about 85 percent of a square canvas with the complete two-object silhouette, preserve modest even transparent margins and just a tight natural contact shadow. No text, letters, digits, logos, money, coins, percentage signs, documents, extra props, floor, environment, backdrop, background panel, glow or UI. All empty pixels must be genuinely transparent. The image must remain immediately legible at 90 pixels.",
+  "status": "Local source candidate; no deployment or template promotion"
+}

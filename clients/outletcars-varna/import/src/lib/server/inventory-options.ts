@@ -1,4 +1,5 @@
 import { inventoryText } from '$lib/content/inventory-localized';
+import { desktopCopy } from '$lib/content/desktop-copy';
 import { dealerCopy } from '$lib/config/dealer-copy';
 import { daynightContact } from '$lib/data/daynight';
 import { site } from '$lib/config/site';
@@ -234,8 +235,7 @@ const text = (locale: Locale) =>
 					status: 'Статус',
 					transmission: 'Скорости'
 				},
-				inventorySubtitle:
-					'Разгледай наличните автомобили с ясни спецификации, цена и възможност за оглед.',
+				inventorySubtitle: desktopCopy.bg.inventoryCaption,
 				inventoryTitle: 'Налични автомобили',
 				fuel: 'Гориво',
 				gearbox: 'Скорости',
@@ -317,8 +317,7 @@ const text = (locale: Locale) =>
 					status: 'Status',
 					transmission: 'Transmission'
 				},
-				inventorySubtitle:
-					'Browse available vehicles with clear specifications, pricing, and viewing support.',
+				inventorySubtitle: desktopCopy.en.inventoryCaption,
 				inventoryTitle: 'Available vehicles',
 				fuel: 'Fuel',
 				gearbox: 'Gearbox',
@@ -484,7 +483,9 @@ const inventoryClearFiltersUrl = (state: InventoryState) => {
 	const defaultView = defaultInventoryViewForLayout(state.layout);
 
 	if (state.filterPresentation === 'modal') params.set('filters', 'modal');
-	if (state.layout === 'classic') params.set('layout', 'classic');
+	if (state.layout === 'dashboard') params.set('layout', 'dashboard');
+	const lang = state.searchParams.get('lang');
+	if (lang) params.set('lang', lang);
 	if (state.view !== defaultView) params.set('view', state.view);
 	if (state.sortParam !== 'best-match') params.set('sort', state.sortParam);
 

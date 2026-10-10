@@ -140,7 +140,11 @@
 			aria-label={menuLabel}
 			aria-haspopup="dialog"
 			aria-expanded={menuOpen}
-			onclick={() => (menuOpen = true)}
+			onclick={(event) => {
+				// WebKit does not focus buttons on pointer activation.
+				event.currentTarget.focus({ preventScroll: true });
+				menuOpen = true;
+			}}
 		>
 			<span class="mobile-bottom-nav__icon" aria-hidden="true">
 				<MobileNavIcon name="menu" />
@@ -174,6 +178,7 @@
 
 	@media (max-width: 767.98px) {
 		:global(body) {
+			--bc-mobile-nav-height: max(52px, calc(3rem + 4px));
 			padding-bottom: calc(var(--bc-mobile-nav-height) + env(safe-area-inset-bottom));
 		}
 		:global(body:has(.mobile-bottom-nav[data-footer-visible='true'])) {
@@ -207,7 +212,7 @@
 		.mobile-bottom-nav__inner {
 			display: grid;
 			width: 100%;
-			height: var(--bc-mobile-nav-height);
+			height: 100%;
 			max-width: var(--bc-mobile-content-max);
 			grid-template-columns: repeat(5, minmax(0, 1fr));
 			margin: 0 auto;
@@ -223,12 +228,12 @@
 			align-items: center;
 			justify-content: center;
 			flex-direction: column;
-			gap: 3px;
+			gap: 2px;
 			border: 0;
 			border-radius: 0;
 			background: transparent;
 			appearance: none;
-			color: var(--bc-copy);
+			color: var(--bc-muted);
 			cursor: pointer;
 			padding: 0;
 			text-align: center;
@@ -240,29 +245,46 @@
 
 		.mobile-bottom-nav__icon {
 			display: grid;
-			width: 44px;
-			height: 30px;
+			width: 24px;
+			height: 24px;
 			place-items: center;
-			border-radius: 10px;
 			color: inherit;
 			line-height: 0;
 		}
 
 		.mobile-bottom-nav__label {
+			display: block;
+			min-width: 0;
+			max-width: 100%;
+			overflow: hidden;
 			color: inherit;
 			font-size: 0.75rem;
 			font-weight: var(--bc-weight-body);
 			line-height: 1.3334;
+			text-overflow: ellipsis;
+			white-space: nowrap;
 		}
 
 		.mobile-bottom-nav a.active,
 		.mobile-bottom-nav__menu-trigger.active {
-			color: var(--bc-accent);
+			color: var(--bc-ink);
 		}
 
 		.mobile-bottom-nav a.active .mobile-bottom-nav__icon,
 		.mobile-bottom-nav__menu-trigger.active .mobile-bottom-nav__icon {
-			background: color-mix(in srgb, var(--bc-accent) 9%, var(--bc-white));
+			color: var(--bc-accent);
+		}
+		.mobile-bottom-nav a.active::before,
+		.mobile-bottom-nav__menu-trigger.active::before {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 24px;
+			height: 3px;
+			border-radius: 0 0 3px 3px;
+			background: var(--bc-accent);
+			content: '';
+			transform: translateX(-50%);
 		}
 
 		.mobile-bottom-nav a.active .mobile-bottom-nav__label,
@@ -278,6 +300,8 @@
 		}
 
 		.mobile-bottom-nav :global(svg) {
+			width: 22px;
+			height: 22px;
 			color: currentColor;
 		}
 
@@ -287,6 +311,8 @@
 
 		:global(.mobile-menu-sheet__panel .bc-mobile-sheet__body) {
 			display: grid;
+			grid-auto-rows: max-content;
+			align-content: start;
 			gap: var(--bc-space-3);
 			padding-bottom: var(--bc-space-2);
 		}

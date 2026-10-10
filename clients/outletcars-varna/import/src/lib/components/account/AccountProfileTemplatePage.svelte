@@ -1,8 +1,11 @@
 <script lang="ts">
+	import { page } from '$app/state';
+	import { routeParts } from '$lib/locale/core';
 	import type { AuxeroAccountProfileFormData } from '$lib/auxero/account-forms';
 	import type { AuxeroPageDocument } from '$lib/auxero/page-document';
 	import AuxeroDashboardSlotShell from '$lib/components/layout/AuxeroDashboardSlotShell.svelte';
 	import AccountProfileForm from './AccountProfileForm.svelte';
+	import MobileAccountProfileForm from './MobileAccountProfileForm.svelte';
 
 	let {
 		afterProfileHtml,
@@ -42,46 +45,42 @@
 	let profileHtmlWithStatus = $derived(
 		profileHtml ? withFormStatus(profileHtml, statusMessage) : ''
 	);
+	const accountProfile = $derived(routeParts(page.url.pathname).path === '/account/profile');
 </script>
 
-<AuxeroDashboardSlotShell
-	{pageDocument}
-	beforeHtml={beforeProfileHtml}
-	afterHtml={afterProfileHtml}
->
-	{#if profileHtmlWithStatus}
-		<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-		{@html profileHtmlWithStatus}
-	{:else}
-		<AccountProfileForm {profile} />
-	{/if}
-</AuxeroDashboardSlotShell>
+<div class="account-profile-page">
+	<AuxeroDashboardSlotShell
+		{pageDocument}
+		beforeHtml={beforeProfileHtml}
+		afterHtml={afterProfileHtml}
+	>
+		<div class:account-profile-desktop={accountProfile}>
+			{#if profileHtmlWithStatus}
+				<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+				{@html profileHtmlWithStatus}
+			{:else}
+				<AccountProfileForm {profile} />
+			{/if}
+		</div>
+		{#if accountProfile}<div class="account-profile-mobile">
+				<MobileAccountProfileForm {profile} english={page.data.locale === 'en'} />
+			</div>{/if}
+	</AuxeroDashboardSlotShell>
+</div>
 
 <style>
+	.account-profile-mobile {
+		display: none;
+	}
 	@media (max-width: 767.98px) {
-		:global(body.auxero-template-my-profile-html),
-		:global(body.auxero-template-my-profile-html #wrapper),
-		:global(body.auxero-template-my-profile-html .dashboard-container),
-		:global(body.auxero-template-my-profile-html .dashboard-content) {
-			background: var(--bc-bg) !important;
-			background-color: var(--bc-bg) !important;
+		.account-profile-desktop {
+			display: none;
 		}
-
-		:global(body.auxero-template-my-profile-html .dashboard-content--inner) {
-			padding: 18px 14px 92px !important;
+		.account-profile-mobile {
+			display: block;
 		}
-
-		:global(body.auxero-template-my-profile-html .dashboard-content--inner > .h3) {
-			margin-bottom: 18px !important;
-			font-size: 30px !important;
-			font-weight: 700 !important;
-			line-height: 36px !important;
-		}
-
-		:global(body.auxero-template-my-profile-html .upload-btn) {
-			min-height: var(--bc-control-height-compact) !important;
-			border-radius: var(--bc-radius-md) !important;
-			padding: 0 14px !important;
+		.account-profile-page :global(.account-mobile-shell .dashboard-content--inner) {
+			padding: var(--bc-space-4) var(--bc-mobile-gutter) var(--bc-space-6) !important;
 		}
 	}
 </style>

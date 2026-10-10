@@ -1,0 +1,27 @@
+{
+  "qa": "C:/Users/radev/.codex/tmp/cars-import-inventory-simplification-2026-10-05-qa",
+  "baseline": "C:/Users/radev/.codex/tmp/cars-import-search-types-2026-10-04-qa",
+  "baselineSourceDifferences": [
+    "src/lib/components/inventory/InventoryPage.svelte",
+    "src/lib/components/layout/PublicHeader.svelte"
+  ],
+  "node": "v24.21.0",
+  "lockfile": "aa596db7046c3f226ce50b488e283e30121eb49122d5006c60035ef57a952e1c",
+  "fileCount": 1768,
+  "sourceDigest": "89fe3d70eef255fb438da41411c41e72210b6ca72b242c0708ddb6ee83c5df20",
+  "taskSources": [
+    {
+      "path": "src/lib/components/inventory/InventoryPage.svelte",
+      "sha256": "02d93cbec474433cfc4c27e20c73d3d1cefba272d74249c9cf9caa2923bc85b5"
+    },
+    {
+      "path": "src/lib/components/layout/PublicHeader.svelte",
+      "sha256": "df676f38205e6b80ac1a1083bd5d4972a002ea1968efb005876b3e0a181a4dcc"
+    },
+    {
+      "path": "tests/desktop-search.e2e.ts",
+      "sha256": "8bf5a6cb39cd1d5fc86f434d1d21f3912c3ad1cf0888c41fb44534f76a0c3172"
+    }
+  ],
+  "revision": "Removed the unused linkHref import after ESLint identified it; final build uses these inputs."
+}

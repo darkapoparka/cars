@@ -1,27 +1,26 @@
 export const sellValuationCopy = {
 	en: {
-		sellTitle: 'Sell your car',
-		sellAction: 'Start a valuation',
-		sellNote: 'VIN or details · Photos optional',
-		howTitle: 'How it works',
+		processTitle: 'How selling works',
+		processDescription: 'From details to a decision.',
+		questions: 'Questions?',
+		callAction: 'Call us',
+		howTitle: 'Selling in 3 steps',
 		sellSteps: [
-			{ title: 'Tell us about your car', text: 'VIN or make, model, year and mileage.' },
-			{
-				title: 'Review it together',
-				text: 'We discuss its history, condition and your expectations.'
-			},
-			{ title: 'Choose how to sell', text: 'Agree on an offer or a plan to find a buyer.' }
+			{ title: 'Tell us about your car', text: 'VIN or car details.' },
+			{ title: 'Review it together', text: 'We review history and condition.' },
+			{ title: 'Choose how to sell', text: 'An offer or help finding a buyer.' }
 		]
 	},
 	bg: {
-		sellTitle: 'Продай колата си',
-		sellAction: 'Заяви оценка',
-		sellNote: 'VIN или данни · Снимки по желание',
-		howTitle: 'Как работи',
+		processTitle: 'Как става продажбата',
+		processDescription: 'От данните до решението.',
+		questions: 'Имаш въпроси?',
+		callAction: 'Обади се',
+		howTitle: 'Продажба в 3 стъпки',
 		sellSteps: [
-			{ title: 'Разкажи за автомобила', text: 'VIN или марка, модел, година и пробег.' },
-			{ title: 'Обсъдете го заедно', text: 'Уточняваме историята, състоянието и очакванията ти.' },
-			{ title: 'Избери как да продадеш', text: 'Уговаряме оферта или план да намерим купувач.' }
+			{ title: 'Разкажи за автомобила', text: 'VIN или данни за колата.' },
+			{ title: 'Обсъдете го заедно', text: 'Преглед на историята и състоянието.' },
+			{ title: 'Избери как да продадеш', text: 'Оферта или помощ с продажбата.' }
 		]
 	}
 } as const;

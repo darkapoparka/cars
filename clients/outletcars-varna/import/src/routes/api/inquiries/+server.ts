@@ -9,8 +9,9 @@ import { errorJson, okJson, payloadString, readApiPayload } from '$lib/server/ap
 import { requireDayNightApiAccess } from '$lib/server/api-auth';
 import { normalizeDayNightRole } from '$lib/server/roles';
 import type { ApiPayload } from '$lib/server/api';
-import { inquirySubmissionSchema as submissionSchema } from '$lib/domain/inquiry';
+import { inquirySubmissionSchema as submissionSchema } from '$lib/server/inquiry-validation';
 import { hasInquiryDatabase } from '$lib/server/inquiry-config';
+import { serviceRequestSchema, serviceRequestInquiry } from '$lib/domain/service-request';
 
 const contactName = (payload: ApiPayload) => {
 	const directName = payloadString(payload, 'name', 'SendInquiryname');
@@ -71,16 +72,24 @@ export async function GET({ request, url }: { request: Request; url: URL }) {
 
 export async function POST({ request }: { request: Request }) {
 	const payload = await readApiPayload(request);
-	const parsed = submissionSchema.safeParse({
-		agentSlug: payloadString(payload, 'agentSlug', 'assignedAgentSlug'),
-		email: payloadString(payload, 'email', 'SendInquiryemail'),
-		message: inquiryMessage(payload),
-		name: contactName(payload),
-		phone: payloadString(payload, 'phone', 'SendInquiryphone'),
-		routePath: payloadString(payload, 'routePath'),
-		source: payloadString(payload, 'source'),
-		vehicleSlug: payloadString(payload, 'vehicleSlug')
-	});
+	const serviceRequest =
+		payload.source === 'service-request' ? serviceRequestSchema.safeParse(payload) : undefined;
+	if (serviceRequest && !serviceRequest.success)
+		return errorJson('Check the selected service, vehicle details and contact fields.', 400);
+	const parsed = submissionSchema.safeParse(
+		serviceRequest?.success
+			? serviceRequestInquiry(serviceRequest.data)
+			: {
+					agentSlug: payloadString(payload, 'agentSlug', 'assignedAgentSlug'),
+					email: payloadString(payload, 'email', 'SendInquiryemail'),
+					message: inquiryMessage(payload),
+					name: contactName(payload),
+					phone: payloadString(payload, 'phone', 'SendInquiryphone'),
+					routePath: payloadString(payload, 'routePath'),
+					source: payloadString(payload, 'source'),
+					vehicleSlug: payloadString(payload, 'vehicleSlug')
+				}
+	);
 	if (!parsed.success)
 		return errorJson(
 			'Please provide your name and a valid email or phone. Keep the message under 5000 characters.',

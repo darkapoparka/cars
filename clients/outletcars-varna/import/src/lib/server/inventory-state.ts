@@ -1,4 +1,5 @@
-import { filterVehicles, sortVehicles } from '$lib/data/vehicles';
+import { filterVehicles, sortVehicles } from '$lib/domain/vehicle-search';
+import type { Vehicle } from '$lib/types/vehicle';
 import { listPublicVehicles } from './public-vehicles';
 import {
 	parseInventoryState,
@@ -9,11 +10,12 @@ export * from '$lib/domain/inventory-query';
 
 export const getInventoryState = (
 	templateFile: string,
-	options: InventoryStateOptions = {}
+	options: InventoryStateOptions = {},
+	source: readonly Vehicle[] = listPublicVehicles()
 ): InventoryState => {
 	const state = parseInventoryState(templateFile, options);
 	return {
 		...state,
-		selected: sortVehicles(filterVehicles(listPublicVehicles(), state.filters), state.sort)
+		selected: sortVehicles(filterVehicles(source, state.filters), state.sort)
 	};
 };
