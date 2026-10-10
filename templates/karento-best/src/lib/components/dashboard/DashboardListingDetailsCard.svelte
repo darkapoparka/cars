@@ -9,6 +9,8 @@
   import DemoActionButton from "#lib/components/DemoActionButton.svelte";
   import { dashboardFields } from "#lib/data/dashboard.ts";
   import DashboardFormField from "#lib/components/dashboard/DashboardFormField.svelte";
+  import { MediaQuery } from "svelte/reactivity";
+  const phone = new MediaQuery("(max-width: 767.98px)");
 </script>
 
 <div class="card shadow-none flex-fill">
@@ -101,9 +103,9 @@
           ><label class="lbl-checkbox text-md-medium neutral-500"
             ><input
               type="checkbox"
-              aria-label={locale.t(
-                "ui.dashboard-listing-details-card.preview-field",
-              )}
+              aria-label={phone.current
+                ? locale.text(feature)
+                : locale.t("ui.dashboard-listing-details-card.preview-field")}
             />{locale.text(feature)}</label
           ></div
         >{/each}

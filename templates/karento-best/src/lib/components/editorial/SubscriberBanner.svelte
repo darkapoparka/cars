@@ -23,7 +23,9 @@
         <DemoForm class="form-subscriber desktop-subscribe-controls" action="#">
           <input
             class="form-control desktop-type-body-small"
-            type="text"
+            type="email"
+            inputmode="email"
+            autocomplete="email"
             placeholder={locale.t("ui.subscriber-banner.your-email")}
             aria-label={locale.t("ui.subscriber-banner.your-email")}
           />

@@ -7,9 +7,52 @@
   import DemoForm from "#lib/components/DemoForm.svelte";
   import { MediaQuery } from "svelte/reactivity";
   import DesktopRegistration from "#lib/components/account/DesktopRegistration.svelte";
+  import type { Attachment } from "svelte/attachments";
   const desktop = new MediaQuery("(min-width: 992px)");
   const phone = new MediaQuery("(max-width: 767.98px)");
+  let password = "";
+  let confirmation = "";
+  let confirmationInput: HTMLInputElement | undefined;
+  function validatePasswords() {
+    confirmationInput?.setCustomValidity(
+      phone.current && confirmation && confirmation !== password
+        ? locale.t("account.passwordMatch")
+        : "",
+    );
+  }
+  const ownConfirmation: Attachment<HTMLInputElement> = (node) => {
+    confirmationInput = node;
+    $effect(() => {
+      // Keep native validation current after locale or breakpoint changes.
+      void locale.locale;
+      validatePasswords();
+    });
+    return () => {
+      if (confirmationInput === node) confirmationInput = undefined;
+    };
+  };
 </script>
+
+{#snippet registrationAction()}
+  {locale.t("ui.demo-registration.sign-up")}
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path
+      d="M8 15L15 8L8 1M15 8L1 8"
+      stroke=""
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    ></path>
+  </svg>
+{/snippet}
 
 {#if desktop.current}
   <DesktopRegistration />
@@ -39,6 +82,7 @@
                   autocomplete="name"
                   placeholder={locale.t("ui.desktop-registration.your-name")}
                   aria-label={locale.t("ui.desktop-registration.name")}
+                  required={phone.current}
                 />
               </div>
               <div class="form-group">
@@ -51,6 +95,7 @@
                     "ui.desktop-registration.email-address",
                   )}
                   aria-label={locale.t("ui.desktop-registration.email-address")}
+                  required={phone.current}
                 />
               </div>
               <div class="form-group">
@@ -61,6 +106,12 @@
                   autocomplete="new-password"
                   placeholder={locale.t("ui.desktop-registration.password")}
                   aria-label={locale.t("ui.desktop-registration.password")}
+                  minlength={phone.current ? 8 : undefined}
+                  required={phone.current}
+                  oninput={(event) => {
+                    password = event.currentTarget.value;
+                    validatePasswords();
+                  }}
                 />
               </div>
               <div class="form-group">
@@ -75,6 +126,13 @@
                   aria-label={locale.t(
                     "ui.desktop-registration.confirm-password",
                   )}
+                  minlength={phone.current ? 8 : undefined}
+                  required={phone.current}
+                  {@attach ownConfirmation}
+                  oninput={(event) => {
+                    confirmation = event.currentTarget.value;
+                    validatePasswords();
+                  }}
                 />
               </div>
               <div class="form-group my-3">
@@ -82,35 +140,32 @@
                   <label
                     class="remeber-me d-flex align-items-center neutral-500"
                   >
-                    <input class="cb-remember" type="checkbox" />
+                    <input
+                      class="cb-remember"
+                      type="checkbox"
+                      name="terms"
+                      required={phone.current}
+                    />
                     {locale.t("account.agreeTerms")}
                   </label>
                 </div>
               </div>
               <div class="form-group mb-30">
-                <DemoActionLink
-                  class="btn btn-primary w-100 desktop-type-control"
-                  href="#!"
-                  aria-label={locale.t("ui.demo-registration.sign-up")}
-                  >{locale.t("ui.demo-registration.sign-up")}
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                    focusable="false"
+                {#if phone.current}
+                  <button
+                    class="btn btn-primary w-100 desktop-type-control"
+                    type="submit"
+                    aria-label={locale.t("ui.demo-registration.sign-up")}
+                    >{@render registrationAction()}</button
                   >
-                    <path
-                      d="M8 15L15 8L8 1M15 8L1 8"
-                      stroke=""
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                </DemoActionLink>
+                {:else}
+                  <DemoActionLink
+                    class="btn btn-primary w-100 desktop-type-control"
+                    href="#!"
+                    aria-label={locale.t("ui.demo-registration.sign-up")}
+                    >{@render registrationAction()}</DemoActionLink
+                  >
+                {/if}
               </div>
               <p
                 class="text-md-medium neutral-500 text-center desktop-type-body"

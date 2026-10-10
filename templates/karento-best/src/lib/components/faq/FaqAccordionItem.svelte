@@ -1,8 +1,10 @@
 <svelte:options preserveWhitespace={true} runes={true} />
 
 <script lang="ts">
+  import { MediaQuery } from "svelte/reactivity";
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   const locale = useLocale();
+  const phone = new MediaQuery("(max-width: 767.98px)");
   import type { FaqCardAppearance, FaqItemContent } from "#lib/data/faq.ts";
   let {
     item,
@@ -76,7 +78,10 @@
           { collapsed },
         ]}
         aria-expanded={open}
-        {onclick}
+        onclick={(event) => {
+          if (phone.current) event.preventDefault();
+          onclick();
+        }}
       >
         <p class="text-lg-bold neutral-1000 pe-4 desktop-type-compact-card"
           >{locale.text(item.question)}{#if item.continuation}<br

@@ -9,6 +9,20 @@
   import DashboardDropdown from "#lib/components/dashboard/DashboardDropdown.svelte";
   import { dashboardBookingRows } from "#lib/data/dashboard.ts";
   import DashboardBookingTable from "#lib/components/dashboard/DashboardBookingTable.svelte";
+  import { MediaQuery } from "svelte/reactivity";
+  import type { CatalogText } from "#lib/i18n/text.ts";
+  import { recentDashboardItems } from "#lib/data/dashboard-mobile.ts";
+  const phone = new MediaQuery("(max-width: 767.98px)");
+  let selection = $state<CatalogText>();
+  const rows = $derived(
+    phone.current
+      ? recentDashboardItems(
+          dashboardBookingRows.earningTransactions,
+          selection,
+          (item) => Date.parse(item.date),
+        )
+      : dashboardBookingRows.earningTransactions,
+  );
 </script>
 
 <div class="card shadow-none flex-fill">
@@ -20,10 +34,16 @@
 
       <DashboardDropdown
         config={dashboardDropdowns.earningTransactionsPeriod}
+        bind:selection
       />
     </div>
   </div>
   <div class="card-body">
+    {#if phone.current}<span
+        class="visually-hidden"
+        aria-live="polite"
+        aria-atomic="true">{locale.count(rows.length, "results")}</span
+      >{/if}
     <p class="neutral-500"
       >{locale.t(
         "reference.ancillary.DashboardEarningTransactionsCard.updated-every-several-minutes",
@@ -31,7 +51,7 @@
     >
 
     <div class="table-responsive">
-      <DashboardBookingTable rows={dashboardBookingRows.earningTransactions} />
+      <DashboardBookingTable {rows} />
     </div>
     <ListingPagination />
   </div>

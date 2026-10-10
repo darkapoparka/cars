@@ -18,8 +18,18 @@
   ><CalculatorHero />
   <LoanCalculatorLayout />
   {#if !desktop.current}
-    <RentalSavingsBanner />
+    <div class="calculator-reference-offer">
+      <RentalSavingsBanner />
+    </div>
     <AboutFaqColumns />
   {/if}
   <Footer /></main
 >
+
+<style>
+  @media (max-width: 767.98px) {
+    .calculator-reference-offer {
+      display: none;
+    }
+  }
+</style>

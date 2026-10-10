@@ -35,7 +35,7 @@
               data-bs-toggle="collapse"
               data-bs-target="#collapseOverview"
               aria-controls="collapseOverview"
-              aria-label={locale.t("ui.import-source-profile.view-details")}
+              aria-label={locale.t("ui.import-source-profile.overview")}
               class={"btn btn-collapse" + (panelOpen0 ? "" : " collapsed")}
               aria-expanded={panelOpen0}
               onclick={() =>
@@ -128,7 +128,7 @@
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseHighlight"
                 aria-controls="collapseHighlight"
-                aria-label={locale.t("ui.import-source-profile.view-details")}
+                aria-label={locale.t("ui.import-source-profile.services")}
                 class={"btn btn-collapse" + (panelOpen1 ? "" : " collapsed")}
                 aria-expanded={panelOpen1}
                 onclick={() =>

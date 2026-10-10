@@ -2,7 +2,6 @@
 
 <script lang="ts">
   import { stockFaqAnswer } from "#lib/i18n/dealer.ts";
-  import DemoActionLink from "#lib/components/DemoActionLink.svelte";
   import FaqAccordion from "#lib/components/faq/FaqAccordion.svelte";
   import { referenceNumberedFaqItems } from "#lib/data/faq.ts";
   import { dealer } from "#lib/content.ts";
@@ -49,9 +48,9 @@
       <div class="row">
         <div class="col-12 mt-4">
           <div class="d-flex justify-content-center gap-2">
-            <DemoActionLink
+            <a
               class="btn btn-primary mt-2 desktop-type-control"
-              href="#!"
+              href={locale.href("/contact")}
               aria-label={locale.t("ui.home-faq.contact-us")}
             >
               {locale.t("ui.home-faq.contact-us")}
@@ -72,10 +71,10 @@
                   stroke-linejoin="round"
                 ></path>
               </svg>
-            </DemoActionLink>
-            <DemoActionLink
+            </a>
+            <a
               class="btn btn-primary bg-transparent mt-2 invert desktop-type-control"
-              href="#!"
+              href={locale.href("/faq")}
               aria-label={locale.t("ui.home-faq.help-center")}
             >
               {locale.t("ui.home-faq.help-center")}
@@ -96,7 +95,7 @@
                   stroke-linejoin="round"
                 ></path>
               </svg>
-            </DemoActionLink>
+            </a>
           </div>
         </div>
       </div>

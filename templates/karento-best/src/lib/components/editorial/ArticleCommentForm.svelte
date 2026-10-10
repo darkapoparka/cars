@@ -26,7 +26,9 @@
         <div class="form-group">
           <input
             class="form-control desktop-type-body-small"
-            type="text"
+            type="email"
+            inputmode="email"
+            autocomplete="email"
             placeholder={locale.t("ui.article-comment-form.email-address")}
             aria-label={locale.t("ui.article-comment-form.email-address")}
           />

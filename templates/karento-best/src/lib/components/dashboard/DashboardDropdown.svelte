@@ -6,9 +6,11 @@
   import type { CatalogText } from "#lib/i18n/text.ts";
   import type { DashboardDropdownConfig } from "#lib/data/dashboard.ts";
   import { dropdownNavigation } from "#lib/attachments.svelte.ts";
-  let { config }: { config: DashboardDropdownConfig } = $props();
+  let {
+    config,
+    selection = $bindable<CatalogText>(),
+  }: { config: DashboardDropdownConfig; selection?: CatalogText } = $props();
   let open = $state(false);
-  let selection = $state<CatalogText>();
   const label = $derived(locale.text(selection ?? config.initial));
 </script>
 

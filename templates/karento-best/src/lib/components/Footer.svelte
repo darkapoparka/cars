@@ -136,7 +136,9 @@
               >
                 <input
                   class="form-control desktop-type-body-small"
-                  type="text"
+                  type="email"
+                  inputmode="email"
+                  autocomplete="email"
                   placeholder={locale.t("ui.footer.enter-your-email")}
                   aria-label={locale.t("ui.footer.enter-your-email")}
                 />

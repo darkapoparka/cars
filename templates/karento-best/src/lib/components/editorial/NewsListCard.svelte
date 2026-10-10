@@ -4,12 +4,15 @@
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   const locale = useLocale();
   import DemoActionLink from "#lib/components/DemoActionLink.svelte";
+  import MobilePill from "#lib/components/mobile/MobilePill.svelte";
+  import { MediaQuery } from "svelte/reactivity";
   import {
     referenceEditorialMetadata,
     type NewsListItem,
   } from "#lib/data/editorial.ts";
 
   let { item }: { item: NewsListItem } = $props();
+  const phone = new MediaQuery("(max-width: 767.98px)");
 </script>
 
 <div class="card-flight card-news background-card news-list-card desktop-card">
@@ -21,12 +24,18 @@
     >
   </div>
   <div class="card-info">
-    <DemoActionLink
-      class={[item.categoryClass, "desktop-type-badge"]}
-      href="#!"
-      aria-label={locale.text(item.categoryLabel)}
-      >{locale.text(item.categoryLabel)}</DemoActionLink
-    >
+    {#if phone.current}
+      <a class="news-list-category" href={locale.href("/news")}
+        >{locale.text(item.categoryLabel)}</a
+      >
+    {:else}
+      <DemoActionLink
+        class={[item.categoryClass, "desktop-type-badge"]}
+        href="#!"
+        aria-label={locale.text(item.categoryLabel)}
+        >{locale.text(item.categoryLabel)}</DemoActionLink
+      >
+    {/if}
     <div class="card-title"
       ><a
         class="heading-6 neutral-1000 d-block desktop-type-card"
@@ -50,20 +59,121 @@
     </div>
     <div class="card-program">
       <div class="endtime">
-        <div class="card-button"
-          ><a
-            class="btn btn-gray desktop-type-pill desktop-card-action"
-            href={locale.href("/news/article")}
-            aria-label={locale.t("ui.news-list-card.keep-reading")}
-            >{locale.t("ui.news-list-card.keep-reading")}</a
-          ></div
-        >
+        <div class="card-button">
+          {#if phone.current}
+            <MobilePill
+              label={locale.t("ui.news-list-card.keep-reading")}
+              href="/news/article"
+              variant="secondary"
+            />
+          {:else}
+            <a
+              class="btn btn-gray desktop-type-pill desktop-card-action"
+              href={locale.href("/news/article")}
+              aria-label={locale.t("ui.news-list-card.keep-reading")}
+              >{locale.t("ui.news-list-card.keep-reading")}</a
+            >
+          {/if}
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <style>
+  @media (max-width: 767.98px) {
+    .news-list-card.card-news {
+      display: block;
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+      margin-bottom: var(--karento-space-6);
+      border-radius: var(--karento-radius-card);
+    }
+    .news-list-card.card-news .card-image {
+      width: 100%;
+      max-width: none;
+      height: auto;
+    }
+    .news-list-card.card-news .card-image a {
+      display: block;
+    }
+    .news-list-card.card-news .card-image img {
+      display: block;
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+      height: auto;
+      min-height: 0;
+      max-height: none;
+    }
+    .news-list-card.card-news .card-info {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: var(--karento-space-2);
+      width: 100%;
+      min-width: 0;
+      height: auto;
+      min-height: 0;
+      margin: calc(-1 * var(--karento-space-6)) 0 0;
+      padding: var(--karento-space-4);
+      border-radius: var(--karento-radius-card);
+    }
+    .news-list-category {
+      position: relative;
+      display: inline-flex;
+      align-self: flex-start;
+      color: var(--bs-neutral-600);
+      font-size: var(--karento-type-meta-size);
+      font-weight: var(--karento-type-eyebrow-weight);
+      line-height: var(--karento-type-meta-leading);
+      text-decoration: none;
+    }
+    .news-list-category::before {
+      content: "";
+      position: absolute;
+      inset-inline: 0;
+      bottom: calc(-1 * var(--karento-space-2));
+      height: max(100%, var(--karento-touch-target));
+    }
+    .news-list-category:hover,
+    .news-list-category:focus-visible {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .news-list-category:focus-visible {
+      outline: 2px solid var(--karento-accent);
+      outline-offset: 2px;
+    }
+    .news-list-card.card-news .card-title,
+    .news-list-card.card-news .card-meta,
+    .news-list-card.card-news .card-desc,
+    .news-list-card.card-news .card-desc p {
+      margin: 0;
+    }
+    .news-list-card.card-news .card-title a {
+      font-size: var(--karento-type-compact-card-size);
+      font-weight: var(--karento-type-compact-card-weight);
+      line-height: var(--karento-type-compact-card-leading);
+    }
+    .news-list-card.card-news .card-meta {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: var(--karento-space-1) var(--karento-space-3);
+    }
+    .news-list-card.card-news .card-meta span {
+      padding-inline-end: 0;
+      font-size: var(--karento-type-meta-size);
+      font-weight: var(--karento-type-meta-weight);
+      line-height: var(--karento-type-meta-leading);
+    }
+    .news-list-card.card-news .card-desc p {
+      font-size: var(--karento-type-body-size);
+      font-weight: var(--karento-type-body-weight);
+      line-height: var(--karento-type-body-leading);
+    }
+  }
   @media (min-width: 992px) {
     .news-list-card.card-news {
       display: grid;

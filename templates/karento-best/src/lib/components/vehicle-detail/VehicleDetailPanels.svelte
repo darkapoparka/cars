@@ -52,7 +52,11 @@
   >
   <DetailAccordion
     id="collapseItinerary"
-    title={product ? "About this item" : "Included in the price"}
+    title={mobile.current
+      ? locale.t(product ? "product.aboutItem" : "vehicle.includedPrice")
+      : product
+        ? "About this item"
+        : "Included in the price"}
     mobileOpen={false}
     ><DetailIncludedFeatures
       items={content.includedFeatures}

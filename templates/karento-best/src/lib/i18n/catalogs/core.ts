@@ -1,5 +1,9 @@
 /** Literal core EN/BG pair used by the native release catalog audit. */
 export const coreEn = {
+  "contact.polish.locationEnquiry": "Enquire about {location}",
+  "contact.polish.directions": "Directions to {location}",
+  "contact.polish.call": "Call {phone}",
+  "contact.polish.email": "Email {email}",
   "dealer.stock.illustrativeCount": "{count} illustrative vehicles",
   "dealer.stock.illustrativeNotice":
     "These vehicles illustrate the website. They are not verified dealer stock. Contact the dealer for current inventory.",
@@ -16,6 +20,14 @@ export const coreEn = {
   "gallery.previousPhoto": "Previous photo",
   "gallery.nextPhoto": "Next photo",
   "gallery.openViewer": "Open photo viewer",
+  "action.openNamed": "Open {name}",
+  "quantity.decrease": "Decrease quantity",
+  "quantity.increase": "Increase quantity",
+  "gallery.photo": "Photo",
+  "gallery.navigation": "Photo navigation",
+  "gallery.photoPosition": "Photo {number} of {count}",
+  "product.aboutItem": "About this item",
+  "vehicle.includedPrice": "Included in the price",
   "vehicle.field.mileage": "Mileage",
   "vehicle.field.fuel": "Fuel",
   "vehicle.field.transmission": "Transmission",
@@ -224,6 +236,10 @@ export const coreEn = {
 } as const;
 
 export const coreBg = {
+  "contact.polish.locationEnquiry": "Запитване за {location}",
+  "contact.polish.directions": "Упътвания до {location}",
+  "contact.polish.call": "Обадете се на {phone}",
+  "contact.polish.email": "Пишете на {email}",
   "dealer.stock.illustrativeCount": "{count} примерни автомобила",
   "dealer.stock.illustrativeNotice":
     "Тези автомобили показват възможностите на сайта и не са потвърдена наличност на автокъщата. Свържете се с нея за актуални предложения.",
@@ -240,6 +256,14 @@ export const coreBg = {
   "gallery.previousPhoto": "Предишна снимка",
   "gallery.nextPhoto": "Следваща снимка",
   "gallery.openViewer": "Отвори снимките",
+  "action.openNamed": "Отвори {name}",
+  "quantity.decrease": "Намали количеството",
+  "quantity.increase": "Увеличи количеството",
+  "gallery.photo": "Снимка",
+  "gallery.navigation": "Преглед на снимките",
+  "gallery.photoPosition": "Снимка {number} от {count}",
+  "product.aboutItem": "За този продукт",
+  "vehicle.includedPrice": "Включено в цената",
   "vehicle.field.mileage": "Пробег",
   "vehicle.field.fuel": "Гориво",
   "vehicle.field.transmission": "Скоростна кутия",

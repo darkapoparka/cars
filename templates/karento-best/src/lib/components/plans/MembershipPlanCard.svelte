@@ -11,6 +11,7 @@
   let { item, annualPrice }: { item: MembershipPlan; annualPrice: boolean } =
     $props();
   const desktop = new MediaQuery("(min-width: 992px)");
+  const phone = new MediaQuery("(max-width: 767.98px)");
 </script>
 
 <div class="col-lg-3 col-sm-6 mb-lg-0 mb-4 membership-plan-column">
@@ -34,7 +35,7 @@
       >
     </div>
     <p class="text-sm-medium neutral-1000 desktop-type-body-small"
-      >{desktop.current
+      >{desktop.current || phone.current
         ? locale.text(item.desktopDescription)
         : locale.t(
             "ui.membership-plan-card.for-most-businesses-that-want-to-optimize-web-queries",

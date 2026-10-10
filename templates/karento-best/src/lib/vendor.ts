@@ -125,28 +125,116 @@ export const scrollbar: Attachment<HTMLElement> = (node) => {
     scope.onCleanup(() => instance.destroy());
   });
 };
-export const chart: Attachment<HTMLElement> = (node) => {
-  return own(node, async (scope) => {
-    await loadScript("/assets/js/plugins/apexcharts.min.js");
-    if (!scope.active) return;
-    const Constructor = (window as VendorWindow).ApexCharts;
-    const options = charts[("#" + node.id) as keyof typeof charts];
-    if (!Constructor || !options) return;
-    const renderedOptions = structuredClone(options);
-    // The chart's auto-sized parent also contains the chart. Observing its
-    // height creates a resize feedback loop; window resizing still redraws it.
-    Object.assign(renderedOptions.chart, { redrawOnParentResize: false });
-    if (node.id === "chart-2") {
-      const radial = renderedOptions as (typeof charts)["#chart-2"];
-      Object.assign(radial.plotOptions.radialBar.dataLabels.total, {
-        formatter: () => radial.series.reduce((sum, value) => sum + value, 0),
-      });
-    }
-    const instance = new Constructor(node, renderedOptions);
-    scope.onCleanup(() => instance.destroy());
-    await instance.render();
-  });
-};
+export function chartForPeriod(recent: boolean): Attachment<HTMLElement> {
+  return (node) =>
+    own(node, async (scope) => {
+      await loadScript("/assets/js/plugins/apexcharts.min.js");
+      if (!scope.active) return;
+      const Constructor = (window as VendorWindow).ApexCharts;
+      const options = charts[("#" + node.id) as keyof typeof charts];
+      if (!Constructor || !options) return;
+      const renderedOptions = structuredClone(options);
+      if (recent && window.matchMedia("(max-width: 767.98px)").matches) {
+        if (node.id === "chart") {
+          const bookings = renderedOptions as (typeof charts)["#chart"];
+          const first = Math.floor(bookings.labels.length / 2);
+          bookings.labels = bookings.labels.slice(first);
+          bookings.series = bookings.series.map((series) => ({
+            ...series,
+            data: series.data.slice(first),
+          }));
+        } else if (node.id === "chart-3") {
+          const earnings = renderedOptions as (typeof charts)["#chart-3"];
+          const first = Math.floor(earnings.xaxis.categories.length / 2);
+          earnings.xaxis.categories = earnings.xaxis.categories.slice(first);
+          earnings.series = earnings.series.map((series) => ({
+            ...series,
+            data: series.data.slice(first),
+          }));
+        }
+      }
+      // The chart's auto-sized parent also contains the chart. Observing its
+      // height creates a resize feedback loop; window resizing still redraws it.
+      Object.assign(renderedOptions.chart, { redrawOnParentResize: false });
+      if (node.id === "chart" || node.id === "chart-3") {
+        const cartesian = renderedOptions as
+          | (typeof charts)["#chart"]
+          | (typeof charts)["#chart-3"];
+        Object.assign(renderedOptions, {
+          responsive: [
+            {
+              breakpoint: 767.98,
+              options: {
+                // The enclosing panel already names this chart on phones.
+                title: { text: "", offsetX: 0 },
+                chart: { toolbar: { show: false } },
+                ...(node.id === "chart-3"
+                  ? { grid: { padding: { left: 28, right: 10 } } }
+                  : {}),
+                dataLabels: { enabled: false },
+                legend: {
+                  offsetX: 0,
+                  fontSize: "12px",
+                  itemMargin: { horizontal: 8, vertical: 4 },
+                },
+                xaxis: {
+                  tickAmount: node.id === "chart-3" ? 1 : 3,
+                  labels: {
+                    rotate: 0,
+                    hideOverlappingLabels: true,
+                    trim: false,
+                    style: { fontSize: "11px" },
+                  },
+                },
+                yaxis: cartesian.yaxis.map((axis) => ({
+                  ...axis,
+                  tickAmount: 3,
+                  decimalsInFloat: 1,
+                  title: { ...axis.title, text: "" },
+                  labels: {
+                    ...("labels" in axis ? axis.labels : {}),
+                    // Reserve the same inset in the plot and its left axis.
+                    ...(node.id === "chart-3" &&
+                    !("opposite" in axis && axis.opposite)
+                      ? { offsetX: 16 }
+                      : {}),
+                    minWidth: 0,
+                    maxWidth: 28,
+                    style: {
+                      ...("labels" in axis ? axis.labels.style : {}),
+                      fontSize: "11px",
+                    },
+                  },
+                })),
+                tooltip: {
+                  fixed: { enabled: false },
+                  y: {
+                    title: {
+                      formatter: (name: string) =>
+                        cartesian.yaxis.find(
+                          (axis) =>
+                            "seriesName" in axis && axis.seriesName === name,
+                        )?.title.text ?? name,
+                    },
+                  },
+                },
+              },
+            },
+          ],
+        });
+      }
+      if (node.id === "chart-2") {
+        const radial = renderedOptions as (typeof charts)["#chart-2"];
+        Object.assign(radial.plotOptions.radialBar.dataLabels.total, {
+          formatter: () => radial.series.reduce((sum, value) => sum + value, 0),
+        });
+      }
+      const instance = new Constructor(node, renderedOptions);
+      scope.onCleanup(() => instance.destroy());
+      await instance.render();
+    });
+}
+export const chart: Attachment<HTMLElement> = chartForPeriod(false);
 interface RangeApi {
   on(event: string, callback: (values: string[]) => void): void;
   destroy(): void;

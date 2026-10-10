@@ -4,6 +4,8 @@
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   const locale = useLocale();
   import DemoActionLink from "#lib/components/DemoActionLink.svelte";
+  import { MediaQuery } from "svelte/reactivity";
+  const phone = new MediaQuery("(max-width: 767.98px)");
 </script>
 
 <div class="card shadow-none flex-fill">
@@ -18,7 +20,15 @@
         "ui.dashboard-add-amount-card.add-funds-to-your-account-ready-for-any-transaction",
       )}</p
     >
-    <input type="text" class="form-control" placeholder="$" aria-label="$" />
+    <input
+      type="text"
+      class="form-control"
+      placeholder="$"
+      inputmode={phone.current ? "decimal" : undefined}
+      aria-label={phone.current
+        ? locale.t("ui.dashboard-transactions-card.amount")
+        : "$"}
+    />
 
     <div class="mt-3">
       <div class="credit-card-details">
@@ -38,11 +48,13 @@
                     ><i class="fi fi-rr-user"></i></span
                   >
                   <input
-                    type="email"
+                    type={phone.current ? "text" : "email"}
                     class="form-control"
                     placeholder={locale.t("reference.controls.nameOnCard")}
                     id="field-0c8b68bb-0"
-                    aria-label={locale.t("reference.controls.nameOnCard")}
+                    aria-label={phone.current
+                      ? undefined
+                      : locale.t("reference.controls.nameOnCard")}
                   />
                 </div>
               </div>
@@ -59,11 +71,12 @@
                     ><i class="fi fi-rr-credit-card"></i></span
                   >
                   <input
-                    type="email"
+                    type={phone.current ? "text" : "email"}
+                    inputmode={phone.current ? "numeric" : undefined}
                     class="form-control"
                     placeholder="*** *** *** ***"
                     id="field-0c8b68bb-1"
-                    aria-label="*** *** *** ***"
+                    aria-label={phone.current ? undefined : "*** *** *** ***"}
                   />
                 </div>
               </div>
@@ -80,15 +93,18 @@
                     ><i class="fi fi-rr-calendar-lines"></i></span
                   >
                   <input
-                    type="email"
+                    type={phone.current ? "text" : "email"}
+                    inputmode={phone.current ? "numeric" : undefined}
                     class="form-control"
                     placeholder={locale.t(
                       "reference.ancillary.DashboardAddAmountCard.mm-yyyy",
                     )}
                     id="field-0c8b68bb-2"
-                    aria-label={locale.t(
-                      "reference.ancillary.DashboardAddAmountCard.mm-yyyy",
-                    )}
+                    aria-label={phone.current
+                      ? undefined
+                      : locale.t(
+                          "reference.ancillary.DashboardAddAmountCard.mm-yyyy",
+                        )}
                   />
                 </div>
               </div>
@@ -104,11 +120,12 @@
                     ><i class="fi fi-rr-qr-scan"></i></span
                   >
                   <input
-                    type="email"
+                    type={phone.current ? "text" : "email"}
+                    inputmode={phone.current ? "numeric" : undefined}
                     class="form-control"
                     placeholder="***"
                     id="field-0c8b68bb-3"
-                    aria-label="***"
+                    aria-label={phone.current ? undefined : "***"}
                   />
                 </div>
               </div>

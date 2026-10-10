@@ -3,6 +3,9 @@
 <script lang="ts">
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   const locale = useLocale();
+  import { MediaQuery } from "svelte/reactivity";
+  import type { Attachment } from "svelte/attachments";
+  const phone = new MediaQuery("(max-width: 767.98px)");
   import {
     dashboardAudiences,
     type DashboardAudience,
@@ -12,6 +15,28 @@
     activeHref,
   }: { audience: DashboardAudience; activeHref: string } = $props();
   const profile = $derived(dashboardAudiences[audience]);
+  const revealCurrent: Attachment<HTMLUListElement> = (node) => {
+    const reveal = () => {
+      if (!phone.current) return;
+      const current = node.querySelector<HTMLElement>('[aria-current="page"]');
+      if (!current) return;
+      const rail = node.getBoundingClientRect();
+      const item = current.getBoundingClientRect();
+      if (item.left < rail.left) node.scrollLeft += item.left - rail.left;
+      else if (item.right > rail.right)
+        node.scrollLeft += item.right - rail.right;
+    };
+    const observer = new ResizeObserver(reveal);
+    observer.observe(node);
+    $effect(() => {
+      void activeHref;
+      void locale.locale;
+      if (!phone.current) return;
+      const frame = requestAnimationFrame(reveal);
+      return () => cancelAnimationFrame(frame);
+    });
+    return () => observer.disconnect();
+  };
 </script>
 
 <div class="card user-sidebar mb-4">
@@ -54,9 +79,12 @@
           ><div class="d-flex align-items-center justify-content-center"
             ><a
               href={locale.href(profile.settingsHref)}
-              class="p-1 rounded-circle align-items-center justify-content-center btn-edit"
-              aria-label={locale.t("ui.dashboard-sidebar.view-details")}
-              ><i class="fi fi-rr-pencil fs-7"></i></a
+              class="p-1 rounded-circle align-items-center justify-content-center btn-edit dashboard-profile-edit"
+              aria-label={locale.t(
+                phone.current
+                  ? "account.settings"
+                  : "ui.dashboard-sidebar.view-details",
+              )}><i class="fi fi-rr-pencil fs-7"></i></a
             ></div
           ></div
         >
@@ -64,7 +92,11 @@
     </div>
   </div>
   <div class="card-body user-sidebar-body">
-    <ul class="dashboard-sidebar-menu" aria-label={locale.text(profile.label)}>
+    <ul
+      class="dashboard-sidebar-menu"
+      aria-label={locale.text(profile.label)}
+      {@attach revealCurrent}
+    >
       {#each profile.links as link (link.href)}
         <li class="py-2"
           ><a
@@ -79,3 +111,20 @@
     </ul>
   </div>
 </div>
+
+<style>
+  @media (max-width: 767.98px) {
+    .dashboard-profile-edit {
+      position: relative;
+    }
+    .dashboard-profile-edit::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: var(--karento-touch-target);
+      height: var(--karento-touch-target);
+      transform: translate(-50%, -50%);
+      content: "";
+    }
+  }
+</style>

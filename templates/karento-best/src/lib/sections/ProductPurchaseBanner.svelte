@@ -18,6 +18,16 @@
   const desktop = new MediaQuery("(min-width: 992px)");
   const selected = $derived(selectedReferenceProduct(page.url.searchParams));
   const discounted = $derived(hasReferenceDiscount(selected));
+
+  function normalizeQuantity(
+    event: Event & { currentTarget: HTMLInputElement },
+  ) {
+    if (!phone.current) return;
+    const amount = Math.floor(Number(event.currentTarget.value));
+    event.currentTarget.value = String(
+      Number.isSafeInteger(amount) && amount > 0 ? amount : 1,
+    );
+  }
 </script>
 
 {#if desktop.current}
@@ -71,48 +81,52 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="container-banner-activities">
-            <Gallery
-              slides={phone.current
-                ? [{ src: selected.image, alt: selected.title }]
-                : [
-                    "/assets/imgs/shop/shop-details/img-1.png",
-                    "/assets/imgs/shop/shop-details/img-1.png",
-                    "/assets/imgs/shop/shop-details/img-1.png",
-                    "/assets/imgs/shop/shop-details/img-1.png",
-                    "/assets/imgs/shop/shop-details/img-1.png",
-                  ].map((src) => ({ src, alt: "Carento" }))}
-              thumbnails={phone.current
-                ? []
-                : [
-                    "/assets/imgs/shop/shop-details/thumb-1.png",
-                    "/assets/imgs/shop/shop-details/thumb-2.png",
-                    "/assets/imgs/shop/shop-details/thumb-3.png",
-                    "/assets/imgs/shop/shop-details/thumb-4.png",
-                    "/assets/imgs/shop/shop-details/thumb-1.png",
-                    "/assets/imgs/shop/shop-details/thumb-2.png",
-                    "/assets/imgs/shop/shop-details/thumb-3.png",
-                    "/assets/imgs/shop/shop-details/thumb-4.png",
-                  ].map((src) => ({ src, alt: "Carento" }))}
-              boxClass="box-banner-activities border rounded-3 overflow-hidden"
-              thumbnailClass="banner-slide border p-0 mx-2 rounded-3"
-              label={locale.t("ui.product-purchase-banner.product-photos")}
-              mobileThumbnailCount={4}
-            >
-              <div class="box-button-abs">
-                <a
-                  class="btn btn-white-md popup-youtube desktop-type-control"
-                  href="https://www.youtube.com/watch?v=AOg61RB75Ho"
-                  aria-label={locale.t(
-                    "ui.product-purchase-banner.video-clips",
-                  )}
-                >
-                  <img
-                    src="/assets/imgs/page/activities/video.svg"
-                    alt={locale.t("image.illustrative")}
-                  />{locale.t("ui.product-purchase-banner.video-clips")}</a
-                >
-              </div>
-            </Gallery>
+            {#if phone.current}
+              <Gallery
+                slides={[{ src: selected.image, alt: selected.title }]}
+                boxClass="box-banner-activities border rounded-3 overflow-hidden"
+                label={locale.t("ui.product-purchase-banner.product-photo")}
+              />
+            {:else}
+              <Gallery
+                slides={[
+                  "/assets/imgs/shop/shop-details/img-1.png",
+                  "/assets/imgs/shop/shop-details/img-1.png",
+                  "/assets/imgs/shop/shop-details/img-1.png",
+                  "/assets/imgs/shop/shop-details/img-1.png",
+                  "/assets/imgs/shop/shop-details/img-1.png",
+                ].map((src) => ({ src, alt: "Carento" }))}
+                thumbnails={[
+                  "/assets/imgs/shop/shop-details/thumb-1.png",
+                  "/assets/imgs/shop/shop-details/thumb-2.png",
+                  "/assets/imgs/shop/shop-details/thumb-3.png",
+                  "/assets/imgs/shop/shop-details/thumb-4.png",
+                  "/assets/imgs/shop/shop-details/thumb-1.png",
+                  "/assets/imgs/shop/shop-details/thumb-2.png",
+                  "/assets/imgs/shop/shop-details/thumb-3.png",
+                  "/assets/imgs/shop/shop-details/thumb-4.png",
+                ].map((src) => ({ src, alt: "Carento" }))}
+                boxClass="box-banner-activities border rounded-3 overflow-hidden"
+                thumbnailClass="banner-slide border p-0 mx-2 rounded-3"
+                label={locale.t("ui.product-purchase-banner.product-photos")}
+                mobileThumbnailCount={4}
+              >
+                <div class="box-button-abs">
+                  <a
+                    class="btn btn-white-md popup-youtube desktop-type-control"
+                    href="https://www.youtube.com/watch?v=AOg61RB75Ho"
+                    aria-label={locale.t(
+                      "ui.product-purchase-banner.video-clips",
+                    )}
+                  >
+                    <img
+                      src="/assets/imgs/page/activities/video.svg"
+                      alt={locale.t("image.illustrative")}
+                    />{locale.t("ui.product-purchase-banner.video-clips")}</a
+                  >
+                </div>
+              </Gallery>
+            {/if}
           </div>
         </div>
         <div class="col-lg-6 ps-lg-4">
@@ -194,13 +208,7 @@
               <div class="tour-meta-left mb-0">
                 <div class="add-to-cart me-3">
                   <div class="detail-qty" {@attach quantity}>
-                    <a
-                      href="#!"
-                      class="qty-down ps-2"
-                      aria-label={phone.current
-                        ? "Decrease quantity"
-                        : locale.t("ui.product-purchase-banner.view-details")}
-                    >
+                    {#snippet quantityDownIcon()}
                       <svg
                         class="invert"
                         xmlns="http://www.w3.org/2000/svg"
@@ -216,24 +224,37 @@
                           fill="#101010"
                         ></path>
                       </svg>
-                    </a>
+                    {/snippet}
+                    {#if phone.current}
+                      <button
+                        type="button"
+                        class="qty-down ps-2"
+                        aria-label={locale.t("quantity.decrease")}
+                        >{@render quantityDownIcon()}</button
+                      >
+                    {:else}
+                      <a
+                        href="#!"
+                        class="qty-down ps-2"
+                        aria-label={locale.t(
+                          "ui.product-purchase-banner.view-details",
+                        )}>{@render quantityDownIcon()}</a
+                      >
+                    {/if}
                     <input
                       type="text"
                       name="quantity"
                       class="qty-val w-100px pl-45"
                       value="1"
                       min="1"
+                      inputmode={phone.current ? "numeric" : undefined}
+                      onchange={normalizeQuantity}
+                      onblur={normalizeQuantity}
                       aria-label={locale.t(
                         "ui.product-purchase-banner.quantity",
                       )}
                     />
-                    <a
-                      href="#!"
-                      class="qty-up pe-2"
-                      aria-label={phone.current
-                        ? "Increase quantity"
-                        : locale.t("ui.product-purchase-banner.view-details")}
-                    >
+                    {#snippet quantityUpIcon()}
                       <svg
                         class="invert"
                         xmlns="http://www.w3.org/2000/svg"
@@ -249,7 +270,23 @@
                           fill="#101010"
                         ></path>
                       </svg>
-                    </a>
+                    {/snippet}
+                    {#if phone.current}
+                      <button
+                        type="button"
+                        class="qty-up pe-2"
+                        aria-label={locale.t("quantity.increase")}
+                        >{@render quantityUpIcon()}</button
+                      >
+                    {:else}
+                      <a
+                        href="#!"
+                        class="qty-up pe-2"
+                        aria-label={locale.t(
+                          "ui.product-purchase-banner.view-details",
+                        )}>{@render quantityUpIcon()}</a
+                      >
+                    {/if}
                   </div>
                 </div>
                 <DemoActionButton
@@ -498,6 +535,11 @@
     }
     .add-to-cart {
       margin-right: 0 !important;
+    }
+    .detail-qty :global(button) {
+      border: 0;
+      background: transparent;
+      color: inherit;
     }
     .tour-meta-right {
       display: flex;

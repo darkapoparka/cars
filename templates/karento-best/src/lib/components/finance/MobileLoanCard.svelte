@@ -69,7 +69,7 @@
   {id}
   type="button"
   class="mobile-loan-trigger"
-  aria-label={"Open " + title.toLowerCase()}
+  aria-label={locale.t("action.openNamed", { name: title.toLocaleLowerCase() })}
   aria-haspopup="dialog"
   aria-expanded={open}
   onclick={() => (open = true)}

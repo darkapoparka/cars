@@ -5,15 +5,23 @@
   const locale = useLocale();
   import type { DashboardPreviewImage } from "#lib/data/dashboard.ts";
   import DemoActionLink from "#lib/components/DemoActionLink.svelte";
+  import { MediaQuery } from "svelte/reactivity";
+  const phone = new MediaQuery("(max-width: 767.98px)");
   let { image }: { image: DashboardPreviewImage } = $props();
 </script>
 
 <div class="image-preview">
   <div class="box-image-preview"
-    ><img src={image.src} alt={image.alt} /><DemoActionLink
+    >{#if phone.current}<div class="dashboard-preview-image"
+        ><img src={image.src} alt={image.alt} /></div
+      >{:else}<img src={image.src} alt={image.alt} />{/if}<DemoActionLink
       class="btn-delete-image"
       href="#!"
-      aria-label={locale.t("ui.dashboard-image-preview.view-details")}
+      aria-label={locale.t(
+        phone.current
+          ? "action.clear"
+          : "ui.dashboard-image-preview.view-details",
+      )}
     >
       <svg
         width="16"
@@ -59,3 +67,26 @@
     ></div
   >
 </div>
+
+<style>
+  @media (max-width: 767.98px) {
+    .box-image-preview {
+      /* The hit area may extend past a short photo without changing its crop. */
+      overflow: visible !important;
+    }
+    .dashboard-preview-image {
+      overflow: hidden;
+      max-height: inherit;
+      border-radius: inherit;
+    }
+    .box-image-preview :global(.btn-delete-image::before) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: var(--karento-touch-target);
+      height: var(--karento-touch-target);
+      transform: translate(-50%, -50%);
+      content: "";
+    }
+  }
+</style>

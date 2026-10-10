@@ -3,10 +3,22 @@
 <script lang="ts">
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   const locale = useLocale();
-  import { chart } from "#lib/vendor.ts";
+  import { chart, chartForPeriod } from "#lib/vendor.ts";
 
   import { dashboardDropdowns } from "#lib/data/dashboard.ts";
   import DashboardDropdown from "#lib/components/dashboard/DashboardDropdown.svelte";
+  import { MediaQuery } from "svelte/reactivity";
+  import type { CatalogText } from "#lib/i18n/text.ts";
+  import { dashboardRecentSelected } from "#lib/data/dashboard-mobile.ts";
+  const phone = new MediaQuery("(max-width: 767.98px)");
+  let selection = $state<CatalogText>();
+  const phonePeriod = {
+    ...dashboardDropdowns.earningsPeriod,
+    options: dashboardDropdowns.bookingsChartPeriod.options,
+  };
+  const periodChart = $derived(
+    phone.current ? chartForPeriod(dashboardRecentSelected(selection)) : chart,
+  );
 </script>
 
 <div class="card shadow-none flex-fill">
@@ -15,7 +27,10 @@
       <span class="neutral-1000 text-md-bold fs-5 desktop-type-panel"
         >{locale.t("ui.dashboard-earnings-card.earnings")}</span
       >
-      <DashboardDropdown config={dashboardDropdowns.earningsPeriod} />
+      <DashboardDropdown
+        config={phone.current ? phonePeriod : dashboardDropdowns.earningsPeriod}
+        bind:selection
+      />
     </div>
   </div>
   <div class="card-body">
@@ -35,7 +50,7 @@
 
     <div class="card shadow-none mb-2 mt-3">
       <div class="card-body">
-        <div id="chart-3" {@attach chart}></div>
+        <div id="chart-3" {@attach periodChart}></div>
       </div>
     </div>
   </div>

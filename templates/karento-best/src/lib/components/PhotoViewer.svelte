@@ -122,7 +122,11 @@
     <div
       class="karento-photo-image"
       role="group"
-      aria-label={images.length > 1 ? "Photo navigation" : "Photo"}
+      aria-label={phone.current
+        ? locale.t(images.length > 1 ? "gallery.navigation" : "gallery.photo")
+        : images.length > 1
+          ? "Photo navigation"
+          : "Photo"}
       onpointerdown={startSwipe}
       onpointerup={endSwipe}
       onpointercancel={() => (swipe = undefined)}
@@ -132,7 +136,12 @@
           onclick={() => move(-1)}>‹</button
         >{/if}<img
         src={images[index]}
-        alt={`Photo ${index + 1} of ${images.length}`}
+        alt={phone.current
+          ? locale.t("gallery.photoPosition", {
+              number: locale.number(index + 1),
+              count: locale.number(images.length),
+            })
+          : `Photo ${index + 1} of ${images.length}`}
         draggable="false"
       />{#if images.length > 1}<button
           type="button"

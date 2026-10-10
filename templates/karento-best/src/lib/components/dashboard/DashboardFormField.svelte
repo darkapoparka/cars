@@ -4,7 +4,44 @@
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   const locale = useLocale();
   import type { DashboardField } from "#lib/data/dashboard.ts";
+  import { dashboardFields } from "#lib/data/dashboard.ts";
+  import { MediaQuery } from "svelte/reactivity";
+  import type { HTMLInputAttributes } from "svelte/elements";
+  const phone = new MediaQuery("(max-width: 767.98px)");
   let { field }: { field: DashboardField } = $props();
+  const phoneTypes = new Map<string, HTMLInputAttributes["type"]>([
+    [dashboardFields.memberEmail.id, "email"],
+    [dashboardFields.ownerEmail.id, "email"],
+    [dashboardFields.memberContactNumber.id, "tel"],
+    [dashboardFields.ownerContactNumber.id, "tel"],
+    ...[
+      dashboardFields.memberWebsite,
+      dashboardFields.ownerWebsite,
+      dashboardFields.memberFacebook,
+      dashboardFields.ownerFacebook,
+      dashboardFields.memberTwitter,
+      dashboardFields.ownerTwitter,
+      dashboardFields.memberInstagram,
+      dashboardFields.ownerInstagram,
+    ].map((item) => [item.id, "url"] as const),
+  ]);
+  const inputType = $derived(
+    phone.current ? (phoneTypes.get(field.id ?? "") ?? field.type) : field.type,
+  );
+  const controlName = $derived(
+    locale.text(phone.current && field.label ? field.label : field.ariaLabel),
+  );
+  const inputMode = $derived<HTMLInputAttributes["inputmode"]>(
+    !phone.current
+      ? undefined
+      : inputType === "email"
+        ? "email"
+        : inputType === "tel"
+          ? "tel"
+          : inputType === "url"
+            ? "url"
+            : undefined,
+  );
 </script>
 
 {#snippet label()}
@@ -23,16 +60,17 @@
         placeholder={locale.text(field.placeholder)}
         rows={field.rows}
         id={field.id}
-        aria-label={locale.text(field.ariaLabel)}>{field.value ?? ""}</textarea
+        aria-label={controlName}>{field.value ?? ""}</textarea
       >
     {:else}
       <input
         class="form-control"
-        type={field.type}
+        type={inputType}
+        inputmode={inputMode}
         placeholder={locale.text(field.placeholder)}
         value={field.value}
         id={field.id}
-        aria-label={locale.text(field.ariaLabel)}
+        aria-label={controlName}
       />
     {/if}
   </div>
