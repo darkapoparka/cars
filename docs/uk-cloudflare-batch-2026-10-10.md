@@ -40,6 +40,14 @@ A server-rendered pilot candidate is one public routing Worker with six applicat
 
 The provider extension also needs generated-output exclusions for `.wrangler` and `.open-next`, output-budget checks, authenticated upload receipts and mounted hosted verification. The completed creation/default changes below do not claim any of this provider work has been implemented.
 
+### Confirmed Free-plan feasibility
+
+The bounded source audit found no feature-preserving, unchanged-source static six-pack. Auto Best uses request locale/preferences and query loaders; Import uses server inventory/detail loaders and count endpoints; Signature uses server locale cookies and phone hints. Modern is explicitly dynamic with server filtering, preferences and forms. App and Mobile consume request/query state, and the publisher also injects request-dependent metadata/proxies for all three Next families. These features need runtime support or a separately tested client/static conversion. See [SvelteKit page options](https://svelte.dev/docs/kit/page-options) and [Next static export limitations](https://nextjs.org/docs/app/guides/static-exports).
+
+The smallest complete Free pilot therefore qualifies all six supported framework outputs, serves matching assets first, and measures actual cold and repeated home/catalogue/detail/filter/locale requests. Start the heavier Modern/Import request measurements early. Free permits 10 ms CPU per Worker request; its asset bundle has a 20,000-file limit and 25 MiB individual-file limit. [Workers limits](https://developers.cloudflare.com/workers/platform/limits/) and [static asset billing](https://developers.cloudflare.com/workers/static-assets/billing-and-limitations/) define the current limits.
+
+If that complete SSR implementation repeatedly exceeds Free, present a Paid requirement for that implementation or scope a feature-preserving static conversion. Mobile is the lowest-effort static candidate, but a Mobile-only pilot would not qualify this six-family batch. No paid capacity or static compatibility is inferred from the preparation checks.
+
 ## UK acceptance
 
 Use dealer country GB and British presentation en-GB with actual GBP prices, original tagged mileage and UK contact/postcode information. Native routing currently uses en/bg, so an English route and British formatting are distinct settings. Preserve manual URL choice, saved preference and supported browser language ahead of country hints.
