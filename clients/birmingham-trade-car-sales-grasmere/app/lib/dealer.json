@@ -1,0 +1,30 @@
+{
+  "mode": "dealer",
+  "id": "birmingham-trade-car-sales-grasmere",
+  "name": "Trade Car Sales",
+  "shortName": "Trade Car Sales",
+  "logo": {
+    "light": "/dealer-app/logo-light-48aedfea403dcaed8c71.webp",
+    "dark": "/dealer-app/logo-dark-48aedfea403dcaed8c71.webp",
+    "icon": "/dealer-app/icon.png"
+  },
+  "defaultLocale": "en",
+  "enabledLocales": [
+    "en",
+    "bg"
+  ],
+  "country": "GB",
+  "currency": "GBP",
+  "city": "Birmingham",
+  "address": "",
+  "phoneDisplay": "",
+  "phoneE164": "",
+  "email": "",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Trade%20Car%20Sales%2C%20Birmingham",
+  "website": "",
+  "whatsappUrl": "",
+  "services": [],
+  "observedAt": "2026-10-10",
+  "inventoryNotice": "Vehicle images are generated illustrations, not photographs of the advertised vehicles. Listing details were observed on 10 October 2026; confirm each original advert, price, condition and availability with the dealership.",
+  "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
+}

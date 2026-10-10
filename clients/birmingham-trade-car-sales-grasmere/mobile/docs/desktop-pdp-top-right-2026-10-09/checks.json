@@ -1,0 +1,2100 @@
+{
+  "base": "http://127.0.0.1:6548",
+  "date": "2026-10-09T12:11:00.493Z",
+  "layouts": [
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1024,
+      "scrollWidth": 1009,
+      "gallery": {
+        "x": 52,
+        "y": 296,
+        "width": 501,
+        "height": 397.125,
+        "top": 296,
+        "right": 553,
+        "bottom": 693.125,
+        "left": 52
+      },
+      "summary": {
+        "x": 577,
+        "y": 164,
+        "width": 380,
+        "height": 587,
+        "top": 164,
+        "right": 957,
+        "bottom": 751,
+        "left": 577
+      },
+      "price": {
+        "x": 602,
+        "y": 215,
+        "width": 140.515625,
+        "height": 44,
+        "top": 215,
+        "right": 742.515625,
+        "bottom": 259,
+        "left": 602
+      },
+      "priceLabel": {
+        "x": 602,
+        "y": 189,
+        "width": 140.515625,
+        "height": 20,
+        "top": 189,
+        "right": 742.515625,
+        "bottom": 209,
+        "left": 602
+      },
+      "rating": {
+        "x": 808,
+        "y": 189,
+        "width": 124,
+        "height": 44,
+        "top": 189,
+        "right": 932,
+        "bottom": 233,
+        "left": 808
+      },
+      "controls": [
+        {
+          "label": "Обратно към колите",
+          "height": 44,
+          "width": 173,
+          "contentWidth": 173
+        },
+        {
+          "label": "Запази колата",
+          "height": 44,
+          "width": 90,
+          "contentWidth": 90
+        },
+        {
+          "label": "Сподели",
+          "height": 44,
+          "width": 101,
+          "contentWidth": 101
+        },
+        {
+          "label": "Детайли за оценката",
+          "height": 44,
+          "width": 122,
+          "contentWidth": 122
+        },
+        {
+          "label": "Калкулатор за финансиране",
+          "height": 72,
+          "width": 328,
+          "contentWidth": 328
+        },
+        {
+          "label": "Запитване за този автомобил: BMW X6",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Контакт",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Проверка при оглед",
+          "height": 44,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Детайли",
+          "height": 44,
+          "width": 162,
+          "contentWidth": 162
+        },
+        {
+          "label": "Снимки",
+          "height": 44,
+          "width": 162,
+          "contentWidth": 162
+        },
+        {
+          "label": "Екстри",
+          "height": 44,
+          "width": 162,
+          "contentWidth": 162
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1280,
+      "scrollWidth": 1265,
+      "gallery": {
+        "x": 52,
+        "y": 296,
+        "width": 757,
+        "height": 557.125,
+        "top": 296,
+        "right": 809,
+        "bottom": 853.125,
+        "left": 52
+      },
+      "summary": {
+        "x": 833,
+        "y": 164,
+        "width": 380,
+        "height": 587,
+        "top": 164,
+        "right": 1213,
+        "bottom": 751,
+        "left": 833
+      },
+      "price": {
+        "x": 858,
+        "y": 215,
+        "width": 140.515625,
+        "height": 44,
+        "top": 215,
+        "right": 998.515625,
+        "bottom": 259,
+        "left": 858
+      },
+      "priceLabel": {
+        "x": 858,
+        "y": 189,
+        "width": 140.515625,
+        "height": 20,
+        "top": 189,
+        "right": 998.515625,
+        "bottom": 209,
+        "left": 858
+      },
+      "rating": {
+        "x": 1064,
+        "y": 189,
+        "width": 124,
+        "height": 44,
+        "top": 189,
+        "right": 1188,
+        "bottom": 233,
+        "left": 1064
+      },
+      "controls": [
+        {
+          "label": "Обратно към колите",
+          "height": 44,
+          "width": 173,
+          "contentWidth": 173
+        },
+        {
+          "label": "Запази колата",
+          "height": 44,
+          "width": 90,
+          "contentWidth": 90
+        },
+        {
+          "label": "Сподели",
+          "height": 44,
+          "width": 101,
+          "contentWidth": 101
+        },
+        {
+          "label": "Детайли за оценката",
+          "height": 44,
+          "width": 122,
+          "contentWidth": 122
+        },
+        {
+          "label": "Калкулатор за финансиране",
+          "height": 72,
+          "width": 328,
+          "contentWidth": 328
+        },
+        {
+          "label": "Запитване за този автомобил: BMW X6",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Контакт",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Проверка при оглед",
+          "height": 44,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Детайли",
+          "height": 44,
+          "width": 247,
+          "contentWidth": 247
+        },
+        {
+          "label": "Снимки",
+          "height": 44,
+          "width": 247,
+          "contentWidth": 247
+        },
+        {
+          "label": "Екстри",
+          "height": 44,
+          "width": 247,
+          "contentWidth": 247
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "gallery": {
+        "x": 100.5,
+        "y": 296,
+        "width": 820,
+        "height": 596.5,
+        "top": 296,
+        "right": 920.5,
+        "bottom": 892.5,
+        "left": 100.5
+      },
+      "summary": {
+        "x": 944.5,
+        "y": 164,
+        "width": 380,
+        "height": 587,
+        "top": 164,
+        "right": 1324.5,
+        "bottom": 751,
+        "left": 944.5
+      },
+      "price": {
+        "x": 969.5,
+        "y": 215,
+        "width": 140.515625,
+        "height": 44,
+        "top": 215,
+        "right": 1110.015625,
+        "bottom": 259,
+        "left": 969.5
+      },
+      "priceLabel": {
+        "x": 969.5,
+        "y": 189,
+        "width": 140.515625,
+        "height": 20,
+        "top": 189,
+        "right": 1110.015625,
+        "bottom": 209,
+        "left": 969.5
+      },
+      "rating": {
+        "x": 1175.5,
+        "y": 189,
+        "width": 124,
+        "height": 44,
+        "top": 189,
+        "right": 1299.5,
+        "bottom": 233,
+        "left": 1175.5
+      },
+      "controls": [
+        {
+          "label": "Обратно към колите",
+          "height": 44,
+          "width": 173,
+          "contentWidth": 173
+        },
+        {
+          "label": "Запази колата",
+          "height": 44,
+          "width": 90,
+          "contentWidth": 90
+        },
+        {
+          "label": "Сподели",
+          "height": 44,
+          "width": 101,
+          "contentWidth": 101
+        },
+        {
+          "label": "Детайли за оценката",
+          "height": 44,
+          "width": 122,
+          "contentWidth": 122
+        },
+        {
+          "label": "Калкулатор за финансиране",
+          "height": 72,
+          "width": 328,
+          "contentWidth": 328
+        },
+        {
+          "label": "Запитване за този автомобил: BMW X6",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Контакт",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Проверка при оглед",
+          "height": 44,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Детайли",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        },
+        {
+          "label": "Снимки",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        },
+        {
+          "label": "Екстри",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1920,
+      "scrollWidth": 1905,
+      "gallery": {
+        "x": 340.5,
+        "y": 296,
+        "width": 820,
+        "height": 596.5,
+        "top": 296,
+        "right": 1160.5,
+        "bottom": 892.5,
+        "left": 340.5
+      },
+      "summary": {
+        "x": 1184.5,
+        "y": 164,
+        "width": 380,
+        "height": 587,
+        "top": 164,
+        "right": 1564.5,
+        "bottom": 751,
+        "left": 1184.5
+      },
+      "price": {
+        "x": 1209.5,
+        "y": 215,
+        "width": 140.515625,
+        "height": 44,
+        "top": 215,
+        "right": 1350.015625,
+        "bottom": 259,
+        "left": 1209.5
+      },
+      "priceLabel": {
+        "x": 1209.5,
+        "y": 189,
+        "width": 140.515625,
+        "height": 20,
+        "top": 189,
+        "right": 1350.015625,
+        "bottom": 209,
+        "left": 1209.5
+      },
+      "rating": {
+        "x": 1415.5,
+        "y": 189,
+        "width": 124,
+        "height": 44,
+        "top": 189,
+        "right": 1539.5,
+        "bottom": 233,
+        "left": 1415.5
+      },
+      "controls": [
+        {
+          "label": "Обратно към колите",
+          "height": 44,
+          "width": 173,
+          "contentWidth": 173
+        },
+        {
+          "label": "Запази колата",
+          "height": 44,
+          "width": 90,
+          "contentWidth": 90
+        },
+        {
+          "label": "Сподели",
+          "height": 44,
+          "width": 101,
+          "contentWidth": 101
+        },
+        {
+          "label": "Детайли за оценката",
+          "height": 44,
+          "width": 122,
+          "contentWidth": 122
+        },
+        {
+          "label": "Калкулатор за финансиране",
+          "height": 72,
+          "width": 328,
+          "contentWidth": 328
+        },
+        {
+          "label": "Запитване за този автомобил: BMW X6",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Контакт",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Проверка при оглед",
+          "height": 44,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Детайли",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        },
+        {
+          "label": "Снимки",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        },
+        {
+          "label": "Екстри",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1024,
+      "scrollWidth": 1009,
+      "gallery": {
+        "x": 52,
+        "y": 296,
+        "width": 501,
+        "height": 397.125,
+        "top": 296,
+        "right": 553,
+        "bottom": 693.125,
+        "left": 52
+      },
+      "summary": {
+        "x": 577,
+        "y": 164,
+        "width": 380,
+        "height": 587,
+        "top": 164,
+        "right": 957,
+        "bottom": 751,
+        "left": 577
+      },
+      "price": {
+        "x": 602,
+        "y": 215,
+        "width": 133.0625,
+        "height": 44,
+        "top": 215,
+        "right": 735.0625,
+        "bottom": 259,
+        "left": 602
+      },
+      "priceLabel": {
+        "x": 602,
+        "y": 189,
+        "width": 133.0625,
+        "height": 20,
+        "top": 189,
+        "right": 735.0625,
+        "bottom": 209,
+        "left": 602
+      },
+      "rating": {
+        "x": 808,
+        "y": 189,
+        "width": 124,
+        "height": 44,
+        "top": 189,
+        "right": 932,
+        "bottom": 233,
+        "left": 808
+      },
+      "controls": [
+        {
+          "label": "Back to cars",
+          "height": 44,
+          "width": 125,
+          "contentWidth": 125
+        },
+        {
+          "label": "Save car",
+          "height": 44,
+          "width": 77,
+          "contentWidth": 77
+        },
+        {
+          "label": "Share via",
+          "height": 44,
+          "width": 83,
+          "contentWidth": 83
+        },
+        {
+          "label": "Price rating details",
+          "height": 44,
+          "width": 122,
+          "contentWidth": 122
+        },
+        {
+          "label": "Calculate Financing",
+          "height": 72,
+          "width": 328,
+          "contentWidth": 328
+        },
+        {
+          "label": "Enquire about this car: BMW X6",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Contact",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Checklist",
+          "height": 44,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Details",
+          "height": 44,
+          "width": 162,
+          "contentWidth": 162
+        },
+        {
+          "label": "Photos",
+          "height": 44,
+          "width": 162,
+          "contentWidth": 162
+        },
+        {
+          "label": "Features",
+          "height": 44,
+          "width": 162,
+          "contentWidth": 162
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1280,
+      "scrollWidth": 1265,
+      "gallery": {
+        "x": 52,
+        "y": 296,
+        "width": 757,
+        "height": 557.125,
+        "top": 296,
+        "right": 809,
+        "bottom": 853.125,
+        "left": 52
+      },
+      "summary": {
+        "x": 833,
+        "y": 164,
+        "width": 380,
+        "height": 587,
+        "top": 164,
+        "right": 1213,
+        "bottom": 751,
+        "left": 833
+      },
+      "price": {
+        "x": 858,
+        "y": 215,
+        "width": 133.0625,
+        "height": 44,
+        "top": 215,
+        "right": 991.0625,
+        "bottom": 259,
+        "left": 858
+      },
+      "priceLabel": {
+        "x": 858,
+        "y": 189,
+        "width": 133.0625,
+        "height": 20,
+        "top": 189,
+        "right": 991.0625,
+        "bottom": 209,
+        "left": 858
+      },
+      "rating": {
+        "x": 1064,
+        "y": 189,
+        "width": 124,
+        "height": 44,
+        "top": 189,
+        "right": 1188,
+        "bottom": 233,
+        "left": 1064
+      },
+      "controls": [
+        {
+          "label": "Back to cars",
+          "height": 44,
+          "width": 125,
+          "contentWidth": 125
+        },
+        {
+          "label": "Save car",
+          "height": 44,
+          "width": 77,
+          "contentWidth": 77
+        },
+        {
+          "label": "Share via",
+          "height": 44,
+          "width": 83,
+          "contentWidth": 83
+        },
+        {
+          "label": "Price rating details",
+          "height": 44,
+          "width": 122,
+          "contentWidth": 122
+        },
+        {
+          "label": "Calculate Financing",
+          "height": 72,
+          "width": 328,
+          "contentWidth": 328
+        },
+        {
+          "label": "Enquire about this car: BMW X6",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Contact",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Checklist",
+          "height": 44,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Details",
+          "height": 44,
+          "width": 247,
+          "contentWidth": 247
+        },
+        {
+          "label": "Photos",
+          "height": 44,
+          "width": 247,
+          "contentWidth": 247
+        },
+        {
+          "label": "Features",
+          "height": 44,
+          "width": 247,
+          "contentWidth": 247
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "gallery": {
+        "x": 100.5,
+        "y": 296,
+        "width": 820,
+        "height": 596.5,
+        "top": 296,
+        "right": 920.5,
+        "bottom": 892.5,
+        "left": 100.5
+      },
+      "summary": {
+        "x": 944.5,
+        "y": 164,
+        "width": 380,
+        "height": 587,
+        "top": 164,
+        "right": 1324.5,
+        "bottom": 751,
+        "left": 944.5
+      },
+      "price": {
+        "x": 969.5,
+        "y": 215,
+        "width": 133.0625,
+        "height": 44,
+        "top": 215,
+        "right": 1102.5625,
+        "bottom": 259,
+        "left": 969.5
+      },
+      "priceLabel": {
+        "x": 969.5,
+        "y": 189,
+        "width": 133.0625,
+        "height": 20,
+        "top": 189,
+        "right": 1102.5625,
+        "bottom": 209,
+        "left": 969.5
+      },
+      "rating": {
+        "x": 1175.5,
+        "y": 189,
+        "width": 124,
+        "height": 44,
+        "top": 189,
+        "right": 1299.5,
+        "bottom": 233,
+        "left": 1175.5
+      },
+      "controls": [
+        {
+          "label": "Back to cars",
+          "height": 44,
+          "width": 125,
+          "contentWidth": 125
+        },
+        {
+          "label": "Save car",
+          "height": 44,
+          "width": 77,
+          "contentWidth": 77
+        },
+        {
+          "label": "Share via",
+          "height": 44,
+          "width": 83,
+          "contentWidth": 83
+        },
+        {
+          "label": "Price rating details",
+          "height": 44,
+          "width": 122,
+          "contentWidth": 122
+        },
+        {
+          "label": "Calculate Financing",
+          "height": 72,
+          "width": 328,
+          "contentWidth": 328
+        },
+        {
+          "label": "Enquire about this car: BMW X6",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Contact",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Checklist",
+          "height": 44,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Details",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        },
+        {
+          "label": "Photos",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        },
+        {
+          "label": "Features",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1920,
+      "scrollWidth": 1905,
+      "gallery": {
+        "x": 340.5,
+        "y": 296,
+        "width": 820,
+        "height": 596.5,
+        "top": 296,
+        "right": 1160.5,
+        "bottom": 892.5,
+        "left": 340.5
+      },
+      "summary": {
+        "x": 1184.5,
+        "y": 164,
+        "width": 380,
+        "height": 587,
+        "top": 164,
+        "right": 1564.5,
+        "bottom": 751,
+        "left": 1184.5
+      },
+      "price": {
+        "x": 1209.5,
+        "y": 215,
+        "width": 133.0625,
+        "height": 44,
+        "top": 215,
+        "right": 1342.5625,
+        "bottom": 259,
+        "left": 1209.5
+      },
+      "priceLabel": {
+        "x": 1209.5,
+        "y": 189,
+        "width": 133.0625,
+        "height": 20,
+        "top": 189,
+        "right": 1342.5625,
+        "bottom": 209,
+        "left": 1209.5
+      },
+      "rating": {
+        "x": 1415.5,
+        "y": 189,
+        "width": 124,
+        "height": 44,
+        "top": 189,
+        "right": 1539.5,
+        "bottom": 233,
+        "left": 1415.5
+      },
+      "controls": [
+        {
+          "label": "Back to cars",
+          "height": 44,
+          "width": 125,
+          "contentWidth": 125
+        },
+        {
+          "label": "Save car",
+          "height": 44,
+          "width": 77,
+          "contentWidth": 77
+        },
+        {
+          "label": "Share via",
+          "height": 44,
+          "width": 83,
+          "contentWidth": 83
+        },
+        {
+          "label": "Price rating details",
+          "height": 44,
+          "width": 122,
+          "contentWidth": 122
+        },
+        {
+          "label": "Calculate Financing",
+          "height": 72,
+          "width": 328,
+          "contentWidth": 328
+        },
+        {
+          "label": "Enquire about this car: BMW X6",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Contact",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Checklist",
+          "height": 44,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Details",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        },
+        {
+          "label": "Photos",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        },
+        {
+          "label": "Features",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "gallery": {
+        "x": 52,
+        "y": 296,
+        "width": 516,
+        "height": 406.5,
+        "top": 296,
+        "right": 568,
+        "bottom": 702.5,
+        "left": 52
+      },
+      "summary": {
+        "x": 592,
+        "y": 164,
+        "width": 380,
+        "height": 587,
+        "top": 164,
+        "right": 972,
+        "bottom": 751,
+        "left": 592
+      },
+      "price": {
+        "x": 617,
+        "y": 215,
+        "width": 140.515625,
+        "height": 44,
+        "top": 215,
+        "right": 757.515625,
+        "bottom": 259,
+        "left": 617
+      },
+      "priceLabel": {
+        "x": 617,
+        "y": 189,
+        "width": 140.515625,
+        "height": 20,
+        "top": 189,
+        "right": 757.515625,
+        "bottom": 209,
+        "left": 617
+      },
+      "rating": {
+        "x": 823,
+        "y": 189,
+        "width": 124,
+        "height": 44,
+        "top": 189,
+        "right": 947,
+        "bottom": 233,
+        "left": 823
+      },
+      "controls": [
+        {
+          "label": "Обратно към колите",
+          "height": 44,
+          "width": 173,
+          "contentWidth": 173
+        },
+        {
+          "label": "Запази колата",
+          "height": 44,
+          "width": 90,
+          "contentWidth": 90
+        },
+        {
+          "label": "Сподели",
+          "height": 44,
+          "width": 101,
+          "contentWidth": 101
+        },
+        {
+          "label": "Детайли за оценката",
+          "height": 44,
+          "width": 122,
+          "contentWidth": 122
+        },
+        {
+          "label": "Калкулатор за финансиране",
+          "height": 72,
+          "width": 328,
+          "contentWidth": 328
+        },
+        {
+          "label": "Запитване за този автомобил: BMW X6",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Контакт",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Проверка при оглед",
+          "height": 44,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Детайли",
+          "height": 44,
+          "width": 167,
+          "contentWidth": 167
+        },
+        {
+          "label": "Снимки",
+          "height": 44,
+          "width": 167,
+          "contentWidth": 167
+        },
+        {
+          "label": "Екстри",
+          "height": 44,
+          "width": 167,
+          "contentWidth": 167
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "gallery": {
+        "x": 52,
+        "y": 296,
+        "width": 772,
+        "height": 566.5,
+        "top": 296,
+        "right": 824,
+        "bottom": 862.5,
+        "left": 52
+      },
+      "summary": {
+        "x": 848,
+        "y": 164,
+        "width": 380,
+        "height": 587,
+        "top": 164,
+        "right": 1228,
+        "bottom": 751,
+        "left": 848
+      },
+      "price": {
+        "x": 873,
+        "y": 215,
+        "width": 140.515625,
+        "height": 44,
+        "top": 215,
+        "right": 1013.515625,
+        "bottom": 259,
+        "left": 873
+      },
+      "priceLabel": {
+        "x": 873,
+        "y": 189,
+        "width": 140.515625,
+        "height": 20,
+        "top": 189,
+        "right": 1013.515625,
+        "bottom": 209,
+        "left": 873
+      },
+      "rating": {
+        "x": 1079,
+        "y": 189,
+        "width": 124,
+        "height": 44,
+        "top": 189,
+        "right": 1203,
+        "bottom": 233,
+        "left": 1079
+      },
+      "controls": [
+        {
+          "label": "Обратно към колите",
+          "height": 44,
+          "width": 173,
+          "contentWidth": 173
+        },
+        {
+          "label": "Запази колата",
+          "height": 44,
+          "width": 90,
+          "contentWidth": 90
+        },
+        {
+          "label": "Сподели",
+          "height": 44,
+          "width": 101,
+          "contentWidth": 101
+        },
+        {
+          "label": "Детайли за оценката",
+          "height": 44,
+          "width": 122,
+          "contentWidth": 122
+        },
+        {
+          "label": "Калкулатор за финансиране",
+          "height": 72,
+          "width": 328,
+          "contentWidth": 328
+        },
+        {
+          "label": "Запитване за този автомобил: BMW X6",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Контакт",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Проверка при оглед",
+          "height": 44,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Детайли",
+          "height": 44,
+          "width": 252,
+          "contentWidth": 252
+        },
+        {
+          "label": "Снимки",
+          "height": 44,
+          "width": 252,
+          "contentWidth": 252
+        },
+        {
+          "label": "Екстри",
+          "height": 44,
+          "width": 252,
+          "contentWidth": 252
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "gallery": {
+        "x": 108,
+        "y": 296,
+        "width": 820,
+        "height": 596.5,
+        "top": 296,
+        "right": 928,
+        "bottom": 892.5,
+        "left": 108
+      },
+      "summary": {
+        "x": 952,
+        "y": 164,
+        "width": 380,
+        "height": 587,
+        "top": 164,
+        "right": 1332,
+        "bottom": 751,
+        "left": 952
+      },
+      "price": {
+        "x": 977,
+        "y": 215,
+        "width": 140.515625,
+        "height": 44,
+        "top": 215,
+        "right": 1117.515625,
+        "bottom": 259,
+        "left": 977
+      },
+      "priceLabel": {
+        "x": 977,
+        "y": 189,
+        "width": 140.515625,
+        "height": 20,
+        "top": 189,
+        "right": 1117.515625,
+        "bottom": 209,
+        "left": 977
+      },
+      "rating": {
+        "x": 1183,
+        "y": 189,
+        "width": 124,
+        "height": 44,
+        "top": 189,
+        "right": 1307,
+        "bottom": 233,
+        "left": 1183
+      },
+      "controls": [
+        {
+          "label": "Обратно към колите",
+          "height": 44,
+          "width": 173,
+          "contentWidth": 173
+        },
+        {
+          "label": "Запази колата",
+          "height": 44,
+          "width": 90,
+          "contentWidth": 90
+        },
+        {
+          "label": "Сподели",
+          "height": 44,
+          "width": 101,
+          "contentWidth": 101
+        },
+        {
+          "label": "Детайли за оценката",
+          "height": 44,
+          "width": 122,
+          "contentWidth": 122
+        },
+        {
+          "label": "Калкулатор за финансиране",
+          "height": 72,
+          "width": 328,
+          "contentWidth": 328
+        },
+        {
+          "label": "Запитване за този автомобил: BMW X6",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Контакт",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Проверка при оглед",
+          "height": 44,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Детайли",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        },
+        {
+          "label": "Снимки",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        },
+        {
+          "label": "Екстри",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "gallery": {
+        "x": 348,
+        "y": 296,
+        "width": 820,
+        "height": 596.5,
+        "top": 296,
+        "right": 1168,
+        "bottom": 892.5,
+        "left": 348
+      },
+      "summary": {
+        "x": 1192,
+        "y": 164,
+        "width": 380,
+        "height": 587,
+        "top": 164,
+        "right": 1572,
+        "bottom": 751,
+        "left": 1192
+      },
+      "price": {
+        "x": 1217,
+        "y": 215,
+        "width": 140.515625,
+        "height": 44,
+        "top": 215,
+        "right": 1357.515625,
+        "bottom": 259,
+        "left": 1217
+      },
+      "priceLabel": {
+        "x": 1217,
+        "y": 189,
+        "width": 140.515625,
+        "height": 20,
+        "top": 189,
+        "right": 1357.515625,
+        "bottom": 209,
+        "left": 1217
+      },
+      "rating": {
+        "x": 1423,
+        "y": 189,
+        "width": 124,
+        "height": 44,
+        "top": 189,
+        "right": 1547,
+        "bottom": 233,
+        "left": 1423
+      },
+      "controls": [
+        {
+          "label": "Обратно към колите",
+          "height": 44,
+          "width": 173,
+          "contentWidth": 173
+        },
+        {
+          "label": "Запази колата",
+          "height": 44,
+          "width": 90,
+          "contentWidth": 90
+        },
+        {
+          "label": "Сподели",
+          "height": 44,
+          "width": 101,
+          "contentWidth": 101
+        },
+        {
+          "label": "Детайли за оценката",
+          "height": 44,
+          "width": 122,
+          "contentWidth": 122
+        },
+        {
+          "label": "Калкулатор за финансиране",
+          "height": 72,
+          "width": 328,
+          "contentWidth": 328
+        },
+        {
+          "label": "Запитване за този автомобил: BMW X6",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Контакт",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Проверка при оглед",
+          "height": 44,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Детайли",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        },
+        {
+          "label": "Снимки",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        },
+        {
+          "label": "Екстри",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "gallery": {
+        "x": 52,
+        "y": 296,
+        "width": 516,
+        "height": 406.5,
+        "top": 296,
+        "right": 568,
+        "bottom": 702.5,
+        "left": 52
+      },
+      "summary": {
+        "x": 592,
+        "y": 164,
+        "width": 380,
+        "height": 587,
+        "top": 164,
+        "right": 972,
+        "bottom": 751,
+        "left": 592
+      },
+      "price": {
+        "x": 617,
+        "y": 215,
+        "width": 133.0625,
+        "height": 44,
+        "top": 215,
+        "right": 750.0625,
+        "bottom": 259,
+        "left": 617
+      },
+      "priceLabel": {
+        "x": 617,
+        "y": 189,
+        "width": 133.0625,
+        "height": 20,
+        "top": 189,
+        "right": 750.0625,
+        "bottom": 209,
+        "left": 617
+      },
+      "rating": {
+        "x": 823,
+        "y": 189,
+        "width": 124,
+        "height": 44,
+        "top": 189,
+        "right": 947,
+        "bottom": 233,
+        "left": 823
+      },
+      "controls": [
+        {
+          "label": "Back to cars",
+          "height": 44,
+          "width": 125,
+          "contentWidth": 125
+        },
+        {
+          "label": "Save car",
+          "height": 44,
+          "width": 77,
+          "contentWidth": 77
+        },
+        {
+          "label": "Share via",
+          "height": 44,
+          "width": 83,
+          "contentWidth": 83
+        },
+        {
+          "label": "Price rating details",
+          "height": 44,
+          "width": 122,
+          "contentWidth": 122
+        },
+        {
+          "label": "Calculate Financing",
+          "height": 72,
+          "width": 328,
+          "contentWidth": 328
+        },
+        {
+          "label": "Enquire about this car: BMW X6",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Contact",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Checklist",
+          "height": 44,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Details",
+          "height": 44,
+          "width": 167,
+          "contentWidth": 167
+        },
+        {
+          "label": "Photos",
+          "height": 44,
+          "width": 167,
+          "contentWidth": 167
+        },
+        {
+          "label": "Features",
+          "height": 44,
+          "width": 167,
+          "contentWidth": 167
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "gallery": {
+        "x": 52,
+        "y": 296,
+        "width": 772,
+        "height": 566.5,
+        "top": 296,
+        "right": 824,
+        "bottom": 862.5,
+        "left": 52
+      },
+      "summary": {
+        "x": 848,
+        "y": 164,
+        "width": 380,
+        "height": 587,
+        "top": 164,
+        "right": 1228,
+        "bottom": 751,
+        "left": 848
+      },
+      "price": {
+        "x": 873,
+        "y": 215,
+        "width": 133.0625,
+        "height": 44,
+        "top": 215,
+        "right": 1006.0625,
+        "bottom": 259,
+        "left": 873
+      },
+      "priceLabel": {
+        "x": 873,
+        "y": 189,
+        "width": 133.0625,
+        "height": 20,
+        "top": 189,
+        "right": 1006.0625,
+        "bottom": 209,
+        "left": 873
+      },
+      "rating": {
+        "x": 1079,
+        "y": 189,
+        "width": 124,
+        "height": 44,
+        "top": 189,
+        "right": 1203,
+        "bottom": 233,
+        "left": 1079
+      },
+      "controls": [
+        {
+          "label": "Back to cars",
+          "height": 44,
+          "width": 125,
+          "contentWidth": 125
+        },
+        {
+          "label": "Save car",
+          "height": 44,
+          "width": 77,
+          "contentWidth": 77
+        },
+        {
+          "label": "Share via",
+          "height": 44,
+          "width": 83,
+          "contentWidth": 83
+        },
+        {
+          "label": "Price rating details",
+          "height": 44,
+          "width": 122,
+          "contentWidth": 122
+        },
+        {
+          "label": "Calculate Financing",
+          "height": 72,
+          "width": 328,
+          "contentWidth": 328
+        },
+        {
+          "label": "Enquire about this car: BMW X6",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Contact",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Checklist",
+          "height": 44,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Details",
+          "height": 44,
+          "width": 252,
+          "contentWidth": 252
+        },
+        {
+          "label": "Photos",
+          "height": 44,
+          "width": 252,
+          "contentWidth": 252
+        },
+        {
+          "label": "Features",
+          "height": 44,
+          "width": 252,
+          "contentWidth": 252
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "gallery": {
+        "x": 108,
+        "y": 296,
+        "width": 820,
+        "height": 596.5,
+        "top": 296,
+        "right": 928,
+        "bottom": 892.5,
+        "left": 108
+      },
+      "summary": {
+        "x": 952,
+        "y": 164,
+        "width": 380,
+        "height": 587,
+        "top": 164,
+        "right": 1332,
+        "bottom": 751,
+        "left": 952
+      },
+      "price": {
+        "x": 977,
+        "y": 215,
+        "width": 133.0625,
+        "height": 44,
+        "top": 215,
+        "right": 1110.0625,
+        "bottom": 259,
+        "left": 977
+      },
+      "priceLabel": {
+        "x": 977,
+        "y": 189,
+        "width": 133.0625,
+        "height": 20,
+        "top": 189,
+        "right": 1110.0625,
+        "bottom": 209,
+        "left": 977
+      },
+      "rating": {
+        "x": 1183,
+        "y": 189,
+        "width": 124,
+        "height": 44,
+        "top": 189,
+        "right": 1307,
+        "bottom": 233,
+        "left": 1183
+      },
+      "controls": [
+        {
+          "label": "Back to cars",
+          "height": 44,
+          "width": 125,
+          "contentWidth": 125
+        },
+        {
+          "label": "Save car",
+          "height": 44,
+          "width": 77,
+          "contentWidth": 77
+        },
+        {
+          "label": "Share via",
+          "height": 44,
+          "width": 83,
+          "contentWidth": 83
+        },
+        {
+          "label": "Price rating details",
+          "height": 44,
+          "width": 122,
+          "contentWidth": 122
+        },
+        {
+          "label": "Calculate Financing",
+          "height": 72,
+          "width": 328,
+          "contentWidth": 328
+        },
+        {
+          "label": "Enquire about this car: BMW X6",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Contact",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Checklist",
+          "height": 44,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Details",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        },
+        {
+          "label": "Photos",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        },
+        {
+          "label": "Features",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "gallery": {
+        "x": 348,
+        "y": 296,
+        "width": 820,
+        "height": 596.5,
+        "top": 296,
+        "right": 1168,
+        "bottom": 892.5,
+        "left": 348
+      },
+      "summary": {
+        "x": 1192,
+        "y": 164,
+        "width": 380,
+        "height": 587,
+        "top": 164,
+        "right": 1572,
+        "bottom": 751,
+        "left": 1192
+      },
+      "price": {
+        "x": 1217,
+        "y": 215,
+        "width": 133.0625,
+        "height": 44,
+        "top": 215,
+        "right": 1350.0625,
+        "bottom": 259,
+        "left": 1217
+      },
+      "priceLabel": {
+        "x": 1217,
+        "y": 189,
+        "width": 133.0625,
+        "height": 20,
+        "top": 189,
+        "right": 1350.0625,
+        "bottom": 209,
+        "left": 1217
+      },
+      "rating": {
+        "x": 1423,
+        "y": 189,
+        "width": 124,
+        "height": 44,
+        "top": 189,
+        "right": 1547,
+        "bottom": 233,
+        "left": 1423
+      },
+      "controls": [
+        {
+          "label": "Back to cars",
+          "height": 44,
+          "width": 125,
+          "contentWidth": 125
+        },
+        {
+          "label": "Save car",
+          "height": 44,
+          "width": 77,
+          "contentWidth": 77
+        },
+        {
+          "label": "Share via",
+          "height": 44,
+          "width": 83,
+          "contentWidth": 83
+        },
+        {
+          "label": "Price rating details",
+          "height": 44,
+          "width": 122,
+          "contentWidth": 122
+        },
+        {
+          "label": "Calculate Financing",
+          "height": 72,
+          "width": 328,
+          "contentWidth": 328
+        },
+        {
+          "label": "Enquire about this car: BMW X6",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Contact",
+          "height": 52,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Checklist",
+          "height": 44,
+          "width": 330,
+          "contentWidth": 330
+        },
+        {
+          "label": "Details",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        },
+        {
+          "label": "Photos",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        },
+        {
+          "label": "Features",
+          "height": 44,
+          "width": 268,
+          "contentWidth": 268
+        }
+      ]
+    }
+  ],
+  "interactions": [
+    {
+      "engine": "chromium",
+      "check": "Save toggles its real local state"
+    },
+    {
+      "engine": "chromium",
+      "check": "Price rating details opens, dismisses, and restores focus"
+    },
+    {
+      "engine": "chromium",
+      "check": "Calculate Financing opens, dismisses, and restores focus"
+    },
+    {
+      "engine": "chromium",
+      "check": "Contact opens, dismisses, and restores focus"
+    },
+    {
+      "engine": "chromium",
+      "check": "Gallery arrows, thumbnails, and keyboard change photos"
+    },
+    {
+      "engine": "chromium",
+      "check": "All sections work; reload and gallery Back preserve the selected section"
+    },
+    {
+      "engine": "chromium",
+      "check": "Segmented tabs retain arrow-key and Home/End navigation, selection, panel updates, and focus"
+    },
+    {
+      "engine": "chromium",
+      "check": "Sidebar remains visible while scrolling; short viewports use normal flow; checklist and vehicle enquiry navigate correctly"
+    },
+    {
+      "engine": "chromium",
+      "check": "A longer Mercedes-Benz title and alternate sample data fit the desktop layout"
+    },
+    {
+      "engine": "chromium",
+      "check": "Captured leasing quote and buying price retain their correct labels and modal"
+    },
+    {
+      "engine": "chromium",
+      "check": "The white Back to cars control returns a direct PDP visit to the inventory"
+    },
+    {
+      "engine": "webkit",
+      "check": "Save toggles its real local state"
+    },
+    {
+      "engine": "webkit",
+      "check": "Price rating details opens, dismisses, and restores focus"
+    },
+    {
+      "engine": "webkit",
+      "check": "Calculate Financing opens, dismisses, and restores focus"
+    },
+    {
+      "engine": "webkit",
+      "check": "Contact opens, dismisses, and restores focus"
+    },
+    {
+      "engine": "webkit",
+      "check": "Gallery arrows, thumbnails, and keyboard change photos"
+    },
+    {
+      "engine": "webkit",
+      "check": "All sections work; reload and gallery Back preserve the selected section"
+    },
+    {
+      "engine": "webkit",
+      "check": "Segmented tabs retain arrow-key and Home/End navigation, selection, panel updates, and focus"
+    },
+    {
+      "engine": "webkit",
+      "check": "Sidebar remains visible while scrolling; short viewports use normal flow; checklist and vehicle enquiry navigate correctly"
+    },
+    {
+      "engine": "webkit",
+      "check": "The white Back to cars control returns a direct PDP visit to the inventory"
+    }
+  ],
+  "mobile": [
+    {
+      "width": 390,
+      "view": "viewport",
+      "changedPixels": 0
+    },
+    {
+      "width": 390,
+      "view": "full",
+      "changedPixels": 23140,
+      "belowHeaderChangedPixels": 0,
+      "note": "Full-page captures sampled different fixed-header scroll states; matched viewport and all pixels below the 66px header are unchanged."
+    },
+    {
+      "width": 320,
+      "view": "viewport",
+      "changedPixels": 0
+    },
+    {
+      "width": 320,
+      "view": "full",
+      "changedPixels": 18520,
+      "belowHeaderChangedPixels": 0,
+      "note": "Full-page captures sampled different fixed-header scroll states; matched viewport and all pixels below the 66px header are unchanged."
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

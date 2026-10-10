@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "client": "birmingham-trade-car-sales-grasmere",
+  "templateKey": "modern",
+  "templateVersion": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
+  "createdAt": "2026-10-10T12:25:21.216Z",
+  "state": "personalized-needs-build",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": "gb-birmingham-trade-car-sales-grasmere",
+    "demoProjectId": null,
+    "registered": false
+  },
+  "templateSource": {
+    "repository": "darkapoparka/cars",
+    "revision": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
+    "path": "templates/modern",
+    "tree": "c2b3b3e74815c1e5eba0c82cfb1352c795921dcf",
+    "digest": "f097bc4802e62ffb0b752bc5523f3fe1b00df83f67b16843d698d276d10344a3",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "5",
+    "entry": "/variant-2/cars"
+  },
+  "workflowCommit": "2c54ec1e0612b95910825bd885ba3e4b7d40d1cd",
+  "hosting": {
+    "provider": "cloudflare",
+    "status": "not-deployed"
+  },
+  "readyToPublish": false
+}

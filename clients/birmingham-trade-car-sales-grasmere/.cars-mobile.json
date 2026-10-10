@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "format": "mobile-preview-v1",
+  "dealer": "birmingham-trade-car-sales-grasmere",
+  "name": "Trade Car Sales",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "876590474d01178413feccf3153a0859230158a1",
+    "path": "templates/mobile",
+    "tree": "7b1f0878715aa1bc0f5942c7e654a6a1bb091510",
+    "digest": "380b153972039a80dccee73f53760a87e963d007b83a921020c5ab5353c942fc"
+  },
+  "sourceDigest": "516090bbc6ac56982cea29174e7ca8432f6419728e3ad9b86117f46bbb992db0",
+  "inventory": {
+    "mode": "dated-listing-snapshot",
+    "count": 10,
+    "observedAt": "2026-10-10"
+  },
+  "personalization": {
+    "profileSha256": "4f03677c0bfb343abc857cb793fa9b13aabe097d80fc15e08f3084145080fdcd",
+    "logoPaths": [
+      "/dealer-brand/logo.webp"
+    ],
+    "mediaPaths": [
+      "/dealer-stock/van.webp",
+      "/dealer-stock/hatchback.webp",
+      "/dealer-stock/wagon.webp",
+      "/dealer-stock/sedan.webp",
+      "/dealer-stock/coupe.webp"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "mobile/src/lib/showroom-config.ts",
+      "mobile/src/lib/catalog.ts",
+      "mobile/src/lib/dealers.ts",
+      "mobile/src/lib/dealer-inventory.json",
+      "mobile/src/lib/locale.ts",
+      "mobile/src/lib/search.ts",
+      "mobile/src/components/NativeDealerCards.tsx",
+      "mobile/src/components/DealerScreens.tsx",
+      "mobile/src/components/VehicleCard.tsx",
+      "mobile/src/components/ShowroomVehicleCard.tsx",
+      "mobile/src/components/VehicleSections.tsx",
+      "mobile/src/lib/dealer-mileage.ts",
+      "mobile/src/lib/filter-fields.ts",
+      "mobile/src/lib/native-filter-options.ts",
+      "mobile/src/components/DesktopVehicleSummary.tsx",
+      "mobile/src/components/NativeCarPark.tsx",
+      "mobile/src/components/ShowroomFilterSheet.tsx",
+      "mobile/src/lib/vehicle-copy.ts",
+      "mobile/src/components/ShowroomInventoryScreen.tsx",
+      "mobile/src/components/ShowroomDesktopFilterFields.tsx",
+      "mobile/src/components/ShowroomServiceRequest.tsx",
+      "mobile/src/lib/service-requests.ts",
+      "mobile/src/lib/enquiry.ts",
+      "mobile/src/lib/assistant.ts"
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

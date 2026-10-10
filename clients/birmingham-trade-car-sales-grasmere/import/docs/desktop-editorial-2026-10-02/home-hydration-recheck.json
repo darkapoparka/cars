@@ -1,0 +1,30 @@
+{
+	"earlierFailure": {
+		"name": "home",
+		"locale": "bg",
+		"width": 1920,
+		"failure": "page.waitForFunction: Timeout 15000ms exceeded."
+	},
+	"thresholdMs": 15000,
+	"fullStateRecheck": "Passed",
+	"probes": [
+		{
+			"attempt": 1,
+			"status": 200,
+			"navigationAndHydrationMs": 525,
+			"errors": []
+		},
+		{
+			"attempt": 2,
+			"status": 200,
+			"navigationAndHydrationMs": 481,
+			"errors": []
+		},
+		{
+			"attempt": 3,
+			"status": 200,
+			"navigationAndHydrationMs": 527,
+			"errors": []
+		}
+	]
+}
