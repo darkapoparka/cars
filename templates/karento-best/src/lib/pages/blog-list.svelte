@@ -1,21 +1,17 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import BoxPostsGrid244dc77d6 from "#lib/sections/BoxPostsGrid244dc77d6.svelte";
-  import BoxSection35f1a4b6 from "#lib/sections/BoxSection35f1a4b6.svelte";
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import TrendingNewsGrid from "#lib/sections/TrendingNewsGrid.svelte";
+  import NewsList from "#lib/sections/NewsList.svelte";
   import Footer from "#lib/components/Footer.svelte";
-  import { dealer } from "#lib/content.ts";
 </script>
 
-<svelte:head
-  ><title
-    >{dealer.name === "Karento"
-      ? "Carento - Car rental Bootstrap 5 Template"
-      : "Carento - Car rental Bootstrap 5 Template" +
-        " | " +
-        dealer.name}</title
-  ></svelte:head
->
+<PageMetadata title={locale.t("ui.blog-list.news")} />
 <main class="main"
-  ><BoxPostsGrid244dc77d6 />
-  <BoxSection35f1a4b6 />
+  ><TrendingNewsGrid />
+  <NewsList />
   <Footer /></main
 >

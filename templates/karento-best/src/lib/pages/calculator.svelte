@@ -1,23 +1,25 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import SectionCta11Pt85655b768d from "#lib/sections/SectionCta11Pt85655b768d.svelte";
-  import SectionCta12633889a9 from "#lib/sections/SectionCta12633889a9.svelte";
-  import SectionBoxBanner3Banner285f6a313 from "#lib/sections/SectionBoxBanner3Banner285f6a313.svelte";
-  import SectionFaqs2Pt80ae47a2dc from "#lib/sections/SectionFaqs2Pt80ae47a2dc.svelte";
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import CalculatorHero from "#lib/sections/CalculatorHero.svelte";
+  import LoanCalculatorLayout from "#lib/sections/LoanCalculatorLayout.svelte";
+  import RentalSavingsBanner from "#lib/sections/RentalSavingsBanner.svelte";
+  import AboutFaqColumns from "#lib/sections/AboutFaqColumns.svelte";
   import Footer from "#lib/components/Footer.svelte";
-  import { dealer } from "#lib/content.ts";
+  import { MediaQuery } from "svelte/reactivity";
+  const desktop = new MediaQuery("(min-width: 992px)");
 </script>
 
-<svelte:head
-  ><title
-    >{dealer.name === "Karento"
-      ? "Car Calculator | Karento"
-      : "Car Calculator" + " | " + dealer.name}</title
-  ></svelte:head
->
+<PageMetadata title={locale.t("ui.calculator.car-calculator")} />
 <main class="main"
-  ><SectionCta11Pt85655b768d />
-  <SectionCta12633889a9 />
-  <SectionBoxBanner3Banner285f6a313 />
-  <SectionFaqs2Pt80ae47a2dc />
+  ><CalculatorHero />
+  <LoanCalculatorLayout />
+  {#if !desktop.current}
+    <RentalSavingsBanner />
+    <AboutFaqColumns />
+  {/if}
   <Footer /></main
 >

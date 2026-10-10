@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import { load } from "cheerio";
-import { resolveRoute } from "../src/lib/routes.ts";
+import { resolveRoute, type SourceKey } from "../src/lib/routes.ts";
+import adjustments from "../provenance/reviewed-reference-adjustments.json" with { type: "json" };
 
 interface ReferencePage {
   title: string;
@@ -16,6 +17,9 @@ const pages = JSON.parse(
     "utf8",
   ),
 ) as Record<string, ReferencePage>;
+// Only the declared metadata cleanup differs from the preserved title contract.
+// Body, images and captured composition hashes remain independently asserted.
+const titles: Partial<Record<SourceKey, string>> = adjustments.titles.values;
 export function mainText(body: string): string {
   const $ = load(body);
   // Block boundaries create visible separation even when HTML has no newline.
@@ -29,5 +33,5 @@ export function referencePage(route: string): ReferencePage {
   const key = resolveRoute(route);
   if (!key || !Object.hasOwn(pages, key))
     throw new Error(`No captured reference for ${route}`);
-  return pages[key];
+  return titles[key] ? { ...pages[key], title: titles[key] } : pages[key];
 }

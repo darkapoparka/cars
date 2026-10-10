@@ -1,5 +1,11 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import { locales } from "#lib/i18n/locales.ts";
   import { tick, untrack } from "svelte";
+  import type { Attachment } from "svelte/attachments";
   import type { HTMLInputAttributes } from "svelte/elements";
   import {
     calendarDays,
@@ -12,7 +18,7 @@
   const generatedId = $props.id();
   let {
     value = $bindable(""),
-    class: className = "",
+    class: className = "desktop-type-body",
     id = generatedId,
     ...attributes
   }: Omit<HTMLInputAttributes, "value" | "type" | "class" | "id"> & {
@@ -20,11 +26,17 @@
     class?: string;
     id?: string;
   } = $props();
-  let input: HTMLInputElement;
+  let input: HTMLInputElement | undefined;
+  const ownInput: Attachment<HTMLInputElement> = (node) => {
+    input = node;
+    return () => {
+      if (input === node) input = undefined;
+    };
+  };
   let popup = $state<HTMLDivElement>();
   let open = $state(false);
   let restoringFocus = false;
-  let selected = $state<Date | null>(null);
+  const selected = $derived(parseDate(value));
   let cursor = $state(untrack(() => parseDate(value) || new Date()));
   let left = $state(0);
   let top = $state(0);
@@ -32,10 +44,33 @@
   const days = $derived(calendarDays(cursor.getFullYear(), cursor.getMonth()));
   const decade = $derived(Math.floor(cursor.getFullYear() / 10) * 10);
   const label = $derived(
-    `${months[cursor.getMonth()]} ${cursor.getFullYear()}`,
+    new Intl.DateTimeFormat(locales[locale.locale].format, {
+      month: "long",
+      year: "numeric",
+    }).format(cursor),
   );
+  const weekLabels = $derived(
+    Array.from({ length: 7 }, (_, index) =>
+      new Intl.DateTimeFormat(locales[locale.locale].format, {
+        weekday: "short",
+      }).format(dateAt(2025, 0, 5 + index)),
+    ),
+  );
+  const monthLabels = $derived(
+    Array.from({ length: 12 }, (_, index) =>
+      new Intl.DateTimeFormat(locales[locale.locale].format, {
+        month: "short",
+      }).format(dateAt(2025, index, 1)),
+    ),
+  );
+  function calendarDateLabel(date: Date) {
+    return new Intl.DateTimeFormat(locales[locale.locale].format, {
+      dateStyle: "long",
+    }).format(date);
+  }
   const numeric = $derived(className.includes("calendar-date"));
   function position() {
+    if (!open || !input?.isConnected) return;
     const box = input.getBoundingClientRect();
     const width = popup?.offsetWidth || 340;
     left =
@@ -46,22 +81,25 @@
   async function show(keyboard = false) {
     if (restoringFocus) return;
     if (open) {
-      if (keyboard) void focusDate();
+      if (keyboard) {
+        if (selected) cursor = selected;
+        void focusCursor();
+      }
       return;
     }
-    selected = parseDate(value);
     const now = new Date();
     cursor =
       selected || dateAt(now.getFullYear(), now.getMonth(), now.getDate());
     mode = "days";
     open = true;
     await tick();
+    if (!open || !input?.isConnected) return;
     position();
-    if (keyboard) focusDate();
+    if (keyboard) void focusCursor();
   }
   function close(restore = false) {
     open = false;
-    if (restore) {
+    if (restore && input?.isConnected) {
       restoringFocus = true;
       input.focus({ preventScroll: true });
       queueMicrotask(() => {
@@ -70,16 +108,22 @@
     }
   }
   function choose(date: Date) {
+    if (!input?.isConnected) return;
     value = formatDate(date, numeric);
     input.value = value;
     input.dispatchEvent(new Event("input", { bubbles: true }));
     input.dispatchEvent(new Event("change", { bubbles: true }));
     close(true);
   }
-  async function focusDate() {
+  async function focusCursor() {
     await tick();
+    if (!open || !popup?.isConnected) return;
+    const selector =
+      mode === "days"
+        ? `[data-date="${cursor.getTime()}"]`
+        : `[data-calendar-period="${mode === "months" ? cursor.getMonth() : cursor.getFullYear()}"]`;
     popup
-      ?.querySelector<HTMLButtonElement>(`[data-date="${cursor.getTime()}"]`)
+      ?.querySelector<HTMLButtonElement>(selector)
       ?.focus({ preventScroll: true });
   }
   function keydown(event: KeyboardEvent) {
@@ -121,36 +165,29 @@
       );
     else return;
     event.preventDefault();
-    void focusDate();
+    void focusCursor();
   }
-  function portal(node: HTMLElement) {
+  const portal: Attachment<HTMLDivElement> = (node) => {
+    popup = node;
     document.body.appendChild(node);
-    return {
-      destroy() {
-        node.remove();
-      },
-    };
-  }
-  $effect(() => {
-    if (!open) return;
-    const dismiss = (event: PointerEvent) => {
-      if (
-        event.target instanceof Node &&
-        !popup?.contains(event.target) &&
-        event.target !== input
-      )
-        close();
-    };
-    document.addEventListener("pointerdown", dismiss);
-    window.addEventListener("resize", position);
-    window.addEventListener("scroll", position, true);
     return () => {
-      document.removeEventListener("pointerdown", dismiss);
-      window.removeEventListener("resize", position);
-      window.removeEventListener("scroll", position, true);
+      if (popup === node) popup = undefined;
+      node.remove();
     };
-  });
+  };
+  function dismiss(event: PointerEvent) {
+    if (
+      open &&
+      event.target instanceof Node &&
+      !popup?.contains(event.target) &&
+      event.target !== input
+    )
+      close();
+  }
 </script>
+
+<svelte:document onpointerdown={dismiss} />
+<svelte:window onresize={position} onscrollcapture={position} />
 
 <input
   {...attributes}
@@ -160,7 +197,7 @@
   role="combobox"
   aria-autocomplete="none"
   bind:value
-  bind:this={input}
+  {@attach ownInput}
   data-widget-ready="true"
   aria-haspopup="dialog"
   aria-expanded={open}
@@ -182,15 +219,14 @@
 />
 {#if open}
   <div
-    bind:this={popup}
-    use:portal
+    {@attach portal}
     id={`${id}-calendar`}
     class="datepicker datepicker-dropdown dropdown-menu datepicker-orient-left datepicker-orient-bottom karento-calendar"
     style:left={`${left}px`}
     style:top={`${top}px`}
     style:display="block"
     role="dialog"
-    aria-label="Choose a date"
+    aria-label={locale.t("ui.calendar-input.choose-a-date")}
     tabindex="-1"
     onkeydown={keydown}
   >
@@ -201,7 +237,13 @@
             ><th class="prev"
               ><button
                 type="button"
-                aria-label={`Previous ${mode === "years" ? "decade" : mode === "months" ? "year" : "month"}`}
+                aria-label={locale.t(
+                  mode === "years"
+                    ? "calendar.previous.decade"
+                    : mode === "months"
+                      ? "calendar.previous.year"
+                      : "calendar.previous.month",
+                )}
                 onclick={() => {
                   cursor = moveMonth(
                     cursor,
@@ -211,6 +253,7 @@
               ></button></th
             ><th colspan="5" class="datepicker-switch"
               ><button
+                class="desktop-type-control"
                 type="button"
                 aria-live="polite"
                 onclick={() => {
@@ -225,7 +268,13 @@
             ><th class="next"
               ><button
                 type="button"
-                aria-label={`Next ${mode === "years" ? "decade" : mode === "months" ? "year" : "month"}`}
+                aria-label={locale.t(
+                  mode === "years"
+                    ? "calendar.next.decade"
+                    : mode === "months"
+                      ? "calendar.next.year"
+                      : "calendar.next.month",
+                )}
                 onclick={() => {
                   cursor = moveMonth(
                     cursor,
@@ -236,28 +285,39 @@
             ></tr
           >
           {#if mode === "days"}<tr
-              >{#each ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"] as day}<th
-                  class="dow"
+              >{#each weekLabels as day (day)}<th
+                  class="dow desktop-type-label"
                   scope="col">{day}</th
                 >{/each}</tr
             >{/if}
         </thead>
         <tbody>
           {#if mode === "days"}
-            {#each Array.from({ length: 6 }, (_, i) => i) as row}
+            {#each Array.from({ length: 6 }, (_, i) => i) as row (days[row * 7].getTime())}
               <tr
-                >{#each days.slice(row * 7, row * 7 + 7) as date}<td
-                    class:old={date <
-                      dateAt(cursor.getFullYear(), cursor.getMonth(), 1)}
-                    class:new={date >
-                      dateAt(cursor.getFullYear(), cursor.getMonth() + 1, 0)}
-                    class:active={selected?.getTime() === date.getTime()}
-                    class="day"
+                >{#each days.slice(row * 7, row * 7 + 7) as date (date.getTime())}<td
+                    class={[
+                      "day",
+                      {
+                        old:
+                          date <
+                          dateAt(cursor.getFullYear(), cursor.getMonth(), 1),
+                        new:
+                          date >
+                          dateAt(
+                            cursor.getFullYear(),
+                            cursor.getMonth() + 1,
+                            0,
+                          ),
+                        active: selected?.getTime() === date.getTime(),
+                      },
+                    ]}
                     aria-selected={selected?.getTime() === date.getTime()}
                     ><button
+                      class="desktop-type-body-small"
                       type="button"
                       data-date={date.getTime()}
-                      aria-label={formatDate(date, false)}
+                      aria-label={calendarDateLabel(date)}
                       tabindex={date.getTime() === cursor.getTime() ? 0 : -1}
                       onfocus={() => {
                         cursor = date;
@@ -271,8 +331,12 @@
             <tr
               ><td colspan="7"
                 ><div class="karento-calendar-options"
-                  >{#each Array.from({ length: 12 }, (_, i) => i) as i}<button
+                  >{#each Array.from({ length: 12 }, (_, i) => i) as i (mode === "years" ? decade - 1 + i : months[i])}<button
+                      class="desktop-type-body-small"
                       type="button"
+                      data-calendar-period={mode === "years"
+                        ? decade - 1 + i
+                        : i}
                       onclick={() => {
                         cursor = dateAt(
                           mode === "years"
@@ -282,10 +346,11 @@
                           1,
                         );
                         mode = mode === "years" ? "months" : "days";
+                        void focusCursor();
                       }}
                       >{mode === "years"
                         ? decade - 1 + i
-                        : months[i].slice(0, 3)}</button
+                        : monthLabels[i]}</button
                     >{/each}</div
                 ></td
               ></tr

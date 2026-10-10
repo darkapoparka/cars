@@ -1,0 +1,104 @@
+/* Shared phone geometry, surfaces and typography. Components own composition. */
+@media (max-width: 767.98px) {
+  html:root {
+    --karento-space-1: 4px;
+    --karento-space-2: 8px;
+    --karento-space-3: 12px;
+    --karento-space-4: 16px;
+    --karento-space-6: 24px;
+    --karento-space-8: 32px;
+    --karento-radius-card: 12px;
+    --karento-radius-media: 8px;
+    --karento-radius-panel: 16px;
+    --karento-radius-pill: 999px;
+    --karento-radius-sheet: 24px;
+    --karento-touch-target: 44px;
+    --karento-control-selector: 36px;
+    --karento-control-field: 48px;
+    --karento-control-line: 20px;
+    --karento-control-icon: 16px;
+    --karento-control-inset: 12px;
+    --karento-newsletter-field-basis: 16rem;
+    --karento-browse-inset-inline: 6px;
+    --karento-browse-inset-block: 3px;
+    --karento-safe-area-bottom: env(safe-area-inset-bottom, 0px);
+    --karento-mobile-navigation-height: calc(
+      var(--karento-touch-target) + var(--karento-space-1) +
+        var(--karento-space-1) + 1px + var(--karento-safe-area-bottom)
+    );
+    --karento-surface-tool: var(--bs-neutral-100);
+    --karento-border-tool: var(--bs-neutral-200);
+    --karento-image-landscape: 4 / 3;
+    --karento-image-wide: 16 / 9;
+    --karento-image-portrait: 4 / 5;
+    --karento-vehicle-media-max: 9rem;
+    --karento-type-hero-size: 1.625rem;
+    --karento-type-hero-weight: 700;
+    --karento-type-hero-leading: 1.15;
+    --karento-type-hero-tracking: -0.6px;
+    --karento-type-page-size: 1.375rem;
+    --karento-type-page-weight: 700;
+    --karento-type-page-leading: 1.2;
+    --karento-type-section-size: 1.25rem;
+    --karento-type-section-weight: 700;
+    --karento-type-section-leading: 1.25;
+    --karento-type-detail-size: 1.25rem;
+    --karento-type-detail-weight: 700;
+    --karento-type-detail-leading: 1.25;
+    --karento-type-panel-size: 1.125rem;
+    --karento-type-panel-weight: 700;
+    --karento-type-panel-leading: 1.3;
+    --karento-type-card-size: 1rem;
+    --karento-type-card-weight: 700;
+    --karento-type-card-leading: 1.3;
+    --karento-type-compact-card-size: 1.125rem;
+    --karento-type-compact-card-weight: 700;
+    --karento-type-compact-card-leading: 1.35;
+    --karento-type-lead-size: 0.9375rem;
+    --karento-type-lead-weight: 500;
+    --karento-type-lead-leading: 1.5;
+    --karento-type-body-size: 0.875rem;
+    --karento-type-body-weight: 400;
+    --karento-type-body-leading: 1.5;
+    --karento-type-body-small-size: 0.8125rem;
+    --karento-type-body-small-weight: 400;
+    --karento-type-body-small-leading: 1.5;
+    --karento-type-meta-size: 0.75rem;
+    --karento-type-meta-weight: 400;
+    --karento-type-meta-leading: 1.5;
+    --karento-type-eyebrow-size: 0.8125rem;
+    --karento-type-eyebrow-weight: 500;
+    --karento-type-eyebrow-leading: 20px;
+    --karento-type-label-size: 0.8125rem;
+    --karento-type-label-weight: 500;
+    --karento-type-label-leading: 20px;
+    --karento-type-badge-size: 0.75rem;
+    --karento-type-badge-weight: 600;
+    --karento-type-badge-leading: 18px;
+    --karento-type-control-size: 0.8125rem;
+    --karento-type-control-weight: 600;
+    --karento-type-control-leading: 20px;
+    --karento-type-pill-size: 0.8125rem;
+    --karento-type-pill-weight: 600;
+    --karento-type-pill-leading: 20px;
+    --karento-type-field-size: 1rem;
+    --karento-type-field-weight: 400;
+    --karento-type-field-leading: 22px;
+    --karento-type-price-size: 1.125rem;
+    --karento-type-price-weight: 700;
+    --karento-type-price-leading: 1.4;
+    --karento-type-nav-size: 0.75rem;
+    --karento-type-nav-weight: 500;
+    --karento-type-nav-leading: 18px;
+
+    /* Existing consumers keep working while components select semantic roles. */
+    --karento-text-compact: var(--karento-type-meta-size);
+    --karento-text-caption: var(--karento-type-label-size);
+    --karento-text-field: var(--karento-type-field-size);
+    --karento-text-body: var(--karento-type-body-size);
+    --karento-text-card-title: var(--karento-type-card-size);
+    --karento-text-subheading: var(--karento-type-panel-size);
+    --karento-text-heading: var(--karento-type-section-size);
+    --karento-text-section: var(--karento-type-page-size);
+  }
+}

@@ -1,5 +1,8 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import NotFound from "#lib/pages/404.svelte";
+  import ErrorPage from "#lib/pages/404.svelte";
+  import { page } from "$app/state";
 </script>
 
-<NotFound />
+<ErrorPage status={page.status} />

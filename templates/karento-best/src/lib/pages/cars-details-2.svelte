@@ -1,21 +1,17 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import BoxSectionBoxBreadcrumba56474dc from "#lib/sections/BoxSectionBoxBreadcrumba56474dc.svelte";
-  import BoxSectionBoxContentTourDetailaf5525a3 from "#lib/sections/BoxSectionBoxContentTourDetailaf5525a3.svelte";
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import VehicleBreadcrumb from "#lib/sections/VehicleBreadcrumb.svelte";
+  import VehicleSplitDetail from "#lib/sections/VehicleSplitDetail.svelte";
   import Footer from "#lib/components/Footer.svelte";
-  import { dealer } from "#lib/content.ts";
 </script>
 
-<svelte:head
-  ><title
-    >{dealer.name === "Karento"
-      ? "Carento - Car rental Bootstrap 5 Template"
-      : "Carento - Car rental Bootstrap 5 Template" +
-        " | " +
-        dealer.name}</title
-  ></svelte:head
->
+<PageMetadata title={locale.t("ui.cars-details-2.vehicle-details")} />
 <main class="main"
-  ><BoxSectionBoxBreadcrumba56474dc />
-  <BoxSectionBoxContentTourDetailaf5525a3 />
+  ><VehicleBreadcrumb />
+  <VehicleSplitDetail />
   <Footer /></main
 >

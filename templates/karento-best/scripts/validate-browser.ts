@@ -7,7 +7,21 @@ import { sourceKeys } from "../src/lib/routes.ts";
 import adjustments from "../provenance/reviewed-reference-adjustments.json" with { type: "json" };
 const baselineUrl =
   process.env.KARENTO_BASELINE_URL || "http://127.0.0.1:19478";
+const referenceKind = process.env.KARENTO_REFERENCE_KIND || "preserved";
+assert.ok(
+  ["preserved", "native"].includes(referenceKind),
+  "Unknown reference kind",
+);
 const nativeUrl = process.env.KARENTO_NATIVE_URL || "http://127.0.0.1:6466";
+const widths = (process.env.KARENTO_WIDTHS || "320,390,1440")
+  .split(",")
+  .map(Number);
+assert.ok(
+  widths.length > 0 &&
+    new Set(widths).size === widths.length &&
+    widths.every((width) => [320, 390, 768, 1024, 1440].includes(width)),
+  "KARENTO_WIDTHS must be a unique subset of 320,390,768,1024,1440",
+);
 const failures: string[] = [];
 const directory = process.env.KARENTO_EVIDENCE_DIR || ".runtime/evidence";
 fs.mkdirSync(directory, { recursive: true });
@@ -16,6 +30,29 @@ const routes = (
 ).split(",");
 const browser = await launchBrowser();
 const results: unknown[] = [];
+const captureBaseline = process.env.KARENTO_CAPTURE_BASELINE === "1";
+interface SavedCapture {
+  route: string;
+  width: number;
+  drawer: boolean;
+  capture: Awaited<ReturnType<typeof capture>>;
+}
+const captures: SavedCapture[] = [];
+const savedCaptures: SavedCapture[] = process.env.KARENTO_SAVED_BASELINE
+  ? JSON.parse(fs.readFileSync(process.env.KARENTO_SAVED_BASELINE, "utf8"))
+  : [];
+function retainedBaseline(route: string, width: number, drawer = false) {
+  const saved = savedCaptures.find(
+    (entry) =>
+      entry.route === route && entry.width === width && entry.drawer === drawer,
+  );
+  assert.ok(saved, `Missing saved baseline for ${route} at ${width}px`);
+  assert.ok(
+    fs.existsSync(saved.capture.file),
+    "Saved baseline pixels must exist",
+  );
+  return saved.capture;
+}
 async function capture(
   base: string,
   route: string,
@@ -29,22 +66,45 @@ async function capture(
   });
   const errors: string[] = [];
   page.on("pageerror", (error) => errors.push(error.message));
+  page.on("console", (message) => {
+    if (
+      message.type() === "error" &&
+      !/^Failed to load resource:/.test(message.text())
+    )
+      errors.push(message.text());
+  });
   await page.route("**/*", (request) =>
     new URL(request.request().url()).hostname === "127.0.0.1"
       ? request.continue()
       : request.abort(),
   );
   await page.clock.setFixedTime(new Date("2026-10-07T10:00:00Z"));
-  await page.goto(`${base}${route}`, {
+  const response = await page.goto(`${base}${route}`, {
     waitUntil: "networkidle",
   });
-  await page.waitForFunction(
-    () => document.body.dataset.karentoReady === "true",
-  );
+  assert.equal(response?.status(), 200, `${route}: HTTP status`);
+  try {
+    await page.waitForFunction(
+      () => document.body.dataset.karentoReady === "true",
+    );
+  } catch (cause) {
+    const state = await page.evaluate(() => ({
+      title: document.title,
+      ready: document.body.dataset.karentoReady,
+      documentState: document.readyState,
+      widgets: [
+        ...document.querySelectorAll<HTMLElement>("[data-widget-error]"),
+      ].map((node) => node.dataset.widgetError),
+    }));
+    throw new Error(
+      `Readiness failed at ${base}${route}: ${JSON.stringify({ ...state, errors })}`,
+      { cause },
+    );
+  }
   await page.evaluate(() => document.fonts.ready);
   // Compare the range labels in the same stable 2D layer used by the native
   // fix. This changes neither their font nor geometry and masks no pixels.
-  if (base === baselineUrl) {
+  if (base === baselineUrl && referenceKind === "preserved") {
     await page.evaluate((styles) => {
       if (!document.querySelector("#slider-range")) return;
       const style = document.createElement("style");
@@ -55,7 +115,11 @@ async function capture(
   // The owner changed Contact after the preserved captured-renderer checkpoint.
   // Apply that declared composition to the reference only; never mask pixels or
   // mutate the hash-locked source. Every native page is captured as delivered.
-  if (base === baselineUrl && route === "/contact") {
+  if (
+    base === baselineUrl &&
+    referenceKind === "preserved" &&
+    route === "/contact"
+  ) {
     await page.evaluate((styles) => {
       const row = document.querySelector("main .karento-contact-layout");
       if (
@@ -75,7 +139,11 @@ async function capture(
   // The preserved wallet chart redraws when its own parent height changes,
   // producing a resize feedback loop. Set the same chart option used by the
   // native fix; its data, dimensions, artwork and screenshot pixels stay visible.
-  if (base === baselineUrl && route === "/user-dashboard-wallet") {
+  if (
+    base === baselineUrl &&
+    referenceKind === "preserved" &&
+    route === "/user-dashboard-wallet"
+  ) {
     await page.evaluate(async (chartOptions) => {
       const reference = window as typeof window & {
         chart?: {
@@ -289,16 +357,32 @@ async function capture(
   return { file, name, errors, pageWidth, typography, ...geometry };
 }
 try {
-  for (const width of [320, 390, 1440])
+  for (const width of widths)
     for (const route of routes) {
-      const [baseline, native] = await Promise.all([
-        capture(
-          baselineUrl,
+      if (captureBaseline) {
+        captures.push({
           route,
           width,
-          false,
-          baselineUrl === nativeUrl ? "baseline" : "",
-        ),
+          drawer: false,
+          capture: await capture(nativeUrl, route, width, false, "baseline"),
+        });
+        fs.writeFileSync(
+          directory + "/captures.json",
+          JSON.stringify(captures, null, 2),
+        );
+        console.log("CAPTURE", route, width);
+        continue;
+      }
+      const [baseline, native] = await Promise.all([
+        savedCaptures.length
+          ? Promise.resolve(retainedBaseline(route, width))
+          : capture(
+              baselineUrl,
+              route,
+              width,
+              false,
+              baselineUrl === nativeUrl ? "baseline" : "",
+            ),
         capture(
           nativeUrl,
           route,
@@ -348,13 +432,15 @@ try {
         horizontalOverflowNative: native.pageWidth - width,
         exactRawMatch: a.equals(b),
         differentPixels: different,
-        rangeLayerNormalization: baseline.rangeCount
-          ? adjustments.ranges.reason
-          : undefined,
+        rangeLayerNormalization:
+          referenceKind === "preserved" && baseline.rangeCount
+            ? adjustments.ranges.reason
+            : undefined,
         reviewedReferenceAdjustment:
-          route === "/contact"
+          referenceKind === "preserved" && route === "/contact"
             ? adjustments.contact.reason
-            : route === "/user-dashboard-wallet"
+            : referenceKind === "preserved" &&
+                route === "/user-dashboard-wallet"
               ? adjustments.wallet.reason
               : undefined,
         typography: different
@@ -372,6 +458,7 @@ try {
         different > 0 ||
         metaA.height !== metaB.height ||
         native.errors.length ||
+        native.broken.length ||
         native.widgets.length ||
         native.pageWidth > width ||
         sectionDeltas.some(
@@ -394,14 +481,29 @@ try {
         JSON.stringify(results, null, 2),
       );
     }
-  for (const width of [320, 390, 1440]) {
-    const a = await capture(
-        baselineUrl,
-        "/",
+  for (const width of widths) {
+    if (captureBaseline) {
+      captures.push({
+        route: "/",
         width,
-        true,
-        baselineUrl === nativeUrl ? "baseline" : "",
-      ),
+        drawer: true,
+        capture: await capture(nativeUrl, "/", width, true, "baseline"),
+      });
+      fs.writeFileSync(
+        directory + "/captures.json",
+        JSON.stringify(captures, null, 2),
+      );
+      continue;
+    }
+    const a = savedCaptures.length
+        ? retainedBaseline("/", width, true)
+        : await capture(
+            baselineUrl,
+            "/",
+            width,
+            true,
+            baselineUrl === nativeUrl ? "baseline" : "",
+          ),
       b = await capture(
         nativeUrl,
         "/",

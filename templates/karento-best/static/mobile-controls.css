@@ -1,0 +1,1096 @@
+/* Phone controls reuse the maintained cards, fields and native dialog sheet. */
+@media (max-width: 767.98px) {
+  .main .mobile-section-label {
+    display: inline-flex;
+    align-items: center;
+    min-height: 0;
+    height: auto;
+    padding: var(--karento-browse-inset-block) var(--karento-space-2) !important;
+    border-radius: var(--karento-radius-pill) !important;
+    font-size: var(--karento-type-eyebrow-size) !important;
+    font-weight: var(--karento-type-eyebrow-weight) !important;
+    line-height: var(--karento-type-eyebrow-leading) !important;
+  }
+  .footer .phone-support {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--karento-touch-target);
+  }
+  .karento-account-drawer .karento-account-heading {
+    font-size: var(--karento-type-badge-size);
+    font-weight: var(--karento-type-badge-weight);
+    line-height: var(--karento-type-badge-leading);
+  }
+  .karento-account-drawer
+    :is(
+      .karento-drawer-account a,
+      .karento-demo-signout,
+      .karento-drawer-navigation a,
+      .karento-drawer-explore > summary,
+      [data-signature-language] a
+    ) {
+    font-size: var(--karento-type-control-size);
+    font-weight: var(--karento-type-control-weight);
+    line-height: var(--karento-type-control-leading);
+  }
+  .karento-account-drawer [data-signature-language] > p {
+    font-size: var(--karento-type-label-size);
+    font-weight: var(--karento-type-label-weight);
+    line-height: var(--karento-type-label-leading);
+  }
+  /* The preserved .btn-gray typography uses important declarations. */
+  .karento-account-drawer [data-signature-language] a.btn {
+    font-size: var(--karento-type-control-size) !important;
+    font-weight: var(--karento-type-control-weight) !important;
+    line-height: var(--karento-type-control-leading) !important;
+  }
+  .footer .icon-socials {
+    position: relative;
+  }
+  .footer .icon-socials::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: max(100%, var(--karento-touch-target));
+    height: max(100%, var(--karento-touch-target));
+    transform: translate(-50%, -50%);
+    content: "";
+  }
+  .main .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--karento-space-2);
+    max-width: 100%;
+    font-size: var(--karento-type-control-size);
+    line-height: var(--karento-type-control-leading);
+    white-space: nowrap;
+    font-weight: var(--karento-type-control-weight);
+  }
+  /* Bridge preserved desktop actions to one phone size. Static labels and
+     disclosure/media controls keep their own component geometry. */
+  .main :is(a, button, input[type="submit"]).btn:not(.btn-collapse, .btn-play) {
+    min-height: var(--karento-touch-target);
+    height: auto;
+    padding: var(--karento-space-2) var(--karento-control-inset);
+    border-radius: var(--karento-action-radius, var(--karento-radius-card));
+    font-weight: var(--karento-type-control-weight);
+    font-size: var(--karento-type-control-size);
+    line-height: var(--karento-type-control-leading);
+  }
+  .main :is(.btn-share, .btn-wishlish, .btn-white-md) {
+    --karento-action-radius: var(--karento-radius-pill);
+  }
+  .main :is(a, button).btn.py-3 {
+    padding-block: var(--karento-space-2) !important;
+  }
+  .main :is(a, button).btn:not(.btn-collapse, .btn-play) > svg {
+    width: var(--karento-control-icon);
+    height: var(--karento-control-icon);
+  }
+  .main :is(input.form-control, select.form-control),
+  .main .input-calendar .form-control,
+  .main .form-newsletter .form-control,
+  .footer .form-newsletter .form-control,
+  .main .form-subscriber .form-control {
+    min-height: var(--karento-control-field);
+    height: var(--karento-control-field);
+    padding-block: var(--karento-space-2);
+    border-radius: var(--karento-radius-card);
+    font-size: var(--karento-type-field-size);
+    font-weight: var(--karento-type-field-weight);
+    line-height: var(--karento-type-field-leading);
+  }
+  .main .form-group textarea.form-control {
+    min-height: calc(var(--karento-control-field) * 2.5);
+    padding-block: var(--karento-space-3);
+    border-radius: var(--karento-radius-card);
+    font-size: var(--karento-type-field-size);
+    font-weight: var(--karento-type-field-weight);
+    line-height: var(--karento-type-body-leading);
+  }
+  .main .form-group {
+    margin-bottom: var(--karento-space-3);
+  }
+  .footer .form-newsletter,
+  .main .form-subscriber {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--karento-space-2);
+    min-width: 0;
+  }
+  .footer .form-newsletter .form-control,
+  .main .form-subscriber .form-control {
+    flex: 1 1 var(--karento-newsletter-field-basis);
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding-inline-end: var(--karento-control-inset);
+  }
+  .footer .form-newsletter input[type="submit"],
+  .main .form-subscriber .btn-submit {
+    flex: 0 0 auto;
+    position: static;
+    min-height: var(--karento-touch-target);
+    height: var(--karento-touch-target);
+    max-width: 100%;
+    padding: var(--karento-space-2) var(--karento-control-inset);
+    border-radius: var(--karento-radius-card);
+    font-size: var(--karento-type-control-size);
+    font-weight: var(--karento-type-control-weight);
+    line-height: var(--karento-type-control-leading);
+  }
+  .footer .form-newsletter output[data-demo-feedback],
+  .main .form-subscriber output[data-demo-feedback] {
+    display: block;
+    flex: 1 0 100%;
+    min-width: 0;
+    width: 100%;
+    margin: 0;
+    font-size: var(--karento-type-body-small-size);
+    font-weight: var(--karento-type-body-small-weight);
+    line-height: var(--karento-type-body-small-leading);
+    overflow-wrap: anywhere;
+  }
+  .main .box-search-style-2 input[type="text"] {
+    height: var(--karento-control-field);
+    min-height: var(--karento-control-field);
+    font-size: var(--karento-type-field-size);
+    font-weight: var(--karento-type-field-weight);
+    line-height: var(--karento-type-field-leading);
+  }
+  .main .btn svg {
+    margin: 0 !important;
+  }
+  .main .btn svg [stroke=""] {
+    stroke: currentColor;
+  }
+  .main .btn svg [fill=""],
+  .main .btn-brand-2 svg path[fill] {
+    fill: currentColor;
+  }
+  /* One geometry source for typed pills and the existing demo category links. */
+  .mobile-pill {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex: 0 0 auto;
+    min-width: 0;
+    max-width: 100%;
+    min-height: var(--karento-control-selector);
+    padding: var(--karento-space-1) var(--karento-control-inset);
+    border: 1px solid var(--bs-border-color);
+    border-radius: var(--karento-radius-pill);
+    color: var(--bs-neutral-1000);
+    background: var(--bs-background-card);
+    font: inherit;
+    font-size: var(--karento-type-pill-size);
+    font-weight: var(--karento-type-pill-weight);
+    line-height: var(--karento-type-pill-leading);
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .mobile-pill::before {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    top: 50%;
+    height: max(100%, var(--karento-touch-target));
+    transform: translateY(-50%);
+  }
+  .mobile-pill.mobile-pill-secondary {
+    display: inline-flex;
+    position: relative;
+    width: max-content;
+    gap: var(--karento-space-1);
+    min-height: 0;
+    height: auto;
+    justify-self: end;
+    padding: var(--karento-browse-inset-block)
+      var(--karento-browse-inset-inline);
+    border-color: var(--bs-neutral-200);
+    background: var(--bs-neutral-100);
+  }
+  .mobile-pill.mobile-pill-secondary:hover {
+    background: var(--bs-neutral-200);
+  }
+  .mobile-pill-selected {
+    border-color: var(--karento-accent);
+    background: var(--bs-neutral-100);
+  }
+  .mobile-pill svg {
+    flex: 0 0 var(--karento-control-icon);
+    width: var(--karento-control-icon);
+    height: var(--karento-control-icon);
+    margin: 0;
+  }
+  .mobile-pill-icon-only {
+    width: var(--karento-touch-target);
+    min-width: var(--karento-touch-target);
+    min-height: var(--karento-touch-target);
+    height: var(--karento-touch-target);
+    padding: 0;
+  }
+  .mobile-pill-icon-only svg {
+    flex-basis: 20px;
+    width: 20px;
+    height: 20px;
+  }
+  /* Hero icons share the 36px selector surface inside a 44px tap target. */
+  :is(.mobile-catalog-search, .mobile-service-tools) .mobile-pill-icon-only {
+    border: 0;
+    background: transparent;
+  }
+  :is(.mobile-catalog-search, .mobile-service-tools)
+    .mobile-pill-icon-only::before {
+    inset: var(--karento-space-1);
+    height: auto;
+    transform: none;
+    border: 1px solid var(--bs-border-color);
+    border-radius: inherit;
+    background: var(--bs-background-card);
+  }
+  :is(.mobile-catalog-search, .mobile-service-tools)
+    .mobile-pill-icon-only
+    svg {
+    position: relative;
+  }
+  .mobile-pill .mobile-pill-label {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+  }
+  .mobile-pill-count {
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    min-width: 18px;
+    height: 18px;
+    padding-inline: 3px;
+    border-radius: var(--karento-radius-pill);
+    background: var(--bs-neutral-200);
+    font-size: var(--karento-type-badge-size);
+    font-weight: var(--karento-type-badge-weight);
+    line-height: var(--karento-type-badge-leading);
+  }
+  .mobile-pill:focus-visible {
+    outline: 2px solid var(--karento-accent);
+    outline-offset: -2px;
+  }
+  .mobile-search-opener:focus-visible {
+    outline: 2px solid var(--karento-accent);
+    outline-offset: 2px;
+  }
+
+  /* All eight existing types fit in three columns, with no clipped rail. */
+  .main .box-list-populars > .row {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-columns: auto;
+    gap: 8px;
+    overflow: visible;
+    padding: 0;
+  }
+  .main .box-list-populars .row > div {
+    min-width: 0;
+  }
+  .main .box-list-populars .card-popular {
+    height: 100%;
+    padding: 8px;
+  }
+  .main .box-list-populars .card-image {
+    height: 64px;
+    padding: 8px;
+    margin: 0;
+    border: 0;
+  }
+  .main .box-list-populars .card-image a {
+    display: block;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+  .main .box-list-populars .card-info {
+    padding: 0 0 8px;
+    margin: 0;
+    text-align: center;
+  }
+  .main .box-list-populars .card-info > .card-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0;
+    margin: 0;
+    font-size: var(--karento-type-pill-size);
+    line-height: var(--karento-type-pill-leading);
+    white-space: normal;
+    font-weight: var(--karento-type-pill-weight);
+  }
+  .main .box-list-populars .card-meta {
+    display: block;
+    margin: 0;
+  }
+  .main .box-list-populars .meta-links {
+    display: block;
+  }
+  .main .box-list-populars .card-popular .card-info .card-meta .meta-links a {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-size: var(--karento-type-meta-size);
+    line-height: var(--karento-type-meta-leading);
+    white-space: nowrap;
+    font-weight: var(--karento-type-meta-weight);
+  }
+  .main
+    .section-box:has(> .container > .box-list-populars)
+    .row.align-items-end {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+    margin-inline: 0;
+  }
+  .main
+    .section-box:has(> .container > .box-list-populars)
+    .row.align-items-end
+    > div {
+    width: auto;
+    padding: 0;
+  }
+  .main
+    .section-box:has(> .container > .box-list-populars)
+    .row.align-items-end
+    p {
+    display: none;
+  }
+  .main
+    .section-box:has(> .container > .box-list-populars)
+    .row.align-items-end
+    .d-flex {
+    margin-top: 0 !important;
+  }
+
+  /* Search opens the same sheet in place, with its action inside the sheet. */
+  .mobile-search-opener {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    min-height: 44px;
+    padding: 0 8px;
+    border: 0;
+    background: transparent;
+    color: var(--bs-neutral-1000);
+    font: inherit;
+    font-size: var(--karento-type-field-size);
+    text-align: left;
+    font-weight: var(--karento-type-field-weight);
+    line-height: var(--karento-type-field-leading);
+  }
+  .mobile-search-opener svg {
+    flex: 0 0 20px;
+    margin: 0 !important;
+    color: var(--bs-neutral-500);
+  }
+  .mobile-search-opener span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* Supporting pages share an editable search field and the same action pill. */
+  :is(.karento-page-hero, .page-header-2):has(.karento-mobile-hero-controls) {
+    margin-bottom: calc(var(--karento-mobile-hero-control-overlap) * -1);
+  }
+  .karento-mobile-hero-controls {
+    position: absolute;
+    inset: auto 0 0;
+    z-index: 2;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 16px;
+    transform: translateY(50%);
+  }
+  .karento-mobile-hero-controls .mobile-catalog-search {
+    top: 0;
+    margin-bottom: 0;
+  }
+  .mobile-service-tools .mobile-text-search {
+    min-height: var(--karento-touch-target);
+    height: var(--karento-touch-target);
+    padding: 0 8px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+  .mobile-service-tools .mobile-text-search input {
+    min-height: 44px;
+    height: 44px;
+    font-size: var(--karento-type-field-size);
+    font-weight: var(--karento-type-field-weight);
+    line-height: var(--karento-type-field-leading);
+  }
+  .mobile-service-filters {
+    margin-block: 12px 8px;
+  }
+  .mobile-text-search {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: var(--karento-space-2);
+    min-width: 0;
+    min-height: var(--karento-control-field);
+    height: var(--karento-control-field);
+    padding: 0 4px 0 12px;
+    border: 1px solid var(--bs-border-color);
+    border-radius: var(--karento-radius-card);
+    color: var(--bs-neutral-1000);
+    background: var(--bs-background-card);
+  }
+  .mobile-text-search > svg {
+    flex: 0 0 20px;
+    color: var(--bs-neutral-500);
+  }
+  .mobile-text-search input {
+    flex: 1 1 auto;
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-size: var(--karento-type-field-size);
+    line-height: var(--karento-type-field-leading);
+    font-weight: var(--karento-type-field-weight);
+  }
+  .mobile-text-search input::placeholder {
+    color: var(--bs-neutral-500);
+    opacity: 1;
+  }
+  .mobile-text-search input::-webkit-search-cancel-button {
+    display: none;
+  }
+  .mobile-text-search button {
+    display: grid;
+    place-items: center;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+    color: inherit;
+    background: transparent;
+  }
+  .mobile-text-search:focus-within,
+  .mobile-text-search button:focus-visible {
+    outline: 2px solid var(--karento-accent);
+    outline-offset: 2px;
+  }
+  .mobile-text-search input:focus-visible {
+    outline: none !important;
+  }
+  .mobile-service-list {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+  .mobile-service-card:focus-visible {
+    outline: 2px solid var(--karento-accent);
+    outline-offset: 2px;
+  }
+  .mobile-service-empty {
+    padding-block: 16px;
+  }
+  .mobile-service-empty h4 {
+    font-size: var(--karento-type-panel-size);
+    line-height: var(--karento-type-panel-leading);
+    font-weight: var(--karento-type-panel-weight);
+  }
+  .mobile-service-empty p {
+    margin-block: 8px 16px;
+    font-size: var(--karento-type-body-size);
+    line-height: var(--karento-type-body-leading);
+    font-weight: var(--karento-type-body-weight);
+  }
+
+  /* Product photos keep the complete product inside a compact phone gallery. */
+  .karento-product-purchase .container-banner-activities {
+    margin-bottom: 16px;
+  }
+  .karento-product-purchase .banner-activities-detail > .slick-arrow {
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    min-height: 44px;
+  }
+  .karento-product-purchase .banner-activities-detail,
+  .karento-product-purchase .banner-activities-detail .slick-list,
+  .karento-product-purchase .banner-slide-activity {
+    height: clamp(200px, 60vw, 240px);
+    max-height: 240px;
+  }
+  .karento-product-purchase .banner-slide-activity a {
+    display: block;
+    height: 100%;
+  }
+  .karento-product-purchase .banner-slide-activity img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+  .karento-product-purchase .slider-thumnail-activities {
+    margin-top: 12px;
+  }
+  .karento-product-purchase .slider-thumnail-activities .banner-slide {
+    height: 56px;
+  }
+  .karento-product-purchase .karento-gallery-thumb {
+    display: grid;
+    place-items: center;
+    min-width: 44px;
+    min-height: 56px;
+  }
+  .karento-product-purchase .karento-gallery-thumb img {
+    width: 100%;
+    height: 56px;
+    object-fit: contain;
+  }
+  .karento-product-purchase .detail-qty {
+    display: grid;
+    grid-template-columns: 44px minmax(40px, 1fr) 44px;
+    width: 144px;
+    min-height: 44px;
+    padding: 0;
+  }
+  .karento-product-purchase .detail-qty :is(.qty-down, .qty-up) {
+    position: static;
+    inset: auto;
+    transform: none;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0 !important;
+  }
+  .karento-product-purchase .detail-qty .qty-val {
+    width: 100% !important;
+    height: 44px;
+    padding: 0 !important;
+    text-align: center;
+  }
+
+  /* Eight existing help topics open as readable rows; the FAQs stay in reach. */
+  .karento-faq-topics > .container > .text-center {
+    margin-bottom: 20px !important;
+  }
+  .karento-faq-topics h3 {
+    font-size: var(--karento-type-section-size);
+    line-height: var(--karento-type-section-leading);
+    font-weight: var(--karento-type-section-weight);
+  }
+  .karento-faq-topics .text-xl-medium {
+    font-size: var(--karento-type-body-size);
+    line-height: var(--karento-type-body-leading);
+    font-weight: var(--karento-type-body-weight);
+  }
+  .mobile-faq-topic-summary {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+  }
+  .mobile-faq-topic-summary p {
+    margin: 0;
+    font-size: var(--karento-type-meta-size);
+    line-height: var(--karento-type-meta-leading);
+    font-weight: var(--karento-type-meta-weight);
+  }
+  .mobile-faq-topic-list {
+    display: grid;
+    gap: 10px;
+    padding: 16px;
+  }
+  .mobile-faq-topic {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) 16px;
+    align-items: center;
+    gap: 12px;
+    min-height: 88px;
+    padding: 12px;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 12px;
+    color: var(--bs-neutral-1000);
+    background: var(--bs-background-card);
+    text-decoration: none;
+  }
+  .mobile-faq-topic-icon {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 8px;
+  }
+  .mobile-faq-topic-icon svg [fill=""] {
+    fill: currentColor;
+  }
+  .mobile-faq-topic-copy {
+    display: grid;
+    gap: 6px;
+    min-width: 0;
+  }
+  .mobile-faq-topic-copy strong {
+    font-size: var(--karento-type-body-size);
+    line-height: var(--karento-type-body-leading);
+    font-weight: var(--karento-type-card-weight);
+  }
+  .mobile-faq-topic-copy > span {
+    color: var(--bs-neutral-500);
+    font-size: var(--karento-type-meta-size);
+    line-height: var(--karento-type-meta-leading);
+    font-weight: var(--karento-type-meta-weight);
+  }
+  .mobile-faq-topic:focus-visible {
+    outline: 2px solid var(--karento-accent);
+    outline-offset: 2px;
+  }
+
+  .karento-news-grid > .container > .text-center {
+    margin-bottom: 24px !important;
+  }
+  .karento-news-grid .karento-news-hero {
+    min-height: 280px;
+    padding: 24px 20px 64px;
+  }
+  .karento-news-grid .karento-news-hero-copy .karento-news-hero-title {
+    margin-block: 12px !important;
+    font-size: var(--karento-type-page-size);
+    line-height: var(--karento-type-page-leading);
+    font-weight: var(--karento-type-page-weight);
+  }
+  .karento-news-grid .karento-news-hero-copy > p {
+    display: none;
+  }
+  .karento-news-grid .karento-news-hero .card-meta-user {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 12px;
+    margin-top: 12px;
+  }
+  .karento-news-grid .box-swiper .position-absolute.end-0.bottom-0 {
+    padding: 16px !important;
+  }
+  .mobile-preview-controls {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .mobile-preview-feedback:empty {
+    display: none;
+  }
+  .mobile-preview-feedback output[data-demo-action] {
+    display: block;
+    margin-top: 10px;
+    padding: 12px;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 12px;
+    color: var(--bs-neutral-500);
+    background: var(--bs-background-card);
+    font-size: var(--karento-type-meta-size);
+    line-height: var(--karento-type-meta-leading);
+    white-space: normal;
+    font-weight: var(--karento-type-meta-weight);
+  }
+  .mobile-news-category-controls {
+    margin-block: 16px 24px;
+  }
+  .mobile-news-categories {
+    margin: 0;
+  }
+  .karento-news-grid > .container > h3.mb-65 {
+    margin-bottom: 24px !important;
+    text-align: left !important;
+    font-size: var(--karento-type-section-size);
+    line-height: var(--karento-type-section-leading);
+    font-weight: var(--karento-type-section-weight);
+  }
+  .karento-news-pagination {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+  .karento-news-pagination .pagination {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 4px;
+    width: max-content;
+    margin-block: 16px;
+  }
+  .karento-news-pagination .page-item {
+    flex: 0 0 auto;
+    margin: 0;
+  }
+  .karento-news-pagination .page-item:has([aria-label="..."]) {
+    display: none;
+  }
+  .karento-news-pagination .page-link {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    min-height: 44px;
+    padding: 0;
+    margin: 0;
+  }
+  .karento-news-pagination svg path[stroke=""] {
+    stroke: currentColor;
+  }
+  .karento-news-pagination:focus-visible {
+    outline: 2px solid var(--karento-accent);
+    outline-offset: 2px;
+  }
+
+  .karento-bookings-chart .card-header > .d-flex {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px;
+  }
+  .karento-bookings-chart .card-header .fs-5 {
+    min-width: 0;
+    font-size: var(--karento-type-card-size) !important;
+    line-height: var(--karento-type-card-leading);
+    font-weight: var(--karento-type-card-weight);
+  }
+  .karento-bookings-chart .apexcharts-toolbar {
+    display: none !important;
+  }
+
+  .mobile-contact-hero-tools {
+    display: flex;
+    justify-content: center;
+  }
+  .karento-contact-team .row.mt-30 {
+    scrollbar-width: none;
+  }
+  .karento-contact-team .row.mt-30::-webkit-scrollbar {
+    display: none;
+  }
+  .mobile-contact-opener p {
+    margin-block: 0 16px;
+    font-size: var(--karento-type-body-size);
+    line-height: var(--karento-type-body-leading);
+    font-weight: var(--karento-type-body-weight);
+  }
+  .mobile-contact-form {
+    padding: 16px;
+  }
+  .mobile-contact-form .form-contact > .row {
+    --bs-gutter-x: 12px;
+  }
+  .mobile-contact-form .form-contact .col-lg-6 {
+    width: 50%;
+  }
+  .mobile-contact-form .form-group {
+    margin-bottom: 16px;
+  }
+  .mobile-contact-form .form-contact label {
+    display: block;
+    font-size: var(--karento-type-label-size);
+    line-height: var(--karento-type-label-leading);
+    font-weight: var(--karento-type-label-weight);
+  }
+  .mobile-contact-form .form-control {
+    min-height: 48px;
+    height: 48px;
+    padding: 12px;
+    font-size: var(--karento-type-field-size);
+    line-height: var(--karento-type-field-leading);
+    font-weight: var(--karento-type-field-weight);
+  }
+  .mobile-contact-form textarea.form-control {
+    min-height: 120px;
+    height: auto;
+  }
+  .mobile-contact-form .btn-book {
+    width: 100%;
+    min-height: var(--karento-touch-target);
+  }
+  .mobile-contact-form :is(input, textarea, button, a):focus-visible {
+    outline: 2px solid var(--karento-accent) !important;
+    outline-offset: 3px;
+  }
+  .mobile-contact-form .remeber-me label {
+    min-height: 44px;
+  }
+  .mobile-contact-form output[data-demo-feedback] {
+    display: block;
+    margin-top: 16px;
+  }
+
+  /* All vehicle layouts share an inset phone card without legacy card rules. */
+  .mobile-home-vehicles {
+    --karento-vehicle-card-margin: 0;
+    display: grid;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .mobile-vehicle-collection {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    align-items: start;
+    gap: 12px;
+    min-width: 0;
+    max-width: 100%;
+    margin-block: 12px 20px;
+    padding-block: 4px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .mobile-vehicle-collection::-webkit-scrollbar {
+    display: none;
+  }
+  .mobile-vehicle-collection:focus-visible {
+    outline: 2px solid var(--karento-accent);
+    outline-offset: 3px;
+  }
+  .mobile-vehicle-page {
+    --karento-vehicle-card-margin: 0;
+    display: grid;
+    gap: 12px;
+    min-width: 0;
+    scroll-snap-align: start;
+  }
+  /* The same native dialog owns scrolling, dismissal and focus for every tool. */
+  .mobile-sheet[open] {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .mobile-sheet > :is(header, footer) {
+    flex: 0 0 auto;
+  }
+  .mobile-sheet > header h2 {
+    font-size: var(--karento-type-page-size);
+    line-height: var(--karento-type-page-leading);
+    font-weight: var(--karento-type-page-weight);
+  }
+  .mobile-sheet > header button {
+    display: grid;
+    place-items: center;
+    flex: 0 0 44px;
+    margin-left: 8px;
+    padding: 0;
+    color: inherit;
+  }
+  .mobile-sheet-content {
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .mobile-sheet > footer {
+    position: static;
+  }
+  .mobile-catalog-editor {
+    inset: 0;
+    height: 100dvh;
+    max-height: 100dvh;
+    border-radius: 0;
+  }
+  .mobile-catalog-editor > header {
+    min-height: 68px;
+    padding-block: 12px;
+  }
+  .mobile-catalog-editor > .mobile-sheet-content {
+    flex: 1 1 auto;
+  }
+  .mobile-catalog-panel-tabs {
+    margin: 0;
+  }
+  .mobile-catalog-panel-tabs .mobile-pill-selected {
+    /* Persistent selection without changing pill size or text position. */
+    border-width: 2px;
+    padding-block: calc(var(--karento-space-1) - 1px);
+    padding-inline: calc(var(--karento-control-inset) - 1px);
+  }
+  .mobile-choice-picker,
+  .mobile-choice-options {
+    display: grid;
+    gap: 8px;
+    min-width: 0;
+  }
+  .mobile-choice-picker {
+    gap: 12px;
+  }
+  .mobile-choice-options {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .mobile-filter-body .mobile-text-search input {
+    min-height: var(--karento-touch-target);
+    height: var(--karento-touch-target);
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    font-size: var(--karento-type-field-size);
+    font-weight: var(--karento-type-field-weight);
+    line-height: var(--karento-type-field-leading);
+  }
+  .mobile-filter-shortcut {
+    width: 100%;
+    color: inherit;
+    background: var(--bs-background-card);
+    font: inherit;
+    text-align: left;
+  }
+  .mobile-filter-shortcut > span {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+    font-size: var(--karento-type-label-size);
+    line-height: var(--karento-type-label-leading);
+    overflow-wrap: anywhere;
+    font-weight: var(--karento-type-label-weight);
+  }
+  .mobile-filter-shortcut > span > strong {
+    font-size: var(--karento-type-label-size);
+    font-weight: var(--karento-type-label-weight);
+    line-height: var(--karento-type-label-leading);
+  }
+  .mobile-budget-field {
+    display: grid;
+    gap: var(--karento-space-2);
+  }
+  .mobile-filter-shortcut > span > span,
+  .mobile-choice-context,
+  .mobile-choice-empty,
+  .mobile-budget-error,
+  .mobile-choice-prerequisite p {
+    margin: 0;
+    color: var(--bs-neutral-500);
+    font-size: var(--karento-type-body-small-size);
+    line-height: var(--karento-type-body-small-leading);
+    font-weight: var(--karento-type-body-small-weight);
+  }
+  .mobile-filter-shortcut svg {
+    flex: 0 0 16px;
+  }
+  .mobile-choice-prerequisite {
+    display: grid;
+    justify-items: start;
+    gap: 12px;
+  }
+  .mobile-sort-options {
+    display: grid;
+    gap: 8px;
+    padding: 0;
+    border: 0;
+    margin: 0;
+  }
+  .mobile-filter-body .mobile-choice-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: var(--karento-touch-target);
+    gap: var(--karento-space-4);
+    padding: var(--karento-space-2) var(--karento-space-3);
+    border: 1px solid var(--bs-border-color);
+    border-radius: var(--karento-radius-card);
+  }
+  .mobile-filter-body .mobile-choice-row input {
+    flex: 0 0 20px;
+    width: 20px;
+    min-height: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    accent-color: var(--karento-accent);
+  }
+  .mobile-sheet :is(button, input, select):focus-visible {
+    outline: 2px solid var(--karento-accent);
+    outline-offset: 2px;
+  }
+
+  /* Home uses one compact box; the existing calculator fields open on demand. */
+  .main .box-cta-7:has(.mobile-loan-card) {
+    padding-block: 12px;
+    background-image: none;
+  }
+  .main .box-cta-7:has(.mobile-loan-card) .bg-shape {
+    display: none;
+  }
+  .main .box-cta-7:has(.mobile-loan-card) .row > .col-lg-6 {
+    padding: 0 12px !important;
+  }
+  .main .mobile-loan-card {
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent;
+  }
+  .mobile-loan-body {
+    padding: 20px 16px;
+  }
+  .mobile-loan-body > .row {
+    --bs-gutter-x: 12px;
+  }
+  .mobile-loan-body > .row > .col-lg-6 {
+    width: 50%;
+  }
+  .mobile-loan-body .form-group {
+    margin-bottom: 16px;
+  }
+  .mobile-loan-body .form-control {
+    height: 48px;
+    min-height: 48px;
+    padding: 10px;
+    font-size: var(--karento-type-field-size);
+    font-weight: var(--karento-type-field-weight);
+    line-height: var(--karento-type-field-leading);
+  }
+  .mobile-loan-summary {
+    --bs-gutter-x: 0;
+    margin: 0;
+    padding-block: 8px;
+  }
+  .mobile-loan-summary p {
+    font-size: var(--karento-type-meta-size);
+    line-height: var(--karento-type-meta-leading);
+    font-weight: var(--karento-type-meta-weight);
+  }
+  .mobile-loan-note {
+    margin: 8px 0 0;
+    color: var(--bs-neutral-500);
+  }
+  .mobile-loan-sheet > footer {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .mobile-loan-sheet footer .btn {
+    width: 100%;
+  }
+}

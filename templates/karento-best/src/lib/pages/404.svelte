@@ -1,17 +1,17 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import ContainerPt1409c82aa21 from "#lib/sections/ContainerPt1409c82aa21.svelte";
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import ErrorPanel from "#lib/sections/ErrorPanel.svelte";
   import Footer from "#lib/components/Footer.svelte";
-  import { dealer } from "#lib/content.ts";
+  let { status = 404 }: { status?: number } = $props();
+  const title = $derived(
+    status === 404 ? "Page Not Found" : "Something went wrong",
+  );
 </script>
 
-<svelte:head
-  ><title
-    >{dealer.name === "Karento"
-      ? "Page Not Found | Karento"
-      : "Page Not Found" + " | " + dealer.name}</title
-  ></svelte:head
->
+<PageMetadata {title} />
 <main class="main background-body"
-  ><ContainerPt1409c82aa21 />
+  ><ErrorPanel {status} />
   <Footer /></main
 >

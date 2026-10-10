@@ -1,19 +1,17 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import BoxSectionPt801b5d99eb from "#lib/sections/BoxSectionPt801b5d99eb.svelte";
-  import BoxSectionPt8029760a9f from "#lib/sections/BoxSectionPt8029760a9f.svelte";
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import BookingsHeading from "#lib/sections/BookingsHeading.svelte";
+  import MemberBookingsDashboard from "#lib/sections/MemberBookingsDashboard.svelte";
   import Footer from "#lib/components/Footer.svelte";
-  import { dealer } from "#lib/content.ts";
 </script>
 
-<svelte:head
-  ><title
-    >{dealer.name === "Karento"
-      ? "My Bookings | Karento"
-      : "My Bookings" + " | " + dealer.name}</title
-  ></svelte:head
->
+<PageMetadata title={locale.t("ui.user-dashboard-bookings.my-bookings")} />
 <main class="main"
-  ><BoxSectionPt801b5d99eb />
-  <BoxSectionPt8029760a9f />
+  ><BookingsHeading />
+  <MemberBookingsDashboard />
   <Footer /></main
 >

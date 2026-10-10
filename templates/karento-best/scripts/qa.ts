@@ -1,9 +1,11 @@
 import { spawnSync } from "node:child_process";
 for (const script of [
   "validate-ssr.ts",
+  "validate-links.ts",
   "validate-interactions.ts",
   "validate-native-widgets.ts",
   "validate-smoke.ts",
+  "validate-mobile.ts",
 ]) {
   const result = spawnSync(process.execPath, ["scripts/" + script], {
     stdio: "inherit",

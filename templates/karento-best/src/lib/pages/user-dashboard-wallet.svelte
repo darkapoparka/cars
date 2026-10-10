@@ -1,19 +1,17 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import BoxSectionPt80f00c7808 from "#lib/sections/BoxSectionPt80f00c7808.svelte";
-  import BoxSectionPt800c8b68bb from "#lib/sections/BoxSectionPt800c8b68bb.svelte";
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import WalletHeading from "#lib/sections/WalletHeading.svelte";
+  import MemberWalletDashboard from "#lib/sections/MemberWalletDashboard.svelte";
   import Footer from "#lib/components/Footer.svelte";
-  import { dealer } from "#lib/content.ts";
 </script>
 
-<svelte:head
-  ><title
-    >{dealer.name === "Karento"
-      ? "My Wallet | Karento"
-      : "My Wallet" + " | " + dealer.name}</title
-  ></svelte:head
->
+<PageMetadata title={locale.t("ui.user-dashboard-wallet.my-wallet")} />
 <main class="main"
-  ><BoxSectionPt80f00c7808 />
-  <BoxSectionPt800c8b68bb />
+  ><WalletHeading />
+  <MemberWalletDashboard />
   <Footer /></main
 >

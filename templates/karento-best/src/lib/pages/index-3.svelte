@@ -1,47 +1,74 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import BoxSectionBlockBannerHome3bfeb1480 from "#lib/sections/BoxSectionBlockBannerHome3bfeb1480.svelte";
-  import BoxSectionBoxSearchAdvanceHome101bf42523 from "#lib/sections/BoxSectionBoxSearchAdvanceHome101bf42523.svelte";
-  import Sectioncae3d3c5 from "#lib/sections/Sectioncae3d3c5.svelte";
-  import KarentoHomeBrandse42ce21b from "#lib/sections/KarentoHomeBrandse42ce21b.svelte";
-  import KarentoHowItWorksa462d9b9 from "#lib/sections/KarentoHowItWorksa462d9b9.svelte";
-  import SectionBoxBanner2e6f03532 from "#lib/sections/SectionBoxBanner2e6f03532.svelte";
-  import SectionCta4PositionRelative48e1b39f from "#lib/sections/SectionCta4PositionRelative48e1b39f.svelte";
-  import Sectiond6a6020d from "#lib/sections/Sectiond6a6020d.svelte";
-  import BoxCta7d472647c from "#lib/sections/BoxCta7d472647c.svelte";
-  import BoxFlights3300f4a2 from "#lib/sections/BoxFlights3300f4a2.svelte";
-  import Section20986d1c from "#lib/sections/Section20986d1c.svelte";
-  import BoxPropertiesAreaPt96ebd2b50a from "#lib/sections/BoxPropertiesAreaPt96ebd2b50a.svelte";
-  import Pt0c5e22240 from "#lib/sections/Pt0c5e22240.svelte";
-  import SectionTeam1Pb01cc02dd3 from "#lib/sections/SectionTeam1Pb01cc02dd3.svelte";
-  import BoxNews7a68114b from "#lib/sections/BoxNews7a68114b.svelte";
-  import BoxApp2PositionRelative2218c96e from "#lib/sections/BoxApp2PositionRelative2218c96e.svelte";
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import { MediaQuery } from "svelte/reactivity";
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import HomeVehicleCarousel from "#lib/sections/HomeVehicleCarousel.svelte";
+  import HomeVehicleSearch from "#lib/sections/HomeVehicleSearch.svelte";
+  import DesktopDealershipHero from "#lib/sections/DesktopDealershipHero.svelte";
+  import PopularVehicleGrid from "#lib/sections/PopularVehicleGrid.svelte";
+  import HomeBrandLinks from "#lib/sections/HomeBrandLinks.svelte";
+  import VehiclePurchaseSteps from "#lib/sections/VehiclePurchaseSteps.svelte";
+  import RentalOfferCardsCompact from "#lib/sections/RentalOfferCardsCompact.svelte";
+  import SellAndRentalOffers from "#lib/sections/SellAndRentalOffers.svelte";
+  import VehicleTypeShowcase from "#lib/sections/VehicleTypeShowcase.svelte";
+  import LoanCalculatorPanel from "#lib/sections/LoanCalculatorPanel.svelte";
+  import FeaturedVehicleGrid from "#lib/sections/FeaturedVehicleGrid.svelte";
+  import CustomerReviewGrid from "#lib/sections/CustomerReviewGrid.svelte";
+  import ServicesOverview from "#lib/sections/ServicesOverview.svelte";
+  import VehicleReviewCarousel from "#lib/sections/VehicleReviewCarousel.svelte";
+  import AgentTeamCompact from "#lib/sections/AgentTeamCompact.svelte";
+  import UpcomingVehicleNews from "#lib/sections/UpcomingVehicleNews.svelte";
+  import AppDownloadPromotion from "#lib/sections/AppDownloadPromotion.svelte";
   import Footer from "#lib/components/Footer.svelte";
   import { dealer } from "#lib/content.ts";
+  const phone = new MediaQuery("(max-width: 767.98px)");
 </script>
 
-<svelte:head
-  ><title
-    >{dealer.name === "Karento"
-      ? "Home | Karento"
-      : "Home" + " | " + dealer.name}</title
-  ></svelte:head
->
-<main class="main background-body"
-  ><BoxSectionBlockBannerHome3bfeb1480 />
-  <BoxSectionBoxSearchAdvanceHome101bf42523 />
-  <Sectioncae3d3c5 />
-  <KarentoHomeBrandse42ce21b />
-  <KarentoHowItWorksa462d9b9 />
-  <SectionBoxBanner2e6f03532 />
-  <SectionCta4PositionRelative48e1b39f />
-  <Sectiond6a6020d />
-  <BoxCta7d472647c />
-  <BoxFlights3300f4a2 />
-  <Section20986d1c />
-  <BoxPropertiesAreaPt96ebd2b50a />
-  <Pt0c5e22240 />
-  <SectionTeam1Pb01cc02dd3 />
-  <BoxNews7a68114b />
-  <BoxApp2PositionRelative2218c96e />
+<PageMetadata title={locale.t("ui.index-3.home")} />
+<main class="main background-body karento-dealership-home"
+  ><DesktopDealershipHero />
+  <div class="original-home-hero">
+    <HomeVehicleCarousel />
+    <HomeVehicleSearch />
+  </div>
+  <PopularVehicleGrid />
+  <HomeBrandLinks />
+  {#if !phone.current}
+    <VehiclePurchaseSteps />
+  {/if}
+  {#if !dealer.businessPreview}
+    <RentalOfferCardsCompact />
+    <SellAndRentalOffers />
+    <VehicleTypeShowcase />
+    <LoanCalculatorPanel />
+  {/if}
+  <FeaturedVehicleGrid />
+  {#if !dealer.businessPreview}
+    <CustomerReviewGrid />
+    <ServicesOverview />
+  {/if}
+  {#if phone.current}
+    <VehiclePurchaseSteps />
+  {/if}
+  {#if !dealer.businessPreview}
+    <VehicleReviewCarousel />
+    <AgentTeamCompact />
+    <UpcomingVehicleNews />
+    <AppDownloadPromotion />
+  {/if}
   <Footer /></main
 >
+
+<style>
+  @media (min-width: 992px) {
+    .original-home-hero {
+      display: none;
+    }
+    :global(.karento-dealership-home > .section-box.py-96) {
+      padding-top: 64px !important;
+    }
+  }
+</style>

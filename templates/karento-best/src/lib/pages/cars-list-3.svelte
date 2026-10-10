@@ -1,25 +1,21 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import PageHeader2Pt3096c2aa85 from "#lib/sections/PageHeader2Pt3096c2aa85.svelte";
-  import BoxSectionBoxSearchAdvanceHome10d473775e from "#lib/sections/BoxSectionBoxSearchAdvanceHome10d473775e.svelte";
-  import Pt5072dc7312 from "#lib/sections/Pt5072dc7312.svelte";
-  import BoxSectionBlockContentTourlist7929e168 from "#lib/sections/BoxSectionBlockContentTourlist7929e168.svelte";
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import RentalVehicleHero from "#lib/sections/RentalVehicleHero.svelte";
+  import ListingVehicleSearch from "#lib/sections/ListingVehicleSearch.svelte";
+  import VehicleFleetHeading from "#lib/sections/VehicleFleetHeading.svelte";
+  import VehicleThreeColumnListing from "#lib/sections/VehicleThreeColumnListing.svelte";
   import Footer from "#lib/components/Footer.svelte";
-  import { dealer } from "#lib/content.ts";
 </script>
 
-<svelte:head
-  ><title
-    >{dealer.name === "Karento"
-      ? "Carento - Car rental Bootstrap 5 Template"
-      : "Carento - Car rental Bootstrap 5 Template" +
-        " | " +
-        dealer.name}</title
-  ></svelte:head
->
+<PageMetadata title={locale.t("ui.cars-list-3.vehicles")} />
 <main class="main"
-  ><PageHeader2Pt3096c2aa85 />
-  <BoxSectionBoxSearchAdvanceHome10d473775e />
-  <Pt5072dc7312 />
-  <BoxSectionBlockContentTourlist7929e168 />
+  ><RentalVehicleHero />
+  <ListingVehicleSearch />
+  <VehicleFleetHeading />
+  <VehicleThreeColumnListing />
   <Footer /></main
 >

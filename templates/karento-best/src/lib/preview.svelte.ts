@@ -1,7 +1,7 @@
-import { getContext, setContext } from "svelte";
+import { createContext } from "svelte";
 export type PreviewRole = "guest" | "owner" | "member";
-const key = Symbol("karento-preview");
 export class PreviewState {
+  readonly actionFeedback = new WeakMap<HTMLElement, symbol>();
   role = $state<PreviewRole>("guest");
   panels = $state<Record<string, string | null | undefined>>({});
   drawer = $state(false);
@@ -22,9 +22,10 @@ export class PreviewState {
     }
   }
 }
+const [getPreview, setPreview] = createContext<PreviewState>();
 export function createPreview() {
-  return setContext(key, new PreviewState());
+  return setPreview(new PreviewState());
 }
 export function usePreview(): PreviewState {
-  return getContext<PreviewState>(key);
+  return getPreview();
 }

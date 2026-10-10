@@ -9,6 +9,7 @@ try {
     const page = await browser.newPage({
       viewport: { width, height: 900 },
       reducedMotion: "reduce",
+      hasTouch: width < 1000,
     });
     const errors: string[] = [];
     const forbidden: string[] = [];
@@ -22,6 +23,9 @@ try {
         forbidden.push(request.url());
     });
     await page.goto(base + "/vehicle");
+    await page.waitForFunction(
+      () => document.body.dataset.karentoReady === "true",
+    );
     const gallery = page.locator(".banner-activities-detail");
     await gallery.locator(".slick-next").waitFor();
     await gallery.getByRole("button", { name: "Next photo" }).click();
@@ -58,6 +62,157 @@ try {
     await viewer
       .getByRole("button", { name: "Close photo viewer" })
       .press("Escape");
+    await viewer.waitFor({ state: "detached" });
+    const photoCount = await gallery.locator(".slick-slide").count();
+    await gallery.locator(".slick-current a").focus();
+    for (const [key, expected] of [
+      ["ArrowLeft", "0"],
+      ["ArrowRight", "1"],
+      ["End", String(photoCount - 1)],
+      ["Home", "0"],
+    ] as const) {
+      await page.keyboard.press(key);
+      await page.waitForFunction(
+        (index) =>
+          document.activeElement
+            ?.closest(".slick-slide")
+            ?.getAttribute("data-slick-index") === index,
+        expected,
+      );
+      assert.equal(
+        await page.evaluate(
+          () =>
+            document.activeElement?.closest('[aria-hidden="true"]') !== null,
+        ),
+        false,
+      );
+    }
+    const photo = gallery.locator(".slick-current img");
+    await photo.scrollIntoViewIfNeeded();
+    const box = await photo.boundingBox();
+    assert.ok(box);
+    const gestureY = Math.min(890, Math.max(10, box.y + box.height / 2));
+    await page.mouse.move(box.x + box.width * 0.7, gestureY);
+    await page.mouse.down();
+    await page.mouse.move(box.x + box.width * 0.3, gestureY, { steps: 8 });
+    await page.mouse.up();
+    await page.waitForFunction(
+      () =>
+        document
+          .querySelector(".banner-activities-detail .slick-current")
+          ?.getAttribute("data-slick-index") === "1",
+    );
+    assert.equal(await viewer.count(), 0);
+    await gallery.locator(".slick-current a").click();
+    await viewer.waitFor({ state: "visible" });
+    await page.keyboard.press("Escape");
+    await viewer.waitFor({ state: "detached" });
+    if (width < 1000) {
+      const touchBox = await photo.boundingBox();
+      assert.ok(touchBox);
+      const session = await page.context().newCDPSession(page);
+      try {
+        await session.send("Input.dispatchTouchEvent", {
+          type: "touchStart",
+          touchPoints: [{ x: touchBox.x + touchBox.width * 0.75, y: gestureY }],
+        });
+        for (let step = 1; step <= 8; step++) {
+          await session.send("Input.dispatchTouchEvent", {
+            type: "touchMove",
+            touchPoints: [
+              {
+                x: touchBox.x + touchBox.width * (0.75 - step / 16),
+                y: gestureY,
+              },
+            ],
+          });
+        }
+        await session.send("Input.dispatchTouchEvent", {
+          type: "touchEnd",
+          touchPoints: [],
+        });
+      } finally {
+        await session.detach();
+      }
+      await page.waitForFunction(
+        () =>
+          document
+            .querySelector(".banner-activities-detail .slick-current")
+            ?.getAttribute("data-slick-index") === "2",
+      );
+      assert.equal(await viewer.count(), 0);
+    }
+    for (const index of [NaN, Infinity, -Infinity, 1.5]) {
+      await page.evaluate(
+        (value) =>
+          window.dispatchEvent(
+            new CustomEvent("karento-gallery", {
+              detail: {
+                images: [
+                  "/assets/imgs/cars-details/banner.png",
+                  "/assets/imgs/cars-details/banner2.png",
+                ],
+                index: value,
+              },
+            }),
+          ),
+        index,
+      );
+      await viewer.waitFor({ state: "visible" });
+      assert.equal(
+        await viewer.locator("img").getAttribute("alt"),
+        "Photo 1 of 2",
+      );
+      assert.equal(
+        await viewer.locator("img").getAttribute("src"),
+        "/assets/imgs/cars-details/banner.png",
+      );
+      await page.keyboard.press("Escape");
+      await viewer.waitFor({ state: "detached" });
+    }
+    await page.evaluate(() =>
+      window.dispatchEvent(
+        new CustomEvent("karento-gallery", {
+          detail: {
+            images: ["/assets/imgs/cars-details/banner.png"],
+            index: 0,
+          },
+        }),
+      ),
+    );
+    await viewer.waitFor({ state: "visible" });
+    await page.evaluate(() => {
+      const current = document.querySelector<HTMLDialogElement>(
+        ".karento-photo-viewer",
+      );
+      if (!current)
+        throw new Error("Photo viewer must be mounted before reopening");
+      current.close();
+      window.dispatchEvent(
+        new CustomEvent("karento-gallery", {
+          detail: {
+            images: ["/assets/imgs/cars-details/banner2.png"],
+            index: 0,
+          },
+        }),
+      );
+    });
+    await page.evaluate(
+      () =>
+        new Promise<void>((resolve) =>
+          requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+        ),
+    );
+    assert.equal(
+      await viewer.isVisible(),
+      true,
+      "Queued close must preserve the reopened viewer",
+    );
+    assert.equal(
+      await viewer.locator("img").getAttribute("src"),
+      "/assets/imgs/cars-details/banner2.png",
+    );
+    await page.keyboard.press("Escape");
     await viewer.waitFor({ state: "detached" });
     const date = page.getByRole("combobox", {
       name: "Pick-up date",
@@ -121,7 +276,48 @@ try {
       `calendar fits ${width}px`,
     );
     await date.press("Escape");
+    await date.fill("01/10/2026");
+    await date.press("Escape");
+    await date.click();
+    await date.fill("17/10/2026");
+    await page
+      .locator(
+        '.karento-calendar td[aria-selected="true"] button[aria-label="17 October 2026"]',
+      )
+      .waitFor();
+    await date.press("ArrowDown");
+    await page.waitForFunction(
+      () =>
+        document.activeElement?.getAttribute("aria-label") ===
+        "17 October 2026",
+    );
+    await page.keyboard.press("Escape");
+    assert.equal(
+      await date.evaluate((element) => document.activeElement === element),
+      true,
+    );
+    for (let attempt = 0; attempt < 3; attempt++) {
+      await date.evaluate((element) => {
+        const input = element as HTMLInputElement;
+        input.blur();
+        input.focus();
+        input.dispatchEvent(
+          new KeyboardEvent("keydown", { key: "Tab", bubbles: true }),
+        );
+      });
+      assert.equal(await page.locator(".karento-calendar").count(), 0);
+    }
+    await date.click();
+    await page.locator(".karento-calendar").waitFor();
+    await page
+      .locator('header .main-menu a[href="/vehicles"]')
+      .evaluate((link) => (link as HTMLAnchorElement).click());
+    await page.waitForURL("**/vehicles");
+    assert.equal(await page.locator(".karento-calendar").count(), 0);
     await page.goto(base + "/membership");
+    await page.waitForFunction(
+      () => document.body.dataset.karentoReady === "true",
+    );
     const options = page.locator(".karento-billing-option");
     await options.filter({ hasText: "Annual" }).click();
     assert.deepEqual(
@@ -154,8 +350,13 @@ try {
       checks: [
         "gallery arrows, keyboard and thumbnails",
         "photo viewer and Escape",
+        "visible photo keyboard focus",
+        "mouse and mobile touch swipe without accidental viewer opening",
+        "invalid viewer index recovery",
+        "queued close preserves the reopened photo viewer",
         "calendar keyboard, selection, month/year and invalid date recovery",
         "calendar within viewport",
+        "calendar typed selection, rapid closure and route disposal",
         "billing amounts and truthful action",
         "no jQuery or legacy widget requests",
       ],

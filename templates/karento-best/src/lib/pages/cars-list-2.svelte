@@ -1,23 +1,25 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import PageHeader2Pt30dc16efd0 from "#lib/sections/PageHeader2Pt30dc16efd0.svelte";
-  import BoxSectionBoxSearchAdvanceHome10d473775e from "#lib/sections/BoxSectionBoxSearchAdvanceHome10d473775e.svelte";
-  import Pt5072dc7312 from "#lib/sections/Pt5072dc7312.svelte";
-  import BoxSectionBlockContentTourlist89624236 from "#lib/sections/BoxSectionBlockContentTourlist89624236.svelte";
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import VehicleFourColumnHero from "#lib/sections/VehicleFourColumnHero.svelte";
+  import ListingVehicleSearch from "#lib/sections/ListingVehicleSearch.svelte";
+  import VehicleFleetHeading from "#lib/sections/VehicleFleetHeading.svelte";
+  import VehicleFourColumnListing from "#lib/sections/VehicleFourColumnListing.svelte";
   import Footer from "#lib/components/Footer.svelte";
-  import { dealer } from "#lib/content.ts";
+  import { MediaQuery } from "svelte/reactivity";
+  const desktop = new MediaQuery("(min-width: 992px)");
 </script>
 
-<svelte:head
-  ><title
-    >{dealer.name === "Karento"
-      ? "Vehicles | Karento"
-      : "Vehicles" + " | " + dealer.name}</title
-  ></svelte:head
->
+<PageMetadata title={locale.t("ui.cars-list-2.vehicles")} />
 <main class="main"
-  ><PageHeader2Pt30dc16efd0 />
-  <BoxSectionBoxSearchAdvanceHome10d473775e />
-  <Pt5072dc7312 />
-  <BoxSectionBlockContentTourlist89624236 />
+  ><VehicleFourColumnHero />
+  {#if !desktop.current}
+    <ListingVehicleSearch />
+    <VehicleFleetHeading />
+  {/if}
+  <VehicleFourColumnListing />
   <Footer /></main
 >

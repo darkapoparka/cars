@@ -1,19 +1,17 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import PageHeaderPt308f30dc04 from "#lib/sections/PageHeaderPt308f30dc04.svelte";
-  import BoxSectionTermPt85b8262f12 from "#lib/sections/BoxSectionTermPt85b8262f12.svelte";
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import TermsHeading from "#lib/sections/TermsHeading.svelte";
+  import TermsContent from "#lib/sections/TermsContent.svelte";
   import Footer from "#lib/components/Footer.svelte";
-  import { dealer } from "#lib/content.ts";
 </script>
 
-<svelte:head
-  ><title
-    >{dealer.name === "Karento"
-      ? "Terms | Karento"
-      : "Terms" + " | " + dealer.name}</title
-  ></svelte:head
->
+<PageMetadata title={locale.t("ui.term.terms")} />
 <main class="main"
-  ><PageHeaderPt308f30dc04 />
-  <BoxSectionTermPt85b8262f12 />
+  ><TermsHeading />
+  <TermsContent />
   <Footer /></main
 >

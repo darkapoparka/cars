@@ -1,19 +1,17 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import BoxSectionPt80da85a548 from "#lib/sections/BoxSectionPt80da85a548.svelte";
-  import BoxSectionPt8097261e44 from "#lib/sections/BoxSectionPt8097261e44.svelte";
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import ListingsHeading from "#lib/sections/ListingsHeading.svelte";
+  import OwnerListingsDashboard from "#lib/sections/OwnerListingsDashboard.svelte";
   import Footer from "#lib/components/Footer.svelte";
-  import { dealer } from "#lib/content.ts";
 </script>
 
-<svelte:head
-  ><title
-    >{dealer.name === "Karento"
-      ? "Listings | Karento"
-      : "Listings" + " | " + dealer.name}</title
-  ></svelte:head
->
+<PageMetadata title={locale.t("header.account.listings")} />
 <main class="main"
-  ><BoxSectionPt80da85a548 />
-  <BoxSectionPt8097261e44 />
+  ><ListingsHeading />
+  <OwnerListingsDashboard />
   <Footer /></main
 >

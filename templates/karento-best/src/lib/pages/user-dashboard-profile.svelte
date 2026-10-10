@@ -1,19 +1,17 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import BoxSectionPt80828fa4bb from "#lib/sections/BoxSectionPt80828fa4bb.svelte";
-  import BoxSectionPt8049bbf3aa from "#lib/sections/BoxSectionPt8049bbf3aa.svelte";
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import ProfileHeading from "#lib/sections/ProfileHeading.svelte";
+  import MemberProfileDashboard from "#lib/sections/MemberProfileDashboard.svelte";
   import Footer from "#lib/components/Footer.svelte";
-  import { dealer } from "#lib/content.ts";
 </script>
 
-<svelte:head
-  ><title
-    >{dealer.name === "Karento"
-      ? "My Profile | Karento"
-      : "My Profile" + " | " + dealer.name}</title
-  ></svelte:head
->
+<PageMetadata title={locale.t("ui.user-dashboard-profile.my-profile")} />
 <main class="main"
-  ><BoxSectionPt80828fa4bb />
-  <BoxSectionPt8049bbf3aa />
+  ><ProfileHeading />
+  <MemberProfileDashboard />
   <Footer /></main
 >

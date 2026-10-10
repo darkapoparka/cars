@@ -1,21 +1,35 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import PageHeaderPt30f3e0d191 from "#lib/sections/PageHeaderPt30f3e0d191.svelte";
-  import BoxSection9bcc958d from "#lib/sections/BoxSection9bcc958d.svelte";
-  import BoxNews7a68114b from "#lib/sections/BoxNews7a68114b.svelte";
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import NewsArticleHeading from "#lib/sections/NewsArticleHeading.svelte";
+  import NewsArticle from "#lib/sections/NewsArticle.svelte";
+  import UpcomingVehicleNews from "#lib/sections/UpcomingVehicleNews.svelte";
   import Footer from "#lib/components/Footer.svelte";
+  import { page } from "$app/state";
   import { dealer } from "#lib/content.ts";
+  import { selectedNewsArticle, suppliedNews } from "#lib/data/news.ts";
+
+  const article = $derived(
+    selectedNewsArticle(suppliedNews(dealer.news), page.url.searchParams),
+  );
+  const missing = $derived(page.url.searchParams.has("article") && !article);
 </script>
 
-<svelte:head
-  ><title
-    >{dealer.name === "Karento"
-      ? "News Article | Karento"
-      : "News Article" + " | " + dealer.name}</title
-  ></svelte:head
->
+<PageMetadata
+  title={article
+    ? locale.text(article.title)
+    : locale.t(
+        missing
+          ? "editorial.article.notFoundTitle"
+          : "editorial.metadata.article",
+      )}
+/>
 <main class="main"
-  ><PageHeaderPt30f3e0d191 />
-  <BoxSection9bcc958d />
-  <BoxNews7a68114b />
+  ><NewsArticleHeading {article} {missing} />
+  <NewsArticle {article} {missing} />
+  {#if !article && !missing}<UpcomingVehicleNews />{/if}
   <Footer /></main
 >

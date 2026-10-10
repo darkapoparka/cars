@@ -4,6 +4,8 @@
   "exclude": ["src/service-worker"],
   "compilerOptions": {
     "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "allowJs": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,

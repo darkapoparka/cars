@@ -37,6 +37,24 @@ try {
       .evaluateAll((els) => els.map((el) => el.className || el.id));
     results.push({ route: current, widgetErrors });
     assert.deepEqual(widgetErrors, [], current);
+    const invalidAssociations = await page.evaluate(() =>
+      Array.from(
+        document.querySelectorAll(
+          "label[for], [aria-controls], [aria-labelledby]",
+        ),
+      ).flatMap((element) =>
+        ["for", "aria-controls", "aria-labelledby"].flatMap((attribute) =>
+          (element.getAttribute(attribute)?.trim().split(/\s+/) || [])
+            .filter((target) => !document.getElementById(target))
+            .map((target) => `${attribute}: ${target}`),
+        ),
+      ),
+    );
+    assert.deepEqual(
+      invalidAssociations,
+      [],
+      current + " control associations",
+    );
     assert.equal(await page.locator("header.header").count(), 1, current);
     assert.equal(await page.locator("main").count(), 1, current);
   }

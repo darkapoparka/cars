@@ -2,6 +2,15 @@ import fs from "node:fs";
 import path from "node:path";
 import type { Browser } from "playwright";
 
+/** Locale selection is retained on links without changing their destination. */
+export function matchesDestination(actual: URL, destination: string): boolean {
+  const current = new URL(actual);
+  const expected = new URL(destination);
+  current.searchParams.delete("lang");
+  expected.searchParams.delete("lang");
+  return current.href === expected.href;
+}
+
 /** Keep this test process's temporary browser profiles inside the checkout. */
 export async function launchBrowser(): Promise<Browser> {
   const temporary = path.resolve(".runtime/browser-temp");

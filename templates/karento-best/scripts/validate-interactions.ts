@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import { launchBrowser } from "./browser.ts";
+import { dealer } from "../src/lib/content.ts";
 const browser = await launchBrowser();
 try {
   const context = await browser.newContext({
@@ -32,8 +33,8 @@ try {
       await assert.doesNotReject(() =>
         drawer.locator(".close-canvas").waitFor({ state: "visible" }),
       );
-      await page.waitForFunction(
-        () => document.activeElement?.className === "close-canvas",
+      await page.waitForFunction(() =>
+        document.activeElement?.matches(".close-canvas"),
       );
       assert.equal(await drawer.getAttribute("aria-hidden"), "false");
       assert.equal(
@@ -41,8 +42,10 @@ try {
         false,
       );
       assert.equal(
-        await page.evaluate(() => document.activeElement?.className),
-        "close-canvas",
+        await page.evaluate(() =>
+          document.activeElement?.matches(".close-canvas"),
+        ),
+        true,
       );
       await drawer.locator("summary").focus();
       await page.keyboard.press("Tab");
@@ -84,6 +87,10 @@ try {
     await dropdown.locator("button").click();
     await dropdown.locator(".dropdown-item").first().click();
     assert.match(await dropdown.locator("button").innerText(), /Paris/);
+    assert.match(
+      (await dropdown.locator("button").getAttribute("aria-label")) || "",
+      /Paris/,
+    );
     assert.equal(
       await dropdown.locator("button").getAttribute("aria-expanded"),
       "false",
@@ -95,6 +102,81 @@ try {
       "false",
     );
   });
+  await record("dropdown arrow keys open, wrap and restore focus", async () => {
+    const dropdown = page.locator(".box-search-advance .dropdown").first();
+    const toggle = dropdown.locator("button");
+    const items = dropdown.locator(".dropdown-item");
+    await toggle.focus();
+    await page.keyboard.press("ArrowUp");
+    assert.equal(await toggle.getAttribute("aria-expanded"), "true");
+    await page.waitForFunction(
+      () =>
+        document.activeElement?.textContent?.trim() === "New York City, USA",
+    );
+    assert.equal(
+      await items.last().evaluate((el) => el === document.activeElement),
+      true,
+    );
+    await page.keyboard.press("ArrowDown");
+    assert.equal(
+      await items.first().evaluate((el) => el === document.activeElement),
+      true,
+    );
+    await page.keyboard.press("Escape");
+    assert.equal(await toggle.getAttribute("aria-expanded"), "false");
+    assert.equal(
+      await toggle.evaluate((el) => el === document.activeElement),
+      true,
+    );
+    await page.keyboard.press("ArrowDown");
+    await page.waitForFunction(
+      () => document.activeElement?.textContent?.trim() === "Paris, France",
+    );
+    assert.equal(
+      await items.first().evaluate((el) => el === document.activeElement),
+      true,
+    );
+    await page.keyboard.press("Enter");
+    assert.equal(await toggle.getAttribute("aria-expanded"), "false");
+    assert.equal(
+      await toggle.evaluate((el) => el === document.activeElement),
+      true,
+    );
+  });
+  await record(
+    "category selections use local state and support Space",
+    async () => {
+      for (const route of ["/", "/index", "/index-2"]) {
+        await page.goto(base + route);
+        await ready();
+        const categories = page.locator(".box-search-advance .btn-click");
+        assert.equal(await categories.count(), 3);
+        await categories.nth(1).focus();
+        await page.keyboard.press("Space");
+        assert.equal(
+          await categories.nth(1).getAttribute("aria-pressed"),
+          "true",
+        );
+        assert.equal(
+          await categories.nth(0).getAttribute("aria-pressed"),
+          "false",
+        );
+        assert.equal(
+          await page.locator(".box-search-advance .btn-click.active").count(),
+          1,
+        );
+        await categories.nth(2).click();
+        assert.equal(
+          await categories.nth(1).getAttribute("aria-pressed"),
+          "false",
+        );
+        assert.equal(
+          await categories.nth(2).getAttribute("aria-pressed"),
+          "true",
+        );
+      }
+    },
+  );
   await record(
     "owner demo login and sign-out do not imply saved authentication",
     async () => {
@@ -379,24 +461,214 @@ try {
       await client.detach();
     },
   );
-  await record("mobile navigation opens and closes with Escape", async () => {
-    await page.setViewportSize({ width: 390, height: 900 });
-    await page.goto(base);
-    await page.locator("header .burger-icon").click();
-    assert.equal(
+  await record(
+    "Explore is keyboard reachable without hash navigation",
+    async () => {
+      await page.setViewportSize({ width: 1440, height: 900 });
+      await page.goto(base);
+      await ready();
+      const explore = page.locator(".header .main-menu > .has-children > a");
+      await explore.focus();
+      const initial = page.url();
+      await page.keyboard.press("Enter");
+      assert.equal(page.url(), initial);
+      await page.keyboard.press("Space");
+      assert.equal(page.url(), initial);
+      // The preserved submenu animates visibility; wait for its links before Tab.
       await page
-        .locator(".mobile-header-active")
-        .evaluate((el) => (el as HTMLElement).inert),
-      false,
-    );
-    await page.keyboard.press("Escape");
-    assert.equal(
+        .locator('.header .sub-menu a[href="/about"]')
+        .waitFor({ state: "visible" });
+      await page.keyboard.press("Tab");
+      assert.equal(
+        await page
+          .locator('.header .sub-menu a[href="/about"]')
+          .evaluate((el) => el === document.activeElement),
+        true,
+      );
+    },
+  );
+  await record(
+    "preserved tablet navigation supports Space without scrolling",
+    async () => {
+      await page.setViewportSize({ width: 1024, height: 900 });
+      await page.goto(base);
+      await ready();
+      const toggle = page.locator("header .burger-icon");
+      await toggle.focus();
+      const initial = await page.evaluate(() => scrollY);
+      await page.keyboard.press("Space");
+      await page.waitForFunction(
+        () =>
+          document
+            .querySelector(".mobile-header-active")
+            ?.getAttribute("aria-hidden") === "false",
+      );
+      assert.equal(await page.evaluate(() => scrollY), initial);
+      const close = page.locator('.mobile-header-logo [role="button"]');
+      await close.focus();
+      await page.keyboard.press("Space");
+      assert.equal(
+        await page
+          .locator(".mobile-header-active")
+          .evaluate((el) => el instanceof HTMLElement && el.inert),
+        true,
+      );
+    },
+  );
+  await record(
+    "preserved tablet navigation opens and closes with Escape",
+    async () => {
+      await page.setViewportSize({ width: 1024, height: 900 });
+      await page.goto(base);
+      await page.locator("header .burger-icon").click();
+      assert.equal(
+        await page
+          .locator(".mobile-header-active")
+          .evaluate((el) => (el as HTMLElement).inert),
+        false,
+      );
+      await page.keyboard.press("Escape");
+      assert.equal(
+        await page
+          .locator(".mobile-header-active")
+          .evaluate((el) => (el as HTMLElement).inert),
+        true,
+      );
+    },
+  );
+  await record(
+    "FAQ groups, review forms and settings labels control their own targets",
+    async () => {
+      await page.setViewportSize({ width: 1440, height: 900 });
+      await page.goto(base + "/faq");
+      await ready();
+      const questions = page.locator('main [data-bs-toggle="collapse"]');
+      const panels = await questions.evaluateAll((buttons) =>
+        buttons.map((button) => ({
+          target: button.getAttribute("aria-controls"),
+          open: button.getAttribute("aria-expanded"),
+        })),
+      );
+      await questions.nth(1).click();
+      const repeated = panels.findIndex(
+        (panel, index) => index > 1 && panel.target?.endsWith("collapse02"),
+      );
+      assert.ok(repeated > 1);
+      assert.equal(
+        await questions.nth(repeated).getAttribute("aria-expanded"),
+        panels[repeated].open,
+      );
+      await questions.nth(repeated).click();
+      assert.equal(
+        await questions.nth(1).getAttribute("aria-expanded"),
+        "true",
+      );
+      for (const route of [
+        "/vehicle",
+        "/cars-details-2",
+        "/cars-details-4",
+        "/shop-details",
+      ]) {
+        await page.goto(base + route);
+        await ready();
+        const review = page
+          .locator('main [data-bs-target*="collapseAddReview"]:visible')
+          .first();
+        const target = await review.getAttribute("aria-controls");
+        assert.ok(target);
+        const reviewPanel = page.locator(`[id="${target}"]`);
+        const calculator = page.locator(
+          'main [data-bs-target*="collapseCalculator"]:visible',
+        );
+        assert.equal(await review.getAttribute("aria-expanded"), "true");
+        await review.click();
+        await reviewPanel.waitFor({ state: "hidden" });
+        if (await calculator.count()) {
+          assert.equal(await calculator.getAttribute("aria-expanded"), "true");
+        }
+        await review.click();
+        await reviewPanel.waitFor({ state: "visible" });
+        if (await calculator.count()) {
+          await calculator.click();
+          assert.equal(await calculator.getAttribute("aria-expanded"), "false");
+          await reviewPanel.waitFor({ state: "visible" });
+        }
+      }
+      await page.goto(base + "/account/settings");
+      await ready();
+      const label = page
+        .locator("label[for]")
+        .filter({ hasText: "SMS" })
+        .nth(1);
+      const checkboxId = await label.getAttribute("for");
+      assert.ok(checkboxId);
+      const checkbox = page.locator(`[id="${checkboxId}"]`);
+      const firstCheckbox = page.locator('input[type="checkbox"]').first();
+      const before = await checkbox.isChecked();
+      const firstBefore = await firstCheckbox.isChecked();
+      await label.click();
+      assert.equal(await checkbox.isChecked(), !before);
+      assert.equal(await firstCheckbox.isChecked(), firstBefore);
+    },
+  );
+  await record(
+    "internal page failures show their status instead of a false 404",
+    async () => {
+      const failedPage = await context.newPage();
+      try {
+        await failedPage.goto(base + "/404");
+        await failedPage.waitForFunction(
+          () => document.body.dataset.karentoReady === "true",
+        );
+        // Simulate a failed lazy page import after the shared shell has loaded.
+        await failedPage.route("**/_app/immutable/chunks/*.js", (request) =>
+          request.abort(),
+        );
+        await failedPage
+          .locator('header .main-menu a[href="/vehicles"]')
+          .click();
+        await failedPage.waitForURL("**/vehicles");
+        await failedPage
+          .getByRole("heading", { name: "500", exact: true })
+          .waitFor();
+        assert.equal(
+          await failedPage.title(),
+          `Something went wrong | ${dealer.name}`,
+        );
+        assert.equal(await failedPage.locator("header.header").count(), 1);
+        assert.equal(await failedPage.locator("main").count(), 1);
+      } finally {
+        await failedPage.close();
+      }
+    },
+  );
+  await record(
+    "compiled demo feedback is singular and resets after client navigation",
+    async () => {
+      await page.goto(base + "/membership");
+      await ready();
+      const action = page
+        .getByRole("button", { name: "Get Started Now", exact: true })
+        .first();
+      await action.click();
+      await action.click();
+      assert.equal(await page.locator("output[data-demo-action]").count(), 1);
+      assert.equal(
+        await page.locator("output[data-demo-action]").innerText(),
+        "Template preview only. No purchase or saved account change is made.",
+      );
+      await page.locator('header .main-menu a[href="/contact"]').click();
+      await page.waitForURL("**/contact");
+      await page.locator('header .main-menu a[href="/membership"]').click();
+      await page.waitForURL("**/membership");
+      assert.equal(await page.locator("output[data-demo-action]").count(), 0);
       await page
-        .locator(".mobile-header-active")
-        .evaluate((el) => (el as HTMLElement).inert),
-      true,
-    );
-  });
+        .getByRole("button", { name: "Get Started Now", exact: true })
+        .first()
+        .click();
+      assert.equal(await page.locator("output[data-demo-action]").count(), 1);
+    },
+  );
   assert.deepEqual(errors, []);
   fs.mkdirSync(".runtime/evidence", { recursive: true });
   fs.writeFileSync(

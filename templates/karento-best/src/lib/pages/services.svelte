@@ -1,29 +1,70 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import PageHeaderPt30ddd2d327 from "#lib/sections/PageHeaderPt30ddd2d327.svelte";
-  import Section35142173 from "#lib/sections/Section35142173.svelte";
-  import SectionBoxBanner3Banner285f6a313 from "#lib/sections/SectionBoxBanner3Banner285f6a313.svelte";
-  import Section6d539111 from "#lib/sections/Section6d539111.svelte";
-  import SectionCta718be8b86 from "#lib/sections/SectionCta718be8b86.svelte";
-  import SectionStatic1BorderBottom8d026355 from "#lib/sections/SectionStatic1BorderBottom8d026355.svelte";
-  import BoxNews7a68114b from "#lib/sections/BoxNews7a68114b.svelte";
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import { snapshot } from "$app/navigation";
+  import { MediaQuery } from "svelte/reactivity";
+  import type { ServiceFilterId } from "#lib/data/services.ts";
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import ServicesHeading from "#lib/sections/ServicesHeading.svelte";
+  import ServiceBenefits from "#lib/sections/ServiceBenefits.svelte";
+  import RentalSavingsBanner from "#lib/sections/RentalSavingsBanner.svelte";
+  import CustomerReviewCarouselPlain from "#lib/sections/CustomerReviewCarouselPlain.svelte";
+  import TripPlanningCarousel from "#lib/sections/TripPlanningCarousel.svelte";
+  import BusinessStatsBordered from "#lib/sections/BusinessStatsBordered.svelte";
+  import UpcomingVehicleNews from "#lib/sections/UpcomingVehicleNews.svelte";
   import Footer from "#lib/components/Footer.svelte";
-  import { dealer } from "#lib/content.ts";
+  import DesktopServiceSupport from "#lib/components/services/DesktopServiceSupport.svelte";
+
+  interface ServicesFilterSnapshot {
+    query: string;
+    category: ServiceFilterId;
+  }
+
+  let query = $state("");
+  let category = $state<ServiceFilterId>("all");
+  const phone = new MediaQuery("(max-width: 767.98px)");
+  const desktop = new MediaQuery("(min-width: 992px)");
+  snapshot<ServicesFilterSnapshot>({
+    id: "karento-services-filters",
+    capture: () => ({ query, category }),
+    restore: (value) => {
+      query = value.query;
+      category = value.category;
+    },
+    reset: resetFilters,
+  });
+
+  function resetFilters() {
+    query = "";
+    category = "all";
+  }
+
+  function clearFilters() {
+    resetFilters();
+    document
+      .querySelector<HTMLInputElement>(
+        desktop.current
+          ? '.desktop-service-search input[type="search"]'
+          : ".mobile-service-tools input",
+      )
+      ?.focus({ preventScroll: !desktop.current });
+  }
 </script>
 
-<svelte:head
-  ><title
-    >{dealer.name === "Karento"
-      ? "Services | Karento"
-      : "Services" + " | " + dealer.name}</title
-  ></svelte:head
->
+<PageMetadata title={locale.t("ui.services.services")} />
 <main class="main"
-  ><PageHeaderPt30ddd2d327 />
-  <Section35142173 />
-  <SectionBoxBanner3Banner285f6a313 />
-  <Section6d539111 />
-  <SectionCta718be8b86 />
-  <SectionStatic1BorderBottom8d026355 />
-  <BoxNews7a68114b />
+  ><ServicesHeading bind:query bind:category />
+  <ServiceBenefits bind:query bind:category onclear={clearFilters} />
+  {#if desktop.current}
+    <DesktopServiceSupport />
+  {:else}
+    <RentalSavingsBanner servicesMobile />
+    <CustomerReviewCarouselPlain />
+    <TripPlanningCarousel />
+    {#if !phone.current}<BusinessStatsBordered />{/if}
+    <UpcomingVehicleNews />
+  {/if}
   <Footer /></main
 >

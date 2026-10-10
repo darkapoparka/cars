@@ -1,19 +1,17 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import BoxSectionPt803562461d from "#lib/sections/BoxSectionPt803562461d.svelte";
-  import BoxSectionPt80e1f57090 from "#lib/sections/BoxSectionPt80e1f57090.svelte";
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import EarningsHeading from "#lib/sections/EarningsHeading.svelte";
+  import OwnerEarningsDashboard from "#lib/sections/OwnerEarningsDashboard.svelte";
   import Footer from "#lib/components/Footer.svelte";
-  import { dealer } from "#lib/content.ts";
 </script>
 
-<svelte:head
-  ><title
-    >{dealer.name === "Karento"
-      ? "Earnings | Karento"
-      : "Earnings" + " | " + dealer.name}</title
-  ></svelte:head
->
+<PageMetadata title={locale.t("ui.agent-dashboard-earning.earnings")} />
 <main class="main"
-  ><BoxSectionPt803562461d />
-  <BoxSectionPt80e1f57090 />
+  ><EarningsHeading />
+  <OwnerEarningsDashboard />
   <Footer /></main
 >

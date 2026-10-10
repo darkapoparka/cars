@@ -1,23 +1,50 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import PageHeaderPt3064d3183f from "#lib/sections/PageHeaderPt3064d3183f.svelte";
-  import BoxSectionBoxContentTourDetailf5ab29e1 from "#lib/sections/BoxSectionBoxContentTourDetailf5ab29e1.svelte";
-  import Pt5023f5495b from "#lib/sections/Pt5023f5495b.svelte";
-  import BoxSectionBlockContentTourlist1f909262 from "#lib/sections/BoxSectionBlockContentTourlist1f909262.svelte";
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import ImportProfileHeading from "#lib/sections/ImportProfileHeading.svelte";
+  import ImportSourceProfile from "#lib/sections/ImportSourceProfile.svelte";
+  import ImportVehiclesHeading from "#lib/sections/ImportVehiclesHeading.svelte";
+  import ImportSourceVehicleListing from "#lib/sections/ImportSourceVehicleListing.svelte";
   import Footer from "#lib/components/Footer.svelte";
-  import { dealer } from "#lib/content.ts";
+  import { page } from "$app/state";
+  import {
+    findImportSource,
+    suppliedImportSources,
+  } from "#lib/data/import-sources.ts";
+  const sources = suppliedImportSources();
+  const source = $derived(
+    findImportSource(sources, page.url.searchParams.get("source")),
+  );
 </script>
 
-<svelte:head
-  ><title
-    >{dealer.name === "Karento"
-      ? "Import Source Profile | Karento"
-      : "Import Source Profile" + " | " + dealer.name}</title
-  ></svelte:head
->
+<PageMetadata
+  title={source?.name ?? locale.t("ui.import-discovery.source-unavailable")}
+/>
 <main class="main"
-  ><PageHeaderPt3064d3183f />
-  <BoxSectionBoxContentTourDetailf5ab29e1 />
-  <Pt5023f5495b />
-  <BoxSectionBlockContentTourlist1f909262 />
+  >{#if source}
+    <ImportProfileHeading {source} />
+    <ImportSourceProfile {source} />
+    {#if source.vehicles?.length}
+      <ImportVehiclesHeading />
+      <ImportSourceVehicleListing cards={source.vehicles} />
+    {/if}
+  {:else}
+    <section class="container desktop-collection-section">
+      <h1 class="desktop-type-page"
+        >{locale.t("ui.import-discovery.source-unavailable")}</h1
+      >
+      <p class="desktop-type-body"
+        >{locale.t("ui.import-discovery.choose-another-source")}</p
+      >
+      <a
+        class="btn btn-primary desktop-type-control"
+        href={locale.href("/import")}
+        >{locale.t("ui.import-discovery.back-to-sources")}</a
+      >
+    </section>
+  {/if}
   <Footer /></main
 >

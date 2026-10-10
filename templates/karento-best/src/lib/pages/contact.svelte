@@ -1,21 +1,35 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import PageHeaderPt303794e9c8 from "#lib/sections/PageHeaderPt303794e9c8.svelte";
-  import BoxSectionPt1105cb56a12 from "#lib/sections/BoxSectionPt1105cb56a12.svelte";
-  import BoxSectionBoxContactForm71cbd808 from "#lib/sections/BoxSectionBoxContactForm71cbd808.svelte";
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import { afterNavigate } from "$app/navigation";
+  import { page } from "$app/state";
+  import { onDestroy, tick } from "svelte";
+  import { MediaQuery } from "svelte/reactivity";
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import ContactHeading from "#lib/sections/ContactHeading.svelte";
+  import ContactLocations from "#lib/sections/ContactLocations.svelte";
+  import ContactEnquiry from "#lib/sections/ContactEnquiry.svelte";
   import Footer from "#lib/components/Footer.svelte";
-  import { dealer } from "#lib/content.ts";
+  let enquiryOpen = $state(false);
+  const phone = new MediaQuery("(max-width: 767.98px)");
+  let active = true;
+  afterNavigate(async () => {
+    if (page.url.hash !== "#contact-enquiry") return;
+    await tick();
+    if (active && phone.current && page.url.hash === "#contact-enquiry")
+      enquiryOpen = true;
+  });
+  onDestroy(() => {
+    active = false;
+  });
 </script>
 
-<svelte:head
-  ><title
-    >{dealer.name === "Karento"
-      ? "Contact | Karento"
-      : "Contact" + " | " + dealer.name}</title
-  ></svelte:head
->
+<PageMetadata title={locale.t("ui.contact.contact")} />
 <main class="main"
-  ><PageHeaderPt303794e9c8 />
-  <BoxSectionPt1105cb56a12 />
-  <BoxSectionBoxContactForm71cbd808 />
+  ><ContactHeading bind:open={enquiryOpen} />
+  <ContactLocations />
+  <ContactEnquiry bind:open={enquiryOpen} />
   <Footer /></main
 >

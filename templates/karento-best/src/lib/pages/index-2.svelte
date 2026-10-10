@@ -1,45 +1,41 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import BoxBannerHome7b226deee from "#lib/sections/BoxBannerHome7b226deee.svelte";
-  import BorderBottomd32072b6 from "#lib/sections/BorderBottomd32072b6.svelte";
-  import BoxFlights21829611 from "#lib/sections/BoxFlights21829611.svelte";
-  import SectionCta4PositionRelativedae35d64 from "#lib/sections/SectionCta4PositionRelativedae35d64.svelte";
-  import Pt80Pb509525f0ff from "#lib/sections/Pt80Pb509525f0ff.svelte";
-  import SectionStatic1ClassList0754f62c from "#lib/sections/SectionStatic1ClassList0754f62c.svelte";
-  import BoxFlights860c666e from "#lib/sections/BoxFlights860c666e.svelte";
-  import Section22a42e50 from "#lib/sections/Section22a42e50.svelte";
-  import SectionTeam1ec547cfe from "#lib/sections/SectionTeam1ec547cfe.svelte";
-  import BoxCta5c4f130a1 from "#lib/sections/BoxCta5c4f130a1.svelte";
-  import Section6d539111 from "#lib/sections/Section6d539111.svelte";
-  import BoxWhyBook22ClassList7de3e37d from "#lib/sections/BoxWhyBook22ClassList7de3e37d.svelte";
-  import Pb85cd5c61b8 from "#lib/sections/Pb85cd5c61b8.svelte";
-  import BoxApp2PositionRelativeaa2090fd from "#lib/sections/BoxApp2PositionRelativeaa2090fd.svelte";
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import HomeSearchCarousel from "#lib/sections/HomeSearchCarousel.svelte";
+  import VehicleTypeLinks from "#lib/sections/VehicleTypeLinks.svelte";
+  import PopularVehicleCarousel from "#lib/sections/PopularVehicleCarousel.svelte";
+  import SellAndRentalOffersCompact from "#lib/sections/SellAndRentalOffersCompact.svelte";
+  import VehicleReviewCarouselPadded from "#lib/sections/VehicleReviewCarouselPadded.svelte";
+  import BusinessStatsPlain from "#lib/sections/BusinessStatsPlain.svelte";
+  import FeaturedVehicleCarousel from "#lib/sections/FeaturedVehicleCarousel.svelte";
+  import PremiumBrandGrid from "#lib/sections/PremiumBrandGrid.svelte";
+  import AgentTeam from "#lib/sections/AgentTeam.svelte";
+  import LoanCalculatorSplit from "#lib/sections/LoanCalculatorSplit.svelte";
+  import CustomerReviewCarouselPlain from "#lib/sections/CustomerReviewCarouselPlain.svelte";
+  import VehicleJourneySteps from "#lib/sections/VehicleJourneySteps.svelte";
+  import TrendingNewsCarousel from "#lib/sections/TrendingNewsCarousel.svelte";
+  import AppDownloadPromotionCompact from "#lib/sections/AppDownloadPromotionCompact.svelte";
   import Footer from "#lib/components/Footer.svelte";
-  import { dealer } from "#lib/content.ts";
 </script>
 
-<svelte:head
-  ><title
-    >{dealer.name === "Karento"
-      ? "Carento - Car rental Bootstrap 5 Template"
-      : "Carento - Car rental Bootstrap 5 Template" +
-        " | " +
-        dealer.name}</title
-  ></svelte:head
->
+<PageMetadata title={locale.t("ui.index-2.home")} />
 <main class="main"
-  ><BoxBannerHome7b226deee />
-  <BorderBottomd32072b6 />
-  <BoxFlights21829611 />
-  <SectionCta4PositionRelativedae35d64 />
-  <Pt80Pb509525f0ff />
-  <SectionStatic1ClassList0754f62c />
-  <BoxFlights860c666e />
-  <Section22a42e50 />
-  <SectionTeam1ec547cfe />
-  <BoxCta5c4f130a1 />
-  <Section6d539111 />
-  <BoxWhyBook22ClassList7de3e37d />
-  <Pb85cd5c61b8 />
-  <BoxApp2PositionRelativeaa2090fd />
+  ><HomeSearchCarousel />
+  <VehicleTypeLinks />
+  <PopularVehicleCarousel />
+  <SellAndRentalOffersCompact />
+  <VehicleReviewCarouselPadded />
+  <BusinessStatsPlain />
+  <FeaturedVehicleCarousel />
+  <PremiumBrandGrid />
+  <AgentTeam />
+  <LoanCalculatorSplit />
+  <CustomerReviewCarouselPlain />
+  <VehicleJourneySteps />
+  <TrendingNewsCarousel />
+  <AppDownloadPromotionCompact />
   <Footer /></main
 >

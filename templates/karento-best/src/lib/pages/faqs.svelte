@@ -1,23 +1,36 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import BoxSectionBackground23057ec46 from "#lib/sections/BoxSectionBackground23057ec46.svelte";
-  import SectionFaqs2Pt8092250cf0 from "#lib/sections/SectionFaqs2Pt8092250cf0.svelte";
-  import SectionFaqs2Pt80635426c2 from "#lib/sections/SectionFaqs2Pt80635426c2.svelte";
-  import SectionStatic1Background2e19b6fdf from "#lib/sections/SectionStatic1Background2e19b6fdf.svelte";
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import FaqSupportTopics from "#lib/sections/FaqSupportTopics.svelte";
+  import GeneralFaq from "#lib/sections/GeneralFaq.svelte";
+  import PaymentFaq from "#lib/sections/PaymentFaq.svelte";
+  import BusinessStats from "#lib/sections/BusinessStats.svelte";
   import Footer from "#lib/components/Footer.svelte";
+  import HomeFaq from "#lib/sections/HomeFaq.svelte";
   import { dealer } from "#lib/content.ts";
 </script>
 
-<svelte:head
-  ><title
-    >{dealer.name === "Karento"
-      ? "FAQ | Karento"
-      : "FAQ" + " | " + dealer.name}</title
-  ></svelte:head
->
-<main class="main"
-  ><BoxSectionBackground23057ec46 />
-  <SectionFaqs2Pt8092250cf0 />
-  <SectionFaqs2Pt80635426c2 />
-  <SectionStatic1Background2e19b6fdf />
+<PageMetadata title={locale.t("ui.faqs.faq")} />
+<main class="main karento-faq-page"
+  >{#if dealer.businessPreview}<HomeFaq />{:else}<FaqSupportTopics />
+    <GeneralFaq />
+    <PaymentFaq />
+    <BusinessStats />
+  {/if}
   <Footer /></main
 >
+
+<style>
+  @media (min-width: 992px) {
+    .karento-faq-page :global(.karento-faq-topics),
+    .karento-faq-page :global(.karento-faq-topics .heading-panel),
+    .karento-faq-page :global(.karento-faq-card),
+    .karento-faq-page :global(.karento-faq-card > .card-header),
+    .karento-faq-page :global(.section-static-1) {
+      background-color: var(--bs-background-body) !important;
+    }
+  }
+</style>

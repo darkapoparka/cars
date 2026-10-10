@@ -1,4 +1,5 @@
 import { ownAsyncResource, type ResourceScope } from "./async-resource.ts";
+import type { Attachment } from "svelte/attachments";
 import configs from "./slider-config.json";
 import charts from "./chart-config.json";
 type Options = Record<string, unknown>;
@@ -38,42 +39,34 @@ function loadScript(src: string) {
 }
 function own(
   node: HTMLElement,
-  initialize: (scope: ResourceScope) => Promise<Disposable | null>,
-) {
-  const resource = ownAsyncResource(
-    async (scope) => {
-      const instance = await initialize(scope);
-      if (instance) scope.onCleanup(() => instance.destroy(true, true));
+  initialize: (scope: ResourceScope) => Promise<void>,
+): () => void {
+  const resource = ownAsyncResource(initialize, {
+    ready() {
+      node.dataset.widgetReady = "true";
     },
-    {
-      ready() {
-        node.dataset.widgetReady = "true";
-      },
-      error(error) {
-        node.dataset.widgetError = "true";
-        console.error("Karento preview widget failed", error);
-      },
-      cleanupError(error) {
-        console.error("Karento widget cleanup failed", error);
-      },
+    error(error) {
+      node.dataset.widgetError = "true";
+      console.error("Karento preview widget failed", error);
     },
-  );
-  return {
-    destroy() {
-      resource.destroy();
-      delete node.dataset.widgetReady;
-      delete node.dataset.widgetError;
+    cleanupError(error) {
+      console.error("Karento widget cleanup failed", error);
     },
+  });
+  return () => {
+    resource.destroy();
+    delete node.dataset.widgetReady;
+    delete node.dataset.widgetError;
   };
 }
-export function slider(node: HTMLElement) {
+export const slider: Attachment<HTMLElement> = (node) => {
   return own(node, async (scope) => {
     await loadScript("/assets/js/plugins/swiper-bundle.min.js");
-    if (!scope.active) return null;
+    if (!scope.active) return;
     const Constructor = (window as VendorWindow).Swiper;
     if (!Constructor) throw new Error("Swiper unavailable");
     const key = Object.keys(configs).find((key) => node.matches(key));
-    if (!key) return null;
+    if (!key) return;
     const options: Options = structuredClone(
       configs[key as keyof typeof configs],
     );
@@ -120,25 +113,25 @@ export function slider(node: HTMLElement) {
               (node.classList.contains("swiper-group-animate") ? 15 : 0),
           ) + "px";
     }
-    return null;
   });
-}
-export function scrollbar(node: HTMLElement) {
+};
+export const scrollbar: Attachment<HTMLElement> = (node) => {
   return own(node, async (scope) => {
     await loadScript("/assets/js/plugins/perfect-scrollbar.min.js");
-    if (!scope.active) return null;
+    if (!scope.active) return;
     const Constructor = (window as VendorWindow).PerfectScrollbar;
     if (!Constructor) throw new Error("Scrollbar unavailable");
-    return new Constructor(node);
+    const instance = new Constructor(node);
+    scope.onCleanup(() => instance.destroy());
   });
-}
-export function chart(node: HTMLElement) {
+};
+export const chart: Attachment<HTMLElement> = (node) => {
   return own(node, async (scope) => {
     await loadScript("/assets/js/plugins/apexcharts.min.js");
-    if (!scope.active) return null;
+    if (!scope.active) return;
     const Constructor = (window as VendorWindow).ApexCharts;
     const options = charts[("#" + node.id) as keyof typeof charts];
-    if (!Constructor || !options) return null;
+    if (!Constructor || !options) return;
     const renderedOptions = structuredClone(options);
     // The chart's auto-sized parent also contains the chart. Observing its
     // height creates a resize feedback loop; window resizing still redraws it.
@@ -152,9 +145,8 @@ export function chart(node: HTMLElement) {
     const instance = new Constructor(node, renderedOptions);
     scope.onCleanup(() => instance.destroy());
     await instance.render();
-    return null;
   });
-}
+};
 interface RangeApi {
   on(event: string, callback: (values: string[]) => void): void;
   destroy(): void;
@@ -162,10 +154,10 @@ interface RangeApi {
 interface RangeElement extends HTMLElement {
   noUiSlider?: RangeApi;
 }
-export function range(node: RangeElement) {
+export const range: Attachment<RangeElement> = (node) => {
   return own(node, async (scope) => {
     await loadScript("/assets/js/plugins/noUISlider.js");
-    if (!scope.active) return null;
+    if (!scope.active) return;
     const vendor = window as Window & {
       noUiSlider?: { create(node: HTMLElement, options: Options): void };
     };
@@ -185,16 +177,12 @@ export function range(node: RangeElement) {
     });
     const api = node.noUiSlider;
     if (!api) throw new Error("Range slider did not initialize");
+    scope.onCleanup(() => api.destroy());
     api.on("update", (values) => {
       const input = node
         .closest(".block-filter")
         ?.querySelector<HTMLInputElement>(".value-money");
       if (input) input.value = values[0];
     });
-    return {
-      destroy() {
-        api.destroy();
-      },
-    };
   });
-}
+};

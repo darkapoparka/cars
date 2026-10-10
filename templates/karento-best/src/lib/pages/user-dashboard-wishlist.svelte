@@ -1,19 +1,17 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import BoxSectionPt801536352c from "#lib/sections/BoxSectionPt801536352c.svelte";
-  import BoxSectionPt800d2ca8da from "#lib/sections/BoxSectionPt800d2ca8da.svelte";
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import WishlistHeading from "#lib/sections/WishlistHeading.svelte";
+  import MemberWishlistDashboard from "#lib/sections/MemberWishlistDashboard.svelte";
   import Footer from "#lib/components/Footer.svelte";
-  import { dealer } from "#lib/content.ts";
 </script>
 
-<svelte:head
-  ><title
-    >{dealer.name === "Karento"
-      ? "My Wishlist | Karento"
-      : "My Wishlist" + " | " + dealer.name}</title
-  ></svelte:head
->
+<PageMetadata title={locale.t("ui.user-dashboard-wishlist.my-wishlist")} />
 <main class="main"
-  ><BoxSectionPt801536352c />
-  <BoxSectionPt800d2ca8da />
+  ><WishlistHeading />
+  <MemberWishlistDashboard />
   <Footer /></main
 >

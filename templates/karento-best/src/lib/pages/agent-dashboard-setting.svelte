@@ -1,19 +1,17 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import BoxSectionPt80a9956b80 from "#lib/sections/BoxSectionPt80a9956b80.svelte";
-  import BoxSectionPt802c5ad6f8 from "#lib/sections/BoxSectionPt802c5ad6f8.svelte";
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import OwnerSettingsHeading from "#lib/sections/OwnerSettingsHeading.svelte";
+  import OwnerSettingsDashboard from "#lib/sections/OwnerSettingsDashboard.svelte";
   import Footer from "#lib/components/Footer.svelte";
-  import { dealer } from "#lib/content.ts";
 </script>
 
-<svelte:head
-  ><title
-    >{dealer.name === "Karento"
-      ? "Dealer Settings | Karento"
-      : "Dealer Settings" + " | " + dealer.name}</title
-  ></svelte:head
->
+<PageMetadata title={locale.t("ui.agent-dashboard-setting.dealer-settings")} />
 <main class="main"
-  ><BoxSectionPt80a9956b80 />
-  <BoxSectionPt802c5ad6f8 />
+  ><OwnerSettingsHeading />
+  <OwnerSettingsDashboard />
   <Footer /></main
 >

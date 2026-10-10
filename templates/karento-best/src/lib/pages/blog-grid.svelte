@@ -1,17 +1,15 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import BoxSectionPt80627c6b85 from "#lib/sections/BoxSectionPt80627c6b85.svelte";
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import NewsGrid from "#lib/sections/NewsGrid.svelte";
   import Footer from "#lib/components/Footer.svelte";
-  import { dealer } from "#lib/content.ts";
 </script>
 
-<svelte:head
-  ><title
-    >{dealer.name === "Karento"
-      ? "News | Karento"
-      : "News" + " | " + dealer.name}</title
-  ></svelte:head
->
+<PageMetadata title={locale.t("ui.blog-grid.news")} />
 <main class="main"
-  ><BoxSectionPt80627c6b85 />
+  ><NewsGrid />
   <Footer /></main
 >

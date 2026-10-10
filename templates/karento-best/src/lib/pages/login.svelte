@@ -1,17 +1,15 @@
+<svelte:options runes={true} />
+
 <script lang="ts">
-  import ContainerPt140d2109d6f from "#lib/sections/ContainerPt140d2109d6f.svelte";
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import DemoSignIn from "#lib/sections/DemoSignIn.svelte";
   import Footer from "#lib/components/Footer.svelte";
-  import { dealer } from "#lib/content.ts";
 </script>
 
-<svelte:head
-  ><title
-    >{dealer.name === "Karento"
-      ? "Login | Karento"
-      : "Login" + " | " + dealer.name}</title
-  ></svelte:head
->
+<PageMetadata title={locale.t("ui.login.login")} />
 <main class="main background-body"
-  ><ContainerPt140d2109d6f />
+  ><DemoSignIn />
   <Footer /></main
 >
