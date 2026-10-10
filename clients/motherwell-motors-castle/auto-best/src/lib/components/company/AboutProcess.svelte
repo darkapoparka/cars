@@ -34,11 +34,11 @@
             <AboutServiceIcon name={service.icon} />
           </div>
           <div class="dn-about-service-card__copy">
-            <h3>{i18n.text(service.title)}</h3>
-            <p>{i18n.text(service.description)}</p>
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
           </div>
           <a href={i18n.href(service.href)}>
-            <span>{i18n.text(service.cta)}</span>
+            <span>{service.cta}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </a>
         </article>

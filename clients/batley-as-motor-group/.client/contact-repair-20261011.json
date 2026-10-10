@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "dealer": "batley-as-motor-group",
+  "at": "2026-10-10T23:53:13.089Z",
+  "missingShortAddressUsesVerifiedFullAddress": true,
+  "unknownDealerFieldsStillThrow": true,
+  "aboutServiceTextUsesDealerDataDirectly": true,
+  "strictTemplateCopyValidationUnchanged": true,
+  "factsSha256": "c01ff963ef8f1277aef78e5d5bd957aae180df55f18edb7a933d5c534ed1db3d",
+  "stockSha256": "e0deb9f20a9a25c416467f8951dab0c50de33ac757f09612265c46f16eeee008",
+  "hostedVerified": false
+}

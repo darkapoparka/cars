@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "dealer": "stockport-broadbent-car-and-servicing",
+  "at": "2026-10-10T23:53:16.500Z",
+  "missingShortAddressUsesVerifiedFullAddress": true,
+  "unknownDealerFieldsStillThrow": true,
+  "aboutServiceTextUsesDealerDataDirectly": true,
+  "strictTemplateCopyValidationUnchanged": true,
+  "factsSha256": "1c80d119b909d694a533396f2c83aa65cc8d184a8a50ef68aeb24605cacb04ad",
+  "stockSha256": "0de2376c2ba951c349a59bab08239b96508ee7aa53315d79e561371f13ad611f",
+  "hostedVerified": false
+}

@@ -45,7 +45,7 @@ export function vehicleCount(locale: Locale, count: number): string {
 export type DealerTextField = keyof typeof dealerLocalizedText.en;
 export function dealerLabel(locale: Locale, field: DealerTextField, compact = false): string {
   const labels = dealerLocalizedText[locale] as Record<string, string>;
-  const value = compact ? labels[`${field}Short`] ?? labels[field] : labels[field];
+  const value = (compact ? labels[`${field}Short`] ?? labels[field] : labels[field]) ?? (field.endsWith('Short') ? labels[field.slice(0, -5)] : undefined);
   if (typeof value !== 'string' || !value.trim()) throw new Error(`Dealer field ${field} requires reviewed EN/BG dealer-owned copy`);
   return value;
 }

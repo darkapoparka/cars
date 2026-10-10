@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "dealer": "birmingham-trade-car-sales-grasmere",
+  "at": "2026-10-10T23:53:23.427Z",
+  "missingShortAddressUsesVerifiedFullAddress": true,
+  "unknownDealerFieldsStillThrow": true,
+  "aboutServiceTextUsesDealerDataDirectly": true,
+  "strictTemplateCopyValidationUnchanged": true,
+  "factsSha256": "d635920e40aae81f9844db156e345bfd0e4dbb3ed97279bffc43120ad38a1beb",
+  "stockSha256": "99b6c0ccc0bc8e88b9699c7a11ff5d5bb12f770e4997df591d037a1063d972e1",
+  "hostedVerified": false
+}
