@@ -22,9 +22,16 @@ const numberFrom = (...values) => {
   }
   return null;
 };
-const normalizePhoneHref = (value) => {
+const normalizePhoneHref = (value, countryCode) => {
   const source = asString(value);
   if (!source) return '';
+  const local = source.replace(/^tel:/, '');
+  // Only a recorded UK business and a complete domestic number may gain +44.
+  // Retain international numbers, short codes and extension-bearing input.
+  if (countryCode === 'GB' && /^0[\d\s().-]*$/.test(local)) {
+    const localDigits = local.replace(/\D/g, '');
+    if (/^0[1-9]\d{9}$/.test(localDigits)) return `tel:+44${localDigits.slice(1)}`;
+  }
   if (source.startsWith('tel:')) return source;
   const digits = source.replace(/[^\d+]/g, '');
   return digits ? `tel:${digits}` : '';
@@ -64,10 +71,12 @@ function legacyEliqBusiness(client) {
 function normalizeCountryCode(value, locale) {
   const direct = asString(value).toUpperCase();
   if (/^[A-Z]{2}$/.test(direct)) return direct;
+  if (/\bUNITED\s+KINGDOM\b/.test(direct) || /^EN-?GB$/.test(direct)) return 'GB';
   const text = `${direct} ${asString(locale)}`.toUpperCase();
   if (/BULGARIA|БЪЛГАР|BG-?BG/.test(text)) return 'BG';
   if (/UNITED ARAB EMIRATES|UAE|EN-?AE/.test(text)) return 'AE';
   if (/UNITED STATES|USA|EN-?US/.test(text)) return 'US';
+  if (!direct && /\bEN-?GB\b/.test(text)) return 'GB';
   return '';
 }
 
@@ -77,9 +86,9 @@ function normalizeBusiness(client, slug, rawFacts) {
     ? (rawFacts.business || rawFacts)
     : (slug === 'eliqauto' ? legacyEliqBusiness(client) : {});
   const countryCode = normalizeCountryCode(source.countryCode || source.country, source.locale);
-  const locale = firstString(source.locale, countryCode === 'BG' ? 'bg-BG' : countryCode === 'AE' ? 'en-AE' : countryCode === 'US' ? 'en-US' : 'en-US');
-  const currency = firstString(source.currency, countryCode === 'BG' ? 'EUR' : countryCode === 'AE' ? 'AED' : countryCode === 'US' ? 'USD' : 'EUR').toUpperCase();
-  const distanceUnit = firstString(source.distanceUnit, source.mileageUnit, countryCode === 'US' ? 'mi' : 'km').toLowerCase();
+  const locale = firstString(source.locale, countryCode === 'BG' ? 'bg-BG' : countryCode === 'AE' ? 'en-AE' : countryCode === 'GB' ? 'en-GB' : 'en-US');
+  const currency = firstString(source.currency, countryCode === 'BG' ? 'EUR' : countryCode === 'AE' ? 'AED' : countryCode === 'US' ? 'USD' : countryCode === 'GB' ? 'GBP' : 'EUR').toUpperCase();
+  const distanceUnit = firstString(source.distanceUnit, source.mileageUnit, ['US', 'GB'].includes(countryCode) ? 'mi' : 'km').toLowerCase();
   const publishedPhones = [
     ...asArray(source.phones),
     ...asArray(source.phoneNumbers)
@@ -89,7 +98,7 @@ function normalizeBusiness(client, slug, rawFacts) {
     source.phoneE164,
     source.phone,
     publishedPhones[0]
-  ));
+  ), countryCode);
   const phoneDisplay = firstString(
     source.phoneDisplay,
     source.phone,
@@ -127,7 +136,7 @@ function normalizeBusiness(client, slug, rawFacts) {
     tagline: firstString(source.tagline, `${name} · ${source.city || ''}`),
     city: firstString(source.city, source.location?.city),
     region: firstString(source.region, source.district),
-    country: firstString(source.country, countryCode === 'BG' ? 'Bulgaria' : countryCode === 'AE' ? 'United Arab Emirates' : countryCode === 'US' ? 'United States' : ''),
+    country: firstString(source.country, countryCode === 'BG' ? 'Bulgaria' : countryCode === 'AE' ? 'United Arab Emirates' : countryCode === 'US' ? 'United States' : countryCode === 'GB' ? 'United Kingdom' : ''),
     countryCode,
     locale,
     currency,

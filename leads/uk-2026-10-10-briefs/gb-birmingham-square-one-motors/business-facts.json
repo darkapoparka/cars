@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "leadId": "gb-birmingham-square-one-motors",
+  "slug": "birmingham-square-one-motors",
+  "observedAt": "2026-10-10",
+  "name": "Square One Motors",
+  "shortName": "Square One Motors",
+  "legalName": null,
+  "companyNumber": null,
+  "city": "Birmingham",
+  "country": "United Kingdom",
+  "countryCode": "GB",
+  "address": "Tameside Way, Birmingham B42 2UB",
+  "phone": null,
+  "phoneDisplay": null,
+  "phoneHref": null,
+  "email": null,
+  "hours": null,
+  "coordinates": null,
+  "currency": "GBP",
+  "distanceUnit": "mi",
+  "locale": "en-GB",
+  "languages": [
+    "en"
+  ],
+  "accent": null,
+  "website": null,
+  "sourceProfile": "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+  "mapsUrl": null,
+  "mapsEmbedUrl": null,
+  "tagline": "Vehicle design preview for Square One Motors in Birmingham.",
+  "socialLinks": {},
+  "services": [],
+  "stockCount": 0,
+  "publishedListingCount": 40,
+  "sampleOnly": true,
+  "inventoryMode": "illustrative_unpopulated",
+  "previewNotice": "Independent design preview for discussion; it is not an official dealership website. No dealership approval or enquiry delivery is implied.",
+  "inventoryNotice": "No vehicle samples have been populated yet. Later advertised examples must retain their source date, actual GBP price, original mileage unit and availability caveat. Illustrative stock must be clearly identified.",
+  "availabilityLabel": "Sample — availability not confirmed",
+  "contactNotice": "Direct enquiry destination is not confirmed; show an honest demo/unavailable contact state until resolved.",
+  "locationNote": "Publicly advertised premises; reconfirm the visit address before travel or release.",
+  "sources": [
+    "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+    "https://showroom.ebaymotorspro.co.uk/Square-One-Motors?menu=1",
+    "https://www.cazoo.co.uk/dealers/square-one-motors-15536/",
+    "https://www.ebay.co.uk/itm/237115219033"
+  ],
+  "opportunity": "A branded stock catalogue with consistent vehicle details and direct enquiries from social and marketplace visitors.",
+  "qualificationNotes": [
+    "A larger budget catalogue on two platforms, public business email and a primary listing updated 9 October.",
+    "40 in AutoTrader's real Used cars section; eBay and Cazoo opened snapshots each 24. Indexed counts differ. Generic Ford Kuga Dummy featured records were excluded; counts are not summed.",
+    "Tameside Way, Birmingham B42 2UB matches platforms. Google Maps did not return a confidently matched profile.",
+    "Marketplace-provided phone may forward calls; confirm an owner-controlled number.",
+    "Public trading name/city only: no dealership approval, contact ownership, matched legal entity or private contact history has been verified.",
+    "Vehicle media, prices, mileage, services, staff, reviews, finance claims, hours and branding have not been selected or accepted for application content in this preparation pass."
+  ],
+  "contactCandidates": {
+    "phone": "0121 728 5538",
+    "email": "squareonemotors@hotmail.com",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Square-One-Motors?menu=1",
+    "phoneCaveat": "Marketplace-provided phone may forward calls; confirm an owner-controlled number.",
+    "status": "public_business_contact_not_contacted",
+    "phoneE164": "+441217285538",
+    "approvalStatus": "public_research_not_dealer_confirmed"
+  },
+  "addressCandidates": {
+    "publishedNote": "Tameside Way, Birmingham B42 2UB matches platforms. Google Maps did not return a confidently matched profile.",
+    "conflicts": [],
+    "googleProfile": {
+      "status": "no_confidently_matched_profile_in_bounded_map_search",
+      "assessedAt": "2026-10-10",
+      "note": "No dealer profile was confidently matched; this does not prove no Google profile exists."
+    },
+    "status": "publicly_advertised_not_owner_confirmed"
+  },
+  "researchEvidence": {
+    "inventory": {
+      "count": 40,
+      "kind": "opened_platform_advertised_count",
+      "retrievedAt": "2026-10-10",
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+      "caveat": "40 in AutoTrader's real Used cars section; eBay and Cazoo opened snapshots each 24. Indexed counts differ. Generic Ford Kuga Dummy featured records were excluded; counts are not summed."
+    },
+    "stockSnapshots": [
+      {
+        "count": 40,
+        "sourceUrl": "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+        "method": "opened",
+        "observedAt": "2026-10-10"
+      },
+      {
+        "count": 24,
+        "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Square-One-Motors?menu=1",
+        "method": "opened",
+        "observedAt": "2026-10-10"
+      },
+      {
+        "count": 24,
+        "sourceUrl": "https://www.cazoo.co.uk/dealers/square-one-motors-15536/",
+        "method": "opened",
+        "observedAt": "2026-10-10"
+      }
+    ],
+    "activityEvidence": [
+      {
+        "kind": "primary_advert_last_updated_date",
+        "date": "2026-10-09",
+        "sourceUrl": "https://www.ebay.co.uk/itm/237115219033",
+        "note": "Smart Roadster advert explicitly Last updated 09 Oct 2026 03:01:17 BST. Seller squareone1m, Birmingham and public platform phone match showroom. Direct research-agent observation; root web tool could not reproduce the page."
+      }
+    ],
+    "website": {
+      "url": null,
+      "status": "no_standalone_domain_found_in_bounded_search",
+      "assessedAt": "2026-10-10",
+      "confidence": "medium",
+      "observations": [
+        "AutoTrader Website field is blank.",
+        "eBay showroom lists public email but no standalone website destination."
+      ]
+    },
+    "domainChecks": {
+      "queries": [
+        "\"Square One Motors\" \"Tameside Way\" website",
+        "\"squareonemotors@hotmail.com\" website",
+        "\"Square One Motors\" \"B42 2UB\"",
+        "\"0121 728 5538\" website"
+      ],
+      "profilesChecked": [
+        "https://showroom.ebaymotorspro.co.uk/Square-One-Motors?menu=1",
+        "https://www.cazoo.co.uk/dealers/square-one-motors-15536/"
+      ],
+      "result": "No confidently matched dealer-owned standalone domain found in these bounded checks. Absence must be confirmed with the operator."
+    }
+  },
+  "branding": {
+    "publishedBranding": null,
+    "sourceLogoUrl": null,
+    "workingLogoPath": null,
+    "creationMethod": null,
+    "approvalStatus": "not_researched_for_build",
+    "visualInspection": "not_performed_in_brief_preparation",
+    "requiredNextStep": "Inspect matching public branding visually; use a suitable permitted original raster asset or an identified generated refresh/proposal when required by the build guardrails."
+  },
+  "buildPreparation": {
+    "status": "public_fact_pack_prepared_not_an_application",
+    "derivedFrom": {
+      "path": "../../uk-2026-10-10.json",
+      "sourceSha256": "05d34f35ad699beb6676de775a50e8659ae23771e73d0aa25c9c94a646f348b2",
+      "researchAsOf": "2026-10-10"
+    },
+    "researchSnapshotFlags": {
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked"
+    },
+    "ownerRequest": "Ten proposals with six variants on Cloudflare after accepted template releases. This pack records neither dealership approval nor changes to original research flags.",
+    "requestedTemplateChoices": [
+      "auto-best",
+      "modern",
+      "import",
+      "app",
+      "mobile",
+      "karento-best"
+    ],
+    "templateLabels": {
+      "auto-best": "Auto Best",
+      "modern": "Modern",
+      "import": "Import",
+      "app": "App",
+      "mobile": "Mobile",
+      "karento-best": "Signature"
+    },
+    "recommendedEntryTemplate": "modern",
+    "showFirstReason": "Show a simple stock-to-viewing demonstration suited to the budget catalogue.",
+    "templatePins": null,
+    "hosting": {
+      "requestedProvider": "cloudflare",
+      "acceptedPublisher": null,
+      "publicOrigin": null,
+      "status": "await_qualified_pilot_and_release_acceptance",
+      "dnsChangeAuthorized": false,
+      "billingChangeAuthorized": false
+    },
+    "nextAction": "Resolve platform stock-count differences and confirm a direct phone, owner identity, domain status and current vehicles before adapting.",
+    "readyToPersonalizeNow": [
+      "Public trading name",
+      "Public city/region",
+      "GB dealership country",
+      "en-GB English presentation",
+      "GBP pricing contract",
+      "Miles display contract with actual kilometre conversion",
+      "Independent preview disclosure"
+    ],
+    "requiresBeforeComplete": [
+      "Accepted immutable pins for all six requested families",
+      "Qualified six-variant Cloudflare packaging/publisher",
+      "Canonical identity and existing-client/alias reconciliation",
+      "Current premises and direct contact destination",
+      "Visual brand inspection and permitted local raster assets",
+      "Sourced dated stock with correct units and permitted images, or explicitly illustrative inventory",
+      "Inherited identity/claim sweep and honest demo forms",
+      "Per-variant QA and hosted checks"
+    ],
+    "qa": {
+      "sourcePackValidated": true,
+      "applicationBuilt": false,
+      "browserReviewed": false,
+      "hostedVerified": false
+    },
+    "existingClientPathFromResearch": null
+  }
+}

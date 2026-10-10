@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "leadId": "gb-north-norfolk-car-sales",
+  "slug": "north-norfolk-car-sales",
+  "observedAt": "2026-10-10",
+  "name": "North Norfolk Car Sales",
+  "shortName": "North Norfolk Car Sales",
+  "legalName": null,
+  "companyNumber": null,
+  "city": "North Walsham, Norfolk",
+  "country": "United Kingdom",
+  "countryCode": "GB",
+  "address": "Unit 3 Midland Road, North Walsham NR28 9JR",
+  "phone": "+441263653055",
+  "phoneDisplay": "01263 653055",
+  "phoneHref": "tel:+441263653055",
+  "email": "sales@northnorfolkcarsales.co.uk",
+  "hours": null,
+  "coordinates": null,
+  "currency": "GBP",
+  "distanceUnit": "mi",
+  "locale": "en-GB",
+  "languages": [
+    "en"
+  ],
+  "accent": null,
+  "website": "https://northnorfolkcarsales.co.uk/",
+  "sourceProfile": "https://northnorfolkcarsales.co.uk/",
+  "mapsUrl": null,
+  "mapsEmbedUrl": null,
+  "tagline": "Vehicle design preview for North Norfolk Car Sales in North Walsham, Norfolk.",
+  "socialLinks": {},
+  "services": [],
+  "stockCount": 0,
+  "publishedListingCount": null,
+  "sampleOnly": true,
+  "inventoryMode": "illustrative_unpopulated",
+  "previewNotice": "Independent design preview for discussion; it is not an official dealership website. No dealership approval or enquiry delivery is implied.",
+  "inventoryNotice": "No vehicle samples have been populated yet. Later advertised examples must retain their source date, actual GBP price, original mileage unit and availability caveat. Illustrative stock must be clearly identified.",
+  "availabilityLabel": "Sample — availability not confirmed",
+  "contactNotice": "Published business contact observed on 10 October 2026; confirm the current owner-controlled destination before release.",
+  "locationNote": "Publicly advertised premises; reconfirm the visit address before travel or release.",
+  "sources": [
+    "https://northnorfolkcarsales.co.uk/",
+    "https://www.carandclassic.com/pt/carro/C2210498"
+  ],
+  "opportunity": "A consistent dealer identity, genuine proof points and a clean stock-to-viewing journey, retaining useful existing stock exposure.",
+  "qualificationNotes": [
+    "Retained as the tenth prospect under the owner's existing weak-website criterion: recent indexed 9 October stock listing plus browser-confirmed test reviews and misdirected social link. Exact stock volume unknown.",
+    "Search-indexed Porsche listing at GBP 12,999 has an explicit Listed on 09/10/2026 field. Direct opening was unavailable. This is indexed listing evidence, not proof of a social post or current availability.",
+    "Public trading name/city only: no dealership approval, contact ownership, matched legal entity or private contact history has been verified.",
+    "Vehicle media, prices, mileage, services, staff, reviews, finance claims, hours and branding have not been selected or accepted for application content in this preparation pass."
+  ],
+  "contactCandidates": {
+    "phone": "01263 653055",
+    "email": "sales@northnorfolkcarsales.co.uk",
+    "sourceUrl": "https://northnorfolkcarsales.co.uk/",
+    "status": "public_business_contact_not_contacted",
+    "phoneE164": "+441263653055",
+    "approvalStatus": "public_research_not_dealer_confirmed"
+  },
+  "addressCandidates": {
+    "publishedNote": null,
+    "conflicts": [],
+    "googleProfile": null,
+    "status": "publicly_advertised_not_owner_confirmed"
+  },
+  "researchEvidence": {
+    "inventory": {
+      "count": null,
+      "kind": "indexed_dated_marketplace_listing_and_own_site_stock",
+      "retrievedAt": "2026-10-10",
+      "sourceUrl": "https://www.carandclassic.com/pt/carro/C2210498",
+      "caveat": "Search-indexed Porsche listing at GBP 12,999 has an explicit Listed on 09/10/2026 field. Direct opening was unavailable. This is indexed listing evidence, not proof of a social post or current availability."
+    },
+    "stockSnapshots": [],
+    "activityEvidence": [
+      {
+        "kind": "indexed_explicit_marketplace_listing_date",
+        "date": "2026-10-09",
+        "sourceUrl": "https://www.carandclassic.com/pt/carro/C2210498",
+        "note": "Search-indexed Listed on field 09/10/2026; Porsche advertised at GBP 12,999. Direct opening was unavailable."
+      }
+    ],
+    "website": {
+      "url": "https://northnorfolkcarsales.co.uk/",
+      "status": "present_with_content_observations",
+      "assessedAt": "2026-10-10",
+      "confidence": "high_for_presence_medium_for_opportunity",
+      "observations": [
+        "Public review area contains explicit test content, confirmed in browser DOM inspection.",
+        "The Facebook destination was a website vendor rather than the dealer; confirm and correct the intended destination."
+      ]
+    },
+    "domainChecks": null
+  },
+  "branding": {
+    "publishedBranding": null,
+    "sourceLogoUrl": null,
+    "workingLogoPath": null,
+    "creationMethod": null,
+    "approvalStatus": "not_researched_for_build",
+    "visualInspection": "not_performed_in_brief_preparation",
+    "requiredNextStep": "Inspect matching public branding visually; use a suitable permitted original raster asset or an identified generated refresh/proposal when required by the build guardrails."
+  },
+  "buildPreparation": {
+    "status": "public_fact_pack_prepared_not_an_application",
+    "derivedFrom": {
+      "path": "../../uk-2026-10-10.json",
+      "sourceSha256": "05d34f35ad699beb6676de775a50e8659ae23771e73d0aa25c9c94a646f348b2",
+      "researchAsOf": "2026-10-10"
+    },
+    "researchSnapshotFlags": {
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked"
+    },
+    "ownerRequest": "Ten proposals with six variants on Cloudflare after accepted template releases. This pack records neither dealership approval nor changes to original research flags.",
+    "requestedTemplateChoices": [
+      "auto-best",
+      "modern",
+      "import",
+      "app",
+      "mobile",
+      "karento-best"
+    ],
+    "templateLabels": {
+      "auto-best": "Auto Best",
+      "modern": "Modern",
+      "import": "Import",
+      "app": "App",
+      "mobile": "Mobile",
+      "karento-best": "Signature"
+    },
+    "recommendedEntryTemplate": "modern",
+    "showFirstReason": "Show an immediately understandable stock and trust presentation before offering the other five styles.",
+    "templatePins": null,
+    "hosting": {
+      "requestedProvider": "cloudflare",
+      "acceptedPublisher": null,
+      "publicOrigin": null,
+      "status": "await_qualified_pilot_and_release_acceptance",
+      "dnsChangeAuthorized": false,
+      "billingChangeAuthorized": false
+    },
+    "nextAction": "Confirm the Unit 3 Midland Road, North Walsham NR28 9JR premises and current stock, then review/social destinations; personalize only after the release gate passes.",
+    "readyToPersonalizeNow": [
+      "Public trading name",
+      "Public city/region",
+      "GB dealership country",
+      "en-GB English presentation",
+      "GBP pricing contract",
+      "Miles display contract with actual kilometre conversion",
+      "Independent preview disclosure"
+    ],
+    "requiresBeforeComplete": [
+      "Accepted immutable pins for all six requested families",
+      "Qualified six-variant Cloudflare packaging/publisher",
+      "Canonical identity and existing-client/alias reconciliation",
+      "Current premises and direct contact destination",
+      "Visual brand inspection and permitted local raster assets",
+      "Sourced dated stock with correct units and permitted images, or explicitly illustrative inventory",
+      "Inherited identity/claim sweep and honest demo forms",
+      "Per-variant QA and hosted checks"
+    ],
+    "qa": {
+      "sourcePackValidated": true,
+      "applicationBuilt": false,
+      "browserReviewed": false,
+      "hostedVerified": false
+    },
+    "existingClientPathFromResearch": null
+  }
+}

@@ -6,7 +6,7 @@ import path from 'node:path';
 import test from 'node:test';
 import { fileURLToPath } from 'node:url';
 import { applyRefreshAdapter as runRefreshAdapter } from './lib/client-refresh-adapters.mjs';
-import { loadDealerProfile } from './lib/client-refresh-normalize.mjs';
+import { loadDealerProfile, refreshNormalizeInternals } from './lib/client-refresh-normalize.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const NAVARA = path.join(ROOT, 'clients/navara-car');
@@ -81,6 +81,91 @@ test('dealer phone arrays normalize to an international contact number', () => {
   assert.equal(kgTeam.business.phoneE164, '+359877346262');
   assert.equal(kgTeam.business.phoneHref, 'tel:+359877346262');
   assert.equal(kgTeam.business.phoneDisplay, '+359877346262');
+});
+
+test('UK profile recognises recorded country and formatting locale with British defaults', () => {
+  for (const facts of [{countryCode: 'GB'}, {country: 'United Kingdom'}, {locale: 'en-GB'}]) {
+    const business = refreshNormalizeInternals.normalizeBusiness('', 'uk-fixture', facts);
+    assert.equal(business.countryCode, 'GB');
+    assert.equal(business.country, 'United Kingdom');
+    assert.equal(business.locale, 'en-GB');
+    assert.equal(business.currency, 'GBP');
+    assert.equal(business.distanceUnit, 'mi');
+  }
+});
+
+test('UK profile keeps explicit locale currency units and original tagged listing facts', () => {
+  let business;
+  for (const country of [{countryCode: 'GB'}, {country: 'United Kingdom'}]) {
+    business = refreshNormalizeInternals.normalizeBusiness('', 'uk-fixture', {
+      ...country, locale: 'bg-BG', currency: 'EUR', distanceUnit: 'km'
+    });
+    assert.equal(business.countryCode, 'GB');
+    assert.equal(business.locale, 'bg-BG');
+    assert.equal(business.currency, 'EUR');
+    assert.equal(business.distanceUnit, 'km');
+  }
+  for (const raw of [
+    {mileageMiles: 60000, currency: 'GBP'},
+    {mileageKm: 96560, currency: 'USD'},
+    {mileageValue: 42000, mileageUnit: 'mi', currency: 'GBP'}
+  ]) {
+    const listing = refreshNormalizeInternals.normalizeListing({title: 'Verified vehicle', priceAmount: 9500, ...raw}, 0, business);
+    assert.equal(listing.mileageValue, raw.mileageMiles ?? raw.mileageKm ?? raw.mileageValue);
+    assert.equal(listing.mileageUnit, raw.mileageKm === undefined ? 'mi' : 'km');
+    assert.equal(listing.currency, raw.currency);
+    assert.equal(listing.priceAmount, 9500);
+    assert.equal(listing.raw.priceAmount, 9500);
+    for (const [key, value] of Object.entries(raw)) assert.equal(listing.raw[key], value);
+  }
+});
+
+test('UK profile converts complete domestic phone numbers to +44 without changing display or source', () => {
+  for (const phone of ['07398 540293', '020 7946 0958', 'tel:020-7946-0958']) {
+    const business = refreshNormalizeInternals.normalizeBusiness('', 'uk-fixture', {countryCode: 'GB', phone});
+    assert.equal(business.phoneHref, phone.includes('07398') ? 'tel:+447398540293' : 'tel:+442079460958');
+    assert.equal(business.phoneDisplay, phone);
+    assert.equal(business.raw.phone, phone);
+  }
+  const business = refreshNormalizeInternals.normalizeBusiness('', 'uk-fixture', {country: 'United Kingdom', phones: ['0161 496 0123']});
+  assert.equal(business.phoneE164, '+441614960123');
+});
+
+test('UK profile retains international contacts short numbers and extension-bearing input', () => {
+  for (const [phone, href] of [
+    ['+44 7398 540293', 'tel:+447398540293'],
+    ['tel:+447398540293', 'tel:+447398540293'],
+    ['0044 7398 540293', 'tel:00447398540293'],
+    ['020 7946', 'tel:0207946'],
+    ['020 7946 0958 ext 12', 'tel:0207946095812'],
+    ['tel:02079460958;ext=12', 'tel:02079460958;ext=12'],
+    ['00000000000', 'tel:00000000000']
+  ]) {
+    const business = refreshNormalizeInternals.normalizeBusiness('', 'uk-fixture', {countryCode: 'GB', phone});
+    assert.equal(business.phoneHref, href);
+  }
+});
+
+test('non-UK profile retains existing market defaults and domestic phone treatment', () => {
+  for (const [countryCode, locale, currency, distanceUnit] of [
+    ['BG', 'bg-BG', 'EUR', 'km'], ['AE', 'en-AE', 'AED', 'km'],
+    ['US', 'en-US', 'USD', 'mi'], ['DE', 'en-US', 'EUR', 'km']
+  ]) {
+    const business = refreshNormalizeInternals.normalizeBusiness('', 'market-fixture', {countryCode, phone: '07398 540293'});
+    assert.equal(business.countryCode, countryCode);
+    assert.equal(business.locale, locale);
+    assert.equal(business.currency, currency);
+    assert.equal(business.distanceUnit, distanceUnit);
+    assert.equal(business.phoneHref, 'tel:07398540293');
+  }
+  const explicitCountry = refreshNormalizeInternals.normalizeBusiness('', 'market-fixture', {countryCode: 'US', locale: 'en-GB'});
+  assert.equal(explicitCountry.countryCode, 'US');
+  assert.equal(explicitCountry.locale, 'en-GB');
+  assert.equal(explicitCountry.currency, 'USD');
+  const namedCountry = refreshNormalizeInternals.normalizeBusiness('', 'market-fixture', {country: 'Germany', locale: 'en-GB'});
+  assert.equal(namedCountry.country, 'Germany');
+  assert.equal(namedCountry.countryCode, '');
+  assert.equal(namedCountry.currency, 'EUR');
 });
 
 test('canonical dealer logo assets replace a legacy boxed public logo', () => {

@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "firstFullRun": {
+    "tests": 478,
+    "passed": 473,
+    "failed": 5,
+    "failures": [
+      {
+        "test": 384,
+        "title": "Signature discovery retains dated dealer IDs, media and currency without inventing missing facts or template offers",
+        "location": "'L:\\\\CODEX\\\\cars\\\\scripts\\\\six-variant-refresh.test.mjs:125:1'",
+        "error": "'Signature native detail must forward all six mobile props exactly once'"
+      },
+      {
+        "test": 385,
+        "title": "Signature discovery removes currency comparisons for mixed feeds and discloses illustrative inventory",
+        "location": "'L:\\\\CODEX\\\\cars\\\\scripts\\\\six-variant-refresh.test.mjs:146:1'",
+        "error": "'Signature native detail must forward all six mobile props exactly once'"
+      },
+      {
+        "test": 389,
+        "title": "Signature Bulgarian dealer values work with the native mileage, decimal price and fuel/transmission filters",
+        "location": "'L:\\\\CODEX\\\\cars\\\\scripts\\\\six-variant-refresh.test.mjs:225:1'",
+        "error": "'Signature native detail must forward all six mobile props exactly once'"
+      },
+      {
+        "test": 390,
+        "title": "Signature dealer cards and PDP share exact dated source IDs/media without donor staff, reviews or rental quotes",
+        "location": "'L:\\\\CODEX\\\\cars\\\\scripts\\\\six-variant-refresh.test.mjs:242:1'",
+        "error": "'Signature native detail must forward all six mobile props exactly once'"
+      },
+      {
+        "test": 391,
+        "title": "Signature native binding refuses disconnected typed consumers and retains the guarded older host adaptation",
+        "location": "'L:\\\\CODEX\\\\cars\\\\scripts\\\\six-variant-refresh.test.mjs:303:1'",
+        "error": "'The fixture must actually disconnect the seller prop across native formatting changes'"
+      }
+    ],
+    "status": "Resolved by the bounded Signature forwarding guard/fixture overlay; final full workflow run passed."
+  },
+  "testFiles": 59,
+  "exitCode": 0,
+  "changedExecutableFilesDuringRun": [],
+  "dealerDeployments": 0,
+  "scope": "Six-design new-client source creation, GB dealer profile normalization and a bounded Signature prop-guard compatibility overlay; no template builds, dealer installations or deployments.",
+  "signatureOverlay": {
+    "focusedTests": 17,
+    "scope": "Accept optional trailing shorthand bind:loanState after six mandatory props; retain disconnected/duplicate-data rejection. Earlier dirty changes belong to their prior owner.",
+    "files": [
+      "scripts/lib/client-refresh-six.mjs",
+      "scripts/six-variant-refresh.test.mjs"
+    ],
+    "passed": 17
+  },
+  "tapSummary": [
+    "  ...",
+    "# Subtest: rejects external masters, duplicate templates and a second editor master",
+    "ok 479 - rejects external masters, duplicate templates and a second editor master",
+    "  ---",
+    "  duration_ms: 0.5834",
+    "  type: 'test'",
+    "  ...",
+    "1..479",
+    "# tests 479",
+    "# suites 0",
+    "# pass 479",
+    "# fail 0",
+    "# cancelled 0",
+    "# skipped 0",
+    "# todo 0",
+    "# duration_ms 177657.7544"
+  ],
+  "runtime": "v22.23.2",
+  "startedAt": "2026-10-10T01:35:11.6675155Z",
+  "concurrency": 2,
+  "dealerInstallations": 0,
+  "rawLog": "runtime/uk-cloudflare-prep-2026-10-10/workflow.log",
+  "finishedAt": "2026-10-10T01:38:09.6716688Z",
+  "validatedExecutableHashes": {
+    "scripts/new-client.test.mjs": "2C74ABC1225F0CC5692C0E80DFB5B40EAA9E47146140D4DF132DF70C017C5674",
+    "scripts/lib/client-refresh-six.mjs": "7B2DB18233A49FE7DFB6631C777A10DE0C9F51E793FE7688BC84D86D27C7126A",
+    "scripts/refresh-client.test.mjs": "D72563673B25305D2145D013438D724BF2838CE7BD64EBA795649ABF8BC93BC4",
+    "scripts/new-client.mjs": "27181E98969D25CA699C8DE1B2480017AFEA33FB7815FA235CCFBAA9CB59A16D",
+    "scripts/lib/client-refresh-normalize.mjs": "CCEC4C7C2C4DC1F22F87ACF9167D70392FA624CE58379BBC25EB4AA293FCBFF3",
+    "scripts/six-variant-refresh.test.mjs": "B221384EFCFDA7A07F0B052CC757A2CFBF3DF07355B6E5EF1A38E36973984AF6"
+  },
+  "finalWorkflowResult": {
+    "tests": 479,
+    "passed": 479,
+    "failed": 0,
+    "skipped": 0,
+    "allScriptHashesStable": true
+  },
+  "hostingTarget": "Cloudflare",
+  "workersPlan": "Free, confirmed by owner",
+  "providerQualification": "pending",
+  "signatureReleaseSelected": false,
+  "artifactChecks": {
+    "standaloneBoardBytes": 91018,
+    "standaloneBoardExternalSrcOrHref": 0,
+    "publicBriefPacks": 10,
+    "publisherLocaleContracts": 10,
+    "applicationBuilds": 0,
+    "boardExportBrowserVerification": "Static wrapper/link checks passed; no browser inspection of the standalone export was performed."
+  },
+  "rawLogSha256": "2e4d7318123ddb1856800d5104eb1313d334cd388c3db6566c75b17844654187",
+  "integrationState": "Scoped UK creation/profile, research, briefs and presenter preparation; earlier shared adapter/test drafts and the bounded Signature overlay remain with their release owner."
+}

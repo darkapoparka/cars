@@ -1,0 +1,1502 @@
+{
+  "schemaVersion": 1,
+  "market": "United Kingdom",
+  "updatedAt": "2026-10-10",
+  "researchAsOf": "2026-10-10",
+  "defaults": {
+    "templateChoices": [
+      "auto-best",
+      "modern",
+      "import",
+      "app",
+      "mobile",
+      "karento-best"
+    ],
+    "templateLabels": {
+      "auto-best": "Auto Best",
+      "modern": "Modern",
+      "import": "Import",
+      "app": "App",
+      "mobile": "Mobile",
+      "karento-best": "Signature"
+    },
+    "templateChoiceStatus": "six_requested_choices_awaiting_release_acceptance",
+    "researchOnly": true,
+    "visualAudit": "bounded_content_review_not_full_rendered_acceptance",
+    "contactHistory": "not_checked",
+    "buildApproved": false,
+    "outreachApproved": false,
+    "buildGate": "await_approved_immutable_template_releases_and_qualified_Cloudflare_publisher"
+  },
+  "notes": [
+    "Revised around the owner's UK platform/large-stock request. Nine prospects had no confidently matched standalone website in bounded checks; one existing website has concrete browser-confirmed content gaps. Eight have 23–77 opened advertised listings.",
+    "Research as of 10 October 2026. No post made on 10 October was verified. Explicit advert Last updated dates, undated stock, indexed evidence and secondary social mirrors are distinguished per record.",
+    "Ad counts are platform snapshots, not unique physical stock or availability. Do not add feeds together. Generic AutoTrader featured Dummy records were excluded; real Used cars and corroborating eBay/PistonHeads stock support counts.",
+    "Broadbent, Motors Castle and Car Market Yorkshire have matching Google profiles displaying Add website. Google missing website alone is insufficient: W M motors was excluded after the same premises matched a real own website under West Midlands Motors.",
+    "No standalone website found means bounded search absence, not proof of no website. Confirm domain, legal/trading identity, current premises and a direct owner-controlled contact before personalization.",
+    "Ranking is research/qualification priority, not a prediction of conversion, endorsement of dealer quality, verified budget or willingness to buy. Google/review scores are not treated as verified customer outcomes.",
+    "Public research only. No outreach, CRM/contact-history check, dealer build, publication, DNS or billing change. Private CRM remains Agency OS.",
+    "All six requested choices remain Auto Best, Modern, Import, App, Mobile and Signature (karento-best). Show-first choices do not alter templates.lock.json, dealer manifests or release acceptance.",
+    "Builds wait for accepted immutable releases and the qualified Cloudflare pilot/publisher. The sister's sales guide distinguishes visible demo capabilities from unimplemented finance, inventory feeds, live enquiry and CRM integrations.",
+    "Prior first-pass records and Walton reserve are preserved in reserves. W M motors is an identity/website reserve; Highgrove is excluded pending operator/legacy-domain resolution in the platform notes.",
+    "Forum and Facebook discovery did not supply an additional directly verified same-day no-website lead. Facebook throttling and conflicting mirror snapshots remain evidence limitations; no stale directory filler was used."
+  ],
+  "leads": [
+    {
+      "id": "gb-stockport-broadbent-car-and-servicing",
+      "rank": 1,
+      "name": "Broadbent Car and Servicing",
+      "country": "GB",
+      "city": "Bredbury, Stockport",
+      "priority": "qualification_before_demo",
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked",
+      "primarySellerUrl": "https://showroom.ebaymotorspro.co.uk/Costa-Car-Sales",
+      "inventory": {
+        "count": 34,
+        "kind": "opened_platform_advertised_count",
+        "retrievedAt": "2026-10-10",
+        "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Costa-Car-Sales",
+        "caveat": "Opened eBay showroom: 34 ads; opened Cazoo snapshot: 33. The Costa-Car-Sales URL is a legacy slug; displayed dealer name and Oldmoor Road address identify Broadbent."
+      },
+      "stockSnapshots": [
+        {
+          "count": 34,
+          "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Costa-Car-Sales",
+          "method": "opened",
+          "observedAt": "2026-10-10"
+        },
+        {
+          "count": 33,
+          "sourceUrl": "https://www.cazoo.co.uk/dealers/broadbent-car-and-servicing-43589/",
+          "method": "opened",
+          "observedAt": "2026-10-10"
+        }
+      ],
+      "website": {
+        "url": null,
+        "status": "no_standalone_domain_found_in_bounded_search",
+        "assessedAt": "2026-10-10",
+        "confidence": "high_for_matching_public_profile_gap_medium_for_domain_absence",
+        "observations": [
+          "Opened eBay showroom has no standalone website link.",
+          "Matching Google Maps profile displays Add website and no website destination."
+        ]
+      },
+      "domainChecks": {
+        "queries": [
+          "\"Broadbent Car and Servicing\" website",
+          "\"Broadbent\" \"Oldmoor Road\" website",
+          "\"transitsellers2020@gmail.com\" website"
+        ],
+        "profilesChecked": [
+          "https://showroom.ebaymotorspro.co.uk/Costa-Car-Sales",
+          "https://www.cazoo.co.uk/dealers/broadbent-car-and-servicing-43589/"
+        ],
+        "result": "No confidently matched dealer-owned standalone domain found in these bounded checks. Absence must be confirmed with the operator."
+      },
+      "googleBusinessProfile": {
+        "status": "matched_profile_website_not_listed",
+        "url": "https://www.google.com/maps/place/Broadbent+cars+%26+servicing/@53.4254393,-2.1235032,17z/data=!3m1!4b1!4m6!3m5!1s0x487bb5b81f56cc3b:0x4ac3e2367b9af59b!8m2!3d53.4254393!4d-2.1209283!16s%2Fg%2F11nqy649kj?hl=en",
+        "assessedAt": "2026-10-10",
+        "matchedAddress": "Oldmoor Road, Bredbury, Stockport SK6 2QE",
+        "phone": "+44 7398 540293",
+        "websiteField": "Add website",
+        "note": "No website listed in the matched public Google profile. This is not proof that an unlisted website does not exist."
+      },
+      "publicContacts": {
+        "phone": "07398 540293",
+        "email": "transitsellers2020@gmail.com",
+        "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Costa-Car-Sales",
+        "phoneCaveat": "Public phone on matching Google profile; eBay lists a different likely platform number 01663 791446. Confirm direct ownership before personalization.",
+        "status": "public_business_contact_not_contacted",
+        "phoneSourceUrl": "https://www.google.com/maps/place/Broadbent+cars+%26+servicing/@53.4254393,-2.1235032,17z/data=!3m1!4b1!4m6!3m5!1s0x487bb5b81f56cc3b:0x4ac3e2367b9af59b!8m2!3d53.4254393!4d-2.1209283!16s%2Fg%2F11nqy649kj?hl=en",
+        "emailSourceUrl": "https://showroom.ebaymotorspro.co.uk/Costa-Car-Sales"
+      },
+      "businessContactSource": "https://showroom.ebaymotorspro.co.uk/Costa-Car-Sales",
+      "addressNote": "Oldmoor Road, Bredbury, Stockport SK6 2QE matches eBay and Google.",
+      "activityEvidence": [
+        {
+          "kind": "primary_advert_last_updated_date",
+          "date": "2026-10-09",
+          "sourceUrl": "https://www.ebay.co.uk/itm/860026521888",
+          "note": "Primary Peugeot Partner advert explicitly Last updated 09 Oct 2026 16:01:03 BST; registered business seller broadbent-1. Subsequent root web fetch failed; date was observed directly by the research agent, not inferred from crawl time."
+        }
+      ],
+      "evidenceUrls": [
+        "https://showroom.ebaymotorspro.co.uk/Costa-Car-Sales",
+        "https://www.cazoo.co.uk/dealers/broadbent-car-and-servicing-43589/",
+        "https://www.ebay.co.uk/itm/860026521888",
+        "https://www.google.com/maps/place/Broadbent+cars+%26+servicing/@53.4254393,-2.1235032,17z/data=!3m1!4b1!4m6!3m5!1s0x487bb5b81f56cc3b:0x4ac3e2367b9af59b!8m2!3d53.4254393!4d-2.1209283!16s%2Fg%2F11nqy649kj?hl=en"
+      ],
+      "evidenceNote": "Matching marketplace and Google identity, substantial car/van catalogue and a primary advert updated one day before research. No same-day dealer post verified.",
+      "opportunityHypothesis": "An owned branded car/van showroom with correct directions, searchable stock and a direct viewing enquiry route.",
+      "existingClientPath": null,
+      "recommendedEntryTemplate": "modern",
+      "showFirstReason": "Start with a clear car/van stock and location journey; then compare all six requested styles.",
+      "nextAction": "Confirm current trading identity, direct phone, domain ownership and stock updating method. Use real permitted stock and viewing-by-appointment wording after release acceptance."
+    },
+    {
+      "id": "gb-motherwell-motors-castle",
+      "rank": 2,
+      "name": "Motors Castle",
+      "country": "GB",
+      "city": "Cleland / Motherwell, Scotland",
+      "priority": "qualification_before_demo",
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked",
+      "primarySellerUrl": "https://showroom.ebaymotorspro.co.uk/Motors-castle",
+      "inventory": {
+        "count": 31,
+        "kind": "opened_platform_advertised_count",
+        "retrievedAt": "2026-10-10",
+        "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Motors-castle",
+        "caveat": "Advertised listings, not verified physical stock or availability. Do not sum counts across platforms."
+      },
+      "stockSnapshots": [
+        {
+          "count": 31,
+          "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Motors-castle",
+          "method": "opened",
+          "observedAt": "2026-10-10"
+        }
+      ],
+      "website": {
+        "url": null,
+        "status": "no_standalone_domain_found_in_bounded_search",
+        "assessedAt": "2026-10-10",
+        "confidence": "high_for_matching_public_profile_gap_medium_for_domain_absence",
+        "observations": [
+          "Opened eBay showroom lists email/contact/stock but no own website link.",
+          "Matching public Google profile displays Add website with no website destination."
+        ]
+      },
+      "domainChecks": {
+        "queries": [
+          "\"Motors Castle\" Cleland website",
+          "\"Motors Castle\" \"ML1 5PB\"",
+          "\"davidautodesign5@gmail.com\" website"
+        ],
+        "profilesChecked": [
+          "https://showroom.ebaymotorspro.co.uk/Motors-castle"
+        ],
+        "result": "No confidently matched dealer-owned standalone domain found in these bounded checks. Absence must be confirmed with the operator."
+      },
+      "googleBusinessProfile": {
+        "status": "matched_profile_website_not_listed",
+        "url": "https://www.google.com/maps/place/Motors+castle/@55.8074316,-3.9127636,17z/data=!3m1!4b1!4m6!3m5!1s0x48886d0a398a8f65:0x37c826e322dfbe0c!8m2!3d55.8074316!4d-3.9101887!16s%2Fg%2F11xkpv82zf?hl=en",
+        "assessedAt": "2026-10-10",
+        "matchedAddress": "23a Biggar Road, Cleland, Motherwell ML1 5PB",
+        "phone": "+44 7850 472427",
+        "websiteField": "Add website",
+        "note": "Street, postcode and trading name match the eBay showroom."
+      },
+      "publicContacts": {
+        "phone": "07850 472427",
+        "email": "davidautodesign5@gmail.com",
+        "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Motors-castle",
+        "phoneCaveat": "Public Google profile phone; showroom 01698 539243 may be tracked. Confirm direct ownership.",
+        "status": "public_business_contact_not_contacted",
+        "phoneSourceUrl": "https://www.google.com/maps/place/Motors+castle/@55.8074316,-3.9127636,17z/data=!3m1!4b1!4m6!3m5!1s0x48886d0a398a8f65:0x37c826e322dfbe0c!8m2!3d55.8074316!4d-3.9101887!16s%2Fg%2F11xkpv82zf?hl=en",
+        "emailSourceUrl": "https://showroom.ebaymotorspro.co.uk/Motors-castle"
+      },
+      "businessContactSource": "https://showroom.ebaymotorspro.co.uk/Motors-castle",
+      "addressNote": "23a Biggar Road, Cleland Industrial Estate, Motherwell ML1 5PB.",
+      "activityEvidence": [
+        {
+          "kind": "primary_advert_last_updated_date",
+          "date": "2026-10-06",
+          "sourceUrl": "https://www.ebay.co.uk/itm/800766023040",
+          "note": "Citroen C3 Aircross advert explicitly Last updated 06 Oct 2026 22:17:15 BST. Registered business seller motorscarsale2022; reproduced by fresh TinyFish fetch."
+        },
+        {
+          "kind": "primary_advert_last_updated_date",
+          "date": "2026-10-03",
+          "sourceUrl": "https://www.ebay.co.uk/itm/800753431171",
+          "note": "Audi A1 advert explicitly updated 03 Oct 2026 17:37:12 BST in direct research-agent observation."
+        }
+      ],
+      "evidenceUrls": [
+        "https://showroom.ebaymotorspro.co.uk/Motors-castle",
+        "https://www.ebay.co.uk/itm/800766023040",
+        "https://www.ebay.co.uk/itm/800753431171",
+        "https://www.google.com/maps/place/Motors+castle/@55.8074316,-3.9127636,17z/data=!3m1!4b1!4m6!3m5!1s0x48886d0a398a8f65:0x37c826e322dfbe0c!8m2!3d55.8074316!4d-3.9101887!16s%2Fg%2F11xkpv82zf?hl=en"
+      ],
+      "evidenceNote": "31 opened adverts, matching Google trading premises with missing website, and verified early-October listing updates.",
+      "opportunityHypothesis": "An owned affordable-stock showroom with reliable vehicle details, directions and direct viewing enquiries.",
+      "existingClientPath": null,
+      "recommendedEntryTemplate": "mobile",
+      "showFirstReason": "Show a fast phone route from a vehicle card to viewing enquiry, then the other five styles.",
+      "nextAction": "Confirm stock availability, operator identity and direct enquiry destination. Validate any warranty, delivery or finance promises before copying them."
+    },
+    {
+      "id": "gb-birmingham-trade-car-sales-grasmere",
+      "rank": 3,
+      "name": "Trade Car Sales",
+      "country": "GB",
+      "city": "Birmingham",
+      "priority": "show-first_after_qualification",
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked",
+      "primarySellerUrl": "https://showroom.ebaymotorspro.co.uk/Trade-Car-Sales1",
+      "inventory": {
+        "count": 62,
+        "kind": "retrieved_marketplace_advertised_count",
+        "retrievedAt": "2026-10-10",
+        "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Trade-Car-Sales1",
+        "caveat": "Opened eBay and Cazoo snapshots each 62 adverts, corroborated by fresh TinyFish showroom extraction. Advertising count is not verified available stock; do not sum feeds."
+      },
+      "website": {
+        "url": null,
+        "status": "no_standalone_domain_found_in_bounded_search",
+        "assessedAt": "2026-10-10",
+        "confidence": "medium",
+        "observations": [
+          "Dealer eBay showroom Visit website destination is motors.co.uk, a marketplace."
+        ]
+      },
+      "domainChecks": {
+        "queries": [
+          "\"Trade Car Sales\" \"Grasmere Road\" website",
+          "\"Trade Car Sales\" \"Grasmere Road\" -site:showroom.ebaymotorspro.co.uk",
+          "\"trade.car.sales@outlook.com\" -site:showroom.ebaymotorspro.co.uk",
+          "\"Trade Car Sales\" \"B21 0UR\""
+        ],
+        "profilesChecked": [
+          "https://showroom.ebaymotorspro.co.uk/Trade-Car-Sales1",
+          "https://www.cazoo.co.uk/dealers/trade-car-sales-16229/"
+        ],
+        "result": "No confidently matched standalone dealer website found; generic trading name requires careful identity matching."
+      },
+      "publicContacts": {
+        "phone": "0121 647 4034",
+        "phoneCaveat": "Marketplace-provided number may be forwarding; do not describe it as the dealer's own landline.",
+        "email": "trade.car.sales@outlook.com",
+        "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Trade-Car-Sales1",
+        "status": "public_business_contact_not_contacted"
+      },
+      "businessContactSource": "https://showroom.ebaymotorspro.co.uk/Trade-Car-Sales1",
+      "activityEvidence": [
+        {
+          "kind": "primary_advert_last_updated_date",
+          "date": "2026-10-04",
+          "sourceUrl": "https://www.ebay.co.uk/itm/189038456623",
+          "note": "Ford Transit Connect advert explicitly Last updated 04 Oct 2026 09:14:08 BST, registered business seller all-about-automotive, phone matches showroom. Direct earlier research-agent observation; later root fetch was unavailable."
+        },
+        {
+          "kind": "undated_advertised_inventory",
+          "date": null,
+          "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Trade-Car-Sales1",
+          "note": "Opened marketplace stock includes a Ford Transit Connect GBP 4,950 and Audi A6 GBP 16,995. No same-day social post verified."
+        }
+      ],
+      "addressNote": "Grasmere Road, Birmingham B21 0UR on eBay; Cazoo spells the road Grassmere. Confirm full premises address and legal identity.",
+      "evidenceUrls": [
+        "https://showroom.ebaymotorspro.co.uk/Trade-Car-Sales1",
+        "https://www.cazoo.co.uk/dealers/trade-car-sales-16229/",
+        "https://www.ebay.co.uk/itm/189038456623"
+      ],
+      "evidenceNote": "62 opened advertisements and an explicit 4 October primary advert update support a larger-catalogue opportunity; generic name and exact trading identity remain qualification gaps.",
+      "opportunityHypothesis": "Owned stock search with useful price/fuel/body filters, honest condition disclosures and a clear visit/enquiry route.",
+      "existingClientPath": null,
+      "recommendedEntryTemplate": "app",
+      "showFirstReason": "Show inventory discovery for the larger mixed catalogue before the other five visual choices.",
+      "nextAction": "Confirm trading/legal identity, premises and stock condition details; prepare App first after accepted releases.",
+      "googleBusinessProfile": {
+        "status": "no_confidently_matched_profile_in_bounded_map_search",
+        "assessedAt": "2026-10-10",
+        "note": "Unrelated Tradecarsales UK / Cars4Less result was not merged with Grasmere Road seller."
+      }
+    },
+    {
+      "id": "gb-birmingham-square-one-motors",
+      "rank": 4,
+      "name": "Square One Motors",
+      "country": "GB",
+      "city": "Birmingham",
+      "priority": "qualification_before_demo",
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked",
+      "primarySellerUrl": "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+      "inventory": {
+        "count": 40,
+        "kind": "opened_platform_advertised_count",
+        "retrievedAt": "2026-10-10",
+        "sourceUrl": "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+        "caveat": "40 in AutoTrader's real Used cars section; eBay and Cazoo opened snapshots each 24. Indexed counts differ. Generic Ford Kuga Dummy featured records were excluded; counts are not summed."
+      },
+      "stockSnapshots": [
+        {
+          "count": 40,
+          "sourceUrl": "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+          "method": "opened",
+          "observedAt": "2026-10-10"
+        },
+        {
+          "count": 24,
+          "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Square-One-Motors?menu=1",
+          "method": "opened",
+          "observedAt": "2026-10-10"
+        },
+        {
+          "count": 24,
+          "sourceUrl": "https://www.cazoo.co.uk/dealers/square-one-motors-15536/",
+          "method": "opened",
+          "observedAt": "2026-10-10"
+        }
+      ],
+      "website": {
+        "url": null,
+        "status": "no_standalone_domain_found_in_bounded_search",
+        "assessedAt": "2026-10-10",
+        "confidence": "medium",
+        "observations": [
+          "AutoTrader Website field is blank.",
+          "eBay showroom lists public email but no standalone website destination."
+        ]
+      },
+      "domainChecks": {
+        "queries": [
+          "\"Square One Motors\" \"Tameside Way\" website",
+          "\"squareonemotors@hotmail.com\" website",
+          "\"Square One Motors\" \"B42 2UB\"",
+          "\"0121 728 5538\" website"
+        ],
+        "profilesChecked": [
+          "https://showroom.ebaymotorspro.co.uk/Square-One-Motors?menu=1",
+          "https://www.cazoo.co.uk/dealers/square-one-motors-15536/"
+        ],
+        "result": "No confidently matched dealer-owned standalone domain found in these bounded checks. Absence must be confirmed with the operator."
+      },
+      "googleBusinessProfile": {
+        "status": "no_confidently_matched_profile_in_bounded_map_search",
+        "assessedAt": "2026-10-10",
+        "note": "No dealer profile was confidently matched; this does not prove no Google profile exists."
+      },
+      "publicContacts": {
+        "phone": "0121 728 5538",
+        "email": "squareonemotors@hotmail.com",
+        "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Square-One-Motors?menu=1",
+        "phoneCaveat": "Marketplace-provided phone may forward calls; confirm an owner-controlled number.",
+        "status": "public_business_contact_not_contacted"
+      },
+      "businessContactSource": "https://showroom.ebaymotorspro.co.uk/Square-One-Motors?menu=1",
+      "addressNote": "Tameside Way, Birmingham B42 2UB matches platforms. Google Maps did not return a confidently matched profile.",
+      "activityEvidence": [
+        {
+          "kind": "primary_advert_last_updated_date",
+          "date": "2026-10-09",
+          "sourceUrl": "https://www.ebay.co.uk/itm/237115219033",
+          "note": "Smart Roadster advert explicitly Last updated 09 Oct 2026 03:01:17 BST. Seller squareone1m, Birmingham and public platform phone match showroom. Direct research-agent observation; root web tool could not reproduce the page."
+        }
+      ],
+      "evidenceUrls": [
+        "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+        "https://showroom.ebaymotorspro.co.uk/Square-One-Motors?menu=1",
+        "https://www.cazoo.co.uk/dealers/square-one-motors-15536/",
+        "https://www.ebay.co.uk/itm/237115219033"
+      ],
+      "evidenceNote": "A larger budget catalogue on two platforms, public business email and a primary listing updated 9 October.",
+      "opportunityHypothesis": "A branded stock catalogue with consistent vehicle details and direct enquiries from social and marketplace visitors.",
+      "existingClientPath": null,
+      "recommendedEntryTemplate": "modern",
+      "showFirstReason": "Show a simple stock-to-viewing demonstration suited to the budget catalogue.",
+      "nextAction": "Resolve platform stock-count differences and confirm a direct phone, owner identity, domain status and current vehicles before adapting."
+    },
+    {
+      "id": "gb-dewsbury-car-market-yorkshire",
+      "rank": 5,
+      "name": "Car Market Yorkshire",
+      "country": "GB",
+      "city": "Dewsbury, West Yorkshire",
+      "priority": "qualification_before_demo",
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked",
+      "primarySellerUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/dewsbury/car-market-yorkshire-10050891",
+      "inventory": {
+        "count": 77,
+        "kind": "opened_platform_advertised_count",
+        "retrievedAt": "2026-10-10",
+        "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/dewsbury/car-market-yorkshire-10050891",
+        "caveat": "77 opened real Used cars on AutoTrader and 77 opened eBay ads; Cazoo search snapshot 73. Featured dummy cards excluded. Do not sum feeds or equate advertised count with available stock."
+      },
+      "stockSnapshots": [
+        {
+          "count": 77,
+          "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/dewsbury/car-market-yorkshire-10050891",
+          "method": "opened",
+          "observedAt": "2026-10-10"
+        },
+        {
+          "count": 77,
+          "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Car-market-Yorkshire",
+          "method": "opened",
+          "observedAt": "2026-10-10"
+        },
+        {
+          "count": 73,
+          "sourceUrl": "https://www.cazoo.co.uk/dealers/car-market-yorkshire-57290/",
+          "method": "indexed",
+          "observedAt": "2026-10-10"
+        }
+      ],
+      "website": {
+        "url": null,
+        "status": "no_standalone_domain_found_in_bounded_search",
+        "assessedAt": "2026-10-10",
+        "confidence": "high_for_marketplace_and_google_presence_medium_for_domain_absence",
+        "observations": [
+          "Opened AutoTrader Website field is blank.",
+          "eBay showroom has no own website link.",
+          "Google profile at 20 South Street displays Add website."
+        ]
+      },
+      "domainChecks": {
+        "queries": [
+          "\"Car Market Yorkshire\" website",
+          "\"carmarketyorkshire@gmail.com\" website",
+          "\"Car Market Yorkshire\" \"South Street\"",
+          "\"07457401169\" website"
+        ],
+        "profilesChecked": [
+          "https://showroom.ebaymotorspro.co.uk/Car-market-Yorkshire",
+          "https://www.cazoo.co.uk/dealers/car-market-yorkshire-57290/"
+        ],
+        "result": "No confidently matched dealer-owned standalone domain found in these bounded checks. Absence must be confirmed with the operator."
+      },
+      "googleBusinessProfile": {
+        "status": "matched_profile_website_not_listed",
+        "url": "https://www.google.com/maps/place/Car+Market+Yorkshire/@53.6902759,-1.6340533,17z/data=!3m1!4b1!4m6!3m5!1s0x4879610029c69207:0x11911c2130592d72!8m2!3d53.6902759!4d-1.6314784!16s%2Fg%2F11y3ymt165?hl=en",
+        "assessedAt": "2026-10-10",
+        "matchedAddress": "20 South Street, Dewsbury WF13 1JS",
+        "phone": "+44 7457 401169",
+        "websiteField": "Add website",
+        "note": "Public profile and phone match advertised trading identity. Platform address ranges differ and must be resolved."
+      },
+      "publicContacts": {
+        "phone": "07457 401169",
+        "email": "carmarketyorkshire@gmail.com",
+        "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Car-market-Yorkshire",
+        "phoneCaveat": "Public Google profile number matches AutoTrader; eBay has 01924 908904. Confirm direct business ownership.",
+        "status": "public_business_contact_not_contacted",
+        "phoneSourceUrl": "https://www.google.com/maps/place/Car+Market+Yorkshire/@53.6902759,-1.6340533,17z/data=!3m1!4b1!4m6!3m5!1s0x4879610029c69207:0x11911c2130592d72!8m2!3d53.6902759!4d-1.6314784!16s%2Fg%2F11y3ymt165?hl=en",
+        "emailSourceUrl": "https://showroom.ebaymotorspro.co.uk/Car-market-Yorkshire"
+      },
+      "businessContactSource": "https://showroom.ebaymotorspro.co.uk/Car-market-Yorkshire",
+      "addressNote": "Google/eBay/Cazoo: 20 South Street WF13 1JS; AutoTrader: 24–28 South Street. Confirm exact premises. Registered-office and older financial snapshots do not prove current trading operator.",
+      "activityEvidence": [
+        {
+          "kind": "undated_advertised_inventory",
+          "date": null,
+          "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/dewsbury/car-market-yorkshire-10050891",
+          "note": "Real priced stock observed on 10 October 2026; no recent post date verified."
+        }
+      ],
+      "evidenceUrls": [
+        "https://www.autotrader.co.uk/dealers/west-yorkshire/dewsbury/car-market-yorkshire-10050891",
+        "https://showroom.ebaymotorspro.co.uk/Car-market-Yorkshire",
+        "https://www.cazoo.co.uk/dealers/car-market-yorkshire-57290/",
+        "https://www.google.com/maps/place/Car+Market+Yorkshire/@53.6902759,-1.6340533,17z/data=!3m1!4b1!4m6!3m5!1s0x4879610029c69207:0x11911c2130592d72!8m2!3d53.6902759!4d-1.6314784!16s%2Fg%2F11y3ymt165?hl=en"
+      ],
+      "evidenceNote": "Largest catalogue in this shortlist and a matched Google profile with no website listed. Activity evidence is undated; identity/address and customer-service qualification reduce immediate priority.",
+      "opportunityHypothesis": "An owned searchable catalogue, consistent business/location information and a clear enquiry journey for a substantial stock feed.",
+      "existingClientPath": null,
+      "recommendedEntryTemplate": "app",
+      "showFirstReason": "Show inventory filtering and vehicle details with a real larger catalogue.",
+      "nextAction": "Confirm current legal/trading operator and premises, any existing domain, stock-feed permission and enquiry handling. Review mixed public feedback with the operator; do not turn unverified reviews into factual accusations."
+    },
+    {
+      "id": "gb-nottingham-s-a-motors",
+      "rank": 6,
+      "name": "S A Motors",
+      "country": "GB",
+      "city": "Nottingham",
+      "priority": "qualification_before_demo",
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked",
+      "primarySellerUrl": "https://showroom.ebaymotorspro.co.uk/S-A-motors?aboutUs=&page=2",
+      "inventory": {
+        "count": 36,
+        "kind": "opened_platform_advertised_count",
+        "retrievedAt": "2026-10-10",
+        "sourceUrl": "https://showroom.ebaymotorspro.co.uk/S-A-motors?aboutUs=&page=2",
+        "caveat": "Advertised listings, not verified physical stock or availability. Do not sum counts across platforms."
+      },
+      "stockSnapshots": [
+        {
+          "count": 36,
+          "sourceUrl": "https://showroom.ebaymotorspro.co.uk/S-A-motors?aboutUs=&page=2",
+          "method": "opened",
+          "observedAt": "2026-10-10"
+        },
+        {
+          "count": 35,
+          "sourceUrl": "https://www.cazoo.co.uk/dealers/s-a-motors-76195/",
+          "method": "opened",
+          "observedAt": "2026-10-10"
+        }
+      ],
+      "website": {
+        "url": null,
+        "status": "no_standalone_domain_found_in_bounded_search",
+        "assessedAt": "2026-10-10",
+        "confidence": "medium",
+        "observations": [
+          "eBay lists business email but no standalone website link.",
+          "Name/address/email/phone checks matched stock portals and older classified mirrors; no own domain matched."
+        ]
+      },
+      "domainChecks": {
+        "queries": [
+          "\"S A Motors\" Nottingham website",
+          "\"aadamali121@yahoo.co.uk\" website",
+          "\"S A Motors\" \"NG7 2BE\"",
+          "\"0115 684 8052\" website"
+        ],
+        "profilesChecked": [
+          "https://www.cazoo.co.uk/dealers/s-a-motors-76195/"
+        ],
+        "result": "No confidently matched dealer-owned standalone domain found in these bounded checks. Absence must be confirmed with the operator."
+      },
+      "googleBusinessProfile": {
+        "status": "no_confidently_matched_profile_in_bounded_map_search",
+        "assessedAt": "2026-10-10",
+        "note": "No dealer profile was confidently matched; this does not prove no Google profile exists."
+      },
+      "publicContacts": {
+        "phone": "0115 684 8052",
+        "email": "aadamali121@yahoo.co.uk",
+        "sourceUrl": "https://showroom.ebaymotorspro.co.uk/S-A-motors?aboutUs=&page=2",
+        "phoneCaveat": "Marketplace-provided phone may forward calls; confirm an owner-controlled number.",
+        "status": "public_business_contact_not_contacted"
+      },
+      "businessContactSource": "https://showroom.ebaymotorspro.co.uk/S-A-motors?aboutUs=&page=2",
+      "addressNote": "4 Sailsbury Street, Nottingham NG7 2BE is platform spelling; confirm current premises and correct street spelling. Same-name Somercotes/West Drayton businesses were excluded.",
+      "activityEvidence": [
+        {
+          "kind": "primary_advert_last_updated_date",
+          "date": "2026-09-22",
+          "sourceUrl": "https://www.ebay.co.uk/itm/178519418514",
+          "note": "Mercedes A45 advert explicitly Last updated 22 Sep 2026 18:49:57 BST. Seller 5a_auto, Nottingham and public showroom phone match. No October update verified; a Just now Gumtree snippet was excluded after opening returned 410 Gone."
+        }
+      ],
+      "evidenceUrls": [
+        "https://showroom.ebaymotorspro.co.uk/S-A-motors?aboutUs=&page=2",
+        "https://www.cazoo.co.uk/dealers/s-a-motors-76195/",
+        "https://www.ebay.co.uk/itm/178519418514"
+      ],
+      "evidenceNote": "36 opened eBay adverts, matching 35-car Cazoo catalogue and business email. Primary late-September update supports recent advertising; no verified October post.",
+      "opportunityHypothesis": "An owned stock catalogue supporting mixed mainstream/import cars and a clear direct viewing enquiry.",
+      "existingClientPath": null,
+      "recommendedEntryTemplate": "import",
+      "showFirstReason": "Show Import if left-hand-drive/import stock is an actual service; all six designs remain available.",
+      "nextAction": "Confirm whether imports are a real service, exact address, direct contacts, current stock and domain ownership before presentation."
+    },
+    {
+      "id": "gb-batley-as-motor-group",
+      "rank": 7,
+      "name": "AS Motor Group",
+      "country": "GB",
+      "city": "Batley, West Yorkshire",
+      "priority": "qualification_before_demo",
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked",
+      "primarySellerUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+      "inventory": {
+        "count": 41,
+        "kind": "opened_platform_advertised_count",
+        "retrievedAt": "2026-10-10",
+        "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+        "caveat": "41 in opened AutoTrader Used cars, versus 36 indexed in an older snapshot. Real Batley vehicles include SQ5, Golf R and Cayenne; generic featured Dummy adverts were excluded."
+      },
+      "stockSnapshots": [
+        {
+          "count": 41,
+          "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+          "method": "opened",
+          "observedAt": "2026-10-10"
+        }
+      ],
+      "website": {
+        "url": null,
+        "status": "no_standalone_domain_found_in_bounded_search",
+        "assessedAt": "2026-10-10",
+        "confidence": "medium",
+        "observations": [
+          "Opened AutoTrader Website heading has no domain or destination."
+        ]
+      },
+      "domainChecks": {
+        "queries": [
+          "\"AS Motor Group\" Batley website",
+          "\"AS Motor Group\" \"WF17 5SS\"",
+          "\"AS Motor Group\" \"Chopdat\"",
+          "\"07537165504\" website"
+        ],
+        "profilesChecked": [
+          "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673"
+        ],
+        "result": "No confidently matched dealer-owned standalone domain found in these bounded checks. Absence must be confirmed with the operator."
+      },
+      "googleBusinessProfile": {
+        "status": "no_confidently_matched_profile_in_bounded_map_search",
+        "assessedAt": "2026-10-10",
+        "note": "No dealer profile was confidently matched; this does not prove no Google profile exists."
+      },
+      "publicContacts": {
+        "phone": "07537 165504",
+        "email": null,
+        "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+        "phoneCaveat": "Marketplace-provided phone may forward calls; confirm an owner-controlled number.",
+        "status": "public_business_contact_not_contacted"
+      },
+      "businessContactSource": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+      "addressNote": "Unit 2–3 Chopdat Industrial Estate, Soothill Lane, Batley WF17 5SS. Soothill Cars nearby is not a confirmed alias. A same-name London registered company was not matched and is not attached.",
+      "activityEvidence": [
+        {
+          "kind": "undated_advertised_inventory",
+          "date": null,
+          "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+          "note": "Real priced stock observed on 10 October 2026; no recent post date verified."
+        }
+      ],
+      "evidenceUrls": [
+        "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673"
+      ],
+      "evidenceNote": "41 real advertised vehicles and a blank own-website field. No recent primary posting date or confidently matched Google business profile verified.",
+      "opportunityHypothesis": "An owned branded showroom for a larger, mixed premium/mainstream catalogue, with clear stock filters and viewing enquiries.",
+      "existingClientPath": null,
+      "recommendedEntryTemplate": "modern",
+      "showFirstReason": "Show consistent branded stock and readable vehicle details before comparing the other designs.",
+      "nextAction": "Confirm operator/legal identity, public direct contact, domain ownership, exact premises and current stock. Do not borrow details from the London company or nearby Soothill Cars."
+    },
+    {
+      "id": "gb-bradford-cherry-tree-cars",
+      "rank": 8,
+      "name": "Cherry Tree Cars Ltd",
+      "country": "GB",
+      "city": "Bradford, West Yorkshire",
+      "priority": "qualification_before_demo",
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked",
+      "primarySellerUrl": "https://www.pistonheads.com/buy/dealer/999124",
+      "inventory": {
+        "count": 23,
+        "kind": "opened_platform_advertised_count",
+        "retrievedAt": "2026-10-10",
+        "sourceUrl": "https://www.pistonheads.com/buy/dealer/999124",
+        "caveat": "23 opened PistonHeads cars corroborates 21 opened real AutoTrader Used cars; 24 on indexed CarGurus could not be opened. AutoTrader's Doncaster URL contains Bradford dealer content. Generic featured Dummy adverts were excluded."
+      },
+      "stockSnapshots": [
+        {
+          "count": 23,
+          "sourceUrl": "https://www.pistonheads.com/buy/dealer/999124",
+          "method": "opened",
+          "observedAt": "2026-10-10"
+        },
+        {
+          "count": 21,
+          "sourceUrl": "https://www.autotrader.co.uk/dealers/south-yorkshire/doncaster/cherry-tree-cars-ltd-10045747",
+          "method": "opened",
+          "observedAt": "2026-10-10"
+        },
+        {
+          "count": 24,
+          "sourceUrl": "https://www.cargurus.co.uk/Cars/m-Cherry-Tree-Cars-Ltd-sp526338",
+          "method": "indexed",
+          "observedAt": "2026-10-10"
+        }
+      ],
+      "website": {
+        "url": null,
+        "status": "no_standalone_domain_found_in_bounded_search",
+        "assessedAt": "2026-10-10",
+        "confidence": "medium",
+        "observations": [
+          "Opened AutoTrader Website field is blank; PistonHeads header lists dealer contact and location without an own domain.",
+          "cherrytreecars.co.uk belongs to a separate Beverley/Woodmansey business, not the Bradford premises."
+        ]
+      },
+      "domainChecks": {
+        "queries": [
+          "\"Cherry Tree Cars\" Bradford website",
+          "\"Cherry Tree Cars\" \"BD1\" website OR facebook OR email",
+          "\"07400048263\" website",
+          "\"Cherry Tree Cars\" \"41 Canal Street\""
+        ],
+        "profilesChecked": [
+          "https://www.autotrader.co.uk/dealers/south-yorkshire/doncaster/cherry-tree-cars-ltd-10045747",
+          "https://www.cargurus.co.uk/Cars/m-Cherry-Tree-Cars-Ltd-sp526338"
+        ],
+        "result": "No confidently matched dealer-owned standalone domain found in these bounded checks. Absence must be confirmed with the operator."
+      },
+      "googleBusinessProfile": {
+        "status": "possible_profile_address_conflict_not_confirmed",
+        "url": "https://www.google.com/maps/place/CTC+Cherry+Tree+Cars/@53.7989305,-1.751754,17z/data=!3m1!4b1!4m6!3m5!1s0x487be1001545e575:0xdf87ca81141a47a6!8m2!3d53.7989305!4d-1.7491791!16s%2Fg%2F11zxx0g4s7?hl=en",
+        "assessedAt": "2026-10-10",
+        "websiteField": "Add website",
+        "note": "CTC Cherry Tree Cars Google result says Canal Road BD1 4SJ and has no phone shown, whereas platforms say 41 Canal Street BD1 4BD. Do not treat this as a confidently matched profile."
+      },
+      "publicContacts": {
+        "phone": "07400 048263",
+        "email": null,
+        "sourceUrl": "https://www.pistonheads.com/buy/dealer/999124",
+        "phoneCaveat": "Marketplace-provided phone may forward calls; confirm an owner-controlled number.",
+        "status": "public_business_contact_not_contacted"
+      },
+      "businessContactSource": "https://www.pistonheads.com/buy/dealer/999124",
+      "addressNote": "41 Canal Street, Bradford BD1 4BD matches stock platforms. AutoTrader phone 07441 952282 and CarGurus 0191 743 4631 differ; likely forwarding but unproven. Registered-office move does not establish legal identity.",
+      "activityEvidence": [
+        {
+          "kind": "undated_advertised_inventory",
+          "date": null,
+          "sourceUrl": "https://www.pistonheads.com/buy/dealer/999124",
+          "note": "Real priced stock observed on 10 October 2026; no recent post date verified."
+        }
+      ],
+      "evidenceUrls": [
+        "https://www.pistonheads.com/buy/dealer/999124",
+        "https://www.autotrader.co.uk/dealers/south-yorkshire/doncaster/cherry-tree-cars-ltd-10045747",
+        "https://www.cargurus.co.uk/Cars/m-Cherry-Tree-Cars-Ltd-sp526338",
+        "https://www.google.com/maps/place/CTC+Cherry+Tree+Cars/@53.7989305,-1.751754,17z/data=!3m1!4b1!4m6!3m5!1s0x487be1001545e575:0xdf87ca81141a47a6!8m2!3d53.7989305!4d-1.7491791!16s%2Fg%2F11zxx0g4s7?hl=en"
+      ],
+      "evidenceNote": "23 opened PistonHeads vehicles and matching Bradford marketplace identity; no own domain matched. Google postcode and legal/contact differences require confirmation.",
+      "opportunityHypothesis": "An owned affordable-stock showroom with consistent location, truthful vehicle details and a direct enquiry route.",
+      "existingClientPath": null,
+      "recommendedEntryTemplate": "auto-best",
+      "showFirstReason": "Show the home-to-stock-to-enquiry flow with a simple local dealer identity.",
+      "nextAction": "Confirm trading/legal identity, Canal Street versus Canal Road premises, owner-controlled contact and any own domain. No dated October update verified."
+    },
+    {
+      "id": "gb-stockton-norton-grange-trade-cars",
+      "rank": 9,
+      "name": "Norton Grange Trade Cars",
+      "country": "GB",
+      "city": "Stockton-on-Tees",
+      "priority": "show-first_after_qualification",
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked",
+      "primarySellerUrl": "https://showroom.ebaymotorspro.co.uk/Norton-grange-car-sales?menu=1",
+      "socialUrl": "https://www.facebook.com/155134585966802/",
+      "inventory": {
+        "count": 17,
+        "kind": "retrieved_marketplace_advertised_count",
+        "retrievedAt": "2026-10-10",
+        "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Norton-grange-car-sales?menu=1",
+        "caveat": "Snapshot of advertisements; availability and count need a refresh before reuse."
+      },
+      "website": {
+        "url": null,
+        "status": "no_standalone_domain_found_in_bounded_search",
+        "assessedAt": "2026-10-10",
+        "confidence": "medium",
+        "observations": [
+          "Dealer eBay showroom Visit website destination is motors.co.uk, a marketplace."
+        ]
+      },
+      "domainChecks": {
+        "queries": [
+          "\"Norton grange trade cars\" website",
+          "\"Norton Grange\" car sales website"
+        ],
+        "profilesChecked": [
+          "https://showroom.ebaymotorspro.co.uk/Norton-grange-car-sales?menu=1",
+          "https://www.cargurus.co.uk/Cars/m-Norton-Grange-Trade-Cars-sp520783",
+          "https://www.pistonheads.com/buy/dealer/968844"
+        ],
+        "result": "No confidently matched standalone dealer website found; absence is unproven."
+      },
+      "publicContacts": {
+        "phone": "07759 060895",
+        "email": "nortongrangecars@outlook.com",
+        "phoneSourceUrl": "https://www.autoyas.com/GB/Stockton-on-Tees/155134585966802/Norton-grange-trade-cars",
+        "emailSourceUrl": "https://showroom.ebaymotorspro.co.uk/Norton-grange-car-sales?menu=1",
+        "status": "public_business_contact_not_contacted"
+      },
+      "businessContactSource": "https://showroom.ebaymotorspro.co.uk/Norton-grange-car-sales?menu=1",
+      "activityEvidence": [
+        {
+          "kind": "dated_secondary_social_mirror",
+          "date": "2026-09-26",
+          "sourceUrl": "https://www.autoyas.com/GB/Stockton-on-Tees/155134585966802/Norton-grange-trade-cars",
+          "note": "Opened mirror showed Audi A1 stock matching the marketplace description."
+        },
+        {
+          "kind": "indexed_secondary_date_conflict",
+          "date": "2026-10-02",
+          "sourceUrl": "https://www.autoyas.com/GB/Stockton-on-Tees/155134585966802/Norton-grange-trade-cars",
+          "note": "Newer stock post appeared in search results but was not reproduced by opening the page. Direct Facebook verification was throttled."
+        }
+      ],
+      "addressConflicts": [
+        {
+          "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Norton-grange-car-sales?menu=1",
+          "address": "385 Norton Road, Stockton-on-Tees TS20 2PJ"
+        },
+        {
+          "sourceUrl": "https://www.autoyas.com/GB/Stockton-on-Tees/155134585966802/Norton-grange-trade-cars",
+          "address": "1A Norton Avenue, Stockton-on-Tees TS20 2JH",
+          "note": "Older social and other marketplace address; confirm current premises."
+        }
+      ],
+      "evidenceUrls": [
+        "https://showroom.ebaymotorspro.co.uk/Norton-grange-car-sales?menu=1",
+        "https://www.autoyas.com/GB/Stockton-on-Tees/155134585966802/Norton-grange-trade-cars",
+        "https://www.facebook.com/155134585966802/",
+        "https://www.cargurus.co.uk/Cars/m-Norton-Grange-Trade-Cars-sp520783"
+      ],
+      "evidenceNote": "Repeated budget family stock and local identity with portal exposure. No owned domain found; recent mirror evidence is secondary and snapshots differ.",
+      "opportunityHypothesis": "An owned mobile stock showroom with filtering, dealer identity, clear directions and viewing enquiries can complement its marketplace and social presence.",
+      "existingClientPath": null,
+      "recommendedEntryTemplate": "mobile",
+      "showFirstReason": "Start from the phone experience its social followers would use to browse and enquire.",
+      "nextAction": "Resolve the address conflict, confirm contact and available inventory, and show Mobile first after accepted releases.",
+      "googleBusinessProfile": {
+        "status": "not_directly_verified",
+        "assessedAt": "2026-10-10",
+        "note": "Marketplace and social-mirror identity checked; public Google profile not confirmed."
+      }
+    },
+    {
+      "id": "gb-north-norfolk-car-sales",
+      "rank": 10,
+      "name": "North Norfolk Car Sales",
+      "country": "GB",
+      "city": "North Walsham, Norfolk",
+      "priority": "website_improvement_candidate",
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked",
+      "inventory": {
+        "count": null,
+        "kind": "indexed_dated_marketplace_listing_and_own_site_stock",
+        "retrievedAt": "2026-10-10",
+        "sourceUrl": "https://www.carandclassic.com/pt/carro/C2210498",
+        "caveat": "Search-indexed Porsche listing at GBP 12,999 has an explicit Listed on 09/10/2026 field. Direct opening was unavailable. This is indexed listing evidence, not proof of a social post or current availability."
+      },
+      "website": {
+        "url": "https://northnorfolkcarsales.co.uk/",
+        "status": "present_with_content_observations",
+        "assessedAt": "2026-10-10",
+        "confidence": "high_for_presence_medium_for_opportunity",
+        "observations": [
+          "Public review area contains explicit test content, confirmed in browser DOM inspection.",
+          "The Facebook destination was a website vendor rather than the dealer; confirm and correct the intended destination."
+        ]
+      },
+      "publicContacts": {
+        "phone": "01263 653055",
+        "email": "sales@northnorfolkcarsales.co.uk",
+        "sourceUrl": "https://northnorfolkcarsales.co.uk/",
+        "status": "public_business_contact_not_contacted"
+      },
+      "businessContactSource": "https://northnorfolkcarsales.co.uk/",
+      "activityEvidence": [
+        {
+          "kind": "indexed_explicit_marketplace_listing_date",
+          "date": "2026-10-09",
+          "sourceUrl": "https://www.carandclassic.com/pt/carro/C2210498",
+          "note": "Search-indexed Listed on field 09/10/2026; Porsche advertised at GBP 12,999. Direct opening was unavailable."
+        }
+      ],
+      "evidenceUrls": [
+        "https://northnorfolkcarsales.co.uk/",
+        "https://www.carandclassic.com/pt/carro/C2210498"
+      ],
+      "evidenceNote": "Retained as the tenth prospect under the owner's existing weak-website criterion: recent indexed 9 October stock listing plus browser-confirmed test reviews and misdirected social link. Exact stock volume unknown.",
+      "opportunityHypothesis": "A consistent dealer identity, genuine proof points and a clean stock-to-viewing journey, retaining useful existing stock exposure.",
+      "existingClientPath": null,
+      "recommendedEntryTemplate": "modern",
+      "showFirstReason": "Show an immediately understandable stock and trust presentation before offering the other five styles.",
+      "nextAction": "Confirm the Unit 3 Midland Road, North Walsham NR28 9JR premises and current stock, then review/social destinations; personalize only after the release gate passes."
+    }
+  ],
+  "reserves": [
+    {
+      "id": "gb-surrey-walton-car-sales",
+      "name": "Walton Car Sales",
+      "city": "Walton-on-Thames, Surrey",
+      "priority": "research_reserve_excluded_from_top_ten",
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked",
+      "inventory": {
+        "count": 6,
+        "kind": "retrieved_marketplace_listing_snapshot",
+        "retrievedAt": "2026-10-10",
+        "sourceUrl": "https://www.carandclassic.com/us/car/C2209120",
+        "caveat": "Snapshot of six dealer listings; confirm live count and availability. Explicit Listed on 08/10/2026 field differs from another published footer 10/9/2026; do not silently reconcile."
+      },
+      "website": {
+        "url": "https://www.waltoncarsales.co.uk/",
+        "status": "present_needs_rendered_audit",
+        "assessedAt": "2026-10-10",
+        "confidence": "high_for_presence_low_for_defect",
+        "observations": [
+          "Parsed contact content repeated contact details and ran email text together; rendered impact was not verified.",
+          "Browser navigation was blocked/timed out. This is an audit limitation, not evidence that customers see a broken site."
+        ],
+        "visualAudit": "blocked_or_timed_out_no_defect_confirmed"
+      },
+      "publicContacts": {
+        "phone": "07526 110010",
+        "email": "sales@waltoncarsales.co.uk",
+        "sourceUrl": "https://www.waltoncarsales.co.uk/",
+        "status": "public_business_contact_not_contacted"
+      },
+      "activityEvidence": [
+        {
+          "kind": "explicit_marketplace_listing_date_with_conflict",
+          "date": "2026-10-08",
+          "sourceUrl": "https://www.carandclassic.com/us/car/C2209120",
+          "note": "Preserve explicit Listed on field 08/10/2026. A separate footer says 10/9/2026 and has unresolved date-format/field differences."
+        }
+      ],
+      "evidenceUrls": [
+        "https://www.waltoncarsales.co.uk/",
+        "https://www.carandclassic.com/us/car/C2209120"
+      ],
+      "reasonExcluded": "Useful explicit 8 October 2026 marketplace listing evidence retained, but website opportunity is unproven. Auto Barn replaces it in the top ten with recent opened secondary stock evidence and confirmed public content gaps. Browser timeouts never prove a dealer website is broken."
+    },
+    {
+      "id": "gb-rhyl-autobarn-car-sales",
+      "name": "Auto Barn Car Sales / Autobarn Carsales",
+      "country": "GB",
+      "city": "Rhyl / Denbighshire, North Wales",
+      "priority": "show-first_after_qualification",
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked",
+      "inventory": {
+        "count": null,
+        "kind": "dated_secondary_social_stock_with_own_site_match",
+        "retrievedAt": "2026-10-10",
+        "sourceUrl": "https://www.autobarncarsales.co.uk/",
+        "caveat": "The own homepage advertises a 2018 Skoda Octavia Scout at GBP 8,395, matching a 2 October 2026 secondary social-mirror stock post and the same public phone. Multiple vehicles are priced on the own site. No exact live-stock count or availability guarantee is asserted."
+      },
+      "website": {
+        "url": "https://www.autobarncarsales.co.uk/",
+        "status": "present_with_confirmed_public_parsed_content_observations",
+        "assessedAt": "2026-10-10",
+        "confidence": "high_for_presence_and_public_content_medium_for_opportunity",
+        "observations": [
+          "Public homepage content exposes instructions for the owner to add introductory business text through Settings, Company Settings and Homepage Text in the Car Dealer 5 admin.",
+          "A phone/signal/WhatsApp instruction is inserted into the town field, producing malformed location headings, make URLs and footer content.",
+          "Own-page content and secondary stock mirror were confirmed by web opening. Browser navigation timed out, including a fresh attempt, so rendered acceptance is unavailable; this is not proof of a broken customer website."
+        ],
+        "visualAudit": "rendered_acceptance_unavailable_browser_navigation_timed_out"
+      },
+      "publicContacts": {
+        "phone": "07561 461881",
+        "additionalPhone": "07775 498666",
+        "email": "autobarn-carsales@mail.com",
+        "sourceUrl": "https://www.autobarncarsales.co.uk/",
+        "status": "public_business_contact_not_contacted"
+      },
+      "businessContactSource": "https://www.autobarncarsales.co.uk/",
+      "activityEvidence": [
+        {
+          "kind": "dated_secondary_social_mirror_opened",
+          "date": "2026-10-02",
+          "sourceUrl": "https://www.autoyas.com/GB/Rhyl/104066902193493/Auto-Barn-Car-Sales",
+          "note": "Opened page explicitly shows several 2 October 2026 stock posts, including Skoda Scout GBP 8,395 and Ford Focus GBP 4,395, with phone 07561461881. This is a secondary mirror, not a directly verified Facebook post; no 10 October post confirmed."
+        },
+        {
+          "kind": "undated_own_site_stock_match",
+          "date": null,
+          "sourceUrl": "https://www.autobarncarsales.co.uk/",
+          "note": "Own homepage shows Skoda Octavia 2.0 TDI Scout 2018 at GBP 8,395, matching the mirrored Skoda Scout price and public phone. Own stock has no independently verified posting date."
+        },
+        {
+          "kind": "syndicated_secondary_mirror_not_independent_confirmation",
+          "date": "2026-10-02",
+          "sourceUrl": "https://www.autos1000.com/GB/Rhyl/104066902193493/Auto-Barn-Car-Sales",
+          "note": "Identical dates/content appear to be syndicated; do not count this as independent corroboration."
+        }
+      ],
+      "addressConflicts": [
+        {
+          "sourceUrl": "https://www.autoyas.com/GB/Rhyl/104066902193493/Auto-Barn-Car-Sales",
+          "address": "Rhyl, LL181",
+          "note": "Partial directory location only; exact premises unresolved."
+        },
+        {
+          "sourceUrl": "https://www.autobarncarsales.co.uk/",
+          "address": "Denbighshire, LL16",
+          "note": "Own title says St Asaph, homepage says Rhyl, and footer town field contains contact instructions. Confirm current town, full postcode and physical viewing address before directions."
+        }
+      ],
+      "evidenceUrls": [
+        "https://www.autobarncarsales.co.uk/",
+        "https://www.autoyas.com/GB/Rhyl/104066902193493/Auto-Barn-Car-Sales",
+        "https://www.autos1000.com/GB/Rhyl/104066902193493/Auto-Barn-Car-Sales"
+      ],
+      "evidenceNote": "Recent opened secondary stock posts match own-site stock and phone, while confirmed public page content exposes business-introduction instructions and malformed location fields. Rendered browser acceptance remains unavailable; exact-day social posting is unverified.",
+      "opportunityHypothesis": "A finished dealer introduction, verified showroom location and clear stock-to-viewing enquiries complement the existing stock business and remove exposed setup content.",
+      "existingClientPath": null,
+      "recommendedEntryTemplate": "modern",
+      "showFirstReason": "Show a finished, clear dealer identity and stock presentation with correct location information before the other five styles.",
+      "nextAction": "Resolve the exact showroom town/address and live stock, obtain a successful rendered audit when available, and prepare Modern first after accepted immutable releases and Cloudflare qualification.",
+      "previousRank": 2,
+      "researchDisposition": "outside_volume_led_top_ten",
+      "reserveReason": "Preserved first-pass evidence; lower verified volume, older or conflicted activity, or a weaker replacement hypothesis than the revised shortlist."
+    },
+    {
+      "id": "gb-winslow-amw-car-sales",
+      "name": "AMW Car Sales",
+      "country": "GB",
+      "city": "Winslow, Buckinghamshire",
+      "priority": "show-first_after_qualification",
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked",
+      "primarySellerUrl": "https://www.cargurus.co.uk/Cars/m-AMW-Car-Sales-sp483585",
+      "inventory": {
+        "count": null,
+        "kind": "dated_secondary_social_stock_posts",
+        "retrievedAt": "2026-10-10",
+        "sourceUrl": "https://www.autoyas.com/GB/Winslow/1527947974154046/AMW-CAR-SALES",
+        "caveat": "28 September posts include Renault Kadjar GBP 4,790, Ford Ka GBP 1,990 and Volvo V40 GBP 1,750. Prices and availability are unconfirmed."
+      },
+      "website": {
+        "url": null,
+        "status": "no_standalone_domain_found_in_bounded_search",
+        "assessedAt": "2026-10-10",
+        "confidence": "medium",
+        "observations": [
+          "Cylex website field points to CarGurus; the social mirror website field points to Facebook."
+        ]
+      },
+      "domainChecks": {
+        "queries": [
+          "\"AMW Car Sales\" website",
+          "\"AMW Car Sales\" Winslow"
+        ],
+        "profilesChecked": [
+          "https://winslow.cylex-uk.co.uk/company/amw-car-sales-26961748.html",
+          "https://www.cargurus.co.uk/Cars/m-AMW-Car-Sales-sp483585",
+          "https://www.autoyas.com/GB/Winslow/1527947974154046/AMW-CAR-SALES"
+        ],
+        "result": "No confidently matched standalone dealer website found; absence is unproven."
+      },
+      "publicContacts": {
+        "phone": "07944 529056",
+        "email": null,
+        "sourceUrl": "https://www.autoyas.com/GB/Winslow/1527947974154046/AMW-CAR-SALES",
+        "status": "public_business_phone_in_posts_not_contacted"
+      },
+      "businessContactSource": "https://www.autoyas.com/GB/Winslow/1527947974154046/AMW-CAR-SALES",
+      "activityEvidence": [
+        {
+          "kind": "dated_secondary_social_mirror",
+          "date": "2026-09-28",
+          "sourceUrl": "https://www.autoyas.com/GB/Winslow/1527947974154046/AMW-CAR-SALES",
+          "note": "Opened mirror has several stock, preparation and sold posts. A near-8,000-followers statement is the business's dated claim, not a verified current audience size."
+        }
+      ],
+      "addressConflicts": [
+        {
+          "sourceUrl": "https://www.autoyas.com/GB/Winslow/1527947974154046/AMW-CAR-SALES",
+          "address": "Station Road Industry, Winslow MK18 3RQ"
+        },
+        {
+          "sourceUrl": "https://winslow.cylex-uk.co.uk/company/amw-car-sales-26961748.html",
+          "address": "Capitol Works, Station Road, Winslow MK18 3EH",
+          "note": "Confirm current premises/postcode before using directions."
+        }
+      ],
+      "evidenceUrls": [
+        "https://www.autoyas.com/GB/Winslow/1527947974154046/AMW-CAR-SALES",
+        "https://www.cargurus.co.uk/Cars/m-AMW-Car-Sales-sp483585",
+        "https://winslow.cylex-uk.co.uk/company/amw-car-sales-26961748.html"
+      ],
+      "evidenceNote": "Owner-led social stock updates and repeat sales are a useful fit for a simple owned showroom. The dated mirror is secondary evidence and the CarGurus crawl is older.",
+      "opportunityHypothesis": "Preserve the familiar seller voice while making budget stock, availability and viewing enquiries easier to find from a social link.",
+      "existingClientPath": null,
+      "recommendedEntryTemplate": "mobile",
+      "showFirstReason": "Present a compact phone stock journey suited to social discovery.",
+      "nextAction": "Confirm the address/postcode and live stock; show a sourced Mobile concept after accepted releases.",
+      "previousRank": 4,
+      "researchDisposition": "outside_volume_led_top_ten",
+      "reserveReason": "Preserved first-pass evidence; lower verified volume, older or conflicted activity, or a weaker replacement hypothesis than the revised shortlist."
+    },
+    {
+      "id": "gb-hull-harvey-bloom",
+      "name": "Harvey Bloom Cars",
+      "country": "GB",
+      "city": "Hull",
+      "priority": "show-first_after_qualification",
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked",
+      "inventory": {
+        "count": null,
+        "kind": "undated_own_site_advertised_stock",
+        "retrievedAt": "2026-10-10",
+        "sourceUrl": "https://harveybloomcars.co.uk/",
+        "caveat": "Stock was displayed, but no independent September/October posting date was verified."
+      },
+      "website": {
+        "url": "https://harveybloomcars.co.uk/",
+        "status": "present_with_content_observations",
+        "assessedAt": "2026-10-10",
+        "confidence": "high_for_presence_medium_for_opportunity",
+        "observations": [
+          "Several vehicle prices display GBP 0.",
+          "Vehicle distance uses km; confirm whether these are correct dealer-entered units or a presentation issue before conversion."
+        ]
+      },
+      "publicContacts": {
+        "phone": "01482 709922",
+        "email": "harvey@harveybloomcars.co.uk",
+        "sourceUrl": "https://harveybloomcars.co.uk/",
+        "status": "public_business_contact_not_contacted"
+      },
+      "businessContactSource": "https://harveybloomcars.co.uk/",
+      "activityEvidence": [
+        {
+          "kind": "undated_advertised_inventory",
+          "date": null,
+          "sourceUrl": "https://harveybloomcars.co.uk/",
+          "note": "Existing stock presence observed; no exact-day or dated recent post claim."
+        }
+      ],
+      "evidenceUrls": [
+        "https://harveybloomcars.co.uk/"
+      ],
+      "evidenceNote": "Specific price and unit presentation questions create a practical sales-demo opening. The dealer already has an owned site and stock; replacement value needs confirmation.",
+      "opportunityHypothesis": "Clear ask-price/price-on-request states, verified UK distance units and a simple enquiry route improve the stock presentation.",
+      "existingClientPath": null,
+      "recommendedEntryTemplate": "modern",
+      "showFirstReason": "Show straightforward vehicle cards with trustworthy prices and units.",
+      "nextAction": "Check zero-price intent and original mileage data; validate current stock before drafting the Modern concept.",
+      "previousRank": 5,
+      "researchDisposition": "outside_volume_led_top_ten",
+      "reserveReason": "Preserved first-pass evidence; lower verified volume, older or conflicted activity, or a weaker replacement hypothesis than the revised shortlist."
+    },
+    {
+      "id": "gb-newtownabbey-j-and-f-group",
+      "name": "J&F Group",
+      "country": "GB",
+      "city": "Newtownabbey, Northern Ireland",
+      "priority": "show-first_after_qualification",
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked",
+      "inventory": {
+        "count": null,
+        "kind": "undated_own_site_advertised_stock",
+        "retrievedAt": "2026-10-10",
+        "sourceUrl": "https://jandfgroup.co.uk/search-auto/",
+        "caveat": "Inventory includes a 2026 Mercedes listing; model year does not establish posting date or available stock."
+      },
+      "website": {
+        "url": "https://jandfgroup.co.uk/",
+        "status": "present_with_content_observations",
+        "assessedAt": "2026-10-10",
+        "confidence": "high_for_presence_medium_for_opportunity",
+        "observations": [
+          "Homepage displays Under Construction.",
+          "About area contains theme filler content.",
+          "An electric Nissan Leaf is labelled Autogas in inventory; verify source data before correcting."
+        ]
+      },
+      "publicContacts": {
+        "phone": "02890 342019",
+        "email": "sales@jandfgroup.co.uk",
+        "sourceUrl": "https://jandfgroup.co.uk/",
+        "status": "public_business_contact_not_contacted"
+      },
+      "businessContactSource": "https://jandfgroup.co.uk/",
+      "activityEvidence": [
+        {
+          "kind": "undated_advertised_inventory",
+          "date": null,
+          "sourceUrl": "https://jandfgroup.co.uk/search-auto/",
+          "note": "Stock exists, including a 2026 Mercedes; no September/October posting date independently verified."
+        }
+      ],
+      "evidenceUrls": [
+        "https://jandfgroup.co.uk/",
+        "https://jandfgroup.co.uk/search-auto/"
+      ],
+      "evidenceNote": "Construction/filler wording and a concrete fuel-label mismatch offer a more specific opening than a subjective design criticism.",
+      "opportunityHypothesis": "A finished dealer presentation with accurate searchable vehicle data and visible viewing/enquiry actions.",
+      "existingClientPath": null,
+      "recommendedEntryTemplate": "auto-best",
+      "showFirstReason": "Show the completed dealer home-to-stock journey and accurate vehicle detail presentation.",
+      "nextAction": "Confirm legal/trading identity, actual fuel data and current stock; prepare Auto Best first once approved releases are ready.",
+      "previousRank": 6,
+      "researchDisposition": "outside_volume_led_top_ten",
+      "reserveReason": "Preserved first-pass evidence; lower verified volume, older or conflicted activity, or a weaker replacement hypothesis than the revised shortlist."
+    },
+    {
+      "id": "gb-dewsbury-nn-selected-motors",
+      "name": "NN Motors T/A Selected Motors",
+      "country": "GB",
+      "city": "Dewsbury, West Yorkshire",
+      "priority": "show-first_after_qualification",
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked",
+      "primarySellerUrl": "https://showroom.ebaymotorspro.co.uk/NN-MOTORS",
+      "inventory": {
+        "count": null,
+        "kind": "marketplace_advertisements_with_conflicting_snapshot_counts",
+        "retrievedAt": "2026-10-10",
+        "sourceUrl": "https://showroom.ebaymotorspro.co.uk/NN-MOTORS",
+        "snapshotCounts": {
+          "opened": 11,
+          "indexed": 14
+        },
+        "caveat": "Do not state an exact live count. Several advertised cars disclose repaired Cat S/N history. A Honda Jazz MOT September 2027 is not a posting date."
+      },
+      "website": {
+        "url": null,
+        "status": "no_standalone_domain_found_in_bounded_search",
+        "assessedAt": "2026-10-10",
+        "confidence": "medium",
+        "observations": [
+          "Dealer eBay showroom Visit website destination is motors.co.uk, a marketplace."
+        ]
+      },
+      "domainChecks": {
+        "queries": [
+          "\"NN Motors\" Dewsbury website",
+          "\"NN Motors\" \"Selected Motors\"",
+          "\"NN Motors\" \"Netherfield Mills\""
+        ],
+        "profilesChecked": [
+          "https://showroom.ebaymotorspro.co.uk/NN-MOTORS",
+          "https://www.cazoo.co.uk/dealers/nn-motors-ta-selected-motors-10757/"
+        ],
+        "result": "No confidently matched standalone dealer website found; absence is unproven."
+      },
+      "publicContacts": {
+        "phone": "07955 577000",
+        "phoneSourceUrl": "https://www.bizseek.co.uk/nn-motors-07955-577000",
+        "phoneCaveat": "Public directory phone; current ownership needs a refresh before outreach.",
+        "email": "nn-motors@hotmail.co.uk",
+        "emailSourceUrl": "https://showroom.ebaymotorspro.co.uk/NN-MOTORS",
+        "marketplacePhone": "01924 978708",
+        "marketplacePhoneCaveat": "May be a forwarding number.",
+        "status": "public_business_contact_not_contacted"
+      },
+      "businessContactSource": "https://showroom.ebaymotorspro.co.uk/NN-MOTORS",
+      "activityEvidence": [
+        {
+          "kind": "undated_advertised_inventory",
+          "date": null,
+          "sourceUrl": "https://showroom.ebaymotorspro.co.uk/NN-MOTORS",
+          "note": "Repeated trade stock; Cazoo identifies seller joined in 2014. No dated October social post independently verified."
+        }
+      ],
+      "addressNote": "Unit 4 Netherfield Mills, Dewsbury WF13 3JY; confirm current viewing location.",
+      "evidenceUrls": [
+        "https://showroom.ebaymotorspro.co.uk/NN-MOTORS",
+        "https://www.cazoo.co.uk/dealers/nn-motors-ta-selected-motors-10757/",
+        "https://www.bizseek.co.uk/nn-motors-07955-577000"
+      ],
+      "evidenceNote": "Longstanding trade marketplace presence with no owned domain found. Repaired history must remain clear and truthful in any demo.",
+      "opportunityHypothesis": "An owned showroom that surfaces vehicle history and condition clearly while making viewing enquiries easy.",
+      "existingClientPath": null,
+      "recommendedEntryTemplate": "modern",
+      "showFirstReason": "Demonstrate clear stock and history information before pitching appearance.",
+      "nextAction": "Refresh mobile contact and inventory, preserve Cat S/N disclosures and confirm premises before personalization.",
+      "previousRank": 8,
+      "researchDisposition": "outside_volume_led_top_ten",
+      "reserveReason": "Preserved first-pass evidence; lower verified volume, older or conflicted activity, or a weaker replacement hypothesis than the revised shortlist."
+    },
+    {
+      "id": "gb-ayr-ayrshire-car-traders",
+      "name": "Ayrshire Car Traders Ltd",
+      "country": "GB",
+      "city": "Ayr, Scotland",
+      "priority": "show-first_after_qualification",
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked",
+      "primarySellerUrl": "https://www.autotrader.co.uk/dealers/ayrshire/ayr/ayrshire-car-traders-ltd-10049151",
+      "socialUrl": "https://www.facebook.com/257010041542654/",
+      "inventory": {
+        "count": null,
+        "kind": "marketplace_advertisements_with_conflicting_snapshot_counts",
+        "retrievedAt": "2026-10-10",
+        "sourceUrl": "https://www.autotrader.co.uk/dealers/ayrshire/ayr/ayrshire-car-traders-ltd-10049151",
+        "snapshotCounts": {
+          "opened": 8,
+          "indexed": 7
+        },
+        "caveat": "Use real dealer used-car section, not unrelated test/featured content in extracted page. Availability remains unconfirmed."
+      },
+      "website": {
+        "url": null,
+        "status": "no_standalone_domain_found_in_bounded_search",
+        "assessedAt": "2026-10-10",
+        "confidence": "medium",
+        "observations": [
+          "AutoTrader website field points back to AutoTrader itself.",
+          "Regional dealer directory links Facebook rather than an owned site."
+        ]
+      },
+      "domainChecks": {
+        "queries": [
+          "\"Ayrshire Car Traders Ltd\" website",
+          "\"Ayrshire Car Traders\" Ayr"
+        ],
+        "profilesChecked": [
+          "https://www.autotrader.co.uk/dealers/ayrshire/ayr/ayrshire-car-traders-ltd-10049151",
+          "https://www.ayrshirescotland.com/ayrshirebusiness/independentdealers.html",
+          "https://ayr-south-ayrshire.cylex-uk.co.uk/company/ayrshire-car-traders-ltd-27778315.html"
+        ],
+        "result": "No confidently matched standalone dealer website found; absence is unproven."
+      },
+      "publicContacts": {
+        "phone": "01292 886599",
+        "email": null,
+        "sourceUrl": "https://www.ayrshirescotland.com/ayrshirebusiness/independentdealers.html",
+        "corroboratingSourceUrl": "https://ayr-south-ayrshire.cylex-uk.co.uk/company/ayrshire-car-traders-ltd-27778315.html",
+        "status": "public_business_phone_not_contacted"
+      },
+      "businessContactSource": "https://www.ayrshirescotland.com/ayrshirebusiness/independentdealers.html",
+      "activityEvidence": [
+        {
+          "kind": "indexed_secondary_date_conflict",
+          "date": "2026-10-06",
+          "sourceUrl": "https://www.autoyas.com/GB/Ayr/257010041542654/Ayrshire-Car-Traders-Ltd",
+          "note": "Search result showed community posts 6 October, sold Panda 3 October and Zafira stock 2 October. Opening the same page returned 7 August 2025 content. October evidence is indexed secondary evidence, not directly confirmed Facebook activity."
+        }
+      ],
+      "addressNote": "17 Peebles Street, Ayr KA8 8DP; confirm before using directions.",
+      "evidenceUrls": [
+        "https://www.autotrader.co.uk/dealers/ayrshire/ayr/ayrshire-car-traders-ltd-10049151",
+        "https://www.autoyas.com/GB/Ayr/257010041542654/Ayrshire-Car-Traders-Ltd",
+        "https://www.facebook.com/257010041542654/",
+        "https://www.ayrshirescotland.com/ayrshirebusiness/independentdealers.html",
+        "https://ayr-south-ayrshire.cylex-uk.co.uk/company/ayrshire-car-traders-ltd-27778315.html"
+      ],
+      "evidenceNote": "Family-business presentation and current advertised stock support an owned-showroom opportunity, with lower freshness confidence because social snapshots conflict.",
+      "opportunityHypothesis": "A mobile dealer home, searchable stock and genuine business proof that complements existing AutoTrader exposure.",
+      "existingClientPath": null,
+      "recommendedEntryTemplate": "mobile",
+      "showFirstReason": "Show an approachable family-dealer phone journey and viewing action.",
+      "nextAction": "Verify direct recent Facebook activity and current stock/contact, then personalize after release acceptance.",
+      "previousRank": 9,
+      "researchDisposition": "outside_volume_led_top_ten",
+      "reserveReason": "Preserved first-pass evidence; lower verified volume, older or conflicted activity, or a weaker replacement hypothesis than the revised shortlist."
+    },
+    {
+      "id": "gb-rillington-woodlands-cars",
+      "name": "Woodlands Cars",
+      "country": "GB",
+      "city": "Rillington, North Yorkshire",
+      "priority": "audit-first",
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked",
+      "inventory": {
+        "count": null,
+        "kind": "dated_own_site_stock_article_and_undated_inventory",
+        "retrievedAt": "2026-10-10",
+        "sourceUrl": "https://woodlandscars.com/2026/07/12/view-our-car-stock-here/",
+        "caveat": "Stock article is dated 12 July 2026. Displayed prices/stock are undated; this is not proof of September/October posting activity."
+      },
+      "website": {
+        "url": "https://woodlandscars.com/view-our-cars-for-sale/",
+        "status": "present_with_content_observations",
+        "assessedAt": "2026-10-10",
+        "confidence": "high_for_presence_medium_for_opportunity",
+        "observations": [
+          "Literal [Loan-calculator] is visibly rendered beneath the inventory page heading, confirmed in the browser on 10 October 2026."
+        ]
+      },
+      "publicContacts": {
+        "phone": "01653 472500",
+        "email": null,
+        "sourceUrl": "https://woodlandscars.com/view-our-cars-for-sale/",
+        "status": "public_business_phone_not_contacted"
+      },
+      "businessContactSource": "https://woodlandscars.com/view-our-cars-for-sale/",
+      "activityEvidence": [
+        {
+          "kind": "explicit_own_site_article_date",
+          "date": "2026-07-12",
+          "sourceUrl": "https://woodlandscars.com/2026/07/12/view-our-car-stock-here/",
+          "note": "Dated stock article; subsequently displayed inventory is undated."
+        }
+      ],
+      "evidenceUrls": [
+        "https://woodlandscars.com/view-our-cars-for-sale/",
+        "https://woodlandscars.com/2026/07/12/view-our-car-stock-here/"
+      ],
+      "evidenceNote": "Specific exposed-shortcode observation supports a focused audit, but dated activity is older than the highest-ranked candidates.",
+      "opportunityHypothesis": "A tidy stock/detail journey with working, accurately described enquiry and finance-related surfaces where the dealer is authorized to offer them.",
+      "existingClientPath": null,
+      "recommendedEntryTemplate": "auto-best",
+      "showFirstReason": "Show a finished stock-to-enquiry flow that replaces exposed implementation text.",
+      "nextAction": "Verify recent trading and stock activity before qualifying a build; the visible inventory shortcode is confirmed.",
+      "previousRank": 10,
+      "researchDisposition": "outside_volume_led_top_ten",
+      "reserveReason": "Preserved first-pass evidence; lower verified volume, older or conflicted activity, or a weaker replacement hypothesis than the revised shortlist."
+    },
+    {
+      "id": "gb-birmingham-w-m-motors-unresolved",
+      "name": "W M motors / possible West Midlands Motors identity",
+      "city": "Birmingham",
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked",
+      "researchDisposition": "excluded_until_website_and_operator_identity_resolved",
+      "reserveReason": "W M motors advertises 40 vehicles at Unit 12 Rushey Lane B11 2BL. Exact same premises are used by West Midlands Motors, whose own website was independently opened with priced stock and 0121 7065550 / 07944 018946. Operator equivalence is unproven; it cannot safely be sold as a no-website prospect.",
+      "evidenceUrls": [
+        "https://www.autotrader.co.uk/dealers/worcestershire/birmingham/w-m-motors-10035620",
+        "https://www.westmidlandsmotors.co.uk/",
+        "https://www.autotrader.co.uk/dealers/west-midlands/birmingham/west-midlands-motors-415477"
+      ],
+      "notesSource": "uk-platform-cargurus-notes-2026-10-10.md"
+    }
+  ],
+  "researchPhase": "volume_led_platform_and_google_business_validation",
+  "selection": {
+    "description": "Eight prospects with 23–77 advertised vehicles and no own domain matched, Norton Grange with 17, and one concrete weak-website prospect. Not a claim that all ten posted today, have no website or are likely to buy.",
+    "rankingBasis": [
+      "matching business identity",
+      "primary recent dated activity where available",
+      "advertised catalogue volume",
+      "concrete own-website gap",
+      "public contact quality and qualification risk"
+    ],
+    "noDomainFound": 9,
+    "existingWeakWebsite": 1,
+    "largerCatalogueCandidates": 8,
+    "verifiedSameDayPostCount": 0
+  }
+}

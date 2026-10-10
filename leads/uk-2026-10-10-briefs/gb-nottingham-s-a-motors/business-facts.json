@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "leadId": "gb-nottingham-s-a-motors",
+  "slug": "nottingham-s-a-motors",
+  "observedAt": "2026-10-10",
+  "name": "S A Motors",
+  "shortName": "S A Motors",
+  "legalName": null,
+  "companyNumber": null,
+  "city": "Nottingham",
+  "country": "United Kingdom",
+  "countryCode": "GB",
+  "address": null,
+  "phone": null,
+  "phoneDisplay": null,
+  "phoneHref": null,
+  "email": null,
+  "hours": null,
+  "coordinates": null,
+  "currency": "GBP",
+  "distanceUnit": "mi",
+  "locale": "en-GB",
+  "languages": [
+    "en"
+  ],
+  "accent": null,
+  "website": null,
+  "sourceProfile": "https://showroom.ebaymotorspro.co.uk/S-A-motors?aboutUs=&page=2",
+  "mapsUrl": null,
+  "mapsEmbedUrl": null,
+  "tagline": "Vehicle design preview for S A Motors in Nottingham.",
+  "socialLinks": {},
+  "services": [],
+  "stockCount": 0,
+  "publishedListingCount": 36,
+  "sampleOnly": true,
+  "inventoryMode": "illustrative_unpopulated",
+  "previewNotice": "Independent design preview for discussion; it is not an official dealership website. No dealership approval or enquiry delivery is implied.",
+  "inventoryNotice": "No vehicle samples have been populated yet. Later advertised examples must retain their source date, actual GBP price, original mileage unit and availability caveat. Illustrative stock must be clearly identified.",
+  "availabilityLabel": "Sample — availability not confirmed",
+  "contactNotice": "Direct enquiry destination is not confirmed; show an honest demo/unavailable contact state until resolved.",
+  "locationNote": "City-level location only until conflicting or incomplete premises information is resolved.",
+  "sources": [
+    "https://showroom.ebaymotorspro.co.uk/S-A-motors?aboutUs=&page=2",
+    "https://www.cazoo.co.uk/dealers/s-a-motors-76195/",
+    "https://www.ebay.co.uk/itm/178519418514"
+  ],
+  "opportunity": "An owned stock catalogue supporting mixed mainstream/import cars and a clear direct viewing enquiry.",
+  "qualificationNotes": [
+    "36 opened eBay adverts, matching 35-car Cazoo catalogue and business email. Primary late-September update supports recent advertising; no verified October post.",
+    "Advertised listings, not verified physical stock or availability. Do not sum counts across platforms.",
+    "4 Sailsbury Street, Nottingham NG7 2BE is platform spelling; confirm current premises and correct street spelling. Same-name Somercotes/West Drayton businesses were excluded.",
+    "Marketplace-provided phone may forward calls; confirm an owner-controlled number.",
+    "Public trading name/city only: no dealership approval, contact ownership, matched legal entity or private contact history has been verified.",
+    "Vehicle media, prices, mileage, services, staff, reviews, finance claims, hours and branding have not been selected or accepted for application content in this preparation pass."
+  ],
+  "contactCandidates": {
+    "phone": "0115 684 8052",
+    "email": "aadamali121@yahoo.co.uk",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/S-A-motors?aboutUs=&page=2",
+    "phoneCaveat": "Marketplace-provided phone may forward calls; confirm an owner-controlled number.",
+    "status": "public_business_contact_not_contacted",
+    "phoneE164": "+441156848052",
+    "approvalStatus": "public_research_not_dealer_confirmed"
+  },
+  "addressCandidates": {
+    "publishedNote": "4 Sailsbury Street, Nottingham NG7 2BE is platform spelling; confirm current premises and correct street spelling. Same-name Somercotes/West Drayton businesses were excluded.",
+    "conflicts": [],
+    "googleProfile": {
+      "status": "no_confidently_matched_profile_in_bounded_map_search",
+      "assessedAt": "2026-10-10",
+      "note": "No dealer profile was confidently matched; this does not prove no Google profile exists."
+    },
+    "status": "unresolved_do_not_publish_exact_visit_pin"
+  },
+  "researchEvidence": {
+    "inventory": {
+      "count": 36,
+      "kind": "opened_platform_advertised_count",
+      "retrievedAt": "2026-10-10",
+      "sourceUrl": "https://showroom.ebaymotorspro.co.uk/S-A-motors?aboutUs=&page=2",
+      "caveat": "Advertised listings, not verified physical stock or availability. Do not sum counts across platforms."
+    },
+    "stockSnapshots": [
+      {
+        "count": 36,
+        "sourceUrl": "https://showroom.ebaymotorspro.co.uk/S-A-motors?aboutUs=&page=2",
+        "method": "opened",
+        "observedAt": "2026-10-10"
+      },
+      {
+        "count": 35,
+        "sourceUrl": "https://www.cazoo.co.uk/dealers/s-a-motors-76195/",
+        "method": "opened",
+        "observedAt": "2026-10-10"
+      }
+    ],
+    "activityEvidence": [
+      {
+        "kind": "primary_advert_last_updated_date",
+        "date": "2026-09-22",
+        "sourceUrl": "https://www.ebay.co.uk/itm/178519418514",
+        "note": "Mercedes A45 advert explicitly Last updated 22 Sep 2026 18:49:57 BST. Seller 5a_auto, Nottingham and public showroom phone match. No October update verified; a Just now Gumtree snippet was excluded after opening returned 410 Gone."
+      }
+    ],
+    "website": {
+      "url": null,
+      "status": "no_standalone_domain_found_in_bounded_search",
+      "assessedAt": "2026-10-10",
+      "confidence": "medium",
+      "observations": [
+        "eBay lists business email but no standalone website link.",
+        "Name/address/email/phone checks matched stock portals and older classified mirrors; no own domain matched."
+      ]
+    },
+    "domainChecks": {
+      "queries": [
+        "\"S A Motors\" Nottingham website",
+        "\"aadamali121@yahoo.co.uk\" website",
+        "\"S A Motors\" \"NG7 2BE\"",
+        "\"0115 684 8052\" website"
+      ],
+      "profilesChecked": [
+        "https://www.cazoo.co.uk/dealers/s-a-motors-76195/"
+      ],
+      "result": "No confidently matched dealer-owned standalone domain found in these bounded checks. Absence must be confirmed with the operator."
+    }
+  },
+  "branding": {
+    "publishedBranding": null,
+    "sourceLogoUrl": null,
+    "workingLogoPath": null,
+    "creationMethod": null,
+    "approvalStatus": "not_researched_for_build",
+    "visualInspection": "not_performed_in_brief_preparation",
+    "requiredNextStep": "Inspect matching public branding visually; use a suitable permitted original raster asset or an identified generated refresh/proposal when required by the build guardrails."
+  },
+  "buildPreparation": {
+    "status": "public_fact_pack_prepared_not_an_application",
+    "derivedFrom": {
+      "path": "../../uk-2026-10-10.json",
+      "sourceSha256": "05d34f35ad699beb6676de775a50e8659ae23771e73d0aa25c9c94a646f348b2",
+      "researchAsOf": "2026-10-10"
+    },
+    "researchSnapshotFlags": {
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked"
+    },
+    "ownerRequest": "Ten proposals with six variants on Cloudflare after accepted template releases. This pack records neither dealership approval nor changes to original research flags.",
+    "requestedTemplateChoices": [
+      "auto-best",
+      "modern",
+      "import",
+      "app",
+      "mobile",
+      "karento-best"
+    ],
+    "templateLabels": {
+      "auto-best": "Auto Best",
+      "modern": "Modern",
+      "import": "Import",
+      "app": "App",
+      "mobile": "Mobile",
+      "karento-best": "Signature"
+    },
+    "recommendedEntryTemplate": "import",
+    "showFirstReason": "Show Import if left-hand-drive/import stock is an actual service; all six designs remain available.",
+    "templatePins": null,
+    "hosting": {
+      "requestedProvider": "cloudflare",
+      "acceptedPublisher": null,
+      "publicOrigin": null,
+      "status": "await_qualified_pilot_and_release_acceptance",
+      "dnsChangeAuthorized": false,
+      "billingChangeAuthorized": false
+    },
+    "nextAction": "Confirm whether imports are a real service, exact address, direct contacts, current stock and domain ownership before presentation.",
+    "readyToPersonalizeNow": [
+      "Public trading name",
+      "Public city/region",
+      "GB dealership country",
+      "en-GB English presentation",
+      "GBP pricing contract",
+      "Miles display contract with actual kilometre conversion",
+      "Independent preview disclosure"
+    ],
+    "requiresBeforeComplete": [
+      "Accepted immutable pins for all six requested families",
+      "Qualified six-variant Cloudflare packaging/publisher",
+      "Canonical identity and existing-client/alias reconciliation",
+      "Current premises and direct contact destination",
+      "Visual brand inspection and permitted local raster assets",
+      "Sourced dated stock with correct units and permitted images, or explicitly illustrative inventory",
+      "Inherited identity/claim sweep and honest demo forms",
+      "Per-variant QA and hosted checks"
+    ],
+    "qa": {
+      "sourcePackValidated": true,
+      "applicationBuilt": false,
+      "browserReviewed": false,
+      "hostedVerified": false
+    },
+    "existingClientPathFromResearch": null
+  }
+}

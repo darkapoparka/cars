@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "leadId": "gb-birmingham-trade-car-sales-grasmere",
+  "slug": "birmingham-trade-car-sales-grasmere",
+  "observedAt": "2026-10-10",
+  "name": "Trade Car Sales",
+  "shortName": "Trade Car Sales",
+  "legalName": null,
+  "companyNumber": null,
+  "city": "Birmingham",
+  "country": "United Kingdom",
+  "countryCode": "GB",
+  "address": null,
+  "phone": null,
+  "phoneDisplay": null,
+  "phoneHref": null,
+  "email": null,
+  "hours": null,
+  "coordinates": null,
+  "currency": "GBP",
+  "distanceUnit": "mi",
+  "locale": "en-GB",
+  "languages": [
+    "en"
+  ],
+  "accent": null,
+  "website": null,
+  "sourceProfile": "https://showroom.ebaymotorspro.co.uk/Trade-Car-Sales1",
+  "mapsUrl": null,
+  "mapsEmbedUrl": null,
+  "tagline": "Vehicle design preview for Trade Car Sales in Birmingham.",
+  "socialLinks": {},
+  "services": [],
+  "stockCount": 0,
+  "publishedListingCount": 62,
+  "sampleOnly": true,
+  "inventoryMode": "illustrative_unpopulated",
+  "previewNotice": "Independent design preview for discussion; it is not an official dealership website. No dealership approval or enquiry delivery is implied.",
+  "inventoryNotice": "No vehicle samples have been populated yet. Later advertised examples must retain their source date, actual GBP price, original mileage unit and availability caveat. Illustrative stock must be clearly identified.",
+  "availabilityLabel": "Sample — availability not confirmed",
+  "contactNotice": "Direct enquiry destination is not confirmed; show an honest demo/unavailable contact state until resolved.",
+  "locationNote": "City-level location only until conflicting or incomplete premises information is resolved.",
+  "sources": [
+    "https://showroom.ebaymotorspro.co.uk/Trade-Car-Sales1",
+    "https://www.cazoo.co.uk/dealers/trade-car-sales-16229/",
+    "https://www.ebay.co.uk/itm/189038456623"
+  ],
+  "opportunity": "Owned stock search with useful price/fuel/body filters, honest condition disclosures and a clear visit/enquiry route.",
+  "qualificationNotes": [
+    "62 opened advertisements and an explicit 4 October primary advert update support a larger-catalogue opportunity; generic name and exact trading identity remain qualification gaps.",
+    "Opened eBay and Cazoo snapshots each 62 adverts, corroborated by fresh TinyFish showroom extraction. Advertising count is not verified available stock; do not sum feeds.",
+    "Grasmere Road, Birmingham B21 0UR on eBay; Cazoo spells the road Grassmere. Confirm full premises address and legal identity.",
+    "Marketplace-provided number may be forwarding; do not describe it as the dealer's own landline.",
+    "Public trading name/city only: no dealership approval, contact ownership, matched legal entity or private contact history has been verified.",
+    "Vehicle media, prices, mileage, services, staff, reviews, finance claims, hours and branding have not been selected or accepted for application content in this preparation pass."
+  ],
+  "contactCandidates": {
+    "phone": "0121 647 4034",
+    "phoneCaveat": "Marketplace-provided number may be forwarding; do not describe it as the dealer's own landline.",
+    "email": "trade.car.sales@outlook.com",
+    "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Trade-Car-Sales1",
+    "status": "public_business_contact_not_contacted",
+    "phoneE164": "+441216474034",
+    "approvalStatus": "public_research_not_dealer_confirmed"
+  },
+  "addressCandidates": {
+    "publishedNote": "Grasmere Road, Birmingham B21 0UR on eBay; Cazoo spells the road Grassmere. Confirm full premises address and legal identity.",
+    "conflicts": [],
+    "googleProfile": {
+      "status": "no_confidently_matched_profile_in_bounded_map_search",
+      "assessedAt": "2026-10-10",
+      "note": "Unrelated Tradecarsales UK / Cars4Less result was not merged with Grasmere Road seller."
+    },
+    "status": "unresolved_do_not_publish_exact_visit_pin"
+  },
+  "researchEvidence": {
+    "inventory": {
+      "count": 62,
+      "kind": "retrieved_marketplace_advertised_count",
+      "retrievedAt": "2026-10-10",
+      "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Trade-Car-Sales1",
+      "caveat": "Opened eBay and Cazoo snapshots each 62 adverts, corroborated by fresh TinyFish showroom extraction. Advertising count is not verified available stock; do not sum feeds."
+    },
+    "stockSnapshots": [],
+    "activityEvidence": [
+      {
+        "kind": "primary_advert_last_updated_date",
+        "date": "2026-10-04",
+        "sourceUrl": "https://www.ebay.co.uk/itm/189038456623",
+        "note": "Ford Transit Connect advert explicitly Last updated 04 Oct 2026 09:14:08 BST, registered business seller all-about-automotive, phone matches showroom. Direct earlier research-agent observation; later root fetch was unavailable."
+      },
+      {
+        "kind": "undated_advertised_inventory",
+        "date": null,
+        "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Trade-Car-Sales1",
+        "note": "Opened marketplace stock includes a Ford Transit Connect GBP 4,950 and Audi A6 GBP 16,995. No same-day social post verified."
+      }
+    ],
+    "website": {
+      "url": null,
+      "status": "no_standalone_domain_found_in_bounded_search",
+      "assessedAt": "2026-10-10",
+      "confidence": "medium",
+      "observations": [
+        "Dealer eBay showroom Visit website destination is motors.co.uk, a marketplace."
+      ]
+    },
+    "domainChecks": {
+      "queries": [
+        "\"Trade Car Sales\" \"Grasmere Road\" website",
+        "\"Trade Car Sales\" \"Grasmere Road\" -site:showroom.ebaymotorspro.co.uk",
+        "\"trade.car.sales@outlook.com\" -site:showroom.ebaymotorspro.co.uk",
+        "\"Trade Car Sales\" \"B21 0UR\""
+      ],
+      "profilesChecked": [
+        "https://showroom.ebaymotorspro.co.uk/Trade-Car-Sales1",
+        "https://www.cazoo.co.uk/dealers/trade-car-sales-16229/"
+      ],
+      "result": "No confidently matched standalone dealer website found; generic trading name requires careful identity matching."
+    }
+  },
+  "branding": {
+    "publishedBranding": null,
+    "sourceLogoUrl": null,
+    "workingLogoPath": null,
+    "creationMethod": null,
+    "approvalStatus": "not_researched_for_build",
+    "visualInspection": "not_performed_in_brief_preparation",
+    "requiredNextStep": "Inspect matching public branding visually; use a suitable permitted original raster asset or an identified generated refresh/proposal when required by the build guardrails."
+  },
+  "buildPreparation": {
+    "status": "public_fact_pack_prepared_not_an_application",
+    "derivedFrom": {
+      "path": "../../uk-2026-10-10.json",
+      "sourceSha256": "05d34f35ad699beb6676de775a50e8659ae23771e73d0aa25c9c94a646f348b2",
+      "researchAsOf": "2026-10-10"
+    },
+    "researchSnapshotFlags": {
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked"
+    },
+    "ownerRequest": "Ten proposals with six variants on Cloudflare after accepted template releases. This pack records neither dealership approval nor changes to original research flags.",
+    "requestedTemplateChoices": [
+      "auto-best",
+      "modern",
+      "import",
+      "app",
+      "mobile",
+      "karento-best"
+    ],
+    "templateLabels": {
+      "auto-best": "Auto Best",
+      "modern": "Modern",
+      "import": "Import",
+      "app": "App",
+      "mobile": "Mobile",
+      "karento-best": "Signature"
+    },
+    "recommendedEntryTemplate": "app",
+    "showFirstReason": "Show inventory discovery for the larger mixed catalogue before the other five visual choices.",
+    "templatePins": null,
+    "hosting": {
+      "requestedProvider": "cloudflare",
+      "acceptedPublisher": null,
+      "publicOrigin": null,
+      "status": "await_qualified_pilot_and_release_acceptance",
+      "dnsChangeAuthorized": false,
+      "billingChangeAuthorized": false
+    },
+    "nextAction": "Confirm trading/legal identity, premises and stock condition details; prepare App first after accepted releases.",
+    "readyToPersonalizeNow": [
+      "Public trading name",
+      "Public city/region",
+      "GB dealership country",
+      "en-GB English presentation",
+      "GBP pricing contract",
+      "Miles display contract with actual kilometre conversion",
+      "Independent preview disclosure"
+    ],
+    "requiresBeforeComplete": [
+      "Accepted immutable pins for all six requested families",
+      "Qualified six-variant Cloudflare packaging/publisher",
+      "Canonical identity and existing-client/alias reconciliation",
+      "Current premises and direct contact destination",
+      "Visual brand inspection and permitted local raster assets",
+      "Sourced dated stock with correct units and permitted images, or explicitly illustrative inventory",
+      "Inherited identity/claim sweep and honest demo forms",
+      "Per-variant QA and hosted checks"
+    ],
+    "qa": {
+      "sourcePackValidated": true,
+      "applicationBuilt": false,
+      "browserReviewed": false,
+      "hostedVerified": false
+    },
+    "existingClientPathFromResearch": null
+  }
+}

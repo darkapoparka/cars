@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "leadId": "gb-batley-as-motor-group",
+  "slug": "batley-as-motor-group",
+  "observedAt": "2026-10-10",
+  "name": "AS Motor Group",
+  "shortName": "AS Motor Group",
+  "legalName": null,
+  "companyNumber": null,
+  "city": "Batley, West Yorkshire",
+  "country": "United Kingdom",
+  "countryCode": "GB",
+  "address": "Unit 2-3 Chopdat Industrial Estate, Soothill Lane, Batley WF17 5SS",
+  "phone": null,
+  "phoneDisplay": null,
+  "phoneHref": null,
+  "email": null,
+  "hours": null,
+  "coordinates": null,
+  "currency": "GBP",
+  "distanceUnit": "mi",
+  "locale": "en-GB",
+  "languages": [
+    "en"
+  ],
+  "accent": null,
+  "website": null,
+  "sourceProfile": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+  "mapsUrl": null,
+  "mapsEmbedUrl": null,
+  "tagline": "Vehicle design preview for AS Motor Group in Batley, West Yorkshire.",
+  "socialLinks": {},
+  "services": [],
+  "stockCount": 0,
+  "publishedListingCount": 41,
+  "sampleOnly": true,
+  "inventoryMode": "illustrative_unpopulated",
+  "previewNotice": "Independent design preview for discussion; it is not an official dealership website. No dealership approval or enquiry delivery is implied.",
+  "inventoryNotice": "No vehicle samples have been populated yet. Later advertised examples must retain their source date, actual GBP price, original mileage unit and availability caveat. Illustrative stock must be clearly identified.",
+  "availabilityLabel": "Sample — availability not confirmed",
+  "contactNotice": "Direct enquiry destination is not confirmed; show an honest demo/unavailable contact state until resolved.",
+  "locationNote": "Publicly advertised premises; reconfirm the visit address before travel or release.",
+  "sources": [
+    "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673"
+  ],
+  "opportunity": "An owned branded showroom for a larger, mixed premium/mainstream catalogue, with clear stock filters and viewing enquiries.",
+  "qualificationNotes": [
+    "41 real advertised vehicles and a blank own-website field. No recent primary posting date or confidently matched Google business profile verified.",
+    "41 in opened AutoTrader Used cars, versus 36 indexed in an older snapshot. Real Batley vehicles include SQ5, Golf R and Cayenne; generic featured Dummy adverts were excluded.",
+    "Unit 2–3 Chopdat Industrial Estate, Soothill Lane, Batley WF17 5SS. Soothill Cars nearby is not a confirmed alias. A same-name London registered company was not matched and is not attached.",
+    "Marketplace-provided phone may forward calls; confirm an owner-controlled number.",
+    "Public trading name/city only: no dealership approval, contact ownership, matched legal entity or private contact history has been verified.",
+    "Vehicle media, prices, mileage, services, staff, reviews, finance claims, hours and branding have not been selected or accepted for application content in this preparation pass."
+  ],
+  "contactCandidates": {
+    "phone": "07537 165504",
+    "email": null,
+    "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+    "phoneCaveat": "Marketplace-provided phone may forward calls; confirm an owner-controlled number.",
+    "status": "public_business_contact_not_contacted",
+    "phoneE164": "+447537165504",
+    "approvalStatus": "public_research_not_dealer_confirmed"
+  },
+  "addressCandidates": {
+    "publishedNote": "Unit 2–3 Chopdat Industrial Estate, Soothill Lane, Batley WF17 5SS. Soothill Cars nearby is not a confirmed alias. A same-name London registered company was not matched and is not attached.",
+    "conflicts": [],
+    "googleProfile": {
+      "status": "no_confidently_matched_profile_in_bounded_map_search",
+      "assessedAt": "2026-10-10",
+      "note": "No dealer profile was confidently matched; this does not prove no Google profile exists."
+    },
+    "status": "publicly_advertised_not_owner_confirmed"
+  },
+  "researchEvidence": {
+    "inventory": {
+      "count": 41,
+      "kind": "opened_platform_advertised_count",
+      "retrievedAt": "2026-10-10",
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+      "caveat": "41 in opened AutoTrader Used cars, versus 36 indexed in an older snapshot. Real Batley vehicles include SQ5, Golf R and Cayenne; generic featured Dummy adverts were excluded."
+    },
+    "stockSnapshots": [
+      {
+        "count": 41,
+        "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+        "method": "opened",
+        "observedAt": "2026-10-10"
+      }
+    ],
+    "activityEvidence": [
+      {
+        "kind": "undated_advertised_inventory",
+        "date": null,
+        "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+        "note": "Real priced stock observed on 10 October 2026; no recent post date verified."
+      }
+    ],
+    "website": {
+      "url": null,
+      "status": "no_standalone_domain_found_in_bounded_search",
+      "assessedAt": "2026-10-10",
+      "confidence": "medium",
+      "observations": [
+        "Opened AutoTrader Website heading has no domain or destination."
+      ]
+    },
+    "domainChecks": {
+      "queries": [
+        "\"AS Motor Group\" Batley website",
+        "\"AS Motor Group\" \"WF17 5SS\"",
+        "\"AS Motor Group\" \"Chopdat\"",
+        "\"07537165504\" website"
+      ],
+      "profilesChecked": [
+        "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673"
+      ],
+      "result": "No confidently matched dealer-owned standalone domain found in these bounded checks. Absence must be confirmed with the operator."
+    }
+  },
+  "branding": {
+    "publishedBranding": null,
+    "sourceLogoUrl": null,
+    "workingLogoPath": null,
+    "creationMethod": null,
+    "approvalStatus": "not_researched_for_build",
+    "visualInspection": "not_performed_in_brief_preparation",
+    "requiredNextStep": "Inspect matching public branding visually; use a suitable permitted original raster asset or an identified generated refresh/proposal when required by the build guardrails."
+  },
+  "buildPreparation": {
+    "status": "public_fact_pack_prepared_not_an_application",
+    "derivedFrom": {
+      "path": "../../uk-2026-10-10.json",
+      "sourceSha256": "05d34f35ad699beb6676de775a50e8659ae23771e73d0aa25c9c94a646f348b2",
+      "researchAsOf": "2026-10-10"
+    },
+    "researchSnapshotFlags": {
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked"
+    },
+    "ownerRequest": "Ten proposals with six variants on Cloudflare after accepted template releases. This pack records neither dealership approval nor changes to original research flags.",
+    "requestedTemplateChoices": [
+      "auto-best",
+      "modern",
+      "import",
+      "app",
+      "mobile",
+      "karento-best"
+    ],
+    "templateLabels": {
+      "auto-best": "Auto Best",
+      "modern": "Modern",
+      "import": "Import",
+      "app": "App",
+      "mobile": "Mobile",
+      "karento-best": "Signature"
+    },
+    "recommendedEntryTemplate": "modern",
+    "showFirstReason": "Show consistent branded stock and readable vehicle details before comparing the other designs.",
+    "templatePins": null,
+    "hosting": {
+      "requestedProvider": "cloudflare",
+      "acceptedPublisher": null,
+      "publicOrigin": null,
+      "status": "await_qualified_pilot_and_release_acceptance",
+      "dnsChangeAuthorized": false,
+      "billingChangeAuthorized": false
+    },
+    "nextAction": "Confirm operator/legal identity, public direct contact, domain ownership, exact premises and current stock. Do not borrow details from the London company or nearby Soothill Cars.",
+    "readyToPersonalizeNow": [
+      "Public trading name",
+      "Public city/region",
+      "GB dealership country",
+      "en-GB English presentation",
+      "GBP pricing contract",
+      "Miles display contract with actual kilometre conversion",
+      "Independent preview disclosure"
+    ],
+    "requiresBeforeComplete": [
+      "Accepted immutable pins for all six requested families",
+      "Qualified six-variant Cloudflare packaging/publisher",
+      "Canonical identity and existing-client/alias reconciliation",
+      "Current premises and direct contact destination",
+      "Visual brand inspection and permitted local raster assets",
+      "Sourced dated stock with correct units and permitted images, or explicitly illustrative inventory",
+      "Inherited identity/claim sweep and honest demo forms",
+      "Per-variant QA and hosted checks"
+    ],
+    "qa": {
+      "sourcePackValidated": true,
+      "applicationBuilt": false,
+      "browserReviewed": false,
+      "hostedVerified": false
+    },
+    "existingClientPathFromResearch": null
+  }
+}

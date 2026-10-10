@@ -6,6 +6,7 @@ import path from 'node:path';
 import { assertMainCheckout, planNewClient, createNewClient } from './new-client.mjs';
 import { copySource } from './copy-source.mjs';
 import { fingerprint, POLICY } from './lib/workflow.mjs';
+import { NATIVE_CHECKS } from './lib/native-localization.mjs';
 
 function fixture(t) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'cars-new-client-test-'));
@@ -14,7 +15,7 @@ function fixture(t) {
   put('workspace.json', { machinePaths: { [process.platform]: root } });
   put('docs/DEPLOYMENT-INVENTORY.json', { aliases: {}, dealers: [] });
   fs.mkdirSync(path.join(root, 'clients'));
-  const templates = ['auto-best', 'modern', 'import', 'carwow'].map(key => ({ key, path: 'templates/' + key, aliases: [], homes: [{ id: 'home' }] }));
+  const templates = ['auto-best', 'modern', 'import', 'carwow', 'app', 'mobile', 'karento-best'].map(key => ({ key, path: 'templates/' + key, aliases: [], homes: [{ id: 'home' }] }));
   put('catalog.json', { templates });
   const lock = { templates: {} };
   for (const item of templates) {
@@ -38,6 +39,88 @@ function fixture(t) {
   const plan = (options = {}) => planNewClient({ root, client: 'sample-dealer', repository: 'darkapoparka/cars-sampledealer', readGit, ...options });
   return { root, put, state, readGit, plan, lock };
 }
+
+function sixFixture(t) {
+  const f = fixture(t);
+  for (const key of ['auto-best', 'modern', 'import']) {
+    const release = f.lock.templates[key];
+    // Synthetic exact-source acceptance for isolated generator tests only.
+    release.qa = { nativeLocalization: { schemaVersion: 1, adapter: 'native-v1', repository: release.repository,
+      commit: release.commit, sourceDigest: release.digest, locales: ['en', 'bg'], widths: [320, 390, 1440],
+      verifiedAt: '2026-10-10T00:00:00Z', evidenceSha256: 'c'.repeat(64),
+      checks: NATIVE_CHECKS.map(name => ({ name, status: 'passed', evidenceSha256: 'd'.repeat(64) })),
+      catalogs: [{ format: 'json-pair', en: 'localization/en.json', bg: 'localization/bg.json' }],
+      deployment: { id: 'dpl_fixture', projectId: 'prj_fixture', state: 'READY', sourceCommit: release.commit,
+        publicAlias: `https://fixture-${key}.example/` }
+    } };
+  }
+  f.put('templates.lock.json', f.lock);
+  const localeConfig = { schemaVersion: 1, dealerId: 'sample-dealer', defaultLocale: 'en', enabledLocales: ['en', 'bg'], dealerCountry: 'GB', inventoryCurrency: 'GBP' };
+  return { ...f, localeConfig, sixPlan: (options = {}) => f.plan({ designSet: 'six', localeConfig, ...options }) };
+}
+
+for (const preset of ['standard', 'import']) test(`explicit six ${preset}: creates pinned source copies and UK contract without shipping receipts`, async t => {
+  const f = sixFixture(t); f.state.development = 'c'.repeat(40);
+  const plan = f.sixPlan({ preset });
+  assert.equal(fs.existsSync(plan.clientRoot), false);
+  assert.equal(plan.manifest.packaging.version, '5');
+  assert.deepEqual(plan.manifest.variants.map(v => v.key), ['auto-best', preset === 'import' ? 'import' : 'modern', preset === 'import' ? 'modern' : 'import', 'app', 'mobile', 'karento-best']);
+  assert.equal(plan.manifest.variants[2].entry, preset === 'import' ? '/variant-3/cars' : '/variant-3/');
+  assert.ok(plan.plans.every(p => p.updateAvailable && p.sourceRef.revision === 'b'.repeat(40)), 'new development does not change any selected pin');
+  const result = await createNewClient(plan, { readGit: f.readGit });
+  assert.equal(result.applications, 6);
+  assert.deepEqual(JSON.parse(fs.readFileSync(path.join(result.clientRoot, 'localization/contract.json'))), f.localeConfig);
+  for (const item of plan.plans) {
+    const dir = path.join(result.clientRoot, item.template);
+    assert.equal(fingerprint(dir).digest, item.release.digest, 'native configuration is not silently written into the copied template');
+    const meta = JSON.parse(fs.readFileSync(path.join(dir, '.client/project.json')));
+    assert.equal(meta.packaging.version, '5'); assert.equal(meta.qa.desktop, false); assert.equal(meta.publicUrl, null);
+    assert.match(fs.readFileSync(path.join(dir, 'AGENTS.md'), 'utf8'), /awaiting personalization/);
+  }
+  for (const name of ['localization/adoption.json', '.cars-app.json', '.cars-mobile.json', '.cars-signature.json', 'vercel.json', 'wrangler.jsonc']) assert.equal(fs.existsSync(path.join(result.clientRoot, name)), false, name);
+  assert.match(fs.readFileSync(path.join(result.clientRoot, 'CLIENT.md'), 'utf8'), /all six apps/);
+});
+
+test('six creation requires explicit complete native locale and rejects locale on legacy creation', t => {
+  const f = sixFixture(t);
+  assert.throws(() => f.plan({ designSet: 'six' }), /explicit --locale-config/);
+  assert.throws(() => f.sixPlan({ localeConfig: { ...f.localeConfig, enabledLocales: ['en'] } }), /requires complete EN\/BG/);
+  assert.throws(() => f.sixPlan({ localeConfig: { ...f.localeConfig, dealerId: 'another-dealer' } }), /must match/);
+  assert.throws(() => f.sixPlan({ localeConfig: { ...f.localeConfig, defaultLocale: 'en-GB' } }), /defaultLocale/);
+  assert.throws(() => f.plan({ localeConfig: f.localeConfig }), /legacy version 1/);
+  assert.throws(() => f.plan({ designSet: 'five' }), /--design-set six/);
+  assert.deepEqual(fs.readdirSync(path.join(f.root, 'clients')), []);
+});
+
+test('six creation refuses missing/held Signature and core native acceptance without writing source', t => {
+  const f = sixFixture(t); const signature = f.lock.templates['karento-best'];
+  delete f.lock.templates['karento-best']; f.put('templates.lock.json', f.lock);
+  assert.throws(() => f.sixPlan(), /No release lock for karento-best/);
+  f.lock.templates['karento-best'] = { ...signature, status: 'draft' }; f.put('templates.lock.json', f.lock);
+  assert.throws(() => f.sixPlan(), /karento-best: draft/);
+  f.lock.templates['karento-best'] = signature; delete f.lock.templates.modern.qa; f.put('templates.lock.json', f.lock);
+  assert.throws(() => f.sixPlan(), /no exact-commit native acceptance/);
+  assert.deepEqual(fs.readdirSync(path.join(f.root, 'clients')), []);
+});
+
+test('explicit six selection cannot duplicate families, reintroduce Carwow or use unknown mounts', t => {
+  const f = sixFixture(t);
+  assert.throws(() => f.sixPlan({ templates: 'auto-best,modern,import,app,mobile,mobile' }), /six distinct/);
+  assert.throws(() => f.sixPlan({ templates: 'auto-best,modern,carwow,app,mobile,karento-best' }), /no Carwow/);
+  assert.throws(() => f.sixPlan({ templates: 'auto-best,modern,import,app,karento-best,mobile' }), /Unknown design family/);
+  assert.throws(() => f.plan({ templates: 'auto-best,modern,import,app,mobile,karento-best' }), /three distinct/);
+});
+
+test('a Signature release changed during six copying preserves the incomplete candidate outside canonical source', async t => {
+  const f = sixFixture(t); const plan = f.sixPlan(); let first = true;
+  await assert.rejects(createNewClient(plan, { readGit: f.readGit, copy: async (...args) => {
+    const result = await copySource(...args);
+    if (first) { first = false; delete f.lock.templates['karento-best']; f.put('templates.lock.json', f.lock); }
+    return result;
+  } }), /No release lock for karento-best/);
+  assert.equal(fs.existsSync(plan.clientRoot), false);
+  assert.equal(fs.existsSync(path.join(f.root, 'runtime/locks/new-client')), false);
+});
 
 for (const preset of ['standard', 'import']) test(preset + ': creates three exact template copies together, with one manifest and no inherited secrets', async t => {
   const f = fixture(t); const plan = f.plan({ preset });
