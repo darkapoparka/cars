@@ -165,7 +165,8 @@ function uploader(key) {
   const pkg=json(packageFile),entryFile=path.join(path.dirname(cli),'..','wrangler-dist','cli.js');
   if(pkg.name!=='wrangler'||pkg.version!==version||!fs.statSync(cli).isFile())throw Error('Existing local Wrangler differs from the qualified uploader.');
   return {file:cli,entryFile,version,sha256:sha256(fs.readFileSync(cli)),entrySha256:sha256(fs.readFileSync(entryFile)),
-    packageSha256:sha256(fs.readFileSync(packageFile)),node:process.version,nodeArguments:[...WRANGLER_NODE_ARGUMENTS]};
+    packageSha256:sha256(fs.readFileSync(packageFile)),node:process.version,nodeArguments:[...WRANGLER_NODE_ARGUMENTS],
+    authenticationPolicy:'standard-cli-environment-or-profile'};
 }
 
 export function validatePrivatePublication({published,exported,publishMeta,remoteHead,commitTree,commitParent},dealer,deploy) {
@@ -287,7 +288,7 @@ function runWrangler(context,label,args,{structured=false}={}) {
   if(fs.existsSync(file)||fs.existsSync(output))throw Error('An earlier deployment command requires receipt review before retry.');
   const env={...process.env};
   for(const name of Object.keys(env)){
-    if(['gh_token','github_token','cloudflare_api_token','cf_api_token','cloudflare_api_key','cf_api_key','cloudflare_email','cf_email',
+    if(['gh_token','github_token',
       'wrangler_output_file_path','wrangler_output_file_directory','wrangler_log','wrangler_log_path','wrangler_log_sanitize',
       'wrangler_cache_dir','cloudflare_account_id','cf_account_id'].includes(name.toLowerCase()))delete env[name];
   }
