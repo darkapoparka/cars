@@ -1,0 +1,1340 @@
+{
+  "complete": true,
+  "source": "canonical dev; no injected styles",
+  "results": [
+    {
+      "locale": "bg",
+      "width": 390,
+      "height": 844,
+      "tab": "Инфо",
+      "metrics": {
+        "tabs": [
+          {
+            "text": "Инфо",
+            "selected": "true",
+            "size": "18px",
+            "weight": "600",
+            "background": "rgb(245, 247, 249)",
+            "height": 44,
+            "width": 120.65625,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "text": "Данни",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 120.671875,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "text": "Екстри",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 120.65625,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 362,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 376,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "cta": [
+          {
+            "label": "Запитване",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          },
+          {
+            "label": "Обади се",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          }
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "height": 844,
+      "tab": "Данни",
+      "metrics": {
+        "tabs": [
+          {
+            "text": "Инфо",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 120.65625,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "text": "Данни",
+            "selected": "true",
+            "size": "18px",
+            "weight": "600",
+            "background": "rgb(245, 247, 249)",
+            "height": 44,
+            "width": 120.671875,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "text": "Екстри",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 120.65625,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 362,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 376,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "cta": [
+          {
+            "label": "Запитване",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          },
+          {
+            "label": "Обади се",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          }
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "height": 844,
+      "tab": "Екстри",
+      "metrics": {
+        "tabs": [
+          {
+            "text": "Инфо",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 120.65625,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "text": "Данни",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 120.671875,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "text": "Екстри",
+            "selected": "true",
+            "size": "18px",
+            "weight": "600",
+            "background": "rgb(245, 247, 249)",
+            "height": 44,
+            "width": 120.65625,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 362,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 376,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "cta": [
+          {
+            "label": "Запитване",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          },
+          {
+            "label": "Обади се",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          }
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "height": 844,
+      "keyboard": {
+        "text": "Данни",
+        "focusVisible": true,
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(28, 28, 28)",
+        "selected": "false"
+      },
+      "keyboardSelected": "true"
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 844,
+      "tab": "Инфо",
+      "metrics": {
+        "tabs": [
+          {
+            "text": "Инфо",
+            "selected": "true",
+            "size": "18px",
+            "weight": "600",
+            "background": "rgb(245, 247, 249)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Данни",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Екстри",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.34375,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 292,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 306,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "cta": [
+          {
+            "label": "Запитване",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          },
+          {
+            "label": "Обади се",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          }
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 844,
+      "tab": "Данни",
+      "metrics": {
+        "tabs": [
+          {
+            "text": "Инфо",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Данни",
+            "selected": "true",
+            "size": "18px",
+            "weight": "600",
+            "background": "rgb(245, 247, 249)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Екстри",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.34375,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 292,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 306,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "cta": [
+          {
+            "label": "Запитване",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          },
+          {
+            "label": "Обади се",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          }
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 844,
+      "tab": "Екстри",
+      "metrics": {
+        "tabs": [
+          {
+            "text": "Инфо",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Данни",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Екстри",
+            "selected": "true",
+            "size": "18px",
+            "weight": "600",
+            "background": "rgb(245, 247, 249)",
+            "height": 44,
+            "width": 97.34375,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 292,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 306,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "cta": [
+          {
+            "label": "Запитване",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          },
+          {
+            "label": "Обади се",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          }
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 844,
+      "keyboard": {
+        "text": "Данни",
+        "focusVisible": true,
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(28, 28, 28)",
+        "selected": "false"
+      },
+      "keyboardSelected": "true"
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 540,
+      "tab": "Инфо",
+      "metrics": {
+        "tabs": [
+          {
+            "text": "Инфо",
+            "selected": "true",
+            "size": "18px",
+            "weight": "600",
+            "background": "rgb(245, 247, 249)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Данни",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Екстри",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.34375,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 375.6000061035156,
+          "width": 292,
+          "height": 152.40621948242188,
+          "top": 375.6000061035156,
+          "right": 306,
+          "bottom": 528.0062255859375,
+          "left": 14
+        },
+        "cta": [
+          {
+            "label": "Запитване",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          },
+          {
+            "label": "Обади се",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          }
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 540,
+      "tab": "Данни",
+      "metrics": {
+        "tabs": [
+          {
+            "text": "Инфо",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Данни",
+            "selected": "true",
+            "size": "18px",
+            "weight": "600",
+            "background": "rgb(245, 247, 249)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Екстри",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.34375,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 375.6000061035156,
+          "width": 292,
+          "height": 152.40621948242188,
+          "top": 375.6000061035156,
+          "right": 306,
+          "bottom": 528.0062255859375,
+          "left": 14
+        },
+        "cta": [
+          {
+            "label": "Запитване",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          },
+          {
+            "label": "Обади се",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          }
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 540,
+      "tab": "Екстри",
+      "metrics": {
+        "tabs": [
+          {
+            "text": "Инфо",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Данни",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Екстри",
+            "selected": "true",
+            "size": "18px",
+            "weight": "600",
+            "background": "rgb(245, 247, 249)",
+            "height": 44,
+            "width": 97.34375,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 375.6000061035156,
+          "width": 292,
+          "height": 152.40621948242188,
+          "top": 375.6000061035156,
+          "right": 306,
+          "bottom": 528.0062255859375,
+          "left": 14
+        },
+        "cta": [
+          {
+            "label": "Запитване",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          },
+          {
+            "label": "Обади се",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          }
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 540,
+      "keyboard": {
+        "text": "Данни",
+        "focusVisible": true,
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(28, 28, 28)",
+        "selected": "false"
+      },
+      "keyboardSelected": "true"
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "height": 1000,
+      "desktopIdentical": true,
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "tab": "Info",
+      "metrics": {
+        "tabs": [
+          {
+            "text": "Info",
+            "selected": "true",
+            "size": "18px",
+            "weight": "600",
+            "background": "rgb(245, 247, 249)",
+            "height": 44,
+            "width": 120.65625,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "text": "Specs",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 120.671875,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "text": "Extras",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 120.65625,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 362,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 376,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "cta": [
+          {
+            "label": "Inquire",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          },
+          {
+            "label": "Call",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          }
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "tab": "Specs",
+      "metrics": {
+        "tabs": [
+          {
+            "text": "Info",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 120.65625,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "text": "Specs",
+            "selected": "true",
+            "size": "18px",
+            "weight": "600",
+            "background": "rgb(245, 247, 249)",
+            "height": 44,
+            "width": 120.671875,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "text": "Extras",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 120.65625,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 362,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 376,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "cta": [
+          {
+            "label": "Inquire",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          },
+          {
+            "label": "Call",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          }
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "tab": "Extras",
+      "metrics": {
+        "tabs": [
+          {
+            "text": "Info",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 120.65625,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "text": "Specs",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 120.671875,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          },
+          {
+            "text": "Extras",
+            "selected": "true",
+            "size": "18px",
+            "weight": "600",
+            "background": "rgb(245, 247, 249)",
+            "height": 44,
+            "width": 120.65625,
+            "scrollWidth": 121,
+            "clientWidth": 121
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 362,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 376,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "cta": [
+          {
+            "label": "Inquire",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          },
+          {
+            "label": "Call",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          }
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "keyboard": {
+        "text": "Specs",
+        "focusVisible": true,
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(28, 28, 28)",
+        "selected": "false"
+      },
+      "keyboardSelected": "true"
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 844,
+      "tab": "Info",
+      "metrics": {
+        "tabs": [
+          {
+            "text": "Info",
+            "selected": "true",
+            "size": "18px",
+            "weight": "600",
+            "background": "rgb(245, 247, 249)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Specs",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Extras",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.34375,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 292,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 306,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "cta": [
+          {
+            "label": "Inquire",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          },
+          {
+            "label": "Call",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          }
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 844,
+      "tab": "Specs",
+      "metrics": {
+        "tabs": [
+          {
+            "text": "Info",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Specs",
+            "selected": "true",
+            "size": "18px",
+            "weight": "600",
+            "background": "rgb(245, 247, 249)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Extras",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.34375,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 292,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 306,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "cta": [
+          {
+            "label": "Inquire",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          },
+          {
+            "label": "Call",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          }
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 844,
+      "tab": "Extras",
+      "metrics": {
+        "tabs": [
+          {
+            "text": "Info",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Specs",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Extras",
+            "selected": "true",
+            "size": "18px",
+            "weight": "600",
+            "background": "rgb(245, 247, 249)",
+            "height": 44,
+            "width": 97.34375,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 292,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 306,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "cta": [
+          {
+            "label": "Inquire",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          },
+          {
+            "label": "Call",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          }
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 844,
+      "keyboard": {
+        "text": "Specs",
+        "focusVisible": true,
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(28, 28, 28)",
+        "selected": "false"
+      },
+      "keyboardSelected": "true"
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 540,
+      "tab": "Info",
+      "metrics": {
+        "tabs": [
+          {
+            "text": "Info",
+            "selected": "true",
+            "size": "18px",
+            "weight": "600",
+            "background": "rgb(245, 247, 249)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Specs",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Extras",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.34375,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 375.6000061035156,
+          "width": 292,
+          "height": 152.40621948242188,
+          "top": 375.6000061035156,
+          "right": 306,
+          "bottom": 528.0062255859375,
+          "left": 14
+        },
+        "cta": [
+          {
+            "label": "Inquire",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          },
+          {
+            "label": "Call",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          }
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 540,
+      "tab": "Specs",
+      "metrics": {
+        "tabs": [
+          {
+            "text": "Info",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Specs",
+            "selected": "true",
+            "size": "18px",
+            "weight": "600",
+            "background": "rgb(245, 247, 249)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Extras",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.34375,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 375.6000061035156,
+          "width": 292,
+          "height": 152.40621948242188,
+          "top": 375.6000061035156,
+          "right": 306,
+          "bottom": 528.0062255859375,
+          "left": 14
+        },
+        "cta": [
+          {
+            "label": "Inquire",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          },
+          {
+            "label": "Call",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          }
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 540,
+      "tab": "Extras",
+      "metrics": {
+        "tabs": [
+          {
+            "text": "Info",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Specs",
+            "selected": "false",
+            "size": "18px",
+            "weight": "400",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44,
+            "width": 97.328125,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          },
+          {
+            "text": "Extras",
+            "selected": "true",
+            "size": "18px",
+            "weight": "600",
+            "background": "rgb(245, 247, 249)",
+            "height": 44,
+            "width": 97.34375,
+            "scrollWidth": 97,
+            "clientWidth": 97
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 375.6000061035156,
+          "width": 292,
+          "height": 152.40621948242188,
+          "top": 375.6000061035156,
+          "right": 306,
+          "bottom": 528.0062255859375,
+          "left": 14
+        },
+        "cta": [
+          {
+            "label": "Inquire",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          },
+          {
+            "label": "Call",
+            "size": "17px",
+            "weight": "400",
+            "height": 44
+          }
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 540,
+      "keyboard": {
+        "text": "Specs",
+        "focusVisible": true,
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(28, 28, 28)",
+        "selected": "false"
+      },
+      "keyboardSelected": "true"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "desktopIdentical": true,
+      "errors": []
+    }
+  ]
+}

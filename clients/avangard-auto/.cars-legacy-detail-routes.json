@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "dealer": "avangard-auto",
+  "family": "import",
+  "base": "/variant-3",
+  "defaultLocale": "bg",
+  "source": {
+    "inventory": {
+      "path": "carwow/src/lib/data/daynight-current-inventory.ts",
+      "sha256": "9a9cb3e4dfcc3446264923d019a0832bd9f50a80b53099e40d07ad053ee530cd"
+    },
+    "vehicles": {
+      "path": "carwow/src/lib/data/daynight-vehicles.ts",
+      "sha256": "58507cc762f0d0763f6d521a86d8474729fd6cf112b7dd072170f350a2c11d84"
+    },
+    "routeFactorySha256": "094d5128ad5e689e41486a228b1de6d11c54efbe051ce0e75c0170709d8571c9"
+  },
+  "profileSha256": "5ab3aea31e6a2d1a3cd61b1bec68ba24553b43e08dc6c318291679d41e27a826",
+  "entries": [
+    {
+      "sourceId": "11785010475119627",
+      "slug": "vw-passat-alltrack-119627",
+      "targetId": "11785010475119627"
+    },
+    {
+      "sourceId": "21783748809976935",
+      "slug": "volvo-xc40-2-0d-976935",
+      "targetId": "21783748809976935"
+    },
+    {
+      "sourceId": "21766322242220471",
+      "slug": "volvo-xc40-t5-220471",
+      "targetId": "21766322242220471"
+    },
+    {
+      "sourceId": "11782450720679744",
+      "slug": "peugeot-208-1-6hdi-679744",
+      "targetId": "11782450720679744"
+    },
+    {
+      "sourceId": "11782462832415648",
+      "slug": "peugeot-2008-1-6hdi-415648",
+      "targetId": "11782462832415648"
+    },
+    {
+      "sourceId": "21776284342452600",
+      "slug": "nissan-qashqai-1-5dci-452600",
+      "targetId": "21776284342452600"
+    },
+    {
+      "sourceId": "21773782041228539",
+      "slug": "mitsubishi-outlander-2-2di-d-228539",
+      "targetId": "21773782041228539"
+    },
+    {
+      "sourceId": "21760385289842805",
+      "slug": "kia-sportage-1-7crdi-842805",
+      "targetId": "21760385289842805"
+    },
+    {
+      "sourceId": "21785012088488667",
+      "slug": "bmw-x1-488667",
+      "targetId": "21785012088488667"
+    },
+    {
+      "sourceId": "21746821020349714",
+      "slug": "bmw-x1-349714",
+      "targetId": "21746821020349714"
+    },
+    {
+      "sourceId": "11754080933689299",
+      "slug": "bmw-320-689299",
+      "targetId": "11754080933689299"
+    },
+    {
+      "sourceId": "21779794798955793",
+      "slug": "audi-sq5-955793",
+      "targetId": "21779794798955793"
+    },
+    {
+      "sourceId": "21786111867697018",
+      "slug": "audi-q7-697018",
+      "targetId": "21786111867697018"
+    },
+    {
+      "sourceId": "21779802183945718",
+      "slug": "audi-q5-945718",
+      "targetId": "21779802183945718"
+    },
+    {
+      "sourceId": "21762503862293800",
+      "slug": "audi-q5-293800",
+      "targetId": "21762503862293800"
+    },
+    {
+      "sourceId": "11787435697096424",
+      "slug": "audi-a4-096424",
+      "targetId": "11787435697096424"
+    }
+  ],
+  "retired": []
+}

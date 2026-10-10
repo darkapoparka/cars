@@ -1,0 +1,187 @@
+[
+  {
+    "locale": "en",
+    "width": 390,
+    "surface": "home",
+    "state": {
+      "overflow": -15,
+      "controls": [
+        {
+          "selector": ".dn-mobile-controls .dn-mobile-control",
+          "sharedRole": true,
+          "width": 44,
+          "height": 44,
+          "x": 268,
+          "y": 11,
+          "icon": {
+            "width": 20,
+            "height": 20,
+            "x": 280,
+            "y": 23
+          },
+          "padding": 2,
+          "paint": 40,
+          "href": "/en/contact",
+          "label": "Location and contact details"
+        },
+        {
+          "selector": ".dn-mobile-controls .dn-mobile-control",
+          "sharedRole": true,
+          "width": 44,
+          "height": 44,
+          "x": 319,
+          "y": 11,
+          "icon": {
+            "width": 20,
+            "height": 20,
+            "x": 331,
+            "y": 23
+          },
+          "padding": 2,
+          "paint": 40,
+          "href": "tel:+359879824625",
+          "label": "Call the showroom: 087 982 4625"
+        }
+      ],
+      "desktop": [
+        {
+          "width": 351,
+          "height": 66,
+          "x": 12,
+          "y": 0
+        },
+        {
+          "width": 1,
+          "height": 1,
+          "x": 11,
+          "y": -1
+        }
+      ]
+    }
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "surface": "cars",
+    "state": {
+      "overflow": -15,
+      "controls": [
+        {
+          "selector": ".dn-listing-filter__mobile-sort",
+          "sharedRole": true,
+          "width": 44,
+          "height": 44,
+          "x": 271,
+          "y": 12,
+          "icon": {
+            "width": 20,
+            "height": 20,
+            "x": 283,
+            "y": 24
+          },
+          "padding": 2,
+          "paint": 40,
+          "href": null,
+          "label": "Sort: Recommended"
+        },
+        {
+          "selector": ".dn-listing-filter__toggle",
+          "sharedRole": true,
+          "width": 44,
+          "height": 44,
+          "x": 319,
+          "y": 12,
+          "icon": {
+            "width": 20,
+            "height": 20,
+            "x": 331,
+            "y": 24
+          },
+          "padding": 2,
+          "paint": 40,
+          "href": null,
+          "label": "Filters"
+        }
+      ],
+      "desktop": []
+    }
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "surface": "pdp",
+    "state": {
+      "overflow": -15,
+      "controls": [
+        {
+          "selector": ".dn-detail-mobile-back",
+          "sharedRole": true,
+          "width": 44,
+          "height": 44,
+          "x": 12,
+          "y": 12,
+          "icon": {
+            "width": 20,
+            "height": 20,
+            "x": 24,
+            "y": 24
+          },
+          "padding": 2,
+          "paint": 40,
+          "href": "/en/cars",
+          "label": "Back to cars"
+        },
+        {
+          "selector": ".dn-detail-mobile-actions a",
+          "sharedRole": true,
+          "width": 44,
+          "height": 44,
+          "x": 268,
+          "y": 12,
+          "icon": {
+            "width": 20,
+            "height": 20,
+            "x": 280,
+            "y": 24
+          },
+          "padding": 2,
+          "paint": 40,
+          "href": "tel:+359879824625",
+          "label": "Call the showroom: 087 982 4625"
+        },
+        {
+          "selector": ".dn-detail-mobile-actions button",
+          "sharedRole": true,
+          "width": 44,
+          "height": 44,
+          "x": 319,
+          "y": 12,
+          "icon": {
+            "width": 20,
+            "height": 20,
+            "x": 331,
+            "y": 24
+          },
+          "padding": 2,
+          "paint": 40,
+          "href": null,
+          "label": "Share this car"
+        }
+      ],
+      "desktop": [
+        {
+          "width": 375,
+          "height": 51.875,
+          "x": 0,
+          "y": 255.25
+        },
+        {
+          "width": 375,
+          "height": 281.25,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  }
+]

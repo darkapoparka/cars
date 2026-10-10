@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-09",
+  "scope": "Import local source and production Chromium audit",
+  "runtime": {
+    "node": "24.21.0",
+    "npm": "11.19.0"
+  },
+  "checks": {
+    "svelte": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "lint": "passed",
+    "architecture": {
+      "routes": 57,
+      "reachableModules": 261,
+      "tailwindEntries": 1
+    },
+    "assets": {
+      "localImageSignatures": 997
+    },
+    "unit": {
+      "files": 26,
+      "passed": 179
+    },
+    "productionBuild": "passed"
+  },
+  "browser": {
+    "applicableCasesVerified": 497,
+    "intentionalSkips": 259,
+    "originalEnvironmentFailures": 3,
+    "successfulRepeatsPerFailure": 3,
+    "finalPolish": {
+      "startTime": "2026-10-09T07:11:38.187Z",
+      "duration": 63035.79600000001,
+      "expected": 20,
+      "skipped": 6,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "finalFooter": {
+      "startTime": "2026-10-09T07:24:35.186Z",
+      "duration": 20791.111,
+      "expected": 3,
+      "skipped": 1,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "visual": {
+    "guides390": {
+      "beforeHeight": 484.78125,
+      "afterHeight": 224.390625,
+      "savedHeight": 260.390625,
+      "matchedTitleTop": 86.34375,
+      "overflow": false
+    },
+    "socials390": {
+      "alignment": "left",
+      "targetSize": 48
+    },
+    "bg320": {
+      "guideHeight": 245.1875,
+      "socialsAlignment": "left",
+      "messageButtonHeight": 48,
+      "overflow": false
+    },
+    "desktopAndTabletComposition": "preserved",
+    "consoleWarnings": 2,
+    "pageErrors": 0,
+    "footer": {
+      "duplicateNameHiddenOnMobile": true,
+      "messageButtonHeight": 48,
+      "messageDestination": "preserved",
+      "desktopComposition": "preserved"
+    }
+  },
+  "dependencies": {
+    "productionVulnerabilities": 0,
+    "developmentModerateAdvisories": 4
+  },
+  "sourceFingerprint": "51e244a5975df082aeb2547b7423e0ee665a0e8d06e4ff38107f69353f2916c7",
+  "release": {
+    "promoted": false,
+    "deployed": false,
+    "hostedVerified": false
+  },
+  "rawDiagnostics": "runtime/final-audit-2026-10-09/"
+}

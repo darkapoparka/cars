@@ -4,8 +4,8 @@
     "en",
     "bg"
   ],
-  "messages": 1019,
-  "catalogSha256": "871c8084e669e4f705189c9ade3245be0dc8a3d35bdf8f963b1cbebf630cdb45",
+  "messages": 1128,
+  "catalogSha256": "b700acf5329d8b2e4266036910f7fb173ce98b84caa1563ac7c4f86cfd06f1af",
   "sources": [
     "localization/common.json",
     "localization/catalog.reviewed.json",
@@ -13,18 +13,19 @@
     "localization/dealer.reviewed.json"
   ],
   "sourceSha256": {
-    "localization/common.json": "eeaadf539d5d1d9e9975ed5b2329cc01a9de41233c35a1552aa56a1785d846f3",
-    "localization/catalog.reviewed.json": "5e878df9d64a3289ff415e9a45f65ff5f6a30ff62c1ae40cbc07b9ccc80489cd",
-    "localization/template.reviewed.json": "e8276265d20a7069f25dfca610af2fa39125bb2f7ae392c174a5a4a9bd30c1b5",
-    "localization/dealer.reviewed.json": "f91d785d0edb37c40fee8ce877429978b8d314e50ef1ac850d7917701abe2e26"
+    "localization/common.json": "0d332e050638c8555dfcb6e22ed83eb1eaee839c961d94a2359aec082f75b88a",
+    "localization/catalog.reviewed.json": "9d17a1c40d8f54089a306231730a5fa30c42c06dc92bd8cc9710a3ff9aeccdea",
+    "localization/template.reviewed.json": "87f67dbce93c1e7d59569d538a3ea81540803284d836365183e338c0ea903122",
+    "localization/dealer.reviewed.json": "599243c4bc6d215e48701f6da05f35557f65736a4eb185d6f4eedc4908f695c2"
   },
-  "policySha256": "5cac2494777341dfb0f2cbc886de13a554dee17bfa46ba8b116ddf57a2a700bc",
+  "policySha256": "9b965830b64c496eac861fdc4059813f130056d543173bc3a777eb34624226cf",
   "ambiguousAliases": [
     "About",
     "Address and visits",
     "Arrange a viewing",
     "Automatic",
     "Browse cars",
+    "By appointment",
     "Car search",
     "Choose JPG, PNG or WebP photos.",
     "Choosing a car",

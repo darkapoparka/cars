@@ -1,0 +1,242 @@
+{
+	"date": "2026-10-04",
+	"runtime": "Node 24.21.0",
+	"scope": "Reusable master identity/logo configuration and dealer personalization instructions; no client refresh, promotion or deployment",
+	"sources": [
+		{
+			"path": "src/lib/config/dealer.ts",
+			"sha256": "c98eb97cd54df36bae16551bad29b61dd1218f15d3527f06f0f683bd50220f57"
+		},
+		{
+			"path": "src/lib/config/site.ts",
+			"sha256": "13c22a45540715ccc6a1891423b774a456a285c820177f4e3cbc87bb3cd113b1"
+		},
+		{
+			"path": "src/lib/components/layout/PublicHeader.svelte",
+			"sha256": "e707d9f4757d8dc96c6fcdb0e7db04bd5bc87700e70e7853c2dfab7ace0b2d63"
+		}
+	],
+	"assets": [
+		{
+			"path": "static/brand/import-template-logo-v1.webp",
+			"width": 600,
+			"height": 164,
+			"hasAlpha": true,
+			"alphaRange": {
+				"min": 0,
+				"max": 255
+			},
+			"bytes": 38696,
+			"sha256": "e84c5aad6ba522bd6e29443bc9f3281b86e6234280c5072b248832f2010ff200"
+		},
+		{
+			"path": "static/brand/import-template-icon-v1.png",
+			"width": 192,
+			"height": 192,
+			"hasAlpha": true,
+			"alphaRange": {
+				"min": 0,
+				"max": 255
+			},
+			"bytes": 53288,
+			"sha256": "99fc406dbc83ed9282a8ecf7605dbad31c4b415c0cec1412c4ba3039b56d15e3"
+		}
+	],
+	"checks": {
+		"typecheck": {
+			"errors": 0,
+			"warnings": 0
+		},
+		"build": {
+			"exitCode": 0,
+			"warnings": "Existing Tailwind compatibility @reference warnings"
+		},
+		"scopedEslint": "passed",
+		"scopedPrettier": "passed",
+		"siteConfigUnit": {
+			"passed": 16
+		},
+		"architecture": {
+			"nativeRoutes": 57,
+			"reachableModules": 230,
+			"tailwindEntries": 1
+		},
+		"imageSignatures": {
+			"checked": 957
+		},
+		"workflowCheck": "passed",
+		"workflowTests": [
+			"✔ template checks reject nested Git ownership without changing it (2221.7436ms)",
+			"✔ workspace fetches Cars once and never fetches template subdirectories (4462.0849ms)",
+			"✔ four templates share Cars Git ownership through one editor root (3.6382ms)",
+			"✔ rejects external masters, duplicate templates and a second editor master (1.0004ms)",
+			"ℹ tests 339",
+			"ℹ suites 0",
+			"ℹ pass 339",
+			"ℹ fail 0",
+			"ℹ cancelled 0",
+			"ℹ skipped 0",
+			"ℹ todo 0",
+			"ℹ duration_ms 378194.5901"
+		],
+		"productionBrowserTests": {
+			"passed": 5,
+			"skipped": 5,
+			"server": "http://127.0.0.1:4197",
+			"note": "Existing desktop commerce and BG/EN 320/390 mobile menu/action/accessibility tests. Initial dev-server run hit production-only icon bundle assertions and a cold hydration timeout; rerun used the completed production build."
+		},
+		"workspaceDoctor": "Fetched Cars main; shared unrelated dirty work was preserved, no files reset or cleaned"
+	},
+	"rendered": {
+		"home": {
+			"locale": "bg",
+			"viewport": {
+				"width": 1440,
+				"height": 1000
+			},
+			"screenshotPixels": {
+				"width": 1425,
+				"height": 990
+			},
+			"scrollY": 665,
+			"banners": {
+				"count": 2,
+				"logoWidth": 112,
+				"logoHeight": 32,
+				"loaded": true,
+				"matchedGeometry": true
+			}
+		},
+		"mobile": [
+			{
+				"locale": "bg",
+				"width": 320,
+				"header": {
+					"logos": [
+						{
+							"alt": "Import Template",
+							"height": 45.90625,
+							"loaded": true,
+							"width": 168
+						}
+					],
+					"overflow": false,
+					"url": "http://127.0.0.1:6790/bg",
+					"width": 320
+				},
+				"menu": {
+					"logos": [
+						{
+							"contained": true,
+							"height": 48,
+							"loaded": true,
+							"width": 180
+						}
+					],
+					"width": 320
+				}
+			},
+			{
+				"locale": "bg",
+				"width": 390,
+				"header": {
+					"logos": [
+						{
+							"alt": "Import Template",
+							"height": 45.90625,
+							"loaded": true,
+							"width": 168
+						}
+					],
+					"overflow": false,
+					"url": "http://127.0.0.1:6790/bg",
+					"width": 390
+				},
+				"menu": {
+					"logos": [
+						{
+							"contained": true,
+							"height": 48,
+							"loaded": true,
+							"width": 180
+						}
+					],
+					"width": 390
+				}
+			},
+			{
+				"locale": "en",
+				"width": 320,
+				"header": {
+					"logos": [
+						{
+							"alt": "Import Template",
+							"height": 45.90625,
+							"loaded": true,
+							"width": 168
+						}
+					],
+					"overflow": false,
+					"url": "http://127.0.0.1:6790/en",
+					"width": 320
+				},
+				"menu": {
+					"logos": [
+						{
+							"contained": true,
+							"height": 48,
+							"loaded": true,
+							"width": 180
+						}
+					],
+					"width": 320
+				}
+			},
+			{
+				"locale": "en",
+				"width": 390,
+				"header": {
+					"logos": [
+						{
+							"alt": "Import Template",
+							"height": 45.90625,
+							"loaded": true,
+							"width": 168
+						}
+					],
+					"overflow": false,
+					"url": "http://127.0.0.1:6790/en",
+					"width": 390
+				},
+				"menu": {
+					"logos": [
+						{
+							"contained": true,
+							"height": 48,
+							"loaded": true,
+							"width": 180
+						}
+					],
+					"width": 390
+				}
+			}
+		],
+		"detail": {
+			"contained": true,
+			"height": 49.1875,
+			"link": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+			"loaded": true,
+			"overflow": false,
+			"src": "/brand/import-template-logo-v1.webp",
+			"width": 180
+		},
+		"footer": {
+			"background": "rgb(28, 28, 28)",
+			"height": 54.65625,
+			"loaded": true,
+			"src": "/brand/import-template-logo-v1.webp",
+			"width": 200
+		}
+	},
+	"preservation": "Retained original logo and banner artwork, legacy export names and import family ID; untouched other templates, clients and publisher migration edits"
+}

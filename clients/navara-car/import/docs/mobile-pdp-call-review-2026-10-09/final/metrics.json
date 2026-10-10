@@ -1,0 +1,719 @@
+{
+  "base": "http://127.0.0.1:6791",
+  "source": "rendered page; no injected styles",
+  "capturedAt": "2026-10-09T12:43:38.271Z",
+  "results": [
+    {
+      "locale": "bg",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "metrics": {
+        "call": {
+          "background": "rgb(245, 247, 249)",
+          "color": "rgb(23, 25, 28)",
+          "border": "0px",
+          "fontSize": "17px",
+          "weight": "400",
+          "height": 44,
+          "href": "tel:0877733110"
+        },
+        "title": {
+          "height": 28,
+          "lineHeight": "28px",
+          "wrap": "nowrap",
+          "overflow": "ellipsis",
+          "fullTitle": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+          "text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package"
+        },
+        "topTargets": [
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          }
+        ],
+        "pageOverflow": 0
+      },
+      "panels": [
+        {
+          "label": "Инфо",
+          "card": {
+            "background": "rgb(255, 255, 255)",
+            "border": "1px",
+            "radius": "12px",
+            "padding": "12px"
+          },
+          "rail": {
+            "weight": "600",
+            "fontSize": "18px",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44
+          },
+          "readingHeight": 353.0468444824219,
+          "pageOverflow": 0,
+          "lastContentReachable": true
+        },
+        {
+          "label": "Данни",
+          "card": {
+            "background": "rgb(255, 255, 255)",
+            "border": "1px",
+            "radius": "12px",
+            "padding": "12px"
+          },
+          "rail": {
+            "weight": "600",
+            "fontSize": "18px",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44
+          },
+          "readingHeight": 353.0468444824219,
+          "pageOverflow": 0,
+          "lastContentReachable": true
+        },
+        {
+          "label": "Екстри",
+          "card": {
+            "background": "rgb(255, 255, 255)",
+            "border": "1px",
+            "radius": "12px",
+            "padding": "12px"
+          },
+          "rail": {
+            "weight": "600",
+            "fontSize": "18px",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44
+          },
+          "readingHeight": 353.0468444824219,
+          "pageOverflow": 0,
+          "lastContentReachable": true
+        }
+      ],
+      "nav": {
+        "height": 52,
+        "targets": [
+          51,
+          51,
+          51,
+          51,
+          51
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 844,
+      "status": 200,
+      "metrics": {
+        "call": {
+          "background": "rgb(245, 247, 249)",
+          "color": "rgb(23, 25, 28)",
+          "border": "0px",
+          "fontSize": "17px",
+          "weight": "400",
+          "height": 44,
+          "href": "tel:0877733110"
+        },
+        "title": {
+          "height": 28,
+          "lineHeight": "28px",
+          "wrap": "nowrap",
+          "overflow": "ellipsis",
+          "fullTitle": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+          "text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package"
+        },
+        "topTargets": [
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          }
+        ],
+        "pageOverflow": 0
+      },
+      "panels": [
+        {
+          "label": "Инфо",
+          "card": {
+            "background": "rgb(255, 255, 255)",
+            "border": "1px",
+            "radius": "12px",
+            "padding": "12px"
+          },
+          "rail": {
+            "weight": "600",
+            "fontSize": "18px",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44
+          },
+          "readingHeight": 353.0468444824219,
+          "pageOverflow": 0,
+          "lastContentReachable": true
+        },
+        {
+          "label": "Данни",
+          "card": {
+            "background": "rgb(255, 255, 255)",
+            "border": "1px",
+            "radius": "12px",
+            "padding": "12px"
+          },
+          "rail": {
+            "weight": "600",
+            "fontSize": "18px",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44
+          },
+          "readingHeight": 353.0468444824219,
+          "pageOverflow": 0,
+          "lastContentReachable": true
+        },
+        {
+          "label": "Екстри",
+          "card": {
+            "background": "rgb(255, 255, 255)",
+            "border": "1px",
+            "radius": "12px",
+            "padding": "12px"
+          },
+          "rail": {
+            "weight": "600",
+            "fontSize": "18px",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44
+          },
+          "readingHeight": 353.0468444824219,
+          "pageOverflow": 0,
+          "lastContentReachable": true
+        }
+      ],
+      "nav": {
+        "height": 52,
+        "targets": [
+          51,
+          51,
+          51,
+          51,
+          51
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 540,
+      "status": 200,
+      "metrics": {
+        "call": {
+          "background": "rgb(245, 247, 249)",
+          "color": "rgb(23, 25, 28)",
+          "border": "0px",
+          "fontSize": "17px",
+          "weight": "400",
+          "height": 44,
+          "href": "tel:0877733110"
+        },
+        "title": {
+          "height": 28,
+          "lineHeight": "28px",
+          "wrap": "nowrap",
+          "overflow": "ellipsis",
+          "fullTitle": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+          "text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package"
+        },
+        "topTargets": [
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          }
+        ],
+        "pageOverflow": 0
+      },
+      "panels": [
+        {
+          "label": "Инфо",
+          "card": {
+            "background": "rgb(255, 255, 255)",
+            "border": "1px",
+            "radius": "12px",
+            "padding": "12px"
+          },
+          "rail": {
+            "weight": "600",
+            "fontSize": "18px",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44
+          },
+          "readingHeight": 152.40621948242188,
+          "pageOverflow": 0,
+          "lastContentReachable": true
+        },
+        {
+          "label": "Данни",
+          "card": {
+            "background": "rgb(255, 255, 255)",
+            "border": "1px",
+            "radius": "12px",
+            "padding": "12px"
+          },
+          "rail": {
+            "weight": "600",
+            "fontSize": "18px",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44
+          },
+          "readingHeight": 152.40621948242188,
+          "pageOverflow": 0,
+          "lastContentReachable": true
+        },
+        {
+          "label": "Екстри",
+          "card": {
+            "background": "rgb(255, 255, 255)",
+            "border": "1px",
+            "radius": "12px",
+            "padding": "12px"
+          },
+          "rail": {
+            "weight": "600",
+            "fontSize": "18px",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44
+          },
+          "readingHeight": 152.40621948242188,
+          "pageOverflow": 0,
+          "lastContentReachable": true
+        }
+      ],
+      "nav": {
+        "height": 52,
+        "targets": [
+          51,
+          51,
+          51,
+          51,
+          51
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "height": 1000,
+      "status": 200,
+      "mobilePdpVisible": false,
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "metrics": {
+        "call": {
+          "background": "rgb(245, 247, 249)",
+          "color": "rgb(23, 25, 28)",
+          "border": "0px",
+          "fontSize": "17px",
+          "weight": "400",
+          "height": 44,
+          "href": "tel:0877733110"
+        },
+        "title": {
+          "height": 28,
+          "lineHeight": "28px",
+          "wrap": "nowrap",
+          "overflow": "ellipsis",
+          "fullTitle": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+          "text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package"
+        },
+        "topTargets": [
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          }
+        ],
+        "pageOverflow": 0
+      },
+      "panels": [
+        {
+          "label": "Info",
+          "card": {
+            "background": "rgb(255, 255, 255)",
+            "border": "1px",
+            "radius": "12px",
+            "padding": "12px"
+          },
+          "rail": {
+            "weight": "600",
+            "fontSize": "18px",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44
+          },
+          "readingHeight": 353.0468444824219,
+          "pageOverflow": 0,
+          "lastContentReachable": true
+        },
+        {
+          "label": "Specs",
+          "card": {
+            "background": "rgb(255, 255, 255)",
+            "border": "1px",
+            "radius": "12px",
+            "padding": "12px"
+          },
+          "rail": {
+            "weight": "600",
+            "fontSize": "18px",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44
+          },
+          "readingHeight": 353.0468444824219,
+          "pageOverflow": 0,
+          "lastContentReachable": true
+        },
+        {
+          "label": "Extras",
+          "card": {
+            "background": "rgb(255, 255, 255)",
+            "border": "1px",
+            "radius": "12px",
+            "padding": "12px"
+          },
+          "rail": {
+            "weight": "600",
+            "fontSize": "18px",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44
+          },
+          "readingHeight": 353.0468444824219,
+          "pageOverflow": 0,
+          "lastContentReachable": true
+        }
+      ],
+      "nav": {
+        "height": 52,
+        "targets": [
+          51,
+          51,
+          51,
+          51,
+          51
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 844,
+      "status": 200,
+      "metrics": {
+        "call": {
+          "background": "rgb(245, 247, 249)",
+          "color": "rgb(23, 25, 28)",
+          "border": "0px",
+          "fontSize": "17px",
+          "weight": "400",
+          "height": 44,
+          "href": "tel:0877733110"
+        },
+        "title": {
+          "height": 28,
+          "lineHeight": "28px",
+          "wrap": "nowrap",
+          "overflow": "ellipsis",
+          "fullTitle": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+          "text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package"
+        },
+        "topTargets": [
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          }
+        ],
+        "pageOverflow": 0
+      },
+      "panels": [
+        {
+          "label": "Info",
+          "card": {
+            "background": "rgb(255, 255, 255)",
+            "border": "1px",
+            "radius": "12px",
+            "padding": "12px"
+          },
+          "rail": {
+            "weight": "600",
+            "fontSize": "18px",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44
+          },
+          "readingHeight": 353.0468444824219,
+          "pageOverflow": 0,
+          "lastContentReachable": true
+        },
+        {
+          "label": "Specs",
+          "card": {
+            "background": "rgb(255, 255, 255)",
+            "border": "1px",
+            "radius": "12px",
+            "padding": "12px"
+          },
+          "rail": {
+            "weight": "600",
+            "fontSize": "18px",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44
+          },
+          "readingHeight": 353.0468444824219,
+          "pageOverflow": 0,
+          "lastContentReachable": true
+        },
+        {
+          "label": "Extras",
+          "card": {
+            "background": "rgb(255, 255, 255)",
+            "border": "1px",
+            "radius": "12px",
+            "padding": "12px"
+          },
+          "rail": {
+            "weight": "600",
+            "fontSize": "18px",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44
+          },
+          "readingHeight": 353.0468444824219,
+          "pageOverflow": 0,
+          "lastContentReachable": true
+        }
+      ],
+      "nav": {
+        "height": 52,
+        "targets": [
+          51,
+          51,
+          51,
+          51,
+          51
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 540,
+      "status": 200,
+      "metrics": {
+        "call": {
+          "background": "rgb(245, 247, 249)",
+          "color": "rgb(23, 25, 28)",
+          "border": "0px",
+          "fontSize": "17px",
+          "weight": "400",
+          "height": 44,
+          "href": "tel:0877733110"
+        },
+        "title": {
+          "height": 28,
+          "lineHeight": "28px",
+          "wrap": "nowrap",
+          "overflow": "ellipsis",
+          "fullTitle": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+          "text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package"
+        },
+        "topTargets": [
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          },
+          {
+            "width": 44,
+            "height": 44,
+            "visualWidth": "36px"
+          }
+        ],
+        "pageOverflow": 0
+      },
+      "panels": [
+        {
+          "label": "Info",
+          "card": {
+            "background": "rgb(255, 255, 255)",
+            "border": "1px",
+            "radius": "12px",
+            "padding": "12px"
+          },
+          "rail": {
+            "weight": "600",
+            "fontSize": "18px",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44
+          },
+          "readingHeight": 152.40621948242188,
+          "pageOverflow": 0,
+          "lastContentReachable": true
+        },
+        {
+          "label": "Specs",
+          "card": {
+            "background": "rgb(255, 255, 255)",
+            "border": "1px",
+            "radius": "12px",
+            "padding": "12px"
+          },
+          "rail": {
+            "weight": "600",
+            "fontSize": "18px",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44
+          },
+          "readingHeight": 152.40621948242188,
+          "pageOverflow": 0,
+          "lastContentReachable": true
+        },
+        {
+          "label": "Extras",
+          "card": {
+            "background": "rgb(255, 255, 255)",
+            "border": "1px",
+            "radius": "12px",
+            "padding": "12px"
+          },
+          "rail": {
+            "weight": "600",
+            "fontSize": "18px",
+            "background": "rgba(0, 0, 0, 0)",
+            "height": 44
+          },
+          "readingHeight": 152.40621948242188,
+          "pageOverflow": 0,
+          "lastContentReachable": true
+        }
+      ],
+      "nav": {
+        "height": 52,
+        "targets": [
+          51,
+          51,
+          51,
+          51,
+          51
+        ],
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "status": 200,
+      "mobilePdpVisible": false,
+      "errors": []
+    }
+  ]
+}

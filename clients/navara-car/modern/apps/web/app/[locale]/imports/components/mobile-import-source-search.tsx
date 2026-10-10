@@ -15,6 +15,7 @@ import {
   mobileSearchTriggerClassName,
   mobileSearchTriggerLabelClassName,
 } from "@repo/marketplace-ui/lib/mobile-form-control";
+import { Link2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 interface MobileImportSourceSearchProps {
@@ -35,7 +36,7 @@ const overlayCopy = {
       "Поставете директен линк към конкретна автомобилна обява и продължете към заявката за внос.",
     hint: "Поставете директен линк към конкретната обява. Ще го пренесем в заявката ви за внос.",
     open: "Отворете полето за линк към обява",
-    title: "Линк към обява за внос",
+    title: "Линк",
   },
   en: {
     clear: "Clear listing link",
@@ -44,7 +45,7 @@ const overlayCopy = {
       "Paste a direct link to a specific vehicle listing and continue to the import request.",
     hint: "Paste a direct link to the specific listing. We will carry it into your import request.",
     open: "Open vehicle listing link field",
-    title: "Import listing link",
+    title: "Link",
   },
 } as const;
 
@@ -83,14 +84,14 @@ export const MobileImportSourceSearch = ({
           ref={triggerRef}
           type="button"
         >
-          <DealerUiIcon className={mobileSearchIconClassName} name="search" />
+          <Link2
+            aria-hidden="true"
+            className={mobileSearchIconClassName}
+            strokeWidth={1.75}
+          />
           <span className={mobileSearchTriggerLabelClassName}>
             {sourceUrl || placeholder}
           </span>
-          <DealerUiIcon
-            className={mobileSearchIconClassName}
-            name="chevronRight"
-          />
         </button>
       </search>
 
@@ -133,9 +134,10 @@ export const MobileImportSourceSearch = ({
                 onClear: () => setSourceUrl(""),
               }}
               icon={
-                <DealerUiIcon
+                <Link2
+                  aria-hidden="true"
                   className="size-[18px] shrink-0 text-zinc-600"
-                  name="search"
+                  strokeWidth={1.75}
                 />
               }
               inputMode="url"

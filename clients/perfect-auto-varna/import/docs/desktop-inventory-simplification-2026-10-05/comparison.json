@@ -1,0 +1,50 @@
+{
+  "mobile": [
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 844,
+      "beforeEncoding": "PNG",
+      "afterEncoding": "JPEG",
+      "verification": "Matched capture dimensions and visual composition; no zero-pixel claim across encodings."
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "height": 844,
+      "beforeEncoding": "PNG",
+      "afterEncoding": "JPEG",
+      "verification": "Matched capture dimensions and visual composition; no zero-pixel claim across encodings."
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 844,
+      "beforeEncoding": "PNG",
+      "afterEncoding": "JPEG",
+      "verification": "Matched capture dimensions and visual composition; no zero-pixel claim across encodings."
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "beforeEncoding": "PNG",
+      "afterEncoding": "JPEG",
+      "verification": "Matched capture dimensions and visual composition; no zero-pixel claim across encodings."
+    }
+  ],
+  "desktop": [
+    {
+      "locale": "bg",
+      "panelBefore": 251,
+      "panelAfter": 175,
+      "carsMoveUp": 42.234375
+    },
+    {
+      "locale": "en",
+      "panelBefore": 251,
+      "panelAfter": 175,
+      "carsMoveUp": 42.234375
+    }
+  ]
+}

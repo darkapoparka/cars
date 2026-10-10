@@ -25,7 +25,7 @@ export function getI18n() {
     get locale() { return state().locale; },
     get state() { return state(); },
     t: (key: MessageKey, parameters?: MessageParameters) => message(state().locale, key, parameters),
-    dealer: (field: DealerTextField) => dealerLabel(state().locale, field),
+    dealer: (field: DealerTextField, compact = false) => dealerLabel(state().locale, field, compact),
     text: <T>(value: T): T => templateText(state().locale, value),
     href: (value: string) => localeHref(value, state().locale, routeParts(page.url.pathname).base)
   };

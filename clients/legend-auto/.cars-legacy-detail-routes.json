@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "dealer": "legend-auto",
+  "family": "import",
+  "base": "/variant-3",
+  "defaultLocale": "bg",
+  "source": {
+    "inventory": {
+      "path": "carwow/src/lib/data/daynight-current-inventory.ts",
+      "sha256": "eedca3d8d4253b4801a57f1ea5899481b41fd0b1dc2280f9eb824dcd9672bdb3"
+    },
+    "vehicles": {
+      "path": "carwow/src/lib/data/daynight-vehicles.ts",
+      "sha256": "58507cc762f0d0763f6d521a86d8474729fd6cf112b7dd072170f350a2c11d84"
+    },
+    "routeFactorySha256": "094d5128ad5e689e41486a228b1de6d11c54efbe051ce0e75c0170709d8571c9"
+  },
+  "profileSha256": "d0f03065fa4ed8a956eb2f1eebbe07b069e6f15e557516d3feab0b7be0742966",
+  "entries": [
+    {
+      "sourceId": "11774263732166588",
+      "slug": "audi-q4-166588",
+      "targetId": "11774263732166588"
+    },
+    {
+      "sourceId": "11784618839120443",
+      "slug": "seat-leon-2-0tdi-120443",
+      "targetId": "11784618839120443"
+    },
+    {
+      "sourceId": "21785269571488349",
+      "slug": "vw-tiguan-2-0tdi-488349",
+      "targetId": "21785269571488349"
+    },
+    {
+      "sourceId": "11788186558085673",
+      "slug": "vw-passat-2-0tdi-085673",
+      "targetId": "11788186558085673"
+    },
+    {
+      "sourceId": "11788202283254523",
+      "slug": "vw-golf-1-9tdi-254523",
+      "targetId": "11788202283254523"
+    },
+    {
+      "sourceId": "11782331844226239",
+      "slug": "toyota-yaris-1-5-226239",
+      "targetId": "11782331844226239"
+    },
+    {
+      "sourceId": "21787135215316819",
+      "slug": "toyota-rav4-2-5-316819",
+      "targetId": "21787135215316819"
+    },
+    {
+      "sourceId": "11786699392982478",
+      "slug": "toyota-auris-2-0d4d-982478",
+      "targetId": "11786699392982478"
+    },
+    {
+      "sourceId": "11787054081251501",
+      "slug": "skoda-scala-1-6tdi-251501",
+      "targetId": "11787054081251501"
+    },
+    {
+      "sourceId": "11787771672265620",
+      "slug": "renault-zoe-52kw-265620",
+      "targetId": "11787771672265620"
+    },
+    {
+      "sourceId": "11777013326319103",
+      "slug": "renault-clio-1-2-319103",
+      "targetId": "11777013326319103"
+    },
+    {
+      "sourceId": "11764232323880460",
+      "slug": "peugeot-508-2-0hdi-880460",
+      "targetId": "11764232323880460"
+    },
+    {
+      "sourceId": "11786966551654053",
+      "slug": "opel-astra-1-6-654053",
+      "targetId": "11786966551654053"
+    },
+    {
+      "sourceId": "11725562013563390",
+      "slug": "opel-agila-1-3i-563390",
+      "targetId": "11725562013563390"
+    }
+  ],
+  "retired": []
+}

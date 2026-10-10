@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "format": "mobile-preview-v1",
+  "dealer": "navara-car",
+  "name": "Навара кар",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+    "path": "templates/mobile",
+    "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d",
+    "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b"
+  },
+  "sourceDigest": "bd72ea0a301fa3017c17ca0f91a87dccd3a449e9a5c1ae9101eea17209d8c7e0",
+  "inventory": {
+    "mode": "dated-listing-snapshot",
+    "count": 9,
+    "observedAt": "2026-09-08"
+  },
+  "personalization": {
+    "profileSha256": "2c9f5f990ee1817faee7d8fc3c780fe1a7ff7dd04356c0aea34cc54f1fc66c0e",
+    "logoPaths": [
+      "/dealer-brand/logo-on-light-20260919.webp",
+      "/dealer-brand/logo-on-dark-20260919.webp"
+    ],
+    "mediaPaths": [
+      "/navara/vehicles/11786363468065195-1.webp",
+      "/navara/vehicles/11786363468065195-2.webp",
+      "/navara/vehicles/11782409246983224-1.webp",
+      "/navara/vehicles/11782409246983224-2.webp",
+      "/navara/vehicles/11787311216769974-1.webp",
+      "/navara/vehicles/11787311216769974-2.webp",
+      "/navara/vehicles/21780735125049477-1.webp",
+      "/navara/vehicles/21780735125049477-2.webp",
+      "/navara/vehicles/11787212062225914-1.webp",
+      "/navara/vehicles/11787212062225914-2.webp",
+      "/navara/vehicles/21774534756506554-1.webp",
+      "/navara/vehicles/21774534756506554-2.webp",
+      "/navara/vehicles/11784982235652112-1.webp",
+      "/navara/vehicles/11784982235652112-2.webp",
+      "/navara/vehicles/11772183782578045-1.webp",
+      "/navara/vehicles/11772183782578045-2.webp",
+      "/navara/vehicles/11780755712824361-1.webp",
+      "/navara/vehicles/11780755712824361-2.webp"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "mobile/src/lib/showroom-config.ts",
+      "mobile/src/lib/catalog.ts",
+      "mobile/src/lib/dealers.ts",
+      "mobile/src/lib/dealer-inventory.json",
+      "mobile/src/lib/locale.ts",
+      "mobile/src/lib/search.ts",
+      "mobile/src/components/NativeDealerCards.tsx",
+      "mobile/src/components/DealerScreens.tsx",
+      "mobile/src/components/VehicleCard.tsx",
+      "mobile/src/components/ShowroomVehicleCard.tsx",
+      "mobile/src/components/VehicleSections.tsx"
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

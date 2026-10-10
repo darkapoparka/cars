@@ -36,6 +36,6 @@ export function preserveScrollOffset(property: `--${string}`) {
 }
 
 /** Event-handler adapter for native dialogs. */
-export function trapDialogTab(event: KeyboardEvent) {
-  if (event.currentTarget instanceof HTMLDialogElement) containDialogTab(event, event.currentTarget);
+export function trapDialogTab(event: KeyboardEvent, cycleAll = false) {
+  if (event.currentTarget instanceof HTMLDialogElement) containDialogTab(event, event.currentTarget, cycleAll);
 }

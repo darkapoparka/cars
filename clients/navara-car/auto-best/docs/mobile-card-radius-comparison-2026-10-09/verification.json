@@ -1,0 +1,21 @@
+{
+  "base": "http://127.0.0.1:57762",
+  "status": "closed",
+  "results": [
+    {
+      "name": "comparison",
+      "code": 0,
+      "base": "http://127.0.0.1:57762"
+    },
+    {
+      "name": "radius-16",
+      "code": 0,
+      "base": "http://127.0.0.1:57762"
+    },
+    {
+      "name": "radius-12",
+      "code": 0,
+      "base": "http://127.0.0.1:57762"
+    }
+  ]
+}

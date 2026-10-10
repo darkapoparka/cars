@@ -74,7 +74,7 @@ The vehicle detail route owns its main gallery, tabs, overview, recommendations 
 | `company/AboutTeam.svelte`, `AboutPartners.svelte` | Optional sample content selected by presentation flags |
 | `company/SocialBrandIcon.svelte` | Outgoing social-platform glyphs |
 
-The committed standalone baseline uses `company/VehicleEnquiry.svelte` with `kind` (`trade-in` or `import`) and optional `importUrl`. The current reviewed working preview has additional components: `home/MobileCoreActions.svelte`, `company/TradeInEnquiry.svelte`, `company/TradeInInfoDrawer.svelte`, `company/ImportHowItWorks.svelte` and `vehicles/PdpImportBanner.svelte`. Its later refactor names the import flow `company/ImportEnquiry.svelte`. These are working-preview implementations, not files added to the standalone source by this documentation commit.
+`company/VehicleEnquiry.svelte` owns the import flow, with optional `importUrl` and `inlineEntry`. `company/TradeInEnquiry.svelte` owns selling and trade-in. The contact route selects these service topics through `company/ServiceLanding.svelte`, which composes their inline entry presentation; `ContactIntent.svelte` presents the other contact topics. `home/MobileCoreActions.svelte`, `company/TradeInInfoDrawer.svelte` and `company/ImportHowItWorks.svelte` are part of this reusable source.
 
 ## Editorial
 

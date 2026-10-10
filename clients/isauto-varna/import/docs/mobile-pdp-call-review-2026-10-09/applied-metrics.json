@@ -1,0 +1,75 @@
+{
+  "source": "canonical dev; no injected styles",
+  "measurements": [
+    {
+      "locale": "bg",
+      "width": 390,
+      "metrics": {
+        "label": "Обади се",
+        "background": "rgb(245, 247, 249)",
+        "color": "rgb(23, 25, 28)",
+        "border": "1px solid rgb(200, 205, 211)",
+        "fontSize": "17px",
+        "weight": "400",
+        "height": 44,
+        "width": 177.5,
+        "href": "tel:0877733110",
+        "overflow": 0
+      },
+      "errors": [],
+      "previewIdentical": false
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "metrics": {
+        "label": "Обади се",
+        "background": "rgb(245, 247, 249)",
+        "color": "rgb(23, 25, 28)",
+        "border": "1px solid rgb(200, 205, 211)",
+        "fontSize": "17px",
+        "weight": "400",
+        "height": 44,
+        "width": 142.5,
+        "href": "tel:0877733110",
+        "overflow": 0
+      },
+      "errors": [],
+      "previewIdentical": true
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "metrics": {
+        "label": "Call",
+        "background": "rgb(245, 247, 249)",
+        "color": "rgb(23, 25, 28)",
+        "border": "1px solid rgb(200, 205, 211)",
+        "fontSize": "17px",
+        "weight": "400",
+        "height": 44,
+        "width": 177.5,
+        "href": "tel:0877733110",
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "metrics": {
+        "label": "Call",
+        "background": "rgb(245, 247, 249)",
+        "color": "rgb(23, 25, 28)",
+        "border": "1px solid rgb(200, 205, 211)",
+        "fontSize": "17px",
+        "weight": "400",
+        "height": 44,
+        "width": 142.5,
+        "href": "tel:0877733110",
+        "overflow": 0
+      },
+      "errors": []
+    }
+  ]
+}

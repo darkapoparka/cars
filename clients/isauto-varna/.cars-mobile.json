@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "format": "mobile-preview-v1",
+  "dealer": "isauto-varna",
+  "name": "IS AUTO Varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+    "path": "templates/mobile",
+    "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d",
+    "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b"
+  },
+  "sourceDigest": "1156e68cb9baa09cd012237311cfb6f8b54a2c072ecaf0d6599c3f501ef5124b",
+  "inventory": {
+    "mode": "dated-listing-snapshot",
+    "count": 6,
+    "observedAt": "2026-09-16"
+  },
+  "personalization": {
+    "profileSha256": "ab90f71f542cf493eeb900ed1474d8b009da173dc62d56932f886a13dae3c6d8",
+    "logoPaths": [
+      "/dealer-brand/logo-on-light-20260919.webp",
+      "/dealer-brand/logo-on-dark-20260919.webp"
+    ],
+    "mediaPaths": [
+      "/dealer/inventory-1.webp",
+      "/dealer/inventory-2.webp",
+      "/dealer/inventory-3.webp",
+      "/dealer/inventory-4.webp",
+      "/dealer/inventory-5.webp",
+      "/dealer/inventory-6.webp"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "mobile/src/lib/showroom-config.ts",
+      "mobile/src/lib/catalog.ts",
+      "mobile/src/lib/dealers.ts",
+      "mobile/src/lib/dealer-inventory.json",
+      "mobile/src/lib/locale.ts",
+      "mobile/src/lib/search.ts",
+      "mobile/src/components/NativeDealerCards.tsx",
+      "mobile/src/components/DealerScreens.tsx",
+      "mobile/src/components/VehicleCard.tsx",
+      "mobile/src/components/ShowroomVehicleCard.tsx",
+      "mobile/src/components/VehicleSections.tsx"
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

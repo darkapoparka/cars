@@ -1,0 +1,195 @@
+{
+  "base": "https://cars-template-import.vercel.app",
+  "phase": "before",
+  "capturedAt": "2026-10-09T15:43:14.358Z",
+  "results": [
+    {
+      "locale": "bg",
+      "width": 390,
+      "errors": [],
+      "states": {
+        "home-import-search": {
+          "label": "Затвори търсенето",
+          "hit": [
+            40,
+            40
+          ],
+          "paint": [
+            40,
+            40
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2.4px",
+          "position": [
+            334,
+            12
+          ]
+        },
+        "selling-close": {
+          "label": "Затвори",
+          "hit": [
+            40,
+            40
+          ],
+          "paint": [
+            40,
+            40
+          ],
+          "icon": [
+            21,
+            21
+          ],
+          "stroke": "2.3px",
+          "position": [
+            14,
+            9.09375
+          ]
+        }
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "errors": [],
+      "states": {
+        "home-import-search": {
+          "label": "Затвори търсенето",
+          "hit": [
+            40,
+            40
+          ],
+          "paint": [
+            40,
+            40
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2.4px",
+          "position": [
+            264,
+            20
+          ]
+        },
+        "selling-close": {
+          "label": "Затвори",
+          "hit": [
+            40,
+            40
+          ],
+          "paint": [
+            40,
+            40
+          ],
+          "icon": [
+            21,
+            21
+          ],
+          "stroke": "2.3px",
+          "position": [
+            14,
+            9.09375
+          ]
+        }
+      }
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "errors": [],
+      "states": {
+        "home-import-search": {
+          "label": "Close search",
+          "hit": [
+            40,
+            40
+          ],
+          "paint": [
+            40,
+            40
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2.4px",
+          "position": [
+            334,
+            12
+          ]
+        },
+        "selling-close": {
+          "label": "Close",
+          "hit": [
+            40,
+            40
+          ],
+          "paint": [
+            40,
+            40
+          ],
+          "icon": [
+            21,
+            21
+          ],
+          "stroke": "2.3px",
+          "position": [
+            14,
+            9.09375
+          ]
+        }
+      }
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "errors": [],
+      "states": {
+        "home-import-search": {
+          "label": "Close search",
+          "hit": [
+            40,
+            40
+          ],
+          "paint": [
+            40,
+            40
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2.4px",
+          "position": [
+            264,
+            12
+          ]
+        },
+        "selling-close": {
+          "label": "Close",
+          "hit": [
+            40,
+            40
+          ],
+          "paint": [
+            40,
+            40
+          ],
+          "icon": [
+            21,
+            21
+          ],
+          "stroke": "2.3px",
+          "position": [
+            14,
+            9.09375
+          ]
+        }
+      }
+    }
+  ]
+}

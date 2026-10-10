@@ -1,0 +1,566 @@
+[
+  {
+    "locale": "bg",
+    "id": "home-buy",
+    "metrics": {
+      "background": "rgb(37, 40, 43)",
+      "tabs": [
+        {
+          "value": "buy",
+          "selected": "true",
+          "tabIndex": 0,
+          "height": 48,
+          "color": "rgb(255, 255, 255)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(255, 255, 255)",
+          "indicator": {
+            "color": "rgb(238, 29, 36)",
+            "height": "2px"
+          }
+        },
+        {
+          "value": "finance",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": null
+        },
+        {
+          "value": "sell",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": null
+        },
+        {
+          "value": "import",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": null
+        }
+      ],
+      "indicatorContrast": 3.413149958848288
+    },
+    "accessibilityViolations": 0,
+    "errors": []
+  },
+  {
+    "locale": "bg",
+    "id": "home-finance",
+    "metrics": {
+      "background": "rgb(37, 40, 43)",
+      "tabs": [
+        {
+          "value": "buy",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": null
+        },
+        {
+          "value": "finance",
+          "selected": "true",
+          "tabIndex": 0,
+          "height": 48,
+          "color": "rgb(255, 255, 255)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(255, 255, 255)",
+          "indicator": {
+            "color": "rgb(238, 29, 36)",
+            "height": "2px"
+          }
+        },
+        {
+          "value": "sell",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": null
+        },
+        {
+          "value": "import",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": null
+        }
+      ],
+      "indicatorContrast": 3.413149958848288
+    },
+    "accessibilityViolations": 0,
+    "errors": []
+  },
+  {
+    "locale": "bg",
+    "id": "home-sell",
+    "metrics": {
+      "background": "rgb(37, 40, 43)",
+      "tabs": [
+        {
+          "value": "buy",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": null
+        },
+        {
+          "value": "finance",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": null
+        },
+        {
+          "value": "sell",
+          "selected": "true",
+          "tabIndex": 0,
+          "height": 48,
+          "color": "rgb(255, 255, 255)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(255, 255, 255)",
+          "indicator": {
+            "color": "rgb(238, 29, 36)",
+            "height": "2px"
+          }
+        },
+        {
+          "value": "import",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": null
+        }
+      ],
+      "indicatorContrast": 3.413149958848288
+    },
+    "accessibilityViolations": 0,
+    "errors": []
+  },
+  {
+    "locale": "bg",
+    "id": "home-import",
+    "metrics": {
+      "background": "rgb(37, 40, 43)",
+      "tabs": [
+        {
+          "value": "buy",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": null
+        },
+        {
+          "value": "finance",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": null
+        },
+        {
+          "value": "sell",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": null
+        },
+        {
+          "value": "import",
+          "selected": "true",
+          "tabIndex": 0,
+          "height": 48,
+          "color": "rgb(255, 255, 255)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(255, 255, 255)",
+          "indicator": {
+            "color": "rgb(238, 29, 36)",
+            "height": "2px"
+          }
+        }
+      ],
+      "indicatorContrast": 3.413149958848288
+    },
+    "accessibilityViolations": 0,
+    "errors": []
+  },
+  {
+    "locale": "bg",
+    "id": "search-dialog",
+    "surface": "rgb(255, 255, 255)",
+    "escapeRestoresFocus": true
+  },
+  {
+    "locale": "bg",
+    "id": "inventory?brand=BMW&maxPrice=50000",
+    "metrics": {
+      "background": "rgb(37, 40, 43)",
+      "tabs": []
+    },
+    "accessibilityViolations": 0,
+    "errors": []
+  },
+  {
+    "locale": "bg",
+    "id": "services?q=VIN",
+    "metrics": {
+      "background": "rgb(37, 40, 43)",
+      "tabs": []
+    },
+    "accessibilityViolations": 0,
+    "errors": []
+  },
+  {
+    "locale": "bg",
+    "id": "about",
+    "metrics": {
+      "background": "rgb(37, 40, 43)",
+      "tabs": []
+    },
+    "accessibilityViolations": 0,
+    "errors": []
+  },
+  {
+    "locale": "bg",
+    "id": "contact",
+    "metrics": {
+      "background": "rgb(37, 40, 43)",
+      "tabs": []
+    },
+    "accessibilityViolations": 0,
+    "errors": []
+  },
+  {
+    "locale": "en",
+    "id": "home-buy",
+    "metrics": {
+      "background": "rgb(37, 40, 43)",
+      "tabs": [
+        {
+          "value": "buy",
+          "selected": "true",
+          "tabIndex": 0,
+          "height": 48,
+          "color": "rgb(255, 255, 255)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(255, 255, 255)",
+          "indicator": {
+            "color": "rgb(238, 29, 36)",
+            "height": "2px"
+          }
+        },
+        {
+          "value": "finance",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": null
+        },
+        {
+          "value": "sell",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": null
+        },
+        {
+          "value": "import",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": null
+        }
+      ],
+      "indicatorContrast": 3.413149958848288
+    },
+    "accessibilityViolations": 0,
+    "errors": []
+  },
+  {
+    "locale": "en",
+    "id": "home-finance",
+    "metrics": {
+      "background": "rgb(37, 40, 43)",
+      "tabs": [
+        {
+          "value": "buy",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": null
+        },
+        {
+          "value": "finance",
+          "selected": "true",
+          "tabIndex": 0,
+          "height": 48,
+          "color": "rgb(255, 255, 255)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(255, 255, 255)",
+          "indicator": {
+            "color": "rgb(238, 29, 36)",
+            "height": "2px"
+          }
+        },
+        {
+          "value": "sell",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": null
+        },
+        {
+          "value": "import",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": null
+        }
+      ],
+      "indicatorContrast": 3.413149958848288
+    },
+    "accessibilityViolations": 0,
+    "errors": []
+  },
+  {
+    "locale": "en",
+    "id": "home-sell",
+    "metrics": {
+      "background": "rgb(37, 40, 43)",
+      "tabs": [
+        {
+          "value": "buy",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": null
+        },
+        {
+          "value": "finance",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": null
+        },
+        {
+          "value": "sell",
+          "selected": "true",
+          "tabIndex": 0,
+          "height": 48,
+          "color": "rgb(255, 255, 255)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(255, 255, 255)",
+          "indicator": {
+            "color": "rgb(238, 29, 36)",
+            "height": "2px"
+          }
+        },
+        {
+          "value": "import",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": null
+        }
+      ],
+      "indicatorContrast": 3.413149958848288
+    },
+    "accessibilityViolations": 0,
+    "errors": []
+  },
+  {
+    "locale": "en",
+    "id": "home-import",
+    "metrics": {
+      "background": "rgb(37, 40, 43)",
+      "tabs": [
+        {
+          "value": "buy",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": null
+        },
+        {
+          "value": "finance",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": null
+        },
+        {
+          "value": "sell",
+          "selected": "false",
+          "tabIndex": -1,
+          "height": 48,
+          "color": "rgb(196, 199, 203)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(255, 255, 255)",
+          "indicator": null
+        },
+        {
+          "value": "import",
+          "selected": "true",
+          "tabIndex": 0,
+          "height": 48,
+          "color": "rgb(255, 255, 255)",
+          "size": "22px",
+          "weight": "400",
+          "icon": "rgb(196, 199, 203)",
+          "indicator": {
+            "color": "rgb(238, 29, 36)",
+            "height": "2px"
+          }
+        }
+      ],
+      "indicatorContrast": 3.413149958848288
+    },
+    "accessibilityViolations": 0,
+    "errors": []
+  },
+  {
+    "locale": "en",
+    "id": "search-dialog",
+    "surface": "rgb(255, 255, 255)",
+    "escapeRestoresFocus": true
+  },
+  {
+    "locale": "en",
+    "id": "inventory?brand=BMW&maxPrice=50000",
+    "metrics": {
+      "background": "rgb(37, 40, 43)",
+      "tabs": []
+    },
+    "accessibilityViolations": 0,
+    "errors": []
+  },
+  {
+    "locale": "en",
+    "id": "services?q=VIN",
+    "metrics": {
+      "background": "rgb(37, 40, 43)",
+      "tabs": []
+    },
+    "accessibilityViolations": 0,
+    "errors": []
+  },
+  {
+    "locale": "en",
+    "id": "about",
+    "metrics": {
+      "background": "rgb(37, 40, 43)",
+      "tabs": []
+    },
+    "accessibilityViolations": 0,
+    "errors": []
+  },
+  {
+    "locale": "en",
+    "id": "contact",
+    "metrics": {
+      "background": "rgb(37, 40, 43)",
+      "tabs": []
+    },
+    "accessibilityViolations": 0,
+    "errors": []
+  }
+]

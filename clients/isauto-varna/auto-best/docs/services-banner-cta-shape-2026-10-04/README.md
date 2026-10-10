@@ -1,0 +1,13 @@
+# Services action shape — 4 October 2026
+
+The final owner correction restores the shared rounded button shape. Removing the local `--dn-radius-button` override keeps the 28px painted height, 6px horizontal padding and 500 text weight while inheriting the site's pill radius. The matched [before](before-rounded-bg.png) / [after](after-rounded-bg.png) at 319×884 show this one-declaration correction. [Current measurements](rounded-browser-audit.json) cover 280, 319, 320 and 390px and confirm unchanged card/artwork rectangles, single-line supporting text/actions, no overflow and zero console errors. The final [validation/build](rounded-validation.json) passed. The earlier squared iteration below is superseded.
+
+## Earlier squared iteration
+
+The owner found the compact services action too bulky and round. Its mobile card inherited the shared 999px button radius and used 600-weight text. This follow-up changes only the card's action renderer: local token overrides give it a 28px painted height, 6px corners, 6px horizontal padding and 500-weight Inter text. The existing 40px frame remains, and the full card is still the single localized About `#process` link. The geometry and hit area of the card, supporting text and silver image are preserved.
+
+The [before](before-bg-319.png) and [after](after-bg-319.png) use the user's original 319×884 viewport and 1392px scroll position. Browser measurements confirm that the card and artwork rectangles match exactly. [390px](after-bg-390.png) retains the full action label. The [native audit](browser-audit.json) covers BG/EN at 280, 300, 320, 390 and 430px, plus the matched 319px case. All eleven cases retain the 128px artwork, one-line subtext/action, correct localized destination and no overflow. The renderer is hidden at both 768px and 1440px.
+
+[Validation](validation.json): CSS policy, tokens, typography/pinned visual-system checks and production build passed. Svelte reports zero errors and one existing warning in `src/lib/components/listing/DesktopFacetMenu.svelte:48` about event listeners on a noninteractive div; this mobile polish does not edit that desktop component. The fresh English browser has no console errors. The earlier compact/reflow evidence remains historical; no broad smoke suite was rerun for these scoped visual declarations.
+
+The source remains in `L:/CODEX/cars`, branch `main`, baseline HEAD `6c92fdc2758d5d5b985a9c8a9004c7bb969d313a`. The existing shared `.git/index.lock` blocks staging/commit/push and was preserved. The combined [integration handoff](../services-banner-cta-2026-10-04/INTEGRATION.md) and guarded staging plan include this follow-up and retain unrelated drafts. No template promotion or dealer deployment is included.

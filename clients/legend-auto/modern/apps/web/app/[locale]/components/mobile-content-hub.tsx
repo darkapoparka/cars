@@ -9,6 +9,8 @@ import {
   DrawerTitle,
 } from "@repo/design-system/components/ui/drawer";
 import { cn } from "@repo/design-system/lib/utils";
+import { withBasePath } from "@repo/internationalization/paths";
+import { publicSite } from "@repo/marketplace/site-config";
 import {
   DealerMobileBrandBar,
   DealerMobileHeaderIcon,
@@ -17,7 +19,13 @@ import {
   MobilePillRail,
   mobileHeaderIconActionClassName,
 } from "@repo/marketplace-ui";
+import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
 import Image from "@repo/marketplace-ui/components/public-image";
+import {
+  mobileSearchFieldClassName,
+  mobileSearchIconClassName,
+} from "@repo/marketplace-ui/lib/mobile-form-control";
+import { mobileMarketplaceOverlayIconActionClassName } from "@repo/marketplace-ui/lib/mobile-overlay-styles";
 import { getLocalizedPath } from "@repo/seo/metadata";
 import {
   ArrowRight,
@@ -45,12 +53,69 @@ interface MobileContentHubProps {
   locale: "bg" | "en";
 }
 
+const desktopGuideVehicles = publicSite.artwork.desktopPageVehicles?.guides;
+const desktopGuideHeroAppearance = desktopGuideVehicles
+  ? "vehicles"
+  : undefined;
+
 const contentCategoryLabels = {
   bg: "Категории материали",
   en: "Content categories",
 } as const;
 
+const contentResultsLabels = {
+  bg: "Намерени статии",
+  en: "Matching articles",
+} as const;
+
+function ContentCategoryPills({
+  filter,
+  locale,
+  mobile = false,
+  onSelect,
+  ready,
+}: {
+  filter: ContentFilter;
+  locale: "bg" | "en";
+  mobile?: boolean;
+  onSelect: (value: ContentFilter) => void;
+  ready: boolean;
+}) {
+  const buttons = contentFilters.map(({ id: value, ...labels }) => (
+    <button
+      aria-pressed={filter === value}
+      className={
+        mobile ? getMobileQuickPillClassName(filter === value) : undefined
+      }
+      disabled={!ready}
+      key={value}
+      onClick={() => onSelect(value)}
+      type="button"
+    >
+      {labels[locale]}
+    </button>
+  ));
+  return mobile ? (
+    <MobilePillRail
+      className="gap-2"
+      data-slot="editorial-filter-pills"
+      label={contentCategoryLabels[locale]}
+    >
+      {buttons}
+    </MobilePillRail>
+  ) : (
+    <fieldset
+      aria-label={contentCategoryLabels[locale]}
+      className={desktopStyles.editorialPills}
+      data-slot="editorial-desktop-filter-pills"
+    >
+      {buttons}
+    </fieldset>
+  );
+}
+
 function DesktopContentSearch({
+  count,
   isBg,
   ready,
   query,
@@ -58,6 +123,7 @@ function DesktopContentSearch({
   onQueryChange,
   onClear,
 }: {
+  count: number;
   isBg: boolean;
   ready: boolean;
   query: string;
@@ -78,6 +144,15 @@ function DesktopContentSearch({
         type="search"
         value={query}
       />
+      <output
+        aria-atomic="true"
+        aria-label={isBg ? "Намерени статии" : "Matching articles"}
+        aria-live="polite"
+        className="shrink-0 text-meta text-muted-foreground tabular-nums"
+        data-slot="content-search-count-desktop"
+      >
+        ({count})
+      </output>
       {query && (
         <button
           aria-label={isBg ? "Изчисти търсенето" : "Clear search"}
@@ -122,7 +197,6 @@ export const MobileContentHub = ({
     );
   };
   useEffect(() => {
-    setReady(true);
     const restore = () => {
       const search = parseContentSearch(
         Object.fromEntries(new URLSearchParams(window.location.search))
@@ -130,6 +204,9 @@ export const MobileContentHub = ({
       setQuery(search.query);
       setFilter(search.filter);
     };
+    // Returning to a cached page can restore props from before URL-only filtering.
+    restore();
+    setReady(true);
     window.addEventListener("popstate", restore);
     return () => window.removeEventListener("popstate", restore);
   }, []);
@@ -145,7 +222,35 @@ export const MobileContentHub = ({
         desktopStyles.editorial
       )}
     >
-      <section className="bg-zinc-950 text-white lg:hidden">
+      <DealerDesktopHero
+        appearance={desktopGuideHeroAppearance}
+        controls={
+          <div className={desktopStyles.editorialDiscovery}>
+            <DesktopContentSearch
+              count={visibleItems.length}
+              inputRef={desktopSearchInput}
+              isBg={isBg}
+              onClear={() => {
+                updateSearch({ query: "", filter });
+                focusSearch();
+              }}
+              onQueryChange={(value) => updateSearch({ query: value, filter })}
+              query={query}
+              ready={ready}
+            />
+            <ContentCategoryPills
+              filter={filter}
+              locale={locale}
+              onSelect={selectFilter}
+              ready={ready}
+            />
+          </div>
+        }
+        locale={locale}
+        title={isBg ? "Съвети и статии" : "Guides and articles"}
+        vehicleArtwork={desktopGuideVehicles}
+      />
+      <section className="bg-brand text-white [--lead-site-accent-bright:white] lg:hidden">
         <div className="mx-auto w-full max-w-lg">
           <MobileDealerChrome
             brandRow={
@@ -184,11 +289,19 @@ export const MobileContentHub = ({
                 }
               />
             }
+            title={isBg ? "Съвети и статии" : "Guides and articles"}
           >
-            <div className="flex h-12 items-center gap-2.5 rounded-full bg-white px-4 text-zinc-950 ring-1 ring-white/20 ring-inset focus-within:outline-2 focus-within:outline-white">
+            <div
+              className={cn(
+                mobileSearchFieldClassName,
+                "bg-white p-1 pl-4 text-zinc-950 ring-white/20 focus-within:outline-2 focus-within:outline-[var(--lead-site-accent-bright)] focus-within:outline-offset-2"
+              )}
+              data-slot="mobile-guides-search"
+            >
               <Search
                 aria-hidden="true"
-                className="size-[18px] shrink-0 text-muted-foreground"
+                className={mobileSearchIconClassName}
+                strokeWidth={1.75}
               />
               <label className="sr-only" htmlFor="content-search">
                 {isBg ? "Търси" : "Search"}
@@ -197,23 +310,34 @@ export const MobileContentHub = ({
                 aria-label={
                   isBg ? "Търси съвети и статии" : "Search guides and articles"
                 }
-                className="min-w-0 flex-1 bg-transparent font-medium text-body outline-none placeholder:text-muted-foreground [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden"
+                className="h-full min-w-0 flex-1 bg-transparent font-normal text-body outline-none placeholder:text-muted-foreground [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden"
                 disabled={!ready}
                 id="content-search"
                 onChange={(event) =>
                   updateSearch({ query: event.target.value, filter })
                 }
-                placeholder={
-                  isBg ? "Търси съвети и статии" : "Search guides and articles"
-                }
+                placeholder={`${isBg ? "Търси статии" : "Search articles"} (${visibleItems.length})`}
                 ref={searchInput}
                 type="search"
                 value={query}
               />
+              <output
+                aria-atomic="true"
+                aria-label={contentResultsLabels[locale]}
+                aria-live="polite"
+                className={cn({
+                  "shrink-0 px-2 text-meta text-muted-foreground tabular-nums":
+                    query,
+                  "sr-only": !query,
+                })}
+                data-slot="content-search-count"
+              >
+                ({visibleItems.length})
+              </output>
               {query ? (
                 <button
                   aria-label={isBg ? "Изчисти търсенето" : "Clear search"}
-                  className="grid size-8 shrink-0 place-items-center rounded-full bg-zinc-100"
+                  className="grid size-11 shrink-0 place-items-center rounded-full bg-zinc-100 transition-colors hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-200"
                   disabled={!ready}
                   onClick={() => {
                     updateSearch({ query: "", filter });
@@ -229,103 +353,99 @@ export const MobileContentHub = ({
         </div>
       </section>
 
-      <DesktopContentSearch
-        inputRef={desktopSearchInput}
-        isBg={isBg}
-        onClear={() => {
-          updateSearch({ query: "", filter });
-          focusSearch();
-        }}
-        onQueryChange={(value) => updateSearch({ query: value, filter })}
-        query={query}
-        ready={ready}
-      />
-
       <div
         className={cn(
           "mx-auto w-full max-w-lg lg:max-w-[90rem]",
           desktopStyles.editorialBody
         )}
       >
-        <div className="relative -mt-3 rounded-t-2xl bg-background pt-3 lg:mt-0 lg:rounded-none lg:pt-8">
+        <div
+          className={cn(
+            "relative -mt-3 rounded-t-2xl bg-background pt-3 lg:mt-0 lg:rounded-none lg:pt-8",
+            desktopStyles.editorialPanel
+          )}
+        >
           <div className="px-4 lg:px-0">
-            <MobilePillRail
-              className="gap-2"
-              data-slot="editorial-filter-pills"
-              label={contentCategoryLabels[locale]}
-            >
-              {contentFilters.map(({ id: value, ...labels }) => (
-                <button
-                  aria-pressed={filter === value}
-                  className={getMobileQuickPillClassName(filter === value)}
-                  disabled={!ready}
-                  key={value}
-                  onClick={() => selectFilter(value)}
-                  type="button"
-                >
-                  {labels[locale]}
-                </button>
-              ))}
-            </MobilePillRail>
+            <ContentCategoryPills
+              filter={filter}
+              locale={locale}
+              mobile
+              onSelect={selectFilter}
+              ready={ready}
+            />
           </div>
 
-          <div className="px-4 pt-3 pb-2 lg:px-0">
-            <div className="flex items-center justify-between gap-3">
-              <h1 className="font-semibold text-section-title tracking-heading lg:hidden">
-                {isBg ? "Съвети и статии" : "Guides and articles"}
-              </h1>
-              <output
-                aria-atomic="true"
-                className="text-micro text-muted-foreground tabular-nums"
-              >
-                {visibleItems.length} {isBg ? "материала" : "items"}
-              </output>
-            </div>
-          </div>
-
-          <div className="grid gap-2 px-4 pb-8 md:grid-cols-2 lg:gap-5 lg:px-0 xl:grid-cols-3">
+          <div
+            className="mt-3 grid gap-3 px-4 pb-8 md:grid-cols-2 lg:mt-5 lg:gap-5 lg:px-0 xl:grid-cols-3"
+            data-slot="editorial-content-grid"
+          >
             {visibleItems.map((item, index) => (
               <Link
-                className="group flex min-h-[124px] overflow-hidden rounded-2xl bg-white focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-2 active:scale-[0.995]"
+                aria-label={item.title}
+                className="group flex min-h-[124px] flex-col overflow-hidden rounded-2xl bg-white focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-2 active:scale-[0.995]"
                 data-slot="content-card"
                 href={`${localize(`/guides/${item.slug}`)}${serializeContentSearch({ query, filter })}`}
                 key={`${item.type}-${item.slug}`}
                 prefetch={false}
               >
                 <div
-                  className="relative w-24 min-w-24 shrink-0 overflow-hidden bg-zinc-200 min-[360px]:w-[35%] min-[360px]:min-w-28"
+                  className="relative aspect-[7/3] w-full min-w-0 shrink-0 overflow-hidden bg-secondary"
                   data-slot="content-card-media"
                 >
-                  <Image
-                    alt=""
-                    className="object-cover"
-                    fill
-                    loading={index === 0 ? "eager" : "lazy"}
-                    sizes="(max-width: 359px) 96px, (max-width: 768px) 140px, (max-width: 1023px) 260px, (min-width: 1280px) 30vw, 44vw"
-                    src={item.image}
-                  />
+                  <picture className="absolute inset-0 block">
+                    {item.desktopImage && (
+                      <source
+                        media="(min-width: 1024px)"
+                        srcSet={withBasePath(item.desktopImage)}
+                      />
+                    )}
+                    <Image
+                      alt=""
+                      className={
+                        item.mobileImage
+                          ? "object-contain object-center p-2.5"
+                          : "object-cover object-center"
+                      }
+                      fill
+                      loading={index === 0 ? "eager" : "lazy"}
+                      sizes="(max-width: 511px) calc(100vw - 32px), (max-width: 767px) 480px, (max-width: 1023px) 240px, (min-width: 1600px) 260px, (min-width: 1280px) 330px, 30vw"
+                      src={item.mobileImage ?? item.image}
+                    />
+                  </picture>
                 </div>
                 <div
-                  className="flex min-w-0 flex-1 flex-col px-2 py-2.5 min-[360px]:px-3"
+                  className="flex min-w-0 flex-1 flex-col p-2.5"
                   data-slot="content-card-body"
                 >
                   <div
-                    className="grid grid-cols-1 items-center gap-0 font-semibold text-micro text-muted-foreground uppercase tracking-label min-[360px]:flex min-[360px]:flex-wrap min-[360px]:gap-x-1.5"
+                    className="font-medium text-meta text-muted-foreground"
                     data-slot="content-card-meta"
                   >
                     <span className="whitespace-nowrap">{item.category}</span>
-                    <span className="whitespace-nowrap">{item.meta}</span>
                   </div>
-                  <h2 className="mt-1 line-clamp-3 font-semibold text-card-title tracking-heading lg:line-clamp-2 lg:text-card-title-lg">
-                    {item.title}
-                  </h2>
+                  <div
+                    className="mt-1 flex items-end gap-3 lg:mt-0 lg:block"
+                    data-slot="content-card-heading"
+                  >
+                    <h2
+                      aria-label={item.title}
+                      className="line-clamp-2 min-w-0 flex-1 font-medium text-card-title tracking-heading lg:font-semibold lg:text-card-title-lg"
+                      title={item.title}
+                    >
+                      {item.desktopTitle ?? item.title}
+                    </h2>
+                    <ArrowRight
+                      aria-hidden="true"
+                      className="mb-0.5 size-4 shrink-0 text-muted-foreground lg:hidden"
+                    />
+                  </div>
                   <p
-                    className="mt-1 hidden text-meta text-zinc-600 lg:line-clamp-2 min-[360px]:line-clamp-1"
+                    className="mt-1 hidden text-meta text-zinc-600 lg:line-clamp-2"
                     data-slot="content-card-description"
                   >
                     {item.description}
                   </p>
-                  <span className="mt-auto inline-flex items-center gap-1 pt-1.5 font-semibold text-compact-control">
+                  <span className="mt-auto hidden items-center gap-1 pt-1.5 font-semibold text-compact-control lg:inline-flex">
                     {isBg ? "Прочети" : "Read"}
                     <ArrowRight aria-hidden="true" className="size-3.5" />
                   </span>
@@ -372,12 +492,15 @@ export const MobileContentHub = ({
           <DrawerHeader className="shrink-0 px-4 pt-2 pb-3">
             <div className="grid grid-cols-[44px_minmax(0,1fr)_44px] items-center gap-2">
               <span />
-              <DrawerTitle className="text-center text-card-title">
-                {isBg ? "Филтрирай материалите" : "Filter content"}
+              <DrawerTitle className="text-center font-medium text-card-title-lg">
+                {isBg ? "Теми" : "Topics"}
               </DrawerTitle>
               <DrawerClose
                 aria-label={isBg ? "Затвори" : "Close"}
-                className="grid size-11 place-items-center rounded-full bg-zinc-100 text-zinc-950 focus-visible:outline-2 focus-visible:outline-ring"
+                className={cn(
+                  mobileMarketplaceOverlayIconActionClassName,
+                  "grid place-items-center bg-zinc-100"
+                )}
               >
                 <X aria-hidden="true" className="size-[18px]" />
               </DrawerClose>

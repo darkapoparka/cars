@@ -1,0 +1,615 @@
+{
+	"sourceDigest": "415c8e6f4c3f2eac5fa441d47bf561e187985691b60f322ab6d9a2d22bb4e1a6",
+	"paths": 1677,
+	"codeChanges": ["src/lib/styles/tokens.css"],
+	"productionStates": 156,
+	"desktopStates": 56,
+	"mobileStates": 100,
+	"mobileComparisonEnvironment": "Matched canonical Vite dev before/after at 6790",
+	"mobile": [
+		{
+			"id": "home-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "inventory-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "services-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "about-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "contact-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "import-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "sell-your-car-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "financing-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "calculator-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "account-favorites-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "compare-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "reviews-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "faqs-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "blog-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "terms-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "privacy-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "cookies-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "locale-settings-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "inventory-selected-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "inventory-empty-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "vehicle-1-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "vehicle-2-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "vehicle-3-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "article-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "not-found-bg-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "home-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "inventory-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "services-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "about-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "contact-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "import-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "sell-your-car-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "financing-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "calculator-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "account-favorites-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "compare-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "reviews-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "faqs-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "blog-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "terms-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "privacy-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "cookies-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "locale-settings-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "inventory-selected-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "inventory-empty-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "vehicle-1-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "vehicle-2-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "vehicle-3-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "article-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "not-found-bg-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "home-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "inventory-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "services-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "about-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "contact-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "import-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "sell-your-car-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "financing-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "calculator-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "account-favorites-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "compare-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "reviews-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "faqs-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "blog-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "terms-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "privacy-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "cookies-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "locale-settings-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "inventory-selected-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "inventory-empty-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "vehicle-1-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "vehicle-2-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "vehicle-3-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "article-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "not-found-en-320",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "home-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "inventory-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "services-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "about-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "contact-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "import-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "sell-your-car-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "financing-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "calculator-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "account-favorites-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "compare-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "reviews-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "faqs-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "blog-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "terms-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "privacy-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "cookies-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "locale-settings-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "inventory-selected-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "inventory-empty-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "vehicle-1-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "vehicle-2-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "vehicle-3-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "article-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		},
+		{
+			"id": "not-found-en-390",
+			"identicalPixels": true,
+			"identicalPresentation": true
+		}
+	],
+	"actualScreenshots": [
+		{
+			"id": "home",
+			"filename": "after-home.png",
+			"sha256": "fa6315d465fc3e52fcb04043d2f72678cead0e44949c0d7561344b711eac1934",
+			"surfaces": {
+				"shell": "rgb(242, 244, 247)",
+				"header": "rgb(242, 244, 247)",
+				"hero": "rgb(242, 244, 247)"
+			}
+		},
+		{
+			"id": "about",
+			"filename": "after-about.png",
+			"sha256": "c5992ff978a48848c5e28c4dce67246824e2998f277ae42480acb77c68eb1d67",
+			"surfaces": {
+				"shell": "rgb(242, 244, 247)",
+				"header": "rgb(242, 244, 247)",
+				"hero": "rgb(242, 244, 247)"
+			}
+		},
+		{
+			"id": "contact",
+			"filename": "after-contact.png",
+			"sha256": "0efe0f97516d6ccd8f2b74d7647da81c4582343418bcb89729f8147c6cb9e99d",
+			"surfaces": {
+				"shell": "rgb(242, 244, 247)",
+				"header": "rgb(242, 244, 247)",
+				"hero": "rgb(242, 244, 247)"
+			}
+		}
+	],
+	"failures": [],
+	"gates": [
+		{
+			"name": "verify",
+			"args": ["L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js", "run", "verify"],
+			"started": "2026-10-03T16:51:58.335Z",
+			"completed": "2026-10-03T16:52:54.286Z",
+			"exitCode": 1,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-continuous-light-2026-10-03\\implemented\\qa/runtime/verify.log",
+			"logSha256": "b972ebabcee3f1b3e1c1a762c1d41819f30b5b208691e1e9174c55bef44838d5"
+		},
+		{
+			"name": "scoped-format",
+			"args": ["node_modules/prettier/bin/prettier.cjs", "--check", "src/lib/styles/tokens.css"],
+			"started": "2026-10-03T16:52:54.288Z",
+			"completed": "2026-10-03T16:52:55.733Z",
+			"exitCode": 0,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-continuous-light-2026-10-03\\implemented\\qa/runtime/scoped-format.log",
+			"logSha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+		},
+		{
+			"name": "architecture",
+			"args": [
+				"L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js",
+				"run",
+				"check:architecture"
+			],
+			"started": "2026-10-03T16:52:55.734Z",
+			"completed": "2026-10-03T16:52:57.584Z",
+			"exitCode": 0,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-continuous-light-2026-10-03\\implemented\\qa/runtime/architecture.log",
+			"logSha256": "f153ca4e2ca9b6b71ae622dc6c3d96cd08f8f9eff45a7f6791ae81213b51c491"
+		},
+		{
+			"name": "assets",
+			"args": ["L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js", "run", "check:assets"],
+			"started": "2026-10-03T16:52:57.586Z",
+			"completed": "2026-10-03T16:52:58.530Z",
+			"exitCode": 0,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-continuous-light-2026-10-03\\implemented\\qa/runtime/assets.log",
+			"logSha256": "b98cbb4d013072e79e1bd8765db3905ed8c6f5fae74e56356eca4fd5a28ef995"
+		},
+		{
+			"name": "build",
+			"args": ["L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js", "run", "build"],
+			"started": "2026-10-03T16:52:58.694Z",
+			"completed": "2026-10-03T16:55:07.348Z",
+			"exitCode": 0,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-continuous-light-2026-10-03\\implemented\\qa/runtime/build.log",
+			"logSha256": "15f02a66b58a7428574cbff96625cef9ba49434d8c30562fb570c6c143979619"
+		}
+	],
+	"browser": {
+		"startTime": "2026-10-03T16:57:04.700Z",
+		"duration": 171234.426,
+		"expected": 47,
+		"skipped": 22,
+		"unexpected": 1,
+		"flaky": 0
+	},
+	"inheritedBrowserFailure": {
+		"file": "tests/style-parity.e2e.ts",
+		"line": 44,
+		"expected": "All filters strong class",
+		"actual": "secondary class",
+		"sourceAndTestUnchangedSincePreviousBuild": true
+	},
+	"lintCode": {
+		"exitCode": 0,
+		"logSha256": "464b95a7ca6fad4fe437a0615cd7c28475e1770222814d0300bfce4ba7d6e8c4"
+	},
+	"externalMapPixelsExcluded": true
+}

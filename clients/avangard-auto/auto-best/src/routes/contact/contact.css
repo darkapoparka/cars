@@ -1,5 +1,6 @@
 .dn-contact-hero__mobile-title,
 .dn-contact-workflow-title { display: none; }
+.dn-contact-hero__desktop-actions { display: none; }
 
 .dn-contact-hero.dn-route-hero {
   position: relative;
@@ -83,7 +84,7 @@
 .dn-contact-card {
   min-width: 0;
   padding: 40px;
-  border-radius: 16px;
+  border-radius: var(--dn-radius-card);
   box-sizing: border-box;
 }
 
@@ -271,7 +272,7 @@
   width: max-content;
   max-width: 180px;
   padding: 7px 10px;
-  border-radius: 8px;
+  border-radius: var(--dn-radius-media);
   background: #202329;
   color: #fff;
   font-size: var(--dn-text-meta);
@@ -485,7 +486,7 @@
   .dn-contact-card {
     margin-top: 16px;
     padding: 20px;
-    border-radius: 16px;
+    border-radius: var(--dn-radius-card);
   }
 
   .dn-contact-intent__heading h2,
@@ -530,6 +531,7 @@
   }
 
   .dn-contact-location__heading {
+    display: none;
     margin-bottom: 22px;
     text-align: left;
   }
@@ -561,7 +563,7 @@
     position: relative;
     margin: -52px 0 0;
     padding: 20px 16px 12px;
-    border-radius: 20px;
+    border-radius: var(--dn-radius-entry-card);
     background: var(--dn-mobile-surface);
     box-shadow: 0 18px 42px rgba(13, 18, 26, .2);
   }
@@ -589,7 +591,7 @@
   .dn-contact-intent--workflow .dn-contact-card {
     margin-top: 20px;
     padding: 8px 12px;
-    border-radius: 16px;
+    border-radius: var(--dn-radius-card);
     background: var(--dn-mobile-surface);
   }
 
@@ -601,7 +603,7 @@
     margin-inline: 0;
     padding: 12px 4px;
     gap: 12px;
-    border-radius: 12px;
+    border-radius: var(--dn-radius-control);
   }
   .dn-contact-intent--workflow .dn-contact-card__icon { color: #525a66; }
   .dn-contact-intent--workflow .dn-contact-card__icon .dn-icon { width: 20px; height: 20px; }
@@ -635,7 +637,7 @@
     container-type: inline-size;
     margin: 16px 0 0;
     padding: 20px 16px;
-    border-radius: 16px;
+    border-radius: var(--dn-radius-card);
   }
   .dn-contact-section:not(.dn-contact-section--workflow) .dn-contact-selected { text-align: left; }
   .dn-contact-section:not(.dn-contact-section--workflow) .dn-contact-selected p { font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
@@ -658,68 +660,102 @@
   .dn-contact-call-number { white-space: normal; }
 }
 
-/* General Contact actions occupy the remaining shared hero height in normal flow. */
+@media (max-width: 991px) {
+  .dn-app-shell .dn-contact-hero--general.dn-information-hero.dn-route-hero {
+    display: block;
+    height: 244px;
+    min-height: 244px;
+  }
+  .dn-contact-hero--general .dn-contact-hero__content { display: none; }
+  .dn-contact-hero--general .dn-contact-hero__action { display: none; }
+  .dn-contact-section--general { position: relative; z-index: 1; margin-top: calc(-1 * (var(--dn-space-8) + var(--dn-space-5))); background: linear-gradient(to bottom, transparent calc(var(--dn-space-8) + var(--dn-space-5)), var(--dn-mobile-canvas) 0); }
+  .dn-contact-section--general > .container { width: min(100%, 784px); padding-inline: var(--dn-space-3); }
+  .dn-contact-section.dn-contact-section--general .dn-contact-intent__main.dn-information-card { container-type: inline-size; margin: 0; padding: var(--dn-entry-card-padding); border-radius: var(--dn-radius-content-card); }
+  .dn-contact-intent--general .dn-contact-intent__heading,
+  .dn-contact-intent--general .dn-contact-selected { width: 100%; margin-inline: auto; }
+  .dn-contact-intent--general .dn-contact-intent__heading h1 {
+    margin: 0;
+    color: var(--dn-ink);
+    font-size: var(--dn-text-subheading);
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-heading);
+    letter-spacing: var(--dn-tracking-heading);
+    text-align: center;
+  }
+  .dn-contact-section--general .dn-contact-intent--general .dn-contact-selected { text-align: center; }
+  .dn-contact-intent--general .dn-contact-selected p { margin-inline: auto; }
+  .dn-contact-primary-actions { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: var(--dn-space-2); margin-top: var(--dn-space-4); }
+  .dn-contact-primary-actions .dn-entry-action { width: 100%; min-width: 0; padding-inline: var(--dn-space-3); }
+  .dn-contact-intent--general .dn-contact-primary-actions .dn-contact-primary-directions { --dn-compact-control-surface: var(--dn-home-panel); }
+  .dn-contact-intent--general .dn-contact-primary-actions .dn-contact-primary-directions:hover { --dn-compact-control-surface: var(--dn-surface-hover); }
+  .dn-contact-section--general .dn-contact-card { margin-top: var(--dn-space-4); border-radius: var(--dn-radius-content-card); }
+  .dn-contact-section--general .dn-contact-card__heading { display: none; }
+  .dn-contact-section--general .dn-contact-card__links { margin-top: 0; }
+  .dn-contact-intent--general .dn-contact-card__link {
+    grid-template-columns: minmax(0, 1fr) 20px;
+    column-gap: var(--dn-space-4);
+    row-gap: 3px;
+    align-content: center;
+  }
+  .dn-contact-intent--general .dn-contact-card__icon { display: none; }
+  .dn-contact-intent--general .dn-contact-card__copy { display: contents; }
+  .dn-contact-intent--general .dn-contact-card__copy strong {
+    min-width: 0;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .dn-contact-intent--general .dn-contact-card__copy > span {
+    min-width: 0;
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  .dn-contact-intent--general .dn-contact-card__cue {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .dn-contact-section--general .dn-contact-location { margin-top: var(--dn-space-6); }
+  .dn-contact-section--general .dn-contact-location__card {
+    overflow: hidden;
+    border: 1px solid var(--dn-line);
+    border-radius: var(--dn-radius-content-card);
+    background: var(--dn-surface-raised);
+  }
+  .dn-contact-section--general .dn-contact-location__card .dn-showroom-map {
+    border: 0;
+    border-radius: 0;
+  }
+}
+
+@container (max-width: 18rem) {
+  .dn-contact-primary-actions { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Keep the full photographic hero separate from the practical visit panel. */
 @media (min-width: 992px) {
   .dn-app-shell .dn-contact-hero--general.dn-route-hero {
     align-items: flex-start;
-    background: var(--dn-theme-contact-surface);
   }
-
-  .dn-app-shell .dn-contact-hero--general :is(.dn-hero-vehicles, .dn-contact-hero__action) {
-    display: none;
+  .dn-app-shell .dn-contact-hero--general .dn-contact-hero__action { display: none; }
+  .dn-contact-hero__desktop-actions { display: flex; gap: var(--dn-space-3); }
+  .dn-contact-hero__desktop-actions .dn-contact-button {
+    min-height: var(--dn-control-height-default);
+    gap: var(--dn-space-2);
+    padding: 0 var(--dn-space-5);
+    border-radius: var(--dn-pill);
+    font: var(--dn-control-font);
   }
-
-  .dn-app-shell .dn-contact-section--general {
-    position: relative;
-    z-index: 1;
-    margin-top: calc(var(--dn-route-hero-control-top) - var(--dn-route-hero-height));
-    padding: 0 0 72px;
-    background: linear-gradient(to bottom, transparent calc(var(--dn-route-hero-height) - var(--dn-route-hero-control-top)), var(--dn-surface-canvas) 0);
+  .dn-contact-hero__call { background: var(--dn-red); color: var(--dn-white); }
+  .dn-contact-hero__call:hover { background: var(--dn-red-hover); }
+  .dn-contact-hero__visit { background: var(--dn-white); color: var(--dn-ink); }
+  .dn-contact-hero__visit:hover { background: var(--dn-surface-hover); }
+  .dn-contact-hero__desktop-actions a:focus-visible { outline: 3px solid var(--dn-white); outline-offset: 4px; }
+  .dn-contact-section--general {
+    padding: var(--dn-space-8) 0 48px;
+    background: var(--dn-surface-canvas);
     scroll-margin-top: 160px;
   }
-
-  .dn-app-shell .dn-contact-section--general > .container {
-    width: min(1408px, 100%);
-    padding-inline: 24px;
-  }
-
-  .dn-app-shell .dn-contact-section--general .dn-contact-location--general {
-    margin: 56px auto 0;
-  }
-
-  .dn-app-shell .dn-contact-section--general .dn-contact-location__card {
-    overflow: hidden;
-    border-radius: 20px;
-    background: var(--dn-white);
-    box-shadow: var(--dn-card-hover-shadow);
-  }
-
-  .dn-app-shell .dn-contact-section--general .dn-contact-location__heading {
-    max-width: none;
-    margin: 0;
-    padding: 28px 32px;
-    text-align: center;
-  }
-
-  .dn-app-shell .dn-contact-section--general .dn-contact-location__heading h2 {
-    font-size: var(--dn-text-section-compact);
-    line-height: var(--dn-leading-section);
-  }
-
-  .dn-app-shell .dn-contact-section--general .dn-contact-location__heading p { margin-top: 8px; }
-
-  .dn-app-shell .dn-contact-section--general .dn-showroom-map,
-  .dn-app-shell .dn-contact-section--general .dn-showroom-map__frame {
-    width: 100%;
-    min-height: 440px;
-    height: 440px;
-  }
-
-  .dn-app-shell .dn-contact-section--general .dn-showroom-map {
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-  }
+  .dn-contact-section--general > .container { width: min(1344px, 100%); padding-inline: 24px; }
+  .dn-contact-location--general { display: none; }
 }
 
 /* Topic journeys share the studio banner and readable white panels. */
@@ -775,7 +811,7 @@
     margin-top: -52px;
     padding: 20px 16px 14px;
     border: 1px solid #e3e6ea;
-    border-radius: 20px;
+    border-radius: var(--dn-radius-entry-card);
     background: #fff;
     box-shadow: 0 10px 28px rgba(13, 18, 26, .11);
   }

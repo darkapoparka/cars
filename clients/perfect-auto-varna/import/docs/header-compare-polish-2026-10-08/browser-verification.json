@@ -1,0 +1,118 @@
+{
+  "headerKeyboardOrder": [
+    "Menu",
+    "Call",
+    "Search cars",
+    "Compare",
+    "Saved cars",
+    "Admin dashboard (demo)"
+  ],
+  "desktop1440": {
+    "viewport": [
+      1440,
+      1000
+    ],
+    "tableClientHeight": 502,
+    "tableScrollHeight": 502
+  },
+  "responsive": [
+    {
+      "columns": [
+        {
+          "title": "BMW X5 40i M Sport Shadow Line",
+          "width": 163.5,
+          "x": 198
+        },
+        {
+          "title": "BMW X4 M Competition",
+          "width": 163.5,
+          "x": 394.5
+        },
+        {
+          "title": "BMW XM",
+          "width": 163.5,
+          "x": 591
+        },
+        {
+          "title": "Audi SQ5 30T Black Optic",
+          "width": 164,
+          "x": 787.5
+        }
+      ],
+      "pageOverflow": false,
+      "table": {
+        "clientHeight": 502,
+        "clientWidth": 926,
+        "scrollHeight": 502,
+        "scrollWidth": 926
+      },
+      "toolbarOverflow": false,
+      "viewport": [
+        1024,
+        900
+      ]
+    },
+    {
+      "columns": [
+        {
+          "title": "BMW X5 40i M Sport Shadow Line",
+          "width": 163,
+          "x": 190
+        },
+        {
+          "title": "BMW X4 M Competition",
+          "width": 163,
+          "x": 370
+        },
+        {
+          "title": "BMW XM",
+          "width": 163,
+          "x": 550
+        },
+        {
+          "title": "Audi SQ5 30T Black Optic",
+          "width": 163.5,
+          "x": 730
+        }
+      ],
+      "pageOverflow": false,
+      "table": {
+        "clientHeight": 199,
+        "clientWidth": 655,
+        "scrollHeight": 399,
+        "scrollWidth": 860
+      },
+      "toolbarOverflow": false,
+      "viewport": [
+        768,
+        540
+      ]
+    },
+    {
+      "columns": [
+        {
+          "title": "BMW X5 40i M Sport Shadow Line",
+          "width": 240.5,
+          "x": 190
+        },
+        {
+          "title": "BMW X4 M Competition",
+          "width": 241,
+          "x": 447.5
+        }
+      ],
+      "pageOverflow": false,
+      "table": {
+        "clientHeight": 214,
+        "clientWidth": 655,
+        "scrollHeight": 378,
+        "scrollWidth": 655
+      },
+      "toolbarOverflow": false,
+      "viewport": [
+        768,
+        540
+      ]
+    }
+  ]
+}

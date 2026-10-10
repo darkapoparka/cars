@@ -1,0 +1,162 @@
+[
+  {
+    "variant": "kerb",
+    "width": 1440,
+    "locale": "bg",
+    "frame": {
+      "x": 32.5,
+      "y": 138,
+      "width": 1360,
+      "height": 164
+    },
+    "title": {
+      "x": 556.96875,
+      "y": 158.796875,
+      "width": 311.046875,
+      "height": 38.390625
+    },
+    "background": "url(\"http://127.0.0.1:59088/assets/images/template/home-section-circuit-asphalt-v3.webp\")",
+    "before": "url(\"http://127.0.0.1:59088/assets/images/template/home-section-kerb-photographic-v5.webp\")",
+    "after": "url(\"http://127.0.0.1:59088/assets/images/template/home-section-kerb-photographic-v5.webp\")",
+    "overflow": false,
+    "cta": "/bg/listing-grid",
+    "bannerRequests": [
+      "/assets/images/template/home-section-shared-backdrop-v1.webp",
+      "/assets/images/template/home-section-circuit-asphalt-v3.webp",
+      "/assets/images/template/home-section-kerb-photographic-v5.webp"
+    ],
+    "errors": []
+  },
+  {
+    "variant": "circuit",
+    "width": 1440,
+    "locale": "bg",
+    "frame": {
+      "x": 32.5,
+      "y": 138,
+      "width": 1360,
+      "height": 164
+    },
+    "title": {
+      "x": 556.96875,
+      "y": 158.796875,
+      "width": 311.046875,
+      "height": 38.390625
+    },
+    "background": "url(\"http://127.0.0.1:59088/assets/images/template/home-section-circuit-asphalt-v3.webp\")",
+    "before": "none",
+    "after": "url(\"http://127.0.0.1:59088/assets/images/template/home-section-circuit-asphalt-v3.webp\")",
+    "overflow": false,
+    "cta": "/bg/listing-grid",
+    "bannerRequests": [
+      "/assets/images/template/home-section-shared-backdrop-v1.webp",
+      "/assets/images/template/home-section-circuit-asphalt-v3.webp"
+    ],
+    "errors": []
+  },
+  {
+    "variant": "kerb",
+    "width": 320,
+    "locale": "bg",
+    "frame": {
+      "x": 12,
+      "y": 108.21875,
+      "width": 296,
+      "height": 81.59375
+    },
+    "title": {
+      "x": 56,
+      "y": 120.21875,
+      "width": 208,
+      "height": 57.59375
+    },
+    "background": "url(\"http://127.0.0.1:59088/assets/images/template/home-section-circuit-asphalt-v3-960.webp\")",
+    "before": "url(\"http://127.0.0.1:59088/assets/images/template/home-section-kerb-photographic-v5-960.webp\")",
+    "after": "url(\"http://127.0.0.1:59088/assets/images/template/home-section-kerb-photographic-v5-960.webp\")",
+    "overflow": false,
+    "cta": "/bg/listing-grid",
+    "bannerRequests": [
+      "/assets/images/template/home-section-circuit-asphalt-v3-960.webp",
+      "/assets/images/template/home-section-kerb-photographic-v5-960.webp"
+    ],
+    "errors": []
+  },
+  {
+    "variant": "circuit",
+    "width": 390,
+    "locale": "en",
+    "frame": {
+      "x": 12,
+      "y": 108.21875,
+      "width": 366,
+      "height": 64
+    },
+    "title": {
+      "x": 122.296875,
+      "y": 125.8125,
+      "width": 145.40625,
+      "height": 28.796875
+    },
+    "background": "url(\"http://127.0.0.1:59088/assets/images/template/home-section-circuit-asphalt-v3-960.webp\")",
+    "before": "none",
+    "after": "url(\"http://127.0.0.1:59088/assets/images/template/home-section-circuit-asphalt-v3-960.webp\")",
+    "overflow": false,
+    "cta": "/en/listing-grid",
+    "bannerRequests": [
+      "/assets/images/template/home-section-circuit-asphalt-v3-960.webp"
+    ],
+    "errors": []
+  },
+  {
+    "variant": "headlights",
+    "width": 320,
+    "locale": "bg",
+    "frame": {
+      "x": 12,
+      "y": 108.21875,
+      "width": 296,
+      "height": 81.59375
+    },
+    "title": {
+      "x": 56,
+      "y": 120.21875,
+      "width": 208,
+      "height": 57.59375
+    },
+    "background": "linear-gradient(to right, rgba(0, 0, 0, 0), color(srgb 0.0823529 0.0941176 0.113725 / 0.88) 18%, color(srgb 0.0823529 0.0941176 0.113725 / 0.88) 82%, rgba(0, 0, 0, 0)), url(\"http://127.0.0.1:59088/assets/images/template/home-section-headlights-v1.webp\")",
+    "before": "none",
+    "after": "none",
+    "overflow": false,
+    "cta": "/bg/listing-grid",
+    "bannerRequests": [
+      "/assets/images/template/home-section-headlights-v1.webp"
+    ],
+    "errors": []
+  },
+  {
+    "variant": "headlights",
+    "width": 390,
+    "locale": "bg",
+    "frame": {
+      "x": 12,
+      "y": 108.21875,
+      "width": 366,
+      "height": 64
+    },
+    "title": {
+      "x": 77.390625,
+      "y": 125.8125,
+      "width": 235.21875,
+      "height": 28.796875
+    },
+    "background": "linear-gradient(to right, rgba(0, 0, 0, 0), color(srgb 0.0823529 0.0941176 0.113725 / 0.88) 18%, color(srgb 0.0823529 0.0941176 0.113725 / 0.88) 82%, rgba(0, 0, 0, 0)), url(\"http://127.0.0.1:59088/assets/images/template/home-section-headlights-v1.webp\")",
+    "before": "none",
+    "after": "none",
+    "overflow": false,
+    "cta": "/bg/listing-grid",
+    "bannerRequests": [
+      "/assets/images/template/home-section-headlights-v1.webp"
+    ],
+    "errors": []
+  }
+]

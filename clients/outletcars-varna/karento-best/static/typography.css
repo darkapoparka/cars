@@ -1,0 +1,90 @@
+/* Shared font and small-text roles. Keep the theme's heading and body scale. */
+
+:root {
+  --karento-font-sans: "Urbanist", sans-serif;
+  --karento-text-compact: 0.75rem;
+  --karento-text-caption: 0.8125rem;
+  --karento-text-field: 1rem;
+}
+
+body,
+input,
+select,
+button,
+textarea,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+.heading-1,
+.heading-2,
+.heading-3,
+.heading-4,
+.heading-5,
+.heading-6,
+.display-1,
+.display-2,
+.text-sm,
+.text-md,
+.text-lg,
+.text-xl,
+.text-label,
+.text-15-medium,
+.text-20-medium,
+.text-24-semibold,
+.text-24-bold,
+.text-24-medium,
+.text-22-bold,
+.text-18-bold,
+.text-16-bold,
+.text-18-semibold,
+.text-32-bold,
+.text-48-semibold,
+.text-88-semibold,
+.box-calendar-date input,
+.btn,
+.btn.btn-black,
+.btn.btn-gray,
+.btn.btn-gray2,
+.btn.btn-primary,
+.btn.btn-primary2,
+.contact-from-area .contact-form-style button,
+.form-group label,
+.header .main-menu li a,
+.header .main-menu li ul li a,
+.pagination li a,
+.box-banner-ads-recent .btn-brand-secondary {
+  font-family: var(--karento-font-sans);
+}
+
+.text-96 {
+  font-family: var(--karento-font-sans) !important;
+}
+
+/* Existing caption utilities retain their weight and 18px line height. */
+.text-xs,
+.text-xs-medium,
+.text-xs-bold,
+.karento-account-heading {
+  font-size: var(--karento-text-caption);
+}
+
+.card-popular .card-info .card-meta .meta-links a {
+  font-size: var(--karento-text-caption);
+}
+
+/* Bootstrap's relative badge size otherwise resolves to 10.5px. */
+.badge.badge-sm,
+.badge.fs-10 {
+  font-size: var(--karento-text-compact);
+}
+
+.box-calendar-date input {
+  font-size: var(--karento-text-field);
+}
+
+/* Phone role values and their component/legacy consumers are owned by
+   mobile-tokens.css, mobile-controls.css and scoped component styles. */

@@ -1,63 +1,87 @@
 'use client';
-import {assetPath} from '@/lib/paths';
-import {useCopy} from '@/lib/locale';
-import Image from '@/components/AppImage';
-
-import {useState} from 'react';
+import {Suspense, useState} from 'react';
+import {ClipboardCheck, Heart, Search} from 'lucide-react';
 import {useRouter} from '@/lib/navigation';
+import {useCopy} from '@/lib/locale';
 import * as stylex from '@stylexjs/stylex';
 import DiscoveryHeader from '@/components/DiscoveryHeader';
-import ShowroomBanner from '@/components/ShowroomBanner';
+import PageHeader from '@/components/PageHeader';
+import IconButton from '@/components/IconButton';
+import ShowroomBanner, {ShowroomBannerSkeleton} from '@/components/ShowroomBanner';
+import DealerMobileBanner, {DealerBannerAction} from '@/components/DealerMobileBanner';
+import LandingContentFrame, {landingContent} from '@/components/LandingContentFrame';
+import ServiceSearchField, {useServiceSearch, type ServiceSearchState} from '@/components/ServiceSearchField';
 import FeatureContent from '@/components/FeatureContent';
-import LoginSheet from '@/components/DealerEnquirySheet';
-import {showroom} from '@/lib/showroom';
+import FinanceCalculatorLauncher, {type FinanceView} from '@/components/FinanceCalculatorLauncher';
+import FinanceQuoteHero from '@/components/FinanceQuoteHero';
+import ImportCountryPicker, {ImportCountryFilters} from '@/components/ImportCountryPicker';
+import {ServiceHeroControls} from '@/components/ServiceCatalogue';
+import DealerEnquirySheet from '@/components/DealerEnquirySheet';
+import SellEnquirySheet, {type SellCarDetails, type SellIntent} from '@/components/SellEnquirySheet';
+import SellCarEntry from '@/components/SellCarEntry';
+import SellQuoteHero from '@/components/SellQuoteHero';
+import {useHomeAlternative} from '@/lib/home-alternative';
 import {media, tokens as $} from '@/app/tokens.stylex';
 
 export type FeatureKind = 'sell' | 'finance' | 'service';
 const config = {
-  sell: {mobileTitle: 'Sell your car.', title: 'Sell your car.', copy: 'A simple way to sell or part-exchange.', mobileCopy: 'Sell or part-exchange.', cta: 'Sell your car', mobileCta: 'Ask about selling'},
-  finance: {mobileTitle: 'Car finance.', title: 'Finance your next car.', copy: 'Payment options for your next car.', mobileCopy: 'Explore payment options.', cta: 'Get assistance', mobileCta: 'Ask about finance'},
-  service: {mobileTitle: 'Car care.', title: 'Care for your car.', copy: 'Find the right service for your car.', mobileCopy: 'Vehicle care options.', cta: 'Book a service', mobileCta: 'Ask about service'},
+  sell: {mobileTitle: 'Sell your car.', title: 'Sell your car.', mobileCopy: 'Sell or part-exchange.'},
+  finance: {mobileTitle: 'Finance calculator', title: 'Car finance.', mobileCopy: 'Monthly payment'},
+  service: {mobileTitle: 'Car services.', title: 'Care for your car.', mobileCopy: 'Servicing and diagnostics.'},
 } as const;
-const sellBrands = [['Toyota', 'sell-brand-1'], ['Honda', 'sell-brand-2'], ['Nissan', 'sell-brand-3'], ['Mercedes', 'sell-brand-4'], ['BMW', 'sell-brand-5'], ['Audi', 'sell-brand-6'], ['Ford', 'sell-brand-7'], ['Kia', 'sell-brand-8'], ['Hyundai', 'brand-hyundai']] as const;
-const serviceBrands = [['Toyota', 'sell-brand-1'], ['Honda', 'sell-brand-2'], ['Nissan', 'sell-brand-3'], ['Hyundai', 'brand-hyundai'], ['BMW', 'sell-brand-5'], ['Chevrolet', 'brand-chevrolet'], ['Ford', 'sell-brand-7'], ['Kia', 'sell-brand-8'], ['Mercedes', 'sell-brand-4']] as const;
-const benefits = ['Explore deposit\noptions', 'Choose your\npayment term', 'Understand\neligibility', 'Discuss rates\nand repayments'];
 
 export default function FeatureLanding({kind}: {kind: FeatureKind}) {
-  const tx = useCopy();
+  return kind === 'service'
+    ? <Suspense fallback={<ShowroomBannerSkeleton title={config.service.title}/>}><ServiceLanding/></Suspense>
+    : <FeatureLandingContent kind={kind}/>;
+}
 
+function ServiceLanding() {
+  const serviceSearch = useServiceSearch();
+  return <FeatureLandingContent kind="service" serviceSearch={serviceSearch}/>;
+}
+
+function FeatureLandingContent({kind, serviceSearch}: {kind: FeatureKind; serviceSearch?: ServiceSearchState}) {
   const router = useRouter();
+  const tx = useCopy();
+  const alternative = useHomeAlternative();
   const current = config[kind];
-  const [loginOpen, setLoginOpen] = useState(false);
-  const brands = kind === 'service' ? serviceBrands : sellBrands;
-  function start(brand?: string) {
-    if (kind === 'finance') {setLoginOpen(true); return;}
-    const params = brand ? `?brand=${encodeURIComponent(brand === 'Mercedes' ? 'Mercedes-Benz' : brand)}` : '';
-    router.push(`/${kind}/details${params}`);
+  const [enquiryOpen, setEnquiryOpen] = useState(false);
+  const [financeView, setFinanceView] = useState<FinanceView>(null);
+  const [importCountry, setImportCountry] = useState('all');
+  const [sellIntent, setSellIntent] = useState<SellIntent | null>(null);
+  const [sellCar, setSellCar] = useState<SellCarDetails>({make: '', model: '', year: '', mileage: '', notes: ''});
+  function start(intent: SellIntent = 'sale') {
+    if (kind === 'sell') {setSellIntent(intent); return;}
+    if (kind === 'finance') {setEnquiryOpen(true); return;}
+    router.push(`/${kind}/details`);
   }
+  const desktopControl = kind === 'finance'
+    ? <><FinanceQuoteHero pickerOpen={financeView !== null} onChooseCar={() => setFinanceView('cars')}/><ImportCountryFilters country={importCountry} onCountryChange={setImportCountry} hero/></>
+    : kind === 'sell'
+      ? <SellQuoteHero car={sellCar} onCarChange={setSellCar} onStart={() => start()} expanded={sellIntent !== null}/>
+      : serviceSearch ? <><ServiceSearchField state={serviceSearch} onDark desktopHero/><ServiceHeroControls searchState={serviceSearch}/></> : null;
   return <div {...stylex.props(s.screen)}>
-    <DiscoveryHeader active={kind} />
-    <ShowroomBanner title={tx(current.title)} mobileTitle={current.mobileTitle} description={tx(current.copy)} mobileDescription={current.mobileCopy} action={current.cta} mobileAction={current.mobileCta} image={showroom.artwork.heroes[kind]} colourful onClick={() => start()} />
-    <main {...stylex.props(s.content)}>
-      <section aria-label={tx(kind === 'finance' ? 'Finance options' : 'Choose your brand')} {...stylex.props(s.firstSection)}>{kind !== 'finance' ? <h2 {...stylex.props(s.heading)}>{tx("Choose your brand")}</h2> : null}
-        {kind === 'finance' ? <div {...stylex.props(s.benefits)}>{benefits.map((title, index) => <button type="button" key={title} onClick={() => start()} {...stylex.props(s.benefit)}><Image sizes="(max-width: 767px) 50vw, 600px" src={showroom.artwork.financeBenefits[index]} width={486} height={324} alt={tx("")} {...stylex.props(s.benefitArt)} /><h3 {...stylex.props(s.benefitTitle)}>{tx(title)}</h3></button>)}</div> : <div {...stylex.props(s.brands)}>{brands.map(([name, asset]) => <button type="button" key={name} onClick={() => start(name)} {...stylex.props(s.brand)}><img src={assetPath(`/reference-assets/${asset}.png`)} alt={tx("")} width={83} height={76} {...stylex.props(s.brandImage)} /><span {...stylex.props(s.brandName)}>{tx(name)}</span></button>)}</div>}
-      </section>
-      <FeatureContent kind={kind} onStart={() => start()} />
-    </main>
-    <LoginSheet open={loginOpen} onClose={() => setLoginOpen(false)} />
+    {alternative ? <div {...stylex.props(s.alternativeHeader)}><PageHeader compact title={tx(current.mobileTitle).replace(/\.$/, '')} backHref="/services" backLabel="Back to services" action={<IconButton href="/saved" label={tx('Saved cars')} icon={Heart}/>}/></div> : null}
+    <div {...stylex.props(s.discovery, alternative && s.alternativeDiscovery)}><DiscoveryHeader active={kind} hideMobileIdentity /></div>
+    <DealerMobileBanner mobileCard={alternative} controlOnly={alternative} title={current.mobileTitle} description={current.mobileCopy}>
+      {kind === 'service' && serviceSearch ? <ServiceSearchField state={serviceSearch} onDark plainOnMobile={alternative}/> : kind === 'finance' ? <DealerBannerAction label="Choose your car" icon={<Search size={20} aria-hidden="true"/>} searchEntry plainOnMobile={alternative} expanded={financeView !== null} onClick={() => setFinanceView('cars')}/> : alternative ? <SellCarEntry expanded={sellIntent !== null} onClick={() => start()}/> : <DealerBannerAction label="Value my car" icon={<ClipboardCheck size={20} aria-hidden="true"/>} expanded={sellIntent !== null} onClick={() => start()}/>}
+    </DealerMobileBanner>
+    <ShowroomBanner title={current.title} control={desktopControl}/>
+    <LandingContentFrame><main data-landing-content {...stylex.props(landingContent.panel, s.content, alternative && s.alternativeContent)}>
+      {kind === 'finance' ? <><ImportCountryPicker country={importCountry} onCountryChange={setImportCountry}/><FinanceCalculatorLauncher view={financeView} onViewChange={setFinanceView} backNavigation={alternative}/></> : null}
+      <FeatureContent kind={kind} onStart={start} serviceSearch={serviceSearch}/>
+    </main></LandingContentFrame>
+    <DealerEnquirySheet open={enquiryOpen} onClose={() => setEnquiryOpen(false)} />
+    {kind === 'sell' ? <SellEnquirySheet car={sellCar} onCarChange={setSellCar} intent={sellIntent} onIntentChange={setSellIntent} onClose={() => setSellIntent(null)}/> : null}
   </div>;
 }
 const s = stylex.create({
-  screen: {minHeight: '100vh', paddingBottom: 170, backgroundColor: '#fff'},
-  content: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}},
-  firstSection: {paddingTop: 20},
-  heading: {fontSize: 14, color: $.muted, fontWeight: 500, lineHeight: 1.4},
-  brands: {display: 'grid', gridAutoFlow: 'column', gridTemplateRows: 'repeat(2,auto)', gridAutoColumns: {[media.mobile]: 83, default: 110}, columnGap: 14, rowGap: 18, overflowX: 'auto', marginTop: 14, marginRight: {[media.mobile]: -12, default: 0}, scrollbarWidth: 'none'},
-  brand: {display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, padding: 0, color: $.text, fontSize: 14, fontWeight: 500, borderWidth: 0, backgroundColor: 'transparent', cursor: 'pointer'},
-  brandImage: {width: '100%', height: 68, objectFit: 'contain'},
-  brandName: {minHeight: 20, lineHeight: '20px'},
-  benefits: {display: 'grid', gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gap: 12},
-  benefit: {position: 'relative', aspectRatio: {[media.mobile]: '1.25', default: '1.5'}, padding: 0, overflow: 'hidden', textAlign: 'left', color: $.text, borderWidth: 0, borderRadius: 16, backgroundColor: '#f9f9f9', cursor: 'pointer'},
-  benefitArt: {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'fill'},
-  benefitTitle: {position: 'absolute', top: 0, left: 0, right: 0, zIndex: 1, padding: {[media.mobile]: 12, default: 24}, fontSize: {[media.mobile]: 15, default: 25}, fontWeight: 600, lineHeight: 1.3, whiteSpace: 'normal', textWrap: 'balance', letterSpacing: 0},
+  screen: {minHeight: '100vh', paddingBottom: 'calc(84px + env(safe-area-inset-bottom))', backgroundColor: '#fff'},
+  alternativeHeader: {display: {[media.mobile]: 'contents', default: 'none'}},
+  discovery: {display: 'contents'},
+  alternativeDiscovery: {display: {[media.mobile]: 'none', default: 'contents'}},
+  alternativeContent: {paddingTop: {[media.mobile]: 0, default: 8}, borderTopLeftRadius: {[media.mobile]: 0, default: 32}, borderTopRightRadius: {[media.mobile]: 0, default: 32}},
+  // Keep the first row's margin inside every mobile landing panel.
+  content: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}, paddingTop: {[media.mobile]: 0, default: 8}, display: {[media.mobile]: 'flow-root', default: 'block'}},
 });

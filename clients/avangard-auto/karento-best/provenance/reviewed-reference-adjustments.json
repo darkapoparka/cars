@@ -1,0 +1,29 @@
+{
+  "titles": {
+    "reason": "The owner requested removal of old template boilerplate during the 8 October 2026 source audit. Nine alternate layouts now have descriptive dealer-aware document titles instead of the generic Bootstrap template title. This changes browser metadata only; captured main content, image contracts, composition hashes and visual comparisons remain unchanged.",
+    "values": {
+      "index": "Home | Karento",
+      "index-2": "Home | Karento",
+      "cars-list-1": "Vehicles | Karento",
+      "cars-list-3": "Vehicles | Karento",
+      "cars-list-4": "Vehicles | Karento",
+      "cars-details-1": "Vehicle Details | Karento",
+      "cars-details-2": "Vehicle Details | Karento",
+      "cars-details-4": "Vehicle Details | Karento",
+      "blog-list": "News | Karento"
+    }
+  },
+  "contact": {
+    "reason": "The owner subsequently requested one white outer container with an inner card only for Get in Touch. This approved native Contact adjustment follows the preserved 4dda988 checkpoint; other reference routes are unchanged.",
+    "sourceDecision": "Cars docs/karento/DESIGN-SELECTION.md: shared outer Contact container, 7 October 2026",
+    "styles": ".karento-contact-enquiry .karento-enquiry-shell{padding:24px;border:1px solid var(--bs-border-color);border-radius:16px;background:var(--bs-background-card)}.karento-contact-enquiry .karento-enquiry-panel{padding:24px;border-radius:12px}.karento-contact-enquiry .karento-contact-map{border-radius:12px}@media(max-width:640px){.karento-contact-enquiry .karento-enquiry-shell,.karento-contact-enquiry .karento-enquiry-panel{padding:16px}.karento-contact-enquiry .karento-contact-layout{--bs-gutter-x:16px;row-gap:16px}}"
+  },
+  "wallet": {
+    "reason": "Disable the preserved wallet chart's parent-resize feedback loop to compare a settled chart. The native implementation contains this same resize fix. No chart data, dimensions, pixels or comparison threshold are removed or changed.",
+    "chartOptions": { "redrawOnParentResize": false }
+  },
+  "ranges": {
+    "reason": "Use the native range-slider fix's stable 2D layer for the preserved reference too. The former 3D layer produced a 59-pixel label rasterization difference despite identical Urbanist font files, computed styles and rectangles. Font, geometry, labels and values stay unchanged, and all pixels remain compared at the original threshold.",
+    "styles": ".noUi-base,.noUi-handle{transform:translate(0,0)}"
+  }
+}

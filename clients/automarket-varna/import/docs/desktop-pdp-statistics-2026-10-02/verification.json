@@ -1,0 +1,127 @@
+{
+	"desktop": [
+		{
+			"cards": 3,
+			"documentOverflow": false,
+			"icons": 9,
+			"labelSize": "16px",
+			"panels": [
+				{
+					"overflow": false,
+					"title": "Основни данни"
+				},
+				{
+					"overflow": false,
+					"title": "Детайли"
+				},
+				{
+					"overflow": false,
+					"title": "Оборудване"
+				}
+			],
+			"rowGap": "16px",
+			"rows": 9,
+			"width": 768
+		},
+		{
+			"cards": 3,
+			"documentOverflow": false,
+			"icons": 9,
+			"labelSize": "16px",
+			"panels": [
+				{
+					"overflow": false,
+					"title": "Основни данни"
+				},
+				{
+					"overflow": false,
+					"title": "Детайли"
+				},
+				{
+					"overflow": false,
+					"title": "Оборудване"
+				}
+			],
+			"rowGap": "16px",
+			"rows": 9,
+			"width": 1024
+		},
+		{
+			"cards": 3,
+			"documentOverflow": false,
+			"icons": 9,
+			"labelSize": "16px",
+			"panels": [
+				{
+					"overflow": false,
+					"title": "Основни данни"
+				},
+				{
+					"overflow": false,
+					"title": "Детайли"
+				},
+				{
+					"overflow": false,
+					"title": "Оборудване"
+				}
+			],
+			"rowGap": "16px",
+			"rows": 9,
+			"width": 1440
+		}
+	],
+	"english": {
+		"icons": 9,
+		"labels": [
+			"Mileage",
+			"Year",
+			"Fuel",
+			"Engine",
+			"Transmission",
+			"Color",
+			"Location",
+			"Interior",
+			"Stock No."
+		],
+		"titles": ["Vehicle details", "Details"],
+		"values": [
+			"106,000 km",
+			"2021",
+			"Petrol",
+			"3000 cc / 354 hp",
+			"Automatic",
+			"Grey",
+			"Пловдив, гр. Пловдив",
+			"On request",
+			"21778067767337633"
+		]
+	},
+	"mobile": [
+		{
+			"desktopFacts": 0,
+			"documentOverflow": false,
+			"mobilePdp": 1,
+			"width": 320
+		},
+		{
+			"desktopFacts": 0,
+			"documentOverflow": false,
+			"mobilePdp": 1,
+			"width": 390
+		}
+	],
+	"console": {
+		"freshLoad": {
+			"errors": 0,
+			"warnings": 0,
+			"route": "/bg/inventory/21778067767337633"
+		},
+		"earlierSession": {
+			"hotReloadErrorsObserved": true,
+			"source": "VehicleCard.svelte",
+			"sourceModifiedByThisTask": false,
+			"reproducedOnFreshLoad": false
+		}
+	},
+	"mobileScreenshotsMatchPriorCapture": true
+}

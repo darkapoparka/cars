@@ -1,31 +1,31 @@
 <script lang="ts">
-  import { specificationLabel } from '$lib/i18n/presentation';
+  import { MediaQuery } from 'svelte/reactivity';
 
 
   import { getI18n } from '$lib/locale/context';
   const i18n = getI18n();
+  const mobile = new MediaQuery('(max-width: 767px)', false);
 
   import { resolve } from '$app/paths';
   import {
     activeFilterCount as countFilters,
-    bodyLabel,
     listingParams,
     listingHiddenFields,
     removeListingFilter,
     listingFilterOptions,
-    listingModelsForMake,
-    parseListingFilters,
     type ListingFilters
   } from '$data/listing';
   import {
     cleanListingFormData,
+    listingDraftFromFilters,
     listingAppliedFilterLabel,
     listingFacetTitle,
+    listingFiltersFromDraft,
     listingFiltersFromFormData,
-    listingModelAfterMakeChange,
     normalizeListingMakeTransition
   } from '$data/listing-draft';
   import Icon from '$components/ui/Icon.svelte';
+  import ListingChoicePicker from './ListingChoicePicker.svelte';
   import MobileNavIcon from '$components/layout/MobileActionIcon.svelte';
   import QuickFilterSheet from './QuickFilterSheet.svelte';
   import VehicleDiscoveryForm from './VehicleDiscoveryForm.svelte';
@@ -41,33 +41,20 @@
   let { filters, resultCount, openFilters, filtersOpen, onDraftChange }: Props = $props();
   let activeFilterCount = $derived(countFilters(filters));
   let pending = $derived(filters);
+  let controlDraft = $derived(listingDraftFromFilters(filters));
+  function updateControls(draft: typeof controlDraft) {
+    pending = listingFiltersFromDraft({ ...draft, q: query });
+    onDraftChange(pending);
+  }
   let query = $derived(filters.q);
-  let make = $derived(filters.make);
-  let model = $derived(filters.model);
-  let body = $derived(filters.body);
-  let fuel = $derived(filters.fuel);
-  let modelOptions = $derived(listingModelsForMake(make));
-  const quickFilters = [
-    { label: 'Vehicle type', field: 'type' },
-    { label: 'Марка', field: 'make' },
-    { label: 'Модел', field: 'model' },
-    { label: 'Цена', field: 'price' },
-    { label: 'Година', field: 'year' },
-    { label: 'Купе', field: 'body' },
-    { label: 'Гориво', field: 'fuel' },
-    { label: 'Скорости', field: 'transmission' },
-    { label: 'Пробег', field: 'mileage_max' },
-    { label: 'Версия', field: 'version' },
-    { label: 'Състояние', field: 'condition' },
-    { label: 'Екстри', field: 'equipment' }
-  ] as const;
+  const quickFilters = ['type', 'make', 'model', 'price', 'year', 'body', 'fuel', 'transmission', 'mileage_max', 'version', 'condition', 'equipment'] as const;
   const activeChips = $derived(
     [...listingParams(filters).entries()]
       .filter(([key, value]) => value && key !== 'sort' && ['q', 'type', 'make', 'model', 'body', 'fuel', 'transmission', 'version', 'condition', 'price_min', 'price_max', 'year_min', 'year_max', 'mileage_max', 'equipment'].includes(key))
       .map(([key, value]) => {
         const params = removeListingFilter(filters, key, value);
         const search = params.toString();
-        const href: '/listing-grid' | `/listing-grid?${string}` = search ? `/listing-grid?${search}` : '/listing-grid';
+        const href: '/cars' | `/cars?${string}` = search ? `/cars?${search}` : '/cars';
         return { key: `${key}-${value}`, label: listingAppliedFilterLabel(filters, key, value, i18n.locale), href };
       })
   );
@@ -77,21 +64,16 @@
     pending = normalizeListingMakeTransition(pending, listingFiltersFromFormData(new FormData(event.currentTarget as HTMLFormElement)));
     onDraftChange(pending);
   }
-  function changeMake(event: Event) {
-    const nextMake = (event.currentTarget as HTMLSelectElement).value;
-    model = listingModelAfterMakeChange(make, nextMake, model);
-    make = nextMake;
-  }
   const cleanFormData = (event: FormDataEvent) => cleanListingFormData(event.formData);
 </script>
 
 <section class="dn-listing-filter-wrap" data-slot="listing-filters" aria-label={i18n.t("m_6f8428de4166")}>
   <div class="container">
     <div class="dn-listing-filter">
-      <div class="dn-listing-desktop-discovery"><VehicleDiscoveryForm {filters} {openFilters} {filtersOpen} {onDraftChange} showFilterAction={false} /></div>
+      <div class="dn-listing-desktop-discovery"><VehicleDiscoveryForm {filters} {resultCount} {openFilters} {filtersOpen} {onDraftChange} showFilterAction={false} modalFacets /></div>
       <QuickFilterSheet mode="url" id="dn-listing-sort-sheet">
       {#snippet children(openSort, sortOpen)}
-      <form class="dn-listing-mobile-form" method="GET" action={i18n.href(resolve('/listing-grid'))} onformdata={cleanFormData} oninput={updateDraft} onchange={updateDraft}>
+      <form class="dn-listing-mobile-form" method="GET" action={i18n.href(resolve('/cars'))} onformdata={cleanFormData} oninput={updateDraft} onchange={updateDraft}>
         <div class="dn-listing-filter__primary">
         <div class="dn-listing-filter__search-field">
           <MobileNavIcon name="search" size={22} />
@@ -105,21 +87,21 @@
           aria-controls="dn-listing-filter-dialog"
           aria-expanded={filtersOpen}
           aria-label={query ? i18n.t("m_645cee389418", { p0: query }) : i18n.t("m_a6403c514411")}
-          onclick={(event) => openFilters(event)}
+          onclick={(event) => openFilters(event, 'search')}
         >
           <MobileNavIcon name="search" size={22} />
           <span class={['dn-listing-filter__keyword-value', { 'dn-listing-filter__keyword-value--empty': !query }]}>{query || `${i18n.t("m_49c266baaaa7")} (${resultCount})`}</span>
           <span class="dn-listing-filter__keyword-hint">{i18n.t("m_27194051d1f9")} <Icon name="arrow-right" size={16} /></span>
         </button>
-        <button class="dn-listing-filter__mobile-sort dn-icon-button" class:dn-listing-filter__mobile-sort--active={filters.sort !== 'default'} type="button" title={i18n.t("m_bec69036aa27")}
+        <button class="dn-listing-filter__mobile-sort dn-icon-button dn-mobile-header-action" class:dn-listing-filter__mobile-sort--active={filters.sort !== 'default'} type="button" title={i18n.t("m_bec69036aa27")}
           aria-label={i18n.t("m_c3f09566c8eb", { p0: i18n.text(listingFilterOptions.sorts.find(([value]) => value === filters.sort)?.[1] ?? 'Recommended') })}
           aria-haspopup="dialog" aria-controls="dn-listing-sort-sheet" aria-expanded={sortOpen}
-          onclick={(event) => openSort(event, 'sort', 'Сортиране')}>
+          onclick={(event) => openSort(event, 'sort')}>
           <MobileNavIcon name="sort" size={20} />
           {#if filters.sort !== 'default'}<span class="dn-listing-filter__sort-active" aria-hidden="true"></span>{/if}
         </button>
         <button
-          class="dn-listing-filter__toggle dn-icon-button"
+          class="dn-listing-filter__toggle dn-icon-button dn-mobile-header-action"
           class:dn-listing-filter__toggle--active={activeFilterCount > 0}
           type="button"
           aria-haspopup="dialog"
@@ -137,38 +119,10 @@
         </div>
 
         <div class="dn-listing-filter__facets" aria-label={i18n.t("m_f6c8ed6a4374")}>
-        <label>
-          <span class="dn-listing-filter__label">{i18n.t("m_ccdd25d4230f")}</span>
-          <select {@attach i18n.validation} name="make" aria-label={i18n.t("m_ccdd25d4230f")} value={make} onchange={changeMake}>
-            {#each listingFilterOptions.makes as option (option)}
-              <option value={option}>{specificationLabel(option, i18n.locale) || i18n.t("m_a52ace420f21")}</option>
-            {/each}
-          </select>
-        </label>
-        <label>
-          <span class="dn-listing-filter__label">{i18n.t("m_5e2c614c23f0")}</span>
-          <select {@attach i18n.validation} name="model" aria-label={i18n.t("m_5e2c614c23f0")} bind:value={model}>
-            {#each modelOptions as option (option)}
-              <option value={option}>{specificationLabel(option, i18n.locale) || i18n.t("m_a52ace420f21")}</option>
-            {/each}
-          </select>
-        </label>
-        <label>
-          <span class="dn-listing-filter__label">{i18n.t("m_191c24bf12d5")}</span>
-          <select {@attach i18n.validation} name="body" aria-label={i18n.t("m_191c24bf12d5")} bind:value={body}>
-            {#each listingFilterOptions.bodies as option (option)}
-              <option value={option}>{specificationLabel(bodyLabel(option), i18n.locale) || i18n.t("m_a52ace420f21")}</option>
-            {/each}
-          </select>
-        </label>
-        <label>
-          <span class="dn-listing-filter__label">{i18n.t("m_a80f942f4112")}</span>
-          <select {@attach i18n.validation} name="fuel" aria-label={i18n.t("m_a80f942f4112")} bind:value={fuel}>
-            {#each listingFilterOptions.fuels as option (option)}
-              <option value={option}>{specificationLabel(option, i18n.locale) || i18n.t("m_a52ace420f21")}</option>
-            {/each}
-          </select>
-        </label>
+        <ListingChoicePicker field="make" bind:draft={controlDraft} showLabel={false} compact onchange={updateControls} />
+        <ListingChoicePicker field="model" bind:draft={controlDraft} showLabel={false} compact onchange={updateControls} />
+        <ListingChoicePicker field="body" bind:draft={controlDraft} label={i18n.t('m_191c24bf12d5')} showLabel={false} compact onchange={updateControls} />
+        <ListingChoicePicker field="fuel" bind:draft={controlDraft} showLabel={false} compact onchange={updateControls} />
         </div>
         {#each primaryHiddenFields(filters) as [name, value], index (`${name}-${value}-${index}`)}
           <input type="hidden" {name} {value} />
@@ -177,24 +131,24 @@
       {/snippet}
       </QuickFilterSheet>
 
-      <div class="dn-listing-filter__quick-row">
+      <div class="dn-listing-filter__quick-row dn-listing-filter__mobile-applied">
       <QuickFilterSheet mode="url">
       {#snippet children(openQuick, quickOpen)}
       <nav class={['dn-listing-filter__quick', { 'dn-listing-filter__quick--active': activeChips.length > 0 }]} aria-label={i18n.t("m_dea1661dff21")}>
         {#each activeChips as chip (chip.key)}
           <a class="active" href={i18n.href(resolve(chip.href))} aria-label={i18n.t("m_ef5e8d630d53", { p0: chip.label })}>
-            {chip.label}<Icon name="x" size={14} />
+            {chip.label}{#if mobile.current}<MobileNavIcon name="close" size={14} />{:else}<Icon name="x" size={14} />{/if}
           </a>
         {/each}
-        {#each quickFilters as item (item.field)}
+        {#each quickFilters as field (field)}
           <button
             type="button"
             aria-haspopup="dialog"
             aria-controls="dn-quick-filter"
             aria-expanded={quickOpen}
-            onclick={(event) => openQuick(event, item.field, item.label)}
+            onclick={(event) => openQuick(event, field)}
           >
-            {listingFacetTitle(item.field, i18n.locale)}<Icon name="chevron-down" size={14} />
+            {listingFacetTitle(field, i18n.locale)}{#if mobile.current}<MobileNavIcon name="arrow" size={14} />{:else}<Icon name="chevron-down" size={14} />{/if}
           </button>
         {/each}
       </nav>
@@ -212,7 +166,7 @@
     --dn-discovery-padding: 18px;
     --dn-discovery-gap: 14px;
     --dn-discovery-search-height: 60px;
-    --dn-discovery-radius: 16px;
+    --dn-discovery-radius: var(--dn-radius);
     position: absolute;
     z-index: 4;
     top: var(--dn-route-hero-control-top);
@@ -224,7 +178,7 @@
   .dn-listing-filter {
     position: relative;
     overflow: hidden;
-    border-radius: 16px;
+    border-radius: var(--dn-radius);
     background: #fff;
     box-shadow: 0 18px 44px rgba(18, 25, 38, 0.18);
   }
@@ -245,7 +199,6 @@
   }
 
   .dn-listing-filter__quick { display: none; }
-  .dn-listing-filter label { display: block; min-width: 0; }
   .dn-listing-filter .dn-listing-filter__mobile-sort { display: none; }
   .dn-listing-filter__quick-row { display: contents; }
 
@@ -271,17 +224,6 @@
 
     .dn-listing-filter__keyword > :global(.dn-icon) { color: #6d737d; }
 
-  .dn-listing-filter select {
-    width: 100%;
-    height: 52px;
-    padding: 0 15px;
-    border: 1px solid #dfe2e6;
-    border-radius: var(--dn-radius-control);
-    outline: 0;
-    background: #f5f6f7;
-    color: #202329;
-    font: var(--dn-body-font);
-  }
 
   .dn-listing-filter__keyword:hover { border-color: #b8bec7; background: #fff; }
   .dn-listing-filter__keyword:focus-visible {
@@ -295,8 +237,7 @@
   .dn-listing-filter__keyword-value--empty { color: #737984; }
   .dn-listing-filter__keyword-hint { color: #555c66; font-size: var(--dn-text-meta); font-weight: var(--dn-weight-semibold); }
   .dn-listing-filter input::placeholder { color: #737984; opacity: 1; }
-  .dn-listing-filter input:focus,
-  .dn-listing-filter select:focus {
+  .dn-listing-filter input:focus {
     border-color: #777e88;
     background: #fff;
     box-shadow: 0 0 0 3px rgba(32, 35, 41, 0.12);
@@ -355,7 +296,7 @@
       min-height: 60px;
       padding: 5px 5px 5px 18px;
       border: 1px solid #dfe2e6;
-      border-radius: 14px;
+      border-radius: var(--dn-radius-compact);
       background: #f5f6f7;
       color: #6d737d;
     }
@@ -381,14 +322,6 @@
       font-size: var(--dn-cta-size);
     }
     .dn-listing-filter__facets { padding: 0; gap: 14px; }
-    .dn-listing-filter__label {
-      display: block;
-      margin: 0 0 6px 2px;
-      color: var(--dn-muted);
-      font-size: var(--dn-text-meta);
-      font-weight: var(--dn-weight-semibold);
-      line-height: var(--dn-leading-meta);
-    }
     .dn-listing-filter__quick--active { display: flex; gap: 8px; padding: 0 18px 14px; overflow-x: auto; }
     .dn-listing-filter__quick button { display: none; }
     .dn-listing-filter__quick a {
@@ -408,6 +341,7 @@
   }
 
   @media (min-width: 992px) {
+    .dn-listing-filter__mobile-applied { display: none; }
     .dn-listing-filter-wrap { --dn-discovery-width: min(var(--dn-hero-center-width), calc(100% - 48px)); top: var(--dn-route-hero-control-top); margin-top: 0; }
     .dn-listing-filter-wrap > .container { width: var(--dn-discovery-width); }
     .dn-listing-filter { border-radius: var(--dn-discovery-radius); box-shadow: 0 12px 32px rgb(32 35 41 / 6%); }
@@ -464,11 +398,12 @@
     .dn-listing-filter__quick :global(svg) { width: 14px; height: 14px; flex: 0 0 auto; }
     .dn-listing-filter__quick a:focus-visible,
     .dn-listing-filter__quick button:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
-    .dn-listing-filter__quick a.active { background: transparent; color: var(--dn-white); }
-    .dn-listing-filter__quick a.active::before { background: var(--dn-ink); }
+    .dn-listing-filter__quick a.active { background: transparent; color: var(--dn-ink); }
+    .dn-listing-filter__quick a.active::before { background: var(--dn-white); box-shadow: inset 0 0 0 1px var(--dn-line-emphasis); }
+    .dn-listing-filter__quick :is(a, button):active::before { background: var(--dn-surface-hover); }
     .dn-listing-filter__primary {
       grid-template-columns: minmax(0, 1fr) 44px 44px;
-      gap: 8px;
+      gap: var(--dn-space-1);
       padding: calc(12px + env(safe-area-inset-top)) 0 0;
     }
     .dn-listing-filter__keyword {
@@ -519,7 +454,7 @@
       min-width: 0;
       align-items: center;
       gap: 12px;
-      padding-block: var(--dn-space-3) var(--dn-space-4);
+      padding-block: var(--dn-space-1) var(--dn-space-2);
     }
     .dn-listing-filter__quick-row .dn-listing-filter__quick { min-width: 0; flex: 1; padding-block: 0; }
     .dn-listing-filter__count { display: none; }

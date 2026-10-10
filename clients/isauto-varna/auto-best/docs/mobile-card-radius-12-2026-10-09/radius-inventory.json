@@ -1,0 +1,1024 @@
+[
+  {
+    "name": "home",
+    "width": 390,
+    "measurements": [
+      {
+        "selector": ".dn-entry-card",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 366,
+        "height": 202
+      },
+      {
+        "selector": ".dn-vehicle-card",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 250,
+        "height": 273.25
+      },
+      {
+        "selector": ".dn-body-type",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 179,
+        "height": 116
+      },
+      {
+        "selector": ".dn-brand-card",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 179,
+        "height": 116
+      },
+      {
+        "selector": ".dn-discovery-toggle",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 179,
+        "height": 116
+      },
+      {
+        "selector": ".dn-editorial-item",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 250,
+        "height": 285.5
+      },
+      {
+        "selector": ".dn-mobile-core-card",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 175,
+        "height": 161.609375
+      },
+      {
+        "selector": ".dn-mobile-services__card",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 366,
+        "height": 127.609375
+      },
+      {
+        "selector": ".dn-vehicle-card__fact",
+        "corners": [
+          "6px",
+          "6px",
+          "6px",
+          "6px"
+        ],
+        "width": 59.015625,
+        "height": 23
+      }
+    ]
+  },
+  {
+    "name": "cars",
+    "width": 390,
+    "measurements": [
+      {
+        "selector": ".dn-vehicle-card",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 366,
+        "height": 135
+      },
+      {
+        "selector": ".dn-vehicle-card__fact",
+        "corners": [
+          "6px",
+          "6px",
+          "6px",
+          "6px"
+        ],
+        "width": 54.46875,
+        "height": 23
+      },
+      {
+        "selector": ".dn-vehicle-card--listing .dn-vehicle-card__visual",
+        "corners": [
+          "10px",
+          "10px",
+          "10px",
+          "10px"
+        ],
+        "width": 156,
+        "height": 88
+      }
+    ]
+  },
+  {
+    "name": "about",
+    "width": 390,
+    "measurements": [
+      {
+        "selector": ".dn-entry-card",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 366,
+        "height": 190.796875
+      },
+      {
+        "selector": ".dn-showroom-map",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 366,
+        "height": 282
+      }
+    ]
+  },
+  {
+    "name": "blog",
+    "width": 390,
+    "measurements": [
+      {
+        "selector": ".dn-entry-card",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 366,
+        "height": 126.796875
+      },
+      {
+        "selector": ".dn-blog-card",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 366,
+        "height": 126.828125
+      }
+    ]
+  },
+  {
+    "name": "article",
+    "width": 390,
+    "measurements": []
+  },
+  {
+    "name": "contact",
+    "width": 390,
+    "measurements": [
+      {
+        "selector": ".dn-showroom-map",
+        "corners": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "width": 364,
+        "height": 280
+      }
+    ]
+  },
+  {
+    "name": "sell",
+    "width": 390,
+    "measurements": [
+      {
+        "selector": ".dn-entry-card",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 366,
+        "height": 202
+      }
+    ]
+  },
+  {
+    "name": "import",
+    "width": 390,
+    "measurements": [
+      {
+        "selector": ".dn-entry-card",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 366,
+        "height": 202
+      }
+    ]
+  },
+  {
+    "name": "vehicle",
+    "width": 390,
+    "measurements": [
+      {
+        "selector": ".dn-showroom-map",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 366,
+        "height": 280
+      }
+    ]
+  },
+  {
+    "name": "preferences",
+    "width": 390,
+    "measurements": []
+  },
+  {
+    "name": "home",
+    "width": 320,
+    "measurements": [
+      {
+        "selector": ".dn-entry-card",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 296,
+        "height": 202
+      },
+      {
+        "selector": ".dn-vehicle-card",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 224,
+        "height": 258.625
+      },
+      {
+        "selector": ".dn-body-type",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 144,
+        "height": 116
+      },
+      {
+        "selector": ".dn-brand-card",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 144,
+        "height": 116
+      },
+      {
+        "selector": ".dn-discovery-toggle",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 144,
+        "height": 116
+      },
+      {
+        "selector": ".dn-editorial-item",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 224,
+        "height": 270.875
+      },
+      {
+        "selector": ".dn-mobile-core-card",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 140,
+        "height": 161.609375
+      },
+      {
+        "selector": ".dn-mobile-services__card",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 296,
+        "height": 122.34375
+      },
+      {
+        "selector": ".dn-vehicle-card__fact",
+        "corners": [
+          "6px",
+          "6px",
+          "6px",
+          "6px"
+        ],
+        "width": 50.359375,
+        "height": 23
+      }
+    ]
+  },
+  {
+    "name": "cars",
+    "width": 320,
+    "measurements": [
+      {
+        "selector": ".dn-vehicle-card",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 296,
+        "height": 135
+      },
+      {
+        "selector": ".dn-vehicle-card__fact",
+        "corners": [
+          "6px",
+          "6px",
+          "6px",
+          "6px"
+        ],
+        "width": 40.46875,
+        "height": 23
+      },
+      {
+        "selector": ".dn-vehicle-card--listing .dn-vehicle-card__visual",
+        "corners": [
+          "10px",
+          "10px",
+          "10px",
+          "10px"
+        ],
+        "width": 126,
+        "height": 88
+      }
+    ]
+  },
+  {
+    "name": "about",
+    "width": 320,
+    "measurements": [
+      {
+        "selector": ".dn-entry-card",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 296,
+        "height": 190.796875
+      },
+      {
+        "selector": ".dn-showroom-map",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 296,
+        "height": 282
+      }
+    ]
+  },
+  {
+    "name": "blog",
+    "width": 320,
+    "measurements": [
+      {
+        "selector": ".dn-entry-card",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 296,
+        "height": 126.796875
+      },
+      {
+        "selector": ".dn-blog-card",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 296,
+        "height": 147.625
+      }
+    ]
+  },
+  {
+    "name": "article",
+    "width": 320,
+    "measurements": []
+  },
+  {
+    "name": "contact",
+    "width": 320,
+    "measurements": [
+      {
+        "selector": ".dn-showroom-map",
+        "corners": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "width": 294,
+        "height": 280
+      }
+    ]
+  },
+  {
+    "name": "sell",
+    "width": 320,
+    "measurements": [
+      {
+        "selector": ".dn-entry-card",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 296,
+        "height": 202
+      }
+    ]
+  },
+  {
+    "name": "import",
+    "width": 320,
+    "measurements": [
+      {
+        "selector": ".dn-entry-card",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 296,
+        "height": 202
+      }
+    ]
+  },
+  {
+    "name": "vehicle",
+    "width": 320,
+    "measurements": [
+      {
+        "selector": ".dn-showroom-map",
+        "corners": [
+          "12px",
+          "12px",
+          "12px",
+          "12px"
+        ],
+        "width": 296,
+        "height": 280
+      }
+    ]
+  },
+  {
+    "name": "preferences",
+    "width": 320,
+    "measurements": []
+  },
+  {
+    "name": "home",
+    "width": 768,
+    "measurements": [
+      {
+        "selector": ".dn-entry-card",
+        "corners": [
+          "999px",
+          "999px",
+          "999px",
+          "999px"
+        ],
+        "width": 729,
+        "height": 72
+      },
+      {
+        "selector": ".dn-vehicle-card",
+        "corners": [
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "width": 333.5,
+        "height": 391.734375
+      },
+      {
+        "selector": ".dn-body-type",
+        "corners": [
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "width": 166.25,
+        "height": 200.890625
+      },
+      {
+        "selector": ".dn-brand-card",
+        "corners": [
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "width": 153.25,
+        "height": 115.1875
+      },
+      {
+        "selector": ".dn-editorial-item",
+        "corners": [
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "width": 352.5,
+        "height": 393.015625
+      },
+      {
+        "selector": ".dn-trust-card",
+        "corners": [
+          "14px",
+          "14px",
+          "14px",
+          "14px"
+        ],
+        "width": 357.5,
+        "height": 144
+      },
+      {
+        "selector": ".dn-vehicle-card__badge",
+        "corners": [
+          "999px",
+          "999px",
+          "999px",
+          "999px"
+        ],
+        "width": 101.859375,
+        "height": 34.875
+      }
+    ]
+  },
+  {
+    "name": "cars",
+    "width": 768,
+    "measurements": [
+      {
+        "selector": ".dn-vehicle-card",
+        "corners": [
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "width": 354.5,
+        "height": 405.734375
+      },
+      {
+        "selector": ".dn-vehicle-card__badge",
+        "corners": [
+          "999px",
+          "999px",
+          "999px",
+          "999px"
+        ],
+        "width": 101.859375,
+        "height": 34.875
+      },
+      {
+        "selector": ".dn-vehicle-card--listing .dn-vehicle-card__visual",
+        "corners": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "width": 354.5,
+        "height": 236.328125
+      }
+    ]
+  },
+  {
+    "name": "about",
+    "width": 768,
+    "measurements": [
+      {
+        "selector": ".dn-entry-card",
+        "corners": [
+          "20px",
+          "20px",
+          "20px",
+          "20px"
+        ],
+        "width": 729,
+        "height": 190.796875
+      },
+      {
+        "selector": ".dn-showroom-map",
+        "corners": [
+          "20px",
+          "20px",
+          "20px",
+          "20px"
+        ],
+        "width": 729,
+        "height": 282
+      }
+    ]
+  },
+  {
+    "name": "blog",
+    "width": 768,
+    "measurements": [
+      {
+        "selector": ".dn-entry-card",
+        "corners": [
+          "20px",
+          "20px",
+          "20px",
+          "20px"
+        ],
+        "width": 729,
+        "height": 130.796875
+      },
+      {
+        "selector": ".dn-blog-card",
+        "corners": [
+          "20px",
+          "20px",
+          "20px",
+          "20px"
+        ],
+        "width": 729,
+        "height": 106.8125
+      }
+    ]
+  },
+  {
+    "name": "article",
+    "width": 768,
+    "measurements": []
+  },
+  {
+    "name": "contact",
+    "width": 768,
+    "measurements": [
+      {
+        "selector": ".dn-showroom-map",
+        "corners": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "width": 727,
+        "height": 280
+      }
+    ]
+  },
+  {
+    "name": "sell",
+    "width": 768,
+    "measurements": [
+      {
+        "selector": ".dn-entry-card",
+        "corners": [
+          "20px",
+          "20px",
+          "20px",
+          "20px"
+        ],
+        "width": 560,
+        "height": 404.796875
+      }
+    ]
+  },
+  {
+    "name": "import",
+    "width": 768,
+    "measurements": [
+      {
+        "selector": ".dn-entry-card",
+        "corners": [
+          "20px",
+          "20px",
+          "20px",
+          "20px"
+        ],
+        "width": 560,
+        "height": 242.796875
+      }
+    ]
+  },
+  {
+    "name": "vehicle",
+    "width": 768,
+    "measurements": [
+      {
+        "selector": ".dn-showroom-map",
+        "corners": [
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "width": 703,
+        "height": 280
+      }
+    ]
+  },
+  {
+    "name": "preferences",
+    "width": 768,
+    "measurements": []
+  },
+  {
+    "name": "home",
+    "width": 1440,
+    "measurements": [
+      {
+        "selector": ".dn-entry-card",
+        "corners": [
+          "999px",
+          "999px",
+          "999px",
+          "999px"
+        ],
+        "width": 960,
+        "height": 72
+      },
+      {
+        "selector": ".dn-vehicle-card",
+        "corners": [
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "width": 310,
+        "height": 363.46875
+      },
+      {
+        "selector": ".dn-body-type",
+        "corners": [
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "width": 316,
+        "height": 188
+      },
+      {
+        "selector": ".dn-brand-card",
+        "corners": [
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "width": 205.328125,
+        "height": 143
+      },
+      {
+        "selector": ".dn-editorial-item",
+        "corners": [
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "width": 421.328125,
+        "height": 314.03125
+      },
+      {
+        "selector": ".dn-trust-card",
+        "corners": [
+          "20px",
+          "20px",
+          "20px",
+          "20px"
+        ],
+        "width": 668,
+        "height": 234
+      },
+      {
+        "selector": ".dn-vehicle-card__badge",
+        "corners": [
+          "999px",
+          "999px",
+          "999px",
+          "999px"
+        ],
+        "width": 93.390625,
+        "height": 30.015625
+      }
+    ]
+  },
+  {
+    "name": "cars",
+    "width": 1440,
+    "measurements": [
+      {
+        "selector": ".dn-vehicle-card",
+        "corners": [
+          "20px",
+          "20px",
+          "20px",
+          "20px"
+        ],
+        "width": 259.1875,
+        "height": 329.609375
+      },
+      {
+        "selector": ".dn-vehicle-card__badge",
+        "corners": [
+          "999px",
+          "999px",
+          "999px",
+          "999px"
+        ],
+        "width": 93.390625,
+        "height": 30.015625
+      },
+      {
+        "selector": ".dn-vehicle-card--listing .dn-vehicle-card__visual",
+        "corners": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "width": 259.1875,
+        "height": 172.78125
+      }
+    ]
+  },
+  {
+    "name": "about",
+    "width": 1440,
+    "measurements": []
+  },
+  {
+    "name": "blog",
+    "width": 1440,
+    "measurements": [
+      {
+        "selector": ".dn-blog-card",
+        "corners": [
+          "16px",
+          "16px",
+          "16px",
+          "16px"
+        ],
+        "width": 309,
+        "height": 368.046875
+      }
+    ]
+  },
+  {
+    "name": "article",
+    "width": 1440,
+    "measurements": []
+  },
+  {
+    "name": "contact",
+    "width": 1440,
+    "measurements": []
+  },
+  {
+    "name": "sell",
+    "width": 1440,
+    "measurements": [
+      {
+        "selector": ".dn-entry-card",
+        "corners": [
+          "20px",
+          "20px",
+          "20px",
+          "20px"
+        ],
+        "width": 560,
+        "height": 404.796875
+      }
+    ]
+  },
+  {
+    "name": "import",
+    "width": 1440,
+    "measurements": [
+      {
+        "selector": ".dn-entry-card",
+        "corners": [
+          "20px",
+          "20px",
+          "20px",
+          "20px"
+        ],
+        "width": 560,
+        "height": 242.796875
+      }
+    ]
+  },
+  {
+    "name": "vehicle",
+    "width": 1440,
+    "measurements": [
+      {
+        "selector": ".dn-showroom-map",
+        "corners": [
+          "20px",
+          "20px",
+          "20px",
+          "20px"
+        ],
+        "width": 866,
+        "height": 334
+      }
+    ]
+  },
+  {
+    "name": "preferences",
+    "width": 1440,
+    "measurements": []
+  }
+]

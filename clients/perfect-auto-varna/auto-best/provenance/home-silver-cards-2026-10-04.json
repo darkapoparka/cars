@@ -1,0 +1,131 @@
+[
+  {
+    "key": "collection",
+    "source": "C:/Users/radev/.codex/generated_images/01a10004-b481-79f1-820e-bb1a4abc0500/exec-37e11772-ff01-4790-ab5f-41bb93355845.png",
+    "destination": "static/assets/images/template/home-collection-silver-v1.webp",
+    "dimensions": [
+      800,
+      533
+    ],
+    "hasAlpha": true,
+    "alphaRange": [
+      0,
+      255
+    ],
+    "crop": [
+      2,
+      129,
+      796,
+      284
+    ],
+    "bytes": 61034,
+    "sha256": "5c6d2d74a9170d1c64ddf480d8bc6a91e69c2c0e82b4b595ceaa38c9a1f374c3",
+    "sourceSha256": "6468f234a749a6716af54a702e888eb48857fc4e1f76cfdd510a984499a5d7ac",
+    "encoding": {
+      "resizeWidth": 800,
+      "quality": 90,
+      "alphaQuality": 100,
+      "effort": 6,
+      "preserveFullCanvas": true
+    }
+  },
+  {
+    "key": "services",
+    "source": "runtime/home-services-preview-20261004/services-overview-v1.png",
+    "destination": "static/assets/images/template/home-services-silver-v1.webp",
+    "dimensions": [
+      800,
+      533
+    ],
+    "hasAlpha": true,
+    "alphaRange": [
+      0,
+      255
+    ],
+    "crop": [
+      38,
+      34,
+      732,
+      463
+    ],
+    "bytes": 70978,
+    "sha256": "df6a9d8520a1b09171f25ef2046dba602796c294f97fa95bb8cac704dbff63b4",
+    "sourceSha256": "51bcfa8a7d51378a9a5076fa2622f6c6288237b99fcafbbb9b43439d74c3af00",
+    "encoding": {
+      "resizeWidth": 800,
+      "quality": 90,
+      "alphaQuality": 100,
+      "effort": 6,
+      "preserveFullCanvas": true
+    }
+  },
+  {
+    "key": "sell",
+    "source": "static/assets/images/template/desktop-service-trade-in-v1.webp",
+    "dimensions": [
+      800,
+      533
+    ],
+    "hasAlpha": true,
+    "alphaRange": [
+      0,
+      255
+    ],
+    "crop": [
+      66,
+      35,
+      689,
+      456
+    ],
+    "bytes": 70328,
+    "sha256": "f1e550020133d3dcd6c6d61825b31b4b23676fbec242aad04157c7de2c75ad48",
+    "sourceSha256": "f1e550020133d3dcd6c6d61825b31b4b23676fbec242aad04157c7de2c75ad48",
+    "reuse": true
+  },
+  {
+    "key": "import",
+    "source": "static/assets/images/template/desktop-service-import-v2.webp",
+    "dimensions": [
+      800,
+      533
+    ],
+    "hasAlpha": true,
+    "alphaRange": [
+      0,
+      255
+    ],
+    "crop": [
+      28,
+      43,
+      730,
+      437
+    ],
+    "bytes": 64582,
+    "sha256": "f36eac9acd99f7dade5ce3832fcf12f1f3a6f59ce98be1144357c7c607a44c7a",
+    "sourceSha256": "f36eac9acd99f7dade5ce3832fcf12f1f3a6f59ce98be1144357c7c607a44c7a",
+    "reuse": true
+  },
+  {
+    "key": "finance",
+    "source": "static/assets/images/template/desktop-service-leasing-v2.webp",
+    "dimensions": [
+      800,
+      533
+    ],
+    "hasAlpha": true,
+    "alphaRange": [
+      0,
+      255
+    ],
+    "crop": [
+      77,
+      59,
+      694,
+      451
+    ],
+    "bytes": 65374,
+    "sha256": "475231e17474849de57c912c684b97f6dc000b715d6a1c1e2eaf431e3a8de3ad",
+    "sourceSha256": "475231e17474849de57c912c684b97f6dc000b715d6a1c1e2eaf431e3a8de3ad",
+    "reuse": true
+  }
+]

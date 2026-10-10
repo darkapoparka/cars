@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Varna",
     "addressLine": "518 Yanosh Hunyadi Blvd., opposite Varna Traffic Police",
     "address": "518 Yanosh Hunyadi Blvd., opposite Varna Traffic Police, Varna, Bulgaria",
-    "appointment": "Mon–Fri 08:30–17:30; Sat–Sun closed"
+    "appointment": "Mon–Fri 08:30–17:30; Sat–Sun closed",
+    "addressShort": "518 Yanosh Hunyadi Blvd., opposite Varna Traffic Police",
+    "appointmentShort": "Mon–Fri 08:30–17:30; Sat–Sun closed"
   },
   "bg": {
     "city": "Варна",
     "addressLine": "бул. Янош Хуняди 518, срещу КАТ Варна",
     "address": "бул. Янош Хуняди 518, срещу КАТ Варна, Варна, България",
-    "appointment": "Пон.–пет. 08:30–17:30; съб.–нед. почивни дни"
+    "appointment": "Пон.–пет. 08:30–17:30; съб.–нед. почивни дни",
+    "addressShort": "бул. Янош Хуняди 518, срещу КАТ Варна",
+    "appointmentShort": "Пон.–пет. 08:30–17:30; съб.–нед. почивни дни"
   }
 } as const;
 

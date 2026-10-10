@@ -1,0 +1,465 @@
+{
+	"date": "2026-10-04",
+	"files": [
+		{
+			"path": "src/lib/components/services/ServiceCard.svelte",
+			"sha256": "1b779cdbad2b697d1f00d6065979be1cc7c8f85226699c03203296af00e2383a"
+		},
+		{
+			"path": "src/lib/content/service-directory.ts",
+			"sha256": "5a4d625f32d08e83dd0d5d3379354efd9eed96a8c866dba2a922f126eca9c747"
+		}
+	],
+	"desktop": [
+		{
+			"locale": "bg",
+			"width": 1024,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"summaries": [
+				{
+					"text": "Избор според бюджета.",
+					"textWidth": 175.31,
+					"availableWidth": 187.25,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "VIN, история и разходи.",
+					"textWidth": 171.64,
+					"availableWidth": 187.25,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Оценка и продажба.",
+					"textWidth": 140.97,
+					"availableWidth": 187.25,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Документи и КАТ.",
+					"textWidth": 128.56,
+					"availableWidth": 187.25,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Оглед с уговорка.",
+					"textWidth": 126.14,
+					"availableWidth": 187.25,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Цена и оборудване.",
+					"textWidth": 138.67,
+					"availableWidth": 187.25,
+					"paragraphHeight": 26,
+					"fits": true
+				}
+			],
+			"blackActions": 6
+		},
+		{
+			"locale": "bg",
+			"width": 768,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"summaries": [
+				{
+					"text": "Избор според бюджета.",
+					"textWidth": 175.31,
+					"availableWidth": 300.5,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "VIN, история и разходи.",
+					"textWidth": 171.64,
+					"availableWidth": 300.5,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Оценка и продажба.",
+					"textWidth": 140.97,
+					"availableWidth": 300.5,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Документи и КАТ.",
+					"textWidth": 128.56,
+					"availableWidth": 300.5,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Оглед с уговорка.",
+					"textWidth": 126.14,
+					"availableWidth": 300.5,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Цена и оборудване.",
+					"textWidth": 138.67,
+					"availableWidth": 300.5,
+					"paragraphHeight": 26,
+					"fits": true
+				}
+			],
+			"blackActions": 6
+		},
+		{
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"summaries": [
+				{
+					"text": "Избор според бюджета.",
+					"textWidth": 175.31,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "VIN, история и разходи.",
+					"textWidth": 171.64,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Оценка и продажба.",
+					"textWidth": 140.97,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Документи и КАТ.",
+					"textWidth": 128.56,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Оглед с уговорка.",
+					"textWidth": 126.14,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Цена и оборудване.",
+					"textWidth": 138.67,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				}
+			],
+			"blackActions": 6
+		},
+		{
+			"locale": "bg",
+			"width": 1920,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"summaries": [
+				{
+					"text": "Избор според бюджета.",
+					"textWidth": 175.31,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "VIN, история и разходи.",
+					"textWidth": 171.64,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Оценка и продажба.",
+					"textWidth": 140.97,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Документи и КАТ.",
+					"textWidth": 128.56,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Оглед с уговорка.",
+					"textWidth": 126.14,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Цена и оборудване.",
+					"textWidth": 138.67,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				}
+			],
+			"blackActions": 6
+		},
+		{
+			"locale": "en",
+			"width": 768,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"summaries": [
+				{
+					"text": "Cars within your budget.",
+					"textWidth": 166.86,
+					"availableWidth": 300.5,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "VIN, history and costs.",
+					"textWidth": 153.38,
+					"availableWidth": 300.5,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Valuation and sale.",
+					"textWidth": 127.63,
+					"availableWidth": 300.5,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Registration paperwork.",
+					"textWidth": 164.17,
+					"availableWidth": 300.5,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Viewings by appointment.",
+					"textWidth": 177.86,
+					"availableWidth": 300.5,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Price and equipment.",
+					"textWidth": 145.86,
+					"availableWidth": 300.5,
+					"paragraphHeight": 26,
+					"fits": true
+				}
+			],
+			"blackActions": 6
+		},
+		{
+			"locale": "en",
+			"width": 1024,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"summaries": [
+				{
+					"text": "Cars within your budget.",
+					"textWidth": 166.86,
+					"availableWidth": 187.25,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "VIN, history and costs.",
+					"textWidth": 153.38,
+					"availableWidth": 187.25,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Valuation and sale.",
+					"textWidth": 127.63,
+					"availableWidth": 187.25,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Registration paperwork.",
+					"textWidth": 164.17,
+					"availableWidth": 187.25,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Viewings by appointment.",
+					"textWidth": 177.86,
+					"availableWidth": 187.25,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Price and equipment.",
+					"textWidth": 145.86,
+					"availableWidth": 187.25,
+					"paragraphHeight": 26,
+					"fits": true
+				}
+			],
+			"blackActions": 6
+		},
+		{
+			"locale": "en",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"summaries": [
+				{
+					"text": "Cars within your budget.",
+					"textWidth": 166.86,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "VIN, history and costs.",
+					"textWidth": 153.38,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Valuation and sale.",
+					"textWidth": 127.63,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Registration paperwork.",
+					"textWidth": 164.17,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Viewings by appointment.",
+					"textWidth": 177.86,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Price and equipment.",
+					"textWidth": 145.86,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				}
+			],
+			"blackActions": 6
+		},
+		{
+			"locale": "en",
+			"width": 1920,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"summaries": [
+				{
+					"text": "Cars within your budget.",
+					"textWidth": 166.86,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "VIN, history and costs.",
+					"textWidth": 153.38,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Valuation and sale.",
+					"textWidth": 127.63,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Registration paperwork.",
+					"textWidth": 164.17,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Viewings by appointment.",
+					"textWidth": 177.86,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				},
+				{
+					"text": "Price and equipment.",
+					"textWidth": 145.86,
+					"availableWidth": 281,
+					"paragraphHeight": 26,
+					"fits": true
+				}
+			],
+			"blackActions": 6
+		}
+	],
+	"mobile": [
+		{
+			"name": "services-bg-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "services-en-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "services-bg-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "services-en-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		}
+	],
+	"checks": {
+		"architecture": "passed",
+		"format": "passed",
+		"build": "passed",
+		"serviceSearchBrowserTests": 3
+	},
+	"preview": "Canonical Vite at 6790; production build in the existing isolated QA directory.",
+	"git": "Existing shared index.lock preserved; task changes remain uncommitted on main."
+}

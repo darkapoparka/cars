@@ -1,0 +1,856 @@
+[
+  {
+    "height": 844,
+    "overflow": 0,
+    "rails": [
+      {
+        "class": "mobile-mode-tabs daynight-mobile-hero__tabs svelte-1l8ahof mobile-mode-tabs--soft",
+        "rect": {
+          "bottom": 111,
+          "height": 45,
+          "left": 16,
+          "right": 374,
+          "top": 66,
+          "width": 358,
+          "x": 16,
+          "y": 66
+        },
+        "tabs": [
+          {
+            "after": "block",
+            "background": "rgba(0, 0, 0, 0)",
+            "focusVisible": false,
+            "outline": "none",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 16,
+              "right": 195,
+              "top": 66,
+              "width": 179,
+              "x": 16,
+              "y": 66
+            },
+            "selected": "false",
+            "text": "Buy"
+          },
+          {
+            "after": "none",
+            "background": "color(srgb 1 1 1 / 0.08)",
+            "focusVisible": true,
+            "outline": "solid",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 195,
+              "right": 374,
+              "top": 66,
+              "width": 179,
+              "x": 195,
+              "y": 66
+            },
+            "selected": "true",
+            "text": "Import"
+          }
+        ]
+      }
+    ],
+    "url": "http://localhost:6794/en?lang=en",
+    "width": 390
+  },
+  {
+    "height": 844,
+    "overflow": 0,
+    "rails": [
+      {
+        "class": "mobile-mode-tabs daynight-mobile-hero__tabs svelte-1l8ahof mobile-mode-tabs--soft",
+        "rect": {
+          "bottom": 111,
+          "height": 45,
+          "left": 16,
+          "right": 304,
+          "top": 66,
+          "width": 288,
+          "x": 16,
+          "y": 66
+        },
+        "tabs": [
+          {
+            "after": "none",
+            "background": "color(srgb 1 1 1 / 0.08)",
+            "focusVisible": true,
+            "outline": "solid",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 16,
+              "right": 160,
+              "top": 66,
+              "width": 144,
+              "x": 16,
+              "y": 66
+            },
+            "selected": "true",
+            "text": "Buy"
+          },
+          {
+            "after": "block",
+            "background": "rgba(0, 0, 0, 0)",
+            "focusVisible": false,
+            "outline": "none",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 160,
+              "right": 304,
+              "top": 66,
+              "width": 144,
+              "x": 160,
+              "y": 66
+            },
+            "selected": "false",
+            "text": "Import"
+          }
+        ]
+      }
+    ],
+    "url": "http://localhost:6794/en?lang=en",
+    "width": 320
+  },
+  {
+    "height": 844,
+    "overflow": 0,
+    "rails": [
+      {
+        "class": "mobile-mode-tabs svelte-1l8ahof mobile-mode-tabs--soft",
+        "rect": {
+          "bottom": 111,
+          "height": 45,
+          "left": 16,
+          "right": 374,
+          "top": 66,
+          "width": 358,
+          "x": 16,
+          "y": 66
+        },
+        "tabs": [
+          {
+            "after": "none",
+            "background": "color(srgb 1 1 1 / 0.08)",
+            "focusVisible": false,
+            "outline": "none",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 16,
+              "right": 195,
+              "top": 66,
+              "width": 179,
+              "x": 16,
+              "y": 66
+            },
+            "selected": "true",
+            "text": "Link / VIN"
+          },
+          {
+            "after": "block",
+            "background": "rgba(0, 0, 0, 0)",
+            "focusVisible": false,
+            "outline": "none",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 195,
+              "right": 374,
+              "top": 66,
+              "width": 179,
+              "x": 195,
+              "y": 66
+            },
+            "selected": "false",
+            "text": "Find a car"
+          }
+        ]
+      }
+    ],
+    "url": "http://localhost:6794/en/import?lang=en",
+    "width": 390
+  },
+  {
+    "height": 844,
+    "overflow": 0,
+    "rails": [
+      {
+        "class": "mobile-mode-tabs svelte-1l8ahof mobile-mode-tabs--soft",
+        "rect": {
+          "bottom": 111,
+          "height": 45,
+          "left": 16,
+          "right": 374,
+          "top": 66,
+          "width": 358,
+          "x": 16,
+          "y": 66
+        },
+        "tabs": [
+          {
+            "after": "block",
+            "background": "rgba(0, 0, 0, 0)",
+            "focusVisible": false,
+            "outline": "none",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 16,
+              "right": 195,
+              "top": 66,
+              "width": 179,
+              "x": 16,
+              "y": 66
+            },
+            "selected": "false",
+            "text": "Link / VIN"
+          },
+          {
+            "after": "none",
+            "background": "color(srgb 1 1 1 / 0.08)",
+            "focusVisible": true,
+            "outline": "solid",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 195,
+              "right": 374,
+              "top": 66,
+              "width": 179,
+              "x": 195,
+              "y": 66
+            },
+            "selected": "true",
+            "text": "Find a car"
+          }
+        ]
+      }
+    ],
+    "url": "http://localhost:6794/en/import?lang=en",
+    "width": 390
+  },
+  {
+    "height": 844,
+    "overflow": 0,
+    "rails": [
+      {
+        "class": "mobile-mode-tabs svelte-1l8ahof mobile-mode-tabs--soft",
+        "rect": {
+          "bottom": 111,
+          "height": 45,
+          "left": 16,
+          "right": 304,
+          "top": 66,
+          "width": 288,
+          "x": 16,
+          "y": 66
+        },
+        "tabs": [
+          {
+            "after": "block",
+            "background": "rgba(0, 0, 0, 0)",
+            "focusVisible": false,
+            "outline": "none",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 16,
+              "right": 160,
+              "top": 66,
+              "width": 144,
+              "x": 16,
+              "y": 66
+            },
+            "selected": "false",
+            "text": "Link / VIN"
+          },
+          {
+            "after": "none",
+            "background": "color(srgb 1 1 1 / 0.08)",
+            "focusVisible": true,
+            "outline": "solid",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 160,
+              "right": 304,
+              "top": 66,
+              "width": 144,
+              "x": 160,
+              "y": 66
+            },
+            "selected": "true",
+            "text": "Find a car"
+          }
+        ]
+      }
+    ],
+    "url": "http://localhost:6794/en/import?lang=en",
+    "width": 320
+  },
+  {
+    "height": 844,
+    "overflow": 0,
+    "rails": [
+      {
+        "class": "mobile-mode-tabs svelte-1l8ahof mobile-mode-tabs--soft",
+        "rect": {
+          "bottom": 111,
+          "height": 45,
+          "left": 16,
+          "right": 304,
+          "top": 66,
+          "width": 288,
+          "x": 16,
+          "y": 66
+        },
+        "tabs": [
+          {
+            "after": "none",
+            "background": "color(srgb 1 1 1 / 0.08)",
+            "focusVisible": false,
+            "outline": "none",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 16,
+              "right": 160,
+              "top": 66,
+              "width": 144,
+              "x": 16,
+              "y": 66
+            },
+            "selected": "true",
+            "text": "VIN"
+          },
+          {
+            "after": "block",
+            "background": "rgba(0, 0, 0, 0)",
+            "focusVisible": false,
+            "outline": "none",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 160,
+              "right": 304,
+              "top": 66,
+              "width": 144,
+              "x": 160,
+              "y": 66
+            },
+            "selected": "false",
+            "text": "No VIN?"
+          }
+        ]
+      }
+    ],
+    "url": "http://localhost:6794/en/sell-your-car?lang=en",
+    "width": 320
+  },
+  {
+    "height": 844,
+    "overflow": 0,
+    "rails": [
+      {
+        "class": "mobile-mode-tabs svelte-1l8ahof mobile-mode-tabs--soft",
+        "rect": {
+          "bottom": 111,
+          "height": 45,
+          "left": 16,
+          "right": 374,
+          "top": 66,
+          "width": 358,
+          "x": 16,
+          "y": 66
+        },
+        "tabs": [
+          {
+            "after": "none",
+            "background": "color(srgb 1 1 1 / 0.08)",
+            "focusVisible": false,
+            "outline": "none",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 16,
+              "right": 195,
+              "top": 66,
+              "width": 179,
+              "x": 16,
+              "y": 66
+            },
+            "selected": "true",
+            "text": "VIN"
+          },
+          {
+            "after": "block",
+            "background": "rgba(0, 0, 0, 0)",
+            "focusVisible": false,
+            "outline": "none",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 195,
+              "right": 374,
+              "top": 66,
+              "width": 179,
+              "x": 195,
+              "y": 66
+            },
+            "selected": "false",
+            "text": "No VIN?"
+          }
+        ]
+      }
+    ],
+    "url": "http://localhost:6794/en/sell-your-car?lang=en",
+    "width": 390
+  },
+  {
+    "height": 844,
+    "overflow": 0,
+    "rails": [
+      {
+        "class": "mobile-mode-tabs svelte-1l8ahof mobile-mode-tabs--soft",
+        "rect": {
+          "bottom": 111,
+          "height": 45,
+          "left": 16,
+          "right": 374,
+          "top": 66,
+          "width": 358,
+          "x": 16,
+          "y": 66
+        },
+        "tabs": [
+          {
+            "after": "block",
+            "background": "rgba(0, 0, 0, 0)",
+            "focusVisible": false,
+            "outline": "none",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 16,
+              "right": 195,
+              "top": 66,
+              "width": 179,
+              "x": 16,
+              "y": 66
+            },
+            "selected": "false",
+            "text": "VIN"
+          },
+          {
+            "after": "none",
+            "background": "color(srgb 1 1 1 / 0.08)",
+            "focusVisible": true,
+            "outline": "solid",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 195,
+              "right": 374,
+              "top": 66,
+              "width": 179,
+              "x": 195,
+              "y": 66
+            },
+            "selected": "true",
+            "text": "No VIN?"
+          }
+        ]
+      }
+    ],
+    "url": "http://localhost:6794/en/sell-your-car?lang=en",
+    "width": 390
+  },
+  {
+    "height": 844,
+    "overflow": 0,
+    "rails": [
+      {
+        "class": "mobile-mode-tabs daynight-mobile-hero__tabs svelte-1l8ahof mobile-mode-tabs--soft",
+        "rect": {
+          "bottom": 111,
+          "height": 45,
+          "left": 16,
+          "right": 374,
+          "top": 66,
+          "width": 358,
+          "x": 16,
+          "y": 66
+        },
+        "tabs": [
+          {
+            "after": "none",
+            "background": "color(srgb 1 1 1 / 0.08)",
+            "focusVisible": false,
+            "outline": "none",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 16,
+              "right": 195,
+              "top": 66,
+              "width": 179,
+              "x": 16,
+              "y": 66
+            },
+            "selected": "true",
+            "text": "Купи"
+          },
+          {
+            "after": "block",
+            "background": "rgba(0, 0, 0, 0)",
+            "focusVisible": false,
+            "outline": "none",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 195,
+              "right": 374,
+              "top": 66,
+              "width": 179,
+              "x": 195,
+              "y": 66
+            },
+            "selected": "false",
+            "text": "Внос"
+          }
+        ]
+      }
+    ],
+    "url": "http://localhost:6794/bg?lang=bg",
+    "width": 390
+  },
+  {
+    "height": 844,
+    "overflow": 0,
+    "rails": [
+      {
+        "class": "mobile-mode-tabs daynight-mobile-hero__tabs svelte-1l8ahof mobile-mode-tabs--soft",
+        "rect": {
+          "bottom": 111,
+          "height": 45,
+          "left": 16,
+          "right": 304,
+          "top": 66,
+          "width": 288,
+          "x": 16,
+          "y": 66
+        },
+        "tabs": [
+          {
+            "after": "none",
+            "background": "color(srgb 1 1 1 / 0.08)",
+            "focusVisible": false,
+            "outline": "none",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 16,
+              "right": 160,
+              "top": 66,
+              "width": 144,
+              "x": 16,
+              "y": 66
+            },
+            "selected": "true",
+            "text": "Купи"
+          },
+          {
+            "after": "block",
+            "background": "rgba(0, 0, 0, 0)",
+            "focusVisible": false,
+            "outline": "none",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 160,
+              "right": 304,
+              "top": 66,
+              "width": 144,
+              "x": 160,
+              "y": 66
+            },
+            "selected": "false",
+            "text": "Внос"
+          }
+        ]
+      }
+    ],
+    "url": "http://localhost:6794/bg?lang=bg",
+    "width": 320
+  },
+  {
+    "height": 844,
+    "overflow": 0,
+    "rails": [
+      {
+        "class": "mobile-mode-tabs svelte-1l8ahof mobile-mode-tabs--soft",
+        "rect": {
+          "bottom": 111,
+          "height": 45,
+          "left": 16,
+          "right": 304,
+          "top": 66,
+          "width": 288,
+          "x": 16,
+          "y": 66
+        },
+        "tabs": [
+          {
+            "after": "none",
+            "background": "color(srgb 1 1 1 / 0.08)",
+            "focusVisible": false,
+            "outline": "none",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 16,
+              "right": 160,
+              "top": 66,
+              "width": 144,
+              "x": 16,
+              "y": 66
+            },
+            "selected": "true",
+            "text": "Линк / VIN"
+          },
+          {
+            "after": "block",
+            "background": "rgba(0, 0, 0, 0)",
+            "focusVisible": false,
+            "outline": "none",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 160,
+              "right": 304,
+              "top": 66,
+              "width": 144,
+              "x": 160,
+              "y": 66
+            },
+            "selected": "false",
+            "text": "Нямам линк"
+          }
+        ]
+      }
+    ],
+    "url": "http://localhost:6794/bg/import?lang=bg",
+    "width": 320
+  },
+  {
+    "height": 844,
+    "overflow": 0,
+    "rails": [
+      {
+        "class": "mobile-mode-tabs svelte-1l8ahof mobile-mode-tabs--soft",
+        "rect": {
+          "bottom": 111,
+          "height": 45,
+          "left": 16,
+          "right": 374,
+          "top": 66,
+          "width": 358,
+          "x": 16,
+          "y": 66
+        },
+        "tabs": [
+          {
+            "after": "none",
+            "background": "color(srgb 1 1 1 / 0.08)",
+            "focusVisible": false,
+            "outline": "none",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 16,
+              "right": 195,
+              "top": 66,
+              "width": 179,
+              "x": 16,
+              "y": 66
+            },
+            "selected": "true",
+            "text": "Линк / VIN"
+          },
+          {
+            "after": "block",
+            "background": "rgba(0, 0, 0, 0)",
+            "focusVisible": false,
+            "outline": "none",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 195,
+              "right": 374,
+              "top": 66,
+              "width": 179,
+              "x": 195,
+              "y": 66
+            },
+            "selected": "false",
+            "text": "Нямам линк"
+          }
+        ]
+      }
+    ],
+    "url": "http://localhost:6794/bg/import?lang=bg",
+    "width": 390
+  },
+  {
+    "height": 844,
+    "overflow": 0,
+    "rails": [
+      {
+        "class": "mobile-mode-tabs svelte-1l8ahof mobile-mode-tabs--soft",
+        "rect": {
+          "bottom": 111,
+          "height": 45,
+          "left": 16,
+          "right": 374,
+          "top": 66,
+          "width": 358,
+          "x": 16,
+          "y": 66
+        },
+        "tabs": [
+          {
+            "after": "none",
+            "background": "color(srgb 1 1 1 / 0.08)",
+            "focusVisible": false,
+            "outline": "none",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 16,
+              "right": 195,
+              "top": 66,
+              "width": 179,
+              "x": 16,
+              "y": 66
+            },
+            "selected": "true",
+            "text": "VIN"
+          },
+          {
+            "after": "block",
+            "background": "rgba(0, 0, 0, 0)",
+            "focusVisible": false,
+            "outline": "none",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 195,
+              "right": 374,
+              "top": 66,
+              "width": 179,
+              "x": 195,
+              "y": 66
+            },
+            "selected": "false",
+            "text": "Без VIN?"
+          }
+        ]
+      }
+    ],
+    "url": "http://localhost:6794/bg/sell-your-car?lang=bg",
+    "width": 390
+  },
+  {
+    "height": 844,
+    "overflow": 0,
+    "rails": [
+      {
+        "class": "mobile-mode-tabs svelte-1l8ahof mobile-mode-tabs--soft",
+        "rect": {
+          "bottom": 111,
+          "height": 45,
+          "left": 16,
+          "right": 304,
+          "top": 66,
+          "width": 288,
+          "x": 16,
+          "y": 66
+        },
+        "tabs": [
+          {
+            "after": "none",
+            "background": "color(srgb 1 1 1 / 0.08)",
+            "focusVisible": false,
+            "outline": "none",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 16,
+              "right": 160,
+              "top": 66,
+              "width": 144,
+              "x": 16,
+              "y": 66
+            },
+            "selected": "true",
+            "text": "VIN"
+          },
+          {
+            "after": "block",
+            "background": "rgba(0, 0, 0, 0)",
+            "focusVisible": false,
+            "outline": "none",
+            "radius": "999px",
+            "rect": {
+              "bottom": 110,
+              "height": 44,
+              "left": 160,
+              "right": 304,
+              "top": 66,
+              "width": 144,
+              "x": 160,
+              "y": 66
+            },
+            "selected": "false",
+            "text": "Без VIN?"
+          }
+        ]
+      }
+    ],
+    "url": "http://localhost:6794/bg/sell-your-car?lang=bg",
+    "width": 320
+  }
+]

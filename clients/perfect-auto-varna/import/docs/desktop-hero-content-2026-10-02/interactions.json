@@ -1,0 +1,114 @@
+[
+	{
+		"locale": "bg",
+		"route": "about",
+		"keyboard": [
+			{
+				"name": "Facebook",
+				"href": "https://www.facebook.com/deninoshtautogroup/?locale=bg_BG",
+				"width": 48,
+				"height": 48,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			},
+			{
+				"name": "Instagram",
+				"href": "https://www.instagram.com/kristiankirilov13/",
+				"width": 48,
+				"height": 48,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			},
+			{
+				"name": "TikTok",
+				"href": "https://www.tiktok.com/@kristiankirilov13",
+				"width": 48,
+				"height": 48,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			}
+		],
+		"accessibilityViolations": 0,
+		"actions": "Configured destinations, keyboard sequence and enquiry/navigation verified"
+	},
+	{
+		"locale": "bg",
+		"route": "contact",
+		"keyboard": [
+			{
+				"name": "Как да стигнеш",
+				"href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+				"width": 191.015625,
+				"height": 44,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			},
+			{
+				"name": "Пиши ни · Viber",
+				"href": "viber://chat?number=%2B359877733110",
+				"width": 181.78125,
+				"height": 44,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			}
+		],
+		"accessibilityViolations": 0,
+		"actions": "Configured destinations, keyboard sequence and enquiry/navigation verified"
+	},
+	{
+		"locale": "en",
+		"route": "about",
+		"keyboard": [
+			{
+				"name": "Facebook",
+				"href": "https://www.facebook.com/deninoshtautogroup/?locale=bg_BG",
+				"width": 48,
+				"height": 48,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			},
+			{
+				"name": "Instagram",
+				"href": "https://www.instagram.com/kristiankirilov13/",
+				"width": 48,
+				"height": 48,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			},
+			{
+				"name": "TikTok",
+				"href": "https://www.tiktok.com/@kristiankirilov13",
+				"width": 48,
+				"height": 48,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			}
+		],
+		"accessibilityViolations": 0,
+		"actions": "Configured destinations, keyboard sequence and enquiry/navigation verified"
+	},
+	{
+		"locale": "en",
+		"route": "contact",
+		"keyboard": [
+			{
+				"name": "Get directions",
+				"href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+				"width": 169.625,
+				"height": 44,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			},
+			{
+				"name": "Message us · Viber",
+				"href": "viber://chat?number=%2B359877733110",
+				"width": 201.0625,
+				"height": 44,
+				"outlineWidth": "3px",
+				"outlineStyle": "solid"
+			}
+		],
+		"accessibilityViolations": 0,
+		"actions": "Configured destinations, keyboard sequence and enquiry/navigation verified"
+	}
+]

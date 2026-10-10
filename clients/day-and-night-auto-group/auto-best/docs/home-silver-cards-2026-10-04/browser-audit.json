@@ -1,0 +1,457 @@
+{
+  "serviceNavigation": {
+    "processTop": -0.203125,
+    "url": "http://127.0.0.1:6461/bg/about-us#process"
+  },
+  "mobile": [
+    {
+      "locale": "en",
+      "overflow": false,
+      "services": {
+        "copy": "All services\nViewing, import & finance\nExplore services",
+        "href": "/en/about-us#process",
+        "rect": {
+          "bottom": 434.953125,
+          "height": 135.90625,
+          "left": 12,
+          "right": 293,
+          "top": 299.046875,
+          "width": 281,
+          "x": 12,
+          "y": 299.046875
+        }
+      },
+      "viewport": [
+        320,
+        844
+      ]
+    },
+    {
+      "locale": "bg",
+      "overflow": false,
+      "services": {
+        "copy": "Всички услуги\nОглед, внос и лизинг\nВиж услугите",
+        "href": "/bg/about-us#process",
+        "rect": {
+          "bottom": 428.15625,
+          "height": 128.109375,
+          "left": 12,
+          "right": 293,
+          "top": 300.046875,
+          "width": 281,
+          "x": 12,
+          "y": 300.046875
+        }
+      },
+      "viewport": [
+        320,
+        844
+      ]
+    },
+    {
+      "locale": "bg",
+      "overflow": false,
+      "services": {
+        "copy": "Всички услуги\nОглед, внос и лизинг\nВиж услугите",
+        "href": "/bg/about-us#process",
+        "rect": {
+          "bottom": 400.859375,
+          "height": 145.1875,
+          "left": 12,
+          "right": 347,
+          "top": 255.671875,
+          "width": 335,
+          "x": 12,
+          "y": 255.671875
+        }
+      },
+      "viewport": [
+        374,
+        884
+      ]
+    }
+  ],
+  "keyboardFocus": {
+    "focusVisible": true,
+    "focused": true,
+    "outline": "3px"
+  },
+  "desktopAfter": {
+    "mobileCardsVisible": false,
+    "scrollHeight": 3929,
+    "scrollWidth": 1425,
+    "sections": [
+      {
+        "className": "dn-hero dn-route-hero dn-route-hero--campaign dn-route-hero--search dn-discovery-hero svelte-tc3uts",
+        "rect": {
+          "bottom": 540,
+          "height": 540,
+          "left": 0,
+          "right": 1425,
+          "top": 0,
+          "width": 1425,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "className": "dn-search-wrap svelte-1l31nwn",
+        "rect": {
+          "bottom": 494,
+          "height": 154,
+          "left": 0,
+          "right": 1425,
+          "top": 340,
+          "width": 1425,
+          "x": 0,
+          "y": 340
+        }
+      },
+      {
+        "className": "dn-listing-filter__filter-group dn-listing-filter__filter-group--equipment svelte-1p0aidb",
+        "rect": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "className": "dn-home-content-section svelte-kqev91 dn-trust-actions",
+        "rect": {
+          "bottom": 826,
+          "height": 298,
+          "left": 0,
+          "right": 1425,
+          "top": 528,
+          "width": 1425,
+          "x": 0,
+          "y": 528
+        }
+      },
+      {
+        "className": "dn-section dn-inventory dn-home-content-section svelte-11lf63j",
+        "rect": {
+          "bottom": 1459.46875,
+          "height": 633.46875,
+          "left": 0,
+          "right": 1425,
+          "top": 826,
+          "width": 1425,
+          "x": 0,
+          "y": 826
+        }
+      },
+      {
+        "className": "dn-section dn-body-types dn-home-content-section svelte-djj1lf",
+        "rect": {
+          "bottom": 2119.46875,
+          "height": 660,
+          "left": 0,
+          "right": 1425,
+          "top": 1459.46875,
+          "width": 1425,
+          "x": 0,
+          "y": 1459.46875
+        }
+      },
+      {
+        "className": "dn-brand-section dn-home-content-section svelte-iiazeg",
+        "rect": {
+          "bottom": 2673.46875,
+          "height": 554,
+          "left": 0,
+          "right": 1425,
+          "top": 2119.46875,
+          "width": 1425,
+          "x": 0,
+          "y": 2119.46875
+        }
+      },
+      {
+        "className": "dn-home-content-section svelte-kqev91 dn-trust-actions",
+        "rect": {
+          "bottom": 2971.46875,
+          "height": 298,
+          "left": 0,
+          "right": 1425,
+          "top": 2673.46875,
+          "width": 1425,
+          "x": 0,
+          "y": 2673.46875
+        }
+      },
+      {
+        "className": "dn-editorial dn-home-content-section svelte-11ysa33",
+        "rect": {
+          "bottom": 3537.5,
+          "height": 566.03125,
+          "left": 0,
+          "right": 1425,
+          "top": 2971.46875,
+          "width": 1425,
+          "x": 0,
+          "y": 2971.46875
+        }
+      }
+    ],
+    "servicesVisible": false,
+    "viewport": [
+      1440,
+      900
+    ]
+  },
+  "desktopPreserved": true,
+  "console": [],
+  "cardsBefore": {
+    "cards": [
+      {
+        "copy": "Коли\n7 примерни",
+        "rect": {
+          "bottom": 185.609375,
+          "height": 161.609375,
+          "left": 12,
+          "right": 171.5,
+          "top": 24,
+          "width": 159.5,
+          "x": 12,
+          "y": 24
+        }
+      },
+      {
+        "copy": "Продай\nБърза оценка",
+        "rect": {
+          "bottom": 185.609375,
+          "height": 161.609375,
+          "left": 187.5,
+          "right": 347,
+          "top": 24,
+          "width": 159.5,
+          "x": 187.5,
+          "y": 24
+        }
+      },
+      {
+        "copy": "Внос\nПо заявка",
+        "rect": {
+          "bottom": 363.21875,
+          "height": 161.609375,
+          "left": 12,
+          "right": 171.5,
+          "top": 201.609375,
+          "width": 159.5,
+          "x": 12,
+          "y": 201.609375
+        }
+      },
+      {
+        "copy": "Лизинг\nГъвкав план",
+        "rect": {
+          "bottom": 363.21875,
+          "height": 161.609375,
+          "left": 187.5,
+          "right": 347,
+          "top": 201.609375,
+          "width": 159.5,
+          "x": 187.5,
+          "y": 201.609375
+        }
+      }
+    ],
+    "height": 884,
+    "width": 374,
+    "y": 442
+  },
+  "cardsAfter": {
+    "cards": [
+      {
+        "copy": "Коли\n7 примерни",
+        "rect": {
+          "bottom": 185.609375,
+          "height": 161.609375,
+          "left": 12,
+          "right": 171.5,
+          "top": 24,
+          "width": 159.5,
+          "x": 12,
+          "y": 24
+        }
+      },
+      {
+        "copy": "Продай\nБърза оценка",
+        "rect": {
+          "bottom": 185.609375,
+          "height": 161.609375,
+          "left": 187.5,
+          "right": 347,
+          "top": 24,
+          "width": 159.5,
+          "x": 187.5,
+          "y": 24
+        }
+      },
+      {
+        "copy": "Внос\nПо заявка",
+        "rect": {
+          "bottom": 363.21875,
+          "height": 161.609375,
+          "left": 12,
+          "right": 171.5,
+          "top": 201.609375,
+          "width": 159.5,
+          "x": 12,
+          "y": 201.609375
+        }
+      },
+      {
+        "copy": "Лизинг\nГъвкав план",
+        "rect": {
+          "bottom": 363.21875,
+          "height": 161.609375,
+          "left": 187.5,
+          "right": 347,
+          "top": 201.609375,
+          "width": 159.5,
+          "x": 187.5,
+          "y": 201.609375
+        }
+      }
+    ],
+    "height": 884,
+    "width": 374,
+    "y": 442
+  },
+  "cardDimensionsPreserved": true,
+  "desktopBefore": {
+    "mobileCardsVisible": false,
+    "scrollHeight": 3929,
+    "scrollWidth": 1425,
+    "sections": [
+      {
+        "className": "dn-hero dn-route-hero dn-route-hero--campaign dn-route-hero--search dn-discovery-hero svelte-tc3uts",
+        "rect": {
+          "bottom": 540,
+          "height": 540,
+          "left": 0,
+          "right": 1425,
+          "top": 0,
+          "width": 1425,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "className": "dn-search-wrap svelte-1l31nwn",
+        "rect": {
+          "bottom": 494,
+          "height": 154,
+          "left": 0,
+          "right": 1425,
+          "top": 340,
+          "width": 1425,
+          "x": 0,
+          "y": 340
+        }
+      },
+      {
+        "className": "dn-listing-filter__filter-group dn-listing-filter__filter-group--equipment svelte-1p0aidb",
+        "rect": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "className": "dn-home-content-section svelte-kqev91 dn-trust-actions",
+        "rect": {
+          "bottom": 826,
+          "height": 298,
+          "left": 0,
+          "right": 1425,
+          "top": 528,
+          "width": 1425,
+          "x": 0,
+          "y": 528
+        }
+      },
+      {
+        "className": "dn-section dn-inventory dn-home-content-section svelte-11lf63j",
+        "rect": {
+          "bottom": 1459.46875,
+          "height": 633.46875,
+          "left": 0,
+          "right": 1425,
+          "top": 826,
+          "width": 1425,
+          "x": 0,
+          "y": 826
+        }
+      },
+      {
+        "className": "dn-section dn-body-types dn-home-content-section svelte-djj1lf",
+        "rect": {
+          "bottom": 2119.46875,
+          "height": 660,
+          "left": 0,
+          "right": 1425,
+          "top": 1459.46875,
+          "width": 1425,
+          "x": 0,
+          "y": 1459.46875
+        }
+      },
+      {
+        "className": "dn-brand-section dn-home-content-section svelte-iiazeg",
+        "rect": {
+          "bottom": 2673.46875,
+          "height": 554,
+          "left": 0,
+          "right": 1425,
+          "top": 2119.46875,
+          "width": 1425,
+          "x": 0,
+          "y": 2119.46875
+        }
+      },
+      {
+        "className": "dn-home-content-section svelte-kqev91 dn-trust-actions",
+        "rect": {
+          "bottom": 2971.46875,
+          "height": 298,
+          "left": 0,
+          "right": 1425,
+          "top": 2673.46875,
+          "width": 1425,
+          "x": 0,
+          "y": 2673.46875
+        }
+      },
+      {
+        "className": "dn-editorial dn-home-content-section svelte-11ysa33",
+        "rect": {
+          "bottom": 3537.5,
+          "height": 566.03125,
+          "left": 0,
+          "right": 1425,
+          "top": 2971.46875,
+          "width": 1425,
+          "x": 0,
+          "y": 2971.46875
+        }
+      }
+    ],
+    "viewport": [
+      1440,
+      900
+    ]
+  }
+}

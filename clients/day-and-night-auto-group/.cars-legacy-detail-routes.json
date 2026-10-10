@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 1,
+  "dealer": "day-and-night-auto-group",
+  "family": "import",
+  "base": "/variant-3",
+  "defaultLocale": "bg",
+  "source": {
+    "inventory": {
+      "path": "carwow/src/lib/data/daynight-current-inventory.ts",
+      "sha256": "7f1a0af281e9e9a08fa29626441eed86b319d0e11d7ad443277bc374ce47ff74"
+    },
+    "vehicles": {
+      "path": "carwow/src/lib/data/daynight-vehicles.ts",
+      "sha256": "3d2fc7b04df1529cef35b38f681d7dd4247328ade4e5cee38dc1ad1213b4ccea"
+    },
+    "routeFactorySha256": "094d5128ad5e689e41486a228b1de6d11c54efbe051ce0e75c0170709d8571c9"
+  },
+  "profileSha256": "86df505a9618442751430133108c6f1d6ffe5efb5806eb055ce4997bbae03556",
+  "entries": [
+    {
+      "sourceId": "21784728210405323",
+      "slug": "mercedes-benz-gla-45-amg-405323",
+      "targetId": "21784728210405323"
+    },
+    {
+      "sourceId": "11782122632841845",
+      "slug": "mercedes-benz-s-63-amg-841845",
+      "targetId": "11782122632841845"
+    },
+    {
+      "sourceId": "11781786688563618",
+      "slug": "mercedes-benz-s-400-563618",
+      "targetId": "11781786688563618"
+    },
+    {
+      "sourceId": "21781366888650416",
+      "slug": "mercedes-benz-gls-400-650416",
+      "targetId": "21781366888650416"
+    },
+    {
+      "sourceId": "21784223776383846",
+      "slug": "mercedes-benz-gle-53-4matic-383846",
+      "targetId": "21784223776383846"
+    },
+    {
+      "sourceId": "21781186627237038",
+      "slug": "mercedes-benz-gle-400-237038",
+      "targetId": "21781186627237038"
+    },
+    {
+      "sourceId": "21775198700636300",
+      "slug": "mercedes-benz-gl-63-amg-636300",
+      "targetId": "21775198700636300"
+    },
+    {
+      "sourceId": "21758203454344162",
+      "slug": "mercedes-benz-g-350-344162",
+      "targetId": "21758203454344162"
+    },
+    {
+      "sourceId": "11782540302515038",
+      "slug": "mercedes-benz-e-63-amg-515038",
+      "targetId": "11782540302515038"
+    },
+    {
+      "sourceId": "11784224743668074",
+      "slug": "mercedes-benz-e-400-668074",
+      "targetId": "11784224743668074"
+    },
+    {
+      "sourceId": "11777018671764829",
+      "slug": "mercedes-benz-e-350-764829",
+      "targetId": "11777018671764829"
+    },
+    {
+      "sourceId": "11783434857807146",
+      "slug": "mercedes-benz-cls-53-amg-807146",
+      "targetId": "11783434857807146"
+    },
+    {
+      "sourceId": "11782479430635636",
+      "slug": "mercedes-benz-cls-400-635636",
+      "targetId": "11782479430635636"
+    },
+    {
+      "sourceId": "11779001443562014",
+      "slug": "mercedes-benz-amg-gt-562014",
+      "targetId": "11779001443562014"
+    },
+    {
+      "sourceId": "21781097577012835",
+      "slug": "land-rover-range-rover-sport-012835",
+      "targetId": "21781097577012835"
+    },
+    {
+      "sourceId": "21783785043166128",
+      "slug": "bmw-x7-166128",
+      "targetId": "21783785043166128"
+    },
+    {
+      "sourceId": "21784134153263153",
+      "slug": "bmw-x6-263153",
+      "targetId": "21784134153263153"
+    },
+    {
+      "sourceId": "21765900685685588",
+      "slug": "bmw-x6-685588",
+      "targetId": "21765900685685588"
+    },
+    {
+      "sourceId": "21777637702876978",
+      "slug": "bmw-x6-876978",
+      "targetId": "21777637702876978"
+    },
+    {
+      "sourceId": "21780050061781136",
+      "slug": "bmw-x6-781136",
+      "targetId": "21780050061781136"
+    },
+    {
+      "sourceId": "11781282994167628",
+      "slug": "bmw-m5-167628",
+      "targetId": "11781282994167628"
+    },
+    {
+      "sourceId": "11775899765171119",
+      "slug": "bmw-430-171119",
+      "targetId": "11775899765171119"
+    },
+    {
+      "sourceId": "11781969350224394",
+      "slug": "audi-rs6-224394",
+      "targetId": "11781969350224394"
+    },
+    {
+      "sourceId": "21782920140707096",
+      "slug": "audi-q8-707096",
+      "targetId": "21782920140707096"
+    },
+    {
+      "sourceId": "21782329010196509",
+      "slug": "audi-q7-196509",
+      "targetId": "21782329010196509"
+    },
+    {
+      "sourceId": "21784136402983332",
+      "slug": "audi-q7-983332",
+      "targetId": "21784136402983332"
+    },
+    {
+      "sourceId": "11775198338574112",
+      "slug": "audi-a8-574112",
+      "targetId": "11775198338574112"
+    },
+    {
+      "sourceId": "21781787768273938",
+      "slug": "mercedes-benz-gls-400-273938",
+      "targetId": "21781787768273938"
+    },
+    {
+      "sourceId": "11778599312336917",
+      "slug": "mercedes-benz-e-350-336917",
+      "targetId": "11778599312336917"
+    },
+    {
+      "sourceId": "11782541049698048",
+      "slug": "mercedes-benz-amg-gt-s-698048",
+      "targetId": "11782541049698048"
+    },
+    {
+      "sourceId": "21762334502775312",
+      "slug": "lamborghini-urus-775312",
+      "targetId": "21762334502775312"
+    },
+    {
+      "sourceId": "21782329865022942",
+      "slug": "bmw-x5-022942",
+      "targetId": "21782329865022942"
+    },
+    {
+      "sourceId": "11784380846697521",
+      "slug": "audi-a8-697521",
+      "targetId": "11784380846697521"
+    },
+    {
+      "sourceId": "11784130537689775",
+      "slug": "mercedes-benz-s-580-689775",
+      "targetId": "11784130537689775"
+    },
+    {
+      "sourceId": "11778179700610297",
+      "slug": "mercedes-benz-v-300-610297",
+      "targetId": "11778179700610297"
+    },
+    {
+      "sourceId": "11782329384140338",
+      "slug": "mercedes-benz-v-300-140338",
+      "targetId": "11782329384140338"
+    },
+    {
+      "sourceId": "11778085846169037",
+      "slug": "mercedes-benz-e-400-169037",
+      "targetId": "11778085846169037"
+    },
+    {
+      "sourceId": "11774291387702102",
+      "slug": "audi-rs7-702102",
+      "targetId": "11774291387702102"
+    },
+    {
+      "sourceId": "21782661898906066",
+      "slug": "mercedes-benz-g-63-amg-906066",
+      "targetId": "21782661898906066"
+    },
+    {
+      "sourceId": "11781790478711568",
+      "slug": "mercedes-benz-s-500-711568",
+      "targetId": "11781790478711568"
+    }
+  ],
+  "retired": []
+}
