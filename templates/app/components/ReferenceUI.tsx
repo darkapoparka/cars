@@ -94,7 +94,7 @@ const s=stylex.create({
  tabTitleOnDarkActive:{color:$.ink,backgroundColor:{[media.mobile]:'transparent',default:'#fff'}},
  tabArtworkBox:{position:{[media.mobile]:'relative',default:'absolute'},flexShrink:0,left:{[media.mobile]:'auto',default:'50%'},transform:{[media.mobile]:'translateY(-1px)',default:'translateX(-50%)'},bottom:{[media.mobile]:'auto',default:2},width:{[media.mobile]:64,default:'100%'},height:{[media.mobile]:42,default:'64%'},maxWidth:160},
  tabArt:{objectFit:'contain'},
- tabArtSell:{transform:{[media.mobile]:'scaleX(1.08)',default:'none'}},
+ tabArtSell:{transform:{[media.mobile]:'scaleX(1.16)',default:'none'}},
  tabTitle:{position:{[media.mobile]:'static',default:'absolute'},top:16,left:0,right:0,maxWidth:'100%',textAlign:'center',zIndex:1,whiteSpace:'pre-line',overflowWrap:'anywhere',letterSpacing:0},
  tabTitleActive:{fontWeight:{[media.mobile]:500,default:400}},
  sectionTitle:{fontSize:{[media.mobile]:18,default:25},fontWeight:{[media.mobile]:600,default:500},lineHeight:1.35,color:$.text},

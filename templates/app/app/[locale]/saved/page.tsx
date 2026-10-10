@@ -24,7 +24,7 @@ export default function SavedPage() {
       <PageHeader title="Saved cars" compact wrapTitle/>
       <main {...stylex.props(styles.page)}>
         {savedVehicles.length ? (
-          <><div {...stylex.props(styles.heading)}><h2 {...stylex.props(styles.count)}>{tx(savedVehicles.length)} {tx(savedVehicles.length === 1 ? 'car' : 'cars')}</h2><p {...stylex.props(styles.caption)}>{tx("Your shortlist is stored on this device.")}</p></div><div {...stylex.props(styles.grid)}>{savedVehicles.map(vehicle => <SavedCar key={vehicle.slug} vehicle={vehicle}/>)}</div></>
+          <><div {...stylex.props(styles.heading)}><h2 {...stylex.props(styles.count)}>{tx(savedVehicles.length)} {tx(savedVehicles.length === 1 ? 'car' : 'cars')}</h2><p {...stylex.props(styles.caption)}>{tx("Your shortlist is stored on this device.")}</p></div><div data-saved-list {...stylex.props(styles.grid)}>{savedVehicles.map(vehicle => <SavedCar key={vehicle.slug} vehicle={vehicle}/>)}</div></>
         ) : (
           <section {...stylex.props(styles.empty)}>
             <span aria-hidden="true" {...stylex.props(styles.heart)}><Heart size={48}/></span>
@@ -42,7 +42,8 @@ function SavedCar({vehicle}: {vehicle: Vehicle}) {
   const tx = useCopy();
   const {remove, error} = useSavedVehicle(vehicle.slug);
   function removeCar(event: MouseEvent<HTMLButtonElement>) {
-    const buttons = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-saved-remove]'));
+    const list = event.currentTarget.closest('[data-saved-list]');
+    const buttons = Array.from(list?.querySelectorAll<HTMLButtonElement>('[data-saved-remove]') ?? []).filter(button => button.getClientRects().length > 0);
     const index = buttons.indexOf(event.currentTarget);
     const next = buttons[index + 1] ?? buttons[index - 1];
     if (!remove()) return;
@@ -52,7 +53,7 @@ function SavedCar({vehicle}: {vehicle: Vehicle}) {
     });
   }
   return <div {...stylex.props(styles.savedCar)}>
-    <VehicleCard vehicle={vehicle} desktopTile/>
+    <VehicleCard vehicle={vehicle} desktopTile onRemoveSaved={removeCar}/>
     <button type="button" data-saved-remove onClick={removeCar} aria-label={tx(`Remove ${vehicle.make} ${vehicle.model} from saved cars`)} {...stylex.props(styles.remove)}><Trash2 size={16} aria-hidden="true"/>{tx('Remove')}</button>
     {error ? <p role="alert" {...stylex.props(styles.error)}>{tx(error)}</p> : null}
   </div>;

@@ -10,6 +10,7 @@ import {useModal} from '@/components/useModal';
 import {dealer} from '@/lib/dealer-config';
 import {useCopy, useLocale} from '@/lib/locale';
 import {basePath, browserPath} from '@/lib/paths';
+import {homeAlternativeHref, useHomeAlternative} from '@/lib/home-alternative';
 import {media, tokens as $} from '@/app/tokens.stylex';
 
 const dismissalKey = `cars-app:welcome:v1:${dealer.id}:${basePath || '/'}`;
@@ -56,6 +57,7 @@ const languageNames = {bg: 'Български', en: 'English'};
 export default function WelcomeBanner() {
   const tx = useCopy();
   const locale = useLocale();
+  const alternative = useHomeAlternative();
   const pending = useSyncExternalStore(subscribe, pendingWelcome, serverSnapshot);
   const open = Boolean(dealer.welcomeEnabled && pending);
   const showLanguages = dealer.enabledLocales.length > 1;
@@ -69,7 +71,7 @@ export default function WelcomeBanner() {
       <div {...stylex.props(s.brand)}><DealerBrand compact/></div>
       <h2 id="welcome-title" {...stylex.props(s.title)}>{tx('Welcome to {dealerName}').replace('{dealerName}', dealer.name)}</h2>
       {showLanguages ? <><p id="welcome-description" {...stylex.props(s.description)}>{tx('Choose your language.')}</p><div role="group" aria-label={tx('Language')} {...stylex.props(s.languages)}>
-        {dealer.enabledLocales.map(language => <a key={language} href={browserPath('/', language) + (previewRequested() ? '?welcome=1' : '')} lang={language} hrefLang={language} aria-current={locale === language ? 'true' : undefined} {...stylex.props(s.language)}><span {...stylex.props(s.languageLabel, locale === language && s.languageSelected)}>{locale === language ? <Check size={12} aria-hidden="true"/> : null}{languageNames[language]}</span></a>)}
+        {dealer.enabledLocales.map(language => <a key={language} href={browserPath(homeAlternativeHref('/', alternative), language) + (previewRequested() ? '?welcome=1' : '')} lang={language} hrefLang={language} aria-current={locale === language ? 'true' : undefined} {...stylex.props(s.language)}><span {...stylex.props(s.languageLabel, locale === language && s.languageSelected)}>{locale === language ? <Check size={12} aria-hidden="true"/> : null}{languageNames[language]}</span></a>)}
       </div></> : null}
       <Link href="/cars" onClick={dismissWelcome} {...stylex.props(s.primary)}>{tx('Start browsing')}<ArrowRight size={16} aria-hidden="true"/></Link>
     </div>

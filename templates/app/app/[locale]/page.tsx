@@ -39,7 +39,7 @@ export default function HomePage() {
   const tx = useCopy();
   const alternative = useHomeAlternative();
   const desktop=useSyncExternalStore(subscribeDesktop,desktopSnapshot,serverSnapshot);
-  useVehicleReturn(true, alternative && !desktop);
+  useVehicleReturn(true, !desktop);
 
   const [visibleCount, setVisibleCount] = useState(4);
   const sentinel = useRef<HTMLDivElement>(null);

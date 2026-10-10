@@ -3,7 +3,7 @@ import {displayMake} from '@/lib/inventory-labels';
 import {useCopy} from '@/lib/locale';
 import {useDeferredValue,useEffect,useLayoutEffect,useMemo,useRef,useState,type ReactNode} from 'react';
 import * as stylex from '@stylexjs/stylex';
-import {Heart,Search,X} from 'lucide-react';
+import {ArrowUpDown,Heart,Search,SlidersHorizontal,X} from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 import IconButton from '@/components/IconButton';
 import FilterPill from '@/components/FilterPill';
@@ -108,7 +108,8 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
    [...controls].find(control=>control.getClientRects().length>0)?.focus({preventScroll:true});
  },[filterRevision,modal]);
  const filterBackdrop=(content:ReactNode)=><div {...stylex.props(s.filterBackdrop)} onMouseDown={event=>event.target===event.currentTarget&&close()}>{content}</div>;
- const search=<div role="search" {...stylex.props(!home&&s.topInner)}>{home?<label data-search-field {...stylex.props(searchField.field)}>
+ const sortMobileLabel=sort==='price-asc'?`${tx('Price')} ↑`:sort==='price-desc'?`${tx('Price')} ↓`:sort==='kms-asc'?`${tx('Mileage')} ↑`:sort==='kms-desc'?`${tx('Mileage')} ↓`:sort==='age-asc'?`${tx('Year')} ↑`:sort==='age-desc'?`${tx('Year')} ↓`:sort==='recent'?tx('Recently added'):sort==='discount'?`${tx('Discount')} ↓`:undefined;
+ const search=<div role="search" {...stylex.props(!home&&s.topInner,!home&&!luxe&&s.searchFirst)}>{home?<label data-search-field {...stylex.props(searchField.field)}>
     <Search size={22} strokeWidth={2} aria-hidden="true" {...stylex.props(searchField.icon)}/>
     <span {...stylex.props(searchField.editableGroup)}>
       <span {...stylex.props(searchField.inputSlot)}>
@@ -118,19 +119,28 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
       <span id="inventory-result-count" data-result-count role="status" aria-live="polite" aria-atomic="true" {...stylex.props(searchField.count)}><span aria-hidden="true">({count})</span><span className="visually-hidden">{count} {tx(count===1?'car':'cars')}</span></span>
     </span>
     {query?<button type="button" aria-label={tx('Clear search')} onClick={()=>setQuery('')} {...stylex.props(searchField.clear)}><X size={18} aria-hidden="true"/></button>:null}
-  </label>:<div data-search-field {...stylex.props(searchField.field,s.searchRing)}>
+  </label>:<div data-search-field {...stylex.props(searchField.field,s.searchRing,!luxe&&s.compactSearchField)}>
     <button type="button" aria-haspopup="dialog" aria-expanded={overlay==='search'} aria-labelledby="inventory-search-prompt" aria-describedby="inventory-result-count" onClick={()=>open('search')} {...stylex.props(s.searchEntry)}>
       <Search size={22} strokeWidth={2} aria-hidden="true" {...stylex.props(searchField.icon)}/>
-      <span {...stylex.props(searchField.copy)}><span id="inventory-search-prompt" {...stylex.props(s.searchPrompt,!query&&s.searchPlaceholder)}>{query||tx('Search make or model')}</span><span id="inventory-result-count" data-result-count role="status" aria-live="polite" aria-atomic="true" {...stylex.props(searchField.count)}><span aria-hidden="true">({count})</span><span className="visually-hidden">{count} {tx(count===1?'car':'cars')}</span></span></span>
+      <span {...stylex.props(searchField.copy)}><span id="inventory-search-prompt" {...stylex.props(s.searchPrompt,!query&&s.searchPlaceholder)}>{query||(luxe?tx('Search make or model'):<><span {...stylex.props(s.phoneSearchPrompt)}>{tx('Search cars')}</span><span {...stylex.props(s.wideSearchPrompt)}>{tx('Search make or model')}</span></>)}</span><span id="inventory-result-count" data-result-count role="status" aria-live="polite" aria-atomic="true" {...stylex.props(searchField.count)}><span aria-hidden="true">({count})</span><span className="visually-hidden">{count} {tx(count===1?'car':'cars')}</span></span></span>
     </button>
     {query?<button type="button" aria-label={tx('Clear search')} onClick={()=>setQuery('')} {...stylex.props(searchField.clear)}><X size={18} aria-hidden="true"/></button>:null}
-  </div>}</div>;
+  </div>}{!home&&!luxe?<div {...stylex.props(s.compactActions)}>
+    <button data-inventory-filter-action type="button" aria-label={filtered?`${tx('Filter')}: ${tx('Applied')}`:tx('Filter')} aria-haspopup="dialog" aria-expanded={overlay==='filters'} onClick={()=>open('filters')} {...stylex.props(pill.control,s.compactActionControl,filtered&&pill.selectedControl)}><span {...stylex.props(pill.surface,pill.soft,pillTone==='grey'&&pill.grey,filtered&&pill.selected,s.compactActionSurface)}><SlidersHorizontal size={18} strokeWidth={1.8} aria-hidden="true"/></span></button>
+    <button data-inventory-sort-action type="button" aria-label={sortMobileLabel?`${tx('Sort')}: ${sortMobileLabel}`:tx('Sort')} aria-haspopup="dialog" aria-expanded={overlay==='sort'} onClick={()=>open('sort')} {...stylex.props(pill.control,s.compactActionControl,sort!=='default'&&pill.selectedControl)}><span {...stylex.props(pill.surface,pill.soft,pillTone==='grey'&&pill.grey,sort!=='default'&&pill.selected,s.compactActionSurface)}><ArrowUpDown size={18} strokeWidth={1.8} aria-hidden="true"/></span></button>
+  </div>:null}</div>;
+ const pageHeader=<PageHeader compact showBack={luxe} title={tx(luxe?'Select collection':'Our cars')} action={<IconButton href="/saved" label={tx('Saved cars')} icon={Heart}/>}/>;
  return <div data-desktop-buy-inventory={home?'':undefined} {...stylex.props(s.screen)}>
-  {home?<DealerHomeBanner desktopSearch={<DesktopInventoryFilters filters={filters} update={setFilters} count={count} countMatches={countMatches} onShowResults={showResults} onAllFilters={()=>open('filters')} quickFilter={quickFilter} setQuickFilter={setQuickFilter} quickFiltersRef={quickFiltersRef}/>}/>:<><PageHeader compact title={tx(luxe?'Select collection':'Our cars')} action={<IconButton href="/saved" label={tx('Saved cars')} icon={Heart}/>}/>{search}</>}
-  {!home?<nav ref={mobileFiltersRef} aria-label={tx("Inventory filters")} {...stylex.props(s.toolbar)}>
+  {home?<DealerHomeBanner desktopSearch={<DesktopInventoryFilters filters={filters} update={setFilters} count={count} countMatches={countMatches} onShowResults={showResults} onAllFilters={()=>open('filters')} quickFilter={quickFilter} setQuickFilter={setQuickFilter} quickFiltersRef={quickFiltersRef}/>}/>:<>
+    {luxe?pageHeader:<><div {...stylex.props(s.phoneHeading)}><h1 className="visually-hidden">{tx('Our cars')}</h1></div><div {...stylex.props(s.pageHeader)}>{pageHeader}</div></>}
+    {search}
+  </>}
+  {!home?<nav ref={mobileFiltersRef} aria-label={tx("Inventory filters")} {...stylex.props(s.toolbar,!luxe&&s.scrollingToolbar)}>
     {filtered?<DesktopAppliedFilters mobile filters={filters} update={setFilters} query={query} setQuery={setQuery} emiMax={emiMax} setEmiMax={setEmiMax}/>:null}
-    <FilterPill label={tx("Filter")} tone={pillTone} icon="filter" selected={filtered} onClick={()=>open('filters')}/>
-    <FilterPill label={tx("Sort")} mobileLabel={sort==='price-asc'?`${tx('Price')} ↑`:sort==='price-desc'?`${tx('Price')} ↓`:sort==='kms-asc'?`${tx('Mileage')} ↑`:sort==='kms-desc'?`${tx('Mileage')} ↓`:sort==='age-asc'?`${tx('Year')} ↑`:sort==='age-desc'?`${tx('Year')} ↓`:sort==='recent'?tx('Recently added'):sort==='discount'?`${tx('Discount')} ↓`:undefined} tone={pillTone} icon="sort" selected={sort!=='default'} onClick={()=>open('sort')}/>
+    <div {...stylex.props(s.wideActions,luxe&&s.collectionActions)}>
+      <FilterPill label={tx("Filter")} tone={pillTone} icon="filter" selected={filtered} onClick={()=>open('filters')}/>
+      <FilterPill label={tx("Sort")} mobileLabel={sortMobileLabel} tone={pillTone} icon="sort" selected={sort!=='default'} onClick={()=>open('sort')}/>
+    </div>
     {quickFilterTabs.map(tab=><FilterPill key={tab} label={tx(titleCase(tab))} tone={pillTone} selected={quickSelection[tab]} onClick={()=>open('filters',tab)}/>)}
   </nav>:null}
   <LandingContentFrame enabled={home}><main data-landing-content={home||undefined} {...stylex.props(home&&landingContent.panel,s.content,home&&s.homeContent)}>{!home?<aside {...stylex.props(s.sidebar)}><div {...stylex.props(s.sidebarHeading)}><h2 {...stylex.props(s.sideTitle)}>{tx('Make')}</h2><button type="button" onClick={()=>open('filters')} {...stylex.props(s.sectionClear)}>{tx('All filters')}</button></div><label data-search-field {...stylex.props(searchField.field,s.sidebarSearch)}><Search size={18} aria-hidden="true" {...stylex.props(searchField.icon)}/><input data-search-input aria-label={tx("Search sidebar brands")} placeholder={tx("Search brand")} autoComplete="off" autoCapitalize="none" spellCheck={false} value={brandSearch} onChange={e=>setBrandSearch(e.target.value)} {...stylex.props(searchField.input)}/></label><div {...stylex.props(s.sidebarOptions)}>{makes.filter(make=>(vehicles.some(car=>car.make===make)||filters.brands.includes(make))&&make.toLowerCase().includes(brandSearch.toLowerCase())).map(make=><label key={make} {...stylex.props(s.sideOption,filters.brands.includes(make)&&s.sideOptionSelected)}><input type="checkbox" className="cars24-filter-checkbox" checked={filters.brands.includes(make)} onChange={()=>setFilters({...filters,brands:toggle(filters.brands,make),models:filters.models.filter(model=>!model.startsWith(`${make}::`))})}/><span {...stylex.props(s.sideEmblem)}><BrandEmblem make={make}/></span><span {...stylex.props(s.sideMake)}>{tx(displayMake(make))}</span><span aria-hidden="true" {...stylex.props(s.sideCount)}>{countMatches({...clearDesktopFilter(filters,'BRAND'),brands:[make]})}</span></label>)}</div>{brandSearch&&!makes.some(make=>vehicles.some(car=>car.make===make)&&make.toLowerCase().includes(brandSearch.toLowerCase()))?<p role="status" {...stylex.props(s.sidebarEmpty)}>{tx('No brands found')}</p>:null}<button type="button" onClick={reset} {...stylex.props(s.reset)}>{tx("Clear all filters")}</button></aside>:null}
@@ -190,7 +200,19 @@ const s=stylex.create({
  homeReset:{fontSize:$.desktopSupportSize,fontWeight:400,color:$.muted},
  homeResetSurface:{paddingInline:12,borderColor:'transparent',backgroundColor:{default:'transparent',':hover':$.surfaceAlt}},
  screen:{minHeight:'100vh',paddingBottom:{[media.mobile]:0,default:110},backgroundColor:'#fff'},
+ pageHeader:{display:{[media.mobile]:'none',default:'contents'}},
+ phoneHeading:{display:{[media.mobile]:'block',default:'none'}},
  topInner:{maxWidth:$.content,marginInline:'auto',paddingTop:4,paddingInline:{[media.mobile]:12,default:28}},
+ searchFirst:{display:{[media.mobile]:'flex',default:'block'},alignItems:'center',gap:8,position:{[media.mobile]:'sticky',default:'static'},top:{[media.mobile]:0,default:'auto'},zIndex:{[media.mobile]:65,default:'auto'},paddingTop:{[media.mobile]:'calc(6px + env(safe-area-inset-top))',default:4},paddingBottom:{[media.mobile]:6,default:0},backgroundColor:$.surface},
+ compactSearchField:{flexGrow:{[media.mobile]:1,default:0},flexBasis:{[media.mobile]:0,default:'auto'},minWidth:0},
+ compactActions:{display:{[media.mobile]:'flex',default:'none'},flexShrink:0,gap:8},
+ compactActionControl:{width:44,height:44},
+ compactActionSurface:{width:40,height:40,paddingInline:0},
+ phoneSearchPrompt:{display:{[media.mobile]:'inline',default:'none'}},
+ wideSearchPrompt:{display:{[media.mobile]:'none',default:'inline'}},
+ wideActions:{display:{[media.mobile]:'none',default:'contents'}},
+ collectionActions:{display:'contents'},
+ scrollingToolbar:{position:{[media.mobile]:'static',default:'sticky'}},
  searchRing:{outlineOffset:-3},
  searchEntry:{display:'flex',alignItems:'center',flexGrow:1,gap:8,minWidth:0,minHeight:40,padding:0,color:$.ink,fontFamily:$.fontSans,fontSize:16,fontWeight:400,lineHeight:1.5,textAlign:'left',borderWidth:0,backgroundColor:'transparent',outlineStyle:'none',cursor:'pointer'},
  searchPrompt:{minWidth:0,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'},

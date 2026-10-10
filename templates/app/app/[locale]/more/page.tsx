@@ -8,7 +8,7 @@ import {media, tokens as $} from '@/app/tokens.stylex';
 
 export default function MorePage() {
   return <div data-menu-page {...stylex.props(s.screen)}>
-    <PageHeader title="Menu" compact wrapTitle action={<span {...stylex.props(s.brand)}><DealerBrand compact/></span>}/>
+    <PageHeader title="Menu" compact wrapTitle showBack={false} action={<span {...stylex.props(s.brand)}><DealerBrand compact/></span>}/>
     <main {...stylex.props(s.content)}><ShowroomMenu/></main>
   </div>;
 }

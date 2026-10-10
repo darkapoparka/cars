@@ -1,6 +1,6 @@
-import {CarFront, CreditCard, Heart, House, Mail, MapPin, PanelsTopLeft, Phone, Tag, Wrench} from 'lucide-react';
+import {CarFront, CreditCard, Heart, House, Mail, MapPin, Menu, Phone, Tag, Wrench} from 'lucide-react';
 
-const icons = {home: House, cars: CarFront, saved: Heart, more: PanelsTopLeft, sell: Tag, finance: CreditCard, service: Wrench, location: MapPin, phone: Phone, email: Mail};
+const icons = {home: House, cars: CarFront, saved: Heart, more: Menu, sell: Tag, finance: CreditCard, service: Wrench, location: MapPin, phone: Phone, email: Mail};
 export type ShowroomIconName = keyof typeof icons;
 
 /** Shared navigation symbols; size changes by context, colour follows the theme. */
