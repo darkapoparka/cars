@@ -1,0 +1,369 @@
+{
+  "at": "2026-09-20T15:24:39.543Z",
+  "scope": "Three compact import guide/return labels; no component, CSS, configuration, domain or business-write change",
+  "head": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+  "changedRows": [
+    {
+      "key": "m_0dc54277231e",
+      "before": {
+        "en": "How the import demo works",
+        "bg": "Как работи демонстрацията за внос"
+      },
+      "after": {
+        "en": "Import guide (demo)",
+        "bg": "За вноса (демо)"
+      }
+    },
+    {
+      "key": "m_15f4f5be4ade",
+      "before": {
+        "en": "How it works",
+        "bg": "Как протича процесът"
+      },
+      "after": {
+        "en": "How it works",
+        "bg": "Как работи"
+      }
+    },
+    {
+      "key": "m_ed51f4a53cda",
+      "before": {
+        "en": "Go to the demo enquiry",
+        "bg": "Към демонстрационното запитване"
+      },
+      "after": {
+        "en": "Back to enquiry",
+        "bg": "Към запитването"
+      }
+    }
+  ],
+  "sourceSha256": {
+    "before": "074fd50842e305e07c14c6536ed4201421ef901f95db4f6caafdaf97da20a37a",
+    "after": "3f7e5003777a739bce07a5d3bf78fbc6656433a53f53ed095cfa44607136d463"
+  },
+  "protectedBefore": {
+    "src/lib/components/home/VehicleQuickSearch.svelte": "1e20b95db99b15b8d949c6ea369d7f79354ffdf0d7b007fe5ea9499ecc7fed13",
+    "src/lib/components/listing/VehicleSearchDialog.svelte": "d960b350b2209c5da263e0d716aae2eccf87b96bfc062ca1c0a725a4f9cc75e9",
+    "src/lib/components/listing/QuickFilterSheet.svelte": "92bb69d5b8121ec8ffd5eeef4bdef5a4b1225bdd0eb8756e54dbb63da6e1149c",
+    "src/lib/components/company/EnquiryEntryField.svelte": "44b04e8c215da892e926d780705b2cf116ed2ceee46e9d613d34625a27020a08",
+    "src/lib/styles/tokens.css": "e261126bb8679e7be4dabb670e8ba0a29f2f19e2529dda8ad1d89e6afcb92061"
+  },
+  "protectedAfter": {
+    "src/lib/components/home/VehicleQuickSearch.svelte": "1e20b95db99b15b8d949c6ea369d7f79354ffdf0d7b007fe5ea9499ecc7fed13",
+    "src/lib/components/listing/VehicleSearchDialog.svelte": "d960b350b2209c5da263e0d716aae2eccf87b96bfc062ca1c0a725a4f9cc75e9",
+    "src/lib/components/listing/QuickFilterSheet.svelte": "92bb69d5b8121ec8ffd5eeef4bdef5a4b1225bdd0eb8756e54dbb63da6e1149c",
+    "src/lib/components/company/EnquiryEntryField.svelte": "44b04e8c215da892e926d780705b2cf116ed2ceee46e9d613d34625a27020a08",
+    "src/lib/styles/tokens.css": "e261126bb8679e7be4dabb670e8ba0a29f2f19e2529dda8ad1d89e6afcb92061"
+  },
+  "protectedUnchanged": true,
+  "catalogSha256": "2163501de7f4170b4285a976392d4c20a01a03f4c71f002c174c8907b5b94502",
+  "policySha256": "e0adcfd9ca1efaf30c1410540cdbef25d2144bf9dc447971f0ce3b38cc5928c0",
+  "publicationHold": true,
+  "tests": {
+    "at": "2026-09-20T15:25:26.321Z",
+    "results": [
+      {
+        "name": "generated-catalog",
+        "exitCode": 0,
+        "log": "{\"status\":\"checked\",\"messages\":955,\"aliases\":1919,\"quarantinedAliases\":44,\"activeAmbiguousAliases\":0}\n"
+      },
+      {
+        "name": "locale-negative-and-mobile-copy",
+        "exitCode": 0,
+        "log": "TAP version 13\n# Subtest: requires a complete EN/BG pair without placeholders or review stubs\nok 1 - requires a complete EN/BG pair without placeholders or review stubs\n  ---\n  duration_ms: 3.8859\n  type: 'test'\n  ...\n# Subtest: rejects duplicate keys even when both entries happen to agree\nok 2 - rejects duplicate keys even when both entries happen to agree\n  ---\n  duration_ms: 0.7208\n  type: 'test'\n  ...\n# Subtest: ambiguous aliases cannot select a meaning according to declaration order\nok 3 - ambiguous aliases cannot select a meaning according to declaration order\n  ---\n  duration_ms: 1.3784\n  type: 'test'\n  ...\n# Subtest: identical meanings have a deterministic alias while not-ui entries are omitted\nok 4 - identical meanings have a deterministic alias while not-ui entries are omitted\n  ---\n  duration_ms: 0.4244\n  type: 'test'\n  ...\n# Subtest: actual catalogs contain no active ambiguous aliases and include dealer/context keys\nok 5 - actual catalogs contain no active ambiguous aliases and include dealer/context keys\n  ---\n  duration_ms: 20.3122\n  type: 'test'\n  ...\n# Subtest: recognizes interpolated All 6 cars rather than only literal catalog entries\nok 6 - recognizes interpolated All 6 cars rather than only literal catalog entries\n  ---\n  duration_ms: 2.2886\n  type: 'test'\n  ...\n# Subtest: escapes punctuation and anchors the complete known message\nok 7 - escapes punctuation and anchors the complete known message\n  ---\n  duration_ms: 0.6266\n  type: 'test'\n  ...\n# Subtest: excludes invariant names, currencies and short domain patterns\nok 8 - excludes invariant names, currencies and short domain patterns\n  ---\n  duration_ms: 1.3161\n  type: 'test'\n  ...\n# Subtest: normalizes catalog whitespace and removes duplicates\nok 9 - normalizes catalog whitespace and removes duplicates\n  ---\n  duration_ms: 1.5332\n  type: 'test'\n  ...\n# Subtest: does not classify already-covered static catalog entries as dynamic\nok 10 - does not classify already-covered static catalog entries as dynamic\n  ---\n  duration_ms: 0.2697\n  type: 'test'\n  ...\n# Subtest: compact import controls retain complete native EN/BG copy\nok 11 - compact import controls retain complete native EN/BG copy\n  ---\n  duration_ms: 3.4395\n  type: 'test'\n  ...\n# Subtest: import guide uses direct keys, not lookups of already translated copy\nok 12 - import guide uses direct keys, not lookups of already translated copy\n  ---\n  duration_ms: 1.0219\n  type: 'test'\n  ...\n# Subtest: explicit native path wins all conflicting hints, without accepting cookies\nok 13 - explicit native path wins all conflicting hints, without accepting cookies\n  ---\n  duration_ms: 2.5503\n  type: 'test'\n  ...\n# Subtest: independent countries do not change stock currency or enable unfinished languages\nok 14 - independent countries do not change stock currency or enable unfinished languages\n  ---\n  duration_ms: 25.5061\n  type: 'test'\n  ...\n# Subtest: native mounts and suffixes are idempotent and resources stay outside rewriting\nok 15 - native mounts and suffixes are idempotent and resources stay outside rewriting\n  ---\n  duration_ms: 1.6257\n  type: 'test'\n  ...\n# Subtest: safe destinations reject traversal, external origins, encoded separators and resources\nok 16 - safe destinations reject traversal, external origins, encoded separators and resources\n  ---\n  duration_ms: 1.1882\n  type: 'test'\n  ...\n# Subtest: save sets exactly host-only secure preference cookies and preserves query/anchor\nok 17 - save sets exactly host-only secure preference cookies and preserves query/anchor\n  ---\n  duration_ms: 43.466\n  type: 'test'\n  ...\n# Subtest: dismissal records no accepted language or country\nok 18 - dismissal records no accepted language or country\n  ---\n  duration_ms: 1.7849\n  type: 'test'\n  ...\n# Subtest: malformed, cross-origin, unsupported and oversized preference writes fail without cookies\nok 19 - malformed, cross-origin, unsupported and oversized preference writes fail without cookies\n  ---\n  duration_ms: 10.2828\n  type: 'test'\n  ...\n# Subtest: server resolution has no cross-request state or mutable caller configuration\nok 20 - server resolution has no cross-request state or mutable caller configuration\n  ---\n  duration_ms: 3.6326\n  type: 'test'\n  ...\n1..20\n# tests 20\n# suites 0\n# pass 20\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 1364.4918\n"
+      }
+    ]
+  },
+  "browser": {
+    "at": "2026-09-20T15:29:08.432Z",
+    "base": "http://127.0.0.1:6462",
+    "report": "artifacts/localization/mobile-copy-browser/report.json",
+    "reportSha256": "33572616de6459e4fc86486ca55cd93c965e9ce88451af640b17981ad1a533fa",
+    "stable": true,
+    "passed": 6,
+    "failed": 0,
+    "results": [
+      {
+        "locale": "bg",
+        "width": 320,
+        "pass": true,
+        "labels": [
+          {
+            "text": "Внос (демо)",
+            "lines": 1,
+            "fits": true,
+            "width": 156,
+            "height": 44
+          },
+          {
+            "text": "Внос (демо)",
+            "lines": 1,
+            "fits": true,
+            "width": 220,
+            "height": 44
+          },
+          {
+            "text": "Как работи",
+            "lines": 1,
+            "fits": true,
+            "width": 86.828125,
+            "height": 24
+          },
+          {
+            "text": "За вноса (демо)",
+            "lines": 1,
+            "fits": true,
+            "width": 180.109375,
+            "height": 28.796875
+          },
+          {
+            "text": "Към запитването",
+            "lines": 1,
+            "fits": true,
+            "width": 200,
+            "height": 44
+          }
+        ],
+        "errors": [],
+        "writes": []
+      },
+      {
+        "locale": "bg",
+        "width": 390,
+        "pass": true,
+        "labels": [
+          {
+            "text": "Внос (демо)",
+            "lines": 1,
+            "fits": true,
+            "width": 156,
+            "height": 44
+          },
+          {
+            "text": "Внос (демо)",
+            "lines": 1,
+            "fits": true,
+            "width": 220,
+            "height": 44
+          },
+          {
+            "text": "Как работи",
+            "lines": 1,
+            "fits": true,
+            "width": 86.828125,
+            "height": 24
+          },
+          {
+            "text": "За вноса (демо)",
+            "lines": 1,
+            "fits": true,
+            "width": 180.109375,
+            "height": 28.796875
+          },
+          {
+            "text": "Към запитването",
+            "lines": 1,
+            "fits": true,
+            "width": 200,
+            "height": 44
+          }
+        ],
+        "errors": [],
+        "writes": []
+      },
+      {
+        "locale": "bg",
+        "width": 430,
+        "pass": true,
+        "labels": [
+          {
+            "text": "Внос (демо)",
+            "lines": 1,
+            "fits": true,
+            "width": 156,
+            "height": 44
+          },
+          {
+            "text": "Внос (демо)",
+            "lines": 1,
+            "fits": true,
+            "width": 220,
+            "height": 44
+          },
+          {
+            "text": "Как работи",
+            "lines": 1,
+            "fits": true,
+            "width": 86.828125,
+            "height": 24
+          },
+          {
+            "text": "За вноса (демо)",
+            "lines": 1,
+            "fits": true,
+            "width": 180.109375,
+            "height": 28.796875
+          },
+          {
+            "text": "Към запитването",
+            "lines": 1,
+            "fits": true,
+            "width": 200,
+            "height": 44
+          }
+        ],
+        "errors": [],
+        "writes": []
+      },
+      {
+        "locale": "en",
+        "width": 320,
+        "pass": true,
+        "labels": [
+          {
+            "text": "Import demo",
+            "lines": 1,
+            "fits": true,
+            "width": 157.671875,
+            "height": 44
+          },
+          {
+            "text": "Import demo",
+            "lines": 1,
+            "fits": true,
+            "width": 220,
+            "height": 44
+          },
+          {
+            "text": "How it works",
+            "lines": 1,
+            "fits": true,
+            "width": 99.71875,
+            "height": 24
+          },
+          {
+            "text": "Import guide (demo)",
+            "lines": 1,
+            "fits": true,
+            "width": 220.71875,
+            "height": 28.796875
+          },
+          {
+            "text": "Back to enquiry",
+            "lines": 1,
+            "fits": true,
+            "width": 200,
+            "height": 44
+          }
+        ],
+        "errors": [],
+        "writes": []
+      },
+      {
+        "locale": "en",
+        "width": 390,
+        "pass": true,
+        "labels": [
+          {
+            "text": "Import demo",
+            "lines": 1,
+            "fits": true,
+            "width": 157.671875,
+            "height": 44
+          },
+          {
+            "text": "Import demo",
+            "lines": 1,
+            "fits": true,
+            "width": 220,
+            "height": 44
+          },
+          {
+            "text": "How it works",
+            "lines": 1,
+            "fits": true,
+            "width": 99.71875,
+            "height": 24
+          },
+          {
+            "text": "Import guide (demo)",
+            "lines": 1,
+            "fits": true,
+            "width": 220.71875,
+            "height": 28.796875
+          },
+          {
+            "text": "Back to enquiry",
+            "lines": 1,
+            "fits": true,
+            "width": 200,
+            "height": 44
+          }
+        ],
+        "errors": [],
+        "writes": []
+      },
+      {
+        "locale": "en",
+        "width": 430,
+        "pass": true,
+        "labels": [
+          {
+            "text": "Import demo",
+            "lines": 1,
+            "fits": true,
+            "width": 157.671875,
+            "height": 44
+          },
+          {
+            "text": "Import demo",
+            "lines": 1,
+            "fits": true,
+            "width": 220,
+            "height": 44
+          },
+          {
+            "text": "How it works",
+            "lines": 1,
+            "fits": true,
+            "width": 99.71875,
+            "height": 24
+          },
+          {
+            "text": "Import guide (demo)",
+            "lines": 1,
+            "fits": true,
+            "width": 220.71875,
+            "height": 28.796875
+          },
+          {
+            "text": "Back to enquiry",
+            "lines": 1,
+            "fits": true,
+            "width": 200,
+            "height": 44
+          }
+        ],
+        "errors": [],
+        "writes": []
+      }
+    ],
+    "screenshotsInspected": [
+      "bg-320-import-guide.png",
+      "en-320-import-guide.png"
+    ]
+  },
+  "reservedUnchangedAtBrowserFinish": true,
+  "finalCheckAt": "2026-09-20T15:31:32.228Z",
+  "headAtFinalCheck": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+  "committed": false,
+  "productionBuildPerformed": false,
+  "pushed": false,
+  "deployed": false,
+  "currentRegisteredLocaleTestsPlusCopy": {
+    "at": "2026-09-20T15:32:41.926Z",
+    "command": "node --test --test-concurrency=1 scripts/locale-policy.test.mjs scripts/locale-copy-audit.test.mjs scripts/locale-catalog.test.mjs scripts/locale-source-audit.test.mjs scripts/locale-mobile-copy.test.mjs",
+    "exitCode": 0,
+    "log": "TAP version 13\n# Subtest: requires a complete EN/BG pair without placeholders or review stubs\nok 1 - requires a complete EN/BG pair without placeholders or review stubs\n  ---\n  duration_ms: 4.9823\n  type: 'test'\n  ...\n# Subtest: rejects duplicate keys even when both entries happen to agree\nok 2 - rejects duplicate keys even when both entries happen to agree\n  ---\n  duration_ms: 0.6632\n  type: 'test'\n  ...\n# Subtest: ambiguous aliases cannot select a meaning according to declaration order\nok 3 - ambiguous aliases cannot select a meaning according to declaration order\n  ---\n  duration_ms: 1.9011\n  type: 'test'\n  ...\n# Subtest: identical meanings have a deterministic alias while not-ui entries are omitted\nok 4 - identical meanings have a deterministic alias while not-ui entries are omitted\n  ---\n  duration_ms: 0.9658\n  type: 'test'\n  ...\n# Subtest: actual catalogs contain no active ambiguous aliases and include dealer/context keys\nok 5 - actual catalogs contain no active ambiguous aliases and include dealer/context keys\n  ---\n  duration_ms: 25.1858\n  type: 'test'\n  ...\n# Subtest: recognizes interpolated All 6 cars rather than only literal catalog entries\nok 6 - recognizes interpolated All 6 cars rather than only literal catalog entries\n  ---\n  duration_ms: 2.039\n  type: 'test'\n  ...\n# Subtest: escapes punctuation and anchors the complete known message\nok 7 - escapes punctuation and anchors the complete known message\n  ---\n  duration_ms: 0.5604\n  type: 'test'\n  ...\n# Subtest: excludes invariant names, currencies and short domain patterns\nok 8 - excludes invariant names, currencies and short domain patterns\n  ---\n  duration_ms: 1.278\n  type: 'test'\n  ...\n# Subtest: normalizes catalog whitespace and removes duplicates\nok 9 - normalizes catalog whitespace and removes duplicates\n  ---\n  duration_ms: 1.5184\n  type: 'test'\n  ...\n# Subtest: does not classify already-covered static catalog entries as dynamic\nok 10 - does not classify already-covered static catalog entries as dynamic\n  ---\n  duration_ms: 0.2056\n  type: 'test'\n  ...\n# Subtest: compact import controls retain complete native EN/BG copy\nok 11 - compact import controls retain complete native EN/BG copy\n  ---\n  duration_ms: 2.1483\n  type: 'test'\n  ...\n# Subtest: import guide uses direct keys, not lookups of already translated copy\nok 12 - import guide uses direct keys, not lookups of already translated copy\n  ---\n  duration_ms: 0.657\n  type: 'test'\n  ...\n# Subtest: explicit native path wins all conflicting hints, without accepting cookies\nok 13 - explicit native path wins all conflicting hints, without accepting cookies\n  ---\n  duration_ms: 2.3912\n  type: 'test'\n  ...\n# Subtest: independent countries do not change stock currency or enable unfinished languages\nok 14 - independent countries do not change stock currency or enable unfinished languages\n  ---\n  duration_ms: 17.7386\n  type: 'test'\n  ...\n# Subtest: native mounts and suffixes are idempotent and resources stay outside rewriting\nok 15 - native mounts and suffixes are idempotent and resources stay outside rewriting\n  ---\n  duration_ms: 0.6293\n  type: 'test'\n  ...\n# Subtest: safe destinations reject traversal, external origins, encoded separators and resources\nok 16 - safe destinations reject traversal, external origins, encoded separators and resources\n  ---\n  duration_ms: 0.4915\n  type: 'test'\n  ...\n# Subtest: save sets exactly host-only secure preference cookies and preserves query/anchor\nok 17 - save sets exactly host-only secure preference cookies and preserves query/anchor\n  ---\n  duration_ms: 25.1872\n  type: 'test'\n  ...\n# Subtest: dismissal records no accepted language or country\nok 18 - dismissal records no accepted language or country\n  ---\n  duration_ms: 0.9719\n  type: 'test'\n  ...\n# Subtest: malformed, cross-origin, unsupported and oversized preference writes fail without cookies\nok 19 - malformed, cross-origin, unsupported and oversized preference writes fail without cookies\n  ---\n  duration_ms: 3.3343\n  type: 'test'\n  ...\n# Subtest: server resolution has no cross-request state or mutable caller configuration\nok 20 - server resolution has no cross-request state or mutable caller configuration\n  ---\n  duration_ms: 1.3792\n  type: 'test'\n  ...\n# Subtest: rejects unkeyed visible and accessibility copy\nok 21 - rejects unkeyed visible and accessibility copy\n  ---\n  duration_ms: 14.1581\n  type: 'test'\n  ...\n# Subtest: rejects unknown keys and ambiguous source aliases, including attributes\nok 22 - rejects unknown keys and ambiguous source aliases, including attributes\n  ---\n  duration_ms: 6.3072\n  type: 'test'\n  ...\n# Subtest: accepts explicit context keys and language autonyms\nok 23 - accepts explicit context keys and language autonyms\n  ---\n  duration_ms: 6.2478\n  type: 'test'\n  ...\n# Subtest: all native application files satisfy the source-copy boundary\nok 24 - all native application files satisfy the source-copy boundary\n  ---\n  duration_ms: 611.0375\n  type: 'test'\n  ...\n1..24\n# tests 24\n# suites 0\n# pass 24\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 2805.9124\n"
+  }
+}

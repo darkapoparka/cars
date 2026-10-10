@@ -1,0 +1,5219 @@
+{
+  "mobile": [
+    {
+      "id": "home-bg-320",
+      "exactVisiblePresentation": false,
+      "presentationMatchesWithProductionLineHeightRounding": false,
+      "recoveredListingImage": true,
+      "transientFooterObserver": false,
+      "matchingPrefix": false,
+      "beforeElements": 186,
+      "afterElements": 186,
+      "differences": [
+        {
+          "index": 9,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Търси марка, модел, цена...",
+            "href": null,
+            "src": null,
+            "box": [
+              32,
+              123,
+              216,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Търси марка, модел, цена...",
+            "href": null,
+            "src": null,
+            "box": [
+              32,
+              123,
+              216,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 11,
+          "before": {
+            "tag": "A",
+            "text": "Виж всички (42)",
+            "href": "/bg/inventory",
+            "src": null,
+            "box": [
+              71.97,
+              179,
+              176.06,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "Виж всички (42)",
+            "href": "/bg/inventory",
+            "src": null,
+            "box": [
+              71.97,
+              179,
+              176.06,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 13,
+          "before": {
+            "tag": "BUTTON",
+            "text": "",
+            "href": null,
+            "src": null,
+            "box": [
+              16,
+              261,
+              44,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "",
+            "href": null,
+            "src": null,
+            "box": [
+              16,
+              261,
+              44,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 14,
+          "before": {
+            "tag": "A",
+            "text": "До 10 000",
+            "href": "/bg/inventory?maxPrice=10000",
+            "src": null,
+            "box": [
+              68,
+              261,
+              102.08,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "До 10 000",
+            "href": "/bg/inventory?maxPrice=10000",
+            "src": null,
+            "box": [
+              68,
+              261,
+              102.08,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 15,
+          "before": {
+            "tag": "A",
+            "text": "До 20 000",
+            "href": "/bg/inventory?maxPrice=20000",
+            "src": null,
+            "box": [
+              178.08,
+              261,
+              103.63,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "До 20 000",
+            "href": "/bg/inventory?maxPrice=20000",
+            "src": null,
+            "box": [
+              178.08,
+              261,
+              103.63,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 16,
+          "before": {
+            "tag": "A",
+            "text": "До 30 000",
+            "href": "/bg/inventory?maxPrice=30000",
+            "src": null,
+            "box": [
+              289.7,
+              261,
+              103.77,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "До 30 000",
+            "href": "/bg/inventory?maxPrice=30000",
+            "src": null,
+            "box": [
+              289.7,
+              261,
+              103.77,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 17,
+          "before": {
+            "tag": "A",
+            "text": "Нови обяви",
+            "href": "/bg/inventory?status=New%20listing",
+            "src": null,
+            "box": [
+              401.47,
+              261,
+              116.64,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "Нови обяви",
+            "href": "/bg/inventory?status=New%20listing",
+            "src": null,
+            "box": [
+              401.47,
+              261,
+              116.64,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 18,
+          "before": {
+            "tag": "A",
+            "text": "Налични",
+            "href": "/bg/inventory?status=Available",
+            "src": null,
+            "box": [
+              526.11,
+              261,
+              91.5,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "Налични",
+            "href": "/bg/inventory?status=Available",
+            "src": null,
+            "box": [
+              526.11,
+              261,
+              91.5,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 64,
+          "before": {
+            "tag": "IMG",
+            "text": "",
+            "href": null,
+            "src": "/assets/vehicle-placeholder.svg",
+            "box": [
+              1672.34,
+              316,
+              262.39,
+              149.94
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "16px",
+              "400",
+              "26px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "IMG",
+            "text": "",
+            "href": null,
+            "src": "https://mobistatic4.focus.bg/mobile/photosorg/363/1/11778673403376363_9H.webp",
+            "box": [
+              1672.34,
+              316,
+              262.39,
+              149.94
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "16px",
+              "400",
+              "26px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "inventory-bg-320",
+      "exactVisiblePresentation": false,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 56,
+      "afterElements": 56,
+      "differences": [
+        {
+          "index": 6,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Марка",
+            "href": null,
+            "src": null,
+            "box": [
+              14,
+              58,
+              94.94,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Марка",
+            "href": null,
+            "src": null,
+            "box": [
+              14,
+              58,
+              94.94,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 7,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Модел",
+            "href": null,
+            "src": null,
+            "box": [
+              116.94,
+              58,
+              95.73,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Модел",
+            "href": null,
+            "src": null,
+            "box": [
+              116.94,
+              58,
+              95.73,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 8,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Цена",
+            "href": null,
+            "src": null,
+            "box": [
+              220.67,
+              58,
+              84.77,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Цена",
+            "href": null,
+            "src": null,
+            "box": [
+              220.67,
+              58,
+              84.77,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 9,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Година",
+            "href": null,
+            "src": null,
+            "box": [
+              313.44,
+              58,
+              99.91,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Година",
+            "href": null,
+            "src": null,
+            "box": [
+              313.44,
+              58,
+              99.91,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 10,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Още",
+            "href": null,
+            "src": null,
+            "box": [
+              421.34,
+              58,
+              80.92,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Още",
+            "href": null,
+            "src": null,
+            "box": [
+              421.34,
+              58,
+              80.92,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "services-bg-320",
+      "exactVisiblePresentation": false,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 59,
+      "afterElements": 59,
+      "differences": [
+        {
+          "index": 9,
+          "before": {
+            "tag": "INPUT",
+            "text": "",
+            "href": null,
+            "src": null,
+            "box": [
+              30,
+              128,
+              220,
+              23.98
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "INPUT",
+            "text": "",
+            "href": null,
+            "src": null,
+            "box": [
+              30,
+              128,
+              220,
+              23.98
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "about-bg-320",
+      "exactVisiblePresentation": true,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 55,
+      "afterElements": 55,
+      "differences": []
+    },
+    {
+      "id": "contact-bg-320",
+      "exactVisiblePresentation": true,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 28,
+      "afterElements": 28,
+      "differences": []
+    },
+    {
+      "id": "sell-your-car-bg-320",
+      "exactVisiblePresentation": false,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 29,
+      "afterElements": 29,
+      "differences": [
+        {
+          "index": 11,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Как работи",
+            "href": null,
+            "src": null,
+            "box": [
+              83.59,
+              179,
+              152.81,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 14px",
+            "gap": "8px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Как работи",
+            "href": null,
+            "src": null,
+            "box": [
+              83.59,
+              179,
+              152.81,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 14px",
+            "gap": "8px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "financing-bg-320",
+      "exactVisiblePresentation": true,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 35,
+      "afterElements": 35,
+      "differences": []
+    },
+    {
+      "id": "import-bg-320",
+      "exactVisiblePresentation": false,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 33,
+      "afterElements": 33,
+      "differences": [
+        {
+          "index": 11,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Как работи",
+            "href": null,
+            "src": null,
+            "box": [
+              83.59,
+              179,
+              152.81,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 14px",
+            "gap": "8px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Как работи",
+            "href": null,
+            "src": null,
+            "box": [
+              83.59,
+              179,
+              152.81,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 14px",
+            "gap": "8px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 14,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Държава",
+            "href": null,
+            "src": null,
+            "box": [
+              14,
+              257,
+              142.83,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Държава",
+            "href": null,
+            "src": null,
+            "box": [
+              14,
+              257,
+              142.83,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 15,
+          "before": {
+            "tag": "IMG",
+            "text": "",
+            "href": null,
+            "src": "/assets/daynight/flags/all.svg",
+            "box": [
+              27,
+              271,
+              20,
+              16
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "IMG",
+            "text": "",
+            "href": null,
+            "src": "/assets/daynight/flags/all.svg",
+            "box": [
+              27,
+              271,
+              20,
+              16
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 16,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Тип",
+            "href": null,
+            "src": null,
+            "box": [
+              164.83,
+              257,
+              74.78,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Тип",
+            "href": null,
+            "src": null,
+            "box": [
+              164.83,
+              257,
+              74.78,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 17,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Марка",
+            "href": null,
+            "src": null,
+            "box": [
+              247.61,
+              257,
+              96.94,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Марка",
+            "href": null,
+            "src": null,
+            "box": [
+              247.61,
+              257,
+              96.94,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 18,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Модел",
+            "href": null,
+            "src": null,
+            "box": [
+              352.55,
+              257,
+              97.73,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Модел",
+            "href": null,
+            "src": null,
+            "box": [
+              352.55,
+              257,
+              97.73,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "home-bg-390",
+      "exactVisiblePresentation": false,
+      "presentationMatchesWithProductionLineHeightRounding": false,
+      "recoveredListingImage": false,
+      "transientFooterObserver": true,
+      "matchingPrefix": true,
+      "beforeElements": 181,
+      "afterElements": 186,
+      "differences": [
+        {
+          "index": 9,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Търси марка, модел, цена...",
+            "href": null,
+            "src": null,
+            "box": [
+              32,
+              123,
+              286,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Търси марка, модел, цена...",
+            "href": null,
+            "src": null,
+            "box": [
+              32,
+              123,
+              286,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 11,
+          "before": {
+            "tag": "A",
+            "text": "Виж всички (42)",
+            "href": "/bg/inventory",
+            "src": null,
+            "box": [
+              106.97,
+              179,
+              176.06,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "Виж всички (42)",
+            "href": "/bg/inventory",
+            "src": null,
+            "box": [
+              106.97,
+              179,
+              176.06,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 13,
+          "before": {
+            "tag": "BUTTON",
+            "text": "",
+            "href": null,
+            "src": null,
+            "box": [
+              16,
+              261,
+              44,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "",
+            "href": null,
+            "src": null,
+            "box": [
+              16,
+              261,
+              44,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 14,
+          "before": {
+            "tag": "A",
+            "text": "До 10 000",
+            "href": "/bg/inventory?maxPrice=10000",
+            "src": null,
+            "box": [
+              68,
+              261,
+              102.08,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "До 10 000",
+            "href": "/bg/inventory?maxPrice=10000",
+            "src": null,
+            "box": [
+              68,
+              261,
+              102.08,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 15,
+          "before": {
+            "tag": "A",
+            "text": "До 20 000",
+            "href": "/bg/inventory?maxPrice=20000",
+            "src": null,
+            "box": [
+              178.08,
+              261,
+              103.63,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "До 20 000",
+            "href": "/bg/inventory?maxPrice=20000",
+            "src": null,
+            "box": [
+              178.08,
+              261,
+              103.63,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 16,
+          "before": {
+            "tag": "A",
+            "text": "До 30 000",
+            "href": "/bg/inventory?maxPrice=30000",
+            "src": null,
+            "box": [
+              289.7,
+              261,
+              103.77,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "До 30 000",
+            "href": "/bg/inventory?maxPrice=30000",
+            "src": null,
+            "box": [
+              289.7,
+              261,
+              103.77,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 17,
+          "before": {
+            "tag": "A",
+            "text": "Нови обяви",
+            "href": "/bg/inventory?status=New%20listing",
+            "src": null,
+            "box": [
+              401.47,
+              261,
+              116.64,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "Нови обяви",
+            "href": "/bg/inventory?status=New%20listing",
+            "src": null,
+            "box": [
+              401.47,
+              261,
+              116.64,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 18,
+          "before": {
+            "tag": "A",
+            "text": "Налични",
+            "href": "/bg/inventory?status=Available",
+            "src": null,
+            "box": [
+              526.11,
+              261,
+              91.5,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "Налични",
+            "href": "/bg/inventory?status=Available",
+            "src": null,
+            "box": [
+              526.11,
+              261,
+              91.5,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 181,
+          "after": {
+            "tag": "A",
+            "text": "Начало",
+            "href": "/bg",
+            "src": null,
+            "box": [
+              4,
+              943,
+              76.39,
+              58
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "16px",
+              "400",
+              "26px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "3px",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 182,
+          "after": {
+            "tag": "A",
+            "text": "Коли",
+            "href": "/bg/inventory",
+            "src": null,
+            "box": [
+              80.39,
+              943,
+              76.41,
+              58
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "16px",
+              "400",
+              "26px"
+            ],
+            "color": "rgb(98, 109, 124)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(98, 109, 124)",
+            "padding": "0px",
+            "gap": "3px",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 183,
+          "after": {
+            "tag": "A",
+            "text": "Продай",
+            "href": "/bg/sell-your-car",
+            "src": null,
+            "box": [
+              156.8,
+              943,
+              76.39,
+              58
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "16px",
+              "400",
+              "26px"
+            ],
+            "color": "rgb(98, 109, 124)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(98, 109, 124)",
+            "padding": "0px",
+            "gap": "3px",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 184,
+          "after": {
+            "tag": "A",
+            "text": "Внос",
+            "href": "/bg/import",
+            "src": null,
+            "box": [
+              233.19,
+              943,
+              76.41,
+              58
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "16px",
+              "400",
+              "26px"
+            ],
+            "color": "rgb(98, 109, 124)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(98, 109, 124)",
+            "padding": "0px",
+            "gap": "3px",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 185,
+          "after": {
+            "tag": "BUTTON",
+            "text": "Меню",
+            "href": null,
+            "src": null,
+            "box": [
+              309.59,
+              943,
+              76.41,
+              58
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "16px",
+              "400",
+              "26px"
+            ],
+            "color": "rgb(98, 109, 124)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(98, 109, 124)",
+            "padding": "0px",
+            "gap": "3px",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "inventory-bg-390",
+      "exactVisiblePresentation": false,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 56,
+      "afterElements": 56,
+      "differences": [
+        {
+          "index": 6,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Марка",
+            "href": null,
+            "src": null,
+            "box": [
+              14,
+              58,
+              94.94,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Марка",
+            "href": null,
+            "src": null,
+            "box": [
+              14,
+              58,
+              94.94,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 7,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Модел",
+            "href": null,
+            "src": null,
+            "box": [
+              116.94,
+              58,
+              95.73,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Модел",
+            "href": null,
+            "src": null,
+            "box": [
+              116.94,
+              58,
+              95.73,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 8,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Цена",
+            "href": null,
+            "src": null,
+            "box": [
+              220.67,
+              58,
+              84.77,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Цена",
+            "href": null,
+            "src": null,
+            "box": [
+              220.67,
+              58,
+              84.77,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 9,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Година",
+            "href": null,
+            "src": null,
+            "box": [
+              313.44,
+              58,
+              99.91,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Година",
+            "href": null,
+            "src": null,
+            "box": [
+              313.44,
+              58,
+              99.91,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 10,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Още",
+            "href": null,
+            "src": null,
+            "box": [
+              421.34,
+              58,
+              80.92,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Още",
+            "href": null,
+            "src": null,
+            "box": [
+              421.34,
+              58,
+              80.92,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "services-bg-390",
+      "exactVisiblePresentation": false,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 59,
+      "afterElements": 59,
+      "differences": [
+        {
+          "index": 9,
+          "before": {
+            "tag": "INPUT",
+            "text": "",
+            "href": null,
+            "src": null,
+            "box": [
+              30,
+              128,
+              290,
+              23.98
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "INPUT",
+            "text": "",
+            "href": null,
+            "src": null,
+            "box": [
+              30,
+              128,
+              290,
+              23.98
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "about-bg-390",
+      "exactVisiblePresentation": true,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 55,
+      "afterElements": 55,
+      "differences": []
+    },
+    {
+      "id": "contact-bg-390",
+      "exactVisiblePresentation": true,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 28,
+      "afterElements": 28,
+      "differences": []
+    },
+    {
+      "id": "sell-your-car-bg-390",
+      "exactVisiblePresentation": false,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 29,
+      "afterElements": 29,
+      "differences": [
+        {
+          "index": 11,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Как работи",
+            "href": null,
+            "src": null,
+            "box": [
+              118.59,
+              179,
+              152.81,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 14px",
+            "gap": "8px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Как работи",
+            "href": null,
+            "src": null,
+            "box": [
+              118.59,
+              179,
+              152.81,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 14px",
+            "gap": "8px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "financing-bg-390",
+      "exactVisiblePresentation": true,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 35,
+      "afterElements": 35,
+      "differences": []
+    },
+    {
+      "id": "import-bg-390",
+      "exactVisiblePresentation": false,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 33,
+      "afterElements": 33,
+      "differences": [
+        {
+          "index": 11,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Как работи",
+            "href": null,
+            "src": null,
+            "box": [
+              118.59,
+              179,
+              152.81,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 14px",
+            "gap": "8px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Как работи",
+            "href": null,
+            "src": null,
+            "box": [
+              118.59,
+              179,
+              152.81,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 14px",
+            "gap": "8px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 14,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Държава",
+            "href": null,
+            "src": null,
+            "box": [
+              14,
+              257,
+              142.83,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Държава",
+            "href": null,
+            "src": null,
+            "box": [
+              14,
+              257,
+              142.83,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 15,
+          "before": {
+            "tag": "IMG",
+            "text": "",
+            "href": null,
+            "src": "/assets/daynight/flags/all.svg",
+            "box": [
+              27,
+              271,
+              20,
+              16
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "IMG",
+            "text": "",
+            "href": null,
+            "src": "/assets/daynight/flags/all.svg",
+            "box": [
+              27,
+              271,
+              20,
+              16
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 16,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Тип",
+            "href": null,
+            "src": null,
+            "box": [
+              164.83,
+              257,
+              74.78,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Тип",
+            "href": null,
+            "src": null,
+            "box": [
+              164.83,
+              257,
+              74.78,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 17,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Марка",
+            "href": null,
+            "src": null,
+            "box": [
+              247.61,
+              257,
+              96.94,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Марка",
+            "href": null,
+            "src": null,
+            "box": [
+              247.61,
+              257,
+              96.94,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 18,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Модел",
+            "href": null,
+            "src": null,
+            "box": [
+              352.55,
+              257,
+              97.73,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Модел",
+            "href": null,
+            "src": null,
+            "box": [
+              352.55,
+              257,
+              97.73,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "home-en-320",
+      "exactVisiblePresentation": false,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 186,
+      "afterElements": 186,
+      "differences": [
+        {
+          "index": 9,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Search brand, model, price...",
+            "href": null,
+            "src": null,
+            "box": [
+              32,
+              123,
+              216,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Search brand, model, price...",
+            "href": null,
+            "src": null,
+            "box": [
+              32,
+              123,
+              216,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 11,
+          "before": {
+            "tag": "A",
+            "text": "View all (42)",
+            "href": "/en/inventory",
+            "src": null,
+            "box": [
+              89.5,
+              179,
+              141,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "View all (42)",
+            "href": "/en/inventory",
+            "src": null,
+            "box": [
+              89.5,
+              179,
+              141,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 13,
+          "before": {
+            "tag": "BUTTON",
+            "text": "",
+            "href": null,
+            "src": null,
+            "box": [
+              16,
+              261,
+              44,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "",
+            "href": null,
+            "src": null,
+            "box": [
+              16,
+              261,
+              44,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 14,
+          "before": {
+            "tag": "A",
+            "text": "Under 10k",
+            "href": "/en/inventory?maxPrice=10000",
+            "src": null,
+            "box": [
+              68,
+              261,
+              102.36,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "Under 10k",
+            "href": "/en/inventory?maxPrice=10000",
+            "src": null,
+            "box": [
+              68,
+              261,
+              102.36,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 15,
+          "before": {
+            "tag": "A",
+            "text": "Under 20k",
+            "href": "/en/inventory?maxPrice=20000",
+            "src": null,
+            "box": [
+              178.36,
+              261,
+              103.91,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "Under 20k",
+            "href": "/en/inventory?maxPrice=20000",
+            "src": null,
+            "box": [
+              178.36,
+              261,
+              103.91,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 16,
+          "before": {
+            "tag": "A",
+            "text": "Under 30k",
+            "href": "/en/inventory?maxPrice=30000",
+            "src": null,
+            "box": [
+              290.27,
+              261,
+              104.05,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "Under 30k",
+            "href": "/en/inventory?maxPrice=30000",
+            "src": null,
+            "box": [
+              290.27,
+              261,
+              104.05,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 17,
+          "before": {
+            "tag": "A",
+            "text": "New listings",
+            "href": "/en/inventory?status=New%20listing",
+            "src": null,
+            "box": [
+              402.31,
+              261,
+              118.02,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "New listings",
+            "href": "/en/inventory?status=New%20listing",
+            "src": null,
+            "box": [
+              402.31,
+              261,
+              118.02,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 18,
+          "before": {
+            "tag": "A",
+            "text": "In stock",
+            "href": "/en/inventory?status=Available",
+            "src": null,
+            "box": [
+              528.33,
+              261,
+              85.22,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "In stock",
+            "href": "/en/inventory?status=Available",
+            "src": null,
+            "box": [
+              528.33,
+              261,
+              85.22,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "inventory-en-320",
+      "exactVisiblePresentation": false,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 56,
+      "afterElements": 56,
+      "differences": [
+        {
+          "index": 6,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Brand",
+            "href": null,
+            "src": null,
+            "box": [
+              14,
+              58,
+              90.22,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Brand",
+            "href": null,
+            "src": null,
+            "box": [
+              14,
+              58,
+              90.22,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 7,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Model",
+            "href": null,
+            "src": null,
+            "box": [
+              112.22,
+              58,
+              91.84,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Model",
+            "href": null,
+            "src": null,
+            "box": [
+              112.22,
+              58,
+              91.84,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 8,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Price",
+            "href": null,
+            "src": null,
+            "box": [
+              212.06,
+              58,
+              84.02,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Price",
+            "href": null,
+            "src": null,
+            "box": [
+              212.06,
+              58,
+              84.02,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 9,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Year",
+            "href": null,
+            "src": null,
+            "box": [
+              304.08,
+              58,
+              78.11,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Year",
+            "href": null,
+            "src": null,
+            "box": [
+              304.08,
+              58,
+              78.11,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 10,
+          "before": {
+            "tag": "BUTTON",
+            "text": "More",
+            "href": null,
+            "src": null,
+            "box": [
+              390.19,
+              58,
+              84.06,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "More",
+            "href": null,
+            "src": null,
+            "box": [
+              390.19,
+              58,
+              84.06,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "services-en-320",
+      "exactVisiblePresentation": false,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 59,
+      "afterElements": 59,
+      "differences": [
+        {
+          "index": 9,
+          "before": {
+            "tag": "INPUT",
+            "text": "",
+            "href": null,
+            "src": null,
+            "box": [
+              30,
+              128,
+              220,
+              23.98
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "INPUT",
+            "text": "",
+            "href": null,
+            "src": null,
+            "box": [
+              30,
+              128,
+              220,
+              23.98
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "about-en-320",
+      "exactVisiblePresentation": true,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 55,
+      "afterElements": 55,
+      "differences": []
+    },
+    {
+      "id": "contact-en-320",
+      "exactVisiblePresentation": true,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 28,
+      "afterElements": 28,
+      "differences": []
+    },
+    {
+      "id": "sell-your-car-en-320",
+      "exactVisiblePresentation": false,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 29,
+      "afterElements": 29,
+      "differences": [
+        {
+          "index": 11,
+          "before": {
+            "tag": "BUTTON",
+            "text": "How it works",
+            "href": null,
+            "src": null,
+            "box": [
+              81.64,
+              179,
+              156.72,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 14px",
+            "gap": "8px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "How it works",
+            "href": null,
+            "src": null,
+            "box": [
+              81.64,
+              179,
+              156.72,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 14px",
+            "gap": "8px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "financing-en-320",
+      "exactVisiblePresentation": true,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 35,
+      "afterElements": 35,
+      "differences": []
+    },
+    {
+      "id": "import-en-320",
+      "exactVisiblePresentation": false,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 33,
+      "afterElements": 33,
+      "differences": [
+        {
+          "index": 11,
+          "before": {
+            "tag": "BUTTON",
+            "text": "How it works",
+            "href": null,
+            "src": null,
+            "box": [
+              81.64,
+              179,
+              156.72,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 14px",
+            "gap": "8px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "How it works",
+            "href": null,
+            "src": null,
+            "box": [
+              81.64,
+              179,
+              156.72,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 14px",
+            "gap": "8px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 14,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Country",
+            "href": null,
+            "src": null,
+            "box": [
+              14,
+              257,
+              136.45,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Country",
+            "href": null,
+            "src": null,
+            "box": [
+              14,
+              257,
+              136.45,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 15,
+          "before": {
+            "tag": "IMG",
+            "text": "",
+            "href": null,
+            "src": "/assets/daynight/flags/all.svg",
+            "box": [
+              27,
+              271,
+              20,
+              16
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "IMG",
+            "text": "",
+            "href": null,
+            "src": "/assets/daynight/flags/all.svg",
+            "box": [
+              27,
+              271,
+              20,
+              16
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 16,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Type",
+            "href": null,
+            "src": null,
+            "box": [
+              158.45,
+              257,
+              83.69,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Type",
+            "href": null,
+            "src": null,
+            "box": [
+              158.45,
+              257,
+              83.69,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 17,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Make",
+            "href": null,
+            "src": null,
+            "box": [
+              250.14,
+              257,
+              87.66,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Make",
+            "href": null,
+            "src": null,
+            "box": [
+              250.14,
+              257,
+              87.66,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 18,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Model",
+            "href": null,
+            "src": null,
+            "box": [
+              345.8,
+              257,
+              93.84,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Model",
+            "href": null,
+            "src": null,
+            "box": [
+              345.8,
+              257,
+              93.84,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "home-en-390",
+      "exactVisiblePresentation": false,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 186,
+      "afterElements": 186,
+      "differences": [
+        {
+          "index": 9,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Search brand, model, price...",
+            "href": null,
+            "src": null,
+            "box": [
+              32,
+              123,
+              286,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Search brand, model, price...",
+            "href": null,
+            "src": null,
+            "box": [
+              32,
+              123,
+              286,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 11,
+          "before": {
+            "tag": "A",
+            "text": "View all (42)",
+            "href": "/en/inventory",
+            "src": null,
+            "box": [
+              124.5,
+              179,
+              141,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "View all (42)",
+            "href": "/en/inventory",
+            "src": null,
+            "box": [
+              124.5,
+              179,
+              141,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 13,
+          "before": {
+            "tag": "BUTTON",
+            "text": "",
+            "href": null,
+            "src": null,
+            "box": [
+              16,
+              261,
+              44,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "",
+            "href": null,
+            "src": null,
+            "box": [
+              16,
+              261,
+              44,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 14,
+          "before": {
+            "tag": "A",
+            "text": "Under 10k",
+            "href": "/en/inventory?maxPrice=10000",
+            "src": null,
+            "box": [
+              68,
+              261,
+              102.36,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "Under 10k",
+            "href": "/en/inventory?maxPrice=10000",
+            "src": null,
+            "box": [
+              68,
+              261,
+              102.36,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 15,
+          "before": {
+            "tag": "A",
+            "text": "Under 20k",
+            "href": "/en/inventory?maxPrice=20000",
+            "src": null,
+            "box": [
+              178.36,
+              261,
+              103.91,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "Under 20k",
+            "href": "/en/inventory?maxPrice=20000",
+            "src": null,
+            "box": [
+              178.36,
+              261,
+              103.91,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 16,
+          "before": {
+            "tag": "A",
+            "text": "Under 30k",
+            "href": "/en/inventory?maxPrice=30000",
+            "src": null,
+            "box": [
+              290.27,
+              261,
+              104.05,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "Under 30k",
+            "href": "/en/inventory?maxPrice=30000",
+            "src": null,
+            "box": [
+              290.27,
+              261,
+              104.05,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 17,
+          "before": {
+            "tag": "A",
+            "text": "New listings",
+            "href": "/en/inventory?status=New%20listing",
+            "src": null,
+            "box": [
+              402.31,
+              261,
+              118.02,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "New listings",
+            "href": "/en/inventory?status=New%20listing",
+            "src": null,
+            "box": [
+              402.31,
+              261,
+              118.02,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 18,
+          "before": {
+            "tag": "A",
+            "text": "In stock",
+            "href": "/en/inventory?status=Available",
+            "src": null,
+            "box": [
+              528.33,
+              261,
+              85.22,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "A",
+            "text": "In stock",
+            "href": "/en/inventory?status=Available",
+            "src": null,
+            "box": [
+              528.33,
+              261,
+              85.22,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 12px",
+            "gap": "8px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "inventory-en-390",
+      "exactVisiblePresentation": false,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 56,
+      "afterElements": 56,
+      "differences": [
+        {
+          "index": 6,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Brand",
+            "href": null,
+            "src": null,
+            "box": [
+              14,
+              58,
+              90.22,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Brand",
+            "href": null,
+            "src": null,
+            "box": [
+              14,
+              58,
+              90.22,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 7,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Model",
+            "href": null,
+            "src": null,
+            "box": [
+              112.22,
+              58,
+              91.84,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Model",
+            "href": null,
+            "src": null,
+            "box": [
+              112.22,
+              58,
+              91.84,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 8,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Price",
+            "href": null,
+            "src": null,
+            "box": [
+              212.06,
+              58,
+              84.02,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Price",
+            "href": null,
+            "src": null,
+            "box": [
+              212.06,
+              58,
+              84.02,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 9,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Year",
+            "href": null,
+            "src": null,
+            "box": [
+              304.08,
+              58,
+              78.11,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Year",
+            "href": null,
+            "src": null,
+            "box": [
+              304.08,
+              58,
+              78.11,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 10,
+          "before": {
+            "tag": "BUTTON",
+            "text": "More",
+            "href": null,
+            "src": null,
+            "box": [
+              390.19,
+              58,
+              84.06,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "More",
+            "href": null,
+            "src": null,
+            "box": [
+              390.19,
+              58,
+              84.06,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px 10px 0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "services-en-390",
+      "exactVisiblePresentation": false,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 59,
+      "afterElements": 59,
+      "differences": [
+        {
+          "index": 9,
+          "before": {
+            "tag": "INPUT",
+            "text": "",
+            "href": null,
+            "src": null,
+            "box": [
+              30,
+              128,
+              290,
+              23.98
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "INPUT",
+            "text": "",
+            "href": null,
+            "src": null,
+            "box": [
+              30,
+              128,
+              290,
+              23.98
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "about-en-390",
+      "exactVisiblePresentation": true,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 55,
+      "afterElements": 55,
+      "differences": []
+    },
+    {
+      "id": "contact-en-390",
+      "exactVisiblePresentation": true,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 28,
+      "afterElements": 28,
+      "differences": []
+    },
+    {
+      "id": "sell-your-car-en-390",
+      "exactVisiblePresentation": false,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 29,
+      "afterElements": 29,
+      "differences": [
+        {
+          "index": 11,
+          "before": {
+            "tag": "BUTTON",
+            "text": "How it works",
+            "href": null,
+            "src": null,
+            "box": [
+              116.64,
+              179,
+              156.72,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 14px",
+            "gap": "8px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "How it works",
+            "href": null,
+            "src": null,
+            "box": [
+              116.64,
+              179,
+              156.72,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 14px",
+            "gap": "8px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "financing-en-390",
+      "exactVisiblePresentation": true,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 35,
+      "afterElements": 35,
+      "differences": []
+    },
+    {
+      "id": "import-en-390",
+      "exactVisiblePresentation": false,
+      "presentationMatchesWithProductionLineHeightRounding": true,
+      "recoveredListingImage": false,
+      "transientFooterObserver": false,
+      "matchingPrefix": true,
+      "beforeElements": 33,
+      "afterElements": 33,
+      "differences": [
+        {
+          "index": 11,
+          "before": {
+            "tag": "BUTTON",
+            "text": "How it works",
+            "href": null,
+            "src": null,
+            "box": [
+              116.64,
+              179,
+              156.72,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 14px",
+            "gap": "8px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "How it works",
+            "href": null,
+            "src": null,
+            "box": [
+              116.64,
+              179,
+              156.72,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(255, 255, 255, 0.08)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 14px",
+            "gap": "8px",
+            "radius": "999px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 14,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Country",
+            "href": null,
+            "src": null,
+            "box": [
+              14,
+              257,
+              136.45,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Country",
+            "href": null,
+            "src": null,
+            "box": [
+              14,
+              257,
+              136.45,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 15,
+          "before": {
+            "tag": "IMG",
+            "text": "",
+            "href": null,
+            "src": "/assets/daynight/flags/all.svg",
+            "box": [
+              27,
+              271,
+              20,
+              16
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "IMG",
+            "text": "",
+            "href": null,
+            "src": "/assets/daynight/flags/all.svg",
+            "box": [
+              27,
+              271,
+              20,
+              16
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "rgb(23, 25, 28)",
+            "padding": "0px",
+            "gap": "normal",
+            "radius": "0px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 16,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Type",
+            "href": null,
+            "src": null,
+            "box": [
+              158.45,
+              257,
+              83.69,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Type",
+            "href": null,
+            "src": null,
+            "box": [
+              158.45,
+              257,
+              83.69,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 17,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Make",
+            "href": null,
+            "src": null,
+            "box": [
+              250.14,
+              257,
+              87.66,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Make",
+            "href": null,
+            "src": null,
+            "box": [
+              250.14,
+              257,
+              87.66,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        },
+        {
+          "index": 18,
+          "before": {
+            "tag": "BUTTON",
+            "text": "Model",
+            "href": null,
+            "src": null,
+            "box": [
+              345.8,
+              257,
+              93.84,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "24px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          },
+          "after": {
+            "tag": "BUTTON",
+            "text": "Model",
+            "href": null,
+            "src": null,
+            "box": [
+              345.8,
+              257,
+              93.84,
+              44
+            ],
+            "font": [
+              "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+              "18px",
+              "400",
+              "23.9999px"
+            ],
+            "color": "rgb(23, 25, 28)",
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "padding": "0px 12px",
+            "gap": "6px",
+            "radius": "12px",
+            "transform": "none",
+            "objectPosition": "50% 50%"
+          }
+        }
+      ]
+    }
+  ],
+  "pixels": [
+    {
+      "route": "home",
+      "width": 390,
+      "beforeSha256": "fcf805c7c1116c6ad535d87339f3de0274421594c21d9aadbbecd65125c2c6cd",
+      "afterSha256": "fcf805c7c1116c6ad535d87339f3de0274421594c21d9aadbbecd65125c2c6cd",
+      "byteIdentical": true
+    },
+    {
+      "route": "about",
+      "width": 390,
+      "beforeSha256": "d7b70c257b27e8743b2fd25584f19e3703a914a5bc5ff63a6b38fd82e7b856ce",
+      "afterSha256": "d7b70c257b27e8743b2fd25584f19e3703a914a5bc5ff63a6b38fd82e7b856ce",
+      "byteIdentical": true
+    },
+    {
+      "route": "contact",
+      "width": 390,
+      "beforeSha256": "eab6ac0b67be04293c933149cac25f0f8a956fa0085acf245809301e1ab21fa4",
+      "afterSha256": "eab6ac0b67be04293c933149cac25f0f8a956fa0085acf245809301e1ab21fa4",
+      "byteIdentical": true
+    }
+  ]
+}

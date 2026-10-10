@@ -1,0 +1,412 @@
+{
+	"sourcePaths": 1670,
+	"lockSha256": "aa596db7046c3f226ce50b488e283e30121eb49122d5006c60035ef57a952e1c",
+	"sourceSnapshotMatches": true,
+	"beforeStates": 36,
+	"afterStates": 84,
+	"renderedFailures": 0,
+	"mobileComparisons": [
+		{
+			"id": "home-bg-320",
+			"elements": 181,
+			"equal": false,
+			"presentationPreserved": true,
+			"observerTiming": "Footer observer restored the five fixed nav items after the initial metrics sample; existing nodes and cross-locale nav styles match, Home pixels are identical."
+		},
+		{
+			"id": "inventory-bg-320",
+			"elements": 56,
+			"equal": true,
+			"presentationPreserved": true
+		},
+		{
+			"id": "services-bg-320",
+			"elements": 59,
+			"equal": true,
+			"presentationPreserved": true
+		},
+		{
+			"id": "about-bg-320",
+			"elements": 55,
+			"equal": true,
+			"presentationPreserved": true
+		},
+		{
+			"id": "contact-bg-320",
+			"elements": 28,
+			"equal": true,
+			"presentationPreserved": true
+		},
+		{
+			"id": "home-bg-390",
+			"elements": 181,
+			"equal": false,
+			"presentationPreserved": true,
+			"observerTiming": "Footer observer restored the five fixed nav items after the initial metrics sample; existing nodes and cross-locale nav styles match, Home pixels are identical."
+		},
+		{
+			"id": "inventory-bg-390",
+			"elements": 56,
+			"equal": true,
+			"presentationPreserved": true
+		},
+		{
+			"id": "services-bg-390",
+			"elements": 59,
+			"equal": true,
+			"presentationPreserved": true
+		},
+		{
+			"id": "about-bg-390",
+			"elements": 55,
+			"equal": true,
+			"presentationPreserved": true
+		},
+		{
+			"id": "contact-bg-390",
+			"elements": 28,
+			"equal": true,
+			"presentationPreserved": true
+		},
+		{
+			"id": "home-en-320",
+			"elements": 186,
+			"equal": true,
+			"presentationPreserved": true
+		},
+		{
+			"id": "inventory-en-320",
+			"elements": 56,
+			"equal": true,
+			"presentationPreserved": true
+		},
+		{
+			"id": "services-en-320",
+			"elements": 59,
+			"equal": true,
+			"presentationPreserved": true
+		},
+		{
+			"id": "about-en-320",
+			"elements": 55,
+			"equal": true,
+			"presentationPreserved": true
+		},
+		{
+			"id": "contact-en-320",
+			"elements": 28,
+			"equal": true,
+			"presentationPreserved": true
+		},
+		{
+			"id": "home-en-390",
+			"elements": 186,
+			"equal": true,
+			"presentationPreserved": true
+		},
+		{
+			"id": "inventory-en-390",
+			"elements": 56,
+			"equal": true,
+			"presentationPreserved": true
+		},
+		{
+			"id": "services-en-390",
+			"elements": 59,
+			"equal": true,
+			"presentationPreserved": true
+		},
+		{
+			"id": "about-en-390",
+			"elements": 55,
+			"equal": true,
+			"presentationPreserved": true
+		},
+		{
+			"id": "contact-en-390",
+			"elements": 28,
+			"equal": true,
+			"presentationPreserved": true
+		}
+	],
+	"mobilePngs": [
+		{
+			"route": "home",
+			"beforeSha256": "fcf805c7c1116c6ad535d87339f3de0274421594c21d9aadbbecd65125c2c6cd",
+			"afterSha256": "fcf805c7c1116c6ad535d87339f3de0274421594c21d9aadbbecd65125c2c6cd",
+			"byteIdentical": true
+		},
+		{
+			"route": "inventory",
+			"beforeSha256": "d2393497832374367dd62cc4ed9dabc3df7484ac741ea13bf76c5a992c89d55f",
+			"afterSha256": "d2393497832374367dd62cc4ed9dabc3df7484ac741ea13bf76c5a992c89d55f",
+			"byteIdentical": true
+		},
+		{
+			"route": "services",
+			"beforeSha256": "695046873ea8b503482932c18a466da5e9f80db7b8f6c12b0272eebcdd1e71b4",
+			"afterSha256": "695046873ea8b503482932c18a466da5e9f80db7b8f6c12b0272eebcdd1e71b4",
+			"byteIdentical": true
+		},
+		{
+			"route": "about",
+			"beforeSha256": "d7b70c257b27e8743b2fd25584f19e3703a914a5bc5ff63a6b38fd82e7b856ce",
+			"afterSha256": "d7b70c257b27e8743b2fd25584f19e3703a914a5bc5ff63a6b38fd82e7b856ce",
+			"byteIdentical": true
+		},
+		{
+			"route": "contact",
+			"beforeSha256": "eab6ac0b67be04293c933149cac25f0f8a956fa0085acf245809301e1ab21fa4",
+			"afterSha256": "eab6ac0b67be04293c933149cac25f0f8a956fa0085acf245809301e1ab21fa4",
+			"byteIdentical": true
+		}
+	],
+	"desktopFrames": [
+		{
+			"id": "home-bg-1440",
+			"equal": true,
+			"beforeHero": [0, 94, 1425, 400],
+			"afterHero": [0, 94, 1425, 400],
+			"beforeTitle": [565.03, 126, 294.94, 48.38],
+			"afterTitle": [565.03, 126, 294.94, 48.38]
+		},
+		{
+			"id": "home-finance-bg-1440",
+			"equal": true,
+			"beforeHero": [0, 94, 1425, 400],
+			"afterHero": [0, 94, 1425, 400],
+			"beforeTitle": [522.41, 126, 380.17, 48.38],
+			"afterTitle": [522.41, 126, 380.17, 48.38]
+		},
+		{
+			"id": "home-sell-bg-1440",
+			"equal": true,
+			"beforeHero": [0, 94, 1425, 400],
+			"afterHero": [0, 94, 1425, 400],
+			"beforeTitle": [542.52, 126, 339.95, 48.38],
+			"afterTitle": [542.52, 126, 339.95, 48.38]
+		},
+		{
+			"id": "home-import-bg-1440",
+			"equal": true,
+			"beforeHero": [0, 94, 1425, 400],
+			"afterHero": [0, 94, 1425, 400],
+			"beforeTitle": [554.38, 126, 316.23, 48.38],
+			"afterTitle": [554.38, 126, 316.23, 48.38]
+		},
+		{
+			"id": "inventory-bg-1440",
+			"equal": true,
+			"beforeHero": [0, 94, 1425, 400],
+			"afterHero": [0, 94, 1425, 400],
+			"beforeTitle": [523.03, 126, 378.92, 48.38],
+			"afterTitle": [523.03, 126, 378.92, 48.38]
+		},
+		{
+			"id": "services-bg-1440",
+			"equal": true,
+			"beforeHero": [0, 94, 1425, 400],
+			"afterHero": [0, 94, 1425, 400],
+			"beforeTitle": [475.11, 126, 474.78, 48.38],
+			"afterTitle": [475.11, 126, 474.78, 48.38]
+		},
+		{
+			"id": "about-bg-1440",
+			"equal": true,
+			"beforeHero": [0, 94, 1425, 400],
+			"afterHero": [0, 94, 1425, 400],
+			"beforeTitle": [656.95, 126, 111.08, 48.38],
+			"afterTitle": [656.95, 126, 111.08, 48.38]
+		},
+		{
+			"id": "contact-bg-1440",
+			"equal": true,
+			"beforeHero": [0, 94, 1425, 400],
+			"afterHero": [0, 94, 1425, 400],
+			"beforeTitle": [616.22, 126, 192.55, 48.38],
+			"afterTitle": [616.22, 126, 192.55, 48.38]
+		},
+		{
+			"id": "home-en-1440",
+			"equal": true,
+			"beforeHero": [0, 94, 1425, 400],
+			"afterHero": [0, 94, 1425, 400],
+			"beforeTitle": [636.67, 126, 151.64, 48.38],
+			"afterTitle": [636.67, 126, 151.64, 48.38]
+		},
+		{
+			"id": "home-finance-en-1440",
+			"equal": true,
+			"beforeHero": [0, 94, 1425, 400],
+			"afterHero": [0, 94, 1425, 400],
+			"beforeTitle": [602.27, 126, 220.45, 48.38],
+			"afterTitle": [602.27, 126, 220.45, 48.38]
+		},
+		{
+			"id": "home-sell-en-1440",
+			"equal": true,
+			"beforeHero": [0, 94, 1425, 400],
+			"afterHero": [0, 94, 1425, 400],
+			"beforeTitle": [610.44, 126, 204.13, 48.38],
+			"afterTitle": [610.44, 126, 204.13, 48.38]
+		},
+		{
+			"id": "home-import-en-1440",
+			"equal": true,
+			"beforeHero": [0, 94, 1425, 400],
+			"afterHero": [0, 94, 1425, 400],
+			"beforeTitle": [611.06, 126, 202.88, 48.38],
+			"afterTitle": [611.06, 126, 202.88, 48.38]
+		},
+		{
+			"id": "inventory-en-1440",
+			"equal": true,
+			"beforeHero": [0, 94, 1425, 400],
+			"afterHero": [0, 94, 1425, 400],
+			"beforeTitle": [565.88, 126, 293.25, 48.38],
+			"afterTitle": [565.88, 126, 293.25, 48.38]
+		},
+		{
+			"id": "services-en-1440",
+			"equal": true,
+			"beforeHero": [0, 94, 1425, 400],
+			"afterHero": [0, 94, 1425, 400],
+			"beforeTitle": [540.28, 126, 344.44, 48.38],
+			"afterTitle": [540.28, 126, 344.44, 48.38]
+		},
+		{
+			"id": "about-en-1440",
+			"equal": true,
+			"beforeHero": [0, 94, 1425, 400],
+			"afterHero": [0, 94, 1425, 400],
+			"beforeTitle": [638.23, 126, 148.53, 48.38],
+			"afterTitle": [638.23, 126, 148.53, 48.38]
+		},
+		{
+			"id": "contact-en-1440",
+			"equal": true,
+			"beforeHero": [0, 94, 1425, 400],
+			"afterHero": [0, 94, 1425, 400],
+			"beforeTitle": [620.05, 126, 184.91, 48.38],
+			"afterTitle": [620.05, 126, 184.91, 48.38]
+		}
+	],
+	"interactions": {
+		"states": 18,
+		"accessibilityStates": 16,
+		"violations": 0
+	},
+	"gates": [
+		{
+			"name": "check",
+			"command": [
+				"L:/Toolchains/Node/24.21.0/node.exe",
+				"L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js",
+				"run",
+				"check"
+			],
+			"started": "2026-10-02T23:45:50.281Z",
+			"completed": "2026-10-02T23:46:30.658Z",
+			"exitCode": 0,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/charcoal-check.log",
+			"logSha256": "03d97cfa4a9ef86ca411d25f6228bcae22460142d1a8a747a9d966445cf03229"
+		},
+		{
+			"name": "lint",
+			"command": [
+				"L:/Toolchains/Node/24.21.0/node.exe",
+				"node_modules/eslint/bin/eslint.js",
+				"src/lib/components/common/DesktopDiscoveryPanel.svelte",
+				"src/lib/components/common/Action.svelte",
+				"src/lib/components/common/MobileModeTabs.svelte",
+				"src/lib/components/home/DesktopHomeHero.svelte",
+				"src/lib/components/inventory/InventoryToolbar.svelte"
+			],
+			"started": "2026-10-02T23:46:30.661Z",
+			"completed": "2026-10-02T23:46:56.210Z",
+			"exitCode": 0,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/charcoal-lint.log",
+			"logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+		},
+		{
+			"name": "architecture",
+			"command": [
+				"L:/Toolchains/Node/24.21.0/node.exe",
+				"L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js",
+				"run",
+				"check:architecture"
+			],
+			"started": "2026-10-02T23:46:56.211Z",
+			"completed": "2026-10-02T23:46:58.135Z",
+			"exitCode": 0,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/charcoal-architecture.log",
+			"logSha256": "f153ca4e2ca9b6b71ae622dc6c3d96cd08f8f9eff45a7f6791ae81213b51c491"
+		},
+		{
+			"name": "assets",
+			"command": [
+				"L:/Toolchains/Node/24.21.0/node.exe",
+				"L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js",
+				"run",
+				"check:assets"
+			],
+			"started": "2026-10-02T23:46:58.136Z",
+			"completed": "2026-10-02T23:46:58.786Z",
+			"exitCode": 0,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/charcoal-assets.log",
+			"logSha256": "b98cbb4d013072e79e1bd8765db3905ed8c6f5fae74e56356eca4fd5a28ef995"
+		},
+		{
+			"name": "unit",
+			"command": [
+				"L:/Toolchains/Node/24.21.0/node.exe",
+				"L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js",
+				"run",
+				"test:unit",
+				"--",
+				"--run",
+				"--maxWorkers=1"
+			],
+			"started": "2026-10-02T23:46:58.787Z",
+			"completed": "2026-10-02T23:47:15.219Z",
+			"exitCode": 0,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/charcoal-unit.log",
+			"logSha256": "5f86c7ca6c33dc4c936d0734ac53d8a5bffa38a9a2744fcf27c91e87272f8ac1"
+		},
+		{
+			"name": "build",
+			"command": [
+				"L:/Toolchains/Node/24.21.0/node.exe",
+				"L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js",
+				"run",
+				"build"
+			],
+			"started": "2026-10-02T23:47:15.219Z",
+			"completed": "2026-10-02T23:55:18.343Z",
+			"exitCode": 0,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/charcoal-build.log",
+			"logSha256": "e6c2177d20b09b8e47f2d3fea08188508e4af27e4578132d4bf11e323dd4b01f"
+		}
+	],
+	"browser": {
+		"suites": [
+			"desktop-page-patterns",
+			"typography-contact",
+			"storefront-controls",
+			"desktop-search"
+		],
+		"started": "2026-10-02T23:58:09.907Z",
+		"completed": "2026-10-02T23:59:08.241Z",
+		"exitCode": 0,
+		"stats": {
+			"startTime": "2026-10-02T23:58:10.947Z",
+			"duration": 57254.867,
+			"expected": 29,
+			"skipped": 19,
+			"unexpected": 0,
+			"flaky": 0
+		},
+		"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/charcoal-browser.log",
+		"logSha256": "ef827924ecd274e2573b8c9610eb42db2e8deae783a0ccbbd9ec87e0d9d91753"
+	}
+}

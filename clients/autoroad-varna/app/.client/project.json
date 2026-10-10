@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "client": "autoroad-varna",
+  "templateKey": "app",
+  "templateVersion": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+  "templateSource": {
+    "repository": "darkapoparka/cars",
+    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+    "path": "templates/app",
+    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe",
+    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541"
+  },
+  "createdAt": "2026-10-10T18:20:26.164Z",
+  "state": "candidate-personalized-needs-build",
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": "bg-varna-autoroad",
+    "demoProjectId": null,
+    "registered": false
+  },
+  "hosting": {
+    "provider": "vercel",
+    "status": "not-deployed"
+  },
+  "readyToPublish": false
+}

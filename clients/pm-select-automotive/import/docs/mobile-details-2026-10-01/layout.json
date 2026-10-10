@@ -1,0 +1,187 @@
+{
+	"origin": "http://127.0.0.1:6791",
+	"checks": [
+		{
+			"locale": "bg",
+			"width": 320,
+			"route": "/inventory",
+			"overflow": false,
+			"toolbarGap": 4,
+			"iconFaces": [44, 44],
+			"imageMileage": 0,
+			"sameRow": true,
+			"matchingBadges": true,
+			"clipped": [],
+			"cards": 12
+		},
+		{
+			"locale": "bg",
+			"width": 320,
+			"route": "/inventory",
+			"largeText": true,
+			"overflow": false,
+			"clipped": []
+		},
+		{
+			"locale": "bg",
+			"width": 320,
+			"route": "/import",
+			"yearAndPhotoMileage": true
+		},
+		{
+			"locale": "bg",
+			"width": 320,
+			"route": "/",
+			"overflow": false,
+			"headingHeight": 21.59375,
+			"headingLine": 21.6,
+			"visibleDetailButtons": 0,
+			"photoHref": "/bg/inventory/21754658377544573",
+			"titleHref": "/bg/inventory/21754658377544573",
+			"roles": ["Клиент", "Клиент", "Клиент"],
+			"channelHref": "https://www.youtube.com/@kristiankirilov1355/videos",
+			"channelTarget": "_blank",
+			"channelLast": true
+		},
+		{
+			"locale": "bg",
+			"width": 320,
+			"route": "/",
+			"largeText": true,
+			"overflow": false,
+			"headingFits": true
+		},
+		{
+			"locale": "bg",
+			"width": 320,
+			"photoNavigationAndBack": true
+		},
+		{
+			"locale": "bg",
+			"width": 390,
+			"route": "/inventory",
+			"overflow": false,
+			"toolbarGap": 4,
+			"iconFaces": [44, 44],
+			"imageMileage": 0,
+			"sameRow": true,
+			"matchingBadges": true,
+			"clipped": [],
+			"cards": 12
+		},
+		{
+			"locale": "bg",
+			"width": 390,
+			"route": "/import",
+			"yearAndPhotoMileage": true
+		},
+		{
+			"locale": "bg",
+			"width": 390,
+			"route": "/",
+			"overflow": false,
+			"headingHeight": 21.59375,
+			"headingLine": 21.6,
+			"visibleDetailButtons": 0,
+			"photoHref": "/bg/inventory/21754658377544573",
+			"titleHref": "/bg/inventory/21754658377544573",
+			"roles": ["Клиент", "Клиент", "Клиент"],
+			"channelHref": "https://www.youtube.com/@kristiankirilov1355/videos",
+			"channelTarget": "_blank",
+			"channelLast": true
+		},
+		{
+			"locale": "en",
+			"width": 320,
+			"route": "/inventory",
+			"overflow": false,
+			"toolbarGap": 4,
+			"iconFaces": [44, 44],
+			"imageMileage": 0,
+			"sameRow": true,
+			"matchingBadges": true,
+			"clipped": [],
+			"cards": 12
+		},
+		{
+			"locale": "en",
+			"width": 320,
+			"route": "/inventory",
+			"largeText": true,
+			"overflow": false,
+			"clipped": []
+		},
+		{
+			"locale": "en",
+			"width": 320,
+			"route": "/import",
+			"yearAndPhotoMileage": true
+		},
+		{
+			"locale": "en",
+			"width": 320,
+			"route": "/",
+			"overflow": false,
+			"headingHeight": 21.59375,
+			"headingLine": 21.6,
+			"visibleDetailButtons": 0,
+			"photoHref": "/en/inventory/21754658377544573",
+			"titleHref": "/en/inventory/21754658377544573",
+			"roles": ["Customer", "Customer", "Customer"],
+			"channelHref": "https://www.youtube.com/@kristiankirilov1355/videos",
+			"channelTarget": "_blank",
+			"channelLast": true
+		},
+		{
+			"locale": "en",
+			"width": 320,
+			"route": "/",
+			"largeText": true,
+			"overflow": false,
+			"headingFits": true
+		},
+		{
+			"locale": "en",
+			"width": 390,
+			"route": "/inventory",
+			"overflow": false,
+			"toolbarGap": 4,
+			"iconFaces": [44, 44],
+			"imageMileage": 0,
+			"sameRow": true,
+			"matchingBadges": true,
+			"clipped": [],
+			"cards": 12
+		},
+		{
+			"locale": "en",
+			"width": 390,
+			"route": "/import",
+			"yearAndPhotoMileage": true
+		},
+		{
+			"locale": "en",
+			"width": 390,
+			"route": "/",
+			"overflow": false,
+			"headingHeight": 21.59375,
+			"headingLine": 21.6,
+			"visibleDetailButtons": 0,
+			"photoHref": "/en/inventory/21754658377544573",
+			"titleHref": "/en/inventory/21754658377544573",
+			"roles": ["Customer", "Customer", "Customer"],
+			"channelHref": "https://www.youtube.com/@kristiankirilov1355/videos",
+			"channelTarget": "_blank",
+			"channelLast": true
+		},
+		{
+			"width": 1440,
+			"videos": 3,
+			"channelHidden": true,
+			"compactRolesHidden": true,
+			"fullRolesVisible": true,
+			"overflow": false
+		}
+	],
+	"pageErrors": []
+}

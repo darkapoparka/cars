@@ -1,0 +1,63 @@
+{
+	"mode": "built-in",
+	"modelSelection": "The available built-in generator does not expose a model selector.",
+	"optimization": "Resampling and WebP encoding only; generated composition and alpha preserved.",
+	"assets": [
+		{
+			"key": "buy",
+			"prompt": "Use case: stylized-concept.\nCreate one polished 3D cutout asset for a premium automotive website's desktop navigation tab. This is a matched family of four miniature objects, displayed beside black Bulgarian labels on white cards over a cool off-white page. Style: refined realistic product rendering, sculpted forms with visible thickness, glossy deep automotive red lacquer (#b9161c), brushed silver edges and restrained dark graphite details. Camera: consistent three-quarter view, slightly above, orthographic-like, facing slightly toward the viewer. Lighting: large soft studio key upper left, subtle rim light, realistic ambient occlusion, very small soft contact shadow; crisp silhouette and readable at 48 pixels. Composition: single isolated object centered in a square image, tightly composed with about 8% clear margin, no cropping. Background: genuinely transparent alpha. No backdrop, no pedestal, no rounded icon tile, no UI, no writing, no brand logos, no watermark. Avoid flat vectors, line icons, cartoon faces, overly detailed ornament or additional floating props.\nSubject: a compact premium red car, full vehicle visible, front-left three-quarter view. Realistic smoked glass, silver rims and dark tires, clean recognizable silhouette. The red body is the dominant feature. Keep the vehicle broad and substantial, with believable wheels and a soft ground shadow. This asset means buying a car.",
+			"original": "C:\\Users\\radev\\.codex\\generated_images\\01a0fd63-539e-7cb1-ac3b-c8dd2ac8a935\\exec-5d7c00da-4022-4f86-8666-f66e29d2a6bb.png",
+			"path": "static/assets/daynight/home-modes/buy-3d-v1.webp",
+			"width": 192,
+			"height": 192,
+			"bytes": 10442,
+			"sha256": "a2a117603b0bf73a7183c42268d660f34dd00381abbc8023f250ae275e9c5296",
+			"originalSha256": "5fc6d52a5103c245f841a1e855212c421e7814efa01f5227c3b28b5060d59a8e",
+			"originalWidth": 1254,
+			"originalHeight": 1254,
+			"hasAlpha": true
+		},
+		{
+			"key": "finance",
+			"prompt": "Use case: stylized-concept.\nCreate one polished 3D cutout asset for a premium automotive website's desktop navigation tab. This is a matched family of four miniature objects, displayed beside black Bulgarian labels on white cards over a cool off-white page. Style: refined realistic product rendering, sculpted forms with visible thickness, glossy deep automotive red lacquer (#b9161c), brushed silver edges and restrained dark graphite details. Camera: consistent three-quarter view, slightly above, orthographic-like, facing slightly toward the viewer. Lighting: large soft studio key upper left, subtle rim light, realistic ambient occlusion, very small soft contact shadow; crisp silhouette and readable at 48 pixels. Composition: single isolated object centered in a square image, tightly composed with about 8% clear margin, no cropping. Background: genuinely transparent alpha. No backdrop, no pedestal, no rounded icon tile, no UI, no writing, no brand logos, no watermark. Avoid flat vectors, line icons, cartoon faces, overly detailed ornament or additional floating props.\nSubject: a single bold sculptural percent symbol %, made of glossy red lacquer with subtle brushed silver bevels and deep realistic sides. Two round ring counters and a diagonal bar, one coherent upright sculpture with a slight three-dimensional turn. The percent symbol is the only visible symbol. This asset means car leasing.",
+			"original": "C:\\Users\\radev\\.codex\\generated_images\\01a0fd63-539e-7cb1-ac3b-c8dd2ac8a935\\exec-fb1d190a-3c51-4dbf-a462-f2c2acf7109b.png",
+			"path": "static/assets/daynight/home-modes/finance-3d-v1.webp",
+			"width": 192,
+			"height": 192,
+			"bytes": 14542,
+			"sha256": "c91a301997ead89242de32f370f8bf67d0a1618abfa8bd8fda311d5ff798fdf2",
+			"originalSha256": "dbba9424a16c677e15d600ef60a6ee91724861b96f01d73f4fed521017423941",
+			"originalWidth": 1254,
+			"originalHeight": 1254,
+			"hasAlpha": true
+		},
+		{
+			"key": "sell",
+			"prompt": "Use case: stylized-concept.\nCreate one polished 3D cutout asset for a premium automotive website's desktop navigation tab. This is a matched family of four miniature objects, displayed beside black Bulgarian labels on white cards over a cool off-white page. Style: refined realistic product rendering, sculpted forms with visible thickness, glossy deep automotive red lacquer (#b9161c), brushed silver edges and restrained dark graphite details. Camera: consistent three-quarter view, slightly above, orthographic-like, facing slightly toward the viewer. Lighting: large soft studio key upper left, subtle rim light, realistic ambient occlusion, very small soft contact shadow; crisp silhouette and readable at 48 pixels. Composition: single isolated object centered in a square image, tightly composed with about 8% clear margin, no cropping. Background: genuinely transparent alpha. No backdrop, no pedestal, no rounded icon tile, no UI, no writing, no brand logos, no watermark. Avoid flat vectors, line icons, cartoon faces, overly detailed ornament or additional floating props.\nSubject: one substantial red sales price tag with a rounded rectangular silhouette and clipped shoulder, rendered as a thick glossy red object. One circular hole fitted with a small brushed silver eyelet and a short curved graphite loop. Face entirely blank, no text or numbers. Clear tag silhouette, one object only. This asset means selling a car.",
+			"original": "C:\\Users\\radev\\.codex\\generated_images\\01a0fd63-539e-7cb1-ac3b-c8dd2ac8a935\\exec-6d38305e-74b7-4406-8fa2-d6c3fc59d918.png",
+			"path": "static/assets/daynight/home-modes/sell-3d-v1.webp",
+			"width": 192,
+			"height": 192,
+			"bytes": 7864,
+			"sha256": "056967541f4a38154ae79e2c1f3bb0de375fd52d29057ba41b930bcaeee58d16",
+			"originalSha256": "7b51c5d2ff1ffe9d60add9631b126c04f773a25a2de5c2cbce906cfb93d74efd",
+			"originalWidth": 1254,
+			"originalHeight": 1254,
+			"hasAlpha": true
+		},
+		{
+			"key": "import",
+			"prompt": "Use case: stylized-concept.\nCreate one polished 3D cutout asset for a premium automotive website's desktop navigation tab. This is a matched family of four miniature objects, displayed beside black Bulgarian labels on white cards over a cool off-white page. Style: refined realistic product rendering, sculpted forms with visible thickness, glossy deep automotive red lacquer (#b9161c), brushed silver edges and restrained dark graphite details. Camera: consistent three-quarter view, slightly above, orthographic-like, facing slightly toward the viewer. Lighting: large soft studio key upper left, subtle rim light, realistic ambient occlusion, very small soft contact shadow; crisp silhouette and readable at 48 pixels. Composition: single isolated object centered in a square image, tightly composed with about 8% clear margin, no cropping. Background: genuinely transparent alpha. No backdrop, no pedestal, no rounded icon tile, no UI, no writing, no brand logos, no watermark. Avoid flat vectors, line icons, cartoon faces, overly detailed ornament or additional floating props.\nSubject: one polished red globe with simple raised brushed-silver continent shapes and a single substantial silver orbit arrow wrapping partway around it. Coherent compact spherical form, visible depth, clear globe silhouette and recognisable orbit arrow. No latitude/longitude grid clutter. This asset means importing a car from abroad.",
+			"original": "C:\\Users\\radev\\.codex\\generated_images\\01a0fd63-539e-7cb1-ac3b-c8dd2ac8a935\\exec-2a3e07a9-e831-4f24-9572-e62830414ea1.png",
+			"path": "static/assets/daynight/home-modes/import-3d-v1.webp",
+			"width": 192,
+			"height": 192,
+			"bytes": 10828,
+			"sha256": "1bee2c67dd908b8d7e20b5bf6f7e0b1dfc8c573d7ed0d75f337471e102ae7258",
+			"originalSha256": "c0d2c34560937ab6647c33b10cb5947c61abf6478c2b0b189d241a4342f98850",
+			"originalWidth": 1254,
+			"originalHeight": 1254,
+			"hasAlpha": true
+		}
+	]
+}

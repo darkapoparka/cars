@@ -1,0 +1,23 @@
+[
+  {
+    "state": "home",
+    "width": 1440,
+    "height": 1000,
+    "changedPixels": 5,
+    "maxChannelDelta": 1
+  },
+  {
+    "state": "inventory",
+    "width": 1440,
+    "height": 1000,
+    "changedPixels": 20,
+    "maxChannelDelta": 2
+  },
+  {
+    "state": "pdp",
+    "width": 1440,
+    "height": 1000,
+    "changedPixels": 0,
+    "maxChannelDelta": 0
+  }
+]

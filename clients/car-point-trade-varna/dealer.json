@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "slug": "car-point-trade-varna",
+  "dealerId": "car-point-trade-varna",
+  "repository": "darkapoparka/cars-carpointtradevarna",
+  "defaultBranch": "main",
+  "sourceBranch": "varna",
+  "sourceOwnership": "cars-canonical",
+  "language": "bg",
+  "variants": [
+    {
+      "key": "auto-best",
+      "base": "",
+      "entry": "/"
+    },
+    {
+      "key": "modern",
+      "base": "/variant-2",
+      "entry": "/variant-2/cars"
+    },
+    {
+      "key": "import",
+      "base": "/variant-3",
+      "entry": "/variant-3/"
+    },
+    {
+      "key": "app",
+      "base": "/variant-4",
+      "entry": "/variant-4/"
+    },
+    {
+      "key": "mobile",
+      "base": "/variant-5",
+      "entry": "/variant-5/"
+    },
+    {
+      "key": "karento-best",
+      "base": "/variant-6",
+      "entry": "/variant-6/"
+    }
+  ],
+  "packaging": {
+    "version": "5"
+  },
+  "extraAssets": [
+    "assets",
+    "branding",
+    "dealer-brand"
+  ],
+  "localization": {
+    "schemaVersion": 1,
+    "dealerId": "car-point-trade-varna",
+    "defaultLocale": "bg",
+    "enabledLocales": [
+      "bg",
+      "en"
+    ],
+    "dealerCountry": "BG",
+    "inventoryCurrency": "EUR"
+  },
+  "templateRevisions": {
+    "auto-best": "696230a404abd9b20b6f907b9cfb139175298c7a",
+    "modern": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+    "import": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+    "app": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+    "mobile": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+    "karento-best": "cc130e432a41a3a60cc80bc2b3461c6416893b4a"
+  },
+  "templateSources": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "696230a404abd9b20b6f907b9cfb139175298c7a",
+      "path": "templates/auto-best",
+      "tree": "b07ff2273be554ef64a039ac8f4f023ae60a33ac",
+      "digest": "90f131aa0ead6ae4fcb06d30c054ca4d0c5d39097a2927cca8f298c7d2dfb3ca"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+      "path": "templates/modern",
+      "tree": "51d68e5dd6e3b305191df94e877403fd7b7414e1",
+      "digest": "b035a849efb41d3ed18d97fcf3511850469162c0a990397b74be588179d43588"
+    },
+    "import": {
+      "repository": "darkapoparka/cars",
+      "revision": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+      "path": "templates/import",
+      "tree": "b64c4a4939c4244ba3f408e5c0311c586a913e67",
+      "digest": "eef4c3544b28bb3a62cad4c2a07e4ff64301fb4c9e9925ba002077bda7f63bd3"
+    },
+    "app": {
+      "repository": "darkapoparka/cars",
+      "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+      "path": "templates/app",
+      "tree": "749512ff762c25272d1474225ff653dd4c88f0fe",
+      "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541"
+    },
+    "mobile": {
+      "repository": "darkapoparka/cars",
+      "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+      "path": "templates/mobile",
+      "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b",
+      "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d"
+    },
+    "karento-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+      "path": "templates/karento-best",
+      "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
+      "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+    }
+  },
+  "switcher": {
+    "language": "bg",
+    "accent": "#2563eb"
+  },
+  "candidate": {
+    "approved": false,
+    "releaseSelection": "exact-latest-committed-snapshots",
+    "nativeReleaseQualification": false,
+    "build": false,
+    "hosted": false,
+    "admin": "https://cars-admin-blue.vercel.app/"
+  }
+}

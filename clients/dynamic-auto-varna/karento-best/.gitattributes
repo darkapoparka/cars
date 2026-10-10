@@ -1,0 +1,6 @@
+# These files are hash-locked preservation evidence, including their line ends.
+provenance/frozen-best/** -text
+provenance/frozen-library/** -text
+static/** -text
+karento/** -text
+karento-best/** -text

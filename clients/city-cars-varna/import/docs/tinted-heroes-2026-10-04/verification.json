@@ -1,0 +1,456 @@
+{
+	"date": "2026-10-04",
+	"source": "L:/CODEX/cars/templates/import",
+	"frozenBuild": "C:/Users/radev/.codex/tmp/cars-import-desktop-continuation-2026-10-04-qa",
+	"preview": "http://127.0.0.1:6793",
+	"checks": [
+		{
+			"name": "sync",
+			"args": ["node_modules/@sveltejs/kit/svelte-kit.js", "sync"],
+			"status": 0,
+			"seconds": 3
+		},
+		{
+			"name": "svelte",
+			"args": ["node_modules/svelte-check/bin/svelte-check", "--tsconfig", "./tsconfig.json"],
+			"status": 0,
+			"seconds": 52.2
+		},
+		{
+			"name": "format",
+			"args": [
+				"node_modules/prettier/bin/prettier.cjs",
+				"--check",
+				"src/lib/components/common/PageIntro.svelte",
+				"src/lib/components/common/DesktopHeroActions.svelte",
+				"src/lib/components/layout/PublicHeader.svelte",
+				"src/routes/(site)/about/+page.svelte",
+				"src/routes/(site)/contact/+page.svelte",
+				"src/routes/(site)/blog/[slug]/+page.svelte",
+				"tests/typography-contact.e2e.ts",
+				"src/lib/styles/tokens.css"
+			],
+			"status": 0,
+			"seconds": 10.6
+		},
+		{
+			"name": "eslint",
+			"args": [
+				"node_modules/eslint/bin/eslint.js",
+				"src/lib/components/common/PageIntro.svelte",
+				"src/lib/components/common/DesktopHeroActions.svelte",
+				"src/lib/components/layout/PublicHeader.svelte",
+				"src/routes/(site)/about/+page.svelte",
+				"src/routes/(site)/contact/+page.svelte",
+				"src/routes/(site)/blog/[slug]/+page.svelte",
+				"tests/typography-contact.e2e.ts"
+			],
+			"status": 0,
+			"seconds": 92.8
+		},
+		{
+			"name": "architecture",
+			"args": ["scripts/check-architecture.mjs"],
+			"status": 0,
+			"seconds": 1.7
+		},
+		{
+			"name": "build",
+			"args": ["node_modules/vite/bin/vite.js", "build"],
+			"status": 0,
+			"seconds": 168.6
+		}
+	],
+	"files": [
+		{
+			"path": "src/lib/components/common/PageIntro.svelte",
+			"sha256": "17018cbb446d187cb2afe7f5bcddf14d1334db5395ea07ec51778e878141c656"
+		},
+		{
+			"path": "src/lib/components/common/DesktopHeroActions.svelte",
+			"sha256": "dacec262deeb20627363651d21ad04af143800831f4b6c67eccc00c0665ec6dd"
+		},
+		{
+			"path": "src/lib/components/layout/PublicHeader.svelte",
+			"sha256": "dccb6f5c86e2a3d2e5bf161d696b323ccaba184d673822b5e3d262a960eecf63"
+		},
+		{
+			"path": "src/lib/styles/tokens.css",
+			"sha256": "435c38cdc70e0a5a40594100667ae44e3c0a7ffd71830acef3ccc7debb4517c8"
+		},
+		{
+			"path": "src/routes/(site)/about/+page.svelte",
+			"sha256": "d640f7140b2af3995d792b2b4a63f8d01455d168a5edf2538675a434c0e9921e"
+		},
+		{
+			"path": "src/routes/(site)/contact/+page.svelte",
+			"sha256": "c7462db7201018c687922e367fd77926688fb1e69732736ad85c087174c5f979"
+		},
+		{
+			"path": "src/routes/(site)/blog/[slug]/+page.svelte",
+			"sha256": "b261a5f4d0508bebdfef19a369c09ed6bd786f9dcf68521a58d1aa407d37f418"
+		},
+		{
+			"path": "tests/typography-contact.e2e.ts",
+			"sha256": "4de6560c98e1cf12100666a301f80c95d16591606c4cf84dc23814428085be2f"
+		}
+	],
+	"desktop": [
+		{
+			"route": "about",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"framedHero": true
+		},
+		{
+			"route": "inventory",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"framedHero": true
+		},
+		{
+			"route": "home",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"framedHero": true
+		},
+		{
+			"route": "import",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"framedHero": true
+		},
+		{
+			"route": "sell",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"framedHero": true
+		},
+		{
+			"route": "services",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"framedHero": true
+		},
+		{
+			"route": "financing",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"framedHero": true
+		},
+		{
+			"route": "favorites",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"framedHero": true
+		},
+		{
+			"route": "compare",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"framedHero": true
+		},
+		{
+			"route": "contact",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"framedHero": true
+		},
+		{
+			"route": "reviews",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"framedHero": true
+		},
+		{
+			"route": "faq",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"framedHero": true
+		},
+		{
+			"route": "blog",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"framedHero": true
+		},
+		{
+			"route": "article",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"framedHero": true
+		},
+		{
+			"route": "locale",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"framedHero": true
+		},
+		{
+			"route": "privacy",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"framedHero": true
+		},
+		{
+			"route": "calculator",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"framedHero": true
+		}
+	],
+	"mobile": {
+		"locales": ["bg", "en"],
+		"widths": [320, 390],
+		"captures": 32,
+		"comparisons": [
+			{
+				"name": "about-bg-320",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			},
+			{
+				"name": "inventory-bg-320",
+				"changedPixels": 0,
+				"excludedRemoteImages": 2,
+				"presentationMatches": true
+			},
+			{
+				"name": "home-bg-320",
+				"changedPixels": 0,
+				"excludedRemoteImages": 13,
+				"presentationMatches": true
+			},
+			{
+				"name": "services-bg-320",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			},
+			{
+				"name": "contact-bg-320",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			},
+			{
+				"name": "faq-bg-320",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			},
+			{
+				"name": "article-bg-320",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			},
+			{
+				"name": "privacy-bg-320",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			},
+			{
+				"name": "home-bg-390",
+				"changedPixels": 0,
+				"excludedRemoteImages": 13,
+				"presentationMatches": true
+			},
+			{
+				"name": "about-bg-390",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			},
+			{
+				"name": "inventory-bg-390",
+				"changedPixels": 0,
+				"excludedRemoteImages": 2,
+				"presentationMatches": true
+			},
+			{
+				"name": "services-bg-390",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			},
+			{
+				"name": "contact-bg-390",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			},
+			{
+				"name": "faq-bg-390",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			},
+			{
+				"name": "article-bg-390",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			},
+			{
+				"name": "privacy-bg-390",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			},
+			{
+				"name": "home-en-320",
+				"changedPixels": 0,
+				"excludedRemoteImages": 13,
+				"presentationMatches": true
+			},
+			{
+				"name": "about-en-320",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			},
+			{
+				"name": "inventory-en-320",
+				"changedPixels": 0,
+				"excludedRemoteImages": 2,
+				"presentationMatches": true
+			},
+			{
+				"name": "services-en-320",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			},
+			{
+				"name": "contact-en-320",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			},
+			{
+				"name": "faq-en-320",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			},
+			{
+				"name": "article-en-320",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			},
+			{
+				"name": "privacy-en-320",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			},
+			{
+				"name": "about-en-390",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			},
+			{
+				"name": "home-en-390",
+				"changedPixels": 0,
+				"excludedRemoteImages": 13,
+				"presentationMatches": true
+			},
+			{
+				"name": "inventory-en-390",
+				"changedPixels": 0,
+				"excludedRemoteImages": 2,
+				"presentationMatches": true
+			},
+			{
+				"name": "services-en-390",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			},
+			{
+				"name": "contact-en-390",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			},
+			{
+				"name": "faq-en-390",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			},
+			{
+				"name": "article-en-390",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			},
+			{
+				"name": "privacy-en-390",
+				"changedPixels": 0,
+				"excludedRemoteImages": 0,
+				"presentationMatches": true
+			}
+		],
+		"statusErrors": [],
+		"imageBoundary": "Iframes are masked. Remote inventory/review image pixels are excluded consistently from comparison. Existing Home lazy/remote image misses occur identically before and after; this receipt verifies local pixels and complete visible presentation."
+	},
+	"publication": "Local implementation and frozen production preview only. No template promotion or dealer deployment.",
+	"git": "Task changes remain on main with an empty staged index. Existing shared index.lock is preserved; commit/push needs owner lock coordination."
+}

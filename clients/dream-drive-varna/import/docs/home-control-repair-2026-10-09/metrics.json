@@ -1,0 +1,1555 @@
+{
+  "before": {
+    "base": "http://127.0.0.1:6791",
+    "capturedAt": "2026-10-09T16:17:36.034Z",
+    "source": "Actual rendered pages with no injected CSS",
+    "records": [
+      {
+        "locale": "bg",
+        "width": 390,
+        "field": {
+          "label": "Търси марка, модел, цена...",
+          "size": [
+            358,
+            44
+          ],
+          "paint": [
+            358,
+            44
+          ],
+          "radius": "999px",
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edgeHit": true
+        },
+        "search": {
+          "label": "Покажи",
+          "size": [
+            44,
+            44
+          ],
+          "paint": [
+            44,
+            44
+          ],
+          "radius": "999px",
+          "background": "rgb(16, 17, 19)",
+          "border": "0px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edgeHit": true
+        },
+        "filter": {
+          "label": "Отвори филтри",
+          "size": [
+            44,
+            44
+          ],
+          "paint": [
+            44,
+            44
+          ],
+          "radius": "999px",
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edgeHit": true
+        },
+        "pills": [
+          {
+            "label": "До 10 000",
+            "size": [
+              102.078125,
+              44
+            ],
+            "paint": [
+              102.078125,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": true
+          },
+          {
+            "label": "До 20 000",
+            "size": [
+              103.625,
+              44
+            ],
+            "paint": [
+              103.625,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": true
+          },
+          {
+            "label": "До 30 000",
+            "size": [
+              103.765625,
+              44
+            ],
+            "paint": [
+              103.765625,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          },
+          {
+            "label": "Нови обяви",
+            "size": [
+              116.640625,
+              44
+            ],
+            "paint": [
+              116.640625,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          },
+          {
+            "label": "Налични",
+            "size": [
+              91.5,
+              44
+            ],
+            "paint": [
+              91.5,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          }
+        ],
+        "appbar": [
+          {
+            "label": "Контакти",
+            "size": [
+              44,
+              44
+            ],
+            "paint": [
+              44,
+              44
+            ],
+            "radius": "999px",
+            "background": "rgb(23, 25, 28)",
+            "border": "0px",
+            "icon": [
+              20,
+              20
+            ],
+            "stroke": "2px",
+            "edgeHit": true
+          },
+          {
+            "label": "Карта",
+            "size": [
+              44,
+              44
+            ],
+            "paint": [
+              44,
+              44
+            ],
+            "radius": "999px",
+            "background": "rgb(23, 25, 28)",
+            "border": "0px",
+            "icon": [
+              20,
+              20
+            ],
+            "stroke": "2px",
+            "edgeHit": true
+          }
+        ],
+        "overflow": 0,
+        "errors": []
+      },
+      {
+        "locale": "bg",
+        "width": 320,
+        "field": {
+          "label": "Търси марка, модел, цена...",
+          "size": [
+            288,
+            44
+          ],
+          "paint": [
+            288,
+            44
+          ],
+          "radius": "999px",
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edgeHit": true
+        },
+        "search": {
+          "label": "Покажи",
+          "size": [
+            44,
+            44
+          ],
+          "paint": [
+            44,
+            44
+          ],
+          "radius": "999px",
+          "background": "rgb(16, 17, 19)",
+          "border": "0px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edgeHit": true
+        },
+        "filter": {
+          "label": "Отвори филтри",
+          "size": [
+            44,
+            44
+          ],
+          "paint": [
+            44,
+            44
+          ],
+          "radius": "999px",
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edgeHit": true
+        },
+        "pills": [
+          {
+            "label": "До 10 000",
+            "size": [
+              102.078125,
+              44
+            ],
+            "paint": [
+              102.078125,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": true
+          },
+          {
+            "label": "До 20 000",
+            "size": [
+              103.625,
+              44
+            ],
+            "paint": [
+              103.625,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": true
+          },
+          {
+            "label": "До 30 000",
+            "size": [
+              103.765625,
+              44
+            ],
+            "paint": [
+              103.765625,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          },
+          {
+            "label": "Нови обяви",
+            "size": [
+              116.640625,
+              44
+            ],
+            "paint": [
+              116.640625,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          },
+          {
+            "label": "Налични",
+            "size": [
+              91.5,
+              44
+            ],
+            "paint": [
+              91.5,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          }
+        ],
+        "appbar": [
+          {
+            "label": "Контакти",
+            "size": [
+              44,
+              44
+            ],
+            "paint": [
+              44,
+              44
+            ],
+            "radius": "999px",
+            "background": "rgb(23, 25, 28)",
+            "border": "0px",
+            "icon": [
+              20,
+              20
+            ],
+            "stroke": "2px",
+            "edgeHit": true
+          },
+          {
+            "label": "Карта",
+            "size": [
+              44,
+              44
+            ],
+            "paint": [
+              44,
+              44
+            ],
+            "radius": "999px",
+            "background": "rgb(23, 25, 28)",
+            "border": "0px",
+            "icon": [
+              20,
+              20
+            ],
+            "stroke": "2px",
+            "edgeHit": true
+          }
+        ],
+        "overflow": 0,
+        "errors": []
+      },
+      {
+        "locale": "en",
+        "width": 390,
+        "field": {
+          "label": "Search brand, model, price...",
+          "size": [
+            358,
+            44
+          ],
+          "paint": [
+            358,
+            44
+          ],
+          "radius": "999px",
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edgeHit": true
+        },
+        "search": {
+          "label": "Show",
+          "size": [
+            44,
+            44
+          ],
+          "paint": [
+            44,
+            44
+          ],
+          "radius": "999px",
+          "background": "rgb(16, 17, 19)",
+          "border": "0px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edgeHit": true
+        },
+        "filter": {
+          "label": "Open filters",
+          "size": [
+            44,
+            44
+          ],
+          "paint": [
+            44,
+            44
+          ],
+          "radius": "999px",
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edgeHit": true
+        },
+        "pills": [
+          {
+            "label": "Under 10k",
+            "size": [
+              102.359375,
+              44
+            ],
+            "paint": [
+              102.359375,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": true
+          },
+          {
+            "label": "Under 20k",
+            "size": [
+              103.90625,
+              44
+            ],
+            "paint": [
+              103.90625,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": true
+          },
+          {
+            "label": "Under 30k",
+            "size": [
+              104.046875,
+              44
+            ],
+            "paint": [
+              104.046875,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          },
+          {
+            "label": "New listings",
+            "size": [
+              118.015625,
+              44
+            ],
+            "paint": [
+              118.015625,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          },
+          {
+            "label": "In stock",
+            "size": [
+              85.21875,
+              44
+            ],
+            "paint": [
+              85.21875,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          }
+        ],
+        "appbar": [
+          {
+            "label": "Contact",
+            "size": [
+              44,
+              44
+            ],
+            "paint": [
+              44,
+              44
+            ],
+            "radius": "999px",
+            "background": "rgb(23, 25, 28)",
+            "border": "0px",
+            "icon": [
+              20,
+              20
+            ],
+            "stroke": "2px",
+            "edgeHit": true
+          },
+          {
+            "label": "Map",
+            "size": [
+              44,
+              44
+            ],
+            "paint": [
+              44,
+              44
+            ],
+            "radius": "999px",
+            "background": "rgb(23, 25, 28)",
+            "border": "0px",
+            "icon": [
+              20,
+              20
+            ],
+            "stroke": "2px",
+            "edgeHit": true
+          }
+        ],
+        "overflow": 0,
+        "errors": []
+      },
+      {
+        "locale": "en",
+        "width": 320,
+        "field": {
+          "label": "Search brand, model, price...",
+          "size": [
+            288,
+            44
+          ],
+          "paint": [
+            288,
+            44
+          ],
+          "radius": "999px",
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edgeHit": true
+        },
+        "search": {
+          "label": "Show",
+          "size": [
+            44,
+            44
+          ],
+          "paint": [
+            44,
+            44
+          ],
+          "radius": "999px",
+          "background": "rgb(16, 17, 19)",
+          "border": "0px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edgeHit": true
+        },
+        "filter": {
+          "label": "Open filters",
+          "size": [
+            44,
+            44
+          ],
+          "paint": [
+            44,
+            44
+          ],
+          "radius": "999px",
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edgeHit": true
+        },
+        "pills": [
+          {
+            "label": "Under 10k",
+            "size": [
+              102.359375,
+              44
+            ],
+            "paint": [
+              102.359375,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": true
+          },
+          {
+            "label": "Under 20k",
+            "size": [
+              103.90625,
+              44
+            ],
+            "paint": [
+              103.90625,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": true
+          },
+          {
+            "label": "Under 30k",
+            "size": [
+              104.046875,
+              44
+            ],
+            "paint": [
+              104.046875,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          },
+          {
+            "label": "New listings",
+            "size": [
+              118.015625,
+              44
+            ],
+            "paint": [
+              118.015625,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          },
+          {
+            "label": "In stock",
+            "size": [
+              85.21875,
+              44
+            ],
+            "paint": [
+              85.21875,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          }
+        ],
+        "appbar": [
+          {
+            "label": "Contact",
+            "size": [
+              44,
+              44
+            ],
+            "paint": [
+              44,
+              44
+            ],
+            "radius": "999px",
+            "background": "rgb(23, 25, 28)",
+            "border": "0px",
+            "icon": [
+              20,
+              20
+            ],
+            "stroke": "2px",
+            "edgeHit": true
+          },
+          {
+            "label": "Map",
+            "size": [
+              44,
+              44
+            ],
+            "paint": [
+              44,
+              44
+            ],
+            "radius": "999px",
+            "background": "rgb(23, 25, 28)",
+            "border": "0px",
+            "icon": [
+              20,
+              20
+            ],
+            "stroke": "2px",
+            "edgeHit": true
+          }
+        ],
+        "overflow": 0,
+        "errors": []
+      }
+    ],
+    "desktop": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    }
+  },
+  "after": {
+    "base": "http://127.0.0.1:6791",
+    "capturedAt": "2026-10-09T16:21:24.037Z",
+    "source": "Actual rendered pages with no injected CSS",
+    "records": [
+      {
+        "locale": "bg",
+        "width": 390,
+        "field": {
+          "label": "Търси марка, модел, цена...",
+          "size": [
+            358,
+            48
+          ],
+          "paint": [
+            358,
+            48
+          ],
+          "radius": "999px",
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2.25px",
+          "edgeHit": true
+        },
+        "search": {
+          "label": "Покажи",
+          "size": [
+            44,
+            44
+          ],
+          "paint": [
+            36,
+            36
+          ],
+          "radius": "999px",
+          "background": "rgb(16, 17, 19)",
+          "border": "4px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2.25px",
+          "edgeHit": true
+        },
+        "filter": {
+          "label": "Отвори филтри",
+          "size": [
+            44,
+            44
+          ],
+          "paint": [
+            44,
+            44
+          ],
+          "radius": "12px",
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edgeHit": true
+        },
+        "pills": [
+          {
+            "label": "До 10 000",
+            "size": [
+              102.078125,
+              44
+            ],
+            "paint": [
+              102.078125,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": true
+          },
+          {
+            "label": "До 20 000",
+            "size": [
+              103.625,
+              44
+            ],
+            "paint": [
+              103.625,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": true
+          },
+          {
+            "label": "До 30 000",
+            "size": [
+              103.765625,
+              44
+            ],
+            "paint": [
+              103.765625,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          },
+          {
+            "label": "Нови обяви",
+            "size": [
+              116.640625,
+              44
+            ],
+            "paint": [
+              116.640625,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          },
+          {
+            "label": "Налични",
+            "size": [
+              91.5,
+              44
+            ],
+            "paint": [
+              91.5,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          }
+        ],
+        "appbar": [
+          {
+            "label": "Контакти",
+            "size": [
+              44,
+              44
+            ],
+            "paint": [
+              44,
+              44
+            ],
+            "radius": "999px",
+            "background": "rgb(23, 25, 28)",
+            "border": "0px",
+            "icon": [
+              20,
+              20
+            ],
+            "stroke": "2px",
+            "edgeHit": true
+          },
+          {
+            "label": "Карта",
+            "size": [
+              44,
+              44
+            ],
+            "paint": [
+              44,
+              44
+            ],
+            "radius": "999px",
+            "background": "rgb(23, 25, 28)",
+            "border": "0px",
+            "icon": [
+              20,
+              20
+            ],
+            "stroke": "2px",
+            "edgeHit": true
+          }
+        ],
+        "overflow": 0,
+        "errors": []
+      },
+      {
+        "locale": "bg",
+        "width": 320,
+        "field": {
+          "label": "Търси марка, модел, цена...",
+          "size": [
+            288,
+            48
+          ],
+          "paint": [
+            288,
+            48
+          ],
+          "radius": "999px",
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2.25px",
+          "edgeHit": true
+        },
+        "search": {
+          "label": "Покажи",
+          "size": [
+            44,
+            44
+          ],
+          "paint": [
+            36,
+            36
+          ],
+          "radius": "999px",
+          "background": "rgb(16, 17, 19)",
+          "border": "4px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2.25px",
+          "edgeHit": true
+        },
+        "filter": {
+          "label": "Отвори филтри",
+          "size": [
+            44,
+            44
+          ],
+          "paint": [
+            44,
+            44
+          ],
+          "radius": "12px",
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edgeHit": true
+        },
+        "pills": [
+          {
+            "label": "До 10 000",
+            "size": [
+              102.078125,
+              44
+            ],
+            "paint": [
+              102.078125,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": true
+          },
+          {
+            "label": "До 20 000",
+            "size": [
+              103.625,
+              44
+            ],
+            "paint": [
+              103.625,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": true
+          },
+          {
+            "label": "До 30 000",
+            "size": [
+              103.765625,
+              44
+            ],
+            "paint": [
+              103.765625,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          },
+          {
+            "label": "Нови обяви",
+            "size": [
+              116.640625,
+              44
+            ],
+            "paint": [
+              116.640625,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          },
+          {
+            "label": "Налични",
+            "size": [
+              91.5,
+              44
+            ],
+            "paint": [
+              91.5,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          }
+        ],
+        "appbar": [
+          {
+            "label": "Контакти",
+            "size": [
+              44,
+              44
+            ],
+            "paint": [
+              44,
+              44
+            ],
+            "radius": "999px",
+            "background": "rgb(23, 25, 28)",
+            "border": "0px",
+            "icon": [
+              20,
+              20
+            ],
+            "stroke": "2px",
+            "edgeHit": true
+          },
+          {
+            "label": "Карта",
+            "size": [
+              44,
+              44
+            ],
+            "paint": [
+              44,
+              44
+            ],
+            "radius": "999px",
+            "background": "rgb(23, 25, 28)",
+            "border": "0px",
+            "icon": [
+              20,
+              20
+            ],
+            "stroke": "2px",
+            "edgeHit": true
+          }
+        ],
+        "overflow": 0,
+        "errors": []
+      },
+      {
+        "locale": "en",
+        "width": 390,
+        "field": {
+          "label": "Search brand, model, price...",
+          "size": [
+            358,
+            48
+          ],
+          "paint": [
+            358,
+            48
+          ],
+          "radius": "999px",
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2.25px",
+          "edgeHit": true
+        },
+        "search": {
+          "label": "Show",
+          "size": [
+            44,
+            44
+          ],
+          "paint": [
+            36,
+            36
+          ],
+          "radius": "999px",
+          "background": "rgb(16, 17, 19)",
+          "border": "4px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2.25px",
+          "edgeHit": true
+        },
+        "filter": {
+          "label": "Open filters",
+          "size": [
+            44,
+            44
+          ],
+          "paint": [
+            44,
+            44
+          ],
+          "radius": "12px",
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edgeHit": true
+        },
+        "pills": [
+          {
+            "label": "Under 10k",
+            "size": [
+              102.359375,
+              44
+            ],
+            "paint": [
+              102.359375,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": true
+          },
+          {
+            "label": "Under 20k",
+            "size": [
+              103.90625,
+              44
+            ],
+            "paint": [
+              103.90625,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": true
+          },
+          {
+            "label": "Under 30k",
+            "size": [
+              104.046875,
+              44
+            ],
+            "paint": [
+              104.046875,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          },
+          {
+            "label": "New listings",
+            "size": [
+              118.015625,
+              44
+            ],
+            "paint": [
+              118.015625,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          },
+          {
+            "label": "In stock",
+            "size": [
+              85.21875,
+              44
+            ],
+            "paint": [
+              85.21875,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          }
+        ],
+        "appbar": [
+          {
+            "label": "Contact",
+            "size": [
+              44,
+              44
+            ],
+            "paint": [
+              44,
+              44
+            ],
+            "radius": "999px",
+            "background": "rgb(23, 25, 28)",
+            "border": "0px",
+            "icon": [
+              20,
+              20
+            ],
+            "stroke": "2px",
+            "edgeHit": true
+          },
+          {
+            "label": "Map",
+            "size": [
+              44,
+              44
+            ],
+            "paint": [
+              44,
+              44
+            ],
+            "radius": "999px",
+            "background": "rgb(23, 25, 28)",
+            "border": "0px",
+            "icon": [
+              20,
+              20
+            ],
+            "stroke": "2px",
+            "edgeHit": true
+          }
+        ],
+        "overflow": 0,
+        "errors": []
+      },
+      {
+        "locale": "en",
+        "width": 320,
+        "field": {
+          "label": "Search brand, model, price...",
+          "size": [
+            288,
+            48
+          ],
+          "paint": [
+            288,
+            48
+          ],
+          "radius": "999px",
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2.25px",
+          "edgeHit": true
+        },
+        "search": {
+          "label": "Show",
+          "size": [
+            44,
+            44
+          ],
+          "paint": [
+            36,
+            36
+          ],
+          "radius": "999px",
+          "background": "rgb(16, 17, 19)",
+          "border": "4px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2.25px",
+          "edgeHit": true
+        },
+        "filter": {
+          "label": "Open filters",
+          "size": [
+            44,
+            44
+          ],
+          "paint": [
+            44,
+            44
+          ],
+          "radius": "12px",
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edgeHit": true
+        },
+        "pills": [
+          {
+            "label": "Under 10k",
+            "size": [
+              102.359375,
+              44
+            ],
+            "paint": [
+              102.359375,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": true
+          },
+          {
+            "label": "Under 20k",
+            "size": [
+              103.90625,
+              44
+            ],
+            "paint": [
+              103.90625,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": true
+          },
+          {
+            "label": "Under 30k",
+            "size": [
+              104.046875,
+              44
+            ],
+            "paint": [
+              104.046875,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          },
+          {
+            "label": "New listings",
+            "size": [
+              118.015625,
+              44
+            ],
+            "paint": [
+              118.015625,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          },
+          {
+            "label": "In stock",
+            "size": [
+              85.21875,
+              44
+            ],
+            "paint": [
+              85.21875,
+              44
+            ],
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "icon": null,
+            "edgeHit": false
+          }
+        ],
+        "appbar": [
+          {
+            "label": "Contact",
+            "size": [
+              44,
+              44
+            ],
+            "paint": [
+              44,
+              44
+            ],
+            "radius": "999px",
+            "background": "rgb(23, 25, 28)",
+            "border": "0px",
+            "icon": [
+              20,
+              20
+            ],
+            "stroke": "2px",
+            "edgeHit": true
+          },
+          {
+            "label": "Map",
+            "size": [
+              44,
+              44
+            ],
+            "paint": [
+              44,
+              44
+            ],
+            "radius": "999px",
+            "background": "rgb(23, 25, 28)",
+            "border": "0px",
+            "icon": [
+              20,
+              20
+            ],
+            "stroke": "2px",
+            "edgeHit": true
+          }
+        ],
+        "overflow": 0,
+        "errors": []
+      }
+    ],
+    "desktop": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    }
+  },
+  "desktop": {
+    "width": 1440,
+    "height": 1000,
+    "changedPixels": 0,
+    "maxChannelDelta": 0,
+    "heroGeometryEqual": true
+  }
+}

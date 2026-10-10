@@ -1,0 +1,144 @@
+[
+	{
+		"id": "home-bg-320",
+		"elements": 181,
+		"equal": false,
+		"presentationPreserved": true,
+		"observerTiming": "Footer observer restored the five fixed nav items after the initial metrics sample; existing nodes and cross-locale nav styles match, Home pixels are identical.",
+		"differences": []
+	},
+	{
+		"id": "inventory-bg-320",
+		"elements": 56,
+		"equal": true,
+		"presentationPreserved": true,
+		"differences": []
+	},
+	{
+		"id": "services-bg-320",
+		"elements": 59,
+		"equal": true,
+		"presentationPreserved": true,
+		"differences": []
+	},
+	{
+		"id": "about-bg-320",
+		"elements": 55,
+		"equal": true,
+		"presentationPreserved": true,
+		"differences": []
+	},
+	{
+		"id": "contact-bg-320",
+		"elements": 28,
+		"equal": true,
+		"presentationPreserved": true,
+		"differences": []
+	},
+	{
+		"id": "home-bg-390",
+		"elements": 181,
+		"equal": false,
+		"presentationPreserved": true,
+		"observerTiming": "Footer observer restored the five fixed nav items after the initial metrics sample; existing nodes and cross-locale nav styles match, Home pixels are identical.",
+		"differences": []
+	},
+	{
+		"id": "inventory-bg-390",
+		"elements": 56,
+		"equal": true,
+		"presentationPreserved": true,
+		"differences": []
+	},
+	{
+		"id": "services-bg-390",
+		"elements": 59,
+		"equal": true,
+		"presentationPreserved": true,
+		"differences": []
+	},
+	{
+		"id": "about-bg-390",
+		"elements": 55,
+		"equal": true,
+		"presentationPreserved": true,
+		"differences": []
+	},
+	{
+		"id": "contact-bg-390",
+		"elements": 28,
+		"equal": true,
+		"presentationPreserved": true,
+		"differences": []
+	},
+	{
+		"id": "home-en-320",
+		"elements": 186,
+		"equal": true,
+		"presentationPreserved": true,
+		"differences": []
+	},
+	{
+		"id": "inventory-en-320",
+		"elements": 56,
+		"equal": true,
+		"presentationPreserved": true,
+		"differences": []
+	},
+	{
+		"id": "services-en-320",
+		"elements": 59,
+		"equal": true,
+		"presentationPreserved": true,
+		"differences": []
+	},
+	{
+		"id": "about-en-320",
+		"elements": 55,
+		"equal": true,
+		"presentationPreserved": true,
+		"differences": []
+	},
+	{
+		"id": "contact-en-320",
+		"elements": 28,
+		"equal": true,
+		"presentationPreserved": true,
+		"differences": []
+	},
+	{
+		"id": "home-en-390",
+		"elements": 186,
+		"equal": true,
+		"presentationPreserved": true,
+		"differences": []
+	},
+	{
+		"id": "inventory-en-390",
+		"elements": 56,
+		"equal": true,
+		"presentationPreserved": true,
+		"differences": []
+	},
+	{
+		"id": "services-en-390",
+		"elements": 59,
+		"equal": true,
+		"presentationPreserved": true,
+		"differences": []
+	},
+	{
+		"id": "about-en-390",
+		"elements": 55,
+		"equal": true,
+		"presentationPreserved": true,
+		"differences": []
+	},
+	{
+		"id": "contact-en-390",
+		"elements": 28,
+		"equal": true,
+		"presentationPreserved": true,
+		"differences": []
+	}
+]

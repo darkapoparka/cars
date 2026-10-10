@@ -1,0 +1,200 @@
+{
+  "baseline": "https://cars-template-auto-best.vercel.app",
+  "preview": "http://127.0.0.1:6461",
+  "mobile": [
+    {
+      "locale": "bg",
+      "width": 320,
+      "route": "/",
+      "overflow": false,
+      "servicesFollowsArticles": true
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "route": "/contact?topic=trade-in",
+      "overflow": false
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "route": "/contact?topic=import",
+      "overflow": false
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "route": "/blog",
+      "overflow": false
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "route": "/",
+      "overflow": false,
+      "servicesFollowsArticles": true
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "route": "/contact?topic=trade-in",
+      "overflow": false
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "route": "/contact?topic=import",
+      "overflow": false
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "route": "/blog",
+      "overflow": false
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "route": "/",
+      "overflow": false,
+      "servicesFollowsArticles": true
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "route": "/contact?topic=trade-in",
+      "overflow": false
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "route": "/contact?topic=import",
+      "overflow": false
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "route": "/blog",
+      "overflow": false
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "route": "/",
+      "overflow": false,
+      "servicesFollowsArticles": true
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "route": "/contact?topic=trade-in",
+      "overflow": false
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "route": "/contact?topic=import",
+      "overflow": false
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "route": "/blog",
+      "overflow": false
+    }
+  ],
+  "desktopAndTabletMatches": true,
+  "preservedWidths": [
+    768,
+    1440
+  ],
+  "locales": [
+    "bg",
+    "en"
+  ],
+  "controls": [
+    {
+      "locale": "en",
+      "width": 320,
+      "passed": true
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "passed": true
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "locale": "bg",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "passed": true
+    }
+  ],
+  "actions": [
+    {
+      "locale": "bg",
+      "width": 320,
+      "homeSearchFocus": true,
+      "importField16px": true,
+      "inventoryAction": true,
+      "servicesAndArticleLinks": true,
+      "sellAndBlogFocus": true,
+      "enlargedHome": true
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "homeSearchFocus": true,
+      "importField16px": true,
+      "inventoryAction": true
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "homeSearchFocus": true,
+      "importField16px": true,
+      "inventoryAction": true,
+      "servicesAndArticleLinks": true,
+      "sellAndBlogFocus": true,
+      "enlargedHome": true
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "homeSearchFocus": true,
+      "importField16px": true,
+      "inventoryAction": true
+    }
+  ],
+  "cssPolicy": "passed",
+  "tokens": "passed",
+  "typographyAndVisualPins": "passed",
+  "svelte": {
+    "entryCard": "clean",
+    "homeRoute": "Existing localized goto wrapper advisory; unchanged by this patch"
+  }
+}

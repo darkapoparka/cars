@@ -1,0 +1,581 @@
+{
+  "source": "canonical dev; no injected styles",
+  "results": [
+    {
+      "locale": "bg",
+      "width": 390,
+      "phase": "after",
+      "states": [
+        {
+          "tabs": [
+            {
+              "label": "Инфо",
+              "selected": "true",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "600",
+              "size": "18px",
+              "width": 120.65625,
+              "height": 44,
+              "x": 14,
+              "y": 433.9599914550781,
+              "underlineColor": "rgb(23, 25, 28)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Данни",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 120.671875,
+              "height": 44,
+              "x": 134.65625,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Екстри",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 120.65625,
+              "height": 44,
+              "x": 255.328125,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            }
+          ],
+          "overflow": 0
+        },
+        {
+          "tabs": [
+            {
+              "label": "Инфо",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 120.65625,
+              "height": 44,
+              "x": 14,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Данни",
+              "selected": "true",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "600",
+              "size": "18px",
+              "width": 120.671875,
+              "height": 44,
+              "x": 134.65625,
+              "y": 433.9599914550781,
+              "underlineColor": "rgb(23, 25, 28)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Екстри",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 120.65625,
+              "height": 44,
+              "x": 255.328125,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            }
+          ],
+          "overflow": 0
+        },
+        {
+          "tabs": [
+            {
+              "label": "Инфо",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 120.65625,
+              "height": 44,
+              "x": 14,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Данни",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 120.671875,
+              "height": 44,
+              "x": 134.65625,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Екстри",
+              "selected": "true",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "600",
+              "size": "18px",
+              "width": 120.65625,
+              "height": 44,
+              "x": 255.328125,
+              "y": 433.9599914550781,
+              "underlineColor": "rgb(23, 25, 28)",
+              "underlineHeight": "3px"
+            }
+          ],
+          "overflow": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "phase": "after",
+      "states": [
+        {
+          "tabs": [
+            {
+              "label": "Инфо",
+              "selected": "true",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "600",
+              "size": "18px",
+              "width": 97.328125,
+              "height": 44,
+              "x": 14,
+              "y": 433.9599914550781,
+              "underlineColor": "rgb(23, 25, 28)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Данни",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 97.328125,
+              "height": 44,
+              "x": 111.328125,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Екстри",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 97.34375,
+              "height": 44,
+              "x": 208.65625,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            }
+          ],
+          "overflow": 0
+        },
+        {
+          "tabs": [
+            {
+              "label": "Инфо",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 97.328125,
+              "height": 44,
+              "x": 14,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Данни",
+              "selected": "true",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "600",
+              "size": "18px",
+              "width": 97.328125,
+              "height": 44,
+              "x": 111.328125,
+              "y": 433.9599914550781,
+              "underlineColor": "rgb(23, 25, 28)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Екстри",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 97.34375,
+              "height": 44,
+              "x": 208.65625,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            }
+          ],
+          "overflow": 0
+        },
+        {
+          "tabs": [
+            {
+              "label": "Инфо",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 97.328125,
+              "height": 44,
+              "x": 14,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Данни",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 97.328125,
+              "height": 44,
+              "x": 111.328125,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Екстри",
+              "selected": "true",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "600",
+              "size": "18px",
+              "width": 97.34375,
+              "height": 44,
+              "x": 208.65625,
+              "y": 433.9599914550781,
+              "underlineColor": "rgb(23, 25, 28)",
+              "underlineHeight": "3px"
+            }
+          ],
+          "overflow": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "phase": "after",
+      "states": [],
+      "errors": [],
+      "desktopIdentical": true
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "phase": "after",
+      "states": [
+        {
+          "tabs": [
+            {
+              "label": "Info",
+              "selected": "true",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "600",
+              "size": "18px",
+              "width": 120.65625,
+              "height": 44,
+              "x": 14,
+              "y": 433.9599914550781,
+              "underlineColor": "rgb(23, 25, 28)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Specs",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 120.671875,
+              "height": 44,
+              "x": 134.65625,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Extras",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 120.65625,
+              "height": 44,
+              "x": 255.328125,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            }
+          ],
+          "overflow": 0
+        },
+        {
+          "tabs": [
+            {
+              "label": "Info",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 120.65625,
+              "height": 44,
+              "x": 14,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Specs",
+              "selected": "true",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "600",
+              "size": "18px",
+              "width": 120.671875,
+              "height": 44,
+              "x": 134.65625,
+              "y": 433.9599914550781,
+              "underlineColor": "rgb(23, 25, 28)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Extras",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 120.65625,
+              "height": 44,
+              "x": 255.328125,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            }
+          ],
+          "overflow": 0
+        },
+        {
+          "tabs": [
+            {
+              "label": "Info",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 120.65625,
+              "height": 44,
+              "x": 14,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Specs",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 120.671875,
+              "height": 44,
+              "x": 134.65625,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Extras",
+              "selected": "true",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "600",
+              "size": "18px",
+              "width": 120.65625,
+              "height": 44,
+              "x": 255.328125,
+              "y": 433.9599914550781,
+              "underlineColor": "rgb(23, 25, 28)",
+              "underlineHeight": "3px"
+            }
+          ],
+          "overflow": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "phase": "after",
+      "states": [
+        {
+          "tabs": [
+            {
+              "label": "Info",
+              "selected": "true",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "600",
+              "size": "18px",
+              "width": 97.328125,
+              "height": 44,
+              "x": 14,
+              "y": 433.9599914550781,
+              "underlineColor": "rgb(23, 25, 28)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Specs",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 97.328125,
+              "height": 44,
+              "x": 111.328125,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Extras",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 97.34375,
+              "height": 44,
+              "x": 208.65625,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            }
+          ],
+          "overflow": 0
+        },
+        {
+          "tabs": [
+            {
+              "label": "Info",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 97.328125,
+              "height": 44,
+              "x": 14,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Specs",
+              "selected": "true",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "600",
+              "size": "18px",
+              "width": 97.328125,
+              "height": 44,
+              "x": 111.328125,
+              "y": 433.9599914550781,
+              "underlineColor": "rgb(23, 25, 28)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Extras",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 97.34375,
+              "height": 44,
+              "x": 208.65625,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            }
+          ],
+          "overflow": 0
+        },
+        {
+          "tabs": [
+            {
+              "label": "Info",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 97.328125,
+              "height": 44,
+              "x": 14,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Specs",
+              "selected": "false",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "400",
+              "size": "18px",
+              "width": 97.328125,
+              "height": 44,
+              "x": 111.328125,
+              "y": 433.9599914550781,
+              "underlineColor": "rgba(0, 0, 0, 0)",
+              "underlineHeight": "3px"
+            },
+            {
+              "label": "Extras",
+              "selected": "true",
+              "background": "rgba(0, 0, 0, 0)",
+              "weight": "600",
+              "size": "18px",
+              "width": 97.34375,
+              "height": 44,
+              "x": 208.65625,
+              "y": 433.9599914550781,
+              "underlineColor": "rgb(23, 25, 28)",
+              "underlineHeight": "3px"
+            }
+          ],
+          "overflow": 0
+        }
+      ],
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "phase": "after",
+      "states": [],
+      "errors": [],
+      "desktopIdentical": true
+    }
+  ]
+}

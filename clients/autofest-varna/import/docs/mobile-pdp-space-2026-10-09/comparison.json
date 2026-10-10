@@ -1,0 +1,304 @@
+{
+  "desktop": [
+    {
+      "locale": "en",
+      "state": "home",
+      "identical": false,
+      "changedChannels": 18,
+      "changedPixels": 7,
+      "maxChannelDifference": 4,
+      "pixels": [
+        {
+          "x": 1369,
+          "y": 481
+        },
+        {
+          "x": 1369,
+          "y": 482
+        },
+        {
+          "x": 1368,
+          "y": 483
+        },
+        {
+          "x": 1367,
+          "y": 484
+        },
+        {
+          "x": 1368,
+          "y": 484
+        },
+        {
+          "x": 1367,
+          "y": 485
+        },
+        {
+          "x": 1366,
+          "y": 486
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "state": "pdp",
+      "identical": true,
+      "changedChannels": 0,
+      "changedPixels": 0,
+      "maxChannelDifference": 0,
+      "pixels": []
+    },
+    {
+      "locale": "bg",
+      "state": "home",
+      "identical": false,
+      "changedChannels": 25,
+      "changedPixels": 10,
+      "maxChannelDifference": 2,
+      "pixels": [
+        {
+          "x": 362,
+          "y": 602
+        },
+        {
+          "x": 363,
+          "y": 603
+        },
+        {
+          "x": 392,
+          "y": 603
+        },
+        {
+          "x": 363,
+          "y": 604
+        },
+        {
+          "x": 364,
+          "y": 606
+        },
+        {
+          "x": 325,
+          "y": 974
+        },
+        {
+          "x": 324,
+          "y": 975
+        },
+        {
+          "x": 323,
+          "y": 976
+        },
+        {
+          "x": 333,
+          "y": 986
+        },
+        {
+          "x": 332,
+          "y": 987
+        }
+      ]
+    },
+    {
+      "locale": "bg",
+      "state": "pdp",
+      "identical": true,
+      "changedChannels": 0,
+      "changedPixels": 0,
+      "maxChannelDifference": 0,
+      "pixels": []
+    }
+  ],
+  "changes": [
+    {
+      "locale": "en",
+      "width": 390,
+      "state": "home",
+      "navbarBefore": 58,
+      "navbarAfter": 52,
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "state": "pdp-info",
+      "drawerHeadingBefore": 95,
+      "drawerHeadingAfter": 68,
+      "extraPanelHeight": 27,
+      "titleSize": "22px",
+      "titleWeight": "600",
+      "priceWeight": "400",
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "state": "pdp-specs",
+      "drawerHeadingBefore": 95,
+      "drawerHeadingAfter": 68,
+      "extraPanelHeight": 27,
+      "titleSize": "22px",
+      "titleWeight": "600",
+      "priceWeight": "400",
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "state": "pdp-features",
+      "drawerHeadingBefore": 95,
+      "drawerHeadingAfter": 68,
+      "extraPanelHeight": 27,
+      "titleSize": "22px",
+      "titleWeight": "600",
+      "priceWeight": "400",
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "state": "home",
+      "navbarBefore": 58,
+      "navbarAfter": 52,
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "state": "pdp-info",
+      "drawerHeadingBefore": 95,
+      "drawerHeadingAfter": 68,
+      "extraPanelHeight": 27,
+      "titleSize": "22px",
+      "titleWeight": "600",
+      "priceWeight": "400",
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "state": "pdp-specs",
+      "drawerHeadingBefore": 95,
+      "drawerHeadingAfter": 68,
+      "extraPanelHeight": 27,
+      "titleSize": "22px",
+      "titleWeight": "600",
+      "priceWeight": "400",
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "state": "pdp-features",
+      "drawerHeadingBefore": 95,
+      "drawerHeadingAfter": 68,
+      "extraPanelHeight": 27,
+      "titleSize": "22px",
+      "titleWeight": "600",
+      "priceWeight": "400",
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "state": "home",
+      "navbarBefore": 58,
+      "navbarAfter": 52,
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "state": "pdp-info",
+      "drawerHeadingBefore": 95,
+      "drawerHeadingAfter": 68,
+      "extraPanelHeight": 27,
+      "titleSize": "22px",
+      "titleWeight": "600",
+      "priceWeight": "400",
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "state": "pdp-specs",
+      "drawerHeadingBefore": 95,
+      "drawerHeadingAfter": 68,
+      "extraPanelHeight": 27,
+      "titleSize": "22px",
+      "titleWeight": "600",
+      "priceWeight": "400",
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "state": "pdp-features",
+      "drawerHeadingBefore": 95,
+      "drawerHeadingAfter": 68,
+      "extraPanelHeight": 27,
+      "titleSize": "22px",
+      "titleWeight": "600",
+      "priceWeight": "400",
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "state": "home",
+      "navbarBefore": 58,
+      "navbarAfter": 52,
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "state": "pdp-info",
+      "drawerHeadingBefore": 95,
+      "drawerHeadingAfter": 68,
+      "extraPanelHeight": 27,
+      "titleSize": "22px",
+      "titleWeight": "600",
+      "priceWeight": "400",
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "state": "pdp-specs",
+      "drawerHeadingBefore": 95,
+      "drawerHeadingAfter": 68,
+      "extraPanelHeight": 27,
+      "titleSize": "22px",
+      "titleWeight": "600",
+      "priceWeight": "400",
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "state": "pdp-features",
+      "drawerHeadingBefore": 95,
+      "drawerHeadingAfter": 68,
+      "extraPanelHeight": 27,
+      "titleSize": "22px",
+      "titleWeight": "600",
+      "priceWeight": "400",
+      "overflow": 0,
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,1727 @@
+{
+	"verifiedAt": "2026-10-01T23:59:25.587Z",
+	"repository": "darkapoparka/cars",
+	"sourcePath": "templates/import",
+	"branch": "main",
+	"verificationHead": "9ec3a94d449e16315ac6baba94ddec56f3067f46",
+	"frozenBase": "0d593ffa828c6da4302de75f843ef54aaf9ce864",
+	"workingSourceDigest": "af5c24bb5319030820758f579b1ccf0e8ba7d386c778f08f017cd856b1dd31ef",
+	"runtime": "Node 24.21.0",
+	"sourceFiles": [
+		{
+			"path": "src/lib/components/common/DesktopDiscoveryPanel.svelte",
+			"sha256": "4737be558cfd07fa76e4a9205993748e12862a505cc237a309b329cc633ce456"
+		},
+		{
+			"path": "src/lib/components/common/DesktopSearchControl.svelte",
+			"sha256": "ab3e152a9c7bed0bca7b90fac8508a9436638ae38d07f8579b1edcf6bf50928a"
+		},
+		{
+			"path": "src/lib/components/home/DesktopHomeHero.svelte",
+			"sha256": "12786a71edd9de3788997d4265af8b3a1135b36bfddd045918edbe3de71e3679"
+		},
+		{
+			"path": "src/lib/components/home/HeroFilterDialog.svelte",
+			"sha256": "1f006ae6e45b18de97f4f27a38b719ac233f6fbce26653e7ec189f6ea80d683b"
+		},
+		{
+			"path": "src/lib/components/inventory/InventoryPage.svelte",
+			"sha256": "2d82f33d291e92138e4849c97aa6cfc1542197d818f84b4d72ab95d53ab7ed96"
+		},
+		{
+			"path": "src/lib/components/inventory/InventoryToolbar.svelte",
+			"sha256": "c6f52e25362a389ac5614e616f1b1351a55824111f195e493076d1fb6712655d"
+		},
+		{
+			"path": "src/lib/components/inventory/InventoryFilter.svelte",
+			"sha256": "be3fdae68ca84e9a5bbb48afeedb289f1784241c14e0ca83ebf751b97ba25975"
+		},
+		{
+			"path": "src/lib/styles/tokens.css",
+			"sha256": "14e220d860e3e00f8807e12de7c4b92efa6cacf51b751eacd67c4044a0b47911"
+		},
+		{
+			"path": "tests/inventory.e2e.ts",
+			"sha256": "e7447a9c8a71fe0f5f73823d6979679f08900945ca5986ec3ae76424986e21ae"
+		},
+		{
+			"path": "docs/ARCHITECTURE.md",
+			"sha256": "f4a0f759d1f1de449d2b3fbb3f90177ade4ca4695efdff62f87541702d6d90ab"
+		},
+		{
+			"path": "src/lib/components/inventory/InventorySidebar.svelte",
+			"sha256": "7f504c3aa7aebe94cfdd4885b5359976625da741d9fa1b88843e87f5b646fcac"
+		}
+	],
+	"deleted": "src/lib/components/home/DesktopHomeSearchEntry.svelte",
+	"checks": [
+		{
+			"name": "check",
+			"exit": 0,
+			"seconds": 132
+		},
+		{
+			"name": "format",
+			"exit": 0,
+			"seconds": 3
+		},
+		{
+			"name": "lint",
+			"exit": 0,
+			"seconds": 43
+		},
+		{
+			"name": "architecture",
+			"exit": 0,
+			"seconds": 2
+		},
+		{
+			"name": "build",
+			"exit": 0,
+			"seconds": 67
+		}
+	],
+	"browser": [
+		{
+			"name": "browser",
+			"exit": 0,
+			"seconds": 108,
+			"summary": ["  17 skipped", "  21 passed (1.7m)"]
+		},
+		{
+			"name": "accessibility",
+			"exit": 0,
+			"seconds": 48,
+			"summary": ["  4 passed (46.3s)"]
+		}
+	],
+	"desktop": {
+		"locales": ["bg", "en"],
+		"widths": [768, 900, 1024, 1440, 1920],
+		"cases": 20,
+		"geometry": [
+			{
+				"action": {
+					"height": 44,
+					"width": 44,
+					"x": 651,
+					"y": 322.546875
+				},
+				"buttons": [
+					{
+						"height": 48,
+						"label": "Марка",
+						"width": 155.75,
+						"x": 53,
+						"y": 388.546875
+					},
+					{
+						"height": 48,
+						"label": "Модел",
+						"width": 155.75,
+						"x": 216.75,
+						"y": 388.546875
+					},
+					{
+						"height": 48,
+						"label": "Цена",
+						"width": 155.75,
+						"x": 380.5,
+						"y": 388.546875
+					},
+					{
+						"height": 48,
+						"label": "Пробег",
+						"width": 155.75,
+						"x": 544.25,
+						"y": 388.546875
+					},
+					{
+						"height": 48,
+						"label": "Гориво",
+						"width": 155.75,
+						"x": 53,
+						"y": 448.546875
+					},
+					{
+						"height": 48,
+						"label": "Купе",
+						"width": 155.75,
+						"x": 216.75,
+						"y": 448.546875
+					},
+					{
+						"height": 48,
+						"label": "Всички филтри",
+						"width": 178.21875,
+						"x": 521.78125,
+						"y": 448.546875
+					}
+				],
+				"controls": {
+					"height": 108,
+					"width": 647,
+					"x": 53,
+					"y": 388.546875
+				},
+				"hero": {
+					"height": 450,
+					"width": 753,
+					"x": 0,
+					"y": 133
+				},
+				"locale": "bg",
+				"overflow": false,
+				"panel": {
+					"height": 222,
+					"width": 689,
+					"x": 32,
+					"y": 295.546875
+				},
+				"route": "inventory",
+				"search": {
+					"height": 56,
+					"width": 647,
+					"x": 53,
+					"y": 316.546875
+				},
+				"width": 768
+			},
+			{
+				"action": {
+					"height": 44,
+					"width": 44,
+					"x": 783,
+					"y": 322.546875
+				},
+				"buttons": [
+					{
+						"height": 48,
+						"label": "Марка",
+						"width": 188.75,
+						"x": 53,
+						"y": 388.546875
+					},
+					{
+						"height": 48,
+						"label": "Модел",
+						"width": 188.75,
+						"x": 249.75,
+						"y": 388.546875
+					},
+					{
+						"height": 48,
+						"label": "Цена",
+						"width": 188.75,
+						"x": 446.5,
+						"y": 388.546875
+					},
+					{
+						"height": 48,
+						"label": "Пробег",
+						"width": 188.75,
+						"x": 643.25,
+						"y": 388.546875
+					},
+					{
+						"height": 48,
+						"label": "Гориво",
+						"width": 188.75,
+						"x": 53,
+						"y": 448.546875
+					},
+					{
+						"height": 48,
+						"label": "Купе",
+						"width": 188.75,
+						"x": 249.75,
+						"y": 448.546875
+					},
+					{
+						"height": 48,
+						"label": "Всички филтри",
+						"width": 178.21875,
+						"x": 653.78125,
+						"y": 448.546875
+					}
+				],
+				"controls": {
+					"height": 108,
+					"width": 779,
+					"x": 53,
+					"y": 388.546875
+				},
+				"hero": {
+					"height": 450,
+					"width": 885,
+					"x": 0,
+					"y": 133
+				},
+				"locale": "bg",
+				"overflow": false,
+				"panel": {
+					"height": 222,
+					"width": 821,
+					"x": 32,
+					"y": 295.546875
+				},
+				"route": "inventory",
+				"search": {
+					"height": 56,
+					"width": 779,
+					"x": 53,
+					"y": 316.546875
+				},
+				"width": 900
+			},
+			{
+				"action": {
+					"height": 44,
+					"width": 44,
+					"x": 874.5,
+					"y": 327.546875
+				},
+				"buttons": [
+					{
+						"height": 48,
+						"label": "Марка",
+						"width": 93.9375,
+						"x": 85.5,
+						"y": 393.546875
+					},
+					{
+						"height": 48,
+						"label": "Модел",
+						"width": 94.734375,
+						"x": 187.4375,
+						"y": 393.546875
+					},
+					{
+						"height": 48,
+						"label": "Цена",
+						"width": 83.765625,
+						"x": 290.171875,
+						"y": 393.546875
+					},
+					{
+						"height": 48,
+						"label": "Пробег",
+						"width": 102.9375,
+						"x": 381.9375,
+						"y": 393.546875
+					},
+					{
+						"height": 48,
+						"label": "Гориво",
+						"width": 99.5625,
+						"x": 492.875,
+						"y": 393.546875
+					},
+					{
+						"height": 48,
+						"label": "Купе",
+						"width": 82.390625,
+						"x": 600.4375,
+						"y": 393.546875
+					},
+					{
+						"height": 48,
+						"label": "Всички филтри",
+						"width": 178.21875,
+						"x": 745.28125,
+						"y": 393.546875
+					}
+				],
+				"controls": {
+					"height": 48,
+					"width": 838,
+					"x": 85.5,
+					"y": 393.546875
+				},
+				"hero": {
+					"height": 400,
+					"width": 1009,
+					"x": 0,
+					"y": 133
+				},
+				"locale": "bg",
+				"overflow": false,
+				"panel": {
+					"height": 162,
+					"width": 880,
+					"x": 64.5,
+					"y": 300.546875
+				},
+				"route": "inventory",
+				"search": {
+					"height": 56,
+					"width": 838,
+					"x": 85.5,
+					"y": 321.546875
+				},
+				"width": 1024
+			},
+			{
+				"action": {
+					"height": 44,
+					"width": 44,
+					"x": 1082.5,
+					"y": 292.578125
+				},
+				"buttons": [
+					{
+						"height": 48,
+						"label": "Марка",
+						"width": 93.9375,
+						"x": 293.5,
+						"y": 358.578125
+					},
+					{
+						"height": 48,
+						"label": "Модел",
+						"width": 94.734375,
+						"x": 395.4375,
+						"y": 358.578125
+					},
+					{
+						"height": 48,
+						"label": "Цена",
+						"width": 83.765625,
+						"x": 498.171875,
+						"y": 358.578125
+					},
+					{
+						"height": 48,
+						"label": "Пробег",
+						"width": 102.9375,
+						"x": 589.9375,
+						"y": 358.578125
+					},
+					{
+						"height": 48,
+						"label": "Гориво",
+						"width": 99.5625,
+						"x": 700.875,
+						"y": 358.578125
+					},
+					{
+						"height": 48,
+						"label": "Купе",
+						"width": 82.390625,
+						"x": 808.4375,
+						"y": 358.578125
+					},
+					{
+						"height": 48,
+						"label": "Всички филтри",
+						"width": 178.21875,
+						"x": 953.28125,
+						"y": 358.578125
+					}
+				],
+				"controls": {
+					"height": 48,
+					"width": 838,
+					"x": 293.5,
+					"y": 358.578125
+				},
+				"hero": {
+					"height": 400,
+					"width": 1425,
+					"x": 0,
+					"y": 94
+				},
+				"locale": "bg",
+				"overflow": false,
+				"panel": {
+					"height": 162,
+					"width": 880,
+					"x": 272.5,
+					"y": 265.578125
+				},
+				"route": "inventory",
+				"search": {
+					"height": 56,
+					"width": 838,
+					"x": 293.5,
+					"y": 286.578125
+				},
+				"width": 1440
+			},
+			{
+				"action": {
+					"height": 44,
+					"width": 44,
+					"x": 1322.5,
+					"y": 293.03125
+				},
+				"buttons": [
+					{
+						"height": 48,
+						"label": "Марка",
+						"width": 93.9375,
+						"x": 533.5,
+						"y": 359.03125
+					},
+					{
+						"height": 48,
+						"label": "Модел",
+						"width": 94.734375,
+						"x": 635.4375,
+						"y": 359.03125
+					},
+					{
+						"height": 48,
+						"label": "Цена",
+						"width": 83.765625,
+						"x": 738.171875,
+						"y": 359.03125
+					},
+					{
+						"height": 48,
+						"label": "Пробег",
+						"width": 102.9375,
+						"x": 829.9375,
+						"y": 359.03125
+					},
+					{
+						"height": 48,
+						"label": "Гориво",
+						"width": 99.5625,
+						"x": 940.875,
+						"y": 359.03125
+					},
+					{
+						"height": 48,
+						"label": "Купе",
+						"width": 82.390625,
+						"x": 1048.4375,
+						"y": 359.03125
+					},
+					{
+						"height": 48,
+						"label": "Всички филтри",
+						"width": 178.21875,
+						"x": 1193.28125,
+						"y": 359.03125
+					}
+				],
+				"controls": {
+					"height": 48,
+					"width": 838,
+					"x": 533.5,
+					"y": 359.03125
+				},
+				"hero": {
+					"height": 400,
+					"width": 1905,
+					"x": 0,
+					"y": 94
+				},
+				"locale": "bg",
+				"overflow": false,
+				"panel": {
+					"height": 162,
+					"width": 880,
+					"x": 512.5,
+					"y": 266.03125
+				},
+				"route": "inventory",
+				"search": {
+					"height": 56,
+					"width": 838,
+					"x": 533.5,
+					"y": 287.03125
+				},
+				"width": 1920
+			},
+			{
+				"action": {
+					"height": 44,
+					"width": 44,
+					"x": 651,
+					"y": 296.15625
+				},
+				"buttons": [
+					{
+						"height": 48,
+						"label": "Марка: Всички марки",
+						"width": 317.5,
+						"x": 53,
+						"y": 362.15625
+					},
+					{
+						"height": 48,
+						"label": "Модел: Всички модели",
+						"width": 317.5,
+						"x": 382.5,
+						"y": 362.15625
+					},
+					{
+						"height": 48,
+						"label": "Цена: Всички цени",
+						"width": 317.5,
+						"x": 53,
+						"y": 422.15625
+					},
+					{
+						"height": 48,
+						"label": "Пробег: Без ограничение",
+						"width": 317.5,
+						"x": 382.5,
+						"y": 422.15625
+					}
+				],
+				"controls": {
+					"height": 108,
+					"width": 647,
+					"x": 53,
+					"y": 362.15625
+				},
+				"hero": {
+					"height": 450,
+					"width": 753,
+					"x": 0,
+					"y": 133
+				},
+				"locale": "bg",
+				"overflow": false,
+				"panel": {
+					"height": 274,
+					"width": 689,
+					"x": 32,
+					"y": 217.15625
+				},
+				"route": "home",
+				"search": {
+					"height": 56,
+					"width": 647,
+					"x": 53,
+					"y": 290.15625
+				},
+				"width": 768
+			},
+			{
+				"action": {
+					"height": 44,
+					"width": 44,
+					"x": 783,
+					"y": 296.15625
+				},
+				"buttons": [
+					{
+						"height": 48,
+						"label": "Марка: Всички марки",
+						"width": 383.5,
+						"x": 53,
+						"y": 362.15625
+					},
+					{
+						"height": 48,
+						"label": "Модел: Всички модели",
+						"width": 383.5,
+						"x": 448.5,
+						"y": 362.15625
+					},
+					{
+						"height": 48,
+						"label": "Цена: Всички цени",
+						"width": 383.5,
+						"x": 53,
+						"y": 422.15625
+					},
+					{
+						"height": 48,
+						"label": "Пробег: Без ограничение",
+						"width": 383.5,
+						"x": 448.5,
+						"y": 422.15625
+					}
+				],
+				"controls": {
+					"height": 108,
+					"width": 779,
+					"x": 53,
+					"y": 362.15625
+				},
+				"hero": {
+					"height": 450,
+					"width": 885,
+					"x": 0,
+					"y": 133
+				},
+				"locale": "bg",
+				"overflow": false,
+				"panel": {
+					"height": 274,
+					"width": 821,
+					"x": 32,
+					"y": 217.15625
+				},
+				"route": "home",
+				"search": {
+					"height": 56,
+					"width": 779,
+					"x": 53,
+					"y": 290.15625
+				},
+				"width": 900
+			},
+			{
+				"action": {
+					"height": 44,
+					"width": 44,
+					"x": 874.5,
+					"y": 301.15625
+				},
+				"buttons": [
+					{
+						"height": 48,
+						"label": "Марка: Всички марки",
+						"width": 200.5,
+						"x": 85.5,
+						"y": 367.15625
+					},
+					{
+						"height": 48,
+						"label": "Модел: Всички модели",
+						"width": 200.5,
+						"x": 298,
+						"y": 367.15625
+					},
+					{
+						"height": 48,
+						"label": "Цена: Всички цени",
+						"width": 200.5,
+						"x": 510.5,
+						"y": 367.15625
+					},
+					{
+						"height": 48,
+						"label": "Пробег: Без ограничение",
+						"width": 200.5,
+						"x": 723,
+						"y": 367.15625
+					}
+				],
+				"controls": {
+					"height": 48,
+					"width": 838,
+					"x": 85.5,
+					"y": 367.15625
+				},
+				"hero": {
+					"height": 400,
+					"width": 1009,
+					"x": 0,
+					"y": 133
+				},
+				"locale": "bg",
+				"overflow": false,
+				"panel": {
+					"height": 214,
+					"width": 880,
+					"x": 64.5,
+					"y": 222.15625
+				},
+				"route": "home",
+				"search": {
+					"height": 56,
+					"width": 838,
+					"x": 85.5,
+					"y": 295.15625
+				},
+				"width": 1024
+			},
+			{
+				"action": {
+					"height": 44,
+					"width": 44,
+					"x": 1082.5,
+					"y": 266.1875
+				},
+				"buttons": [
+					{
+						"height": 48,
+						"label": "Марка: Всички марки",
+						"width": 200.5,
+						"x": 293.5,
+						"y": 332.1875
+					},
+					{
+						"height": 48,
+						"label": "Модел: Всички модели",
+						"width": 200.5,
+						"x": 506,
+						"y": 332.1875
+					},
+					{
+						"height": 48,
+						"label": "Цена: Всички цени",
+						"width": 200.5,
+						"x": 718.5,
+						"y": 332.1875
+					},
+					{
+						"height": 48,
+						"label": "Пробег: Без ограничение",
+						"width": 200.5,
+						"x": 931,
+						"y": 332.1875
+					}
+				],
+				"controls": {
+					"height": 48,
+					"width": 838,
+					"x": 293.5,
+					"y": 332.1875
+				},
+				"hero": {
+					"height": 400,
+					"width": 1425,
+					"x": 0,
+					"y": 94
+				},
+				"locale": "bg",
+				"overflow": false,
+				"panel": {
+					"height": 214,
+					"width": 880,
+					"x": 272.5,
+					"y": 187.1875
+				},
+				"route": "home",
+				"search": {
+					"height": 56,
+					"width": 838,
+					"x": 293.5,
+					"y": 260.1875
+				},
+				"width": 1440
+			},
+			{
+				"action": {
+					"height": 44,
+					"width": 44,
+					"x": 1322.5,
+					"y": 266.625
+				},
+				"buttons": [
+					{
+						"height": 48,
+						"label": "Марка: Всички марки",
+						"width": 200.5,
+						"x": 533.5,
+						"y": 332.625
+					},
+					{
+						"height": 48,
+						"label": "Модел: Всички модели",
+						"width": 200.5,
+						"x": 746,
+						"y": 332.625
+					},
+					{
+						"height": 48,
+						"label": "Цена: Всички цени",
+						"width": 200.5,
+						"x": 958.5,
+						"y": 332.625
+					},
+					{
+						"height": 48,
+						"label": "Пробег: Без ограничение",
+						"width": 200.5,
+						"x": 1171,
+						"y": 332.625
+					}
+				],
+				"controls": {
+					"height": 48,
+					"width": 838,
+					"x": 533.5,
+					"y": 332.625
+				},
+				"hero": {
+					"height": 400,
+					"width": 1905,
+					"x": 0,
+					"y": 94
+				},
+				"locale": "bg",
+				"overflow": false,
+				"panel": {
+					"height": 214,
+					"width": 880,
+					"x": 512.5,
+					"y": 187.625
+				},
+				"route": "home",
+				"search": {
+					"height": 56,
+					"width": 838,
+					"x": 533.5,
+					"y": 260.625
+				},
+				"width": 1920
+			},
+			{
+				"action": {
+					"height": 44,
+					"width": 44,
+					"x": 651,
+					"y": 322.546875
+				},
+				"buttons": [
+					{
+						"height": 48,
+						"label": "Make",
+						"width": 155.75,
+						"x": 53,
+						"y": 388.546875
+					},
+					{
+						"height": 48,
+						"label": "Model",
+						"width": 155.75,
+						"x": 216.75,
+						"y": 388.546875
+					},
+					{
+						"height": 48,
+						"label": "Price",
+						"width": 155.75,
+						"x": 380.5,
+						"y": 388.546875
+					},
+					{
+						"height": 48,
+						"label": "Mileage",
+						"width": 155.75,
+						"x": 544.25,
+						"y": 388.546875
+					},
+					{
+						"height": 48,
+						"label": "Fuel",
+						"width": 155.75,
+						"x": 53,
+						"y": 448.546875
+					},
+					{
+						"height": 48,
+						"label": "Body",
+						"width": 155.75,
+						"x": 216.75,
+						"y": 448.546875
+					},
+					{
+						"height": 48,
+						"label": "All filters",
+						"width": 119.546875,
+						"x": 580.453125,
+						"y": 448.546875
+					}
+				],
+				"controls": {
+					"height": 108,
+					"width": 647,
+					"x": 53,
+					"y": 388.546875
+				},
+				"hero": {
+					"height": 450,
+					"width": 753,
+					"x": 0,
+					"y": 133
+				},
+				"locale": "en",
+				"overflow": false,
+				"panel": {
+					"height": 222,
+					"width": 689,
+					"x": 32,
+					"y": 295.546875
+				},
+				"route": "inventory",
+				"search": {
+					"height": 56,
+					"width": 647,
+					"x": 53,
+					"y": 316.546875
+				},
+				"width": 768
+			},
+			{
+				"action": {
+					"height": 44,
+					"width": 44,
+					"x": 783,
+					"y": 322.546875
+				},
+				"buttons": [
+					{
+						"height": 48,
+						"label": "Make",
+						"width": 188.75,
+						"x": 53,
+						"y": 388.546875
+					},
+					{
+						"height": 48,
+						"label": "Model",
+						"width": 188.75,
+						"x": 249.75,
+						"y": 388.546875
+					},
+					{
+						"height": 48,
+						"label": "Price",
+						"width": 188.75,
+						"x": 446.5,
+						"y": 388.546875
+					},
+					{
+						"height": 48,
+						"label": "Mileage",
+						"width": 188.75,
+						"x": 643.25,
+						"y": 388.546875
+					},
+					{
+						"height": 48,
+						"label": "Fuel",
+						"width": 188.75,
+						"x": 53,
+						"y": 448.546875
+					},
+					{
+						"height": 48,
+						"label": "Body",
+						"width": 188.75,
+						"x": 249.75,
+						"y": 448.546875
+					},
+					{
+						"height": 48,
+						"label": "All filters",
+						"width": 119.546875,
+						"x": 712.453125,
+						"y": 448.546875
+					}
+				],
+				"controls": {
+					"height": 108,
+					"width": 779,
+					"x": 53,
+					"y": 388.546875
+				},
+				"hero": {
+					"height": 450,
+					"width": 885,
+					"x": 0,
+					"y": 133
+				},
+				"locale": "en",
+				"overflow": false,
+				"panel": {
+					"height": 222,
+					"width": 821,
+					"x": 32,
+					"y": 295.546875
+				},
+				"route": "inventory",
+				"search": {
+					"height": 56,
+					"width": 779,
+					"x": 53,
+					"y": 316.546875
+				},
+				"width": 900
+			},
+			{
+				"action": {
+					"height": 44,
+					"width": 44,
+					"x": 874.5,
+					"y": 327.546875
+				},
+				"buttons": [
+					{
+						"height": 48,
+						"label": "Make",
+						"width": 84.65625,
+						"x": 85.5,
+						"y": 393.546875
+					},
+					{
+						"height": 48,
+						"label": "Model",
+						"width": 90.84375,
+						"x": 178.15625,
+						"y": 393.546875
+					},
+					{
+						"height": 48,
+						"label": "Price",
+						"width": 83.015625,
+						"x": 277,
+						"y": 393.546875
+					},
+					{
+						"height": 48,
+						"label": "Mileage",
+						"width": 103.1875,
+						"x": 368.015625,
+						"y": 393.546875
+					},
+					{
+						"height": 48,
+						"label": "Fuel",
+						"width": 76.140625,
+						"x": 479.203125,
+						"y": 393.546875
+					},
+					{
+						"height": 48,
+						"label": "Body",
+						"width": 82.6875,
+						"x": 563.34375,
+						"y": 393.546875
+					},
+					{
+						"height": 48,
+						"label": "All filters",
+						"width": 119.546875,
+						"x": 803.953125,
+						"y": 393.546875
+					}
+				],
+				"controls": {
+					"height": 48,
+					"width": 838,
+					"x": 85.5,
+					"y": 393.546875
+				},
+				"hero": {
+					"height": 400,
+					"width": 1009,
+					"x": 0,
+					"y": 133
+				},
+				"locale": "en",
+				"overflow": false,
+				"panel": {
+					"height": 162,
+					"width": 880,
+					"x": 64.5,
+					"y": 300.546875
+				},
+				"route": "inventory",
+				"search": {
+					"height": 56,
+					"width": 838,
+					"x": 85.5,
+					"y": 321.546875
+				},
+				"width": 1024
+			},
+			{
+				"action": {
+					"height": 44,
+					"width": 44,
+					"x": 1082.5,
+					"y": 292.578125
+				},
+				"buttons": [
+					{
+						"height": 48,
+						"label": "Make",
+						"width": 84.65625,
+						"x": 293.5,
+						"y": 358.578125
+					},
+					{
+						"height": 48,
+						"label": "Model",
+						"width": 90.84375,
+						"x": 386.15625,
+						"y": 358.578125
+					},
+					{
+						"height": 48,
+						"label": "Price",
+						"width": 83.015625,
+						"x": 485,
+						"y": 358.578125
+					},
+					{
+						"height": 48,
+						"label": "Mileage",
+						"width": 103.1875,
+						"x": 576.015625,
+						"y": 358.578125
+					},
+					{
+						"height": 48,
+						"label": "Fuel",
+						"width": 76.140625,
+						"x": 687.203125,
+						"y": 358.578125
+					},
+					{
+						"height": 48,
+						"label": "Body",
+						"width": 82.6875,
+						"x": 771.34375,
+						"y": 358.578125
+					},
+					{
+						"height": 48,
+						"label": "All filters",
+						"width": 119.546875,
+						"x": 1011.953125,
+						"y": 358.578125
+					}
+				],
+				"controls": {
+					"height": 48,
+					"width": 838,
+					"x": 293.5,
+					"y": 358.578125
+				},
+				"hero": {
+					"height": 400,
+					"width": 1425,
+					"x": 0,
+					"y": 94
+				},
+				"locale": "en",
+				"overflow": false,
+				"panel": {
+					"height": 162,
+					"width": 880,
+					"x": 272.5,
+					"y": 265.578125
+				},
+				"route": "inventory",
+				"search": {
+					"height": 56,
+					"width": 838,
+					"x": 293.5,
+					"y": 286.578125
+				},
+				"width": 1440
+			},
+			{
+				"action": {
+					"height": 44,
+					"width": 44,
+					"x": 1322.5,
+					"y": 293.03125
+				},
+				"buttons": [
+					{
+						"height": 48,
+						"label": "Make",
+						"width": 84.65625,
+						"x": 533.5,
+						"y": 359.03125
+					},
+					{
+						"height": 48,
+						"label": "Model",
+						"width": 90.84375,
+						"x": 626.15625,
+						"y": 359.03125
+					},
+					{
+						"height": 48,
+						"label": "Price",
+						"width": 83.015625,
+						"x": 725,
+						"y": 359.03125
+					},
+					{
+						"height": 48,
+						"label": "Mileage",
+						"width": 103.1875,
+						"x": 816.015625,
+						"y": 359.03125
+					},
+					{
+						"height": 48,
+						"label": "Fuel",
+						"width": 76.140625,
+						"x": 927.203125,
+						"y": 359.03125
+					},
+					{
+						"height": 48,
+						"label": "Body",
+						"width": 82.6875,
+						"x": 1011.34375,
+						"y": 359.03125
+					},
+					{
+						"height": 48,
+						"label": "All filters",
+						"width": 119.546875,
+						"x": 1251.953125,
+						"y": 359.03125
+					}
+				],
+				"controls": {
+					"height": 48,
+					"width": 838,
+					"x": 533.5,
+					"y": 359.03125
+				},
+				"hero": {
+					"height": 400,
+					"width": 1905,
+					"x": 0,
+					"y": 94
+				},
+				"locale": "en",
+				"overflow": false,
+				"panel": {
+					"height": 162,
+					"width": 880,
+					"x": 512.5,
+					"y": 266.03125
+				},
+				"route": "inventory",
+				"search": {
+					"height": 56,
+					"width": 838,
+					"x": 533.5,
+					"y": 287.03125
+				},
+				"width": 1920
+			},
+			{
+				"action": {
+					"height": 44,
+					"width": 44,
+					"x": 651,
+					"y": 296.15625
+				},
+				"buttons": [
+					{
+						"height": 48,
+						"label": "Make: All Brand",
+						"width": 317.5,
+						"x": 53,
+						"y": 362.15625
+					},
+					{
+						"height": 48,
+						"label": "Model: All Model",
+						"width": 317.5,
+						"x": 382.5,
+						"y": 362.15625
+					},
+					{
+						"height": 48,
+						"label": "Price: All Price",
+						"width": 317.5,
+						"x": 53,
+						"y": 422.15625
+					},
+					{
+						"height": 48,
+						"label": "Mileage: Any mileage",
+						"width": 317.5,
+						"x": 382.5,
+						"y": 422.15625
+					}
+				],
+				"controls": {
+					"height": 108,
+					"width": 647,
+					"x": 53,
+					"y": 362.15625
+				},
+				"hero": {
+					"height": 450,
+					"width": 753,
+					"x": 0,
+					"y": 133
+				},
+				"locale": "en",
+				"overflow": false,
+				"panel": {
+					"height": 274,
+					"width": 689,
+					"x": 32,
+					"y": 217.15625
+				},
+				"route": "home",
+				"search": {
+					"height": 56,
+					"width": 647,
+					"x": 53,
+					"y": 290.15625
+				},
+				"width": 768
+			},
+			{
+				"action": {
+					"height": 44,
+					"width": 44,
+					"x": 783,
+					"y": 296.15625
+				},
+				"buttons": [
+					{
+						"height": 48,
+						"label": "Make: All Brand",
+						"width": 383.5,
+						"x": 53,
+						"y": 362.15625
+					},
+					{
+						"height": 48,
+						"label": "Model: All Model",
+						"width": 383.5,
+						"x": 448.5,
+						"y": 362.15625
+					},
+					{
+						"height": 48,
+						"label": "Price: All Price",
+						"width": 383.5,
+						"x": 53,
+						"y": 422.15625
+					},
+					{
+						"height": 48,
+						"label": "Mileage: Any mileage",
+						"width": 383.5,
+						"x": 448.5,
+						"y": 422.15625
+					}
+				],
+				"controls": {
+					"height": 108,
+					"width": 779,
+					"x": 53,
+					"y": 362.15625
+				},
+				"hero": {
+					"height": 450,
+					"width": 885,
+					"x": 0,
+					"y": 133
+				},
+				"locale": "en",
+				"overflow": false,
+				"panel": {
+					"height": 274,
+					"width": 821,
+					"x": 32,
+					"y": 217.15625
+				},
+				"route": "home",
+				"search": {
+					"height": 56,
+					"width": 779,
+					"x": 53,
+					"y": 290.15625
+				},
+				"width": 900
+			},
+			{
+				"action": {
+					"height": 44,
+					"width": 44,
+					"x": 874.5,
+					"y": 301.15625
+				},
+				"buttons": [
+					{
+						"height": 48,
+						"label": "Make: All Brand",
+						"width": 200.5,
+						"x": 85.5,
+						"y": 367.15625
+					},
+					{
+						"height": 48,
+						"label": "Model: All Model",
+						"width": 200.5,
+						"x": 298,
+						"y": 367.15625
+					},
+					{
+						"height": 48,
+						"label": "Price: All Price",
+						"width": 200.5,
+						"x": 510.5,
+						"y": 367.15625
+					},
+					{
+						"height": 48,
+						"label": "Mileage: Any mileage",
+						"width": 200.5,
+						"x": 723,
+						"y": 367.15625
+					}
+				],
+				"controls": {
+					"height": 48,
+					"width": 838,
+					"x": 85.5,
+					"y": 367.15625
+				},
+				"hero": {
+					"height": 400,
+					"width": 1009,
+					"x": 0,
+					"y": 133
+				},
+				"locale": "en",
+				"overflow": false,
+				"panel": {
+					"height": 214,
+					"width": 880,
+					"x": 64.5,
+					"y": 222.15625
+				},
+				"route": "home",
+				"search": {
+					"height": 56,
+					"width": 838,
+					"x": 85.5,
+					"y": 295.15625
+				},
+				"width": 1024
+			},
+			{
+				"action": {
+					"height": 44,
+					"width": 44,
+					"x": 1082.5,
+					"y": 266.1875
+				},
+				"buttons": [
+					{
+						"height": 48,
+						"label": "Make: All Brand",
+						"width": 200.5,
+						"x": 293.5,
+						"y": 332.1875
+					},
+					{
+						"height": 48,
+						"label": "Model: All Model",
+						"width": 200.5,
+						"x": 506,
+						"y": 332.1875
+					},
+					{
+						"height": 48,
+						"label": "Price: All Price",
+						"width": 200.5,
+						"x": 718.5,
+						"y": 332.1875
+					},
+					{
+						"height": 48,
+						"label": "Mileage: Any mileage",
+						"width": 200.5,
+						"x": 931,
+						"y": 332.1875
+					}
+				],
+				"controls": {
+					"height": 48,
+					"width": 838,
+					"x": 293.5,
+					"y": 332.1875
+				},
+				"hero": {
+					"height": 400,
+					"width": 1425,
+					"x": 0,
+					"y": 94
+				},
+				"locale": "en",
+				"overflow": false,
+				"panel": {
+					"height": 214,
+					"width": 880,
+					"x": 272.5,
+					"y": 187.1875
+				},
+				"route": "home",
+				"search": {
+					"height": 56,
+					"width": 838,
+					"x": 293.5,
+					"y": 260.1875
+				},
+				"width": 1440
+			},
+			{
+				"action": {
+					"height": 44,
+					"width": 44,
+					"x": 1322.5,
+					"y": 266.625
+				},
+				"buttons": [
+					{
+						"height": 48,
+						"label": "Make: All Brand",
+						"width": 200.5,
+						"x": 533.5,
+						"y": 332.625
+					},
+					{
+						"height": 48,
+						"label": "Model: All Model",
+						"width": 200.5,
+						"x": 746,
+						"y": 332.625
+					},
+					{
+						"height": 48,
+						"label": "Price: All Price",
+						"width": 200.5,
+						"x": 958.5,
+						"y": 332.625
+					},
+					{
+						"height": 48,
+						"label": "Mileage: Any mileage",
+						"width": 200.5,
+						"x": 1171,
+						"y": 332.625
+					}
+				],
+				"controls": {
+					"height": 48,
+					"width": 838,
+					"x": 533.5,
+					"y": 332.625
+				},
+				"hero": {
+					"height": 400,
+					"width": 1905,
+					"x": 0,
+					"y": 94
+				},
+				"locale": "en",
+				"overflow": false,
+				"panel": {
+					"height": 214,
+					"width": 880,
+					"x": 512.5,
+					"y": 187.625
+				},
+				"route": "home",
+				"search": {
+					"height": 56,
+					"width": 838,
+					"x": 533.5,
+					"y": 260.625
+				},
+				"width": 1920
+			}
+		],
+		"interaction": {
+			"homeOpenedWithEnter": true,
+			"homeFocusRestored": true,
+			"homeQueryHref": "/en/inventory?keyword=X3&lang=en",
+			"inventoryUrl": "http://127.0.0.1:6790/en/inventory?brand=BMW%2CAudi&layout=dashboard&maxPrice=50000&q=X3&sort=lowest-price&view=3&keyword=xDrive",
+			"inventoryFirstCar": "BMW X3 30e xDrive\n2022\nPlug-in hybrid\nAutomatic\n100,000 km\n€31,000\n€431/mo\nView details",
+			"repeatedMakesPreserved": true,
+			"keywordReplaced": true,
+			"modelPreserved": true,
+			"repeatedParametersUrl": "http://127.0.0.1:6790/en/inventory?brand=BMW%2CAudi&campaign=one&campaign=two&layout=dashboard&maxPrice=50000&q=X3&sort=lowest-price&view=3&keyword=xDrive",
+			"repeatedParametersFirstCar": "BMW X3 30e xDrive",
+			"repeatedParametersHydrated": true
+		}
+	},
+	"mobile": {
+		"widths": [320, 390],
+		"comparisons": [
+			{
+				"route": "home",
+				"width": 320,
+				"height": 3752,
+				"changedPixels": 21875,
+				"pixelIdentical": false,
+				"maxChannelDelta": 22,
+				"changeBounds": {
+					"left": 16,
+					"top": 1887,
+					"right": 272,
+					"bottom": 2031
+				}
+			},
+			{
+				"route": "inventory",
+				"width": 320,
+				"height": 2386,
+				"changedPixels": 16928,
+				"pixelIdentical": false,
+				"maxChannelDelta": 21,
+				"changeBounds": {
+					"left": 0,
+					"top": 1295,
+					"right": 144,
+					"bottom": 1472
+				}
+			},
+			{
+				"route": "home",
+				"width": 390,
+				"height": 3844,
+				"changedPixels": 36473,
+				"pixelIdentical": false,
+				"maxChannelDelta": 228,
+				"changeBounds": {
+					"left": 16,
+					"top": 559,
+					"right": 336,
+					"bottom": 2095
+				}
+			},
+			{
+				"route": "inventory",
+				"width": 390,
+				"height": 2390,
+				"changedPixels": 20923,
+				"pixelIdentical": false,
+				"maxChannelDelta": 16,
+				"changeBounds": {
+					"left": 0,
+					"top": 1295,
+					"right": 176,
+					"bottom": 1472
+				}
+			}
+		],
+		"sourceScope": "Task changes are desktop compositions and desktop-scoped styling. Independent mobile edits in the checkout were excluded.",
+		"pixelIdentityClaimed": false
+	},
+	"preservedChanges": [
+		"templates/import/.gitignore",
+		"templates/import/.prettierignore",
+		"templates/import/src/lib/components/home/HomeFiveHero.svelte",
+		"templates/import/src/lib/components/services/ServiceCard.svelte",
+		"templates/import/src/lib/content/service-directory.ts",
+		"templates/import/src/routes/(site)/services/+page.svelte",
+		"templates/import/tests/mobile-secondary.e2e.ts"
+	],
+	"dev": {
+		"url": "http://127.0.0.1:6790/bg/inventory",
+		"pid": 24284,
+		"keptRunning": true
+	},
+	"deployment": null,
+	"ownerVisualAcceptance": "pending"
+}

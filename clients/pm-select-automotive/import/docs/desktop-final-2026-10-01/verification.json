@@ -1,0 +1,100 @@
+{
+	"checkedAt": "2026-10-01T06:27:32.124Z",
+	"sourceHeadBeforeDesktopCommit": "903286b4708edd54510e1c6dce22e23bf8612423",
+	"runtime": {
+		"files": 1560,
+		"sha256": "5f29394eab3850514a4323e713ceaf397187fc2704eb92dad453351beb285482",
+		"changedComparedWithFrozenBuild": []
+	},
+	"preview": {
+		"live": "http://127.0.0.1:6790/bg/",
+		"frozenProduction": "http://127.0.0.1:6791",
+		"manualViewport": {
+			"width": 1440,
+			"height": 1000
+		}
+	},
+	"checks": {
+		"svelte": {
+			"errors": 0,
+			"warnings": 0
+		},
+		"codeLint": "passed",
+		"architecture": {
+			"status": "passed",
+			"routes": 57,
+			"reachableModules": 200,
+			"tailwindEntries": 1
+		},
+		"localAssets": {
+			"status": "passed",
+			"images": 857
+		},
+		"unit": {
+			"passed": 124,
+			"files": 18
+		},
+		"productionBuild": "passed",
+		"browserOriginal": {
+			"project": "desktop",
+			"passed": 130,
+			"skipped": 67,
+			"failed": 7
+		},
+		"pickerRecheck": {
+			"passed": 3,
+			"failed": 0
+		},
+		"reconciledBrowserCases": {
+			"passed": 131,
+			"skipped": 67,
+			"failed": 6,
+			"remainingFailureViewports": [320, 390]
+		}
+	},
+	"remainingLimits": [
+		"Global verify stops at existing formatting in docs/mobile-service-cards-2026-09-30/metrics.json.",
+		"Six existing mobile locale-entry/focus checks fail; desktop equivalents pass.",
+		"Image generation tool does not expose the requested 2.5 model version.",
+		"Standalone local verification only; no mounted/public acceptance, template release or dealer rollout.",
+		"Automatic approval review blocked temporary QA bundle cleanup; retained snapshot and recovery evidence."
+	],
+	"logs": [
+		{
+			"path": "L:/CODEX/cars/runtime/import-desktop-20261001/verify.log",
+			"sha256": "a99c7408e3b0be13b0171e542a2322cf5f7c2133d00ca15d2a57ac9cb354c0a6"
+		},
+		{
+			"path": "L:/CODEX/cars/runtime/import-desktop-20261001/lint-code.log",
+			"sha256": "464b95a7ca6fad4fe437a0615cd7c28475e1770222814d0300bfce4ba7d6e8c4"
+		},
+		{
+			"path": "L:/CODEX/cars/runtime/import-desktop-20261001/check-architecture.log",
+			"sha256": "f1ab9f08610bf310f2f48b1ddaafecfe0f14a35fc30dd8fa64babfe2202bd1cb"
+		},
+		{
+			"path": "L:/CODEX/cars/runtime/import-desktop-20261001/check-assets.log",
+			"sha256": "4cb304af3615189957bbc9469321427d1fec1bff5cbf53409ccca74f9fc4977b"
+		},
+		{
+			"path": "L:/CODEX/cars/runtime/import-desktop-20261001/test-unit.log",
+			"sha256": "5e719b9f0a339bbabc0f6cb092caea68782b1d1bc304e14f0d067a8711c6dd98"
+		},
+		{
+			"path": "L:/CODEX/cars/runtime/import-desktop-20261001/build.log",
+			"sha256": "6dfdbe57b8aa4fec16d6038328d7aa6813306e28e45f9785863b3262375fd849"
+		},
+		{
+			"path": "L:/CODEX/cars/runtime/import-desktop-20261001/desktop-e2e.log",
+			"sha256": "1e512228b9a3daed804859f1bfe6085cd5d86da71c0d2653028ad95f05c713ac"
+		},
+		{
+			"path": "L:/CODEX/cars/runtime/import-desktop-20261001/picker-final.log",
+			"sha256": "aaf6b3b2b3c9b08dc8aa0c2ba83319e6c84e4e8f4a3f44143a117780eae68615"
+		},
+		{
+			"path": "L:/CODEX/cars/runtime/import-desktop-20261001/workspace-doctor.log",
+			"sha256": "cb5701a0a21a79422aa86c08abfaa76e7e105412c32b8b2f439d1343a6a8049d"
+		}
+	]
+}

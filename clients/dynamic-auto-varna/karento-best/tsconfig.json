@@ -1,0 +1,16 @@
+{
+  "extends": "$app/tsconfig",
+  "include": ["src", "scripts/*.ts", "tests/*.ts", "*.ts"],
+  "exclude": ["src/service-worker"],
+  "compilerOptions": {
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "bundler",
+    "types": ["$app/types", "node"],
+    "checkJs": true
+  }
+}

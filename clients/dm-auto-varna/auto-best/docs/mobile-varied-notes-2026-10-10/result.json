@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "locale": "bg",
+      "width": 320,
+      "scale": 1,
+      "cards": 7,
+      "notes": [
+        "Панорамен покрив",
+        "360° камера",
+        "Адаптивен круиз",
+        "Безключов достъп",
+        "Навигация",
+        "4×4 задвижване",
+        "Парктроник"
+      ],
+      "readable": true
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "scale": 1,
+      "cards": 7,
+      "notes": [
+        "Panoramic roof",
+        "360° camera",
+        "Adaptive cruise",
+        "Keyless entry",
+        "Navigation",
+        "All-wheel drive",
+        "Parking sensors"
+      ],
+      "readable": true
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "scale": 1,
+      "cards": 7,
+      "notes": [
+        "Панорамен покрив",
+        "360° камера",
+        "Адаптивен круиз",
+        "Безключов достъп",
+        "Навигация",
+        "4×4 задвижване",
+        "Парктроник"
+      ],
+      "readable": true
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "scale": 2,
+      "cards": 7,
+      "notes": [
+        "Панорамен покрив",
+        "360° камера",
+        "Адаптивен круиз",
+        "Безключов достъп",
+        "Навигация",
+        "4×4 задвижване",
+        "Парктроник"
+      ],
+      "readable": true
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "scale": 2,
+      "cards": 7,
+      "notes": [
+        "Panoramic roof",
+        "360° camera",
+        "Adaptive cruise",
+        "Keyless entry",
+        "Navigation",
+        "All-wheel drive",
+        "Parking sensors"
+      ],
+      "readable": true
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "scale": 1,
+      "cards": 7,
+      "notes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "readable": true
+    }
+  ],
+  "desktopMatches": true
+}

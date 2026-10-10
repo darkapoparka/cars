@@ -1,0 +1,319 @@
+{
+	"before": {
+		"appointment": {
+			"size": "14px",
+			"text": "Огледи с предварителна уговорка"
+		},
+		"facts": [
+			{
+				"height": 285,
+				"title": "Основни данни",
+				"top": 342.3125
+			},
+			{
+				"height": 245,
+				"title": "Детайли",
+				"top": 342.3125
+			}
+		],
+		"finance": [
+			{
+				"appearance": "auto",
+				"height": 48,
+				"label": "Цена на автомобила (EUR)",
+				"paddingRight": "12px",
+				"top": -12.125,
+				"value": "33000"
+			},
+			{
+				"appearance": "auto",
+				"height": 48,
+				"label": "Първоначална вноска (EUR)",
+				"paddingRight": "12px",
+				"top": 81.46875,
+				"value": "0"
+			},
+			{
+				"appearance": "auto",
+				"height": 48,
+				"label": "Срок (месеци)",
+				"paddingRight": "12px",
+				"top": 175.0625,
+				"value": "72"
+			},
+			{
+				"appearance": "auto",
+				"height": 48,
+				"label": "Годишна лихва (%)",
+				"paddingRight": "12px",
+				"top": 175.0625,
+				"value": "0"
+			}
+		],
+		"scrollY": 808,
+		"seller": {
+			"address": "гр. София, Студентски град, ул. Атанас Манчев 18",
+			"height": 200
+		},
+		"viewport": {
+			"height": 1000,
+			"width": 1440
+		}
+	},
+	"after": {
+		"documentOverflow": false,
+		"facts": [
+			{
+				"height": 285,
+				"title": "Основни данни",
+				"top": 342.3125
+			},
+			{
+				"height": 285,
+				"title": "Детайли",
+				"top": 342.3125
+			}
+		],
+		"finance": {
+			"appearance": "none",
+			"chevronCenterDelta": 0,
+			"chevronInset": 16,
+			"chevronSize": 18,
+			"controls": [
+				{
+					"appearance": "textfield",
+					"height": 48,
+					"label": "Цена на автомобила (EUR)",
+					"top": -12.125,
+					"value": "33000"
+				},
+				{
+					"appearance": "textfield",
+					"height": 48,
+					"label": "Първоначална вноска (EUR)",
+					"top": 81.46875,
+					"value": "0"
+				},
+				{
+					"appearance": "none",
+					"height": 48,
+					"label": "Срок (месеци)",
+					"top": 175.0625,
+					"value": "72"
+				},
+				{
+					"appearance": "textfield",
+					"height": 48,
+					"label": "Годишна лихва (%)",
+					"top": 175.0625,
+					"value": "0"
+				}
+			]
+		},
+		"scrollY": 808,
+		"seller": {
+			"addressAlign": "center",
+			"appointmentSize": "18px",
+			"arrowCenterDelta": 0,
+			"height": 200,
+			"iconCenterDelta": 0,
+			"overflow": false
+		},
+		"viewport": {
+			"height": 1000,
+			"width": 1440
+		}
+	},
+	"screenshot": {
+		"defaultCalculation": "458 €",
+		"scrollY": 808,
+		"viewport": {
+			"height": 1000,
+			"width": 1440
+		}
+	},
+	"desktop": [
+		{
+			"documentOverflow": false,
+			"factsHeights": [285, 245],
+			"factsOverflow": false,
+			"finance": {
+				"chevronCenterDelta": 0,
+				"chevronInset": 16,
+				"controlHeights": [48, 48, 48, 48],
+				"overflow": false,
+				"pairedControlsTop": [489.609375, 489.609375]
+			},
+			"paired": false,
+			"seller": {
+				"appointmentSize": "18px",
+				"arrowCenterDelta": 0,
+				"iconCenterDelta": 0,
+				"overflow": false
+			},
+			"width": 768
+		},
+		{
+			"documentOverflow": false,
+			"factsHeights": [285, 245],
+			"factsOverflow": false,
+			"finance": {
+				"chevronCenterDelta": 0,
+				"chevronInset": 16,
+				"controlHeights": [48, 48, 48, 48],
+				"overflow": false,
+				"pairedControlsTop": [492.015625, 492.015625]
+			},
+			"paired": false,
+			"seller": {
+				"appointmentSize": "18px",
+				"arrowCenterDelta": 0,
+				"iconCenterDelta": 0,
+				"overflow": false
+			},
+			"width": 1024
+		},
+		{
+			"documentOverflow": false,
+			"factsHeights": [285, 285],
+			"factsOverflow": false,
+			"finance": {
+				"chevronCenterDelta": 0,
+				"chevronInset": 16,
+				"controlHeights": [48, 48, 48, 48],
+				"overflow": false,
+				"pairedControlsTop": [476.1875, 476.1875]
+			},
+			"paired": true,
+			"seller": {
+				"appointmentSize": "18px",
+				"arrowCenterDelta": 0,
+				"iconCenterDelta": 0,
+				"overflow": false
+			},
+			"width": 1280
+		},
+		{
+			"documentOverflow": false,
+			"factsHeights": [285, 285],
+			"factsOverflow": false,
+			"finance": {
+				"chevronCenterDelta": 0,
+				"chevronInset": 16,
+				"controlHeights": [48, 48, 48, 48],
+				"overflow": false,
+				"pairedControlsTop": [476.0625, 476.0625]
+			},
+			"paired": true,
+			"seller": {
+				"appointmentSize": "18px",
+				"arrowCenterDelta": 0,
+				"iconCenterDelta": 0,
+				"overflow": false
+			},
+			"width": 1440
+		},
+		{
+			"documentOverflow": false,
+			"factsHeights": [285, 285],
+			"factsOverflow": false,
+			"finance": {
+				"chevronCenterDelta": 0,
+				"chevronInset": 16,
+				"controlHeights": [48, 48, 48, 48],
+				"overflow": false,
+				"pairedControlsTop": [477.015625, 477.015625]
+			},
+			"paired": true,
+			"seller": {
+				"appointmentSize": "18px",
+				"arrowCenterDelta": 0,
+				"iconCenterDelta": 0,
+				"overflow": false
+			},
+			"width": 1920
+		}
+	],
+	"keyboard": {
+		"interestAfterArrowUp": "0.1",
+		"interestType": "number",
+		"priceAfterArrowUp": "33100",
+		"priceType": "number"
+	},
+	"recalculation": {
+		"errors": [],
+		"fields": ["33000", "6600", "60", "6"],
+		"results": [
+			{
+				"label": "Финансирана сума",
+				"value": "26 400 €"
+			},
+			{
+				"label": "Общо с първоначалната вноска",
+				"value": "37 223 €"
+			},
+			{
+				"label": "Ориентировъчна месечна вноска",
+				"value": "510 €"
+			}
+		],
+		"termLabel": "Срок (месеци)"
+	},
+	"english": {
+		"appointment": "Viewings by appointment. Please call before visiting.",
+		"appointmentSize": "18px",
+		"documentOverflow": false,
+		"monthly": "€550",
+		"selectedTerm": "60",
+		"termLabel": "Term (months)"
+	},
+	"fullFinance": [
+		{
+			"customChevrons": 0,
+			"documentOverflow": false,
+			"numberAppearances": ["auto", "auto", "auto"],
+			"sidebar": 0,
+			"termAppearance": "auto",
+			"width": 320
+		},
+		{
+			"customChevrons": 0,
+			"documentOverflow": false,
+			"numberAppearances": ["auto", "auto", "auto"],
+			"sidebar": 0,
+			"termAppearance": "auto",
+			"width": 390
+		},
+		{
+			"customChevrons": 0,
+			"documentOverflow": false,
+			"numberAppearances": ["auto", "auto", "auto"],
+			"sidebar": 0,
+			"termAppearance": "auto",
+			"width": 1440
+		}
+	],
+	"mobilePdp": [
+		{
+			"desktopFacts": 0,
+			"documentOverflow": false,
+			"mobilePdp": 1,
+			"sellerBanner": 0,
+			"sidebarFinance": 0,
+			"width": 320
+		},
+		{
+			"desktopFacts": 0,
+			"documentOverflow": false,
+			"mobilePdp": 1,
+			"sellerBanner": 0,
+			"sidebarFinance": 0,
+			"width": 390
+		}
+	],
+	"mapHref": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+	"freshLoadConsole": {
+		"errors": 0,
+		"warnings": 0
+	}
+}

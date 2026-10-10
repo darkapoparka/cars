@@ -1,0 +1,150 @@
+[
+	{
+		"controls": [
+			{
+				"height": 44,
+				"radius": "12px",
+				"text": "Държава",
+				"width": 142.828125
+			},
+			{
+				"height": 44,
+				"radius": "12px",
+				"text": "Тип",
+				"width": 74.78125
+			},
+			{
+				"height": 44,
+				"radius": "12px",
+				"text": "Марка",
+				"width": 96.9375
+			},
+			{
+				"height": 44,
+				"radius": "12px",
+				"text": "Модел",
+				"width": 97.734375
+			}
+		],
+		"overflow": false,
+		"page": "Import",
+		"width": 320
+	},
+	{
+		"controls": [
+			{
+				"height": 44,
+				"radius": "12px",
+				"text": "",
+				"width": 44
+			},
+			{
+				"height": 44,
+				"radius": "12px",
+				"text": "До 10 000",
+				"width": 102.078125
+			},
+			{
+				"height": 44,
+				"radius": "12px",
+				"text": "До 20 000",
+				"width": 103.625
+			},
+			{
+				"height": 44,
+				"radius": "12px",
+				"text": "До 30 000",
+				"width": 103.765625
+			},
+			{
+				"height": 44,
+				"radius": "12px",
+				"text": "Нови обяви",
+				"width": 116.640625
+			},
+			{
+				"height": 44,
+				"radius": "12px",
+				"text": "Налични",
+				"width": 91.5
+			}
+		],
+		"overflow": false,
+		"page": "Home",
+		"width": 320
+	},
+	{
+		"controls": [
+			{
+				"height": 44,
+				"radius": "12px",
+				"text": "Всички",
+				"width": 76.890625
+			},
+			{
+				"height": 44,
+				"radius": "12px",
+				"text": "Проверка / VIN",
+				"width": 131.546875
+			},
+			{
+				"height": 44,
+				"radius": "12px",
+				"text": "Продажба",
+				"width": 97.984375
+			},
+			{
+				"height": 44,
+				"radius": "12px",
+				"text": "Документи",
+				"width": 109.203125
+			},
+			{
+				"height": 44,
+				"radius": "12px",
+				"text": "Оглед",
+				"width": 68.125
+			}
+		],
+		"overflow": false,
+		"page": "Services",
+		"width": 320
+	},
+	{
+		"controls": [
+			{
+				"height": 44,
+				"radius": "12px",
+				"text": "Марка",
+				"width": 94.9375
+			},
+			{
+				"height": 44,
+				"radius": "12px",
+				"text": "Модел",
+				"width": 95.734375
+			},
+			{
+				"height": 44,
+				"radius": "12px",
+				"text": "Цена",
+				"width": 84.765625
+			},
+			{
+				"height": 44,
+				"radius": "12px",
+				"text": "Година",
+				"width": 99.90625
+			},
+			{
+				"height": 44,
+				"radius": "12px",
+				"text": "Още",
+				"width": 80.921875
+			}
+		],
+		"overflow": false,
+		"page": "Cars",
+		"width": 320
+	}
+]

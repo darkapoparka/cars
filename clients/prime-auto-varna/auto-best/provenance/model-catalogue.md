@@ -1,0 +1,9 @@
+# Desktop model catalogue
+
+The desktop model picker reuses the preserved native taxonomy in `templates/mobile/src/lib/native-data/car-models.json`. The source snapshot SHA-256 is `b6c341d345f2a9cc9f90b95836ba7c26b02f0b3656930754f2825c9511b2eb36`. It contains historical and current model names; it is a browsing catalogue, not a claim about current manufacturer production or dealer stock.
+
+`src/lib/data/model-catalogue-data.ts` retains that tree locally so Auto Best remains independently buildable. The pure `model-catalogue.ts` presentation adapter orders BMW's numbered Series before X, M, i and Z, combines 840/850 into 8 Series, folds Audi's S/RS derivatives into the corresponding A/Q families, and groups explicitly prefixed variants for other makes. BMW's family direction was checked against its [manufacturer model range](https://www.bmw.co.uk/en/all-models.html); Audi's RS 6 relationship was checked against its [manufacturer history](https://www.audi.com/en/press-releases/20-years-four-generations-audi-rs-6-superior-performance-with-an-everyday-look-14795).
+
+Counts come only from dealer inventory. Empty catalogue choices remain selectable. Existing exact stock model values and dealer-specific names are preserved. New catalogue values use readable make-prefixed `model` parameters to disambiguate shared names; existing repeated `make`/`model` URL keys remain authoritative. Catalogue matching includes model derivatives and guards numeric boundaries, while legacy model URLs retain their existing matching behavior.
+
+The shared grouped editor is used by the desktop Home picker, inventory shortcut and nested full-form picker. Mobile and tablet keep their existing stock-derived choices. The approved selector widths, header, search field, footer and opening motion stay with their existing owners.

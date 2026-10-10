@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "client": "autofest-varna",
+  "templateKey": "karento-best",
+  "templateVersion": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+  "templateSource": {
+    "repository": "darkapoparka/cars",
+    "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+    "path": "templates/karento-best",
+    "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
+    "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+  },
+  "createdAt": "2026-10-10T18:20:53.231Z",
+  "state": "candidate-personalized-needs-build",
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": "bg-varna-autofest",
+    "demoProjectId": null,
+    "registered": false
+  },
+  "hosting": {
+    "provider": "vercel",
+    "status": "not-deployed"
+  },
+  "readyToPublish": false
+}

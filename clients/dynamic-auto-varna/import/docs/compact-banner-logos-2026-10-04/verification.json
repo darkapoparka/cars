@@ -1,0 +1,128 @@
+{
+  "date": "2026-10-04",
+  "repository": "L:/CODEX/cars",
+  "branch": "main",
+  "headAtVerification": "3c146c0acc3936e142cd42da196f8ff15b62146b",
+  "sources": [
+    {
+      "path": "src/lib/components/common/CommerceBanner.svelte",
+      "sha256": "dbc848f800ef2297db33054504fdcaa161171d843038c2ebe1b57683c6028e82"
+    },
+    {
+      "path": "src/lib/components/home/HomeFiveActionBand.svelte",
+      "sha256": "a86a4cc51a3e11b3c50fcd5bf5eb95f90c2217c9ae8374120797916508586926"
+    },
+    {
+      "path": "tests/commerce-banners.e2e.ts",
+      "sha256": "9a37b0983f41762991da0586fddfdd06a7b8e20fc646e6ce2d4a1e477b804281"
+    }
+  ],
+  "runtime": {
+    "node": "24.21.0",
+    "qa": "C:/Users/radev/.codex/tmp/cars-import-desktop-continuation-2026-10-04-qa",
+    "liveUrl": "http://127.0.0.1:6790/bg"
+  },
+  "change": {
+    "banners": [
+      "Sell",
+      "Finance"
+    ],
+    "logoOwner": "site.identity.logoOnDark",
+    "logoFrame": {
+      "width": 112,
+      "height": 32
+    },
+    "desktopBannerHeight": 260,
+    "bodyToActionGapAt1440": 19.375,
+    "artwork": "unchanged",
+    "nativeLinks": "retained"
+  },
+  "screenshots": {
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "capture": {
+      "width": 1425,
+      "height": 990
+    },
+    "crop": {
+      "width": 1425,
+      "height": 337
+    },
+    "scrollY": 703,
+    "locale": "bg",
+    "before": "before-bg.jpg",
+    "after": "after-bg.jpg",
+    "beforeCrop": "before-banners.jpg",
+    "afterCrop": "after-banners.jpg",
+    "baseline": "Source with optional logo absent; same artwork, type and layout."
+  },
+  "desktop": {
+    "locales": [
+      "bg",
+      "en"
+    ],
+    "widths": [
+      768,
+      1024,
+      1440,
+      1920
+    ],
+    "cases": 8,
+    "bannersPerCase": 2,
+    "totalBannersChecked": 16,
+    "allContentContained": true,
+    "orderedContent": true,
+    "nestedControls": 0,
+    "overflow": false
+  },
+  "nativeActions": {
+    "locale": "bg",
+    "method": "Enter then Back",
+    "destinations": [
+      "/bg/sell-your-car",
+      "/bg/financing"
+    ],
+    "headingConfirmed": true
+  },
+  "mobile": {
+    "locales": [
+      "bg",
+      "en"
+    ],
+    "widths": [
+      320,
+      390
+    ],
+    "cases": 4,
+    "bannersPerCase": 1,
+    "settledPresentationIdentical": true,
+    "overflow": false,
+    "initialTransient": "BG 390px first measurement differed; settled recheck matched all recorded geometry, copy and typography fields."
+  },
+  "checks": {
+    "svelte": {
+      "errors": 0,
+      "warnings": 0,
+      "retry": "First concurrent check hit native Zone Allocation out-of-memory; isolated retry with max-old-space-size=2048 passed."
+    },
+    "productionBuild": "passed",
+    "desktopCommerceTest": {
+      "passed": 1,
+      "failed": 0
+    },
+    "scopedEslint": "passed",
+    "scopedPrettier": "passed",
+    "architecture": {
+      "nativeRoutes": 57,
+      "reachableModules": 230,
+      "tailwindEntries": 1
+    },
+    "assets": {
+      "localImages": 955
+    },
+    "workspaceDoctor": "fetched; unrelated work preserved"
+  },
+  "boundary": "Local source and isolated build verification; no template promotion or dealer deployment."
+}

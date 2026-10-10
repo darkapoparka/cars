@@ -1,0 +1,43 @@
+{
+  "phase": "after",
+  "results": [
+    {
+      "locale": "bg",
+      "width": 320,
+      "cardsChecked": 7,
+      "visibleFacts": 4,
+      "oneRow": true,
+      "noTruncation": true,
+      "maximumBadgeWidth": 78.703125
+    },
+    {
+      "locale": "bg",
+      "checkedWidths": [
+        320,
+        390,
+        430
+      ],
+      "sixDigitMileageAndElectric": "passed",
+      "enlargedText": "passed"
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "cardsChecked": 7,
+      "visibleFacts": 4,
+      "oneRow": true,
+      "noTruncation": true,
+      "maximumBadgeWidth": 78.703125
+    },
+    {
+      "locale": "en",
+      "checkedWidths": [
+        320,
+        390,
+        430
+      ],
+      "sixDigitMileageAndElectric": "passed",
+      "enlargedText": "passed"
+    }
+  ]
+}

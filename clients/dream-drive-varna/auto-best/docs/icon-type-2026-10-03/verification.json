@@ -1,0 +1,205 @@
+[
+  {
+    "suite": "artifacts/desktop-routes-smoke-focused/report.json",
+    "generatedAt": "2026-10-03T17:04:18.272Z",
+    "base": "http://127.0.0.1:6498",
+    "cases": 30,
+    "passed": 30,
+    "results": [
+      {
+        "name": "bg/home at 320",
+        "passed": true
+      },
+      {
+        "name": "bg/listing-grid at 320",
+        "passed": true
+      },
+      {
+        "name": "bg/about-us at 320",
+        "passed": true
+      },
+      {
+        "name": "bg/blog at 320",
+        "passed": true
+      },
+      {
+        "name": "bg/contact at 320",
+        "passed": true
+      },
+      {
+        "name": "bg/home at 390",
+        "passed": true
+      },
+      {
+        "name": "bg/listing-grid at 390",
+        "passed": true
+      },
+      {
+        "name": "bg/about-us at 390",
+        "passed": true
+      },
+      {
+        "name": "bg/blog at 390",
+        "passed": true
+      },
+      {
+        "name": "bg/contact at 390",
+        "passed": true
+      },
+      {
+        "name": "bg/home at 1440",
+        "passed": true
+      },
+      {
+        "name": "bg/listing-grid at 1440",
+        "passed": true
+      },
+      {
+        "name": "bg/about-us at 1440",
+        "passed": true
+      },
+      {
+        "name": "bg/blog at 1440",
+        "passed": true
+      },
+      {
+        "name": "bg/contact at 1440",
+        "passed": true
+      },
+      {
+        "name": "en/home at 320",
+        "passed": true
+      },
+      {
+        "name": "en/listing-grid at 320",
+        "passed": true
+      },
+      {
+        "name": "en/about-us at 320",
+        "passed": true
+      },
+      {
+        "name": "en/blog at 320",
+        "passed": true
+      },
+      {
+        "name": "en/contact at 320",
+        "passed": true
+      },
+      {
+        "name": "en/home at 390",
+        "passed": true
+      },
+      {
+        "name": "en/listing-grid at 390",
+        "passed": true
+      },
+      {
+        "name": "en/about-us at 390",
+        "passed": true
+      },
+      {
+        "name": "en/blog at 390",
+        "passed": true
+      },
+      {
+        "name": "en/contact at 390",
+        "passed": true
+      },
+      {
+        "name": "en/home at 1440",
+        "passed": true
+      },
+      {
+        "name": "en/listing-grid at 1440",
+        "passed": true
+      },
+      {
+        "name": "en/about-us at 1440",
+        "passed": true
+      },
+      {
+        "name": "en/blog at 1440",
+        "passed": true
+      },
+      {
+        "name": "en/contact at 1440",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "suite": "artifacts/mobile-final-smoke/report.json",
+    "generatedAt": "2026-10-03T17:22:34.04Z",
+    "base": "http://127.0.0.1:6498",
+    "cases": 6,
+    "passed": 6,
+    "results": [
+      {
+        "name": "en 320: enlarged text, motion, focus and image loading",
+        "passed": true
+      },
+      {
+        "name": "en 390: enlarged text, motion, focus and image loading",
+        "passed": true
+      },
+      {
+        "name": "en 430: enlarged text, motion, focus and image loading",
+        "passed": true
+      },
+      {
+        "name": "bg 320: enlarged text, motion, focus and image loading",
+        "passed": true
+      },
+      {
+        "name": "bg 390: enlarged text, motion, focus and image loading",
+        "passed": true
+      },
+      {
+        "name": "bg 430: enlarged text, motion, focus and image loading",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "suite": "artifacts/mobile-polish-smoke/report.json",
+    "generatedAt": "2026-10-03T17:31:00.462Z",
+    "base": "http://127.0.0.1:6498",
+    "cases": 8,
+    "passed": 8,
+    "results": [
+      {
+        "name": "bg mobile polish 320",
+        "passed": true
+      },
+      {
+        "name": "bg mobile polish 390",
+        "passed": true
+      },
+      {
+        "name": "bg mobile polish 430",
+        "passed": true
+      },
+      {
+        "name": "bg mobile polish 1440",
+        "passed": true
+      },
+      {
+        "name": "en mobile polish 320",
+        "passed": true
+      },
+      {
+        "name": "en mobile polish 390",
+        "passed": true
+      },
+      {
+        "name": "en mobile polish 430",
+        "passed": true
+      },
+      {
+        "name": "en mobile polish 1440",
+        "passed": true
+      }
+    ]
+  }
+]

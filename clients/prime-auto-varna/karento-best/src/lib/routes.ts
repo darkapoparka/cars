@@ -1,0 +1,85 @@
+export const canonicalRoutes = {
+  "404": "404",
+  "": "index-3",
+  vehicles: "cars-list-2",
+  vehicle: "cars-details-3",
+  import: "dealer-listing",
+  "import/source": "dealer-details",
+  shop: "shop-list",
+  "shop/product": "shop-details",
+  about: "about-us",
+  services: "services",
+  membership: "pricing",
+  calculator: "calculator",
+  faq: "faqs",
+  terms: "term",
+  contact: "contact",
+  login: "login",
+  register: "register",
+  news: "blog-grid",
+  "news/article": "blog-details",
+  account: "user-dashboard-home",
+  "account/bookings": "user-dashboard-bookings",
+  "account/wishlist": "user-dashboard-wishlist",
+  "account/wallet": "user-dashboard-wallet",
+  "account/profile": "user-dashboard-profile",
+  "account/settings": "user-dashboard-setting",
+  dashboard: "agent-dashboard-home",
+  "dashboard/listings": "agent-dashboard-listing",
+  "dashboard/add-listing": "agent-dashboard-add-listing",
+  "dashboard/earnings": "agent-dashboard-earning",
+  "dashboard/settings": "agent-dashboard-setting",
+} as const;
+export const sourceKeys = [
+  "404",
+  "index-3",
+  "index-2",
+  "index",
+  "cars-list-3",
+  "cars-list-1",
+  "cars-list-2",
+  "cars-details-1",
+  "cars-details-2",
+  "cars-list-4",
+  "shop-list",
+  "dealer-listing",
+  "shop-details",
+  "dealer-details",
+  "cars-details-4",
+  "cars-details-3",
+  "term",
+  "about-us",
+  "calculator",
+  "faqs",
+  "pricing",
+  "services",
+  "register",
+  "login",
+  "contact",
+  "blog-list",
+  "blog-grid",
+  "user-dashboard-profile",
+  "user-dashboard-wallet",
+  "blog-details",
+  "user-dashboard-wishlist",
+  "user-dashboard-bookings",
+  "user-dashboard-home",
+  "agent-dashboard-setting",
+  "user-dashboard-setting",
+  "agent-dashboard-earning",
+  "agent-dashboard-home",
+  "agent-dashboard-listing",
+  "agent-dashboard-add-listing",
+] as const;
+export type SourceKey = (typeof sourceKeys)[number];
+export function resolveRoute(path: string): SourceKey | null {
+  const key = path
+    .replace(/^\//, "")
+    .replace(/\/$/, "")
+    .replace(/\.html$/, "");
+  if (Object.hasOwn(canonicalRoutes, key))
+    return canonicalRoutes[key as keyof typeof canonicalRoutes];
+  return (sourceKeys as readonly string[]).includes(key)
+    ? (key as SourceKey)
+    : null;
+}

@@ -1,0 +1,30 @@
+{
+  "mode": "dealer",
+  "id": "kolarov-cars",
+  "name": "Kolarov Cars",
+  "shortName": "Kolarov Cars",
+  "logo": {
+    "light": "/dealer-app/logo-light-248674c9cb9d8120b789.webp",
+    "dark": "/dealer-app/logo-dark-248674c9cb9d8120b789.webp",
+    "icon": "/dealer-app/icon.png"
+  },
+  "defaultLocale": "bg",
+  "enabledLocales": [
+    "en",
+    "bg"
+  ],
+  "country": "BG",
+  "currency": "EUR",
+  "city": "Варна",
+  "address": "Бизнес Парк Варна, сграда В8, Варна, България",
+  "phoneDisplay": "0876999800",
+  "phoneE164": "+359876999800",
+  "email": "",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Kolarov%20Cars%2C%20%D0%91%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%20%D0%9F%D0%B0%D1%80%D0%BA%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D1%81%D0%B3%D1%80%D0%B0%D0%B4%D0%B0%20%D0%928%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+  "website": "https://kolarovcars.mobile.bg/",
+  "whatsappUrl": "",
+  "services": [],
+  "observedAt": "2026-10-10T09:30:00.987Z",
+  "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността. Обявите за очакван внос не означават наличен автомобил във Варна.",
+  "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
+}

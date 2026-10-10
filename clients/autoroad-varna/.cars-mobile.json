@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "format": "mobile-preview-v1",
+  "dealer": "autoroad-varna",
+  "name": "AUTOROAD",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+    "path": "templates/mobile",
+    "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b",
+    "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d"
+  },
+  "sourceDigest": "4e3284872b01786b7899336c4871bac950084eed5665fd81c72e1951eaf4414e",
+  "inventory": {
+    "mode": "dated-listing-snapshot",
+    "count": 8,
+    "observedAt": "2026-10-10T09:30:55.057Z"
+  },
+  "personalization": {
+    "profileSha256": "028d096bf2cfbd5094b6a6d1fa55369c73f500e20ca0d9277c556cca5945e143",
+    "logoPaths": [
+      "/dealer-brand/logo-on-light.webp",
+      "/dealer-brand/logo-on-dark.webp"
+    ],
+    "mediaPaths": [
+      "/assets/vehicles/11764083375105654/1.webp",
+      "/assets/vehicles/11764083375105654/2.webp",
+      "/assets/vehicles/11764083375105654/3.webp",
+      "/assets/vehicles/11764083375105654/4.webp",
+      "/assets/vehicles/11791216679127136/1.webp",
+      "/assets/vehicles/11791216679127136/2.webp",
+      "/assets/vehicles/11791216679127136/3.webp",
+      "/assets/vehicles/11791216679127136/4.webp",
+      "/assets/vehicles/21791195488121434/1.webp",
+      "/assets/vehicles/21791195488121434/2.webp",
+      "/assets/vehicles/21791195488121434/3.webp",
+      "/assets/vehicles/21791195488121434/4.webp",
+      "/assets/vehicles/21778683919459620/1.webp",
+      "/assets/vehicles/21778683919459620/2.webp",
+      "/assets/vehicles/21778683919459620/3.webp",
+      "/assets/vehicles/21778683919459620/4.webp",
+      "/assets/vehicles/11785948289956075/1.webp",
+      "/assets/vehicles/11785948289956075/2.webp",
+      "/assets/vehicles/11785948289956075/3.webp",
+      "/assets/vehicles/11785948289956075/4.webp",
+      "/assets/vehicles/21781865867073187/1.webp",
+      "/assets/vehicles/21781865867073187/2.webp",
+      "/assets/vehicles/21781865867073187/3.webp",
+      "/assets/vehicles/21781865867073187/4.webp",
+      "/assets/vehicles/11781957951294075/1.webp",
+      "/assets/vehicles/11781957951294075/2.webp",
+      "/assets/vehicles/11781957951294075/3.webp",
+      "/assets/vehicles/11781957951294075/4.webp",
+      "/assets/vehicles/11789287072800457/1.webp",
+      "/assets/vehicles/11789287072800457/2.webp",
+      "/assets/vehicles/11789287072800457/3.webp",
+      "/assets/vehicles/11789287072800457/4.webp"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "mobile/src/lib/showroom-config.ts",
+      "mobile/src/lib/catalog.ts",
+      "mobile/src/lib/dealers.ts",
+      "mobile/src/lib/dealer-inventory.json",
+      "mobile/src/lib/locale.ts",
+      "mobile/src/lib/search.ts",
+      "mobile/src/components/NativeDealerCards.tsx",
+      "mobile/src/components/DealerScreens.tsx",
+      "mobile/src/components/VehicleCard.tsx",
+      "mobile/src/components/ShowroomVehicleCard.tsx",
+      "mobile/src/components/VehicleSections.tsx"
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

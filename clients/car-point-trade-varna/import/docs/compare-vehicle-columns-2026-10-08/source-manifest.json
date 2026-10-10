@@ -1,0 +1,18 @@
+[
+  {
+    "path": "src/lib/components/compare/CompareTable.svelte",
+    "hash": "40E808C67CB424A5B8B4EEF0A6FA39116AD13AA4AF3EE0895B4DADCF994B6F27"
+  },
+  {
+    "path": "src/lib/components/compare/CompareDialog.svelte",
+    "hash": "4E181E4C9C347452C42D8C6C42614DC72A6E37418EFA1E97CCEB05837336BE33"
+  },
+  {
+    "path": "src/lib/components/compare/CompareVehicleColumns.svelte",
+    "hash": "41C8651685590CA426D8CE924489FFF23BCBD69627E28B60DF426AEA9D7C2204"
+  },
+  {
+    "path": "tests/compare-overlay.e2e.ts",
+    "hash": "3769302ED64810CDFD6AE41197184EFF6E7F0AB77D091D257473AEB0EEDF5907"
+  }
+]

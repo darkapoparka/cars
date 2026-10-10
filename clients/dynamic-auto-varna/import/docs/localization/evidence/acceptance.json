@@ -1,0 +1,2035 @@
+{
+	"recordedAt": "2026-09-20T16:30:45.257Z",
+	"startingCommit": "5ff9805ebe0211343e7a025465d8d71e306180fa",
+	"toolchain": {
+		"node": "v24.21.0",
+		"npm": "11.19.0"
+	},
+	"checks": {
+		"verify": "passed",
+		"unit": {
+			"passed": 104,
+			"files": 16
+		},
+		"architecture": {
+			"routes": 57,
+			"reachable": 181,
+			"tailwindEntries": 1
+		},
+		"imageSignatures": 806,
+		"productionBuilds": ["standalone", "/variant-2"]
+	},
+	"browsers": [
+		{
+			"name": "standalone-desktop",
+			"sourceLog": "release-browser-desktop-final2.json",
+			"sha256": "44d640d392e25682452e26b247a2c402f0e7747e193625b5c1cbf48afa3b329e",
+			"stats": {
+				"startTime": "2026-09-20T16:17:05.584Z",
+				"duration": 180893.912,
+				"expected": 115,
+				"skipped": 3,
+				"unexpected": 0,
+				"flaky": 0
+			},
+			"cases": [
+				{
+					"title": "accessible landmarks and controls on /",
+					"file": "accessibility.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "accessible landmarks and controls on /inventory",
+					"file": "accessibility.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "accessible landmarks and controls on /contact",
+					"file": "accessibility.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "accessible landmarks and controls on /import",
+					"file": "accessibility.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "accessible landmarks and controls on /sell-your-car",
+					"file": "accessibility.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "accessible landmarks and controls on /financing",
+					"file": "accessibility.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "reference-style icon tabs connect to compact fields without changing the mobile tab variant",
+					"file": "desktop-search.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "search entry opens a focused dialog with one intact focus outline and pinned actions",
+					"file": "desktop-search.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "nested make selection returns to search, keeps the draft, and submits the same canonical query",
+					"file": "desktop-search.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "empty results and an unavailable preview never manufacture a result count",
+					"file": "desktop-search.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "header search reuses the same focused result dialog",
+					"file": "desktop-search.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "every filter has a useful input and searching preserves selected makes",
+					"file": "filter-inputs.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "custom maxima replace presets once and survive navigation and reopening",
+					"file": "filter-inputs.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "quick-filter input validates a maximum and clear removes its value",
+					"file": "filter-inputs.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "contact submission works without JavaScript at both widths",
+					"file": "forms-and-detail.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "desktop enquiry reports saving separately from delivery",
+					"file": "forms-and-detail.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "PDP opens the gallery and enquiry without legacy styles",
+					"file": "forms-and-detail.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "native route changes do not leave old modal or body cleanup behind",
+					"file": "forms-and-detail.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "inventory remains server-rendered without JavaScript",
+					"file": "inventory.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "filters and detail return retain the original URL",
+					"file": "inventory.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "desktop filter search does not discard a previously selected make",
+					"file": "inventory.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "import listing and source submissions en 320",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "sell VIN and manual submissions en 320",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "calculator, contact trade-in and menu en 320",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "vehicle gallery, specs and inquiry en 320",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "import listing and source submissions bg 320",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "sell VIN and manual submissions bg 320",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "calculator, contact trade-in and menu bg 320",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "vehicle gallery, specs and inquiry bg 320",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "import listing and source submissions en 390",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "sell VIN and manual submissions en 390",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "calculator, contact trade-in and menu en 390",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "vehicle gallery, specs and inquiry en 390",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "import listing and source submissions bg 390",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "sell VIN and manual submissions bg 390",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "calculator, contact trade-in and menu bg 390",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "vehicle gallery, specs and inquiry bg 390",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "import listing and source submissions en 1440",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "sell VIN and manual submissions en 1440",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "calculator, contact trade-in and menu en 1440",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "vehicle gallery, specs and inquiry en 1440",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "import listing and source submissions bg 1440",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "sell VIN and manual submissions bg 1440",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "calculator, contact trade-in and menu bg 1440",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "vehicle gallery, specs and inquiry bg 1440",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "no-JS localized contact submission en 320",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "no-JS localized contact submission bg 320",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "no-JS localized contact submission en 390",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "no-JS localized contact submission bg 390",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "no-JS localized contact submission en 1440",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "no-JS localized contact submission bg 1440",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "native constraints use the page language in an opposite-language browser: en",
+					"file": "localization-validation.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "native constraints use the page language in an opposite-language browser: bg",
+					"file": "localization-validation.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "native route families en 320",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "native route families bg 320",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "native route families en 390",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "native route families bg 390",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "native route families en 1440",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "native route families bg 1440",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "preferences save dismiss reload and focus 320",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "preferences save dismiss reload and focus 390",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "preferences save dismiss reload and focus 1440",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "stale save cannot navigate after close and reopen",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "no JavaScript preferences and contact are native forms",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "explicit URL works with blocked storage and conflicting preferences",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "language/country and cookies cannot leak between requests",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "both import modes and sell wizard validate without business writes",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "blocked cookies still allow explicit language and independent country selection",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "client locale navigation and back update language, copy, SEO and links without reload",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "only offered public routes reroute; resource and admin boundaries remain separate",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "localized errors and slash redirects are private while assets stay cacheable",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "menu restores focus and browser back dismisses it exactly once",
+					"file": "mobile-navigation.e2e.ts",
+					"project": "desktop",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\mobile-navigation.e2e.ts",
+								"line": 7,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "navigation from the menu does not leave a stale overlay or scroll lock",
+					"file": "mobile-navigation.e2e.ts",
+					"project": "desktop",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\mobile-navigation.e2e.ts",
+								"line": 26,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "failed vehicle photos recover even when the request fails before hydration",
+					"file": "refactor-contracts.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "language-specific pages have distinct canonicals and matching HTML language",
+					"file": "refactor-contracts.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "mobile menu is accessible and preserves language during navigation",
+					"file": "refactor-contracts.e2e.ts",
+					"project": "desktop",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\refactor-contracts.e2e.ts",
+								"line": 48,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "desktop content reflows at intermediate and wide widths",
+					"file": "refactor-contracts.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "desktop import country choices do not clip or need horizontal scrolling",
+					"file": "refactor-contracts.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "homepage makes and models use the retained modal picker, not native selects",
+					"file": "restored-pickers.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "quick filters have a proper dialog with a fixed apply action and readable options",
+					"file": "restored-pickers.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "restored homepage picker traps keyboard focus and remains usable at 768px",
+					"file": "restored-pickers.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders / without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /inventory without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /import without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /sell-your-car without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /financing without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /contact without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /about without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /services without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /blog without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /faqs without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /reviews without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /privacy without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /terms without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /cookies without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /calculator without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /compare without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /account/favorites without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "preview responses cannot be indexed",
+					"file": "smoke.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "header reserves the same trailing slot without inventing Home or Contact menus",
+					"file": "storefront-controls.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "desktop buying panel contrasts with its hero without shrinking the tabs",
+					"file": "storefront-controls.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "all-brands tile renders an icon, not an empty image, and preserves locale",
+					"file": "storefront-controls.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "reviews retain their avatars and articles share a complete card on the home and blog routes",
+					"file": "storefront-controls.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "compact filters fit on desktop and retain an accessible persistent footer",
+					"file": "storefront-controls.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "all-filters search preserves hidden selected models and replaces canonical price values",
+					"file": "storefront-controls.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "desktop navigation is centered and its dropdown aligns with the complete item",
+					"file": "style-parity.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "image banners do not underline their titles or action copy",
+					"file": "style-parity.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "desktop catalogue keeps a prominent filter action and six readable quick pills",
+					"file": "style-parity.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "conversion forms precede the horizontal process instead of a split column layout",
+					"file": "style-parity.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "about and services retain centered media sections at desktop and mobile widths",
+					"file": "style-parity.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "public action labels share a readable regular-weight role",
+					"file": "typography-contact.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "About opens with the team, not a wall of duplicate introduction copy",
+					"file": "typography-contact.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "Contact has centered contact channels and a centered usable form",
+					"file": "typography-contact.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "buying-panel selections retain their size and weight after choosing",
+					"file": "typography-contact.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "home buying controls wrap before default labels are truncated",
+					"file": "typography-contact.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "desktop section actions follow the content rather than competing with headings",
+					"file": "visual-hierarchy.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "desktop detail restores a title above the gallery and operable payment tabs",
+					"file": "visual-hierarchy.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "desktop detail sidebar remains within the viewport at supported widths",
+					"file": "visual-hierarchy.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				}
+			]
+		},
+		{
+			"name": "standalone-mobile",
+			"sourceLog": "release-browser-mobile-final.json",
+			"sha256": "7edb150bd973182695c771c88cc9a57837765dd4330fbf8b98704d93528e61e1",
+			"stats": {
+				"startTime": "2026-09-20T16:20:07.130Z",
+				"duration": 39497.25,
+				"expected": 39,
+				"skipped": 29,
+				"unexpected": 0,
+				"flaky": 0
+			},
+			"cases": [
+				{
+					"title": "accessible landmarks and controls on /",
+					"file": "accessibility.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "accessible landmarks and controls on /inventory",
+					"file": "accessibility.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "accessible landmarks and controls on /contact",
+					"file": "accessibility.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "accessible landmarks and controls on /import",
+					"file": "accessibility.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "accessible landmarks and controls on /sell-your-car",
+					"file": "accessibility.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "accessible landmarks and controls on /financing",
+					"file": "accessibility.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "reference-style icon tabs connect to compact fields without changing the mobile tab variant",
+					"file": "desktop-search.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\desktop-search.e2e.ts",
+								"line": 6,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "search entry opens a focused dialog with one intact focus outline and pinned actions",
+					"file": "desktop-search.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\desktop-search.e2e.ts",
+								"line": 6,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "nested make selection returns to search, keeps the draft, and submits the same canonical query",
+					"file": "desktop-search.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\desktop-search.e2e.ts",
+								"line": 6,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "empty results and an unavailable preview never manufacture a result count",
+					"file": "desktop-search.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\desktop-search.e2e.ts",
+								"line": 6,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "header search reuses the same focused result dialog",
+					"file": "desktop-search.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\desktop-search.e2e.ts",
+								"line": 6,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "every filter has a useful input and searching preserves selected makes",
+					"file": "filter-inputs.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"description": "These filters belong to the desktop inventory composition.",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\filter-inputs.e2e.ts",
+								"line": 5,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "custom maxima replace presets once and survive navigation and reopening",
+					"file": "filter-inputs.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"description": "These filters belong to the desktop inventory composition.",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\filter-inputs.e2e.ts",
+								"line": 5,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "quick-filter input validates a maximum and clear removes its value",
+					"file": "filter-inputs.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"description": "These filters belong to the desktop inventory composition.",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\filter-inputs.e2e.ts",
+								"line": 5,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "contact submission works without JavaScript at both widths",
+					"file": "forms-and-detail.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "desktop enquiry reports saving separately from delivery",
+					"file": "forms-and-detail.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\forms-and-detail.e2e.ts",
+								"line": 37,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "PDP opens the gallery and enquiry without legacy styles",
+					"file": "forms-and-detail.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\forms-and-detail.e2e.ts",
+								"line": 51,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "native route changes do not leave old modal or body cleanup behind",
+					"file": "forms-and-detail.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "inventory remains server-rendered without JavaScript",
+					"file": "inventory.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "filters and detail return retain the original URL",
+					"file": "inventory.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "desktop filter search does not discard a previously selected make",
+					"file": "inventory.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\inventory.e2e.ts",
+								"line": 32,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "menu restores focus and browser back dismisses it exactly once",
+					"file": "mobile-navigation.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "navigation from the menu does not leave a stale overlay or scroll lock",
+					"file": "mobile-navigation.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "failed vehicle photos recover even when the request fails before hydration",
+					"file": "refactor-contracts.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "language-specific pages have distinct canonicals and matching HTML language",
+					"file": "refactor-contracts.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "mobile menu is accessible and preserves language during navigation",
+					"file": "refactor-contracts.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "desktop content reflows at intermediate and wide widths",
+					"file": "refactor-contracts.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\refactor-contracts.e2e.ts",
+								"line": 67,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "desktop import country choices do not clip or need horizontal scrolling",
+					"file": "refactor-contracts.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\refactor-contracts.e2e.ts",
+								"line": 81,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "homepage makes and models use the retained modal picker, not native selects",
+					"file": "restored-pickers.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\restored-pickers.e2e.ts",
+								"line": 8,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "quick filters have a proper dialog with a fixed apply action and readable options",
+					"file": "restored-pickers.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\restored-pickers.e2e.ts",
+								"line": 52,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "restored homepage picker traps keyboard focus and remains usable at 768px",
+					"file": "restored-pickers.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\restored-pickers.e2e.ts",
+								"line": 86,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "renders / without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /inventory without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /import without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /sell-your-car without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /financing without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /contact without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /about without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /services without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /blog without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /faqs without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /reviews without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /privacy without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /terms without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /cookies without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /calculator without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /compare without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "renders /account/favorites without errors or horizontal overflow",
+					"file": "smoke.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "preview responses cannot be indexed",
+					"file": "smoke.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "header reserves the same trailing slot without inventing Home or Contact menus",
+					"file": "storefront-controls.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\storefront-controls.e2e.ts",
+								"line": 8,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "desktop buying panel contrasts with its hero without shrinking the tabs",
+					"file": "storefront-controls.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\storefront-controls.e2e.ts",
+								"line": 39,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "all-brands tile renders an icon, not an empty image, and preserves locale",
+					"file": "storefront-controls.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "reviews retain their avatars and articles share a complete card on the home and blog routes",
+					"file": "storefront-controls.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "compact filters fit on desktop and retain an accessible persistent footer",
+					"file": "storefront-controls.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\storefront-controls.e2e.ts",
+								"line": 104,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "all-filters search preserves hidden selected models and replaces canonical price values",
+					"file": "storefront-controls.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\storefront-controls.e2e.ts",
+								"line": 149,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "desktop navigation is centered and its dropdown aligns with the complete item",
+					"file": "style-parity.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\style-parity.e2e.ts",
+								"line": 7,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "image banners do not underline their titles or action copy",
+					"file": "style-parity.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "desktop catalogue keeps a prominent filter action and six readable quick pills",
+					"file": "style-parity.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\style-parity.e2e.ts",
+								"line": 42,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "conversion forms precede the horizontal process instead of a split column layout",
+					"file": "style-parity.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\style-parity.e2e.ts",
+								"line": 59,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "about and services retain centered media sections at desktop and mobile widths",
+					"file": "style-parity.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "public action labels share a readable regular-weight role",
+					"file": "typography-contact.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "About opens with the team, not a wall of duplicate introduction copy",
+					"file": "typography-contact.e2e.ts",
+					"project": "mobile",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "Contact has centered contact channels and a centered usable form",
+					"file": "typography-contact.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\typography-contact.e2e.ts",
+								"line": 41,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "buying-panel selections retain their size and weight after choosing",
+					"file": "typography-contact.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\typography-contact.e2e.ts",
+								"line": 69,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "home buying controls wrap before default labels are truncated",
+					"file": "typography-contact.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\typography-contact.e2e.ts",
+								"line": 85,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "desktop section actions follow the content rather than competing with headings",
+					"file": "visual-hierarchy.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\visual-hierarchy.e2e.ts",
+								"line": 8,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "desktop detail restores a title above the gallery and operable payment tabs",
+					"file": "visual-hierarchy.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\visual-hierarchy.e2e.ts",
+								"line": 27,
+								"column": 7
+							}
+						}
+					]
+				},
+				{
+					"title": "desktop detail sidebar remains within the viewport at supported widths",
+					"file": "visual-hierarchy.e2e.ts",
+					"project": "mobile",
+					"status": "skipped",
+					"annotations": [
+						{
+							"type": "skip",
+							"location": {
+								"file": "J:\\template-repos\\cars-template-import\\.audit\\localization-20260920\\release-qa\\tests\\visual-hierarchy.e2e.ts",
+								"line": 59,
+								"column": 7
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "mounted-en-bg",
+			"sourceLog": "release-browser-mounted-final.json",
+			"sha256": "ab4e404b4958078f02c6b862179431740d99f1aad0f017008c3710f94ead6357",
+			"stats": {
+				"startTime": "2026-09-20T16:28:31.661Z",
+				"duration": 115128.588,
+				"expected": 50,
+				"skipped": 0,
+				"unexpected": 0,
+				"flaky": 0
+			},
+			"cases": [
+				{
+					"title": "import listing and source submissions en 320",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "sell VIN and manual submissions en 320",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "calculator, contact trade-in and menu en 320",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "vehicle gallery, specs and inquiry en 320",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "import listing and source submissions bg 320",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "sell VIN and manual submissions bg 320",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "calculator, contact trade-in and menu bg 320",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "vehicle gallery, specs and inquiry bg 320",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "import listing and source submissions en 390",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "sell VIN and manual submissions en 390",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "calculator, contact trade-in and menu en 390",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "vehicle gallery, specs and inquiry en 390",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "import listing and source submissions bg 390",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "sell VIN and manual submissions bg 390",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "calculator, contact trade-in and menu bg 390",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "vehicle gallery, specs and inquiry bg 390",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "import listing and source submissions en 1440",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "sell VIN and manual submissions en 1440",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "calculator, contact trade-in and menu en 1440",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "vehicle gallery, specs and inquiry en 1440",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "import listing and source submissions bg 1440",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "sell VIN and manual submissions bg 1440",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "calculator, contact trade-in and menu bg 1440",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "vehicle gallery, specs and inquiry bg 1440",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "no-JS localized contact submission en 320",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "no-JS localized contact submission bg 320",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "no-JS localized contact submission en 390",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "no-JS localized contact submission bg 390",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "no-JS localized contact submission en 1440",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "no-JS localized contact submission bg 1440",
+					"file": "localization-interactions.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "native constraints use the page language in an opposite-language browser: en",
+					"file": "localization-validation.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "native constraints use the page language in an opposite-language browser: bg",
+					"file": "localization-validation.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "native route families en 320",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "native route families bg 320",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "native route families en 390",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "native route families bg 390",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "native route families en 1440",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "native route families bg 1440",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "preferences save dismiss reload and focus 320",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "preferences save dismiss reload and focus 390",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "preferences save dismiss reload and focus 1440",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "stale save cannot navigate after close and reopen",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "no JavaScript preferences and contact are native forms",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "explicit URL works with blocked storage and conflicting preferences",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "language/country and cookies cannot leak between requests",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "both import modes and sell wizard validate without business writes",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "blocked cookies still allow explicit language and independent country selection",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "client locale navigation and back update language, copy, SEO and links without reload",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "only offered public routes reroute; resource and admin boundaries remain separate",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				},
+				{
+					"title": "localized errors and slash redirects are private while assets stay cacheable",
+					"file": "localization.e2e.ts",
+					"project": "desktop",
+					"status": "expected",
+					"annotations": []
+				}
+			]
+		}
+	],
+	"assetAndInventoryPreservation": {
+		"checked": 823,
+		"changed": []
+	},
+	"scope": {
+		"template": "Import",
+		"position": "Design 2",
+		"mountFixture": "/variant-2",
+		"carsPinsChanged": false,
+		"dealersDeployed": false,
+		"additionalLanguagesEnabled": false,
+		"realBusinessIntegrationsEnabled": false
+	},
+	"limitations": [
+		"Chromium automation and visual spot checks are not universal browser/device acceptance.",
+		"No independent human linguistic approval is claimed.",
+		"The mount is an isolated Import fixture, not a Cars trio or dealer rollout.",
+		"Browser-owned file/calendar chrome remains browser-controlled; authored validation and server errors are EN/BG."
+	],
+	"runtimeSource": {
+		"files": 1408,
+		"sha256": "6065cf3b1b7f3d7bce1274895f1c5f99d7ec6e156f81e0382063fc8cb7896fe6"
+	}
+}

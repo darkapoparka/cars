@@ -1,0 +1,274 @@
+{
+  "scope": "Import desktop: all quick filters in the hero, native sort buttons, matching Home/Inventory artwork frame. Mobile compositions unchanged.",
+  "created": "2026-10-01T21:24:57.852Z",
+  "runtime": "Node 24.21.0",
+  "sourceFiles": [
+    {
+      "path": "src/lib/components/common/PageIntro.svelte",
+      "sha256": "eff95673a3694c4856a8dbc7b6dedd46dacabd8f86bd23ad4dba18d644bfe1ea",
+      "matchesTypeCheckedSnapshot": true,
+      "matchesBuiltSnapshot": true
+    },
+    {
+      "path": "src/lib/components/common/SearchField.svelte",
+      "sha256": "6b71147f803722fc3845560b43b3046da02de86a8540ecfbc05d941b3131a113",
+      "matchesTypeCheckedSnapshot": true,
+      "matchesBuiltSnapshot": true
+    },
+    {
+      "path": "src/lib/components/inventory/InventoryToolbar.svelte",
+      "sha256": "cd47568d904b9b78371aa656050f11e8ca6ba97c413bc91fbb98b60ea120bc78",
+      "matchesTypeCheckedSnapshot": true,
+      "matchesBuiltSnapshot": true
+    },
+    {
+      "path": "src/lib/components/inventory/InventoryDisplayControls.svelte",
+      "sha256": "7e8e92e79754cb2a0208df9f0a60f35384e118ab5c75e31452465167a307dc94",
+      "matchesTypeCheckedSnapshot": true,
+      "matchesBuiltSnapshot": true
+    },
+    {
+      "path": "src/lib/components/inventory/InventoryPage.svelte",
+      "sha256": "dd7925d46c413d18a04374a2d0e1c6d1fd2e6e88f7100b6a56e5deeef12e2a83",
+      "matchesTypeCheckedSnapshot": true,
+      "matchesBuiltSnapshot": true
+    },
+    {
+      "path": "src/lib/components/inventory/InventoryFilter.svelte",
+      "sha256": "cc9504f9f7d5ae19b6665cc4f89cc3e7cf802fffc561b16b6cc6ec210e3cc92b",
+      "matchesTypeCheckedSnapshot": true,
+      "matchesBuiltSnapshot": true
+    },
+    {
+      "path": "src/lib/content/inventory-desktop-controls.ts",
+      "sha256": "b76129fb11715c290ff60f3a9cd9f7fea9a27bb2c2d39911ceecaaf6bce6d99a",
+      "matchesTypeCheckedSnapshot": true,
+      "matchesBuiltSnapshot": true
+    },
+    {
+      "path": "src/lib/styles/tokens.css",
+      "sha256": "d8892d483acf3c5a3c1f362ec5f9ec8841aaecf4743163c67e9020261c1ff923",
+      "matchesTypeCheckedSnapshot": true,
+      "matchesBuiltSnapshot": true
+    },
+    {
+      "path": "tests/inventory.e2e.ts",
+      "sha256": "694bd78fee20fde7f3585aaef1a9354cc51b962dffe22e6000ffa60473fa7c54",
+      "matchesTypeCheckedSnapshot": true,
+      "matchesBuiltSnapshot": false
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "c46025292834729bc529812a9378998b683329a6a34d06a896cb2da6f422d0b9",
+      "matchesTypeCheckedSnapshot": true,
+      "matchesBuiltSnapshot": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "check",
+      "exit": 0,
+      "seconds": 19
+    },
+    {
+      "name": "format",
+      "exit": 0,
+      "seconds": 7
+    },
+    {
+      "name": "lint",
+      "exit": 0,
+      "seconds": 47
+    },
+    {
+      "name": "architecture",
+      "exit": 0,
+      "seconds": 1
+    },
+    {
+      "name": "build",
+      "exit": 0,
+      "seconds": 61
+    }
+  ],
+  "driverChecks": [
+    {
+      "name": "test-format",
+      "exit": 0
+    },
+    {
+      "name": "test-lint",
+      "exit": 0
+    }
+  ],
+  "buildSnapshot": {
+    "head": "4ae328a04e6491cf2d268ac8ca2082c6713c687c",
+    "digest": "8a5d93ce6d7f481ea335d7f84e0adb083cd7c13a41259061d99ec662211ea552",
+    "composition": "Git HEAD plus ten reviewed desktop task paths; unrelated working drafts excluded",
+    "files": 2013
+  },
+  "workingSourceTypeCheck": {
+    "head": "57be4a0bc4a6923d6c323824d32e5ad8709a2dac",
+    "digest": "4ed27027041cb10e15a25e346739b39e51b397a71d6b63a825bb98a78cad2ca5",
+    "files": 2089,
+    "errors": 0,
+    "warnings": 0
+  },
+  "browser": {
+    "passed": 26,
+    "skipped": 22,
+    "suites": [
+      "inventory.e2e.ts",
+      "filter-inputs.e2e.ts",
+      "desktop-search.e2e.ts"
+    ],
+    "projects": [
+      "desktop",
+      "mobile"
+    ],
+    "baseUrl": "http://127.0.0.1:6832",
+    "target": "Frozen production preview",
+    "driver": "Current canonical tests; selector correction verified separately by formatter/linter and the full working-source type check"
+  },
+  "desktop": {
+    "cases": 12,
+    "locales": [
+      "bg",
+      "en"
+    ],
+    "widths": [
+      768,
+      900,
+      1024,
+      1280,
+      1440,
+      1920
+    ],
+    "allSixQuickFiltersInsideHero": true,
+    "allFiltersInsideHero": true,
+    "sixNativeSortButtons": true,
+    "noLabelClipping": true,
+    "noOverflow": true
+  },
+  "heroParity": {
+    "cases": 12,
+    "identicalFrameAndArtworkCoordinates": true
+  },
+  "interactions": {
+    "modelFocus": {
+      "dialogOpen": false,
+      "focused": "Model: X3"
+    },
+    "sortedState": {
+      "chipsInHero": true,
+      "heroFilterCount": 6,
+      "href": "http://127.0.0.1:6790/en/inventory?brand=BMW&q=X3&maxPrice=50000&view=4&lang=en&sort=lowest-price",
+      "selected": "lowest-price"
+    },
+    "viewFocus": {
+      "closed": true,
+      "focusRestored": true
+    },
+    "sidebar": {
+      "href": "http://127.0.0.1:6790/en/inventory?brand=BMW&q=X3&maxPrice=50000&lang=en&sort=lowest-price&layout=dashboard",
+      "overflow": false,
+      "sidebarVisible": true,
+      "viewMenuClosed": true
+    },
+    "sticky": {
+      "scrollY": 1308,
+      "top": 0
+    },
+    "console": []
+  },
+  "mobile": [
+    {
+      "viewportWidth": 320,
+      "imageWidth": 320,
+      "imageHeight": 844,
+      "changedPixels": 0,
+      "pixelIdentical": true,
+      "maxChannelDelta": 0,
+      "changeBounds": null
+    },
+    {
+      "viewportWidth": 390,
+      "imageWidth": 390,
+      "imageHeight": 844,
+      "changedPixels": 95,
+      "pixelIdentical": false,
+      "maxChannelDelta": 2,
+      "changeBounds": {
+        "left": 104,
+        "top": 200,
+        "right": 143,
+        "bottom": 255
+      }
+    }
+  ],
+  "mobileViewports": [
+    {
+      "desktopHidden": true,
+      "height": 844,
+      "overflow": false,
+      "scrollY": 0,
+      "width": 390
+    },
+    {
+      "desktopHidden": true,
+      "height": 844,
+      "overflow": false,
+      "scrollY": 0,
+      "width": 320
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "before-1440.jpg",
+      "width": 1425,
+      "height": 990
+    },
+    {
+      "name": "after-1440.jpg",
+      "width": 1425,
+      "height": 990
+    },
+    {
+      "name": "before-1024.jpg",
+      "width": 1009,
+      "height": 985
+    },
+    {
+      "name": "after-1024.jpg",
+      "width": 1009,
+      "height": 985
+    },
+    {
+      "name": "home-reference-1440.jpg",
+      "width": 1425,
+      "height": 990
+    },
+    {
+      "name": "home-after-1440.jpg",
+      "width": 1425,
+      "height": 990
+    },
+    {
+      "name": "filtered-after-1440.jpg",
+      "width": 1425,
+      "height": 990
+    },
+    {
+      "name": "sidebar-after-1440.jpg",
+      "width": 1425,
+      "height": 990
+    },
+    {
+      "name": "view-menu-1440.jpg",
+      "width": 1425,
+      "height": 990
+    }
+  ],
+  "mobileComparisonNote": "320px is pixel-identical. At 390px, 95 pixels differ by at most 2/255 per color channel within the first car photo (x104-143, y200-255); text, controls and page geometry are unchanged. This is not claimed to be pixel-identical at 390px.",
+  "boundary": "Local source/build/browser verification. No template promotion or dealer deployment."
+}
