@@ -2,45 +2,39 @@
 
 <script lang="ts">
   import { useLocale } from "#lib/i18n/context.svelte.ts";
-  import type { CatalogText } from "#lib/i18n/text.ts";
+  import { message, type CatalogText } from "#lib/i18n/text.ts";
   const locale = useLocale();
   const group = $props.id();
   const questions = [
     {
       id: "choose",
-      question: "Which plan should I choose?",
-      answer:
-        "Compare the features in each card and choose the level that fits your needs. These are example plans; contact us to confirm the options and pricing available to you.",
+      question: message("reference.faq.plans.choose.question"),
+      answer: message("reference.faq.plans.choose.answer"),
     },
     {
       id: "billing",
-      question: "How do monthly and annual prices compare?",
-      answer:
-        "The billing switch shows either the monthly amount or the annual total. The annual examples equal twelve monthly payments, so no annual discount is included in the displayed prices.",
+      question: message("reference.faq.plans.billing.question"),
+      answer: message("reference.faq.plans.billing.answer"),
     },
     {
       id: "included",
-      question: "What is included in each plan?",
-      answer:
-        "The feature list under each plan shows the example benefits. Vehicle availability, insurance cover, mileage and any additional charges should be confirmed with the team before you choose a plan.",
+      question: message("reference.faq.plans.included.question"),
+      answer: message("reference.faq.plans.included.answer"),
     },
     {
       id: "start",
-      question: "How do I get started?",
-      answer:
-        "Contact us with the plan you are interested in and the vehicle or service you need. The team can confirm the details and explain the next steps. Selecting a plan here does not activate a membership or take a payment.",
+      question: message("reference.faq.plans.start.question"),
+      answer: message("reference.faq.plans.start.answer"),
     },
     {
       id: "changes",
-      question: "Can I change or cancel a plan?",
-      answer:
-        "Changes, cancellations and any notice period depend on the confirmed plan terms. Ask the team to explain these conditions before you agree to a membership.",
+      question: message("reference.faq.plans.changes.question"),
+      answer: message("reference.faq.plans.changes.answer"),
     },
     {
       id: "help",
-      question: "Can someone help me compare the plans?",
-      answer:
-        "Yes. Contact us with your requirements and the plans you are considering so the team can help you compare the available options.",
+      question: message("reference.faq.plans.help.question"),
+      answer: message("reference.faq.plans.help.answer"),
     },
   ] as const satisfies readonly {
     id: string;

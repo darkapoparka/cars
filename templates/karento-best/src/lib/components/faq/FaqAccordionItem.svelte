@@ -2,6 +2,7 @@
 
 <script lang="ts">
   import { MediaQuery } from "svelte/reactivity";
+  import MobileIcon from "#lib/components/mobile/MobileIcon.svelte";
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   const locale = useLocale();
   const phone = new MediaQuery("(max-width: 767.98px)");
@@ -69,46 +70,60 @@
         ? "px-0 card-header border-0 bacground-body"
         : "px-0 card-header border-0 bg-gradient-1 background-card"}
     >
-      <a
-        data-bs-toggle="collapse"
-        href={locale.href("#" + id)}
-        aria-controls={id}
-        class={[
-          " px-3 py-2 text-900 fw-bold d-flex align-items-center",
-          { collapsed },
-        ]}
-        aria-expanded={open}
-        onclick={(event) => {
-          if (phone.current) event.preventDefault();
-          onclick();
-        }}
-      >
-        <p class="text-lg-bold neutral-1000 pe-4 desktop-type-compact-card"
-          >{locale.text(item.question)}{#if item.continuation}<br
-            />{locale.text(item.continuation)}{/if}</p
+      {#if phone.current}
+        <button
+          type="button"
+          aria-controls={id}
+          aria-expanded={open}
+          class:collapsed
+          {onclick}
         >
-        <span class="ms-auto arrow me-2">
-          <svg
-            class="invert"
-            xmlns="http://www.w3.org/2000/svg"
-            width="13"
-            height="8"
-            viewBox="0 0 13 8"
-            fill="none"
-            aria-hidden="true"
-            focusable="false"
+          <p
+            >{locale.text(item.question)}{#if item.continuation}<br
+              />{locale.text(item.continuation)}{/if}</p
           >
-            <path
-              class="stroke-dark"
-              d="M11.5 1L6.25 6.5L1 1"
-              stroke="#111827"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-        </span>
-      </a>
+          <span class="arrow"><MobileIcon name="chevron-down" /></span>
+        </button>
+      {:else}<a
+          data-bs-toggle="collapse"
+          href={locale.href("#" + id)}
+          aria-controls={id}
+          class={[
+            " px-3 py-2 text-900 fw-bold d-flex align-items-center",
+            { collapsed },
+          ]}
+          aria-expanded={open}
+          onclick={(event) => {
+            if (phone.current) event.preventDefault();
+            onclick();
+          }}
+        >
+          <p class="text-lg-bold neutral-1000 pe-4 desktop-type-compact-card"
+            >{locale.text(item.question)}{#if item.continuation}<br
+              />{locale.text(item.continuation)}{/if}</p
+          >
+          <span class="ms-auto arrow me-2">
+            <svg
+              class="invert"
+              xmlns="http://www.w3.org/2000/svg"
+              width="13"
+              height="8"
+              viewBox="0 0 13 8"
+              fill="none"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                class="stroke-dark"
+                d="M11.5 1L6.25 6.5L1 1"
+                stroke="#111827"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </span>
+        </a>{/if}
     </div>
     <div {id} data-bs-parent={parent} class={["collapse", { show: open }]}>
       <p
@@ -122,6 +137,15 @@
 {/if}
 
 <style>
+  @media (min-width: 992px) {
+    .karento-faq-card .card-header a[aria-expanded="false"] .arrow {
+      transform: none;
+    }
+    .karento-faq-card .card-header a[aria-expanded="true"] .arrow {
+      transform: rotate(180deg);
+    }
+  }
+
   @media (max-width: 767.98px) {
     .karento-faq-numbered .accordion-button {
       display: grid;
@@ -168,10 +192,18 @@
     .karento-faq-card .card-header {
       padding: 0;
     }
-    .karento-faq-card .card-header a {
+    .karento-faq-card .card-header :is(a, button) {
+      display: flex;
+      align-items: center;
+      width: 100%;
       gap: var(--karento-space-3);
       min-height: var(--karento-touch-target);
       padding: var(--karento-space-3) !important;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      text-align: left;
     }
     .karento-faq-card .card-header p {
       min-width: 0;
@@ -186,11 +218,18 @@
       flex: 0 0 auto;
       margin: 0 0 0 auto !important;
     }
-    .karento-faq-card .card-header a[aria-expanded="false"] .arrow {
+    .karento-faq-card
+      .card-header
+      :is(a, button)[aria-expanded="false"]
+      .arrow {
       transform: none;
     }
-    .karento-faq-card .card-header a[aria-expanded="true"] .arrow {
+    .karento-faq-card .card-header :is(a, button)[aria-expanded="true"] .arrow {
       transform: rotate(180deg);
+    }
+    .karento-faq-card .card-header button:focus-visible {
+      outline: var(--karento-focus-width) solid currentColor;
+      outline-offset: calc(var(--karento-focus-offset) * -1);
     }
     .karento-faq-card .card-body {
       margin: 0;

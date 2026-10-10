@@ -10,6 +10,7 @@
   import { serviceSpots } from "#lib/data/services.ts";
   import { slider } from "#lib/vendor.ts";
   const mobile = new MediaQuery("(max-width: 767.98px)");
+  const desktop = new MediaQuery("(min-width: 992px)");
 </script>
 
 <section
@@ -36,7 +37,9 @@
           <p
             class="text-lg-medium neutral-500 home-section-description desktop-type-lead"
             >{locale.t(
-              "ui.services-overview.serving-you-with-quality-comfort-and-convenience",
+              desktop.current
+                ? "referenceHome.services.previewDescription"
+                : "ui.services-overview.serving-you-with-quality-comfort-and-convenience",
             )}</p
           >
         </div>

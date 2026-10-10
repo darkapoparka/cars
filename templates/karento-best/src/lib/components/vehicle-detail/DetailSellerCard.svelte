@@ -9,7 +9,26 @@
     referenceSeller,
     type DetailSeller,
   } from "#lib/data/vehicle-detail.ts";
-  let { seller = referenceSeller }: { seller?: DetailSeller } = $props();
+  let {
+    seller = referenceSeller,
+    desktopBranding = false,
+  }: { seller?: DetailSeller; desktopBranding?: boolean } = $props();
+  const brandReferenceSeller = $derived(
+    desktopBranding && seller === referenceSeller,
+  );
+  const displayedSeller = $derived<DetailSeller>(
+    brandReferenceSeller
+      ? {
+          name: dealer.name,
+          location: dealer.locations[0]?.address ?? "",
+          avatar: dealer.logo.light,
+          mobile: dealer.contacts.phone,
+          email: dealer.contacts.email,
+          whatsapp: "",
+          fax: "",
+        }
+      : seller,
+  );
 </script>
 
 {#snippet listingsAction()}
@@ -38,56 +57,74 @@
   </svg>
 {/snippet}
 
-<div class="sidebar-left border-1 background-card desktop-panel">
+<div
+  class={[
+    "sidebar-left border-1 background-card desktop-panel",
+    { "seller-dealer-brand": brandReferenceSeller },
+  ]}
+>
   <h6 class="text-xl-bold neutral-1000 desktop-type-panel"
     >{locale.t("ui.detail-seller-card.listed-by")}</h6
   >
   <div class="box-sidebar-content">
     <div class="box-agent-support border-bottom pb-3 mb-3">
       <div class="card-author">
-        <div class="me-2"><img src={seller.avatar} alt={seller.name} /></div>
+        {#if brandReferenceSeller}
+          <div class="me-2"
+            ><img src={dealer.logo.light} alt={dealer.logo.alt} /></div
+          >
+        {:else}
+          <div class="me-2"><img src={seller.avatar} alt={seller.name} /></div>
+        {/if}
         <div class="card-author-info">
-          <p class="text-lg-bold neutral-1000 desktop-type-compact-card"
-            >{seller.name}</p
+          <p
+            class={[
+              "text-lg-bold neutral-1000 desktop-type-compact-card",
+              { "visually-hidden": brandReferenceSeller },
+            ]}>{displayedSeller.name}</p
           >
           <p class="text-sm-medium neutral-500 desktop-type-meta"
-            >{seller.location}</p
+            >{displayedSeller.location}</p
           >
         </div>
       </div>
     </div>
     <div class="box-info-contact">
-      {#if seller.mobile}<p
+      {#if displayedSeller.mobile}<p
           class="text-md-medium mobile-phone neutral-1000 desktop-type-body-small"
           ><span class="text-md-bold desktop-type-label"
             >{locale.t("ui.detail-seller-card.mobile")}</span
           >
-          <a href={locale.href(`tel:${seller.mobile}`)}>{seller.mobile}</a></p
+          <a href={locale.href(`tel:${displayedSeller.mobile}`)}
+            >{displayedSeller.mobile}</a
+          ></p
         >{/if}
-      {#if seller.email}<p
+      {#if displayedSeller.email}<p
           class="text-md-medium email neutral-1000 desktop-type-body-small"
           ><span class="text-md-bold desktop-type-label"
             >{locale.t("ui.detail-seller-card.email")}</span
           >
-          <a href={locale.href(`mailto:${seller.email}`)}>{seller.email}</a></p
+          <a href={locale.href(`mailto:${displayedSeller.email}`)}
+            >{displayedSeller.email}</a
+          ></p
         >{/if}
-      {#if seller.whatsapp}<p
+      {#if displayedSeller.whatsapp}<p
           class="text-md-medium whatsapp neutral-1000 desktop-type-body-small"
           ><span class="text-md-bold desktop-type-label"
             >{locale.t("ui.detail-seller-card.whatsapp")}</span
           >
-          {seller.whatsapp}</p
+          {displayedSeller.whatsapp}</p
         >{/if}
-      {#if seller.fax}<p
+      {#if displayedSeller.fax}<p
           class="text-md-medium fax neutral-1000 desktop-type-body-small"
           ><span class="text-md-bold desktop-type-label"
             >{locale.t("ui.detail-seller-card.fax")}</span
           >
-          {seller.fax}</p
+          {displayedSeller.fax}</p
         >{/if}
     </div>
     <div class="box-link-bottom">
-      {#if dealer.businessPreview}
+      {#if brandReferenceSeller || dealer.businessPreview}
         <a
           class="btn btn-primary py-3 w-100 rounded-3 desktop-type-control desktop-panel-action"
           href={locale.href("/vehicles")}
@@ -226,6 +263,20 @@
   }
 
   @media (min-width: 992px) {
+    .seller-dealer-brand .card-author {
+      display: grid;
+      gap: var(--karento-desktop-space-3);
+    }
+    .seller-dealer-brand .card-author img {
+      width: auto;
+      height: var(--karento-desktop-space-8);
+      max-width: 100%;
+      border-radius: 0;
+      object-fit: contain;
+    }
+    .seller-dealer-brand .card-author-info p {
+      margin: 0;
+    }
     .sidebar-left {
       margin-bottom: var(--karento-desktop-panel-gap);
     }

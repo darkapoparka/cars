@@ -9,7 +9,13 @@
   import { focusableScroll } from "#lib/horizontal-scroll.ts";
   import VehicleGridCard from "#lib/cards/VehicleGridCard.svelte";
   import { referenceVehicles } from "#lib/data/vehicles.ts";
+  let { compactMobile = false }: { compactMobile?: boolean } = $props();
   const mobile = new MediaQuery("(max-width: 767.98px)");
+  const mobileVehicles = $derived(
+    compactMobile
+      ? referenceVehicles.featuredVehicles
+      : referenceVehicles.featuredVehicles.slice(0, 3),
+  );
 </script>
 
 <section
@@ -19,7 +25,9 @@
     {#if mobile.current}
       <MobileSectionHeading
         title={locale.t("ui.featured-vehicle-grid.featured-listings")}
-        description={locale.t("reference.bodyTypes.intro")}
+        description={compactMobile
+          ? undefined
+          : locale.t("reference.bodyTypes.intro")}
         actionLabel={locale.t("ui.featured-vehicle-grid.view-more")}
         actionHref="/vehicles"
       />
@@ -73,7 +81,7 @@
         aria-label={locale.t("ui.featured-vehicle-grid.featured-vehicles")}
         {@attach focusableScroll}
       >
-        {#each referenceVehicles.featuredVehicles.slice(0, 3) as card (card.title)}
+        {#each mobileVehicles as card (card.title)}
           <VehicleGridCard {card} />
         {/each}
       </div>

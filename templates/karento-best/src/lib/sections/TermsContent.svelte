@@ -102,7 +102,7 @@
       </div>
       <div class="col-lg-9 px-lg-5">
         <div class="d-flex flex-column gap-4">
-          {#if dealer.businessPreview}
+          {#if dealer.businessPreview || (desktop.current && dealer.contentStatus === "reference-demo")}
             <p class="text-md-medium neutral-500 desktop-type-body"
               >{locale.t("terms.previewNotice")}</p
             >

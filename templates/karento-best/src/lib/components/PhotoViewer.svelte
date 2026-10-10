@@ -7,7 +7,8 @@
   import { afterNavigate } from "$app/navigation";
   import { MediaQuery } from "svelte/reactivity";
   import type { Attachment } from "svelte/attachments";
-  import MobileIcon from "#lib/components/mobile/MobileIcon.svelte";
+  import MobileCloseButton from "#lib/components/mobile/MobileCloseButton.svelte";
+  import MobileIconButton from "#lib/components/mobile/MobileIconButton.svelte";
   let images = $state<string[]>([]);
   let index = $state(0);
   let dialog: HTMLDialogElement | undefined;
@@ -108,17 +109,16 @@
       }
     }}
   >
-    <div class="karento-photo-controls"
-      ><button
-        type="button"
-        aria-label={locale.t("ui.photo-viewer.close-photo-viewer")}
-        onclick={() => dialog?.close()}
-        >{#if phone.current}<MobileIcon
-            name="close"
-            size={20}
-          />{:else}×{/if}</button
-      ></div
-    >
+    <div class="karento-photo-controls">
+      {#if phone.current}<MobileCloseButton
+          label={locale.t("ui.photo-viewer.close-photo-viewer")}
+          onclick={() => dialog?.close()}
+        />{:else}<button
+          type="button"
+          aria-label={locale.t("ui.photo-viewer.close-photo-viewer")}
+          onclick={() => dialog?.close()}>×</button
+        >{/if}
+    </div>
     <div
       class="karento-photo-image"
       role="group"
@@ -130,11 +130,17 @@
       onpointerdown={startSwipe}
       onpointerup={endSwipe}
       onpointercancel={() => (swipe = undefined)}
-      >{#if images.length > 1}<button
-          type="button"
-          aria-label={locale.t("ui.photo-viewer.previous-photo")}
-          onclick={() => move(-1)}>‹</button
-        >{/if}<img
+      >{#if images.length > 1}{#if phone.current}<MobileIconButton
+            class="mobile-photo-previous"
+            label={locale.t("ui.photo-viewer.previous-photo")}
+            icon="chevron-left"
+            surface="square"
+            onclick={() => move(-1)}
+          />{:else}<button
+            type="button"
+            aria-label={locale.t("ui.photo-viewer.previous-photo")}
+            onclick={() => move(-1)}>‹</button
+          >{/if}{/if}<img
         src={images[index]}
         alt={phone.current
           ? locale.t("gallery.photoPosition", {
@@ -143,11 +149,17 @@
             })
           : `Photo ${index + 1} of ${images.length}`}
         draggable="false"
-      />{#if images.length > 1}<button
-          type="button"
-          aria-label={locale.t("ui.photo-viewer.next-photo")}
-          onclick={() => move(1)}>›</button
-        >{/if}</div
+      />{#if images.length > 1}{#if phone.current}<MobileIconButton
+            class="mobile-photo-next"
+            label={locale.t("ui.photo-viewer.next-photo")}
+            icon="chevron-right"
+            surface="square"
+            onclick={() => move(1)}
+          />{:else}<button
+            type="button"
+            aria-label={locale.t("ui.photo-viewer.next-photo")}
+            onclick={() => move(1)}>›</button
+          >{/if}{/if}</div
     >
     <p class="desktop-type-meta" aria-live="polite"
       >{index + 1} / {images.length}{#if phone.current && images.length > 1}<span
@@ -179,14 +191,6 @@
       display: grid;
       grid-template-rows: auto minmax(0, 1fr) auto;
     }
-    .karento-photo-controls button {
-      display: grid;
-      place-items: center;
-      width: var(--karento-touch-target);
-      height: var(--karento-touch-target);
-      padding: 0;
-      background: transparent;
-    }
     .karento-photo-image {
       position: relative;
       min-height: 0;
@@ -198,12 +202,13 @@
       max-height: 100%;
       object-fit: contain;
     }
-    .karento-photo-image button {
+    .karento-photo-image :global(.mobile-photo-previous),
+    .karento-photo-image :global(.mobile-photo-next) {
       position: absolute;
       z-index: 1;
       left: 8px;
     }
-    .karento-photo-image button:last-child {
+    .karento-photo-image :global(.mobile-photo-next) {
       left: auto;
       right: 8px;
     }

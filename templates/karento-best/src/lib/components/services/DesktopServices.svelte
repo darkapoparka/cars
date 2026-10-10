@@ -165,6 +165,9 @@
     .desktop-services {
       padding-block: var(--karento-desktop-space-8)
         var(--karento-desktop-space-16);
+      scroll-margin-top: calc(
+        var(--karento-desktop-space-16) + var(--karento-desktop-space-8)
+      );
     }
     .desktop-services:focus {
       outline: none;

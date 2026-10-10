@@ -1,5 +1,7 @@
 /** Authored sample UI roles; machine IDs, currencies and factual names remain source data. */
 export const referenceDynamicEn = {
+  "reference.dashboard.desktop.bookingNotifications":
+    "Instant notifications for vehicle bookings",
   "reference.dynamic.service-filters.all.label": "All",
   "reference.dynamic.service-filters.rentals.label": "Rentals",
   "reference.dynamic.service-filters.transfers.label": "Transfers",
@@ -618,6 +620,8 @@ export const referenceDynamicEn = {
   "reference.dynamic.dashboard-listing-features.12": " Airbags ",
 } as const;
 export const referenceDynamicBg = {
+  "reference.dashboard.desktop.bookingNotifications":
+    "Незабавни известия за резервации на автомобили",
   "reference.dynamic.service-filters.all.label": "Всички",
   "reference.dynamic.service-filters.rentals.label": "Наеми",
   "reference.dynamic.service-filters.transfers.label": "Трансфери",

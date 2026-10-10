@@ -8,6 +8,7 @@
   import MobileVehicleCard from "#lib/components/mobile/MobileVehicleCard.svelte";
   import type { RentalRow } from "#lib/data/vehicle-listing.ts";
   import { dealer } from "#lib/content.ts";
+  import { referenceVehicleDestination } from "#lib/data/vehicle-detail-selection.ts";
   let {
     card,
     actionClass = "btn btn-gray",
@@ -18,6 +19,10 @@
     showLocation?: boolean;
   } = $props();
   const mobile = new MediaQuery("(max-width: 767.98px)");
+  const desktop = new MediaQuery("(min-width: 992px)");
+  const destination = $derived(
+    desktop.current ? referenceVehicleDestination(card) : card.href,
+  );
   const display = $derived(presentVehicle(card, locale));
   const baggage = $derived(
     typeof card.baggageCount === "number"
@@ -38,7 +43,7 @@
   <div class="card-flight card-hotel card-property background-card border">
     <div class="card-image">
       <a
-        href={locale.href(card.href)}
+        href={locale.href(destination)}
         aria-label={locale.t("ui.listing-vehicle-row-card.view-details")}
         ><img src={card.image} alt={card.imageAlt} /></a
       >
@@ -57,7 +62,7 @@
       <div class="card-title"
         ><a
           class="heading-6 neutral-1000 desktop-type-card"
-          href={locale.href(card.href)}
+          href={locale.href(destination)}
           aria-label={card.titleLabel}>{card.title}</a
         ></div
       >
@@ -114,7 +119,7 @@
           <div class="card-button"
             ><a
               class={[actionClass, "desktop-type-control desktop-card-action"]}
-              href={locale.href(card.href)}
+              href={locale.href(destination)}
               aria-label={dealer.businessPreview
                 ? locale.t("action.enquire")
                 : display.action}

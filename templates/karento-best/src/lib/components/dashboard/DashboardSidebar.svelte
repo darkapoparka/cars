@@ -4,6 +4,7 @@
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   const locale = useLocale();
   import { MediaQuery } from "svelte/reactivity";
+  import MobileIcon from "#lib/components/mobile/MobileIcon.svelte";
   import type { Attachment } from "svelte/attachments";
   const phone = new MediaQuery("(max-width: 767.98px)");
   import {
@@ -84,7 +85,11 @@
                 phone.current
                   ? "account.settings"
                   : "ui.dashboard-sidebar.view-details",
-              )}><i class="fi fi-rr-pencil fs-7"></i></a
+              )}
+              >{#if phone.current}<MobileIcon
+                  name="edit"
+                  size="action"
+                />{:else}<i class="fi fi-rr-pencil fs-7"></i>{/if}</a
             ></div
           ></div
         >
@@ -104,7 +109,8 @@
             href={locale.href(link.href)}
             aria-current={activeHref === link.href ? "page" : undefined}
             aria-label={locale.text(link.label)}
-            ><i class={link.icon}></i> {locale.text(link.label)}</a
+            ><i class={link.icon} aria-hidden="true"></i>
+            {locale.text(link.label)}</a
           ></li
         >
       {/each}

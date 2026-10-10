@@ -58,7 +58,7 @@
             class="text-white text-xl-medium karento-hero-description desktop-type-lead"
             >{locale.text(description ?? "")}</span
           >{/if}{" "}{/if}{#if header.action && !(phone.current && mobileControls)}<a
-          class="btn btn-white karento-hero-action desktop-type-control"
+          class="btn btn-white karento-hero-action desktop-type-control desktop-section-action"
           href={locale.href(header.action.href)}
           >{locale.text(header.action.label)}{" "}<span aria-hidden="true"
             >↗</span

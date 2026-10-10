@@ -1,4 +1,6 @@
 export const finalPolishEn = {
+  "ui.desktop-catalog-toolbar.filter-modals": "Filter modals",
+  "ui.desktop-catalog-toolbar.filter-drawer": "Filter drawer",
   "referenceFinance.selectVehicle": "Choose a vehicle",
   "referenceFinance.manualPrice": "Enter a price",
   "referenceFinance.formTitle": "Estimate your payment",
@@ -83,6 +85,8 @@ export const finalPolishEn = {
 } as const;
 
 export const finalPolishBg = {
+  "ui.desktop-catalog-toolbar.filter-modals": "Филтри в прозорец",
+  "ui.desktop-catalog-toolbar.filter-drawer": "Филтри в панел",
   "referenceFinance.selectVehicle": "Изберете автомобил",
   "referenceFinance.manualPrice": "Въведете цена",
   "referenceFinance.formTitle": "Изчислете вноската си",

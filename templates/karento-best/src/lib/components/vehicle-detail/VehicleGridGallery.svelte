@@ -1,6 +1,7 @@
 <svelte:options preserveWhitespace={true} runes={true} />
 
 <script lang="ts">
+  import { MediaQuery } from "svelte/reactivity";
   import VehicleGalleryActions from "./VehicleGalleryActions.svelte";
   import {
     referenceGridGallery,
@@ -8,6 +9,22 @@
   } from "#lib/data/vehicle-detail.ts";
   let { gallery = referenceGridGallery }: { gallery?: DetailGridGallery } =
     $props();
+  const desktop = new MediaQuery("(min-width: 992px)");
+  function showPhotos() {
+    window.dispatchEvent(
+      new CustomEvent("karento-gallery", {
+        detail: {
+          images: [
+            gallery.hero.src,
+            ...gallery.columns.flatMap((column) =>
+              column.images.map((image) => image.src),
+            ),
+          ],
+          index: 0,
+        },
+      }),
+    );
+  }
 </script>
 
 <div class="box-section box-banner-property-detail background-body">
@@ -17,7 +34,9 @@
         <div class="col-lg-7">
           <div class="position-relative rounded-12 overflow-hidden">
             <img class="" src={gallery.hero.src} alt={gallery.hero.alt} />
-            <VehicleGalleryActions />
+            <VehicleGalleryActions
+              onphotos={desktop.current ? showPhotos : undefined}
+            />
           </div>
         </div>
         <div class="col-lg-5">

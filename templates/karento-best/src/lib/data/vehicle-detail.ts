@@ -521,3 +521,45 @@ export const referenceProductDetailContent: DetailContent = {
   ...referenceDetailContent,
   includedFeatures: referenceProductFeatures,
 };
+
+/** Desktop automotive sample copy keeps the complete reference detail composition. */
+export const desktopReferenceDetailContent: DetailContent = {
+  ...referenceDetailContent,
+  overview: [
+    message("reference.vehicle.desktop.overview.1"),
+    message("reference.vehicle.desktop.overview.2"),
+  ],
+  questions: referenceQuestions.map((question, index) => ({
+    ...question,
+    question: message(
+      (
+        [
+          "reference.vehicle.desktop.questions.availability.question",
+          "reference.vehicle.desktop.questions.viewing.question",
+          "reference.vehicle.desktop.questions.finance.question",
+        ] as const
+      )[index],
+    ),
+    answer: message(
+      (
+        [
+          "reference.vehicle.desktop.questions.availability.answer",
+          "reference.vehicle.desktop.questions.viewing.answer",
+          "reference.vehicle.desktop.questions.finance.answer",
+        ] as const
+      )[index],
+    ),
+  })),
+  reviews: referenceReviews.map((review, index) => ({
+    ...review,
+    text: message(
+      (
+        [
+          "reference.vehicle.desktop.reviews.sarah-johnson.text",
+          "reference.vehicle.desktop.reviews.michael-smith.text",
+          "reference.vehicle.desktop.reviews.emily-williams.text",
+        ] as const
+      )[index],
+    ),
+  })),
+};

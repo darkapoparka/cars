@@ -5,11 +5,17 @@
   const locale = useLocale();
   import { dealer } from "#lib/content.ts";
   import DemoForm from "#lib/components/DemoForm.svelte";
+  import { MediaQuery } from "svelte/reactivity";
+  const desktop = new MediaQuery("(min-width: 992px)");
   let { idPrefix = "contact" }: { idPrefix?: string } = $props();
 </script>
 
 <DemoForm class="form-contact" data-contact-enquiry>
-  {#if dealer.businessPreview}<p
+  {#if desktop.current}
+    <p class="desktop-form-help neutral-500 desktop-type-body-small">
+      {locale.t("contact.polish.formHelp")}
+    </p>
+  {:else if dealer.businessPreview}<p
       class="text-sm-medium neutral-500 desktop-type-body-small"
       >{locale.t("dealer.enquiry.draft")}</p
     >{/if}
@@ -93,37 +99,51 @@
         ></textarea>
       </div>
     </div>
-    <div class="box-remember-forgot">
-      <div class="form-group">
-        <div class="remeber-me">
-          <label class="text-sm-medium neutral-500 desktop-type-label"
-            ><input
-              class="cb-remember"
-              type="checkbox"
-              aria-label={locale.t("ui.contact-enquiry-form.preview-field")}
-            />{locale.t("ui.contact-enquiry-form.agree-to-our")}
-            <a
-              class="text-sm-medium neutral-1000"
-              href={locale.href("/terms")}
-              aria-label={locale.t("ui.contact-enquiry-form.terms-of-service")}
-              >{locale.t("ui.contact-enquiry-form.terms-of-service")}</a
-            ></label
-          >
+    {#if desktop.current}
+      <div class="col-lg-12">
+        <p class="desktop-form-terms neutral-500 desktop-type-body-small">
+          {locale.t("contact.polish.readTerms")}
+          <a href={locale.href("/terms")}
+            >{locale.t("ui.contact-enquiry-form.terms-of-service")}</a
+          >.
+        </p>
+      </div>
+    {:else}
+      <div class="box-remember-forgot">
+        <div class="form-group">
+          <div class="remeber-me">
+            <label class="text-sm-medium neutral-500 desktop-type-label"
+              ><input
+                class="cb-remember"
+                type="checkbox"
+                aria-label={locale.t("ui.contact-enquiry-form.preview-field")}
+              />{locale.t("ui.contact-enquiry-form.agree-to-our")}
+              <a
+                class="text-sm-medium neutral-1000"
+                href={locale.href("/terms")}
+                aria-label={locale.t(
+                  "ui.contact-enquiry-form.terms-of-service",
+                )}>{locale.t("ui.contact-enquiry-form.terms-of-service")}</a
+              ></label
+            >
+          </div>
         </div>
       </div>
-    </div>
+    {/if}
     <div class="col-lg-12">
       <button
-        class="btn btn-book desktop-type-control"
+        class={desktop.current
+          ? "btn btn-book desktop-action-primary desktop-panel-action rounded-pill desktop-type-pill desktop-enquiry-submit"
+          : "btn btn-book desktop-type-control"}
         aria-label={locale.t(
-          dealer.businessPreview
+          desktop.current || dealer.businessPreview
             ? "dealer.enquiry.preview"
             : "ui.contact-enquiry-form.send-message",
         )}
         type="submit"
       >
         {locale.t(
-          dealer.businessPreview
+          desktop.current || dealer.businessPreview
             ? "dealer.enquiry.preview"
             : "ui.contact-enquiry-form.send-message",
         )}
@@ -148,3 +168,26 @@
     </div>
   </div>
 </DemoForm>
+
+<style>
+  @media (min-width: 992px) {
+    .desktop-form-help {
+      margin-bottom: var(--karento-desktop-space-6);
+    }
+    .desktop-form-terms {
+      margin-bottom: var(--karento-desktop-space-4);
+    }
+    .desktop-form-terms a {
+      color: var(--bs-neutral-1000);
+      text-decoration: underline;
+      text-underline-offset: var(--karento-desktop-space-1);
+    }
+    .btn.desktop-enquiry-submit {
+      width: auto;
+    }
+    .desktop-enquiry-submit svg {
+      margin: 0;
+      stroke: currentColor !important;
+    }
+  }
+</style>

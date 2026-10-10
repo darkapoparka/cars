@@ -185,12 +185,14 @@ export interface ServiceSpot {
   readonly description: string;
   readonly descriptionKey?: PlainMessageKey;
   readonly href: string;
+  readonly desktopTitleKey?: PlainMessageKey;
 }
 export const serviceSpots = [
   {
     id: "venice",
     image: "/assets/imgs/services/services-1/img-1.png",
     title: "Venice",
+    desktopTitleKey: "referenceHome.services.import",
     description: "356 Properties",
     descriptionKey: "reference.dynamic.service-spots.venice.description",
     href: "/services",
@@ -199,6 +201,7 @@ export const serviceSpots = [
     id: "new-york",
     image: "/assets/imgs/services/services-1/img-2.png",
     title: "New York",
+    desktopTitleKey: "referenceHome.services.sell",
     description: "356 Properties",
     descriptionKey: "reference.dynamic.service-spots.new-york.description",
     href: "/services",
@@ -207,6 +210,7 @@ export const serviceSpots = [
     id: "amsterdam",
     image: "/assets/imgs/services/services-1/img-3.png",
     title: "Amsterdam",
+    desktopTitleKey: "referenceHome.services.buy",
     description: "356 Properties",
     descriptionKey: "reference.dynamic.service-spots.amsterdam.description",
     href: "/services",
@@ -215,6 +219,7 @@ export const serviceSpots = [
     id: "budapest",
     image: "/assets/imgs/services/services-1/img-4.png",
     title: "Budapest",
+    desktopTitleKey: "referenceHome.services.lease",
     description: "356 Properties",
     descriptionKey: "reference.dynamic.service-spots.budapest.description",
     href: "/services",

@@ -9,14 +9,27 @@
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   const locale = useLocale();
   const phone = new MediaQuery("(max-width: 767.98px)");
+  const desktop = new MediaQuery("(min-width: 992px)");
   let {
     header,
     mobileControls,
+    desktopPrimary = false,
   }: {
     header: DiscoveryBannerContent;
     mobileControls?: Snippet;
+    desktopPrimary?: boolean;
   } = $props();
 </script>
+
+{#snippet titleContent()}
+  {#if phone.current && header.mobileTitle}{locale.text(
+      header.mobileTitle,
+    )}{:else}{locale.text(
+      header.titleLines[0],
+    )}{#if header.titleLines.length === 2}<br />&#32;{locale.text(
+        header.titleLines[1],
+      )}{/if}{/if}
+{/snippet}
 
 <div class="page-header-2 pt-30 background-body"
   ><div class="custom-container position-relative mx-auto"
@@ -24,15 +37,11 @@
       class="container position-absolute z-1 top-50 start-50 pb-70 translate-middle text-center"
       ><span class="text-sm-bold bg-2 px-4 py-3 rounded-12 desktop-type-eyebrow"
         >{locale.text(header.label)}</span
-      >{" "}<h2 class="text-white mt-4 desktop-type-hero"
-        >{#if phone.current && header.mobileTitle}{locale.text(
-            header.mobileTitle,
-          )}{:else}{locale.text(
-            header.titleLines[0],
-          )}{#if header.titleLines.length === 2}{" "}<br />{" "}{locale.text(
-              header.titleLines[1],
-            )}{/if}{/if}</h2
-      ><span class="text-white text-lg-medium desktop-type-lead"
+      >&#32;{#if desktop.current && desktopPrimary}<h1
+          class="text-white mt-4 desktop-type-hero">{@render titleContent()}</h1
+        >{:else}<h2 class="text-white mt-4 desktop-type-hero"
+          >{@render titleContent()}</h2
+        >{/if}<span class="text-white text-lg-medium desktop-type-lead"
         >{locale.text(
           phone.current
             ? (header.mobileDescription ?? header.description)

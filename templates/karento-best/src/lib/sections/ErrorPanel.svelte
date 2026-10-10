@@ -40,3 +40,11 @@
     </div>
   </div>
 </div>
+
+<style>
+  @media (min-width: 992px) {
+    .btn-primary img {
+      filter: brightness(0) invert(1);
+    }
+  }
+</style>

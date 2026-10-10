@@ -7,6 +7,7 @@
   import { page } from "$app/state";
   import { resolveRoute } from "#lib/routes.ts";
   import { usePreview } from "#lib/preview.svelte.ts";
+  import MobileIcon from "#lib/components/mobile/MobileIcon.svelte";
 
   const preview = usePreview();
   const route = $derived(resolveRoute(page.params.path ?? ""));
@@ -15,13 +16,13 @@
       {
         href: "/",
         label: locale.t("navigation.home"),
-        path: "M3 10 12 3l9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z",
+        icon: "home" as const,
         routes: ["index-3", "index-2", "index"],
       },
       {
         href: "/vehicles",
         label: locale.t("navigation.vehicles"),
-        path: "m5 7 2-4h10l2 4M3 10l2-3h14l2 3v8H3Zm0 8v3m18-3v3M6 13h2m8 0h2",
+        icon: "vehicles" as const,
         routes: [
           "cars-list-1",
           "cars-list-2",
@@ -36,13 +37,13 @@
       {
         href: "/services",
         label: locale.t("navigation.services"),
-        path: "M14 3a6 6 0 0 0-7 8L3 15a3 3 0 0 0 4 4l4-4a6 6 0 0 0 8-7l-4 4-3-3 4-4Z",
+        icon: "services" as const,
         routes: ["services"],
       },
       {
         href: "/shop",
         label: locale.t("navigation.shop"),
-        path: "M4 8h16l1 13H3ZM8 8V6a4 4 0 0 1 8 0v2",
+        icon: "shop" as const,
         routes: ["shop-list", "shop-details"],
       },
     ].filter(
@@ -52,24 +53,6 @@
   );
   const vehicleDetail = $derived(route?.startsWith("cars-details-") ?? false);
 </script>
-
-{#snippet icon(path: string)}
-  <svg
-    width="22"
-    height="22"
-    viewBox="0 0 24 24"
-    fill="none"
-    aria-hidden="true"
-  >
-    <path
-      d={path}
-      stroke="currentColor"
-      stroke-width="1.6"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-  </svg>
-{/snippet}
 
 {#if vehicleDetail}
   <aside
@@ -82,13 +65,13 @@
       href={locale.href("/vehicles")}
       aria-label={locale.t("ui.mobile-navigation.back-to-vehicles")}
     >
-      {@render icon("m14 6-6 6 6 6")}
+      <MobileIcon name="chevron-left" size="action" />
     </a>
     <a
       class="mobile-enquiry-link"
       href={locale.href("/contact#contact-enquiry")}
       >{locale.t("ui.mobile-navigation.ask-about-this-car")}
-      {@render icon("M5 12h14m-6-6 6 6-6 6")}</a
+      <MobileIcon name="arrow-right" /></a
     >
   </aside>
 {/if}
@@ -106,7 +89,7 @@
         ? "page"
         : undefined}
     >
-      {@render icon(link.path)}
+      <MobileIcon name={link.icon} size="action" />
       <span>{link.label}</span>
     </a>
   {/each}
@@ -120,7 +103,7 @@
       preview.drawer = true;
     }}
   >
-    {@render icon("M4 6h16M4 12h16M4 18h16")}
+    <MobileIcon name="menu" size="action" />
     <span>{locale.t("ui.mobile-navigation.menu")}</span>
   </button>
 </nav>

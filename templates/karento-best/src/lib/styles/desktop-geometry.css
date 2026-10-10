@@ -87,6 +87,14 @@
   .main .desktop-card-footer {
     gap: var(--karento-desktop-card-footer-gap);
   }
+  html:root .main .pagination .page-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  html:root .main .pagination .page-link svg {
+    display: block;
+  }
   html:root .main .desktop-action-primary {
     gap: var(--karento-desktop-space-2);
     border: 1px solid var(--bs-neutral-1000);

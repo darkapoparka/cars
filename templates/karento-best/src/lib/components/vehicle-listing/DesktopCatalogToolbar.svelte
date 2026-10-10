@@ -143,8 +143,8 @@
         </svg>
         <span
           >{defaultLayout === "drawer"
-            ? "Filter modals"
-            : "Filter drawer"}</span
+            ? locale.t("ui.desktop-catalog-toolbar.filter-modals")
+            : locale.t("ui.desktop-catalog-toolbar.filter-drawer")}</span
         >
       </button>
     {/if}

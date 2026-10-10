@@ -78,9 +78,19 @@
           >{vehicleTitle ??
             (dealer.businessPreview
               ? locale.t("vehicle.page")
-              : referenceHeading.title)}
+              : referenceHeading.titleKey
+                ? locale.t(referenceHeading.titleKey)
+                : referenceHeading.title)}
         </span></li
       >
     </ul>
   </div>
 </section>
+
+<style>
+  @media (min-width: 992px) {
+    .karento-product-breadcrumb .breadcrumbs {
+      border-radius: var(--karento-desktop-pill-radius) !important;
+    }
+  }
+</style>

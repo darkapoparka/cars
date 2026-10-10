@@ -4,7 +4,12 @@
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   const locale = useLocale();
   import FaqColumns from "#lib/components/faq/FaqColumns.svelte";
-  import { referenceCardFaqItems } from "#lib/data/faq.ts";
+  import {
+    desktopGeneralFaqItems,
+    referenceCardFaqItems,
+  } from "#lib/data/faq.ts";
+  import { MediaQuery } from "svelte/reactivity";
+  const desktop = new MediaQuery("(min-width: 992px)");
   const idBase = $props.id();
 </script>
 
@@ -18,9 +23,13 @@
       >
     </div>
     <FaqColumns
-      items={referenceCardFaqItems}
+      items={desktop.current ? desktopGeneralFaqItems : referenceCardFaqItems}
       {idBase}
-      defaultOpen={"#" + idBase + "-collapse01"}
+      splitAt={desktop.current ? 4 : 7}
+      defaultOpen={"#" +
+        idBase +
+        "-" +
+        (desktop.current ? desktopGeneralFaqItems[0].suffix : "collapse01")}
       appearance="rounded"
     />
   </div>

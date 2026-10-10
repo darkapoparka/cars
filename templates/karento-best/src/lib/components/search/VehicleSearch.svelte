@@ -113,7 +113,7 @@
       aria-expanded={open}
       onclick={() => openSearch()}
     >
-      <MobileIcon name="search" size={20} />
+      <MobileIcon name="search" size="action" />
       <span>{searchLabel}</span>
     </button>
     <MobilePill
@@ -159,7 +159,7 @@
         : locale.t("ui.vehicle-search.make-or-model")}</label
     >
     <div class="mobile-search-input">
-      <MobileIcon name="search" size={20} />
+      <MobileIcon name="search" size="action" />
       <input
         id={optionsId}
         name="q"
@@ -177,7 +177,7 @@
         ? locale.t("ui.vehicle-search.search-products")
         : locale.t("catalog.searchVehicles")}
       class="mobile-search-submit"
-      ><MobileIcon name="arrow-right" size={20} /></button
+      ><MobileIcon name="arrow-right" size="action" /></button
     >
   </form>
 {:else if dealer.businessPreview && kind === "vehicle"}

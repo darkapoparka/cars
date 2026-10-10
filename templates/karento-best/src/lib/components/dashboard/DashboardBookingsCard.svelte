@@ -18,6 +18,7 @@
   } from "#lib/data/dashboard-mobile.ts";
   import MobilePill from "#lib/components/mobile/MobilePill.svelte";
   const phone = new MediaQuery("(max-width: 767.98px)");
+  const desktop = new MediaQuery("(min-width: 992px)");
   let query = $state("");
   let vehicleType = $state<CatalogText>();
   let sort = $state<CatalogText>();
@@ -32,7 +33,7 @@
     dashboardDropdowns.bookingsSort,
   );
   const rows = $derived(
-    phone.current
+    phone.current || desktop.current
       ? matchDashboardBookings(
           dashboardBookingRows.memberBookings,
           query,
@@ -73,33 +74,40 @@
           />
         </div>
         <DashboardDropdown
-          config={phone.current
+          config={phone.current || desktop.current
             ? typeConfig
             : dashboardDropdowns.bookingsVehicleType}
           bind:selection={vehicleType}
         />
         <DashboardDropdown
-          config={phone.current ? sortConfig : dashboardDropdowns.bookingsSort}
+          config={phone.current || desktop.current
+            ? sortConfig
+            : dashboardDropdowns.bookingsSort}
           bind:selection={sort}
         />
       </div>
     </div>
   </div>
   <div class="card-body">
-    {#if phone.current}<span
+    {#if phone.current || desktop.current}<span
         class="visually-hidden"
         aria-live="polite"
         aria-atomic="true">{locale.count(rows.length, "results")}</span
       >{/if}
     <div class="card shadow-none mb-2">
-      {#if phone.current && rows.length === 0}
+      {#if (phone.current || desktop.current) && rows.length === 0}
         <div class="py-4 text-center">
           <p class="neutral-500 mb-3">{locale.count(0, "results")}</p>
-          <MobilePill
-            label={locale.t("ui.mobile-catalog.clear-filters")}
-            variant="secondary"
-            onclick={clear}
-          />
+          {#if desktop.current}<button
+              type="button"
+              class="desktop-card-action desktop-action-primary"
+              onclick={clear}
+              >{locale.t("ui.mobile-catalog.clear-filters")}</button
+            >{:else}<MobilePill
+              label={locale.t("ui.mobile-catalog.clear-filters")}
+              variant="secondary"
+              onclick={clear}
+            />{/if}
         </div>
       {:else}
         <div class="table-responsive">

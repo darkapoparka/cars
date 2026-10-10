@@ -7,6 +7,18 @@
   import DemoActionLink from "#lib/components/DemoActionLink.svelte";
   import { dashboardFields } from "#lib/data/dashboard.ts";
   import DashboardFormField from "#lib/components/dashboard/DashboardFormField.svelte";
+  import { MediaQuery } from "svelte/reactivity";
+  import { message } from "#lib/i18n/text.ts";
+  const desktop = new MediaQuery("(min-width: 992px)");
+  const listingPrice = $derived(
+    desktop.current
+      ? {
+          ...dashboardFields.listingPrice,
+          placeholder: message("ui.dashboard-listing-pricing-card.price"),
+          ariaLabel: message("ui.dashboard-listing-pricing-card.price"),
+        }
+      : dashboardFields.listingPrice,
+  );
 </script>
 
 <div class="card shadow-none flex-fill">
@@ -19,7 +31,7 @@
   </div>
   <div class="card-body">
     <div class="row">
-      <DashboardFormField field={dashboardFields.listingPrice} />
+      <DashboardFormField field={listingPrice} />
     </div>
     <div class="row mb-2">
       <p class="text-md-bold neutral-1000 mb-12"

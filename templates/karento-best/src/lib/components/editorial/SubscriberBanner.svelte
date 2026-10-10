@@ -4,6 +4,8 @@
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   const locale = useLocale();
   import DemoForm from "#lib/components/DemoForm.svelte";
+  import { MediaQuery } from "svelte/reactivity";
+  const desktop = new MediaQuery("(min-width: 992px)");
 
   let { spacing = "" }: { spacing?: string } = $props();
 </script>
@@ -13,11 +15,17 @@
     <div class="block-subscriber">
       <div class="subscriber-left">
         <span class="btn btn-primary desktop-display-badge desktop-type-pill"
-          >{locale.t("ui.subscriber-banner.get-instant-discounts")}</span
+          >{locale.t(
+            desktop.current
+              ? "editorial.signup.previewLabel"
+              : "ui.subscriber-banner.get-instant-discounts",
+          )}</span
         >
         <h4 class="mt-15 mb-30 neutral-1000 desktop-type-banner"
           >{locale.t(
-            "ui.subscriber-banner.sign-up-to-unlock-secret-deals-instantly",
+            desktop.current
+              ? "editorial.signup.previewTitle"
+              : "ui.subscriber-banner.sign-up-to-unlock-secret-deals-instantly",
           )}</h4
         >
         <DemoForm class="form-subscriber desktop-subscribe-controls" action="#">
@@ -32,12 +40,24 @@
           <input
             class="btn btn-submit desktop-type-control"
             type="submit"
-            value={locale.t("ui.subscriber-banner.subscribe")}
-            aria-label={locale.t("ui.subscriber-banner.subscribe")}
+            value={locale.t(
+              desktop.current
+                ? "footer.polish.previewSignup"
+                : "ui.subscriber-banner.subscribe",
+            )}
+            aria-label={locale.t(
+              desktop.current
+                ? "footer.polish.previewSignup"
+                : "ui.subscriber-banner.subscribe",
+            )}
           />
         </DemoForm>
         <p class="text-sm-medium neutral-500 mt-15 desktop-type-body-small"
-          >{locale.t("ui.subscriber-banner.no-ads-no-trails-no-commitments")}</p
+          >{locale.t(
+            desktop.current
+              ? "editorial.signup.previewHelp"
+              : "ui.subscriber-banner.no-ads-no-trails-no-commitments",
+          )}</p
         >
       </div>
       <div class="subscriber-right"></div>

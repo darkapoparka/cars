@@ -117,6 +117,7 @@ export const vehicleListings = {
     vehicle({
       id: "/assets/imgs/cars-listing/cars-listing-6/car-6.png:Hyundai Sonata SEL Plus",
       image: "/assets/imgs/cars-listing/cars-listing-6/car-6.png",
+      detailImage: "/assets/imgs/cars-listing/cars-listing-1/car-2.png",
       title: "Hyundai Sonata SEL Plus",
       price: "$72.15",
       listingHighlights: ["new-import"],

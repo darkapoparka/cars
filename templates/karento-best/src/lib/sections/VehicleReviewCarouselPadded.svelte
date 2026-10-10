@@ -178,3 +178,11 @@
     </div>
   </section>
 {/if}
+
+<style>
+  @media (min-width: 992px) {
+    .item-banner-slide-review span.text-primary {
+      color: var(--bs-neutral-0) !important;
+    }
+  }
+</style>

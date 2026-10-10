@@ -15,6 +15,7 @@ import { termsEn } from "./terms.ts";
 import { headerEn } from "./page-headers.ts";
 import { uiEn } from "./ui.ts";
 import { finalPolishEn } from "./final-polish.ts";
+import { contactFooterEn } from "./contact-footer.ts";
 /** Stable message identifiers. Business facts and listing titles do not belong here. */
 export const en = {
   ...referenceFeaturedEn,
@@ -34,4 +35,5 @@ export const en = {
   ...uiEn,
   ...coreEn,
   ...finalPolishEn,
+  ...contactFooterEn,
 } as const;

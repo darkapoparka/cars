@@ -6,6 +6,7 @@
   import DemoActionLink from "#lib/components/DemoActionLink.svelte";
   import { MediaQuery } from "svelte/reactivity";
   const phone = new MediaQuery("(max-width: 767.98px)");
+  const desktop = new MediaQuery("(min-width: 992px)");
 </script>
 
 <div class="card shadow-none flex-fill">
@@ -24,8 +25,8 @@
       type="text"
       class="form-control"
       placeholder="$"
-      inputmode={phone.current ? "decimal" : undefined}
-      aria-label={phone.current
+      inputmode={phone.current || desktop.current ? "decimal" : undefined}
+      aria-label={phone.current || desktop.current
         ? locale.t("ui.dashboard-transactions-card.amount")
         : "$"}
     />
@@ -48,11 +49,11 @@
                     ><i class="fi fi-rr-user"></i></span
                   >
                   <input
-                    type={phone.current ? "text" : "email"}
+                    type={phone.current || desktop.current ? "text" : "email"}
                     class="form-control"
                     placeholder={locale.t("reference.controls.nameOnCard")}
                     id="field-0c8b68bb-0"
-                    aria-label={phone.current
+                    aria-label={phone.current || desktop.current
                       ? undefined
                       : locale.t("reference.controls.nameOnCard")}
                   />
@@ -71,12 +72,16 @@
                     ><i class="fi fi-rr-credit-card"></i></span
                   >
                   <input
-                    type={phone.current ? "text" : "email"}
-                    inputmode={phone.current ? "numeric" : undefined}
+                    type={phone.current || desktop.current ? "text" : "email"}
+                    inputmode={phone.current || desktop.current
+                      ? "numeric"
+                      : undefined}
                     class="form-control"
                     placeholder="*** *** *** ***"
                     id="field-0c8b68bb-1"
-                    aria-label={phone.current ? undefined : "*** *** *** ***"}
+                    aria-label={phone.current || desktop.current
+                      ? undefined
+                      : "*** *** *** ***"}
                   />
                 </div>
               </div>
@@ -93,14 +98,16 @@
                     ><i class="fi fi-rr-calendar-lines"></i></span
                   >
                   <input
-                    type={phone.current ? "text" : "email"}
-                    inputmode={phone.current ? "numeric" : undefined}
+                    type={phone.current || desktop.current ? "text" : "email"}
+                    inputmode={phone.current || desktop.current
+                      ? "numeric"
+                      : undefined}
                     class="form-control"
                     placeholder={locale.t(
                       "reference.ancillary.DashboardAddAmountCard.mm-yyyy",
                     )}
                     id="field-0c8b68bb-2"
-                    aria-label={phone.current
+                    aria-label={phone.current || desktop.current
                       ? undefined
                       : locale.t(
                           "reference.ancillary.DashboardAddAmountCard.mm-yyyy",
@@ -120,12 +127,16 @@
                     ><i class="fi fi-rr-qr-scan"></i></span
                   >
                   <input
-                    type={phone.current ? "text" : "email"}
-                    inputmode={phone.current ? "numeric" : undefined}
+                    type={phone.current || desktop.current ? "text" : "email"}
+                    inputmode={phone.current || desktop.current
+                      ? "numeric"
+                      : undefined}
                     class="form-control"
                     placeholder="***"
                     id="field-0c8b68bb-3"
-                    aria-label={phone.current ? undefined : "***"}
+                    aria-label={phone.current || desktop.current
+                      ? undefined
+                      : "***"}
                   />
                 </div>
               </div>

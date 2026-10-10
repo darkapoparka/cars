@@ -53,10 +53,12 @@
       <div class="d-flex align-items-center">
         <DemoActionLink
           href="#!"
+          class="dashboard-booking-action"
           data-bs-toggle="modal"
           data-bs-target={booking.actionTarget}
           aria-label={locale.t("ui.dashboard-booking-row.view-details")}
-          ><i class="fi fi-rr-arrow-up-right-from-square"></i></DemoActionLink
+          ><i class="fi fi-rr-arrow-up-right-from-square" aria-hidden="true"
+          ></i></DemoActionLink
         >
       </div>
     </td>{/if}

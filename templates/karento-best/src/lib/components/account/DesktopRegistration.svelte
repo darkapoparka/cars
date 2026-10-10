@@ -22,8 +22,8 @@
           <p class="registration-label desktop-type-eyebrow"
             >{locale.t("ui.desktop-registration.register")}</p
           >
-          <h4 class="neutral-1000 desktop-type-panel"
-            >{locale.t("ui.desktop-registration.create-an-account")}</h4
+          <h1 class="neutral-1000 desktop-type-panel"
+            >{locale.t("ui.desktop-registration.create-an-account")}</h1
           >
         </div>
         <p class="registration-note desktop-type-body-small"

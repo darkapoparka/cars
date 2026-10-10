@@ -18,6 +18,7 @@
   } from "#lib/data/dashboard-mobile.ts";
   import MobilePill from "#lib/components/mobile/MobilePill.svelte";
   const phone = new MediaQuery("(max-width: 767.98px)");
+  const desktop = new MediaQuery("(min-width: 992px)");
   let query = $state("");
   let make = $state<CatalogText>();
   let sort = $state<CatalogText>();
@@ -29,7 +30,7 @@
     dashboardDropdowns.ownerListingsSort,
   );
   const cards = $derived(
-    phone.current
+    phone.current || desktop.current
       ? matchDashboardVehicles(dashboardOwnerInventory, query, make, sort)
       : dashboardOwnerInventory,
   );
@@ -48,7 +49,11 @@
   <div class="card-header">
     <div class="d-flex justify-content-between align-items-center">
       <span class="neutral-1000 text-md-bold fs-5 desktop-type-panel"
-        >{locale.t("ui.dashboard-owner-listings-card.booking-list")}</span
+        >{locale.t(
+          desktop.current
+            ? "reference.dynamic.dashboard-audiences.owner.links.2.label"
+            : "ui.dashboard-owner-listings-card.booking-list",
+        )}</span
       >
       <div class="fillter d-flex gap-2">
         <div class="input-icon-start position-relative">
@@ -64,13 +69,13 @@
           />
         </div>
         <DashboardDropdown
-          config={phone.current
+          config={phone.current || desktop.current
             ? makeConfig
             : dashboardDropdowns.ownerListingsVehicleType}
           bind:selection={make}
         />
         <DashboardDropdown
-          config={phone.current
+          config={phone.current || desktop.current
             ? priceConfig
             : dashboardDropdowns.ownerListingsSort}
           bind:selection={sort}
@@ -79,21 +84,26 @@
     </div>
   </div>
   <div class="card-body">
-    {#if phone.current}<span
+    {#if phone.current || desktop.current}<span
         class="visually-hidden"
         aria-live="polite"
         aria-atomic="true">{locale.count(cards.length)}</span
       >{/if}
-    {#if phone.current && cards.length === 0}
+    {#if (phone.current || desktop.current) && cards.length === 0}
       <div class="py-4 text-center">
         <p class="neutral-500 mb-3"
           >{locale.t("ui.desktop-catalog-results.no-matching-vehicles")}</p
         >
-        <MobilePill
-          label={locale.t("ui.mobile-catalog.clear-filters")}
-          variant="secondary"
-          onclick={clear}
-        />
+        {#if desktop.current}<button
+            type="button"
+            class="desktop-card-action desktop-action-primary"
+            onclick={clear}
+            >{locale.t("ui.mobile-catalog.clear-filters")}</button
+          >{:else}<MobilePill
+            label={locale.t("ui.mobile-catalog.clear-filters")}
+            variant="secondary"
+            onclick={clear}
+          />{/if}
       </div>
     {:else}
       <div class="box-grid-tours">

@@ -7,7 +7,17 @@
   import { slider } from "#lib/vendor.ts";
   import { MediaQuery } from "svelte/reactivity";
   import MobileNewsCollection from "#lib/components/editorial/MobileNewsCollection.svelte";
+  import {
+    newsArticleDestination,
+    referenceNewsLinkIds,
+  } from "#lib/data/news.ts";
   const phone = new MediaQuery("(max-width: 767.98px)");
+  const desktop = new MediaQuery("(min-width: 992px)");
+  function articleHref(id: string) {
+    return locale.href(
+      desktop.current ? newsArticleDestination({ id }) : "/news/article",
+    );
+  }
 </script>
 
 {#if phone.current}
@@ -90,7 +100,7 @@
                 <div class="card-news background-card">
                   <div class="card-image">
                     <a
-                      href={locale.href("/news/article")}
+                      href={articleHref(referenceNewsLinkIds.escalade)}
                       aria-label={locale.t(
                         "ui.upcoming-vehicle-news.view-details",
                       )}
@@ -120,7 +130,7 @@
                     <div class="card-title"
                       ><a
                         class="text-xl-bold neutral-1000 d-block desktop-type-card"
-                        href={locale.href("/news/article")}
+                        href={articleHref(referenceNewsLinkIds.escalade)}
                         aria-label={locale.t("referenceHome.news.escalade")}
                         >{locale.t("referenceHome.news.escalade")}
                       </a></div
@@ -139,7 +149,7 @@
                         <div class="card-button"
                           ><a
                             class="btn btn-gray desktop-type-pill"
-                            href={locale.href("/news/article")}
+                            href={articleHref(referenceNewsLinkIds.escalade)}
                             aria-label={locale.t(
                               "ui.upcoming-vehicle-news.keep-reading",
                             )}
@@ -157,7 +167,7 @@
                 <div class="card-news background-card">
                   <div class="card-image">
                     <a
-                      href={locale.href("/news/article")}
+                      href={articleHref(referenceNewsLinkIds.bmw)}
                       aria-label={locale.t(
                         "ui.upcoming-vehicle-news.view-details",
                       )}
@@ -187,7 +197,7 @@
                     <div class="card-title"
                       ><a
                         class="text-xl-bold neutral-1000 d-block desktop-type-card"
-                        href={locale.href("/news/article")}
+                        href={articleHref(referenceNewsLinkIds.bmw)}
                         aria-label={locale.t("referenceHome.news.bmw")}
                         >{locale.t("referenceHome.news.bmw")}</a
                       ></div
@@ -206,7 +216,7 @@
                         <div class="card-button"
                           ><a
                             class="btn btn-gray desktop-type-pill"
-                            href={locale.href("/news/article")}
+                            href={articleHref(referenceNewsLinkIds.bmw)}
                             aria-label={locale.t(
                               "ui.upcoming-vehicle-news.keep-reading",
                             )}
@@ -224,7 +234,7 @@
                 <div class="card-news background-card">
                   <div class="card-image">
                     <a
-                      href={locale.href("/news/article")}
+                      href={articleHref(referenceNewsLinkIds.rodeo)}
                       aria-label={locale.t(
                         "ui.upcoming-vehicle-news.view-details",
                       )}
@@ -254,7 +264,7 @@
                     <div class="card-title"
                       ><a
                         class="text-xl-bold neutral-1000 d-block desktop-type-card"
-                        href={locale.href("/news/article")}
+                        href={articleHref(referenceNewsLinkIds.rodeo)}
                         aria-label={locale.t("referenceHome.news.rodeo")}
                         >{locale.t("referenceHome.news.rodeo")}</a
                       ></div
@@ -273,7 +283,7 @@
                         <div class="card-button"
                           ><a
                             class="btn btn-gray desktop-type-pill"
-                            href={locale.href("/news/article")}
+                            href={articleHref(referenceNewsLinkIds.rodeo)}
                             aria-label={locale.t(
                               "ui.upcoming-vehicle-news.keep-reading",
                             )}

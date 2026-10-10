@@ -338,8 +338,8 @@
     line-height: var(--karento-type-nav-leading);
   }
   .karento-mobile-navigation svg {
-    width: calc(var(--karento-space-4) + var(--karento-space-1));
-    height: calc(var(--karento-space-4) + var(--karento-space-1));
+    width: var(--karento-control-icon-action);
+    height: var(--karento-control-icon-action);
     flex-shrink: 0;
   }
   .karento-mobile-navigation span {
@@ -412,7 +412,7 @@
     box-shadow: 0 8px 40px rgb(0 0 0 / 15%);
   }
   .karento-calendar :is(td button, th button) {
-    min-height: 44px;
+    min-height: var(--karento-touch-target);
   }
   .karento-calendar table {
     width: 100%;
@@ -424,7 +424,12 @@
     padding: var(--karento-space-1) 0;
   }
   .karento-calendar :is(.prev, .next) {
-    width: calc(100% / 7);
+    width: var(--karento-touch-target);
+    background-image: none;
+  }
+  .karento-calendar :is(.prev, .next) button {
+    display: grid;
+    place-items: center;
   }
 
   /* Native swipe rails reuse the original cards; the catalogue stays vertical. */
@@ -1102,17 +1107,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 44px;
-    border-radius: 12px;
+    min-height: var(--karento-touch-target);
+    border-radius: var(--karento-radius-card);
   }
   .mobile-back-to-vehicles {
-    flex: 0 0 44px;
+    flex: 0 0 var(--karento-touch-target);
     border: 1px solid var(--bs-border-color);
     color: var(--bs-neutral-1000);
   }
   .mobile-enquiry-link {
     flex: 1;
-    gap: 16px;
+    gap: var(--karento-space-4);
     background: var(--karento-accent);
     color: var(--karento-accent-contrast);
     font-size: var(--karento-type-control-size);
@@ -1363,8 +1368,9 @@
     box-shadow: none;
   }
   .mobile-search-input > svg {
-    flex: 0 0 17px;
-    width: 17px;
+    flex: 0 0 var(--karento-control-icon-action);
+    width: var(--karento-control-icon-action);
+    height: var(--karento-control-icon-action);
     margin: 0 !important;
     color: var(--bs-neutral-500);
   }

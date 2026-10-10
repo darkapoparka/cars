@@ -44,7 +44,7 @@
 {#snippet contents()}
   {#if leadingIcon}<MobileIcon
       name={leadingIcon}
-      size={iconOnly ? 20 : 16}
+      size={iconOnly ? "action" : "compact"}
     />{/if}
   <span
     class={iconOnly ? "mobile-pill-label visually-hidden" : "mobile-pill-label"}
@@ -55,7 +55,7 @@
     >{/if}
   {#if trailingIcon}<MobileIcon
       name={trailingIcon}
-      size={iconOnly ? 20 : 16}
+      size={iconOnly ? "action" : "compact"}
     />{/if}
 {/snippet}
 

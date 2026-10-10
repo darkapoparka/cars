@@ -6,6 +6,8 @@
   import DemoActionButton from "#lib/components/DemoActionButton.svelte";
   import { dashboardFields } from "#lib/data/dashboard.ts";
   import DashboardFormField from "#lib/components/dashboard/DashboardFormField.svelte";
+  import { MediaQuery } from "svelte/reactivity";
+  const desktop = new MediaQuery("(min-width: 992px)");
 </script>
 
 <div class="card shadow-none flex-fill mb-3">
@@ -17,7 +19,10 @@
   <div class="card-body">
     <div class="box-avatar-profile d-flex align-items-center">
       <div class="image-avatar me-3">
-        <img src="/assets/imgs/section-1/img-2.png" alt="Travilla" />
+        <img
+          src="/assets/imgs/section-1/img-2.png"
+          alt={desktop.current ? "" : "Travilla"}
+        />
       </div>
       <DemoActionButton
         class="btn btn-primary me-3"

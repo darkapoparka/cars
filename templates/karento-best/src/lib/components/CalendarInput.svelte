@@ -5,6 +5,8 @@
   const locale = useLocale();
   import { locales } from "#lib/i18n/locales.ts";
   import { tick, untrack } from "svelte";
+  import { MediaQuery } from "svelte/reactivity";
+  import MobileIcon from "#lib/components/mobile/MobileIcon.svelte";
   import type { Attachment } from "svelte/attachments";
   import type { HTMLInputAttributes } from "svelte/elements";
   import {
@@ -16,6 +18,7 @@
     parseDate,
   } from "#lib/calendar.ts";
   const generatedId = $props.id();
+  const phone = new MediaQuery("(max-width: 767.98px)", false);
   let {
     value = $bindable(""),
     class: className = "desktop-type-body",
@@ -250,7 +253,11 @@
                     mode === "years" ? -120 : mode === "months" ? -12 : -1,
                   );
                 }}
-              ></button></th
+                >{#if phone.current}<MobileIcon
+                    name="chevron-left"
+                    size="action"
+                  />{/if}</button
+              ></th
             ><th colspan="5" class="datepicker-switch"
               ><button
                 class="desktop-type-control"
@@ -281,7 +288,11 @@
                     mode === "years" ? 120 : mode === "months" ? 12 : 1,
                   );
                 }}
-              ></button></th
+                >{#if phone.current}<MobileIcon
+                    name="chevron-right"
+                    size="action"
+                  />{/if}</button
+              ></th
             ></tr
           >
           {#if mode === "days"}<tr

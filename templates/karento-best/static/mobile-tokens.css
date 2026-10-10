@@ -1,4 +1,9 @@
 /* Shared phone geometry, surfaces and typography. Components own composition. */
+html:root {
+  --karento-control-icon: 16px;
+  --karento-control-icon-action: 20px;
+}
+
 @media (max-width: 767.98px) {
   html:root {
     --karento-space-1: 4px;
@@ -16,7 +21,8 @@
     --karento-control-selector: 36px;
     --karento-control-field: 48px;
     --karento-control-line: 20px;
-    --karento-control-icon: 16px;
+    --karento-focus-width: 2px;
+    --karento-focus-offset: 2px;
     --karento-control-inset: 12px;
     --karento-newsletter-field-basis: 16rem;
     --karento-browse-inset-inline: 6px;

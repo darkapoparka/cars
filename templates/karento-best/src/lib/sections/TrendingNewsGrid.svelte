@@ -4,6 +4,17 @@
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   const locale = useLocale();
   import DemoActionLink from "#lib/components/DemoActionLink.svelte";
+  import { MediaQuery } from "svelte/reactivity";
+  import {
+    newsArticleDestination,
+    referenceNewsLinkIds,
+  } from "#lib/data/news.ts";
+  const desktop = new MediaQuery("(min-width: 992px)");
+  function articleHref(id: string) {
+    return locale.href(
+      desktop.current ? newsArticleDestination({ id }) : "/news/article",
+    );
+  }
 </script>
 
 <div class="section-box box-posts-grid-2 background-100">
@@ -31,9 +42,15 @@
           >{locale.t("editorial.navigation.blog")}</DemoActionLink
         >
       </div>
-      <h3 class="my-3 neutral-1000 desktop-type-page"
-        >{locale.t("ui.trending-news-grid.inside-trending")}</h3
-      >
+      {#if desktop.current}
+        <h1 class="my-3 neutral-1000 desktop-type-page"
+          >{locale.t("ui.trending-news-grid.inside-trending")}</h1
+        >
+      {:else}
+        <h3 class="my-3 neutral-1000 desktop-type-page"
+          >{locale.t("ui.trending-news-grid.inside-trending")}</h3
+        >
+      {/if}
     </div>
     <div class="row">
       <div class="col-lg-7">
@@ -56,7 +73,7 @@
               >
               <a
                 class="card-title heading-5 desktop-type-article-subhead"
-                href={locale.href("/news/article")}
+                href={articleHref(referenceNewsLinkIds.rentalExperience)}
                 aria-label={locale.t("editorial.title.rentalExperience")}
                 >{locale.t("editorial.title.rentalExperience")}</a
               >
@@ -88,7 +105,7 @@
             <div class="card-post">
               <div class="card-image">
                 <a
-                  href={locale.href("/news/article")}
+                  href={articleHref(referenceNewsLinkIds.rentalNeeds)}
                   aria-label={locale.t("ui.trending-news-grid.view-details")}
                   ><img
                     src="/assets/imgs/blog/blog-list/img-2.png"
@@ -99,7 +116,7 @@
               <div class="card-info">
                 <a
                   class="text-xl-bold neutral-1000 desktop-type-card"
-                  href={locale.href("/news/article")}
+                  href={articleHref(referenceNewsLinkIds.rentalNeeds)}
                   aria-label={locale.t("editorial.title.rentalNeeds")}
                   >{locale.t("editorial.title.rentalNeeds")}</a
                 >
@@ -119,7 +136,7 @@
             <div class="card-post">
               <div class="card-image">
                 <a
-                  href={locale.href("/news/article")}
+                  href={articleHref(referenceNewsLinkIds.luxuryOccasions)}
                   aria-label={locale.t("ui.trending-news-grid.view-details")}
                   ><img
                     src="/assets/imgs/blog/blog-list/img-3.png"
@@ -130,7 +147,7 @@
               <div class="card-info">
                 <a
                   class="text-xl-bold neutral-1000 desktop-type-card"
-                  href={locale.href("/news/article")}
+                  href={articleHref(referenceNewsLinkIds.luxuryOccasions)}
                   aria-label={locale.t("editorial.title.luxuryOccasions")}
                   >{locale.t("editorial.title.luxuryOccasions")}</a
                 >
@@ -150,7 +167,7 @@
             <div class="card-post">
               <div class="card-image">
                 <a
-                  href={locale.href("/news/article")}
+                  href={articleHref(referenceNewsLinkIds.scenicDrives)}
                   aria-label={locale.t("ui.trending-news-grid.view-details")}
                   ><img
                     src="/assets/imgs/blog/blog-list/img-4.png"
@@ -161,7 +178,7 @@
               <div class="card-info">
                 <a
                   class="text-xl-bold neutral-1000 desktop-type-card"
-                  href={locale.href("/news/article")}
+                  href={articleHref(referenceNewsLinkIds.scenicDrives)}
                   aria-label={locale.t("editorial.title.scenicDrives")}
                   >{locale.t("editorial.title.scenicDrives")}</a
                 >
@@ -181,7 +198,7 @@
             <div class="card-post">
               <div class="card-image">
                 <a
-                  href={locale.href("/news/article")}
+                  href={articleHref(referenceNewsLinkIds.rentingAbroad)}
                   aria-label={locale.t("ui.trending-news-grid.view-details")}
                   ><img
                     src="/assets/imgs/blog/blog-list/img-5.png"
@@ -192,7 +209,7 @@
               <div class="card-info">
                 <a
                   class="text-xl-bold neutral-1000 desktop-type-card"
-                  href={locale.href("/news/article")}
+                  href={articleHref(referenceNewsLinkIds.rentingAbroad)}
                   aria-label={locale.t("editorial.title.rentingAbroad")}
                   >{locale.t("editorial.title.rentingAbroad")}</a
                 >

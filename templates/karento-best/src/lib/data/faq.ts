@@ -120,6 +120,95 @@ export const referenceCardFaqItems = [
 ] as const satisfies readonly CardFaqContent[];
 export const referencePaymentFaqItems: readonly CardFaqContent[] =
   referenceCardFaqItems.slice(1);
+/** Automotive demonstration guidance, selected only by desktop FAQ layouts. */
+export const desktopGeneralFaqItems = [
+  {
+    kind: "card",
+    suffix: "desktop-general-availability",
+    question: message("reference.faq.general.availability.question"),
+    answer: message("reference.faq.general.availability.answer"),
+  },
+  {
+    kind: "card",
+    suffix: "desktop-general-viewing",
+    question: message("reference.faq.general.viewing.question"),
+    answer: message("reference.faq.general.viewing.answer"),
+  },
+  {
+    kind: "card",
+    suffix: "desktop-general-documents",
+    question: message("reference.faq.general.documents.question"),
+    answer: message("reference.faq.general.documents.answer"),
+  },
+  {
+    kind: "card",
+    suffix: "desktop-general-history",
+    question: message("reference.faq.general.history.question"),
+    answer: message("reference.faq.general.history.answer"),
+  },
+  {
+    kind: "card",
+    suffix: "desktop-general-reservation",
+    question: message("reference.faq.general.reservation.question"),
+    answer: message("reference.faq.general.reservation.answer"),
+  },
+  {
+    kind: "card",
+    suffix: "desktop-general-exchange",
+    question: message("reference.faq.general.exchange.question"),
+    answer: message("reference.faq.general.exchange.answer"),
+  },
+  {
+    kind: "card",
+    suffix: "desktop-general-warranty",
+    question: message("reference.faq.general.warranty.question"),
+    answer: message("reference.faq.general.warranty.answer"),
+  },
+  {
+    kind: "card",
+    suffix: "desktop-general-import",
+    question: message("reference.faq.general.import.question"),
+    answer: message("reference.faq.general.import.answer"),
+  },
+] as const satisfies readonly CardFaqContent[];
+export const desktopPaymentFaqItems = [
+  {
+    kind: "card",
+    suffix: "desktop-payment-methods",
+    question: message("reference.faq.payment.methods.question"),
+    answer: message("reference.faq.payment.methods.answer"),
+  },
+  {
+    kind: "card",
+    suffix: "desktop-payment-deposit",
+    question: message("reference.faq.payment.deposit.question"),
+    answer: message("reference.faq.payment.deposit.answer"),
+  },
+  {
+    kind: "card",
+    suffix: "desktop-payment-finance",
+    question: message("reference.faq.payment.finance.question"),
+    answer: message("reference.faq.payment.finance.answer"),
+  },
+  {
+    kind: "card",
+    suffix: "desktop-payment-quote",
+    question: message("reference.faq.payment.quote.question"),
+    answer: message("reference.faq.payment.quote.answer"),
+  },
+  {
+    kind: "card",
+    suffix: "desktop-payment-invoice",
+    question: message("reference.faq.payment.invoice.question"),
+    answer: message("reference.faq.payment.invoice.answer"),
+  },
+  {
+    kind: "card",
+    suffix: "desktop-payment-refund",
+    question: message("reference.faq.payment.refund.question"),
+    answer: message("reference.faq.payment.refund.answer"),
+  },
+] as const satisfies readonly CardFaqContent[];
 export const referenceNumberedFaqItems = [
   {
     kind: "numbered",

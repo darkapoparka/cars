@@ -5,6 +5,8 @@
   const locale = useLocale();
   import { demoSignIn } from "#lib/demo-sign-in.ts";
   import { usePreview } from "#lib/preview.svelte.ts";
+  import { MediaQuery } from "svelte/reactivity";
+  const desktop = new MediaQuery("(min-width: 992px)");
   const preview = usePreview();
 </script>
 
@@ -18,9 +20,11 @@
               class="neutral-1000 px-4 py-2 bg-2 text-sm-bold rounded-12 d-inline-flex align-items-center"
               >{locale.t("ui.demo-sign-in.sign-in")}</p
             >
-            <h4 class="neutral-1000 desktop-type-panel"
-              >{locale.t("ui.demo-sign-in.welcome-back")}</h4
-            >
+            {#if desktop.current}<h1 class="neutral-1000 desktop-type-panel"
+                >{locale.t("ui.demo-sign-in.welcome-back")}</h1
+              >{:else}<h4 class="neutral-1000 desktop-type-panel"
+                >{locale.t("ui.demo-sign-in.welcome-back")}</h4
+              >{/if}
           </div>
           <div class="form-login mt-30">
             <form

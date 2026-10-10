@@ -127,7 +127,8 @@
       align-items: center;
       gap: var(--karento-desktop-card-gap);
       min-height: var(--karento-desktop-control-height);
-      padding: var(--karento-desktop-space-4) var(--karento-desktop-space-5);
+      padding: var(--karento-desktop-space-4)
+        var(--karento-desktop-panel-padding);
       white-space: normal;
       text-align: left;
     }
@@ -136,6 +137,17 @@
     }
     .karento-detail-accordion > .btn-collapse svg {
       flex-shrink: 0;
+    }
+    .karento-detail-accordion > .btn-collapse:focus-visible {
+      border-radius: var(--karento-desktop-card-radius);
+      outline: 2px solid var(--bs-neutral-1000) !important;
+      outline-offset: calc(var(--karento-desktop-space-1) * -1);
+    }
+    .karento-detail-accordion > .btn-collapse[aria-expanded="true"] svg {
+      transform: rotate(180deg);
+    }
+    .karento-detail-accordion > .btn-collapse[aria-expanded="false"] svg {
+      transform: rotate(0deg);
     }
     .karento-detail-accordion > .collapse {
       padding: 0 var(--karento-desktop-panel-padding)

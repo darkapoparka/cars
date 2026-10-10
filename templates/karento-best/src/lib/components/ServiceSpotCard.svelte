@@ -5,7 +5,17 @@
   const locale = useLocale();
   import DemoActionLink from "./DemoActionLink.svelte";
   import type { ServiceSpot } from "#lib/data/services.ts";
+  import { MediaQuery } from "svelte/reactivity";
   let { spot }: { spot: ServiceSpot } = $props();
+  const desktop = new MediaQuery("(min-width: 992px)");
+  const title = $derived(
+    desktop.current && spot.desktopTitleKey
+      ? locale.t(spot.desktopTitleKey)
+      : spot.title,
+  );
+  const description = $derived(
+    spot.descriptionKey ? locale.t(spot.descriptionKey) : spot.description,
+  );
 </script>
 
 <div class="card-spot background-card service-spot-card">
@@ -26,19 +36,14 @@
         ><a
           class="text-lg-bold neutral-1000 desktop-type-compact-card"
           href={locale.href(spot.href)}
-          aria-label={spot.title}>{spot.title}</a
+          aria-label={title}>{title}</a
         ></div
       >
       <div class="card-desc"
         ><DemoActionLink
           class="text-sm neutral-500 desktop-type-body-small"
           href="#!"
-          aria-label={spot.descriptionKey
-            ? locale.t(spot.descriptionKey)
-            : spot.description}
-          >{spot.descriptionKey
-            ? locale.t(spot.descriptionKey)
-            : spot.description}</DemoActionLink
+          aria-label={description}>{description}</DemoActionLink
         ></div
       >
     </div>
@@ -71,6 +76,12 @@
 </div>
 
 <style>
+  @media (min-width: 992px) {
+    .service-spot-card .card-desc {
+      display: none;
+    }
+  }
+
   @media (max-width: 767.98px) {
     .service-spot-card .card-image {
       aspect-ratio: var(--karento-image-wide);

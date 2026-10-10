@@ -68,12 +68,18 @@
   }
 
   @media (min-width: 992px) {
+    .box-feature-car {
+      padding: var(--karento-desktop-panel-padding);
+      margin-bottom: var(--karento-desktop-panel-gap);
+      border-radius: var(--karento-desktop-card-radius);
+    }
     .list-feature-car {
       margin-inline: calc(var(--karento-desktop-space-2) * -1);
+      row-gap: var(--karento-desktop-space-4);
     }
     .list-feature-car .item-feature-car {
       padding-inline: var(--karento-desktop-space-2);
-      margin-bottom: var(--karento-desktop-space-4);
+      margin-bottom: 0;
     }
     .list-feature-car .item-feature-car .item-feature-car-inner {
       gap: var(--karento-desktop-space-2);

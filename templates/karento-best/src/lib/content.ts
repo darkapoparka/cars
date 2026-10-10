@@ -12,6 +12,8 @@ export type VehicleListingHighlight = "new-import" | "registered" | "serviced";
 export interface VehicleCardContent {
   sample: boolean;
   image: string;
+  /** Supplied larger photo of the same listing for its detail gallery. */
+  detailImage?: string;
   imageAlt: string;
   href: string;
   title: string;

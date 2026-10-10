@@ -85,19 +85,20 @@
       <a
         href={locale.href("/vehicles")}
         aria-label={locale.t("action.backVehicles")}
-        ><MobileIcon name="arrow-left" size={20} /></a
+        ><MobileIcon name="arrow-left" size="action" /></a
       >
       <div class="mobile-pdp-photo-tools">
         <DemoActionLink
           href="#!"
           aria-label={locale.t("action.wishlist")}
           getFeedbackContainer={() => wishlistFeedback}
-          ><MobileIcon name="heart" size={20} /></DemoActionLink
+          ><MobileIcon name="heart" size="action" /></DemoActionLink
         >
         <button
           type="button"
           aria-label={locale.t("share.vehicle")}
-          onclick={shareVehicle}><MobileIcon name="share" size={20} /></button
+          onclick={shareVehicle}
+          ><MobileIcon name="share" size="action" /></button
         >
       </div>
     </nav>

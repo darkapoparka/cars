@@ -15,6 +15,7 @@
     actionHref,
     note,
     body,
+    featured = false,
   }: {
     id?: string;
     title: string;
@@ -22,6 +23,7 @@
     actionHref?: string;
     note?: string;
     body: Snippet;
+    featured?: boolean;
   } = $props();
   let open = $state(false);
   let artworkVisible = $state(true);
@@ -39,20 +41,7 @@
 
 {#snippet sheetFooter()}
   {#snippet actionContent()}
-    {actionLabel}<svg
-      width="17"
-      height="16"
-      viewBox="0 0 17 16"
-      fill="none"
-      aria-hidden="true"
-      ><path
-        d="M8.5 15L15.5 8L8.5 1M15.5 8L1.5 8"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      /></svg
-    >
+    {actionLabel}<MobileIcon name="arrow-right" />
   {/snippet}
   {#if actionHref}
     <a class="btn btn-book" href={actionHref}>{@render actionContent()}</a>
@@ -69,7 +58,10 @@
   {id}
   type="button"
   class="mobile-loan-trigger"
-  aria-label={locale.t("action.openNamed", { name: title.toLocaleLowerCase() })}
+  class:mobile-loan-featured={featured}
+  aria-label={featured
+    ? `${locale.t("referenceFinance.useCalculator")}: ${title}`
+    : locale.t("action.openNamed", { name: title.toLocaleLowerCase() })}
   aria-haspopup="dialog"
   aria-expanded={open}
   onclick={() => (open = true)}
@@ -79,8 +71,8 @@
       class="mobile-loan-artwork"
       src="/assets/imgs/mobile/loan-calculator.webp"
       alt=""
-      width="44"
-      height="44"
+      width={featured ? 128 : 44}
+      height={featured ? 128 : 44}
       decoding="async"
       onerror={() => (artworkVisible = false)}
     />
@@ -90,9 +82,16 @@
       >{locale.t("ui.mobile-loan-card.estimate-monthly-payments")}</small
     ></span
   >
-  <span class="mobile-loan-action" aria-hidden="true"
-    ><MobileIcon name="arrow-right" size={18} /></span
-  >
+  {#if featured}
+    <span class="mobile-loan-cta">
+      <span>{locale.t("referenceFinance.calculate")}</span>
+      <MobileIcon name="arrow-right" size="compact" />
+    </span>
+  {:else}
+    <span class="mobile-loan-action" aria-hidden="true"
+      ><MobileIcon name="arrow-right" size="action" /></span
+    >
+  {/if}
 </button>
 <MobileSheet
   bind:open
@@ -136,6 +135,58 @@
       width: var(--karento-touch-target);
       height: var(--karento-touch-target);
       object-fit: contain;
+    }
+
+    .mobile-loan-featured {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: var(--karento-space-3);
+    }
+
+    .mobile-loan-featured .mobile-loan-copy {
+      grid-column: 1 / -1;
+      grid-row: 1;
+    }
+
+    .mobile-loan-featured strong {
+      font-size: var(--karento-type-panel-size);
+      font-weight: var(--karento-type-panel-weight);
+      line-height: var(--karento-type-panel-leading);
+    }
+
+    .mobile-loan-featured .mobile-loan-artwork {
+      grid-column: 1;
+      grid-row: 2;
+      width: min(100%, 160px);
+      height: auto;
+      aspect-ratio: 5 / 3;
+      object-fit: cover;
+    }
+
+    .mobile-loan-cta {
+      display: inline-flex;
+      grid-column: 2;
+      grid-row: 2;
+      align-items: center;
+      justify-content: center;
+      justify-self: end;
+      align-self: end;
+      gap: var(--karento-space-1);
+      max-width: 100%;
+      min-height: var(--karento-touch-target);
+      padding: var(--karento-space-2) var(--karento-space-3);
+      border-radius: var(--karento-radius-pill);
+      background: var(--bs-neutral-1000);
+      color: var(--bs-neutral-0);
+      font-size: var(--karento-type-pill-size);
+      font-weight: var(--karento-type-pill-weight);
+      line-height: var(--karento-type-pill-leading);
+      text-align: center;
+    }
+
+    .mobile-loan-cta > span {
+      min-width: 0;
+      overflow-wrap: anywhere;
     }
 
     strong {

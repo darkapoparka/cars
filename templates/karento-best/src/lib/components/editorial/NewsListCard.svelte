@@ -6,6 +6,7 @@
   import DemoActionLink from "#lib/components/DemoActionLink.svelte";
   import MobilePill from "#lib/components/mobile/MobilePill.svelte";
   import { MediaQuery } from "svelte/reactivity";
+  import { newsArticleDestination } from "#lib/data/news.ts";
   import {
     referenceEditorialMetadata,
     type NewsListItem,
@@ -13,12 +14,18 @@
 
   let { item }: { item: NewsListItem } = $props();
   const phone = new MediaQuery("(max-width: 767.98px)");
+  const desktop = new MediaQuery("(min-width: 992px)");
+  const articleHref = $derived(
+    locale.href(
+      desktop.current ? newsArticleDestination(item) : "/news/article",
+    ),
+  );
 </script>
 
 <div class="card-flight card-news background-card news-list-card desktop-card">
   <div class="card-image">
     <a
-      href={locale.href("/news/article")}
+      href={articleHref}
       aria-label={locale.t("ui.news-list-card.view-details")}
       ><img src={item.image} alt={locale.t("image.illustrative")} /></a
     >
@@ -39,7 +46,7 @@
     <div class="card-title"
       ><a
         class="heading-6 neutral-1000 d-block desktop-type-card"
-        href={locale.href("/news/article")}
+        href={articleHref}
         aria-label={locale.text(item.titleLabel)}>{locale.text(item.title)}</a
       ></div
     >
@@ -54,7 +61,11 @@
     >
     <div class="card-desc">
       <p class="text-md-medium neutral-500 desktop-type-body"
-        >{locale.t("editorial.list.excerpt")}</p
+        >{locale.t(
+          desktop.current
+            ? "editorial.list.sampleExcerpt"
+            : "editorial.list.excerpt",
+        )}</p
       >
     </div>
     <div class="card-program">
@@ -69,7 +80,7 @@
           {:else}
             <a
               class="btn btn-gray desktop-type-pill desktop-card-action"
-              href={locale.href("/news/article")}
+              href={articleHref}
               aria-label={locale.t("ui.news-list-card.keep-reading")}
               >{locale.t("ui.news-list-card.keep-reading")}</a
             >

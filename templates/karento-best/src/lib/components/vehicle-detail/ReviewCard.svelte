@@ -11,8 +11,7 @@
 <div class="item-review review-card"
   ><div class="head-review"
     ><div class="author-review"
-      ><img src={review.avatar} alt={locale.t("ui.review-card.carento")} /><div
-        class="author-info"
+      ><img src={review.avatar} alt={review.author} /><div class="author-info"
         ><p class="text-lg-bold desktop-type-compact-card">{review.author}</p><p
           class="text-sm-medium neutral-500 desktop-type-meta">{review.date}</p
         ></div

@@ -141,6 +141,13 @@
 </section>
 
 <style>
+  @media (min-width: 992px) {
+    .container-search-advance a.text-primary {
+      color: var(--bs-neutral-0) !important;
+      text-decoration: underline;
+    }
+  }
+
   @media (max-width: 767.98px) {
     .box-banner-home7 .item-banner-slide {
       min-height: 0;

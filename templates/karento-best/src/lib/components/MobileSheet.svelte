@@ -8,7 +8,7 @@
   import type { Snippet } from "svelte";
   import type { Attachment } from "svelte/attachments";
   import { on } from "svelte/events";
-  import MobileIcon from "#lib/components/mobile/MobileIcon.svelte";
+  import MobileCloseButton from "#lib/components/mobile/MobileCloseButton.svelte";
 
   let {
     open = $bindable(false),
@@ -150,13 +150,12 @@
           >{description}</p
         >{/if}</div
     >
-    <button
-      type="button"
-      aria-label={locale.t("action.closeNamed", {
+    <MobileCloseButton
+      label={locale.t("action.closeNamed", {
         name: label.toLocaleLowerCase(),
       })}
-      onclick={close}><MobileIcon name="close" size={20} /></button
-    >
+      onclick={close}
+    />
   </header>
   <div class="mobile-sheet-content">{@render children()}</div>
   {#if footer}<footer>{@render footer()}</footer>{/if}
@@ -185,22 +184,6 @@
       flex: 1;
       min-width: 0;
       overflow-wrap: anywhere;
-    }
-    .mobile-sheet > header :global(button) {
-      display: grid;
-      place-items: center;
-      flex: 0 0 var(--karento-touch-target);
-      width: var(--karento-touch-target);
-      height: var(--karento-touch-target);
-      margin: 0;
-      padding: 0;
-      border: 0;
-      background: transparent;
-      color: inherit;
-    }
-    .mobile-sheet > header :global(button:focus-visible) {
-      outline: 2px solid currentColor !important;
-      outline-offset: 2px;
     }
     .mobile-sheet-content {
       scroll-padding-block: 12px;

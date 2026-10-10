@@ -1,5 +1,31 @@
 /** Authored reference UI copy. Dealer facts remain literal strings. */
 export const referenceVehicleEn = {
+  "reference.vehicle.selection.note":
+    "Illustrative listing. Confirm vehicle details, price and availability with the team.",
+  "reference.vehicle.desktop.gallery.notice":
+    "The listing photo appears first; the remaining gallery and detail content are illustrative.",
+  "reference.vehicle.desktop.overview.1":
+    "Explore the vehicle through its photos and key specifications, from cabin space and equipment to exterior details. Compare the features that matter for daily driving, family trips or longer journeys.",
+  "reference.vehicle.desktop.overview.2":
+    "Ask the team about condition, service history and the exact equipment before arranging a viewing. Discuss the current price and included services, and use the calculator to compare estimated repayments.",
+  "reference.vehicle.desktop.questions.availability.question":
+    "How can I confirm this vehicle's availability?",
+  "reference.vehicle.desktop.questions.availability.answer":
+    "Contact the team with the listing title to confirm availability and the current price.",
+  "reference.vehicle.desktop.questions.viewing.question":
+    "Can I discuss a viewing or test drive?",
+  "reference.vehicle.desktop.questions.viewing.answer":
+    "Ask the team about viewing times and test-drive requirements before travelling.",
+  "reference.vehicle.desktop.questions.finance.question":
+    "What does the finance calculator show?",
+  "reference.vehicle.desktop.questions.finance.answer":
+    "An estimated repayment based on your price, deposit, interest rate and term; final fees and lender terms may differ.",
+  "reference.vehicle.desktop.reviews.sarah-johnson.text":
+    "Sample review: Clear photos and vehicle details make comparisons easier. Condition and equipment are the main points to discuss before a viewing.",
+  "reference.vehicle.desktop.reviews.michael-smith.text":
+    "Sample review: Seating, luggage space and running costs are useful details for a family car. The gallery gives a helpful starting point for comparing options.",
+  "reference.vehicle.desktop.reviews.emily-williams.text":
+    "Sample review: Photos and specifications provide a useful overview. A clear breakdown of price and finance terms helps with the next steps.",
   "reference.vehicle.specifications.seat.value": "7 seats",
   "reference.vehicle.specifications.bag.value": "3 Large bags",
   "reference.vehicle.specifications.bag.mobile": "3 Bags",
@@ -65,6 +91,32 @@ export const referenceVehicleEn = {
   "reference.vehicle.review-summary.count": "(672 reviews)",
 } as const;
 export const referenceVehicleBg = {
+  "reference.vehicle.selection.note":
+    "Примерна обява. Потвърдете данните, цената и наличността с екипа.",
+  "reference.vehicle.desktop.gallery.notice":
+    "Снимката от обявата е първа; останалата галерия и информацията са илюстративни.",
+  "reference.vehicle.desktop.overview.1":
+    "Разгледайте снимките и основните характеристики — от пространството в купето и оборудването до външните детайли. Сравнете важните за вас удобства за всекидневно шофиране, семейни пътувания или по-дълги маршрути.",
+  "reference.vehicle.desktop.overview.2":
+    "Попитайте екипа за състоянието, сервизната история и точното оборудване, преди да уговорите оглед. Обсъдете актуалната цена и включените услуги и използвайте калкулатора, за да сравните ориентировъчни вноски.",
+  "reference.vehicle.desktop.questions.availability.question":
+    "Как да потвърдя наличността на автомобила?",
+  "reference.vehicle.desktop.questions.availability.answer":
+    "Свържете се с екипа и посочете обявата, за да потвърдите наличността и актуалната цена.",
+  "reference.vehicle.desktop.questions.viewing.question":
+    "Мога ли да обсъдя оглед или пробно шофиране?",
+  "reference.vehicle.desktop.questions.viewing.answer":
+    "Попитайте екипа за часовете за оглед и изискванията за пробно шофиране, преди да пътувате.",
+  "reference.vehicle.desktop.questions.finance.question":
+    "Какво показва финансовият калкулатор?",
+  "reference.vehicle.desktop.questions.finance.answer":
+    "Ориентировъчна вноска според въведените цена, първоначална вноска, лихва и срок; окончателните такси и кредитни условия може да се различават.",
+  "reference.vehicle.desktop.reviews.sarah-johnson.text":
+    "Примерен отзив: Ясните снимки и информацията за автомобила улесняват сравняването. Състоянието и оборудването са основните теми за обсъждане преди оглед.",
+  "reference.vehicle.desktop.reviews.michael-smith.text":
+    "Примерен отзив: Местата, багажното пространство и разходите са полезни подробности за семеен автомобил. Галерията е добра отправна точка за сравняване на възможностите.",
+  "reference.vehicle.desktop.reviews.emily-williams.text":
+    "Примерен отзив: Снимките и спецификациите дават полезна обща представа. Ясното обяснение на цената и финансовите условия помага за следващите стъпки.",
   "reference.vehicle.specifications.seat.value": "7 места",
   "reference.vehicle.specifications.bag.value": "3 големи чанти",
   "reference.vehicle.specifications.bag.mobile": "3 чанти",

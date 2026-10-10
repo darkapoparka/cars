@@ -11,6 +11,7 @@
   import DashboardFormField from "#lib/components/dashboard/DashboardFormField.svelte";
   import { MediaQuery } from "svelte/reactivity";
   const phone = new MediaQuery("(max-width: 767.98px)");
+  const desktop = new MediaQuery("(min-width: 992px)");
 </script>
 
 <div class="card shadow-none flex-fill">
@@ -99,14 +100,18 @@
           >{locale.t("ui.dashboard-listing-details-card.features")}</h6
         >
       </div>
-      {#each dashboardListingFeatures as feature (feature)}<div class="col-lg-6"
+      {#each dashboardListingFeatures as feature (feature)}{@const featureLabel =
+          desktop.current &&
+          feature.message === "reference.dynamic.dashboard-listing-features.8"
+            ? locale.t("reference.listing.filter.heatedSeats")
+            : locale.text(feature)}<div class="col-lg-6"
           ><label class="lbl-checkbox text-md-medium neutral-500"
             ><input
               type="checkbox"
-              aria-label={phone.current
-                ? locale.text(feature)
+              aria-label={phone.current || desktop.current
+                ? featureLabel
                 : locale.t("ui.dashboard-listing-details-card.preview-field")}
-            />{locale.text(feature)}</label
+            />{featureLabel}</label
           ></div
         >{/each}
     </div>

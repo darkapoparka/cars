@@ -10,6 +10,8 @@
 
   import NewsListCard from "#lib/components/editorial/NewsListCard.svelte";
   import { newsList } from "#lib/data/editorial.ts";
+  import { MediaQuery } from "svelte/reactivity";
+  const desktop = new MediaQuery("(min-width: 992px)");
 </script>
 
 <section class="box-section background-body">
@@ -23,7 +25,9 @@
             >
             <p class="text-xl-medium neutral-500 desktop-type-lead"
               >{locale.t(
-                "ui.news-list.favorite-vehicles-based-on-customer-reviews",
+                desktop.current
+                  ? "editorial.list.sampleSummary"
+                  : "ui.news-list.favorite-vehicles-based-on-customer-reviews",
               )}</p
             >
             <div class="box-grid-hotels box-grid-news mt-60 mb-50">

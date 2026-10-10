@@ -16,6 +16,7 @@ import type { MessageCatalog } from "../schema.ts";
 import { headerBg } from "./page-headers.ts";
 import { uiBg } from "./ui.ts";
 import { finalPolishBg } from "./final-polish.ts";
+import { contactFooterBg } from "./contact-footer.ts";
 
 export const bg = {
   ...referenceFeaturedBg,
@@ -35,4 +36,5 @@ export const bg = {
   ...uiBg,
   ...coreBg,
   ...finalPolishBg,
+  ...contactFooterBg,
 } satisfies MessageCatalog;

@@ -21,8 +21,8 @@
     <div class="custom-container position-relative mx-auto">
       <HeroBackdrop image={discoveryBanners.vehicles.image} />
       <div class="catalog-hero-content">
-        <h2 class="text-white desktop-hero-title"
-          >{locale.t("header.vehicles.mobileTitle")}</h2
+        <h1 class="text-white desktop-hero-title"
+          >{locale.t("header.vehicles.mobileTitle")}</h1
         >
         <div class="hero-search-controls">
           <ListingVehicleSearch dealership />
@@ -66,7 +66,7 @@
       text-align: center;
     }
 
-    h2 {
+    h1 {
       margin: 0;
       font-size: var(--karento-desktop-hero-title-size);
       line-height: var(--karento-type-hero-leading);

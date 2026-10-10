@@ -28,6 +28,12 @@
 </section>
 
 <style>
+  @media (min-width: 992px) {
+    p.text-primary {
+      color: var(--bs-neutral-0) !important;
+    }
+  }
+
   @media (max-width: 767.98px) {
     section.block-banner-home1 {
       min-height: 0;

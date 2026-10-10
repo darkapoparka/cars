@@ -8,7 +8,9 @@
 
   import { dealer } from "#lib/content.ts";
   import { useLocale } from "#lib/i18n/context.svelte.ts";
+  import { MediaQuery } from "svelte/reactivity";
   const locale = useLocale();
+  const desktop = new MediaQuery("(min-width: 992px)");
 </script>
 
 {#if dealer.businessPreview}
@@ -121,9 +123,16 @@
         <div class="row align-items-center">
           <div class="col-lg-5 col-md-6 text-center text-md-start">
             <h5 class="color-white"
-              >{locale.t(
-                "ui.footer.subscribe-to-see-secret-deals-prices-drop-the-moment",
-              )}</h5
+              >{desktop.current
+                ? (dealer.copy["footer.newsletterTitle"] ??
+                  locale.t(
+                    dealer.contentStatus === "reference-demo"
+                      ? "footer.polish.previewTitle"
+                      : "ui.footer.subscribe-to-see-secret-deals-prices-drop-the-moment",
+                  ))
+                : locale.t(
+                    "ui.footer.subscribe-to-see-secret-deals-prices-drop-the-moment",
+                  )}</h5
             >
           </div>
           <div class="col-lg-7 col-md-6 text-center text-md-end mt-md-0 mt-4">
@@ -145,8 +154,16 @@
                 <input
                   class="btn btn-brand-2 desktop-type-control desktop-panel-action"
                   type="submit"
-                  value={locale.t("ui.footer.subscribe")}
-                  aria-label={locale.t("ui.footer.subscribe")}
+                  value={locale.t(
+                    desktop.current
+                      ? "footer.polish.previewSignup"
+                      : "ui.footer.subscribe",
+                  )}
+                  aria-label={locale.t(
+                    desktop.current
+                      ? "footer.polish.previewSignup"
+                      : "ui.footer.subscribe",
+                  )}
                 />
               </DemoForm>
             </div>
@@ -185,14 +202,36 @@
               />
             </a>
             <div class="box-info-contact mt-0">
-              <p class="text-md neutral-400 icon-address"
-                >2356 Oakwood Drive, Suite 18, San Francisco, California 94111,
-                US</p
-              >
+              {#if desktop.current}
+                <p class="text-md neutral-400 icon-address">
+                  {dealer.locations[0]?.address ||
+                    locale.t("dealer.contact.beforeVisit")}
+                </p>
+              {:else}
+                <p class="text-md neutral-400 icon-address"
+                  >2356 Oakwood Drive, Suite 18, San Francisco, California
+                  94111, US</p
+                >
+              {/if}
               <p class="text-md neutral-400 icon-worktime"
                 >{locale.t("reference.controls.referenceHours")}</p
               >
-              <p class="text-md neutral-400 icon-email">support@carento.com</p>
+              {#if desktop.current}
+                {#if dealer.contacts.email}
+                  <p class="text-md neutral-400 icon-email"
+                    ><a
+                      class="neutral-400"
+                      href={locale.href(`mailto:${dealer.contacts.email}`)}
+                      aria-label={locale.t("contact.polish.email", {
+                        email: dealer.contacts.email,
+                      })}>{dealer.contacts.email}</a
+                    ></p
+                  >
+                {/if}
+              {:else}
+                <p class="text-md neutral-400 icon-email">support@carento.com</p
+                >
+              {/if}
             </div>
             <div class="box-need-help">
               <p class="need-help text-md-medium mb-5"
@@ -201,7 +240,11 @@
               <br /><a
                 class="heading-6 phone-support"
                 href={locale.href("tel:" + dealer.contacts.phone)}
-                aria-label="+1 222-555-33-99">{dealer.contacts.phone}</a
+                aria-label={desktop.current
+                  ? locale.t("contact.polish.call", {
+                      phone: dealer.contacts.phone,
+                    })
+                  : "+1 222-555-33-99"}>{dealer.contacts.phone}</a
               >
             </div>
           </div>
@@ -534,8 +577,21 @@
 
 <style>
   @media (min-width: 992px) {
+    .footer .footer-1 > .mt-20 {
+      margin-top: 0 !important;
+    }
+
+    .footer .footer-1 > .mt-20 > a > img {
+      height: auto;
+    }
+
+    .footer .footer-1 > .mt-20 > a {
+      margin-bottom: var(--karento-desktop-card-gap);
+    }
+
     .footer :global(.desktop-footer-newsletter .form-control) {
       margin-right: 0;
+      color: var(--bs-neutral-0);
       padding-inline: calc(
           var(--karento-desktop-space-6) + var(--karento-desktop-space-5)
         )
@@ -543,8 +599,25 @@
       background-position: left var(--karento-desktop-space-4) center;
     }
 
+    .footer :global(.desktop-footer-newsletter .form-control::placeholder) {
+      color: var(--bs-neutral-400);
+    }
+
+    .footer :global([data-demo-feedback]),
+    .footer :global([data-demo-action]) {
+      color: var(--bs-neutral-400);
+    }
+
     .footer :global(.desktop-footer-newsletter input[type="submit"]) {
       padding-inline: var(--karento-desktop-space-4);
+      border-radius: var(--karento-desktop-pill-radius) !important;
+      color: var(--karento-accent-contrast) !important;
+    }
+
+    .footer :global(a:focus-visible),
+    .footer :global(.desktop-footer-newsletter input:focus-visible) {
+      outline: 2px solid var(--bs-neutral-0) !important;
+      outline-offset: 3px;
     }
   }
 </style>

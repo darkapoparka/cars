@@ -384,12 +384,15 @@
         />
       </div>
     {/if}
-    <SubscriberBanner spacing="pt-85" />
+    {#if !desktop.current}<SubscriberBanner spacing="pt-85" />{/if}
   </div>
 </section>
 
 <style>
   @media (min-width: 992px) {
+    .karento-news-grid {
+      padding-bottom: var(--karento-desktop-section-padding);
+    }
     .karento-news-banner {
       position: relative;
     }

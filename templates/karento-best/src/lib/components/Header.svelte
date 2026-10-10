@@ -3,7 +3,8 @@
 <script lang="ts">
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   import LanguageSwitcher from "./LanguageSwitcher.svelte";
-  import MobileIcon from "./mobile/MobileIcon.svelte";
+  import MobileCloseButton from "./mobile/MobileCloseButton.svelte";
+  import MobileIconButton from "./mobile/MobileIconButton.svelte";
   const locale = useLocale();
   import { usePreview } from "#lib/preview.svelte.ts";
   import { drawerFocus } from "#lib/attachments.svelte.ts";
@@ -14,6 +15,8 @@
   import { MediaQuery } from "svelte/reactivity";
   import type { Attachment } from "svelte/attachments";
   const phone = new MediaQuery("(max-width: 767.98px)");
+  // Keep the comparison page's existing header controls.
+  const phoneControls = $derived(phone.current && page.route.id !== "/2");
   const heroHeader = $derived(
     phone.current &&
       [
@@ -250,50 +253,64 @@
         <div class="header-right">
           <div
             class="d-none d-xxl-inline-block align-middle mr-15 karento-header-actions"
-            ><a
-              class="btn btn-primary karento-header-cta"
-              href={locale.href(preview.accountHref)}
-              data-demo-account-link=""
-              data-demo-fixed-label=""
-              aria-label={locale.t("ui.header.account")}
-              ><svg
+            >{#if phoneControls}<MobileIconButton
+                label={locale.t("ui.header.account")}
+                icon="account"
+                href={locale.href(preview.accountHref)}
+                surface="circle"
+                onMedia={heroLogo}
+              />{:else}<a
+                class="btn btn-primary karento-header-cta"
+                href={locale.href(preview.accountHref)}
+                data-demo-account-link=""
+                data-demo-fixed-label=""
+                aria-label={locale.t("ui.header.account")}
+                ><svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                  focusable="false"
+                  ><circle
+                    cx="12"
+                    cy="8"
+                    r="3.5"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  ></circle><path
+                    d="M5 21v-2a7 7 0 0 1 14 0v2"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  ></path></svg
+                ><span>{locale.t("ui.header.account")}</span></a
+              >{/if}</div
+          >
+          {#if phoneControls}<MobileIconButton
+              label={locale.t("ui.header.open-menu")}
+              icon="menu"
+              surface="circle"
+              onMedia={heroLogo}
+              expanded={preview.drawer}
+              controls="karento-account-drawer"
+              onclick={() => (preview.drawer = !preview.drawer)}
+            />{:else}<button
+              class={"burger-icon-2 karento-menu-toggle" +
+                (preview.drawer ? " burger-2-close" : "")}
+              onclick={() => (preview.drawer = !preview.drawer)}
+              type="button"
+              aria-label={locale.t("ui.header.open-menu")}
+              aria-expanded={preview.drawer}
+              aria-controls="karento-account-drawer"
+            >
+              <img
+                src="/assets/imgs/template/icons/menu.svg"
+                alt=""
                 width="18"
                 height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                aria-hidden="true"
-                focusable="false"
-                ><circle
-                  cx="12"
-                  cy="8"
-                  r="3.5"
-                  stroke="currentColor"
-                  stroke-width="1.6"
-                ></circle><path
-                  d="M5 21v-2a7 7 0 0 1 14 0v2"
-                  stroke="currentColor"
-                  stroke-width="1.6"
-                  stroke-linecap="round"
-                ></path></svg
-              ><span>{locale.t("ui.header.account")}</span></a
-            ></div
-          >
-          <button
-            class={"burger-icon-2 karento-menu-toggle" +
-              (preview.drawer ? " burger-2-close" : "")}
-            onclick={() => (preview.drawer = !preview.drawer)}
-            type="button"
-            aria-label={locale.t("ui.header.open-menu")}
-            aria-expanded={preview.drawer}
-            aria-controls="karento-account-drawer"
-          >
-            <img
-              src="/assets/imgs/template/icons/menu.svg"
-              alt=""
-              width="18"
-              height="18"
-            />
-          </button>
+              />
+            </button>{/if}
           <div
             role="button"
             tabindex="0"
@@ -539,18 +556,22 @@
           />
         </a>
       </div>
-      <button
-        class="close-canvas"
-        onclick={() => (preview.drawer = false)}
-        type="button"
-        aria-label={locale.t("ui.header.close-menu")}
-        >{#if phone.current}<MobileIcon name="close" size={20} />{:else}<img
+      {#if phone.current}<MobileCloseButton
+          class="close-canvas"
+          label={locale.t("ui.header.close-menu")}
+          onclick={() => (preview.drawer = false)}
+        />{:else}<button
+          class="close-canvas"
+          onclick={() => (preview.drawer = false)}
+          type="button"
+          aria-label={locale.t("ui.header.close-menu")}
+          ><img
             src="/assets/imgs/template/icons/close.png"
             alt=""
             width="16"
             height="16"
-          />{/if}</button
-      >
+          /></button
+        >{/if}
     </div>
     <div class="sidebar-canvas-content">
       <nav
@@ -763,18 +784,6 @@
     .header .karento-header-cta svg,
     .header .karento-menu-toggle img {
       display: block;
-    }
-    .karento-account-drawer .close-canvas {
-      display: grid;
-      place-items: center;
-      padding: 0;
-      border: 0;
-      background: transparent;
-      color: var(--bs-neutral-1000);
-      line-height: 0;
-    }
-    .karento-account-drawer .close-canvas:hover {
-      background: transparent;
     }
   }
   @media (min-width: 992px) {

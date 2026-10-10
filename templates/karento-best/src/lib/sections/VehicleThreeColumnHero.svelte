@@ -5,4 +5,4 @@
   import { discoveryBanners } from "#lib/data/page-headers.ts";
 </script>
 
-<DiscoveryBanner header={discoveryBanners.dreamRide} />
+<DiscoveryBanner header={discoveryBanners.dreamRide} desktopPrimary />

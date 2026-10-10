@@ -7,6 +7,7 @@
   import { MediaQuery } from "svelte/reactivity";
   import MobileTestimonialRail from "#lib/components/editorial/MobileTestimonialRail.svelte";
   const phone = new MediaQuery("(max-width: 767.98px)");
+  const desktop = new MediaQuery("(min-width: 992px)");
 </script>
 
 {#if phone.current}
@@ -36,7 +37,11 @@
               src="/assets/imgs/page/homepage1/testimonial3.png"
               alt={locale.t("image.illustrative")}
             />
-            {locale.t("referenceHome.testimonials.label")}
+            {locale.t(
+              desktop.current
+                ? "referenceHome.testimonials.previewLabel"
+                : "referenceHome.testimonials.label",
+            )}
           </div>
           <h3 class="mt-8 mb-15 neutral-1000 desktop-section-title"
             >{locale.t("ui.customer-review-grid.what-they-say-about-us")}</h3
@@ -120,7 +125,9 @@
                       >
                       <p class="text-md-regular neutral-500 desktop-type-body"
                         >{locale.t(
-                          "referenceHome.testimonials.vacationQuote",
+                          desktop.current
+                            ? "referenceHome.testimonials.vehicleQuote"
+                            : "referenceHome.testimonials.vacationQuote",
                         )}</p
                       >
                     </div>

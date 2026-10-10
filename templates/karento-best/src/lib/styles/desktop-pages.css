@@ -275,7 +275,9 @@
     border-radius: var(--karento-desktop-card-radius) !important;
   }
   .main .box-section-term .content h3 {
-    scroll-margin-top: var(--karento-desktop-space-6);
+    scroll-margin-top: calc(
+      var(--karento-desktop-space-16) + var(--karento-desktop-space-8)
+    );
   }
   .main .box-section-term .content p {
     line-height: var(--karento-type-prose-leading);

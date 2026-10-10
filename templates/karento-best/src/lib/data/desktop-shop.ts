@@ -46,6 +46,18 @@ export const shopSortOptions = [
   },
 ] as const;
 
+/** An explicit detail URL must identify exactly one supplied reference record. */
+export function isUnavailableDesktopProduct(
+  parameters: Pick<URLSearchParams, "getAll">,
+  products: readonly Pick<ListingProduct, "id">[],
+): boolean {
+  const ids = parameters.getAll("product");
+  return (
+    ids.length > 0 &&
+    (ids.length !== 1 || !products.some((product) => product.id === ids[0]))
+  );
+}
+
 function priceFilter(value: string | null): string {
   const trimmed = value?.trim() ?? "";
   return trimmed && Number.isFinite(Number(trimmed)) && Number(trimmed) >= 0

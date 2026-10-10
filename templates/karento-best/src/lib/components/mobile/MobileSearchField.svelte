@@ -4,6 +4,7 @@
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   const locale = useLocale();
   import MobileIcon from "./MobileIcon.svelte";
+  import MobileIconButton from "./MobileIconButton.svelte";
   import type { Attachment } from "svelte/attachments";
 
   let {
@@ -35,7 +36,7 @@
 
 <div class={["mobile-text-search", className]} role="search" aria-label={label}>
   <label class="visually-hidden" for={id}>{label}</label>
-  <MobileIcon name="search" size={20} />
+  <MobileIcon name="search" size="action" />
   <input
     {id}
     type="search"
@@ -45,11 +46,9 @@
     {@attach ownInput}
     bind:value
   />
-  {#if value}<button
-      type="button"
-      aria-label={locale.t("ui.mobile-search-field.clear-search")}
+  {#if value}<MobileIconButton
+      icon="close"
+      label={locale.t("ui.mobile-search-field.clear-search")}
       onclick={clear}
-    >
-      <MobileIcon name="close" />
-    </button>{/if}
+    />{/if}
 </div>

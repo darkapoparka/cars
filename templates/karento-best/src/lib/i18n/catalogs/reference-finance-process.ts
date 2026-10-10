@@ -5,6 +5,7 @@ export const referenceFinanceProcessEn = {
   "referenceFinance.heroDescription":
     "Estimate monthly payments and explore the numbers for your next car.",
   "referenceFinance.useCalculator": "Use calculator",
+  "referenceFinance.calculate": "Calculate",
   "referenceFinance.apply": "Apply for a loan",
   "referenceFinance.vehiclePrice": "Price of vehicle",
   "referenceFinance.interest": "Annual interest rate (%)",
@@ -44,6 +45,7 @@ export const referenceFinanceProcessBg = {
   "referenceFinance.heroDescription":
     "Разгледайте ориентировъчните вноски за следващия си автомобил.",
   "referenceFinance.useCalculator": "Към калкулатора",
+  "referenceFinance.calculate": "Изчисли",
   "referenceFinance.apply": "Кандидатствайте за кредит",
   "referenceFinance.vehiclePrice": "Цена на автомобила",
   "referenceFinance.interest": "Годишна лихва (%)",

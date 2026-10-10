@@ -19,6 +19,7 @@
   import { MediaQuery } from "svelte/reactivity";
   import {
     referenceDetailContent,
+    desktopReferenceDetailContent,
     referenceProductDetailContent,
     type DetailContent,
   } from "#lib/data/vehicle-detail.ts";
@@ -26,14 +27,21 @@
     product = false,
     details,
     loanState = $bindable(),
+    showFinance = true,
   }: {
     product?: boolean;
     details?: DetailContent;
     loanState?: LoanCalculatorState;
+    showFinance?: boolean;
   } = $props();
+  const desktop = new MediaQuery("(min-width: 992px)");
   let content = $derived(
-    details ??
-      (product ? referenceProductDetailContent : referenceDetailContent),
+    desktop.current &&
+      !product &&
+      (!details || details === referenceDetailContent)
+      ? desktopReferenceDetailContent
+      : (details ??
+          (product ? referenceProductDetailContent : referenceDetailContent)),
   );
   const idBase = $props.id();
   const mobile = new MediaQuery("(max-width: 767.98px)");
@@ -52,11 +60,7 @@
   >
   <DetailAccordion
     id="collapseItinerary"
-    title={mobile.current
-      ? locale.t(product ? "product.aboutItem" : "vehicle.includedPrice")
-      : product
-        ? "About this item"
-        : "Included in the price"}
+    title={locale.t(product ? "product.aboutItem" : "vehicle.includedPrice")}
     mobileOpen={false}
     ><DetailIncludedFeatures
       items={content.includedFeatures}
@@ -68,26 +72,28 @@
     mobileOpen={false}
     ><DetailQuestions questions={content.questions} /></DetailAccordion
   >
-  {#if !dealer.businessPreview && !product && mobile.current}
-    <div class="py-3">
-      <LoanCalculator
-        fields={content.loanFields}
-        summary={content.loanSummary}
-        bind:state={calculatorState}
-      />
-    </div>
+  {#if showFinance}
+    {#if !dealer.businessPreview && !product && mobile.current}
+      <div class="py-3">
+        <LoanCalculator
+          fields={content.loanFields}
+          summary={content.loanSummary}
+          bind:state={calculatorState}
+        />
+      </div>
+    {/if}
+    {#if !dealer.businessPreview && !product && !mobile.current}<DetailAccordion
+        id={idBase + "-collapseCalculator"}
+        title={locale.t("ui.vehicle-detail-panels.car-loan-calculator")}
+        stateKey={idBase + "-calculator"}
+        stateValue="#collapseCalculator"
+        ><LoanCalculator
+          fields={content.loanFields}
+          summary={content.loanSummary}
+          bind:state={calculatorState}
+        /></DetailAccordion
+      >{/if}
   {/if}
-  {#if !dealer.businessPreview && !product && !mobile.current}<DetailAccordion
-      id={idBase + "-collapseCalculator"}
-      title={locale.t("ui.vehicle-detail-panels.car-loan-calculator")}
-      stateKey={idBase + "-calculator"}
-      stateValue="#collapseCalculator"
-      ><LoanCalculator
-        fields={content.loanFields}
-        summary={content.loanSummary}
-        bind:state={calculatorState}
-      /></DetailAccordion
-    >{/if}
   {#if !dealer.businessPreview}<DetailAccordion
       id="collapseReviews"
       title={locale.t("ui.vehicle-detail-panels.rate-reviews")}

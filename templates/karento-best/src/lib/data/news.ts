@@ -8,6 +8,26 @@ export interface NewsArticleSection {
   readonly paragraphs: readonly CatalogText[];
 }
 
+/** Stable legacy reference links; missing supplied bodies use article recovery. */
+export const referenceNewsLinkIds = {
+  rentalExperience: "reference-rental-experience",
+  rentalNeeds: "reference-rental-needs",
+  luxuryOccasions: "reference-luxury-occasions",
+  scenicDrives: "reference-scenic-drives",
+  rentingAbroad: "reference-renting-abroad",
+  familyRoadTrips: "newsList-1",
+  hiddenRentalFees: "newsList-2",
+  peakTravelRental: "newsList-3",
+  rentalInsurance: "newsList-4",
+  businessTravel: "reference-business-travel",
+  nationalParks: "reference-national-parks",
+  extendRental: "reference-extend-rental",
+  returnChecklist: "reference-return-checklist",
+  escalade: "reference-escalade",
+  bmw: "reference-bmw",
+  rodeo: "reference-rodeo",
+} as const;
+
 /** An article owns its title, artwork and body; sample content stays explicit. */
 export interface NewsArticleContent {
   readonly id: string;

@@ -3,6 +3,7 @@
 <script lang="ts">
   import { MediaQuery } from "svelte/reactivity";
   import LoanCard from "#lib/components/finance/LoanCard.svelte";
+  let { mobileFeatured = false }: { mobileFeatured?: boolean } = $props();
   const desktop = new MediaQuery("(min-width: 992px)");
 </script>
 
@@ -26,6 +27,7 @@
     <div class="row position-relative z-1">
       <div class="col-lg-6 p-md-5 p-4">
         <LoanCard
+          {mobileFeatured}
           fieldIdPrefix="field-d472647c"
           class="background-card p-md-5 p-4 rounded-3 my-3"
           summaryClass="row pt-3 pb-4"

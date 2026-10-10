@@ -22,14 +22,21 @@
     items,
     actionLabel,
     actionHref,
+    layout = "rail",
   }: {
     items: readonly MobileBodyType[];
     actionLabel: string;
     actionHref: string;
+    layout?: "rail" | "grid";
   } = $props();
 </script>
 
-<div class="mobile-body-type-header">
+<div
+  class={[
+    "mobile-body-type-header",
+    { "mobile-body-type-grid-header": layout === "grid" },
+  ]}
+>
   <h3 class="mobile-body-type-heading"
     >{locale.t("ui.mobile-body-type-rail.browse-by-type")}</h3
   >
@@ -40,9 +47,12 @@
   />
 </div>
 <nav
-  class="mobile-body-type-rail"
+  class={[
+    "mobile-body-type-rail",
+    { "mobile-body-type-grid": layout === "grid" },
+  ]}
   aria-label={locale.t("ui.mobile-body-type-rail.vehicle-body-types")}
-  {@attach focusableScroll}
+  {@attach layout === "rail" ? focusableScroll : undefined}
 >
   {#each items as item (item.id)}
     <a
@@ -120,6 +130,20 @@
       scroll-snap-type: none;
     }
 
+    .mobile-body-type-grid-header .mobile-body-type-heading {
+      overflow: visible;
+      white-space: normal;
+      text-overflow: clip;
+    }
+
+    .mobile-body-type-grid {
+      grid-auto-flow: row;
+      grid-auto-columns: auto;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      overflow: visible;
+      scroll-snap-type: none;
+    }
+
     .mobile-body-type-card {
       display: grid;
       align-content: start;
@@ -170,6 +194,22 @@
       font-size: var(--karento-type-meta-size);
       font-weight: var(--karento-type-meta-weight);
       line-height: var(--karento-type-meta-leading);
+    }
+
+    .mobile-body-type-grid .mobile-body-type-card {
+      scroll-snap-align: none;
+    }
+
+    .mobile-body-type-grid .mobile-body-type-copy {
+      display: grid;
+      gap: var(--karento-space-1);
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+
+    .mobile-body-type-grid .mobile-body-type-label {
+      overflow: visible;
+      text-overflow: clip;
     }
 
     .mobile-body-type-rail:focus-visible,

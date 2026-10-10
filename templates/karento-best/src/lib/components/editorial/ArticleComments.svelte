@@ -12,6 +12,8 @@
   );
   import { locales } from "#lib/i18n/locales.ts";
   import DemoActionLink from "#lib/components/DemoActionLink.svelte";
+  import { MediaQuery } from "svelte/reactivity";
+  const desktop = new MediaQuery("(min-width: 992px)");
 </script>
 
 <div class="box-list-comment background-card mb-0">
@@ -65,7 +67,11 @@
       </div>
       <div class="content-review">
         <p class="text-sm-medium neutral-800 desktop-type-body"
-          >{locale.t("editorial.comment.firstBody")}</p
+          >{locale.t(
+            desktop.current
+              ? "editorial.comment.sampleFirstBody"
+              : "editorial.comment.firstBody",
+          )}</p
         >
       </div>
     </div>
@@ -118,7 +124,11 @@
       </div>
       <div class="content-review">
         <p class="text-sm-medium neutral-800 desktop-type-body"
-          >{locale.t("editorial.comment.secondBody")}</p
+          >{locale.t(
+            desktop.current
+              ? "editorial.comment.sampleSecondBody"
+              : "editorial.comment.secondBody",
+          )}</p
         >
       </div>
     </div>
@@ -171,7 +181,11 @@
       </div>
       <div class="content-review">
         <p class="text-sm-medium neutral-800 desktop-type-body"
-          >{locale.t("editorial.comment.thirdBody")}</p
+          >{locale.t(
+            desktop.current
+              ? "editorial.comment.sampleThirdBody"
+              : "editorial.comment.thirdBody",
+          )}</p
         >
       </div>
     </div>

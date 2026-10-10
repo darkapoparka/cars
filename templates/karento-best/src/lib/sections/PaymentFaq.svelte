@@ -5,7 +5,12 @@
   const locale = useLocale();
   import DemoActionLink from "#lib/components/DemoActionLink.svelte";
   import FaqColumns from "#lib/components/faq/FaqColumns.svelte";
-  import { referencePaymentFaqItems } from "#lib/data/faq.ts";
+  import {
+    desktopPaymentFaqItems,
+    referencePaymentFaqItems,
+  } from "#lib/data/faq.ts";
+  import { MediaQuery } from "svelte/reactivity";
+  const desktop = new MediaQuery("(min-width: 992px)");
   const idBase = $props.id();
 </script>
 
@@ -19,16 +24,21 @@
       >
     </div>
     <FaqColumns
-      items={referencePaymentFaqItems}
+      items={desktop.current
+        ? desktopPaymentFaqItems
+        : referencePaymentFaqItems}
       {idBase}
-      splitAt={6}
+      splitAt={desktop.current ? 3 : 6}
       appearance="rounded"
     />
     <div class="row">
       <div class="col-12 mt-4">
         <div class="d-flex justify-content-start gap-2">
           <a
-            class="btn btn-gray2 desktop-type-control"
+            class={[
+              "btn btn-gray2 desktop-type-control",
+              desktop.current && "desktop-card-action desktop-action-primary",
+            ]}
             href={locale.href("/contact")}
             aria-label={locale.t("reference.faq.contact")}
           >
@@ -44,37 +54,37 @@
             >
               <path
                 d="M8 15L15 8L8 1M15 8L1 8"
-                stroke=""
+                stroke={desktop.current ? "currentColor" : ""}
                 stroke-width="1.5"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               ></path>
             </svg>
           </a>
-          <DemoActionLink
-            class="btn btn-primary rounded-3 desktop-type-control"
-            href="#!"
-            aria-label={locale.t("reference.faq.ticket")}
-          >
-            {locale.t("reference.faq.ticket")}
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-              focusable="false"
+          {#if !desktop.current}<DemoActionLink
+              class="btn btn-primary rounded-3 desktop-type-control"
+              href="#!"
+              aria-label={locale.t("reference.faq.ticket")}
             >
-              <path
-                d="M8 15L15 8L8 1M15 8L1 8"
-                stroke=""
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
-            </svg>
-          </DemoActionLink>
+              {locale.t("reference.faq.ticket")}
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M8 15L15 8L8 1M15 8L1 8"
+                  stroke=""
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </DemoActionLink>{/if}
         </div>
       </div>
     </div>
@@ -83,6 +93,10 @@
 
 <style>
   @media (min-width: 992px) {
+    a.desktop-card-action svg path {
+      fill: none;
+      stroke: currentColor;
+    }
     .desktop-section-heading h2 {
       margin-block: 0 !important;
     }

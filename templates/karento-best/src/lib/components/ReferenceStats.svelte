@@ -5,9 +5,17 @@
   const locale = useLocale();
   import { referenceStats } from "#lib/data/promotions.ts";
   import ResponsiveDisclosure from "./ResponsiveDisclosure.svelte";
+  import { dealer } from "#lib/content.ts";
+  import { MediaQuery } from "svelte/reactivity";
+  const desktop = new MediaQuery("(min-width: 992px)");
 </script>
 
 <ResponsiveDisclosure title={locale.t("ui.reference-stats.sample-statistics")}>
+  {#if desktop.current && dealer.contentStatus === "reference-demo"}
+    <p class="reference-stats-notice text-center neutral-500 desktop-type-meta"
+      >{locale.t("ui.reference-stats.sample-statistics")}</p
+    >
+  {/if}
   <div
     class="reference-stats d-flex align-items-center justify-content-around flex-wrap"
   >
@@ -37,6 +45,11 @@
 </ResponsiveDisclosure>
 
 <style>
+  @media (min-width: 992px) {
+    .reference-stats-notice {
+      margin-bottom: var(--karento-desktop-card-gap);
+    }
+  }
   @media (max-width: 767.98px) {
     .reference-stats {
       display: grid !important;

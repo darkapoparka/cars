@@ -41,6 +41,9 @@ export const referenceServicesShopEn = {
   "reference.shop.count.of": " of {count}",
   "reference.shop.product.one": "product",
   "reference.shop.product.other": "products",
+  "reference.shop.product.missingTitle": "Product not found in this preview",
+  "reference.shop.product.missingBody":
+    "This link does not identify a product in the sample collection. Return to the shop to choose a reference product.",
   "reference.shop.reviewCount": "(672 reviews)",
   "reference.shop.buy": "Buy Now",
   "reference.shop.feature.weather":
@@ -95,6 +98,10 @@ export const referenceServicesShopBg = {
   "reference.shop.count.of": " от {count}",
   "reference.shop.product.one": "продукт",
   "reference.shop.product.other": "продукта",
+  "reference.shop.product.missingTitle":
+    "Продуктът не е намерен в този демонстрационен сайт",
+  "reference.shop.product.missingBody":
+    "Тази връзка не посочва продукт от примерната колекция. Върнете се в магазина, за да изберете примерен продукт.",
   "reference.shop.reviewCount": "(672 отзива)",
   "reference.shop.buy": "Купете",
   "reference.shop.feature.weather": "Уверено шофиране при всякакво време",

@@ -34,30 +34,40 @@
     <HomeVehicleCarousel />
     <HomeVehicleSearch />
   </div>
-  <PopularVehicleGrid />
-  <HomeBrandLinks />
-  {#if !phone.current}
-    <VehiclePurchaseSteps />
-  {/if}
-  {#if !dealer.businessPreview}
-    <RentalOfferCardsCompact />
-    <SellAndRentalOffers />
-    <VehicleTypeShowcase />
-    <LoanCalculatorPanel />
-  {/if}
-  <FeaturedVehicleGrid />
-  {#if !dealer.businessPreview}
-    <CustomerReviewGrid />
-    <ServicesOverview />
-  {/if}
   {#if phone.current}
+    <PopularVehicleGrid />
+    {#if !dealer.businessPreview}
+      <HomeBrandLinks compactMobile />
+      <VehicleTypeShowcase mobileLayout="grid" />
+      <LoanCalculatorPanel mobileFeatured />
+    {/if}
+    <FeaturedVehicleGrid compactMobile />
     <VehiclePurchaseSteps />
-  {/if}
-  {#if !dealer.businessPreview}
-    <VehicleReviewCarousel />
-    <AgentTeamCompact />
-    <UpcomingVehicleNews />
-    <AppDownloadPromotion />
+    {#if !dealer.businessPreview}
+      <CustomerReviewGrid />
+      <VehicleReviewCarousel />
+      <AgentTeamCompact />
+      <UpcomingVehicleNews />
+    {/if}
+  {:else}
+    <PopularVehicleGrid />
+    <HomeBrandLinks />
+    <VehiclePurchaseSteps />
+    {#if !dealer.businessPreview}
+      <RentalOfferCardsCompact />
+      <SellAndRentalOffers />
+      <VehicleTypeShowcase />
+      <LoanCalculatorPanel />
+    {/if}
+    <FeaturedVehicleGrid />
+    {#if !dealer.businessPreview}
+      <CustomerReviewGrid />
+      <ServicesOverview />
+      <VehicleReviewCarousel />
+      <AgentTeamCompact />
+      <UpcomingVehicleNews />
+      <AppDownloadPromotion />
+    {/if}
   {/if}
   <Footer /></main
 >

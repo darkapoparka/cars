@@ -1,5 +1,19 @@
 /** Reference-only editorial content. IDs, people, providers and stock facts stay in their source data. */
 export const referenceEditorialEn = {
+  "editorial.list.sampleSummary":
+    "Example automotive articles for this website preview.",
+  "editorial.list.sampleExcerpt":
+    "Explore vehicle choice, journey planning and rental costs.",
+  "editorial.signup.previewLabel": "Signup preview",
+  "editorial.signup.previewTitle": "Keep up with vehicle news and updates",
+  "editorial.signup.previewHelp":
+    "This preview does not send or save your email.",
+  "editorial.comment.sampleFirstBody":
+    "Sample comment: Comparing passenger and luggage space is a useful starting point when choosing a car. Before arranging a journey, confirm the vehicle details, availability and any restrictions with the team.",
+  "editorial.comment.sampleSecondBody":
+    "Sample comment: A clear comparison includes the vehicle price, running costs and any chosen extras. Ask which details apply to the vehicle and the journey you have in mind before making a decision.",
+  "editorial.comment.sampleThirdBody":
+    "Sample comment: A viewing is a chance to check the vehicle condition and ask about its history. Prepare questions about space, comfort and practical features, and confirm the next steps with the team.",
   "editorial.source.view": "View source",
   "editorial.hero.desktopSummary":
     "Compare space, comfort and cost before choosing your rental.",
@@ -109,6 +123,21 @@ export const referenceEditorialEn = {
 } as const;
 
 export const referenceEditorialBg = {
+  "editorial.list.sampleSummary":
+    "Примерни автомобилни статии за този демонстрационен сайт.",
+  "editorial.list.sampleExcerpt":
+    "Разгледайте избора на автомобил, планирането на пътуване и разходите за наем.",
+  "editorial.signup.previewLabel": "Примерен абонамент",
+  "editorial.signup.previewTitle":
+    "Следете новините и актуалностите за автомобили",
+  "editorial.signup.previewHelp":
+    "Този преглед не изпраща или запазва имейла ви.",
+  "editorial.comment.sampleFirstBody":
+    "Примерен коментар: Сравняването на мястото за пътници и багаж е полезна отправна точка при избора на автомобил. Преди пътуване потвърдете с екипа данните, наличността и приложимите ограничения.",
+  "editorial.comment.sampleSecondBody":
+    "Примерен коментар: Ясното сравнение включва цената на автомобила, текущите разходи и избраните допълнения. Попитайте кои условия се отнасят за автомобила и планираното пътуване, преди да вземете решение.",
+  "editorial.comment.sampleThirdBody":
+    "Примерен коментар: Огледът е възможност да проверите състоянието на автомобила и да попитате за историята му. Подгответе въпроси за мястото, комфорта и практичните функции и потвърдете следващите стъпки с екипа.",
   "editorial.source.view": "Вижте профила",
   "editorial.hero.desktopSummary":
     "Сравнете пространството, комфорта и цената, преди да изберете автомобил под наем.",

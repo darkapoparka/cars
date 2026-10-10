@@ -28,6 +28,7 @@
     headingClass = "neutral-1000 mb-2",
     content = referenceLoanCard,
     showHeading = true,
+    mobileFeatured = false,
     state: suppliedState = $bindable(),
   }: {
     fieldIdPrefix: string;
@@ -37,6 +38,7 @@
     headingClass?: string;
     content?: LoanCardContent;
     showHeading?: boolean;
+    mobileFeatured?: boolean;
     state?: LoanCalculatorState;
   } = $props();
   const mobile = new MediaQuery("(max-width: 767.98px)");
@@ -145,6 +147,7 @@
       {@render calculatorBody("row mobile-loan-summary")}
     {/snippet}
     <MobileLoanCard
+      featured={mobileFeatured}
       id={headingId}
       title={locale.text(content.title)}
       actionLabel={locale.t("referenceFinance.discussFinance")}

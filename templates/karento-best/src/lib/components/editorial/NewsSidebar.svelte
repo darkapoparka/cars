@@ -5,6 +5,17 @@
   const locale = useLocale();
   import DemoActionLink from "#lib/components/DemoActionLink.svelte";
   import DemoForm from "#lib/components/DemoForm.svelte";
+  import { MediaQuery } from "svelte/reactivity";
+  import {
+    newsArticleDestination,
+    referenceNewsLinkIds,
+  } from "#lib/data/news.ts";
+  const desktop = new MediaQuery("(min-width: 992px)");
+  function articleHref(id: string) {
+    return locale.href(
+      desktop.current ? newsArticleDestination({ id }) : "/news/article",
+    );
+  }
 </script>
 
 <div class="col-lg-4">
@@ -36,7 +47,7 @@
           <div class="card-post">
             <div class="card-image">
               <a
-                href={locale.href("/news/article")}
+                href={articleHref(referenceNewsLinkIds.rentalInsurance)}
                 aria-label={locale.t("ui.news-sidebar.view-details")}
                 ><img
                   src="/assets/imgs/blog/blog-list/trending.png"
@@ -47,7 +58,7 @@
             <div class="card-info">
               <a
                 class="text-md-bold neutral-1000 desktop-type-compact-card"
-                href={locale.href("/news/article")}
+                href={articleHref(referenceNewsLinkIds.rentalInsurance)}
                 aria-label={locale.t("editorial.title.rentalInsurance")}
                 >{locale.t("editorial.title.rentalInsurance")}</a
               >
@@ -61,7 +72,7 @@
           <div class="card-post">
             <div class="card-image">
               <a
-                href={locale.href("/news/article")}
+                href={articleHref(referenceNewsLinkIds.businessTravel)}
                 aria-label={locale.t("ui.news-sidebar.view-details")}
                 ><img
                   src="/assets/imgs/blog/blog-list/trending1.png"
@@ -72,7 +83,7 @@
             <div class="card-info">
               <a
                 class="text-md-bold neutral-1000 desktop-type-compact-card"
-                href={locale.href("/news/article")}
+                href={articleHref(referenceNewsLinkIds.businessTravel)}
                 aria-label={locale.t("editorial.title.businessTravel")}
                 >{locale.t("editorial.title.businessTravel")}</a
               >
@@ -86,7 +97,7 @@
           <div class="card-post">
             <div class="card-image">
               <a
-                href={locale.href("/news/article")}
+                href={articleHref(referenceNewsLinkIds.nationalParks)}
                 aria-label={locale.t("ui.news-sidebar.view-details")}
                 ><img
                   src="/assets/imgs/blog/blog-list/trending2.png"
@@ -97,7 +108,7 @@
             <div class="card-info">
               <a
                 class="text-md-bold neutral-1000 desktop-type-compact-card"
-                href={locale.href("/news/article")}
+                href={articleHref(referenceNewsLinkIds.nationalParks)}
                 aria-label={locale.t("editorial.title.nationalParks")}
                 >{locale.t("editorial.title.nationalParks")}</a
               >
@@ -111,7 +122,7 @@
           <div class="card-post">
             <div class="card-image">
               <a
-                href={locale.href("/news/article")}
+                href={articleHref(referenceNewsLinkIds.extendRental)}
                 aria-label={locale.t("ui.news-sidebar.view-details")}
                 ><img
                   src="/assets/imgs/blog/blog-list/trending3.png"
@@ -122,7 +133,7 @@
             <div class="card-info">
               <a
                 class="text-md-bold neutral-1000 desktop-type-compact-card"
-                href={locale.href("/news/article")}
+                href={articleHref(referenceNewsLinkIds.extendRental)}
                 aria-label={locale.t("editorial.title.extendRental")}
                 >{locale.t("editorial.title.extendRental")}</a
               >
@@ -136,7 +147,7 @@
           <div class="card-post">
             <div class="card-image">
               <a
-                href={locale.href("/news/article")}
+                href={articleHref(referenceNewsLinkIds.returnChecklist)}
                 aria-label={locale.t("ui.news-sidebar.view-details")}
                 ><img
                   src="/assets/imgs/blog/blog-list/trending4.png"
@@ -147,7 +158,7 @@
             <div class="card-info">
               <a
                 class="text-md-bold neutral-1000 desktop-type-compact-card"
-                href={locale.href("/news/article")}
+                href={articleHref(referenceNewsLinkIds.returnChecklist)}
                 aria-label={locale.t("editorial.title.returnChecklist")}
                 >{locale.t("editorial.title.returnChecklist")}</a
               >

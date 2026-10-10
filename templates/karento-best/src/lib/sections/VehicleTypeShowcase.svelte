@@ -8,6 +8,7 @@
   import MobileBodyTypeRail, {
     type MobileBodyType,
   } from "#lib/components/mobile/MobileBodyTypeRail.svelte";
+  let { mobileLayout = "rail" }: { mobileLayout?: "rail" | "grid" } = $props();
   const phone = new MediaQuery("(max-width: 767.98px)");
   const bodyTypes = $derived([
     {
@@ -90,6 +91,7 @@
     <div class="container">
       <MobileBodyTypeRail
         items={bodyTypes}
+        layout={mobileLayout}
         actionLabel={locale.t("action.viewMore")}
         actionHref="/vehicles"
       />

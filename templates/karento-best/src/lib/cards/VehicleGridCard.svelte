@@ -7,6 +7,7 @@
   import { MediaQuery } from "svelte/reactivity";
   import MobileVehicleCard from "#lib/components/mobile/MobileVehicleCard.svelte";
   import { dealer, type VehicleCardContent } from "#lib/content.ts";
+  import { referenceVehicleDestination } from "#lib/data/vehicle-detail-selection.ts";
   let {
     card: referenceCard,
     linkedImage = true,
@@ -24,6 +25,12 @@
   } = $props();
   const card = $derived(dealer.inventory[referenceCard.title] ?? referenceCard);
   const mobile = new MediaQuery("(max-width: 767.98px)");
+  const desktop = new MediaQuery("(min-width: 992px)");
+  const destination = $derived(
+    desktop.current && card === referenceCard
+      ? referenceVehicleDestination(card)
+      : card.href,
+  );
   const display = $derived(presentVehicle(card, locale));
   const desktopFacts = $derived(
     [
@@ -49,7 +56,7 @@
   <div class="card-journey-small background-card">
     <div class="card-image">
       {#if linkedImage}<a
-          href={locale.href(card.href)}
+          href={locale.href(destination)}
           aria-label={locale.t("action.viewVehicle", { vehicle: card.title })}
         >
           <img src={card.image} alt={card.imageAlt} />
@@ -77,7 +84,7 @@
             "text-lg-bold neutral-1000 desktop-type-compact-card",
             { "text-nowrap": nowrapTitle },
           ]}
-          href={locale.href(card.href)}
+          href={locale.href(destination)}
           aria-label={locale.t("action.viewVehicle", { vehicle: card.title })}
           >{card.title}</a
         ></div
@@ -126,7 +133,7 @@
           {#if showAction}<div class="card-button"
               ><a
                 class="btn btn-gray desktop-type-control desktop-card-action"
-                href={locale.href(card.href)}
+                href={locale.href(destination)}
                 aria-label={locale.t("action.viewVehicle", {
                   vehicle: card.title,
                 })}

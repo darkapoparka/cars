@@ -8,6 +8,7 @@
   import { MediaQuery } from "svelte/reactivity";
   import type { HTMLInputAttributes } from "svelte/elements";
   const phone = new MediaQuery("(max-width: 767.98px)");
+  const desktop = new MediaQuery("(min-width: 992px)");
   let { field }: { field: DashboardField } = $props();
   const phoneTypes = new Map<string, HTMLInputAttributes["type"]>([
     [dashboardFields.memberEmail.id, "email"],
@@ -29,7 +30,11 @@
     phone.current ? (phoneTypes.get(field.id ?? "") ?? field.type) : field.type,
   );
   const controlName = $derived(
-    locale.text(phone.current && field.label ? field.label : field.ariaLabel),
+    locale.text(
+      (phone.current || desktop.current) && field.label
+        ? field.label
+        : field.ariaLabel,
+    ),
   );
   const inputMode = $derived<HTMLInputAttributes["inputmode"]>(
     !phone.current

@@ -1,4 +1,13 @@
 export const referenceHomeEn = {
+  "referenceHome.services.import": "Import",
+  "referenceHome.services.sell": "Sell",
+  "referenceHome.services.buy": "Buy",
+  "referenceHome.services.lease": "Lease",
+  "referenceHome.services.previewDescription":
+    "Explore sample vehicle services and discuss what you need.",
+  "referenceHome.testimonials.previewLabel": "Sample testimonials",
+  "referenceHome.testimonials.vehicleQuote":
+    "The vehicle details helped me compare the options and prepare my questions before contacting the team.",
   "referenceHome.promotions.rentalTitle": "Looking for a rental car?",
   "referenceHome.promotions.rentalFirst":
     "Discover your ideal rental car for every adventure,",
@@ -62,6 +71,15 @@ export const referenceHomeEn = {
 } as const;
 
 export const referenceHomeBg = {
+  "referenceHome.services.import": "Внос",
+  "referenceHome.services.sell": "Продажба",
+  "referenceHome.services.buy": "Покупка",
+  "referenceHome.services.lease": "Лизинг",
+  "referenceHome.services.previewDescription":
+    "Разгледайте примерните автомобилни услуги и обсъдете от какво имате нужда.",
+  "referenceHome.testimonials.previewLabel": "Примерни отзиви",
+  "referenceHome.testimonials.vehicleQuote":
+    "Информацията за автомобилите ми помогна да сравня вариантите и да подготвя въпросите си, преди да се свържа с екипа.",
   "referenceHome.promotions.rentalTitle": "Търсите кола под наем?",
   "referenceHome.promotions.rentalFirst":
     "Изберете подходящата кола за всяко пътуване,",

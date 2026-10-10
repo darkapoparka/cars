@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   desktopShopDestination,
+  isUnavailableDesktopProduct,
   matchDesktopShop,
   readDesktopShopFilters,
   shopFilterLabel,
@@ -222,4 +223,54 @@ test("each reference product keeps its own detail selection without false discou
     assert.equal(selectedReferenceProduct(url.searchParams), product);
     assert.equal(hasReferenceDiscount(product), false);
   }
+});
+
+test("desktop product recovery rejects unknown, empty and duplicate explicit IDs", () => {
+  for (const id of ["missing-product", "constructor", "__proto__", "", " "]) {
+    assert.equal(
+      isUnavailableDesktopProduct(
+        new URLSearchParams({ product: id }),
+        listingProducts,
+      ),
+      true,
+    );
+  }
+  for (const secondId of [listingProducts[0].id, listingProducts[1].id, ""]) {
+    const parameters = new URLSearchParams({ product: listingProducts[0].id });
+    parameters.append("product", secondId);
+    assert.equal(
+      isUnavailableDesktopProduct(parameters, listingProducts),
+      true,
+    );
+  }
+  assert.equal(
+    isUnavailableDesktopProduct(
+      new URLSearchParams({ product: listingProducts[0].id }),
+      [],
+    ),
+    true,
+  );
+});
+
+test("desktop recovery preserves default and exact product selections without changing the phone helper", () => {
+  const defaultParameters = new URLSearchParams("lang=bg");
+  assert.equal(
+    isUnavailableDesktopProduct(defaultParameters, listingProducts),
+    false,
+  );
+  assert.equal(selectedReferenceProduct(defaultParameters), listingProducts[0]);
+  for (const product of listingProducts) {
+    const parameters = new URLSearchParams({ product: product.id, lang: "bg" });
+    assert.equal(
+      isUnavailableDesktopProduct(parameters, listingProducts),
+      false,
+    );
+    assert.equal(selectedReferenceProduct(parameters), product);
+  }
+  assert.equal(
+    selectedReferenceProduct(
+      new URLSearchParams({ product: "missing-product" }),
+    ),
+    listingProducts[0],
+  );
 });

@@ -6,8 +6,14 @@
   import type { DashboardPreferenceGroup } from "#lib/data/dashboard.ts";
   import { MediaQuery } from "svelte/reactivity";
   const phone = new MediaQuery("(max-width: 767.98px)");
+  const desktop = new MediaQuery("(min-width: 992px)");
   let { group, idBase }: { group: DashboardPreferenceGroup; idBase: string } =
     $props();
+  const description = $derived(
+    desktop.current && group.id === "Booking Confirmations"
+      ? locale.t("reference.dashboard.desktop.bookingNotifications")
+      : locale.text(group.description),
+  );
 </script>
 
 <div class="row mb-3">
@@ -22,12 +28,12 @@
         ><div class="ms-3"
           ><p class="fw-bold fs-6 desktop-type-compact-card"
             >{locale.text(group.title)}</p
-          ><p class="neutral-500">{locale.text(group.description)}</p></div
+          ><p class="neutral-500">{description}</p></div
         ></div
       >
     {:else}<p class="fw-bold fs-6 desktop-type-compact-card"
         >{locale.text(group.title)}</p
-      ><p class="neutral-500">{locale.text(group.description)}</p>{/if}
+      ><p class="neutral-500">{description}</p>{/if}
   </div>
   <div class="col-lg-6"
     ><div class={group.toggleContainerClass}>
@@ -58,7 +64,9 @@
                 role="switch"
                 id={idBase + toggle.suffix}
                 checked={toggle.checked}
-                aria-label={toggle.ariaLabel}
+                aria-label={desktop.current
+                  ? locale.text(toggle.label)
+                  : toggle.ariaLabel}
               /></div
             >{/if}</div
         >{/each}
