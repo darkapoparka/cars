@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-10",
+  "scope": "Cloudflare six-design provider extension and two framework qualification Workers",
+  "runtime": "Node22.23.2 workflow checks; family-specific pinned qualification runtimes",
+  "checks": [
+    {
+      "name": "workflow integration",
+      "status": "passed",
+      "tests": 505,
+      "files": 64,
+      "phases": [
+        466,
+        39
+      ],
+      "evidence": [
+        "runtime/uk-cloudflare-workflow-tests-20261010.log",
+        "runtime/uk-cloudflare-workflow-extra-tests-20261010.log"
+      ]
+    },
+    {
+      "name": "final focused Cloudflare guards and routes",
+      "status": "passed",
+      "tests": 33,
+      "files": 5,
+      "command": "node --test scripts/cloudflare-provider.test.mjs scripts/cloudflare-export.test.mjs scripts/cloudflare-six-mount.test.mjs scripts/publishing/cloudflare-next.test.mjs scripts/publishing/cloudflare-svelte.test.mjs"
+    },
+    {
+      "name": "workflow documentation and command help",
+      "status": "passed",
+      "command": "node scripts/check-workflow.mjs"
+    }
+  ],
+  "hostedQualification": [
+    {
+      "family": "auto-best",
+      "sourceCommit": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+      "worker": "cars-cf-qualification-auto-best",
+      "version": "451c0cf6-6e1a-4f95-bcd8-7d03cbb7d791",
+      "url": "https://cars-cf-qualification-auto-best.darkapoparka1.workers.dev/en",
+      "httpChecksPassed": 19,
+      "cpuSampleCount": 10,
+      "cpuMedianMs": 8,
+      "cpuMaxMs": 55,
+      "cpuAbove10Ms": 4,
+      "freeCpuQualified": false
+    },
+    {
+      "family": "mobile",
+      "sourceCommit": "876590474d01178413feccf3153a0859230158a1",
+      "worker": "cars-cf-qualification-mobile",
+      "version": "ff5a4997-4912-4ba0-be73-ebe6cf32b7d5",
+      "url": "https://cars-cf-qualification-mobile.darkapoparka1.workers.dev/variant-5/",
+      "httpChecksPassed": 17,
+      "cpuSampleCount": 11,
+      "cpuMedianMs": 16,
+      "cpuMaxMs": 69,
+      "cpuAbove10Ms": 8,
+      "freeCpuQualified": false
+    }
+  ],
+  "acceptance": {
+    "providerIntegrationTestsPassed": true,
+    "sixFamilyHostedPilot": false,
+    "latestTemplateSetSelected": false,
+    "ukDealerOriginsPublished": 0,
+    "billingChanged": false,
+    "dnsChanged": false
+  },
+  "retention": "Compact receipts, two matched Mobile image captures and one active qualification output/install per owner. Raw request/IP tails retired after sanitized CPU evidence saved."
+}

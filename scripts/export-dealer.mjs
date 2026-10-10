@@ -4,8 +4,8 @@ import path from 'node:path';
 import {ROOT,args,json,writeJson,git,inside,filesAt,sha256,normalized,validateManifest} from './lib/workflow.mjs';
 
 export function packageFiles(directory) {
-  const omit = new Set(['.git','node_modules','.vercel','.netlify','.agency-os','.auth','.codex','.claude','.agents','.openai','.template','.svelte-kit','.next','.turbo','.cache','.pnpm-store','build','dist','runtime','audits','artifacts','evidence','qa','qa-final','test-results','playwright-report','coverage']);
-  return filesAt(directory,{filter:relative => !relative.split('/').some(p => omit.has(p) || (p.startsWith('.env') && !/^\.env\.(example|sample|template)$/.test(p)) || p.startsWith('.next-')) && !/\.(pem|key|pfx|p12|log|pid|tsbuildinfo)$/i.test(relative) && (!/(?:credentials|service-account|purchase-code|license-certificate)/i.test(path.basename(relative)) || /\.(?:[cm]?[jt]sx?|svelte|vue|py|sh|ps1)$/i.test(relative)) && relative !== '.cars-publish.json'});
+  const omit = new Set(['.git','node_modules','.vercel','.netlify','.wrangler','.open-next','.vinext','.cloudflare','.cars-cloudflare','.cars-build-assets','.agency-os','.auth','.codex','.claude','.agents','.openai','.template','.svelte-kit','.next','.turbo','.cache','.pnpm-store','build','dist','runtime','audits','artifacts','evidence','qa','qa-final','test-results','playwright-report','coverage']);
+  return filesAt(directory,{filter:relative => !relative.split('/').some(p => omit.has(p) || (p.startsWith('.env') && !/^\.env\.(example|sample|template)$/.test(p)) || p.startsWith('.next-')) && !/\.(pem|key|pfx|p12|log|pid|tsbuildinfo)$/i.test(relative) && (!/(?:credentials|service-account|purchase-code|license-certificate)/i.test(path.basename(relative)) || /\.(?:[cm]?[jt]sx?|svelte|vue|py|sh|ps1)$/i.test(relative)) && relative !== '.cars-publish.json' && relative !== '.cars-cloudflare-svelte-locks.json' && !/^\.cars-next-(?:modern|app|mobile)-(?:dependencies|frozen-lock)\.json$/.test(relative)});
 }
 export function packageDigest(directory) {
   const files = packageFiles(directory).map(p => ({path:p,sha256:sha256(normalized(fs.readFileSync(path.join(directory,p))))}));
@@ -13,6 +13,10 @@ export function packageDigest(directory) {
 }
 export function verifyPackage(directory) {
   const meta=json(path.join(directory,'.cars-package.json'));
+  if (meta.assetDelivery?.provider === 'cloudflare') {
+    const provider = json(path.join(directory, '.cars-cloudflare.json'));
+    if (provider.provider !== 'cloudflare' || provider.acceptance?.dependencyLocksFrozen !== true) throw new Error('Cloudflare dependency locks must be qualified and frozen before publishing');
+  }
   const actual=packageDigest(directory);
   const payload=actual.files.filter(f=>f.path!=='.cars-package.json');
   if(JSON.stringify(payload)!==JSON.stringify(meta.payload)||sha256(JSON.stringify(payload))!==meta.payloadDigest)
@@ -60,7 +64,7 @@ export function exportDealer({root=ROOT,slug,packageDir,reviewFile,write=false,t
   const priorText=git(root,['show',parent+':.cars-publish.json'],{allowFailure:true});
   let unexpected=[];
   if(priorText){const prior=JSON.parse(priorText);if(prior.repository!==manifest.repository)throw new Error('Remote publishing metadata has another repository identity.');const managed=new Map(prior.files.map(f=>[f.path,f.blob]));unexpected=[...new Set([...remote.keys(),...managed.keys()])].filter(p=>p!=='.cars-publish.json'&&remote.get(p)!==managed.get(p));}
-  const report={schemaVersion:1,slug,repository:manifest.repository,branch,defaultBranch,baseHead,targetHead,parent,sourceCommit:packageMeta.sourceCommit,candidateDigest:digest.digest,tree,changes,unexpectedRemoteChanges:unexpected,packageDirectory:directory,proposalDirectory:run};
+  const report={schemaVersion:1,slug,repository:manifest.repository,branch,defaultBranch,baseHead,targetHead,parent,sourceCommit:packageMeta.sourceCommit,candidateDigest:digest.digest,tree,changes,unexpectedRemoteChanges:unexpected,packageDirectory:directory,proposalDirectory:run,...(packageMeta.assetDelivery?.provider === 'cloudflare' ? {provider:'cloudflare'} : {})};
   writeJson(path.join(run,'proposal.json'),report);
   if(!write)return report;
   if(!priorText||unexpected.length)validateReview({review:reviewFile?json(reviewFile):null,remoteCommit:parent,candidateDigest:digest.digest,changes:priorText?unexpected:changes});
@@ -82,7 +86,7 @@ export function pushExport({root=ROOT,receiptFile}) {
   if(git(root,['rev-parse',r.commit+'^'])!==r.parent)throw new Error('Export does not preserve reviewed remote ancestry.');
   git(root,['push',url,r.commit+':refs/heads/'+r.branch]);
   if(remoteHead(root,url,r.branch)!==r.commit)throw new Error('Push did not verify.');
-  return{repository:r.repository,branch:r.branch,commit:r.commit,trigger:'Git-to-Vercel only; inspect the deployment for this exact commit.'};
+  return{repository:r.repository,branch:r.branch,commit:r.commit,trigger:r.provider === 'cloudflare' ? 'Cloudflare source delivered; deploy and verify this exact package separately.' : 'Git-to-Vercel only; inspect the deployment for this exact commit.'};
 }
 async function main() {
   if(process.argv.includes('--help')){console.log('Usage: node scripts/export-dealer.mjs --client SLUG --package PATH [--branch BRANCH] [--review JSON --write]\nnode scripts/export-dealer.mjs --push-receipt runtime/.../export.json\nDry run fetches and compares the actual remote. Write creates a scoped commit; push is explicit and never forced.');return;}

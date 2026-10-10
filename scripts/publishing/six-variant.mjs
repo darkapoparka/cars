@@ -133,20 +133,24 @@ function mountAppEntry(files) {
   }
 }
 
-function mountSignature(files, adapter) {
+function mountSignature(files, adapter, provider) {
   const key = 'karento-best', base = '/variant-6';
-  if (adapter?.schemaVersion !== 1 || adapter.version !== '7.0.0' || adapter.runtime !== 'nodejs24.x'
+  if (provider === 'vercel' && (adapter?.schemaVersion !== 1 || adapter.version !== '7.0.0' || adapter.runtime !== 'nodejs24.x'
     || adapter.input?.packageSha256 !== hash(normalized(files.get(key + '/package.json')))
-    || adapter.input?.lockSha256 !== hash(normalized(files.get(key + '/package-lock.json')))) throw Error('Signature dependency inputs changed; requalify the frozen Vercel adapter');
+    || adapter.input?.lockSha256 !== hash(normalized(files.get(key + '/package-lock.json'))))) throw Error('Signature dependency inputs changed; requalify the frozen Vercel adapter');
   const viteName = key + '/vite.config.ts';
   let vite = read(files, viteName);
   if (/\bpaths\s*:/.test(vite) || !vite.includes('"@sveltejs/adapter-node"') || vite.split('sveltekit({ adapter: adapter() })').length !== 2) throw Error('Signature Vite adapter boundary changed; review before mounting');
-  vite = vite.replace('"@sveltejs/adapter-node"', '"@sveltejs/adapter-vercel"')
-    .replace('sveltekit({ adapter: adapter() })', 'sveltekit({ adapter: adapter({ runtime: "nodejs24.x" }), paths: { base: "/variant-6", relative: false } })');
+  vite = provider === 'vercel'
+    ? vite.replace('"@sveltejs/adapter-node"', '"@sveltejs/adapter-vercel"')
+      .replace('sveltekit({ adapter: adapter() })', 'sveltekit({ adapter: adapter({ runtime: "nodejs24.x" }), paths: { base: "/variant-6", relative: false } })')
+    : vite.replace('sveltekit({ adapter: adapter() })', 'sveltekit({ adapter: adapter(), paths: { base: "/variant-6", relative: false } })');
   write(files, viteName, vite);
-  files.set(key + '/package.json', json(adapter.package));
-  files.set(key + '/package-lock.json', json(adapter.lock));
-  write(files, key + '/.node-version', '24.21.0\n');
+  if (provider === 'vercel') {
+    files.set(key + '/package.json', json(adapter.package));
+    files.set(key + '/package-lock.json', json(adapter.lock));
+    write(files, key + '/.node-version', '24.21.0\n');
+  }
   const helperName = key + '/src/lib/cars-mount.ts';
   if (files.has(helperName)) throw Error('Signature already contains an unknown mounting helper');
   write(files, helperName, `// Generated deployment paths; canonical template URLs stay local.\nexport const carsBase = ${JSON.stringify(base)};\nexport function carsLocalPath(value: string): string {\n  return value === carsBase ? "/" : value.startsWith(carsBase + "/") ? value.slice(carsBase.length) : value;\n}\nexport function carsMountPath<T extends string | null | undefined>(value: T): T {\n  if (typeof value !== "string" || !value.startsWith("/") || value.startsWith("//") || value === "/preview-switcher.js" || value === carsBase || value.startsWith(carsBase + "/") || value.startsWith(carsBase + "?") || value.startsWith(carsBase + "#")) return value;\n  return (carsBase + value) as T;\n}\n`);
@@ -183,18 +187,23 @@ function mountSignature(files, adapter) {
 }
 
 /** Only generated package files are transformed; source receipts remain original input proof. */
-export function applySixVariantMounts(inputFiles, manifest, { signatureAdapter = JSON.parse(readFileSync(new URL('./signature-vercel-adapter.json', import.meta.url))) } = {}) {
+export function applySixVariantMounts(inputFiles, manifest, { provider = 'vercel', signatureAdapter } = {}) {
+  if (!['vercel', 'cloudflare'].includes(provider)) throw Error('Unknown six-design hosting provider');
   if (manifest.packaging?.version !== SIX_PACKAGING_VERSION) return new Map(inputFiles);
   assertSixDesignSelection(manifest.variants);
   const files = new Map(inputFiles);
-  mountAppEntry(files); mountMobile(files); mountSignature(files, signatureAdapter);
+  const adapter = provider === 'vercel' ? signatureAdapter ?? JSON.parse(readFileSync(new URL('./signature-vercel-adapter.json', import.meta.url))) : undefined;
+  mountAppEntry(files); mountMobile(files); mountSignature(files, adapter, provider);
   return files;
 }
 
-export function sealSixVariantBuild(files, manifest) {
+export function sealSixVariantBuild(files, manifest, { provider = 'vercel' } = {}) {
+  if (!['vercel', 'cloudflare'].includes(provider)) throw Error('Unknown six-design hosting provider');
   if (manifest.packaging?.version !== SIX_PACKAGING_VERSION) return;
   const families = Object.fromEntries(['app', 'mobile', 'karento-best'].map(key => [key, { base: manifest.variants.find(v => v.key === key).base, digest: extendedSourceDigest(files, key) }]));
   files.set('.cars-six-build.json', json({ schemaVersion: 1, packagingVersion: SIX_PACKAGING_VERSION, dealer: manifest.slug,
-    transformation: 'six-design-services-v1', signature: { adapter: '@sveltejs/adapter-vercel@7.0.0', runtime: 'nodejs24.x' }, families,
+    transformation: provider === 'cloudflare' ? 'six-design-cloudflare-v1' : 'six-design-services-v1',
+    signature: provider === 'cloudflare' ? { provider: 'cloudflare', adapterReceipt: '.cars-cloudflare-svelte.json', buildVerified: false }
+      : { adapter: '@sveltejs/adapter-vercel@7.0.0', runtime: 'nodejs24.x' }, families,
     sourceReceipts: Object.fromEntries(['.cars-app.json', '.cars-mobile.json', '.cars-signature.json'].map(name => [name, hash(files.get(name))])) }));
 }

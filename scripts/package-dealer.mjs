@@ -20,7 +20,7 @@ import {LEGACY_DETAIL_FILE,legacyDetailArtifact,legacyDetailRedirects} from './p
 
 export const PACKAGING_VERSION = '1';
 const ROOT = path.resolve(import.meta.dirname, '..');
-const OMITTED = new Set(['node_modules', '.git', '.vercel', '.netlify', '.agency-os', '.codex', '.claude', '.agents', '.openai', '.auth', '.template', '.qa', '.runtime', '.svelte-kit', '.turbo', '.cache', '.pnpm-store', 'build', 'dist', 'runtime', 'artifacts', 'audits', 'qa', 'qa-final', 'evidence', 'test-results', 'playwright-report', 'coverage']);
+const OMITTED = new Set(['node_modules', '.git', '.vercel', '.netlify', '.wrangler', '.open-next', '.vinext', '.cloudflare', '.cars-cloudflare', '.cars-build-assets', '.agency-os', '.codex', '.claude', '.agents', '.openai', '.auth', '.template', '.qa', '.runtime', '.svelte-kit', '.turbo', '.cache', '.pnpm-store', 'build', 'dist', 'runtime', 'artifacts', 'audits', 'qa', 'qa-final', 'evidence', 'test-results', 'playwright-report', 'coverage']);
 const ROOT_FILES = new Set(['.gitignore', 'AGENTS.md', 'CLIENT.md', 'README.md', 'DEPLOYMENT.md', 'business-facts.json', 'stock.json', 'FACTS-AND-INVENTORY.json', '.cars-app.json', '.cars-mobile.json', '.cars-signature.json', LEGACY_DETAIL_FILE]);
 const nativePackaging = version => [NATIVE_PACKAGING_VERSION, APP_PACKAGING_VERSION, SIX_PACKAGING_VERSION].includes(version);
 const json = (value) => `${JSON.stringify(value, null, 2)}\n`;
@@ -195,13 +195,17 @@ function switcherConfiguration(manifest, nativeMessages) {
   return { language, labels, ...(accent ? { accent } : {}), ...(native ? { localization: { defaultLocale: language, enabledLocales: manifest.localization.enabledLocales, messages: nativeMessages } } : {}), variants: manifest.variants.map(({ key, base, entry }) => ({ key, base, entry })) };
 }
 
-function fallbackGuidance(manifest) {
+function fallbackGuidance(manifest, provider) {
+  if (provider === 'cloudflare') return `# ${manifest.slug} Cloudflare dealer package\n\nDerived from the canonical Cars dealer source at clients/${manifest.slug}. Read dealer.json, .cars-package.json and .cars-cloudflare.json for source and provider identities. All six designs use one public routing Worker with internal application bindings. Complete the exact family dependency lock, build, output and hosted acceptance before deployment. No plan upgrade, DNS change, enquiry delivery or outreach is implied.\n`;
   return `# ${manifest.slug} dealer package\n\nThis repository is a derived deployment package. Canonical dealer source lives under clients/${manifest.slug} in the Cars repository. Read dealer.json and .cars-package.json for identity and provenance. Make source changes in Cars and regenerate the package; do not silently edit generated mounting code or template masters.\n\nAll ${manifest.variants.length} designs share one Vercel project. Preserve retained lockfiles, source layouts, licensing and provenance. Run each app's documented checks and test every mounted entry, inventory, detail, contact and enquiry destination at 390 and 1440 px. Check the design switcher at 320 px, including Escape and focus return. A build is not public-preview proof. Publishing does not authorize outreach.\n`;
 }
 
-async function prepare({ source, manifest, sourceCommit, guidance, canonicalFiles, nativeReleases }) {
+async function prepare({ source, manifest, sourceCommit, guidance, canonicalFiles, nativeReleases, provider = 'vercel', cloudflareLocks }) {
   manifest = structuredClone(manifest);
   validatePackagingManifest(manifest);
+  if (!['vercel', 'cloudflare'].includes(provider)) throw new Error('Unsupported publishing provider');
+  if (provider === 'cloudflare' && manifest.packaging.version !== SIX_PACKAGING_VERSION) throw new Error('Cloudflare requires six-design packaging version 5');
+  if (cloudflareLocks && provider !== 'cloudflare') throw new Error('Cloudflare dependency locks require --provider cloudflare');
   if (!/^[a-f\d]{40}(?:[a-f\d]{24})?$/i.test(sourceCommit ?? '')) throw new Error('sourceCommit must be the full source Git commit SHA');
   const resolvedSource = await fs.realpath(path.resolve(source));
   const native = nativePackaging(manifest.packaging.version);
@@ -224,7 +228,7 @@ async function prepare({ source, manifest, sourceCommit, guidance, canonicalFile
     assertAppVariant(files, manifest);
     if (manifest.packaging.version === SIX_PACKAGING_VERSION) {
       assertExtendedVariantSources(files, manifest);
-      files = applySixVariantMounts(files, manifest);
+      files = applySixVariantMounts(files, manifest, { provider });
       const {applyDealerShare} = await import('./publishing/dealer-share.mjs');
       await applyDealerShare(files, manifest);
     }
@@ -234,25 +238,32 @@ async function prepare({ source, manifest, sourceCommit, guidance, canonicalFile
     await applyMounts(files, manifest);
   }
   const ignore=(files.get('.gitignore')?.toString('utf8')||'').split(/\r?\n/).filter(Boolean);
-  const generatedIgnores=['# Cars generated package exclusions','**/node_modules/','**/.vercel/','**/.svelte-kit/','**/.next*/','**/.turbo/','**/build/','**/dist/','**/.agency-os/','**/.auth/','**/.env*','!**/.env.example','!**/.env.sample','!**/.env.template','runtime/','*.log','*.tsbuildinfo'];
+  const generatedIgnores=['# Cars generated package exclusions','**/node_modules/','**/.vercel/','**/.wrangler/','**/.open-next/','**/.vinext/','**/.cloudflare/','**/.cars-cloudflare/','**/.cars-build-assets/','.cars-next-*-dependencies.json','.cars-next-*-frozen-lock.json','.cars-cloudflare-svelte-locks.json','**/.svelte-kit/','**/.next*/','**/.turbo/','**/build/','**/dist/','**/.agency-os/','**/.auth/','**/.env*','!**/.env.example','!**/.env.sample','!**/.env.template','runtime/','*.log','*.tsbuildinfo'];
   files.set('.gitignore',Buffer.from([...new Set([...ignore,...generatedIgnores])].join('\n')+'\n'));
+  if (provider === 'vercel') {
   files.set('vercel.json', Buffer.from(json(vercelConfiguration(manifest,manifest.packaging.version === SIX_PACKAGING_VERSION ? legacyDetailArtifact(files,manifest) : undefined))));
   files.set('.vercelignore', Buffer.from('.git\n**/node_modules\n**/.next*\n**/.svelte-kit\n**/.vercel\n**/.turbo\n**/.env*\n**/*.log\n**/*.tsbuildinfo\n**/build\n**/dist\nruntime\nqa\nqa-final\nevidence\n'));
   files.set('scripts/fix-svelte-service-output.mjs', await fs.readFile(new URL('./publishing/fix-svelte-service-output.mjs', import.meta.url)));
   if (native) files.set('scripts/build-native-service.mjs', await fs.readFile(new URL('./publishing/build-native-service.mjs', import.meta.url)));
   if (manifest.packaging.version === SIX_PACKAGING_VERSION) files.set('scripts/build-app-service.mjs', await fs.readFile(new URL('./publishing/build-app-service.mjs', import.meta.url)));
+  }
   const switcher = await fs.readFile(new URL('./publishing/preview-switcher.js', import.meta.url), 'utf8');
   const nativeMessages = native ? JSON.parse(await fs.readFile(new URL('./publishing/switcher-messages.json', import.meta.url), 'utf8')) : undefined;
   files.set('auto-best/static/preview-switcher.js', Buffer.from(switcher.replace('__CARS_SWITCHER_CONFIG__', () => JSON.stringify(switcherConfiguration(manifest, nativeMessages)).replace(/</g, '\\u003c'))));
   files.set('dealer.json', Buffer.from(json(manifest)));
   if (guidance !== undefined && (typeof guidance !== 'string' || !guidance.trim())) throw new Error('guidance must be nonempty portable Markdown');
-  if (guidance !== undefined || !files.has('AGENTS.md')) files.set('AGENTS.md', Buffer.from(guidance ?? fallbackGuidance(manifest)));
+  if (guidance !== undefined || !files.has('AGENTS.md')) files.set('AGENTS.md', Buffer.from(guidance ?? fallbackGuidance(manifest, provider)));
+  if (provider === 'cloudflare') {
+    const { applyCloudflareProvider } = await import('./publishing/cloudflare-provider.mjs');
+    files = await applyCloudflareProvider(files, manifest, { dependencyLocks: cloudflareLocks });
+    files.set('scripts/build-cloudflare-svelte.mjs', await fs.readFile(new URL('./publishing/cloudflare-svelte.mjs', import.meta.url)));
+  }
   const mediaCatalog = new URL('./publishing/shared-media-catalog.json', import.meta.url);
-  if (native && await exists(mediaCatalog)) {
+  if (native && provider === 'vercel' && await exists(mediaCatalog)) {
     applySharedMedia(files, JSON.parse(await fs.readFile(mediaCatalog, 'utf8')));
     for (const helper of ['prune-shared-media.mjs', 'storage-assets.mjs']) files.set(`scripts/${helper}`, await fs.readFile(new URL(`./publishing/${helper}`, import.meta.url)));
   }
-  if (native) {
+  if (native && provider === 'vercel') {
     applyVercelAssets(files);
     files.set('scripts/vercel-service-assets.mjs', await fs.readFile(new URL('./publishing/vercel-service-assets.mjs', import.meta.url)));
     files.set('scripts/vercel-output-budget.mjs', await fs.readFile(new URL('./publishing/vercel-output-budget.mjs', import.meta.url)));
@@ -260,11 +271,11 @@ async function prepare({ source, manifest, sourceCommit, guidance, canonicalFile
   const assetDelivery = files.has('.cars-vercel-assets.json') ? {
     provider: 'vercel', projectMode: 'services', designCount: manifest.variants.length,
     ...JSON.parse(files.get('.cars-vercel-assets.json')).summary
-  } : null;
+  } : provider === 'cloudflare' ? { provider: 'cloudflare', projectMode: 'worker-service-bindings', designCount: manifest.variants.length, assets: 'family-owned' } : null;
   const hashes = () => [...files].sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0).map(([name, content]) => ({ path: name, sha256: sha256(normalized(content)) }));
   // Seal final derived family bytes after media and provider asset planning.
   // Original personalization receipts still describe the reviewed input.
-  sealSixVariantBuild(files, manifest);
+  sealSixVariantBuild(files, manifest, { provider });
   const payload = hashes();
   const payloadDigest = sha256(JSON.stringify(payload));
   files.set('.cars-package.json', Buffer.from(json({ schemaVersion: 1, manifest, sourceCommit, packagingVersion: manifest.packaging.version, assetDelivery, payloadDigest, payload })));
@@ -351,11 +362,11 @@ async function main(args) {
     const flag = args[index];
     if (flag === '--write') write = true;
     else if (flag === '--dry-run') write = false;
-    else if (['--client', '--out', '--source-commit'].includes(flag)) {
+    else if (['--client', '--out', '--source-commit', '--provider', '--cloudflare-locks'].includes(flag)) {
       if (!args[index + 1] || args[index + 1].startsWith('--')) throw new Error(`Missing value for ${flag}`);
       options[flag.slice(2)] = args[++index];
     } else if (flag === '--help') {
-      console.log('Usage: node scripts/package-dealer.mjs --client SLUG --out runtime/dealer-packages/SLUG [--source-commit SHA] [--write] (dry-run by default; retained source must match the commit)');
+      console.log('Usage: node scripts/package-dealer.mjs --client SLUG --out runtime/dealer-packages/SLUG [--provider vercel|cloudflare] [--cloudflare-locks JSON] [--source-commit SHA] [--write] (dry-run by default; retained source must match the commit)');
       return;
     } else throw new Error(`Unknown argument: ${flag}`);
   }
@@ -370,7 +381,8 @@ async function main(args) {
   if (revision.status !== 0) throw new Error(revision.stderr || 'Cannot read Cars source commit');
   const sourceCommit = options['source-commit'] || revision.stdout.trim();
   const {canonicalFiles: retained, untrackedExcluded} = await committedDealerInputs({root: ROOT, source, manifest, sourceCommit, prefix:`clients/${options.client}`});
-  const result = await (write ? packageDealer : planDealerPackage)({ source, destination, manifest, sourceCommit, canonicalFiles:retained, guidance:dealerGuidance({slug:manifest.slug,variants:manifest.variants,workflowCommit:sourceCommit}) });
+  const cloudflareLocks = options['cloudflare-locks'] ? JSON.parse(await fs.readFile(path.resolve(ROOT, options['cloudflare-locks']), 'utf8')) : undefined;
+  const result = await (write ? packageDealer : planDealerPackage)({ source, destination, manifest, sourceCommit, canonicalFiles:retained, provider:options.provider ?? 'vercel', cloudflareLocks, guidance: options.provider === 'cloudflare' ? fallbackGuidance(manifest, 'cloudflare') : dealerGuidance({slug:manifest.slug,variants:manifest.variants,workflowCommit:sourceCommit}) });
   console.log(json({ mode: write ? 'write' : 'dry-run', ...result, fileCount: result.files.length, files: undefined,untrackedExcluded }).trim());
 }
 
