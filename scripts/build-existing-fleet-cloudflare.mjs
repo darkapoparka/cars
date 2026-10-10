@@ -83,11 +83,11 @@ async function prepare(slug,key,sha,area){
  manifest.cloudflare={workerPrefix};
  if(!manifest.shareIdentity?.logo?.sourcePath||!files.has(manifest.shareIdentity.logo.sourcePath)||hash(files.get(manifest.shareIdentity.logo.sourcePath))!==manifest.shareIdentity.logo.sha256)throw Error('Preserved dealer share-logo contract differs');
  manifest.shareIdentity={...manifest.shareIdentity,publicOrigin};manifest.candidate={...(manifest.candidate||{}),approved:false,nativeReleaseQualification:false};
+ const presentation=applyDealerPresentation(files,manifest);
  files=applySixVariantMounts(files,manifest,{provider:'cloudflare'});
  const logoFile='modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx',originalLogo=files.get(logoFile);if(!originalLogo)throw Error('Modern logo consumer missing');
  const fixedLogo=Buffer.from(bindModernMobileWordmarkLogo(originalLogo.toString('utf8')));files.set(logoFile,fixedLogo);
  const contracts={kind:'existing-reviewed-pilot-logo-binding',changes:[{path:logoFile,beforeSha256:hash(originalLogo),afterSha256:hash(fixedLogo)}],factsPreserved:true};
- const presentation=applyDealerPresentation(files,manifest);
  const reference=specializeDealerReferencePackage(files,manifest);
  const databaseSpecialization=specializeModernDemoDatabase(files,manifest);
  const tools=createRequire(path.join(ROOT,'runtime/varna-tools/package.json')),sharp=tools('sharp'),typescript=tools('typescript');

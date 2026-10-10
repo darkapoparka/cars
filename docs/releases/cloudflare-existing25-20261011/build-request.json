@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "request": "neutral-palette-services-first-paint-v1",
+  "request": "neutral-palette-services-first-paint-v2-pre-mount",
   "dealers": [
     "promosale-varna"
   ],
-  "scope": "Rebuild the existing pilot with user-requested neutral palette, stable responsive logo and visible illustrative Services. Existing Worker names and aliases retained; no billing change."
+  "scope": "Apply presentation to source after input verification, before native mounting. Source dealer logo URLs are subsequently mounted by the existing adapter."
 }
