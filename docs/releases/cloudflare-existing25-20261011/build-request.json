@@ -1,11 +1,10 @@
 {
   "schemaVersion": 1,
-  "request": "preserved-promosale-cloudflare-pilot-01",
-  "dealers": [
-    "promosale-varna"
-  ],
+  "request": "preserved-promosale-cloudflare-pilot-02",
+  "dealers": ["promosale-varna"],
   "sourceBaseline": "07768e05360676160495f6dd527458c2bf114d8b",
   "sourceCandidate": "d46d832fe651d24300cfb5bff8a3ac437b572eec",
   "adapterSource": "b90e69f6091626c1ee149b0c66c4f645b0f6fea7",
+  "sourcePathsTransport": "NUL-delimited Git source identities; UTF-8 evidence filenames retained",
   "scope": "Compile exact artifacts only; normal authorized Wrangler publication is separate. Vercel, billing, DNS and new Varna batch untouched."
 }
