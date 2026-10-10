@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "motherwell-motors-castle",
+  "approvalStatus": "independent_design_proposal_not_dealer_approved",
+  "assets": {
+    "onLight": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "7848e9527a5883b0644ecbf16687991e93a61ea76aa16f7b997a24c1751c955a",
+      "width": 1024,
+      "background": "opaque_white"
+    },
+    "onDark": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "7848e9527a5883b0644ecbf16687991e93a61ea76aa16f7b997a24c1751c955a",
+      "width": 1024,
+      "background": "opaque_white"
+    },
+    "onAccent": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "7848e9527a5883b0644ecbf16687991e93a61ea76aa16f7b997a24c1751c955a",
+      "width": 1024,
+      "background": "opaque_white"
+    }
+  },
+  "icon": {
+    "localPath": "assets/app-icon.png",
+    "sha256": "4a490ca4e1aebcacfcbcc640509dc637ea1c68cc7b1df12606ab5a4ee6aa306b",
+    "width": 512,
+    "height": 512
+  },
+  "provenance": {
+    "creationMethod": "built_in_image_generation",
+    "date": "2026-10-10",
+    "sources": [
+      "exec-3f223a10-8fd4-43ee-ba16-1059b6a2c353.png",
+      "exec-966ac925-d44b-4a2c-bc1d-fef504f698aa.png"
+    ],
+    "deliveryEncoding": "Proportional size and delivery-format encoding only; no crop, recolouring or compositing.",
+    "visualInspection": "Spelling, complete emblem, contrasting white surface, clear square icon checked in generated output; application surfaces await browser QA."
+  },
+  "favicon": {
+    "localPath": "assets/favicon.ico",
+    "sha256": "38ef73eb584417a319de331f7de231daa57914fe3a164bba8b9f6f3a6df547f1",
+    "sizes": [
+      16,
+      32,
+      48,
+      64,
+      128,
+      256
+    ],
+    "encoding": "ICO with PNG image entries from the actual generated square icon"
+  }
+}

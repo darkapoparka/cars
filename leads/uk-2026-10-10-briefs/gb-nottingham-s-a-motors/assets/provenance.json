@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-10-10",
+  "dealerId": "nottingham-s-a-motors",
+  "media": [
+    {
+      "publicPath": "/dealer-stock/hatchback.webp",
+      "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+      "kind": "generated_category_illustration",
+      "representsAdvertisedVehicle": false,
+      "source": {
+        "carsCommit": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+        "path": "templates/auto-best/static/assets/images/template/body-hatchback-v2.webp"
+      },
+      "rights": "Generated design illustration; no third-party listing photograph copied."
+    },
+    {
+      "publicPath": "/dealer-stock/convertible.webp",
+      "sha256": "c6193d08e66b41ed6b10bd19fc1e9dee0f8bffa994479a480ed3499dd5c4b372",
+      "kind": "generated_category_illustration",
+      "representsAdvertisedVehicle": false,
+      "source": {
+        "carsCommit": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+        "path": "templates/auto-best/static/assets/images/template/body-convertible-v2.webp"
+      },
+      "rights": "Generated design illustration; no third-party listing photograph copied."
+    }
+  ],
+  "thirdPartyStockPhotosBundled": false,
+  "dealerApproval": false
+}

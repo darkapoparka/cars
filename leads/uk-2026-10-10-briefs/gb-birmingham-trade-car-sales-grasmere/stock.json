@@ -1,1 +1,407 @@
-[]
+{
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-10",
+  "mediaDisclosure": "Illustrations are not photographs of the advertised vehicles.",
+  "records": [
+    {
+      "price": 4950,
+      "currency": "GBP",
+      "title": "2014 Ford Transit Connect 1.6 TDCi 115ps LWB 3 Seater PANEL VAN Diesel Manual",
+      "year": 2014,
+      "mileage": 115000,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/189038456623",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTEyNVgxNTAw/z/kOwAAeSw0LNqyeYV/$_2.JPG",
+      "sourceSummary": "2014 | 115,000 Miles | 1560 ccm | Red",
+      "make": "Ford",
+      "model": "Transit Connect",
+      "trim": "1.6 TDCi 115ps LWB 3 Seater PANEL VAN Diesel Manual",
+      "body": "Van",
+      "id": "189038456623",
+      "slug": "ford-transit-connect-2014-189038456623",
+      "priceAmount": 4950,
+      "mileageMiles": 115000,
+      "images": [
+        "/dealer-stock/van.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/189038456623",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 600,
+      "currency": "GBP",
+      "title": "2014 Vauxhall Astra 1.6i 16V Limited Edition 5dr HATCHBACK Petrol Manual",
+      "year": 2014,
+      "mileage": 110000,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/189026984290",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTEyNVgxNTAw/z/QSIAAeSwuulqyeY2/$_2.JPG",
+      "sourceSummary": "2014 | 110,000 Miles | Hatchback | 1598 ccm | Black",
+      "make": "Vauxhall",
+      "model": "Astra",
+      "trim": "1.6i 16V Limited Edition 5dr HATCHBACK Petrol Manual",
+      "body": "Hatchback",
+      "id": "189026984290",
+      "slug": "vauxhall-astra-2014-189026984290",
+      "priceAmount": 600,
+      "mileageMiles": 110000,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/189026984290",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 3950,
+      "currency": "GBP",
+      "title": "2016 Ford Mondeo 1.5 EcoBoost Titanium 5dr ESTATE Petrol Manual",
+      "year": 2016,
+      "mileage": 108000,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/189001222071",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTEyNVgxNTAw/z/mswAAeSwUHVqyeYx/$_2.JPG",
+      "sourceSummary": "2016 | 108,000 Miles | Estate | 1499 ccm | Silver",
+      "make": "Ford",
+      "model": "Mondeo",
+      "trim": "1.5 EcoBoost Titanium 5dr ESTATE Petrol Manual",
+      "body": "Estate",
+      "id": "189001222071",
+      "slug": "ford-mondeo-2016-189001222071",
+      "priceAmount": 3950,
+      "mileageMiles": 108000,
+      "images": [
+        "/dealer-stock/wagon.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/189001222071",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 2950,
+      "currency": "GBP",
+      "title": "2014 MINI Hatch 1.5 Cooper 3dr HATCHBACK Petrol Manual",
+      "year": 2014,
+      "mileage": 120000,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/189001115867",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTEyNVgxNTAw/z/W48AAeSwAvNqyeYv/$_2.JPG",
+      "sourceSummary": "2014 | 120,000 Miles | Hatchback | 1499 ccm | White",
+      "make": "MINI",
+      "model": "Hatch",
+      "trim": "1.5 Cooper 3dr HATCHBACK Petrol Manual",
+      "body": "Hatchback",
+      "id": "189001115867",
+      "slug": "mini-hatch-2014-189001115867",
+      "priceAmount": 2950,
+      "mileageMiles": 120000,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/189001115867",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 2500,
+      "currency": "GBP",
+      "title": "2015 Ford Mondeo 1.6 TDCi ECOnetic Titanium 5dr HATCHBACK Diesel Manual",
+      "year": 2015,
+      "mileage": 155000,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/189001107042",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTEyNVgxNTAw/z/lgoAAeSw-bxqyeYW/$_2.JPG",
+      "sourceSummary": "2015 | 155,000 Miles | Hatchback | 1560 ccm | Grey",
+      "make": "Ford",
+      "model": "Mondeo",
+      "trim": "1.6 TDCi ECOnetic Titanium 5dr HATCHBACK Diesel Manual",
+      "body": "Hatchback",
+      "id": "189001107042",
+      "slug": "ford-mondeo-2015-189001107042",
+      "priceAmount": 2500,
+      "mileageMiles": 155000,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/189001107042",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 1850,
+      "currency": "GBP",
+      "title": "2007 Mercedes-Benz C Class C220 CDI Sport 4dr Auto SALOON Diesel Automatic",
+      "year": 2007,
+      "mileage": 115000,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/188987508854",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTEyNVgxNTAw/z/sbIAAeSwXiVqyeYn/$_2.JPG",
+      "sourceSummary": "2007 | 115,000 Miles | Saloon | 2148 ccm | Silver",
+      "make": "Mercedes-Benz",
+      "model": "C",
+      "trim": "Class C220 CDI Sport 4dr Auto SALOON Diesel Automatic",
+      "body": "Saloon",
+      "id": "188987508854",
+      "slug": "mercedes-benz-c-2007-188987508854",
+      "priceAmount": 1850,
+      "mileageMiles": 115000,
+      "images": [
+        "/dealer-stock/sedan.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/188987508854",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 1500,
+      "currency": "GBP",
+      "title": "2011 Chevrolet Captiva 2.0 VCDi LT 5dr FWD ESTATE Diesel Manual",
+      "year": 2011,
+      "mileage": 85000,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/188945492227",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTEyNVgxNTAw/z/MEkAAeSwu0xqyeYX/$_2.JPG",
+      "sourceSummary": "2011 | 85,000 Miles | Estate | 1991 ccm | Blue",
+      "make": "Chevrolet",
+      "model": "Captiva",
+      "trim": "2.0 VCDi LT 5dr FWD ESTATE Diesel Manual",
+      "body": "Estate",
+      "id": "188945492227",
+      "slug": "chevrolet-captiva-2011-188945492227",
+      "priceAmount": 1500,
+      "mileageMiles": 85000,
+      "images": [
+        "/dealer-stock/wagon.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/188945492227",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 2450,
+      "currency": "GBP",
+      "title": "2009 Volkswagen Golf Plus 1.6 TDI 105 SE 5dr DSG HATCHBACK Diesel Automatic",
+      "year": 2009,
+      "mileage": 115000,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/188941416002",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTEyNVgxNTAw/z/jhEAAeSwiy9qyeYe/$_2.JPG",
+      "sourceSummary": "2009 | 115,000 Miles | Hatchback | 1598 ccm | Grey",
+      "make": "Volkswagen",
+      "model": "Golf",
+      "trim": "Plus 1.6 TDI 105 SE 5dr DSG HATCHBACK Diesel Automatic",
+      "body": "Hatchback",
+      "id": "188941416002",
+      "slug": "volkswagen-golf-2009-188941416002",
+      "priceAmount": 2450,
+      "mileageMiles": 115000,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/188941416002",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 2000,
+      "currency": "GBP",
+      "title": "2007 BMW 3 Series 320i 2.0i Special Edition 2dr Coupe COUPE Petrol Manual",
+      "year": 2007,
+      "mileage": 79000,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/188941382536",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTA0MlgxNTAw/z/dKsAAeSwOcVqyeYy/$_2.JPG",
+      "sourceSummary": "2007 | 79,000 Miles | Coupe | 1995 ccm | Black",
+      "make": "BMW",
+      "model": "3",
+      "trim": "Series 320i 2.0i Special Edition 2dr Coupe COUPE Petrol Manual",
+      "body": "Coupe",
+      "id": "188941382536",
+      "slug": "bmw-3-2007-188941382536",
+      "priceAmount": 2000,
+      "mileageMiles": 79000,
+      "images": [
+        "/dealer-stock/coupe.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/188941382536",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 1500,
+      "currency": "GBP",
+      "title": "2008 Volkswagen Golf 1.6 Match FSI 5dr HATCHBACK Petrol Manual",
+      "year": 2008,
+      "mileage": 99000,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/188941314819",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTEyNVgxNTAw/z/vC8AAeSwlUBqyeY8/$_2.JPG",
+      "sourceSummary": "2008 | 99,000 Miles | Hatchback | 1598 ccm | Blue",
+      "make": "Volkswagen",
+      "model": "Golf",
+      "trim": "1.6 Match FSI 5dr HATCHBACK Petrol Manual",
+      "body": "Hatchback",
+      "id": "188941314819",
+      "slug": "volkswagen-golf-2008-188941314819",
+      "priceAmount": 1500,
+      "mileageMiles": 99000,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/188941314819",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    }
+  ]
+}

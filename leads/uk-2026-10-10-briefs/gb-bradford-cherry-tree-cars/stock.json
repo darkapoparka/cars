@@ -1,1 +1,311 @@
-[]
+{
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-10",
+  "mediaDisclosure": "Illustrations are not photographs of the advertised vehicles.",
+  "records": [
+    {
+      "title": "Chrysler Sebring 2.4 Limited Saloon 4dr Petrol Automatic (211 g/km, 167 bhp)",
+      "year": 2008,
+      "price": 1499,
+      "mileage": 100000,
+      "fuel": "Petrol",
+      "transmission": "Auto",
+      "sourceUrl": "https://www.pistonheads.com/buy/listing/20722137",
+      "conditionNote": "",
+      "make": "Chrysler",
+      "model": "Sebring",
+      "trim": "2.4 Limited Saloon 4dr Petrol Automatic (211 g/km, 167 bhp)",
+      "body": "Saloon",
+      "id": "20722137",
+      "slug": "chrysler-sebring-2008-20722137",
+      "priceAmount": 1499,
+      "currency": "GBP",
+      "mileageMiles": 100000,
+      "images": [
+        "/dealer-stock/sedan.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.pistonheads.com/buy/listing/20722137",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "title": "Land Rover Discovery Sport 2.0 TD4 HSE Black SUV 5dr Diesel Auto 4WD Euro 6 (s/s) (180 ps)",
+      "year": 2018,
+      "price": 7499,
+      "mileage": 107000,
+      "fuel": "Diesel",
+      "transmission": "Auto",
+      "sourceUrl": "https://www.pistonheads.com/buy/listing/21144493",
+      "conditionNote": "",
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "trim": "2.0 TD4 HSE Black SUV 5dr Diesel Auto 4WD Euro 6 (s/s) (180 ps)",
+      "body": "SUV",
+      "id": "21144493",
+      "slug": "land-rover-discovery-sport-2018-21144493",
+      "priceAmount": 7499,
+      "currency": "GBP",
+      "mileageMiles": 107000,
+      "images": [
+        "/dealer-stock/suv.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.pistonheads.com/buy/listing/21144493",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "title": "Mercedes-Benz R-Class 3.0 R320 CDI SE L MPV 5dr Diesel 7G-Tronic (246 g/km, 221 bhp)",
+      "year": 2007,
+      "price": 2699,
+      "mileage": 97000,
+      "fuel": "Diesel",
+      "transmission": "Auto",
+      "sourceUrl": "https://www.pistonheads.com/buy/listing/20977893",
+      "conditionNote": "",
+      "make": "Mercedes-Benz",
+      "model": "R-Class",
+      "trim": "3.0 R320 CDI SE L MPV 5dr Diesel 7G-Tronic (246 g/km, 221 bhp)",
+      "body": "MPV",
+      "id": "20977893",
+      "slug": "mercedes-benz-r-class-2007-20977893",
+      "priceAmount": 2699,
+      "currency": "GBP",
+      "mileageMiles": 97000,
+      "images": [
+        "/dealer-stock/van.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.pistonheads.com/buy/listing/20977893",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "title": "Audi A4 3.0 TDI SE Estate 5dr Diesel S Tronic quattro Euro 4 (240 ps)",
+      "year": 2009,
+      "price": 3299,
+      "mileage": 150000,
+      "fuel": "Diesel",
+      "transmission": "Auto",
+      "sourceUrl": "https://www.pistonheads.com/buy/listing/21086505",
+      "conditionNote": "",
+      "make": "Audi",
+      "model": "A4",
+      "trim": "3.0 TDI SE Estate 5dr Diesel S Tronic quattro Euro 4 (240 ps)",
+      "body": "Estate",
+      "id": "21086505",
+      "slug": "audi-a4-2009-21086505",
+      "priceAmount": 3299,
+      "currency": "GBP",
+      "mileageMiles": 150000,
+      "images": [
+        "/dealer-stock/wagon.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.pistonheads.com/buy/listing/21086505",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "title": "Renault Megane 1.5 dCi Expression Hatchback 5dr Diesel Manual Euro 5 (110 ps)",
+      "year": 2011,
+      "price": 1499,
+      "mileage": 72000,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "sourceUrl": "https://www.pistonheads.com/buy/listing/20877963",
+      "conditionNote": "",
+      "make": "Renault",
+      "model": "Megane",
+      "trim": "1.5 dCi Expression Hatchback 5dr Diesel Manual Euro 5 (110 ps)",
+      "body": "Hatchback",
+      "id": "20877963",
+      "slug": "renault-megane-2011-20877963",
+      "priceAmount": 1499,
+      "currency": "GBP",
+      "mileageMiles": 72000,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.pistonheads.com/buy/listing/20877963",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "title": "Hyundai Santa Fe 2.2 CRDi Premium SE SUV 5dr Diesel Auto 4WD Euro 5 (7 seat) (194 bhp)",
+      "year": 2013,
+      "price": 3199,
+      "mileage": 171000,
+      "fuel": "Diesel",
+      "transmission": "Auto",
+      "sourceUrl": "https://www.pistonheads.com/buy/listing/21180529",
+      "conditionNote": "",
+      "make": "Hyundai",
+      "model": "Santa Fe",
+      "trim": "2.2 CRDi Premium SE SUV 5dr Diesel Auto 4WD Euro 5 (7 seat) (194 bhp)",
+      "body": "SUV",
+      "id": "21180529",
+      "slug": "hyundai-santa-fe-2013-21180529",
+      "priceAmount": 3199,
+      "currency": "GBP",
+      "mileageMiles": 171000,
+      "images": [
+        "/dealer-stock/suv.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.pistonheads.com/buy/listing/21180529",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "title": "Volvo XC60 2.4 D5 R-Design SUV 5dr Diesel Geartronic AWD Euro 5 (205 ps)",
+      "year": 2010,
+      "price": 3799,
+      "mileage": 141000,
+      "fuel": "Diesel",
+      "transmission": "Auto",
+      "sourceUrl": "https://www.pistonheads.com/buy/listing/21170923",
+      "conditionNote": "",
+      "make": "Volvo",
+      "model": "XC60",
+      "trim": "2.4 D5 R-Design SUV 5dr Diesel Geartronic AWD Euro 5 (205 ps)",
+      "body": "SUV",
+      "id": "21170923",
+      "slug": "volvo-xc60-2010-21170923",
+      "priceAmount": 3799,
+      "currency": "GBP",
+      "mileageMiles": 141000,
+      "images": [
+        "/dealer-stock/suv.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.pistonheads.com/buy/listing/21170923",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "title": "MINI Hatchback 1.5 Cooper Hatchback 5dr Petrol Manual Euro 6 (s/s) (136 ps)",
+      "year": 2014,
+      "price": 2499,
+      "mileage": 123000,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "sourceUrl": "https://www.pistonheads.com/buy/listing/20562332",
+      "conditionNote": "The source advert reports cosmetic imperfections to the bodywork.",
+      "make": "MINI",
+      "model": "Hatchback",
+      "trim": "1.5 Cooper Hatchback 5dr Petrol Manual Euro 6 (s/s) (136 ps)",
+      "body": "Hatchback",
+      "id": "20562332",
+      "slug": "mini-hatchback-2014-20562332",
+      "priceAmount": 2499,
+      "currency": "GBP",
+      "mileageMiles": 123000,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer. The source advert reports cosmetic imperfections to the bodywork.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.pistonheads.com/buy/listing/20562332",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    }
+  ]
+}

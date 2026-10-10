@@ -1,1 +1,241 @@
-[]
+{
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-10",
+  "mediaDisclosure": "Illustrations are not photographs of the advertised vehicles.",
+  "records": [
+    {
+      "title": "Nissan Gt-R 3.8 V6 Black Edition Auto 4WD Euro 4 2dr",
+      "year": 2010,
+      "mileage": 71715,
+      "price": 42495,
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/dewsbury/car-market-yorkshire-10050891",
+      "sourceId": "at-sample-1",
+      "sourceSummary": "2 door Automatic Petrol Coupe",
+      "body": "Coupe",
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "make": "Nissan",
+      "model": "Gt-R",
+      "trim": "3.8 V6 Black Edition Auto 4WD Euro 4 2dr",
+      "id": "at-sample-1",
+      "slug": "nissan-gt-r-2010-at-sample-1",
+      "priceAmount": 42495,
+      "currency": "GBP",
+      "mileageMiles": 71715,
+      "images": [
+        "/dealer-stock/coupe.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.autotrader.co.uk/dealers/west-yorkshire/dewsbury/car-market-yorkshire-10050891",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "title": "Audi A6 Saloon 2.0 TDI 40 S line S Tronic quattro Euro 6 (s/s) 4dr",
+      "year": 2022,
+      "mileage": 34981,
+      "price": 22995,
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/dewsbury/car-market-yorkshire-10050891",
+      "sourceId": "at-sample-2",
+      "sourceSummary": "4 door Automatic Diesel Saloon",
+      "body": "Saloon",
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "make": "Audi",
+      "model": "A6 Saloon",
+      "trim": "2.0 TDI 40 S line S Tronic quattro Euro 6 (s/s) 4dr",
+      "id": "at-sample-2",
+      "slug": "audi-a6-saloon-2022-at-sample-2",
+      "priceAmount": 22995,
+      "currency": "GBP",
+      "mileageMiles": 34981,
+      "images": [
+        "/dealer-stock/sedan.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.autotrader.co.uk/dealers/west-yorkshire/dewsbury/car-market-yorkshire-10050891",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "title": "Land Rover Range Rover Velar 2.0 D180 R-Dynamic S Auto 4WD Euro 6 (s/s) 5dr",
+      "year": 2019,
+      "mileage": 66313,
+      "price": 15495,
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/dewsbury/car-market-yorkshire-10050891",
+      "sourceId": "at-sample-3",
+      "sourceSummary": "5 door Automatic Diesel SUV",
+      "body": "SUV",
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "make": "Land Rover",
+      "model": "Range Rover Velar",
+      "trim": "2.0 D180 R-Dynamic S Auto 4WD Euro 6 (s/s) 5dr",
+      "id": "at-sample-3",
+      "slug": "land-rover-range-rover-velar-2019-at-sample-3",
+      "priceAmount": 15495,
+      "currency": "GBP",
+      "mileageMiles": 66313,
+      "images": [
+        "/dealer-stock/suv.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.autotrader.co.uk/dealers/west-yorkshire/dewsbury/car-market-yorkshire-10050891",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "title": "Mercedes-Benz GLC 2.0 GLC250 AMG Line (Premium Plus) G-Tronic+ 4MATIC Euro 6 (s/s) 5dr",
+      "year": 2018,
+      "mileage": 120952,
+      "price": 12995,
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/dewsbury/car-market-yorkshire-10050891",
+      "sourceId": "at-sample-4",
+      "sourceSummary": "5 door Automatic Petrol SUV",
+      "body": "SUV",
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "make": "Mercedes-Benz",
+      "model": "GLC",
+      "trim": "2.0 GLC250 AMG Line (Premium Plus) G-Tronic+ 4MATIC Euro 6 (s/s) 5dr",
+      "id": "at-sample-4",
+      "slug": "mercedes-benz-glc-2018-at-sample-4",
+      "priceAmount": 12995,
+      "currency": "GBP",
+      "mileageMiles": 120952,
+      "images": [
+        "/dealer-stock/suv.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.autotrader.co.uk/dealers/west-yorkshire/dewsbury/car-market-yorkshire-10050891",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "title": "Volkswagen Golf 2.0 TSI BlueMotion Tech R 4Motion Euro 6 (s/s) 5dr",
+      "year": 2017,
+      "mileage": 82391,
+      "price": 12995,
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/dewsbury/car-market-yorkshire-10050891",
+      "sourceId": "at-sample-5",
+      "sourceSummary": "5 door Manual Petrol Hatchback",
+      "body": "Hatchback",
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "make": "Volkswagen",
+      "model": "Golf",
+      "trim": "2.0 TSI BlueMotion Tech R 4Motion Euro 6 (s/s) 5dr",
+      "id": "at-sample-5",
+      "slug": "volkswagen-golf-2017-at-sample-5",
+      "priceAmount": 12995,
+      "currency": "GBP",
+      "mileageMiles": 82391,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.autotrader.co.uk/dealers/west-yorkshire/dewsbury/car-market-yorkshire-10050891",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "title": "Mercedes-Benz Citan 1.5 109 CDI BlueEfficiency L2 Euro 6 (s/s) 5dr",
+      "year": 2018,
+      "mileage": 105906,
+      "price": 4895,
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/dewsbury/car-market-yorkshire-10050891",
+      "sourceId": "at-sample-6",
+      "sourceSummary": "Panel Van | LWB | 1.5L | Manual | Diesel | 2 seats",
+      "body": "Van",
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "make": "Mercedes-Benz",
+      "model": "Citan",
+      "trim": "1.5 109 CDI BlueEfficiency L2 Euro 6 (s/s) 5dr",
+      "id": "at-sample-6",
+      "slug": "mercedes-benz-citan-2018-at-sample-6",
+      "priceAmount": 4895,
+      "currency": "GBP",
+      "mileageMiles": 105906,
+      "images": [
+        "/dealer-stock/van.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.autotrader.co.uk/dealers/west-yorkshire/dewsbury/car-market-yorkshire-10050891",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    }
+  ]
+}

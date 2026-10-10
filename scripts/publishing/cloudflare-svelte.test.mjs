@@ -4,11 +4,13 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
+import { spawnSync } from 'node:child_process';
+import { resolveCloudflareNpmCli } from './cloudflare-next.mjs';
 import { packageDigest } from '../export-dealer.mjs';
 import {
   applyCloudflareSvelte, cloudflareSvelteBuildPlan, cloudflareSvelteConfiguration,
   CLOUDFLARE_SVELTE_OUTPUT, inspectCloudflareSvelteOutput, mergeCloudflareAssetsIgnore,
-  runCloudflareSvelteBuild
+  runCloudflareSvelteBuild, changedCloudflareSvelteSourceRows, cloudflareSvelteBuildEnvironment
 } from './cloudflare-svelte.mjs';
 
 const manifest = (importBase = '/variant-3') => ({ slug: 'uk-broadbent-motors', packaging: { version: '5' }, variants: [
@@ -294,4 +296,46 @@ test('output inspection distinguishes build bytes from CPU and never reports an 
   assert.equal(report.worker.uncompressedWithinLimit, true);
   assert.equal(report.worker.bundledModules, 1);
   assert.deepEqual(report.runtimeCpu, { measured: false, freeQualified: false });
+});
+
+test('dependency source diagnostics retain exact additions, edits and removals without hiding cache-shaped paths', () => {
+  const before = [{ path: 'src/unchanged.ts', sha256: 'keep' }, { path: 'src/removed.ts', sha256: 'old' },
+    { path: 'src/page.ts', sha256: 'before' }, { path: '.runtime/npm-cache/existing', sha256: 'cache-before' }];
+  const after = [{ path: '.runtime/npm-cache/_logs/install.log', sha256: 'log' }, { path: 'src/page.ts', sha256: 'after' },
+    { path: 'src/unchanged.ts', sha256: 'keep' }, { path: '.runtime/npm-cache/existing', sha256: 'cache-after' }];
+  assert.deepEqual(changedCloudflareSvelteSourceRows(before, after), [
+    { path: '.runtime/npm-cache/_logs/install.log', before: null, after: 'log' },
+    { path: '.runtime/npm-cache/existing', before: 'cache-before', after: 'cache-after' },
+    { path: 'src/page.ts', before: 'before', after: 'after' },
+    { path: 'src/removed.ts', before: 'old', after: null }
+  ]);
+  assert.deepEqual(changedCloudflareSvelteSourceRows(before, [...before].reverse()), []);
+});
+
+test('npm cache environment uses generated output and replaces inherited casing variants', () => {
+  const root = path.resolve('generated-cloudflare-package');
+  const environment = cloudflareSvelteBuildEnvironment(root, 'karento-best', '/variant-6', {
+    Path: 'inherited-bin', npm_config_cache: 'old-cache', NPM_CONFIG_CACHE: 'other-cache', KEEP_ME: 'unchanged'
+  });
+  assert.equal(environment.npm_config_cache, path.join(root, '.cars-build-assets', 'karento-best.npm-cache'));
+  assert.equal(environment.NPM_CONFIG_CACHE, undefined);
+  assert.equal(environment.CARS_SIGNATURE_BASE_PATH, '/variant-6');
+  assert.equal(environment.KEEP_ME, 'unchanged');
+  assert.equal(Object.keys(environment).filter(key => key.toLowerCase() === 'path').length, 1);
+});
+test('npm cache environment wins over the approved Signature source .npmrc without editing it', t => {
+  const root = ownedTemporaryRoot(t), service = path.join(root, 'karento-best');
+  fs.mkdirSync(service);
+  const sourceConfig = 'cache=.runtime/npm-cache\n';
+  const config = path.join(service, '.npmrc'); fs.writeFileSync(config, sourceConfig);
+  const environment = cloudflareSvelteBuildEnvironment(root, 'karento-best', '/variant-6');
+  const npmCli = resolveCloudflareNpmCli(process.execPath, fs, path);
+  const result = spawnSync(process.execPath, [npmCli, '--logs-max=0', 'config', 'get', 'cache'], {
+    cwd: service, env: environment, encoding: 'utf8', windowsHide: true
+  });
+  assert.equal(result.error, undefined);
+  assert.equal(result.status, 0, result.stderr);
+  assert.equal(result.stdout.trim(), path.join(root, '.cars-build-assets', 'karento-best.npm-cache'));
+  assert.equal(fs.readFileSync(config, 'utf8'), sourceConfig);
+  assert.equal(fs.existsSync(path.join(service, '.runtime')), false);
 });

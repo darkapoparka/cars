@@ -12,6 +12,7 @@ function fixture(keys=['modern','app','mobile']){
     files.set(root+'/app/page.tsx',Buffer.from("import {headers} from 'next/headers'; export default async function Page(){return (await headers()).get('x-cars-country')}"));
     if(key==='modern'){
       files.set('modern/pnpm-lock.yaml',Buffer.from("lockfileVersion: '9.0'\n"));
+      files.set('modern/pnpm-workspace.yaml',Buffer.from("packages:\n  - 'apps/*'\n  - 'packages/*'\nstrictDepBuilds: true\nallowBuilds:\n  esbuild: true\n  sharp: true\nminimumReleaseAge: 1440\n"));
       files.set('modern/packages/internationalization/request.ts',Buffer.from('trustedCountry: process.env.VERCEL === "1"\n          ? request.headers.get("x-vercel-ip-country")\n          : null,'));
     }
     else{
@@ -107,4 +108,20 @@ test('npm resolver rejects missing or directory candidates without using an unre
     assert.deepEqual(checked,['/opt/pinned/bin/node_modules/npm/bin/npm-cli.js','/opt/pinned/lib/node_modules/npm/bin/npm-cli.js']);
   }
   assert.match(cloudflareNextBuildHelper(),/const npmCli=resolveCloudflareNpmCli\(process\.execPath,fs,path\)/);
+});
+
+test('Modern approves only the reviewed Cloudflare native build and retains the existing strict policy',()=>{
+  const {files,manifest}=fixture(['modern']),name='modern/pnpm-workspace.yaml',source=files.get(name).toString();
+  const out=applyCloudflareNext(files,manifest),generated=out.get(name).toString();
+  assert.equal(files.get(name).toString(),source);
+  assert.equal(generated.replace("  'workerd@1.20261006.1': true\n",''),source);
+  assert.match(generated,/^strictDepBuilds: true$/m);
+  assert.doesNotMatch(generated,/dangerouslyAllowAllBuilds|workerd: true/);
+  const change=JSON.parse(out.get('.cars-cloudflare-next.json')).adaptations.find(row=>row.operation==='allow-pinned-cloudflare-native-build');
+  const hash=value=>createHash('sha256').update(value).digest('hex');
+  assert.deepEqual(change,{file:name,operation:'allow-pinned-cloudflare-native-build',dependency:'workerd',version:'1.20261006.1',sourceSha256:hash(source),generatedSha256:hash(generated)});
+  for(const policy of [source.replace('allowBuilds:\n','allowBuilds: {}\n'),source+'allowBuilds:\n',source.replace('allowBuilds:\n','allowBuilds:\n  workerd: false\n'),source.replace('allowBuilds:\n',"allowBuilds:\n  'workerd@1.20261006.1': false\n")]){
+    const changed=new Map(files);changed.set(name,Buffer.from(policy));
+    assert.throws(()=>applyCloudflareNext(changed,manifest),/dependency build policy changed/);
+  }
 });

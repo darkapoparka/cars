@@ -1,6 +1,8 @@
 import fs from 'node:fs/promises';
+import { UK_APP_PATHS, personalizeAppUk } from './client-refresh-uk-next.mjs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
+import {appSourceDigest, assertAppVariant} from '../publishing/app-variant.mjs';
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const text = value => typeof value === 'string' ? value.trim() : '';
 const url = (value, protocols = ['https:']) => {try {const u = new URL(value);return protocols.includes(u.protocol) && !u.username && !u.password ? u.href : '';} catch {return '';}};
@@ -41,7 +43,7 @@ function dealerMileage(listing,business) {
  return unknown;
 }
 /** Existing dealer source is authoritative. readFile permits exact, hash-verified deployment inputs. */
-export async function prepareAppDealer(sourceRoot, manifest, {readFile} = {}) {
+export async function prepareAppDealer(sourceRoot, manifest, {readFile, appFiles} = {}) {
  const read = readFile || (name => fs.readFile(path.join(sourceRoot, name)));
  const profileBytes = await read('auto-best/src/lib/data/dealer-profile.json');
  const profile = JSON.parse(profileBytes.toString('utf8'));
@@ -73,8 +75,9 @@ export async function prepareAppDealer(sourceRoot, manifest, {readFile} = {}) {
   if(!Array.isArray(listing.images)||!listing.images.length)throw new Error('Vehicle has no retained photos: '+slug);
   const rasterSources=listing.images.filter(image=>typeof image==='string'&&!/\.svg(?:[?#]|$)/i.test(image)&&!/(?:placeholder|no[-_]?photo)/i.test(image));
   const images=await Promise.all(rasterSources.map(image=>retain(image,'vehicle')));
-  const imagePlaceholder=images.length===0;
-  if(imagePlaceholder)images.push('/cutouts/buy-sedan-v1.png');
+  const generatedIllustration=(listing.mediaKind || listing.raw?.mediaKind) === 'generated_category_illustration';
+  const imagePlaceholder=images.length===0 || generatedIllustration;
+  if(!images.length)images.push('/cutouts/buy-sedan-v1.png');
   const price=number(listing.priceAmount),mileage=dealerMileage(listing,business);
   mileageFacts.push({slug,...mileage});
   const fuelKey=text(listing.fuelType).toLowerCase(),transmissionKey=text(listing.transmissionType||listing.transmission).toLowerCase();
@@ -101,11 +104,37 @@ export async function prepareAppDealer(sourceRoot, manifest, {readFile} = {}) {
   email:/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(text(business.email))?text(business.email):'',
   mapsUrl:url(business.mapsUrl),website:url(business.website),whatsappUrl:url(business.whatsappUrl||business.socialLinks?.whatsapp),
   services:(business.services||[]).map(s=>typeof s==='string'?s:text(s.title)).filter(Boolean),observedAt,
-  inventoryNotice:'Dated listing samples. Confirm price, availability and vehicle information with the dealer.',
+  inventoryNotice:text(business.inventoryNotice) || 'Dated listing samples. Confirm price, availability and vehicle information with the dealer.',
   previewNotice:'Independent design preview. No purchase, reservation or message is submitted by this website.'};
  files.set('lib/dealer.json',Buffer.from(JSON.stringify(config,null,2)+'\n'));
  files.set('lib/dealer-inventory.json',Buffer.from(JSON.stringify(inventory,null,2)+'\n'));
  const provenance={schemaVersion:1,dealer:manifest.slug,profile:'auto-best/src/lib/data/dealer-profile.json',profileSha256:hash(profileBytes),
   logoPolicy:'Preserve existing raster identities; no replacement logo was generated.',vehicles:inventory.length,currency,observedAt,assets,mileageFacts};
+ if (business.countryCode === 'GB' && business.distanceUnit === 'mi') {
+  const candidate = appFiles ? new Map(appFiles) : new Map(await Promise.all(UK_APP_PATHS.map(async name => [name, await read('app/' + name)])));
+  const contentPaths = personalizeAppUk(candidate, profile, mileageFacts);
+  for (const name of contentPaths) files.set(name, Buffer.from(candidate.get(name)));
+  provenance.ukPresentation = {distanceUnit:'mi', canonicalDistanceUnit:'km', originalMileageRetained:true, contentPaths};
+ }
  return {config,inventory,files,provenance};
+}
+
+/** Seal final canonical inputs, including retained metadata; this records no QA or hosted pass. */
+export function sealAppDealerSource({files, manifest, provenance}) {
+ if (!['3','5'].includes(manifest.packaging?.version)) throw new Error('App source seal requires an App-enabled dealer manifest');
+ const template=manifest.templateSources?.app;
+ if (!template || template.repository !== 'darkapoparka/cars' || template.path !== 'templates/app' ||
+     !/^[a-f0-9]{40}$/.test(template.revision || '') || template.revision !== manifest.templateRevisions?.app ||
+     !/^[a-f0-9]{40}$/.test(template.tree || '') || !/^[a-f0-9]{64}$/.test(template.digest || '')) throw new Error('App: exact reviewed Cars source is required');
+ const profilePath='auto-best/src/lib/data/dealer-profile.json', profileBytes=files.get(profilePath);
+ if (!profileBytes || provenance?.dealer !== manifest.slug || provenance.profile !== profilePath ||
+     provenance.profileSha256 !== hash(profileBytes)) throw new Error('App dealer facts changed after personalization; regenerate the adapted inputs before sealing');
+ const appFiles=new Map([...files].filter(([name])=>name.startsWith('app/')).map(([name,bytes])=>[name.slice(4),bytes]));
+ const receipt={schemaVersion:1,dealer:manifest.slug,template,appDigest:appSourceDigest(appFiles),provenance,
+  needsDealerQA:true,readyToPublish:false};
+ const pending=new Map(files);
+ pending.set('.cars-app.json',Buffer.from(JSON.stringify(receipt,null,2)+'\n'));
+ assertAppVariant(pending,manifest);
+ files.set('.cars-app.json',pending.get('.cars-app.json'));
+ return receipt;
 }

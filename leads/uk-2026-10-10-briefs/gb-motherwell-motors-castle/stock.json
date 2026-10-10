@@ -1,1 +1,327 @@
-[]
+{
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-10",
+  "mediaDisclosure": "Illustrations are not photographs of the advertised vehicles.",
+  "records": [
+    {
+      "price": 3000,
+      "currency": "GBP",
+      "title": "2013 Audi A1 1.6 TDI S Line 5dr HATCHBACK Diesel Manual",
+      "year": 2013,
+      "mileage": 119612,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/800753431171",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/3lkAAeSwKsVqydjd/$_2.JPG",
+      "sourceSummary": "2013 | 119,612 Miles | Hatchback | 1598 ccm | Red",
+      "make": "Audi",
+      "model": "A1",
+      "trim": "1.6 TDI S Line 5dr HATCHBACK Diesel Manual",
+      "body": "Hatchback",
+      "id": "800753431171",
+      "slug": "audi-a1-2013-800753431171",
+      "priceAmount": 3000,
+      "mileageMiles": 119612,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/800753431171",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 6500,
+      "currency": "GBP",
+      "title": "2021 Vauxhall Corsa 1.2 SE 5dr HATCHBACK Petrol Manual",
+      "year": 2021,
+      "mileage": 32590,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/800729940509",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/OZwAAeSwLTVqydjV/$_2.JPG",
+      "sourceSummary": "2021 | 32,590 Miles | Hatchback | 1199 ccm | Black",
+      "make": "Vauxhall",
+      "model": "Corsa",
+      "trim": "1.2 SE 5dr HATCHBACK Petrol Manual",
+      "body": "Hatchback",
+      "id": "800729940509",
+      "slug": "vauxhall-corsa-2021-800729940509",
+      "priceAmount": 6500,
+      "mileageMiles": 32590,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/800729940509",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 8000,
+      "currency": "GBP",
+      "title": "2023 Citroen C3 1.2 PureTech Elle 5dr HATCHBACK Petrol Manual",
+      "year": 2023,
+      "mileage": 3441,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/800722114749",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/3xYAAeSw4GFqydjU/$_2.JPG",
+      "sourceSummary": "2023 | 3,441 Miles | Hatchback | 1199 ccm | White",
+      "make": "Citroen",
+      "model": "C3",
+      "trim": "1.2 PureTech Elle 5dr HATCHBACK Petrol Manual",
+      "body": "Hatchback",
+      "id": "800722114749",
+      "slug": "citroen-c3-2023-800722114749",
+      "priceAmount": 8000,
+      "mileageMiles": 3441,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/800722114749",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 3500,
+      "currency": "GBP",
+      "title": "2016 Renault Clio 0.9 TCE 90 Dynamique Nav 5dr HATCHBACK Petrol Manual",
+      "year": 2016,
+      "mileage": 54322,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/800696671424",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/5WEAAeSwFntqwKiM/$_2.JPG",
+      "sourceSummary": "2016 | 54,322 Miles | Hatchback | 898 ccm | Black",
+      "make": "Renault",
+      "model": "Clio",
+      "trim": "0.9 TCE 90 Dynamique Nav 5dr HATCHBACK Petrol Manual",
+      "body": "Hatchback",
+      "id": "800696671424",
+      "slug": "renault-clio-2016-800696671424",
+      "priceAmount": 3500,
+      "mileageMiles": 54322,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/800696671424",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 3300,
+      "currency": "GBP",
+      "title": "2015 Vauxhall Corsa 1.4 Limited Edition 3dr HATCHBACK Petrol Manual",
+      "year": 2015,
+      "mileage": 75185,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/800682432068",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/Gf8AAeSwUVFqyXIc/$_2.JPG",
+      "sourceSummary": "2015 | 75,185 Miles | Hatchback | 1398 ccm | White",
+      "make": "Vauxhall",
+      "model": "Corsa",
+      "trim": "1.4 Limited Edition 3dr HATCHBACK Petrol Manual",
+      "body": "Hatchback",
+      "id": "800682432068",
+      "slug": "vauxhall-corsa-2015-800682432068",
+      "priceAmount": 3300,
+      "mileageMiles": 75185,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/800682432068",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 7500,
+      "currency": "GBP",
+      "title": "2013 Audi Q5 2.0 TDI Quattro S Line Plus 5dr ESTATE Diesel Manual",
+      "year": 2013,
+      "mileage": 81414,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/800637144674",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/cQIAAeSwAvNqxzN5/$_2.JPG",
+      "sourceSummary": "2013 | 81,414 Miles | Estate | 1968 ccm | Grey",
+      "make": "Audi",
+      "model": "Q5",
+      "trim": "2.0 TDI Quattro S Line Plus 5dr ESTATE Diesel Manual",
+      "body": "Estate",
+      "id": "800637144674",
+      "slug": "audi-q5-2013-800637144674",
+      "priceAmount": 7500,
+      "mileageMiles": 81414,
+      "images": [
+        "/dealer-stock/wagon.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/800637144674",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 3400,
+      "currency": "GBP",
+      "title": "2016 Nissan Qashqai 1.5 dCi Tekna 5dr HATCHBACK Diesel Manual",
+      "year": 2016,
+      "mileage": 109154,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/800632116283",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/2aMAAeSw2jBqydjc/$_2.JPG",
+      "sourceSummary": "2016 | 109,154 Miles | Hatchback | 1461 ccm | Blue",
+      "make": "Nissan",
+      "model": "Qashqai",
+      "trim": "1.5 dCi Tekna 5dr HATCHBACK Diesel Manual",
+      "body": "Hatchback",
+      "id": "800632116283",
+      "slug": "nissan-qashqai-2016-800632116283",
+      "priceAmount": 3400,
+      "mileageMiles": 109154,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/800632116283",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 4000,
+      "currency": "GBP",
+      "title": "2016 Audi A1 1.4 TFSI Sport 5dr HATCHBACK Petrol Manual",
+      "year": 2016,
+      "mileage": 91421,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/800549423064",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/6v8AAeSwEzlqyXIb/$_2.JPG",
+      "sourceSummary": "2016 | 91,421 Miles | Hatchback | 1395 ccm | Red",
+      "make": "Audi",
+      "model": "A1",
+      "trim": "1.4 TFSI Sport 5dr HATCHBACK Petrol Manual",
+      "body": "Hatchback",
+      "id": "800549423064",
+      "slug": "audi-a1-2016-800549423064",
+      "priceAmount": 4000,
+      "mileageMiles": 91421,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/800549423064",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    }
+  ]
+}

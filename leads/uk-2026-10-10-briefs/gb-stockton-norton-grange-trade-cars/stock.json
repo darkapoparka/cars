@@ -1,1 +1,407 @@
-[]
+{
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-10",
+  "mediaDisclosure": "Illustrations are not photographs of the advertised vehicles.",
+  "records": [
+    {
+      "price": 3490,
+      "currency": "GBP",
+      "title": "2016 Peugeot 208 1.6 BlueHDi Active 5dr HATCHBACK Diesel Manual",
+      "year": 2016,
+      "mileage": 80000,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/820214219013",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTA4NlgxNDQ4/z/g0UAAeSwfZZqye4c/$_2.JPG",
+      "sourceSummary": "2016 | 80,000 Miles | Hatchback | 1560 ccm | Blue",
+      "make": "Peugeot",
+      "model": "208",
+      "trim": "1.6 BlueHDi Active 5dr HATCHBACK Diesel Manual",
+      "body": "Hatchback",
+      "id": "820214219013",
+      "slug": "peugeot-208-2016-820214219013",
+      "priceAmount": 3490,
+      "mileageMiles": 80000,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/820214219013",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 4990,
+      "currency": "GBP",
+      "title": "2016 Ford Grand C-Max 1.5 TDCi Titanium 5dr MPV Diesel Manual",
+      "year": 2016,
+      "mileage": 103000,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/820210366321",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTA4NlgxNDQ4/z/WooAAeSwymFqxfLt/$_2.JPG",
+      "sourceSummary": "2016 | 103,000 Miles | MPV | 1499 ccm | Grey",
+      "make": "Ford",
+      "model": "Grand",
+      "trim": "C-Max 1.5 TDCi Titanium 5dr MPV Diesel Manual",
+      "body": "MPV",
+      "id": "820210366321",
+      "slug": "ford-grand-2016-820210366321",
+      "priceAmount": 4990,
+      "mileageMiles": 103000,
+      "images": [
+        "/dealer-stock/van.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/820210366321",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 3990,
+      "currency": "GBP",
+      "title": "2016 Ford Focus 1.5 TDCi 120 Titanium 5dr HATCHBACK Diesel Manual",
+      "year": 2016,
+      "mileage": 103000,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/820209853597",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTA4NlgxNDQ4/z/2-UAAeSwCilqxPE-/$_2.JPG",
+      "sourceSummary": "2016 | 103,000 Miles | Hatchback | 1499 ccm | Silver",
+      "make": "Ford",
+      "model": "Focus",
+      "trim": "1.5 TDCi 120 Titanium 5dr HATCHBACK Diesel Manual",
+      "body": "Hatchback",
+      "id": "820209853597",
+      "slug": "ford-focus-2016-820209853597",
+      "priceAmount": 3990,
+      "mileageMiles": 103000,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/820209853597",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 5990,
+      "currency": "GBP",
+      "title": "2017 Nissan Qashqai 1.5 dCi N-Vision 5dr HATCHBACK Diesel Manual",
+      "year": 2017,
+      "mileage": 93000,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/820206910321",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTA4NlgxNDQ4/z/Zv0AAeSwazRqye4a/$_2.JPG",
+      "sourceSummary": "2017 | 93,000 Miles | Hatchback | 1461 ccm | Other",
+      "make": "Nissan",
+      "model": "Qashqai",
+      "trim": "1.5 dCi N-Vision 5dr HATCHBACK Diesel Manual",
+      "body": "Hatchback",
+      "id": "820206910321",
+      "slug": "nissan-qashqai-2017-820206910321",
+      "priceAmount": 5990,
+      "mileageMiles": 93000,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/820206910321",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 4750,
+      "currency": "GBP",
+      "title": "2017 Vauxhall Corsa 1.4 SRi Vx-line 3dr HATCHBACK Petrol Manual",
+      "year": 2017,
+      "mileage": 75401,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/820199748020",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTA4NlgxNDQ4/z/nowAAeSwG5NqwSa6/$_2.JPG",
+      "sourceSummary": "2017 | 75,401 Miles | Hatchback | 1398 ccm | White",
+      "make": "Vauxhall",
+      "model": "Corsa",
+      "trim": "1.4 SRi Vx-line 3dr HATCHBACK Petrol Manual",
+      "body": "Hatchback",
+      "id": "820199748020",
+      "slug": "vauxhall-corsa-2017-820199748020",
+      "priceAmount": 4750,
+      "mileageMiles": 75401,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/820199748020",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 5490,
+      "currency": "GBP",
+      "title": "2013 Audi A1 1.4 TFSI Sport 5dr HATCHBACK Petrol Manual",
+      "year": 2013,
+      "mileage": 80000,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/820174486495",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTA4NlgxNDQ4/z/eOgAAeSwc2Fqx0gT/$_2.JPG",
+      "sourceSummary": "2013 | 80,000 Miles | Hatchback | 1390 ccm | Black",
+      "make": "Audi",
+      "model": "A1",
+      "trim": "1.4 TFSI Sport 5dr HATCHBACK Petrol Manual",
+      "body": "Hatchback",
+      "id": "820174486495",
+      "slug": "audi-a1-2013-820174486495",
+      "priceAmount": 5490,
+      "mileageMiles": 80000,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/820174486495",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 7490,
+      "currency": "GBP",
+      "title": "2018 Nissan Qashqai 1.5 dCi 115 N-Connecta 5dr HATCHBACK Diesel Manual",
+      "year": 2018,
+      "mileage": 92418,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/820154120347",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTA4NlgxNDQ4/z/1oEAAeSw9mxqxfLs/$_2.JPG",
+      "sourceSummary": "2018 | 92,418 Miles | Hatchback | 1461 ccm | Black",
+      "make": "Nissan",
+      "model": "Qashqai",
+      "trim": "1.5 dCi 115 N-Connecta 5dr HATCHBACK Diesel Manual",
+      "body": "Hatchback",
+      "id": "820154120347",
+      "slug": "nissan-qashqai-2018-820154120347",
+      "priceAmount": 7490,
+      "mileageMiles": 92418,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/820154120347",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 4650,
+      "currency": "GBP",
+      "title": "2014 Ford Fiesta 1.25 82 Zetec 3dr HATCHBACK Petrol Manual",
+      "year": 2014,
+      "mileage": 51000,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/820133361606",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTA4NlgxNDQ4/z/gg0AAeSw2uBqu24h/$_2.JPG",
+      "sourceSummary": "2014 | 51,000 Miles | Hatchback | 1241 ccm | Blue",
+      "make": "Ford",
+      "model": "Fiesta",
+      "trim": "1.25 82 Zetec 3dr HATCHBACK Petrol Manual",
+      "body": "Hatchback",
+      "id": "820133361606",
+      "slug": "ford-fiesta-2014-820133361606",
+      "priceAmount": 4650,
+      "mileageMiles": 51000,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/820133361606",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 4290,
+      "currency": "GBP",
+      "title": "2017 Nissan Juke 1.5 dCi N-Connecta 5dr HATCHBACK Diesel Manual",
+      "year": 2017,
+      "mileage": 101000,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/820133263757",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTA4NlgxNDQ4/z/bNUAAeSwA7xqw0Yl/$_2.JPG",
+      "sourceSummary": "2017 | 101,000 Miles | Hatchback | 1461 ccm | White",
+      "make": "Nissan",
+      "model": "Juke",
+      "trim": "1.5 dCi N-Connecta 5dr HATCHBACK Diesel Manual",
+      "body": "Hatchback",
+      "id": "820133263757",
+      "slug": "nissan-juke-2017-820133263757",
+      "priceAmount": 4290,
+      "mileageMiles": 101000,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/820133263757",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "price": 3990,
+      "currency": "GBP",
+      "title": "2015 Nissan Juke 1.5 dCi Acenta Premium 5dr HATCHBACK Diesel Manual",
+      "year": 2015,
+      "mileage": 83830,
+      "mileageUnit": "mi",
+      "sourceUrl": "https://www.ebay.co.uk/itm/820110031882",
+      "imageSourceUrl": "https://i.ebayimg.com/00/s/MTA4NlgxNDQ4/z/OQ0AAeSwfZZqxkKw/$_2.JPG",
+      "sourceSummary": "2015 | 83,830 Miles | Hatchback | 1461 ccm | Grey",
+      "make": "Nissan",
+      "model": "Juke",
+      "trim": "1.5 dCi Acenta Premium 5dr HATCHBACK Diesel Manual",
+      "body": "Hatchback",
+      "id": "820110031882",
+      "slug": "nissan-juke-2015-820110031882",
+      "priceAmount": 3990,
+      "mileageMiles": 83830,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.ebay.co.uk/itm/820110031882",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    }
+  ]
+}

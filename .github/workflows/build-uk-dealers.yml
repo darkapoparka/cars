@@ -1,0 +1,121 @@
+name: Build UK dealer sources
+on:
+  workflow_dispatch:
+    inputs:
+      dealer:
+        description: Create the approved six-family canonical sources; builds and Cloudflare deployment remain separate gates
+        required: true
+        type: choice
+        default: all
+        options:
+          - all
+          - batley-as-motor-group
+          - birmingham-square-one-motors
+          - birmingham-trade-car-sales-grasmere
+          - bradford-cherry-tree-cars
+          - dewsbury-car-market-yorkshire
+          - motherwell-motors-castle
+          - north-norfolk-car-sales
+          - nottingham-s-a-motors
+          - stockport-broadbent-car-and-servicing
+          - stockton-norton-grange-trade-cars
+permissions:
+  contents: read
+concurrency:
+  group: cars-uk-dealer-source-creation
+  cancel-in-progress: false
+jobs:
+  plan:
+    if: github.repository == 'darkapoparka/cars' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          persist-credentials: false
+          sparse-checkout: |
+            scripts
+            leads/uk-2026-10-10-briefs
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '22.23.2'
+      - name: Check sourced facts, local raster assets and exact release selection
+        env:
+          UK_DEALER_SELECTION: ${{ inputs.dealer }}
+        run: node scripts/build-uk-dealers.mjs preflight "$UK_DEALER_SELECTION"
+      - id: matrix
+        name: Select one fresh runner per dealer
+        env:
+          UK_DEALER_SELECTION: ${{ inputs.dealer }}
+        run: node scripts/build-uk-dealers.mjs matrix "$UK_DEALER_SELECTION" >> "$GITHUB_OUTPUT"
+  create:
+    needs: plan
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    name: Create ${{ matrix.slug }}
+    steps:
+      - name: Check out current canonical main with existing client metadata
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /AGENTS.md
+            /.gitignore
+            /.gitattributes
+            /package.json
+            /package-lock.json
+            /templates.lock.json
+            /catalog.json
+            /workspace.json
+            /scripts/
+            /.github/workflows/
+            /docs/
+            /leads/uk-2026-10-10-build-manifest.json
+            /leads/uk-2026-10-10-briefs/
+            /templates/auto-best/
+            /templates/modern/
+            /templates/import/
+            /templates/app/
+            /templates/mobile/
+            /templates/karento-best/
+            /clients/*/dealer.json
+            /clients/*/.client/project.json
+            /clients/*/.client/uk-source-creation.json
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '22.23.2'
+      - name: Copy, personalize, verify seals and push only this canonical dealer
+        env:
+          UK_DEALER_SLUG: ${{ matrix.slug }}
+        run: node scripts/build-uk-dealers.mjs create "$UK_DEALER_SLUG"
+      - name: Retain source creation and commit evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: uk-source-${{ matrix.slug }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: runtime/uk-dealer-builds/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/
+          if-no-files-found: warn
+          include-hidden-files: true
+          retention-days: 7
+      - name: Preserve an unpublished source candidate after failure
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: uk-source-candidate-${{ matrix.slug }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: clients/${{ matrix.slug }}/
+          if-no-files-found: ignore
+          include-hidden-files: true
+          compression-level: 0
+          retention-days: 3

@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import { UK_MOBILE_PATHS, personalizeMobileUk, ukSourceMileage } from './client-refresh-uk-next.mjs';
 import path from 'node:path';
 import { excluded, normalized, sha256, inside } from './workflow.mjs';
 import { signatureBusinessPreview, signaturePriceFacts, signatureMileageFacts, signatureNativeFactsContract } from './client-refresh-signature.mjs';
@@ -107,6 +108,10 @@ export function replaceExportInitializer(source, name, value) {
 
 function showroomVehicle(listing, profile) {
   const raw = listing.raw || {};
+  if (profile.business.countryCode === 'GB' && profile.business.distanceUnit === 'mi' &&
+      (!ukSourceMileage(listing) || !Number.isFinite(listing.priceAmount) || listing.priceAmount <= 0)) {
+    throw new Error('Mobile UK requires source mileage and a published price; unknown facts cannot become zero offers: ' + listing.id);
+  }
   const price = listing.priceAmount;
   if (!Number.isFinite(price) || price < 0) throw new Error(`Mobile cannot display an unpublished price as a numeric offer: ${listing.id}`);
   if (!Number.isFinite(listing.year) || !/\d{4}/.test(String(raw.year || raw.production || raw.date || ''))) throw new Error(`Mobile needs the source year for ${listing.id}`);
@@ -205,7 +210,15 @@ function patchMobile(files, profile, logos) {
   if (files.has(localeFile)) put(files,localeFile,replaceOne(text(files,localeFile),"currency: 'EUR'","currency: " + JSON.stringify(currency),'Mobile explicit stock currency'));
   if (files.has(searchFile)) put(files,searchFile,text(files,searchFile).replace(/'€' \+ new Intl.NumberFormat\('en-GB', \{ maximumFractionDigits: 0 \}\).format\(amount\)/,
     `new Intl.NumberFormat('en-GB', { style: 'currency', currency: ${JSON.stringify(currency)}, maximumFractionDigits: 0 }).format(amount)`));
-  return { contentPaths: [file,catalog,dealerFile,prefix+'src/lib/dealer-inventory.json',...[localeFile,searchFile].filter(name=>files.has(name)),...guardMobileFacts(files,profile)], inventory };
+  const contentPaths = [file,catalog,dealerFile,prefix+'src/lib/dealer-inventory.json',...[localeFile,searchFile].filter(name=>files.has(name)),...guardMobileFacts(files,profile)];
+  if (business.countryCode === 'GB' && business.distanceUnit === 'mi') {
+    const generated = new Map(UK_MOBILE_PATHS.map(name => [name, text(files, prefix + name)]));
+    for (const name of personalizeMobileUk(generated, profile)) {
+      put(files, prefix + name, String(generated.get(name)));
+      contentPaths.push(prefix + name);
+    }
+  }
+  return { contentPaths: [...new Set(contentPaths)], inventory };
 }
 
 function signatureCard(listing, profile, nativeFacts=false) {

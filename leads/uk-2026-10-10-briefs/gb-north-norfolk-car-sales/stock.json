@@ -1,1 +1,86 @@
-[]
+{
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-10",
+  "mediaDisclosure": "Illustrations are not photographs of the advertised vehicles.",
+  "records": [
+    {
+      "title": "1991 Peugeot 205 1.9 GTI Phase 2",
+      "year": 1991,
+      "price": 19999,
+      "mileage": 92500,
+      "sourceUrl": "https://northnorfolkcarsales.co.uk/listing/1991-peugeot-205_1090",
+      "body": "Hatchback",
+      "transmission": "Manual",
+      "color": "Red",
+      "engineCc": 1905,
+      "make": "Peugeot",
+      "model": "205",
+      "trim": "1.9 GTI Phase 2",
+      "id": "1090",
+      "slug": "peugeot-205-1991-1090",
+      "priceAmount": 19999,
+      "currency": "GBP",
+      "mileageMiles": 92500,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "fuel": "",
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://northnorfolkcarsales.co.uk/listing/1991-peugeot-205_1090",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "title": "2018 Peugeot 208 GTI Prestige THP",
+      "year": 2018,
+      "price": 8499,
+      "mileage": 45500,
+      "sourceUrl": "https://northnorfolkcarsales.co.uk/listing/2018-peugeot-208_1089",
+      "body": "Hatchback",
+      "transmission": "Manual",
+      "color": "Black",
+      "engineCc": 1600,
+      "fuel": "Petrol",
+      "conditionNote": "The overview shows 45,500 miles; the prose rounds it to 45,000. This preview preserves the structured overview value.",
+      "make": "Peugeot",
+      "model": "208",
+      "trim": "GTI Prestige THP",
+      "id": "1089",
+      "slug": "peugeot-208-2018-1089",
+      "priceAmount": 8499,
+      "currency": "GBP",
+      "mileageMiles": 45500,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer. The overview shows 45,500 miles; the prose rounds it to 45,000. This preview preserves the structured overview value.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://northnorfolkcarsales.co.uk/listing/2018-peugeot-208_1089",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    }
+  ]
+}

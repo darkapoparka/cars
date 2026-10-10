@@ -1,1 +1,202 @@
-[]
+{
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-10",
+  "mediaDisclosure": "Illustrations are not photographs of the advertised vehicles.",
+  "records": [
+    {
+      "title": "Audi SQ5 3.0 BiTDI V6 Tiptronic quattro Euro 6 (s/s) 5dr",
+      "year": 2015,
+      "mileage": 105000,
+      "price": 12995,
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+      "sourceId": "at-sample-1",
+      "sourceSummary": "5 door Automatic Diesel SUV",
+      "body": "SUV",
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "make": "Audi",
+      "model": "SQ5",
+      "trim": "3.0 BiTDI V6 Tiptronic quattro Euro 6 (s/s) 5dr",
+      "id": "at-sample-1",
+      "slug": "audi-sq5-2015-at-sample-1",
+      "priceAmount": 12995,
+      "currency": "GBP",
+      "mileageMiles": 105000,
+      "images": [
+        "/dealer-stock/suv.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "title": "Volkswagen Golf 2.0 TSI BlueMotion Tech R DSG 4Motion Euro 6 (s/s) 5dr",
+      "year": 2015,
+      "mileage": 114000,
+      "price": 10995,
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+      "sourceId": "at-sample-2",
+      "sourceSummary": "5 door Automatic Petrol Hatchback",
+      "body": "Hatchback",
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "make": "Volkswagen",
+      "model": "Golf",
+      "trim": "2.0 TSI BlueMotion Tech R DSG 4Motion Euro 6 (s/s) 5dr",
+      "id": "at-sample-2",
+      "slug": "volkswagen-golf-2015-at-sample-2",
+      "priceAmount": 10995,
+      "currency": "GBP",
+      "mileageMiles": 114000,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "title": "Porsche Cayenne 3.0 TD V6 Tiptronic 4WD Euro 5 (s/s) 5dr",
+      "year": 2013,
+      "mileage": 126000,
+      "price": 9395,
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+      "sourceId": "at-sample-3",
+      "sourceSummary": "5 door Automatic Diesel SUV",
+      "body": "SUV",
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "make": "Porsche",
+      "model": "Cayenne",
+      "trim": "3.0 TD V6 Tiptronic 4WD Euro 5 (s/s) 5dr",
+      "id": "at-sample-3",
+      "slug": "porsche-cayenne-2013-at-sample-3",
+      "priceAmount": 9395,
+      "currency": "GBP",
+      "mileageMiles": 126000,
+      "images": [
+        "/dealer-stock/suv.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "title": "Nissan Navara 2.5 dCi Tekna Auto 4WD Euro 5 4dr",
+      "year": 2014,
+      "mileage": 99000,
+      "price": 5295,
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+      "sourceId": "at-sample-4",
+      "sourceSummary": "4 door Automatic Diesel Pickup",
+      "body": "Other",
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "make": "Nissan",
+      "model": "Navara",
+      "trim": "2.5 dCi Tekna Auto 4WD Euro 5 4dr",
+      "id": "at-sample-4",
+      "slug": "nissan-navara-2014-at-sample-4",
+      "priceAmount": 5295,
+      "currency": "GBP",
+      "mileageMiles": 99000,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "title": "Nissan Qashqai 1.6 dCi N-Connecta Euro 6 (s/s) 5dr",
+      "year": 2017,
+      "mileage": 128000,
+      "price": 5095,
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+      "sourceId": "at-sample-5",
+      "sourceSummary": "5 door Manual Diesel SUV",
+      "body": "SUV",
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "make": "Nissan",
+      "model": "Qashqai",
+      "trim": "1.6 dCi N-Connecta Euro 6 (s/s) 5dr",
+      "id": "at-sample-5",
+      "slug": "nissan-qashqai-2017-at-sample-5",
+      "priceAmount": 5095,
+      "currency": "GBP",
+      "mileageMiles": 128000,
+      "images": [
+        "/dealer-stock/suv.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-10-10",
+  "dealerId": "stockton-norton-grange-trade-cars",
+  "media": [
+    {
+      "publicPath": "/dealer-stock/hatchback.webp",
+      "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+      "kind": "generated_category_illustration",
+      "representsAdvertisedVehicle": false,
+      "source": {
+        "carsCommit": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+        "path": "templates/auto-best/static/assets/images/template/body-hatchback-v2.webp"
+      },
+      "rights": "Generated design illustration; no third-party listing photograph copied."
+    },
+    {
+      "publicPath": "/dealer-stock/van.webp",
+      "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5",
+      "kind": "generated_category_illustration",
+      "representsAdvertisedVehicle": false,
+      "source": "Image Generation, 2026-10-10",
+      "rights": "Generated design illustration; no third-party listing photograph copied."
+    }
+  ],
+  "thirdPartyStockPhotosBundled": false,
+  "dealerApproval": false
+}

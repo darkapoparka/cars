@@ -1,1 +1,280 @@
-[]
+{
+  "kind": "dated-listing-snapshot",
+  "observedAt": "2026-10-10",
+  "mediaDisclosure": "Illustrations are not photographs of the advertised vehicles.",
+  "records": [
+    {
+      "title": "Ford Fiesta 1.25 Zetec Euro 6 5dr",
+      "year": 2015,
+      "mileage": 46000,
+      "price": 4000,
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+      "sourceId": "at-sample-1",
+      "sourceSummary": "5 door Manual Petrol Hatchback",
+      "body": "Hatchback",
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "make": "Ford",
+      "model": "Fiesta",
+      "trim": "1.25 Zetec Euro 6 5dr",
+      "id": "at-sample-1",
+      "slug": "ford-fiesta-2015-at-sample-1",
+      "priceAmount": 4000,
+      "currency": "GBP",
+      "mileageMiles": 46000,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "title": "Volkswagen Golf 1.6 TDI BlueMotion Tech S Euro 5 (s/s) 5dr",
+      "year": 2013,
+      "mileage": 152385,
+      "price": 2895,
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+      "sourceId": "at-sample-2",
+      "sourceSummary": "5 door Manual Diesel Hatchback",
+      "body": "Hatchback",
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "make": "Volkswagen",
+      "model": "Golf",
+      "trim": "1.6 TDI BlueMotion Tech S Euro 5 (s/s) 5dr",
+      "id": "at-sample-2",
+      "slug": "volkswagen-golf-2013-at-sample-2",
+      "priceAmount": 2895,
+      "currency": "GBP",
+      "mileageMiles": 152385,
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "title": "Ford Transit 2.2 TDCi 280 Duratorq Tourneo Limited Minibus 5dr Diesel Manual L1 H1 (113 bhp)",
+      "year": 2008,
+      "mileage": 158538,
+      "price": 2500,
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+      "sourceId": "at-sample-3",
+      "sourceSummary": "5 door Manual Diesel Minibus",
+      "body": "Van",
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "make": "Ford",
+      "model": "Transit",
+      "trim": "2.2 TDCi 280 Duratorq Tourneo Limited Minibus 5dr Diesel Manual L1 H1 (113 bhp)",
+      "id": "at-sample-3",
+      "slug": "ford-transit-2008-at-sample-3",
+      "priceAmount": 2500,
+      "currency": "GBP",
+      "mileageMiles": 158538,
+      "images": [
+        "/dealer-stock/van.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "title": "BMW Z4 2.2i SE Auto Euro 3 2dr",
+      "year": 2004,
+      "mileage": 75408,
+      "price": 2495,
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+      "sourceId": "at-sample-4",
+      "sourceSummary": "2 door Automatic Petrol Convertible",
+      "body": "Convertible",
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "make": "BMW",
+      "model": "Z4",
+      "trim": "2.2i SE Auto Euro 3 2dr",
+      "id": "at-sample-4",
+      "slug": "bmw-z4-2004-at-sample-4",
+      "priceAmount": 2495,
+      "currency": "GBP",
+      "mileageMiles": 75408,
+      "images": [
+        "/dealer-stock/convertible.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "title": "Smart Fortwo 0.8 CDI Pulse SoftTouch Euro 5 2dr",
+      "year": 2009,
+      "mileage": 119033,
+      "price": 2195,
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+      "sourceId": "at-sample-5",
+      "sourceSummary": "2 door Automatic Diesel Coupe",
+      "body": "Coupe",
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "make": "Smart",
+      "model": "Fortwo",
+      "trim": "0.8 CDI Pulse SoftTouch Euro 5 2dr",
+      "id": "at-sample-5",
+      "slug": "smart-fortwo-2009-at-sample-5",
+      "priceAmount": 2195,
+      "currency": "GBP",
+      "mileageMiles": 119033,
+      "images": [
+        "/dealer-stock/coupe.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "title": "Volkswagen Caddy Maxi 1.9 TDi Maxi FWD 5dr",
+      "year": 2009,
+      "mileage": 140178,
+      "price": 1395,
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+      "sourceId": "at-sample-6",
+      "sourceSummary": "Panel Van | 1.9L | Manual | Diesel | 5 seats",
+      "body": "Van",
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "make": "Volkswagen",
+      "model": "Caddy Maxi",
+      "trim": "1.9 TDi Maxi FWD 5dr",
+      "id": "at-sample-6",
+      "slug": "volkswagen-caddy-maxi-2009-at-sample-6",
+      "priceAmount": 1395,
+      "currency": "GBP",
+      "mileageMiles": 140178,
+      "images": [
+        "/dealer-stock/van.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    },
+    {
+      "title": "Ford Transit Connect 1.8 TDCi T230 LX L3 H3 4dr",
+      "year": 2007,
+      "mileage": 193794,
+      "price": 1195,
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+      "sourceId": "at-sample-7",
+      "sourceSummary": "Panel Van | LWB | 1.8L | Manual | Diesel | 2 seats",
+      "body": "Van",
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "make": "Ford",
+      "model": "Transit Connect",
+      "trim": "1.8 TDCi T230 LX L3 H3 4dr",
+      "id": "at-sample-7",
+      "slug": "ford-transit-connect-2007-at-sample-7",
+      "priceAmount": 1195,
+      "currency": "GBP",
+      "mileageMiles": 193794,
+      "images": [
+        "/dealer-stock/van.webp"
+      ],
+      "imageCaption": "Illustration — not the advertised vehicle",
+      "mediaKind": "generated_category_illustration",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "features": [],
+      "sourceEvidence": {
+        "kind": "public_advertised_listing",
+        "url": "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+        "observedAt": "2026-10-10"
+      },
+      "mediaRights": {
+        "method": "generated_illustration",
+        "representsActualVehicle": false,
+        "thirdPartyVehiclePhotographyBundled": false
+      }
+    }
+  ]
+}

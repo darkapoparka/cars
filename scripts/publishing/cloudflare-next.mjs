@@ -8,6 +8,9 @@ export const CLOUDFLARE_NEXT_PINS = Object.freeze({
   '@cloudflare/vite-plugin': '1.63.1', wrangler: '4.149.0',
   '@vinext/cloudflare': '1.1.0', '@stylexjs/unplugin': '0.19.1', unplugin: '2.3.11'
 });
+// This exact workerd release is required by the pinned Cloudflare toolchain.
+// Its reviewed installer selects and validates the platform-native binary.
+const CLOUDFLARE_NEXT_WORKERD = '1.20261006.1';
 const services = { modern: 'modern/apps/web', app: 'app', mobile: 'mobile' };
 const digest = value => createHash('sha256').update(value).digest('hex');
 const encode = value => Buffer.from(JSON.stringify(value, null, 2) + '\n');
@@ -63,6 +66,15 @@ function modernTrustedCountry(files) {
   files.set(name, Buffer.from(source.replace(original,
     'process.env.CARS_CLOUDFLARE_PROVIDER === "1"\n          ? request.headers.get("x-cars-country")\n          : process.env.VERCEL === "1"\n            ? request.headers.get("x-vercel-ip-country")\n            : null')));
 }
+function modernCloudflareBuildPolicy(files, changes) {
+  const name = 'modern/pnpm-workspace.yaml', source = text(files, name);
+  if ([...source.matchAll(/^allowBuilds:\n/gm)].length !== 1
+    || /^\s+['\"]?workerd(?:@|['\"]?\s*:)/m.test(source)) throw Error('Modern dependency build policy changed; review the Cloudflare boundary');
+  const value = source.replace(/^allowBuilds:\n/m, "allowBuilds:\n  'workerd@" + CLOUDFLARE_NEXT_WORKERD + "': true\n");
+  files.set(name, Buffer.from(value));
+  changes.push({ file: name, operation: 'allow-pinned-cloudflare-native-build', dependency: 'workerd',
+    version: CLOUDFLARE_NEXT_WORKERD, sourceSha256: digest(source), generatedSha256: digest(value) });
+}
 function modernReact(files, changes) {
   // Vinext 1.1.0 requires ^19.2.6. Record this generated-only security/runtime
   // alignment explicitly instead of silently loosening upstream peer checks.
@@ -99,7 +111,10 @@ export function applyCloudflareNext(inputFiles, manifest, { workerPrefix = 'cars
     const react = key === 'modern' && sourceReact === '19.2.4' ? '19.2.6' : sourceReact?.replace(/^[~^]/, '');
     if (!/^19\.(?:2\.(?:[6-9]|[1-9]\d+)|[3-9]\.\d+)$/.test(react ?? '')) throw Error(key + ': React runtime is incompatible with pinned vinext 1.1.0');
     generated(files, root + '/cars-next-source-package.json', originalPackage);
-    if (key === 'modern') modernReact(files, adaptations);
+    if (key === 'modern') {
+      modernReact(files, adaptations);
+      modernCloudflareBuildPolicy(files, adaptations);
+    }
     pkg.type = 'module';
     pkg.dependencies = { ...pkg.dependencies, react, 'react-dom': react, vinext: CLOUDFLARE_NEXT_PINS.vinext, 'react-server-dom-webpack': react };
     pkg.devDependencies = { ...pkg.devDependencies,

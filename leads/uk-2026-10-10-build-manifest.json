@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "batch": "uk-2026-10-10",
+  "designSet": "six",
+  "provider": "cloudflare",
+  "sourceOwnership": "cars-canonical",
+  "publishingRepositoryVisibility": "private",
+  "selectionEvidence": "docs/qa/uk-approved-six-selection-2026-10-10.json",
+  "releasePolicy": "Use these exact approved sources; newer development is excluded.",
+  "sourceReleases": {
+    "auto-best": {
+      "revision": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+      "tree": "5be83ea8685a3e99d517ced43af67d9d3d7a24db",
+      "digest": "bc08eb6123546c0e0cb0f4d21e2209450bfe642e542515b53f557016d14416d2"
+    },
+    "modern": {
+      "revision": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
+      "tree": "c2b3b3e74815c1e5eba0c82cfb1352c795921dcf",
+      "digest": "f097bc4802e62ffb0b752bc5523f3fe1b00df83f67b16843d698d276d10344a3"
+    },
+    "import": {
+      "revision": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
+      "tree": "874b601a661045dd0e265bb14a9b0af762a17d0f",
+      "digest": "25cc87e3d71101be065333c5d5d8c124516a936281b1b3c81aba6e674253a4b1"
+    },
+    "app": {
+      "revision": "70c2b80671e217ab299549a938a537c0b9559611",
+      "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
+      "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f"
+    },
+    "mobile": {
+      "revision": "876590474d01178413feccf3153a0859230158a1",
+      "tree": "7b1f0878715aa1bc0f5942c7e654a6a1bb091510",
+      "digest": "380b153972039a80dccee73f53760a87e963d007b83a921020c5ab5353c942fc"
+    },
+    "karento-best": {
+      "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+      "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
+      "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+    }
+  },
+  "dealers": [
+    {
+      "leadId": "gb-batley-as-motor-group",
+      "slug": "batley-as-motor-group",
+      "name": "AS Motor Group",
+      "brief": "leads/uk-2026-10-10-briefs/gb-batley-as-motor-group",
+      "repository": "darkapoparka/cars-uk-batley-as-motor-group",
+      "preset": "standard",
+      "appIcon": "assets/app-icon.png"
+    },
+    {
+      "leadId": "gb-birmingham-square-one-motors",
+      "slug": "birmingham-square-one-motors",
+      "name": "Square One Motors",
+      "brief": "leads/uk-2026-10-10-briefs/gb-birmingham-square-one-motors",
+      "repository": "darkapoparka/cars-uk-birmingham-square-one-motors",
+      "preset": "standard",
+      "appIcon": "assets/app-icon.png"
+    },
+    {
+      "leadId": "gb-birmingham-trade-car-sales-grasmere",
+      "slug": "birmingham-trade-car-sales-grasmere",
+      "name": "Trade Car Sales",
+      "brief": "leads/uk-2026-10-10-briefs/gb-birmingham-trade-car-sales-grasmere",
+      "repository": "darkapoparka/cars-uk-birmingham-trade-car-sales-grasmere",
+      "preset": "standard",
+      "appIcon": "assets/app-icon.png"
+    },
+    {
+      "leadId": "gb-bradford-cherry-tree-cars",
+      "slug": "bradford-cherry-tree-cars",
+      "name": "Cherry Tree Cars Ltd",
+      "brief": "leads/uk-2026-10-10-briefs/gb-bradford-cherry-tree-cars",
+      "repository": "darkapoparka/cars-uk-bradford-cherry-tree-cars",
+      "preset": "standard",
+      "appIcon": "assets/app-icon.png"
+    },
+    {
+      "leadId": "gb-dewsbury-car-market-yorkshire",
+      "slug": "dewsbury-car-market-yorkshire",
+      "name": "Car Market Yorkshire",
+      "brief": "leads/uk-2026-10-10-briefs/gb-dewsbury-car-market-yorkshire",
+      "repository": "darkapoparka/cars-uk-dewsbury-car-market-yorkshire",
+      "preset": "standard",
+      "appIcon": "assets/app-icon.png"
+    },
+    {
+      "leadId": "gb-motherwell-motors-castle",
+      "slug": "motherwell-motors-castle",
+      "name": "Motors Castle",
+      "brief": "leads/uk-2026-10-10-briefs/gb-motherwell-motors-castle",
+      "repository": "darkapoparka/cars-uk-motherwell-motors-castle",
+      "preset": "standard",
+      "appIcon": "assets/app-icon.png"
+    },
+    {
+      "leadId": "gb-north-norfolk-car-sales",
+      "slug": "north-norfolk-car-sales",
+      "name": "North Norfolk Car Sales",
+      "brief": "leads/uk-2026-10-10-briefs/gb-north-norfolk-car-sales",
+      "repository": "darkapoparka/cars-uk-north-norfolk-car-sales",
+      "preset": "standard",
+      "appIcon": "assets/app-icon.png"
+    },
+    {
+      "leadId": "gb-nottingham-s-a-motors",
+      "slug": "nottingham-s-a-motors",
+      "name": "S A Motors",
+      "brief": "leads/uk-2026-10-10-briefs/gb-nottingham-s-a-motors",
+      "repository": "darkapoparka/cars-uk-nottingham-s-a-motors",
+      "preset": "standard",
+      "appIcon": "assets/app-icon.png"
+    },
+    {
+      "leadId": "gb-stockport-broadbent-car-and-servicing",
+      "slug": "stockport-broadbent-car-and-servicing",
+      "name": "Broadbent Car and Servicing",
+      "brief": "leads/uk-2026-10-10-briefs/gb-stockport-broadbent-car-and-servicing",
+      "repository": "darkapoparka/cars-uk-stockport-broadbent-car-and-servicing",
+      "preset": "standard",
+      "appIcon": "assets/app-icon.png"
+    },
+    {
+      "leadId": "gb-stockton-norton-grange-trade-cars",
+      "slug": "stockton-norton-grange-trade-cars",
+      "name": "Norton Grange Trade Cars",
+      "brief": "leads/uk-2026-10-10-briefs/gb-stockton-norton-grange-trade-cars",
+      "repository": "darkapoparka/cars-uk-stockton-norton-grange-trade-cars",
+      "preset": "standard",
+      "appIcon": "assets/app-icon.png"
+    }
+  ]
+}

@@ -31,13 +31,13 @@
   "tagline": "Vehicle design preview for S A Motors in Nottingham.",
   "socialLinks": {},
   "services": [],
-  "stockCount": 0,
+  "stockCount": 5,
   "publishedListingCount": 36,
   "sampleOnly": true,
-  "inventoryMode": "illustrative_unpopulated",
-  "previewNotice": "Independent design preview for discussion; it is not an official dealership website. No dealership approval or enquiry delivery is implied.",
-  "inventoryNotice": "No vehicle samples have been populated yet. Later advertised examples must retain their source date, actual GBP price, original mileage unit and availability caveat. Illustrative stock must be clearly identified.",
-  "availabilityLabel": "Sample — availability not confirmed",
+  "inventoryMode": "dated_listing_samples_with_generated_illustrations",
+  "previewNotice": "Independent design preview for discussion, not an official dealership website. Forms do not send messages or create reservations.",
+  "inventoryNotice": "Vehicle images are generated illustrations, not photographs of the advertised vehicles. Listing details were observed on 10 October 2026; confirm each original advert, price, condition and availability with the dealership.",
+  "availabilityLabel": "Listing sample — availability unconfirmed",
   "contactNotice": "Direct enquiry destination is not confirmed; show an honest demo/unavailable contact state until resolved.",
   "locationNote": "City-level location only until conflicting or incomplete premises information is resolved.",
   "sources": [
@@ -136,7 +136,7 @@
     "requiredNextStep": "Inspect matching public branding visually; use a suitable permitted original raster asset or an identified generated refresh/proposal when required by the build guardrails."
   },
   "buildPreparation": {
-    "status": "public_fact_pack_prepared_not_an_application",
+    "status": "content_pack_populated_application_pending",
     "derivedFrom": {
       "path": "../../uk-2026-10-10.json",
       "sourceSha256": "0b8a38395e80f44f70035ba3cd538e44554a917056fd3fde9b4efbc31a999c92",
@@ -202,6 +202,46 @@
       "browserReviewed": false,
       "hostedVerified": false
     },
-    "existingClientPathFromResearch": null
+    "existingClientPathFromResearch": null,
+    "contentSelection": {
+      "observedAt": "2026-10-10",
+      "listingCount": 5,
+      "kind": "dated-listing-snapshot",
+      "mediaKind": "generated_category_illustration",
+      "source": "https://showroom.ebaymotorspro.co.uk/S-A-motors",
+      "excluded": [
+        {
+          "leadId": "gb-nottingham-s-a-motors",
+          "title": "Citroen C4 Picasso 2.0HDi 16V Exclusive 5dr Auto [5 seat] LEFT HAND DRIVE MPV Di",
+          "sourceUrl": "https://www.ebay.co.uk/itm/178560797375",
+          "reason": "missing year"
+        },
+        {
+          "leadId": "gb-nottingham-s-a-motors",
+          "title": "Mercedes-Benz A CLASS A150 Classic SE 3dr LEFT HAND DRIVE Hatchback Petrol Manua",
+          "sourceUrl": "https://www.ebay.co.uk/itm/178548322924",
+          "reason": "missing year"
+        },
+        {
+          "leadId": "gb-nottingham-s-a-motors",
+          "title": "2006 Citroen C3 1.4i Desire 5dr HATCHBACK Petrol Manual",
+          "sourceUrl": "https://www.ebay.co.uk/itm/",
+          "reason": "missing advert ID"
+        },
+        {
+          "leadId": "gb-nottingham-s-a-motors",
+          "title": "2013 MINI Coupe 1.6 Cooper 3dr COUPE Petrol Manual",
+          "sourceUrl": "https://www.ebay.co.uk/itm/",
+          "reason": "missing advert ID"
+        },
+        {
+          "leadId": "gb-nottingham-s-a-motors",
+          "title": "2018 MERCEDES C220 CDI UK LEFT HAND DRIVE Estate DIESEL Automatic",
+          "sourceUrl": "https://www.ebay.co.uk/itm/178527227735",
+          "reason": "year conflict"
+        }
+      ],
+      "countNote": "Only the sufficiently complete examples observed in this pass are used; no extra available vehicles are invented."
+    }
   }
 }

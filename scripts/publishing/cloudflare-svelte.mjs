@@ -149,6 +149,19 @@ export function cloudflareSvelteBuildPlan(key, base) {
     output: { ...CLOUDFLARE_SVELTE_OUTPUT } };
 }
 
+export function cloudflareSvelteBuildEnvironment(root, key, base, inherited = process.env) {
+  const plan = cloudflareSvelteBuildPlan(key, base);
+  const environment = { ...inherited, ...plan.environment };
+  const inheritedPath = Object.entries(environment).find(([name]) => name.toLowerCase() === 'path')?.[1] ?? '';
+  for (const name of Object.keys(environment)) if (['path', 'npm_config_cache'].includes(name.toLowerCase())) delete environment[name];
+  environment[process.platform === 'win32' ? 'Path' : 'PATH'] = path.dirname(process.execPath) + path.delimiter + inheritedPath;
+  // Signature's approved .npmrc keeps a local .runtime/npm-cache. Route the
+  // generated build's mutable npm cache outside retained family source, without
+  // changing that source configuration or excluding any .runtime content.
+  environment.npm_config_cache = path.join(root, '.cars-build-assets', key + '.npm-cache');
+  return environment;
+}
+
 function beneath(parent, child) {
   const relative = path.relative(parent, child);
   return relative && relative !== '..' && !relative.startsWith('..' + path.sep) && !path.isAbsolute(relative);
@@ -247,7 +260,7 @@ function verifySealedPayload(root) {
   }
   return { packageMode: 'sealed-package', payloadDigest: meta.payloadDigest };
 }
-function familySourceDigest(root, key) {
+function familySourceRows(root, key) {
   const rows = sourceRows(path.join(root, key), retainedFamilySource);
   for (const name of ['dealer.json', '.cars-cloudflare-svelte.json', 'scripts/build-cloudflare-svelte.mjs']) {
     const file = path.join(root, name);
@@ -255,7 +268,16 @@ function familySourceDigest(root, key) {
     if (!fs.lstatSync(file).isFile() || fs.lstatSync(file).isSymbolicLink()) throw Error('Linked generated source input: ' + name);
     rows.push({ path: '../' + name, sha256: digest(payloadBytes(fs.readFileSync(file))) });
   }
-  return digest(JSON.stringify(rows.sort((left, right) => left.path < right.path ? -1 : left.path > right.path ? 1 : 0)));
+  return rows.sort((left, right) => left.path < right.path ? -1 : left.path > right.path ? 1 : 0);
+}
+function familySourceDigest(root, key) {
+  return digest(JSON.stringify(familySourceRows(root, key)));
+}
+export function changedCloudflareSvelteSourceRows(before, after) {
+  const original = new Map(before.map(row => [row.path, row.sha256]));
+  const current = new Map(after.map(row => [row.path, row.sha256]));
+  return [...new Set([...original.keys(), ...current.keys()])].sort().flatMap(name =>
+    original.get(name) === current.get(name) ? [] : [{ path: name, before: original.get(name) ?? null, after: current.get(name) ?? null }]);
 }
 function sourceProof(root, key, identity, seal = verifySealedPayload(root)) {
   return { ...identity, schemaVersion: 2, ...seal, sourceDigest: familySourceDigest(root, key) };
@@ -306,10 +328,9 @@ export function runCloudflareSvelteBuild(key, { packageRoot = path.resolve(impor
   if ((fs.existsSync(proofDirectory) && fs.lstatSync(proofDirectory).isSymbolicLink()) || [proofFile, buildProofFile].some(file => fs.existsSync(file) && fs.lstatSync(file).isSymbolicLink())) throw Error('Linked provider dependency/build proof');
   const storedProof = fs.existsSync(proofFile) ? readJson(proofFile) : null;
   if (storedProof?.packageMode === 'sealed-package' && seal.packageMode !== 'sealed-package') throw Error('Sealed Cloudflare package cannot become an unsealed qualification');
-  const environment = { ...process.env, ...plan.environment };
-  const inheritedPath = Object.entries(environment).find(([name]) => name.toLowerCase() === 'path')?.[1] ?? '';
-  for (const name of Object.keys(environment)) if (name.toLowerCase() === 'path') delete environment[name];
-  environment[process.platform === 'win32' ? 'Path' : 'PATH'] = path.dirname(process.execPath) + path.delimiter + inheritedPath;
+  const environment = cloudflareSvelteBuildEnvironment(root, key, entry.base);
+  const cacheDirectory = environment.npm_config_cache;
+  if (fs.existsSync(cacheDirectory) && (fs.lstatSync(cacheDirectory).isSymbolicLink() || !fs.lstatSync(cacheDirectory).isDirectory())) throw Error('Linked or invalid generated npm cache');
   if (phase === 'dependencies') {
     if (entry.dependencyLockStatus !== 'frozen' && fs.existsSync(path.join(root, '.cars-package.json'))) throw Error('Materialize or supply frozen provider dependency locks before sealing/exporting a package');
     const before = readJson(path.join(cwd, 'package-lock.json'));
@@ -318,11 +339,12 @@ export function runCloudflareSvelteBuild(key, { packageRoot = path.resolve(impor
     assertProviderLock(lock, before, entry.dependencies, readJson(path.join(cwd, 'package.json')));
     if (entry.dependencyLockStatus === 'frozen' && digest(fs.readFileSync(path.join(cwd, 'package-lock.json'))) !== entry.lockSha256) throw Error('Frozen provider dependency lock changed');
     const resolvedLockSha256 = digest(fs.readFileSync(path.join(cwd, 'package-lock.json')));
-    const installSourceDigest = familySourceDigest(root, key);
+    const installSourceRows = familySourceRows(root, key);
     runSteps(plan.dependencies.slice(1), cwd, environment, run, key);
     const after = dependencyIdentity(root, key);
     if (after.packageSha256 !== identity.packageSha256 || after.configSha256 !== identity.configSha256 || after.wranglerSha256 !== identity.wranglerSha256 || after.lockSha256 !== resolvedLockSha256) throw Error('Generated provider inputs changed during dependency installation');
-    if (familySourceDigest(root, key) !== installSourceDigest) throw Error('Generated Cloudflare source changed during dependency installation');
+    const sourceChanges = changedCloudflareSvelteSourceRows(installSourceRows, familySourceRows(root, key));
+    if (sourceChanges.length) throw Error('Generated Cloudflare source changed during dependency installation: ' + JSON.stringify(sourceChanges));
     verifyInstalledDependencies(root, key, entry);
     fs.mkdirSync(proofDirectory, { recursive: true });
     const proof = sourceProof(root, key, after);

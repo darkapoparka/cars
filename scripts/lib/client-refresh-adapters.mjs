@@ -1,4 +1,5 @@
 import { ensureImportMenuKeys } from './import-menu-keys.mjs';
+import { UK_MODERN_PATHS, personalizeModernUk, ukSourceMileage } from './client-refresh-uk-next.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { applyDealerLogoContract } from './client-logo-contract.mjs';
@@ -614,6 +615,11 @@ function patchAutoBest({ oldVariant, candidate, profile }) {
 
 function modernListing(item, index, id, profile) {
   const b = profile.business;
+  const uk = b.countryCode === 'GB' && b.distanceUnit === 'mi';
+  const original = uk ? ukSourceMileage(item) : null;
+  if (uk && (!original || !Number.isFinite(item.priceAmount) || item.priceAmount <= 0)) {
+    throw new Error('Modern UK requires a published mileage and price; unsupported unknown values cannot become zero offers: ' + item.id);
+  }
   const fuel = ['gasoline', 'diesel', 'hybrid', 'plug_in_hybrid', 'electric', 'lpg', 'cng'].includes(item.fuelType)
     ? item.fuelType : 'other';
   const transmission = item.transmissionType === 'manual' ? 'manual' :
@@ -645,6 +651,7 @@ function modernListing(item, index, id, profile) {
       transmission,
       mileageValue: mileageKm(item),
       mileageUnit: 'km',
+      ...(original ? { mileageSourceValue: original.value, mileageSourceUnit: original.unit } : {}),
       ...(item.powerHp ? { enginePowerHp: item.powerHp } : {}),
       ...(item.color ? { colorExterior: item.color } : {})
     },
@@ -831,6 +838,13 @@ function patchModern({ oldVariant, candidate, profile }) {
     `${JSON.stringify(profile, null, 2)}\n`);
   const dealerTextFiles = patchModernDealerText(candidate, profile)
     .map((file) => path.relative(candidate, file).replaceAll('\\', '/'));
+  if (b.countryCode === 'GB' && b.distanceUnit === 'mi') {
+    const generated = new Map(UK_MODERN_PATHS.map(name => [name, read(path.join(candidate, name))]));
+    for (const name of personalizeModernUk(generated, profile)) {
+      write(path.join(candidate, name), String(generated.get(name)));
+      dealerTextFiles.push(name);
+    }
+  }
   return [
     'packages/marketplace-domain/testing/mock-data.ts',
     'packages/marketplace/lead-site.ts',

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-10-10",
+  "dealerId": "bradford-cherry-tree-cars",
+  "media": [
+    {
+      "publicPath": "/dealer-stock/sedan.webp",
+      "sha256": "63c0cba6517e482786809a18e5217140aec2e64ff1c8a31a09b3ad7582d278c6",
+      "kind": "generated_category_illustration",
+      "representsAdvertisedVehicle": false,
+      "source": {
+        "carsCommit": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+        "path": "templates/auto-best/static/assets/images/template/body-sedan-v2.webp"
+      },
+      "rights": "Generated design illustration; no third-party listing photograph copied."
+    },
+    {
+      "publicPath": "/dealer-stock/suv.webp",
+      "sha256": "67094fedb8305304ba8b0d2842f5d2c7d47979ed1bb42fe51688ab3f77b765ff",
+      "kind": "generated_category_illustration",
+      "representsAdvertisedVehicle": false,
+      "source": {
+        "carsCommit": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+        "path": "templates/auto-best/static/assets/images/lead/day-night-cutout-silver-v1.webp"
+      },
+      "rights": "Generated design illustration; no third-party listing photograph copied."
+    },
+    {
+      "publicPath": "/dealer-stock/van.webp",
+      "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5",
+      "kind": "generated_category_illustration",
+      "representsAdvertisedVehicle": false,
+      "source": "Image Generation, 2026-10-10",
+      "rights": "Generated design illustration; no third-party listing photograph copied."
+    },
+    {
+      "publicPath": "/dealer-stock/wagon.webp",
+      "sha256": "88d014cb79ae0bfd6d53fe0cd8af546b55869f70e03c6ebd24e4cec1f5e1acc2",
+      "kind": "generated_category_illustration",
+      "representsAdvertisedVehicle": false,
+      "source": {
+        "carsCommit": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+        "path": "templates/auto-best/static/assets/images/template/body-wagon-v2.webp"
+      },
+      "rights": "Generated design illustration; no third-party listing photograph copied."
+    },
+    {
+      "publicPath": "/dealer-stock/hatchback.webp",
+      "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+      "kind": "generated_category_illustration",
+      "representsAdvertisedVehicle": false,
+      "source": {
+        "carsCommit": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+        "path": "templates/auto-best/static/assets/images/template/body-hatchback-v2.webp"
+      },
+      "rights": "Generated design illustration; no third-party listing photograph copied."
+    }
+  ],
+  "thirdPartyStockPhotosBundled": false,
+  "dealerApproval": false
+}
