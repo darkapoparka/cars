@@ -822,58 +822,160 @@
       "snapshotPath": "templates/app",
       "status": "approved",
       "repository": "darkapoparka/cars",
-      "commit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+      "commit": "70c2b80671e217ab299549a938a537c0b9559611",
       "source": {
         "repository": "darkapoparka/cars",
-        "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+        "revision": "70c2b80671e217ab299549a938a537c0b9559611",
         "path": "templates/app",
-        "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080",
-        "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad"
+        "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
+        "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f"
       },
-      "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
+      "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f",
       "exportPolicy": "cars-source-v1",
-      "release": "2026.09.30",
+      "release": "app-source-ui-audit-2026-10-10",
       "reason": "Reviewed immutable Cars template source; dealer adoption is explicit.",
       "runtime": {
-        "node": "22.x",
-        "hosting": "Vercel production build",
-        "browser": "Chrome"
+        "node": "22.20.0",
+        "declaredNode": ">=22.20.0 <23",
+        "next": "16.3.8",
+        "packageManager": "npm@11.3.0",
+        "browser": "Recorded Chromium/Chrome production journeys"
       },
       "modes": {
-        "standalone": "Hosted EN/BG acceptance passed for the exact canonical runtime source.",
-        "mounted": "Explicit dealer refresh, preservation assertions and hosted verification required."
+        "standalone": "Exact immutable Cars subtree matches its READY publishing mirror; recorded integration and hosted EN/BG mobile/desktop checks passed.",
+        "mounted": "Requires exact personalized dealer mount and hosted acceptance. This record does not claim a newly tested native six-design mount.",
+        "dealer": "Requires verified GBP inventory, dealer identity/assets/contact data and final proposal QA."
       },
       "qa": {
-        "evidence": "docs/releases/final-polish-2026-09-30/app-release.json",
-        "verifiedAt": "2026-09-30T09:43:46.204Z",
+        "evidence": "docs/qa/app-template-release-2026-10-10.json",
+        "verifiedAt": "2026-10-10T03:01:54.272Z",
         "checks": [
           {
-            "name": "exact-source-and-mirror-mapping",
+            "name": "immutable-source-and-mirror-mapping",
             "status": "passed",
-            "evidence": "docs/releases/final-polish-2026-09-30/app-acceptance.json",
-            "evidenceSha256": "09182ecd0d5073243a1290058817c689c047b16bb117b1011c8fb96e9f528346"
+            "scope": "Prepared publication records the exact committed Cars subtree, digest and fast-forward mirror; immutable identity is independently checked by approveCarsTemplate.",
+            "evidence": [
+              {
+                "path": "templates/app/runtime/ui-audit-20261010/prepared-publication.json",
+                "sha256": "061d480ca65d2b82a168f792b5836a3c36eba6b431867a0eff7c0b5a3f0f2832"
+              },
+              {
+                "path": "docs/qa/app-ui-audit-publication-2026-10-10.md",
+                "sha256": "49f0f162bd3132b31ae84f013b9bba00c0f2c6d9746147767d183e482802cbb3"
+              }
+            ]
           },
           {
-            "name": "vercel-production-build",
+            "name": "recorded-integration-checks",
             "status": "passed",
-            "evidence": "docs/releases/final-polish-2026-09-30/app-acceptance.json",
-            "evidenceSha256": "09182ecd0d5073243a1290058817c689c047b16bb117b1011c8fb96e9f528346"
+            "scope": "Recorded lint, types, configuration, 135 unit tests, 36 journeys, eight focused final journeys and production build; no checks rerun by this reconciliation.",
+            "evidence": [
+              {
+                "path": "templates/app/runtime/ui-audit-20261010/checks-summary.json",
+                "sha256": "2ce579f792b2ffd9ccdff78dcfcd2ac1616c240ac29db882e2bbd188002bf9d6"
+              },
+              {
+                "path": "docs/qa/app-ui-audit-publication-2026-10-10.md",
+                "sha256": "49f0f162bd3132b31ae84f013b9bba00c0f2c6d9746147767d183e482802cbb3"
+              }
+            ]
           },
           {
-            "name": "public-en-bg-browser-acceptance",
+            "name": "recorded-publishing-quality-workflow",
             "status": "passed",
-            "evidence": "docs/releases/final-polish-2026-09-30/app-acceptance.json",
-            "evidenceSha256": "09182ecd0d5073243a1290058817c689c047b16bb117b1011c8fb96e9f528346"
+            "scope": "Passed installation, application checks, build, production dependency audit, browser and route checks as recorded by the publishing owner. Fresh gh query was unavailable because gh is unauthenticated.",
+            "workflow": "https://github.com/darkapoparka/cars-template-app/actions/runs/38015879393",
+            "evidence": [
+              {
+                "path": "docs/qa/app-ui-audit-publication-2026-10-10.md",
+                "sha256": "49f0f162bd3132b31ae84f013b9bba00c0f2c6d9746147767d183e482802cbb3"
+              }
+            ]
+          },
+          {
+            "name": "exact-source-ready-deployment",
+            "status": "passed",
+            "scope": "READY deployment from the mirror commit mapped to this exact Cars source; no dealer or Cloudflare compatibility claim.",
+            "evidence": [
+              {
+                "path": "templates/app/runtime/ui-audit-20261010/prepared-publication.json",
+                "sha256": "061d480ca65d2b82a168f792b5836a3c36eba6b431867a0eff7c0b5a3f0f2832"
+              },
+              {
+                "path": "templates/app/runtime/ui-audit-20261010/deployed-verification.json",
+                "sha256": "59167b58b49f4899133e2a3283816d10e2d4c325bd0346166a3a7038ca6ed8c3"
+              }
+            ]
+          },
+          {
+            "name": "standalone-hosted-mobile-desktop-journeys",
+            "status": "passed",
+            "scope": "18 passing EN/BG and alternate-layout journeys at 390/1440: navigation, filters, sorting/reload, empty states, collection return, saved cars and truthful enquiry drafts.",
+            "evidence": [
+              {
+                "path": "templates/app/runtime/ui-audit-20261010/hosted-journeys.json",
+                "sha256": "314abf34d0cd448aae8df219c4d20029e642a832b23344f3dfd268e34bd865af"
+              },
+              {
+                "path": "templates/app/runtime/ui-audit-20261010/hosted-checks-summary.json",
+                "sha256": "de0e018f7ec8ed2cbf2b37d204661bfc526d29b52d15d07500ecc25a95dce63f"
+              }
+            ]
+          },
+          {
+            "name": "focused-hosted-accessibility",
+            "status": "passed",
+            "scope": "15 actual route/viewport scans at 320/390/1440 with zero automated violations, page errors or overflow. Automated checks do not establish full manual accessibility conformance.",
+            "evidence": [
+              {
+                "path": "templates/app/runtime/ui-audit-20261010/hosted-accessibility.json",
+                "sha256": "2fc75f5efcb0c674f929ffaf95da1dda3af158965dfbbe9f03d1e4c734d68697"
+              },
+              {
+                "path": "templates/app/runtime/ui-audit-20261010/hosted-checks-summary.json",
+                "sha256": "de0e018f7ec8ed2cbf2b37d204661bfc526d29b52d15d07500ecc25a95dce63f"
+              }
+            ]
           }
         ],
         "standalone": {
-          "mobile": true,
-          "desktop": true,
-          "widths": [
-            320,
-            390,
-            1440
-          ]
+          "mobile": {
+            "verified": true,
+            "localJourneyWidths": [
+              320,
+              390
+            ],
+            "hostedJourneyWidths": [
+              390
+            ],
+            "hostedAccessibilityWidths": [
+              320,
+              390
+            ],
+            "locales": [
+              "en",
+              "bg"
+            ],
+            "recordedHostedJourneys": 9
+          },
+          "desktop": {
+            "verified": true,
+            "localJourneyWidths": [
+              1100,
+              1440
+            ],
+            "hostedJourneyWidths": [
+              1440
+            ],
+            "hostedAccessibilityWidths": [
+              1440
+            ],
+            "locales": [
+              "en",
+              "bg"
+            ],
+            "recordedHostedJourneys": 9
+          }
         }
       },
       "legacySource": {
