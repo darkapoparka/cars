@@ -27,7 +27,7 @@ Branding is unresearched for build in every pack: visually inspect the matching 
 
 Source: [dated public lead research](../uk-2026-10-10.json). Use the existing [workflow](../../docs/WORKFLOW.md), [guardrails](../../docs/LEAD-BUILD-GUARDRAILS.md) and [hosting decision](../../docs/HOSTING-AND-RELEASE-DECISION-2026-10-04.md), applying the explicit six-variant/Cloudflare request. Reconcile registry aliases/current client folders before copying. Unknown private contact history stays unknown.
 
-Source SHA-256: 05d34f35ad699beb6676de775a50e8659ae23771e73d0aa25c9c94a646f348b2. Preparation validation covers lead count, unique IDs, six families, GB/en-GB/GBP contracts, source URLs, empty stock and false application QA flags. This is document/data validation only.
+Source SHA-256 of the canonical UTF-8/LF research snapshot: 0b8a38395e80f44f70035ba3cd538e44554a917056fd3fde9b4efbc31a999c92. Preparation validation covers lead count, unique IDs, six families, GB/en-GB/GBP contracts, source URLs, empty stock and false application QA flags. This is document/data validation only.
 
 Each locale-config.json is publisher configuration: schema version 1, dealerId equal to the facts slug, English default, complete EN/BG catalogs, dealer country GB and inventory currency GBP. The current native six-design publisher requires both catalogs. This does not claim that the dealer offers Bulgarian-speaking service. Business facts languages remain [en], and their formatting locale remains en-GB. Visitor country detection does not change the dealership country or inventory currency.
 

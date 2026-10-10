@@ -104,5 +104,7 @@
     "boardExportBrowserVerification": "Static wrapper/link checks passed; no browser inspection of the standalone export was performed."
   },
   "rawLogSha256": "2e4d7318123ddb1856800d5104eb1313d334cd388c3db6566c75b17844654187",
-  "integrationState": "Scoped UK creation/profile, research, briefs and presenter preparation; earlier shared adapter/test drafts and the bounded Signature overlay remain with their release owner."
+  "integrationState": "Scoped UK creation/profile, research, briefs and presenter preparation; earlier shared adapter/test drafts and the bounded Signature overlay remain with their release owner.",
+  "sourceResearchSha256": "0b8a38395e80f44f70035ba3cd538e44554a917056fd3fde9b4efbc31a999c92",
+  "sourceResearchEncoding": "UTF-8/LF, matching committed blob"
 }
