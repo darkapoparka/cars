@@ -17,7 +17,7 @@ import {useHomeAlternative} from '@/lib/home-alternative';
 import {useVehicleReturn} from '@/components/useInventoryHistory';
 import {BrandRow, ShowroomPromotion} from '@/components/ReferenceUI';
 import {useRecentVehicles} from '@/components/useVehicleState';
-import {getVehicle, homeFeed, hotDeals, vehicles} from '@/lib/data';
+import {getVehicle, homeFeed, hotDeals} from '@/lib/data';
 import {media, tokens as $} from '@/app/tokens.stylex';
 import {ArrowRight} from 'lucide-react';
 import {assetPath} from '@/lib/paths';
@@ -63,10 +63,6 @@ export default function HomePage() {
       <div {...stylex.props(s.contents, alternative && s.hideAlternativePhone)}><BrandRow showTitle={false} /></div>
       <section aria-label={tx('Your showroom, your way')} {...stylex.props(s.offers, alternative && s.hideAlternativeOffers)}><ShowroomHighlights /></section>
       <section aria-label={tx('Available cars')}>
-        <div {...stylex.props(s.collectionHeading, s.inventoryHeading)}>
-          <h2 id="home-inventory-heading" {...stylex.props(s.heading, s.inventoryTitle)}>{tx('Available cars')}<span {...stylex.props(s.inventoryCount)}> · {vehicles.length}</span></h2>
-          <Link href="/cars" aria-label={tx('View all cars')} {...stylex.props(s.collectionLink, s.inventoryLink)}><span {...stylex.props(s.inventoryLinkSurface)}>{tx('View all')}<ArrowRight size={15} aria-hidden="true"/></span></Link>
-        </div>
         <div {...stylex.props(s.feed)}>{firstFeed.map(vehicle => <VehicleCard key={vehicle.slug} vehicle={vehicle} desktopTile showDiscount={false} />)}</div>
       </section>
       <div {...stylex.props(s.contents)}>{recent.length ? <section {...stylex.props(s.recent)}>
@@ -109,11 +105,6 @@ const s = stylex.create({
   recentRail: {display: 'flex', gap: 12, overflowX: 'auto', marginTop: 12, paddingBottom: 6, scrollbarWidth: 'none'},
   offers: {marginTop: {[media.mobile]: $.mobileBrandGap, default: 24}},
   feed: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', [media.desktop]: 'repeat(4,minmax(0,1fr))', default: 'repeat(2,minmax(0,1fr))'}, gap: {[media.mobile]: $.mobileSectionGap, default: 14}, marginTop: {[media.mobile]: $.mobileSectionGap, default: 14}},
-  inventoryHeading: {display: 'flex', marginTop: {[media.mobile]: 0, default: 16}},
-  inventoryTitle: {fontSize: {[media.mobile]: 16, default: 25}, fontWeight: 500},
-  inventoryCount: {display: {[media.mobile]: 'inline', default: 'none'}, color: $.muted, fontSize: 14, fontWeight: 400},
-  inventoryLink: {minHeight: 44, fontWeight: {[media.mobile]: 400, [media.desktop]: 400, default: 600}},
-  inventoryLinkSurface: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 4, minHeight: {[media.mobile]: 32, default: 'auto'}, paddingInline: {[media.mobile]: 12, default: 0}, borderRadius: {[media.mobile]: $.radiusPill, default: 0}, backgroundColor: {default: 'transparent', [media.mobile]: $.surfaceAlt, ':hover': {[media.mobile]: $.line}}},
   hotDeals: {marginTop: {[media.mobile]: 24, default: 26}, paddingTop: {[media.mobile]: 0, default: 18}, paddingBottom: {[media.mobile]: 0, default: 8},},
   mobileCollectionBanner: {display: {[media.mobile]: 'block', default: 'none'}, position: 'relative', height: 156, overflow: 'hidden', color: '#fff', borderRadius: 18, backgroundColor: '#242428'},
   collectionBannerImage: {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center'},

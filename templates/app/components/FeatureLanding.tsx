@@ -13,8 +13,9 @@ import LandingContentFrame, {landingContent} from '@/components/LandingContentFr
 import ServiceSearchField, {useServiceSearch, type ServiceSearchState} from '@/components/ServiceSearchField';
 import FeatureContent from '@/components/FeatureContent';
 import FinanceCalculatorLauncher, {type FinanceView} from '@/components/FinanceCalculatorLauncher';
-import FinanceQuoteHero, {type QuoteSelection} from '@/components/FinanceQuoteHero';
-import ImportCountryPicker from '@/components/ImportCountryPicker';
+import FinanceQuoteHero from '@/components/FinanceQuoteHero';
+import ImportCountryPicker, {ImportCountryFilters} from '@/components/ImportCountryPicker';
+import {ServiceHeroControls} from '@/components/ServiceCatalogue';
 import DealerEnquirySheet from '@/components/DealerEnquirySheet';
 import SellEnquirySheet, {type SellCarDetails, type SellIntent} from '@/components/SellEnquirySheet';
 import SellCarEntry from '@/components/SellCarEntry';
@@ -25,7 +26,7 @@ import {media, tokens as $} from '@/app/tokens.stylex';
 export type FeatureKind = 'sell' | 'finance' | 'service';
 const config = {
   sell: {mobileTitle: 'Sell your car.', title: 'Sell your car.', mobileCopy: 'Sell or part-exchange.'},
-  finance: {mobileTitle: 'Finance calculator', title: 'Finance calculator', mobileCopy: 'Monthly payment'},
+  finance: {mobileTitle: 'Finance calculator', title: 'Car finance.', mobileCopy: 'Monthly payment'},
   service: {mobileTitle: 'Car services.', title: 'Care for your car.', mobileCopy: 'Servicing and diagnostics.'},
 } as const;
 
@@ -47,8 +48,7 @@ function FeatureLandingContent({kind, serviceSearch}: {kind: FeatureKind; servic
   const current = config[kind];
   const [enquiryOpen, setEnquiryOpen] = useState(false);
   const [financeView, setFinanceView] = useState<FinanceView>(null);
-  const [quotePicker, setQuotePicker] = useState(false);
-  const [quoteSelection, setQuoteSelection] = useState<QuoteSelection>({car: null, custom: false});
+  const [importCountry, setImportCountry] = useState('all');
   const [sellIntent, setSellIntent] = useState<SellIntent | null>(null);
   const [sellCar, setSellCar] = useState<SellCarDetails>({make: '', model: '', year: '', mileage: '', notes: ''});
   function start(intent: SellIntent = 'sale') {
@@ -57,10 +57,10 @@ function FeatureLandingContent({kind, serviceSearch}: {kind: FeatureKind; servic
     router.push(`/${kind}/details`);
   }
   const desktopControl = kind === 'finance'
-    ? <FinanceQuoteHero selection={quoteSelection} pickerOpen={quotePicker && financeView === 'cars'} onChooseCar={() => {setQuotePicker(true); setFinanceView('cars');}}/>
+    ? <><FinanceQuoteHero pickerOpen={financeView !== null} onChooseCar={() => setFinanceView('cars')}/><ImportCountryFilters country={importCountry} onCountryChange={setImportCountry} hero/></>
     : kind === 'sell'
       ? <SellQuoteHero car={sellCar} onCarChange={setSellCar} onStart={() => start()} expanded={sellIntent !== null}/>
-      : serviceSearch ? <ServiceSearchField state={serviceSearch} onDark desktopHero/> : null;
+      : serviceSearch ? <><ServiceSearchField state={serviceSearch} onDark desktopHero/><ServiceHeroControls searchState={serviceSearch}/></> : null;
   return <div {...stylex.props(s.screen)}>
     {alternative ? <div {...stylex.props(s.alternativeHeader)}><PageHeader compact title={tx(current.mobileTitle).replace(/\.$/, '')} backHref="/services" backLabel="Back to services" action={<IconButton href="/saved" label={tx('Saved cars')} icon={Heart}/>}/></div> : null}
     <div {...stylex.props(s.discovery, alternative && s.alternativeDiscovery)}><DiscoveryHeader active={kind} hideMobileIdentity /></div>
@@ -69,7 +69,7 @@ function FeatureLandingContent({kind, serviceSearch}: {kind: FeatureKind; servic
     </DealerMobileBanner>
     <ShowroomBanner title={current.title} control={desktopControl}/>
     <LandingContentFrame><main data-landing-content {...stylex.props(landingContent.panel, s.content, alternative && s.alternativeContent)}>
-      {kind === 'finance' ? <><ImportCountryPicker/><FinanceCalculatorLauncher view={financeView} onViewChange={view => {setFinanceView(view); if (!view) setQuotePicker(false);}} backNavigation={alternative} onChooseCar={quotePicker ? car => setQuoteSelection({car, custom: !car}) : undefined}/></> : null}
+      {kind === 'finance' ? <><ImportCountryPicker country={importCountry} onCountryChange={setImportCountry}/><FinanceCalculatorLauncher view={financeView} onViewChange={setFinanceView} backNavigation={alternative}/></> : null}
       <FeatureContent kind={kind} onStart={start} serviceSearch={serviceSearch}/>
     </main></LandingContentFrame>
     <DealerEnquirySheet open={enquiryOpen} onClose={() => setEnquiryOpen(false)} />

@@ -13,6 +13,14 @@ const nextConfig = {
   devIndicators: false,
   // Serve retained images directly on the mounted dealer Services routes.
   images: {unoptimized: Boolean(process.env.NEXT_PUBLIC_BASE_PATH), remotePatterns},
+  webpack(config, {dev, isServer}) {
+    // Next 16.3.8's Babel client graph retains the unused DevTools package in production.
+    // Use Next's own non-browser overlay boundary; development keeps its actual tools.
+    if (!dev && !isServer) {
+      config.resolve.alias['next/dist/compiled/next-devtools'] = require.resolve('next/dist/next-devtools/dev-overlay.shim.js');
+    }
+    return config;
+  },
 };
 
 // Each isolated QA check has its own output directory and no warm-cache reuse.
@@ -22,9 +30,11 @@ const isolatedQaBuild = /(?:^|[\\/])(?:next-check|\.next-build[^\\/]*|\.next-qa[
 if (isolatedQaBuild) {
   nextConfig.experimental = { turbopackFileSystemCacheForBuild: false };
   nextConfig.turbopack = {};
-  nextConfig.webpack = (config, { dev }) => {
-    if (!dev) config.cache = false;
-    return config;
+  const configureWebpack = nextConfig.webpack;
+  nextConfig.webpack = (config, options) => {
+    const configured = configureWebpack(config, options);
+    if (!options.dev) configured.cache = false;
+    return configured;
   };
 }
 module.exports = nextConfig;

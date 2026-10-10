@@ -22,7 +22,6 @@ export function DealerEnquiryDraft({vehicleTitle, intent = 'enquiry'}: {vehicleT
   const whatsapp = dealer.whatsappUrl ? dealer.whatsappUrl + (dealer.whatsappUrl.includes('?') ? '&' : '?') + 'text=' + encodeURIComponent(message) : '';
   async function copyDraft() {try {await navigator.clipboard.writeText(message); setStatus(tx('Draft copied. Nothing has been sent.'));} catch {setStatus(tx('Select and copy the draft below.'));}}
   return <>
-      <p {...stylex.props(s.note)}>{tx('This preview prepares an enquiry only. No booking, purchase or message is submitted here.')}</p>
       <label htmlFor={messageId} {...stylex.props(s.label)}>{tx('Your enquiry draft')}</label>
       <textarea id={messageId} value={message} onChange={event => setMessage(event.target.value)} rows={5} {...stylex.props(s.textarea)}/>
       <div {...stylex.props(s.actions)}>
@@ -31,8 +30,8 @@ export function DealerEnquiryDraft({vehicleTitle, intent = 'enquiry'}: {vehicleT
         {whatsapp ? <a href={whatsapp} target="_blank" rel="noopener noreferrer" {...stylex.props(s.action)}><MessageCircle size={19}/>{tx('Open WhatsApp draft')}</a> : null}
         <button type="button" onClick={copyDraft} {...stylex.props(s.secondary)}><Copy size={18}/>{tx('Copy draft')}</button>
       </div>
-      {!dealer.phoneE164 && !mail && !whatsapp ? <p {...stylex.props(s.note)}>{tx('No verified contact destination is available for this preview.')}</p> : null}
-      <p role="status" {...stylex.props(s.note)}>{status || tx(intent === 'selling' || intent === 'part-exchange' || intent === 'importing' ? 'The dealer confirms the price and terms.' : 'Availability, prices and service terms must be confirmed directly with the dealer.')}</p>
+      <p {...stylex.props(s.note)}>{tx(!dealer.phoneE164 && !mail && !whatsapp ? 'Contact details are not available. Copy the draft to send it separately.' : 'Review the draft before sending it. Nothing is sent automatically.')}</p>
+      <p role="status" aria-live="polite" aria-atomic="true" {...stylex.props(Boolean(status) && s.note)}>{status}</p>
   </>;
 }
 function DealerEnquiryContent({open, onClose, vehicleTitle, intent = 'enquiry'}: {open: boolean; onClose: () => void; vehicleTitle?: string; intent?: DealerEnquiryIntent}) {

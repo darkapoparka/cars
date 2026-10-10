@@ -22,10 +22,10 @@ export default function ShowroomMenu({compact = false, languagePath = '/more', o
   return <>
     {showroom.menu.map((group, index) => <nav key={group.label} aria-labelledby={`${id}-group-${index}`} {...stylex.props(s.section, compact && s.compactSection)}>
       <h2 id={`${id}-group-${index}`} {...stylex.props(t.caption, s.sectionTitle, compact && s.compactTitle)}>{tx(group.label)}</h2>
-      <div {...stylex.props(s.list, compact && s.compactList)}>
-        {group.items.map(item => <MenuRow key={item.href} href={item.href} icon={item.icon} title={tx(item.label)} compact={compact} onNavigate={onNavigate}/>)}
-        {group.contacts && dealer.phoneE164 ? <MenuRow href={'tel:' + dealer.phoneE164} icon="phone" title={dealer.phoneDisplay || dealer.phoneE164} compact={compact} onNavigate={onNavigate}/> : null}
-        {group.contacts && dealer.email ? <MenuRow href={'mailto:' + dealer.email} icon="email" title={dealer.email} compact={compact} onNavigate={onNavigate}/> : null}
+      <div {...stylex.props(s.list, compact && s.compactList, alternative && s.alternativeList)}>
+        {group.items.map(item => <MenuRow key={item.href} href={item.href} icon={item.icon} title={tx(item.label)} compact={compact} alternative={alternative} onNavigate={onNavigate}/>)}
+        {group.contacts && dealer.phoneE164 ? <MenuRow href={'tel:' + dealer.phoneE164} icon="phone" title={dealer.phoneDisplay || dealer.phoneE164} compact={compact} alternative={alternative} onNavigate={onNavigate}/> : null}
+        {group.contacts && dealer.email ? <MenuRow href={'mailto:' + dealer.email} icon="email" title={dealer.email} compact={compact} alternative={alternative} onNavigate={onNavigate}/> : null}
       </div>
     </nav>)}
     {dealer.enabledLocales.length > 1 ? <footer data-menu-language {...stylex.props(compact ? s.compactFooter : s.languageFooter)}>
@@ -37,8 +37,8 @@ export default function ShowroomMenu({compact = false, languagePath = '/more', o
   </>;
 }
 
-function MenuRow({href, icon, title, compact, onNavigate}: {href: string; icon: ShowroomIconName; title: string; compact: boolean; onNavigate?: () => void}) {
-  return <Link href={href} onClick={onNavigate} {...stylex.props(t.input, s.row, compact && s.compactRow)}>
+function MenuRow({href, icon, title, compact, alternative, onNavigate}: {href: string; icon: ShowroomIconName; title: string; compact: boolean; alternative: boolean; onNavigate?: () => void}) {
+  return <Link href={href} onClick={onNavigate} {...stylex.props(t.input, s.row, compact && s.compactRow, alternative && s.alternativeRow)}>
     <span {...stylex.props(s.icon, compact && s.compactIcon)}><ShowroomIcon name={icon} size={compact ? 18 : 20}/></span>
     <span {...stylex.props(s.label)}>{title}</span>
     <ChevronRight size={compact ? 14 : 16} aria-hidden="true" {...stylex.props(s.chevron)}/>
@@ -49,6 +49,8 @@ const s = stylex.create({
   section: {marginBottom: $.mobileSectionGap},
   sectionTitle: {margin: 0, paddingBottom: 8, paddingInline: 2, color: $.muted},
   list: {display: {[media.mobile]: 'flex', default: 'block'}, flexDirection: 'column', gap: 0, padding: 0, backgroundColor: {[media.mobile]: $.surface, default: 'transparent'}, borderColor: {[media.mobile]: $.surfaceBorder, default: $.line}, borderStyle: 'solid', borderWidth: 1, borderRadius: $.radiusMd, overflow: 'hidden'},
+  alternativeList: {backgroundColor: $.surfaceAlt},
+  alternativeRow: {backgroundColor: {default: $.surfaceAlt, ':hover': $.line, ':active': $.line}},
   row: {display: 'grid', gridTemplateColumns: '32px minmax(0,1fr) 16px', alignItems: 'center', gap: 12, minHeight: 56, paddingBlock: 10, paddingInline: 12, color: $.ink, textAlign: 'left',
     borderRadius: 0, borderBottomWidth: {[media.mobile]: {default: 1, ':last-child': 0}, default: 0}, borderBottomStyle: 'solid', borderBottomColor: $.line, backgroundColor: {default: $.surface, ':hover': $.surfaceAlt, ':active': {default: $.rail, [media.mobile]: $.line}},
     outlineOffset: -3, outlineWidth: 2, outlineStyle: {default: 'none', ':focus-visible': 'solid'}, outlineColor: $.ink},

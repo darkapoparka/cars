@@ -11,11 +11,29 @@ import {serviceOptions, type ServiceOption} from '@/lib/service-catalogue';
 import {media, tokens as $} from '@/app/tokens.stylex';
 import {typography as t} from '@/app/typography.stylex';
 import FilterPill from '@/components/FilterPill';
+import {desktopHero} from '@/components/desktop-hero.stylex';
+
+function ServiceCategories({searchState, onDark = false}: {searchState: ServiceSearchState; onDark?: boolean}) {
+  const tx = useCopy();
+  const {query, category, update} = searchState;
+  return <div role="group" aria-label={tx('Service categories')} {...stylex.props(s.pills)}>
+    {[{id: 'all', label: 'All'}, ...serviceOptions].map(option => <FilterPill key={option.id} label={option.label} tone="soft" onDark={onDark} pressed={category === option.id} onClick={() => update(query, option.id)}/>)}
+  </div>;
+}
+
+export function ServiceHeroControls({searchState}: {searchState: ServiceSearchState}) {
+  const tx = useCopy();
+  const [open, setOpen] = useState(false);
+  return <>
+    <div {...stylex.props(desktopHero.secondary)}><ServiceCategories searchState={searchState} onDark/><button type="button" aria-haspopup="dialog" aria-expanded={open} onClick={() => setOpen(true)} {...stylex.props(desktopHero.action)}><span {...stylex.props(desktopHero.actionSurface)}>{tx('Enquire')}<ArrowRight size={16} aria-hidden="true"/></span></button></div>
+    {open ? <ServiceDetailsSheet service={null} initialView="enquiry" onClose={() => setOpen(false)}/> : null}
+  </>;
+}
 
 export default function ServiceCatalogue({searchState}: {searchState: ServiceSearchState}) {
   const tx = useCopy();
   const [selection, setSelection] = useState<{service: ServiceOption | null; initialView: 'details' | 'enquiry'} | null>(null);
-  const {query, category, update, clear} = searchState;
+  const {query, category, clear} = searchState;
   const search = query.trim().toLocaleLowerCase();
   const visible = serviceOptions.filter(option => {
     const terms = [option.name, option.label, option.copy, ...option.checks];
@@ -25,16 +43,12 @@ export default function ServiceCatalogue({searchState}: {searchState: ServiceSea
 
   return <section aria-label={tx('Service options')} {...stylex.props(s.catalogue)}>
     <div {...stylex.props(s.toolbar)}>
-    <div role="group" aria-label={tx('Service categories')} {...stylex.props(s.pills)}>
-      {[{id: 'all', label: 'All'}, ...serviceOptions].map(option => <FilterPill key={option.id} label={option.label} tone="soft" pressed={category === option.id} onClick={() => update(query, option.id)}/>)}
-    </div>
-    <button type="button" aria-haspopup="dialog" onClick={() => setSelection({service: null, initialView: 'enquiry'})} {...stylex.props(s.request, t.caption)}>{tx('Enquire')}<ArrowRight size={16} aria-hidden="true"/></button>
+    <ServiceCategories searchState={searchState}/>
     </div>
     <span role="status" {...stylex.props(s.srOnly)}>{visible.length} {tx('Service options')}</span>
     {visible.length > 0 ? <div {...stylex.props(s.cards)}>{visible.map(option => <button key={option.id} type="button" aria-haspopup="dialog" onClick={() => setSelection({service: option, initialView: 'details'})} aria-label={`${tx('Choose a service')}: ${tx(option.label)}`} data-service-card={option.id} {...stylex.props(s.card, s.compactCard)}>
       <div {...stylex.props(s.artwork, s.compactArtwork)}>
         <Image src={option.image} width={1200} height={800} sizes="(min-width: 1240px) 284px, (min-width: 1100px) 25vw, (max-width: 767px) 88px, 50vw" alt="" {...stylex.props(s.image, s.compactImage)}/>
-        {option.demo ? <span {...stylex.props(s.demo, s.compactDemo)}>{tx('Demo service')}</span> : null}
       </div>
       <div {...stylex.props(s.cardBody, s.compactBody)}>
         <div {...stylex.props(s.cardHeading, s.compactHeading)}><h2 {...stylex.props(t.heading, s.title, s.compactTitle)}>{tx(option.label)}</h2><span {...stylex.props(s.arrow, s.compactArrow)}><ArrowRight size={20} aria-hidden="true"/></span></div>
@@ -47,14 +61,12 @@ export default function ServiceCatalogue({searchState}: {searchState: ServiceSea
 
 const s = stylex.create({
   catalogue: {marginTop: {[media.mobile]: $.mobilePillGap, [media.desktop]: 12, default: 24}},
-  toolbar: {display: {[media.desktop]: 'flex', default: 'contents'}, alignItems: 'center', justifyContent: 'space-between', gap: 16},
-  request: {display: {[media.desktop]: 'inline-flex', default: 'none'}, alignItems: 'center', justifyContent: 'center', flexShrink: 0, gap: 8, minHeight: 44, paddingBlock: 0, paddingInline: 14, color: $.ink, fontFamily: $.fontSans, borderWidth: 0, borderRadius: 999, backgroundColor: {default: $.surfaceAlt, ':hover': '#ededf0'}, cursor: 'pointer'},
+  toolbar: {display: {[media.desktop]: 'none', default: 'contents'}, alignItems: 'center', justifyContent: 'space-between', gap: 16},
   pills: {display: 'flex', minWidth: 0, gap: 8, overflowX: 'auto', marginTop: {[media.mobile]: 0, [media.desktop]: 0, default: 10}, paddingBlock: {[media.mobile]: 0, [media.desktop]: 0, default: 3}, scrollbarWidth: 'none'},
   cards: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', [media.desktop]: 'repeat(4,minmax(0,1fr))', default: 'repeat(2,minmax(0,1fr))'}, gap: {[media.mobile]: $.mobileSectionGap, [media.desktop]: 16, default: 20}, marginTop: {[media.mobile]: $.mobilePillGap, [media.desktop]: 12, default: 14}},
   card: {display: 'flex', flexDirection: 'column', alignItems: 'stretch', minWidth: 0, padding: 0, overflow: 'hidden', color: $.ink, fontFamily: $.fontSans, textAlign: 'left', borderWidth: 0, borderRadius: {[media.desktop]: 14, default: 20}, backgroundColor: {default: $.surfaceAlt, ':hover': '#ededf0'}, outline: {default: 'none', ':focus-visible': '2px solid #242428'}, outlineOffset: 3, cursor: 'pointer'},
   image: {display: 'block', width: '100%', height: {[media.desktop]: 120, default: 'auto'}, aspectRatio: {[media.desktop]: 'auto', default: '2 / 1'}, objectFit: 'cover', objectPosition: 'center 55%'},
   artwork: {position: 'relative'},
-  demo: {position: 'absolute', top: 12, left: 12, padding: '4px 8px', borderRadius: 6, backgroundColor: '#fff', color: $.ink, fontSize: 12, lineHeight: '18px', fontWeight: 500},
   cardBody: {padding: {[media.mobile]: 18, [media.desktop]: 16, default: 24}},
   cardHeading: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: {[media.desktop]: 8, default: 12}},
   title: {minWidth: 0, margin: 0, overflowWrap: 'anywhere', fontSize: {[media.mobile]: 24, [media.desktop]: 20, default: 28}, lineHeight: {[media.mobile]: '28px', [media.desktop]: '26px', default: '34px'}},
@@ -65,7 +77,6 @@ const s = stylex.create({
   compactCard: {flexDirection: {[media.mobile]: 'row', default: 'column'}, alignItems: {[media.mobile]: 'center', default: 'stretch'}, gap: {[media.mobile]: 12, default: 0}, padding: {[media.mobile]: 12, default: 0}},
   compactArtwork: {flexShrink: 0, width: {[media.mobile]: 88, default: 'auto'}, height: {[media.mobile]: 88, default: 'auto'}, overflow: {[media.mobile]: 'hidden', default: 'visible'}, borderRadius: {[media.mobile]: 14, default: 0}},
   compactImage: {height: {[media.mobile]: '100%', [media.desktop]: 120, default: 'auto'}, aspectRatio: {[media.mobile]: '1 / 1', [media.desktop]: 'auto', default: '2 / 1'}},
-  compactDemo: {top: {[media.mobile]: 'auto', default: 12}, bottom: {[media.mobile]: 4, default: 'auto'}, left: {[media.mobile]: 4, default: 12}, right: {[media.mobile]: 4, default: 'auto'}, padding: {[media.mobile]: '2px 4px', default: '4px 8px'}, fontSize: {[media.mobile]: 10, default: 12}, lineHeight: {[media.mobile]: '14px', default: '18px'}, textAlign: {[media.mobile]: 'center', default: 'left'}},
   compactBody: {flexGrow: {[media.mobile]: 1, default: 0}, minWidth: 0, padding: {[media.mobile]: 0, [media.desktop]: 16, default: 24}},
   compactHeading: {gap: {[media.mobile]: 6, [media.desktop]: 8, default: 12}},
   compactTitle: {fontSize: {[media.mobile]: 18, [media.desktop]: 20, default: 28}, fontWeight: {[media.mobile]: 500, default: 600}, lineHeight: {[media.mobile]: '24px', [media.desktop]: '26px', default: '34px'}},

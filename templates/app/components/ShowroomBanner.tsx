@@ -20,7 +20,7 @@ export default function ShowroomBanner({title, description, control, compact = f
   const tx = useCopy();
 
   return <div {...stylex.props(s.frame)}>
-    <section data-showroom-banner {...stylex.props(s.banner, compact && s.compactBanner)}>
+    <section data-showroom-banner aria-label={tx(title)} {...stylex.props(s.banner, compact && s.compactBanner)}>
       <div aria-hidden="true" {...stylex.props(s.backdrop(`url("${assetPath(showroom.desktopHeroArtwork)}")`))}/>
       <div aria-hidden="true" {...stylex.props(s.shade)}/>
       <div {...stylex.props(s.content, desktopHero.container)}>

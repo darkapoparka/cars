@@ -1,7 +1,7 @@
 'use client';
 
 import * as stylex from '@stylexjs/stylex';
-import {useRef, useState} from 'react';
+import {useId, useRef, useState} from 'react';
 import {ArrowRight, Heart, MapPin, MessageSquareText, Phone, type LucideIcon} from 'lucide-react';
 import Link from '@/components/AppLink';
 import Image from '@/components/AppImage';
@@ -72,6 +72,7 @@ function HeaderActionIcon({icon: Icon, onDark}: {icon: LucideIcon; onDark: boole
 
 export function MobileAlternativeHero() {
   const tx = useCopy();
+  const headingId = useId();
   const promotionRail = useRef<HTMLDivElement>(null);
   const [activePromotion, setActivePromotion] = useState(0);
   function selectPromotion(index: number) {
@@ -87,7 +88,8 @@ export function MobileAlternativeHero() {
     const nearest = cards.reduce((current, card, index) => Math.abs(card.offsetLeft - 12 - rail.scrollLeft) < Math.abs(cards[current].offsetLeft - 12 - rail.scrollLeft) ? index : current, 0);
     setActivePromotion(nearest);
   }
-  return <div data-alternative-home-hero {...stylex.props(s.phoneOnly)}>
+  return <section data-alternative-home-hero aria-labelledby={headingId} {...stylex.props(s.phoneOnly)}>
+    <h1 id={headingId} className="visually-hidden">{tx('Home')}</h1>
     <ShowroomBannerFrame inline>
       <section {...stylex.props(s.hero)}>
         <div {...stylex.props(s.heroControls)}>
@@ -106,7 +108,7 @@ export function MobileAlternativeHero() {
         <div data-alternative-promotion-pages aria-label={tx('Choose a promotion')} {...stylex.props(s.promotionPages)}>{homePromotions.map((promotion, index) => <button key={promotion.href} type="button" aria-label={`${index + 1}: ${tx(promotion.title).replace(/\.$/, '')}`} aria-current={activePromotion === index ? 'true' : undefined} onClick={() => selectPromotion(index)} {...stylex.props(s.promotionPage)}><span aria-hidden="true" {...stylex.props(s.promotionDot, activePromotion === index && s.promotionDotActive)}/></button>)}</div>
       </section>
     </ShowroomBannerFrame>
-  </div>;
+  </section>;
 }
 
 export function MobileAlternativeDiscovery() {

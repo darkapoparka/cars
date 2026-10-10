@@ -7,13 +7,16 @@ import * as stylex from '@stylexjs/stylex';
 import {Heart, Phone} from 'lucide-react';
 import DealerBrand from '@/components/DealerBrand';
 import DesktopHeaderMenu from '@/components/DesktopHeaderMenu';
-import {MobileAlternativeDock, MobileAlternativeHeader} from '@/components/MobileHomeAlternative';
+import dynamic from 'next/dynamic';
 import {HomeAlternativeProvider, isHomeAlternative, primaryHomePath} from '@/lib/home-alternative';
 import ShowroomIcon from '@/components/ShowroomIcon';
 import {compactDock} from '@/components/dock.stylex';
 import {showroom} from '@/lib/showroom';
 import {dealer} from '@/lib/dealer-config';
 import {media, tokens as $} from '@/app/tokens.stylex';
+
+const MobileAlternativeHeader = dynamic(() => import('@/components/MobileHomeAlternative').then(module => module.MobileAlternativeHeader));
+const MobileAlternativeDock = dynamic(() => import('@/components/MobileHomeAlternative').then(module => module.MobileAlternativeDock));
 
 const desktopJourneys = [...showroom.services, {key: 'about', label: 'About us', href: '/stores'}];
 
@@ -36,12 +39,12 @@ export default function AppShell({children}: {children:ReactNode}){
     <a href="#app-content" onClick={skipNavigation} {...stylex.props(s.skip)}>{tx('Skip to content')}</a>
     <div data-desktop-shell {...stylex.props(s.pageShell)}>
     <header data-desktop-header data-header-tone="light" {...stylex.props(s.desktopHeader)}><div {...stylex.props(s.headerInner)}>
-      <Link href="/" aria-label={tx(`${showroom.name} home`)} {...stylex.props(s.wordmark)}><DealerBrand/></Link>
+      <Link href="/" aria-label={`${showroom.name} · ${tx('Home')}`} {...stylex.props(s.wordmark)}><DealerBrand/></Link>
       <nav data-desktop-journeys aria-label={tx('Main navigation')} {...stylex.props(s.journeys)}>{desktopJourneys.map(item=>{
         const active=item.key==='buy'?pathname==='/'||['/cars','/saved','/search','/luxe'].some(route=>pathname===route||pathname.startsWith(route+'/')):pathname===item.href||pathname.startsWith(item.href+'/')||item.key==='service'&&pathname==='/services';
         return <Link key={item.key} href={item.href} aria-current={active?'page':undefined} {...stylex.props(s.journey)}><span {...stylex.props(s.journeyLabel,active&&s.journeyActive)}>{tx(item.key==='finance'?'Leasing':item.label)}</span></Link>;
       })}</nav>
-      <nav data-desktop-tools aria-label={tx("Primary navigation")} {...stylex.props(s.actions)}>
+      <nav data-desktop-tools aria-label={tx('Header actions')} {...stylex.props(s.actions)}>
         <Link href="/saved" aria-label={tx("Saved cars")} title={tx("Saved cars")} {...stylex.props(s.iconButton)}><Heart size={21} aria-hidden="true"/></Link>
         {dealer.phoneE164 ? <a href={`tel:${dealer.phoneE164}`} aria-label={`${tx('Call')} · ${dealer.phoneDisplay || dealer.phoneE164}`} title={dealer.phoneDisplay || dealer.phoneE164} {...stylex.props(s.iconButton)}><Phone size={20} aria-hidden="true"/></a> : null}
         <DesktopHeaderMenu key={currentPath}/>

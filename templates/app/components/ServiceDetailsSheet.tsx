@@ -46,7 +46,7 @@ export default function ServiceDetailsSheet({service, initialView = 'details', o
       </header>
       <div ref={body} {...stylex.props(s.body)}>
         {view === 'details' && service ? <>
-          <div {...stylex.props(s.media)}><Image src={service.image} width={1200} height={800} sizes="(max-width: 767px) calc(100vw - 40px), 512px" alt="" priority {...stylex.props(s.image)}/>{service.demo ? <span {...stylex.props(s.demo)}>{tx('Demo service')}</span> : null}</div>
+          <div {...stylex.props(s.media)}><Image src={service.image} width={1200} height={800} sizes="(max-width: 767px) calc(100vw - 40px), 512px" alt="" loading="eager" {...stylex.props(s.image)}/></div>
           <p {...stylex.props(s.copy)}>{tx(service.copy)}</p>
           <h3 {...stylex.props(s.sectionTitle)}>{tx('What this service covers')}</h3>
           <ul {...stylex.props(s.checks)}>{service.checks.map(check => <li key={check} {...stylex.props(s.check)}><Check size={18} strokeWidth={1.8} aria-hidden="true"/>{tx(check)}</li>)}</ul>
@@ -78,7 +78,6 @@ const s = stylex.create({
   body: {minHeight: 0, overflowY: 'auto', overscrollBehaviorY: 'contain', padding: '0 20px 20px'},
   media: {position: 'relative', overflow: 'hidden', borderRadius: 16},
   image: {display: 'block', width: '100%', height: 'auto', aspectRatio: '2 / 1', objectFit: 'cover', objectPosition: 'center 55%'},
-  demo: {position: 'absolute', top: 10, left: 10, padding: '4px 8px', fontSize: 12, lineHeight: '18px', borderRadius: 6, backgroundColor: $.surface},
   copy: {marginTop: 16, color: $.muted, fontSize: 15, lineHeight: '23px'},
   sectionTitle: {margin: '20px 0 10px', fontSize: 15, fontWeight: 500, lineHeight: '22px'},
   checks: {display: 'grid', gap: 10, margin: 0, padding: 0, listStyle: 'none'},

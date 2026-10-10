@@ -40,7 +40,8 @@ function ServiceTabArtwork({image, mobileImage, sell}: {image: string; mobileIma
 export function BrandEmblem({make,plain=false}: {make: string;plain?: boolean}) {
   const artwork = brandLogo(make);
   const framed = artwork?.presentation === 'framed' && !(plain && artwork.plainSymbolViewBox);
-  const logo = framed ? <img data-brand-logo src={assetPath(artwork.src)} width={72} height={72} alt="" {...stylex.props(s.brandImageFramed)}/> : artwork ? <svg data-brand-logo viewBox={plain ? artwork.plainSymbolViewBox ?? artwork.symbolViewBox : artwork.symbolViewBox} aria-hidden="true" focusable="false" {...stylex.props(s.brandImage, artwork.wide && s.brandImageWide, artwork.compact && s.brandImageCompact, plain && s.brandImagePlain, plain && artwork.compact && s.brandImagePlainCompact)}><image href={assetPath(artwork.src)} width={artwork.sourceSize?.[0]} height={artwork.sourceSize?.[1]}/></svg> : <span {...stylex.props(s.brandName)}>{make}</span>;
+  const image = artwork ? getImageProps({src: assetPath(artwork.src), width: 72, height: 72, alt: ''}).props : null;
+  const logo = framed ? <img data-brand-logo {...image} alt="" {...stylex.props(s.brandImageFramed)}/> : artwork ? <svg data-brand-logo viewBox={plain ? artwork.plainSymbolViewBox ?? artwork.symbolViewBox : artwork.symbolViewBox} aria-hidden="true" focusable="false" {...stylex.props(s.brandImage, artwork.wide && s.brandImageWide, artwork.compact && s.brandImageCompact, plain && s.brandImagePlain, plain && artwork.compact && s.brandImagePlainCompact)}><image href={image?.src} width={artwork.sourceSize?.[0]} height={artwork.sourceSize?.[1]}/></svg> : <span {...stylex.props(s.brandName)}>{make}</span>;
   return <span aria-hidden="true" {...stylex.props(s.brandIcon, artwork?.presentation === 'framed' && s.brandIconFramed, plain && s.brandIconPlain)}>{logo}</span>;
 }
 

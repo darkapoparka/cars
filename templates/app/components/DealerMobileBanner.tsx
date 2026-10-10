@@ -1,6 +1,6 @@
 'use client';
 
-import type {ReactNode} from 'react';
+import {useId, type ReactNode} from 'react';
 import {ArrowRight} from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import DealerBrand from '@/components/DealerBrand';
@@ -13,11 +13,12 @@ import {media, tokens as $} from '@/app/tokens.stylex';
 /** Phone heroes use the soft page surface; wider heroes retain the satin backdrop. */
 export default function DealerMobileBanner({title, description, secondary, children, mobileCard = false, controlOnly = false}: {title?: string; description?: string; secondary?: ReactNode; children: ReactNode; mobileCard?: boolean; controlOnly?: boolean}) {
   const tx = useCopy();
+  const titleId = useId();
   return <div {...stylex.props(s.mobileOnly)}><ShowroomBannerFrame inline mobileCard={mobileCard && !controlOnly}>
-    <section data-dealer-mobile-banner {...stylex.props(s.panel, controlOnly && s.plainPanel)}>
+    <section data-dealer-mobile-banner aria-labelledby={titleId} {...stylex.props(s.panel, controlOnly && s.plainPanel)}>
       <img src={assetPath('/showroom/black/dealer-satin-v1.webp')} alt="" aria-hidden="true" width={1536} height={512} {...stylex.props(s.backdrop, controlOnly && s.compactBackdrop)}/>
       <div {...stylex.props(s.identity, controlOnly && s.compactIdentity)}>
-        {title ? <><h1 {...stylex.props(s.title)}>{tx(title)}</h1>{description ? <p {...stylex.props(s.description)}>{tx(description)}</p> : null}</> : <h1 {...stylex.props(s.brand)}><DealerBrand hero onDark mobileOnLight/></h1>}
+        {title ? <><h1 id={titleId} {...stylex.props(s.title)}>{tx(title)}</h1>{description ? <p {...stylex.props(s.description)}>{tx(description)}</p> : null}</> : <h1 id={titleId} {...stylex.props(s.brand)}><DealerBrand hero onDark mobileOnLight/></h1>}
         {secondary}
       </div>
       <div {...stylex.props(s.control, controlOnly && s.compactControl)}>{children}</div>

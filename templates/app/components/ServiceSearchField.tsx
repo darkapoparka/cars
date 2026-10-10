@@ -39,7 +39,7 @@ export type ServiceSearchState = ReturnType<typeof useServiceSearch>;
 export default function ServiceSearchField({state, onDark = false, plainOnMobile = false, desktopHero = false}: {state: ServiceSearchState; onDark?: boolean; plainOnMobile?: boolean; desktopHero?: boolean}) {
   const tx = useCopy();
   return <div role="search">
-    <div data-search-field {...stylex.props(searchField.field, s.search, onDark && s.onDark, plainOnMobile && s.plainMobileSearch, desktopHero && hero.bar)}>
+    <div data-search-field {...stylex.props(searchField.field, s.search, onDark && s.onDark, plainOnMobile && s.plainMobileSearch, desktopHero && hero.bar, desktopHero && hero.singleFieldBar)}>
       <Search aria-hidden="true" {...stylex.props(searchField.icon, desktopHero && s.heroIcon)}/>
       <input ref={desktopHero ? state.desktopInput : onDark ? state.mobileInput : state.desktopInput} data-search-input type="search" aria-label={tx('Search services')} placeholder={tx('Search services')} value={state.query} onChange={event => state.update(event.target.value, state.category)} {...stylex.props(searchField.input, s.input, onDark && s.compactInput, desktopHero && hero.cell)}/>
       {state.query ? <button type="button" aria-label={tx('Clear search')} onClick={() => state.clear()} {...stylex.props(searchField.clear, s.clear, onDark && s.compactClear, desktopHero && s.heroClear)}><X size={18} aria-hidden="true"/></button> : null}

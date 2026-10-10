@@ -52,7 +52,7 @@ test('saved vehicles survive reload and enquiry actions remain drafts', async ({
   await page.getByRole('button', {name: 'Arrange a viewing', exact: true}).first().click();
   await page.getByRole('button', {name: /Request a viewing/}).click();
   await expect(page.getByRole('dialog')).toBeVisible();
-  await expect(page.getByRole('dialog')).toContainText(/No booking, purchase or message is submitted here/);
+  await expect(page.getByRole('dialog')).toContainText(/Copy the draft to send it separately|Nothing is sent automatically/);
   await expect(page.getByRole('textbox', {name: 'Your enquiry draft'})).toBeVisible();
   await dismissDialog(page);
 });

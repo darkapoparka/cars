@@ -2,7 +2,7 @@
 import {displayMake} from '@/lib/inventory-labels';
 import {hasPublishedMileage, hasPublishedMonthlyPayment, vehicleDiscount} from '@/lib/vehicle-values';
 import {memo, useEffect, useRef, useState} from 'react';
-import {assetPath} from '@/lib/paths';
+import Image from '@/components/AppImage';
 import {useCopy} from '@/lib/locale';
 import Link from '@/components/AppLink';
 import * as stylex from '@stylexjs/stylex';
@@ -23,8 +23,9 @@ const factKeys: Record<string, string> = {
 function factOverflow(element: HTMLElement) {
   return (element.scrollLeft > 1 ? 1 : 0) | (element.scrollLeft + element.clientWidth < element.scrollWidth - 1 ? 2 : 0);
 }
-function VehicleCard({vehicle, showDiscount = false, desktopTile = false, finance, importListing}: {vehicle: Vehicle; showDiscount?: boolean; desktopTile?: boolean; finance?: {monthly: number; onCalculate: () => void}; importListing?: {country: string; onEnquire: () => void}}) {
+function VehicleCard({vehicle, showDiscount = false, desktopTile = false, imagePriority = false, headingLevel = 3, finance, importListing}: {vehicle: Vehicle; showDiscount?: boolean; desktopTile?: boolean; imagePriority?: boolean; headingLevel?: 2 | 3; finance?: {monthly: number; onCalculate: () => void}; importListing?: {country: string; onEnquire: () => void}}) {
   const tx = useCopy();
+  const Heading = headingLevel === 2 ? 'h2' : 'h3';
   const factRow = useRef<HTMLDivElement>(null);
   const [overflow, setOverflow] = useState(0);
   useEffect(() => {
@@ -48,13 +49,13 @@ function VehicleCard({vehicle, showDiscount = false, desktopTile = false, financ
     vehicle.highlights[0] || (vehicle.fuel !== 'Not published' ? vehicle.fuel : vehicle.body)].filter(Boolean);
   const importAction = `${tx('Import enquiry')}: ${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}, ${importListing?.country || ''}`;
   const photo = <>
-    <img src={assetPath(vehicle.image)} alt={vehicle.imagePlaceholder ? tx('Photo unavailable') : tx(`${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}`)} loading="lazy" width={400} height={225} {...stylex.props(s.image, vehicle.imagePlaceholder && s.placeholderImage)} />
+    <Image src={vehicle.image} alt={vehicle.imagePlaceholder ? tx('Photo unavailable') : tx(`${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}`)} fill sizes={desktopTile ? '(max-width: 767px) 44vw, (max-width: 1099px) 25vw, (max-width: 1399px) 28vw, 320px' : '(max-width: 767px) 44vw, 240px'} loading={imagePriority ? 'eager' : 'lazy'} fetchPriority={imagePriority ? 'high' : undefined} {...stylex.props(s.image, vehicle.imagePlaceholder && s.placeholderImage)} />
     {vehicle.imagePlaceholder ? <span {...stylex.props(s.placeholderLabel)}>{tx('Photo unavailable')}</span> : null}
     {importListing ? <span data-import-origin {...stylex.props(s.originBadge)}><Globe2 size={13} aria-hidden="true"/>{importListing.country}</span> : badge ? <span {...stylex.props(s.rate, /coming/i.test(badge) && s.coming)}>{tx(badge)}</span> : null}
   </>;
   const details = <>
     <p data-vehicle-make {...stylex.props(s.make, desktopTile && s.tileText, importListing && s.importText)}>{tx(displayMake(vehicle.make))}</p>
-    <h3 title={`${tx(vehicle.year)} ${tx(vehicle.model)}`} {...stylex.props(s.title, desktopTile && s.tileTitle, importListing && s.importText)}>{tx(vehicle.year)} {tx(vehicle.model)}</h3>
+    <Heading title={`${tx(vehicle.year)} ${tx(vehicle.model)}`} {...stylex.props(s.title, desktopTile && s.tileTitle, importListing && s.importText)}>{tx(vehicle.year)} {tx(vehicle.model)}</Heading>
     {vehicle.trim ? <p {...stylex.props(s.trim)}>{tx(vehicle.trim)}</p> : null}
     <div {...stylex.props(s.priceRow)}><strong {...stylex.props(s.price, vehicle.priceOnRequest && s.priceOnRequest)}>{vehicle.priceOnRequest ? tx('Price on request') : <><CurrencyLabel size={18} />{tx(formatPrice(vehicle.price))}</>}</strong>{showDiscount && discount > 0 ? <span {...stylex.props(s.discount)}>{tx(formatPrice(discount))} {tx(" OFF")}</span> : null}</div>
     {!finance && hasPublishedMonthlyPayment(vehicle) ? <p {...stylex.props(s.monthly)}><span {...stylex.props(s.monthlyPrice)}><CurrencyLabel size={11} />{tx(formatPrice(vehicle.monthly))}{tx("/mo*")}</span><span {...stylex.props(s.monthlyNote)}>{tx("est.")}</span></p> : null}
