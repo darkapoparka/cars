@@ -292,5 +292,152 @@
     "identity": false,
     "contactPath": false
   },
-  "readyToPublish": false
+  "readyToPublish": false,
+  "repairs": [
+    {
+      "id": "gb-modern-unpublished-transmission-v1",
+      "at": "2026-10-10T10:52:45.235Z",
+      "workflowCommit": "492f7ffe0873a7607dbf5c35d12798a53879b71b",
+      "previousSourceCommit": "fabcc0704a8eea8646eee254af41f03947ce674c",
+      "reason": "One sourced listing did not publish transmission; Modern must display Not published rather than an invented gearbox.",
+      "listingId": "860026521888",
+      "field": "transmission",
+      "before": "semi_automatic",
+      "after": "unknown",
+      "changedFiles": [
+        {
+          "path": "localization/adoption.json",
+          "before": "7588d7b6e5378a6cfeb7a32a3d774b156223563906e71a47e54dcfdfede34b2e",
+          "after": "1fcb72be398667748d0db5bdb7002106772716c244d88d3c441baf959d896879"
+        },
+        {
+          "path": "modern/apps/app/app/(authenticated)/sell/components/listing-form.tsx",
+          "before": "2c32f5e1b82adbe4f06f99d3e353630e935179626e6b29584881df76f9c592e4",
+          "after": "1bdbfc95293f03891679f54b4ab6cbec6c06a65fa2bc62cdfd294e32ae976e63"
+        },
+        {
+          "path": "modern/apps/web/app/[locale]/imports/components/external-import-listings.tsx",
+          "before": "96f8a8b0524de69e3693ed3303c0d8c6449439b8421b70c5b1858220d63a4613",
+          "after": "3cb0219d151b81099d828d674927b899a401866cf9bede1233d562cbb442f432"
+        },
+        {
+          "path": "modern/packages/marketplace-domain/taxonomy.ts",
+          "before": "74d5ea9118049719d06641e8cc8b458dce682cecd9d2e4fc19151900e97b2112",
+          "after": "6bcb0b456f8f10d418e5ec4027b358676d382df24e49aad77413b27446b73ac8"
+        },
+        {
+          "path": "modern/packages/marketplace-domain/testing/mock-data.ts",
+          "before": "740cf635e9ce06ee0fd84b50091034b9517f1e71b1c2b943bc2dd1774ef31fc6",
+          "after": "eac2f62abe3426f9f72788d8a30e839f90d2a3750914b7312bd44b487b0a28a6"
+        },
+        {
+          "path": "modern/packages/marketplace-domain/types.ts",
+          "before": "4a74f380f6a9668fd86a01f71a6123a93e7b7d9870642954f451ff7032d5b307",
+          "after": "be34942bb7fed58443504fc6a84a35a8db0b7de689a548f67a426a73bb860659"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/components/listing-specs.tsx",
+          "before": "dc6f102df331bd60000154b9ffd255fdf9c6d116a415c975fa344d5f62ae1ac9",
+          "after": "65529c2a77e2547aa40bded2ad341db96bc4f75b4624b0d6f7b2039a3ee3dcdd"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/components/marketplace-filter-options.tsx",
+          "before": "8a9870df2bf01b1a6b00c7864cea876e087037ccfd962b64a19fabb4c41dd321",
+          "after": "038f6ba4473580c1da0229065c8a19ff3624b51417d709abcd9a29e6e0e50dce"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/lib/marketplace-filter-config.ts",
+          "before": "ff21fd83f4c236bf041a38f85133bd969538685e378a1e8cb7a4e6e0f1739a8c",
+          "after": "9079b5efe4053d7b4967ae3039328b34d17d20faa0df3c015a9b6a94c7f1c71f"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/lib/vehicle-card-policy.ts",
+          "before": "9107421228ba46732c0a85d6680e72fa2c562c04ecb1a8ec18a929e039afc213",
+          "after": "bdd70294d5c95c26d5aeb408d4d8b96dc11f3b774a6267c39db0e6ca6db62d5e"
+        },
+        {
+          "path": "modern/packages/marketplace/filters.ts",
+          "before": "699b103ec3469b68afc808df0a8b86ca03ad8959838549f56929e52de39ce15d",
+          "after": "038d53c303d5d612c5e3c1a1f5056ba18b0d6f5629f1ebb16e0eb25a8d98b702"
+        },
+        {
+          "path": "modern/packages/marketplace/format.ts",
+          "before": "71ef906d18a69a079e9bbe0b2dcbe8842cda624b4ca8ab4668e2cdb7e618fa35",
+          "after": "2aa42df1d4b7f79b1f6e3d0b8de1e46e5dceef9bcc3367064ce7c501962e5819"
+        }
+      ],
+      "sourceBefore": {
+        "files": 12246,
+        "sha256": "85adbead6cf2a49575a49049d9d78c110941e4b2380ad2a807e25f586d01a84e"
+      },
+      "sourceAfter": {
+        "files": 12246,
+        "sha256": "6e4fe02fdca8b24e1d80f828628f3c6254b11413664fb07ea2007d180738e574"
+      },
+      "familiesBefore": {
+        "auto-best": {
+          "files": 1246,
+          "sha256": "28900b0c98a83174de11953e0fe2553e67fdca905d4d5a2cd2b544b66a6577d3"
+        },
+        "modern": {
+          "files": 3979,
+          "sha256": "d544f5603b09096cf30de9f3e688695ac6f18e8554f4d7f6d68c31bd4fd5316a"
+        },
+        "import": {
+          "files": 3398,
+          "sha256": "6396bfcbaa69ed6188b74461d7d7240beb84d7358fa0fd7794ad91c302166211"
+        },
+        "app": {
+          "files": 1647,
+          "sha256": "aa1aae79d36e898049e718b4fcb0ceb0214860ad83cb0d316f74ed530b4e5ca9"
+        },
+        "mobile": {
+          "files": 833,
+          "sha256": "45aa74b427e128ddba11a036e77b8c3e4000cdf7de0fa5c954377497ad689810"
+        },
+        "karento-best": {
+          "files": 1124,
+          "sha256": "ceb137b5d4cb1616bd1c678385036fac8babb63835c9bc2f4a81f0e5136c8845"
+        }
+      },
+      "familiesAfter": {
+        "auto-best": {
+          "files": 1246,
+          "sha256": "28900b0c98a83174de11953e0fe2553e67fdca905d4d5a2cd2b544b66a6577d3"
+        },
+        "modern": {
+          "files": 3979,
+          "sha256": "15b79c2b9fbc2b353724c1b91e8f211a150bec7e31e9906872a89cef14c4ba7b"
+        },
+        "import": {
+          "files": 3398,
+          "sha256": "6396bfcbaa69ed6188b74461d7d7240beb84d7358fa0fd7794ad91c302166211"
+        },
+        "app": {
+          "files": 1647,
+          "sha256": "aa1aae79d36e898049e718b4fcb0ceb0214860ad83cb0d316f74ed530b4e5ca9"
+        },
+        "mobile": {
+          "files": 833,
+          "sha256": "45aa74b427e128ddba11a036e77b8c3e4000cdf7de0fa5c954377497ad689810"
+        },
+        "karento-best": {
+          "files": 1124,
+          "sha256": "ceb137b5d4cb1616bd1c678385036fac8babb63835c9bc2f4a81f0e5136c8845"
+        }
+      },
+      "nativeAdoptionBefore": "7588d7b6e5378a6cfeb7a32a3d774b156223563906e71a47e54dcfdfede34b2e",
+      "nativeAdoptionAfter": "1fcb72be398667748d0db5bdb7002106772716c244d88d3c441baf959d896879",
+      "verification": {
+        "originalSixSourceSeals": true,
+        "repairedSixSourceSeals": true,
+        "otherFiveFamiliesByteIdentical": true,
+        "factsAndSourcePinsUnchanged": true
+      },
+      "build": false,
+      "hosted": false,
+      "dealerQa": false,
+      "readyToPublish": false
+    }
+  ]
 }

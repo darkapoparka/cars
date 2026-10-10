@@ -108,6 +108,7 @@ const transmissionLabels: Record<string, string> = {
   automatic: "Автоматична",
   manual: "Ръчна",
   semi_automatic: "Полуавтоматична",
+  unknown: "Не е посочена",
 };
 const statusLabels: Record<string, string> = {
   active: "Активна",

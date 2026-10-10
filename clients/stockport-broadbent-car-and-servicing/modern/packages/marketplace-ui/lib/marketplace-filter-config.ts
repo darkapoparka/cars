@@ -88,6 +88,7 @@ export const marketplaceTransmissionOptions: readonly Transmission[] = [
   "automatic",
   "manual",
   "semi_automatic",
+  "unknown",
 ];
 
 export const marketplaceFuelLabelsBg: Record<FuelType, string> = {
@@ -105,6 +106,7 @@ export const marketplaceTransmissionLabelsBg: Record<Transmission, string> = {
   automatic: "Автоматик",
   manual: "Ръчни",
   semi_automatic: "Полуавтоматик",
+  unknown: "Не е посочена",
 };
 
 export const marketplaceSortLabelsBg: Record<

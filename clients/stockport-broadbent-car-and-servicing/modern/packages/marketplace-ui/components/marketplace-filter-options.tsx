@@ -373,6 +373,7 @@ export const MarketplaceFilterSubview = ({
           ["automatic", copy.options.automatic],
           ["manual", copy.options.manual],
           ["semi_automatic", copy.options.semiAutomatic],
+          ["unknown", isBulgarianMarketplaceLocale(locale) ? "Не е посочена" : "Not published"],
         ]}
         selected={draft.transmission}
       />

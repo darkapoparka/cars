@@ -32,7 +32,7 @@ export type FuelType =
   | "cng"
   | "other";
 
-export type Transmission = "automatic" | "manual" | "semi_automatic";
+export type Transmission = "automatic" | "manual" | "semi_automatic" | "unknown";
 
 export type BodyType =
   | "hatchback"

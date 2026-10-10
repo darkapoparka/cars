@@ -52,6 +52,7 @@ export const filterLabels = {
     automatic: "Automatic",
     manual: "Manual",
     semi_automatic: "Semi-auto",
+    unknown: "Not published",
   },
   sort: {
     recommended: "Recommended",

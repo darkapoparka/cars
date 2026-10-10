@@ -129,6 +129,7 @@ const compactTransmissionLabels = {
   automatic: { bg: "Автоматик", en: "Automatic" },
   manual: { bg: "Ръчна", en: "Manual" },
   semi_automatic: { bg: "Полуавтоматик", en: "Semi-auto" },
+  unknown: { bg: "Не е посочена", en: "Not published" },
 } as const satisfies Record<Transmission, { bg: string; en: string }>;
 
 const compactFuelLabels: Partial<Record<FuelType, { bg: string; en: string }>> =

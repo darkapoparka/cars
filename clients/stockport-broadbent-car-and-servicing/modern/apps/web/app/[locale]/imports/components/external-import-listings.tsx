@@ -114,6 +114,7 @@ const getCompactTransmissionLabel = (
     automatic: "Автоматик",
     manual: "Ръчни",
     semi_automatic: "Полуавтоматик",
+    unknown: "Не е посочена",
   } as const;
   return labels[transmission];
 };

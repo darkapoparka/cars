@@ -26,6 +26,7 @@ export const transmissionTypes = [
   "automatic",
   "manual",
   "semi_automatic",
+  "unknown",
 ] as const;
 
 export const bodyTypes = [

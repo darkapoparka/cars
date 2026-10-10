@@ -36,6 +36,7 @@ const compactTransmissionLabels = {
   automatic: { bg: "Автоматик", en: "Automatic" },
   manual: { bg: "Ръчни", en: "Manual" },
   semi_automatic: { bg: "Полуавтоматик", en: "Semi-auto" },
+  unknown: { bg: "Не е посочена", en: "Not published" },
 } as const;
 
 const trimPackagePattern =

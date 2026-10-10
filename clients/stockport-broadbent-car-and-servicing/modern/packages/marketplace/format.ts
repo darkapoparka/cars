@@ -25,6 +25,7 @@ const transmissionLabels: Record<Transmission, string> = {
   automatic: "Automatic",
   manual: "Manual",
   semi_automatic: "Semi-auto",
+  unknown: "Not published",
 };
 
 const bodyTypeLabels: Record<BodyType, string> = {
@@ -79,6 +80,7 @@ const transmissionLabelsBg: Record<Transmission, string> = {
   automatic: "Автоматична",
   manual: "Ръчна",
   semi_automatic: "Полуавтоматична",
+  unknown: "Не е посочена",
 };
 
 const bodyTypeLabelsBg: Record<BodyType, string> = {
