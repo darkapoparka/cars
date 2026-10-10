@@ -1,0 +1,166 @@
+{
+	"date": "2026-10-04",
+	"scope": "About process artwork only; no dealer deployment or promotion.",
+	"baseline": "Reused prior source-rendered About captures after verifying all six recorded inputs still matched the current main checkout before changes.",
+	"desktop": [
+		{
+			"locale": "bg",
+			"width": 1440,
+			"images": [
+				{
+					"src": "http://127.0.0.1:6790/assets/process/request-neutral-v1.webp",
+					"loaded": true
+				},
+				{
+					"src": "http://127.0.0.1:6790/assets/process/inspection-neutral-v1.webp",
+					"loaded": true
+				},
+				{
+					"src": "http://127.0.0.1:6790/assets/process/decision-neutral-v1.webp",
+					"loaded": true
+				},
+				{
+					"src": "http://127.0.0.1:6790/assets/process/handover-neutral-v1.webp",
+					"loaded": true
+				}
+			],
+			"presentationMatches": true,
+			"errors": [],
+			"overflow": false
+		},
+		{
+			"locale": "bg",
+			"width": 768,
+			"images": [
+				{
+					"src": "http://127.0.0.1:6790/assets/process/request-neutral-v1.webp",
+					"loaded": true
+				},
+				{
+					"src": "http://127.0.0.1:6790/assets/process/inspection-neutral-v1.webp",
+					"loaded": true
+				},
+				{
+					"src": "http://127.0.0.1:6790/assets/process/decision-neutral-v1.webp",
+					"loaded": true
+				},
+				{
+					"src": "http://127.0.0.1:6790/assets/process/handover-neutral-v1.webp",
+					"loaded": true
+				}
+			],
+			"presentationMatches": true,
+			"errors": [],
+			"overflow": false
+		},
+		{
+			"locale": "en",
+			"width": 768,
+			"images": [
+				{
+					"src": "http://127.0.0.1:6790/assets/process/request-neutral-v1.webp",
+					"loaded": true
+				},
+				{
+					"src": "http://127.0.0.1:6790/assets/process/inspection-neutral-v1.webp",
+					"loaded": true
+				},
+				{
+					"src": "http://127.0.0.1:6790/assets/process/decision-neutral-v1.webp",
+					"loaded": true
+				},
+				{
+					"src": "http://127.0.0.1:6790/assets/process/handover-neutral-v1.webp",
+					"loaded": true
+				}
+			],
+			"presentationMatches": true,
+			"errors": [],
+			"overflow": false
+		},
+		{
+			"locale": "en",
+			"width": 1440,
+			"images": [
+				{
+					"src": "http://127.0.0.1:6790/assets/process/request-neutral-v1.webp",
+					"loaded": true
+				},
+				{
+					"src": "http://127.0.0.1:6790/assets/process/inspection-neutral-v1.webp",
+					"loaded": true
+				},
+				{
+					"src": "http://127.0.0.1:6790/assets/process/decision-neutral-v1.webp",
+					"loaded": true
+				},
+				{
+					"src": "http://127.0.0.1:6790/assets/process/handover-neutral-v1.webp",
+					"loaded": true
+				}
+			],
+			"presentationMatches": true,
+			"errors": [],
+			"overflow": false
+		}
+	],
+	"mobile": [
+		{
+			"name": "about-bg-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "about-en-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "about-bg-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "about-en-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		}
+	],
+	"sources": [
+		{
+			"path": "src/lib/content/about-page.ts",
+			"sha256": "6561b1e0a452ab79821b784596e34b417f58ff960286f5e7c3f013c6cf3a34f8",
+			"frozenInputMatches": true
+		},
+		{
+			"path": "static/assets/process/request-neutral-v1.webp",
+			"sha256": "3bc13f4f9acd7dadb08525587a25ac1e4dc8543508c3f18090569ce864e5b922",
+			"frozenInputMatches": true
+		},
+		{
+			"path": "static/assets/process/inspection-neutral-v1.webp",
+			"sha256": "5590544131740f4e58de4ee103be581338329da60bf7f50aa385a7b520174455",
+			"frozenInputMatches": true
+		},
+		{
+			"path": "static/assets/process/decision-neutral-v1.webp",
+			"sha256": "0b6af6ebef6d009300987b3c08d7c39b1b62339d505b84b7afa54fee463782ec",
+			"frozenInputMatches": true
+		},
+		{
+			"path": "static/assets/process/handover-neutral-v1.webp",
+			"sha256": "391a290eb7a66038efdd64aa51f2b8700e5fb5f59e6e88a04f1e1e0ce6848707",
+			"frozenInputMatches": true
+		}
+	],
+	"checks": {
+		"assets": "955 local images valid",
+		"scopedESLint": "passed",
+		"productionBuild": "passed in isolated QA output; all four new public assets retained in .vercel/output/static/assets/process/"
+	},
+	"preserved": "Original branded assets, request source PNG, all prior layout/actions and unrelated dirty work."
+}

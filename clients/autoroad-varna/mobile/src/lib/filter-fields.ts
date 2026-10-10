@@ -1,0 +1,392 @@
+export type FilterField = {
+  id: string;
+  label: string;
+  kind?: 'toggle' | 'range' | 'text' | 'single' | 'location';
+  options?: string[];
+  unit?: string;
+  max?: number;
+};
+export type FilterSection = { title: string; fields: FilterField[] };
+export const filterSections: FilterSection[] = [
+  {
+    title: 'Basic Data',
+    fields: [
+      { id: 'condition', label: 'Condition', kind: 'single', options: ['New', 'Used'] },
+      { id: 'payment', label: 'Payment type', kind: 'single', options: ['Buy', 'Leasing'] },
+      { id: 'price', label: 'Price', kind: 'range', unit: '€', max: 100000 },
+      { id: 'deal', label: 'Deal', kind: 'toggle' },
+      { id: 'year', label: 'First Registration Date', kind: 'range', max: 2026 },
+      { id: 'mileage', label: 'Mileage', kind: 'range', unit: 'km', max: 200000 },
+      { id: 'power', label: 'Power', kind: 'range', unit: 'hp', max: 600 },
+      {
+        id: 'fuel',
+        label: 'Fuel type',
+        options: [
+          'Petrol',
+          'Diesel',
+          'Electric',
+          'Hybrid (petrol/electric)',
+          'Hybrid (diesel/electric)',
+          'LPG',
+          'CNG',
+          'Hydrogen',
+          'Ethanol',
+          'Other',
+        ],
+      },
+      { id: 'plugin', label: 'Plug-in hybrid', kind: 'toggle' },
+      { id: 'location', label: 'Location and radius', kind: 'location' },
+    ],
+  },
+  {
+    title: 'Detail search',
+    fields: [
+      {
+        id: 'body',
+        label: 'Vehicle type',
+        options: [
+          'Saloon',
+          'Estate',
+          'SUV',
+          'Convertible',
+          'Coupe',
+          'Van',
+          'Small Car',
+          'Sports Car',
+          'Other',
+        ],
+      },
+      {
+        id: 'seats',
+        label: 'Number of seats',
+        kind: 'single',
+        options: ['2', '3', '4', '5', '6', '7', '8', '9'],
+      },
+      { id: 'doors', label: 'Number of doors', kind: 'single', options: ['2', '3', '4', '5'] },
+      { id: 'slidingDoor', label: 'Sliding door', options: ['Left', 'Right', 'Both sides'] },
+      {
+        id: 'transmission',
+        label: 'Transmission',
+        options: ['Automatic', 'Manual', 'Semi-automatic'],
+      },
+      { id: 'capacity', label: 'Cubic capacity', kind: 'range', unit: 'cm³', max: 8000 },
+      {
+        id: 'color',
+        label: 'Exterior Colour',
+        options: [
+          'Beige',
+          'Black',
+          'Blue',
+          'Brown',
+          'Gold',
+          'Green',
+          'Grey',
+          'Orange',
+          'Purple',
+          'Red',
+          'Silver',
+          'White',
+          'Yellow',
+          'Other',
+        ],
+      },
+      { id: 'metallic', label: 'Metallic', kind: 'toggle' },
+      { id: 'matte', label: 'Matte', kind: 'toggle' },
+    ],
+  },
+  {
+    title: 'Features',
+    fields: [
+      { id: 'description', label: 'Search vehicle description', kind: 'text' },
+      { id: 'rearTraffic', label: 'Rear traffic alert', kind: 'toggle' },
+      {
+        id: 'air',
+        label: 'Air conditioning',
+        options: [
+          'Air conditioning',
+          'Automatic climatisation',
+          'Automatic air conditioning, 2 zones',
+          'Automatic air conditioning, 3 zones',
+          'Automatic air conditioning, 4 zones',
+        ],
+      },
+      { id: 'heating', label: 'Auxiliary heating', kind: 'toggle' },
+      {
+        id: 'interior',
+        label: 'Interior features',
+        options: [
+          'Ambient lighting',
+          'Arm rest',
+          'Electric windows',
+          'Leather steering wheel',
+          'Lumbar support',
+          'Multifunction steering wheel',
+        ],
+      },
+      {
+        id: 'security',
+        label: 'Security',
+        options: [
+          'ABS',
+          'Alarm system',
+          'Central locking',
+          'Electric immobilizer',
+          'ESP',
+          'Isofix',
+          'Lane change assist',
+          'Traction control',
+        ],
+      },
+      {
+        id: 'other',
+        label: 'Other',
+        options: [
+          'Bluetooth',
+          'Navigation system',
+          'On-board computer',
+          'Voice control',
+          'USB port',
+        ],
+      },
+      {
+        id: 'controls',
+        label: 'Controls',
+        options: [
+          'Apple CarPlay',
+          'Android Auto',
+          'Digital cockpit',
+          'Head-up display',
+          'Touchscreen',
+        ],
+      },
+      {
+        id: 'extras',
+        label: 'Extras',
+        options: [
+          'Electric tailgate',
+          'Keyless central locking',
+          'Sport package',
+          'Sports suspension',
+          'Start-stop system',
+        ],
+      },
+      {
+        id: 'headlights',
+        label: 'Headlights type',
+        options: ['LED headlights', 'Xenon headlights', 'Bi-xenon headlights', 'Laser headlights'],
+      },
+      {
+        id: 'headlightExtras',
+        label: 'Headlights type (Extras)',
+        options: ['Glare-free high beam headlights', 'High beam assist', 'Headlight washer system'],
+      },
+      {
+        id: 'airbags',
+        label: 'Airbags',
+        options: [
+          'Driver airbag',
+          'Front airbags',
+          'Front and side airbags',
+          'Front, side and more airbags',
+        ],
+      },
+      {
+        id: 'wheels',
+        label: 'Wheels and tires',
+        options: [
+          'Alloy wheels',
+          'All season tyres',
+          'Summer tyres',
+          'Winter tyres',
+          'Tyre pressure monitoring',
+        ],
+      },
+      {
+        id: 'breakdown',
+        label: 'Breakdown service',
+        options: ['Spare tyre', 'Emergency tyre', 'Repair kit'],
+      },
+      {
+        id: 'parking',
+        label: 'Parking sensors',
+        options: [
+          'Parking sensors',
+          'Front',
+          'Rear',
+          'Rear view camera',
+          '360° camera',
+          'Self-steering systems',
+        ],
+      },
+      {
+        id: 'seatFeatures',
+        label: 'Seat Features',
+        options: [
+          'Heated seats',
+          'Electric seat adjustment',
+          'Massage seats',
+          'Ventilated seats',
+          'Sports seats',
+          'Seat memory',
+        ],
+      },
+      { id: 'roof', label: 'Roof type', options: ['Panoramic roof', 'Sunroof', 'Roof rails'] },
+      { id: 'taxi', label: 'Taxi (previous use)', kind: 'toggle' },
+      {
+        id: 'daylight',
+        label: 'Daytime running lights',
+        options: ['Daytime running lights', 'LED daytime running lights'],
+      },
+      {
+        id: 'coupling',
+        label: 'Trailer coupling',
+        options: ['Tow bar', 'Detachable tow bar', 'Swivelling tow bar'],
+      },
+      { id: 'trailerAssist', label: 'Trailer assist', kind: 'toggle' },
+      { id: 'unbraked', label: 'Trailer load unbraked', kind: 'range', unit: 'kg', max: 1500 },
+      { id: 'braked', label: 'Trailer load braked', kind: 'range', unit: 'kg', max: 5000 },
+      { id: 'support', label: 'Support load from', kind: 'range', unit: 'kg', max: 500 },
+      {
+        id: 'drive',
+        label: 'Drive type',
+        options: ['Front-wheel drive', 'Rear-wheel drive', 'Four-wheel drive'],
+      },
+      {
+        id: 'bending',
+        label: 'Bending lights type',
+        options: ['Adaptive cornering lights', 'Bending lights'],
+      },
+      {
+        id: 'cruise',
+        label: 'Cruise control',
+        options: ['Cruise control', 'Adaptive cruise control'],
+      },
+      { id: 'radio', label: 'Radio', options: ['DAB radio', 'Radio', 'CD player', 'Sound system'] },
+      {
+        id: 'material',
+        label: 'Interior material',
+        options: ['Cloth', 'Part leather', 'Full leather', 'Alcantara', 'Velour', 'Other'],
+      },
+      {
+        id: 'interiorColor',
+        label: 'Interior colour',
+        options: ['Black', 'Grey', 'Beige', 'Brown', 'Other'],
+      },
+      { id: 'weight', label: 'Weight', kind: 'range', unit: 'kg', max: 5000 },
+      { id: 'cylinders', label: 'Cylinders', options: ['2', '3', '4', '5', '6', '8', '10', '12'] },
+      { id: 'tank', label: 'Tank capacity', kind: 'range', unit: 'l', max: 150 },
+    ],
+  },
+  {
+    title: 'Offer details',
+    fields: [
+      {
+        id: 'online',
+        label: 'Ad online since',
+        kind: 'single',
+        options: ['Today', '1 day', '3 days', '7 days', '14 days', '30 days'],
+      },
+      {
+        id: 'listing',
+        label: 'Listing features',
+        options: ['With pictures', 'With video', 'Available immediately'],
+      },
+      { id: 'seller', label: 'Seller', kind: 'single', options: ['Dealer', 'Private seller'] },
+      {
+        id: 'commercial',
+        label: 'Commercial, Export/Import',
+        options: ['Commercial', 'Export', 'Import'],
+      },
+      {
+        id: 'vat',
+        label: 'VAT',
+        kind: 'single',
+        options: ['VAT reclaimable', 'VAT not reclaimable'],
+      },
+      {
+        id: 'rating',
+        label: 'Dealer rating',
+        kind: 'single',
+        options: ['5 stars', '4 stars or more', '3 stars or more'],
+      },
+    ],
+  },
+  {
+    title: 'Environment',
+    fields: [
+      {
+        id: 'consumption',
+        label: 'Consumption (combined) up to',
+        kind: 'range',
+        unit: 'l/100km',
+        max: 20,
+      },
+      {
+        id: 'emission',
+        label: 'Emission class',
+        options: [
+          'Euro 6e',
+          'Euro 6d',
+          'Euro 6d-TEMP',
+          'Euro 6',
+          'Euro 5',
+          'Euro 4',
+          'Euro 3',
+          'Euro 2',
+          'Euro 1',
+        ],
+      },
+      {
+        id: 'sticker',
+        label: 'Emissions Sticker',
+        options: ['4 (Green)', '3 (Yellow)', '2 (Red)', '1 (None)'],
+      },
+      { id: 'particulate', label: 'Particulate filter', kind: 'toggle' },
+    ],
+  },
+  {
+    title: 'Vehicle history',
+    fields: [
+      {
+        id: 'maintenance',
+        label: 'Maintenance',
+        options: ['Full service history', 'Non-smoker vehicle', 'Warranty'],
+      },
+      { id: 'roadworthy', label: 'Roadworthy', kind: 'toggle' },
+      {
+        id: 'damaged',
+        label: 'Damaged Vehicles',
+        kind: 'single',
+        options: ['Do not show', 'Show also'],
+      },
+      {
+        id: 'owners',
+        label: 'Previous owners',
+        kind: 'single',
+        options: ['1', '2', '3', '4', '5'],
+      },
+      {
+        id: 'inspection',
+        label: 'Vehicle inspection (TÜV) valid until',
+        kind: 'single',
+        options: ['New', 'At least 6 months', 'At least 12 months', 'At least 18 months'],
+      },
+      { id: 'approved', label: 'Any Approved Used Programme', kind: 'toggle' },
+      {
+        id: 'programme',
+        label: 'Approved Used Programme',
+        options: [
+          'BMW Premium Selection',
+          'Audi Gebrauchtwagen :plus',
+          'Mercedes-Benz Junge Sterne',
+          'Volkswagen Das WeltAuto',
+        ],
+      },
+      {
+        id: 'registration',
+        label: 'Registration Type',
+        options: ['Passenger car registration', 'Truck registration', 'Classic car registration'],
+      },
+    ],
+  },
+];

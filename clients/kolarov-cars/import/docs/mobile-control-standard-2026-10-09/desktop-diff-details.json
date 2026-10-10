@@ -1,0 +1,30 @@
+[
+  {
+    "state": "home",
+    "count": 31,
+    "maxChannelDifference": 2,
+    "bounds": {
+      "minX": 323,
+      "maxX": 1059,
+      "minY": 392,
+      "maxY": 987
+    }
+  },
+  {
+    "state": "inventory",
+    "count": 51,
+    "maxChannelDifference": 2,
+    "bounds": {
+      "minX": 323,
+      "maxX": 1351,
+      "minY": 392,
+      "maxY": 980
+    }
+  },
+  {
+    "state": "pdp",
+    "count": 0,
+    "maxChannelDifference": 0,
+    "bounds": null
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "client": "kolarov-cars",
+  "repository": "darkapoparka/cars-kolarovcars",
+  "sourceBranch": "varna",
+  "workflowCommit": "d2d891166fee31339eca3450f6704a5fc1c8fdcb",
+  "designSet": "six",
+  "state": "candidate-personalized-needs-build",
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": "bg-varna-kolarovcars",
+    "demoProjectId": null,
+    "registered": false
+  },
+  "hosting": {
+    "provider": "vercel",
+    "status": "not-deployed"
+  },
+  "readyToPublish": false
+}

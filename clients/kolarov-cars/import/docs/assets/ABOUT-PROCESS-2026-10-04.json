@@ -1,0 +1,32 @@
+{
+	"date": "2026-10-04",
+	"tool": "Built-in image_gen.imagegen",
+	"description": "Illustrative About process imagery. One new request image extends the existing showroom style. Reviewed inspection, comparison and handover assets are reused unchanged. Desktop only; no claim of actual staff, premises or customer submissions.",
+	"generated": [
+		{
+			"key": "request",
+			"prompt": "Use case: photorealistic-natural.\nAsset type: a single editorial photograph for step 01 \"Request\" in an automotive dealer website's \"How we work\" sequence. This is illustrative process imagery.\nInput Image 1: supporting style and showroom reference only. Match its realistic charcoal automotive showroom, narrow warm yellow architectural accents, muted premium materials and daylight. Do not reproduce the notebook logo or the person.\nPrimary request: show the act of sending a car listing and requirements to a dealer. A hand naturally holds a modern smartphone in the right foreground; its screen has a restrained car-listing thumbnail above a short message field, no readable text. A silver premium estate car is softly visible in the showroom background. The message and car should be immediately recognizable at card size.\nComposition: landscape 3:2, one coherent believable photograph, smartphone completely contained with natural fingers and realistic scale, foreground phone near the center-right, recognizable car behind it. Keep the whole main subject in the central safe area so 16:9 cropping also works. The UI will supply the title and description below this photograph, so no empty text half is needed.\nLighting: match the reference's soft natural daylight and restrained dark interior; no glow, no neon.\nConstraints: no words, letters, numbers, company logos, watermark, badges, arrows, floating icons, collage or infographic. No visible person's face. Do not imitate a real submitted customer message.",
+			"reference": "static/assets/daynight/services/desktop/comparison-reference-v4.webp",
+			"source": "C:/Users/radev/.codex/generated_images/01a10434-ddd7-7361-ae8e-48bd3e8da469/exec-55e7d639-d0bb-4fba-900b-38f6c7f0f648.png",
+			"destination": "static/assets/daynight/banners/about-request-v1.webp",
+			"width": 900,
+			"height": 600,
+			"delivery": "WebP, quality 84; source preserved."
+		}
+	],
+	"reused": [
+		{
+			"step": "checks",
+			"source": "static/assets/daynight/services/desktop/inspection-reference-v4.webp"
+		},
+		{
+			"step": "decision",
+			"source": "static/assets/daynight/services/desktop/comparison-reference-v4.webp"
+		},
+		{
+			"step": "viewing-and-handover",
+			"source": "static/assets/daynight/services/desktop/selling-reference-v4.webp"
+		}
+	],
+	"reusedProvenance": "DESKTOP-COMPANY-REFERENCE-2026-10-02.json"
+}

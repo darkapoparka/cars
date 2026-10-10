@@ -1,0 +1,253 @@
+/* Shared desktop density. Mobile keeps its existing tokens and component CSS. */
+@media (min-width: 992px) {
+  html:root {
+    --karento-desktop-space-1: 4px;
+    --karento-desktop-space-0-5: 2px;
+    --karento-desktop-space-1-5: 6px;
+    --karento-desktop-space-2: 8px;
+    --karento-desktop-space-3: 12px;
+    --karento-desktop-space-2-5: 10px;
+    --karento-desktop-space-3-5: 14px;
+    --karento-desktop-space-4: 16px;
+    --karento-desktop-space-5: 20px;
+    --karento-desktop-space-6: 24px;
+    --karento-desktop-space-8: 32px;
+    --karento-desktop-space-10: 40px;
+    --karento-desktop-space-12: 48px;
+    --karento-desktop-space-14: 56px;
+    --karento-desktop-space-16: 64px;
+    --karento-desktop-space-18: 72px;
+
+    --karento-desktop-card-radius: 16px;
+    --karento-desktop-control-radius: 12px;
+    --karento-desktop-pill-radius: 999px;
+    --karento-desktop-control-height: 44px;
+    --karento-desktop-pill-height: 40px;
+    --karento-desktop-card-action-height: 34px;
+    --karento-desktop-card-action-padding-block: var(
+      --karento-desktop-space-1-5
+    );
+    --karento-desktop-card-action-padding-inline: var(
+      --karento-desktop-space-4
+    );
+    --karento-desktop-card-footer-gap: var(--karento-desktop-space-2);
+    --karento-desktop-disclosure-height: var(--karento-desktop-space-14);
+    --karento-desktop-card-padding: var(--karento-desktop-space-5);
+    --karento-desktop-card-padding-compact: var(--karento-desktop-space-4);
+    --karento-desktop-card-gap: var(--karento-desktop-space-4);
+    --karento-desktop-panel-padding: var(--karento-desktop-space-6);
+    --karento-desktop-panel-gap: var(--karento-desktop-space-6);
+    --karento-desktop-grid-gap: var(--karento-desktop-space-6);
+    --karento-desktop-section-padding: var(--karento-desktop-space-16);
+    --karento-desktop-section-padding-compact: var(--karento-desktop-space-12);
+    --karento-desktop-section-padding-marketing: var(
+      --karento-desktop-space-18
+    );
+    --karento-desktop-heading-gap: var(--karento-desktop-space-8);
+    --karento-desktop-heading-gap-compact: var(--karento-desktop-space-6);
+  }
+
+  html:root .main .desktop-collection-section {
+    padding-block: var(--karento-desktop-section-padding) !important;
+  }
+  html:root .main .desktop-marketing-section {
+    padding-block: var(--karento-desktop-section-padding-marketing) !important;
+  }
+  html:root .main .desktop-section-heading {
+    margin-bottom: var(--karento-desktop-heading-gap) !important;
+  }
+  html:root .main .desktop-card,
+  html:root .main .desktop-panel {
+    border-radius: var(--karento-desktop-card-radius) !important;
+  }
+  html:root .main .desktop-card-body {
+    padding: var(--karento-desktop-card-padding) !important;
+    gap: var(--karento-desktop-card-gap);
+  }
+  html:root .main .desktop-panel {
+    padding: var(--karento-desktop-panel-padding) !important;
+    gap: var(--karento-desktop-panel-gap);
+  }
+
+  /* Compact card actions have their own density, separate from toolbar pills. */
+  html:root .main .desktop-card-action,
+  html:root .main .card-news .card-button .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    height: auto;
+    min-height: var(--karento-desktop-card-action-height);
+    padding: var(--karento-desktop-card-action-padding-block)
+      var(--karento-desktop-card-action-padding-inline) !important;
+    border-radius: var(--karento-desktop-pill-radius) !important;
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+  .main .desktop-card-footer {
+    gap: var(--karento-desktop-card-footer-gap);
+  }
+  html:root .main .pagination .page-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  html:root .main .pagination .page-link svg {
+    display: block;
+  }
+  html:root .main .desktop-action-primary {
+    gap: var(--karento-desktop-space-2);
+    border: 1px solid var(--bs-neutral-1000);
+    background: var(--bs-neutral-1000);
+    color: var(--bs-neutral-0) !important;
+  }
+  html:root .main .desktop-action-primary:hover,
+  html:root .main a:hover .desktop-action-primary {
+    opacity: 0.9;
+  }
+  html:root .main .desktop-action-primary svg .fill-dark {
+    fill: currentColor;
+  }
+  html:root .main .desktop-action-primary:focus-visible {
+    outline: 2px solid var(--bs-neutral-1000) !important;
+    outline-offset: 3px;
+  }
+  html:root .main .desktop-panel--compact {
+    gap: var(--karento-desktop-card-gap);
+  }
+  html:root .desktop-panel-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--karento-desktop-control-height);
+    padding: var(--karento-desktop-space-2) var(--karento-desktop-space-4) !important;
+    border-radius: var(--karento-desktop-control-radius) !important;
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+  html:root .desktop-panel-action--spread {
+    justify-content: space-between;
+  }
+  html:root .desktop-panel-action.rounded-pill {
+    border-radius: var(--karento-desktop-pill-radius) !important;
+  }
+  html:root .main .desktop-section-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--karento-desktop-space-2);
+    min-height: var(--karento-desktop-pill-height);
+    padding: var(--karento-desktop-space-2) var(--karento-desktop-space-4) !important;
+    border-radius: var(--karento-desktop-pill-radius) !important;
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+  html:root .main .desktop-display-badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 0;
+    height: auto;
+    padding: var(--karento-desktop-space-1) var(--karento-desktop-space-3) !important;
+    border-radius: var(--karento-desktop-pill-radius) !important;
+    white-space: nowrap;
+  }
+  html:root .desktop-subscribe-controls {
+    display: flex;
+    align-items: stretch;
+    gap: var(--karento-desktop-space-2);
+  }
+  html:root .desktop-subscribe-controls > input {
+    height: var(--karento-desktop-control-height) !important;
+    min-height: var(--karento-desktop-control-height);
+    box-sizing: border-box;
+    padding-block: var(--karento-desktop-space-2) !important;
+    border-radius: var(--karento-desktop-control-radius);
+  }
+  html:root .desktop-subscribe-controls > input[type="submit"] {
+    position: static;
+    flex: 0 0 auto;
+  }
+
+  /* Maintained reference cards share density without changing their artwork. */
+  html:root .main .vehicle-offer {
+    padding: var(--karento-desktop-panel-padding) !important;
+    gap: var(--karento-desktop-card-gap) !important;
+    border-radius: var(--karento-desktop-card-radius) !important;
+  }
+  html:root .main .service-spot-card,
+  html:root .main .promotion-card {
+    border-radius: var(--karento-desktop-card-radius) !important;
+    overflow: hidden;
+  }
+  html:root .main .service-spot-card .card-info {
+    padding: var(--karento-desktop-card-padding);
+    border-radius: var(--karento-desktop-card-radius);
+  }
+
+  html:root .main .card-testimonial {
+    padding: var(--karento-desktop-panel-padding);
+    border-radius: var(--karento-desktop-card-radius);
+  }
+  html:root .main .card-testimonial .pt-40 {
+    padding-top: var(--karento-desktop-card-gap) !important;
+  }
+  html:root .main .card-popular {
+    padding: var(--karento-desktop-card-padding);
+    border-radius: var(--karento-desktop-card-radius);
+  }
+
+  /* Inline editorial variants retained from the compiled reference library. */
+  html:root .main .card-news:not(.news-grid-card):not(.news-list-card) {
+    border-radius: var(--karento-desktop-card-radius);
+  }
+  html:root
+    .main
+    .card-news:not(.news-grid-card):not(.news-list-card)
+    .card-info {
+    padding: var(--karento-desktop-card-padding);
+    border-radius: var(--karento-desktop-card-radius);
+  }
+  html:root
+    .main
+    .card-news:not(.news-grid-card):not(.news-list-card)
+    .card-meta {
+    margin-bottom: var(--karento-desktop-card-gap);
+  }
+  html:root
+    .main
+    .card-news:not(.news-grid-card):not(.news-list-card)
+    .card-title {
+    margin-bottom: var(--karento-desktop-card-gap);
+  }
+  html:root
+    .main
+    .card-news:not(.news-grid-card):not(.news-list-card)
+    .karento-news-tag,
+  html:root
+    .main
+    .card-news:not(.news-grid-card):not(.news-list-card)
+    .card-button
+    .btn {
+    border-radius: var(--karento-desktop-pill-radius) !important;
+  }
+
+  html:root .main .karento-faq-card {
+    overflow: hidden;
+    border-radius: var(--karento-desktop-card-radius) !important;
+    margin-bottom: var(--karento-desktop-card-gap) !important;
+  }
+  html:root .main .karento-faq-card > .card-header {
+    padding: 0 !important;
+    border-radius: 0;
+  }
+  html:root .main .karento-faq-card > .card-header > a {
+    min-height: var(--karento-desktop-disclosure-height);
+    padding: var(--karento-desktop-space-4) var(--karento-desktop-card-padding) !important;
+    gap: var(--karento-desktop-card-gap);
+  }
+  html:root .main .karento-faq-card .card-body {
+    padding: 0 var(--karento-desktop-card-padding)
+      var(--karento-desktop-card-padding) !important;
+    margin: 0;
+  }
+}

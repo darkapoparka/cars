@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-03",
+  "tool": "Built-in image_gen.imagegen through the imagegen skill; no CLI fallback.",
+  "purpose": "Replace the rejected abstract diagonal panels in the desktop Home Featured cars banner with a quiet flat satin-metal texture.",
+  "path": "static/assets/images/template/home-section-inventory-backdrop-v2.webp",
+  "replaces": "static/assets/images/template/home-section-inventory-backdrop-v1.webp",
+  "previousAssetStatus": "Retained as source provenance without runtime requests.",
+  "prompt": "Use case: ads-marketing.\nAsset type: decorative raster background for a premium automotive website's Featured cars section banner, panoramic landscape about 3:1. The site uses a shallow 8:1 center crop with live white centered heading and button; artwork only.\nPrimary request: a single continuous FLAT graphite-black satin-metal surface, photographed straight on in soft neutral studio light. Fine authentic horizontal brushed grain supplies an understated automotive material connection. The grain is visible only gently near the outer edges, disappearing smoothly into an almost uniform charcoal center. Restrained, clean, tactile, believable material photography, without sculptural decoration.\nComposition: the central 72 percent is calm dark charcoal around #15181d, completely clear behind live copy. Outer edges carry subtle fine satin grain and very low-contrast light falloff. No obvious left/right objects, no cutout illustrations, no artificial geometric pattern. The same quiet treatment through the middle vertical third so it works in a 1360 by 164 banner. Maintain balanced illumination, a continuous surface and deep neutral blacks.\nPalette: black, charcoal and extremely subdued dark grey. No colored accents, bright highlights or reflective glare.\nText: none.\nAvoid: cars, parts, people, leather, perforations, dots, holes, steering wheels, rings, circles, tires, arcs, curves, diagonal slabs, folded panels, waves, chevrons, sharp seams, shapes, frames, architectural elements, carbon fiber, ridges, embossed logos, text, buttons, UI, sci-fi chrome, smoke, flares, neon and watermark. A quiet flat material background, not a decorative object render or website mockup.",
+  "generatedSource": "exec-b1dde1a1-7515-4c03-a4be-a22fc23595c7.png",
+  "backupPath": "runtime/home-inventory-texture-20261003/source-inventory.png",
+  "width": 2172,
+  "height": 724,
+  "bytes": 41152,
+  "format": "WebP",
+  "delivery": "Full-frame WebP quality 84, effort 6; no crop, compositing or pixel retouching.",
+  "integration": "Archived asset only. The four Home section headers use one common graphite-dot background; this earlier texture has no runtime requests. Generated source, dimensions, delivery and original prompt are retained.",
+  "runtimeStatus": "Superseded on 2026-10-03; retained as source provenance without runtime requests. Home section headers use the shared graphite-dot background recorded in home-shared-background-2026-10-03.json."
+}

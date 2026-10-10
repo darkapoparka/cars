@@ -1,0 +1,419 @@
+.dialog {
+  composes: dialog from "./desktop-overlay.module.css";
+}
+.header {
+  composes: header from "./desktop-overlay.module.css";
+}
+.close {
+  composes: close from "./desktop-overlay.module.css";
+}
+.footer {
+  composes: footer from "./desktop-overlay.module.css";
+}
+.reset {
+  composes: reset from "./desktop-overlay.module.css";
+}
+.apply {
+  composes: apply from "./desktop-overlay.module.css";
+}
+
+@media (min-width: 1024px) {
+  .dialog {
+    width: min(calc(var(--spacing) * 230), calc(100vw - var(--spacing) * 16));
+    height: min(calc(var(--spacing) * 160), calc(100dvh - var(--spacing) * 16));
+  }
+  .dialog[data-focused="true"] {
+    width: min(calc(var(--spacing) * 175), calc(100vw - var(--spacing) * 16));
+    height: min(calc(var(--spacing) * 142), calc(100dvh - var(--spacing) * 16));
+  }
+  .dialog:is([data-filter-entry="make"], [data-filter-entry="model"]) {
+    width: min(calc(var(--spacing) * 230), calc(100vw - var(--spacing) * 16));
+  }
+  .quickDialog {
+    width: min(calc(var(--spacing) * 128), calc(100vw - var(--spacing) * 16));
+    height: auto;
+    max-height: min(
+      calc(var(--spacing) * 160),
+      calc(100dvh - var(--spacing) * 16)
+    );
+  }
+  .quickDialog[data-slot="desktop-quick-filter-dialog"]
+    :global(button[aria-pressed]) {
+    min-height: calc(var(--spacing) * 11);
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
+  }
+  .quickRangeDialog {
+    width: min(calc(var(--spacing) * 140), calc(100vw - var(--spacing) * 16));
+  }
+  .categoryDialog {
+    width: min(calc(var(--spacing) * 180), calc(100vw - var(--spacing) * 16));
+  }
+  .dialog[data-filter-entry="price"] {
+    width: min(calc(var(--spacing) * 140), calc(100vw - var(--spacing) * 16));
+    height: min(calc(var(--spacing) * 120), calc(100dvh - var(--spacing) * 16));
+  }
+  .dialog[data-filter-entry="search"] {
+    width: min(calc(var(--spacing) * 140), calc(100vw - var(--spacing) * 16));
+    height: min(calc(var(--spacing) * 64), calc(100dvh - var(--spacing) * 16));
+  }
+  .workspace {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0;
+    min-height: 0;
+  }
+  .menu {
+    display: grid;
+    flex: none;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: var(--spacing);
+    width: auto;
+    height: auto;
+    padding: var(--spacing);
+    margin: calc(var(--spacing) * 4) calc(var(--spacing) * 5) 0;
+    background: var(--control);
+    border: 0;
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .menuItem {
+    min-height: calc(var(--spacing) * 11);
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
+    font-size: calc(var(--spacing) * 3.5);
+    color: var(--muted-foreground);
+    background: transparent;
+    border: 0;
+    border-radius: calc(var(--spacing) * 2);
+    box-shadow: none;
+  }
+  .menuItem[data-state="active"] {
+    color: var(--foreground);
+    background: var(--panel);
+    box-shadow: var(--desktop-surface-shadow);
+  }
+  .menuItem[data-state="inactive"]:hover {
+    color: var(--foreground);
+  }
+  .content {
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  .content[data-state="active"] {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding-top: calc(var(--spacing) * 4);
+  }
+  .focusedVehicleContent {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
+    padding-top: calc(var(--spacing) * 4);
+    overflow: hidden;
+  }
+  .focusedContent {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
+    padding: calc(var(--spacing) * 4) calc(var(--spacing) * 5);
+    overflow: hidden;
+  }
+  .content :global(button.border-primary[aria-pressed="true"]),
+  .focusedContent :global(button.border-primary[aria-pressed="true"]) {
+    color: var(--brand-foreground);
+    background: var(--brand);
+    border-color: var(--brand);
+  }
+  .content :global(button.border-primary[aria-pressed="true"]:hover),
+  .focusedContent :global(button.border-primary[aria-pressed="true"]:hover) {
+    color: var(--brand-hover-foreground);
+    background: var(--lead-site-accent-hover);
+  }
+  .vehicleColumns {
+    display: grid;
+    flex: 1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: calc(var(--spacing) * 4);
+    min-height: 0;
+    padding: 0 calc(var(--spacing) * 5) calc(var(--spacing) * 5);
+  }
+  .vehiclePanel {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    padding-top: calc(var(--spacing) * 3.5);
+    overflow: hidden;
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 4);
+  }
+  .vehicleEmpty {
+    display: grid;
+    grid-column: 1 / -1;
+    gap: calc(var(--spacing) * 4);
+    align-content: center;
+    justify-items: center;
+    padding: calc(var(--spacing) * 6);
+    text-align: center;
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 4);
+  }
+  .vehicleEmpty p {
+    font-size: calc(var(--spacing) * 3.5);
+    color: var(--muted-foreground);
+  }
+  .vehicleSearch {
+    margin: calc(var(--spacing) * 3) calc(var(--spacing) * 3.5);
+  }
+  .vehicleSearch > div {
+    margin: 0;
+  }
+  .vehicleSearch input {
+    height: calc(var(--spacing) * 11);
+  }
+  .makeOptions,
+  .modelOptions {
+    padding: 0 calc(var(--spacing) * 3.5) calc(var(--spacing) * 3.5);
+  }
+  .makeOptions > div:first-child {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .makeOptions button {
+    height: auto;
+    padding-inline: calc(var(--spacing) * 2);
+    white-space: normal;
+  }
+  .makeOptions button,
+  .modelOptions :global([data-slot="model-option"]),
+  .modelOptions :global([data-slot="model-any-option"]) {
+    min-height: calc(var(--spacing) * 11);
+    font-weight: var(--font-weight-medium);
+  }
+  .vehiclePanel .modelOptions :global(button[aria-pressed]) {
+    font-weight: var(--font-weight-medium);
+    border: var(--desktop-border-width) solid var(--border);
+  }
+  .vehiclePanel .makeOptions :global(button[aria-pressed]),
+  .vehiclePanel .modelOptions :global(button[aria-pressed]) {
+    border-radius: var(--radius-pill);
+  }
+  .modelOptions :global([data-slot="model-option"]),
+  .modelOptions :global([data-slot="model-any-option"]) {
+    height: calc(var(--spacing) * 11);
+    min-height: calc(var(--spacing) * 11);
+  }
+  .modelOptions :global(button[aria-pressed="false"]) {
+    color: var(--secondary-foreground);
+    background: var(--secondary);
+  }
+  .modelOptions :global(button[aria-pressed="false"]:hover) {
+    color: var(--accent-foreground);
+    background: var(--accent);
+  }
+  .vehiclePanel .modelOptions :global(button[aria-pressed="true"]) {
+    color: var(--brand-foreground);
+    background: var(--brand);
+    border-color: var(--brand);
+  }
+  .modelOptions :global(button[aria-pressed="true"]:hover) {
+    color: var(--brand-hover-foreground);
+    background: var(--lead-site-accent-hover);
+  }
+  .vehiclePanel
+    :global(button[aria-pressed="false"] [data-slot="picker-option-meta"]) {
+    color: var(--desktop-prose-text);
+  }
+  .modelPrompt {
+    display: grid;
+    flex: 1;
+    place-content: center;
+    padding: calc(var(--spacing) * 6);
+    font-size: calc(var(--spacing) * 3.5);
+    color: var(--muted-foreground);
+    text-align: center;
+  }
+  .derivatives {
+    margin-top: calc(var(--spacing) * 4);
+    border-top: var(--desktop-border-width) solid var(--border);
+  }
+  .groupGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: calc(var(--spacing) * 3);
+    padding: 0 calc(var(--spacing) * 5) calc(var(--spacing) * 5);
+  }
+  .groupGrid .options {
+    min-width: 0;
+    padding: calc(var(--spacing) * 3.5) 0 0;
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 4);
+  }
+  .groupGrid .options[data-filter-section="category"],
+  .groupGrid .options[data-filter-section="transmission"] {
+    grid-column: 1 / -1;
+  }
+  .groupGrid
+    .options[data-filter-section="transmission"]
+    :global([data-slot="marketplace-option-grid"]) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .groupGrid:has(> [data-filter-section="price"]) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  :is(.groupGrid, .focusedContent)
+    :global([data-slot="numeric-range-presets"]) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  :is(.groupGrid, .focusedContent) :global([data-slot="numeric-range-filter"]) {
+    padding: calc(var(--spacing) * 3.5);
+  }
+  :is(.groupGrid, .focusedContent)
+    :global([data-slot="numeric-range-filter"] > :not(:last-child)) {
+    margin-block-end: calc(var(--spacing) * 4);
+  }
+  :is(.groupGrid, .focusedContent)
+    :global([data-slot="numeric-range-summary"]) {
+    font-size: calc(var(--spacing) * 4.5);
+    font-weight: var(--font-weight-medium);
+    line-height: calc(var(--spacing) * 6);
+  }
+  :is(.groupGrid, .focusedContent)
+    :global([data-slot="numeric-range-presets"] button) {
+    height: calc(var(--spacing) * 11);
+    min-height: calc(var(--spacing) * 11);
+    font-weight: var(--font-weight-medium);
+  }
+  :is(.groupGrid, .focusedContent)
+    :global([data-slot="numeric-range-filter"] input),
+  .groupGrid
+    :global([data-slot="numeric-range-filter"] label > span[aria-hidden]) {
+    height: calc(var(--spacing) * 13);
+  }
+  .groupGrid
+    .options[data-filter-section="price"]
+    :global(label > span[aria-hidden="true"]) {
+    font-size: calc(var(--spacing) * 3.5);
+    white-space: nowrap;
+  }
+  .groupGrid :global([data-slot="marketplace-category-options"]) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: calc(var(--spacing) * 3.5);
+  }
+  .groupGrid
+    :global(
+      :is(
+        [data-slot="marketplace-option-grid"],
+        [data-slot="marketplace-country-option-grid"]
+      )
+    ) {
+    padding: calc(var(--spacing) * 3.5);
+  }
+  .groupGrid
+    :global(
+      :is(
+        [data-slot="marketplace-option-grid"],
+        [data-slot="marketplace-country-option-grid"]
+      )
+      button
+    ) {
+    min-height: calc(var(--spacing) * 11);
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
+    font-weight: var(--font-weight-medium);
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .groupGrid :global([data-slot="marketplace-category-option"]) {
+    grid-template-columns: calc(var(--spacing) * 15) minmax(0, 1fr) calc(
+        var(--spacing) *
+        5
+      );
+    gap: calc(var(--spacing) * 2.5);
+    min-height: calc(var(--spacing) * 18);
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .groupGrid
+    :global([data-slot="marketplace-category-option"] > span:first-child) {
+    width: calc(var(--spacing) * 15);
+    height: calc(var(--spacing) * 11);
+  }
+  .groupGrid
+    :global(
+      [data-slot="marketplace-category-option"]
+      > span:nth-child(2)
+      > span:first-child
+    ) {
+    font-weight: var(--font-weight-medium);
+  }
+  .groupGrid
+    :global(
+      [data-slot="marketplace-category-option"]
+      > span:nth-child(2)
+      > span:last-child
+    ) {
+    font-size: calc(var(--spacing) * 3);
+    font-weight: var(--font-weight-normal);
+    line-height: calc(var(--spacing) * 4);
+  }
+  .groupGrid
+    :global([data-slot="marketplace-category-option"] > span:last-child) {
+    width: calc(var(--spacing) * 5);
+    height: calc(var(--spacing) * 5);
+  }
+  .optionsHeading {
+    display: flex;
+    gap: calc(var(--spacing) * 3);
+    align-items: center;
+    justify-content: space-between;
+    min-height: calc(var(--spacing) * 9);
+    margin: 0 calc(var(--spacing) * 4);
+  }
+  .optionsHeading h2 {
+    font-size: calc(var(--spacing) * 4);
+  }
+  .optionsHeading button {
+    height: calc(var(--spacing) * 9);
+    box-shadow: none;
+  }
+  :is(.groupGrid, .vehicleColumns) .optionsHeading {
+    gap: calc(var(--spacing) * 2);
+    min-height: calc(var(--spacing) * 8);
+    margin-inline: calc(var(--spacing) * 3.5);
+  }
+  :is(.groupGrid, .vehicleColumns) .optionsHeading h2 {
+    font-size: calc(var(--spacing) * 3.75);
+    font-weight: var(--font-weight-medium);
+    line-height: calc(var(--spacing) * 5);
+  }
+  :is(.groupGrid, .vehicleColumns) .optionsHeading button {
+    position: relative;
+    height: calc(var(--spacing) * 8);
+    padding-inline: calc(var(--spacing) * 2.5);
+  }
+  :is(.groupGrid, .vehicleColumns) .optionsHeading button::after {
+    position: absolute;
+    inset: calc(var(--spacing) * -1.5) 0;
+    content: "";
+  }
+  .keyword {
+    display: grid;
+    gap: calc(var(--spacing) * 2);
+    font-size: calc(var(--spacing) * 3.5);
+  }
+  .keyword input {
+    height: calc(var(--spacing) * 11);
+    background: var(--control);
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .groupGrid .keyword {
+    padding: calc(var(--spacing) * 3.5);
+  }
+  .groupGrid .keyword input {
+    height: calc(var(--spacing) * 11);
+  }
+  .singleActionFooter {
+    justify-content: flex-end;
+  }
+}

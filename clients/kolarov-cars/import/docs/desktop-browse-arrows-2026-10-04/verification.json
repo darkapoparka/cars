@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-04",
+  "repository": "L:/CODEX/cars",
+  "branch": "main",
+  "headAtVerification": "c2c2ba0ea87a06de318566d64ff75e06720560ae",
+  "scope": "Desktop Home browse-card arrow circle and redundant focus rule; preserves prior verified discovery inset and focus-owner refinement.",
+  "runtime": {
+    "node": "24.21.0",
+    "liveUrl": "http://127.0.0.1:6790/bg",
+    "qa": "C:/Users/radev/.codex/tmp/cars-import-desktop-continuation-2026-10-04-qa"
+  },
+  "sources": [
+    {
+      "path": "src/lib/components/common/DesktopDiscoveryPanel.svelte",
+      "sha256": "27135a388c3544ad1f844ce40d5c24b0ce4abf7a217bb95280817173e67d8da2"
+    },
+    {
+      "path": "src/lib/components/common/DesktopSearchControl.svelte",
+      "sha256": "24090cd50d06c878ce861779f9bf9227c865ba9ea842ba9fb55b7731dd76f019"
+    },
+    {
+      "path": "src/lib/components/home/DesktopHomeHero.svelte",
+      "sha256": "1fa45849898e7b59e000fd81ae44eaa5d1ad67ba865dece9211e55f3fb80edcd"
+    },
+    {
+      "path": "src/lib/components/home/HomeBrowseCard.svelte",
+      "sha256": "7206e56098ce83cf439296c36b44f4122e48243c8339ecc00e770aef46d45012"
+    },
+    {
+      "path": "src/lib/styles/daynight.css",
+      "sha256": "c8e545ec8bd9d894be75340a08fbf682182f176a21b4b5d870b66c4eeb17550d"
+    }
+  ],
+  "checks": {
+    "svelte": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "productionBuild": "passed",
+    "scopedEslint": "passed",
+    "scopedPrettier": "passed",
+    "diffCheck": "passed",
+    "browseE2e": {
+      "suite": "tests/visual-hierarchy.e2e.ts",
+      "project": "desktop",
+      "passed": 3,
+      "failed": 0,
+      "cases": [
+        "Desktop four-width grid containment, keyboard focus and all five Enter/Back destinations",
+        "BG: five destinations without JavaScript",
+        "EN: five destinations without JavaScript"
+      ]
+    },
+    "workspaceDoctor": {
+      "fetch": "passed",
+      "unrelatedDirtyWork": "preserved"
+    }
+  },
+  "screenshots": {
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "locale": "bg",
+    "scrollY": 48,
+    "before": "before-home.jpg",
+    "after": "after-home.jpg",
+    "identicalCardDimensions": true
+  },
+  "desktop": {
+    "locales": [
+      "bg",
+      "en"
+    ],
+    "widths": [
+      768,
+      1024,
+      1440,
+      1920
+    ],
+    "cases": 8,
+    "cardsPerCase": 5,
+    "totalCardsChecked": 40,
+    "overflow": false,
+    "nestedControls": 0,
+    "arrow": {
+      "background": "rgb(23, 25, 28)",
+      "color": "rgb(255, 255, 255)",
+      "width": "48px",
+      "height": "48px",
+      "radius": "999px"
+    }
+  },
+  "keyboardFocus": {
+    "target": "Stock browse card",
+    "outline": "rgb(23, 25, 28) solid 3px",
+    "offset": "3px",
+    "shadow": "rgb(255, 255, 255) 0px 0px 0px 2px"
+  },
+  "mobile": {
+    "locales": [
+      "bg",
+      "en"
+    ],
+    "widths": [
+      320,
+      390
+    ],
+    "cases": 4,
+    "cardsPerCase": 4,
+    "totalCardsCompared": 16,
+    "identical": true,
+    "overflow": false,
+    "comparison": "Rendered browse-card copy, destinations, geometry, typography, surfaces and arrow presentation; focused component comparison."
+  },
+  "priorBoxRefinement": "../hero-box-refinement-2026-10-04/verification.json",
+  "boundary": "Local source and isolated build verification; no template release selection or dealer deployment."
+}

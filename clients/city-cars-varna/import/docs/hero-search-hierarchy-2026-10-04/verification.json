@@ -1,0 +1,485 @@
+{
+	"date": "2026-10-04",
+	"origin": "http://127.0.0.1:6790",
+	"scope": "Reusable Import source and local preview",
+	"sources": [
+		{
+			"path": "src/lib/components/common/DesktopSearchControl.svelte",
+			"sha256": "c58353f5be4c91c3bcac0de059b108eb633f163e294c831de185b37edbf8870c"
+		},
+		{
+			"path": "src/lib/components/common/DesktopDiscoveryPanel.svelte",
+			"sha256": "7c04772ce4d37eaebc1e94222e8a57b95349efb77bd368f80467c6ee91dcda59"
+		},
+		{
+			"path": "src/lib/components/home/DesktopHomeHero.svelte",
+			"sha256": "51c39ee6bc060e499ff7859f0fac7a47d41945f0e0989c27bcfdac410a9592e9"
+		},
+		{
+			"path": "src/lib/content/home-discovery.ts",
+			"sha256": "265994621fe450d9e97f27167ebc6cfa507fb42f9a1ae44b48bf8d98dac20e3f"
+		},
+		{
+			"path": "src/routes/+layout.svelte",
+			"sha256": "c3b5ea60cb68319a031d41cb637d190056fcf8e89748f98cc8227bc788316f60"
+		},
+		{
+			"path": "tests/typography-contact.e2e.ts",
+			"sha256": "b3c970cbad8cc4bdf2d0f8257d2895e4c687216f987c421bd44409575d64d680"
+		}
+	],
+	"checks": {
+		"svelte": {
+			"errors": 0,
+			"warnings": 0
+		},
+		"productionBuild": "passed",
+		"scopedEslint": "passed",
+		"scopedPrettier": "passed",
+		"desktopSearchJourneys": {
+			"passed": 6
+		},
+		"earlierColdFontCases": {
+			"passed": 4
+		},
+		"architecture": {
+			"routes": 57,
+			"reachableComponents": 230,
+			"tailwindEntries": 1
+		},
+		"localImages": 955
+	},
+	"desktop": [
+		{
+			"locale": "bg",
+			"route": "home",
+			"width": 768,
+			"height": 1000,
+			"horizontalOverflow": false,
+			"fieldHeight": 48,
+			"entryFontSize": 18,
+			"entryFontWeight": 400,
+			"iconWidth": 44,
+			"iconHeight": 44,
+			"visibleActionText": "",
+			"actionName": "Търси",
+			"visibleActionWidth": 36,
+			"visibleActionHeight": 36,
+			"actionCornerRadius": 999,
+			"actionPadding": 4,
+			"actionBackgroundClip": "content-box"
+		},
+		{
+			"locale": "bg",
+			"route": "home",
+			"width": 1024,
+			"height": 1000,
+			"horizontalOverflow": false,
+			"fieldHeight": 48,
+			"entryFontSize": 18,
+			"entryFontWeight": 400,
+			"iconWidth": 44,
+			"iconHeight": 44,
+			"visibleActionText": "",
+			"actionName": "Търси",
+			"visibleActionWidth": 36,
+			"visibleActionHeight": 36,
+			"actionCornerRadius": 999,
+			"actionPadding": 4,
+			"actionBackgroundClip": "content-box"
+		},
+		{
+			"locale": "bg",
+			"route": "home",
+			"width": 1440,
+			"height": 1000,
+			"horizontalOverflow": false,
+			"fieldHeight": 48,
+			"entryFontSize": 18,
+			"entryFontWeight": 400,
+			"iconWidth": 44,
+			"iconHeight": 44,
+			"visibleActionText": "",
+			"actionName": "Търси",
+			"visibleActionWidth": 36,
+			"visibleActionHeight": 36,
+			"actionCornerRadius": 999,
+			"actionPadding": 4,
+			"actionBackgroundClip": "content-box"
+		},
+		{
+			"locale": "bg",
+			"route": "home",
+			"width": 1920,
+			"height": 1000,
+			"horizontalOverflow": false,
+			"fieldHeight": 48,
+			"entryFontSize": 18,
+			"entryFontWeight": 400,
+			"iconWidth": 44,
+			"iconHeight": 44,
+			"visibleActionText": "",
+			"actionName": "Търси",
+			"visibleActionWidth": 36,
+			"visibleActionHeight": 36,
+			"actionCornerRadius": 999,
+			"actionPadding": 4,
+			"actionBackgroundClip": "content-box"
+		},
+		{
+			"locale": "bg",
+			"route": "inventory",
+			"width": 768,
+			"height": 1000,
+			"horizontalOverflow": false,
+			"fieldHeight": 48,
+			"entryFontSize": 18,
+			"entryFontWeight": 400,
+			"iconWidth": 44,
+			"iconHeight": 44,
+			"visibleActionText": "",
+			"actionName": "Търси",
+			"visibleActionWidth": 36,
+			"visibleActionHeight": 36,
+			"actionCornerRadius": 999,
+			"actionPadding": 4,
+			"actionBackgroundClip": "content-box"
+		},
+		{
+			"locale": "bg",
+			"route": "inventory",
+			"width": 1440,
+			"height": 1000,
+			"horizontalOverflow": false,
+			"fieldHeight": 48,
+			"entryFontSize": 18,
+			"entryFontWeight": 400,
+			"iconWidth": 44,
+			"iconHeight": 44,
+			"visibleActionText": "",
+			"actionName": "Търси",
+			"visibleActionWidth": 36,
+			"visibleActionHeight": 36,
+			"actionCornerRadius": 999,
+			"actionPadding": 4,
+			"actionBackgroundClip": "content-box"
+		},
+		{
+			"locale": "bg",
+			"route": "services",
+			"width": 768,
+			"height": 1000,
+			"horizontalOverflow": false,
+			"fieldHeight": 48,
+			"entryFontSize": 18,
+			"entryFontWeight": 400,
+			"iconWidth": 44,
+			"iconHeight": 44,
+			"visibleActionText": "",
+			"actionName": "Търси",
+			"visibleActionWidth": 36,
+			"visibleActionHeight": 36,
+			"actionCornerRadius": 999,
+			"actionPadding": 4,
+			"actionBackgroundClip": "content-box"
+		},
+		{
+			"locale": "bg",
+			"route": "services",
+			"width": 1440,
+			"height": 1000,
+			"horizontalOverflow": false,
+			"fieldHeight": 48,
+			"entryFontSize": 18,
+			"entryFontWeight": 400,
+			"iconWidth": 44,
+			"iconHeight": 44,
+			"visibleActionText": "",
+			"actionName": "Търси",
+			"visibleActionWidth": 36,
+			"visibleActionHeight": 36,
+			"actionCornerRadius": 999,
+			"actionPadding": 4,
+			"actionBackgroundClip": "content-box"
+		},
+		{
+			"locale": "en",
+			"route": "home",
+			"width": 768,
+			"height": 1000,
+			"horizontalOverflow": false,
+			"fieldHeight": 48,
+			"entryFontSize": 18,
+			"entryFontWeight": 400,
+			"iconWidth": 44,
+			"iconHeight": 44,
+			"visibleActionText": "",
+			"actionName": "Search",
+			"visibleActionWidth": 36,
+			"visibleActionHeight": 36,
+			"actionCornerRadius": 999,
+			"actionPadding": 4,
+			"actionBackgroundClip": "content-box"
+		},
+		{
+			"locale": "en",
+			"route": "home",
+			"width": 1024,
+			"height": 1000,
+			"horizontalOverflow": false,
+			"fieldHeight": 48,
+			"entryFontSize": 18,
+			"entryFontWeight": 400,
+			"iconWidth": 44,
+			"iconHeight": 44,
+			"visibleActionText": "",
+			"actionName": "Search",
+			"visibleActionWidth": 36,
+			"visibleActionHeight": 36,
+			"actionCornerRadius": 999,
+			"actionPadding": 4,
+			"actionBackgroundClip": "content-box"
+		},
+		{
+			"locale": "en",
+			"route": "home",
+			"width": 1440,
+			"height": 1000,
+			"horizontalOverflow": false,
+			"fieldHeight": 48,
+			"entryFontSize": 18,
+			"entryFontWeight": 400,
+			"iconWidth": 44,
+			"iconHeight": 44,
+			"visibleActionText": "",
+			"actionName": "Search",
+			"visibleActionWidth": 36,
+			"visibleActionHeight": 36,
+			"actionCornerRadius": 999,
+			"actionPadding": 4,
+			"actionBackgroundClip": "content-box"
+		},
+		{
+			"locale": "en",
+			"route": "home",
+			"width": 1920,
+			"height": 1000,
+			"horizontalOverflow": false,
+			"fieldHeight": 48,
+			"entryFontSize": 18,
+			"entryFontWeight": 400,
+			"iconWidth": 44,
+			"iconHeight": 44,
+			"visibleActionText": "",
+			"actionName": "Search",
+			"visibleActionWidth": 36,
+			"visibleActionHeight": 36,
+			"actionCornerRadius": 999,
+			"actionPadding": 4,
+			"actionBackgroundClip": "content-box"
+		},
+		{
+			"locale": "en",
+			"route": "inventory",
+			"width": 768,
+			"height": 1000,
+			"horizontalOverflow": false,
+			"fieldHeight": 48,
+			"entryFontSize": 18,
+			"entryFontWeight": 400,
+			"iconWidth": 44,
+			"iconHeight": 44,
+			"visibleActionText": "",
+			"actionName": "Search",
+			"visibleActionWidth": 36,
+			"visibleActionHeight": 36,
+			"actionCornerRadius": 999,
+			"actionPadding": 4,
+			"actionBackgroundClip": "content-box"
+		},
+		{
+			"locale": "en",
+			"route": "inventory",
+			"width": 1440,
+			"height": 1000,
+			"horizontalOverflow": false,
+			"fieldHeight": 48,
+			"entryFontSize": 18,
+			"entryFontWeight": 400,
+			"iconWidth": 44,
+			"iconHeight": 44,
+			"visibleActionText": "",
+			"actionName": "Search",
+			"visibleActionWidth": 36,
+			"visibleActionHeight": 36,
+			"actionCornerRadius": 999,
+			"actionPadding": 4,
+			"actionBackgroundClip": "content-box"
+		},
+		{
+			"locale": "en",
+			"route": "services",
+			"width": 768,
+			"height": 1000,
+			"horizontalOverflow": false,
+			"fieldHeight": 48,
+			"entryFontSize": 18,
+			"entryFontWeight": 400,
+			"iconWidth": 44,
+			"iconHeight": 44,
+			"visibleActionText": "",
+			"actionName": "Search",
+			"visibleActionWidth": 36,
+			"visibleActionHeight": 36,
+			"actionCornerRadius": 999,
+			"actionPadding": 4,
+			"actionBackgroundClip": "content-box"
+		},
+		{
+			"locale": "en",
+			"route": "services",
+			"width": 1440,
+			"height": 1000,
+			"horizontalOverflow": false,
+			"fieldHeight": 48,
+			"entryFontSize": 18,
+			"entryFontWeight": 400,
+			"iconWidth": 44,
+			"iconHeight": 44,
+			"visibleActionText": "",
+			"actionName": "Search",
+			"visibleActionWidth": 36,
+			"visibleActionHeight": 36,
+			"actionCornerRadius": 999,
+			"actionPadding": 4,
+			"actionBackgroundClip": "content-box"
+		}
+	],
+	"placeholderColor": "rgb(105, 112, 120)",
+	"inputValueColor": "rgb(23, 25, 28)",
+	"mobilePreservation": [
+		{
+			"locale": "bg",
+			"route": "services",
+			"width": 320,
+			"inspectedVisibleElements": 13,
+			"matched": true
+		},
+		{
+			"locale": "bg",
+			"route": "services",
+			"width": 390,
+			"inspectedVisibleElements": 13,
+			"matched": true
+		},
+		{
+			"locale": "bg",
+			"route": "home",
+			"width": 320,
+			"inspectedVisibleElements": 7,
+			"matched": true
+		},
+		{
+			"locale": "bg",
+			"route": "home",
+			"width": 390,
+			"inspectedVisibleElements": 7,
+			"matched": true
+		}
+	],
+	"manualSubmissions": [
+		{
+			"route": "inventory",
+			"query": "BMW",
+			"url": "/bg/inventory?sort=best-match&view=4&keyword=BMW",
+			"resultCount": 15,
+			"enteredValueRetained": true
+		},
+		{
+			"route": "services",
+			"query": "VIN",
+			"url": "/bg/services?q=VIN",
+			"resultCount": 1
+		}
+	],
+	"screenshots": {
+		"width": 1440,
+		"height": 1000,
+		"bgMatchedPairs": ["home", "cars", "services"],
+		"enAfter": ["home", "cars", "services"]
+	},
+	"limits": [
+		"Mobile evidence covers inspected first-viewport elements on BG Home and Services at 320/390px.",
+		"No template promotion, dealer deployment or hosted acceptance."
+	],
+	"squareButtonFollowUp": {
+		"desktopCasesPassed": 16,
+		"focusedExistingTestsPassed": 3,
+		"mobileCases": [
+			{
+				"width": 320,
+				"locale": "bg",
+				"horizontalOverflow": false,
+				"route": "home",
+				"visibleDesktopSearch": false
+			},
+			{
+				"width": 390,
+				"locale": "bg",
+				"horizontalOverflow": false,
+				"route": "home",
+				"visibleDesktopSearch": false
+			},
+			{
+				"width": 320,
+				"locale": "bg",
+				"horizontalOverflow": false,
+				"route": "services",
+				"visibleDesktopSearch": false
+			},
+			{
+				"width": 390,
+				"locale": "bg",
+				"horizontalOverflow": false,
+				"route": "services",
+				"visibleDesktopSearch": false
+			},
+			{
+				"width": 320,
+				"locale": "en",
+				"horizontalOverflow": false,
+				"route": "home",
+				"visibleDesktopSearch": false
+			},
+			{
+				"width": 390,
+				"locale": "en",
+				"horizontalOverflow": false,
+				"route": "home",
+				"visibleDesktopSearch": false
+			},
+			{
+				"width": 320,
+				"locale": "en",
+				"horizontalOverflow": false,
+				"route": "services",
+				"visibleDesktopSearch": false
+			},
+			{
+				"width": 390,
+				"locale": "en",
+				"horizontalOverflow": false,
+				"route": "services",
+				"visibleDesktopSearch": false
+			}
+		]
+	},
+	"roundedButtonFollowUp": {
+		"visibleActionDiameter": 36,
+		"verification": "Scoped formatting/lint and rendered BG/EN cases; existing action tests remain applicable because geometry and behavior are unchanged.",
+		"desktopCasesPassed": 16,
+		"desktopOnly": true,
+		"clickTarget": 44,
+		"visibleActionShape": "circle"
+	}
+}

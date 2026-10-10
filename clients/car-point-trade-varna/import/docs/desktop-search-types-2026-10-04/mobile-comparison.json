@@ -1,0 +1,49 @@
+[
+	{
+		"route": "home",
+		"width": 320,
+		"height": 844,
+		"changedPixels": 0,
+		"bounds": null
+	},
+	{
+		"route": "inventory",
+		"width": 320,
+		"height": 844,
+		"changedPixels": 0,
+		"bounds": null
+	},
+	{
+		"route": "services",
+		"width": 320,
+		"height": 844,
+		"changedPixels": 0,
+		"bounds": null
+	},
+	{
+		"route": "home",
+		"width": 390,
+		"height": 844,
+		"changedPixels": 0,
+		"bounds": null
+	},
+	{
+		"route": "inventory",
+		"width": 390,
+		"height": 844,
+		"changedPixels": 1121,
+		"bounds": {
+			"left": 8,
+			"top": 768,
+			"right": 167,
+			"bottom": 791
+		}
+	},
+	{
+		"route": "services",
+		"width": 390,
+		"height": 844,
+		"changedPixels": 0,
+		"bounds": null
+	}
+]

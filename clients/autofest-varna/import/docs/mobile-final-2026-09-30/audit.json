@@ -1,0 +1,3504 @@
+{
+	"date": "2026-09-30",
+	"canonical": "L:/CODEX/cars/templates/import",
+	"devUrl": "http://127.0.0.1:5174/en",
+	"previewUrl": "http://127.0.0.1:4198",
+	"runtime": {
+		"node": "24.21.0",
+		"npm": "11.19.0",
+		"sourceDigest": "2012941df31bcd07e789931010bca9d61a30339d6117e8b09429424e6cd1b753"
+	},
+	"checks": {
+		"svelteErrors": 0,
+		"svelteWarnings": 0,
+		"formatting": "passed",
+		"eslint": "passed",
+		"nativeRouteModules": 57,
+		"reachableModules": 188,
+		"localImageSignatures": 824,
+		"unitTests": 117,
+		"unitFiles": 16,
+		"build": "passed"
+	},
+	"tests": {
+		"mobile": {
+			"stats": {
+				"startTime": "2026-09-30T00:47:52.459Z",
+				"duration": 157143.473,
+				"expected": 136,
+				"skipped": 43,
+				"unexpected": 0,
+				"flaky": 0
+			},
+			"cases": [
+				{
+					"file": "accessibility.e2e.ts",
+					"line": 6,
+					"title": "accessible landmarks and controls on /",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2144,
+					"skipReason": []
+				},
+				{
+					"file": "accessibility.e2e.ts",
+					"line": 6,
+					"title": "accessible landmarks and controls on /inventory",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1870,
+					"skipReason": []
+				},
+				{
+					"file": "accessibility.e2e.ts",
+					"line": 6,
+					"title": "accessible landmarks and controls on /contact",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2411,
+					"skipReason": []
+				},
+				{
+					"file": "accessibility.e2e.ts",
+					"line": 6,
+					"title": "accessible landmarks and controls on /import",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2322,
+					"skipReason": []
+				},
+				{
+					"file": "accessibility.e2e.ts",
+					"line": 6,
+					"title": "accessible landmarks and controls on /sell-your-car",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1531,
+					"skipReason": []
+				},
+				{
+					"file": "accessibility.e2e.ts",
+					"line": 6,
+					"title": "accessible landmarks and controls on /financing",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1538,
+					"skipReason": []
+				},
+				{
+					"file": "desktop-page-patterns.e2e.ts",
+					"line": 10,
+					"title": "bg: service, about and contact heroes share their geometry",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 1,
+					"skipReason": ["Desktop page composition."]
+				},
+				{
+					"file": "desktop-page-patterns.e2e.ts",
+					"line": 46,
+					"title": "bg: service search filters descriptions, clears and follows useful destinations",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 1,
+					"skipReason": ["Desktop page composition."]
+				},
+				{
+					"file": "desktop-page-patterns.e2e.ts",
+					"line": 10,
+					"title": "en: service, about and contact heroes share their geometry",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 1,
+					"skipReason": ["Desktop page composition."]
+				},
+				{
+					"file": "desktop-page-patterns.e2e.ts",
+					"line": 46,
+					"title": "en: service search filters descriptions, clears and follows useful destinations",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 1,
+					"skipReason": ["Desktop page composition."]
+				},
+				{
+					"file": "desktop-page-patterns.e2e.ts",
+					"line": 93,
+					"title": "service search is server-rendered and service links are distinct",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 1,
+					"skipReason": ["Desktop page composition."]
+				},
+				{
+					"file": "desktop-page-patterns.e2e.ts",
+					"line": 111,
+					"title": "page actions are real destinations and the services directory is accessible",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 1,
+					"skipReason": ["Desktop page composition."]
+				},
+				{
+					"file": "desktop-search.e2e.ts",
+					"line": 9,
+					"title": "reference-style icon tabs connect to compact fields without changing the mobile tab variant",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 2,
+					"skipReason": [null]
+				},
+				{
+					"file": "desktop-search.e2e.ts",
+					"line": 50,
+					"title": "search entry opens a focused dialog with one intact focus outline and pinned actions",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 1,
+					"skipReason": [null]
+				},
+				{
+					"file": "desktop-search.e2e.ts",
+					"line": 88,
+					"title": "nested make selection returns to search, keeps the draft, and submits the same canonical query",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 1,
+					"skipReason": [null]
+				},
+				{
+					"file": "desktop-search.e2e.ts",
+					"line": 121,
+					"title": "empty results and an unavailable preview never manufacture a result count",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 2,
+					"skipReason": [null]
+				},
+				{
+					"file": "desktop-search.e2e.ts",
+					"line": 151,
+					"title": "header search reuses the same focused result dialog",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 1,
+					"skipReason": [null]
+				},
+				{
+					"file": "filter-inputs.e2e.ts",
+					"line": 10,
+					"title": "en: fields and first option retain their position across categories",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 1,
+					"skipReason": ["Desktop filter composition only."]
+				},
+				{
+					"file": "filter-inputs.e2e.ts",
+					"line": 10,
+					"title": "bg: fields and first option retain their position across categories",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 1,
+					"skipReason": ["Desktop filter composition only."]
+				},
+				{
+					"file": "filter-inputs.e2e.ts",
+					"line": 63,
+					"title": "clearing a category retains other drafts and returns focus to its input",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 1,
+					"skipReason": ["Desktop filter composition only."]
+				},
+				{
+					"file": "filter-inputs.e2e.ts",
+					"line": 91,
+					"title": "desktop categories stay readable and stationary across viewport sizes",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 1,
+					"skipReason": ["Desktop filter composition only."]
+				},
+				{
+					"file": "filter-inputs.e2e.ts",
+					"line": 131,
+					"title": "category tabs and search stay visible while long choices scroll",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 1,
+					"skipReason": ["Desktop filter composition only."]
+				},
+				{
+					"file": "filter-inputs.e2e.ts",
+					"line": 165,
+					"title": "draft makes update models and ranges submit the same filters as the preview",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 1,
+					"skipReason": ["Desktop filter composition only."]
+				},
+				{
+					"file": "filter-inputs.e2e.ts",
+					"line": 203,
+					"title": "invalid ranges reveal their category and focus the invalid input",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 1,
+					"skipReason": ["Desktop filter composition only."]
+				},
+				{
+					"file": "filter-inputs.e2e.ts",
+					"line": 226,
+					"title": "searched-out choices survive switching categories and closing discards the draft",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 2,
+					"skipReason": ["Desktop filter composition only."]
+				},
+				{
+					"file": "filter-inputs.e2e.ts",
+					"line": 247,
+					"title": "clear removes visible and passthrough filters while retaining the view",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 1,
+					"skipReason": ["Desktop filter composition only."]
+				},
+				{
+					"file": "filter-inputs.e2e.ts",
+					"line": 264,
+					"title": "zero results recover and unavailable counts do not block filtering",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 1,
+					"skipReason": ["Desktop filter composition only."]
+				},
+				{
+					"file": "filter-inputs.e2e.ts",
+					"line": 290,
+					"title": "free-text inventory search is retained when adding a filter",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 1,
+					"skipReason": ["Desktop filter composition only."]
+				},
+				{
+					"file": "forms-and-detail.e2e.ts",
+					"line": 13,
+					"title": "contact submission works without JavaScript at both widths",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 734,
+					"skipReason": []
+				},
+				{
+					"file": "forms-and-detail.e2e.ts",
+					"line": 36,
+					"title": "desktop enquiry reports saving separately from delivery",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 134,
+					"skipReason": [null]
+				},
+				{
+					"file": "forms-and-detail.e2e.ts",
+					"line": 50,
+					"title": "PDP opens the gallery and enquiry without legacy styles",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 132,
+					"skipReason": [null]
+				},
+				{
+					"file": "forms-and-detail.e2e.ts",
+					"line": 68,
+					"title": "native route changes do not leave old modal or body cleanup behind",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1018,
+					"skipReason": []
+				},
+				{
+					"file": "inventory.e2e.ts",
+					"line": 4,
+					"title": "inventory remains server-rendered without JavaScript",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 517,
+					"skipReason": []
+				},
+				{
+					"file": "inventory.e2e.ts",
+					"line": 19,
+					"title": "filters and detail return retain the original URL",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 912,
+					"skipReason": []
+				},
+				{
+					"file": "inventory.e2e.ts",
+					"line": 29,
+					"title": "desktop filter search does not discard a previously selected make",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 129,
+					"skipReason": [null]
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 11,
+					"title": "import listing and source submissions en 320",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 3352,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 80,
+					"title": "sell VIN and manual submissions en 320",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 3307,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 114,
+					"title": "calculator, contact trade-in and menu en 320",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 4011,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 183,
+					"title": "vehicle gallery, specs and inquiry en 320",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2443,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 11,
+					"title": "import listing and source submissions bg 320",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 3421,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 80,
+					"title": "sell VIN and manual submissions bg 320",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 3418,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 114,
+					"title": "calculator, contact trade-in and menu bg 320",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 4192,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 183,
+					"title": "vehicle gallery, specs and inquiry bg 320",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2942,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 11,
+					"title": "import listing and source submissions en 390",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 3511,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 80,
+					"title": "sell VIN and manual submissions en 390",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 3463,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 114,
+					"title": "calculator, contact trade-in and menu en 390",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 4573,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 183,
+					"title": "vehicle gallery, specs and inquiry en 390",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2747,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 11,
+					"title": "import listing and source submissions bg 390",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 3902,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 80,
+					"title": "sell VIN and manual submissions bg 390",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 3912,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 114,
+					"title": "calculator, contact trade-in and menu bg 390",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 4198,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 183,
+					"title": "vehicle gallery, specs and inquiry bg 390",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2714,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 11,
+					"title": "import listing and source submissions en 1440",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2214,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 80,
+					"title": "sell VIN and manual submissions en 1440",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1483,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 114,
+					"title": "calculator, contact trade-in and menu en 1440",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2070,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 183,
+					"title": "vehicle gallery, specs and inquiry en 1440",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 927,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 11,
+					"title": "import listing and source submissions bg 1440",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2264,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 80,
+					"title": "sell VIN and manual submissions bg 1440",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1828,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 114,
+					"title": "calculator, contact trade-in and menu bg 1440",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2483,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 183,
+					"title": "vehicle gallery, specs and inquiry bg 1440",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1105,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 235,
+					"title": "no-JS localized contact submission en 320",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2669,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 235,
+					"title": "no-JS localized contact submission bg 320",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 3648,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 235,
+					"title": "no-JS localized contact submission en 390",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2740,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 235,
+					"title": "no-JS localized contact submission bg 390",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2566,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 235,
+					"title": "no-JS localized contact submission en 1440",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2675,
+					"skipReason": []
+				},
+				{
+					"file": "localization-interactions.e2e.ts",
+					"line": 235,
+					"title": "no-JS localized contact submission bg 1440",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2457,
+					"skipReason": []
+				},
+				{
+					"file": "localization-validation.e2e.ts",
+					"line": 5,
+					"title": "native constraints use the page language in an opposite-language browser: en",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1097,
+					"skipReason": []
+				},
+				{
+					"file": "localization-validation.e2e.ts",
+					"line": 5,
+					"title": "native constraints use the page language in an opposite-language browser: bg",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1015,
+					"skipReason": []
+				},
+				{
+					"file": "localization.e2e.ts",
+					"line": 32,
+					"title": "native route families en 320",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 8295,
+					"skipReason": []
+				},
+				{
+					"file": "localization.e2e.ts",
+					"line": 32,
+					"title": "native route families bg 320",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 6260,
+					"skipReason": []
+				},
+				{
+					"file": "localization.e2e.ts",
+					"line": 32,
+					"title": "native route families en 390",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 7394,
+					"skipReason": []
+				},
+				{
+					"file": "localization.e2e.ts",
+					"line": 32,
+					"title": "native route families bg 390",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 8509,
+					"skipReason": []
+				},
+				{
+					"file": "localization.e2e.ts",
+					"line": 32,
+					"title": "native route families en 1440",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 9583,
+					"skipReason": []
+				},
+				{
+					"file": "localization.e2e.ts",
+					"line": 32,
+					"title": "native route families bg 1440",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 8355,
+					"skipReason": []
+				},
+				{
+					"file": "localization.e2e.ts",
+					"line": 127,
+					"title": "preferences save dismiss reload and focus 320",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1831,
+					"skipReason": []
+				},
+				{
+					"file": "localization.e2e.ts",
+					"line": 127,
+					"title": "preferences save dismiss reload and focus 390",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1882,
+					"skipReason": []
+				},
+				{
+					"file": "localization.e2e.ts",
+					"line": 127,
+					"title": "preferences save dismiss reload and focus 1440",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2576,
+					"skipReason": []
+				},
+				{
+					"file": "localization.e2e.ts",
+					"line": 169,
+					"title": "stale save cannot navigate after close and reopen",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1386,
+					"skipReason": []
+				},
+				{
+					"file": "localization.e2e.ts",
+					"line": 193,
+					"title": "no JavaScript preferences and contact are native forms",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 604,
+					"skipReason": []
+				},
+				{
+					"file": "localization.e2e.ts",
+					"line": 215,
+					"title": "explicit URL works with blocked storage and conflicting preferences",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 712,
+					"skipReason": []
+				},
+				{
+					"file": "localization.e2e.ts",
+					"line": 240,
+					"title": "language/country and cookies cannot leak between requests",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 125,
+					"skipReason": []
+				},
+				{
+					"file": "localization.e2e.ts",
+					"line": 258,
+					"title": "both import modes and sell wizard validate without business writes",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1059,
+					"skipReason": []
+				},
+				{
+					"file": "localization.e2e.ts",
+					"line": 282,
+					"title": "blocked cookies still allow explicit language and independent country selection",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1105,
+					"skipReason": []
+				},
+				{
+					"file": "localization.e2e.ts",
+					"line": 316,
+					"title": "client locale navigation and back update language, copy, SEO and links without reload",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1077,
+					"skipReason": []
+				},
+				{
+					"file": "localization.e2e.ts",
+					"line": 377,
+					"title": "only offered public routes reroute; resource and admin boundaries remain separate",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 81,
+					"skipReason": []
+				},
+				{
+					"file": "localization.e2e.ts",
+					"line": 407,
+					"title": "localized errors and slash redirects are private while assets stay cacheable",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 127,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 8,
+					"title": "mobile en account menu keeps legacy routes outside the locale prefix",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2152,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 8,
+					"title": "mobile bg account menu keeps legacy routes outside the locale prefix",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2784,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 41,
+					"title": "mobile home prioritizes its visible photo without downloading desktop artwork",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 806,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 55,
+					"title": "visible mobile inventory photos load delivery renditions and Contact prioritizes its banner",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1324,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 88,
+					"title": "mobile comparison supports adding, removing and clearing cars",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1685,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 111,
+					"title": "vehicle toolbar remains keyboard reachable outside the persistent panel at 320",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2689,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 111,
+					"title": "vehicle toolbar remains keyboard reachable outside the persistent panel at 390",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2549,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 167,
+					"title": "English mobile WCAG 2.2 AA and reflow: /en",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2210,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 167,
+					"title": "English mobile WCAG 2.2 AA and reflow: /en/inventory",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2049,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 167,
+					"title": "English mobile WCAG 2.2 AA and reflow: /en/inventory/11774283016080050",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1517,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 167,
+					"title": "English mobile WCAG 2.2 AA and reflow: /en/contact",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1631,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 167,
+					"title": "English mobile WCAG 2.2 AA and reflow: /en/import",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1905,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 167,
+					"title": "English mobile WCAG 2.2 AA and reflow: /en/sell-your-car",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1885,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 167,
+					"title": "English mobile WCAG 2.2 AA and reflow: /en/financing",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1829,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 167,
+					"title": "English mobile WCAG 2.2 AA and reflow: /en/calculator",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1899,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 167,
+					"title": "English mobile WCAG 2.2 AA and reflow: /en/about",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1867,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 167,
+					"title": "English mobile WCAG 2.2 AA and reflow: /en/services",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1600,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 167,
+					"title": "English mobile WCAG 2.2 AA and reflow: /en/blog",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1643,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 167,
+					"title": "English mobile WCAG 2.2 AA and reflow: /en/blog/vnos-ot-kanada-proverka",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1668,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 167,
+					"title": "English mobile WCAG 2.2 AA and reflow: /en/reviews",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1796,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 167,
+					"title": "English mobile WCAG 2.2 AA and reflow: /en/faqs",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1803,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 167,
+					"title": "English mobile WCAG 2.2 AA and reflow: /en/privacy",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1555,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 167,
+					"title": "English mobile WCAG 2.2 AA and reflow: /en/terms",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1516,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 167,
+					"title": "English mobile WCAG 2.2 AA and reflow: /en/cookies",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1588,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 167,
+					"title": "English mobile WCAG 2.2 AA and reflow: /en/account/favorites",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1529,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 167,
+					"title": "English mobile WCAG 2.2 AA and reflow: /en/compare",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1523,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-final.e2e.ts",
+					"line": 167,
+					"title": "English mobile WCAG 2.2 AA and reflow: /en/locale-settings",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1597,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-navigation.e2e.ts",
+					"line": 4,
+					"title": "menu restores focus and browser back dismisses it exactly once",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 3012,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-navigation.e2e.ts",
+					"line": 23,
+					"title": "navigation from the menu does not leave a stale overlay or scroll lock",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 3128,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-sheet-regressions.e2e.ts",
+					"line": 21,
+					"title": "Import and Sell keep their headers and actions visible at 320x568",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 4791,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-sheet-regressions.e2e.ts",
+					"line": 21,
+					"title": "Import and Sell keep their headers and actions visible at 320x844",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 4767,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-sheet-regressions.e2e.ts",
+					"line": 21,
+					"title": "Import and Sell keep their headers and actions visible at 390x568",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 4552,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-sheet-regressions.e2e.ts",
+					"line": 21,
+					"title": "Import and Sell keep their headers and actions visible at 390x844",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 4931,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-sheet-regressions.e2e.ts",
+					"line": 73,
+					"title": "en home sourcing helper and consultant lead to a native contact page",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1215,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-sheet-regressions.e2e.ts",
+					"line": 73,
+					"title": "bg home sourcing helper and consultant lead to a native contact page",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1324,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-sheet-regressions.e2e.ts",
+					"line": 101,
+					"title": "expanded mobile Import requirements meet automated WCAG 2.2 AA checks",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 3061,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-sheet-regressions.e2e.ts",
+					"line": 120,
+					"title": "contact validation scrolls the form body and keeps the sheet close control visible",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2854,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-sheet-regressions.e2e.ts",
+					"line": 140,
+					"title": "photo viewer contains keyboard focus and browser back restores its trigger",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2793,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-sheet-regressions.e2e.ts",
+					"line": 167,
+					"title": "en/home control names contain their visible labels",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1639,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-sheet-regressions.e2e.ts",
+					"line": 167,
+					"title": "en/inventory control names contain their visible labels",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1417,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-sheet-regressions.e2e.ts",
+					"line": 167,
+					"title": "en/import control names contain their visible labels",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1283,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-sheet-regressions.e2e.ts",
+					"line": 167,
+					"title": "bg/home control names contain their visible labels",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1564,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-sheet-regressions.e2e.ts",
+					"line": 167,
+					"title": "bg/inventory control names contain their visible labels",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1441,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-sheet-regressions.e2e.ts",
+					"line": 167,
+					"title": "bg/import control names contain their visible labels",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1358,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-sheet-regressions.e2e.ts",
+					"line": 190,
+					"title": "open mobile Menu meets automated WCAG 2.2 AA checks",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2897,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-sheet-regressions.e2e.ts",
+					"line": 190,
+					"title": "open mobile Search brand, model, price... meets automated WCAG 2.2 AA checks",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2957,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-sheet-regressions.e2e.ts",
+					"line": 190,
+					"title": "open mobile Open filters meets automated WCAG 2.2 AA checks",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2914,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-sheet-regressions.e2e.ts",
+					"line": 190,
+					"title": "open mobile How it works meets automated WCAG 2.2 AA checks",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1936,
+					"skipReason": []
+				},
+				{
+					"file": "mobile-sheet-regressions.e2e.ts",
+					"line": 204,
+					"title": "native mobile locale dialog meets automated WCAG 2.2 AA checks",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2398,
+					"skipReason": []
+				},
+				{
+					"file": "refactor-contracts.e2e.ts",
+					"line": 5,
+					"title": "failed vehicle photos recover even when the request fails before hydration",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 883,
+					"skipReason": []
+				},
+				{
+					"file": "refactor-contracts.e2e.ts",
+					"line": 29,
+					"title": "language-specific pages have distinct canonicals and matching HTML language",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 775,
+					"skipReason": []
+				},
+				{
+					"file": "refactor-contracts.e2e.ts",
+					"line": 45,
+					"title": "mobile menu is accessible and preserves language during navigation",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 3525,
+					"skipReason": []
+				},
+				{
+					"file": "refactor-contracts.e2e.ts",
+					"line": 66,
+					"title": "desktop content reflows at intermediate and wide widths",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 147,
+					"skipReason": [null]
+				},
+				{
+					"file": "refactor-contracts.e2e.ts",
+					"line": 78,
+					"title": "desktop import country choices do not clip or need horizontal scrolling",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 138,
+					"skipReason": [null]
+				},
+				{
+					"file": "restored-pickers.e2e.ts",
+					"line": 5,
+					"title": "homepage makes and models use the retained modal picker, not native selects",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 117,
+					"skipReason": [null]
+				},
+				{
+					"file": "restored-pickers.e2e.ts",
+					"line": 49,
+					"title": "quick filters have a proper dialog with a fixed apply action and readable options",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 106,
+					"skipReason": [null]
+				},
+				{
+					"file": "restored-pickers.e2e.ts",
+					"line": 83,
+					"title": "restored homepage picker traps keyboard focus and remains usable at 768px",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 137,
+					"skipReason": [null]
+				},
+				{
+					"file": "smoke.e2e.ts",
+					"line": 23,
+					"title": "renders / without errors or horizontal overflow",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1050,
+					"skipReason": []
+				},
+				{
+					"file": "smoke.e2e.ts",
+					"line": 23,
+					"title": "renders /inventory without errors or horizontal overflow",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 890,
+					"skipReason": []
+				},
+				{
+					"file": "smoke.e2e.ts",
+					"line": 23,
+					"title": "renders /import without errors or horizontal overflow",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 604,
+					"skipReason": []
+				},
+				{
+					"file": "smoke.e2e.ts",
+					"line": 23,
+					"title": "renders /sell-your-car without errors or horizontal overflow",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 620,
+					"skipReason": []
+				},
+				{
+					"file": "smoke.e2e.ts",
+					"line": 23,
+					"title": "renders /financing without errors or horizontal overflow",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 634,
+					"skipReason": []
+				},
+				{
+					"file": "smoke.e2e.ts",
+					"line": 23,
+					"title": "renders /contact without errors or horizontal overflow",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 660,
+					"skipReason": []
+				},
+				{
+					"file": "smoke.e2e.ts",
+					"line": 23,
+					"title": "renders /about without errors or horizontal overflow",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 745,
+					"skipReason": []
+				},
+				{
+					"file": "smoke.e2e.ts",
+					"line": 23,
+					"title": "renders /services without errors or horizontal overflow",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 726,
+					"skipReason": []
+				},
+				{
+					"file": "smoke.e2e.ts",
+					"line": 23,
+					"title": "renders /blog without errors or horizontal overflow",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 703,
+					"skipReason": []
+				},
+				{
+					"file": "smoke.e2e.ts",
+					"line": 23,
+					"title": "renders /faqs without errors or horizontal overflow",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 598,
+					"skipReason": []
+				},
+				{
+					"file": "smoke.e2e.ts",
+					"line": 23,
+					"title": "renders /reviews without errors or horizontal overflow",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 611,
+					"skipReason": []
+				},
+				{
+					"file": "smoke.e2e.ts",
+					"line": 23,
+					"title": "renders /privacy without errors or horizontal overflow",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 605,
+					"skipReason": []
+				},
+				{
+					"file": "smoke.e2e.ts",
+					"line": 23,
+					"title": "renders /terms without errors or horizontal overflow",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 617,
+					"skipReason": []
+				},
+				{
+					"file": "smoke.e2e.ts",
+					"line": 23,
+					"title": "renders /cookies without errors or horizontal overflow",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 570,
+					"skipReason": []
+				},
+				{
+					"file": "smoke.e2e.ts",
+					"line": 23,
+					"title": "renders /calculator without errors or horizontal overflow",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 602,
+					"skipReason": []
+				},
+				{
+					"file": "smoke.e2e.ts",
+					"line": 23,
+					"title": "renders /compare without errors or horizontal overflow",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 625,
+					"skipReason": []
+				},
+				{
+					"file": "smoke.e2e.ts",
+					"line": 23,
+					"title": "renders /account/favorites without errors or horizontal overflow",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 619,
+					"skipReason": []
+				},
+				{
+					"file": "smoke.e2e.ts",
+					"line": 38,
+					"title": "preview responses cannot be indexed",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 54,
+					"skipReason": []
+				},
+				{
+					"file": "storefront-controls.e2e.ts",
+					"line": 5,
+					"title": "header reserves the same trailing slot without inventing Home or Contact menus",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 110,
+					"skipReason": [null]
+				},
+				{
+					"file": "storefront-controls.e2e.ts",
+					"line": 36,
+					"title": "desktop buying panel contrasts with its hero without shrinking the tabs",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 103,
+					"skipReason": [null]
+				},
+				{
+					"file": "storefront-controls.e2e.ts",
+					"line": 57,
+					"title": "all-brands tile renders an icon, not an empty image, and preserves locale",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1285,
+					"skipReason": []
+				},
+				{
+					"file": "storefront-controls.e2e.ts",
+					"line": 74,
+					"title": "reviews retain their avatars and articles share a complete card on the home and blog routes",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1806,
+					"skipReason": []
+				},
+				{
+					"file": "storefront-controls.e2e.ts",
+					"line": 101,
+					"title": "compact filters fit on desktop and retain an accessible persistent footer",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 141,
+					"skipReason": [null]
+				},
+				{
+					"file": "storefront-controls.e2e.ts",
+					"line": 142,
+					"title": "all-filters search preserves hidden selected models and replaces canonical price values",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 172,
+					"skipReason": [null]
+				},
+				{
+					"file": "style-parity.e2e.ts",
+					"line": 4,
+					"title": "desktop navigation is centered and its dropdown aligns with the complete item",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 135,
+					"skipReason": [null]
+				},
+				{
+					"file": "style-parity.e2e.ts",
+					"line": 28,
+					"title": "image banners do not underline their titles or action copy",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1020,
+					"skipReason": []
+				},
+				{
+					"file": "style-parity.e2e.ts",
+					"line": 39,
+					"title": "desktop catalogue keeps a prominent filter action and six readable quick pills",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 170,
+					"skipReason": [null]
+				},
+				{
+					"file": "style-parity.e2e.ts",
+					"line": 56,
+					"title": "conversion forms precede the horizontal process instead of a split column layout",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 140,
+					"skipReason": [null]
+				},
+				{
+					"file": "style-parity.e2e.ts",
+					"line": 69,
+					"title": "about and services retain centered media sections at desktop and mobile widths",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1062,
+					"skipReason": []
+				},
+				{
+					"file": "typography-contact.e2e.ts",
+					"line": 5,
+					"title": "public actions retain their readable weight and homepage search emphasis",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2879,
+					"skipReason": []
+				},
+				{
+					"file": "typography-contact.e2e.ts",
+					"line": 38,
+					"title": "About opens with the team, not a wall of duplicate introduction copy",
+					"project": "mobile",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1061,
+					"skipReason": []
+				},
+				{
+					"file": "typography-contact.e2e.ts",
+					"line": 53,
+					"title": "Contact has centered contact channels and a centered usable form",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 252,
+					"skipReason": [null]
+				},
+				{
+					"file": "typography-contact.e2e.ts",
+					"line": 79,
+					"title": "buying-panel selections retain their size and weight after choosing",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 167,
+					"skipReason": [null]
+				},
+				{
+					"file": "typography-contact.e2e.ts",
+					"line": 97,
+					"title": "home buying controls wrap before default labels are truncated",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 186,
+					"skipReason": [null]
+				},
+				{
+					"file": "visual-hierarchy.e2e.ts",
+					"line": 5,
+					"title": "desktop section actions follow the content rather than competing with headings",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 287,
+					"skipReason": [null]
+				},
+				{
+					"file": "visual-hierarchy.e2e.ts",
+					"line": 24,
+					"title": "desktop detail restores a title above the gallery and operable payment tabs",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 341,
+					"skipReason": [null]
+				},
+				{
+					"file": "visual-hierarchy.e2e.ts",
+					"line": 56,
+					"title": "desktop detail sidebar remains within the viewport at supported widths",
+					"project": "mobile",
+					"expected": "skipped",
+					"status": "skipped",
+					"durationMs": 278,
+					"skipReason": [null]
+				}
+			]
+		},
+		"desktop": {
+			"stats": {
+				"startTime": "2026-09-30T00:51:29.045Z",
+				"duration": 48781.217,
+				"expected": 19,
+				"skipped": 0,
+				"unexpected": 0,
+				"flaky": 0
+			},
+			"cases": [
+				{
+					"file": "desktop-page-patterns.e2e.ts",
+					"line": 10,
+					"title": "bg: service, about and contact heroes share their geometry",
+					"project": "desktop",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 8405,
+					"skipReason": []
+				},
+				{
+					"file": "desktop-page-patterns.e2e.ts",
+					"line": 46,
+					"title": "bg: service search filters descriptions, clears and follows useful destinations",
+					"project": "desktop",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 9091,
+					"skipReason": []
+				},
+				{
+					"file": "desktop-page-patterns.e2e.ts",
+					"line": 10,
+					"title": "en: service, about and contact heroes share their geometry",
+					"project": "desktop",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 6827,
+					"skipReason": []
+				},
+				{
+					"file": "desktop-page-patterns.e2e.ts",
+					"line": 46,
+					"title": "en: service search filters descriptions, clears and follows useful destinations",
+					"project": "desktop",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 4136,
+					"skipReason": []
+				},
+				{
+					"file": "desktop-page-patterns.e2e.ts",
+					"line": 93,
+					"title": "service search is server-rendered and service links are distinct",
+					"project": "desktop",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 1222,
+					"skipReason": []
+				},
+				{
+					"file": "desktop-page-patterns.e2e.ts",
+					"line": 111,
+					"title": "page actions are real destinations and the services directory is accessible",
+					"project": "desktop",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 4657,
+					"skipReason": []
+				},
+				{
+					"file": "desktop-search.e2e.ts",
+					"line": 9,
+					"title": "reference-style icon tabs connect to compact fields without changing the mobile tab variant",
+					"project": "desktop",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 3451,
+					"skipReason": []
+				},
+				{
+					"file": "desktop-search.e2e.ts",
+					"line": 50,
+					"title": "search entry opens a focused dialog with one intact focus outline and pinned actions",
+					"project": "desktop",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 6705,
+					"skipReason": []
+				},
+				{
+					"file": "desktop-search.e2e.ts",
+					"line": 88,
+					"title": "nested make selection returns to search, keeps the draft, and submits the same canonical query",
+					"project": "desktop",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 4131,
+					"skipReason": []
+				},
+				{
+					"file": "desktop-search.e2e.ts",
+					"line": 121,
+					"title": "empty results and an unavailable preview never manufacture a result count",
+					"project": "desktop",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 4915,
+					"skipReason": []
+				},
+				{
+					"file": "desktop-search.e2e.ts",
+					"line": 151,
+					"title": "header search reuses the same focused result dialog",
+					"project": "desktop",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2736,
+					"skipReason": []
+				},
+				{
+					"file": "inventory.e2e.ts",
+					"line": 4,
+					"title": "inventory remains server-rendered without JavaScript",
+					"project": "desktop",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2512,
+					"skipReason": []
+				},
+				{
+					"file": "inventory.e2e.ts",
+					"line": 19,
+					"title": "filters and detail return retain the original URL",
+					"project": "desktop",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2166,
+					"skipReason": []
+				},
+				{
+					"file": "inventory.e2e.ts",
+					"line": 29,
+					"title": "desktop filter search does not discard a previously selected make",
+					"project": "desktop",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2973,
+					"skipReason": []
+				},
+				{
+					"file": "typography-contact.e2e.ts",
+					"line": 5,
+					"title": "public actions retain their readable weight and homepage search emphasis",
+					"project": "desktop",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 6430,
+					"skipReason": []
+				},
+				{
+					"file": "typography-contact.e2e.ts",
+					"line": 38,
+					"title": "About opens with the team, not a wall of duplicate introduction copy",
+					"project": "desktop",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2725,
+					"skipReason": []
+				},
+				{
+					"file": "typography-contact.e2e.ts",
+					"line": 53,
+					"title": "Contact has centered contact channels and a centered usable form",
+					"project": "desktop",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 3490,
+					"skipReason": []
+				},
+				{
+					"file": "typography-contact.e2e.ts",
+					"line": 79,
+					"title": "buying-panel selections retain their size and weight after choosing",
+					"project": "desktop",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2656,
+					"skipReason": []
+				},
+				{
+					"file": "typography-contact.e2e.ts",
+					"line": 97,
+					"title": "home buying controls wrap before default labels are truncated",
+					"project": "desktop",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 4342,
+					"skipReason": []
+				}
+			]
+		},
+		"desktopReflow": {
+			"stats": {
+				"startTime": "2026-09-30T01:00:36.599Z",
+				"duration": 5427.02,
+				"expected": 1,
+				"skipped": 0,
+				"unexpected": 0,
+				"flaky": 0
+			},
+			"cases": [
+				{
+					"file": "refactor-contracts.e2e.ts",
+					"line": 66,
+					"title": "desktop content reflows at intermediate and wide widths",
+					"project": "desktop",
+					"expected": "passed",
+					"status": "passed",
+					"durationMs": 2303,
+					"skipReason": []
+				}
+			]
+		}
+	},
+	"performance": {
+		"simulated": {
+			"results": [
+				{
+					"key": "home-final-loading-1",
+					"path": "/en",
+					"time": "2026-09-30T00:52:40.338Z",
+					"version": "13.5.0",
+					"performance": 75,
+					"accessibility": 100,
+					"bestPractices": 100,
+					"fcpMs": 2251.0520000000006,
+					"lcpMs": 5664.512000000001,
+					"tbtMs": 166,
+					"cls": 0.0004889222544935579,
+					"resources": [
+						{
+							"resourceType": "total",
+							"label": "Total",
+							"requestCount": 96,
+							"transferSize": 992953
+						},
+						{
+							"resourceType": "image",
+							"label": "Image",
+							"requestCount": 40,
+							"transferSize": 507539
+						},
+						{
+							"resourceType": "script",
+							"label": "Script",
+							"requestCount": 47,
+							"transferSize": 227540
+						},
+						{
+							"resourceType": "font",
+							"label": "Font",
+							"requestCount": 6,
+							"transferSize": 177844
+						},
+						{
+							"resourceType": "document",
+							"label": "Document",
+							"requestCount": 1,
+							"transferSize": 78905
+						},
+						{
+							"resourceType": "stylesheet",
+							"label": "Stylesheet",
+							"requestCount": 1,
+							"transferSize": 619
+						},
+						{
+							"resourceType": "other",
+							"label": "Other",
+							"requestCount": 1,
+							"transferSize": 506
+						},
+						{
+							"resourceType": "media",
+							"label": "Media",
+							"requestCount": 0,
+							"transferSize": 0
+						},
+						{
+							"resourceType": "third-party",
+							"label": "Third-party",
+							"requestCount": 9,
+							"transferSize": 180953
+						}
+					],
+					"failedChecks": [
+						{
+							"id": "cache-insight",
+							"title": "Use efficient cache lifetimes",
+							"displayValue": "Est savings of 404 KiB"
+						},
+						{
+							"id": "forced-reflow-insight",
+							"title": "Forced reflow"
+						},
+						{
+							"id": "image-delivery-insight",
+							"title": "Improve image delivery",
+							"displayValue": "Est savings of 372 KiB"
+						},
+						{
+							"id": "network-dependency-tree-insight",
+							"title": "Network dependency tree"
+						}
+					]
+				},
+				{
+					"key": "home-final-loading-2",
+					"path": "/en",
+					"time": "2026-09-30T00:52:51.273Z",
+					"version": "13.5.0",
+					"performance": 76,
+					"accessibility": 100,
+					"bestPractices": 100,
+					"fcpMs": 2442.1742500000005,
+					"lcpMs": 4915.281819480897,
+					"tbtMs": 179.5,
+					"cls": 0.0001980010405633988,
+					"resources": [
+						{
+							"resourceType": "total",
+							"label": "Total",
+							"requestCount": 96,
+							"transferSize": 992534
+						},
+						{
+							"resourceType": "image",
+							"label": "Image",
+							"requestCount": 40,
+							"transferSize": 507120
+						},
+						{
+							"resourceType": "script",
+							"label": "Script",
+							"requestCount": 47,
+							"transferSize": 227540
+						},
+						{
+							"resourceType": "font",
+							"label": "Font",
+							"requestCount": 6,
+							"transferSize": 177844
+						},
+						{
+							"resourceType": "document",
+							"label": "Document",
+							"requestCount": 1,
+							"transferSize": 78905
+						},
+						{
+							"resourceType": "stylesheet",
+							"label": "Stylesheet",
+							"requestCount": 1,
+							"transferSize": 619
+						},
+						{
+							"resourceType": "other",
+							"label": "Other",
+							"requestCount": 1,
+							"transferSize": 506
+						},
+						{
+							"resourceType": "media",
+							"label": "Media",
+							"requestCount": 0,
+							"transferSize": 0
+						},
+						{
+							"resourceType": "third-party",
+							"label": "Third-party",
+							"requestCount": 9,
+							"transferSize": 180534
+						}
+					],
+					"failedChecks": [
+						{
+							"id": "mainthread-work-breakdown",
+							"title": "Minimize main-thread work",
+							"displayValue": "2.4 s"
+						},
+						{
+							"id": "cache-insight",
+							"title": "Use efficient cache lifetimes",
+							"displayValue": "Est savings of 404 KiB"
+						},
+						{
+							"id": "forced-reflow-insight",
+							"title": "Forced reflow"
+						},
+						{
+							"id": "image-delivery-insight",
+							"title": "Improve image delivery",
+							"displayValue": "Est savings of 372 KiB"
+						},
+						{
+							"id": "network-dependency-tree-insight",
+							"title": "Network dependency tree"
+						}
+					]
+				},
+				{
+					"key": "home-final-loading-3",
+					"path": "/en",
+					"time": "2026-09-30T00:53:03.648Z",
+					"version": "13.5.0",
+					"performance": 67,
+					"accessibility": 100,
+					"bestPractices": 100,
+					"fcpMs": 2272.0149250000004,
+					"lcpMs": 6051.759650000005,
+					"tbtMs": 373,
+					"cls": 0.0002412012675954131,
+					"resources": [
+						{
+							"resourceType": "total",
+							"label": "Total",
+							"requestCount": 96,
+							"transferSize": 992534
+						},
+						{
+							"resourceType": "image",
+							"label": "Image",
+							"requestCount": 40,
+							"transferSize": 507120
+						},
+						{
+							"resourceType": "script",
+							"label": "Script",
+							"requestCount": 47,
+							"transferSize": 227540
+						},
+						{
+							"resourceType": "font",
+							"label": "Font",
+							"requestCount": 6,
+							"transferSize": 177844
+						},
+						{
+							"resourceType": "document",
+							"label": "Document",
+							"requestCount": 1,
+							"transferSize": 78905
+						},
+						{
+							"resourceType": "stylesheet",
+							"label": "Stylesheet",
+							"requestCount": 1,
+							"transferSize": 619
+						},
+						{
+							"resourceType": "other",
+							"label": "Other",
+							"requestCount": 1,
+							"transferSize": 506
+						},
+						{
+							"resourceType": "media",
+							"label": "Media",
+							"requestCount": 0,
+							"transferSize": 0
+						},
+						{
+							"resourceType": "third-party",
+							"label": "Third-party",
+							"requestCount": 9,
+							"transferSize": 180534
+						}
+					],
+					"failedChecks": [
+						{
+							"id": "mainthread-work-breakdown",
+							"title": "Minimize main-thread work",
+							"displayValue": "2.1 s"
+						},
+						{
+							"id": "cache-insight",
+							"title": "Use efficient cache lifetimes",
+							"displayValue": "Est savings of 404 KiB"
+						},
+						{
+							"id": "image-delivery-insight",
+							"title": "Improve image delivery",
+							"displayValue": "Est savings of 372 KiB"
+						},
+						{
+							"id": "network-dependency-tree-insight",
+							"title": "Network dependency tree"
+						}
+					]
+				},
+				{
+					"key": "inventory-final-loading",
+					"path": "/en/inventory",
+					"time": "2026-09-30T00:53:15.619Z",
+					"version": "13.5.0",
+					"performance": 79,
+					"accessibility": 100,
+					"bestPractices": 100,
+					"fcpMs": 1990.7524999999996,
+					"lcpMs": 4643.403999999999,
+					"tbtMs": 189.4999999999995,
+					"cls": 0.0002247136668866723,
+					"resources": [
+						{
+							"resourceType": "total",
+							"label": "Total",
+							"requestCount": 63,
+							"transferSize": 565604
+						},
+						{
+							"resourceType": "image",
+							"label": "Image",
+							"requestCount": 14,
+							"transferSize": 196328
+						},
+						{
+							"resourceType": "script",
+							"label": "Script",
+							"requestCount": 42,
+							"transferSize": 189002
+						},
+						{
+							"resourceType": "font",
+							"label": "Font",
+							"requestCount": 4,
+							"transferSize": 118032
+						},
+						{
+							"resourceType": "document",
+							"label": "Document",
+							"requestCount": 1,
+							"transferSize": 61117
+						},
+						{
+							"resourceType": "stylesheet",
+							"label": "Stylesheet",
+							"requestCount": 1,
+							"transferSize": 619
+						},
+						{
+							"resourceType": "other",
+							"label": "Other",
+							"requestCount": 1,
+							"transferSize": 506
+						},
+						{
+							"resourceType": "media",
+							"label": "Media",
+							"requestCount": 0,
+							"transferSize": 0
+						},
+						{
+							"resourceType": "third-party",
+							"label": "Third-party",
+							"requestCount": 3,
+							"transferSize": 27752
+						}
+					],
+					"failedChecks": [
+						{
+							"id": "cache-insight",
+							"title": "Use efficient cache lifetimes",
+							"displayValue": "Est savings of 165 KiB"
+						},
+						{
+							"id": "image-delivery-insight",
+							"title": "Improve image delivery",
+							"displayValue": "Est savings of 131 KiB"
+						},
+						{
+							"id": "network-dependency-tree-insight",
+							"title": "Network dependency tree"
+						}
+					]
+				},
+				{
+					"key": "detail-final-loading",
+					"path": "/en/inventory/11774283016080050",
+					"time": "2026-09-30T00:53:27.793Z",
+					"version": "13.5.0",
+					"performance": 73,
+					"accessibility": 100,
+					"bestPractices": 100,
+					"fcpMs": 1776.0565000000001,
+					"lcpMs": 4891.855000000003,
+					"tbtMs": 345.00000000000045,
+					"cls": 0.0000625656831348387,
+					"resources": [
+						{
+							"resourceType": "total",
+							"label": "Total",
+							"requestCount": 67,
+							"transferSize": 579802
+						},
+						{
+							"resourceType": "script",
+							"label": "Script",
+							"requestCount": 48,
+							"transferSize": 237458
+						},
+						{
+							"resourceType": "image",
+							"label": "Image",
+							"requestCount": 11,
+							"transferSize": 165302
+						},
+						{
+							"resourceType": "font",
+							"label": "Font",
+							"requestCount": 5,
+							"transferSize": 122464
+						},
+						{
+							"resourceType": "document",
+							"label": "Document",
+							"requestCount": 1,
+							"transferSize": 53453
+						},
+						{
+							"resourceType": "stylesheet",
+							"label": "Stylesheet",
+							"requestCount": 1,
+							"transferSize": 619
+						},
+						{
+							"resourceType": "other",
+							"label": "Other",
+							"requestCount": 1,
+							"transferSize": 506
+						},
+						{
+							"resourceType": "media",
+							"label": "Media",
+							"requestCount": 0,
+							"transferSize": 0
+						},
+						{
+							"resourceType": "third-party",
+							"label": "Third-party",
+							"requestCount": 0,
+							"transferSize": 0
+						}
+					],
+					"failedChecks": [
+						{
+							"id": "mainthread-work-breakdown",
+							"title": "Minimize main-thread work",
+							"displayValue": "2.3 s"
+						},
+						{
+							"id": "unused-javascript",
+							"title": "Reduce unused JavaScript",
+							"displayValue": "Est savings of 22 KiB"
+						},
+						{
+							"id": "cache-insight",
+							"title": "Use efficient cache lifetimes",
+							"displayValue": "Est savings of 161 KiB"
+						},
+						{
+							"id": "forced-reflow-insight",
+							"title": "Forced reflow"
+						},
+						{
+							"id": "image-delivery-insight",
+							"title": "Improve image delivery",
+							"displayValue": "Est savings of 50 KiB"
+						},
+						{
+							"id": "network-dependency-tree-insight",
+							"title": "Network dependency tree"
+						}
+					]
+				},
+				{
+					"key": "import-final-loading",
+					"path": "/en/import",
+					"time": "2026-09-30T00:53:41.079Z",
+					"version": "13.5.0",
+					"performance": 77,
+					"accessibility": 100,
+					"bestPractices": 100,
+					"fcpMs": 1537.8947500000002,
+					"lcpMs": 5578.175499999999,
+					"tbtMs": 180.50000000000045,
+					"cls": 0.00002954526213213125,
+					"resources": [
+						{
+							"resourceType": "total",
+							"label": "Total",
+							"requestCount": 70,
+							"transferSize": 599082
+						},
+						{
+							"resourceType": "script",
+							"label": "Script",
+							"requestCount": 49,
+							"transferSize": 241455
+						},
+						{
+							"resourceType": "image",
+							"label": "Image",
+							"requestCount": 14,
+							"transferSize": 186868
+						},
+						{
+							"resourceType": "font",
+							"label": "Font",
+							"requestCount": 4,
+							"transferSize": 118032
+						},
+						{
+							"resourceType": "document",
+							"label": "Document",
+							"requestCount": 1,
+							"transferSize": 51602
+						},
+						{
+							"resourceType": "stylesheet",
+							"label": "Stylesheet",
+							"requestCount": 1,
+							"transferSize": 619
+						},
+						{
+							"resourceType": "other",
+							"label": "Other",
+							"requestCount": 1,
+							"transferSize": 506
+						},
+						{
+							"resourceType": "media",
+							"label": "Media",
+							"requestCount": 0,
+							"transferSize": 0
+						},
+						{
+							"resourceType": "third-party",
+							"label": "Third-party",
+							"requestCount": 0,
+							"transferSize": 0
+						}
+					],
+					"failedChecks": [
+						{
+							"id": "mainthread-work-breakdown",
+							"title": "Minimize main-thread work",
+							"displayValue": "2.1 s"
+						},
+						{
+							"id": "unused-javascript",
+							"title": "Reduce unused JavaScript",
+							"displayValue": "Est savings of 22 KiB"
+						},
+						{
+							"id": "cache-insight",
+							"title": "Use efficient cache lifetimes",
+							"displayValue": "Est savings of 182 KiB"
+						},
+						{
+							"id": "image-delivery-insight",
+							"title": "Improve image delivery",
+							"displayValue": "Est savings of 70 KiB"
+						},
+						{
+							"id": "network-dependency-tree-insight",
+							"title": "Network dependency tree"
+						}
+					]
+				},
+				{
+					"key": "sell-final-loading",
+					"path": "/en/sell-your-car",
+					"time": "2026-09-30T00:53:57.084Z",
+					"version": "13.5.0",
+					"performance": 80,
+					"accessibility": 100,
+					"bestPractices": 100,
+					"fcpMs": 1347.2275499999998,
+					"lcpMs": 5019.6068000000005,
+					"tbtMs": 155.8173499999998,
+					"cls": 0,
+					"resources": [
+						{
+							"resourceType": "total",
+							"label": "Total",
+							"requestCount": 58,
+							"transferSize": 488719
+						},
+						{
+							"resourceType": "script",
+							"label": "Script",
+							"requestCount": 47,
+							"transferSize": 221176
+						},
+						{
+							"resourceType": "image",
+							"label": "Image",
+							"requestCount": 5,
+							"transferSize": 128440
+						},
+						{
+							"resourceType": "font",
+							"label": "Font",
+							"requestCount": 3,
+							"transferSize": 87556
+						},
+						{
+							"resourceType": "document",
+							"label": "Document",
+							"requestCount": 1,
+							"transferSize": 50422
+						},
+						{
+							"resourceType": "stylesheet",
+							"label": "Stylesheet",
+							"requestCount": 1,
+							"transferSize": 619
+						},
+						{
+							"resourceType": "other",
+							"label": "Other",
+							"requestCount": 1,
+							"transferSize": 506
+						},
+						{
+							"resourceType": "media",
+							"label": "Media",
+							"requestCount": 0,
+							"transferSize": 0
+						},
+						{
+							"resourceType": "third-party",
+							"label": "Third-party",
+							"requestCount": 0,
+							"transferSize": 0
+						}
+					],
+					"failedChecks": [
+						{
+							"id": "unused-javascript",
+							"title": "Reduce unused JavaScript",
+							"displayValue": "Est savings of 22 KiB"
+						},
+						{
+							"id": "cache-insight",
+							"title": "Use efficient cache lifetimes",
+							"displayValue": "Est savings of 125 KiB"
+						},
+						{
+							"id": "image-delivery-insight",
+							"title": "Improve image delivery",
+							"displayValue": "Est savings of 39 KiB"
+						},
+						{
+							"id": "lcp-discovery-insight",
+							"title": "LCP request discovery"
+						},
+						{
+							"id": "network-dependency-tree-insight",
+							"title": "Network dependency tree"
+						}
+					]
+				},
+				{
+					"key": "contact-final-loading",
+					"path": "/en/contact",
+					"time": "2026-09-30T00:54:11.012Z",
+					"version": "13.5.0",
+					"performance": 78,
+					"accessibility": 100,
+					"bestPractices": 100,
+					"fcpMs": 1500.253775,
+					"lcpMs": 4960.19435,
+					"tbtMs": 198.49999999999955,
+					"cls": 0.003591618425243287,
+					"resources": [
+						{
+							"resourceType": "total",
+							"label": "Total",
+							"requestCount": 52,
+							"transferSize": 482882
+						},
+						{
+							"resourceType": "script",
+							"label": "Script",
+							"requestCount": 41,
+							"transferSize": 203575
+						},
+						{
+							"resourceType": "image",
+							"label": "Image",
+							"requestCount": 5,
+							"transferSize": 144620
+						},
+						{
+							"resourceType": "font",
+							"label": "Font",
+							"requestCount": 3,
+							"transferSize": 87556
+						},
+						{
+							"resourceType": "document",
+							"label": "Document",
+							"requestCount": 1,
+							"transferSize": 46006
+						},
+						{
+							"resourceType": "stylesheet",
+							"label": "Stylesheet",
+							"requestCount": 1,
+							"transferSize": 619
+						},
+						{
+							"resourceType": "other",
+							"label": "Other",
+							"requestCount": 1,
+							"transferSize": 506
+						},
+						{
+							"resourceType": "media",
+							"label": "Media",
+							"requestCount": 0,
+							"transferSize": 0
+						},
+						{
+							"resourceType": "third-party",
+							"label": "Third-party",
+							"requestCount": 0,
+							"transferSize": 0
+						}
+					],
+					"failedChecks": [
+						{
+							"id": "unused-javascript",
+							"title": "Reduce unused JavaScript",
+							"displayValue": "Est savings of 22 KiB"
+						},
+						{
+							"id": "cache-insight",
+							"title": "Use efficient cache lifetimes",
+							"displayValue": "Est savings of 141 KiB"
+						},
+						{
+							"id": "image-delivery-insight",
+							"title": "Improve image delivery",
+							"displayValue": "Est savings of 39 KiB"
+						},
+						{
+							"id": "network-dependency-tree-insight",
+							"title": "Network dependency tree"
+						}
+					]
+				},
+				{
+					"key": "financing-final-loading",
+					"path": "/en/financing",
+					"time": "2026-09-30T00:54:23.623Z",
+					"version": "13.5.0",
+					"performance": 84,
+					"accessibility": 100,
+					"bestPractices": 100,
+					"fcpMs": 1070.513,
+					"lcpMs": 4184.025999999998,
+					"tbtMs": 163.7304999999992,
+					"cls": 0.0021528808304378403,
+					"resources": [
+						{
+							"resourceType": "total",
+							"label": "Total",
+							"requestCount": 52,
+							"transferSize": 418268
+						},
+						{
+							"resourceType": "script",
+							"label": "Script",
+							"requestCount": 41,
+							"transferSize": 173817
+						},
+						{
+							"resourceType": "image",
+							"label": "Image",
+							"requestCount": 5,
+							"transferSize": 111662
+						},
+						{
+							"resourceType": "font",
+							"label": "Font",
+							"requestCount": 3,
+							"transferSize": 87556
+						},
+						{
+							"resourceType": "document",
+							"label": "Document",
+							"requestCount": 1,
+							"transferSize": 44108
+						},
+						{
+							"resourceType": "stylesheet",
+							"label": "Stylesheet",
+							"requestCount": 1,
+							"transferSize": 619
+						},
+						{
+							"resourceType": "other",
+							"label": "Other",
+							"requestCount": 1,
+							"transferSize": 506
+						},
+						{
+							"resourceType": "media",
+							"label": "Media",
+							"requestCount": 0,
+							"transferSize": 0
+						},
+						{
+							"resourceType": "third-party",
+							"label": "Third-party",
+							"requestCount": 0,
+							"transferSize": 0
+						}
+					],
+					"failedChecks": [
+						{
+							"id": "cache-insight",
+							"title": "Use efficient cache lifetimes",
+							"displayValue": "Est savings of 109 KiB"
+						},
+						{
+							"id": "image-delivery-insight",
+							"title": "Improve image delivery",
+							"displayValue": "Est savings of 99 KiB"
+						},
+						{
+							"id": "network-dependency-tree-insight",
+							"title": "Network dependency tree"
+						}
+					]
+				},
+				{
+					"key": "calculator-final-loading",
+					"path": "/en/calculator",
+					"time": "2026-09-30T00:54:35.601Z",
+					"version": "13.5.0",
+					"performance": 100,
+					"accessibility": 100,
+					"bestPractices": 100,
+					"fcpMs": 1177.571,
+					"lcpMs": 1364.4279999999999,
+					"tbtMs": 74,
+					"cls": 0,
+					"resources": [
+						{
+							"resourceType": "total",
+							"label": "Total",
+							"requestCount": 49,
+							"transferSize": 319628
+						},
+						{
+							"resourceType": "script",
+							"label": "Script",
+							"requestCount": 40,
+							"transferSize": 172315
+						},
+						{
+							"resourceType": "font",
+							"label": "Font",
+							"requestCount": 2,
+							"transferSize": 58148
+						},
+						{
+							"resourceType": "image",
+							"label": "Image",
+							"requestCount": 4,
+							"transferSize": 44810
+						},
+						{
+							"resourceType": "document",
+							"label": "Document",
+							"requestCount": 1,
+							"transferSize": 43230
+						},
+						{
+							"resourceType": "stylesheet",
+							"label": "Stylesheet",
+							"requestCount": 1,
+							"transferSize": 619
+						},
+						{
+							"resourceType": "other",
+							"label": "Other",
+							"requestCount": 1,
+							"transferSize": 506
+						},
+						{
+							"resourceType": "media",
+							"label": "Media",
+							"requestCount": 0,
+							"transferSize": 0
+						},
+						{
+							"resourceType": "third-party",
+							"label": "Third-party",
+							"requestCount": 0,
+							"transferSize": 0
+						}
+					],
+					"failedChecks": [
+						{
+							"id": "network-dependency-tree-insight",
+							"title": "Network dependency tree"
+						}
+					]
+				}
+			],
+			"configuration": {
+				"output": "json",
+				"maxWaitForFcp": 30000,
+				"maxWaitForLoad": 45000,
+				"pauseAfterFcpMs": 1000,
+				"pauseAfterLoadMs": 1000,
+				"networkQuietThresholdMs": 1000,
+				"cpuQuietThresholdMs": 1000,
+				"formFactor": "mobile",
+				"throttling": {
+					"rttMs": 150,
+					"throughputKbps": 1638.4,
+					"requestLatencyMs": 562.5,
+					"downloadThroughputKbps": 1474.5600000000002,
+					"uploadThroughputKbps": 675,
+					"cpuSlowdownMultiplier": 4
+				},
+				"throttlingMethod": "simulate",
+				"screenEmulation": {
+					"mobile": true,
+					"width": 390,
+					"height": 844,
+					"deviceScaleFactor": 1,
+					"disabled": false
+				},
+				"emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+				"auditMode": false,
+				"gatherMode": false,
+				"clearStorageTypes": ["file_systems", "shader_cache", "service_workers", "cache_storage"],
+				"disableStorageReset": false,
+				"debugNavigation": false,
+				"channel": "node",
+				"usePassiveGathering": false,
+				"disableFullPageScreenshot": false,
+				"skipAboutBlank": false,
+				"blankPage": "about:blank",
+				"ignoreStatusCode": false,
+				"locale": "en-US",
+				"blockedUrlPatterns": null,
+				"additionalTraceCategories": null,
+				"extraHeaders": {
+					"Cookie": "cars_prompt=v1; cars_locale=en"
+				},
+				"precomputedLanternData": null,
+				"onlyAudits": null,
+				"onlyCategories": ["performance", "accessibility", "best-practices"],
+				"skipAudits": null
+			}
+		},
+		"applied": {
+			"results": [
+				{
+					"key": "home-final-loading-throttled-1",
+					"path": "/en",
+					"time": "2026-09-30T00:55:49.529Z",
+					"version": "13.5.0",
+					"performance": 69,
+					"accessibility": 100,
+					"bestPractices": 100,
+					"fcpMs": 1429.12,
+					"lcpMs": 1863.342,
+					"tbtMs": 4250.761,
+					"cls": 0.0001980010405633988,
+					"resources": [
+						{
+							"resourceType": "total",
+							"label": "Total",
+							"requestCount": 95,
+							"transferSize": 980559
+						},
+						{
+							"resourceType": "image",
+							"label": "Image",
+							"requestCount": 39,
+							"transferSize": 495145
+						},
+						{
+							"resourceType": "script",
+							"label": "Script",
+							"requestCount": 47,
+							"transferSize": 227540
+						},
+						{
+							"resourceType": "font",
+							"label": "Font",
+							"requestCount": 6,
+							"transferSize": 177844
+						},
+						{
+							"resourceType": "document",
+							"label": "Document",
+							"requestCount": 1,
+							"transferSize": 78905
+						},
+						{
+							"resourceType": "stylesheet",
+							"label": "Stylesheet",
+							"requestCount": 1,
+							"transferSize": 619
+						},
+						{
+							"resourceType": "other",
+							"label": "Other",
+							"requestCount": 1,
+							"transferSize": 506
+						},
+						{
+							"resourceType": "media",
+							"label": "Media",
+							"requestCount": 0,
+							"transferSize": 0
+						},
+						{
+							"resourceType": "third-party",
+							"label": "Third-party",
+							"requestCount": 8,
+							"transferSize": 168559
+						}
+					],
+					"failedChecks": [
+						{
+							"id": "max-potential-fid",
+							"title": "Max Potential First Input Delay",
+							"displayValue": "2,120 ms"
+						},
+						{
+							"id": "mainthread-work-breakdown",
+							"title": "Minimize main-thread work",
+							"displayValue": "7.3 s"
+						},
+						{
+							"id": "bootup-time",
+							"title": "Reduce JavaScript execution time",
+							"displayValue": "2.5 s"
+						},
+						{
+							"id": "forced-reflow-insight",
+							"title": "Forced reflow"
+						},
+						{
+							"id": "network-dependency-tree-insight",
+							"title": "Network dependency tree"
+						}
+					]
+				},
+				{
+					"key": "home-final-loading-throttled-2",
+					"path": "/en",
+					"time": "2026-09-30T00:56:34.036Z",
+					"version": "13.5.0",
+					"performance": 64,
+					"accessibility": 100,
+					"bestPractices": 100,
+					"fcpMs": 1214.829,
+					"lcpMs": 2977.13,
+					"tbtMs": 4923.730999999997,
+					"cls": 0.002437800887970471,
+					"resources": [
+						{
+							"resourceType": "total",
+							"label": "Total",
+							"requestCount": 95,
+							"transferSize": 980117
+						},
+						{
+							"resourceType": "image",
+							"label": "Image",
+							"requestCount": 39,
+							"transferSize": 494703
+						},
+						{
+							"resourceType": "script",
+							"label": "Script",
+							"requestCount": 47,
+							"transferSize": 227540
+						},
+						{
+							"resourceType": "font",
+							"label": "Font",
+							"requestCount": 6,
+							"transferSize": 177844
+						},
+						{
+							"resourceType": "document",
+							"label": "Document",
+							"requestCount": 1,
+							"transferSize": 78905
+						},
+						{
+							"resourceType": "stylesheet",
+							"label": "Stylesheet",
+							"requestCount": 1,
+							"transferSize": 619
+						},
+						{
+							"resourceType": "other",
+							"label": "Other",
+							"requestCount": 1,
+							"transferSize": 506
+						},
+						{
+							"resourceType": "media",
+							"label": "Media",
+							"requestCount": 0,
+							"transferSize": 0
+						},
+						{
+							"resourceType": "third-party",
+							"label": "Third-party",
+							"requestCount": 8,
+							"transferSize": 168117
+						}
+					],
+					"failedChecks": [
+						{
+							"id": "total-blocking-time",
+							"title": "Total Blocking Time",
+							"displayValue": "4,920 ms"
+						},
+						{
+							"id": "max-potential-fid",
+							"title": "Max Potential First Input Delay",
+							"displayValue": "2,670 ms"
+						},
+						{
+							"id": "mainthread-work-breakdown",
+							"title": "Minimize main-thread work",
+							"displayValue": "7.9 s"
+						},
+						{
+							"id": "bootup-time",
+							"title": "Reduce JavaScript execution time",
+							"displayValue": "2.5 s"
+						},
+						{
+							"id": "bf-cache",
+							"title": "Page prevented back/forward cache restoration",
+							"displayValue": "1 failure reason"
+						},
+						{
+							"id": "forced-reflow-insight",
+							"title": "Forced reflow"
+						},
+						{
+							"id": "image-delivery-insight",
+							"title": "Improve image delivery",
+							"displayValue": "Est savings of 366 KiB"
+						},
+						{
+							"id": "lcp-breakdown-insight",
+							"title": "LCP breakdown"
+						},
+						{
+							"id": "network-dependency-tree-insight",
+							"title": "Network dependency tree"
+						}
+					]
+				},
+				{
+					"key": "inventory-final-loading-throttled",
+					"path": "/en/inventory",
+					"time": "2026-09-30T00:57:21.618Z",
+					"version": "13.5.0",
+					"performance": 43,
+					"accessibility": 100,
+					"bestPractices": 100,
+					"fcpMs": 1369.477,
+					"lcpMs": 9390.727,
+					"tbtMs": 3890.1090000000013,
+					"cls": 0.0017873230037942342,
+					"resources": [
+						{
+							"resourceType": "total",
+							"label": "Total",
+							"requestCount": 63,
+							"transferSize": 565604
+						},
+						{
+							"resourceType": "image",
+							"label": "Image",
+							"requestCount": 14,
+							"transferSize": 196328
+						},
+						{
+							"resourceType": "script",
+							"label": "Script",
+							"requestCount": 42,
+							"transferSize": 189002
+						},
+						{
+							"resourceType": "font",
+							"label": "Font",
+							"requestCount": 4,
+							"transferSize": 118032
+						},
+						{
+							"resourceType": "document",
+							"label": "Document",
+							"requestCount": 1,
+							"transferSize": 61117
+						},
+						{
+							"resourceType": "stylesheet",
+							"label": "Stylesheet",
+							"requestCount": 1,
+							"transferSize": 619
+						},
+						{
+							"resourceType": "other",
+							"label": "Other",
+							"requestCount": 1,
+							"transferSize": 506
+						},
+						{
+							"resourceType": "media",
+							"label": "Media",
+							"requestCount": 0,
+							"transferSize": 0
+						},
+						{
+							"resourceType": "third-party",
+							"label": "Third-party",
+							"requestCount": 3,
+							"transferSize": 27752
+						}
+					],
+					"failedChecks": [
+						{
+							"id": "largest-contentful-paint",
+							"title": "Largest Contentful Paint",
+							"displayValue": "9.4 s"
+						},
+						{
+							"id": "max-potential-fid",
+							"title": "Max Potential First Input Delay",
+							"displayValue": "2,400 ms"
+						},
+						{
+							"id": "mainthread-work-breakdown",
+							"title": "Minimize main-thread work",
+							"displayValue": "6.1 s"
+						},
+						{
+							"id": "bootup-time",
+							"title": "Reduce JavaScript execution time",
+							"displayValue": "2.4 s"
+						},
+						{
+							"id": "bf-cache",
+							"title": "Page prevented back/forward cache restoration",
+							"displayValue": "1 failure reason"
+						},
+						{
+							"id": "cache-insight",
+							"title": "Use efficient cache lifetimes",
+							"displayValue": "Est savings of 165 KiB"
+						},
+						{
+							"id": "forced-reflow-insight",
+							"title": "Forced reflow"
+						},
+						{
+							"id": "image-delivery-insight",
+							"title": "Improve image delivery",
+							"displayValue": "Est savings of 131 KiB"
+						},
+						{
+							"id": "lcp-breakdown-insight",
+							"title": "LCP breakdown"
+						},
+						{
+							"id": "network-dependency-tree-insight",
+							"title": "Network dependency tree"
+						}
+					]
+				},
+				{
+					"key": "contact-final-loading-throttled",
+					"path": "/en/contact",
+					"time": "2026-09-30T00:58:08.452Z",
+					"version": "13.5.0",
+					"performance": 44,
+					"accessibility": 100,
+					"bestPractices": 100,
+					"fcpMs": 1814.988,
+					"lcpMs": 8428.133,
+					"tbtMs": 3093.4449999999997,
+					"cls": 0.0036348564477495203,
+					"resources": [
+						{
+							"resourceType": "total",
+							"label": "Total",
+							"requestCount": 52,
+							"transferSize": 482882
+						},
+						{
+							"resourceType": "script",
+							"label": "Script",
+							"requestCount": 41,
+							"transferSize": 203575
+						},
+						{
+							"resourceType": "image",
+							"label": "Image",
+							"requestCount": 5,
+							"transferSize": 144620
+						},
+						{
+							"resourceType": "font",
+							"label": "Font",
+							"requestCount": 3,
+							"transferSize": 87556
+						},
+						{
+							"resourceType": "document",
+							"label": "Document",
+							"requestCount": 1,
+							"transferSize": 46006
+						},
+						{
+							"resourceType": "stylesheet",
+							"label": "Stylesheet",
+							"requestCount": 1,
+							"transferSize": 619
+						},
+						{
+							"resourceType": "other",
+							"label": "Other",
+							"requestCount": 1,
+							"transferSize": 506
+						},
+						{
+							"resourceType": "media",
+							"label": "Media",
+							"requestCount": 0,
+							"transferSize": 0
+						},
+						{
+							"resourceType": "third-party",
+							"label": "Third-party",
+							"requestCount": 0,
+							"transferSize": 0
+						}
+					],
+					"failedChecks": [
+						{
+							"id": "max-potential-fid",
+							"title": "Max Potential First Input Delay",
+							"displayValue": "1,920 ms"
+						},
+						{
+							"id": "mainthread-work-breakdown",
+							"title": "Minimize main-thread work",
+							"displayValue": "5.8 s"
+						},
+						{
+							"id": "bootup-time",
+							"title": "Reduce JavaScript execution time",
+							"displayValue": "2.2 s"
+						},
+						{
+							"id": "unused-javascript",
+							"title": "Reduce unused JavaScript",
+							"displayValue": "Est savings of 22 KiB"
+						},
+						{
+							"id": "cache-insight",
+							"title": "Use efficient cache lifetimes",
+							"displayValue": "Est savings of 141 KiB"
+						},
+						{
+							"id": "forced-reflow-insight",
+							"title": "Forced reflow"
+						},
+						{
+							"id": "image-delivery-insight",
+							"title": "Improve image delivery",
+							"displayValue": "Est savings of 39 KiB"
+						},
+						{
+							"id": "lcp-breakdown-insight",
+							"title": "LCP breakdown"
+						},
+						{
+							"id": "network-dependency-tree-insight",
+							"title": "Network dependency tree"
+						}
+					]
+				}
+			],
+			"configuration": {
+				"output": "json",
+				"maxWaitForFcp": 30000,
+				"maxWaitForLoad": 45000,
+				"pauseAfterFcpMs": 5250,
+				"pauseAfterLoadMs": 5250,
+				"networkQuietThresholdMs": 5250,
+				"cpuQuietThresholdMs": 5250,
+				"formFactor": "mobile",
+				"throttling": {
+					"rttMs": 150,
+					"throughputKbps": 1638.4,
+					"requestLatencyMs": 562.5,
+					"downloadThroughputKbps": 1474.5600000000002,
+					"uploadThroughputKbps": 675,
+					"cpuSlowdownMultiplier": 4
+				},
+				"throttlingMethod": "devtools",
+				"screenEmulation": {
+					"mobile": true,
+					"width": 390,
+					"height": 844,
+					"deviceScaleFactor": 1,
+					"disabled": false
+				},
+				"emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+				"auditMode": false,
+				"gatherMode": false,
+				"clearStorageTypes": ["file_systems", "shader_cache", "service_workers", "cache_storage"],
+				"disableStorageReset": false,
+				"debugNavigation": false,
+				"channel": "node",
+				"usePassiveGathering": false,
+				"disableFullPageScreenshot": false,
+				"skipAboutBlank": false,
+				"blankPage": "about:blank",
+				"ignoreStatusCode": false,
+				"locale": "en-US",
+				"blockedUrlPatterns": null,
+				"additionalTraceCategories": null,
+				"extraHeaders": {
+					"Cookie": "cars_prompt=v1; cars_locale=en"
+				},
+				"precomputedLanternData": null,
+				"onlyAudits": null,
+				"onlyCategories": ["performance", "accessibility", "best-practices"],
+				"skipAudits": null
+			}
+		},
+		"homeSimulatedMedian": {
+			"performance": 75,
+			"lcpMs": 5664.512000000001,
+			"tbtMs": 179.5
+		}
+	},
+	"limits": [
+		"Chromium emulation and local HTTP/1.1 preview; no physical-device or field Core Web Vitals evidence.",
+		"Automated WCAG results do not certify full conformance or screen-reader usability.",
+		"Original owner drafts were included in the tested working source and preserved outside this scoped change.",
+		"No mounted variant, public alias, template promotion or dealer deployment verified.",
+		"Synthetic preview forms; external contact links inspected without outreach."
+	],
+	"retainedRawEvidence": "C:/Users/radev/AppData/Local/Temp/import-mobile-final-20260930"
+}

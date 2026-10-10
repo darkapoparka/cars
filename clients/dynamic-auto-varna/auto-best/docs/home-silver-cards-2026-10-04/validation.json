@@ -1,0 +1,21 @@
+{
+  "node": "22.20.0",
+  "command": "npm run validate",
+  "exitCode": 0,
+  "checks": [
+    "Architecture check passed across 153 native application/configuration files.",
+    "CSS policy check passed across 151 source files: semantic selectors and centralized dealer theme assets/colors.",
+    "Token check passed: 203 global tokens, 3308 source references, no unresolved aliases or cycles.",
+    "Visual system passed: pinned Inter v4.1 and 16 official Fluent Regular roles, including the bottom navbar.",
+    "Typography check passed: 1099 declarations use shared tokens or inheritance; no unsupported weights or typography !important rules.",
+    "Asset check passed: 196 inventoried static files, 196 guarded media files, 135 referenced public assets.",
+    "Domain checks passed for 7 records, filter/context boundaries and CSS variables.",
+    "svelte-check found 0 errors and 0 warnings"
+  ],
+  "build": [
+    "✓ built in 3.04s",
+    "✓ built in 13.66s",
+    "  ✔ done"
+  ],
+  "scope": "Local working checkout; existing unrelated drafts preserved in scoped staging."
+}

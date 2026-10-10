@@ -1,0 +1,39 @@
+# Showroom artwork v2
+
+Generated on 2026-09-26 with the built-in image generation tool. Model/version selection was not exposed. These are synthetic demo illustrations, not real dealer stock photography or financial endorsements. Original generation files are retained; runtime files are copies and served through Next Image.
+
+## Mobile service navigation - 3 October 2026
+
+The owner's mobile tab polish uses original generated Sell, Leasing and Services product cutouts. [Originals and exact built-in imagegen prompts](navigation/MOBILE-PROMPTS-2026-10-03.md) record the key, calculator/key and complete wheel/wrench assets. Transparent WebP derivatives are 480 x 320 at quality 85. Buy retains its existing car; desktop retains the previous artwork through responsive picture sources. These are navigation illustrations and contain no dealer or manufacturer identity.
+
+## Service card photographs - 2 October 2026
+
+The owner requested original generated imagery for the Services cards. [Service originals and exact prompts](services/PROMPTS.md) record the maintenance and diagnostics series, created with the built-in image generation tool. Model selection was not exposed. PNG originals are retained alongside optimized WebP copies; these illustrative scenes do not depict the actual dealer team or facilities.
+
+## Demo service photographs - 4 October 2026
+
+The owner's catalogue expansion adds tyre care, brake inspection and air conditioning examples. [Selected assets and exact generation/edit prompts](services/DEMO-PROMPTS-2026-10-04.md) record the built-in image_gen work. The three new cards use a compact Demo / Демо badge. Selected PNG originals are retained alongside WebP copies; these scenes do not establish actual facilities or service availability. The tyre illustration received one valve-connection correction. No third-party photographic asset was used.
+
+## finance
+
+File: finance-v2.png
+
+Prompt:
+
+Use case: stylized-concept. Create a premium automotive finance navigation tile asset, isolated on a truly transparent background. Single compact sculptural arrangement: a chunky small satin graphite calculator with three neat rows of blank metallic buttons and a warm ivory display, leaning slightly backward; an elegant glossy deep-red car key fob rests in front, with a small brushed aluminum percent symbol beside it. Sophisticated realistic 3D product rendering, soft studio light from upper left, controlled reflections, charcoal, silver and deep racing red only. Camera front three-quarter view, entire arrangement fully visible, tightly framed with 8 percent transparent margin, centered and legible at 60 pixels. No platform, no floor plane, no background, no lettering, no logos, no currency, no watermark. Not a flat line icon, no cartoon, no floating extra objects.
+
+## service
+
+File: service-v2.png
+
+Prompt:
+
+Use case: stylized-concept. Create a premium automotive servicing navigation tile asset, isolated on a truly transparent background. A single compact sculptural arrangement: one realistic upright black performance tire with a brushed aluminum wheel and a deep racing-red center hub, with one short polished metal combination wrench leaning diagonally across the front. Sophisticated realistic 3D product rendering, soft studio light from upper left, controlled reflections, charcoal, silver and deep racing red only. Camera front three-quarter view, entire arrangement fully visible, tightly framed with 8 percent transparent margin, centered and legible at 60 pixels. No platform, no floor plane, no background, no lettering, no logos, no watermark. Not a flat line icon, no cartoon, no floating extra objects.
+
+## hero
+
+File: studio-car-v2.png
+
+Prompt:
+
+Use case: ads-marketing. Create an exceptionally refined automotive showroom website banner photograph, wide landscape 2:1 composition. An original unbranded deep racing-red luxury sportback sedan, tasteful modern design, front three-quarter view facing toward the left, parked on a pale warm gray seamless studio floor. The COMPLETE car including all wheels occupies the RIGHT 55 percent of the image, with generous breathing space around its silhouette and realistic contact shadow so it is grounded. The LEFT 45 percent is clean empty pale gray negative space for editable dark website headline overlay; no car or objects in that area. Car placed in lower half, subtle soft architectural light sweeps in upper right, bright silver-white studio environment, premium editorial automotive photography, realistic paint and materials, restrained dramatic reflections. Camera at headlamp height, 70mm lens look. The whole scene is one coherent photograph. No text, no numbers, no logos or badges, no brands, no watermarks, no typography, no colored gradients, no graphic ornaments. Ensure car is fully visible with comfortable margin on right and bottom. Wide 2:1 image.

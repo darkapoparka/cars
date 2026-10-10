@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "client": "dm-auto-varna",
+  "templateKey": "import",
+  "templateVersion": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+  "templateSource": {
+    "repository": "darkapoparka/cars",
+    "revision": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+    "path": "templates/import",
+    "tree": "b64c4a4939c4244ba3f408e5c0311c586a913e67",
+    "digest": "eef4c3544b28bb3a62cad4c2a07e4ff64301fb4c9e9925ba002077bda7f63bd3"
+  },
+  "createdAt": "2026-10-10T16:50:20.891Z",
+  "state": "candidate-personalized-needs-build",
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": "bg-varna-dmautovarna",
+    "demoProjectId": null,
+    "registered": false
+  },
+  "hosting": {
+    "provider": "vercel",
+    "status": "not-deployed"
+  },
+  "readyToPublish": false
+}

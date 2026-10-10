@@ -1,0 +1,146 @@
+import { appPath, returningContext, returningPage } from './locale-smoke-fixture.mjs';
+import assert from 'node:assert/strict';
+import { readFile, mkdir, writeFile } from 'node:fs/promises';
+import { launchBrowser, previewUrl } from './browser.mjs';
+import { fillServiceEntry, serviceEntry, serviceAction } from './service-entry-fixture.mjs';
+
+const base = previewUrl();
+const output = 'artifacts/enquiry-smoke';
+await mkdir(output, { recursive: true });
+const browser = await launchBrowser();
+const photo = await readFile('static/assets/images/lead/day-night-stock-01.webp');
+const results = [];
+
+try {
+  for (const width of [320, 390, 844, 1440]) {
+    const page = await returningPage(browser, { viewport: { width, height: width === 844 ? 390 : 900 } });
+    page.setDefaultTimeout(8000);
+    const errors = [];
+    const posts = [];
+    page.on('pageerror', error => errors.push(error.message));
+    page.on('request', request => {
+      if (request.method() === 'POST' && request.frame() === page.mainFrame()) posts.push(request.url());
+    });
+    await page.addInitScript(() => {
+      Object.defineProperty(navigator, 'clipboard', { configurable: true, value: { writeText: async text => { window.__copied = text; } } });
+      Object.defineProperty(navigator, 'share', { configurable: true, value: async data => { window.__shared = { text: data.text, files: data.files?.length || 0 }; } });
+      Object.defineProperty(navigator, 'canShare', { configurable: true, value: () => true });
+    });
+
+    await page.goto(`${base}/contact?topic=trade-in`, { waitUntil: 'networkidle' });
+    const entryForm = serviceEntry(page);
+    const start = serviceAction(page);
+    if (width < 768) {
+      await start.click();
+      assert(await page.locator('.dn-service-editor[open] [name="make"]').evaluate(input => input === document.activeElement));
+      await fillServiceEntry(page, { make:'Audi', model:'A6 Avant', year:'2020', mileage:'85000' });
+    } else {
+    await start.click();
+    assert.equal(await entryForm.locator('input[name="make"]').evaluate(input => input === document.activeElement), true);
+    await entryForm.locator('input[name="make"]').fill('Audi');
+    await entryForm.locator('input[name="model"]').fill('A6 Avant');
+    await entryForm.locator('input[name="year"]').fill('2020');
+    await entryForm.locator('input[name="mileage"]').fill('85000');
+    }
+    await page.screenshot({ path: `${output}/sell-details-${width}.png` });
+    await start.click();
+    const trade = page.locator('.dn-tradein-dialog');
+    await trade.waitFor({ state: 'visible' });
+    assert.equal(await page.evaluate(() => getComputedStyle(document.body).position), 'fixed');
+
+    const files = trade.locator('input[type="file"]');
+    await files.setInputFiles({ name: 'bad.txt', mimeType: 'text/plain', buffer: Buffer.from('not a photo') });
+    assert.match(await trade.locator('[role="alert"]').innerText(), /JPG/);
+    await files.setInputFiles({ name: 'large.jpg', mimeType: 'image/jpeg', buffer: Buffer.alloc(10 * 1024 * 1024 + 1) });
+    assert.match(await trade.locator('[role="alert"]').innerText(), /10 MB/);
+    await files.setInputFiles(Array.from({ length: 7 }, (_, index) => ({ name: `car-${index}.webp`, mimeType: 'image/webp', buffer: photo })));
+    assert.equal(await trade.locator('.dn-tradein-photo-grid img').count(), 6);
+    await trade.locator('.dn-tradein-photo-grid li:has(img[alt="car-0.webp"]) button').click();
+    assert.equal(await trade.locator('.dn-tradein-photo-grid img').count(), 5);
+    await trade.locator('textarea').fill('Редовно обслужван.');
+    await trade.locator('input[autocomplete="name"]').fill('Тест');
+    await trade.locator('input[type="tel"]').fill('+359 (88) 123-45-67');
+    await page.screenshot({ path: `${output}/sell-photos-${width}.png` });
+    await trade.locator('.dn-tradein-primary').click();
+    const tradeReview = trade.locator('.dn-tradein-review-card');
+    assert.match(await tradeReview.innerText(), /Audi A6 Avant/);
+    assert.match(await tradeReview.innerText(), /85000/);
+    await trade.locator('.dn-tradein-copy').click();
+    assert.match(await page.evaluate(() => window.__copied), /Audi A6 Avant/);
+    await trade.locator('.dn-tradein-primary').click();
+    assert.equal(await page.evaluate(() => window.__shared.files), 5);
+    await page.screenshot({ path: `${output}/sell-review-${width}.png` });
+    await page.keyboard.press('Escape');
+    assert.equal(await start.evaluate(button => document.activeElement === button), true);
+    assert.notEqual(await page.evaluate(() => getComputedStyle(document.body).position), 'fixed');
+    await start.click();
+    assert.equal(await trade.locator('.dn-tradein-photo-grid img').count(), 5);
+    await trade.locator('.dn-tradein-primary').click();
+    assert.match(await tradeReview.innerText(), /Audi A6 Avant/, 'Closing must retain the draft');
+    assert.equal(await trade.locator('.dn-tradein-review-photos img').count(), 5);
+    await page.keyboard.press('Escape');
+
+    await page.goto(`${base}/contact?topic=import`, { waitUntil: 'networkidle' });
+    let entry;
+    if (width < 768) {
+      await entryForm.locator('.dn-service-entry__field').click();
+      entry = page.locator('.dn-service-editor[open] [name="reference"]');
+    } else entry = serviceEntry(page).locator('input[name="link"]');
+    await entry.fill('javascript:alert(1)');
+    if (width < 768) await page.locator('.dn-service-editor__save:visible').click();
+    else await serviceAction(page).click();
+    assert.match(await page.locator('[role="alert"]:visible').innerText(), /валиден линк/);
+    await entry.fill('https://example.com/car?id=12#photos');
+    if (width < 768) await page.locator('.dn-service-editor__save:visible').click();
+    await serviceAction(page).click();
+    const enquiry = page.locator('.dn-enquiry');
+    await enquiry.waitFor({ state: 'visible' });
+    assert.equal(await enquiry.locator('input[type="file"]').count(), 0, 'Import must not expose selling photos');
+    await enquiry.locator('textarea').fill('Автоматик, до 40 000 евро.');
+    await enquiry.locator('input[autocomplete="name"]').fill('Тест');
+    await enquiry.locator('input[type="tel"]').fill('+359 88 123 4567');
+    await enquiry.locator('footer .dn-enquiry-primary').click();
+    const summary = enquiry.locator('.dn-enquiry-summary');
+    assert.match(await summary.innerText(), /id=12#photos/);
+    assert.match(await summary.innerText(), /Автоматик/);
+    await enquiry.locator('.dn-enquiry-copy').click();
+    assert.match(await page.evaluate(() => window.__copied), /id=12#photos/);
+    await enquiry.locator('footer .dn-enquiry-primary').click();
+    assert.equal(await page.evaluate(() => window.__shared.files), 0);
+    await page.screenshot({ path: `${output}/import-link-review-${width}.png` });
+    await page.keyboard.press('Escape');
+
+    await serviceEntry(page).locator('.dn-service-entry__choices button').nth(1).click();
+    await fillServiceEntry(page, { brief:'BMW X5, дизел, 2020+, xDrive', budget:'40000' });
+    await serviceAction(page).click();
+    await enquiry.waitFor({ state: 'visible' });
+    await enquiry.locator('textarea').fill('Предпочитам автомобил от Германия.');
+    await enquiry.locator('footer .dn-enquiry-primary').click();
+    assert.match(await summary.innerText(), /BMW X5/);
+    assert.match(await summary.innerText(), /40000/);
+    assert.doesNotMatch(await summary.innerText(), /example.com/, 'Criteria requests exclude the inactive listing draft');
+    const geometry = await enquiry.evaluate(element => ({
+      overflow: element.scrollWidth - element.clientWidth,
+      height: element.getBoundingClientRect().height,
+      viewport: window.innerHeight
+    }));
+    assert.ok(geometry.overflow <= 1 && geometry.height <= geometry.viewport);
+    await page.keyboard.press('Tab');
+    assert.equal(await enquiry.evaluate(element => element.contains(document.activeElement)), true);
+    await page.keyboard.press('Escape');
+
+    assert.deepEqual(errors, []);
+    assert.deepEqual(posts, [], 'Drafts must not be sent to a server');
+    results.push({ width, passed: true, geometry, pageErrors: errors.length, serverSubmissions: posts.length });
+    await writeFile(`${output}/report.json`, JSON.stringify({ generatedAt: new Date().toISOString(), base, results }, null, 2));
+    console.log(`PASS sell/import forms, photos, review, share, draft and focus at ${width}px`);
+    await page.close();
+  }
+  await writeFile(`${output}/report.json`, JSON.stringify({ generatedAt: new Date().toISOString(), base, results }, null, 2));
+} catch (error) {
+  results.push({ passed: false, error: error.stack });
+  throw error;
+} finally {
+  await browser.close();
+  await writeFile(`${output}/report.json`, JSON.stringify({ generatedAt: new Date().toISOString(), base, results }, null, 2));
+}

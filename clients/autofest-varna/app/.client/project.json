@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "client": "autofest-varna",
+  "templateKey": "app",
+  "templateVersion": "e79078da8934de1333fd0488fb26193a3f5dc17d",
+  "templateSource": {
+    "repository": "darkapoparka/cars",
+    "revision": "e79078da8934de1333fd0488fb26193a3f5dc17d",
+    "path": "templates/app",
+    "tree": "e3f761d7b4b5555e6e394ef4d170728efafc7306",
+    "digest": "85bbf1455a45ee7021bf30cc6770e2e5e999a0e509592c0196bbbb0d190c250a"
+  },
+  "createdAt": "2026-10-10T16:52:28.907Z",
+  "state": "candidate-personalized-needs-build",
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": "bg-varna-autofest",
+    "demoProjectId": null,
+    "registered": false
+  },
+  "hosting": {
+    "provider": "vercel",
+    "status": "not-deployed"
+  },
+  "readyToPublish": false
+}

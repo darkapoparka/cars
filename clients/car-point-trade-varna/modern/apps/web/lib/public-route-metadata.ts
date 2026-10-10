@@ -1,0 +1,54 @@
+import {
+  getVehicleCategory,
+  leadSite,
+  type VehicleCategory,
+} from "@repo/marketplace";
+import { getLeadCopy } from "@repo/marketplace/lead-copy";
+import type { Metadata } from "next";
+import {
+  createPublicLocalizedMetadata,
+  getPublicInventoryRobots,
+  type PublicSearchParams,
+} from "./public-metadata";
+import { getPublicWebBaseUrl } from "./public-url";
+
+const bgCategoryNames: Record<VehicleCategory, string> = {
+  car: "Автомобили",
+  lease: "Автомобили на лизинг",
+  motorbike: "Мотори",
+  truck: "Камиони",
+  van: "Бусове",
+};
+
+export const createCategoryMetadata = ({
+  category,
+  locale,
+  make,
+  model,
+  path,
+  searchParams,
+}: {
+  category: VehicleCategory;
+  locale: string;
+  make?: string;
+  model?: string;
+  path?: string;
+  searchParams?: PublicSearchParams;
+}): Metadata => {
+  const isBg = locale === "bg";
+  const categoryName = isBg
+    ? bgCategoryNames[category]
+    : getVehicleCategory(category).label;
+  const subject = [make, model].filter(Boolean).join(" ") || categoryName;
+
+  return createPublicLocalizedMetadata({
+    baseUrl: getPublicWebBaseUrl(),
+    description: isBg
+      ? `Разгледайте актуалните ${subject.toLowerCase()} на ${leadSite.name} в ${getLeadCopy(locale).city}.`
+      : `Browse current ${subject.toLowerCase()} from ${leadSite.name} in ${getLeadCopy(locale).city}, ${getLeadCopy(locale).country}.`,
+    locale,
+    path: path ?? getVehicleCategory(category).path,
+    robots: getPublicInventoryRobots(searchParams),
+    title: subject,
+  });
+};

@@ -1,0 +1,1276 @@
+{
+  "base": "http://127.0.0.1:6791",
+  "phase": "before",
+  "results": [
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "metrics": {
+        "title": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+        "topbar": [
+          {
+            "tag": "BUTTON",
+            "label": "Back",
+            "x": 14,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 22,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "A",
+            "label": "Compare",
+            "x": 228,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 20,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Save",
+            "x": 280,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 20,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Share",
+            "x": 332,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 21,
+              "stroke": "2.35"
+            }
+          }
+        ],
+        "cta": [
+          {
+            "tag": "BUTTON",
+            "label": "Inquire",
+            "x": 14,
+            "y": 383.9599914550781,
+            "width": 177.5,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "radius": "12px",
+            "background": "rgb(23, 25, 28)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 17,
+              "stroke": "2.3"
+            }
+          },
+          {
+            "tag": "A",
+            "label": "Call",
+            "x": 198.5,
+            "y": 383.9599914550781,
+            "width": 177.5,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 17,
+              "stroke": "2.3"
+            }
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 362,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 376,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 844,
+      "metrics": {
+        "title": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+        "topbar": [
+          {
+            "tag": "BUTTON",
+            "label": "Back",
+            "x": 14,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 22,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "A",
+            "label": "Compare",
+            "x": 158,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 20,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Save",
+            "x": 210,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 20,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Share",
+            "x": 262,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 21,
+              "stroke": "2.35"
+            }
+          }
+        ],
+        "cta": [
+          {
+            "tag": "BUTTON",
+            "label": "Inquire",
+            "x": 14,
+            "y": 383.9599914550781,
+            "width": 142.5,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "radius": "12px",
+            "background": "rgb(23, 25, 28)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 17,
+              "stroke": "2.3"
+            }
+          },
+          {
+            "tag": "A",
+            "label": "Call",
+            "x": 163.5,
+            "y": 383.9599914550781,
+            "width": 142.5,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 17,
+              "stroke": "2.3"
+            }
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 292,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 306,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 540,
+      "metrics": {
+        "title": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+        "topbar": [
+          {
+            "tag": "BUTTON",
+            "label": "Back",
+            "x": 14,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 22,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "A",
+            "label": "Compare",
+            "x": 228,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 20,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Save",
+            "x": 280,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 20,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Share",
+            "x": 332,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 21,
+              "stroke": "2.35"
+            }
+          }
+        ],
+        "cta": [
+          {
+            "tag": "BUTTON",
+            "label": "Inquire",
+            "x": 14,
+            "y": 280.6000061035156,
+            "width": 177.5,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "radius": "12px",
+            "background": "rgb(23, 25, 28)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 17,
+              "stroke": "2.3"
+            }
+          },
+          {
+            "tag": "A",
+            "label": "Call",
+            "x": 198.5,
+            "y": 280.6000061035156,
+            "width": 177.5,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 17,
+              "stroke": "2.3"
+            }
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 375.6000061035156,
+          "width": 362,
+          "height": 152.40621948242188,
+          "top": 375.6000061035156,
+          "right": 376,
+          "bottom": 528.0062255859375,
+          "left": 14
+        },
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 540,
+      "metrics": {
+        "title": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+        "topbar": [
+          {
+            "tag": "BUTTON",
+            "label": "Back",
+            "x": 14,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 22,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "A",
+            "label": "Compare",
+            "x": 158,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 20,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Save",
+            "x": 210,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 20,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Share",
+            "x": 262,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 21,
+              "stroke": "2.35"
+            }
+          }
+        ],
+        "cta": [
+          {
+            "tag": "BUTTON",
+            "label": "Inquire",
+            "x": 14,
+            "y": 280.6000061035156,
+            "width": 142.5,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "radius": "12px",
+            "background": "rgb(23, 25, 28)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 17,
+              "stroke": "2.3"
+            }
+          },
+          {
+            "tag": "A",
+            "label": "Call",
+            "x": 163.5,
+            "y": 280.6000061035156,
+            "width": 142.5,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 17,
+              "stroke": "2.3"
+            }
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 375.6000061035156,
+          "width": 292,
+          "height": 152.40621948242188,
+          "top": 375.6000061035156,
+          "right": 306,
+          "bottom": 528.0062255859375,
+          "left": 14
+        },
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "metrics": {
+        "topbar": [],
+        "cta": [],
+        "overflow": -15
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "height": 844,
+      "metrics": {
+        "title": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+        "topbar": [
+          {
+            "tag": "BUTTON",
+            "label": "Назад",
+            "x": 14,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 22,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "A",
+            "label": "Сравни",
+            "x": 228,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 20,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Запази",
+            "x": 280,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 20,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Сподели",
+            "x": 332,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 21,
+              "stroke": "2.35"
+            }
+          }
+        ],
+        "cta": [
+          {
+            "tag": "BUTTON",
+            "label": "Запитване",
+            "x": 14,
+            "y": 383.9599914550781,
+            "width": 177.5,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "radius": "12px",
+            "background": "rgb(23, 25, 28)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 17,
+              "stroke": "2.3"
+            }
+          },
+          {
+            "tag": "A",
+            "label": "Обади се",
+            "x": 198.5,
+            "y": 383.9599914550781,
+            "width": 177.5,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 17,
+              "stroke": "2.3"
+            }
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 362,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 376,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 844,
+      "metrics": {
+        "title": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+        "topbar": [
+          {
+            "tag": "BUTTON",
+            "label": "Назад",
+            "x": 14,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 22,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "A",
+            "label": "Сравни",
+            "x": 158,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 20,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Запази",
+            "x": 210,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 20,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Сподели",
+            "x": 262,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 21,
+              "stroke": "2.35"
+            }
+          }
+        ],
+        "cta": [
+          {
+            "tag": "BUTTON",
+            "label": "Запитване",
+            "x": 14,
+            "y": 383.9599914550781,
+            "width": 142.5,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "radius": "12px",
+            "background": "rgb(23, 25, 28)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 17,
+              "stroke": "2.3"
+            }
+          },
+          {
+            "tag": "A",
+            "label": "Обади се",
+            "x": 163.5,
+            "y": 383.9599914550781,
+            "width": 142.5,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 17,
+              "stroke": "2.3"
+            }
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 478.9599914550781,
+          "width": 292,
+          "height": 353.0468444824219,
+          "top": 478.9599914550781,
+          "right": 306,
+          "bottom": 832.0068359375,
+          "left": 14
+        },
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "height": 540,
+      "metrics": {
+        "title": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+        "topbar": [
+          {
+            "tag": "BUTTON",
+            "label": "Назад",
+            "x": 14,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 22,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "A",
+            "label": "Сравни",
+            "x": 228,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 20,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Запази",
+            "x": 280,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 20,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Сподели",
+            "x": 332,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 21,
+              "stroke": "2.35"
+            }
+          }
+        ],
+        "cta": [
+          {
+            "tag": "BUTTON",
+            "label": "Запитване",
+            "x": 14,
+            "y": 280.6000061035156,
+            "width": 177.5,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "radius": "12px",
+            "background": "rgb(23, 25, 28)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 17,
+              "stroke": "2.3"
+            }
+          },
+          {
+            "tag": "A",
+            "label": "Обади се",
+            "x": 198.5,
+            "y": 280.6000061035156,
+            "width": 177.5,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 17,
+              "stroke": "2.3"
+            }
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 375.6000061035156,
+          "width": 362,
+          "height": 152.40621948242188,
+          "top": 375.6000061035156,
+          "right": 376,
+          "bottom": 528.0062255859375,
+          "left": 14
+        },
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 540,
+      "metrics": {
+        "title": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+        "topbar": [
+          {
+            "tag": "BUTTON",
+            "label": "Назад",
+            "x": 14,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 22,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "A",
+            "label": "Сравни",
+            "x": 158,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 20,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Запази",
+            "x": 210,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 20,
+              "stroke": "2.35"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Сподели",
+            "x": 262,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "radius": "999px",
+            "background": "rgba(255, 255, 255, 0.92)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 21,
+              "stroke": "2.35"
+            }
+          }
+        ],
+        "cta": [
+          {
+            "tag": "BUTTON",
+            "label": "Запитване",
+            "x": 14,
+            "y": 280.6000061035156,
+            "width": 142.5,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "radius": "12px",
+            "background": "rgb(23, 25, 28)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 17,
+              "stroke": "2.3"
+            }
+          },
+          {
+            "tag": "A",
+            "label": "Обади се",
+            "x": 163.5,
+            "y": 280.6000061035156,
+            "width": 142.5,
+            "height": 44,
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "radius": "12px",
+            "background": "rgb(255, 255, 255)",
+            "paint": {
+              "content": "none",
+              "width": "auto",
+              "height": "auto",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "icon": {
+              "width": 17,
+              "stroke": "2.3"
+            }
+          }
+        ],
+        "panel": {
+          "x": 14,
+          "y": 375.6000061035156,
+          "width": 292,
+          "height": 152.40621948242188,
+          "top": 375.6000061035156,
+          "right": 306,
+          "bottom": 528.0062255859375,
+          "left": 14
+        },
+        "overflow": 0
+      },
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "height": 1000,
+      "metrics": {
+        "topbar": [],
+        "cta": [],
+        "overflow": -15
+      },
+      "errors": []
+    }
+  ]
+}

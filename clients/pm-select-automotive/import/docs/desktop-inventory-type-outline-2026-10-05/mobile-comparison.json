@@ -1,0 +1,66 @@
+[
+	{
+		"locale": "bg",
+		"viewport": {
+			"width": 320,
+			"height": 844
+		},
+		"nativeCanvas": {
+			"width": 320,
+			"height": 844
+		},
+		"byteIdentical": true,
+		"changedPixels": 0,
+		"maxChannelDifference": 0,
+		"beforeSha256": "f6a9d8ad6aa323676c2c1f187c6ef40d4d90778e0f2ae6077eb22064ebfb3a03",
+		"afterSha256": "f6a9d8ad6aa323676c2c1f187c6ef40d4d90778e0f2ae6077eb22064ebfb3a03"
+	},
+	{
+		"locale": "bg",
+		"viewport": {
+			"width": 390,
+			"height": 844
+		},
+		"nativeCanvas": {
+			"width": 390,
+			"height": 844
+		},
+		"byteIdentical": true,
+		"changedPixels": 0,
+		"maxChannelDifference": 0,
+		"beforeSha256": "11d9f5c82e5984f4ca1157aa17aa262e605683ce73586456237adaf9cef5a16f",
+		"afterSha256": "11d9f5c82e5984f4ca1157aa17aa262e605683ce73586456237adaf9cef5a16f"
+	},
+	{
+		"locale": "en",
+		"viewport": {
+			"width": 320,
+			"height": 844
+		},
+		"nativeCanvas": {
+			"width": 320,
+			"height": 844
+		},
+		"byteIdentical": true,
+		"changedPixels": 0,
+		"maxChannelDifference": 0,
+		"beforeSha256": "eb562af72da6369be8cdb16c0e3c74c2bb8ea8ca60a708495f9a2083c6a48f65",
+		"afterSha256": "eb562af72da6369be8cdb16c0e3c74c2bb8ea8ca60a708495f9a2083c6a48f65"
+	},
+	{
+		"locale": "en",
+		"viewport": {
+			"width": 390,
+			"height": 844
+		},
+		"nativeCanvas": {
+			"width": 390,
+			"height": 844
+		},
+		"byteIdentical": true,
+		"changedPixels": 0,
+		"maxChannelDifference": 0,
+		"beforeSha256": "d18ab2f19a9d6ce6160a063a40e368da1c0d3bd517a57f345cfce268ce09c1fb",
+		"afterSha256": "d18ab2f19a9d6ce6160a063a40e368da1c0d3bd517a57f345cfce268ce09c1fb"
+	}
+]

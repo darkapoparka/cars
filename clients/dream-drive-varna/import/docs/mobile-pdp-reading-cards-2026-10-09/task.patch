@@ -1,0 +1,68 @@
+diff --git "a/L:\\CODEX\\cars\\runtime\\import-mobile-pdp-reading-cards-20261009\\AuxeroVehicleMobilePdp.svelte.before" "b/src\\lib\\components\\detail\\AuxeroVehicleMobilePdp.svelte"
+index 6b1edfa..69c8455 100644
+--- "a/L:\\CODEX\\cars\\runtime\\import-mobile-pdp-reading-cards-20261009\\AuxeroVehicleMobilePdp.svelte.before"
++++ "b/src\\lib\\components\\detail\\AuxeroVehicleMobilePdp.svelte"
+@@ -1073,10 +1073,6 @@
+ 		.daynight-mobile-pdp__description {
+ 			display: grid;
+ 			gap: 10px;
+-			padding: 16px;
+-			border: 1px solid #e4e7eb;
+-			border-radius: var(--bc-radius-card);
+-			background: #fff;
+ 		}
+ 
+ 		.daynight-mobile-pdp__body-copy {
+@@ -1095,8 +1091,7 @@
+ 			gap: 10px;
+ 		}
+ 
+-		.daynight-mobile-pdp__finance div,
+-		.daynight-mobile-pdp__feature-groups section {
++		.daynight-mobile-pdp__finance div {
+ 			border-radius: 8px;
+ 			background: var(--bc-surface);
+ 			padding: 12px;
+@@ -1139,6 +1134,15 @@
+ 			list-style: none;
+ 		}
+ 
++		.daynight-mobile-pdp__description,
++		.daynight-mobile-pdp__spec-list,
++		.daynight-mobile-pdp__feature-groups section {
++			border: 1px solid #e4e7eb;
++			border-radius: var(--bc-radius-card);
++			background: var(--bc-white);
++			padding: var(--bc-space-3);
++		}
++
+ 		.daynight-mobile-pdp__spec-list li {
+ 			display: grid;
+ 			grid-template-columns: minmax(0, 1fr) minmax(96px, auto);
+@@ -1148,6 +1152,15 @@
+ 			padding: 10px 0;
+ 		}
+ 
++		.daynight-mobile-pdp__spec-list li:first-child {
++			padding-top: 0;
++		}
++
++		.daynight-mobile-pdp__spec-list li:last-child {
++			border-bottom: 0;
++			padding-bottom: 0;
++		}
++
+ 		.daynight-mobile-pdp__spec-list span {
+ 			display: flex;
+ 			min-width: 0;
+@@ -1529,6 +1542,10 @@
+ 			gap: 4px;
+ 		}
+ 
++		.daynight-mobile-pdp__spec-list li {
++			grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
++		}
++
+ 		.daynight-mobile-pdp__tabs {
+ 			gap: 0;
+ 		}

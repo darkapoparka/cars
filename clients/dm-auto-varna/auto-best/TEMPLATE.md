@@ -1,0 +1,38 @@
+# Template reference
+
+| Property | Value |
+| --- | --- |
+| Name / key | Auto Best / `auto-best` |
+| Project repository | `darkapoparka/cars`, under `templates/auto-best` |
+| Application | One Svelte 5 / SvelteKit application |
+| Main entry | `/` |
+| Homepage variants | One retained homepage; legacy home URLs redirect to it |
+| Default presentation | Bulgarian, euro prices, kilometres |
+| Default identity | Auto Best wordmark with source/sample contact and content data |
+| Runtime content | Typed local modules; no database required |
+| Build target | Vercel adapter |
+| Suggested development URL | `http://127.0.0.1:6461/` |
+
+## Main configuration
+
+`src/lib/config/brand.ts` contains names, logo, phone, address and social destinations. `src/lib/config/template.ts` contains preview/published mode, canonical origin, identity/inventory verification flags and optional team/partner sections. Design tokens live in `src/lib/styles/tokens.css`.
+
+These are code-level configuration modules. Native English/Bulgarian localization uses `src/lib/config/locale.ts` and versioned common/template/dealer catalogs; other languages remain disabled. There is no admin panel or universal theme JSON. Headlines, service artwork and some campaign copy live with their components or feature data; [Reuse](REUSE_GUIDE.md) and [Components](docs/COMPONENTS.md) identify them.
+
+## Defaults that matter when copying
+
+The template starts in preview/noindex mode. About Us shows a clearly marked demo team on desktop; sample partners remain disabled. Published mode requires sample sections to be disabled. Vehicle records are sample data unless explicitly verified by the implementation. The brand name does not make the existing phone, map, social accounts, video selection or inventory generic.
+
+A client copy retains the application structure and changes its content and relevant imagery. A template version should be identified by its actual source commit, not an old date embedded in an inherited manifest. Historical `.template` records describe acquisition/copy operations rather than an application release service.
+
+## Source and working preview
+
+The authoritative reusable master is `templates/auto-best` in `darkapoparka/cars`, edited in the saved Cars checkout on `main`. Former standalone/J: checkouts are recovery history, not editable masters. Shared source changes do not promote a release or update dealer copies; follow [Cars template promotion](../../docs/TEMPLATE-PROMOTION.md) for that separate operation.
+
+## Reference
+
+[Setup](README.md) · [Product](PRODUCT.md) · [Architecture](ARCHITECTURE.md) · [Styling](docs/STYLING.md) · [Reuse](REUSE_GUIDE.md) · [Source lineage](SOURCE_LICENSE.md)
+
+Current cross-repository ownership, approved releases, dealer-copy workflow and standalone/mounted limits: [Cars integration](docs/CARS-INTEGRATION.md).
+
+Native locale routing, catalog ownership and reproducible acceptance: [Localization](docs/localization/README.md).

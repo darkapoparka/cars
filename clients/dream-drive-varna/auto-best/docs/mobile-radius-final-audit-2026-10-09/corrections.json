@@ -1,0 +1,27 @@
+[
+  {
+    "file": "src/lib/components/layout/HomeBannerPicker.svelte",
+    "before": "ebd4e9892b48f5edbde926dee26e65a6d01b2b8c94ac00cf62dfaeb95d3459ad",
+    "after": "ce9919744e3ffe46358eb779fa2a6d1c39119613f860ff7d5b495dbc837f4939"
+  },
+  {
+    "file": "src/lib/components/company/ContactVehicle.svelte",
+    "before": "f2d4ebd7556f392285ce07911f401667144b496776306fd69279b7e736e2f45f",
+    "after": "9d98361fd9086c01bd902dc2d626c8e913d971cfd7244fb5f4da989eed5b5577"
+  },
+  {
+    "file": "src/lib/components/company/TradeInEnquiry.svelte",
+    "before": "a63626e39716a8bd548e7c3ebeea29351be0cff262d117ba144df2888cb00bed",
+    "after": "cf24e608717a8868c996b9d9e12f5c7dc2a3f582e63bdd3c307d3f4d37829511"
+  },
+  {
+    "file": "src/lib/components/company/VehicleEnquiry.svelte",
+    "before": "6edeb735fcb3b8ec22b320fcc77307e1f1bae1c095240613da37a8192a21a42d",
+    "after": "73a180fcc2d0621215a948e9bbbcfad2da7e84de21afaff910142db826942ca8"
+  },
+  {
+    "file": "scripts/check-tokens.mjs",
+    "before": "c2967b0a52f759bbf69dfb23c023c53df31a5da01b2e14639172a816a035a5d5",
+    "after": "2ef1d102280051fe732dab5568e0cd5b3ce0e626128ed500ee02e681fbdd246c"
+  }
+]

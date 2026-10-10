@@ -1,0 +1,30 @@
+{
+  "mode": "dealer",
+  "id": "autoroad-varna",
+  "name": "AUTOROAD",
+  "shortName": "AUTOROAD",
+  "logo": {
+    "light": "/dealer-app/logo-light-f8d23446c89f14ab7d02.webp",
+    "dark": "/dealer-app/logo-dark-f8d23446c89f14ab7d02.webp",
+    "icon": "/dealer-app/icon.png"
+  },
+  "defaultLocale": "bg",
+  "enabledLocales": [
+    "en",
+    "bg"
+  ],
+  "country": "BG",
+  "currency": "EUR",
+  "city": "Варна",
+  "address": "бул. Трети Март 22 Б, Варна, България",
+  "phoneDisplay": "+359899230001",
+  "phoneE164": "+359899230001",
+  "email": "dragotd@gmail.com",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=AUTOROAD%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A2%D1%80%D0%B5%D1%82%D0%B8%20%D0%9C%D0%B0%D1%80%D1%82%2022%20%D0%91%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+  "website": "https://www.autoroadbg.com/",
+  "whatsappUrl": "",
+  "services": [],
+  "observedAt": "2026-10-10T09:30:55.057Z",
+  "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността. Обявите за очакван внос не означават наличен автомобил във Варна.",
+  "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
+}

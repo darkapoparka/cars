@@ -1,0 +1,25 @@
+{
+	"enquiry": {
+		"url": "http://127.0.0.1:6790/bg/contact#contact-enquiry",
+		"formTop": 118,
+		"headingTop": 143
+	},
+	"cars": {
+		"url": "http://127.0.0.1:6790/bg/inventory",
+		"artworkOverride": "",
+		"discoveryWidth": "880px",
+		"heroHeight": 400,
+		"noOverflow": true,
+		"title": "Налични автомобили"
+	},
+	"home": {
+		"url": "http://127.0.0.1:6790/bg",
+		"artworkOverride": "",
+		"discoveryWidth": "880px",
+		"heroHeight": 400,
+		"noOverflow": true
+	},
+	"contact": {
+		"url": "http://127.0.0.1:6790/bg/contact"
+	}
+}

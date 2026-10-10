@@ -1,0 +1,112 @@
+{
+	"date": "2026-10-04",
+	"sources": [
+		{
+			"path": "src/lib/components/common/DesktopSearchControl.svelte",
+			"sha256": "18e8f27d3bb4d81c88e59d4c930018aa10e9a36defdee71211804746f6424d6e"
+		},
+		{
+			"path": "src/lib/components/home/DesktopHomeHero.svelte",
+			"sha256": "575bbd655a95bd3d887f05cf7742612a2209f4d8dc241d7934b0a34283b1b86e"
+		},
+		{
+			"path": "src/lib/components/home/HeroFilterDialog.svelte",
+			"sha256": "6e57a0a94e52d6d11da58bacb692af556f5fe7547b850b70ca9600ef3c8e895e"
+		},
+		{
+			"path": "src/lib/components/common/MobileModeTabs.svelte",
+			"sha256": "88f24a3667a1b43847ea36e2e258c8f37cd91fe27ea8b5fbc55c6e1d3b2c7152"
+		},
+		{
+			"path": "src/lib/content/home-discovery.ts",
+			"sha256": "de3ebbf09d47567d176cfdd1a11490c0cdf5bbf94c8323475e08bd9b82b99517"
+		}
+	],
+	"mobile": [
+		{
+			"locale": "bg",
+			"width": 320,
+			"changedPixels": 0
+		},
+		{
+			"locale": "bg",
+			"width": 390,
+			"changedPixels": 2495
+		},
+		{
+			"locale": "en",
+			"width": 320,
+			"changedPixels": 0
+		},
+		{
+			"locale": "en",
+			"width": 390,
+			"changedPixels": 114
+		}
+	],
+	"desktop": {
+		"locales": ["bg", "en"],
+		"widths": [768, 1024, 1440, 1920],
+		"horizontalOverflow": false,
+		"filterHeight": 48,
+		"filterEmptyBackground": "rgb(255, 255, 255)",
+		"filterSelectedBackground": "rgb(23, 25, 28)",
+		"filterSelectedTextAndIcons": "rgb(255, 255, 255)",
+		"searchAction": "Visible localized label, icon and black fill",
+		"artwork": {
+			"originalFilesPreserved": true,
+			"sharedSlot": 48,
+			"financeScale": 0.86,
+			"financeRenderedSize": 41.28
+		}
+	},
+	"interaction": {
+		"selectedMake": "BMW",
+		"nativeSearchURL": "/bg/inventory?brand=BMW",
+		"firstResult": "BMW X5 40i M Sport Shadow Line",
+		"existingDesktopSearchTests": "6 passed",
+		"keyboard": "ArrowRight opens finance panel with home-mode-finance label and /bg/financing destination; Home restores Buy"
+	},
+	"checks": {
+		"node": "24.21.0",
+		"scopedPrettier": "passed",
+		"scopedEslint": "passed",
+		"svelteCheck": "0 errors, 0 warnings",
+		"architecture": "passed",
+		"assetSignatures": "955 local images passed",
+		"productionBuild": "passed in isolated frozen QA output (exit 0)",
+		"buildWarnings": ["Retained dashboard @reference minifier warning"]
+	},
+	"scope": "Reusable Import Home desktop presentation. Opt-in labeled search action; existing mobile, Inventory and other mode-tab appearances retain their defaults. Local source and browser evidence; no template promotion or dealer deployment.",
+	"evidence": "Matched actual in-app browser screenshots. Mobile comparison covers the viewport at the top of Home; no complete-page pixel comparison is claimed.",
+	"actualBrowser": {
+		"finalURL": "http://127.0.0.1:6790/bg",
+		"viewportOverrideReset": true
+	},
+	"mobilePaintDifferenceBounds": [
+		{
+			"locale": "bg",
+			"width": 390,
+			"changedPixels": 2495,
+			"left": 43,
+			"top": 184,
+			"right": 351,
+			"bottom": 751
+		},
+		{
+			"locale": "en",
+			"width": 390,
+			"changedPixels": 114,
+			"left": 256,
+			"top": 184,
+			"right": 263,
+			"bottom": 223
+		}
+	],
+	"integration": {
+		"status": "Grouped with the light canvas and direct header follow-up for scoped integration; commit and push result recorded in the task handoff",
+		"repository": "L:/CODEX/cars",
+		"branch": "main",
+		"finalSourceVerification": "../light-canvas-header-2026-10-04/verification.json"
+	}
+}

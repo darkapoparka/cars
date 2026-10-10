@@ -1,0 +1,46 @@
+{
+	"checks": [
+		{
+			"mode": "Лизинг",
+			"contentFits": true,
+			"heroHeight": 400,
+			"noOverflow": true,
+			"title": "Автомобил на лизинг",
+			"topInset": 32
+		},
+		{
+			"mode": "Продай",
+			"contentFits": true,
+			"heroHeight": 400,
+			"noOverflow": true,
+			"title": "Продай автомобил",
+			"topInset": 32
+		},
+		{
+			"mode": "Внос",
+			"contentFits": true,
+			"heroHeight": 400,
+			"noOverflow": true,
+			"title": "Внеси автомобил",
+			"topInset": 32
+		},
+		{
+			"mode": "Купи",
+			"contentFits": true,
+			"heroHeight": 400,
+			"noOverflow": true,
+			"title": "Купи автомобил",
+			"topInset": 32
+		},
+		{
+			"route": "inventory?brand=BMW",
+			"width": 768,
+			"contentFits": true,
+			"heroHeight": 450,
+			"noOverflow": true,
+			"title": "Налични автомобили",
+			"topInset": 32
+		}
+	],
+	"logs": []
+}
