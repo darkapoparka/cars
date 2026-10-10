@@ -4,11 +4,15 @@
  * Import: permit an honestly absent telephone pair and hide unavailable calls.
  * Original template sources and factual profile/stock records are never edited.
  */
+export const UK_MODERN_CARD_CITY_PATHS = Object.freeze([
+  'packages/marketplace-ui/lib/vehicle-card-view-policy.ts'
+]);
 export const UK_MODERN_CITY_PATHS = Object.freeze([
   'packages/marketplace-ui/lib/listing-truth.ts',
-  'packages/marketplace-ui/lib/marketplace-control-copy.ts'
+  'packages/marketplace-ui/lib/marketplace-control-copy.ts',
+  ...UK_MODERN_CARD_CITY_PATHS
 ]);
-const cityMaps = ['locationLabelsBg', 'cityLabelsBg'];
+const cityMaps = ['locationLabelsBg', 'cityLabelsBg', 'locationLabelsBg'];
 const callBoundaries = [
   ['src/lib/components/agents/AgentDetailSidebar.svelte', 'sidebar.callHref', 'sidebar.callHref && sidebar.phone', 2],
   ['src/lib/components/agents/AuxeroAgentCard.svelte', 'card.phoneHref', 'card.phoneHref', 1],
@@ -60,15 +64,14 @@ function commit(files, updates) {
   return [...updates.keys()];
 }
 
-/** Family-relative string/Buffer Map; atomic, exact-path changes only. */
-export function repairModernUkCityKeys(files, profile) {
+function repairCityMaps(files, profile, paths, maps) {
   if (profile?.business?.countryCode !== 'GB') return [];
   const city = profile.business.city;
   if (typeof city !== 'string' || !city.trim() || /[\r\n"]/.test(city)) throw Error('Expected the reviewed UK city text.');
   const updates = new Map();
-  UK_MODERN_CITY_PATHS.forEach((name, index) => {
+  paths.forEach((name, index) => {
     const source = text(files, name);
-    const header = 'const ' + cityMaps[index] + ': Record<string, string> = {\n';
+    const header = 'const ' + maps[index] + ': Record<string, string> = {\n';
     const start = source.indexOf(header), end = source.indexOf('\n};', start);
     if (start < 0 || end < start || source.split(header).length !== 2) throw Error('UK native city map boundary changed: ' + name);
     const block = source.slice(start, end);
@@ -78,6 +81,16 @@ export function repairModernUkCityKeys(files, profile) {
     updates.set(name, source.slice(0, start) + fixed + source.slice(end));
   });
   return commit(files, updates);
+}
+
+/** All three initial native city boundaries; atomic family-relative Map changes. */
+export function repairModernUkCityKeys(files, profile) {
+  return repairCityMaps(files, profile, UK_MODERN_CITY_PATHS, cityMaps);
+}
+
+/** Existing UK sources already have the first two maps repaired; patch only the reviewed third map. */
+export function repairModernUkVehicleCardCity(files, profile) {
+  return repairCityMaps(files, profile, UK_MODERN_CARD_CITY_PATHS, ['locationLabelsBg']);
 }
 
 /** Find the actual end of a Svelte opening tag, respecting JS/quoted attributes. */

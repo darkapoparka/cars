@@ -570,7 +570,7 @@ function patchAutoBestIdentity(candidate) {
   return 'src/routes/listing-detail-v1/[id]/+page.svelte (dealer identity)';
 }
 
-function patchAutoBestLocale(candidate, profile) {
+export function patchAutoBestLocale(candidate, profile) {
   const b = profile.business;
   const copy = dealerLocalizedCopy(profile);
   const dealerTextFields = ['city', 'addressLine', 'address', 'appointment'];
@@ -580,8 +580,8 @@ function patchAutoBestLocale(candidate, profile) {
   ]));
   const catalogFile = updateDealerCatalog(candidate, {
     'dealer.city': { source: b.city, en: copy.en.city, bg: copy.bg.city, disposition: 'translate', notes: 'Dealer-owned city copy generated from the reviewed Cars dealer profile.' },
-    'dealer.addressLine': { source: b.addressLine || b.address, en: copy.en.addressLine, bg: copy.bg.addressLine, disposition: 'translate', notes: 'Dealer-owned address line; physical location and destination remain unchanged.' },
-    'dealer.address': { source: b.address || b.addressLine, en: copy.en.address, bg: copy.bg.address, disposition: 'translate', notes: 'Dealer-owned full address; physical location and destination remain unchanged.' },
+    'dealer.addressLine': { source: b.addressLine || b.address || b.city, en: copy.en.addressLine, bg: copy.bg.addressLine, disposition: 'translate', notes: b.addressLine || b.address ? 'Dealer-owned address line; physical location and destination remain unchanged.' : 'Reviewed city-only display; factual street-address fields and visit destinations remain unpublished.' },
+    'dealer.address': { source: b.address || b.addressLine || b.city, en: copy.en.address, bg: copy.bg.address, disposition: 'translate', notes: b.address || b.addressLine ? 'Dealer-owned full address; physical location and destination remain unchanged.' : 'Reviewed city-only display; factual street-address fields and visit destinations remain unpublished.' },
     'dealer.appointment': { source: b.hours, en: copy.en.appointment, bg: copy.bg.appointment, disposition: 'translate', notes: 'Dealer-owned appointment and opening-hours guidance.' }
   });
   const file = path.join(candidate, 'src/lib/config/locale.ts');

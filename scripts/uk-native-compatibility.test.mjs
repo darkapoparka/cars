@@ -6,8 +6,8 @@ import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {createRequire, stripTypeScriptTypes} from 'node:module';
 import {loadDealerProfile} from './lib/client-refresh-normalize.mjs';
-import {UK_MODERN_CITY_PATHS, UK_IMPORT_PHONE_PATHS, UK_IMPORT_PHONE_INPUT_PATHS,
-  repairModernUkCityKeys, repairImportUkOptionalPhone} from './lib/client-refresh-uk-native.mjs';
+import {UK_MODERN_CITY_PATHS, UK_MODERN_CARD_CITY_PATHS, UK_IMPORT_PHONE_PATHS, UK_IMPORT_PHONE_INPUT_PATHS,
+  repairModernUkCityKeys, repairModernUkVehicleCardCity, repairImportUkOptionalPhone} from './lib/client-refresh-uk-native.mjs';
 
 const root=path.resolve(import.meta.dirname,'..');
 const env={...process.env,GIT_NO_LAZY_FETCH:'1',GIT_TERMINAL_PROMPT:'0'};
@@ -50,7 +50,16 @@ function parseTs(source,name) {
 const importFixed=originalImport(), importBefore=new Map([...importFixed].map(([name,b])=>[name,Buffer.from(b)]));
 const changedImport=repairImportUkOptionalPhone(importFixed,asProfile);
 
-test('all ten factual cities compile and execute in both actual Modern native localization maps',async()=>{
+test('the complete pinned Modern bare-city property set is covered by the three-map adapter',()=>{
+  const matches=git(['grep','-n','-E','^[[:space:]]*Sofia[[:space:]]*:',modernPin,'--','templates/modern']);
+  const names=matches.split('\n').filter(Boolean).map(line=>{
+    const match=/^[a-f0-9]{40}:templates\/modern\/(.+?):[0-9]+:/.exec(line);assert.ok(match);return match[1];
+  });
+  assert.deepEqual(names.sort(),[...UK_MODERN_CITY_PATHS].sort());
+  assert.equal(names.length,3);
+});
+
+test('all ten factual cities compile and execute in all three actual Modern native localization maps',async()=>{
   let cases=0;
   for(const profile of profiles) {
     const city=profile.business.city;
@@ -74,6 +83,10 @@ test('all ten factual cities compile and execute in both actual Modern native lo
       removeImports(str(files.get(UK_MODERN_CITY_PATHS[0]))));
     assert.equal(truth.formatVehicleLocation({city},'en'),city);
     assert.equal(truth.formatVehicleLocation({city},'bg'),city);
+    const card=await loadTs(removeImports(str(files.get(UK_MODERN_CARD_CITY_PATHS[0]))));
+    assert.equal(card.getLocalizedVehicleCardLocationPart(city,'en'),city);
+    assert.equal(card.getLocalizedVehicleCardLocationPart(city,'bg'),city);
+    assert.equal(card.formatLocalizedVehicleCardLocation({city},'bg'),city);
     cases++;
   }
   assert.equal(cases,10);
@@ -92,6 +105,34 @@ test('actual retained Modern source reproduces AS syntax failure and Broadbent u
   repairModernUkCityKeys(broadFiles,broad);
   const fixed=await loadTs(removeImports(str(broadFiles.get(UK_MODERN_CITY_PATHS[1]))));
   assert.equal(fixed.getLocalizedMarketplaceCityName(broad.business.city,'bg'),broad.business.city);
+});
+
+
+test('actual AS and Broadbent vehicle-card modules reproduce the third-map failure and repair only that existing map',async()=>{
+  const name=UK_MODERN_CARD_CITY_PATHS[0];
+  for(const profile of [asProfile,profiles.find(p=>p.slug==='stockport-broadbent-car-and-servicing')]) {
+    const files=familyMap(profile.slug,'modern',UK_MODERN_CITY_PATHS);
+    const original=Buffer.from(files.get(name));
+    if(profile===asProfile)assert.throws(()=>stripTypeScriptTypes(str(original)),/Unexpected|Expected/);
+    else await assert.rejects(loadTs(removeImports(str(original))),/Bredbury is not defined/);
+    repairModernUkCityKeys(files,profile);
+    files.set(name,original);
+    const before=new Map([...files].map(([path,bytes])=>[path,Buffer.from(bytes)]));
+    assert.deepEqual(repairModernUkVehicleCardCity(files,profile),[...UK_MODERN_CARD_CITY_PATHS]);
+    for(const [path,bytes]of before)if(path!==name)assert.deepEqual(files.get(path),bytes,'prior repaired map remains byte-identical');
+    assert.ok(Buffer.isBuffer(files.get(name)));
+    parseTs(str(files.get(name)),name);
+    const module=await loadTs(removeImports(str(files.get(name))));
+    assert.equal(module.getLocalizedVehicleCardLocationPart(profile.business.city,'en'),profile.business.city);
+    assert.equal(module.getLocalizedVehicleCardLocationPart(profile.business.city,'bg'),profile.business.city);
+    assert.equal(module.formatLocalizedVehicleCardLocation({city:profile.business.city},'bg'),profile.business.city);
+    const fixed=new Map([...files].map(([path,bytes])=>[path,Buffer.from(bytes)]));
+    assert.throws(()=>repairModernUkVehicleCardCity(files,profile),/boundary changed/);
+    assert.deepEqual(files,fixed);
+    assert.deepEqual(repairModernUkVehicleCardCity(files,{...profile,business:{...profile.business,countryCode:'BG'}}),[]);
+    assert.deepEqual(files,fixed);
+  }
+  assert.equal(JSON.stringify(profiles),beforeProfiles);
 });
 
 test('Modern city repair rejects unexpected maps atomically and does not touch other markets',()=>{
