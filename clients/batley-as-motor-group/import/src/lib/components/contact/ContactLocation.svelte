@@ -54,11 +54,11 @@
 			>
 				{labels.directions}<ArrowUpRight size={18} aria-hidden="true" />
 			</Action>
-			<Action
+			{#if site.contact.phoneHref}<Action
 				href={site.contact.phoneHref}
 				variant="secondary"
 				size={desktopFramed ? 'compact' : 'standard'}>{site.contact.phone}</Action
-			>
+			>{/if}
 		</div>
 	</div>
 	{#if desktop.current}

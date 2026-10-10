@@ -85,11 +85,11 @@
 				</nav>
 			{/each}
 			<div class="dn-footer__contact">
-				<a {...externalHref(daynightContact.primaryPhoneHref)}
+				{#if daynightContact.primaryPhoneHref}<a {...externalHref(daynightContact.primaryPhoneHref)}
 					><Phone size={18} /><strong>{daynightContact.primaryPhoneLabel}</strong><ArrowUpRight
 						size={15}
 					/></a
-				>
+				>{/if}
 				<a {...externalHref(daynightContact.emailHref)}
 					><Mail size={18} /><span>{daynightContact.emailLabel}</span><ArrowUpRight size={15} /></a
 				>
@@ -123,10 +123,10 @@
 			<img src={footer.logo.src} alt={footer.logo.alt} width="180" height="48" loading="lazy" />
 		</a>
 		<div class="dn-footer-mobile__contact">
-			<a class="dn-footer-mobile__phone" {...externalHref(daynightContact.primaryPhoneHref)}>
+			{#if daynightContact.primaryPhoneHref}<a class="dn-footer-mobile__phone" {...externalHref(daynightContact.primaryPhoneHref)}>
 				<Phone size={19} aria-hidden="true" />
 				<span>{daynightContact.primaryPhoneLabel}</span>
-			</a>
+			</a>{/if}
 			<a class="dn-footer-mobile__address" href={resolve('/contact')}>
 				<MapPin size={18} aria-hidden="true" />
 				<span>{footer.contact.address}</span>

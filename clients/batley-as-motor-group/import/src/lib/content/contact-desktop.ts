@@ -63,9 +63,9 @@ export function desktopContactChannels(site: SiteConfig, locale: Locale) {
 			kind: 'message',
 			href: site.contact.messageHref,
 			title: contactDesktopCopy[locale].message,
-			text: 'Viber',
+			text: site.contact.messageHref.startsWith('viber:') ? 'Viber' : contactDesktopCopy[locale].message,
 			image: daynightAssets.contactMessageBanner,
 			external: false
 		}
-	];
+	].filter((channel) => channel.kind !== 'phone' || Boolean(site.contact.phone && site.contact.phoneHref));
 }

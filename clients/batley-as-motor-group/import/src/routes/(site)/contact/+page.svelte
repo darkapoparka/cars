@@ -62,9 +62,9 @@
 					{#snippet secondaryActions()}
 						<SocialLinks links={data.site.socials ?? []} tone="plain" />
 					{/snippet}
-					<Action href={data.site.contact.phoneHref} variant="strong" size="primary"
+					{#if data.site.contact.phoneHref}<Action href={data.site.contact.phoneHref} variant="strong" size="primary"
 						><Phone size={18} aria-hidden="true" />{data.site.contact.phone}</Action
-					>
+					>{/if}
 					<Action href="#contact-enquiry" variant="secondary" size="primary"
 						><MessageSquare size={18} aria-hidden="true" />{copy.enquiry}</Action
 					>

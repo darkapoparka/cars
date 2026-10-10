@@ -31,11 +31,11 @@
 			>{dealerCopy[english ? 'en' : 'bg'].appointment}
 		</p>
 		<div class="contact-banner__actions">
-			<Action href={site.contact.phoneHref}
+			{#if site.contact.phoneHref}<Action href={site.contact.phoneHref}
 				><Phone size={20} aria-hidden="true" /><span class="site-desktop-only"
 					>{site.contact.phone}</span
 				><span class="site-mobile-only">{english ? 'Call us' : 'Обади се'}</span></Action
-			>
+			>{/if}
 			<Action href={site.contact.mapHref} variant="secondary" target="_blank" rel="noreferrer"
 				><MapPin size={20} aria-hidden="true" /><span class="site-desktop-only"
 					>{english ? 'Directions' : 'Как да стигнеш'}</span

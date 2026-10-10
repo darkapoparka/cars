@@ -90,12 +90,12 @@
 	description={site.contact.phone}
 >
 	<div class="bc-mobile-appbar__contact-options">
-		<MobileMenuAction
+		{#if site.contact.phoneHref}<MobileMenuAction
 			href={site.contact.phoneHref}
 			label={english ? 'Call' : 'Обади се'}
 			icon={PhoneCall}
 			variant="primary"
-		/>
+		/>{/if}
 		<MobileMenuAction
 			href={site.contact.messageHref}
 			label={isViber ? 'Viber' : english ? 'Message us' : 'Пиши ни'}

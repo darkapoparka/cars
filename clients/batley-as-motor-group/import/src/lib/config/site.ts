@@ -66,8 +66,11 @@ export function validateSiteConfig(config: SiteConfig): SiteConfig {
 		)
 			throw new Error('Identity assets must be local absolute paths');
 	}
-	if (!/^tel:[+]?[0-9 -]+$/.test(config.contact.phoneHref))
-		throw new Error('A valid telephone link is required');
+	if (
+		(config.contact.phone || config.contact.phoneHref) &&
+		(!config.contact.phone.trim() || !/^tel:[+]?[0-9 -]+$/.test(config.contact.phoneHref))
+	)
+		throw new Error('A published telephone requires a label and valid telephone link');
 	const links: Array<[string, string[]]> = [
 		[config.contact.mapHref, ['https:']],
 		[config.contact.contactHref, ['https:', 'mailto:']],

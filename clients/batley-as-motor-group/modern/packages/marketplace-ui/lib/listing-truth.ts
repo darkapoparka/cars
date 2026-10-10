@@ -41,7 +41,7 @@ const locationLabelsBg: Record<string, string> = {
   Plovdiv: "Пловдив",
   Romania: "Румъния",
   Ruse: "Русе",
-  Batley, West Yorkshire: "Batley, West Yorkshire",
+  "Batley, West Yorkshire": "Batley, West Yorkshire",
   "Batley, West Yorkshire City": "Batley, West Yorkshire-град",
   "Stara Zagora": "Стара Загора",
   Varna: "Варна",

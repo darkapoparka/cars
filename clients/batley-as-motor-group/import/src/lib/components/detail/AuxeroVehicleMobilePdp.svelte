@@ -431,13 +431,13 @@
 					<Send size={16} strokeWidth={2} aria-hidden="true" />
 					{detail.copy.inquiryCta}
 				</button>
-				<a
+				{#if detail.contact.primaryPhoneHref}<a
 					class="daynight-mobile-pdp__cta daynight-mobile-pdp__cta--call"
 					{...externalHref(detail.contact.primaryPhoneHref)}
 				>
 					<PhoneCall size={16} strokeWidth={2} aria-hidden="true" />
 					{detail.copy.callCta}
-				</a>
+				</a>{/if}
 			</div>
 
 			<Drawer.Description>
@@ -569,10 +569,10 @@
 			</p>
 		</form>
 
-		<a class="daynight-mobile-pdp__inquiry-call" {...externalHref(detail.contact.primaryPhoneHref)}>
+		{#if detail.contact.primaryPhoneHref}<a class="daynight-mobile-pdp__inquiry-call" {...externalHref(detail.contact.primaryPhoneHref)}>
 			<PhoneCall size={18} strokeWidth={2.3} aria-hidden="true" />
 			{detail.contact.primaryPhoneLabel}
-		</a>
+		</a>{/if}
 		{#snippet footer()}
 			{#if inquirySaved}
 				<button type="button" class="daynight-mobile-pdp__inquiry-submit" onclick={closeInquiry}>

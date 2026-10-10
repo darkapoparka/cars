@@ -444,7 +444,7 @@ const countryNameFormatters = {
 } as const;
 
 const cityLabelsBg: Record<string, string> = {
-  Batley, West Yorkshire: "Batley, West Yorkshire",
+  "Batley, West Yorkshire": "Batley, West Yorkshire",
   Plovdiv: "Пловдив",
   Varna: "Варна",
   Burgas: "Бургас",

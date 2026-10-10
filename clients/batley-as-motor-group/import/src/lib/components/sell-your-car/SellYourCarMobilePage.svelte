@@ -156,10 +156,10 @@
 				<Navigation size={18} strokeWidth={2.25} aria-hidden="true" />
 				{nt('ui44')}
 			</a>
-			<a {...hrefAttributes(daynightContact.primaryPhoneHref)}>
+			{#if daynightContact.primaryPhoneHref}<a {...hrefAttributes(daynightContact.primaryPhoneHref)}>
 				<PhoneCall size={18} strokeWidth={2.25} aria-hidden="true" />
 				{nt('ui37')}
-			</a>
+			</a>{/if}
 		</div>
 	</MobileSheet>
 

@@ -387,6 +387,334 @@
       "hosted": false,
       "dealerQa": false,
       "readyToPublish": false
+    },
+    {
+      "id": "gb-native-finalization-v1",
+      "at": "2026-10-10T11:58:06.513Z",
+      "workflowCommit": "9f79de85fe06d038a52c1af0ac91c8d704183944",
+      "previousSourceCommit": "643440c58ff7e11241f06c4e39a31d22633c50c9",
+      "reason": "Finalize native locale outputs from reviewed UK copy; preserve arbitrary city text as object keys; hide absent telephone actions without inventing contact details.",
+      "localeFinalization": {
+        "schemaVersion": 1,
+        "method": "approved-native-locale-generator",
+        "generatorBlobs": {
+          "scripts/build-locales.mjs": "c62c7f149591308e71cdd0dc9eee2f2ecff9661d",
+          "scripts/locale-catalog.mjs": "d1c8b4c43fc073f24137785b69f7a497d9290da8"
+        },
+        "inputBytes": 762476,
+        "inputHashes": {
+          "auto-best/scripts/build-locales.mjs": "544139179e7375ca367c56f10bf5d983ac92a5673ff3c7895c348b3afc951519",
+          "auto-best/scripts/locale-catalog.mjs": "738fa9e490ec69e4acfce1c01f505336a459d25037b9ee3b037d81e46f9b7626",
+          "auto-best/localization/common.json": "b43729d750d3c5afa9b5e0921ae78451f25f450222e593c56980774c5f4955f4",
+          "auto-best/localization/catalog.reviewed.json": "0bc34f72f1e001112d5fe3ab2f2027a8654a13faabca550d4b690bc17ab5fb1d",
+          "auto-best/localization/template.reviewed.json": "87f67dbce93c1e7d59569d538a3ea81540803284d836365183e338c0ea903122",
+          "auto-best/localization/dealer.reviewed.json": "69ed6ce628ee2dbfdfc3070b5226bf68fedfed2221c1f3240f271a84976bcf0f",
+          "auto-best/src/lib/locale/policy.ts": "9b965830b64c496eac861fdc4059813f130056d543173bc3a777eb34624226cf"
+        },
+        "generated": {
+          "status": "generated",
+          "messages": 1113,
+          "aliases": 1971,
+          "quarantinedAliases": 44,
+          "activeAmbiguousAliases": 0
+        },
+        "checked": {
+          "status": "checked",
+          "messages": 1113,
+          "aliases": 1971,
+          "quarantinedAliases": 44,
+          "activeAmbiguousAliases": 0
+        },
+        "changedFiles": [
+          {
+            "path": "auto-best/src/lib/locale/catalog.ts",
+            "before": "097a5ae64d70518b0eea8f0244dbe9a3a61131bbb8771c2adb8cbc3b0e73349f",
+            "after": "6e4c3323661bcbb94557c180b30d07ac9bd8973c73d9cbfe4353fb26356476ac"
+          },
+          {
+            "path": "auto-best/localization/generated-manifest.json",
+            "before": "4ec2366c11436ad14b838c38cdf3569e03c145dcded117354a1f0f16936756ee",
+            "after": "e5f70925d0a781507a2964e3fd3cece480a3363bb930c7a579ac12cdb8e8b2b5"
+          }
+        ],
+        "outputHashes": {
+          "auto-best/src/lib/locale/catalog.ts": "6e4c3323661bcbb94557c180b30d07ac9bd8973c73d9cbfe4353fb26356476ac",
+          "auto-best/localization/generated-manifest.json": "e5f70925d0a781507a2964e3fd3cece480a3363bb930c7a579ac12cdb8e8b2b5"
+        },
+        "nativeCheckPassed": true,
+        "authoritativeInputsUnchanged": true,
+        "fixture": "runtime/uk-locale-finalization/auto-best-oujW3L",
+        "hosted": false,
+        "readyToPublish": false
+      },
+      "modernCityPaths": [
+        "modern/packages/marketplace-ui/lib/listing-truth.ts",
+        "modern/packages/marketplace-ui/lib/marketplace-control-copy.ts"
+      ],
+      "optionalPhonePaths": [
+        "import/src/lib/config/site.ts",
+        "import/src/lib/components/agents/AgentDetailSidebar.svelte",
+        "import/src/lib/components/agents/AuxeroAgentCard.svelte",
+        "import/src/lib/components/common/ContactBanner.svelte",
+        "import/src/lib/components/contact/ContactLocation.svelte",
+        "import/src/lib/components/contact/ContactMobilePage.svelte",
+        "import/src/lib/components/detail/AuxeroVehicleMobilePdp.svelte",
+        "import/src/lib/components/detail/VehiclePurchasePanel.svelte",
+        "import/src/lib/components/home/HomeFiveFooter.svelte",
+        "import/src/lib/components/home/HomeFiveHeader.svelte",
+        "import/src/lib/components/home/HomeFiveHero.svelte",
+        "import/src/lib/components/home1/Home1Hero.svelte",
+        "import/src/lib/components/layout/CleanSiteFooter.svelte",
+        "import/src/lib/components/layout/CleanSiteHeader.svelte",
+        "import/src/lib/components/layout/MobileAppbar.svelte",
+        "import/src/lib/components/layout/MobileNavigationMenu.svelte",
+        "import/src/lib/components/layout/PublicFooter.svelte",
+        "import/src/lib/components/layout/PublicHeader.svelte",
+        "import/src/lib/components/layout/SiteFooter.svelte",
+        "import/src/lib/components/sell-your-car/SellValuationCard.svelte",
+        "import/src/lib/components/sell-your-car/SellYourCarMobilePage.svelte",
+        "import/src/routes/(site)/contact/+page.svelte",
+        "import/src/lib/content/contact-desktop.ts",
+        "import/src/routes/(site)/import/+page.svelte",
+        "import/src/routes/(site)/sell-your-car/+page.svelte",
+        "import/src/lib/data/blog.ts"
+      ],
+      "changedFiles": [
+        {
+          "path": "auto-best/localization/generated-manifest.json",
+          "before": "4ec2366c11436ad14b838c38cdf3569e03c145dcded117354a1f0f16936756ee",
+          "after": "e5f70925d0a781507a2964e3fd3cece480a3363bb930c7a579ac12cdb8e8b2b5"
+        },
+        {
+          "path": "auto-best/src/lib/locale/catalog.ts",
+          "before": "097a5ae64d70518b0eea8f0244dbe9a3a61131bbb8771c2adb8cbc3b0e73349f",
+          "after": "6e4c3323661bcbb94557c180b30d07ac9bd8973c73d9cbfe4353fb26356476ac"
+        },
+        {
+          "path": "import/src/lib/components/agents/AgentDetailSidebar.svelte",
+          "before": "692bbd71d103bfafa7ab7a15873954ba3160b9da1820419efbb8737b01c94113",
+          "after": "09ebed5e33a339bfd7129cc6ba53a63769246fa0563408d91b1cf91206c9ee74"
+        },
+        {
+          "path": "import/src/lib/components/agents/AuxeroAgentCard.svelte",
+          "before": "0e2f2bf4c470fd282fda42929af080a266459c568423d03cae7d35d26ef48af7",
+          "after": "cd20a810235a3b151d58f44aa2400b999d919d0c66b73413ff518fd32b2dd8b5"
+        },
+        {
+          "path": "import/src/lib/components/common/ContactBanner.svelte",
+          "before": "2ea6a063d4e39299d0138b710e8683a6bf9a6575cc82af88f8ca7ce03944962d",
+          "after": "8c6772373104761e40d6389c9f5c8b8c8f2134d96c7826e061cb507687428a92"
+        },
+        {
+          "path": "import/src/lib/components/contact/ContactLocation.svelte",
+          "before": "2649cc5ccc40eee231d77b64bceecdab44c82fc15ea55bfdd8a05916111b529b",
+          "after": "ad9bc38d5f707f322bc7f7af116f9715d4425555c5bf32190c657df7ab05004f"
+        },
+        {
+          "path": "import/src/lib/components/contact/ContactMobilePage.svelte",
+          "before": "ba95a9133d211b555077a0f4d85e6bdcfd50df87e47ac92278fd9441145f050e",
+          "after": "ea45d5b5da6ea6e69d5abaf7af5652a214c26d1ab06f172abb886d03f2b5dba9"
+        },
+        {
+          "path": "import/src/lib/components/detail/AuxeroVehicleMobilePdp.svelte",
+          "before": "2dc59c15a894391ac620dd4b10ad8cce2368212b32f4834f7df2449e1fabe28a",
+          "after": "61eb64ab31826bae94e9a0ff06c8b18cedce19e1cce06620846f01a9261d4242"
+        },
+        {
+          "path": "import/src/lib/components/detail/VehiclePurchasePanel.svelte",
+          "before": "26cab1e611d1ce9714fb6e0b226d4b2270395d527d989afadb408cf5d6319cb6",
+          "after": "5d10a6cfeed655ca6eff2f113b9a01716e9d962c8b1d670de001825e33c6349a"
+        },
+        {
+          "path": "import/src/lib/components/home/HomeFiveFooter.svelte",
+          "before": "41545462d0e3fb277ef5431c36449e1046f68ec69ec7e86581d786e5c46cec11",
+          "after": "8bbdb1f7117e925f37c97e863e786a47b2035cf489555ddf46337cc02950b8c6"
+        },
+        {
+          "path": "import/src/lib/components/home/HomeFiveHeader.svelte",
+          "before": "7e067bac98c3aa8324c60af9b0dab1e08a1ed904e1fe2af56efd82532a2d1c6b",
+          "after": "7467af5c8ca916af988a5f591a87aff75f99273e2bb79ccd3af773892b542a54"
+        },
+        {
+          "path": "import/src/lib/components/home/HomeFiveHero.svelte",
+          "before": "5ff55852af547a545cde3b5cec6ad87c0d9e730c5f87badbac8200a2c79467a6",
+          "after": "cf9359cecc4a07a2c986efdb8e6244d184ad5bc8c5b5ddc1b1b8b2813e17e0e4"
+        },
+        {
+          "path": "import/src/lib/components/home1/Home1Hero.svelte",
+          "before": "3a0deacceb79a35e3e03065ddfa1ddd7ee8c836299008e3ba01ff3d93a4d2a6b",
+          "after": "9e145ef0934068db475db89d937f8a7212ca6e656d1df0f89e38c4c962ccb4c7"
+        },
+        {
+          "path": "import/src/lib/components/layout/CleanSiteFooter.svelte",
+          "before": "767a423e52da6dd4fa831e0bfd49af18f4b76202b5cb3ecd0070644b490f8609",
+          "after": "dfc8f1b4c99ce8b85b88c7d05c983bd9fd3b9cc9f514828134c3a08216affe25"
+        },
+        {
+          "path": "import/src/lib/components/layout/CleanSiteHeader.svelte",
+          "before": "225eaaa481749d28485548f72bee2a3ffbc7965642888970083331ff1fe40b64",
+          "after": "4000dc5276dcad65b1be101b076ecb8925e02f3d10459650e1fa6dbbafbf4f4a"
+        },
+        {
+          "path": "import/src/lib/components/layout/MobileAppbar.svelte",
+          "before": "357961c0ed4301a27901db5fc1e1607d2922f88644d805ab750638bd6a8955d6",
+          "after": "cf968e35bc40552fbd6aa960004d5b234933fd27bae6cab4d300c3caf38ecd98"
+        },
+        {
+          "path": "import/src/lib/components/layout/MobileNavigationMenu.svelte",
+          "before": "1bfb05b98dcc83d9b925ddb9c6151b6ab1fa656642fdc0c907cb52e1814e7c9a",
+          "after": "01c015f652a938eb4595cc6f45a75d775d648576ba93363b197738d00dbe78e9"
+        },
+        {
+          "path": "import/src/lib/components/layout/PublicFooter.svelte",
+          "before": "105b0855bfee8b5143e977c5ffdeeead8840aa0c403c2ee0921381b4e1ec7cce",
+          "after": "7b562643e6973da8c4acf0765ed350f7bbb8685e946588aa25c7cbedbef9fc6e"
+        },
+        {
+          "path": "import/src/lib/components/layout/PublicHeader.svelte",
+          "before": "16cb437542d63b240f615aab3dad1c8a2dda685ed20c14c73b0c43741d47af4b",
+          "after": "2d8ce78da9efdba8227ab8dfe38cb2556e9ae9287248cf26eb6e437c63d7d048"
+        },
+        {
+          "path": "import/src/lib/components/layout/SiteFooter.svelte",
+          "before": "62ab13ad456487f18e745dcec848d74b740e1730f85e2611d80540f159d8eb00",
+          "after": "f7634702d3ecb8bc058b6f0e5c22d79a77ccc0a35f61a97906da7f3d4b637fe0"
+        },
+        {
+          "path": "import/src/lib/components/sell-your-car/SellValuationCard.svelte",
+          "before": "04bb4cb96b305952ded017789961d63b70b06eb3182fb314027e923a0811ade3",
+          "after": "7d5c63bdd240f6538b1326468cb430ccba3b840936bf66bb1657b1d3d5fd6f8c"
+        },
+        {
+          "path": "import/src/lib/components/sell-your-car/SellYourCarMobilePage.svelte",
+          "before": "77fb7ce627832614ee8296dc47c0b5e2fd23e51dc5f08f38b66542f684d20858",
+          "after": "decfa6643267b202221ede6d9886cd767df752a0bdcefe99394fafa5520e7a2d"
+        },
+        {
+          "path": "import/src/lib/config/site.ts",
+          "before": "90c1d5dfa06c3e680cba2e0e2ba9db93d73ee42b02398f14e2641e580d28f0e3",
+          "after": "98558fa560cd29eb06af4d4c1e5b78880ac4ca88e96b16edaa39c844242f1676"
+        },
+        {
+          "path": "import/src/lib/content/contact-desktop.ts",
+          "before": "c33763f2052ec123b91c454b3140f039ac14830b154f7006aa03dbae47921d10",
+          "after": "5e8cf2d30ab556b3b0af834eb000e1188b05a7b78ab83bbbf5faffc81213d19e"
+        },
+        {
+          "path": "import/src/lib/data/blog.ts",
+          "before": "b51aff0c0018e95190d35a904989d9566eb0b3538b70729a22da49d35763d3fc",
+          "after": "477090ac3e4ca3f562f42af6ffd63ab30923aae47980eb75aa4196b2a428599e"
+        },
+        {
+          "path": "import/src/routes/(site)/contact/+page.svelte",
+          "before": "064066779e97273a4a98da4e4d5991170f4609f93635664ef5795ed2765bc276",
+          "after": "563a8cb2bcd63ee62cffa916c5553058b8b3b226f0cdadd1283b651ab1e6a594"
+        },
+        {
+          "path": "import/src/routes/(site)/import/+page.svelte",
+          "before": "2a76dc7ec2e040b370b4724550b86c5760f4f6158985458c0366f5e6f1ea9fde",
+          "after": "4129b84eab9b44505dab5859232fb522bd6650745a0646a05861dc4762b30281"
+        },
+        {
+          "path": "import/src/routes/(site)/sell-your-car/+page.svelte",
+          "before": "02d3cf3f17e3bb68922676398f20df978f0450a4d0d73f8a76038ff83ca4d828",
+          "after": "c9fe8ce200774ec8eabfedef4e6287e339c589d30aa9be7265914a196397967c"
+        },
+        {
+          "path": "localization/adoption.json",
+          "before": "dcfd42f571b9a450f47df2cc1fc78773117ee7869edc4c34962d4d0ab38247f6",
+          "after": "d0e53986c90127fd55b1ee8681adeac117f47a49da8ea0609384577d1643596e"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/lib/listing-truth.ts",
+          "before": "b7c9fd7102745f62061fd2339272b055abce2c35590cba6ecb43703ee5d84560",
+          "after": "b8167c3080bb1814b29a6a736675282788b1fffc96decfdbab685a2c89c223b1"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/lib/marketplace-control-copy.ts",
+          "before": "eff437be3b7c7f1d4061c1ce997aa451c2e31ffb5dd4379824b886f011d59149",
+          "after": "13f927695bf1ade49d628c57421a26f6426f00c1f377981ea59d022d5359e02f"
+        }
+      ],
+      "sourceBefore": {
+        "files": 12245,
+        "sha256": "945aaeee650fa3294753c3e75ec1e2899b3e12f78ae8724d802aceb3b51fccb7"
+      },
+      "sourceAfter": {
+        "files": 12245,
+        "sha256": "b1152493a3932c092a2d5a314c33f99950864e2f85bfe076952cb48b8e8481c6"
+      },
+      "familiesBefore": {
+        "auto-best": {
+          "files": 1246,
+          "sha256": "1ea1cf436b19f9f1b2c9db92bc8e8ae8ac02ac94cf7ccae81f13de96ab4676fb"
+        },
+        "modern": {
+          "files": 3979,
+          "sha256": "dca1e2caab64986ea64f4a37b0746c5f37f847562066fb8c9abd581d9efcea74"
+        },
+        "import": {
+          "files": 3398,
+          "sha256": "3e9e7c101c293b1881207d8652db62ed72fd841180d704de034cb3a2bc6176ab"
+        },
+        "app": {
+          "files": 1647,
+          "sha256": "d6c384dda1d27258da3e0266e6e2754ff6b178c81b88cd5e4ee435c922a7599c"
+        },
+        "mobile": {
+          "files": 833,
+          "sha256": "bea03ac9f8e1cbc7b0c868c6badcd3607747359b334089ad6d2076b32146d960"
+        },
+        "karento-best": {
+          "files": 1124,
+          "sha256": "8dacce7f9b67942449f98b7d315d22b55c633453dd89a6ecb2f9f750857b7350"
+        }
+      },
+      "familiesAfter": {
+        "auto-best": {
+          "files": 1246,
+          "sha256": "81ed9d704eb7c1a261bf7b838f16a21b36838598590828c8242f1ebff5bceb1a"
+        },
+        "modern": {
+          "files": 3979,
+          "sha256": "eb3cc396731d101a64c2707ba086357158781cdf55e93c3c90af86461a3e41f9"
+        },
+        "import": {
+          "files": 3398,
+          "sha256": "375bbd9e5964fb122b6eabed6b324579eff5bdbbe5056b487d42490217a2c2a7"
+        },
+        "app": {
+          "files": 1647,
+          "sha256": "d6c384dda1d27258da3e0266e6e2754ff6b178c81b88cd5e4ee435c922a7599c"
+        },
+        "mobile": {
+          "files": 833,
+          "sha256": "bea03ac9f8e1cbc7b0c868c6badcd3607747359b334089ad6d2076b32146d960"
+        },
+        "karento-best": {
+          "files": 1124,
+          "sha256": "8dacce7f9b67942449f98b7d315d22b55c633453dd89a6ecb2f9f750857b7350"
+        }
+      },
+      "nativeAdoptionBefore": "dcfd42f571b9a450f47df2cc1fc78773117ee7869edc4c34962d4d0ab38247f6",
+      "nativeAdoptionAfter": "d0e53986c90127fd55b1ee8681adeac117f47a49da8ea0609384577d1643596e",
+      "verification": {
+        "originalSixSourceSeals": true,
+        "repairedSixSourceSeals": true,
+        "unaffectedFamilies": [
+          "app",
+          "mobile",
+          "karento-best"
+        ],
+        "unaffectedFamiliesByteIdentical": true,
+        "factualStockBytesUnchanged": true,
+        "factsAndSourcePinsUnchanged": true,
+        "nativeLocaleCheck": true
+      },
+      "build": false,
+      "hosted": false,
+      "dealerQa": false,
+      "readyToPublish": false
     }
   ]
 }
