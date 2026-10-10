@@ -1,3 +1,4 @@
+import { withRetainedPublicAssets } from './scripts/public-asset-retention.mjs';
 import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
@@ -5,7 +6,7 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const config = {
   preprocess: vitePreprocess(),
   kit: {
-    adapter: adapter(),
+    adapter: withRetainedPublicAssets(adapter(), { root: import.meta.dirname }),
     // Avoid extra blocking requests for small styles; keep larger sheets cacheable.
     inlineStyleThreshold: 32 * 1024,
     alias: {

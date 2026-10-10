@@ -7,7 +7,17 @@
 	import Play from '@lucide/svelte/icons/play';
 	import type { AboutVideo } from '$lib/data/about-videos';
 
-	let { videos, english = false }: { videos: AboutVideo[]; english?: boolean } = $props();
+	let {
+		videos,
+		english = false,
+		channelHref = '',
+		mobileHomeTitle = ''
+	}: {
+		videos: AboutVideo[];
+		english?: boolean;
+		channelHref?: string;
+		mobileHomeTitle?: string;
+	} = $props();
 	let activeVideo = $state<string | null>(null);
 	const focusPlayer = (element: HTMLIFrameElement) => element.focus();
 	const selectedVideos = $derived(
@@ -20,10 +30,23 @@
 {#if selectedVideos.length}
 	<section
 		class="daynight-youtube"
+		class:daynight-youtube--home={Boolean(mobileHomeTitle)}
 		aria-label={site.identity.name + (english ? ' on YouTube' : ' в YouTube')}
 	>
 		<div class="site-container">
 			<div class="daynight-youtube__heading">
+				{#if mobileHomeTitle}
+					<h2 class="youtube-home-title">
+						{mobileHomeTitle}<span
+							><svg width="36" height="25" viewBox="0 0 36 25" aria-hidden="true"
+								><rect width="36" height="25" rx="7" fill="#ff0033" /><path
+									d="m15 7 10 5.5L15 18Z"
+									fill="white"
+								/></svg
+							>YouTube</span
+						>
+					</h2>
+				{/if}
 				<h2>
 					<span class="youtube-dealer">{site.identity.name}</span><span class="youtube-preposition"
 						>{english ? 'on' : 'в'}</span
@@ -85,12 +108,30 @@
 						{/if}
 					</div>
 				{/each}
+				{#if channelHref}
+					<a
+						class="daynight-youtube__channel"
+						href={linkHref(channelHref)}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<Play size={28} aria-hidden="true" />
+						<strong>{english ? 'View channel' : 'Виж канала'}</strong>
+						<ArrowRight size={20} aria-hidden="true" />
+					</a>
+				{/if}
 			</div>
 		</div>
 	</section>
 {/if}
 
 <style>
+	.youtube-home-title {
+		display: none;
+	}
+	.daynight-youtube__channel {
+		display: none;
+	}
 	.daynight-youtube {
 		padding-block: 32px;
 		background: var(--bc-bg);
@@ -177,7 +218,7 @@
 		height: 44px;
 		margin: auto;
 		border-radius: 12px;
-		background: #ff0033;
+		background: var(--bc-accent);
 		color: #fff;
 	}
 	.daynight-youtube__watch {
@@ -207,7 +248,14 @@
 		outline-offset: -4px;
 	}
 	.daynight-youtube__poster:hover .daynight-youtube__play {
-		background: #d9002b;
+		background: var(--bc-accent-hover);
+	}
+	@media (min-width: 768px) {
+		h2 {
+			font-family: var(--bc-font-body);
+			font-weight: var(--bc-desktop-title-weight);
+			line-height: var(--bc-desktop-section-leading);
+		}
 	}
 	@media (max-width: 767px) {
 		.daynight-youtube {
@@ -221,15 +269,15 @@
 			padding: 20px 14px;
 		}
 		h2 .youtube-dealer {
-			flex-basis: 100%;
-			font-size: 16px;
-			color: var(--bc-muted);
+			max-width: 100%;
+			font-size: 0.875rem;
+			color: var(--bc-ink);
 		}
 		h2 {
-			gap: 8px;
+			gap: 6px;
 		}
 		h2 .youtube-preposition {
-			font-size: 18px;
+			font-size: 0.875rem;
 		}
 		.daynight-youtube__heading {
 			gap: 12px;
@@ -238,7 +286,14 @@
 			margin-bottom: 16px;
 		}
 		h2 {
-			font-size: 24px;
+			font-size: 1.125rem;
+		}
+		h2 span {
+			gap: 4px;
+		}
+		h2 svg {
+			width: 24px;
+			height: 17px;
 		}
 		.daynight-youtube__grid {
 			grid-template-columns: none;
@@ -253,6 +308,112 @@
 		}
 		.daynight-youtube__video {
 			scroll-snap-align: start;
+		}
+		.daynight-youtube__channel {
+			display: flex;
+			min-width: 0;
+			aspect-ratio: 16 / 9;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			gap: 12px;
+			border: 1px solid var(--bc-border);
+			border-radius: 12px;
+			background: var(--bc-surface-raised);
+			padding: 16px;
+			color: var(--bc-ink);
+			font-size: 1rem;
+			line-height: 1.375;
+			text-align: center;
+			text-decoration: none;
+			scroll-snap-align: start;
+		}
+		.daynight-youtube__channel strong {
+			overflow-wrap: anywhere;
+		}
+		.daynight-youtube__channel :global(svg) {
+			flex: 0 0 auto;
+		}
+	}
+	@media (max-width: 767.98px) {
+		.daynight-youtube--home {
+			padding-block: var(--bc-space-6) var(--bc-space-2);
+		}
+		.daynight-youtube--home > .site-container {
+			background: transparent;
+			border: 0;
+			border-radius: 0;
+			padding-block: 0;
+			padding-inline: 0;
+		}
+		.daynight-youtube--home .daynight-youtube__heading {
+			justify-content: space-between;
+			flex-wrap: nowrap;
+			margin-bottom: var(--bc-space-3);
+		}
+		.daynight-youtube--home h2:not(.youtube-home-title),
+		.daynight-youtube--home .daynight-youtube__watch {
+			display: none;
+		}
+		.daynight-youtube--home .youtube-home-title {
+			display: flex;
+			gap: var(--bc-space-2);
+			font: var(--bc-mobile-home-section-font);
+			letter-spacing: var(--bc-tracking-tight);
+		}
+		.daynight-youtube--home .youtube-home-title svg {
+			width: 29px;
+			height: 20px;
+		}
+		.daynight-youtube--home .youtube-home-title span {
+			gap: 6px;
+		}
+		.daynight-youtube--home .daynight-youtube__grid {
+			gap: var(--bc-space-3);
+			scrollbar-width: none;
+		}
+		.daynight-youtube--home .daynight-youtube__video {
+			aspect-ratio: auto;
+			background: var(--bc-surface-raised);
+			border: 1px solid var(--bc-border);
+			border-radius: var(--bc-radius-panel);
+		}
+		.daynight-youtube--home .daynight-youtube__poster {
+			position: relative;
+			color: var(--bc-ink);
+			text-decoration: none;
+		}
+		.daynight-youtube--home .daynight-youtube__poster img {
+			height: auto;
+			aspect-ratio: 16 / 9;
+		}
+		.daynight-youtube--home .daynight-youtube__poster::after {
+			display: none;
+		}
+		.daynight-youtube--home .daynight-youtube__title {
+			position: static;
+			display: block;
+			padding: var(--bc-space-4);
+			white-space: normal;
+			font: var(--bc-weight-heading) var(--bc-mobile-label)/var(--bc-mobile-label-leading)
+				var(--bc-font-body);
+		}
+		.daynight-youtube--home .daynight-youtube__play {
+			top: 0;
+			bottom: auto;
+			height: var(--bc-control-height-standard);
+			margin-top: calc((100cqw * 9 / 16 - var(--bc-control-height-standard)) / 2);
+		}
+		.daynight-youtube--home .daynight-youtube__play :global(svg) {
+			width: var(--bc-control-icon-size-standard);
+			height: var(--bc-control-icon-size-standard);
+		}
+		.daynight-youtube--home .daynight-youtube__poster {
+			container-type: inline-size;
+		}
+		.daynight-youtube--home iframe {
+			aspect-ratio: 16 / 9;
+			height: auto;
 		}
 	}
 </style>

@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "scope": "Existing 25-dealer cohort; first Cloudflare pilot only. New Varna cohort remains separate.",
+  "leads": [
+    {
+      "slug": "promosale-varna",
+      "proposedRepository": "darkapoparka/cars-promosalevarna"
+    }
+  ]
+}

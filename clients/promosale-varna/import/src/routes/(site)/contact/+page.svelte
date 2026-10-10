@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { linkHref } from '$lib/utils/links';
 	import { nativeMessage } from '$lib/i18n/native';
 	import { page } from '$app/state';
 	const nt = (key: import('$lib/i18n/native').NativeKey) =>
@@ -8,34 +7,26 @@
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
 	import Action from '$lib/components/common/Action.svelte';
 	import LeadForm from '$lib/components/common/LeadForm.svelte';
-	import SocialLinks from '$lib/components/common/SocialLinks.svelte';
+	import DesktopHeroActions from '$lib/components/common/DesktopHeroActions.svelte';
+	import { desktopCopy } from '$lib/content/desktop-copy';
 	import ContactMobilePage from '$lib/components/contact/ContactMobilePage.svelte';
+	import ContactLocation from '$lib/components/contact/ContactLocation.svelte';
+	import SocialLinks from '$lib/components/common/SocialLinks.svelte';
+	import { contactDesktopCopy } from '$lib/content/contact-desktop';
+	import { dealerCopy } from '$lib/config/dealer-copy';
+	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
 	import Phone from '@lucide/svelte/icons/phone';
 	import MapPin from '@lucide/svelte/icons/map-pin';
-	import MessageCircle from '@lucide/svelte/icons/message-circle';
+	import Mail from '@lucide/svelte/icons/mail';
+	import MessageSquare from '@lucide/svelte/icons/message-square';
 	import { receiptMessage } from '$lib/domain/inquiry';
 	let { data, form }: PageProps = $props();
 	const english = $derived(data.locale === 'en');
-	const channels = $derived([
-		{
-			href: data.site.contact.phoneHref,
-			title: english ? 'Call us' : 'Обади се',
-			text: data.site.contact.phone,
-			icon: Phone
-		},
-		{
-			href: data.site.contact.mapHref,
-			title: english ? 'Visit the showroom' : 'Посети ни',
-			text: data.site.contact.address,
-			icon: MapPin
-		},
-		{
-			href: data.site.contact.messageHref,
-			title: english ? 'Message us' : 'Пиши ни',
-			text: 'Viber',
-			icon: MessageCircle
-		}
-	]);
+	const copy = $derived(contactDesktopCopy[data.locale]);
+	const emailHref = $derived(
+		data.site.contact.contactHref.startsWith('mailto:') ? data.site.contact.contactHref : undefined
+	);
+	const emailLabel = $derived(emailHref ? new URL(emailHref).pathname : '');
 </script>
 
 <svelte:head>
@@ -45,51 +36,54 @@
 <main id="main-content">
 	<div class="site-desktop-only">
 		<PageIntro
-			title={english ? 'Contact us' : 'Контакти'}
-			description={data.site.contact.appointment}
+			title={copy.title}
+			description={dealerCopy[data.locale].address}
 			image="/assets/daynight/proof-studio-import-handoff.webp"
-			desktopImage="/assets/daynight/banners/contact-desktop-v2.webp"
-			align="center"
+			vehicleArtwork
+			artworkPanelWidth="var(--bc-desktop-action-panel-width)"
 		>
-			{#snippet desktopActions()}
-				<Action href={data.site.contact.phoneHref} size="hero"
-					><Phone size={20} aria-hidden="true" />{english ? 'Call us' : 'Обади се'}</Action
-				>
-				<Action href={data.site.contact.mapHref} variant="glass" size="hero"
-					><MapPin size={20} aria-hidden="true" />{english
-						? 'Get directions'
-						: 'Как да стигнеш'}</Action
-				>
-			{/snippet}
-			{#snippet desktopSecondaryActions()}<SocialLinks tone="dark" />{/snippet}
-		</PageIntro>
-		<section
-			class="site-section site-container contact-overview"
-			id="contact-details"
-			aria-label={english ? 'Contact details' : 'Връзка с нас'}
-		>
-			<div class="contact-channels">
-				{#each channels as channel (channel.href)}
-					<a class="contact-channel" href={linkHref(channel.href)}>
-						<span class="contact-channel__icon"
-							><channel.icon size={26} strokeWidth={1.6} aria-hidden="true" /></span
+			{#snippet desktopActions(caption: string | undefined)}
+				<DesktopHeroActions description={caption}>
+					{#snippet descriptionContent()}
+						<a
+							class="contact-hero-location"
+							href={data.site.contact.mapHref}
+							target="_blank"
+							rel="noopener noreferrer"
 						>
-						<h2>{channel.title}</h2>
-						<p>{channel.text}</p>
-					</a>
-				{/each}
-			</div>
-		</section>
-		<section class="site-section contact-intake">
-			<div class="site-container contact-form-panel">
-				<header>
-					<h2 class="site-heading">{english ? 'Send an enquiry' : 'Изпрати запитване'}</h2>
-				</header>
-				<LeadForm
-					{english}
-					source={page.url.searchParams.get('topic') === 'trade-in' ? 'trade-in' : 'contact'}
-					result={form}
-				/>
+							<MapPin size={16} aria-hidden="true" />{caption ?? data.site.contact.address}
+						</a>
+						{#if emailHref && emailLabel}
+							<a class="contact-hero-email" href={emailHref}>
+								<Mail size={16} aria-hidden="true" />{emailLabel}
+							</a>
+						{/if}
+					{/snippet}
+					{#snippet secondaryActions()}
+						<SocialLinks links={data.site.socials ?? []} tone="plain" />
+					{/snippet}
+					<Action href={data.site.contact.phoneHref} variant="strong" size="primary"
+						><Phone size={18} aria-hidden="true" />{data.site.contact.phone}</Action
+					>
+					<Action href="#contact-enquiry" variant="secondary" size="primary"
+						><MessageSquare size={18} aria-hidden="true" />{copy.enquiry}</Action
+					>
+				</DesktopHeroActions>
+			{/snippet}
+		</PageIntro>
+		<section class="site-section contact-intake" id="contact-details" aria-label={copy.details}>
+			<div class="site-container contact-intake-grid">
+				<ContactLocation {english} layout="stacked" desktopFramed />
+				<div class="contact-form-panel" id="contact-enquiry">
+					<header>
+						<h2 class="site-heading">{desktopCopy[data.locale].contactEnquiry}</h2>
+					</header>
+					<LeadForm
+						{english}
+						source={page.url.searchParams.get('topic') === 'trade-in' ? 'trade-in' : 'contact'}
+						result={form}
+					/>
+				</div>
 			</div>
 		</section>
 	</div>
@@ -110,6 +104,7 @@
 	</div>
 	<noscript
 		><section class="site-container site-panel site-mobile-only">
+			<LocaleTrigger />
 			<h2>{nt('ui251')}</h2>
 			<LeadForm
 				{english}
@@ -121,65 +116,55 @@
 </main>
 
 <style>
-	.contact-overview {
-		display: grid;
-		gap: var(--bc-space-6);
-		padding-block: var(--bc-space-8);
-	}
-	.contact-channels {
-		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: var(--bc-space-5);
-	}
-	.contact-channel {
-		display: flex;
-		flex-direction: column;
+	.contact-hero-location,
+	.contact-hero-email {
+		display: inline-flex;
 		align-items: center;
-		gap: var(--bc-space-2);
-		padding: var(--bc-space-5);
-		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-card);
-		background: var(--bc-surface-raised);
-		color: var(--bc-ink);
-		text-decoration: none;
-		text-align: center;
-	}
-	.contact-channel:hover {
-		background: var(--bc-surface-hover);
-	}
-	.contact-channel__icon {
-		display: grid;
-		place-items: center;
-		width: var(--bc-control-height-standard);
-		height: var(--bc-control-height-standard);
-		border-radius: var(--bc-radius-pill);
-		background: var(--bc-bg-strong);
-		color: var(--bc-ink);
-	}
-	.contact-channel h2 {
-		margin: 0;
-		font: var(--bc-weight-heading) var(--bc-text-h4)/1.3 var(--bc-font-heading);
-	}
-	.contact-channel p {
-		margin: 0;
-		max-width: 32ch;
-		font-size: var(--bc-text-body-lg);
-		font-weight: var(--bc-weight-body);
-		line-height: var(--bc-leading-body-lg);
+		vertical-align: top;
+		gap: var(--bc-space-1);
 		color: var(--bc-copy);
+		text-decoration: underline;
+		text-decoration-color: var(--bc-muted-light);
+		text-underline-offset: var(--bc-space-1);
+	}
+	.contact-hero-email {
+		margin-inline-start: var(--bc-space-6);
+	}
+	.contact-hero-location:hover,
+	.contact-hero-email:hover {
+		color: var(--bc-ink);
+		text-decoration-color: currentColor;
 	}
 	.contact-intake {
-		padding-top: var(--bc-space-2);
+		padding-block: var(--bc-space-8);
+	}
+	.contact-intake-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+		align-items: stretch;
+		gap: var(--bc-space-6);
 	}
 	.contact-form-panel {
-		max-width: var(--bc-container-narrow);
+		scroll-margin-block-start: calc(var(--bc-desktop-header-height) + var(--bc-space-6));
+		min-width: 0;
 		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-panel);
-		padding: var(--bc-space-8);
+		border-radius: var(--bc-desktop-card-radius);
+		padding: var(--bc-space-6);
 		background: var(--bc-surface-raised);
+		box-shadow: var(--bc-editorial-shadow);
 	}
 	.contact-form-panel header {
 		margin-bottom: var(--bc-space-6);
-		text-align: center;
+		text-align: left;
+	}
+	@media (min-width: 768px) {
+		.contact-form-panel {
+			padding: var(--bc-space-8);
+		}
+	}
+	@media (max-width: 1023px) {
+		.contact-intake-grid {
+			grid-template-columns: minmax(0, 1fr);
+		}
 	}
 </style>

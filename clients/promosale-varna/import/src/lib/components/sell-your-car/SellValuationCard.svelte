@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { assetHref } from '$lib/utils/assets';
+	import { linkHref as resolve } from '$lib/utils/links';
+	import { site } from '$lib/config/site';
 	import { sellValuationCopy } from '$lib/content/sell-valuation';
-	import ArrowRight from '@lucide/svelte/icons/arrow-right';
-	let { onstart, open = false }: { onstart: () => void; open?: boolean } = $props();
+	import PhoneCall from '@lucide/svelte/icons/phone-call';
 	const locale = $derived(page.data.locale === 'en' ? 'en' : 'bg');
 	const copy = $derived(sellValuationCopy[locale]);
 	const banner = '/assets/daynight/services/sell-commerce';
@@ -16,7 +17,7 @@
 				<source
 					media="(max-width: 767px)"
 					srcset={`${assetHref(`${banner}-small.webp`)} 360w, ${assetHref(`${banner}.webp`)} 720w, ${assetHref(`${banner}-large.webp`)} 1080w`}
-					sizes="(max-width: 767px) calc(100vw - 28px), 1px"
+					sizes="(max-width: 767px) min(calc(30vw - 22.8px), 112px), 1px"
 					type="image/webp"
 				/>
 				<img
@@ -29,18 +30,16 @@
 					fetchpriority="high"
 				/>
 			</picture>
-			<h2 id="sell-valuation-title" class="sell-valuation__title" lang={locale}>
-				{copy.sellTitle}
-			</h2>
-			<button type="button" aria-haspopup="dialog" aria-expanded={open} onclick={onstart}>
-				{copy.sellAction}<ArrowRight size={20} aria-hidden="true" />
-			</button>
+			<div class="sell-valuation__content">
+				<h2 id="sell-valuation-title" class="sell-valuation__title" lang={locale}>
+					{copy.processTitle}
+				</h2>
+				<p class="sell-valuation__description">{copy.processDescription}</p>
+			</div>
 		</div>
-		<small class="sell-valuation__note">{copy.sellNote}</small>
 	</div>
 	<div class="sell-valuation__guide">
-		<h2>{copy.howTitle}</h2>
-		<ol>
+		<ol aria-label={copy.howTitle}>
 			{#each copy.sellSteps as step, index (step.title)}
 				<li>
 					<span aria-hidden="true">{index + 1}</span>
@@ -51,49 +50,81 @@
 				</li>
 			{/each}
 		</ol>
+		<div class="sell-valuation__contact">
+			<a href={resolve(site.contact.phoneHref)}>
+				<span>
+					<PhoneCall size={14} aria-hidden="true" />
+					<span
+						><span class="sell-valuation__question">{copy.questions}</span> {copy.callAction}</span
+					>
+				</span>
+			</a>
+		</div>
 	</div>
 </section>
 
 <style>
 	.sell-valuation {
 		display: grid;
-		gap: var(--bc-space-3);
+		overflow: hidden;
+		width: 100%;
+		max-width: 28rem;
+		margin-inline: auto;
+		border-radius: var(--bc-radius-panel);
+		background: var(--bc-white);
 	}
 	.sell-valuation__card {
 		overflow: hidden;
-		border-radius: var(--bc-radius-card);
-		background: var(--bc-white);
+		padding: var(--bc-space-3) var(--bc-space-3) 0;
 	}
 	.sell-valuation__banner {
-		position: relative;
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) min(30%, 112px);
+		gap: var(--bc-space-2);
+		padding: var(--bc-space-3);
+		border-radius: var(--bc-radius-card);
 		background: var(--bc-ink);
 	}
+	.sell-valuation__content {
+		display: grid;
+		grid-column: 1;
+		grid-row: 1;
+		gap: 4px;
+		align-content: center;
+		justify-items: start;
+		min-width: 0;
+	}
 	.sell-valuation .sell-valuation__title {
-		position: absolute;
-		z-index: 1;
-		top: var(--bc-space-4);
-		left: var(--bc-space-4);
 		color: var(--bc-white);
-		font: var(--bc-weight-heading) clamp(22px, 6.2vw, 26px)/1.15 var(--bc-font-body);
+		font: var(--bc-weight-heading) 20px/24px var(--bc-font-body);
 		letter-spacing: -0.03em;
 		white-space: nowrap;
 	}
+	.sell-valuation .sell-valuation__title:lang(bg) {
+		font-size: clamp(16px, 5vw, 20px);
+	}
 	.sell-valuation picture {
+		position: relative;
 		display: block;
+		grid-column: 2;
+		grid-row: 1;
+		overflow: hidden;
+		min-width: 0;
+		min-height: 76px;
+		border-radius: var(--bc-radius-md);
 	}
 	.sell-valuation img {
+		position: absolute;
+		inset: 0;
 		display: block;
 		width: 100%;
-		height: auto;
-		object-fit: contain;
-	}
-	.sell-valuation__note {
-		display: block;
-		padding: var(--bc-space-3) var(--bc-space-4);
+		height: 100%;
+		object-fit: cover;
+		object-position: right center;
 	}
 	.sell-valuation h2 {
 		margin: 0;
-		font: var(--bc-weight-heading) 20px/24px var(--bc-font-heading);
+		font: var(--bc-weight-heading) 18px/22px var(--bc-font-heading);
 	}
 	.sell-valuation p {
 		margin: 0;
@@ -101,37 +132,45 @@
 		font-size: var(--bc-mobile-body);
 		line-height: var(--bc-mobile-body-leading);
 	}
-	.sell-valuation button {
-		position: absolute;
-		z-index: 1;
-		bottom: var(--bc-space-4);
-		left: var(--bc-space-4);
-		display: flex;
+	.sell-valuation .sell-valuation__description {
+		max-width: 180px;
+		color: rgb(255 255 255 / 0.76);
+		font-size: 14px;
+		line-height: 18px;
+	}
+	.sell-valuation__contact a {
+		display: inline-flex;
 		min-height: 44px;
-		padding: 0 var(--bc-space-4);
 		align-items: center;
 		justify-content: center;
-		gap: var(--bc-space-2);
-		border: 0;
-		border-radius: var(--bc-radius-pill);
-		background: var(--bc-white);
-		color: var(--bc-ink);
-		font: var(--bc-weight-control) var(--bc-text-control)/var(--bc-leading-control)
-			var(--bc-font-body);
-		cursor: pointer;
+		color: var(--bc-white);
+		font: var(--bc-weight-control) 14px/20px var(--bc-font-body);
+		text-decoration: none;
+		white-space: nowrap;
 	}
-	.sell-valuation small {
-		color: var(--bc-copy);
-		text-align: center;
-		font-size: var(--bc-mobile-label);
-		line-height: var(--bc-mobile-label-leading);
+	.sell-valuation__contact a > span {
+		display: inline-flex;
+		min-height: 32px;
+		padding: 0 var(--bc-space-3);
+		align-items: center;
+		gap: 6px;
+		border-radius: var(--bc-radius-pill);
+		background: var(--bc-ink);
+	}
+	.sell-valuation__contact a:hover > span {
+		background: var(--bc-ink-soft);
+	}
+	.sell-valuation__question {
+		margin-inline-end: 2px;
+		color: rgb(255 255 255 / 0.76);
+	}
+	.sell-valuation__contact a:focus-visible > span {
+		outline: 2px solid var(--bc-ink);
+		outline-offset: 3px;
 	}
 	.sell-valuation__guide {
 		display: grid;
-		gap: var(--bc-space-4);
 		padding: var(--bc-space-4);
-		border-radius: var(--bc-radius-card);
-		background: var(--bc-white);
 	}
 	.sell-valuation ol {
 		display: grid;
@@ -142,20 +181,23 @@
 	}
 	.sell-valuation li {
 		display: grid;
-		grid-template-columns: 24px minmax(0, 1fr);
+		grid-template-columns: 28px minmax(0, 1fr);
+		min-width: 0;
 		align-items: start;
 		gap: var(--bc-space-3);
 	}
 	.sell-valuation li > span {
 		display: grid;
-		width: 24px;
-		height: 24px;
+		width: 28px;
+		height: 28px;
 		place-items: center;
 		border-radius: var(--bc-radius-pill);
-		border: 1px solid var(--bc-border);
-		color: var(--bc-copy);
-		font-size: var(--bc-mobile-label);
-		font-weight: 600;
+		background: var(--bc-control);
+		color: var(--bc-ink);
+		font-size: 14px;
+		font-weight: var(--bc-weight-heading);
+		font-variant-numeric: tabular-nums;
+		line-height: 1;
 	}
 	.sell-valuation h3 {
 		margin: 0 0 4px;
@@ -166,5 +208,11 @@
 	.sell-valuation__guide p {
 		font-size: var(--bc-mobile-label);
 		line-height: var(--bc-mobile-label-leading);
+	}
+	.sell-valuation__contact {
+		display: flex;
+		margin-top: var(--bc-space-3);
+		align-items: center;
+		justify-content: center;
 	}
 </style>

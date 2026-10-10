@@ -3,12 +3,12 @@
   "dealer": "promosale-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
     "path": "templates/app",
-    "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
-    "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
+    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
   },
-  "appDigest": "3ea99a22c5e8c0432b1f75c5a18cc9754d674b8fcf4c0b685a2dbdb0d9d996c5",
+  "appDigest": "3f4d4af301f1cbfdf46ee8b368ee8066dc8452e5376611cac54fd0c6fbca8185",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "promosale-varna",
@@ -147,5 +147,5 @@
     "checkedAt": "2026-09-28T02:25:55.038Z"
   },
   "baseReceiptSha256": "9b0c9431292d973f54e0c4eb850700f5be7848050f7fd2fa1ea608e63346a94b",
-  "refreshedAt": "2026-09-30T11:47:10.128Z"
+  "refreshedAt": "2026-10-10T18:07:55.700Z"
 }

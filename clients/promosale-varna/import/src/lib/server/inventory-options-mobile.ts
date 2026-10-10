@@ -14,6 +14,7 @@ export type InventoryMobilePill = {
 
 export type InventoryMobileOption = {
 	active: boolean;
+	count?: number;
 	countLabel?: string;
 	href: string;
 	image?: string;
@@ -267,6 +268,7 @@ const optionForRange = ({
 	value: string;
 }): InventoryMobileOption => ({
 	active: activeValue === value,
+	count,
 	countLabel: String(count),
 	href,
 	label,
@@ -424,6 +426,7 @@ export const inventoryMobileDataFromState = (
 		return Array.from(modelCounts.entries())
 			.map(([model, count]) => ({
 				active: selectedBrandMatches && hasFilterValue(selectedQueries, model),
+				count,
 				countLabel: String(count),
 				href: inventoryUrl(state, {
 					brand: brandFilter || null,
@@ -433,7 +436,7 @@ export const inventoryMobileDataFromState = (
 				value: model
 			}))
 			.sort((left, right) => {
-				const countDelta = Number(right.countLabel) - Number(left.countLabel);
+				const countDelta = right.count - left.count;
 
 				return countDelta || left.label.localeCompare(right.label);
 			});
@@ -451,6 +454,7 @@ export const inventoryMobileDataFromState = (
 	const brandOptions: InventoryMobileOption[] = [
 		{
 			active: !selectedBrands.length,
+			count: vehicles.length,
 			countLabel: String(vehicles.length),
 			href: quickUrl(state, { brand: null }),
 			label: text.allBrands,
@@ -497,6 +501,7 @@ export const inventoryMobileDataFromState = (
 	const bodyOptions: InventoryMobileOption[] = [
 		{
 			active: !selectedBodies.length,
+			count: vehicles.length,
 			countLabel: String(vehicles.length),
 			href: quickUrl(state, { bodyType: null }),
 			label: text.allBodyTypes,
@@ -539,6 +544,7 @@ export const inventoryMobileDataFromState = (
 	const transmissionOptions: InventoryMobileOption[] = [
 		{
 			active: !selectedTransmissions.length,
+			count: vehicles.length,
 			countLabel: String(vehicles.length),
 			href: inventoryUrl(state, { Transmission: null, gearbox: null, transmission: null }),
 			label: text.allTransmissions,
@@ -575,6 +581,7 @@ export const inventoryMobileDataFromState = (
 	const priceOptions: InventoryMobileOption[] = [
 		{
 			active: !selectedPriceRange,
+			count: vehicles.length,
 			countLabel: String(vehicles.length),
 			href: inventoryUrl(state, {
 				maxPrice: null,
@@ -625,6 +632,7 @@ export const inventoryMobileDataFromState = (
 	const mileageOptions: InventoryMobileOption[] = [
 		{
 			active: !selectedMileageRange,
+			count: vehicles.length,
 			countLabel: String(vehicles.length),
 			href: inventoryUrl(state, {
 				maxMileage: null,
@@ -660,6 +668,7 @@ export const inventoryMobileDataFromState = (
 	const yearOptions: InventoryMobileOption[] = [
 		{
 			active: !selectedYearRange,
+			count: vehicles.length,
 			countLabel: String(vehicles.length),
 			href: inventoryUrl(state, { maxYear: null, minYear: null, yearFrom: null, yearTo: null }),
 			label: text.allYears,
@@ -685,6 +694,7 @@ export const inventoryMobileDataFromState = (
 	const featureOptions: InventoryMobileOption[] = [
 		{
 			active: !selectedFeatures.length,
+			count: vehicles.length,
 			countLabel: String(vehicles.length),
 			href: inventoryUrl(state, {
 				equipment: null,

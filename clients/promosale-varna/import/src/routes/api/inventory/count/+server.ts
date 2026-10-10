@@ -22,7 +22,13 @@ const featureRank = (feature: string) => {
 };
 
 export const GET: RequestHandler = ({ url, locals }) => {
-	const state = getInventoryState('listing-grid4-columns.html', { searchParams: url.searchParams });
+	// Share one request-local inventory snapshot between results and available equipment.
+	const source = listPublicVehicles();
+	const state = getInventoryState(
+		'listing-grid4-columns.html',
+		{ searchParams: url.searchParams },
+		source
+	);
 	const locale = locals.localeState.locale;
 	const desktop = inventoryDesktopDataFromState(state, locale);
 	return json(
@@ -32,7 +38,7 @@ export const GET: RequestHandler = ({ url, locals }) => {
 				? { cards: inventoryCardsFromVehicles(state.selected.slice(0, 4), locale) }
 				: {}),
 			filters: desktop.filters,
-			features: [...new Set(listPublicVehicles().flatMap((vehicle) => vehicle.features))]
+			features: [...new Set(source.flatMap((vehicle) => vehicle.features))]
 				.sort((a, b) => featureRank(a) - featureRank(b) || a.localeCompare(b, 'bg'))
 				.map((value) => ({
 					value,

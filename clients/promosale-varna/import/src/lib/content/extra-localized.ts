@@ -95,16 +95,26 @@ export const extraEnglish = {
 	'1. Заявка': '1. Request',
 	'Изпращате линк, VIN, бюджет или модел, който търсите.':
 		'Send a link, VIN, budget or the model you are looking for.',
+	'Изпрати линк, VIN или предпочитан модел.': 'Send a listing, VIN or the model you want.',
 	'2. Проверка': '2. Review',
 	'Екипът гледа история, снимки, пробег, документи и реални разходи.':
 		'The team reviews history, photos, mileage, documents and actual costs.',
+	'Проверяваме история, документи и разходи.': 'Review the history, documents and costs.',
 	'3. Решение': '3. Decision',
 	'Получавате ясен контекст дали автомобилът си струва следваща стъпка.':
 		'Get clear information to decide whether the car is worth pursuing.',
+	'Обсъждаме автомобила и крайните разходи.': 'Discuss the car and its total cost.',
 	'4. Оглед и предаване': '4. Viewing and handover',
 	'Организираме оглед, документи, регистрация или продажба с уговорка.':
 		'We arrange a viewing, documents, registration or sale by appointment.',
+	'Уговаряме оглед, документи и предаване.': 'Arrange viewing, documents and handover.',
 	'Клиент на Promosale Varna': 'Promosale Varna customer',
+	'Историята, транспортът и регистрацията бяха обяснени ясно. Спокойно и прозрачно предаване.':
+		'History, transport and registration were explained clearly. A calm, transparent handover.',
+	'Ясни снимки, документи, пробег и разходи. Практичен разговор преди доставката.':
+		'Clear photos, documents, mileage and costs. A practical conversation before delivery.',
+	'Получих ясна обратна връзка за цената, документите и представянето на автомобила.':
+		'Clear feedback on the price, documents and how to present my car.',
 	'Екипът ми обясни историята на автомобила, транспорта и стъпките по регистрацията, преди да поема ангажимент. Предаването беше спокойно и прозрачно.':
 		'The team explained the car’s history, transport and registration steps before I committed. Handover was calm and transparent.',
 	'Клиент с внос': 'Import customer',

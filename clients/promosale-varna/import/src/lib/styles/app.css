@@ -6,6 +6,7 @@
 @import './forms.css';
 @import './daynight.tailwind.css';
 @import './ui-theme.css';
+@import './mobile-controls.css';
 @import 'tw-animate-css';
 @custom-variant dark (&:is(.dark *));
 
@@ -65,14 +66,31 @@
 	display: none;
 }
 @media (min-width: 768px) {
+	.site-shell .site-section {
+		padding-block: var(--bc-space-8);
+	}
+	.site-shell .site-heading {
+		font-family: var(--bc-font-body);
+		font-weight: var(--bc-desktop-title-weight);
+		line-height: var(--bc-desktop-section-leading);
+	}
 	.site-empty-state {
+		display: grid;
 		width: 100%;
 		max-width: var(--bc-container-narrow);
 		margin-inline: auto;
 		justify-items: center;
 		gap: var(--bc-space-4);
 		padding: var(--bc-space-8);
+		border: 1px solid var(--bc-border);
+		border-radius: var(--bc-desktop-card-radius);
+		background: var(--bc-card-bg);
+		box-shadow: var(--bc-editorial-shadow);
 		text-align: center;
+	}
+	.site-empty-state h2 {
+		font: var(--bc-weight-heading) var(--bc-desktop-card-heading)/var(--bc-leading-h4)
+			var(--bc-font-body);
 	}
 	.site-empty-state h2,
 	.site-empty-state p {

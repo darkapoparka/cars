@@ -1,5 +1,3 @@
-@reference '../../styles/app.css';
-
 [data-daynight-dashboard] {
 	--dash-bg: var(--bc-dashboard-bg);
 	--dash-border: var(--bc-dashboard-border);

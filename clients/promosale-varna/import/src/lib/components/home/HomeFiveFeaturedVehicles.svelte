@@ -1043,14 +1043,12 @@
 			display: none;
 		}
 
-		.daynight-mobile-title-swap {
+		.daynight-newest-heading .daynight-mobile-title-swap {
 			width: auto;
 			margin: 0;
-			color: #ffffff;
-			font-size: 28px;
-			font-weight: 650;
-			letter-spacing: -0.02em;
-			line-height: 34px;
+			color: var(--bc-white);
+			font: var(--bc-mobile-home-section-font) !important;
+			letter-spacing: var(--bc-tracking-tight);
 			text-align: left;
 			white-space: normal;
 		}
@@ -1137,7 +1135,7 @@
 		}
 
 		.daynight-home-vehicle-grid :global(.card-box-style-1 .image) {
-			aspect-ratio: 2.05;
+			aspect-ratio: 1.75;
 		}
 
 		.daynight-home-vehicle-grid :global(.card-box-style-1 .content) {
@@ -1253,9 +1251,7 @@
 		}
 
 		.daynight-home-vehicle-grid :global(.card-box-style-1 .card-box__title) {
-			-webkit-line-clamp: 1;
-			line-clamp: 1;
-			white-space: nowrap;
+			white-space: normal;
 		}
 
 		.daynight-newest-footer-cta {

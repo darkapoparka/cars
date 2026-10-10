@@ -1,36 +1,63 @@
 <script lang="ts">
-	import { assetHref } from '$lib/utils/assets';
 	import type {
 		HomeFiveHeroData,
 		HomeFiveHeroActionMode,
 		HomeFiveHeroSelect
 	} from '$lib/auxero/home-five';
-	import Search from '@lucide/svelte/icons/search';
-	import CarFront from '@lucide/svelte/icons/car-front';
 	import HandCoins from '@lucide/svelte/icons/hand-coins';
-	import Tag from '@lucide/svelte/icons/tag';
-	import Ship from '@lucide/svelte/icons/ship';
-	import LayoutGrid from '@lucide/svelte/icons/layout-grid';
-	import Banknote from '@lucide/svelte/icons/banknote';
-	import Gauge from '@lucide/svelte/icons/gauge';
 	import { SvelteURLSearchParams } from 'svelte/reactivity';
+	import { tick } from 'svelte';
+	import DesktopImportEntry from '$lib/components/services/DesktopImportEntry.svelte';
+	import { importEntryComplete, type ImportIntent } from '$lib/domain/import-entry';
+	import { importEntryCopy } from '$lib/content/import-entry';
 	import VehicleSearchDialog from '$lib/components/inventory/VehicleSearchDialog.svelte';
 	import ModeTabs from '$lib/components/common/MobileModeTabs.svelte';
 	import Action from '$lib/components/common/Action.svelte';
 	import HeroFilterDialog from './HeroFilterDialog.svelte';
+	import DesktopHomeFilter from './DesktopHomeFilter.svelte';
+	import DesktopSearchControl from '$lib/components/common/DesktopSearchControl.svelte';
+	import DesktopDiscoveryPanel from '$lib/components/common/DesktopDiscoveryPanel.svelte';
 	import { linkHref } from '$lib/utils/links';
-	let { hero, english = false }: { hero: HomeFiveHeroData; english?: boolean } = $props();
+	import PageIntro from '$lib/components/common/PageIntro.svelte';
+	import { homeHeroModes, desktopHomeCopy, homeModeArtwork } from '$lib/content/home-discovery';
+	let {
+		hero,
+		english = false
+	}: {
+		hero: HomeFiveHeroData;
+		english?: boolean;
+	} = $props();
+	const copy = $derived(desktopHomeCopy[english ? 'en' : 'bg']);
+	let importIntent = $state<ImportIntent>('listing');
+	let importVehicle = $state('');
+	let importMake = $state('');
+	let importModel = $state('');
+	let importType = $state('');
+	let importError = $state('');
+	let importForm = $state<HTMLFormElement>();
+	function setImportIntent(intent: ImportIntent) {
+		importIntent = intent;
+		importError = '';
+	}
+	async function continueImport(event: SubmitEvent) {
+		if (
+			importEntryComplete(importIntent, importVehicle, {
+				make: importMake,
+				model: importModel,
+				origin: ''
+			})
+		) {
+			importError = '';
+			return;
+		}
+		event.preventDefault();
+		const entryCopy = importEntryCopy[english ? 'en' : 'bg'];
+		importError = importIntent === 'listing' ? entryCopy.invalidListing : entryCopy.missingCriteria;
+		await tick();
+		importForm?.querySelector<HTMLElement>('[aria-invalid="true"]')?.focus();
+	}
 	let modeOverride = $state<HomeFiveHeroActionMode | 'finance' | null>(null);
 	const mode = $derived(modeOverride ?? hero.activeMode);
-	const modeContent = {
-		buy: { title: ['Купи автомобил', 'Buy a car'], action: '/inventory' },
-		finance: { title: ['Автомобил на лизинг', 'Finance a car'], action: '/inventory' },
-		sell: { title: ['Продай автомобил', 'Sell your car'], action: '/sell-your-car' },
-		import: { title: ['Внеси автомобил', 'Import a car'], action: '/import' }
-	} satisfies Record<
-		HomeFiveHeroActionMode | 'finance',
-		{ title: [string, string]; action: string }
-	>;
 	let brandSelection = $state<string[]>([]);
 	let modelSelection = $state<string[]>([]);
 	let priceSelection = $state<string[]>([]);
@@ -51,8 +78,8 @@
 	const mileageFilter: HomeFiveHeroSelect = $derived({
 		id: 'desktop-home-mileage',
 		name: 'maxMileage',
-		title: english ? 'Mileage up to' : 'Пробег до',
-		defaultLabel: english ? 'Any mileage' : 'Без ограничение',
+		title: copy.mileageUpTo,
+		defaultLabel: copy.anyMileage,
 		options:
 			mileageSource?.options.map((option) => ({ value: option.value, label: option.label })) ?? []
 	});
@@ -65,8 +92,8 @@
 			)
 		);
 	}
-	const title = $derived(modeContent[mode].title[english ? 1 : 0]);
-	const action = $derived(modeContent[mode].action);
+	const title = $derived(homeHeroModes[mode].title[english ? 'en' : 'bg']);
+	const action = $derived(homeHeroModes[mode].action);
 
 	let searchOpen = $state(false);
 	let keyword = $state('');
@@ -80,6 +107,12 @@
 		for (const value of mileageSelection) params.append('maxMileage', value);
 		return params.toString();
 	});
+	const searchHref = $derived.by(() => {
+		const params = new SvelteURLSearchParams(searchParams);
+		if (keyword.trim()) params.set('keyword', keyword.trim());
+		if (english) params.set('lang', 'en');
+		return '/inventory' + (params.size ? '?' + params.toString() : '');
+	});
 	function clearSelection() {
 		brandSelection = [];
 		modelSelection = [];
@@ -88,89 +121,117 @@
 	}
 </script>
 
-{#snippet searchFilters()}
-	{#if brandFilter}<HeroFilterDialog
-			select={{ ...brandFilter, title: english ? 'Make' : 'Марка' }}
-			bind:selected={() => brandSelection, updateBrandSelection}
-			mode="multi"
-			variant="grid"
-			searchable
-			compact
-			prominent
-			icon={LayoutGrid}
-			isEnglish={english}
-			dialogTitle={english ? 'Choose make' : 'Избери марка'}
-		/>{/if}
-	{#if modelFilter}<HeroFilterDialog
-			select={{ ...modelFilter, title: english ? 'Model' : 'Модел' }}
-			bind:selected={modelSelection}
-			options={modelOptions}
-			mode="multi"
-			searchable
-			compact
-			prominent
-			icon={CarFront}
-			isEnglish={english}
-			dialogTitle={english ? 'Choose model' : 'Избери модел'}
-		/>{/if}
-	{#if priceFilter}<HeroFilterDialog
-			select={{ ...priceFilter, title: english ? 'Price' : 'Цена' }}
-			bind:selected={priceSelection}
+{#snippet searchFilters(anchored = false)}
+	{#if anchored}
+		{#if brandFilter}<DesktopHomeFilter
+				select={{ ...brandFilter, title: copy.make }}
+				bind:selected={() => brandSelection, updateBrandSelection}
+				searchable
+				searchPlaceholder={copy.searchMakes}
+				title={copy.chooseMake}
+				{english}
+			/>{/if}
+		{#if modelFilter}<DesktopHomeFilter
+				select={{ ...modelFilter, title: copy.model }}
+				bind:selected={modelSelection}
+				options={modelOptions}
+				searchable
+				searchPlaceholder={copy.searchModels}
+				title={copy.chooseModel}
+				{english}
+			/>{/if}
+		{#if priceFilter}<DesktopHomeFilter
+				select={{ ...priceFilter, title: copy.price }}
+				bind:selected={priceSelection}
+				mode="single"
+				{english}
+			/>{/if}
+		<DesktopHomeFilter
+			select={{ ...mileageFilter, title: copy.mileage }}
+			bind:selected={mileageSelection}
+			mode="single"
+			{english}
+		/>
+	{:else}
+		{#if brandFilter}<HeroFilterDialog
+				select={{ ...brandFilter, title: copy.make }}
+				bind:selected={() => brandSelection, updateBrandSelection}
+				mode="multi"
+				variant="grid"
+				searchable
+				compact
+				prominent
+				isEnglish={english}
+				dialogTitle={copy.chooseMake}
+			/>{/if}
+		{#if modelFilter}<HeroFilterDialog
+				select={{ ...modelFilter, title: copy.model }}
+				bind:selected={modelSelection}
+				options={modelOptions}
+				mode="multi"
+				searchable
+				compact
+				prominent
+				isEnglish={english}
+				dialogTitle={copy.chooseModel}
+			/>{/if}
+		{#if priceFilter}<HeroFilterDialog
+				select={{ ...priceFilter, title: copy.price }}
+				bind:selected={priceSelection}
+				mode="single"
+				compact
+				prominent
+				isEnglish={english}
+			/>{/if}
+		<HeroFilterDialog
+			select={{ ...mileageFilter, title: copy.mileage }}
+			bind:selected={mileageSelection}
 			mode="single"
 			compact
 			prominent
-			icon={Banknote}
 			isEnglish={english}
-		/>{/if}
-	<HeroFilterDialog
-		select={{ ...mileageFilter, title: english ? 'Mileage' : 'Пробег' }}
-		bind:selected={mileageSelection}
-		mode="single"
-		compact
-		prominent
-		icon={Gauge}
-		isEnglish={english}
-	/>
+		/>
+	{/if}
 {/snippet}
-<section class="home-hero" aria-labelledby="home-title">
-	<div class="site-container">
-		<div class="home-hero__heading">
-			<img
-				src={assetHref('/assets/daynight/megamenu/inventory-bmw-x5-cutout.webp')}
-				alt=""
-				width="420"
-				height="220"
-				loading="lazy"
-			/>
-			<h1 id="home-title">{title}</h1>
-			<img
-				src={assetHref('/assets/daynight/megamenu/inventory-audi-sq5-cutout.webp')}
-				alt=""
-				width="420"
-				height="220"
-				loading="lazy"
-			/>
-		</div>
-		<div class="home-hero__box">
-			<ModeTabs
-				surface="dark"
-				appearance="attached"
-				value={mode}
-				onchange={(value) => (modeOverride = value as HomeFiveHeroActionMode | 'finance')}
-				idPrefix="home-mode"
-				label={english ? 'Choose a service' : 'Избери услуга'}
-				options={[
-					{ value: 'buy', label: english ? 'Buy' : 'Купи', icon: CarFront, panelId: 'home-entry' },
-					{
-						value: 'finance',
-						label: english ? 'Finance' : 'Лизинг',
-						icon: HandCoins,
-						panelId: 'home-entry'
-					},
-					{ value: 'sell', label: english ? 'Sell' : 'Продай', icon: Tag, panelId: 'home-entry' },
-					{ value: 'import', label: english ? 'Import' : 'Внос', icon: Ship, panelId: 'home-entry' }
-				]}
-			/>
+<PageIntro {title} titleId="home-title" class="home-hero" vehicleArtwork>
+	{#snippet desktopActions()}
+		<DesktopDiscoveryPanel class="home-hero__box" compactHeader>
+			{#snippet header()}
+				<ModeTabs
+					surface="light"
+					appearance="segmented"
+					value={mode}
+					onchange={(value) => (modeOverride = value as HomeFiveHeroActionMode | 'finance')}
+					idPrefix="home-mode"
+					label={copy.chooseService}
+					options={[
+						{
+							value: 'buy',
+							label: copy.buy,
+							artwork: homeModeArtwork.buy,
+							panelId: 'home-entry'
+						},
+						{
+							value: 'finance',
+							label: copy.finance,
+							artwork: homeModeArtwork.finance,
+							panelId: 'home-entry'
+						},
+						{
+							value: 'sell',
+							label: copy.sell,
+							artwork: homeModeArtwork.sell,
+							panelId: 'home-entry'
+						},
+						{
+							value: 'import',
+							label: copy.import,
+							artwork: homeModeArtwork.import,
+							panelId: 'home-entry'
+						}
+					]}
+				/>
+			{/snippet}
 			<div
 				class="home-hero__panel"
 				id="home-entry"
@@ -179,86 +240,69 @@
 				aria-labelledby={'home-mode-' + mode}
 			>
 				{#if mode === 'buy'}
-					<div class="home-hero__filters">{@render searchFilters()}</div>
-					<div class="home-hero__search">
-						<button
-							id="home-query"
-							class="home-hero__search-trigger"
-							type="button"
-							aria-haspopup="dialog"
-							aria-expanded={searchOpen}
-							onclick={() => (searchOpen = true)}
-							><Search size={21} aria-hidden="true" />
-							<span
-								>{keyword ||
-									(english ? 'Make, model or keyword' : 'Марка, модел или ключова дума')}</span
-							>
-						</button>
-						<Action
-							size="hero"
-							class="home-hero__search-action"
-							aria-haspopup="dialog"
-							aria-expanded={searchOpen}
-							onclick={() => (searchOpen = true)}
-						>
-							<Search size={19} aria-hidden="true" />{english ? 'Search' : 'Търси'}
-						</Action>
-					</div>
-					<noscript
-						><a href={linkHref(localized('/inventory'))}
-							>{english ? 'Browse all cars' : 'Разгледай всички автомобили'}</a
-						></noscript
-					>
+					<DesktopSearchControl
+						id="home-query"
+						class="home-hero__search"
+						value={keyword}
+						label={copy.search}
+						placeholder={copy.searchPlaceholder}
+						actionLabel={copy.searchAction}
+						href={searchHref}
+						expanded={searchOpen}
+						onopen={() => (searchOpen = true)}
+					/>
+					<div class="home-hero__filters">{@render searchFilters(true)}</div>
+					<noscript><a href={linkHref(localized('/inventory'))}>{copy.browseAll}</a></noscript>
 				{:else if mode === 'finance'}
 					<div class="home-hero__finance">
 						<p>
-							{english
-								? 'Calculate a monthly payment for your next car.'
-								: 'Изчисли месечна вноска за следващия си автомобил.'}
+							{copy.financeDescription}
 						</p>
 						<div class="home-hero__intent-actions">
 							<Action href={localized('/financing')} size="primary"
-								><HandCoins size={20} aria-hidden="true" />{english
-									? 'Calculate payment'
-									: 'Изчисли вноска'}</Action
+								><HandCoins size={20} aria-hidden="true" />{copy.calculatePayment}</Action
 							>
 							<Action variant="secondary" aria-haspopup="dialog" onclick={() => (searchOpen = true)}
-								>{english ? 'Choose a car' : 'Избери автомобил'}</Action
+								>{copy.chooseCar}</Action
 							>
 						</div>
 					</div>
+				{:else if mode === 'import'}
+					<form action={linkHref('/import')} bind:this={importForm} onsubmit={continueImport}>
+						{#if english}<input type="hidden" name="lang" value="en" />{/if}
+						<input type="hidden" name="intent" value={importIntent} />
+						<input type="hidden" name="step" value="details" />
+						<DesktopImportEntry
+							intent={importIntent}
+							bind:vehicle={importVehicle}
+							bind:make={importMake}
+							bind:model={importModel}
+							bind:bodyType={importType}
+							locale={english ? 'en' : 'bg'}
+							countries={false}
+							fieldIds={{ vehicle: 'home-query' }}
+							error={importError}
+							onIntentChange={setImportIntent}
+						/>
+					</form>
 				{:else}
 					<form class="home-hero__intent" action={linkHref(action)}>
 						{#if english}<input type="hidden" name="lang" value="en" />{/if}
-						<div class="home-hero__search">
+						<div class="home-hero__intent-row">
 							<label class="home-hero__intent-field" for="home-query">
-								<Search size={21} aria-hidden="true" /><span class="sr-only"
-									>{mode === 'import' ? 'LINK / VIN' : 'VIN'}</span
-								>
-								<input
-									id="home-query"
-									type="search"
-									name={mode === 'import' ? 'vehicle' : 'vin'}
-									placeholder={mode === 'import' ? 'LINK / VIN' : 'VIN'}
-								/>
+								<span class="sr-only">VIN</span>
+								<input id="home-query" type="search" name="vin" placeholder="VIN" />
 							</label>
-							<Action type="submit" size="primary">{english ? 'Continue' : 'Продължи'}</Action>
+							<Action type="submit" size="compact" variant="strong">{copy.continue}</Action>
 						</div>
-						<a class="home-hero__intent-link" href={linkHref(localized(action))}
-							>{mode === 'import'
-								? english
-									? 'Find a car without a listing'
-									: 'Нямам линк — търся автомобил'
-								: english
-									? 'Enter make and model instead'
-									: 'Въведи марка и модел вместо VIN'}</a
+						<a class="home-hero__intent-link" href={linkHref(localized(action))}>{copy.manualCar}</a
 						>
 					</form>
 				{/if}
 			</div>
-		</div>
-	</div>
-</section>
+		</DesktopDiscoveryPanel>
+	{/snippet}
+</PageIntro>
 <VehicleSearchDialog
 	bind:open={searchOpen}
 	bind:keyword
@@ -269,45 +313,14 @@
 />
 
 <style>
-	.home-hero {
-		background: var(--bc-mobile-dark);
-		color: var(--bc-white);
-		padding: var(--bc-space-6) 0 var(--bc-space-8);
-	}
-	.home-hero__heading {
-		display: grid;
-		grid-template-columns: 260px minmax(0, 1fr) 260px;
-		align-items: center;
-		gap: var(--bc-space-5);
-		padding-bottom: var(--bc-space-6);
-	}
-	.home-hero__heading img {
-		width: 100%;
-		height: 130px;
-		object-fit: contain;
-	}
-	h1 {
-		margin: 0;
-		font: var(--bc-weight-heading) clamp(2.5rem, 4vw, 3.5rem)/1.1 var(--bc-font-heading);
-		text-align: center;
-	}
-	.home-hero__box {
-		max-width: 1100px;
-		margin-inline: auto;
-	}
-	.home-hero__box :global(.mobile-mode-tabs) {
-		margin-inline: var(--bc-space-6);
-	}
 	.home-hero__panel {
 		display: grid;
 		align-content: center;
 		gap: var(--bc-space-4);
-		min-height: 156px;
-		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-control);
-		padding: var(--bc-space-5);
-		color: var(--bc-ink);
-		background: var(--bc-surface-raised);
+		min-height: calc(
+			var(--bc-desktop-discovery-panel-height) - 2 *
+				var(--desktop-discovery-inset, var(--bc-space-5))
+		);
 	}
 	.home-hero__panel:focus-visible {
 		outline-offset: 4px !important;
@@ -317,65 +330,54 @@
 		grid-template-columns: repeat(4, minmax(0, 1fr));
 		gap: var(--bc-space-3);
 	}
-	.home-hero__search {
-		display: grid;
-		grid-template-columns: minmax(0, 1fr) auto;
-		gap: var(--bc-space-3);
+	.home-hero__intent-row {
+		--action-height: var(--bc-control-height-compact);
+		--action-text: var(--bc-text-body);
+		--action-strong-border: transparent;
+		display: flex;
+		align-items: center;
+		gap: var(--bc-space-1);
+		min-height: var(--bc-desktop-search-height);
+		padding: var(--bc-space-1);
+		border: 1px solid transparent;
+		border-radius: var(--bc-desktop-control-radius);
+		background: var(--bc-control);
 	}
-	.home-hero__search-trigger,
+	.home-hero__intent-row:hover {
+		background: var(--bc-control-hover);
+	}
+	.home-hero__intent-row :global(.site-action) {
+		padding-inline: var(--bc-space-3);
+	}
+	.home-hero__intent-row:has(input:focus-visible) {
+		outline: 2px solid var(--bc-focus);
+		outline-offset: 2px;
+	}
 	.home-hero__intent-field {
 		display: flex;
 		align-items: center;
-		gap: var(--bc-space-3);
+		flex: 1;
 		min-width: 0;
-		min-height: var(--bc-control-height-primary);
-		padding: 0 var(--bc-space-4);
-		border: 1px solid var(--bc-border-strong);
+		min-height: calc(var(--bc-desktop-search-height) - 2 * var(--bc-space-1) - 2px);
+		padding: 0 var(--bc-space-3);
+		border: 0;
 		border-radius: var(--bc-radius-md);
-		background: var(--bc-surface-raised);
+		background: transparent;
 		color: var(--bc-ink);
-		font-size: var(--bc-text-search-trigger);
+		font-size: var(--bc-text-entry);
 		font-weight: var(--bc-weight-control);
-		line-height: var(--bc-leading-search);
+		line-height: var(--bc-leading-control);
 		text-align: left;
-	}
-	.home-hero__search-trigger :global(svg) {
-		flex: 0 0 auto;
-		color: var(--bc-ink);
-	}
-	.home-hero__search-trigger {
-		min-height: var(--bc-control-height-hero);
-		border-color: var(--bc-route-pill-border);
-	}
-	.home-hero__search :global(.home-hero__search-action) {
-		min-width: 160px;
-		padding-inline: var(--bc-space-5);
-		border-radius: var(--bc-radius-md);
-		font-size: var(--bc-text-search-trigger);
-		font-weight: var(--bc-weight-heading);
-	}
-	.home-hero__search-trigger span {
-		overflow: hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-	}
-	.home-hero__search-trigger:hover {
-		background: var(--bc-surface);
-		border-color: var(--bc-muted);
 	}
 	.home-hero__intent-field input {
 		flex: 1;
 		min-width: 0;
-		min-height: var(--bc-control-height-primary);
+		min-height: calc(var(--bc-desktop-search-height) - 2 * var(--bc-space-1) - 2px);
 		padding: 0;
 		background: transparent;
 		border: 0;
 		color: var(--bc-ink);
-		font-size: var(--bc-text-filter);
-	}
-	.home-hero__intent-field:focus-within {
-		outline: 2px solid var(--bc-focus);
-		outline-offset: 2px;
+		font: inherit;
 	}
 	.home-hero__intent-field input:focus-visible {
 		outline: none !important;
@@ -383,14 +385,14 @@
 	}
 	.home-hero__intent {
 		display: grid;
-		gap: var(--bc-space-3);
+		gap: var(--bc-space-4);
 	}
 	.home-hero__intent-link {
 		justify-self: center;
 		display: inline-flex;
 		align-items: center;
 		min-height: var(--bc-control-height-standard);
-		color: var(--bc-copy);
+		color: var(--desktop-discovery-copy, var(--bc-copy));
 		font-size: var(--bc-text-filter);
 		text-underline-offset: 4px;
 	}
@@ -403,7 +405,7 @@
 	.home-hero__finance p {
 		margin: 0;
 		font-size: var(--bc-text-body-lg);
-		color: var(--bc-copy);
+		color: var(--desktop-discovery-copy, var(--bc-copy));
 	}
 	.home-hero__intent-actions {
 		display: flex;
@@ -411,9 +413,13 @@
 		flex-wrap: wrap;
 		justify-content: center;
 	}
-	@media (max-width: 1100px) {
-		.home-hero__heading {
-			grid-template-columns: 180px minmax(0, 1fr) 180px;
+	@media (min-width: 768px) {
+		:global(.home-hero__box) {
+			--mode-tab-font-size: var(--bc-text-body);
+		}
+		.home-hero__panel {
+			min-height: 0;
+			align-content: start;
 		}
 	}
 	@media (max-width: 900px) {

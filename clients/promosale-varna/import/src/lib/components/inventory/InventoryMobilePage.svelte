@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { assetHref } from '$lib/utils/assets';
 	import { nativeMessage } from '$lib/i18n/native';
 
 	const nt = (key: import('$lib/i18n/native').NativeKey) =>
@@ -12,42 +11,46 @@
 	import { navigating, page } from '$app/state';
 	import ArrowUpDown from '@lucide/svelte/icons/arrow-up-down';
 	import ChevronDown from '@lucide/svelte/icons/chevron-down';
+	import ChevronRight from '@lucide/svelte/icons/chevron-right';
+	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
 	import Search from '@lucide/svelte/icons/search';
 	import SlidersHorizontal from '@lucide/svelte/icons/sliders-horizontal';
 	import X from '@lucide/svelte/icons/x';
-	import { onMount, tick } from 'svelte';
+	import { onMount, tick, untrack } from 'svelte';
+	import { SvelteURLSearchParams } from 'svelte/reactivity';
+	import Action from '$lib/components/common/Action.svelte';
+	import MobileIntakeChoiceField from '$lib/components/common/MobileIntakeChoiceField.svelte';
+	import MobileIntakeChoiceList from '$lib/components/common/MobileIntakeChoiceList.svelte';
+	import { mobileIntakeCopy } from '$lib/content/mobile-intake';
+	import { parseInventoryQuery } from '$lib/domain/inventory-query';
 	import type { AuxeroInventoryVehicleCard } from '$lib/auxero/inventory';
 	import type { InventoryMobileData } from '$lib/auxero/inventory-mobile';
 	import type { InventoryCopy } from '$lib/i18n/messages';
-	import { SvelteURLSearchParams } from 'svelte/reactivity';
+	import {
+		inventoryMobileDraftFromQuery,
+		mergeInventoryModelOptions,
+		serializeInventoryMobileDraft,
+		type InventoryMobileDraft as FilterDraft
+	} from '$lib/domain/inventory-mobile-draft';
 	import { Drawer } from 'vaul-svelte';
-	import { trackKeyboardInset } from '$lib/utils/keyboard-inset';
+	import { keyboardInset, trackKeyboardInset } from '$lib/utils/keyboard-inset';
 	import MobileVehicleCard from '$lib/components/common/MobileVehicleCard.svelte';
 	import MobileIconAction from '$lib/components/common/MobileIconAction.svelte';
+	// Choice rows own label, count and selection.
+	import MobileChoiceRow from '$lib/components/common/MobileChoiceRow.svelte';
 
 	type FilterDrawerMode =
 		| 'all'
 		| 'brand'
 		| 'model'
 		| 'sort'
+		| 'transmission'
 		| 'fuel'
 		| 'mileage'
 		| 'body'
 		| 'price'
 		| 'extras'
 		| 'year';
-	type FilterDraft = {
-		body: string;
-		brand: string;
-		feature: string;
-		fuel: string;
-		mileage: string;
-		model: string;
-		price: string;
-		sort: string;
-		transmission: string;
-		year: string;
-	};
 	type InventoryMobileOption = InventoryMobileData['brandOptions'][number];
 
 	let {
@@ -55,6 +58,7 @@
 		copy,
 		mobile,
 		filtersOnly = false,
+		initialOverlay = 'filters',
 		embedded = false,
 		filterDrawerOpen = $bindable(false),
 		onclose
@@ -63,6 +67,7 @@
 		copy: InventoryCopy;
 		mobile: InventoryMobileData;
 		filtersOnly?: boolean;
+		initialOverlay?: 'search' | 'filters';
 		embedded?: boolean;
 		filterDrawerOpen?: boolean;
 		onclose?: () => void;
@@ -116,15 +121,9 @@
 		model: 'daynight-inventory-mobile-model-drawer',
 		price: 'daynight-inventory-mobile-price-drawer',
 		sort: 'daynight-inventory-mobile-sort-drawer',
+		transmission: 'daynight-inventory-mobile-transmission-drawer',
 		year: 'daynight-inventory-mobile-year-drawer'
 	} as const;
-	const activeOptionValue = (options: InventoryMobileData['brandOptions']) =>
-		options.find((option) => option.active)?.value ?? '';
-	const activeOptionValues = (options: InventoryMobileData['brandOptions']) =>
-		options
-			.filter((option) => option.active && option.value)
-			.map((option) => option.value)
-			.join(',');
 	const normalizedOptionQuery = (value: string) => value.trim().toLocaleLowerCase();
 	const optionSearchText = (option: InventoryMobileOption) =>
 		`${option.label} ${option.value}`.toLocaleLowerCase();
@@ -152,28 +151,10 @@
 				: [...values, value]
 		);
 	};
-	const rangeParams = (value: string) => {
-		const [min, max] = value.split('-');
+	const currentFilterDraft = (): FilterDraft =>
+		inventoryMobileDraftFromQuery(page.url.searchParams);
 
-		return {
-			max: max ? Number(max) : undefined,
-			min: min ? Number(min) : undefined
-		};
-	};
-	const currentFilterDraft = (): FilterDraft => ({
-		body: activeOptionValues(mobile.bodyOptions),
-		brand: activeOptionValues(mobile.brandOptions),
-		feature: activeOptionValues(mobile.featureOptions),
-		fuel: activeOptionValues(mobile.fuelOptions),
-		mileage: activeOptionValue(mobile.mileageOptions),
-		model: mobile.searchValue || activeOptionValue(mobile.modelOptions),
-		price: activeOptionValue(mobile.priceOptions),
-		sort: activeOptionValue(mobile.sortOptions) || 'best-match',
-		transmission: activeOptionValues(mobile.transmissionOptions),
-		year: activeOptionValue(mobile.yearOptions)
-	});
-
-	let searchDrawerOpen = $state(false);
+	let searchDrawerOpen = $state(untrack(() => filtersOnly && initialOverlay === 'search'));
 	let overlayWasOpen = false;
 	let overlayHistoryActive = false;
 	let overlayClosePending = false;
@@ -199,6 +180,10 @@
 		if (overlayClosePending) {
 			overlayClosePending = false;
 			finishOverlayClose();
+			return;
+		}
+		if (searchChoiceHistoryActive || searchChoiceClosePending) {
+			finishSearchChoice();
 			return;
 		}
 		if (!overlayOpen() || !overlayHistoryActive) return;
@@ -232,13 +217,18 @@
 			if (overlayHistoryActive) {
 				overlayHistoryActive = false;
 				overlayClosePending = true;
-				history.back();
+				const historyDepth = searchChoiceHistoryActive ? 2 : 1;
+				searchChoiceHistoryActive = false;
+				searchChoiceClosePending = false;
+				searchChoice = null;
+				history.go(-historyDepth);
 			} else if (!overlayClosePending) {
 				finishOverlayClose();
 			}
 		}
 	});
 	let searchInput = $state<HTMLInputElement | null>(null);
+	let filterSearchInput = $state<HTMLInputElement | null>(null);
 	// Search is a full-screen overlay (input pinned top → keyboard never fights it). While
 	// it's open, focus the input, lock background scroll, and close on Escape.
 	$effect(() => {
@@ -252,7 +242,30 @@
 		themeMeta?.setAttribute('content', '#ffffff');
 		tick().then(() => searchInput?.focus());
 		const onKey = (e: KeyboardEvent) => {
-			if (e.key === 'Escape') closeSearchDrawer();
+			if (e.key === 'Escape') {
+				if (searchChoice) {
+					e.preventDefault();
+					e.stopImmediatePropagation();
+					closeSearchChoice();
+				} else closeSearchDrawer();
+			}
+			if (e.key === 'Tab') {
+				const dialog = document.getElementById('daynight-inventory-mobile-search-drawer');
+				const controls = [
+					...(dialog?.querySelectorAll<HTMLElement>(
+						'a[href], button, input:not([type="hidden"])'
+					) ?? [])
+				].filter((control) => control.getClientRects().length > 0);
+				const first = controls[0];
+				const last = controls.at(-1);
+				if (e.shiftKey && document.activeElement === first) {
+					e.preventDefault();
+					last?.focus();
+				} else if (!e.shiftKey && document.activeElement === last) {
+					e.preventDefault();
+					first?.focus();
+				}
+			}
 		};
 		window.addEventListener('keydown', onKey);
 		return () => {
@@ -268,7 +281,60 @@
 		return trackKeyboardInset();
 	});
 	let filterDrawerMode = $state<FilterDrawerMode>('all');
+	let filterOverview = $state(untrack(() => filtersOnly && initialOverlay === 'filters'));
 	let filterDraft = $state<FilterDraft>(currentFilterDraft());
+	const searchId = $props.id();
+	const searchLocale = $derived(page.data.locale === 'en' ? 'en' : 'bg');
+	const intakeCopy = $derived(mobileIntakeCopy[searchLocale]);
+	let searchKeyword = $state(
+		untrack(() => parseInventoryQuery(page.url.searchParams).filters.keyword ?? '')
+	);
+	let searchChoice = $state<'brand' | 'model' | 'price' | 'body' | null>(null);
+	let searchChoiceHistoryActive = false;
+	let searchChoiceClosePending = false;
+	let searchCount = $state<number | null>(null);
+	const searchParams = $derived.by(() => {
+		const params = new SvelteURLSearchParams(
+			serializeInventoryMobileDraft(filterDraft, page.url.searchParams).toString()
+		);
+		if (searchKeyword.trim()) params.set('keyword', searchKeyword.trim());
+		else params.delete('keyword');
+		params.set('lang', searchLocale);
+		return params;
+	});
+	const searchQuery = $derived(searchParams.toString());
+	const searchResultsLabel = $derived(
+		searchCount === null
+			? searchLocale === 'en'
+				? 'Show cars'
+				: 'Виж автомобилите'
+			: searchLocale === 'en'
+				? `Show ${searchCount} cars`
+				: `Виж ${searchCount} автомобила`
+	);
+	$effect(() => {
+		if (!searchDrawerOpen) return;
+		const query = searchQuery;
+		const controller = new AbortController();
+		searchCount = null;
+		const timer = setTimeout(async () => {
+			try {
+				const response = await fetch(`${resolve('/api/inventory/count')}?${query}`, {
+					signal: controller.signal
+				});
+				if (!response.ok) return;
+				const data = await response.json();
+				if (!controller.signal.aborted && Number.isInteger(data.count) && data.count >= 0)
+					searchCount = data.count;
+			} catch {
+				/* The native search remains usable without a preview count. */
+			}
+		}, 180);
+		return () => {
+			clearTimeout(timer);
+			controller.abort();
+		};
+	});
 	let brandDrawerQuery = $state('');
 	let modelDrawerQuery = $state('');
 
@@ -308,17 +374,19 @@
 	);
 	const moreFiltersLabel = $derived(mobile.filterLabel === nt('ui133') ? nt('ui134') : 'More');
 	const updatingLabel = $derived(mobile.filterLabel === nt('ui133') ? nt('ui135') : 'Updating…');
-	const mobileSearchShowAllLabel = $derived(
-		mobile.countLabel.toLocaleLowerCase().startsWith('all') ? 'Show all' : nt('ui85')
-	);
-	const mobileSearchCount = $derived(String(mobile.resultCount));
 	const mobileSearchTriggerLabel = $derived(
 		`${mobile.searchDisplayValue || mobile.searchLabel} (${mobile.resultCount})`
 	);
 	const inventoryHeading = $derived(mobile.filterLabel === nt('ui133') ? nt('ui136') : 'Vehicles');
 	const filterDrawerId = $derived(filterDrawerIds[filterDrawerMode]);
+	const filterDrawerFullscreen = $derived(
+		filtersOnly || filterOverview || filterDrawerMode === 'brand' || filterDrawerMode === 'model'
+	);
 	const filterDrawerHasActions = $derived(
-		filterDrawerMode === 'all' || filterDrawerMode === 'brand' || filterDrawerMode === 'model'
+		filterOverview ||
+			filterDrawerMode === 'all' ||
+			filterDrawerMode === 'brand' ||
+			filterDrawerMode === 'model'
 	);
 	const filterDrawerTitle = $derived.by(() => {
 		if (filterDrawerMode === 'body') return mobile.bodyLabel;
@@ -329,16 +397,20 @@
 		if (filterDrawerMode === 'model') return mobile.modelLabel;
 		if (filterDrawerMode === 'price') return mobile.priceLabel;
 		if (filterDrawerMode === 'sort') return mobile.sortLabel;
+		if (filterDrawerMode === 'transmission') return mobile.transmissionLabel;
 		if (filterDrawerMode === 'year') return mobile.yearLabel;
 
 		return mobile.drawerTitle;
 	});
 	const stagedModelOptions = $derived.by(() => {
-		const options =
+		const brands = splitDraftValues(filterDraft.brand);
+		let options =
 			mobile.modelOptionsByBrand[filterDraft.brand] ??
 			mobile.modelOptionsByBrand[''] ??
 			mobile.modelOptions;
-
+		if (brands.length > 1) {
+			options = mergeInventoryModelOptions(brands, mobile.modelOptionsByBrand);
+		}
 		return options.map((option) => ({
 			...option,
 			active: draftOptionActive(filterDraft.model, option.value)
@@ -360,6 +432,132 @@
 			(option) => !query || optionSearchText(option).includes(query)
 		);
 	});
+	const categorySummary = (key: keyof FilterDraft, options: InventoryMobileOption[]) => {
+		const value = filterDraft[key];
+		if (!value || (key === 'sort' && value === 'best-match')) return '';
+		return splitDraftValues(value)
+			.map((item) => options.find((option) => option.value === item)?.label ?? item)
+			.join(', ');
+	};
+	const sortOrder = [
+		'best-match',
+		'lowest-price',
+		'highest-price',
+		'lowest-mileage',
+		'newest-year',
+		'newest-listed'
+	];
+	const sortOptions = $derived(
+		[...mobile.sortOptions].sort(
+			(left, right) => sortOrder.indexOf(left.value) - sortOrder.indexOf(right.value)
+		)
+	);
+	const filterCategories = $derived([
+		{
+			mode: 'brand' as const,
+			key: 'brand' as const,
+			label: mobile.brandLabel,
+			options: mobile.brandOptions
+		},
+		{
+			mode: 'model' as const,
+			key: 'model' as const,
+			label: mobile.modelLabel,
+			options: stagedModelOptions
+		},
+		{
+			mode: 'price' as const,
+			key: 'price' as const,
+			label: mobile.priceLabel,
+			options: mobile.priceOptions
+		},
+		{
+			mode: 'mileage' as const,
+			key: 'mileage' as const,
+			label: mobile.mileageLabel,
+			options: mobile.mileageOptions
+		},
+		{
+			mode: 'body' as const,
+			key: 'body' as const,
+			label: mobile.bodyLabel,
+			options: mobile.bodyOptions
+		},
+		{
+			mode: 'fuel' as const,
+			key: 'fuel' as const,
+			label: mobile.fuelLabel,
+			options: mobile.fuelOptions
+		},
+		{
+			mode: 'year' as const,
+			key: 'year' as const,
+			label: mobile.yearLabel,
+			options: mobile.yearOptions
+		},
+		{
+			mode: 'transmission' as const,
+			key: 'transmission' as const,
+			label: mobile.transmissionLabel,
+			options: mobile.transmissionOptions
+		},
+		{
+			mode: 'extras' as const,
+			key: 'feature' as const,
+			label: mobile.extrasLabel,
+			options: mobile.featureOptions
+		},
+		{
+			mode: 'sort' as const,
+			key: 'sort' as const,
+			label: mobile.sortLabel,
+			options: sortOptions
+		}
+	]);
+	const searchCategory = $derived(
+		filterCategories.find((category) => category.mode === searchChoice)
+	);
+	function openSearchChoice(choice: 'brand' | 'model' | 'price' | 'body') {
+		searchInput?.blur();
+		searchChoice = choice;
+		pushState('', { ...page.state, __daynightInventorySearchChoice: choice });
+		searchChoiceHistoryActive = true;
+	}
+	function finishSearchChoice() {
+		const choice = searchChoice;
+		searchChoice = null;
+		searchChoiceHistoryActive = false;
+		searchChoiceClosePending = false;
+		void tick().then(() =>
+			document.getElementById(`${searchId}-${choice}`)?.focus({ preventScroll: true })
+		);
+	}
+	function closeSearchChoice() {
+		if (searchChoiceClosePending) return;
+		if (searchChoiceHistoryActive) {
+			searchChoiceClosePending = true;
+			history.back();
+		} else finishSearchChoice();
+	}
+	function selectSearchChoice(value: string) {
+		if (!searchChoice) return;
+		if (searchChoice === 'brand' && filterDraft.brand !== value) filterDraft.model = '';
+		filterDraft[searchChoice] = value;
+		closeSearchChoice();
+	}
+	function clearSearchDraft() {
+		filterDraft = inventoryMobileDraftFromQuery(new URLSearchParams());
+		searchKeyword = '';
+	}
+	function submitSearchDraft(event: SubmitEvent) {
+		event.preventDefault();
+		navigateToFilterDraft(`/inventory?${searchQuery}`);
+	}
+	const openFilterCategory = (mode: FilterDrawerMode) => {
+		filterDrawerMode = mode;
+		brandDrawerQuery = '';
+		modelDrawerQuery = '';
+	};
 	const filterDraftChanged = $derived.by(() => {
 		const current = currentFilterDraft();
 
@@ -406,58 +604,12 @@
 		filterDraft[key] = filterDraft[key] === value ? '' : value;
 	};
 	const filterDraftHref = () => {
-		const params = new SvelteURLSearchParams(page.url.search);
-		const setParam = (key: string, value: string, defaultValue = '') => {
-			if (!value || value === defaultValue) {
-				params.delete(key);
-				return;
-			}
-
-			params.set(key, value);
-		};
-
-		setParam('brand', filterDraft.brand);
-		params.delete('query');
-		params.delete('keyword');
-		params.delete('model');
-		setParam('q', filterDraft.model);
-		params.delete('body');
-		params.delete('bodystyle');
-		setParam('bodyType', filterDraft.body);
-		params.delete('equipment');
-		params.delete('extra');
-		params.delete('features');
-		setParam('feature', filterDraft.feature);
-		params.delete('FuelType');
-		setParam('fuel', filterDraft.fuel);
-		params.delete('mileageFrom');
-		params.delete('mileageTo');
-		const mileage = rangeParams(filterDraft.mileage);
-		setParam('minMileage', mileage.min ? String(mileage.min) : '');
-		setParam('maxMileage', mileage.max ? String(mileage.max) : '');
-		params.delete('price');
-		params.delete('priceFrom');
-		params.delete('priceTo');
-		const price = rangeParams(filterDraft.price);
-		setParam('minPrice', price.min ? String(price.min) : '');
-		setParam('maxPrice', price.max ? String(price.max) : '');
-		setParam('sort', filterDraft.sort, 'best-match');
-		params.delete('Transmission');
-		params.delete('gearbox');
-		setParam('transmission', filterDraft.transmission);
-		params.delete('yearFrom');
-		params.delete('yearTo');
-		const year = rangeParams(filterDraft.year);
-		setParam('minYear', year.min ? String(year.min) : '');
-		setParam('maxYear', year.max ? String(year.max) : '');
-
-		const query = params.toString();
-
+		const query = serializeInventoryMobileDraft(filterDraft, page.url.searchParams).toString();
 		return `/inventory${query ? `?${query}` : ''}`;
 	};
 	const clearFilterDraft = () => {
 		if (filterDrawerMode === 'all') {
-			void navigateToFilterDraft(mobile.clearHref);
+			filterDraft = inventoryMobileDraftFromQuery(new URLSearchParams());
 			return;
 		}
 
@@ -472,7 +624,10 @@
 		if (filterDrawerMode === 'model') {
 			filterDraft.model = '';
 			modelDrawerQuery = '';
+			return;
 		}
+		const category = filterCategories.find((value) => value.mode === filterDrawerMode);
+		if (category) filterDraft[category.key] = category.key === 'sort' ? 'best-match' : '';
 	};
 	const navigateToFilterDraft = (href = filterDraftHref()) => {
 		const queryStart = href.indexOf('?');
@@ -490,10 +645,12 @@
 		void navigateToFilterDraft();
 	};
 	const selectFilterOption = (key: keyof FilterDraft, value: string) => {
+		filterSearchInput?.blur();
 		const previousHref = filterDraftHref();
 		selectDraftOption(key, value);
 
 		if (
+			filterOverview ||
 			filterDrawerMode === 'all' ||
 			filterDrawerMode === 'brand' ||
 			filterDrawerMode === 'model'
@@ -511,6 +668,8 @@
 	};
 
 	const openSearchDrawer = () => {
+		resetFilterDraft();
+		searchKeyword = parseInventoryQuery(page.url.searchParams).filters.keyword ?? '';
 		filterDrawerOpen = false;
 		searchDrawerOpen = true;
 	};
@@ -519,6 +678,7 @@
 	};
 	const openFilterDrawer = (mode: FilterDrawerMode = 'all') => {
 		searchDrawerOpen = false;
+		filterOverview = mode === 'all';
 		filterDrawerMode = mode;
 		resetFilterDraft();
 		if (mode === 'brand') brandDrawerQuery = '';
@@ -530,12 +690,21 @@
 	};
 </script>
 
+<svelte:window
+	onresize={() => {
+		if (innerWidth >= 768) {
+			searchDrawerOpen = false;
+			filterDrawerOpen = false;
+		}
+	}}
+/>
+
 <div class="daynight-inventory-mobile" style:display={filtersOnly ? 'contents' : undefined}>
 	{#if !filtersOnly}
 		<svelte:element this={embedded ? 'section' : 'main'} class="daynight-inventory-mobile__main">
 			<h1 class="sr-only">{inventoryHeading}</h1>
 			<div class="daynight-inventory-mobile__sticky" aria-busy={filterNavigationPending}>
-				<div class="daynight-inventory-mobile__search">
+				<div class="daynight-inventory-mobile__search mobile-utility-bar">
 					<button
 						type="button"
 						class="daynight-inventory-mobile__search-field"
@@ -545,7 +714,10 @@
 						onclick={openSearchDrawer}
 					>
 						<Search size={20} strokeWidth={2} aria-hidden="true" />
-						<span class="daynight-inventory-mobile__search-label">
+						<span
+							class="daynight-inventory-mobile__search-label"
+							class:daynight-inventory-mobile__search-label--placeholder={!mobile.searchDisplayValue}
+						>
 							<span class="daynight-inventory-mobile__search-value">
 								{mobile.searchDisplayValue || mobile.searchLabel}
 							</span>
@@ -573,63 +745,78 @@
 					</MobileIconAction>
 				</div>
 
-				<nav class="daynight-inventory-mobile__tools" aria-label={mobile.filterLabel}>
+				<nav
+					class="daynight-inventory-mobile__tools mobile-quick-rail"
+					aria-label={mobile.filterLabel}
+				>
 					<button
 						type="button"
-						class="daynight-inventory-mobile__tool-choice"
+						class="daynight-inventory-mobile__tool-choice mobile-quick-pill"
 						class:active={brandSelected}
 						aria-label={mobile.brandLabel + ': ' + mobile.brandValue}
 						aria-haspopup="dialog"
 						aria-expanded={filterDrawerOpen && filterDrawerMode === 'brand'}
 						onclick={() => openFilterDrawer('brand')}
 					>
-						<span>{mobile.brandLabel}</span>
-						{#if brandSelected}<strong>{mobile.brandValue}</strong>{/if}
+						{#if brandSelected}
+							<strong>{mobile.brandValue}</strong>
+						{:else}
+							<span>{mobile.brandLabel}</span>
+						{/if}
 						<ChevronDown size={17} strokeWidth={2.1} aria-hidden="true" />
 					</button>
 					<button
 						type="button"
-						class="daynight-inventory-mobile__tool-choice"
+						class="daynight-inventory-mobile__tool-choice mobile-quick-pill"
 						class:active={modelSelected}
 						aria-label={mobile.modelLabel + ': ' + mobile.modelValue}
 						aria-haspopup="dialog"
 						aria-expanded={filterDrawerOpen && filterDrawerMode === 'model'}
 						onclick={() => openFilterDrawer('model')}
 					>
-						<span>{mobile.modelLabel}</span>
-						{#if modelSelected}<strong>{mobile.modelValue}</strong>{/if}
+						{#if modelSelected}
+							<strong>{mobile.modelValue}</strong>
+						{:else}
+							<span>{mobile.modelLabel}</span>
+						{/if}
 						<ChevronDown size={17} strokeWidth={2.1} aria-hidden="true" />
 					</button>
 					<button
 						type="button"
-						class="daynight-inventory-mobile__tool-choice"
+						class="daynight-inventory-mobile__tool-choice mobile-quick-pill"
 						class:active={priceSelected}
 						aria-label={mobile.priceLabel + ': ' + mobile.priceValue}
 						aria-haspopup="dialog"
 						aria-expanded={filterDrawerOpen && filterDrawerMode === 'price'}
 						onclick={() => openFilterDrawer('price')}
 					>
-						<span>{mobile.priceLabel}</span>
-						{#if priceSelected}<strong>{mobile.priceValue}</strong>{/if}
+						{#if priceSelected}
+							<strong>{mobile.priceValue}</strong>
+						{:else}
+							<span>{mobile.priceLabel}</span>
+						{/if}
 						<ChevronDown size={17} strokeWidth={2.1} aria-hidden="true" />
 					</button>
 					<button
 						type="button"
-						class="daynight-inventory-mobile__tool-choice"
+						class="daynight-inventory-mobile__tool-choice mobile-quick-pill"
 						class:active={yearSelected}
 						aria-label={mobile.yearLabel + ': ' + mobile.yearValue}
 						aria-haspopup="dialog"
 						aria-expanded={filterDrawerOpen && filterDrawerMode === 'year'}
 						onclick={() => openFilterDrawer('year')}
 					>
-						<span>{mobile.yearLabel}</span>
-						{#if yearSelected}<strong>{mobile.yearValue}</strong>{/if}
+						{#if yearSelected}
+							<strong>{mobile.yearValue}</strong>
+						{:else}
+							<span>{mobile.yearLabel}</span>
+						{/if}
 						<ChevronDown size={17} strokeWidth={2.1} aria-hidden="true" />
 					</button>
 
 					<button
 						type="button"
-						class="daynight-inventory-mobile__tool-choice daynight-inventory-mobile__tool-choice--more"
+						class="daynight-inventory-mobile__tool-choice daynight-inventory-mobile__tool-choice--more mobile-quick-pill"
 						class:active={moreFiltersActive}
 						aria-label={moreFiltersLabel}
 						aria-haspopup="dialog"
@@ -642,7 +829,7 @@
 					</button>
 					{#if hasActiveFilters}
 						<a
-							class="daynight-inventory-mobile__tool-choice daynight-inventory-mobile__tool-choice--clear"
+							class="daynight-inventory-mobile__tool-choice daynight-inventory-mobile__tool-choice--clear mobile-quick-pill"
 							href={resolve(mobile.clearHref as '/inventory')}
 						>
 							<span>{mobile.clearLabel}</span>
@@ -657,7 +844,7 @@
 
 			<section class="daynight-inventory-mobile__cards" aria-label={mobile.countLabel}>
 				{#each cards as card, index (card.slug)}
-					<MobileVehicleCard {card} priority={index < 3} />
+					<MobileVehicleCard {card} priority={index < 4} />
 				{:else}
 					<div class="daynight-inventory-mobile__empty">
 						<h2>{copy.emptyTitle}</h2>
@@ -675,109 +862,103 @@
 		<div
 			id="daynight-inventory-mobile-search-drawer"
 			class="daynight-inventory-mobile-search-overlay"
+			class:daynight-inventory-mobile-search-overlay--choosing={Boolean(searchChoice)}
 			role="dialog"
 			aria-modal="true"
-			aria-label={mobile.searchDrawerTitle}
+			aria-label={searchCategory?.label ?? mobile.searchDrawerTitle}
+			{@attach keyboardInset}
 		>
-			<header class="daynight-inventory-mobile-search-overlay__bar">
-				<span class="daynight-inventory-mobile-drawer__title">
-					{mobile.searchDrawerTitle}
-				</span>
-				<button
-					type="button"
-					class="daynight-inventory-mobile-search-overlay__close"
-					aria-label={mobile.closeLabel}
-					onclick={closeSearchDrawer}
-				>
-					<X size={20} strokeWidth={2.4} aria-hidden="true" />
-				</button>
-			</header>
-			<form
-				class="daynight-inventory-mobile-drawer__search-form"
-				action={resolve('/inventory')}
-				method="get"
-			>
-				{#each mobile.hiddenInputs as input (`${input.name}-${input.value}`)}
-					<input type="hidden" name={input.name} value={input.value} />
-				{/each}
-				<div
-					class="daynight-inventory-mobile-drawer__search-box daynight-inventory-mobile-drawer__search-box--submit"
-				>
-					<input
-						bind:this={searchInput}
-						name="q"
-						type="search"
-						value={mobile.searchValue}
-						placeholder={mobile.searchPlaceholder}
-						autocomplete="off"
-						enterkeyhint="search"
-						aria-label={mobile.searchPlaceholder}
-					/>
-					<button
-						type="submit"
-						class="daynight-inventory-mobile-drawer__search-submit"
-						aria-label={mobile.searchLabel}
+			{#if searchChoice && searchCategory}
+				<MobileIntakeChoiceList
+					title={searchCategory.label}
+					options={searchCategory.options.map((option) => ({
+						value: option.value,
+						label: option.label
+					}))}
+					value={filterDraft[searchChoice]}
+					locale={searchLocale}
+					backLabel={nt('ui183')}
+					searchLabel={searchChoice === 'brand'
+						? mobile.brandSearchPlaceholder
+						: searchChoice === 'model'
+							? mobile.modelSearchPlaceholder
+							: undefined}
+					onback={closeSearchChoice}
+					onselect={selectSearchChoice}
+				/>
+			{:else}
+				<header class="daynight-inventory-mobile-search-overlay__bar">
+					<span class="daynight-inventory-mobile-drawer__title">
+						{mobile.searchDrawerTitle}
+					</span>
+					<MobileIconAction
+						class="daynight-inventory-mobile-search-overlay__close"
+						label={mobile.closeLabel}
+						onclick={closeSearchDrawer}
 					>
-						<Search size={18} strokeWidth={2.25} aria-hidden="true" />
-					</button>
-				</div>
-				<div class="daynight-inventory-mobile-search-overlay__scroll">
-					<div
-						class="daynight-inventory-mobile-drawer__group daynight-inventory-mobile-drawer__group--logos"
-					>
-						<p>{mobile.brandLabel}</p>
-						<div>
-							{#each mobile.brandOptions.slice(1, 7) as option (option.value)}
-								<a
-									class:active={option.active}
-									href={resolve(option.href as '/inventory')}
-									aria-current={option.active ? 'page' : undefined}
-								>
-									{#if option.image}
-										<span class="daynight-inventory-mobile-drawer__brand-logo-frame">
-											<img
-												class="daynight-inventory-mobile-drawer__brand-logo"
-												src={assetHref(option.image)}
-												alt=""
-												aria-hidden="true"
-												width="96"
-												height="64"
-												loading="lazy"
-												decoding="async"
-											/>
-										</span>
-									{/if}
-									<span>{option.label}</span>
-								</a>
-							{/each}
+						<X size={20} strokeWidth={2} aria-hidden="true" />
+					</MobileIconAction>
+				</header>
+				<form
+					class="daynight-inventory-mobile-drawer__search-form"
+					action={resolve('/inventory')}
+					method="get"
+					onsubmit={submitSearchDraft}
+				>
+					{#each [...searchParams].filter(([name]) => name !== 'keyword') as [name, value], index (index)}
+						<input type="hidden" {name} {value} />
+					{/each}
+					<div class="daynight-inventory-mobile-drawer__search-box">
+						<Search size={19} strokeWidth={2.1} aria-hidden="true" />
+						<input
+							bind:this={searchInput}
+							name="keyword"
+							type="search"
+							bind:value={searchKeyword}
+							placeholder={mobile.searchPlaceholder}
+							autocomplete="off"
+							enterkeyhint="search"
+							aria-label={mobile.searchPlaceholder}
+						/>
+					</div>
+					<div class="daynight-inventory-mobile-search-overlay__scroll">
+						<div class="daynight-inventory-mobile-search-overlay__fields">
+							<MobileIntakeChoiceField
+								id={`${searchId}-brand`}
+								label={mobile.brandLabel}
+								value={categorySummary('brand', mobile.brandOptions)}
+								placeholder={intakeCopy.selectMake}
+								onopen={() => openSearchChoice('brand')}
+							/>
+							<MobileIntakeChoiceField
+								id={`${searchId}-model`}
+								label={mobile.modelLabel}
+								value={categorySummary('model', stagedModelOptions)}
+								placeholder={intakeCopy.selectModel}
+								onopen={() => openSearchChoice('model')}
+							/>
+							<MobileIntakeChoiceField
+								id={`${searchId}-price`}
+								label={mobile.priceLabel}
+								value={categorySummary('price', mobile.priceOptions)}
+								placeholder={searchLocale === 'en' ? 'Any budget' : 'Всеки бюджет'}
+								onopen={() => openSearchChoice('price')}
+							/>
+							<MobileIntakeChoiceField
+								id={`${searchId}-body`}
+								label={mobile.bodyLabel}
+								value={categorySummary('body', mobile.bodyOptions)}
+								placeholder={intakeCopy.selectType}
+								onopen={() => openSearchChoice('body')}
+							/>
 						</div>
 					</div>
-					<div class="daynight-inventory-mobile-drawer__group">
-						<p>{mobile.bodyLabel}</p>
-						<div>
-							{#each mobile.bodyOptions.slice(1, 7) as option (option.value)}
-								<a
-									class:active={option.active}
-									href={resolve(option.href as '/inventory')}
-									aria-current={option.active ? 'page' : undefined}
-								>
-									{option.label}
-								</a>
-							{/each}
-						</div>
+					<div class="daynight-inventory-mobile-search-overlay__actions">
+						<Action variant="secondary" onclick={clearSearchDraft}>{mobile.clearLabel}</Action>
+						<Action type="submit">{searchResultsLabel}</Action>
 					</div>
-				</div>
-				<a
-					class="daynight-inventory-mobile-drawer__clear daynight-inventory-mobile-drawer__clear--search daynight-inventory-mobile-search-overlay__cta"
-					href={resolve('/inventory')}
-					aria-label={mobile.countLabel}
-				>
-					<span>{mobileSearchShowAllLabel}</span>
-					{#if mobileSearchCount}
-						<small>{mobileSearchCount}</small>
-					{/if}
-				</a>
-			</form>
+				</form>
+			{/if}
 		</div>
 	{/if}
 
@@ -786,50 +967,57 @@
 		direction="bottom"
 		fixed={true}
 		repositionInputs={false}
+		dismissible={!filterDrawerFullscreen}
 	>
 		<Drawer.Overlay class="daynight-inventory-mobile-drawer__backdrop">
 			<span>{mobile.closeLabel}</span>
 		</Drawer.Overlay>
 		<Drawer.Content
 			id={filterDrawerId}
-			class={`daynight-inventory-mobile-drawer__sheet daynight-inventory-mobile-drawer__sheet--filters ${filtersOnly ? 'daynight-inventory-mobile-drawer__sheet--fullscreen' : ''} ${filterDrawerMode === 'all' ? 'daynight-inventory-mobile-drawer__sheet--full' : 'daynight-inventory-mobile-drawer__sheet--compact'} ${filterDrawerMode === 'brand' || filterDrawerMode === 'model' ? 'daynight-inventory-mobile-drawer__sheet--searchable' : ''} ${filterDrawerHasActions ? 'daynight-inventory-mobile-drawer__sheet--with-actions' : ''}`}
+			class={`mobile-filter-surface mobile-selection-surface ${filterDrawerFullscreen ? 'mobile-selection-surface--full' : ''} daynight-inventory-mobile-drawer__sheet daynight-inventory-mobile-drawer__sheet--filters ${filterDrawerFullscreen ? 'daynight-inventory-mobile-drawer__sheet--fullscreen' : ''} ${filterDrawerMode === 'all' ? 'daynight-inventory-mobile-drawer__sheet--full' : 'daynight-inventory-mobile-drawer__sheet--compact'} ${filterDrawerMode === 'brand' || filterDrawerMode === 'model' ? 'daynight-inventory-mobile-drawer__sheet--searchable' : ''} ${filterDrawerHasActions ? 'daynight-inventory-mobile-drawer__sheet--with-actions' : ''}`}
 		>
-			{#if !filtersOnly}<Drawer.Handle class="daynight-inventory-mobile-drawer__handle" />{/if}
+			{#if !filterDrawerFullscreen}<Drawer.Handle
+					class="daynight-inventory-mobile-drawer__handle"
+				/>{/if}
 			<header>
-				<div>
-					<Drawer.Title>
-						<span class="daynight-inventory-mobile-drawer__title">
-							{filterDrawerTitle}
-						</span>
-					</Drawer.Title>
-				</div>
-				<button type="button" aria-label={mobile.closeLabel} onclick={closeFilterDrawer}>
-					<X size={20} strokeWidth={2.25} aria-hidden="true" />
-				</button>
+				{#if filterOverview && filterDrawerMode !== 'all'}
+					<MobileIconAction label={nt('ui183')} onclick={() => (filterDrawerMode = 'all')}>
+						<ArrowLeft size={20} strokeWidth={2} aria-hidden="true" />
+					</MobileIconAction>
+				{/if}
+				<Drawer.Title>
+					<span class="daynight-inventory-mobile-drawer__title">
+						{filterDrawerTitle}
+					</span>
+				</Drawer.Title>
+				<MobileIconAction label={mobile.closeLabel} onclick={closeFilterDrawer}>
+					<X size={20} strokeWidth={2} aria-hidden="true" />
+				</MobileIconAction>
 			</header>
 			<Drawer.Description class="daynight-inventory-mobile-drawer__description">
 				{mobile.countLabel}
 			</Drawer.Description>
-			{#if filterDrawerMode === 'all'}
-				<form
-					onsubmit={(event) => {
-						event.preventDefault();
-						applyFilterDraft();
-					}}
-				>
-					<label class="daynight-inventory-mobile-drawer__search-box">
-						<Search size={19} strokeWidth={2.15} aria-hidden="true" />
-						<input
-							type="search"
-							bind:value={filterDraft.model}
-							placeholder={mobile.searchPlaceholder}
-							aria-label={mobile.searchPlaceholder}
-							enterkeyhint="search"
-						/>
-					</label>
-				</form>
-			{/if}
 			<div class="daynight-inventory-mobile-drawer__body" data-vaul-no-drag>
+				{#if filterDrawerMode === 'all'}
+					<div class="daynight-inventory-mobile-drawer__categories">
+						{#each filterCategories as category (category.mode)}
+							{@const summary = categorySummary(category.key, category.options)}
+							<button
+								type="button"
+								class="mobile-disclosure-row"
+								class:active={Boolean(summary)}
+								aria-label={summary ? `${category.label}: ${summary}` : category.label}
+								title={summary || category.label}
+								onclick={() => openFilterCategory(category.mode)}
+							>
+								<span
+									><strong>{category.label}</strong>{#if summary}<small>{summary}</small>{/if}</span
+								>
+								<ChevronRight size={18} aria-hidden="true" />
+							</button>
+						{/each}
+					</div>
+				{/if}
 				{#if filterDrawerMode === 'brand'}
 					<div class="daynight-inventory-mobile-drawer__group">
 						<label class="daynight-inventory-mobile-drawer__search-box">
@@ -837,40 +1025,32 @@
 							<input
 								type="search"
 								bind:value={brandDrawerQuery}
+								bind:this={filterSearchInput}
 								placeholder={mobile.brandSearchPlaceholder}
 								autocomplete="off"
 								autocapitalize="none"
 								spellcheck="false"
-								enterkeyhint="search"
+								enterkeyhint="done"
+								onkeydown={(event) => {
+									if (event.key === 'Enter') {
+										event.preventDefault();
+										event.currentTarget.blur();
+									}
+								}}
 								aria-label={mobile.brandSearchPlaceholder}
 							/>
 						</label>
 						{#if visibleBrandOptions.length}
-							<div>
+							<div class="mobile-choice-list">
 								{#each visibleBrandOptions as option (option.value)}
-									<button
-										type="button"
-										class:active={draftOptionActive(filterDraft.brand, option.value)}
-										aria-pressed={draftOptionActive(filterDraft.brand, option.value)}
-										onclick={() => selectFilterOption('brand', option.value)}
-									>
-										{#if option.image}
-											<img
-												class="daynight-inventory-mobile-drawer__brand-logo"
-												src={assetHref(option.image)}
-												alt=""
-												aria-hidden="true"
-												width="96"
-												height="64"
-												loading="lazy"
-												decoding="async"
-											/>
-										{/if}
-										<span>{option.label}</span>
-										{#if option.countLabel}
-											<small>{option.countLabel}</small>
-										{/if}
-									</button>
+									<MobileChoiceRow
+										label={option.label}
+										selected={draftOptionActive(filterDraft.brand, option.value)}
+										multiple
+										count={option.count}
+										image={option.image}
+										onselect={() => selectFilterOption('brand', option.value)}
+									/>
 								{/each}
 							</div>
 						{:else}
@@ -887,28 +1067,31 @@
 							<input
 								type="search"
 								bind:value={modelDrawerQuery}
+								bind:this={filterSearchInput}
 								placeholder={mobile.modelSearchPlaceholder}
 								autocomplete="off"
 								autocapitalize="none"
 								spellcheck="false"
-								enterkeyhint="search"
+								enterkeyhint="done"
+								onkeydown={(event) => {
+									if (event.key === 'Enter') {
+										event.preventDefault();
+										event.currentTarget.blur();
+									}
+								}}
 								aria-label={mobile.modelSearchPlaceholder}
 							/>
 						</label>
 						{#if visibleStagedModelOptions.length}
-							<div>
+							<div class="mobile-choice-list">
 								{#each visibleStagedModelOptions as option (option.value)}
-									<button
-										type="button"
-										class:active={option.active}
-										aria-pressed={option.active}
-										onclick={() => selectFilterOption('model', option.value)}
-									>
-										<span>{option.label}</span>
-										{#if option.countLabel}
-											<small>{option.countLabel}</small>
-										{/if}
-									</button>
+									<MobileChoiceRow
+										label={option.label}
+										selected={option.active}
+										multiple
+										count={option.count}
+										onselect={() => selectFilterOption('model', option.value)}
+									/>
 								{/each}
 							</div>
 						{:else}
@@ -918,178 +1101,145 @@
 						{/if}
 					</div>
 				{/if}
-				{#if filterDrawerMode === 'all' || filterDrawerMode === 'body'}
+				{#if filterDrawerMode === 'body'}
 					<div class="daynight-inventory-mobile-drawer__group">
-						{#if filterDrawerMode === 'all'}<p>{mobile.bodyLabel}</p>{/if}
-						<div>
+						<div class="mobile-choice-list">
 							{#each mobile.bodyOptions as option (option.value)}
-								<button
-									type="button"
-									class:active={draftOptionActive(filterDraft.body, option.value)}
-									aria-pressed={draftOptionActive(filterDraft.body, option.value)}
-									onclick={() => selectFilterOption('body', option.value)}
-								>
-									<span>{option.label}</span>
-									{#if option.countLabel}
-										<small>{option.countLabel}</small>
-									{/if}
-								</button>
+								<MobileChoiceRow
+									label={option.label}
+									selected={draftOptionActive(filterDraft.body, option.value)}
+									multiple
+									count={option.count}
+									onselect={() => selectFilterOption('body', option.value)}
+								/>
 							{/each}
 						</div>
 					</div>
 				{/if}
 				{#if filterDrawerMode === 'sort'}
 					<div class="daynight-inventory-mobile-drawer__group">
-						<div>
-							{#each mobile.sortOptions as option (option.value)}
-								<button
-									type="button"
-									class:active={filterDraft.sort === option.value}
-									aria-pressed={filterDraft.sort === option.value}
-									onclick={() => selectFilterOption('sort', option.value)}
-								>
-									<span>{option.label}</span>
-								</button>
+						<div class="mobile-choice-list">
+							{#each sortOptions as option (option.value)}
+								<MobileChoiceRow
+									label={option.label}
+									selected={filterDraft.sort === option.value}
+									count={option.count}
+									onselect={() => selectFilterOption('sort', option.value)}
+								/>
 							{/each}
 						</div>
 					</div>
 				{/if}
-				{#if filterDrawerMode === 'all' || filterDrawerMode === 'fuel'}
+				{#if filterDrawerMode === 'fuel'}
 					<div class="daynight-inventory-mobile-drawer__group">
-						{#if filterDrawerMode === 'all'}<p>{mobile.fuelLabel}</p>{/if}
-						<div>
+						<div class="mobile-choice-list">
 							{#each mobile.fuelOptions as option (option.value)}
-								<button
-									type="button"
-									class:active={draftOptionActive(filterDraft.fuel, option.value)}
-									aria-pressed={draftOptionActive(filterDraft.fuel, option.value)}
-									onclick={() => selectFilterOption('fuel', option.value)}
-								>
-									<span>{option.label}</span>
-									{#if option.countLabel}
-										<small>{option.countLabel}</small>
-									{/if}
-								</button>
+								<MobileChoiceRow
+									label={option.label}
+									selected={draftOptionActive(filterDraft.fuel, option.value)}
+									multiple
+									count={option.count}
+									onselect={() => selectFilterOption('fuel', option.value)}
+								/>
 							{/each}
 						</div>
 					</div>
 				{/if}
-				{#if filterDrawerMode === 'all' || filterDrawerMode === 'mileage'}
+				{#if filterDrawerMode === 'mileage'}
 					<div class="daynight-inventory-mobile-drawer__group">
-						{#if filterDrawerMode === 'all'}<p>{mobile.mileageLabel}</p>{/if}
-						<div>
+						<div class="mobile-choice-list">
 							{#each mobile.mileageOptions as option (option.value)}
-								<button
-									type="button"
-									class:active={filterDraft.mileage === option.value}
-									aria-pressed={filterDraft.mileage === option.value}
-									onclick={() => selectFilterOption('mileage', option.value)}
-								>
-									<span>{option.label}</span>
-									{#if option.countLabel}
-										<small>{option.countLabel}</small>
-									{/if}
-								</button>
+								<MobileChoiceRow
+									label={option.label}
+									selected={filterDraft.mileage === option.value}
+									count={option.count}
+									onselect={() => selectFilterOption('mileage', option.value)}
+								/>
 							{/each}
 						</div>
 					</div>
 				{/if}
-				{#if filterDrawerMode === 'all' || filterDrawerMode === 'price'}
+				{#if filterDrawerMode === 'price'}
 					<div class="daynight-inventory-mobile-drawer__group">
-						{#if filterDrawerMode === 'all'}<p>{mobile.priceLabel}</p>{/if}
-						<div>
+						<div class="mobile-choice-list">
 							{#each mobile.priceOptions as option (option.value)}
-								<button
-									type="button"
-									class:active={filterDraft.price === option.value}
-									aria-pressed={filterDraft.price === option.value}
-									onclick={() => selectFilterOption('price', option.value)}
-								>
-									<span>{option.label}</span>
-									{#if option.countLabel}
-										<small>{option.countLabel}</small>
-									{/if}
-								</button>
+								<MobileChoiceRow
+									label={option.label}
+									selected={filterDraft.price === option.value}
+									count={option.count}
+									onselect={() => selectFilterOption('price', option.value)}
+								/>
 							{/each}
 						</div>
 					</div>
 				{/if}
-				{#if filterDrawerMode === 'all' || filterDrawerMode === 'year'}
+				{#if filterDrawerMode === 'year'}
 					<div class="daynight-inventory-mobile-drawer__group">
-						{#if filterDrawerMode === 'all'}<p>{mobile.yearLabel}</p>{/if}
-						<div>
+						<div class="mobile-choice-list">
 							{#each mobile.yearOptions as option (option.value)}
-								<button
-									type="button"
-									class:active={filterDraft.year === option.value}
-									aria-pressed={filterDraft.year === option.value}
-									onclick={() => selectFilterOption('year', option.value)}
-								>
-									<span>{option.label}</span>
-									{#if option.countLabel}
-										<small>{option.countLabel}</small>
-									{/if}
-								</button>
+								<MobileChoiceRow
+									label={option.label}
+									selected={filterDraft.year === option.value}
+									count={option.count}
+									onselect={() => selectFilterOption('year', option.value)}
+								/>
 							{/each}
 						</div>
 					</div>
 				{/if}
-				{#if filterDrawerMode === 'all'}
+				{#if filterDrawerMode === 'transmission'}
 					<div class="daynight-inventory-mobile-drawer__group">
-						<p>{mobile.transmissionLabel}</p>
-						<div>
+						<div class="mobile-choice-list">
 							{#each mobile.transmissionOptions as option (option.value)}
-								<button
-									type="button"
-									class:active={draftOptionActive(filterDraft.transmission, option.value)}
-									aria-pressed={draftOptionActive(filterDraft.transmission, option.value)}
-									onclick={() => selectFilterOption('transmission', option.value)}
-								>
-									<span>{option.label}</span>
-									{#if option.countLabel}
-										<small>{option.countLabel}</small>
-									{/if}
-								</button>
+								<MobileChoiceRow
+									label={option.label}
+									selected={draftOptionActive(filterDraft.transmission, option.value)}
+									multiple
+									count={option.count}
+									onselect={() => selectFilterOption('transmission', option.value)}
+								/>
 							{/each}
 						</div>
 					</div>
 				{/if}
-				{#if filterDrawerMode === 'all' || filterDrawerMode === 'extras'}
+				{#if filterDrawerMode === 'extras'}
 					<div class="daynight-inventory-mobile-drawer__group">
-						{#if filterDrawerMode === 'all'}<p>{mobile.extrasLabel}</p>{/if}
-						<div>
+						<div class="mobile-choice-list">
 							{#each mobile.featureOptions as option (option.value)}
-								<button
-									type="button"
-									class:active={draftOptionActive(filterDraft.feature, option.value)}
-									aria-pressed={draftOptionActive(filterDraft.feature, option.value)}
-									onclick={() => selectFilterOption('feature', option.value)}
-								>
-									<span>{option.label}</span>
-									{#if option.countLabel}
-										<small>{option.countLabel}</small>
-									{/if}
-								</button>
+								<MobileChoiceRow
+									label={option.label}
+									selected={draftOptionActive(filterDraft.feature, option.value)}
+									multiple
+									count={option.count}
+									onselect={() => selectFilterOption('feature', option.value)}
+								/>
 							{/each}
 						</div>
 					</div>
 				{/if}
 			</div>
 			{#if filterDrawerHasActions}
-				<div class="daynight-inventory-mobile-drawer__actions">
+				<div class="daynight-inventory-mobile-drawer__actions mobile-filter-actions">
 					<button
 						type="button"
-						class="daynight-inventory-mobile-drawer__clear"
+						class="mobile-filter-action mobile-filter-action--clear"
 						onclick={clearFilterDraft}
 					>
 						{mobile.clearLabel}
 					</button>
 					<button
 						type="button"
-						class="daynight-inventory-mobile-drawer__done"
-						onclick={applyFilterDraft}
+						class="mobile-filter-action mobile-filter-action--apply"
+						onclick={() => {
+							if (filterOverview && filterDrawerMode !== 'all') filterDrawerMode = 'all';
+							else applyFilterDraft();
+						}}
 					>
-						{filterDraftChanged ? mobile.applyLabel : mobile.showResultsLabel}
+						{filterOverview && filterDrawerMode !== 'all'
+							? mobile.doneLabel
+							: filterDraftChanged
+								? mobile.applyLabel
+								: mobile.showResultsLabel}
 					</button>
 				</div>
 			{/if}
@@ -1127,7 +1277,7 @@
 		top: 0;
 		z-index: 40;
 		display: grid;
-		gap: var(--bc-space-2);
+		gap: 6px;
 		min-width: 0;
 		margin: 0;
 		/* Keep one 12px gap between the pills and results, owned by the sticky toolbar. */
@@ -1143,17 +1293,17 @@
 
 	.daynight-inventory-mobile__search {
 		display: grid;
-		grid-template-columns: minmax(0, 1fr) repeat(2, var(--bc-control-height-standard));
+		grid-template-columns: minmax(0, 1fr) repeat(2, var(--bc-mobile-icon-action-hit-size));
 		align-items: center;
-		gap: var(--bc-space-2);
+		gap: var(--bc-mobile-utility-gap);
 		min-width: 0;
 	}
 
-	.daynight-inventory-mobile__search-field {
+	.daynight-inventory-mobile__search-field,
+	.daynight-inventory-mobile-drawer__search-box {
 		display: flex;
-		width: 100%;
 		min-width: 0;
-		height: var(--bc-control-height-standard);
+		min-height: var(--bc-control-height-standard);
 		align-items: center;
 		gap: var(--bc-space-2);
 		border: 0;
@@ -1161,10 +1311,17 @@
 		background: var(--bc-white);
 		padding: 0 var(--bc-space-4);
 		color: var(--bc-ink);
+	}
+	.daynight-inventory-mobile__search-field {
+		width: 100%;
+		height: var(--bc-control-height-standard);
 		cursor: pointer;
 		text-align: left;
 	}
-	.daynight-inventory-mobile__search-field :global(svg) {
+	.daynight-inventory-mobile__search-field :global(svg),
+	.daynight-inventory-mobile-drawer__search-box :global(svg) {
+		width: var(--bc-control-icon-size-standard);
+		height: var(--bc-control-icon-size-standard);
 		flex: 0 0 auto;
 		color: var(--bc-copy);
 	}
@@ -1176,6 +1333,9 @@
 		font-weight: var(--bc-weight-body);
 		line-height: var(--bc-leading-search);
 		white-space: nowrap;
+	}
+	.daynight-inventory-mobile__search-label--placeholder {
+		color: var(--bc-control-placeholder, var(--bc-ink));
 	}
 	.daynight-inventory-mobile__search-value {
 		min-width: 0;
@@ -1191,40 +1351,10 @@
 	}
 
 	.daynight-inventory-mobile__tools {
-		display: flex;
-		min-width: 0;
-		gap: var(--bc-space-2);
-		margin: 0 calc(-1 * var(--bc-mobile-gutter));
-		overflow-x: auto;
-		padding: 0 var(--bc-mobile-gutter);
-		scrollbar-width: none;
-		-webkit-mask-image: linear-gradient(to right, var(--bc-ink) calc(100% - 34px), transparent);
-		mask-image: linear-gradient(to right, var(--bc-ink) calc(100% - 34px), transparent);
-	}
-
-	.daynight-inventory-mobile__tools::-webkit-scrollbar {
-		display: none;
-	}
-
-	.daynight-inventory-mobile__tools :is(button, a) {
-		display: inline-flex;
-		min-width: 0;
-		flex: 0 0 auto;
-		min-height: var(--bc-control-height-standard);
-		align-items: center;
-		gap: var(--bc-space-2);
-		border: 0;
-		border-radius: var(--bc-radius-control);
-		background: var(--bc-white);
-		padding: 0 var(--bc-space-3);
-		appearance: none;
-		color: var(--bc-ink);
-		cursor: pointer;
-		font-size: var(--bc-text-filter);
-		font-weight: var(--bc-weight-control);
-		line-height: var(--bc-leading-filter);
-		text-decoration: none;
-		white-space: nowrap;
+		--bc-text-filter: var(--bc-text-quick-pill);
+		--bc-leading-filter: var(--bc-leading-quick-pill);
+		margin: 0;
+		padding-block: 0;
 	}
 
 	.daynight-inventory-mobile__tools :is(button, a).active {
@@ -1245,24 +1375,15 @@
 		color: var(--bc-white);
 	}
 
-	.daynight-inventory-mobile__tools :is(button, a).daynight-inventory-mobile__tool-choice {
-		gap: 6px;
-		padding-right: 10px;
-	}
-
 	.daynight-inventory-mobile__tool-choice span {
-		color: var(--bc-ink);
-		font-size: var(--bc-text-filter);
-		font-weight: var(--bc-weight-control);
-		line-height: var(--bc-leading-filter);
+		color: inherit;
+		font: inherit;
 	}
 
 	.daynight-inventory-mobile__tool-choice.active span,
 	.daynight-inventory-mobile__tool-choice.active strong {
 		color: var(--bc-white);
-		font-size: var(--bc-text-filter);
-		font-weight: var(--bc-weight-control);
-		line-height: var(--bc-leading-filter);
+		font: inherit;
 		text-transform: none;
 	}
 
@@ -1276,10 +1397,8 @@
 		min-width: 0;
 		max-width: min(42vw, 138px);
 		overflow: hidden;
-		color: var(--bc-ink);
-		font-size: var(--bc-text-filter);
-		font-weight: var(--bc-weight-control);
-		line-height: var(--bc-leading-filter);
+		color: inherit;
+		font: inherit;
 		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
@@ -1337,22 +1456,23 @@
 	}
 
 	:global(.daynight-inventory-mobile-drawer__sheet[data-vaul-drawer]) {
+		--bc-control-height-standard: var(--bc-control-height-chip);
 		position: fixed;
-		right: 0;
+		right: var(--bc-sheet-inset, 0px);
 		/* Lifted above the on-screen keyboard on iOS; --bc-kb-inset stays ~0 on Android,
 		   where interactive-widget=resizes-content already lifts the layout. vaul's own
 		   repositionInputs is disabled (it conflicts with that meta and collapses the sheet). */
-		bottom: var(--bc-kb-inset, 0px);
-		left: 0;
+		bottom: calc(var(--bc-kb-inset, 0px) + var(--bc-sheet-bottom, 0px));
+		left: var(--bc-sheet-inset, 0px);
 		display: flex;
 		flex-direction: column;
 		z-index: 1201;
 		height: auto;
 		max-height: min(calc(86dvh - var(--bc-kb-inset, 0px)), 720px);
 		gap: 0;
-		overflow: hidden;
-		border-radius: 18px 18px 0 0;
-		background: var(--bc-bg);
+		overflow: clip;
+		border-radius: var(--bc-sheet-radius, 18px 18px 0 0);
+		background: var(--bc-sheet-background, var(--bc-bg));
 		outline: 0;
 		padding: 10px 16px max(22px, env(safe-area-inset-bottom));
 		-webkit-overflow-scrolling: touch;
@@ -1362,13 +1482,41 @@
 	/* Inventory search = full-screen overlay. Input pinned top; chips scroll below; the
 	   keyboard opens beneath the input and never fights the panel. Appears instantly. */
 	.daynight-inventory-mobile-search-overlay {
+		--bc-control-height-standard: var(--bc-control-height-chip);
 		position: fixed;
 		inset: 0;
+		bottom: var(--bc-kb-inset, 0px);
 		z-index: 1300;
 		display: grid;
 		grid-template-rows: max-content minmax(0, 1fr);
-		background: var(--bc-bg);
+		background: var(--bc-white);
 		color: var(--bc-ink, var(--bc-ink));
+	}
+	.daynight-inventory-mobile-search-overlay--choosing {
+		grid-template-rows: minmax(0, 1fr);
+	}
+	.daynight-inventory-mobile-search-overlay__fields {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 12px;
+		min-width: 0;
+	}
+	.daynight-inventory-mobile-search-overlay__actions {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+		gap: 10px;
+		padding: 12px 16px max(14px, env(safe-area-inset-bottom));
+		border-top: 1px solid var(--bc-border);
+	}
+	.daynight-inventory-mobile-search-overlay__actions :global(.site-action) {
+		height: var(--bc-control-height-standard);
+		min-width: 0;
+		border: 0;
+		border-radius: 10px;
+		padding: 0 10px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 
 	.daynight-inventory-mobile-search-overlay__bar {
@@ -1376,22 +1524,7 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 12px;
-		padding: max(12px, env(safe-area-inset-top)) 16px 12px;
-	}
-
-	.daynight-inventory-mobile-search-overlay__close {
-		display: flex;
-		width: 40px;
-		height: 40px;
-		align-items: center;
-		justify-content: center;
-		flex: 0 0 40px;
-		border: 0;
-		border-radius: var(--bc-radius-pill);
-		background: var(--bc-white);
-		color: inherit;
-		cursor: pointer;
-		padding: 0;
+		padding: max(12px, env(safe-area-inset-top)) 16px 8px;
 	}
 
 	.daynight-inventory-mobile-search-overlay__scroll {
@@ -1417,19 +1550,12 @@
 	}
 
 	.daynight-inventory-mobile-search-overlay .daynight-inventory-mobile-drawer__search-box {
-		margin: 16px 16px 0;
-	}
-
-	/* Pinned footer CTA: the form's last grid row, flush at the bottom of the screen. */
-	.daynight-inventory-mobile-search-overlay__cta {
-		border-radius: 12px;
-		margin: 12px 16px max(14px, env(safe-area-inset-bottom));
-		min-height: 52px;
+		margin: 4px 16px 0;
 	}
 
 	:global(.daynight-inventory-mobile-drawer__sheet--filters[data-vaul-drawer]) {
 		max-height: min(calc(90dvh - var(--bc-kb-inset, 0px)), 760px);
-		padding-bottom: 0;
+		padding-bottom: var(--bc-space-3);
 	}
 
 	:global(.daynight-inventory-mobile-drawer__sheet--full[data-vaul-drawer]) {
@@ -1442,6 +1568,9 @@
 		max-height: calc(100dvh - var(--bc-kb-inset, 0px));
 		border-radius: 0;
 		padding-top: max(var(--bc-space-3), env(safe-area-inset-top));
+	}
+	:global(.daynight-inventory-mobile-drawer__sheet--fullscreen[data-vaul-drawer])::after {
+		display: none;
 	}
 
 	:global(.daynight-inventory-mobile-drawer__sheet[data-vaul-drawer]::-webkit-scrollbar) {
@@ -1497,6 +1626,33 @@
 	:global(.daynight-inventory-mobile-drawer__sheet header div) {
 		min-width: 0;
 	}
+	.daynight-inventory-mobile-drawer__categories {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.daynight-inventory-mobile-drawer__categories button > span {
+		display: flex;
+		align-items: baseline;
+		min-width: 0;
+		gap: var(--bc-space-3);
+	}
+	.daynight-inventory-mobile-drawer__categories strong,
+	.daynight-inventory-mobile-drawer__categories small {
+		min-width: 0;
+		overflow: hidden;
+		font: inherit;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.daynight-inventory-mobile-drawer__categories small {
+		color: var(--bc-muted);
+		font-size: var(--bc-mobile-label);
+		margin-left: auto;
+	}
+	.daynight-inventory-mobile-drawer__categories :global(svg) {
+		flex: 0 0 auto;
+	}
 
 	.daynight-inventory-mobile-drawer__title {
 		display: block;
@@ -1515,21 +1671,6 @@
 		white-space: nowrap;
 	}
 
-	:global(.daynight-inventory-mobile-drawer__sheet header button) {
-		display: flex;
-		width: var(--bc-control-height-standard);
-		height: var(--bc-control-height-standard);
-		align-items: center;
-		justify-content: center;
-		flex: 0 0 var(--bc-control-height-standard);
-		border: 0;
-		border-radius: 50%;
-		background: var(--bc-white);
-		color: var(--bc-ink);
-		cursor: pointer;
-		padding: 0;
-	}
-
 	.daynight-inventory-mobile-drawer__search-form {
 		display: grid;
 		flex: 0 0 auto;
@@ -1538,25 +1679,15 @@
 	}
 
 	.daynight-inventory-mobile-drawer__search-box {
-		display: flex;
-		min-height: var(--bc-control-height-primary);
-		align-items: center;
-		gap: var(--bc-space-3);
-		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-pill);
-		background: var(--bc-white);
-		padding: 0 var(--bc-space-3);
-		color: var(--bc-ink);
-	}
-
-	.daynight-inventory-mobile-drawer__search-box--submit {
-		padding-right: 6px;
+		background: var(--bc-bg-strong);
 	}
 
 	.daynight-inventory-mobile-drawer__search-box input {
+		--control-focus-outline: none;
+		--control-focus-shadow: none;
 		min-width: 0;
 		width: 100%;
-		height: var(--bc-control-height-primary);
+		height: var(--bc-control-height-standard);
 		flex: 1 1 auto;
 		border: 0 !important;
 		border-radius: 0 !important;
@@ -1577,42 +1708,8 @@
 	}
 
 	.daynight-inventory-mobile-drawer__search-box:focus-within {
-		outline: 2px solid var(--bc-ink);
-		outline-offset: 2px;
+		box-shadow: inset 0 0 0 2px var(--bc-focus);
 	}
-
-	.daynight-inventory-mobile-drawer__search-submit {
-		display: inline-flex;
-		width: var(--bc-control-height-standard);
-		min-width: var(--bc-control-height-standard);
-		height: var(--bc-control-height-standard);
-		min-height: var(--bc-control-height-standard);
-		align-items: center;
-		justify-content: center;
-		flex: 0 0 auto;
-		border: 0;
-		border-radius: var(--bc-radius-pill);
-		background: var(--bc-accent);
-		appearance: none;
-		color: var(--bc-white);
-		cursor: pointer;
-		padding: 0;
-	}
-
-	.daynight-inventory-mobile-drawer__search-submit :global(svg),
-	.daynight-inventory-mobile-drawer__search-submit :global(path) {
-		stroke: var(--bc-white);
-	}
-
-	.daynight-inventory-mobile-drawer__search-submit:focus-visible,
-	.daynight-inventory-mobile-drawer__group a:focus-visible,
-	.daynight-inventory-mobile-drawer__group button:focus-visible,
-	.daynight-inventory-mobile-drawer__clear:focus-visible,
-	.daynight-inventory-mobile-drawer__done:focus-visible {
-		outline: 2px solid var(--bc-ink);
-		outline-offset: 2px;
-	}
-
 	.daynight-inventory-mobile-drawer__body {
 		display: grid;
 		min-height: 0;
@@ -1629,7 +1726,11 @@
 		display: none;
 	}
 
-	:global(.daynight-inventory-mobile-drawer__sheet--compact[data-vaul-drawer]) {
+	:global(
+		.daynight-inventory-mobile-drawer__sheet--compact[data-vaul-drawer]:not(
+				.daynight-inventory-mobile-drawer__sheet--fullscreen
+			)
+	) {
 		padding-top: var(--bc-space-2);
 	}
 
@@ -1643,126 +1744,39 @@
 	}
 
 	:global(.daynight-inventory-mobile-drawer__sheet--searchable[data-vaul-drawer])
+		.daynight-inventory-mobile-drawer__body {
+		display: flex;
+		overflow: hidden;
+	}
+
+	:global(.daynight-inventory-mobile-drawer__sheet--searchable[data-vaul-drawer])
 		.daynight-inventory-mobile-drawer__group {
+		display: flex;
+		min-height: 0;
+		flex: 1;
+		flex-direction: column;
 		gap: var(--bc-space-2);
+	}
+
+	:global(.daynight-inventory-mobile-drawer__sheet--searchable[data-vaul-drawer])
+		.daynight-inventory-mobile-drawer__search-box {
+		flex: 0 0 auto;
+	}
+
+	:global(.daynight-inventory-mobile-drawer__sheet--searchable[data-vaul-drawer])
+		.daynight-inventory-mobile-drawer__group
+		> div {
+		min-height: 0;
+		flex: 1;
+		align-content: flex-start;
+		overflow-y: auto;
+		overscroll-behavior: contain;
 	}
 
 	.daynight-inventory-mobile-drawer__group {
 		display: grid;
 		gap: var(--bc-space-2);
 	}
-
-	.daynight-inventory-mobile-drawer__group p {
-		margin: 0;
-		color: var(--bc-muted);
-		font-size: var(--bc-mobile-label);
-		font-weight: var(--bc-weight-heading);
-		line-height: var(--bc-mobile-label-leading);
-		text-transform: uppercase;
-	}
-
-	.daynight-inventory-mobile-drawer__group div {
-		display: flex;
-		flex-wrap: wrap;
-		gap: var(--bc-space-2);
-	}
-
-	.daynight-inventory-mobile-drawer__group--logos div {
-		flex-wrap: nowrap;
-		overflow-x: auto;
-		padding-bottom: 2px;
-		scrollbar-width: none;
-		-webkit-overflow-scrolling: touch;
-	}
-
-	.daynight-inventory-mobile-drawer__group--logos div::-webkit-scrollbar {
-		display: none;
-	}
-
-	.daynight-inventory-mobile-drawer__group a,
-	.daynight-inventory-mobile-drawer__group button,
-	.daynight-inventory-mobile-drawer__clear {
-		display: inline-flex;
-		min-height: var(--bc-control-height-standard);
-		align-items: center;
-		gap: 7px;
-		border: 0;
-		border-radius: var(--bc-radius-md);
-		background: var(--bc-white);
-		padding: 0 var(--bc-space-3);
-		appearance: none;
-		color: var(--bc-ink);
-		cursor: pointer;
-		font-size: var(--bc-text-control);
-		font-weight: var(--bc-weight-control);
-		line-height: var(--bc-leading-control);
-		text-align: left;
-	}
-
-	.daynight-inventory-mobile-drawer__group--logos a {
-		width: 86px;
-		min-width: 86px;
-		min-height: 68px;
-		justify-content: center;
-		flex-direction: column;
-		gap: 6px;
-		padding: var(--bc-space-2) 5px;
-		font-size: var(--bc-text-control);
-		text-align: center;
-		line-height: var(--bc-leading-control);
-		font-weight: var(--bc-weight-control);
-	}
-
-	.daynight-inventory-mobile-drawer__group a.active,
-	.daynight-inventory-mobile-drawer__group button.active {
-		background: var(--bc-accent);
-		color: var(--bc-white);
-	}
-
-	.daynight-inventory-mobile-drawer__brand-logo-frame {
-		display: flex;
-		width: 40px;
-		height: 28px;
-		align-items: center;
-		justify-content: center;
-		flex: 0 0 28px;
-	}
-
-	.daynight-inventory-mobile-drawer__brand-logo {
-		display: block;
-		max-width: 40px;
-		max-height: 26px;
-		object-fit: contain;
-	}
-
-	.daynight-inventory-mobile-drawer__group--logos a > span:last-child {
-		max-width: 100%;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-	}
-
-	.daynight-inventory-mobile-drawer__group button span {
-		min-width: 0;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-	}
-
-	.daynight-inventory-mobile-drawer__group button small {
-		display: inline-flex;
-		min-width: 21px;
-		height: 21px;
-		align-items: center;
-		justify-content: center;
-		border-radius: var(--bc-radius-pill);
-		background: var(--bc-white);
-		color: var(--bc-muted);
-		font-size: var(--bc-mobile-meta);
-		font-weight: var(--bc-weight-body);
-		line-height: var(--bc-mobile-meta-leading);
-	}
-
 	.daynight-inventory-mobile-drawer__empty-option {
 		display: inline-flex;
 		min-height: var(--bc-control-height-standard);
@@ -1777,64 +1791,9 @@
 	}
 
 	.daynight-inventory-mobile-drawer__actions {
-		position: sticky;
-		bottom: 0;
 		z-index: 3;
-		display: grid;
-		grid-template-columns: 1fr 1.5fr;
-		gap: var(--bc-space-2);
-		margin: 2px calc(-1 * var(--bc-space-4)) 0;
-		border-top: 1px solid var(--bc-border);
-		background: var(--bc-bg);
-		padding: var(--bc-space-3) var(--bc-space-4)
-			max(var(--bc-mobile-gutter), env(safe-area-inset-bottom));
-		box-shadow: var(--bc-shadow-sticky);
-	}
-
-	.daynight-inventory-mobile-drawer__clear {
-		justify-content: center;
-		min-height: var(--bc-control-height-primary);
-		border-radius: var(--bc-radius-control);
+		flex: 0 0 auto;
 		background: var(--bc-white);
-		color: var(--bc-ink);
-	}
-
-	.daynight-inventory-mobile-drawer__clear--search {
-		gap: var(--bc-space-2);
-		background: var(--bc-accent);
-		color: var(--bc-white);
-		font-weight: var(--bc-weight-heading);
-		text-align: center;
-		white-space: nowrap;
-	}
-
-	.daynight-inventory-mobile-drawer__clear--search small {
-		display: inline-flex;
-		min-width: 23px;
-		height: 23px;
-		align-items: center;
-		justify-content: center;
-		border-radius: var(--bc-radius-pill);
-		background: rgba(255, 255, 255, 0.72);
-		color: var(--bc-ink);
-		font-size: var(--bc-mobile-meta);
-		font-weight: var(--bc-weight-body);
-		line-height: var(--bc-mobile-meta-leading);
-	}
-
-	.daynight-inventory-mobile-drawer__done {
-		display: inline-flex;
-		min-height: var(--bc-control-height-primary);
-		align-items: center;
-		justify-content: center;
-		border: 0;
-		border-radius: var(--bc-radius-control);
-		background: var(--bc-accent);
-		appearance: none;
-		color: var(--bc-white);
-		cursor: pointer;
-		font-size: var(--bc-text-cta);
-		font-weight: var(--bc-weight-heading);
-		line-height: var(--bc-leading-cta);
+		padding-top: var(--bc-space-3);
 	}
 </style>

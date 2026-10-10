@@ -1,0 +1,126 @@
+{
+	"node": "24.21.0",
+	"packageLockSha256": "aa596db7046c3f226ce50b488e283e30121eb49122d5006c60035ef57a952e1c",
+	"source": [
+		{
+			"path": "src/routes/(site)/about/+page.svelte",
+			"canonicalSha256": "816982b8a9f8a8f2d07cee1f8107802e51d960f323f0e761f46b3c4f13fc0fe5",
+			"testedSha256": "816982b8a9f8a8f2d07cee1f8107802e51d960f323f0e761f46b3c4f13fc0fe5"
+		},
+		{
+			"path": "src/routes/(site)/contact/+page.svelte",
+			"canonicalSha256": "6545ad3af232acfa29a5ab4f2c3e724db86a3527a2adce940e84480104ad387b",
+			"testedSha256": "6545ad3af232acfa29a5ab4f2c3e724db86a3527a2adce940e84480104ad387b"
+		},
+		{
+			"path": "src/lib/components/common/Action.svelte",
+			"canonicalSha256": "6b9fe26da898566cb80200122a5ac524ea292e95ddc4cc6751ef129b5b4521d7",
+			"testedSha256": "6b9fe26da898566cb80200122a5ac524ea292e95ddc4cc6751ef129b5b4521d7"
+		},
+		{
+			"path": "tests/desktop-page-patterns.e2e.ts",
+			"canonicalSha256": "1c6001d7801de08f78fac431bf5940b344db6d21db045300f089d9dcc8e1278d",
+			"testedSha256": "1c6001d7801de08f78fac431bf5940b344db6d21db045300f089d9dcc8e1278d"
+		},
+		{
+			"path": "tests/typography-contact.e2e.ts",
+			"canonicalSha256": "4bd831cd463c1c011d564e5ee1c4ec9a3211ab4191dd286526783b43a95d16b6",
+			"testedSha256": "4bd831cd463c1c011d564e5ee1c4ec9a3211ab4191dd286526783b43a95d16b6"
+		}
+	],
+	"before": {
+		"states": 24,
+		"server": "http://127.0.0.1:6790"
+	},
+	"after": {
+		"states": 24,
+		"server": "http://127.0.0.1:6792",
+		"production": true,
+		"failures": 0
+	},
+	"preservation": {
+		"mobileStates": 8,
+		"exactVisiblePresentationMatches": 8,
+		"desktopStates": 16,
+		"exactHeroFrameAndTitleMatches": 16
+	},
+	"colors": {
+		"states": [
+			{
+				"route": "about",
+				"locale": "bg",
+				"background": "rgb(23, 25, 28)",
+				"color": "rgb(255, 255, 255)",
+				"class": "site-action strong size-primary svelte-9fmx20",
+				"href": "/bg/contact"
+			},
+			{
+				"route": "contact",
+				"locale": "bg",
+				"background": "rgb(23, 25, 28)",
+				"color": "rgb(255, 255, 255)",
+				"class": "site-action strong size-primary svelte-9fmx20",
+				"href": "#contact-enquiry"
+			},
+			{
+				"route": "about",
+				"locale": "en",
+				"background": "rgb(23, 25, 28)",
+				"color": "rgb(255, 255, 255)",
+				"class": "site-action strong size-primary svelte-9fmx20",
+				"href": "/en/contact"
+			},
+			{
+				"route": "contact",
+				"locale": "en",
+				"background": "rgb(23, 25, 28)",
+				"color": "rgb(255, 255, 255)",
+				"class": "site-action strong size-primary svelte-9fmx20",
+				"href": "#contact-enquiry"
+			}
+		],
+		"owner": "Existing Action strong variant; shared bc-ink and bc-white tokens"
+	},
+	"browser": {
+		"passed": 4,
+		"viewportSkips": 2,
+		"failed": 0,
+		"scope": "Existing page actions and About/Contact typography suites"
+	},
+	"interactions": {
+		"states": 4,
+		"keyboardAndDestinationsPassed": true,
+		"axeViolations": 0
+	},
+	"gallery": {
+		"matchedPairs": 4,
+		"loadedImages": 8,
+		"errors": 0
+	},
+	"logs": [
+		{
+			"name": "Svelte/TypeScript",
+			"result": "0 errors, 0 warnings",
+			"path": "C:/Users/radev/AppData/Local/Temp/cars-import-desktop-contact-about-services-2026-10-02/runtime/hero-action-check.log",
+			"sha256": "e2e779b8de53654fde83558f1928bf2662e8e76169698ac8c8bc4d0e3c5d9531"
+		},
+		{
+			"name": "Production build",
+			"result": "Passed",
+			"path": "C:/Users/radev/AppData/Local/Temp/cars-import-desktop-contact-about-services-2026-10-02/runtime/hero-action-build.log",
+			"sha256": "f5a11074af218f3216ef1442099ca04bd85a12d9ec66415010c58cc67258816f"
+		},
+		{
+			"name": "Focused existing browser suites",
+			"result": "4 passed, 2 viewport skips, 0 failures",
+			"path": "C:/Users/radev/AppData/Local/Temp/cars-import-desktop-contact-about-services-2026-10-02/runtime/hero-action-e2e.log",
+			"sha256": "337798a667d3ff2edeb68b4478a393ea38d774095ac8a19a9eff127920e498cc"
+		}
+	],
+	"workspaceDoctor": {
+		"path": "runtime/desktop-hero-content-2026-10-02/action-workspace-doctor.log",
+		"sha256": "93fcd789e4adafc8cbf8d68a06bad94f3416080695a032d3d35c705c1b031998",
+		"sourceTracking": "cars ahead=0 behind=0 at fetched inspection; unrelated Cars Admin divergence preserved"
+	},
+	"boundary": "Standalone local Chromium and frozen production build; no hosted/mounted verification, template promotion or dealer deployment"
+}

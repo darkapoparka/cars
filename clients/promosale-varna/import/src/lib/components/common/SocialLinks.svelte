@@ -4,13 +4,15 @@
 	import { base } from '$app/paths';
 	import { page } from '$app/state';
 	import { site, type SocialLink } from '$lib/config/site';
+	import { siteShellCopy } from '$lib/content/site-shell';
+	import { socialBrandMarks } from './social-brand-marks';
 	let {
 		links = site.socials ?? [],
 		tone = 'light',
 		align = 'center'
 	}: {
 		links?: readonly SocialLink[];
-		tone?: 'light' | 'dark';
+		tone?: 'light' | 'dark' | 'glass' | 'plain';
 		align?: 'start' | 'center';
 	} = $props();
 </script>
@@ -19,8 +21,10 @@
 	<nav
 		class="social-links"
 		class:social-links--dark={tone === 'dark'}
+		class:social-links--glass={tone === 'glass'}
+		class:social-links--plain={tone === 'plain'}
 		class:social-links--start={align === 'start'}
-		aria-label={page.data.locale === 'en' ? 'Social media' : 'Социални мрежи'}
+		aria-label={siteShellCopy[page.data.locale === 'en' ? 'en' : 'bg'].socialMedia}
 	>
 		{#each links as link (link.platform)}
 			<a
@@ -30,12 +34,18 @@
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				<img
-					src={assetHref(base + '/assets/icons/brands/' + link.platform + '.svg')}
-					alt=""
-					width="24"
-					height="24"
-				/>
+				{#if tone === 'glass' || tone === 'plain'}
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+						<path d={socialBrandMarks[link.platform]} />
+					</svg>
+				{:else}
+					<img
+						src={assetHref(base + '/assets/icons/brands/' + link.platform + '.svg')}
+						alt=""
+						width="24"
+						height="24"
+					/>
+				{/if}
 			</a>
 		{/each}
 	</nav>
@@ -77,10 +87,29 @@
 		background: var(--bc-white);
 		color: var(--bc-ink);
 	}
-	.social-links img {
+	.social-links--plain a {
+		background: transparent;
+	}
+	.social-links img,
+	.social-links svg {
 		width: 24px;
 		height: 24px;
 		display: block;
 		object-fit: contain;
+	}
+	@media (min-width: 768px) {
+		.social-links a:hover,
+		.social-links--dark a:hover {
+			background: var(--bc-control-hover);
+		}
+		.social-links--glass a {
+			border: 1px solid transparent;
+			background: var(--bc-desktop-hero-quiet-surface);
+			color: var(--bc-desktop-hero-ink);
+		}
+		.social-links--glass a:hover {
+			border-color: transparent;
+			background: var(--bc-control-hover);
+		}
 	}
 </style>

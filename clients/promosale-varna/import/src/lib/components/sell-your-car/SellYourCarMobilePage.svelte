@@ -24,18 +24,21 @@
 	import MobileServiceEntry from '$lib/components/services/MobileServiceEntry.svelte';
 	import MobileServiceManualEntry from '$lib/components/services/MobileServiceManualEntry.svelte';
 	import SellCarWizard from './SellCarWizard.svelte';
+	import type { VehicleIntakeOptions } from '$lib/domain/vehicle-intake-options';
 	import SellValuationCard from './SellValuationCard.svelte';
 
 	let {
 		embedded = false,
 		copy,
 		form,
-		steps
+		steps,
+		intakeOptions
 	}: {
 		embedded?: boolean;
 		copy: AuxeroSellCarMobileCopy;
 		form: AuxeroSellCarFormData;
 		steps: AuxeroSellCarMobileStep[];
+		intakeOptions: VehicleIntakeOptions;
 	} = $props();
 
 	let wizardOpen = $state(false);
@@ -115,7 +118,12 @@
 						onclick={() => openWizard(false)}
 					>
 						<ScanLine size={21} strokeWidth={2.15} aria-hidden="true" />
-						<span class="service-input__text">{fieldValues.vin || nt('ui198')}</span>
+						<span
+							class="service-input__text"
+							class:service-input__text--placeholder={!fieldValues.vin}
+						>
+							{fieldValues.vin || nt('ui198')}
+						</span>
 						<span class="service-input__go" aria-hidden="true">
 							<ArrowRight size={21} strokeWidth={2.35} />
 						</span>
@@ -126,7 +134,7 @@
 			</div>
 		{/snippet}
 		{#snippet content()}
-			<SellValuationCard open={wizardOpen} onstart={() => openWizard(entryMode === 'manual')} />
+			<SellValuationCard />
 		{/snippet}
 	</MobileServiceEntry>
 
@@ -171,6 +179,8 @@
 	>
 		{#key wizardSession}
 			<SellCarWizard
+				mobile
+				{intakeOptions}
 				initial={{
 					make: '',
 					model: '',

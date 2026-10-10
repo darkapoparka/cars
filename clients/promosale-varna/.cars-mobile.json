@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "format": "mobile-preview-v1",
+  "dealer": "promosale-varna",
+  "name": "Promosale Varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+    "path": "templates/mobile",
+    "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d",
+    "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b"
+  },
+  "sourceDigest": "233e7e4fd950f0faf1a79b7a4961f2ee33bc376f8236812fb62bd023dd1cf2cf",
+  "inventory": {
+    "mode": "dated-listing-snapshot",
+    "count": 6,
+    "observedAt": "2026-09-09T19:17:27.878450+00:00"
+  },
+  "personalization": {
+    "profileSha256": "9f544cf27245328d99dc3e32b160cecef7fe54eef8f37c7e43798aed859b0cf1",
+    "logoPaths": [
+      "/dealer-brand/logo-on-light.webp",
+      "/dealer-brand/logo-on-dark.webp"
+    ],
+    "mediaPaths": [
+      "/dealer/inventory/21788787563552939-1.webp",
+      "/dealer/inventory/21788787563552939-2.webp",
+      "/dealer/inventory/21788787563552939-3.webp",
+      "/dealer/inventory/11787906058256951-1.webp",
+      "/dealer/inventory/11787906058256951-2.webp",
+      "/dealer/inventory/11787906058256951-3.webp",
+      "/dealer/inventory/11786461174971809-1.webp",
+      "/dealer/inventory/11786461174971809-2.webp",
+      "/dealer/inventory/11786461174971809-3.webp",
+      "/dealer/inventory/11786375334835370-1.webp",
+      "/dealer/inventory/11786375334835370-2.webp",
+      "/dealer/inventory/11786375334835370-3.webp",
+      "/dealer/inventory/11786370554050885-1.webp",
+      "/dealer/inventory/11786370554050885-2.webp",
+      "/dealer/inventory/11786370554050885-3.webp",
+      "/dealer/inventory/11786106091652576-1.webp",
+      "/dealer/inventory/11786106091652576-2.webp",
+      "/dealer/inventory/11786106091652576-3.webp"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "mobile/src/lib/showroom-config.ts",
+      "mobile/src/lib/catalog.ts",
+      "mobile/src/lib/dealers.ts",
+      "mobile/src/lib/dealer-inventory.json",
+      "mobile/src/lib/locale.ts",
+      "mobile/src/lib/search.ts",
+      "mobile/src/components/NativeDealerCards.tsx",
+      "mobile/src/components/DealerScreens.tsx",
+      "mobile/src/components/VehicleCard.tsx",
+      "mobile/src/components/ShowroomVehicleCard.tsx",
+      "mobile/src/components/VehicleSections.tsx"
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

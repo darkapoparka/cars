@@ -1,3 +1,6 @@
+import type { DayNightVehicleSubmissionRecord } from '$lib/types/account';
+import type { VehicleIntakeOptions } from '$lib/domain/vehicle-intake-options';
+
 export type AuxeroListingFormMode = 'clone-static' | 'create' | 'edit';
 
 export type AuxeroListingFormHiddenField = {
@@ -72,6 +75,7 @@ export type AuxeroListingFormAttachment = {
 };
 
 export type AuxeroAccountListingFormData = {
+	intakeOptions?: VehicleIntakeOptions;
 	address: string;
 	attachments: AuxeroListingFormAttachment[];
 	detailFields: AuxeroListingFormDetailField[];
@@ -84,4 +88,17 @@ export type AuxeroAccountListingFormData = {
 	previewImage: AuxeroListingFormImage;
 	priceLabel: string;
 	sourceUrl: string;
+	submission?: Pick<
+		DayNightVehicleSubmissionRecord,
+		| 'id'
+		| 'status'
+		| 'title'
+		| 'expectedPrice'
+		| 'vin'
+		| 'mileage'
+		| 'message'
+		| 'previewImage'
+		| 'galleryImages'
+		| 'documents'
+	>;
 };
