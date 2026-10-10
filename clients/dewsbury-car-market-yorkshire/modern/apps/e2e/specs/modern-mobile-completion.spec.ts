@@ -430,51 +430,106 @@ test("Sell overlay resolves semantic type and primary-action contrast", async ({
   ).toEqual([]);
 });
 
-test("320px guide cards keep metadata and primary content readable", async ({
+test("mobile guide cards keep artwork and primary content readable", async ({
   page,
 }) => {
-  await page.setViewportSize({ width: 320, height: 700 });
-  await page.goto("/guides");
-  await page.evaluate(() => document.fonts.ready);
+  for (const width of [320, 390]) {
+    await page.setViewportSize({ width, height: 700 });
+    await page.goto("/guides");
+    await page.evaluate(() => document.fonts.ready);
 
-  const card = page.locator('[data-slot="content-card"]').first();
-  const media = card.locator('[data-slot="content-card-media"]');
-  const mediaBounds = await media.boundingBox();
-  expect(mediaBounds?.width).toBeLessThanOrEqual(97);
-
-  const metadata = card.locator(
-    '[data-slot="content-card-meta"] > span:visible'
-  );
-  const metrics = await metadata.evaluateAll((elements) =>
-    elements.map((element) => ({
-      text: element.textContent,
-      clientWidth: element.clientWidth,
-      scrollWidth: element.scrollWidth,
-    }))
-  );
-  expect(metrics).toHaveLength(1);
-  for (const metric of metrics) {
+    const cards = page.locator('[data-slot="content-card"]');
+    const card = cards.first();
+    await expect(card).toBeVisible();
+    await expect(card).toHaveAttribute(
+      "aria-label",
+      "Какво да проверите преди покупка на премиум автомобил"
+    );
+    const cardMetrics = await cards.evaluateAll((elements) =>
+      elements.map((element) => {
+        const bounds = element.getBoundingClientRect();
+        const media = element
+          .querySelector('[data-slot="content-card-media"]')
+          ?.getBoundingClientRect();
+        const body = element
+          .querySelector('[data-slot="content-card-body"]')
+          ?.getBoundingClientRect();
+        const title = element.querySelector("h2");
+        return {
+          label: element.getAttribute("aria-label"),
+          width: bounds.width,
+          mediaWidth: media?.width ?? 0,
+          mediaHeight: media?.height ?? 0,
+          mediaBottom: media?.bottom ?? 0,
+          bodyTop: body?.top ?? 0,
+          titleHeight: title?.getBoundingClientRect().height ?? 0,
+          titleLineHeight: title
+            ? Number.parseFloat(getComputedStyle(title).lineHeight)
+            : 0,
+          clientWidth: element.clientWidth,
+          scrollWidth: element.scrollWidth,
+        };
+      })
+    );
+    for (const metric of cardMetrics) {
+      expect(metric.label).toBeTruthy();
+      expect(Math.abs(metric.mediaWidth - metric.width)).toBeLessThan(1);
+      expect(metric.mediaHeight).toBeGreaterThan(0);
+      expect(metric.mediaHeight).toBeLessThan(metric.mediaWidth);
+      expect(metric.mediaBottom).toBeLessThanOrEqual(metric.bodyTop + 1);
+      expect(metric.titleHeight).toBeGreaterThan(0);
+      expect(metric.titleHeight).toBeLessThanOrEqual(
+        metric.titleLineHeight * 2 + 1
+      );
+      expect(
+        metric.scrollWidth,
+        metric.label ?? "content card"
+      ).toBeLessThanOrEqual(metric.clientWidth);
+    }
     expect(
-      metric.scrollWidth,
-      metric.text ?? "content metadata"
-    ).toBeLessThanOrEqual(metric.clientWidth);
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= window.innerWidth
+      )
+    ).toBe(true);
+
+    const metadata = card.locator(
+      '[data-slot="content-card-meta"] > span:visible'
+    );
+    const metrics = await metadata.evaluateAll((elements) =>
+      elements.map((element) => ({
+        text: element.textContent,
+        clientWidth: element.clientWidth,
+        scrollWidth: element.scrollWidth,
+      }))
+    );
+    expect(metrics).toHaveLength(1);
+    for (const metric of metrics) {
+      expect(
+        metric.scrollWidth,
+        metric.text ?? "content metadata"
+      ).toBeLessThanOrEqual(metric.clientWidth);
+    }
+    await expect(
+      card.locator('[data-slot="content-card-description"]')
+    ).toBeHidden();
+    await expect(card.getByText("Прочети", { exact: true })).toBeHidden();
+    const headingArrow = card.locator('[data-slot="content-card-heading"] svg');
+    await expect(headingArrow).toBeVisible();
+    await expect(headingArrow).toHaveAttribute("aria-hidden", "true");
+
+    const count = page.locator('[data-slot="content-search-count"]');
+    const total = await cards.count();
+    await expect(count).toHaveText(`(${total})`);
+    await page
+      .getByRole("searchbox", { name: "Търси съвети и статии", exact: true })
+      .fill("no-guide-matches-this-query");
+    await expect(count).toHaveText("(0)");
+    await expect(cards).toHaveCount(0);
+    await page
+      .getByRole("button", { name: "Изчисти търсенето", exact: true })
+      .click();
+    await expect(count).toHaveText(`(${total})`);
   }
-  await expect(
-    card.locator('[data-slot="content-card-description"]')
-  ).toBeHidden();
-  await expect(card.getByText("Прочети", { exact: true })).toBeVisible();
-  const count = page.locator('[data-slot="content-search-count"]');
-  const total = await page.locator('[data-slot="content-card"]').count();
-  await expect(count).toHaveText(`(${total})`);
-  await page
-    .getByRole("searchbox", { name: "Търси съвети и статии", exact: true })
-    .fill("no-guide-matches-this-query");
-  await expect(count).toHaveText("(0)");
-  await expect(page.locator('[data-slot="content-card"]')).toHaveCount(0);
-  await page
-    .getByRole("button", { name: "Изчисти търсенето", exact: true })
-    .click();
-  await expect(count).toHaveText(`(${total})`);
 });
 
 test("320px inventory keeps semantic type and complete vehicle facts", async ({
@@ -521,7 +576,7 @@ test("320px inventory keeps semantic type and complete vehicle facts", async ({
 });
 
 for (const width of [320, 375, 390, 430]) {
-  test(`mobile cards keep landscape photos and one complete badge row at ${width}px`, async ({
+  test(`mobile cards keep single-line titles, matching photo height and one complete badge row at ${width}px`, async ({
     page,
   }) => {
     await page.setViewportSize({ width, height: 844 });
@@ -533,6 +588,9 @@ for (const width of [320, 375, 390, 430]) {
       const metrics = await cards.evaluateAll((elements) =>
         elements.map((card) => {
           const title = card.querySelector('[data-slot="vehicle-card-title"]');
+          const titleStyle = title ? getComputedStyle(title) : null;
+          const titleRect = title?.getBoundingClientRect();
+          const info = title?.parentElement?.getBoundingClientRect();
           const media = card
             .closest("article")
             ?.querySelector('[data-slot="vehicle-card-media"]')
@@ -543,6 +601,13 @@ for (const width of [320, 375, 390, 430]) {
           return {
             titleName: title?.getAttribute("aria-label"),
             fullTitle: title?.getAttribute("title"),
+            titleHeight: titleRect?.height ?? 0,
+            titleLineHeight: Number.parseFloat(titleStyle?.lineHeight ?? "0"),
+            titleWhiteSpace: titleStyle?.whiteSpace,
+            titleTextOverflow: titleStyle?.textOverflow,
+            infoTop: info?.top ?? 0,
+            infoHeight: info?.height ?? 0,
+            mediaTop: media?.top ?? 0,
             mediaWidth: media?.width ?? 0,
             mediaHeight: media?.height ?? 0,
             factsGap: (facts?.top ?? 0) - (media?.bottom ?? 0),
@@ -571,8 +636,21 @@ for (const width of [320, 375, 390, 430]) {
       );
       expect(metrics.length).toBeGreaterThan(0);
       for (const card of metrics) {
+        expect(card.fullTitle).toBeTruthy();
         expect(card.titleName).toBe(card.fullTitle);
-        expect(card.mediaWidth).toBeGreaterThan(card.mediaHeight);
+        expect(
+          card.titleHeight,
+          card.fullTitle ?? "vehicle title"
+        ).toBeGreaterThan(0);
+        expect(
+          card.titleHeight,
+          card.fullTitle ?? "single-line vehicle title"
+        ).toBeLessThanOrEqual(card.titleLineHeight + 1);
+        expect(card.titleWhiteSpace).toBe("nowrap");
+        expect(card.titleTextOverflow).toBe("ellipsis");
+        expect(Math.abs(card.mediaTop - card.infoTop)).toBeLessThan(1);
+        expect(Math.abs(card.mediaHeight - card.infoHeight)).toBeLessThan(1);
+        expect(card.mediaHeight).toBeLessThanOrEqual(card.mediaWidth + 1);
         expect(card.factsGap).toBeGreaterThanOrEqual(8);
         expect(card.pills).toHaveLength(4);
         for (const pill of card.pills) {
@@ -587,8 +665,18 @@ for (const width of [320, 375, 390, 430]) {
         }
       }
       const automatic = cards.locator('[data-fact="transmission"]').first();
+      const factsWidth = await automatic.evaluate(
+        (element) => element.parentElement?.getBoundingClientRect().width ?? 0
+      );
+      let automaticLabel = "Автом.";
+      if (factsWidth >= 310) {
+        automaticLabel = "Автоматик";
+      } else if (factsWidth >= 280) {
+        automaticLabel = "Автомат";
+      }
       await expect(automatic.locator("span").first()).toHaveText(
-        locale === "bg" ? "Автом." : "Auto"
+        locale === "bg" ? automaticLabel : "Auto",
+        { useInnerText: true }
       );
       await expect(automatic.locator(".sr-only")).toHaveText(
         locale === "bg" ? "Автоматик" : "Automatic"
