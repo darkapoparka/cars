@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "packagingVersion": "5",
+  "dealer": "batley-as-motor-group",
+  "transformation": "six-design-cloudflare-v1",
+  "signature": {
+    "provider": "cloudflare",
+    "adapterReceipt": ".cars-cloudflare-svelte.json",
+    "buildVerified": false
+  },
+  "families": {
+    "app": {
+      "base": "/variant-4",
+      "digest": "7d0f31a90217fd5f4440771eaea384bae779bf55b40907ffecc9ec74c54e6ff8"
+    },
+    "mobile": {
+      "base": "/variant-5",
+      "digest": "d4a580aa52c242950db1b1988a63bee3d8a92f797f869435bc0bca8acc4687e7"
+    },
+    "karento-best": {
+      "base": "/variant-6",
+      "digest": "38deffbf832216c9f5c056f518b5905c862d0cca8b30884eec8f55b05b8da762"
+    }
+  },
+  "sourceReceipts": {
+    ".cars-app.json": "d10f73b5a7c3d510300d36ddae2f635266ba6e98137f23eae07ece13bf68b4c1",
+    ".cars-mobile.json": "7772ac92aaace5c50996f25c7ee2532773fd004b00338f4e4553b9846177cfaf",
+    ".cars-signature.json": "4f45c59559c841f1369bc46fb910dd07e3fb5fc4e9f8c44c0470488ac44d9f0b"
+  }
+}
