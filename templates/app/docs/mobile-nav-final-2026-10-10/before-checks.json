@@ -1,0 +1,138 @@
+{
+  "results": [
+    {
+      "route": "/en/cars",
+      "status": 200,
+      "overflow": false,
+      "tabs": [],
+      "pills": [
+        {
+          "text": "Brand",
+          "font": "14px",
+          "height": 44
+        },
+        {
+          "text": "Budget",
+          "font": "14px",
+          "height": 44
+        }
+      ]
+    },
+    {
+      "route": "/en/service",
+      "status": 200,
+      "overflow": false,
+      "tabs": [
+        {
+          "text": "Buy",
+          "rect": {
+            "x": 12,
+            "y": 6,
+            "width": 91.5,
+            "height": 76,
+            "top": 6,
+            "right": 103.5,
+            "bottom": 82,
+            "left": 12
+          },
+          "image": {
+            "x": 25.75,
+            "y": 33,
+            "width": 64,
+            "height": 42,
+            "top": 33,
+            "right": 89.75,
+            "bottom": 75,
+            "left": 25.75
+          },
+          "source": "http://127.0.0.1:6506/_next/image?url=%2Fshowroom%2Fnavigation%2Fbuy-front-v1.png&w=96&q=75"
+        },
+        {
+          "text": "Sell",
+          "rect": {
+            "x": 103.5,
+            "y": 6,
+            "width": 91.5,
+            "height": 76,
+            "top": 6,
+            "right": 195,
+            "bottom": 82,
+            "left": 103.5
+          },
+          "image": {
+            "x": 113.41000366210938,
+            "y": 30.479999542236328,
+            "width": 71.67999267578125,
+            "height": 47.04000473022461,
+            "top": 30.479999542236328,
+            "right": 185.08999633789062,
+            "bottom": 77.52000427246094,
+            "left": 113.41000366210938
+          },
+          "source": "http://127.0.0.1:6506/_next/image?url=%2Fshowroom%2Fnavigation%2Fsell-euro-notes-v1.webp&w=96&q=75"
+        },
+        {
+          "text": "Finance",
+          "rect": {
+            "x": 195,
+            "y": 6,
+            "width": 91.5,
+            "height": 76,
+            "top": 6,
+            "right": 286.5,
+            "bottom": 82,
+            "left": 195
+          },
+          "image": {
+            "x": 208.75,
+            "y": 33,
+            "width": 64,
+            "height": 42,
+            "top": 33,
+            "right": 272.75,
+            "bottom": 75,
+            "left": 208.75
+          },
+          "source": "http://127.0.0.1:6506/_next/image?url=%2Fshowroom%2Fnavigation%2Ffinance-front-v1.png&w=96&q=75"
+        },
+        {
+          "text": "Services",
+          "rect": {
+            "x": 286.5,
+            "y": 6,
+            "width": 91.5,
+            "height": 76,
+            "top": 6,
+            "right": 378,
+            "bottom": 82,
+            "left": 286.5
+          },
+          "image": {
+            "x": 300.25,
+            "y": 33,
+            "width": 64,
+            "height": 42,
+            "top": 33,
+            "right": 364.25,
+            "bottom": 75,
+            "left": 300.25
+          },
+          "source": "http://127.0.0.1:6506/_next/image?url=%2Fshowroom%2Fnavigation%2Fservice-side-v1.png&w=96&q=75"
+        }
+      ],
+      "pills": [
+        {
+          "text": "All",
+          "font": "14px",
+          "height": 44
+        },
+        {
+          "text": "Servicing",
+          "font": "14px",
+          "height": 44
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

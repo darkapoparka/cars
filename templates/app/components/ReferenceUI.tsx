@@ -21,7 +21,7 @@ export function ServiceTabs({active,compact=false,onDark=false}: {active:Service
 
   return <nav aria-label={tx("Car services")} {...stylex.props(s.tabs)}>{showroom.services.map(tab => <Link key={tab.key} href={tab.href} aria-label={tx(tab.key === 'finance' ? 'Finance navigation' : tab.label)} aria-current={active===tab.key?'page':undefined} {...stylex.props(s.tab,active===tab.key&&s.tabActive,onDark&&active===tab.key&&s.tabOnDarkActive,compact&&s.tabCompact)}>
     <span {...stylex.props(s.tabTitle,t.navigation,active===tab.key&&s.tabTitleActive,compact&&s.tabTitleCompact,compact&&active===tab.key&&s.tabTitleCompactActive,compact&&onDark&&s.tabTitleOnDark,compact&&onDark&&active===tab.key&&s.tabTitleOnDarkActive)}>{tx(tab.key === 'finance' ? 'Finance navigation' : tab.label)}</span>
-    {!compact ? <span aria-hidden="true" {...stylex.props(s.tabArtworkBox)}><ServiceTabArtwork image={tab.image} mobileImage={tab.mobileTabImage} service={tab.key}/></span> : null}
+    {!compact ? <span aria-hidden="true" {...stylex.props(s.tabArtworkBox)}><ServiceTabArtwork image={tab.image} mobileImage={tab.mobileTabImage} mobileViewBox={tab.mobileTabViewBox}/></span> : null}
     {active===tab.key?<span aria-hidden="true" {...stylex.props(s.tabIndicator,compact&&s.tabIndicatorCompact)}/>:null}
   </Link>)}</nav>;
 }
@@ -30,11 +30,13 @@ export function ShowroomPromotion() {
   return <DealerHomeBanner/>;
 }
 
-function ServiceTabArtwork({image, mobileImage, service}: {image: string; mobileImage: string; service: ServiceKey}) {
+function ServiceTabArtwork({image, mobileImage, mobileViewBox}: {image: string; mobileImage: string; mobileViewBox: string}) {
   const common = {alt: '', fill: true, sizes: '(max-width: 767px) 90px, 160px'};
   const {props: desktop} = getImageProps({...common, src: assetPath(image)});
-  const {props: mobile} = getImageProps({...common, src: assetPath(mobileImage)});
-  return <picture><source media="(max-width: 767px)" srcSet={mobile.srcSet} sizes={mobile.sizes}/><img {...desktop} alt="" {...stylex.props(s.tabArt, service === 'sell' && s.tabArtSell)}/></picture>;
+  const {props: mobile} = getImageProps({alt: '', src: assetPath(mobileImage), width: 96, height: 64});
+  // Frame the painted artwork, not each file's unequal transparent margins.
+  // The 1536 x 1024 source coordinate system also fits the proportional WebP.
+  return <><img {...desktop} alt="" {...stylex.props(s.tabArt,s.tabDesktopArt)}/><svg viewBox={mobileViewBox} preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false" {...stylex.props(s.tabMobileArt)}><image href={mobile.src} width={1536} height={1024}/></svg></>;
 }
 
 export function BrandEmblem({make,plain=false}: {make: string;plain?: boolean}) {
@@ -92,9 +94,10 @@ const s=stylex.create({
  tabTitleCompactActive:{color:{[media.mobile]:$.ink,default:'#fff'},backgroundColor:{[media.mobile]:'transparent',default:$.ink}},
  tabTitleOnDark:{color:{[media.mobile]:$.ink,default:'#dddde1'},backgroundColor:{[media.mobile]:'transparent',default:'#343438'}},
  tabTitleOnDarkActive:{color:$.ink,backgroundColor:{[media.mobile]:'transparent',default:'#fff'}},
- tabArtworkBox:{position:{[media.mobile]:'relative',default:'absolute'},flexShrink:0,left:{[media.mobile]:'auto',default:'50%'},transform:{[media.mobile]:'translateY(-1px)',default:'translateX(-50%)'},bottom:{[media.mobile]:'auto',default:2},width:{[media.mobile]:64,default:'100%'},height:{[media.mobile]:42,default:'64%'},maxWidth:160},
+ tabArtworkBox:{position:{[media.mobile]:'relative',default:'absolute'},flexShrink:0,left:{[media.mobile]:'auto',default:'50%'},transform:{[media.mobile]:'translateY(-2px)',default:'translateX(-50%)'},bottom:{[media.mobile]:'auto',default:2},width:{[media.mobile]:64,default:'100%'},height:{[media.mobile]:42,default:'64%'},maxWidth:160},
  tabArt:{objectFit:'contain'},
- tabArtSell:{transform:{[media.mobile]:'scale(1.12)',default:'none'}},
+ tabDesktopArt:{display:{[media.mobile]:'none',default:'block'}},
+ tabMobileArt:{display:{[media.mobile]:'block',default:'none'},width:'100%',height:'100%'},
  tabTitle:{position:{[media.mobile]:'static',default:'absolute'},top:16,left:0,right:0,maxWidth:'100%',textAlign:'center',zIndex:1,whiteSpace:'pre-line',overflowWrap:'anywhere',letterSpacing:0},
  tabTitleActive:{fontWeight:{[media.mobile]:500,default:400}},
  sectionTitle:{fontSize:{[media.mobile]:18,default:25},fontWeight:{[media.mobile]:600,default:500},lineHeight:1.35,color:$.text},

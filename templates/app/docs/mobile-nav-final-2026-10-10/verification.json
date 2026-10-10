@@ -1,0 +1,382 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "route": "/en",
+      "width": 320,
+      "art": [
+        {
+          "bottom": 74,
+          "height": 42,
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Fbuy-front-v1.png&w=256&q=75"
+        },
+        {
+          "bottom": 74,
+          "height": 42,
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Fsell-euro-notes-v2.webp&w=256&q=75"
+        },
+        {
+          "bottom": 74,
+          "height": 42,
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Ffinance-front-v1.png&w=256&q=75"
+        },
+        {
+          "bottom": 74,
+          "height": 42,
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Fservice-side-v1.png&w=256&q=75"
+        }
+      ],
+      "dockTargets": [
+        {
+          "height": 44,
+          "width": 44,
+          "href": "/en"
+        },
+        {
+          "height": 44,
+          "width": 44,
+          "href": "/en/cars"
+        },
+        {
+          "height": 44,
+          "width": 44,
+          "href": "/en/service"
+        },
+        {
+          "height": 44,
+          "width": 44,
+          "href": "/en/more"
+        }
+      ]
+    },
+    {
+      "route": "/en/sell",
+      "width": 320,
+      "art": [
+        {
+          "bottom": 74,
+          "height": 42,
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Fbuy-front-v1.png&w=256&q=75"
+        },
+        {
+          "bottom": 74,
+          "height": 42,
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Fsell-euro-notes-v2.webp&w=256&q=75"
+        },
+        {
+          "bottom": 74,
+          "height": 42,
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Ffinance-front-v1.png&w=256&q=75"
+        },
+        {
+          "bottom": 74,
+          "height": 42,
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Fservice-side-v1.png&w=256&q=75"
+        }
+      ],
+      "dockTargets": [
+        {
+          "height": 44,
+          "width": 44,
+          "href": "/en"
+        },
+        {
+          "height": 44,
+          "width": 44,
+          "href": "/en/cars"
+        },
+        {
+          "height": 44,
+          "width": 44,
+          "href": "/en/service"
+        },
+        {
+          "height": 44,
+          "width": 44,
+          "href": "/en/more"
+        }
+      ]
+    },
+    {
+      "route": "/en/finance",
+      "width": 320,
+      "art": [
+        {
+          "bottom": 74,
+          "height": 42,
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Fbuy-front-v1.png&w=256&q=75"
+        },
+        {
+          "bottom": 74,
+          "height": 42,
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Fsell-euro-notes-v2.webp&w=256&q=75"
+        },
+        {
+          "bottom": 74,
+          "height": 42,
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Ffinance-front-v1.png&w=256&q=75"
+        },
+        {
+          "bottom": 74,
+          "height": 42,
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Fservice-side-v1.png&w=256&q=75"
+        }
+      ],
+      "dockTargets": [
+        {
+          "height": 44,
+          "width": 44,
+          "href": "/en"
+        },
+        {
+          "height": 44,
+          "width": 44,
+          "href": "/en/cars"
+        },
+        {
+          "height": 44,
+          "width": 44,
+          "href": "/en/service"
+        },
+        {
+          "height": 44,
+          "width": 44,
+          "href": "/en/more"
+        }
+      ]
+    },
+    {
+      "route": "/en/service",
+      "width": 320,
+      "art": [
+        {
+          "bottom": 74,
+          "height": 42,
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Fbuy-front-v1.png&w=256&q=75"
+        },
+        {
+          "bottom": 74,
+          "height": 42,
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Fsell-euro-notes-v2.webp&w=256&q=75"
+        },
+        {
+          "bottom": 74,
+          "height": 42,
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Ffinance-front-v1.png&w=256&q=75"
+        },
+        {
+          "bottom": 74,
+          "height": 42,
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Fservice-side-v1.png&w=256&q=75"
+        }
+      ],
+      "dockTargets": [
+        {
+          "height": 44,
+          "width": 44,
+          "href": "/en"
+        },
+        {
+          "height": 44,
+          "width": 44,
+          "href": "/en/cars"
+        },
+        {
+          "height": 44,
+          "width": 44,
+          "href": "/en/service"
+        },
+        {
+          "height": 44,
+          "width": 44,
+          "href": "/en/more"
+        }
+      ]
+    },
+    {
+      "route": "/bg/service",
+      "width": 320,
+      "art": [
+        {
+          "bottom": 74,
+          "height": 42,
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Fbuy-front-v1.png&w=256&q=75"
+        },
+        {
+          "bottom": 74,
+          "height": 42,
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Fsell-euro-notes-v2.webp&w=256&q=75"
+        },
+        {
+          "bottom": 74,
+          "height": 42,
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Ffinance-front-v1.png&w=256&q=75"
+        },
+        {
+          "bottom": 74,
+          "height": 42,
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Fservice-side-v1.png&w=256&q=75"
+        }
+      ],
+      "dockTargets": [
+        {
+          "height": 44,
+          "width": 44,
+          "href": "/bg"
+        },
+        {
+          "height": 44,
+          "width": 44,
+          "href": "/bg/cars"
+        },
+        {
+          "height": 44,
+          "width": 44,
+          "href": "/bg/service"
+        },
+        {
+          "height": 44,
+          "width": 44,
+          "href": "/bg/more"
+        }
+      ]
+    },
+    {
+      "interactions": "service category/reset, compact header, Sell tab, Cars dock, Brand drawer/Escape"
+    },
+    {
+      "width": 768,
+      "geometry": [
+        {
+          "label": "Buy",
+          "image": {
+            "x": 29.125,
+            "y": 51.734375,
+            "width": 160,
+            "height": 65.265625,
+            "top": 51.734375,
+            "right": 189.125,
+            "bottom": 117,
+            "left": 29.125
+          },
+          "svgDisplay": "none",
+          "source": "/_next/image?url=%2Fcutouts%2Fbuy-sedan-v1.png&w=3840&q=75"
+        },
+        {
+          "label": "Sell",
+          "image": {
+            "x": 207.375,
+            "y": 51.734375,
+            "width": 160,
+            "height": 65.265625,
+            "top": 51.734375,
+            "right": 367.375,
+            "bottom": 117,
+            "left": 207.375
+          },
+          "svgDisplay": "none",
+          "source": "/_next/image?url=%2Fcutouts%2Fsedan.png&w=3840&q=75"
+        },
+        {
+          "label": "Finance",
+          "image": {
+            "x": 385.625,
+            "y": 51.734375,
+            "width": 160,
+            "height": 65.265625,
+            "top": 51.734375,
+            "right": 545.625,
+            "bottom": 117,
+            "left": 385.625
+          },
+          "svgDisplay": "none",
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Ffinance-v4.webp&w=3840&q=75"
+        },
+        {
+          "label": "Services",
+          "image": {
+            "x": 563.875,
+            "y": 51.734375,
+            "width": 160,
+            "height": 65.265625,
+            "top": 51.734375,
+            "right": 723.875,
+            "bottom": 117,
+            "left": 563.875
+          },
+          "svgDisplay": "none",
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Fservice-v3.webp&w=3840&q=75"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "geometry": [
+        {
+          "label": "Buy",
+          "image": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "svgDisplay": "none",
+          "source": "/_next/image?url=%2Fcutouts%2Fbuy-sedan-v1.png&w=3840&q=75"
+        },
+        {
+          "label": "Sell",
+          "image": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "svgDisplay": "none",
+          "source": "/_next/image?url=%2Fcutouts%2Fsedan.png&w=3840&q=75"
+        },
+        {
+          "label": "Finance",
+          "image": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "svgDisplay": "none",
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Ffinance-v4.webp&w=3840&q=75"
+        },
+        {
+          "label": "Services",
+          "image": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "svgDisplay": "none",
+          "source": "/_next/image?url=%2Fshowroom%2Fnavigation%2Fservice-v3.webp&w=3840&q=75"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior=\"smooth\"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior"
+  ]
+}

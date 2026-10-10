@@ -46,10 +46,10 @@ export const showroom = {
     mobileAction: 'Visit showroom',
   },
   services: [
-    {key: 'buy', label: 'Buy', href: '/', image: '/cutouts/buy-sedan-v1.png', mobileImage: '/cutouts/buy-sedan-v1.png', mobileTabImage: '/showroom/navigation/buy-front-v1.png'},
-    {key: 'sell', label: 'Sell', href: '/sell', image: '/cutouts/sedan.png', mobileImage: '/showroom/navigation/sell-euro-notes-v1.webp', mobileTabImage: '/showroom/navigation/sell-euro-notes-v1.webp'},
-    {key: 'finance', label: 'Finance', href: '/finance', image: '/showroom/navigation/finance-v4.webp', mobileImage: '/showroom/navigation/finance-v5.webp', mobileTabImage: '/showroom/navigation/finance-front-v1.png'},
-    {key: 'service', label: 'Services', href: '/service', image: '/showroom/navigation/service-v3.webp', mobileImage: '/showroom/navigation/service-v4.webp', mobileTabImage: '/showroom/navigation/service-side-v1.png'},
+    {key: 'buy', label: 'Buy', href: '/', image: '/cutouts/buy-sedan-v1.png', mobileImage: '/cutouts/buy-sedan-v1.png', mobileTabImage: '/showroom/navigation/buy-front-v1.png', mobileTabViewBox: '136 68 1264 878'},
+    {key: 'sell', label: 'Sell', href: '/sell', image: '/cutouts/sedan.png', mobileImage: '/showroom/navigation/sell-euro-notes-v2.webp', mobileTabImage: '/showroom/navigation/sell-euro-notes-v2.webp', mobileTabViewBox: '269 41 999 940'},
+    {key: 'finance', label: 'Finance', href: '/finance', image: '/showroom/navigation/finance-v4.webp', mobileImage: '/showroom/navigation/finance-v5.webp', mobileTabImage: '/showroom/navigation/finance-front-v1.png', mobileTabViewBox: '308 27 920 972'},
+    {key: 'service', label: 'Services', href: '/service', image: '/showroom/navigation/service-v3.webp', mobileImage: '/showroom/navigation/service-v4.webp', mobileTabImage: '/showroom/navigation/service-side-v1.png', mobileTabViewBox: '167 8 1202 978'},
   ],
   // Countries used by the import listing filters and enquiry form.
   importCountries: [
