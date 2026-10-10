@@ -180,12 +180,20 @@ function gitMerge(pathname, dealerBytes, baseBytes, templateBytes, tempRoot) {
     fs.writeFileSync(dealer, normalizedText(dealerBytes));
     fs.writeFileSync(base, normalizedText(baseBytes));
     fs.writeFileSync(template, normalizedText(templateBytes));
-    const result = spawnSync('git', [
-      'merge-file', '-p', '-L', 'dealer', '-L', 'old-template', '-L', 'new-template',
-      dealer, base, template
-    ], { encoding: null, maxBuffer: 16 * 1024 * 1024, windowsHide: true });
-    if (result.error) throw result.error;
-    const output = Buffer.from(result.stdout || []);
+    // Large generated catalogs/SVGs can exceed spawnSync's stdout buffer.
+    // Keep the complete merge output on this owned temporary file; never truncate
+    // actual candidate bytes or turn a merge conflict into an accepted result.
+    const outputFile = path.join(files, 'merged');
+    const descriptor = fs.openSync(outputFile, 'wx');
+    let result;
+    try {
+      result = spawnSync('git', [
+        'merge-file', '-p', '-L', 'dealer', '-L', 'old-template', '-L', 'new-template',
+        dealer, base, template
+      ], { encoding: null, stdio: ['ignore', descriptor, 'pipe'], maxBuffer: 1024 * 1024, windowsHide: true });
+    } finally { fs.closeSync(descriptor); }
+    if (result.error) throw new Error('git merge-file failed for ' + pathname + ': ' + result.error.message);
+    const output = fs.readFileSync(outputFile);
     if (result.status === 0) return { clean: true, bytes: output };
     const preview = output.toString('utf8');
     const hasConflictMarkers = /^<<<<<<< .+\r?$/m.test(preview) && /^>>>>>>> .+\r?$/m.test(preview);
@@ -515,19 +523,47 @@ export function unifiedDiff(beforeBytes, afterBytes, labels = ['dealer', 'candid
   diffCache.set(key,result);return result;
 }
 function computeUnifiedDiff(beforeBytes, afterBytes, labels) {
-  const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'cars-upgrade-diff-'));
-  try {
-    const before = path.join(temp, 'before');
-    const after = path.join(temp, 'after');
-    fs.writeFileSync(before, beforeBytes ?? Buffer.alloc(0));
-    fs.writeFileSync(after, afterBytes ?? Buffer.alloc(0));
-    const result = spawnSync('git', ['diff', '--no-index', '--no-prefix', '--', 'before', 'after'], {
-      cwd: temp, encoding: 'utf8', maxBuffer: 8 * 1024 * 1024, windowsHide: true
-    });
-    if (result.error) throw result.error;
-    if (![0, 1].includes(result.status)) throw new Error(`git diff failed: ${result.stderr}`);
-    return result.stdout.replaceAll(before, labels[0]).replaceAll(after, labels[1]);
-  } finally { fs.rmSync(temp, { recursive: true, force: true }); }
+  const beforeContent = beforeBytes ?? Buffer.alloc(0), afterContent = afterBytes ?? Buffer.alloc(0);
+  if (beforeContent.equals(afterContent)) return '';
+  // Review text is informational: conflict decisions and complete source bytes
+  // remain unchanged. Avoid a Git process and duplicate temp assets for images.
+  if (tryUtf8(beforeContent) === null || tryUtf8(afterContent) === null) {
+    return 'Binary files ' + labels[0] + ' and ' + labels[1] + ' differ\n';
+  }
+  // Bound only the displayed patch. Exact before/after hashes and the complete
+  // immutable source/candidate remain available for explicit large-file review.
+  if (beforeContent.length + afterContent.length > 4 * 1024 * 1024) {
+    return 'Large text patch omitted from review display (full source retained).\n'
+      + labels[0] + ': ' + beforeContent.length + ' bytes; sha256=' + sha256(beforeContent) + '\n'
+      + labels[1] + ': ' + afterContent.length + ' bytes; sha256=' + sha256(afterContent) + '\n';
+  }
+  // A single exact context hunk avoids thousands of short-lived Git processes
+  // on Windows. This is review text only; Git still performs real three-way
+  // merges and all original conflict/hash/installation gates remain intact.
+  const lines = bytes => {
+    const text = bytes.toString('utf8'), values = text.length ? text.split('\n') : [];
+    if (text.endsWith('\n')) values.pop();
+    return {values, finalNewline: text.endsWith('\n')};
+  };
+  const before = lines(beforeContent), after = lines(afterContent), a = before.values, b = after.values;
+  let prefix = 0, suffix = 0;
+  while (prefix < a.length && prefix < b.length && a[prefix] === b[prefix]) prefix++;
+  while (suffix < a.length - prefix && suffix < b.length - prefix && a[a.length - 1 - suffix] === b[b.length - 1 - suffix]) suffix++;
+  // Include a changed final-newline bit even when line content is identical.
+  if (prefix === a.length && prefix === b.length && prefix > 0) { prefix--; suffix = 0; }
+  const contextStart = Math.max(0, prefix - 3), aEnd = Math.min(a.length, a.length - suffix + 3), bEnd = Math.min(b.length, b.length - suffix + 3);
+  const aCount = aEnd - contextStart, bCount = bEnd - contextStart;
+  const range = (start, count) => (count ? start + 1 : start) + ',' + count;
+  let result = 'diff --git ' + labels[0] + ' ' + labels[1] + '\n--- ' + labels[0] + '\n+++ ' + labels[1] + '\n'
+    + '@@ -' + range(contextStart, aCount) + ' +' + range(contextStart, bCount) + ' @@\n';
+  const add = (sign, values, from, to, newline) => {
+    for (let i = from; i < to; i++) { result += sign + values[i] + '\n'; if (i === values.length - 1 && !newline) result += '\\ No newline at end of file\n'; }
+  };
+  add(' ', a, contextStart, prefix, before.finalNewline);
+  add('-', a, prefix, a.length - suffix, before.finalNewline);
+  add('+', b, prefix, b.length - suffix, after.finalNewline);
+  add(' ', b, b.length - suffix, bEnd, after.finalNewline);
+  return result;
 }
 
 export function writeCandidateTree(plan, destination) {

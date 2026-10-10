@@ -1,0 +1,111 @@
+{
+  "base": "https://cars-template-auto-best.vercel.app",
+  "checkedAt": "2026-10-10T17:21:30.403Z",
+  "scope": "Native preferences and URL retention; not catalog or full-design completion.",
+  "results": [
+    {
+      "name": "Auto Best preserves trade-in query and anchor when saving country and language",
+      "pass": true,
+      "cookies": [
+        {
+          "name": "cars_prompt",
+          "value": "v1",
+          "domain": "cars-template-auto-best.vercel.app",
+          "path": "/",
+          "expires": 1807204885.103214,
+          "httpOnly": true,
+          "secure": true,
+          "sameSite": "Lax"
+        },
+        {
+          "name": "cars_locale",
+          "value": "bg",
+          "domain": "cars-template-auto-best.vercel.app",
+          "path": "/",
+          "expires": 1807204885.103598,
+          "httpOnly": true,
+          "secure": true,
+          "sameSite": "Lax"
+        },
+        {
+          "name": "cars_country",
+          "value": "BG",
+          "domain": "cars-template-auto-best.vercel.app",
+          "path": "/",
+          "expires": 1807204885.103697,
+          "httpOnly": true,
+          "secure": true,
+          "sameSite": "Lax"
+        }
+      ],
+      "geometry": {
+        "x": 0,
+        "y": 280.96875,
+        "width": 390,
+        "height": 563.03125
+      },
+      "finalUrl": "https://cars-template-auto-best.vercel.app/en/contact?topic=trade-in&probe=keep#trade-in-enquiry",
+      "errors": []
+    },
+    {
+      "name": "Escape dismissal is persisted without accepting a country or language",
+      "pass": true,
+      "cookies": [
+        {
+          "name": "cars_prompt",
+          "value": "v1",
+          "domain": "cars-template-auto-best.vercel.app",
+          "path": "/",
+          "expires": 1807204887.633671,
+          "httpOnly": true,
+          "secure": true,
+          "sameSite": "Lax"
+        }
+      ],
+      "promptReopenedOnReload": false
+    },
+    {
+      "name": "No-JavaScript form uses server-set preferences and preserves the return route",
+      "pass": true,
+      "finalUrl": "https://cars-template-auto-best.vercel.app/bg/contact?topic=import&probe=no-js#form",
+      "cookies": [
+        {
+          "name": "cars_prompt",
+          "value": "v1",
+          "domain": "cars-template-auto-best.vercel.app",
+          "path": "/",
+          "expires": 1807204889.245069,
+          "httpOnly": true,
+          "secure": true,
+          "sameSite": "Lax"
+        },
+        {
+          "name": "cars_locale",
+          "value": "bg",
+          "domain": "cars-template-auto-best.vercel.app",
+          "path": "/",
+          "expires": 1807204889.24519,
+          "httpOnly": true,
+          "secure": true,
+          "sameSite": "Lax"
+        },
+        {
+          "name": "cars_country",
+          "value": "DE",
+          "domain": "cars-template-auto-best.vercel.app",
+          "path": "/",
+          "expires": 1807204889.245254,
+          "httpOnly": true,
+          "secure": true,
+          "sameSite": "Lax"
+        }
+      ]
+    },
+    {
+      "name": "Explicit locale works when browser storage is unavailable",
+      "pass": true,
+      "finalUrl": "https://cars-template-auto-best.vercel.app/bg/contact?topic=trade-in",
+      "errors": []
+    }
+  ]
+}

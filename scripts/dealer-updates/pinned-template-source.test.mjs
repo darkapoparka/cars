@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
-import { fingerprint } from '../lib/workflow.mjs';
+import { fingerprint, fingerprintCommit } from '../lib/workflow.mjs';
 import { exportPinnedTemplate, exportPinnedTemplatePair, readPinnedTemplateTree, readRepositoryTreeMap } from './pinned-template-source.mjs';
 import {appSourceRetainsPath} from '../publishing/app-source.mjs';
 
@@ -199,4 +199,19 @@ test('selected Cars lock digest uses the canonical workflow fingerprint policy',
   assert.equal(result.revision, selected.source.revision);
   assert.equal(result.path, 'templates/auto-best');
   assert.ok(result.files > 0);
+});
+
+
+test('batched reads preserve canonical Git ordering and text/binary normalization', t => {
+  const fixture=templateRepo(t);
+  fs.mkdirSync(path.join(fixture.repo,'many'));
+  for(let index=0;index<530;index++)fs.writeFileSync(path.join(fixture.repo,'many',String(index).padStart(4,'0')+'.ts'),'export const value = '+index+';\r\n');
+  fs.writeFileSync(path.join(fixture.repo,'many','binary.dat'),Buffer.from([0,13,10,255,10]));
+  runGit(fixture.repo,['add','.']);runGit(fixture.repo,['commit','-m','batched canonical evidence']);
+  const revision=runGit(fixture.repo,['rev-parse','HEAD']);
+  const canonical=fingerprintCommit(fixture.repo,revision);
+  const source={repository:'darkapoparka/cars-template-auto-best',revision,digest:canonical.digest};
+  const loaded=readPinnedTemplateTree({key:'auto-best',repositoryPath:fixture.repo,source});
+  assert.equal(loaded.digest,canonical.digest);assert.equal(loaded.files,canonical.files.length);
+  assert.deepEqual(loaded.tree.get('many/binary.dat'),Buffer.from([0,13,10,255,10]));
 });

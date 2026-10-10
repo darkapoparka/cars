@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
-import { installUpgrade, materializeUpgradeCandidate, planDealerUpgrade, planThreeWayUpgrade, rollbackUpgrade, selectPinnedRevisions, updateManifestPins, upgradeReviewReport, writeCandidateTree } from './three-way-upgrade.mjs';
+import { unifiedDiff, installUpgrade, materializeUpgradeCandidate, planDealerUpgrade, planThreeWayUpgrade, rollbackUpgrade, selectPinnedRevisions, updateManifestPins, upgradeReviewReport, writeCandidateTree } from './three-way-upgrade.mjs';
 
 const bytes = value => Buffer.from(value);
 const map = entries => new Map(Object.entries(entries).map(([name, value]) => [name, Buffer.isBuffer(value) ? value : bytes(value)]));
@@ -456,4 +456,40 @@ test('dealer upgrade reviews an exact packaging-v2 target manifest atomically', 
   assert.equal(saved.packaging.version,'2');
   assert.equal(saved.localization.dealerCountry,'BG');
   assert.equal(JSON.parse(fs.readFileSync(path.join(dealerRoot,'dealer.json'),'utf8')).packaging.version,'1');
+});
+
+
+test('binary review diffs are bounded without changing conflict decisions', () => {
+  const before=Buffer.from([0,1,2,3]), after=Buffer.from([0,4,5,6]);
+  assert.equal(unifiedDiff(before,after,['dealer/logo.png','candidate/logo.png']), 'Binary files dealer/logo.png and candidate/logo.png differ\n');
+  const plan=planThreeWayUpgrade({oldBase:new Map([['logo.png',before]]),dealer:new Map([['logo.png',Buffer.from([0,7,8,9])]]),newBase:new Map([['logo.png',after]])});
+  assert.equal(plan.ready,false);assert.equal(plan.conflicts.length,1);
+});
+
+test('large review patches retain exact identities instead of overflowing Git output', () => {
+  const before=Buffer.from('a'.repeat(5*1024*1024)),after=Buffer.from('b'.repeat(5*1024*1024));
+  const patch=unifiedDiff(before,after,['old/generated.json','new/generated.json']);
+  assert.match(patch,/Large text patch omitted/);assert.match(patch,/5242880 bytes; sha256=[a-f0-9]{64}/);assert.ok(patch.length<512);
+});
+
+test('large clean merges preserve complete output beyond the former 16 MiB limit', () => {
+  const prefix='const retained = "'+'x'.repeat(17*1024*1024)+'";\n';
+  const base=prefix+'old dealer line\ncommon one\ncommon two\ncommon three\nold template line\n';
+  const local=base.replace('old dealer line','retained dealer line');
+  const upstream=base.replace('old template line','latest template line');
+  const plan=planThreeWayUpgrade({oldBase:map({'large.ts':base}),dealer:map({'large.ts':local}),newBase:map({'large.ts':upstream})});
+  assert.equal(plan.ready,true);assert.equal(plan.conflicts.length,0);
+  assert.equal(plan.candidate.get('large.ts').toString(),local.replace('old template line','latest template line'));
+  assert.match(plan.changes[0].diff,/Large text patch omitted/);
+});
+
+
+test('fast review hunks cover insertion, deletion, separated edits and final-newline changes', () => {
+  for(const [before,after] of [['','new\n'],['old\n',''],['one\ntwo\nthree\nfour\nfive\n','ONE\ntwo\nthree\nfour\nFIVE\n'],['same','same\n']]) {
+    const result=unifiedDiff(Buffer.from(before),Buffer.from(after));
+    assert.match(result,/^diff --git dealer candidate\n--- dealer\n\+\+\+ candidate\n@@/);
+    const lines=result.split('\n'),header=lines[3].match(/@@ -(\d+),(\d+) \+(\d+),(\d+) @@/);assert.ok(header);
+    let oldCount=0,newCount=0;for(const line of lines.slice(4)){if(line.startsWith(' ')||line.startsWith('-'))oldCount++;if(line.startsWith(' ')||line.startsWith('+'))newCount++;}
+    assert.equal(oldCount,Number(header[2]));assert.equal(newCount,Number(header[4]));
+  }
 });

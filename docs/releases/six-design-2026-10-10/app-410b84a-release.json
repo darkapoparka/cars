@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "kind": "exact-source-template-release-evidence",
+  "repository": "darkapoparka/cars",
+  "commit": "410b84af397a8a6159f3510bd843cbbe81a4ca5d",
+  "sourcePath": "templates/app",
+  "sourceTree": "bd9dac18618bb4b423c442c34fa9f13ce941db0d",
+  "sourceDigest": "e1f085e028a359a6253f63293c1eb41612d4d8b5ef36a366aee1b689341652bd",
+  "exportPolicy": "cars-source-v1",
+  "approved": true,
+  "release": "app-final-mobile-panels-2026-10-10",
+  "verifiedAt": "2026-10-10T16:43:23.006Z",
+  "recordedAt": "2026-10-10T16:43:23.006Z",
+  "runtime": {
+    "node": "22.23.2",
+    "declaredNode": ">=22.20.0 <23",
+    "next": "16.3.8",
+    "packageManager": "npm@11.3.0",
+    "browser": "Installed Playwright Chromium; public production alias"
+  },
+  "modes": {
+    "standalone": "Verified exact source binding, READY deployment, 149 tests, 50 routes and fresh public browser checks.",
+    "mounted": "Requires complete personalized six-service pilot acceptance before any dealer release.",
+    "dealer": "Dealer logos, inventory, metadata and contacts require candidate and hosted checks."
+  },
+  "checks": [
+    {
+      "name": "immutable-source-ready-binding",
+      "status": "passed",
+      "scope": "Live Vercel get_project/get_deployment in this release session; declared source tree/digest independently match immutable Cars Git objects. Hosted route and browser checks are separate fresh evidence.",
+      "deployment": {
+        "id": "dpl_6XM9cz4hXz5rD4kXaRtiW8Grsrit",
+        "projectId": "prj_TnD7adaf0u3zjwhmV2xRxx9mWkOu",
+        "state": "READY",
+        "target": "production",
+        "sourceCommit": "410b84af397a8a6159f3510bd843cbbe81a4ca5d",
+        "publishingRepository": "darkapoparka/cars-template-app",
+        "publishingCommit": "35b8479806e65f773f2214e9d7df3905db165ac3",
+        "sourceTree": "bd9dac18618bb4b423c442c34fa9f13ce941db0d",
+        "sourceDigest": "e1f085e028a359a6253f63293c1eb41612d4d8b5ef36a366aee1b689341652bd",
+        "publicAlias": "https://cars-template-app.vercel.app/",
+        "immutableUrl": "https://cars-template-faqrfzqps-tyj5.vercel.app",
+        "readyAt": "2026-10-10T09:31:02.494Z",
+        "verification": "Live Vercel get_project/get_deployment in this release session; declared source tree/digest independently match immutable Cars Git objects. Hosted route and browser checks are separate fresh evidence."
+      }
+    },
+    {
+      "name": "current-unit-tests",
+      "status": "passed",
+      "count": 149,
+      "evidence": [
+        {
+          "path": "runtime/vercel-six-release-20261010-web/app-tests.log",
+          "sha256": "4b354a00510c12c5894f564e7b4aef6a2f15419ab713b0f334608bf538b17f5d"
+        }
+      ]
+    },
+    {
+      "name": "public-route-families",
+      "status": "passed",
+      "count": 50,
+      "locales": [
+        "en",
+        "bg"
+      ],
+      "homeVariants": [
+        1,
+        2
+      ],
+      "evidence": [
+        {
+          "path": "runtime/vercel-six-release-20261010-web/app-public-routes.log",
+          "sha256": "7ddb174133d074ec476e52e727a085d6410822b198be7e4c41c8de8a63f4a592"
+        }
+      ]
+    },
+    {
+      "name": "fresh-hosted-ui-interactions",
+      "status": "passed",
+      "scope": "320px EN/BG, 768/1440 desktop, four tab destinations, service filter/reset, compact header, Sell/Cars links, Brand drawer Escape, 44px targets; no overflow or browser errors.",
+      "evidence": [
+        {
+          "path": "runtime/vercel-six-release-20261010-web/hosted-verification.json",
+          "sha256": "8a41a3186e2862883db21179c7a01be91e6c26f406260d1745bda98f48ea14f4"
+        },
+        {
+          "path": "runtime/vercel-six-release-20261010-web/app-browser-source.json",
+          "sha256": "3b536e879a6fb95825cd5f8bb9c9a04a4fa7232609a352d8ac61c9379472848b"
+        }
+      ]
+    },
+    {
+      "name": "final-panel-spacing-owner-receipt",
+      "status": "passed",
+      "scope": "Retained owner hosted Home/Services final panel measurements; original timestamp and source scope preserved.",
+      "evidence": [
+        {
+          "path": "templates/app/runtime/mobile-nav-final-20261010/hosted-panel-checks.json",
+          "sha256": "ceb881de5335b570ab05eed242c9808cf8b7698531ac68eebaeeb102d2409123"
+        }
+      ]
+    }
+  ],
+  "standalone": {
+    "mobile": {
+      "verified": true,
+      "widths": [
+        320
+      ],
+      "locales": [
+        "en",
+        "bg"
+      ]
+    },
+    "desktop": {
+      "verified": true,
+      "widths": [
+        768,
+        1440
+      ],
+      "locales": [
+        "en"
+      ]
+    }
+  },
+  "deployment": {
+    "id": "dpl_6XM9cz4hXz5rD4kXaRtiW8Grsrit",
+    "projectId": "prj_TnD7adaf0u3zjwhmV2xRxx9mWkOu",
+    "state": "READY",
+    "target": "production",
+    "sourceCommit": "410b84af397a8a6159f3510bd843cbbe81a4ca5d",
+    "publishingRepository": "darkapoparka/cars-template-app",
+    "publishingCommit": "35b8479806e65f773f2214e9d7df3905db165ac3",
+    "sourceTree": "bd9dac18618bb4b423c442c34fa9f13ce941db0d",
+    "sourceDigest": "e1f085e028a359a6253f63293c1eb41612d4d8b5ef36a366aee1b689341652bd",
+    "publicAlias": "https://cars-template-app.vercel.app/",
+    "immutableUrl": "https://cars-template-faqrfzqps-tyj5.vercel.app",
+    "readyAt": "2026-10-10T09:31:02.494Z",
+    "verification": "Live Vercel get_project/get_deployment in this release session; declared source tree/digest independently match immutable Cars Git objects. Hosted route and browser checks are separate fresh evidence."
+  },
+  "limitations": [
+    "This does not claim a new six-design dealer build or hosted fleet deployment.",
+    "The live provider source binding is not described as a fresh byte-by-byte audit of the entire publishing repository."
+  ]
+}
