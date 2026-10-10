@@ -1,0 +1,53 @@
+name: Review existing ten-dealer refresh
+on:
+  push:
+    branches: [codex/cloudflare-existing25-20261011]
+    paths: [docs/releases/cloudflare-existing25-20261011/wave-selection.json]
+permissions:
+  contents: read
+concurrency:
+  group: cars-existing-ten-source-review
+  cancel-in-progress: false
+jobs:
+  review:
+    if: github.repository == 'darkapoparka/cars' && github.ref == 'refs/heads/codex/cloudflare-existing25-20261011'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        dealer: [navara-car, day-and-night-auto-group, priselci, isauto-varna, automarket-varna, outletcars-varna, perfect-auto-varna, avangard-auto, legend-auto]
+    env:
+      DEALER_SLUG: ${{ matrix.dealer }}
+      NODE_OPTIONS: --max-old-space-size=4608
+      NEXT_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/
+            /templates.lock.json
+            /catalog.json
+            /workspace.json
+            /docs/DEPLOYMENT-INVENTORY.json
+            /docs/releases/cloudflare-existing25-20261011/
+            /clients/${{ matrix.dealer }}/
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '22.23.2'
+          package-manager-cache: false
+      - name: Read immutable template trees and run existing preservation-aware review
+        run: node scripts/review-existing-ten.mjs "$DEALER_SLUG"
+      - name: Retain exact proposed changes and unresolved conflicts without publication
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: existing-ten-review-${{ matrix.dealer }}-${{ github.run_id }}
+          path: runtime/existing-ten-reviews/${{ matrix.dealer }}/
+          include-hidden-files: true
+          retention-days: 7
+          if-no-files-found: error

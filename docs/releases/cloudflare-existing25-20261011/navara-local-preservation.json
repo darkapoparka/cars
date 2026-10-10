@@ -1,0 +1,287 @@
+{
+  "source": "L:/CODEX/cars",
+  "observed": "2026-10-10T22:34:32.579Z",
+  "kind": "Existing local work preserved in release branch; not accepted as build or native qualification",
+  "files": [
+    {
+      "path": "clients/navara-car/app/app/[locale]/page.tsx",
+      "bytes": 7766,
+      "sha256": "7530e4e16c9e75339e6d7ff1600d669980a70b82fe33c25e8c70552e351c4c13"
+    },
+    {
+      "path": "clients/navara-car/app/components/DealerBrand.tsx",
+      "bytes": 759,
+      "sha256": "a705630bb813b0654f7329f4aace68140505d88eb27b4a2def650b9f3573310e"
+    },
+    {
+      "path": "clients/navara-car/app/components/DiscoveryHeader.tsx",
+      "bytes": 4503,
+      "sha256": "eca28bb9df370c491d87e8d7b89146c6d6bf67175a6f7bce156e325b72e3abe4"
+    },
+    {
+      "path": "clients/navara-car/app/components/InventoryClient.tsx",
+      "bytes": 17970,
+      "sha256": "e7d4a7b640a745a2c6ed4fa6f9102f72969669143a61fac55391dff42328b248"
+    },
+    {
+      "path": "clients/navara-car/app/components/ReferenceUI.tsx",
+      "bytes": 8689,
+      "sha256": "33e4618ab790cf5daf04ca1949d67221e7a2728cc2bfa567795549c2650188a9"
+    },
+    {
+      "path": "clients/navara-car/app/components/VehicleCard.tsx",
+      "bytes": 8262,
+      "sha256": "356e66e3e32d680e14ac987cb847a74a120d91738034e828b1d8d8109251d078"
+    },
+    {
+      "path": "clients/navara-car/app/components/search-field.stylex.ts",
+      "bytes": 1898,
+      "sha256": "8e9d5d8e464d1eacd910b0fa3061d864f6a9076c2f12806c0b1c09df00900059"
+    },
+    {
+      "path": "clients/navara-car/app/lib/currency.ts",
+      "bytes": 367,
+      "sha256": "dc754fdc6ba011d6df049ec72e3187775966a6e60ca6affaa351efea2b1652ca"
+    },
+    {
+      "path": "clients/navara-car/app/lib/inventory-filters.ts",
+      "bytes": 10701,
+      "sha256": "d60c940e0978692aed30b41b27a42fb73f34a771aa1581470a2983b342b2c605"
+    },
+    {
+      "path": "clients/navara-car/app/lib/locales/bg.json",
+      "bytes": 143502,
+      "sha256": "d909a9755f93e57d25cbc0df46e9e8a19ad9bcc138a5bc74f92ba28d5cbb2dcd"
+    },
+    {
+      "path": "clients/navara-car/app/lib/locales/en.json",
+      "bytes": 98819,
+      "sha256": "3cd1d22896577533c76ea3582728b89305d58d6f3a9efcd4247d51d61f2b54c0"
+    },
+    {
+      "path": "clients/navara-car/app/lib/showroom.ts",
+      "bytes": 3816,
+      "sha256": "4a8995c2d35f64b526dd4b7134058741d0754502509adee162ad97c8fa335920"
+    },
+    {
+      "path": "clients/navara-car/app/tsconfig.json",
+      "bytes": 860,
+      "sha256": "505a08ee4fb8c1f5892347bf3f3ff823c17d1c6a5954e47a70ded93915ffffeb"
+    },
+    {
+      "path": "clients/navara-car/app/components/DealerHomeBanner.tsx",
+      "bytes": 3849,
+      "sha256": "98983e2b20508d3e96dc81153ecb3f159986a45314c313de351ccad87ff52d9b"
+    },
+    {
+      "path": "clients/navara-car/app/components/DealerLocationSheet.tsx",
+      "bytes": 4004,
+      "sha256": "7a75e1521bb4d4125c1e9b5dc3cdcf2d56874b0969e0ec743b0d8d6ec4cb6624"
+    },
+    {
+      "path": "clients/navara-car/app/lib/brand-logos.ts",
+      "bytes": 2874,
+      "sha256": "ee086dc8161824e928b501052c8a5d2d9af8e67062f6daadb35805fc08d74c80"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/SOURCES.md",
+      "bytes": 2332,
+      "sha256": "fad5bace2136eb4fcebefa85296855e82c4cc0742ac67d8c13b228c116e7b454"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/audi.svg",
+      "bytes": 2128,
+      "sha256": "43af01b7b9331040a84756bfbfd1dd4b9ffbf0ccf045a329e24514435a5be339"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/bmw.svg",
+      "bytes": 1613,
+      "sha256": "e80a2212b5eb954c70e9f8a66aa97067884fdada154f60e40e6741cd2050bda1"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/chevrolet.svg",
+      "bytes": 511,
+      "sha256": "c40bdb61de2602d55d92e0a121acafbf7ab5fd9d8ff85bb6c42fd161fd822e0f"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/ford.svg",
+      "bytes": 4177,
+      "sha256": "9f6a3e7b984260de4b4e4afb6a155e939bcf41d0a098529ba5965737d17f6d16"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/haval.png",
+      "bytes": 29563,
+      "sha256": "0fb9fefc735633dbd60b9f4657c58c39bc8f3d7c4685b724bfddc8649573587f"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/honda.svg",
+      "bytes": 1773,
+      "sha256": "c8126e635090b1773269cb5f34e1af2733b59ea65d48e43d276cd305377b0aaf"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/hyundai.svg",
+      "bytes": 1641,
+      "sha256": "dcd2d6c20e7c4bc431f7c3a1108c4493b007f978b8ee6f48b007406cc8435937"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/jac.png",
+      "bytes": 84908,
+      "sha256": "a82208c947a2dcc9b51010e9c0ac3ab8596237a7be035b80ba13b2d3a8a9eb1c"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/jeep.svg",
+      "bytes": 1796,
+      "sha256": "b06a5248c18bf0c0b3181dc52f20558f8e85d6952424f52e7b285410bfd47864"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/kia.svg",
+      "bytes": 1001,
+      "sha256": "bbdeeab899331fc6181949c2b31686208a88d7afc69d182b54dccc138b8e4843"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/land-rover.svg",
+      "bytes": 4028,
+      "sha256": "49e3e6e483134d5babca57cafc3a94ea03e5e757b655617f3e56705f5a9e2c7b"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/lexus.png",
+      "bytes": 76095,
+      "sha256": "cea884ae4c5c5f918aa509da77cce9ae23fb8e31c284176a053d46ab96e232c6"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/mazda.svg",
+      "bytes": 1566,
+      "sha256": "dce8c3596ed3efa9d76b9d5cc40be88979827fe9697b4e7949e5a1f49eb8cd7a"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/mg.svg",
+      "bytes": 4844,
+      "sha256": "51b79569d32c05fb19e99f03c8ff8edd90a445b3d8f732a9e8bd8899e7a2a350"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/mitsubishi.svg",
+      "bytes": 183,
+      "sha256": "d855e4d9d41f87287c917b1e6bb4baaf868957466a9ae1f64db34a1bdf7255c3"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/nissan.svg",
+      "bytes": 1816,
+      "sha256": "97980fa3135dfeffb72a9acdf3ee23b21bf9a53b8475e7b5cff9ce6df645cf5c"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/opel-badge-small.png",
+      "bytes": 6980,
+      "sha256": "c46e0928af92495511132663675c1c1618e7345a6b2901dfc7add3d7e29731d7"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/opel-badge.png",
+      "bytes": 44146,
+      "sha256": "1a1b24dd66759917e9ce06f8b0ac68903a38a34fbfea1d910342ddb62640d1f2"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/opel.svg",
+      "bytes": 574,
+      "sha256": "30372097f05f482163f49f2fe7363ce9807d6394c1a2531d7e666321ed4adc14"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/peugeot-badge-small.png",
+      "bytes": 7574,
+      "sha256": "789e11a63d6889138c45dd632e4715ba66e1e48e05d4802bf08f289824db9ecb"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/peugeot-badge.png",
+      "bytes": 52938,
+      "sha256": "a462700407352b6e328626f4bf0fbde79930fab868a9a73553742362c027181e"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/peugeot.svg",
+      "bytes": 10518,
+      "sha256": "983259cfcdec14b8fef194454588470f8f344c7d64961c1a1cf11182cbbb2efc"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/smart-badge-small.png",
+      "bytes": 7282,
+      "sha256": "3df63a51edbdd3bb02320e537fba78ec24e45c407ecb62514e1a9fc0b49386af"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/smart-badge.png",
+      "bytes": 54567,
+      "sha256": "de3f8a8e0c85bb8bb371b15f738dabde642fb45ee05b1692e88f406b66e701db"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/smart.svg",
+      "bytes": 599,
+      "sha256": "ae7c0c92c9ebd055b732bc4f882cfa14dd0b3b7099628405d8408420bffe18fd"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/suzuki.svg",
+      "bytes": 349,
+      "sha256": "3ef67701d67dcb096645dbaf16cf5cad9dc9f04826d394b471a9f43aee4a2596"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/tesla-badge-small.png",
+      "bytes": 1773,
+      "sha256": "0869f0f755d064329ddd60fc2084c77eee4c5c76113520791116d011d9372233"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/tesla-badge.png",
+      "bytes": 2644,
+      "sha256": "883f1efb9e1e5d1d077095fc8d39c2419a92ed0a98c6e18f2772072017423db1"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/tesla.svg",
+      "bytes": 541,
+      "sha256": "4b94d9eaf23849d6feec7a9c819e3699a35cbb76045ba7d482d17cbcc97414a5"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/toyota.svg",
+      "bytes": 974,
+      "sha256": "70a20e8335255cff3311314636ab15dbc0c5941a52d1ae5ea3471e85f40e7507"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/volkswagen-badge-small.png",
+      "bytes": 3240,
+      "sha256": "5f24df6ccee9f9c8be7f3540b3bb511753069f5a01917d0d691e513392018626"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/volkswagen-badge.png",
+      "bytes": 25101,
+      "sha256": "885e777d31548803a8debda6057f99fb7e156191586c7ea51eb546e234aab3eb"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/volkswagen.svg",
+      "bytes": 1103,
+      "sha256": "24d0666e617afcfc1a030001f39fe844807c547130652c77ae9d57526261d068"
+    },
+    {
+      "path": "clients/navara-car/app/public/brands/emblems/volvo.svg",
+      "bytes": 1384,
+      "sha256": "4c4d5a01028a331977b28e8e1d0a2d085d545fafcdf1dfe24de805abdc03210a"
+    },
+    {
+      "path": "clients/navara-car/app/public/showroom/black/dealer-satin-v1.webp",
+      "bytes": 40412,
+      "sha256": "fd5e19746019998885ebb88484a9c79e994ee784a972164dfbe3ca1726c13849"
+    },
+    {
+      "path": "clients/navara-car/assets/branding/icon.png",
+      "bytes": 25585,
+      "sha256": "c47e277e477b6c62885d47baa20ceee842246a3acc2a8bee41d9ab444cb935b4"
+    },
+    {
+      "path": "clients/navara-car/assets/branding/logo-accent.png",
+      "bytes": 75747,
+      "sha256": "c0d63b3f3eaf645e070b3a07d33dd65973974ad39b7413a7c559591a84d35086"
+    },
+    {
+      "path": "clients/navara-car/assets/branding/logo-dark.png",
+      "bytes": 122790,
+      "sha256": "8667c8ce4053461b8a8c5477796bdd1f0f3cb7a35cb135d6d1d42d3017b7e8c1"
+    },
+    {
+      "path": "clients/navara-car/assets/branding/logo-light.png",
+      "bytes": 97072,
+      "sha256": "c510b9cbb063af74aa42a05394cea7d6367d1eab4640eb487aa683bd21350e20"
+    }
+  ]
+}

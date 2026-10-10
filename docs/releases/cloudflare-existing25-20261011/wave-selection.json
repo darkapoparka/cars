@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "selectedAt": "2026-10-10T22:34:32.000Z",
+  "scope": "Ten existing dealers: nine Varna plus mandatory Day and Night in Sofia. No new-Varna or UK branch changes.",
+  "billingUpgradeAuthorized": false,
+  "dealers": [
+    {
+      "priority": 1,
+      "slug": "navara-car",
+      "repository": "darkapoparka/cars-navaracar",
+      "city": "Варна",
+      "existingVercelProject": "prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr",
+      "retainedInventory": 9,
+      "alreadyHosted": false
+    },
+    {
+      "priority": 2,
+      "slug": "day-and-night-auto-group",
+      "repository": "darkapoparka/day-and-night-autodeal",
+      "city": "София",
+      "existingVercelProject": "prj_enD9orrI6rwguMMtDlS0IP6RAXjr",
+      "retainedInventory": 40,
+      "alreadyHosted": false
+    },
+    {
+      "priority": 3,
+      "slug": "promosale-varna",
+      "repository": "darkapoparka/cars-promosalevarna",
+      "city": "Варна",
+      "existingVercelProject": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
+      "retainedInventory": 6,
+      "alreadyHosted": true
+    },
+    {
+      "priority": 4,
+      "slug": "priselci",
+      "repository": "darkapoparka/cars-priselci",
+      "city": "Варна",
+      "existingVercelProject": "prj_GwnlfPmyImlJuiocl77NWplzvTTb",
+      "retainedInventory": 16,
+      "alreadyHosted": false
+    },
+    {
+      "priority": 5,
+      "slug": "isauto-varna",
+      "repository": "darkapoparka/cars-isautovarna",
+      "city": "Варна",
+      "existingVercelProject": "prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv",
+      "retainedInventory": 6,
+      "alreadyHosted": false
+    },
+    {
+      "priority": 6,
+      "slug": "automarket-varna",
+      "repository": "darkapoparka/cars-automarketvarna",
+      "city": "Варна",
+      "existingVercelProject": "prj_5H4OESlQ0KpNM5mJvbIEmlUgaMcP",
+      "retainedInventory": 16,
+      "alreadyHosted": false
+    },
+    {
+      "priority": 7,
+      "slug": "outletcars-varna",
+      "repository": "darkapoparka/cars-outletcarsvarna",
+      "city": "Варна",
+      "existingVercelProject": "prj_1KYEEcbBwAd5iCtAvDGM59INQLe7",
+      "retainedInventory": 8,
+      "alreadyHosted": false
+    },
+    {
+      "priority": 8,
+      "slug": "perfect-auto-varna",
+      "repository": "darkapoparka/cars-perfectauto",
+      "city": "Варна",
+      "existingVercelProject": "prj_sqN8Xc2fs7g2Y2pSs0qeSeYJgVZR",
+      "retainedInventory": 6,
+      "alreadyHosted": false
+    },
+    {
+      "priority": 9,
+      "slug": "avangard-auto",
+      "repository": "darkapoparka/cars-avangardauto",
+      "city": "Варна",
+      "existingVercelProject": "prj_QqFCB2Zllc60dfPVIo6aJ8P4wlKc",
+      "retainedInventory": 16,
+      "alreadyHosted": false
+    },
+    {
+      "priority": 10,
+      "slug": "legend-auto",
+      "repository": "darkapoparka/cars-legendauto",
+      "city": "Варна",
+      "existingVercelProject": "prj_kdnDQxZaPh8xgKBiIXyb9uODrXZw",
+      "retainedInventory": 14,
+      "alreadyHosted": false
+    }
+  ]
+}

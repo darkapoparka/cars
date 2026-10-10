@@ -6,6 +6,7 @@ import Link from '@/components/AppLink';
 import * as stylex from '@stylexjs/stylex';
 import {MapPin, ArrowUpRight, Search} from 'lucide-react';
 import {showroom} from '@/lib/showroom';
+import {vehicles} from '@/lib/data';
 import {ServiceTabs, type ServiceKey} from '@/components/ReferenceUI';
 import {media, tokens as $} from '@/app/tokens.stylex';
 import {searchField} from '@/components/search-field.stylex';
@@ -36,7 +37,14 @@ export function ShowroomSearch() {
   const tx = useCopy();
 
   return <div {...stylex.props(s.searchWrap)}><div {...stylex.props(s.searchRow)}>
-    <Link data-search-field href="/search" aria-label={tx("Search cars")} {...stylex.props(searchField.field)}><Search size={20} strokeWidth={1.8} aria-hidden="true" {...stylex.props(searchField.icon)}/><span {...stylex.props(s.searchPrompt)}>{tx(showroom.searchPlaceholder)}</span><span {...stylex.props(s.mobileSearchPrompt)}>{tx(showroom.mobileSearchPlaceholder)}</span></Link>
+    <Link data-search-field href="/search" aria-label={`${tx('Search cars')} · ${vehicles.length} ${tx(vehicles.length === 1 ? 'car' : 'cars')}`} {...stylex.props(searchField.field)}>
+      <Search size={22} strokeWidth={2} aria-hidden="true" {...stylex.props(searchField.icon)}/>
+      <span {...stylex.props(searchField.copy)}>
+        <span data-search-prompt {...stylex.props(s.searchPrompt)}>{tx(showroom.searchPlaceholder)}</span>
+        <span data-search-prompt {...stylex.props(s.mobileSearchPrompt)}>{tx(showroom.mobileSearchPlaceholder)}</span>
+        <span data-result-count aria-hidden="true" {...stylex.props(searchField.count)}>({vehicles.length})</span>
+      </span>
+    </Link>
   </div></div>;
 }
 const s = stylex.create({
@@ -52,6 +60,6 @@ const s = stylex.create({
   innerCompact: {paddingTop: {[media.mobile]: 'calc(12px + env(safe-area-inset-top))', default: 18}, paddingBottom: 12},
   searchWrap: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}, paddingTop: 10},
   searchRow: {display: 'block'},
-  searchPrompt: {display: {[media.mobile]: 'none', default: 'block'}},
+  searchPrompt: {display: {[media.mobile]: 'none', default: 'block'}, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap'},
   mobileSearchPrompt: {display: {[media.mobile]: 'block', default: 'none'}, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap'},
 });

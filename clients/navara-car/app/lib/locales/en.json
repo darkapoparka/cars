@@ -1,11 +1,11 @@
 {
+  "2020": "2020",
+  "40000": "40000",
+  "85000": "85000",
   "Your activity": "Your activity",
   "Discuss your car": "Discuss your car",
   "Ask about finance": "Ask about finance",
   "Ask about available services": "Ask about available services",
-  "2020": "2020",
-  "40000": "40000",
-  "85000": "85000",
   "— Showroom concept in": "— Showroom concept in",
   ", copy the text or call directly.": ", copy the text or call directly.",
   ". Call to confirm a day and time.": ". Call to confirm a day and time.",
@@ -164,7 +164,6 @@
   "Ask about availability and viewings, or explore import and finance enquiry demos.": "Ask about availability and viewings, or explore import and finance enquiry demos.",
   "Ask about current terms": "Ask about current terms",
   "Ask about current terms for your selected car.": "Ask about current terms for your selected car.",
-  "Ask about finance": "Ask about finance",
   "Ask about importing": "Ask about importing",
   "Ask about options": "Ask about options",
   "Ask about payments,": "Ask about payments,",
@@ -1389,7 +1388,6 @@
   "View cars": "View cars",
   "See the car in person.": "See the car in person.",
   "Ask about selling": "Ask about selling",
-  "Ask about finance": "Ask about finance",
   "Ask about service": "Ask about service",
   "Sell or part-exchange.": "Sell or part-exchange.",
   "Explore payment options.": "Explore payment options.",
@@ -1407,6 +1405,8 @@
   "Explore by brand": "Explore by brand",
   "Our happy customers": "Our happy customers",
   "Your next car.": "Your next car.",
+  "Explore our cars.": "Explore our cars.",
+  "Compare the cars. Find your favourite.": "Compare the cars. Find your favourite.",
   "Selected collection": "Select",
   "search suggestions available": "search suggestions available",
   "No brands found": "No brands found",
@@ -1450,5 +1450,7 @@
   "Explore the cars. See them in person.": "Explore the cars.\nSee them in person.",
   "Compare your options. Plan your purchase.": "Compare your options.\nPlan your purchase.",
   "Value your car. Discuss a part-exchange.": "Value your car.\nDiscuss a part-exchange.",
-  "Choose a time. Take a closer look.": "Choose a time.\nTake a closer look."
+  "Choose a time. Take a closer look.": "Choose a time.\nTake a closer look.",
+  "Contact the dealer for the showroom address.": "Contact the dealer for the showroom address.",
+  "Auto": "Auto"
 }
