@@ -15,6 +15,7 @@ import {loadDealerProfile} from './lib/client-refresh-normalize.mjs';
 import {assertAppVariant} from './publishing/app-variant.mjs';
 import {assertExtendedVariantSources,applySixVariantMounts} from './publishing/six-variant.mjs';
 import {bindModernMobileWordmarkLogo} from './lib/client-logo-contract.mjs';
+import {applyDealerPresentation} from './publishing/dealer-presentation.mjs';
 import {specializeModernDemoDatabase} from './publishing/modern-demo-database.mjs';
 import {specializeDealerReferencePackage} from './publishing/dealer-reference-package.mjs';
 import {applyDealerShare} from './publishing/dealer-share.mjs';
@@ -86,6 +87,7 @@ async function prepare(slug,key,sha,area){
  const logoFile='modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx',originalLogo=files.get(logoFile);if(!originalLogo)throw Error('Modern logo consumer missing');
  const fixedLogo=Buffer.from(bindModernMobileWordmarkLogo(originalLogo.toString('utf8')));files.set(logoFile,fixedLogo);
  const contracts={kind:'existing-reviewed-pilot-logo-binding',changes:[{path:logoFile,beforeSha256:hash(originalLogo),afterSha256:hash(fixedLogo)}],factsPreserved:true};
+ const presentation=applyDealerPresentation(files,manifest);
  const reference=specializeDealerReferencePackage(files,manifest);
  const databaseSpecialization=specializeModernDemoDatabase(files,manifest);
  const tools=createRequire(path.join(ROOT,'runtime/varna-tools/package.json')),sharp=tools('sharp'),typescript=tools('typescript');
@@ -102,7 +104,7 @@ async function prepare(slug,key,sha,area){
  const root=key==='router'?'cloudflare':key;
  const retained=new Map([...files].filter(([name])=>name.startsWith(root+'/')||name.startsWith('scripts/')||!name.includes('/')));
  const packageRoot=path.join(area,'package');writeFiles(packageRoot,retained);
- const provenance={schemaVersion:1,dealer:slug,key,sourceCommit:sha,sourceTree:git(ROOT,['rev-parse',sha+':clients/'+slug]),inputDigest:hash(JSON.stringify(inputRows)),sourceCandidate:candidate.candidateSourceDigest,sourceReleases:manifest.templateSources,manifest,workerPrefix,publicOrigin,originalSourceUnchanged:true,assembledDigest:hash(JSON.stringify(assembledRows)),targetBeforeDependencies:sourceRows(retained),contracts,reference,databaseSpecialization,retention:pruned.receipts,nativeApproval:false,hosted:false};
+ const provenance={schemaVersion:1,dealer:slug,key,sourceCommit:sha,sourceTree:git(ROOT,['rev-parse',sha+':clients/'+slug]),inputDigest:hash(JSON.stringify(inputRows)),sourceCandidate:candidate.candidateSourceDigest,sourceReleases:manifest.templateSources,manifest,workerPrefix,publicOrigin,originalSourceUnchanged:true,assembledDigest:hash(JSON.stringify(assembledRows)),targetBeforeDependencies:sourceRows(retained),contracts,presentation,reference,databaseSpecialization,retention:pruned.receipts,nativeApproval:false,hosted:false};
  writeJson(path.join(area,'receipts/source.json'),provenance);return {packageRoot,manifest,provenance};
 }
 function installedBin(root,name){
