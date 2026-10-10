@@ -1,0 +1,4781 @@
+{
+  "phase": "after",
+  "sourceHash": "4ed9cc408187ac3e6493d825087a9bd3b78dd49711b3e6aed606c49075b04066",
+  "views": [
+    {
+      "overflow": false,
+      "columns": "318.25px 318.25px 318.25px 318.25px",
+      "firstY": 420,
+      "cards": [
+        {
+          "box": {
+            "x": 52,
+            "y": 420,
+            "right": 370.25,
+            "width": 318.25,
+            "height": 385.296875
+          },
+          "title": {
+            "x": 73,
+            "y": 631.828125,
+            "right": 349.25,
+            "width": 276.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 73,
+            "y": 748.296875,
+            "right": 161.828125,
+            "width": 88.828125,
+            "height": 28
+          },
+          "photo": {
+            "x": 53,
+            "y": 421,
+            "right": 369.25,
+            "width": 316.25,
+            "height": 210.828125
+          },
+          "titleText": "BMW X6",
+          "facts": [
+            {
+              "text": "2025",
+              "box": {
+                "x": 73,
+                "y": 667.921875,
+                "right": 208.125,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "18 500 км",
+              "box": {
+                "x": 214.125,
+                "y": 667.921875,
+                "right": 349.25,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 73,
+                "y": 700.109375,
+                "right": 208.125,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Дизел",
+              "box": {
+                "x": 214.125,
+                "y": 700.109375,
+                "right": 349.25,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 325.25,
+            "y": 421,
+            "right": 369.25,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 386.25,
+            "y": 420,
+            "right": 704.5,
+            "width": 318.25,
+            "height": 385.296875
+          },
+          "title": {
+            "x": 407.25,
+            "y": 631.828125,
+            "right": 683.5,
+            "width": 276.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 407.25,
+            "y": 748.296875,
+            "right": 496.078125,
+            "width": 88.828125,
+            "height": 28
+          },
+          "photo": {
+            "x": 387.25,
+            "y": 421,
+            "right": 703.5,
+            "width": 316.25,
+            "height": 210.828125
+          },
+          "titleText": "BMW 540",
+          "facts": [
+            {
+              "text": "2024",
+              "box": {
+                "x": 407.25,
+                "y": 667.921875,
+                "right": 542.375,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "33 987 км",
+              "box": {
+                "x": 548.375,
+                "y": 667.921875,
+                "right": 683.5,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 407.25,
+                "y": 700.109375,
+                "right": 542.375,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Дизел",
+              "box": {
+                "x": 548.375,
+                "y": 700.109375,
+                "right": 683.5,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 659.5,
+            "y": 421,
+            "right": 703.5,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 720.5,
+            "y": 420,
+            "right": 1038.75,
+            "width": 318.25,
+            "height": 385.296875
+          },
+          "title": {
+            "x": 741.5,
+            "y": 631.828125,
+            "right": 1017.75,
+            "width": 276.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 741.5,
+            "y": 748.296875,
+            "right": 830.328125,
+            "width": 88.828125,
+            "height": 28
+          },
+          "photo": {
+            "x": 721.5,
+            "y": 421,
+            "right": 1037.75,
+            "width": 316.25,
+            "height": 210.828125
+          },
+          "titleText": "BMW X3",
+          "facts": [
+            {
+              "text": "2025",
+              "box": {
+                "x": 741.5,
+                "y": 667.921875,
+                "right": 876.625,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "0 км",
+              "box": {
+                "x": 882.625,
+                "y": 667.921875,
+                "right": 1017.75,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 741.5,
+                "y": 700.109375,
+                "right": 876.625,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Дизел",
+              "box": {
+                "x": 882.625,
+                "y": 700.109375,
+                "right": 1017.75,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 993.75,
+            "y": 421,
+            "right": 1037.75,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 1054.75,
+            "y": 420,
+            "right": 1373,
+            "width": 318.25,
+            "height": 385.296875
+          },
+          "title": {
+            "x": 1075.75,
+            "y": 631.828125,
+            "right": 1352,
+            "width": 276.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 1075.75,
+            "y": 748.296875,
+            "right": 1164.578125,
+            "width": 88.828125,
+            "height": 28
+          },
+          "photo": {
+            "x": 1055.75,
+            "y": 421,
+            "right": 1372,
+            "width": 316.25,
+            "height": 210.828125
+          },
+          "titleText": "BMW 120",
+          "facts": [
+            {
+              "text": "2026",
+              "box": {
+                "x": 1075.75,
+                "y": 667.921875,
+                "right": 1210.875,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "0 км",
+              "box": {
+                "x": 1216.875,
+                "y": 667.921875,
+                "right": 1352,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 1075.75,
+                "y": 700.109375,
+                "right": 1210.875,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Бензин",
+              "box": {
+                "x": 1216.875,
+                "y": 700.109375,
+                "right": 1352,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 1328,
+            "y": 421,
+            "right": 1372,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 52,
+            "y": 821.296875,
+            "right": 370.25,
+            "width": 318.25,
+            "height": 385.296875
+          },
+          "title": {
+            "x": 73,
+            "y": 1033.125,
+            "right": 349.25,
+            "width": 276.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 73,
+            "y": 1149.59375,
+            "right": 161.828125,
+            "width": 88.828125,
+            "height": 28
+          },
+          "photo": {
+            "x": 53,
+            "y": 822.296875,
+            "right": 369.25,
+            "width": 316.25,
+            "height": 210.828125
+          },
+          "titleText": "Mercedes-Benz GLE",
+          "facts": [
+            {
+              "text": "2019",
+              "box": {
+                "x": 73,
+                "y": 1069.21875,
+                "right": 208.125,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "119 000 км",
+              "box": {
+                "x": 214.125,
+                "y": 1069.21875,
+                "right": 349.25,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 73,
+                "y": 1101.40625,
+                "right": 208.125,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Дизел",
+              "box": {
+                "x": 214.125,
+                "y": 1101.40625,
+                "right": 349.25,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 325.25,
+            "y": 822.296875,
+            "right": 369.25,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 386.25,
+            "y": 821.296875,
+            "right": 704.5,
+            "width": 318.25,
+            "height": 385.296875
+          },
+          "title": {
+            "x": 407.25,
+            "y": 1033.125,
+            "right": 683.5,
+            "width": 276.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 407.25,
+            "y": 1149.59375,
+            "right": 496.078125,
+            "width": 88.828125,
+            "height": 28
+          },
+          "photo": {
+            "x": 387.25,
+            "y": 822.296875,
+            "right": 703.5,
+            "width": 316.25,
+            "height": 210.828125
+          },
+          "titleText": "Audi RS6",
+          "facts": [
+            {
+              "text": "2021",
+              "box": {
+                "x": 407.25,
+                "y": 1069.21875,
+                "right": 542.375,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "52 000 км",
+              "box": {
+                "x": 548.375,
+                "y": 1069.21875,
+                "right": 683.5,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 407.25,
+                "y": 1101.40625,
+                "right": 542.375,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Бензин",
+              "box": {
+                "x": 548.375,
+                "y": 1101.40625,
+                "right": 683.5,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 659.5,
+            "y": 822.296875,
+            "right": 703.5,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 720.5,
+            "y": 821.296875,
+            "right": 1038.75,
+            "width": 318.25,
+            "height": 385.296875
+          },
+          "title": {
+            "x": 741.5,
+            "y": 1033.125,
+            "right": 1017.75,
+            "width": 276.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 741.5,
+            "y": 1149.59375,
+            "right": 830.328125,
+            "width": 88.828125,
+            "height": 28
+          },
+          "photo": {
+            "x": 721.5,
+            "y": 822.296875,
+            "right": 1037.75,
+            "width": 316.25,
+            "height": 210.828125
+          },
+          "titleText": "Mercedes-Benz AMG GT",
+          "facts": [
+            {
+              "text": "2020",
+              "box": {
+                "x": 741.5,
+                "y": 1069.21875,
+                "right": 876.625,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "46 000 км",
+              "box": {
+                "x": 882.625,
+                "y": 1069.21875,
+                "right": 1017.75,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 741.5,
+                "y": 1101.40625,
+                "right": 876.625,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Бензин",
+              "box": {
+                "x": 882.625,
+                "y": 1101.40625,
+                "right": 1017.75,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 993.75,
+            "y": 822.296875,
+            "right": 1037.75,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 1054.75,
+            "y": 821.296875,
+            "right": 1373,
+            "width": 318.25,
+            "height": 385.296875
+          },
+          "title": {
+            "x": 1075.75,
+            "y": 1033.125,
+            "right": 1352,
+            "width": 276.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 1075.75,
+            "y": 1149.59375,
+            "right": 1164.578125,
+            "width": 88.828125,
+            "height": 28
+          },
+          "photo": {
+            "x": 1055.75,
+            "y": 822.296875,
+            "right": 1372,
+            "width": 316.25,
+            "height": 210.828125
+          },
+          "titleText": "BMW X6",
+          "facts": [
+            {
+              "text": "2018",
+              "box": {
+                "x": 1075.75,
+                "y": 1069.21875,
+                "right": 1210.875,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "128 000 км",
+              "box": {
+                "x": 1216.875,
+                "y": 1069.21875,
+                "right": 1352,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 1075.75,
+                "y": 1101.40625,
+                "right": 1210.875,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Дизел",
+              "box": {
+                "x": 1216.875,
+                "y": 1101.40625,
+                "right": 1352,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 1328,
+            "y": 822.296875,
+            "right": 1372,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 52,
+            "y": 1222.59375,
+            "right": 370.25,
+            "width": 318.25,
+            "height": 385.296875
+          },
+          "title": {
+            "x": 73,
+            "y": 1434.421875,
+            "right": 349.25,
+            "width": 276.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 73,
+            "y": 1550.890625,
+            "right": 161.828125,
+            "width": 88.828125,
+            "height": 28
+          },
+          "photo": {
+            "x": 53,
+            "y": 1223.59375,
+            "right": 369.25,
+            "width": 316.25,
+            "height": 210.828125
+          },
+          "titleText": "Audi RSQ8",
+          "facts": [
+            {
+              "text": "2020",
+              "box": {
+                "x": 73,
+                "y": 1470.515625,
+                "right": 208.125,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "84 500 км",
+              "box": {
+                "x": 214.125,
+                "y": 1470.515625,
+                "right": 349.25,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 73,
+                "y": 1502.703125,
+                "right": 208.125,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Бензин",
+              "box": {
+                "x": 214.125,
+                "y": 1502.703125,
+                "right": 349.25,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 325.25,
+            "y": 1223.59375,
+            "right": 369.25,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 386.25,
+            "y": 1222.59375,
+            "right": 704.5,
+            "width": 318.25,
+            "height": 385.296875
+          },
+          "title": {
+            "x": 407.25,
+            "y": 1434.421875,
+            "right": 683.5,
+            "width": 276.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 407.25,
+            "y": 1550.890625,
+            "right": 496.078125,
+            "width": 88.828125,
+            "height": 28
+          },
+          "photo": {
+            "x": 387.25,
+            "y": 1223.59375,
+            "right": 703.5,
+            "width": 316.25,
+            "height": 210.828125
+          },
+          "titleText": "BMW 540",
+          "facts": [
+            {
+              "text": "2022",
+              "box": {
+                "x": 407.25,
+                "y": 1470.515625,
+                "right": 542.375,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "65 000 км",
+              "box": {
+                "x": 548.375,
+                "y": 1470.515625,
+                "right": 683.5,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 407.25,
+                "y": 1502.703125,
+                "right": 542.375,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Дизел",
+              "box": {
+                "x": 548.375,
+                "y": 1502.703125,
+                "right": 683.5,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 659.5,
+            "y": 1223.59375,
+            "right": 703.5,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 720.5,
+            "y": 1222.59375,
+            "right": 1038.75,
+            "width": 318.25,
+            "height": 385.296875
+          },
+          "title": {
+            "x": 741.5,
+            "y": 1434.421875,
+            "right": 1017.75,
+            "width": 276.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 741.5,
+            "y": 1550.890625,
+            "right": 830.328125,
+            "width": 88.828125,
+            "height": 28
+          },
+          "photo": {
+            "x": 721.5,
+            "y": 1223.59375,
+            "right": 1037.75,
+            "width": 316.25,
+            "height": 210.828125
+          },
+          "titleText": "BMW X3",
+          "facts": [
+            {
+              "text": "2023",
+              "box": {
+                "x": 741.5,
+                "y": 1470.515625,
+                "right": 876.625,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "48 800 км",
+              "box": {
+                "x": 882.625,
+                "y": 1470.515625,
+                "right": 1017.75,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 741.5,
+                "y": 1502.703125,
+                "right": 876.625,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Дизел",
+              "box": {
+                "x": 882.625,
+                "y": 1502.703125,
+                "right": 1017.75,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 993.75,
+            "y": 1223.59375,
+            "right": 1037.75,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 1054.75,
+            "y": 1222.59375,
+            "right": 1373,
+            "width": 318.25,
+            "height": 385.296875
+          },
+          "title": {
+            "x": 1075.75,
+            "y": 1434.421875,
+            "right": 1352,
+            "width": 276.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 1075.75,
+            "y": 1550.890625,
+            "right": 1164.578125,
+            "width": 88.828125,
+            "height": 28
+          },
+          "photo": {
+            "x": 1055.75,
+            "y": 1223.59375,
+            "right": 1372,
+            "width": 316.25,
+            "height": 210.828125
+          },
+          "titleText": "BMW 120",
+          "facts": [
+            {
+              "text": "2025",
+              "box": {
+                "x": 1075.75,
+                "y": 1470.515625,
+                "right": 1210.875,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "12 000 км",
+              "box": {
+                "x": 1216.875,
+                "y": 1470.515625,
+                "right": 1352,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 1075.75,
+                "y": 1502.703125,
+                "right": 1210.875,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Бензин",
+              "box": {
+                "x": 1216.875,
+                "y": 1502.703125,
+                "right": 1352,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 1328,
+            "y": 1223.59375,
+            "right": 1372,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 52,
+            "y": 1623.890625,
+            "right": 370.25,
+            "width": 318.25,
+            "height": 385.296875
+          },
+          "title": {
+            "x": 73,
+            "y": 1835.71875,
+            "right": 349.25,
+            "width": 276.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 73,
+            "y": 1952.1875,
+            "right": 161.828125,
+            "width": 88.828125,
+            "height": 28
+          },
+          "photo": {
+            "x": 53,
+            "y": 1624.890625,
+            "right": 369.25,
+            "width": 316.25,
+            "height": 210.828125
+          },
+          "titleText": "Mercedes-Benz GLE",
+          "facts": [
+            {
+              "text": "2018",
+              "box": {
+                "x": 73,
+                "y": 1871.8125,
+                "right": 208.125,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "157 000 км",
+              "box": {
+                "x": 214.125,
+                "y": 1871.8125,
+                "right": 349.25,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 73,
+                "y": 1904,
+                "right": 208.125,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Дизел",
+              "box": {
+                "x": 214.125,
+                "y": 1904,
+                "right": 349.25,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 325.25,
+            "y": 1624.890625,
+            "right": 369.25,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 386.25,
+            "y": 1623.890625,
+            "right": 704.5,
+            "width": 318.25,
+            "height": 385.296875
+          },
+          "title": {
+            "x": 407.25,
+            "y": 1835.71875,
+            "right": 683.5,
+            "width": 276.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 407.25,
+            "y": 1952.1875,
+            "right": 496.078125,
+            "width": 88.828125,
+            "height": 28
+          },
+          "photo": {
+            "x": 387.25,
+            "y": 1624.890625,
+            "right": 703.5,
+            "width": 316.25,
+            "height": 210.828125
+          },
+          "titleText": "Audi RS6",
+          "facts": [
+            {
+              "text": "2022",
+              "box": {
+                "x": 407.25,
+                "y": 1871.8125,
+                "right": 542.375,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "28 600 км",
+              "box": {
+                "x": 548.375,
+                "y": 1871.8125,
+                "right": 683.5,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 407.25,
+                "y": 1904,
+                "right": 542.375,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Бензин",
+              "box": {
+                "x": 548.375,
+                "y": 1904,
+                "right": 683.5,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 659.5,
+            "y": 1624.890625,
+            "right": 703.5,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 720.5,
+            "y": 1623.890625,
+            "right": 1038.75,
+            "width": 318.25,
+            "height": 385.296875
+          },
+          "title": {
+            "x": 741.5,
+            "y": 1835.71875,
+            "right": 1017.75,
+            "width": 276.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 741.5,
+            "y": 1952.1875,
+            "right": 830.328125,
+            "width": 88.828125,
+            "height": 28
+          },
+          "photo": {
+            "x": 721.5,
+            "y": 1624.890625,
+            "right": 1037.75,
+            "width": 316.25,
+            "height": 210.828125
+          },
+          "titleText": "BMW X6",
+          "facts": [
+            {
+              "text": "2017",
+              "box": {
+                "x": 741.5,
+                "y": 1871.8125,
+                "right": 876.625,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "162 000 км",
+              "box": {
+                "x": 882.625,
+                "y": 1871.8125,
+                "right": 1017.75,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 741.5,
+                "y": 1904,
+                "right": 876.625,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Дизел",
+              "box": {
+                "x": 882.625,
+                "y": 1904,
+                "right": 1017.75,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 993.75,
+            "y": 1624.890625,
+            "right": 1037.75,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 1054.75,
+            "y": 1623.890625,
+            "right": 1373,
+            "width": 318.25,
+            "height": 385.296875
+          },
+          "title": {
+            "x": 1075.75,
+            "y": 1835.71875,
+            "right": 1352,
+            "width": 276.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 1075.75,
+            "y": 1952.1875,
+            "right": 1164.578125,
+            "width": 88.828125,
+            "height": 28
+          },
+          "photo": {
+            "x": 1055.75,
+            "y": 1624.890625,
+            "right": 1372,
+            "width": 316.25,
+            "height": 210.828125
+          },
+          "titleText": "Mercedes-Benz AMG GT",
+          "facts": [
+            {
+              "text": "2021",
+              "box": {
+                "x": 1075.75,
+                "y": 1871.8125,
+                "right": 1210.875,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "33 700 км",
+              "box": {
+                "x": 1216.875,
+                "y": 1871.8125,
+                "right": 1352,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 1075.75,
+                "y": 1904,
+                "right": 1210.875,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Бензин",
+              "box": {
+                "x": 1216.875,
+                "y": 1904,
+                "right": 1352,
+                "width": 135.125,
+                "height": 26.1875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 1328,
+            "y": 1624.890625,
+            "right": 1372,
+            "width": 44,
+            "height": 44
+          }
+        }
+      ],
+      "width": 1440,
+      "journey": "desktop view-car link",
+      "english": "no overflow, localized unclipped facts"
+    },
+    {
+      "overflow": false,
+      "columns": "214.25px 214.25px 214.25px 214.25px",
+      "firstY": 420,
+      "cards": [
+        {
+          "box": {
+            "x": 52,
+            "y": 420,
+            "right": 266.25,
+            "width": 214.25,
+            "height": 305.1875
+          },
+          "title": {
+            "x": 69,
+            "y": 558.5,
+            "right": 249.25,
+            "width": 180.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 69,
+            "y": 673.59375,
+            "right": 149.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 53,
+            "y": 421,
+            "right": 265.25,
+            "width": 212.25,
+            "height": 141.5
+          },
+          "titleText": "BMW X6",
+          "facts": [
+            {
+              "text": "2025",
+              "box": {
+                "x": 69,
+                "y": 594.59375,
+                "right": 156.125,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "18 500 км",
+              "box": {
+                "x": 162.125,
+                "y": 594.59375,
+                "right": 249.25,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 69,
+                "y": 625.390625,
+                "right": 156.125,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Дизел",
+              "box": {
+                "x": 162.125,
+                "y": 625.390625,
+                "right": 249.25,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 221.25,
+            "y": 421,
+            "right": 265.25,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 282.25,
+            "y": 420,
+            "right": 496.5,
+            "width": 214.25,
+            "height": 305.1875
+          },
+          "title": {
+            "x": 299.25,
+            "y": 558.5,
+            "right": 479.5,
+            "width": 180.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 299.25,
+            "y": 673.59375,
+            "right": 379.296875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 283.25,
+            "y": 421,
+            "right": 495.5,
+            "width": 212.25,
+            "height": 141.5
+          },
+          "titleText": "BMW 540",
+          "facts": [
+            {
+              "text": "2024",
+              "box": {
+                "x": 299.25,
+                "y": 594.59375,
+                "right": 386.375,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "33 987 км",
+              "box": {
+                "x": 392.375,
+                "y": 594.59375,
+                "right": 479.5,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 299.25,
+                "y": 625.390625,
+                "right": 386.375,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Дизел",
+              "box": {
+                "x": 392.375,
+                "y": 625.390625,
+                "right": 479.5,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 451.5,
+            "y": 421,
+            "right": 495.5,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 512.5,
+            "y": 420,
+            "right": 726.75,
+            "width": 214.25,
+            "height": 305.1875
+          },
+          "title": {
+            "x": 529.5,
+            "y": 558.5,
+            "right": 709.75,
+            "width": 180.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 529.5,
+            "y": 673.59375,
+            "right": 609.546875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 513.5,
+            "y": 421,
+            "right": 725.75,
+            "width": 212.25,
+            "height": 141.5
+          },
+          "titleText": "BMW X3",
+          "facts": [
+            {
+              "text": "2025",
+              "box": {
+                "x": 529.5,
+                "y": 594.59375,
+                "right": 616.625,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "0 км",
+              "box": {
+                "x": 622.625,
+                "y": 594.59375,
+                "right": 709.75,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 529.5,
+                "y": 625.390625,
+                "right": 616.625,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Дизел",
+              "box": {
+                "x": 622.625,
+                "y": 625.390625,
+                "right": 709.75,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 681.75,
+            "y": 421,
+            "right": 725.75,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 742.75,
+            "y": 420,
+            "right": 957,
+            "width": 214.25,
+            "height": 305.1875
+          },
+          "title": {
+            "x": 759.75,
+            "y": 558.5,
+            "right": 940,
+            "width": 180.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 759.75,
+            "y": 673.59375,
+            "right": 839.796875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 743.75,
+            "y": 421,
+            "right": 956,
+            "width": 212.25,
+            "height": 141.5
+          },
+          "titleText": "BMW 120",
+          "facts": [
+            {
+              "text": "2026",
+              "box": {
+                "x": 759.75,
+                "y": 594.59375,
+                "right": 846.875,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "0 км",
+              "box": {
+                "x": 852.875,
+                "y": 594.59375,
+                "right": 940,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 759.75,
+                "y": 625.390625,
+                "right": 846.875,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Бензин",
+              "box": {
+                "x": 852.875,
+                "y": 625.390625,
+                "right": 940,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 912,
+            "y": 421,
+            "right": 956,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 52,
+            "y": 741.1875,
+            "right": 266.25,
+            "width": 214.25,
+            "height": 327.28125
+          },
+          "title": {
+            "x": 69,
+            "y": 879.6875,
+            "right": 249.25,
+            "width": 180.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 69,
+            "y": 1016.875,
+            "right": 149.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 53,
+            "y": 742.1875,
+            "right": 265.25,
+            "width": 212.25,
+            "height": 141.5
+          },
+          "titleText": "Mercedes-Benz GLE",
+          "facts": [
+            {
+              "text": "2019",
+              "box": {
+                "x": 69,
+                "y": 915.78125,
+                "right": 156.125,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "119 000 км",
+              "box": {
+                "x": 162.125,
+                "y": 915.78125,
+                "right": 249.25,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 69,
+                "y": 946.578125,
+                "right": 156.125,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Дизел",
+              "box": {
+                "x": 162.125,
+                "y": 946.578125,
+                "right": 249.25,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 221.25,
+            "y": 742.1875,
+            "right": 265.25,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 282.25,
+            "y": 741.1875,
+            "right": 496.5,
+            "width": 214.25,
+            "height": 327.28125
+          },
+          "title": {
+            "x": 299.25,
+            "y": 879.6875,
+            "right": 479.5,
+            "width": 180.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 299.25,
+            "y": 1016.875,
+            "right": 379.296875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 283.25,
+            "y": 742.1875,
+            "right": 495.5,
+            "width": 212.25,
+            "height": 141.5
+          },
+          "titleText": "Audi RS6",
+          "facts": [
+            {
+              "text": "2021",
+              "box": {
+                "x": 299.25,
+                "y": 915.78125,
+                "right": 386.375,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "52 000 км",
+              "box": {
+                "x": 392.375,
+                "y": 915.78125,
+                "right": 479.5,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 299.25,
+                "y": 946.578125,
+                "right": 386.375,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Бензин",
+              "box": {
+                "x": 392.375,
+                "y": 946.578125,
+                "right": 479.5,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 451.5,
+            "y": 742.1875,
+            "right": 495.5,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 512.5,
+            "y": 741.1875,
+            "right": 726.75,
+            "width": 214.25,
+            "height": 327.28125
+          },
+          "title": {
+            "x": 529.5,
+            "y": 879.6875,
+            "right": 709.75,
+            "width": 180.25,
+            "height": 44.1875
+          },
+          "price": {
+            "x": 529.5,
+            "y": 1016.875,
+            "right": 609.546875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 513.5,
+            "y": 742.1875,
+            "right": 725.75,
+            "width": 212.25,
+            "height": 141.5
+          },
+          "titleText": "Mercedes-Benz AMG GT",
+          "facts": [
+            {
+              "text": "2020",
+              "box": {
+                "x": 529.5,
+                "y": 937.875,
+                "right": 616.625,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "46 000 км",
+              "box": {
+                "x": 622.625,
+                "y": 937.875,
+                "right": 709.75,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 529.5,
+                "y": 968.671875,
+                "right": 616.625,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Бензин",
+              "box": {
+                "x": 622.625,
+                "y": 968.671875,
+                "right": 709.75,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 681.75,
+            "y": 742.1875,
+            "right": 725.75,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 742.75,
+            "y": 741.1875,
+            "right": 957,
+            "width": 214.25,
+            "height": 327.28125
+          },
+          "title": {
+            "x": 759.75,
+            "y": 879.6875,
+            "right": 940,
+            "width": 180.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 759.75,
+            "y": 1016.875,
+            "right": 839.796875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 743.75,
+            "y": 742.1875,
+            "right": 956,
+            "width": 212.25,
+            "height": 141.5
+          },
+          "titleText": "BMW X6",
+          "facts": [
+            {
+              "text": "2018",
+              "box": {
+                "x": 759.75,
+                "y": 915.78125,
+                "right": 846.875,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "128 000 км",
+              "box": {
+                "x": 852.875,
+                "y": 915.78125,
+                "right": 940,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 759.75,
+                "y": 946.578125,
+                "right": 846.875,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Дизел",
+              "box": {
+                "x": 852.875,
+                "y": 946.578125,
+                "right": 940,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 912,
+            "y": 742.1875,
+            "right": 956,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 52,
+            "y": 1084.46875,
+            "right": 266.25,
+            "width": 214.25,
+            "height": 305.1875
+          },
+          "title": {
+            "x": 69,
+            "y": 1222.96875,
+            "right": 249.25,
+            "width": 180.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 69,
+            "y": 1338.0625,
+            "right": 149.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 53,
+            "y": 1085.46875,
+            "right": 265.25,
+            "width": 212.25,
+            "height": 141.5
+          },
+          "titleText": "Audi RSQ8",
+          "facts": [
+            {
+              "text": "2020",
+              "box": {
+                "x": 69,
+                "y": 1259.0625,
+                "right": 156.125,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "84 500 км",
+              "box": {
+                "x": 162.125,
+                "y": 1259.0625,
+                "right": 249.25,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 69,
+                "y": 1289.859375,
+                "right": 156.125,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Бензин",
+              "box": {
+                "x": 162.125,
+                "y": 1289.859375,
+                "right": 249.25,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 221.25,
+            "y": 1085.46875,
+            "right": 265.25,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 282.25,
+            "y": 1084.46875,
+            "right": 496.5,
+            "width": 214.25,
+            "height": 305.1875
+          },
+          "title": {
+            "x": 299.25,
+            "y": 1222.96875,
+            "right": 479.5,
+            "width": 180.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 299.25,
+            "y": 1338.0625,
+            "right": 379.296875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 283.25,
+            "y": 1085.46875,
+            "right": 495.5,
+            "width": 212.25,
+            "height": 141.5
+          },
+          "titleText": "BMW 540",
+          "facts": [
+            {
+              "text": "2022",
+              "box": {
+                "x": 299.25,
+                "y": 1259.0625,
+                "right": 386.375,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "65 000 км",
+              "box": {
+                "x": 392.375,
+                "y": 1259.0625,
+                "right": 479.5,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 299.25,
+                "y": 1289.859375,
+                "right": 386.375,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Дизел",
+              "box": {
+                "x": 392.375,
+                "y": 1289.859375,
+                "right": 479.5,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 451.5,
+            "y": 1085.46875,
+            "right": 495.5,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 512.5,
+            "y": 1084.46875,
+            "right": 726.75,
+            "width": 214.25,
+            "height": 305.1875
+          },
+          "title": {
+            "x": 529.5,
+            "y": 1222.96875,
+            "right": 709.75,
+            "width": 180.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 529.5,
+            "y": 1338.0625,
+            "right": 609.546875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 513.5,
+            "y": 1085.46875,
+            "right": 725.75,
+            "width": 212.25,
+            "height": 141.5
+          },
+          "titleText": "BMW X3",
+          "facts": [
+            {
+              "text": "2023",
+              "box": {
+                "x": 529.5,
+                "y": 1259.0625,
+                "right": 616.625,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "48 800 км",
+              "box": {
+                "x": 622.625,
+                "y": 1259.0625,
+                "right": 709.75,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 529.5,
+                "y": 1289.859375,
+                "right": 616.625,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Дизел",
+              "box": {
+                "x": 622.625,
+                "y": 1289.859375,
+                "right": 709.75,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 681.75,
+            "y": 1085.46875,
+            "right": 725.75,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 742.75,
+            "y": 1084.46875,
+            "right": 957,
+            "width": 214.25,
+            "height": 305.1875
+          },
+          "title": {
+            "x": 759.75,
+            "y": 1222.96875,
+            "right": 940,
+            "width": 180.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 759.75,
+            "y": 1338.0625,
+            "right": 839.796875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 743.75,
+            "y": 1085.46875,
+            "right": 956,
+            "width": 212.25,
+            "height": 141.5
+          },
+          "titleText": "BMW 120",
+          "facts": [
+            {
+              "text": "2025",
+              "box": {
+                "x": 759.75,
+                "y": 1259.0625,
+                "right": 846.875,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "12 000 км",
+              "box": {
+                "x": 852.875,
+                "y": 1259.0625,
+                "right": 940,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 759.75,
+                "y": 1289.859375,
+                "right": 846.875,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Бензин",
+              "box": {
+                "x": 852.875,
+                "y": 1289.859375,
+                "right": 940,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 912,
+            "y": 1085.46875,
+            "right": 956,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 52,
+            "y": 1405.65625,
+            "right": 266.25,
+            "width": 214.25,
+            "height": 327.28125
+          },
+          "title": {
+            "x": 69,
+            "y": 1544.15625,
+            "right": 249.25,
+            "width": 180.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 69,
+            "y": 1681.34375,
+            "right": 149.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 53,
+            "y": 1406.65625,
+            "right": 265.25,
+            "width": 212.25,
+            "height": 141.5
+          },
+          "titleText": "Mercedes-Benz GLE",
+          "facts": [
+            {
+              "text": "2018",
+              "box": {
+                "x": 69,
+                "y": 1580.25,
+                "right": 156.125,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "157 000 км",
+              "box": {
+                "x": 162.125,
+                "y": 1580.25,
+                "right": 249.25,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 69,
+                "y": 1611.046875,
+                "right": 156.125,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Дизел",
+              "box": {
+                "x": 162.125,
+                "y": 1611.046875,
+                "right": 249.25,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 221.25,
+            "y": 1406.65625,
+            "right": 265.25,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 282.25,
+            "y": 1405.65625,
+            "right": 496.5,
+            "width": 214.25,
+            "height": 327.28125
+          },
+          "title": {
+            "x": 299.25,
+            "y": 1544.15625,
+            "right": 479.5,
+            "width": 180.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 299.25,
+            "y": 1681.34375,
+            "right": 379.296875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 283.25,
+            "y": 1406.65625,
+            "right": 495.5,
+            "width": 212.25,
+            "height": 141.5
+          },
+          "titleText": "Audi RS6",
+          "facts": [
+            {
+              "text": "2022",
+              "box": {
+                "x": 299.25,
+                "y": 1580.25,
+                "right": 386.375,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "28 600 км",
+              "box": {
+                "x": 392.375,
+                "y": 1580.25,
+                "right": 479.5,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 299.25,
+                "y": 1611.046875,
+                "right": 386.375,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Бензин",
+              "box": {
+                "x": 392.375,
+                "y": 1611.046875,
+                "right": 479.5,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 451.5,
+            "y": 1406.65625,
+            "right": 495.5,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 512.5,
+            "y": 1405.65625,
+            "right": 726.75,
+            "width": 214.25,
+            "height": 327.28125
+          },
+          "title": {
+            "x": 529.5,
+            "y": 1544.15625,
+            "right": 709.75,
+            "width": 180.25,
+            "height": 22.09375
+          },
+          "price": {
+            "x": 529.5,
+            "y": 1681.34375,
+            "right": 609.546875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 513.5,
+            "y": 1406.65625,
+            "right": 725.75,
+            "width": 212.25,
+            "height": 141.5
+          },
+          "titleText": "BMW X6",
+          "facts": [
+            {
+              "text": "2017",
+              "box": {
+                "x": 529.5,
+                "y": 1580.25,
+                "right": 616.625,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "162 000 км",
+              "box": {
+                "x": 622.625,
+                "y": 1580.25,
+                "right": 709.75,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 529.5,
+                "y": 1611.046875,
+                "right": 616.625,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Дизел",
+              "box": {
+                "x": 622.625,
+                "y": 1611.046875,
+                "right": 709.75,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 681.75,
+            "y": 1406.65625,
+            "right": 725.75,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 742.75,
+            "y": 1405.65625,
+            "right": 957,
+            "width": 214.25,
+            "height": 327.28125
+          },
+          "title": {
+            "x": 759.75,
+            "y": 1544.15625,
+            "right": 940,
+            "width": 180.25,
+            "height": 44.1875
+          },
+          "price": {
+            "x": 759.75,
+            "y": 1681.34375,
+            "right": 839.796875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 743.75,
+            "y": 1406.65625,
+            "right": 956,
+            "width": 212.25,
+            "height": 141.5
+          },
+          "titleText": "Mercedes-Benz AMG GT",
+          "facts": [
+            {
+              "text": "2021",
+              "box": {
+                "x": 759.75,
+                "y": 1602.34375,
+                "right": 846.875,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "33 700 км",
+              "box": {
+                "x": 852.875,
+                "y": 1602.34375,
+                "right": 940,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Автоматик",
+              "box": {
+                "x": 759.75,
+                "y": 1633.140625,
+                "right": 846.875,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            },
+            {
+              "text": "Бензин",
+              "box": {
+                "x": 852.875,
+                "y": 1633.140625,
+                "right": 940,
+                "width": 87.125,
+                "height": 24.796875
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 912,
+            "y": 1406.65625,
+            "right": 956,
+            "width": 44,
+            "height": 44
+          }
+        }
+      ],
+      "width": 1024
+    },
+    {
+      "overflow": false,
+      "columns": "172px 172px",
+      "firstY": 237,
+      "cards": [
+        {
+          "box": {
+            "x": 16,
+            "y": 237,
+            "right": 188,
+            "width": 172,
+            "height": 213.453125
+          },
+          "title": {
+            "x": 16,
+            "y": 359.65625,
+            "right": 188,
+            "width": 172,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 16,
+            "y": 415.859375,
+            "right": 96.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 16,
+            "y": 237,
+            "right": 188,
+            "width": 172,
+            "height": 114.65625
+          },
+          "titleText": "BMW X6",
+          "facts": [
+            {
+              "text": "2025",
+              "box": {
+                "x": 16,
+                "y": 384.453125,
+                "right": 45.328125,
+                "width": 29.328125,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "18 500 км",
+              "box": {
+                "x": 56.796875,
+                "y": 384.453125,
+                "right": 113.859375,
+                "width": 57.0625,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 144,
+            "y": 406.453125,
+            "right": 188,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 202,
+            "y": 237,
+            "right": 374,
+            "width": 172,
+            "height": 213.453125
+          },
+          "title": {
+            "x": 202,
+            "y": 359.65625,
+            "right": 374,
+            "width": 172,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 202,
+            "y": 415.859375,
+            "right": 282.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 202,
+            "y": 237,
+            "right": 374,
+            "width": 172,
+            "height": 114.65625
+          },
+          "titleText": "BMW 540",
+          "facts": [
+            {
+              "text": "2024",
+              "box": {
+                "x": 202,
+                "y": 384.453125,
+                "right": 231.78125,
+                "width": 29.78125,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "33 987 км",
+              "box": {
+                "x": 243.25,
+                "y": 384.453125,
+                "right": 302.234375,
+                "width": 58.984375,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 330,
+            "y": 406.453125,
+            "right": 374,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 16,
+            "y": 464.453125,
+            "right": 188,
+            "width": 172,
+            "height": 213.453125
+          },
+          "title": {
+            "x": 16,
+            "y": 587.109375,
+            "right": 188,
+            "width": 172,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 16,
+            "y": 643.3125,
+            "right": 96.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 16,
+            "y": 464.453125,
+            "right": 188,
+            "width": 172,
+            "height": 114.65625
+          },
+          "titleText": "BMW X3",
+          "facts": [
+            {
+              "text": "2025",
+              "box": {
+                "x": 16,
+                "y": 611.90625,
+                "right": 45.328125,
+                "width": 29.328125,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "0 км",
+              "box": {
+                "x": 56.796875,
+                "y": 611.90625,
+                "right": 83.5,
+                "width": 26.703125,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 144,
+            "y": 633.90625,
+            "right": 188,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 202,
+            "y": 464.453125,
+            "right": 374,
+            "width": 172,
+            "height": 213.453125
+          },
+          "title": {
+            "x": 202,
+            "y": 587.109375,
+            "right": 374,
+            "width": 172,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 202,
+            "y": 643.3125,
+            "right": 282.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 202,
+            "y": 464.453125,
+            "right": 374,
+            "width": 172,
+            "height": 114.65625
+          },
+          "titleText": "BMW 120",
+          "facts": [
+            {
+              "text": "2026",
+              "box": {
+                "x": 202,
+                "y": 611.90625,
+                "right": 231.65625,
+                "width": 29.65625,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "0 км",
+              "box": {
+                "x": 243.125,
+                "y": 611.90625,
+                "right": 269.828125,
+                "width": 26.703125,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 330,
+            "y": 633.90625,
+            "right": 374,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 16,
+            "y": 691.90625,
+            "right": 188,
+            "width": 172,
+            "height": 213.453125
+          },
+          "title": {
+            "x": 16,
+            "y": 814.5625,
+            "right": 188,
+            "width": 172,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 16,
+            "y": 870.765625,
+            "right": 96.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 16,
+            "y": 691.90625,
+            "right": 188,
+            "width": 172,
+            "height": 114.65625
+          },
+          "titleText": "Mercedes-Benz GLE",
+          "facts": [
+            {
+              "text": "2019",
+              "box": {
+                "x": 16,
+                "y": 839.359375,
+                "right": 43.21875,
+                "width": 27.21875,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "119 000 км",
+              "box": {
+                "x": 54.6875,
+                "y": 839.359375,
+                "right": 117.109375,
+                "width": 62.421875,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 144,
+            "y": 861.359375,
+            "right": 188,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 202,
+            "y": 691.90625,
+            "right": 374,
+            "width": 172,
+            "height": 213.453125
+          },
+          "title": {
+            "x": 202,
+            "y": 814.5625,
+            "right": 374,
+            "width": 172,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 202,
+            "y": 870.765625,
+            "right": 282.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 202,
+            "y": 691.90625,
+            "right": 374,
+            "width": 172,
+            "height": 114.65625
+          },
+          "titleText": "Audi RS6",
+          "facts": [
+            {
+              "text": "2021",
+              "box": {
+                "x": 202,
+                "y": 839.359375,
+                "right": 229.09375,
+                "width": 27.09375,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "52 000 км",
+              "box": {
+                "x": 240.5625,
+                "y": 839.359375,
+                "right": 300.21875,
+                "width": 59.65625,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 330,
+            "y": 861.359375,
+            "right": 374,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 16,
+            "y": 919.359375,
+            "right": 188,
+            "width": 172,
+            "height": 234.25
+          },
+          "title": {
+            "x": 16,
+            "y": 1042.015625,
+            "right": 188,
+            "width": 172,
+            "height": 41.59375
+          },
+          "price": {
+            "x": 16,
+            "y": 1119.015625,
+            "right": 96.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 16,
+            "y": 919.359375,
+            "right": 188,
+            "width": 172,
+            "height": 114.65625
+          },
+          "titleText": "Mercedes-Benz AMG GT",
+          "facts": [
+            {
+              "text": "2020",
+              "box": {
+                "x": 16,
+                "y": 1087.609375,
+                "right": 45.78125,
+                "width": 29.78125,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "46 000 км",
+              "box": {
+                "x": 57.25,
+                "y": 1087.609375,
+                "right": 117.65625,
+                "width": 60.40625,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 144,
+            "y": 1109.609375,
+            "right": 188,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 202,
+            "y": 919.359375,
+            "right": 374,
+            "width": 172,
+            "height": 234.25
+          },
+          "title": {
+            "x": 202,
+            "y": 1042.015625,
+            "right": 374,
+            "width": 172,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 202,
+            "y": 1119.015625,
+            "right": 282.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 202,
+            "y": 919.359375,
+            "right": 374,
+            "width": 172,
+            "height": 114.65625
+          },
+          "titleText": "BMW X6",
+          "facts": [
+            {
+              "text": "2018",
+              "box": {
+                "x": 202,
+                "y": 1066.8125,
+                "right": 229.203125,
+                "width": 27.203125,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "128 000 км",
+              "box": {
+                "x": 240.671875,
+                "y": 1066.8125,
+                "right": 305.5,
+                "width": 64.828125,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 330,
+            "y": 1109.609375,
+            "right": 374,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 16,
+            "y": 1167.609375,
+            "right": 188,
+            "width": 172,
+            "height": 213.453125
+          },
+          "title": {
+            "x": 16,
+            "y": 1290.265625,
+            "right": 188,
+            "width": 172,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 16,
+            "y": 1346.46875,
+            "right": 96.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 16,
+            "y": 1167.609375,
+            "right": 188,
+            "width": 172,
+            "height": 114.65625
+          },
+          "titleText": "Audi RSQ8",
+          "facts": [
+            {
+              "text": "2020",
+              "box": {
+                "x": 16,
+                "y": 1315.0625,
+                "right": 45.78125,
+                "width": 29.78125,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "84 500 км",
+              "box": {
+                "x": 57.25,
+                "y": 1315.0625,
+                "right": 117.1875,
+                "width": 59.9375,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 144,
+            "y": 1337.0625,
+            "right": 188,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 202,
+            "y": 1167.609375,
+            "right": 374,
+            "width": 172,
+            "height": 213.453125
+          },
+          "title": {
+            "x": 202,
+            "y": 1290.265625,
+            "right": 374,
+            "width": 172,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 202,
+            "y": 1346.46875,
+            "right": 282.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 202,
+            "y": 1167.609375,
+            "right": 374,
+            "width": 172,
+            "height": 114.65625
+          },
+          "titleText": "BMW 540",
+          "facts": [
+            {
+              "text": "2022",
+              "box": {
+                "x": 202,
+                "y": 1315.0625,
+                "right": 231.53125,
+                "width": 29.53125,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "65 000 км",
+              "box": {
+                "x": 243,
+                "y": 1315.0625,
+                "right": 302.765625,
+                "width": 59.765625,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 330,
+            "y": 1337.0625,
+            "right": 374,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 16,
+            "y": 1395.0625,
+            "right": 188,
+            "width": 172,
+            "height": 213.453125
+          },
+          "title": {
+            "x": 16,
+            "y": 1517.71875,
+            "right": 188,
+            "width": 172,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 16,
+            "y": 1573.921875,
+            "right": 96.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 16,
+            "y": 1395.0625,
+            "right": 188,
+            "width": 172,
+            "height": 114.65625
+          },
+          "titleText": "BMW X3",
+          "facts": [
+            {
+              "text": "2023",
+              "box": {
+                "x": 16,
+                "y": 1542.515625,
+                "right": 45.625,
+                "width": 29.625,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "48 800 км",
+              "box": {
+                "x": 57.09375,
+                "y": 1542.515625,
+                "right": 117.328125,
+                "width": 60.234375,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 144,
+            "y": 1564.515625,
+            "right": 188,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 202,
+            "y": 1395.0625,
+            "right": 374,
+            "width": 172,
+            "height": 213.453125
+          },
+          "title": {
+            "x": 202,
+            "y": 1517.71875,
+            "right": 374,
+            "width": 172,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 202,
+            "y": 1573.921875,
+            "right": 282.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 202,
+            "y": 1395.0625,
+            "right": 374,
+            "width": 172,
+            "height": 114.65625
+          },
+          "titleText": "BMW 120",
+          "facts": [
+            {
+              "text": "2025",
+              "box": {
+                "x": 202,
+                "y": 1542.515625,
+                "right": 231.328125,
+                "width": 29.328125,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "12 000 км",
+              "box": {
+                "x": 242.796875,
+                "y": 1542.515625,
+                "right": 300.203125,
+                "width": 57.40625,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 330,
+            "y": 1564.515625,
+            "right": 374,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 16,
+            "y": 1622.515625,
+            "right": 188,
+            "width": 172,
+            "height": 213.453125
+          },
+          "title": {
+            "x": 16,
+            "y": 1745.171875,
+            "right": 188,
+            "width": 172,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 16,
+            "y": 1801.375,
+            "right": 96.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 16,
+            "y": 1622.515625,
+            "right": 188,
+            "width": 172,
+            "height": 114.65625
+          },
+          "titleText": "Mercedes-Benz GLE",
+          "facts": [
+            {
+              "text": "2018",
+              "box": {
+                "x": 16,
+                "y": 1769.96875,
+                "right": 43.203125,
+                "width": 27.203125,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "157 000 км",
+              "box": {
+                "x": 54.671875,
+                "y": 1769.96875,
+                "right": 118.671875,
+                "width": 64,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 144,
+            "y": 1791.96875,
+            "right": 188,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 202,
+            "y": 1622.515625,
+            "right": 374,
+            "width": 172,
+            "height": 213.453125
+          },
+          "title": {
+            "x": 202,
+            "y": 1745.171875,
+            "right": 374,
+            "width": 172,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 202,
+            "y": 1801.375,
+            "right": 282.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 202,
+            "y": 1622.515625,
+            "right": 374,
+            "width": 172,
+            "height": 114.65625
+          },
+          "titleText": "Audi RS6",
+          "facts": [
+            {
+              "text": "2022",
+              "box": {
+                "x": 202,
+                "y": 1769.96875,
+                "right": 231.53125,
+                "width": 29.53125,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "28 600 км",
+              "box": {
+                "x": 243,
+                "y": 1769.96875,
+                "right": 302.828125,
+                "width": 59.828125,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 330,
+            "y": 1791.96875,
+            "right": 374,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 16,
+            "y": 1849.96875,
+            "right": 188,
+            "width": 172,
+            "height": 234.25
+          },
+          "title": {
+            "x": 16,
+            "y": 1972.625,
+            "right": 188,
+            "width": 172,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 16,
+            "y": 2049.625,
+            "right": 96.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 16,
+            "y": 1849.96875,
+            "right": 188,
+            "width": 172,
+            "height": 114.65625
+          },
+          "titleText": "BMW X6",
+          "facts": [
+            {
+              "text": "2017",
+              "box": {
+                "x": 16,
+                "y": 1997.421875,
+                "right": 42.5625,
+                "width": 26.5625,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "162 000 км",
+              "box": {
+                "x": 54.03125,
+                "y": 1997.421875,
+                "right": 118.890625,
+                "width": 64.859375,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 144,
+            "y": 2040.21875,
+            "right": 188,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 202,
+            "y": 1849.96875,
+            "right": 374,
+            "width": 172,
+            "height": 234.25
+          },
+          "title": {
+            "x": 202,
+            "y": 1972.625,
+            "right": 374,
+            "width": 172,
+            "height": 41.59375
+          },
+          "price": {
+            "x": 202,
+            "y": 2049.625,
+            "right": 282.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 202,
+            "y": 1849.96875,
+            "right": 374,
+            "width": 172,
+            "height": 114.65625
+          },
+          "titleText": "Mercedes-Benz AMG GT",
+          "facts": [
+            {
+              "text": "2021",
+              "box": {
+                "x": 202,
+                "y": 2018.21875,
+                "right": 229.09375,
+                "width": 27.09375,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "33 700 км",
+              "box": {
+                "x": 240.5625,
+                "y": 2018.21875,
+                "right": 299.625,
+                "width": 59.0625,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 330,
+            "y": 2040.21875,
+            "right": 374,
+            "width": 44,
+            "height": 44
+          }
+        }
+      ],
+      "width": 390,
+      "journey": "save, reload, detail, related cards, back, remove",
+      "english": "no overflow, localized unclipped facts"
+    },
+    {
+      "overflow": false,
+      "columns": "137px 137px",
+      "firstY": 237,
+      "cards": [
+        {
+          "box": {
+            "x": 16,
+            "y": 237,
+            "right": 153,
+            "width": 137,
+            "height": 190.125
+          },
+          "title": {
+            "x": 16,
+            "y": 336.328125,
+            "right": 153,
+            "width": 137,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 16,
+            "y": 392.53125,
+            "right": 96.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 16,
+            "y": 237,
+            "right": 153,
+            "width": 137,
+            "height": 91.328125
+          },
+          "titleText": "BMW X6",
+          "facts": [
+            {
+              "text": "2025",
+              "box": {
+                "x": 16,
+                "y": 361.125,
+                "right": 45.328125,
+                "width": 29.328125,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "18 500 км",
+              "box": {
+                "x": 56.796875,
+                "y": 361.125,
+                "right": 113.859375,
+                "width": 57.0625,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 109,
+            "y": 383.125,
+            "right": 153,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 167,
+            "y": 237,
+            "right": 304,
+            "width": 137,
+            "height": 190.125
+          },
+          "title": {
+            "x": 167,
+            "y": 336.328125,
+            "right": 304,
+            "width": 137,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 167,
+            "y": 392.53125,
+            "right": 247.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 167,
+            "y": 237,
+            "right": 304,
+            "width": 137,
+            "height": 91.328125
+          },
+          "titleText": "BMW 540",
+          "facts": [
+            {
+              "text": "2024",
+              "box": {
+                "x": 167,
+                "y": 361.125,
+                "right": 196.78125,
+                "width": 29.78125,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "33 987 км",
+              "box": {
+                "x": 208.25,
+                "y": 361.125,
+                "right": 267.234375,
+                "width": 58.984375,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 260,
+            "y": 383.125,
+            "right": 304,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 16,
+            "y": 441.125,
+            "right": 153,
+            "width": 137,
+            "height": 190.125
+          },
+          "title": {
+            "x": 16,
+            "y": 540.453125,
+            "right": 153,
+            "width": 137,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 16,
+            "y": 596.65625,
+            "right": 96.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 16,
+            "y": 441.125,
+            "right": 153,
+            "width": 137,
+            "height": 91.328125
+          },
+          "titleText": "BMW X3",
+          "facts": [
+            {
+              "text": "2025",
+              "box": {
+                "x": 16,
+                "y": 565.25,
+                "right": 45.328125,
+                "width": 29.328125,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "0 км",
+              "box": {
+                "x": 56.796875,
+                "y": 565.25,
+                "right": 83.5,
+                "width": 26.703125,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 109,
+            "y": 587.25,
+            "right": 153,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 167,
+            "y": 441.125,
+            "right": 304,
+            "width": 137,
+            "height": 190.125
+          },
+          "title": {
+            "x": 167,
+            "y": 540.453125,
+            "right": 304,
+            "width": 137,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 167,
+            "y": 596.65625,
+            "right": 247.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 167,
+            "y": 441.125,
+            "right": 304,
+            "width": 137,
+            "height": 91.328125
+          },
+          "titleText": "BMW 120",
+          "facts": [
+            {
+              "text": "2026",
+              "box": {
+                "x": 167,
+                "y": 565.25,
+                "right": 196.65625,
+                "width": 29.65625,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "0 км",
+              "box": {
+                "x": 208.125,
+                "y": 565.25,
+                "right": 234.828125,
+                "width": 26.703125,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 260,
+            "y": 587.25,
+            "right": 304,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 16,
+            "y": 645.25,
+            "right": 153,
+            "width": 137,
+            "height": 210.921875
+          },
+          "title": {
+            "x": 16,
+            "y": 744.578125,
+            "right": 153,
+            "width": 137,
+            "height": 41.59375
+          },
+          "price": {
+            "x": 16,
+            "y": 821.578125,
+            "right": 96.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 16,
+            "y": 645.25,
+            "right": 153,
+            "width": 137,
+            "height": 91.328125
+          },
+          "titleText": "Mercedes-Benz GLE",
+          "facts": [
+            {
+              "text": "2019",
+              "box": {
+                "x": 16,
+                "y": 790.171875,
+                "right": 43.21875,
+                "width": 27.21875,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "119 000 км",
+              "box": {
+                "x": 54.6875,
+                "y": 790.171875,
+                "right": 117.109375,
+                "width": 62.421875,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 109,
+            "y": 812.171875,
+            "right": 153,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 167,
+            "y": 645.25,
+            "right": 304,
+            "width": 137,
+            "height": 210.921875
+          },
+          "title": {
+            "x": 167,
+            "y": 744.578125,
+            "right": 304,
+            "width": 137,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 167,
+            "y": 821.578125,
+            "right": 247.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 167,
+            "y": 645.25,
+            "right": 304,
+            "width": 137,
+            "height": 91.328125
+          },
+          "titleText": "Audi RS6",
+          "facts": [
+            {
+              "text": "2021",
+              "box": {
+                "x": 167,
+                "y": 769.375,
+                "right": 194.09375,
+                "width": 27.09375,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "52 000 км",
+              "box": {
+                "x": 205.5625,
+                "y": 769.375,
+                "right": 265.21875,
+                "width": 59.65625,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 260,
+            "y": 812.171875,
+            "right": 304,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 16,
+            "y": 870.171875,
+            "right": 153,
+            "width": 137,
+            "height": 210.921875
+          },
+          "title": {
+            "x": 16,
+            "y": 969.5,
+            "right": 153,
+            "width": 137,
+            "height": 41.59375
+          },
+          "price": {
+            "x": 16,
+            "y": 1046.5,
+            "right": 96.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 16,
+            "y": 870.171875,
+            "right": 153,
+            "width": 137,
+            "height": 91.328125
+          },
+          "titleText": "Mercedes-Benz AMG GT",
+          "facts": [
+            {
+              "text": "2020",
+              "box": {
+                "x": 16,
+                "y": 1015.09375,
+                "right": 45.78125,
+                "width": 29.78125,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "46 000 км",
+              "box": {
+                "x": 57.25,
+                "y": 1015.09375,
+                "right": 117.65625,
+                "width": 60.40625,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 109,
+            "y": 1037.09375,
+            "right": 153,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 167,
+            "y": 870.171875,
+            "right": 304,
+            "width": 137,
+            "height": 210.921875
+          },
+          "title": {
+            "x": 167,
+            "y": 969.5,
+            "right": 304,
+            "width": 137,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 167,
+            "y": 1046.5,
+            "right": 247.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 167,
+            "y": 870.171875,
+            "right": 304,
+            "width": 137,
+            "height": 91.328125
+          },
+          "titleText": "BMW X6",
+          "facts": [
+            {
+              "text": "2018",
+              "box": {
+                "x": 167,
+                "y": 994.296875,
+                "right": 194.203125,
+                "width": 27.203125,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "128 000 км",
+              "box": {
+                "x": 205.671875,
+                "y": 994.296875,
+                "right": 270.5,
+                "width": 64.828125,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 260,
+            "y": 1037.09375,
+            "right": 304,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 16,
+            "y": 1095.09375,
+            "right": 153,
+            "width": 137,
+            "height": 190.125
+          },
+          "title": {
+            "x": 16,
+            "y": 1194.421875,
+            "right": 153,
+            "width": 137,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 16,
+            "y": 1250.625,
+            "right": 96.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 16,
+            "y": 1095.09375,
+            "right": 153,
+            "width": 137,
+            "height": 91.328125
+          },
+          "titleText": "Audi RSQ8",
+          "facts": [
+            {
+              "text": "2020",
+              "box": {
+                "x": 16,
+                "y": 1219.21875,
+                "right": 45.78125,
+                "width": 29.78125,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "84 500 км",
+              "box": {
+                "x": 57.25,
+                "y": 1219.21875,
+                "right": 117.1875,
+                "width": 59.9375,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 109,
+            "y": 1241.21875,
+            "right": 153,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 167,
+            "y": 1095.09375,
+            "right": 304,
+            "width": 137,
+            "height": 190.125
+          },
+          "title": {
+            "x": 167,
+            "y": 1194.421875,
+            "right": 304,
+            "width": 137,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 167,
+            "y": 1250.625,
+            "right": 247.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 167,
+            "y": 1095.09375,
+            "right": 304,
+            "width": 137,
+            "height": 91.328125
+          },
+          "titleText": "BMW 540",
+          "facts": [
+            {
+              "text": "2022",
+              "box": {
+                "x": 167,
+                "y": 1219.21875,
+                "right": 196.53125,
+                "width": 29.53125,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "65 000 км",
+              "box": {
+                "x": 208,
+                "y": 1219.21875,
+                "right": 267.765625,
+                "width": 59.765625,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 260,
+            "y": 1241.21875,
+            "right": 304,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 16,
+            "y": 1299.21875,
+            "right": 153,
+            "width": 137,
+            "height": 190.125
+          },
+          "title": {
+            "x": 16,
+            "y": 1398.546875,
+            "right": 153,
+            "width": 137,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 16,
+            "y": 1454.75,
+            "right": 96.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 16,
+            "y": 1299.21875,
+            "right": 153,
+            "width": 137,
+            "height": 91.328125
+          },
+          "titleText": "BMW X3",
+          "facts": [
+            {
+              "text": "2023",
+              "box": {
+                "x": 16,
+                "y": 1423.34375,
+                "right": 45.625,
+                "width": 29.625,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "48 800 км",
+              "box": {
+                "x": 57.09375,
+                "y": 1423.34375,
+                "right": 117.328125,
+                "width": 60.234375,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 109,
+            "y": 1445.34375,
+            "right": 153,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 167,
+            "y": 1299.21875,
+            "right": 304,
+            "width": 137,
+            "height": 190.125
+          },
+          "title": {
+            "x": 167,
+            "y": 1398.546875,
+            "right": 304,
+            "width": 137,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 167,
+            "y": 1454.75,
+            "right": 247.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 167,
+            "y": 1299.21875,
+            "right": 304,
+            "width": 137,
+            "height": 91.328125
+          },
+          "titleText": "BMW 120",
+          "facts": [
+            {
+              "text": "2025",
+              "box": {
+                "x": 167,
+                "y": 1423.34375,
+                "right": 196.328125,
+                "width": 29.328125,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "12 000 км",
+              "box": {
+                "x": 207.796875,
+                "y": 1423.34375,
+                "right": 265.203125,
+                "width": 57.40625,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 260,
+            "y": 1445.34375,
+            "right": 304,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 16,
+            "y": 1503.34375,
+            "right": 153,
+            "width": 137,
+            "height": 210.921875
+          },
+          "title": {
+            "x": 16,
+            "y": 1602.671875,
+            "right": 153,
+            "width": 137,
+            "height": 41.59375
+          },
+          "price": {
+            "x": 16,
+            "y": 1679.671875,
+            "right": 96.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 16,
+            "y": 1503.34375,
+            "right": 153,
+            "width": 137,
+            "height": 91.328125
+          },
+          "titleText": "Mercedes-Benz GLE",
+          "facts": [
+            {
+              "text": "2018",
+              "box": {
+                "x": 16,
+                "y": 1648.265625,
+                "right": 43.203125,
+                "width": 27.203125,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "157 000 км",
+              "box": {
+                "x": 54.671875,
+                "y": 1648.265625,
+                "right": 118.671875,
+                "width": 64,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 109,
+            "y": 1670.265625,
+            "right": 153,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 167,
+            "y": 1503.34375,
+            "right": 304,
+            "width": 137,
+            "height": 210.921875
+          },
+          "title": {
+            "x": 167,
+            "y": 1602.671875,
+            "right": 304,
+            "width": 137,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 167,
+            "y": 1679.671875,
+            "right": 247.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 167,
+            "y": 1503.34375,
+            "right": 304,
+            "width": 137,
+            "height": 91.328125
+          },
+          "titleText": "Audi RS6",
+          "facts": [
+            {
+              "text": "2022",
+              "box": {
+                "x": 167,
+                "y": 1627.46875,
+                "right": 196.53125,
+                "width": 29.53125,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "28 600 км",
+              "box": {
+                "x": 208,
+                "y": 1627.46875,
+                "right": 267.828125,
+                "width": 59.828125,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 260,
+            "y": 1670.265625,
+            "right": 304,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 16,
+            "y": 1728.265625,
+            "right": 153,
+            "width": 137,
+            "height": 210.921875
+          },
+          "title": {
+            "x": 16,
+            "y": 1827.59375,
+            "right": 153,
+            "width": 137,
+            "height": 20.796875
+          },
+          "price": {
+            "x": 16,
+            "y": 1904.59375,
+            "right": 96.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 16,
+            "y": 1728.265625,
+            "right": 153,
+            "width": 137,
+            "height": 91.328125
+          },
+          "titleText": "BMW X6",
+          "facts": [
+            {
+              "text": "2017",
+              "box": {
+                "x": 16,
+                "y": 1852.390625,
+                "right": 42.5625,
+                "width": 26.5625,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "162 000 км",
+              "box": {
+                "x": 54.03125,
+                "y": 1852.390625,
+                "right": 118.890625,
+                "width": 64.859375,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 109,
+            "y": 1895.1875,
+            "right": 153,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "box": {
+            "x": 167,
+            "y": 1728.265625,
+            "right": 304,
+            "width": 137,
+            "height": 210.921875
+          },
+          "title": {
+            "x": 167,
+            "y": 1827.59375,
+            "right": 304,
+            "width": 137,
+            "height": 41.59375
+          },
+          "price": {
+            "x": 167,
+            "y": 1904.59375,
+            "right": 247.046875,
+            "width": 80.046875,
+            "height": 25.1875
+          },
+          "photo": {
+            "x": 167,
+            "y": 1728.265625,
+            "right": 304,
+            "width": 137,
+            "height": 91.328125
+          },
+          "titleText": "Mercedes-Benz AMG GT",
+          "facts": [
+            {
+              "text": "2021",
+              "box": {
+                "x": 167,
+                "y": 1873.1875,
+                "right": 194.09375,
+                "width": 27.09375,
+                "height": 18
+              },
+              "clipped": false
+            },
+            {
+              "text": "33 700 км",
+              "box": {
+                "x": 205.5625,
+                "y": 1873.1875,
+                "right": 264.625,
+                "width": 59.0625,
+                "height": 18
+              },
+              "clipped": false
+            }
+          ],
+          "priceClipped": false,
+          "button": {
+            "x": 260,
+            "y": 1895.1875,
+            "right": 304,
+            "width": 44,
+            "height": 44
+          }
+        }
+      ],
+      "width": 320,
+      "enlargedText": "200 percent, one column, prices fit"
+    }
+  ],
+  "errors": [],
+  "status": "passed"
+}

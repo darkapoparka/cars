@@ -63,7 +63,7 @@
 		gap: 10px;
 		border: 0;
 		border-radius: 10px;
-		background: var(--bc-white);
+		background: var(--bc-mobile-field-surface, var(--bc-white));
 		color: var(--bc-ink);
 		font-size: var(--bc-text-control);
 		font-weight: var(--bc-weight-body);
@@ -87,8 +87,11 @@
 		border-radius: 2px;
 		object-fit: cover;
 	}
-	.mobile-intake-field__placeholder,
-	button:disabled {
+	.mobile-intake-field__placeholder {
+		color: var(--bc-control-placeholder, var(--bc-muted));
+	}
+	button:disabled,
+	button:disabled > span {
 		color: var(--bc-muted);
 	}
 	button:disabled {
@@ -100,5 +103,10 @@
 	}
 	button[data-invalid='true'] {
 		box-shadow: inset 0 0 0 2px var(--bc-danger);
+	}
+	@media (max-width: 767.98px) {
+		button {
+			border-radius: var(--bc-radius-control);
+		}
 	}
 </style>

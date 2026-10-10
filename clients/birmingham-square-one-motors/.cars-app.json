@@ -3,12 +3,12 @@
   "dealer": "birmingham-square-one-motors",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "70c2b80671e217ab299549a938a537c0b9559611",
+    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
     "path": "templates/app",
-    "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
-    "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f"
+    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
+    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
   },
-  "appDigest": "281fb2bfb700818f1cc6bd4fd15829936055b4dad2636905285d4236b6e1e7ad",
+  "appDigest": "d3effe92d94e73c481f5b8fe2d1efab80a4024ef7dce6375fb3870c96be75cc8",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "birmingham-square-one-motors",
@@ -138,5 +138,6 @@
     }
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-10T21:15:31.176Z"
 }

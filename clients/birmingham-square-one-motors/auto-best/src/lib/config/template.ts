@@ -6,6 +6,7 @@ type TemplatePresentation = {
   canonicalOrigin: string | null;
   verifiedIdentity: boolean;
   verifiedInventory: boolean;
+  desktopInventorySearch: 'menu' | 'filters';
   sections: { demoTeam: boolean; demoPartners: boolean };
 };
 
@@ -14,6 +15,7 @@ export const template: TemplatePresentation = {
   canonicalOrigin: null,
   verifiedIdentity: false,
   verifiedInventory: false,
+  desktopInventorySearch: 'menu',
   sections: { demoTeam: true, demoPartners: false }
 };
 

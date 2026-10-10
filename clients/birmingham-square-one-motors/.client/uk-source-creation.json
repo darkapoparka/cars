@@ -3,35 +3,35 @@
   "batch": "uk-2026-10-10",
   "dealer": "birmingham-square-one-motors",
   "leadId": "gb-birmingham-square-one-motors",
-  "workflowCommit": "643440c58ff7e11241f06c4e39a31d22633c50c9",
+  "workflowCommit": "deab694c8b4401a32c5b843d2202425a62954093",
   "createdAt": "2026-10-10T11:27:36.016Z",
   "provider": "cloudflare",
   "inputPackDigest": "0d23ab75373c1b8703b749ee4cb5d87788d580f73c3e9960f8febe04c02c4a0a",
   "sourceReleases": {
     "auto-best": {
-      "revision": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
-      "tree": "5be83ea8685a3e99d517ced43af67d9d3d7a24db",
-      "digest": "bc08eb6123546c0e0cb0f4d21e2209450bfe642e542515b53f557016d14416d2"
+      "revision": "696230a404abd9b20b6f907b9cfb139175298c7a",
+      "tree": "b07ff2273be554ef64a039ac8f4f023ae60a33ac",
+      "digest": "90f131aa0ead6ae4fcb06d30c054ca4d0c5d39097a2927cca8f298c7d2dfb3ca"
     },
     "modern": {
-      "revision": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
-      "tree": "c2b3b3e74815c1e5eba0c82cfb1352c795921dcf",
-      "digest": "f097bc4802e62ffb0b752bc5523f3fe1b00df83f67b16843d698d276d10344a3"
+      "revision": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+      "tree": "51d68e5dd6e3b305191df94e877403fd7b7414e1",
+      "digest": "b035a849efb41d3ed18d97fcf3511850469162c0a990397b74be588179d43588"
     },
     "import": {
-      "revision": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
-      "tree": "874b601a661045dd0e265bb14a9b0af762a17d0f",
-      "digest": "25cc87e3d71101be065333c5d5d8c124516a936281b1b3c81aba6e674253a4b1"
+      "revision": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+      "tree": "b64c4a4939c4244ba3f408e5c0311c586a913e67",
+      "digest": "eef4c3544b28bb3a62cad4c2a07e4ff64301fb4c9e9925ba002077bda7f63bd3"
     },
     "app": {
-      "revision": "70c2b80671e217ab299549a938a537c0b9559611",
-      "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
-      "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f"
+      "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+      "tree": "749512ff762c25272d1474225ff653dd4c88f0fe",
+      "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541"
     },
     "mobile": {
-      "revision": "876590474d01178413feccf3153a0859230158a1",
-      "tree": "7b1f0878715aa1bc0f5942c7e654a6a1bb091510",
-      "digest": "380b153972039a80dccee73f53760a87e963d007b83a921020c5ab5353c942fc"
+      "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+      "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b",
+      "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d"
     },
     "karento-best": {
       "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
@@ -727,5 +727,52 @@
       "dealerQa": false,
       "readyToPublish": false
     }
-  ]
+  ],
+  "refresh": {
+    "at": "2026-10-10T21:19:58.140Z",
+    "sourceTree": "0e0724bbcf567e398732b76dbf4fdfce88d47075",
+    "previousReceiptSha256": "75d49a4292841926f1bc554c252067bfa29e644075cfe938c163a0b3a7160a91",
+    "previousSourceReleases": {
+      "auto-best": {
+        "revision": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+        "tree": "5be83ea8685a3e99d517ced43af67d9d3d7a24db",
+        "digest": "bc08eb6123546c0e0cb0f4d21e2209450bfe642e542515b53f557016d14416d2"
+      },
+      "modern": {
+        "revision": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
+        "tree": "c2b3b3e74815c1e5eba0c82cfb1352c795921dcf",
+        "digest": "f097bc4802e62ffb0b752bc5523f3fe1b00df83f67b16843d698d276d10344a3"
+      },
+      "import": {
+        "revision": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
+        "tree": "874b601a661045dd0e265bb14a9b0af762a17d0f",
+        "digest": "25cc87e3d71101be065333c5d5d8c124516a936281b1b3c81aba6e674253a4b1"
+      },
+      "app": {
+        "revision": "70c2b80671e217ab299549a938a537c0b9559611",
+        "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
+        "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f"
+      },
+      "mobile": {
+        "revision": "876590474d01178413feccf3153a0859230158a1",
+        "tree": "7b1f0878715aa1bc0f5942c7e654a6a1bb091510",
+        "digest": "380b153972039a80dccee73f53760a87e963d007b83a921020c5ab5353c942fc"
+      },
+      "karento-best": {
+        "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+        "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
+        "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+      }
+    },
+    "reviewSha256": "cc7243590abe58a720fcbe0cd0faeac38c950478bb34e0e182fa6346c12bc1a2",
+    "protectedInputsPreserved": true,
+    "runId": "38086503433",
+    "selected": [
+      "auto-best",
+      "modern",
+      "import",
+      "app",
+      "mobile"
+    ]
+  }
 }

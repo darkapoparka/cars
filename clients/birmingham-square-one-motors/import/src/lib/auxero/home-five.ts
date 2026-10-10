@@ -1,5 +1,6 @@
 import { daynightAssets, daynightBrand, daynightContact, mainNavigation } from '$lib/data/daynight';
 import { homeBrowseArtwork } from '$lib/content/home-discovery';
+import { filterVehicles } from '$lib/domain/vehicle-search';
 import type { ReviewRoleKind } from '$lib/content/reviews';
 import type { BlogPost } from '$lib/data/blog';
 import { vehicles as inventoryVehicles } from '$lib/data/vehicles';
@@ -16,6 +17,7 @@ import {
 export type HomeFiveBrandCard = {
 	allTile?: boolean;
 	count: string;
+	stockCount: number;
 	href?: string;
 	image: string;
 	name: string;
@@ -27,6 +29,8 @@ export type HomeFiveReview = {
 	name: string;
 	role: string;
 	roleKind?: ReviewRoleKind;
+	rating?: number;
+	excerpt?: string;
 	text: string;
 };
 
@@ -196,6 +200,7 @@ export type HomeFiveModalsData = {
 export type HomeFiveTypeCard = {
 	allTile?: boolean;
 	bodyType: string;
+	stockCount?: number;
 	href: `/inventory${string}` | `/import${string}`;
 	image: string;
 	label: string;
@@ -588,8 +593,6 @@ const countBy = (items: string[]) =>
 		return counts;
 	}, new Map<string, number>());
 
-const brandInventoryCounts = countBy(inventoryVehicles.map((vehicle) => vehicle.brand));
-
 // Stocked brands lead with real inventory counts; the rest are honest
 // "import on request" cards that route to the import flow instead of an
 // empty inventory result.
@@ -619,25 +622,28 @@ const showcaseBrandCountLabel = (locale: Locale, count: number) => {
 
 const showcaseBrandCard = (
 	locale: Locale,
-	brand: (typeof homeFiveBrandShowcase)[number]
+	brand: (typeof homeFiveBrandShowcase)[number],
+	source: readonly Vehicle[]
 ): HomeFiveBrandCard => {
-	const stockCount = brandInventoryCounts.get(brand.query) ?? 0;
+	const stockCount = filterVehicles(source, { brand: brand.query }).length;
 
 	if (stockCount === 0) {
 		return {
 			...brand,
+			stockCount,
 			count: locale === 'bg' ? 'Внос по заявка' : 'Import on request',
 			href: `/import?intent=source&make=${encodeURIComponent(brand.query)}`
 		};
 	}
 
-	return { ...brand, count: showcaseBrandCountLabel(locale, stockCount) };
+	return { ...brand, stockCount, count: showcaseBrandCountLabel(locale, stockCount) };
 };
 
 // Closing tile: links to the full inventory with the live total, keeping the wall at 12 cards.
-const allBrandsCard = (locale: Locale): HomeFiveBrandCard => ({
+const allBrandsCard = (locale: Locale, source: readonly Vehicle[]): HomeFiveBrandCard => ({
 	allTile: true,
-	count: showcaseBrandCountLabel(locale, inventoryVehicles.length),
+	count: showcaseBrandCountLabel(locale, source.length),
+	stockCount: source.length,
 	href: '/inventory',
 	image: '',
 	name: locale === 'bg' ? 'Всички марки' : 'All brands',
@@ -645,13 +651,16 @@ const allBrandsCard = (locale: Locale): HomeFiveBrandCard => ({
 });
 
 export const homeFiveBrandCards: HomeFiveBrandCard[] = [
-	...homeFiveBrandShowcase.map((brand) => showcaseBrandCard('en', brand)),
-	allBrandsCard('en')
+	...homeFiveBrandShowcase.map((brand) => showcaseBrandCard('en', brand, inventoryVehicles)),
+	allBrandsCard('en', inventoryVehicles)
 ];
 
-export const homeFiveBrandCardsForLocale = (locale: Locale): HomeFiveBrandCard[] => [
-	...homeFiveBrandShowcase.map((brand) => showcaseBrandCard(locale, brand)),
-	allBrandsCard(locale)
+export const homeFiveBrandCardsForLocale = (
+	locale: Locale,
+	source: readonly Vehicle[] = inventoryVehicles
+): HomeFiveBrandCard[] => [
+	...homeFiveBrandShowcase.map((brand) => showcaseBrandCard(locale, brand, source)),
+	allBrandsCard(locale, source)
 ];
 
 const isHeaderNavActive = (activePath: string, href: string) => {
@@ -723,29 +732,8 @@ export const homeFiveHeaderDataForLocale = (
 
 export const homeFiveHeaderData: HomeFiveHeaderData = homeFiveHeaderDataForLocale('en');
 
-export const homeFiveReviewItems: HomeFiveReview[] = [
-	{
-		name: 'Aleksandar Vytev',
-		role: 'Клиент на Square One Motors',
-		roleKind: 'customer',
-		avatar: '/assets/images/avatar/avatar-1.webp',
-		text: 'Екипът ми обясни историята на автомобила, транспорта и стъпките по регистрацията, преди да поема ангажимент. Предаването беше спокойно и прозрачно.'
-	},
-	{
-		name: 'Krasimir Georgiev',
-		role: 'Клиент с внос',
-		roleKind: 'import',
-		avatar: '/assets/images/avatar/avatar-2.webp',
-		text: 'Square One Motors запазиха разговора практичен: снимки, документи, пробег и разходите, които имат значение преди доставка.'
-	},
-	{
-		name: 'Iliyan Petrov',
-		role: 'Продава клиентски автомобил',
-		roleKind: 'sale',
-		avatar: '/assets/images/avatar/avatar-3.webp',
-		text: 'Изпратих данните за колата и получих ясна обратна връзка за цената, документите и най-добрия начин да представя автомобила.'
-	}
-];
+// No dealer-approved testimonials were supplied for this proposal.
+export const homeFiveReviewItems: HomeFiveReview[] = [];
 
 export const homeFiveNewsPostsFromPosts = (posts: BlogPost[]): HomeFiveNewsPost[] =>
 	posts.slice(0, 3).map((post) => ({
@@ -904,11 +892,29 @@ export const homeFiveTypeCards: HomeFiveTypeCard[] = [
 	}
 ];
 
-export const homeFiveTypeCardsForLocale = (locale: Locale): HomeFiveTypeCard[] =>
-	homeFiveTypeCards.map((card) => ({
-		...card,
-		label: translateVehicleTerm(locale, 'bodyTypes', card.label)
-	}));
+export const homeFiveTypeCardsForLocale = (
+	locale: Locale,
+	source: readonly Vehicle[] = inventoryVehicles
+): Array<HomeFiveTypeCard & { stockCount: number }> =>
+	homeFiveTypeCards.map((card) => {
+		const filters: Record<string, string> = card.allTile
+			? {}
+			: card.bodyType === 'Electric'
+				? { fuel: 'Електрически' }
+				: { bodyType: card.bodyType };
+		const stockCount = filterVehicles(source, filters).length;
+		const query = new URLSearchParams(filters).toString();
+		const href: HomeFiveTypeCard['href'] =
+			card.allTile || stockCount > 0
+				? `/inventory${query ? `?${query}` : ''}`
+				: `/import?intent=source&${query}`;
+		return {
+			...card,
+			stockCount,
+			href,
+			label: translateVehicleTerm(locale, 'bodyTypes', card.label)
+		};
+	});
 
 export const homeFiveVehiclePills: HomeFiveVehiclePill[] = [
 	{
@@ -1194,7 +1200,7 @@ const heroActionsForLocale = (locale: Locale): HomeFiveHeroAction[] =>
 					label: 'Купи',
 					mobileHeading: 'Намери автомобила си.',
 					mode: 'buy',
-					placeholder: 'Търси марка, модел, цена...',
+					placeholder: 'Търси марка или модел',
 					secondaryHref: '/inventory',
 					secondaryLabel: 'Разгледай всички',
 					submitLabel: 'Покажи автомобили',
@@ -1243,7 +1249,7 @@ const heroActionsForLocale = (locale: Locale): HomeFiveHeroAction[] =>
 					label: 'Buy',
 					mobileHeading: 'Find your car.',
 					mode: 'buy',
-					placeholder: 'Search brand, model, price...',
+					placeholder: 'Search brand or model',
 					secondaryHref: '/inventory',
 					secondaryLabel: 'Browse all',
 					submitLabel: 'Show vehicles',
@@ -1383,7 +1389,7 @@ export function homeFiveHeroDataFromVehicles(
 				defaultLabel: t.filters.allPrice,
 				id: 'Home05MaxPriceSelectToggle',
 				name: 'maxPrice',
-				options: ['30 000 EUR', '50 000 EUR', '80 000 EUR', '120 000 EUR'].map((value) => ({
+				options: ['30 000 GBP', '50 000 GBP', '80 000 GBP', '120 000 GBP'].map((value) => ({
 					label: value,
 					value
 				})),
@@ -1415,11 +1421,16 @@ const compareVehicleFrom = (vehicle: Vehicle): HomeFiveCompareVehicle => ({
 	title: vehicle.title
 });
 
-const formatKm = (value: number) => `${value.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} km`;
+const formatKm = (vehicle: Vehicle, locale: Locale) => {
+	if (vehicle.mileageKnown === false) return locale === 'bg' ? 'При запитване' : 'On request';
+	const unit = vehicle.mileageUnit ?? 'mi';
+	const value = vehicle.mileageValue ?? (unit === 'mi' ? Math.round(vehicle.mileage / 1.609344) : vehicle.mileage);
+	return Number.isFinite(value) ? new Intl.NumberFormat(locale === 'bg' ? 'bg-BG' : 'en-GB').format(value) + ' ' + unit : (locale === 'bg' ? 'При запитване' : 'On request');
+};
 
 const formatMonthly = (value: number, locale: Locale) =>
 	value > 0
-		? `${value.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} ${locale === 'bg' ? '€/мес.' : '€/mo'}`
+		? `${value.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} ${locale === 'bg' ? '£/мес.' : '£/mo'}`
 		: '';
 
 const compactFuelLabel = (fuel: string, locale: Locale) => {
@@ -1451,7 +1462,7 @@ export const homeFiveVehicleCardFromVehicle = (
 	fuel: compactFuelLabel(vehicle.fuel, locale),
 	highlightClass: 'bg-primary-2',
 	image: imageForHomeFiveVehicle(vehicle),
-	mileageLabel: formatKm(vehicle.mileage),
+	mileageLabel: formatKm(vehicle, locale),
 	monthlyLabel: formatMonthly(vehicle.monthly, locale),
 	photoCount: vehicle.images.length || 1,
 	priceLabel: vehicle.priceLabel,
@@ -1481,7 +1492,7 @@ const modalVehicleFromVehicle = (
 	image: imageForHomeFiveVehicle(vehicle),
 	interior: vehicle.interior,
 	location: vehicle.location,
-	mileageLabel: formatKm(vehicle.mileage),
+	mileageLabel: formatKm(vehicle, locale),
 	slug: vehicle.slug,
 	stockNumber: vehicle.stockNumber,
 	title: vehicle.title,

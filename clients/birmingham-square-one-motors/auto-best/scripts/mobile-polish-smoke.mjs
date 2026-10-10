@@ -24,7 +24,7 @@ async function fits(locator) {
 async function compactControl(locator, { icon = false } = {}) {
   const result = await locator.evaluate(el => {
     const box = el.getBoundingClientRect(), style = getComputedStyle(el), pseudo = getComputedStyle(el, '::before');
-    const svg = el.querySelector('svg')?.getBoundingClientRect();
+    const svg = [...el.querySelectorAll('svg')].find(icon => icon.checkVisibility())?.getBoundingClientRect();
     const hasSurface = pseudo.content !== 'none';
     const visibleHeight = hasSurface ? box.height - parseFloat(pseudo.top) - parseFloat(pseudo.bottom) : box.height;
     return { width: box.width, height: box.height, visibleHeight, fontSize: style.fontSize,
@@ -121,12 +121,15 @@ async function longCardCopy(page, locale, layout) {
       const geometry = await fixture.evaluate(card => {
         const heading = card.querySelector('.dn-vehicle-card__name');
         const headingStyle = getComputedStyle(heading);
-        const badges = [...card.querySelectorAll('.dn-vehicle-card__fact')];
+        const badges = [...card.querySelectorAll('.dn-vehicle-card__fact')].filter(badge => badge.checkVisibility());
         const photo = card.querySelector('.dn-vehicle-card__visual').getBoundingClientRect();
         const metadata = card.querySelector('.dn-vehicle-card__mobile-meta').getBoundingClientRect();
         const content = card.querySelector('.dn-vehicle-card__content').getBoundingClientRect();
         const mileage = badges[1].querySelector('span');
+        const note = card.querySelector('.dn-vehicle-card__note');
         return {
+          note: note?.checkVisibility() ? { text: note.textContent, clipped: note.scrollWidth > note.clientWidth + 1 } : null,
+          expectedFacts: !card.classList.contains('dn-vehicle-card--listing') ? 3 : card.clientWidth <= 24 * parseFloat(getComputedStyle(document.documentElement).fontSize) ? 4 : 5,
           lines: heading.getBoundingClientRect().height / parseFloat(headingStyle.lineHeight),
           title: heading.title, accessible: card.querySelector('a').getAttribute('aria-label'),
           bottomStrip: metadata.top >= photo.bottom && metadata.top >= content.bottom - 1,
@@ -144,9 +147,10 @@ async function longCardCopy(page, locale, layout) {
       assert(geometry.lines <= 2.05, `Long model copy stays within two lines: ${JSON.stringify(geometry)}`);
       assert.equal(geometry.title, title);
       assert.equal(geometry.accessible, title, 'Clamped copy retains the complete vehicle name for accessibility');
-      assert(geometry.badges.every(badge => badge.whiteSpace === 'nowrap' && badge.height <= badge.lineHeight + badge.padding + 1 && badge.fits), `Every badge keeps a single line inside its surface: ${JSON.stringify(geometry)}`);
+      if (layout === 'listing' && geometry.note) assert(geometry.note.text && !geometry.note.clipped, 'A long model title leaves its note readable above the price');
+      assert(geometry.badges.every(badge => badge.whiteSpace === 'nowrap' && badge.height <= badge.lineHeight + badge.padding + 1 && badge.fits), `Every visible badge keeps a single line inside its surface: ${JSON.stringify(geometry)}`);
       assert(geometry.badges.every(badge => !badge.clipped), `Known compact fuel and transmission labels remain fully visible: ${JSON.stringify(geometry)}`);
-      assert.equal(geometry.badges.length, layout === 'listing' ? 5 : 3);
+      assert.equal(geometry.badges.length, geometry.expectedFacts, 'Narrow listings prioritize year, mileage, fuel and transmission; roomy listings retain all five facts');
       assert(geometry.bottomStrip && geometry.fullMileageFits, 'All mobile cards retain complete mileage in the strip after the title and price');
       assert(Math.max(...geometry.badges.map(badge => badge.top)) - Math.min(...geometry.badges.map(badge => badge.top)) <= 1, 'All mobile specifications share one row');
       assert(geometry.badges.some(badge => badge.full === fuel.full), 'Full fuel values remain available alongside compact copy');
@@ -213,11 +217,10 @@ try {
             'The service overview reaches the existing localized service section');
           const placement = await services.evaluate(card => {
             const box = card.getBoundingClientRect();
-            const brands = document.querySelector('.dn-brand-section').getBoundingClientRect();
             const advice = document.querySelector('.dn-editorial').getBoundingClientRect();
             return box.left >= 0 && box.right <= innerWidth && box.top >= advice.bottom;
           });
-          assert(placement, 'All services follows Buying guides without widening the page');
+          assert(placement, 'Services follows Buying guides without widening the page');
           await capture('home');
           await page.locator('.dn-mobile-core-actions').scrollIntoViewIfNeeded();
           await capture('home-actions');
@@ -241,12 +244,17 @@ try {
           assert.equal(search.border, '0px', 'Entry fields have no decorative border');
           assert(search.labelFits, 'The default make/model prompt fits on one line without truncation');
           assert.equal(search.tapHighlight, 'rgba(0, 0, 0, 0)', 'Taps do not paint a native blue overlay');
-          const headerIcons = await page.locator('.dn-mobile-control svg').evaluateAll(icons => icons.map(icon => icon.getBoundingClientRect().width));
-          assert.deepEqual(headerIcons, [22, 22], 'Header location and phone glyphs remain balanced within 44px targets');
+          const headerIcons = await page.locator('.dn-mobile-control svg').evaluateAll(icons => icons.map(icon => ({
+            width: icon.getBoundingClientRect().width,
+            token: parseFloat(getComputedStyle(icon).getPropertyValue('--dn-mobile-header-icon-size')),
+            family: icon.getAttribute('data-icon-family')
+          })));
+          assert(headerIcons.length === 2 && headerIcons.every(icon => icon.width === 20 && icon.width === icon.token && icon.family === 'fluent-system-regular'),
+            'Header location and phone use the shared 20px Fluent role within 44px targets');
           await fits(page.locator('.dn-mobile-control'));
           await page.locator('.dn-quick-search__trigger').click();
-          assert.equal(await page.locator('#quick-search-input').evaluate(input => getComputedStyle(input).fontSize), '18px',
-            'The search editor uses the same readable input size as its entry field');
+          assert.equal(await page.locator('#quick-search-input').evaluate(input => getComputedStyle(input).fontSize), '16px',
+            'The search editor uses the shared 16px mobile overlay field role');
           await page.locator('.dn-quick-search__close').click();
           assert.equal(await page.locator('.dn-quick-search__trigger').evaluate(el => getComputedStyle(el).outlineStyle), 'none', 'Closing by pointer does not leave a focus ring over the opener');
           await page.keyboard.press('Tab');
@@ -262,7 +270,7 @@ try {
               priceSize: price.fontSize, priceWeight: price.fontWeight,
               fuel: fuel.innerText, fits: fuel.scrollWidth <= fuel.clientWidth + 1 };
           });
-          assert.deepEqual(cardTypography, { titleSize: '16px', titleWeight: '500', priceSize: '24px', priceWeight: '600',
+          assert.deepEqual(cardTypography, { titleSize: '16px', titleWeight: '500', priceSize: '20px', priceWeight: '600',
             fuel: locale === 'bg' ? 'Бензин' : 'Petrol', fits: true }, 'Price has a clear hierarchy; Home retains three readable facts');
           const viewAll = page.locator('.dn-search__mobile-all:visible').first();
           await compactControl(viewAll, { icon: true });
@@ -270,7 +278,9 @@ try {
             'Home action has a concise localized label without a competing count');
           assert.match(await viewAll.getAttribute('href'), /\/cars$/, 'Home action still opens the inventory');
           await fits(page.locator('.dn-mobile-bottom-nav a, .dn-mobile-bottom-nav button, .dn-mobile-controls a'));
+          await page.evaluate(() => scrollTo(0, 0));
           const dock = page.locator('.dn-mobile-bottom-nav');
+          await dock.waitFor({ state: 'visible' });
           const dockControls = dock.locator('a,button');
           assert.equal(await dockControls.count(), 5);
           dockNames = await dock.locator('.dn-mobile-bottom-nav__label').allTextContents();
@@ -319,10 +329,18 @@ try {
           await fits(page.locator('.dn-mobile-menu__contact a'));
           const localeControl = page.locator('.dn-mobile-menu [data-locale-selector]');
           await fits(localeControl);
-          assert.equal(await localeControl.locator('svg[data-icon-family="fluent-system-regular"]').count(), 2,
-            'Country and language has a globe and chevron in the same mobile icon family');
+          assert.equal(await localeControl.locator('svg[data-icon-family="fluent-system-regular"]').count(), 1,
+            'The compact Language action retains the Fluent globe');
           assert(await localeControl.evaluate(el => el.getBoundingClientRect().height >= 44 && getComputedStyle(el).backgroundColor !== 'rgba(0, 0, 0, 0)'),
-            'Country and language is a visible full-row control');
+            'Language remains a visible control with a complete touch target');
+          const bannerControl = page.locator('.dn-mobile-menu .dn-banner-picker-trigger');
+          await fits(bannerControl);
+          const utilities = await page.locator('.dn-mobile-menu__utilities').evaluate(el => {
+            const [banner, language] = el.querySelectorAll(':scope > button, :scope > a');
+            return { banner: banner.getBoundingClientRect().toJSON(), language: language.getBoundingClientRect().toJSON() };
+          });
+          assert(Math.abs(utilities.banner.width - utilities.language.width) <= 1 && Math.abs(utilities.banner.y - utilities.language.y) <= 1 && utilities.banner.right < utilities.language.left,
+            'Banners and Language share a compact row below the primary menu');
           await capture('menu');
           await page.keyboard.press('Escape');
           assert.equal(await trigger.evaluate(el => document.activeElement === el), true);
@@ -361,7 +379,8 @@ try {
             const metadata = card.querySelector('.dn-vehicle-card__mobile-meta').getBoundingClientRect();
             const headingStyle = getComputedStyle(card.querySelector('.dn-vehicle-card__name'));
             const priceStyle = getComputedStyle(card.querySelector('.dn-vehicle-card__amount'));
-            const facts = [...card.querySelectorAll('.dn-vehicle-card__fact')];
+            const facts = [...card.querySelectorAll('.dn-vehicle-card__fact')].filter(fact => fact.checkVisibility());
+            const expectedFacts = card.clientWidth <= 24 * parseFloat(getComputedStyle(document.documentElement).fontSize) ? 4 : 5;
             const badgeBoxes = facts.map(fact => fact.getBoundingClientRect());
             const badgeTextFits = facts.every(fact => {
               const text = fact.querySelector('span:not(.dn-sr-only)');
@@ -373,25 +392,25 @@ try {
             const badgesMatch = facts.every(fact => getComputedStyle(fact).backgroundColor === badgeSurface);
             return { title: photograph.alt, loaded: photograph.complete && photograph.naturalWidth > 0, fits:
               getComputedStyle(photograph).objectFit === 'cover' && image.width >= 112 && image.width <= 157 &&
-              identity.top >= image.top - 1 && price.bottom <= image.bottom + 1 && image.bottom <= metadata.top &&
+              Math.abs(identity.top - image.top - 2) <= 1 && Math.abs(price.bottom - image.bottom + 2) <= 1 && image.bottom <= metadata.top &&
               image.left >= box.left && image.right <= content.left - 1 && image.bottom <= box.bottom &&
               make && card.querySelector('.dn-vehicle-card__name').innerText.trim() === model &&
-              Math.abs(price.left - identity.left) <= 1 && price.top >= identity.bottom + 7.5 && price.top <= identity.bottom + 9 &&
+              Math.abs(price.left - identity.left) <= 1 && price.top >= identity.bottom + 7.5 &&
               metadata.top >= content.bottom - 1 && Math.abs(metadata.left - image.left) <= 1 &&
               metadata.left >= box.left && metadata.right <= box.right && metadata.bottom <= box.bottom &&
               parseFloat(priceStyle.fontSize) > parseFloat(headingStyle.fontSize) &&
               parseFloat(priceStyle.fontWeight) > parseFloat(headingStyle.fontWeight) &&
-              facts.length === 5 && badgesMatch && badgeTextFits && badgeSurface !== 'rgba(0, 0, 0, 0)' &&
+              facts.length === expectedFacts && priceStyle.fontSize === '18px' && badgesMatch && badgeTextFits && badgeSurface !== 'rgba(0, 0, 0, 0)' &&
               badgeBoxes.every(badge => Math.abs(badge.height - badgeBoxes[0].height) <= 1) &&
               facts.every(fact => getComputedStyle(fact).borderRadius === '6px') &&
-              Math.abs(badgeBoxes[0].left - metadata.left) <= 1 && Math.abs(badgeBoxes[4].right - metadata.right) <= 1 &&
+              Math.abs(badgeBoxes[0].left - metadata.left) <= 1 && badgeBoxes.at(-1).right <= metadata.right + 1 &&
               badgeBoxes.every(badge => Math.abs(badge.top - badgeBoxes[0].top) <= 1) &&
               priceStyle.backgroundColor === 'rgba(0, 0, 0, 0)' };
           }));
           assert(photos.every(photo => photo.loaded && photo.fits),
             `Compact photos sit beside details, with a full-width strip below both: ${JSON.stringify(photos.filter(photo => !photo.loaded || !photo.fits))}`);
           const mileage = page.locator('.dn-vehicle-card__mobile-meta li:nth-child(2) span').first();
-          assert.equal(await page.locator('.dn-vehicle-card--listing .dn-vehicle-card__fact--spec').nth(1).locator('[aria-hidden="true"]').innerText(),
+          assert.equal(await page.locator('.dn-vehicle-card--listing .dn-vehicle-card__fact--transmission [aria-hidden="true"]').first().textContent(),
             locale === 'bg' ? 'Автомат' : 'Auto', 'Dense cards use a recognizable transmission label');
           assert.match(await mileage.innerText(), /\d.*(?:km|км)/,
             'Mobile mileage visibly retains formatting and its kilometer unit');
@@ -468,7 +487,7 @@ try {
             const editorFields = await editor.locator('input').evaluateAll(inputs => inputs.map(input => ({
               height: input.getBoundingClientRect().height, font: getComputedStyle(input).fontSize
             })));
-            assert(editorFields.every(input => input.height === 44 && input.font === '18px'));
+            assert(editorFields.every(input => input.height === 48 && input.font === '16px'), 'Service editors use the shared 48px/16px mobile overlay field role');
             await page.keyboard.press('Escape');
             const guide = page.locator('.dn-service-guide button[aria-haspopup=dialog]');
             await guide.scrollIntoViewIfNeeded();
@@ -534,7 +553,7 @@ try {
             size: getComputedStyle(input).fontSize, border: getComputedStyle(input).borderWidth,
             height: input.getBoundingClientRect().height, frame: getComputedStyle(input.closest('.dn-mobile-overlay-search')).padding
           }));
-          assert.deepEqual(articleStyles, { size: '18px', border: '0px', height: 44, frame: '0px 4px 0px 16px' },
+          assert.deepEqual(articleStyles, { size: '16px', border: '0px', height: 48, frame: '0px 4px 0px 16px' },
             'Article search uses the shared mobile overlay field');
           assert.equal(await page.locator('.dn-blog-card h2').first().evaluate(title => getComputedStyle(title).fontWeight), '600');
           await capture('articles');

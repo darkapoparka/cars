@@ -242,7 +242,7 @@ try {
     const homeRow = view => home.locator(`button[data-view=${view}]`);
     await homeTrigger.click();
     await page.waitForFunction(() => document.activeElement?.id === 'quick-search-input');
-    for (const view of ['make','body','price','fuel','mileage','year']) {
+    for (const view of ['make','model','body','price','fuel','mileage','year']) {
       await homeRow(view).click();
       await home.locator('.dn-quick-search__option').first().waitFor({ state: 'visible' });
       assert(await home.locator('.dn-quick-search__option').count(), 'Each Home control opens its own choices');
@@ -260,7 +260,8 @@ try {
     await home.getByRole('button', { name: 'RS Q8', exact: true }).click();
     await home.getByRole('button', { name: 'X6 M Sport', exact: true }).click();
     await home.locator('.dn-quick-search__mobile-footer .dn-mobile-overlay-action').click();
-    assert.match(await homeRow('make').innerText(), /Audi, BMW, RS Q8, X6 M Sport/);
+    assert.match(await homeRow('make').innerText(), /Audi, BMW/);
+    assert.match(await homeRow('model').innerText(), /RS Q8, X6 M Sport/);
     for (const [view, choice] of [['body', /^SUV$/], ['price', /100\s*000/], ['fuel', /^Бензин$/], ['mileage', /100\s*000/], ['year', /2019/]]) {
       await homeRow(view).click();
       await home.locator('.dn-quick-search__option').filter({ hasText: choice }).click();

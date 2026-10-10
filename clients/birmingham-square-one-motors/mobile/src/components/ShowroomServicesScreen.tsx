@@ -6,6 +6,7 @@ import { useSearchParams } from 'next/navigation';
 import { ChevronRight } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import { showroomPageContent } from '@/lib/showroom';
+import { serviceDetailHref } from '@/lib/showroom-service-details';
 import {
   serviceCategories,
   serviceCategoryHref,
@@ -29,6 +30,7 @@ import { Header } from './Header';
 import { Icon } from './Icon';
 import { ShowroomTabs } from './ShowroomTabs';
 import { ShowroomSearch } from './ShowroomSearch';
+import { ShowroomDesktopServiceType } from './ShowroomDesktopServiceType';
 import { ShowroomServiceSearchSheet } from './ShowroomServiceSearchSheet';
 import { ShowroomQuickPill, ShowroomQuickPills } from './ShowroomQuickPills';
 import { ShowroomServiceRequest } from './ShowroomServiceRequest';
@@ -133,71 +135,102 @@ export function ShowroomServicesScreen() {
         ))}
       </ShowroomQuickPills>
     ) : null;
+  const secondaryFilters = contextFilters || (
+    <ShowroomQuickPills label={t('Service filters')} inventoryDesktop compactOnPhone>
+      {quickFilters
+        .filter(({ value }) => value !== 'all')
+        .map(({ value, label }) => (
+          <ShowroomQuickPill
+            key={value}
+            inventoryDesktop
+            secondaryOnPhone
+            active={quickFilter === value}
+            aria-pressed={quickFilter === value}
+            aria-label={label}
+            onClick={() => selectServiceFilter(value)}
+          >
+            {label}
+          </ShowroomQuickPill>
+        ))}
+    </ShowroomQuickPills>
+  );
+  const phoneControls = (
+    <div data-showroom-controls {...stylex.props(s.tabs, s.phoneServiceFilters)}>
+      <div {...stylex.props(s.serviceCategoryControls)}>
+        <ShowroomTabs
+          label={t('Service category')}
+          tabs={serviceCategories}
+          selected={selected}
+          panelId="showroom-services"
+          idPrefix="service-category-"
+          layout="desktop-pills"
+          primary
+          onChange={selectCategory}
+        />
+      </div>
+      {secondaryFilters}
+    </div>
+  );
+  const activeContext =
+    selected === 'import' && country !== 'all'
+      ? importCountries.find(({ value }) => value === country)?.label
+      : selected === 'sell' && params.has('saleType')
+        ? saleEnquiryTypes.find(({ value }) => value === saleType)?.label
+        : selected === 'services' && quickFilter !== 'all'
+          ? quickFilters.find(({ value }) => value === quickFilter)?.label
+          : undefined;
+  function clearContext() {
+    if (selected === 'import') window.history.pushState(null, '', importCountryHref('all'));
+    else if (selected === 'sell') window.history.pushState(null, '', saleEnquiryHref('buyout'));
+    else selectServiceFilter(quickFilter);
+  }
   return (
     <>
       <ShowroomBanner>
         <Header home sticky={false} overHeroDesktop />
         <ShowroomPageHero
-          {...showroomPageContent.services}
-          description={undefined}
-          compact
-          stackedControls
+          title={showroomPageContent.services.title}
+          controlLayout="services"
+          filters={<div {...stylex.props(s.desktopServiceFilters)}>{secondaryFilters}</div>}
         >
-          <div {...stylex.props(s.serviceHeroControls)}>
-            <div {...stylex.props(s.desktopServiceControls)}>
-              <ShowroomTabs
-                label={t('Service category')}
-                tabs={serviceCategories}
-                selected={selected}
-                panelId="showroom-services"
-                idPrefix="service-hero-"
-                layout="hero"
-                onChange={selectCategory}
-              />
+          <div {...stylex.props(s.search, s.serviceSearch)}>
+            <div {...stylex.props(s.desktopServiceType)}>
+              <ShowroomDesktopServiceType selected={selected} onSelect={selectCategory} />
             </div>
-            <div {...stylex.props(s.search)}>
-              <ShowroomSearch
-                label={t('Search services')}
-                value={query}
-                onOpen={openSearch}
-                inBanner
-              />
-            </div>
+            <ShowroomSearch
+              label={t('Search services')}
+              value={query}
+              onOpen={openSearch}
+              inBanner
+              inControlRow
+            />
           </div>
         </ShowroomPageHero>
       </ShowroomBanner>
       <ShowroomDrawer>
-        <div data-showroom-controls {...stylex.props(s.tabs)}>
-          <div {...stylex.props(s.phoneServiceControls)}>
-            <ShowroomTabs
-              label={t('Service category')}
-              tabs={serviceCategories}
-              selected={selected}
-              panelId="showroom-services"
-              idPrefix="service-category-"
-              layout="desktop-pills"
-              primary
-              onChange={selectCategory}
-            />
-          </div>
-          {contextFilters || (
-            <ShowroomQuickPills label={t('Service filters')} inventoryDesktop compactOnPhone>
-              {quickFilters
-                .filter(({ value }) => value !== 'all')
-                .map(({ value, label }) => (
-                  <ShowroomQuickPill
-                    key={value}
-                    inventoryDesktop
-                    secondaryOnPhone
-                    active={quickFilter === value}
-                    aria-pressed={quickFilter === value}
-                    aria-label={label}
-                    onClick={() => selectServiceFilter(value)}
-                  >
-                    {label}
-                  </ShowroomQuickPill>
-                ))}
-            </ShowroomQuickPills>
+        {phoneControls}
+        <div data-desktop-applied-filters {...stylex.props(s.desktopAppliedFilters)}>
+          {query && (
+            <ShowroomQuickPill
+              inventoryDesktop
+              active
+              aria-label={t('Clear filters') + ': ' + query}
+              onClick={() => search('')}
+            >
+              {query}
+              <Icon name="close" size={14} />
+            </ShowroomQuickPill>
+          )}
+          {activeContext && (
+            <ShowroomQuickPill
+              inventoryDesktop
+              active
+              aria-label={t('Clear filters') + ': ' + t(activeContext)}
+              onClick={clearContext}
+            >
+              {t(activeContext)}
+              <Icon name="close" size={14} />
+            </ShowroomQuickPill>
           )}
         </div>
         <div
@@ -236,18 +269,8 @@ export function ShowroomServicesScreen() {
                   <Link
                     key={service.id}
                     data-showroom-service={service.id}
-                    href={
-                      service.details ||
-                      service.category === 'import' ||
-                      service.category === 'sell'
-                        ? serviceCategoryHref(service.category)
-                        : '/contact?service=' + service.id
-                    }
-                    aria-label={
-                      service.details
-                        ? t('View ') + t(service.title).toLowerCase()
-                        : t(service.action)
-                    }
+                    href={serviceDetailHref(service.id) || '/services'}
+                    aria-label={t('View ') + t(service.title).toLowerCase()}
                     aria-describedby={'showroom-service-' + service.id + '-copy'}
                     {...stylex.props(s.serviceCard, s.serviceCardLink)}
                   >
@@ -289,19 +312,9 @@ export function ShowroomServicesScreen() {
                     <span
                       data-service-card-cue
                       aria-hidden="true"
-                      {...stylex.props(
-                        s.serviceCardCue,
-                        (service.details ||
-                          service.category === 'import' ||
-                          service.category === 'sell') &&
-                          s.serviceCardViewCue,
-                      )}
+                      {...stylex.props(s.serviceCardCue, s.serviceCardViewCue)}
                     >
-                      {(service.details ||
-                        service.category === 'import' ||
-                        service.category === 'sell') && (
-                        <span {...stylex.props(s.serviceCardCueText)}>{t('View')}</span>
-                      )}
+                      <span {...stylex.props(s.serviceCardCueText)}>{t('View')}</span>
                       <ChevronRight
                         size={12}
                         strokeWidth={1.8}
