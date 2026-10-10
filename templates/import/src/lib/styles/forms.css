@@ -40,7 +40,7 @@
 }
 .site-field input::placeholder,
 .site-field textarea::placeholder {
-	color: var(--bc-muted);
+	color: var(--bc-control-placeholder, var(--bc-muted));
 	opacity: 1;
 }
 .site-field textarea {

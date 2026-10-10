@@ -8,15 +8,20 @@
 	import { browser } from '$app/environment';
 	import { onDestroy, onMount, tick, type Snippet } from 'svelte';
 	import X from '@lucide/svelte/icons/x';
+	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
 	import { Drawer } from 'vaul-svelte';
 	import MobileIconAction from '$lib/components/common/MobileIconAction.svelte';
+	import { keyboardInset } from '$lib/utils/keyboard-inset';
 
 	let {
 		open = $bindable(false),
 		title,
 		description,
 		closeLabel = nt('ui33'),
+		backLabel = nt('ui183'),
+		onback,
 		mode = 'sheet',
+		surface = 'default',
 		showHandle = mode === 'sheet',
 		showHeader = true,
 		contentClass = '',
@@ -30,7 +35,10 @@
 		title: string;
 		description?: string;
 		closeLabel?: string;
+		backLabel?: string;
+		onback?: () => void;
 		mode?: 'sheet' | 'full';
+		surface?: 'default' | 'selection';
 		showHandle?: boolean;
 		showHeader?: boolean;
 		contentClass?: string;
@@ -105,22 +113,17 @@
 	});
 </script>
 
-<Drawer.Root
-	bind:open
-	direction="bottom"
-	fixed={true}
-	{repositionInputs}
-	dismissible={mode !== 'full'}
->
+{#snippet sheetContent()}
 	<Drawer.Overlay class="bc-mobile-sheet__backdrop" />
 	<Drawer.Content
 		bind:ref={contentElement}
+		{@attach keyboardInset}
 		tabindex={-1}
 		onOpenAutoFocus={(event) => {
 			event.preventDefault();
 			contentElement?.focus({ preventScroll: true });
 		}}
-		class={`bc-mobile-sheet__content bc-mobile-sheet__content--${mode} ${contentClass}`.trim()}
+		class={`bc-mobile-sheet__content bc-mobile-sheet__content--${mode} ${surface === 'selection' ? `mobile-selection-surface ${mode === 'full' ? 'mobile-selection-surface--full' : ''}` : ''} ${contentClass}`.trim()}
 	>
 		{#if showHandle}<Drawer.Handle class="bc-mobile-sheet__handle" />{/if}
 		{#if showHeader}
@@ -128,6 +131,11 @@
 				class="bc-mobile-sheet__header"
 				class:bc-mobile-sheet__header--with-description={Boolean(description)}
 			>
+				{#if onback}
+					<MobileIconAction label={backLabel} onclick={onback}
+						><ArrowLeft size={22} aria-hidden="true" /></MobileIconAction
+					>
+				{/if}
 				<div>
 					<Drawer.Title class="bc-mobile-sheet__title">{title}</Drawer.Title>
 					{#if description}
@@ -147,6 +155,20 @@
 		<div class="bc-mobile-sheet__body" data-vaul-no-drag>{@render children()}</div>
 		{#if footer}<footer class="bc-mobile-sheet__footer">{@render footer()}</footer>{/if}
 	</Drawer.Content>
+{/snippet}
+
+<Drawer.Root
+	bind:open
+	direction="bottom"
+	fixed={true}
+	{repositionInputs}
+	dismissible={mode !== 'full'}
+>
+	{#if surface === 'selection'}
+		<Drawer.Portal>{@render sheetContent()}</Drawer.Portal>
+	{:else}
+		{@render sheetContent()}
+	{/if}
 </Drawer.Root>
 
 <style>
@@ -160,19 +182,19 @@
 	:global(.bc-mobile-sheet__content) {
 		--bc-control-height-standard: var(--bc-control-height-chip);
 		position: fixed;
-		right: 0;
-		bottom: var(--bc-kb-inset, 0px);
-		left: 0;
+		right: var(--bc-sheet-inset, 0px);
+		bottom: calc(var(--bc-kb-inset, 0px) + var(--bc-sheet-bottom, 0px));
+		left: var(--bc-sheet-inset, 0px);
 		z-index: 1401;
 		display: flex;
 		flex-direction: column;
-		width: min(100%, var(--bc-mobile-sheet-max-width));
+		width: min(calc(100% - 2 * var(--bc-sheet-inset, 0px)), var(--bc-mobile-sheet-max-width));
 		max-height: min(calc(92dvh - var(--bc-kb-inset, 0px)), var(--bc-mobile-sheet-max-height));
 		/* The body owns scrolling; focusing a field must not scroll the sheet shell. */
 		overflow: clip;
 		margin-inline: auto;
-		border-radius: var(--bc-radius-panel) var(--bc-radius-panel) 0 0;
-		background: var(--bc-bg-strong);
+		border-radius: var(--bc-sheet-radius, var(--bc-radius-panel) var(--bc-radius-panel) 0 0);
+		background: var(--bc-sheet-background, var(--bc-bg-strong));
 		color: var(--bc-ink);
 		outline: 0;
 		padding: var(--bc-space-2) var(--bc-mobile-gutter)
@@ -194,7 +216,7 @@
 		display: none;
 	}
 
-	:global(.bc-mobile-sheet__handle) {
+	:global(.bc-mobile-sheet__handle[data-vaul-handle]) {
 		position: relative;
 		width: 56px;
 		height: 22px;
@@ -203,7 +225,7 @@
 		background: transparent;
 	}
 
-	:global(.bc-mobile-sheet__handle)::after {
+	:global(.bc-mobile-sheet__handle[data-vaul-handle])::after {
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -220,9 +242,10 @@
 		z-index: 2;
 		display: flex;
 		min-height: var(--bc-mobile-sheet-header-height);
+		flex: 0 0 auto;
 		align-items: center;
 		justify-content: space-between;
-		gap: var(--bc-space-4);
+		gap: var(--bc-space-2);
 		padding: 0 0 var(--bc-space-2);
 	}
 
@@ -233,6 +256,7 @@
 
 	:global(.bc-mobile-sheet__header > div) {
 		min-width: 0;
+		flex: 1;
 	}
 
 	:global(.bc-mobile-sheet__title) {

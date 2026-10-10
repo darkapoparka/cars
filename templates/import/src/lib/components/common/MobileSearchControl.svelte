@@ -90,6 +90,7 @@
 		display: flex;
 		align-items: center;
 		align-self: stretch;
+		color: var(--bc-control-placeholder, var(--bc-ink));
 		cursor: pointer;
 	}
 	.mobile-search-control__label span {
@@ -102,7 +103,7 @@
 		width: 100%;
 	}
 	input::placeholder {
-		color: var(--bc-ink);
+		color: var(--bc-control-placeholder, var(--bc-ink));
 		opacity: 1;
 	}
 	input:focus-visible {
@@ -139,5 +140,11 @@
 		flex: 0 0 auto;
 		color: var(--bc-white);
 		stroke: var(--bc-white) !important;
+	}
+	@media (max-width: 767.98px) {
+		.mobile-search-control__action :global(svg) {
+			width: var(--bc-control-icon-size-compact);
+			height: var(--bc-control-icon-size-compact);
+		}
 	}
 </style>

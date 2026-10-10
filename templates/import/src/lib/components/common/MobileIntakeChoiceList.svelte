@@ -1,8 +1,8 @@
 <script lang="ts">
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
-	import Check from '@lucide/svelte/icons/check';
 	import Search from '@lucide/svelte/icons/search';
-	import { assetHref } from '$lib/utils/assets';
+	import MobileChoiceRow from './MobileChoiceRow.svelte';
+	import MobileIconAction from './MobileIconAction.svelte';
 	import { mobileIntakeCopy } from '$lib/content/mobile-intake';
 	import type { IntakeChoice } from '$lib/domain/vehicle-intake-options';
 
@@ -60,14 +60,9 @@
 
 <section class="mobile-intake-choice" aria-labelledby={`intake-choice-${id}`} data-intake-selector>
 	<header>
-		<button
-			class="mobile-intake-choice__back"
-			type="button"
-			aria-label={backLabel}
-			onclick={onback}
-		>
+		<MobileIconAction label={backLabel} onclick={onback}>
 			<ArrowLeft size={20} strokeWidth={2.2} aria-hidden="true" />
-		</button>
+		</MobileIconAction>
 		<h2 id={`intake-choice-${id}`} tabindex="-1" {@attach focusHeading}>{title}</h2>
 		<span class="mobile-intake-choice__spacer" aria-hidden="true"></span>
 	</header>
@@ -80,44 +75,38 @@
 					aria-label={searchLabel}
 					placeholder={searchLabel}
 					maxlength={maxLength}
+					enterkeyhint="done"
 					autocomplete="off"
 					onkeydown={(event) => {
 						// Filtering a selector must not submit its surrounding intake form.
-						if (event.key === 'Enter') event.preventDefault();
+						if (event.key === 'Enter') {
+							event.preventDefault();
+							event.currentTarget.blur();
+						}
 					}}
 					bind:value={query}
 				/>
 			</div>
 		{/if}
 		<div class="mobile-intake-choice__scroll">
-			<ul>
+			<ul class="mobile-choice-list">
 				{#if showCustom}
 					<li>
-						<button type="button" onclick={() => onselect(customValue)}>
-							<span>{mobileIntakeCopy[locale].useValue} “{customValue}”</span>
-						</button>
+						<MobileChoiceRow
+							label={`${mobileIntakeCopy[locale].useValue} “${customValue}”`}
+							onselect={() => onselect(customValue)}
+						/>
 					</li>
 				{/if}
 				{#each choices as option (option.value)}
 					<li>
-						<button
-							type="button"
-							aria-pressed={value === option.value}
-							onclick={() => onselect(option.value)}
-						>
-							{#if option.flag}<img
-									src={assetHref(option.flag)}
-									alt=""
-									width="24"
-									height="17"
-								/>{/if}
-							<span>{option.label}</span>
-							{#if value === option.value}<Check
-									size={20}
-									strokeWidth={2.3}
-									aria-hidden="true"
-								/>{/if}
-						</button>
+						<MobileChoiceRow
+							label={option.label}
+							selected={value === option.value}
+							image={option.flag}
+							imageKind="flag"
+							onselect={() => onselect(option.value)}
+						/>
 					</li>
 				{/each}
 			</ul>
@@ -135,7 +124,7 @@
 		height: 100%;
 		min-height: 0;
 		flex-direction: column;
-		background: var(--bc-bg-strong);
+		background: var(--bc-white);
 		color: var(--bc-ink);
 	}
 	header {
@@ -159,20 +148,9 @@
 		white-space: nowrap;
 		outline: 0;
 	}
-	.mobile-intake-choice__back,
 	.mobile-intake-choice__spacer {
 		width: var(--bc-control-height-standard);
 		height: var(--bc-control-height-standard);
-	}
-	.mobile-intake-choice__back {
-		display: grid;
-		place-items: center;
-		border: 0;
-		border-radius: 50%;
-		background: var(--bc-white);
-		color: inherit;
-		padding: 0;
-		cursor: pointer;
 	}
 	.mobile-intake-choice__body {
 		display: flex;
@@ -187,10 +165,10 @@
 		min-height: var(--bc-control-height-standard);
 		flex: 0 0 auto;
 		align-items: center;
-		gap: 10px;
-		border-radius: 10px;
-		background: var(--bc-white);
-		padding: 0 11px;
+		gap: var(--bc-space-2);
+		border-radius: var(--bc-radius-pill);
+		background: var(--bc-bg-strong);
+		padding: 0 var(--bc-space-4);
 	}
 	.mobile-intake-choice__search :global(svg) {
 		flex: 0 0 auto;
@@ -205,8 +183,9 @@
 		background: transparent !important;
 		box-shadow: none !important;
 		color: inherit;
-		font-size: var(--bc-text-control);
-		line-height: var(--bc-leading-control);
+		font-size: var(--bc-text-search);
+		font-weight: var(--bc-weight-body);
+		line-height: var(--bc-leading-search);
 		padding: 0 !important;
 		appearance: none;
 		outline: 0;
@@ -233,50 +212,21 @@
 		padding: 0;
 		list-style: none;
 	}
-	li + li {
-		border-top: 1px solid var(--bc-border);
-	}
-	li button {
-		display: flex;
-		width: 100%;
-		min-height: var(--bc-control-height-standard);
-		align-items: center;
-		gap: 12px;
-		border: 0;
-		background: transparent;
-		color: inherit;
-		font-size: var(--bc-text-control);
-		font-weight: var(--bc-weight-body);
-		line-height: var(--bc-leading-control);
-		text-align: left;
-		padding: 8px 12px;
-		cursor: pointer;
-	}
-	li button > span {
-		min-width: 0;
-		flex: 1;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-	}
-	li button > img,
-	li button :global(svg) {
-		flex: 0 0 auto;
-	}
-	li button > img {
-		border-radius: 2px;
-		object-fit: cover;
-	}
-	li button[aria-pressed='true'] {
-		font-weight: var(--bc-weight-emphasis);
-	}
-	button:focus-visible {
-		outline: 2px solid var(--bc-accent);
-		outline-offset: -2px;
-	}
+
 	p {
 		margin: 12px 0;
 		color: var(--bc-muted);
 		font-size: var(--bc-mobile-body);
+	}
+	@media (min-width: 768px) {
+		li + li {
+			border-top: 1px solid var(--bc-border);
+		}
+	}
+	@media (max-width: 767.98px) {
+		.mobile-intake-choice__search :global(svg) {
+			width: var(--bc-control-icon-size-standard);
+			height: var(--bc-control-icon-size-standard);
+		}
 	}
 </style>

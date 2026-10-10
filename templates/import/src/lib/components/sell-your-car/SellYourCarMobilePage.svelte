@@ -118,7 +118,12 @@
 						onclick={() => openWizard(false)}
 					>
 						<ScanLine size={21} strokeWidth={2.15} aria-hidden="true" />
-						<span class="service-input__text">{fieldValues.vin || nt('ui198')}</span>
+						<span
+							class="service-input__text"
+							class:service-input__text--placeholder={!fieldValues.vin}
+						>
+							{fieldValues.vin || nt('ui198')}
+						</span>
 						<span class="service-input__go" aria-hidden="true">
 							<ArrowRight size={21} strokeWidth={2.35} />
 						</span>

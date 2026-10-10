@@ -1183,9 +1183,10 @@
 			border: 0;
 			border-radius: var(--bc-radius-control);
 			padding: 6px var(--bc-space-3);
-			font-size: 1.0625rem;
+			font-size: var(--bc-text-cta);
 			font-weight: var(--bc-weight-action);
-			line-height: var(--bc-leading-label);
+			line-height: var(--bc-leading-cta);
+			white-space: nowrap;
 			text-align: center;
 			text-decoration: none;
 			cursor: pointer;
@@ -1202,6 +1203,14 @@
 		}
 
 		.daynight-mobile-pdp__cta :global(svg) {
+			width: var(--bc-control-icon-size-standard);
+			height: var(--bc-control-icon-size-standard);
+			flex-shrink: 0;
+		}
+		.daynight-mobile-pdp__inquiry-call :global(svg),
+		.daynight-mobile-pdp__inquiry-submit :global(svg) {
+			width: var(--bc-control-icon-size-standard);
+			height: var(--bc-control-icon-size-standard);
 			flex-shrink: 0;
 		}
 

@@ -233,6 +233,13 @@
 	--bc-control-height-standard: 44px;
 	--bc-control-height-primary: 48px;
 	--bc-control-height-hero: 56px;
+	/* Action glyphs occupy half their visible control height. */
+	--bc-control-icon-size-compact: calc(var(--bc-control-height-compact) / 2);
+	--bc-control-icon-size-secondary: calc(var(--bc-control-height-secondary) / 2);
+	--bc-control-icon-size-chip: calc(var(--bc-control-height-chip) / 2);
+	--bc-control-icon-size-standard: calc(var(--bc-control-height-standard) / 2);
+	--bc-control-icon-size-primary: calc(var(--bc-control-height-primary) / 2);
+	--bc-control-icon-size-hero: calc(var(--bc-control-height-hero) / 2);
 	--bc-mobile-entry-inset: 2px;
 	--bc-mobile-entry-gap: 10px;
 
@@ -270,15 +277,15 @@
 	--bc-mobile-content-max: 480px;
 	--bc-mobile-nav-icon-size: 22px;
 	--bc-mobile-icon-action-hit-size: var(--bc-control-height-standard);
-	/* Mobile icon buttons share the standard visible size and touch target. */
+	/* Breakpoints choose the painted size independently of the standard touch target. */
 	--bc-mobile-icon-action-surface-size: var(--bc-control-height-standard);
-	--bc-mobile-icon-action-glyph-size: 20px;
+	--bc-mobile-icon-action-glyph-size: var(--bc-control-icon-size-standard);
 	--bc-mobile-icon-action-stroke: 2;
 	--bc-mobile-sheet-max-width: 520px;
 	--bc-mobile-sheet-max-height: 780px;
 	--bc-mobile-sheet-header-height: 52px;
 	--bc-mobile-menu-row-height: var(--bc-control-height-primary);
-	--bc-mobile-menu-icon-size: 24px;
+	--bc-mobile-menu-icon-size: var(--bc-control-icon-size-primary);
 	--bc-mobile-menu-feature-height: 68px;
 	--bc-mobile-stat-height: 30px;
 	--bc-mobile-page-title: 28px;
@@ -445,6 +452,18 @@
 @media (max-width: 767.98px) {
 	:root {
 		--bc-control-height-chip: var(--bc-control-height-standard);
+		--bc-mobile-control-surface-size: var(--bc-control-height-secondary);
+		--bc-mobile-control-hit-size: var(--bc-control-height-standard);
+		--bc-mobile-control-inset: calc(
+			(var(--bc-mobile-control-hit-size) - var(--bc-mobile-control-surface-size)) / 2
+		);
+		--bc-mobile-control-glyph-size: var(--bc-control-icon-size-secondary);
+		--bc-mobile-icon-action-surface-size: var(--bc-mobile-control-surface-size);
+		--bc-mobile-icon-action-glyph-size: var(--bc-mobile-control-glyph-size);
+		--bc-text-quick-pill: var(--bc-text-control);
+		--bc-text-search: var(--bc-text-entry);
+		--bc-text-cta: var(--bc-text-control);
+		--bc-control-placeholder: var(--bc-copy);
 	}
 }
 

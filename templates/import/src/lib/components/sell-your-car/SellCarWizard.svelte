@@ -21,6 +21,7 @@
 	import { site } from '$lib/config/site';
 	import { onMount, tick } from 'svelte';
 	import Modal from '$lib/components/common/Modal.svelte';
+	import MobileIconAction from '$lib/components/common/MobileIconAction.svelte';
 	import MobileIntakeChoiceField from '$lib/components/common/MobileIntakeChoiceField.svelte';
 	import MobileIntakeChoiceList from '$lib/components/common/MobileIntakeChoiceList.svelte';
 	import { mobileIntakeCopy } from '$lib/content/mobile-intake';
@@ -399,14 +400,20 @@
 			/>
 		{:else}
 			{#if !dialog}<header class="sell-flow__header" data-intake-header>
-					<button
-						type="button"
-						class="sell-flow__close"
-						aria-label={nt('ui33')}
-						onclick={requestClose}
-					>
-						<X size={21} strokeWidth={2.3} />
-					</button>
+					{#if mobile}
+						<MobileIconAction label={nt('ui33')} onclick={requestClose}>
+							<X size={20} strokeWidth={2} aria-hidden="true" />
+						</MobileIconAction>
+					{:else}
+						<button
+							type="button"
+							class="sell-flow__close"
+							aria-label={nt('ui33')}
+							onclick={requestClose}
+						>
+							<X size={21} strokeWidth={2.3} />
+						</button>
+					{/if}
 					<div>
 						<span>{nt('ui165')} {step + 1} {nt('ui166')}</span>
 						<h2>{step === 0 ? nt('ui167') : nt('ui137')}</h2>
@@ -723,7 +730,7 @@
 	}
 	.sell-field input::placeholder,
 	.sell-field textarea::placeholder {
-		color: #8b95a1;
+		color: var(--bc-control-placeholder, #8b95a1);
 		opacity: 1;
 	}
 	.sell-field input:focus,
@@ -1008,7 +1015,7 @@
 	}
 	.sell-flow__back,
 	.sell-flow__next {
-		min-height: 46px;
+		min-height: var(--sell-flow-action-height, 46px);
 		border-radius: 11px;
 	}
 	.sell-flow__back {
@@ -1096,6 +1103,8 @@
 		}
 		.sell-flow__back :global(svg),
 		.sell-flow__next :global(svg) {
+			width: calc(var(--sell-flow-action-height, 46px) / 2);
+			height: calc(var(--sell-flow-action-height, 46px) / 2);
 			flex: 0 0 auto;
 		}
 	}

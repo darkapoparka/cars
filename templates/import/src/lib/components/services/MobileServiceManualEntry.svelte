@@ -10,7 +10,7 @@
 
 <button type="button" class="service-input service-manual-entry" {onclick}>
 	<CarFront size={24} strokeWidth={2.15} aria-hidden="true" />
-	<span class="service-input__text">{nt('ui250')}</span>
+	<span class="service-input__text service-input__text--placeholder">{nt('ui250')}</span>
 	<span class="service-input__go" aria-hidden="true">
 		<ArrowRight size={21} strokeWidth={2.35} />
 	</span>

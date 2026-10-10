@@ -102,7 +102,9 @@
 						onclick={() => openWizard('listing')}
 					>
 						<Link2 size={21} strokeWidth={2.15} aria-hidden="true" />
-						<span class="service-input__text">{vehicle || nt('ui213')}</span>
+						<span class="service-input__text" class:service-input__text--placeholder={!vehicle}>
+							{vehicle || nt('ui213')}
+						</span>
 						<span class="service-input__go" aria-hidden="true">
 							<ArrowRight size={21} strokeWidth={2.35} />
 						</span>

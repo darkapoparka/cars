@@ -40,6 +40,7 @@
 	import { importEntryComplete, type ImportIntent } from '$lib/domain/import-entry';
 	import { importEntryCopy } from '$lib/content/import-entry';
 	import Modal from '$lib/components/common/Modal.svelte';
+	import MobileIconAction from '$lib/components/common/MobileIconAction.svelte';
 	import { publicPageCopy } from '$lib/content/desktop-copy';
 	import {
 		emptyImportCriteria,
@@ -520,9 +521,15 @@
 						<p>{nt('ui165')} {step + 1} {nt('ui216')} {stepLabels.length}</p>
 						<h2>{stepLabels[step]}</h2>
 					</div>
-					<button type="button" aria-label={nt('ui33')} onclick={requestClose}>
-						<X size={20} strokeWidth={2.3} aria-hidden="true" />
-					</button>
+					{#if mobile}
+						<MobileIconAction label={nt('ui33')} onclick={requestClose}>
+							<X size={20} strokeWidth={2} aria-hidden="true" />
+						</MobileIconAction>
+					{:else}
+						<button type="button" aria-label={nt('ui33')} onclick={requestClose}>
+							<X size={20} strokeWidth={2.3} aria-hidden="true" />
+						</button>
+					{/if}
 				</header>{/if}
 
 			<div
@@ -1082,7 +1089,7 @@
 
 	.bc-import-wizard__fields input::placeholder,
 	.bc-import-wizard__fields textarea::placeholder {
-		color: var(--bc-muted);
+		color: var(--bc-control-placeholder, var(--bc-muted));
 		opacity: 1;
 	}
 
@@ -1433,7 +1440,7 @@
 	}
 	.bc-import-wizard__back,
 	.bc-import-wizard__next {
-		min-height: 46px;
+		min-height: var(--import-wizard-action-height, 46px);
 		border-radius: 11px;
 	}
 	.bc-import-wizard__back {
@@ -1510,6 +1517,26 @@
 		align-content: center;
 	}
 	@media (max-width: 767.98px) {
+		.bc-import-wizard--mobile .bc-import-wizard__header {
+			grid-template-columns:
+				var(--bc-mobile-icon-action-hit-size) minmax(0, 1fr)
+				var(--bc-mobile-icon-action-hit-size);
+		}
+		.bc-import-wizard--mobile .bc-import-wizard__header :global(.bc-mobile-icon-action) {
+			grid-column: 1;
+			grid-row: 1;
+		}
+		.bc-import-wizard--mobile .bc-import-wizard__header::after {
+			width: var(--bc-mobile-icon-action-hit-size);
+			height: var(--bc-mobile-icon-action-hit-size);
+		}
+		.bc-import-wizard--mobile .bc-import-wizard__chips button {
+			border-radius: var(--bc-radius-control);
+		}
+		.bc-import-wizard__header > button :global(svg) {
+			width: var(--bc-control-icon-size-secondary);
+			height: var(--bc-control-icon-size-secondary);
+		}
 		.bc-import-wizard__back,
 		.bc-import-wizard__next {
 			min-width: 0;
@@ -1523,6 +1550,8 @@
 		}
 		.bc-import-wizard__back :global(svg),
 		.bc-import-wizard__next :global(svg) {
+			width: calc(var(--import-wizard-action-height, 46px) / 2);
+			height: calc(var(--import-wizard-action-height, 46px) / 2);
 			flex: 0 0 auto;
 		}
 	}

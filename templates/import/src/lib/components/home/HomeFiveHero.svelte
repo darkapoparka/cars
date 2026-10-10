@@ -30,6 +30,7 @@
 	import MobileSearchControl from '$lib/components/common/MobileSearchControl.svelte';
 	import MobileIconAction from '$lib/components/common/MobileIconAction.svelte';
 	import HeroFilterDialog from './HeroFilterDialog.svelte';
+	import { keyboardInset } from '$lib/utils/keyboard-inset';
 
 	let { hero }: { hero?: HomeFiveHeroData } = $props();
 
@@ -513,6 +514,7 @@
 				role="dialog"
 				aria-modal="true"
 				aria-label={activeMobileAction.drawerTitle ?? mobileSearchDrawerTitle}
+				{@attach keyboardInset}
 			>
 				<header class="daynight-home-search-overlay__bar">
 					<span class="daynight-home-search-drawer__title"
@@ -613,7 +615,7 @@
 					{#if mobileMode === 'buy'}
 						<button
 							type="button"
-							class="daynight-mobile-home-quick__filter"
+							class="daynight-mobile-home-quick__filter mobile-quick-pill mobile-quick-pill--icon"
 							aria-haspopup="dialog"
 							aria-expanded={mobileSearchOpen || inventorySearchOpen}
 							aria-label={isEnglish ? 'Open filters' : nt('ui62')}
@@ -623,7 +625,7 @@
 						</button>
 					{/if}
 					{#each activeMobileQuickLinks as filter (filter.href)}
-						<a href={resolve(filter.href as '/')}>{filter.label}</a>
+						<a class="mobile-quick-pill" href={resolve(filter.href as '/')}>{filter.label}</a>
 					{/each}
 				</nav>
 			</div>
@@ -1558,8 +1560,8 @@
 		}
 
 		.daynight-mobile-hero__all :global(svg) {
-			width: 16px;
-			height: 16px;
+			width: var(--bc-control-icon-size-chip);
+			height: var(--bc-control-icon-size-chip);
 		}
 
 		:global(.daynight-home-location-sheet) {
@@ -1734,6 +1736,8 @@
 		}
 
 		.daynight-mobile-location-actions :global(svg) {
+			width: var(--bc-control-icon-size-primary);
+			height: var(--bc-control-icon-size-primary);
 			flex: 0 0 auto;
 			color: currentColor;
 			stroke: currentColor;
@@ -1746,6 +1750,7 @@
 			--bc-control-height-standard: var(--bc-control-height-chip);
 			position: fixed;
 			inset: 0;
+			bottom: var(--bc-kb-inset, 0px);
 			z-index: 1300;
 			display: grid;
 			grid-template-rows: max-content minmax(0, 1fr);
@@ -1826,6 +1831,11 @@
 			outline: 0;
 			padding: 0 !important;
 			appearance: none;
+		}
+		.daynight-home-search-drawer__field :global(svg) {
+			width: var(--bc-control-icon-size-standard);
+			height: var(--bc-control-icon-size-standard);
+			flex-shrink: 0;
 		}
 
 		.daynight-home-search-drawer__field input::-webkit-search-cancel-button {
@@ -2012,33 +2022,8 @@
 			display: none;
 		}
 
-		.daynight-mobile-home-quick__scroller a,
-		.daynight-mobile-home-quick__scroller button {
-			display: inline-flex;
+		.daynight-mobile-home-quick__scroller a {
 			min-width: max-content;
-			min-height: var(--bc-control-height-chip);
-			align-items: center;
-			justify-content: center;
-			gap: 8px;
-			flex: 0 0 auto;
-			padding: 0 12px;
-			border: 0;
-			border-radius: var(--bc-radius-control);
-			background: var(--bc-card-bg);
-			box-shadow: none;
-			color: var(--bc-ink);
-			cursor: pointer;
-			font-size: var(--bc-text-filter);
-			font-weight: var(--bc-weight-control);
-			line-height: var(--bc-leading-filter);
-			text-decoration: none;
-			white-space: nowrap;
-		}
-
-		.daynight-mobile-home-quick__scroller .daynight-mobile-home-quick__filter {
-			width: var(--bc-control-height-chip);
-			min-width: var(--bc-control-height-chip);
-			padding: 0;
 		}
 
 		.daynight-mobile-home-quick__scroller :is(button, a):focus-visible {

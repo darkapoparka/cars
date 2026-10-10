@@ -179,12 +179,15 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
-		color: var(--bc-muted);
+		color: var(--bc-ink);
+	}
+	.mobile-service-entry__field :global(.service-input__text--placeholder) {
+		color: var(--bc-control-placeholder, var(--bc-muted));
 	}
 	.mobile-service-entry__field :global(input::placeholder) {
 		font: inherit;
 		letter-spacing: inherit;
-		color: var(--bc-muted);
+		color: var(--bc-control-placeholder, var(--bc-muted));
 		opacity: 1;
 	}
 	.mobile-service-entry__field :global(svg) {
@@ -321,6 +324,17 @@
 		display: grid;
 		gap: var(--bc-space-3);
 	}
+	@media (max-width: 767.98px) {
+		.mobile-service-entry__field :global(.service-input > svg) {
+			width: var(--bc-control-icon-size-primary);
+			height: var(--bc-control-icon-size-primary);
+		}
+		.mobile-service-entry__field :global(.service-input button svg),
+		.mobile-service-entry__field :global(.service-input__go svg) {
+			width: var(--bc-control-icon-size-compact);
+			height: var(--bc-control-icon-size-compact);
+		}
+	}
 	@media (max-height: 620px) {
 		header h1 {
 			margin-bottom: var(--bc-space-3);
@@ -329,6 +343,11 @@
 	.mobile-service-entry__help:focus-visible {
 		outline: 2px solid var(--bc-accent);
 		outline-offset: 3px;
+	}
+	.mobile-service-entry__help :global(svg) {
+		width: var(--bc-mobile-control-glyph-size);
+		height: var(--bc-mobile-control-glyph-size);
+		flex: none;
 	}
 	:global(.mobile-service-info-sheet.bc-mobile-sheet__content) {
 		background: var(--bc-bg-strong);
