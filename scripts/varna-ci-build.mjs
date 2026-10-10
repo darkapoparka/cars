@@ -8,6 +8,7 @@ import {assertExtendedVariantSources,applySixVariantMounts,sealSixVariantBuild} 
 import {legacyDetailArtifact} from './publishing/legacy-detail-routes.mjs';
 import {applyDealerShare} from './publishing/dealer-share.mjs';
 import {applySharedMedia} from './publishing/shared-media.mjs';
+import {specializeDealerReferencePackage} from './publishing/dealer-reference-package.mjs';
 import {applyVercelAssets,planVercelAssets,PUBLIC_ROOTS,SERVICE_NAMES} from './publishing/vercel-asset-plan.mjs';
 export const FAMILIES=['auto-best','modern','import','app','mobile','karento-best'];
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex'),encode=value=>Buffer.from(JSON.stringify(value,null,2)+'\n');
@@ -32,6 +33,8 @@ export async function assemble(slug,sourceCommit){
  const profile=loadDealerProfile(source,slug),logoPath='branding/logo-on-light.png';
  manifest.shareIdentity={name:profile.business.name,publicOrigin:'https://'+manifest.repository.split('/')[1]+'.vercel.app',description:profile.business.name+' — демонстрационен автомобилен каталог. Наличността и условията се потвърждават с търговеца.',logo:{sourcePath:logoPath,sha256:hash(files.get(logoPath)),faviconSourcePath:'assets/app-icon.png',faviconSha256:hash(files.get('assets/app-icon.png'))}};
  files=applySixVariantMounts(files,manifest,{provider:'vercel'});
+ const referenceSpecialization=specializeDealerReferencePackage(files,manifest);
+ writeJson(path.join(ROOT,'runtime/varna-ci-evidence',slug,'reference-specialization.json'),referenceSpecialization);
  await applyDealerShare(files,manifest,{sharp:dependency('sharp'),typescript:dependency('typescript')});
  files.set('dealer.json',encode(manifest));files.set('vercel.json',encode(vercelConfiguration(manifest,legacyDetailArtifact(files,manifest))));
  for(const helper of ['fix-svelte-service-output.mjs','build-native-service.mjs','build-app-service.mjs','prune-shared-media.mjs','storage-assets.mjs','vercel-service-assets.mjs','vercel-output-budget.mjs'])files.set('scripts/'+helper,fs.readFileSync(path.join(ROOT,'scripts/publishing',helper)));
