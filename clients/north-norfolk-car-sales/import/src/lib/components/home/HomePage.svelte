@@ -1,5 +1,10 @@
 <script lang="ts">
-	import { homeBrowseArtwork, homeDiscoveryCopy } from '$lib/content/home-discovery';
+	import {
+		homeBrowseArtwork,
+		homeBrowseCountLabel,
+		homeDiscoveryCopy,
+		homeMobileTypeArtwork
+	} from '$lib/content/home-discovery';
 	import { assetHref } from '$lib/utils/assets';
 	import { MediaQuery } from 'svelte/reactivity';
 	import type { homePageData } from '$lib/server/home';
@@ -50,7 +55,7 @@
 	</div>
 	<ActionBand copy={data.copy} variant="ownership" />
 	<section class="site-section site-container site-stack">
-		<h2 class="site-heading home-section-title">
+		<h2 class="site-heading home-section-title home-browse-heading">
 			{mobile.current ? copy.mobileMakes : copy.browseMakes}
 		</h2>
 		<div class="home-brands">
@@ -64,7 +69,11 @@
 				<a
 					class:home-mobile-browse={brand.allTile}
 					class:home-browse-all={brand.allTile}
-					aria-label={brand.allTile ? brand.name : undefined}
+					aria-label={mobile.current
+						? `${brand.name}: ${brand.count}`
+						: brand.allTile
+							? brand.name
+							: undefined}
 					href={href(brand.href ?? '/inventory?brand=' + encodeURIComponent(brand.query))}
 					>{#if brand.allTile}<span class="home-browse-icon"
 							><ArrowRight size={32} aria-hidden="true" /></span
@@ -79,12 +88,15 @@
 						>{#if brand.allTile}<span class="browse-label-full">{brand.name}</span><span
 								class="browse-label-short">{copy.all}</span
 							>{:else}{brand.name}{/if}</strong
-					><span>{brand.count}</span></a
+					><span class="home-browse-desktop">{brand.count}</span><span
+						class="home-browse-mobile home-browse-count"
+						>{homeBrowseCountLabel(data.locale, brand.stockCount, brand.allTile)}</span
+					></a
 				>{/each}
 		</div>
 	</section>
 	<section class="site-section site-container site-stack">
-		<h2 class="site-heading home-section-title">
+		<h2 class="site-heading home-section-title home-browse-heading">
 			{mobile.current ? copy.mobileTypes : copy.browseTypes}
 		</h2>
 		<div class="home-types">
@@ -98,16 +110,21 @@
 				<a
 					class:home-mobile-browse={type.allTile}
 					class:home-browse-all={!type.image}
+					aria-label={mobile.current
+						? `${type.label}: ${homeBrowseCountLabel(data.locale, type.stockCount, type.allTile)}`
+						: undefined}
 					href={href(type.href)}
-					>{#if type.image}<img
-							src={assetHref(type.image)}
-							alt=""
-							width="360"
-							height="200"
-							loading="lazy"
-						/>{:else}<span class="home-browse-icon"
+					>{#if type.image}<picture class="home-type-artwork">
+							<source
+								media="(max-width: 767.98px)"
+								srcset={assetHref(homeMobileTypeArtwork[type.bodyType] ?? type.image)}
+							/>
+							<img src={assetHref(type.image)} alt="" width="360" height="200" loading="lazy" />
+						</picture>{:else}<span class="home-browse-icon"
 							><ArrowRight size={36} aria-hidden="true" /></span
-						>{/if}<strong>{type.label}</strong></a
+						>{/if}<strong>{type.label}</strong><span class="home-browse-mobile home-browse-count"
+						>{homeBrowseCountLabel(data.locale, type.stockCount, type.allTile)}</span
+					></a
 				>{/each}
 		</div>
 	</section>
@@ -156,6 +173,7 @@
 
 <style>
 	.home-mobile-entry,
+	.home-browse-mobile,
 	.home-brands .browse-label-short {
 		display: none;
 	}
@@ -218,6 +236,12 @@
 		width: 100%;
 		height: 125px;
 		object-fit: contain;
+	}
+	.home-type-artwork {
+		display: contents;
+	}
+	.home-type-artwork source {
+		display: none;
 	}
 	.home-reviews,
 	.home-news {
@@ -286,17 +310,26 @@
 		}
 		.home-brands {
 			grid-template-columns: repeat(3, minmax(0, 1fr));
-			gap: 10px;
+			gap: var(--bc-space-2);
 		}
 		.home-brands a {
-			min-height: 108px;
-			padding: 10px 8px;
+			min-height: calc(var(--bc-space-8) * 3 + var(--bc-space-5));
+			padding: var(--bc-space-3) var(--bc-space-2);
 			align-content: center;
-			gap: 6px;
+			gap: var(--bc-space-1);
+		}
+		.home-brands strong {
+			max-width: 100%;
+			font: var(--bc-weight-control) var(--bc-mobile-label)/var(--bc-mobile-label-leading)
+				var(--bc-font-body);
+			white-space: nowrap;
+		}
+		.home-browse-heading {
+			font: var(--bc-mobile-home-section-font);
 		}
 		.home-brands img {
-			height: 56px;
-			width: 88px;
+			height: var(--bc-control-height-standard);
+			width: calc(var(--bc-space-8) * 2);
 			/* Balance the supplied artwork without changing the label baseline or tile size. */
 			transform: scale(var(--brand-optical-scale, 1));
 		}
@@ -320,11 +353,41 @@
 		.home-brands img[data-brand='Hyundai'] {
 			--brand-optical-scale: 1.12;
 		}
-		.home-types img {
-			height: 68px;
+		.home-types {
+			gap: var(--bc-space-3);
 		}
-		.home-brands span {
+		.home-types a {
+			padding: var(--bc-space-3);
+			gap: var(--bc-space-1);
+			align-content: center;
+		}
+		.home-type-artwork {
+			display: grid;
+			place-items: center;
+			width: 100%;
+			height: calc(var(--bc-space-8) + var(--bc-space-6));
+		}
+		.home-type-artwork img {
+			min-width: 0;
+			min-height: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.home-types strong {
+			font: var(--bc-weight-heading) var(--bc-mobile-card-title)/var(--bc-mobile-card-title-leading)
+				var(--bc-font-body);
+		}
+		.home-brands .home-browse-desktop {
 			display: none;
+		}
+		.home-brands a > .home-browse-count,
+		.home-types .home-browse-count {
+			display: block;
+			color: var(--bc-muted);
+			font: var(--bc-weight-body) var(--bc-mobile-meta)/var(--bc-mobile-meta-leading)
+				var(--bc-font-body);
+			white-space: nowrap;
+			font-variant-numeric: tabular-nums;
 		}
 		.home-reviews,
 		.home-news {
@@ -389,18 +452,21 @@
 			border-color: var(--bc-border);
 			color: var(--bc-ink);
 		}
-		.home-brands .home-browse-all > span {
+		.home-brands .home-browse-all > .home-browse-icon {
 			color: var(--bc-ink);
+		}
+		.home-brands a.home-browse-all > .home-browse-count {
+			color: var(--bc-muted);
 		}
 		.home-brands img {
 			max-width: 100%;
 		}
 		.home-brands .home-browse-icon {
 			display: grid;
-			height: 56px;
+			height: var(--bc-control-height-standard);
 		}
 		.home-types .home-browse-icon {
-			height: 68px;
+			height: calc(var(--bc-space-8) + var(--bc-space-6));
 		}
 	}
 </style>

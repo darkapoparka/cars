@@ -6,6 +6,7 @@
 @import './forms.css';
 @import './daynight.tailwind.css';
 @import './ui-theme.css';
+@import './mobile-controls.css';
 @import 'tw-animate-css';
 @custom-variant dark (&:is(.dark *));
 

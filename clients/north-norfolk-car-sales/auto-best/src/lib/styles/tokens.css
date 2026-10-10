@@ -89,6 +89,24 @@
   --dn-radius: 16px;
   --dn-radius-lg: 20px;
   --dn-radius-sheet: 24px;
+  /* Corner roles retain the reviewed desktop geometry. */
+  --dn-radius-focus: 2px;
+  --dn-radius-badge: 4px;
+  --dn-radius-media: 8px;
+  --dn-radius-compact: 14px;
+  --dn-radius-panel: 18px;
+  --dn-radius-dialog: 22px;
+  --dn-radius-footer: 40px;
+  --dn-radius-circle: 50%;
+  --dn-radius-locale-control: 0.65rem;
+  --dn-radius-card: var(--dn-radius);
+  --dn-radius-card-inset: calc(var(--dn-radius-card) - 1px);
+  --dn-radius-mobile-card: 12px;
+  --dn-radius-entry-card: var(--dn-radius-lg);
+  --dn-radius-content-card: var(--dn-radius-lg);
+  --dn-radius-service-card: var(--dn-radius-sheet);
+  --dn-radius-discovery-card: var(--dn-radius-compact);
+  --dn-radius-showroom: var(--dn-radius-panel);
   --dn-route-hero-compact: 520px;
   --dn-mobile-entry-hero-height: 252px;
   --dn-route-hero-controls: 560px;
@@ -176,8 +194,8 @@
   --dn-mobile-card-title-font: var(--dn-weight-medium) var(--dn-text-body) / var(--dn-leading-control) var(--dn-font);
   --dn-mobile-card-meta-font: var(--dn-weight-regular) var(--dn-text-caption) / var(--dn-leading-meta) var(--dn-font);
   --dn-mobile-card-spec-font: var(--dn-weight-medium) var(--dn-text-caption) / var(--dn-leading-badge) var(--dn-font);
-  --dn-mobile-card-price-font: var(--dn-weight-semibold) var(--dn-text-subheading) / var(--dn-leading-heading) var(--dn-font);
-  --dn-mobile-card-price-compact-font: var(--dn-mobile-card-price-font);
+  --dn-mobile-card-price-font: var(--dn-weight-semibold) var(--dn-text-card) / var(--dn-leading-heading) var(--dn-font);
+  --dn-mobile-card-price-compact-font: var(--dn-weight-semibold) var(--dn-text-lead) / var(--dn-leading-heading) var(--dn-font);
   --dn-mobile-listing-photo-max-width: 156px;
   --dn-mobile-listing-photo-min-height: 88px;
 

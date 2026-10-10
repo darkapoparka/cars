@@ -70,7 +70,7 @@
 <section class="dn-listing-filter-wrap" data-slot="listing-filters" aria-label={i18n.t("m_6f8428de4166")}>
   <div class="container">
     <div class="dn-listing-filter">
-      <div class="dn-listing-desktop-discovery"><VehicleDiscoveryForm {filters} {openFilters} {filtersOpen} {onDraftChange} showFilterAction={false} modalFacets /></div>
+      <div class="dn-listing-desktop-discovery"><VehicleDiscoveryForm {filters} {resultCount} {openFilters} {filtersOpen} {onDraftChange} showFilterAction={false} modalFacets /></div>
       <QuickFilterSheet mode="url" id="dn-listing-sort-sheet">
       {#snippet children(openSort, sortOpen)}
       <form class="dn-listing-mobile-form" method="GET" action={i18n.href(resolve('/cars'))} onformdata={cleanFormData} oninput={updateDraft} onchange={updateDraft}>
@@ -131,7 +131,7 @@
       {/snippet}
       </QuickFilterSheet>
 
-      <div class="dn-listing-filter__quick-row">
+      <div class="dn-listing-filter__quick-row dn-listing-filter__mobile-applied">
       <QuickFilterSheet mode="url">
       {#snippet children(openQuick, quickOpen)}
       <nav class={['dn-listing-filter__quick', { 'dn-listing-filter__quick--active': activeChips.length > 0 }]} aria-label={i18n.t("m_dea1661dff21")}>
@@ -166,7 +166,7 @@
     --dn-discovery-padding: 18px;
     --dn-discovery-gap: 14px;
     --dn-discovery-search-height: 60px;
-    --dn-discovery-radius: 16px;
+    --dn-discovery-radius: var(--dn-radius);
     position: absolute;
     z-index: 4;
     top: var(--dn-route-hero-control-top);
@@ -178,7 +178,7 @@
   .dn-listing-filter {
     position: relative;
     overflow: hidden;
-    border-radius: 16px;
+    border-radius: var(--dn-radius);
     background: #fff;
     box-shadow: 0 18px 44px rgba(18, 25, 38, 0.18);
   }
@@ -296,7 +296,7 @@
       min-height: 60px;
       padding: 5px 5px 5px 18px;
       border: 1px solid #dfe2e6;
-      border-radius: 14px;
+      border-radius: var(--dn-radius-compact);
       background: #f5f6f7;
       color: #6d737d;
     }
@@ -341,6 +341,7 @@
   }
 
   @media (min-width: 992px) {
+    .dn-listing-filter__mobile-applied { display: none; }
     .dn-listing-filter-wrap { --dn-discovery-width: min(var(--dn-hero-center-width), calc(100% - 48px)); top: var(--dn-route-hero-control-top); margin-top: 0; }
     .dn-listing-filter-wrap > .container { width: var(--dn-discovery-width); }
     .dn-listing-filter { border-radius: var(--dn-discovery-radius); box-shadow: 0 12px 32px rgb(32 35 41 / 6%); }

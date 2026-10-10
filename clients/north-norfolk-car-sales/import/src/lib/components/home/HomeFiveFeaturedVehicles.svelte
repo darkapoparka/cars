@@ -1043,14 +1043,12 @@
 			display: none;
 		}
 
-		.daynight-mobile-title-swap {
+		.daynight-newest-heading .daynight-mobile-title-swap {
 			width: auto;
 			margin: 0;
-			color: #ffffff;
-			font-size: 28px;
-			font-weight: 650;
-			letter-spacing: -0.02em;
-			line-height: 34px;
+			color: var(--bc-white);
+			font: var(--bc-mobile-home-section-font) !important;
+			letter-spacing: var(--bc-tracking-tight);
 			text-align: left;
 			white-space: normal;
 		}

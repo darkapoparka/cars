@@ -113,7 +113,7 @@
 
 <style>
   :global(body:has(.dn-quick-sheet.standalone[open])) { position: fixed; top: var(--dn-quick-scroll, 0); width: 100%; overflow: hidden; }
-  .dn-quick-sheet { width: min(480px, calc(100% - 32px)); max-width: none; max-height: calc(100dvh - 32px); margin: auto; padding: 0; overflow: hidden; border: 0; border-radius: 20px; background: var(--dn-white); color: var(--dn-ink); }
+  .dn-quick-sheet { width: min(480px, calc(100% - 32px)); max-width: none; max-height: calc(100dvh - 32px); margin: auto; padding: 0; overflow: hidden; border: 0; border-radius: var(--dn-radius-lg); background: var(--dn-white); color: var(--dn-ink); }
   .dn-quick-sheet::backdrop { background: rgb(8 10 14 / .35); }
   form { display: flex; flex-direction: column; max-height: calc(100dvh - 32px); margin: 0; }
   .searchable form { height: min(600px, calc(100dvh - 32px)); }

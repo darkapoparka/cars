@@ -47,6 +47,7 @@ test('older dealer configurations keep their own localized fields when compact v
 test('compact import controls retain complete native EN/BG copy', () => {
   const expected = {
     'action.importShort': ['Import', 'Внос'],
+    'action.requestShort': ['Request', 'Заяви'],
     'action.requestImport': ['Request import', 'Заяви внос'],
     'action.requestValuation': ['Request valuation', 'Заяви оценка'],
     m_0dc54277231e: ['Import guide (demo)', 'За вноса (демо)'],
@@ -63,7 +64,13 @@ test('primary actions use direct native keys while demo copy stays descriptive',
   const guide = read('src/lib/components/company/ImportHowItWorks.svelte');
   for (const key of ['m_0dc54277231e', 'm_15f4f5be4ade', 'm_ed51f4a53cda'])
     assert.ok(usesNativeKey(guide, key), key);
-  assert.ok(usesNativeKey(read('src/lib/components/home/SearchBox.svelte'), 'action.importShort'));
-  assert.ok(usesNativeKey(read('src/lib/components/company/VehicleEnquiry.svelte'), 'action.requestImport'));
-  assert.ok(usesNativeKey(read('src/lib/components/company/TradeInEnquiry.svelte'), 'action.requestValuation'));
+  for (const [path, contextKey] of [
+    ['src/lib/components/home/SearchBox.svelte', 'action.requestImport'],
+    ['src/lib/components/company/VehicleEnquiry.svelte', 'action.requestImport'],
+    ['src/lib/components/company/TradeInEnquiry.svelte', 'action.requestValuation']
+  ]) {
+    const source = read(path);
+    assert.ok(usesNativeKey(source, 'action.requestShort'), `${path}: compact label`);
+    assert.ok(usesNativeKey(source, contextKey), `${path}: complete request context`);
+  }
 });
