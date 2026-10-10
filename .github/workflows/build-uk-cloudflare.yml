@@ -22,7 +22,7 @@ on:
         description: Comma-separated manual qualification runs whose exact passed receipts cover all six families
         required: true
         type: string
-        default: '38041380562,38042594609,38043025503'
+        default: '38084379432'
 permissions:
   contents: read
   actions: read

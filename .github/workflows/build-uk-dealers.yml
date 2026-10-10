@@ -2,6 +2,12 @@ name: Build UK dealer sources
 on:
   workflow_dispatch:
     inputs:
+      operation:
+        description: Create new sources, review an existing latest-template refresh, or apply exact reviewed refresh resolutions
+        required: true
+        type: choice
+        default: refresh-plan
+        options: [create, refresh-plan, refresh-apply]
       dealer:
         description: Create the approved six-family canonical sources; builds and Cloudflare deployment remain separate gates
         required: true
@@ -39,6 +45,7 @@ jobs:
           sparse-checkout: |
             scripts
             leads/uk-2026-10-10-briefs
+            leads/uk-2026-10-10-build-manifest.json
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: '22.23.2'
@@ -59,7 +66,7 @@ jobs:
       contents: write
     strategy:
       fail-fast: false
-      max-parallel: 1
+      max-parallel: ${{ inputs.operation == 'refresh-plan' && 2 || 1 }}
       matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
     name: Create ${{ matrix.slug }}
     steps:
@@ -93,19 +100,29 @@ jobs:
             /clients/*/dealer.json
             /clients/*/.client/project.json
             /clients/*/.client/uk-source-creation.json
+            /clients/${{ matrix.slug }}/
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: '22.23.2'
       - name: Copy, personalize, verify seals and push only this canonical dealer
         env:
           UK_DEALER_SLUG: ${{ matrix.slug }}
-        run: node scripts/build-uk-dealers.mjs create "$UK_DEALER_SLUG"
+          UK_OPERATION: ${{ inputs.operation }}
+        run: |
+          case "$UK_OPERATION" in
+            create) node scripts/build-uk-dealers.mjs create "$UK_DEALER_SLUG" ;;
+            refresh-plan) node scripts/refresh-uk-dealers.mjs plan "$UK_DEALER_SLUG" ;;
+            refresh-apply) node scripts/refresh-uk-dealers.mjs apply "$UK_DEALER_SLUG" ;;
+            *) exit 1 ;;
+          esac
       - name: Retain source creation and commit evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: uk-source-${{ matrix.slug }}-${{ github.run_id }}-${{ github.run_attempt }}
-          path: runtime/uk-dealer-builds/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/
+          path: |
+            runtime/uk-dealer-builds/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/
+            runtime/uk-refresh-reports/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/
           if-no-files-found: warn
           include-hidden-files: true
           retention-days: 7

@@ -212,6 +212,16 @@ function splitPrefixedTrees(files, keys) {
   )]));
 }
 
+export function registeredDeliveryOrigin(record, manifest) {
+  if (!record || record.repository !== manifest.repository) throw new Error('Six-design delivery needs the exact registered repository and public origin');
+  const value = record.delivery?.url || (record.delivery?.provider === 'cloudflare' ? record.delivery.configuredPublicOrigin : null);
+  if (!value) throw new Error('Six-design delivery needs the exact registered repository and public origin');
+  const origin = new URL(value);
+  if (origin.protocol !== 'https:' || origin.username || origin.password || origin.pathname !== '/' || origin.search || origin.hash) throw new Error('The registered dealer delivery must be a complete HTTPS origin');
+  if (record.delivery?.provider === 'cloudflare' && origin.origin !== manifest.shareIdentity?.publicOrigin) throw new Error('Configured Cloudflare origin differs from the retained dealer identity');
+  return origin;
+}
+
 export function targetManifestForUpgrade({ dealerRoot, manifest, pins, targetVariants = manifest.variants, carsRoot }) {
   const next = updateManifestPins(manifest, pins);
   next.variants = structuredClone(targetVariants);
@@ -221,14 +231,12 @@ export function targetManifestForUpgrade({ dealerRoot, manifest, pins, targetVar
     if (carsRoot) {
       const registryFile = path.join(carsRoot,'docs/DEPLOYMENT-INVENTORY.json');
       const record = fs.existsSync(registryFile) ? readJson(registryFile).dealers?.find(row=>row.slug===manifest.slug) : null;
-      if (!record || record.repository !== manifest.repository || !record.delivery?.url) throw new Error('Six-design delivery needs the exact registered repository and public origin');
+      const origin = registeredDeliveryOrigin(record, manifest);
       const profile = loadDealerProfile(dealerRoot,manifest.slug),asset = profile.logoContract?.assets.onLight;
       if (!asset) throw new Error('Six-design sharing needs the reviewed dealer logo contract');
-      const origin = new URL(record.delivery.url);
-      if (origin.protocol!=='https:' || origin.username || origin.password || origin.pathname!=='/' || origin.search || origin.hash) throw new Error('The registered dealer delivery must be a complete HTTPS origin');
-      next.shareIdentity={name:profile.business.name,publicOrigin:origin.origin,
+      next.shareIdentity={...(manifest.shareIdentity || {}),name:profile.business.name,publicOrigin:origin.origin,
         description:profile.business.previewNotice,
-        logo:{sourcePath:asset.publicPath.slice(1),sha256:asset.sha256}};
+        logo:{...(manifest.shareIdentity?.logo || {}),sourcePath:asset.publicPath.slice(1),sha256:asset.sha256}};
       next.extraAssets=[...new Set([...(next.extraAssets || []),'dealer-brand','branding'])];
     }
   }
