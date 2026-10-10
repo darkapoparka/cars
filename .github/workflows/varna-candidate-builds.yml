@@ -5,9 +5,12 @@ on:
     paths: [leads/varna/candidates/build-request.json]
 permissions:
   contents: read
+defaults:
+  run:
+    shell: bash
 concurrency:
   group: cars-varna-candidate-builds
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   plan:
     if: github.repository == 'darkapoparka/cars' && github.ref == 'refs/heads/varna'

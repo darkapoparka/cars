@@ -1,19 +1,12 @@
 {
   "schemaVersion": 1,
-  "request": "remaining-nine-01",
-  "sourceCandidateCommit": "0ee5393e7fb5feb2238d18518f2bbcf7112443cd",
-  "successfulPilotRun": 38070168949,
+  "request": "asset-diagnostic-01",
+  "sourceCandidateCommit": "74f598df7c8a898d01d7c6e370487db4688da065",
   "dealers": [
-    "kolarov-cars",
-    "dynamic-auto-varna",
-    "car-point-trade-varna",
-    "pm-select-automotive",
-    "dream-drive-varna",
-    "prime-auto-varna",
-    "autoroad-varna",
-    "autofest-varna",
-    "city-cars-varna"
+    "dm-auto-varna"
   ],
-  "families": ["auto-best", "modern", "import", "app", "mobile", "karento-best"],
-  "scope": "Framework compile and derived candidate assembly only; no publication, production access or release approval."
+  "families": [
+    "app"
+  ],
+  "scope": "Correct the previous false-green CI status: the pilot did not compile. Diagnose the retained asset excess with fail-closed shell handling; no release, deployment or outreach."
 }

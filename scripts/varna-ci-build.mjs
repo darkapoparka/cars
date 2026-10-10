@@ -8,7 +8,7 @@ import {assertExtendedVariantSources,applySixVariantMounts,sealSixVariantBuild} 
 import {legacyDetailArtifact} from './publishing/legacy-detail-routes.mjs';
 import {applyDealerShare} from './publishing/dealer-share.mjs';
 import {applySharedMedia} from './publishing/shared-media.mjs';
-import {applyVercelAssets,SERVICE_NAMES} from './publishing/vercel-asset-plan.mjs';
+import {applyVercelAssets,planVercelAssets,PUBLIC_ROOTS,SERVICE_NAMES} from './publishing/vercel-asset-plan.mjs';
 export const FAMILIES=['auto-best','modern','import','app','mobile','karento-best'];
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex'),encode=value=>Buffer.from(JSON.stringify(value,null,2)+'\n');
 const read=file=>JSON.parse(fs.readFileSync(file,'utf8'));
@@ -40,7 +40,12 @@ export async function assemble(slug,sourceCommit){
  const switcher=fs.readFileSync(path.join(ROOT,'scripts/publishing/preview-switcher.js'),'utf8').replace('__CARS_SWITCHER_CONFIG__',()=>JSON.stringify(config).replace(/</g,'\\u003c'));
  files.set('auto-best/static/preview-switcher.js',Buffer.from(switcher));
  applySharedMedia(files,read(path.join(ROOT,'scripts/publishing/shared-media-catalog.json')));
- const assetPlan=applyVercelAssets(files);sealSixVariantBuild(files,manifest,{provider:'vercel'});
+ let assetPlan;try{assetPlan=applyVercelAssets(files);}catch(error){
+ const diagnosis=planVercelAssets(files,{maxPublicBytes:2*1024**3,maxRoutes:10000});
+ const removed=new Set(diagnosis.removals.map(e=>e.sourcePath));const ext=new Set(JSON.parse(files.get('.cars-shared-media.json').toString()).entries.map(e=>PUBLIC_ROOTS[e.service]+e.relative));
+ const retained=[...files].filter(([name])=>Object.values(PUBLIC_ROOTS).some(prefix=>name.startsWith(prefix))&&!removed.has(name)&&!ext.has(name)).map(([name,bytes])=>({path:name,bytes:bytes.length,sha256:hash(bytes)})).sort((a,b)=>b.bytes-a.bytes);
+ writeJson(path.join(ROOT,'runtime/varna-ci-evidence',slug,'asset-budget-failure.json'),{error:error.message,diagnosticOnly:true,productionBudgetUnchanged:384*1024**2,family:diagnosis.family,summary:diagnosis.summary,largestRetained:retained.slice(0,150)});throw error;
+ }sealSixVariantBuild(files,manifest,{provider:'vercel'});
  files.set('.cars-varna-candidate-package.json',encode({schemaVersion:1,kind:'build-only-six-design-candidate',sourceCommit,dealer:slug,sourceCandidate:candidate.candidateSourceDigest,nativeReleaseApproval:false,buildVerified:false,hostedVerified:false,outreachApproved:false,productionPublisherUntouched:true}));
  const payload=[...files].sort(([a],[b])=>a<b?-1:a>b?1:0).map(([name,bytes])=>({path:name,sha256:hash(normalized(bytes))}));
  files.set('.cars-package.json',encode({schemaVersion:1,manifest,sourceCommit,packagingVersion:'5',payloadDigest:hash(JSON.stringify(payload)),payload,candidate:true,approved:false}));
