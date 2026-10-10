@@ -1,101 +1,121 @@
 # Ten UK dealer proposals on Cloudflare — 10 October 2026
 
-The owner requested all ten selected UK leads with Auto Best, Modern, Import, App, Mobile and Signature, hosted on Cloudflare after final template polish. This authorizes the builds and publication direction. Final polishing time is not an immutable release or a hosted acceptance result.
+The owner requested ten saved UK leads, each with Auto Best, Modern, Import, App, Mobile and Signature, hosted on Cloudflare. The recovered current shortlist is the ten-dealer set in [the build manifest](../leads/uk-2026-10-10-build-manifest.json). It supersedes the earlier research shortlist pasted into the conversation. The owner explicitly chose Workers Free; no paid upgrade is authorized.
 
-## Prepared inputs
+## Current delivery checkpoint
 
-- [Ranked research](../leads/uk-2026-10-10.md) and [public brief packs](../leads/uk-2026-10-10-briefs/README.md) cover ten stable identities.
-- Each dealer gets one public proposal origin with six choices, using the existing Cars creation, personalisation, source seals, packaging and preservation-aware export machinery.
-- For new dealers: Auto Best at /, Modern at /variant-2/cars, Import at /variant-3/, App at /variant-4/, Mobile at /variant-5/, Signature at /variant-6/. The shared admin demonstration remains a separate destination.
-- Existing Vercel resources and the historical Cloudflare Priselci pilot remain intact. This batch is new UK work; it does not refresh the old dealer fleet.
+As of 10 October, 10:10 UTC:
 
-## Live readiness
+- All ten dated business, stock, logo, icon and locale packs pass input validation. They contain 71 sourced listing samples with real advertised GBP prices and original mileage.
+- All six exact approved template versions passed Cloudflare production compilation and frozen dependency qualification on GitHub Actions.
+- Ten private publishing repositories exist on `main`. They currently contain the GitHub initialization README; actual package exports are still pending. [Verified repository inventory](qa/uk-publishing-repositories-2026-10-10.json).
+- The first canonical dealer source run stopped before committing because the approved Signature version used different contact and discovery boundaries. The narrowly scoped compatibility fix passed the complete pinned Signature adapter against all ten actual packs, including contacts, stock, GBP filters, disclosure text, TypeScript and Svelte checks.
+- No complete branded UK origin has been deployed or accepted yet. Template compilation, source personalization, private export, upload, hosted behavior and Free CPU qualification remain distinct evidence.
 
-Cloudflare connector identity, account listing, Workers listing, account settings and workers.dev subdomain reads succeeded on 10 October. Four historical Priselci Workers exist. Account settings report `default_usage_model: standard`; this does not establish a Paid subscription. Subscription read returned an authentication error. The owner subsequently confirmed **Workers Free** on 10 October. Two isolated framework qualification Workers have now deployed successfully using the existing CLI OAuth session. No subscription, billing, DNS, domain or historical Worker changed.
+Broadbent is the first complete six-design dealer pilot. The remaining nine use the same reviewed source creation and publishing workflow once the pilot establishes the necessary behavior.
 
-The executable publisher now has an explicit `--provider cloudflare` path for six-design packaging version 5. It adapts original mounted sources through compatible SvelteKit Cloudflare adapters and vinext, emits a public router with six internal services, and seals provider receipts. The Vercel default remains available. Cloudflare never consumes a previously Vercel-transformed payload. Publishing requires frozen family and router dependency locks; generated build proofs stay outside the source payload.
+## Dealer inputs
 
-The working release lock now selects App’s reviewed 10 October source, alongside the 9 October Auto Best, Modern, Import and Mobile releases. Signature is not selected. The latest chat audit found newer published Auto Best (`14b3cbe…`), Modern (`fc267cef…`) and App (`70c2b806…`) candidates. Auto Best's final publication receipt confirms READY and matching hosted EN/BG checks at 320/390/768/1440; its new native release selection remains a separate checkpoint. Modern's focused receipt needs exact native release acceptance. [App's reconciled exact release evidence](qa/app-template-release-2026-10-10.json) passed the existing approval tool and is selected. Import's “Refine mobile PDP layout” owner has a new local `2aedade…` commit; its public READY source remains `a51f329…`. Mobile's “Improve desktop car cards” owner has committed `14def50…` with additional local labels; its public READY source remains `8765904…`. Signature published `0f9c79d…` through mirror `0224ae7…`, with 102 tests, 127 HTTP checks and hosted mobile filter/menu/photo evidence; its exact release selection is still unreconciled and both owners have further edits in progress. Final six-family source checks and immutable release selection remain necessary before copying. Qualification below uses older approved immutable inputs and is not a latest-template or dealer delivery claim.
+| Dealer | Location | Retained listing samples |
+| --- | --- | ---: |
+| Broadbent Car and Servicing | Stockport | 10 |
+| Motors Castle | Motherwell | 8 |
+| Trade Car Sales | Birmingham, Grasmere Road | 10 |
+| Square One Motors | Birmingham | 7 |
+| Car Market Yorkshire | Dewsbury | 6 |
+| S A Motors | Nottingham | 5 |
+| AS Motor Group | Batley | 5 |
+| Cherry Tree Cars Ltd | Bradford | 8 |
+| Norton Grange Trade Cars | Stockton-on-Tees | 10 |
+| North Norfolk Car Sales | North Walsham | 2 |
 
-### Hosted framework qualification
+The [retained stock research](../leads/uk-2026-10-10-stock-research.json) and individual [brief packs](../leads/uk-2026-10-10-briefs/README.md) distinguish listing facts observed on 10 October from a live stock feed. Availability is unconfirmed. Incomplete or conflicting records were excluded; unknown prices or mileage were not converted to zero.
 
-- Auto Best: approved source `2afd974c23d4f4cfb290ed99a00f46074793be3a`, Worker `cars-cf-qualification-auto-best`, version `451c0cf6-6e1a-4f95-bcd8-7d03cbb7d791`. Production build and dry run passed; 19 hosted HTTP checks passed, including EN/BG, catalogue filtering, details, 404, contact, robots and imagery. [Live English template](https://cars-cf-qualification-auto-best.darkapoparka1.workers.dev/en).
-- Mobile: approved source `876590474d01178413feccf3153a0859230158a1`, Worker `cars-cf-qualification-mobile`, corrected version `ff5a4997-4912-4ba0-be73-ebe6cf32b7d5`. Production build passed after applying the existing native mount transformation. All 23 distinct rendered image URLs passed local production checks; 17 hosted checks passed. Browser checks confirmed loaded imagery, no horizontal overflow and the saved-car interaction. [Live mounted template](https://cars-cf-qualification-mobile.darkapoparka1.workers.dev/variant-5/).
+Vehicle images are generated category illustrations, explicitly labelled “Illustration — not the advertised vehicle”. Each pack retains source URLs, observation dates, image provenance and the inventory disclosure. No third-party listing photographs are presented as licensed dealer assets. Published condition caveats remain in the applicable descriptions.
 
-Both sites are template qualification, retain sample identity/inventory and original presentation, and carry noindex metadata. No branded UK dealer origin or complete six-family pilot exists yet. Import, Modern, App and Signature still need actual framework build/hosted qualification.
+Branding uses retained public identity where available and clearly recorded design proposals otherwise. Every dealer has a raster logo contract, a real square PNG app icon and a valid multi-size ICO. [Brand research](qa/uk-branding-visual-research-2026-10-10.md) records the observed identities and proposal decisions. Dealer approval and application visual acceptance have not been inferred from asset generation.
 
-Auto Best's first retained CPU sample contains 10 complete matched invocation records: median 8 ms, p95/max 55 ms, four above 10 ms; all outcomes were `ok`. The final raw tail object was incomplete, and later repeated requests were not captured in that sample. Wall time is not CPU, and the first request is not asserted cold. Successful deployment and HTTP responses do not certify sustained Free CPU compatibility. [Current Workers limits](https://developers.cloudflare.com/workers/platform/limits/) remain the qualification reference. No Paid requirement or upgrade is inferred from an upload.
+## Approved design versions and Cloudflare qualification
 
-Corrected Mobile's retained CPU sample contains 11 exact matched invocation records from 17 HTTP probes: median 16 ms, p95/max 69 ms, eight above 10 ms; all outcomes were `ok`. Home measured 69 ms on the first observed invocation and 16/16 ms on captured repeats; detail measured 34 then 3/2 ms. This does not establish isolate coldness. Cloudflare documents per-isolate flexibility for infrequent CPU overruns before terminating consistent limit hits, which explains successful responses above 10 ms. This SSR candidate is therefore not qualified for reliable Free operation. The final dealer inputs must be measured after UK personalization; if they still exceed the allowance, qualify a feature-preserving static/client conversion or present the exact SSR Paid requirement without purchasing it.
+[Exact six-design release selection](qa/uk-approved-six-selection-2026-10-10.json) binds the revisions, source trees, digests and approval evidence. Ongoing edits to template masters do not silently change this batch.
 
-Compact source/build/HTTP/CPU receipts are retained in `runtime/uk-cloudflare-svelte-adapter-20261010/` and `runtime/uk-cloudflare-next-adapter-20261010/`. Two rendered Mobile captures retain the image-path defect and correction. Each owner reuses one qualification output and dependency installation while this pilot remains active; these have a concrete ongoing build/CPU investigation purpose.
+| Design | Approved source | Successful qualification run |
+| --- | --- | --- |
+| Auto Best | `2afd974c23d4f4cfb290ed99a00f46074793be3a` | [38041380562](https://github.com/darkapoparka/cars/actions/runs/38041380562) |
+| Modern | `827d75b9a53666c6feb09f04e3f8e7f255e95a30` | [38043025503](https://github.com/darkapoparka/cars/actions/runs/38043025503) |
+| Import | `a51f329b0b9e8e4d21665e16abf2734505d02e07` | [38041380562](https://github.com/darkapoparka/cars/actions/runs/38041380562) |
+| App | `70c2b80671e217ab299549a938a537c0b9559611` | [38041380562](https://github.com/darkapoparka/cars/actions/runs/38041380562) |
+| Mobile | `876590474d01178413feccf3153a0859230158a1` | [38041380562](https://github.com/darkapoparka/cars/actions/runs/38041380562) |
+| Signature | `cc130e432a41a3a60cc80bc2b3461c6416893b4a` | [38042594609](https://github.com/darkapoparka/cars/actions/runs/38042594609) |
 
-The older WORKFLOW/LEAD-PUBLISHING prose describes three designs. Current code and the owner's explicit six/Cloudflare scope govern this extension; existing input identity and release validation remain required.
+The initial combined run had four successful families. Modern and Signature passed subsequent targeted runs. The publisher consumes only the verified successful family receipts and their frozen locks; the overall conclusion of the initial mixed run is not substituted for individual evidence.
 
-## Concrete rollout
+The provider fixes preserve the approved application sources. Modern uses the exact reviewed workerd build permission and the typography plugin version already present in its approved lock. Svelte npm caches are outside sealed source directories. The portable npm resolver supports the declared GitHub runner toolchains. Next deployments use the emitted `dist/server/wrangler.json`, with verified relative entry and asset paths.
 
-1. Finish public identities, branding and one coherent inventory/media pack per dealer. Current stock packs are unpopulated: advertisement counts are research evidence, not a live feed. Use source-backed permitted assets or explicitly illustrative stock with truthful prices/units and unavailable delivery/form states.
-2. The existing new-client command now accepts `--design-set six --locale-config JSON`, creates six selected families and records an explicit native locale contract. Synchronized-main, duplicate, release source/digest and staged-install guards remain. This source-creation extension does not create deployment or adoption receipts. It still refuses the currently absent Signature release pin.
-3. Use the implemented Cloudflare provider branch after source proof, before Vercel-specific transformations. Reuse dealer facts, mounts, switcher and export logic; finish Next and Svelte production qualification for all six families. Do not create another source generator or bypass acceptance.
-4. Qualify **Broadbent first** as one six-family UK pilot. Measure real emitted assets/bundles, route behaviour and CPU. Provider success alone does not mark visual acceptance.
-5. After that passes, publish Motors Castle and Square One in a small first wave, then the remaining seven using the same versioned publisher. Each origin must show all six families exactly once.
-6. Record exact source/template/export/build/deployment identities and route/browser evidence in the technical registry at publication. No outreach or private sales history is created.
+Compilation proves that the applications build for Cloudflare. It does not establish hosted UI acceptance or reliable operation within Free CPU limits.
 
-All ten are Modern-first source configurations. The existing preservation-aware tooling still needs to preserve both slot orders for the old fleet; this batch does not migrate that fleet.
+## Source creation, packaging and export
 
-## Provider implementation boundary
+Canonical editable source stays in `darkapoparka/cars`, under `clients/<slug>/`. There is one authorized local Cars checkout at `L:\CODEX\cars`; independent dealer source materialization and dependency builds run on ephemeral GitHub runners.
 
-The extension reuses `committedDealerInputs`, `collectSource`, packaging validation, native adoption proofs, export hashes and the existing private-repository reconciliation. It selects the provider inside `prepare()` before six-variant mounting, the Signature Vercel adapter replacement, `vercel.json`, Vercel asset planning and Vercel-only output corrections. Cloudflare build proofs bind source, installed dependencies and emitted bytes. The shared publisher also contains another owner's pending selector edits, which the scoped integration preserves.
+The manual `build-uk-dealers` workflow reuses the existing new-client planner and creation tool, all six family adapters, native localization adoption and source seals. It commits only the selected dealer prefix to Cars `main`. Existing unrelated work is preserved, source pins and pack digests are checked again, and there is no force push. A failed source candidate receives a failure artifact instead of a false success receipt.
 
-Qualify [SvelteKit's Cloudflare adapter](https://developers.cloudflare.com/workers/framework-guides/web-apps/sveltekit/) for Auto Best, Import and Signature, and a supported [Next.js Workers build](https://developers.cloudflare.com/workers/framework-guides/web-apps/nextjs/) for Modern, App and Mobile. Compare the exact apps with the documented [OpenNext path](https://developers.cloudflare.com/workers/framework-guides/web-apps/opennext/) where needed. Preserve the Modern workspace and the Mobile build wrapper. Signature's current runtime/dependency versions differ from its frozen Vercel publishing adapter; changing only the adapter name is not qualification.
+The first run, [38043022224](https://github.com/darkapoparka/cars/actions/runs/38043022224), copied all six approved sources but failed during Signature personalization. It created no canonical source commit. The contact correction recognizes the exact approved responsive component and hides unpublished rows at phone and tablet widths. The discovery correction supports the approved inline catalog while retaining genuine mandatory price/year facts, original body types and real filtering behavior. Newer catalog-shaped sources retain their existing path; unknown source shapes still fail.
 
-A server-rendered pilot candidate is one public routing Worker with six application Workers behind [HTTP Service bindings](https://developers.cloudflare.com/workers/runtime-apis/bindings/service-bindings/http/). Preserve path, query, method, cookies and mount boundaries, and keep the selector on the public origin. This candidate would use seventy Workers for the full batch and has not been selected. The confirmed Free plan makes actual CPU and output limits decisive. First assess complete static hosting for all six demos, preserving their routes and interactions; do not strip required features to claim Free compatibility. Keep adapter-owned assets initially and avoid caching language/preference-bearing HTML. A later asset pool must preserve namespaced aliases, hashes and true 404 responses, following [static asset routing](https://developers.cloudflare.com/workers/static-assets/routing/worker-script/).
+The manual `build-uk-cloudflare` workflow prepares one sealed package from committed dealer source, using the existing `package-dealer` provider path. All six applications and the router compile from that identical package tree. Share images use the retained approved rendering toolchain. No Cloudflare credentials enter GitHub Actions.
 
-The provider extension implements generated-output exclusions and family budget inspection, preserves adapter exclusions and freezes exact dependency inputs. Hosted upload and route receipts exist for the two framework qualifications above. Complete six-family mounted acceptance, UK integration and the accepted dealer publisher checkpoint remain outstanding.
+A thin Git bundle transports the package tree with its canonical source commit as a prerequisite. The local exporter verifies the retained blobs directly, using an isolated index and the existing private repository reconciliation. This avoids another complete source directory on the PC. Transport ancestry is not published into dealer repositories. Each compiled target is downloaded and deployed separately, retaining its hash inventory and actual deployment receipt.
 
-### Confirmed Free-plan feasibility
+The six-source set measured 1,661,899,116 bytes before dependencies. Ten complete local copies would exceed 16 GB. [Storage accounting](qa/uk-source-storage-2026-10-10.json) and [the 60 exact sparse exclusions](qa/uk-2026-10-10-sparse-exclusions.txt) retain local metadata while keeping the new family trees off disk. No pre-existing caches or unrelated projects are removed.
 
-The bounded source audit found no feature-preserving, unchanged-source static six-pack. Auto Best uses request locale/preferences and query loaders; Import uses server inventory/detail loaders and count endpoints; Signature uses server locale cookies and phone hints. Modern is explicitly dynamic with server filtering, preferences and forms. App and Mobile consume request/query state, and the publisher also injects request-dependent metadata/proxies for all three Next families. These features need runtime support or a separately tested client/static conversion. See [SvelteKit page options](https://svelte.dev/docs/kit/page-options) and [Next static export limitations](https://nextjs.org/docs/app/guides/static-exports).
+## Public routing and UK behavior
 
-The smallest complete Free pilot therefore qualifies all six supported framework outputs, serves matching assets first, and measures actual cold and repeated home/catalogue/detail/filter/locale requests. Start the heavier Modern/Import request measurements early. Free permits 10 ms CPU per Worker request; its asset bundle has a 20,000-file limit and 25 MiB individual-file limit. [Workers limits](https://developers.cloudflare.com/workers/platform/limits/) and [static asset billing](https://developers.cloudflare.com/workers/static-assets/billing-and-limitations/) define the current limits.
+Each dealer has one public origin in the connected `darkapoparka1.workers.dev` subdomain, named `cars-uk-<slug>`, with six internal application Workers.
 
-If that complete SSR implementation repeatedly exceeds Free, present a Paid requirement for that implementation or scope a feature-preserving static conversion. Mobile is the lowest-effort static candidate, but a Mobile-only pilot would not qualify this six-family batch. No paid capacity or static compatibility is inferred from the preparation checks.
+| Design | Public route |
+| --- | --- |
+| Auto Best | `/` |
+| Modern | `/variant-2/cars` |
+| Import | `/variant-3/` |
+| App | `/variant-4/` |
+| Mobile | `/variant-5/` |
+| Signature | `/variant-6/` |
 
-## UK acceptance
+The public router preserves request paths, query strings, methods, cookies and mount boundaries through service bindings. Internal applications have `workers_dev: false`. The design selector lists each family once; the established shared Admin demonstration remains a separate destination. Existing Vercel sites and historical Cloudflare Priselci deployments are outside this batch.
 
-The existing normalizer and App input adapter now preserve tagged original mileage, keep unpublished mileage/prices unknown, and convert known miles to canonical km where the application requires it. Generated Auto Best/Import adapters also preserve original units on cards/details and use canonical comparisons with miles-based controls. Focused behavior, Svelte compilation and strict TypeScript checks passed; these are integration checks, not branded UK hosted acceptance. Auto Best's existing locale generator must run after its reviewed mileage labels change and before sealing.
+Dealer country is GB, currency GBP, display locale en-GB and distance miles. Native source catalogs retain the required en/bg contract with English as default. A visitor's location does not change the dealer's actual currency, distance facts or business country. Original mileage is retained even when an application needs canonical kilometres for internal comparisons; filter bounds use matching conversions.
 
-Use dealer country GB and British presentation en-GB with actual GBP prices, original tagged mileage and UK contact/postcode information. Native routing currently uses en/bg, so an English route and British formatting are distinct settings. Preserve manual URL choice, saved preference and supported browser language ahead of country hints.
+Published contact information is used without inventing missing details. Preview forms must not claim an enquiry was delivered, finance approved or CRM connected. The planned hosted review covers home, stock, details, search, filters, gallery, navigation, contact actions, honest form states, direct reloads, images, icons and the six-design selector at phone and desktop widths.
 
-UK profile normalization now recognizes GB, United Kingdom and en-GB, defaults to en-GB/GBP/mi, and converts complete domestic UK phone links to +44 only for GB businesses. Explicit settings and original inventory facts remain intact. App source-mileage input now converts known miles to canonical km and preserves original facts in provenance; published zero is distinguished from missing mileage. Family publication still needs Modern GBP schema support, Mobile English/dealer-owned formatting, remaining App/Mobile miles display and filter controls, and complete UK hosted checks through the implemented trusted Cloudflare country boundary. Never change real currency, distance facts or business country based on the visitor.
+## Workers Free qualification
 
-A 60,000-mile listing should retain that original fact and remain consistent on cards, detail and filters. Canonical km storage can coexist with a deliberate miles display; relabelling km as miles is invalid. Missing prices must not become zero.
+The account has four historical Priselci Workers and two framework qualification Workers. The ten six-family origins would add seventy Workers, within the Free account count limit. Asset and CPU limits still require actual measured outputs and requests; upload success alone is insufficient.
 
-## Hosting and remaining inputs
+Two earlier framework qualifications were hosted with the existing Wrangler OAuth session:
 
-The measured six-source candidate set totals 1,661,899,116 bytes; ten full independent copies would total 16,618,991,160 bytes before dependencies/builds. That includes 672,567,286 bytes of docs/provenance per set and 472,905,931 bytes of App reference media. It is source accounting, not deployed storage: the older Auto Best framework qualification emitted 22,888,120 bytes of assets plus Worker. See [the storage audit](qa/uk-source-storage-2026-10-10.json) for exact pins and limits.
+- Auto Best: `cars-cf-qualification-auto-best`, version `451c0cf6-6e1a-4f95-bcd8-7d03cbb7d791`. Nineteen hosted HTTP checks passed across locale, catalogue/filter, detail, contact, robots, 404 and imagery.
+- Mobile: `cars-cf-qualification-mobile`, corrected version `ff5a4997-4912-4ba0-be73-ebe6cf32b7d5`. Seventeen hosted checks passed; all 23 distinct rendered image URLs passed production checks. Browser inspection verified loaded images, no horizontal overflow and the saved-car interaction.
 
-The existing package CLI now exposes `--asset-pool PATH` for identical generated binary assets. Use a separate same-volume pool and one bounded sequential package/build owner. Editable dealer/master sources remain independent; this change does not resolve canonical source duplication. A reviewed, versioned dealer export retention policy is still needed to avoid repeating historical evidence and unused donor libraries. CFNext also needs an explicit existing-retention-planner hook before sealing generated bytes; the current App policy covers only 14.45 MB of unused assets, and complete reference folders cannot be dropped.
+Both use template inventory and identity. They are not branded UK delivery.
 
-The planned Cloudflare deployment must preserve all six applications and direct reloads, deep links, images, filters, browser navigation, safe enquiry behaviour and the design selector. Use supported framework output; assess renderer sharing or bounded static deployment groups from actual measurements, rather than assuming sixty independent Workers are the final architecture.
+Auto Best's retained CPU sample had ten complete matched invocations: median 8 ms and maximum 55 ms, with four above 10 ms; all outcomes were `ok`. Mobile had eleven complete matched invocations: median 16 ms and maximum 69 ms, with eight above 10 ms; all outcomes were `ok`. Incomplete tail data was excluded, wall time was not treated as CPU, and isolate coldness was not established. These samples do not qualify either final dealer implementation for sustained Free operation.
 
-Cloudflare's current [Workers pricing](https://developers.cloudflare.com/workers/platform/pricing/) states a $5/month account minimum plus usage for Paid; [limits](https://developers.cloudflare.com/workers/platform/limits/) distinguish Free and Paid CPU allowances. The owner confirmed Free. The previous Modern Free pilot recorded CPU errors; it does not prove the final six-family build's result. Qualify static hosting first or measure real server rendering against Free limits. If preserving the full demo needs Paid, present the concrete pilot requirement and cost before purchasing an upgrade. No upgrade or purchase is authorized by this preparation.
+Cloudflare documents a 10 ms Free CPU allowance and flexibility for infrequent overruns before consistent excess is terminated. See [Workers limits](https://developers.cloudflare.com/workers/platform/limits/) and [asset billing and limits](https://developers.cloudflare.com/workers/static-assets/billing-and-limitations/). The real personalized six-family pilot must be measured, with early attention to Modern and Import. The older Modern pilot's CPU errors remain historical evidence, not a verdict on the new package.
 
-Current holds: final six immutable releases, accepted Cloudflare provider implementation/pilot, UK family integration, and sourced branding/inventory/media. A shell deploy command also needs its own authenticated upload session; plugin login is not proof of CLI authentication. A qualified plugin/API upload path can be used instead if it preserves the same artifact receipts.
+The source audit found request-dependent behavior in all six families. An unchanged-source complete static export was not established. A static conversion would need to preserve routes, filters, preferences and other interactions and receive separate qualification. If actual six-family SSR repeatedly exceeds Free, the next decision must be based on those observed results. [Workers Paid pricing](https://developers.cloudflare.com/workers/platform/pricing/) lists an account minimum of $5/month plus applicable usage; no purchase or upgrade is authorized.
 
-## Preparation verification
+Compact historical build, HTTP and CPU records remain under `runtime/uk-cloudflare-svelte-adapter-20261010/` and `runtime/uk-cloudflare-next-adapter-20261010/`.
 
-The initial preparation check passed **479/479** across 59 test files on Node 22.23.2. It includes the new six-design creation and UK profile cases. Five initial Signature failures were resolved by permitting the template's known optional trailing calculator binding after all six mandatory dealer props; missing, duplicate and misdirected props remain rejected. See [the initial compact QA record](qa/uk-cloudflare-prep-2026-10-10.json).
+## Earlier integration evidence
 
-The provider integration checkpoint subsequently passed **505/505** workflow tests across 64 files. After the final source/dependency/artifact guard changes, **33/33** focused Cloudflare tests and `check-workflow` passed. These cover source seal tampering, stale output, exact lock maps, mounted routing, trusted country hints and the Vercel default. [Provider checkpoint](qa/uk-cloudflare-provider-2026-10-10.json) distinguishes the test phases.
+The initial preparation passed 479 tests; the provider integration checkpoint passed 505. Subsequent focused provider checks passed 33 tests. [Preparation](qa/uk-cloudflare-prep-2026-10-10.json), [provider evidence](qa/uk-cloudflare-provider-2026-10-10.json) and [UK personalization integration](qa/uk-personalization-integration-2026-10-10.json) distinguish their exact phases, known fixture failures and targeted follow-ups. They are not claims of a fresh complete suite or hosted dealer approval.
 
-The UK mileage/storage integration checkpoint ran all 66 workflow test files: **522 passed and 6 failed**, with no skips. All six failures came from an uncommitted Signature contact layout being read by the fixture. Pinning only that adapter fixture boundary to an immutable candidate left production guards and masters unchanged; the complete affected file then passed **17/17**. A follow-up App review found a published `0 miles` edge case; the corrected App suite passed **6/6**. The other previously passed suites were not rerun. [The compact integration record](qa/uk-personalization-integration-2026-10-10.json) records each phase and shared-tree boundaries; this is not a claim of a fresh all-tests pass or template release approval.
-
-All ten public packs and locale contracts validated; Markdown link checks passed. The standalone board contains its own wrapper/runtime and no external `src`/`href` dependencies. Two framework production builds and test deployments now exist as recorded above. No branded UK dealer installation, complete six-family pilot or ten-dealer delivery is asserted.
+The older workflow prose describes three designs. Current six-design code and the owner's explicit scope govern this extension while preserving the existing release, source ownership, payload integrity and remote reconciliation requirements.
 
 ## Sister's presentation
 
-- [Browser-ready board](uk-sales-board-2026-10-10.html): open with Chrome or Edge. This is a standalone export of the original in-conversation coach.
-- [Written guide](uk-sales-board-2026-10-10.md): open in Codex or a Markdown editor.
-- Do not present a design demo as a live stock feed, delivered enquiry, finance approval or connected CRM.
+- [Browser-ready board](uk-sales-board-2026-10-10.html): standalone file for Chrome or Edge.
+- [Written presenter guide](uk-sales-board-2026-10-10.md).
+- [Current ranked research](../leads/uk-2026-10-10.md).
 
+Design proposals are demonstrations. Their dated listing samples, illustrations and enquiry behavior must be explained accurately.

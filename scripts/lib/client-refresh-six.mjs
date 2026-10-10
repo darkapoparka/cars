@@ -386,6 +386,13 @@ function personalizeSignatureCopy(files,profile) {
     let component=bytes.toString('utf8');
     if(name.endsWith('/ContactLocationCard.svelte')) {
       if(!component.includes('{#if location.avatar}'))component=replaceOne(component,/<div class="card-image"\s*>\s*<img[\s\S]*?\/><\/div\s*>/,node=>'{#if location.avatar}'+node+'{/if}','Signature unpublished location portrait');
+      // The approved responsive contact uses optional fields on phones only. Dealer
+      // previews must also omit unpublished contact rows on tablet widths.
+      if(/\{#if !phone\.current \|\| location\.(?:address|phone|email)\}/.test(component)) {
+        for(const field of ['address','phone','email'])component=replaceOne(component,
+          `{#if !phone.current || location.${field}}`,`{#if location.${field}}`,
+          `Signature optional ${field} native contact row`);
+      }
       if(!component.includes('{#if location.email}')) {
         const rows=[...component.matchAll(/\n        <div class="d-flex align-items-(?:start|center)(?: mb-2)?">[\s\S]*?\n        <\/div>/g)].filter(match=>match[0].includes('location.email'));
         if(rows.length!==1)throw new Error('Signature optional email row needs one reviewed contact boundary');
@@ -414,13 +421,27 @@ function bindSignatureDiscovery(files,profile,cards) {
   const prefix='karento-best/src/routes/2/',file=prefix+'discovery.ts';
   if(!files.has(file))return [];
   let source=text(files,file);
-  if(!source.includes('titleKey?:')||!source.includes('priceAmount?:')||!source.includes('year?:')||!source.includes('discoveryMessages'))
-    throw new Error('Signature discovery requires the qualified optional factual data and native catalog boundaries');
+  const inlineContract='export interface DiscoveryCar extends VehicleCardContent {\n  priceAmount: number;\n  currency: string;\n  id: string;\n  make: string;\n  year: number;\n  arrival: number;\n  offer: boolean;\n  exclusive: boolean;\n  body: "hatchback" | "sedan" | "suv" | "pickup" | "coupe" | "convertible";\n}';
+  const inlineDiscovery=source.includes(inlineContract)&&source.includes('const en = {')&&
+    source.includes('const bg: Record<DiscoveryTextKey, string> = {')&&source.includes('return (locale === "bg" ? bg : en)[key];');
+  const catalogDiscovery=['titleKey?:','priceAmount?:','year?:','discoveryMessages'].every(boundary=>source.includes(boundary));
+  if(!inlineDiscovery&&!catalogDiscovery)
+    throw new Error('Signature discovery requires a reviewed factual data and text boundary');
   const currency=signatureBusinessPreview(profile).currency;
+  if(inlineDiscovery) {
+    // The approved cc130 discovery view renders a mandatory price and year.
+    // Require those advertised facts rather than manufacturing display defaults.
+    if(!currency||profile.listings.some(listing=>!Number.isFinite(listing.priceAmount)||listing.priceAmount<0||
+      !Number.isInteger(listing.year)||listing.year<=0))
+      throw new Error('Signature inline discovery requires published numeric price/year and one inventory currency');
+    source=replaceOne(source,inlineContract,inlineContract.replace(
+      'body: "hatchback" | "sedan" | "suv" | "pickup" | "coupe" | "convertible";','body: string;'),
+      'Signature advertised discovery body types');
+  }
   const records=profile.listings.map((listing,index)=>({...cards[index],id:listing.id,make:listing.make||'',
     ...(Number.isInteger(listing.year)&&listing.year>0?{year:listing.year}:{}),
     ...(Number.isFinite(listing.priceAmount)?{priceAmount:listing.priceAmount}:{}),currency:listing.currency,
-    ...(['hatchback','sedan','suv','pickup','coupe','convertible'].includes(listing.bodyType)?{body:listing.bodyType}:{}),
+    ...(inlineDiscovery?{body:listing.bodyType||''}:['hatchback','sedan','suv','pickup','coupe','convertible'].includes(listing.bodyType)?{body:listing.bodyType}:{}),
     // This preserves source order; no arrival date, discount or exclusive offer is asserted.
     arrival:profile.listings.length-index,offer:false,exclusive:false}));
   source=replaceExportInitializer(source,'discoveryCars',records);
@@ -439,8 +460,21 @@ function bindSignatureDiscovery(files,profile,cards) {
     'export type CollectionId = "newest" | "offers" | "under-10000" | "cheapest" | "premium" | "exclusive" | "under-20000" | "bmw" | "german" | "suvs";',
     'Signature stable discovery collection IDs');
   const notice=profile.stockKind==='illustrative-not-dealer-stock'?'dealer.stock.illustrativeNotice':'dealer.stock.notice';
-  source=replaceOne(source,/sample: "reference\.discovery\.disclosure\.summary"/,`sample: ${JSON.stringify(notice)}`,'Signature discovery stock disclosure');
-  source=replaceOne(source,/sampleDetail: "reference\.discovery\.disclosure\.detail"/,`sampleDetail: ${JSON.stringify(notice)}`,'Signature discovery detail disclosure');
+  if(inlineDiscovery) {
+    for(const donor of [
+      '"Sample cars · illustrative sale prices"',
+      '"This car and its sale price are illustrative examples for this preview."',
+      '"Примерни коли · илюстративни продажни цени"',
+      '"Този автомобил и продажната му цена са илюстративни примери за това демо."'
+    ])source=replaceOne(source,donor,JSON.stringify(profile.business.inventoryNotice),'Signature inline stock disclosure');
+    const symbol=new Intl.NumberFormat(profile.business.locale,{style:'currency',currency,currencyDisplay:'narrowSymbol'})
+      .formatToParts(1).find(part=>part.type==='currency')?.value||currency;
+    source=source.replaceAll('Maximum price (€)','Maximum price ('+currency+')')
+      .replaceAll('Максимална цена (€)','Максимална цена ('+currency+')').replaceAll('€',symbol);
+  } else {
+    source=replaceOne(source,/sample: "reference\.discovery\.disclosure\.summary"/,'sample: '+JSON.stringify(notice),'Signature discovery stock disclosure');
+    source=replaceOne(source,/sampleDetail: "reference\.discovery\.disclosure\.detail"/,'sampleDetail: '+JSON.stringify(notice),'Signature discovery detail disclosure');
+  }
   put(files,file,source);
   const homeFile=prefix+'DiscoveryHome.svelte',home=text(files,homeFile);
   const pills=[{title:'all',section:'collections'},{title:'brandPill',section:'brand-search'},
@@ -456,6 +490,7 @@ function bindSignatureDiscovery(files,profile,cards) {
     put(files,file,source);
   }
   put(files,searchFile,search);
+  if(inlineDiscovery)return [file,homeFile,searchFile];
   const catalogFile='karento-best/src/lib/i18n/catalogs/reference-discovery.ts';
   let catalog=text(files,catalogFile);
   catalog=catalog.replaceAll('"Maximum price (€)"',JSON.stringify(currency?'Maximum price ('+currency+')':'Maximum price'))

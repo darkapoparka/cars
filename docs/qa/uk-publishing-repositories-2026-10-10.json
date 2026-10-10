@@ -1,0 +1,98 @@
+{
+    "schemaVersion":  1,
+    "batch":  "uk-2026-10-10",
+    "observedAt":  "2026-10-10T09:57:30.6559584Z",
+    "repositories":  [
+                         {
+                             "repository":  "darkapoparka/cars-uk-batley-as-motor-group",
+                             "url":  "https://github.com/darkapoparka/cars-uk-batley-as-motor-group",
+                             "private":  true,
+                             "defaultBranch":  "main",
+                             "initialization":  "GitHub generated README only",
+                             "state":  "created_waiting_for_verified_package",
+                             "provider":  "cloudflare"
+                         },
+                         {
+                             "repository":  "darkapoparka/cars-uk-birmingham-square-one-motors",
+                             "url":  "https://github.com/darkapoparka/cars-uk-birmingham-square-one-motors",
+                             "private":  true,
+                             "defaultBranch":  "main",
+                             "initialization":  "GitHub generated README only",
+                             "state":  "created_waiting_for_verified_package",
+                             "provider":  "cloudflare"
+                         },
+                         {
+                             "repository":  "darkapoparka/cars-uk-birmingham-trade-car-sales-grasmere",
+                             "url":  "https://github.com/darkapoparka/cars-uk-birmingham-trade-car-sales-grasmere",
+                             "private":  true,
+                             "defaultBranch":  "main",
+                             "initialization":  "GitHub generated README only",
+                             "state":  "created_waiting_for_verified_package",
+                             "provider":  "cloudflare"
+                         },
+                         {
+                             "repository":  "darkapoparka/cars-uk-bradford-cherry-tree-cars",
+                             "url":  "https://github.com/darkapoparka/cars-uk-bradford-cherry-tree-cars",
+                             "private":  true,
+                             "defaultBranch":  "main",
+                             "initialization":  "GitHub generated README only",
+                             "state":  "created_waiting_for_verified_package",
+                             "provider":  "cloudflare"
+                         },
+                         {
+                             "repository":  "darkapoparka/cars-uk-dewsbury-car-market-yorkshire",
+                             "url":  "https://github.com/darkapoparka/cars-uk-dewsbury-car-market-yorkshire",
+                             "private":  true,
+                             "defaultBranch":  "main",
+                             "initialization":  "GitHub generated README only",
+                             "state":  "created_waiting_for_verified_package",
+                             "provider":  "cloudflare"
+                         },
+                         {
+                             "repository":  "darkapoparka/cars-uk-motherwell-motors-castle",
+                             "url":  "https://github.com/darkapoparka/cars-uk-motherwell-motors-castle",
+                             "private":  true,
+                             "defaultBranch":  "main",
+                             "initialization":  "GitHub generated README only",
+                             "state":  "created_waiting_for_verified_package",
+                             "provider":  "cloudflare"
+                         },
+                         {
+                             "repository":  "darkapoparka/cars-uk-north-norfolk-car-sales",
+                             "url":  "https://github.com/darkapoparka/cars-uk-north-norfolk-car-sales",
+                             "private":  true,
+                             "defaultBranch":  "main",
+                             "initialization":  "GitHub generated README only",
+                             "state":  "created_waiting_for_verified_package",
+                             "provider":  "cloudflare"
+                         },
+                         {
+                             "repository":  "darkapoparka/cars-uk-nottingham-s-a-motors",
+                             "url":  "https://github.com/darkapoparka/cars-uk-nottingham-s-a-motors",
+                             "private":  true,
+                             "defaultBranch":  "main",
+                             "initialization":  "GitHub generated README only",
+                             "state":  "created_waiting_for_verified_package",
+                             "provider":  "cloudflare"
+                         },
+                         {
+                             "repository":  "darkapoparka/cars-uk-stockport-broadbent-car-and-servicing",
+                             "url":  "https://github.com/darkapoparka/cars-uk-stockport-broadbent-car-and-servicing",
+                             "private":  true,
+                             "defaultBranch":  "main",
+                             "initialization":  "GitHub generated README only",
+                             "state":  "created_waiting_for_verified_package",
+                             "provider":  "cloudflare"
+                         },
+                         {
+                             "repository":  "darkapoparka/cars-uk-stockton-norton-grange-trade-cars",
+                             "url":  "https://github.com/darkapoparka/cars-uk-stockton-norton-grange-trade-cars",
+                             "private":  true,
+                             "defaultBranch":  "main",
+                             "initialization":  "GitHub generated README only",
+                             "state":  "created_waiting_for_verified_package",
+                             "provider":  "cloudflare"
+                         }
+                     ],
+    "deployed":  false
+}
