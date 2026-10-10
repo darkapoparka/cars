@@ -1,0 +1,443 @@
+{
+  "checkedAt": "2026-10-10T17:21:30.840Z",
+  "target": {
+    "key": "import",
+    "origin": "https://cars-template-import.vercel.app",
+    "base": "",
+    "inventory": "/inventory",
+    "detail": {}
+  },
+  "node": "v22.23.2",
+  "scope": "Current production/native mounted entry, inventory, detail reload, contact, language, assets and overflow checks; all business mutations blocked.",
+  "results": [
+    {
+      "width": 320,
+      "locale": "en",
+      "routes": [
+        {
+          "url": "https://cars-template-import.vercel.app/en",
+          "status": 200,
+          "lang": "en",
+          "reload": false,
+          "geometry": {
+            "width": 320,
+            "scroll": 320
+          },
+          "title": "Import — Cars and vehicle sourcing"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/en/inventory",
+          "status": 200,
+          "lang": "en",
+          "reload": false,
+          "geometry": {
+            "width": 320,
+            "scroll": 320
+          },
+          "title": "Available vehicles — Import"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/en/inventory/21764342419542174?lang=en",
+          "status": 200,
+          "lang": "en",
+          "reload": false,
+          "geometry": {
+            "width": 320,
+            "scroll": 320
+          },
+          "title": "BMW X5 40i M Sport Shadow Line — Import"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/en/inventory/21764342419542174?lang=en",
+          "status": 200,
+          "lang": "en",
+          "reload": true,
+          "geometry": {
+            "width": 320,
+            "scroll": 320
+          },
+          "title": "BMW X5 40i M Sport Shadow Line — Import"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/en/contact",
+          "status": 200,
+          "lang": "en",
+          "reload": false,
+          "geometry": {
+            "width": 320,
+            "scroll": 320
+          },
+          "title": "Contact IMPORT — Import"
+        }
+      ],
+      "pageErrors": [],
+      "assetFailures": [],
+      "blockedWrites": [
+        {
+          "method": "POST",
+          "url": "https://maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/GetViewportInfo"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "width": 320,
+      "locale": "bg",
+      "routes": [
+        {
+          "url": "https://cars-template-import.vercel.app/bg",
+          "status": 200,
+          "lang": "bg",
+          "reload": false,
+          "geometry": {
+            "width": 320,
+            "scroll": 320
+          },
+          "title": "Import — Автомобили и внос по заявка"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/bg/inventory",
+          "status": 200,
+          "lang": "bg",
+          "reload": false,
+          "geometry": {
+            "width": 320,
+            "scroll": 320
+          },
+          "title": "Налични автомобили — Import"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/bg/inventory/21764342419542174",
+          "status": 200,
+          "lang": "bg",
+          "reload": false,
+          "geometry": {
+            "width": 320,
+            "scroll": 320
+          },
+          "title": "BMW X5 40i M Sport Shadow Line — Import"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/bg/inventory/21764342419542174",
+          "status": 200,
+          "lang": "bg",
+          "reload": true,
+          "geometry": {
+            "width": 320,
+            "scroll": 320
+          },
+          "title": "BMW X5 40i M Sport Shadow Line — Import"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/bg/contact",
+          "status": 200,
+          "lang": "bg",
+          "reload": false,
+          "geometry": {
+            "width": 320,
+            "scroll": 320
+          },
+          "title": "Свържете се с IMPORT — Import"
+        }
+      ],
+      "pageErrors": [],
+      "assetFailures": [],
+      "blockedWrites": [
+        {
+          "method": "POST",
+          "url": "https://maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/GetViewportInfo"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "routes": [
+        {
+          "url": "https://cars-template-import.vercel.app/en",
+          "status": 200,
+          "lang": "en",
+          "reload": false,
+          "geometry": {
+            "width": 390,
+            "scroll": 390
+          },
+          "title": "Import — Cars and vehicle sourcing"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/en/inventory",
+          "status": 200,
+          "lang": "en",
+          "reload": false,
+          "geometry": {
+            "width": 390,
+            "scroll": 390
+          },
+          "title": "Available vehicles — Import"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/en/inventory/21764342419542174?lang=en",
+          "status": 200,
+          "lang": "en",
+          "reload": false,
+          "geometry": {
+            "width": 390,
+            "scroll": 390
+          },
+          "title": "BMW X5 40i M Sport Shadow Line — Import"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/en/inventory/21764342419542174?lang=en",
+          "status": 200,
+          "lang": "en",
+          "reload": true,
+          "geometry": {
+            "width": 390,
+            "scroll": 390
+          },
+          "title": "BMW X5 40i M Sport Shadow Line — Import"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/en/contact",
+          "status": 200,
+          "lang": "en",
+          "reload": false,
+          "geometry": {
+            "width": 390,
+            "scroll": 390
+          },
+          "title": "Contact IMPORT — Import"
+        }
+      ],
+      "pageErrors": [],
+      "assetFailures": [],
+      "blockedWrites": [
+        {
+          "method": "POST",
+          "url": "https://maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/GetViewportInfo"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "width": 390,
+      "locale": "bg",
+      "routes": [
+        {
+          "url": "https://cars-template-import.vercel.app/bg",
+          "status": 200,
+          "lang": "bg",
+          "reload": false,
+          "geometry": {
+            "width": 390,
+            "scroll": 390
+          },
+          "title": "Import — Автомобили и внос по заявка"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/bg/inventory",
+          "status": 200,
+          "lang": "bg",
+          "reload": false,
+          "geometry": {
+            "width": 390,
+            "scroll": 390
+          },
+          "title": "Налични автомобили — Import"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/bg/inventory/21764342419542174",
+          "status": 200,
+          "lang": "bg",
+          "reload": false,
+          "geometry": {
+            "width": 390,
+            "scroll": 390
+          },
+          "title": "BMW X5 40i M Sport Shadow Line — Import"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/bg/inventory/21764342419542174",
+          "status": 200,
+          "lang": "bg",
+          "reload": true,
+          "geometry": {
+            "width": 390,
+            "scroll": 390
+          },
+          "title": "BMW X5 40i M Sport Shadow Line — Import"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/bg/contact",
+          "status": 200,
+          "lang": "bg",
+          "reload": false,
+          "geometry": {
+            "width": 390,
+            "scroll": 390
+          },
+          "title": "Свържете се с IMPORT — Import"
+        }
+      ],
+      "pageErrors": [],
+      "assetFailures": [],
+      "blockedWrites": [
+        {
+          "method": "POST",
+          "url": "https://maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/GetViewportInfo"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "routes": [
+        {
+          "url": "https://cars-template-import.vercel.app/en",
+          "status": 200,
+          "lang": "en",
+          "reload": false,
+          "geometry": {
+            "width": 1440,
+            "scroll": 1425
+          },
+          "title": "Import — Cars and vehicle sourcing"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/en/inventory",
+          "status": 200,
+          "lang": "en",
+          "reload": false,
+          "geometry": {
+            "width": 1440,
+            "scroll": 1425
+          },
+          "title": "Available vehicles — Import"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/en/inventory/21764342419542174?lang=en",
+          "status": 200,
+          "lang": "en",
+          "reload": false,
+          "geometry": {
+            "width": 1440,
+            "scroll": 1425
+          },
+          "title": "BMW X5 40i M Sport Shadow Line — Import"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/en/inventory/21764342419542174?lang=en",
+          "status": 200,
+          "lang": "en",
+          "reload": true,
+          "geometry": {
+            "width": 1440,
+            "scroll": 1425
+          },
+          "title": "BMW X5 40i M Sport Shadow Line — Import"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/en/contact",
+          "status": 200,
+          "lang": "en",
+          "reload": false,
+          "geometry": {
+            "width": 1440,
+            "scroll": 1425
+          },
+          "title": "Contact IMPORT — Import"
+        }
+      ],
+      "pageErrors": [],
+      "assetFailures": [],
+      "blockedWrites": [
+        {
+          "method": "POST",
+          "url": "https://maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/GetViewportInfo"
+        },
+        {
+          "method": "POST",
+          "url": "https://maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/InitMapsJwt"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "locale": "bg",
+      "routes": [
+        {
+          "url": "https://cars-template-import.vercel.app/bg",
+          "status": 200,
+          "lang": "bg",
+          "reload": false,
+          "geometry": {
+            "width": 1440,
+            "scroll": 1425
+          },
+          "title": "Import — Автомобили и внос по заявка"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/bg/inventory",
+          "status": 200,
+          "lang": "bg",
+          "reload": false,
+          "geometry": {
+            "width": 1440,
+            "scroll": 1425
+          },
+          "title": "Налични автомобили — Import"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/bg/inventory/21764342419542174",
+          "status": 200,
+          "lang": "bg",
+          "reload": false,
+          "geometry": {
+            "width": 1440,
+            "scroll": 1425
+          },
+          "title": "BMW X5 40i M Sport Shadow Line — Import"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/bg/inventory/21764342419542174",
+          "status": 200,
+          "lang": "bg",
+          "reload": true,
+          "geometry": {
+            "width": 1440,
+            "scroll": 1425
+          },
+          "title": "BMW X5 40i M Sport Shadow Line — Import"
+        },
+        {
+          "url": "https://cars-template-import.vercel.app/bg/contact",
+          "status": 200,
+          "lang": "bg",
+          "reload": false,
+          "geometry": {
+            "width": 1440,
+            "scroll": 1425
+          },
+          "title": "Свържете се с IMPORT — Import"
+        }
+      ],
+      "pageErrors": [],
+      "assetFailures": [],
+      "blockedWrites": [
+        {
+          "method": "POST",
+          "url": "https://maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/GetViewportInfo"
+        },
+        {
+          "method": "POST",
+          "url": "https://maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/InitMapsJwt"
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true
+}

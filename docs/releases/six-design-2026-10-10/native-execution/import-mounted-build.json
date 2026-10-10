@@ -1,0 +1,64 @@
+{
+  "key": "import",
+  "startedAt": "2026-10-10T16:56:26.700Z",
+  "finishedAt": "2026-10-10T16:59:06.636Z",
+  "node": "v24.21.0",
+  "source": {
+    "repository": "darkapoparka/cars",
+    "path": "templates/import",
+    "revision": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+    "digest": "eef4c3544b28bb3a62cad4c2a07e4ff64301fb4c9e9925ba002077bda7f63bd3",
+    "tree": "b64c4a4939c4244ba3f408e5c0311c586a913e67"
+  },
+  "mounted": {
+    "key": "import",
+    "base": "/variant-2",
+    "entry": "/variant-2/"
+  },
+  "packageRoot": "C:/Users/radev/Documents/Codex/2026-10-10/cars-six-release-native-mounts",
+  "passed": true,
+  "result": {
+    "key": "import",
+    "base": "/variant-2",
+    "phase": "build",
+    "dependencyInstallPerformed": false
+  },
+  "steps": [
+    {
+      "program": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "\"\"L:\\Toolchains\\Node\\24.21.0\\npm.cmd\" \"ci\" \"--include=dev\"\""
+      ],
+      "startedAt": "2026-10-10T16:56:27.437Z",
+      "finishedAt": "2026-10-10T16:58:26.146Z",
+      "exitCode": 0
+    },
+    {
+      "program": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "\"\"L:\\Toolchains\\Node\\24.21.0\\npm.cmd\" \"run\" \"build\"\""
+      ],
+      "startedAt": "2026-10-10T16:58:26.205Z",
+      "finishedAt": "2026-10-10T16:59:06.549Z",
+      "exitCode": 0
+    },
+    {
+      "program": "L:\\Toolchains\\Node\\24.21.0\\node.exe",
+      "args": [
+        "../scripts/fix-svelte-service-output.mjs",
+        "/variant-2"
+      ],
+      "startedAt": "2026-10-10T16:59:06.549Z",
+      "finishedAt": "2026-10-10T16:59:06.636Z",
+      "exitCode": 0
+    }
+  ],
+  "error": null,
+  "logSha256": "6c481c49f0b8453be490263093518206cb72f730c32890b35aee1d7fd20258ea"
+}
