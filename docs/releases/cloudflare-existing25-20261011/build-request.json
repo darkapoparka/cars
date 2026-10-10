@@ -1,14 +1,8 @@
 {
-    "scope":  "Compile remaining seven reviewed existing dealers after the mandatory Navara/Day wave. No Cloudflare publication or billing changes in CI.",
-    "schemaVersion":  1,
-    "request":  "remaining-seven-selected-six-designs-neutral-services",
-    "dealers":  [
-                    "priselci",
-                    "isauto-varna",
-                    "automarket-varna",
-                    "outletcars-varna",
-                    "perfect-auto-varna",
-                    "avangard-auto",
-                    "legend-auto"
-                ]
+  "schemaVersion": 1,
+  "request": "avangard-reviewed-optional-contact-fallback",
+  "dealers": [
+    "avangard-auto"
+  ],
+  "scope": "Only Avangard complete seven-target rebuild after empty email boundary fix; other six passed dealers are retained, no billing or hosting write."
 }
