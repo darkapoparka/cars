@@ -113,6 +113,12 @@
 		background: var(--bc-accent-hover);
 		color: var(--bc-white);
 	}
+	@media (max-width: 767.98px) {
+		.bc-mobile-menu-action__icon :global(svg) {
+			width: var(--bc-mobile-menu-icon-size);
+			height: var(--bc-mobile-menu-icon-size);
+		}
+	}
 
 	@media (hover: hover) and (pointer: fine) {
 		.bc-mobile-menu-action:hover {

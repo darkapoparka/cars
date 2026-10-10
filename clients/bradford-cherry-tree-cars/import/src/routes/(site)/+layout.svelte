@@ -43,8 +43,8 @@
 	<PublicHeader mobile={isHome} />
 	{@render children()}
 	<div class:site-shell__footer--desktop-only={!isHome} data-home-footer={isHome ? '' : undefined}>
-		<PublicFooter />
-		<div class="site-container"><LocaleTrigger /></div>
+		<PublicFooter showLocale />
+		<div class="site-container site-shell__footer-locale"><LocaleTrigger /></div>
 	</div>
 	<LocalePreferences />
 	<DesktopImportRequestDialog />
@@ -53,6 +53,11 @@
 </div>
 
 <style>
+	@media (min-width: 768px) {
+		.site-shell__footer-locale {
+			display: none;
+		}
+	}
 	@media (max-width: 767.98px) {
 		.site-shell--secondary {
 			--bc-section-sm: var(--bc-space-4);

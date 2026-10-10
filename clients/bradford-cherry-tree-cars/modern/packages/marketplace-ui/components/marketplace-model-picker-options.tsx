@@ -2,6 +2,7 @@ import { Button } from "@repo/design-system/components/ui/button";
 import { cn } from "@repo/design-system/lib/utils";
 import type { VehicleTaxonomyModelOption } from "@repo/marketplace";
 import { ChevronRight } from "lucide-react";
+import type { ReactNode } from "react";
 import { getMarketplaceModelInventoryKey } from "../lib/model-picker-options";
 
 export const marketplaceOptionButtonClassName =
@@ -79,6 +80,7 @@ const ModelPickerOptionGrid = ({
   countByKey,
   isDesktop,
   items,
+  leadingOption,
   make,
   model,
   onSelect,
@@ -86,11 +88,13 @@ const ModelPickerOptionGrid = ({
   countByKey?: ReadonlyMap<string, number>;
   isDesktop: boolean;
   items: VehicleTaxonomyModelOption[];
+  leadingOption?: ReactNode;
   make?: string;
   model?: string;
   onSelect: (item: VehicleTaxonomyModelOption) => void;
 }) => (
   <div className={cn("grid gap-2", isDesktop ? "grid-cols-2" : "grid-cols-1")}>
+    {leadingOption}
     {items.map((item) => (
       <ModelPickerOptionButton
         inventoryCount={getModelInventoryCount({
@@ -111,6 +115,7 @@ export const ModelPickerSections = ({
   additionalModelsLabel,
   countByKey,
   isDesktop,
+  leadingOption,
   make,
   model,
   onSelect,
@@ -121,56 +126,75 @@ export const ModelPickerSections = ({
   additionalModelsLabel: string;
   countByKey?: ReadonlyMap<string, number>;
   isDesktop: boolean;
+  leadingOption?: ReactNode;
   make?: string;
   model?: string;
   onSelect: (item: VehicleTaxonomyModelOption) => void;
   popular: VehicleTaxonomyModelOption[];
   popularModelsLabel: string;
   remaining: VehicleTaxonomyModelOption[];
-}) => (
-  <div className="space-y-4" data-slot="model-options">
-    {popular.length > 0 ? (
-      <section aria-labelledby="popular-models-heading">
-        <p
-          className="mb-2 px-1 font-semibold text-micro text-muted-foreground uppercase tracking-label"
-          id="popular-models-heading"
-        >
-          {popularModelsLabel}
-        </p>
+}) => {
+  if (isDesktop) {
+    return (
+      <div data-slot="model-options">
         <ModelPickerOptionGrid
           countByKey={countByKey}
-          isDesktop={isDesktop}
-          items={popular}
+          isDesktop
+          items={[...popular, ...remaining]}
+          leadingOption={leadingOption}
           make={make}
           model={model}
           onSelect={onSelect}
         />
-      </section>
-    ) : null}
+      </div>
+    );
+  }
 
-    {remaining.length > 0 ? (
-      <section
-        aria-labelledby={
-          popular.length > 0 ? "additional-models-heading" : undefined
-        }
-      >
-        {popular.length > 0 ? (
+  return (
+    <div className="space-y-4" data-slot="model-options">
+      {popular.length > 0 ? (
+        <section aria-labelledby="popular-models-heading">
           <p
             className="mb-2 px-1 font-semibold text-micro text-muted-foreground uppercase tracking-label"
-            id="additional-models-heading"
+            id="popular-models-heading"
           >
-            {additionalModelsLabel}
+            {popularModelsLabel}
           </p>
-        ) : null}
-        <ModelPickerOptionGrid
-          countByKey={countByKey}
-          isDesktop={isDesktop}
-          items={remaining}
-          make={make}
-          model={model}
-          onSelect={onSelect}
-        />
-      </section>
-    ) : null}
-  </div>
-);
+          <ModelPickerOptionGrid
+            countByKey={countByKey}
+            isDesktop={isDesktop}
+            items={popular}
+            make={make}
+            model={model}
+            onSelect={onSelect}
+          />
+        </section>
+      ) : null}
+
+      {remaining.length > 0 ? (
+        <section
+          aria-labelledby={
+            popular.length > 0 ? "additional-models-heading" : undefined
+          }
+        >
+          {popular.length > 0 ? (
+            <p
+              className="mb-2 px-1 font-semibold text-micro text-muted-foreground uppercase tracking-label"
+              id="additional-models-heading"
+            >
+              {additionalModelsLabel}
+            </p>
+          ) : null}
+          <ModelPickerOptionGrid
+            countByKey={countByKey}
+            isDesktop={isDesktop}
+            items={remaining}
+            make={make}
+            model={model}
+            onSelect={onSelect}
+          />
+        </section>
+      ) : null}
+    </div>
+  );
+};

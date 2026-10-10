@@ -23,6 +23,22 @@ const rangeBounds = (value: string) => {
 	return { min: number(min), max: number(max) };
 };
 
+/** Merge model counts from the selected makes without parsing display labels. */
+export function mergeInventoryModelOptions<
+	T extends { value: string; label: string; count?: number; countLabel?: string }
+>(brands: string[], optionsByBrand: Record<string, T[]>): T[] {
+	const combined = new Map<string, T>();
+	for (const brand of new Set(brands)) {
+		for (const option of optionsByBrand[brand] ?? []) {
+			const count = (combined.get(option.value)?.count ?? 0) + (option.count ?? 0);
+			combined.set(option.value, { ...option, count, countLabel: String(count) });
+		}
+	}
+	return [...combined.values()].sort(
+		(left, right) => (right.count ?? 0) - (left.count ?? 0) || left.label.localeCompare(right.label)
+	);
+}
+
 /** The URL, not the set of available presets, owns the applied values. */
 export function inventoryMobileDraftFromQuery(params: URLSearchParams): InventoryMobileDraft {
 	const { filters, sortParam } = parseInventoryQuery(params);
