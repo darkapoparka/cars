@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "request": "cloudflare-dm-pilot-01",
+  "dealers": ["dm-auto-varna"],
+  "sourceBaseline": "06fcad9c0a8a5ac6b4f27c1a4e0df5445a6c8f5e",
+  "scope": "Owner-requested Cloudflare migration. Compile six existing dealer applications and router without hosting credentials. Deploy exact artifacts locally after verification; no Vercel, billing, DNS or outreach changes."
+}
