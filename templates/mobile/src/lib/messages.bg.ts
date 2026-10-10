@@ -28,7 +28,7 @@ export const bgMessages: Record<string, string> = {
   'Find a vehicle': 'Намерете автомобил',
   'Vehicle category': 'Вид превозно средство',
   'Vehicle type': 'Вид',
-  Gearbox: 'Скоростна кутия',
+  Gearbox: 'Трансмисия',
   'All filters': 'Всички филтри',
   'Active filters': 'Активни филтри',
   Motorbikes: 'Мотоциклети',
@@ -123,7 +123,7 @@ export const bgMessages: Record<string, string> = {
   'No fuel options in this category’s inventory yet.':
     'Все още няма предложения с гориво в тази категория.',
   Mileage: 'Пробег',
-  Transmission: 'Скоростна кутия',
+  Transmission: 'Трансмисия',
   'Body type': 'Купе',
   Diesel: 'Дизел',
   Petrol: 'Бензин',
