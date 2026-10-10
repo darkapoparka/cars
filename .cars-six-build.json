@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "packagingVersion": "5",
+  "dealer": "stockport-broadbent-car-and-servicing",
+  "transformation": "six-design-cloudflare-v1",
+  "signature": {
+    "provider": "cloudflare",
+    "adapterReceipt": ".cars-cloudflare-svelte.json",
+    "buildVerified": false
+  },
+  "families": {
+    "app": {
+      "base": "/variant-4",
+      "digest": "0c83d611380e05580dad19afbb71e295a6e476ce0cd665f88aae216a0f4ced99"
+    },
+    "mobile": {
+      "base": "/variant-5",
+      "digest": "e3efc4dfa895e600e7b4284b3318f193bed7acb073d429eb7b8d5f4d5e203869"
+    },
+    "karento-best": {
+      "base": "/variant-6",
+      "digest": "417f3d5344d22498086d829303385d20bc0c5e2b081909c6387d67c74799effa"
+    }
+  },
+  "sourceReceipts": {
+    ".cars-app.json": "0f6d6367f5153d048b9ec65f60c148f0320c1af33bc60c2ef87efaa1dc923ecc",
+    ".cars-mobile.json": "bde0333dd1d78bea5e47f7d0b20de78001bf683e3d3a7a3eba723a38e3ada0d5",
+    ".cars-signature.json": "b2397d2d86d7e7f8d555f21515b9b2473422b2f1d44c4a28ec1facdea43d077f"
+  }
+}

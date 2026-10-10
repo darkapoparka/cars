@@ -1,0 +1,12 @@
+{
+  "name": "cars-cloudflare-dealer-router",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "wrangler": "4.149.0"
+  },
+  "scripts": {
+    "check": "wrangler deploy --dry-run",
+    "deploy": "wrangler deploy"
+  }
+}
