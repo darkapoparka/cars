@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "request": "preservation-aware-nine-candidates-v1",
+  "sourceReviewRun": 38092372478,
+  "sourceReviewCommit": "38c30f0a4652c3f8a91bf06972b1903e51eadbc0",
+  "dealerCount": 9,
+  "scope": "Resolve only previously reviewed bounded conflicts, preserve all source identity and stock, build separate immutable candidate transports. No canonical source, hosting or billing writes."
+}
