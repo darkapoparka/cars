@@ -2,12 +2,17 @@ import type { Locale } from '$lib/locale/core';
 import { homeModeArtwork } from './home-discovery';
 
 type InventoryDesktopControlsCopy = {
-	searchPlaceholder: string;
+	searchPlaceholder: (count: number) => string;
 	typeLabel: string;
 	typeNavigation: string;
 	allTypes: string;
 	allFilters: string;
 	removeFilter: string;
+	appliedFilters: string;
+	appliedFilterCount: (count: number) => string;
+	moreFilters: (count: number) => string;
+	showAppliedFilters: string;
+	editFilters: string;
 	vehicleNoun: (count: number) => string;
 	sortLabel: string;
 	showFilterPanel: string;
@@ -16,24 +21,34 @@ type InventoryDesktopControlsCopy = {
 
 export const inventoryDesktopControlsCopy: Record<Locale, InventoryDesktopControlsCopy> = {
 	bg: {
-		searchPlaceholder: 'Търси автомобил…',
+		searchPlaceholder: (count) => `Търси автомобили (${count})`,
 		typeLabel: 'Тип',
 		typeNavigation: 'Тип автомобил',
 		allTypes: 'Всички',
 		allFilters: 'Всички филтри',
 		removeFilter: 'Премахни филтър: ',
+		appliedFilters: 'Приложени филтри',
+		appliedFilterCount: (count) => `Филтри (${count})`,
+		moreFilters: (count) => `+${count} още`,
+		showAppliedFilters: 'Виж всички приложени филтри',
+		editFilters: 'Промени филтрите',
 		vehicleNoun: (count) => (count === 1 ? 'автомобил' : 'автомобила'),
 		sortLabel: 'Подреди по',
 		showFilterPanel: 'Покажи панел с филтри',
 		hideFilterPanel: 'Скрий панела с филтри'
 	},
 	en: {
-		searchPlaceholder: 'Search cars…',
+		searchPlaceholder: (count) => `Search cars (${count})`,
 		typeLabel: 'Type',
 		typeNavigation: 'Vehicle type',
 		allTypes: 'All cars',
 		allFilters: 'All filters',
 		removeFilter: 'Remove filter: ',
+		appliedFilters: 'Applied filters',
+		appliedFilterCount: (count) => `Filters (${count})`,
+		moreFilters: (count) => `+${count} more`,
+		showAppliedFilters: 'View all applied filters',
+		editFilters: 'Edit filters',
 		vehicleNoun: (count) => (count === 1 ? 'car' : 'cars'),
 		sortLabel: 'Sort by',
 		showFilterPanel: 'Show filter panel',
@@ -69,6 +84,8 @@ type InventoryDialogCopy = {
 	clearSearch: string;
 	matchingCars: string;
 	matchingCount: (count: number) => string;
+	optionCount: (count: number) => string;
+	quickChoices: string;
 	from: string;
 	upTo: string;
 	showCars: string;
@@ -93,6 +110,8 @@ export const inventoryDialogCopy: Record<Locale, InventoryDialogCopy> = {
 		clearSearch: 'Изчисти търсенето',
 		matchingCars: 'Намерени автомобили',
 		matchingCount: (count) => `${count} намерени автомобила`,
+		optionCount: (count) => (count === 1 ? '1 опция' : `${count} опции`),
+		quickChoices: 'Бърз избор',
 		from: 'От',
 		upTo: 'До',
 		showCars: 'Покажи автомобили',
@@ -114,6 +133,8 @@ export const inventoryDialogCopy: Record<Locale, InventoryDialogCopy> = {
 		clearSearch: 'Clear search text',
 		matchingCars: 'Matching cars',
 		matchingCount: (count) => `${count} matching cars`,
+		optionCount: (count) => (count === 1 ? '1 option' : `${count} options`),
+		quickChoices: 'Quick choices',
 		from: 'From',
 		upTo: 'Up to',
 		showCars: 'Show cars',

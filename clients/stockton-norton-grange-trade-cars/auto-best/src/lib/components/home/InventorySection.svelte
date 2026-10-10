@@ -46,7 +46,7 @@
 
   .dn-inventory-panel {
     padding: 46px 30px 30px;
-    border-radius: 20px;
+    border-radius: var(--dn-radius-lg);
     background: #f1f3f5;
   }
 
@@ -292,7 +292,7 @@
     .dn-inventory__all {
       min-height: 44px;
       padding: 0 12px;
-      border-radius: 10px;
+      border-radius: var(--dn-radius-sm);
       background: transparent;
       color: #24272c;
       font-size: var(--dn-control-size);

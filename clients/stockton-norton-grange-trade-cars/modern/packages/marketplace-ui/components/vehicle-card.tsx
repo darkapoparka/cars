@@ -39,6 +39,8 @@ export type {
 } from "../lib/vehicle-card-types";
 
 export const VehicleCard = ({
+  className,
+  compactDesktopGrid = false,
   density = "default",
   desktopHeadingLevel = 2,
   desktopImageSizes,
@@ -59,6 +61,8 @@ export const VehicleCard = ({
   const [imageFailed, setImageFailed] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(!listing.images[0]?.url);
   const isGrid = viewMode === "grid";
+  const hasCompactDesktopGrid =
+    compactDesktopGrid && isGrid && presentation === "showroom";
   const isCompact = density === "compact";
   const variant = getVehicleCardVariant({ density, desktopLayout, viewMode });
   const isDesktopComparison = isCompact && desktopLayout === "grid";
@@ -93,8 +97,10 @@ export const VehicleCard = ({
           : "lg:**:data-[slot=vehicle-card-title]:line-clamp-1",
         variant === "compact-list" &&
           "lg:grid lg:grid-cols-[13rem_minmax(0,1fr)] lg:gap-0 xl:grid-cols-[15rem_minmax(0,1fr)]",
-        isDesktopComparison && "lg:flex lg:flex-col lg:gap-0"
+        isDesktopComparison && "lg:flex lg:flex-col lg:gap-0",
+        className
       )}
+      data-desktop-compact={hasCompactDesktopGrid}
       data-desktop-surface={desktopSurface}
       data-presentation={presentation}
       data-slot="vehicle-card"
@@ -184,6 +190,7 @@ export const VehicleCard = ({
       </div>
 
       <VehicleCardContent
+        compactDesktopGrid={hasCompactDesktopGrid}
         desktopHeadingLevel={desktopHeadingLevel}
         isDesktopComparison={isDesktopComparison}
         listing={listing}

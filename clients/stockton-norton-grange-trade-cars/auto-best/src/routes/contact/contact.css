@@ -84,7 +84,7 @@
 .dn-contact-card {
   min-width: 0;
   padding: 40px;
-  border-radius: 16px;
+  border-radius: var(--dn-radius-card);
   box-sizing: border-box;
 }
 
@@ -272,7 +272,7 @@
   width: max-content;
   max-width: 180px;
   padding: 7px 10px;
-  border-radius: 8px;
+  border-radius: var(--dn-radius-media);
   background: #202329;
   color: #fff;
   font-size: var(--dn-text-meta);
@@ -486,7 +486,7 @@
   .dn-contact-card {
     margin-top: 16px;
     padding: 20px;
-    border-radius: 16px;
+    border-radius: var(--dn-radius-card);
   }
 
   .dn-contact-intent__heading h2,
@@ -563,7 +563,7 @@
     position: relative;
     margin: -52px 0 0;
     padding: 20px 16px 12px;
-    border-radius: 20px;
+    border-radius: var(--dn-radius-entry-card);
     background: var(--dn-mobile-surface);
     box-shadow: 0 18px 42px rgba(13, 18, 26, .2);
   }
@@ -591,7 +591,7 @@
   .dn-contact-intent--workflow .dn-contact-card {
     margin-top: 20px;
     padding: 8px 12px;
-    border-radius: 16px;
+    border-radius: var(--dn-radius-card);
     background: var(--dn-mobile-surface);
   }
 
@@ -603,7 +603,7 @@
     margin-inline: 0;
     padding: 12px 4px;
     gap: 12px;
-    border-radius: 12px;
+    border-radius: var(--dn-radius-control);
   }
   .dn-contact-intent--workflow .dn-contact-card__icon { color: #525a66; }
   .dn-contact-intent--workflow .dn-contact-card__icon .dn-icon { width: 20px; height: 20px; }
@@ -637,7 +637,7 @@
     container-type: inline-size;
     margin: 16px 0 0;
     padding: 20px 16px;
-    border-radius: 16px;
+    border-radius: var(--dn-radius-card);
   }
   .dn-contact-section:not(.dn-contact-section--workflow) .dn-contact-selected { text-align: left; }
   .dn-contact-section:not(.dn-contact-section--workflow) .dn-contact-selected p { font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
@@ -670,7 +670,7 @@
   .dn-contact-hero--general .dn-contact-hero__action { display: none; }
   .dn-contact-section--general { position: relative; z-index: 1; margin-top: calc(-1 * (var(--dn-space-8) + var(--dn-space-5))); background: linear-gradient(to bottom, transparent calc(var(--dn-space-8) + var(--dn-space-5)), var(--dn-mobile-canvas) 0); }
   .dn-contact-section--general > .container { width: min(100%, 784px); padding-inline: var(--dn-space-3); }
-  .dn-contact-section.dn-contact-section--general .dn-contact-intent__main.dn-information-card { container-type: inline-size; margin: 0; padding: var(--dn-entry-card-padding); border-radius: var(--dn-radius-lg); }
+  .dn-contact-section.dn-contact-section--general .dn-contact-intent__main.dn-information-card { container-type: inline-size; margin: 0; padding: var(--dn-entry-card-padding); border-radius: var(--dn-radius-content-card); }
   .dn-contact-intent--general .dn-contact-intent__heading,
   .dn-contact-intent--general .dn-contact-selected { width: 100%; margin-inline: auto; }
   .dn-contact-intent--general .dn-contact-intent__heading h1 {
@@ -688,7 +688,7 @@
   .dn-contact-primary-actions .dn-entry-action { width: 100%; min-width: 0; padding-inline: var(--dn-space-3); }
   .dn-contact-intent--general .dn-contact-primary-actions .dn-contact-primary-directions { --dn-compact-control-surface: var(--dn-home-panel); }
   .dn-contact-intent--general .dn-contact-primary-actions .dn-contact-primary-directions:hover { --dn-compact-control-surface: var(--dn-surface-hover); }
-  .dn-contact-section--general .dn-contact-card { margin-top: var(--dn-space-4); border-radius: var(--dn-radius-lg); }
+  .dn-contact-section--general .dn-contact-card { margin-top: var(--dn-space-4); border-radius: var(--dn-radius-content-card); }
   .dn-contact-section--general .dn-contact-card__heading { display: none; }
   .dn-contact-section--general .dn-contact-card__links { margin-top: 0; }
   .dn-contact-intent--general .dn-contact-card__link {
@@ -717,7 +717,7 @@
   .dn-contact-section--general .dn-contact-location__card {
     overflow: hidden;
     border: 1px solid var(--dn-line);
-    border-radius: var(--dn-radius-lg);
+    border-radius: var(--dn-radius-content-card);
     background: var(--dn-surface-raised);
   }
   .dn-contact-section--general .dn-contact-location__card .dn-showroom-map {
@@ -811,7 +811,7 @@
     margin-top: -52px;
     padding: 20px 16px 14px;
     border: 1px solid #e3e6ea;
-    border-radius: 20px;
+    border-radius: var(--dn-radius-entry-card);
     background: #fff;
     box-shadow: 0 10px 28px rgba(13, 18, 26, .11);
   }

@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const suites = [
   'http-security-smoke', 'sveltekit-smoke', 'enquiry-smoke',
-  'mobile-filter-smoke', 'home-browse-smoke', 'desktop-discovery-smoke', 'phase4-smoke'
+  'mobile-filter-smoke', 'home-browse-smoke', 'desktop-discovery-smoke', 'radius-smoke', 'phase4-smoke'
 ];
 const args = process.argv.slice(2);
 if (args.some(arg => arg !== '--preview') || args.length > 1) {

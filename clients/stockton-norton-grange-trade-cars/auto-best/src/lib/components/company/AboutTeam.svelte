@@ -37,17 +37,17 @@
             />
           </picture>
           <div class="dn-about-team-card__details">
-            <div class="dn-about-team-card__heading">
+            <div class="dn-about-team-card__copy">
               <h3 id={`about-team-${member.id}`}>{member.name}</h3>
-              <a
-                class="dn-about-team__contact"
-                href={i18n.href(resolve('/contact'))}
-                aria-describedby={`about-team-${member.id}`}
-              >
-                {i18n.t('company.team.contact')}
-              </a>
+              <p>{i18n.t(member.role)}</p>
             </div>
-            <p>{i18n.t(member.role)}</p>
+            <a
+              class="dn-about-team__contact dn-about-team-card__contact"
+              href={i18n.href(resolve('/contact'))}
+              aria-describedby={`about-team-${member.id}`}
+            >
+              {i18n.t('company.team.contact')}
+            </a>
           </div>
         </article>
       {/each}
@@ -89,9 +89,10 @@
     .dn-about-team-card { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid var(--dn-line); border-radius: var(--dn-radius-lg); background: var(--dn-surface-raised); box-shadow: var(--dn-card-shadow-subtle); }
     .dn-about-team-card__media { display: block; flex: none; width: 100%; max-height: 240px; overflow: hidden; aspect-ratio: 4 / 3; background: var(--dn-surface-subtle); }
     .dn-about-team-card__media img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
-    .dn-about-team-card__details { flex: 1; padding: var(--dn-space-4); }
-    .dn-about-team-card__heading { display: flex; flex-wrap: wrap; align-items: center; gap: var(--dn-space-3); }
-    .dn-about-team-card h3 { flex: 1 1 8rem; min-width: 0; margin: 0; color: var(--dn-ink); font-size: var(--dn-text-card); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-card); overflow-wrap: anywhere; }
+    .dn-about-team-card__details { display: flex; flex: 1; flex-direction: column; gap: var(--dn-space-3); padding: var(--dn-space-4); }
+    .dn-about-team-card__copy { min-width: 0; }
+    .dn-about-team-card__contact { align-self: flex-end; margin-top: auto; white-space: nowrap; }
+    .dn-about-team-card h3 { min-width: 0; margin: 0; color: var(--dn-ink); font-size: var(--dn-text-card); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-card); overflow-wrap: anywhere; }
     .dn-about-team-card p { margin: var(--dn-space-1) 0 0; color: var(--dn-muted); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
   }
 

@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "dealer": "stockton-norton-grange-trade-cars",
+  "sourceCommit": "499baa37c3e479723337d22e38a7ffe17178e2a3",
+  "sourceTree": "d36f4845824d3540602580aed4049d4b9393c7d6",
+  "sourceReleases": {
+    "auto-best": {
+      "revision": "696230a404abd9b20b6f907b9cfb139175298c7a",
+      "tree": "b07ff2273be554ef64a039ac8f4f023ae60a33ac",
+      "digest": "90f131aa0ead6ae4fcb06d30c054ca4d0c5d39097a2927cca8f298c7d2dfb3ca"
+    },
+    "modern": {
+      "revision": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+      "tree": "51d68e5dd6e3b305191df94e877403fd7b7414e1",
+      "digest": "b035a849efb41d3ed18d97fcf3511850469162c0a990397b74be588179d43588"
+    },
+    "import": {
+      "revision": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+      "tree": "b64c4a4939c4244ba3f408e5c0311c586a913e67",
+      "digest": "eef4c3544b28bb3a62cad4c2a07e4ff64301fb4c9e9925ba002077bda7f63bd3"
+    },
+    "app": {
+      "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+      "tree": "749512ff762c25272d1474225ff653dd4c88f0fe",
+      "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541"
+    },
+    "mobile": {
+      "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+      "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b",
+      "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d"
+    },
+    "karento-best": {
+      "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+      "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
+      "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+    }
+  },
+  "selected": [
+    "auto-best",
+    "modern",
+    "import",
+    "app",
+    "mobile"
+  ],
+  "protectedInputs": [
+    {
+      "path": "assets/app-icon.png",
+      "sha256": "30debbba6a343cbfb24357a4a52101611b8602ef89152e6220d63c27ab138f69"
+    },
+    {
+      "path": "assets/favicon.ico",
+      "sha256": "79709c1b7b8e8aea4793d6e1af870b6a0dd54914fd6265fe4ee6444d743230f3"
+    },
+    {
+      "path": "assets/provenance.json",
+      "sha256": "fc2ce8b4915629ed76ae387437012e4fc0903773331447c1b2f8833ba00d49f2"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "30d37951d2146dfe9134bd3695075947e766aebb1591b8338e56552e9cd291e6"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "sha256": "4cfc0fbc6a9ed1aa9bba9a6673713ea87562832e918f39ab5d34cefa34a23de7"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "8b3a2b7b3b5e6c73cb0981c75bced570c80f0addddf9a62ba7c7b90d7d319eb0"
+    },
+    {
+      "path": "dealer-brand/logo.webp",
+      "sha256": "a4c81c76ad62d0916a4212e7e31f93e2aa2b513309761f6c38a4c4ddc385befc"
+    },
+    {
+      "path": "dealer-stock/hatchback.webp",
+      "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2"
+    },
+    {
+      "path": "dealer-stock/van.webp",
+      "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5"
+    },
+    {
+      "path": "locale-config.json",
+      "sha256": "b3c07636e0d3b39f598bfd0af1ca7f0d6b3ac9cab1f123a80df656f25ab8afef"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "42f3fe39210c49dc4047aef525d7c4c08c12daaf6b95be5f80c3ca5324bd2aba"
+    }
+  ],
+  "installed": true,
+  "sourceSealsVerified": true,
+  "protectedInputsPreserved": true,
+  "build": false,
+  "hosted": false
+}

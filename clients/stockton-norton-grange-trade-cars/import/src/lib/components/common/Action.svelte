@@ -137,8 +137,22 @@
 		flex-shrink: 0;
 	}
 	@media (max-width: 767.98px) {
+		.site-action {
+			--action-icon-size: calc(var(--action-height, var(--bc-control-height-standard)) / 2);
+		}
 		.size-compact {
+			--action-icon-size: calc(var(--action-height, var(--bc-control-height-chip)) / 2);
 			min-height: var(--action-height, var(--bc-control-height-chip));
+		}
+		.size-primary {
+			--action-icon-size: calc(var(--action-height, var(--bc-control-height-primary)) / 2);
+		}
+		.size-hero {
+			--action-icon-size: calc(var(--action-height, var(--bc-control-height-hero)) / 2);
+		}
+		.site-action :global(svg) {
+			width: var(--action-icon-size);
+			height: var(--action-icon-size);
 		}
 	}
 	@media (min-width: 768px) {

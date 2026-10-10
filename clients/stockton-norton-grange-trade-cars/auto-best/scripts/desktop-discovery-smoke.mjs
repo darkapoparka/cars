@@ -40,14 +40,17 @@ try {
         assert.equal(await form.locator('.dn-discovery__filters').count(), 0);
         const resultFilter = page.locator('.dn-listing-results__filters');
         assert.equal(await resultFilter.innerText(), 'Филтри');
-        assert.equal(await resultFilter.evaluate(el => getComputedStyle(el).backgroundColor), 'rgb(32, 35, 41)');
+        assert.equal(await resultFilter.evaluate(el => getComputedStyle(el).backgroundColor), 'rgb(20, 23, 29)', 'The Filters action uses the shared ink surface');
         assert.equal(await resultFilter.evaluate(el => getComputedStyle(el).color), 'rgb(255, 255, 255)');
         const filterBox = await resultFilter.boundingBox();
         const sortBox = await page.locator('.dn-listing-sort').boundingBox();
         assert.equal(filterBox.height, sortBox.height);
         assert.equal(filterBox.y, sortBox.y);
         const toolbarGap = Number.parseFloat(await page.locator('.dn-listing-results__tools').evaluate(el => getComputedStyle(el).columnGap));
-        assert.equal(sortBox.x - filterBox.x - filterBox.width, toolbarGap);
+        const toolbarBox = await page.locator('.dn-listing-results__tools').boundingBox();
+        assert(Math.abs(filterBox.x - toolbarBox.x) < 1, 'Filters align with the start of the toolbar');
+        assert(Math.abs(sortBox.x + sortBox.width - toolbarBox.x - toolbarBox.width) < 1, 'Sort aligns with the end of the toolbar');
+        assert(sortBox.x - filterBox.x - filterBox.width >= toolbarGap - 1, 'The toolbar preserves its minimum control gap');
         if (width === 1440) await page.locator('.dn-listing-results__heading').screenshot({ path: `${output}/cars-results-toolbar.png` });
         await resultFilter.click();
         await page.locator('#dn-listing-filter-dialog').waitFor({ state: 'visible' });
@@ -236,7 +239,7 @@ try {
         await filters.click();
         const dialog = page.locator('#dn-listing-filter-dialog');
         await dialog.waitFor({ state: 'visible' });
-        assert.equal(await dialog.locator('input[type=hidden][name=make]').inputValue(), 'Audi');
+        assert.equal(await listingFormValue(dialog, 'make'), 'Audi', 'The full filter form retains the applied make');
         await page.keyboard.press('Escape');
         await page.waitForFunction(() => document.querySelector('.dn-discovery-sticky__filters').getAttribute('aria-expanded') === 'false');
         await dialog.waitFor({ state: 'hidden' });
