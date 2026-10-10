@@ -1,0 +1,10 @@
+# Final mobile Home action art
+
+Cars, Sell and Import retain the existing transparent collection, Sell car/key/coins and Import car/ship/transporter assets. Native titles sit on flat blue, crimson, ice-blue and charcoal surfaces. There are no subtitles or inset photo panels.
+
+Leasing uses `static/assets/images/template/home-action-finance-v3.webp`, a 720 x 405 alpha WebP derived with the built-in imagegen tool from the exact port 3001 Cars App reference `templates/app/public/showroom/black/home-finance-v1.png`. The tool removed the environment and oversized document while retaining the sedan, euro coins and calculator financing motif. The original generated edit is preserved at `C:/Users/radev/.codex/generated_images/01a0f0c2-f7e9-7861-9bb5-2f3b4ab3235b/exec-7c3ff018-086d-4125-b44a-0b757d6493ac.png`. Its alpha is preserved in the quality 90 encoding. The crop tuple frames the foreground only; no CSS masks or blend tricks create transparency. Model version is managed by the built-in tool.
+
+## Final prompt
+
+Extract and refine the foreground financing arrangement from this exact approved 3001 reference banner. Keep the realistic white sedan as the dominant object and the existing small grouped euro coins at its front right, plus a restrained real calculator partly behind the vehicle as supporting finance context. Remove the giant white document entirely. Preserve the recognizable vehicle shape, finish, perspective, complete body and wheels. Tight cohesive compact landscape composition, naturally lit like the reference. Remove black backdrop, studio floor, reflection, dots, ribbons, sparks, glows and all environmental background. Output genuinely transparent alpha around this single coherent car/finance foreground cluster, with about 5 percent transparent outer padding. No books, huge papers, oversized props, fantasy objects, panels, photographic rectangle, frame, logos or text. This foreground will sit directly on a solid charcoal mobile tile and must look clear and plausible at small size.
+

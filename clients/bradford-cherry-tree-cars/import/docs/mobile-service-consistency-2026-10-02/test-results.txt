@@ -1,0 +1,26 @@
+
+Running 12 tests using 1 worker
+
+(node:33800) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:33800) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [desktop] › tests\account-hydration.e2e.ts:34:2 › mobile bg contact and account pages reflow with a 200% root font (3.9s)
+  ok  2 [desktop] › tests\account-hydration.e2e.ts:34:2 › mobile en contact and account pages reflow with a 200% root font (2.1s)
+  -   3 [desktop] › tests\mobile-secondary.e2e.ts:130:2 › en service filters and search preserve readable cards and service destinations
+  -   4 [desktop] › tests\mobile-secondary.e2e.ts:130:2 › bg service filters and search preserve readable cards and service destinations
+  -   5 [desktop] › tests\mobile-sheet-regressions.e2e.ts:73:2 › en home sourcing helper and consultant lead to a native contact page
+  -   6 [desktop] › tests\mobile-sheet-regressions.e2e.ts:73:2 › bg home sourcing helper and consultant lead to a native contact page
+(node:1096) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1096) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  7 [mobile] › tests\account-hydration.e2e.ts:34:2 › mobile bg contact and account pages reflow with a 200% root font (2.1s)
+  ok  8 [mobile] › tests\account-hydration.e2e.ts:34:2 › mobile en contact and account pages reflow with a 200% root font (1.9s)
+  ok  9 [mobile] › tests\mobile-secondary.e2e.ts:130:2 › en service filters and search preserve readable cards and service destinations (1.5s)
+  ok 10 [mobile] › tests\mobile-secondary.e2e.ts:130:2 › bg service filters and search preserve readable cards and service destinations (1.6s)
+  ok 11 [mobile] › tests\mobile-sheet-regressions.e2e.ts:73:2 › en home sourcing helper and consultant lead to a native contact page (1.3s)
+  ok 12 [mobile] › tests\mobile-sheet-regressions.e2e.ts:73:2 › bg home sourcing helper and consultant lead to a native contact page (1.2s)
+
+  4 skipped
+  8 passed (20.9s)

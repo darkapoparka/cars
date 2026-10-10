@@ -1,0 +1,1172 @@
+{
+  "schemaVersion": 1,
+  "slug": "bradford-cherry-tree-cars",
+  "business": {
+    "slug": "bradford-cherry-tree-cars",
+    "name": "Cherry Tree Cars Ltd",
+    "shortName": "Cherry Tree Cars Ltd",
+    "latinName": "Cherry Tree Cars Ltd",
+    "tagline": "Browse used cars in Bradford.",
+    "city": "Bradford, West Yorkshire",
+    "region": "",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "locale": "en-GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "address": "",
+    "addressLine": "",
+    "phoneDisplay": "",
+    "phoneHref": "",
+    "phoneE164": "",
+    "email": "",
+    "hours": "Contact the dealership before visiting.",
+    "website": "",
+    "inventoryUrl": "https://www.pistonheads.com/buy/dealer/999124",
+    "contactUrl": "",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Cherry%20Tree%20Cars%20Ltd%2C%20Bradford%2C%20West%20Yorkshire",
+    "mapsEmbedUrl": "https://maps.google.com/maps?q=Cherry%20Tree%20Cars%20Ltd%2C%20Bradford%2C%20West%20Yorkshire&z=16&output=embed",
+    "accent": "#871221",
+    "logo": "/dealer-brand/logo.webp",
+    "logoLight": "/dealer-brand/logo.webp",
+    "logoDark": "/dealer-brand/logo.webp",
+    "socialLinks": {
+      "facebook": "",
+      "instagram": "",
+      "youtube": "",
+      "tiktok": ""
+    },
+    "services": [],
+    "inventoryNotice": "Vehicle images are generated illustrations, not photographs of the advertised vehicles. Listing details were observed on 10 October 2026; confirm each original advert, price, condition and availability with the dealership.",
+    "previewNotice": "Independent design preview for discussion, not an official dealership website. Forms do not send messages or create reservations.",
+    "observedAt": "2026-10-10",
+    "coordinates": null,
+    "raw": {
+      "schemaVersion": 1,
+      "leadId": "gb-bradford-cherry-tree-cars",
+      "slug": "bradford-cherry-tree-cars",
+      "observedAt": "2026-10-10",
+      "name": "Cherry Tree Cars Ltd",
+      "shortName": "Cherry Tree Cars Ltd",
+      "legalName": null,
+      "companyNumber": null,
+      "city": "Bradford, West Yorkshire",
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "address": null,
+      "phone": null,
+      "phoneDisplay": null,
+      "phoneHref": null,
+      "email": null,
+      "hours": null,
+      "coordinates": null,
+      "currency": "GBP",
+      "distanceUnit": "mi",
+      "locale": "en-GB",
+      "languages": [
+        "en"
+      ],
+      "accent": "#871221",
+      "website": null,
+      "sourceProfile": "https://www.pistonheads.com/buy/dealer/999124",
+      "mapsUrl": null,
+      "mapsEmbedUrl": null,
+      "tagline": "Browse used cars in Bradford.",
+      "socialLinks": {},
+      "services": [],
+      "stockCount": 8,
+      "publishedListingCount": 23,
+      "sampleOnly": true,
+      "inventoryMode": "dated_listing_samples_with_generated_illustrations",
+      "previewNotice": "Independent design preview for discussion, not an official dealership website. Forms do not send messages or create reservations.",
+      "inventoryNotice": "Vehicle images are generated illustrations, not photographs of the advertised vehicles. Listing details were observed on 10 October 2026; confirm each original advert, price, condition and availability with the dealership.",
+      "availabilityLabel": "Listing sample — availability unconfirmed",
+      "contactNotice": "Direct enquiry destination is not confirmed; show an honest demo/unavailable contact state until resolved.",
+      "locationNote": "City-level location only until conflicting or incomplete premises information is resolved.",
+      "sources": [
+        "https://www.pistonheads.com/buy/dealer/999124",
+        "https://www.autotrader.co.uk/dealers/south-yorkshire/doncaster/cherry-tree-cars-ltd-10045747",
+        "https://www.cargurus.co.uk/Cars/m-Cherry-Tree-Cars-Ltd-sp526338",
+        "https://www.google.com/maps/place/CTC+Cherry+Tree+Cars/@53.7989305,-1.751754,17z/data=!3m1!4b1!4m6!3m5!1s0x487be1001545e575:0xdf87ca81141a47a6!8m2!3d53.7989305!4d-1.7491791!16s%2Fg%2F11zxx0g4s7?hl=en"
+      ],
+      "opportunity": "An owned affordable-stock showroom with consistent location, truthful vehicle details and a direct enquiry route.",
+      "qualificationNotes": [
+        "23 opened PistonHeads vehicles and matching Bradford marketplace identity; no own domain matched. Google postcode and legal/contact differences require confirmation.",
+        "23 opened PistonHeads cars corroborates 21 opened real AutoTrader Used cars; 24 on indexed CarGurus could not be opened. AutoTrader's Doncaster URL contains Bradford dealer content. Generic featured Dummy adverts were excluded.",
+        "41 Canal Street, Bradford BD1 4BD matches stock platforms. AutoTrader phone 07441 952282 and CarGurus 0191 743 4631 differ; likely forwarding but unproven. Registered-office move does not establish legal identity.",
+        "Marketplace-provided phone may forward calls; confirm an owner-controlled number.",
+        "Public trading name/city only: no dealership approval, contact ownership, matched legal entity or private contact history has been verified.",
+        "Vehicle media, prices, mileage, services, staff, reviews, finance claims, hours and branding have not been selected or accepted for application content in this preparation pass."
+      ],
+      "contactCandidates": {
+        "phone": "07400 048263",
+        "email": null,
+        "sourceUrl": "https://www.pistonheads.com/buy/dealer/999124",
+        "phoneCaveat": "Marketplace-provided phone may forward calls; confirm an owner-controlled number.",
+        "status": "public_business_contact_not_contacted",
+        "phoneE164": "+447400048263",
+        "approvalStatus": "public_research_not_dealer_confirmed"
+      },
+      "addressCandidates": {
+        "publishedNote": "41 Canal Street, Bradford BD1 4BD matches stock platforms. AutoTrader phone 07441 952282 and CarGurus 0191 743 4631 differ; likely forwarding but unproven. Registered-office move does not establish legal identity.",
+        "conflicts": [],
+        "googleProfile": {
+          "status": "possible_profile_address_conflict_not_confirmed",
+          "url": "https://www.google.com/maps/place/CTC+Cherry+Tree+Cars/@53.7989305,-1.751754,17z/data=!3m1!4b1!4m6!3m5!1s0x487be1001545e575:0xdf87ca81141a47a6!8m2!3d53.7989305!4d-1.7491791!16s%2Fg%2F11zxx0g4s7?hl=en",
+          "assessedAt": "2026-10-10",
+          "websiteField": "Add website",
+          "note": "CTC Cherry Tree Cars Google result says Canal Road BD1 4SJ and has no phone shown, whereas platforms say 41 Canal Street BD1 4BD. Do not treat this as a confidently matched profile."
+        },
+        "status": "unresolved_do_not_publish_exact_visit_pin"
+      },
+      "researchEvidence": {
+        "inventory": {
+          "count": 23,
+          "kind": "opened_platform_advertised_count",
+          "retrievedAt": "2026-10-10",
+          "sourceUrl": "https://www.pistonheads.com/buy/dealer/999124",
+          "caveat": "23 opened PistonHeads cars corroborates 21 opened real AutoTrader Used cars; 24 on indexed CarGurus could not be opened. AutoTrader's Doncaster URL contains Bradford dealer content. Generic featured Dummy adverts were excluded."
+        },
+        "stockSnapshots": [
+          {
+            "count": 23,
+            "sourceUrl": "https://www.pistonheads.com/buy/dealer/999124",
+            "method": "opened",
+            "observedAt": "2026-10-10"
+          },
+          {
+            "count": 21,
+            "sourceUrl": "https://www.autotrader.co.uk/dealers/south-yorkshire/doncaster/cherry-tree-cars-ltd-10045747",
+            "method": "opened",
+            "observedAt": "2026-10-10"
+          },
+          {
+            "count": 24,
+            "sourceUrl": "https://www.cargurus.co.uk/Cars/m-Cherry-Tree-Cars-Ltd-sp526338",
+            "method": "indexed",
+            "observedAt": "2026-10-10"
+          }
+        ],
+        "activityEvidence": [
+          {
+            "kind": "undated_advertised_inventory",
+            "date": null,
+            "sourceUrl": "https://www.pistonheads.com/buy/dealer/999124",
+            "note": "Real priced stock observed on 10 October 2026; no recent post date verified."
+          }
+        ],
+        "website": {
+          "url": null,
+          "status": "no_standalone_domain_found_in_bounded_search",
+          "assessedAt": "2026-10-10",
+          "confidence": "medium",
+          "observations": [
+            "Opened AutoTrader Website field is blank; PistonHeads header lists dealer contact and location without an own domain.",
+            "cherrytreecars.co.uk belongs to a separate Beverley/Woodmansey business, not the Bradford premises."
+          ]
+        },
+        "domainChecks": {
+          "queries": [
+            "\"Cherry Tree Cars\" Bradford website",
+            "\"Cherry Tree Cars\" \"BD1\" website OR facebook OR email",
+            "\"07400048263\" website",
+            "\"Cherry Tree Cars\" \"41 Canal Street\""
+          ],
+          "profilesChecked": [
+            "https://www.autotrader.co.uk/dealers/south-yorkshire/doncaster/cherry-tree-cars-ltd-10045747",
+            "https://www.cargurus.co.uk/Cars/m-Cherry-Tree-Cars-Ltd-sp526338"
+          ],
+          "result": "No confidently matched dealer-owned standalone domain found in these bounded checks. Absence must be confirmed with the operator."
+        }
+      },
+      "branding": {
+        "publishedBranding": "No usable original recovered from matching bounded public sources; generated design proposal uses the correct researched trading identity.",
+        "sourceLogoUrl": null,
+        "workingLogoPath": "dealer-brand/logo.webp",
+        "creationMethod": "generated_proposal",
+        "approvalStatus": "independent_design_proposal_not_dealer_approved",
+        "visualInspection": "Public references and new logo/icon imagery visually inspected; spelling and complete marks checked.",
+        "requiredNextStep": "Verify actual logo and icon consumers at desktop and mobile widths in all six applications.",
+        "publicReferenceUrls": [
+          "https://www.autotrader.co.uk/dealers/west-yorkshire/bradford/cherry-tree-cars-ltd-10045747",
+          "https://www.pistonheads.com/buy/dealer/999124"
+        ],
+        "researchDocument": "docs/qa/uk-branding-visual-research-2026-10-10.md"
+      },
+      "buildPreparation": {
+        "status": "content_pack_populated_application_pending",
+        "derivedFrom": {
+          "path": "../../uk-2026-10-10.json",
+          "sourceSha256": "0b8a38395e80f44f70035ba3cd538e44554a917056fd3fde9b4efbc31a999c92",
+          "researchAsOf": "2026-10-10"
+        },
+        "researchSnapshotFlags": {
+          "researchOnly": true,
+          "buildApproved": false,
+          "outreachApproved": false,
+          "contactHistory": "not_checked"
+        },
+        "ownerRequest": "Ten proposals with six variants on Cloudflare after accepted template releases. This pack records neither dealership approval nor changes to original research flags.",
+        "requestedTemplateChoices": [
+          "auto-best",
+          "modern",
+          "import",
+          "app",
+          "mobile",
+          "karento-best"
+        ],
+        "templateLabels": {
+          "auto-best": "Auto Best",
+          "modern": "Modern",
+          "import": "Import",
+          "app": "App",
+          "mobile": "Mobile",
+          "karento-best": "Signature"
+        },
+        "recommendedEntryTemplate": "auto-best",
+        "showFirstReason": "Show the home-to-stock-to-enquiry flow with a simple local dealer identity.",
+        "templatePins": null,
+        "hosting": {
+          "requestedProvider": "cloudflare",
+          "acceptedPublisher": null,
+          "publicOrigin": null,
+          "status": "await_qualified_pilot_and_release_acceptance",
+          "dnsChangeAuthorized": false,
+          "billingChangeAuthorized": false
+        },
+        "nextAction": "Confirm trading/legal identity, Canal Street versus Canal Road premises, owner-controlled contact and any own domain. No dated October update verified.",
+        "readyToPersonalizeNow": [
+          "Public trading name",
+          "Public city/region",
+          "GB dealership country",
+          "en-GB English presentation",
+          "GBP pricing contract",
+          "Miles display contract with actual kilometre conversion",
+          "Independent preview disclosure"
+        ],
+        "requiresBeforeComplete": [
+          "Accepted immutable pins for all six requested families",
+          "Qualified six-variant Cloudflare packaging/publisher",
+          "Canonical identity and existing-client/alias reconciliation",
+          "Current premises and direct contact destination",
+          "Visual brand inspection and permitted local raster assets",
+          "Sourced dated stock with correct units and permitted images, or explicitly illustrative inventory",
+          "Inherited identity/claim sweep and honest demo forms",
+          "Per-variant QA and hosted checks"
+        ],
+        "qa": {
+          "sourcePackValidated": true,
+          "applicationBuilt": false,
+          "browserReviewed": false,
+          "hostedVerified": false
+        },
+        "existingClientPathFromResearch": null,
+        "contentSelection": {
+          "observedAt": "2026-10-10",
+          "listingCount": 8,
+          "kind": "dated-listing-snapshot",
+          "mediaKind": "generated_category_illustration",
+          "source": "https://www.pistonheads.com/buy/dealer/999124",
+          "excluded": [],
+          "countNote": "Representative dated examples; not a live available-stock count."
+        }
+      },
+      "logoDark": "/dealer-brand/logo.webp",
+      "logoLight": "/dealer-brand/logo.webp",
+      "logo": "/dealer-brand/logo.webp"
+    }
+  },
+  "listings": [
+    {
+      "id": "20722137",
+      "sourceId": "20722137",
+      "slug": "chrysler-sebring-2008-20722137",
+      "title": "Chrysler Sebring 2.4 Limited Saloon 4dr Petrol Automatic (211 g/km, 167 bhp)",
+      "make": "Chrysler",
+      "model": "Sebring",
+      "trim": "2.4 Limited Saloon 4dr Petrol Automatic (211 g/km, 167 bhp)",
+      "year": 2008,
+      "priceAmount": 1499,
+      "currency": "GBP",
+      "mileageValue": 100000,
+      "mileageUnit": "mi",
+      "mileageOnRequest": false,
+      "body": "Saloon",
+      "bodyType": "other",
+      "fuel": "Petrol",
+      "fuelType": "gasoline",
+      "transmission": "Auto",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/sedan.webp"
+      ],
+      "image": "/dealer-stock/sedan.webp",
+      "sourceUrl": "https://www.pistonheads.com/buy/listing/20722137",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "condition": "used",
+      "location": "Bradford, West Yorkshire",
+      "raw": {
+        "title": "Chrysler Sebring 2.4 Limited Saloon 4dr Petrol Automatic (211 g/km, 167 bhp)",
+        "year": 2008,
+        "price": 1499,
+        "mileage": 100000,
+        "fuel": "Petrol",
+        "transmission": "Auto",
+        "sourceUrl": "https://www.pistonheads.com/buy/listing/20722137",
+        "conditionNote": "",
+        "make": "Chrysler",
+        "model": "Sebring",
+        "trim": "2.4 Limited Saloon 4dr Petrol Automatic (211 g/km, 167 bhp)",
+        "body": "Saloon",
+        "id": "20722137",
+        "slug": "chrysler-sebring-2008-20722137",
+        "priceAmount": 1499,
+        "currency": "GBP",
+        "mileageMiles": 100000,
+        "images": [
+          "/dealer-stock/sedan.webp"
+        ],
+        "imageCaption": "Illustration — not the advertised vehicle",
+        "mediaKind": "generated_category_illustration",
+        "observedAt": "2026-10-10",
+        "availability": "Listing sample — availability unconfirmed",
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "features": [],
+        "sourceEvidence": {
+          "kind": "public_advertised_listing",
+          "url": "https://www.pistonheads.com/buy/listing/20722137",
+          "observedAt": "2026-10-10"
+        },
+        "mediaRights": {
+          "method": "generated_illustration",
+          "representsActualVehicle": false,
+          "thirdPartyVehiclePhotographyBundled": false
+        }
+      }
+    },
+    {
+      "id": "21144493",
+      "sourceId": "21144493",
+      "slug": "land-rover-discovery-sport-2018-21144493",
+      "title": "Land Rover Discovery Sport 2.0 TD4 HSE Black SUV 5dr Diesel Auto 4WD Euro 6 (s/s) (180 ps)",
+      "make": "Land Rover",
+      "model": "Discovery Sport",
+      "trim": "2.0 TD4 HSE Black SUV 5dr Diesel Auto 4WD Euro 6 (s/s) (180 ps)",
+      "year": 2018,
+      "priceAmount": 7499,
+      "currency": "GBP",
+      "mileageValue": 107000,
+      "mileageUnit": "mi",
+      "mileageOnRequest": false,
+      "body": "SUV",
+      "bodyType": "suv",
+      "fuel": "Diesel",
+      "fuelType": "diesel",
+      "transmission": "Auto",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/suv.webp"
+      ],
+      "image": "/dealer-stock/suv.webp",
+      "sourceUrl": "https://www.pistonheads.com/buy/listing/21144493",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "condition": "used",
+      "location": "Bradford, West Yorkshire",
+      "raw": {
+        "title": "Land Rover Discovery Sport 2.0 TD4 HSE Black SUV 5dr Diesel Auto 4WD Euro 6 (s/s) (180 ps)",
+        "year": 2018,
+        "price": 7499,
+        "mileage": 107000,
+        "fuel": "Diesel",
+        "transmission": "Auto",
+        "sourceUrl": "https://www.pistonheads.com/buy/listing/21144493",
+        "conditionNote": "",
+        "make": "Land Rover",
+        "model": "Discovery Sport",
+        "trim": "2.0 TD4 HSE Black SUV 5dr Diesel Auto 4WD Euro 6 (s/s) (180 ps)",
+        "body": "SUV",
+        "id": "21144493",
+        "slug": "land-rover-discovery-sport-2018-21144493",
+        "priceAmount": 7499,
+        "currency": "GBP",
+        "mileageMiles": 107000,
+        "images": [
+          "/dealer-stock/suv.webp"
+        ],
+        "imageCaption": "Illustration — not the advertised vehicle",
+        "mediaKind": "generated_category_illustration",
+        "observedAt": "2026-10-10",
+        "availability": "Listing sample — availability unconfirmed",
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "features": [],
+        "sourceEvidence": {
+          "kind": "public_advertised_listing",
+          "url": "https://www.pistonheads.com/buy/listing/21144493",
+          "observedAt": "2026-10-10"
+        },
+        "mediaRights": {
+          "method": "generated_illustration",
+          "representsActualVehicle": false,
+          "thirdPartyVehiclePhotographyBundled": false
+        }
+      }
+    },
+    {
+      "id": "20977893",
+      "sourceId": "20977893",
+      "slug": "mercedes-benz-r-class-2007-20977893",
+      "title": "Mercedes-Benz R-Class 3.0 R320 CDI SE L MPV 5dr Diesel 7G-Tronic (246 g/km, 221 bhp)",
+      "make": "Mercedes-Benz",
+      "model": "R-Class",
+      "trim": "3.0 R320 CDI SE L MPV 5dr Diesel 7G-Tronic (246 g/km, 221 bhp)",
+      "year": 2007,
+      "priceAmount": 2699,
+      "currency": "GBP",
+      "mileageValue": 97000,
+      "mileageUnit": "mi",
+      "mileageOnRequest": false,
+      "body": "MPV",
+      "bodyType": "other",
+      "fuel": "Diesel",
+      "fuelType": "diesel",
+      "transmission": "Auto",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/van.webp"
+      ],
+      "image": "/dealer-stock/van.webp",
+      "sourceUrl": "https://www.pistonheads.com/buy/listing/20977893",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "condition": "used",
+      "location": "Bradford, West Yorkshire",
+      "raw": {
+        "title": "Mercedes-Benz R-Class 3.0 R320 CDI SE L MPV 5dr Diesel 7G-Tronic (246 g/km, 221 bhp)",
+        "year": 2007,
+        "price": 2699,
+        "mileage": 97000,
+        "fuel": "Diesel",
+        "transmission": "Auto",
+        "sourceUrl": "https://www.pistonheads.com/buy/listing/20977893",
+        "conditionNote": "",
+        "make": "Mercedes-Benz",
+        "model": "R-Class",
+        "trim": "3.0 R320 CDI SE L MPV 5dr Diesel 7G-Tronic (246 g/km, 221 bhp)",
+        "body": "MPV",
+        "id": "20977893",
+        "slug": "mercedes-benz-r-class-2007-20977893",
+        "priceAmount": 2699,
+        "currency": "GBP",
+        "mileageMiles": 97000,
+        "images": [
+          "/dealer-stock/van.webp"
+        ],
+        "imageCaption": "Illustration — not the advertised vehicle",
+        "mediaKind": "generated_category_illustration",
+        "observedAt": "2026-10-10",
+        "availability": "Listing sample — availability unconfirmed",
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "features": [],
+        "sourceEvidence": {
+          "kind": "public_advertised_listing",
+          "url": "https://www.pistonheads.com/buy/listing/20977893",
+          "observedAt": "2026-10-10"
+        },
+        "mediaRights": {
+          "method": "generated_illustration",
+          "representsActualVehicle": false,
+          "thirdPartyVehiclePhotographyBundled": false
+        }
+      }
+    },
+    {
+      "id": "21086505",
+      "sourceId": "21086505",
+      "slug": "audi-a4-2009-21086505",
+      "title": "Audi A4 3.0 TDI SE Estate 5dr Diesel S Tronic quattro Euro 4 (240 ps)",
+      "make": "Audi",
+      "model": "A4",
+      "trim": "3.0 TDI SE Estate 5dr Diesel S Tronic quattro Euro 4 (240 ps)",
+      "year": 2009,
+      "priceAmount": 3299,
+      "currency": "GBP",
+      "mileageValue": 150000,
+      "mileageUnit": "mi",
+      "mileageOnRequest": false,
+      "body": "Estate",
+      "bodyType": "wagon",
+      "fuel": "Diesel",
+      "fuelType": "diesel",
+      "transmission": "Auto",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/wagon.webp"
+      ],
+      "image": "/dealer-stock/wagon.webp",
+      "sourceUrl": "https://www.pistonheads.com/buy/listing/21086505",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "condition": "used",
+      "location": "Bradford, West Yorkshire",
+      "raw": {
+        "title": "Audi A4 3.0 TDI SE Estate 5dr Diesel S Tronic quattro Euro 4 (240 ps)",
+        "year": 2009,
+        "price": 3299,
+        "mileage": 150000,
+        "fuel": "Diesel",
+        "transmission": "Auto",
+        "sourceUrl": "https://www.pistonheads.com/buy/listing/21086505",
+        "conditionNote": "",
+        "make": "Audi",
+        "model": "A4",
+        "trim": "3.0 TDI SE Estate 5dr Diesel S Tronic quattro Euro 4 (240 ps)",
+        "body": "Estate",
+        "id": "21086505",
+        "slug": "audi-a4-2009-21086505",
+        "priceAmount": 3299,
+        "currency": "GBP",
+        "mileageMiles": 150000,
+        "images": [
+          "/dealer-stock/wagon.webp"
+        ],
+        "imageCaption": "Illustration — not the advertised vehicle",
+        "mediaKind": "generated_category_illustration",
+        "observedAt": "2026-10-10",
+        "availability": "Listing sample — availability unconfirmed",
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "features": [],
+        "sourceEvidence": {
+          "kind": "public_advertised_listing",
+          "url": "https://www.pistonheads.com/buy/listing/21086505",
+          "observedAt": "2026-10-10"
+        },
+        "mediaRights": {
+          "method": "generated_illustration",
+          "representsActualVehicle": false,
+          "thirdPartyVehiclePhotographyBundled": false
+        }
+      }
+    },
+    {
+      "id": "20877963",
+      "sourceId": "20877963",
+      "slug": "renault-megane-2011-20877963",
+      "title": "Renault Megane 1.5 dCi Expression Hatchback 5dr Diesel Manual Euro 5 (110 ps)",
+      "make": "Renault",
+      "model": "Megane",
+      "trim": "1.5 dCi Expression Hatchback 5dr Diesel Manual Euro 5 (110 ps)",
+      "year": 2011,
+      "priceAmount": 1499,
+      "currency": "GBP",
+      "mileageValue": 72000,
+      "mileageUnit": "mi",
+      "mileageOnRequest": false,
+      "body": "Hatchback",
+      "bodyType": "hatchback",
+      "fuel": "Diesel",
+      "fuelType": "diesel",
+      "transmission": "Manual",
+      "transmissionType": "manual",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "image": "/dealer-stock/hatchback.webp",
+      "sourceUrl": "https://www.pistonheads.com/buy/listing/20877963",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "condition": "used",
+      "location": "Bradford, West Yorkshire",
+      "raw": {
+        "title": "Renault Megane 1.5 dCi Expression Hatchback 5dr Diesel Manual Euro 5 (110 ps)",
+        "year": 2011,
+        "price": 1499,
+        "mileage": 72000,
+        "fuel": "Diesel",
+        "transmission": "Manual",
+        "sourceUrl": "https://www.pistonheads.com/buy/listing/20877963",
+        "conditionNote": "",
+        "make": "Renault",
+        "model": "Megane",
+        "trim": "1.5 dCi Expression Hatchback 5dr Diesel Manual Euro 5 (110 ps)",
+        "body": "Hatchback",
+        "id": "20877963",
+        "slug": "renault-megane-2011-20877963",
+        "priceAmount": 1499,
+        "currency": "GBP",
+        "mileageMiles": 72000,
+        "images": [
+          "/dealer-stock/hatchback.webp"
+        ],
+        "imageCaption": "Illustration — not the advertised vehicle",
+        "mediaKind": "generated_category_illustration",
+        "observedAt": "2026-10-10",
+        "availability": "Listing sample — availability unconfirmed",
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "features": [],
+        "sourceEvidence": {
+          "kind": "public_advertised_listing",
+          "url": "https://www.pistonheads.com/buy/listing/20877963",
+          "observedAt": "2026-10-10"
+        },
+        "mediaRights": {
+          "method": "generated_illustration",
+          "representsActualVehicle": false,
+          "thirdPartyVehiclePhotographyBundled": false
+        }
+      }
+    },
+    {
+      "id": "21180529",
+      "sourceId": "21180529",
+      "slug": "hyundai-santa-fe-2013-21180529",
+      "title": "Hyundai Santa Fe 2.2 CRDi Premium SE SUV 5dr Diesel Auto 4WD Euro 5 (7 seat) (194 bhp)",
+      "make": "Hyundai",
+      "model": "Santa Fe",
+      "trim": "2.2 CRDi Premium SE SUV 5dr Diesel Auto 4WD Euro 5 (7 seat) (194 bhp)",
+      "year": 2013,
+      "priceAmount": 3199,
+      "currency": "GBP",
+      "mileageValue": 171000,
+      "mileageUnit": "mi",
+      "mileageOnRequest": false,
+      "body": "SUV",
+      "bodyType": "suv",
+      "fuel": "Diesel",
+      "fuelType": "diesel",
+      "transmission": "Auto",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/suv.webp"
+      ],
+      "image": "/dealer-stock/suv.webp",
+      "sourceUrl": "https://www.pistonheads.com/buy/listing/21180529",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "condition": "used",
+      "location": "Bradford, West Yorkshire",
+      "raw": {
+        "title": "Hyundai Santa Fe 2.2 CRDi Premium SE SUV 5dr Diesel Auto 4WD Euro 5 (7 seat) (194 bhp)",
+        "year": 2013,
+        "price": 3199,
+        "mileage": 171000,
+        "fuel": "Diesel",
+        "transmission": "Auto",
+        "sourceUrl": "https://www.pistonheads.com/buy/listing/21180529",
+        "conditionNote": "",
+        "make": "Hyundai",
+        "model": "Santa Fe",
+        "trim": "2.2 CRDi Premium SE SUV 5dr Diesel Auto 4WD Euro 5 (7 seat) (194 bhp)",
+        "body": "SUV",
+        "id": "21180529",
+        "slug": "hyundai-santa-fe-2013-21180529",
+        "priceAmount": 3199,
+        "currency": "GBP",
+        "mileageMiles": 171000,
+        "images": [
+          "/dealer-stock/suv.webp"
+        ],
+        "imageCaption": "Illustration — not the advertised vehicle",
+        "mediaKind": "generated_category_illustration",
+        "observedAt": "2026-10-10",
+        "availability": "Listing sample — availability unconfirmed",
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "features": [],
+        "sourceEvidence": {
+          "kind": "public_advertised_listing",
+          "url": "https://www.pistonheads.com/buy/listing/21180529",
+          "observedAt": "2026-10-10"
+        },
+        "mediaRights": {
+          "method": "generated_illustration",
+          "representsActualVehicle": false,
+          "thirdPartyVehiclePhotographyBundled": false
+        }
+      }
+    },
+    {
+      "id": "21170923",
+      "sourceId": "21170923",
+      "slug": "volvo-xc60-2010-21170923",
+      "title": "Volvo XC60 2.4 D5 R-Design SUV 5dr Diesel Geartronic AWD Euro 5 (205 ps)",
+      "make": "Volvo",
+      "model": "XC60",
+      "trim": "2.4 D5 R-Design SUV 5dr Diesel Geartronic AWD Euro 5 (205 ps)",
+      "year": 2010,
+      "priceAmount": 3799,
+      "currency": "GBP",
+      "mileageValue": 141000,
+      "mileageUnit": "mi",
+      "mileageOnRequest": false,
+      "body": "SUV",
+      "bodyType": "suv",
+      "fuel": "Diesel",
+      "fuelType": "diesel",
+      "transmission": "Auto",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/suv.webp"
+      ],
+      "image": "/dealer-stock/suv.webp",
+      "sourceUrl": "https://www.pistonheads.com/buy/listing/21170923",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "condition": "used",
+      "location": "Bradford, West Yorkshire",
+      "raw": {
+        "title": "Volvo XC60 2.4 D5 R-Design SUV 5dr Diesel Geartronic AWD Euro 5 (205 ps)",
+        "year": 2010,
+        "price": 3799,
+        "mileage": 141000,
+        "fuel": "Diesel",
+        "transmission": "Auto",
+        "sourceUrl": "https://www.pistonheads.com/buy/listing/21170923",
+        "conditionNote": "",
+        "make": "Volvo",
+        "model": "XC60",
+        "trim": "2.4 D5 R-Design SUV 5dr Diesel Geartronic AWD Euro 5 (205 ps)",
+        "body": "SUV",
+        "id": "21170923",
+        "slug": "volvo-xc60-2010-21170923",
+        "priceAmount": 3799,
+        "currency": "GBP",
+        "mileageMiles": 141000,
+        "images": [
+          "/dealer-stock/suv.webp"
+        ],
+        "imageCaption": "Illustration — not the advertised vehicle",
+        "mediaKind": "generated_category_illustration",
+        "observedAt": "2026-10-10",
+        "availability": "Listing sample — availability unconfirmed",
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "features": [],
+        "sourceEvidence": {
+          "kind": "public_advertised_listing",
+          "url": "https://www.pistonheads.com/buy/listing/21170923",
+          "observedAt": "2026-10-10"
+        },
+        "mediaRights": {
+          "method": "generated_illustration",
+          "representsActualVehicle": false,
+          "thirdPartyVehiclePhotographyBundled": false
+        }
+      }
+    },
+    {
+      "id": "20562332",
+      "sourceId": "20562332",
+      "slug": "mini-hatchback-2014-20562332",
+      "title": "MINI Hatchback 1.5 Cooper Hatchback 5dr Petrol Manual Euro 6 (s/s) (136 ps)",
+      "make": "MINI",
+      "model": "Hatchback",
+      "trim": "1.5 Cooper Hatchback 5dr Petrol Manual Euro 6 (s/s) (136 ps)",
+      "year": 2014,
+      "priceAmount": 2499,
+      "currency": "GBP",
+      "mileageValue": 123000,
+      "mileageUnit": "mi",
+      "mileageOnRequest": false,
+      "body": "Hatchback",
+      "bodyType": "hatchback",
+      "fuel": "Petrol",
+      "fuelType": "gasoline",
+      "transmission": "Manual",
+      "transmissionType": "manual",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "image": "/dealer-stock/hatchback.webp",
+      "sourceUrl": "https://www.pistonheads.com/buy/listing/20562332",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer. The source advert reports cosmetic imperfections to the bodywork.",
+      "condition": "used",
+      "location": "Bradford, West Yorkshire",
+      "raw": {
+        "title": "MINI Hatchback 1.5 Cooper Hatchback 5dr Petrol Manual Euro 6 (s/s) (136 ps)",
+        "year": 2014,
+        "price": 2499,
+        "mileage": 123000,
+        "fuel": "Petrol",
+        "transmission": "Manual",
+        "sourceUrl": "https://www.pistonheads.com/buy/listing/20562332",
+        "conditionNote": "The source advert reports cosmetic imperfections to the bodywork.",
+        "make": "MINI",
+        "model": "Hatchback",
+        "trim": "1.5 Cooper Hatchback 5dr Petrol Manual Euro 6 (s/s) (136 ps)",
+        "body": "Hatchback",
+        "id": "20562332",
+        "slug": "mini-hatchback-2014-20562332",
+        "priceAmount": 2499,
+        "currency": "GBP",
+        "mileageMiles": 123000,
+        "images": [
+          "/dealer-stock/hatchback.webp"
+        ],
+        "imageCaption": "Illustration — not the advertised vehicle",
+        "mediaKind": "generated_category_illustration",
+        "observedAt": "2026-10-10",
+        "availability": "Listing sample — availability unconfirmed",
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer. The source advert reports cosmetic imperfections to the bodywork.",
+        "features": [],
+        "sourceEvidence": {
+          "kind": "public_advertised_listing",
+          "url": "https://www.pistonheads.com/buy/listing/20562332",
+          "observedAt": "2026-10-10"
+        },
+        "mediaRights": {
+          "method": "generated_illustration",
+          "representsActualVehicle": false,
+          "thirdPartyVehiclePhotographyBundled": false
+        }
+      }
+    }
+  ],
+  "rawFacts": {
+    "schemaVersion": 1,
+    "leadId": "gb-bradford-cherry-tree-cars",
+    "slug": "bradford-cherry-tree-cars",
+    "observedAt": "2026-10-10",
+    "name": "Cherry Tree Cars Ltd",
+    "shortName": "Cherry Tree Cars Ltd",
+    "legalName": null,
+    "companyNumber": null,
+    "city": "Bradford, West Yorkshire",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "address": null,
+    "phone": null,
+    "phoneDisplay": null,
+    "phoneHref": null,
+    "email": null,
+    "hours": null,
+    "coordinates": null,
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "languages": [
+      "en"
+    ],
+    "accent": "#871221",
+    "website": null,
+    "sourceProfile": "https://www.pistonheads.com/buy/dealer/999124",
+    "mapsUrl": null,
+    "mapsEmbedUrl": null,
+    "tagline": "Browse used cars in Bradford.",
+    "socialLinks": {},
+    "services": [],
+    "stockCount": 8,
+    "publishedListingCount": 23,
+    "sampleOnly": true,
+    "inventoryMode": "dated_listing_samples_with_generated_illustrations",
+    "previewNotice": "Independent design preview for discussion, not an official dealership website. Forms do not send messages or create reservations.",
+    "inventoryNotice": "Vehicle images are generated illustrations, not photographs of the advertised vehicles. Listing details were observed on 10 October 2026; confirm each original advert, price, condition and availability with the dealership.",
+    "availabilityLabel": "Listing sample — availability unconfirmed",
+    "contactNotice": "Direct enquiry destination is not confirmed; show an honest demo/unavailable contact state until resolved.",
+    "locationNote": "City-level location only until conflicting or incomplete premises information is resolved.",
+    "sources": [
+      "https://www.pistonheads.com/buy/dealer/999124",
+      "https://www.autotrader.co.uk/dealers/south-yorkshire/doncaster/cherry-tree-cars-ltd-10045747",
+      "https://www.cargurus.co.uk/Cars/m-Cherry-Tree-Cars-Ltd-sp526338",
+      "https://www.google.com/maps/place/CTC+Cherry+Tree+Cars/@53.7989305,-1.751754,17z/data=!3m1!4b1!4m6!3m5!1s0x487be1001545e575:0xdf87ca81141a47a6!8m2!3d53.7989305!4d-1.7491791!16s%2Fg%2F11zxx0g4s7?hl=en"
+    ],
+    "opportunity": "An owned affordable-stock showroom with consistent location, truthful vehicle details and a direct enquiry route.",
+    "qualificationNotes": [
+      "23 opened PistonHeads vehicles and matching Bradford marketplace identity; no own domain matched. Google postcode and legal/contact differences require confirmation.",
+      "23 opened PistonHeads cars corroborates 21 opened real AutoTrader Used cars; 24 on indexed CarGurus could not be opened. AutoTrader's Doncaster URL contains Bradford dealer content. Generic featured Dummy adverts were excluded.",
+      "41 Canal Street, Bradford BD1 4BD matches stock platforms. AutoTrader phone 07441 952282 and CarGurus 0191 743 4631 differ; likely forwarding but unproven. Registered-office move does not establish legal identity.",
+      "Marketplace-provided phone may forward calls; confirm an owner-controlled number.",
+      "Public trading name/city only: no dealership approval, contact ownership, matched legal entity or private contact history has been verified.",
+      "Vehicle media, prices, mileage, services, staff, reviews, finance claims, hours and branding have not been selected or accepted for application content in this preparation pass."
+    ],
+    "contactCandidates": {
+      "phone": "07400 048263",
+      "email": null,
+      "sourceUrl": "https://www.pistonheads.com/buy/dealer/999124",
+      "phoneCaveat": "Marketplace-provided phone may forward calls; confirm an owner-controlled number.",
+      "status": "public_business_contact_not_contacted",
+      "phoneE164": "+447400048263",
+      "approvalStatus": "public_research_not_dealer_confirmed"
+    },
+    "addressCandidates": {
+      "publishedNote": "41 Canal Street, Bradford BD1 4BD matches stock platforms. AutoTrader phone 07441 952282 and CarGurus 0191 743 4631 differ; likely forwarding but unproven. Registered-office move does not establish legal identity.",
+      "conflicts": [],
+      "googleProfile": {
+        "status": "possible_profile_address_conflict_not_confirmed",
+        "url": "https://www.google.com/maps/place/CTC+Cherry+Tree+Cars/@53.7989305,-1.751754,17z/data=!3m1!4b1!4m6!3m5!1s0x487be1001545e575:0xdf87ca81141a47a6!8m2!3d53.7989305!4d-1.7491791!16s%2Fg%2F11zxx0g4s7?hl=en",
+        "assessedAt": "2026-10-10",
+        "websiteField": "Add website",
+        "note": "CTC Cherry Tree Cars Google result says Canal Road BD1 4SJ and has no phone shown, whereas platforms say 41 Canal Street BD1 4BD. Do not treat this as a confidently matched profile."
+      },
+      "status": "unresolved_do_not_publish_exact_visit_pin"
+    },
+    "researchEvidence": {
+      "inventory": {
+        "count": 23,
+        "kind": "opened_platform_advertised_count",
+        "retrievedAt": "2026-10-10",
+        "sourceUrl": "https://www.pistonheads.com/buy/dealer/999124",
+        "caveat": "23 opened PistonHeads cars corroborates 21 opened real AutoTrader Used cars; 24 on indexed CarGurus could not be opened. AutoTrader's Doncaster URL contains Bradford dealer content. Generic featured Dummy adverts were excluded."
+      },
+      "stockSnapshots": [
+        {
+          "count": 23,
+          "sourceUrl": "https://www.pistonheads.com/buy/dealer/999124",
+          "method": "opened",
+          "observedAt": "2026-10-10"
+        },
+        {
+          "count": 21,
+          "sourceUrl": "https://www.autotrader.co.uk/dealers/south-yorkshire/doncaster/cherry-tree-cars-ltd-10045747",
+          "method": "opened",
+          "observedAt": "2026-10-10"
+        },
+        {
+          "count": 24,
+          "sourceUrl": "https://www.cargurus.co.uk/Cars/m-Cherry-Tree-Cars-Ltd-sp526338",
+          "method": "indexed",
+          "observedAt": "2026-10-10"
+        }
+      ],
+      "activityEvidence": [
+        {
+          "kind": "undated_advertised_inventory",
+          "date": null,
+          "sourceUrl": "https://www.pistonheads.com/buy/dealer/999124",
+          "note": "Real priced stock observed on 10 October 2026; no recent post date verified."
+        }
+      ],
+      "website": {
+        "url": null,
+        "status": "no_standalone_domain_found_in_bounded_search",
+        "assessedAt": "2026-10-10",
+        "confidence": "medium",
+        "observations": [
+          "Opened AutoTrader Website field is blank; PistonHeads header lists dealer contact and location without an own domain.",
+          "cherrytreecars.co.uk belongs to a separate Beverley/Woodmansey business, not the Bradford premises."
+        ]
+      },
+      "domainChecks": {
+        "queries": [
+          "\"Cherry Tree Cars\" Bradford website",
+          "\"Cherry Tree Cars\" \"BD1\" website OR facebook OR email",
+          "\"07400048263\" website",
+          "\"Cherry Tree Cars\" \"41 Canal Street\""
+        ],
+        "profilesChecked": [
+          "https://www.autotrader.co.uk/dealers/south-yorkshire/doncaster/cherry-tree-cars-ltd-10045747",
+          "https://www.cargurus.co.uk/Cars/m-Cherry-Tree-Cars-Ltd-sp526338"
+        ],
+        "result": "No confidently matched dealer-owned standalone domain found in these bounded checks. Absence must be confirmed with the operator."
+      }
+    },
+    "branding": {
+      "publishedBranding": "No usable original recovered from matching bounded public sources; generated design proposal uses the correct researched trading identity.",
+      "sourceLogoUrl": null,
+      "workingLogoPath": "dealer-brand/logo.webp",
+      "creationMethod": "generated_proposal",
+      "approvalStatus": "independent_design_proposal_not_dealer_approved",
+      "visualInspection": "Public references and new logo/icon imagery visually inspected; spelling and complete marks checked.",
+      "requiredNextStep": "Verify actual logo and icon consumers at desktop and mobile widths in all six applications.",
+      "publicReferenceUrls": [
+        "https://www.autotrader.co.uk/dealers/west-yorkshire/bradford/cherry-tree-cars-ltd-10045747",
+        "https://www.pistonheads.com/buy/dealer/999124"
+      ],
+      "researchDocument": "docs/qa/uk-branding-visual-research-2026-10-10.md"
+    },
+    "buildPreparation": {
+      "status": "content_pack_populated_application_pending",
+      "derivedFrom": {
+        "path": "../../uk-2026-10-10.json",
+        "sourceSha256": "0b8a38395e80f44f70035ba3cd538e44554a917056fd3fde9b4efbc31a999c92",
+        "researchAsOf": "2026-10-10"
+      },
+      "researchSnapshotFlags": {
+        "researchOnly": true,
+        "buildApproved": false,
+        "outreachApproved": false,
+        "contactHistory": "not_checked"
+      },
+      "ownerRequest": "Ten proposals with six variants on Cloudflare after accepted template releases. This pack records neither dealership approval nor changes to original research flags.",
+      "requestedTemplateChoices": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "templateLabels": {
+        "auto-best": "Auto Best",
+        "modern": "Modern",
+        "import": "Import",
+        "app": "App",
+        "mobile": "Mobile",
+        "karento-best": "Signature"
+      },
+      "recommendedEntryTemplate": "auto-best",
+      "showFirstReason": "Show the home-to-stock-to-enquiry flow with a simple local dealer identity.",
+      "templatePins": null,
+      "hosting": {
+        "requestedProvider": "cloudflare",
+        "acceptedPublisher": null,
+        "publicOrigin": null,
+        "status": "await_qualified_pilot_and_release_acceptance",
+        "dnsChangeAuthorized": false,
+        "billingChangeAuthorized": false
+      },
+      "nextAction": "Confirm trading/legal identity, Canal Street versus Canal Road premises, owner-controlled contact and any own domain. No dated October update verified.",
+      "readyToPersonalizeNow": [
+        "Public trading name",
+        "Public city/region",
+        "GB dealership country",
+        "en-GB English presentation",
+        "GBP pricing contract",
+        "Miles display contract with actual kilometre conversion",
+        "Independent preview disclosure"
+      ],
+      "requiresBeforeComplete": [
+        "Accepted immutable pins for all six requested families",
+        "Qualified six-variant Cloudflare packaging/publisher",
+        "Canonical identity and existing-client/alias reconciliation",
+        "Current premises and direct contact destination",
+        "Visual brand inspection and permitted local raster assets",
+        "Sourced dated stock with correct units and permitted images, or explicitly illustrative inventory",
+        "Inherited identity/claim sweep and honest demo forms",
+        "Per-variant QA and hosted checks"
+      ],
+      "qa": {
+        "sourcePackValidated": true,
+        "applicationBuilt": false,
+        "browserReviewed": false,
+        "hostedVerified": false
+      },
+      "existingClientPathFromResearch": null,
+      "contentSelection": {
+        "observedAt": "2026-10-10",
+        "listingCount": 8,
+        "kind": "dated-listing-snapshot",
+        "mediaKind": "generated_category_illustration",
+        "source": "https://www.pistonheads.com/buy/dealer/999124",
+        "excluded": [],
+        "countNote": "Representative dated examples; not a live available-stock count."
+      }
+    },
+    "logoDark": "/dealer-brand/logo.webp",
+    "logoLight": "/dealer-brand/logo.webp",
+    "logo": "/dealer-brand/logo.webp"
+  },
+  "sourceCount": 8,
+  "stockKind": "dated-listing-snapshot",
+  "logoContract": {
+    "schemaVersion": 1,
+    "dealerId": "bradford-cherry-tree-cars",
+    "approvalStatus": "independent_design_proposal_not_dealer_approved",
+    "assets": {
+      "onLight": {
+        "publicPath": "/dealer-brand/logo.webp",
+        "sha256": "e78f01dbd616cd1fbf3fb0fe043d0eaaacc98d7af211e7af859367e7d3ac78d4",
+        "width": 1024,
+        "height": 341,
+        "background": "opaque_white"
+      },
+      "onDark": {
+        "publicPath": "/dealer-brand/logo.webp",
+        "sha256": "e78f01dbd616cd1fbf3fb0fe043d0eaaacc98d7af211e7af859367e7d3ac78d4",
+        "width": 1024,
+        "height": 341,
+        "background": "opaque_white"
+      },
+      "onAccent": {
+        "publicPath": "/dealer-brand/logo.webp",
+        "sha256": "e78f01dbd616cd1fbf3fb0fe043d0eaaacc98d7af211e7af859367e7d3ac78d4",
+        "width": 1024,
+        "height": 341,
+        "background": "opaque_white"
+      }
+    },
+    "icon": {
+      "localPath": "assets/app-icon.png",
+      "sha256": "74c094fd1a92575b7d2d634e202595a3eb39d5824b7b962839e2e4975dd847d6",
+      "width": 512,
+      "height": 512
+    },
+    "favicon": {
+      "localPath": "assets/favicon.ico",
+      "sha256": "d1352bb18aecd1f2a1e324f9e4c14df3e99bf4cd87a5a494155fedf599bff487",
+      "sizes": [
+        16,
+        32,
+        48,
+        64,
+        128,
+        256
+      ],
+      "encoding": "ICO with PNG entries from the actual square icon"
+    },
+    "provenance": {
+      "creationMethod": "generated_proposal",
+      "date": "2026-10-10",
+      "sources": [
+        "generated_images/exec-bb7eafaf-8e9f-483b-aba9-ed72115fc42f.png",
+        "generated_images/exec-65f766df-bef5-4b83-8023-b08f905e321c.png"
+      ],
+      "publicReferenceUrls": [
+        "https://www.autotrader.co.uk/dealers/west-yorkshire/bradford/cherry-tree-cars-ltd-10045747",
+        "https://www.pistonheads.com/buy/dealer/999124"
+      ],
+      "research": "docs/qa/uk-branding-visual-research-2026-10-10.md",
+      "deliveryEncoding": "Proportional size and delivery-format encoding only; no crop, recolouring or compositing.",
+      "visualInspection": "Original reference where available, full business-name spelling, emblem completeness, white surface and square icon checked in generated output. Application consumers await browser QA.",
+      "dealerApproval": false
+    }
+  }
+}

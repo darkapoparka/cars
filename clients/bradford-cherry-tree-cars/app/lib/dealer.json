@@ -1,0 +1,30 @@
+{
+  "mode": "dealer",
+  "id": "bradford-cherry-tree-cars",
+  "name": "Cherry Tree Cars Ltd",
+  "shortName": "Cherry Tree Cars Ltd",
+  "logo": {
+    "light": "/dealer-app/logo-light-e78f01dbd616cd1fbf3f.webp",
+    "dark": "/dealer-app/logo-dark-e78f01dbd616cd1fbf3f.webp",
+    "icon": "/dealer-app/icon.png"
+  },
+  "defaultLocale": "en",
+  "enabledLocales": [
+    "en",
+    "bg"
+  ],
+  "country": "GB",
+  "currency": "GBP",
+  "city": "Bradford, West Yorkshire",
+  "address": "",
+  "phoneDisplay": "",
+  "phoneE164": "",
+  "email": "",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Cherry%20Tree%20Cars%20Ltd%2C%20Bradford%2C%20West%20Yorkshire",
+  "website": "",
+  "whatsappUrl": "",
+  "services": [],
+  "observedAt": "2026-10-10",
+  "inventoryNotice": "Vehicle images are generated illustrations, not photographs of the advertised vehicles. Listing details were observed on 10 October 2026; confirm each original advert, price, condition and availability with the dealership.",
+  "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
+}
