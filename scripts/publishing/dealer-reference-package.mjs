@@ -17,7 +17,10 @@ export function referenceInspectionSlugs(): string[] {
 `;
 export function specializeDealerReferencePackage(files,manifest){
  const read=name=>{const bytes=files.get(name);if(!bytes)throw Error('Missing reference-boundary input: '+name);return bytes;};
- const config=JSON.parse(read('app/lib/dealer.json'));
+ const originalDealerConfig=read('app/lib/dealer.json'),config=JSON.parse(originalDealerConfig);
+ const defaults={welcomeEnabled:true,socialLinks:[],referenceClaimsApproved:false};
+ const completeConfig={...defaults,...config};
+ if(typeof completeConfig.welcomeEnabled!=='boolean'||typeof completeConfig.referenceClaimsApproved!=='boolean'||!Array.isArray(completeConfig.socialLinks))throw Error('Invalid App presentation contract');
  if(config.mode!=='dealer'||config.id!==manifest.slug)throw Error('Reference specialization is allowed only for the named dealer');
  const configModule=read('app/lib/dealer-config.ts').toString('utf8');
  if(!configModule.includes("export const isDealer = dealer.mode === 'dealer';"))throw Error('Dealer mode boundary changed');
@@ -31,7 +34,7 @@ export function specializeDealerReferencePackage(files,manifest){
  if(references.length)throw Error('Another consumer requires captured details: '+references.join(', '));
  const originalPolicy=read('app/public-assets.policy.json'),policy=JSON.parse(originalPolicy);
  if(policy.schemaVersion!==1||policy.family!=='app'||!Array.isArray(policy.candidates))throw Error('Unexpected reference asset policy');
- const pending=new Map(files);pending.set(serverPath,Buffer.from(specialized));pending.delete(snapshotsPath);
+ const pending=new Map(files);pending.set('app/lib/dealer.json',encode(completeConfig));pending.set(serverPath,Buffer.from(specialized));pending.delete(snapshotsPath);
  const candidates=new Set(policy.candidates.map(c=>c.path));let added=0;
  for(const [name,bytes]of files){
   if(!/^app\/public\/reference-assets\/.*\.(?:png|jpe?g|webp|avif|gif|svg|ico|woff2?|ttf|otf|mp4|webm)$/i.test(name))continue;
@@ -41,7 +44,7 @@ export function specializeDealerReferencePackage(files,manifest){
  policy.candidates.sort((a,b)=>a.path.localeCompare(b.path,'en'));
  pending.set('app/public-assets.policy.json',encode(policy));
  const receipt={schemaVersion:1,dealer:manifest.slug,kind:'dealer-mode-reference-boundary-specialization',
-  originalServerSha256:hash(original),specializedServerSha256:hash(Buffer.from(specialized)),
+  originalDealerConfigSha256:hash(originalDealerConfig),completedDealerConfigSha256:hash(encode(completeConfig)),presentationDefaultsAdded:Object.keys(defaults).filter(k=>!Object.hasOwn(config,k)),originalServerSha256:hash(original),specializedServerSha256:hash(Buffer.from(specialized)),
   removedData:{path:snapshotsPath,sha256:hash(snapshots),bytes:snapshots.length,reason:'Only importer was the reviewed server module; both exports return no captured detail in dealer mode.'},
   originalPolicySha256:hash(originalPolicy),newPolicySha256:hash(pending.get('app/public-assets.policy.json')),additionalHashBoundCandidates:added,
   publicAssetsDeletedByThisStep:0,originalSourceReceiptPreserved:true,templatesUnchanged:true,

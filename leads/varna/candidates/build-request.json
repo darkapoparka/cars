@@ -1,12 +1,17 @@
 {
   "schemaVersion": 1,
-  "request": "reference-specialization-app-01",
+  "request": "pilot-six-presentation-contract-02",
   "sourceCandidateCommit": "74f598df7c8a898d01d7c6e370487db4688da065",
   "dealers": [
     "dm-auto-varna"
   ],
   "families": [
-    "app"
+    "auto-best",
+    "modern",
+    "import",
+    "app",
+    "mobile",
+    "karento-best"
   ],
-  "scope": "Compile the real App after a hash-bound dealer-only reference-data specialization and normal asset retention. No production budget relaxation or release approval."
+  "scope": "Real six-family compilation with dealer-mode reference-media specialization and complete App presentation defaults. No release approval or deployment."
 }
