@@ -6,12 +6,12 @@ import * as stylex from '@stylexjs/stylex';
 import {media, tokens as $} from '@/app/tokens.stylex';
 
 /** One header geometry for secondary screens and their back actions. */
-export default function PageHeader({title, backHref = '/', backLabel = 'Back home', onBack, action, subtitle, compact = false, wrapTitle = false}: {title: string; backHref?: string; backLabel?: string; onBack?: () => void; action?: ReactNode; subtitle?: string; compact?: boolean; wrapTitle?: boolean}) {
+export default function PageHeader({title, backHref = '/', backLabel = 'Back home', onBack, action, subtitle, compact = false, wrapTitle = false, showBack = true}: {title: string; backHref?: string; backLabel?: string; onBack?: () => void; action?: ReactNode; subtitle?: string; compact?: boolean; wrapTitle?: boolean; showBack?: boolean}) {
   const tx = useCopy();
   const titleId = useId();
 
   return <section data-page-header aria-labelledby={titleId} {...stylex.props(s.header)}><div {...stylex.props(s.inner, compact && s.compact, wrapTitle && s.wrappingInner)}>
-    {onBack ? <BackButton label={backLabel} onClick={onBack}/> : <BackButton label={backLabel} href={backHref}/>}
+    {showBack ? (onBack ? <BackButton label={backLabel} onClick={onBack}/> : <BackButton label={backLabel} href={backHref}/>) : null}
     <div {...stylex.props(s.copy)}><h1 id={titleId} {...stylex.props(s.title, wrapTitle && s.wrappingTitle)}>{tx(title)}</h1>{subtitle ? <p {...stylex.props(s.subtitle)}>{tx(subtitle)}</p> : null}</div>
     {action != null ? <div {...stylex.props(s.action)}>{tx(action)}</div> : null}
   </div></section>;

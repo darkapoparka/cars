@@ -55,7 +55,7 @@ export default function AppShell({children}: {children:ReactNode}){
     </div>
     {!hideMobileNav?<nav aria-label={tx("App navigation")} {...stylex.props(compactDock.root,alternative&&s.standardAlternativeDock)}>{showroom.navigation.map(item=>{
       const active=item.href==='/'?pathname==='/':item.href==='/more'?pathname==='/more'||pathname==='/saved':pathname.startsWith(item.href);
-      return <Link key={item.label} href={item.href} aria-label={tx(item.label)} title={tx(item.label)} aria-current={active?'page':undefined} {...stylex.props(compactDock.link,active&&compactDock.active)}><ShowroomIcon name={item.icon} size={22} strokeWidth={active?2:1.65}/></Link>;
+      return <Link key={item.label} href={item.href} aria-label={tx(item.label)} title={tx(item.label)} aria-current={active?'page':undefined} {...stylex.props(compactDock.link,active&&compactDock.active)}><ShowroomIcon dock name={item.icon} size={22} strokeWidth={active?2:1.65}/></Link>;
     })}</nav>:null}
     {alternative&&!hideMobileNav?<MobileAlternativeDock pathname={pathname}/>:null}
   </div></HomeAlternativeProvider>;

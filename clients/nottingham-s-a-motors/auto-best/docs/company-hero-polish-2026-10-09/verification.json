@@ -1,0 +1,1818 @@
+{
+  "passed": true,
+  "cases": 33,
+  "mobileScreenshotsIdentical": true,
+  "foregroundGeometryPreserved": true,
+  "rows": [
+    {
+      "locale": "en",
+      "width": 320,
+      "surface": "about",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 305,
+          "height": 244,
+          "right": 305,
+          "bottom": 244
+        },
+        "title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "scene": null,
+        "image": null,
+        "models": [],
+        "actions": []
+      }
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "surface": "contact",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 305,
+          "height": 244,
+          "right": 305,
+          "bottom": 244
+        },
+        "title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "scene": null,
+        "image": null,
+        "models": [],
+        "actions": []
+      }
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "surface": "about",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 375,
+          "height": 244,
+          "right": 375,
+          "bottom": 244
+        },
+        "title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "scene": null,
+        "image": null,
+        "models": [],
+        "actions": []
+      }
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "surface": "contact",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 375,
+          "height": 244,
+          "right": 375,
+          "bottom": 244
+        },
+        "title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "scene": null,
+        "image": null,
+        "models": [],
+        "actions": []
+      }
+    },
+    {
+      "locale": "en",
+      "width": 767,
+      "surface": "about",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 752,
+          "height": 244,
+          "right": 752,
+          "bottom": 244
+        },
+        "title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "scene": null,
+        "image": null,
+        "models": [],
+        "actions": []
+      }
+    },
+    {
+      "locale": "en",
+      "width": 767,
+      "surface": "contact",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 752,
+          "height": 244,
+          "right": 752,
+          "bottom": 244
+        },
+        "title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "scene": null,
+        "image": null,
+        "models": [],
+        "actions": []
+      }
+    },
+    {
+      "locale": "en",
+      "width": 991,
+      "surface": "about",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 976,
+          "height": 295.609375,
+          "right": 976,
+          "bottom": 295.609375
+        },
+        "title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "scene": null,
+        "image": null,
+        "models": [],
+        "actions": []
+      }
+    },
+    {
+      "locale": "en",
+      "width": 991,
+      "surface": "contact",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 976,
+          "height": 244,
+          "right": 976,
+          "bottom": 244
+        },
+        "title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "scene": null,
+        "image": null,
+        "models": [],
+        "actions": []
+      }
+    },
+    {
+      "locale": "en",
+      "width": 992,
+      "surface": "about",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 977,
+          "height": 540,
+          "right": 977,
+          "bottom": 540
+        },
+        "title": {
+          "x": 108.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 100.78125,
+          "right": 868.5,
+          "bottom": 332.796875
+        },
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 977,
+          "height": 540,
+          "right": 977,
+          "bottom": 540
+        },
+        "image": {
+          "x": -111.5,
+          "y": 146,
+          "width": 1200,
+          "height": 400,
+          "right": 1088.5,
+          "bottom": 546,
+          "src": "http://127.0.0.1:6461/assets/images/template/company-about-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        },
+        "models": [],
+        "actions": [
+          {
+            "text": "Sofia · 18 Atanas Manchev Street, Studentski Grad",
+            "box": {
+              "x": 290.046875,
+              "y": 340.796875,
+              "width": 420.890625,
+              "height": 27,
+              "right": 710.9375,
+              "bottom": 367.796875
+            },
+            "clickable": true
+          },
+          {
+            "text": "Explore demo cars",
+            "box": {
+              "x": 379.875,
+              "y": 391.796875,
+              "width": 217.234375,
+              "height": 44,
+              "right": 597.109375,
+              "bottom": 435.796875
+            },
+            "clickable": true
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 992,
+      "surface": "contact",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 977,
+          "height": 540,
+          "right": 977,
+          "bottom": 540
+        },
+        "title": {
+          "x": 108.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 100.78125,
+          "right": 868.5,
+          "bottom": 332.796875
+        },
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 977,
+          "height": 540,
+          "right": 977,
+          "bottom": 540
+        },
+        "image": {
+          "x": -111.5,
+          "y": 146,
+          "width": 1200,
+          "height": 400,
+          "right": 1088.5,
+          "bottom": 546,
+          "src": "http://127.0.0.1:6461/assets/images/template/company-contact-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        },
+        "models": [],
+        "actions": [
+          {
+            "text": "087 982 4625",
+            "box": {
+              "x": 324.34375,
+              "y": 391.796875,
+              "width": 173.46875,
+              "height": 44,
+              "right": 497.8125,
+              "bottom": 435.796875
+            },
+            "clickable": true
+          },
+          {
+            "text": "Directions",
+            "box": {
+              "x": 509.8125,
+              "y": 391.796875,
+              "width": 142.828125,
+              "height": 44,
+              "right": 652.640625,
+              "bottom": 435.796875
+            },
+            "clickable": true
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1024,
+      "surface": "about",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1009,
+          "height": 540,
+          "right": 1009,
+          "bottom": 540
+        },
+        "title": {
+          "x": 124.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 100.78125,
+          "right": 884.5,
+          "bottom": 332.796875
+        },
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 1009,
+          "height": 540,
+          "right": 1009,
+          "bottom": 540
+        },
+        "image": {
+          "x": -95.5,
+          "y": 146,
+          "width": 1200,
+          "height": 400,
+          "right": 1104.5,
+          "bottom": 546,
+          "src": "http://127.0.0.1:6461/assets/images/template/company-about-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        },
+        "models": [],
+        "actions": [
+          {
+            "text": "Sofia · 18 Atanas Manchev Street, Studentski Grad",
+            "box": {
+              "x": 306.046875,
+              "y": 340.796875,
+              "width": 420.890625,
+              "height": 27,
+              "right": 726.9375,
+              "bottom": 367.796875
+            },
+            "clickable": true
+          },
+          {
+            "text": "Explore demo cars",
+            "box": {
+              "x": 395.875,
+              "y": 391.796875,
+              "width": 217.234375,
+              "height": 44,
+              "right": 613.109375,
+              "bottom": 435.796875
+            },
+            "clickable": true
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1024,
+      "surface": "contact",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1009,
+          "height": 540,
+          "right": 1009,
+          "bottom": 540
+        },
+        "title": {
+          "x": 124.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 100.78125,
+          "right": 884.5,
+          "bottom": 332.796875
+        },
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 1009,
+          "height": 540,
+          "right": 1009,
+          "bottom": 540
+        },
+        "image": {
+          "x": -95.5,
+          "y": 146,
+          "width": 1200,
+          "height": 400,
+          "right": 1104.5,
+          "bottom": 546,
+          "src": "http://127.0.0.1:6461/assets/images/template/company-contact-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        },
+        "models": [],
+        "actions": [
+          {
+            "text": "087 982 4625",
+            "box": {
+              "x": 340.34375,
+              "y": 391.796875,
+              "width": 173.46875,
+              "height": 44,
+              "right": 513.8125,
+              "bottom": 435.796875
+            },
+            "clickable": true
+          },
+          {
+            "text": "Directions",
+            "box": {
+              "x": 525.8125,
+              "y": 391.796875,
+              "width": 142.828125,
+              "height": 44,
+              "right": 668.640625,
+              "bottom": 435.796875
+            },
+            "clickable": true
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1199,
+      "surface": "about",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1184,
+          "height": 540,
+          "right": 1184,
+          "bottom": 540
+        },
+        "title": {
+          "x": 212,
+          "y": 232.015625,
+          "width": 760,
+          "height": 100.78125,
+          "right": 972,
+          "bottom": 332.796875
+        },
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 1184,
+          "height": 540,
+          "right": 1184,
+          "bottom": 540
+        },
+        "image": {
+          "x": -8,
+          "y": 146,
+          "width": 1200,
+          "height": 400,
+          "right": 1192,
+          "bottom": 546,
+          "src": "http://127.0.0.1:6461/assets/images/template/company-about-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        },
+        "models": [],
+        "actions": [
+          {
+            "text": "Sofia · 18 Atanas Manchev Street, Studentski Grad",
+            "box": {
+              "x": 393.546875,
+              "y": 340.796875,
+              "width": 420.890625,
+              "height": 27,
+              "right": 814.4375,
+              "bottom": 367.796875
+            },
+            "clickable": true
+          },
+          {
+            "text": "Explore demo cars",
+            "box": {
+              "x": 483.375,
+              "y": 391.796875,
+              "width": 217.234375,
+              "height": 44,
+              "right": 700.609375,
+              "bottom": 435.796875
+            },
+            "clickable": true
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1199,
+      "surface": "contact",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1184,
+          "height": 540,
+          "right": 1184,
+          "bottom": 540
+        },
+        "title": {
+          "x": 212,
+          "y": 232.015625,
+          "width": 760,
+          "height": 100.78125,
+          "right": 972,
+          "bottom": 332.796875
+        },
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 1184,
+          "height": 540,
+          "right": 1184,
+          "bottom": 540
+        },
+        "image": {
+          "x": -8,
+          "y": 146,
+          "width": 1200,
+          "height": 400,
+          "right": 1192,
+          "bottom": 546,
+          "src": "http://127.0.0.1:6461/assets/images/template/company-contact-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        },
+        "models": [],
+        "actions": [
+          {
+            "text": "087 982 4625",
+            "box": {
+              "x": 427.84375,
+              "y": 391.796875,
+              "width": 173.46875,
+              "height": 44,
+              "right": 601.3125,
+              "bottom": 435.796875
+            },
+            "clickable": true
+          },
+          {
+            "text": "Directions",
+            "box": {
+              "x": 613.3125,
+              "y": 391.796875,
+              "width": 142.828125,
+              "height": 44,
+              "right": 756.140625,
+              "bottom": 435.796875
+            },
+            "clickable": true
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1200,
+      "surface": "about",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1185,
+          "height": 540,
+          "right": 1185,
+          "bottom": 540
+        },
+        "title": {
+          "x": 212.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 117.59375,
+          "right": 972.5,
+          "bottom": 349.609375
+        },
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 1185,
+          "height": 540,
+          "right": 1185,
+          "bottom": 540
+        },
+        "image": {
+          "x": -7.5,
+          "y": 146,
+          "width": 1200,
+          "height": 400,
+          "right": 1192.5,
+          "bottom": 546,
+          "src": "http://127.0.0.1:6461/assets/images/template/company-about-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        },
+        "models": [],
+        "actions": [
+          {
+            "text": "Sofia · 18 Atanas Manchev Street, Studentski Grad",
+            "box": {
+              "x": 394.046875,
+              "y": 357.609375,
+              "width": 420.890625,
+              "height": 27,
+              "right": 814.9375,
+              "bottom": 384.609375
+            },
+            "clickable": true
+          },
+          {
+            "text": "Explore demo cars",
+            "box": {
+              "x": 483.875,
+              "y": 408.609375,
+              "width": 217.234375,
+              "height": 44,
+              "right": 701.109375,
+              "bottom": 452.609375
+            },
+            "clickable": true
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1200,
+      "surface": "contact",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1185,
+          "height": 540,
+          "right": 1185,
+          "bottom": 540
+        },
+        "title": {
+          "x": 212.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 117.59375,
+          "right": 972.5,
+          "bottom": 349.609375
+        },
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 1185,
+          "height": 540,
+          "right": 1185,
+          "bottom": 540
+        },
+        "image": {
+          "x": -7.5,
+          "y": 146,
+          "width": 1200,
+          "height": 400,
+          "right": 1192.5,
+          "bottom": 546,
+          "src": "http://127.0.0.1:6461/assets/images/template/company-contact-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        },
+        "models": [],
+        "actions": [
+          {
+            "text": "087 982 4625",
+            "box": {
+              "x": 428.34375,
+              "y": 408.609375,
+              "width": 173.46875,
+              "height": 44,
+              "right": 601.8125,
+              "bottom": 452.609375
+            },
+            "clickable": true
+          },
+          {
+            "text": "Directions",
+            "box": {
+              "x": 613.8125,
+              "y": 408.609375,
+              "width": 142.828125,
+              "height": 44,
+              "right": 756.640625,
+              "bottom": 452.609375
+            },
+            "clickable": true
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "surface": "about",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "title": {
+          "x": 332.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 117.59375,
+          "right": 1092.5,
+          "bottom": 349.609375
+        },
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "image": {
+          "x": 0,
+          "y": 81.5,
+          "width": 1425,
+          "height": 475,
+          "right": 1425,
+          "bottom": 556.5,
+          "src": "http://127.0.0.1:6461/assets/images/template/company-about-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        },
+        "models": [],
+        "actions": [
+          {
+            "text": "Sofia · 18 Atanas Manchev Street, Studentski Grad",
+            "box": {
+              "x": 514.046875,
+              "y": 357.609375,
+              "width": 420.890625,
+              "height": 27,
+              "right": 934.9375,
+              "bottom": 384.609375
+            },
+            "clickable": true
+          },
+          {
+            "text": "Explore demo cars",
+            "box": {
+              "x": 603.875,
+              "y": 408.609375,
+              "width": 217.234375,
+              "height": 44,
+              "right": 821.109375,
+              "bottom": 452.609375
+            },
+            "clickable": true
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "surface": "contact",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "title": {
+          "x": 332.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 117.59375,
+          "right": 1092.5,
+          "bottom": 349.609375
+        },
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "image": {
+          "x": 0,
+          "y": 81.5,
+          "width": 1425,
+          "height": 475,
+          "right": 1425,
+          "bottom": 556.5,
+          "src": "http://127.0.0.1:6461/assets/images/template/company-contact-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        },
+        "models": [],
+        "actions": [
+          {
+            "text": "087 982 4625",
+            "box": {
+              "x": 548.34375,
+              "y": 408.609375,
+              "width": 173.46875,
+              "height": 44,
+              "right": 721.8125,
+              "bottom": 452.609375
+            },
+            "clickable": true
+          },
+          {
+            "text": "Directions",
+            "box": {
+              "x": 733.8125,
+              "y": 408.609375,
+              "width": 142.828125,
+              "height": 44,
+              "right": 876.640625,
+              "bottom": 452.609375
+            },
+            "clickable": true
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "surface": "sell",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "title": {
+          "x": 152.5,
+          "y": 200,
+          "width": 1120,
+          "height": 53.75,
+          "right": 1272.5,
+          "bottom": 253.75
+        },
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "image": {
+          "x": 0,
+          "y": 81.5,
+          "width": 1425,
+          "height": 475,
+          "right": 1425,
+          "bottom": 556.5,
+          "src": "http://127.0.0.1:6461/assets/images/template/company-contact-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        },
+        "models": [],
+        "actions": [
+          {
+            "text": "Start with the carsContact and address",
+            "box": {
+              "x": 602.15625,
+              "y": 340,
+              "width": 220.671875,
+              "height": 44,
+              "right": 822.828125,
+              "bottom": 384
+            },
+            "clickable": true
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "surface": "import",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "title": {
+          "x": 152.5,
+          "y": 200,
+          "width": 1120,
+          "height": 53.75,
+          "right": 1272.5,
+          "bottom": 253.75
+        },
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "image": {
+          "x": 0,
+          "y": 81.5,
+          "width": 1425,
+          "height": 475,
+          "right": 1425,
+          "bottom": 556.5,
+          "src": "http://127.0.0.1:6461/assets/images/template/company-contact-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        },
+        "models": [],
+        "actions": [
+          {
+            "text": "Describe what you are looking forContact and address",
+            "box": {
+              "x": 544.09375,
+              "y": 340,
+              "width": 336.796875,
+              "height": 44,
+              "right": 880.890625,
+              "bottom": 384
+            },
+            "clickable": true
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "surface": "leasing",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "title": {
+          "x": 152.5,
+          "y": 200,
+          "width": 1120,
+          "height": 53.75,
+          "right": 1272.5,
+          "bottom": 253.75
+        },
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "image": {
+          "x": 0,
+          "y": 81.5,
+          "width": 1425,
+          "height": 475,
+          "right": 1425,
+          "bottom": 556.5,
+          "src": "http://127.0.0.1:6461/assets/images/template/company-contact-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        },
+        "models": [],
+        "actions": [
+          {
+            "text": "Find a car",
+            "box": {
+              "x": 634.203125,
+              "y": 340,
+              "width": 156.59375,
+              "height": 44,
+              "right": 790.796875,
+              "bottom": 384
+            },
+            "clickable": true
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "title": {
+          "x": 152.5,
+          "y": 258.234375,
+          "width": 1120,
+          "height": 53.75,
+          "right": 1272.5,
+          "bottom": 311.984375
+        },
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "image": {
+          "x": -255.53125,
+          "y": 256.078125,
+          "width": 472.53125,
+          "height": 315.171875,
+          "right": 217,
+          "bottom": 571.25,
+          "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+          "naturalWidth": 1000,
+          "naturalHeight": 667
+        },
+        "models": [
+          "urus",
+          "urus"
+        ],
+        "actions": []
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "title": {
+          "x": 152.5,
+          "y": 258.234375,
+          "width": 1120,
+          "height": 53.75,
+          "right": 1272.5,
+          "bottom": 311.984375
+        },
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "image": {
+          "x": -249.796875,
+          "y": 239.828125,
+          "width": 461.53125,
+          "height": 307.84375,
+          "right": 211.734375,
+          "bottom": 547.671875,
+          "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+          "naturalWidth": 1000,
+          "naturalHeight": 667
+        },
+        "models": [
+          "gclass",
+          "gclass"
+        ],
+        "actions": []
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1920,
+      "surface": "about",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1905,
+          "height": 540,
+          "right": 1905,
+          "bottom": 540
+        },
+        "title": {
+          "x": 572.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 117.59375,
+          "right": 1332.5,
+          "bottom": 349.609375
+        },
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 1905,
+          "height": 540,
+          "right": 1905,
+          "bottom": 540
+        },
+        "image": {
+          "x": 0,
+          "y": -56.0999755859375,
+          "width": 1905,
+          "height": 635,
+          "right": 1905,
+          "bottom": 578.9000244140625,
+          "src": "http://127.0.0.1:6461/assets/images/template/company-about-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        },
+        "models": [],
+        "actions": [
+          {
+            "text": "Sofia · 18 Atanas Manchev Street, Studentski Grad",
+            "box": {
+              "x": 754.046875,
+              "y": 357.609375,
+              "width": 420.890625,
+              "height": 27,
+              "right": 1174.9375,
+              "bottom": 384.609375
+            },
+            "clickable": true
+          },
+          {
+            "text": "Explore demo cars",
+            "box": {
+              "x": 843.875,
+              "y": 408.609375,
+              "width": 217.234375,
+              "height": 44,
+              "right": 1061.109375,
+              "bottom": 452.609375
+            },
+            "clickable": true
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1920,
+      "surface": "contact",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1905,
+          "height": 540,
+          "right": 1905,
+          "bottom": 540
+        },
+        "title": {
+          "x": 572.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 117.59375,
+          "right": 1332.5,
+          "bottom": 349.609375
+        },
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 1905,
+          "height": 540,
+          "right": 1905,
+          "bottom": 540
+        },
+        "image": {
+          "x": 0,
+          "y": -56.0999755859375,
+          "width": 1905,
+          "height": 635,
+          "right": 1905,
+          "bottom": 578.9000244140625,
+          "src": "http://127.0.0.1:6461/assets/images/template/company-contact-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        },
+        "models": [],
+        "actions": [
+          {
+            "text": "087 982 4625",
+            "box": {
+              "x": 788.34375,
+              "y": 408.609375,
+              "width": 173.46875,
+              "height": 44,
+              "right": 961.8125,
+              "bottom": 452.609375
+            },
+            "clickable": true
+          },
+          {
+            "text": "Directions",
+            "box": {
+              "x": 973.8125,
+              "y": 408.609375,
+              "width": 142.828125,
+              "height": 44,
+              "right": 1116.640625,
+              "bottom": 452.609375
+            },
+            "clickable": true
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 2560,
+      "surface": "about",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 2545,
+          "height": 540,
+          "right": 2545,
+          "bottom": 540
+        },
+        "title": {
+          "x": 892.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 117.59375,
+          "right": 1652.5,
+          "bottom": 349.609375
+        },
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 2545,
+          "height": 540,
+          "right": 2545,
+          "bottom": 540
+        },
+        "image": {
+          "x": 0,
+          "y": -239.56219482421875,
+          "width": 2545,
+          "height": 848.328125,
+          "right": 2545,
+          "bottom": 608.7659301757812,
+          "src": "http://127.0.0.1:6461/assets/images/template/company-about-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        },
+        "models": [],
+        "actions": [
+          {
+            "text": "Sofia · 18 Atanas Manchev Street, Studentski Grad",
+            "box": {
+              "x": 1074.046875,
+              "y": 357.609375,
+              "width": 420.890625,
+              "height": 27,
+              "right": 1494.9375,
+              "bottom": 384.609375
+            },
+            "clickable": true
+          },
+          {
+            "text": "Explore demo cars",
+            "box": {
+              "x": 1163.875,
+              "y": 408.609375,
+              "width": 217.234375,
+              "height": 44,
+              "right": 1381.109375,
+              "bottom": 452.609375
+            },
+            "clickable": true
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 2560,
+      "surface": "contact",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 2545,
+          "height": 540,
+          "right": 2545,
+          "bottom": 540
+        },
+        "title": {
+          "x": 892.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 117.59375,
+          "right": 1652.5,
+          "bottom": 349.609375
+        },
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 2545,
+          "height": 540,
+          "right": 2545,
+          "bottom": 540
+        },
+        "image": {
+          "x": 0,
+          "y": -239.56219482421875,
+          "width": 2545,
+          "height": 848.328125,
+          "right": 2545,
+          "bottom": 608.7659301757812,
+          "src": "http://127.0.0.1:6461/assets/images/template/company-contact-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        },
+        "models": [],
+        "actions": [
+          {
+            "text": "087 982 4625",
+            "box": {
+              "x": 1108.34375,
+              "y": 408.609375,
+              "width": 173.46875,
+              "height": 44,
+              "right": 1281.8125,
+              "bottom": 452.609375
+            },
+            "clickable": true
+          },
+          {
+            "text": "Directions",
+            "box": {
+              "x": 1293.8125,
+              "y": 408.609375,
+              "width": 142.828125,
+              "height": 44,
+              "right": 1436.640625,
+              "bottom": 452.609375
+            },
+            "clickable": true
+          }
+        ]
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "surface": "about",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 375,
+          "height": 244,
+          "right": 375,
+          "bottom": 244
+        },
+        "title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "scene": null,
+        "image": null,
+        "models": [],
+        "actions": []
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "surface": "contact",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 375,
+          "height": 244,
+          "right": 375,
+          "bottom": 244
+        },
+        "title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "scene": null,
+        "image": null,
+        "models": [],
+        "actions": []
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 992,
+      "surface": "about",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 977,
+          "height": 540,
+          "right": 977,
+          "bottom": 540
+        },
+        "title": {
+          "x": 108.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 100.78125,
+          "right": 868.5,
+          "bottom": 332.796875
+        },
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 977,
+          "height": 540,
+          "right": 977,
+          "bottom": 540
+        },
+        "image": {
+          "x": -111.5,
+          "y": 146,
+          "width": 1200,
+          "height": 400,
+          "right": 1088.5,
+          "bottom": 546,
+          "src": "http://127.0.0.1:6461/assets/images/template/company-about-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        },
+        "models": [],
+        "actions": [
+          {
+            "text": "София · ул. „Атанас Манчев“ 18, Студентски град",
+            "box": {
+              "x": 286.75,
+              "y": 340.796875,
+              "width": 427.5,
+              "height": 27,
+              "right": 714.25,
+              "bottom": 367.796875
+            },
+            "clickable": true
+          },
+          {
+            "text": "Разгледайте примерните автомобили",
+            "box": {
+              "x": 301.671875,
+              "y": 391.796875,
+              "width": 373.640625,
+              "height": 44,
+              "right": 675.3125,
+              "bottom": 435.796875
+            },
+            "clickable": true
+          }
+        ]
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 992,
+      "surface": "contact",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 977,
+          "height": 540,
+          "right": 977,
+          "bottom": 540
+        },
+        "title": {
+          "x": 108.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 100.78125,
+          "right": 868.5,
+          "bottom": 332.796875
+        },
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 977,
+          "height": 540,
+          "right": 977,
+          "bottom": 540
+        },
+        "image": {
+          "x": -111.5,
+          "y": 146,
+          "width": 1200,
+          "height": 400,
+          "right": 1088.5,
+          "bottom": 546,
+          "src": "http://127.0.0.1:6461/assets/images/template/company-contact-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        },
+        "models": [],
+        "actions": [
+          {
+            "text": "087 982 4625",
+            "box": {
+              "x": 321.1875,
+              "y": 391.796875,
+              "width": 173.46875,
+              "height": 44,
+              "right": 494.65625,
+              "bottom": 435.796875
+            },
+            "clickable": true
+          },
+          {
+            "text": "Упътвания",
+            "box": {
+              "x": 506.65625,
+              "y": 391.796875,
+              "width": 149.140625,
+              "height": 44,
+              "right": 655.796875,
+              "bottom": 435.796875
+            },
+            "clickable": true
+          }
+        ]
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "surface": "about",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "title": {
+          "x": 332.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 117.59375,
+          "right": 1092.5,
+          "bottom": 349.609375
+        },
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "image": {
+          "x": 0,
+          "y": 81.5,
+          "width": 1425,
+          "height": 475,
+          "right": 1425,
+          "bottom": 556.5,
+          "src": "http://127.0.0.1:6461/assets/images/template/company-about-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        },
+        "models": [],
+        "actions": [
+          {
+            "text": "София · ул. „Атанас Манчев“ 18, Студентски град",
+            "box": {
+              "x": 510.75,
+              "y": 357.609375,
+              "width": 427.5,
+              "height": 27,
+              "right": 938.25,
+              "bottom": 384.609375
+            },
+            "clickable": true
+          },
+          {
+            "text": "Разгледайте примерните автомобили",
+            "box": {
+              "x": 525.671875,
+              "y": 408.609375,
+              "width": 373.640625,
+              "height": 44,
+              "right": 899.3125,
+              "bottom": 452.609375
+            },
+            "clickable": true
+          }
+        ]
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "surface": "contact",
+      "state": {
+        "overflow": -15,
+        "hero": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "title": {
+          "x": 332.5,
+          "y": 232.015625,
+          "width": 760,
+          "height": 117.59375,
+          "right": 1092.5,
+          "bottom": 349.609375
+        },
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 540,
+          "right": 1425,
+          "bottom": 540
+        },
+        "image": {
+          "x": 0,
+          "y": 81.5,
+          "width": 1425,
+          "height": 475,
+          "right": 1425,
+          "bottom": 556.5,
+          "src": "http://127.0.0.1:6461/assets/images/template/company-contact-studio-v4.webp",
+          "naturalWidth": 2160,
+          "naturalHeight": 720
+        },
+        "models": [],
+        "actions": [
+          {
+            "text": "087 982 4625",
+            "box": {
+              "x": 545.1875,
+              "y": 408.609375,
+              "width": 173.46875,
+              "height": 44,
+              "right": 718.65625,
+              "bottom": 452.609375
+            },
+            "clickable": true
+          },
+          {
+            "text": "Упътвания",
+            "box": {
+              "x": 730.65625,
+              "y": 408.609375,
+              "width": 149.140625,
+              "height": 44,
+              "right": 879.796875,
+              "bottom": 452.609375
+            },
+            "clickable": true
+          }
+        ]
+      }
+    }
+  ]
+}
