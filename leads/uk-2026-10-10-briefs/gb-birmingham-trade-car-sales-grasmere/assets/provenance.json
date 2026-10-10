@@ -54,6 +54,31 @@
         "path": "templates/auto-best/static/assets/images/lead/day-night-cutout-porsche-v1.webp"
       },
       "rights": "Generated design illustration; no third-party listing photograph copied."
+    },
+    {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "48aedfea403dcaed8c715bd5cb0c3aa53f1c046a41e1ff11ddf3a0d5d2cc6dcc",
+      "kind": "generated_proposal",
+      "source": "generated_images/exec-81088b37-55e8-4f82-be74-c423abf49813.png",
+      "publicReferenceUrls": [
+        "https://showroom.ebaymotorspro.co.uk/Trade-Car-Sales1",
+        "https://www.cazoo.co.uk/dealers/trade-car-sales-16229/"
+      ],
+      "dealerApproval": false,
+      "rights": "Generated proposed identity; not dealer-approved."
+    },
+    {
+      "localPath": "assets/app-icon.png",
+      "sha256": "a4fd1926de34e6364438488900b971deb87775a2196c31ffe77faac7f439604e",
+      "kind": "generated_proposal_icon",
+      "source": "generated_images/exec-f05c16fb-380d-42d2-b816-330885c60589.png"
+    },
+    {
+      "localPath": "assets/favicon.ico",
+      "sha256": "c8f6151cdf52034398092ead26504745ddcec51d581b646ef794f96723710db5",
+      "kind": "generated_proposal_icon",
+      "source": "assets/app-icon.png",
+      "encoding": "Proportional resizing and ICO delivery encoding only"
     }
   ],
   "thirdPartyStockPhotosBundled": false,

@@ -66,6 +66,20 @@ function modernTrustedCountry(files) {
   files.set(name, Buffer.from(source.replace(original,
     'process.env.CARS_CLOUDFLARE_PROVIDER === "1"\n          ? request.headers.get("x-cars-country")\n          : process.env.VERCEL === "1"\n            ? request.headers.get("x-vercel-ip-country")\n            : null')));
 }
+function modernCssPlugin(files, pkg, changes) {
+  const name = 'modern/packages/design-system/package.json', source = text(files, name);
+  const dependency = '@tailwindcss/typography', version = '0.5.20';
+  const shared = JSON.parse(source), sourceLock = text(files, 'modern/pnpm-lock.yaml');
+  if (shared.devDependencies?.[dependency] !== '^0.5.19'
+    || !sourceLock.includes("  '@tailwindcss/typography@0.5.20':\n")
+    || !text(files, 'modern/packages/design-system/styles/globals.css').includes('@plugin "@tailwindcss/typography";')
+    || pkg.dependencies?.[dependency] || pkg.devDependencies?.[dependency]) throw Error('Modern shared CSS plugin boundary changed; review the Cloudflare adapter');
+  // Vite resolves the imported @plugin at the web CSS entry. Keep the same
+  // plugin and exact version already frozen for the shared design system.
+  pkg.devDependencies = { ...pkg.devDependencies, [dependency]: version };
+  changes.push({ file: 'modern/apps/web/package.json', operation: 'expose-shared-css-plugin-at-vite-entry',
+    dependency, version, sourcePackage: name, sourcePackageSha256: digest(source), sourceLockSha256: digest(sourceLock) });
+}
 function modernCloudflareBuildPolicy(files, changes) {
   const name = 'modern/pnpm-workspace.yaml', source = text(files, name);
   if ([...source.matchAll(/^allowBuilds:\n/gm)].length !== 1
@@ -112,6 +126,7 @@ export function applyCloudflareNext(inputFiles, manifest, { workerPrefix = 'cars
     if (!/^19\.(?:2\.(?:[6-9]|[1-9]\d+)|[3-9]\.\d+)$/.test(react ?? '')) throw Error(key + ': React runtime is incompatible with pinned vinext 1.1.0');
     generated(files, root + '/cars-next-source-package.json', originalPackage);
     if (key === 'modern') {
+      modernCssPlugin(files, pkg, adaptations);
       modernReact(files, adaptations);
       modernCloudflareBuildPolicy(files, adaptations);
     }

@@ -24,6 +24,31 @@
         "path": "templates/auto-best/static/assets/images/template/body-convertible-v2.webp"
       },
       "rights": "Generated design illustration; no third-party listing photograph copied."
+    },
+    {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "bdebc2914c113b9adb3b93a1a9ddee86c40ceecafa2d4cb148ef58cce5c85fe4",
+      "kind": "generated_proposal",
+      "source": "generated_images/exec-bb07ba1c-0236-472e-a190-961e22e70b27.png",
+      "publicReferenceUrls": [
+        "https://showroom.ebaymotorspro.co.uk/S-A-motors",
+        "https://www.cazoo.co.uk/dealers/s-a-motors-76195/"
+      ],
+      "dealerApproval": false,
+      "rights": "Generated proposed identity; not dealer-approved."
+    },
+    {
+      "localPath": "assets/app-icon.png",
+      "sha256": "804e5032b534e3ed5e1189a2a717ef227f24ebd1da2e865a1de515090984135e",
+      "kind": "generated_proposal_icon",
+      "source": "generated_images/exec-c36284ce-51cf-4b0a-934d-4e498d7faece.png"
+    },
+    {
+      "localPath": "assets/favicon.ico",
+      "sha256": "ca5888eef146b6aad03204f773938e0d319b2b3db412ad9423187a1f868fcee9",
+      "kind": "generated_proposal_icon",
+      "source": "assets/app-icon.png",
+      "encoding": "Proportional resizing and ICO delivery encoding only"
     }
   ],
   "thirdPartyStockPhotosBundled": false,

@@ -83,3 +83,20 @@ test('provider transformation refuses Vercel output and records unverified accep
   await assert.rejects(() => applyCloudflareProvider(new Map([...original, ['vercel.json', Buffer.from('{}')]]), manifest), /before provider transforms/);
   assert.throws(() => cloudflareRoutingPlan({ ...manifest, packaging: { version: '1' } }), /explicit six-design/);
 });
+
+test('explicit manifest Worker prefix binds router and every family while preserving legacy default', () => {
+  const selected = { ...manifest, cloudflare: { workerPrefix: 'cars-uk-fixture-uk' } };
+  const plan = cloudflareRoutingPlan(selected);
+  assert.equal(plan.worker, 'cars-uk-fixture-uk');
+  assert.equal(plan.configuration.name, plan.worker);
+  assert.deepEqual(plan.variants.map(variant => variant.worker), [
+    'cars-uk-fixture-uk-auto-best', 'cars-uk-fixture-uk-modern', 'cars-uk-fixture-uk-import',
+    'cars-uk-fixture-uk-app', 'cars-uk-fixture-uk-mobile', 'cars-uk-fixture-uk-signature'
+  ]);
+  assert.deepEqual(plan.configuration.services.map(service => service.service), plan.variants.map(variant => variant.worker));
+  assert.equal(cloudflareRoutingPlan(manifest).worker, 'cars-fixture-uk');
+  assert.equal(cloudflareRoutingPlan(selected, { workerPrefix: 'cars-explicit' }).worker, 'cars-explicit');
+  for (const workerPrefix of ['', '../dealer', 'https://dealer.example', 'UPPERCASE', 'x'.repeat(49)]) {
+    assert.throws(() => cloudflareRoutingPlan({ ...manifest, cloudflare: { workerPrefix } }), /Invalid Cloudflare Worker prefix/);
+  }
+});

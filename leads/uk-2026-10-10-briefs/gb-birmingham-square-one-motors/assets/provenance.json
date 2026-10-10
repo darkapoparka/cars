@@ -43,6 +43,30 @@
         "path": "templates/auto-best/static/assets/images/lead/day-night-cutout-porsche-v1.webp"
       },
       "rights": "Generated design illustration; no third-party listing photograph copied."
+    },
+    {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "cad5a4c01d4881deb0320f25323ae598f3ca520e38a83eff7a41581e0dd7f8bf",
+      "kind": "generated_proposal",
+      "source": "generated_images/exec-2cd63a4a-f27f-4f2a-b234-b0a1c597ce64.png",
+      "publicReferenceUrls": [
+        "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456"
+      ],
+      "dealerApproval": false,
+      "rights": "Generated proposed identity; not dealer-approved."
+    },
+    {
+      "localPath": "assets/app-icon.png",
+      "sha256": "0feba4fe1d6307615bd0d58a211f78bce330668cd88c98e6c9d39519aa7a1236",
+      "kind": "generated_proposal_icon",
+      "source": "generated_images/exec-99af87bf-0b7a-4001-ac8c-aff9bdbe9d6e.png"
+    },
+    {
+      "localPath": "assets/favicon.ico",
+      "sha256": "5a8267aca2594ecc57790816049a0c7372e018002d83da17241beb899a75c791",
+      "kind": "generated_proposal_icon",
+      "source": "assets/app-icon.png",
+      "encoding": "Proportional resizing and ICO delivery encoding only"
     }
   ],
   "thirdPartyStockPhotosBundled": false,

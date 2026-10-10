@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "bradford-cherry-tree-cars",
+  "approvalStatus": "independent_design_proposal_not_dealer_approved",
+  "assets": {
+    "onLight": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "e78f01dbd616cd1fbf3fb0fe043d0eaaacc98d7af211e7af859367e7d3ac78d4",
+      "width": 1024,
+      "height": 341,
+      "background": "opaque_white"
+    },
+    "onDark": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "e78f01dbd616cd1fbf3fb0fe043d0eaaacc98d7af211e7af859367e7d3ac78d4",
+      "width": 1024,
+      "height": 341,
+      "background": "opaque_white"
+    },
+    "onAccent": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "e78f01dbd616cd1fbf3fb0fe043d0eaaacc98d7af211e7af859367e7d3ac78d4",
+      "width": 1024,
+      "height": 341,
+      "background": "opaque_white"
+    }
+  },
+  "icon": {
+    "localPath": "assets/app-icon.png",
+    "sha256": "74c094fd1a92575b7d2d634e202595a3eb39d5824b7b962839e2e4975dd847d6",
+    "width": 512,
+    "height": 512
+  },
+  "favicon": {
+    "localPath": "assets/favicon.ico",
+    "sha256": "d1352bb18aecd1f2a1e324f9e4c14df3e99bf4cd87a5a494155fedf599bff487",
+    "sizes": [
+      16,
+      32,
+      48,
+      64,
+      128,
+      256
+    ],
+    "encoding": "ICO with PNG entries from the actual square icon"
+  },
+  "provenance": {
+    "creationMethod": "generated_proposal",
+    "date": "2026-10-10",
+    "sources": [
+      "generated_images/exec-bb7eafaf-8e9f-483b-aba9-ed72115fc42f.png",
+      "generated_images/exec-65f766df-bef5-4b83-8023-b08f905e321c.png"
+    ],
+    "publicReferenceUrls": [
+      "https://www.autotrader.co.uk/dealers/west-yorkshire/bradford/cherry-tree-cars-ltd-10045747",
+      "https://www.pistonheads.com/buy/dealer/999124"
+    ],
+    "research": "docs/qa/uk-branding-visual-research-2026-10-10.md",
+    "deliveryEncoding": "Proportional size and delivery-format encoding only; no crop, recolouring or compositing.",
+    "visualInspection": "Original reference where available, full business-name spelling, emblem completeness, white surface and square icon checked in generated output. Application consumers await browser QA.",
+    "dealerApproval": false
+  }
+}

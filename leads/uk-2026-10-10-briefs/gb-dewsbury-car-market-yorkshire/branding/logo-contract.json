@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "dewsbury-car-market-yorkshire",
+  "approvalStatus": "independent_design_proposal_not_dealer_approved",
+  "assets": {
+    "onLight": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "cadb9c07122892749d4b0ff128ba3ac51f6b0e15e3f17fe8c56ece5dbf177f46",
+      "width": 1024,
+      "height": 341,
+      "background": "opaque_white"
+    },
+    "onDark": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "cadb9c07122892749d4b0ff128ba3ac51f6b0e15e3f17fe8c56ece5dbf177f46",
+      "width": 1024,
+      "height": 341,
+      "background": "opaque_white"
+    },
+    "onAccent": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "cadb9c07122892749d4b0ff128ba3ac51f6b0e15e3f17fe8c56ece5dbf177f46",
+      "width": 1024,
+      "height": 341,
+      "background": "opaque_white"
+    }
+  },
+  "icon": {
+    "localPath": "assets/app-icon.png",
+    "sha256": "e82eba71d163abe2ca60d50667d1eeb24f1bd5459b21ed849b8b0eeb79264833",
+    "width": 512,
+    "height": 512
+  },
+  "favicon": {
+    "localPath": "assets/favicon.ico",
+    "sha256": "d60a7aad9f0744c99d0e02e9c8e3a4937dbefa62cd8fb58c011e64baa15204da",
+    "sizes": [
+      16,
+      32,
+      48,
+      64,
+      128,
+      256
+    ],
+    "encoding": "ICO with PNG entries from the actual square icon"
+  },
+  "provenance": {
+    "creationMethod": "sign_inspired_proposal",
+    "date": "2026-10-10",
+    "sources": [
+      "generated_images/exec-c091b934-6ade-4157-9570-15d1bafa7b3d.png",
+      "generated_images/exec-093ffacc-6725-4223-884e-5444fdce178a.png"
+    ],
+    "publicReferenceUrls": [
+      "https://www.yorkshire.com/dewsbury/services/car-dealers/car-market-yorkshire",
+      "https://yorkshire-2026-assets-uk.s3.eu-west-2.amazonaws.com/entities/dewsbury/car-market-yorkshire-dewsbury-23343ced.jpg"
+    ],
+    "research": "docs/qa/uk-branding-visual-research-2026-10-10.md",
+    "deliveryEncoding": "Proportional size and delivery-format encoding only; no crop, recolouring or compositing.",
+    "visualInspection": "Original reference where available, full business-name spelling, emblem completeness, white surface and square icon checked in generated output. Application consumers await browser QA.",
+    "dealerApproval": false
+  }
+}

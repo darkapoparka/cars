@@ -54,6 +54,31 @@
         "path": "templates/auto-best/static/assets/images/template/body-hatchback-v2.webp"
       },
       "rights": "Generated design illustration; no third-party listing photograph copied."
+    },
+    {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "e78f01dbd616cd1fbf3fb0fe043d0eaaacc98d7af211e7af859367e7d3ac78d4",
+      "kind": "generated_proposal",
+      "source": "generated_images/exec-bb7eafaf-8e9f-483b-aba9-ed72115fc42f.png",
+      "publicReferenceUrls": [
+        "https://www.autotrader.co.uk/dealers/west-yorkshire/bradford/cherry-tree-cars-ltd-10045747",
+        "https://www.pistonheads.com/buy/dealer/999124"
+      ],
+      "dealerApproval": false,
+      "rights": "Generated proposed identity; not dealer-approved."
+    },
+    {
+      "localPath": "assets/app-icon.png",
+      "sha256": "74c094fd1a92575b7d2d634e202595a3eb39d5824b7b962839e2e4975dd847d6",
+      "kind": "generated_proposal_icon",
+      "source": "generated_images/exec-65f766df-bef5-4b83-8023-b08f905e321c.png"
+    },
+    {
+      "localPath": "assets/favicon.ico",
+      "sha256": "d1352bb18aecd1f2a1e324f9e4c14df3e99bf4cd87a5a494155fedf599bff487",
+      "kind": "generated_proposal_icon",
+      "source": "assets/app-icon.png",
+      "encoding": "Proportional resizing and ICO delivery encoding only"
     }
   ],
   "thirdPartyStockPhotosBundled": false,

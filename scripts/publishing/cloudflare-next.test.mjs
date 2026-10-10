@@ -11,7 +11,9 @@ function fixture(keys=['modern','app','mobile']){
     files.set(root+'/package.json',Buffer.from(JSON.stringify({name:key,dependencies:{next:'16.3.8',react:key==='modern'?'19.2.4':'19.3.0','react-dom':key==='modern'?'19.2.4':'19.3.0'},scripts:{build:'next build'}})));
     files.set(root+'/app/page.tsx',Buffer.from("import {headers} from 'next/headers'; export default async function Page(){return (await headers()).get('x-cars-country')}"));
     if(key==='modern'){
-      files.set('modern/pnpm-lock.yaml',Buffer.from("lockfileVersion: '9.0'\n"));
+      files.set('modern/pnpm-lock.yaml',Buffer.from("lockfileVersion: '9.0'\npackages:\n  '@tailwindcss/typography@0.5.20':\n    resolution: {integrity: fixture}\n"));
+      files.set('modern/packages/design-system/package.json',Buffer.from(JSON.stringify({devDependencies:{'@tailwindcss/typography':'^0.5.19'}})));
+      files.set('modern/packages/design-system/styles/globals.css',Buffer.from('@plugin "@tailwindcss/typography";\n'));
       files.set('modern/pnpm-workspace.yaml',Buffer.from("packages:\n  - 'apps/*'\n  - 'packages/*'\nstrictDepBuilds: true\nallowBuilds:\n  esbuild: true\n  sharp: true\nminimumReleaseAge: 1440\n"));
       files.set('modern/packages/internationalization/request.ts',Buffer.from('trustedCountry: process.env.VERCEL === "1"\n          ? request.headers.get("x-vercel-ip-country")\n          : null,'));
     }
@@ -123,5 +125,23 @@ test('Modern approves only the reviewed Cloudflare native build and retains the 
   for(const policy of [source.replace('allowBuilds:\n','allowBuilds: {}\n'),source+'allowBuilds:\n',source.replace('allowBuilds:\n','allowBuilds:\n  workerd: false\n'),source.replace('allowBuilds:\n',"allowBuilds:\n  'workerd@1.20261006.1': false\n")]){
     const changed=new Map(files);changed.set(name,Buffer.from(policy));
     assert.throws(()=>applyCloudflareNext(changed,manifest),/dependency build policy changed/);
+  }
+});
+
+test('Modern Vite entry declares the existing frozen typography plugin without changing shared styles',()=>{
+  const {files,manifest}=fixture(['modern']),before=new Map(files),out=applyCloudflareNext(files,manifest);
+  assert.equal(JSON.parse(out.get('modern/apps/web/package.json')).devDependencies['@tailwindcss/typography'],'0.5.20');
+  for(const name of ['modern/packages/design-system/package.json','modern/packages/design-system/styles/globals.css','modern/pnpm-lock.yaml']){
+    assert.deepEqual(out.get(name),before.get(name)); assert.deepEqual(files.get(name),before.get(name));
+  }
+  const change=JSON.parse(out.get('.cars-cloudflare-next.json')).adaptations.find(row=>row.operation==='expose-shared-css-plugin-at-vite-entry');
+  assert.equal(change.version,'0.5.20');assert.equal(change.sourcePackage,'modern/packages/design-system/package.json');
+  for(const [name,bytes]of [
+    ['modern/pnpm-lock.yaml',"lockfileVersion: '9.0'\n"],
+    ['modern/packages/design-system/package.json',JSON.stringify({devDependencies:{'@tailwindcss/typography':'^0.6.0'}})],
+    ['modern/packages/design-system/styles/globals.css','@import "tailwindcss";\n']
+  ]){
+    const changed=new Map(files);changed.set(name,Buffer.from(bytes));
+    assert.throws(()=>applyCloudflareNext(changed,manifest),/shared CSS plugin boundary changed/);
   }
 });

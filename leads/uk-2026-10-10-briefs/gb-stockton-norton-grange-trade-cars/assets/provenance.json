@@ -21,6 +21,31 @@
       "representsAdvertisedVehicle": false,
       "source": "Image Generation, 2026-10-10",
       "rights": "Generated design illustration; no third-party listing photograph copied."
+    },
+    {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "a4c81c76ad62d0916a4212e7e31f93e2aa2b513309761f6c38a4c4ddc385befc",
+      "kind": "identity_preserving_proposal",
+      "source": "generated_images/exec-32e3878d-8587-47c8-b9f1-526fbaf8ced4.png",
+      "publicReferenceUrls": [
+        "https://graph.facebook.com/155134585966802/picture?type=large",
+        "https://www.autoyas.com/GB/Stockton-on-Tees/155134585966802/Norton-grange-trade-cars"
+      ],
+      "dealerApproval": false,
+      "rights": "Generated proposed identity; not dealer-approved."
+    },
+    {
+      "localPath": "assets/app-icon.png",
+      "sha256": "30debbba6a343cbfb24357a4a52101611b8602ef89152e6220d63c27ab138f69",
+      "kind": "generated_proposal_icon",
+      "source": "generated_images/exec-3f9357dd-0b01-43a4-b08a-92191a1e2a4e.png"
+    },
+    {
+      "localPath": "assets/favicon.ico",
+      "sha256": "79709c1b7b8e8aea4793d6e1af870b6a0dd54914fd6265fe4ee6444d743230f3",
+      "kind": "generated_proposal_icon",
+      "source": "assets/app-icon.png",
+      "encoding": "Proportional resizing and ICO delivery encoding only"
     }
   ],
   "thirdPartyStockPhotosBundled": false,

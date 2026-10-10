@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "nottingham-s-a-motors",
+  "approvalStatus": "independent_design_proposal_not_dealer_approved",
+  "assets": {
+    "onLight": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "bdebc2914c113b9adb3b93a1a9ddee86c40ceecafa2d4cb148ef58cce5c85fe4",
+      "width": 1024,
+      "height": 341,
+      "background": "opaque_white"
+    },
+    "onDark": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "bdebc2914c113b9adb3b93a1a9ddee86c40ceecafa2d4cb148ef58cce5c85fe4",
+      "width": 1024,
+      "height": 341,
+      "background": "opaque_white"
+    },
+    "onAccent": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "bdebc2914c113b9adb3b93a1a9ddee86c40ceecafa2d4cb148ef58cce5c85fe4",
+      "width": 1024,
+      "height": 341,
+      "background": "opaque_white"
+    }
+  },
+  "icon": {
+    "localPath": "assets/app-icon.png",
+    "sha256": "804e5032b534e3ed5e1189a2a717ef227f24ebd1da2e865a1de515090984135e",
+    "width": 512,
+    "height": 512
+  },
+  "favicon": {
+    "localPath": "assets/favicon.ico",
+    "sha256": "ca5888eef146b6aad03204f773938e0d319b2b3db412ad9423187a1f868fcee9",
+    "sizes": [
+      16,
+      32,
+      48,
+      64,
+      128,
+      256
+    ],
+    "encoding": "ICO with PNG entries from the actual square icon"
+  },
+  "provenance": {
+    "creationMethod": "generated_proposal",
+    "date": "2026-10-10",
+    "sources": [
+      "generated_images/exec-bb07ba1c-0236-472e-a190-961e22e70b27.png",
+      "generated_images/exec-c36284ce-51cf-4b0a-934d-4e498d7faece.png"
+    ],
+    "publicReferenceUrls": [
+      "https://showroom.ebaymotorspro.co.uk/S-A-motors",
+      "https://www.cazoo.co.uk/dealers/s-a-motors-76195/"
+    ],
+    "research": "docs/qa/uk-branding-visual-research-2026-10-10.md",
+    "deliveryEncoding": "Proportional size and delivery-format encoding only; no crop, recolouring or compositing.",
+    "visualInspection": "Original reference where available, full business-name spelling, emblem completeness, white surface and square icon checked in generated output. Application consumers await browser QA.",
+    "dealerApproval": false
+  }
+}

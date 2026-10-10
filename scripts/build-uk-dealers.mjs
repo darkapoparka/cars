@@ -14,6 +14,7 @@ import { baseNativeManifest, assertAppVariant } from './publishing/app-variant.m
 import { assertNativeAdoption } from './lib/native-localization.mjs';
 import { assertExtendedVariantSources } from './publishing/six-variant.mjs';
 import { applyDealerIcons, inspectDealerIcon, ICO_INPUT_PATH } from './lib/uk-dealer-icons.mjs';
+import { resolveShareIdentity } from './publishing/dealer-share.mjs';
 
 export const MANIFEST_PATH = 'leads/uk-2026-10-10-build-manifest.json';
 export const FAMILIES = Object.freeze(['auto-best', 'modern', 'import', 'app', 'mobile', 'karento-best']);
@@ -48,6 +49,8 @@ export function validateBatch(batch) {
     if (!safeSlug(dealer.slug) || !safeSlug(dealer.leadId) || !dealer.name ||
         dealer.brief !== 'leads/uk-2026-10-10-briefs/' + dealer.leadId ||
         dealer.repository !== 'darkapoparka/cars-uk-' + dealer.slug ||
+        dealer.workerName !== 'cars-uk-' + dealer.slug ||
+        dealer.publicOrigin !== 'https://' + dealer.workerName + '.darkapoparka1.workers.dev' ||
         !['standard', 'import'].includes(dealer.preset) || !relative(dealer.appIcon) ||
         !dealer.appIcon.startsWith('assets/') || !dealer.appIcon.endsWith('.png')) {
       throw new Error('Invalid canonical UK dealer identity: ' + (dealer.slug || 'unknown'));
@@ -112,6 +115,24 @@ function assertPngIcon(file) {
       bytes.readUInt32BE(16) !== bytes.readUInt32BE(20)) throw new Error('App branding needs a retained square PNG of at least 32 pixels: ' + file);
 }
 
+export function shareIdentityForDealer(dealer, profile, directory) {
+  if (dealer.workerName !== 'cars-uk-' + dealer.slug ||
+      dealer.publicOrigin !== 'https://' + dealer.workerName + '.darkapoparka1.workers.dev') {
+    throw new Error('Dealer share identity must match the reviewed Cloudflare router and account subdomain.');
+  }
+  const logo = profile.logoContract?.assets?.onLight, icon = profile.logoContract?.icon;
+  const sourcePath = logo?.publicPath?.replace(/^\//, '');
+  if (!relative(sourcePath) || icon?.localPath !== dealer.appIcon) throw new Error('Missing retained logo or icon contract for dealer share metadata.');
+  const identity = {
+    name:profile.business.name, publicOrigin:dealer.publicOrigin,
+    description:[profile.business.previewNotice, profile.business.inventoryNotice].filter(Boolean).join(' '),
+    logo:{sourcePath, sha256:logo.sha256, faviconSourcePath:dealer.appIcon, faviconSha256:icon.sha256}
+  };
+  const files = new Map([sourcePath,dealer.appIcon].map(name => [name,fs.readFileSync(inside(directory,name,{mustExist:true}))]));
+  resolveShareIdentity(files,{shareIdentity:identity});
+  return identity;
+}
+
 export function inspectBrief(root, dealer) {
   const directory = inside(root, dealer.brief, {mustExist:true});
   const facts = json(inside(directory, 'business-facts.json', {mustExist:true}));
@@ -139,6 +160,7 @@ export function inspectBrief(root, dealer) {
   inspectDealerIcon(fs.readFileSync(inside(directory, dealer.appIcon)), fs.readFileSync(inside(directory, ICO_INPUT_PATH, {mustExist:true})));
   // Validate actual retained logo and stock bytes before any source materialization.
   retainDealerVariantAssets(new Map(), 'auto-best', profile, directory);
+  shareIdentityForDealer(dealer, profile, directory);
   const snapshot = packSnapshot(directory);
   return {directory, facts, locale, profile, snapshot};
 }
@@ -205,6 +227,8 @@ async function personalize(client, dealer, batch, brief, plan) {
   copyBrief(brief, client);
   const manifest = json(inside(client, 'dealer.json', {mustExist:true}));
   manifest.extraAssets = ['assets', 'branding', 'dealer-brand', 'dealer-stock'];
+  manifest.cloudflare = {workerPrefix:dealer.workerName};
+  manifest.shareIdentity = shareIdentityForDealer(dealer, brief.profile, client);
   writeJson(inside(client, 'dealer.json'), manifest);
   metadata(client, dealer, batch, plan.checkout.head);
   const profile = loadDealerProfile(client, dealer.slug), nativeChanges = {};

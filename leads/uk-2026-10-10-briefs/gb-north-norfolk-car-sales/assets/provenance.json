@@ -13,6 +13,30 @@
         "path": "templates/auto-best/static/assets/images/template/body-hatchback-v2.webp"
       },
       "rights": "Generated design illustration; no third-party listing photograph copied."
+    },
+    {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "0f70eadda345cc351592c2d1c705b1aab754aefa7cf1eeb05231add4c0d2420f",
+      "kind": "retained_public_identity",
+      "source": "uk-brand-references/north-norfolk-original.png",
+      "publicReferenceUrls": [
+        "https://northnorfolkcarsales.co.uk/uploads/logos/69571776159384.png"
+      ],
+      "dealerApproval": false,
+      "rights": "Publicly associated identity retained for an independent design preview; no dealer approval or licence verified."
+    },
+    {
+      "localPath": "assets/app-icon.png",
+      "sha256": "7ff5d5683108045ff86743fd983d0da5925070718f019af512f8e6f0814d140d",
+      "kind": "generated_proposal_icon",
+      "source": "generated_images/exec-a318f051-6e54-457e-91e2-1b79bb8af821.png"
+    },
+    {
+      "localPath": "assets/favicon.ico",
+      "sha256": "c7591b040772fc6cac9742c00dd34131238cfa751818741284c8fee0512fb647",
+      "kind": "generated_proposal_icon",
+      "source": "assets/app-icon.png",
+      "encoding": "Proportional resizing and ICO delivery encoding only"
     }
   ],
   "thirdPartyStockPhotosBundled": false,

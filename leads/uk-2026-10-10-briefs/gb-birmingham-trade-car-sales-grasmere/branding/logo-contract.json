@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "birmingham-trade-car-sales-grasmere",
+  "approvalStatus": "independent_design_proposal_not_dealer_approved",
+  "assets": {
+    "onLight": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "48aedfea403dcaed8c715bd5cb0c3aa53f1c046a41e1ff11ddf3a0d5d2cc6dcc",
+      "width": 1024,
+      "height": 341,
+      "background": "opaque_white"
+    },
+    "onDark": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "48aedfea403dcaed8c715bd5cb0c3aa53f1c046a41e1ff11ddf3a0d5d2cc6dcc",
+      "width": 1024,
+      "height": 341,
+      "background": "opaque_white"
+    },
+    "onAccent": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "48aedfea403dcaed8c715bd5cb0c3aa53f1c046a41e1ff11ddf3a0d5d2cc6dcc",
+      "width": 1024,
+      "height": 341,
+      "background": "opaque_white"
+    }
+  },
+  "icon": {
+    "localPath": "assets/app-icon.png",
+    "sha256": "a4fd1926de34e6364438488900b971deb87775a2196c31ffe77faac7f439604e",
+    "width": 512,
+    "height": 512
+  },
+  "favicon": {
+    "localPath": "assets/favicon.ico",
+    "sha256": "c8f6151cdf52034398092ead26504745ddcec51d581b646ef794f96723710db5",
+    "sizes": [
+      16,
+      32,
+      48,
+      64,
+      128,
+      256
+    ],
+    "encoding": "ICO with PNG entries from the actual square icon"
+  },
+  "provenance": {
+    "creationMethod": "generated_proposal",
+    "date": "2026-10-10",
+    "sources": [
+      "generated_images/exec-81088b37-55e8-4f82-be74-c423abf49813.png",
+      "generated_images/exec-f05c16fb-380d-42d2-b816-330885c60589.png"
+    ],
+    "publicReferenceUrls": [
+      "https://showroom.ebaymotorspro.co.uk/Trade-Car-Sales1",
+      "https://www.cazoo.co.uk/dealers/trade-car-sales-16229/"
+    ],
+    "research": "docs/qa/uk-branding-visual-research-2026-10-10.md",
+    "deliveryEncoding": "Proportional size and delivery-format encoding only; no crop, recolouring or compositing.",
+    "visualInspection": "Original reference where available, full business-name spelling, emblem completeness, white surface and square icon checked in generated output. Application consumers await browser QA.",
+    "dealerApproval": false
+  }
+}

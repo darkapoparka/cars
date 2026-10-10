@@ -54,6 +54,31 @@
       "representsAdvertisedVehicle": false,
       "source": "Image Generation, 2026-10-10",
       "rights": "Generated design illustration; no third-party listing photograph copied."
+    },
+    {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "cadb9c07122892749d4b0ff128ba3ac51f6b0e15e3f17fe8c56ece5dbf177f46",
+      "kind": "sign_inspired_proposal",
+      "source": "generated_images/exec-c091b934-6ade-4157-9570-15d1bafa7b3d.png",
+      "publicReferenceUrls": [
+        "https://www.yorkshire.com/dewsbury/services/car-dealers/car-market-yorkshire",
+        "https://yorkshire-2026-assets-uk.s3.eu-west-2.amazonaws.com/entities/dewsbury/car-market-yorkshire-dewsbury-23343ced.jpg"
+      ],
+      "dealerApproval": false,
+      "rights": "Generated proposed identity; not dealer-approved."
+    },
+    {
+      "localPath": "assets/app-icon.png",
+      "sha256": "e82eba71d163abe2ca60d50667d1eeb24f1bd5459b21ed849b8b0eeb79264833",
+      "kind": "generated_proposal_icon",
+      "source": "generated_images/exec-093ffacc-6725-4223-884e-5444fdce178a.png"
+    },
+    {
+      "localPath": "assets/favicon.ico",
+      "sha256": "d60a7aad9f0744c99d0e02e9c8e3a4937dbefa62cd8fb58c011e64baa15204da",
+      "kind": "generated_proposal_icon",
+      "source": "assets/app-icon.png",
+      "encoding": "Proportional resizing and ICO delivery encoding only"
     }
   ],
   "thirdPartyStockPhotosBundled": false,

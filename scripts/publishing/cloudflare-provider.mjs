@@ -7,7 +7,7 @@ export const CLOUDFLARE_PUBLISHER_VERSION = '1';
 const json = value => Buffer.from(JSON.stringify(value, null, 2) + '\n');
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const ROUTER_LOCK_SHA256 = '43d61c1a6932cc9c6f1d7c653c3ba6789921aa0880ea2e948ac76a408e114f80';
-export function cloudflareRoutingPlan(manifest, { workerPrefix = 'cars-' + manifest.slug, redirects = [] } = {}) {
+export function cloudflareRoutingPlan(manifest, { workerPrefix = manifest.cloudflare?.workerPrefix ?? 'cars-' + manifest.slug, redirects = [] } = {}) {
   if (manifest.packaging?.version !== '5') throw Error('Cloudflare requires the explicit six-design package');
   assertSixDesignSelection(manifest.variants);
   if (!/^[a-z][a-z0-9-]{0,47}$/.test(workerPrefix)) throw Error('Invalid Cloudflare Worker prefix');

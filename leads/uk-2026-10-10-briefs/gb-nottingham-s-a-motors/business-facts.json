@@ -23,7 +23,7 @@
   "languages": [
     "en"
   ],
-  "accent": null,
+  "accent": "#126D77",
   "website": null,
   "sourceProfile": "https://showroom.ebaymotorspro.co.uk/S-A-motors?aboutUs=&page=2",
   "mapsUrl": null,
@@ -127,13 +127,18 @@
     }
   },
   "branding": {
-    "publishedBranding": null,
+    "publishedBranding": "No usable original recovered from matching bounded public sources; generated design proposal uses the correct researched trading identity.",
     "sourceLogoUrl": null,
-    "workingLogoPath": null,
-    "creationMethod": null,
-    "approvalStatus": "not_researched_for_build",
-    "visualInspection": "not_performed_in_brief_preparation",
-    "requiredNextStep": "Inspect matching public branding visually; use a suitable permitted original raster asset or an identified generated refresh/proposal when required by the build guardrails."
+    "workingLogoPath": "dealer-brand/logo.webp",
+    "creationMethod": "generated_proposal",
+    "approvalStatus": "independent_design_proposal_not_dealer_approved",
+    "visualInspection": "Public references and new logo/icon imagery visually inspected; spelling and complete marks checked.",
+    "requiredNextStep": "Verify actual logo and icon consumers at desktop and mobile widths in all six applications.",
+    "publicReferenceUrls": [
+      "https://showroom.ebaymotorspro.co.uk/S-A-motors",
+      "https://www.cazoo.co.uk/dealers/s-a-motors-76195/"
+    ],
+    "researchDocument": "docs/qa/uk-branding-visual-research-2026-10-10.md"
   },
   "buildPreparation": {
     "status": "content_pack_populated_application_pending",
@@ -243,5 +248,8 @@
       ],
       "countNote": "Only the sufficiently complete examples observed in this pass are used; no extra available vehicles are invented."
     }
-  }
+  },
+  "logoDark": "/dealer-brand/logo.webp",
+  "logoLight": "/dealer-brand/logo.webp",
+  "logo": "/dealer-brand/logo.webp"
 }

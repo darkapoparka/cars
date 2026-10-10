@@ -24,6 +24,30 @@
         "path": "templates/auto-best/static/assets/images/template/body-hatchback-v2.webp"
       },
       "rights": "Generated design illustration; no third-party listing photograph copied."
+    },
+    {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "6caa1b29976e04784a567581823d517af961510c2e8c4aad4453b51c66db6df1",
+      "kind": "generated_proposal",
+      "source": "generated_images/exec-d2bf3d97-1571-4a53-acd4-b6ed20d297f9.png",
+      "publicReferenceUrls": [
+        "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673"
+      ],
+      "dealerApproval": false,
+      "rights": "Generated proposed identity; not dealer-approved."
+    },
+    {
+      "localPath": "assets/app-icon.png",
+      "sha256": "cfa07cd586e7355aece15f887796773d5bd5ee6f845945c1f850c44119fce96c",
+      "kind": "generated_proposal_icon",
+      "source": "generated_images/exec-ce9b129f-52f8-472e-a067-77ed99f8b19c.png"
+    },
+    {
+      "localPath": "assets/favicon.ico",
+      "sha256": "0837193a895a7973ca158e9b3cdf2b69c673aa7f151013f645e72dedaca7c1e9",
+      "kind": "generated_proposal_icon",
+      "source": "assets/app-icon.png",
+      "encoding": "Proportional resizing and ICO delivery encoding only"
     }
   ],
   "thirdPartyStockPhotosBundled": false,

@@ -47,7 +47,9 @@
       "brief": "leads/uk-2026-10-10-briefs/gb-batley-as-motor-group",
       "repository": "darkapoparka/cars-uk-batley-as-motor-group",
       "preset": "standard",
-      "appIcon": "assets/app-icon.png"
+      "appIcon": "assets/app-icon.png",
+      "workerName": "cars-uk-batley-as-motor-group",
+      "publicOrigin": "https://cars-uk-batley-as-motor-group.darkapoparka1.workers.dev"
     },
     {
       "leadId": "gb-birmingham-square-one-motors",
@@ -56,7 +58,9 @@
       "brief": "leads/uk-2026-10-10-briefs/gb-birmingham-square-one-motors",
       "repository": "darkapoparka/cars-uk-birmingham-square-one-motors",
       "preset": "standard",
-      "appIcon": "assets/app-icon.png"
+      "appIcon": "assets/app-icon.png",
+      "workerName": "cars-uk-birmingham-square-one-motors",
+      "publicOrigin": "https://cars-uk-birmingham-square-one-motors.darkapoparka1.workers.dev"
     },
     {
       "leadId": "gb-birmingham-trade-car-sales-grasmere",
@@ -65,7 +69,9 @@
       "brief": "leads/uk-2026-10-10-briefs/gb-birmingham-trade-car-sales-grasmere",
       "repository": "darkapoparka/cars-uk-birmingham-trade-car-sales-grasmere",
       "preset": "standard",
-      "appIcon": "assets/app-icon.png"
+      "appIcon": "assets/app-icon.png",
+      "workerName": "cars-uk-birmingham-trade-car-sales-grasmere",
+      "publicOrigin": "https://cars-uk-birmingham-trade-car-sales-grasmere.darkapoparka1.workers.dev"
     },
     {
       "leadId": "gb-bradford-cherry-tree-cars",
@@ -74,7 +80,9 @@
       "brief": "leads/uk-2026-10-10-briefs/gb-bradford-cherry-tree-cars",
       "repository": "darkapoparka/cars-uk-bradford-cherry-tree-cars",
       "preset": "standard",
-      "appIcon": "assets/app-icon.png"
+      "appIcon": "assets/app-icon.png",
+      "workerName": "cars-uk-bradford-cherry-tree-cars",
+      "publicOrigin": "https://cars-uk-bradford-cherry-tree-cars.darkapoparka1.workers.dev"
     },
     {
       "leadId": "gb-dewsbury-car-market-yorkshire",
@@ -83,7 +91,9 @@
       "brief": "leads/uk-2026-10-10-briefs/gb-dewsbury-car-market-yorkshire",
       "repository": "darkapoparka/cars-uk-dewsbury-car-market-yorkshire",
       "preset": "standard",
-      "appIcon": "assets/app-icon.png"
+      "appIcon": "assets/app-icon.png",
+      "workerName": "cars-uk-dewsbury-car-market-yorkshire",
+      "publicOrigin": "https://cars-uk-dewsbury-car-market-yorkshire.darkapoparka1.workers.dev"
     },
     {
       "leadId": "gb-motherwell-motors-castle",
@@ -92,7 +102,9 @@
       "brief": "leads/uk-2026-10-10-briefs/gb-motherwell-motors-castle",
       "repository": "darkapoparka/cars-uk-motherwell-motors-castle",
       "preset": "standard",
-      "appIcon": "assets/app-icon.png"
+      "appIcon": "assets/app-icon.png",
+      "workerName": "cars-uk-motherwell-motors-castle",
+      "publicOrigin": "https://cars-uk-motherwell-motors-castle.darkapoparka1.workers.dev"
     },
     {
       "leadId": "gb-north-norfolk-car-sales",
@@ -101,7 +113,9 @@
       "brief": "leads/uk-2026-10-10-briefs/gb-north-norfolk-car-sales",
       "repository": "darkapoparka/cars-uk-north-norfolk-car-sales",
       "preset": "standard",
-      "appIcon": "assets/app-icon.png"
+      "appIcon": "assets/app-icon.png",
+      "workerName": "cars-uk-north-norfolk-car-sales",
+      "publicOrigin": "https://cars-uk-north-norfolk-car-sales.darkapoparka1.workers.dev"
     },
     {
       "leadId": "gb-nottingham-s-a-motors",
@@ -110,7 +124,9 @@
       "brief": "leads/uk-2026-10-10-briefs/gb-nottingham-s-a-motors",
       "repository": "darkapoparka/cars-uk-nottingham-s-a-motors",
       "preset": "standard",
-      "appIcon": "assets/app-icon.png"
+      "appIcon": "assets/app-icon.png",
+      "workerName": "cars-uk-nottingham-s-a-motors",
+      "publicOrigin": "https://cars-uk-nottingham-s-a-motors.darkapoparka1.workers.dev"
     },
     {
       "leadId": "gb-stockport-broadbent-car-and-servicing",
@@ -119,7 +135,9 @@
       "brief": "leads/uk-2026-10-10-briefs/gb-stockport-broadbent-car-and-servicing",
       "repository": "darkapoparka/cars-uk-stockport-broadbent-car-and-servicing",
       "preset": "standard",
-      "appIcon": "assets/app-icon.png"
+      "appIcon": "assets/app-icon.png",
+      "workerName": "cars-uk-stockport-broadbent-car-and-servicing",
+      "publicOrigin": "https://cars-uk-stockport-broadbent-car-and-servicing.darkapoparka1.workers.dev"
     },
     {
       "leadId": "gb-stockton-norton-grange-trade-cars",
@@ -128,7 +146,9 @@
       "brief": "leads/uk-2026-10-10-briefs/gb-stockton-norton-grange-trade-cars",
       "repository": "darkapoparka/cars-uk-stockton-norton-grange-trade-cars",
       "preset": "standard",
-      "appIcon": "assets/app-icon.png"
+      "appIcon": "assets/app-icon.png",
+      "workerName": "cars-uk-stockton-norton-grange-trade-cars",
+      "publicOrigin": "https://cars-uk-stockton-norton-grange-trade-cars.darkapoparka1.workers.dev"
     }
   ]
 }
