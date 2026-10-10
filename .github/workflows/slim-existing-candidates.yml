@@ -1,0 +1,84 @@
+name: Bound reviewed candidate transports
+on:
+  push:
+    branches: [codex/cloudflare-existing25-20261011]
+    paths: [docs/releases/cloudflare-existing25-20261011/slim-request.json]
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: cars-existing-ten-thin-transports
+  cancel-in-progress: false
+jobs:
+  slim:
+    if: github.repository == 'darkapoparka/cars' && github.ref == 'refs/heads/codex/cloudflare-existing25-20261011'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        include:
+          - dealer: day-and-night-auto-group
+            run: 38093790826
+          - dealer: navara-car
+            run: 38094097346
+          - dealer: priselci
+            run: 38093790826
+          - dealer: isauto-varna
+            run: 38093790826
+          - dealer: automarket-varna
+            run: 38093790826
+          - dealer: perfect-auto-varna
+            run: 38093790826
+          - dealer: avangard-auto
+            run: 38093790826
+          - dealer: legend-auto
+            run: 38093790826
+          - dealer: outletcars-varna
+            run: 38094169958
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/slim-existing-candidates.mjs
+            /docs/releases/cloudflare-existing25-20261011/approved-inputs.json
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '22.23.2'
+          package-manager-cache: false
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        with:
+          repository: darkapoparka/cars
+          run-id: ${{ matrix.run }}
+          github-token: ${{ github.token }}
+          name: existing-ten-candidate-${{ matrix.dealer }}-${{ matrix.run }}
+          path: input
+      - name: Preserve exact reviewed commit while excluding remotely owned immutable templates
+        env:
+          DEALER_SLUG: ${{ matrix.dealer }}
+          SOURCE_RUN: ${{ matrix.run }}
+        run: node scripts/slim-existing-candidates.mjs "$DEALER_SLUG"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: existing-slim-${{ matrix.dealer }}-${{ github.run_id }}
+          path: slim
+          if-no-files-found: error
+          retention-days: 7
+  summary:
+    needs: slim
+    if: always() && !cancelled()
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        with:
+          pattern: existing-slim-*-${{ github.run_id }}
+          path: reviewed
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: existing-all-slim-${{ github.run_id }}
+          path: reviewed
+          if-no-files-found: error
+          retention-days: 7
