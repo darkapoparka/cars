@@ -47,7 +47,7 @@ export const showroom = {
   },
   services: [
     {key: 'buy', label: 'Buy', href: '/', image: '/cutouts/buy-sedan-v1.png', mobileImage: '/cutouts/buy-sedan-v1.png', mobileTabImage: '/showroom/navigation/buy-front-v1.png'},
-    {key: 'sell', label: 'Sell', href: '/sell', image: '/cutouts/sedan.png', mobileImage: '/showroom/navigation/sell-cash-hand-v1.png', mobileTabImage: '/showroom/navigation/sell-cash-hand-v1.png'},
+    {key: 'sell', label: 'Sell', href: '/sell', image: '/cutouts/sedan.png', mobileImage: '/showroom/navigation/sell-v2.webp', mobileTabImage: '/showroom/navigation/sell-v2.webp'},
     {key: 'finance', label: 'Finance', href: '/finance', image: '/showroom/navigation/finance-v4.webp', mobileImage: '/showroom/navigation/finance-v5.webp', mobileTabImage: '/showroom/navigation/finance-front-v1.png'},
     {key: 'service', label: 'Services', href: '/service', image: '/showroom/navigation/service-v3.webp', mobileImage: '/showroom/navigation/service-v4.webp', mobileTabImage: '/showroom/navigation/service-side-v1.png'},
   ],
