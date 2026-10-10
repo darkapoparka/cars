@@ -1,0 +1,66 @@
+{
+  "previewOnly": true,
+  "changedStyle": "Call background only",
+  "measurements": [
+    {
+      "width": 390,
+      "variant": "Current white",
+      "call": {
+        "label": "Обади се",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(23, 25, 28)",
+        "border": "1px solid rgb(200, 205, 211)",
+        "fontSize": "17px",
+        "weight": "400",
+        "height": 44,
+        "width": 177.5,
+        "href": "tel:0877733110"
+      }
+    },
+    {
+      "width": 390,
+      "variant": "Pale grey preview",
+      "call": {
+        "label": "Обади се",
+        "background": "rgb(245, 247, 249)",
+        "color": "rgb(23, 25, 28)",
+        "border": "1px solid rgb(200, 205, 211)",
+        "fontSize": "17px",
+        "weight": "400",
+        "height": 44,
+        "width": 177.5,
+        "href": "tel:0877733110"
+      }
+    },
+    {
+      "width": 320,
+      "variant": "Current white",
+      "call": {
+        "label": "Обади се",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(23, 25, 28)",
+        "border": "1px solid rgb(200, 205, 211)",
+        "fontSize": "17px",
+        "weight": "400",
+        "height": 44,
+        "width": 142.5,
+        "href": "tel:0877733110"
+      }
+    },
+    {
+      "width": 320,
+      "variant": "Pale grey preview",
+      "call": {
+        "label": "Обади се",
+        "background": "rgb(245, 247, 249)",
+        "color": "rgb(23, 25, 28)",
+        "border": "1px solid rgb(200, 205, 211)",
+        "fontSize": "17px",
+        "weight": "400",
+        "height": 44,
+        "width": 142.5,
+        "href": "tel:0877733110"
+      }
+    }
+  ]
+}

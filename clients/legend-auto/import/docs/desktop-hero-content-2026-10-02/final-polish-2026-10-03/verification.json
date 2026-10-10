@@ -1,0 +1,345 @@
+{
+	"date": "2026-10-03",
+	"scope": "Final Import desktop About/Contact refinement; earlier full public audit retained",
+	"node": "24.21.0",
+	"npm": "11.19.0",
+	"retainedLockSha256": "aa596db7046c3f226ce50b488e283e30121eb49122d5006c60035ef57a952e1c",
+	"frozenQA": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa",
+	"sourceSnapshotPaths": 1670,
+	"sourceSnapshotSha256": "835c556318b6dc2dc334c185c1b18e931847df87564ea4b351b9f6a39ba8c5ce",
+	"changedSourceOwners": [
+		{
+			"path": "src/lib/components/common/SocialLinks.svelte",
+			"canonicalSha256": "d7ed4684b34d9d929fdbda6d3a46bd6fc1da1a5bb9157e3d9d26a7158c47164e",
+			"frozenQaSha256": "d7ed4684b34d9d929fdbda6d3a46bd6fc1da1a5bb9157e3d9d26a7158c47164e"
+		},
+		{
+			"path": "src/lib/components/common/TeamMemberCard.svelte",
+			"canonicalSha256": "3b9b6fc8fefe3b76c6e1173562a633046b236baf8f8db5c9291916ce665436f7",
+			"frozenQaSha256": "3b9b6fc8fefe3b76c6e1173562a633046b236baf8f8db5c9291916ce665436f7"
+		},
+		{
+			"path": "src/lib/components/contact/ContactHeroDetails.svelte",
+			"canonicalSha256": "3d329f5544fef897305207ab0c8d34504bec462d8b351617cf04f0cd0ea433c9",
+			"frozenQaSha256": "3d329f5544fef897305207ab0c8d34504bec462d8b351617cf04f0cd0ea433c9"
+		},
+		{
+			"path": "src/routes/(site)/about/+page.svelte",
+			"canonicalSha256": "1b529d58828dcce792d9fc6f1d417dac0f4c6445c7f07bb51dcc2f7f38f003ea",
+			"frozenQaSha256": "1b529d58828dcce792d9fc6f1d417dac0f4c6445c7f07bb51dcc2f7f38f003ea"
+		},
+		{
+			"path": "src/routes/(site)/contact/+page.svelte",
+			"canonicalSha256": "de1d138f5de19817202266905407a69e7ff9c3fabdd0f87acd0ba95ea85b6c7c",
+			"frozenQaSha256": "de1d138f5de19817202266905407a69e7ff9c3fabdd0f87acd0ba95ea85b6c7c"
+		},
+		{
+			"path": "src/lib/auxero/agents.ts",
+			"canonicalSha256": "0377147949bc52a24251d1f55f924cba63febb31f10ace326f6e073d24ac3ad8",
+			"frozenQaSha256": "0377147949bc52a24251d1f55f924cba63febb31f10ace326f6e073d24ac3ad8"
+		},
+		{
+			"path": "src/lib/auxero/about.ts",
+			"canonicalSha256": "8e369e09461d477819a7791f5d3000b99835227d0affc6de2f7005cfa3d4d266",
+			"frozenQaSha256": "8e369e09461d477819a7791f5d3000b99835227d0affc6de2f7005cfa3d4d266"
+		},
+		{
+			"path": "src/lib/content/site-shell.ts",
+			"canonicalSha256": "c5c06fb7e9ecc73a6c4dc56cf2eb131ffa1b87b88f9721611fe29a204f1dfc7a",
+			"frozenQaSha256": "c5c06fb7e9ecc73a6c4dc56cf2eb131ffa1b87b88f9721611fe29a204f1dfc7a"
+		},
+		{
+			"path": "tests/typography-contact.e2e.ts",
+			"canonicalSha256": "1e47ccb9c0bf84cee6f77d21b71f482985d9f71440f05253fc6146f6333984d2",
+			"frozenQaSha256": "1e47ccb9c0bf84cee6f77d21b71f482985d9f71440f05253fc6146f6333984d2"
+		}
+	],
+	"install": {
+		"command": "npm ci",
+		"exitCode": 0,
+		"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/npm-ci.log",
+		"logSha256": "58fcdbc8562a1be841322f342c9490b585490f0f84abbbd00ef5909c56eb5de2"
+	},
+	"checks": [
+		{
+			"name": "check",
+			"command": [
+				"L:/Toolchains/Node/24.21.0/node.exe",
+				"L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js",
+				"run",
+				"check"
+			],
+			"started": "2026-10-02T21:51:51.528Z",
+			"completed": "2026-10-02T21:52:17.253Z",
+			"exitCode": 0,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/final-check.log",
+			"logSha256": "03d97cfa4a9ef86ca411d25f6228bcae22460142d1a8a747a9d966445cf03229"
+		},
+		{
+			"name": "lint",
+			"command": [
+				"L:/Toolchains/Node/24.21.0/node.exe",
+				"node_modules/eslint/bin/eslint.js",
+				"src/lib/components/common/SocialLinks.svelte",
+				"src/lib/components/common/TeamMemberCard.svelte",
+				"src/lib/components/contact/ContactHeroDetails.svelte",
+				"src/routes/(site)/about/+page.svelte",
+				"src/routes/(site)/contact/+page.svelte",
+				"src/lib/auxero/agents.ts",
+				"src/lib/auxero/about.ts",
+				"src/lib/content/site-shell.ts",
+				"tests/typography-contact.e2e.ts"
+			],
+			"started": "2026-10-02T21:52:17.254Z",
+			"completed": "2026-10-02T21:52:33.226Z",
+			"exitCode": 0,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/final-lint.log",
+			"logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+		},
+		{
+			"name": "architecture",
+			"command": [
+				"L:/Toolchains/Node/24.21.0/node.exe",
+				"L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js",
+				"run",
+				"check:architecture"
+			],
+			"started": "2026-10-02T21:52:33.227Z",
+			"completed": "2026-10-02T21:52:34.701Z",
+			"exitCode": 0,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/final-architecture.log",
+			"logSha256": "f153ca4e2ca9b6b71ae622dc6c3d96cd08f8f9eff45a7f6791ae81213b51c491"
+		},
+		{
+			"name": "assets",
+			"command": [
+				"L:/Toolchains/Node/24.21.0/node.exe",
+				"L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js",
+				"run",
+				"check:assets"
+			],
+			"started": "2026-10-02T21:52:34.702Z",
+			"completed": "2026-10-02T21:52:35.344Z",
+			"exitCode": 0,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/final-assets.log",
+			"logSha256": "b98cbb4d013072e79e1bd8765db3905ed8c6f5fae74e56356eca4fd5a28ef995"
+		},
+		{
+			"name": "unit",
+			"command": [
+				"L:/Toolchains/Node/24.21.0/node.exe",
+				"L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js",
+				"run",
+				"test:unit",
+				"--",
+				"--run",
+				"--maxWorkers=1"
+			],
+			"started": "2026-10-02T21:52:35.345Z",
+			"completed": "2026-10-02T21:53:01.628Z",
+			"exitCode": 0,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/final-unit.log",
+			"logSha256": "993a39ed3720fc6a553bca895ed0579de7551f69433b0d15a4167b57cb998461"
+		},
+		{
+			"name": "build",
+			"command": [
+				"L:/Toolchains/Node/24.21.0/node.exe",
+				"L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js",
+				"run",
+				"build"
+			],
+			"started": "2026-10-02T21:53:01.629Z",
+			"completed": "2026-10-02T21:56:00.790Z",
+			"exitCode": 0,
+			"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/final-build.log",
+			"logSha256": "7b50a9758a3dbd5532eea1cc4e551883da977bdcf7754e2bf7689e2ed9bc5606"
+		}
+	],
+	"browser": {
+		"suites": [
+			"desktop-page-patterns",
+			"typography-contact",
+			"style-parity",
+			"visual-hierarchy",
+			"smoke",
+			"forms-and-detail",
+			"storefront-controls",
+			"desktop-search"
+		],
+		"command": [
+			"node_modules/@playwright/test/cli.js",
+			"test",
+			"tests/desktop-page-patterns.e2e.ts",
+			"tests/typography-contact.e2e.ts",
+			"tests/style-parity.e2e.ts",
+			"tests/visual-hierarchy.e2e.ts",
+			"tests/smoke.e2e.ts",
+			"tests/forms-and-detail.e2e.ts",
+			"tests/storefront-controls.e2e.ts",
+			"tests/desktop-search.e2e.ts",
+			"--workers=1",
+			"--retries=0",
+			"--reporter=list,json",
+			"--output=L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/final-browser-results"
+		],
+		"started": "2026-10-02T21:59:57.353Z",
+		"completed": "2026-10-02T22:02:32.783Z",
+		"exitCode": 0,
+		"stats": {
+			"startTime": "2026-10-02T21:59:58.637Z",
+			"duration": 154015.448,
+			"expected": 85,
+			"skipped": 27,
+			"unexpected": 0,
+			"flaky": 0
+		},
+		"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03\\qa/runtime/final-browser.log",
+		"logSha256": "99f1b9e56fc2355bc9dc11fbe6016e434003c7ae77178b1bc4871df9d0a8d492"
+	},
+	"scopedDocumentationFormat": {
+		"paths": [
+			"docs/ARCHITECTURE.md",
+			"docs/DESKTOP-STYLING.md",
+			"docs/QA.md",
+			"docs/desktop-hero-content-2026-10-02/README.md",
+			"docs/desktop-hero-content-2026-10-02/screenshots.html",
+			"docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/after-matrix.json",
+			"docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/before-matrix.json",
+			"docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/gallery-check.json",
+			"docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/interactions.json",
+			"docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/mobile-screenshots.json",
+			"docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/preservation.json",
+			"docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/README.md",
+			"docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/source-snapshot.json",
+			"docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/verification.json"
+		],
+		"exitCode": 0
+	},
+	"responsive": {
+		"states": 24,
+		"locales": ["bg", "en"],
+		"routes": ["about", "contact"],
+		"widths": [320, 390, 768, 1024, 1440, 1920],
+		"failures": 0
+	},
+	"preservation": {
+		"exactMobileVisibleElementComparisons": 8,
+		"exactDesktopHeroFrames": 16,
+		"exactDesktopTitleAnchors": 16,
+		"mobileScreenshots": [
+			{
+				"route": "about",
+				"locale": "bg",
+				"width": 390,
+				"beforeSha256": "d7b70c257b27e8743b2fd25584f19e3703a914a5bc5ff63a6b38fd82e7b856ce",
+				"afterSha256": "d7b70c257b27e8743b2fd25584f19e3703a914a5bc5ff63a6b38fd82e7b856ce",
+				"byteIdentical": true
+			},
+			{
+				"route": "contact",
+				"locale": "bg",
+				"width": 390,
+				"beforeSha256": "eab6ac0b67be04293c933149cac25f0f8a956fa0085acf245809301e1ab21fa4",
+				"afterSha256": "eab6ac0b67be04293c933149cac25f0f8a956fa0085acf245809301e1ab21fa4",
+				"byteIdentical": true
+			}
+		]
+	},
+	"additionalInteractionStates": 8,
+	"hydratedMainContentAxeViolations": 0,
+	"gallery": {
+		"comparisons": [
+			{
+				"pair": "about-bg",
+				"phase": "before",
+				"image": "final-polish-2026-10-03/before/about-bg.png",
+				"dimensions": [1440, 1000],
+				"fullPage": "final-polish-2026-10-03/before/about-bg-full.png",
+				"fullPageStatus": 200
+			},
+			{
+				"pair": "about-bg",
+				"phase": "after",
+				"image": "final-polish-2026-10-03/after/about-bg.png",
+				"dimensions": [1440, 1000],
+				"fullPage": "final-polish-2026-10-03/after/about-bg-full.png",
+				"fullPageStatus": 200
+			},
+			{
+				"pair": "contact-bg",
+				"phase": "before",
+				"image": "final-polish-2026-10-03/before/contact-bg.png",
+				"dimensions": [1440, 1000],
+				"fullPage": "final-polish-2026-10-03/before/contact-bg-full.png",
+				"fullPageStatus": 200
+			},
+			{
+				"pair": "contact-bg",
+				"phase": "after",
+				"image": "final-polish-2026-10-03/after/contact-bg.png",
+				"dimensions": [1440, 1000],
+				"fullPage": "final-polish-2026-10-03/after/contact-bg-full.png",
+				"fullPageStatus": 200
+			},
+			{
+				"pair": "about-en",
+				"phase": "before",
+				"image": "final-polish-2026-10-03/before/about-en.png",
+				"dimensions": [1440, 1000],
+				"fullPage": "final-polish-2026-10-03/before/about-en-full.png",
+				"fullPageStatus": 200
+			},
+			{
+				"pair": "about-en",
+				"phase": "after",
+				"image": "final-polish-2026-10-03/after/about-en.png",
+				"dimensions": [1440, 1000],
+				"fullPage": "final-polish-2026-10-03/after/about-en-full.png",
+				"fullPageStatus": 200
+			},
+			{
+				"pair": "contact-en",
+				"phase": "before",
+				"image": "final-polish-2026-10-03/before/contact-en.png",
+				"dimensions": [1440, 1000],
+				"fullPage": "final-polish-2026-10-03/before/contact-en-full.png",
+				"fullPageStatus": 200
+			},
+			{
+				"pair": "contact-en",
+				"phase": "after",
+				"image": "final-polish-2026-10-03/after/contact-en.png",
+				"dimensions": [1440, 1000],
+				"fullPage": "final-polish-2026-10-03/after/contact-en-full.png",
+				"fullPageStatus": 200
+			}
+		],
+		"earlierEvidenceAvailable": true,
+		"pageErrors": []
+	},
+	"references": {
+		"studio": "http://127.0.0.1:6418/admin-preview?lang=bg&store=studio",
+		"shopFeed": "http://127.0.0.1:6418/",
+		"bothInspectedLive": true,
+		"evidence": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03/review-loaded-treido-studio.png; L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03/review-loaded-treido-feed.png"
+	},
+	"workspaceDoctor": {
+		"command": "node scripts/workspace-doctor.mjs --fetch",
+		"exitCode": 0,
+		"log": "L:\\CODEX\\cars\\templates\\import\\runtime\\desktop-final-polish-2026-10-03/workspace-doctor-final.log",
+		"logSha256": "0e8f60590038f42c24bc876e334b2418bd4ceafdc914a0904c67c98e47a6f039"
+	},
+	"limits": [
+		"Standalone local Chromium preview; no mounted/public alias verification",
+		"Google Maps external rendering remains unverified; configured links/frame geometry checked",
+		"Preview submissions are synthetic and do not claim notification delivery",
+		"Owner visual acceptance, immutable template promotion and dealer deployment remain separate"
+	],
+	"preserved": [
+		"Current main history and unrelated Cars/dealer edits",
+		"Inherited Import ignore-file edits and older untracked evidence",
+		"Earlier QA logs, source and Git recovery files",
+		"Approved mobile About trial presentation and original photo files"
+	]
+}
