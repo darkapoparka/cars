@@ -1,0 +1,648 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-04",
+  "scope": "Mobile Home Buy/Import, Sell and Import single-line entry field rounding",
+  "baselineCommit": "59bbf4169788b927c83f47f15b59b9c119609890",
+  "sourceParent": "e7ab87d9f98c644abccfbfc6cb6c1693f92e77f2",
+  "sourceFingerprints": {
+    "src/lib/styles/base.css": "3ce14fde95073a449a580b84de60a1e01d551d0a9efc38164b01663acda744ee",
+    "src/lib/components/home/SearchBox.svelte": "f90599b726be02c345406aca9dae40cd8fc07a3f71b792010b5d223764f845ca"
+  },
+  "changes": {
+    "token": "--dn-pill",
+    "breakpoint": "max-width: 767px",
+    "fieldHeightUnchanged": "48px"
+  },
+  "checks": {
+    "svelte": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "cssPolicy": "passed",
+    "tokens": "passed",
+    "typographyAndVisualPins": "passed",
+    "productionBuild": {
+      "passed": true,
+      "node": "22.20.0",
+      "previewPort": 6469
+    },
+    "diffCheck": "passed",
+    "sharedEntry": [
+      {
+        "locale": "en",
+        "width": 320,
+        "passed": true,
+        "routes": [
+          "/",
+          "/contact?topic=trade-in",
+          "/contact?topic=import"
+        ]
+      },
+      {
+        "locale": "en",
+        "width": 390,
+        "passed": true,
+        "routes": [
+          "/",
+          "/contact?topic=trade-in",
+          "/contact?topic=import"
+        ]
+      },
+      {
+        "locale": "en",
+        "width": 768,
+        "passed": true,
+        "routes": [
+          "/contact?topic=trade-in",
+          "/contact?topic=import"
+        ]
+      },
+      {
+        "locale": "en",
+        "width": 1440,
+        "passed": true,
+        "routes": [
+          "/contact?topic=trade-in",
+          "/contact?topic=import"
+        ]
+      },
+      {
+        "locale": "bg",
+        "width": 320,
+        "passed": true,
+        "routes": [
+          "/",
+          "/contact?topic=trade-in",
+          "/contact?topic=import"
+        ]
+      },
+      {
+        "locale": "bg",
+        "width": 390,
+        "passed": true,
+        "routes": [
+          "/",
+          "/contact?topic=trade-in",
+          "/contact?topic=import"
+        ]
+      },
+      {
+        "locale": "bg",
+        "width": 768,
+        "passed": true,
+        "routes": [
+          "/contact?topic=trade-in",
+          "/contact?topic=import"
+        ]
+      },
+      {
+        "locale": "bg",
+        "width": 1440,
+        "passed": true,
+        "routes": [
+          "/contact?topic=trade-in",
+          "/contact?topic=import"
+        ]
+      }
+    ]
+  },
+  "screenshots": [
+    "before-home-320.jpg",
+    "after-home-320.jpg",
+    "before-home-import-320.jpg",
+    "after-home-import-320.jpg",
+    "before-sell-320.jpg",
+    "after-sell-320.jpg",
+    "before-import-320.jpg",
+    "after-import-320.jpg"
+  ],
+  "comparisons": [
+    {
+      "route": "home",
+      "beforeRadius": "16px",
+      "afterRadius": "999px",
+      "fieldHeight": 48,
+      "geometryUnchanged": true
+    },
+    {
+      "route": "home-import",
+      "beforeRadius": "16px",
+      "afterRadius": "999px",
+      "fieldHeight": 48,
+      "geometryUnchanged": true
+    },
+    {
+      "route": "sell",
+      "beforeRadius": "12px",
+      "afterRadius": "999px",
+      "fieldHeight": 48,
+      "geometryUnchanged": true
+    },
+    {
+      "route": "import",
+      "beforeRadius": "12px",
+      "afterRadius": "999px",
+      "fieldHeight": 48,
+      "geometryUnchanged": true
+    }
+  ],
+  "browserMeasurements": [
+    {
+      "phase": "before",
+      "route": "home",
+      "action": {
+        "paint": "40px",
+        "radius": "999px",
+        "rect": {
+          "bottom": 381,
+          "height": 44,
+          "left": 74.53125,
+          "right": 230.453125,
+          "top": 337,
+          "width": 155.921875,
+          "x": 74.53125,
+          "y": 337
+        }
+      },
+      "card": {
+        "bottom": 402,
+        "height": 210,
+        "left": 12,
+        "right": 293,
+        "top": 192,
+        "width": 281,
+        "x": 12,
+        "y": 192
+      },
+      "field": {
+        "font": "450 18px / 23.4px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "padding": "8px 12px",
+        "radius": "16px",
+        "rect": {
+          "bottom": 321,
+          "height": 48,
+          "left": 33,
+          "right": 272,
+          "top": 273,
+          "width": 239,
+          "x": 33,
+          "y": 273
+        }
+      },
+      "track": {
+        "background": "rgb(241, 243, 245)",
+        "radius": "999px",
+        "rect": {
+          "bottom": 257,
+          "height": 44,
+          "left": 33,
+          "right": 272,
+          "top": 213,
+          "width": 239,
+          "x": 33,
+          "y": 213
+        }
+      },
+      "viewport": {
+        "canvas": 305,
+        "height": 844,
+        "width": 320
+      }
+    },
+    {
+      "phase": "before",
+      "route": "home-import",
+      "action": {
+        "paint": "40px",
+        "radius": "999px",
+        "rect": {
+          "bottom": 381,
+          "height": 44,
+          "left": 48.5,
+          "right": 256.5,
+          "top": 337,
+          "width": 208,
+          "x": 48.5,
+          "y": 337
+        }
+      },
+      "card": {
+        "bottom": 402,
+        "height": 210,
+        "left": 12,
+        "right": 293,
+        "top": 192,
+        "width": 281,
+        "x": 12,
+        "y": 192
+      },
+      "field": {
+        "font": "450 18px / 23.4px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "padding": "0px 12px 0px 42px",
+        "radius": "16px",
+        "rect": {
+          "bottom": 321,
+          "height": 48,
+          "left": 33,
+          "right": 272,
+          "top": 273,
+          "width": 239,
+          "x": 33,
+          "y": 273
+        }
+      },
+      "track": {
+        "background": "rgb(241, 243, 245)",
+        "radius": "999px",
+        "rect": {
+          "bottom": 257,
+          "height": 44,
+          "left": 33,
+          "right": 272,
+          "top": 213,
+          "width": 239,
+          "x": 33,
+          "y": 213
+        }
+      },
+      "viewport": {
+        "canvas": 305,
+        "height": 844,
+        "width": 320
+      }
+    },
+    {
+      "phase": "before",
+      "route": "sell",
+      "action": {
+        "paint": "40px",
+        "radius": "999px",
+        "rect": {
+          "bottom": 385,
+          "height": 44,
+          "left": 56,
+          "right": 264,
+          "top": 341,
+          "width": 208,
+          "x": 56,
+          "y": 341
+        }
+      },
+      "card": {
+        "bottom": 402,
+        "height": 202,
+        "left": 12,
+        "right": 308,
+        "top": 200,
+        "width": 296,
+        "x": 12,
+        "y": 200
+      },
+      "field": {
+        "font": "450 18px / 23.4px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "padding": "8px 12px",
+        "radius": "12px",
+        "rect": {
+          "bottom": 325,
+          "height": 48,
+          "left": 29,
+          "right": 291,
+          "top": 277,
+          "width": 262,
+          "x": 29,
+          "y": 277
+        }
+      },
+      "track": {
+        "background": "rgb(241, 243, 245)",
+        "radius": "999px",
+        "rect": {
+          "bottom": 261,
+          "height": 44,
+          "left": 40,
+          "right": 280,
+          "top": 217,
+          "width": 240,
+          "x": 40,
+          "y": 217
+        }
+      },
+      "viewport": {
+        "canvas": 320,
+        "height": 844,
+        "width": 320
+      }
+    },
+    {
+      "phase": "before",
+      "route": "import",
+      "action": {
+        "paint": "40px",
+        "radius": "999px",
+        "rect": {
+          "bottom": 385,
+          "height": 44,
+          "left": 56,
+          "right": 264,
+          "top": 341,
+          "width": 208,
+          "x": 56,
+          "y": 341
+        }
+      },
+      "card": {
+        "bottom": 402,
+        "height": 202,
+        "left": 12,
+        "right": 308,
+        "top": 200,
+        "width": 296,
+        "x": 12,
+        "y": 200
+      },
+      "field": {
+        "font": "450 18px / 23.4px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "padding": "8px 12px",
+        "radius": "12px",
+        "rect": {
+          "bottom": 325,
+          "height": 48,
+          "left": 29,
+          "right": 291,
+          "top": 277,
+          "width": 262,
+          "x": 29,
+          "y": 277
+        }
+      },
+      "track": {
+        "background": "rgb(241, 243, 245)",
+        "radius": "999px",
+        "rect": {
+          "bottom": 261,
+          "height": 44,
+          "left": 40,
+          "right": 280,
+          "top": 217,
+          "width": 240,
+          "x": 40,
+          "y": 217
+        }
+      },
+      "viewport": {
+        "canvas": 320,
+        "height": 844,
+        "width": 320
+      }
+    },
+    {
+      "phase": "after",
+      "route": "import",
+      "action": {
+        "paint": "40px",
+        "radius": "999px",
+        "rect": {
+          "bottom": 385,
+          "height": 44,
+          "left": 56,
+          "right": 264,
+          "top": 341,
+          "width": 208,
+          "x": 56,
+          "y": 341
+        }
+      },
+      "card": {
+        "bottom": 402,
+        "height": 202,
+        "left": 12,
+        "right": 308,
+        "top": 200,
+        "width": 296,
+        "x": 12,
+        "y": 200
+      },
+      "field": {
+        "font": "450 18px / 23.4px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "padding": "8px 12px",
+        "radius": "999px",
+        "rect": {
+          "bottom": 325,
+          "height": 48,
+          "left": 29,
+          "right": 291,
+          "top": 277,
+          "width": 262,
+          "x": 29,
+          "y": 277
+        }
+      },
+      "track": {
+        "background": "rgb(241, 243, 245)",
+        "radius": "999px",
+        "rect": {
+          "bottom": 261,
+          "height": 44,
+          "left": 40,
+          "right": 280,
+          "top": 217,
+          "width": 240,
+          "x": 40,
+          "y": 217
+        }
+      },
+      "viewport": {
+        "canvas": 320,
+        "height": 844,
+        "width": 320
+      }
+    },
+    {
+      "phase": "after",
+      "route": "sell",
+      "action": {
+        "paint": "40px",
+        "radius": "999px",
+        "rect": {
+          "bottom": 385,
+          "height": 44,
+          "left": 56,
+          "right": 264,
+          "top": 341,
+          "width": 208,
+          "x": 56,
+          "y": 341
+        }
+      },
+      "card": {
+        "bottom": 402,
+        "height": 202,
+        "left": 12,
+        "right": 308,
+        "top": 200,
+        "width": 296,
+        "x": 12,
+        "y": 200
+      },
+      "field": {
+        "font": "450 18px / 23.4px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "padding": "8px 12px",
+        "radius": "999px",
+        "rect": {
+          "bottom": 325,
+          "height": 48,
+          "left": 29,
+          "right": 291,
+          "top": 277,
+          "width": 262,
+          "x": 29,
+          "y": 277
+        }
+      },
+      "track": {
+        "background": "rgb(241, 243, 245)",
+        "radius": "999px",
+        "rect": {
+          "bottom": 261,
+          "height": 44,
+          "left": 40,
+          "right": 280,
+          "top": 217,
+          "width": 240,
+          "x": 40,
+          "y": 217
+        }
+      },
+      "viewport": {
+        "canvas": 320,
+        "height": 844,
+        "width": 320
+      }
+    },
+    {
+      "phase": "after",
+      "route": "home",
+      "action": {
+        "paint": "40px",
+        "radius": "999px",
+        "rect": {
+          "bottom": 381,
+          "height": 44,
+          "left": 74.53125,
+          "right": 230.453125,
+          "top": 337,
+          "width": 155.921875,
+          "x": 74.53125,
+          "y": 337
+        }
+      },
+      "card": {
+        "bottom": 402,
+        "height": 210,
+        "left": 12,
+        "right": 293,
+        "top": 192,
+        "width": 281,
+        "x": 12,
+        "y": 192
+      },
+      "field": {
+        "font": "450 18px / 23.4px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "padding": "8px 12px",
+        "radius": "999px",
+        "rect": {
+          "bottom": 321,
+          "height": 48,
+          "left": 33,
+          "right": 272,
+          "top": 273,
+          "width": 239,
+          "x": 33,
+          "y": 273
+        }
+      },
+      "track": {
+        "background": "rgb(241, 243, 245)",
+        "radius": "999px",
+        "rect": {
+          "bottom": 257,
+          "height": 44,
+          "left": 33,
+          "right": 272,
+          "top": 213,
+          "width": 239,
+          "x": 33,
+          "y": 213
+        }
+      },
+      "viewport": {
+        "canvas": 305,
+        "height": 844,
+        "width": 320
+      }
+    },
+    {
+      "phase": "after",
+      "route": "home-import",
+      "action": {
+        "paint": "40px",
+        "radius": "999px",
+        "rect": {
+          "bottom": 381,
+          "height": 44,
+          "left": 48.5,
+          "right": 256.5,
+          "top": 337,
+          "width": 208,
+          "x": 48.5,
+          "y": 337
+        }
+      },
+      "card": {
+        "bottom": 402,
+        "height": 210,
+        "left": 12,
+        "right": 293,
+        "top": 192,
+        "width": 281,
+        "x": 12,
+        "y": 192
+      },
+      "field": {
+        "font": "450 18px / 23.4px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "padding": "0px 12px 0px 42px",
+        "radius": "999px",
+        "rect": {
+          "bottom": 321,
+          "height": 48,
+          "left": 33,
+          "right": 272,
+          "top": 273,
+          "width": 239,
+          "x": 33,
+          "y": 273
+        }
+      },
+      "track": {
+        "background": "rgb(241, 243, 245)",
+        "radius": "999px",
+        "rect": {
+          "bottom": 257,
+          "height": 44,
+          "left": 33,
+          "right": 272,
+          "top": 213,
+          "width": 239,
+          "x": 33,
+          "y": 213
+        }
+      },
+      "viewport": {
+        "canvas": 305,
+        "height": 844,
+        "width": 320
+      }
+    }
+  ],
+  "delivery": "Local template source and browser evidence; no dealer deployment or release selection"
+}

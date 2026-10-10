@@ -1,0 +1,276 @@
+{
+  "sourceHashes": {
+    "src/components/ShowroomVehicleCard.tsx": "a15f46913c335a1745c3f239e97dd863e72f9c5ad92bf02465990fdda394a172",
+    "src/components/SavedCarsScreen.tsx": "39ae85296e2c7c8818240752a7a622b9a8aed8b4d9fbb8bd10b4c533ce87cf54",
+    "src/lib/messages.bg.ts": "0068d42932e010d1c9a58b25a1582c6fbbe2ad7af492a7110f834ec042354e2d"
+  },
+  "views": [
+    {
+      "width": 320,
+      "columns": 2,
+      "cards": [
+        {
+          "width": 129.5,
+          "height": 154.328125,
+          "fullPrice": true
+        },
+        {
+          "width": 129.5,
+          "height": 154.328125,
+          "fullPrice": true
+        },
+        {
+          "width": 129.5,
+          "height": 154.328125,
+          "fullPrice": true
+        },
+        {
+          "width": 129.5,
+          "height": 154.328125,
+          "fullPrice": true
+        },
+        {
+          "width": 129.5,
+          "height": 154.328125,
+          "fullPrice": true
+        },
+        {
+          "width": 129.5,
+          "height": 154.328125,
+          "fullPrice": true
+        },
+        {
+          "width": 129.5,
+          "height": 154.328125,
+          "fullPrice": true
+        },
+        {
+          "width": 129.5,
+          "height": 154.328125,
+          "fullPrice": true
+        },
+        {
+          "width": 129.5,
+          "height": 154.328125,
+          "fullPrice": true
+        },
+        {
+          "width": 129.5,
+          "height": 154.328125,
+          "fullPrice": true
+        },
+        {
+          "width": 129.5,
+          "height": 154.328125,
+          "fullPrice": true
+        },
+        {
+          "width": 129.5,
+          "height": 154.328125,
+          "fullPrice": true
+        },
+        {
+          "width": 129.5,
+          "height": 154.328125,
+          "fullPrice": true
+        },
+        {
+          "width": 129.5,
+          "height": 154.328125,
+          "fullPrice": true
+        },
+        {
+          "width": 129.5,
+          "height": 154.328125,
+          "fullPrice": true
+        },
+        {
+          "width": 129.5,
+          "height": 154.328125,
+          "fullPrice": true
+        }
+      ],
+      "navigation": "Card opens its PDP",
+      "saving": "Save, reload, Saved list and remove all pass on the PDP",
+      "copy": "Used, new, description and related headings are concise; Saved hint matches the flow"
+    },
+    {
+      "width": 390,
+      "columns": 2,
+      "cards": [
+        {
+          "width": 172,
+          "height": 182.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 172,
+          "height": 182.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 172,
+          "height": 182.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 172,
+          "height": 182.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 172,
+          "height": 182.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 172,
+          "height": 182.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 172,
+          "height": 182.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 172,
+          "height": 182.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 172,
+          "height": 182.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 172,
+          "height": 182.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 172,
+          "height": 182.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 172,
+          "height": 182.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 172,
+          "height": 182.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 172,
+          "height": 182.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 172,
+          "height": 182.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 172,
+          "height": 182.65625,
+          "fullPrice": true
+        }
+      ],
+      "navigation": "Card opens its PDP",
+      "saving": "Save, reload, Saved list and remove all pass on the PDP",
+      "copy": "Used, new, description and related headings are concise; Saved hint matches the flow"
+    },
+    {
+      "width": 1440,
+      "columns": 5,
+      "cards": [
+        {
+          "width": 251.390625,
+          "height": 293.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 251.40625,
+          "height": 293.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 251.390625,
+          "height": 293.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 251.40625,
+          "height": 293.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 251.390625,
+          "height": 293.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 251.390625,
+          "height": 293.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 251.40625,
+          "height": 293.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 251.390625,
+          "height": 293.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 251.40625,
+          "height": 293.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 251.390625,
+          "height": 293.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 251.390625,
+          "height": 293.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 251.40625,
+          "height": 293.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 251.390625,
+          "height": 293.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 251.40625,
+          "height": 293.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 251.390625,
+          "height": 293.65625,
+          "fullPrice": true
+        },
+        {
+          "width": 251.390625,
+          "height": 293.640625,
+          "fullPrice": true
+        }
+      ],
+      "saving": "Desktop card save/remove retained"
+    }
+  ],
+  "errors": [],
+  "status": "passed"
+}

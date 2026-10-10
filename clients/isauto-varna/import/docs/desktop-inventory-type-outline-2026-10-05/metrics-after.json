@@ -1,0 +1,518 @@
+[
+	{
+		"filters": {
+			"height": 48,
+			"width": 830,
+			"x": 297.5,
+			"y": 410.234375
+		},
+		"firstCardY": 599.234375,
+		"inactiveTypeBorders": [
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)"
+		],
+		"overflow": false,
+		"panel": {
+			"height": 162,
+			"width": 880,
+			"x": 272.5,
+			"y": 321.234375
+		},
+		"scrollY": 0,
+		"searchControl": {
+			"height": 48,
+			"width": 830,
+			"x": 297.5,
+			"y": 346.234375
+		},
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"types": {
+			"height": 44,
+			"width": 880,
+			"x": 272.5,
+			"y": 261.234375
+		},
+		"typesInsidePanel": false,
+		"url": "http://127.0.0.1:6793/bg/inventory",
+		"viewport": {
+			"height": 1000,
+			"width": 1440
+		},
+		"visibleImagesLoaded": true
+	},
+	{
+		"filters": {
+			"height": 108,
+			"width": 591,
+			"x": 81,
+			"y": 435.640625
+		},
+		"firstCardY": 684.640625,
+		"inactiveTypeBorders": [
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)"
+		],
+		"overflow": false,
+		"panel": {
+			"height": 222,
+			"width": 641,
+			"x": 56,
+			"y": 346.640625
+		},
+		"scrollY": 0,
+		"searchControl": {
+			"height": 48,
+			"width": 591,
+			"x": 81,
+			"y": 371.640625
+		},
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"types": {
+			"height": 44,
+			"width": 641,
+			"x": 56,
+			"y": 286.640625
+		},
+		"typesInsidePanel": false,
+		"url": "http://127.0.0.1:6793/bg/inventory",
+		"viewport": {
+			"height": 1000,
+			"width": 768
+		},
+		"visibleImagesLoaded": true
+	},
+	{
+		"filters": {
+			"height": 48,
+			"width": 830,
+			"x": 89.5,
+			"y": 435.640625
+		},
+		"firstCardY": 624.640625,
+		"inactiveTypeBorders": [
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)"
+		],
+		"overflow": false,
+		"panel": {
+			"height": 162,
+			"width": 880,
+			"x": 64.5,
+			"y": 346.640625
+		},
+		"scrollY": 0,
+		"searchControl": {
+			"height": 48,
+			"width": 830,
+			"x": 89.5,
+			"y": 371.640625
+		},
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"types": {
+			"height": 44,
+			"width": 880,
+			"x": 64.5,
+			"y": 286.640625
+		},
+		"typesInsidePanel": false,
+		"url": "http://127.0.0.1:6793/bg/inventory",
+		"viewport": {
+			"height": 1000,
+			"width": 1024
+		},
+		"visibleImagesLoaded": true
+	},
+	{
+		"filters": {
+			"height": 48,
+			"width": 830,
+			"x": 537.5,
+			"y": 411.953125
+		},
+		"firstCardY": 600.953125,
+		"inactiveTypeBorders": [
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)"
+		],
+		"overflow": false,
+		"panel": {
+			"height": 162,
+			"width": 880,
+			"x": 512.5,
+			"y": 322.953125
+		},
+		"scrollY": 0,
+		"searchControl": {
+			"height": 48,
+			"width": 830,
+			"x": 537.5,
+			"y": 347.953125
+		},
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"types": {
+			"height": 44,
+			"width": 880,
+			"x": 512.5,
+			"y": 262.953125
+		},
+		"typesInsidePanel": false,
+		"url": "http://127.0.0.1:6793/bg/inventory",
+		"viewport": {
+			"height": 1000,
+			"width": 1920
+		},
+		"visibleImagesLoaded": true
+	},
+	{
+		"filters": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"firstCardY": 0,
+		"inactiveTypeBorders": [
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)"
+		],
+		"overflow": false,
+		"panel": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"scrollY": 0,
+		"searchControl": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"types": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"typesInsidePanel": false,
+		"url": "http://127.0.0.1:6793/bg/inventory",
+		"viewport": {
+			"height": 844,
+			"width": 320
+		},
+		"visibleImagesLoaded": true
+	},
+	{
+		"filters": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"firstCardY": 0,
+		"inactiveTypeBorders": [
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)"
+		],
+		"overflow": false,
+		"panel": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"scrollY": 0,
+		"searchControl": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"types": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"typesInsidePanel": false,
+		"url": "http://127.0.0.1:6793/bg/inventory",
+		"viewport": {
+			"height": 844,
+			"width": 390
+		},
+		"visibleImagesLoaded": true
+	},
+	{
+		"filters": {
+			"height": 48,
+			"width": 830,
+			"x": 297.5,
+			"y": 410.234375
+		},
+		"firstCardY": 599.234375,
+		"inactiveTypeBorders": [
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)"
+		],
+		"overflow": false,
+		"panel": {
+			"height": 162,
+			"width": 880,
+			"x": 272.5,
+			"y": 321.234375
+		},
+		"scrollY": 0,
+		"searchControl": {
+			"height": 48,
+			"width": 830,
+			"x": 297.5,
+			"y": 346.234375
+		},
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"types": {
+			"height": 44,
+			"width": 880,
+			"x": 272.5,
+			"y": 261.234375
+		},
+		"typesInsidePanel": false,
+		"url": "http://127.0.0.1:6793/en/inventory",
+		"viewport": {
+			"height": 1000,
+			"width": 1440
+		},
+		"visibleImagesLoaded": true
+	},
+	{
+		"filters": {
+			"height": 108,
+			"width": 591,
+			"x": 81,
+			"y": 435.640625
+		},
+		"firstCardY": 684.640625,
+		"inactiveTypeBorders": [
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)"
+		],
+		"overflow": false,
+		"panel": {
+			"height": 222,
+			"width": 641,
+			"x": 56,
+			"y": 346.640625
+		},
+		"scrollY": 0,
+		"searchControl": {
+			"height": 48,
+			"width": 591,
+			"x": 81,
+			"y": 371.640625
+		},
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"types": {
+			"height": 44,
+			"width": 641,
+			"x": 56,
+			"y": 286.640625
+		},
+		"typesInsidePanel": false,
+		"url": "http://127.0.0.1:6793/en/inventory",
+		"viewport": {
+			"height": 1000,
+			"width": 768
+		},
+		"visibleImagesLoaded": true
+	},
+	{
+		"filters": {
+			"height": 48,
+			"width": 830,
+			"x": 89.5,
+			"y": 435.640625
+		},
+		"firstCardY": 624.640625,
+		"inactiveTypeBorders": [
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)"
+		],
+		"overflow": false,
+		"panel": {
+			"height": 162,
+			"width": 880,
+			"x": 64.5,
+			"y": 346.640625
+		},
+		"scrollY": 0,
+		"searchControl": {
+			"height": 48,
+			"width": 830,
+			"x": 89.5,
+			"y": 371.640625
+		},
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"types": {
+			"height": 44,
+			"width": 880,
+			"x": 64.5,
+			"y": 286.640625
+		},
+		"typesInsidePanel": false,
+		"url": "http://127.0.0.1:6793/en/inventory",
+		"viewport": {
+			"height": 1000,
+			"width": 1024
+		},
+		"visibleImagesLoaded": true
+	},
+	{
+		"filters": {
+			"height": 48,
+			"width": 830,
+			"x": 537.5,
+			"y": 411.953125
+		},
+		"firstCardY": 600.953125,
+		"inactiveTypeBorders": [
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)"
+		],
+		"overflow": false,
+		"panel": {
+			"height": 162,
+			"width": 880,
+			"x": 512.5,
+			"y": 322.953125
+		},
+		"scrollY": 0,
+		"searchControl": {
+			"height": 48,
+			"width": 830,
+			"x": 537.5,
+			"y": 347.953125
+		},
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"types": {
+			"height": 44,
+			"width": 880,
+			"x": 512.5,
+			"y": 262.953125
+		},
+		"typesInsidePanel": false,
+		"url": "http://127.0.0.1:6793/en/inventory",
+		"viewport": {
+			"height": 1000,
+			"width": 1920
+		},
+		"visibleImagesLoaded": true
+	},
+	{
+		"filters": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"firstCardY": 0,
+		"inactiveTypeBorders": [
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)"
+		],
+		"overflow": false,
+		"panel": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"scrollY": 0,
+		"searchControl": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"types": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"typesInsidePanel": false,
+		"url": "http://127.0.0.1:6793/en/inventory",
+		"viewport": {
+			"height": 844,
+			"width": 320
+		},
+		"visibleImagesLoaded": true
+	},
+	{
+		"filters": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"firstCardY": 0,
+		"inactiveTypeBorders": [
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)",
+			"color(srgb 0.0901961 0.0980392 0.109804 / 0.16)"
+		],
+		"overflow": false,
+		"panel": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"scrollY": 0,
+		"searchControl": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"types": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"typesInsidePanel": false,
+		"url": "http://127.0.0.1:6793/en/inventory",
+		"viewport": {
+			"height": 844,
+			"width": 390
+		},
+		"visibleImagesLoaded": true
+	}
+]

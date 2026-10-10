@@ -12,12 +12,14 @@ import type { InventorySearchListing } from "@repo/marketplace/inventory-search"
 import { CarFront, Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
+import { rememberInventoryReturn } from "../lib/inventory-return";
 import {
   getMobileInventorySearchGroups,
   type MobileSearchItem,
 } from "../lib/inventory-search-suggestions";
 import { getMarketplaceControlCopy } from "../lib/marketplace-control-copy";
 import { getLocalizedPublicPath } from "../lib/public-path";
+import { isSearchComposition } from "../lib/search-keyboard";
 import {
   MobileMarketplaceOverlayCloseAction,
   MobileMarketplaceOverlayField,
@@ -62,13 +64,15 @@ export const MobileInventorySearch = ({
 
   const groups = useMemo(
     () =>
-      getMobileInventorySearchGroups({
-        isBg,
-        listings,
-        locale,
-        query: draft,
-      }),
-    [draft, isBg, listings, locale]
+      open
+        ? getMobileInventorySearchGroups({
+            isBg,
+            listings,
+            locale,
+            query: draft,
+          })
+        : [],
+    [draft, isBg, listings, locale, open]
   );
 
   const commitItem = (item: MobileSearchItem) => {
@@ -79,8 +83,10 @@ export const MobileInventorySearch = ({
     }
 
     if (item.kind === "listing") {
+      const href = getLocalizedPublicPath(locale, getListingPath(item.listing));
+      rememberInventoryReturn(href);
       onOpenChange(false);
-      router.push(getLocalizedPublicPath(locale, getListingPath(item.listing)));
+      router.push(href);
       return;
     }
 
@@ -118,7 +124,7 @@ export const MobileInventorySearch = ({
         rightAction={
           <MobileMarketplaceOverlayCloseAction ariaLabel={copy.actions.close} />
         }
-        title={isBg ? "Търсене" : "Search"}
+        title={copy.mobileTitles.search}
       />
 
       <div
@@ -143,12 +149,12 @@ export const MobileInventorySearch = ({
           name="q"
           onChange={(event) => setDraft(event.target.value)}
           onKeyDown={(event) => {
-            if (event.key === "Enter") {
+            if (event.key === "Enter" && !isSearchComposition(event)) {
               event.preventDefault();
               commitDraft();
             }
           }}
-          placeholder={isBg ? "Търси марка, модел…" : "Search make or model…"}
+          placeholder={copy.search.makeModelPlaceholder}
           spellCheck={false}
           type="search"
           value={draft}
@@ -156,7 +162,7 @@ export const MobileInventorySearch = ({
       </div>
 
       <div
-        className="no-scrollbar min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 pb-[calc(1rem+env(safe-area-inset-bottom))]"
+        className="no-scrollbar min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-[calc(1rem+env(safe-area-inset-bottom))]"
         data-slot="mobile-inventory-search-scroll-body"
       >
         {groups.length === 0 ? (
@@ -174,7 +180,7 @@ export const MobileInventorySearch = ({
             >
               <h3 className="sr-only">{group.heading}</h3>
               {group.presentation === "chips" ? (
-                <ul className="no-scrollbar flex gap-2 overflow-x-auto px-1 pb-1">
+                <ul className="no-scrollbar -mx-1 flex gap-2 overflow-x-auto px-1 pb-1">
                   {group.items.map((item) => (
                     <li className="shrink-0" key={item.id}>
                       <Button

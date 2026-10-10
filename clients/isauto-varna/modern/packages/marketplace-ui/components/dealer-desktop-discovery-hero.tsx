@@ -1,3 +1,4 @@
+import { publicSite } from "@repo/marketplace/site-config";
 import styles from "./dealer-desktop-discovery.module.css";
 import { DealerDesktopHero } from "./dealer-desktop-hero";
 import {
@@ -12,11 +13,26 @@ export function DealerDesktopDiscoveryHero({
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   return (
     <DealerDesktopHero
-      title={isBg ? "Намерете своя автомобил." : "Find Your Next Drive"}
+      appearance={
+        publicSite.artwork.desktopDiscoveryVehicles ? "vehicles" : undefined
+      }
+      artwork={
+        publicSite.artwork.desktopDiscoveryVehicles
+          ? undefined
+          : (publicSite.artwork.desktopHeroScene ??
+            publicSite.artwork.heroScene)
+      }
+      locale={locale}
+      title={isBg ? "Намерете своя автомобил" : "Find Your Perfect Car"}
       variant="landing"
     >
       <div className={styles.heroSearch}>
-        <DealerHeroSearch {...toolbarProps} locale={locale} />
+        <DealerHeroSearch
+          {...toolbarProps}
+          compact
+          locale={locale}
+          surface="hero"
+        />
       </div>
     </DealerDesktopHero>
   );
