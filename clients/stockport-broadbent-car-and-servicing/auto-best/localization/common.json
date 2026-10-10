@@ -1,4 +1,52 @@
 {
+  "inventory.applied.all": {
+    "en": "All ({count})",
+    "bg": "Всички ({count})"
+  },
+  "inventory.modal.yearFrom": {
+    "en": "From year",
+    "bg": "От година"
+  },
+  "inventory.modal.yearTo": {
+    "en": "To year",
+    "bg": "До година"
+  },
+  "inventory.modal.vehicle": {
+    "en": "Vehicle",
+    "bg": "Автомобил"
+  },
+  "inventory.modal.price": {
+    "en": "Price",
+    "bg": "Цена"
+  },
+  "inventory.modal.details": {
+    "en": "Details",
+    "bg": "Характеристики"
+  },
+  "inventory.modal.makeHelp": {
+    "en": "Choose makes or browse their models.",
+    "bg": "Изберете марки или разгледайте моделите им."
+  },
+  "inventory.modal.modelsFor": {
+    "en": "Models for {make}",
+    "bg": "Модели на {make}"
+  },
+  "inventory.modal.applied": {
+    "en": "Selected filters",
+    "bg": "Избрани филтри"
+  },
+  "inventory.modal.selected": {
+    "en": "{count} selected",
+    "bg": "{count} избрани"
+  },
+  "inventory.modal.clear": {
+    "en": "Clear",
+    "bg": "Изчисти"
+  },
+  "inventory.modal.invalidNumber": {
+    "en": "Enter a whole number within the allowed range.",
+    "bg": "Въведете цяло число в допустимия диапазон."
+  },
   "inventory.search.placeholder": {
     "en": "Search makes, models or filters…",
     "bg": "Търси марка, модел или филтър…"
@@ -260,8 +308,8 @@
     "bg": "Напр. семеен SUV, автоматик, бензин. Опиши предпочитани модели и важното за теб."
   },
   "service.budget": {
-    "en": "Budget (€)",
-    "bg": "Бюджет (€)"
+    "en": "Budget (£)",
+    "bg": "Бюджет (£)"
   },
   "service.make.placeholder": {
     "en": "BMW",
@@ -392,16 +440,16 @@
     "bg": "Гъвкав план"
   },
   "home.services.title": {
-    "en": "All services",
-    "bg": "Всички услуги"
+    "en": "Our services",
+    "bg": "Нашите услуги"
   },
   "home.services.detail": {
     "en": "For your car",
     "bg": "За вашата кола"
   },
   "home.services.action": {
-    "en": "See services",
-    "bg": "Виж услугите"
+    "en": "View all",
+    "bg": "Виж всички"
   },
   "home.services.actionShort": {
     "en": "View",
@@ -410,6 +458,10 @@
   "locale.title": {
     "en": "Country and language",
     "bg": "Държава и език"
+  },
+  "locale.languageShort": {
+    "en": "Language",
+    "bg": "Език"
   },
   "locale.welcome": {
     "en": "Welcome to {dealerName}",
@@ -559,6 +611,10 @@
     "en": "Call",
     "bg": "Обади се"
   },
+  "action.callUs": {
+    "en": "Call us",
+    "bg": "Обадете се"
+  },
   "action.locationShort": {
     "en": "Location",
     "bg": "Адрес"
@@ -687,6 +743,10 @@
     "en": "Import",
     "bg": "Внос"
   },
+  "action.requestShort": {
+    "en": "Request",
+    "bg": "Заяви"
+  },
   "action.requestImport": {
     "en": "Request import",
     "bg": "Заяви внос"
@@ -768,7 +828,7 @@
     "bg": "Обслужване на клиенти"
   },
   "home.bannerPreview.title": {
-    "en": "Banner preview",
+    "en": "Banners",
     "bg": "Банери"
   },
   "home.bannerPreview.stripes": {

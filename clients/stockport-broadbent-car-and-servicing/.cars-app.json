@@ -3,12 +3,12 @@
   "dealer": "stockport-broadbent-car-and-servicing",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "70c2b80671e217ab299549a938a537c0b9559611",
+    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
     "path": "templates/app",
-    "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
-    "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f"
+    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
+    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
   },
-  "appDigest": "b79650d3356927e6c6a9f48ac4cac0a76f56d1c6c330c9a740790476d13cba1a",
+  "appDigest": "836ee82038ac129f4e8f165aae3d1cdc9b8762e28c973d40fc238e9d37d118e6",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "stockport-broadbent-car-and-servicing",
@@ -174,5 +174,6 @@
     }
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-10T21:56:36.041Z"
 }

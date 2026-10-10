@@ -1,5 +1,18 @@
 # QA contract — Import
 
+## Mobile control sizing
+
+Follow [Mobile styling](MOBILE-STYLING.md) for action glyphs and control text.
+Verify the icon against half the visible surface height, separately from the
+native tap area: 36/18, 40/20, 44/22, 48/24 and 56/28. Preserve approved component
+heights, strokes, radii and typography. Label font size comes from its role token
+or approved component override, never from the half-height icon calculation.
+Inspect actual BG/EN labels at 320px and 390px after fonts load, including search,
+quick filters, PDP Inquire/Call, contact actions, drawers and form navigation.
+Check icon centering, retained tap areas, single-line label fit at default text
+size, viewport containment and usable text enlargement. For shared owners,
+compare the affected desktop views as well.
+
 Desktop Services task flow: check all four compact service segments in BG/EN at
 768/1024/1440/1920px, including invalid entries, keyboard tab selection and separate
 drafts. Task selection must not filter the catalogue or alter the search query;

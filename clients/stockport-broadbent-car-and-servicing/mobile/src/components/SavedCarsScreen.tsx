@@ -43,7 +43,7 @@ export function SavedCarsScreen() {
           <div {...stylex.props(ui.empty)}>
             <Icon name="heart" size={44} />
             <h2 {...stylex.props(ui.title)}>{t('Your shortlist starts here')}</h2>
-            <p>{t('Tap the heart on a car to save it for later.')}</p>
+            <p>{t('Open a car to save it.')}</p>
             <Button href={showroomInventoryHref(filters, inventorySort)}>{t('Browse cars')}</Button>
           </div>
         )}

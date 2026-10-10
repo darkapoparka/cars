@@ -64,7 +64,7 @@
     a:focus-visible {
       outline: 2px solid var(--dn-focus);
       outline-offset: 4px;
-      border-radius: 2px;
+      border-radius: var(--dn-radius-focus);
     }
     .dn-hero-location--subtitle a:hover { color: var(--dn-white); }
     .dn-hero-location--subtitle a:focus-visible { outline-color: var(--dn-white); }

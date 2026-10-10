@@ -24,6 +24,7 @@ const files = [
   'native-filter-fields',
   'native-taxonomy',
   'showroom-services',
+  'showroom-service-details',
   'service-requests',
   'service-draft-storage',
   'inventory-navigation',

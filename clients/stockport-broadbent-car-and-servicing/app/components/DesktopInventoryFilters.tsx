@@ -164,7 +164,10 @@ export function DesktopAppliedFilters({filters, update, query, setQuery, mobile 
     const rail = button.closest('nav');
     const next = button.nextElementSibling instanceof HTMLButtonElement ? button.nextElementSibling : null;
     remove();
-    requestAnimationFrame(() => (next?.isConnected ? next : rail?.querySelector<HTMLButtonElement>('button'))?.focus({preventScroll: true}));
+    requestAnimationFrame(() => {
+      const target = next?.isConnected && next.getClientRects().length > 0 ? next : [...(rail?.querySelectorAll<HTMLButtonElement>('button') ?? [])].find(control => control.getClientRects().length > 0);
+      target?.focus({preventScroll: true});
+    });
   }
   function removeCompactChip(button: HTMLButtonElement, remove: () => void) {
     const sibling = button.nextElementSibling ?? button.previousElementSibling;

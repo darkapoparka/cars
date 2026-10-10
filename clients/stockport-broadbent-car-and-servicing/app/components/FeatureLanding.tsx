@@ -82,5 +82,6 @@ const s = stylex.create({
   discovery: {display: 'contents'},
   alternativeDiscovery: {display: {[media.mobile]: 'none', default: 'contents'}},
   alternativeContent: {paddingTop: {[media.mobile]: 0, default: 8}, borderTopLeftRadius: {[media.mobile]: 0, default: 32}, borderTopRightRadius: {[media.mobile]: 0, default: 32}},
-  content: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}},
+  // Keep the first row's margin inside every mobile landing panel.
+  content: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}, paddingTop: {[media.mobile]: 0, default: 8}, display: {[media.mobile]: 'flow-root', default: 'block'}},
 });
