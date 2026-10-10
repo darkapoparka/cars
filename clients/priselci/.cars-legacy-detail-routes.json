@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "dealer": "priselci",
+  "family": "import",
+  "base": "/variant-3",
+  "defaultLocale": "bg",
+  "source": {
+    "inventory": {
+      "path": "carwow/src/lib/data/daynight-current-inventory.ts",
+      "sha256": "082442d41877cd13819c0f298fa7f5eddcc7f068c14ea194b9ec41916684bf6d"
+    },
+    "vehicles": {
+      "path": "carwow/src/lib/data/daynight-vehicles.ts",
+      "sha256": "58507cc762f0d0763f6d521a86d8474729fd6cf112b7dd072170f350a2c11d84"
+    },
+    "routeFactorySha256": "094d5128ad5e689e41486a228b1de6d11c54efbe051ce0e75c0170709d8571c9"
+  },
+  "profileSha256": "8fc3358aaa9af5fd52f1b7b4e03eaf2fac7b8c3557fbb4d30d92bfd469462f6c",
+  "entries": [
+    {
+      "sourceId": "11784527405061757",
+      "slug": "vw-golf-1-4-061757",
+      "targetId": "11784527405061757"
+    },
+    {
+      "sourceId": "11758270885113337",
+      "slug": "vw-passat-1-4-113337",
+      "targetId": "11758270885113337"
+    },
+    {
+      "sourceId": "11753962633467246",
+      "slug": "vw-passat-2-0tdi-467246",
+      "targetId": "11753962633467246"
+    },
+    {
+      "sourceId": "11784527857493559",
+      "slug": "seat-ibiza-1-2-493559",
+      "targetId": "11784527857493559"
+    },
+    {
+      "sourceId": "21754395406651747",
+      "slug": "renault-koleos-2-0-651747",
+      "targetId": "21754395406651747"
+    },
+    {
+      "sourceId": "11781856640282742",
+      "slug": "peugeot-307-cc-282742",
+      "targetId": "11781856640282742"
+    },
+    {
+      "sourceId": "11759747090481666",
+      "slug": "ford-mondeo-2-0-481666",
+      "targetId": "11759747090481666"
+    },
+    {
+      "sourceId": "11776863022154449",
+      "slug": "peugeot-5008-2-0hdi-154449",
+      "targetId": "11776863022154449"
+    },
+    {
+      "sourceId": "11751891575433302",
+      "slug": "mercedes-benz-c-433302",
+      "targetId": "11751891575433302"
+    },
+    {
+      "sourceId": "11787126157294169",
+      "slug": "citroen-c3-picasso-294169",
+      "targetId": "11787126157294169"
+    },
+    {
+      "sourceId": "11784638939574277",
+      "slug": "audi-a3-574277",
+      "targetId": "11784638939574277"
+    },
+    {
+      "sourceId": "11779190417819998",
+      "slug": "dacia-sandero-1-4-819998",
+      "targetId": "11779190417819998"
+    },
+    {
+      "sourceId": "11770812815337634",
+      "slug": "renault-grand-scenic-337634",
+      "targetId": "11770812815337634"
+    },
+    {
+      "sourceId": "21786691566300206",
+      "slug": "bmw-x3-300206",
+      "targetId": "21786691566300206"
+    },
+    {
+      "sourceId": "21787900875118991",
+      "slug": "nissan-qashqai-1-5-118991",
+      "targetId": "21787900875118991"
+    },
+    {
+      "sourceId": "11763969547989753",
+      "slug": "mercedes-benz-e-280-989753",
+      "targetId": "11763969547989753"
+    }
+  ],
+  "retired": []
+}

@@ -1,0 +1,39 @@
+{
+	"filters": {
+		"height": 48,
+		"width": 830,
+		"x": 297.5,
+		"y": 410.234375
+	},
+	"firstCardY": 599.234375,
+	"inactiveTypeBorders": ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0)"],
+	"overflow": false,
+	"panel": {
+		"height": 162,
+		"width": 880,
+		"x": 272.5,
+		"y": 321.234375
+	},
+	"scrollY": 0,
+	"searchControl": {
+		"height": 48,
+		"width": 830,
+		"x": 297.5,
+		"y": 346.234375
+	},
+	"separators": ["none", "none", "none", "none", "none", "none"],
+	"submitLabelDisplay": "none",
+	"types": {
+		"height": 44,
+		"width": 880,
+		"x": 272.5,
+		"y": 261.234375
+	},
+	"typesInsidePanel": false,
+	"url": "http://127.0.0.1:6790/bg/inventory",
+	"viewport": {
+		"height": 1000,
+		"width": 1440
+	},
+	"visibleImagesLoaded": true
+}

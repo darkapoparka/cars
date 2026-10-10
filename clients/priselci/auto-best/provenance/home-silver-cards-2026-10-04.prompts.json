@@ -1,0 +1,34 @@
+[
+  {
+    "key": "collection",
+    "intent": "generate",
+    "builtInTool": true,
+    "prompt": "Use case: product-mockup\nAsset type: one transparent illustration for the Cars tile in a mobile automotive website, read at about 140 by 80 pixels.\nPrimary request: two realistic silver premium vehicles as a coherent car collection, matching the silver vehicle, graphite details and studio lighting of the supplied service illustrations.\nInput images: Image 1 is the approved services-card silver car style and material reference. Image 2 is the existing silver service-car rendering and front three-quarter orientation reference. Use only the vehicle language, not the showroom, percent symbol or document.\nSubject: one silver premium estate car and one silver premium SUV. Both face toward the lower right in a matching front three-quarter perspective. Arrange them as a compact horizontal pair, nearly side by side with only slight depth offset, with both roofs, windshields, fronts and all visible wheels legible. Keep the vehicles distinct and separated, with no major occlusion.\nStyle: crisp realistic automotive catalog product rendering, physically plausible bodywork, neutral silver metallic paint, graphite tires and glass, restrained reflections. Match the neutral soft studio daylight of the references. No white paint, no toy styling.\nComposition: landscape 3:2 canvas with a wide visible vehicle pair, roughly 2.3:1 ink footprint. Leave small transparent margins, no clipping, no large empty bands. Entire vehicles contained, camera at headlamp height, one consistent baseline.\nBackground: genuinely transparent, with minimal local contact shadows only.\nText: none.\nAvoid: badges, manufacturer logos, plates with lettering, watermarks, showroom architecture, coins, keys, percent symbols, props, platforms, glow, colored rectangles, front-only views, mismatched perspectives, distorted wheels, merged car bodies, excessive black shadow. This is conceptual decorative inventory art, not a depiction of verified stock.",
+    "referenceImages": [
+      {
+        "path": "runtime/home-services-preview-20261004/services-overview-v1.png",
+        "role": "Approved services-card vehicle style"
+      },
+      {
+        "path": "static/assets/images/template/desktop-service-leasing-v2.webp",
+        "role": "Vehicle perspective, silver paint and neutral lighting"
+      }
+    ]
+  },
+  {
+    "key": "services",
+    "intent": "generate",
+    "builtInTool": true,
+    "prompt": "Use case: stylized-concept\nAsset type: a single transparent automotive services illustration for a compact mobile website card, displayed at about 170 by 125 pixels.\nPrimary request: a refined, realistic silver premium estate car in front of a small modern glass showroom/service consultation bay, matching the supplied desktop service artwork.\nInput images: Image 1 is a reference for the architectural design, graphite metal, glass, restrained red seam and realistic lighting. Image 2 is a reference for vehicle proportions, silver paint, product-render fidelity and perspective. Create one new coherent scene; do not collage these files.\nSubject: one silver premium estate car in front three-quarter view, with one simple glass-and-graphite showroom fragment behind it. The car is the dominant foreground subject; the modest showroom fragment establishes automotive services without visual clutter. No second vehicle.\nStyle/medium: high quality automotive studio product visualization, realistic paint, tires and glass, physically plausible proportions, crisp clean silhouette. No toy styling.\nComposition: landscape 3:2. Entire car and showroom fragment contained with small clear margins. A close, simple composition that remains readable when small. Vehicle occupies roughly two thirds of the visible scene, glass frame rises modestly behind it. No decorative plinth, no reception desk blocking the car, no sprawling building.\nLighting: neutral soft studio daylight, consistent with reference images, controlled realistic reflections.\nPalette: silver, graphite and glass with one subtle red trim detail.\nBackground: genuinely transparent, no scenery or colored rectangle. Preserve realistic soft local contact shadows within the cutout only.\nText: none.\nAvoid: letters, logos, badges, watermarks, percent symbols, coins, calculators, floating icons, piles of props, neon, heavy glow, abstract gradients, cartoon render, over-sharpening, distorted wheels or windows. This is conceptual decorative service art, not a depiction of an actual dealer facility.",
+    "referenceImages": [
+      {
+        "path": "static/assets/images/template/desktop-service-inspection-v2.webp",
+        "role": "Architecture, graphite/glass and restrained red materials"
+      },
+      {
+        "path": "static/assets/images/template/desktop-service-import-v2.webp",
+        "role": "Vehicle proportions, silver paint and render fidelity"
+      }
+    ]
+  }
+]

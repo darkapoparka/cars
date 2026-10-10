@@ -4,6 +4,8 @@
   const i18n = getI18n();
 
   import HeroVehicles from '$components/ui/HeroVehicles.svelte';
+  import DesktopHeroScene from '$components/ui/DesktopHeroScene.svelte';
+  import HeroLocation from '$components/ui/HeroLocation.svelte';
   import { mobileHeroRegions } from '$data/vehicle-artwork';
   import { imageSrcset, mobileHeroSizes } from '$data/responsive-images';
 </script>
@@ -12,15 +14,16 @@
   <link rel="preload" as="image" href={mobileHeroRegions.home.src} imagesrcset={imageSrcset(mobileHeroRegions.home.src)} imagesizes={mobileHeroSizes} media="(max-width: 767px)" fetchpriority="high" />
 </svelte:head>
 
-<section class="dn-hero dn-route-hero dn-route-hero--light dn-discovery-hero" aria-labelledby="home-hero-title">
-  <HeroVehicles pair="home" mobile />
+<section class="dn-hero dn-route-hero dn-route-hero--campaign dn-route-hero--search dn-discovery-hero" aria-labelledby="home-hero-title">
+  <DesktopHeroScene scene="home" />
+  <HeroVehicles pair="home" mobile desktop={false} />
   <div class="container dn-hero__inner dn-route-hero__layout">
     <div class="dn-hero__copy dn-route-hero__copy">
       <h1 id="home-hero-title">
         <span class="dn-hero__title-desktop">{i18n.t("m_bb7c0e3ca487")}</span>
         <span class="dn-hero__title-mobile">{i18n.t("m_f92c64344e85")}</span>
       </h1>
-      <p class="dn-hero__location">{i18n.dealer('city')}, {i18n.dealer('addressLine')}</p>
+      <HeroLocation />
     </div>
   </div>
 </section>
@@ -30,11 +33,8 @@
     isolation: isolate;
   }
 
-  .dn-hero__location { display: none; }
-
   @media (min-width: 992px) {
-    .dn-hero { background: var(--dn-surface-canvas); }
-    .dn-hero__copy .dn-hero__location { display: block; color: var(--dn-studio-description); text-wrap: balance; }
+    .dn-hero { background: var(--dn-theme-hero-surface-deep); }
   }
 
   .dn-hero__title-mobile {

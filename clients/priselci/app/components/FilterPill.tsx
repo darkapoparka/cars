@@ -1,34 +1,43 @@
 'use client';
 
 import {useCopy} from '@/lib/locale';
+import {assetPath} from '@/lib/paths';
 import Link from '@/components/AppLink';
 import {ArrowUpDown, SlidersHorizontal} from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
-import {tokens as $} from '@/app/tokens.stylex';
+import {pillStyles as pill} from '@/components/pill.stylex';
+import {media} from '@/app/tokens.stylex';
 
 type Props = {
   label: string;
+  mobileLabel?: string;
   icon?: 'filter' | 'sort';
+  flagSrc?: string;
   selected?: boolean;
+  pressed?: boolean;
+  tone?: 'default' | 'soft' | 'grey';
+  onDark?: boolean;
 } & ({href: string; onClick?: never} | {href?: never; onClick: () => void});
 
-/** One compact control treatment for Home shortcuts and inventory actions. */
-export default function FilterPill({label, icon, selected = false, href, onClick}: Props) {
+/** One compact treatment for drawer actions and inline quick filters. */
+export default function FilterPill({label, mobileLabel, icon, flagSrc, selected = false, pressed, tone = 'default', onDark = false, href, onClick}: Props) {
   const tx = useCopy();
 
-  const content = <span {...stylex.props(s.surface, selected && s.selected)}>
+  const content = <span {...stylex.props(pill.surface, tone !== 'default' && pill.soft, tone === 'grey' && pill.grey, (pressed ?? selected) && pill.selected, onDark && pill.onDark, onDark && (pressed ?? selected) && pill.selectedOnDark)}>
+    {flagSrc ? <img src={assetPath(flagSrc)} width={20} height={15} alt="" aria-hidden="true" draggable={false} {...stylex.props(s.flag)}/> : null}
     {icon === 'filter' ? <SlidersHorizontal size={16} strokeWidth={1.8} aria-hidden="true" {...stylex.props(s.icon)}/> : icon === 'sort' ? <ArrowUpDown size={16} strokeWidth={1.8} aria-hidden="true" {...stylex.props(s.icon)}/> : null}
-    <span>{tx(label)}</span>
+    {mobileLabel ? <><span {...stylex.props(s.wideLabel)}>{tx(label)}</span><span {...stylex.props(s.mobileLabel)}>{tx(mobileLabel)}</span></> : <span>{tx(label)}</span>}
   </span>;
-  const props = stylex.props(s.pill);
+  const props = stylex.props(pill.control, (pressed ?? selected) && pill.selectedControl, onDark && pill.controlOnDark);
+  const accessibleLabel = mobileLabel ? `${tx(label)}: ${tx(mobileLabel)}` : selected ? `${tx(label)}: ${tx('Applied')}` : tx(label);
   return href
-    ? <Link href={href} aria-label={selected ? `${tx(label)}: ${tx('Applied')}` : tx(label)} {...props}>{content}</Link>
-    : <button type="button" onClick={onClick} aria-label={selected ? `${tx(label)}: ${tx('Applied')}` : tx(label)} aria-haspopup="dialog" {...props}>{content}</button>;
+    ? <Link href={href} aria-label={accessibleLabel} {...props}>{content}</Link>
+    : <button type="button" onClick={onClick} aria-label={accessibleLabel} aria-pressed={pressed} aria-haspopup={pressed === undefined ? 'dialog' : undefined} {...props}>{content}</button>;
 }
 
 const s = stylex.create({
-  pill: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, minHeight: 44, padding: 0, color: $.ink, fontFamily: $.fontSans, fontSize: 15, fontWeight: 500, lineHeight: '20px', whiteSpace: 'nowrap', borderWidth: 0, borderRadius: 9999, backgroundColor: 'transparent', cursor: 'pointer'},
-  surface: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 5, minHeight: 36, paddingInline: 8, borderWidth: 1, borderStyle: 'solid', borderColor: '#e6e6e9', borderRadius: 9999, backgroundColor: {default: '#fff', ':hover': '#f4f4f5'}},
-  selected: {color: '#fff', borderColor: $.ink, backgroundColor: {default: $.ink, ':hover': $.violetDark}},
+  wideLabel: {display: {[media.mobile]: 'none', default: 'inline'}},
+  mobileLabel: {display: {[media.mobile]: 'inline', default: 'none'}},
   icon: {flexShrink: 0},
+  flag: {display: 'block', flexShrink: 0, width: 20, height: 15, objectFit: 'cover', borderRadius: 2, boxShadow: '0 0 0 1px rgba(0,0,0,.08)'},
 });

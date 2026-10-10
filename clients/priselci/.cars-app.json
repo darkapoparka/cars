@@ -3,12 +3,12 @@
   "dealer": "priselci",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
     "path": "templates/app",
-    "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
-    "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
+    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
   },
-  "appDigest": "9da40654acb83bff4a55d7a5dac0b0874b820ac130b20ec485320787c8a00bf7",
+  "appDigest": "cc09ec397f5fdac3ac0fbbe5da8c84db0e134a66a0b353aaadb256eb89b83e27",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "priselci",
@@ -423,5 +423,5 @@
     "checkedAt": "2026-09-28T02:25:55.298Z"
   },
   "baseReceiptSha256": "c793bf349c7feae7cab0fcc9891617a370856c723990da8d6312887bd533d19c",
-  "refreshedAt": "2026-09-30T11:44:07.460Z"
+  "refreshedAt": "2026-10-10T23:06:21.413Z"
 }
