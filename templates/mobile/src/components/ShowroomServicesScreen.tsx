@@ -29,6 +29,7 @@ import { Header } from './Header';
 import { Icon } from './Icon';
 import { ShowroomTabs } from './ShowroomTabs';
 import { ShowroomSearch } from './ShowroomSearch';
+import { ShowroomDesktopServiceType } from './ShowroomDesktopServiceType';
 import { ShowroomServiceSearchSheet } from './ShowroomServiceSearchSheet';
 import { ShowroomQuickPill, ShowroomQuickPills } from './ShowroomQuickPills';
 import { ShowroomServiceRequest } from './ShowroomServiceRequest';
@@ -152,42 +153,21 @@ export function ShowroomServicesScreen() {
         ))}
     </ShowroomQuickPills>
   );
-  const renderControls = (desktop: boolean) => (
-    <div
-      data-showroom-controls
-      {...stylex.props(s.tabs, desktop ? s.desktopServiceFilters : s.phoneServiceFilters)}
-    >
-      {desktop ? (
-        <ShowroomQuickPills label={t('Service category')} inventoryDesktop inset={false}>
-          {serviceCategories.map(({ value, label }) => (
-            <ShowroomQuickPill
-              key={value}
-              inventoryDesktop
-              active={selected === value}
-              aria-pressed={selected === value}
-              onClick={() => selectCategory(value)}
-            >
-              {t(label)}
-            </ShowroomQuickPill>
-          ))}
-        </ShowroomQuickPills>
-      ) : (
-        <>
-          <div {...stylex.props(s.serviceCategoryControls)}>
-            <ShowroomTabs
-              label={t('Service category')}
-              tabs={serviceCategories}
-              selected={selected}
-              panelId="showroom-services"
-              idPrefix="service-category-"
-              layout="desktop-pills"
-              primary
-              onChange={selectCategory}
-            />
-          </div>
-          {secondaryFilters}
-        </>
-      )}
+  const phoneControls = (
+    <div data-showroom-controls {...stylex.props(s.tabs, s.phoneServiceFilters)}>
+      <div {...stylex.props(s.serviceCategoryControls)}>
+        <ShowroomTabs
+          label={t('Service category')}
+          tabs={serviceCategories}
+          selected={selected}
+          panelId="showroom-services"
+          idPrefix="service-category-"
+          layout="desktop-pills"
+          primary
+          onChange={selectCategory}
+        />
+      </div>
+      {secondaryFilters}
     </div>
   );
   const activeContext =
@@ -210,23 +190,24 @@ export function ShowroomServicesScreen() {
         <ShowroomPageHero
           title={showroomPageContent.services.title}
           controlLayout="services"
-          filters={renderControls(true)}
+          filters={<div {...stylex.props(s.desktopServiceFilters)}>{secondaryFilters}</div>}
         >
-          <div {...stylex.props(s.search)}>
+          <div {...stylex.props(s.search, s.serviceSearch)}>
+            <div {...stylex.props(s.desktopServiceType)}>
+              <ShowroomDesktopServiceType selected={selected} onSelect={selectCategory} />
+            </div>
             <ShowroomSearch
               label={t('Search services')}
               value={query}
               onOpen={openSearch}
               inBanner
+              inControlRow
             />
           </div>
         </ShowroomPageHero>
       </ShowroomBanner>
       <ShowroomDrawer>
-        {renderControls(false)}
-        <div data-desktop-service-filters {...stylex.props(s.desktopServiceTopics)}>
-          {secondaryFilters}
-        </div>
+        {phoneControls}
         <div data-desktop-applied-filters {...stylex.props(s.desktopAppliedFilters)}>
           {query && (
             <ShowroomQuickPill

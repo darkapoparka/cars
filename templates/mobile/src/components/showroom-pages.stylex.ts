@@ -42,6 +42,12 @@ export const s = stylex.create({
       '@media (min-width: 1024px)': '0 8px 24px rgba(14, 25, 36, .12)',
     },
   },
+  serviceSearch: {
+    display: { default: 'block', '@media (min-width: 1024px)': 'grid' },
+    gridTemplateColumns: '196px minmax(0, 1fr)',
+    alignItems: 'center',
+  },
+  desktopServiceType: { display: { default: 'none', '@media (min-width: 1024px)': 'block' } },
   tabs: {
     position: { default: 'sticky', '@media (min-width: 1024px)': 'static' },
     top: 0,
@@ -65,13 +71,6 @@ export const s = stylex.create({
     backgroundColor: 'transparent',
   },
   phoneServiceFilters: { display: { default: 'flow-root', '@media (min-width: 1024px)': 'none' } },
-  desktopServiceTopics: {
-    display: { default: 'none', '@media (min-width: 1024px)': 'flex' },
-    justifyContent: 'center',
-    minWidth: 0,
-    paddingTop: 8,
-    paddingBottom: 4,
-  },
   desktopAppliedFilters: {
     display: { default: 'none', '@media (min-width: 1024px)': 'flex' },
     alignItems: 'center',

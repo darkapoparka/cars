@@ -51,6 +51,18 @@ const s = stylex.create({
     },
     boxShadow: 'none',
   },
+  controlRowTrigger: {
+    minWidth: 0,
+    backgroundColor: {
+      default: colors.controlSurface,
+      ':active': colors.surface,
+      '@media (min-width: 1024px)': {
+        default: 'transparent',
+        ':hover': colors.controlSurface,
+        ':active': colors.surface,
+      },
+    },
+  },
   bannerPhoneIcon: {
     display: { default: 'inline-flex', '@media (min-width: 1024px)': 'none' },
   },
@@ -128,12 +140,14 @@ export function ShowroomSearch({
   onOpen,
   inBanner = false,
   phoneHeader = false,
+  inControlRow = false,
 }: {
   label: string;
   value: string;
   onOpen: (button: HTMLButtonElement) => void;
   inBanner?: boolean;
   phoneHeader?: boolean;
+  inControlRow?: boolean;
 }) {
   const { t } = useLocale();
   return (
@@ -148,6 +162,7 @@ export function ShowroomSearch({
         s.trigger,
         phoneHeader && s.phoneHeaderTrigger,
         inBanner && s.bannerTrigger,
+        inControlRow && s.controlRowTrigger,
       )}
     >
       {inBanner ? (
