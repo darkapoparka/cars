@@ -106,6 +106,18 @@ Quick pills use the shared 8px horizontal padding and 4px inline gap. Avoid
 page-specific padding or font overrides that make the same control look larger.
 Ordinary form fields and action buttons retain their existing component shapes.
 
+Home and Import use `.mobile-quick-rail` for shared scrolling, gaps and 2px block
+padding. Their quick-filter rows start at the shared 14px mobile gutter.
+
+Final Home corner roles, confirmed on 10 October 2026: quick filters, brand cards
+and type cards use 12px corners; vehicle cards retain their existing 10px corners.
+Quick filters match the browse controls they accompany. These are separate
+component roles, so the vehicle-card radius does not set the quick-filter radius.
+The same 12px corner looks rounder on a 40px-high filter than on a taller browse
+card because it occupies a larger share of the control's height.
+Sell's outer white valuation panel uses the shared 16px panel radius, matching
+the default drawer corners; its inset banner retains the 12px card radius.
+
 Compact pills and default mobile icon actions share `--bc-mobile-control-surface-size`
 (40px), `--bc-mobile-control-hit-size` (44px) and
 `--bc-mobile-control-glyph-size` (20px). Quick pills use 2px vertical margins and

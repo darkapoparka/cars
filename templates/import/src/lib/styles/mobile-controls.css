@@ -23,6 +23,17 @@
 		--bc-mobile-search-surface: var(--bc-control);
 	}
 
+	.mobile-quick-rail {
+		display: flex;
+		gap: var(--bc-space-2);
+		overflow-x: auto;
+		padding-block: var(--bc-mobile-control-inset);
+		scrollbar-width: none;
+	}
+	.mobile-quick-rail::-webkit-scrollbar {
+		display: none;
+	}
+
 	.mobile-quick-pill {
 		position: relative;
 		display: inline-flex;

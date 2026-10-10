@@ -125,7 +125,7 @@
 </script>
 
 <section class="import-browse" aria-label={copy.preferences}>
-	<nav class="import-browse__countries" aria-label={copy.countryHelp}>
+	<nav class="import-browse__countries mobile-quick-rail" aria-label={copy.countryHelp}>
 		<button
 			type="button"
 			class="mobile-quick-pill mobile-quick-pill--icon"
@@ -282,14 +282,6 @@
 	.import-browse__countries {
 		--bc-text-filter: var(--bc-text-quick-pill);
 		--bc-leading-filter: var(--bc-leading-quick-pill);
-		display: flex;
-		gap: var(--bc-space-2);
-		overflow-x: auto;
-		padding: 2px 0;
-		scrollbar-width: none;
-	}
-	.import-browse__countries::-webkit-scrollbar {
-		display: none;
 	}
 	.import-browse__countries a {
 		min-width: var(--bc-control-height-chip);

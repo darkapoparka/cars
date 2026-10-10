@@ -97,9 +97,7 @@
 	};
 	const modelOptions = $derived(modelOptionsForBrands(brandSelection));
 
-	const mobileSearchPlaceholder = $derived(
-		activeMobileAction?.placeholder ?? (isEnglish ? 'Search brand, model, price...' : nt('ui77'))
-	);
+	const mobileSearchPlaceholder = $derived(activeMobileAction?.placeholder ?? nt('ui77'));
 	const mobileHeading = $derived(
 		activeMobileAction?.mobileHeading ?? (isEnglish ? 'Find your car.' : nt('ui78'))
 	);
@@ -611,7 +609,9 @@
 	{#if mobileActionTabs.length}
 		<section class="daynight-mobile-home-quick" aria-label={hero.heading}>
 			<div class="site-container">
-				<nav class="daynight-mobile-home-quick__scroller bc-quick bc-quick--{mobileMode}">
+				<nav
+					class="daynight-mobile-home-quick__scroller mobile-quick-rail bc-quick bc-quick--{mobileMode}"
+				>
 					{#if mobileMode === 'buy'}
 						<button
 							type="button"
@@ -1471,6 +1471,10 @@
 			padding-left: 16px;
 		}
 
+		.daynight-mobile-home-quick :global(.site-container) {
+			padding-inline: var(--bc-mobile-gutter);
+		}
+
 		/* Heading mirrors the active Buy/Import/Sell tab, so keep it for SEO/a11y
 		   but visually hidden — the tab row is the real heading. */
 		.daynight-mobile-hero__copy {
@@ -2008,18 +2012,9 @@
 		.daynight-mobile-home-quick__scroller {
 			--bc-text-filter: var(--bc-text-quick-pill);
 			--bc-leading-filter: var(--bc-leading-quick-pill);
-			display: flex;
-			gap: 8px;
 			width: calc(100% + 24px);
-			overflow-x: auto;
 			padding-right: 24px;
-			padding-bottom: 2px;
-			scrollbar-width: none;
 			-webkit-overflow-scrolling: touch;
-		}
-
-		.daynight-mobile-home-quick__scroller::-webkit-scrollbar {
-			display: none;
 		}
 
 		.daynight-mobile-home-quick__scroller a {
