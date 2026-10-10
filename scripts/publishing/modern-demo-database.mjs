@@ -14,7 +14,7 @@ export const STATIC_DATABASE_MODULE=String.raw`import "server-only";
 import type { PrismaClient } from "./generated/client";
 export type * from "./generated/client";
 export * from "./generated/enums";
-export { Prisma } from "./generated/browser";
+export * as Prisma from "./generated/internal/prismaNamespace";
 // Deliberately no runtime PrismaClient, query compiler, database driver or connection.
 export const getDatabase = (): PrismaClient => {
   throw new Error("Database access is unavailable in this independent static dealer demonstration");
@@ -31,7 +31,7 @@ export const PRISMA_CONSUMERS={
   "modern/packages/database/organizations.ts": "7020189d1ce3157df6000b3db4d5e356473e3c3d7567a0d1301680f20026b7e3"
 };
 export const DEMO_BRIDGE_PATH="modern/packages/database/cars-demo-client.ts";
-const bridge='export * from "./generated/browser";\nexport type { PrismaClient } from "./generated/client";\n';
+const bridge='export type * from "./generated/client";\nexport * from "./generated/enums";\nexport * as Prisma from "./generated/internal/prismaNamespace";\n';
 export function specializeModernDemoDatabase(files,manifest){
  if(!(files instanceof Map)||!manifest?.slug||manifest.candidate?.approved!==false||manifest.candidate?.nativeReleaseQualification!==false)throw Error('Only explicit unapproved independent dealer candidates can be specialized');
  const original=files.get(DATABASE_PATH),policy=files.get(POLICY),site=files.get(SITE);
@@ -40,6 +40,10 @@ export function specializeModernDemoDatabase(files,manifest){
  if(sections.length!==2||sections[1].split('// LEAD_SITE_CONFIG_END').length!==2)throw Error('Missing explicit dealer identity block');
  const config=sections[1].split('// LEAD_SITE_CONFIG_END')[0];
  if(!/^export const leadSite: LeadSiteConfig = \{/m.test(config)||!/^  staticDemoMode: true,$/m.test(config)||!config.includes('  slug: '+JSON.stringify(manifest.slug)+','))throw Error('Dealer is not explicitly static or identity differs');
+ const pkg=JSON.parse(String(files.get("modern/packages/database/package.json")||"null"));
+ if(pkg?.dependencies?.["@prisma/client"]!=="7.4.2"||(pkg.devDependencies?.prisma??pkg.dependencies?.prisma)!=="7.4.2")throw Error("Requalify generated Prisma namespace for the changed compiler");
+ // Use exactly the same generated server namespace as Prisma client.ts, but not its client factory.
+ // This retains SQL tag utilities and server types while the database proxy remains unavailable.
  const edits=[];
  if(files.has(DEMO_BRIDGE_PATH))throw Error('Static database bridge already exists');
  for(const [p,expected]of Object.entries(PRISMA_CONSUMERS)){
