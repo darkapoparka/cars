@@ -236,7 +236,7 @@ try {
                 return { width: icon.width, dy: icon.y + icon.height / 2 - box.y - box.height / 2 };
               }) };
           });
-          assert.equal(search.height, 48); assert.equal(search.font, '16px'); assert.equal(search.gap, '8px');
+          assert.equal(search.height, 48); assert.equal(search.font, '18px'); assert.equal(search.gap, '8px');
           assert.deepEqual(search.icons.map(icon => icon.width), [22]);
           assert(search.icons.every(icon => Math.abs(icon.dy) <= .5));
           assert.equal(search.background, 'rgb(241, 243, 245)', 'The main mobile entry field has a pale surface');
@@ -481,7 +481,7 @@ try {
             const field = page.locator('.dn-service-entry__field:visible');
             assert.deepEqual(await field.evaluate(el => ({ height: el.getBoundingClientRect().height,
               font: getComputedStyle(el).fontSize, fits: el.querySelector('span').scrollWidth <= el.querySelector('span').clientWidth + 1 })),
-              { height: 48, font: '16px', fits: true }, 'Sell and Import share the prominent field within the compact entry hierarchy');
+              { height: 48, font: '18px', fits: true }, 'Sell and Import share the prominent field within the compact entry hierarchy');
             await field.click();
             const editor = page.locator('.dn-service-editor[open]');
             const editorFields = await editor.locator('input').evaluateAll(inputs => inputs.map(input => ({

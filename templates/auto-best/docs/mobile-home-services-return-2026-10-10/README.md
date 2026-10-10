@@ -1,5 +1,7 @@
 # Mobile Home order and entry balance - 10 October 2026
 
+Correction, 10 October 2026: the 16px entry-font change recorded below was not approved and has been reverted to the original 18px/450 entry role. Services remains below Buying guides. These captures record the earlier iteration; the 16px typography is not the current design.
+
 Services follows the completed Buying guides section again. Its title, copy, artwork, action and destination are unchanged. The entire card remains the single link to localized About #process.
 
 The mobile search prompt was 18px while the adjacent tabs and CTA were 16px. EntryCard now maps the prominent field typography to the existing 16px/450 field role below 768px. This applies to Home Buy/Import, Sell/Trade-in, Import listing/criteria and the Blog entry opener. The generic 18px desktop entry role and editor typography remain independent.

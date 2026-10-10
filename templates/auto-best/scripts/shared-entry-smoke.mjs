@@ -53,7 +53,7 @@ try {
       assert.equal(metrics.action.height, 44, 'Every primary action shares the same target');
       assert.equal(await action.evaluate(element => parseFloat(getComputedStyle(element, '::before').height)), 40, 'Primary action paint stays compact');
       assert.equal(metrics.field.height, width < 768 ? 48 : 44, 'Mobile entry fields are slightly taller than the selector and CTA');
-      if (width < 768) assert.equal(await field.evaluate(el => getComputedStyle(el).fontSize), '16px', 'Entry prompts share the readable 16px field role with the surrounding controls');
+      if (width < 768) assert.equal(await field.evaluate(el => getComputedStyle(el).fontSize), '18px', 'Mobile entry prompts retain the approved 18px entry typography');
       const roles = { segment: metrics.segment, action: metrics.action, field: metrics.field };
       if (baseline) assert.deepEqual(roles, baseline, 'Shared control roles match across routes while card composition is retained');
       else baseline = roles;
