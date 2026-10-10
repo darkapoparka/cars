@@ -1,0 +1,303 @@
+{
+  "schemaVersion": 1,
+  "kind": "exact-source-template-release-evidence",
+  "repository": "darkapoparka/cars",
+  "commit": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+  "sourcePath": "templates/karento-best",
+  "sourceTree": "c661129affb32649c8fcecea097fc9a6487783d0",
+  "sourceDigest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30",
+  "exportPolicy": "cars-source-v1",
+  "release": "signature-final-polish-2026-10-10",
+  "recordedAt": "2026-10-10T08:10:04.839Z",
+  "verifiedAt": "2026-10-10T08:10:04.839Z",
+  "approved": true,
+  "runtime": {
+    "node": "26.10.0",
+    "sourceAdapter": "@sveltejs/adapter-node@6.0.0",
+    "hostingNode": "24.21.0",
+    "hostingRuntime": "nodejs24.x",
+    "hostingAdapter": "@sveltejs/adapter-vercel@7.0.0",
+    "recipe": {
+      "path": "scripts/publishing/signature-vercel-adapter.json",
+      "sha256": "87f06c6e658ffc6b077481d270bd7da6b9eff933354dd8163ba65b6b5f7b669c"
+    }
+  },
+  "standalone": {
+    "mobile": true,
+    "desktop": true,
+    "scope": "Focused exact-source final standalone checks reused from the recorded completed release; no new build, deployment or all-route screenshot campaign.",
+    "mobileWidths": [
+      320,
+      430
+    ],
+    "desktopWidths": [
+      1440
+    ],
+    "locales": [
+      "en",
+      "bg"
+    ]
+  },
+  "modes": {
+    "standalone": "verified",
+    "mounted": "requires-dealer-QA"
+  },
+  "checks": [
+    {
+      "name": "exact-committed-source-and-tested-tree",
+      "status": "passed",
+      "scope": "Committed Cars source and final validated candidate have the same template tree; current tracked template is clean and HEAD retains that tree.",
+      "evidence": [
+        {
+          "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/source-integration.json",
+          "sha256": "786e08b186da2d48004088c756881f760699102ff7d840b116d67f14df51a87a"
+        },
+        {
+          "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/final-candidate.json",
+          "sha256": "2dd5bc2d5b732242e0b63bc80b5d9a0400b01b300a2e7f80f95d614474c190ea"
+        }
+      ]
+    },
+    {
+      "name": "source-to-mirror-application-closure",
+      "status": "passed",
+      "scope": "All 1087 declared source hashes match committed Cars source; mirror bytes match except for the five individually verified provider overrides. The 29 omitted policy files are historical evidence and tooling, outside maintained src/static/scripts/tests.",
+      "evidence": [
+        {
+          "path": "runtime/karento-astra/provenance/standalone-source.json",
+          "sha256": "2bd85cd2ea890b9c48d79271309a5c8515b7cf1f3b9fae8ec8045a94371dbd0e"
+        },
+        {
+          "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/mirror-integration.json",
+          "sha256": "56a800c21e0f2a4c5e866c78fa30c93485e8763e3f1c24f680d2bc0251073365"
+        }
+      ]
+    },
+    {
+      "name": "master-node26-quality",
+      "status": "passed",
+      "scope": "Existing exact-tree Node 26.10.0 integration: zero strict Svelte errors/warnings, typography/geometry guards, formatting, 117 passing tests, and adapter-node production build. Checks were reused without rerunning.",
+      "evidence": [
+        {
+          "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/release-check.log",
+          "sha256": "9a1b4cc78944d35f459358954f79cad69df389eac2b55fadacf35edc41dc501a"
+        },
+        {
+          "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/release-format.log",
+          "sha256": "a348c0496851563ed00c492307c0fe5ad678d8f43e51a1fc9a0a8ce58dbf9768"
+        },
+        {
+          "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/release-tests.log",
+          "sha256": "37a3ca4d5f93254a0647653fd2128187f05204e8880df9f4dc3ff225099eac59"
+        },
+        {
+          "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/release-build.log",
+          "sha256": "62c6d5a5bcc13357d5dfc60fea60d6e2344551261b8e6e6ce3aa8b9dfc347bc7"
+        }
+      ]
+    },
+    {
+      "name": "mirror-node24-vercel-quality",
+      "status": "passed",
+      "scope": "Existing mapped Node 24.21.0 mirror: zero strict Svelte errors/warnings, typography/geometry guards, formatting, 117 passing tests, adapter-vercel 7 production build and recorded READY deployment for the exact mirror commit.",
+      "evidence": [
+        {
+          "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/mirror-check.log",
+          "sha256": "ea649b01215ffd5d8f947340d7049eeb7c798d31362ab1dea0fca7dbc016855a"
+        },
+        {
+          "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/mirror-format.log",
+          "sha256": "a348c0496851563ed00c492307c0fe5ad678d8f43e51a1fc9a0a8ce58dbf9768"
+        },
+        {
+          "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/mirror-tests.log",
+          "sha256": "44227e0fee2b42096e16837c523f88464a5e61f383c6c5383366b14f9c6b6045"
+        },
+        {
+          "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/mirror-build.log",
+          "sha256": "9a9b2397464af8b3f00f2b96eb3671a91a5dc4fdb92b502ff7d73809a119e6d9"
+        },
+        {
+          "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/release-result.json",
+          "sha256": "bd55f1a18a2869526e2d424e53749a6395a05197c3da7d54b8e2217d2198f7cb"
+        }
+      ]
+    },
+    {
+      "name": "signature-en-bg-catalog-contract",
+      "status": "passed",
+      "scope": "Current committed i18n source and all 29 localization files match the qualified mirror; EN and BG each resolve 2293 keys with no empty-key, key-set or interpolation problems. The resolved catalog check was repeated during this closure; no build or full test suite was repeated.",
+      "evidence": [
+        {
+          "path": "templates/karento-best/src/lib/i18n/catalogs/en.ts",
+          "sha256": "d7d91840d3b2435779a38c7ec98cfd1984dc084aaf9f9599d68602a501cbe76f"
+        },
+        {
+          "path": "templates/karento-best/src/lib/i18n/catalogs/bg.ts",
+          "sha256": "25ebcccf2f55c2f1d1591d79a7c02a4daa7248d3562d9235c59ff9d7cd576702"
+        },
+        {
+          "path": "templates/karento-best/src/lib/i18n/messages.ts",
+          "sha256": "911c37f586d0f36625f450317655915b30466b98251099c0dac9fd0751323ad1"
+        }
+      ]
+    },
+    {
+      "name": "hosted-current-http-and-links",
+      "status": "passed",
+      "scope": "Existing exact release: 127 HTTP contracts (102 canonical/aliases, 9 Bulgarian canonical, 7 locale/preference-isolation cases, 9 genuine 404s); 39 variants with valid IDs/control associations and 3139 resolving internal links. This is structural/locale proof, without a preserved-pixel claim.",
+      "evidence": [
+        {
+          "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/hosted/current-http.json",
+          "sha256": "20e47527fdf8cafd8ff9d9e591228700b5ffa61ea01bd9f33adb8a6a79ee3394"
+        },
+        {
+          "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/hosted-links.log",
+          "sha256": "40b20c7cb9b3bb2d756703fd5a581903e5e13233c02e07ef8ab3af3207cedb8a"
+        },
+        {
+          "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/release-result.json",
+          "sha256": "bd55f1a18a2869526e2d424e53749a6395a05197c3da7d54b8e2217d2198f7cb"
+        }
+      ]
+    },
+    {
+      "name": "standalone-focused-browser",
+      "status": "passed",
+      "scope": "Existing final standalone receipts: phone home at 320/430, menu and filters, photo viewer navigation and Escape, desktop Contact at 1440, preserved /2, and no console errors. Local receipts also cover EN/BG filters and seller controls, focus return, services recovery and budget validation. This does not assert a mounted-dealer or every-route/390px browser matrix.",
+      "evidence": [
+        {
+          "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/hosted/browser-checks.json",
+          "sha256": "414caeaac6ab0888ebd9fa033242f2c9661b49487f5b9b3d85d6e4755768f6af"
+        },
+        {
+          "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/browser-checks.json",
+          "sha256": "e976dbf2a15bb7569cbd01edfd2297a6271f36d3c6722066e865089d76dc9237"
+        },
+        {
+          "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/release-result.json",
+          "sha256": "bd55f1a18a2869526e2d424e53749a6395a05197c3da7d54b8e2217d2198f7cb"
+        }
+      ]
+    }
+  ],
+  "sourceMirror": {
+    "source": {
+      "path": "runtime/karento-astra/provenance/standalone-source.json",
+      "sha256": "2bd85cd2ea890b9c48d79271309a5c8515b7cf1f3b9fae8ec8045a94371dbd0e"
+    },
+    "publishingRepository": "darkapoparka/cars-template-karento",
+    "publishingCommit": "f5378b16daa6ff6924141779a0fcf5f41931d9a8",
+    "sourceCommit": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+    "verifiedDeclaredSourceFiles": 1087,
+    "providerOverrides": [
+      {
+        "path": "package.json",
+        "sourceSha256": "af0df4fff164ea2473c80746b5d57102100e8f977e3a0c29e987a3ec1768c937",
+        "mirrorSha256": "6c550857d2315ef2acf6424dcff17f073aeff372d1100f0a24dd37058174bff4"
+      },
+      {
+        "path": "package-lock.json",
+        "sourceSha256": "d6ea4d6bc8db1689f94e4637e008530b5147458b3225a22774c96ce99c7f57c1",
+        "mirrorSha256": "90a28c687683ca48f5a23d63f3d3aa104b24823298e5d3de1079a07bde18446c"
+      },
+      {
+        "path": ".node-version",
+        "sourceSha256": "10e4e07fe7b63d3da1d899ea0f9a7a3d78c116051fae44b9f245a53d6f665a41",
+        "mirrorSha256": "73fb1b615e2043a933be1c0895cde4358036acc28d785692509b822aa53c761f"
+      },
+      {
+        "path": "vite.config.ts",
+        "sourceSha256": "da6dd6f68a8ee7f6f0fb339c16f3ad3c76ab4f1bf4b213c042a652c40de27e6c",
+        "mirrorSha256": "a94b49cf87bbc7db05853f135bee5712bc1fd2974820c3e5aa016931eea30170"
+      },
+      {
+        "path": "README.md",
+        "sourceSha256": "8549638de40c873d5394b8619fef408f22c4432e118634dda5a9d9c642ccf18b",
+        "mirrorSha256": "001e70281980800071e9a5aeb1d2aba530372366123ec0a4138492bc099861a8"
+      }
+    ],
+    "applicationMismatches": [],
+    "policyFiles": 1116,
+    "excludedPolicyFiles": {
+      "count": 29,
+      "groups": [
+        {
+          "path": "docs/mobile-final-20261010/hosted-filters.png",
+          "count": 1,
+          "role": "historical capture"
+        },
+        {
+          "path": "provenance/frozen-best/",
+          "count": 25,
+          "role": "preserved historical reference source"
+        },
+        {
+          "path": "provenance/tooling/",
+          "count": 3,
+          "role": "preserved migration tooling"
+        }
+      ]
+    },
+    "preservedReferenceFiles": 607,
+    "sourceClosure": "Read-only comparison of committed normalized source/mirror hashes; no working file projection."
+  },
+  "catalogs": {
+    "format": "signature-i18n",
+    "locales": [
+      "en",
+      "bg"
+    ],
+    "localizationFiles": 29,
+    "localizationFilesDigest": "268743939a89d5fab5b8ba3df3a75aa0df793e0867055e82bfe4d189e57542df",
+    "resolvedHashConvention": "sha256 of UTF-8 JSON.stringify of the fully composed catalog, in committed insertion order",
+    "en": {
+      "keys": 2293,
+      "sha256": "eb49e233187f86c94e1618f69e882ffb0b299c3a351c823a850d7e38ba54b549"
+    },
+    "bg": {
+      "keys": 2293,
+      "sha256": "bd33003a71b77237d42964058d807a383be5b7a988920ca7524d2395f0ae732b"
+    },
+    "problems": [],
+    "nativeReleaseValidation": {
+      "detectedSourcePaths": [],
+      "nativeLocalizationAcceptanceProvided": false,
+      "explanation": "Signature uses src/lib/i18n catalogs and the general template-release envelope. No native-v1 block is fabricated."
+    }
+  },
+  "deployment": {
+    "id": "dpl_EDXrTKKtTcB8toeHoXadsUvoo68x",
+    "project": "cars-template-karento",
+    "projectId": "prj_l79mMMCI7onndJfgNTUdxIifOQ5r",
+    "state": "READY",
+    "commit": "f5378b16daa6ff6924141779a0fcf5f41931d9a8",
+    "url": "https://cars-template-karento.vercel.app/",
+    "immutableUrl": "https://cars-template-karento-lblicqg3r-tyj5.vercel.app",
+    "buildSeconds": 32.613,
+    "sourceCommit": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+    "publishingCommit": "f5378b16daa6ff6924141779a0fcf5f41931d9a8",
+    "evidence": {
+      "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/release-result.json",
+      "sha256": "bd55f1a18a2869526e2d424e53749a6395a05197c3da7d54b8e2217d2198f7cb"
+    },
+    "stateSource": "Existing exact-source recorded READY receipt; no new deployment or live provider reinspection in this closure."
+  },
+  "adapterInputClosure": {
+    "packageInputMatches": true,
+    "lockInputMatches": true,
+    "qualifiedMirrorRecipeMatches": true,
+    "canonicalRecipeTrackedState": "modified root-owned reviewed file; commit with publisher integration"
+  },
+  "missingGeneralTemplateApprovalGates": [],
+  "remainingDealerReleaseGates": [
+    "Select this immutable release in templates.lock.json through the authorized root approval operation and commit evidence/lock with the reviewed publisher revision.",
+    "Assemble a complete candidate from all six approved current pins using the existing preservation-aware CLI; the 25 drafts at I:/cars-runtime/cars-signature-25-20261009-2140 still bind Signature 03b70f633d1ab3191379b8d976a9dd35a84271bc.",
+    "Qualify actual /variant-6 dealer mounting, Services output, assets, truthful identity/inventory/actions, alternate homes, locale state, detail/back/reload and FAB/Admin at 320/390/1440 before installed-source export/deployment."
+  ],
+  "ownerVisualAcceptance": "Separate owner acceptance is not asserted by this technical envelope.",
+  "limitations": [
+    "Reused source and hosted receipts retain their original scope; historical reports and captures were not relabeled as a full new browser campaign.",
+    "No canonical dealer installation, package build, Git/index mutation, lock selection, push or deployment was performed by this closure."
+  ]
+}

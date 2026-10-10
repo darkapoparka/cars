@@ -156,6 +156,10 @@ function guardMobileFacts(files,profile) {
     source=replaceOne(source,'{Math.round(v.power / 1.36)} kW ({v.power} hp)',"{v.power > 0 ? Math.round(v.power / 1.36) + ' kW (' + v.power + ' hp)' : 'Power not published'}",'Mobile compact published power');
     return replaceOne(source,/<RatingStars rating=\{v\.rating\} size=\{20\} \/>\s*<span \{\.\.\.stylex\.props\(s\.reviewCount\)\}>\(\{v\.reviews\}\)<\/span>/,node=>'{v.reviews > 0 && (<>'+node+'</>)}','Mobile card verified reviews');
   });
+  patch('ShowroomVehicleCard.tsx',source=>source.includes('const desktopCovers:')
+    ?replaceOne(source,/const desktopCovers:\s*Record<string,\s*string>\s*=\s*\{[\s\S]*?\};/,
+      'const desktopCovers: Record<string, string> = {};','Mobile dealer-owned desktop gallery covers')
+    :source);
   patch('VehicleSections.tsx',source=>{
     const power="Math.round(v.power / 1.36) + ' kW (' + v.power + ' ' + t('hp') + ')'";
     if(source.split(power).length!==3)throw new Error('Reviewed Mobile power specification consumers changed');
@@ -207,11 +211,15 @@ function patchMobile(files, profile, logos) {
 function signatureCard(listing, profile, nativeFacts=false) {
   const business = profile.business;
   const priceFacts=signaturePriceFacts(listing),mileageFacts=signatureMileageFacts(listing);
-  const fuel=listing.fuel==='Not published'?'':listing.fuel,transmission=listing.transmission==='Not published'?'':listing.transmission;
-  const price = Number.isFinite(listing.priceAmount) ? new Intl.NumberFormat(business.locale, {style:'currency',currency:listing.currency,maximumFractionDigits:0}).format(listing.priceAmount) : 'Price on request';
+  const knownFuel={diesel:'Diesel',gasoline:'Petrol',electric:'Electric',hybrid:'Hybrid',lpg:'LPG'};
+  const knownTransmission={automatic:'Automatic',manual:'Manual'};
+  const fuel=listing.fuel==='Not published'?'':nativeFacts?(knownFuel[listing.fuelType]||listing.fuel):listing.fuel;
+  const transmission=listing.transmission==='Not published'?'':nativeFacts?(knownTransmission[listing.transmissionType]||listing.transmission):listing.transmission;
+  // Catalog filters parse invariant machine values; typed facts supply localized presentation.
+  const price = Number.isFinite(listing.priceAmount) ? nativeFacts?`${listing.priceAmount} ${listing.currency}`:new Intl.NumberFormat(business.locale, {style:'currency',currency:listing.currency,maximumFractionDigits:0}).format(listing.priceAmount) : 'Price on request';
   return { sample: false, image: listing.image, imageAlt: listing.title,
     href: '/vehicle?id=' + encodeURIComponent(listing.id), title: listing.title, location: listing.location || business.city,
-    mileage: Number.isFinite(mileageFacts.mileageValue)?`${mileageFacts.mileageValue.toLocaleString(business.locale)} ${mileageFacts.mileageUnit}`:'',
+    mileage: Number.isFinite(mileageFacts.mileageValue)?`${nativeFacts?mileageFacts.mileageValue:mileageFacts.mileageValue.toLocaleString(business.locale)} ${mileageFacts.mileageUnit}`:'',
     transmission, fuel, seats: listing.raw?.seats ? String(listing.raw.seats) : '',
     bodyType: listing.bodyType, price, pricePeriod: '', action: 'Enquire', rating: '', reviews: '',
     ...(nativeFacts?{...priceFacts,...mileageFacts,...(fuel?{fuelType:listing.fuelType}:{}),...(transmission?{transmissionType:listing.transmissionType}:{})}:{}) };
@@ -264,7 +272,7 @@ function bindSignatureDetail(files,profile,logos,nativeFacts=false) {
     const forwarded=(source,pattern,label)=>{
       if([...source.matchAll(new RegExp(pattern,'g'))].length!==1)throw new Error('Signature native detail must forward '+label+' exactly once');
     };
-    forwarded(component,'<MobileVehicleDetail\\s+\\{heading\\}\\s+\\{gallery\\}\\s+\\{specifications\\}\\s+\\{details\\}\\s+\\{reservation\\}\\s+\\{seller\\}\\s*\\/>','all six mobile props');
+    forwarded(component,'<MobileVehicleDetail\\s+\\{heading\\}\\s+\\{gallery\\}\\s+\\{specifications\\}\\s+\\{details\\}\\s+\\{reservation\\}\\s+\\{seller\\}(?:\\s+bind:loanState)?\\s*\\/>','all six mobile props');
     for(const source of [component,mobile])for(const [tag,prop]of [['VehicleHeading','heading'],['VehicleSpecifications','specifications'],['VehicleDetailPanels','details'],['VehicleReservationCard','reservation'],['DetailSellerCard','seller']])
       forwarded(source,'<'+tag+'\\s+\\{'+prop+'\\}(?=\\s|\\/)','selected '+prop);
     forwarded(component,'<VehicleSliderGallery\\s+\\{gallery\\}\\s*\\/>','desktop gallery');
@@ -363,6 +371,14 @@ function personalizeSignatureCopy(files,profile) {
   for(const [name,bytes] of files) {
     if(!name.startsWith(prefix+'src/lib/') || !name.endsWith('.svelte')) continue;
     let component=bytes.toString('utf8');
+    if(name.endsWith('/ContactLocationCard.svelte')) {
+      if(!component.includes('{#if location.avatar}'))component=replaceOne(component,/<div class="card-image"\s*>\s*<img[\s\S]*?\/><\/div\s*>/,node=>'{#if location.avatar}'+node+'{/if}','Signature unpublished location portrait');
+      if(!component.includes('{#if location.email}')) {
+        const rows=[...component.matchAll(/\n        <div class="d-flex align-items-(?:start|center)(?: mb-2)?">[\s\S]*?\n        <\/div>/g)].filter(match=>match[0].includes('location.email'));
+        if(rows.length!==1)throw new Error('Signature optional email row needs one reviewed contact boundary');
+        component=component.replace(rows[0][0],'\n        {#if location.email}'+rows[0][0]+'\n        {/if}');
+      }
+    }
     if(name.endsWith('/VehicleHeading.svelte')&&!/\{#if[^}]*heading\.rating[^}]*heading\.reviewCount/.test(component))component=replaceOne(component,/<div class="tour-rate">[\s\S]*?<\/div>\s*<\/div>/,node=>'{#if heading.rating && heading.reviewCount}'+node+'{/if}','Signature PDP rating guard');
     if(name.includes('/cards/')&&component.includes('{card.rating}')&&!/\{#if[^}]*card\.rating[^}]*card\.reviews/.test(component))component=replaceOne(component,/<span\s+class=[^>]*>\s*\{card\.rating\}[\s\S]*?<\/span\s*>\s*<\/span\s*>/,node=>'{#if card.rating && card.reviews}'+node+'{/if}','Signature card rating guard');
     if(name.endsWith('/ReviewSummary.svelte')&&!/\{#if[^}]*summary\.count/.test(component))component=replaceOne(component,/<FiveStarRating source="\/assets\/imgs\/page\/tour-detail\/star\.svg" \/>/,node=>'{#if summary.count}'+node+'{/if}','Signature verified review stars');
@@ -379,6 +395,60 @@ function personalizeSignatureCopy(files,profile) {
     if(component!==bytes.toString('utf8')) {put(files,name,component);changed.push(name);}
   }
   return unique(changed);
+}
+
+function bindSignatureDiscovery(files,profile,cards) {
+  const prefix='karento-best/src/routes/2/',file=prefix+'discovery.ts';
+  if(!files.has(file))return [];
+  let source=text(files,file);
+  if(!source.includes('titleKey?:')||!source.includes('priceAmount?:')||!source.includes('year?:')||!source.includes('discoveryMessages'))
+    throw new Error('Signature discovery requires the qualified optional factual data and native catalog boundaries');
+  const currency=signatureBusinessPreview(profile).currency;
+  const records=profile.listings.map((listing,index)=>({...cards[index],id:listing.id,make:listing.make||'',
+    ...(Number.isInteger(listing.year)&&listing.year>0?{year:listing.year}:{}),
+    ...(Number.isFinite(listing.priceAmount)?{priceAmount:listing.priceAmount}:{}),currency:listing.currency,
+    ...(['hatchback','sedan','suv','pickup','coupe','convertible'].includes(listing.bodyType)?{body:listing.bodyType}:{}),
+    // This preserves source order; no arrival date, discount or exclusive offer is asserted.
+    arrival:profile.listings.length-index,offer:false,exclusive:false}));
+  source=replaceExportInitializer(source,'discoveryCars',records);
+  if(source.includes('function sample(input: Sample): DiscoveryCar {')) {
+    source=replaceOne(source,/\ntype Sample = Pick<[\s\S]*?\nfunction sample\(input: Sample\): DiscoveryCar \{[\s\S]*?\n\}\n(?=\nexport const discoveryCars)/,'\n','Signature unused donor discovery builder');
+    if(/:\s*Sample\b|\btype Sample\b|\bsample\(/.test(source))throw new Error('Signature discovery still consumes the removed donor builder');
+  }
+  const collections=[{id:'newest',title:'all'},...(currency?[{id:'cheapest',title:'cheapest'}]:[]),
+    ...(records.some(car=>car.make==='BMW')?[{id:'bmw',title:'bmw'}]:[]),
+    ...(records.some(car=>['Audi','BMW','Mercedes-Benz','Volkswagen'].includes(car.make))?[{id:'german',title:'german'}]:[]),
+    ...(records.some(car=>car.body==='suv')?[{id:'suvs',title:'suvs'}]:[])];
+  source=replaceExportInitializer(source,'collections',collections);
+  source=replaceOne(source,'export const collections =','export const collections: readonly { id: CollectionId; title: DiscoveryTextKey }[] =',
+    'Signature typed factual collection labels');
+  source=replaceOne(source,'export type CollectionId = Collection["id"];',
+    'export type CollectionId = "newest" | "offers" | "under-10000" | "cheapest" | "premium" | "exclusive" | "under-20000" | "bmw" | "german" | "suvs";',
+    'Signature stable discovery collection IDs');
+  const notice=profile.stockKind==='illustrative-not-dealer-stock'?'dealer.stock.illustrativeNotice':'dealer.stock.notice';
+  source=replaceOne(source,/sample: "reference\.discovery\.disclosure\.summary"/,`sample: ${JSON.stringify(notice)}`,'Signature discovery stock disclosure');
+  source=replaceOne(source,/sampleDetail: "reference\.discovery\.disclosure\.detail"/,`sampleDetail: ${JSON.stringify(notice)}`,'Signature discovery detail disclosure');
+  put(files,file,source);
+  const homeFile=prefix+'DiscoveryHome.svelte',home=text(files,homeFile);
+  const pills=[{title:'all',section:'collections'},{title:'brandPill',section:'brand-search'},
+    ...(currency?[{title:'cheapest',section:'collection-cheapest'}]:[]),
+    ...(records.some(car=>car.body==='suv')?[{title:'suvPill',section:'collection-suvs'}]:[])];
+  put(files,homeFile,replaceOne(home,/const pills = \[[\s\S]*?\] as const;/,`const pills = ${JSON.stringify(pills,null,2)} as const;`,'Signature factual discovery navigation'));
+  const searchFile=prefix+'DiscoverySearch.svelte';
+  let search=text(files,searchFile);
+  if(currency)search=search.replaceAll(', "EUR")',', '+JSON.stringify(currency)+')');
+  else {
+    search=replaceOne(search,/<section class="budget-section(?: search-panel)?">[\s\S]*?<\/section>/,'','Signature mixed currency budget control');
+    source=replaceOne(text(files,file),/priceMax:\s*normalizeCatalogBudget\(params\.get\("priceMax"\) \?\? ""\) \?\? ""/,'priceMax: ""','Signature mixed currency budget query');
+    put(files,file,source);
+  }
+  put(files,searchFile,search);
+  const catalogFile='karento-best/src/lib/i18n/catalogs/reference-discovery.ts';
+  let catalog=text(files,catalogFile);
+  catalog=catalog.replaceAll('"Maximum price (€)"',JSON.stringify(currency?'Maximum price ('+currency+')':'Maximum price'))
+    .replaceAll('"Максимална цена (€)"',JSON.stringify(currency?'Максимална цена ('+currency+')':'Максимална цена'));
+  put(files,catalogFile,catalog);
+  return [file,homeFile,searchFile,catalogFile];
 }
 
 function patchSignature(files, profile, logos) {
@@ -410,7 +480,7 @@ function patchSignature(files, profile, logos) {
   put(files,listData,personalizedListing);
   const detailData = prefix+'src/lib/data/dealer-vehicles.json';
   put(files,detailData,jsonText(profile.listings.map((listing,index)=>({ ...listing,raw:undefined,card:cards[index] }))));
-  return {contentPaths:[file,homeData,listData,detailData,...bindSignatureDetail(files,profile,logos,nativeFacts),...personalizeSignatureCopy(files,profile)],inventory:cards,nativeFacts};
+  return {contentPaths:[file,homeData,listData,detailData,...bindSignatureDetail(files,profile,logos,nativeFacts),...personalizeSignatureCopy(files,profile),...bindSignatureDiscovery(files,profile,cards)],inventory:cards,nativeFacts};
 }
 
 /** Personalization operates on a derived pinned source map, never an editable master. */

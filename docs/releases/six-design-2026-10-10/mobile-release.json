@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "kind": "exact-source-template-release-evidence",
+  "repository": "darkapoparka/cars",
+  "commit": "3f637b0ff6861af1290cd579cf5aca45bb47c971",
+  "sourcePath": "templates/mobile",
+  "sourceTree": "57c9fd1c2d5683bf3b5c9e2cd2130f1ea67707e9",
+  "sourceDigest": "dab2c1134b68cb96d66c43ff507a80b48c1a3d311a80d287345cbfc01dc4b839",
+  "exportPolicy": "cars-source-v1",
+  "release": "mobile-final-owner-handoff-pending-2026-10-10",
+  "recordedAt": "2026-10-10T08:14:05.803Z",
+  "verifiedAt": null,
+  "approved": false,
+  "status": "pending-service-draft-integration-and-exact-evidence",
+  "runtime": {
+    "node": "22.20.0",
+    "declaredNode": "22.x",
+    "next": "16.3.8"
+  },
+  "modes": {
+    "standalone": "Latest committed desktop/selector changes and the dirty service feature have separate local receipts; complete final immutable evidence is pending.",
+    "mounted": "requires-dealer-QA"
+  },
+  "standalone": {
+    "mobile": false,
+    "desktop": false
+  },
+  "owners": [
+    {
+      "threadId": "01a12443-0df5-7fc0-a2ab-778f8d361b13",
+      "observedStatus": "idle",
+      "scope": "Committed desktop/selector polish, latest pushed source 3f637b0."
+    },
+    {
+      "threadId": "01a123d5-1d21-7b21-a5f7-1fbfbcc34ee8",
+      "observedStatus": "notLoaded",
+      "scope": "Service detail pages and Contact follow-up; final local checks are recorded, source remains dirty/untracked."
+    }
+  ],
+  "uncommittedOwnerConsumers": {
+    "recordedAt": "2026-10-10T08:14:05.803Z",
+    "scope": "Read-only current file hashes for continuity on resume; not an immutable release or a claim that the exact hashes were tested.",
+    "files": [
+      {
+        "path": "templates/mobile/src/components/AppShell.tsx",
+        "sha256": "11eef6b590d072c889d4e1cebd1b929fb1576544bd34c0292a213982506da543"
+      },
+      {
+        "path": "templates/mobile/src/components/ContactSheet.tsx",
+        "sha256": "9fb30cc41f28e701b8b7e997bdd32eca93ab847a5fdde1e050f175fba13d7220"
+      },
+      {
+        "path": "templates/mobile/src/components/ShowroomContactScreen.tsx",
+        "sha256": "b6b53e03da3901d8f51ba908603cef7e4ee299f192421833de1f5e2b503cc7e1"
+      },
+      {
+        "path": "templates/mobile/src/components/ShowroomDesktopNavigation.tsx",
+        "sha256": "7b3b0c60e7649c0c56e633b51a0fcf3559340771e0ebc031e9c875f2b3acb3d8"
+      },
+      {
+        "path": "templates/mobile/src/components/ShowroomServiceRequest.tsx",
+        "sha256": "1e34899eed72e6a940b01dd349d86bad8c45b265ecb71b4377ad7bdb52685113"
+      },
+      {
+        "path": "templates/mobile/src/components/ShowroomServicesScreen.tsx",
+        "sha256": "15dc644c679a097e5831a27caeebb1993bc00e0274621d5f8c4d49994c1c8ece"
+      },
+      {
+        "path": "templates/mobile/src/app/services/[id]/page.tsx",
+        "sha256": "eb55e2980ed3af202c7e97301f1f993e26ab7e52b2933fbcef68436189fda26d"
+      },
+      {
+        "path": "templates/mobile/src/components/ShowroomServiceDetailScreen.tsx",
+        "sha256": "876304370683400843e35e8ae5ab671d1662fb027e56e58184dfd9f2a18ff9b7"
+      },
+      {
+        "path": "templates/mobile/src/components/showroom-service-detail.stylex.ts",
+        "sha256": "0a090698149e4723b71ae8be059da6a0863f0b714dcc1412d2936ffb40f4d4a3"
+      },
+      {
+        "path": "templates/mobile/src/lib/showroom-service-details.ts",
+        "sha256": "c3c23fc91afdb790de5bbee0677c2eabfcf356077ade0518123089891f4143b0"
+      },
+      {
+        "path": "templates/mobile/tests/service-details.test.mjs",
+        "sha256": "705e842c3275f31160ea6ebdb325afa4b42c0c556e17c5bd5373bac038773a8c"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "name": "observed-immutable-source-identity",
+      "status": "passed",
+      "scope": "The pushed Cars main snapshot, subtree and cars-source-v1 digest were read directly. Service-detail dirty inputs are excluded from this immutable source."
+    },
+    {
+      "name": "recorded-desktop-and-selector-owner-checks",
+      "status": "recorded-baseline",
+      "scope": "The desktop-final owner recorded committed-candidate full lint/types, 156 domain tests, build and focused 320/390/1024/1440 checks. Category correction and final label changes have narrower focused checks. No new checks were run during this envelope inventory.",
+      "evidence": [
+        {
+          "path": "templates/mobile/docs/desktop-final-2026-10-10/result.md",
+          "sha256": "c0ffa888fc5064c9ca7f7b690181b22b367926a99569eb855dca358e4af9a1ef"
+        },
+        {
+          "path": "templates/mobile/docs/services-category-correction-2026-10-10/result.md",
+          "sha256": "a445021c310b3527212bcb9b4b8166485401865d4913aaa8cc4fadcb0b1f6893"
+        },
+        {
+          "path": "runtime/mobile-label-polish-20261010/placeholder-commit.json",
+          "sha256": "7d51518ad9ec7a81445999ae5f328decfb0b311dc8c8e44cf98b886046469808"
+        },
+        {
+          "path": "runtime/mobile-label-polish-20261010/placeholder-push.json",
+          "sha256": "c53e60aa8a3ba4819858657c91129318e57cb592d7b4fcca452b8887366c903b"
+        }
+      ]
+    },
+    {
+      "name": "recorded-service-detail-owner-checks",
+      "status": "recorded-working-inputs",
+      "scope": "The existing owner README records the initial 132-page routing build plus focused local journeys/tests. The final Contact/header follow-up records lint/types, five tests and 320/390/1440 EN/BG checks without repeating that build. These working-input records are not exact committed-source or hosted proof.",
+      "evidence": [
+        {
+          "path": "docs/mobile-service-details-20261010/README.md",
+          "sha256": "286e7bd5523433b0922cd5e9ced5104533e7c7cd7623ebcbc3b02aad040321c6"
+        }
+      ]
+    },
+    {
+      "name": "final-owner-source-freeze",
+      "status": "pending",
+      "scope": "The service owner must preserve and finish the six modified consumers plus new detail route/screen/style/domain/test files as a scoped Cars main commit/push; this envelope does not adopt dirty source."
+    },
+    {
+      "name": "immutable-consumer-continuity-and-delta-closure",
+      "status": "pending",
+      "scope": "Compare the final committed service/desktop inputs against the recorded local checkpoint inputs; reuse matching checks and qualify the changed follow-up. The final complete integration checkpoint is required only where no completed checkpoint matches the final inputs."
+    },
+    {
+      "name": "latest-exact-hosted-source",
+      "status": "pending",
+      "scope": "The latest recorded READY publishing mirror binds b118edf, not 3f637b0 or the uncommitted service-detail work.",
+      "evidence": [
+        {
+          "path": "runtime/mobile-price-filter-release-20261010/mirror-source.json",
+          "sha256": "95981f170fccab5e1e444d9b648f17dbca7ae827d47d5691478224e282982097"
+        },
+        {
+          "path": "runtime/mobile-price-filter-release-20261010/hosted-deployment.json",
+          "sha256": "fb686202bd5caf6ee2c5bfb9f18d0567fc7163e395b0726bb58654d2a9d91825"
+        }
+      ]
+    }
+  ],
+  "deployment": {
+    "matchesSelectedSource": false,
+    "state": "not-established-for-observed-source",
+    "baseline": {
+      "sourceCommit": "b118edf7da44c8dcd8591f5cd93649d963694514",
+      "sourceTree": "9db18cda3369a3bc61554effed00a06992556862",
+      "sourceDigest": "210ec1eca539325856759af4e657e13c98ac78dc68c53efd7a28d09efd7897f7",
+      "publishingRepository": "darkapoparka/cars-template-mobile",
+      "publishingCommit": "a3d4927f1e5424be4877862c5374d0e76aae8ea2",
+      "id": "dpl_6en8pa6bXp5P3Aa6DSTDZqfMEbEJ",
+      "state": "READY",
+      "publicAlias": "https://cars-template-mobile.vercel.app",
+      "checkedAt": "2026-10-10T06:09:54.908Z",
+      "scope": "Recorded exact older source only; no current live deployment query was run."
+    }
+  },
+  "previousSelectedRelease": {
+    "commit": "876590474d01178413feccf3153a0859230158a1",
+    "evidence": "docs/releases/six-design-2026-10-09/extended/mobile-release.json",
+    "scope": "Older working-lock selection; not final source."
+  },
+  "nextAction": "Finish the service owner scoped source handoff, inspect that exact final SHA with template-release approve without --write, bind matching local/hosted source proof and focused delta closure, then let the publisher owner select the release."
+}

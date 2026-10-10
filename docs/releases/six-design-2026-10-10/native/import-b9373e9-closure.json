@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "kind": "current-source-native-release-closure-draft",
+  "key": "import",
+  "recordedAt": "2026-10-10T08:15:22.104Z",
+  "source": {
+    "repository": "darkapoparka/cars",
+    "revision": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+    "path": "templates/import",
+    "tree": "b64c4a4939c4244ba3f408e5c0311c586a913e67",
+    "digest": "eef4c3544b28bb3a62cad4c2a07e4ff64301fb4c9e9925ba002077bda7f63bd3"
+  },
+  "approved": false,
+  "sourceFingerprint": {
+    "verifiedInThisTask": true,
+    "exportPolicy": "cars-source-v1",
+    "retainedFiles": 3423
+  },
+  "originalOwnerReceipts": [
+    {
+      "path": "runtime/import-mobile-final-audit-20261009/header-controls-final-20261010/import-source.json",
+      "sha256": "276005fd1dfbbcab49c84711863bf9384bb1ea1d5b3e3a9469d85772ba0e6938"
+    },
+    {
+      "path": "runtime/import-mobile-final-audit-20261009/header-controls-final-20261010/import-mirror.json",
+      "sha256": "5576fdb4c1b056b3a2a502917e89c6cba6e43823c13eb8793fadb2c633c24cd9"
+    },
+    {
+      "path": "runtime/import-mobile-final-audit-20261009/header-controls-final-20261010/import-mirror-drift.json",
+      "sha256": "a7159b1000109acfc24665bbd5fc01496ef855d0d636d2d46a776fc186731143"
+    },
+    {
+      "path": "runtime/import-mobile-final-audit-20261009/header-controls-final-20261010/result.md",
+      "sha256": "6aa6a67c68cdf32555f18eb3ed00448856aee4b7b7e037c6635e788d1b604ecd"
+    },
+    {
+      "path": "runtime/import-mobile-final-audit-20261009/header-controls-final-20261010/verification.json",
+      "sha256": "0f0dd3003fe50f19b3f02d5d57c8c8c7acba218f5e90e654057b21793bcf4f87"
+    },
+    {
+      "path": "runtime/import-mobile-final-audit-20261009/header-controls-final-20261010/unit.log",
+      "sha256": "c7c91d77c67c574fdbc3f9da6563d75cb636371ae05fffa094ac8642550106d2"
+    },
+    {
+      "path": "runtime/import-mobile-final-audit-20261009/header-controls-final-20261010/types.log",
+      "sha256": "8c269594860822cfdb80a8ae0fe72e59a4a0b6cd6e24d17720d53d2c238bd9d0"
+    },
+    {
+      "path": "runtime/import-mobile-final-audit-20261009/header-controls-final-20261010/build.log",
+      "sha256": "89d978ced3b80bb35c0e8db9ac090d6ee32cfa9c044ccebfcbf51fab2c7f8c7b"
+    }
+  ],
+  "currentFacts": [
+    "Owner final result and mirror receipts bind b9373e9/tree b64c4a4/digest eef4c354 to mirror63c8f72 and READY dpl_FVLe1Dr6vChJWkuJWSf5iwYpz4pN.",
+    "Owner reports all190 unit tests, strict Svelte diagnostics0/0, architecture61entries/274modules and1013 image signatures passed; compact original logs are referenced.",
+    "Local production build preceded the final CSS-only map glyph adjustment. That adjustment passed focused Svelte/lint/format/render checks and Vercel subsequently built the final exact source successfully. The old local build is not labelled as the final exact CSS build.",
+    "Final verification includes16 local BG/EN320/390 cases and8 hosted EN390/BG320 Home/Import/Cars/PDP cases, desktop1440 and gallery/contact/sort/filter/locale-opening interactions.",
+    "The Cars-only38px experiment was removed; source remains owner-selected40px/18px/44px. docs/qa/import-template-release-2026-10-10.json binds the older a51 source and cannot approve b9373e9.",
+    "From a51,66 retained files changed (63 outside Markdown/docs), including localized source copy, home inventory extraction and footer locale entry."
+  ],
+  "providerObservation": {
+    "id": "dpl_FVLe1Dr6vChJWkuJWSf5iwYpz4pN",
+    "name": "cars-template-import",
+    "state": "READY",
+    "target": "production",
+    "url": "cars-template-import-dtzkv74rt-tyj5.vercel.app",
+    "meta": {
+      "sourceCommit": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+      "publishingCommit": "63c8f720b8c2b61596ddcecf68d3fc56c714109c",
+      "publishingRepository": "darkapoparka/cars-template-import",
+      "githubCommitMessage": "Publish polished import template for phone testing\n\nCars source: b9373e9ed5453bc7d208898ae140eae4d596a232\nCars subtree: templates/import\nCars digest: eef4c3544b28bb3a62cad4c2a07e4ff64301fb4c9e9925ba002077bda7f63bd3"
+    },
+    "observation": "Read-only Vercel connector response obtained during the earlier readiness assessment in this task; owner final deployment receipt is linked separately.",
+    "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv"
+  },
+  "catalogAudit": {
+    "catalogs": [
+      {
+        "descriptor": {
+          "format": "typescript-pair",
+          "path": "src/lib/locale/messages.ts",
+          "en": "en",
+          "bg": "bg"
+        },
+        "keys": 15,
+        "contentDigest": "06dead7dfa79c57f0872d960d112141262b5a5ca4998d76523cc6351d101ab6f"
+      },
+      {
+        "descriptor": {
+          "format": "typescript-pair",
+          "path": "src/lib/i18n/native.ts",
+          "en": "nativeEn",
+          "bg": "nativeBg"
+        },
+        "keys": 254,
+        "contentDigest": "66b25993df9cb487bb1efc81a80a27af0edeab104f581aae0451c2c5bd1286b6"
+      },
+      {
+        "descriptor": {
+          "format": "typescript-pair",
+          "path": "src/lib/content/localized.ts",
+          "en": "contentEn",
+          "bg": "contentBg"
+        },
+        "keys": 158,
+        "contentDigest": "631c6d046ccb14d7b34934e4f6f5db535876af1a7cf76cd886533f09d18f1b61"
+      },
+      {
+        "descriptor": {
+          "format": "typescript-rows",
+          "path": "src/lib/content/inventory-localized.ts",
+          "export": "inventoryCopy"
+        },
+        "keys": 119,
+        "contentDigest": "195a0cdb2850ed419adfbccb5e9900b7b5a5376f42c6e4ce9a57f30b1c6b748f"
+      },
+      {
+        "descriptor": {
+          "format": "typescript-source-map",
+          "path": "src/lib/content/extra-localized.ts",
+          "export": "extraEnglish"
+        },
+        "keys": 90,
+        "contentDigest": "f1451cb59cc1247baa11419ecff9d8c46534b866fea8d14001ef9b70bd410f0d"
+      }
+    ],
+    "declaredCatalogParityPassed": true,
+    "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+  },
+  "deltaReview": {
+    "baseline": {
+      "path": "docs/releases/six-design-2026-10-09/native/import-a51-release.json",
+      "sha256": "e01306a09e8ff75aec0b9b2ed1a6bb506c54fd391b198ce1f14c7e42723b71f4",
+      "commit": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
+      "role": "Historical original acceptance; not relabelled as current browser proof"
+    },
+    "retainedFileDifferences": 66,
+    "nonMarkdownOutsideDocsDifferences": 63,
+    "affectedNativeOrIntegrationInputs": [
+      "src/lib/i18n/native.ts",
+      "src/lib/content/extra-localized.ts",
+      "src/lib/server/home.ts",
+      "src/lib/server/inventory-options-mobile.ts",
+      "src/lib/components/layout/PublicFooter.svelte",
+      "src/routes/(site)/+layout.svelte"
+    ],
+    "contextOnly": [
+      {
+        "path": "templates/import/docs/final-pass-2026-10-10/README.md",
+        "sha256": "949690c5a2f20f9c7454f28f7ee6e5e20102848cf249f37aec0ad72ea97a65c9"
+      },
+      {
+        "path": "docs/qa/import-template-release-2026-10-10.json",
+        "sha256": "9b43adadc781cf5ae2720203f9cd4d081a6f781d37c796f876f58293fab85220"
+      }
+    ]
+  },
+  "closureStatus": {
+    "exactSource": true,
+    "exactPublishingMirror": true,
+    "matchingReadyMasterDeployment": true,
+    "masterBuildReceiptAvailable": true,
+    "focusedStandaloneDeltaReceiptsAvailable": true,
+    "declaredCatalogParity": true,
+    "fullNativeAcceptance": false,
+    "dealerMountedAcceptance": false,
+    "templateLockChanged": false,
+    "dealersDeployed": false
+  },
+  "remaining": [
+    {
+      "gate": "native-acceptance",
+      "checkNames": [
+        "catalog-completeness",
+        "hardcoded-ui",
+        "native-routing",
+        "standalone-journeys",
+        "public-journeys",
+        "preferences-no-js",
+        "preferences-storage-disabled",
+        "preferences-races",
+        "request-isolation",
+        "security-write-blocking",
+        "assets-preserved"
+      ],
+      "required": "Bind the existing current-owner receipts to these categories where their actual coverage suffices; use current-source native policy/browser acceptance only for missing coverage. Fresh exact catalog key/interpolation parity and focused master receipts are already available. Historical receipts retain their original SHAs. Current source full-native browser receipt was not found. No whole master build is needed."
+    },
+    {
+      "gate": "mounted-journeys",
+      "required": "Qualify the final exact selected trio in the representative six-family package, including Import/Modern at both variant-2/variant-3 orders, EN/BG320/390/1440, prefix/resources/deep links, affected filters/locale entry and shared prompt. Neither owner standalone proof nor old pinned mounted builds satisfies this gate."
+    }
+  ],
+  "limitations": [
+    "This file records source identity, original receipts and closure gaps; recordedAt is assembly time, not a new browser execution time.",
+    "No permission hold: the owner has authorized final release/Vercel rollout. Missing evidence stays a verification hold.",
+    "No new full audit, master build, browser campaign, source copy, lock/index/Git or publishing mutation was performed."
+  ]
+}

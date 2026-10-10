@@ -1,0 +1,270 @@
+{
+  "schemaVersion": 1,
+  "kind": "exact-source-release-envelope-draft",
+  "repository": "darkapoparka/cars",
+  "commit": "696230a404abd9b20b6f907b9cfb139175298c7a",
+  "sourcePath": "templates/auto-best",
+  "sourceTree": "b07ff2273be554ef64a039ac8f4f023ae60a33ac",
+  "sourceDigest": "90f131aa0ead6ae4fcb06d30c054ca4d0c5d39097a2927cca8f298c7d2dfb3ca",
+  "approved": false,
+  "verifiedAt": "2026-10-10T08:15:22.104Z",
+  "release": "six-design-source-auto-best-2026-10-10",
+  "runtime": {
+    "node": "22.20.0"
+  },
+  "checks": [
+    {
+      "name": "exact-source-and-mirror",
+      "status": "passed",
+      "evidence": [
+        {
+          "path": "docs/releases/six-design-2026-10-10/native/auto-best-696230a-closure.json",
+          "sha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97"
+        }
+      ],
+      "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97"
+    },
+    {
+      "name": "matching-master-build",
+      "status": "passed",
+      "evidence": [
+        {
+          "path": "docs/releases/six-design-2026-10-10/native/auto-best-696230a-closure.json",
+          "sha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97"
+        }
+      ],
+      "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97"
+    },
+    {
+      "name": "declared-catalog-parity",
+      "status": "passed",
+      "evidence": [
+        {
+          "path": "docs/releases/six-design-2026-10-10/native/auto-best-696230a-closure.json",
+          "sha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97"
+        }
+      ],
+      "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97"
+    },
+    {
+      "name": "scoped-owner-standalone-delta",
+      "status": "passed",
+      "evidence": [
+        {
+          "path": "docs/releases/six-design-2026-10-10/native/auto-best-696230a-closure.json",
+          "sha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97"
+        }
+      ],
+      "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97"
+    },
+    {
+      "name": "catalog-completeness",
+      "status": "pending",
+      "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+      "scope": "Exact current declared catalog parity is passed in closure.catalogAudit; full native acceptance reconciliation remains pending."
+    },
+    {
+      "name": "hardcoded-ui",
+      "status": "pending",
+      "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+      "scope": "Owner targeted checks are available in the hashed closure; this draft does not claim a new full-native execution."
+    },
+    {
+      "name": "native-routing",
+      "status": "pending",
+      "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+      "scope": "Owner targeted checks are available in the hashed closure; this draft does not claim a new full-native execution."
+    },
+    {
+      "name": "standalone-journeys",
+      "status": "pending",
+      "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+      "scope": "Owner targeted checks are available in the hashed closure; this draft does not claim a new full-native execution."
+    },
+    {
+      "name": "mounted-journeys",
+      "status": "pending",
+      "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+      "scope": "Current exact six-family mounted proof is missing; old source evidence is retained as history."
+    },
+    {
+      "name": "public-journeys",
+      "status": "pending",
+      "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+      "scope": "Owner targeted checks are available in the hashed closure; this draft does not claim a new full-native execution."
+    },
+    {
+      "name": "preferences-no-js",
+      "status": "pending",
+      "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+      "scope": "Owner targeted checks are available in the hashed closure; this draft does not claim a new full-native execution."
+    },
+    {
+      "name": "preferences-storage-disabled",
+      "status": "pending",
+      "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+      "scope": "Owner targeted checks are available in the hashed closure; this draft does not claim a new full-native execution."
+    },
+    {
+      "name": "preferences-races",
+      "status": "pending",
+      "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+      "scope": "Owner targeted checks are available in the hashed closure; this draft does not claim a new full-native execution."
+    },
+    {
+      "name": "request-isolation",
+      "status": "pending",
+      "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+      "scope": "Owner targeted checks are available in the hashed closure; this draft does not claim a new full-native execution."
+    },
+    {
+      "name": "security-write-blocking",
+      "status": "pending",
+      "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+      "scope": "Owner targeted checks are available in the hashed closure; this draft does not claim a new full-native execution."
+    },
+    {
+      "name": "assets-preserved",
+      "status": "pending",
+      "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+      "scope": "Owner targeted checks are available in the hashed closure; this draft does not claim a new full-native execution."
+    }
+  ],
+  "standalone": {
+    "mobile": true,
+    "desktop": true,
+    "scope": "Original owner focused UI/build/hosted checks; full native journeys remain pending."
+  },
+  "modes": {
+    "standalone": "Focused current owner receipts retained; see closure.",
+    "mounted": "pending exact representative six-family acceptance",
+    "dealer": "not deployed"
+  },
+  "nativeLocalization": {
+    "schemaVersion": 1,
+    "adapter": "native-v1",
+    "repository": "darkapoparka/cars",
+    "commit": "696230a404abd9b20b6f907b9cfb139175298c7a",
+    "sourcePath": "templates/auto-best",
+    "sourceTree": "b07ff2273be554ef64a039ac8f4f023ae60a33ac",
+    "sourceDigest": "90f131aa0ead6ae4fcb06d30c054ca4d0c5d39097a2927cca8f298c7d2dfb3ca",
+    "verifiedAt": "2026-10-10T08:15:22.104Z",
+    "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+    "locales": [
+      "en",
+      "bg"
+    ],
+    "widths": [
+      320,
+      390,
+      1440
+    ],
+    "widthsMeaning": "Required acceptance widths; checks remain pending, not a new execution claim.",
+    "catalogs": [
+      {
+        "format": "typescript-pair",
+        "path": "src/lib/locale/catalog.ts",
+        "en": "en",
+        "bg": "bg"
+      }
+    ],
+    "deployment": {
+      "id": "dpl_G1VGqetcp7n6phxTu2NPSLukiogZ",
+      "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+      "state": "READY",
+      "sourceCommit": "696230a404abd9b20b6f907b9cfb139175298c7a",
+      "publicAlias": "https://cars-template-auto-best.vercel.app/",
+      "publishingRepository": "darkapoparka/cars-template-auto-best",
+      "publishingCommit": "e91baa9c2247f17186dcf43b3b1c8bc83a0266c6",
+      "sourceMapping": {
+        "path": "docs/releases/six-design-2026-10-10/native/auto-best-696230a-closure.json",
+        "sha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97"
+      }
+    },
+    "checks": [
+      {
+        "name": "catalog-completeness",
+        "status": "pending",
+        "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+        "scope": "Exact current declared catalog parity is passed in closure.catalogAudit; full native acceptance reconciliation remains pending."
+      },
+      {
+        "name": "hardcoded-ui",
+        "status": "pending",
+        "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+        "scope": "Owner targeted checks are available in the hashed closure; this draft does not claim a new full-native execution."
+      },
+      {
+        "name": "native-routing",
+        "status": "pending",
+        "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+        "scope": "Owner targeted checks are available in the hashed closure; this draft does not claim a new full-native execution."
+      },
+      {
+        "name": "standalone-journeys",
+        "status": "pending",
+        "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+        "scope": "Owner targeted checks are available in the hashed closure; this draft does not claim a new full-native execution."
+      },
+      {
+        "name": "mounted-journeys",
+        "status": "pending",
+        "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+        "scope": "Current exact six-family mounted proof is missing; old source evidence is retained as history."
+      },
+      {
+        "name": "public-journeys",
+        "status": "pending",
+        "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+        "scope": "Owner targeted checks are available in the hashed closure; this draft does not claim a new full-native execution."
+      },
+      {
+        "name": "preferences-no-js",
+        "status": "pending",
+        "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+        "scope": "Owner targeted checks are available in the hashed closure; this draft does not claim a new full-native execution."
+      },
+      {
+        "name": "preferences-storage-disabled",
+        "status": "pending",
+        "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+        "scope": "Owner targeted checks are available in the hashed closure; this draft does not claim a new full-native execution."
+      },
+      {
+        "name": "preferences-races",
+        "status": "pending",
+        "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+        "scope": "Owner targeted checks are available in the hashed closure; this draft does not claim a new full-native execution."
+      },
+      {
+        "name": "request-isolation",
+        "status": "pending",
+        "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+        "scope": "Owner targeted checks are available in the hashed closure; this draft does not claim a new full-native execution."
+      },
+      {
+        "name": "security-write-blocking",
+        "status": "pending",
+        "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+        "scope": "Owner targeted checks are available in the hashed closure; this draft does not claim a new full-native execution."
+      },
+      {
+        "name": "assets-preserved",
+        "status": "pending",
+        "evidenceSha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97",
+        "scope": "Owner targeted checks are available in the hashed closure; this draft does not claim a new full-native execution."
+      }
+    ]
+  },
+  "qualification": {
+    "path": "docs/releases/six-design-2026-10-10/native/auto-best-696230a-closure.json",
+    "sha256": "b9518e088dd884921b2653064cf89f6a20c78672ddd4c36d904899526bd78c97"
+  },
+  "limitations": [
+    "This file records source identity, original receipts and closure gaps; recordedAt is assembly time, not a new browser execution time.",
+    "No permission hold: the owner has authorized final release/Vercel rollout. Missing evidence stays a verification hold.",
+    "No new full audit, master build, browser campaign, source copy, lock/index/Git or publishing mutation was performed."
+  ],
+  "ownerVisualApproval": false,
+  "dealersDeployed": false
+}

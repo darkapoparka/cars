@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "kind": "current-source-native-release-closure-draft",
+  "key": "modern",
+  "recordedAt": "2026-10-10T08:15:22.104Z",
+  "source": {
+    "repository": "darkapoparka/cars",
+    "revision": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+    "path": "templates/modern",
+    "tree": "51d68e5dd6e3b305191df94e877403fd7b7414e1",
+    "digest": "b035a849efb41d3ed18d97fcf3511850469162c0a990397b74be588179d43588"
+  },
+  "approved": false,
+  "sourceFingerprint": {
+    "verifiedInThisTask": true,
+    "exportPolicy": "cars-source-v1",
+    "retainedFiles": 3977
+  },
+  "originalOwnerReceipts": [
+    {
+      "path": "templates/modern/runtime/guide-card-polish-20261010/compact-final/source-commit.json",
+      "sha256": "7f701af08548d915b647f1bc21598943fe6f70367dea60a86c5f2fa969a93d22"
+    },
+    {
+      "path": "templates/modern/runtime/guide-card-polish-20261010/compact-final/publication-mirror.json",
+      "sha256": "e6c8e54923d4284898f1513477241152356fe4ade0f3498a71b049f8cedfe517"
+    },
+    {
+      "path": "templates/modern/runtime/guide-card-polish-20261010/compact-final/vercel-deployment.json",
+      "sha256": "92268afdafe4cca0918f743bafb4fac22b7de6ed9d4552f12c1bbf089ab44994"
+    },
+    {
+      "path": "templates/modern/runtime/guide-card-polish-20261010/compact-checks.json",
+      "sha256": "87dfe86a90e43fa8dad1a0893e1315b45011f479d0e2c6010f2dfc302ad9584f"
+    }
+  ],
+  "currentFacts": [
+    "Final exact mirror receipt verifies 3977 retained blobs/modes, source digest, canonical push and publishing push.",
+    "Vercel receipt binds READY dpl_D384gvRsUcJLNC7TmvzH94TnnhUn to mirror2e9cd2a/source6f87470 and successful remote build.",
+    "Compact-checks contains final hosted 320/390 guide-card/search observations, EN320 local check, typecheck/Biome passed and exact desktop1440 geometry comparison.",
+    "Earlier comprehensive audit/publication source ca34608 and subsequent guide-card source1a72cf5 remain separate original receipts. They are not current full-native proof.",
+    "From the selected Oct9 release, 74 retained files changed (72 outside Markdown/docs). Locale dialog changed presentation; preference persistence handler changes were not found in that scoped diff."
+  ],
+  "providerObservation": {
+    "id": "dpl_D384gvRsUcJLNC7TmvzH94TnnhUn",
+    "name": "cars-template-modern",
+    "state": "READY",
+    "target": "production",
+    "url": "cars-template-modern-ar5fyx0vr-tyj5.vercel.app",
+    "meta": {
+      "sourceCommit": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+      "publishingCommit": "2e9cd2acf2dddb8bd96f0e9242200366b0522048",
+      "publishingRepository": "darkapoparka/cars-template-modern",
+      "githubCommitMessage": "Tighten Modern mobile guide cards and search count\n\nCars source: 6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710\nCars subtree: templates/modern\nCars digest: b035a849efb41d3ed18d97fcf3511850469162c0a990397b74be588179d43588"
+    },
+    "observation": "Read-only Vercel connector response obtained during the earlier readiness assessment in this task; owner final deployment receipt is linked separately.",
+    "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy"
+  },
+  "catalogAudit": {
+    "catalogs": [
+      {
+        "descriptor": {
+          "format": "typescript-pair",
+          "path": "packages/internationalization/preferences-messages.ts",
+          "en": "en",
+          "bg": "bg"
+        },
+        "keys": 26,
+        "contentDigest": "89d3278de72c828f268800cb538a436c2bfd8a7868b6e4c0044e989158d1a368"
+      },
+      {
+        "descriptor": {
+          "format": "typescript-pair",
+          "path": "packages/internationalization/public-messages.ts",
+          "en": "en",
+          "bg": "bg"
+        },
+        "keys": 27,
+        "contentDigest": "5bffa6e066509d415a0730f5b7c39d7b6d13ff563c8f447cde59c95fc3d86a8a"
+      },
+      {
+        "descriptor": {
+          "format": "typescript-rows",
+          "path": "packages/marketplace/content/inventory-copy.ts",
+          "export": "inventoryCopy"
+        },
+        "keys": 28,
+        "contentDigest": "7c9e8fd4f189c9f76c6eaafeb93d3c8c910bf149685a659feaa7b185e2893c07"
+      },
+      {
+        "descriptor": {
+          "format": "typescript-locale-object",
+          "path": "packages/marketplace-ui/lib/marketplace-control-copy.ts",
+          "export": "copyByLanguage"
+        },
+        "keys": 118,
+        "contentDigest": "c0f9822da9bc3b6c01911e80b400d026d7f063581657196c12cece13820d0fc4"
+      }
+    ],
+    "declaredCatalogParityPassed": true,
+    "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+  },
+  "deltaReview": {
+    "baseline": {
+      "path": "docs/releases/six-design-2026-10-09/native/modern-release.json",
+      "sha256": "bd797326daf75965729b2fd8ad751c79c3d2d99e131559962894748c80f886e8",
+      "commit": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
+      "role": "Historical original acceptance; not relabelled as current browser proof"
+    },
+    "retainedFileDifferences": 74,
+    "nonMarkdownOutsideDocsDifferences": 72,
+    "affectedNativeOrIntegrationInputs": [
+      "packages/marketplace-ui/components/locale-preferences.tsx",
+      "packages/marketplace-ui/components/dealer-desktop-locale-menu.tsx",
+      "packages/marketplace-ui/components/desktop-overlay.module.css",
+      "packages/marketplace-ui/package.json",
+      "packages/marketplace-ui/lib/inventory-return.ts",
+      "packages/marketplace-ui/components/desktop-full-filter-dialog.tsx"
+    ],
+    "contextOnly": [
+      {
+        "path": "templates/modern/runtime/guide-card-polish-20261010/checks.json",
+        "sha256": "9703119984a513cbab220590f3a161bcc04d488b18620ad5b586d760ed929db7"
+      },
+      {
+        "path": "templates/modern/docs/FINAL-PASS-AUDIT-2026-10-10.md",
+        "sha256": "0e7455f7af423533ad8f77e7eb6e1b99bf7768a6843bdc772388de06b40db39d"
+      },
+      {
+        "path": "C:/Users/radev/.codex/visualizations/2026/10/10/01a123d7-909a-7111-8b3b-cd621cfba25c/modern-final-audit/publication-scope.json",
+        "sha256": "378f9f7693b8e242a36fc6becf6da1d75c6c5c78c1c20a582d8a5bf5b4f46d52"
+      },
+      {
+        "path": "C:/Users/radev/.codex/visualizations/2026/10/10/01a123d7-909a-7111-8b3b-cd621cfba25c/modern-final-audit/hosted-checks.json",
+        "sha256": "be1186d682c6f0739aea977951610121e2e9faf23770f9391b23d2cfe4cb5eee"
+      }
+    ]
+  },
+  "closureStatus": {
+    "exactSource": true,
+    "exactPublishingMirror": true,
+    "matchingReadyMasterDeployment": true,
+    "masterBuildReceiptAvailable": true,
+    "focusedStandaloneDeltaReceiptsAvailable": true,
+    "declaredCatalogParity": true,
+    "fullNativeAcceptance": false,
+    "dealerMountedAcceptance": false,
+    "templateLockChanged": false,
+    "dealersDeployed": false
+  },
+  "remaining": [
+    {
+      "gate": "native-acceptance",
+      "checkNames": [
+        "catalog-completeness",
+        "hardcoded-ui",
+        "native-routing",
+        "standalone-journeys",
+        "public-journeys",
+        "preferences-no-js",
+        "preferences-storage-disabled",
+        "preferences-races",
+        "request-isolation",
+        "security-write-blocking",
+        "assets-preserved"
+      ],
+      "required": "Bind the existing current-owner receipts to these categories where their actual coverage suffices; use current-source native policy/browser acceptance only for missing coverage. Fresh exact catalog key/interpolation parity and focused master receipts are already available. Historical receipts retain their original SHAs. Current source full-native browser receipt was not found. No whole master build is needed."
+    },
+    {
+      "gate": "mounted-journeys",
+      "required": "Qualify the final exact selected trio in the representative six-family package, including Import/Modern at both variant-2/variant-3 orders, EN/BG320/390/1440, prefix/resources/deep links, affected filters/locale entry and shared prompt. Neither owner standalone proof nor old pinned mounted builds satisfies this gate."
+    }
+  ],
+  "limitations": [
+    "This file records source identity, original receipts and closure gaps; recordedAt is assembly time, not a new browser execution time.",
+    "No permission hold: the owner has authorized final release/Vercel rollout. Missing evidence stays a verification hold.",
+    "No new full audit, master build, browser campaign, source copy, lock/index/Git or publishing mutation was performed.",
+    "braces@3.0.3 remains disclosed in the owner audit with its specific publication exception. Do not mark the dependency security gate passed or broaden that exception."
+  ]
+}

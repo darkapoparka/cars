@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "kind": "current-source-native-release-closure-draft",
+  "key": "auto-best",
+  "recordedAt": "2026-10-10T08:15:22.104Z",
+  "source": {
+    "repository": "darkapoparka/cars",
+    "revision": "696230a404abd9b20b6f907b9cfb139175298c7a",
+    "path": "templates/auto-best",
+    "tree": "b07ff2273be554ef64a039ac8f4f023ae60a33ac",
+    "digest": "90f131aa0ead6ae4fcb06d30c054ca4d0c5d39097a2927cca8f298c7d2dfb3ca"
+  },
+  "approved": false,
+  "sourceFingerprint": {
+    "verifiedInThisTask": true,
+    "exportPolicy": "cars-source-v1",
+    "retainedFiles": 1602
+  },
+  "originalOwnerReceipts": [
+    {
+      "path": "templates/auto-best/runtime/final-pass-2026-10-10/polish/source-commit.json",
+      "sha256": "f0b912a25f25438ef808e02b3273a52c866a9b2a7b5994e92affa77fa0b216d1"
+    },
+    {
+      "path": "templates/auto-best/runtime/final-pass-2026-10-10/polish/mirror.json",
+      "sha256": "41b218e469104a2cd248eed2e5783098ef20cf903e2d5f033a33e99839e224c0"
+    },
+    {
+      "path": "templates/auto-best/runtime/final-pass-2026-10-10/polish/deployment.json",
+      "sha256": "cc852bea27e6af6b3f32315587c27775a20588e92558f38bd383dce35a9045f5"
+    },
+    {
+      "path": "templates/auto-best/runtime/final-pass-2026-10-10/polish/enquiry-after.json",
+      "sha256": "29e5e99106dbc648c8cec8167cdc02e8c42b2547b73a060481719653100df0fd"
+    },
+    {
+      "path": "templates/auto-best/runtime/final-pass-2026-10-10/polish/article-hosted-results.json",
+      "sha256": "dcddec893004fb84862d2b647ca219a916d00f2054471f8c9bcff6367c486bf9"
+    },
+    {
+      "path": "templates/auto-best/runtime/final-pass-2026-10-10/polish/hosted-http.json",
+      "sha256": "9c0ef42d942da47f821576d9edf9a915c9b94746c49400831317eb99f6f2c3ef"
+    },
+    {
+      "path": "templates/auto-best/runtime/final-pass-2026-10-10/polish/README.md",
+      "sha256": "c1c4383298979c7381e4f41f72f39afb191d8ad13b6f795b183b736b98f005b7"
+    }
+  ],
+  "currentFacts": [
+    "Final source-commit receipt records validate passed including the Vercel adapter production build, 27 locale tests, six local enquiry cases and five local article cases.",
+    "Hosted final-source receipts record six enquiry and six article cases, including BG WebKit 320px at 200% text; six HTTP route checks passed.",
+    "These final receipts bind the current commit, mirror and changed source hashes; earlier broad final audit is retained as historical delta context, not newly executed 696230a full-native proof.",
+    "Latest commit changes only VehicleEnquiry.svelte and blog-detail/[id]/detail.css. The previous selected Oct9 release has 445 retained-file differences including 91 outside Markdown/docs; it is not the same source."
+  ],
+  "providerObservation": {
+    "id": "dpl_G1VGqetcp7n6phxTu2NPSLukiogZ",
+    "name": "cars-template-auto-best",
+    "state": "READY",
+    "target": "production",
+    "url": "cars-template-auto-best-iyh5mvqk5-tyj5.vercel.app",
+    "meta": {
+      "sourceCommit": "696230a404abd9b20b6f907b9cfb139175298c7a",
+      "publishingCommit": "e91baa9c2247f17186dcf43b3b1c8bc83a0266c6",
+      "publishingRepository": "darkapoparka/cars-template-auto-best",
+      "githubCommitMessage": "Polish Auto Best mobile enquiry and article context\n\nCars source: 696230a404abd9b20b6f907b9cfb139175298c7a\nCars subtree: templates/auto-best\nCars digest: 90f131aa0ead6ae4fcb06d30c054ca4d0c5d39097a2927cca8f298c7d2dfb3ca"
+    },
+    "observation": "Read-only Vercel connector response obtained during the earlier readiness assessment in this task; owner final deployment receipt is linked separately.",
+    "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX"
+  },
+  "catalogAudit": {
+    "catalogs": [
+      {
+        "descriptor": {
+          "format": "typescript-pair",
+          "path": "src/lib/locale/catalog.ts",
+          "en": "en",
+          "bg": "bg"
+        },
+        "keys": 1128,
+        "contentDigest": "093531b4870cdbc28f797b5ad9f343d183851d2ffb78a00ca7625562da5079cf"
+      }
+    ],
+    "declaredCatalogParityPassed": true,
+    "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+  },
+  "deltaReview": {
+    "baseline": {
+      "path": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-release.json",
+      "sha256": "6121bc5d6ef77e844ad701834e08e249ebeab6eba2ae89824c0b1b474bd1fc45",
+      "commit": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+      "role": "Historical original acceptance; not relabelled as current browser proof"
+    },
+    "retainedFileDifferences": 445,
+    "nonMarkdownOutsideDocsDifferences": 91,
+    "affectedNativeOrIntegrationInputs": [
+      "localization/common.json",
+      "localization/generated-manifest.json",
+      "scripts/locale-mobile-copy.test.mjs",
+      "src/lib/locale/LocalePreferences.svelte",
+      "src/lib/locale/LocaleTrigger.svelte",
+      "src/lib/locale/catalog.ts",
+      "src/lib/ui/focus.ts",
+      "src/lib/ui/overlay.ts",
+      "src/routes/locale-settings/+page.svelte"
+    ],
+    "contextOnly": [
+      {
+        "path": "templates/auto-best/runtime/final-pass-2026-10-10/results.json",
+        "sha256": "a9a63e2ca75951a5fbf5618c92c047d6f8e803ce9b98af5d83d4ce3d9def25fd"
+      },
+      {
+        "path": "templates/auto-best/runtime/final-pass-2026-10-10/README.md",
+        "sha256": "fc998f0bee4a0ed134af76cfbd1d61a449c021400629372f8461572211f54c16"
+      }
+    ]
+  },
+  "closureStatus": {
+    "exactSource": true,
+    "exactPublishingMirror": true,
+    "matchingReadyMasterDeployment": true,
+    "masterBuildReceiptAvailable": true,
+    "focusedStandaloneDeltaReceiptsAvailable": true,
+    "declaredCatalogParity": true,
+    "fullNativeAcceptance": false,
+    "dealerMountedAcceptance": false,
+    "templateLockChanged": false,
+    "dealersDeployed": false
+  },
+  "remaining": [
+    {
+      "gate": "native-acceptance",
+      "checkNames": [
+        "catalog-completeness",
+        "hardcoded-ui",
+        "native-routing",
+        "standalone-journeys",
+        "public-journeys",
+        "preferences-no-js",
+        "preferences-storage-disabled",
+        "preferences-races",
+        "request-isolation",
+        "security-write-blocking",
+        "assets-preserved"
+      ],
+      "required": "Bind the existing current-owner receipts to these categories where their actual coverage suffices; use current-source native policy/browser acceptance only for missing coverage. Fresh exact catalog key/interpolation parity and focused master receipts are already available. Historical receipts retain their original SHAs. Current source full-native browser receipt was not found. No whole master build is needed."
+    },
+    {
+      "gate": "mounted-journeys",
+      "required": "Qualify the final exact selected trio in the representative six-family package, including Import/Modern at both variant-2/variant-3 orders, EN/BG320/390/1440, prefix/resources/deep links, affected filters/locale entry and shared prompt. Neither owner standalone proof nor old pinned mounted builds satisfies this gate."
+    }
+  ],
+  "limitations": [
+    "This file records source identity, original receipts and closure gaps; recordedAt is assembly time, not a new browser execution time.",
+    "No permission hold: the owner has authorized final release/Vercel rollout. Missing evidence stays a verification hold.",
+    "No new full audit, master build, browser campaign, source copy, lock/index/Git or publishing mutation was performed."
+  ]
+}

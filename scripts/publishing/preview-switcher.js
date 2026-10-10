@@ -13,11 +13,52 @@
       if (document.querySelector('dealer-design-switcher, excellent-design-switcher')) return;
       const config = globalThis.__CARS_SWITCHER_CONFIG__;
       if (!config) return;
+      // Shared presentation leaves each app's locale, request and focus logic intact.
+      if (config.localePresentation === 'compact-v1') {
+        const presentation = document.createElement('style');
+        presentation.dataset.carsLocalePresentation = 'compact-v1';
+        presentation.textContent = `
+          dialog[data-locale-dialog][open]{position:fixed!important;inset:auto!important;top:50%!important;left:50%!important;transform:translate(-50%,-50%)!important;display:block!important;box-sizing:border-box;width:min(420px,calc(100vw - 32px))!important;max-width:calc(100vw - 32px)!important;height:auto!important;max-height:calc(100dvh - 32px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px))!important;margin:0!important;padding:0!important;overflow-y:auto!important;overscroll-behavior:contain;border:1px solid #ececee!important;border-radius:24px!important;background:#fff!important;color:#1d1e22!important;box-shadow:0 16px 64px #0002!important}
+          dialog[data-locale-dialog]::backdrop{background:rgba(12,12,16,.3)!important;backdrop-filter:blur(2px)}
+          dialog[data-locale-dialog] .cars-locale-header,dialog[data-locale-dialog]>div>div:has(#locale-preferences-title){position:relative;display:block!important;padding:26px 24px 14px!important;border:0!important;text-align:center}
+          dialog[data-locale-dialog] .cars-locale-header h2,dialog[data-locale-dialog] #locale-preferences-title{margin:0 20px!important;color:inherit;font-size:22px!important;line-height:28px!important;font-weight:600!important;text-align:center;overflow-wrap:anywhere}
+          dialog[data-locale-dialog] .cars-locale-eyebrow{display:block!important;margin:0 28px 10px!important;color:#65666d!important;font-size:13px!important;line-height:18px!important;font-weight:400!important;letter-spacing:0!important;text-transform:none!important}
+          dialog[data-locale-dialog] .cars-locale-close,dialog[data-locale-dialog] button[aria-label]:not([type=submit]){position:absolute!important;top:7px!important;right:7px!important;display:grid!important;place-items:center;width:44px!important;height:44px!important;min-height:44px!important;margin:0!important;padding:0!important;border:0!important;border-radius:50%!important;background:transparent!important;color:#65666d!important;box-shadow:none!important}
+          dialog[data-locale-dialog] .cars-locale-close:hover,dialog[data-locale-dialog] button[aria-label]:not([type=submit]):hover{background:#f3f3f5!important}
+          dialog[data-locale-dialog] .cars-locale-close svg,dialog[data-locale-dialog] button[aria-label]:not([type=submit]) svg{width:18px!important;height:18px!important}
+          dialog[data-locale-dialog] .cars-locale-content,dialog[data-locale-dialog] [data-locale-fields]{display:block!important;min-height:0;max-height:none!important;padding:0 24px!important;overflow:visible!important}
+          dialog[data-locale-dialog] .cars-locale-content{padding-bottom:24px!important}
+          dialog[data-locale-dialog]>div{max-height:none!important}
+          dialog[data-locale-dialog]>div>div[aria-hidden=true]{display:none!important}
+          dialog[data-locale-dialog] #cars-locale-description,dialog[data-locale-dialog] .cars-locale-suggestion,dialog[data-locale-dialog] [data-locale-fields]>p:first-child{margin:0 0 12px!important;padding:0!important;border:0!important;background:transparent!important;color:#65666d!important;font-size:13px!important;line-height:19px!important;text-align:center}
+          dialog[data-locale-dialog] form{gap:6px!important}
+          dialog[data-locale-dialog] form>label,dialog[data-locale-dialog] label[for=locale-country]{margin:8px 0 4px!important;color:#44454d!important;font-size:13px!important;line-height:18px!important;font-weight:500!important}
+          dialog[data-locale-dialog] select{box-sizing:border-box;width:100%!important;min-width:0;min-height:44px!important;height:44px!important;padding:10px 14px!important;border:1px solid #e7e7eb!important;border-radius:14px!important;background:#f6f6f8!important;color:#1d1e22!important;font:inherit!important;font-size:14px!important;line-height:20px!important}
+          dialog[data-locale-dialog] select[name=country]{padding-right:38px!important}
+          dialog[data-locale-dialog] fieldset{margin-top:16px!important;min-width:0}
+          dialog[data-locale-dialog] legend{margin-bottom:8px!important;font-size:13px!important;line-height:18px!important;font-weight:500!important;color:#44454d!important}
+          dialog[data-locale-dialog] fieldset>div{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px!important}
+          dialog[data-locale-dialog] [data-language-option]{position:relative!important;justify-content:center!important;min-width:0;min-height:46px!important;gap:7px!important;padding:8px 10px!important;border:1px solid #e7e7eb!important;border-radius:14px!important;background:#f6f6f8!important}
+          dialog[data-locale-dialog] [data-language-option]>input[type=radio]{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;margin:0!important;opacity:0!important;cursor:pointer}
+          dialog[data-locale-dialog] [data-language-option]:has(input:focus-visible){outline:2px solid #1d1e22!important;outline-offset:3px!important}
+          dialog[data-locale-dialog] [data-language-option]:has(input:checked){border-color:#1d1e22!important;background:#fff!important}
+          dialog[data-locale-dialog] [data-language-option]>span{font-size:13px!important;line-height:18px!important;font-weight:500!important}
+          dialog[data-locale-dialog] .cars-locale-facts,dialog[data-locale-dialog] .cars-locale-unavailable,dialog[data-locale-dialog] [data-locale-fields]>p:not(:first-child):not([role=alert]){margin:12px 0 0!important;color:#72727a!important;font-size:12px!important;line-height:18px!important}
+          dialog[data-locale-dialog] .cars-locale-actions,dialog[data-locale-dialog] [data-locale-actions]{display:flex!important;flex-wrap:nowrap!important;gap:8px!important;margin-top:18px!important;padding:0!important;border:0!important;background:transparent!important}
+          dialog[data-locale-dialog] [data-locale-actions]{padding:0 24px 24px!important}
+          dialog[data-locale-dialog] .cars-locale-actions button,dialog[data-locale-dialog] [data-locale-actions] button{flex:1 1 0!important;box-sizing:border-box;min-width:0!important;width:auto!important;min-height:44px!important;height:auto!important;padding:10px 12px!important;border:0!important;border-radius:999px!important;background:#f1f1f4!important;color:#65666d!important;font:inherit!important;font-size:14px!important;line-height:20px!important;font-weight:500!important;box-shadow:none!important}
+          dialog[data-locale-dialog] .cars-locale-actions button[type=submit],dialog[data-locale-dialog] [data-locale-actions] button[type=submit]{background:#1d1e22!important;color:#fff!important}
+          dialog[data-locale-dialog] button[type=submit]:disabled{opacity:.55!important}
+          dialog[data-locale-dialog] :is(button,select,input):focus-visible{outline:2px solid #1d1e22!important;outline-offset:3px!important}
+          @media(max-width:360px){dialog[data-locale-dialog] .cars-locale-header,dialog[data-locale-dialog]>div>div:has(#locale-preferences-title){padding:24px 16px 12px!important}dialog[data-locale-dialog] .cars-locale-content,dialog[data-locale-dialog] [data-locale-fields]{padding-inline:16px!important}dialog[data-locale-dialog] [data-locale-actions]{padding-inline:16px!important}dialog[data-locale-dialog] .cars-locale-header h2,dialog[data-locale-dialog] #locale-preferences-title{font-size:20px!important;line-height:26px!important}}
+        `;
+        document.head.append(presentation);
+      }
       const mount = config.variants.find(({base}) => base && (location.pathname === base || location.pathname.startsWith(`${base}/`)))?.base || '';
       const selectedFamily = config.variants.find(choice => choice.base === mount)?.key;
       const resolveLanguage = () => {
         if (!config.localization) return config.language || 'en';
-        const requested = selectedFamily === 'mobile'
+        const requested = selectedFamily === 'mobile' || selectedFamily === 'karento-best'
           ? new URLSearchParams(location.search).get('lang')
           : location.pathname.slice(mount.length).split('/')[1];
         const enabled = config.localization.enabledLocales;
@@ -31,45 +72,43 @@
       }
       let language = String(config.language || 'en').toLowerCase().startsWith('bg') ? 'bg' : 'en';
       const copyFor = language => language === 'bg' ? {
-        design: 'Дизайн', title: 'Изберете визия за сайта', subtitle: 'Разгледайте различен стил, без да напускате този адрес.',
-        current: 'Текущ', open: 'Отвори', close: 'Затворете избора на дизайн',
-        admin: 'Админ панел', adminDescription: 'Преглед на наличности, запитвания и съдържание.',
+        design: 'Дизайн', title: 'Изберете дизайн',
+        current: 'Текущ', open: 'Отвори', view: 'Виж', close: 'Затворете избора на дизайн', home: 'Начало', homeChoices: 'Варианти на началната страница',
+        admin: 'Админ панел',
         adminLabel: 'Админ панел — демо, отваря се в нов раздел'
       } : {
-        design: 'Design', title: 'Choose a website style', subtitle: 'Preview another experience without leaving this address.',
-        current: 'Current', open: 'Open', close: 'Close design selector',
-        admin: 'Admin dashboard', adminDescription: 'Preview inventory, enquiries and content tools.',
+        design: 'Design', title: 'Choose a design',
+        current: 'Current', open: 'Open', view: 'View', close: 'Close design selector', home: 'Home', homeChoices: 'Homepage layouts',
+        admin: 'Admin dashboard',
         adminLabel: 'Admin dashboard — demo, opens in a new tab'
       };
       let copy = copyFor(language);
       const designCopyFor = {
         en: {
-          'auto-best': ['Auto Best', 'Editorial dealer site'], modern: ['Modern', 'Rich catalog experience'],
-          import: ['Import', 'Import-focused journey'], carwow: ['Premium', 'Modern showroom layout'],
-          app: ['App', 'Mobile-first buying journey'], mobile: ['Mobile', 'Photo-led vehicle showroom'],
-          'karento-best': ['Signature', 'Curated dealer showroom']
+          'auto-best': 'Auto Best', modern: 'Modern', import: 'Import', carwow: 'Premium',
+          app: 'App', mobile: 'Mobile', 'karento-best': 'Signature'
         },
         bg: {
-          'auto-best': ['Auto Best', 'Дилърски сайт с редакционна визия'], modern: ['Modern', 'Богато каталожно изживяване'],
-          import: ['Import', 'Визия, фокусирана върху вноса'], carwow: ['Премиум', 'Модерен шоурум'],
-          app: ['Приложение', 'Мобилно изживяване за покупка'], mobile: ['Мобилен', 'Фото каталог на автомобили'],
-          'karento-best': ['Signature', 'Подбран дилърски шоурум']
+          'auto-best': 'Auto Best', modern: 'Modern', import: 'Import', carwow: 'Премиум',
+          app: 'Приложение', mobile: 'Мобилен', 'karento-best': 'Signature'
         }
       };
       let designCopy = designCopyFor[language];
-      const choicesFor = () => config.variants.map(choice => {
-        if (!config.localization) return choice;
-        // Karento currently has document-level locale, without /bg or /en routes.
-        // Keep its declared entry until a translated route contract is qualified.
-        if (choice.key === 'karento-best') return choice;
-        if (choice.key === 'mobile') {
-          const entry = new URL(choice.entry, location.origin);
+      const localizedEntry = (choice, destination) => {
+        if (!config.localization) return destination;
+        const entry = new URL(destination, location.origin);
+        if (choice.key === 'mobile' || choice.key === 'karento-best') {
           entry.searchParams.set('lang', config.language);
-          return {...choice, entry: entry.pathname + entry.search + entry.hash};
+          return entry.pathname + entry.search + entry.hash;
         }
-        const tail = choice.entry.slice(choice.base.length);
-        return {...choice, entry: `${choice.base}/${config.language}${tail === '/' ? '' : tail}`};
-      });
+        const tail = entry.pathname.slice(choice.base.length);
+        return `${choice.base}/${config.language}${tail === '/' ? '' : tail}${entry.search}${entry.hash}`;
+      };
+      const choicesFor = () => config.variants.map(choice => ({...choice,
+        entry: localizedEntry(choice, choice.entry),
+        ...(choice.homes ? {homes: choice.homes.map(home => ({...home, entry: localizedEntry(choice, home.entry)}))} : {})
+      }));
+      const isCurrentHome = home => location.pathname.replace(/\/$/, '') === new URL(home.entry, location.origin).pathname.replace(/\/$/, '');
       let choices = choicesFor();
       const index = choices.findIndex(({base}) => base && (location.pathname === base || location.pathname.startsWith(`${base}/`)));
       const active = index < 0 ? 0 : index;
@@ -87,25 +126,28 @@
         .fab[data-has-logo="true"]{background:#fff;color:#17191c;border-color:#e2e5e9}.fab-artwork{display:grid;place-items:center}.fab-artwork img{width:44px;height:25px;object-fit:contain}
         .count{position:absolute;right:-4px;top:-5px;min-width:26px;padding:2px 5px;border:2px solid #fff;border-radius:999px;background:#17191c;color:#fff;font-size:10px;line-height:15px;text-align:center}
         .backdrop{position:fixed;inset:0;background:rgba(10,12,16,.42);backdrop-filter:blur(2px)}
-        .sheet{position:fixed;left:0;right:0;bottom:0;width:100%;max-height:min(82dvh,680px);overflow:auto;padding:8px 16px calc(18px + env(safe-area-inset-bottom,0px));border:1px solid #e2e5e9;border-bottom:0;border-radius:26px 26px 0 0;background:#fff;box-shadow:0 -18px 55px rgba(0,0,0,.24)}
+        .sheet{position:fixed;left:0;right:0;bottom:0;width:100%;max-height:min(90dvh,740px);overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;padding:8px 16px calc(18px + env(safe-area-inset-bottom,0px));border:1px solid #e2e5e9;border-bottom:0;border-radius:26px 26px 0 0;background:#fff;box-shadow:0 -18px 55px rgba(0,0,0,.24)}
         .handle{width:44px;height:4px;margin:2px auto 12px;border-radius:999px;background:#d8dce1}
-        .header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px}.heading{margin:0;font-size:20px;line-height:25px;letter-spacing:-.3px}.subtitle{margin:4px 0 0;color:#697078;font-size:12px;line-height:17px}
+        .header{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;background:#fff}.heading{margin:0;font-size:20px;line-height:25px;letter-spacing:-.3px}
         .close{display:grid;place-items:center;flex:none;width:42px;height:42px;padding:0;border:0;border-radius:50%;background:#f1f3f5;color:#25282c;cursor:pointer}.close svg{width:20px;height:20px}
         .design-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-        .design{position:relative;display:flex;min-width:0;min-height:126px;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:10px;padding:12px;border:1px solid #dfe3e7;border-radius:16px;background:#fafbfc;color:inherit;text-decoration:none;transition:border-color .15s ease,background .15s ease,transform .15s ease}
-        .design:hover{transform:translateY(-1px);border-color:#aeb5bd;background:#fff}
-        .design[aria-current="page"]{border:2px solid var(--accent);padding:11px;background:#f4f5f6}
+        .design-card{display:flex;min-width:0;min-height:110px;flex-direction:column;border:1px solid #dfe3e7;border-radius:16px;background:#fafbfc;transition:border-color .15s ease,background .15s ease}
+        .design-card:hover{border-color:#aeb5bd;background:#fff}.design-card[data-active="true"]{border:2px solid var(--accent);background:#f4f5f6}
+        .design{position:relative;display:flex;flex:1;min-width:0;min-height:108px;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:8px;padding:12px;border-radius:14px;color:inherit;text-decoration:none}
+        .design-card[data-active="true"] .design{padding:11px}
         .preview{display:flex;align-items:center;justify-content:flex-start;width:100%;height:36px;margin-top:15px;color:var(--accent)}
         .preview img{display:block;width:100%;height:36px;object-fit:contain;object-position:left center}
-        .preview svg{width:22px;height:22px}.design-name{display:block;font-size:14px;font-weight:750;line-height:18px}
-        .design-description{display:block;margin-top:2px;color:#707780;font-size:10px;line-height:14px}
+        .preview svg{width:22px;height:22px}.view-pill{display:inline-flex;align-items:center;justify-content:center;align-self:center;min-width:56px;height:28px;padding:0 12px;border:1px solid #e0e3e7;border-radius:999px;background:#eef0f3;color:#626971;font-size:12px;font-weight:650;line-height:16px}.design:hover .view-pill{background:#e1e5ea}.design[aria-current="page"] .view-pill{border-color:var(--accent);background:var(--accent);color:#fff}
         .state{position:absolute;right:9px;top:9px;padding:2px 6px;border-radius:999px;background:#e9ecef;color:#4d535a;font-size:9px;font-weight:700}
         .design[aria-current="page"] .state{background:var(--accent);color:#fff}
-        .admin{display:grid;grid-template-columns:42px minmax(0,1fr) 22px;align-items:center;gap:10px;min-height:68px;margin-top:12px;padding:10px 12px;border:1px solid #dfe3e7;border-radius:16px;background:#fff;color:#17191c;text-decoration:none}
-        .admin:hover{background:#f7f8fa}.admin-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#eef2ff;color:#3157d8}
+        .design-card[data-has-homes="true"] .design{min-height:64px;gap:0;padding-bottom:0}
+        .home-choices{position:relative;isolation:isolate;display:flex;width:88px;gap:0;margin:0 auto 3px;padding:0}.home-choices::before{content:'';position:absolute;inset:7px 0;z-index:-1;border:1px solid #e0e3e7;border-radius:9px;background:#eef0f3}
+        .home-choice{position:relative;isolation:isolate;display:grid;place-items:center;flex:none;width:44px;height:44px;padding:0;border-radius:7px;color:#626971;text-align:center;text-decoration:none;font-size:12px;font-weight:700;line-height:16px}.home-choice::before{content:'';position:absolute;inset:9px 2px;z-index:-1;border-radius:6px;background:transparent}.home-choice:hover::before{background:#e1e5ea}.home-choice[aria-current="page"]{color:#fff}.home-choice[aria-current="page"]::before{background:var(--accent);box-shadow:0 1px 2px #00000014}
+        .admin{display:grid;grid-template-columns:36px minmax(0,1fr) 22px;align-items:center;gap:10px;min-height:54px;margin-top:12px;padding:8px 12px;border:1px solid #dfe3e7;border-radius:16px;background:#fff;color:#17191c;text-decoration:none}
+        .admin:hover{background:#f7f8fa}.admin-icon{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:#eef2ff;color:#3157d8}
         .admin-icon svg{width:21px;height:21px}.admin strong{display:block;font-size:14px}
-        .admin small{display:block;margin-top:2px;color:#697078;font-size:10px;line-height:14px}.arrow{font-size:17px;color:#3157d8}
-        .fab:focus-visible,.close:focus-visible,.design:focus-visible,.admin:focus-visible{outline:3px solid #5b8def;outline-offset:3px}
+        .arrow{font-size:17px;color:#3157d8}
+        .fab:focus-visible,.close:focus-visible,.design:focus-visible,.home-choice:focus-visible,.admin:focus-visible{outline:3px solid #5b8def;outline-offset:3px}
         @media(min-width:992px){:host,:host([data-active-key="app"]),:host([data-active-key="mobile"]){right:24px;bottom:96px}.backdrop{display:none}.sheet{position:absolute;left:auto;right:0;bottom:70px;width:374px;max-height:calc(100dvh - 130px);padding:16px;border:1px solid #e2e5e9;border-radius:20px;box-shadow:0 18px 56px rgba(0,0,0,.22)}.handle{display:none}.header{margin-bottom:12px}}
       </style>
       <div class="backdrop" hidden></div>
@@ -115,11 +157,11 @@
       </button>
       <section class="sheet" id="choices" role="dialog" aria-modal="true" aria-labelledby="selector-title" hidden>
         <div class="handle" aria-hidden="true"></div>
-        <header class="header"><div><h2 class="heading" id="selector-title"></h2><p class="subtitle"></p></div>
+        <header class="header"><h2 class="heading" id="selector-title"></h2>
         <button class="close" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></header>
         <nav class="design-grid" aria-label=""></nav><a class="admin" data-cars-admin="v2" target="_blank" rel="noopener noreferrer">
           <span class="admin-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 9v12M13 13h4M13 17h4"/></svg></span>
-          <span><strong></strong><small></small></span><span class="arrow" aria-hidden="true">↗</span></a>
+          <strong></strong><span class="arrow" aria-hidden="true">↗</span></a>
       </section>`;
       const icons = {
         'auto-best': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 5h16v14H4zM4 10h16M9 10v9"/></svg>',
@@ -149,15 +191,17 @@
         button.setAttribute('data-has-logo', 'true');
       }
       shadow.querySelector('.heading').textContent = config.labels?.title || copy.title;
-      shadow.querySelector('.subtitle').textContent = copy.subtitle;
       shadow.querySelector('.fab-label').textContent = config.labels?.design || copy.design;
       shadow.querySelector('.count').textContent = `${active + 1}/${choices.length}`;
       button.setAttribute('aria-label', `${config.labels?.design || copy.design} ${active + 1} / ${choices.length}`);
       closeButton.setAttribute('aria-label', copy.close);
       grid.setAttribute('aria-label', config.labels?.choose || copy.title);
       for (const [number, choice] of choices.entries()) {
+        const card = document.createElement('div');
+        card.className = 'design-card';
+        card.setAttribute('data-active', String(number === active));
         const link = document.createElement('a');
-        const [name, description] = designCopy[choice.key] || [`${copy.design} ${number + 1}`, ''];
+        const name = designCopy[choice.key] || `${copy.design} ${number + 1}`;
         link.className = 'design';
         link.href = choice.entry;
         link.dataset.designKey = choice.key;
@@ -166,13 +210,36 @@
         const preview = document.createElement('span'); preview.className = 'preview';
         if (templateLogos[choice.key]) preview.append(logoImage(choice.key));
         else preview.innerHTML = icons[choice.key] || icons['auto-best'];
-        const label = document.createElement('span');
-        const title = document.createElement('span'); title.className = 'design-name'; title.textContent = name;
-        const note = document.createElement('span'); note.className = 'design-description'; note.textContent = description;
-        label.append(title, note);
         const state = document.createElement('span'); state.className = 'state'; state.textContent = number === active ? copy.current : `${number + 1}`;
-        link.append(preview, label, state);
-        grid.append(link);
+        link.append(preview, state);
+        if (!choice.homes?.length) {
+          const view = document.createElement('span');
+          view.className = 'view-pill';
+          view.textContent = config.labels?.view || copy.view;
+          view.setAttribute('aria-hidden', 'true');
+          link.append(view);
+        }
+        card.append(link);
+        if (choice.homes?.length) {
+          card.setAttribute('data-has-homes', 'true');
+          const homes = document.createElement('div');
+          homes.className = 'home-choices';
+          homes.setAttribute('role', 'group');
+          homes.setAttribute('aria-label', `${name}: ${config.labels?.homeChoices || copy.homeChoices}`);
+          for (const home of choice.homes) {
+            const alternative = document.createElement('a');
+            alternative.className = 'home-choice';
+            alternative.dataset.designKey = choice.key;
+            alternative.dataset.homeId = home.id;
+            alternative.href = home.entry;
+            alternative.textContent = String(home.id);
+            alternative.setAttribute('aria-label', `${copy.open} ${name}, ${config.labels?.home || copy.home} ${home.id}`);
+            if (number === active && isCurrentHome(home)) alternative.setAttribute('aria-current', 'page');
+            homes.append(alternative);
+          }
+          card.append(homes);
+        }
+        grid.append(card);
       }
       const admin = shadow.querySelector('.admin');
       const adminUrl = new URL('https://cars-admin-blue.vercel.app/');
@@ -181,20 +248,34 @@
       admin.href = adminUrl.href;
       admin.setAttribute('aria-label', copy.adminLabel);
       admin.querySelector('strong').textContent = copy.admin;
-      admin.querySelector('small').textContent = copy.adminDescription;
       let previousOverflow = '';
-      const mobile = () => matchMedia('(max-width: 991px)').matches;
+      let scrollLocked = false;
+      const viewport = matchMedia('(max-width: 991px)');
+      const mobile = () => viewport.matches;
+      const syncPanelMode = () => {
+        const modal = mobile();
+        panel.setAttribute('aria-modal', String(modal));
+        backdrop.hidden = panel.hidden || !modal;
+        if (!panel.hidden && modal && !scrollLocked) {
+          previousOverflow = document.documentElement.style.overflow;
+          document.documentElement.style.overflow = 'hidden';
+          scrollLocked = true;
+        } else if ((!modal || panel.hidden) && scrollLocked) {
+          document.documentElement.style.overflow = previousOverflow;
+          scrollLocked = false;
+        }
+      };
+      viewport.addEventListener('change', () => { if (!panel.hidden) syncPanelMode(); });
       const focusable = () => [...panel.querySelectorAll('a,button')].filter(element => !element.hidden);
       const close = (returnFocus = false) => {
         panel.hidden = true; backdrop.hidden = true;
         button.setAttribute('aria-expanded', 'false');
-        if (mobile()) document.documentElement.style.overflow = previousOverflow;
+        if (scrollLocked) { document.documentElement.style.overflow = previousOverflow; scrollLocked = false; }
         if (returnFocus) button.focus();
       };
       const refreshLanguage = () => {
         if (!config.localization) return;
         const next = resolveLanguage();
-        if (next === config.language) return;
         config.language = next;
         config.labels = config.localization.messages[next];
         language = next;
@@ -203,30 +284,44 @@
         choices = choicesFor();
         host.lang = language;
         shadow.querySelector('.heading').textContent = config.labels?.title || copy.title;
-        shadow.querySelector('.subtitle').textContent = copy.subtitle;
         shadow.querySelector('.fab-label').textContent = config.labels?.design || copy.design;
         button.setAttribute('aria-label', (config.labels?.design || copy.design) + ' ' + (active + 1) + ' / ' + choices.length);
         closeButton.setAttribute('aria-label', copy.close);
         grid.setAttribute('aria-label', config.labels?.choose || copy.title);
-        [...grid.querySelectorAll('a')].forEach((link, number) => {
+        [...grid.querySelectorAll('.design')].forEach((link, number) => {
           const choice = choices[number];
-          const [name, description] = designCopy[choice.key] || [copy.design + ' ' + (number + 1), ''];
+          const name = designCopy[choice.key] || copy.design + ' ' + (number + 1);
           link.href = choice.entry;
           link.setAttribute('aria-label', copy.open + ' ' + name);
-          link.querySelector('.design-name').textContent = name;
-          link.querySelector('.design-description').textContent = description;
+          const view = link.querySelector('.view-pill');
+          if (view) view.textContent = config.labels?.view || copy.view;
           link.querySelector('.state').textContent = number === active ? copy.current : String(number + 1);
+        });
+        [...grid.querySelectorAll('.home-choice')].forEach(link => {
+          const choice = choices.find(choice => choice.key === link.dataset.designKey);
+          const home = choice.homes.find(home => home.id === link.dataset.homeId);
+          const name = designCopy[choice.key] || copy.design;
+          link.href = home.entry;
+          link.textContent = String(home.id);
+          link.setAttribute('aria-label', `${copy.open} ${name}, ${config.labels?.home || copy.home} ${home.id}`);
+          if (choice.key === choices[active]?.key && isCurrentHome(home)) link.setAttribute('aria-current', 'page');
+          else link.removeAttribute('aria-current');
+        });
+        [...grid.querySelectorAll('.home-choices')].forEach((group, number) => {
+          const choice = choices.filter(choice => choice.homes?.length)[number];
+          const name = designCopy[choice.key] || copy.design;
+          group.setAttribute('aria-label', `${name}: ${config.labels?.homeChoices || copy.homeChoices}`);
         });
         admin.setAttribute('aria-label', copy.adminLabel);
         admin.querySelector('strong').textContent = copy.admin;
-        admin.querySelector('small').textContent = copy.adminDescription;
       };
       const open = () => {
         refreshLanguage();
         panel.hidden = false; backdrop.hidden = false;
+        syncPanelMode();
         button.setAttribute('aria-expanded', 'true');
-        if (mobile()) { previousOverflow = document.documentElement.style.overflow; document.documentElement.style.overflow = 'hidden'; }
-        (panel.querySelector('[aria-current="page"]') || panel.querySelector('a')).focus();
+        if (mobile()) { panel.scrollTop = 0; closeButton.focus(); }
+        else ([...panel.querySelectorAll('.home-choice')].find(link => link.getAttribute('aria-current') === 'page') || panel.querySelector('[aria-current="page"]') || panel.querySelector('a')).focus();
       };
       button.addEventListener('click', () => panel.hidden ? open() : close(true));
       closeButton.addEventListener('click', () => close(true));
@@ -237,7 +332,7 @@
       document.addEventListener('keydown', event => {
         if (panel.hidden) return;
         if (event.key === 'Escape') { event.preventDefault(); event.stopImmediatePropagation(); close(true); return; }
-        if (event.key !== 'Tab') return;
+        if (event.key !== 'Tab' || !mobile()) return;
         const items = focusable(); if (!items.length) return;
         const first = items[0], last = items[items.length - 1];
         if (event.shiftKey && shadow.activeElement === first) { event.preventDefault(); last.focus(); }

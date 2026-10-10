@@ -2,14 +2,20 @@
   "en": {
     "design": "Design",
     "choose": "Choose a design",
-    "title": "Choose a design for the site",
+    "title": "Choose a design",
+    "view": "View",
+    "home": "Home",
+    "homeChoices": "Homepage layouts",
     "admin": "Admin dashboard (English demo)",
     "adminLabel": "Admin dashboard — English-only demo, opens in a new tab"
   },
   "bg": {
     "design": "Дизайн",
-    "choose": "Избор на дизайн",
-    "title": "Изберете визия за сайта",
+    "choose": "Изберете дизайн",
+    "title": "Изберете дизайн",
+    "view": "Виж",
+    "home": "Начало",
+    "homeChoices": "Варианти на началната страница",
     "admin": "Админ панел (демо на английски)",
     "adminLabel": "Админ панел — демо само на английски, отваря се в нов раздел"
   }

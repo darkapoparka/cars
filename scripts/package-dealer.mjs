@@ -180,19 +180,27 @@ export function vercelConfiguration(manifest, legacyDetails) {
   return manifest.packaging.version === APP_PACKAGING_VERSION ? appendAppService(configuration) : configuration;
 }
 
-function switcherConfiguration(manifest, nativeMessages) {
+export function switcherConfiguration(manifest, nativeMessages, sourceFiles) {
   const native = nativePackaging(manifest.packaging.version);
   const language = native ? manifest.localization.defaultLocale : manifest.switcher?.language ?? manifest.language ?? 'bg';
   const words = {
     bg: { design: 'Дизайн', choose: 'Избор на дизайн', title: 'Изберете визия за сайта' },
     en: { design: 'Design', choose: 'Choose a design', title: 'Choose a design for the site' },
   };
-  if (native && (!nativeMessages || !['en', 'bg'].every(locale => ['design', 'choose', 'title', 'admin', 'adminLabel'].every(key => typeof nativeMessages[locale]?.[key] === 'string' && nativeMessages[locale][key].trim())))) throw new Error('Native design/Admin messages must be complete in EN/BG');
+  const messageKeys = ['design', 'choose', 'title', 'admin', 'adminLabel', ...(manifest.packaging.version === SIX_PACKAGING_VERSION ? ['home', 'homeChoices'] : [])];
+  if (native && (!nativeMessages || !['en', 'bg'].every(locale => messageKeys.every(key => typeof nativeMessages[locale]?.[key] === 'string' && nativeMessages[locale][key].trim())))) throw new Error('Native design/Admin/home messages must be complete in EN/BG');
   const labels = native ? nativeMessages[language] : manifest.switcher?.labels ?? words[language.split('-')[0]];
   if (!labels || !['design', 'choose', 'title'].every((key) => typeof labels[key] === 'string' && labels[key].length > 0)) throw new Error(`Provide switcher labels for language: ${language}`);
   const accent = manifest.switcher?.accent;
   if (accent !== undefined && !/^#[\da-f]{6}$/i.test(accent)) throw new Error('Switcher accent must be a six-digit hex color');
-  return { language, labels, ...(accent ? { accent } : {}), ...(native ? { localization: { defaultLocale: language, enabledLocales: manifest.localization.enabledLocales, messages: nativeMessages } } : {}), variants: manifest.variants.map(({ key, base, entry }) => ({ key, base, entry })) };
+  return { language, labels, ...(accent ? { accent } : {}), ...(manifest.packaging.version === SIX_PACKAGING_VERSION ? { localePresentation: 'compact-v1' } : {}), ...(native ? { localization: { defaultLocale: language, enabledLocales: manifest.localization.enabledLocales, messages: nativeMessages } } : {}), variants: manifest.variants.map(({ key, base, entry }) => ({
+    key, base, entry,
+    // Only advertise alternate homes present in this package's actual source.
+    // Older App releases lack /2 even when the dealer has six design families.
+    ...(manifest.packaging.version === SIX_PACKAGING_VERSION && ['app', 'karento-best'].includes(key)
+      && sourceFiles?.has(key === 'app' ? 'app/app/[locale]/2/page.tsx' : 'karento-best/src/routes/2/+page.svelte')
+      ? { homes: [{ id: '1', entry: `${base}/` }, { id: '2', entry: `${base}/2` }] } : {}),
+  })) };
 }
 
 function fallbackGuidance(manifest, provider) {
@@ -249,7 +257,7 @@ async function prepare({ source, manifest, sourceCommit, guidance, canonicalFile
   }
   const switcher = await fs.readFile(new URL('./publishing/preview-switcher.js', import.meta.url), 'utf8');
   const nativeMessages = native ? JSON.parse(await fs.readFile(new URL('./publishing/switcher-messages.json', import.meta.url), 'utf8')) : undefined;
-  files.set('auto-best/static/preview-switcher.js', Buffer.from(switcher.replace('__CARS_SWITCHER_CONFIG__', () => JSON.stringify(switcherConfiguration(manifest, nativeMessages)).replace(/</g, '\\u003c'))));
+  files.set('auto-best/static/preview-switcher.js', Buffer.from(switcher.replace('__CARS_SWITCHER_CONFIG__', () => JSON.stringify(switcherConfiguration(manifest, nativeMessages, files)).replace(/</g, '\\u003c'))));
   files.set('dealer.json', Buffer.from(json(manifest)));
   if (guidance !== undefined && (typeof guidance !== 'string' || !guidance.trim())) throw new Error('guidance must be nonempty portable Markdown');
   if (guidance !== undefined || !files.has('AGENTS.md')) files.set('AGENTS.md', Buffer.from(guidance ?? fallbackGuidance(manifest, provider)));

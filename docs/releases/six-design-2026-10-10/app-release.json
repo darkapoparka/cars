@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "kind": "exact-source-template-release-evidence",
+  "repository": "darkapoparka/cars",
+  "commit": "2e42c4dd156e5dd48fbfe2d3e54f5582f4cb3278",
+  "sourcePath": "templates/app",
+  "sourceTree": "7cf7eff5317bab94d0319db263164edd1a333472",
+  "sourceDigest": "c61527fe2b75a2aa3d397fb7b542ac726f7f322bc19b1bb800644af6a1d30909",
+  "exportPolicy": "cars-source-v1",
+  "release": "app-final-owner-handoff-pending-2026-10-10",
+  "recordedAt": "2026-10-10T08:14:05.803Z",
+  "verifiedAt": null,
+  "approved": false,
+  "status": "pending-final-owner-source-and-exact-evidence",
+  "runtime": {
+    "node": "22.20.0",
+    "declaredNode": ">=22.20.0 <23",
+    "next": "16.3.8",
+    "packageManager": "npm@11.3.0"
+  },
+  "modes": {
+    "standalone": "Final immutable source qualification remains pending.",
+    "mounted": "requires-dealer-QA"
+  },
+  "standalone": {
+    "mobile": false,
+    "desktop": false
+  },
+  "owner": {
+    "threadId": "01a123d6-6c14-7552-8e96-db279bb61859",
+    "observedStatus": "active",
+    "finalSourceReceiptReceived": false,
+    "currentWork": "Owner is replacing the Sell key artwork with a compact cash bundle after the pushed compact-tab/control correction. The observed commit is a snapshot, not the final source pin."
+  },
+  "checks": [
+    {
+      "name": "observed-immutable-source-identity",
+      "status": "passed",
+      "scope": "The observed pushed Cars main commit, Git subtree and cars-source-v1 digest were read directly. This checks identity only; no build or browser campaign was run."
+    },
+    {
+      "name": "final-owner-source-freeze",
+      "status": "pending",
+      "scope": "Wait for the actual final owner commit/push and source receipt, including the chosen artwork and generated-config disposition."
+    },
+    {
+      "name": "recorded-local-owner-checks",
+      "status": "recorded-baseline",
+      "scope": "The existing final verification summary records 149 unit tests, 100 passed browser checks with four skips and zero failures, and 431 production pages at an earlier production checkpoint. Later focused mobile results cover both variants and EN/BG. These are not relabeled as exact proof for this observed or a future final commit.",
+      "evidence": [
+        {
+          "path": "templates/app/runtime/final-fixes-20261010/final-verification-summary.json",
+          "sha256": "13490c1f97129c300e269a73951ae2a6b78c97363e3f7f6dbf1c898d0ebbbd5e"
+        },
+        {
+          "path": "templates/app/runtime/final-fixes-20261010/final-source-hashes.json",
+          "sha256": "fb51225c99e0dc975ac7eb8a6cb61fee9d4bcb0d1ee9f121337f08fbd35f4968"
+        },
+        {
+          "path": "templates/app/runtime/final-fixes-20261010/mobile-perfection-review/README.md",
+          "sha256": "43ed00756caa657e8d8ccf424aa6cf315cfe4ae931170947d4517c53e2211be7"
+        },
+        {
+          "path": "templates/app/runtime/final-fixes-20261010/mobile-perfection-review/final-after-results.json",
+          "sha256": "6445b1e51993cb8af35b69b40b1874227ac14be33abb0986d4a139b1440dd6ca"
+        },
+        {
+          "path": "templates/app/runtime/final-fixes-20261010/mobile-perfection-review/production-results.json",
+          "sha256": "336ac83fbdfc8d21401976a02cb33080218b8589d446431dccbfa21ab48023e0"
+        }
+      ]
+    },
+    {
+      "name": "immutable-consumer-continuity-and-delta-closure",
+      "status": "pending",
+      "scope": "Compare the final immutable consumers against the recorded tested-input manifest before reusing checks. Qualify only changed inputs and their affected routes/viewports, including both App variants; run a production checkpoint only if the final inputs lack a matching completed checkpoint."
+    },
+    {
+      "name": "latest-exact-hosted-source",
+      "status": "pending",
+      "scope": "No READY plus hosted receipt matching this observed source was located in the owner handoff. The current prepare-mirror proposal binds ca72e43, and is not a READY or hosted result for 2e42c4d.",
+      "evidence": [
+        {
+          "path": "templates/app/runtime/final-fixes-20261010/publish/mirror-proposal.json",
+          "sha256": "66ab7f844e034ca094b5ed1c750a9e74c7e79f180bbc3de598f9dc927d173f41"
+        }
+      ]
+    }
+  ],
+  "deployment": {
+    "matchesSelectedSource": false,
+    "state": "not-established-for-observed-source",
+    "baseline": {
+      "evidence": "docs/qa/app-template-release-2026-10-10.json",
+      "sourceCommit": "70c2b80671e217ab299549a938a537c0b9559611",
+      "publishingRepository": "darkapoparka/cars-template-app",
+      "publishingCommit": "dcfe33bde79c6d2569804e3000e8816688334608",
+      "id": "dpl_FRSX2fEennkC5E6TiaDna2xzSDTy",
+      "state": "READY",
+      "publicAlias": "https://cars-template-app.vercel.app",
+      "evidenceReceipt": {
+        "path": "docs/qa/app-template-release-2026-10-10.json",
+        "sha256": "2dad1c4c7cd076734a7d48c273e0f7e8426c959302567f1d16e9536938937cb0"
+      },
+      "scope": "Exact old release proof only; unchanged-input continuity has not been established for the final release."
+    }
+  },
+  "nextAction": "Obtain the final owner source/receipt. Run the existing template-release approve inspection for that exact final SHA without --write, bind completed local and hosted delta evidence, then let the publisher owner select the release."
+}

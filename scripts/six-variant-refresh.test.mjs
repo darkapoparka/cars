@@ -100,6 +100,64 @@ function signatureFixture(t) {
   return x;
 }
 
+function discoveryFixture(t) {
+  const x=signatureFixture(t),prefix='karento-best/src/routes/2/';
+  x.files.set(prefix+'discovery.ts',Buffer.from(`
+export interface DiscoveryCar { titleKey?: string; priceAmount?: number; year?: number; }
+type Sample = Pick<DiscoveryCar, "titleKey"> & { amount: number; };
+
+function sample(input: Sample): DiscoveryCar {
+  return { titleKey: input.titleKey, priceAmount: input.amount };
+}
+
+export const discoveryCars: readonly DiscoveryCar[] = [];
+export const collections = [{id:"newest",title:"newest"}] as const;
+export type Collection = (typeof collections)[number];
+export type CollectionId = Collection["id"];
+export const discoveryMessages = {
+  sample: "reference.discovery.disclosure.summary",
+  sampleDetail: "reference.discovery.disclosure.detail",
+};
+export function readDiscoveryFilters(params) { return {priceMax: normalizeCatalogBudget(params.get("priceMax") ?? "") ?? ""}; }
+`));
+  x.files.set(prefix+'DiscoveryHome.svelte',Buffer.from('<script>const pills = [{title:"all",section:"collections"}] as const;</script>'));
+  x.files.set(prefix+'DiscoverySearch.svelte',Buffer.from('<script>const price=locale.money(amount, "EUR");</script><section class="budget-section search-panel"><h3>Budget</h3></section>'));
+  x.files.set('karento-best/src/lib/i18n/catalogs/reference-discovery.ts',Buffer.from('export const referenceDiscoveryEn={"reference.discovery.search.maximumPrice":"Maximum price (€)"};\nexport const referenceDiscoveryBg={"reference.discovery.search.maximumPrice":"Максимална цена (€)"};\n'));
+  return x;
+}
+
+test('Signature discovery retains dated dealer IDs, media and currency without inventing missing facts or template offers',t=>{
+  const x=discoveryFixture(t);x.profile.business.currency='USD';
+  x.profile.listings.push({...x.profile.listings[0],id:'unknown-facts',year:0,priceAmount:null,bodyType:'other'});
+  const adaptation=applyExtendedRefreshAdapter({...x,key:'karento-best'});
+  const source=x.files.get('karento-best/src/routes/2/discovery.ts').toString();
+  const cars=JSON.parse(source.match(/discoveryCars[^=]*=\s*([\s\S]*?);/)[1]);
+  assert.equal(cars.length,2);assert.equal(cars[0].id,'vehicle-1');assert.equal(cars[0].href,'/vehicle?id=vehicle-1');
+  assert.equal(cars[0].image,'/dealer/vehicle.webp');assert.equal(cars[0].priceAmount,12500);assert.equal(cars[0].currency,'AED');
+  assert.equal(Object.hasOwn(cars[1],'year'),false);assert.equal(Object.hasOwn(cars[1],'priceAmount'),false);assert.equal(Object.hasOwn(cars[1],'body'),false);
+  assert.ok(cars.every(car=>car.offer===false&&car.exclusive===false&&!Object.hasOwn(car,'titleKey')));
+  assert.doesNotMatch(source,/\bSample\b|\bfunction sample\(/,'the replaced sample feed must not leave an unused donor builder in strict source');
+  const collectionSource=source.match(/export const collections[^=]*=([\s\S]*?);/)[1];
+  assert.doesNotMatch(collectionSource,/offers|exclusive|premium|under-10000|under-20000/);
+  assert.match(source,/sample: "dealer\.stock\.notice"/);
+  assert.match(x.files.get('karento-best/src/routes/2/DiscoverySearch.svelte').toString(),/locale\.money\(amount, "AED"\)/);
+  assert.match(x.files.get('karento-best/src/lib/i18n/catalogs/reference-discovery.ts').toString(),/Максимална цена \(AED\)/);
+  assert.ok(adaptation.contentPaths.includes('karento-best/src/routes/2/discovery.ts'));
+  const pills=JSON.parse(x.files.get('karento-best/src/routes/2/DiscoveryHome.svelte').toString().match(/const pills = ([\s\S]*?) as const;/)[1]);
+  assert.equal(new Set(pills.map(pill=>pill.section)).size,pills.length,'native keyed discovery pills must remain unique for hydration');
+});
+
+test('Signature discovery removes currency comparisons for mixed feeds and discloses illustrative inventory',t=>{
+  const x=discoveryFixture(t);x.profile.stockKind='illustrative-not-dealer-stock';
+  x.profile.listings.push({...x.profile.listings[0],id:'eur-source',currency:'EUR'});
+  applyExtendedRefreshAdapter({...x,key:'karento-best'});
+  const source=x.files.get('karento-best/src/routes/2/discovery.ts').toString();
+  assert.match(source,/sample: "dealer\.stock\.illustrativeNotice"/);
+  assert.match(source,/priceMax: ""/);
+  const collectionSource=source.match(/export const collections[^=]*=([\s\S]*?);/)[1];assert.doesNotMatch(collectionSource,/cheapest/);
+  assert.doesNotMatch(x.files.get('karento-best/src/routes/2/DiscoverySearch.svelte').toString(),/budget-section/);
+});
+
 test('Mobile adapter uses real identity/media, isolates saved data and removes captured dealer stock from the active feed',t=>{
   const x=extendedFixture(t,'mobile');
   x.profile.business.currency='USD'; // Explicit stock remains AED; never relabel amounts from stale business defaults.
@@ -107,6 +165,8 @@ test('Mobile adapter uses real identity/media, isolates saved data and removes c
   x.files.set('mobile/src/lib/catalog.ts',Buffer.from('import type { Vehicle } from "./types";\nexport const vehicles: Vehicle[] = [oldVehicle];\nexport const makes = ["Audi"];\n'));
   x.files.set('mobile/src/lib/dealers.ts',Buffer.from('export const capturedDealers: Record<string,CapturedDealer> = {};\n'));
   for(const name of ['NativeDealerCards.tsx','DealerScreens.tsx','VehicleCard.tsx','VehicleSections.tsx'])x.files.set('mobile/src/components/'+name,fs.readFileSync(path.join('templates/mobile/src/components',name)));
+  const donorCover='const desktopCovers: Record<string, string> = { "vehicle-1": "/images/donor-bmw.webp" };\nconst desktopCover = desktopCovers[v.id] || v.images[0];';
+  x.files.set('mobile/src/components/ShowroomVehicleCard.tsx',Buffer.from(donorCover));
   for(const name of ['locale.ts','search.ts'])x.files.set('mobile/src/lib/'+name,fs.readFileSync(path.join('templates/mobile/src/lib',name)));
   const adaptation=applyExtendedRefreshAdapter({...x,key:'mobile'});
   assert.match(x.files.get('mobile/src/lib/showroom-config.ts').toString(),/"storageNamespace": "fixture"/);
@@ -114,6 +174,11 @@ test('Mobile adapter uses real identity/media, isolates saved data and removes c
   const vehicles=JSON.parse(x.files.get('mobile/src/lib/dealer-inventory.json'));
   assert.equal(vehicles[0].dealer,'Real Dealer');assert.equal(vehicles[0].reviews,0);assert.ok(!('financeMonthly' in vehicles[0]));
   assert.equal(adaptation.mediaPaths[0],'/dealer/vehicle.webp');
+  const showroomCard=x.files.get('mobile/src/components/ShowroomVehicleCard.tsx').toString();
+  assert.match(showroomCard,/const desktopCovers: Record<string, string> = \{\};/);
+  assert.doesNotMatch(showroomCard,/donor-bmw/);
+  assert.match(showroomCard,/desktopCovers\[v\.id\] \|\| v\.images\[0\]/);
+  assert.ok(adaptation.contentPaths.includes('mobile/src/components/ShowroomVehicleCard.tsx'));
   assert.ok(x.files.has('mobile/public/dealer-brand/light.webp'));
   assert.match(x.files.get('mobile/src/lib/catalog.ts').toString(),/dealerInventory as Vehicle\[\]/);
   assert.match(x.files.get('mobile/src/lib/locale.ts').toString(),/currency: "AED"/);
@@ -159,6 +224,23 @@ test('Signature dealer facts preserve explicit offer currencies and distinguish 
   assert.throws(()=>signaturePriceFacts({...stock,currency:'EUR 12500'}),/invalid stock price/);
   assert.deepEqual(signaturePriceFacts({...stock,priceAmount:null}),{});
   assert.throws(()=>signatureMileageFacts({...stock,mileageValue:-1,raw:{mileageKm:5}}),/invalid stock mileage/);
+});
+
+test('Signature Bulgarian dealer values work with the native mileage, decimal price and fuel/transmission filters',async t=>{
+  const x=signatureFixture(t),stock=x.profile.listings[0];
+  x.profile.business.locale='bg-BG';
+  Object.assign(stock,{priceAmount:27349.75,currency:'EUR',mileageValue:294900,mileageUnit:'km',fuel:'Електрически',fuelType:'electric',transmission:'Автоматична',transmissionType:'automatic',raw:{year:2020,mileageKm:294900}});
+  x.profile.listings.push({...stock,id:'unknown-mileage',mileageValue:0,raw:{year:2020}});
+  const adaptation=applyExtendedRefreshAdapter({...x,key:'karento-best'});
+  assert.equal(adaptation.nativeFacts,true);
+  const cards=JSON.parse(x.files.get('karento-best/src/lib/data/dealer-vehicles.json')).map(record=>record.card);
+  const {catalogMileageInMiles,readDesktopCatalogFilters,matchDesktopCatalog}=await import('../templates/karento-best/src/lib/data/desktop-catalog.ts');
+  assert.equal(Math.round(catalogMileageInMiles(cards[0].mileage)),183242);
+  assert.equal(cards[1].mileage,'','unpublished mileage cannot become a zero-mileage fact');
+  const filters=parameters=>readDesktopCatalogFilters(new URLSearchParams(parameters));
+  assert.deepEqual(matchDesktopCatalog(cards,filters({maxMileage:'200000',minPrice:'27349.5',budget:'27350',fuel:'Electric',transmission:'Automatic'})).map(card=>card.href),['/vehicle?id=vehicle-1']);
+  assert.equal(matchDesktopCatalog(cards,filters({maxMileage:'100000'})).length,0);
+  assert.equal(matchDesktopCatalog(cards,filters({minPrice:'27349.8'})).length,0);
 });
 
 test('Signature dealer cards and PDP share exact dated source IDs/media without donor staff, reviews or rental quotes',t=>{
@@ -217,12 +299,17 @@ test('Signature dealer cards and PDP share exact dated source IDs/media without 
   assert.match(x.files.get('karento-best/src/lib/sections/FeaturedVehicleCarousel.svelte').toString(),/\{#if referenceVehicles\.featuredVehicleSlides\[7\]\}/);
   assert.doesNotMatch(x.files.get('karento-best/src/lib/data/home-stories.ts').toString(),/Sophia Moore|Sara Mohamed/);
   assert.doesNotMatch(x.files.get('karento-best/src/lib/data/editorial.ts').toString().split('export const teamMembers')[1],/Emily Rose/);
+  const contact=x.files.get('karento-best/src/lib/components/contact/ContactLocationCard.svelte').toString();
+  assert.match(contact,/\{#if location.avatar\}/,'missing dealer portraits do not render broken images');
+  assert.match(contact,/\{#if location.email\}/,'an unpublished email does not render an empty contact action');
 });
 
 test('Signature native binding refuses disconnected typed consumers and retains the guarded older host adaptation',t=>{
   const x=signatureFixture(t),hostPath='karento-best/src/lib/sections/VehicleEnquiryDetail.svelte';
   const original=x.files.get(hostPath);
-  x.files.set(hostPath,Buffer.from(original.toString().replace('<MobileVehicleDetail {heading} {gallery} {specifications} {details} {reservation} {seller} />','<MobileVehicleDetail {heading} {gallery} {specifications} {details} {reservation} />')));
+  const disconnected=original.toString().replace(/(<MobileVehicleDetail\b[^>]*?)\s+\{seller\}(?=\s|\/>)/,'$1');
+  assert.notEqual(disconnected,original.toString(),'The fixture must actually disconnect the seller prop across native formatting changes');
+  x.files.set(hostPath,Buffer.from(disconnected));
   assert.throws(()=>applyExtendedRefreshAdapter({...x,key:'karento-best'}),/must forward all six mobile props exactly once/);
   const older=signatureFixture(t);
   older.files.set(hostPath,Buffer.from('<svelte:options runes={true} />\n<script lang="ts">\n</script>\n<MobileVehicleDetail /><VehicleHeading /><VehicleSliderGallery /><VehicleSpecifications alignStart /><VehicleDetailPanels /><VehicleReservationCard /><DetailSellerCard />\n'));
@@ -231,6 +318,33 @@ test('Signature native binding refuses disconnected typed consumers and retains 
   assert.match(adapted,/dealerDetailFor\(page\.url\.searchParams\.get\("id"\)\)/);
   assert.match(adapted,/MobileVehicleDetail heading=\{selected\.heading\} gallery=\{selected\.gallery\}/);
   assert.match(adapted,/\{:else\}<DealerVehicleNotFound \/>\{\/if\}/);
+});
+
+test('Signature native mobile forwarding permits only the optional trailing shorthand loan-state binding',t=>{
+  const hostPath='karento-best/src/lib/sections/VehicleEnquiryDetail.svelte';
+  const original=signatureFixture(t).files.get(hostPath).toString();
+  const tag=original.match(/<MobileVehicleDetail\b[^>]*\/>/)?.[0];
+  assert.ok(tag,'The fixture must contain the native mobile detail invocation');
+  const plainTag=tag.replace(/\s+bind:loanState(?=\s*\/>)/,'');
+  for(const acceptedTag of [plainTag,plainTag.replace(/\s*\/>$/,' bind:loanState />')]){
+    const x=signatureFixture(t),host=original.replace(tag,acceptedTag);
+    x.files.set(hostPath,Buffer.from(host));
+    applyExtendedRefreshAdapter({...x,key:'karento-best'});
+    assert.equal(x.files.get(hostPath).toString(),host,'Accepted native composition is retained unchanged');
+  }
+  for(const [label,rejectedTag]of [
+    ['duplicate seller',plainTag.replace('{seller}','{seller} {seller}')],
+    ['disconnected seller',plainTag.replace('{seller}','seller={referenceSeller}')],
+    ['unexpected attribute',plainTag.replace('{seller}','{seller} title="unreviewed"')],
+    ['remapped loan state',plainTag.replace(/\s*\/>$/,' bind:loanState={unrelatedLoanState} />')],
+    ['duplicate loan binding',plainTag.replace(/\s*\/>$/,' bind:loanState bind:loanState />')],
+    ['binding before required seller',plainTag.replace('{seller}','bind:loanState {seller}')],
+  ]){
+    assert.notEqual(rejectedTag,tag,`The ${label} fixture must change the invocation`);
+    const x=signatureFixture(t);
+    x.files.set(hostPath,Buffer.from(original.replace(tag,rejectedTag)));
+    assert.throws(()=>applyExtendedRefreshAdapter({...x,key:'karento-best'}),/must forward all six mobile props exactly once/,label);
+  }
 });
 
 test('Al Reef authoritative illustrative pack remains illustrative in the native English and Bulgarian preview',async()=>{
