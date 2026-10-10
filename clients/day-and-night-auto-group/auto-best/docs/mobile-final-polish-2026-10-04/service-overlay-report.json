@@ -1,0 +1,36 @@
+{
+  "generatedAt": "2026-10-03T21:33:50.656Z",
+  "base": "http://127.0.0.1:6461",
+  "results": [
+    {
+      "name": "bg 320 service entry overlays",
+      "passed": true,
+      "durationMs": 29032
+    },
+    {
+      "name": "bg 390 service entry overlays",
+      "passed": true,
+      "durationMs": 27498
+    },
+    {
+      "name": "bg 430 service entry overlays",
+      "passed": true,
+      "durationMs": 16578
+    },
+    {
+      "name": "en 320 service entry overlays",
+      "passed": true,
+      "durationMs": 13306
+    },
+    {
+      "name": "en 390 service entry overlays",
+      "passed": true,
+      "durationMs": 12825
+    },
+    {
+      "name": "en 430 service entry overlays",
+      "passed": true,
+      "durationMs": 9895
+    }
+  ]
+}

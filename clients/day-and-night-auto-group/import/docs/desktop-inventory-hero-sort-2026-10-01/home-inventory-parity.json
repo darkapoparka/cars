@@ -1,0 +1,566 @@
+[
+  {
+    "cars": [
+      {
+        "height": 240,
+        "width": 360,
+        "x": -198,
+        "y": 238
+      },
+      {
+        "height": 240,
+        "width": 360,
+        "x": 591,
+        "y": 238
+      }
+    ],
+    "hero": {
+      "height": 450,
+      "width": 753,
+      "x": 0,
+      "y": 133
+    },
+    "locale": "bg",
+    "overflow": false,
+    "width": 768,
+    "inventoryHero": {
+      "height": 450,
+      "width": 753,
+      "x": 0,
+      "y": 133
+    },
+    "inventoryCars": [
+      {
+        "height": 240,
+        "width": 360,
+        "x": -198,
+        "y": 238
+      },
+      {
+        "height": 240,
+        "width": 360,
+        "x": 591,
+        "y": 238
+      }
+    ],
+    "frameMatches": true,
+    "artworkMatches": true
+  },
+  {
+    "cars": [
+      {
+        "height": 240,
+        "width": 360,
+        "x": -198,
+        "y": 238
+      },
+      {
+        "height": 240,
+        "width": 360,
+        "x": 723,
+        "y": 238
+      }
+    ],
+    "hero": {
+      "height": 450,
+      "width": 885,
+      "x": 0,
+      "y": 133
+    },
+    "locale": "bg",
+    "overflow": false,
+    "width": 900,
+    "inventoryHero": {
+      "height": 450,
+      "width": 885,
+      "x": 0,
+      "y": 133
+    },
+    "inventoryCars": [
+      {
+        "height": 240,
+        "width": 360,
+        "x": -198,
+        "y": 238
+      },
+      {
+        "height": 240,
+        "width": 360,
+        "x": 723,
+        "y": 238
+      }
+    ],
+    "frameMatches": true,
+    "artworkMatches": true
+  },
+  {
+    "cars": [
+      {
+        "height": 240,
+        "width": 360,
+        "x": -198,
+        "y": 213
+      },
+      {
+        "height": 240,
+        "width": 360,
+        "x": 847,
+        "y": 213
+      }
+    ],
+    "hero": {
+      "height": 400,
+      "width": 1009,
+      "x": 0,
+      "y": 133
+    },
+    "locale": "bg",
+    "overflow": false,
+    "width": 1024,
+    "inventoryHero": {
+      "height": 400,
+      "width": 1009,
+      "x": 0,
+      "y": 133
+    },
+    "inventoryCars": [
+      {
+        "height": 240,
+        "width": 360,
+        "x": -198,
+        "y": 213
+      },
+      {
+        "height": 240,
+        "width": 360,
+        "x": 847,
+        "y": 213
+      }
+    ],
+    "frameMatches": true,
+    "artworkMatches": true
+  },
+  {
+    "cars": [
+      {
+        "height": 290.125,
+        "width": 435.1875,
+        "x": -121.85250091552734,
+        "y": 148.9375
+      },
+      {
+        "height": 290.125,
+        "width": 435.18756103515625,
+        "x": 951.6649780273438,
+        "y": 148.9375
+      }
+    ],
+    "hero": {
+      "height": 400,
+      "width": 1265,
+      "x": 0,
+      "y": 94
+    },
+    "locale": "bg",
+    "overflow": false,
+    "width": 1280,
+    "inventoryHero": {
+      "height": 400,
+      "width": 1265,
+      "x": 0,
+      "y": 94
+    },
+    "inventoryCars": [
+      {
+        "height": 290.125,
+        "width": 435.1875,
+        "x": -121.85250091552734,
+        "y": 148.9375
+      },
+      {
+        "height": 290.125,
+        "width": 435.18756103515625,
+        "x": 951.6649780273438,
+        "y": 148.9375
+      }
+    ],
+    "frameMatches": true,
+    "artworkMatches": true
+  },
+  {
+    "cars": [
+      {
+        "height": 326.390625,
+        "width": 489.59375,
+        "x": -137.08624267578125,
+        "y": 130.8046875
+      },
+      {
+        "height": 326.390625,
+        "width": 489.59375,
+        "x": 1072.492431640625,
+        "y": 130.8046875
+      }
+    ],
+    "hero": {
+      "height": 400,
+      "width": 1425,
+      "x": 0,
+      "y": 94
+    },
+    "locale": "bg",
+    "overflow": false,
+    "width": 1440,
+    "inventoryHero": {
+      "height": 400,
+      "width": 1425,
+      "x": 0,
+      "y": 94
+    },
+    "inventoryCars": [
+      {
+        "height": 326.390625,
+        "width": 489.59375,
+        "x": -137.08624267578125,
+        "y": 130.8046875
+      },
+      {
+        "height": 326.390625,
+        "width": 489.59375,
+        "x": 1072.492431640625,
+        "y": 130.8046875
+      }
+    ],
+    "frameMatches": true,
+    "artworkMatches": true
+  },
+  {
+    "cars": [
+      {
+        "height": 426.65625,
+        "width": 640,
+        "x": -179.1999969482422,
+        "y": 80.671875
+      },
+      {
+        "height": 426.65625,
+        "width": 640,
+        "x": 1444.199951171875,
+        "y": 80.671875
+      }
+    ],
+    "hero": {
+      "height": 400,
+      "width": 1905,
+      "x": 0,
+      "y": 94
+    },
+    "locale": "bg",
+    "overflow": false,
+    "width": 1920,
+    "inventoryHero": {
+      "height": 400,
+      "width": 1905,
+      "x": 0,
+      "y": 94
+    },
+    "inventoryCars": [
+      {
+        "height": 426.65625,
+        "width": 640,
+        "x": -179.1999969482422,
+        "y": 80.671875
+      },
+      {
+        "height": 426.65625,
+        "width": 640,
+        "x": 1444.199951171875,
+        "y": 80.671875
+      }
+    ],
+    "frameMatches": true,
+    "artworkMatches": true
+  },
+  {
+    "cars": [
+      {
+        "height": 240,
+        "width": 360,
+        "x": -198,
+        "y": 238
+      },
+      {
+        "height": 240,
+        "width": 360,
+        "x": 591,
+        "y": 238
+      }
+    ],
+    "hero": {
+      "height": 450,
+      "width": 753,
+      "x": 0,
+      "y": 133
+    },
+    "locale": "en",
+    "overflow": false,
+    "width": 768,
+    "inventoryHero": {
+      "height": 450,
+      "width": 753,
+      "x": 0,
+      "y": 133
+    },
+    "inventoryCars": [
+      {
+        "height": 240,
+        "width": 360,
+        "x": -198,
+        "y": 238
+      },
+      {
+        "height": 240,
+        "width": 360,
+        "x": 591,
+        "y": 238
+      }
+    ],
+    "frameMatches": true,
+    "artworkMatches": true
+  },
+  {
+    "cars": [
+      {
+        "height": 240,
+        "width": 360,
+        "x": -198,
+        "y": 238
+      },
+      {
+        "height": 240,
+        "width": 360,
+        "x": 723,
+        "y": 238
+      }
+    ],
+    "hero": {
+      "height": 450,
+      "width": 885,
+      "x": 0,
+      "y": 133
+    },
+    "locale": "en",
+    "overflow": false,
+    "width": 900,
+    "inventoryHero": {
+      "height": 450,
+      "width": 885,
+      "x": 0,
+      "y": 133
+    },
+    "inventoryCars": [
+      {
+        "height": 240,
+        "width": 360,
+        "x": -198,
+        "y": 238
+      },
+      {
+        "height": 240,
+        "width": 360,
+        "x": 723,
+        "y": 238
+      }
+    ],
+    "frameMatches": true,
+    "artworkMatches": true
+  },
+  {
+    "cars": [
+      {
+        "height": 240,
+        "width": 360,
+        "x": -198,
+        "y": 213
+      },
+      {
+        "height": 240,
+        "width": 360,
+        "x": 847,
+        "y": 213
+      }
+    ],
+    "hero": {
+      "height": 400,
+      "width": 1009,
+      "x": 0,
+      "y": 133
+    },
+    "locale": "en",
+    "overflow": false,
+    "width": 1024,
+    "inventoryHero": {
+      "height": 400,
+      "width": 1009,
+      "x": 0,
+      "y": 133
+    },
+    "inventoryCars": [
+      {
+        "height": 240,
+        "width": 360,
+        "x": -198,
+        "y": 213
+      },
+      {
+        "height": 240,
+        "width": 360,
+        "x": 847,
+        "y": 213
+      }
+    ],
+    "frameMatches": true,
+    "artworkMatches": true
+  },
+  {
+    "cars": [
+      {
+        "height": 290.125,
+        "width": 435.1875,
+        "x": -121.85250091552734,
+        "y": 148.9375
+      },
+      {
+        "height": 290.125,
+        "width": 435.18756103515625,
+        "x": 951.6649780273438,
+        "y": 148.9375
+      }
+    ],
+    "hero": {
+      "height": 400,
+      "width": 1265,
+      "x": 0,
+      "y": 94
+    },
+    "locale": "en",
+    "overflow": false,
+    "width": 1280,
+    "inventoryHero": {
+      "height": 400,
+      "width": 1265,
+      "x": 0,
+      "y": 94
+    },
+    "inventoryCars": [
+      {
+        "height": 290.125,
+        "width": 435.1875,
+        "x": -121.85250091552734,
+        "y": 148.9375
+      },
+      {
+        "height": 290.125,
+        "width": 435.18756103515625,
+        "x": 951.6649780273438,
+        "y": 148.9375
+      }
+    ],
+    "frameMatches": true,
+    "artworkMatches": true
+  },
+  {
+    "cars": [
+      {
+        "height": 326.390625,
+        "width": 489.59375,
+        "x": -137.08624267578125,
+        "y": 130.8046875
+      },
+      {
+        "height": 326.390625,
+        "width": 489.59375,
+        "x": 1072.492431640625,
+        "y": 130.8046875
+      }
+    ],
+    "hero": {
+      "height": 400,
+      "width": 1425,
+      "x": 0,
+      "y": 94
+    },
+    "locale": "en",
+    "overflow": false,
+    "width": 1440,
+    "inventoryHero": {
+      "height": 400,
+      "width": 1425,
+      "x": 0,
+      "y": 94
+    },
+    "inventoryCars": [
+      {
+        "height": 326.390625,
+        "width": 489.59375,
+        "x": -137.08624267578125,
+        "y": 130.8046875
+      },
+      {
+        "height": 326.390625,
+        "width": 489.59375,
+        "x": 1072.492431640625,
+        "y": 130.8046875
+      }
+    ],
+    "frameMatches": true,
+    "artworkMatches": true
+  },
+  {
+    "cars": [
+      {
+        "height": 426.65625,
+        "width": 640,
+        "x": -179.1999969482422,
+        "y": 80.671875
+      },
+      {
+        "height": 426.65625,
+        "width": 640,
+        "x": 1444.199951171875,
+        "y": 80.671875
+      }
+    ],
+    "hero": {
+      "height": 400,
+      "width": 1905,
+      "x": 0,
+      "y": 94
+    },
+    "locale": "en",
+    "overflow": false,
+    "width": 1920,
+    "inventoryHero": {
+      "height": 400,
+      "width": 1905,
+      "x": 0,
+      "y": 94
+    },
+    "inventoryCars": [
+      {
+        "height": 426.65625,
+        "width": 640,
+        "x": -179.1999969482422,
+        "y": 80.671875
+      },
+      {
+        "height": 426.65625,
+        "width": 640,
+        "x": 1444.199951171875,
+        "y": 80.671875
+      }
+    ],
+    "frameMatches": true,
+    "artworkMatches": true
+  }
+]

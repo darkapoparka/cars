@@ -14,9 +14,13 @@ export interface VehicleCardTrustSignal {
 }
 
 export interface VehicleCardProps {
+  className?: string;
+  compactDesktopGrid?: boolean;
   density?: "default" | "compact";
   desktopHeadingLevel?: 2 | 3;
+  desktopImageSizes?: string;
   desktopLayout?: "list" | "grid";
+  desktopSurface?: "landing" | "inventory";
   href?: string;
   listing: VehicleListing;
   locale?: string;
