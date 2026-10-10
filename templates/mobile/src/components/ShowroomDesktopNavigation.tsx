@@ -74,6 +74,7 @@ export function ShowroomDesktopNavigation({ overHero = false }: { overHero?: boo
       {showroomNavigation.map(([href, label]) => {
         const current =
           pathname === href ||
+          (href === '/services' && pathname.startsWith('/services/')) ||
           (href === '/' && (pathname === '/car-park' || pathname === '/results'));
         return (
           <Link

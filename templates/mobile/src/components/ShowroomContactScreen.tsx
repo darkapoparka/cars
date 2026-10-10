@@ -7,7 +7,8 @@ import * as stylex from '@stylexjs/stylex';
 import type { Vehicle } from '@/lib/types';
 import { showroomVehiclePhotos } from '@/lib/vehicle-copy';
 import { showroom, showroomContactLocation, showroomPageContent } from '@/lib/showroom';
-import { serviceCategoryHref, showroomService } from '@/lib/showroom-services';
+import { showroomService } from '@/lib/showroom-services';
+import { serviceDetailHref } from '@/lib/showroom-service-details';
 import { saveMessageDraft, useAppState } from '@/lib/store';
 import { Header } from './Header';
 import { ShowroomBanner, ShowroomDrawer, ShowroomPageHero } from './ShowroomPageLayout';
@@ -190,7 +191,7 @@ export function ShowroomContactScreen({
                       : service
                         ? {
                             title: t(service.title),
-                            href: serviceCategoryHref(service.category),
+                            href: serviceDetailHref(service.id) || '/services',
                             linkLabel: 'View service',
                           }
                         : undefined
@@ -221,7 +222,7 @@ export function ShowroomContactScreen({
                         href={
                           vehicle
                             ? '/vehicle/' + vehicle.id
-                            : serviceCategoryHref(service?.category || 'services')
+                            : serviceDetailHref(service?.id || '') || '/services'
                         }
                         {...stylex.props(s.contextLink)}
                       >

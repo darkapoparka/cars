@@ -6,6 +6,7 @@ import { useSearchParams } from 'next/navigation';
 import { ChevronRight } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import { showroomPageContent } from '@/lib/showroom';
+import { serviceDetailHref } from '@/lib/showroom-service-details';
 import {
   serviceCategories,
   serviceCategoryHref,
@@ -268,18 +269,8 @@ export function ShowroomServicesScreen() {
                   <Link
                     key={service.id}
                     data-showroom-service={service.id}
-                    href={
-                      service.details ||
-                      service.category === 'import' ||
-                      service.category === 'sell'
-                        ? serviceCategoryHref(service.category)
-                        : '/contact?service=' + service.id
-                    }
-                    aria-label={
-                      service.details
-                        ? t('View ') + t(service.title).toLowerCase()
-                        : t(service.action)
-                    }
+                    href={serviceDetailHref(service.id) || '/services'}
+                    aria-label={t('View ') + t(service.title).toLowerCase()}
                     aria-describedby={'showroom-service-' + service.id + '-copy'}
                     {...stylex.props(s.serviceCard, s.serviceCardLink)}
                   >
@@ -321,19 +312,9 @@ export function ShowroomServicesScreen() {
                     <span
                       data-service-card-cue
                       aria-hidden="true"
-                      {...stylex.props(
-                        s.serviceCardCue,
-                        (service.details ||
-                          service.category === 'import' ||
-                          service.category === 'sell') &&
-                          s.serviceCardViewCue,
-                      )}
+                      {...stylex.props(s.serviceCardCue, s.serviceCardViewCue)}
                     >
-                      {(service.details ||
-                        service.category === 'import' ||
-                        service.category === 'sell') && (
-                        <span {...stylex.props(s.serviceCardCueText)}>{t('View')}</span>
-                      )}
+                      <span {...stylex.props(s.serviceCardCueText)}>{t('View')}</span>
                       <ChevronRight
                         size={12}
                         strokeWidth={1.8}
