@@ -237,6 +237,10 @@ h1, h2, h3, h4, h5, h6, strong, b { font-weight: var(--dn-weight-semibold); }
   }
   .dn-app-shell input.dn-entry-field--prominent::placeholder { color: var(--dn-entry-prominent-muted); opacity: 1; }
   .dn-app-shell .dn-entry-card .dn-entry-field--prominent { --dn-entry-height: var(--dn-control-height-entry-mobile); border-radius: var(--dn-pill); }
+  /* Mobile selectors share the CTA's 40px surface and retain 44px targets. */
+  .dn-app-shell .dn-entry-card .dn-segmented-control { position: relative; isolation: isolate; width: min(100%, 15rem); margin-inline: auto; background: transparent; }
+  .dn-app-shell .dn-entry-card .dn-segmented-control::before { position: absolute; z-index: -1; inset: var(--dn-space-half) 0; border-radius: inherit; background: var(--dn-segment-surface); content: ''; pointer-events: none; }
+  .dn-app-shell .dn-entry-card .dn-segmented-option { border-block-width: var(--dn-space-1); padding-block: 0; font: var(--dn-tab-font); }
   @media (hover: hover) and (pointer: fine) {
     .dn-app-shell .dn-entry-field--prominent:hover { background: var(--dn-entry-hover-surface); }
   }

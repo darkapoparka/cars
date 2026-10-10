@@ -12,12 +12,14 @@ const style = (locator) => locator.evaluate(element => {
 });
 const selectorFrame = (locator) => locator.evaluate(track => {
   const css = getComputedStyle(track);
+  const paint = getComputedStyle(track, '::before');
   const options = [...track.querySelectorAll('.dn-segmented-option')];
   const selected = options.find(el => el.getAttribute('aria-selected') === 'true' || el.getAttribute('aria-pressed') === 'true');
   const selectedCss = getComputedStyle(selected);
   return {
     width: track.getBoundingClientRect().width, height: track.getBoundingClientRect().height,
-    background: css.backgroundColor,
+    background: paint.content === 'none' ? css.backgroundColor : paint.backgroundColor,
+    paintHeight: paint.content === 'none' ? track.getBoundingClientRect().height : parseFloat(paint.height),
     optionWidths: options.map(el => el.getBoundingClientRect().width),
     selectedPaintHeight: selected.getBoundingClientRect().height - parseFloat(selectedCss.borderTopWidth) - parseFloat(selectedCss.borderBottomWidth),
     selectedInsets: [selectedCss.borderTopWidth, selectedCss.borderRightWidth, selectedCss.borderBottomWidth, selectedCss.borderLeftWidth],
@@ -49,9 +51,11 @@ try {
       assert.equal(metrics.segment.height, 44, 'Every segment is a full 44px target');
       const segmentTrack = card.locator('.dn-segmented-control:visible');
       assert.equal((await style(segmentTrack)).height, 44, 'The selector retains its full touch height');
-      assert.equal(await segment.evaluate(element => { const css = getComputedStyle(element); return element.getBoundingClientRect().height - parseFloat(css.borderTopWidth) - parseFloat(css.borderBottomWidth); }), 40, 'Selected segment paint stays inset inside its full touch target');
+      assert.equal(await segment.evaluate(element => { const css = getComputedStyle(element); return element.getBoundingClientRect().height - parseFloat(css.borderTopWidth) - parseFloat(css.borderBottomWidth); }), width < 768 ? 36 : 40, 'Selected segment paint stays inset inside its full touch target');
       assert.equal(metrics.action.height, 44, 'Every primary action shares the same target');
       assert.equal(await action.evaluate(element => parseFloat(getComputedStyle(element, '::before').height)), 40, 'Primary action paint stays compact');
+      assert.equal(await segment.evaluate(element => getComputedStyle(element).fontSize), '16px', 'Entry tabs retain the shared control typography');
+      assert.equal(await action.evaluate(element => getComputedStyle(element).fontSize), '16px', 'Entry actions retain the shared control typography');
       assert.equal(metrics.field.height, width < 768 ? 48 : 44, 'Mobile entry fields are slightly taller than the selector and CTA');
       if (width < 768) assert.equal(await field.evaluate(el => getComputedStyle(el).fontSize), '18px', 'Mobile entry prompts retain the approved 18px entry typography');
       const roles = { segment: metrics.segment, action: metrics.action, field: metrics.field };
@@ -60,7 +64,10 @@ try {
       const geometry = await card.evaluate(element => {
         const track = [...element.querySelectorAll('.dn-segmented-control')].find(el => el.getBoundingClientRect().width > 0), field = [...element.querySelectorAll('.dn-entry-field')].find(el => el.getBoundingClientRect().width > 0);
         return { selectorWidth: track.getBoundingClientRect().width, fieldWidth: field.getBoundingClientRect().width,
-          labelsFit: [...track.querySelectorAll('.dn-segmented-option')].every(el => el.getBoundingClientRect().width >= 44 && el.scrollWidth <= el.clientWidth + 1 && el.scrollHeight <= el.clientHeight + 1) };
+          labelsFit: [...track.querySelectorAll('.dn-segmented-option')].every(el => {
+            const label = el.querySelector('span') ?? el;
+            return el.getBoundingClientRect().width >= 44 && el.scrollWidth <= el.clientWidth + 1 && el.scrollHeight <= el.clientHeight + 1 && label.scrollWidth <= label.clientWidth + 1;
+          }) };
       });
       assert(geometry.labelsFit, 'Localized selector labels fit inside usable targets');
       if (width < 768) {
@@ -69,8 +76,9 @@ try {
       const firstFrame = await selectorFrame(segmentTrack);
       assert.equal(firstFrame.height, 44);
       assert.notEqual(firstFrame.background, 'rgba(0, 0, 0, 0)', 'The gray surround remains visible around the selected pill');
-      assert.equal(firstFrame.selectedPaintHeight, 40);
-      assert.deepEqual(firstFrame.selectedInsets, ['2px', '2px', '2px', '2px'], 'The selected pill stays inset on every side');
+      assert.equal(firstFrame.paintHeight, width < 768 ? 40 : 44);
+      assert.equal(firstFrame.selectedPaintHeight, width < 768 ? 36 : 40);
+      assert.deepEqual(firstFrame.selectedInsets, width < 768 ? ['4px', '2px', '4px', '2px'] : ['2px', '2px', '2px', '2px'], 'The selected pill stays inset on every side');
       assert.equal(firstFrame.selectedClip, 'padding-box');
       assert(Math.abs(firstFrame.optionWidths[0] - firstFrame.optionWidths[1]) < 1, 'Both segments share an equal width');
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'No horizontal page overflow');
