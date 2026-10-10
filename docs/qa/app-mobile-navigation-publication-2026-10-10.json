@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 1,
+  "kind": "standalone-template-publication",
+  "template": "app",
+  "source": {
+    "repository": "darkapoparka/cars",
+    "commit": "410b84af397a8a6159f3510bd843cbbe81a4ca5d",
+    "path": "templates/app",
+    "tree": "bd9dac18618bb4b423c442c34fa9f13ce941db0d",
+    "digest": "e1f085e028a359a6253f63293c1eb41612d4d8b5ef36a366aee1b689341652bd",
+    "exportPolicy": "cars-source-v1"
+  },
+  "publishing": {
+    "repository": "darkapoparka/cars-template-app",
+    "commit": "35b8479806e65f773f2214e9d7df3905db165ac3",
+    "parent": "2a4a74263d16962b5cf1782c740d3151a70a81f7",
+    "files": 1666,
+    "normalizedSourceMatches": true
+  },
+  "deployment": {
+    "project": "cars-template-app",
+    "projectId": "prj_TnD7adaf0u3zjwhmV2xRxx9mWkOu",
+    "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+    "id": "dpl_6XM9cz4hXz5rD4kXaRtiW8Grsrit",
+    "url": "cars-template-faqrfzqps-tyj5.vercel.app",
+    "state": "READY",
+    "alias": [
+      "cars-template-app.vercel.app",
+      "cars-template-app-tyj5.vercel.app",
+      "cars-template-app-git-main-tyj5.vercel.app"
+    ],
+    "commit": "35b8479806e65f773f2214e9d7df3905db165ac3",
+    "ready": 1791624662494,
+    "publicOrigin": "https://cars-template-app.vercel.app",
+    "readyAt": "2026-10-10T09:31:02.494Z"
+  },
+  "changes": [
+    "Upright image-generated Sell notes and aligned mobile artwork, with optical Buy sizing.",
+    "44px search, main pills with 15px labels and 40px paint; drawer pills with 14px labels and 36px paint; both retain 44px targets.",
+    "Home and Services: 20px search-to-panel gap and 12px painted-control inset. Home cards move 8px closer to carousel pagination.",
+    "Lucide dock icons, with the car displayed as a 26px side profile inside the existing 44px target."
+  ],
+  "checks": {
+    "local": {
+      "eslint": "passed",
+      "typescript": "passed",
+      "node": "22.20.0"
+    },
+    "github": {
+      "id": 114182640209,
+      "name": "verify",
+      "status": "retry_in_progress",
+      "conclusion": null,
+      "run_id": 38041549321,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run npm ci",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run npm run check",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Run npm audit --omit=dev --audit-level=high",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Run npx playwright install --with-deps chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Run npm run test:browser",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 8
+        },
+        {
+          "name": "Production routes in both journeys",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9
+        },
+        {
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19
+        }
+      ],
+      "runId": 38041549321,
+      "url": "https://github.com/darkapoparka/cars-template-app/actions/runs/38041549321",
+      "initialAttempt": {
+        "passed": 98,
+        "skipped": 4,
+        "failed": 2,
+        "reason": "Desktop sorting tests timed out waiting for page load at 1100px and 1440px.",
+        "jobConclusion": "failure"
+      },
+      "retryRequested": true,
+      "note": "The exact failed sorting tests passed against the current production alias in both desktop viewports. The failed CI job was retried; no test or product code was changed to conceal the timeouts."
+    },
+    "hosted": {
+      "passed": true,
+      "panels": [
+        {
+          "route": "/en",
+          "width": 390,
+          "searchToPanel": 20,
+          "firstInsidePanel": 12,
+          "cardToPagination": 4,
+          "dockCarSize": 26,
+          "dockTarget": 44
+        },
+        {
+          "route": "/en/service",
+          "width": 390,
+          "searchToPanel": 20,
+          "firstInsidePanel": 12,
+          "cardToPagination": null,
+          "dockCarSize": 26,
+          "dockTarget": 44
+        },
+        {
+          "route": "/en",
+          "width": 320,
+          "searchToPanel": 20,
+          "firstInsidePanel": 12,
+          "cardToPagination": 4,
+          "dockCarSize": 26,
+          "dockTarget": 44
+        },
+        {
+          "route": "/en/service",
+          "width": 320,
+          "searchToPanel": 20,
+          "firstInsidePanel": 12,
+          "cardToPagination": null,
+          "dockCarSize": 26,
+          "dockTarget": 44
+        }
+      ],
+      "routes": [
+        {
+          "route": "/en",
+          "width": 320
+        },
+        {
+          "route": "/en/sell",
+          "width": 320
+        },
+        {
+          "route": "/en/finance",
+          "width": 320
+        },
+        {
+          "route": "/en/service",
+          "width": 320
+        },
+        {
+          "route": "/bg/service",
+          "width": 320
+        },
+        {
+          "interactions": "service category/reset, compact header, Sell tab, Cars dock, Brand drawer/Escape"
+        },
+        {
+          "width": 768
+        },
+        {
+          "width": 1440
+        }
+      ],
+      "errors": [],
+      "warnings": [],
+      "desktopSorting": {
+        "passed": 2,
+        "widths": [
+          1100,
+          1440
+        ],
+        "durationSeconds": 7.9,
+        "usesExistingTests": true
+      }
+    }
+  },
+  "evidence": {
+    "comparisons": "templates/app/docs/mobile-nav-final-2026-10-10/README.md",
+    "captures": [
+      "before-cars-390.png",
+      "after-cars-390.png",
+      "before-service-390.png",
+      "after-service-390.png",
+      "before-home-390.png",
+      "after-home-390.png"
+    ],
+    "capturePurpose": "Original Cars/Services pairs document the full mobile polish; the additional Home pair documents panel, feed and dock corrections.",
+    "hostedRuntime": "templates/app/runtime/mobile-nav-final-20261010",
+    "retentionNote": "Six matched comparison captures have distinct route/polish and Home-spacing purposes. Prior automatic approval rejected deletion of small inactive QA intermediates; ignored runtime evidence remains. No additional dependency installation or local production build copy was created."
+  },
+  "scope": {
+    "mobileOnly": true,
+    "releaseLockChanged": false,
+    "dealersRefreshed": false,
+    "productionDeployments": 2
+  },
+  "recordedAt": "2026-10-10 09:40:09 UTC"
+}
