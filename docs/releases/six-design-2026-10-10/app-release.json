@@ -105,5 +105,16 @@
       "scope": "Exact old release proof only; unchanged-input continuity has not been established for the final release."
     }
   },
-  "nextAction": "Obtain the final owner source/receipt. Run the existing template-release approve inspection for that exact final SHA without --write, bind completed local and hosted delta evidence, then let the publisher owner select the release."
+  "nextAction": "Obtain the final owner source/receipt. Run the existing template-release approve inspection for that exact final SHA without --write, bind completed local and hosted delta evidence, then let the publisher owner select the release.",
+  "latestObservedDelivery": {
+    "verifiedAt": "2026-10-10T11:34:35.7486381+03:00",
+    "sourceCommit": "dbc3ecc95b3fe8bfeae29820f5f6cbaac20e214b",
+    "sourceTree": "9c1097c0234cc1c10bd85c1541bfb89075adde28",
+    "sourceDigest": "2f1664bbf9dfa3008d60954ab229586b425f531fedbf71ae39c28b9cb4daf78a",
+    "mirrorCommit": "a376e99b6e3fd65a5429413ee4302ce1a7f41732",
+    "deploymentId": "dpl_2SAavx9gAGZ3ioCsT8tzVgai7Edt",
+    "state": "READY",
+    "projectId": "prj_TnD7adaf0u3zjwhmV2xRxx9mWkOu",
+    "scope": "Live master delivery observation; earlier envelope source is not relabeled; final owner delta and release selection remain pending"
+  }
 }

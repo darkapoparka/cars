@@ -120,7 +120,7 @@
   "retention": {
     "usefulCaptures": 3,
     "intermediateDesktopCapture": "preserved because automatic cleanup approval returned blocked by policy",
-    "temporaryRuntime": "preserved after automatic cleanup rejection; owner record in existing local output"
+    "temporaryRuntime": "Both owned native/proxy previews stopped; the 187468316-byte Modern dev cache remains after explicit owner cleanup authorization and a separate automatic review rejection"
   },
   "remaining": [
     "Commit reviewed source preparation",
