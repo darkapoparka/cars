@@ -444,7 +444,7 @@ const countryNameFormatters = {
 } as const;
 
 const cityLabelsBg: Record<string, string> = {
-  Bredbury, Stockport: "Bredbury, Stockport",
+  "Bredbury, Stockport": "Bredbury, Stockport",
   Plovdiv: "Пловдив",
   Varna: "Варна",
   Burgas: "Бургас",

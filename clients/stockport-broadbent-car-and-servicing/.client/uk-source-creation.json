@@ -530,6 +530,178 @@
       "hosted": false,
       "dealerQa": false,
       "readyToPublish": false
+    },
+    {
+      "id": "gb-native-finalization-v1",
+      "at": "2026-10-10T11:55:51.995Z",
+      "workflowCommit": "9f79de85fe06d038a52c1af0ac91c8d704183944",
+      "previousSourceCommit": "32522f6358a34d63ad63f02e2be3f47491fc0a71",
+      "reason": "Finalize native locale outputs from reviewed UK copy; preserve arbitrary city text as object keys; hide absent telephone actions without inventing contact details.",
+      "localeFinalization": {
+        "schemaVersion": 1,
+        "method": "approved-native-locale-generator",
+        "generatorBlobs": {
+          "scripts/build-locales.mjs": "c62c7f149591308e71cdd0dc9eee2f2ecff9661d",
+          "scripts/locale-catalog.mjs": "d1c8b4c43fc073f24137785b69f7a497d9290da8"
+        },
+        "inputBytes": 762317,
+        "inputHashes": {
+          "auto-best/scripts/build-locales.mjs": "544139179e7375ca367c56f10bf5d983ac92a5673ff3c7895c348b3afc951519",
+          "auto-best/scripts/locale-catalog.mjs": "738fa9e490ec69e4acfce1c01f505336a459d25037b9ee3b037d81e46f9b7626",
+          "auto-best/localization/common.json": "b43729d750d3c5afa9b5e0921ae78451f25f450222e593c56980774c5f4955f4",
+          "auto-best/localization/catalog.reviewed.json": "0bc34f72f1e001112d5fe3ab2f2027a8654a13faabca550d4b690bc17ab5fb1d",
+          "auto-best/localization/template.reviewed.json": "87f67dbce93c1e7d59569d538a3ea81540803284d836365183e338c0ea903122",
+          "auto-best/localization/dealer.reviewed.json": "7c15fc34d2a97b30abcf95481e9028b0b8a9208cc75203b8c23366482954d7ca",
+          "auto-best/src/lib/locale/policy.ts": "9b965830b64c496eac861fdc4059813f130056d543173bc3a777eb34624226cf"
+        },
+        "generated": {
+          "status": "generated",
+          "messages": 1113,
+          "aliases": 1971,
+          "quarantinedAliases": 44,
+          "activeAmbiguousAliases": 0
+        },
+        "checked": {
+          "status": "checked",
+          "messages": 1113,
+          "aliases": 1971,
+          "quarantinedAliases": 44,
+          "activeAmbiguousAliases": 0
+        },
+        "changedFiles": [
+          {
+            "path": "auto-best/src/lib/locale/catalog.ts",
+            "before": "097a5ae64d70518b0eea8f0244dbe9a3a61131bbb8771c2adb8cbc3b0e73349f",
+            "after": "8b85b5e4ee103cd1466cad0cb17035033911833954a29fddb1aa4904f765be51"
+          },
+          {
+            "path": "auto-best/localization/generated-manifest.json",
+            "before": "4ec2366c11436ad14b838c38cdf3569e03c145dcded117354a1f0f16936756ee",
+            "after": "fd0a798ebde3fc6f46dc82b6f759874a7618eabb6de775d36b53690b642fd2d7"
+          }
+        ],
+        "outputHashes": {
+          "auto-best/src/lib/locale/catalog.ts": "8b85b5e4ee103cd1466cad0cb17035033911833954a29fddb1aa4904f765be51",
+          "auto-best/localization/generated-manifest.json": "fd0a798ebde3fc6f46dc82b6f759874a7618eabb6de775d36b53690b642fd2d7"
+        },
+        "nativeCheckPassed": true,
+        "authoritativeInputsUnchanged": true,
+        "fixture": "runtime/uk-locale-finalization/auto-best-rbMKSx",
+        "hosted": false,
+        "readyToPublish": false
+      },
+      "modernCityPaths": [
+        "modern/packages/marketplace-ui/lib/listing-truth.ts",
+        "modern/packages/marketplace-ui/lib/marketplace-control-copy.ts"
+      ],
+      "optionalPhonePaths": [],
+      "changedFiles": [
+        {
+          "path": "auto-best/localization/generated-manifest.json",
+          "before": "4ec2366c11436ad14b838c38cdf3569e03c145dcded117354a1f0f16936756ee",
+          "after": "fd0a798ebde3fc6f46dc82b6f759874a7618eabb6de775d36b53690b642fd2d7"
+        },
+        {
+          "path": "auto-best/src/lib/locale/catalog.ts",
+          "before": "097a5ae64d70518b0eea8f0244dbe9a3a61131bbb8771c2adb8cbc3b0e73349f",
+          "after": "8b85b5e4ee103cd1466cad0cb17035033911833954a29fddb1aa4904f765be51"
+        },
+        {
+          "path": "localization/adoption.json",
+          "before": "47bf6f4e986b9fad712bbe21bbd1f65365071b000ca854cfe584dfbaec2a9576",
+          "after": "d7d88eb78116aa6ff949a003c8251243680b7ce541e5e439a20ca7fe964b2610"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/lib/listing-truth.ts",
+          "before": "5ed458d5fa7d58e67573d2f955162cbe341edf1fe30d419a3f78b4ad1d334790",
+          "after": "b52a455c161c46ec904e2bbf2596c06823e4b627f25c16e2bf5be5fe8b372899"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/lib/marketplace-control-copy.ts",
+          "before": "36910b7f84958817fd291835572eb103403fb17859176967a5dea143c3d88bfc",
+          "after": "c838f816b6d3c0d3abc5e67c300d7b8bdcaf58ea2a113252d89c4f821a7393be"
+        }
+      ],
+      "sourceBefore": {
+        "files": 12246,
+        "sha256": "48d82e3f6e39c55bfa102ee79642d922023fe17e536bc0595d320725d90faa59"
+      },
+      "sourceAfter": {
+        "files": 12246,
+        "sha256": "adea419c4461c0eee0f807547100d5205a67c218ebc2292426b359f455693a60"
+      },
+      "familiesBefore": {
+        "auto-best": {
+          "files": 1246,
+          "sha256": "44d57f102b5a5df7989395befa81e36bad8005a8ebc51d73d5ae19ebad72445b"
+        },
+        "modern": {
+          "files": 3979,
+          "sha256": "15b79c2b9fbc2b353724c1b91e8f211a150bec7e31e9906872a89cef14c4ba7b"
+        },
+        "import": {
+          "files": 3398,
+          "sha256": "6396bfcbaa69ed6188b74461d7d7240beb84d7358fa0fd7794ad91c302166211"
+        },
+        "app": {
+          "files": 1647,
+          "sha256": "aa1aae79d36e898049e718b4fcb0ceb0214860ad83cb0d316f74ed530b4e5ca9"
+        },
+        "mobile": {
+          "files": 833,
+          "sha256": "45aa74b427e128ddba11a036e77b8c3e4000cdf7de0fa5c954377497ad689810"
+        },
+        "karento-best": {
+          "files": 1124,
+          "sha256": "ceb137b5d4cb1616bd1c678385036fac8babb63835c9bc2f4a81f0e5136c8845"
+        }
+      },
+      "familiesAfter": {
+        "auto-best": {
+          "files": 1246,
+          "sha256": "b026e1493f7ea04b3c46328634b3cb798e625f8f890a8e1495a37effbb23701d"
+        },
+        "modern": {
+          "files": 3979,
+          "sha256": "e07be334d8a9caa3c08dc73cb55b470182863a492441bea9b3b5dc980b08b812"
+        },
+        "import": {
+          "files": 3398,
+          "sha256": "6396bfcbaa69ed6188b74461d7d7240beb84d7358fa0fd7794ad91c302166211"
+        },
+        "app": {
+          "files": 1647,
+          "sha256": "aa1aae79d36e898049e718b4fcb0ceb0214860ad83cb0d316f74ed530b4e5ca9"
+        },
+        "mobile": {
+          "files": 833,
+          "sha256": "45aa74b427e128ddba11a036e77b8c3e4000cdf7de0fa5c954377497ad689810"
+        },
+        "karento-best": {
+          "files": 1124,
+          "sha256": "ceb137b5d4cb1616bd1c678385036fac8babb63835c9bc2f4a81f0e5136c8845"
+        }
+      },
+      "nativeAdoptionBefore": "47bf6f4e986b9fad712bbe21bbd1f65365071b000ca854cfe584dfbaec2a9576",
+      "nativeAdoptionAfter": "d7d88eb78116aa6ff949a003c8251243680b7ce541e5e439a20ca7fe964b2610",
+      "verification": {
+        "originalSixSourceSeals": true,
+        "repairedSixSourceSeals": true,
+        "unaffectedFamilies": [
+          "import",
+          "app",
+          "mobile",
+          "karento-best"
+        ],
+        "unaffectedFamiliesByteIdentical": true,
+        "factualStockBytesUnchanged": true,
+        "factsAndSourcePinsUnchanged": true,
+        "nativeLocaleCheck": true
+      },
+      "build": false,
+      "hosted": false,
+      "dealerQa": false,
+      "readyToPublish": false
     }
   ]
 }
