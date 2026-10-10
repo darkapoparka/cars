@@ -1,0 +1,90 @@
+@media (min-width: 1024px) {
+  .panel {
+    position: relative;
+    width: 100%;
+    min-height: var(--desktop-action-panel-min-height, 0);
+    padding: calc(var(--spacing) * 6);
+    color: var(--foreground);
+    background: var(--panel);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: var(--radius-vehicle);
+    box-shadow: var(--desktop-surface-shadow);
+  }
+
+  .panel h2:not([class~="sr-only"]) {
+    margin: 0 0 calc(var(--spacing) * 2);
+    font-size: var(--text-dialog-title);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--desktop-leading-body);
+    letter-spacing: var(--desktop-tracking-section);
+  }
+  .panel[data-fit-content] {
+    min-height: 0;
+  }
+
+  .panel :is([data-slot="input"], select, [data-slot="textarea"]) {
+    color: var(--foreground);
+    background-color: var(--panel);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: none;
+  }
+
+  .panel :is([data-slot="input"], select) {
+    height: calc(var(--spacing) * 11);
+  }
+
+  .panel select {
+    padding-inline: calc(var(--spacing) * 3.5) calc(var(--spacing) * 11);
+    appearance: auto;
+    cursor: pointer;
+  }
+
+  .panel :is([data-slot="input"], select):hover {
+    border-color: var(--muted-foreground);
+  }
+
+  .action {
+    display: inline-flex;
+    gap: calc(var(--spacing) * 2);
+    align-items: center;
+    justify-content: center;
+    height: calc(var(--spacing) * 11);
+    padding-inline: calc(var(--spacing) * 5);
+    font-size: var(--text-meta);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--desktop-leading-none);
+    color: var(--brand-foreground);
+    background: var(--brand);
+    border: var(--desktop-border-width) solid transparent;
+    border-radius: var(--radius-lg);
+    box-shadow: none;
+  }
+  .action:hover {
+    color: var(--brand-hover-foreground);
+    background: var(--lead-site-accent-hover);
+  }
+  .action:disabled {
+    color: var(--muted-foreground);
+    background: var(--control);
+    border-color: var(--border);
+    opacity: 1;
+  }
+  .action[data-inset] {
+    height: calc(var(--spacing) * 9);
+    padding-inline: calc(var(--spacing) * 3.5);
+    font-size: var(--text-card-spec);
+    border-radius: calc(var(--spacing) * 1.5);
+  }
+  .action > svg {
+    flex-shrink: 0;
+    width: calc(var(--spacing) * 4);
+    height: calc(var(--spacing) * 4);
+  }
+
+  .panel :is(input, select, textarea, button, a):focus-visible {
+    outline: var(--desktop-focus-width) solid var(--brand);
+    outline-offset: var(--desktop-focus-offset);
+    box-shadow: none;
+  }
+}

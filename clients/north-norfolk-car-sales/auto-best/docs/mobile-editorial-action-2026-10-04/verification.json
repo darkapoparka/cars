@@ -1,0 +1,344 @@
+{
+  "scope": "Mobile Home editorial cards only",
+  "url": "http://127.0.0.1:6461/bg",
+  "before": {
+    "viewport": {
+      "width": 360,
+      "height": 884
+    },
+    "scrollY": 1811,
+    "sectionTop": 141.28125,
+    "sectionHeight": 367.53125
+  },
+  "after": {
+    "viewport": {
+      "width": 360,
+      "height": 884
+    },
+    "scrollY": 1811,
+    "sectionTop": 141.28125,
+    "sectionHeight": 391.515625
+  },
+  "action": {
+    "paintHeight": 28,
+    "frameHeight": 40,
+    "paddingInline": 12,
+    "radius": 999,
+    "iconFamily": "fluent-system-regular",
+    "wholeCardLink": true
+  },
+  "cases": [
+    {
+      "locale": "bg",
+      "width": 360,
+      "documentOverflow": 0,
+      "titleLines": [
+        2,
+        2,
+        2
+      ],
+      "summaryLines": [
+        1,
+        1,
+        1
+      ],
+      "cardHeights": [
+        307.515625,
+        307.515625,
+        307.515625
+      ],
+      "actions": [
+        "Прочети",
+        "Прочети",
+        "Прочети"
+      ],
+      "hrefs": [
+        "/bg/blog-detail/1",
+        "/bg/blog-detail/2",
+        "/bg/blog-detail/3"
+      ]
+    },
+    {
+      "locale": "bg",
+      "width": 280,
+      "documentOverflow": 1,
+      "titleLines": [
+        3,
+        3,
+        3
+      ],
+      "summaryLines": [
+        1,
+        1,
+        1
+      ],
+      "cardHeights": [
+        291.1875,
+        291.1875,
+        291.1875
+      ],
+      "actions": [
+        "Прочети",
+        "Прочети",
+        "Прочети"
+      ],
+      "hrefs": [
+        "/bg/blog-detail/1",
+        "/bg/blog-detail/2",
+        "/bg/blog-detail/3"
+      ]
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "documentOverflow": 0,
+      "titleLines": [
+        2,
+        2,
+        2
+      ],
+      "summaryLines": [
+        1,
+        1,
+        1
+      ],
+      "cardHeights": [
+        292.890625,
+        292.890625,
+        292.890625
+      ],
+      "actions": [
+        "Прочети",
+        "Прочети",
+        "Прочети"
+      ],
+      "hrefs": [
+        "/bg/blog-detail/1",
+        "/bg/blog-detail/2",
+        "/bg/blog-detail/3"
+      ]
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "documentOverflow": 0,
+      "titleLines": [
+        2,
+        2,
+        2
+      ],
+      "summaryLines": [
+        1,
+        1,
+        1
+      ],
+      "cardHeights": [
+        307.515625,
+        307.515625,
+        307.515625
+      ],
+      "actions": [
+        "Прочети",
+        "Прочети",
+        "Прочети"
+      ],
+      "hrefs": [
+        "/bg/blog-detail/1",
+        "/bg/blog-detail/2",
+        "/bg/blog-detail/3"
+      ]
+    },
+    {
+      "locale": "bg",
+      "width": 430,
+      "documentOverflow": 0,
+      "titleLines": [
+        2,
+        2,
+        2
+      ],
+      "summaryLines": [
+        1,
+        1,
+        1
+      ],
+      "cardHeights": [
+        307.515625,
+        307.515625,
+        307.515625
+      ],
+      "actions": [
+        "Прочети",
+        "Прочети",
+        "Прочети"
+      ],
+      "hrefs": [
+        "/bg/blog-detail/1",
+        "/bg/blog-detail/2",
+        "/bg/blog-detail/3"
+      ]
+    },
+    {
+      "locale": "en",
+      "width": 280,
+      "documentOverflow": 1,
+      "titleLines": [
+        3,
+        3,
+        2
+      ],
+      "summaryLines": [
+        1,
+        1,
+        1
+      ],
+      "cardHeights": [
+        291.1875,
+        291.1875,
+        291.1875
+      ],
+      "actions": [
+        "Read",
+        "Read",
+        "Read"
+      ],
+      "hrefs": [
+        "/en/blog-detail/1",
+        "/en/blog-detail/2",
+        "/en/blog-detail/3"
+      ]
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "documentOverflow": 0,
+      "titleLines": [
+        2,
+        2,
+        2
+      ],
+      "summaryLines": [
+        1,
+        1,
+        1
+      ],
+      "cardHeights": [
+        292.890625,
+        292.890625,
+        292.890625
+      ],
+      "actions": [
+        "Read",
+        "Read",
+        "Read"
+      ],
+      "hrefs": [
+        "/en/blog-detail/1",
+        "/en/blog-detail/2",
+        "/en/blog-detail/3"
+      ]
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "documentOverflow": 0,
+      "titleLines": [
+        2,
+        2,
+        2
+      ],
+      "summaryLines": [
+        1,
+        1,
+        1
+      ],
+      "cardHeights": [
+        307.515625,
+        307.515625,
+        307.515625
+      ],
+      "actions": [
+        "Read",
+        "Read",
+        "Read"
+      ],
+      "hrefs": [
+        "/en/blog-detail/1",
+        "/en/blog-detail/2",
+        "/en/blog-detail/3"
+      ]
+    },
+    {
+      "locale": "en",
+      "width": 430,
+      "documentOverflow": 0,
+      "titleLines": [
+        2,
+        2,
+        2
+      ],
+      "summaryLines": [
+        1,
+        1,
+        1
+      ],
+      "cardHeights": [
+        307.515625,
+        307.515625,
+        307.515625
+      ],
+      "actions": [
+        "Read",
+        "Read",
+        "Read"
+      ],
+      "hrefs": [
+        "/en/blog-detail/1",
+        "/en/blog-detail/2",
+        "/en/blog-detail/3"
+      ]
+    }
+  ],
+  "desktop1440": [
+    {
+      "actionHeight": 40,
+      "height": 314.03125,
+      "mobileFooter": "none",
+      "text": "Оглед\nКакво да проверите преди покупка?\nИстория, документи и техническо състояние.\nПрочетете",
+      "width": 421.328125
+    },
+    {
+      "actionHeight": 40,
+      "height": 314.03125,
+      "mobileFooter": "none",
+      "text": "Внос\nКак протича вносът на автомобил?\nТърсене, транспорт и подготовка за регистрация.\nПрочетете",
+      "width": 421.328125
+    },
+    {
+      "actionHeight": 40,
+      "height": 314.03125,
+      "mobileFooter": "none",
+      "text": "Лизинг\nКак да сравните лизингови оферти?\nСрок, първоначална вноска и обща цена.\nПрочетете",
+      "width": 421.34375
+    }
+  ],
+  "checks": {
+    "svelte": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "cssPolicy": "passed",
+    "tokens": "passed",
+    "typography": "passed",
+    "localeSource": "passed",
+    "build": "passed",
+    "homeReflow320": {
+      "en": "passed normal, text spacing, and 200% root text",
+      "bg": "passed normal, text spacing, and 200% root text"
+    }
+  },
+  "notes": [
+    "Titles flow naturally without truncation; extra narrow 280px cards can use a third line.",
+    "A 1px page rounding overflow was observed at 280px in both locales; 320-430px has none."
+  ]
+}

@@ -1,0 +1,1688 @@
+{
+	"baselineCommit": "6c92fdc2758d5d5b985a9c8a9004c7bb969d313a",
+	"node": "24.21.0",
+	"lockfileSha256": "aa596db7046c3f226ce50b488e283e30121eb49122d5006c60035ef57a952e1c",
+	"buildSourceDigest": "129faa4d58142806e7f61ad888d0490bde6e5a57827d12b327323c292b2d5dcd",
+	"verifiedSnapshotFiles": 1683,
+	"testOnlyUpdates": [
+		{
+			"path": "tests/filter-inputs.e2e.ts",
+			"built": "fa5d2dccb8da2932a72411067a63fd1ec2c985eb4ced52fc04879db035898e40",
+			"current": "d4d78485e4a2333cd49125db8a312912bc051ad17a62ec1c9fdbda0be9e991bb"
+		}
+	],
+	"checks": [
+		{
+			"name": "sync",
+			"args": ["node_modules/@sveltejs/kit/svelte-kit.js", "sync"],
+			"status": 0,
+			"seconds": 11.8
+		},
+		{
+			"name": "svelte",
+			"args": ["node_modules/svelte-check/bin/svelte-check", "--tsconfig", "./tsconfig.json"],
+			"status": 0,
+			"seconds": 48.9
+		},
+		{
+			"name": "format",
+			"args": [
+				"node_modules/prettier/bin/prettier.cjs",
+				"--check",
+				"src/lib/components/detail/VehicleDetailPage.svelte",
+				"src/lib/components/detail/VehiclePurchasePanel.svelte",
+				"src/lib/components/financing/FinanceEstimator.svelte",
+				"src/lib/components/inventory/InventoryDisplayControls.svelte",
+				"src/lib/components/inventory/InventoryFilterGroup.svelte",
+				"src/lib/components/inventory/InventorySidebar.svelte",
+				"src/lib/components/sell-your-car/SellCarWizard.svelte",
+				"src/lib/components/services/ImportRequestWizard.svelte",
+				"src/lib/components/services/ServiceIntakeFrame.svelte",
+				"src/lib/content/vehicle-information.ts",
+				"src/routes/(site)/import/+page.svelte",
+				"src/routes/(site)/sell-your-car/+page.svelte",
+				"src/routes/(site)/services/+page.svelte",
+				"src/routes/(site)/compare/+page.svelte",
+				"src/routes/(site)/faqs/+page.svelte",
+				"src/lib/styles/forms.css"
+			],
+			"status": 0,
+			"seconds": 14.7
+		},
+		{
+			"name": "eslint",
+			"args": [
+				"node_modules/eslint/bin/eslint.js",
+				"src/lib/components/detail/VehicleDetailPage.svelte",
+				"src/lib/components/detail/VehiclePurchasePanel.svelte",
+				"src/lib/components/financing/FinanceEstimator.svelte",
+				"src/lib/components/inventory/InventoryDisplayControls.svelte",
+				"src/lib/components/inventory/InventoryFilterGroup.svelte",
+				"src/lib/components/inventory/InventorySidebar.svelte",
+				"src/lib/components/sell-your-car/SellCarWizard.svelte",
+				"src/lib/components/services/ImportRequestWizard.svelte",
+				"src/lib/components/services/ServiceIntakeFrame.svelte",
+				"src/lib/content/vehicle-information.ts",
+				"src/routes/(site)/import/+page.svelte",
+				"src/routes/(site)/sell-your-car/+page.svelte",
+				"src/routes/(site)/services/+page.svelte",
+				"src/routes/(site)/compare/+page.svelte",
+				"src/routes/(site)/faqs/+page.svelte"
+			],
+			"status": 0,
+			"seconds": 83.3
+		},
+		{
+			"name": "architecture",
+			"args": ["scripts/check-architecture.mjs"],
+			"status": 0,
+			"seconds": 1.3
+		},
+		{
+			"name": "assets",
+			"args": ["scripts/check-assets.mjs"],
+			"status": 0,
+			"seconds": 0.3
+		},
+		{
+			"name": "units",
+			"args": ["node_modules/vitest/vitest.mjs", "run", "--maxWorkers=2"],
+			"status": 0,
+			"seconds": 52.3
+		},
+		{
+			"name": "existing-formatting",
+			"args": [
+				"node_modules/prettier/bin/prettier.cjs",
+				"--check",
+				"public-assets.policy.json",
+				"scripts/public-asset-retention.mjs",
+				"svelte.config.js"
+			],
+			"status": 1,
+			"seconds": 1.4
+		},
+		{
+			"name": "build",
+			"args": ["node_modules/vite/bin/vite.js", "build"],
+			"status": 0,
+			"seconds": 145.5
+		}
+	],
+	"desktopJourneys": {
+		"uniquePassing": 57,
+		"skipped": 10,
+		"initialStaleAssertion": 1,
+		"correctedFilterSuitePassing": 11
+	},
+	"mobileJourneys": {
+		"passing": 17,
+		"skipped": 11
+	},
+	"additionalJourneys": [
+		{
+			"name": "Import validation, criteria, choices and Back",
+			"locale": "bg",
+			"width": 768,
+			"passed": true
+		},
+		{
+			"name": "Sell validation, make/model and Back",
+			"locale": "bg",
+			"width": 768,
+			"passed": true
+		},
+		{
+			"name": "Compare add, remove and clear",
+			"locale": "bg",
+			"width": 768,
+			"passed": true
+		},
+		{
+			"name": "Import validation, criteria, choices and Back",
+			"locale": "bg",
+			"width": 1440,
+			"passed": true
+		},
+		{
+			"name": "Sell validation, make/model and Back",
+			"locale": "bg",
+			"width": 1440,
+			"passed": true
+		},
+		{
+			"name": "Compare add, remove and clear",
+			"locale": "bg",
+			"width": 1440,
+			"passed": true
+		},
+		{
+			"name": "Import validation, criteria, choices and Back",
+			"locale": "en",
+			"width": 768,
+			"passed": true
+		},
+		{
+			"name": "Sell validation, make/model and Back",
+			"locale": "en",
+			"width": 768,
+			"passed": true
+		},
+		{
+			"name": "Compare add, remove and clear",
+			"locale": "en",
+			"width": 768,
+			"passed": true
+		},
+		{
+			"name": "Import validation, criteria, choices and Back",
+			"locale": "en",
+			"width": 1440,
+			"passed": true
+		},
+		{
+			"name": "Sell validation, make/model and Back",
+			"locale": "en",
+			"width": 1440,
+			"passed": true
+		},
+		{
+			"name": "Compare add, remove and clear",
+			"locale": "en",
+			"width": 1440,
+			"passed": true
+		}
+	],
+	"additionalVehicleAndGarageChecks": [
+		{
+			"name": "Additional PDP",
+			"title": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+			"id": "21754658377544573",
+			"locale": "bg",
+			"width": 768,
+			"overflow": false,
+			"titleOverflow": false,
+			"regions": [
+				{
+					"name": "detail-gallery-column site-stack svelte-9yogp8",
+					"box": {
+						"x": 32,
+						"y": 153,
+						"width": 689,
+						"height": 598.109375,
+						"top": 153,
+						"right": 721,
+						"bottom": 751.109375,
+						"left": 32
+					}
+				},
+				{
+					"name": "detail-summary site-stack svelte-9yogp8",
+					"box": {
+						"x": 32,
+						"y": 771.109375,
+						"width": 689,
+						"height": 860.125,
+						"top": 771.109375,
+						"right": 721,
+						"bottom": 1631.234375,
+						"left": 32
+					}
+				},
+				{
+					"name": "detail-content-column site-stack svelte-9yogp8",
+					"box": {
+						"x": 32,
+						"y": 1651.234375,
+						"width": 689,
+						"height": 833.75,
+						"top": 1651.234375,
+						"right": 721,
+						"bottom": 2484.984375,
+						"left": 32
+					}
+				}
+			]
+		},
+		{
+			"name": "Additional PDP",
+			"title": "BMW 850 GC xDrive Shadow Line",
+			"id": "11775140982675572",
+			"locale": "bg",
+			"width": 768,
+			"overflow": false,
+			"titleOverflow": false,
+			"regions": [
+				{
+					"name": "detail-gallery-column site-stack svelte-9yogp8",
+					"box": {
+						"x": 32,
+						"y": 153,
+						"width": 689,
+						"height": 598.109375,
+						"top": 153,
+						"right": 721,
+						"bottom": 751.109375,
+						"left": 32
+					}
+				},
+				{
+					"name": "detail-summary site-stack svelte-9yogp8",
+					"box": {
+						"x": 32,
+						"y": 771.109375,
+						"width": 689,
+						"height": 860.125,
+						"top": 771.109375,
+						"right": 721,
+						"bottom": 1631.234375,
+						"left": 32
+					}
+				},
+				{
+					"name": "detail-content-column site-stack svelte-9yogp8",
+					"box": {
+						"x": 32,
+						"y": 1651.234375,
+						"width": 689,
+						"height": 863.4375,
+						"top": 1651.234375,
+						"right": 721,
+						"bottom": 2514.671875,
+						"left": 32
+					}
+				}
+			]
+		},
+		{
+			"name": "Native Save and populated Favorites",
+			"locale": "bg",
+			"width": 768,
+			"passed": true
+		},
+		{
+			"name": "Additional PDP",
+			"title": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+			"id": "21754658377544573",
+			"locale": "bg",
+			"width": 1440,
+			"overflow": false,
+			"titleOverflow": false,
+			"regions": [
+				{
+					"name": "detail-gallery-column site-stack svelte-9yogp8",
+					"box": {
+						"x": 52.5,
+						"y": 114,
+						"width": 918,
+						"height": 726,
+						"top": 114,
+						"right": 970.5,
+						"bottom": 840,
+						"left": 52.5
+					}
+				},
+				{
+					"name": "detail-summary site-stack svelte-9yogp8",
+					"box": {
+						"x": 1002.5,
+						"y": 114,
+						"width": 370,
+						"height": 1502.890625,
+						"top": 114,
+						"right": 1372.5,
+						"bottom": 1616.890625,
+						"left": 1002.5
+					}
+				},
+				{
+					"name": "detail-content-column site-stack svelte-9yogp8",
+					"box": {
+						"x": 52.5,
+						"y": 886.40625,
+						"width": 918,
+						"height": 708.0625,
+						"top": 886.40625,
+						"right": 970.5,
+						"bottom": 1594.46875,
+						"left": 52.5
+					}
+				}
+			]
+		},
+		{
+			"name": "Additional PDP",
+			"title": "BMW 850 GC xDrive Shadow Line",
+			"id": "11775140982675572",
+			"locale": "bg",
+			"width": 1440,
+			"overflow": false,
+			"titleOverflow": false,
+			"regions": [
+				{
+					"name": "detail-gallery-column site-stack svelte-9yogp8",
+					"box": {
+						"x": 52.5,
+						"y": 114,
+						"width": 918,
+						"height": 726,
+						"top": 114,
+						"right": 970.5,
+						"bottom": 840,
+						"left": 52.5
+					}
+				},
+				{
+					"name": "detail-summary site-stack svelte-9yogp8",
+					"box": {
+						"x": 1002.5,
+						"y": 114,
+						"width": 370,
+						"height": 1502.890625,
+						"top": 114,
+						"right": 1372.5,
+						"bottom": 1616.890625,
+						"left": 1002.5
+					}
+				},
+				{
+					"name": "detail-content-column site-stack svelte-9yogp8",
+					"box": {
+						"x": 52.5,
+						"y": 871.5625,
+						"width": 918,
+						"height": 737.75,
+						"top": 871.5625,
+						"right": 970.5,
+						"bottom": 1609.3125,
+						"left": 52.5
+					}
+				}
+			]
+		},
+		{
+			"name": "Native Save and populated Favorites",
+			"locale": "bg",
+			"width": 1440,
+			"passed": true
+		},
+		{
+			"name": "Additional PDP",
+			"title": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+			"id": "21754658377544573",
+			"locale": "en",
+			"width": 768,
+			"overflow": false,
+			"titleOverflow": false,
+			"regions": [
+				{
+					"name": "detail-gallery-column site-stack svelte-9yogp8",
+					"box": {
+						"x": 32,
+						"y": 153,
+						"width": 689,
+						"height": 598.109375,
+						"top": 153,
+						"right": 721,
+						"bottom": 751.109375,
+						"left": 32
+					}
+				},
+				{
+					"name": "detail-summary site-stack svelte-9yogp8",
+					"box": {
+						"x": 32,
+						"y": 771.109375,
+						"width": 689,
+						"height": 797.125,
+						"top": 771.109375,
+						"right": 721,
+						"bottom": 1568.234375,
+						"left": 32
+					}
+				},
+				{
+					"name": "detail-content-column site-stack svelte-9yogp8",
+					"box": {
+						"x": 32,
+						"y": 1588.234375,
+						"width": 689,
+						"height": 804.0625,
+						"top": 1588.234375,
+						"right": 721,
+						"bottom": 2392.296875,
+						"left": 32
+					}
+				}
+			]
+		},
+		{
+			"name": "Additional PDP",
+			"title": "BMW 850 GC xDrive Shadow Line",
+			"id": "11775140982675572",
+			"locale": "en",
+			"width": 768,
+			"overflow": false,
+			"titleOverflow": false,
+			"regions": [
+				{
+					"name": "detail-gallery-column site-stack svelte-9yogp8",
+					"box": {
+						"x": 32,
+						"y": 153,
+						"width": 689,
+						"height": 573.328125,
+						"top": 153,
+						"right": 721,
+						"bottom": 726.328125,
+						"left": 32
+					}
+				},
+				{
+					"name": "detail-summary site-stack svelte-9yogp8",
+					"box": {
+						"x": 32,
+						"y": 746.328125,
+						"width": 689,
+						"height": 797.125,
+						"top": 746.328125,
+						"right": 721,
+						"bottom": 1543.453125,
+						"left": 32
+					}
+				},
+				{
+					"name": "detail-content-column site-stack svelte-9yogp8",
+					"box": {
+						"x": 32,
+						"y": 1563.453125,
+						"width": 689,
+						"height": 833.75,
+						"top": 1563.453125,
+						"right": 721,
+						"bottom": 2397.203125,
+						"left": 32
+					}
+				}
+			]
+		},
+		{
+			"name": "Native Save and populated Favorites",
+			"locale": "en",
+			"width": 768,
+			"passed": true
+		},
+		{
+			"name": "Additional PDP",
+			"title": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+			"id": "21754658377544573",
+			"locale": "en",
+			"width": 1440,
+			"overflow": false,
+			"titleOverflow": false,
+			"regions": [
+				{
+					"name": "detail-gallery-column site-stack svelte-9yogp8",
+					"box": {
+						"x": 52.5,
+						"y": 114,
+						"width": 918,
+						"height": 726,
+						"top": 114,
+						"right": 970.5,
+						"bottom": 840,
+						"left": 52.5
+					}
+				},
+				{
+					"name": "detail-summary site-stack svelte-9yogp8",
+					"box": {
+						"x": 1002.5,
+						"y": 114,
+						"width": 370,
+						"height": 1459.75,
+						"top": 114,
+						"right": 1372.5,
+						"bottom": 1573.75,
+						"left": 1002.5
+					}
+				},
+				{
+					"name": "detail-content-column site-stack svelte-9yogp8",
+					"box": {
+						"x": 52.5,
+						"y": 864.84375,
+						"width": 918,
+						"height": 708.0625,
+						"top": 864.84375,
+						"right": 970.5,
+						"bottom": 1572.90625,
+						"left": 52.5
+					}
+				}
+			]
+		},
+		{
+			"name": "Additional PDP",
+			"title": "BMW 850 GC xDrive Shadow Line",
+			"id": "11775140982675572",
+			"locale": "en",
+			"width": 1440,
+			"overflow": false,
+			"titleOverflow": false,
+			"regions": [
+				{
+					"name": "detail-gallery-column site-stack svelte-9yogp8",
+					"box": {
+						"x": 52.5,
+						"y": 114,
+						"width": 918,
+						"height": 726,
+						"top": 114,
+						"right": 970.5,
+						"bottom": 840,
+						"left": 52.5
+					}
+				},
+				{
+					"name": "detail-summary site-stack svelte-9yogp8",
+					"box": {
+						"x": 1002.5,
+						"y": 114,
+						"width": 370,
+						"height": 1459.75,
+						"top": 114,
+						"right": 1372.5,
+						"bottom": 1573.75,
+						"left": 1002.5
+					}
+				},
+				{
+					"name": "detail-content-column site-stack svelte-9yogp8",
+					"box": {
+						"x": 52.5,
+						"y": 864.84375,
+						"width": 918,
+						"height": 708.0625,
+						"top": 864.84375,
+						"right": 970.5,
+						"bottom": 1572.90625,
+						"left": 52.5
+					}
+				}
+			]
+		},
+		{
+			"name": "Native Save and populated Favorites",
+			"locale": "en",
+			"width": 1440,
+			"passed": true
+		}
+	],
+	"desktopMatrix": [
+		{
+			"name": "import",
+			"locale": "bg",
+			"width": 768,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "inventory",
+			"locale": "bg",
+			"width": 768,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "vehicle",
+			"locale": "bg",
+			"width": 768,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "sell",
+			"locale": "bg",
+			"width": 768,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "compare",
+			"locale": "bg",
+			"width": 768,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "financing",
+			"locale": "bg",
+			"width": 768,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "faq",
+			"locale": "bg",
+			"width": 768,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "inventory",
+			"locale": "bg",
+			"width": 1024,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "vehicle",
+			"locale": "bg",
+			"width": 1024,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "import",
+			"locale": "bg",
+			"width": 1024,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "sell",
+			"locale": "bg",
+			"width": 1024,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "financing",
+			"locale": "bg",
+			"width": 1024,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "compare",
+			"locale": "bg",
+			"width": 1024,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "faq",
+			"locale": "bg",
+			"width": 1024,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "inventory",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "vehicle",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "import",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "sell",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "financing",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "compare",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "faq",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "inventory",
+			"locale": "bg",
+			"width": 1920,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "vehicle",
+			"locale": "bg",
+			"width": 1920,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "import",
+			"locale": "bg",
+			"width": 1920,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "financing",
+			"locale": "bg",
+			"width": 1920,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "sell",
+			"locale": "bg",
+			"width": 1920,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "compare",
+			"locale": "bg",
+			"width": 1920,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "faq",
+			"locale": "bg",
+			"width": 1920,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "vehicle",
+			"locale": "en",
+			"width": 768,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "inventory",
+			"locale": "en",
+			"width": 768,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "import",
+			"locale": "en",
+			"width": 768,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "sell",
+			"locale": "en",
+			"width": 768,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "financing",
+			"locale": "en",
+			"width": 768,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "compare",
+			"locale": "en",
+			"width": 768,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "faq",
+			"locale": "en",
+			"width": 768,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "inventory",
+			"locale": "en",
+			"width": 1024,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "vehicle",
+			"locale": "en",
+			"width": 1024,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "import",
+			"locale": "en",
+			"width": 1024,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "sell",
+			"locale": "en",
+			"width": 1024,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "financing",
+			"locale": "en",
+			"width": 1024,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "compare",
+			"locale": "en",
+			"width": 1024,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "faq",
+			"locale": "en",
+			"width": 1024,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "inventory",
+			"locale": "en",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "vehicle",
+			"locale": "en",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "import",
+			"locale": "en",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "financing",
+			"locale": "en",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "sell",
+			"locale": "en",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "compare",
+			"locale": "en",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "faq",
+			"locale": "en",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "inventory",
+			"locale": "en",
+			"width": 1920,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "vehicle",
+			"locale": "en",
+			"width": 1920,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "import",
+			"locale": "en",
+			"width": 1920,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "sell",
+			"locale": "en",
+			"width": 1920,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "financing",
+			"locale": "en",
+			"width": 1920,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "compare",
+			"locale": "en",
+			"width": 1920,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "faq",
+			"locale": "en",
+			"width": 1920,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		}
+	],
+	"routeScan": [
+		{
+			"name": "about",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "inventory",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "home",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "inventory-empty",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "vehicle",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "services",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "import",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "financing",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "sell",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "favorites",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "contact",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "compare",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "reviews",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "blog",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "faq",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "locale",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "article",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "privacy",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "error",
+			"locale": "bg",
+			"width": 1440,
+			"status": 404,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		},
+		{
+			"name": "calculator",
+			"locale": "bg",
+			"width": 1440,
+			"status": 200,
+			"errors": [],
+			"overflow": false,
+			"failedVisibleImages": []
+		}
+	],
+	"states": [
+		{
+			"name": "inventory-sort",
+			"width": 1440,
+			"overflow": false
+		},
+		{
+			"name": "inventory-view",
+			"width": 1440,
+			"overflow": false
+		},
+		{
+			"name": "inventory-sidebar",
+			"width": 1440,
+			"overflow": false
+		},
+		{
+			"name": "inventory-filters",
+			"width": 1440,
+			"overflow": false
+		},
+		{
+			"name": "vehicle-narrow",
+			"width": 768,
+			"overflow": false
+		},
+		{
+			"name": "vehicle-finance",
+			"width": 1440,
+			"overflow": false
+		},
+		{
+			"name": "sell-manual",
+			"width": 1440,
+			"overflow": false
+		},
+		{
+			"name": "import-source",
+			"width": 1440,
+			"overflow": false
+		},
+		{
+			"name": "services-empty",
+			"width": 1440,
+			"overflow": false
+		},
+		{
+			"name": "compare-populated",
+			"width": 1440,
+			"overflow": false
+		},
+		{
+			"name": "faq-open",
+			"width": 1440,
+			"overflow": false
+		}
+	],
+	"mobilePreservation": [
+		{
+			"name": "about-bg-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "inventory-bg-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 2,
+			"presentationMatches": true
+		},
+		{
+			"name": "home-bg-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 13,
+			"presentationMatches": true
+		},
+		{
+			"name": "inventory-empty-bg-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "vehicle-bg-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "services-bg-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "import-bg-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "sell-bg-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "financing-bg-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "contact-bg-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "compare-bg-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "faq-bg-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "calculator-bg-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "about-bg-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "home-bg-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 13,
+			"presentationMatches": true
+		},
+		{
+			"name": "inventory-empty-bg-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "inventory-bg-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 2,
+			"presentationMatches": true
+		},
+		{
+			"name": "vehicle-bg-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "services-bg-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "import-bg-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "sell-bg-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "financing-bg-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "contact-bg-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "compare-bg-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "calculator-bg-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "faq-bg-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "home-en-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 13,
+			"presentationMatches": true
+		},
+		{
+			"name": "about-en-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "inventory-en-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 2,
+			"presentationMatches": true
+		},
+		{
+			"name": "inventory-empty-en-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "vehicle-en-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "services-en-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "import-en-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "sell-en-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "financing-en-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "contact-en-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "compare-en-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "faq-en-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "calculator-en-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "about-en-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "home-en-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 13,
+			"presentationMatches": true
+		},
+		{
+			"name": "inventory-en-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 2,
+			"presentationMatches": true
+		},
+		{
+			"name": "inventory-empty-en-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "vehicle-en-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "services-en-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "import-en-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "sell-en-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "financing-en-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "contact-en-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "compare-en-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "faq-en-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "calculator-en-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		}
+	],
+	"mobileExclusions": "Foreign-host images are masked in both inputs; iframe pixels are masked during capture. All local images and complete-page presentation remain included.",
+	"existingFormattingFiles": [
+		"public-assets.policy.json",
+		"scripts/public-asset-retention.mjs",
+		"svelte.config.js"
+	],
+	"qualification": "Frozen local preview with providers disabled; owner acceptance, immutable promotion, mounted dealer output and live providers are separate."
+}

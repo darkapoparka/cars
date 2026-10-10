@@ -1,0 +1,6442 @@
+[
+	{
+		"name": "inventory-sidebar-canonical",
+		"locale": "bg",
+		"width": 1024,
+		"mobile": false,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/bg/inventory?layout=dashboard",
+		"errors": [],
+		"title": "Налични автомобили — Day Night Auto Group",
+		"h1": "Налични автомобили",
+		"overflow": -15,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Налични автомобили",
+				"href": null,
+				"src": null,
+				"box": [346.61, 165, 315.77, 40.31],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"36px",
+					"600",
+					"40.32px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Филтри",
+				"href": null,
+				"src": null,
+				"box": [53, 648.41, 82.64, 31.19],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"24px",
+					"600",
+					"31.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [353, 828.81, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [683.5, 828.81, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi SQ5 30T Black Optic",
+				"href": null,
+				"src": null,
+				"box": [353, 1224.2, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi A7 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [683.5, 1224.2, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi Q8 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [353, 1619.59, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+				"href": null,
+				"src": null,
+				"box": [683.5, 1619.59, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [353, 2014.98, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [683.5, 2014.98, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz CLS 53 AMG 4M Night Package",
+				"href": null,
+				"src": null,
+				"box": [353, 2410.38, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [683.5, 2410.38, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [353, 2805.77, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [683.5, 2805.77, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "inventory-sorted",
+		"locale": "bg",
+		"width": 1024,
+		"mobile": false,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/bg/inventory?brand=BMW&sort=lowest-price&view=3",
+		"errors": [],
+		"title": "Налични автомобили — Day Night Auto Group",
+		"h1": "Налични автомобили",
+		"overflow": -15,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Налични автомобили",
+				"href": null,
+				"src": null,
+				"box": [346.61, 165, 315.77, 40.31],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"36px",
+					"600",
+					"40.32px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 xDrive M Package",
+				"href": null,
+				"src": null,
+				"box": [49, 823.28, 267.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [370.66, 823.28, 267.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 М Performance",
+				"href": null,
+				"src": null,
+				"box": [692.33, 823.28, 267.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [49, 1213.14, 267.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 xdrive 40i M-Sport",
+				"href": null,
+				"src": null,
+				"box": [370.66, 1213.14, 267.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [692.33, 1213.14, 267.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 V8 M DCT",
+				"href": null,
+				"src": null,
+				"box": [49, 1603, 267.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 Cabrio M DCT",
+				"href": null,
+				"src": null,
+				"box": [370.66, 1603, 267.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [692.33, 1603, 267.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [49, 1992.86, 267.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X6 M50i xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [370.66, 1992.86, 267.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [692.33, 1992.86, 267.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "inventory-sidebar-canonical",
+		"locale": "bg",
+		"width": 1440,
+		"mobile": false,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/bg/inventory?layout=dashboard",
+		"errors": [],
+		"title": "Налични автомобили — Day Night Auto Group",
+		"h1": "Налични автомобили",
+		"overflow": -15,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Налични автомобили",
+				"href": null,
+				"src": null,
+				"box": [523.03, 126, 378.92, 48.38],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"43.2px",
+					"600",
+					"48.384px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Филтри",
+				"href": null,
+				"src": null,
+				"box": [73.5, 609.41, 82.64, 31.19],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"24px",
+					"600",
+					"31.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [373.5, 799.08, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [718.83, 799.08, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi SQ5 30T Black Optic",
+				"href": null,
+				"src": null,
+				"box": [1064.16, 799.08, 291.34, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi A7 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [373.5, 1203.73, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi Q8 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [718.83, 1203.73, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+				"href": null,
+				"src": null,
+				"box": [1064.16, 1203.73, 291.34, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [373.5, 1608.39, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [718.83, 1608.39, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz CLS 53 AMG 4M Night Package",
+				"href": null,
+				"src": null,
+				"box": [1064.16, 1608.39, 291.34, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [373.5, 2013.05, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [718.83, 2013.05, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [1064.16, 2013.05, 291.34, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "inventory-sorted",
+		"locale": "bg",
+		"width": 1440,
+		"mobile": false,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/bg/inventory?brand=BMW&sort=lowest-price&view=3",
+		"errors": [],
+		"title": "Налични автомобили — Day Night Auto Group",
+		"h1": "Налични автомобили",
+		"overflow": -15,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Налични автомобили",
+				"href": null,
+				"src": null,
+				"box": [523.03, 126, 378.92, 48.38],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"43.2px",
+					"600",
+					"48.384px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 xDrive M Package",
+				"href": null,
+				"src": null,
+				"box": [69.5, 862.41, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [516.16, 862.41, 392.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 М Performance",
+				"href": null,
+				"src": null,
+				"box": [962.83, 862.41, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [69.5, 1330.39, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 xdrive 40i M-Sport",
+				"href": null,
+				"src": null,
+				"box": [516.16, 1330.39, 392.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [962.83, 1330.39, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 V8 M DCT",
+				"href": null,
+				"src": null,
+				"box": [69.5, 1798.38, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 Cabrio M DCT",
+				"href": null,
+				"src": null,
+				"box": [516.16, 1798.38, 392.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [962.83, 1798.38, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [69.5, 2266.36, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X6 M50i xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [516.16, 2266.36, 392.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [962.83, 2266.36, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "inventory-sidebar-canonical",
+		"locale": "bg",
+		"width": 1920,
+		"mobile": false,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/bg/inventory?layout=dashboard",
+		"errors": [],
+		"title": "Налични автомобили — Day Night Auto Group",
+		"h1": "Налични автомобили",
+		"overflow": -15,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Налични автомобили",
+				"href": null,
+				"src": null,
+				"box": [759.53, 126, 385.94, 49.27],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"44px",
+					"600",
+					"49.28px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Филтри",
+				"href": null,
+				"src": null,
+				"box": [313.5, 609.41, 82.64, 31.19],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"24px",
+					"600",
+					"31.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [613.5, 799.08, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [958.83, 799.08, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi SQ5 30T Black Optic",
+				"href": null,
+				"src": null,
+				"box": [1304.16, 799.08, 291.34, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi A7 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [613.5, 1203.73, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi Q8 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [958.83, 1203.73, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+				"href": null,
+				"src": null,
+				"box": [1304.16, 1203.73, 291.34, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [613.5, 1608.39, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [958.83, 1608.39, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz CLS 53 AMG 4M Night Package",
+				"href": null,
+				"src": null,
+				"box": [1304.16, 1608.39, 291.34, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [613.5, 2013.05, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [958.83, 2013.05, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [1304.16, 2013.05, 291.34, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "inventory-sorted",
+		"locale": "bg",
+		"width": 1920,
+		"mobile": false,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/bg/inventory?brand=BMW&sort=lowest-price&view=3",
+		"errors": [],
+		"title": "Налични автомобили — Day Night Auto Group",
+		"h1": "Налични автомобили",
+		"overflow": -15,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Налични автомобили",
+				"href": null,
+				"src": null,
+				"box": [759.53, 126, 385.94, 49.27],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"44px",
+					"600",
+					"49.28px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 xDrive M Package",
+				"href": null,
+				"src": null,
+				"box": [309.5, 862.41, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [756.16, 862.41, 392.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 М Performance",
+				"href": null,
+				"src": null,
+				"box": [1202.83, 862.41, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [309.5, 1330.39, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 xdrive 40i M-Sport",
+				"href": null,
+				"src": null,
+				"box": [756.16, 1330.39, 392.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [1202.83, 1330.39, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 V8 M DCT",
+				"href": null,
+				"src": null,
+				"box": [309.5, 1798.38, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 Cabrio M DCT",
+				"href": null,
+				"src": null,
+				"box": [756.16, 1798.38, 392.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [1202.83, 1798.38, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [309.5, 2266.36, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X6 M50i xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [756.16, 2266.36, 392.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [1202.83, 2266.36, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "inventory-sidebar-canonical",
+		"locale": "bg",
+		"width": 320,
+		"mobile": true,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/bg/inventory?layout=dashboard",
+		"errors": [],
+		"title": "Налични автомобили — Day Night Auto Group",
+		"h1": "Налични автомобили",
+		"overflow": 0,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Автомобили",
+				"href": null,
+				"src": null,
+				"box": [13, -1, 1, 1],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"40px",
+					"600",
+					"43.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [146.63, 124, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [146.63, 294, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi SQ5 30T Black Optic",
+				"href": null,
+				"src": null,
+				"box": [146.63, 464, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi A7 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [146.63, 634, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi Q8 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [146.63, 804, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+				"href": null,
+				"src": null,
+				"box": [146.63, 974, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1144, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1314, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz CLS 53 AMG 4M Night Package",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1484, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1654, 149.38, 22],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1818, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1988, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "inventory-sorted",
+		"locale": "bg",
+		"width": 320,
+		"mobile": true,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/bg/inventory?brand=BMW&sort=lowest-price&view=3",
+		"errors": [],
+		"title": "Налични автомобили — Day Night Auto Group",
+		"h1": "Налични автомобили",
+		"overflow": 0,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Автомобили",
+				"href": null,
+				"src": null,
+				"box": [13, -1, 1, 1],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"40px",
+					"600",
+					"43.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 xDrive M Package",
+				"href": null,
+				"src": null,
+				"box": [146.63, 124, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [146.63, 294, 149.38, 22],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 М Performance",
+				"href": null,
+				"src": null,
+				"box": [146.63, 458, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [146.63, 628, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 xdrive 40i M-Sport",
+				"href": null,
+				"src": null,
+				"box": [146.63, 798, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [146.63, 968, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 V8 M DCT",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1138, 149.38, 22],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 Cabrio M DCT",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1294, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1464, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1634, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X6 M50i xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1804, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1974, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "inventory-sidebar-canonical",
+		"locale": "bg",
+		"width": 390,
+		"mobile": true,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/bg/inventory?layout=dashboard",
+		"errors": [],
+		"title": "Налични автомобили — Day Night Auto Group",
+		"h1": "Налични автомобили",
+		"overflow": 0,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Автомобили",
+				"href": null,
+				"src": null,
+				"box": [13, -1, 1, 1],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"40px",
+					"600",
+					"43.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [178.03, 126, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [178.03, 300, 185.97, 22],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi SQ5 30T Black Optic",
+				"href": null,
+				"src": null,
+				"box": [178.03, 456, 185.97, 22],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi A7 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [178.03, 612, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi Q8 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [178.03, 786, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+				"href": null,
+				"src": null,
+				"box": [178.03, 960, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1134, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1308, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz CLS 53 AMG 4M Night Package",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1482, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1656, 185.97, 22],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1824, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1998, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "inventory-sorted",
+		"locale": "bg",
+		"width": 390,
+		"mobile": true,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/bg/inventory?brand=BMW&sort=lowest-price&view=3",
+		"errors": [],
+		"title": "Налични автомобили — Day Night Auto Group",
+		"h1": "Налични автомобили",
+		"overflow": 0,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Автомобили",
+				"href": null,
+				"src": null,
+				"box": [13, -1, 1, 1],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"40px",
+					"600",
+					"43.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 xDrive M Package",
+				"href": null,
+				"src": null,
+				"box": [178.03, 126, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [178.03, 300, 185.97, 22],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 М Performance",
+				"href": null,
+				"src": null,
+				"box": [178.03, 468, 185.97, 22],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [178.03, 624, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 xdrive 40i M-Sport",
+				"href": null,
+				"src": null,
+				"box": [178.03, 798, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [178.03, 972, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 V8 M DCT",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1146, 185.97, 22],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 Cabrio M DCT",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1302, 185.97, 22],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1458, 185.97, 22],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1614, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X6 M50i xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1788, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1962, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "inventory-sidebar-canonical",
+		"locale": "bg",
+		"width": 768,
+		"mobile": false,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/bg/inventory?layout=dashboard",
+		"errors": [],
+		"title": "Налични автомобили — Day Night Auto Group",
+		"h1": "Налични автомобили",
+		"overflow": -15,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Налични автомобили",
+				"href": null,
+				"src": null,
+				"box": [218.61, 165, 315.77, 40.31],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"36px",
+					"600",
+					"40.32px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Филтри",
+				"href": null,
+				"src": null,
+				"box": [53, 698.41, 82.64, 31.19],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"24px",
+					"600",
+					"31.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [49, 1949.81, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [403.5, 1949.81, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi SQ5 30T Black Optic",
+				"href": null,
+				"src": null,
+				"box": [49, 2360.2, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi A7 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [403.5, 2360.2, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi Q8 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [49, 2770.59, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+				"href": null,
+				"src": null,
+				"box": [403.5, 2770.59, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [49, 3180.98, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [403.5, 3180.98, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz CLS 53 AMG 4M Night Package",
+				"href": null,
+				"src": null,
+				"box": [49, 3591.38, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [403.5, 3591.38, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [49, 4001.77, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [403.5, 4001.77, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "inventory-sorted",
+		"locale": "bg",
+		"width": 768,
+		"mobile": false,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/bg/inventory?brand=BMW&sort=lowest-price&view=3",
+		"errors": [],
+		"title": "Налични автомобили — Day Night Auto Group",
+		"h1": "Налични автомобили",
+		"overflow": -15,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Налични автомобили",
+				"href": null,
+				"src": null,
+				"box": [218.61, 165, 315.77, 40.31],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"36px",
+					"600",
+					"40.32px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 xDrive M Package",
+				"href": null,
+				"src": null,
+				"box": [49, 893.81, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [403.5, 893.81, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 М Performance",
+				"href": null,
+				"src": null,
+				"box": [49, 1304.2, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [403.5, 1304.2, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 xdrive 40i M-Sport",
+				"href": null,
+				"src": null,
+				"box": [49, 1714.59, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [403.5, 1714.59, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 V8 M DCT",
+				"href": null,
+				"src": null,
+				"box": [49, 2124.98, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 Cabrio M DCT",
+				"href": null,
+				"src": null,
+				"box": [403.5, 2124.98, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [49, 2535.38, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [403.5, 2535.38, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X6 M50i xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [49, 2945.77, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [403.5, 2945.77, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "inventory-sidebar-canonical",
+		"locale": "en",
+		"width": 1024,
+		"mobile": false,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/en/inventory?layout=dashboard",
+		"errors": [],
+		"title": "Available vehicles — Day Night Auto Group",
+		"h1": "Available vehicles",
+		"overflow": -15,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Available vehicles",
+				"href": null,
+				"src": null,
+				"box": [382.31, 165, 244.38, 40.31],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"36px",
+					"600",
+					"40.32px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Filters",
+				"href": null,
+				"src": null,
+				"box": [53, 648.41, 58.11, 31.19],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"24px",
+					"600",
+					"31.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [353, 828.81, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [683.5, 828.81, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi SQ5 30T Black Optic",
+				"href": null,
+				"src": null,
+				"box": [353, 1224.2, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi A7 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [683.5, 1224.2, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi Q8 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [353, 1619.59, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+				"href": null,
+				"src": null,
+				"box": [683.5, 1619.59, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [353, 2014.98, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [683.5, 2014.98, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz CLS 53 AMG 4M Night Package",
+				"href": null,
+				"src": null,
+				"box": [353, 2410.38, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [683.5, 2410.38, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [353, 2805.77, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [683.5, 2805.77, 276.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "inventory-sorted",
+		"locale": "en",
+		"width": 1024,
+		"mobile": false,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/en/inventory?brand=BMW&sort=lowest-price&view=3",
+		"errors": [],
+		"title": "Available vehicles — Day Night Auto Group",
+		"h1": "Available vehicles",
+		"overflow": -15,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Available vehicles",
+				"href": null,
+				"src": null,
+				"box": [382.31, 165, 244.38, 40.31],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"36px",
+					"600",
+					"40.32px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 xDrive M Package",
+				"href": null,
+				"src": null,
+				"box": [49, 823.28, 267.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [370.66, 823.28, 267.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 М Performance",
+				"href": null,
+				"src": null,
+				"box": [692.33, 823.28, 267.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [49, 1213.14, 267.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 xdrive 40i M-Sport",
+				"href": null,
+				"src": null,
+				"box": [370.66, 1213.14, 267.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [692.33, 1213.14, 267.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 V8 M DCT",
+				"href": null,
+				"src": null,
+				"box": [49, 1603, 267.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 Cabrio M DCT",
+				"href": null,
+				"src": null,
+				"box": [370.66, 1603, 267.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [692.33, 1603, 267.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [49, 1992.86, 267.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X6 M50i xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [370.66, 1992.86, 267.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [692.33, 1992.86, 267.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "inventory-sidebar-canonical",
+		"locale": "en",
+		"width": 1440,
+		"mobile": false,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/en/inventory?layout=dashboard",
+		"errors": [],
+		"title": "Available vehicles — Day Night Auto Group",
+		"h1": "Available vehicles",
+		"overflow": -15,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Available vehicles",
+				"href": null,
+				"src": null,
+				"box": [565.88, 126, 293.25, 48.38],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"43.2px",
+					"600",
+					"48.384px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Filters",
+				"href": null,
+				"src": null,
+				"box": [73.5, 609.41, 58.11, 31.19],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"24px",
+					"600",
+					"31.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [373.5, 799.08, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [718.83, 799.08, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi SQ5 30T Black Optic",
+				"href": null,
+				"src": null,
+				"box": [1064.16, 799.08, 291.34, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi A7 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [373.5, 1203.73, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi Q8 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [718.83, 1203.73, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+				"href": null,
+				"src": null,
+				"box": [1064.16, 1203.73, 291.34, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [373.5, 1608.39, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [718.83, 1608.39, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz CLS 53 AMG 4M Night Package",
+				"href": null,
+				"src": null,
+				"box": [1064.16, 1608.39, 291.34, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [373.5, 2013.05, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [718.83, 2013.05, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [1064.16, 2013.05, 291.34, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "inventory-sorted",
+		"locale": "en",
+		"width": 1440,
+		"mobile": false,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/en/inventory?brand=BMW&sort=lowest-price&view=3",
+		"errors": [],
+		"title": "Available vehicles — Day Night Auto Group",
+		"h1": "Available vehicles",
+		"overflow": -15,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Available vehicles",
+				"href": null,
+				"src": null,
+				"box": [565.88, 126, 293.25, 48.38],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"43.2px",
+					"600",
+					"48.384px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 xDrive M Package",
+				"href": null,
+				"src": null,
+				"box": [69.5, 862.41, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [516.16, 862.41, 392.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 М Performance",
+				"href": null,
+				"src": null,
+				"box": [962.83, 862.41, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [69.5, 1330.39, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 xdrive 40i M-Sport",
+				"href": null,
+				"src": null,
+				"box": [516.16, 1330.39, 392.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [962.83, 1330.39, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 V8 M DCT",
+				"href": null,
+				"src": null,
+				"box": [69.5, 1798.38, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 Cabrio M DCT",
+				"href": null,
+				"src": null,
+				"box": [516.16, 1798.38, 392.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [962.83, 1798.38, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [69.5, 2266.36, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X6 M50i xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [516.16, 2266.36, 392.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [962.83, 2266.36, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "inventory-sidebar-canonical",
+		"locale": "en",
+		"width": 1920,
+		"mobile": false,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/en/inventory?layout=dashboard",
+		"errors": [],
+		"title": "Available vehicles — Day Night Auto Group",
+		"h1": "Available vehicles",
+		"overflow": -15,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Available vehicles",
+				"href": null,
+				"src": null,
+				"box": [803.16, 126, 298.69, 49.27],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"44px",
+					"600",
+					"49.28px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Filters",
+				"href": null,
+				"src": null,
+				"box": [313.5, 609.41, 58.11, 31.19],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"24px",
+					"600",
+					"31.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [613.5, 799.08, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [958.83, 799.08, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi SQ5 30T Black Optic",
+				"href": null,
+				"src": null,
+				"box": [1304.16, 799.08, 291.34, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi A7 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [613.5, 1203.73, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi Q8 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [958.83, 1203.73, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+				"href": null,
+				"src": null,
+				"box": [1304.16, 1203.73, 291.34, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [613.5, 1608.39, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [958.83, 1608.39, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz CLS 53 AMG 4M Night Package",
+				"href": null,
+				"src": null,
+				"box": [1304.16, 1608.39, 291.34, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [613.5, 2013.05, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [958.83, 2013.05, 291.33, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [1304.16, 2013.05, 291.34, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "inventory-sorted",
+		"locale": "en",
+		"width": 1920,
+		"mobile": false,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/en/inventory?brand=BMW&sort=lowest-price&view=3",
+		"errors": [],
+		"title": "Available vehicles — Day Night Auto Group",
+		"h1": "Available vehicles",
+		"overflow": -15,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Available vehicles",
+				"href": null,
+				"src": null,
+				"box": [803.16, 126, 298.69, 49.27],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"44px",
+					"600",
+					"49.28px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 xDrive M Package",
+				"href": null,
+				"src": null,
+				"box": [309.5, 862.41, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [756.16, 862.41, 392.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 М Performance",
+				"href": null,
+				"src": null,
+				"box": [1202.83, 862.41, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [309.5, 1330.39, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 xdrive 40i M-Sport",
+				"href": null,
+				"src": null,
+				"box": [756.16, 1330.39, 392.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [1202.83, 1330.39, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 V8 M DCT",
+				"href": null,
+				"src": null,
+				"box": [309.5, 1798.38, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 Cabrio M DCT",
+				"href": null,
+				"src": null,
+				"box": [756.16, 1798.38, 392.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [1202.83, 1798.38, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [309.5, 2266.36, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X6 M50i xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [756.16, 2266.36, 392.67, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [1202.83, 2266.36, 392.66, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "inventory-sidebar-canonical",
+		"locale": "en",
+		"width": 320,
+		"mobile": true,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/en/inventory?layout=dashboard",
+		"errors": [],
+		"title": "Available vehicles — Day Night Auto Group",
+		"h1": "Available vehicles",
+		"overflow": 0,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Cars",
+				"href": null,
+				"src": null,
+				"box": [13, -1, 1, 1],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"40px",
+					"600",
+					"43.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [146.63, 124, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [146.63, 294, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi SQ5 30T Black Optic",
+				"href": null,
+				"src": null,
+				"box": [146.63, 464, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi A7 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [146.63, 634, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi Q8 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [146.63, 804, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+				"href": null,
+				"src": null,
+				"box": [146.63, 974, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1144, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1314, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz CLS 53 AMG 4M Night Package",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1484, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1654, 149.38, 22],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1818, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1988, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "inventory-sorted",
+		"locale": "en",
+		"width": 320,
+		"mobile": true,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/en/inventory?brand=BMW&sort=lowest-price&view=3",
+		"errors": [],
+		"title": "Available vehicles — Day Night Auto Group",
+		"h1": "Available vehicles",
+		"overflow": 0,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Cars",
+				"href": null,
+				"src": null,
+				"box": [13, -1, 1, 1],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"40px",
+					"600",
+					"43.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 xDrive M Package",
+				"href": null,
+				"src": null,
+				"box": [146.63, 124, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [146.63, 294, 149.38, 22],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 М Performance",
+				"href": null,
+				"src": null,
+				"box": [146.63, 458, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [146.63, 628, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 xdrive 40i M-Sport",
+				"href": null,
+				"src": null,
+				"box": [146.63, 798, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [146.63, 968, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 V8 M DCT",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1138, 149.38, 22],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 Cabrio M DCT",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1294, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1464, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1634, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X6 M50i xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1804, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [146.63, 1974, 149.38, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "inventory-sidebar-canonical",
+		"locale": "en",
+		"width": 390,
+		"mobile": true,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/en/inventory?layout=dashboard",
+		"errors": [],
+		"title": "Available vehicles — Day Night Auto Group",
+		"h1": "Available vehicles",
+		"overflow": 0,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Cars",
+				"href": null,
+				"src": null,
+				"box": [13, -1, 1, 1],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"40px",
+					"600",
+					"43.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [178.03, 126, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [178.03, 300, 185.97, 22],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi SQ5 30T Black Optic",
+				"href": null,
+				"src": null,
+				"box": [178.03, 456, 185.97, 22],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi A7 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [178.03, 612, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi Q8 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [178.03, 786, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+				"href": null,
+				"src": null,
+				"box": [178.03, 960, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1134, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1308, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz CLS 53 AMG 4M Night Package",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1482, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1656, 185.97, 22],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1824, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1998, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "inventory-sorted",
+		"locale": "en",
+		"width": 390,
+		"mobile": true,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/en/inventory?brand=BMW&sort=lowest-price&view=3",
+		"errors": [],
+		"title": "Available vehicles — Day Night Auto Group",
+		"h1": "Available vehicles",
+		"overflow": 0,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Cars",
+				"href": null,
+				"src": null,
+				"box": [13, -1, 1, 1],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"40px",
+					"600",
+					"43.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 xDrive M Package",
+				"href": null,
+				"src": null,
+				"box": [178.03, 126, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [178.03, 300, 185.97, 22],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 М Performance",
+				"href": null,
+				"src": null,
+				"box": [178.03, 468, 185.97, 22],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [178.03, 624, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 xdrive 40i M-Sport",
+				"href": null,
+				"src": null,
+				"box": [178.03, 798, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [178.03, 972, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 V8 M DCT",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1146, 185.97, 22],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 Cabrio M DCT",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1302, 185.97, 22],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1458, 185.97, 22],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1614, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X6 M50i xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1788, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [178.03, 1962, 185.97, 44],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"22.0014px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "inventory-sidebar-canonical",
+		"locale": "en",
+		"width": 768,
+		"mobile": false,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/en/inventory?layout=dashboard",
+		"errors": [],
+		"title": "Available vehicles — Day Night Auto Group",
+		"h1": "Available vehicles",
+		"overflow": -15,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Available vehicles",
+				"href": null,
+				"src": null,
+				"box": [254.31, 165, 244.38, 40.31],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"36px",
+					"600",
+					"40.32px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Filters",
+				"href": null,
+				"src": null,
+				"box": [53, 698.41, 58.11, 31.19],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"24px",
+					"600",
+					"31.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [49, 1949.81, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [403.5, 1949.81, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi SQ5 30T Black Optic",
+				"href": null,
+				"src": null,
+				"box": [49, 2360.2, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi A7 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [403.5, 2360.2, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Audi Q8 55TFSI Technik Black Optic",
+				"href": null,
+				"src": null,
+				"box": [49, 2770.59, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+				"href": null,
+				"src": null,
+				"box": [403.5, 2770.59, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [49, 3180.98, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [403.5, 3180.98, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz CLS 53 AMG 4M Night Package",
+				"href": null,
+				"src": null,
+				"box": [49, 3591.38, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [403.5, 3591.38, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [49, 4001.77, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "Mercedes-Benz GLC 300 4M AMG Package",
+				"href": null,
+				"src": null,
+				"box": [403.5, 4001.77, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	},
+	{
+		"name": "inventory-sorted",
+		"locale": "en",
+		"width": 768,
+		"mobile": false,
+		"status": 200,
+		"url": "http://127.0.0.1:6792/en/inventory?brand=BMW&sort=lowest-price&view=3",
+		"errors": [],
+		"title": "Available vehicles — Day Night Auto Group",
+		"h1": "Available vehicles",
+		"overflow": -15,
+		"brokenImages": [],
+		"headings": [
+			{
+				"tag": "H1",
+				"text": "Available vehicles",
+				"href": null,
+				"src": null,
+				"box": [254.31, 165, 244.38, 40.31],
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"36px",
+					"600",
+					"40.32px"
+				],
+				"color": "rgb(255, 255, 255)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(255, 255, 255)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 xDrive M Package",
+				"href": null,
+				"src": null,
+				"box": [49, 893.81, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X3 30e xDrive",
+				"href": null,
+				"src": null,
+				"box": [403.5, 893.81, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 540 М Performance",
+				"href": null,
+				"src": null,
+				"box": [49, 1304.2, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [403.5, 1304.2, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 xdrive 40i M-Sport",
+				"href": null,
+				"src": null,
+				"box": [49, 1714.59, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i M Sport Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [403.5, 1714.59, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 V8 M DCT",
+				"href": null,
+				"src": null,
+				"box": [49, 2124.98, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW M3 Cabrio M DCT",
+				"href": null,
+				"src": null,
+				"box": [403.5, 2124.98, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X4 M Competition",
+				"href": null,
+				"src": null,
+				"box": [49, 2535.38, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW 850 GC xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [403.5, 2535.38, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X6 M50i xDrive Shadow Line",
+				"href": null,
+				"src": null,
+				"box": [49, 2945.77, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			},
+			{
+				"tag": "H2",
+				"text": "BMW X5 40i Black Vermilion",
+				"href": null,
+				"src": null,
+				"box": [403.5, 2945.77, 300.5, 25.19],
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"25.2px"
+				],
+				"color": "rgb(23, 25, 28)",
+				"background": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"radius": "0px",
+				"padding": "0px",
+				"gap": "normal"
+			}
+		]
+	}
+]

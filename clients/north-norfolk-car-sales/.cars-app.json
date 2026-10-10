@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "dealer": "north-norfolk-car-sales",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "70c2b80671e217ab299549a938a537c0b9559611",
+    "path": "templates/app",
+    "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
+    "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f"
+  },
+  "appDigest": "8bff9889fd50c93787453bd1dab0f512dc36757c9c82f11cc0ed4e8d53c8db2d",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "north-norfolk-car-sales",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "a68818bd9a7a026b50da33a5576e0801539849d8d2cbdb1d5496e7f498d1f829",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 2,
+    "currency": "GBP",
+    "observedAt": "2026-10-10",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo.webp",
+        "output": "public/dealer-app/logo-light-0f70eadda345cc351592.webp",
+        "sha256": "0f70eadda345cc351592c2d1c705b1aab754aefa7cf1eeb05231add4c0d2420f",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo.webp",
+        "output": "public/dealer-app/logo-dark-0f70eadda345cc351592.webp",
+        "sha256": "0f70eadda345cc351592c2d1c705b1aab754aefa7cf1eeb05231add4c0d2420f",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "peugeot-205-1991-1090",
+        "sourceValue": 92500,
+        "sourceUnit": "mi",
+        "canonicalKm": 148864
+      },
+      {
+        "slug": "peugeot-208-2018-1089",
+        "sourceValue": 45500,
+        "sourceUnit": "mi",
+        "canonicalKm": 73225
+      }
+    ],
+    "ukPresentation": {
+      "distanceUnit": "mi",
+      "canonicalDistanceUnit": "km",
+      "originalMileageRetained": true,
+      "contentPaths": [
+        "lib/dealer-mileage.ts",
+        "lib/currency.ts",
+        "lib/inventory-filters.ts",
+        "lib/inventory-settings.ts",
+        "components/DesktopInventoryFilters.tsx",
+        "components/NativeFilterPane.tsx",
+        "components/VehicleCard.tsx",
+        "components/VehicleBelowFold.tsx",
+        "components/VehicleComparison.tsx",
+        "components/VehicleDetailClient.tsx",
+        "components/SellEnquirySheet.tsx"
+      ]
+    }
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

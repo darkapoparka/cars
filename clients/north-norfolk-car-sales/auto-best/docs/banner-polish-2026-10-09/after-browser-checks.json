@@ -1,0 +1,393 @@
+[
+  {
+    "variant": "kerb",
+    "width": 1440,
+    "locale": "bg",
+    "frame": {
+      "x": 32.5,
+      "y": 138,
+      "width": 1360,
+      "height": 164
+    },
+    "title": {
+      "x": 556.96875,
+      "y": 158.796875,
+      "width": 311.046875,
+      "height": 38.390625
+    },
+    "background": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-circuit-asphalt-v3.webp\")",
+    "before": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-kerb-photographic-v5.webp\")",
+    "after": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-kerb-photographic-v5.webp\")",
+    "overflow": false,
+    "cta": "/bg/listing-grid",
+    "errors": []
+  },
+  {
+    "variant": "circuit",
+    "width": 1440,
+    "locale": "bg",
+    "frame": {
+      "x": 32.5,
+      "y": 138,
+      "width": 1360,
+      "height": 164
+    },
+    "title": {
+      "x": 556.96875,
+      "y": 158.796875,
+      "width": 311.046875,
+      "height": 38.390625
+    },
+    "background": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-circuit-asphalt-v3.webp\")",
+    "before": "none",
+    "after": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-nordschleife-outline-v2.svg\")",
+    "overflow": false,
+    "cta": "/bg/listing-grid",
+    "errors": []
+  },
+  {
+    "variant": "kerb",
+    "width": 992,
+    "locale": "bg",
+    "frame": {
+      "x": 24,
+      "y": 138,
+      "width": 929,
+      "height": 164
+    },
+    "title": {
+      "x": 332.96875,
+      "y": 158.796875,
+      "width": 311.046875,
+      "height": 38.390625
+    },
+    "background": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-circuit-asphalt-v3.webp\")",
+    "before": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-kerb-photographic-v5.webp\")",
+    "after": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-kerb-photographic-v5.webp\")",
+    "overflow": false,
+    "cta": "/bg/listing-grid",
+    "errors": []
+  },
+  {
+    "variant": "kerb",
+    "width": 1920,
+    "locale": "bg",
+    "frame": {
+      "x": 272.5,
+      "y": 138,
+      "width": 1360,
+      "height": 164
+    },
+    "title": {
+      "x": 796.96875,
+      "y": 158.796875,
+      "width": 311.046875,
+      "height": 38.390625
+    },
+    "background": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-circuit-asphalt-v3.webp\")",
+    "before": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-kerb-photographic-v5.webp\")",
+    "after": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-kerb-photographic-v5.webp\")",
+    "overflow": false,
+    "cta": "/bg/listing-grid",
+    "errors": []
+  },
+  {
+    "variant": "circuit",
+    "width": 992,
+    "locale": "bg",
+    "frame": {
+      "x": 24,
+      "y": 138,
+      "width": 929,
+      "height": 164
+    },
+    "title": {
+      "x": 332.96875,
+      "y": 158.796875,
+      "width": 311.046875,
+      "height": 38.390625
+    },
+    "background": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-circuit-asphalt-v3.webp\")",
+    "before": "none",
+    "after": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-nordschleife-outline-v2.svg\")",
+    "overflow": false,
+    "cta": "/bg/listing-grid",
+    "errors": []
+  },
+  {
+    "variant": "circuit",
+    "width": 1920,
+    "locale": "bg",
+    "frame": {
+      "x": 272.5,
+      "y": 138,
+      "width": 1360,
+      "height": 164
+    },
+    "title": {
+      "x": 796.96875,
+      "y": 158.796875,
+      "width": 311.046875,
+      "height": 38.390625
+    },
+    "background": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-circuit-asphalt-v3.webp\")",
+    "before": "none",
+    "after": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-nordschleife-outline-v2.svg\")",
+    "overflow": false,
+    "cta": "/bg/listing-grid",
+    "errors": []
+  },
+  {
+    "variant": "kerb",
+    "width": 320,
+    "locale": "bg",
+    "frame": {
+      "x": 12,
+      "y": 108.21875,
+      "width": 296,
+      "height": 81.59375
+    },
+    "title": {
+      "x": 56,
+      "y": 120.21875,
+      "width": 208,
+      "height": 57.59375
+    },
+    "background": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-circuit-asphalt-v3-960.webp\")",
+    "before": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-kerb-photographic-v5-960.webp\")",
+    "after": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-kerb-photographic-v5-960.webp\")",
+    "overflow": false,
+    "cta": "/bg/listing-grid",
+    "errors": []
+  },
+  {
+    "variant": "kerb",
+    "width": 390,
+    "locale": "bg",
+    "frame": {
+      "x": 12,
+      "y": 108.21875,
+      "width": 366,
+      "height": 64
+    },
+    "title": {
+      "x": 77.390625,
+      "y": 125.8125,
+      "width": 235.21875,
+      "height": 28.796875
+    },
+    "background": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-circuit-asphalt-v3-960.webp\")",
+    "before": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-kerb-photographic-v5-960.webp\")",
+    "after": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-kerb-photographic-v5-960.webp\")",
+    "overflow": false,
+    "cta": "/bg/listing-grid",
+    "errors": []
+  },
+  {
+    "variant": "circuit",
+    "width": 320,
+    "locale": "bg",
+    "frame": {
+      "x": 12,
+      "y": 108.21875,
+      "width": 296,
+      "height": 81.59375
+    },
+    "title": {
+      "x": 56,
+      "y": 120.21875,
+      "width": 208,
+      "height": 57.59375
+    },
+    "background": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-circuit-asphalt-v3-960.webp\")",
+    "before": "none",
+    "after": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-nordschleife-outline-v2.svg\")",
+    "overflow": false,
+    "cta": "/bg/listing-grid",
+    "errors": []
+  },
+  {
+    "variant": "circuit",
+    "width": 390,
+    "locale": "bg",
+    "frame": {
+      "x": 12,
+      "y": 108.21875,
+      "width": 366,
+      "height": 64
+    },
+    "title": {
+      "x": 77.390625,
+      "y": 125.8125,
+      "width": 235.21875,
+      "height": 28.796875
+    },
+    "background": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-circuit-asphalt-v3-960.webp\")",
+    "before": "none",
+    "after": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-nordschleife-outline-v2.svg\")",
+    "overflow": false,
+    "cta": "/bg/listing-grid",
+    "errors": []
+  },
+  {
+    "variant": "kerb",
+    "width": 320,
+    "locale": "en",
+    "frame": {
+      "x": 12,
+      "y": 108.21875,
+      "width": 296,
+      "height": 64
+    },
+    "title": {
+      "x": 87.296875,
+      "y": 125.8125,
+      "width": 145.40625,
+      "height": 28.796875
+    },
+    "background": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-circuit-asphalt-v3-960.webp\")",
+    "before": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-kerb-photographic-v5-960.webp\")",
+    "after": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-kerb-photographic-v5-960.webp\")",
+    "overflow": false,
+    "cta": "/en/listing-grid",
+    "errors": []
+  },
+  {
+    "variant": "circuit",
+    "width": 390,
+    "locale": "en",
+    "frame": {
+      "x": 12,
+      "y": 108.21875,
+      "width": 366,
+      "height": 64
+    },
+    "title": {
+      "x": 122.296875,
+      "y": 125.8125,
+      "width": 145.40625,
+      "height": 28.796875
+    },
+    "background": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-circuit-asphalt-v3-960.webp\")",
+    "before": "none",
+    "after": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-nordschleife-outline-v2.svg\")",
+    "overflow": false,
+    "cta": "/en/listing-grid",
+    "errors": []
+  },
+  {
+    "variant": "motorsport",
+    "width": 1440,
+    "locale": "bg",
+    "frame": {
+      "x": 32.5,
+      "y": 138,
+      "width": 1360,
+      "height": 164
+    },
+    "title": {
+      "x": 556.96875,
+      "y": 158.796875,
+      "width": 311.046875,
+      "height": 38.390625
+    },
+    "background": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-matte-graphite-comparison-v1.webp\")",
+    "before": "linear-gradient(to right, rgb(196, 1, 1) 0px, rgb(196, 1, 1) 44px, rgba(0, 0, 0, 0) 44px, rgba(0, 0, 0, 0) 58px, rgb(244, 245, 247) 58px, rgb(244, 245, 247) 84px)",
+    "after": "linear-gradient(to right, rgb(244, 245, 247) 0px, rgb(244, 245, 247) 14px, rgba(0, 0, 0, 0) 14px, rgba(0, 0, 0, 0) 26px, rgb(196, 1, 1) 26px, rgb(196, 1, 1) 62px)",
+    "overflow": false,
+    "cta": "/bg/listing-grid",
+    "errors": []
+  },
+  {
+    "variant": "headlights",
+    "width": 1440,
+    "locale": "bg",
+    "frame": {
+      "x": 32.5,
+      "y": 138,
+      "width": 1360,
+      "height": 164
+    },
+    "title": {
+      "x": 556.96875,
+      "y": 158.796875,
+      "width": 311.046875,
+      "height": 38.390625
+    },
+    "background": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-headlights-v1.webp\")",
+    "before": "none",
+    "after": "none",
+    "overflow": false,
+    "cta": "/bg/listing-grid",
+    "errors": []
+  },
+  {
+    "variant": "taillights",
+    "width": 1440,
+    "locale": "bg",
+    "frame": {
+      "x": 32.5,
+      "y": 138,
+      "width": 1360,
+      "height": 164
+    },
+    "title": {
+      "x": 556.96875,
+      "y": 158.796875,
+      "width": 311.046875,
+      "height": 38.390625
+    },
+    "background": "url(\"http://127.0.0.1:6461/assets/images/template/home-section-taillights-v1.webp\")",
+    "before": "none",
+    "after": "none",
+    "overflow": false,
+    "cta": "/bg/listing-grid",
+    "errors": []
+  },
+  {
+    "variant": "kerb",
+    "width": 768,
+    "locale": "bg",
+    "frame": {
+      "x": 34,
+      "y": 138,
+      "width": 700,
+      "height": 105.828125
+    },
+    "title": {
+      "x": 228.46875,
+      "y": 138,
+      "width": 311.046875,
+      "height": 35.828125
+    },
+    "background": "none",
+    "before": "none",
+    "after": "none",
+    "overflow": false,
+    "cta": "/bg/listing-grid",
+    "errors": []
+  },
+  {
+    "variant": "kerb",
+    "width": 991,
+    "locale": "bg",
+    "frame": {
+      "x": 135.5,
+      "y": 138,
+      "width": 720,
+      "height": 105.828125
+    },
+    "title": {
+      "x": 339.96875,
+      "y": 138,
+      "width": 311.046875,
+      "height": 35.828125
+    },
+    "background": "none",
+    "before": "none",
+    "after": "none",
+    "overflow": false,
+    "cta": "/bg/listing-grid",
+    "errors": []
+  }
+]

@@ -1,0 +1,21 @@
+.dn-service-entry { display: grid; gap: var(--dn-entry-stack-gap); }
+.dn-service-entry--mobile { display: none; }
+@media (max-width: 767px) {
+  .dn-service-entry--desktop { display: none; }
+  .dn-service-entry--mobile { display: grid; min-width: 0; grid-template-columns: minmax(0, 1fr); }
+  .dn-service-entry--mobile .dn-service-entry__choices { width: min(100%, 15rem); justify-self: center; }
+  .dn-service-entry--mobile .dn-service-entry__choices .dn-segmented-option { padding-inline: var(--dn-space-2); }
+  .dn-service-entry--mobile .dn-service-entry__submit { justify-self: center; max-width: 100%; margin: 0 auto; cursor: pointer; }
+}
+.dn-service-entry__fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 12px; }
+.dn-service-entry__fields .wide { grid-column: 1 / -1; }
+.dn-service-entry label { display: flex; flex-direction: column; gap: 8px; min-width: 0; color: var(--dn-ink); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-medium); }
+.dn-service-entry__hint { margin: 8px 0 0; font-size: var(--dn-text-meta); line-height: var(--dn-leading-body); color: var(--dn-muted); }
+.dn-service-entry > .dn-service-entry__hint { margin: -8px 0 0; }
+.dn-service-entry__error { margin: 8px 0 0; font-size: var(--dn-text-meta); line-height: var(--dn-leading-body); color: var(--dn-red); }
+.dn-service-entry .dn-service-entry__alternative { justify-self: center; min-height: 44px; margin: -8px 0; padding: 8px 4px; border: 0; background: transparent; color: var(--dn-muted); font-family: var(--dn-font); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-regular); line-height: var(--dn-leading-body); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.dn-service-entry .dn-service-entry__alternative:hover { color: var(--dn-ink); }
+
+
+.dn-service-entry__sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.dn-service-entry textarea { width: 100%; min-width: 0; padding: var(--dn-space-3); resize: vertical; }

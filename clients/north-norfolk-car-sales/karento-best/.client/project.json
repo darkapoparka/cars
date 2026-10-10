@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "client": "north-norfolk-car-sales",
+  "templateKey": "karento-best",
+  "templateVersion": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+  "createdAt": "2026-10-10T12:42:38.709Z",
+  "state": "personalized-needs-build",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": "gb-north-norfolk-car-sales",
+    "demoProjectId": null,
+    "registered": false
+  },
+  "templateSource": {
+    "repository": "darkapoparka/cars",
+    "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+    "path": "templates/karento-best",
+    "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
+    "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "5",
+    "entry": "/variant-6/"
+  },
+  "workflowCommit": "40a4a3c9fdb387259e55b32a265986fca3fd6339",
+  "hosting": {
+    "provider": "cloudflare",
+    "status": "not-deployed"
+  },
+  "readyToPublish": false
+}
