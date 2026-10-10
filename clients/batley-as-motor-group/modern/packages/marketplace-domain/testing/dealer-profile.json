@@ -1,0 +1,914 @@
+{
+  "schemaVersion": 1,
+  "slug": "batley-as-motor-group",
+  "business": {
+    "slug": "batley-as-motor-group",
+    "name": "AS Motor Group",
+    "shortName": "AS Motor Group",
+    "latinName": "AS Motor Group",
+    "tagline": "Explore used cars in Batley.",
+    "city": "Batley, West Yorkshire",
+    "region": "",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "locale": "en-GB",
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "address": "Unit 2-3 Chopdat Industrial Estate, Soothill Lane, Batley WF17 5SS",
+    "addressLine": "Unit 2-3 Chopdat Industrial Estate, Soothill Lane, Batley WF17 5SS",
+    "phoneDisplay": "",
+    "phoneHref": "",
+    "phoneE164": "",
+    "email": "",
+    "hours": "Contact the dealership before visiting.",
+    "website": "",
+    "inventoryUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+    "contactUrl": "",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=AS%20Motor%20Group%2C%20Unit%202-3%20Chopdat%20Industrial%20Estate%2C%20Soothill%20Lane%2C%20Batley%20WF17%205SS",
+    "mapsEmbedUrl": "https://maps.google.com/maps?q=AS%20Motor%20Group%2C%20Unit%202-3%20Chopdat%20Industrial%20Estate%2C%20Soothill%20Lane%2C%20Batley%20WF17%205SS&z=16&output=embed",
+    "accent": "#A57F4D",
+    "logo": "/dealer-brand/logo.webp",
+    "logoLight": "/dealer-brand/logo.webp",
+    "logoDark": "/dealer-brand/logo.webp",
+    "socialLinks": {
+      "facebook": "",
+      "instagram": "",
+      "youtube": "",
+      "tiktok": ""
+    },
+    "services": [],
+    "inventoryNotice": "Vehicle images are generated illustrations, not photographs of the advertised vehicles. Listing details were observed on 10 October 2026; confirm each original advert, price, condition and availability with the dealership.",
+    "previewNotice": "Independent design preview for discussion, not an official dealership website. Forms do not send messages or create reservations.",
+    "observedAt": "2026-10-10",
+    "coordinates": null,
+    "raw": {
+      "schemaVersion": 1,
+      "leadId": "gb-batley-as-motor-group",
+      "slug": "batley-as-motor-group",
+      "observedAt": "2026-10-10",
+      "name": "AS Motor Group",
+      "shortName": "AS Motor Group",
+      "legalName": null,
+      "companyNumber": null,
+      "city": "Batley, West Yorkshire",
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "address": "Unit 2-3 Chopdat Industrial Estate, Soothill Lane, Batley WF17 5SS",
+      "phone": null,
+      "phoneDisplay": null,
+      "phoneHref": null,
+      "email": null,
+      "hours": null,
+      "coordinates": null,
+      "currency": "GBP",
+      "distanceUnit": "mi",
+      "locale": "en-GB",
+      "languages": [
+        "en"
+      ],
+      "accent": "#A57F4D",
+      "website": null,
+      "sourceProfile": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+      "mapsUrl": null,
+      "mapsEmbedUrl": null,
+      "tagline": "Explore used cars in Batley.",
+      "socialLinks": {},
+      "services": [],
+      "stockCount": 5,
+      "publishedListingCount": 41,
+      "sampleOnly": true,
+      "inventoryMode": "dated_listing_samples_with_generated_illustrations",
+      "previewNotice": "Independent design preview for discussion, not an official dealership website. Forms do not send messages or create reservations.",
+      "inventoryNotice": "Vehicle images are generated illustrations, not photographs of the advertised vehicles. Listing details were observed on 10 October 2026; confirm each original advert, price, condition and availability with the dealership.",
+      "availabilityLabel": "Listing sample — availability unconfirmed",
+      "contactNotice": "Direct enquiry destination is not confirmed; show an honest demo/unavailable contact state until resolved.",
+      "locationNote": "Publicly advertised premises; reconfirm the visit address before travel or release.",
+      "sources": [
+        "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673"
+      ],
+      "opportunity": "An owned branded showroom for a larger, mixed premium/mainstream catalogue, with clear stock filters and viewing enquiries.",
+      "qualificationNotes": [
+        "41 real advertised vehicles and a blank own-website field. No recent primary posting date or confidently matched Google business profile verified.",
+        "41 in opened AutoTrader Used cars, versus 36 indexed in an older snapshot. Real Batley vehicles include SQ5, Golf R and Cayenne; generic featured Dummy adverts were excluded.",
+        "Unit 2–3 Chopdat Industrial Estate, Soothill Lane, Batley WF17 5SS. Soothill Cars nearby is not a confirmed alias. A same-name London registered company was not matched and is not attached.",
+        "Marketplace-provided phone may forward calls; confirm an owner-controlled number.",
+        "Public trading name/city only: no dealership approval, contact ownership, matched legal entity or private contact history has been verified.",
+        "Vehicle media, prices, mileage, services, staff, reviews, finance claims, hours and branding have not been selected or accepted for application content in this preparation pass."
+      ],
+      "contactCandidates": {
+        "phone": "07537 165504",
+        "email": null,
+        "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+        "phoneCaveat": "Marketplace-provided phone may forward calls; confirm an owner-controlled number.",
+        "status": "public_business_contact_not_contacted",
+        "phoneE164": "+447537165504",
+        "approvalStatus": "public_research_not_dealer_confirmed"
+      },
+      "addressCandidates": {
+        "publishedNote": "Unit 2–3 Chopdat Industrial Estate, Soothill Lane, Batley WF17 5SS. Soothill Cars nearby is not a confirmed alias. A same-name London registered company was not matched and is not attached.",
+        "conflicts": [],
+        "googleProfile": {
+          "status": "no_confidently_matched_profile_in_bounded_map_search",
+          "assessedAt": "2026-10-10",
+          "note": "No dealer profile was confidently matched; this does not prove no Google profile exists."
+        },
+        "status": "publicly_advertised_not_owner_confirmed"
+      },
+      "researchEvidence": {
+        "inventory": {
+          "count": 41,
+          "kind": "opened_platform_advertised_count",
+          "retrievedAt": "2026-10-10",
+          "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+          "caveat": "41 in opened AutoTrader Used cars, versus 36 indexed in an older snapshot. Real Batley vehicles include SQ5, Golf R and Cayenne; generic featured Dummy adverts were excluded."
+        },
+        "stockSnapshots": [
+          {
+            "count": 41,
+            "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+            "method": "opened",
+            "observedAt": "2026-10-10"
+          }
+        ],
+        "activityEvidence": [
+          {
+            "kind": "undated_advertised_inventory",
+            "date": null,
+            "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+            "note": "Real priced stock observed on 10 October 2026; no recent post date verified."
+          }
+        ],
+        "website": {
+          "url": null,
+          "status": "no_standalone_domain_found_in_bounded_search",
+          "assessedAt": "2026-10-10",
+          "confidence": "medium",
+          "observations": [
+            "Opened AutoTrader Website heading has no domain or destination."
+          ]
+        },
+        "domainChecks": {
+          "queries": [
+            "\"AS Motor Group\" Batley website",
+            "\"AS Motor Group\" \"WF17 5SS\"",
+            "\"AS Motor Group\" \"Chopdat\"",
+            "\"07537165504\" website"
+          ],
+          "profilesChecked": [
+            "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673"
+          ],
+          "result": "No confidently matched dealer-owned standalone domain found in these bounded checks. Absence must be confirmed with the operator."
+        }
+      },
+      "branding": {
+        "publishedBranding": "No usable original recovered from matching bounded public sources; generated design proposal uses the correct researched trading identity.",
+        "sourceLogoUrl": null,
+        "workingLogoPath": "dealer-brand/logo.webp",
+        "creationMethod": "generated_proposal",
+        "approvalStatus": "independent_design_proposal_not_dealer_approved",
+        "visualInspection": "Public references and new logo/icon imagery visually inspected; spelling and complete marks checked.",
+        "requiredNextStep": "Verify actual logo and icon consumers at desktop and mobile widths in all six applications.",
+        "publicReferenceUrls": [
+          "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673"
+        ],
+        "researchDocument": "docs/qa/uk-branding-visual-research-2026-10-10.md"
+      },
+      "buildPreparation": {
+        "status": "content_pack_populated_application_pending",
+        "derivedFrom": {
+          "path": "../../uk-2026-10-10.json",
+          "sourceSha256": "0b8a38395e80f44f70035ba3cd538e44554a917056fd3fde9b4efbc31a999c92",
+          "researchAsOf": "2026-10-10"
+        },
+        "researchSnapshotFlags": {
+          "researchOnly": true,
+          "buildApproved": false,
+          "outreachApproved": false,
+          "contactHistory": "not_checked"
+        },
+        "ownerRequest": "Ten proposals with six variants on Cloudflare after accepted template releases. This pack records neither dealership approval nor changes to original research flags.",
+        "requestedTemplateChoices": [
+          "auto-best",
+          "modern",
+          "import",
+          "app",
+          "mobile",
+          "karento-best"
+        ],
+        "templateLabels": {
+          "auto-best": "Auto Best",
+          "modern": "Modern",
+          "import": "Import",
+          "app": "App",
+          "mobile": "Mobile",
+          "karento-best": "Signature"
+        },
+        "recommendedEntryTemplate": "modern",
+        "showFirstReason": "Show consistent branded stock and readable vehicle details before comparing the other designs.",
+        "templatePins": null,
+        "hosting": {
+          "requestedProvider": "cloudflare",
+          "acceptedPublisher": null,
+          "publicOrigin": null,
+          "status": "await_qualified_pilot_and_release_acceptance",
+          "dnsChangeAuthorized": false,
+          "billingChangeAuthorized": false
+        },
+        "nextAction": "Confirm operator/legal identity, public direct contact, domain ownership, exact premises and current stock. Do not borrow details from the London company or nearby Soothill Cars.",
+        "readyToPersonalizeNow": [
+          "Public trading name",
+          "Public city/region",
+          "GB dealership country",
+          "en-GB English presentation",
+          "GBP pricing contract",
+          "Miles display contract with actual kilometre conversion",
+          "Independent preview disclosure"
+        ],
+        "requiresBeforeComplete": [
+          "Accepted immutable pins for all six requested families",
+          "Qualified six-variant Cloudflare packaging/publisher",
+          "Canonical identity and existing-client/alias reconciliation",
+          "Current premises and direct contact destination",
+          "Visual brand inspection and permitted local raster assets",
+          "Sourced dated stock with correct units and permitted images, or explicitly illustrative inventory",
+          "Inherited identity/claim sweep and honest demo forms",
+          "Per-variant QA and hosted checks"
+        ],
+        "qa": {
+          "sourcePackValidated": true,
+          "applicationBuilt": false,
+          "browserReviewed": false,
+          "hostedVerified": false
+        },
+        "existingClientPathFromResearch": null,
+        "contentSelection": {
+          "observedAt": "2026-10-10",
+          "listingCount": 5,
+          "kind": "dated-listing-snapshot",
+          "mediaKind": "generated_category_illustration",
+          "source": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+          "excluded": [],
+          "countNote": "Only the sufficiently complete examples observed in this pass are used; no extra available vehicles are invented."
+        }
+      },
+      "logoDark": "/dealer-brand/logo.webp",
+      "logoLight": "/dealer-brand/logo.webp",
+      "logo": "/dealer-brand/logo.webp"
+    }
+  },
+  "listings": [
+    {
+      "id": "at-sample-1",
+      "sourceId": "at-sample-1",
+      "slug": "audi-sq5-2015-at-sample-1",
+      "title": "Audi SQ5 3.0 BiTDI V6 Tiptronic quattro Euro 6 (s/s) 5dr",
+      "make": "Audi",
+      "model": "SQ5",
+      "trim": "3.0 BiTDI V6 Tiptronic quattro Euro 6 (s/s) 5dr",
+      "year": 2015,
+      "priceAmount": 12995,
+      "currency": "GBP",
+      "mileageValue": 105000,
+      "mileageUnit": "mi",
+      "mileageOnRequest": false,
+      "body": "SUV",
+      "bodyType": "suv",
+      "fuel": "Diesel",
+      "fuelType": "diesel",
+      "transmission": "Automatic",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/suv.webp"
+      ],
+      "image": "/dealer-stock/suv.webp",
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "condition": "used",
+      "location": "Batley, West Yorkshire",
+      "raw": {
+        "title": "Audi SQ5 3.0 BiTDI V6 Tiptronic quattro Euro 6 (s/s) 5dr",
+        "year": 2015,
+        "mileage": 105000,
+        "price": 12995,
+        "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+        "sourceId": "at-sample-1",
+        "sourceSummary": "5 door Automatic Diesel SUV",
+        "body": "SUV",
+        "fuel": "Diesel",
+        "transmission": "Automatic",
+        "make": "Audi",
+        "model": "SQ5",
+        "trim": "3.0 BiTDI V6 Tiptronic quattro Euro 6 (s/s) 5dr",
+        "id": "at-sample-1",
+        "slug": "audi-sq5-2015-at-sample-1",
+        "priceAmount": 12995,
+        "currency": "GBP",
+        "mileageMiles": 105000,
+        "images": [
+          "/dealer-stock/suv.webp"
+        ],
+        "imageCaption": "Illustration — not the advertised vehicle",
+        "mediaKind": "generated_category_illustration",
+        "observedAt": "2026-10-10",
+        "availability": "Listing sample — availability unconfirmed",
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "features": [],
+        "sourceEvidence": {
+          "kind": "public_advertised_listing",
+          "url": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+          "observedAt": "2026-10-10"
+        },
+        "mediaRights": {
+          "method": "generated_illustration",
+          "representsActualVehicle": false,
+          "thirdPartyVehiclePhotographyBundled": false
+        }
+      }
+    },
+    {
+      "id": "at-sample-2",
+      "sourceId": "at-sample-2",
+      "slug": "volkswagen-golf-2015-at-sample-2",
+      "title": "Volkswagen Golf 2.0 TSI BlueMotion Tech R DSG 4Motion Euro 6 (s/s) 5dr",
+      "make": "Volkswagen",
+      "model": "Golf",
+      "trim": "2.0 TSI BlueMotion Tech R DSG 4Motion Euro 6 (s/s) 5dr",
+      "year": 2015,
+      "priceAmount": 10995,
+      "currency": "GBP",
+      "mileageValue": 114000,
+      "mileageUnit": "mi",
+      "mileageOnRequest": false,
+      "body": "Hatchback",
+      "bodyType": "hatchback",
+      "fuel": "Petrol",
+      "fuelType": "gasoline",
+      "transmission": "Automatic",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "image": "/dealer-stock/hatchback.webp",
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "condition": "used",
+      "location": "Batley, West Yorkshire",
+      "raw": {
+        "title": "Volkswagen Golf 2.0 TSI BlueMotion Tech R DSG 4Motion Euro 6 (s/s) 5dr",
+        "year": 2015,
+        "mileage": 114000,
+        "price": 10995,
+        "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+        "sourceId": "at-sample-2",
+        "sourceSummary": "5 door Automatic Petrol Hatchback",
+        "body": "Hatchback",
+        "fuel": "Petrol",
+        "transmission": "Automatic",
+        "make": "Volkswagen",
+        "model": "Golf",
+        "trim": "2.0 TSI BlueMotion Tech R DSG 4Motion Euro 6 (s/s) 5dr",
+        "id": "at-sample-2",
+        "slug": "volkswagen-golf-2015-at-sample-2",
+        "priceAmount": 10995,
+        "currency": "GBP",
+        "mileageMiles": 114000,
+        "images": [
+          "/dealer-stock/hatchback.webp"
+        ],
+        "imageCaption": "Illustration — not the advertised vehicle",
+        "mediaKind": "generated_category_illustration",
+        "observedAt": "2026-10-10",
+        "availability": "Listing sample — availability unconfirmed",
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "features": [],
+        "sourceEvidence": {
+          "kind": "public_advertised_listing",
+          "url": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+          "observedAt": "2026-10-10"
+        },
+        "mediaRights": {
+          "method": "generated_illustration",
+          "representsActualVehicle": false,
+          "thirdPartyVehiclePhotographyBundled": false
+        }
+      }
+    },
+    {
+      "id": "at-sample-3",
+      "sourceId": "at-sample-3",
+      "slug": "porsche-cayenne-2013-at-sample-3",
+      "title": "Porsche Cayenne 3.0 TD V6 Tiptronic 4WD Euro 5 (s/s) 5dr",
+      "make": "Porsche",
+      "model": "Cayenne",
+      "trim": "3.0 TD V6 Tiptronic 4WD Euro 5 (s/s) 5dr",
+      "year": 2013,
+      "priceAmount": 9395,
+      "currency": "GBP",
+      "mileageValue": 126000,
+      "mileageUnit": "mi",
+      "mileageOnRequest": false,
+      "body": "SUV",
+      "bodyType": "suv",
+      "fuel": "Diesel",
+      "fuelType": "diesel",
+      "transmission": "Automatic",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/suv.webp"
+      ],
+      "image": "/dealer-stock/suv.webp",
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "condition": "used",
+      "location": "Batley, West Yorkshire",
+      "raw": {
+        "title": "Porsche Cayenne 3.0 TD V6 Tiptronic 4WD Euro 5 (s/s) 5dr",
+        "year": 2013,
+        "mileage": 126000,
+        "price": 9395,
+        "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+        "sourceId": "at-sample-3",
+        "sourceSummary": "5 door Automatic Diesel SUV",
+        "body": "SUV",
+        "fuel": "Diesel",
+        "transmission": "Automatic",
+        "make": "Porsche",
+        "model": "Cayenne",
+        "trim": "3.0 TD V6 Tiptronic 4WD Euro 5 (s/s) 5dr",
+        "id": "at-sample-3",
+        "slug": "porsche-cayenne-2013-at-sample-3",
+        "priceAmount": 9395,
+        "currency": "GBP",
+        "mileageMiles": 126000,
+        "images": [
+          "/dealer-stock/suv.webp"
+        ],
+        "imageCaption": "Illustration — not the advertised vehicle",
+        "mediaKind": "generated_category_illustration",
+        "observedAt": "2026-10-10",
+        "availability": "Listing sample — availability unconfirmed",
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "features": [],
+        "sourceEvidence": {
+          "kind": "public_advertised_listing",
+          "url": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+          "observedAt": "2026-10-10"
+        },
+        "mediaRights": {
+          "method": "generated_illustration",
+          "representsActualVehicle": false,
+          "thirdPartyVehiclePhotographyBundled": false
+        }
+      }
+    },
+    {
+      "id": "at-sample-4",
+      "sourceId": "at-sample-4",
+      "slug": "nissan-navara-2014-at-sample-4",
+      "title": "Nissan Navara 2.5 dCi Tekna Auto 4WD Euro 5 4dr",
+      "make": "Nissan",
+      "model": "Navara",
+      "trim": "2.5 dCi Tekna Auto 4WD Euro 5 4dr",
+      "year": 2014,
+      "priceAmount": 5295,
+      "currency": "GBP",
+      "mileageValue": 99000,
+      "mileageUnit": "mi",
+      "mileageOnRequest": false,
+      "body": "Other",
+      "bodyType": "other",
+      "fuel": "Diesel",
+      "fuelType": "diesel",
+      "transmission": "Automatic",
+      "transmissionType": "automatic",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/hatchback.webp"
+      ],
+      "image": "/dealer-stock/hatchback.webp",
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "condition": "used",
+      "location": "Batley, West Yorkshire",
+      "raw": {
+        "title": "Nissan Navara 2.5 dCi Tekna Auto 4WD Euro 5 4dr",
+        "year": 2014,
+        "mileage": 99000,
+        "price": 5295,
+        "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+        "sourceId": "at-sample-4",
+        "sourceSummary": "4 door Automatic Diesel Pickup",
+        "body": "Other",
+        "fuel": "Diesel",
+        "transmission": "Automatic",
+        "make": "Nissan",
+        "model": "Navara",
+        "trim": "2.5 dCi Tekna Auto 4WD Euro 5 4dr",
+        "id": "at-sample-4",
+        "slug": "nissan-navara-2014-at-sample-4",
+        "priceAmount": 5295,
+        "currency": "GBP",
+        "mileageMiles": 99000,
+        "images": [
+          "/dealer-stock/hatchback.webp"
+        ],
+        "imageCaption": "Illustration — not the advertised vehicle",
+        "mediaKind": "generated_category_illustration",
+        "observedAt": "2026-10-10",
+        "availability": "Listing sample — availability unconfirmed",
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "features": [],
+        "sourceEvidence": {
+          "kind": "public_advertised_listing",
+          "url": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+          "observedAt": "2026-10-10"
+        },
+        "mediaRights": {
+          "method": "generated_illustration",
+          "representsActualVehicle": false,
+          "thirdPartyVehiclePhotographyBundled": false
+        }
+      }
+    },
+    {
+      "id": "at-sample-5",
+      "sourceId": "at-sample-5",
+      "slug": "nissan-qashqai-2017-at-sample-5",
+      "title": "Nissan Qashqai 1.6 dCi N-Connecta Euro 6 (s/s) 5dr",
+      "make": "Nissan",
+      "model": "Qashqai",
+      "trim": "1.6 dCi N-Connecta Euro 6 (s/s) 5dr",
+      "year": 2017,
+      "priceAmount": 5095,
+      "currency": "GBP",
+      "mileageValue": 128000,
+      "mileageUnit": "mi",
+      "mileageOnRequest": false,
+      "body": "SUV",
+      "bodyType": "suv",
+      "fuel": "Diesel",
+      "fuelType": "diesel",
+      "transmission": "Manual",
+      "transmissionType": "manual",
+      "color": "",
+      "powerHp": null,
+      "engine": "",
+      "drivetrain": "",
+      "features": [],
+      "images": [
+        "/dealer-stock/suv.webp"
+      ],
+      "image": "/dealer-stock/suv.webp",
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+      "observedAt": "2026-10-10",
+      "availability": "Listing sample — availability unconfirmed",
+      "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+      "condition": "used",
+      "location": "Batley, West Yorkshire",
+      "raw": {
+        "title": "Nissan Qashqai 1.6 dCi N-Connecta Euro 6 (s/s) 5dr",
+        "year": 2017,
+        "mileage": 128000,
+        "price": 5095,
+        "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+        "sourceId": "at-sample-5",
+        "sourceSummary": "5 door Manual Diesel SUV",
+        "body": "SUV",
+        "fuel": "Diesel",
+        "transmission": "Manual",
+        "make": "Nissan",
+        "model": "Qashqai",
+        "trim": "1.6 dCi N-Connecta Euro 6 (s/s) 5dr",
+        "id": "at-sample-5",
+        "slug": "nissan-qashqai-2017-at-sample-5",
+        "priceAmount": 5095,
+        "currency": "GBP",
+        "mileageMiles": 128000,
+        "images": [
+          "/dealer-stock/suv.webp"
+        ],
+        "imageCaption": "Illustration — not the advertised vehicle",
+        "mediaKind": "generated_category_illustration",
+        "observedAt": "2026-10-10",
+        "availability": "Listing sample — availability unconfirmed",
+        "description": "Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",
+        "features": [],
+        "sourceEvidence": {
+          "kind": "public_advertised_listing",
+          "url": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+          "observedAt": "2026-10-10"
+        },
+        "mediaRights": {
+          "method": "generated_illustration",
+          "representsActualVehicle": false,
+          "thirdPartyVehiclePhotographyBundled": false
+        }
+      }
+    }
+  ],
+  "rawFacts": {
+    "schemaVersion": 1,
+    "leadId": "gb-batley-as-motor-group",
+    "slug": "batley-as-motor-group",
+    "observedAt": "2026-10-10",
+    "name": "AS Motor Group",
+    "shortName": "AS Motor Group",
+    "legalName": null,
+    "companyNumber": null,
+    "city": "Batley, West Yorkshire",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "address": "Unit 2-3 Chopdat Industrial Estate, Soothill Lane, Batley WF17 5SS",
+    "phone": null,
+    "phoneDisplay": null,
+    "phoneHref": null,
+    "email": null,
+    "hours": null,
+    "coordinates": null,
+    "currency": "GBP",
+    "distanceUnit": "mi",
+    "locale": "en-GB",
+    "languages": [
+      "en"
+    ],
+    "accent": "#A57F4D",
+    "website": null,
+    "sourceProfile": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+    "mapsUrl": null,
+    "mapsEmbedUrl": null,
+    "tagline": "Explore used cars in Batley.",
+    "socialLinks": {},
+    "services": [],
+    "stockCount": 5,
+    "publishedListingCount": 41,
+    "sampleOnly": true,
+    "inventoryMode": "dated_listing_samples_with_generated_illustrations",
+    "previewNotice": "Independent design preview for discussion, not an official dealership website. Forms do not send messages or create reservations.",
+    "inventoryNotice": "Vehicle images are generated illustrations, not photographs of the advertised vehicles. Listing details were observed on 10 October 2026; confirm each original advert, price, condition and availability with the dealership.",
+    "availabilityLabel": "Listing sample — availability unconfirmed",
+    "contactNotice": "Direct enquiry destination is not confirmed; show an honest demo/unavailable contact state until resolved.",
+    "locationNote": "Publicly advertised premises; reconfirm the visit address before travel or release.",
+    "sources": [
+      "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673"
+    ],
+    "opportunity": "An owned branded showroom for a larger, mixed premium/mainstream catalogue, with clear stock filters and viewing enquiries.",
+    "qualificationNotes": [
+      "41 real advertised vehicles and a blank own-website field. No recent primary posting date or confidently matched Google business profile verified.",
+      "41 in opened AutoTrader Used cars, versus 36 indexed in an older snapshot. Real Batley vehicles include SQ5, Golf R and Cayenne; generic featured Dummy adverts were excluded.",
+      "Unit 2–3 Chopdat Industrial Estate, Soothill Lane, Batley WF17 5SS. Soothill Cars nearby is not a confirmed alias. A same-name London registered company was not matched and is not attached.",
+      "Marketplace-provided phone may forward calls; confirm an owner-controlled number.",
+      "Public trading name/city only: no dealership approval, contact ownership, matched legal entity or private contact history has been verified.",
+      "Vehicle media, prices, mileage, services, staff, reviews, finance claims, hours and branding have not been selected or accepted for application content in this preparation pass."
+    ],
+    "contactCandidates": {
+      "phone": "07537 165504",
+      "email": null,
+      "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+      "phoneCaveat": "Marketplace-provided phone may forward calls; confirm an owner-controlled number.",
+      "status": "public_business_contact_not_contacted",
+      "phoneE164": "+447537165504",
+      "approvalStatus": "public_research_not_dealer_confirmed"
+    },
+    "addressCandidates": {
+      "publishedNote": "Unit 2–3 Chopdat Industrial Estate, Soothill Lane, Batley WF17 5SS. Soothill Cars nearby is not a confirmed alias. A same-name London registered company was not matched and is not attached.",
+      "conflicts": [],
+      "googleProfile": {
+        "status": "no_confidently_matched_profile_in_bounded_map_search",
+        "assessedAt": "2026-10-10",
+        "note": "No dealer profile was confidently matched; this does not prove no Google profile exists."
+      },
+      "status": "publicly_advertised_not_owner_confirmed"
+    },
+    "researchEvidence": {
+      "inventory": {
+        "count": 41,
+        "kind": "opened_platform_advertised_count",
+        "retrievedAt": "2026-10-10",
+        "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+        "caveat": "41 in opened AutoTrader Used cars, versus 36 indexed in an older snapshot. Real Batley vehicles include SQ5, Golf R and Cayenne; generic featured Dummy adverts were excluded."
+      },
+      "stockSnapshots": [
+        {
+          "count": 41,
+          "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+          "method": "opened",
+          "observedAt": "2026-10-10"
+        }
+      ],
+      "activityEvidence": [
+        {
+          "kind": "undated_advertised_inventory",
+          "date": null,
+          "sourceUrl": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+          "note": "Real priced stock observed on 10 October 2026; no recent post date verified."
+        }
+      ],
+      "website": {
+        "url": null,
+        "status": "no_standalone_domain_found_in_bounded_search",
+        "assessedAt": "2026-10-10",
+        "confidence": "medium",
+        "observations": [
+          "Opened AutoTrader Website heading has no domain or destination."
+        ]
+      },
+      "domainChecks": {
+        "queries": [
+          "\"AS Motor Group\" Batley website",
+          "\"AS Motor Group\" \"WF17 5SS\"",
+          "\"AS Motor Group\" \"Chopdat\"",
+          "\"07537165504\" website"
+        ],
+        "profilesChecked": [
+          "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673"
+        ],
+        "result": "No confidently matched dealer-owned standalone domain found in these bounded checks. Absence must be confirmed with the operator."
+      }
+    },
+    "branding": {
+      "publishedBranding": "No usable original recovered from matching bounded public sources; generated design proposal uses the correct researched trading identity.",
+      "sourceLogoUrl": null,
+      "workingLogoPath": "dealer-brand/logo.webp",
+      "creationMethod": "generated_proposal",
+      "approvalStatus": "independent_design_proposal_not_dealer_approved",
+      "visualInspection": "Public references and new logo/icon imagery visually inspected; spelling and complete marks checked.",
+      "requiredNextStep": "Verify actual logo and icon consumers at desktop and mobile widths in all six applications.",
+      "publicReferenceUrls": [
+        "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673"
+      ],
+      "researchDocument": "docs/qa/uk-branding-visual-research-2026-10-10.md"
+    },
+    "buildPreparation": {
+      "status": "content_pack_populated_application_pending",
+      "derivedFrom": {
+        "path": "../../uk-2026-10-10.json",
+        "sourceSha256": "0b8a38395e80f44f70035ba3cd538e44554a917056fd3fde9b4efbc31a999c92",
+        "researchAsOf": "2026-10-10"
+      },
+      "researchSnapshotFlags": {
+        "researchOnly": true,
+        "buildApproved": false,
+        "outreachApproved": false,
+        "contactHistory": "not_checked"
+      },
+      "ownerRequest": "Ten proposals with six variants on Cloudflare after accepted template releases. This pack records neither dealership approval nor changes to original research flags.",
+      "requestedTemplateChoices": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "templateLabels": {
+        "auto-best": "Auto Best",
+        "modern": "Modern",
+        "import": "Import",
+        "app": "App",
+        "mobile": "Mobile",
+        "karento-best": "Signature"
+      },
+      "recommendedEntryTemplate": "modern",
+      "showFirstReason": "Show consistent branded stock and readable vehicle details before comparing the other designs.",
+      "templatePins": null,
+      "hosting": {
+        "requestedProvider": "cloudflare",
+        "acceptedPublisher": null,
+        "publicOrigin": null,
+        "status": "await_qualified_pilot_and_release_acceptance",
+        "dnsChangeAuthorized": false,
+        "billingChangeAuthorized": false
+      },
+      "nextAction": "Confirm operator/legal identity, public direct contact, domain ownership, exact premises and current stock. Do not borrow details from the London company or nearby Soothill Cars.",
+      "readyToPersonalizeNow": [
+        "Public trading name",
+        "Public city/region",
+        "GB dealership country",
+        "en-GB English presentation",
+        "GBP pricing contract",
+        "Miles display contract with actual kilometre conversion",
+        "Independent preview disclosure"
+      ],
+      "requiresBeforeComplete": [
+        "Accepted immutable pins for all six requested families",
+        "Qualified six-variant Cloudflare packaging/publisher",
+        "Canonical identity and existing-client/alias reconciliation",
+        "Current premises and direct contact destination",
+        "Visual brand inspection and permitted local raster assets",
+        "Sourced dated stock with correct units and permitted images, or explicitly illustrative inventory",
+        "Inherited identity/claim sweep and honest demo forms",
+        "Per-variant QA and hosted checks"
+      ],
+      "qa": {
+        "sourcePackValidated": true,
+        "applicationBuilt": false,
+        "browserReviewed": false,
+        "hostedVerified": false
+      },
+      "existingClientPathFromResearch": null,
+      "contentSelection": {
+        "observedAt": "2026-10-10",
+        "listingCount": 5,
+        "kind": "dated-listing-snapshot",
+        "mediaKind": "generated_category_illustration",
+        "source": "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673",
+        "excluded": [],
+        "countNote": "Only the sufficiently complete examples observed in this pass are used; no extra available vehicles are invented."
+      }
+    },
+    "logoDark": "/dealer-brand/logo.webp",
+    "logoLight": "/dealer-brand/logo.webp",
+    "logo": "/dealer-brand/logo.webp"
+  },
+  "sourceCount": 5,
+  "stockKind": "dated-listing-snapshot",
+  "logoContract": {
+    "schemaVersion": 1,
+    "dealerId": "batley-as-motor-group",
+    "approvalStatus": "independent_design_proposal_not_dealer_approved",
+    "assets": {
+      "onLight": {
+        "publicPath": "/dealer-brand/logo.webp",
+        "sha256": "6caa1b29976e04784a567581823d517af961510c2e8c4aad4453b51c66db6df1",
+        "width": 1024,
+        "height": 341,
+        "background": "opaque_white"
+      },
+      "onDark": {
+        "publicPath": "/dealer-brand/logo.webp",
+        "sha256": "6caa1b29976e04784a567581823d517af961510c2e8c4aad4453b51c66db6df1",
+        "width": 1024,
+        "height": 341,
+        "background": "opaque_white"
+      },
+      "onAccent": {
+        "publicPath": "/dealer-brand/logo.webp",
+        "sha256": "6caa1b29976e04784a567581823d517af961510c2e8c4aad4453b51c66db6df1",
+        "width": 1024,
+        "height": 341,
+        "background": "opaque_white"
+      }
+    },
+    "icon": {
+      "localPath": "assets/app-icon.png",
+      "sha256": "cfa07cd586e7355aece15f887796773d5bd5ee6f845945c1f850c44119fce96c",
+      "width": 512,
+      "height": 512
+    },
+    "favicon": {
+      "localPath": "assets/favicon.ico",
+      "sha256": "0837193a895a7973ca158e9b3cdf2b69c673aa7f151013f645e72dedaca7c1e9",
+      "sizes": [
+        16,
+        32,
+        48,
+        64,
+        128,
+        256
+      ],
+      "encoding": "ICO with PNG entries from the actual square icon"
+    },
+    "provenance": {
+      "creationMethod": "generated_proposal",
+      "date": "2026-10-10",
+      "sources": [
+        "generated_images/exec-d2bf3d97-1571-4a53-acd4-b6ed20d297f9.png",
+        "generated_images/exec-ce9b129f-52f8-472e-a067-77ed99f8b19c.png"
+      ],
+      "publicReferenceUrls": [
+        "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673"
+      ],
+      "research": "docs/qa/uk-branding-visual-research-2026-10-10.md",
+      "deliveryEncoding": "Proportional size and delivery-format encoding only; no crop, recolouring or compositing.",
+      "visualInspection": "Original reference where available, full business-name spelling, emblem completeness, white surface and square icon checked in generated output. Application consumers await browser QA.",
+      "dealerApproval": false
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "dealer": "batley-as-motor-group",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "70c2b80671e217ab299549a938a537c0b9559611",
+    "path": "templates/app",
+    "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
+    "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f"
+  },
+  "appDigest": "17b6e9bf9ad44fb3585eb4f0d43b6c99e25922d57ad157b89e07ce24ff2f1203",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "batley-as-motor-group",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "9732c623eec3a0b27fa1cb2961fcd4fb5925fc5aaf4e89645b359e3b28c3d564",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 5,
+    "currency": "GBP",
+    "observedAt": "2026-10-10",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo.webp",
+        "output": "public/dealer-app/logo-light-6caa1b29976e04784a56.webp",
+        "sha256": "6caa1b29976e04784a567581823d517af961510c2e8c4aad4453b51c66db6df1",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo.webp",
+        "output": "public/dealer-app/logo-dark-6caa1b29976e04784a56.webp",
+        "sha256": "6caa1b29976e04784a567581823d517af961510c2e8c4aad4453b51c66db6df1",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/suv.webp",
+        "output": "public/dealer-app/vehicle-67094fedb8305304ba8b.webp",
+        "sha256": "67094fedb8305304ba8b0d2842f5d2c7d47979ed1bb42fe51688ab3f77b765ff",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/suv.webp",
+        "output": "public/dealer-app/vehicle-67094fedb8305304ba8b.webp",
+        "sha256": "67094fedb8305304ba8b0d2842f5d2c7d47979ed1bb42fe51688ab3f77b765ff",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/suv.webp",
+        "output": "public/dealer-app/vehicle-67094fedb8305304ba8b.webp",
+        "sha256": "67094fedb8305304ba8b0d2842f5d2c7d47979ed1bb42fe51688ab3f77b765ff",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "audi-sq5-2015-at-sample-1",
+        "sourceValue": 105000,
+        "sourceUnit": "mi",
+        "canonicalKm": 168981
+      },
+      {
+        "slug": "volkswagen-golf-2015-at-sample-2",
+        "sourceValue": 114000,
+        "sourceUnit": "mi",
+        "canonicalKm": 183465
+      },
+      {
+        "slug": "porsche-cayenne-2013-at-sample-3",
+        "sourceValue": 126000,
+        "sourceUnit": "mi",
+        "canonicalKm": 202777
+      },
+      {
+        "slug": "nissan-navara-2014-at-sample-4",
+        "sourceValue": 99000,
+        "sourceUnit": "mi",
+        "canonicalKm": 159325
+      },
+      {
+        "slug": "nissan-qashqai-2017-at-sample-5",
+        "sourceValue": 128000,
+        "sourceUnit": "mi",
+        "canonicalKm": 205996
+      }
+    ],
+    "ukPresentation": {
+      "distanceUnit": "mi",
+      "canonicalDistanceUnit": "km",
+      "originalMileageRetained": true,
+      "contentPaths": [
+        "lib/dealer-mileage.ts",
+        "lib/currency.ts",
+        "lib/inventory-filters.ts",
+        "lib/inventory-settings.ts",
+        "components/DesktopInventoryFilters.tsx",
+        "components/NativeFilterPane.tsx",
+        "components/VehicleCard.tsx",
+        "components/VehicleBelowFold.tsx",
+        "components/VehicleComparison.tsx",
+        "components/VehicleDetailClient.tsx",
+        "components/SellEnquirySheet.tsx"
+      ]
+    }
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

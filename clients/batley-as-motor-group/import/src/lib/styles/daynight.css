@@ -1,0 +1,270 @@
+@import './tokens.css';
+
+@media (min-width: 768px) {
+	:root {
+		--bc-page-x: 32px;
+	}
+
+	.daynight-public-shell .container {
+		width: min(calc(100% - (var(--bc-page-x) * 2)), var(--bc-container-page));
+		max-width: var(--bc-container-page);
+		margin-inline: auto;
+		padding-inline: 0;
+	}
+}
+
+html {
+	margin: 0;
+	border: 0;
+	font-family: var(--bc-font-body);
+	font-synthesis: none;
+	font-optical-sizing: auto;
+	scrollbar-gutter: stable;
+}
+
+html,
+body {
+	scrollbar-color: var(--bc-brand) var(--bc-surface);
+}
+
+/*
+ * Keep the document gutter identical across the legacy desktop template and
+ * the clean app routes. The legacy stylesheet otherwise changes the root
+ * scrollbar from the browser default to 5px, which shifts centered layouts
+ * when navigating between route families.
+ */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+	width: 8px;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+	background: var(--bc-surface);
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+	border-radius: var(--bc-radius-pill);
+	background: var(--bc-brand);
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+	background: var(--bc-brand-hover);
+}
+
+@media (max-width: 767.98px) {
+	:root {
+		/* Mobile pages share one grey canvas with white cards above it. */
+		--bc-bg: var(--bc-bg-strong);
+		--bc-card-bg: var(--bc-white);
+	}
+
+	html,
+	body {
+		scrollbar-width: none;
+		scrollbar-gutter: auto;
+	}
+
+	html::-webkit-scrollbar,
+	body::-webkit-scrollbar {
+		display: none;
+		width: 0;
+	}
+}
+
+body {
+	margin: 0;
+	border: 0;
+	color: var(--bc-ink);
+	font-family: var(--bc-font-body);
+	font-size: var(--bc-text-body);
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: var(--bc-leading-body);
+	text-rendering: optimizeLegibility;
+}
+
+:where(button, input, optgroup, select, textarea) {
+	font: inherit;
+	letter-spacing: inherit;
+}
+
+/* Legacy form CSS gives placeholders their own font size. Keep each hint
+   identical to its input, including mobile search and validation states. */
+body :is(input, textarea)::placeholder {
+	font: inherit !important;
+	letter-spacing: inherit;
+}
+
+:where(h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .h7) {
+	font-family: var(--bc-font-heading);
+	font-synthesis: none;
+	letter-spacing: var(--bc-tracking-tight);
+	text-wrap: balance;
+}
+
+:where(h1, .h1) {
+	font-size: var(--bc-text-h1);
+	font-weight: var(--bc-weight-heading);
+	line-height: var(--bc-leading-h1);
+}
+
+:where(h2, .h2) {
+	font-size: var(--bc-text-h2);
+	font-weight: var(--bc-weight-heading);
+	line-height: var(--bc-leading-h2);
+}
+
+:where(h3, .h3) {
+	font-size: var(--bc-text-h3);
+	font-weight: 600;
+	line-height: var(--bc-leading-h3);
+}
+
+:where(.text-secondary, .text-muted, .text-subtitle) {
+	font-size: var(--bc-text-body);
+	line-height: 1.55;
+}
+
+:where(.text-xs, .text-xxs) {
+	font-size: var(--bc-text-meta);
+	line-height: var(--bc-leading-meta);
+}
+
+:where(p, li) {
+	text-wrap: pretty;
+}
+
+:where(svg, svg *) {
+	color: inherit;
+}
+
+:where(
+	a[href],
+	button,
+	input,
+	select,
+	textarea,
+	summary,
+	[tabindex]:not([tabindex='-1'])
+):focus-visible {
+	outline: var(--control-focus-outline, 3px solid var(--bc-focus)) !important;
+	outline-offset: var(--control-focus-offset, 3px) !important;
+	box-shadow: var(--control-focus-shadow, 0 0 0 2px var(--bc-focus-contrast)) !important;
+}
+
+.sr-only {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	overflow: hidden !important;
+	margin: -1px !important;
+	padding: 0 !important;
+	border: 0 !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+}
+
+body[class*='auxero-template-'] .font-main-2,
+body.daynight-inventory-template .font-main-2 {
+	font-family: var(--bc-font-heading) !important;
+}
+
+/* Normalize the legacy theme utility classes that are still emitted by the
+   imported templates. They now resolve through the project tokens instead of
+   reviving the source theme's bright red. */
+body[class*='auxero-template-'] .text-highlight {
+	color: var(--bc-accent) !important;
+	text-decoration-color: currentcolor !important;
+}
+
+body[class*='auxero-template-'] .btn.effect-line-primary {
+	border-color: var(--bc-accent) !important;
+}
+
+body[class*='auxero-template-'] .rating-box__bar {
+	background: var(--bc-accent) !important;
+}
+
+.bc-container {
+	width: min(100% - (var(--bc-page-x) * 2), var(--bc-container-page));
+	margin-inline: auto;
+}
+
+.bc-container--narrow {
+	width: min(100% - (var(--bc-page-x) * 2), var(--bc-container-narrow));
+}
+
+.bc-container--wide {
+	width: min(100% - (var(--bc-page-x) * 2), var(--bc-container-wide));
+}
+
+.bc-card {
+	border: 1px solid var(--bc-border);
+	border-radius: var(--bc-radius-md);
+	background: var(--bc-surface-raised);
+	box-shadow: none;
+	color: var(--bc-ink);
+}
+
+.bc-card--soft {
+	background: var(--bc-surface);
+}
+
+.bc-calm-hover {
+	transition:
+		background-color var(--bc-motion-hover),
+		border-color var(--bc-motion-hover),
+		color var(--bc-motion-hover),
+		filter var(--bc-motion-hover),
+		opacity var(--bc-motion-hover);
+}
+
+.bc-calm-hover:hover,
+.bc-calm-hover:focus-visible {
+	border-color: var(--bc-hover-border);
+	background: var(--bc-hover-surface);
+	color: var(--bc-hover-quiet-ink);
+}
+
+/* Instant tactile press for push-to-navigate surfaces (cards, CTAs, links).
+   Pointer devices only — on touch the nudge reads as unwanted "everything moves
+   when I tap it", so it's gated to mice/trackpads via the hover/pointer query. */
+@media (hover: hover) and (pointer: fine) {
+	.bc-press:active {
+		transform: translateY(1px);
+	}
+}
+
+.bc-focus-ring {
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+}
+
+.bc-focus-ring:focus-visible {
+	outline-color: var(--bc-focus);
+	box-shadow: 0 0 0 4px color-mix(in srgb, var(--bc-focus) 24%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto !important;
+	}
+
+	*,
+	*::before,
+	*::after {
+		scroll-behavior: auto !important;
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+
+	[data-vaul-drawer],
+	[data-vaul-overlay] {
+		animation: none !important;
+		transition: none !important;
+	}
+}

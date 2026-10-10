@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "batley-as-motor-group",
+  "approvalStatus": "independent_design_proposal_not_dealer_approved",
+  "assets": {
+    "onLight": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "6caa1b29976e04784a567581823d517af961510c2e8c4aad4453b51c66db6df1",
+      "width": 1024,
+      "height": 341,
+      "background": "opaque_white"
+    },
+    "onDark": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "6caa1b29976e04784a567581823d517af961510c2e8c4aad4453b51c66db6df1",
+      "width": 1024,
+      "height": 341,
+      "background": "opaque_white"
+    },
+    "onAccent": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "6caa1b29976e04784a567581823d517af961510c2e8c4aad4453b51c66db6df1",
+      "width": 1024,
+      "height": 341,
+      "background": "opaque_white"
+    }
+  },
+  "icon": {
+    "localPath": "assets/app-icon.png",
+    "sha256": "cfa07cd586e7355aece15f887796773d5bd5ee6f845945c1f850c44119fce96c",
+    "width": 512,
+    "height": 512
+  },
+  "favicon": {
+    "localPath": "assets/favicon.ico",
+    "sha256": "0837193a895a7973ca158e9b3cdf2b69c673aa7f151013f645e72dedaca7c1e9",
+    "sizes": [
+      16,
+      32,
+      48,
+      64,
+      128,
+      256
+    ],
+    "encoding": "ICO with PNG entries from the actual square icon"
+  },
+  "provenance": {
+    "creationMethod": "generated_proposal",
+    "date": "2026-10-10",
+    "sources": [
+      "generated_images/exec-d2bf3d97-1571-4a53-acd4-b6ed20d297f9.png",
+      "generated_images/exec-ce9b129f-52f8-472e-a067-77ed99f8b19c.png"
+    ],
+    "publicReferenceUrls": [
+      "https://www.autotrader.co.uk/dealers/west-yorkshire/batley/as-motor-group-10033673"
+    ],
+    "research": "docs/qa/uk-branding-visual-research-2026-10-10.md",
+    "deliveryEncoding": "Proportional size and delivery-format encoding only; no crop, recolouring or compositing.",
+    "visualInspection": "Original reference where available, full business-name spelling, emblem completeness, white surface and square icon checked in generated output. Application consumers await browser QA.",
+    "dealerApproval": false
+  }
+}

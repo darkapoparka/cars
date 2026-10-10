@@ -1,0 +1,655 @@
+import AxeBuilder from "@axe-core/playwright";
+import { expect, test } from "@playwright/test";
+
+test("make and model search narrow choices without losing filter selection", async ({
+  page,
+}) => {
+  const response = await page.goto("/cars");
+  expect(response?.status()).toBe(200);
+  await page
+    .getByRole("button", { name: "Отвори филтрите", exact: true })
+    .tap();
+  await page.getByRole("button", { name: "Марка и модел, Всички марки" }).tap();
+  const dialog = page.getByRole("dialog");
+  await dialog.getByRole("searchbox").fill("bmw");
+  await expect(
+    dialog.getByRole("button", { name: "Audi", exact: true })
+  ).toBeHidden();
+  await dialog.getByRole("button", { name: "BMW", exact: true }).tap();
+  await dialog.getByRole("searchbox").fill("x5");
+  await expect(
+    dialog.getByRole("button", { name: "X3", exact: true })
+  ).toBeHidden();
+  await dialog.getByRole("button", { name: "X5", exact: true }).tap();
+  await dialog
+    .getByRole("button", { name: "Покажи обявите", exact: true })
+    .tap();
+  await expect
+    .poll(() => new URL(page.url()).searchParams.get("model"))
+    .toBe("X5");
+});
+
+test("linked import edits preserve preparation details and change required labels", async ({
+  page,
+}) => {
+  await page.goto(
+    "/imports?sourceUrl=https%3A%2F%2Fexample.com%2Fcar#import-request"
+  );
+  const form = page.locator('[data-slot="import-request-form"]');
+  await expect(
+    form.locator('[data-slot="import-vehicle-details"]')
+  ).toBeHidden();
+  await form
+    .getByRole("button", { name: "Допълнителни данни (по избор)", exact: true })
+    .tap();
+  await form.locator('input[name="budget"]').fill("30000 EUR");
+  await form.getByRole("button", { name: "Промени", exact: true }).tap();
+  const source = form.locator('input[name="sourceUrl"]');
+  await expect(source).toBeFocused();
+  await source.fill("");
+  await expect(form.locator('label[for="import-mobile-make"]')).toHaveText(
+    "Марка *"
+  );
+  await expect(form.locator('input[name="budget"]')).toHaveValue("30000 EUR");
+  await source.fill("https://example.com/replacement");
+  await expect(form.locator('label[for="import-mobile-make"]')).not.toHaveText(
+    "Марка *"
+  );
+  await expect(form.locator('input[name="budget"]')).toHaveValue("30000 EUR");
+  const values = await form.evaluate((element: HTMLFormElement) =>
+    new FormData(element).getAll("sourceUrl")
+  );
+  expect(values).toEqual(["https://example.com/replacement"]);
+  const year = form.locator('input[name="year"]');
+  await year.fill("1");
+  await form
+    .getByRole("button", { name: "Допълнителни данни (по избор)", exact: true })
+    .tap();
+  await expect(year).toBeHidden();
+  expect(
+    await form.evaluate((element: HTMLFormElement) => element.reportValidity())
+  ).toBe(false);
+  await expect(year).toBeVisible();
+  await expect(year).toBeFocused();
+});
+
+test("Sell dismissal keeps the draft and returns focus without clearing", async ({
+  page,
+}) => {
+  await page.goto("/sell");
+  const trigger = page.locator('[data-slot="mobile-sell-manual-entry"]');
+  await trigger.tap();
+  const dialog = page.getByRole("dialog");
+  await dialog.locator('textarea[name="notes"]').fill("Keep on dismissal");
+  await dialog.getByRole("button", { name: "Затворете", exact: true }).tap();
+  await expect(dialog).toBeHidden();
+  await expect(trigger).toBeFocused();
+  await trigger.tap();
+  await expect(dialog.locator('textarea[name="notes"]')).toHaveValue(
+    "Keep on dismissal"
+  );
+});
+
+test("linked import edit and expansion wait for hydration", async ({
+  browser,
+  baseURL,
+}) => {
+  const context = await browser.newContext({
+    javaScriptEnabled: false,
+    viewport: { width: 390, height: 844 },
+  });
+  try {
+    const page = await context.newPage();
+    await page.goto(
+      new URL("/imports?sourceUrl=https%3A%2F%2Fexample.com%2Fcar", baseURL)
+        .href
+    );
+    const form = page.locator('[data-slot="import-request-form"]');
+    await expect(
+      form.getByRole("button", { name: "Промени", exact: true })
+    ).toBeDisabled();
+    await expect(
+      form.getByRole("button", {
+        name: "Допълнителни данни (по избор)",
+        exact: true,
+      })
+    ).toBeDisabled();
+  } finally {
+    await context.close();
+  }
+});
+
+test.beforeEach(async ({ page }) => {
+  // Exercise only local preview UI. Never send enquiries or call providers.
+  await page.route("**/*", (route) =>
+    ["GET", "HEAD", "OPTIONS"].includes(route.request().method())
+      ? route.continue()
+      : route.abort("blockedbyclient")
+  );
+});
+
+for (const [category, make, model] of [
+  ["truck", "Scania", "R500"],
+  ["motorbike", "Ducati", "Monster"],
+  ["van", "Iveco", "Daily"],
+]) {
+  test(`${category} custom make is serialized exactly once`, async ({
+    page,
+  }) => {
+    const query = new URLSearchParams({
+      category,
+      make,
+      model,
+      year: "2022",
+      mileage: "90000",
+      notes: "Synthetic QA",
+    });
+    await page.goto(`/sell?${query}`);
+    const form = page.locator('[data-slot="mobile-sell-details-form"]');
+    await expect(form).toBeVisible();
+    const values = await form.evaluate((element: HTMLFormElement) => {
+      const data = new FormData(element);
+      return {
+        make: data.getAll("make"),
+        model: data.getAll("model"),
+        category: data.get("category"),
+      };
+    });
+    expect(values).toEqual({ make: [make], model: [model], category });
+    await form.getByRole("button", { name: "Преглед преди обаждане" }).click();
+    await expect
+      .poll(() => new URL(page.url()).searchParams.get("make"))
+      .toBe(make);
+    await expect(
+      page.locator('[data-slot="sell-selected-vehicle"]')
+    ).toContainText(make);
+    await page
+      .getByRole("link", { name: "Редактирайте данните", exact: true })
+      .click();
+    await expect(form.locator('input[name="make"]')).toHaveValue(make);
+    await expect(form.locator('input[name="model"]')).toHaveValue(model);
+  });
+}
+
+test("clearing a Sell draft also clears its refresh source", async ({
+  page,
+}) => {
+  await page.goto(
+    "/sell?vin=WBA12345678901234&make=Scania&model=R500&category=truck&year=2022&mileage=90000&notes=QA&ref=qa"
+  );
+  const dialog = page.getByRole("dialog");
+  await expect(dialog).toBeVisible();
+  await dialog
+    .getByRole("button", { name: "Изчисти въведените данни", exact: true })
+    .click();
+  await expect(dialog.locator('input[name="vin"]')).toHaveValue(
+    "WBA12345678901234"
+  );
+  await dialog
+    .getByRole("button", { name: "Запази данните", exact: true })
+    .click();
+  await expect(
+    dialog.getByRole("button", {
+      name: "Изчисти въведените данни",
+      exact: true,
+    })
+  ).toBeFocused();
+  await dialog
+    .getByRole("button", { name: "Изчисти въведените данни", exact: true })
+    .click();
+  await dialog
+    .getByRole("button", { name: "Изчисти данните", exact: true })
+    .click();
+  await expect(dialog.locator('input[name="vin"]')).toHaveValue("");
+  const query = new URL(page.url()).searchParams;
+  for (const field of [
+    "vin",
+    "make",
+    "model",
+    "category",
+    "year",
+    "mileage",
+    "notes",
+  ]) {
+    expect(query.has(field)).toBe(false);
+  }
+  expect(query.get("ref")).toBe("qa");
+  await page.reload();
+  await expect(page.getByRole("dialog")).toBeHidden();
+});
+
+test("empty article search offers a complete reset and keeps search focus", async ({
+  page,
+}) => {
+  await page.goto("/guides?topic=import&q=not-a-real-article");
+  await expect(page.getByText("Няма материали с тези критерии")).toBeVisible();
+  await page
+    .getByRole("button", { name: "Покажи всички материали", exact: true })
+    .click();
+  await expect(page.getByRole("searchbox")).toHaveValue("");
+  await expect(page.getByRole("searchbox")).toBeFocused();
+  await expect(page.locator('[data-slot="content-card"]')).toHaveCount(6);
+  await expect(page.getByRole("status")).toHaveText("(6)");
+  expect(new URL(page.url()).search).toBe("");
+  await expect(page.getByText("Няма материали с тези критерии")).toBeHidden();
+});
+
+test("selected-vehicle desktop markup retains canonical form values", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.goto(
+    "/sell?category=car&make=BMW&model=X5&year=2020&mileage=80000"
+  );
+  const form = page.locator('[data-slot="sell-vehicle-start-form"]');
+  await expect(form).toBeVisible();
+  const values = await form.evaluate((element: HTMLFormElement) => {
+    const data = new FormData(element);
+    return { make: data.getAll("make"), model: data.getAll("model") };
+  });
+  expect(values).toEqual({ make: ["BMW"], model: ["X5"] });
+});
+
+test("import triggers cannot lose taps before client handlers are attached", async ({
+  browser,
+  baseURL,
+}) => {
+  const unhydrated = await browser.newContext({
+    javaScriptEnabled: false,
+    viewport: { width: 390, height: 844 },
+    locale: "bg-BG",
+  });
+  try {
+    const page = await unhydrated.newPage();
+    await page.goto(new URL("/imports", baseURL).href);
+    await expect(
+      page.getByRole("button", { name: "Опишете автомобил", exact: true })
+    ).toBeDisabled();
+    await expect(
+      page.getByRole("button", {
+        name: "Отворете полето за линк към обява",
+        exact: true,
+      })
+    ).toBeDisabled();
+  } finally {
+    await unhydrated.close();
+  }
+});
+
+test("unfinished Sell numbers survive dismissal and still require correction", async ({
+  page,
+}) => {
+  await page.goto("/sell");
+  const trigger = page.locator('[data-slot="mobile-sell-manual-entry"]');
+  await trigger.tap();
+  const form = page.locator('[data-slot="mobile-sell-details-form"]');
+  await form.locator('input[name="year"]').fill("202");
+  await form.locator('input[name="mileage"]').fill("10000001");
+  await form.locator('input[name="vin"]').fill("WBA123");
+  await form
+    .locator('textarea[name="notes"]')
+    .fill("Synthetic unfinished draft");
+  await page
+    .getByRole("dialog")
+    .getByRole("button", { name: "Затворете", exact: true })
+    .tap();
+  await expect(form).toBeHidden();
+  await trigger.tap();
+  await expect(form.locator('input[name="year"]')).toHaveValue("202");
+  await expect(form.locator('input[name="mileage"]')).toHaveValue("10000001");
+  await expect(form.locator('input[name="vin"]')).toHaveValue("WBA123");
+  await expect(form.locator('textarea[name="notes"]')).toHaveValue(
+    "Synthetic unfinished draft"
+  );
+  expect(
+    await form.evaluate((element: HTMLFormElement) => element.checkValidity())
+  ).toBe(false);
+  await form.locator('input[name="year"]').fill("2022");
+  await form.locator('input[name="mileage"]').fill("120000");
+  await form.locator('input[name="vin"]').fill("WBA12345678901234");
+  expect(
+    await form.evaluate((element: HTMLFormElement) => element.checkValidity())
+  ).toBe(true);
+});
+
+for (const slot of ["mobile-sell-manual-entry", "mobile-sell-vin-entry"]) {
+  test(`touch dismissal restores focus to ${slot}`, async ({ page }) => {
+    await page.goto("/sell");
+    const trigger = page.locator(`[data-slot="${slot}"]`);
+    await trigger.tap();
+    const dialog = page.getByRole("dialog");
+    await expect(dialog).toBeVisible();
+    await dialog.getByRole("button", { name: "Затворете", exact: true }).tap();
+    await expect(dialog).toBeHidden();
+    await expect(trigger).toBeFocused();
+  });
+}
+
+test("landscape Sell help returns focus through the details handoff", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 844, height: 390 });
+  await page.goto("/sell");
+  const trigger = page.locator('[data-slot="mobile-service-help"]');
+  await trigger.tap();
+  await page
+    .getByRole("dialog")
+    .getByRole("button", { name: "Затвори информацията", exact: true })
+    .tap();
+  await expect(page.getByRole("dialog")).toBeHidden();
+  await expect(trigger).toBeFocused();
+  await trigger.tap();
+  await page
+    .getByRole("dialog")
+    .getByRole("button", { name: "Въведете данните", exact: true })
+    .tap();
+  await expect(
+    page.locator('[data-slot="mobile-sell-details-form"]')
+  ).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("dialog")).toBeHidden();
+  await expect(trigger).toBeFocused();
+});
+
+for (const route of ["/sell", "/guides?topic=import&q=qa-no-article"]) {
+  test(`${route} controls wait for hydration instead of losing the first tap`, async ({
+    browser,
+    baseURL,
+  }) => {
+    const context = await browser.newContext({
+      javaScriptEnabled: false,
+      viewport: { width: 390, height: 844 },
+      locale: "bg-BG",
+    });
+    try {
+      const page = await context.newPage();
+      await page.goto(new URL(route, baseURL).href);
+      if (route === "/sell") {
+        for (const slot of [
+          "mobile-sell-manual-entry",
+          "mobile-sell-vin-entry",
+          "mobile-service-help",
+        ]) {
+          await expect(page.locator(`[data-slot="${slot}"]`)).toBeDisabled();
+        }
+      } else {
+        await expect(page.getByRole("searchbox")).toBeDisabled();
+        for (const name of [
+          "Филтрирай материалите",
+          "Изчисти търсенето",
+          "Покажи всички материали",
+        ]) {
+          await expect(
+            page.getByRole("button", { name, exact: true })
+          ).toBeDisabled();
+        }
+        const topics = page.locator("main button[aria-pressed]");
+        expect(await topics.count()).toBeGreaterThan(0);
+        for (const topic of await topics.all()) {
+          await expect(topic).toBeDisabled();
+        }
+      }
+    } finally {
+      await context.close();
+    }
+  });
+}
+
+test("Sell overlay resolves semantic type and primary-action contrast", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 320, height: 700 });
+  await page.goto("/sell");
+  await page.locator('[data-slot="mobile-sell-manual-entry"]').tap();
+  const dialog = page.getByRole("dialog");
+  await expect(dialog).toBeVisible();
+  await page.evaluate(() => document.fonts.ready);
+
+  const title = dialog.getByRole("heading", {
+    name: "Данни",
+    exact: true,
+  });
+  const titleMetrics = await title.evaluate((element) => ({
+    fontSize: getComputedStyle(element).fontSize,
+    clientWidth: element.clientWidth,
+    scrollWidth: element.scrollWidth,
+  }));
+  expect(titleMetrics.fontSize).toBe("18px");
+  expect(titleMetrics.scrollWidth).toBeLessThanOrEqual(
+    titleMetrics.clientWidth
+  );
+
+  const results = await new AxeBuilder({ page })
+    .include('[data-slot="mobile-sell-details-drawer"]')
+    .withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"])
+    .analyze();
+  expect(
+    results.violations.filter(
+      ({ impact }) => impact === "serious" || impact === "critical"
+    )
+  ).toEqual([]);
+});
+
+test("320px guide cards keep metadata and primary content readable", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 320, height: 700 });
+  await page.goto("/guides");
+  await page.evaluate(() => document.fonts.ready);
+
+  const card = page.locator('[data-slot="content-card"]').first();
+  const media = card.locator('[data-slot="content-card-media"]');
+  const mediaBounds = await media.boundingBox();
+  expect(mediaBounds?.width).toBeLessThanOrEqual(97);
+
+  const metadata = card.locator(
+    '[data-slot="content-card-meta"] > span:visible'
+  );
+  const metrics = await metadata.evaluateAll((elements) =>
+    elements.map((element) => ({
+      text: element.textContent,
+      clientWidth: element.clientWidth,
+      scrollWidth: element.scrollWidth,
+    }))
+  );
+  expect(metrics).toHaveLength(1);
+  for (const metric of metrics) {
+    expect(
+      metric.scrollWidth,
+      metric.text ?? "content metadata"
+    ).toBeLessThanOrEqual(metric.clientWidth);
+  }
+  await expect(
+    card.locator('[data-slot="content-card-description"]')
+  ).toBeHidden();
+  await expect(card.getByText("Прочети", { exact: true })).toBeVisible();
+  const count = page.locator('[data-slot="content-search-count"]');
+  const total = await page.locator('[data-slot="content-card"]').count();
+  await expect(count).toHaveText(`(${total})`);
+  await page
+    .getByRole("searchbox", { name: "Търси съвети и статии", exact: true })
+    .fill("no-guide-matches-this-query");
+  await expect(count).toHaveText("(0)");
+  await expect(page.locator('[data-slot="content-card"]')).toHaveCount(0);
+  await page
+    .getByRole("button", { name: "Изчисти търсенето", exact: true })
+    .click();
+  await expect(count).toHaveText(`(${total})`);
+});
+
+test("320px inventory keeps semantic type and complete vehicle facts", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 320, height: 700 });
+  await page.goto("/bg/cars");
+  await page.evaluate(() => document.fonts.ready);
+
+  const navLabels = page.locator(
+    '[data-slot="dealer-bottom-nav"] span.whitespace-nowrap'
+  );
+  await expect(navLabels).toHaveCount(5);
+  const navFontSizes = await navLabels.evaluateAll((elements) =>
+    elements.map((element) => getComputedStyle(element).fontSize)
+  );
+  expect([...new Set(navFontSizes)]).toEqual(["14px"]);
+
+  const quickPill = page
+    .locator('[data-slot="mobile-discovery-quick-rail"] button')
+    .first();
+  expect(
+    await quickPill.evaluate((element) => getComputedStyle(element).fontSize)
+  ).toBe("15px");
+
+  const facts = page
+    .locator('[data-slot="vehicle-card-spec-pills"]:visible')
+    .first()
+    .locator('[data-slot="vehicle-card-spec"] > span:first-child');
+  const metrics = await facts.evaluateAll((elements) =>
+    elements.map((element) => ({
+      text: element.textContent,
+      clientWidth: element.clientWidth,
+      scrollWidth: element.scrollWidth,
+    }))
+  );
+  expect(metrics).toHaveLength(4);
+  for (const metric of metrics) {
+    expect(
+      metric.scrollWidth,
+      metric.text ?? "vehicle fact"
+    ).toBeLessThanOrEqual(metric.clientWidth);
+  }
+});
+
+for (const width of [320, 375, 390, 430]) {
+  test(`mobile cards keep landscape photos and one complete badge row at ${width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: 844 });
+    for (const locale of ["bg", "en"]) {
+      await page.goto(`/${locale}/cars`);
+      await page.evaluate(() => document.fonts.ready);
+      const cards = page.locator('[data-slot="vehicle-card-mobile-content"]');
+      await expect(cards.first()).toBeVisible();
+      const metrics = await cards.evaluateAll((elements) =>
+        elements.map((card) => {
+          const title = card.querySelector('[data-slot="vehicle-card-title"]');
+          const media = card
+            .closest("article")
+            ?.querySelector('[data-slot="vehicle-card-media"]')
+            ?.getBoundingClientRect();
+          const facts = card
+            .querySelector('[data-slot="vehicle-card-spec-pills"]')
+            ?.getBoundingClientRect();
+          return {
+            titleName: title?.getAttribute("aria-label"),
+            fullTitle: title?.getAttribute("title"),
+            mediaWidth: media?.width ?? 0,
+            mediaHeight: media?.height ?? 0,
+            factsGap: (facts?.top ?? 0) - (media?.bottom ?? 0),
+            factsRight: facts?.right ?? 0,
+            pills: [
+              ...card.querySelectorAll(
+                '[data-slot="vehicle-card-spec-pills"] > [data-slot="vehicle-card-spec"]'
+              ),
+            ]
+              .filter((pill) => pill.getBoundingClientRect().width > 0)
+              .map((pill) => {
+                const text = pill.firstElementChild;
+                const rect = pill.getBoundingClientRect();
+                return {
+                  top: rect.top,
+                  right: rect.right,
+                  height: rect.height,
+                  padding: getComputedStyle(pill).paddingInlineStart,
+                  textClientWidth: text?.clientWidth ?? 0,
+                  textScrollWidth: text?.scrollWidth ?? 0,
+                  text: text?.textContent,
+                };
+              }),
+          };
+        })
+      );
+      expect(metrics.length).toBeGreaterThan(0);
+      for (const card of metrics) {
+        expect(card.titleName).toBe(card.fullTitle);
+        expect(card.mediaWidth).toBeGreaterThan(card.mediaHeight);
+        expect(card.factsGap).toBeGreaterThanOrEqual(8);
+        expect(card.pills).toHaveLength(4);
+        for (const pill of card.pills) {
+          expect(Math.abs(pill.top - card.pills[0].top)).toBeLessThan(1);
+          expect(pill.right).toBeLessThanOrEqual(card.factsRight + 1);
+          expect(
+            pill.textScrollWidth,
+            pill.text ?? "vehicle fact"
+          ).toBeLessThanOrEqual(pill.textClientWidth);
+          expect(pill.height).toBe(24);
+          expect(Number.parseFloat(pill.padding)).toBeGreaterThanOrEqual(6);
+        }
+      }
+      const automatic = cards.locator('[data-fact="transmission"]').first();
+      await expect(automatic.locator("span").first()).toHaveText(
+        locale === "bg" ? "Автом." : "Auto"
+      );
+      await expect(automatic.locator(".sr-only")).toHaveText(
+        locale === "bg" ? "Автоматик" : "Automatic"
+      );
+      expect(
+        await page.evaluate(() => document.documentElement.scrollWidth)
+      ).toBeLessThanOrEqual(width);
+    }
+  });
+}
+for (const viewport of [
+  { width: 320, height: 700 },
+  { width: 844, height: 390 },
+]) {
+  test(`clearing import link keeps typing focus at ${viewport.width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize(viewport);
+    await page.goto("/imports");
+    const initialPath = new URL(page.url()).pathname;
+    const trigger = page.getByRole("button", {
+      name: "Отворете полето за линк към обява",
+      exact: true,
+    });
+    await trigger.tap();
+    const dialog = page.locator('[data-slot="mobile-import-source-search"]');
+    const input = dialog.getByRole("textbox", {
+      name: "Линк към обявата",
+      exact: true,
+    });
+    await input.fill("https://example.com/vehicle");
+    await dialog
+      .getByRole("button", { name: "Изчистете линка", exact: true })
+      .tap();
+    await expect(input).toHaveValue("");
+    await expect(input).toBeFocused();
+    await expect(
+      dialog.getByRole("button", {
+        name: "Продължете с този линк",
+        exact: true,
+      })
+    ).toBeDisabled();
+    await page.keyboard.type("https://example.com/replacement");
+    await expect(input).toHaveValue("https://example.com/replacement");
+    await dialog
+      .getByRole("button", { name: "Затворете търсенето", exact: true })
+      .tap();
+    await expect(dialog).toBeHidden();
+    await expect(trigger).toBeFocused();
+    await trigger.tap();
+    await expect(input).toHaveValue("https://example.com/replacement");
+    await input.fill("not-a-url");
+    await dialog
+      .getByRole("button", { name: "Продължете с този линк", exact: true })
+      .tap();
+    await expect(dialog).toBeVisible();
+    expect(
+      await input.evaluate(
+        (element: HTMLInputElement) => element.validity.typeMismatch
+      )
+    ).toBe(true);
+    expect(new URL(page.url()).pathname).toBe(initialPath);
+  });
+}

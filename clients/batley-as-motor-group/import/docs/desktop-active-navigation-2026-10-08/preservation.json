@@ -1,0 +1,51 @@
+{
+  "geometry": {
+    "headerUnchanged": true,
+    "navUnchanged": true,
+    "heroUnchanged": true
+  },
+  "screenshots": [
+    {
+      "name": "mobile-320",
+      "before": "before-mobile-320.jpg",
+      "after": "after-mobile-320.jpg",
+      "dimensions": {
+        "width": 320,
+        "height": 844
+      },
+      "changedPixels": 1,
+      "totalPixels": 270080,
+      "threshold": 16
+    },
+    {
+      "name": "mobile-390",
+      "before": "before-mobile-390.jpg",
+      "after": "after-mobile-390.jpg",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "changedPixels": 0,
+      "totalPixels": 329160,
+      "threshold": 16
+    },
+    {
+      "name": "desktop-hero",
+      "before": "before-desktop-1440.jpg",
+      "after": "after-desktop-1440.jpg",
+      "rect": {
+        "left": 0,
+        "top": 94,
+        "width": 1440,
+        "height": 436
+      },
+      "dimensions": {
+        "width": 1440,
+        "height": 530
+      },
+      "changedPixels": 0,
+      "totalPixels": 627840,
+      "threshold": 16
+    }
+  ]
+}

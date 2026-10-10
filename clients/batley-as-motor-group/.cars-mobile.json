@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "format": "mobile-preview-v1",
+  "dealer": "batley-as-motor-group",
+  "name": "AS Motor Group",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "876590474d01178413feccf3153a0859230158a1",
+    "path": "templates/mobile",
+    "tree": "7b1f0878715aa1bc0f5942c7e654a6a1bb091510",
+    "digest": "380b153972039a80dccee73f53760a87e963d007b83a921020c5ab5353c942fc"
+  },
+  "sourceDigest": "66f47d71abb938283f10dd8b3821cc5bb00497a0dd7438217a5bde406d87930e",
+  "inventory": {
+    "mode": "dated-listing-snapshot",
+    "count": 5,
+    "observedAt": "2026-10-10"
+  },
+  "personalization": {
+    "profileSha256": "5ce1406e17ba84318faddd320e033b3a67e33e2a055aec02af1927fd8e7b5775",
+    "logoPaths": [
+      "/dealer-brand/logo.webp"
+    ],
+    "mediaPaths": [
+      "/dealer-stock/suv.webp",
+      "/dealer-stock/hatchback.webp"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "mobile/src/lib/showroom-config.ts",
+      "mobile/src/lib/catalog.ts",
+      "mobile/src/lib/dealers.ts",
+      "mobile/src/lib/dealer-inventory.json",
+      "mobile/src/lib/locale.ts",
+      "mobile/src/lib/search.ts",
+      "mobile/src/components/NativeDealerCards.tsx",
+      "mobile/src/components/DealerScreens.tsx",
+      "mobile/src/components/VehicleCard.tsx",
+      "mobile/src/components/ShowroomVehicleCard.tsx",
+      "mobile/src/components/VehicleSections.tsx",
+      "mobile/src/lib/dealer-mileage.ts",
+      "mobile/src/lib/filter-fields.ts",
+      "mobile/src/lib/native-filter-options.ts",
+      "mobile/src/components/DesktopVehicleSummary.tsx",
+      "mobile/src/components/NativeCarPark.tsx",
+      "mobile/src/components/ShowroomFilterSheet.tsx",
+      "mobile/src/lib/vehicle-copy.ts",
+      "mobile/src/components/ShowroomInventoryScreen.tsx",
+      "mobile/src/components/ShowroomDesktopFilterFields.tsx",
+      "mobile/src/components/ShowroomServiceRequest.tsx",
+      "mobile/src/lib/service-requests.ts",
+      "mobile/src/lib/enquiry.ts",
+      "mobile/src/lib/assistant.ts"
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}
