@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "packagingVersion": "5",
+  "dealer": "birmingham-square-one-motors",
+  "transformation": "six-design-cloudflare-v1",
+  "signature": {
+    "provider": "cloudflare",
+    "adapterReceipt": ".cars-cloudflare-svelte.json",
+    "buildVerified": false
+  },
+  "families": {
+    "app": {
+      "base": "/variant-4",
+      "digest": "d3743582a46c9a7ce4c62f7fb2489df3ff5fe3131900b4e4e93660b8a179a0af"
+    },
+    "mobile": {
+      "base": "/variant-5",
+      "digest": "48c95e7413683275d8ce53ae7b70005645674f262881452f5f3e74b48357b2a6"
+    },
+    "karento-best": {
+      "base": "/variant-6",
+      "digest": "6c4ba8e64c1bf316dddacb0cafe79c80fd1bd9a2eddb6ab03bfddc64230e19c5"
+    }
+  },
+  "sourceReceipts": {
+    ".cars-app.json": "2ed60f57689d33498db4b008cba195bfea428b91e8ecdefadddb76be3bdd819e",
+    ".cars-mobile.json": "75a4c585dbae46060cb3231c9d7a66d55618d52c2970659288144083abec1a4f",
+    ".cars-signature.json": "d51bda97411d4e1c0bda3027a1f89a4ec067fdf211f10663a63583e7cd3a0320"
+  }
+}

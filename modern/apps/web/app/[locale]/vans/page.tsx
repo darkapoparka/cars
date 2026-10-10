@@ -1,0 +1,34 @@
+import {dealerShareMetadata} from "../../../lib/cars-dealer-share";
+import type { Metadata } from "next";
+import { createCategoryMetadata } from "@/lib/public-route-metadata";
+import { CategoryMarketplacePage } from "../components/category-marketplace-page";
+
+interface PageProps {
+  params: Promise<{ locale: string }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}
+
+const carsOriginalGenerateMetadata = async ({
+  params,
+  searchParams,
+}: PageProps): Promise<Metadata> =>
+  createCategoryMetadata({
+    category: "van",
+    locale: (await params).locale,
+    searchParams: await searchParams,
+  });
+
+export default async function VansPage({ params, searchParams }: PageProps) {
+  const { locale } = await params;
+  return (
+    <CategoryMarketplacePage
+      category="van"
+      locale={locale}
+      searchParams={await searchParams}
+    />
+  );
+}
+
+export async function generateMetadata(...args: Parameters<typeof carsOriginalGenerateMetadata>) {
+  return dealerShareMetadata(carsOriginalGenerateMetadata(...args));
+}
