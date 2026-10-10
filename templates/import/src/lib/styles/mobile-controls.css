@@ -33,7 +33,7 @@
 		justify-content: center;
 		gap: var(--bc-space-1);
 		border: 0;
-		border-radius: var(--bc-radius-pill);
+		border-radius: var(--bc-radius-control);
 		background: var(--bc-white);
 		margin-block: var(--bc-mobile-control-inset);
 		padding: 0 var(--bc-space-2);

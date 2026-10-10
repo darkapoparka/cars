@@ -94,9 +94,11 @@ form canvas. Enabled empty prompts retain readable contrast in both contexts.
 
 Home, Cars and Import country quick filters share `.mobile-quick-pill` from
 [mobile-controls.css](../src/lib/styles/mobile-controls.css). The shared owner
-sets their fully rounded shape, 40px visible height, 44px tap area, 18px text and padding; use
+sets their 12px control corners (`--bc-radius-control`), 40px visible height,
+44px tap area, 18px text and padding; use
 `.mobile-quick-pill--icon` for an icon-only quick filter. Keep page-specific
 rail layout, selected states, flags and label truncation in the component.
+The owner chose these corners on 10 October 2026 after the matched mobile comparison.
 Quick pills use the shared 8px horizontal padding and 4px inline gap. Avoid
 page-specific padding or font overrides that make the same control look larger.
 Ordinary form fields and action buttons retain their existing component shapes.
