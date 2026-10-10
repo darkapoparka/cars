@@ -1,0 +1,211 @@
+{
+	"date": "2026-10-04",
+	"source": "Canonical Import main checkout; no dealer deployment or template promotion.",
+	"screenshot": "Matched 1440 x 900 crops from source-rendered BG About; external map excluded from the after crop.",
+	"desktop": [
+		{
+			"locale": "bg",
+			"width": 1024,
+			"teamActions": 3,
+			"height": 36,
+			"font": 16,
+			"radius": 999,
+			"aligned": true,
+			"banners": 4,
+			"columns": 2,
+			"overflow": false,
+			"errors": []
+		},
+		{
+			"locale": "bg",
+			"width": 768,
+			"teamActions": 3,
+			"height": 36,
+			"font": 16,
+			"radius": 999,
+			"aligned": true,
+			"banners": 4,
+			"columns": 2,
+			"overflow": false,
+			"errors": []
+		},
+		{
+			"locale": "bg",
+			"width": 1440,
+			"teamActions": 3,
+			"height": 36,
+			"font": 16,
+			"radius": 999,
+			"aligned": true,
+			"banners": 4,
+			"columns": 4,
+			"overflow": false,
+			"errors": []
+		},
+		{
+			"locale": "bg",
+			"width": 1920,
+			"teamActions": 3,
+			"height": 36,
+			"font": 16,
+			"radius": 999,
+			"aligned": true,
+			"banners": 4,
+			"columns": 4,
+			"overflow": false,
+			"errors": []
+		},
+		{
+			"locale": "en",
+			"width": 1024,
+			"teamActions": 3,
+			"height": 36,
+			"font": 16,
+			"radius": 999,
+			"aligned": true,
+			"banners": 4,
+			"columns": 2,
+			"overflow": false,
+			"errors": []
+		},
+		{
+			"locale": "en",
+			"width": 768,
+			"teamActions": 3,
+			"height": 36,
+			"font": 16,
+			"radius": 999,
+			"aligned": true,
+			"banners": 4,
+			"columns": 2,
+			"overflow": false,
+			"errors": []
+		},
+		{
+			"locale": "en",
+			"width": 1440,
+			"teamActions": 3,
+			"height": 36,
+			"font": 16,
+			"radius": 999,
+			"aligned": true,
+			"banners": 4,
+			"columns": 4,
+			"overflow": false,
+			"errors": []
+		},
+		{
+			"locale": "en",
+			"width": 1920,
+			"teamActions": 3,
+			"height": 36,
+			"font": 16,
+			"radius": 999,
+			"aligned": true,
+			"banners": 4,
+			"columns": 4,
+			"overflow": false,
+			"errors": []
+		}
+	],
+	"mobile": [
+		{
+			"name": "about-bg-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "about-bg-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "about-en-320",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		},
+		{
+			"name": "about-en-390",
+			"changedPixels": 0,
+			"excludedRemoteImages": 0,
+			"presentationMatches": true
+		}
+	],
+	"nativeActions": [
+		{
+			"locale": "bg",
+			"javaScript": false,
+			"actions": 3,
+			"numberedBanners": 4,
+			"keyboardContact": true,
+			"focus": {
+				"active": true,
+				"outline": "3px"
+			}
+		},
+		{
+			"locale": "en",
+			"javaScript": false,
+			"actions": 3,
+			"numberedBanners": 4,
+			"keyboardContact": true,
+			"focus": {
+				"active": true,
+				"outline": "3px"
+			}
+		},
+		{
+			"locale": "bg",
+			"width": 390,
+			"newArtworkRequests": 0,
+			"visibleNewActions": 0
+		}
+	],
+	"existingBrowserSuite": {
+		"cases": 2,
+		"passed": true,
+		"name": "About opens with the team and retains accessible social destinations"
+	},
+	"checks": {
+		"svelte": "0 errors, 0 warnings",
+		"scopedESLint": "passed",
+		"architecture": "57 native routes, 230 reachable modules",
+		"images": "951 valid local images",
+		"productionBuild": "passed in isolated QA output; six changed source/artwork inputs match the recorded hashes"
+	},
+	"sources": [
+		{
+			"path": "src/lib/content/about-page.ts",
+			"sha256": "25d61076b3bd27e90e730f48e49597a09f07c6811acbf95d39339d631884f820",
+			"frozenInputMatches": true
+		},
+		{
+			"path": "src/routes/(site)/about/+page.svelte",
+			"sha256": "92e4cd24c2f793be6d09e1af6b86ee02222fa476a7134e4dccb54a1f2f6c6dad",
+			"frozenInputMatches": true
+		},
+		{
+			"path": "src/lib/components/common/TeamMemberCard.svelte",
+			"sha256": "f9fabab9edc5686e6ee059e23f8a3605fc9bfb928ac04fd8784801200b4c3d39",
+			"frozenInputMatches": true
+		},
+		{
+			"path": "src/lib/components/common/DesktopProcess.svelte",
+			"sha256": "3d892d966746a12033e845a3313920801f91c085aff5bba10c8e48470a12f893",
+			"frozenInputMatches": true
+		},
+		{
+			"path": "src/lib/components/common/ProcessSteps.svelte",
+			"sha256": "0796cd17ed238da21815363a3c2d1a115c975dbc128aa82ee8f6e0c391cdc9f1",
+			"frozenInputMatches": true
+		},
+		{
+			"path": "static/assets/daynight/banners/about-request-v1.webp",
+			"sha256": "3bc13f4f9acd7dadb08525587a25ac1e4dc8543508c3f18090569ce864e5b922",
+			"frozenInputMatches": true
+		}
+	]
+}

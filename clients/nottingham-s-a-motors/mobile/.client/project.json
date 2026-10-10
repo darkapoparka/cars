@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "client": "nottingham-s-a-motors",
+  "templateKey": "mobile",
+  "templateVersion": "876590474d01178413feccf3153a0859230158a1",
+  "createdAt": "2026-10-10T12:46:28.523Z",
+  "state": "personalized-needs-build",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": "gb-nottingham-s-a-motors",
+    "demoProjectId": null,
+    "registered": false
+  },
+  "templateSource": {
+    "repository": "darkapoparka/cars",
+    "revision": "876590474d01178413feccf3153a0859230158a1",
+    "path": "templates/mobile",
+    "tree": "7b1f0878715aa1bc0f5942c7e654a6a1bb091510",
+    "digest": "380b153972039a80dccee73f53760a87e963d007b83a921020c5ab5353c942fc",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "5",
+    "entry": "/variant-5/"
+  },
+  "workflowCommit": "e37e17fd753d362671a9b4b2525697292279a400",
+  "hosting": {
+    "provider": "cloudflare",
+    "status": "not-deployed"
+  },
+  "readyToPublish": false
+}

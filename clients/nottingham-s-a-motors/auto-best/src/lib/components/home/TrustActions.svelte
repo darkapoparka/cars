@@ -1,0 +1,322 @@
+<script lang="ts">
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
+  import { resolve } from '$app/paths';
+  import Icon from '$components/ui/Icon.svelte';
+  import { getVehicleArtworkRatios } from '$data/vehicle-artwork';
+  import ArtworkRegion from '$components/ui/ArtworkRegion.svelte';
+  import { serviceArtwork } from '$data/service-artwork';
+  import { featureArtwork, homeActionArtwork, illustrationVehicleArtwork } from '$data/feature-artwork';
+  import OriginalActionIcon from '$components/ui/icons/OriginalActionIcon.svelte';
+  let { group, variant = 'banners', mobileArtwork = true }: { group: 'browse' | 'ownership' | 'all'; variant?: 'banners' | 'cards'; mobileArtwork?: boolean } = $props();
+
+  const actions = [
+    {
+      title: 'Вижте колекцията',
+      artwork: illustrationVehicleArtwork(homeActionArtwork.collection, 'front-pair'),
+      tone: 'black',
+      mobileTitle: 'Автомобили',
+      mobileCta: 'Разгледай',
+      description: 'Разгледайте автомобилите с удобни филтри.',
+      bannerDescription: ['Разгледайте нашата колекция', 'и открийте автомобила за вас.'],
+      cta: 'Към автомобилите',
+      href: '/cars',
+      icon: 'car'
+    },
+    {
+      title: 'Продажба или бартер',
+      artwork: illustrationVehicleArtwork(homeActionArtwork.sell, 'front-service'),
+      tone: 'red',
+      mobileTitle: 'Продай/Бартер',
+      mobileCta: 'Заяви оценка',
+      description: 'Получете оценка за продажба или бартер.',
+      bannerDescription: ['Свържете се с нас за оценка', 'при продажба или бартер.'],
+      cta: 'Поискайте оценка',
+      href: '/contact?topic=trade-in',
+      icon: 'value'
+    },
+    {
+      title: 'Внос по заявка',
+      artwork: illustrationVehicleArtwork(homeActionArtwork.import, 'front-service'),
+      tone: 'red',
+      mobileTitle: 'Внос по заявка',
+      mobileCta: 'Заяви внос',
+      description: 'Споделете модел и бюджет за внос по заявка.',
+      bannerDescription: ['Споделете своя бюджет', 'и модел за внос.'],
+      cta: 'Заявете внос',
+      href: '/contact?topic=import',
+      icon: 'contact'
+    },
+    {
+      title: 'Собствен лизинг',
+      artwork: illustrationVehicleArtwork(homeActionArtwork.finance, 'front-service'),
+      tone: 'black',
+      mobileTitle: 'Лизинг',
+      mobileCta: 'Виж условия',
+      description: 'Попитайте за първоначална вноска, срок и условия.',
+      bannerDescription: ['Попитайте за вноска,', 'срок и условия.'],
+      cta: 'Поискайте условия',
+      href: '/contact?topic=leasing',
+      icon: 'finance'
+    }
+  ] as const;
+  const visibleActions = $derived(group === 'all' ? actions : group === 'browse' ? actions.slice(0, 2) : actions.slice(2));
+  const artworkFrameWidth = $derived(Math.max(...visibleActions.map(action => getVehicleArtworkRatios(action.artwork).width)));
+</script>
+
+<section class="dn-home-content-section" class:dn-trust-actions={variant === 'banners'} class:dn-home-services={variant === 'cards'} data-banner-group={variant === 'banners' ? group : undefined} aria-label={variant === 'cards' ? i18n.t("m_5dfe5d699973") : group === 'browse' ? i18n.t("m_d064a1978f8f") : i18n.t("m_5526464e7543")}>
+  <div class="container">
+    <h2 class="dn-sr-only">{variant === 'cards' ? i18n.t("m_5dfe5d699973") : group === 'browse' ? i18n.t("m_d064a1978f8f") : i18n.t("m_5526464e7543")}</h2>
+    <div class="dn-trust-actions__panel">
+      {#if variant === 'cards'}
+        <div class="dn-services-heading dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--light dn-home-banner-frame dn-home-banner-copy">
+          <h2 class="dn-home-section-title">{i18n.t("m_5dfe5d699973")}</h2>
+          
+          <a class="dn-home-section-action" href={i18n.href(resolve('/contact'))}>{i18n.t("m_d7def4b82f7c")}</a>
+        </div>
+      {/if}
+      <div class="dn-trust-actions__grid">
+        {#each visibleActions as action (action.href)}
+          <article class={variant === 'cards' ? 'dn-service-card' : 'dn-trust-card'} class:dn-trust-card--ownership={variant === 'banners' && group === 'ownership'} class:dn-trust-card--illustrated={variant === 'banners' && group === 'browse'} class:dn-trust-card--red={variant === 'banners' && action.tone === 'red'} class:dn-trust-card--campaign={variant === 'banners'}>
+            {#if variant === 'banners'}
+              {@const art = action.artwork}
+              {@const ratios = getVehicleArtworkRatios(art)}
+              <div class="dn-trust-card__vehicle dn-trust-card__vehicle--campaign"
+                style:--art-width={ratios.width}
+                style:--art-height={ratios.height}
+                style:--art-bottom={ratios.bottom}
+                style:--art-right={ratios.right}
+                style:--art-frame-width={artworkFrameWidth}>
+                <picture>
+                  <source media="(min-width: 992px)" srcset={art.src} />
+                  <img class="dn-trust-card__lineup" data-view={art.view} src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" width={art.width} height={art.height} loading="lazy" decoding="async" />
+                </picture>
+              </div>
+            {/if}
+            {#if mobileArtwork && variant === 'banners' && group === 'browse'}
+              <div class="dn-trust-card__mobile-art" aria-hidden="true">
+                <ArtworkRegion artwork={serviceArtwork[action.icon]} />
+              </div>
+            {/if}
+            {#if mobileArtwork && variant === 'banners' && group === 'ownership'}
+              <div class="dn-trust-card__ownership-art" aria-hidden="true"><ArtworkRegion artwork={action.icon === 'contact' ? featureArtwork.import : featureArtwork.finance} /></div>
+            {/if}
+            {#if variant === 'cards'}
+              {@const art = serviceArtwork[action.icon]}
+              <div class="dn-service-card__art" aria-hidden="true" style:--service-art-width={`${art.crop[2] / art.crop[3] * 88}px`}><ArtworkRegion artwork={art} /></div>
+            {/if}
+            <div class="dn-trust-card__icon" aria-hidden="true">
+              <OriginalActionIcon name={action.icon} />
+            </div>
+
+            <div class="dn-trust-card__content">
+              <h3 id={`trust-${variant}-${action.icon}`}>
+                {#if variant === 'banners'}
+                  <a class="desktop-copy" href={i18n.href(resolve(action.href))}>{i18n.text(action.title)}</a><span class="mobile-copy">{i18n.text(action.mobileTitle)}</span>
+                {:else}
+                  <a href={i18n.href(resolve(action.href))}><span class="desktop-copy">{i18n.text(action.title)}</span><span class="mobile-copy">{action.icon === 'finance' ? i18n.t("m_b231bc0b36a1") : action.icon === 'contact' ? i18n.t("m_2cff9baabf56") : action.icon === 'value' ? i18n.t("m_b7457efd1311") : i18n.text(action.mobileTitle)}</span></a>
+                {/if}
+              </h3>
+              <p>{#if variant === 'banners'}{#each action.bannerDescription as line (line)}<span class="dn-trust-card__description-line">{`${i18n.text(line)} `}</span>{/each}{:else}{i18n.text(action.description)}{/if}</p>
+              <a class="dn-trust-card__action" href={i18n.href(resolve(action.href))} aria-labelledby={`trust-${variant}-${action.icon} trust-action-${variant}-${action.icon}`}>
+                <span id={`trust-action-${variant}-${action.icon}`}><span class="desktop-copy">{i18n.text(action.cta)}</span><span class="mobile-copy">{variant === 'cards' && action.icon === 'value' ? i18n.t("m_fec2ceaccc07") : variant === 'cards' && action.icon === 'finance' ? i18n.t("m_908b6d3a8368") : i18n.text(action.mobileCta)}</span></span>
+                <Icon name="arrow-right" size={16} strokeWidth={1.8} />
+              </a>
+            </div>
+          </article>
+        {/each}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .dn-service-card__art, .mobile-copy, .dn-trust-card__icon, .dn-trust-card__mobile-art, .dn-trust-card__ownership-art { display: none; }
+  .dn-trust-actions { padding: 24px 0 32px; background: #fff; }
+  .dn-trust-actions__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .dn-trust-card { position: relative; display: flex; flex-direction: column; min-width: 0; min-height: 234px; padding: 28px; overflow: hidden; border-radius: 16px; background: var(--dn-ink-deep); color: #fff; }
+  .dn-trust-card--red { background: var(--dn-theme-campaign-accent); }
+  .dn-trust-card__content { position: relative; display: flex; flex: 1; flex-direction: column; width: 52%; }
+  .dn-trust-card h3 { margin: 0 0 12px; color: inherit; font-size: var(--dn-text-subheading); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); }
+  .dn-trust-card h3 a { color: inherit; }
+  .dn-trust-card h3 a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .dn-trust-card p { margin: 0 0 20px; color: #e3e4e7; font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
+  .dn-trust-card__description-line { display: block; }
+  .dn-trust-card__vehicle { position: absolute; right: -32px; bottom: 4px; width: min(340px, calc(48% + 20px)); height: 226px; pointer-events: none; }
+  .dn-trust-card__vehicle :global(img) { object-position: right center; }
+  .dn-trust-card__lineup { display: block; width: 100%; height: 100%; object-fit: contain; }
+  @media (min-width: 992px) {
+    .dn-trust-card { min-height: var(--dn-home-banner-height); padding: var(--dn-home-banner-padding); border-radius: var(--dn-radius-lg); background: var(--dn-theme-hero-surface-deep); }
+    .dn-trust-card--red { background: var(--dn-surface-raised); color: var(--dn-ink); }
+    .dn-trust-actions[data-banner-group='ownership'] .dn-trust-card--red { background: var(--dn-theme-campaign-accent); color: var(--dn-white); }
+    .dn-trust-actions[data-banner-group='ownership'] .dn-trust-card--red p { color: var(--dn-text-on-ink); }
+    .dn-trust-actions[data-banner-group='ownership'] .dn-trust-card--red .dn-trust-card__action { background: var(--dn-white); color: var(--dn-ink); }
+    .dn-trust-actions[data-banner-group='ownership'] .dn-trust-card--red .dn-trust-card__action:hover { background: var(--dn-surface-hover); }
+    .dn-trust-actions[data-banner-group='ownership'] .dn-trust-card--red a:focus-visible { outline-color: var(--dn-white); }
+    .dn-trust-card--red p { color: var(--dn-muted); }
+    .dn-trust-card--red .dn-trust-card__action { background: var(--dn-red); color: var(--dn-white); }
+    .dn-trust-card--red .dn-trust-card__action:hover { background: var(--dn-red-hover); }
+    .dn-trust-card.dn-trust-card--red a:focus-visible { outline-color: var(--dn-focus); }
+    .dn-trust-card h3 a { display: inline-flex; min-height: 44px; align-items: center; }
+    .dn-trust-card__content { justify-content: flex-start; gap: var(--dn-home-copy-gap); }
+    .dn-trust-card h3 { margin: 0; }
+    .dn-trust-card p { margin: 0; }
+    .dn-trust-card__description-line { display: inline; }
+    .dn-trust-actions[data-banner-group='browse'] .dn-trust-card p { max-width: none; }
+    .dn-trust-card .dn-trust-card__action { width: max-content; max-width: 100%; margin-top: auto; white-space: normal; }
+    .dn-trust-card--campaign { container-type: inline-size; }
+    .dn-trust-card--campaign .dn-trust-card__content { width: max(52%, 240px); }
+    .dn-trust-card--campaign p { width: 100%; max-width: 28ch; }
+    .dn-trust-card__vehicle--campaign {
+      --car-size: min(188px, calc(min(46cqw, 100cqw - 244px) / var(--art-frame-width)));
+      top: auto;
+      right: calc(var(--dn-space-6) - var(--car-size) * var(--art-right));
+      bottom: calc(var(--dn-space-8) - var(--car-size) * (var(--art-height) - var(--art-bottom)));
+      width: calc(var(--car-size) * var(--art-width));
+      height: calc(var(--car-size) * var(--art-height));
+    }
+  }
+  .dn-trust-card__action { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; gap: 9px; align-self: flex-start; margin-top: auto; padding: 10px 14px; border-radius: var(--dn-radius-button); background: #fff; color: #202329; font: var(--dn-cta-font); letter-spacing: var(--dn-cta-tracking); }
+  .dn-trust-card__action:hover { background: #eceef1; }
+  @media (min-width: 992px) and (hover: hover) {
+    .dn-trust-card__action { transition: background-color 180ms ease; }
+  }
+  .dn-trust-card a:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+  .dn-home-services { padding: 32px 0 64px; background: #fff; }
+  .dn-home-services .dn-trust-actions__panel { padding: 32px; border-radius: 20px; background: #f1f3f5; }
+  .dn-services-heading { display: grid; grid-template-columns: minmax(0, 1fr) auto; margin-bottom: 24px; }
+  
+  .dn-services-heading > a { grid-column: 2; }
+  .dn-home-services .dn-trust-actions__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  @media (min-width: 992px) {
+    .dn-home-services .dn-trust-actions__panel { padding: 0; background: var(--dn-home-panel); }
+    .dn-services-heading { margin-bottom: 0; }
+    .dn-home-services .dn-trust-actions__grid { position: relative; margin-top: calc(-1 * var(--dn-home-banner-overlap)); padding: 24px; border-radius: var(--dn-radius); background: var(--dn-home-panel); }
+    .dn-home-services .dn-service-card .dn-trust-card__action { background: var(--dn-red); color: var(--dn-white); }
+    .dn-home-services .dn-service-card .dn-trust-card__action:hover { background: var(--dn-red-hover); color: var(--dn-white); }
+    .dn-trust-card__action :global(svg) { width: 18px; height: 18px; stroke-width: 2; flex-shrink: 0; }
+  }
+  .dn-service-card { display: flex; flex-direction: column; min-width: 0; min-height: 272px; padding: 24px; border-radius: 16px; background: #fff; }
+  .dn-service-card .dn-trust-card__icon { display: block; width: 60px; height: 60px; margin-bottom: 20px; color: var(--dn-red); }
+  .dn-service-card .dn-trust-card__content { width: 100%; }
+  .dn-service-card h3 { margin: 0 0 12px; color: #24272c; font-size: var(--dn-text-card); line-height: var(--dn-leading-heading); }
+  .dn-service-card h3 a { color: inherit; }
+  .dn-service-card p { margin: 0 0 24px; color: #696665; font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
+  .dn-service-card .dn-trust-card__action { width: 100%; padding-inline: 10px; border: 1px solid var(--dn-red); color: var(--dn-red); font: var(--dn-cta-font); }
+  .dn-service-card .dn-trust-card__action:hover { background: var(--dn-red); color: #fff; }
+  .dn-service-card a:focus-visible { outline: 2px solid var(--dn-red); outline-offset: 3px; }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .dn-trust-card h3 { font-size: var(--dn-text-card); }
+    .dn-trust-card p { font-size: var(--dn-text-body); }
+    .dn-home-services .dn-trust-actions__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 991px) {
+    .dn-home-services { padding: 24px 0 32px; background: var(--dn-mobile-canvas); }
+    .dn-home-services .dn-trust-actions__panel { padding: 0; background: transparent; }
+    .dn-services-heading { display: block; margin-bottom: 16px; }
+    .dn-services-heading h2 { font-size: var(--dn-text-subheading); }
+    
+    .dn-services-heading > a { display: inline-flex; align-items: center; min-height: 44px; font-size: var(--dn-text-meta); }
+    .dn-home-services .dn-trust-actions__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .dn-service-card { min-height: 154px; padding: 12px; border-radius: 14px; }
+    .dn-service-card .dn-trust-card__icon { width: 38px; height: 38px; margin-bottom: 10px; }
+    .dn-service-card .dn-trust-card__icon :global(svg) { width: 38px; height: 38px; }
+    .dn-service-card h3 { font-size: var(--dn-text-meta); white-space: nowrap; }
+    .dn-service-card p { display: none; }
+    .dn-service-card .dn-trust-card__action { padding: 0; border: 0; color: #4f5661; font-size: var(--dn-control-size); }
+    .dn-service-card .dn-trust-card__action:hover { background: transparent; color: var(--dn-red); }
+    .dn-trust-actions { padding: 16px 0 24px; background: var(--dn-mobile-canvas); }
+    .dn-trust-actions__grid { gap: 10px; }
+    .dn-trust-card { min-height: 144px; align-items: center; padding: 16px 12px; border-radius: 14px; background: var(--dn-mobile-surface); color: var(--dn-ink); text-align: center; }
+    .desktop-copy, .dn-trust-card p { display: none; }
+    .dn-trust-card__vehicle { display: none; }
+    .mobile-copy { display: inline; }
+    .dn-trust-card__icon { display: block; width: 38px; height: 38px; margin-bottom: 10px; color: var(--dn-red); }
+    .dn-trust-card__icon :global(svg) { width: 38px; height: 38px; }
+    .dn-trust-card .dn-trust-card__icon { display: block; width: 32px; height: 32px; margin-bottom: 12px; }
+    .dn-trust-card .dn-trust-card__icon :global(svg) { width: 32px; height: 32px; }
+    .dn-trust-card__content { width: 100%; }
+    .dn-trust-card .dn-trust-card__content { position: static; }
+    .dn-trust-card h3 { margin-bottom: 8px; font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); text-wrap: balance; }
+    .dn-trust-card .dn-trust-card__action { min-height: 20px; justify-content: center; align-self: center; gap: 6px; padding: 0; border-radius: 0; background: transparent; color: var(--dn-muted); font-size: var(--dn-control-size); font-weight: var(--dn-control-weight); }
+    .dn-trust-card .dn-trust-card__action::after { position: absolute; inset: 0; border-radius: inherit; content: ''; }
+    .dn-trust-card .dn-trust-card__action :global(svg) { flex-shrink: 0; }
+    .dn-trust-card:hover { background: var(--dn-surface); }
+    .dn-trust-card .dn-trust-card__action:hover { background: transparent; color: var(--dn-ink); }
+    .dn-trust-card:focus-within { outline: 2px solid var(--dn-red); outline-offset: 3px; }
+    .dn-trust-card a:focus-visible { outline: none; }
+  }
+  @media (max-width: 767px) {
+    .dn-services-heading > a { display: none; }
+    .dn-service-card { position: relative; min-height: 144px; padding: 12px 10px 16px; align-items: center; justify-content: center; text-align: center; }
+    .dn-service-card .dn-trust-card__icon, .dn-service-card .dn-trust-card__icon :global(svg) { width: 48px; height: 48px; }
+    .dn-service-card .dn-trust-card__icon { display: none; }
+    .dn-service-card__art { display: flex; align-items: center; justify-content: center; height: 88px; width: 100%; margin-bottom: 4px; pointer-events: none; }
+    .dn-service-card__art :global(.dn-artwork-region) { width: min(100%, var(--service-art-width)); }
+    .dn-service-card h3 { margin: 0; font-size: var(--dn-text-lead); line-height: var(--dn-leading-heading); white-space: normal; }
+    .dn-service-card .dn-trust-card__action { display: none; }
+    .dn-service-card .dn-trust-card__content { position: static; flex: none; }
+    .dn-service-card h3 a::after { position: absolute; inset: 0; border-radius: inherit; content: ''; }
+    .dn-service-card:focus-within { outline: 2px solid var(--dn-red); outline-offset: 3px; }
+    .dn-service-card a:focus-visible { outline: none; }
+    .dn-service-card:hover { background: var(--dn-surface); }
+    .dn-trust-actions[data-banner-group="ownership"] .dn-trust-actions__grid { grid-template-columns: minmax(0, 1fr); }
+    .dn-trust-card--ownership { min-height: 156px; padding: 20px; align-items: flex-start; background: var(--dn-theme-campaign-surface); color: #fff; text-align: left; }
+    .dn-trust-card--ownership.dn-trust-card--red { background: var(--dn-theme-campaign-accent); }
+    .dn-trust-card--ownership .dn-trust-card__icon { display: none; }
+    .dn-trust-card--ownership .dn-trust-card__content { width: 58%; }
+    .dn-trust-card--ownership h3 { font-size: var(--dn-text-card); text-wrap: initial; line-height: var(--dn-leading-heading); }
+    .dn-trust-card--ownership .dn-trust-card__action { align-self: flex-start; min-height: 44px; margin-top: auto; color: #fff; font-size: var(--dn-control-size); font-weight: var(--dn-control-weight); }
+    .dn-trust-card--ownership .dn-trust-card__action :global(svg) { display: none; }
+    .dn-trust-card--ownership .dn-trust-card__action:hover { color: #fff; }
+    .dn-trust-card--ownership .dn-trust-card__ownership-art { display: flex; position: absolute; right: -18px; top: 0; bottom: 0; width: 56%; align-items: center; pointer-events: none; mask-image: linear-gradient(to right, transparent, #000 32%); }
+
+    .dn-trust-card--illustrated {
+      min-height: 188px;
+      padding: 12px 8px;
+      background: var(--dn-mobile-surface);
+      display: grid;
+      grid-template-rows: 44px 108px;
+      align-content: start;
+    }
+    .dn-trust-card--illustrated .dn-trust-card__icon { display: none; }
+    .dn-trust-card--illustrated .dn-trust-card__content { display: contents; }
+    .dn-trust-card--illustrated h3 {
+      grid-row: 1;
+      display: flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      font-size: var(--dn-text-lead);
+      line-height: var(--dn-leading-heading);
+      font-weight: var(--dn-weight-semibold);
+      text-align: center;
+    }
+    .dn-trust-card--illustrated .dn-trust-card__mobile-art {
+      grid-row: 2;
+      display: flex;
+      height: 108px;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .dn-trust-card--illustrated .dn-trust-card__action {
+      position: static;
+      min-height: 0;
+      margin: 0;
+    }
+    .dn-trust-card--illustrated .dn-trust-card__action > span {
+      position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%);
+    }
+    .dn-trust-card--illustrated .dn-trust-card__action :global(svg) {
+      display: none;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .dn-trust-card, .dn-trust-card__action { transition: none; }
+    .dn-trust-card:hover, .dn-trust-card__action:hover { transform: none; }
+  }
+</style>

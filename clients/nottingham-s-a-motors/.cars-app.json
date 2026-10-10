@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "dealer": "nottingham-s-a-motors",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "70c2b80671e217ab299549a938a537c0b9559611",
+    "path": "templates/app",
+    "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
+    "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f"
+  },
+  "appDigest": "1cf1ba6d51caf2153d0d385498b83a1f4b869e044d78beff65cb927f8fe5ca52",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "nottingham-s-a-motors",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "4b71773564d0722884683339de1b0cb53a2d3c6d47d00ba4f3a2dd86e11494f1",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 5,
+    "currency": "GBP",
+    "observedAt": "2026-10-10",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo.webp",
+        "output": "public/dealer-app/logo-light-bdebc2914c113b9adb3b.webp",
+        "sha256": "bdebc2914c113b9adb3b93a1a9ddee86c40ceecafa2d4cb148ef58cce5c85fe4",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo.webp",
+        "output": "public/dealer-app/logo-dark-bdebc2914c113b9adb3b.webp",
+        "sha256": "bdebc2914c113b9adb3b93a1a9ddee86c40ceecafa2d4cb148ef58cce5c85fe4",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/convertible.webp",
+        "output": "public/dealer-app/vehicle-c6193d08e66b41ed6b10.webp",
+        "sha256": "c6193d08e66b41ed6b10bd19fc1e9dee0f8bffa994479a480ed3499dd5c4b372",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "abarth-500-2014-880002442439",
+        "sourceValue": 74000,
+        "sourceUnit": "mi",
+        "canonicalKm": 119091
+      },
+      {
+        "slug": "jeep-wrangler-2008-178567084197",
+        "sourceValue": 115000,
+        "sourceUnit": "mi",
+        "canonicalKm": 185075
+      },
+      {
+        "slug": "renault-clio-2008-178557630733",
+        "sourceValue": 94000,
+        "sourceUnit": "mi",
+        "canonicalKm": 151278
+      },
+      {
+        "slug": "vauxhall-astra-2003-880001351998",
+        "sourceValue": 49000,
+        "sourceUnit": "mi",
+        "canonicalKm": 78858
+      },
+      {
+        "slug": "ford-fiesta-2018-178521890896",
+        "sourceValue": 78000,
+        "sourceUnit": "mi",
+        "canonicalKm": 125529
+      }
+    ],
+    "ukPresentation": {
+      "distanceUnit": "mi",
+      "canonicalDistanceUnit": "km",
+      "originalMileageRetained": true,
+      "contentPaths": [
+        "lib/dealer-mileage.ts",
+        "lib/currency.ts",
+        "lib/inventory-filters.ts",
+        "lib/inventory-settings.ts",
+        "components/DesktopInventoryFilters.tsx",
+        "components/NativeFilterPane.tsx",
+        "components/VehicleCard.tsx",
+        "components/VehicleBelowFold.tsx",
+        "components/VehicleComparison.tsx",
+        "components/VehicleDetailClient.tsx",
+        "components/SellEnquirySheet.tsx"
+      ]
+    }
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

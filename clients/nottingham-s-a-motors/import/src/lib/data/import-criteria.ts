@@ -1,0 +1,102 @@
+import { optionLabel } from '$lib/i18n/options';
+import type { Locale } from '$lib/locale/core';
+import { translateVehicleTerm } from '$lib/i18n/messages';
+export const importCountries = [
+	{ value: '', label: 'Всички', flagSrc: '/assets/daynight/flags/all.svg' },
+	{ value: 'CN', label: 'Китай', flagSrc: '/assets/daynight/flags/cn.svg' },
+	{ value: 'DE', label: 'Германия', flagSrc: '/assets/daynight/flags/de.svg' },
+	{ value: 'US', label: 'САЩ', flagSrc: '/assets/daynight/flags/us.svg' },
+	{ value: 'JP', label: 'Япония', flagSrc: '/assets/daynight/flags/jp.svg' },
+	{ value: 'KR', label: 'Южна Корея', flagSrc: '/assets/daynight/flags/kr.svg' }
+] as const;
+
+export const importFuels = ['Бензин', 'Дизел', 'Хибрид', 'Електрически'];
+export const importTransmissions = ['Автомат', 'Ръчни'];
+export const importBodyTypes = [
+	'SUV',
+	'Sedan',
+	'Hatchback',
+	'Wagon',
+	'Coupe',
+	'Cabriolet',
+	'Pickup Truck',
+	'Crossover'
+];
+export const importMakes = [
+	'Audi',
+	'BMW',
+	'Mercedes-Benz',
+	'Volkswagen',
+	'Toyota',
+	'Porsche',
+	'Volvo',
+	'Hyundai',
+	'Kia',
+	'Tesla'
+];
+export type ImportCriteria = {
+	origin: string;
+	make: string;
+	model: string;
+	bodyType: string;
+	minYear: string;
+	maxPrice: string;
+	fuel: string;
+	transmission: string;
+};
+export const emptyImportCriteria: ImportCriteria = {
+	origin: '',
+	make: '',
+	model: '',
+	bodyType: '',
+	minYear: '',
+	maxPrice: '',
+	fuel: '',
+	transmission: ''
+};
+export const importCriteriaFromParams = (params: URLSearchParams): ImportCriteria => {
+	const origin = params.get('origin')?.toUpperCase() ?? '';
+	const year = params.get('minYear') ?? '';
+	const budget = params.get('maxPrice') ?? '';
+	return {
+		origin: importCountries.some((country) => country.value === origin) ? origin : '',
+		make: (params.get('make') ?? '').trim().slice(0, 60),
+		model: (params.get('model') ?? '').trim().slice(0, 80),
+		bodyType: importBodyTypes.find((value) => value === params.get('bodyType')) ?? '',
+		minYear:
+			/^\d{4}$/.test(year) && Number(year) >= 1900 && Number(year) <= new Date().getFullYear()
+				? year
+				: '',
+		maxPrice: /^\d{1,8}$/.test(budget) && Number(budget) > 0 ? String(Number(budget)) : '',
+		fuel: importFuels.find((fuel) => fuel === params.get('fuel')) ?? '',
+		transmission: importTransmissions.find((value) => value === params.get('transmission')) ?? ''
+	};
+};
+export const importCriteriaUrl = (url: URL, criteria: ImportCriteria) => {
+	const next = new URL(url);
+	for (const key of Object.keys(emptyImportCriteria) as (keyof ImportCriteria)[]) {
+		if (criteria[key].trim()) next.searchParams.set(key, criteria[key].trim());
+		else next.searchParams.delete(key);
+	}
+	return `${next.pathname}${next.search}${next.hash}`;
+};
+export const importCriteriaSummary = (criteria: ImportCriteria, locale: Locale = 'bg') =>
+	[
+		optionLabel(
+			importCountries.find((country) => country.value === criteria.origin && country.value)
+				?.label ?? '',
+			locale
+		),
+		[criteria.make, criteria.model].filter(Boolean).join(' '),
+		criteria.bodyType ? translateVehicleTerm(locale, 'bodyTypes', criteria.bodyType) : '',
+		criteria.minYear
+			? `${locale === 'en' ? 'from' : 'от'} ${criteria.minYear}${locale === 'en' ? '' : ' г.'}`
+			: '',
+		criteria.maxPrice
+			? `${locale === 'en' ? 'up to' : 'до'} ${Number(criteria.maxPrice).toLocaleString(locale === 'en' ? 'en-GB' : 'bg-BG')} €`
+			: '',
+		optionLabel(criteria.fuel, locale),
+		optionLabel(criteria.transmission, locale)
+	]
+		.filter(Boolean)
+		.join(' · ');
