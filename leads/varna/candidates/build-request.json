@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "request": "pilot-six-01",
+  "sourceCandidateCommit": "0ee5393e7fb5feb2238d18518f2bbcf7112443cd",
+  "dealers": [
+    "dm-auto-varna"
+  ],
+  "families": [
+    "auto-best",
+    "modern",
+    "import",
+    "app",
+    "mobile",
+    "karento-best"
+  ],
+  "scope": "Framework compile and derived candidate assembly only; no publication, production access or release approval."
+}
