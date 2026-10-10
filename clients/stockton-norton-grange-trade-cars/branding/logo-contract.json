@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "stockton-norton-grange-trade-cars",
+  "approvalStatus": "independent_design_proposal_not_dealer_approved",
+  "assets": {
+    "onLight": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "a4c81c76ad62d0916a4212e7e31f93e2aa2b513309761f6c38a4c4ddc385befc",
+      "width": 1024,
+      "height": 341,
+      "background": "opaque_white"
+    },
+    "onDark": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "a4c81c76ad62d0916a4212e7e31f93e2aa2b513309761f6c38a4c4ddc385befc",
+      "width": 1024,
+      "height": 341,
+      "background": "opaque_white"
+    },
+    "onAccent": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "a4c81c76ad62d0916a4212e7e31f93e2aa2b513309761f6c38a4c4ddc385befc",
+      "width": 1024,
+      "height": 341,
+      "background": "opaque_white"
+    }
+  },
+  "icon": {
+    "localPath": "assets/app-icon.png",
+    "sha256": "30debbba6a343cbfb24357a4a52101611b8602ef89152e6220d63c27ab138f69",
+    "width": 512,
+    "height": 512
+  },
+  "favicon": {
+    "localPath": "assets/favicon.ico",
+    "sha256": "79709c1b7b8e8aea4793d6e1af870b6a0dd54914fd6265fe4ee6444d743230f3",
+    "sizes": [
+      16,
+      32,
+      48,
+      64,
+      128,
+      256
+    ],
+    "encoding": "ICO with PNG entries from the actual square icon"
+  },
+  "provenance": {
+    "creationMethod": "identity_preserving_proposal",
+    "date": "2026-10-10",
+    "sources": [
+      "generated_images/exec-32e3878d-8587-47c8-b9f1-526fbaf8ced4.png",
+      "generated_images/exec-3f9357dd-0b01-43a4-b08a-92191a1e2a4e.png"
+    ],
+    "publicReferenceUrls": [
+      "https://graph.facebook.com/155134585966802/picture?type=large",
+      "https://www.autoyas.com/GB/Stockton-on-Tees/155134585966802/Norton-grange-trade-cars"
+    ],
+    "research": "docs/qa/uk-branding-visual-research-2026-10-10.md",
+    "deliveryEncoding": "Proportional size and delivery-format encoding only; no crop, recolouring or compositing.",
+    "visualInspection": "Original reference where available, full business-name spelling, emblem completeness, white surface and square icon checked in generated output. Application consumers await browser QA.",
+    "dealerApproval": false
+  }
+}

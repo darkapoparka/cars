@@ -1,0 +1,30 @@
+{
+  "mode": "dealer",
+  "id": "stockton-norton-grange-trade-cars",
+  "name": "Norton Grange Trade Cars",
+  "shortName": "Norton Grange Trade Cars",
+  "logo": {
+    "light": "/dealer-app/logo-light-a4c81c76ad62d0916a42.webp",
+    "dark": "/dealer-app/logo-dark-a4c81c76ad62d0916a42.webp",
+    "icon": "/dealer-app/icon.png"
+  },
+  "defaultLocale": "en",
+  "enabledLocales": [
+    "en",
+    "bg"
+  ],
+  "country": "GB",
+  "currency": "GBP",
+  "city": "Stockton-on-Tees",
+  "address": "",
+  "phoneDisplay": "",
+  "phoneE164": "",
+  "email": "",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Norton%20Grange%20Trade%20Cars%2C%20Stockton-on-Tees",
+  "website": "",
+  "whatsappUrl": "",
+  "services": [],
+  "observedAt": "2026-10-10",
+  "inventoryNotice": "Vehicle images are generated illustrations, not photographs of the advertised vehicles. Listing details were observed on 10 October 2026; confirm each original advert, price, condition and availability with the dealership.",
+  "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
+}

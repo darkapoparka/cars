@@ -1,0 +1,26 @@
+/node_modules/
+/.next*/
+/out/
+/runtime/
+/playwright-report/
+/test-results/
+/.vercel/
+.env*
+!.env.example
+*.tsbuildinfo
+next-env.d.ts
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
+
+# Retained local reference inputs and compatibility with earlier workspace tooling.
+/reference/
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+/coverage/
+/build/
+*.pem
+*.log

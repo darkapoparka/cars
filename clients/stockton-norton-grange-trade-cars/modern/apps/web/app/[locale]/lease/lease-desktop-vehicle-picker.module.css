@@ -1,0 +1,408 @@
+.picker {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2);
+  min-width: 0;
+}
+.trigger {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2.5);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: calc(var(--spacing) * 46);
+  padding: calc(var(--spacing) * 4);
+  cursor: pointer;
+  background: var(--control);
+  border: var(--desktop-border-width) dashed var(--border);
+  border-radius: var(--radius-desktop-control);
+  transition:
+    border-color var(--duration-interaction),
+    background-color var(--duration-interaction);
+}
+.trigger:hover {
+  background: var(--desktop-picker-hover);
+  border-color: var(--brand);
+}
+.trigger:focus-visible {
+  outline: var(--desktop-focus-width) solid var(--brand);
+  outline-offset: var(--desktop-focus-offset);
+}
+.triggerIcon {
+  display: grid;
+  place-items: center;
+  width: calc(var(--spacing) * 12);
+  height: calc(var(--spacing) * 12);
+  color: var(--muted-foreground);
+  background: var(--panel);
+  border: var(--desktop-border-width) solid var(--border);
+  border-radius: 50%;
+}
+.selectedCard {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2);
+  justify-content: space-between;
+  min-height: calc(var(--spacing) * 46);
+  padding: calc(var(--spacing) * 3);
+  background: var(--success-surface);
+  border-radius: var(--radius-desktop-control);
+}
+.cardHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: calc(var(--spacing) * 2);
+  align-items: center;
+  min-width: 0;
+}
+.title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: var(--text-compact-control);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--desktop-leading-body);
+  white-space: nowrap;
+}
+.selectedCard .clear {
+  width: calc(var(--spacing) * 7);
+  height: calc(var(--spacing) * 7);
+  color: var(--success-foreground);
+}
+.selectedCard .clear:hover {
+  background: var(--desktop-success-hover);
+}
+.selectedCard .change {
+  width: 100%;
+  height: calc(var(--spacing) * 9);
+  font-size: var(--text-card-spec);
+  font-weight: var(--font-weight-medium);
+  color: var(--foreground);
+  background: var(--panel);
+  border: var(--desktop-border-width) solid var(--border);
+  border-radius: calc(var(--spacing) * 2);
+  box-shadow: none;
+}
+.selectedCard .change:hover {
+  background: var(--desktop-success-soft);
+  border-color: var(--success);
+}
+.media {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  min-height: calc(var(--spacing) * 30);
+  overflow: hidden;
+  background: var(--foreground);
+  border-radius: calc(var(--spacing) * 2);
+}
+.image {
+  object-fit: contain;
+}
+.dialog {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 4);
+  width: min(
+    calc(var(--spacing) * 224),
+    calc(100vw - calc(var(--spacing) * 16))
+  );
+  max-width: none;
+  max-height: min(
+    calc(var(--spacing) * 192),
+    calc(100dvh - calc(var(--spacing) * 16))
+  );
+  padding: calc(var(--spacing) * 6);
+  border-radius: var(--radius-vehicle);
+}
+.search {
+  display: flex;
+  flex-shrink: 0;
+  gap: calc(var(--spacing) * 3);
+  align-items: center;
+  padding: calc(var(--spacing) * 3) calc(var(--spacing) * 4);
+  color: var(--muted-foreground);
+  background: var(--control);
+  border: var(--desktop-border-width) solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.search input {
+  width: 100%;
+  min-width: 0;
+  font-size: var(--text-meta);
+  color: var(--foreground);
+  outline: none;
+  background: transparent;
+}
+.search:focus-within {
+  outline: var(--desktop-focus-width) solid var(--brand);
+  outline-offset: var(--desktop-focus-width);
+}
+.results {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: max-content;
+  gap: calc(var(--spacing) * 3);
+  min-height: 0;
+  padding: calc(var(--spacing) * 0.75);
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+.results article {
+  min-height: calc(var(--spacing) * 48);
+  border: var(--desktop-border-width) solid var(--border);
+}
+.results article:has([data-vehicle-selected="true"]) {
+  border-color: var(--success);
+}
+.results [data-vehicle-selected="true"] > span {
+  color: var(--success-foreground);
+}
+.results button:focus-visible {
+  outline-color: var(--brand);
+}
+.empty {
+  grid-column: 1 / -1;
+  padding: calc(var(--spacing) * 12) calc(var(--spacing) * 4);
+  color: var(--muted-foreground);
+  text-align: center;
+}
+.close {
+  position: absolute;
+  top: calc(var(--spacing) * 4);
+  right: calc(var(--spacing) * 4);
+  display: grid;
+  place-items: center;
+  width: calc(var(--spacing) * 8);
+  height: calc(var(--spacing) * 8);
+  color: var(--muted-foreground);
+  cursor: pointer;
+  border-radius: calc(var(--spacing) * 2);
+}
+.close:hover {
+  color: var(--foreground);
+  background: var(--control);
+}
+.close:focus-visible {
+  outline: var(--desktop-focus-width) solid var(--brand);
+  outline-offset: var(--desktop-focus-width);
+}
+@media (max-width: 767px) {
+  .results {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .picker {
+    --picker-height: calc(var(--spacing) * 44);
+    --picker-width: calc(var(--spacing) * 240);
+
+    position: relative;
+    align-items: center;
+    min-height: 0;
+  }
+  .trigger {
+    position: relative;
+    display: grid;
+    flex: none;
+    grid-template-columns: calc(var(--spacing) * 50) minmax(0, 1fr) calc(
+        var(--spacing) *
+        50
+      );
+    gap: calc(var(--spacing) * 6);
+    width: min(100%, var(--picker-width));
+    height: var(--picker-height);
+    min-height: 0;
+    padding: calc(var(--spacing) * 4);
+    margin-inline: auto;
+    overflow: hidden;
+    color: var(--foreground);
+    text-align: center;
+    background: var(--panel);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 4);
+  }
+  .triggerCopy {
+    display: grid;
+    gap: calc(var(--spacing) * 1);
+    justify-items: center;
+    min-width: 0;
+  }
+  .trigger:hover {
+    background: var(--desktop-picker-hover);
+  }
+  .triggerCopy > strong {
+    font-size: calc(var(--spacing) * 5);
+    font-weight: var(--font-weight-semibold);
+    line-height: calc(var(--spacing) * 7);
+  }
+  .triggerHint {
+    font-size: calc(var(--spacing) * 3.5);
+    line-height: calc(var(--spacing) * 5.5);
+    color: var(--muted-foreground);
+  }
+  .triggerIcon {
+    width: calc(var(--spacing) * 50);
+    height: calc(var(--spacing) * 35.5);
+    color: var(--foreground);
+    background: var(--control);
+    border: 0;
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .triggerIcon img {
+    width: calc(var(--spacing) * 33);
+    height: calc(var(--spacing) * 18);
+    object-fit: contain;
+  }
+  .caret {
+    display: grid;
+    place-items: center;
+    justify-self: end;
+    width: calc(var(--spacing) * 14);
+    height: calc(var(--spacing) * 14);
+    color: var(--brand-foreground);
+    background: var(--brand);
+    border-radius: var(--radius-pill);
+    transition: background-color var(--duration-interaction);
+  }
+  .trigger:hover .caret {
+    background: var(--lead-site-accent-hover);
+  }
+  .selectedCard {
+    display: grid;
+    flex: none;
+    grid-template-columns: calc(var(--spacing) * 50) minmax(0, 1fr);
+    gap: calc(var(--spacing) * 6);
+    align-items: stretch;
+    width: min(100%, var(--picker-width));
+    min-height: var(--picker-height);
+    padding: calc(var(--spacing) * 4);
+    margin-inline: auto;
+    overflow: hidden;
+    background: var(--panel);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 4);
+  }
+  .cardBody {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 2);
+    justify-content: space-between;
+    min-width: 0;
+  }
+  .cardHeader {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: calc(var(--spacing) * 4);
+    align-items: start;
+    padding: 0;
+  }
+  .headingActions {
+    display: flex;
+    gap: calc(var(--spacing) * 3);
+    align-items: center;
+    min-width: 0;
+  }
+  .title {
+    display: block;
+    min-width: 0;
+    font-size: calc(var(--spacing) * 5);
+    font-weight: var(--font-weight-semibold);
+    line-height: calc(var(--spacing) * 6);
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+  .title:hover {
+    text-decoration: underline;
+    text-underline-offset: calc(var(--spacing) * 1);
+  }
+  .title:focus-visible {
+    outline: var(--desktop-focus-width) solid var(--brand);
+    outline-offset: var(--desktop-focus-offset);
+    border-radius: calc(var(--spacing) * 1);
+  }
+  .vehiclePrice {
+    display: flex;
+    align-items: center;
+    min-height: calc(var(--spacing) * 11);
+    margin: 0;
+    font-size: calc(var(--spacing) * 5);
+    font-weight: var(--font-weight-semibold);
+    line-height: calc(var(--spacing) * 7);
+    white-space: nowrap;
+  }
+  .facts [data-slot="vehicle-card-spec-pills"] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--spacing) * 2);
+  }
+  .facts [data-slot="vehicle-card-spec"] {
+    min-height: calc(var(--spacing) * 7);
+    padding: calc(var(--spacing) * 1) calc(var(--spacing) * 2.5);
+    font-size: calc(var(--spacing) * 3.25);
+    font-weight: var(--font-weight-normal);
+    line-height: calc(var(--spacing) * 5);
+    color: var(--foreground);
+    background: var(--control);
+    border: 0;
+  }
+  .media {
+    width: 100%;
+    min-height: calc(var(--spacing) * 32);
+    background: var(--control);
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .image {
+    object-fit: cover;
+  }
+  .selectedCard .clear {
+    width: auto;
+    height: calc(var(--spacing) * 11);
+    padding-inline: calc(var(--spacing) * 2);
+    font-size: calc(var(--spacing) * 3.25);
+    color: var(--muted-foreground);
+    background: transparent;
+    border: 0;
+    border-radius: calc(var(--spacing) * 2.5);
+  }
+  .selectedCard .clear:hover {
+    color: var(--foreground);
+    background: var(--control);
+  }
+  .selectedCard .change {
+    width: auto;
+    height: calc(var(--spacing) * 11);
+    padding: 0;
+    margin: 0;
+    font-size: calc(var(--spacing) * 3.25);
+    color: var(--foreground);
+    background: transparent;
+    border: 0;
+    border-radius: var(--radius-pill);
+  }
+  .selectedCard .change:hover {
+    background: transparent;
+  }
+  .changeSurface {
+    display: inline-flex;
+    gap: calc(var(--spacing) * 1.5);
+    align-items: center;
+    height: calc(var(--spacing) * 8);
+    padding-inline: calc(var(--spacing) * 3);
+    background: var(--panel);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: var(--radius-pill);
+  }
+  .selectedCard .change:hover .changeSurface {
+    background: var(--control);
+  }
+  .results article:has([data-vehicle-selected="true"]) {
+    border-color: var(--brand);
+  }
+  .results [data-vehicle-selected="true"] > span {
+    color: var(--brand-text);
+  }
+}

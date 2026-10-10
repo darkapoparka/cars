@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "leadId": "gb-stockton-norton-grange-trade-cars",
+  "slug": "stockton-norton-grange-trade-cars",
+  "observedAt": "2026-10-10",
+  "name": "Norton Grange Trade Cars",
+  "shortName": "Norton Grange Trade Cars",
+  "legalName": null,
+  "companyNumber": null,
+  "city": "Stockton-on-Tees",
+  "country": "United Kingdom",
+  "countryCode": "GB",
+  "address": null,
+  "phone": null,
+  "phoneDisplay": null,
+  "phoneHref": null,
+  "email": null,
+  "hours": null,
+  "coordinates": null,
+  "currency": "GBP",
+  "distanceUnit": "mi",
+  "locale": "en-GB",
+  "languages": [
+    "en"
+  ],
+  "accent": "#E21420",
+  "website": null,
+  "sourceProfile": "https://showroom.ebaymotorspro.co.uk/Norton-grange-car-sales?menu=1",
+  "mapsUrl": null,
+  "mapsEmbedUrl": null,
+  "tagline": "Browse used cars in Stockton-on-Tees.",
+  "socialLinks": {},
+  "services": [],
+  "stockCount": 10,
+  "publishedListingCount": 17,
+  "sampleOnly": true,
+  "inventoryMode": "dated_listing_samples_with_generated_illustrations",
+  "previewNotice": "Independent design preview for discussion, not an official dealership website. Forms do not send messages or create reservations.",
+  "inventoryNotice": "Vehicle images are generated illustrations, not photographs of the advertised vehicles. Listing details were observed on 10 October 2026; confirm each original advert, price, condition and availability with the dealership.",
+  "availabilityLabel": "Listing sample — availability unconfirmed",
+  "contactNotice": "Direct enquiry destination is not confirmed; show an honest demo/unavailable contact state until resolved.",
+  "locationNote": "City-level location only until conflicting or incomplete premises information is resolved.",
+  "sources": [
+    "https://showroom.ebaymotorspro.co.uk/Norton-grange-car-sales?menu=1",
+    "https://www.autoyas.com/GB/Stockton-on-Tees/155134585966802/Norton-grange-trade-cars",
+    "https://www.facebook.com/155134585966802/",
+    "https://www.cargurus.co.uk/Cars/m-Norton-Grange-Trade-Cars-sp520783"
+  ],
+  "opportunity": "An owned mobile stock showroom with filtering, dealer identity, clear directions and viewing enquiries can complement its marketplace and social presence.",
+  "qualificationNotes": [
+    "Repeated budget family stock and local identity with portal exposure. No owned domain found; recent mirror evidence is secondary and snapshots differ.",
+    "Snapshot of advertisements; availability and count need a refresh before reuse.",
+    "385 Norton Road, Stockton-on-Tees TS20 2PJ — Current premises require confirmation.",
+    "1A Norton Avenue, Stockton-on-Tees TS20 2JH — Older social and other marketplace address; confirm current premises.",
+    "Public trading name/city only: no dealership approval, contact ownership, matched legal entity or private contact history has been verified.",
+    "Vehicle media, prices, mileage, services, staff, reviews, finance claims, hours and branding have not been selected or accepted for application content in this preparation pass."
+  ],
+  "contactCandidates": {
+    "phone": "07759 060895",
+    "email": "nortongrangecars@outlook.com",
+    "phoneSourceUrl": "https://www.autoyas.com/GB/Stockton-on-Tees/155134585966802/Norton-grange-trade-cars",
+    "emailSourceUrl": "https://showroom.ebaymotorspro.co.uk/Norton-grange-car-sales?menu=1",
+    "status": "public_business_contact_not_contacted",
+    "phoneE164": "+447759060895",
+    "approvalStatus": "public_research_not_dealer_confirmed"
+  },
+  "addressCandidates": {
+    "publishedNote": null,
+    "conflicts": [
+      {
+        "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Norton-grange-car-sales?menu=1",
+        "address": "385 Norton Road, Stockton-on-Tees TS20 2PJ"
+      },
+      {
+        "sourceUrl": "https://www.autoyas.com/GB/Stockton-on-Tees/155134585966802/Norton-grange-trade-cars",
+        "address": "1A Norton Avenue, Stockton-on-Tees TS20 2JH",
+        "note": "Older social and other marketplace address; confirm current premises."
+      }
+    ],
+    "googleProfile": {
+      "status": "not_directly_verified",
+      "assessedAt": "2026-10-10",
+      "note": "Marketplace and social-mirror identity checked; public Google profile not confirmed."
+    },
+    "status": "unresolved_do_not_publish_exact_visit_pin"
+  },
+  "researchEvidence": {
+    "inventory": {
+      "count": 17,
+      "kind": "retrieved_marketplace_advertised_count",
+      "retrievedAt": "2026-10-10",
+      "sourceUrl": "https://showroom.ebaymotorspro.co.uk/Norton-grange-car-sales?menu=1",
+      "caveat": "Snapshot of advertisements; availability and count need a refresh before reuse."
+    },
+    "stockSnapshots": [],
+    "activityEvidence": [
+      {
+        "kind": "dated_secondary_social_mirror",
+        "date": "2026-09-26",
+        "sourceUrl": "https://www.autoyas.com/GB/Stockton-on-Tees/155134585966802/Norton-grange-trade-cars",
+        "note": "Opened mirror showed Audi A1 stock matching the marketplace description."
+      },
+      {
+        "kind": "indexed_secondary_date_conflict",
+        "date": "2026-10-02",
+        "sourceUrl": "https://www.autoyas.com/GB/Stockton-on-Tees/155134585966802/Norton-grange-trade-cars",
+        "note": "Newer stock post appeared in search results but was not reproduced by opening the page. Direct Facebook verification was throttled."
+      }
+    ],
+    "website": {
+      "url": null,
+      "status": "no_standalone_domain_found_in_bounded_search",
+      "assessedAt": "2026-10-10",
+      "confidence": "medium",
+      "observations": [
+        "Dealer eBay showroom Visit website destination is motors.co.uk, a marketplace."
+      ]
+    },
+    "domainChecks": {
+      "queries": [
+        "\"Norton grange trade cars\" website",
+        "\"Norton Grange\" car sales website"
+      ],
+      "profilesChecked": [
+        "https://showroom.ebaymotorspro.co.uk/Norton-grange-car-sales?menu=1",
+        "https://www.cargurus.co.uk/Cars/m-Norton-Grange-Trade-Cars-sp520783",
+        "https://www.pistonheads.com/buy/dealer/968844"
+      ],
+      "result": "No confidently matched standalone dealer website found; absence is unproven."
+    }
+  },
+  "branding": {
+    "publishedBranding": "Original red/gray NG monogram and full business name visually inspected in matching public profile; retaining recognizable identity in a proposed refresh.",
+    "sourceLogoUrl": "https://graph.facebook.com/155134585966802/picture?type=large",
+    "workingLogoPath": "dealer-brand/logo.webp",
+    "creationMethod": "identity_preserving_proposal",
+    "approvalStatus": "independent_design_proposal_not_dealer_approved",
+    "visualInspection": "Public references and new logo/icon imagery visually inspected; spelling and complete marks checked.",
+    "requiredNextStep": "Verify actual logo and icon consumers at desktop and mobile widths in all six applications.",
+    "publicReferenceUrls": [
+      "https://graph.facebook.com/155134585966802/picture?type=large",
+      "https://www.autoyas.com/GB/Stockton-on-Tees/155134585966802/Norton-grange-trade-cars"
+    ],
+    "researchDocument": "docs/qa/uk-branding-visual-research-2026-10-10.md"
+  },
+  "buildPreparation": {
+    "status": "content_pack_populated_application_pending",
+    "derivedFrom": {
+      "path": "../../uk-2026-10-10.json",
+      "sourceSha256": "0b8a38395e80f44f70035ba3cd538e44554a917056fd3fde9b4efbc31a999c92",
+      "researchAsOf": "2026-10-10"
+    },
+    "researchSnapshotFlags": {
+      "researchOnly": true,
+      "buildApproved": false,
+      "outreachApproved": false,
+      "contactHistory": "not_checked"
+    },
+    "ownerRequest": "Ten proposals with six variants on Cloudflare after accepted template releases. This pack records neither dealership approval nor changes to original research flags.",
+    "requestedTemplateChoices": [
+      "auto-best",
+      "modern",
+      "import",
+      "app",
+      "mobile",
+      "karento-best"
+    ],
+    "templateLabels": {
+      "auto-best": "Auto Best",
+      "modern": "Modern",
+      "import": "Import",
+      "app": "App",
+      "mobile": "Mobile",
+      "karento-best": "Signature"
+    },
+    "recommendedEntryTemplate": "mobile",
+    "showFirstReason": "Start from the phone experience its social followers would use to browse and enquire.",
+    "templatePins": null,
+    "hosting": {
+      "requestedProvider": "cloudflare",
+      "acceptedPublisher": null,
+      "publicOrigin": null,
+      "status": "await_qualified_pilot_and_release_acceptance",
+      "dnsChangeAuthorized": false,
+      "billingChangeAuthorized": false
+    },
+    "nextAction": "Resolve the address conflict, confirm contact and available inventory, and show Mobile first after accepted releases.",
+    "readyToPersonalizeNow": [
+      "Public trading name",
+      "Public city/region",
+      "GB dealership country",
+      "en-GB English presentation",
+      "GBP pricing contract",
+      "Miles display contract with actual kilometre conversion",
+      "Independent preview disclosure"
+    ],
+    "requiresBeforeComplete": [
+      "Accepted immutable pins for all six requested families",
+      "Qualified six-variant Cloudflare packaging/publisher",
+      "Canonical identity and existing-client/alias reconciliation",
+      "Current premises and direct contact destination",
+      "Visual brand inspection and permitted local raster assets",
+      "Sourced dated stock with correct units and permitted images, or explicitly illustrative inventory",
+      "Inherited identity/claim sweep and honest demo forms",
+      "Per-variant QA and hosted checks"
+    ],
+    "qa": {
+      "sourcePackValidated": true,
+      "applicationBuilt": false,
+      "browserReviewed": false,
+      "hostedVerified": false
+    },
+    "existingClientPathFromResearch": null,
+    "contentSelection": {
+      "observedAt": "2026-10-10",
+      "listingCount": 10,
+      "kind": "dated-listing-snapshot",
+      "mediaKind": "generated_category_illustration",
+      "source": "https://showroom.ebaymotorspro.co.uk/Norton-grange-car-sales?menu=1",
+      "excluded": [],
+      "countNote": "Representative dated examples; not a live available-stock count."
+    }
+  },
+  "logoDark": "/dealer-brand/logo.webp",
+  "logoLight": "/dealer-brand/logo.webp",
+  "logo": "/dealer-brand/logo.webp"
+}

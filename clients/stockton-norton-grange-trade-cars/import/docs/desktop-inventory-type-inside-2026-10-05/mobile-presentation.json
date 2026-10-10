@@ -1,0 +1,46 @@
+[
+	{
+		"locale": "bg",
+		"width": 320,
+		"beforeDigest": "7002d27752b2741fc1b6568259d9cffca283e6b633ea144c501d438867e27013",
+		"afterDigest": "7002d27752b2741fc1b6568259d9cffca283e6b633ea144c501d438867e27013",
+		"equal": true,
+		"visibleElements": 364,
+		"beforeTotalHeight": 2386,
+		"afterTotalHeight": 2386,
+		"fontStatus": ["loaded", "loaded"]
+	},
+	{
+		"locale": "bg",
+		"width": 390,
+		"beforeDigest": "0d1b676eef1a02c971d6dbf83b457e29add1e2f58c530731f4a7ac3cbcde95b6",
+		"afterDigest": "0d1b676eef1a02c971d6dbf83b457e29add1e2f58c530731f4a7ac3cbcde95b6",
+		"equal": true,
+		"visibleElements": 364,
+		"beforeTotalHeight": 2390,
+		"afterTotalHeight": 2390,
+		"fontStatus": ["loaded", "loaded"]
+	},
+	{
+		"locale": "en",
+		"width": 320,
+		"beforeDigest": "de007310d174955ebb232d891c2c7a1805b21e51e1b594a308d8ae003107d6fa",
+		"afterDigest": "de007310d174955ebb232d891c2c7a1805b21e51e1b594a308d8ae003107d6fa",
+		"equal": true,
+		"visibleElements": 364,
+		"beforeTotalHeight": 2378,
+		"afterTotalHeight": 2378,
+		"fontStatus": ["loaded", "loaded"]
+	},
+	{
+		"locale": "en",
+		"width": 390,
+		"beforeDigest": "ed9d28845c7f4538617719830d464012a8a47090adb912c0be91e71a2910522e",
+		"afterDigest": "ed9d28845c7f4538617719830d464012a8a47090adb912c0be91e71a2910522e",
+		"equal": true,
+		"visibleElements": 364,
+		"beforeTotalHeight": 2390,
+		"afterTotalHeight": 2390,
+		"fontStatus": ["loaded", "loaded"]
+	}
+]

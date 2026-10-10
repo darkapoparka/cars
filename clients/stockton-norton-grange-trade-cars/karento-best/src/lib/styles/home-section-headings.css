@@ -1,0 +1,56 @@
+@media (min-width: 992px) {
+  .karento-dealership-home .home-section-description,
+  .karento-dealership-home .home-brands-browse {
+    display: none;
+  }
+
+  .karento-dealership-home .home-section-heading {
+    align-items: center !important;
+    flex-wrap: nowrap;
+    gap: var(--karento-desktop-grid-gap);
+    margin-bottom: var(--karento-desktop-heading-gap) !important;
+  }
+
+  .karento-dealership-home .home-section-title {
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+    margin-bottom: 0 !important;
+  }
+
+  .karento-dealership-home .home-section-actions {
+    flex: 0 0 auto;
+    width: auto;
+    margin-bottom: 0 !important;
+  }
+
+  .karento-dealership-home .home-section-title :is(h2, h3),
+  .karento-dealership-home .karento-brands-heading h3 {
+    margin-bottom: 0 !important;
+  }
+
+  .karento-dealership-home .home-section-heading + .row.pt-30 {
+    padding-top: 0 !important;
+  }
+
+  .karento-dealership-home .home-section-heading + .box-list-news {
+    margin-top: 0 !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .karento-dealership-home .home-section-heading--filters {
+    flex-wrap: wrap;
+    gap: var(--karento-desktop-card-gap);
+  }
+
+  .karento-dealership-home
+    .home-section-heading--filters
+    :is(.home-section-title, .home-section-actions) {
+    flex-basis: 100%;
+  }
+
+  .karento-dealership-home .home-section-heading--filters .popular-categories {
+    justify-content: flex-start !important;
+  }
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "source": "/blog?q=избор",
+    "uses": [
+      {
+        "file": "src/lib/data/navigation.ts",
+        "line": 144,
+        "kind": "typescript"
+      }
+    ],
+    "reason": "URL and domain filter value, not display text; preserve exactly."
+  },
+  {
+    "source": "/blog?category=Лизинг",
+    "uses": [
+      {
+        "file": "src/lib/data/navigation.ts",
+        "line": 145,
+        "kind": "typescript"
+      }
+    ],
+    "reason": "URL and domain filter value, not display text; preserve exactly."
+  },
+  {
+    "source": "/blog?category=Внос",
+    "uses": [
+      {
+        "file": "src/lib/data/navigation.ts",
+        "line": 152,
+        "kind": "typescript"
+      }
+    ],
+    "reason": "URL and domain filter value, not display text; preserve exactly."
+  },
+  {
+    "source": "Български",
+    "uses": [
+      {
+        "file": "src/routes/locale-settings/+page.svelte",
+        "line": 23,
+        "kind": "markup"
+      }
+    ],
+    "reason": "Language autonym remains in its native language."
+  }
+]
