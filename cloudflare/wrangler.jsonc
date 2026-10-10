@@ -1,0 +1,41 @@
+{
+  "name": "cars-uk-motherwell-motors-castle",
+  "main": "router.mjs",
+  "compatibility_date": "2026-10-10",
+  "workers_dev": true,
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": false
+  },
+  "services": [
+    {
+      "binding": "CARS_AUTO_BEST",
+      "service": "cars-uk-motherwell-motors-castle-auto-best"
+    },
+    {
+      "binding": "CARS_MODERN",
+      "service": "cars-uk-motherwell-motors-castle-modern"
+    },
+    {
+      "binding": "CARS_IMPORT",
+      "service": "cars-uk-motherwell-motors-castle-import"
+    },
+    {
+      "binding": "CARS_APP",
+      "service": "cars-uk-motherwell-motors-castle-app"
+    },
+    {
+      "binding": "CARS_MOBILE",
+      "service": "cars-uk-motherwell-motors-castle-mobile"
+    },
+    {
+      "binding": "CARS_KARENTO_BEST",
+      "service": "cars-uk-motherwell-motors-castle-signature"
+    }
+  ]
+}

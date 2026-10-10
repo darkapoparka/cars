@@ -1,0 +1,20 @@
+{
+  "id": "../",
+  "name": "Motors Castle",
+  "short_name": "Motors Castle",
+  "description": "Independent design preview for discussion, not an official dealership website. Forms do not send messages or create reservations.",
+  "lang": "en",
+  "start_url": "/variant-2/cars",
+  "scope": "/variant-2/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#B87943",
+  "icons": [
+    {
+      "src": "https://cars-uk-motherwell-motors-castle.darkapoparka1.workers.dev/dealer-share/083b9b5b27850ff5c2e3/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
