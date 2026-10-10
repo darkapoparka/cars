@@ -24,7 +24,7 @@ async function fits(locator) {
 async function compactControl(locator, { icon = false } = {}) {
   const result = await locator.evaluate(el => {
     const box = el.getBoundingClientRect(), style = getComputedStyle(el), pseudo = getComputedStyle(el, '::before');
-    const svg = el.querySelector('svg')?.getBoundingClientRect();
+    const svg = [...el.querySelectorAll('svg')].find(icon => icon.checkVisibility())?.getBoundingClientRect();
     const hasSurface = pseudo.content !== 'none';
     const visibleHeight = hasSurface ? box.height - parseFloat(pseudo.top) - parseFloat(pseudo.bottom) : box.height;
     return { width: box.width, height: box.height, visibleHeight, fontSize: style.fontSize,
@@ -245,12 +245,17 @@ try {
           assert.equal(search.border, '0px', 'Entry fields have no decorative border');
           assert(search.labelFits, 'The default make/model prompt fits on one line without truncation');
           assert.equal(search.tapHighlight, 'rgba(0, 0, 0, 0)', 'Taps do not paint a native blue overlay');
-          const headerIcons = await page.locator('.dn-mobile-control svg').evaluateAll(icons => icons.map(icon => icon.getBoundingClientRect().width));
-          assert.deepEqual(headerIcons, [22, 22], 'Header location and phone glyphs remain balanced within 44px targets');
+          const headerIcons = await page.locator('.dn-mobile-control svg').evaluateAll(icons => icons.map(icon => ({
+            width: icon.getBoundingClientRect().width,
+            token: parseFloat(getComputedStyle(icon).getPropertyValue('--dn-mobile-header-icon-size')),
+            family: icon.getAttribute('data-icon-family')
+          })));
+          assert(headerIcons.length === 2 && headerIcons.every(icon => icon.width === 20 && icon.width === icon.token && icon.family === 'fluent-system-regular'),
+            'Header location and phone use the shared 20px Fluent role within 44px targets');
           await fits(page.locator('.dn-mobile-control'));
           await page.locator('.dn-quick-search__trigger').click();
-          assert.equal(await page.locator('#quick-search-input').evaluate(input => getComputedStyle(input).fontSize), '18px',
-            'The search editor uses the same readable input size as its entry field');
+          assert.equal(await page.locator('#quick-search-input').evaluate(input => getComputedStyle(input).fontSize), '16px',
+            'The search editor uses the shared 16px mobile overlay field role');
           await page.locator('.dn-quick-search__close').click();
           assert.equal(await page.locator('.dn-quick-search__trigger').evaluate(el => getComputedStyle(el).outlineStyle), 'none', 'Closing by pointer does not leave a focus ring over the opener');
           await page.keyboard.press('Tab');
@@ -274,7 +279,9 @@ try {
             'Home action has a concise localized label without a competing count');
           assert.match(await viewAll.getAttribute('href'), /\/cars$/, 'Home action still opens the inventory');
           await fits(page.locator('.dn-mobile-bottom-nav a, .dn-mobile-bottom-nav button, .dn-mobile-controls a'));
+          await page.evaluate(() => scrollTo(0, 0));
           const dock = page.locator('.dn-mobile-bottom-nav');
+          await dock.waitFor({ state: 'visible' });
           const dockControls = dock.locator('a,button');
           assert.equal(await dockControls.count(), 5);
           dockNames = await dock.locator('.dn-mobile-bottom-nav__label').allTextContents();
@@ -323,10 +330,18 @@ try {
           await fits(page.locator('.dn-mobile-menu__contact a'));
           const localeControl = page.locator('.dn-mobile-menu [data-locale-selector]');
           await fits(localeControl);
-          assert.equal(await localeControl.locator('svg[data-icon-family="fluent-system-regular"]').count(), 2,
-            'Country and language has a globe and chevron in the same mobile icon family');
+          assert.equal(await localeControl.locator('svg[data-icon-family="fluent-system-regular"]').count(), 1,
+            'The compact Language action retains the Fluent globe');
           assert(await localeControl.evaluate(el => el.getBoundingClientRect().height >= 44 && getComputedStyle(el).backgroundColor !== 'rgba(0, 0, 0, 0)'),
-            'Country and language is a visible full-row control');
+            'Language remains a visible control with a complete touch target');
+          const bannerControl = page.locator('.dn-mobile-menu .dn-banner-picker-trigger');
+          await fits(bannerControl);
+          const utilities = await page.locator('.dn-mobile-menu__utilities').evaluate(el => {
+            const [banner, language] = el.querySelectorAll(':scope > button, :scope > a');
+            return { banner: banner.getBoundingClientRect().toJSON(), language: language.getBoundingClientRect().toJSON() };
+          });
+          assert(Math.abs(utilities.banner.width - utilities.language.width) <= 1 && Math.abs(utilities.banner.y - utilities.language.y) <= 1 && utilities.banner.right < utilities.language.left,
+            'Banners and Language share a compact row below the primary menu');
           await capture('menu');
           await page.keyboard.press('Escape');
           assert.equal(await trigger.evaluate(el => document.activeElement === el), true);
@@ -473,7 +488,7 @@ try {
             const editorFields = await editor.locator('input').evaluateAll(inputs => inputs.map(input => ({
               height: input.getBoundingClientRect().height, font: getComputedStyle(input).fontSize
             })));
-            assert(editorFields.every(input => input.height === 44 && input.font === '18px'));
+            assert(editorFields.every(input => input.height === 48 && input.font === '16px'), 'Service editors use the shared 48px/16px mobile overlay field role');
             await page.keyboard.press('Escape');
             const guide = page.locator('.dn-service-guide button[aria-haspopup=dialog]');
             await guide.scrollIntoViewIfNeeded();
@@ -539,7 +554,7 @@ try {
             size: getComputedStyle(input).fontSize, border: getComputedStyle(input).borderWidth,
             height: input.getBoundingClientRect().height, frame: getComputedStyle(input.closest('.dn-mobile-overlay-search')).padding
           }));
-          assert.deepEqual(articleStyles, { size: '18px', border: '0px', height: 44, frame: '0px 4px 0px 16px' },
+          assert.deepEqual(articleStyles, { size: '16px', border: '0px', height: 48, frame: '0px 4px 0px 16px' },
             'Article search uses the shared mobile overlay field');
           assert.equal(await page.locator('.dn-blog-card h2').first().evaluate(title => getComputedStyle(title).fontWeight), '600');
           await capture('articles');

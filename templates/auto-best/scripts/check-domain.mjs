@@ -31,6 +31,12 @@ const listingDraft = await import(pathToFileURL(`${out}/listing-draft.mjs`));
 const modelCatalogue = await import(pathToFileURL(`${out}/model-catalogue.mjs`));
 const journeys = await import(pathToFileURL(`${out}/journeys.mjs`));
 const records = inventory.featuredVehicles;
+for (const locale of ['bg', 'en']) for (const amount of [0, 10000, 100000]) {
+  const price = inventory.formatVehiclePrice(amount, locale);
+  const label = inventory.formatVehiclePriceLabel(amount, locale);
+  assert.equal(label.replaceAll(' ', '\u00a0'), price.replaceAll(' ', '\u00a0'), 'Price labels preserve the complete localized amount');
+  assert(!/(?:[A-Z]{3}|\p{Sc})[\u00a0\u202f]|[\u00a0\u202f](?:[A-Z]{3}|\p{Sc})$/u.test(label), 'Currency codes and symbols may wrap separately from the grouped digits');
+}
 // Cache only pinned catalogue identities, never arbitrary URL selections.
 const unknownFamilies = modelCatalogue.catalogueFamilies('Unlisted Dealer Make');
 assert(Object.isFrozen(unknownFamilies));

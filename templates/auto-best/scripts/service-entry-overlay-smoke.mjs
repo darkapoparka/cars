@@ -97,7 +97,7 @@ async function guideCheck(page, locale, width, topic) {
     const box = action.getBoundingClientRect(), icon = action.querySelector('svg').getBoundingClientRect();
     return { width: box.width, height: box.height, icon: icon.width };
   }));
-  assert.deepEqual(header, [{ width: 44, height: 44, icon: 22 }, { width: 44, height: 44, icon: 22 }]);
+  assert.deepEqual(header, [{ width: 44, height: 44, icon: 20 }, { width: 44, height: 44, icon: 20 }]);
   const trigger = page.locator('.dn-service-guide button[aria-haspopup=dialog]');
   const draft = await serviceEntry(page).locator('.dn-service-entry__field').innerText();
   assert.equal(await trigger.evaluate(button => getComputedStyle(button).backgroundColor), 'rgb(255, 255, 255)');
@@ -106,7 +106,7 @@ async function guideCheck(page, locale, width, topic) {
     const box = button.getBoundingClientRect(), arrow = button.querySelector('svg').getBoundingClientRect();
     return { corner: parseFloat(getComputedStyle(button).borderRadius), arrowOffset: arrow.y + arrow.height / 2 - box.y - box.height / 2 };
   });
-  assert(cardLayout.corner >= 16 && Math.abs(cardLayout.arrowOffset) <= 1, 'The white guide card centers its arrow beside both copy lines');
+  assert(cardLayout.corner === 16 && Math.abs(cardLayout.arrowOffset) <= 1, 'The shared mobile guide card centers its arrow beside both copy lines');
   const entryLayout = await serviceEntry(page).evaluate(entry => {
     const tabs = entry.querySelector('.dn-service-entry__choices').getBoundingClientRect();
     const field = entry.querySelector('.dn-service-entry__field').getBoundingClientRect();

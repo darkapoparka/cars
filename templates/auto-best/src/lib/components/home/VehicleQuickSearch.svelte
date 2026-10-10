@@ -44,6 +44,7 @@
   let yearMin = $state('');
   let searchOpen = $state(false);
   let mobileView = $state<MobileFilterView>('main');
+  let modelReturnView = $state<'main' | 'make'>('main');
   let modelOptions = $derived(listingModelsForMake(make));
   let quickDraft = $derived<ListingDraft>({
     ...emptyListingDraft(),
@@ -58,7 +59,8 @@
   });
   let filteredVehicles = $derived(filterListingVehicles(featuredVehicles, listingFiltersFromDraft(quickDraft), i18n.locale));
   let hasFilters = $derived(listingDraftHasFilters(quickDraft));
-  let makeModelSummary = $derived([...make, ...model].join(', ') || i18n.t("m_a52ace420f21"));
+  let makeSummary = $derived(make.join(', ') || i18n.t("m_a52ace420f21"));
+  let modelSummary = $derived(model.join(', ') || i18n.t("m_a52ace420f21"));
   let mobileMenuTitle = $derived.by(() => {
     if (mobileView === 'make') return i18n.t("m_ccdd25d4230f");
     if (mobileView === 'model') return i18n.t("m_5e2c614c23f0");
@@ -69,7 +71,6 @@
     if (mobileView === 'year') return i18n.t("m_89f6832560de");
     return i18n.t("m_546ebb8eb993");
   });
-  const identityView = $derived(mobileView === 'make' || mobileView === 'model');
   const optionSelected = (value: string) => Array.isArray(mobileMenuValue)
     ? value ? listingSelectionHas(mobileMenuValue, value) : mobileMenuValue.length === 0
     : mobileMenuValue === value;
@@ -118,7 +119,9 @@
     searchOpen = true;
     mobileView = 'main';
     dialog?.showModal();
-    void tick().then(() => { if (dialog?.open) searchInput?.focus({ preventScroll: true }); });
+    // Keep focus in the tap handler so mobile browsers can open the keyboard.
+    if (mobile.current) searchInput?.focus({ preventScroll: true });
+    else void tick().then(() => { if (dialog?.open) searchInput?.focus({ preventScroll: true }); });
   };
   const closeSearch = () => { if (dialog?.open) dialog.close(); };
   const resetSearch = () => {
@@ -133,10 +136,14 @@
     yearMin = cleared.yearMin;
     mobileView = 'main';
   };
-  const openMobileMenu = (view: Exclude<MobileFilterView, 'main'>) => { mobileView = view; void focusMobileView(); };
+  const openMobileMenu = (view: Exclude<MobileFilterView, 'main'>) => {
+    if (view === 'model') modelReturnView = mobileView === 'make' ? 'make' : 'main';
+    mobileView = view;
+    void focusMobileView();
+  };
   const returnToMobileOverview = () => {
     const previous = mobileView;
-    mobileView = previous === 'model' ? 'make' : 'main';
+    mobileView = previous === 'model' ? modelReturnView : 'main';
     void focusMobileView(previous);
   };
   const selectMobileOption = (value: string) => {
@@ -211,7 +218,7 @@
         <button
           class="dn-quick-search__back dn-icon-button"
           type="button"
-          aria-label={mobileView === 'model' ? i18n.t("m_d73ca16bbc17") : i18n.t("m_a779c56e526e")}
+          aria-label={mobileView === 'model' && modelReturnView === 'make' ? i18n.t("m_d73ca16bbc17") : i18n.t("m_a779c56e526e")}
           onclick={returnToMobileOverview}
         >
           <MobileActionIcon name="back" size={20} />
@@ -269,9 +276,15 @@
 
       {#if mobileView === 'main'}
         <div class="dn-quick-search__filter-rows">
-          <button class="dn-quick-search__filter-row dn-mobile-overlay-row" data-view="make" data-active={Boolean(make.length || model.length)} type="button" onclick={() => openMobileMenu('make')}>
-            <strong>{i18n.t("m_ffd178a2d771")}</strong>
-            <span data-active={Boolean(make.length || model.length)}>{makeModelSummary}</span>
+          <button class="dn-quick-search__filter-row dn-mobile-overlay-row" data-view="make" data-active={Boolean(make.length)} type="button" onclick={() => openMobileMenu('make')}>
+            <strong>{i18n.t("m_ccdd25d4230f")}</strong>
+            <span data-active={Boolean(make.length)}>{makeSummary}</span>
+            <MobileActionIcon name="arrow" size={18} />
+          </button>
+
+          <button class="dn-quick-search__filter-row dn-mobile-overlay-row" data-view="model" data-active={Boolean(model.length)} type="button" onclick={() => openMobileMenu('model')}>
+            <strong>{i18n.t("m_5e2c614c23f0")}</strong>
+            <span data-active={Boolean(model.length)}>{modelSummary}</span>
             <MobileActionIcon name="arrow" size={18} />
           </button>
 
@@ -307,7 +320,7 @@
         </div>
       {:else}
         <div class="dn-quick-search__option-menu" aria-label={mobileMenuTitle}>
-          <div class="dn-quick-search__option-grid" class:identity={identityView}>
+          <div class="dn-quick-search__option-grid">
             {#each mobileMenuOptions as option (option.value)}
               <button
                 class="dn-quick-search__option dn-mobile-overlay-option"
@@ -315,7 +328,7 @@
                 aria-pressed={optionSelected(option.value)}
                 onclick={() => selectMobileOption(option.value)}
               >
-                <span class="option-label">{option.label}</span>{#if identityView}<span class="identity-check dn-mobile-filter-check" data-checked={optionSelected(option.value)} aria-hidden="true">{#if optionSelected(option.value)}<MobileActionIcon name="check" size={18} />{/if}</span>{/if}
+                <span class="option-label">{option.label}</span><span class="identity-check dn-mobile-filter-check" data-checked={optionSelected(option.value)} aria-hidden="true">{#if optionSelected(option.value)}<MobileActionIcon name="check" size={18} />{/if}</span>
               </button>
             {/each}
           </div>
@@ -327,7 +340,7 @@
         {#if mobileView === 'make'}
           <button class="dn-mobile-overlay-action" type="button" onclick={() => openMobileMenu('model')}>{i18n.t('m_5e2c614c23f0')}<MobileActionIcon name="arrow" size={20} /></button>
         {:else if mobileView === 'model'}
-          <button class="dn-mobile-overlay-action" type="button" onclick={() => { mobileView = 'main'; void focusMobileView('make'); }}>{i18n.t('m_1509f561f241')}</button>
+          <button class="dn-mobile-overlay-action" type="button" onclick={() => { mobileView = 'main'; void focusMobileView('model'); }}>{i18n.t('m_1509f561f241')}</button>
         {:else}<button class="dn-mobile-overlay-action" type="submit" disabled={filteredVehicles.length === 0} aria-live="polite" aria-label={filteredVehicles.length === 1 ? i18n.t('m_047e325f6562') : i18n.t('m_08d2ff28407e', { p0: filteredVehicles.length })}>
           {i18n.t('action.showCount', { count: filteredVehicles.length })}
         </button>{/if}
@@ -562,7 +575,7 @@
 
     .dn-quick-search__option:has(.identity-check) { display: flex; align-items: center; justify-content: flex-start; gap: var(--dn-space-3); }
     .identity-check { order: -1; }
-    .option-label { min-width: 0; overflow-wrap: anywhere; }
+    .option-label { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
     .dn-quick-search__title-desktop {
       display: none;
@@ -577,6 +590,7 @@
     }
 
     .dn-quick-search__form {
+      flex-shrink: 0;
       padding: 0 var(--dn-overlay-gutter) var(--dn-overlay-gap);
     }
 
@@ -613,14 +627,11 @@
 
     .dn-quick-search__option-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: minmax(0, 1fr);
       gap: var(--dn-mobile-filter-control-gap);
-      column-gap: var(--dn-overlay-gap);
     }
 
-    .dn-quick-search__option-grid.identity { grid-template-columns: minmax(0, 1fr); gap: var(--dn-mobile-filter-control-gap); }
-    .identity .dn-quick-search__option { min-height: var(--dn-overlay-row-height); padding-inline: var(--dn-space-3); }
-    .dn-quick-search__mobile-footer { border-top: 1px solid var(--dn-line); }
+    .dn-quick-search__option { min-height: var(--dn-overlay-row-height); padding-inline: var(--dn-space-3); }
   }
 
   @media (prefers-reduced-motion: reduce) {

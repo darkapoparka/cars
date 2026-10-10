@@ -200,7 +200,7 @@
   <div class="dn-service-entry dn-service-entry--mobile">
     <EntrySegments class="dn-service-entry__choices" bind:value={purpose} label={i18n.t('service.purpose')} options={[{ value: 'Продажба', label: i18n.t('enquiry.purpose.sell') }, { value: 'Бартер', label: i18n.t('enquiry.purpose.tradeIn') }]} />
     <ServiceEntryField id="sell-service-field" mode="sell" bind:this={mobileEditor} value={{ reference, make, model, year, mileage, budget: price, brief: '' }} onapply={(draft) => { ({ reference, make, model, year, mileage } = draft); price = draft.budget; mobileDraftUsed = true; detailsDraft = { make, model, year, mileage }; }} />
-    <button class="dn-service-entry__submit dn-compact-control dn-entry-action dn-compact-primary" type="button" aria-haspopup="dialog" onclick={startMobile}>{i18n.t('action.requestValuation')}<MobileActionIcon name="arrow" size={15} /></button>
+    <EntryAction class="dn-service-entry__submit" type="button" dialog onclick={startMobile} aria-label={i18n.t('action.requestValuation')}>{i18n.t('action.requestShort')}</EntryAction>
   </div>
   <form class="dn-service-entry dn-service-entry--desktop" bind:this={entryForm} onsubmit={startInline}>
     <EntrySegments class="dn-service-entry__choices" bind:value={purpose} label={i18n.t('service.purpose')} options={[{ value: 'Продажба', label: i18n.t('enquiry.purpose.sell') }, { value: 'Бартер', label: i18n.t('enquiry.purpose.tradeIn') }]} />

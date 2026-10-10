@@ -65,7 +65,7 @@
           {#if importError}
             <p id="home-import-error" class="dn-search__import-error" role="alert">{i18n.text(importError)}</p>
           {/if}
-          <EntryAction class="dn-search__mobile-all">{i18n.t('action.importShort')}</EntryAction>
+          <EntryAction class="dn-search__mobile-all" aria-label={i18n.t('action.requestImport')}>{i18n.t('action.requestShort')}</EntryAction>
         </form>
       </div>
       <div class="dn-search__desktop-form">
@@ -152,7 +152,6 @@
     }
 
     .dn-search-wrap :global(.dn-search) {
-      padding: var(--dn-space-5);
       border-radius: var(--dn-radius-entry-card);
       box-shadow: var(--dn-card-shadow-subtle);
     }
@@ -165,22 +164,12 @@
       --dn-compact-control-surface: var(--dn-ink-deep);
     }
 
-    .dn-search__buy :global(.dn-search__mobile-all) {
-      --dn-entry-action-width: fit-content;
-    }
-
     .dn-search-wrap :global(.dn-search__mobile-all:is(:hover, :focus-visible)) {
       --dn-compact-control-surface: var(--dn-ink-hover);
     }
 
     .dn-search-wrap :global(.dn-quick-search__trigger) {
       padding-block: var(--dn-space-2);
-    }
-
-    .dn-search-wrap :global(.dn-quick-search__label-mobile) {
-      overflow: visible;
-      white-space: normal;
-      text-overflow: clip;
     }
 
     .dn-search__buy { display: contents; }

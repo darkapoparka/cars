@@ -19,11 +19,14 @@
   import DesktopModelGroups, { type ModelPicker } from './DesktopModelGroups.svelte';
   import type { PickerNavigation } from './FilterPopoverHeader.svelte';
 
-  let { field, draft = $bindable(), desktopChoices = false, widePanel = false, header, onChoose, contentElement = $bindable() }: {
+  let { field, draft = $bindable(), desktopChoices = false, widePanel = false, filterPanel = false, modelMakes, onModelMake, header, onChoose, contentElement = $bindable() }: {
     field: ListingFacetField;
     draft: ListingDraft;
     desktopChoices?: boolean;
     widePanel?: boolean;
+    filterPanel?: boolean;
+    modelMakes?: string[];
+    onModelMake?: (make: string) => void;
     header?: Snippet<[Snippet | undefined, PickerNavigation | undefined]>;
     onChoose?: () => void;
     contentElement?: HTMLDivElement;
@@ -97,7 +100,7 @@
   </div>
 {/snippet}
 
-<div class="dn-facet-editor" class:searchable class:desktop-choices={desktopChoices} class:wide-panel={widePanel} class:make-grid={widePanel && field === 'make'}>
+<div class="dn-facet-editor" class:searchable class:desktop-choices={desktopChoices} class:wide-panel={widePanel} class:make-grid={widePanel && field === 'make'} class:filter-panel={filterPanel}>
   {#if header}{@render header(widePanel && searchable ? searchControl : undefined, modelPicker?.navigation())}{/if}
   {#if searchable && !(header && widePanel)}
     <div class="search-wrap">{@render searchControl()}</div>
@@ -105,8 +108,8 @@
   <div class="content" {@attach attachContent}>
     {#if range}
       <div class="range">
-        <label>{templateMessage(i18n, 'From{p0}', { p0: field === 'price' ? ' (' + currencySymbol(i18n.locale) + ')' : '' })}<input {@attach i18n.validationFor(field)} type="number" inputmode="numeric" name={`${field}_min`} value={draft[minimumKey]} oninput={event => draft[minimumKey] = event.currentTarget.value} min={field === 'year' ? 1900 : 0} max={field === 'year' ? new Date().getFullYear() + 1 : undefined} step="1" placeholder={i18n.t('m_8a702098f672')} aria-invalid={invalid || undefined} /></label>
-        <label>{templateMessage(i18n, 'To{p0}', { p0: field === 'price' ? ' (' + currencySymbol(i18n.locale) + ')' : '' })}<input {@attach i18n.validationFor(field)} type="number" inputmode="numeric" name={`${field}_max`} value={draft[maximumKey]} oninput={event => draft[maximumKey] = event.currentTarget.value} min={field === 'year' ? 1900 : 0} max={field === 'year' ? new Date().getFullYear() + 1 : undefined} step="1" placeholder={i18n.t('m_585b0741c5fb')} aria-invalid={invalid || undefined} /></label>
+        <label>{filterPanel && field === 'year' ? i18n.t('inventory.modal.yearFrom') : templateMessage(i18n, 'From{p0}', { p0: field === 'price' ? ' (' + currencySymbol(i18n.locale) + ')' : '' })}<input {@attach i18n.validationFor(field)} type="number" inputmode="numeric" name={`${field}_min`} value={draft[minimumKey]} oninput={event => draft[minimumKey] = event.currentTarget.value} min={field === 'year' ? 1900 : 0} max={field === 'year' ? new Date().getFullYear() + 1 : undefined} step="1" placeholder={i18n.t(filterPanel ? 'inventory.range.unlimited' : 'm_8a702098f672')} aria-invalid={invalid || undefined} /></label>
+        <label>{filterPanel && field === 'year' ? i18n.t('inventory.modal.yearTo') : templateMessage(i18n, 'To{p0}', { p0: field === 'price' ? ' (' + currencySymbol(i18n.locale) + ')' : '' })}<input {@attach i18n.validationFor(field)} type="number" inputmode="numeric" name={`${field}_max`} value={draft[maximumKey]} oninput={event => draft[maximumKey] = event.currentTarget.value} min={field === 'year' ? 1900 : 0} max={field === 'year' ? new Date().getFullYear() + 1 : undefined} step="1" placeholder={i18n.t(filterPanel ? 'inventory.range.unlimited' : 'm_585b0741c5fb')} aria-invalid={invalid || undefined} /></label>
       </div>
       {#if invalid}<p role="alert">{i18n.t('m_8418439e87ac')}</p>{/if}
       {#if mobile.current || widePanel}
@@ -126,14 +129,21 @@
         </div>
       {/if}
     {:else if field === 'model' && desktopChoices && widePanel}
-      <DesktopModelGroups bind:this={modelPicker} makes={draft.make} selected={draft.model} {search} onchange={choose} />
+      <DesktopModelGroups bind:this={modelPicker} makes={modelMakes ?? draft.make} selected={draft.model} {search} onchange={choose} />
     {:else}
       <fieldset>
         <legend class="dn-sr-only">{title}</legend>
         {#each choices as option (option)}
           {#if desktopChoices && matches(optionLabel(option))}
             {#if widePanel && field === 'make'}
-              <DesktopMakeChoice value={option} label={optionLabel(option)} name={field} checked={isSelected(option)} onchange={choose} />
+              {#if filterPanel}
+                <div class="make-card">
+                  <DesktopMakeChoice value={option} label={optionLabel(option)} name={field} checked={isSelected(option)} onchange={choose} portrait={false} compact />
+                  {#if option && onModelMake}<button class="make-models" type="button" aria-label={i18n.t('inventory.modal.modelsFor', { make: option })} onclick={() => onModelMake?.(option)}><Icon name="chevron-down" size={16} /></button>{/if}
+                </div>
+              {:else}
+                <DesktopMakeChoice value={option} label={optionLabel(option)} name={field} checked={isSelected(option)} onchange={choose} />
+              {/if}
             {:else}
               <DesktopFilterChoice value={option} label={optionLabel(option)} name={field}
                 multiple={field === 'make' || field === 'model' || field === 'equipment'} tile={widePanel}
@@ -186,7 +196,27 @@
     .wide-panel .presets button:hover { background: var(--dn-surface-hover); }
     .wide-panel .presets button[aria-pressed=true] { background: var(--dn-surface-hover); box-shadow: inset 0 0 0 1px var(--dn-line-emphasis); }
     .wide-panel .presets button:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
+    .filter-panel .content { padding-inline: 0; }
+    .filter-panel .range { width: 100%; margin-inline: 0; padding-top: 0; gap: var(--dn-space-4); }
+    .filter-panel .range label, .filter-panel .mileage { color: var(--dn-ink); font-weight: var(--dn-weight-medium); }
+    .filter-panel input[type=number] { height: var(--dn-control-height-entry-mobile); border-color: var(--dn-line); font-variant-numeric: tabular-nums; }
+    .filter-panel input[type=number]:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
+    .filter-panel .mileage { max-width: 360px; }
+    .filter-panel .presets { display: flex; flex-wrap: wrap; gap: var(--dn-space-2); margin-top: var(--dn-space-5); }
+    .filter-panel .presets button { min-height: var(--dn-control-height-compact); padding-inline: var(--dn-space-4); border: 1px solid var(--dn-line); border-radius: var(--dn-pill); background: var(--dn-white); font-size: var(--dn-text-meta); }
+    .filter-panel .presets button[aria-pressed=true] { border-color: var(--dn-ink); background: var(--dn-ink); color: var(--dn-white); box-shadow: none; }
+    .filter-panel.make-grid fieldset { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .make-card { display: flex; align-items: center; min-width: 0; min-height: 60px; border: 1px solid var(--dn-line); border-radius: var(--dn-radius-sm); background: var(--dn-white); }
+    .make-card:has(:global(input:checked)) { background: var(--dn-surface-subtle); border-color: var(--dn-line-strong); }
+    .make-card :global(.dn-desktop-choice) { flex: 1; min-width: 0; gap: var(--dn-space-2); padding-inline: var(--dn-space-2); font-size: var(--dn-text-meta); }
+    .make-card :global(.dn-desktop-choice-media) { flex-basis: var(--dn-space-7); width: var(--dn-space-7); height: var(--dn-space-7); }
+    .make-card :global(.dn-desktop-choice-label) { overflow-wrap: normal; }
+    .make-card :global(small) { font-size: var(--dn-text-caption); }
+    .make-models { display: grid; flex: 0 0 32px; place-items: center; align-self: stretch; padding: 0; border: 0; border-radius: var(--dn-radius-sm); background: transparent; color: var(--dn-ink); cursor: pointer; }
+    .make-models:hover { background: var(--dn-surface-subtle); }
+    .make-models:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
   }
+  @media (min-width: 992px) and (max-width: 1099px) { .filter-panel.make-grid fieldset { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   .choice { display: flex; min-height: var(--dn-overlay-control-height); padding: var(--dn-space-2) var(--dn-space-4); gap: var(--dn-entry-action-gap); justify-content: space-between; align-items: center; border-radius: var(--dn-overlay-row-radius); background: var(--dn-home-panel); color: var(--dn-ink); font: var(--dn-field-font); cursor: pointer; }
   .choice[hidden] { display: none; }
   .choice > span { min-width: 0; overflow-wrap: anywhere; }

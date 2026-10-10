@@ -3,9 +3,49 @@
     "en": "All ({count})",
     "bg": "Всички ({count})"
   },
+  "inventory.modal.yearFrom": {
+    "en": "From year",
+    "bg": "От година"
+  },
+  "inventory.modal.yearTo": {
+    "en": "To year",
+    "bg": "До година"
+  },
+  "inventory.modal.vehicle": {
+    "en": "Vehicle",
+    "bg": "Автомобил"
+  },
+  "inventory.modal.price": {
+    "en": "Price",
+    "bg": "Цена"
+  },
+  "inventory.modal.details": {
+    "en": "Details",
+    "bg": "Характеристики"
+  },
+  "inventory.modal.makeHelp": {
+    "en": "Choose makes or browse their models.",
+    "bg": "Изберете марки или разгледайте моделите им."
+  },
+  "inventory.modal.modelsFor": {
+    "en": "Models for {make}",
+    "bg": "Модели на {make}"
+  },
   "inventory.modal.applied": {
     "en": "Selected filters",
     "bg": "Избрани филтри"
+  },
+  "inventory.modal.selected": {
+    "en": "{count} selected",
+    "bg": "{count} избрани"
+  },
+  "inventory.modal.clear": {
+    "en": "Clear",
+    "bg": "Изчисти"
+  },
+  "inventory.modal.invalidNumber": {
+    "en": "Enter a whole number within the allowed range.",
+    "bg": "Въведете цяло число в допустимия диапазон."
   },
   "inventory.search.placeholder": {
     "en": "Search makes, models or filters…",
@@ -392,6 +432,10 @@
     "en": "Country and language",
     "bg": "Държава и език"
   },
+  "locale.languageShort": {
+    "en": "Language",
+    "bg": "Език"
+  },
   "locale.welcome": {
     "en": "Welcome to {dealerName}",
     "bg": "Добре дошли в {dealerName}"
@@ -540,6 +584,10 @@
     "en": "Call",
     "bg": "Обади се"
   },
+  "action.callUs": {
+    "en": "Call us",
+    "bg": "Обадете се"
+  },
   "action.locationShort": {
     "en": "Location",
     "bg": "Адрес"
@@ -668,6 +716,10 @@
     "en": "Import",
     "bg": "Внос"
   },
+  "action.requestShort": {
+    "en": "Request",
+    "bg": "Заяви"
+  },
   "action.requestImport": {
     "en": "Request import",
     "bg": "Заяви внос"
@@ -727,7 +779,7 @@
     "en": "Customer support",
     "bg": "Обслужване на клиенти"
   },
-  "home.bannerPreview.title": { "en": "Banner preview", "bg": "Банери" },
+  "home.bannerPreview.title": { "en": "Banners", "bg": "Банери" },
   "home.bannerPreview.stripes": { "en": "Stripes", "bg": "Ивици" },
   "home.bannerPreview.kerb": { "en": "Kerbs", "bg": "Бордюри" },
   "home.bannerPreview.circuit": { "en": "Nordschleife", "bg": "Нюрбургринг" },

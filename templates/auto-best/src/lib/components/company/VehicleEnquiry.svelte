@@ -207,7 +207,7 @@
   <div class="dn-service-entry dn-service-entry--mobile" bind:this={mobileEntry}>
     <EntrySegments class="dn-service-entry__choices" bind:value={importMode} label={i18n.t('service.method')} onchange={chooseMobileMode} options={[{ value: 'listing', label: i18n.t('service.listing') }, { value: 'criteria', label: i18n.t('service.search') }]} />
     <ServiceEntryField id="import-service-field" mode={importMode} bind:this={mobileEditor} value={{ reference: importMode === 'listing' ? link : '', make, model, year, mileage: '', budget, brief: importBrief }} onapply={(draft) => { if (importMode === 'listing') linkDraft = draft.reference; else { ({ make, model, year, budget } = draft); importBrief = draft.brief; } }} />
-    <button class="dn-service-entry__submit dn-compact-control dn-entry-action dn-compact-primary" type="button" aria-haspopup="dialog" onclick={startMobile}>{i18n.t('action.requestImport')}<MobileActionIcon name="arrow" size={15} /></button>
+    <EntryAction class="dn-service-entry__submit" type="button" dialog onclick={startMobile} aria-label={i18n.t('action.requestImport')}>{i18n.t('action.requestShort')}</EntryAction>
   </div>
   <form class="dn-service-entry dn-service-entry--desktop" bind:this={entryForm} onsubmit={startInline}>
     <EntrySegments class="dn-service-entry__choices" bind:value={importMode} label={i18n.t('service.method')} onchange={() => entryError = ''} options={[{ value: 'listing', label: i18n.t('service.listing') }, { value: 'criteria', label: i18n.t('service.search') }]} />

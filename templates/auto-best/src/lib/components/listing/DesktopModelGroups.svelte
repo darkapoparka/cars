@@ -115,7 +115,7 @@
         <section class="search-group" aria-label={`${group.make} ${family.name}`}>
           <h3>{group.make} · {family.name}</h3>
           <div class="models">{#each family.choices as choice (choice.value)}
-            <DesktopFilterChoice value={choice.value} label={choice.label} accessibleLabel={choice.label} description={vehicleCount(i18n.locale, choice.count)} checked={listingSelectionHas(selected, choice.value)} multiple {name} {onchange} />
+            <DesktopFilterChoice value={choice.value} label={choice.label} accessibleLabel={choice.label} description={vehicleCount(i18n.locale, choice.count)} checked={listingSelectionHas(selected, choice.value)} multiple tile={!compact} {name} {onchange} />
           {/each}</div>
         </section>
       {/each}
@@ -125,7 +125,7 @@
     {#if currentFamily}
       <div class="models" data-model-view={currentFamily.name} role="group" aria-label={`${currentMake.make} ${currentFamily.name}`}>
         {#each currentFamily.choices as choice (choice.value)}
-          <DesktopFilterChoice value={choice.value} label={choice.label} accessibleLabel={choice.label} description={vehicleCount(i18n.locale, choice.count)} checked={listingSelectionHas(selected, choice.value)} multiple {name} {onchange} />
+          <DesktopFilterChoice value={choice.value} label={choice.label} accessibleLabel={choice.label} description={vehicleCount(i18n.locale, choice.count)} checked={listingSelectionHas(selected, choice.value)} multiple tile={!compact} {name} {onchange} />
         {/each}
       </div>
     {:else}
@@ -158,6 +158,9 @@
   h3 { min-width: 0; margin: 0; color: var(--dn-ink); font: var(--dn-control-font); overflow-wrap: anywhere; }
   .search-group { min-width: 0; }
   .search-group h3 { padding: var(--dn-space-2) var(--dn-space-3); color: var(--dn-muted); }
+  @media (min-width: 992px) {
+    .disclosure.selected, .models :global(.dn-desktop-choice--tile:has(input:checked)) { background: var(--dn-surface-hover); box-shadow: inset 0 0 0 1px var(--dn-line-emphasis); }
+  }
   .make-title { font: var(--dn-control-font); }
   .make-media { display: grid; flex: 0 0 var(--dn-control-height-entry-mobile); place-items: center; width: var(--dn-control-height-entry-mobile); height: var(--dn-space-7); }
   .make-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, calc(var(--dn-control-height-default) * 3 + var(--dn-space-1))), 1fr)); }

@@ -31,6 +31,8 @@
   import ListingChoicePicker from './ListingChoicePicker.svelte';
   import DesktopFilterChoice from './DesktopFilterChoice.svelte';
   import DesktopVehicleSearch from './DesktopVehicleSearch.svelte';
+  import DesktopListingFilters from './DesktopListingFilters.svelte';
+  import { template } from '$config/template';
   import FilterCloseButton from './FilterCloseButton.svelte';
   import type { Attachment } from 'svelte/attachments';
 
@@ -53,6 +55,7 @@
   let desktopInitialField = $state<string>();
   const desktopFacet = $derived(listingFilterGroups.flatMap(group => group.fields).find(field => field === desktopInitialField));
   const desktopMode = $derived(desktopPickers && desktopMatches && Boolean(desktopFacet));
+  const desktopModalMode = $derived(desktopPickers && desktopMatches && (!desktopInitialField || desktopInitialField === 'search' && template.desktopInventorySearch === 'filters'));
   const dialogTitle = $derived(i18n.t(desktopPickers && !desktopInitialField ? 'm_546ebb8eb993' : 'm_32729e44de2d'));
   let returnFocus = $state<HTMLButtonElement>();
   let keyboardOpen = $state(false);
@@ -93,7 +96,7 @@
     returnFocus = event.currentTarget as HTMLButtonElement;
     keyboardOpen = event.detail === 0;
     desktopInitialField = field;
-    if (desktopMode || mobile.current) { filtersOpen = true; return; }
+    if (desktopMode || desktopModalMode || mobile.current) { filtersOpen = true; return; }
     initializeDraft();
     releaseOffset = preserveScrollOffset('--dn-dialog-scroll-offset');
     filtersOpen = true;
@@ -106,7 +109,7 @@
       : desktopPickers && !field ? filterDialog?.querySelector<HTMLElement>('#dn-listing-filter-title') : dialogSearch;
     target?.focus({ preventScroll: true });
   };
-  const closeFilters = () => { if (desktopMode) filtersOpen = false; else if (filterDialog?.open) filterDialog.close(); };
+  const closeFilters = () => { if (desktopMode || desktopModalMode) filtersOpen = false; else if (filterDialog?.open) filterDialog.close(); };
   const handleDialogClick = (event: MouseEvent) => { if (event.target === event.currentTarget) closeFilters(); };
   const handleCancel = (event: Event) => { event.preventDefault(); closeFilters(); };
   const handleSearchKeydown = (event: KeyboardEvent) => {
@@ -136,6 +139,8 @@
 {@render children(openFilters, filtersOpen)}
 {#if desktopMode}
   <DesktopVehicleSearch {filters} bind:open={filtersOpen} initialField={desktopFacet} {returnFocus} {keyboardOpen} />
+{:else if desktopModalMode}
+  <DesktopListingFilters {filters} bind:open={filtersOpen} {returnFocus} focusSearch={desktopInitialField === 'search'} />
 {:else if mobile.current}
   <MobileListingFilters {filters} bind:open={filtersOpen} {returnFocus} focusSearch={desktopInitialField === 'search'} />
 {:else}
