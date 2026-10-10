@@ -15,6 +15,7 @@ import {loadDealerProfile} from './lib/client-refresh-normalize.mjs';
 import {assertAppVariant} from './publishing/app-variant.mjs';
 import {assertExtendedVariantSources,applySixVariantMounts} from './publishing/six-variant.mjs';
 import {repairDealerTemplateContracts} from './publishing/dealer-template-contracts.mjs';
+import {specializeModernDemoDatabase} from './publishing/modern-demo-database.mjs';
 import {specializeDealerReferencePackage} from './publishing/dealer-reference-package.mjs';
 import {applyDealerShare} from './publishing/dealer-share.mjs';
 import {PUBLIC_ROOTS,familyRetention} from './publishing/vercel-asset-plan.mjs';
@@ -81,6 +82,7 @@ async function prepare(slug,key,sha,area){
  manifest.cloudflare={workerPrefix};manifest.shareIdentity={name:profile.business.name,publicOrigin,description:profile.business.name+' — независим демонстрационен каталог. Наличността и условията се потвърждават с търговеца.',logo:{sourcePath:'branding/logo-on-light.png',sha256:hash(files.get('branding/logo-on-light.png')),faviconSourcePath:'assets/app-icon.png',faviconSha256:hash(files.get('assets/app-icon.png'))}};
  files=applySixVariantMounts(files,manifest,{provider:'cloudflare'});
  const contracts=repairDealerTemplateContracts(files),reference=specializeDealerReferencePackage(files,manifest);
+ const databaseSpecialization=specializeModernDemoDatabase(files,manifest);
  const tools=createRequire(path.join(ROOT,'runtime/varna-tools/package.json')),sharp=tools('sharp'),typescript=tools('typescript');
  if(sharp.versions.sharp!=='0.35.5'||typescript.version!=='6.0.3')throw Error('Unexpected share compiler');
  await applyDealerShare(files,manifest,{sharp,typescript});
@@ -95,7 +97,7 @@ async function prepare(slug,key,sha,area){
  const root=key==='router'?'cloudflare':key;
  const retained=new Map([...files].filter(([name])=>name.startsWith(root+'/')||name.startsWith('scripts/')||!name.includes('/')));
  const packageRoot=path.join(area,'package');writeFiles(packageRoot,retained);
- const provenance={schemaVersion:1,dealer:slug,key,sourceCommit:sha,sourceTree:git(ROOT,['rev-parse',sha+':clients/'+slug]),inputDigest:hash(JSON.stringify(inputRows)),sourceCandidate:candidate.candidateSourceDigest,sourceReleases:manifest.templateSources,manifest,workerPrefix,publicOrigin,originalSourceUnchanged:true,assembledDigest:hash(JSON.stringify(assembledRows)),targetBeforeDependencies:sourceRows(retained),contracts,reference,retention:pruned.receipts,nativeApproval:false,hosted:false};
+ const provenance={schemaVersion:1,dealer:slug,key,sourceCommit:sha,sourceTree:git(ROOT,['rev-parse',sha+':clients/'+slug]),inputDigest:hash(JSON.stringify(inputRows)),sourceCandidate:candidate.candidateSourceDigest,sourceReleases:manifest.templateSources,manifest,workerPrefix,publicOrigin,originalSourceUnchanged:true,assembledDigest:hash(JSON.stringify(assembledRows)),targetBeforeDependencies:sourceRows(retained),contracts,reference,databaseSpecialization,retention:pruned.receipts,nativeApproval:false,hosted:false};
  writeJson(path.join(area,'receipts/source.json'),provenance);return {packageRoot,manifest,provenance};
 }
 function installedBin(root,name){
