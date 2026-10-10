@@ -1,9 +1,14 @@
 {
-  "schemaVersion": 1,
-  "request": "priority-navara-day-and-night-six-neutral-services",
-  "dealers": [
-    "navara-car",
-    "day-and-night-auto-group"
-  ],
-  "scope": "Compile exact reviewed six-design sources using the working Cloudflare publisher with neutral surfaces and Signature Services. No billing changes; the two mandatory dealers have priority."
+    "scope":  "Compile remaining seven reviewed existing dealers after the mandatory Navara/Day wave. No Cloudflare publication or billing changes in CI.",
+    "schemaVersion":  1,
+    "request":  "remaining-seven-selected-six-designs-neutral-services",
+    "dealers":  [
+                    "priselci",
+                    "isauto-varna",
+                    "automarket-varna",
+                    "outletcars-varna",
+                    "perfect-auto-varna",
+                    "avangard-auto",
+                    "legend-auto"
+                ]
 }
