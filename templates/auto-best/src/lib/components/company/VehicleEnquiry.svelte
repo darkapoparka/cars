@@ -243,14 +243,16 @@
         </div>
       {:else}
         <section class="dn-enquiry-summary" aria-label={i18n.t('m_302415e752d4')}>
-          <div class="dn-enquiry-review-heading"><span>{i18n.t(selectedLink ? 'service.listing' : 'service.search')}</span><button class="dn-enquiry-text-button" type="button" onclick={() => move(0)}>{i18n.t("m_69bd6f7ec2e5")}</button></div>
-          <h3>{vehicleLabel}</h3>
-          {#if selectedLink}<a class="dn-enquiry-review-link" href={selectedLink} target="_blank" rel="noopener noreferrer" aria-label={`${i18n.t('service.url')}: ${listingHost}`}>{listingHost}</a>{/if}
-          {#if year || budget}<dl class="dn-enquiry-review-facts">
-            {#if year}<div><dt>{i18n.t('service.yearFrom')}</dt><dd>{year}</dd></div>{/if}
-            {#if budget}<div><dt>{i18n.t('m_84e960d40ad5')}</dt><dd>{formatPrice(Number(budget), i18n.locale)}</dd></div>{/if}
-          </dl>{/if}
-          {#if !selectedLink && importBrief.trim()}<p class="dn-enquiry-review-brief">{importBrief.trim()}</p>{/if}
+          <div class="dn-enquiry-review-vehicle">
+            <div class="dn-enquiry-review-heading"><span>{i18n.t(selectedLink ? 'service.listing' : 'service.search')}</span><button class="dn-enquiry-text-button" type="button" onclick={() => move(0)}>{i18n.t("m_69bd6f7ec2e5")}</button></div>
+            <h3>{vehicleLabel}</h3>
+            {#if selectedLink}<a class="dn-enquiry-review-link" href={selectedLink} target="_blank" rel="noopener noreferrer" aria-label={`${i18n.t('service.url')}: ${listingHost}`}>{listingHost}</a>{/if}
+            {#if year || budget}<dl class="dn-enquiry-review-facts">
+              {#if year}<div><dt>{i18n.t('service.yearFrom')}</dt><dd>{year}</dd></div>{/if}
+              {#if budget}<div><dt>{i18n.t('m_84e960d40ad5')}</dt><dd>{formatPrice(Number(budget), i18n.locale)}</dd></div>{/if}
+            </dl>{/if}
+            {#if !selectedLink && importBrief.trim()}<p class="dn-enquiry-review-brief">{importBrief.trim()}</p>{/if}
+          </div>
           {#if notes.trim()}<div class="dn-enquiry-review-section"><h4>{i18n.t('m_5b1b33d291b9')}</h4><p>{notes.trim()}</p></div>{/if}
           {#if name.trim() || phone.trim()}<div class="dn-enquiry-review-section"><h4>{i18n.t('m_5bc9a8a2e214')}</h4><p>{name.trim()}{#if name.trim() && phone.trim()}<br />{/if}{phone.trim()}</p></div>{/if}
         </section>
@@ -319,7 +321,8 @@
   .dn-enquiry-footer { display: flex; flex: 0 0 auto; flex-wrap: wrap; align-items: center; gap: 12px; padding: 16px 24px; border-top: 1px solid #e7e9ec; background: #fff; }
   .dn-enquiry-footer .dn-enquiry-primary { flex: 1 1 8rem; width: auto; }
   .dn-enquiry-back { min-width: 0; max-width: 100%; overflow-wrap: anywhere; display: flex; min-height: var(--dn-control-height-default); align-items: center; gap: var(--dn-entry-action-gap); padding: 0 4px; border: 0; background: transparent; color: #202329; font: var(--dn-compact-control-font); }
-  .dn-enquiry-summary { margin: 0; padding: var(--dn-space-5); border-radius: var(--dn-radius-card); background: var(--dn-entry-surface); color: var(--dn-ink); font: var(--dn-body-font); overflow-wrap: anywhere; }
+  .dn-enquiry-summary { display: grid; gap: var(--dn-space-3); margin: 0; color: var(--dn-ink); font: var(--dn-body-font); overflow-wrap: anywhere; }
+  .dn-enquiry-review-vehicle, .dn-enquiry-review-section { min-width: 0; padding: var(--dn-space-5); border-radius: var(--dn-radius-card); background: var(--dn-surface-raised); }
   .dn-enquiry-summary h3 { margin-top: var(--dn-space-2); font: var(--dn-overlay-title-font); }
   .dn-enquiry-review-link { display: inline-flex; align-items: center; min-height: var(--dn-control-hit-height); max-width: 100%; color: var(--dn-muted); font: var(--dn-field-label-font); text-decoration: underline; text-underline-offset: 3px; }
   .dn-enquiry-review-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-3); margin: var(--dn-space-4) 0 0; }
@@ -327,7 +330,6 @@
   .dn-enquiry-review-link + .dn-enquiry-review-facts { margin-top: 0; }
   .dn-enquiry-review-facts dd { margin: var(--dn-space-1) 0 0; font-weight: var(--dn-weight-semibold); }
   .dn-enquiry-review-brief { margin: var(--dn-space-4) 0 0; white-space: pre-wrap; }
-  .dn-enquiry-review-section { margin-top: var(--dn-space-4); padding-top: var(--dn-space-4); border-top: 1px solid var(--dn-line-strong); }
   .dn-enquiry-review-section p { margin: var(--dn-space-2) 0 0; white-space: pre-wrap; }
   .dn-enquiry-review-tools { display: flex; margin-top: var(--dn-space-4); }
 
@@ -336,7 +338,8 @@
   .dn-enquiry-success strong { font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
   .dn-enquiry-success p { margin: 4px 0 0; color: #d3d7dc; font-size: var(--dn-text-body); line-height: var(--dn-leading-meta); }
   .dn-enquiry-copy { flex: 0 0 auto; min-height: var(--dn-control-height-default); padding: 0 var(--dn-space-4); border: 1px solid var(--dn-line-strong); border-radius: var(--dn-radius-button); background: var(--dn-surface-raised); color: var(--dn-ink); font: var(--dn-compact-control-font); }
-  .dn-enquiry--review .dn-enquiry-body { padding-top: var(--dn-space-2); }
+  .dn-enquiry--review .dn-enquiry-body { padding-block: var(--dn-space-4); background: var(--dn-surface-panel); }
+  .dn-enquiry--review .dn-enquiry-footer { border-top: 0; }
   .dn-enquiry-feedback { padding: 12px; border-radius: var(--dn-radius-sm); background: #f2f3f5; font-size: var(--dn-text-meta); line-height: var(--dn-leading-body); }
   @media (max-width: 767px) {
     .dn-enquiry-selected-link, .dn-enquiry-summary, .dn-enquiry-success, .dn-enquiry-feedback { border-radius: var(--dn-radius-card); }
@@ -345,7 +348,7 @@
     .dn-enquiry--review { inset: auto 0 max(0px, calc(100dvh - var(--dn-dialog-viewport-height, 100dvh) - var(--dn-dialog-viewport-top, 0px))); height: auto; max-height: calc(var(--dn-dialog-viewport-height, 100dvh) - var(--dn-space-6) - env(safe-area-inset-top, 0px)); border-radius: var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0; }
     .dn-enquiry--review .dn-enquiry-panel { height: auto; max-height: calc(var(--dn-dialog-viewport-height, 100dvh) - var(--dn-space-6) - env(safe-area-inset-top, 0px)); }
     .dn-enquiry--review .dn-enquiry-body { flex: 0 1 auto; }
-    .dn-enquiry-summary { padding: var(--dn-space-4); }
+    .dn-enquiry-review-vehicle, .dn-enquiry-review-section { padding: var(--dn-space-4); }
 
     .dn-enquiry-header { padding: var(--dn-overlay-header-padding); }
     .dn-enquiry-header h2 { font-size: var(--dn-text-subheading); }

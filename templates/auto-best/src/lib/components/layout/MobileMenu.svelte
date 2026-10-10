@@ -28,15 +28,12 @@
         aria-labelledby="dn-mobile-menu-title"
         tabindex="-1"
         {@attach attachMobileMenu}
-        onkeydown={trapDialogTab}
+        onkeydown={(event) => trapDialogTab(event, true)}
         oncancel={(event) => { event.preventDefault(); void closeMobile(); }}
         onclick={(event) => { if (event.target === event.currentTarget) void closeMobile(); }}
       >
         <h2 class="dn-sr-only" id="dn-mobile-menu-title">{i18n.t("m_123e2803c10b")}</h2>
         <div class="dn-mobile-menu__header">
-          <a class="dn-mobile-menu__brand" href={i18n.href(resolve('/'))} aria-label={i18n.t("m_d007ba60d7c9", { p0: brand.name })} onclick={() => void closeMobile(false)}>
-            <img src={brand.logo} alt={brand.name} width="160" height="44" />
-          </a>
         <button
           class="dn-mobile-menu__close dn-icon-button"
           type="button"
@@ -44,6 +41,9 @@
           aria-label={i18n.t("m_434b5049f81b")}
           onclick={() => closeMobile()}
         ><MobileNavIcon name="close" size={16} /></button>
+          <a class="dn-mobile-menu__brand" href={i18n.href(resolve('/'))} aria-label={i18n.t("m_d007ba60d7c9", { p0: brand.name })} onclick={() => void closeMobile(false)}>
+            <img src={brand.logo} alt={brand.name} width="160" height="44" />
+          </a>
         </div>
         <div class="dn-mobile-menu__contact">
           <a class="dn-mobile-menu__call dn-compact-control dn-compact-primary" {...phoneLinkAttributes} aria-label={`${i18n.t("action.callUs")} — ${brand.phone}`} title={brand.phone}><MobileNavIcon name="phone" size={20} /><span>{i18n.t("action.callUs")}</span></a>

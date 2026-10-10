@@ -41,7 +41,7 @@
 
   function handleKeydown(event: KeyboardEvent) {
     event.stopPropagation();
-    trapDialogTab(event);
+    trapDialogTab(event, true);
     if (event.key === 'Escape') {
       event.preventDefault();
       closePicker();

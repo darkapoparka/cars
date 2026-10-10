@@ -36,6 +36,7 @@
   const compactDetailHeader = $derived(presentation.compactDetailHeader);
   const detailVehicle = $derived(presentation.detailVehicle);
   const vehicleDetailHeader = $derived(presentation.vehicleDetailHeader);
+  const articleDetailHeader = $derived(presentation.articleDetailHeader);
   const mobileSurfaceHeader = $derived(presentation.mobileSurfaceHeader);
   const listingHeader = $derived(presentation.listingHeader);
   const homeOverlayHeader = $derived(presentation.homeOverlayHeader);
@@ -201,6 +202,7 @@
   class="dn-header-fixed"
   class:dn-header-fixed--compact={compactDetailHeader}
   class:dn-header-fixed--vehicle-detail={vehicleDetailHeader}
+  class:dn-header-fixed--article-detail={articleDetailHeader}
   class:dn-header-fixed--mobile-surface={mobileSurfaceHeader}
   class:dn-header-fixed--home-overlay={homeOverlayHeader}
   class:dn-header-fixed--contact-overlay={contactOverlayHeader}
@@ -770,6 +772,17 @@
   }
 
   @media (max-width: 767px) {
+    .dn-header-fixed--article-detail,
+    .dn-header-fixed--article-detail .dn-header {
+      height: 0;
+      min-height: 0;
+      background: transparent;
+    }
+
+    .dn-header-fixed--article-detail .dn-header__lower {
+      display: none;
+    }
+
     .dn-header-fixed:is(.dn-header-fixed--home-overlay, .dn-header-fixed--contact-overlay) .dn-header__lower { border: 0; }
     .dn-header-fixed:is(.dn-header-fixed--home-overlay, .dn-header-fixed--contact-overlay) .dn-header__inner { min-height: 66px; }
     .dn-header-fixed--listing,

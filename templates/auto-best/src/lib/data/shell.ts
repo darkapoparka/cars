@@ -16,6 +16,7 @@ export type NavigationItemPresentation = {
 export type HeaderPresentation = {
   compactDetailHeader: boolean;
   vehicleDetailHeader: boolean;
+  articleDetailHeader: boolean;
   mobileSurfaceHeader: boolean;
   listingHeader: boolean;
   homeOverlayHeader: boolean;
@@ -103,6 +104,7 @@ export function resolveShellPresentation(url: URL, status = 200): ShellPresentat
     header: {
       compactDetailHeader: pathname.startsWith('/blog-detail/') || pathname.startsWith('/listing-detail-v1/'),
       vehicleDetailHeader: Boolean(detailVehicle),
+      articleDetailHeader: status === 200 && pathname.startsWith('/blog-detail/'),
       mobileSurfaceHeader: route === 'home',
       listingHeader: route === 'listing',
       homeOverlayHeader: route === 'home',
