@@ -125,7 +125,7 @@ export function MobileAlternativeDock({pathname}: {pathname: string}) {
   const tx = useCopy();
   return <nav data-alternative-dock aria-label={tx('App navigation')} {...stylex.props(compactDock.root, s.phoneDock)}>{navigation.map(item => {
     const active = item.href === '/' ? pathname === '/' : item.href === '/services' ? ['/services', '/sell', '/finance', '/service'].includes(pathname) : item.href === '/more' ? pathname === '/more' || pathname === '/saved' : pathname === item.href;
-    return <Link key={item.href} href={item.href} aria-label={tx(item.label)} title={tx(item.label)} aria-current={active ? 'page' : undefined} {...stylex.props(compactDock.link, active && compactDock.active)}><ShowroomIcon name={item.icon} size={22} strokeWidth={active ? 2 : 1.65}/></Link>;
+    return <Link key={item.href} href={item.href} aria-label={tx(item.label)} title={tx(item.label)} aria-current={active ? 'page' : undefined} {...stylex.props(compactDock.link, active && compactDock.active)}><ShowroomIcon dock name={item.icon} size={22} strokeWidth={active ? 2 : 1.65}/></Link>;
   })}</nav>;
 }
 
