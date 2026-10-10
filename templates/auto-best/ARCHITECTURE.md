@@ -72,7 +72,7 @@ The finance calculator divides remaining principal by a selected term; it is not
 
 ## CSS and media
 
-Global imports are ordered `tokens.css`, `base.css`, `navigation.css`, `composition.css`. Component `<style>` blocks own internals; route CSS owns layout and route-scoped adaptations. The cascade is part of the existing implementation, not a new theme framework. [Styling](docs/STYLING.md) explains its actual values and responsive patterns.
+Global imports are ordered `tokens.css`, `base.css`, `composition.css`. Component `<style>` blocks own internals; route CSS owns layout and route-scoped adaptations. The cascade is part of the existing implementation, not a new theme framework. [Styling](docs/STYLING.md) explains its actual values and responsive patterns.
 
 Static media is referenced by public paths. Artwork helpers render existing crop/bounds data; they do not generate images. Decorative cutouts, stock photographs and text-bearing campaign banners have different roles. [Assets](ASSET_PROVENANCE.md) explains their origin and treatment.
 

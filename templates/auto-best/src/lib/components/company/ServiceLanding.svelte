@@ -21,7 +21,7 @@
   <ContactHero topic={resolveContactTopic(topic)} />
   <section class="dn-service-card" id="contact-intent" aria-labelledby="service-form-title">
     <EntryCard titleId="service-form-title" hideTitleOnMobile title={topic === 'import' ? i18n.text(resolveContactTopic(topic).title) : i18n.t('service.sell.heading')}>
-    {#if topic === 'trade-in'}<TradeInEnquiry inlineEntry />{:else}<VehicleEnquiry kind="import" {importUrl} inlineEntry />{/if}
+    {#if topic === 'trade-in'}<TradeInEnquiry inlineEntry />{:else}<VehicleEnquiry {importUrl} inlineEntry />{/if}
     </EntryCard>
   </section>
   <div class="dn-service-guide">

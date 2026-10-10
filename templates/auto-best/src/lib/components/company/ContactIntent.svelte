@@ -53,7 +53,7 @@
     {#if topic.id === 'trade-in'}
       <TradeInEnquiry />
     {:else if topic.id === 'import'}
-      {#key topic.id}<VehicleEnquiry kind="import" {importUrl} />{/key}
+      {#key topic.id}<VehicleEnquiry {importUrl} />{/key}
     {:else if preparation}
       <div class="dn-contact-preparation">
         <h2>{i18n.text(preparation.title)}</h2>

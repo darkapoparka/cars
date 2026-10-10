@@ -124,6 +124,9 @@
     else void tick().then(() => { if (dialog?.open) searchInput?.focus({ preventScroll: true }); });
   };
   const closeSearch = () => { if (dialog?.open) dialog.close(); };
+  $effect(() => {
+    if (!mobile.current) closeSearch();
+  });
   const resetSearch = () => {
     const cleared = emptyListingDraft();
     query = cleared.q;
