@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Varna",
     "addressLine": "110 Tsar Osvoboditel Blvd., Pobeda district",
     "address": "110 Tsar Osvoboditel Blvd., Pobeda district, Varna",
-    "appointment": "Call ahead to confirm opening hours and a viewing."
+    "appointment": "Call ahead to confirm opening hours and a viewing.",
+    "addressShort": "110 Tsar Osvoboditel Blvd., Pobeda district",
+    "appointmentShort": "Call ahead to confirm opening hours and a viewing."
   },
   "bg": {
     "city": "Варна",
     "addressLine": "бул. Цар Освободител 110, кв. Победа",
     "address": "бул. Цар Освободител 110, кв. Победа",
-    "appointment": "За работно време и оглед се обадете предварително."
+    "appointment": "За работно време и оглед се обадете предварително.",
+    "addressShort": "бул. Цар Освободител 110, кв. Победа",
+    "appointmentShort": "За работно време и оглед се обадете предварително."
   }
 } as const;
 

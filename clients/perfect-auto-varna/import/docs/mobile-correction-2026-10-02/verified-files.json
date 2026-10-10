@@ -1,0 +1,30 @@
+[
+  {
+    "path": "src/lib/components/account/ProfileImageUpload.svelte",
+    "sha256": "c005cd71d481cf046457d54a06ee434e7448e6abbbfcbc418815af3852ca3503"
+  },
+  {
+    "path": "src/lib/components/account/MobileAccountProfileForm.svelte",
+    "sha256": "78c53766dca6acc429cf3a88e6539830e7b2d03b68e545df5fd64855b44fdfbf"
+  },
+  {
+    "path": "src/lib/components/account/AccountProfileTemplatePage.svelte",
+    "sha256": "c0729aa0afc4a083865b5603e10b7022a5fab30367989d4aca2868f03cb1552c"
+  },
+  {
+    "path": "src/lib/components/contact/ContactMobilePage.svelte",
+    "sha256": "e9e3eed1c3bc46d234aac366a788f68bc8c57eac018010c9371b212a69b806bf"
+  },
+  {
+    "path": "src/routes/(site)/services/+page.svelte",
+    "sha256": "82095cb017ba0f5f0fd535a53f276c617ad0c9f9537d31dd6ed2b7db9550c5f2"
+  },
+  {
+    "path": "tests/account-hydration.e2e.ts",
+    "sha256": "72535ac3080a519f130459d769704d7fce81187eb88d6c951ef27864b1e3a2f8"
+  },
+  {
+    "path": "tests/mobile-secondary.e2e.ts",
+    "sha256": "e87cd0564f67500e1c67a50eba79ffc03db3a00e2b41a7a118adb84fd19deb76"
+  }
+]
