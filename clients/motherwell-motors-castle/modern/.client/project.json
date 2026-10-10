@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "client": "motherwell-motors-castle",
+  "templateKey": "modern",
+  "templateVersion": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
+  "createdAt": "2026-10-10T12:37:39.901Z",
+  "state": "personalized-needs-build",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": "gb-motherwell-motors-castle",
+    "demoProjectId": null,
+    "registered": false
+  },
+  "templateSource": {
+    "repository": "darkapoparka/cars",
+    "revision": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
+    "path": "templates/modern",
+    "tree": "c2b3b3e74815c1e5eba0c82cfb1352c795921dcf",
+    "digest": "f097bc4802e62ffb0b752bc5523f3fe1b00df83f67b16843d698d276d10344a3",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "5",
+    "entry": "/variant-2/cars"
+  },
+  "workflowCommit": "e1fd3d4720b7cfca47728da53519fb61527aa83a",
+  "hosting": {
+    "provider": "cloudflare",
+    "status": "not-deployed"
+  },
+  "readyToPublish": false
+}

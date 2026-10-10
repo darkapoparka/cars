@@ -1,0 +1,101 @@
+[
+  {
+    "width": 320,
+    "locale": "bg",
+    "fiveChoices": true,
+    "bounds": [
+      {
+        "width": 250,
+        "height": 64
+      },
+      {
+        "width": 250,
+        "height": 64
+      },
+      {
+        "width": 250,
+        "height": 64
+      },
+      {
+        "width": 250,
+        "height": 64
+      },
+      {
+        "width": 250,
+        "height": 64
+      }
+    ],
+    "menuLayoutPreserved": true,
+    "pickerEscape": true,
+    "reload": true,
+    "otherRoute": true,
+    "escapeFocus": true,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "locale": "bg",
+    "fiveChoices": true,
+    "bounds": [
+      {
+        "width": 320,
+        "height": 64
+      },
+      {
+        "width": 320,
+        "height": 64
+      },
+      {
+        "width": 320,
+        "height": 64
+      },
+      {
+        "width": 320,
+        "height": 64
+      },
+      {
+        "width": 320,
+        "height": 64
+      }
+    ],
+    "menuLayoutPreserved": true,
+    "pickerEscape": true,
+    "reload": true,
+    "otherRoute": true,
+    "escapeFocus": true,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "locale": "en",
+    "fiveChoices": true,
+    "bounds": [
+      {
+        "width": 320,
+        "height": 64
+      },
+      {
+        "width": 320,
+        "height": 64
+      },
+      {
+        "width": 320,
+        "height": 64
+      },
+      {
+        "width": 320,
+        "height": 64
+      },
+      {
+        "width": 320,
+        "height": 64
+      }
+    ],
+    "menuLayoutPreserved": true,
+    "pickerEscape": true,
+    "reload": true,
+    "otherRoute": true,
+    "escapeFocus": true,
+    "errors": []
+  }
+]

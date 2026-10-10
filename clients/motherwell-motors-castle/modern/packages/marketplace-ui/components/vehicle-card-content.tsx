@@ -1,0 +1,807 @@
+import { Badge } from "@repo/design-system/components/ui/badge";
+import { cn } from "@repo/design-system/lib/utils";
+import type { VehicleListing } from "@repo/marketplace";
+import {
+  ArrowRight,
+  BadgeCheck,
+  Boxes,
+  Clock3,
+  Factory,
+  MapPin,
+  ShieldCheck,
+  Ship,
+  Store,
+  Truck,
+  UserRound,
+} from "lucide-react";
+import Link from "next/link";
+import {
+  formatTruthDateTime,
+  getDeliveryTruth,
+  getLandedCostTruth,
+  getListingSellerRole,
+  getListingSellerRoleLabel,
+  getListingSellerTrustKind,
+  getListingSellerTrustLabel,
+  getPhysicalVehicleLocation,
+  type ListingOrganizationRole,
+  type ListingSellerRole,
+} from "../lib/listing-truth";
+import {
+  mobileVehicleCardBrandClassName,
+  mobileVehicleCardContentClassName,
+  mobileVehicleCardFactsClassName,
+  mobileVehicleCardInfoClassName,
+  mobileVehicleCardPriceClassName,
+  mobileVehicleCardPriceSummaryClassName,
+  mobileVehicleCardTitleClassName,
+} from "../lib/mobile-vehicle-card-layout";
+import {
+  formatVehicleCardMoney,
+  getMobileVehicleCardHeading,
+  getShowroomVehicleCardSpecFacts,
+  getShowroomVehicleHeading,
+  getVehicleCardBadgeLabels,
+  getVehicleCardPricePolicy,
+  getVehicleCardSpecFacts,
+  getVehicleCardTitle,
+  type VehicleCardVariant,
+} from "../lib/vehicle-card-policy";
+import type {
+  VehicleCardPriceInsight,
+  VehicleCardTrustSignal,
+} from "../lib/vehicle-card-types";
+import {
+  formatLocalizedVehicleCardLocation,
+  getCompactVehicleCardLandedCostLabel,
+  getLocalizedVehicleCardDeliveryLabel,
+  getLocalizedVehicleCardFreshnessLabel,
+  getLocalizedVehicleCardLandedCostLabel,
+  getLocalizedVehicleCardLocationPart,
+  getLocalizedVehicleCardSellerName,
+  getLocalizedVehicleCardSourceLabel,
+  getVehicleCardCopy,
+  getVehicleCardSecondaryPriceLabel,
+  vehicleCardToneClassNames,
+} from "../lib/vehicle-card-view-policy";
+import { DealerVehicleFacts } from "./dealer-vehicle-facts";
+import Image from "./public-image";
+import { VehicleCardMoney } from "./vehicle-card-money";
+
+const sellerRoleIcons = {
+  dealer: Store,
+  distributor: Boxes,
+  importer: Ship,
+  manufacturer: Factory,
+  private: UserRound,
+} as const satisfies Record<ListingSellerRole, typeof Store>;
+
+export const VehicleCardMediaBadges = ({
+  listing,
+  locale,
+}: {
+  listing: VehicleListing;
+  locale?: string;
+}) => {
+  const copy = getVehicleCardCopy(locale);
+  const labels = getVehicleCardBadgeLabels(listing, locale, copy);
+
+  if (labels.length === 0) {
+    return null;
+  }
+
+  return (
+    <div
+      className="pointer-events-none absolute top-1.5 left-1.5 z-10 flex max-w-[calc(100%-0.75rem)] flex-wrap gap-1 lg:top-2 lg:left-2 lg:max-w-[calc(100%-4.25rem)] lg:gap-1.5"
+      data-slot="vehicle-card-media-badges"
+    >
+      {labels.map((label) => (
+        <Badge
+          className="h-auto min-h-5 max-w-full whitespace-normal break-words rounded-md border-0 bg-white/95 px-1.5 py-0.5 font-medium text-foreground text-micro ring-1 ring-black/5 ring-inset lg:h-6 lg:px-2 lg:py-0 lg:ring-0"
+          key={label}
+          variant="secondary"
+        >
+          {label}
+        </Badge>
+      ))}
+    </div>
+  );
+};
+
+const VehiclePriceSummary = ({
+  listing,
+  locale,
+  priceInsight,
+  variant,
+}: {
+  listing: VehicleListing;
+  locale?: string;
+  priceInsight?: VehicleCardPriceInsight;
+  variant: VehicleCardVariant;
+}) => {
+  const pricePolicy = getVehicleCardPricePolicy(listing, variant);
+  const conversionTime = formatTruthDateTime(
+    listing.supply?.priceConversion.convertedAt,
+    locale
+  );
+  const copy = getVehicleCardCopy(locale);
+  const secondaryPriceLabel = getVehicleCardSecondaryPriceLabel(
+    listing,
+    locale,
+    variant,
+    pricePolicy
+  );
+
+  return (
+    <div
+      className={mobileVehicleCardPriceSummaryClassName}
+      data-slot="vehicle-card-price-summary"
+    >
+      <p
+        className={cn(
+          mobileVehicleCardPriceClassName,
+          "whitespace-nowrap lg:font-semibold lg:text-price-lg lg:tracking-heading"
+        )}
+        data-slot="vehicle-card-price"
+      >
+        <VehicleCardMoney locale={locale} money={pricePolicy.primaryPrice} />
+        {pricePolicy.isMonthlyPrice ? (
+          <span className="ml-1 font-medium text-meta text-muted-foreground">
+            {copy.monthSuffix}
+          </span>
+        ) : null}
+      </p>
+      {secondaryPriceLabel ? (
+        <p
+          className="text-card-spec text-muted-foreground lg:text-meta"
+          title={secondaryPriceLabel}
+        >
+          {secondaryPriceLabel}
+        </p>
+      ) : null}
+      {pricePolicy.approximatePrice && variant !== "comparison" ? (
+        <p className="text-meta text-muted-foreground">
+          ≈{" "}
+          {formatVehicleCardMoney(
+            pricePolicy.approximatePrice,
+            variant,
+            locale
+          )}
+          {pricePolicy.showConversionTime && conversionTime
+            ? ` · ${copy.rateSnapshot} ${conversionTime}`
+            : ""}
+        </p>
+      ) : null}
+      {priceInsight ? (
+        <div className="flex flex-wrap items-center gap-1.5 text-micro">
+          <span
+            className={
+              vehicleCardToneClassNames[priceInsight.tone ?? "neutral"]
+            }
+          >
+            {priceInsight.label}
+          </span>
+          {priceInsight.detail ? (
+            <span className="text-micro text-muted-foreground">
+              {priceInsight.detail}
+            </span>
+          ) : null}
+        </div>
+      ) : null}
+    </div>
+  );
+};
+
+const VehicleSpecPills = ({
+  listing,
+  locale,
+}: {
+  listing: VehicleListing;
+  locale?: string;
+}) => {
+  const copy = getVehicleCardCopy(locale);
+  const facts = getVehicleCardSpecFacts(listing, locale);
+
+  if (facts.length === 0) {
+    return null;
+  }
+
+  return <DealerVehicleFacts facts={facts} label={copy.specs} />;
+};
+
+const VehicleSellerFooter = ({
+  listing,
+  locale,
+  placement = "footer",
+  sellerOrganizationRole,
+}: {
+  listing: VehicleListing;
+  locale?: string;
+  placement?: "eyebrow" | "footer";
+  sellerOrganizationRole?: ListingOrganizationRole;
+}) => {
+  const sellerName = getLocalizedVehicleCardSellerName(
+    listing,
+    locale,
+    sellerOrganizationRole
+  );
+  const sellerRole = getListingSellerRole(listing, sellerOrganizationRole);
+  const sellerType = getListingSellerRoleLabel(sellerRole, locale);
+  const SellerRoleIcon = sellerRoleIcons[sellerRole];
+  const sellerTrustKind = getListingSellerTrustKind(
+    listing,
+    sellerOrganizationRole
+  );
+  const sellerLabel =
+    sellerName === sellerType ? sellerType : `${sellerType} · ${sellerName}`;
+  const sellerTrustLabel = sellerTrustKind
+    ? getListingSellerTrustLabel(sellerTrustKind, locale)
+    : undefined;
+  const sellerBadgeLabel = sellerTrustLabel
+    ? `${sellerLabel}, ${sellerTrustLabel}`
+    : sellerLabel;
+
+  if (placement === "eyebrow") {
+    return (
+      <footer
+        className="flex min-w-0 flex-1 items-center gap-1.5"
+        data-slot="vehicle-seller-eyebrow"
+      >
+        <Badge
+          aria-label={sellerBadgeLabel}
+          className="h-7 min-w-0 max-w-full shrink gap-2 rounded-md border-border/70 bg-control px-2.5 font-semibold text-foreground text-micro"
+          title={sellerBadgeLabel}
+          variant="outline"
+        >
+          <span
+            className={cn(
+              "relative grid h-4 w-14 shrink-0 place-items-center text-foreground/70",
+              sellerTrustLabel && "text-success-foreground"
+            )}
+          >
+            {listing.seller.logoUrl ? (
+              <Image
+                alt=""
+                aria-hidden="true"
+                className="h-4 w-14 object-contain"
+                data-slot="vehicle-seller-logo"
+                height={16}
+                src={listing.seller.logoUrl}
+                width={56}
+              />
+            ) : (
+              <SellerRoleIcon aria-hidden="true" className="size-3.5" />
+            )}
+            {sellerTrustLabel ? (
+              <BadgeCheck
+                aria-hidden="true"
+                className="absolute -right-1 -bottom-0.5 size-3 rounded-full bg-control text-success-foreground ring-1 ring-control"
+              />
+            ) : null}
+          </span>
+          <span className="truncate">{sellerName}</span>
+          {sellerTrustLabel ? (
+            <span className="sr-only">{sellerTrustLabel}</span>
+          ) : null}
+        </Badge>
+      </footer>
+    );
+  }
+
+  return (
+    <footer
+      className="mt-auto flex min-w-0 max-w-full items-center lg:mt-1 lg:border-border/70 lg:border-t lg:pt-2"
+      data-slot="vehicle-card-seller"
+    >
+      <span
+        className="inline-flex min-w-0 max-w-full items-center gap-1.5 rounded-full bg-secondary/85 px-2.5 py-1 text-foreground/75 text-meta lg:rounded-none lg:bg-transparent lg:p-0 lg:text-muted-foreground"
+        title={sellerLabel}
+      >
+        {listing.seller.logoUrl ? (
+          <Image
+            alt=""
+            aria-hidden="true"
+            className="h-4 w-10 shrink-0 object-contain"
+            height={16}
+            src={listing.seller.logoUrl}
+            width={40}
+          />
+        ) : null}
+        <span className="truncate font-medium">{sellerLabel}</span>
+        {sellerTrustLabel ? (
+          <span className="shrink-0 text-muted-foreground">
+            <ShieldCheck aria-hidden="true" className="h-3 w-3" />
+            <span className="sr-only">{sellerTrustLabel}</span>
+          </span>
+        ) : null}
+      </span>
+    </footer>
+  );
+};
+
+const VehicleLocationDetails = ({
+  deliveryTruth,
+  landedCostTruth,
+  listing,
+  locale,
+  physicalLocation,
+}: {
+  deliveryTruth: ReturnType<typeof getDeliveryTruth>;
+  landedCostTruth: ReturnType<typeof getLandedCostTruth>;
+  listing: VehicleListing;
+  locale?: string;
+  physicalLocation: ReturnType<typeof getPhysicalVehicleLocation>;
+}) => {
+  const copy = getVehicleCardCopy(locale);
+  const desktopLocation = formatLocalizedVehicleCardLocation(
+    physicalLocation,
+    locale
+  );
+  const mobileLocation = [physicalLocation.city, physicalLocation.country]
+    .map((value) => getLocalizedVehicleCardLocationPart(value, locale))
+    .join(", ");
+
+  return (
+    <div
+      className="space-y-1.5 pt-1 text-meta text-muted-foreground lg:pt-0.5"
+      data-slot="vehicle-card-location"
+    >
+      <p className="flex min-w-0 items-start gap-1.5">
+        <MapPin aria-hidden="true" className="mt-0.5 h-3.5 w-3.5 shrink-0" />
+        <span className="lg:hidden">{mobileLocation}</span>
+        <span className="hidden lg:inline">
+          {copy.vehicleIn} {desktopLocation}
+        </span>
+      </p>
+      {deliveryTruth ? (
+        <p className="flex items-start gap-1.5">
+          <Truck aria-hidden="true" className="mt-0.5 h-3.5 w-3.5 shrink-0" />
+          <span>
+            {getLocalizedVehicleCardDeliveryLabel(deliveryTruth, locale)}
+          </span>
+        </p>
+      ) : null}
+      {landedCostTruth ? (
+        <p className="hidden pl-5 text-micro lg:block">
+          {getLocalizedVehicleCardLandedCostLabel(
+            listing,
+            landedCostTruth.label,
+            locale
+          )}
+        </p>
+      ) : null}
+    </div>
+  );
+};
+
+const ComparisonLocationMeta = ({
+  landedCostTruth,
+  listing,
+  locale,
+}: {
+  landedCostTruth: ReturnType<typeof getLandedCostTruth>;
+  listing: VehicleListing;
+  locale?: string;
+}) => {
+  const physicalLocation = getPhysicalVehicleLocation(listing);
+  const compactLocation = getLocalizedVehicleCardLocationPart(
+    physicalLocation.city || physicalLocation.country,
+    locale
+  );
+  const fullLocation = [physicalLocation.city, physicalLocation.country]
+    .filter((value): value is string => Boolean(value))
+    .map((value) => getLocalizedVehicleCardLocationPart(value, locale))
+    .join(", ");
+  const landedCostLabel = landedCostTruth
+    ? getCompactVehicleCardLandedCostLabel(
+        listing,
+        landedCostTruth.label,
+        locale
+      )
+    : undefined;
+  const accessibleLabel = landedCostLabel
+    ? `${fullLocation}. ${landedCostLabel}`
+    : fullLocation;
+
+  return (
+    <span
+      className="ml-auto flex min-w-0 max-w-[42%] shrink-0 items-center gap-1.5 font-medium text-foreground/65 text-meta"
+      data-slot="vehicle-location-meta"
+      title={accessibleLabel}
+    >
+      <span className="sr-only">{accessibleLabel}</span>
+      <MapPin
+        aria-hidden="true"
+        className="size-3.5 shrink-0 text-muted-foreground"
+      />
+      <span aria-hidden="true" className="truncate">
+        {compactLocation}
+      </span>
+      {landedCostLabel ? (
+        <Truck
+          aria-hidden="true"
+          className="size-3.5 shrink-0 text-amber-700"
+        />
+      ) : null}
+    </span>
+  );
+};
+
+const VehicleProvenanceFooter = ({
+  listing,
+  locale,
+  sellerOrganizationRole,
+  signals,
+}: {
+  listing: VehicleListing;
+  locale?: string;
+  sellerOrganizationRole?: ListingOrganizationRole;
+  signals: readonly VehicleCardTrustSignal[];
+}) => {
+  if (!listing.supply && signals.length === 0) {
+    return null;
+  }
+
+  const confirmedAt = formatTruthDateTime(
+    listing.supply?.provenance.lastConfirmedAt,
+    locale
+  );
+  const copy = getVehicleCardCopy(locale);
+  const sellerTrustKind = getListingSellerTrustKind(
+    listing,
+    sellerOrganizationRole
+  );
+
+  return (
+    <footer
+      className="mt-3 hidden flex-wrap items-center justify-between gap-x-3 gap-y-1 text-micro text-muted-foreground lg:flex"
+      data-slot="vehicle-card-provenance"
+    >
+      <span className="flex min-w-0 items-center gap-1.5">
+        <Clock3 aria-hidden="true" className="h-3 w-3 shrink-0" />
+        <span className="truncate">
+          {getLocalizedVehicleCardSourceLabel(listing, locale)}
+          {confirmedAt ? ` · ${copy.confirmed} ${confirmedAt}` : ""}
+        </span>
+      </span>
+      <span className="flex flex-wrap items-center gap-2">
+        {listing.supply ? (
+          <span>{getLocalizedVehicleCardFreshnessLabel(listing, locale)}</span>
+        ) : null}
+        {sellerTrustKind === "verified_importer" ? (
+          <span className="flex items-center gap-1 font-medium text-foreground">
+            <ShieldCheck aria-hidden="true" className="h-3 w-3" />
+            {getListingSellerTrustLabel(sellerTrustKind, locale)}
+          </span>
+        ) : null}
+        {signals.map((signal) => (
+          <span
+            className={vehicleCardToneClassNames[signal.tone ?? "neutral"]}
+            key={signal.id}
+          >
+            {signal.label}
+          </span>
+        ))}
+      </span>
+    </footer>
+  );
+};
+
+const MobileDealerVehicleCardContent = ({
+  listing,
+  listingHref,
+  locale,
+}: {
+  listing: VehicleListing;
+  listingHref: string;
+  locale?: string;
+}) => {
+  const heading = getMobileVehicleCardHeading(listing);
+  return (
+    <Link
+      className={cn(
+        mobileVehicleCardContentClassName,
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:hidden"
+      )}
+      data-slot="vehicle-card-mobile-content"
+      href={listingHref}
+    >
+      <div className={mobileVehicleCardInfoClassName}>
+        {heading.brand ? (
+          <p
+            aria-hidden="true"
+            className={mobileVehicleCardBrandClassName}
+            data-slot="vehicle-card-brand"
+            title={heading.brand}
+          >
+            {heading.brand}
+          </p>
+        ) : null}
+        <h2
+          aria-label={heading.fullTitle}
+          className={mobileVehicleCardTitleClassName}
+          data-slot="vehicle-card-title"
+          title={heading.fullTitle}
+        >
+          {heading.title}
+        </h2>
+        <VehiclePriceSummary
+          listing={listing}
+          locale={locale}
+          variant="comparison"
+        />
+      </div>
+      <div className={mobileVehicleCardFactsClassName}>
+        <VehicleSpecPills listing={listing} locale={locale} />
+      </div>
+    </Link>
+  );
+};
+
+const ComparisonVehicleCardContent = ({
+  desktopHeadingLevel,
+  isDesktopComparison,
+  listing,
+  listingHref,
+  locale,
+  priceInsight,
+  presentation,
+  sellerOrganizationRole,
+}: {
+  desktopHeadingLevel: 2 | 3;
+  isDesktopComparison: boolean;
+  listing: VehicleListing;
+  listingHref: string;
+  locale?: string;
+  priceInsight?: VehicleCardPriceInsight;
+  presentation: "default" | "discovery" | "showroom";
+  sellerOrganizationRole?: ListingOrganizationRole;
+}) => {
+  const Heading = desktopHeadingLevel === 3 ? "h3" : "h2";
+  const landedCostTruth = getLandedCostTruth(listing);
+  const vehicleTitle = getVehicleCardTitle(listing, "comparison");
+
+  return (
+    <Link
+      className={cn(
+        "flex min-w-0 flex-col gap-2.5 p-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:gap-3 lg:p-3.5",
+        isDesktopComparison && "lg:gap-2 lg:p-3"
+      )}
+      data-slot="vehicle-card-content"
+      href={listingHref}
+    >
+      {presentation === "discovery" ? (
+        <div data-slot="vehicle-card-title-row">
+          <Heading
+            className="line-clamp-2 min-w-0 font-semibold text-card-title text-foreground tracking-heading lg:min-h-10 lg:text-card-title-lg"
+            data-slot="vehicle-card-title"
+            title={vehicleTitle}
+          >
+            {vehicleTitle}
+          </Heading>
+        </div>
+      ) : (
+        <>
+          <div className="flex min-w-0 items-center gap-1.5">
+            <VehicleSellerFooter
+              listing={listing}
+              locale={locale}
+              placement="eyebrow"
+              sellerOrganizationRole={sellerOrganizationRole}
+            />
+            <ComparisonLocationMeta
+              landedCostTruth={landedCostTruth}
+              listing={listing}
+              locale={locale}
+            />
+          </div>
+          <Heading
+            className="line-clamp-2 font-semibold text-card-title text-foreground tracking-heading lg:text-card-title-lg"
+            data-slot="vehicle-card-title"
+            title={vehicleTitle}
+          >
+            {vehicleTitle}
+          </Heading>
+        </>
+      )}
+      <VehiclePriceSummary
+        listing={listing}
+        locale={locale}
+        priceInsight={priceInsight}
+        variant="comparison"
+      />
+      <div className="mt-auto">
+        <VehicleSpecPills listing={listing} locale={locale} />
+      </div>
+    </Link>
+  );
+};
+
+/** Compact desktop presentation using the same title, price, media and fact policies as other cards. */
+const ShowroomVehicleCardContent = ({
+  listing,
+  listingHref,
+  locale,
+}: {
+  listing: VehicleListing;
+  listingHref: string;
+  locale?: string;
+}) => {
+  const heading = getShowroomVehicleHeading(listing, locale);
+  const title = heading.title.slice(`${listing.spec.year} `.length);
+  const facts = getShowroomVehicleCardSpecFacts(listing, locale);
+  return (
+    <Link
+      className="min-w-0"
+      data-slot="vehicle-card-content"
+      href={listingHref}
+    >
+      <div data-slot="showroom-vehicle-heading">
+        <h3 data-slot="vehicle-card-title">{title}</h3>
+      </div>
+      <ul
+        aria-label={getVehicleCardCopy(locale).specs}
+        data-slot="showroom-vehicle-facts"
+      >
+        {facts.map((fact) => (
+          <li
+            aria-label={fact.displayValue ? fact.value : undefined}
+            data-fact={fact.id}
+            key={fact.id}
+            title={fact.value}
+          >
+            <span aria-hidden={fact.displayValue ? true : undefined}>
+              {fact.displayValue ?? fact.value}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <div data-slot="showroom-vehicle-price-row">
+        <VehiclePriceSummary
+          listing={listing}
+          locale={locale}
+          variant="comparison"
+        />
+        <span aria-hidden="true" data-slot="showroom-vehicle-open">
+          <ArrowRight size={20} />
+        </span>
+      </div>
+    </Link>
+  );
+};
+
+const ListVehicleCardContent = ({
+  listing,
+  listingHref,
+  locale,
+  priceInsight,
+  sellerOrganizationRole,
+  trustSignals,
+  variant,
+}: {
+  listing: VehicleListing;
+  listingHref: string;
+  locale?: string;
+  priceInsight?: VehicleCardPriceInsight;
+  sellerOrganizationRole?: ListingOrganizationRole;
+  trustSignals: readonly VehicleCardTrustSignal[];
+  variant: Exclude<VehicleCardVariant, "comparison">;
+}) => {
+  const deliveryTruth = getDeliveryTruth(listing);
+  const landedCostTruth = getLandedCostTruth(listing);
+  const physicalLocation = getPhysicalVehicleLocation(listing);
+  const isCompactList = variant === "compact-list";
+
+  return (
+    <Link
+      className={cn(
+        "flex min-w-0 flex-col gap-1.5 p-3.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset",
+        isCompactList && "lg:p-4"
+      )}
+      data-slot="vehicle-card-content"
+      href={listingHref}
+    >
+      <h2
+        className="line-clamp-2 font-semibold text-card-title text-foreground tracking-heading lg:text-card-title-lg"
+        data-slot="vehicle-card-title"
+      >
+        {getVehicleCardTitle(listing, variant)}
+      </h2>
+      <VehiclePriceSummary
+        listing={listing}
+        locale={locale}
+        priceInsight={priceInsight}
+        variant={variant}
+      />
+      <VehicleSpecPills listing={listing} locale={locale} />
+      <VehicleLocationDetails
+        deliveryTruth={deliveryTruth}
+        landedCostTruth={landedCostTruth}
+        listing={listing}
+        locale={locale}
+        physicalLocation={physicalLocation}
+      />
+      <VehicleSellerFooter
+        listing={listing}
+        locale={locale}
+        sellerOrganizationRole={sellerOrganizationRole}
+      />
+      <VehicleProvenanceFooter
+        listing={listing}
+        locale={locale}
+        sellerOrganizationRole={sellerOrganizationRole}
+        signals={trustSignals}
+      />
+    </Link>
+  );
+};
+
+export const VehicleCardContent = ({
+  desktopHeadingLevel,
+  isDesktopComparison,
+  listing,
+  listingHref,
+  locale,
+  presentation,
+  priceInsight,
+  sellerOrganizationRole,
+  trustSignals,
+  variant,
+}: {
+  desktopHeadingLevel: 2 | 3;
+  isDesktopComparison: boolean;
+  listing: VehicleListing;
+  listingHref: string;
+  locale?: string;
+  presentation: "default" | "discovery" | "showroom";
+  priceInsight?: VehicleCardPriceInsight;
+  sellerOrganizationRole?: ListingOrganizationRole;
+  trustSignals: readonly VehicleCardTrustSignal[];
+  variant: VehicleCardVariant;
+}) => {
+  let desktopContent: ReturnType<typeof ComparisonVehicleCardContent>;
+  if (presentation === "showroom") {
+    desktopContent = (
+      <ShowroomVehicleCardContent
+        listing={listing}
+        listingHref={listingHref}
+        locale={locale}
+      />
+    );
+  } else if (variant === "comparison") {
+    desktopContent = (
+      <ComparisonVehicleCardContent
+        desktopHeadingLevel={desktopHeadingLevel}
+        isDesktopComparison={isDesktopComparison}
+        listing={listing}
+        listingHref={listingHref}
+        locale={locale}
+        presentation={presentation}
+        priceInsight={priceInsight}
+        sellerOrganizationRole={sellerOrganizationRole}
+      />
+    );
+  } else {
+    desktopContent = (
+      <ListVehicleCardContent
+        listing={listing}
+        listingHref={listingHref}
+        locale={locale}
+        priceInsight={priceInsight}
+        sellerOrganizationRole={sellerOrganizationRole}
+        trustSignals={trustSignals}
+        variant={variant}
+      />
+    );
+  }
+  return (
+    <>
+      <MobileDealerVehicleCardContent
+        listing={listing}
+        listingHref={listingHref}
+        locale={locale}
+      />
+      <div className="hidden lg:contents">{desktopContent}</div>
+    </>
+  );
+};

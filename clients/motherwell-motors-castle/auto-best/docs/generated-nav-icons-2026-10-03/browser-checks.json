@@ -1,0 +1,330 @@
+{
+  "measurements": [
+    {
+      "controls": [
+        {
+          "active": "true",
+          "color": "rgb(16, 17, 20)",
+          "family": "imagegen-raster-preview",
+          "height": 24,
+          "icon": "home",
+          "label": "Начало",
+          "labelFits": true,
+          "maskIsSet": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 70.1875,
+          "width": 24
+        },
+        {
+          "active": "false",
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-raster-preview",
+          "height": 24,
+          "icon": "cars",
+          "label": "Коли",
+          "labelFits": true,
+          "maskIsSet": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 70.203125,
+          "width": 24
+        },
+        {
+          "active": "false",
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-raster-preview",
+          "height": 24,
+          "icon": "sell",
+          "label": "Продай",
+          "labelFits": true,
+          "maskIsSet": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 70.203125,
+          "width": 24
+        },
+        {
+          "active": "false",
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-raster-preview",
+          "height": 24,
+          "icon": "import",
+          "label": "Внос",
+          "labelFits": true,
+          "maskIsSet": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 70.203125,
+          "width": 24
+        },
+        {
+          "active": "false",
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-raster-preview",
+          "height": 24,
+          "icon": "menu",
+          "label": "Меню",
+          "labelFits": true,
+          "maskIsSet": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 70.1875,
+          "width": 24
+        }
+      ],
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "overflow": false,
+      "url": "http://127.0.0.1:6461/bg?iconPreview=generated-v3",
+      "viewport": {
+        "dpr": 1,
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "controls": [
+        {
+          "active": "true",
+          "family": "imagegen-raster-preview",
+          "iconHeight": 24,
+          "iconWidth": 24,
+          "label": "Начало",
+          "labelFits": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 56.1875
+        },
+        {
+          "active": "false",
+          "family": "imagegen-raster-preview",
+          "iconHeight": 24,
+          "iconWidth": 24,
+          "label": "Коли",
+          "labelFits": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 56.203125
+        },
+        {
+          "active": "false",
+          "family": "imagegen-raster-preview",
+          "iconHeight": 24,
+          "iconWidth": 24,
+          "label": "Продай",
+          "labelFits": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 56.203125
+        },
+        {
+          "active": "false",
+          "family": "imagegen-raster-preview",
+          "iconHeight": 24,
+          "iconWidth": 24,
+          "label": "Внос",
+          "labelFits": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 56.203125
+        },
+        {
+          "active": "false",
+          "family": "imagegen-raster-preview",
+          "iconHeight": 24,
+          "iconWidth": 24,
+          "label": "Меню",
+          "labelFits": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 56.203125
+        }
+      ],
+      "dpr": 1,
+      "height": 844,
+      "overflow": false,
+      "url": "http://127.0.0.1:6461/bg?iconPreview=generated-v3",
+      "width": 320
+    },
+    {
+      "controls": [
+        {
+          "active": "true",
+          "family": "imagegen-raster-preview",
+          "iconHeight": 24,
+          "iconWidth": 24,
+          "label": "Home",
+          "labelFits": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 70.1875
+        },
+        {
+          "active": "false",
+          "family": "imagegen-raster-preview",
+          "iconHeight": 24,
+          "iconWidth": 24,
+          "label": "Cars",
+          "labelFits": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 70.203125
+        },
+        {
+          "active": "false",
+          "family": "imagegen-raster-preview",
+          "iconHeight": 24,
+          "iconWidth": 24,
+          "label": "Sell",
+          "labelFits": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 70.203125
+        },
+        {
+          "active": "false",
+          "family": "imagegen-raster-preview",
+          "iconHeight": 24,
+          "iconWidth": 24,
+          "label": "Import",
+          "labelFits": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 70.203125
+        },
+        {
+          "active": "false",
+          "family": "imagegen-raster-preview",
+          "iconHeight": 24,
+          "iconWidth": 24,
+          "label": "Menu",
+          "labelFits": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 70.1875
+        }
+      ],
+      "dpr": 1,
+      "height": 844,
+      "overflow": false,
+      "url": "http://127.0.0.1:6461/en?iconPreview=generated-v3",
+      "width": 390
+    },
+    {
+      "controls": [
+        {
+          "active": "true",
+          "family": "imagegen-raster-preview",
+          "iconHeight": 24,
+          "iconWidth": 24,
+          "label": "Home",
+          "labelFits": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 56.1875
+        },
+        {
+          "active": "false",
+          "family": "imagegen-raster-preview",
+          "iconHeight": 24,
+          "iconWidth": 24,
+          "label": "Cars",
+          "labelFits": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 56.203125
+        },
+        {
+          "active": "false",
+          "family": "imagegen-raster-preview",
+          "iconHeight": 24,
+          "iconWidth": 24,
+          "label": "Sell",
+          "labelFits": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 56.203125
+        },
+        {
+          "active": "false",
+          "family": "imagegen-raster-preview",
+          "iconHeight": 24,
+          "iconWidth": 24,
+          "label": "Import",
+          "labelFits": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 56.203125
+        },
+        {
+          "active": "false",
+          "family": "imagegen-raster-preview",
+          "iconHeight": 24,
+          "iconWidth": 24,
+          "label": "Menu",
+          "labelFits": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 56.203125
+        }
+      ],
+      "dpr": 1,
+      "height": 844,
+      "overflow": false,
+      "url": "http://127.0.0.1:6461/en?iconPreview=generated-v3",
+      "width": 320
+    },
+    {
+      "controls": [
+        {
+          "active": "false",
+          "family": "imagegen-raster-preview",
+          "iconHeight": 24,
+          "iconWidth": 24,
+          "label": "Home",
+          "labelFits": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 70.1875
+        },
+        {
+          "active": "true",
+          "family": "imagegen-raster-preview",
+          "iconHeight": 24,
+          "iconWidth": 24,
+          "label": "Cars",
+          "labelFits": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 70.203125
+        },
+        {
+          "active": "false",
+          "family": "imagegen-raster-preview",
+          "iconHeight": 24,
+          "iconWidth": 24,
+          "label": "Sell",
+          "labelFits": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 70.203125
+        },
+        {
+          "active": "false",
+          "family": "imagegen-raster-preview",
+          "iconHeight": 24,
+          "iconWidth": 24,
+          "label": "Import",
+          "labelFits": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 70.203125
+        },
+        {
+          "active": "false",
+          "family": "imagegen-raster-preview",
+          "iconHeight": 24,
+          "iconWidth": 24,
+          "label": "Menu",
+          "labelFits": true,
+          "targetHeight": 51.59375,
+          "targetWidth": 70.1875
+        }
+      ],
+      "dpr": 1,
+      "height": 844,
+      "overflow": false,
+      "url": "http://127.0.0.1:6461/en/listing-grid?iconPreview=generated-v3",
+      "width": 390
+    }
+  ],
+  "interactions": [
+    {
+      "check": "BG 320 menu opens, Escape closes and focus returns",
+      "expanded": "false",
+      "focusText": "Меню",
+      "menuVisible": false
+    },
+    {
+      "check": "English Cars destination navigation",
+      "url": "http://127.0.0.1:6461/en/listing-grid"
+    }
+  ],
+  "errors": []
+}

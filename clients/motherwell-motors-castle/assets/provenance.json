@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-10-10",
+  "dealerId": "motherwell-motors-castle",
+  "media": [
+    {
+      "publicPath": "/dealer-stock/hatchback.webp",
+      "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+      "kind": "generated_category_illustration",
+      "representsAdvertisedVehicle": false,
+      "source": {
+        "carsCommit": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+        "path": "templates/auto-best/static/assets/images/template/body-hatchback-v2.webp"
+      },
+      "rights": "Generated design illustration; no third-party listing photograph copied."
+    },
+    {
+      "publicPath": "/dealer-stock/wagon.webp",
+      "sha256": "88d014cb79ae0bfd6d53fe0cd8af546b55869f70e03c6ebd24e4cec1f5e1acc2",
+      "kind": "generated_category_illustration",
+      "representsAdvertisedVehicle": false,
+      "source": {
+        "carsCommit": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+        "path": "templates/auto-best/static/assets/images/template/body-wagon-v2.webp"
+      },
+      "rights": "Generated design illustration; no third-party listing photograph copied."
+    },
+    {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "7848e9527a5883b0644ecbf16687991e93a61ea76aa16f7b997a24c1751c955a",
+      "kind": "generated_proposal_logo",
+      "source": "exec-3f223a10-8fd4-43ee-ba16-1059b6a2c353.png"
+    },
+    {
+      "localPath": "assets/app-icon.png",
+      "sha256": "4a490ca4e1aebcacfcbcc640509dc637ea1c68cc7b1df12606ab5a4ee6aa306b",
+      "kind": "generated_proposal_icon",
+      "source": "exec-966ac925-d44b-4a2c-bc1d-fef504f698aa.png"
+    },
+    {
+      "localPath": "assets/favicon.ico",
+      "sha256": "38ef73eb584417a319de331f7de231daa57914fe3a164bba8b9f6f3a6df547f1",
+      "kind": "generated_proposal_icon",
+      "source": "assets/app-icon.png",
+      "encoding": "Proportional resizing and ICO delivery encoding only"
+    }
+  ],
+  "thirdPartyStockPhotosBundled": false,
+  "dealerApproval": false
+}

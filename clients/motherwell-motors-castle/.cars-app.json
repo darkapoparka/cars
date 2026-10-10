@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "dealer": "motherwell-motors-castle",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "70c2b80671e217ab299549a938a537c0b9559611",
+    "path": "templates/app",
+    "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
+    "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f"
+  },
+  "appDigest": "b233f9ac2eee6130bfe3932464c4afc9b3036d804e8b68b17a55d8650e0c0755",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "motherwell-motors-castle",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "54b729b2b4ae79f348b47ca7e624754f1cbb32a5662be89e64a700ebeee9f65b",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 8,
+    "currency": "GBP",
+    "observedAt": "2026-10-10",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo.webp",
+        "output": "public/dealer-app/logo-light-7848e9527a5883b0644e.webp",
+        "sha256": "7848e9527a5883b0644ecbf16687991e93a61ea76aa16f7b997a24c1751c955a",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo.webp",
+        "output": "public/dealer-app/logo-dark-7848e9527a5883b0644e.webp",
+        "sha256": "7848e9527a5883b0644ecbf16687991e93a61ea76aa16f7b997a24c1751c955a",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/wagon.webp",
+        "output": "public/dealer-app/vehicle-88d014cb79ae0bfd6d53.webp",
+        "sha256": "88d014cb79ae0bfd6d53fe0cd8af546b55869f70e03c6ebd24e4cec1f5e1acc2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "audi-a1-2013-800753431171",
+        "sourceValue": 119612,
+        "sourceUnit": "mi",
+        "canonicalKm": 192497
+      },
+      {
+        "slug": "vauxhall-corsa-2021-800729940509",
+        "sourceValue": 32590,
+        "sourceUnit": "mi",
+        "canonicalKm": 52449
+      },
+      {
+        "slug": "citroen-c3-2023-800722114749",
+        "sourceValue": 3441,
+        "sourceUnit": "mi",
+        "canonicalKm": 5538
+      },
+      {
+        "slug": "renault-clio-2016-800696671424",
+        "sourceValue": 54322,
+        "sourceUnit": "mi",
+        "canonicalKm": 87423
+      },
+      {
+        "slug": "vauxhall-corsa-2015-800682432068",
+        "sourceValue": 75185,
+        "sourceUnit": "mi",
+        "canonicalKm": 120999
+      },
+      {
+        "slug": "audi-q5-2013-800637144674",
+        "sourceValue": 81414,
+        "sourceUnit": "mi",
+        "canonicalKm": 131023
+      },
+      {
+        "slug": "nissan-qashqai-2016-800632116283",
+        "sourceValue": 109154,
+        "sourceUnit": "mi",
+        "canonicalKm": 175666
+      },
+      {
+        "slug": "audi-a1-2016-800549423064",
+        "sourceValue": 91421,
+        "sourceUnit": "mi",
+        "canonicalKm": 147128
+      }
+    ],
+    "ukPresentation": {
+      "distanceUnit": "mi",
+      "canonicalDistanceUnit": "km",
+      "originalMileageRetained": true,
+      "contentPaths": [
+        "lib/dealer-mileage.ts",
+        "lib/currency.ts",
+        "lib/inventory-filters.ts",
+        "lib/inventory-settings.ts",
+        "components/DesktopInventoryFilters.tsx",
+        "components/NativeFilterPane.tsx",
+        "components/VehicleCard.tsx",
+        "components/VehicleBelowFold.tsx",
+        "components/VehicleComparison.tsx",
+        "components/VehicleDetailClient.tsx",
+        "components/SellEnquirySheet.tsx"
+      ]
+    }
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}
