@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-10T09:35:41.636Z",
+  "scope": "Data/identity/local-media integrity and existing dealer normalizer only. Not template acceptance, a framework build, visual QA, source adoption or deployment.",
+  "result": "PASS_DATA_ONLY",
+  "dealers": [
+    {
+      "slug": "dm-auto-varna",
+      "records": 8,
+      "photos": 32,
+      "hashedAssets": 34,
+      "normalizer": "passed",
+      "localeContract": "passed",
+      "assetIntegrity": "passed",
+      "visualLogoQA": "pending",
+      "sixAppBuild": "not-run",
+      "hostedQA": "not-run"
+    },
+    {
+      "slug": "kolarov-cars",
+      "records": 8,
+      "photos": 32,
+      "hashedAssets": 34,
+      "normalizer": "passed",
+      "localeContract": "passed",
+      "assetIntegrity": "passed",
+      "visualLogoQA": "pending",
+      "sixAppBuild": "not-run",
+      "hostedQA": "not-run"
+    },
+    {
+      "slug": "dynamic-auto-varna",
+      "records": 8,
+      "photos": 32,
+      "hashedAssets": 34,
+      "normalizer": "passed",
+      "localeContract": "passed",
+      "assetIntegrity": "passed",
+      "visualLogoQA": "pending",
+      "sixAppBuild": "not-run",
+      "hostedQA": "not-run"
+    },
+    {
+      "slug": "car-point-trade-varna",
+      "records": 8,
+      "photos": 32,
+      "hashedAssets": 34,
+      "normalizer": "passed",
+      "localeContract": "passed",
+      "assetIntegrity": "passed",
+      "visualLogoQA": "pending",
+      "sixAppBuild": "not-run",
+      "hostedQA": "not-run"
+    },
+    {
+      "slug": "pm-select-automotive",
+      "records": 8,
+      "photos": 32,
+      "hashedAssets": 34,
+      "normalizer": "passed",
+      "localeContract": "passed",
+      "assetIntegrity": "passed",
+      "visualLogoQA": "pending",
+      "sixAppBuild": "not-run",
+      "hostedQA": "not-run"
+    },
+    {
+      "slug": "dream-drive-varna",
+      "records": 8,
+      "photos": 32,
+      "hashedAssets": 34,
+      "normalizer": "passed",
+      "localeContract": "passed",
+      "assetIntegrity": "passed",
+      "visualLogoQA": "pending",
+      "sixAppBuild": "not-run",
+      "hostedQA": "not-run"
+    },
+    {
+      "slug": "prime-auto-varna",
+      "records": 8,
+      "photos": 32,
+      "hashedAssets": 34,
+      "normalizer": "passed",
+      "localeContract": "passed",
+      "assetIntegrity": "passed",
+      "visualLogoQA": "pending",
+      "sixAppBuild": "not-run",
+      "hostedQA": "not-run"
+    },
+    {
+      "slug": "autoroad-varna",
+      "records": 8,
+      "photos": 32,
+      "hashedAssets": 34,
+      "normalizer": "passed",
+      "localeContract": "passed",
+      "assetIntegrity": "passed",
+      "visualLogoQA": "pending",
+      "sixAppBuild": "not-run",
+      "hostedQA": "not-run"
+    },
+    {
+      "slug": "autofest-varna",
+      "records": 8,
+      "photos": 32,
+      "hashedAssets": 34,
+      "normalizer": "passed",
+      "localeContract": "passed",
+      "assetIntegrity": "passed",
+      "visualLogoQA": "pending",
+      "sixAppBuild": "not-run",
+      "hostedQA": "not-run"
+    },
+    {
+      "slug": "city-cars-varna",
+      "records": 8,
+      "photos": 32,
+      "hashedAssets": 34,
+      "normalizer": "passed",
+      "localeContract": "passed",
+      "assetIntegrity": "passed",
+      "visualLogoQA": "pending",
+      "sixAppBuild": "not-run",
+      "hostedQA": "not-run"
+    }
+  ],
+  "totals": {
+    "dealers": 10,
+    "vehicles": 80,
+    "photos": 320,
+    "hashedAssets": 340,
+    "appBuilds": 0,
+    "deployments": 0
+  }
+}

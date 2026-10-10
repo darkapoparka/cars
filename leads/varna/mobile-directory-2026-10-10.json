@@ -1,0 +1,4771 @@
+{
+  "schemaVersion": 1,
+  "market": "Bulgaria",
+  "city": "Varna",
+  "observedAt": "2026-10-10",
+  "coverage": {
+    "source": "Mobile.bg Varna city directory",
+    "pagesRead": 9,
+    "paginationExhausted": true,
+    "directoryEntries": 166,
+    "uniqueProfiles": 166,
+    "claim": "Complete observed city-filtered directory, not every real-world Varna dealership. Includes businesses outside passenger-car retail; qualification follows."
+  },
+  "pages": [
+    {
+      "page": 1,
+      "url": "https://www.mobile.bg/dealers/location-grad-varna",
+      "count": 20,
+      "sha256": "866fea0bda23534010d7ce4210e5e35d04753ad42962b7e28a8ea3ae7684020e"
+    },
+    {
+      "page": 2,
+      "url": "https://www.mobile.bg/dealers/location-grad-varna/p-2",
+      "count": 20,
+      "sha256": "cacbace15d364f8026edd3b9b8b6462ebe1232fa9f88598dffcc12b8a4baa4c9"
+    },
+    {
+      "page": 3,
+      "url": "https://www.mobile.bg/dealers/location-grad-varna/p-3",
+      "count": 20,
+      "sha256": "ad2aa197971378a26400f7365cba474867e47b3611eb7567d699f668f63839ad"
+    },
+    {
+      "page": 4,
+      "url": "https://www.mobile.bg/dealers/location-grad-varna/p-4",
+      "count": 20,
+      "sha256": "0daec47dc641d125418d89dbe9ac9dd643279021397bea9a22829b6585fde9a2"
+    },
+    {
+      "page": 5,
+      "url": "https://www.mobile.bg/dealers/location-grad-varna/p-5",
+      "count": 20,
+      "sha256": "9d879ddc606d6331566545e121e5d29e38b1e200b411a5670fa7857d47e001b5"
+    },
+    {
+      "page": 6,
+      "url": "https://www.mobile.bg/dealers/location-grad-varna/p-6",
+      "count": 20,
+      "sha256": "5e68aa75d058f7cb1458c2bba22dd6d13c0338d14fa461c9406d32e0b68ee514"
+    },
+    {
+      "page": 7,
+      "url": "https://www.mobile.bg/dealers/location-grad-varna/p-7",
+      "count": 20,
+      "sha256": "77d4d3dc02ab2d62add33c12b1d796a7d772d820dbaa0bfa543b91efaeaa0675"
+    },
+    {
+      "page": 8,
+      "url": "https://www.mobile.bg/dealers/location-grad-varna/p-8",
+      "count": 20,
+      "sha256": "c85ad859487ebbdfade65cd10ea46d703466c9b8a5ec7b66728f54ec94218120"
+    },
+    {
+      "page": 9,
+      "url": "https://www.mobile.bg/dealers/location-grad-varna/p-9",
+      "count": 6,
+      "sha256": "fada98372f7c72d105be858ccf54265ff92d2a1d635e0b0c415f6ccf6ae3ab1a"
+    }
+  ],
+  "leads": [
+    {
+      "id": "bg-varna-partmag",
+      "name": "Борислав Колев",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, гр. Варна",
+      "phones": [
+        {
+          "display": "0897906712",
+          "e164": "+359897906712"
+        },
+        {
+          "display": "0882291159",
+          "e164": "+359882291159"
+        },
+        {
+          "display": "0899960605",
+          "e164": "+359899960605"
+        }
+      ],
+      "contactText": "0897906712, 0882291159, 0899960605",
+      "profileUrl": "https://partmag.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h14817189043037425.pic?17916234800",
+      "directoryPage": 1,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-isautovarna",
+      "name": "ISauto Varna- ВНОС,ПО ПОРЪЧКА,ПРОДАЖБА И ЗАМЯНА НА АВТОМОБИЛИ!ЛИЗИНГ!",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Бизнес парк Варна, Сграда Б6",
+      "phones": [
+        {
+          "display": "0899266666",
+          "e164": "+359899266666"
+        }
+      ],
+      "contactText": "0899266666",
+      "profileUrl": "https://isautovarna.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h15361436253475389.pic?17916234805",
+      "directoryPage": 1,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna",
+      "observedAt": "2026-10-10",
+      "qualification": "existing-client-reuse",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": [
+        "clients/isauto-varna"
+      ]
+    },
+    {
+      "id": "bg-varna-centralautomorga",
+      "name": "Ц Е Н Т Р А Л - АВТОМОРГА",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Ян Хуняди 23 /под музей 'Вл. Варненчик'/",
+      "phones": [
+        {
+          "display": "0899152377",
+          "e164": "+359899152377"
+        },
+        {
+          "display": "052/503666",
+          "e164": "+35952503666"
+        }
+      ],
+      "contactText": "0899152377, 052/503666 - Aвточасти",
+      "profileUrl": "https://centralautomorga.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h11931281958329124.pic?17916234802",
+      "directoryPage": 1,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna",
+      "observedAt": "2026-10-10",
+      "qualification": "non-passenger-or-specialist-review",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-promosale-varna",
+      "name": "Promosale Varna",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Морска Гара Варна",
+      "phones": [
+        {
+          "display": "0892020208",
+          "e164": "+359892020208"
+        }
+      ],
+      "contactText": "0892020208",
+      "profileUrl": "https://promosale_varna.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h16896811488376921.pic?17916234807",
+      "directoryPage": 1,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna",
+      "observedAt": "2026-10-10",
+      "qualification": "existing-client-reuse",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": [
+        "clients/promosale-varna"
+      ]
+    },
+    {
+      "id": "bg-varna-classic",
+      "name": "КЛАСИК",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ГП4,посока София,1 километър след отбивката за Тополи в ляво",
+      "phones": [
+        {
+          "display": "0896655504",
+          "e164": "+359896655504"
+        }
+      ],
+      "contactText": "0896655504",
+      "profileUrl": "https://classic.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 1,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-tesla",
+      "name": "Тесла БГ",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ул. Прилеп 112",
+      "phones": [
+        {
+          "display": "0895762847",
+          "e164": "+359895762847"
+        }
+      ],
+      "contactText": "0895762847",
+      "profileUrl": "https://tesla.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 1,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-kris-auto",
+      "name": "KRIS AUTO",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 313 (до Хидромарк)",
+      "phones": [
+        {
+          "display": "0897838666",
+          "e164": "+359897838666"
+        }
+      ],
+      "contactText": "0897838666",
+      "profileUrl": "https://kris_auto.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h11926160381094596.pic?17916234802",
+      "directoryPage": 1,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-odesos",
+      "name": "Одесос",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. 'Цар Освободител' на 400м. след 'МЕТРО'",
+      "phones": [
+        {
+          "display": "0888562865",
+          "e164": "+359888562865"
+        }
+      ],
+      "contactText": "0888562865",
+      "profileUrl": "https://odesos.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h10270972857908593.pic?17916234802",
+      "directoryPage": 1,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-tampers",
+      "name": "TAMPERS.EU",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, 9010 Сотира, ул. Георги Китов Otopleniepro.eu&Сонди Про-Варна",
+      "phones": [
+        {
+          "display": "0878420207",
+          "e164": "+359878420207"
+        }
+      ],
+      "contactText": "0878420207",
+      "profileUrl": "https://tampers.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h13733671625255885.pic?17916234801",
+      "directoryPage": 1,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna",
+      "observedAt": "2026-10-10",
+      "qualification": "non-passenger-or-specialist-review",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-dsvarnaauto",
+      "name": "ДС Варна Ауто ООД",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ул.Прилеп 70",
+      "phones": [
+        {
+          "display": "0896898856",
+          "e164": "+359896898856"
+        }
+      ],
+      "contactText": "0896898856",
+      "profileUrl": "https://dsvarnaauto.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 1,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-excellent",
+      "name": "Excellent",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Ян Хунияди, ъгъла с Цар Освободител",
+      "phones": [
+        {
+          "display": "0878377562",
+          "e164": "+359878377562"
+        },
+        {
+          "display": "0894883833",
+          "e164": "+359894883833"
+        },
+        {
+          "display": "0895996559",
+          "e164": "+359895996559"
+        }
+      ],
+      "contactText": "0878377562, 0894883833, 0895996559",
+      "profileUrl": "https://excellent.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h14617507379518336.pic?17916234800",
+      "directoryPage": 1,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna",
+      "observedAt": "2026-10-10",
+      "qualification": "existing-client-reuse",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": [
+        "clients/excellent-cars"
+      ]
+    },
+    {
+      "id": "bg-varna-perfektauto",
+      "name": "Перфект Ауто",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 110",
+      "phones": [
+        {
+          "display": "0884266626",
+          "e164": "+359884266626"
+        },
+        {
+          "display": "0888802226",
+          "e164": "+359888802226"
+        }
+      ],
+      "contactText": "0884266626, 0888802226",
+      "profileUrl": "https://perfektauto.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h11260924040037663.pic?17916234808",
+      "directoryPage": 1,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna",
+      "observedAt": "2026-10-10",
+      "qualification": "existing-client-reuse",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": [
+        "clients/perfect-auto-varna"
+      ]
+    },
+    {
+      "id": "bg-varna-autolife",
+      "name": "А У Т О Л А Й Ф",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, На 3 км. от голямото кръгово под Метро, по път ГП4 на разклона за с.Тополи",
+      "phones": [
+        {
+          "display": "0895766736",
+          "e164": "+359895766736"
+        }
+      ],
+      "contactText": "0895766736",
+      "profileUrl": "https://autolife.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h11949527653306620.pic?17916234809",
+      "directoryPage": 1,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna",
+      "observedAt": "2026-10-10",
+      "qualification": "existing-client-reuse",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": [
+        "clients/autolife"
+      ]
+    },
+    {
+      "id": "bg-varna-balkankar-varna",
+      "name": "АВТОЧАСТИ ВТОРА УПОТРЕБА БАЛКАН КАР",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, От МЕТРО,посока АКСАКОВО след последния светофар на 300 метра в дясно!",
+      "phones": [
+        {
+          "display": "0895565610",
+          "e164": "+359895565610"
+        }
+      ],
+      "contactText": "0895565610",
+      "profileUrl": "https://balkankar-varna.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h11909874890232334.pic?17916234807",
+      "directoryPage": 1,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna",
+      "observedAt": "2026-10-10",
+      "qualification": "non-passenger-or-specialist-review",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-priselci",
+      "name": "АВТОКЪЩА ПРИСЕЛЦИ",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цал Освободител, 285",
+      "phones": [
+        {
+          "display": "0886251705",
+          "e164": "+359886251705"
+        }
+      ],
+      "contactText": "0886251705",
+      "profileUrl": "https://priselci.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 1,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna",
+      "observedAt": "2026-10-10",
+      "qualification": "existing-client-reuse",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": [
+        "clients/priselci"
+      ]
+    },
+    {
+      "id": "bg-varna-pitocar2",
+      "name": "ПИТО КАР",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, пътя за Каменар, в дясно",
+      "phones": [
+        {
+          "display": "0888603085",
+          "e164": "+359888603085"
+        },
+        {
+          "display": "052/300833",
+          "e164": "+35952300833"
+        }
+      ],
+      "contactText": "0888603085, 052/300833",
+      "profileUrl": "https://pitocar2.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 1,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-feniks",
+      "name": "АВТОЧАСТИ ФЕНИКС АГРО",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Сливница 191, срещу Мебелна палата",
+      "phones": [
+        {
+          "display": "052/730364",
+          "e164": "+35952730364"
+        },
+        {
+          "display": "0899968200",
+          "e164": "+359899968200"
+        }
+      ],
+      "contactText": "052/730364, 0899968200",
+      "profileUrl": "https://feniks.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h13093473449245016.pic?17916234804",
+      "directoryPage": 1,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna",
+      "observedAt": "2026-10-10",
+      "qualification": "non-passenger-or-specialist-review",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-astracar",
+      "name": "А С Т Р А К А Р",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 282",
+      "phones": [
+        {
+          "display": "052510822",
+          "e164": "+35952510822"
+        },
+        {
+          "display": "0878908043",
+          "e164": "+359878908043"
+        },
+        {
+          "display": "0899908040",
+          "e164": "+359899908040"
+        }
+      ],
+      "contactText": "052510822, 0878908043, 0899908040",
+      "profileUrl": "https://astracar.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h10303657271230948.pic?17916234801",
+      "directoryPage": 1,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna",
+      "observedAt": "2026-10-10",
+      "qualification": "existing-client-reuse",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": [
+        "clients/astracar"
+      ]
+    },
+    {
+      "id": "bg-varna-avangard-auto",
+      "name": "AVANGARD AUTO",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 289",
+      "phones": [
+        {
+          "display": "0896391615",
+          "e164": "+359896391615"
+        },
+        {
+          "display": "0877800921",
+          "e164": "+359877800921"
+        }
+      ],
+      "contactText": "0896391615, 0877800921",
+      "profileUrl": "https://avangard-auto.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h14628795864514771.pic?17916234802",
+      "directoryPage": 1,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna",
+      "observedAt": "2026-10-10",
+      "qualification": "existing-client-reuse",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": [
+        "clients/avangard-auto"
+      ]
+    },
+    {
+      "id": "bg-varna-centralauto",
+      "name": "Ц Е Н Т Р А Л-АВТОСАЛОН",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. 'Ян Хуняди' 23 /под музей 'Вл. Варненчик'/",
+      "phones": [
+        {
+          "display": "052500177",
+          "e164": "+35952500177"
+        },
+        {
+          "display": "0888602290",
+          "e164": "+359888602290"
+        }
+      ],
+      "contactText": "052500177, 0888602290",
+      "profileUrl": "https://centralauto.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h12669104499724032.pic?17916234804",
+      "directoryPage": 1,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-championautopro",
+      "name": "Champion Auto Pro",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 302 /Автомивка Izgi Europe Motor",
+      "phones": [
+        {
+          "display": "0885072555",
+          "e164": "+359885072555"
+        }
+      ],
+      "contactText": "0885072555",
+      "profileUrl": "https://championautopro.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17466001698666567.pic?17916234806",
+      "directoryPage": 2,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-2",
+      "observedAt": "2026-10-10",
+      "qualification": "existing-client-reuse",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": [
+        "clients/champion-auto-pro"
+      ]
+    },
+    {
+      "id": "bg-varna-auto-grup",
+      "name": "AUTO GROUP",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ЗПЗ",
+      "phones": [
+        {
+          "display": "0898610786",
+          "e164": "+359898610786"
+        }
+      ],
+      "contactText": "0898610786",
+      "profileUrl": "https://auto_grup.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h11771696319826300.pic?17916234805",
+      "directoryPage": 2,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-2",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-champion",
+      "name": "Сhampion Auto",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 210, до изхода на КАТ",
+      "phones": [
+        {
+          "display": "0899736225",
+          "e164": "+359899736225"
+        }
+      ],
+      "contactText": "0899736225",
+      "profileUrl": "https://champion.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h13962952913852661.pic?17916234802",
+      "directoryPage": 2,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-2",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-mcarvarna",
+      "name": "M Car Varna",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Владислав Варненчик 320",
+      "phones": [
+        {
+          "display": "+359887246669",
+          "e164": "+359887246669"
+        }
+      ],
+      "contactText": "+359887246669",
+      "profileUrl": "https://mcarvarna.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h12027526246007970.pic?17916234805",
+      "directoryPage": 2,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-2",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-ivoauto-varna",
+      "name": "Иво Ауто",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 256",
+      "phones": [
+        {
+          "display": "0878720035",
+          "e164": "+359878720035"
+        },
+        {
+          "display": "0898300036",
+          "e164": "+359898300036"
+        }
+      ],
+      "contactText": "0878720035, 0898300036",
+      "profileUrl": "https://ivoauto-varna.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 2,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-2",
+      "observedAt": "2026-10-10",
+      "qualification": "existing-client-reuse",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": [
+        "clients/ivo-auto"
+      ]
+    },
+    {
+      "id": "bg-varna-tesicar",
+      "name": "Теси Кар",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. 'Цар Освободител посока Аксаково последен в ляво",
+      "phones": [
+        {
+          "display": "0886965047",
+          "e164": "+359886965047"
+        },
+        {
+          "display": "0898694330",
+          "e164": "+359898694330"
+        }
+      ],
+      "contactText": "0886965047, 0898694330",
+      "profileUrl": "https://tesicar.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h11316407313562318.pic?17916234800",
+      "directoryPage": 2,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-2",
+      "observedAt": "2026-10-10",
+      "qualification": "existing-client-reuse",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": [
+        "clients/tesi-car-varna"
+      ]
+    },
+    {
+      "id": "bg-varna-elitautoimport",
+      "name": "ELIT AUTO IMPORT EXPORT",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ПРИЛЕП 74 А",
+      "phones": [
+        {
+          "display": "+359887777887",
+          "e164": "+359887777887"
+        }
+      ],
+      "contactText": "+359887777887",
+      "profileUrl": "https://elitautoimport.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h15294999709852078.pic?17916234806",
+      "directoryPage": 2,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-2",
+      "observedAt": "2026-10-10",
+      "qualification": "existing-client-reuse",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": [
+        "clients/elit-auto-import"
+      ]
+    },
+    {
+      "id": "bg-varna-automarket",
+      "name": "АУТОМАРКЕТ ВАРНА",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител, 300 м. вдясно, след Дом на Камиона посока летище.",
+      "phones": [
+        {
+          "display": "+359886424400",
+          "e164": "+359886424400"
+        }
+      ],
+      "contactText": "+359886424400",
+      "profileUrl": "https://automarket.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h12015396395487220.pic?17916234802",
+      "directoryPage": 2,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-2",
+      "observedAt": "2026-10-10",
+      "qualification": "existing-client-reuse",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": [
+        "clients/automarket-varna"
+      ]
+    },
+    {
+      "id": "bg-varna-kristeraagro",
+      "name": "Кристера Агро ЕООД",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Княз Борис I 111",
+      "phones": [
+        {
+          "display": "0886770270",
+          "e164": "+359886770270"
+        }
+      ],
+      "contactText": "0886770270",
+      "profileUrl": "https://kristeraagro.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h14564099069285293.pic?17916234808",
+      "directoryPage": 2,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-2",
+      "observedAt": "2026-10-10",
+      "qualification": "non-passenger-or-specialist-review",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-kapitol",
+      "name": "КАПИТОЛ - АВТОМОБИЛИ С ГАРАНТИРАН ПРОИЗХОД, ЛИЗИНГ",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 236",
+      "phones": [
+        {
+          "display": "0878720052",
+          "e164": "+359878720052"
+        }
+      ],
+      "contactText": "0878720052",
+      "profileUrl": "https://kapitol.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h11864774423254881.pic?17916234807",
+      "directoryPage": 2,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-2",
+      "observedAt": "2026-10-10",
+      "qualification": "existing-client-reuse",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": [
+        "clients/kapitol-varna"
+      ]
+    },
+    {
+      "id": "bg-varna-pitocar",
+      "name": "ПИТО КАР",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, пътя за Каменар, в дясно",
+      "phones": [
+        {
+          "display": "0888603085",
+          "e164": "+359888603085"
+        },
+        {
+          "display": "052/300833",
+          "e164": "+35952300833"
+        }
+      ],
+      "contactText": "0888603085, 052/300833",
+      "profileUrl": "https://pitocar.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 2,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-2",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-kolarovcars",
+      "name": "Kolarov Cars",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Бизнес Парк Варна, сграда В8",
+      "phones": [
+        {
+          "display": "0876999800",
+          "e164": "+359876999800"
+        }
+      ],
+      "contactText": "0876999800",
+      "profileUrl": "https://kolarovcars.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h16291912244144702.pic?17916234809",
+      "directoryPage": 2,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-2",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-motocenter-varna",
+      "name": "Moto Center Varna",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ул. ''Нептун'' N:8",
+      "phones": [
+        {
+          "display": "0885 540 365",
+          "e164": "+359885540365"
+        }
+      ],
+      "contactText": "0885 540 365",
+      "profileUrl": "https://motocenter-varna.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 2,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-2",
+      "observedAt": "2026-10-10",
+      "qualification": "non-passenger-or-specialist-review",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-ecodrive",
+      "name": "Eco Drive",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Варна",
+      "phones": [
+        {
+          "display": "0897838559",
+          "e164": "+359897838559"
+        }
+      ],
+      "contactText": "0897838559",
+      "profileUrl": "https://ecodrive.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17288867291851383.pic?17916234801",
+      "directoryPage": 2,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-2",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-dynamicautovarna",
+      "name": "Dynamic Auto Varna",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 289",
+      "phones": [
+        {
+          "display": "0889616721",
+          "e164": "+359889616721"
+        }
+      ],
+      "contactText": "0889616721",
+      "profileUrl": "https://dynamicautovarna.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17543857841071036.pic?17916234800",
+      "directoryPage": 2,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-2",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-outletcarsvarna",
+      "name": "OUTLETCARS.BG-Варна: Лизингови и фирмени автомобили с доказан произход и история",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Срещу КАТ Варна, бул. Янош Хуняди 518",
+      "phones": [
+        {
+          "display": "0898921010",
+          "e164": "+359898921010"
+        }
+      ],
+      "contactText": "0898921010",
+      "profileUrl": "https://outletcarsvarna.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h16152065363167441.pic?17916234809",
+      "directoryPage": 2,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-2",
+      "observedAt": "2026-10-10",
+      "qualification": "existing-client-reuse",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": [
+        "clients/outletcars-varna"
+      ]
+    },
+    {
+      "id": "bg-varna-skyrentsvarna",
+      "name": "Скай Рентс ООД",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Местност Сълзица",
+      "phones": [
+        {
+          "display": "0892253283",
+          "e164": "+359892253283"
+        },
+        {
+          "display": "0877148915",
+          "e164": "+359877148915"
+        },
+        {
+          "display": "0898303090",
+          "e164": "+359898303090"
+        }
+      ],
+      "contactText": "0892253283, 0877148915, 0898303090",
+      "profileUrl": "https://skyrentsvarna.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17240531026883923.pic?17916234806",
+      "directoryPage": 2,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-2",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-chernomore",
+      "name": "Черно море - внос и търговия с автомобили,",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Кръстовището на бул. Цар Освободител и бул. Константин и Фружин",
+      "phones": [
+        {
+          "display": "0888596963",
+          "e164": "+359888596963"
+        },
+        {
+          "display": "052/560733",
+          "e164": "+35952560733"
+        }
+      ],
+      "contactText": "0888596963, 052/560733",
+      "profileUrl": "https://chernomore.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h10444687689057816.pic?17916234805",
+      "directoryPage": 2,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-2",
+      "observedAt": "2026-10-10",
+      "qualification": "existing-client-reuse",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": [
+        "clients/chernomore-varna"
+      ]
+    },
+    {
+      "id": "bg-varna-autofest",
+      "name": "Аутофест",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул.'Цар Освободител' 1000 метра след Метро",
+      "phones": [
+        {
+          "display": "0897855097",
+          "e164": "+359897855097"
+        },
+        {
+          "display": "0895460139",
+          "e164": "+359895460139"
+        }
+      ],
+      "contactText": "0897855097, 0895460139",
+      "profileUrl": "https://autofest.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h11685301970088360.pic?17916234809",
+      "directoryPage": 2,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-2",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-navara",
+      "name": "Навара кар",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул.'Цар Освободител' преди Италмодалуче, вдясно, посока Летище",
+      "phones": [
+        {
+          "display": "0899192300",
+          "e164": "+359899192300"
+        }
+      ],
+      "contactText": "0899192300",
+      "profileUrl": "https://navara.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h10849685945706627.pic?17916234803",
+      "directoryPage": 2,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-2",
+      "observedAt": "2026-10-10",
+      "qualification": "existing-client-reuse",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": [
+        "clients/navara-car"
+      ]
+    },
+    {
+      "id": "bg-varna-mania",
+      "name": "АВТОБОРСА МАНИЯ",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 345",
+      "phones": [
+        {
+          "display": "0899874488",
+          "e164": "+359899874488"
+        }
+      ],
+      "contactText": "0899874488",
+      "profileUrl": "https://mania.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 3,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-3",
+      "observedAt": "2026-10-10",
+      "qualification": "existing-client-reuse",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": [
+        "clients/avtoborsa-mania"
+      ]
+    },
+    {
+      "id": "bg-varna-legendauto1",
+      "name": "LEGEND AUTO",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 289 /срещу МАКАО/",
+      "phones": [
+        {
+          "display": "0899877305",
+          "e164": "+359899877305"
+        }
+      ],
+      "contactText": "0899877305",
+      "profileUrl": "https://legendauto1.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h14769822911961758.pic?17916234815",
+      "directoryPage": 3,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-3",
+      "observedAt": "2026-10-10",
+      "qualification": "existing-client-reuse",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": [
+        "clients/legend-auto"
+      ]
+    },
+    {
+      "id": "bg-varna-peugeot",
+      "name": "София Франс Ауто - Варна",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Автомагистрала Хемус 66, преди отбивката за летище Варна",
+      "phones": [
+        {
+          "display": "052/554112",
+          "e164": "+35952554112"
+        }
+      ],
+      "contactText": "052/554112",
+      "profileUrl": "https://peugeot.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h14241807522001047.pic?17916234813",
+      "directoryPage": 3,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-3",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-sevicar",
+      "name": "АВТОКЪЩА СЕВИ КАР",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Главен път Е2 ВАРНА-СОФИЯ, 400м. след кръговото под Метро! GPS",
+      "phones": [
+        {
+          "display": "0888205072",
+          "e164": "+359888205072"
+        }
+      ],
+      "contactText": "0888205072",
+      "profileUrl": "https://sevicar.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 3,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-3",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-kalchev",
+      "name": "Kalchev Correct",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, пътя за Побитите камъни, на 200 метра от разклона за с.Тополи, отляво",
+      "phones": [
+        {
+          "display": "0879699644",
+          "e164": "+359879699644"
+        },
+        {
+          "display": "0888355102",
+          "e164": "+359888355102"
+        }
+      ],
+      "contactText": "0879699644, 0888355102",
+      "profileUrl": "https://kalchev.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 3,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-3",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-atvvarna",
+      "name": "ATV VARNA GARAGE",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Варна",
+      "phones": [
+        {
+          "display": "0886068222",
+          "e164": "+359886068222"
+        }
+      ],
+      "contactText": "0886068222",
+      "profileUrl": "https://atvvarna.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17267286495375331.pic?17916234817",
+      "directoryPage": 3,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-3",
+      "observedAt": "2026-10-10",
+      "qualification": "non-passenger-or-specialist-review",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-opelnew",
+      "name": "Булвария ЕООД",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Ян Хунияди 7, над КАТ",
+      "phones": [
+        {
+          "display": "0887407050",
+          "e164": "+359887407050"
+        }
+      ],
+      "contactText": "0887407050",
+      "profileUrl": "https://opelnew.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h14863933366468155.pic?17916234819",
+      "directoryPage": 3,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-3",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-extracar-sm",
+      "name": "ЕКСТРА КАР-СМ",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител, преди светофара за Джъмбо",
+      "phones": [
+        {
+          "display": "0899968555",
+          "e164": "+359899968555"
+        },
+        {
+          "display": "0895762645",
+          "e164": "+359895762645"
+        }
+      ],
+      "contactText": "0899968555, 0895762645",
+      "profileUrl": "https://extracar-sm.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h12548071796009091.pic?17916234815",
+      "directoryPage": 3,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-3",
+      "observedAt": "2026-10-10",
+      "qualification": "existing-client-reuse",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": [
+        "clients/extra-car-sm"
+      ]
+    },
+    {
+      "id": "bg-varna-dmautovarna",
+      "name": "D&M - Auto Varna",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 282",
+      "phones": [
+        {
+          "display": "0898286848",
+          "e164": "+359898286848"
+        }
+      ],
+      "contactText": "0898286848",
+      "profileUrl": "https://dmautovarna.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h16656460933610091.pic?17916234817",
+      "directoryPage": 3,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-3",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-sprint",
+      "name": "Спринт ауто",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител,втората автокъща след Тилком и Италмодалуче посока Аксаково",
+      "phones": [
+        {
+          "display": "0888006224",
+          "e164": "+359888006224"
+        }
+      ],
+      "contactText": "0888006224",
+      "profileUrl": "https://sprint.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h13946341383908032.pic?17916234818",
+      "directoryPage": 3,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-3",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-prestige",
+      "name": "П Р Е С Т И Ж",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул.Цар Освободител 15-20м преди последния светофар за Владиславово в ляво",
+      "phones": [
+        {
+          "display": "0897298385",
+          "e164": "+359897298385"
+        },
+        {
+          "display": "0888502567",
+          "e164": "+359888502567"
+        }
+      ],
+      "contactText": "0897298385, 0888502567",
+      "profileUrl": "https://prestige.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h13400059981431989.pic?17916234813",
+      "directoryPage": 3,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-3",
+      "observedAt": "2026-10-10",
+      "qualification": "existing-client-reuse",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": [
+        "clients/prestige-varna"
+      ]
+    },
+    {
+      "id": "bg-varna-eurocar6",
+      "name": "ЕВРОКАР",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител /до Дом на Камиона/",
+      "phones": [
+        {
+          "display": "0879430777",
+          "e164": "+359879430777"
+        },
+        {
+          "display": "0879586878",
+          "e164": "+359879586878"
+        }
+      ],
+      "contactText": "0879430777, 0879586878",
+      "profileUrl": "https://eurocar6.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h12011642891621656.pic?17916234817",
+      "directoryPage": 3,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-3",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-mladost",
+      "name": "Aвтосалон МЛАДОСТ - нов внос на автомобили от Швейцария и Германия",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, кв. Владиславово",
+      "phones": [
+        {
+          "display": "0895462052",
+          "e164": "+359895462052"
+        }
+      ],
+      "contactText": "0895462052",
+      "profileUrl": "https://mladost.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h12692577316505401.pic?17916234816",
+      "directoryPage": 3,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-3",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-sunny",
+      "name": "СЪНИ",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 256",
+      "phones": [
+        {
+          "display": "0898644464",
+          "e164": "+359898644464"
+        }
+      ],
+      "contactText": "0898644464",
+      "profileUrl": "https://sunny.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h11690476830498886.pic?17916234818",
+      "directoryPage": 3,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-3",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-evrocarvarna09",
+      "name": "ЕВРОКАР ВАРНА 09",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител, след Метро, преди светофара за JUMBO",
+      "phones": [
+        {
+          "display": "0897002225",
+          "e164": "+359897002225"
+        }
+      ],
+      "contactText": "0897002225",
+      "profileUrl": "https://evrocarvarna09.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h12537006227134870.pic?17916234814",
+      "directoryPage": 3,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-3",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-fusionauto",
+      "name": "ФЮЖЪН АУТО",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Пътя за село Тополи, 200 м след Темпо Бетони в ляво, зад Автосервиз и ГТП Тандем",
+      "phones": [
+        {
+          "display": "0883374712",
+          "e164": "+359883374712"
+        },
+        {
+          "display": "0879888461",
+          "e164": "+359879888461"
+        }
+      ],
+      "contactText": "0883374712, 0879888461",
+      "profileUrl": "https://fusionauto.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 3,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-3",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-candexgroup",
+      "name": "КАНДЕКС ГРУП ЕООД",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, складове във Варна, София, Пловдив, Бургас",
+      "phones": [
+        {
+          "display": "0889324240",
+          "e164": "+359889324240"
+        }
+      ],
+      "contactText": "0889324240",
+      "profileUrl": "https://candexgroup.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 3,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-3",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-varnaparts",
+      "name": "VarnaParts",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Варна",
+      "phones": [
+        {
+          "display": "0893968055",
+          "e164": "+359893968055"
+        }
+      ],
+      "contactText": "0893968055",
+      "profileUrl": "https://varnaparts.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 3,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-3",
+      "observedAt": "2026-10-10",
+      "qualification": "non-passenger-or-specialist-review",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-bavaria",
+      "name": "Бавария",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител до светофара за Владиславово",
+      "phones": [
+        {
+          "display": "0879030161",
+          "e164": "+359879030161"
+        }
+      ],
+      "contactText": "0879030161",
+      "profileUrl": "https://bavaria.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h12464359438799833.pic?17916234814",
+      "directoryPage": 3,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-3",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-express-auto",
+      "name": "ЕКСПРЕС АУТО",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул.Цар Освободител 311",
+      "phones": [
+        {
+          "display": "0888885453",
+          "e164": "+359888885453"
+        }
+      ],
+      "contactText": "0888885453",
+      "profileUrl": "https://express_auto.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 3,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-3",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-kalokars",
+      "name": "КАЛО КАРС",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, до кръстовището на бул. Цар Освободител и бул. Константин и Фружин, под Джъмбо",
+      "phones": [
+        {
+          "display": "0876055588",
+          "e164": "+359876055588"
+        }
+      ],
+      "contactText": "0876055588",
+      "profileUrl": "https://kalokars.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h14035979111881216.pic?17916234827",
+      "directoryPage": 4,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-4",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-miraj-auto",
+      "name": "МИРАЖ АУТО",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 230, срещу МЕТРО до автогуми Жижо",
+      "phones": [
+        {
+          "display": "0893777706",
+          "e164": "+359893777706"
+        }
+      ],
+      "contactText": "0893777706",
+      "profileUrl": "https://miraj_auto.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h11815718266160990.pic?17916234826",
+      "directoryPage": 4,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-4",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-city-cars",
+      "name": "Сити Карс",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ул. 'Перекоп' 2",
+      "phones": [
+        {
+          "display": "0899867804",
+          "e164": "+359899867804"
+        }
+      ],
+      "contactText": "0899867804",
+      "profileUrl": "https://city_cars.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17436859446175481.pic?17916234828",
+      "directoryPage": 4,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-4",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-rqsautoteam",
+      "name": "R.Q.S. Auto - Team",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител, ДИРЕКТЕН ВНОСИТЕЛ",
+      "phones": [
+        {
+          "display": "0876997791",
+          "e164": "+359876997791"
+        }
+      ],
+      "contactText": "0876997791",
+      "profileUrl": "https://rqsautoteam.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h13473716076394789.pic?17916234825",
+      "directoryPage": 4,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-4",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-odisey",
+      "name": "Одисей-41",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ул. Атанас Москов",
+      "phones": [
+        {
+          "display": "0885203559",
+          "e164": "+359885203559"
+        }
+      ],
+      "contactText": "0885203559",
+      "profileUrl": "https://odisey.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 4,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-4",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-nunki-1",
+      "name": "NUNKI - 1",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 227;9023 планова индустриална зона-Варна",
+      "phones": [
+        {
+          "display": "0890426113",
+          "e164": "+359890426113"
+        }
+      ],
+      "contactText": "0890426113",
+      "profileUrl": "https://nunki-1.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h14975109548348985.pic?17916234827",
+      "directoryPage": 4,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-4",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-bgagro",
+      "name": "БГ АГРО ЗЕМЕДЕЛСКА КОМПАНИЯ ЕООД",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ул.Генерал Колев 12",
+      "phones": [
+        {
+          "display": "0884010279",
+          "e164": "+359884010279"
+        }
+      ],
+      "contactText": "0884010279",
+      "profileUrl": "https://bgagro.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17724439161539722.pic?17916234826",
+      "directoryPage": 4,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-4",
+      "observedAt": "2026-10-10",
+      "qualification": "non-passenger-or-specialist-review",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-multizaza",
+      "name": "Multi ZaZa",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ул. Райко Жинзифов",
+      "phones": [
+        {
+          "display": "0887236046",
+          "e164": "+359887236046"
+        }
+      ],
+      "contactText": "0887236046",
+      "profileUrl": "https://multizaza.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 4,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-4",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-evropavarna",
+      "name": "Европа",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Хр.Смирненски / до Вятърна мелница/",
+      "phones": [
+        {
+          "display": "0887600565",
+          "e164": "+359887600565"
+        },
+        {
+          "display": "0887616655",
+          "e164": "+359887616655"
+        }
+      ],
+      "contactText": "0887600565, 0887616655",
+      "profileUrl": "https://evropavarna.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 4,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-4",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-vvcars",
+      "name": "VV Cars",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Бул. Цар Освободител - 200 метра след светофара на Дом на камиона - отдясно",
+      "phones": [
+        {
+          "display": "0898 554 198",
+          "e164": "+359898554198"
+        },
+        {
+          "display": "0878 245 522",
+          "e164": "+359878245522"
+        }
+      ],
+      "contactText": "0898 554 198, 0878 245 522",
+      "profileUrl": "https://vvcars.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h16984118165619554.pic?17916234826",
+      "directoryPage": 4,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-4",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-vichenca",
+      "name": "VICHENCA",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цал Освободител, третият автосалон откъм летището в ляво",
+      "phones": [
+        {
+          "display": "0877 778 669",
+          "e164": "+359877778669"
+        }
+      ],
+      "contactText": "0877 778 669",
+      "profileUrl": "https://vichenca.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 4,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-4",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-weltauto",
+      "name": "Das WeltAuto - Автотрейд ООД",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Трети март 59",
+      "phones": [
+        {
+          "display": "0887503099",
+          "e164": "+359887503099"
+        },
+        {
+          "display": "052/570755",
+          "e164": "+35952570755"
+        }
+      ],
+      "contactText": "0887503099, 052/570755",
+      "profileUrl": "https://weltauto.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h14404186292493968.pic?17916234829",
+      "directoryPage": 4,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-4",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-monarh",
+      "name": "Монарх",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Бул. Цар Освободител",
+      "phones": [
+        {
+          "display": "0877796170",
+          "e164": "+359877796170"
+        },
+        {
+          "display": "0877277258",
+          "e164": "+359877277258"
+        }
+      ],
+      "contactText": "0877796170, 0877277258",
+      "profileUrl": "https://monarh.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17727163359858928.pic?17916234827",
+      "directoryPage": 4,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-4",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-gofishboat",
+      "name": "Go Fish Boat Service",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Южна Промишлена Зона",
+      "phones": [
+        {
+          "display": "00359888818151",
+          "e164": "+359888818151"
+        }
+      ],
+      "contactText": "00359888818151",
+      "profileUrl": "https://gofishboat.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h16821668542850378.pic?17916234829",
+      "directoryPage": 4,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-4",
+      "observedAt": "2026-10-10",
+      "qualification": "non-passenger-or-specialist-review",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-pmselect",
+      "name": "PM SELECT AUTOMOTIVE",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 122",
+      "phones": [
+        {
+          "display": "0887083275",
+          "e164": "+359887083275"
+        },
+        {
+          "display": "0899225640",
+          "e164": "+359899225640"
+        }
+      ],
+      "contactText": "0887083275, 0899225640",
+      "profileUrl": "https://pmselect.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17775546960212357.pic?17916234827",
+      "directoryPage": 4,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-4",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-atanasov",
+      "name": "Атанасов",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Варна",
+      "phones": [
+        {
+          "display": "0988 864 133",
+          "e164": "+359988864133"
+        }
+      ],
+      "contactText": "0988 864 133",
+      "profileUrl": "https://atanasov.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 4,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-4",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-kolevi-auto",
+      "name": "Колеви Ауто",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител",
+      "phones": [
+        {
+          "display": "0878431141",
+          "e164": "+359878431141"
+        }
+      ],
+      "contactText": "0878431141",
+      "profileUrl": "https://kolevi_auto.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h16796503012618072.pic?17916234827",
+      "directoryPage": 4,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-4",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-aauto",
+      "name": "Алианс Ауто Варна",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул.Владислав Варненчик 262",
+      "phones": [
+        {
+          "display": "0887000306",
+          "e164": "+359887000306"
+        },
+        {
+          "display": "052/505035",
+          "e164": "+35952505035"
+        },
+        {
+          "display": "0887802060",
+          "e164": "+359887802060"
+        },
+        {
+          "display": "0889706077",
+          "e164": "+359889706077"
+        }
+      ],
+      "contactText": "0887000306 ,052/505035, 0887802060, 0889706077",
+      "profileUrl": "https://aauto.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 4,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-4",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-transcar",
+      "name": "АВТОСАЛОН ТРАНС КАР",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул.Цар Освободител 900 метра след Метро",
+      "phones": [
+        {
+          "display": "0898504908",
+          "e164": "+359898504908"
+        }
+      ],
+      "contactText": "0898504908",
+      "profileUrl": "https://transcar.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 4,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-4",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-stadiona",
+      "name": "Автосалон СТАДИОНА",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул.Цар Освободител-след Метро",
+      "phones": [
+        {
+          "display": "0898838353",
+          "e164": "+359898838353"
+        }
+      ],
+      "contactText": "0898838353",
+      "profileUrl": "https://stadiona.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h12452252789147851.pic?17916234829",
+      "directoryPage": 4,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-4",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-balkancarvarna",
+      "name": "BalkanCarVarna",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 548 (на светофара под Джъмбо)",
+      "phones": [
+        {
+          "display": "0888513460",
+          "e164": "+359888513460"
+        },
+        {
+          "display": "0888706421",
+          "e164": "+359888706421"
+        }
+      ],
+      "contactText": "0888513460, 0888706421",
+      "profileUrl": "https://balkancarvarna.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h16745071698058464.pic?17916234822",
+      "directoryPage": 5,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-5",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-carpointtrade",
+      "name": "CAR POINT TRADE LTD",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 285",
+      "phones": [
+        {
+          "display": "0883530713",
+          "e164": "+359883530713"
+        }
+      ],
+      "contactText": "0883530713",
+      "profileUrl": "https://carpointtrade.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17194805109486374.pic?17916234821",
+      "directoryPage": 5,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-5",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-autobora",
+      "name": "Ауто-бора",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител",
+      "phones": [
+        {
+          "display": "0897447696",
+          "e164": "+359897447696"
+        }
+      ],
+      "contactText": "0897447696",
+      "profileUrl": "https://autobora.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 5,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-5",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-stefancar",
+      "name": "СТЕФАН КАР -внос и продажба на автомобили",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 500 метра след метро",
+      "phones": [
+        {
+          "display": "0888229977",
+          "e164": "+359888229977"
+        }
+      ],
+      "contactText": "0888229977",
+      "profileUrl": "https://stefancar.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 5,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-5",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-promotors82",
+      "name": "PRO MOTORS",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Христо Смирненски",
+      "phones": [
+        {
+          "display": "0899519164",
+          "e164": "+359899519164"
+        }
+      ],
+      "contactText": "0899519164",
+      "profileUrl": "https://promotors82.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17234866690556728.pic?17916234827",
+      "directoryPage": 5,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-5",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-kalchev-correct",
+      "name": "Kalchev Correct",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Пътя от Варна посока побити камъни 200м след отбивката за Тополи в ляво",
+      "phones": [
+        {
+          "display": "0879699644",
+          "e164": "+359879699644"
+        }
+      ],
+      "contactText": "0879699644",
+      "profileUrl": "https://kalchev-correct.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 5,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-5",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-ottimaauto",
+      "name": "Оттима Ауто",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 275",
+      "phones": [
+        {
+          "display": "0887878838",
+          "e164": "+359887878838"
+        }
+      ],
+      "contactText": "0887878838",
+      "profileUrl": "https://ottimaauto.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h16054428822790752.pic?17916234827",
+      "directoryPage": 5,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-5",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-exclusiveauto",
+      "name": "Exclusive Auto",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 176",
+      "phones": [
+        {
+          "display": "0895303009",
+          "e164": "+359895303009"
+        }
+      ],
+      "contactText": "0895303009,",
+      "profileUrl": "https://exclusiveauto.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h16681598865780483.pic?17916234820",
+      "directoryPage": 5,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-5",
+      "observedAt": "2026-10-10",
+      "qualification": "existing-client-reuse",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": [
+        "clients/exclusive-auto-varna",
+        "clients/exclusive-auto-varna-research-bak"
+      ]
+    },
+    {
+      "id": "bg-varna-elegantcar",
+      "name": "Елегант кар",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител разклона за Владиславово",
+      "phones": [
+        {
+          "display": "0888554972",
+          "e164": "+359888554972"
+        },
+        {
+          "display": "0877910051",
+          "e164": "+359877910051"
+        }
+      ],
+      "contactText": "0888554972, 0877910051",
+      "profileUrl": "https://elegantcar.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h11980802637079885.pic?17916234822",
+      "directoryPage": 5,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-5",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-tonyem4m",
+      "name": "Тони Ем",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Янош Хуняди 95 ( до Пароцентралата)",
+      "phones": [
+        {
+          "display": "0889515000",
+          "e164": "+359889515000"
+        }
+      ],
+      "contactText": "0889515000",
+      "profileUrl": "https://tonyem4m.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h11418158385117212.pic?17916234825",
+      "directoryPage": 5,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-5",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-xcar",
+      "name": "Х CAR",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Север, бул. Владислав Варненчик",
+      "phones": [
+        {
+          "display": "0988975522",
+          "e164": "+359988975522"
+        }
+      ],
+      "contactText": "0988975522",
+      "profileUrl": "https://xcar.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17391835586939972.pic?17916234823",
+      "directoryPage": 5,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-5",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-biemaauto",
+      "name": "BIEMAAUТO",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Бул.Цар Освободите 202 до изхода на КАТ",
+      "phones": [
+        {
+          "display": "0898670101",
+          "e164": "+359898670101"
+        },
+        {
+          "display": "0878258953",
+          "e164": "+359878258953"
+        }
+      ],
+      "contactText": "0898670101, 0878258953",
+      "profileUrl": "https://biemaauto.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17471275931423000.pic?17916234828",
+      "directoryPage": 5,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-5",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-am-varna",
+      "name": "АВТОМОТОР ВАРНА АД",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Бул. Цар Освободител 277",
+      "phones": [
+        {
+          "display": "0885735255",
+          "e164": "+359885735255"
+        }
+      ],
+      "contactText": "0885735255",
+      "profileUrl": "https://am-varna.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h16908971384857384.pic?17916234825",
+      "directoryPage": 5,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-5",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-lionauto1",
+      "name": "Лион Ауто",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул.Цар Освободител третата автокъща в ляво след Италмодо",
+      "phones": [
+        {
+          "display": "0895753001",
+          "e164": "+359895753001"
+        }
+      ],
+      "contactText": "0895753001",
+      "profileUrl": "https://lionauto1.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h15566181495309443.pic?17916234826",
+      "directoryPage": 5,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-5",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-buscenter",
+      "name": "BUS Center Bulgaria",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, с. Тополи, изход към крайезерен път",
+      "phones": [
+        {
+          "display": "0888244000",
+          "e164": "+359888244000"
+        },
+        {
+          "display": "0888527819",
+          "e164": "+359888527819"
+        }
+      ],
+      "contactText": "0888244000, 0888527819",
+      "profileUrl": "https://buscenter.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h13889979095300699.pic?17916234828",
+      "directoryPage": 5,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-5",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-abcbulgaria",
+      "name": "АБЦ БЪЛГАРИЯ ЕООД",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ул. Орех 1",
+      "phones": [
+        {
+          "display": "0893324178",
+          "e164": "+359893324178"
+        }
+      ],
+      "contactText": "0893324178",
+      "profileUrl": "https://abcbulgaria.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 5,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-5",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-baev",
+      "name": "АУТО РИЧ",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Кайсиева градина",
+      "phones": [
+        {
+          "display": "0886857250",
+          "e164": "+359886857250"
+        }
+      ],
+      "contactText": "0886857250",
+      "profileUrl": "https://baev.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h16214111933780800.pic?17916234827",
+      "directoryPage": 5,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-5",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-mladost2",
+      "name": "МЛАДОСТ 2 - Внос на автомобили от западна Европа",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 290",
+      "phones": [
+        {
+          "display": "0895324074",
+          "e164": "+359895324074"
+        },
+        {
+          "display": "0897873671",
+          "e164": "+359897873671"
+        }
+      ],
+      "contactText": "0895324074, 0897873671",
+      "profileUrl": "https://mladost2.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h15002743420711635.pic?17916234825",
+      "directoryPage": 5,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-5",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-richicar",
+      "name": "РИЧИ КАР",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, УЛ.Янко Мустаков 39(след магазин ЕЛБА ,до спирка Черни Връх)",
+      "phones": [
+        {
+          "display": "0895636226",
+          "e164": "+359895636226"
+        }
+      ],
+      "contactText": "0895636226",
+      "profileUrl": "https://richicar.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h12712437829915517.pic?17916234824",
+      "directoryPage": 5,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-5",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-elexiscars",
+      "name": "ELEXIS CARS",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ул. Проф. Цани Калянджиев 6",
+      "phones": [
+        {
+          "display": "0899388989",
+          "e164": "+359899388989"
+        }
+      ],
+      "contactText": "0899388989",
+      "profileUrl": "https://elexiscars.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17797762615097465.pic?17916234824",
+      "directoryPage": 5,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-5",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-vaencars",
+      "name": "VAEN CARS",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ул. Мусала11",
+      "phones": [
+        {
+          "display": "0886039057",
+          "e164": "+359886039057"
+        }
+      ],
+      "contactText": "0886039057",
+      "profileUrl": "https://vaencars.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 6,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-6",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-bo-avto1",
+      "name": "BO-AVTO 1",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, до мебелна къща Явор",
+      "phones": [
+        {
+          "display": "0899204282",
+          "e164": "+359899204282"
+        }
+      ],
+      "contactText": "0899204282",
+      "profileUrl": "https://bo-avto1.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h14530756159012789.pic?17916234839",
+      "directoryPage": 6,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-6",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-dreamdrive",
+      "name": "DREAM DRIVE",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 289",
+      "phones": [
+        {
+          "display": "0895395980",
+          "e164": "+359895395980"
+        }
+      ],
+      "contactText": "0895395980",
+      "profileUrl": "https://dreamdrive.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17896673907786870.pic?17916234830",
+      "directoryPage": 6,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-6",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-topauto",
+      "name": "topauto",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Кайсиева градина, до бл. 222",
+      "phones": [
+        {
+          "display": "0893036419",
+          "e164": "+359893036419"
+        }
+      ],
+      "contactText": "0893036419",
+      "profileUrl": "https://topauto.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 6,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-6",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-electricauto",
+      "name": "Electric Auto",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ул. Лале 1",
+      "phones": [
+        {
+          "display": "0879904724",
+          "e164": "+359879904724"
+        }
+      ],
+      "contactText": "0879904724",
+      "profileUrl": "https://electricauto.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 6,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-6",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-varnacarexpress",
+      "name": "Варна Кар Експрес",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул.'Цар Освободител' 200м. след Дом на Камиона посока Аксаково.",
+      "phones": [
+        {
+          "display": "0897964420",
+          "e164": "+359897964420"
+        },
+        {
+          "display": "0899155902",
+          "e164": "+359899155902"
+        }
+      ],
+      "contactText": "0897964420, 0899155902",
+      "profileUrl": "https://varnacarexpress.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h10347082890811433.pic?17916234831",
+      "directoryPage": 6,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-6",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-focus1",
+      "name": "автосалон Фокус",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 329",
+      "phones": [
+        {
+          "display": "0899811258",
+          "e164": "+359899811258"
+        }
+      ],
+      "contactText": "0899811258",
+      "profileUrl": "https://focus1.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 6,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-6",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-garage24",
+      "name": "Garage24",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, р-н Владислав Варненчик",
+      "phones": [
+        {
+          "display": "+359885580070",
+          "e164": "+359885580070"
+        }
+      ],
+      "contactText": "+359885580070",
+      "profileUrl": "https://garage24.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 6,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-6",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-kris",
+      "name": "Крис",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, гр. Варна, бул. ,,Цар Освободител Номер#355А",
+      "phones": [
+        {
+          "display": "0899927244",
+          "e164": "+359899927244"
+        }
+      ],
+      "contactText": "0899927244",
+      "profileUrl": "https://kris.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h15411555320780691.pic?17916234835",
+      "directoryPage": 6,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-6",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-ribbg",
+      "name": "RIBBG",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, гр. Варна",
+      "phones": [
+        {
+          "display": "+359889 436 452",
+          "e164": "+359889436452"
+        }
+      ],
+      "contactText": "+359889 436 452",
+      "profileUrl": "https://ribbg.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h15625807866479290.pic?17916234831",
+      "directoryPage": 6,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-6",
+      "observedAt": "2026-10-10",
+      "qualification": "non-passenger-or-specialist-review",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-mateus-auto",
+      "name": "Mateus_auto",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ул. Цоньо Тодоров до тролейбусно депо",
+      "phones": [
+        {
+          "display": "0898549250",
+          "e164": "+359898549250"
+        }
+      ],
+      "contactText": "0898549250",
+      "profileUrl": "https://mateus_auto.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 6,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-6",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-grand-auto",
+      "name": "ГРАНД АУТО ВАРНА",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 289, до Макао посока Аксаково",
+      "phones": [
+        {
+          "display": "0889811120",
+          "e164": "+359889811120"
+        }
+      ],
+      "contactText": "0889811120",
+      "profileUrl": "https://grand-auto.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 6,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-6",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-mazda-varna",
+      "name": "Експрес Кар ООД",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Владислав Варненчик 322",
+      "phones": [
+        {
+          "display": "052/300946",
+          "e164": "+35952300946"
+        },
+        {
+          "display": "0885444700",
+          "e164": "+359885444700"
+        },
+        {
+          "display": "0885588170",
+          "e164": "+359885588170"
+        }
+      ],
+      "contactText": "052/300946, 0885444700, 0885588170",
+      "profileUrl": "https://mazda_varna.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h15149837213333899.pic?17916234834",
+      "directoryPage": 6,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-6",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-autostar21",
+      "name": "AutoStar",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Ул. Тодор Радев Пенев 5Д, 9009",
+      "phones": [
+        {
+          "display": "0887700052",
+          "e164": "+359887700052"
+        }
+      ],
+      "contactText": "0887700052",
+      "profileUrl": "https://autostar21.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h16158943803375288.pic?17916234836",
+      "directoryPage": 6,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-6",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-mgauto",
+      "name": "Автосалон М&G auto",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 282 , 250 м. вдясно след Дом на Камиона посока Аксково",
+      "phones": [
+        {
+          "display": "0895478847",
+          "e164": "+359895478847"
+        }
+      ],
+      "contactText": "0895478847",
+      "profileUrl": "https://mgauto.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h10346851267323330.pic?17916234838",
+      "directoryPage": 6,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-6",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-technocar",
+      "name": "ТЕХНОКАР ЕООД ОТОРИЗИРАН ДИЛЪР НА НОВИ И ВТОРА РЪКА АВТОМОБИЛИ ОТ МАРКАТА ХЮНДАЙ",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Владислав Варненчик 310",
+      "phones": [
+        {
+          "display": "00359888605466",
+          "e164": "+359888605466"
+        }
+      ],
+      "contactText": "00359888605466",
+      "profileUrl": "https://technocar.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 6,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-6",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-prime-auto",
+      "name": "PRIME AUTO",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 228",
+      "phones": [
+        {
+          "display": "0878751561",
+          "e164": "+359878751561"
+        }
+      ],
+      "contactText": "0878751561",
+      "profileUrl": "https://prime_auto.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h15323517957298601.pic?17916234833",
+      "directoryPage": 6,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-6",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-toyotavarna",
+      "name": "Карком",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 465",
+      "phones": [
+        {
+          "display": "0895518318",
+          "e164": "+359895518318"
+        }
+      ],
+      "contactText": "0895518318",
+      "profileUrl": "https://toyotavarna.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h12417754105674843.pic?17916234836",
+      "directoryPage": 6,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-6",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-stefansti75",
+      "name": "S Trade Parts",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Гр.Варна, ул.Струга 21",
+      "phones": [
+        {
+          "display": "0896447979",
+          "e164": "+359896447979"
+        }
+      ],
+      "contactText": "0896447979",
+      "profileUrl": "https://stefansti75.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h16069363996164055.pic?17916234839",
+      "directoryPage": 6,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-6",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-saxdorbg",
+      "name": "Saxdor Bulgaria",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Морска Гара - Варна",
+      "phones": [
+        {
+          "display": "0878628777",
+          "e164": "+359878628777"
+        }
+      ],
+      "contactText": "0878628777",
+      "profileUrl": "https://saxdorbg.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 6,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-6",
+      "observedAt": "2026-10-10",
+      "qualification": "non-passenger-or-specialist-review",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-dido-auto",
+      "name": "Дидо Ауто",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител",
+      "phones": [
+        {
+          "display": "+359899175949",
+          "e164": "+359899175949"
+        }
+      ],
+      "contactText": "+359899175949",
+      "profileUrl": "https://dido_auto.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 7,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-7",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-wildivaka",
+      "name": "Axe Cars",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Бул. Цар Освободител 302",
+      "phones": [
+        {
+          "display": "0898467497",
+          "e164": "+359898467497"
+        },
+        {
+          "display": "0879370777",
+          "e164": "+359879370777"
+        }
+      ],
+      "contactText": "0898467497, 0879370777",
+      "profileUrl": "https://wildivaka.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17225118406471988.pic?17916234838",
+      "directoryPage": 7,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-7",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-autoroad",
+      "name": "AUTOROAD",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Трети Март 22 Б",
+      "phones": [
+        {
+          "display": "+359899230001",
+          "e164": "+359899230001"
+        }
+      ],
+      "contactText": "+359899230001",
+      "profileUrl": "https://autoroad.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h16895859691267921.pic?17916234833",
+      "directoryPage": 7,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-7",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-bullet",
+      "name": "БУЛИТ",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул'Цар Освободител'289-МЕТРО->Аксаковo-вдясно",
+      "phones": [
+        {
+          "display": "0888312838",
+          "e164": "+359888312838"
+        }
+      ],
+      "contactText": "0888312838",
+      "profileUrl": "https://bullet.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h12088564497296559.pic?17916234832",
+      "directoryPage": 7,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-7",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-bavaro",
+      "name": "Автоцентър Баваро",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 176, срещу бл. 107",
+      "phones": [
+        {
+          "display": "0883590090",
+          "e164": "+359883590090"
+        }
+      ],
+      "contactText": "0883590090",
+      "profileUrl": "https://bavaro.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 7,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-7",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-bora-car",
+      "name": "BORA CAR",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ж.к. Вл. Варненчик, ул. Янко Мустаков, срещу бл. 303, вх.15, спирка Вихрен",
+      "phones": [
+        {
+          "display": "00359896699974",
+          "e164": "+359896699974"
+        }
+      ],
+      "contactText": "00359896699974",
+      "profileUrl": "https://bora_car.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h15312980005024031.pic?17916234833",
+      "directoryPage": 7,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-7",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-varnaboats",
+      "name": "VARNABOATS",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Южна промишлена зона",
+      "phones": [
+        {
+          "display": "+359898528390",
+          "e164": "+359898528390"
+        }
+      ],
+      "contactText": "+359898528390",
+      "profileUrl": "https://varnaboats.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 7,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-7",
+      "observedAt": "2026-10-10",
+      "qualification": "non-passenger-or-specialist-review",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-solaray",
+      "name": "SOLARAY MARINE",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ул. Уста Колю Фичето 39",
+      "phones": [
+        {
+          "display": "0888833228",
+          "e164": "+359888833228"
+        }
+      ],
+      "contactText": "0888833228",
+      "profileUrl": "https://solaray.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h15925626287311419.pic?17916234836",
+      "directoryPage": 7,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-7",
+      "observedAt": "2026-10-10",
+      "qualification": "non-passenger-or-specialist-review",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-porschevarna",
+      "name": "Porsche Varna",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ул. Ян Хуниади 2",
+      "phones": [
+        {
+          "display": "052 59 80 10",
+          "e164": "+35952598010"
+        }
+      ],
+      "contactText": "052 59 80 10",
+      "profileUrl": "https://porschevarna.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h12204344430752481.pic?17916234833",
+      "directoryPage": 7,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-7",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-unitrade",
+      "name": "УНИТРЕЙД",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител-след последния светофар за Владиславово 200 метра вляво",
+      "phones": [
+        {
+          "display": "0887479224",
+          "e164": "+359887479224"
+        }
+      ],
+      "contactText": "0887479224",
+      "profileUrl": "https://unitrade.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h13038169426329278.pic?17916234836",
+      "directoryPage": 7,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-7",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-triumf",
+      "name": "Триумф",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител",
+      "phones": [
+        {
+          "display": "0898547765",
+          "e164": "+359898547765"
+        }
+      ],
+      "contactText": "0898547765",
+      "profileUrl": "https://triumf.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 7,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-7",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-nsosofia",
+      "name": "НСО София ООД",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ул. Отец Паисий 7, Паркинг Лятно Кино Тракия",
+      "phones": [
+        {
+          "display": "0899779990",
+          "e164": "+359899779990"
+        }
+      ],
+      "contactText": "0899779990",
+      "profileUrl": "https://nsosofia.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 7,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-7",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-triumfautomotive",
+      "name": "Триумф Аутомотив",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Южна Промишлена Зона",
+      "phones": [
+        {
+          "display": "0875779797",
+          "e164": "+359875779797"
+        }
+      ],
+      "contactText": "0875779797",
+      "profileUrl": "https://triumfautomotive.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 7,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-7",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-pmcarsvarna",
+      "name": "ПМ КАРС ВАРНА",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Света Елена 1",
+      "phones": [
+        {
+          "display": "0893698811",
+          "e164": "+359893698811"
+        }
+      ],
+      "contactText": "0893698811",
+      "profileUrl": "https://pmcarsvarna.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 7,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-7",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-trackland",
+      "name": "ТракЛенд ЕООД",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Сълзица",
+      "phones": [
+        {
+          "display": "0895664675",
+          "e164": "+359895664675"
+        }
+      ],
+      "contactText": "0895664675",
+      "profileUrl": "https://trackland.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17404942023658596.pic?17916234832",
+      "directoryPage": 7,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-7",
+      "observedAt": "2026-10-10",
+      "qualification": "non-passenger-or-specialist-review",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-energo-pro",
+      "name": "ENERGO-PRO GROUP",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Владислав Варненчик 258",
+      "phones": [
+        {
+          "display": "0883222606",
+          "e164": "+359883222606"
+        }
+      ],
+      "contactText": "0883222606",
+      "profileUrl": "https://energo-pro.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 7,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-7",
+      "observedAt": "2026-10-10",
+      "qualification": "non-passenger-or-specialist-review",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-renaulttrucksvn",
+      "name": "Рено Тракс България - Варна",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Сливница 234",
+      "phones": [
+        {
+          "display": "+359886 616 171",
+          "e164": "+359886616171"
+        }
+      ],
+      "contactText": "+359886 616 171",
+      "profileUrl": "https://renaulttrucksvn.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 7,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-7",
+      "observedAt": "2026-10-10",
+      "qualification": "non-passenger-or-specialist-review",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-autojo-di",
+      "name": "АУТО ЖО-ДИ",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител, 300 м. след светофара за Владиславово",
+      "phones": [
+        {
+          "display": "0898545465",
+          "e164": "+359898545465"
+        }
+      ],
+      "contactText": "0898545465",
+      "profileUrl": "https://autojo-di.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h13137545424954997.pic?17916234838",
+      "directoryPage": 7,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-7",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-specialcarood",
+      "name": "Специал Кар",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 324",
+      "phones": [
+        {
+          "display": "0893557367",
+          "e164": "+359893557367"
+        }
+      ],
+      "contactText": "0893557367",
+      "profileUrl": "https://specialcarood.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h14579723198123411.pic?17916234837",
+      "directoryPage": 7,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-7",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-nascars",
+      "name": "НАСКАРС БГ",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Бул. Цар Освободител 287",
+      "phones": [
+        {
+          "display": "0897090665",
+          "e164": "+359897090665"
+        }
+      ],
+      "contactText": "0897090665",
+      "profileUrl": "https://nascars.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 7,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-7",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-wattacar",
+      "name": "WATT a Car",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ул. 1-ва 95",
+      "phones": [
+        {
+          "display": "0887489513",
+          "e164": "+359887489513"
+        }
+      ],
+      "contactText": "0887489513",
+      "profileUrl": "https://wattacar.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 8,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-8",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-insautoimport",
+      "name": "Auto Insurance Import",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, гр. Варна",
+      "phones": [
+        {
+          "display": "0878601371",
+          "e164": "+359878601371"
+        }
+      ],
+      "contactText": "0878601371",
+      "profileUrl": "https://insautoimport.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 8,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-8",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-partmagcars",
+      "name": "Part Mag Cars",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, гр. Варна",
+      "phones": [
+        {
+          "display": "0899960605",
+          "e164": "+359899960605"
+        },
+        {
+          "display": "0897906712",
+          "e164": "+359897906712"
+        }
+      ],
+      "contactText": "0899960605, 0897906712",
+      "profileUrl": "https://partmagcars.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 8,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-8",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-alphamotors",
+      "name": "Alpha motors",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител 271A",
+      "phones": [
+        {
+          "display": "0885855589",
+          "e164": "+359885855589"
+        }
+      ],
+      "contactText": "0885855589",
+      "profileUrl": "https://alphamotors.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17491328899601799.pic?17916234844",
+      "directoryPage": 8,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-8",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-lzyachting",
+      "name": "ЛЗ яхтинг",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ул. Никола Вапцаров 5",
+      "phones": [
+        {
+          "display": "+359887887667",
+          "e164": "+359887887667"
+        }
+      ],
+      "contactText": "+359887887667",
+      "profileUrl": "https://lzyachting.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h11658321228708624.pic?17916234843",
+      "directoryPage": 8,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-8",
+      "observedAt": "2026-10-10",
+      "qualification": "non-passenger-or-specialist-review",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-kalo",
+      "name": "Кало 0404",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител",
+      "phones": [
+        {
+          "display": "0878483604",
+          "e164": "+359878483604"
+        }
+      ],
+      "contactText": "0878483604",
+      "profileUrl": "https://kalo.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 8,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-8",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-kk-auto",
+      "name": "К&K AUTO",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ул. 3та 18",
+      "phones": [
+        {
+          "display": "0899818608",
+          "e164": "+359899818608"
+        }
+      ],
+      "contactText": "0899818608",
+      "profileUrl": "https://kk-auto.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 8,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-8",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-crazyfoxmotors",
+      "name": "CrazyFoxMotors",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ул. Прилеп 87",
+      "phones": [
+        {
+          "display": "0888205488",
+          "e164": "+359888205488"
+        }
+      ],
+      "contactText": "0888205488",
+      "profileUrl": "https://crazyfoxmotors.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17478926478226582.pic?17916234848",
+      "directoryPage": 8,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-8",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-automoto",
+      "name": "КООПЕРАЦИЯ АУТОМОТОР",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Владислав Варненчик 184",
+      "phones": [
+        {
+          "display": "+359885880340",
+          "e164": "+359885880340"
+        }
+      ],
+      "contactText": "+359885880340",
+      "profileUrl": "https://automoto.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 8,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-8",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-valkovcars",
+      "name": "ВЪЛКОВ КАРС",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител, Преди изхода от града 500 м в ляво",
+      "phones": [
+        {
+          "display": "0898685288",
+          "e164": "+359898685288"
+        }
+      ],
+      "contactText": "0898685288",
+      "profileUrl": "https://valkovcars.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 8,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-8",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-nordicautos11",
+      "name": "Nordic Auto",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, -",
+      "phones": [
+        {
+          "display": "0892453350",
+          "e164": "+359892453350"
+        }
+      ],
+      "contactText": "0892453350",
+      "profileUrl": "https://nordicautos11.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 8,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-8",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-i1autodk",
+      "name": "i1 Auto ApS",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, срещу КАТ, бул. Ян Хуняди 518",
+      "phones": [
+        {
+          "display": "0899820525",
+          "e164": "+359899820525"
+        }
+      ],
+      "contactText": "0899820525",
+      "profileUrl": "https://i1autodk.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 8,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-8",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-calicars",
+      "name": "Cali Cars",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Мест. Боровец Север 2029",
+      "phones": [
+        {
+          "display": "0877064339",
+          "e164": "+359877064339"
+        }
+      ],
+      "contactText": "0877064339",
+      "profileUrl": "https://calicars.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 8,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-8",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-carnova",
+      "name": "CARNOVA",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ул. Тодор Р. Пенев срещу бл.5 вх.Д",
+      "phones": [
+        {
+          "display": "0888865065",
+          "e164": "+359888865065"
+        }
+      ],
+      "contactText": "0888865065",
+      "profileUrl": "https://carnova.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17425009397870383.pic?17916234843",
+      "directoryPage": 8,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-8",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-deinauto",
+      "name": "ДайнАуто",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ул. Петър Дертлиев 34",
+      "phones": [
+        {
+          "display": "+359899117330",
+          "e164": "+359899117330"
+        }
+      ],
+      "contactText": "+359899117330",
+      "profileUrl": "https://deinauto.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17165593662536988.pic?17916234848",
+      "directoryPage": 8,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-8",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-vwvarna",
+      "name": "АВТОТРЕЙД ООД Доставка и лизинг на нови и употребявани",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Булевард Трети Март 59",
+      "phones": [
+        {
+          "display": "052570700",
+          "e164": "+35952570700"
+        },
+        {
+          "display": "0887693828",
+          "e164": "+359887693828"
+        }
+      ],
+      "contactText": "052570700, 0887693828",
+      "profileUrl": "https://vwvarna.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h11261715946614053.pic?17916234848",
+      "directoryPage": 8,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-8",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-solidauto",
+      "name": "SOLID AUTO",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Януш Хуняди 71",
+      "phones": [
+        {
+          "display": "0888822676",
+          "e164": "+359888822676"
+        }
+      ],
+      "contactText": "0888822676",
+      "profileUrl": "https://solidauto.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 8,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-8",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-primeautotrade",
+      "name": "Prime Auto Trade Ltd.",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, ул. Хан Севар 5А",
+      "phones": [
+        {
+          "display": "0877434888",
+          "e164": "+359877434888"
+        }
+      ],
+      "contactText": "0877434888",
+      "profileUrl": "https://primeautotrade.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 8,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-8",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-luxmotors",
+      "name": "LUX MOTORS LTD",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Трошево",
+      "phones": [
+        {
+          "display": "+359886070076",
+          "e164": "+359886070076"
+        }
+      ],
+      "contactText": "+359886070076",
+      "profileUrl": "https://luxmotors.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h16514888316669142.pic?17916234847",
+      "directoryPage": 8,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-8",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-topautoparts",
+      "name": "Top Autoparts",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Гр Варна",
+      "phones": [
+        {
+          "display": "0888406374",
+          "e164": "+359888406374"
+        }
+      ],
+      "contactText": "0888406374",
+      "profileUrl": "https://topautoparts.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 8,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-8",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-autoshamacars",
+      "name": "АУТО БОЛОНЯ",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, разклон Виница, преди Картинг писта",
+      "phones": [
+        {
+          "display": "0895646115",
+          "e164": "+359895646115"
+        }
+      ],
+      "contactText": "0895646115",
+      "profileUrl": "https://autoshamacars.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 9,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-9",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-varnaautohub",
+      "name": "Auto Hub Korea Varna",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Ул. Иван Вазов 41",
+      "phones": [
+        {
+          "display": "+359885408899",
+          "e164": "+359885408899"
+        }
+      ],
+      "contactText": "+359885408899",
+      "profileUrl": "https://varnaautohub.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 9,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-9",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-allesauto",
+      "name": "ALLES AUTO",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Бул.Княз Борис I 127",
+      "phones": [
+        {
+          "display": "0888 80 74 24",
+          "e164": "+359888807424"
+        }
+      ],
+      "contactText": "0888 80 74 24;",
+      "profileUrl": "https://allesauto.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h15658592589436112.pic?17916234857",
+      "directoryPage": 9,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-9",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-karidaauto",
+      "name": "КАРИДА АУТО",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, бул. Цар Освободител, 200 м след последния светофар за Владиславово, вляво !",
+      "phones": [
+        {
+          "display": "0878683689",
+          "e164": "+359878683689"
+        }
+      ],
+      "contactText": "0878683689",
+      "profileUrl": "https://karidaauto.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h14213222955404318.pic?17916234859",
+      "directoryPage": 9,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-9",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-bulpol",
+      "name": "БУЛ-ПОЛ ТРЕЙД",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, Петко Стайнов 1",
+      "phones": [
+        {
+          "display": "0898497580",
+          "e164": "+359898497580"
+        }
+      ],
+      "contactText": "0898497580",
+      "profileUrl": "https://bulpol.mobile.bg/",
+      "logoSourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17878317536679449.pic?17916234856",
+      "directoryPage": 9,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-9",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    },
+    {
+      "id": "bg-varna-avtostaklauran",
+      "name": "Автостъкла Варна",
+      "country": "BG",
+      "city": "Varna",
+      "address": "град Варна, кв. Владиславово, ул. Асен Разцветников (с/у МЕБЕЛИ ДОМИНО до ресторант Балкан)",
+      "phones": [
+        {
+          "display": "0899 244 040",
+          "e164": "+359899244040"
+        }
+      ],
+      "contactText": "0899 244 040",
+      "profileUrl": "https://avtostaklauran.mobile.bg/",
+      "logoSourceUrl": null,
+      "directoryPage": 9,
+      "sourceUrl": "https://www.mobile.bg/dealers/location-grad-varna/p-9",
+      "observedAt": "2026-10-10",
+      "qualification": "not-reviewed",
+      "website": {
+        "url": null,
+        "status": "not-researched"
+      },
+      "outreachApproved": false,
+      "duplicateDirectoryPages": [],
+      "existingClientPaths": []
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-10T09:39:58.215Z",
+  "sourceHead": "410b84af397a8a6159f3510bd843cbbe81a4ca5d",
+  "branch": "main",
+  "releaseInputStatus": "",
+  "scope": "Read-only execution of the existing six-design new-client CLI. Does not approve sources, create clients, install dependencies, build, publish repositories or deploy.",
+  "canCreateCandidates": true,
+  "results": [
+    {
+      "slug": "dm-auto-varna",
+      "command": [
+        "node",
+        "scripts/new-client.mjs",
+        "--client",
+        "dm-auto-varna",
+        "--repository",
+        "darkapoparka/cars-dmautovarna",
+        "--design-set",
+        "six",
+        "--locale-config",
+        "leads\\varna\\packs\\dm-auto-varna\\locale.json",
+        "--dry-run"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "error": null,
+      "clientCreated": false
+    },
+    {
+      "slug": "kolarov-cars",
+      "command": [
+        "node",
+        "scripts/new-client.mjs",
+        "--client",
+        "kolarov-cars",
+        "--repository",
+        "darkapoparka/cars-kolarovcars",
+        "--design-set",
+        "six",
+        "--locale-config",
+        "leads\\varna\\packs\\kolarov-cars\\locale.json",
+        "--dry-run"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "error": null,
+      "clientCreated": false
+    },
+    {
+      "slug": "dynamic-auto-varna",
+      "command": [
+        "node",
+        "scripts/new-client.mjs",
+        "--client",
+        "dynamic-auto-varna",
+        "--repository",
+        "darkapoparka/cars-dynamicautovarna",
+        "--design-set",
+        "six",
+        "--locale-config",
+        "leads\\varna\\packs\\dynamic-auto-varna\\locale.json",
+        "--dry-run"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "error": null,
+      "clientCreated": false
+    },
+    {
+      "slug": "car-point-trade-varna",
+      "command": [
+        "node",
+        "scripts/new-client.mjs",
+        "--client",
+        "car-point-trade-varna",
+        "--repository",
+        "darkapoparka/cars-carpointtradevarna",
+        "--design-set",
+        "six",
+        "--locale-config",
+        "leads\\varna\\packs\\car-point-trade-varna\\locale.json",
+        "--dry-run"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "error": null,
+      "clientCreated": false
+    },
+    {
+      "slug": "pm-select-automotive",
+      "command": [
+        "node",
+        "scripts/new-client.mjs",
+        "--client",
+        "pm-select-automotive",
+        "--repository",
+        "darkapoparka/cars-pmselectautomotive",
+        "--design-set",
+        "six",
+        "--locale-config",
+        "leads\\varna\\packs\\pm-select-automotive\\locale.json",
+        "--dry-run"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "error": null,
+      "clientCreated": false
+    },
+    {
+      "slug": "dream-drive-varna",
+      "command": [
+        "node",
+        "scripts/new-client.mjs",
+        "--client",
+        "dream-drive-varna",
+        "--repository",
+        "darkapoparka/cars-dreamdrivevarna",
+        "--design-set",
+        "six",
+        "--locale-config",
+        "leads\\varna\\packs\\dream-drive-varna\\locale.json",
+        "--dry-run"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "error": null,
+      "clientCreated": false
+    },
+    {
+      "slug": "prime-auto-varna",
+      "command": [
+        "node",
+        "scripts/new-client.mjs",
+        "--client",
+        "prime-auto-varna",
+        "--repository",
+        "darkapoparka/cars-primeautovarna",
+        "--design-set",
+        "six",
+        "--locale-config",
+        "leads\\varna\\packs\\prime-auto-varna\\locale.json",
+        "--dry-run"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "error": null,
+      "clientCreated": false
+    },
+    {
+      "slug": "autoroad-varna",
+      "command": [
+        "node",
+        "scripts/new-client.mjs",
+        "--client",
+        "autoroad-varna",
+        "--repository",
+        "darkapoparka/cars-autoroadvarna",
+        "--design-set",
+        "six",
+        "--locale-config",
+        "leads\\varna\\packs\\autoroad-varna\\locale.json",
+        "--dry-run"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "error": null,
+      "clientCreated": false
+    },
+    {
+      "slug": "autofest-varna",
+      "command": [
+        "node",
+        "scripts/new-client.mjs",
+        "--client",
+        "autofest-varna",
+        "--repository",
+        "darkapoparka/cars-autofestvarna",
+        "--design-set",
+        "six",
+        "--locale-config",
+        "leads\\varna\\packs\\autofest-varna\\locale.json",
+        "--dry-run"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "error": null,
+      "clientCreated": false
+    },
+    {
+      "slug": "city-cars-varna",
+      "command": [
+        "node",
+        "scripts/new-client.mjs",
+        "--client",
+        "city-cars-varna",
+        "--repository",
+        "darkapoparka/cars-citycarsvarna",
+        "--design-set",
+        "six",
+        "--locale-config",
+        "leads\\varna\\packs\\city-cars-varna\\locale.json",
+        "--dry-run"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "error": null,
+      "clientCreated": false
+    }
+  ]
+}

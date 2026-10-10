@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-10-10T09:31:22.871Z",
+  "candidates": [
+    {
+      "slug": "dm-auto-varna",
+      "name": "D&M - Auto Varna",
+      "sourceUrl": "https://dmautovarna.mobile.bg/",
+      "selected": true,
+      "reason": "Verified passenger-car listings and public raster branding"
+    },
+    {
+      "slug": "kolarov-cars",
+      "name": "Kolarov Cars",
+      "sourceUrl": "https://kolarovcars.mobile.bg/",
+      "selected": true,
+      "reason": "Verified passenger-car listings and public raster branding"
+    },
+    {
+      "slug": "dynamic-auto-varna",
+      "name": "Dynamic Auto Varna",
+      "sourceUrl": "https://dynamicautovarna.mobile.bg/",
+      "selected": true,
+      "reason": "Verified passenger-car listings and public raster branding"
+    },
+    {
+      "slug": "eco-drive-varna",
+      "name": "Eco Drive",
+      "sourceUrl": "https://ecodrive.mobile.bg/",
+      "selected": false,
+      "reason": "Not selected: compare stock type/volume, geography or missing raster branding in profile review."
+    },
+    {
+      "slug": "pm-select-automotive",
+      "name": "PM SELECT AUTOMOTIVE",
+      "sourceUrl": "https://pmselect.mobile.bg/",
+      "selected": true,
+      "reason": "Verified passenger-car listings and public raster branding"
+    },
+    {
+      "slug": "dream-drive-varna",
+      "name": "DREAM DRIVE",
+      "sourceUrl": "https://dreamdrive.mobile.bg/",
+      "selected": true,
+      "reason": "Verified passenger-car listings and public raster branding"
+    },
+    {
+      "slug": "prime-auto-varna",
+      "name": "PRIME AUTO",
+      "sourceUrl": "https://prime_auto.mobile.bg/",
+      "selected": true,
+      "reason": "Verified passenger-car listings and public raster branding"
+    },
+    {
+      "slug": "alpha-motors-varna",
+      "name": "Alpha motors",
+      "sourceUrl": "https://alphamotors.mobile.bg/",
+      "selected": false,
+      "reason": "Not selected: compare stock type/volume, geography or missing raster branding in profile review."
+    },
+    {
+      "slug": "cali-cars-varna",
+      "name": "Cali Cars",
+      "sourceUrl": "https://calicars.mobile.bg/",
+      "selected": false,
+      "reason": "Not selected: compare stock type/volume, geography or missing raster branding in profile review."
+    },
+    {
+      "slug": "carnova-varna",
+      "name": "CARNOVA",
+      "sourceUrl": "https://carnova.mobile.bg/",
+      "selected": false,
+      "reason": "Not selected: compare stock type/volume, geography or missing raster branding in profile review."
+    },
+    {
+      "slug": "fusion-auto-varna",
+      "name": "ФЮЖЪН АУТО",
+      "sourceUrl": "https://fusionauto.mobile.bg/",
+      "selected": false,
+      "reason": "Not selected: compare stock type/volume, geography or missing raster branding in profile review."
+    },
+    {
+      "slug": "autoroad-varna",
+      "name": "AUTOROAD",
+      "sourceUrl": "https://autoroad.mobile.bg/",
+      "selected": true,
+      "reason": "Verified passenger-car listings and public raster branding"
+    },
+    {
+      "slug": "solid-auto-varna",
+      "name": "SOLID AUTO",
+      "sourceUrl": "https://solidauto.mobile.bg/",
+      "selected": false,
+      "reason": "Not selected: compare stock type/volume, geography or missing raster branding in profile review."
+    },
+    {
+      "slug": "grand-auto-varna",
+      "name": "ГРАНД АУТО ВАРНА",
+      "sourceUrl": "https://grand-auto.mobile.bg/",
+      "selected": false,
+      "reason": "Not selected: compare stock type/volume, geography or missing raster branding in profile review."
+    },
+    {
+      "slug": "autofest-varna",
+      "name": "Аутофест",
+      "sourceUrl": "https://autofest.mobile.bg/",
+      "selected": true,
+      "reason": "Verified passenger-car listings and public raster branding"
+    },
+    {
+      "slug": "city-cars-varna",
+      "name": "Сити Карс",
+      "sourceUrl": "https://city_cars.mobile.bg/",
+      "selected": true,
+      "reason": "Verified passenger-car listings and public raster branding"
+    },
+    {
+      "slug": "car-point-trade-varna",
+      "name": "CAR POINT TRADE LTD",
+      "sourceUrl": "https://carpointtrade.mobile.bg/",
+      "selected": true,
+      "reason": "Verified passenger-car listings and public raster branding"
+    }
+  ]
+}
