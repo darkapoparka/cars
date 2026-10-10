@@ -6,7 +6,6 @@ import type { ReactNode } from 'react';
 import { showroom, showroomContactLocation, showroomPreviewPhone } from '@/lib/showroom';
 import { useLocale } from '@/lib/use-locale';
 import { colors } from '@/styles/tokens.stylex';
-import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
 
 const s = stylex.create({
   panel: {
@@ -22,8 +21,6 @@ const s = stylex.create({
     position: 'relative',
     backgroundColor: colors.stripe,
     overflow: 'hidden',
-    borderTopLeftRadius: showroomDesktop.panelRadius,
-    borderTopRightRadius: showroomDesktop.panelRadius,
     borderBottomWidth: 1,
     borderBottomStyle: 'solid',
     borderBottomColor: colors.cardLine,

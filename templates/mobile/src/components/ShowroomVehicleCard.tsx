@@ -179,7 +179,7 @@ const s = stylex.create({
     maxWidth: '100%',
     padding: '4px 8px',
     borderRadius: controlShape.pill,
-    backgroundColor: colors.badgeSurface,
+    backgroundColor: colors.stripe,
     color: colors.muted,
     fontWeight: 500,
     fontSize: { default: 13, '@container (max-width: 250px)': 12 },

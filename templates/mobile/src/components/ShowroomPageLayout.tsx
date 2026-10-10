@@ -123,14 +123,19 @@ export function ShowroomHeroHeading({
 export function ShowroomPageHero({
   title,
   children,
+  filters,
   controlLayout = 'contact',
 }: {
   title: string;
   children?: ReactNode;
+  filters?: ReactNode;
   controlLayout?: 'services' | 'contact';
 }) {
   return (
-    <div data-showroom-page-hero {...stylex.props(hero.layout)}>
+    <div
+      data-showroom-page-hero
+      {...stylex.props(hero.layout, Boolean(filters) && hero.withFilters)}
+    >
       <ShowroomHeroHeading title={title} />
       <div
         data-showroom-hero-controls
@@ -141,6 +146,11 @@ export function ShowroomPageHero({
       >
         {children}
       </div>
+      {filters ? (
+        <div data-desktop-hero-filters {...stylex.props(hero.quickFilters)}>
+          {filters}
+        </div>
+      ) : null}
     </div>
   );
 }

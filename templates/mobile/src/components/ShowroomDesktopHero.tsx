@@ -1,5 +1,6 @@
 'use client';
 import * as stylex from '@stylexjs/stylex';
+import type { ReactNode } from 'react';
 import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { useLocale } from '@/lib/use-locale';
@@ -15,14 +16,16 @@ const s = stylex.create({
   compactSearchPanel: { maxWidth: 880 },
   search: {
     display: { default: 'none', '@media (min-width: 1024px)': 'grid' },
-    gridTemplateColumns: 'minmax(0, .95fr) minmax(0, 1.35fr) minmax(0, .85fr) auto',
+    gridTemplateColumns: 'minmax(210px, 1fr) minmax(0, 1.5fr) 48px',
     alignItems: 'center',
     width: '100%',
-    padding: 6,
+    minHeight: 68,
+    paddingBlock: 6,
+    paddingInline: 10,
     gap: 6,
   },
   splitSearch: {
-    gridTemplateColumns: 'minmax(210px, 1fr) minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, .85fr) auto',
+    gridTemplateColumns: 'repeat(3, minmax(0, 1fr)) 48px',
   },
   disabledField: { opacity: 0.6, cursor: 'not-allowed' },
   submit: {
@@ -30,10 +33,11 @@ const s = stylex.create({
     alignItems: 'center',
     justifyContent: 'center',
     width: 48,
-    minHeight: 48,
+    height: 48,
+    flexShrink: 0,
     padding: 0,
     borderWidth: 0,
-    borderRadius: controlShape.pill,
+    borderRadius: controlShape.circle,
     backgroundColor: { default: colors.accent, ':hover': '#b72800' },
     color: '#fff',
     outlineColor: colors.text,
@@ -64,7 +68,7 @@ export function ShowroomDesktopHero({
   category,
   makeLabel,
   modelLabel,
-  priceLabel,
+  quickFilters,
   resultLabel,
   sheet,
   makeView,
@@ -74,13 +78,12 @@ export function ShowroomDesktopHero({
   makeActive,
   modelActive,
   modelReady,
-  priceActive,
   onClear,
 }: {
   category: VehicleCategory;
   makeLabel: string;
   modelLabel: string;
-  priceLabel: string;
+  quickFilters: ReactNode;
   resultLabel: string;
   sheet: ShowroomFilterTab | null;
   makeView: 'make' | 'model';
@@ -94,8 +97,7 @@ export function ShowroomDesktopHero({
   makeActive: boolean;
   modelActive: boolean;
   modelReady: boolean;
-  priceActive: boolean;
-  onClear: (tab: 'make' | 'model' | 'price') => void;
+  onClear: (tab: 'make' | 'model') => void;
 }) {
   const { t } = useLocale();
   const fields = [
@@ -117,10 +119,9 @@ export function ShowroomDesktopHero({
           } as const,
         ]
       : []),
-    { tab: 'price', label: 'Price', value: priceLabel, active: priceActive, disabled: false },
   ] as const;
   return (
-    <div data-desktop-discovery-hero {...stylex.props(hero.layout)}>
+    <div data-desktop-discovery-hero {...stylex.props(hero.layout, hero.withFilters)}>
       <ShowroomHeroHeading
         title="Find your next vehicle"
         heading="h2"
@@ -138,7 +139,7 @@ export function ShowroomDesktopHero({
           {...stylex.props(s.search, category === 'car' && s.splitSearch)}
         >
           <ShowroomDesktopType category={category} onSelect={onSelectCategory} />
-          {fields.map(({ tab, label, value, active, disabled }) => {
+          {fields.map(({ tab, label, value, active, disabled }, index) => {
             const open =
               tab === 'model'
                 ? sheet === 'make' && makeView === 'model'
@@ -159,7 +160,7 @@ export function ShowroomDesktopHero({
                   onClick={(event) => onOpen(tab, event.currentTarget, event.detail === 0)}
                   {...stylex.props(
                     field.field,
-                    tab !== 'price' && field.divider,
+                    index < fields.length - 1 && field.divider,
                     active && s.clearableField,
                     open && field.open,
                     open && field.hideDivider,
@@ -198,6 +199,9 @@ export function ShowroomDesktopHero({
             <Icon name="search" size={20} />
           </button>
         </div>
+      </div>
+      <div data-desktop-hero-filters {...stylex.props(hero.quickFilters)}>
+        {quickFilters}
       </div>
     </div>
   );

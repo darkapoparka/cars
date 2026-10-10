@@ -13,7 +13,7 @@ export const desktopSearchStyles = stylex.create({
     minWidth: 0,
     minHeight: 56,
     paddingInline: 16,
-    paddingBlock: 6,
+    paddingBlock: 5,
     borderWidth: 0,
     borderRadius: controlShape.pill,
     backgroundColor: {

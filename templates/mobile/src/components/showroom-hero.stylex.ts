@@ -4,7 +4,7 @@ import { colors } from '@/styles/tokens.stylex';
 import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
 
 // A heading and a 68px base row anchor the desktop journeys consistently.
-// Services keeps category navigation in the content drawer below the hero.
+// Desktop discovery filters share a row below the search controls.
 // Wrappers dissolve below 1024px to retain each screen's phone composition.
 export const showroomHeroStyles = stylex.create({
   layout: {
@@ -33,6 +33,19 @@ export const showroomHeroStyles = stylex.create({
     textAlign: 'center',
     width: '100%',
     maxWidth: showroomDesktop.heroCopyWidth,
+  },
+  withFilters: {
+    gridTemplateRows: 'auto 68px auto',
+    gap: 16,
+    paddingTop: 48,
+    paddingBottom: 48,
+  },
+  quickFilters: {
+    display: { default: 'none', '@media (min-width: 1024px)': 'flex' },
+    justifyContent: 'center',
+    width: '100%',
+    maxWidth: 1040,
+    minWidth: 0,
   },
   desktopCopy: { display: { default: 'none', '@media (min-width: 1024px)': 'block' } },
   title: {
