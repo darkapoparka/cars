@@ -42,6 +42,37 @@ export function stripModernAlternateWordmark(text) {
   return next;
 }
 
+/** Bind the parent-selected dealer logo into the extracted mobile child. */
+export function bindModernMobileWordmarkLogo(text) {
+  const marker = 'function DealerMobileWordmark(';
+  const start = text.indexOf(marker);
+  if (start < 0) return text; // Older templates render the image in the parent.
+  const end = text.indexOf('export const DealerMobileBrandBar', start);
+  if (end < 0) throw Error('Missing Modern mobile wordmark parent boundary');
+  const child = text.slice(start, end);
+  if (!child.includes('src={logoSource}')) return text;
+  const signature = /function DealerMobileWordmark\(\{([\s\S]*?)\}: \{([\s\S]*?)\}\) \{/;
+  const matched = signature.exec(child);
+  if (!matched) throw Error('Unknown Modern mobile wordmark signature');
+  const hasBinding = /\blogoSource\s*(?:,|$)/.test(matched[1].trim());
+  const hasType = /(?:^|\s)(?:readonly\s+)?logoSource:\s*string;/.test(matched[2]);
+  if (hasBinding !== hasType) throw Error('Incomplete Modern mobile wordmark logo prop');
+  let nextChild = child;
+  if (!hasBinding) nextChild = child.replace(signature, (_, bindings, types) =>
+    'function DealerMobileWordmark({' + bindings + '  logoSource,\n}: {' + types + '  readonly logoSource: string;\n}) {');
+  let parent = text.slice(end), calls = 0;
+  parent = parent.replace(/<DealerMobileWordmark\b([^>]*?)\/>/g, (call, props) => {
+    calls++;
+    if (/\blogoSource=/.test(props)) {
+      if (!/\blogoSource=\{logoSource\}/.test(props)) throw Error('Unexpected Modern mobile wordmark logo binding');
+      return call;
+    }
+    return '<DealerMobileWordmark' + props.trimEnd() + ' logoSource={logoSource} />';
+  });
+  if (!calls) throw Error('Missing Modern mobile wordmark call');
+  return text.slice(0, start) + nextChild + parent;
+}
+
 export function normalizeModernFinancingLogo(text) {
   const start = text.indexOf('<span className="relative block aspect-[1780/512] w-28">');
   const end = text.indexOf('</span>', start);
@@ -112,6 +143,7 @@ export function applyDealerLogoContract({ key, oldVariant, candidate, profile })
         text = text.replace(anchor, `${anchor}\n${useOnLightDeclaration}\n${logoSourceDeclaration}`);
       }
       text = stripModernAlternateWordmark(text);
+      text = bindModernMobileWordmarkLogo(text);
       if (/clipPath|brightness-0|\binvert\b/.test(text)) throw Error('Obsolete clipped Modern mobile logo survived');
       return text;
     });

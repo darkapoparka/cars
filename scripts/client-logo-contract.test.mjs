@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { stripModernAlternateWordmark, normalizeModernFinancingLogo } from './lib/client-logo-contract.mjs';
+import { stripModernAlternateWordmark, normalizeModernFinancingLogo, bindModernMobileWordmarkLogo } from './lib/client-logo-contract.mjs';
 
 test('Modern logo normalization removes the complete alternate wordmark JSX expression', () => {
   const source = `<span className="relative">
@@ -50,4 +50,54 @@ test('Modern financing adaptation retains the approved accent logo in older inli
   assert.doesNotMatch(result, /src=\{leadSite\.logoPath\}/);
   assert.ok(result.endsWith('<p>Financing</p></section>'));
   assert.equal(normalizeModernFinancingLogo(result), result);
+});
+
+const extractedMobileWordmark = `function DealerMobileWordmark({
+  clean,
+  wordmarkTone,
+}: {
+  clean: boolean;
+  wordmarkTone: WordmarkTone;
+}) {
+  if (publicSite.identity.desktopPreview) return <DealerDesktopLogo />;
+  return <Image alt={leadSite.name} src={logoSource} />;
+}
+export const DealerMobileBrandBar = () => {
+  const clean = false;
+  const wordmarkTone = "original";
+  const logoSource = useOnLight ? leadSite.logoOnLight : leadSite.logoOnDark;
+  return <DealerMobileWordmark clean={clean} wordmarkTone={wordmarkTone} />;
+};`;
+
+test('Modern extracted mobile wordmark receives the parent-selected logo through a typed prop', () => {
+  const result = bindModernMobileWordmarkLogo(extractedMobileWordmark);
+  const [child, parent] = result.split('export const DealerMobileBrandBar');
+  assert.match(child, /wordmarkTone,\s+logoSource,\s*\}: \{/);
+  assert.match(child, /readonly logoSource: string;/);
+  assert.match(parent, /<DealerMobileWordmark[^>]+logoSource=\{logoSource\}/);
+  assert.equal((result.match(/const logoSource =/g) || []).length, 1);
+  assert.match(child, /publicSite\.identity\.desktopPreview/);
+  assert.match(result, /useOnLight \? leadSite\.logoOnLight : leadSite\.logoOnDark/);
+  assert.equal(bindModernMobileWordmarkLogo(result), result);
+});
+
+test('Modern mobile wordmark binding supports retained CRLF source', () => {
+  const result = bindModernMobileWordmarkLogo(extractedMobileWordmark.replaceAll('\n', '\r\n'));
+  assert.match(result, /readonly logoSource: string;/);
+  assert.equal(bindModernMobileWordmarkLogo(result), result);
+});
+
+test('Modern mobile wordmark binding leaves legacy inline and independently-bound children unchanged', () => {
+  const inline = 'export const DealerMobileBrandBar = () => { const logoSource = leadSite.logoOnLight; return <Image src={logoSource} />; };';
+  assert.equal(bindModernMobileWordmarkLogo(inline), inline);
+  const independent = extractedMobileWordmark.replace('src={logoSource}', 'src={leadSite.logoOnLight}');
+  assert.equal(bindModernMobileWordmarkLogo(independent), independent);
+});
+
+test('Modern mobile wordmark binding rejects unknown or incomplete component shapes', () => {
+  assert.throws(() => bindModernMobileWordmarkLogo(extractedMobileWordmark.replace('export const DealerMobileBrandBar', 'export const UnknownHeader')), /parent boundary/);
+  assert.throws(() => bindModernMobileWordmarkLogo(extractedMobileWordmark.replace('}: {', '}: Props = {')), /signature/);
+  assert.throws(() => bindModernMobileWordmarkLogo(extractedMobileWordmark.replace('  wordmarkTone,', '  wordmarkTone,\n  logoSource,')), /Incomplete/);
+  assert.throws(() => bindModernMobileWordmarkLogo(extractedMobileWordmark.replace('<DealerMobileWordmark clean={clean} wordmarkTone={wordmarkTone} />', '<Other />')), /wordmark call/);
+  assert.throws(() => bindModernMobileWordmarkLogo(extractedMobileWordmark.replace('wordmarkTone={wordmarkTone} />', 'wordmarkTone={wordmarkTone} logoSource={differentLogo} />')), /Unexpected/);
 });

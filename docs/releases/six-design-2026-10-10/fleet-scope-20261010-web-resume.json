@@ -1,0 +1,1824 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-10T20:43:53.761Z",
+  "scope": "25 existing dealer projects only; excludes the separate 10-new-Varna batch",
+  "status": "SOURCE_PREPARATION_IN_PROGRESS__PUBLICATION_BLOCKED",
+  "templates": [
+    {
+      "key": "auto-best",
+      "displayName": "auto-best",
+      "commit": "696230a404abd9b20b6f907b9cfb139175298c7a"
+    },
+    {
+      "key": "modern",
+      "displayName": "modern",
+      "commit": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710"
+    },
+    {
+      "key": "import",
+      "displayName": "import",
+      "commit": "b9373e9ed5453bc7d208898ae140eae4d596a232"
+    },
+    {
+      "key": "app",
+      "displayName": "app",
+      "commit": "4e184777567849a2c5b4a9e4a3e652252179c29c"
+    },
+    {
+      "key": "mobile",
+      "displayName": "mobile",
+      "commit": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8"
+    },
+    {
+      "key": "karento-best",
+      "displayName": "Signature",
+      "commit": "cc130e432a41a3a60cc80bc2b3461c6416893b4a"
+    }
+  ],
+  "dealerCount": 25,
+  "retainedInventoryCount": 325,
+  "preserve": [
+    "Existing repos/project IDs/public aliases",
+    "Dealer identity, logos and stock",
+    "Independent Al Reef source ownership",
+    "Existing shared Admin",
+    "Existing Modern/Import mount order",
+    "Legacy Carwow detail destinations"
+  ],
+  "quota": {
+    "provider": "vercel",
+    "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+    "operation": "create preview deployment from existing Promosale Git pilot",
+    "projectId": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
+    "commit": "1f9e00d9153b305cfe48e10a454efd633d5ed500",
+    "httpStatus": 402,
+    "errorCode": "payment_required",
+    "limitCode": "api-deployments-free-per-day",
+    "message": "Resource is limited - try again in 24 hours (more than 100, code: api-deployments-free-per-day)",
+    "retryAfterSeconds": 86400,
+    "observedAt": "2026-10-10T20:25:42.084Z",
+    "requestId": "arn1:sfo1::d49kn-1791663942084-170d57686876",
+    "createdDeployment": false
+  },
+  "dealers": [
+    {
+      "slug": "al-basma-motors",
+      "repository": "darkapoparka/cars-albasmamotors",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_axqFQFzpsq6JLTBwXOzyv5Wnbphk",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "import",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 10,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "al-hamoor-al-thahabi",
+      "repository": "darkapoparka/cars-alhamooralthahabi",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_hdzWSWLwsNVu7mmsmGA97XbCDSrw",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "import",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 8,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "al-reef-used-cars",
+      "repository": "darkapoparka/cars-alreefusedcars",
+      "sourceOwnership": "independent-repository",
+      "project": "prj_r5Vaw6NQh5iTxi5jjfrtuP9GFTNm",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "import",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 6,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "asko-96",
+      "repository": "darkapoparka/cars-asko96",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_lrmxXJdqRTKdDlufXaS0vd8TdpJX",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "import",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 16,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "astracar",
+      "repository": "darkapoparka/cars-astracar",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_70zIp6vOJGgHSVcOtk9pR8dCTsTT",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "import",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 15,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "autolife",
+      "repository": "darkapoparka/cars-autolife",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_h9XFj7PYyl3OsEMxBueC5bZWvdSd",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "import",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 16,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "automarket-varna",
+      "repository": "darkapoparka/cars-automarketvarna",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_5H4OESlQ0KpNM5mJvbIEmlUgaMcP",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "import",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 16,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "avangard-auto",
+      "repository": "darkapoparka/cars-avangardauto",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_QqFCB2Zllc60dfPVIo6aJ8P4wlKc",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "import",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 16,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "champion-auto-pro",
+      "repository": "darkapoparka/cars-championautopro",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_Zles0MpLROdFwgSnvuvpxrNBWcRY",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "import",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 16,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "day-and-night-auto-group",
+      "repository": "darkapoparka/day-and-night-autodeal",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_enD9orrI6rwguMMtDlS0IP6RAXjr",
+      "aliases": [
+        "dayandnight"
+      ],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "import",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 40,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "eliqauto",
+      "repository": "darkapoparka/cars-eliqauto",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_0aDYGRa0LI91M3AJRY4dlGssLUF3",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "import",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 16,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "elit-auto-import",
+      "repository": "darkapoparka/cars-elitautoimport",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_7QV9OtCRFxJMWpWWlUXLpptcQPXs",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "import",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 15,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "excellent-cars",
+      "repository": "darkapoparka/excellent-cars",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_dhANzY6pxcqK1hO06ar9ZTk0k4eq",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "import",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 16,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "f1rst-motors",
+      "repository": "darkapoparka/cars-f1rstmotors",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_mavqUXCj6hSEg8EvBJW8G3XJlihm",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "import",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 10,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "isauto-varna",
+      "repository": "darkapoparka/cars-isautovarna",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "import",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 6,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "ivo-auto",
+      "repository": "darkapoparka/cars-ivoauto",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_bruM9mopofyBcgwxkKFG9tQFZBMN",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "import",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 16,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "kg-team-auto",
+      "repository": "darkapoparka/cars-kgteamauto",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_IALzfkjBAv5N4YJfNB1sEliOaNBg",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "import",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 10,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "legend-auto",
+      "repository": "darkapoparka/cars-legendauto",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_kdnDQxZaPh8xgKBiIXyb9uODrXZw",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "import",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 14,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "navara-car",
+      "repository": "darkapoparka/cars-navaracar",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "import",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 9,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "outletcars-varna",
+      "repository": "darkapoparka/cars-outletcarsvarna",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_1KYEEcbBwAd5iCtAvDGM59INQLe7",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "import",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "import",
+          "base": "/variant-2",
+          "entry": "/variant-2/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-3",
+          "entry": "/variant-3/cars"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "modern",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 8,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "perfect-auto-varna",
+      "repository": "darkapoparka/cars-perfectauto",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_sqN8Xc2fs7g2Y2pSs0qeSeYJgVZR",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "import",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 6,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "priselci",
+      "repository": "darkapoparka/cars-priselci",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_GwnlfPmyImlJuiocl77NWplzvTTb",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "import",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 16,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "promosale-varna",
+      "repository": "darkapoparka/cars-promosalevarna",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "import",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "import",
+          "base": "/variant-2",
+          "entry": "/variant-2/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-3",
+          "entry": "/variant-3/cars"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "modern",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 6,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "texas-drive-auto",
+      "repository": "darkapoparka/cars-texasdriveauto",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_0BoiQdp4HpS0QcfH425hy9ns536V",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "import",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 8,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    },
+    {
+      "slug": "the-dealers-point",
+      "repository": "darkapoparka/cars-thedealerspoint",
+      "sourceOwnership": "cars-repository",
+      "project": "prj_tzUK5hufsHiC8aJ7uyxZF5qCii07",
+      "aliases": [],
+      "installedPackagingVersion": "3",
+      "installedVariants": [
+        {
+          "key": "auto-best",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4"
+        }
+      ],
+      "proposedPackagingVersion": "5",
+      "proposedVariants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/"
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars"
+        },
+        {
+          "key": "import",
+          "base": "/variant-3",
+          "entry": "/variant-3/"
+        },
+        {
+          "key": "app",
+          "base": "/variant-4",
+          "entry": "/variant-4/"
+        },
+        {
+          "key": "mobile",
+          "base": "/variant-5",
+          "entry": "/variant-5/"
+        },
+        {
+          "key": "karento-best",
+          "base": "/variant-6",
+          "entry": "/variant-6/"
+        }
+      ],
+      "addFamilies": [
+        "import",
+        "mobile",
+        "karento-best"
+      ],
+      "removeFromPublication": [
+        "carwow"
+      ],
+      "retainedInventoryCount": 10,
+      "canonicalSourceInstalledThisRun": false,
+      "productionPublishedThisRun": false
+    }
+  ],
+  "notYetProven": [
+    "Complete 25-dealer conflict resolution and candidate qualification",
+    "Combined actual six-Service pilot compilation and mounted/browser checks",
+    "Priselci opposite-order mounted qualification",
+    "Canonical dealer installation and reconciled publishing exports",
+    "Exact new production SHA, READY state and alias verification for every dealer"
+  ]
+}

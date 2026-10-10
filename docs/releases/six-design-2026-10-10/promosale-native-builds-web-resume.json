@@ -1,0 +1,180 @@
+{
+    "schemaVersion":  1,
+    "recordedAt":  "2026-10-10T21:01:29.575Z",
+    "status":  "NATIVE_SERVICE_BUILDS_PASSED__FLEET_RELEASE_INCOMPLETE",
+    "repository":  "darkapoparka/cars-promosalevarna",
+    "branch":  "codex/six-design-pilot-20261010",
+    "workflow":  ".github/workflows/six-design-native-pilot.yml",
+    "sourceCommit":  "963ba03df08ecaa98e7508fc9111af056c57fd3a",
+    "runId":  38085547657,
+    "runUrl":  "https://github.com/darkapoparka/cars-promosalevarna/actions/runs/38085547657",
+    "nativeServicesPassed":  6,
+    "jobs":  [
+                 {
+                     "family":  "auto-best",
+                     "jobId":  114311165100,
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "artifactId":  11682147032,
+                     "artifactDigest":  "sha256:c315bd3a131e8e35ce27f448453111007158c46f355015f7b1e4a817a0481663",
+                     "digestSource":  "GitHub Actions artifact API; archive not downloaded in this checkpoint"
+                 },
+                 {
+                     "family":  "modern",
+                     "jobId":  114311165060,
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "artifactId":  11682701209,
+                     "artifactDigest":  "sha256:fdec747b0bc04672d2123f1a78e8d6bfc4468eede4667d6fac3c982f716be32d",
+                     "digestSource":  "GitHub Actions artifact API; archive not downloaded in this checkpoint"
+                 },
+                 {
+                     "family":  "import",
+                     "jobId":  114311165090,
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "artifactId":  11682725969,
+                     "artifactDigest":  "sha256:f7873c3c1000feade8d4c262f834ebcb00bfc3a7ec6d49aad70bb4c90ff272c8",
+                     "digestSource":  "GitHub Actions artifact API; archive not downloaded in this checkpoint"
+                 },
+                 {
+                     "family":  "app",
+                     "jobId":  114311164894,
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "artifactId":  11682536475,
+                     "artifactDigest":  "sha256:23e6e9b67728a9a48bf54143b46a9cc6b3128d174f8a509eab3487fcd046a043",
+                     "digestSource":  "GitHub Actions artifact API; archive not downloaded in this checkpoint"
+                 },
+                 {
+                     "family":  "mobile",
+                     "jobId":  114311165066,
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "artifactId":  11682795832,
+                     "artifactDigest":  "sha256:af39314fe3de1864c0997103f94def9318602c4bc4d02cb41e9d8095de12e0bb",
+                     "digestSource":  "GitHub Actions artifact API; archive not downloaded in this checkpoint"
+                 },
+                 {
+                     "family":  "karento-best",
+                     "jobId":  114311165048,
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "artifactId":  11682755770,
+                     "artifactDigest":  "sha256:6a59d007d8057cfbb34bafdca8dffb3f5dc0c5e3e429401e6cfd99fb2ea72f74",
+                     "digestSource":  "GitHub Actions artifact API; archive not downloaded in this checkpoint"
+                 }
+             ],
+    "selectedTemplates":  [
+                              {
+                                  "key":  "auto-best",
+                                  "displayName":  "auto-best",
+                                  "commit":  "696230a404abd9b20b6f907b9cfb139175298c7a"
+                              },
+                              {
+                                  "key":  "modern",
+                                  "displayName":  "modern",
+                                  "commit":  "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710"
+                              },
+                              {
+                                  "key":  "import",
+                                  "displayName":  "import",
+                                  "commit":  "b9373e9ed5453bc7d208898ae140eae4d596a232"
+                              },
+                              {
+                                  "key":  "app",
+                                  "displayName":  "app",
+                                  "commit":  "4e184777567849a2c5b4a9e4a3e652252179c29c"
+                              },
+                              {
+                                  "key":  "mobile",
+                                  "displayName":  "mobile",
+                                  "commit":  "8a97176e3adfbd95dce69b3096abc84e3eecd9c8"
+                              },
+                              {
+                                  "key":  "karento-best",
+                                  "displayName":  "Signature",
+                                  "commit":  "cc130e432a41a3a60cc80bc2b3461c6416893b4a"
+                              }
+                          ],
+    "scope":  "Actual generated dealer service installs and production compilations, using the six vercel.json service commands on their pinned runtimes. This is not combined Vercel build-output, mounted-browser, deployment or alias acceptance.",
+    "correctedFailure":  {
+                             "initialSource":  "0b92355c8690a05d133b7ba47c8dc6fd648fe622",
+                             "initialRun":  38085076856,
+                             "initialJob":  114309788969,
+                             "error":  "TS2304: Cannot find name \u0027logoSource\u0027",
+                             "path":  "modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx",
+                             "rootCause":  "The logo adapter selected logoSource in the parent but used it in an extracted child without passing a prop.",
+                             "fix":  "Pass the selected source through a readonly string prop; keep selection logic, assets and layout unchanged.",
+                             "pilotDiff":  {
+                                               "files":  1,
+                                               "additions":  3,
+                                               "deletions":  1
+                                           },
+                             "sharedFix":  "scripts/lib/client-logo-contract.mjs",
+                             "focusedRegressionTests":  {
+                                                            "passed":  7,
+                                                            "failed":  0
+                                                        }
+                         },
+    "fullWorkflowTests":  {
+                              "passed":  568,
+                              "failed":  2,
+                              "skipped":  1,
+                              "total":  571,
+                              "passedDocumentationCheck":  true,
+                              "failures":  [
+                                               {
+                                                   "test":  "scripts/uk-dealer-icons.test.mjs",
+                                                   "error":  "UK Next boundary changed: src/components/ShowroomInventoryScreen.tsx (expected 1, found 2)"
+                                               },
+                                               {
+                                                   "test":  "scripts/uk-native-compatibility.test.mjs",
+                                                   "error":  "spawnSync git ETIMEDOUT"
+                                               }
+                                           ],
+                              "note":  "Keep the separate UK owner work intact. This record does not call the whole workspace test suite green."
+                          },
+    "fleet":  {
+                  "targetDealers":  25,
+                  "inventoryBaselineCount":  325,
+                  "productionDeploymentsCreated":  0,
+                  "canonicalInstallsThisCheckpoint":  0,
+                  "newCompletedCandidate":  "al-basma-motors",
+                  "newCandidateRun":  "runtime/dealer-template-upgrades/al-basma-motors-1791664814874-kV1TNw",
+                  "reviewedBoundaryDecisions":  [
+                                                    "al-basma-motors",
+                                                    "al-hamoor-al-thahabi",
+                                                    "al-reef-used-cars"
+                                                ],
+                  "remainingAfterInitialPlannerCrash":  "The fourth item, asko-96, did not finish. The existing Promosale and Priselci candidate evidence is retained separately; it is not evidence that the remaining fleet is refreshed."
+              },
+    "publicationBlocker":  {
+                               "provider":  "vercel",
+                               "teamId":  "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+                               "operation":  "create preview deployment from existing Promosale Git pilot",
+                               "projectId":  "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
+                               "commit":  "1f9e00d9153b305cfe48e10a454efd633d5ed500",
+                               "httpStatus":  402,
+                               "errorCode":  "payment_required",
+                               "limitCode":  "api-deployments-free-per-day",
+                               "message":  "Resource is limited - try again in 24 hours (more than 100, code: api-deployments-free-per-day)",
+                               "retryAfterSeconds":  86400,
+                               "observedAt":  "2026-10-10T20:25:42.084Z",
+                               "requestId":  "arn1:sfo1::d49kn-1791663942084-170d57686876",
+                               "createdDeployment":  false
+                           },
+    "pending":  [
+                    "All 25 final preservation-aware refresh/install/export steps",
+                    "Actual combined Vercel build-output and public/mounted pilot checks",
+                    "Opposite Modern/Import-order Priselci build and mounted checks",
+                    "EN/BG, both alternate homes, details/reloads, FAB/Admin, primary actions and metadata/browser acceptance",
+                    "Exact production source, READY state and existing public alias verification for all 25"
+                ],
+    "releaseRegressionTests":  {
+                                   "passed":  29,
+                                   "failed":  0,
+                                   "skipped":  0,
+                                   "note":  "Focused five-file release regression set, including the seven logo tests; not an additional whole-workspace pass."
+                               }
+}
