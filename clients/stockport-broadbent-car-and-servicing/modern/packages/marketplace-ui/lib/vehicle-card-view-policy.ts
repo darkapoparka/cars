@@ -94,7 +94,7 @@ const locationLabelsBg: Record<string, string> = {
   Plovdiv: "Пловдив",
   Romania: "Румъния",
   Ruse: "Русе",
-  Bredbury, Stockport: "Bredbury, Stockport",
+  "Bredbury, Stockport": "Bredbury, Stockport",
   "Bredbury, Stockport City": "Bredbury, Stockport-град",
   "Stara Zagora": "Стара Загора",
   Varna: "Варна",
