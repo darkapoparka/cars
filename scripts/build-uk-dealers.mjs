@@ -15,6 +15,7 @@ import { assertNativeAdoption } from './lib/native-localization.mjs';
 import { assertExtendedVariantSources } from './publishing/six-variant.mjs';
 import { applyDealerIcons, inspectDealerIcon, ICO_INPUT_PATH } from './lib/uk-dealer-icons.mjs';
 import { resolveShareIdentity } from './publishing/dealer-share.mjs';
+import { finalizeAutoBestLocales } from './lib/uk-auto-best-locales.mjs';
 
 export const MANIFEST_PATH = 'leads/uk-2026-10-10-build-manifest.json';
 export const FAMILIES = Object.freeze(['auto-best', 'modern', 'import', 'app', 'mobile', 'karento-best']);
@@ -248,6 +249,7 @@ async function personalize(client, dealer, batch, brief, plan) {
   for (const key of ['mobile','karento-best']) adaptations[key] = applyExtendedRefreshAdapter({files, key, profile, client});
   const icons = applyDealerIcons({files, manifest, profile,
     png:fs.readFileSync(inside(client, dealer.appIcon)), ico:fs.readFileSync(inside(client, ICO_INPUT_PATH))});
+  const localeFinalization = finalizeAutoBestLocales({files});
   const nativeManifest = baseNativeManifest(manifest);
   files = adoptNativeSource(files, nativeManifest, json(path.join(plan.root, 'templates.lock.json')).templates);
   sealAppDealerSource({files, manifest, provenance:app.provenance});
@@ -261,7 +263,7 @@ async function personalize(client, dealer, batch, brief, plan) {
     inputPackDigest:brief.snapshot.digest, sourceReleases:batch.sourceReleases,
     sourceMaterialized:true, personalizationApplied:true, sourceSealsVerified:true,
     inventory:{count:profile.listings.length, mode:'dated-listing-snapshot', observedAt:profile.business.observedAt},
-    nativeChanges, icons, sourceReceipts:['localization/adoption.json','.cars-app.json','.cars-mobile.json','.cars-signature.json'],
+    nativeChanges, icons, localeFinalization, sourceReceipts:['localization/adoption.json','.cars-app.json','.cars-mobile.json','.cars-signature.json'],
     build:false, hosted:false, dealerQa:state(), readyToPublish:false};
   writeJson(inside(client, SOURCE_RECEIPT), receipt);
   return receipt;

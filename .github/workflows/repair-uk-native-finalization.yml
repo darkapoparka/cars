@@ -1,0 +1,72 @@
+name: Finalize existing UK native dealer sources
+on:
+  workflow_dispatch:
+    inputs:
+      dealer:
+        description: Repair the three inspected UK dealer sources and verify all six source seals
+        required: true
+        type: choice
+        default: all
+        options:
+          - all
+permissions:
+  contents: read
+concurrency:
+  group: cars-uk-dealer-source-creation
+  cancel-in-progress: false
+jobs:
+  repair:
+    if: github.repository == 'darkapoparka/cars' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        dealer:
+          - stockport-broadbent-car-and-servicing
+          - batley-as-motor-group
+          - birmingham-square-one-motors
+    name: Finalize ${{ matrix.dealer }} native source
+    steps:
+      - name: Check out the exact source and reviewed repair implementation
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: true
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /AGENTS.md
+            /.gitignore
+            /.gitattributes
+            /package.json
+            /package-lock.json
+            /templates.lock.json
+            /catalog.json
+            /workspace.json
+            /scripts/
+            /.github/workflows/
+            /docs/
+            /leads/uk-2026-10-10-build-manifest.json
+            /leads/uk-2026-10-10-briefs/
+            /clients/${{ matrix.dealer }}/
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '26.10.0'
+          package-manager-cache: false
+      - name: Verify six sources, finalize locale and contact inputs, reseal and push scoped source
+        env:
+          UK_DEALER_SLUG: ${{ matrix.dealer }}
+        run: node scripts/repair-uk-native-finalization.mjs "$UK_DEALER_SLUG"
+      - name: Retain actual source verification and commit evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: uk-native-finalization-${{ matrix.dealer }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: runtime/uk-native-finalization-repair/${{ github.run_id }}-${{ github.run_attempt }}/
+          if-no-files-found: warn
+          include-hidden-files: true
+          retention-days: 7

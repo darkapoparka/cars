@@ -1,5 +1,6 @@
 import { ensureImportMenuKeys } from './import-menu-keys.mjs';
 import { repairAutoBestUkInventoryContract } from './client-refresh-uk-auto-best.mjs';
+import { UK_MODERN_CITY_PATHS, UK_IMPORT_PHONE_INPUT_PATHS, repairModernUkCityKeys, repairImportUkOptionalPhone } from './client-refresh-uk-native.mjs';
 import { UK_MODERN_PATHS, personalizeModernUk, modernUkTransmission, ukSourceMileage } from './client-refresh-uk-next.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -842,6 +843,13 @@ function patchModern({ oldVariant, candidate, profile }) {
     `${JSON.stringify(profile, null, 2)}\n`);
   const dealerTextFiles = patchModernDealerText(candidate, profile)
     .map((file) => path.relative(candidate, file).replaceAll('\\', '/'));
+  if (b.countryCode === 'GB') {
+    const generated = new Map(UK_MODERN_CITY_PATHS.map(name => [name, read(path.join(candidate, name))]));
+    for (const name of repairModernUkCityKeys(generated, profile)) {
+      write(path.join(candidate, name), String(generated.get(name)));
+      dealerTextFiles.push(name);
+    }
+  }
   if (b.countryCode === 'GB' && b.distanceUnit === 'mi') {
     const generated = new Map(UK_MODERN_PATHS.map(name => [name, read(path.join(candidate, name))]));
     for (const name of personalizeModernUk(generated, profile)) {
@@ -1449,6 +1457,14 @@ function patchImport({ oldVariant, candidate, profile }) {
   changed.push('src/lib/components/home/HomeFiveHeader.svelte');
   write(path.join(candidate, 'src/lib/data/dealer-profile.json'),
     `${JSON.stringify(profile, null, 2)}\n`);
+  if (profile.business.countryCode === 'GB' && !profile.business.phoneDisplay &&
+      !profile.business.phoneHref && !profile.business.phoneE164) {
+    const generated = new Map(UK_IMPORT_PHONE_INPUT_PATHS.map(name => [name, read(path.join(candidate, name))]));
+    for (const name of repairImportUkOptionalPhone(generated, profile)) {
+      write(path.join(candidate, name), String(generated.get(name)));
+      changed.push(name);
+    }
+  }
   return [
     'src/lib/data/daynight-listings.json',
     'src/lib/data/daynight.ts',
