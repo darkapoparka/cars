@@ -1,5 +1,0 @@
-# allow crawling everything except the internal client pitch page
-User-agent: *
-Disallow: /offer
-
-Sitemap: https://eliqauto.bg/sitemap.xml

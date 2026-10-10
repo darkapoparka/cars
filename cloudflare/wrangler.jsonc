@@ -1,0 +1,41 @@
+{
+  "name": "cars-uk-batley-as-motor-group",
+  "main": "router.mjs",
+  "compatibility_date": "2026-10-10",
+  "workers_dev": true,
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": false
+  },
+  "services": [
+    {
+      "binding": "CARS_AUTO_BEST",
+      "service": "cars-uk-batley-as-motor-group-auto-best"
+    },
+    {
+      "binding": "CARS_MODERN",
+      "service": "cars-uk-batley-as-motor-group-modern"
+    },
+    {
+      "binding": "CARS_IMPORT",
+      "service": "cars-uk-batley-as-motor-group-import"
+    },
+    {
+      "binding": "CARS_APP",
+      "service": "cars-uk-batley-as-motor-group-app"
+    },
+    {
+      "binding": "CARS_MOBILE",
+      "service": "cars-uk-batley-as-motor-group-mobile"
+    },
+    {
+      "binding": "CARS_KARENTO_BEST",
+      "service": "cars-uk-batley-as-motor-group-signature"
+    }
+  ]
+}

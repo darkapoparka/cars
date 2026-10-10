@@ -1,0 +1,10 @@
+.vercel
+
+# clerk configuration (can include secrets)
+/.clerk/
+
+.vercel
+/dist/
+/.vinext/
+/.wrangler/
+/.cloudflare/
