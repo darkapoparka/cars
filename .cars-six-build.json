@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "packagingVersion": "5",
+  "dealer": "bradford-cherry-tree-cars",
+  "transformation": "six-design-cloudflare-v1",
+  "signature": {
+    "provider": "cloudflare",
+    "adapterReceipt": ".cars-cloudflare-svelte.json",
+    "buildVerified": false
+  },
+  "families": {
+    "app": {
+      "base": "/variant-4",
+      "digest": "0dd7c2c973ea6533573cba8b32b60147456d4879dd82c78e43452bbaf5d3dbb8"
+    },
+    "mobile": {
+      "base": "/variant-5",
+      "digest": "6c1afb7d82691198850c671a44b4deeb7671f26cf639f474f8224953170d5350"
+    },
+    "karento-best": {
+      "base": "/variant-6",
+      "digest": "fa0815230c6582c7afc002cea2e72a23a81c4eb53886020623b75af983ebf281"
+    }
+  },
+  "sourceReceipts": {
+    ".cars-app.json": "809709486dc6a051aa8043cb390eaed11a73a1ecaf6c5717ba9a58128810b71a",
+    ".cars-mobile.json": "9697ee42bc94377c162e8b2cbdc7d83cd9e28b70e97ece25758bb2190c8ccf5d",
+    ".cars-signature.json": "df0ff77e479b21785ccb4847ba616ed91e2fe5ef4d2cde5f08d75789e18fd516"
+  }
+}

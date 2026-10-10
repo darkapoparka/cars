@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "publisherVersion": "1",
+  "provider": "cloudflare",
+  "dealer": "bradford-cherry-tree-cars",
+  "worker": "cars-uk-bradford-cherry-tree-cars",
+  "workerCount": 7,
+  "variants": [
+    {
+      "key": "auto-best",
+      "entry": "/",
+      "base": "",
+      "binding": "CARS_AUTO_BEST",
+      "worker": "cars-uk-bradford-cherry-tree-cars-auto-best"
+    },
+    {
+      "key": "modern",
+      "entry": "/variant-2/cars",
+      "base": "/variant-2",
+      "binding": "CARS_MODERN",
+      "worker": "cars-uk-bradford-cherry-tree-cars-modern"
+    },
+    {
+      "key": "import",
+      "entry": "/variant-3/",
+      "base": "/variant-3",
+      "binding": "CARS_IMPORT",
+      "worker": "cars-uk-bradford-cherry-tree-cars-import"
+    },
+    {
+      "key": "app",
+      "entry": "/variant-4/",
+      "base": "/variant-4",
+      "binding": "CARS_APP",
+      "worker": "cars-uk-bradford-cherry-tree-cars-app"
+    },
+    {
+      "key": "mobile",
+      "entry": "/variant-5/",
+      "base": "/variant-5",
+      "binding": "CARS_MOBILE",
+      "worker": "cars-uk-bradford-cherry-tree-cars-mobile"
+    },
+    {
+      "key": "karento-best",
+      "entry": "/variant-6/",
+      "base": "/variant-6",
+      "binding": "CARS_KARENTO_BEST",
+      "worker": "cars-uk-bradford-cherry-tree-cars-signature"
+    }
+  ],
+  "redirects": [],
+  "configuration": {
+    "name": "cars-uk-bradford-cherry-tree-cars",
+    "main": "router.mjs",
+    "compatibility_date": "2026-10-10",
+    "workers_dev": true,
+    "observability": {
+      "enabled": true,
+      "head_sampling_rate": 1
+    },
+    "assets": {
+      "directory": "./public",
+      "binding": "ASSETS",
+      "run_worker_first": false
+    },
+    "services": [
+      {
+        "binding": "CARS_AUTO_BEST",
+        "service": "cars-uk-bradford-cherry-tree-cars-auto-best"
+      },
+      {
+        "binding": "CARS_MODERN",
+        "service": "cars-uk-bradford-cherry-tree-cars-modern"
+      },
+      {
+        "binding": "CARS_IMPORT",
+        "service": "cars-uk-bradford-cherry-tree-cars-import"
+      },
+      {
+        "binding": "CARS_APP",
+        "service": "cars-uk-bradford-cherry-tree-cars-app"
+      },
+      {
+        "binding": "CARS_MOBILE",
+        "service": "cars-uk-bradford-cherry-tree-cars-mobile"
+      },
+      {
+        "binding": "CARS_KARENTO_BEST",
+        "service": "cars-uk-bradford-cherry-tree-cars-signature"
+      }
+    ]
+  },
+  "adapterReceipts": [
+    {
+      "path": ".cars-cloudflare-svelte.json",
+      "sha256": "8996f06dd10f9364a0432c9f50d92af7d631e9faea39f394c38648285483ba95"
+    },
+    {
+      "path": ".cars-cloudflare-next.json",
+      "sha256": "7cd79167525560d51d3c52d787910b088eca3ea8d02c6b7d2a05f9222bd20c0d"
+    }
+  ],
+  "routerDependencyLock": {
+    "path": "cloudflare/package-lock.json",
+    "sha256": "43d61c1a6932cc9c6f1d7c653c3ba6789921aa0880ea2e948ac76a408e114f80",
+    "status": "frozen"
+  },
+  "acceptance": {
+    "dependencyLocksFrozen": true,
+    "buildVerified": false,
+    "hostedVerified": false,
+    "freePlanQualified": false
+  },
+  "assets": {
+    "mode": "family-owned",
+    "vercelExternalization": false
+  },
+  "countryHint": {
+    "source": "request.cf.country",
+    "header": "x-cars-country",
+    "ingress": "router-only",
+    "precedence": "URL, saved preference, browser language, country hint, dealer default"
+  }
+}
