@@ -5,9 +5,10 @@
   import DesktopFilterChoice from './DesktopFilterChoice.svelte';
   import DesktopMakeLogo from './DesktopMakeLogo.svelte';
 
-  let { value, label, checked, name, portrait = true, onchange }: {
+  let { value, label, checked, name, portrait = true, compact = false, onchange }: {
     value: string; label: string; checked: boolean; name?: string;
     portrait?: boolean;
+    compact?: boolean;
     onchange: (value: string) => void;
   } = $props();
   const i18n = getI18n();
@@ -15,7 +16,7 @@
 </script>
 
 {#snippet logo()}
-  <DesktopMakeLogo {value} {portrait} />
+  <DesktopMakeLogo {value} {portrait} {compact} />
 {/snippet}
 
-<DesktopFilterChoice {value} {label} {checked} {name} {onchange} multiple tile={portrait} {portrait} media={logo} description={stock} accessibleLabel={label} />
+<DesktopFilterChoice {value} {label} {checked} {name} {onchange} multiple tile={portrait} {portrait} media={logo} description={compact ? String(desktopMakeCount(value)) : stock} accessibleLabel={compact ? `${label}, ${stock}` : label} />

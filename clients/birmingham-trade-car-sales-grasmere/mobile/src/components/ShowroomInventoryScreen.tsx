@@ -39,6 +39,7 @@ import { ShowroomVehicleCard } from './ShowroomVehicleCard';
 import { ShowroomTabs } from './ShowroomTabs';
 import { ShowroomHeaderSurface } from './ShowroomHeaderSurface';
 import { ShowroomSearch } from './ShowroomSearch';
+import { ShowroomMobileToolbar } from './ShowroomMobileToolbar';
 import { ShowroomDesktopHero } from './ShowroomDesktopHero';
 import { ShowroomBanner, ShowroomDrawer } from './ShowroomPageLayout';
 import { ShowroomQuickPill, ShowroomQuickPills } from './ShowroomQuickPills';
@@ -89,7 +90,7 @@ const s = stylex.create({
     backgroundColor: { default: colors.background, '@media (max-width: 699px)': 'transparent' },
   },
   quickBar: {
-    position: { default: 'sticky', '@media (min-width: 1024px)': 'static' },
+    position: 'static',
     top: 0,
     zIndex: 25,
     flexShrink: 0,
@@ -100,6 +101,7 @@ const s = stylex.create({
       '@media (min-width: 1024px)': 'transparent',
     },
   },
+  phoneQuickBar: { display: { default: 'block', '@media (min-width: 1024px)': 'none' } },
   desktopRail: {
     display: { default: 'contents', '@media (min-width: 1024px)': 'flex' },
     alignItems: 'center',
@@ -111,15 +113,15 @@ const s = stylex.create({
     paddingInline: 0,
     paddingBlock: 0,
   },
-  desktopActions: {
+  appliedFilters: {
     display: { default: 'none', '@media (min-width: 1024px)': 'flex' },
     alignItems: 'center',
+    flexWrap: 'wrap',
     gap: 8,
-    flexShrink: 0,
-    paddingInlineStart: 0,
-    paddingInlineEnd: 0,
-    paddingBlock: 0,
+    minWidth: 0,
   },
+  resultCount: { fontSize: 16, lineHeight: '24px', fontWeight: 500, marginInlineEnd: 8 },
+  resultSort: { marginInlineStart: 'auto', flexShrink: 0 },
   pillChevron: { display: { default: 'contents', '@media (min-width: 1024px)': 'none' } },
   emptyCount: { visibility: 'hidden' },
   filterCount: {
@@ -175,10 +177,11 @@ const s = stylex.create({
     display: 'grid',
     gap: { default: 14, '@media (min-width: 1024px)': showroomDesktop.cardGap },
     gridTemplateColumns: {
-      default: 'minmax(0,1fr)',
+      // Two cards still fit at 320px when a classic scrollbar takes 15px.
+      default: 'repeat(auto-fit,minmax(min(100%,max(8rem,calc((100% - 14px)/2))),1fr))',
       '@media (min-width: 700px)': 'repeat(2,minmax(0,1fr))',
       '@media (min-width: 1024px)': showroomDesktop.inventoryColumns,
-      '@media (min-width: 1280px)': showroomDesktop.wideInventoryColumns,
+      '@media (min-width: 1440px)': showroomDesktop.wideInventoryColumns,
     },
   },
   note: {
@@ -226,6 +229,7 @@ export function ShowroomInventoryScreen() {
   const moreSection = sheet === 'more' ? showroomMoreSection(params.get('section')) : null;
   const opener = useRef<{ button: HTMLButtonElement; scrollY: number } | null>(null);
   const browseAfterApply = useRef(false);
+  const quickBar = useRef<HTMLDivElement>(null);
   const category = showroomCategory(filters.category);
   const excludedNames = excludedMakeNames(filters);
   const stock = vehicles.filter((vehicle) => vehicle.category === filters.category);
@@ -281,15 +285,15 @@ export function ShowroomInventoryScreen() {
     if (key === 'all' || key === 'more') return;
     const removers = Array.from(
       document.querySelectorAll<HTMLButtonElement>('[data-remove-selected-filter]'),
-    );
+    ).filter((button) => button.getClientRects().length > 0);
     const index = removers.findIndex((button) => button.dataset.removeSelectedFilter === key);
     change(
       key === 'model' ? clearModelSelections(filters) : clearShowroomQuickFilter(filters, key),
     );
     requestAnimationFrame(() => {
-      const remaining = document.querySelectorAll<HTMLButtonElement>(
-        '[data-remove-selected-filter]',
-      );
+      const remaining = Array.from(
+        document.querySelectorAll<HTMLButtonElement>('[data-remove-selected-filter]'),
+      ).filter((button) => button.getClientRects().length > 0);
       const target =
         remaining[Math.min(Math.max(index, 0), remaining.length - 1)] ||
         document.querySelector<HTMLElement>('[data-quick-filter="all"]');
@@ -439,6 +443,19 @@ export function ShowroomInventoryScreen() {
       filters.minYear || filters.maxYear,
       filters.fuel.length,
     ].filter(Boolean).length;
+  const mobileFilterSummary = [
+    filters.query,
+    hasMakeSelection ? t(makeLabel) : '',
+    filters.minPrice || filters.maxPrice ? t(priceLabel) : '',
+    filters.minYear || filters.maxYear ? t(yearLabel) : '',
+    filters.fuel.map(t).join(', '),
+    filters.condition.map(t).join(', '),
+    filters.minMileage || filters.maxMileage ? mileageLabel + ' ' + t('km') : '',
+    filters.transmission.map(t).join(', '),
+    filters.body.map(t).join(', '),
+  ]
+    .filter(Boolean)
+    .join(' · ');
   const pills: {
     key: ShowroomQuickFilter | 'all' | 'more';
     tab: ShowroomFilterTab;
@@ -534,6 +551,47 @@ export function ShowroomInventoryScreen() {
       count: otherFilterCount,
     },
   ];
+  const desktopQuickFilters = (
+    <ShowroomQuickPills label={t('Quick filters')} inventoryDesktop inset={false}>
+      {pills
+        .filter(({ key }) => key !== 'make' && key !== 'more')
+        .map((pill) => (
+          <ShowroomQuickPill
+            key={pill.key}
+            data-quick-filter={pill.key}
+            inventoryDesktop
+            active={pill.key !== 'all' && pill.active}
+            aria-label={pill.key === 'all' ? t('All filters') : t(pill.name) + ' · ' + t('Filters')}
+            aria-haspopup="dialog"
+            aria-expanded={
+              pill.key === 'all'
+                ? Boolean(sheet && params.get('panel') === 'all')
+                : sheet === pill.tab &&
+                  moreSection === (pill.section || null) &&
+                  params.get('panel') !== 'all'
+            }
+            onClick={(event) =>
+              openSheet(pill.tab, event.currentTarget, pill.section, event.detail === 0)
+            }
+          >
+            {pill.key === 'all' && (
+              <SlidersHorizontal size={16} strokeWidth={1.8} aria-hidden="true" />
+            )}
+            {t(pill.name)}
+          </ShowroomQuickPill>
+        ))}
+    </ShowroomQuickPills>
+  );
+  const appliedFilters = [
+    {
+      key: 'search' as const,
+      tab: 'search' as const,
+      name: 'Search',
+      label: filters.query,
+      active: Boolean(filters.query),
+    },
+    ...pills.filter(({ key }) => key !== 'all' && key !== 'more'),
+  ].filter(({ active }) => active);
   return (
     <>
       <ShowroomBanner discovery>
@@ -544,7 +602,7 @@ export function ShowroomInventoryScreen() {
               label={t('Search make or model')}
               value={filters.query}
               onOpen={(button) => openSheet('search', button)}
-              elevatedOnPhone
+              phoneHeader
             />
           </div>
           <section
@@ -595,7 +653,7 @@ export function ShowroomInventoryScreen() {
                 : t('All makes')
           }
           modelLabel={hasMakeSelection ? desktopModelLabel : t('Choose a make first')}
-          priceLabel={t(filters.minPrice || filters.maxPrice ? priceLabel : 'Any price')}
+          quickFilters={desktopQuickFilters}
           resultLabel={
             t('Show ') +
             results.length +
@@ -612,12 +670,23 @@ export function ShowroomInventoryScreen() {
           makeActive={hasMakeSelection}
           modelActive={hasModelSelection}
           modelReady={Boolean(filters.makes.length || excludedNames.length)}
-          priceActive={Boolean(filters.minPrice || filters.maxPrice)}
           onClear={clearAppliedFilter}
         />
       </ShowroomBanner>
       <ShowroomDrawer id="showroom-results" inventory>
-        <div data-desktop-quick-bar {...stylex.props(s.quickBar)}>
+        <ShowroomMobileToolbar
+          anchor={quickBar}
+          summary={mobileFilterSummary}
+          filterCount={allFilterCount}
+          sortLabel={sortLabel}
+          sorted={sort !== 'standard'}
+          sheet={sheet}
+          sorting={sorting}
+          onSearch={(button) => openSheet('search', button)}
+          onFilters={(button) => openSheet('make', button)}
+          onSort={(button) => openSheet('sort', button)}
+        />
+        <div ref={quickBar} {...stylex.props(s.quickBar, s.phoneQuickBar)}>
           <div {...stylex.props(s.desktopRail)}>
             <ShowroomQuickPills label={t('Quick filters')} inventoryDesktop compactOnPhone>
               <div {...stylex.props(s.phoneOnly)}>
@@ -739,22 +808,54 @@ export function ShowroomInventoryScreen() {
                 </div>
               )}
             </ShowroomQuickPills>
-            <div {...stylex.props(s.desktopActions)}>
-              <ShowroomQuickPill
-                data-desktop-sort
-                aria-label={t('Sort') + ': ' + t(sortLabel)}
-                title={t('Sort') + ': ' + t(sortLabel)}
-                aria-haspopup="dialog"
-                aria-expanded={sorting}
-                active={sort !== 'standard'}
-                inventoryDesktop
-                trailingDesktop
-                iconOnly
-                onClick={(event) => openSheet('sort', event.currentTarget)}
-              >
-                <ArrowDownUp size={16} strokeWidth={1.8} aria-hidden="true" />
-              </ShowroomQuickPill>
-            </div>
+          </div>
+        </div>
+        <div data-desktop-applied-filters {...stylex.props(s.appliedFilters)}>
+          <span {...stylex.props(s.resultCount)}>
+            {results.length} {t(results.length === 1 ? category.singular : category.plural)}
+          </span>
+          {appliedFilters.map((pill) => (
+            <ShowroomQuickPill
+              key={pill.key}
+              inventoryDesktop
+              active
+              aria-label={t(pill.name) + ': ' + t(pill.label)}
+              aria-haspopup="dialog"
+              aria-expanded={sheet === pill.tab}
+              onClick={(event) =>
+                openSheet(
+                  pill.tab,
+                  event.currentTarget,
+                  'section' in pill ? pill.section : undefined,
+                  event.detail === 0,
+                )
+              }
+              clearDesktop={{
+                key: pill.key,
+                label: t('Clear filters') + ': ' + t(pill.name),
+                onClear: () => clearAppliedFilter(pill.key),
+              }}
+            >
+              {t(pill.label)}
+            </ShowroomQuickPill>
+          ))}
+          {appliedFilters.length > 0 && (
+            <ShowroomQuickPill inventoryDesktop onClick={reset} aria-label={t('Clear filters')}>
+              {t('Clear')}
+            </ShowroomQuickPill>
+          )}
+          <div {...stylex.props(s.resultSort)}>
+            <ShowroomQuickPill
+              data-desktop-sort
+              inventoryDesktop
+              aria-label={t('Sort') + ': ' + t(sortLabel)}
+              aria-haspopup="dialog"
+              aria-expanded={sorting}
+              onClick={(event) => openSheet('sort', event.currentTarget)}
+            >
+              <ArrowDownUp size={16} strokeWidth={1.8} aria-hidden="true" />
+              {t(sortLabel)}
+            </ShowroomQuickPill>
           </div>
         </div>
         <section

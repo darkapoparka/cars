@@ -76,6 +76,23 @@
 		color: var(--bc-copy);
 		opacity: 1;
 	}
+	@media (max-width: 767.98px) {
+		.search-field {
+			min-height: var(--bc-control-height-primary);
+			padding: 0 var(--bc-space-4);
+			border: 0;
+			border-radius: var(--bc-radius-pill);
+			background: var(--bc-mobile-search-surface, var(--bc-white));
+		}
+		.search-field--action {
+			padding: var(--bc-mobile-control-inset) var(--bc-mobile-control-inset)
+				var(--bc-mobile-control-inset) var(--bc-space-4);
+		}
+		.search-field > :global(svg) {
+			width: var(--bc-control-icon-size-primary);
+			height: var(--bc-control-icon-size-primary);
+		}
+	}
 	@media (min-width: 768px) {
 		.search-field {
 			border-color: transparent;

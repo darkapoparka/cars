@@ -1,79 +1,31 @@
 'use client';
 import * as stylex from '@stylexjs/stylex';
+import type { ReactNode } from 'react';
 import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { useLocale } from '@/lib/use-locale';
 import type { ShowroomFilterTab } from '@/lib/showroom-filter-editor';
 import type { VehicleCategory } from '@/lib/types';
-import { showroom, showroomPreviewLocation } from '@/lib/showroom';
 import { Icon } from './Icon';
 import { ShowroomDesktopType } from './ShowroomDesktopType';
+import { ShowroomHeroHeading } from './ShowroomPageLayout';
+import { showroomHeroStyles as hero } from './showroom-hero.stylex';
 import { desktopSearchStyles as field } from './showroom-desktop-controls.stylex';
 
 const s = stylex.create({
-  hero: {
-    display: { default: 'contents', '@media (min-width: 1024px)': 'flex' },
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 24,
-    minHeight: { default: 280, '@media (min-width: 1024px)': 340 },
-    marginInline: { default: 16, '@media (min-width: 1024px)': 0 },
-    marginTop: { default: 8, '@media (min-width: 1024px)': 0 },
-    marginBottom: 0,
-    paddingTop: { default: 32, '@media (min-width: 1024px)': 40 },
-    // Balance the heading and search within the part above the overlapping results.
-    paddingBottom: { default: 32, '@media (min-width: 1024px)': 68 },
-    paddingInline: { default: 24, '@media (min-width: 1200px)': 40 },
-    borderRadius: { default: 20, '@media (min-width: 1024px)': 0 },
-    color: '#fff',
-    backgroundColor: { default: '#263644', '@media (min-width: 1024px)': 'transparent' },
-  },
-  copy: {
-    display: { default: 'none', '@media (min-width: 1024px)': 'block' },
-    textAlign: 'center',
-    maxWidth: 800,
-  },
-  title: {
-    fontFamily: 'var(--font-base), Arial, sans-serif',
-    fontSize: 'clamp(32px, 3vw, 40px)',
-    fontWeight: 700,
-    lineHeight: 1.12,
-    letterSpacing: '-.02em',
-    textWrap: 'balance',
-  },
-  location: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 6,
-    marginBottom: 12,
-    color: 'rgba(255, 255, 255, .82)',
-    fontSize: 13,
-    fontWeight: 400,
-    lineHeight: '20px',
-  },
-  searchPanel: {
-    display: { default: 'contents', '@media (min-width: 1024px)': 'block' },
-    width: '100%',
-    maxWidth: 780,
-    borderRadius: controlShape.pill,
-    color: colors.text,
-    backgroundColor: colors.background,
-    boxShadow: '0 8px 24px rgba(14, 25, 36, .12)',
-  },
+  compactSearchPanel: { maxWidth: 880 },
   search: {
     display: { default: 'none', '@media (min-width: 1024px)': 'grid' },
-    gridTemplateColumns: 'minmax(0, .95fr) minmax(0, 1.35fr) minmax(0, .85fr) auto',
+    gridTemplateColumns: 'minmax(210px, 1fr) minmax(0, 1.5fr) 48px',
     alignItems: 'center',
     width: '100%',
-    padding: 6,
+    minHeight: 68,
+    paddingBlock: 6,
+    paddingInline: 10,
     gap: 6,
   },
-  expandedSearchPanel: { maxWidth: 880 },
   splitSearch: {
-    gridTemplateColumns:
-      'minmax(210px, 1.1fr) minmax(0, 1fr) minmax(0, 1.1fr) minmax(0, .85fr) auto',
+    gridTemplateColumns: 'repeat(3, minmax(0, 1fr)) 48px',
   },
   disabledField: { opacity: 0.6, cursor: 'not-allowed' },
   submit: {
@@ -81,10 +33,11 @@ const s = stylex.create({
     alignItems: 'center',
     justifyContent: 'center',
     width: 48,
-    minHeight: 48,
+    height: 48,
+    flexShrink: 0,
     padding: 0,
     borderWidth: 0,
-    borderRadius: controlShape.pill,
+    borderRadius: controlShape.circle,
     backgroundColor: { default: colors.accent, ':hover': '#b72800' },
     color: '#fff',
     outlineColor: colors.text,
@@ -115,7 +68,7 @@ export function ShowroomDesktopHero({
   category,
   makeLabel,
   modelLabel,
-  priceLabel,
+  quickFilters,
   resultLabel,
   sheet,
   makeView,
@@ -125,13 +78,12 @@ export function ShowroomDesktopHero({
   makeActive,
   modelActive,
   modelReady,
-  priceActive,
   onClear,
 }: {
   category: VehicleCategory;
   makeLabel: string;
   modelLabel: string;
-  priceLabel: string;
+  quickFilters: ReactNode;
   resultLabel: string;
   sheet: ShowroomFilterTab | null;
   makeView: 'make' | 'model';
@@ -145,11 +97,9 @@ export function ShowroomDesktopHero({
   makeActive: boolean;
   modelActive: boolean;
   modelReady: boolean;
-  priceActive: boolean;
-  onClear: (tab: 'make' | 'model' | 'price') => void;
+  onClear: (tab: 'make' | 'model') => void;
 }) {
-  const { t, locale } = useLocale();
-  const location = showroom.address || showroomPreviewLocation[locale];
+  const { t } = useLocale();
   const fields = [
     {
       tab: 'make',
@@ -169,22 +119,19 @@ export function ShowroomDesktopHero({
           } as const,
         ]
       : []),
-    { tab: 'price', label: 'Price', value: priceLabel, active: priceActive, disabled: false },
   ] as const;
   return (
-    <div data-desktop-discovery-hero {...stylex.props(s.hero)}>
-      <div {...stylex.props(s.copy)}>
-        <p data-desktop-showroom-location {...stylex.props(s.location)}>
-          <Icon name="pin" size={14} />
-          <span>{location}</span>
-        </p>
-        <h2 id="desktop-discovery-title" {...stylex.props(s.title)}>
-          {t('Find your next vehicle')}
-        </h2>
-      </div>
+    <div data-desktop-discovery-hero {...stylex.props(hero.layout, hero.withFilters)}>
+      <ShowroomHeroHeading
+        title="Find your next vehicle"
+        heading="h2"
+        id="desktop-discovery-title"
+        desktopOnly
+      />
       <div
         data-desktop-search-box
-        {...stylex.props(s.searchPanel, category === 'car' && s.expandedSearchPanel)}
+        data-showroom-hero-controls
+        {...stylex.props(hero.controlSurface, category !== 'car' && s.compactSearchPanel)}
       >
         <div
           role="group"
@@ -192,7 +139,7 @@ export function ShowroomDesktopHero({
           {...stylex.props(s.search, category === 'car' && s.splitSearch)}
         >
           <ShowroomDesktopType category={category} onSelect={onSelectCategory} />
-          {fields.map(({ tab, label, value, active, disabled }) => {
+          {fields.map(({ tab, label, value, active, disabled }, index) => {
             const open =
               tab === 'model'
                 ? sheet === 'make' && makeView === 'model'
@@ -213,7 +160,7 @@ export function ShowroomDesktopHero({
                   onClick={(event) => onOpen(tab, event.currentTarget, event.detail === 0)}
                   {...stylex.props(
                     field.field,
-                    tab !== 'price' && field.divider,
+                    index < fields.length - 1 && field.divider,
                     active && s.clearableField,
                     open && field.open,
                     open && field.hideDivider,
@@ -252,6 +199,9 @@ export function ShowroomDesktopHero({
             <Icon name="search" size={20} />
           </button>
         </div>
+      </div>
+      <div data-desktop-hero-filters {...stylex.props(hero.quickFilters)}>
+        {quickFilters}
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import {displayMake} from '@/lib/inventory-labels';
 
 import {useDeferredValue, useLayoutEffect, useId, useRef, useState} from 'react';
 import * as stylex from '@stylexjs/stylex';
-import {ArrowLeft, ChevronRight, Search, X} from 'lucide-react';
+import {ArrowLeft, ChevronRight, Plus, Search, X} from 'lucide-react';
 import {useCopy} from '@/lib/locale';
 import {assetPath} from '@/lib/paths';
 import {currency} from '@/lib/currency';
@@ -67,7 +67,7 @@ export default function FinanceCalculatorLauncher({view, onViewChange: setView, 
             {!results.length ? <p {...stylex.props(s.empty, t.body)}>{tx('No cars match these filters')}</p> : null}
           </div> : null}
           {!onChooseCar ? <div hidden={view !== 'calculator'}>
-            <button type="button" aria-label={tx('Change car')} onClick={() => setView('cars')} {...stylex.props(s.selectedCar, t.control)}>{selection.car ? <><img src={assetPath(selection.car.image)} width={64} height={48} alt="" {...stylex.props(s.selectedImage)}/><span {...stylex.props(s.choiceCopy)}><span {...stylex.props(s.model)}>{tx(displayMake(selection.car.make))} {selection.car.model}</span><span {...stylex.props(s.note, t.caption)}>{selection.car.year} · {currency.symbol} {formatPrice(selection.car.price)}</span></span></> : <><Search size={20} aria-hidden="true"/>{tx('Choose your car')}</>}<ChevronRight size={20} aria-hidden="true" {...stylex.props(s.changeIcon)}/></button>
+            <button type="button" aria-label={selection.car ? tx('Change car') + ': ' + tx(displayMake(selection.car.make)) + ' ' + selection.car.model : tx('Choose your car')} onClick={() => setView('cars')} {...stylex.props(s.selectedCar, !selection.car && s.emptyCar, t.control)}>{selection.car ? <><img src={assetPath(selection.car.image)} width={64} height={48} alt="" {...stylex.props(s.selectedImage)}/><span {...stylex.props(s.choiceCopy)}><span {...stylex.props(s.model)}>{tx(displayMake(selection.car.make))} {selection.car.model}</span><span {...stylex.props(s.note, t.caption)}>{selection.car.year} · {currency.symbol} {formatPrice(selection.car.price)}</span></span></> : <><Plus size={18} aria-hidden="true" {...stylex.props(s.icon)}/>{tx('Choose your car')}</>}</button>
             <FinanceCalculator key={selection.version} initialPrice={selection.car?.price ?? 25000} presentation="dialog"/>
           </div> : null}
         </div>
@@ -102,6 +102,6 @@ const s = stylex.create({
   model: {overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap'},
   empty: {paddingBlock: 28, color: $.muted},
   selectedCar: {display: 'flex', alignItems: 'center', gap: 12, width: '100%', minHeight: {[media.desktop]: 56, default: 64}, padding: {[media.desktop]: '8px 12px', default: '8px 0'}, marginTop: {[media.desktop]: 12, default: 8}, color: $.ink, textAlign: 'left', borderWidth: 0, borderRadius: {[media.desktop]: 12, default: null}, backgroundColor: {[media.desktop]: $.surfaceAlt, default: '#fff'}, cursor: 'pointer'},
+  emptyCar: {justifyContent: 'center', gap: 8, minHeight: 48, padding: '10px 14px', textAlign: 'center', borderWidth: 1, borderStyle: 'dashed', borderColor: {default: $.surfaceBorder, ':hover': $.controlBorder}, borderRadius: $.radiusSm, backgroundColor: {default: '#fff', ':hover': $.surfaceAlt}},
   selectedImage: {flexShrink: 0, width: 64, height: 48, objectFit: 'cover', borderRadius: 8},
-  changeIcon: {marginLeft: 'auto', flexShrink: 0},
 });

@@ -291,7 +291,19 @@ export function ShowroomServiceRequest({
   const closing = useRef(false);
   const wasOpen = useRef(false);
   const startContext = useRef({ country, saleType });
-  const values = edited ?? parseServiceRequest(kind, raw);
+  const storedValues = parseServiceRequest(kind, raw);
+  const routeCountry = open && params.has('country');
+  const routeSaleType = open && params.has('saleType');
+  // Direct sheet links need the same context as the overview's start action.
+  const seededValues = seedServiceRequest(
+    kind,
+    routeCountry && country === 'all' ? { ...storedValues, country: '' } : storedValues,
+    {
+      country: routeCountry || !storedValues.country ? country : undefined,
+      saleType: routeSaleType || !storedValues.saleType ? saleType : undefined,
+    },
+  );
+  const values = edited ?? seededValues;
   const importing = kind === 'import';
   const title = importing ? 'Import a car' : 'Sell your car';
   const steps = serviceRequestSteps[kind];

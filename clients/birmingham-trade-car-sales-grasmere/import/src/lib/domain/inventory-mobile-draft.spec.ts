@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
 	inventoryMobileDraftFromQuery,
+	mergeInventoryModelOptions,
 	serializeInventoryMobileDraft
 } from './inventory-mobile-draft';
 import { parseInventoryQuery } from './inventory-query';
@@ -76,5 +77,32 @@ describe('mobile inventory draft', () => {
 		expect(
 			parseInventoryQuery(serializeInventoryMobileDraft(draft, original)).filters.maxPrice
 		).toBeUndefined();
+	});
+});
+
+describe('mobile model options', () => {
+	const options = {
+		BMW: [
+			{ value: 'shared', label: 'Shared model', count: 2, countLabel: '2 cars' },
+			{ value: 'x5', label: 'X5', count: 5, countLabel: '5 cars' }
+		],
+		Audi: [
+			{ value: 'shared', label: 'Shared model', count: 3, countLabel: '3 cars' },
+			{ value: 'a4', label: 'A4', count: 1, countLabel: '1 car' }
+		],
+		Mercedes: [{ value: 'gla', label: 'GLA', count: 8, countLabel: '8 cars' }]
+	};
+	it('combines only selected makes using numeric counts, including shared model names', () => {
+		const merged = mergeInventoryModelOptions(['BMW', 'Audi'], options);
+		expect(merged.map(({ value, count }) => ({ value, count }))).toEqual([
+			{ value: 'shared', count: 5 },
+			{ value: 'x5', count: 5 },
+			{ value: 'a4', count: 1 }
+		]);
+		expect(options.BMW[0].count).toBe(2);
+	});
+	it('does not double-count a repeated make and ignores unknown makes', () => {
+		expect(mergeInventoryModelOptions(['Audi', 'Audi', 'missing'], options)).toHaveLength(2);
+		expect(mergeInventoryModelOptions(['Audi', 'Audi'], options)[0].count).toBe(3);
 	});
 });

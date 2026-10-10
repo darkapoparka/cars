@@ -9,6 +9,7 @@ import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
 import { hydrateStore, notify, syncStorage, useAppState } from '@/lib/store';
 import { showroomInventoryHref } from '@/lib/showroom';
 import { showroomTitle } from '@/lib/showroom-config';
+import { showroomService } from '@/lib/showroom-services';
 import { getVehicle } from '@/lib/catalog';
 import { useMobileKeyboard } from '@/lib/use-mobile-keyboard';
 import { showroomNavigation as tabs } from './showroom-navigation';
@@ -61,9 +62,9 @@ const s = stylex.create({
     justifyContent: 'center',
     gap: 2,
     color: colors.muted,
-    fontSize: { default: '0.75rem', '@media (max-width: 699px)': 13 },
-    lineHeight: { default: 1.2, '@media (max-width: 699px)': '16px' },
-    fontWeight: { default: 600, '@media (max-width: 699px)': 500 },
+    fontSize: '0.75rem',
+    lineHeight: 1.25,
+    fontWeight: 400,
     textDecoration: 'none',
     minWidth: 0,
     minHeight: 44,
@@ -82,6 +83,7 @@ const s = stylex.create({
   active: {
     backgroundColor: { default: colors.controlSurface, ':hover': colors.controlSurface },
     color: colors.text,
+    fontWeight: 500,
   },
   icon: { width: 20, height: 20, display: 'block', flexShrink: 0 },
   label: { minWidth: 0, maxWidth: '100%', overflowWrap: 'anywhere' },
@@ -117,7 +119,10 @@ export function AppShell({ children }: { children: ReactNode }) {
   );
   const state = useAppState();
   const keyboard = useMobileKeyboard();
-  const primary = tabs.some(([href]) => href === pathname) || pathname === '/car-park';
+  const primary =
+    tabs.some(([href]) => href === pathname) ||
+    pathname === '/car-park' ||
+    pathname.startsWith('/services/');
   useEffect(() => {
     hydrateStore();
     hydrateLocale();
@@ -135,17 +140,22 @@ export function AppShell({ children }: { children: ReactNode }) {
     const vehicle = pathname.startsWith('/vehicle/')
       ? getVehicle(pathname.split('/')[2])
       : undefined;
+    const service = pathname.startsWith('/services/')
+      ? showroomService(pathname.slice('/services/'.length))
+      : undefined;
     const page = vehicle
       ? vehicle.make + ' ' + vehicle.model
-      : pathname === '/services'
-        ? 'Services'
-        : pathname === '/contact'
-          ? 'Contact'
-          : pathname === '/car-park'
-            ? 'Saved cars'
-            : pathname === '/settings'
-              ? 'Settings'
-              : 'Cars';
+      : service
+        ? service.title
+        : pathname === '/services'
+          ? 'Services'
+          : pathname === '/contact'
+            ? 'Contact'
+            : pathname === '/car-park'
+              ? 'Saved cars'
+              : pathname === '/settings'
+                ? 'Settings'
+                : 'Cars';
     const title = showroomTitle(page, locale);
     const syncTitle = () => {
       if (document.title !== title) document.title = title;
@@ -175,24 +185,30 @@ export function AppShell({ children }: { children: ReactNode }) {
           aria-label={t('Main navigation')}
           {...stylex.props(s.nav, keyboard.open && s.keyboardHidden)}
         >
-          {tabs.map(([href, label, NavigationIcon]) => (
-            <Link
-              key={href}
-              href={href === '/' ? showroomInventoryHref(state.filters, state.inventorySort) : href}
-              prefetch={href === '/' ? false : undefined}
-              aria-current={pathname === href ? 'page' : undefined}
-              {...stylex.props(s.tab, pathname === href && s.active)}
-            >
-              <NavigationIcon
-                size={20}
-                strokeWidth={1.8}
-                aria-hidden="true"
-                focusable="false"
-                {...stylex.props(s.icon)}
-              />
-              <span {...stylex.props(s.label)}>{t(label)}</span>
-            </Link>
-          ))}
+          {tabs.map(([href, label, NavigationIcon]) => {
+            const current =
+              pathname === href || (href === '/services' && pathname.startsWith('/services/'));
+            return (
+              <Link
+                key={href}
+                href={
+                  href === '/' ? showroomInventoryHref(state.filters, state.inventorySort) : href
+                }
+                prefetch={href === '/' ? false : undefined}
+                aria-current={current ? 'page' : undefined}
+                {...stylex.props(s.tab, current && s.active)}
+              >
+                <NavigationIcon
+                  size={20}
+                  strokeWidth={1.8}
+                  aria-hidden="true"
+                  focusable="false"
+                  {...stylex.props(s.icon)}
+                />
+                <span {...stylex.props(s.label)}>{t(label)}</span>
+              </Link>
+            );
+          })}
         </nav>
       )}
       {state.toast && (

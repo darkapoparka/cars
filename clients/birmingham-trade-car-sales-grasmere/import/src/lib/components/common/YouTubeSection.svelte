@@ -337,7 +337,7 @@
 	}
 	@media (max-width: 767.98px) {
 		.daynight-youtube--home {
-			padding-block: 24px 8px;
+			padding-block: var(--bc-space-6) var(--bc-space-2);
 		}
 		.daynight-youtube--home > .site-container {
 			background: transparent;
@@ -349,7 +349,7 @@
 		.daynight-youtube--home .daynight-youtube__heading {
 			justify-content: space-between;
 			flex-wrap: nowrap;
-			margin-bottom: 12px;
+			margin-bottom: var(--bc-space-3);
 		}
 		.daynight-youtube--home h2:not(.youtube-home-title),
 		.daynight-youtube--home .daynight-youtube__watch {
@@ -357,9 +357,9 @@
 		}
 		.daynight-youtube--home .youtube-home-title {
 			display: flex;
-			gap: 8px;
-			font-size: 24px;
-			line-height: 1.25;
+			gap: var(--bc-space-2);
+			font: var(--bc-mobile-home-section-font);
+			letter-spacing: var(--bc-tracking-tight);
 		}
 		.daynight-youtube--home .youtube-home-title svg {
 			width: 29px;
@@ -369,7 +369,7 @@
 			gap: 6px;
 		}
 		.daynight-youtube--home .daynight-youtube__grid {
-			gap: 12px;
+			gap: var(--bc-space-3);
 			scrollbar-width: none;
 		}
 		.daynight-youtube--home .daynight-youtube__video {
@@ -393,15 +393,20 @@
 		.daynight-youtube--home .daynight-youtube__title {
 			position: static;
 			display: block;
-			padding: 12px 14px;
+			padding: var(--bc-space-4);
 			white-space: normal;
-			font-size: 16px;
-			line-height: 1.3;
+			font: var(--bc-weight-heading) var(--bc-mobile-label)/var(--bc-mobile-label-leading)
+				var(--bc-font-body);
 		}
 		.daynight-youtube--home .daynight-youtube__play {
 			top: 0;
 			bottom: auto;
-			margin-top: calc((100cqw * 9 / 16 - 44px) / 2);
+			height: var(--bc-control-height-standard);
+			margin-top: calc((100cqw * 9 / 16 - var(--bc-control-height-standard)) / 2);
+		}
+		.daynight-youtube--home .daynight-youtube__play :global(svg) {
+			width: var(--bc-control-icon-size-standard);
+			height: var(--bc-control-icon-size-standard);
 		}
 		.daynight-youtube--home .daynight-youtube__poster {
 			container-type: inline-size;

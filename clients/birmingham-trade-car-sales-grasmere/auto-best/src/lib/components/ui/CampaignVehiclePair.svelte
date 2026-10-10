@@ -68,7 +68,7 @@
       width: 520px;
       height: 520px;
       border: 1px solid rgb(var(--dn-theme-accent-rgb) / 32%);
-      border-radius: 50%;
+      border-radius: var(--dn-radius-circle);
     }
     .dn-campaign-vehicles__arc--left { right: calc(100% - 180px); }
     .dn-campaign-vehicles__arc--right { left: calc(100% - 180px); }
