@@ -1,5 +1,6 @@
 import { expect, test } from "@playwright/test";
 import { selectInventoryFilterLayout } from "../fixtures/inventory-preview";
+import { dismissModernWelcome } from "../fixtures/modern-session.setup";
 
 const dieselResultsPattern = /\/en\/cars\?.*fuel=diesel/;
 const fuelQueryPattern = /fuel=/;
@@ -148,21 +149,25 @@ for (const width of [1024, 1280, 1440, 1920]) {
         (heroBox?.y ?? 0) + (heroBox?.height ?? 0)
       );
       const stockGrid = page.locator('[data-slot="home-stock-grid"]');
+      const stockColumns = width >= 1400 ? 5 : 4;
+      const stockColumnCount = width < 1200 ? 2 : stockColumns;
       expect(
         await stockGrid.evaluate(
           (element) =>
             getComputedStyle(element).gridTemplateColumns.split(" ").length
         )
-      ).toBe(width < 1200 ? 2 : 4);
-      await expect(stockGrid.locator("article")).toHaveCount(4);
+      ).toBe(stockColumnCount);
+      await expect(stockGrid.locator("article:visible")).toHaveCount(
+        width >= 1400 ? 5 : 4
+      );
       const stockActionBox = await stock
         .getByRole("link", {
           name: locale === "bg" ? "Виж всички автомобили" : "View all cars",
         })
         .boundingBox();
       const stockGridBox = await stockGrid.boundingBox();
-      expect(stockGridBox?.x).toBe(stockBox?.x);
-      expect(stockGridBox?.width).toBe(stockBox?.width);
+      expect(stockGridBox?.x).toBe((stockBox?.x ?? 0) + 24);
+      expect(stockGridBox?.width).toBe((stockBox?.width ?? 0) - 48);
       expect(stockActionBox?.y).toBeGreaterThanOrEqual(
         (stockGridBox?.y ?? 0) + (stockGridBox?.height ?? 0) + 20
       );
@@ -203,7 +208,7 @@ for (const width of [1024, 1280, 1440, 1920]) {
       expect(
         Math.abs(imageSizes.hintedWidth - imageSizes.renderedWidth)
         // Image hints use viewport units; the grid also reserves the OS gutter.
-      ).toBeLessThanOrEqual(2 + (width - pageWidth) / (width < 1200 ? 2 : 4));
+      ).toBeLessThanOrEqual(2 + (width - pageWidth) / stockColumnCount);
       expect(
         (await stockGrid.locator("article").first().boundingBox())?.y
       ).toBeLessThan(800);
@@ -726,8 +731,11 @@ test("desktop listing keeps the gallery, information and phone handoff usable", 
 
 test("financing selection and preferences survive navigation and clearing", async ({
   page,
+  context,
+  baseURL,
 }) => {
   test.setTimeout(120_000);
+  await dismissModernWelcome(context.request, baseURL, "en");
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto("/en/lease");
   const selector = page.locator(
@@ -738,8 +746,14 @@ test("financing selection and preferences survive navigation and clearing", asyn
     page.locator('[data-slot="finance-actions"] button')
   ).toBeDisabled();
   await selector.click();
-  const dialog = page.getByRole("dialog");
+  const dialog = page.locator('[data-slot="lease-desktop-vehicle-dialog"]');
   const search = dialog.getByRole("searchbox");
+  await expect
+    .poll(() =>
+      dialog.evaluate((element) => element.contains(document.activeElement))
+    )
+    .toBe(true);
+  await page.keyboard.press("Tab");
   await expect(search).toBeFocused();
   await search.fill("no-such-car-xyz");
   await expect(
@@ -796,6 +810,7 @@ test("financing selection and preferences survive navigation and clearing", asyn
     page.locator('[data-slot="lease-desktop-selected-title"]')
   ).toHaveText(selectedTitle ?? "");
   await expect(term).toBeChecked();
+
   const flexible = page.locator(
     '[name="desktop-finance-deposit"][value="flexible"]'
   );
@@ -825,6 +840,55 @@ test("financing selection and preferences survive navigation and clearing", asyn
     page.locator('[data-slot="public-route-loading-content"]')
   ).toBeHidden();
   await expect(selector).toHaveAttribute("data-selected", "false");
+});
+
+test("explicit flexible financing preferences survive the mobile to desktop transition", async ({
+  page,
+  context,
+  baseURL,
+}) => {
+  await dismissModernWelcome(context.request, baseURL, "en");
+  await page.setViewportSize({ width: 320, height: 844 });
+  await page.goto("/en/lease?vehicle=am-1001&deposit=30&term=36");
+  const mobile = page.locator('[data-slot="lease-mobile-experience"]');
+  await mobile
+    .getByRole("button", { name: "Deposit: 30%", exact: true })
+    .click();
+  const preferences = page.locator('[data-slot="lease-preference-picker"]');
+  await preferences
+    .getByRole("button", { name: "To be discussed", exact: true })
+    .click();
+  await expect(preferences).toBeHidden();
+  await mobile
+    .getByRole("button", { name: "Term:36mo., 36 months", exact: true })
+    .click();
+  await preferences
+    .getByRole("button", { name: "To be discussed", exact: true })
+    .click();
+  await expect(preferences).toBeHidden();
+  await expect
+    .poll(() => {
+      const params = new URL(page.url()).searchParams;
+      return { deposit: params.get("deposit"), term: params.get("term") };
+    })
+    .toEqual({ deposit: "flexible", term: "flexible" });
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await expect(
+    page.locator('[name="desktop-finance-deposit"][value="flexible"]')
+  ).toBeChecked();
+  await expect(
+    page.locator('[name="desktop-finance-term"][value="flexible"]')
+  ).toBeChecked();
+  await expect(page.locator('[data-slot="finance-principal"]')).toHaveText(
+    "To be agreed"
+  );
+  await page.reload();
+  await expect(
+    page.locator('[name="desktop-finance-deposit"][value="flexible"]')
+  ).toBeChecked();
+  await expect(
+    page.locator('[name="desktop-finance-term"][value="flexible"]')
+  ).toBeChecked();
 });
 
 test("desktop import has one focus treatment and carries the listing into the request", async ({

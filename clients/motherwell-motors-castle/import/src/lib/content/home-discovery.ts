@@ -10,6 +10,17 @@ export const homeBrowseArtwork = {
 	}
 } as const;
 
+/** Retained Cars cutouts for phone browsing; desktop keeps its original artwork. */
+export const homeMobileTypeArtwork: Record<string, string> = {
+	Electric: '/assets/images/card/card-27.webp',
+	Sedan: '/assets/daynight/body-types/mobile/sedan.webp',
+	SUV: '/assets/daynight/body-types/mobile/suv.webp',
+	'Pickup Truck': '/assets/daynight/body-types/mobile/pickup.webp',
+	Hatchback: '/assets/daynight/body-types/mobile/hatchback.webp',
+	Crossover: '/assets/daynight/body-types/mobile/crossover.webp',
+	Cabriolet: '/assets/daynight/body-types/mobile/cabriolet.webp'
+};
+
 export const homeHeroModes = {
 	buy: { title: { bg: 'Купи автомобил', en: 'Buy a car' }, action: '/inventory' },
 	finance: { title: { bg: 'Автомобил на лизинг', en: 'Finance a car' }, action: '/financing' },
@@ -46,24 +57,41 @@ export const homeDiscoveryCopy = {
 		browseTypes: 'Разгледай по тип',
 		mobileTypes: 'Типове',
 		all: 'Всички',
+		onRequest: 'По заявка',
+		oneCar: 'кола',
+		manyCars: 'коли',
 		reviews: 'Примерни отзиви',
+		mobileReviews: 'Отзиви',
 		customer: 'Клиент',
 		guides: 'Полезно за автомобила',
+		mobileGuides: 'Полезно',
 		allGuides: editorialCopy.bg.allGuides
 	},
 	en: {
 		viewAll: 'View all',
 		browseMakes: 'Browse by make',
-		mobileMakes: 'Browse by make',
+		mobileMakes: 'Brands',
 		browseTypes: 'Browse by type',
-		mobileTypes: 'Browse by type',
+		mobileTypes: 'By type',
 		all: 'All',
+		onRequest: 'On request',
+		oneCar: 'car',
+		manyCars: 'cars',
 		reviews: 'Sample reviews',
+		mobileReviews: 'Reviews',
 		customer: 'Customer',
 		guides: 'Guides and advice',
+		mobileGuides: 'Guides',
 		allGuides: editorialCopy.en.allGuides
 	}
 } as const satisfies Record<Locale, Record<string, string>>;
+
+export const homeBrowseCountLabel = (locale: Locale, count: number, all = false) => {
+	const copy = homeDiscoveryCopy[locale];
+	return count === 0 && !all
+		? copy.onRequest
+		: `${count} ${count === 1 ? copy.oneCar : copy.manyCars}`;
+};
 
 /** Desktop entry labels; route/query and stock rules retain their current owners. */
 export const desktopHomeCopy = {

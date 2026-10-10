@@ -35,7 +35,10 @@
 
 <!-- Keep contact and map actions in a fixed order across routes. The map callback
      preserves existing location drawers without changing the button geometry. -->
-<header class:bc-mobile-appbar--dark={surface === 'dark'} class="bc-mobile-appbar">
+<header
+	class:bc-mobile-appbar--dark={surface === 'dark'}
+	class="bc-mobile-appbar mobile-utility-bar"
+>
 	<a
 		class="bc-mobile-appbar__brand"
 		href={resolve(english ? '/?lang=en' : '/')}
@@ -67,7 +70,12 @@
 					haspopup="dialog"
 					onclick={onMap}
 				>
-					<MapPin size={18} strokeWidth={2.35} aria-hidden="true" />
+					<MapPin
+						class="bc-mobile-appbar__map-icon"
+						size={18}
+						strokeWidth={2.35}
+						aria-hidden="true"
+					/>
 				</MobileIconAction>
 			{:else}
 				<MobileIconAction
@@ -77,7 +85,12 @@
 					target="_blank"
 					rel="noreferrer"
 				>
-					<MapPin size={18} strokeWidth={2.35} aria-hidden="true" />
+					<MapPin
+						class="bc-mobile-appbar__map-icon"
+						size={18}
+						strokeWidth={2.35}
+						aria-hidden="true"
+					/>
 				</MobileIconAction>
 			{/if}
 		{/if}
@@ -123,7 +136,7 @@
 		justify-content: space-between;
 		gap: var(--bc-space-2);
 		background: transparent;
-		padding: env(safe-area-inset-top) var(--bc-space-3) 0 var(--bc-space-4);
+		padding: calc(var(--bc-space-1) + env(safe-area-inset-top)) var(--bc-mobile-gutter) 0;
 	}
 
 	.bc-mobile-appbar--dark {
@@ -167,12 +180,14 @@
 		display: flex;
 		flex: 0 0 auto;
 		align-items: center;
-		gap: var(--bc-space-2);
+		gap: var(--bc-mobile-utility-gap);
 	}
 
-	@media (max-width: 374px) {
-		.bc-mobile-appbar__actions {
-			gap: var(--bc-space-1);
+	@media (max-width: 767.98px) {
+		/* The narrow pin needs a small optical correction beside the call glyph. */
+		.bc-mobile-appbar__actions :global(.bc-mobile-appbar__map-icon) {
+			width: calc(var(--bc-mobile-icon-action-glyph-size) + 2px);
+			height: calc(var(--bc-mobile-icon-action-glyph-size) + 2px);
 		}
 	}
 

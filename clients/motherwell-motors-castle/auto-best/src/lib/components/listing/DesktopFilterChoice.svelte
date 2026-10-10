@@ -24,7 +24,7 @@
   .dn-desktop-choice:hover { background: var(--dn-surface-subtle); }
   .dn-desktop-choice:has(input:focus-visible) { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
   .dn-desktop-choice-mark { display: grid; flex: 0 0 var(--dn-space-5); place-items: center; width: var(--dn-space-5); height: var(--dn-space-5); border: 1px solid var(--dn-line-strong); border-radius: var(--dn-pill); background: var(--dn-white); color: transparent; }
-  .dn-desktop-choice-mark[data-multiple='true'] { border-radius: var(--dn-space-1); }
+  .dn-desktop-choice-mark[data-multiple='true'] { border-radius: var(--dn-radius-badge); }
   input:checked + .dn-desktop-choice-mark { border-color: var(--dn-ink); }
   input:checked + [data-multiple='true'] { border-color: transparent; background: transparent; color: var(--dn-ink); }
   input:checked + [data-multiple='false']::after { width: var(--dn-space-2); height: var(--dn-space-2); border-radius: var(--dn-pill); background: var(--dn-ink); content: ''; }

@@ -21,7 +21,7 @@
   <ContactHero topic={resolveContactTopic(topic)} />
   <section class="dn-service-card" id="contact-intent" aria-labelledby="service-form-title">
     <EntryCard titleId="service-form-title" hideTitleOnMobile title={topic === 'import' ? i18n.text(resolveContactTopic(topic).title) : i18n.t('service.sell.heading')}>
-    {#if topic === 'trade-in'}<TradeInEnquiry inlineEntry />{:else}<VehicleEnquiry kind="import" {importUrl} inlineEntry />{/if}
+    {#if topic === 'trade-in'}<TradeInEnquiry inlineEntry />{:else}<VehicleEnquiry {importUrl} inlineEntry />{/if}
     </EntryCard>
   </section>
   <div class="dn-service-guide">
@@ -43,10 +43,10 @@
   .dn-service-card { position: relative; z-index: 1; width: min(560px, calc(100% - 32px)); margin: -120px auto 0; scroll-margin-top: 24px; }
   .dn-service-faq { width: min(560px, calc(100% - 32px)); margin: 16px auto 0; }
   .dn-service-guide { display: none; }
-  details { border: 1px solid var(--dn-line); border-radius: var(--dn-radius); background: var(--dn-white); }
+  details { border: 1px solid var(--dn-line); border-radius: var(--dn-radius-card); background: var(--dn-white); }
   summary { display: flex; align-items: center; justify-content: space-between; gap: var(--dn-space-3); min-height: var(--dn-control-height-default); padding: var(--dn-space-3) var(--dn-space-4); cursor: pointer; list-style: none; color: var(--dn-ink); font: var(--dn-control-font); }
   .dn-service-faq__label { display: flex; align-items: center; gap: var(--dn-space-3); }
-  summary:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 2px; border-radius: var(--dn-radius); }
+  summary:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 2px; border-radius: var(--dn-radius-card); }
   details[open] summary > :global(svg) { transform: rotate(180deg); }
   summary::-webkit-details-marker { display: none; }
   details[open] summary { color: var(--dn-ink); }

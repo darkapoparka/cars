@@ -236,7 +236,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: var(--dn-space-3);
+    margin-bottom: var(--dn-space-2);
     color: var(--dn-muted-on-ink);
     font-size: var(--dn-text-meta);
     font-weight: var(--dn-weight-medium);
@@ -373,7 +373,7 @@
   .dn-app-shell .dn-contact-hero:not(.dn-contact-hero--general) :is(h1, p) { color: #fff; }
 }
 @media (max-width: 767px) {
-  .dn-app-shell .dn-hero.dn-route-hero { height: 244px; min-height: 244px; }
+  .dn-app-shell .dn-hero.dn-route-hero,
   .dn-app-shell .dn-contact-hero--workflow.dn-route-hero { height: var(--dn-mobile-entry-hero-height); min-height: var(--dn-mobile-entry-hero-height); }
   .dn-app-shell .dn-contact-intent--workflow .dn-contact-intent__main { padding-bottom: 20px; box-shadow: 0 6px 18px rgb(13 18 26 / .06); }
 }
@@ -403,7 +403,7 @@
     min-width: 0;
     padding: var(--dn-entry-card-padding);
     border: 1px solid var(--dn-line);
-    border-radius: var(--dn-radius-lg);
+    border-radius: var(--dn-radius-content-card);
     background: var(--dn-surface-raised);
     color: var(--dn-ink);
     box-shadow: var(--dn-card-shadow);

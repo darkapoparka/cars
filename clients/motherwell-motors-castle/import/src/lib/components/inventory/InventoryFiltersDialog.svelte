@@ -503,16 +503,49 @@
 		flex: 1;
 	}
 	@media (min-width: 768px) {
+		:global(.site-dialog.inventory-filters-dialog) {
+			/* Keep the tabs in place as short categories shrink the dialog. */
+			top: max(var(--bc-space-6), calc((100dvh - 640px) / 2));
+			transform: translateX(-50%);
+			height: auto;
+			max-height: min(640px, calc(100dvh - 2 * var(--bc-space-6)));
+		}
+		:global(.site-dialog.inventory-filters-dialog .site-dialog__body) {
+			display: flex;
+			flex: 0 1 auto;
+		}
+		.inventory-all__form {
+			display: flex;
+			flex: 1 1 auto;
+			flex-direction: column;
+			height: auto;
+		}
+		.inventory-all__panel {
+			flex: 0 1 auto;
+			padding-bottom: var(--bc-space-2);
+		}
+		.inventory-all__navigation {
+			flex: none;
+			border-radius: var(--bc-radius-panel);
+			background: var(--bc-control);
+		}
+		.inventory-all__navigation button {
+			flex: 1 1 auto;
+			min-width: 0;
+			border-radius: var(--bc-radius-control);
+		}
 		.inventory-all__navigation button:hover,
 		.inventory-all__clear-category:hover {
 			background: var(--bc-control-hover);
 		}
+		.inventory-all__navigation button[aria-selected='true'],
 		.inventory-all__navigation button[aria-selected='true']:hover {
-			background: var(--bc-accent-hover);
-			color: var(--bc-accent-contrast);
+			background: var(--bc-surface-raised);
+			color: var(--bc-ink);
+			box-shadow: var(--bc-shadow-subtle);
 		}
 	}
-	@media (min-width: 768px) and (max-width: 900px) {
+	@media (min-width: 768px) and (max-width: 1023px) {
 		.inventory-all__panel {
 			padding-block: var(--bc-space-4);
 		}

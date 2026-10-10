@@ -2,9 +2,9 @@
   import { desktopMakeArtwork } from '$data/desktop-makes';
   import Icon from '$components/ui/Icon.svelte';
 
-  let { value, portrait = true }: { value: string; portrait?: boolean } = $props();
+  let { value, portrait = true, compact = false }: { value: string; portrait?: boolean; compact?: boolean } = $props();
   const artwork = $derived(desktopMakeArtwork(value));
-  const logoWidth = $derived(artwork ? Math.min(portrait ? 72 : 48, (portrait ? 40 : 28) * (artwork.bounds[2] - artwork.bounds[0]) / (artwork.bounds[3] - artwork.bounds[1])) : 40);
+  const logoWidth = $derived(artwork ? Math.min(compact ? 28 : portrait ? 72 : 48, (portrait ? 40 : 28) * (artwork.bounds[2] - artwork.bounds[0]) / (artwork.bounds[3] - artwork.bounds[1])) : 40);
 </script>
 
 {#if artwork}
@@ -15,7 +15,7 @@
       style:top={`${-artwork.bounds[1] / (artwork.bounds[3] - artwork.bounds[1]) * 100}%`} />
   </span>
 {:else}
-  <Icon name={value ? 'car' : 'adjustments'} size={portrait ? 40 : 28} />
+  <Icon name={value ? 'car' : 'adjustments'} size={compact ? 20 : portrait ? 40 : 28} />
 {/if}
 
 <style>

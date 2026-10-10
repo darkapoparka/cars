@@ -12,8 +12,7 @@
 	import type {
 		HomeFiveHeroAction,
 		HomeFiveHeroActionMode,
-		HomeFiveHeroData,
-		HomeFiveHeroSelect
+		HomeFiveHeroData
 	} from '$lib/auxero/home-five';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import MapPin from '@lucide/svelte/icons/map-pin';
@@ -23,13 +22,12 @@
 	import SlidersHorizontal from '@lucide/svelte/icons/sliders-horizontal';
 	import X from '@lucide/svelte/icons/x';
 	import { onMount, tick } from 'svelte';
-	import InventoryAdvancedFilters from '$lib/components/inventory/InventoryAdvancedFilters.svelte';
 	import InventoryMobilePage from '$lib/components/inventory/InventoryMobilePage.svelte';
 	import MobileSheet from '$lib/components/common/MobileSheet.svelte';
 	import MobileModeTabs from '$lib/components/common/MobileModeTabs.svelte';
 	import MobileSearchControl from '$lib/components/common/MobileSearchControl.svelte';
 	import MobileIconAction from '$lib/components/common/MobileIconAction.svelte';
-	import HeroFilterDialog from './HeroFilterDialog.svelte';
+	import { keyboardInset } from '$lib/utils/keyboard-inset';
 
 	let { hero }: { hero?: HomeFiveHeroData } = $props();
 
@@ -39,16 +37,6 @@
 		`/inventory?${encodeURIComponent(name)}=${encodeURIComponent(value)}`;
 	const isEnglish = $derived(hero?.searchSubmitPrefix === 'Show');
 	const activeMode = $derived(hero?.activeMode ?? 'buy');
-	const activeAction = $derived.by(
-		() => hero?.actions.find((action) => action.mode === activeMode) ?? hero?.actions[0]
-	);
-	const activeActionHref = $derived(activeAction?.actionHref ?? '/inventory');
-	const activeSubmitLabel = $derived(
-		activeAction?.mode === 'buy' && hero
-			? `${hero.searchSubmitPrefix} ${hero.totalMatches} ${hero.searchSubmitSuffix}`
-			: (activeAction?.submitLabel ?? '')
-	);
-	const isInventoryMode = $derived(activeAction?.mode === 'buy');
 	let mobileModeOverride = $state<HomeFiveHeroActionMode | null>(null);
 	const mobileMode = $derived(mobileModeOverride ?? activeMode);
 	const activeMobileAction = $derived.by(
@@ -58,47 +46,7 @@
 		mobileModeOverride = mode;
 	};
 
-	// Desktop buy box — consistent dialogs replace the cramped CSS dropdowns.
-	// Selection lives here so the model list can cascade off the chosen make(s),
-	// and so each field renders hidden inputs that preserve the GET /inventory contract.
-	const brandFilter = $derived(hero?.primaryFilters.find((filter) => filter.name === 'brand'));
-	const modelFilter = $derived(hero?.primaryFilters.find((filter) => filter.name === 'q'));
-	const priceFilter = $derived(hero?.primaryFilters.find((filter) => filter.name === 'maxPrice'));
-
-	let brandSelection = $state<string[]>([]);
-	let modelSelection = $state<string[]>([]);
-	let priceSelection = $state<string[]>([]);
-	let keyword = $state('');
-	let mileageSelection = $state<string[]>([]);
-	const mileageFilter = $derived({
-		id: 'home-mileage',
-		name: 'mileageTo',
-		title: isEnglish ? 'Mileage' : nt('ui75'),
-		defaultLabel: isEnglish ? 'Mileage' : nt('ui75'),
-		options: [50000, 100000, 150000, 200000, 250000].map((value) => ({
-			value: String(value),
-			label: `${isEnglish ? 'Up to' : nt('ui76')} ${value.toLocaleString('bg-BG')} km`
-		}))
-	});
-
-	const modelOptionsForBrands = (brands: string[]) => {
-		const all = modelFilter?.options ?? [];
-		if (!brands.length) return all;
-		return all.filter((option) => option.brand && brands.includes(option.brand));
-	};
-	const pruneModelSelection = (selection: string[], brands = brandSelection) => {
-		const valid = new Set(modelOptionsForBrands(brands).map((option) => option.value));
-		return selection.filter((value) => valid.has(value));
-	};
-	const updateBrandSelection = (selection: string[]) => {
-		brandSelection = selection;
-		modelSelection = pruneModelSelection(modelSelection, selection);
-	};
-	const modelOptions = $derived(modelOptionsForBrands(brandSelection));
-
-	const mobileSearchPlaceholder = $derived(
-		activeMobileAction?.placeholder ?? (isEnglish ? 'Search brand, model, price...' : nt('ui77'))
-	);
+	const mobileSearchPlaceholder = $derived(activeMobileAction?.placeholder ?? nt('ui77'));
 	const mobileHeading = $derived(
 		activeMobileAction?.mobileHeading ?? (isEnglish ? 'Find your car.' : nt('ui78'))
 	);
@@ -197,16 +145,9 @@
 	const mobileSearchHistoryId = `daynight-home-search-${Math.random().toString(36).slice(2)}`;
 	let inventorySearchOpen = $state(false);
 	let inventoryOverlayMode = $state<'search' | 'filters'>('search');
-	let desktopSearchOpen = $state(false);
-	const openDesktopSearch = () => {
-		inventorySearchTrigger =
-			document.activeElement instanceof HTMLElement ? document.activeElement : null;
-		desktopSearchOpen = true;
-	};
 	let inventorySearchTrigger: HTMLElement | null = null;
 	const closeInventorySearch = () => {
 		inventorySearchOpen = false;
-		desktopSearchOpen = false;
 		void tick().then(() => inventorySearchTrigger?.focus());
 	};
 	const openMobileSearch = () => {
@@ -346,76 +287,8 @@
 		tab.mode === 'buy' && hero
 			? `${hero.searchSubmitPrefix} ${hero.totalMatches} ${hero.searchSubmitSuffix}`
 			: tab.submitLabel;
-	const desktopIntentTitle = $derived(
-		activeAction?.drawerTitle ?? (isEnglish ? 'Find a car' : nt('ui82'))
-	);
-	const desktopIntentPlaceholder = $derived(
-		activeAction?.placeholder ?? (isEnglish ? 'Search brand, model, price...' : nt('ui77'))
-	);
-
-	// The hero reads as a single static block — the three intents live in the
-	// Купи/Внос/Продай tabs below, so we halt the template's auto-rotating slider
-	// (and the nav arrows are removed from the markup).
-	onMount(() => {
-		let tries = 0;
-		const timer = setInterval(() => {
-			tries += 1;
-			const autoplays = Array.from(document.querySelectorAll('.page-title [class*="swiper"]'))
-				.map(
-					(el) =>
-						(el as unknown as { swiper?: { autoplay?: { stop: () => void } } }).swiper?.autoplay
-				)
-				.filter((a): a is { stop: () => void } => Boolean(a));
-			if (autoplays.length) {
-				autoplays.forEach((a) => a.stop());
-				clearInterval(timer);
-			} else if (tries > 50) {
-				clearInterval(timer);
-			}
-		}, 100);
-		return () => clearInterval(timer);
-	});
 </script>
 
-{#snippet heroSelect(select: HomeFiveHeroSelect)}
-	<div class="search-cars__select-wrapper">
-		<div class="search-cars__select filter-select-dropdown bg-white" data-name={select.name}>
-			<label for={select.id} class="search-cars__label">{select.title}</label>
-			<input type="checkbox" id={select.id} class="filter-select-dropdown__toggle" />
-			<label for={select.id} class="filter-select-dropdown__text">
-				<span>{select.defaultLabel}</span>
-			</label>
-			<div class="filter-select-dropdown__menu">
-				<div class="filter-select-dropdown__list">
-					<label class="filter-checkbox">
-						<input type="checkbox" name={select.name} value="" checked />
-						<span>{select.defaultLabel}</span>
-					</label>
-					{#each select.options as option (option.value)}
-						<label class="filter-checkbox">
-							<input type="checkbox" name={select.name} value={option.value} />
-							<span>{option.label}</span>
-						</label>
-					{/each}
-				</div>
-			</div>
-		</div>
-	</div>
-{/snippet}
-
-{#if desktopSearchOpen && hero?.inventorySearch}
-	<InventoryAdvancedFilters
-		desktop={hero.inventorySearch.desktop}
-		initialValues={{
-			q: keyword,
-			brand: brandSelection.join(','),
-			model: modelSelection.join(','),
-			priceTo: priceSelection.join(','),
-			mileageTo: mileageSelection.join(',')
-		}}
-		onclose={closeInventorySearch}
-	/>
-{/if}
 {#if inventorySearchOpen && hero?.inventorySearch}
 	<InventoryMobilePage
 		cards={[]}
@@ -513,6 +386,7 @@
 				role="dialog"
 				aria-modal="true"
 				aria-label={activeMobileAction.drawerTitle ?? mobileSearchDrawerTitle}
+				{@attach keyboardInset}
 			>
 				<header class="daynight-home-search-overlay__bar">
 					<span class="daynight-home-search-drawer__title"
@@ -609,11 +483,13 @@
 	{#if mobileActionTabs.length}
 		<section class="daynight-mobile-home-quick" aria-label={hero.heading}>
 			<div class="site-container">
-				<nav class="daynight-mobile-home-quick__scroller bc-quick bc-quick--{mobileMode}">
+				<nav
+					class="daynight-mobile-home-quick__scroller mobile-quick-rail bc-quick bc-quick--{mobileMode}"
+				>
 					{#if mobileMode === 'buy'}
 						<button
 							type="button"
-							class="daynight-mobile-home-quick__filter"
+							class="daynight-mobile-home-quick__filter mobile-quick-pill mobile-quick-pill--icon"
 							aria-haspopup="dialog"
 							aria-expanded={mobileSearchOpen || inventorySearchOpen}
 							aria-label={isEnglish ? 'Open filters' : nt('ui62')}
@@ -623,801 +499,18 @@
 						</button>
 					{/if}
 					{#each activeMobileQuickLinks as filter (filter.href)}
-						<a href={resolve(filter.href as '/')}>{filter.label}</a>
+						<a class="mobile-quick-pill" href={resolve(filter.href as '/')}>{filter.label}</a>
 					{/each}
 				</nav>
 			</div>
 		</section>
 	{/if}
-
-	<form
-		class="daynight-desktop-hero"
-		action={resolve(activeActionHref)}
-		method="get"
-		data-daynight-search-form={activeAction?.mode ?? 'buy'}
-	>
-		<section class="page-title page-title-style-4 effect-content-slide effect-2 flex">
-			<div class="swiper-container page-title--slider sw-single">
-				<div class="swiper-wrapper">
-					{#each hero.textSlides as slide, index (slide.id)}
-						<div class={['swiper-slide', index === 0 && 'swiper-slide-active']}>
-							<div class="tp-showcase-slider-bg"></div>
-						</div>
-					{/each}
-				</div>
-			</div>
-
-			<div class="daynight-hero-cars" aria-hidden="true">
-				<picture>
-					<source
-						media="(min-width: 768px)"
-						srcset={assetHref('/assets/daynight/megamenu/inventory-bmw-x5-cutout.webp')}
-					/>
-					<img
-						class="daynight-hero-car daynight-hero-car--left"
-						src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1717' height='916'/%3E"
-						alt=""
-						width="1717"
-						height="916"
-						loading="eager"
-						decoding="async"
-						fetchpriority="high"
-					/>
-				</picture>
-				<picture>
-					<source
-						media="(min-width: 768px)"
-						srcset={assetHref('/assets/daynight/megamenu/inventory-audi-sq5-cutout.webp')}
-					/>
-					<img
-						class="daynight-hero-car daynight-hero-car--right"
-						src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1820' height='864'/%3E"
-						alt=""
-						width="1820"
-						height="864"
-						loading="eager"
-						decoding="async"
-						fetchpriority="high"
-					/>
-				</picture>
-			</div>
-
-			<!-- Search Cars Section -->
-			<div class="search-cars thumb effect-zoom-item container">
-				<div class="daynight-hero-heading">
-					<div class="sw-single-thumb swiper">
-						<div class="swiper-wrapper">
-							{#each hero.textSlides as slide, index (slide.id)}
-								<div class={['swiper-slide', index === 0 && 'swiper-slide-active']}>
-									{#if index === 0}
-										<h1 class="search-cars__title effect-item effect-up text-center delay-3">
-											{slide.heading}
-										</h1>
-									{:else}
-										<p class="search-cars__title effect-item effect-up text-center delay-3">
-											{slide.heading}
-										</p>
-									{/if}
-								</div>
-							{/each}
-						</div>
-					</div>
-				</div>
-
-				<div class="daynight-hero-search-panel">
-					<nav
-						class="flat-tabs daynight-intent-switch"
-						aria-label={isEnglish ? 'Choose what you want to do' : nt('ui63')}
-					>
-						<div class="overflow-x-auto">
-							<ul
-								class="menu-tab menu-tab-style1 daynight-intent-switch__list margin-auto text-white"
-							>
-								{#each hero.actions as tab (tab.mode)}
-									<li class={['daynight-intent-switch__item', tab.mode === activeMode && 'active']}>
-										<a
-											class="daynight-intent-switch__link"
-											href={resolve(tab.tabHref)}
-											aria-current={tab.mode === activeMode ? 'page' : undefined}
-										>
-											<span class="font-weight-600 text-white">{tab.label}</span>
-										</a>
-									</li>
-								{/each}
-							</ul>
-						</div>
-					</nav>
-
-					{#if isInventoryMode}
-						<div class="hero-keyword-row">
-							<div class="hero-keyword">
-								<Search size={20} aria-hidden="true" />
-								<input
-									type="search"
-									name="keyword"
-									bind:value={keyword}
-									readonly={Boolean(hero?.inventorySearch)}
-									onclick={hero?.inventorySearch ? openDesktopSearch : undefined}
-									onkeydown={(event) => {
-										if (hero?.inventorySearch && (event.key === 'Enter' || event.key === ' ')) {
-											event.preventDefault();
-											openDesktopSearch();
-										}
-									}}
-									aria-haspopup="dialog"
-									aria-label={isEnglish ? 'Search make, model or keyword' : nt('ui64')}
-									placeholder={isEnglish ? 'Make, model or keyword' : nt('ui65')}
-								/>
-								<button
-									class="hero-keyword-submit"
-									type={hero?.inventorySearch ? 'button' : 'submit'}
-									onclick={hero?.inventorySearch ? openDesktopSearch : undefined}
-									><Search size={19} aria-hidden="true" />{isEnglish
-										? 'Search'
-										: nt('ui66')}</button
-								>
-							</div>
-						</div>
-					{/if}
-					<!-- Primary Search Filters -->
-					<div class="search-cars__filters">
-						{#if isInventoryMode}
-							{#if brandFilter}
-								<HeroFilterDialog
-									select={brandFilter}
-									bind:selected={() => brandSelection, updateBrandSelection}
-									mode="multi"
-									variant="grid"
-									searchable
-									dialogTitle={isEnglish ? 'Choose make' : nt('ui67')}
-									dialogDescription={isEnglish
-										? 'Choose one or more makes. The model list updates automatically.'
-										: nt('ui68')}
-									searchPlaceholder={isEnglish ? 'Search makes…' : nt('ui69')}
-									{isEnglish}
-								/>
-							{/if}
-
-							{#if modelFilter}
-								<HeroFilterDialog
-									select={{ ...modelFilter, name: 'model' }}
-									bind:selected={modelSelection}
-									options={modelOptions}
-									mode="multi"
-									variant="list"
-									searchable
-									{isEnglish}
-									dialogTitle={isEnglish ? 'Choose model' : nt('ui70')}
-									searchPlaceholder={isEnglish ? 'Search models…' : nt('ui71')}
-								/>
-							{/if}
-
-							{#if priceFilter}
-								<HeroFilterDialog
-									select={priceFilter}
-									bind:selected={priceSelection}
-									mode="single"
-									variant="list"
-									dialogTitle={isEnglish ? 'Choose maximum price' : nt('ui72')}
-									dialogDescription={isEnglish
-										? 'Show vehicles within the selected budget.'
-										: nt('ui73')}
-									{isEnglish}
-								/>
-							{/if}
-							<HeroFilterDialog
-								select={mileageFilter}
-								bind:selected={mileageSelection}
-								mode="single"
-								variant="list"
-								{isEnglish}
-								dialogTitle={isEnglish ? 'Choose maximum mileage' : nt('ui74')}
-							/>
-						{:else}
-							<label class="search-cars__intent-field">
-								<span>{desktopIntentTitle}</span>
-								<input
-									name={activeAction?.inputName ?? 'vehicle'}
-									type="search"
-									placeholder={desktopIntentPlaceholder}
-									required
-									autocomplete="off"
-								/>
-							</label>
-							<button
-								type="submit"
-								class="search-cars__search search-cars__search--intent md-w-full flex items-center justify-center gap-8"
-							>
-								<img src={assetHref('/assets/icons/search.svg')} alt="" aria-hidden="true" />
-								{activeSubmitLabel}
-							</button>
-						{/if}
-					</div>
-
-					<!-- Advanced Filters Panel -->
-					<div
-						class={['search-cars__advanced', !isInventoryMode && 'search-cars__advanced--hidden']}
-						id="advancedFilters"
-					>
-						<div class="search-cars__advanced-content">
-							<div class="search-cars__advanced-row">
-								{#each hero.advancedFilters as select (select.id)}
-									{@render heroSelect(select)}
-								{/each}
-								<div class="search-cars__range">
-									<p class="search-cars__range-label">
-										{hero.yearLabel}: <span id="yearMin">{hero.yearRange.min}</span> -
-										<span id="yearMax">{hero.yearRange.max}</span>
-									</p>
-									<div class="search-cars__range-wrapper" id="yearRangeWrapper">
-										<div
-											id="slider-range"
-											data-min={hero.yearRange.min}
-											data-max={hero.yearRange.max}
-											data-step="1"
-											data-values={`${hero.yearRange.min}, ${hero.yearRange.max}`}
-										></div>
-									</div>
-								</div>
-							</div>
-							<div class="divider mt-28 mb-24"></div>
-							<div class="search-cars__features">
-								<p class="h3 search-cars__features-title flex items-center gap-8">
-									{hero.checksTitle}
-									<img src={assetHref('/assets/icons/minus.svg')} alt="" aria-hidden="true" />
-								</p>
-								<div class="search-cars__features-grid">
-									{#each hero.features as feature, index (feature)}
-										<div class="form-group">
-											<input
-												type="checkbox"
-												id={`Home05Feature${index}`}
-												name="feature"
-												value={feature}
-											/>
-											<label for={`Home05Feature${index}`}>{feature}</label>
-										</div>
-									{/each}
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	</form>
 {/if}
 
 <style>
-	.hero-keyword-row {
-		display: flex;
-		align-items: center;
-		gap: 16px;
-	}
-	.hero-keyword {
-		display: flex;
-		align-items: center;
-		gap: 12px;
-		flex: 1;
-		min-width: 0;
-		border: 1px solid var(--bc-hero-control-border);
-		border-radius: 10px;
-		padding: 5px 5px 5px 16px;
-		background: var(--bc-white);
-		color: var(--bc-muted);
-	}
-	.hero-keyword input {
-		flex: 1;
-		min-width: 0;
-		width: 100%;
-		height: 50px;
-		padding: 0 !important;
-		border: 0 !important;
-		background: transparent !important;
-		box-shadow: none !important;
-		color: var(--bc-dark-border) !important;
-		font-size: 16px;
-	}
-	.hero-keyword:focus-within {
-		outline: 2px solid var(--bc-focus);
-		outline-offset: 2px;
-	}
-	.hero-keyword input:focus {
-		outline: none;
-	}
-	.hero-keyword-submit {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 9px;
-		flex: 0 0 148px;
-		min-height: 50px;
-		padding: 0 20px;
-		border: 0;
-		border-radius: 7px;
-		background: var(--bc-accent);
-		color: white;
-		font: inherit;
-		font-size: var(--bc-text-cta);
-		font-weight: var(--bc-weight-action);
-		cursor: pointer;
-		white-space: nowrap;
-	}
-	.hero-keyword-submit:hover {
-		background: var(--bc-accent-hover);
-	}
-	.hero-keyword-submit:focus-visible {
-		outline: 2px solid var(--bc-dark-border);
-		outline-offset: 2px;
-	}
-
-	:global(.page-title.page-title-style-4) {
-		height: auto !important;
-		min-height: 0 !important;
-		align-items: center;
-		padding-top: 30px !important;
-		padding-bottom: 30px !important;
-		background: linear-gradient(
-			120deg,
-			var(--bc-dark-surface) 0%,
-			var(--bc-dark-surface) 58%,
-			var(--bc-mobile-dark) 100%
-		);
-	}
-
-	/* Let the hero collapse to its real content height (the template swiper
-	   otherwise stretches it ~180px taller than the search module needs). */
-	:global(.page-title.page-title-style-4 .search-cars) {
-		height: auto !important;
-		min-height: 0 !important;
-		position: relative;
-		z-index: 7;
-	}
-
-	.daynight-hero-cars {
-		position: absolute;
-		inset: 0;
-		z-index: 4;
-		overflow: hidden;
-		pointer-events: none;
-	}
-
-	.daynight-hero-cars::before {
-		position: absolute;
-		right: 4%;
-		bottom: 18px;
-		left: 4%;
-		height: 118px;
-		border-radius: 999px;
-		background: radial-gradient(
-			ellipse at center,
-			color-mix(in srgb, var(--bc-accent) 32%, transparent),
-			transparent 68%
-		);
-		content: '';
-		filter: blur(2px);
-		opacity: 0.8;
-	}
-
-	.daynight-hero-car {
-		position: absolute;
-		top: 43%;
-		width: min(28vw, 438px);
-		height: auto;
-		user-select: none;
-		filter: drop-shadow(0 26px 24px rgb(0 0 0 / 0.38));
-		transform: translateY(-50%);
-	}
-
-	.daynight-hero-car--left {
-		left: 0.8%;
-	}
-
-	.daynight-hero-car--right {
-		right: 0.8%;
-		transform: translateY(-50%) scaleX(-1);
-	}
-
-	:global(.page-title.page-title-style-4 .tp-showcase-slider-bg::after) {
-		background:
-			linear-gradient(
-				180deg,
-				rgba(4, 7, 5, 0.1) 0%,
-				rgba(4, 7, 5, 0.02) 42%,
-				rgba(7, 13, 9, 0.34) 78%,
-				rgba(5, 9, 6, 0.54) 100%
-			),
-			linear-gradient(90deg, rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0.38));
-	}
-
-	:global(.page-title.page-title-style-4 .tp-showcase-slider-bg) {
-		background: none !important;
-		background-position: center bottom;
-	}
-
-	:global(.page-title.page-title-style-4 .search-cars__title),
-	:global(.page-title.page-title-style-4 .search-cars .h7),
-	:global(.page-title.page-title-style-4 .menu-tab-style1 .font-weight-600) {
-		color: var(--bc-white) !important;
-		text-shadow: 0 4px 22px rgb(0 0 0 / 0.4);
-	}
-
-	:global(.page-title.page-title-style-4 .menu-tab-style1 a:focus-visible) {
-		outline-color: rgb(255 255 255 / 0.72);
-	}
-
 	.daynight-mobile-home,
 	.daynight-mobile-home-quick {
 		display: none;
-	}
-
-	:global(.page-title.page-title-style-4 .search-cars) {
-		padding-top: 4px;
-	}
-
-	.daynight-hero-heading,
-	.daynight-hero-search-panel {
-		position: relative;
-		z-index: 8;
-	}
-
-	.daynight-hero-heading {
-		display: grid;
-		justify-items: center;
-	}
-
-	.daynight-hero-search-panel {
-		display: grid;
-		gap: 12px;
-	}
-
-	@media (min-width: 768px) {
-		:global(.page-title.page-title-style-4 .search-cars) {
-			width: calc(100% - 64px);
-			max-width: 1320px;
-			padding-inline: 0;
-		}
-
-		.daynight-hero-heading {
-			min-height: 110px;
-		}
-
-		.daynight-hero-cars {
-			width: calc(100% - 64px);
-			max-width: 1420px;
-			margin-inline: auto;
-		}
-
-		.daynight-hero-car {
-			top: 88px;
-			width: min(23.5vw, 350px);
-		}
-
-		.daynight-hero-search-panel {
-			gap: 16px;
-			margin-top: 24px;
-			padding: 0 20px 20px;
-			border: 1px solid rgba(255, 255, 255, 0.18);
-			border-radius: 16px;
-			background: var(--bc-dark-surface);
-		}
-
-		:global(.page-title.page-title-style-4 .sw-single-thumb) {
-			translate: none;
-		}
-
-		:global(.page-title.page-title-style-4 .daynight-intent-switch) {
-			margin-top: 0 !important;
-			margin-bottom: 0 !important;
-			position: relative;
-			z-index: 2;
-			border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-		}
-
-		:global(.page-title.page-title-style-4 .daynight-intent-switch__list) {
-			width: min(100%, 480px) !important;
-			margin: 0 auto !important;
-			padding: 0;
-			border: 0 !important;
-			border-radius: 0;
-			background: transparent;
-		}
-
-		:global(.page-title.page-title-style-4 .daynight-intent-switch__link) {
-			min-height: 52px;
-			font-size: 20px !important;
-			font-weight: 650;
-			color: var(--bc-muted-on-dark);
-			border-radius: 0;
-			border-bottom: 2px solid transparent;
-			background: transparent;
-		}
-
-		:global(
-			.page-title.page-title-style-4
-				.daynight-intent-switch__item.active
-				.daynight-intent-switch__link
-		),
-		:global(
-			.page-title.page-title-style-4
-				.daynight-intent-switch__item.active
-				.daynight-intent-switch__link:hover
-		) {
-			border-bottom-color: var(--bc-white);
-			color: var(--bc-white);
-			background: rgb(255 255 255 / 0.05);
-		}
-
-		:global(.page-title.page-title-style-4 .daynight-intent-switch__link:focus-visible) {
-			outline: 2px solid var(--bc-white);
-			outline-offset: -5px;
-		}
-
-		:global(.page-title.page-title-style-4 .search-cars__filters) {
-			min-height: 62px;
-			align-items: center;
-			padding: 0;
-			border: 0;
-			border-radius: 0;
-			background: transparent;
-			box-shadow: none;
-		}
-	}
-
-	@media (min-width: 768px) {
-		:global(.page-title.page-title-style-4 .hfp__value) {
-			font-size: 16px !important;
-			line-height: 22px;
-			color: var(--bc-ink);
-		}
-		:global(.page-title.page-title-style-4 .hfp__label) {
-			font-size: 12px;
-			line-height: 16px;
-			letter-spacing: 0.02em;
-		}
-	}
-	.daynight-intent-switch__list {
-		display: grid !important;
-		width: min(100%, 390px) !important;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: 2px;
-		margin-bottom: 0 !important;
-		border: 1px solid rgba(255, 255, 255, 0.14) !important;
-		border-radius: 14px;
-		background: rgba(255, 255, 255, 0.14);
-		padding: 5px;
-	}
-
-	.daynight-intent-switch__item {
-		min-width: 0 !important;
-		margin: 0 !important;
-		padding: 0 !important;
-	}
-
-	.daynight-intent-switch__item::before {
-		display: none !important;
-	}
-
-	.daynight-intent-switch__link {
-		display: flex;
-		min-height: 51px;
-		align-items: center;
-		justify-content: center;
-		border-radius: 10px;
-		padding: 0 18px;
-		font-size: 17px;
-		font-weight: 650;
-		line-height: 1;
-		transition:
-			background-color var(--bc-motion-hover),
-			color var(--bc-motion-hover);
-	}
-
-	.daynight-intent-switch__item.active .daynight-intent-switch__link {
-		background: var(--bc-accent);
-	}
-
-	@media (hover: hover) and (pointer: fine) {
-		.daynight-intent-switch__item:not(.active) .daynight-intent-switch__link:hover {
-			background: rgba(255, 255, 255, 0.14);
-		}
-
-		.daynight-intent-switch__item.active .daynight-intent-switch__link:hover {
-			background: var(--bc-accent-hover);
-		}
-	}
-
-	@media (max-width: 1199px) {
-		.daynight-hero-car {
-			width: min(24vw, 280px);
-		}
-	}
-
-	:global(.page-title.page-title-style-4 .sw-single-thumb) {
-		overflow: hidden;
-	}
-
-	:global(.page-title.page-title-style-4 .sw-single-thumb .swiper-slide) {
-		opacity: 0 !important;
-		pointer-events: none !important;
-		visibility: hidden;
-	}
-
-	:global(.page-title.page-title-style-4 .sw-single-thumb .swiper-slide-active) {
-		opacity: 1 !important;
-		pointer-events: auto !important;
-		visibility: visible;
-	}
-
-	.search-cars__title {
-		max-width: 13ch;
-		margin-inline: auto;
-		font-family: var(--bc-font-heading);
-		font-size: clamp(44px, 4vw, 64px);
-		font-weight: 700;
-		letter-spacing: var(--bc-tracking-display);
-		line-height: 1.08;
-		margin-bottom: 14px;
-		text-shadow: 0 4px 22px rgba(0, 0, 0, 0.4);
-	}
-
-	@media (min-width: 768px) {
-		/* Desktop intent titles are a single-line state label, not a paragraph. */
-		.search-cars__title {
-			width: max-content;
-			max-width: none;
-			margin-bottom: 18px;
-			white-space: nowrap;
-		}
-	}
-
-	:global(.page-title.page-title-style-4 .search-cars .h7) {
-		max-width: 62ch;
-		margin-inline: auto;
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 1.5;
-	}
-
-	.search-cars p:not(.search-cars__title) {
-		text-shadow: 0 2px 12px rgba(0, 0, 0, 0.34);
-	}
-
-	:global(.page-title.page-title-style-4 .menu-tab-style1 a:focus-visible) {
-		outline: 2px solid rgba(255, 255, 255, 0.72);
-		outline-offset: 4px;
-	}
-
-	.search-cars__filters {
-		align-items: stretch;
-	}
-
-	.search-cars__select-wrapper {
-		min-width: 120px;
-	}
-
-	.search-cars__select {
-		display: grid;
-		min-height: 62px;
-		align-content: center;
-		gap: 3px;
-		padding: 9px 38px 8px 12px;
-	}
-
-	.search-cars__label {
-		position: static;
-		max-width: 100%;
-		overflow: hidden;
-		color: var(--bc-copy);
-		font-size: var(--bc-text-meta);
-		font-weight: 600;
-		line-height: 1.15;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-	}
-
-	.filter-select-dropdown__text span {
-		overflow: hidden;
-		font-size: 16px;
-		line-height: 1.2;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-	}
-
-	.search-cars__intent-field {
-		display: grid;
-		min-width: min(520px, 100%);
-		flex: 1 1 auto;
-		align-content: center;
-		gap: 4px;
-		border-radius: 8px;
-		background: var(--bc-white);
-		padding: 9px 18px;
-	}
-
-	.search-cars__intent-field:focus-within {
-		outline: 2px solid var(--bc-accent);
-		outline-offset: 2px;
-	}
-
-	.search-cars__intent-field span {
-		color: var(--bc-copy);
-		font-size: 12px;
-		font-weight: 700;
-		line-height: 1.15;
-	}
-
-	.search-cars__intent-field input {
-		width: 100%;
-		height: 25px;
-		border: 0 !important;
-		background: transparent !important;
-		box-shadow: none !important;
-		color: var(--bc-ink);
-		font-size: 16px;
-		font-weight: 700;
-		line-height: 1.2;
-		outline: 0 !important;
-		padding: 0 !important;
-	}
-
-	.search-cars__intent-field input::placeholder {
-		color: var(--bc-muted-light);
-		opacity: 1;
-	}
-
-	.search-cars__search--intent {
-		min-width: 210px;
-	}
-
-	.search-cars__search {
-		height: auto;
-		min-height: 66px;
-	}
-
-	.search-cars__search {
-		box-sizing: border-box;
-		flex: 0 0 272px;
-		height: 62px;
-		min-height: 62px;
-		width: 272px;
-		padding: 0 16px;
-		border-color: var(--bc-accent);
-		background: var(--bc-accent);
-		color: var(--bc-accent-contrast);
-		font-size: 18px;
-		font-weight: 600;
-		line-height: 1.2;
-		white-space: nowrap;
-		transition:
-			background-color var(--bc-motion-hover),
-			border-color var(--bc-motion-hover),
-			color var(--bc-motion-hover);
-	}
-
-	.search-cars__search img {
-		flex: 0 0 auto;
-	}
-
-	.search-cars__search:is(:hover, :focus-visible) {
-		border-color: var(--bc-accent-hover);
-		background: var(--bc-accent-hover);
-		color: var(--bc-accent-contrast);
-	}
-
-	.search-cars__advanced--hidden {
-		display: none !important;
-	}
-
-	@media (max-width: 575px) {
-		.search-cars__title {
-			font-size: 40px;
-			line-height: 1.12;
-		}
-
-		.search-cars__select-wrapper {
-			min-width: 100%;
-		}
 	}
 
 	@media (max-width: 767.98px) {
@@ -1436,10 +529,6 @@
 			--daynight-mobile-surface: var(--bc-white);
 			background: var(--daynight-mobile-hero-top) !important;
 			background-color: var(--daynight-mobile-hero-top) !important;
-		}
-
-		.daynight-desktop-hero {
-			display: none;
 		}
 
 		.daynight-mobile-home,
@@ -1467,6 +556,10 @@
 			max-width: 480px;
 			padding-right: 16px;
 			padding-left: 16px;
+		}
+
+		.daynight-mobile-home-quick :global(.site-container) {
+			padding-inline: var(--bc-mobile-gutter);
 		}
 
 		/* Heading mirrors the active Buy/Import/Sell tab, so keep it for SEO/a11y
@@ -1558,8 +651,8 @@
 		}
 
 		.daynight-mobile-hero__all :global(svg) {
-			width: 16px;
-			height: 16px;
+			width: var(--bc-control-icon-size-chip);
+			height: var(--bc-control-icon-size-chip);
 		}
 
 		:global(.daynight-home-location-sheet) {
@@ -1734,6 +827,8 @@
 		}
 
 		.daynight-mobile-location-actions :global(svg) {
+			width: var(--bc-control-icon-size-primary);
+			height: var(--bc-control-icon-size-primary);
 			flex: 0 0 auto;
 			color: currentColor;
 			stroke: currentColor;
@@ -1746,6 +841,7 @@
 			--bc-control-height-standard: var(--bc-control-height-chip);
 			position: fixed;
 			inset: 0;
+			bottom: var(--bc-kb-inset, 0px);
 			z-index: 1300;
 			display: grid;
 			grid-template-rows: max-content minmax(0, 1fr);
@@ -1826,6 +922,11 @@
 			outline: 0;
 			padding: 0 !important;
 			appearance: none;
+		}
+		.daynight-home-search-drawer__field :global(svg) {
+			width: var(--bc-control-icon-size-standard);
+			height: var(--bc-control-icon-size-standard);
+			flex-shrink: 0;
 		}
 
 		.daynight-home-search-drawer__field input::-webkit-search-cancel-button {
@@ -1998,47 +1099,11 @@
 		.daynight-mobile-home-quick__scroller {
 			--bc-text-filter: var(--bc-text-quick-pill);
 			--bc-leading-filter: var(--bc-leading-quick-pill);
-			display: flex;
-			gap: 8px;
-			width: calc(100% + 24px);
-			overflow-x: auto;
-			padding-right: 24px;
-			padding-bottom: 2px;
-			scrollbar-width: none;
 			-webkit-overflow-scrolling: touch;
 		}
 
-		.daynight-mobile-home-quick__scroller::-webkit-scrollbar {
-			display: none;
-		}
-
-		.daynight-mobile-home-quick__scroller a,
-		.daynight-mobile-home-quick__scroller button {
-			display: inline-flex;
+		.daynight-mobile-home-quick__scroller a {
 			min-width: max-content;
-			min-height: var(--bc-control-height-chip);
-			align-items: center;
-			justify-content: center;
-			gap: 8px;
-			flex: 0 0 auto;
-			padding: 0 12px;
-			border: 0;
-			border-radius: var(--bc-radius-control);
-			background: var(--bc-card-bg);
-			box-shadow: none;
-			color: var(--bc-ink);
-			cursor: pointer;
-			font-size: var(--bc-text-filter);
-			font-weight: var(--bc-weight-control);
-			line-height: var(--bc-leading-filter);
-			text-decoration: none;
-			white-space: nowrap;
-		}
-
-		.daynight-mobile-home-quick__scroller .daynight-mobile-home-quick__filter {
-			width: var(--bc-control-height-chip);
-			min-width: var(--bc-control-height-chip);
-			padding: 0;
 		}
 
 		.daynight-mobile-home-quick__scroller :is(button, a):focus-visible {

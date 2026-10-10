@@ -70,7 +70,7 @@
 		width: 100%;
 		max-width: 28rem;
 		margin-inline: auto;
-		border-radius: var(--bc-radius-card);
+		border-radius: var(--bc-radius-panel);
 		background: var(--bc-white);
 	}
 	.sell-valuation__card {

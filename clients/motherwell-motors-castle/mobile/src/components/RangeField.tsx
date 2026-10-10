@@ -1,5 +1,4 @@
 'use client';
-import { useMediaQuery } from '@/lib/use-media-query';
 import { useLocale } from '@/lib/use-locale';
 import { useRef, type PointerEvent } from 'react';
 import * as stylex from '@stylexjs/stylex';
@@ -100,8 +99,8 @@ const s = stylex.create({
   groupedRail: { height: 48 },
   groupedInputs: {
     gridTemplateColumns: 'repeat(2,minmax(0,1fr))',
-    gap: 0,
-    borderWidth: 1,
+    gap: { default: 0, '@media (min-width: 1024px)': 8 },
+    borderWidth: { default: 1, '@media (min-width: 1024px)': 0 },
     borderStyle: 'solid',
     borderColor: colors.cardLine,
     borderRadius: controlShape.field,
@@ -109,7 +108,7 @@ const s = stylex.create({
   },
   groupedField: {
     minHeight: 52,
-    borderWidth: 0,
+    borderWidth: { default: 0, '@media (min-width: 1024px)': 1 },
     borderRadius: controlShape.field,
     backgroundColor: 'transparent',
   },
@@ -138,24 +137,17 @@ const s = stylex.create({
       default: colors.controlSurface,
       '@media (min-width: 1024px)': colors.background,
     },
-    flexDirection: { default: 'column', '@media (max-width: 699px)': 'row' },
-    alignItems: { default: 'stretch', '@media (max-width: 699px)': 'center' },
-    gap: { default: 2, '@media (max-width: 699px)': 8 },
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
     paddingBlock: 8,
-  },
-  fieldLabel: {
-    display: { default: 'block', '@media (max-width: 699px)': 'none' },
-    fontSize: { default: 13, '@media (max-width: 699px)': 14 },
-    lineHeight: '18px',
-    fontWeight: 500,
-    color: colors.muted,
   },
   valueRow: {
     display: 'flex',
     alignItems: 'center',
     gap: 8,
     minWidth: 0,
-    flexGrow: { default: 0, '@media (max-width: 699px)': 1 },
+    flexGrow: 1,
   },
   comfortableText: { fontSize: 16, lineHeight: '24px' },
   comfortableFill: { backgroundColor: colors.accent },
@@ -187,7 +179,6 @@ export function RangeField({
   onChange,
 }: Props) {
   const { t, number } = useLocale();
-  const phone = useMediaQuery('(max-width: 699px)');
   const drag = useRef<{ id: number; side: 'from' | 'to' } | null>(null);
   const low = min ? Math.max(floor, Math.min(ceiling, Number(min))) : floor;
   const high = max ? Math.max(low, Math.min(ceiling, Number(max))) : ceiling;
@@ -230,7 +221,7 @@ export function RangeField({
           maxLength={9}
           value={side === 'from' ? min : max}
           onChange={(event) => (side === 'from' ? from : to)(event.target.value)}
-          placeholder={comfortable && !phone ? t('Any') : t(side === 'from' ? 'From' : 'To')}
+          placeholder={t(side === 'from' ? 'From' : 'To')}
           {...stylex.props(s.input, comfortable && s.comfortableText)}
         />
         {unit && <span {...stylex.props(s.unit, comfortable && s.comfortableText)}>{t(unit)}</span>}
@@ -324,10 +315,7 @@ export function RangeField({
           )}
         >
           {comfortable ? (
-            <>
-              <span {...stylex.props(s.fieldLabel)}>{t('From')}</span>
-              <span {...stylex.props(s.valueRow)}>{numericInput('from')}</span>
-            </>
+            <span {...stylex.props(s.valueRow)}>{numericInput('from')}</span>
           ) : (
             numericInput('from')
           )}
@@ -342,10 +330,7 @@ export function RangeField({
           )}
         >
           {comfortable ? (
-            <>
-              <span {...stylex.props(s.fieldLabel)}>{t('To')}</span>
-              <span {...stylex.props(s.valueRow)}>{numericInput('to')}</span>
-            </>
+            <span {...stylex.props(s.valueRow)}>{numericInput('to')}</span>
           ) : (
             numericInput('to')
           )}
