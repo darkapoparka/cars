@@ -1,0 +1,10 @@
+{
+  "views": [],
+  "errors": [],
+  "status": "failed",
+  "failure": "locator.click: Error: strict mode violation: getByRole('button', { name: 'Изчисти филтрите', exact: true }) resolved to 2 elements:\n    1) <button type=\"button\" aria-label=\"Изчисти филтрите\" data-style-src=\"cars-template-mobile:src\\components\\ShowroomQuickPills.tsx:43\" class=\"ShowroomQuickPills__s.button x1n2onr6 x3nfvp2 x6s0dn4 x1nb6za0 x1gg8mnh x53eaof x1oq85fn x2lah0s x1717udv xc342km x16ffj9d xjbqb8w x9krj2w x2ssjo2 x1hc1fzr x1tmayz8\">…</button> aka getByRole('group', { name: 'Бързи филтри' }).getByRole('button', { name: 'Изчисти филтрите' })\n    2) <button type=\"button\" aria-label=\"Изчисти филтрите\" data-style-src=\"cars-template-mobile:src\\components\\showroom-filter-sheet.stylex.ts:74\" class=\"showroom-filter-sheet__showroomFilterSheetStyles.clearFilters x1rg5ohu xqqqpdu x6s0dn4 xl56j7k x1qab1bc x14atkfc x1tld47h x1wxaq2x x1d77599 xdqyycr xg87z98 x1mrnhfd xc342km x16ffj9d xjbqb8w xuqbtff x1ed1skf xzfc7of x15rqiyk x1an8wva xif65rj x1hizy65 x1s688f x1fc57z9 x14pfdr0 x1ew303f\">…</button> aka getByRole('dialog', { name: 'Търсене и филтри' }).getByRole('button', { name: 'Изчисти филтрите' })\n\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Изчисти филтрите', exact: true })\u001b[22m\n\n    at L:\\CODEX\\cars\\templates\\mobile\\.qa\\mobile-toolbar-review-20261010.mjs:118:79",
+  "sourceHashes": {
+    "src/components/ShowroomInventoryScreen.tsx": "b6d62bc70c86224670f999cbb960de8161937fb5158cca02751fd6302630b2d8",
+    "src/components/ShowroomMobileToolbar.tsx": "651ba810ab4c8a3ec7f6e7891fdd60c4c5eff2a49639f83877a6f14bc83ddad8"
+  }
+}

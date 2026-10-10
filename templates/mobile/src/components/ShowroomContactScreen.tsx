@@ -6,7 +6,7 @@ import { Clock3, Mail, MapPin, Phone } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import type { Vehicle } from '@/lib/types';
 import { showroomVehiclePhotos } from '@/lib/vehicle-copy';
-import { showroom, showroomPageContent } from '@/lib/showroom';
+import { showroom, showroomContactLocation, showroomPageContent } from '@/lib/showroom';
 import { serviceCategoryHref, showroomService } from '@/lib/showroom-services';
 import { saveMessageDraft, useAppState } from '@/lib/store';
 import { Header } from './Header';
@@ -57,6 +57,7 @@ export function ShowroomContactScreen({
   const { t, locale, money } = useLocale();
   const { messageDrafts } = useAppState();
   const service = showroomService(serviceId);
+  const location = showroomContactLocation(locale);
   const hasContactDetails = Boolean(showroom.address || showroom.hours.length);
   const unavailableContacts = !showroom.phone || !showroom.directionsUrl;
   const draftKey = vehicle?.id || 'showroom-' + (service?.id || 'general');
@@ -77,23 +78,45 @@ export function ShowroomContactScreen({
     <>
       <ShowroomBanner>
         <Header home overHeroDesktop />
-        <ShowroomPageHero {...showroomPageContent.contact}>
-          <Button
-            href={showroom.phone ? 'tel:' + showroom.phone : undefined}
-            xstyle={s.contactHeroAction}
-            onClick={() => {
-              const field = messageRef.current;
-              field?.focus({ preventScroll: true });
-              field?.scrollIntoView({
-                block: 'center',
-                behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
-                  ? 'instant'
-                  : 'smooth',
-              });
-            }}
-          >
-            {showroom.phone ? 'Call us' : 'Write to us'}
-          </Button>
+        <ShowroomPageHero title={showroomPageContent.contact.title}>
+          <div data-desktop-contact-box {...stylex.props(s.contactHeroControls)}>
+            <Button
+              xstyle={s.contactHeroAction}
+              onClick={() => {
+                const field = messageRef.current;
+                field?.focus({ preventScroll: true });
+                field?.scrollIntoView({
+                  block: 'center',
+                  behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+                    ? 'instant'
+                    : 'smooth',
+                });
+              }}
+            >
+              <Mail size={16} strokeWidth={1.8} aria-hidden="true" />
+              {t('Write to us')}
+            </Button>
+            {showroom.phone && (
+              <a
+                href={'tel:' + showroom.phone}
+                {...stylex.props(s.contactHeroAction, s.contactHeroSecondary)}
+              >
+                <Phone size={16} strokeWidth={1.8} aria-hidden="true" />
+                {t('Call us')}
+              </a>
+            )}
+            {location.directionsUrl && (
+              <a
+                href={location.directionsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                {...stylex.props(s.contactHeroAction, s.contactHeroSecondary)}
+              >
+                <MapPin size={16} strokeWidth={1.8} aria-hidden="true" />
+                {t(location.preview ? 'View on map' : 'Visit us')}
+              </a>
+            )}
+          </div>
         </ShowroomPageHero>
       </ShowroomBanner>
       <ShowroomDrawer>

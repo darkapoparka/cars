@@ -149,12 +149,11 @@ const s = stylex.create({
   },
   secondarySurface: {
     borderColor: {
-      default: colors.cardLine,
-      '@media (max-width: 699px)': colors.line,
+      default: 'transparent',
       '@media (min-width: 1024px)': colors.line,
     },
     backgroundColor: {
-      default: colors.background,
+      default: colors.stripe,
       '@media (min-width: 1024px)': { default: colors.stripe, ':hover': colors.controlSurface },
     },
   },

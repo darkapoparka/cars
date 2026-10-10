@@ -60,20 +60,14 @@ const s = stylex.create({
     display: 'grid',
     gridAutoFlow: 'column',
     gridAutoColumns: '1fr',
-    minHeight: 48,
+    minHeight: 44,
     marginTop: 0,
-    paddingInline: 1,
-    paddingBlock: 1,
+    paddingInline: 0,
+    paddingBlock: 0,
     justifyContent: 'center',
-    gap: 2,
-    backgroundColor: 'rgba(255,255,255,.12)',
-    backdropFilter: 'blur(12px)',
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderTopColor: 'rgba(255,255,255,.24)',
-    borderRightColor: 'rgba(255,255,255,.24)',
-    borderBottomColor: 'rgba(255,255,255,.24)',
-    borderLeftColor: 'rgba(255,255,255,.24)',
+    gap: 4,
+    backgroundColor: 'transparent',
+    borderWidth: 0,
     borderRadius: controlShape.pill,
     boxShadow: 'none',
   },
@@ -84,29 +78,47 @@ const s = stylex.create({
     whiteSpace: 'nowrap',
     overflowWrap: 'normal',
   },
+  primaryPillsTab: {
+    minWidth: { default: 0, '@media (min-width: 1024px)': 44 },
+    paddingInline: { default: 4, '@media (min-width: 1024px)': 0 },
+    fontSize: { default: 18, '@media (min-width: 1024px)': 16 },
+    lineHeight: { default: '26px', '@media (min-width: 1024px)': '22px' },
+  },
   heroTab: {
     minWidth: 72,
     minHeight: 44,
-    paddingInline: 12,
+    paddingInline: 0,
     paddingBlock: 0,
     fontSize: { default: 14, '@media (min-width: 1024px)': 16 },
     lineHeight: { default: '20px', '@media (min-width: 1024px)': '22px' },
     fontWeight: 500,
     color: '#fff',
     borderRadius: controlShape.pill,
-    backgroundColor: {
-      default: 'transparent',
-      ':hover': 'rgba(255,255,255,.08)',
-      ':active': 'rgba(255,255,255,.16)',
-    },
+    backgroundColor: 'transparent',
     outlineColor: '#fff',
   },
   heroSelected: {
     color: colors.text,
     fontWeight: 500,
-    outlineColor: colors.text,
-    backgroundColor: { default: '#fff', ':hover': '#fff', ':active': '#fff' },
+    outlineColor: '#fff',
     '::after': { height: 0 },
+  },
+  heroFace: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    minHeight: 36,
+    paddingInline: 14,
+    paddingBlock: 6,
+    borderRadius: controlShape.pill,
+    backgroundColor: {
+      default: 'transparent',
+      ':hover': 'rgba(255,255,255,.12)',
+      ':active': 'rgba(255,255,255,.2)',
+    },
+  },
+  heroFaceSelected: {
+    backgroundColor: { default: '#fff', ':hover': '#fff', ':active': '#fff' },
   },
   tab: {
     position: 'relative',
@@ -266,8 +278,9 @@ const s = stylex.create({
     paddingInline: { default: 12, '@media (max-width: 699px)': 0 },
   },
   pillsRail: {
+    minHeight: { default: 52, '@media (min-width: 1024px)': 44 },
     marginTop: { default: 8, '@media (min-width: 1024px)': 0 },
-    gap: { default: 0, '@media (min-width: 1024px)': 6 },
+    gap: { default: 0, '@media (min-width: 1024px)': 8 },
     flexShrink: 0,
     borderBottomWidth: 0,
   },
@@ -288,7 +301,8 @@ const s = stylex.create({
   pillFace: {
     display: { default: 'contents', '@media (min-width: 1024px)': 'inline-flex' },
     alignItems: 'center',
-    minHeight: 38,
+    minHeight: { default: 38, '@media (min-width: 1024px)': 40 },
+    paddingBlock: { default: 0, '@media (min-width: 1024px)': 8 },
     paddingInline: 12,
     borderWidth: 1,
     borderStyle: 'solid',
@@ -580,12 +594,17 @@ export function ShowroomTabs<T extends string>({
             layout === 'desktop-segmented' && s.segmentedTab,
             selected === value && layout === 'desktop-segmented' && s.segmentedSelected,
             primary && s.primaryTab,
+            primary && layout === 'desktop-pills' && s.primaryPillsTab,
             layout === 'hero' && s.heroTab,
             selected === value && layout === 'hero' && s.heroSelected,
             selected === value && edgeToEdgeOnPhone && s.phoneEdgeSelected,
           )}
         >
-          {layout === 'desktop-pills' ? (
+          {layout === 'hero' ? (
+            <span {...stylex.props(s.heroFace, selected === value && s.heroFaceSelected)}>
+              {content ?? tabText(tabLabel)}
+            </span>
+          ) : layout === 'desktop-pills' ? (
             <span {...stylex.props(s.pillFace, selected === value && s.pillFaceSelected)}>
               {content ?? tabText(tabLabel)}
             </span>

@@ -21,27 +21,20 @@ const s = stylex.create({
   card: {
     position: 'relative',
     containerType: { default: 'normal', '@media (min-width: 1024px)': 'inline-size' },
-    display: { default: 'block', '@media (min-width: 1024px)': 'flex' },
+    display: 'flex',
     flexDirection: 'column',
-    height: { default: 'auto', '@media (min-width: 1024px)': '100%' },
+    height: '100%',
     minWidth: 0,
-    backgroundColor: { default: colors.background, '@media (min-width: 1024px)': 'transparent' },
-    borderWidth: { default: 1, '@media (min-width: 1024px)': 0 },
+    backgroundColor: { default: 'transparent', '@media (min-width: 1024px)': colors.background },
+    borderWidth: { default: 0, '@media (min-width: 1024px)': 1 },
     borderStyle: 'solid',
-    borderColor: {
-      default: colors.cardLine,
-      '@media (min-width: 1024px)': { default: colors.cardLine, ':hover': colors.line },
-    },
-    borderRadius: { default: 16, '@media (min-width: 1024px)': 0 },
-    boxShadow: {
-      default: '0 3px 12px rgba(27, 27, 33, 0.035)',
-      '@media (min-width: 1024px)': 'none',
-      '@media (max-width: 699px)': 'none',
-    },
-    overflow: { default: 'hidden', '@media (min-width: 1024px)': 'visible' },
+    borderColor: colors.cardLine,
+    borderRadius: { default: 0, '@media (min-width: 1024px)': 16 },
+    boxShadow: 'none',
+    overflow: { default: 'visible', '@media (min-width: 1024px)': 'hidden' },
   },
   layout: {
-    display: { default: 'contents', '@media (min-width: 1024px)': 'flex' },
+    display: 'flex',
     flexDirection: 'column',
     flexGrow: 1,
     minWidth: 0,
@@ -49,54 +42,49 @@ const s = stylex.create({
   photo: {
     position: 'relative',
     flexShrink: 0,
-    margin: { default: 12, '@media (min-width: 1024px)': 0 },
-    marginBottom: 0,
-    borderRadius: { default: 10, '@media (min-width: 1024px)': 12 },
+    borderRadius: { default: 12, '@media (min-width: 1024px)': '15px 15px 0 0' },
     overflow: 'hidden',
     backgroundColor: colors.surface,
-    aspectRatio: { default: '16 / 10', '@media (min-width: 1024px)': '3 / 2' },
+    aspectRatio: '3 / 2',
   },
   picture: { position: 'absolute', inset: 0 },
   link: {
+    position: 'absolute',
+    inset: 0,
+    zIndex: 1,
     display: 'block',
-    textDecoration: 'none',
-    outline: 'none',
-    color: { default: 'inherit', '@media (min-width: 1024px)': { default: 'inherit', ':hover': colors.accent } },
-    '::after': {
-      content: '""',
-      position: 'absolute',
-      inset: 0,
-      borderRadius: { default: 16, '@media (min-width: 1024px)': 12 },
-      outline: { default: 'none', ':focus-visible': '2px solid' },
-      outlineColor: colors.text,
-      outlineOffset: -3,
-    },
+    borderRadius: { default: 12, '@media (min-width: 1024px)': 16 },
+    outline: { default: 'none', ':focus-visible': '2px solid' },
+    outlineColor: colors.text,
+    outlineOffset: -3,
   },
   image: { objectFit: 'cover' },
   letterboxedImage: {
-    transform: { default: 'none', '@media (min-width: 1024px)': 'scale(1.334)' },
+    // Crop padding baked into these photos before the rounded frame clips them.
+    transform: 'scale(1.334)',
   },
   brandedCover: {
     transform: { default: 'none', '@media (min-width: 1024px)': 'scale(1.3)' },
     transformOrigin: { default: '50% 50%', '@media (min-width: 1024px)': '50% 44%' },
   },
   save: {
+    display: { default: 'none', '@media (min-width: 1024px)': 'block' },
     position: 'absolute',
-    top: { default: 6, '@media (min-width: 1024px)': 8 },
-    right: { default: 6, '@media (min-width: 1024px)': 8 },
-    zIndex: 2,
+    top: 0,
+    right: 0,
+    zIndex: 3,
   },
   saveButton: {
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
-    minWidth: 48,
-    minHeight: 48,
+    minWidth: 44,
+    minHeight: 44,
     padding: 0,
     borderWidth: 0,
     borderRadius: controlShape.circle,
     backgroundColor: 'transparent',
-    color: colors.text,
+    color: '#24262c',
     outlineColor: colors.text,
     outlineOffset: -2,
     opacity: { default: 1, ':active': 0.75 },
@@ -106,134 +94,111 @@ const s = stylex.create({
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
-    width: 36,
-    height: 36,
+    width: 26,
+    height: 26,
     borderRadius: controlShape.circle,
-    backgroundColor: colors.background,
+    backgroundColor: 'rgba(255,255,255,0.92)',
+    backdropFilter: { default: 'none', '@media (min-width: 1024px)': 'blur(8px)' },
   },
   body: {
-    padding: { default: 12, '@media (min-width: 1024px)': '12px 2px 0' },
-    flexGrow: { default: 0, '@media (min-width: 1024px)': 1 },
+    position: 'relative',
+    padding: {
+      default: '6px 0 0',
+      '@media (min-width: 1024px)': 16,
+    },
+    marginTop: { default: 0, '@media (min-width: 1024px)': -20 },
+    borderRadius: { default: 0, '@media (min-width: 1024px)': 16 },
+    backgroundColor: { default: 'transparent', '@media (min-width: 1024px)': colors.background },
+    flexGrow: 1,
     fontFamily: {
       default: 'inherit',
       '@media (min-width: 1024px)': '"Mobile UI", Arial, sans-serif',
     },
     minWidth: 0,
-    display: { default: 'flex', '@media (min-width: 1024px)': 'grid' },
-    gridTemplateColumns: {
-      default: 'none',
-      '@media (min-width: 1024px)': {
-        default: 'minmax(0, 1fr) auto',
-        '@container (max-width: 280px)': 'minmax(0, 1fr)',
-      },
-    },
-    alignContent: 'start',
+    display: 'flex',
     flexDirection: 'column',
-    gap: { default: 6, '@media (min-width: 1024px)': 4 },
-    columnGap: { default: 6, '@media (min-width: 1024px)': 10 },
+    gap: { default: 2, '@media (min-width: 1024px)': 8 },
+  },
+  summary: {
+    display: { default: 'contents', '@media (min-width: 1024px)': 'flex' },
+    flexDirection: 'column',
+    minWidth: 0,
+    gap: 4,
   },
   title: {
     minWidth: 0,
-    fontSize: { default: 18, '@media (min-width: 1024px)': 16 },
-    lineHeight: '24px',
-    fontWeight: {
-      default: 500,
-      '@media (max-width: 699px)': 600,
-      '@media (min-width: 1024px)': 600,
-    },
+    margin: 0,
+    fontSize: { default: '0.9375rem', '@media (min-width: 1024px)': 16 },
+    lineHeight: 1.3,
+    fontWeight: 500,
     overflowWrap: 'anywhere',
-    gridColumn: { default: 'auto', '@media (min-width: 1024px)': 1 },
-    gridRow: { default: 'auto', '@media (min-width: 1024px)': 1 },
   },
   titleText: {
-    display: '-webkit-box',
+    display: { default: 'block', '@media (min-width: 1024px)': '-webkit-box' },
     WebkitBoxOrient: 'vertical',
-    WebkitLineClamp: { default: 2, '@media (min-width: 1024px)': 1 },
-    overflow: 'hidden',
-  },
-  variant: {
-    display: {
-      default: 'none',
-      '@media (max-width: 699px)': 'block',
-    },
-    minWidth: 0,
-    color: colors.muted,
-    fontSize: 14,
-    lineHeight: '20px',
-    whiteSpace: 'nowrap',
+    WebkitLineClamp: 2,
+    whiteSpace: { default: 'nowrap', '@media (min-width: 1024px)': 'normal' },
     overflow: 'hidden',
     textOverflow: 'ellipsis',
   },
+  mobileMeta: {
+    display: { default: 'flex', '@media (min-width: 1024px)': 'none' },
+    flexWrap: 'wrap',
+    gap: 4,
+    margin: 0,
+    color: colors.muted,
+    fontSize: '0.75rem',
+    lineHeight: '1rem',
+  },
   specs: {
-    display: 'flex',
-    flexWrap: { default: 'wrap', '@media (min-width: 1024px)': 'nowrap' },
+    display: { default: 'none', '@media (min-width: 1024px)': 'grid' },
+    gridTemplateColumns: 'repeat(2,minmax(0,1fr))',
     alignItems: 'center',
-    columnGap: 6,
-    rowGap: { default: 6, '@media (min-width: 1024px)': 4 },
-    marginTop: 0,
-    gridColumn: { default: 'auto', '@media (min-width: 1024px)': '1 / -1' },
-    gridRow: { default: 'auto', '@media (min-width: 1024px)': 2 },
+    gap: 6,
+    margin: 0,
+    padding: 0,
+    listStyle: 'none',
+    pointerEvents: 'none',
+    fontFamily: '"Mobile UI", Arial, sans-serif',
   },
   price: {
-    position: { default: 'static', '@media (min-width: 1024px)': { default: 'static', '@container (max-width: 280px)': 'absolute' } },
-    top: { default: 'auto', '@media (min-width: 1024px)': { default: 'auto', '@container (max-width: 280px)': 'calc(66.66667cqw - 10px)' } },
-    right: { default: 'auto', '@media (min-width: 1024px)': { default: 'auto', '@container (max-width: 280px)': 10 } },
-    transform: { default: 'none', '@media (min-width: 1024px)': { default: 'none', '@container (max-width: 280px)': 'translateY(-100%)' } },
-    padding: { default: 0, '@media (min-width: 1024px)': { default: 0, '@container (max-width: 280px)': '5px 8px' } },
-    backgroundColor: { default: 'transparent', '@media (min-width: 1024px)': { default: 'transparent', '@container (max-width: 280px)': colors.background } },
-    borderRadius: 6,
-    gridColumn: { default: 'auto', '@media (min-width: 1024px)': 2 },
-    gridRow: { default: 'auto', '@media (min-width: 1024px)': 1 },
-    zIndex: { default: 'auto', '@media (min-width: 1024px)': 1 },
-    pointerEvents: { default: 'auto', '@media (min-width: 1024px)': 'none' },
-    marginTop: 0,
-    fontSize: { default: 20, '@media (min-width: 1024px)': { default: 18, '@container (max-width: 280px)': 16 } },
-    lineHeight: {
-      default: '26px',
-      '@media (max-width: 699px)': '24px',
-      '@media (min-width: 1024px)': { default: '24px', '@container (max-width: 280px)': '20px' },
+    pointerEvents: 'none',
+    fontSize: {
+      default: '1.125rem',
+      '@media (min-width: 1024px)': { default: 22, '@container (max-width: 250px)': 20 },
     },
+    lineHeight: 1.25,
     fontWeight: 700,
     fontVariantNumeric: 'tabular-nums',
     whiteSpace: 'nowrap',
   },
   fact: {
-    display: 'inline-flex',
-    alignItems: 'center',
+    display: 'block',
+    textAlign: 'center',
     minWidth: 0,
     maxWidth: '100%',
-    flexShrink: 0,
-    paddingInline: { default: 8, '@media (min-width: 1024px)': 0 },
-    paddingBlock: { default: 3, '@media (min-width: 1024px)': 0 },
-    borderWidth: { default: 1, '@media (min-width: 1024px)': 0 },
-    borderStyle: 'solid',
-    borderColor: colors.cardLine,
-    borderRadius: 6,
-    backgroundColor: { default: colors.badgeSurface, '@media (min-width: 1024px)': 'transparent' },
-    color: { default: colors.muted, '@media (max-width: 699px)': colors.text },
-    fontSize: {
-      default: 12,
-      '@media (max-width: 699px)': 14,
-      '@media (min-width: 1024px)': 13,
-      '@container (max-width: 250px)': 12,
-    },
-    lineHeight: {
-      default: '18px',
-      '@media (max-width: 699px)': '20px',
-      '@media (min-width: 1024px)': '20px',
-    },
+    padding: '4px 8px',
+    borderRadius: controlShape.pill,
+    backgroundColor: colors.badgeSurface,
+    color: colors.muted,
+    fontWeight: 500,
+    fontSize: { default: 13, '@container (max-width: 250px)': 12 },
+    lineHeight: 1.4,
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
   },
-  separatedFact: {
-    '::before': {
-      content: '"·"',
-      display: { default: 'none', '@media (min-width: 1024px)': 'inline' },
-      marginRight: 6,
-    },
+  priceRow: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    minHeight: 0,
+    paddingRight: 0,
+    gap: { default: 0, '@media (min-width: 1024px)': 8 },
+    order: { default: 1, '@media (min-width: 1024px)': 0 },
+    marginTop: { default: 'auto', '@media (min-width: 1024px)': 0 },
   },
-  footer: { display: 'contents' },
 });
 
 export function ShowroomVehicleCard({
@@ -247,9 +212,7 @@ export function ShowroomVehicleCard({
   const localizedVehicle = localizeVehicle(vehicle, locale);
   const photos = localizedVehicle.images;
   const cover = desktopCovers[vehicle.id];
-  const desktopPhoto = cover && photos.includes(cover)
-    ? cover
-    : photos[0];
+  const desktopPhoto = cover && photos.includes(cover) ? cover : photos[0];
   const { parked } = useAppState();
   const saved = parked.includes(vehicle.id);
   const name = vehicle.make + ' ' + vehicle.model;
@@ -257,10 +220,17 @@ export function ShowroomVehicleCard({
   const specs = {
     year: String(vehicle.year),
     mileage: number(vehicle.mileage) + ' ' + t('km'),
+    transmission: t(vehicle.transmission),
     fuel: t(vehicle.fuel),
   };
   return (
     <article data-showroom-vehicle={vehicle.id} {...stylex.props(s.card)}>
+      <Link
+        href={href}
+        aria-label={name}
+        onClick={() => rememberInventory(vehicle.id)}
+        {...stylex.props(s.link)}
+      />
       <div {...stylex.props(s.layout)}>
         <div {...stylex.props(s.photo)}>
           <picture {...stylex.props(s.picture)}>
@@ -270,7 +240,7 @@ export function ShowroomVehicleCard({
               alt={name}
               fill
               priority={priority}
-              sizes="(min-width: 1600px) 350px, (min-width: 1024px) calc((100vw - 152px) / 4), (max-width: 699px) calc(100vw - 56px), 520px"
+              sizes="(min-width: 1448px) 256px, (min-width: 1440px) calc((100vw - 168px) / 5), (min-width: 1024px) calc((100vw - 152px) / 4), calc((100vw - 46px) / 2)"
               {...stylex.props(
                 s.image,
                 showroomPhotoHasLetterbox(photos[0]) && s.letterboxedImage,
@@ -278,70 +248,58 @@ export function ShowroomVehicleCard({
               )}
             />
           </picture>
-          <span {...stylex.props(s.save)}>
-            <button
-              type="button"
-              aria-label={
-                (locale === 'bg'
-                  ? saved
-                    ? 'Премахни '
-                    : 'Запази '
-                  : saved
-                    ? 'Remove '
-                    : 'Save ') +
-                name +
-                (saved ? (locale === 'bg' ? ' от запазените' : ' from saved cars') : '')
-              }
-              aria-pressed={saved}
-              onClick={() => togglePark(vehicle.id)}
-              {...stylex.props(s.saveButton, saved && s.savedButton)}
-            >
-              <span {...stylex.props(s.saveFace)}>
-                <Heart
-                  size={22}
-                  strokeWidth={1.8}
-                  fill={saved ? 'currentColor' : 'none'}
-                  aria-hidden="true"
-                  focusable="false"
-                />
-              </span>
-            </button>
-          </span>
         </div>
         <div {...stylex.props(s.body)}>
-          <h2 {...stylex.props(s.title)}>
-            <Link
-              href={href}
-              onClick={() => rememberInventory(vehicle.id)}
-              {...stylex.props(s.link)}
-            >
+          <div {...stylex.props(s.summary)}>
+            <div {...stylex.props(s.priceRow)}>
+              <strong {...stylex.props(s.price)}>{money(vehicle.price)}</strong>
+            </div>
+            <h2 {...stylex.props(s.title)}>
               <span title={name} {...stylex.props(s.titleText)}>
                 {name}
               </span>
-            </Link>
-          </h2>
-          {localizedVehicle.variant && (
-            <p title={localizedVehicle.variant} {...stylex.props(s.variant)}>
-              {localizedVehicle.variant}
-            </p>
-          )}
-          <p title={Object.values(specs).join(' · ')} {...stylex.props(s.specs)}>
-            {Object.entries(specs).map(([key, fact]) => (
-              <span
-                key={key}
-                data-vehicle-fact={key}
-                title={fact}
-                {...stylex.props(s.fact, key !== 'year' && s.separatedFact)}
-              >
-                {fact}
-              </span>
-            ))}
-          </p>
-          <div {...stylex.props(s.footer)}>
-            <strong {...stylex.props(s.price)}>{money(vehicle.price)}</strong>
+            </h2>
           </div>
+          <p {...stylex.props(s.mobileMeta)}>
+            <span data-vehicle-fact="year">{specs.year}</span>
+            <span aria-hidden="true">·</span>
+            <span data-vehicle-fact="mileage">{specs.mileage}</span>
+          </p>
+          <ul
+            aria-label={locale === 'bg' ? 'Характеристики на ' + name : 'Vehicle facts for ' + name}
+            {...stylex.props(s.specs)}
+          >
+            {Object.entries(specs).map(([key, fact]) => (
+              <li key={key} data-vehicle-fact={key} title={fact} {...stylex.props(s.fact)}>
+                {fact}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
+      <span {...stylex.props(s.save)}>
+        <button
+          type="button"
+          aria-label={
+            (locale === 'bg' ? (saved ? 'Премахни ' : 'Запази ') : saved ? 'Remove ' : 'Save ') +
+            name +
+            (saved ? (locale === 'bg' ? ' от запазените' : ' from saved cars') : '')
+          }
+          aria-pressed={saved}
+          onClick={() => togglePark(vehicle.id)}
+          {...stylex.props(s.saveButton, saved && s.savedButton)}
+        >
+          <span {...stylex.props(s.saveFace)}>
+            <Heart
+              size={17}
+              strokeWidth={1.7}
+              fill={saved ? 'currentColor' : 'none'}
+              aria-hidden="true"
+              focusable="false"
+            />
+          </span>
+        </button>
+      </span>
     </article>
   );
 }

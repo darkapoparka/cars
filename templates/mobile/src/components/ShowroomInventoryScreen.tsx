@@ -39,6 +39,7 @@ import { ShowroomVehicleCard } from './ShowroomVehicleCard';
 import { ShowroomTabs } from './ShowroomTabs';
 import { ShowroomHeaderSurface } from './ShowroomHeaderSurface';
 import { ShowroomSearch } from './ShowroomSearch';
+import { ShowroomMobileToolbar } from './ShowroomMobileToolbar';
 import { ShowroomDesktopHero } from './ShowroomDesktopHero';
 import { ShowroomBanner, ShowroomDrawer } from './ShowroomPageLayout';
 import { ShowroomQuickPill, ShowroomQuickPills } from './ShowroomQuickPills';
@@ -89,7 +90,7 @@ const s = stylex.create({
     backgroundColor: { default: colors.background, '@media (max-width: 699px)': 'transparent' },
   },
   quickBar: {
-    position: { default: 'sticky', '@media (min-width: 1024px)': 'static' },
+    position: 'static',
     top: 0,
     zIndex: 25,
     flexShrink: 0,
@@ -175,10 +176,11 @@ const s = stylex.create({
     display: 'grid',
     gap: { default: 14, '@media (min-width: 1024px)': showroomDesktop.cardGap },
     gridTemplateColumns: {
-      default: 'minmax(0,1fr)',
+      // Two cards still fit at 320px when a classic scrollbar takes 15px.
+      default: 'repeat(auto-fit,minmax(min(100%,max(8rem,calc((100% - 14px)/2))),1fr))',
       '@media (min-width: 700px)': 'repeat(2,minmax(0,1fr))',
       '@media (min-width: 1024px)': showroomDesktop.inventoryColumns,
-      '@media (min-width: 1600px)': showroomDesktop.wideInventoryColumns,
+      '@media (min-width: 1440px)': showroomDesktop.wideInventoryColumns,
     },
   },
   note: {
@@ -226,6 +228,7 @@ export function ShowroomInventoryScreen() {
   const moreSection = sheet === 'more' ? showroomMoreSection(params.get('section')) : null;
   const opener = useRef<{ button: HTMLButtonElement; scrollY: number } | null>(null);
   const browseAfterApply = useRef(false);
+  const quickBar = useRef<HTMLDivElement>(null);
   const category = showroomCategory(filters.category);
   const excludedNames = excludedMakeNames(filters);
   const stock = vehicles.filter((vehicle) => vehicle.category === filters.category);
@@ -439,6 +442,19 @@ export function ShowroomInventoryScreen() {
       filters.minYear || filters.maxYear,
       filters.fuel.length,
     ].filter(Boolean).length;
+  const mobileFilterSummary = [
+    filters.query,
+    hasMakeSelection ? t(makeLabel) : '',
+    filters.minPrice || filters.maxPrice ? t(priceLabel) : '',
+    filters.minYear || filters.maxYear ? t(yearLabel) : '',
+    filters.fuel.map(t).join(', '),
+    filters.condition.map(t).join(', '),
+    filters.minMileage || filters.maxMileage ? mileageLabel + ' ' + t('km') : '',
+    filters.transmission.map(t).join(', '),
+    filters.body.map(t).join(', '),
+  ]
+    .filter(Boolean)
+    .join(' · ');
   const pills: {
     key: ShowroomQuickFilter | 'all' | 'more';
     tab: ShowroomFilterTab;
@@ -544,7 +560,7 @@ export function ShowroomInventoryScreen() {
               label={t('Search make or model')}
               value={filters.query}
               onOpen={(button) => openSheet('search', button)}
-              elevatedOnPhone
+              phoneHeader
             />
           </div>
           <section
@@ -617,7 +633,19 @@ export function ShowroomInventoryScreen() {
         />
       </ShowroomBanner>
       <ShowroomDrawer id="showroom-results" inventory>
-        <div data-desktop-quick-bar {...stylex.props(s.quickBar)}>
+        <ShowroomMobileToolbar
+          anchor={quickBar}
+          summary={mobileFilterSummary}
+          filterCount={allFilterCount}
+          sortLabel={sortLabel}
+          sorted={sort !== 'standard'}
+          sheet={sheet}
+          sorting={sorting}
+          onSearch={(button) => openSheet('search', button)}
+          onFilters={(button) => openSheet('make', button)}
+          onSort={(button) => openSheet('sort', button)}
+        />
+        <div ref={quickBar} data-desktop-quick-bar {...stylex.props(s.quickBar)}>
           <div {...stylex.props(s.desktopRail)}>
             <ShowroomQuickPills label={t('Quick filters')} inventoryDesktop compactOnPhone>
               <div {...stylex.props(s.phoneOnly)}>

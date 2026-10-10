@@ -2,74 +2,17 @@
 import * as stylex from '@stylexjs/stylex';
 import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
-import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
 import { useLocale } from '@/lib/use-locale';
 import type { ShowroomFilterTab } from '@/lib/showroom-filter-editor';
 import type { VehicleCategory } from '@/lib/types';
-import { showroom, showroomPreviewLocation } from '@/lib/showroom';
 import { Icon } from './Icon';
 import { ShowroomDesktopType } from './ShowroomDesktopType';
+import { ShowroomHeroHeading } from './ShowroomPageLayout';
+import { showroomHeroStyles as hero } from './showroom-hero.stylex';
 import { desktopSearchStyles as field } from './showroom-desktop-controls.stylex';
 
 const s = stylex.create({
-  hero: {
-    display: { default: 'contents', '@media (min-width: 1024px)': 'flex' },
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-    gap: { default: 24, '@media (min-width: 1024px)': showroomDesktop.heroGap },
-    minHeight: { default: 280, '@media (min-width: 1024px)': showroomDesktop.heroHeight },
-    marginInline: { default: 16, '@media (min-width: 1024px)': 0 },
-    marginTop: { default: 8, '@media (min-width: 1024px)': 0 },
-    marginBottom: 0,
-    paddingTop: { default: 32, '@media (min-width: 1024px)': showroomDesktop.heroPaddingTop },
-    paddingBottom: { default: 32, '@media (min-width: 1024px)': showroomDesktop.heroPaddingBottom },
-    paddingInline: { default: 24, '@media (min-width: 1200px)': 40 },
-    borderRadius: { default: 20, '@media (min-width: 1024px)': 0 },
-    color: '#fff',
-    backgroundColor: { default: '#263644', '@media (min-width: 1024px)': 'transparent' },
-  },
-  copy: {
-    display: { default: 'none', '@media (min-width: 1024px)': 'block' },
-    position: 'relative',
-    textAlign: 'center',
-    width: '100%',
-    maxWidth: showroomDesktop.heroCopyWidth,
-  },
-  title: {
-    fontFamily: 'var(--font-base), Arial, sans-serif',
-    fontSize: {
-      default: 'clamp(32px, 3vw, 40px)',
-      '@media (min-width: 1024px)': showroomDesktop.heroTitleSize,
-    },
-    fontWeight: 700,
-    lineHeight: 1.12,
-    letterSpacing: '-.02em',
-    textWrap: 'balance',
-  },
-  location: {
-    position: { default: 'static', '@media (min-width: 1024px)': 'absolute' },
-    top: { default: 'auto', '@media (min-width: 1024px)': -28 },
-    insetInline: { default: 'auto', '@media (min-width: 1024px)': 0 },
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 6,
-    marginBottom: { default: 12, '@media (min-width: 1024px)': 0 },
-    color: 'rgba(255, 255, 255, .82)',
-    fontSize: { default: 13, '@media (min-width: 1024px)': 14 },
-    fontWeight: 400,
-    lineHeight: '20px',
-  },
-  searchPanel: {
-    display: { default: 'contents', '@media (min-width: 1024px)': 'block' },
-    width: '100%',
-    maxWidth: 880,
-    borderRadius: controlShape.pill,
-    color: colors.text,
-    backgroundColor: colors.background,
-    boxShadow: '0 8px 24px rgba(14, 25, 36, .12)',
-  },
+  compactSearchPanel: { maxWidth: 880 },
   search: {
     display: { default: 'none', '@media (min-width: 1024px)': 'grid' },
     gridTemplateColumns: 'minmax(0, .95fr) minmax(0, 1.35fr) minmax(0, .85fr) auto',
@@ -78,7 +21,6 @@ const s = stylex.create({
     padding: 6,
     gap: 6,
   },
-  expandedSearchPanel: { maxWidth: 1040 },
   splitSearch: {
     gridTemplateColumns: 'minmax(210px, 1fr) minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, .85fr) auto',
   },
@@ -155,8 +97,7 @@ export function ShowroomDesktopHero({
   priceActive: boolean;
   onClear: (tab: 'make' | 'model' | 'price') => void;
 }) {
-  const { t, locale } = useLocale();
-  const location = showroom.address || showroomPreviewLocation[locale];
+  const { t } = useLocale();
   const fields = [
     {
       tab: 'make',
@@ -179,19 +120,17 @@ export function ShowroomDesktopHero({
     { tab: 'price', label: 'Price', value: priceLabel, active: priceActive, disabled: false },
   ] as const;
   return (
-    <div data-desktop-discovery-hero {...stylex.props(s.hero)}>
-      <div {...stylex.props(s.copy)}>
-        <p data-desktop-showroom-location {...stylex.props(s.location)}>
-          <Icon name="pin" size={14} />
-          <span>{location}</span>
-        </p>
-        <h2 id="desktop-discovery-title" {...stylex.props(s.title)}>
-          {t('Find your next vehicle')}
-        </h2>
-      </div>
+    <div data-desktop-discovery-hero {...stylex.props(hero.layout)}>
+      <ShowroomHeroHeading
+        title="Find your next vehicle"
+        heading="h2"
+        id="desktop-discovery-title"
+        desktopOnly
+      />
       <div
         data-desktop-search-box
-        {...stylex.props(s.searchPanel, category === 'car' && s.expandedSearchPanel)}
+        data-showroom-hero-controls
+        {...stylex.props(hero.controlSurface, category !== 'car' && s.compactSearchPanel)}
       >
         <div
           role="group"

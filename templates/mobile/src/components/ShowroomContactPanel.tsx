@@ -12,13 +12,13 @@ const s = stylex.create({
   panel: {
     display: { default: 'none', '@media (min-width: 1024px)': 'flex' },
     flexDirection: 'column',
-    height: '100%',
+    height: 'auto',
     minWidth: 0,
   },
   map: {
     width: '100%',
     aspectRatio: '2 / 1',
-    minHeight: 200,
+    minHeight: 180,
     position: 'relative',
     backgroundColor: colors.stripe,
     overflow: 'hidden',
@@ -40,22 +40,23 @@ const s = stylex.create({
     flexDirection: 'column',
     alignItems: 'flex-start',
     flexGrow: 1,
-    gap: 16,
-    padding: 24,
+    gap: 12,
+    padding: 20,
     minWidth: 0,
   },
   header: {
     display: 'flex',
     alignItems: 'center',
+    flexWrap: 'wrap',
     justifyContent: 'space-between',
     gap: 12,
     width: '100%',
   },
   title: {
-    flex: '1',
+    flex: '1 1 140px',
     minWidth: 0,
-    fontSize: 20,
-    lineHeight: '26px',
+    fontSize: 18,
+    lineHeight: '24px',
     fontWeight: 500,
     overflowWrap: 'anywhere',
   },
@@ -63,8 +64,8 @@ const s = stylex.create({
   address: { fontStyle: 'normal', overflowWrap: 'anywhere' },
   note: {
     color: colors.muted,
-    fontSize: { default: 12, '@media (min-width: 1024px)': 14 },
-    lineHeight: { default: '18px', '@media (min-width: 1024px)': '20px' },
+    fontSize: 12,
+    lineHeight: '18px',
   },
   contacts: { display: 'flex', flexDirection: 'column', gap: 8, width: '100%' },
   contact: {
@@ -75,8 +76,8 @@ const s = stylex.create({
     minHeight: 44,
     width: '100%',
     textDecoration: 'none',
-    fontSize: { default: 14, '@media (min-width: 1024px)': 16 },
-    lineHeight: { default: '20px', '@media (min-width: 1024px)': '24px' },
+    fontSize: 15,
+    lineHeight: '22px',
     fontWeight: 400,
     overflowWrap: 'anywhere',
     outlineColor: colors.accent,
@@ -86,8 +87,8 @@ const s = stylex.create({
   hours: { display: 'flex', alignItems: 'flex-start', gap: 10, width: '100%' },
   hoursText: {
     color: colors.muted,
-    fontSize: { default: 13, '@media (min-width: 1024px)': 15 },
-    lineHeight: { default: '20px', '@media (min-width: 1024px)': '22px' },
+    fontSize: 14,
+    lineHeight: '20px',
   },
   actions: { display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 8, marginTop: 'auto' },
   link: {
@@ -100,7 +101,7 @@ const s = stylex.create({
     padding: 0,
     textDecoration: 'none',
     color: colors.text,
-    fontSize: { default: 13, '@media (min-width: 1024px)': 15 },
+    fontSize: 14,
     lineHeight: '20px',
     fontWeight: 500,
     outlineColor: colors.accent,
@@ -111,19 +112,13 @@ const s = stylex.create({
     alignItems: 'center',
     gap: 6,
     minHeight: 36,
-    paddingBlock: 8,
+    paddingBlock: 7,
     paddingInline: 12,
     borderRadius: 18,
     backgroundColor: { default: colors.stripe, ':hover': colors.controlSurface },
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.cardLine,
-  },
-  mapFace: {
-    minHeight: 32,
-    paddingBlock: 5,
-    paddingInline: 10,
-    borderRadius: 16,
   },
 });
 
@@ -166,7 +161,7 @@ export function ShowroomContactPanel() {
               rel="noopener noreferrer"
               {...stylex.props(s.link)}
             >
-              <span {...stylex.props(s.face, s.mapFace)}>
+              <span {...stylex.props(s.face)}>
                 {t(location.preview ? 'View on map' : 'Get directions')}
                 <ArrowUpRight size={14} aria-hidden="true" />
               </span>

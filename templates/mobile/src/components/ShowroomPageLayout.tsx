@@ -5,6 +5,9 @@ import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
 import { useLocale } from '@/lib/use-locale';
+import { showroom, showroomPreviewLocation } from '@/lib/showroom';
+import { Icon } from './Icon';
+import { showroomHeroStyles as hero } from './showroom-hero.stylex';
 
 const s = stylex.create({
   banner: {
@@ -47,62 +50,6 @@ const s = stylex.create({
     },
     backgroundColor: { default: colors.background, '@media (max-width: 699px)': colors.stripe },
   },
-  page: {
-    fontFamily: {
-      default: 'inherit',
-      '@media (min-width: 1024px)': '"Mobile UI", Arial, sans-serif',
-    },
-  },
-  hero: {
-    display: { default: 'contents', '@media (min-width: 1024px)': 'flex' },
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-    minHeight: showroomDesktop.heroHeight,
-    paddingTop: showroomDesktop.heroPaddingTop,
-    paddingBottom: showroomDesktop.heroPaddingBottom,
-    paddingInline: 40,
-    gap: showroomDesktop.heroGap,
-    color: '#fff',
-    textAlign: 'center',
-  },
-  copy: {
-    display: { default: 'contents', '@media (min-width: 1024px)': 'block' },
-    width: '100%',
-    maxWidth: showroomDesktop.heroCopyWidth,
-  },
-  title: {
-    // One heading serves both sizes; it is visually hidden on the phone layout.
-    position: { default: 'absolute', '@media (min-width: 1024px)': 'static' },
-    width: { default: 1, '@media (min-width: 1024px)': 'auto' },
-    height: { default: 1, '@media (min-width: 1024px)': 'auto' },
-    margin: { default: -1, '@media (min-width: 1024px)': 0 },
-    padding: 0,
-    overflow: { default: 'hidden', '@media (min-width: 1024px)': 'visible' },
-    clip: { default: 'rect(0,0,0,0)', '@media (min-width: 1024px)': 'auto' },
-    whiteSpace: { default: 'nowrap', '@media (min-width: 1024px)': 'normal' },
-    borderWidth: 0,
-    fontFamily: 'var(--font-base), Arial, sans-serif',
-    fontSize: {
-      default: 'clamp(32px, 3vw, 40px)',
-      '@media (min-width: 1024px)': showroomDesktop.heroTitleSize,
-    },
-    fontWeight: 700,
-    lineHeight: 1.12,
-    letterSpacing: '-.02em',
-    textWrap: 'balance',
-  },
-  description: {
-    display: { default: 'none', '@media (min-width: 1024px)': 'block' },
-    marginTop: 12,
-    marginInline: 'auto',
-    maxWidth: 760,
-    color: 'rgba(255, 255, 255, .82)',
-    fontSize: { default: 16, '@media (min-width: 1024px)': 18 },
-    fontWeight: 400,
-    lineHeight: { default: '24px', '@media (min-width: 1024px)': '26px' },
-    textWrap: 'balance',
-  },
 });
 
 export function ShowroomBanner({
@@ -140,30 +87,60 @@ export function ShowroomDrawer({
       data-showroom-drawer
       data-desktop-results-drawer={inventory || undefined}
       data-mobile-results-drawer={phoneResults || undefined}
-      {...stylex.props(s.drawer, inventory ? s.inventory : s.page, phoneResults && s.phoneResults)}
+      {...stylex.props(s.drawer, inventory && s.inventory, phoneResults && s.phoneResults)}
     >
       {children}
     </div>
   );
 }
 
-export function ShowroomPageHero({
+export function ShowroomHeroHeading({
   title,
-  description,
-  children,
+  heading = 'h1',
+  id,
+  desktopOnly = false,
 }: {
   title: string;
-  description?: string;
-  children?: ReactNode;
+  heading?: 'h1' | 'h2';
+  id?: string;
+  desktopOnly?: boolean;
 }) {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
+  const Heading = heading;
   return (
-    <div data-showroom-page-hero {...stylex.props(s.hero)}>
-      <div {...stylex.props(s.copy)}>
-        <h1 {...stylex.props(s.title)}>{t(title)}</h1>
-        {description && <p {...stylex.props(s.description)}>{t(description)}</p>}
+    <div {...stylex.props(hero.copy, desktopOnly && hero.desktopCopy)}>
+      <p data-desktop-showroom-location {...stylex.props(hero.location)}>
+        <Icon name="pin" size={14} />
+        <span>{showroom.address || showroomPreviewLocation[locale]}</span>
+      </p>
+      <Heading id={id} data-showroom-hero-title {...stylex.props(hero.title)}>
+        {t(title)}
+      </Heading>
+    </div>
+  );
+}
+
+export function ShowroomPageHero({
+  title,
+  children,
+  controlLayout = 'contact',
+}: {
+  title: string;
+  children?: ReactNode;
+  controlLayout?: 'services' | 'contact';
+}) {
+  return (
+    <div data-showroom-page-hero {...stylex.props(hero.layout)}>
+      <ShowroomHeroHeading title={title} />
+      <div
+        data-showroom-hero-controls
+        {...stylex.props(
+          hero.controlSurface,
+          controlLayout === 'services' ? hero.serviceControlSurface : hero.contactControlSurface,
+        )}
+      >
+        {children}
       </div>
-      {children}
     </div>
   );
 }

@@ -137,33 +137,20 @@ export function ShowroomServicesScreen() {
     <>
       <ShowroomBanner>
         <Header home sticky={false} overHeroDesktop />
-        <ShowroomPageHero {...showroomPageContent.services} description={undefined}>
-          <div {...stylex.props(s.serviceHeroControls)}>
-            <div {...stylex.props(s.desktopServiceControls)}>
-              <ShowroomTabs
-                label={t('Service category')}
-                tabs={serviceCategories}
-                selected={selected}
-                panelId="showroom-services"
-                idPrefix="service-hero-"
-                layout="hero"
-                onChange={selectCategory}
-              />
-            </div>
-            <div {...stylex.props(s.search)}>
-              <ShowroomSearch
-                label={t('Search services')}
-                value={query}
-                onOpen={openSearch}
-                inBanner
-              />
-            </div>
+        <ShowroomPageHero title={showroomPageContent.services.title} controlLayout="services">
+          <div {...stylex.props(s.search)}>
+            <ShowroomSearch
+              label={t('Search services')}
+              value={query}
+              onOpen={openSearch}
+              inBanner
+            />
           </div>
         </ShowroomPageHero>
       </ShowroomBanner>
       <ShowroomDrawer>
         <div data-showroom-controls {...stylex.props(s.tabs)}>
-          <div {...stylex.props(s.phoneServiceControls)}>
+          <div {...stylex.props(s.serviceCategoryControls)}>
             <ShowroomTabs
               label={t('Service category')}
               tabs={serviceCategories}

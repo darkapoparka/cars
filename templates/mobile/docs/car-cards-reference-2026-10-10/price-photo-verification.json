@@ -1,0 +1,2855 @@
+{
+  "sourceHash": "580f23e654a83395434408f0581e12788d4556c2109a74b6adf7834abed5e2c7",
+  "views": [
+    {
+      "width": 390,
+      "overflow": false,
+      "columns": 2,
+      "cards": [
+        {
+          "name": "BMW X6",
+          "box": {
+            "x": 16,
+            "y": 237,
+            "width": 172,
+            "height": 182.65625,
+            "right": 188
+          },
+          "title": {
+            "x": 16,
+            "y": 357.65625,
+            "width": 172,
+            "height": 19.5,
+            "right": 188
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "BMW X6",
+          "price": {
+            "x": 16,
+            "y": 397.15625,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 96.046875
+          },
+          "meta": {
+            "x": 16,
+            "y": 379.15625,
+            "width": 172,
+            "height": 16,
+            "right": 188
+          },
+          "save": {
+            "x": 144,
+            "y": 386.40625,
+            "width": 44,
+            "height": 44,
+            "right": 188
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW 540",
+          "box": {
+            "x": 202,
+            "y": 237,
+            "width": 172,
+            "height": 182.65625,
+            "right": 374
+          },
+          "title": {
+            "x": 202,
+            "y": 357.65625,
+            "width": 172,
+            "height": 19.5,
+            "right": 374
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "BMW 540",
+          "price": {
+            "x": 202,
+            "y": 397.15625,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 282.046875
+          },
+          "meta": {
+            "x": 202,
+            "y": 379.15625,
+            "width": 172,
+            "height": 16,
+            "right": 374
+          },
+          "save": {
+            "x": 330,
+            "y": 386.40625,
+            "width": 44,
+            "height": 44,
+            "right": 374
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW X3",
+          "box": {
+            "x": 16,
+            "y": 433.65625,
+            "width": 172,
+            "height": 182.65625,
+            "right": 188
+          },
+          "title": {
+            "x": 16,
+            "y": 554.3125,
+            "width": 172,
+            "height": 19.5,
+            "right": 188
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "BMW X3",
+          "price": {
+            "x": 16,
+            "y": 593.8125,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 96.046875
+          },
+          "meta": {
+            "x": 16,
+            "y": 575.8125,
+            "width": 172,
+            "height": 16,
+            "right": 188
+          },
+          "save": {
+            "x": 144,
+            "y": 583.0625,
+            "width": 44,
+            "height": 44,
+            "right": 188
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW 120",
+          "box": {
+            "x": 202,
+            "y": 433.65625,
+            "width": 172,
+            "height": 182.65625,
+            "right": 374
+          },
+          "title": {
+            "x": 202,
+            "y": 554.3125,
+            "width": 172,
+            "height": 19.5,
+            "right": 374
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "BMW 120",
+          "price": {
+            "x": 202,
+            "y": 593.8125,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 282.046875
+          },
+          "meta": {
+            "x": 202,
+            "y": 575.8125,
+            "width": 172,
+            "height": 16,
+            "right": 374
+          },
+          "save": {
+            "x": 330,
+            "y": 583.0625,
+            "width": 44,
+            "height": 44,
+            "right": 374
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Mercedes-Benz GLE",
+          "box": {
+            "x": 16,
+            "y": 630.3125,
+            "width": 172,
+            "height": 182.65625,
+            "right": 188
+          },
+          "title": {
+            "x": 16,
+            "y": 750.96875,
+            "width": 172,
+            "height": 19.5,
+            "right": 188
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "Mercedes-Benz GLE",
+          "price": {
+            "x": 16,
+            "y": 790.46875,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 96.046875
+          },
+          "meta": {
+            "x": 16,
+            "y": 772.46875,
+            "width": 172,
+            "height": 16,
+            "right": 188
+          },
+          "save": {
+            "x": 144,
+            "y": 779.71875,
+            "width": 44,
+            "height": 44,
+            "right": 188
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Audi RS6",
+          "box": {
+            "x": 202,
+            "y": 630.3125,
+            "width": 172,
+            "height": 182.65625,
+            "right": 374
+          },
+          "title": {
+            "x": 202,
+            "y": 750.96875,
+            "width": 172,
+            "height": 19.5,
+            "right": 374
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "Audi RS6",
+          "price": {
+            "x": 202,
+            "y": 790.46875,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 282.046875
+          },
+          "meta": {
+            "x": 202,
+            "y": 772.46875,
+            "width": 172,
+            "height": 16,
+            "right": 374
+          },
+          "save": {
+            "x": 330,
+            "y": 779.71875,
+            "width": 44,
+            "height": 44,
+            "right": 374
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Mercedes-Benz AMG GT",
+          "box": {
+            "x": 16,
+            "y": 826.96875,
+            "width": 172,
+            "height": 182.65625,
+            "right": 188
+          },
+          "title": {
+            "x": 16,
+            "y": 947.625,
+            "width": 172,
+            "height": 19.5,
+            "right": 188
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "Mercedes-Benz AMG GT",
+          "price": {
+            "x": 16,
+            "y": 987.125,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 96.046875
+          },
+          "meta": {
+            "x": 16,
+            "y": 969.125,
+            "width": 172,
+            "height": 16,
+            "right": 188
+          },
+          "save": {
+            "x": 144,
+            "y": 976.375,
+            "width": 44,
+            "height": 44,
+            "right": 188
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW X6",
+          "box": {
+            "x": 202,
+            "y": 826.96875,
+            "width": 172,
+            "height": 182.65625,
+            "right": 374
+          },
+          "title": {
+            "x": 202,
+            "y": 947.625,
+            "width": 172,
+            "height": 19.5,
+            "right": 374
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "BMW X6",
+          "price": {
+            "x": 202,
+            "y": 987.125,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 282.046875
+          },
+          "meta": {
+            "x": 202,
+            "y": 969.125,
+            "width": 172,
+            "height": 16,
+            "right": 374
+          },
+          "save": {
+            "x": 330,
+            "y": 976.375,
+            "width": 44,
+            "height": 44,
+            "right": 374
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Audi RSQ8",
+          "box": {
+            "x": 16,
+            "y": 1023.625,
+            "width": 172,
+            "height": 182.65625,
+            "right": 188
+          },
+          "title": {
+            "x": 16,
+            "y": 1144.28125,
+            "width": 172,
+            "height": 19.5,
+            "right": 188
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "Audi RSQ8",
+          "price": {
+            "x": 16,
+            "y": 1183.78125,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 96.046875
+          },
+          "meta": {
+            "x": 16,
+            "y": 1165.78125,
+            "width": 172,
+            "height": 16,
+            "right": 188
+          },
+          "save": {
+            "x": 144,
+            "y": 1173.03125,
+            "width": 44,
+            "height": 44,
+            "right": 188
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW 540",
+          "box": {
+            "x": 202,
+            "y": 1023.625,
+            "width": 172,
+            "height": 182.65625,
+            "right": 374
+          },
+          "title": {
+            "x": 202,
+            "y": 1144.28125,
+            "width": 172,
+            "height": 19.5,
+            "right": 374
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "BMW 540",
+          "price": {
+            "x": 202,
+            "y": 1183.78125,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 282.046875
+          },
+          "meta": {
+            "x": 202,
+            "y": 1165.78125,
+            "width": 172,
+            "height": 16,
+            "right": 374
+          },
+          "save": {
+            "x": 330,
+            "y": 1173.03125,
+            "width": 44,
+            "height": 44,
+            "right": 374
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW X3",
+          "box": {
+            "x": 16,
+            "y": 1220.28125,
+            "width": 172,
+            "height": 182.65625,
+            "right": 188
+          },
+          "title": {
+            "x": 16,
+            "y": 1340.9375,
+            "width": 172,
+            "height": 19.5,
+            "right": 188
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "BMW X3",
+          "price": {
+            "x": 16,
+            "y": 1380.4375,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 96.046875
+          },
+          "meta": {
+            "x": 16,
+            "y": 1362.4375,
+            "width": 172,
+            "height": 16,
+            "right": 188
+          },
+          "save": {
+            "x": 144,
+            "y": 1369.6875,
+            "width": 44,
+            "height": 44,
+            "right": 188
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW 120",
+          "box": {
+            "x": 202,
+            "y": 1220.28125,
+            "width": 172,
+            "height": 182.65625,
+            "right": 374
+          },
+          "title": {
+            "x": 202,
+            "y": 1340.9375,
+            "width": 172,
+            "height": 19.5,
+            "right": 374
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "BMW 120",
+          "price": {
+            "x": 202,
+            "y": 1380.4375,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 282.046875
+          },
+          "meta": {
+            "x": 202,
+            "y": 1362.4375,
+            "width": 172,
+            "height": 16,
+            "right": 374
+          },
+          "save": {
+            "x": 330,
+            "y": 1369.6875,
+            "width": 44,
+            "height": 44,
+            "right": 374
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Mercedes-Benz GLE",
+          "box": {
+            "x": 16,
+            "y": 1416.9375,
+            "width": 172,
+            "height": 182.65625,
+            "right": 188
+          },
+          "title": {
+            "x": 16,
+            "y": 1537.59375,
+            "width": 172,
+            "height": 19.5,
+            "right": 188
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "Mercedes-Benz GLE",
+          "price": {
+            "x": 16,
+            "y": 1577.09375,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 96.046875
+          },
+          "meta": {
+            "x": 16,
+            "y": 1559.09375,
+            "width": 172,
+            "height": 16,
+            "right": 188
+          },
+          "save": {
+            "x": 144,
+            "y": 1566.34375,
+            "width": 44,
+            "height": 44,
+            "right": 188
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Audi RS6",
+          "box": {
+            "x": 202,
+            "y": 1416.9375,
+            "width": 172,
+            "height": 182.65625,
+            "right": 374
+          },
+          "title": {
+            "x": 202,
+            "y": 1537.59375,
+            "width": 172,
+            "height": 19.5,
+            "right": 374
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "Audi RS6",
+          "price": {
+            "x": 202,
+            "y": 1577.09375,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 282.046875
+          },
+          "meta": {
+            "x": 202,
+            "y": 1559.09375,
+            "width": 172,
+            "height": 16,
+            "right": 374
+          },
+          "save": {
+            "x": 330,
+            "y": 1566.34375,
+            "width": 44,
+            "height": 44,
+            "right": 374
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW X6",
+          "box": {
+            "x": 16,
+            "y": 1613.59375,
+            "width": 172,
+            "height": 182.65625,
+            "right": 188
+          },
+          "title": {
+            "x": 16,
+            "y": 1734.25,
+            "width": 172,
+            "height": 19.5,
+            "right": 188
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "BMW X6",
+          "price": {
+            "x": 16,
+            "y": 1773.75,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 96.046875
+          },
+          "meta": {
+            "x": 16,
+            "y": 1755.75,
+            "width": 172,
+            "height": 16,
+            "right": 188
+          },
+          "save": {
+            "x": 144,
+            "y": 1763,
+            "width": 44,
+            "height": 44,
+            "right": 188
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Mercedes-Benz AMG GT",
+          "box": {
+            "x": 202,
+            "y": 1613.59375,
+            "width": 172,
+            "height": 182.65625,
+            "right": 374
+          },
+          "title": {
+            "x": 202,
+            "y": 1734.25,
+            "width": 172,
+            "height": 19.5,
+            "right": 374
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "Mercedes-Benz AMG GT",
+          "price": {
+            "x": 202,
+            "y": 1773.75,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 282.046875
+          },
+          "meta": {
+            "x": 202,
+            "y": 1755.75,
+            "width": 172,
+            "height": 16,
+            "right": 374
+          },
+          "save": {
+            "x": 330,
+            "y": 1763,
+            "width": 44,
+            "height": 44,
+            "right": 374
+          },
+          "priceClipped": false,
+          "factsFit": true
+        }
+      ],
+      "photo": "BMW 120 white border cropped; rounded photo visibly verified",
+      "save": "Save and remove remain independent of the card link",
+      "english": "Single-line titles, prices and facts fit"
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "columns": 2,
+      "cards": [
+        {
+          "name": "BMW X6",
+          "box": {
+            "x": 16,
+            "y": 237,
+            "width": 137,
+            "height": 159.328125,
+            "right": 153
+          },
+          "title": {
+            "x": 16,
+            "y": 334.328125,
+            "width": 137,
+            "height": 19.5,
+            "right": 153
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "BMW X6",
+          "price": {
+            "x": 16,
+            "y": 373.828125,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 96.046875
+          },
+          "meta": {
+            "x": 16,
+            "y": 355.828125,
+            "width": 137,
+            "height": 16,
+            "right": 153
+          },
+          "save": {
+            "x": 109,
+            "y": 363.078125,
+            "width": 44,
+            "height": 44,
+            "right": 153
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW 540",
+          "box": {
+            "x": 167,
+            "y": 237,
+            "width": 137,
+            "height": 159.328125,
+            "right": 304
+          },
+          "title": {
+            "x": 167,
+            "y": 334.328125,
+            "width": 137,
+            "height": 19.5,
+            "right": 304
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "BMW 540",
+          "price": {
+            "x": 167,
+            "y": 373.828125,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 247.046875
+          },
+          "meta": {
+            "x": 167,
+            "y": 355.828125,
+            "width": 137,
+            "height": 16,
+            "right": 304
+          },
+          "save": {
+            "x": 260,
+            "y": 363.078125,
+            "width": 44,
+            "height": 44,
+            "right": 304
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW X3",
+          "box": {
+            "x": 16,
+            "y": 410.328125,
+            "width": 137,
+            "height": 159.328125,
+            "right": 153
+          },
+          "title": {
+            "x": 16,
+            "y": 507.65625,
+            "width": 137,
+            "height": 19.5,
+            "right": 153
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "BMW X3",
+          "price": {
+            "x": 16,
+            "y": 547.15625,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 96.046875
+          },
+          "meta": {
+            "x": 16,
+            "y": 529.15625,
+            "width": 137,
+            "height": 16,
+            "right": 153
+          },
+          "save": {
+            "x": 109,
+            "y": 536.40625,
+            "width": 44,
+            "height": 44,
+            "right": 153
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW 120",
+          "box": {
+            "x": 167,
+            "y": 410.328125,
+            "width": 137,
+            "height": 159.328125,
+            "right": 304
+          },
+          "title": {
+            "x": 167,
+            "y": 507.65625,
+            "width": 137,
+            "height": 19.5,
+            "right": 304
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "BMW 120",
+          "price": {
+            "x": 167,
+            "y": 547.15625,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 247.046875
+          },
+          "meta": {
+            "x": 167,
+            "y": 529.15625,
+            "width": 137,
+            "height": 16,
+            "right": 304
+          },
+          "save": {
+            "x": 260,
+            "y": 536.40625,
+            "width": 44,
+            "height": 44,
+            "right": 304
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Mercedes-Benz GLE",
+          "box": {
+            "x": 16,
+            "y": 583.65625,
+            "width": 137,
+            "height": 159.328125,
+            "right": 153
+          },
+          "title": {
+            "x": 16,
+            "y": 680.984375,
+            "width": 137,
+            "height": 19.5,
+            "right": 153
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "Mercedes-Benz GLE",
+          "price": {
+            "x": 16,
+            "y": 720.484375,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 96.046875
+          },
+          "meta": {
+            "x": 16,
+            "y": 702.484375,
+            "width": 137,
+            "height": 16,
+            "right": 153
+          },
+          "save": {
+            "x": 109,
+            "y": 709.734375,
+            "width": 44,
+            "height": 44,
+            "right": 153
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Audi RS6",
+          "box": {
+            "x": 167,
+            "y": 583.65625,
+            "width": 137,
+            "height": 159.328125,
+            "right": 304
+          },
+          "title": {
+            "x": 167,
+            "y": 680.984375,
+            "width": 137,
+            "height": 19.5,
+            "right": 304
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "Audi RS6",
+          "price": {
+            "x": 167,
+            "y": 720.484375,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 247.046875
+          },
+          "meta": {
+            "x": 167,
+            "y": 702.484375,
+            "width": 137,
+            "height": 16,
+            "right": 304
+          },
+          "save": {
+            "x": 260,
+            "y": 709.734375,
+            "width": 44,
+            "height": 44,
+            "right": 304
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Mercedes-Benz AMG GT",
+          "box": {
+            "x": 16,
+            "y": 756.984375,
+            "width": 137,
+            "height": 159.328125,
+            "right": 153
+          },
+          "title": {
+            "x": 16,
+            "y": 854.3125,
+            "width": 137,
+            "height": 19.5,
+            "right": 153
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "Mercedes-Benz AMG GT",
+          "price": {
+            "x": 16,
+            "y": 893.8125,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 96.046875
+          },
+          "meta": {
+            "x": 16,
+            "y": 875.8125,
+            "width": 137,
+            "height": 16,
+            "right": 153
+          },
+          "save": {
+            "x": 109,
+            "y": 883.0625,
+            "width": 44,
+            "height": 44,
+            "right": 153
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW X6",
+          "box": {
+            "x": 167,
+            "y": 756.984375,
+            "width": 137,
+            "height": 159.328125,
+            "right": 304
+          },
+          "title": {
+            "x": 167,
+            "y": 854.3125,
+            "width": 137,
+            "height": 19.5,
+            "right": 304
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "BMW X6",
+          "price": {
+            "x": 167,
+            "y": 893.8125,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 247.046875
+          },
+          "meta": {
+            "x": 167,
+            "y": 875.8125,
+            "width": 137,
+            "height": 16,
+            "right": 304
+          },
+          "save": {
+            "x": 260,
+            "y": 883.0625,
+            "width": 44,
+            "height": 44,
+            "right": 304
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Audi RSQ8",
+          "box": {
+            "x": 16,
+            "y": 930.3125,
+            "width": 137,
+            "height": 159.328125,
+            "right": 153
+          },
+          "title": {
+            "x": 16,
+            "y": 1027.640625,
+            "width": 137,
+            "height": 19.5,
+            "right": 153
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "Audi RSQ8",
+          "price": {
+            "x": 16,
+            "y": 1067.140625,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 96.046875
+          },
+          "meta": {
+            "x": 16,
+            "y": 1049.140625,
+            "width": 137,
+            "height": 16,
+            "right": 153
+          },
+          "save": {
+            "x": 109,
+            "y": 1056.390625,
+            "width": 44,
+            "height": 44,
+            "right": 153
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW 540",
+          "box": {
+            "x": 167,
+            "y": 930.3125,
+            "width": 137,
+            "height": 159.328125,
+            "right": 304
+          },
+          "title": {
+            "x": 167,
+            "y": 1027.640625,
+            "width": 137,
+            "height": 19.5,
+            "right": 304
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "BMW 540",
+          "price": {
+            "x": 167,
+            "y": 1067.140625,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 247.046875
+          },
+          "meta": {
+            "x": 167,
+            "y": 1049.140625,
+            "width": 137,
+            "height": 16,
+            "right": 304
+          },
+          "save": {
+            "x": 260,
+            "y": 1056.390625,
+            "width": 44,
+            "height": 44,
+            "right": 304
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW X3",
+          "box": {
+            "x": 16,
+            "y": 1103.640625,
+            "width": 137,
+            "height": 159.328125,
+            "right": 153
+          },
+          "title": {
+            "x": 16,
+            "y": 1200.96875,
+            "width": 137,
+            "height": 19.5,
+            "right": 153
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "BMW X3",
+          "price": {
+            "x": 16,
+            "y": 1240.46875,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 96.046875
+          },
+          "meta": {
+            "x": 16,
+            "y": 1222.46875,
+            "width": 137,
+            "height": 16,
+            "right": 153
+          },
+          "save": {
+            "x": 109,
+            "y": 1229.71875,
+            "width": 44,
+            "height": 44,
+            "right": 153
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW 120",
+          "box": {
+            "x": 167,
+            "y": 1103.640625,
+            "width": 137,
+            "height": 159.328125,
+            "right": 304
+          },
+          "title": {
+            "x": 167,
+            "y": 1200.96875,
+            "width": 137,
+            "height": 19.5,
+            "right": 304
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "BMW 120",
+          "price": {
+            "x": 167,
+            "y": 1240.46875,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 247.046875
+          },
+          "meta": {
+            "x": 167,
+            "y": 1222.46875,
+            "width": 137,
+            "height": 16,
+            "right": 304
+          },
+          "save": {
+            "x": 260,
+            "y": 1229.71875,
+            "width": 44,
+            "height": 44,
+            "right": 304
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Mercedes-Benz GLE",
+          "box": {
+            "x": 16,
+            "y": 1276.96875,
+            "width": 137,
+            "height": 159.328125,
+            "right": 153
+          },
+          "title": {
+            "x": 16,
+            "y": 1374.296875,
+            "width": 137,
+            "height": 19.5,
+            "right": 153
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "Mercedes-Benz GLE",
+          "price": {
+            "x": 16,
+            "y": 1413.796875,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 96.046875
+          },
+          "meta": {
+            "x": 16,
+            "y": 1395.796875,
+            "width": 137,
+            "height": 16,
+            "right": 153
+          },
+          "save": {
+            "x": 109,
+            "y": 1403.046875,
+            "width": 44,
+            "height": 44,
+            "right": 153
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Audi RS6",
+          "box": {
+            "x": 167,
+            "y": 1276.96875,
+            "width": 137,
+            "height": 159.328125,
+            "right": 304
+          },
+          "title": {
+            "x": 167,
+            "y": 1374.296875,
+            "width": 137,
+            "height": 19.5,
+            "right": 304
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "Audi RS6",
+          "price": {
+            "x": 167,
+            "y": 1413.796875,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 247.046875
+          },
+          "meta": {
+            "x": 167,
+            "y": 1395.796875,
+            "width": 137,
+            "height": 16,
+            "right": 304
+          },
+          "save": {
+            "x": 260,
+            "y": 1403.046875,
+            "width": 44,
+            "height": 44,
+            "right": 304
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW X6",
+          "box": {
+            "x": 16,
+            "y": 1450.296875,
+            "width": 137,
+            "height": 159.328125,
+            "right": 153
+          },
+          "title": {
+            "x": 16,
+            "y": 1547.625,
+            "width": 137,
+            "height": 19.5,
+            "right": 153
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "BMW X6",
+          "price": {
+            "x": 16,
+            "y": 1587.125,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 96.046875
+          },
+          "meta": {
+            "x": 16,
+            "y": 1569.125,
+            "width": 137,
+            "height": 16,
+            "right": 153
+          },
+          "save": {
+            "x": 109,
+            "y": 1576.375,
+            "width": 44,
+            "height": 44,
+            "right": 153
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Mercedes-Benz AMG GT",
+          "box": {
+            "x": 167,
+            "y": 1450.296875,
+            "width": 137,
+            "height": 159.328125,
+            "right": 304
+          },
+          "title": {
+            "x": 167,
+            "y": 1547.625,
+            "width": 137,
+            "height": 19.5,
+            "right": 304
+          },
+          "lineHeight": 19.5,
+          "fontSize": "15px",
+          "weight": "500",
+          "tooltip": "Mercedes-Benz AMG GT",
+          "price": {
+            "x": 167,
+            "y": 1587.125,
+            "width": 80.046875,
+            "height": 22.5,
+            "right": 247.046875
+          },
+          "meta": {
+            "x": 167,
+            "y": 1569.125,
+            "width": 137,
+            "height": 16,
+            "right": 304
+          },
+          "save": {
+            "x": 260,
+            "y": 1576.375,
+            "width": 44,
+            "height": 44,
+            "right": 304
+          },
+          "priceClipped": false,
+          "factsFit": true
+        }
+      ],
+      "enlargedText": "200 percent text reflows into one column with full prices"
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "columns": 4,
+      "cards": [
+        {
+          "name": "BMW X6",
+          "box": {
+            "x": 52,
+            "y": 420,
+            "width": 214.25,
+            "height": 279.890625,
+            "right": 266.25
+          },
+          "title": {
+            "x": 69,
+            "y": 558.5,
+            "width": 180.25,
+            "height": 20.796875,
+            "right": 249.25
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "BMW X6",
+          "price": {
+            "x": 69,
+            "y": 656.296875,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 149.046875
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 221.25,
+            "y": 421,
+            "width": 44,
+            "height": 44,
+            "right": 265.25
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW 540",
+          "box": {
+            "x": 282.25,
+            "y": 420,
+            "width": 214.25,
+            "height": 279.890625,
+            "right": 496.5
+          },
+          "title": {
+            "x": 299.25,
+            "y": 558.5,
+            "width": 180.25,
+            "height": 20.796875,
+            "right": 479.5
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "BMW 540",
+          "price": {
+            "x": 299.25,
+            "y": 656.296875,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 379.296875
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 451.5,
+            "y": 421,
+            "width": 44,
+            "height": 44,
+            "right": 495.5
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW X3",
+          "box": {
+            "x": 512.5,
+            "y": 420,
+            "width": 214.25,
+            "height": 279.890625,
+            "right": 726.75
+          },
+          "title": {
+            "x": 529.5,
+            "y": 558.5,
+            "width": 180.25,
+            "height": 20.796875,
+            "right": 709.75
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "BMW X3",
+          "price": {
+            "x": 529.5,
+            "y": 656.296875,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 609.546875
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 681.75,
+            "y": 421,
+            "width": 44,
+            "height": 44,
+            "right": 725.75
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW 120",
+          "box": {
+            "x": 742.75,
+            "y": 420,
+            "width": 214.25,
+            "height": 279.890625,
+            "right": 957
+          },
+          "title": {
+            "x": 759.75,
+            "y": 558.5,
+            "width": 180.25,
+            "height": 20.796875,
+            "right": 940
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "BMW 120",
+          "price": {
+            "x": 759.75,
+            "y": 656.296875,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 839.796875
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 912,
+            "y": 421,
+            "width": 44,
+            "height": 44,
+            "right": 956
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Mercedes-Benz GLE",
+          "box": {
+            "x": 52,
+            "y": 715.890625,
+            "width": 214.25,
+            "height": 300.6875,
+            "right": 266.25
+          },
+          "title": {
+            "x": 69,
+            "y": 854.390625,
+            "width": 180.25,
+            "height": 20.796875,
+            "right": 249.25
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "Mercedes-Benz GLE",
+          "price": {
+            "x": 69,
+            "y": 972.984375,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 149.046875
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 221.25,
+            "y": 716.890625,
+            "width": 44,
+            "height": 44,
+            "right": 265.25
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Audi RS6",
+          "box": {
+            "x": 282.25,
+            "y": 715.890625,
+            "width": 214.25,
+            "height": 300.6875,
+            "right": 496.5
+          },
+          "title": {
+            "x": 299.25,
+            "y": 854.390625,
+            "width": 180.25,
+            "height": 20.796875,
+            "right": 479.5
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "Audi RS6",
+          "price": {
+            "x": 299.25,
+            "y": 972.984375,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 379.296875
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 451.5,
+            "y": 716.890625,
+            "width": 44,
+            "height": 44,
+            "right": 495.5
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Mercedes-Benz AMG GT",
+          "box": {
+            "x": 512.5,
+            "y": 715.890625,
+            "width": 214.25,
+            "height": 300.6875,
+            "right": 726.75
+          },
+          "title": {
+            "x": 529.5,
+            "y": 854.390625,
+            "width": 180.25,
+            "height": 41.59375,
+            "right": 709.75
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "Mercedes-Benz AMG GT",
+          "price": {
+            "x": 529.5,
+            "y": 972.984375,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 609.546875
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 681.75,
+            "y": 716.890625,
+            "width": 44,
+            "height": 44,
+            "right": 725.75
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW X6",
+          "box": {
+            "x": 742.75,
+            "y": 715.890625,
+            "width": 214.25,
+            "height": 300.6875,
+            "right": 957
+          },
+          "title": {
+            "x": 759.75,
+            "y": 854.390625,
+            "width": 180.25,
+            "height": 20.796875,
+            "right": 940
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "BMW X6",
+          "price": {
+            "x": 759.75,
+            "y": 972.984375,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 839.796875
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 912,
+            "y": 716.890625,
+            "width": 44,
+            "height": 44,
+            "right": 956
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Audi RSQ8",
+          "box": {
+            "x": 52,
+            "y": 1032.578125,
+            "width": 214.25,
+            "height": 279.890625,
+            "right": 266.25
+          },
+          "title": {
+            "x": 69,
+            "y": 1171.078125,
+            "width": 180.25,
+            "height": 20.796875,
+            "right": 249.25
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "Audi RSQ8",
+          "price": {
+            "x": 69,
+            "y": 1268.875,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 149.046875
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 221.25,
+            "y": 1033.578125,
+            "width": 44,
+            "height": 44,
+            "right": 265.25
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW 540",
+          "box": {
+            "x": 282.25,
+            "y": 1032.578125,
+            "width": 214.25,
+            "height": 279.890625,
+            "right": 496.5
+          },
+          "title": {
+            "x": 299.25,
+            "y": 1171.078125,
+            "width": 180.25,
+            "height": 20.796875,
+            "right": 479.5
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "BMW 540",
+          "price": {
+            "x": 299.25,
+            "y": 1268.875,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 379.296875
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 451.5,
+            "y": 1033.578125,
+            "width": 44,
+            "height": 44,
+            "right": 495.5
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW X3",
+          "box": {
+            "x": 512.5,
+            "y": 1032.578125,
+            "width": 214.25,
+            "height": 279.890625,
+            "right": 726.75
+          },
+          "title": {
+            "x": 529.5,
+            "y": 1171.078125,
+            "width": 180.25,
+            "height": 20.796875,
+            "right": 709.75
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "BMW X3",
+          "price": {
+            "x": 529.5,
+            "y": 1268.875,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 609.546875
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 681.75,
+            "y": 1033.578125,
+            "width": 44,
+            "height": 44,
+            "right": 725.75
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW 120",
+          "box": {
+            "x": 742.75,
+            "y": 1032.578125,
+            "width": 214.25,
+            "height": 279.890625,
+            "right": 957
+          },
+          "title": {
+            "x": 759.75,
+            "y": 1171.078125,
+            "width": 180.25,
+            "height": 20.796875,
+            "right": 940
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "BMW 120",
+          "price": {
+            "x": 759.75,
+            "y": 1268.875,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 839.796875
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 912,
+            "y": 1033.578125,
+            "width": 44,
+            "height": 44,
+            "right": 956
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Mercedes-Benz GLE",
+          "box": {
+            "x": 52,
+            "y": 1328.46875,
+            "width": 214.25,
+            "height": 300.6875,
+            "right": 266.25
+          },
+          "title": {
+            "x": 69,
+            "y": 1466.96875,
+            "width": 180.25,
+            "height": 20.796875,
+            "right": 249.25
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "Mercedes-Benz GLE",
+          "price": {
+            "x": 69,
+            "y": 1585.5625,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 149.046875
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 221.25,
+            "y": 1329.46875,
+            "width": 44,
+            "height": 44,
+            "right": 265.25
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Audi RS6",
+          "box": {
+            "x": 282.25,
+            "y": 1328.46875,
+            "width": 214.25,
+            "height": 300.6875,
+            "right": 496.5
+          },
+          "title": {
+            "x": 299.25,
+            "y": 1466.96875,
+            "width": 180.25,
+            "height": 20.796875,
+            "right": 479.5
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "Audi RS6",
+          "price": {
+            "x": 299.25,
+            "y": 1585.5625,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 379.296875
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 451.5,
+            "y": 1329.46875,
+            "width": 44,
+            "height": 44,
+            "right": 495.5
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW X6",
+          "box": {
+            "x": 512.5,
+            "y": 1328.46875,
+            "width": 214.25,
+            "height": 300.6875,
+            "right": 726.75
+          },
+          "title": {
+            "x": 529.5,
+            "y": 1466.96875,
+            "width": 180.25,
+            "height": 20.796875,
+            "right": 709.75
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "BMW X6",
+          "price": {
+            "x": 529.5,
+            "y": 1585.5625,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 609.546875
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 681.75,
+            "y": 1329.46875,
+            "width": 44,
+            "height": 44,
+            "right": 725.75
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Mercedes-Benz AMG GT",
+          "box": {
+            "x": 742.75,
+            "y": 1328.46875,
+            "width": 214.25,
+            "height": 300.6875,
+            "right": 957
+          },
+          "title": {
+            "x": 759.75,
+            "y": 1466.96875,
+            "width": 180.25,
+            "height": 41.59375,
+            "right": 940
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "Mercedes-Benz AMG GT",
+          "price": {
+            "x": 759.75,
+            "y": 1585.5625,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 839.796875
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 912,
+            "y": 1329.46875,
+            "width": 44,
+            "height": 44,
+            "right": 956
+          },
+          "priceClipped": false,
+          "factsFit": true
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "columns": 5,
+      "cards": [
+        {
+          "name": "BMW X6",
+          "box": {
+            "x": 52,
+            "y": 420,
+            "width": 251.390625,
+            "height": 304.65625,
+            "right": 303.390625
+          },
+          "title": {
+            "x": 69,
+            "y": 583.25,
+            "width": 217.390625,
+            "height": 20.796875,
+            "right": 286.390625
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "BMW X6",
+          "price": {
+            "x": 69,
+            "y": 681.0625,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 149.046875
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 258.390625,
+            "y": 421,
+            "width": 44,
+            "height": 44,
+            "right": 302.390625
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW 540",
+          "box": {
+            "x": 319.390625,
+            "y": 420,
+            "width": 251.40625,
+            "height": 304.65625,
+            "right": 570.796875
+          },
+          "title": {
+            "x": 336.390625,
+            "y": 583.265625,
+            "width": 217.40625,
+            "height": 20.796875,
+            "right": 553.796875
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "BMW 540",
+          "price": {
+            "x": 336.390625,
+            "y": 681.0625,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 416.4375
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 525.796875,
+            "y": 421,
+            "width": 44,
+            "height": 44,
+            "right": 569.796875
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW X3",
+          "box": {
+            "x": 586.796875,
+            "y": 420,
+            "width": 251.390625,
+            "height": 304.65625,
+            "right": 838.1875
+          },
+          "title": {
+            "x": 603.796875,
+            "y": 583.25,
+            "width": 217.390625,
+            "height": 20.796875,
+            "right": 821.1875
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "BMW X3",
+          "price": {
+            "x": 603.796875,
+            "y": 681.0625,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 683.84375
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 793.1875,
+            "y": 421,
+            "width": 44,
+            "height": 44,
+            "right": 837.1875
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW 120",
+          "box": {
+            "x": 854.1875,
+            "y": 420,
+            "width": 251.40625,
+            "height": 304.65625,
+            "right": 1105.59375
+          },
+          "title": {
+            "x": 871.1875,
+            "y": 583.265625,
+            "width": 217.40625,
+            "height": 20.796875,
+            "right": 1088.59375
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "BMW 120",
+          "price": {
+            "x": 871.1875,
+            "y": 681.0625,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 951.234375
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 1060.59375,
+            "y": 421,
+            "width": 44,
+            "height": 44,
+            "right": 1104.59375
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Mercedes-Benz GLE",
+          "box": {
+            "x": 1121.59375,
+            "y": 420,
+            "width": 251.390625,
+            "height": 304.65625,
+            "right": 1372.984375
+          },
+          "title": {
+            "x": 1138.59375,
+            "y": 583.25,
+            "width": 217.390625,
+            "height": 20.796875,
+            "right": 1355.984375
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "Mercedes-Benz GLE",
+          "price": {
+            "x": 1138.59375,
+            "y": 681.0625,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 1218.640625
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 1327.984375,
+            "y": 421,
+            "width": 44,
+            "height": 44,
+            "right": 1371.984375
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Audi RS6",
+          "box": {
+            "x": 52,
+            "y": 740.65625,
+            "width": 251.390625,
+            "height": 304.65625,
+            "right": 303.390625
+          },
+          "title": {
+            "x": 69,
+            "y": 903.90625,
+            "width": 217.390625,
+            "height": 20.796875,
+            "right": 286.390625
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "Audi RS6",
+          "price": {
+            "x": 69,
+            "y": 1001.71875,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 149.046875
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 258.390625,
+            "y": 741.65625,
+            "width": 44,
+            "height": 44,
+            "right": 302.390625
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Mercedes-Benz AMG GT",
+          "box": {
+            "x": 319.390625,
+            "y": 740.65625,
+            "width": 251.40625,
+            "height": 304.65625,
+            "right": 570.796875
+          },
+          "title": {
+            "x": 336.390625,
+            "y": 903.921875,
+            "width": 217.40625,
+            "height": 20.796875,
+            "right": 553.796875
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "Mercedes-Benz AMG GT",
+          "price": {
+            "x": 336.390625,
+            "y": 1001.71875,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 416.4375
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 525.796875,
+            "y": 741.65625,
+            "width": 44,
+            "height": 44,
+            "right": 569.796875
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW X6",
+          "box": {
+            "x": 586.796875,
+            "y": 740.65625,
+            "width": 251.390625,
+            "height": 304.65625,
+            "right": 838.1875
+          },
+          "title": {
+            "x": 603.796875,
+            "y": 903.90625,
+            "width": 217.390625,
+            "height": 20.796875,
+            "right": 821.1875
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "BMW X6",
+          "price": {
+            "x": 603.796875,
+            "y": 1001.71875,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 683.84375
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 793.1875,
+            "y": 741.65625,
+            "width": 44,
+            "height": 44,
+            "right": 837.1875
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Audi RSQ8",
+          "box": {
+            "x": 854.1875,
+            "y": 740.65625,
+            "width": 251.40625,
+            "height": 304.65625,
+            "right": 1105.59375
+          },
+          "title": {
+            "x": 871.1875,
+            "y": 903.921875,
+            "width": 217.40625,
+            "height": 20.796875,
+            "right": 1088.59375
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "Audi RSQ8",
+          "price": {
+            "x": 871.1875,
+            "y": 1001.71875,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 951.234375
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 1060.59375,
+            "y": 741.65625,
+            "width": 44,
+            "height": 44,
+            "right": 1104.59375
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW 540",
+          "box": {
+            "x": 1121.59375,
+            "y": 740.65625,
+            "width": 251.390625,
+            "height": 304.65625,
+            "right": 1372.984375
+          },
+          "title": {
+            "x": 1138.59375,
+            "y": 903.90625,
+            "width": 217.390625,
+            "height": 20.796875,
+            "right": 1355.984375
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "BMW 540",
+          "price": {
+            "x": 1138.59375,
+            "y": 1001.71875,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 1218.640625
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 1327.984375,
+            "y": 741.65625,
+            "width": 44,
+            "height": 44,
+            "right": 1371.984375
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW X3",
+          "box": {
+            "x": 52,
+            "y": 1061.3125,
+            "width": 251.390625,
+            "height": 304.65625,
+            "right": 303.390625
+          },
+          "title": {
+            "x": 69,
+            "y": 1224.5625,
+            "width": 217.390625,
+            "height": 20.796875,
+            "right": 286.390625
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "BMW X3",
+          "price": {
+            "x": 69,
+            "y": 1322.375,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 149.046875
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 258.390625,
+            "y": 1062.3125,
+            "width": 44,
+            "height": 44,
+            "right": 302.390625
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW 120",
+          "box": {
+            "x": 319.390625,
+            "y": 1061.3125,
+            "width": 251.40625,
+            "height": 304.65625,
+            "right": 570.796875
+          },
+          "title": {
+            "x": 336.390625,
+            "y": 1224.578125,
+            "width": 217.40625,
+            "height": 20.796875,
+            "right": 553.796875
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "BMW 120",
+          "price": {
+            "x": 336.390625,
+            "y": 1322.375,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 416.4375
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 525.796875,
+            "y": 1062.3125,
+            "width": 44,
+            "height": 44,
+            "right": 569.796875
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Mercedes-Benz GLE",
+          "box": {
+            "x": 586.796875,
+            "y": 1061.3125,
+            "width": 251.390625,
+            "height": 304.65625,
+            "right": 838.1875
+          },
+          "title": {
+            "x": 603.796875,
+            "y": 1224.5625,
+            "width": 217.390625,
+            "height": 20.796875,
+            "right": 821.1875
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "Mercedes-Benz GLE",
+          "price": {
+            "x": 603.796875,
+            "y": 1322.375,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 683.84375
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 793.1875,
+            "y": 1062.3125,
+            "width": 44,
+            "height": 44,
+            "right": 837.1875
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Audi RS6",
+          "box": {
+            "x": 854.1875,
+            "y": 1061.3125,
+            "width": 251.40625,
+            "height": 304.65625,
+            "right": 1105.59375
+          },
+          "title": {
+            "x": 871.1875,
+            "y": 1224.578125,
+            "width": 217.40625,
+            "height": 20.796875,
+            "right": 1088.59375
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "Audi RS6",
+          "price": {
+            "x": 871.1875,
+            "y": 1322.375,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 951.234375
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 1060.59375,
+            "y": 1062.3125,
+            "width": 44,
+            "height": 44,
+            "right": 1104.59375
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "BMW X6",
+          "box": {
+            "x": 1121.59375,
+            "y": 1061.3125,
+            "width": 251.390625,
+            "height": 304.65625,
+            "right": 1372.984375
+          },
+          "title": {
+            "x": 1138.59375,
+            "y": 1224.5625,
+            "width": 217.390625,
+            "height": 20.796875,
+            "right": 1355.984375
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "BMW X6",
+          "price": {
+            "x": 1138.59375,
+            "y": 1322.375,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 1218.640625
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 1327.984375,
+            "y": 1062.3125,
+            "width": 44,
+            "height": 44,
+            "right": 1371.984375
+          },
+          "priceClipped": false,
+          "factsFit": true
+        },
+        {
+          "name": "Mercedes-Benz AMG GT",
+          "box": {
+            "x": 52,
+            "y": 1381.96875,
+            "width": 251.390625,
+            "height": 304.640625,
+            "right": 303.390625
+          },
+          "title": {
+            "x": 69,
+            "y": 1545.21875,
+            "width": 217.390625,
+            "height": 20.796875,
+            "right": 286.390625
+          },
+          "lineHeight": 20.8,
+          "fontSize": "16px",
+          "weight": "600",
+          "tooltip": "Mercedes-Benz AMG GT",
+          "price": {
+            "x": 69,
+            "y": 1643.015625,
+            "width": 80.046875,
+            "height": 25.1875,
+            "right": 149.046875
+          },
+          "meta": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0
+          },
+          "save": {
+            "x": 258.390625,
+            "y": 1382.96875,
+            "width": 44,
+            "height": 44,
+            "right": 302.390625
+          },
+          "priceClipped": false,
+          "factsFit": true
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "status": "passed"
+}

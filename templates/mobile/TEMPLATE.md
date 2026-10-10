@@ -13,20 +13,29 @@ category tabs, horizontal filter pills and photo-led inventory share one screen.
 The native icon row offers cars, motorbikes, e-bikes, motorhomes and trucks & more.
 Used/New condition choices live inside Filters. Category selections retain their
 own filters; categories without sample stock show an honest empty state.
-On Cars and Services, the logo header and search scroll with the page. On Cars,
-the category tabs also scroll away, leaving only the quick-filter pills pinned
-above the continuous white results canvas on phones. The phone Home header groups
+On Cars and Services, the logo header and original search scroll with the page.
+On Cars, categories and quick-filter pills also scroll away. Below 1024px, a
+compact search/filter/sort row appears after the pills leave the viewport. Its
+57px row has 36px painted faces inside 44px targets, 14px labels and 16px icons,
+plus a short applied-filter summary and a filter count. Safe-area padding can
+increase the row height on devices that need it.
+Search and Filters open the existing editor; closing it restores the opener and
+browsing position. The extra row is hidden and inert at the top and absent from
+the desktop layout. The phone Home header groups
 the retained logo, search and vehicle categories on white, with the original
-unboxed category artwork. The phone category scroll viewport uses the same 16px
+unboxed category artwork. Primary phone search uses a flat light-gray fill;
+compact quick pills use a lighter gray fill and dark selected faces on white.
+The sticky search uses the same fill as the primary search. The phone category
+scroll viewport uses the same 16px
 side gutters as search and quick filters. Its category rail shares the Services
 tab rail's soft shadow below 700px. Applying
 filters moves browsing to that panel after the editor closes; the page keeps a single natural scroll
 area, including short and empty result lists. Services retains its pinned category
 tabs and quick-filter pills. Its phone category rail sits 8px below the same
-raised white 48px search used on Home; the rail's shadow is clipped above the
+flat light-gray 48px search used on Home; the rail's shadow is clipped above the
 tabs and retained below them. Services uses the same continuous white canvas
-and compact white quick-pill rail as Cars, with 16px from pill face to content.
-Phone service cards retain their artwork and use the lighter car-card edge and
+and compact gray quick pills on white as Cars, with 16px from pill face to content.
+Phone service cards retain their artwork, faint edge and
 subtle shadow. The raised white tab rail retains its spacing and
 shadow. Cancelling an editor or closing sorting restores the opener and the saved
 browsing position. Detail and editor headers remain sticky so Back and dismissal controls
@@ -71,17 +80,39 @@ return. Outside clicks, focus leaving the menu and the phone breakpoint dismiss 
 Phones keep their floating dock, spacing and navigation behavior.
 The desktop page frame is capped at 1400px with at least 24px outer gutters.
 `showroom-desktop-tokens.stylex.ts` owns the frame width and gutters.
-Home and Saved cars share the listing grid: four columns from 1024px.
+Home, Saved and related cars share the listing grid: four columns from 1024px,
+five from 1440px.
 Vehicle and enquiry action bars use the same frame bounds.
-Cards use 16px semibold desktop titles, 13px facts and 18px prices.
-Smaller screens retain
-their existing composition. Responsive listing image sizes follow the photo bounds.
-Cars, Services and Contact share a 300px desktop hero below the 72px header,
-aligned headings, and the same 28px content-drawer overlap. Hero copy takes its
-natural height, with 24px before controls rather than a reserved description
-slot. Shared hero tokens own the height, gap and padding. Desktop navigation
-retains its compact 34px faces with 16px text; supporting Services and Contact
-copy uses 16px text.
+Desktop cards lead with 20–22px bold prices and 16px medium-weight names,
+followed by year, mileage, gearbox and fuel pills. Phone cards retain 15px medium-weight names
+and 18px prices. Phones and tablets show
+two columns, with one-column reflow for enlarged phone text or a single saved car.
+Responsive listing image sizes follow the photo bounds.
+Cars, Services and Contact share a 380px desktop hero below the 72px header,
+with the same location line, heading typography, vertical heading anchor and
+28px content-drawer overlap. The shared hero stylesheet and ShowroomHeroHeading
+own this frame. A two-row desktop grid centers the heading and a 68px control
+row. Home keeps its 1040px vehicle-search capsule and existing fields;
+non-car search keeps its 880px width. Services uses a single 620px search
+capsule in the hero. All / Import / Sell appear as desktop pills in the
+content drawer below, alongside contextual service filters. They inherit
+Home's desktop base font, use 16px/22px labels with 40px painted faces inside
+44px targets, 12px horizontal face padding and 8px gaps. No additional button
+padding widens the category pills. The category/filter handlers and keyboard
+navigation remain. The control row can wrap at narrower desktop widths.
+Contact uses compact 44px write/call/map actions in the same hero control row.
+Write focuses the existing enquiry field; Call appears only for a verified
+configured phone, and the map action uses the existing contact location.
+The white description capsule is replaced by natural-width actions.
+The contact body is capped at 1040px with a map/details panel beside the enquiry
+form, aligned at the top rather than stretched to equal heights. The desktop
+map panel uses 20px padding, an 18px title and 15px contact details. Supporting
+form copy retains 16px text.
+Below 1024px the shared wrappers remain display: contents; phone headings
+retain their accessible hidden treatment and the phone control composition.
+Services and Contact inherit the same base font as Home instead of forcing a
+separate desktop font. Desktop navigation retains its compact 34px faces with
+16px text.
 Utility headers use 24px titles on desktop. Settings supporting copy and language
 options use 16px desktop text; their phone typography remains unchanged.
 Escape also closes desktop filter popovers when focus remains on their trigger.
@@ -91,10 +122,7 @@ fuel, gearbox, body type and condition. From/To share one outlined field; checkb
 options use plain rows within their group. These compact styles apply only to
 All filters; phone editors and desktop quick popovers retain their presentation.
 The fixed footer applies the draft; Escape cancels and restores the opener.
-Desktop Services uses three equal glass segments in a compact 48px rail with
-16px labels, 44px targets, uniform translucent edges and a stable width across selection.
-The rail stays smaller than the 60px search field. The phone Services tabs retain their
-underline composition.
+Phone Services tabs retain their existing underline composition.
 
 Desktop inventory uses compact, natural-width pills for Year, Mileage, Fuel,
 Gearbox, Body type and Condition in a soft gray sticky rail. White 36px faces
@@ -122,19 +150,22 @@ search and category navigation.
 Tab rails use the same page
 or sheet surface token. No route adds its own neutral palette. The centered desktop
 frame keeps the white page token, with the existing stripe token outside it.
-Phone search keeps the shared pill shape around its raised 48px target.
+Phone search keeps the shared pill shape around its flat light-gray 48px target.
 Home and Services category rails use a quieter lower shadow, retaining their
-active underline. Quick-filter pills use the existing stronger line token below
-700px, separating their white faces from the white rail without a gray fill.
-Tablet and desktop controls retain their existing geometry and styling.
-White vehicle cards use a faint 1px `colors.cardLine` edge and a low-opacity
-neutral shadow on larger screens. Year, mileage and fuel share a quiet 14px
-text row with decorative dot separators. Facts can wrap without becoming controls.
-Inventory, Saved and related vehicles use the same card composition.
+active underline. Inactive quick-filter pills use the lighter gray stripe token
+with transparent borders on the white rail; selected pills retain their dark fill.
+Tablet controls and desktop quick-filter pills retain their existing geometry and styling.
+Vehicle cards use the owner's Signature references at port 6478. Desktop cards
+have a faint rounded edge and a white information panel over the photo edge.
+Year, mileage, transmission and fuel use quiet pills below the name. Phones use
+unboxed photo/name/year-and-mileage/price cards. Inventory, Saved and related
+vehicles share the card; photographs remain clear of specification badges.
 On phones, a `colors.background` results sheet sits beneath the
 quick pills with 16px before the first card. Cars uses a continuous white canvas;
-Services also uses a continuous white canvas without raised upper corners. The list retains the page's natural scroll; the pill row stays sticky above
-it. The edge token has a corresponding dark-theme value.
+Services also uses a continuous white canvas without raised upper corners. Both
+lists retain the page's natural scroll. Cars keeps compact search/filter/sort
+access while browsing; Services retains its sticky pill row. The edge token has
+a corresponding dark-theme value.
 Service and import cards, Contact panels and enquiry starters retain the same
 1px `colors.line` border. Existing corner radii and padding remain.
 
@@ -212,25 +243,42 @@ Desktop content has 24px gutters and a 240px apply action with 16px text.
 The native backdrop uses an 8px blur with a light 22% dim on desktop.
 Phones retain the full-screen editor, scrolling tabs, stacked settings and
 full-width apply action.
-Inventory and Saved use a desktop tile with a rounded 3:2 photo from 1024px.
-The 16px semibold model and 18px price share a row below the photo, followed by
-one row of year/mileage/fuel facts. At card widths of 280px or less, a compact
-white price label in the photo leaves the full caption width for the model.
-Desktop cards omit the trim line, separate price footer, Details control,
-outer border, shadow and photo gradient. Related cards use the same layout.
+Inventory, Saved and related vehicles use 3:2 photos. Desktop uses four columns
+from 1024px and five from 1440px. The white rounded information panel starts
+20px over the photo edge. A 20–22px bold price leads the panel, with a 16px
+medium-weight model name 4px below it. Four neutral fact pills form two rows
+8px below the heading: year and mileage, then transmission and fuel. The rows
+have a 6px gap. Desktop panels retain 16px padding. Small cards use 12px facts
+and 20px prices; wider cards use 13px facts and 22px prices. Desktop
+names can occupy two lines, with the full name in the tooltip.
+The full card opens its vehicle. The price is plain text, with no extra badge.
+The trim and power remain in the vehicle details.
+
+Phones show two compact cards per row, with 15px medium-weight, single-line
+names, 12px year/mileage text and 18px prices. Long names use an ellipsis; the
+full name remains in the tooltip and accessible card label. The caption starts
+6px below the photo with 2px content gaps; the price row follows its text height.
+Year/mileage uses a 1rem line box and the price uses 1.25 line-height. The
+price row uses the full card width.
+Their 12px-rounded photos have no fact overlay. White padding embedded in the
+BMW 120 photos is cropped before clipping, matching the desktop crop. The 8rem minimum card width keeps two columns at 320px even with a 15px
+classic scrollbar. The grid can reduce to one column for enlarged text or a
+single saved car. Phone and tablet cards below 1024px have no wishlist overlay;
+saving remains in the vehicle page's header. Desktop cards retain their small
+photo-corner heart, with a 17px outline, 26px visible face and 44px target.
+A full-card native link opens the correct vehicle, preserves inventory return
+context and has an inset keyboard focus ring. There is no separate desktop
+View button; the full-card link is the primary navigation target.
+The Saved empty state directs people to open a car to save it. Bulgarian PDP
+condition values use `Употребяван` and `Нов`, including the compound new/accident
+status. Visible section labels use `Описание` and `Подобни` without repeating
+that the page describes a car. Captured vehicle facts and save storage are intact.
+
 BMW X6, 540 and X3 desktop covers use selected existing exterior gallery photos;
 phones retain their original images through the picture's media source.
-The 540 cover is framed around the vehicle to reduce embedded donor graphics.
-Known photos with built-in letterboxing use the existing crop helper on desktop.
-The grid aligns prices within each row without a fixed height. The full card opens the vehicle,
-including its photo, facts and price, and has an inset keyboard focus ring.
-Phone titles remain 18px and prices 20px; phone facts retain their compact badges.
-Phone photos retain 16:10 cropping. Prices use weight 700. The compact desktop
-price label uses 16px text. Power remains in the vehicle details.
-Desktop names use one line with the full name available in the title tooltip.
-Facts use 12px text when the actual desktop card is under 250px wide.
-Photo save actions use the outline-heart family, with a 36px white face inside a
-48px button and an explicit pressed state. Import cards retain their 12px padding.
+The 540 cover keeps its existing crop; embedded donor branding remains in some
+sample photographs. Known letterboxed photos retain their desktop crop helper.
+Import cards retain their 12px padding.
 
 Phone vehicle detail retains its compact 20px title, 18px advertised price,
 rounded trim pills and side-by-side Contact and Enquire actions. An explicitly
@@ -558,7 +606,7 @@ entry. The configured phone still controls real dialing; the neutral preview
 number remains disabled. Services reserves a right chevron column even at 320px
 and aligns it with the title. Its search surface sits above the tab rail below
 1024px, and the phone tab wrapper contains its top spacing. The tablet Services
-divider is removed. Raised search uses the same white surface and 48px height
-throughout the non-desktop layout. Inactive discovery pills and their rail
-use the same white page token below 1024px, with faint borders; selected pills
+divider is removed. Phone search uses the same light-gray surface and 48px height
+throughout the non-desktop layout. Inactive discovery pills use the lighter gray
+stripe token on a white rail below 1024px; selected pills
 retain their dark state and the category rail retains its soft lift.
