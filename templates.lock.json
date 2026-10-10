@@ -5,61 +5,225 @@
     "auto-best": {
       "repository": "darkapoparka/cars",
       "status": "approved",
-      "commit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
-      "release": "2026.09.30",
+      "commit": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+      "release": "six-design-source-auto-best-2026-10-09",
       "snapshotPath": "templates/auto-best",
-      "digest": "77644e5f217932973c88a81a4e1fd136efd0ca351d6aeee0dca1daa94ad42964",
+      "digest": "bc08eb6123546c0e0cb0f4d21e2209450bfe642e542515b53f557016d14416d2",
       "exportPolicy": "cars-source-v1",
       "observedUpstreamCommit": "1a32dc2b994d78c794e2d19bfd2d24c7adc48807",
       "runtime": {
-        "node": "22.x",
-        "hosting": "Vercel production build",
-        "browser": "Chrome"
+        "node": "22.23.2",
+        "focusedChecksNode": "22.20.0",
+        "pnpm": "11.4.0"
       },
       "modes": {
-        "standalone": "Hosted EN/BG acceptance passed for the exact canonical runtime source.",
-        "mounted": "Explicit dealer refresh, preservation assertions and hosted verification required."
+        "standalone": "Exact-source READY public master browser checks.",
+        "mounted": "Actual source-bound compiler output and EN/BG320/390/1440 journeys at both variant-2 and variant-3.",
+        "dealer": "Requires final individualized build and public alias verification."
       },
       "qa": {
-        "evidence": "docs/releases/final-polish-2026-09-30/auto-best-release.json",
-        "verifiedAt": "2026-09-30T09:43:35.799Z",
+        "evidence": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-release.json",
+        "verifiedAt": "2026-10-09T16:44:29.045Z",
         "checks": [
           {
-            "name": "exact-source-and-mirror-mapping",
+            "name": "catalog-completeness",
             "status": "passed",
-            "evidence": "docs/releases/final-polish-2026-09-30/auto-best-acceptance.json",
-            "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732"
+            "scope": "Exact committed catalogs have complete EN/BG key and interpolation parity; actual public rendering is covered separately. This is not a claim of perfect translations for arbitrary future dealer data.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-catalogs.json",
+                "sha256": "e1aa651386fad4e385f01e8ad2ebacb9b4f96f8dc020406c3aee4f43150ed11a"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-native-tests.json",
+                "sha256": "1e39905392f9640b481f3253f82a312cc72afff8c7e36f7402786faec2b198f0"
+              }
+            ],
+            "evidenceSha256": "bb8cc14fac3feb2672da267386904616e67c2da52cada7273221650d2f1d4a92"
           },
           {
-            "name": "vercel-production-build",
+            "name": "hardcoded-ui",
             "status": "passed",
-            "evidence": "docs/releases/final-polish-2026-09-30/auto-best-acceptance.json",
-            "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732"
+            "scope": "Fresh locale route audits check visible text and language leaks, plus exact selected native source/copy tests. New source is not excused as styles-only; September behavior evidence is not relabelled.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-native-tests.json",
+                "sha256": "1e39905392f9640b481f3253f82a312cc72afff8c7e36f7402786faec2b198f0"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-public-qualified.json",
+                "sha256": "dcb91eb17d604d7363266a64e8d7f6e636aa0e9bed72cde6b2ba980c2cf69404"
+              }
+            ],
+            "evidenceSha256": "f72f9d762bb43f6a8fdca14ddd9b2a66dbb22ad35ce62dff78fa57dbca61d3c0"
           },
           {
-            "name": "public-en-bg-browser-acceptance",
+            "name": "native-routing",
             "status": "passed",
-            "evidence": "docs/releases/final-polish-2026-09-30/auto-best-acceptance.json",
-            "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732"
+            "scope": "Fresh native policy tests and public redirect, resource/admin boundary, locale navigation and deep-link checks.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-native-tests.json",
+                "sha256": "1e39905392f9640b481f3253f82a312cc72afff8c7e36f7402786faec2b198f0"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-public-http.json",
+                "sha256": "5d236f0c3c84722755b2bf7aea4428058bfeccbece747098187a013d7afa5edb"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-public-qualified.json",
+                "sha256": "dcb91eb17d604d7363266a64e8d7f6e636aa0e9bed72cde6b2ba980c2cf69404"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-mounted.json",
+                "sha256": "e989e1f1a407b53a422a1863c5ceb57c07b978b60c9486eef3094e30286bf066"
+              }
+            ],
+            "evidenceSha256": "b04a2afcc69b6d1c5dac8882e06d052858621e308eca33f8e4137bd0701b0464"
+          },
+          {
+            "name": "standalone-journeys",
+            "status": "passed",
+            "scope": "Fresh selected-source standalone master public journeys in EN/BG at 320/390/1440. Local mounted compilation is separate evidence.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-public-qualified.json",
+                "sha256": "dcb91eb17d604d7363266a64e8d7f6e636aa0e9bed72cde6b2ba980c2cf69404"
+              }
+            ],
+            "evidenceSha256": "38ed127533f033eb6c5cd76698476819102e05188a1f208f20b92cb89f0a7160"
+          },
+          {
+            "name": "mounted-journeys",
+            "status": "passed",
+            "scope": "Await fresh exact-source mounted runtime proof at all required widths/locales and both Modern/Import slot orders from the publisher owner.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-mounted.json",
+                "sha256": "e989e1f1a407b53a422a1863c5ceb57c07b978b60c9486eef3094e30286bf066"
+              }
+            ],
+            "evidenceSha256": "1a8b7d73db0e4f98ef7d90b804b14a96eef66b81e34caab1a8fa8afa9ff72ffe"
+          },
+          {
+            "name": "public-journeys",
+            "status": "passed",
+            "scope": "Fresh anonymous exact-source READY master public browser journeys. Dealer hosted acceptance still required after the package is deployed.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-public-qualified.json",
+                "sha256": "dcb91eb17d604d7363266a64e8d7f6e636aa0e9bed72cde6b2ba980c2cf69404"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-public-provider-continuity.json",
+                "sha256": "2372e7dd9fd9f1610d6fc57cc123d7aa49e97468bc91540e2db10d8b9aa6da44"
+              }
+            ],
+            "evidenceSha256": "9f99f40fd65d4a114e51c221e4878791e0ac4406f13de21fa717121d0e823530"
+          },
+          {
+            "name": "preferences-no-js",
+            "status": "passed",
+            "scope": "Fresh EN/BG actual native preference form fallback with JavaScript disabled.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-public-storage.json",
+                "sha256": "3273de6c1a4c86a251bc3e7a49f856c16ff1f83711ca31c4de45913890b370d0"
+              }
+            ],
+            "evidenceSha256": "35c991e577c6f82af1f4051080db793fd7e6b5d42ab00692a3882439b296c4b0"
+          },
+          {
+            "name": "preferences-storage-disabled",
+            "status": "passed",
+            "scope": "Fresh denied storage and conflicting/rejected cookie preference behavior, retaining actual localized rendering.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-public-storage.json",
+                "sha256": "3273de6c1a4c86a251bc3e7a49f856c16ff1f83711ca31c4de45913890b370d0"
+              }
+            ],
+            "evidenceSha256": "35c991e577c6f82af1f4051080db793fd7e6b5d42ab00692a3882439b296c4b0"
+          },
+          {
+            "name": "preferences-races",
+            "status": "passed",
+            "scope": "Fresh slow-save cancellation, dismissal, stale response and hostile return URL preference behavior with actual pages; harness mock responses are disclosed.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-public-races.json",
+                "sha256": "75991ec36a6ae5c61158f55858aa78cfe569d44ac18b6ba52f87005c82867468"
+              }
+            ],
+            "evidenceSha256": "f78a2141189729f62af888643893c9a0a390a1b9b2dcb9bc00826d35b7fdf9ba"
+          },
+          {
+            "name": "request-isolation",
+            "status": "passed",
+            "scope": "Fresh explicit locale versus hints/cookies and alternating requests, cache isolation and immutable native policy tests.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-native-tests.json",
+                "sha256": "1e39905392f9640b481f3253f82a312cc72afff8c7e36f7402786faec2b198f0"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-public-http.json",
+                "sha256": "5d236f0c3c84722755b2bf7aea4428058bfeccbece747098187a013d7afa5edb"
+              }
+            ],
+            "evidenceSha256": "893abf2a051b87187f27c879cf50e49b2f6b453fdb8a10185edd16838bf8d378"
+          },
+          {
+            "name": "security-write-blocking",
+            "status": "passed",
+            "scope": "Fresh public HTTP denial of invalid/guard-probe business writes and malformed/cross-origin preference requests; no real enquiry is submitted.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-native-tests.json",
+                "sha256": "1e39905392f9640b481f3253f82a312cc72afff8c7e36f7402786faec2b198f0"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-public-http.json",
+                "sha256": "5d236f0c3c84722755b2bf7aea4428058bfeccbece747098187a013d7afa5edb"
+              }
+            ],
+            "evidenceSha256": "893abf2a051b87187f27c879cf50e49b2f6b453fdb8a10185edd16838bf8d378"
+          },
+          {
+            "name": "assets-preserved",
+            "status": "passed",
+            "scope": "Every retained source asset Git blob/mode matches the exact public READY mirror, and fresh browser journeys check observable images/resource paths.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/auto-best-latest-exact-mirror.json",
+                "sha256": "a5716fcaee629ed8e869426bbf09bd04e0d2d715a7e541be50690a916f9721e4"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-public-qualified.json",
+                "sha256": "dcb91eb17d604d7363266a64e8d7f6e636aa0e9bed72cde6b2ba980c2cf69404"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-mounted.json",
+                "sha256": "e989e1f1a407b53a422a1863c5ceb57c07b978b60c9486eef3094e30286bf066"
+              }
+            ],
+            "evidenceSha256": "c67936c40ea633ada89d579eabc4c83cbc890cfb7128fdb842bc4d8252145126"
           }
         ],
         "standalone": {
           "mobile": true,
-          "desktop": true,
-          "widths": [
-            320,
-            390,
-            1440
-          ]
+          "desktop": true
         },
         "nativeLocalization": {
           "schemaVersion": 1,
           "adapter": "native-v1",
           "repository": "darkapoparka/cars",
-          "commit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+          "commit": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
           "sourcePath": "templates/auto-best",
-          "sourceTree": "08b90f149f2a2f385cec7fe6b6d8f9d5021b79eb",
-          "sourceDigest": "77644e5f217932973c88a81a4e1fd136efd0ca351d6aeee0dca1daa94ad42964",
+          "sourceTree": "5be83ea8685a3e99d517ced43af67d9d3d7a24db",
+          "sourceDigest": "bc08eb6123546c0e0cb0f4d21e2209450bfe642e542515b53f557016d14416d2",
+          "verifiedAt": "2026-10-09T16:44:29.045Z",
+          "evidenceSha256": "51d32e214e0e5700162ef787b50c3ec01f707b007c3baec6e2642968979052c0",
           "locales": [
             "en",
             "bg"
@@ -69,8 +233,6 @@
             390,
             1440
           ],
-          "verifiedAt": "2026-09-30T09:43:35.799Z",
-          "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732",
           "catalogs": [
             {
               "format": "typescript-pair",
@@ -80,99 +242,78 @@
             }
           ],
           "deployment": {
-            "id": "dpl_DyEQ16sDVqe81ZtaGnuvYAizLDxn",
+            "id": "dpl_AA3rUmkFjgcBkd7RRfxAt5Nq4Uu7",
             "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
             "state": "READY",
-            "sourceCommit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+            "sourceCommit": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
             "publicAlias": "https://cars-template-auto-best.vercel.app/",
             "publishingRepository": "darkapoparka/cars-template-auto-best",
-            "publishingCommit": "e4e1c7840416478d7f8dc285ab4f600e30a8f63b",
-            "sourceMapping": "docs/releases/final-polish-2026-09-30/publishing-source-mapping.json"
+            "publishingCommit": "ed35e4eab40dca40443baaf3a19786488524d637",
+            "sourceMapping": {
+              "path": "docs/releases/six-design-2026-10-09/native/auto-best-latest-exact-mirror.json",
+              "sha256": "a5716fcaee629ed8e869426bbf09bd04e0d2d715a7e541be50690a916f9721e4"
+            }
           },
           "checks": [
             {
               "name": "catalog-completeness",
               "status": "passed",
-              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732",
-              "evidence": "docs/releases/final-polish-2026-09-30/auto-best-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "bb8cc14fac3feb2672da267386904616e67c2da52cada7273221650d2f1d4a92"
             },
             {
               "name": "hardcoded-ui",
               "status": "passed",
-              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732",
-              "evidence": "docs/releases/final-polish-2026-09-30/auto-best-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "f72f9d762bb43f6a8fdca14ddd9b2a66dbb22ad35ce62dff78fa57dbca61d3c0"
             },
             {
               "name": "native-routing",
               "status": "passed",
-              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732",
-              "evidence": "docs/releases/final-polish-2026-09-30/auto-best-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "b04a2afcc69b6d1c5dac8882e06d052858621e308eca33f8e4137bd0701b0464"
             },
             {
               "name": "standalone-journeys",
               "status": "passed",
-              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732",
-              "evidence": "docs/releases/final-polish-2026-09-30/auto-best-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "38ed127533f033eb6c5cd76698476819102e05188a1f208f20b92cb89f0a7160"
             },
             {
               "name": "mounted-journeys",
               "status": "passed",
-              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732",
-              "evidence": "docs/releases/final-polish-2026-09-30/auto-best-acceptance.json",
-              "scope": "Native adapter and workflow mount contracts; final hosted dealer acceptance required."
+              "evidenceSha256": "1a8b7d73db0e4f98ef7d90b804b14a96eef66b81e34caab1a8fa8afa9ff72ffe"
             },
             {
               "name": "public-journeys",
               "status": "passed",
-              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732",
-              "evidence": "docs/releases/final-polish-2026-09-30/auto-best-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "9f99f40fd65d4a114e51c221e4878791e0ac4406f13de21fa717121d0e823530"
             },
             {
               "name": "preferences-no-js",
               "status": "passed",
-              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732",
-              "evidence": "docs/releases/final-polish-2026-09-30/auto-best-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "35c991e577c6f82af1f4051080db793fd7e6b5d42ab00692a3882439b296c4b0"
             },
             {
               "name": "preferences-storage-disabled",
               "status": "passed",
-              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732",
-              "evidence": "docs/releases/final-polish-2026-09-30/auto-best-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "35c991e577c6f82af1f4051080db793fd7e6b5d42ab00692a3882439b296c4b0"
             },
             {
               "name": "preferences-races",
               "status": "passed",
-              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732",
-              "evidence": "docs/releases/final-polish-2026-09-30/auto-best-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "f78a2141189729f62af888643893c9a0a390a1b9b2dcb9bc00826d35b7fdf9ba"
             },
             {
               "name": "request-isolation",
               "status": "passed",
-              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732",
-              "evidence": "docs/releases/final-polish-2026-09-30/auto-best-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "893abf2a051b87187f27c879cf50e49b2f6b453fdb8a10185edd16838bf8d378"
             },
             {
               "name": "security-write-blocking",
               "status": "passed",
-              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732",
-              "evidence": "docs/releases/final-polish-2026-09-30/auto-best-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "893abf2a051b87187f27c879cf50e49b2f6b453fdb8a10185edd16838bf8d378"
             },
             {
               "name": "assets-preserved",
               "status": "passed",
-              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732",
-              "evidence": "docs/releases/final-polish-2026-09-30/auto-best-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "c67936c40ea633ada89d579eabc4c83cbc890cfb7128fdb842bc4d8252145126"
             }
           ]
         }
@@ -183,10 +324,10 @@
       "reconciliationEvidence": "docs/WORKFLOW-MIGRATION-2026-09-12.md",
       "source": {
         "repository": "darkapoparka/cars",
-        "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+        "revision": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
         "path": "templates/auto-best",
-        "tree": "08b90f149f2a2f385cec7fe6b6d8f9d5021b79eb",
-        "digest": "77644e5f217932973c88a81a4e1fd136efd0ca351d6aeee0dca1daa94ad42964"
+        "tree": "5be83ea8685a3e99d517ced43af67d9d3d7a24db",
+        "digest": "bc08eb6123546c0e0cb0f4d21e2209450bfe642e542515b53f557016d14416d2"
       },
       "legacySource": {
         "repository": "darkapoparka/cars-template-auto-best",
@@ -207,61 +348,221 @@
     "modern": {
       "repository": "darkapoparka/cars",
       "status": "approved",
-      "commit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
-      "release": "2026.09.30",
+      "commit": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
+      "release": "six-design-source-modern-2026-10-09",
       "snapshotPath": "templates/modern",
-      "digest": "3585b499ec306bc302bf1abf99771a6aacbdf34bf665a60f2e1093983143fe4c",
+      "digest": "f097bc4802e62ffb0b752bc5523f3fe1b00df83f67b16843d698d276d10344a3",
       "exportPolicy": "cars-source-v1",
       "observedUpstreamCommit": "f64006130523375e440d48e4c4be6ec1b830d46a",
       "runtime": {
-        "node": "22.x",
-        "hosting": "Vercel production build",
-        "browser": "Chrome"
+        "node": "22.23.2",
+        "focusedChecksNode": "22.20.0",
+        "pnpm": "11.4.0"
       },
       "modes": {
-        "standalone": "Hosted EN/BG acceptance passed for the exact canonical runtime source.",
-        "mounted": "Explicit dealer refresh, preservation assertions and hosted verification required."
+        "standalone": "Exact-source READY public master browser checks.",
+        "mounted": "Actual source-bound compiler output and EN/BG320/390/1440 journeys at both variant-2 and variant-3.",
+        "dealer": "Requires final individualized build and public alias verification."
       },
       "qa": {
-        "evidence": "docs/releases/final-polish-2026-09-30/modern-release.json",
-        "verifiedAt": "2026-09-30T09:43:37.017Z",
+        "evidence": "docs/releases/six-design-2026-10-09/native/modern-release.json",
+        "verifiedAt": "2026-10-09T15:24:48.356Z",
         "checks": [
           {
-            "name": "exact-source-and-mirror-mapping",
+            "name": "catalog-completeness",
             "status": "passed",
-            "evidence": "docs/releases/final-polish-2026-09-30/modern-acceptance.json",
-            "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e"
+            "scope": "Exact committed catalogs have complete EN/BG key and interpolation parity; actual public rendering is covered separately. This is not a claim of perfect translations for arbitrary future dealer data.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/modern-extended-catalog-audit.json",
+                "sha256": "470cd92fb2b89a0fc690fe5b6ee660d4389bf98d95c60800bf6fb37e0961828b"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/modern-focused-tests.json",
+                "sha256": "9125e3cdff5cbd065dcb9cacb630b39b7bce8f06383759ea57d7a54a9d36b654"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/modern-exact-source.json",
+                "sha256": "db01d49b624b262a22f0d78680a0c129a896d5f7d4f91b76376b30d526d3bed9"
+              }
+            ],
+            "evidenceSha256": "39f1164658d680d192060e6fb863d40b740326f418a3b229eac4bd479b2eb5ce"
           },
           {
-            "name": "vercel-production-build",
+            "name": "hardcoded-ui",
             "status": "passed",
-            "evidence": "docs/releases/final-polish-2026-09-30/modern-acceptance.json",
-            "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e"
+            "scope": "Fresh locale route audits check visible text and language leaks, plus exact selected native source/copy tests. New source is not excused as styles-only; September behavior evidence is not relabelled.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/modern-focused-tests.json",
+                "sha256": "9125e3cdff5cbd065dcb9cacb630b39b7bce8f06383759ea57d7a54a9d36b654"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/modern-public-qualified.json",
+                "sha256": "85206461fa6cdeb566920a1050a8dadecfc046964302b72ad4360b44cb0988ed"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/modern-exact-source.json",
+                "sha256": "db01d49b624b262a22f0d78680a0c129a896d5f7d4f91b76376b30d526d3bed9"
+              }
+            ],
+            "evidenceSha256": "dc7a6ac7dbbbea4f7cb4c69e494f9f0de07296047e2bd7de68b74cf9023ef933"
           },
           {
-            "name": "public-en-bg-browser-acceptance",
+            "name": "native-routing",
             "status": "passed",
-            "evidence": "docs/releases/final-polish-2026-09-30/modern-acceptance.json",
-            "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e"
+            "scope": "Fresh native policy tests and public redirect, resource/admin boundary, locale navigation and deep-link checks.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/modern-focused-tests.json",
+                "sha256": "9125e3cdff5cbd065dcb9cacb630b39b7bce8f06383759ea57d7a54a9d36b654"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/modern-http-full-receipt.json",
+                "sha256": "f67f15f8061307c5ef201bfb4745f7459eb62c74ac0b51032da9e42461952cb0"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/modern-public-qualified.json",
+                "sha256": "85206461fa6cdeb566920a1050a8dadecfc046964302b72ad4360b44cb0988ed"
+              }
+            ],
+            "evidenceSha256": "0574cc94aad5a212e2495c2547b00c1b80a113933f5d702ee25911696589f9f4"
+          },
+          {
+            "name": "standalone-journeys",
+            "status": "passed",
+            "scope": "Fresh selected-source standalone master public journeys in EN/BG at 320/390/1440. Local mounted compilation is separate evidence.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/modern-public-qualified.json",
+                "sha256": "85206461fa6cdeb566920a1050a8dadecfc046964302b72ad4360b44cb0988ed"
+              }
+            ],
+            "evidenceSha256": "0ec57b732c5a133fa4b5a65ca7440613d6883028b98bce3cb9972d8577de4e45"
+          },
+          {
+            "name": "mounted-journeys",
+            "status": "passed",
+            "scope": "Fresh actual source-bound Modern production compilation and mounted browser journeys in both slot orders, EN/BG at320/390/1440. Dealer hosted acceptance remains separate.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/modern-mounted-qualified.json",
+                "sha256": "550539a7a069ee079341e49c87cc14d2645cd94c74445d5dad1dc9622b90b95e"
+              }
+            ],
+            "evidenceSha256": "aa1e05b7974da345dd7b765eb51cc62f100778c5160fc51de4f4a49453e79761"
+          },
+          {
+            "name": "public-journeys",
+            "status": "passed",
+            "scope": "Fresh anonymous exact-source READY master public browser journeys. Dealer hosted acceptance still required after the package is deployed.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/modern-public-qualified.json",
+                "sha256": "85206461fa6cdeb566920a1050a8dadecfc046964302b72ad4360b44cb0988ed"
+              }
+            ],
+            "evidenceSha256": "0ec57b732c5a133fa4b5a65ca7440613d6883028b98bce3cb9972d8577de4e45"
+          },
+          {
+            "name": "preferences-no-js",
+            "status": "passed",
+            "scope": "Fresh EN/BG actual native preference form fallback with JavaScript disabled.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/modern-preferences-qualified.json",
+                "sha256": "d33c2c6ea35b6030a8fbaa3709ca6d42eaafeb3a8bac5b7e479ad9f9a985266a"
+              }
+            ],
+            "evidenceSha256": "135e4c76766c6e467c729542dda63ecf92ecbbd5f8d54105e36794cb0acdfdcc"
+          },
+          {
+            "name": "preferences-storage-disabled",
+            "status": "passed",
+            "scope": "Fresh denied storage and conflicting/rejected cookie preference behavior, retaining actual localized rendering.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/modern-preferences-qualified.json",
+                "sha256": "d33c2c6ea35b6030a8fbaa3709ca6d42eaafeb3a8bac5b7e479ad9f9a985266a"
+              }
+            ],
+            "evidenceSha256": "135e4c76766c6e467c729542dda63ecf92ecbbd5f8d54105e36794cb0acdfdcc"
+          },
+          {
+            "name": "preferences-races",
+            "status": "passed",
+            "scope": "Fresh slow-save cancellation, dismissal, stale response and hostile return URL preference behavior with actual pages; harness mock responses are disclosed.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/modern-preferences-qualified.json",
+                "sha256": "d33c2c6ea35b6030a8fbaa3709ca6d42eaafeb3a8bac5b7e479ad9f9a985266a"
+              }
+            ],
+            "evidenceSha256": "135e4c76766c6e467c729542dda63ecf92ecbbd5f8d54105e36794cb0acdfdcc"
+          },
+          {
+            "name": "request-isolation",
+            "status": "passed",
+            "scope": "Fresh explicit locale versus hints/cookies and alternating requests, cache isolation and immutable native policy tests.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/modern-focused-tests.json",
+                "sha256": "9125e3cdff5cbd065dcb9cacb630b39b7bce8f06383759ea57d7a54a9d36b654"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/modern-http-full-receipt.json",
+                "sha256": "f67f15f8061307c5ef201bfb4745f7459eb62c74ac0b51032da9e42461952cb0"
+              }
+            ],
+            "evidenceSha256": "049126090b62d61a89d30c664eae32fcdc8167ad741f5a349a19ce0682afd14a"
+          },
+          {
+            "name": "security-write-blocking",
+            "status": "passed",
+            "scope": "Fresh public HTTP denial of invalid/guard-probe business writes and malformed/cross-origin preference requests; no real enquiry is submitted.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/modern-focused-tests.json",
+                "sha256": "9125e3cdff5cbd065dcb9cacb630b39b7bce8f06383759ea57d7a54a9d36b654"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/modern-http-full-receipt.json",
+                "sha256": "f67f15f8061307c5ef201bfb4745f7459eb62c74ac0b51032da9e42461952cb0"
+              }
+            ],
+            "evidenceSha256": "049126090b62d61a89d30c664eae32fcdc8167ad741f5a349a19ce0682afd14a"
+          },
+          {
+            "name": "assets-preserved",
+            "status": "passed",
+            "scope": "Every retained source asset Git blob/mode matches the exact public READY mirror, and fresh browser journeys check observable images/resource paths.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/modern-exact-source.json",
+                "sha256": "db01d49b624b262a22f0d78680a0c129a896d5f7d4f91b76376b30d526d3bed9"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/modern-public-qualified.json",
+                "sha256": "85206461fa6cdeb566920a1050a8dadecfc046964302b72ad4360b44cb0988ed"
+              }
+            ],
+            "evidenceSha256": "6ea11cd1c1659d48506bab37c892323d5643ef3ad88484ec1e5a2ba2e6369f13"
           }
         ],
         "standalone": {
           "mobile": true,
-          "desktop": true,
-          "widths": [
-            320,
-            390,
-            1440
-          ]
+          "desktop": true
         },
         "nativeLocalization": {
           "schemaVersion": 1,
           "adapter": "native-v1",
           "repository": "darkapoparka/cars",
-          "commit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+          "commit": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
           "sourcePath": "templates/modern",
-          "sourceTree": "796661a4ff23fb9db34b7df68dc7f190497e4922",
-          "sourceDigest": "3585b499ec306bc302bf1abf99771a6aacbdf34bf665a60f2e1093983143fe4c",
+          "sourceTree": "c2b3b3e74815c1e5eba0c82cfb1352c795921dcf",
+          "sourceDigest": "f097bc4802e62ffb0b752bc5523f3fe1b00df83f67b16843d698d276d10344a3",
+          "verifiedAt": "2026-10-09T15:24:48.356Z",
+          "evidenceSha256": "0e76a0cf74c0713f517cf2a8bc3813927322770a8d85a01d234ea12f8ac418b8",
           "locales": [
             "en",
             "bg"
@@ -271,8 +572,6 @@
             390,
             1440
           ],
-          "verifiedAt": "2026-09-30T09:43:37.017Z",
-          "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e",
           "catalogs": [
             {
               "format": "typescript-pair",
@@ -290,102 +589,86 @@
               "format": "typescript-rows",
               "path": "packages/marketplace/content/inventory-copy.ts",
               "export": "inventoryCopy"
+            },
+            {
+              "format": "typescript-locale-object",
+              "path": "packages/marketplace-ui/lib/marketplace-control-copy.ts",
+              "export": "copyByLanguage"
             }
           ],
           "deployment": {
-            "id": "dpl_HRWDBhDDptapT6oDGaoE8Bkh2deE",
+            "id": "dpl_3sYZA18R31dXaKpw2VWB3T4zYzoT",
             "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
             "state": "READY",
-            "sourceCommit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+            "sourceCommit": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
             "publicAlias": "https://cars-template-modern.vercel.app/",
             "publishingRepository": "darkapoparka/cars-template-modern",
-            "publishingCommit": "4f6e759e7480b66707ca855ea8bb5fc2611d9afe",
-            "sourceMapping": "docs/releases/final-polish-2026-09-30/publishing-source-mapping.json"
+            "publishingCommit": "31379e62eb7d96afbdeda3338d70cbaa4c93fb58",
+            "sourceMapping": {
+              "path": "docs/releases/six-design-2026-10-09/native/modern-exact-source.json",
+              "sha256": "db01d49b624b262a22f0d78680a0c129a896d5f7d4f91b76376b30d526d3bed9"
+            }
           },
           "checks": [
             {
               "name": "catalog-completeness",
               "status": "passed",
-              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e",
-              "evidence": "docs/releases/final-polish-2026-09-30/modern-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "39f1164658d680d192060e6fb863d40b740326f418a3b229eac4bd479b2eb5ce"
             },
             {
               "name": "hardcoded-ui",
               "status": "passed",
-              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e",
-              "evidence": "docs/releases/final-polish-2026-09-30/modern-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "dc7a6ac7dbbbea4f7cb4c69e494f9f0de07296047e2bd7de68b74cf9023ef933"
             },
             {
               "name": "native-routing",
               "status": "passed",
-              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e",
-              "evidence": "docs/releases/final-polish-2026-09-30/modern-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "0574cc94aad5a212e2495c2547b00c1b80a113933f5d702ee25911696589f9f4"
             },
             {
               "name": "standalone-journeys",
               "status": "passed",
-              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e",
-              "evidence": "docs/releases/final-polish-2026-09-30/modern-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "0ec57b732c5a133fa4b5a65ca7440613d6883028b98bce3cb9972d8577de4e45"
             },
             {
               "name": "mounted-journeys",
               "status": "passed",
-              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e",
-              "evidence": "docs/releases/final-polish-2026-09-30/modern-acceptance.json",
-              "scope": "Native adapter and workflow mount contracts; final hosted dealer acceptance required."
+              "evidenceSha256": "aa1e05b7974da345dd7b765eb51cc62f100778c5160fc51de4f4a49453e79761"
             },
             {
               "name": "public-journeys",
               "status": "passed",
-              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e",
-              "evidence": "docs/releases/final-polish-2026-09-30/modern-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "0ec57b732c5a133fa4b5a65ca7440613d6883028b98bce3cb9972d8577de4e45"
             },
             {
               "name": "preferences-no-js",
               "status": "passed",
-              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e",
-              "evidence": "docs/releases/final-polish-2026-09-30/modern-acceptance.json",
-              "scope": "Unchanged accepted preference implementation verified by exact source comparison; current public fallback checked."
+              "evidenceSha256": "135e4c76766c6e467c729542dda63ecf92ecbbd5f8d54105e36794cb0acdfdcc"
             },
             {
               "name": "preferences-storage-disabled",
               "status": "passed",
-              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e",
-              "evidence": "docs/releases/final-polish-2026-09-30/modern-acceptance.json",
-              "scope": "Unchanged accepted preference implementation verified by exact source comparison; current public fallback checked."
+              "evidenceSha256": "135e4c76766c6e467c729542dda63ecf92ecbbd5f8d54105e36794cb0acdfdcc"
             },
             {
               "name": "preferences-races",
               "status": "passed",
-              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e",
-              "evidence": "docs/releases/final-polish-2026-09-30/modern-acceptance.json",
-              "scope": "Unchanged accepted preference implementation verified by exact source comparison; current public fallback checked."
+              "evidenceSha256": "135e4c76766c6e467c729542dda63ecf92ecbbd5f8d54105e36794cb0acdfdcc"
             },
             {
               "name": "request-isolation",
               "status": "passed",
-              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e",
-              "evidence": "docs/releases/final-polish-2026-09-30/modern-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "049126090b62d61a89d30c664eae32fcdc8167ad741f5a349a19ce0682afd14a"
             },
             {
               "name": "security-write-blocking",
               "status": "passed",
-              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e",
-              "evidence": "docs/releases/final-polish-2026-09-30/modern-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "049126090b62d61a89d30c664eae32fcdc8167ad741f5a349a19ce0682afd14a"
             },
             {
               "name": "assets-preserved",
               "status": "passed",
-              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e",
-              "evidence": "docs/releases/final-polish-2026-09-30/modern-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "6ea11cd1c1659d48506bab37c892323d5643ef3ad88484ec1e5a2ba2e6369f13"
             }
           ]
         }
@@ -396,10 +679,10 @@
       "reconciliationEvidence": "docs/WORKFLOW-MIGRATION-2026-09-12.md",
       "source": {
         "repository": "darkapoparka/cars",
-        "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+        "revision": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
         "path": "templates/modern",
-        "tree": "796661a4ff23fb9db34b7df68dc7f190497e4922",
-        "digest": "3585b499ec306bc302bf1abf99771a6aacbdf34bf665a60f2e1093983143fe4c"
+        "tree": "c2b3b3e74815c1e5eba0c82cfb1352c795921dcf",
+        "digest": "f097bc4802e62ffb0b752bc5523f3fe1b00df83f67b16843d698d276d10344a3"
       },
       "legacySource": {
         "repository": "darkapoparka/cars-template-modern",
@@ -622,61 +905,227 @@
     "import": {
       "repository": "darkapoparka/cars",
       "status": "approved",
-      "commit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
-      "release": "2026.09.30",
+      "commit": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
+      "release": "six-design-source-import-2026-10-09",
       "snapshotPath": "templates/import",
-      "digest": "ed185f9b04d02b1ce3a0304a9e72118d25b45da4e621b63601697eb401d83dfd",
+      "digest": "25cc87e3d71101be065333c5d5d8c124516a936281b1b3c81aba6e674253a4b1",
       "exportPolicy": "cars-source-v1",
       "observedUpstreamCommit": "3c24db073b0b1a3bf26c64ed5336921117658e29",
       "runtime": {
-        "node": "24.x",
-        "hosting": "Vercel production build",
-        "browser": "Chrome"
+        "node": "24.21.0"
       },
       "modes": {
-        "standalone": "Hosted EN/BG acceptance passed for the exact canonical runtime source.",
-        "mounted": "Explicit dealer refresh, preservation assertions and hosted verification required."
+        "standalone": "Fresh exact-source READY public master browser checks.",
+        "mounted": "Actual Node24 compiler output and EN/BG320/390/1440 journeys at both variant-2 and variant-3.",
+        "dealer": "Requires final individualized build and public alias verification."
       },
       "qa": {
-        "evidence": "docs/releases/final-polish-2026-09-30/import-release.json",
-        "verifiedAt": "2026-09-30T09:43:42.928Z",
+        "evidence": "docs/releases/six-design-2026-10-09/native/import-a51-release.json",
+        "verifiedAt": "2026-10-09T17:15:00.520Z",
         "checks": [
           {
-            "name": "exact-source-and-mirror-mapping",
+            "name": "catalog-completeness",
             "status": "passed",
-            "evidence": "docs/releases/final-polish-2026-09-30/import-acceptance.json",
-            "evidenceSha256": "bda2c5c16fb1ffa610c2af1cbe63a81dfd68c375029c53fc40fedc32039dabb6"
+            "scope": "Fresh exact-source EN/BG catalog key and interpolation parity plus native59-test acceptance.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/import-a51-catalogs.json",
+                "sha256": "b410fe99cfe0eba6f4b96512b09c1737f907b54ce1b6ca1d0a37571b03b785d8"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/import-a51-native-tests.json",
+                "sha256": "233ed5dbd6f67b04b248de55b3a5308c6f949110f1a31dbfc74dc4277b1ece23"
+              }
+            ],
+            "evidenceSha256": "5d7ae80720104d2260481c818a43714ac686567800213fb2507899612b0a9421"
           },
           {
-            "name": "vercel-production-build",
+            "name": "hardcoded-ui",
             "status": "passed",
-            "evidence": "docs/releases/final-polish-2026-09-30/import-acceptance.json",
-            "evidenceSha256": "bda2c5c16fb1ffa610c2af1cbe63a81dfd68c375029c53fc40fedc32039dabb6"
+            "scope": "Fresh source-copy audits and EN/BG route rendering for the selected completed UI cut.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/import-a51-native-tests.json",
+                "sha256": "233ed5dbd6f67b04b248de55b3a5308c6f949110f1a31dbfc74dc4277b1ece23"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/import-a51-public-qualified.json",
+                "sha256": "1de43b49485cb5dae8f9fa395f2cf5ed5065ed81e8944370478e1b1c6191eb66"
+              }
+            ],
+            "evidenceSha256": "fc4a1a540414e045eeb060315a238b0b97385995cd547c14b1e43e91732507fa"
           },
           {
-            "name": "public-en-bg-browser-acceptance",
+            "name": "native-routing",
             "status": "passed",
-            "evidence": "docs/releases/final-polish-2026-09-30/import-acceptance.json",
-            "evidenceSha256": "bda2c5c16fb1ffa610c2af1cbe63a81dfd68c375029c53fc40fedc32039dabb6"
+            "scope": "Fresh public and both-mount route/redirect/resource boundaries and client locale navigation.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/import-a51-native-tests.json",
+                "sha256": "233ed5dbd6f67b04b248de55b3a5308c6f949110f1a31dbfc74dc4277b1ece23"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/import-a51-public-qualified.json",
+                "sha256": "1de43b49485cb5dae8f9fa395f2cf5ed5065ed81e8944370478e1b1c6191eb66"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/import-a51-mounted.json",
+                "sha256": "1e91ac6b4a4e51660d57c2b71320e01a93f1abf9320848a9b155e4926fb1f3ce"
+              }
+            ],
+            "evidenceSha256": "35502910824545032ce0938c4f81445963ae87395a23c19029161f4b9b2d598e"
+          },
+          {
+            "name": "standalone-journeys",
+            "status": "passed",
+            "scope": "Fresh120 public route visits across EN/BG320/390/1440 within the twenty-test native suite.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/import-a51-public-qualified.json",
+                "sha256": "1de43b49485cb5dae8f9fa395f2cf5ed5065ed81e8944370478e1b1c6191eb66"
+              }
+            ],
+            "evidenceSha256": "6cbe044ad67035be10b88cbb5d69710f4626bbcb44adef0f1aa449168c1705bf"
+          },
+          {
+            "name": "mounted-journeys",
+            "status": "passed",
+            "scope": "Fresh exact Node24 builds, six journeys and eleven policy cases in each slot position; four mobile stock/filter/sort/PDP/gallery/share/back interactions.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/import-a51-mounted.json",
+                "sha256": "1e91ac6b4a4e51660d57c2b71320e01a93f1abf9320848a9b155e4926fb1f3ce"
+              }
+            ],
+            "evidenceSha256": "a81c5b03067639eca149294d2751acb99cc95ecd457bd6be9a3159b76653edfc"
+          },
+          {
+            "name": "public-journeys",
+            "status": "passed",
+            "scope": "Fresh20/20 native public tests bound to unchanged READYa51 alias before and after execution.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/import-a51-public-qualified.json",
+                "sha256": "1de43b49485cb5dae8f9fa395f2cf5ed5065ed81e8944370478e1b1c6191eb66"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/import-a51-public-provider-continuity.json",
+                "sha256": "972b79d0afb9b789ceee0e9c700026c6fc7ffcc53be24b0fd95f2cdc59891bbb"
+              }
+            ],
+            "evidenceSha256": "2e764d5a8e0e50a632ba8cae4f7d139ae8356afdecdb21c40146ad6b76c29125"
+          },
+          {
+            "name": "preferences-no-js",
+            "status": "passed",
+            "scope": "Actual JavaScript-disabled browser submits the native preference form and retains localized contact fallback.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/import-a51-public-qualified.json",
+                "sha256": "1de43b49485cb5dae8f9fa395f2cf5ed5065ed81e8944370478e1b1c6191eb66"
+              }
+            ],
+            "evidenceSha256": "6cbe044ad67035be10b88cbb5d69710f4626bbcb44adef0f1aa449168c1705bf"
+          },
+          {
+            "name": "preferences-storage-disabled",
+            "status": "passed",
+            "scope": "Actual storage denial and cookie rejection retain explicit locale and independent country choices.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/import-a51-public-qualified.json",
+                "sha256": "1de43b49485cb5dae8f9fa395f2cf5ed5065ed81e8944370478e1b1c6191eb66"
+              }
+            ],
+            "evidenceSha256": "6cbe044ad67035be10b88cbb5d69710f4626bbcb44adef0f1aa449168c1705bf"
+          },
+          {
+            "name": "preferences-races",
+            "status": "passed",
+            "scope": "Actual close/reopen stale-save and native focus/save/dismiss preference scenarios; race responses mocked as committed harness specifies.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/import-a51-public-qualified.json",
+                "sha256": "1de43b49485cb5dae8f9fa395f2cf5ed5065ed81e8944370478e1b1c6191eb66"
+              }
+            ],
+            "evidenceSha256": "6cbe044ad67035be10b88cbb5d69710f4626bbcb44adef0f1aa449168c1705bf"
+          },
+          {
+            "name": "request-isolation",
+            "status": "passed",
+            "scope": "Fresh conflicting hints/cookies, simultaneous locale requests and private error/cache behavior.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/import-a51-native-tests.json",
+                "sha256": "233ed5dbd6f67b04b248de55b3a5308c6f949110f1a31dbfc74dc4277b1ece23"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/import-a51-public-qualified.json",
+                "sha256": "1de43b49485cb5dae8f9fa395f2cf5ed5065ed81e8944370478e1b1c6191eb66"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/import-a51-mounted.json",
+                "sha256": "1e91ac6b4a4e51660d57c2b71320e01a93f1abf9320848a9b155e4926fb1f3ce"
+              }
+            ],
+            "evidenceSha256": "35502910824545032ce0938c4f81445963ae87395a23c19029161f4b9b2d598e"
+          },
+          {
+            "name": "security-write-blocking",
+            "status": "passed",
+            "scope": "Native input/origin/return/body guards plus business-form validation with no business write.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/import-a51-native-tests.json",
+                "sha256": "233ed5dbd6f67b04b248de55b3a5308c6f949110f1a31dbfc74dc4277b1ece23"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/import-a51-public-qualified.json",
+                "sha256": "1de43b49485cb5dae8f9fa395f2cf5ed5065ed81e8944370478e1b1c6191eb66"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/import-a51-mounted.json",
+                "sha256": "1e91ac6b4a4e51660d57c2b71320e01a93f1abf9320848a9b155e4926fb1f3ce"
+              }
+            ],
+            "evidenceSha256": "35502910824545032ce0938c4f81445963ae87395a23c19029161f4b9b2d598e"
+          },
+          {
+            "name": "assets-preserved",
+            "status": "passed",
+            "scope": "Exact publishing mirror closure for all3411 retained blobs/modes and fresh no-error image/script/font/stylesheet checks in public and mounted browsers.",
+            "evidence": [
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/import-a51-exact-mirror.json",
+                "sha256": "26e76c7bd600109187f6a69fc795ad50156afb8ee0239701b8d1f2e560afad56"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/import-a51-public-qualified.json",
+                "sha256": "1de43b49485cb5dae8f9fa395f2cf5ed5065ed81e8944370478e1b1c6191eb66"
+              },
+              {
+                "path": "docs/releases/six-design-2026-10-09/native/import-a51-mounted.json",
+                "sha256": "1e91ac6b4a4e51660d57c2b71320e01a93f1abf9320848a9b155e4926fb1f3ce"
+              }
+            ],
+            "evidenceSha256": "647387dae84a021a1fb2839565ba31aba3936379bdbdf84fdbf0d25df45ad7e6"
           }
         ],
         "standalone": {
           "mobile": true,
-          "desktop": true,
-          "widths": [
-            320,
-            390,
-            1440
-          ]
+          "desktop": true
         },
         "nativeLocalization": {
           "schemaVersion": 1,
           "adapter": "native-v1",
           "repository": "darkapoparka/cars",
-          "commit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+          "commit": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
           "sourcePath": "templates/import",
-          "sourceTree": "9582504af8d3e043b36fc12dd1648e19dbf51cc5",
-          "sourceDigest": "ed185f9b04d02b1ce3a0304a9e72118d25b45da4e621b63601697eb401d83dfd",
+          "sourceTree": "874b601a661045dd0e265bb14a9b0af762a17d0f",
+          "sourceDigest": "25cc87e3d71101be065333c5d5d8c124516a936281b1b3c81aba6e674253a4b1",
+          "verifiedAt": "2026-10-09T17:15:00.520Z",
+          "evidenceSha256": "921feeafdd79a639b4f56e92a9e7a2b6da4073854c8afd52e3ca248481f6ec1c",
           "locales": [
             "en",
             "bg"
@@ -686,110 +1135,109 @@
             390,
             1440
           ],
-          "verifiedAt": "2026-09-30T09:43:42.928Z",
-          "evidenceSha256": "bda2c5c16fb1ffa610c2af1cbe63a81dfd68c375029c53fc40fedc32039dabb6",
           "catalogs": [
             {
               "format": "typescript-pair",
               "path": "src/lib/locale/messages.ts",
               "en": "en",
               "bg": "bg"
+            },
+            {
+              "format": "typescript-pair",
+              "path": "src/lib/i18n/native.ts",
+              "en": "nativeEn",
+              "bg": "nativeBg"
+            },
+            {
+              "format": "typescript-pair",
+              "path": "src/lib/content/localized.ts",
+              "en": "contentEn",
+              "bg": "contentBg"
+            },
+            {
+              "format": "typescript-rows",
+              "path": "src/lib/content/inventory-localized.ts",
+              "export": "inventoryCopy"
+            },
+            {
+              "format": "typescript-source-map",
+              "path": "src/lib/content/extra-localized.ts",
+              "export": "extraEnglish"
             }
           ],
           "deployment": {
-            "id": "dpl_BbgLUrgFQUPWZWkb2djooyH1Kj3n",
+            "id": "dpl_cNMRwaZ2hJAWq1HsV3unWk9SpLnj",
             "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
             "state": "READY",
-            "sourceCommit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+            "sourceCommit": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
             "publicAlias": "https://cars-template-import.vercel.app/",
             "publishingRepository": "darkapoparka/cars-template-import",
-            "publishingCommit": "5bbcb962dd671237f2a360dcae8229638d51d947",
-            "sourceMapping": "docs/releases/final-polish-2026-09-30/publishing-source-mapping.json"
+            "publishingCommit": "6a28273a84d75f7f157457e7e26be2030ce2de72",
+            "sourceMapping": {
+              "path": "docs/releases/six-design-2026-10-09/native/import-a51-exact-mirror.json",
+              "sha256": "26e76c7bd600109187f6a69fc795ad50156afb8ee0239701b8d1f2e560afad56"
+            }
           },
           "checks": [
             {
               "name": "catalog-completeness",
               "status": "passed",
-              "evidenceSha256": "bda2c5c16fb1ffa610c2af1cbe63a81dfd68c375029c53fc40fedc32039dabb6",
-              "evidence": "docs/releases/final-polish-2026-09-30/import-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "5d7ae80720104d2260481c818a43714ac686567800213fb2507899612b0a9421"
             },
             {
               "name": "hardcoded-ui",
               "status": "passed",
-              "evidenceSha256": "bda2c5c16fb1ffa610c2af1cbe63a81dfd68c375029c53fc40fedc32039dabb6",
-              "evidence": "docs/releases/final-polish-2026-09-30/import-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "fc4a1a540414e045eeb060315a238b0b97385995cd547c14b1e43e91732507fa"
             },
             {
               "name": "native-routing",
               "status": "passed",
-              "evidenceSha256": "bda2c5c16fb1ffa610c2af1cbe63a81dfd68c375029c53fc40fedc32039dabb6",
-              "evidence": "docs/releases/final-polish-2026-09-30/import-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "35502910824545032ce0938c4f81445963ae87395a23c19029161f4b9b2d598e"
             },
             {
               "name": "standalone-journeys",
               "status": "passed",
-              "evidenceSha256": "bda2c5c16fb1ffa610c2af1cbe63a81dfd68c375029c53fc40fedc32039dabb6",
-              "evidence": "docs/releases/final-polish-2026-09-30/import-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "6cbe044ad67035be10b88cbb5d69710f4626bbcb44adef0f1aa449168c1705bf"
             },
             {
               "name": "mounted-journeys",
               "status": "passed",
-              "evidenceSha256": "bda2c5c16fb1ffa610c2af1cbe63a81dfd68c375029c53fc40fedc32039dabb6",
-              "evidence": "docs/releases/final-polish-2026-09-30/import-acceptance.json",
-              "scope": "Native adapter and workflow mount contracts; final hosted dealer acceptance required."
+              "evidenceSha256": "a81c5b03067639eca149294d2751acb99cc95ecd457bd6be9a3159b76653edfc"
             },
             {
               "name": "public-journeys",
               "status": "passed",
-              "evidenceSha256": "bda2c5c16fb1ffa610c2af1cbe63a81dfd68c375029c53fc40fedc32039dabb6",
-              "evidence": "docs/releases/final-polish-2026-09-30/import-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "2e764d5a8e0e50a632ba8cae4f7d139ae8356afdecdb21c40146ad6b76c29125"
             },
             {
               "name": "preferences-no-js",
               "status": "passed",
-              "evidenceSha256": "bda2c5c16fb1ffa610c2af1cbe63a81dfd68c375029c53fc40fedc32039dabb6",
-              "evidence": "docs/releases/final-polish-2026-09-30/import-acceptance.json",
-              "scope": "Unchanged accepted preference implementation verified by exact source comparison; current public fallback checked."
+              "evidenceSha256": "6cbe044ad67035be10b88cbb5d69710f4626bbcb44adef0f1aa449168c1705bf"
             },
             {
               "name": "preferences-storage-disabled",
               "status": "passed",
-              "evidenceSha256": "bda2c5c16fb1ffa610c2af1cbe63a81dfd68c375029c53fc40fedc32039dabb6",
-              "evidence": "docs/releases/final-polish-2026-09-30/import-acceptance.json",
-              "scope": "Unchanged accepted preference implementation verified by exact source comparison; current public fallback checked."
+              "evidenceSha256": "6cbe044ad67035be10b88cbb5d69710f4626bbcb44adef0f1aa449168c1705bf"
             },
             {
               "name": "preferences-races",
               "status": "passed",
-              "evidenceSha256": "bda2c5c16fb1ffa610c2af1cbe63a81dfd68c375029c53fc40fedc32039dabb6",
-              "evidence": "docs/releases/final-polish-2026-09-30/import-acceptance.json",
-              "scope": "Unchanged accepted preference implementation verified by exact source comparison; current public fallback checked."
+              "evidenceSha256": "6cbe044ad67035be10b88cbb5d69710f4626bbcb44adef0f1aa449168c1705bf"
             },
             {
               "name": "request-isolation",
               "status": "passed",
-              "evidenceSha256": "bda2c5c16fb1ffa610c2af1cbe63a81dfd68c375029c53fc40fedc32039dabb6",
-              "evidence": "docs/releases/final-polish-2026-09-30/import-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "35502910824545032ce0938c4f81445963ae87395a23c19029161f4b9b2d598e"
             },
             {
               "name": "security-write-blocking",
               "status": "passed",
-              "evidenceSha256": "bda2c5c16fb1ffa610c2af1cbe63a81dfd68c375029c53fc40fedc32039dabb6",
-              "evidence": "docs/releases/final-polish-2026-09-30/import-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "35502910824545032ce0938c4f81445963ae87395a23c19029161f4b9b2d598e"
             },
             {
               "name": "assets-preserved",
               "status": "passed",
-              "evidenceSha256": "bda2c5c16fb1ffa610c2af1cbe63a81dfd68c375029c53fc40fedc32039dabb6",
-              "evidence": "docs/releases/final-polish-2026-09-30/import-acceptance.json",
-              "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+              "evidenceSha256": "647387dae84a021a1fb2839565ba31aba3936379bdbdf84fdbf0d25df45ad7e6"
             }
           ]
         }
@@ -797,10 +1245,10 @@
       "reason": "Reviewed immutable Cars template source; dealer adoption is explicit.",
       "source": {
         "repository": "darkapoparka/cars",
-        "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+        "revision": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
         "path": "templates/import",
-        "tree": "9582504af8d3e043b36fc12dd1648e19dbf51cc5",
-        "digest": "ed185f9b04d02b1ce3a0304a9e72118d25b45da4e621b63601697eb401d83dfd"
+        "tree": "874b601a661045dd0e265bb14a9b0af762a17d0f",
+        "digest": "25cc87e3d71101be065333c5d5d8c124516a936281b1b3c81aba6e674253a4b1"
       },
       "legacySource": {
         "repository": "darkapoparka/cars-template-import",
@@ -983,6 +1431,300 @@
         "tree": null,
         "evidence": null,
         "nativeDeployment": null
+      }
+    },
+    "mobile": {
+      "snapshotPath": "templates/mobile",
+      "status": "approved",
+      "repository": "darkapoparka/cars",
+      "commit": "876590474d01178413feccf3153a0859230158a1",
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "876590474d01178413feccf3153a0859230158a1",
+        "path": "templates/mobile",
+        "tree": "7b1f0878715aa1bc0f5942c7e654a6a1bb091510",
+        "digest": "380b153972039a80dccee73f53760a87e963d007b83a921020c5ab5353c942fc"
+      },
+      "digest": "380b153972039a80dccee73f53760a87e963d007b83a921020c5ab5353c942fc",
+      "exportPolicy": "cars-source-v1",
+      "release": "six-design-source-mobile-2026-10-09",
+      "reason": "Reviewed immutable Cars template source; dealer adoption is explicit.",
+      "runtime": {
+        "node": "v22.23.2",
+        "declaredNode": "22.x"
+      },
+      "modes": {
+        "standalone": "Recorded exact source/publishing mirror production hosted checks with fresh declared-Node lint/types/domain checks.",
+        "mounted": "Fresh exact immutable production mount/browser and runtime-output-budget checks passed; personalized dealer and hosted acceptance remain separate."
+      },
+      "qa": {
+        "evidence": "docs/releases/six-design-2026-10-09/extended/mobile-release.json",
+        "verifiedAt": "2026-10-09T14:44:52.196Z",
+        "checks": [
+          {
+            "name": "strict-lint",
+            "command": "C:/Users/radev/services-node-22.23.2/node-v22.23.2-win-x64/node.exe node_modules/eslint/bin/eslint.js src --max-warnings 0",
+            "status": "passed",
+            "exitCode": 0,
+            "startedAt": "2026-10-09T14:42:13.931Z",
+            "durationMs": 37678,
+            "log": "C:\\Users\\radev\\AppData\\Local\\Temp\\cars-extended-source-release-20261009\\checks\\mobile-8765904\\strict-lint.log",
+            "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "name": "typescript",
+            "command": "C:/Users/radev/services-node-22.23.2/node-v22.23.2-win-x64/node.exe node_modules/typescript/bin/tsc --project tsconfig.check.json --noEmit",
+            "status": "passed",
+            "exitCode": 0,
+            "startedAt": "2026-10-09T14:42:51.610Z",
+            "durationMs": 21409,
+            "log": "C:\\Users\\radev\\AppData\\Local\\Temp\\cars-extended-source-release-20261009\\checks\\mobile-8765904\\typescript.log",
+            "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "name": "domain-tests",
+            "command": "C:/Users/radev/services-node-22.23.2/node-v22.23.2-win-x64/node.exe scripts/test.mjs",
+            "status": "passed",
+            "exitCode": 0,
+            "startedAt": "2026-10-09T14:43:13.019Z",
+            "durationMs": 2598,
+            "log": "C:\\Users\\radev\\AppData\\Local\\Temp\\cars-extended-source-release-20261009\\checks\\mobile-8765904\\domain-tests.log",
+            "logSha256": "e9fdea096fdbff2f3114d9bab3c0933f2a278eb93be942e54a552a2e55a2693f"
+          },
+          {
+            "name": "whole published source identity",
+            "command": "Compare every retained normalized source/asset hash plus source annotations to mirror9c577c6",
+            "status": "passed",
+            "evidence": "mobile-exact-source.json"
+          },
+          {
+            "name": "recorded source-bound production and hosted layout checks",
+            "command": "Exact8765904 phone320/390 and desktop1440 fonts/spec labels/units/clipping/overflow checks",
+            "status": "passed",
+            "evidence": "mobile-recorded-publication.json"
+          },
+          {
+            "name": "fresh exact-source mounted production/browser qualification",
+            "command": "Production Next build and Mobile EN/BG320/390/1440 actual detail/gallery and rooted navigation proof",
+            "status": "passed",
+            "evidence": "mobile-mounted-browser.json"
+          }
+        ],
+        "standalone": {
+          "mobile": {
+            "verified": true,
+            "widths": [
+              320,
+              390
+            ],
+            "languages": [
+              "bg",
+              "en"
+            ],
+            "sourceClosure": "mobile-exact-source.json"
+          },
+          "desktop": {
+            "verified": true,
+            "widths": [
+              1440
+            ],
+            "languages": [
+              "bg"
+            ],
+            "sourceClosure": "mobile-exact-source.json"
+          }
+        }
+      }
+    },
+    "karento-best": {
+      "snapshotPath": "templates/karento-best",
+      "status": "approved",
+      "repository": "darkapoparka/cars",
+      "commit": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+        "path": "templates/karento-best",
+        "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
+        "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+      },
+      "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30",
+      "exportPolicy": "cars-source-v1",
+      "release": "signature-final-polish-2026-10-10",
+      "reason": "Reviewed immutable Cars template source; dealer adoption is explicit.",
+      "runtime": {
+        "node": "26.10.0",
+        "sourceAdapter": "@sveltejs/adapter-node@6.0.0",
+        "hostingNode": "24.21.0",
+        "hostingRuntime": "nodejs24.x",
+        "hostingAdapter": "@sveltejs/adapter-vercel@7.0.0",
+        "recipe": {
+          "path": "scripts/publishing/signature-vercel-adapter.json",
+          "sha256": "87f06c6e658ffc6b077481d270bd7da6b9eff933354dd8163ba65b6b5f7b669c"
+        }
+      },
+      "modes": {
+        "standalone": "verified",
+        "mounted": "requires-dealer-QA"
+      },
+      "qa": {
+        "evidence": "docs/releases/six-design-2026-10-10/signature-release.json",
+        "verifiedAt": "2026-10-10T08:10:04.839Z",
+        "checks": [
+          {
+            "name": "exact-committed-source-and-tested-tree",
+            "status": "passed",
+            "scope": "Committed Cars source and final validated candidate have the same template tree; current tracked template is clean and HEAD retains that tree.",
+            "evidence": [
+              {
+                "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/source-integration.json",
+                "sha256": "786e08b186da2d48004088c756881f760699102ff7d840b116d67f14df51a87a"
+              },
+              {
+                "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/final-candidate.json",
+                "sha256": "2dd5bc2d5b732242e0b63bc80b5d9a0400b01b300a2e7f80f95d614474c190ea"
+              }
+            ]
+          },
+          {
+            "name": "source-to-mirror-application-closure",
+            "status": "passed",
+            "scope": "All 1087 declared source hashes match committed Cars source; mirror bytes match except for the five individually verified provider overrides. The 29 omitted policy files are historical evidence and tooling, outside maintained src/static/scripts/tests.",
+            "evidence": [
+              {
+                "path": "runtime/karento-astra/provenance/standalone-source.json",
+                "sha256": "2bd85cd2ea890b9c48d79271309a5c8515b7cf1f3b9fae8ec8045a94371dbd0e"
+              },
+              {
+                "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/mirror-integration.json",
+                "sha256": "56a800c21e0f2a4c5e866c78fa30c93485e8763e3f1c24f680d2bc0251073365"
+              }
+            ]
+          },
+          {
+            "name": "master-node26-quality",
+            "status": "passed",
+            "scope": "Existing exact-tree Node 26.10.0 integration: zero strict Svelte errors/warnings, typography/geometry guards, formatting, 117 passing tests, and adapter-node production build. Checks were reused without rerunning.",
+            "evidence": [
+              {
+                "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/release-check.log",
+                "sha256": "9a1b4cc78944d35f459358954f79cad69df389eac2b55fadacf35edc41dc501a"
+              },
+              {
+                "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/release-format.log",
+                "sha256": "a348c0496851563ed00c492307c0fe5ad678d8f43e51a1fc9a0a8ce58dbf9768"
+              },
+              {
+                "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/release-tests.log",
+                "sha256": "37a3ca4d5f93254a0647653fd2128187f05204e8880df9f4dc3ff225099eac59"
+              },
+              {
+                "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/release-build.log",
+                "sha256": "62c6d5a5bcc13357d5dfc60fea60d6e2344551261b8e6e6ce3aa8b9dfc347bc7"
+              }
+            ]
+          },
+          {
+            "name": "mirror-node24-vercel-quality",
+            "status": "passed",
+            "scope": "Existing mapped Node 24.21.0 mirror: zero strict Svelte errors/warnings, typography/geometry guards, formatting, 117 passing tests, adapter-vercel 7 production build and recorded READY deployment for the exact mirror commit.",
+            "evidence": [
+              {
+                "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/mirror-check.log",
+                "sha256": "ea649b01215ffd5d8f947340d7049eeb7c798d31362ab1dea0fca7dbc016855a"
+              },
+              {
+                "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/mirror-format.log",
+                "sha256": "a348c0496851563ed00c492307c0fe5ad678d8f43e51a1fc9a0a8ce58dbf9768"
+              },
+              {
+                "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/mirror-tests.log",
+                "sha256": "44227e0fee2b42096e16837c523f88464a5e61f383c6c5383366b14f9c6b6045"
+              },
+              {
+                "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/mirror-build.log",
+                "sha256": "9a9b2397464af8b3f00f2b96eb3671a91a5dc4fdb92b502ff7d73809a119e6d9"
+              },
+              {
+                "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/release-result.json",
+                "sha256": "bd55f1a18a2869526e2d424e53749a6395a05197c3da7d54b8e2217d2198f7cb"
+              }
+            ]
+          },
+          {
+            "name": "signature-en-bg-catalog-contract",
+            "status": "passed",
+            "scope": "Current committed i18n source and all 29 localization files match the qualified mirror; EN and BG each resolve 2293 keys with no empty-key, key-set or interpolation problems. The resolved catalog check was repeated during this closure; no build or full test suite was repeated.",
+            "evidence": [
+              {
+                "path": "templates/karento-best/src/lib/i18n/catalogs/en.ts",
+                "sha256": "d7d91840d3b2435779a38c7ec98cfd1984dc084aaf9f9599d68602a501cbe76f"
+              },
+              {
+                "path": "templates/karento-best/src/lib/i18n/catalogs/bg.ts",
+                "sha256": "25ebcccf2f55c2f1d1591d79a7c02a4daa7248d3562d9235c59ff9d7cd576702"
+              },
+              {
+                "path": "templates/karento-best/src/lib/i18n/messages.ts",
+                "sha256": "911c37f586d0f36625f450317655915b30466b98251099c0dac9fd0751323ad1"
+              }
+            ]
+          },
+          {
+            "name": "hosted-current-http-and-links",
+            "status": "passed",
+            "scope": "Existing exact release: 127 HTTP contracts (102 canonical/aliases, 9 Bulgarian canonical, 7 locale/preference-isolation cases, 9 genuine 404s); 39 variants with valid IDs/control associations and 3139 resolving internal links. This is structural/locale proof, without a preserved-pixel claim.",
+            "evidence": [
+              {
+                "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/hosted/current-http.json",
+                "sha256": "20e47527fdf8cafd8ff9d9e591228700b5ffa61ea01bd9f33adb8a6a79ee3394"
+              },
+              {
+                "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/hosted-links.log",
+                "sha256": "40b20c7cb9b3bb2d756703fd5a581903e5e13233c02e07ef8ab3af3207cedb8a"
+              },
+              {
+                "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/release-result.json",
+                "sha256": "bd55f1a18a2869526e2d424e53749a6395a05197c3da7d54b8e2217d2198f7cb"
+              }
+            ]
+          },
+          {
+            "name": "standalone-focused-browser",
+            "status": "passed",
+            "scope": "Existing final standalone receipts: phone home at 320/430, menu and filters, photo viewer navigation and Escape, desktop Contact at 1440, preserved /2, and no console errors. Local receipts also cover EN/BG filters and seller controls, focus return, services recovery and budget validation. This does not assert a mounted-dealer or every-route/390px browser matrix.",
+            "evidence": [
+              {
+                "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/hosted/browser-checks.json",
+                "sha256": "414caeaac6ab0888ebd9fa033242f2c9661b49487f5b9b3d85d6e4755768f6af"
+              },
+              {
+                "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/browser-checks.json",
+                "sha256": "e976dbf2a15bb7569cbd01edfd2297a6271f36d3c6722066e865089d76dc9237"
+              },
+              {
+                "path": "templates/karento-best/.runtime/evidence/mobile-final-polish-20261010/release-result.json",
+                "sha256": "bd55f1a18a2869526e2d424e53749a6395a05197c3da7d54b8e2217d2198f7cb"
+              }
+            ]
+          }
+        ],
+        "standalone": {
+          "mobile": true,
+          "desktop": true,
+          "scope": "Focused exact-source final standalone checks reused from the recorded completed release; no new build, deployment or all-route screenshot campaign.",
+          "mobileWidths": [
+            320,
+            430
+          ],
+          "desktopWidths": [
+            1440
+          ],
+          "locales": [
+            "en",
+            "bg"
+          ]
+        }
       }
     }
   }

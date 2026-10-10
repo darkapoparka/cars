@@ -1,0 +1,83 @@
+name: Qualify Cloudflare templates
+on:
+  workflow_dispatch:
+    inputs:
+      family:
+        description: Approved family to compile; no deployment
+        required: true
+        type: choice
+        default: all
+        options:
+          - all
+          - auto-best
+          - modern
+          - import
+          - app
+          - mobile
+          - karento-best
+permissions:
+  contents: read
+concurrency:
+  group: cars-cloudflare-qualification-${{ inputs.family }}
+  cancel-in-progress: false
+jobs:
+  plan:
+    if: github.repository == 'darkapoparka/cars' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          sparse-checkout: scripts
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '22.23.2'
+      - id: matrix
+        name: Select approved family jobs
+        env:
+          QUALIFICATION_FAMILY: ${{ inputs.family }}
+        run: node scripts/qualify-cloudflare-template.mjs matrix "$QUALIFICATION_FAMILY" >> "$GITHUB_OUTPUT"
+  compile:
+    needs: plan
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    name: Compile ${{ matrix.key }} with Node ${{ matrix.node }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+          sparse-checkout: |
+            scripts
+            .github/workflows
+            templates/${{ matrix.key }}
+            templates/mobile
+            templates/karento-best
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Materialize approved source and compile Cloudflare output
+        env:
+          QUALIFICATION_FAMILY: ${{ matrix.key }}
+          WRANGLER_SEND_METRICS: 'false'
+          NEXT_TELEMETRY_DISABLED: '1'
+        run: node scripts/qualify-cloudflare-template.mjs run "$QUALIFICATION_FAMILY"
+      - name: Upload compiled artifacts and qualification receipts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: cloudflare-qualification-${{ matrix.key }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: runtime/cloudflare-ci/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.key }}/artifact/
+          if-no-files-found: warn
+          include-hidden-files: true
+          compression-level: 0
+          retention-days: 3

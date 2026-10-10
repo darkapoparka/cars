@@ -1,7 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
-import {applyCloudflareNext,freezeCloudflareNextDependencies,CLOUDFLARE_NEXT_PINS,cloudflareNextBuildHelper} from './cloudflare-next.mjs';
+import path from 'node:path';
+import {applyCloudflareNext,freezeCloudflareNextDependencies,CLOUDFLARE_NEXT_PINS,cloudflareNextBuildHelper,resolveCloudflareNpmCli} from './cloudflare-next.mjs';
 
 function fixture(keys=['modern','app','mobile']){
   const files=new Map();
@@ -87,4 +88,23 @@ test('qualified locks materialize before export, rejecting changed inputs or ins
   assert.throws(()=>freezeCloudflareNextDependencies(out,[{...lock,installedPins:{...installedPins,react:'19.2.4'}}]),/runtime pin mismatch/);
   const changed=new Map(out);changed.set('mobile/package.json',Buffer.from(out.get('mobile/package.json').toString().replace('16.3.8','16.3.9')));
   assert.throws(()=>freezeCloudflareNextDependencies(changed,[lock]),/input mismatch/);
+});
+
+test('npm resolver follows the pinned Node installation on Windows and Unix',()=>{
+  for(const [paths,node,real,expected]of [
+    [path.win32,'C:\\tools\\node\\node.exe','C:\\tools\\node\\node.exe','C:\\tools\\node\\node_modules\\npm\\bin\\npm-cli.js'],
+    [path.posix,'/opt/hostedtoolcache/node/22.23.2/x64/bin/node','/opt/hostedtoolcache/node/22.23.2/x64/bin/node','/opt/hostedtoolcache/node/22.23.2/x64/lib/node_modules/npm/bin/npm-cli.js'],
+    [path.posix,'/usr/local/bin/node','/opt/node-v22.23.2/bin/node','/opt/node-v22.23.2/lib/node_modules/npm/bin/npm-cli.js'],
+  ]){
+    const io={realpathSync:value=>{assert.equal(value,node);return real;},existsSync:value=>value===expected,statSync:()=>({isFile:()=>true})};
+    assert.equal(resolveCloudflareNpmCli(node,io,paths),expected);
+  }
+});
+test('npm resolver rejects missing or directory candidates without using an unrelated PATH npm',()=>{
+  for(const exists of [false,true]){
+    const checked=[],io={realpathSync:()=>'/opt/pinned/bin/node',existsSync:file=>{checked.push(file);return exists;},statSync:()=>({isFile:()=>false})};
+    assert.throws(()=>resolveCloudflareNpmCli('/opt/pinned/bin/node',io,path.posix),/pinned Node installation/);
+    assert.deepEqual(checked,['/opt/pinned/bin/node_modules/npm/bin/npm-cli.js','/opt/pinned/lib/node_modules/npm/bin/npm-cli.js']);
+  }
+  assert.match(cloudflareNextBuildHelper(),/const npmCli=resolveCloudflareNpmCli\(process\.execPath,fs,path\)/);
 });

@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 1,
+  "kind": "uk-six-design-reviewed-source-selection",
+  "verifiedAt": "2026-10-10T09:10:53.241Z",
+  "repository": "darkapoparka/cars",
+  "inspectionHead": "ca32f1d75516452576875de6fab13677d77e5d8c",
+  "selectionPolicy": "Latest already approved immutable native/App/Mobile releases plus accepted Signature. Newer unfinished development is excluded; source acceptance does not imply dealer/Cloudflare acceptance.",
+  "sources": [
+    {
+      "key": "auto-best",
+      "repository": "darkapoparka/cars",
+      "commit": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+      "path": "templates/auto-best",
+      "tree": "5be83ea8685a3e99d517ced43af67d9d3d7a24db",
+      "digest": "bc08eb6123546c0e0cb0f4d21e2209450bfe642e542515b53f557016d14416d2",
+      "evidence": "docs/releases/six-design-2026-10-09/native/auto-best-2afd-release.json"
+    },
+    {
+      "key": "modern",
+      "repository": "darkapoparka/cars",
+      "commit": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
+      "path": "templates/modern",
+      "tree": "c2b3b3e74815c1e5eba0c82cfb1352c795921dcf",
+      "digest": "f097bc4802e62ffb0b752bc5523f3fe1b00df83f67b16843d698d276d10344a3",
+      "evidence": "docs/releases/six-design-2026-10-09/native/modern-release.json"
+    },
+    {
+      "key": "import",
+      "repository": "darkapoparka/cars",
+      "commit": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
+      "path": "templates/import",
+      "tree": "874b601a661045dd0e265bb14a9b0af762a17d0f",
+      "digest": "25cc87e3d71101be065333c5d5d8c124516a936281b1b3c81aba6e674253a4b1",
+      "evidence": "docs/releases/six-design-2026-10-09/native/import-a51-release.json"
+    },
+    {
+      "key": "app",
+      "repository": "darkapoparka/cars",
+      "commit": "70c2b80671e217ab299549a938a537c0b9559611",
+      "path": "templates/app",
+      "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
+      "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f",
+      "evidence": "docs/qa/app-template-release-2026-10-10.json"
+    },
+    {
+      "key": "mobile",
+      "repository": "darkapoparka/cars",
+      "commit": "876590474d01178413feccf3153a0859230158a1",
+      "path": "templates/mobile",
+      "tree": "7b1f0878715aa1bc0f5942c7e654a6a1bb091510",
+      "digest": "380b153972039a80dccee73f53760a87e963d007b83a921020c5ab5353c942fc",
+      "evidence": "docs/releases/six-design-2026-10-09/extended/mobile-release.json"
+    },
+    {
+      "key": "karento-best",
+      "repository": "darkapoparka/cars",
+      "commit": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+      "path": "templates/karento-best",
+      "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
+      "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30",
+      "evidence": "docs/releases/six-design-2026-10-10/signature-release.json"
+    }
+  ],
+  "checks": [
+    {
+      "name": "six-immutable-source-verification",
+      "status": "passed",
+      "function": "verifyTemplate(root,key)",
+      "keys": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "execution": {
+        "remoteProcessId": 27644,
+        "detail": "All six checks completed and logged passed after the lock addition. The subsequent English-only manifest trial failed as documented; this evidence uses the corrected supported contract."
+      }
+    },
+    {
+      "name": "three-native-release-acceptance",
+      "status": "passed",
+      "function": "validateNativeRelease(key,entry)",
+      "keys": [
+        "auto-best",
+        "modern",
+        "import"
+      ],
+      "scope": "Existing exact-source native acceptance validates; no native acceptance evidence was edited."
+    },
+    {
+      "name": "signature-evidence-integrity",
+      "status": "passed",
+      "matchedReferences": 21,
+      "failures": 0
+    },
+    {
+      "name": "six-family-UK-manifests",
+      "status": "passed",
+      "cases": [
+        {
+          "order": "modern-first",
+          "status": "passed",
+          "variants": [
+            {
+              "key": "auto-best",
+              "base": "",
+              "entry": "/"
+            },
+            {
+              "key": "modern",
+              "base": "/variant-2",
+              "entry": "/variant-2/cars"
+            },
+            {
+              "key": "import",
+              "base": "/variant-3",
+              "entry": "/variant-3/"
+            },
+            {
+              "key": "app",
+              "base": "/variant-4",
+              "entry": "/variant-4/"
+            },
+            {
+              "key": "mobile",
+              "base": "/variant-5",
+              "entry": "/variant-5/"
+            },
+            {
+              "key": "karento-best",
+              "base": "/variant-6",
+              "entry": "/variant-6/"
+            }
+          ]
+        },
+        {
+          "order": "import-first",
+          "status": "passed",
+          "variants": [
+            {
+              "key": "auto-best",
+              "base": "",
+              "entry": "/"
+            },
+            {
+              "key": "import",
+              "base": "/variant-2",
+              "entry": "/variant-2/"
+            },
+            {
+              "key": "modern",
+              "base": "/variant-3",
+              "entry": "/variant-3/cars"
+            },
+            {
+              "key": "app",
+              "base": "/variant-4",
+              "entry": "/variant-4/"
+            },
+            {
+              "key": "mobile",
+              "base": "/variant-5",
+              "entry": "/variant-5/"
+            },
+            {
+              "key": "karento-best",
+              "base": "/variant-6",
+              "entry": "/variant-6/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "preexisting-lock-and-catalog-preservation",
+      "status": "passed",
+      "scope": "Removing only new karento-best entry reconstructs the exact reviewed original lock SHA-256. Catalog bytes remain unchanged."
+    }
+  ],
+  "ukLocaleContract": {
+    "schemaVersion": 1,
+    "defaultLocale": "en",
+    "enabledLocales": [
+      "en",
+      "bg"
+    ],
+    "dealerCountry": "GB",
+    "inventoryCurrency": "GBP",
+    "dealerId": "Use each actual dealer identity.",
+    "constraint": "Current native v2 adoption requires complete EN/BG; English-only was rejected with: Native v2 adoption requires complete EN/BG; additional languages stay hidden."
+  },
+  "signatureSelection": {
+    "sourceEvidence": "docs/releases/six-design-2026-10-10/signature-release.json",
+    "sourceEvidenceSha256": "c219f867b02094020f190cf3d89739b03c5a1fd83869269fbe4df627a0932c72",
+    "validation": "approveCarsTemplate({write:false}) returned ready:true for exact source; full returned release record selected.",
+    "method": "Exact-prehash compare guarded in-place tail addition after two genuine CLI --write attempts failed at Windows atomic rename. Existing file identity preserved; only seven original closing-tail bytes were rewritten.",
+    "cliFailures": [
+      {
+        "remoteProcessId": 22544,
+        "error": "EPERM rename .templates-lock-19124-1791623188983.tmp to templates.lock.json",
+        "lockUnchanged": true
+      },
+      {
+        "remoteProcessId": 9916,
+        "error": "EPERM rename .templates-lock-15900-1791623236781.tmp to templates.lock.json",
+        "lockUnchanged": true
+      }
+    ],
+    "permissionsChanged": false,
+    "acceptanceRulesChanged": false,
+    "processesTerminated": false
+  },
+  "preservation": {
+    "preexistingEntriesUnchanged": true,
+    "catalogUnchanged": true,
+    "catalogSha256": "35e0149f4915469ca7c6d94dc41bbb88e976dc1f97cce7a41aaa4059938f5334",
+    "lockSha256Before": "94947aad236ab51eb3222297e48dabf0a97024df215e851e99e958a55b8d9e1d",
+    "lockSha256After": "3fdd6849a223c6149b777a964d9b634a775f58568395260131fec94925132836",
+    "fileIdentityPreserved": true,
+    "carwowRetainedInLockAndHistory": true,
+    "carwowIncludedInSixDesigns": false,
+    "masterEdits": false,
+    "indexEdits": false,
+    "commit": false,
+    "push": false
+  },
+  "newerDevelopmentExcluded": [
+    {
+      "key": "auto-best",
+      "selectedCommit": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+      "currentTree": "b07ff2273be554ef64a039ac8f4f023ae60a33ac",
+      "latestCommitTouchingTemplate": "696230a404abd9b20b6f907b9cfb139175298c7a",
+      "developmentDiffersFromSelected": true,
+      "newerDevelopmentIncluded": false
+    },
+    {
+      "key": "modern",
+      "selectedCommit": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
+      "currentTree": "51d68e5dd6e3b305191df94e877403fd7b7414e1",
+      "latestCommitTouchingTemplate": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+      "developmentDiffersFromSelected": true,
+      "newerDevelopmentIncluded": false
+    },
+    {
+      "key": "import",
+      "selectedCommit": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
+      "currentTree": "b64c4a4939c4244ba3f408e5c0311c586a913e67",
+      "latestCommitTouchingTemplate": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+      "developmentDiffersFromSelected": true,
+      "newerDevelopmentIncluded": false
+    },
+    {
+      "key": "app",
+      "selectedCommit": "70c2b80671e217ab299549a938a537c0b9559611",
+      "currentTree": "42836b33d039a6429515d72dfbbac1adddeca9a1",
+      "latestCommitTouchingTemplate": "ca32f1d75516452576875de6fab13677d77e5d8c",
+      "developmentDiffersFromSelected": true,
+      "newerDevelopmentIncluded": false
+    },
+    {
+      "key": "mobile",
+      "selectedCommit": "876590474d01178413feccf3153a0859230158a1",
+      "currentTree": "57c9fd1c2d5683bf3b5c9e2cd2130f1ea67707e9",
+      "latestCommitTouchingTemplate": "3f637b0ff6861af1290cd579cf5aca45bb47c971",
+      "developmentDiffersFromSelected": true,
+      "newerDevelopmentIncluded": false
+    },
+    {
+      "key": "karento-best",
+      "selectedCommit": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+      "currentTree": "c661129affb32649c8fcecea097fc9a6487783d0",
+      "latestCommitTouchingTemplate": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+      "developmentDiffersFromSelected": false,
+      "newerDevelopmentIncluded": false
+    }
+  ],
+  "newClientPreflight": {
+    "status": "held-pending-scoped-integration-commit",
+    "message": "Commit the reviewed workflow/release inputs before cloning: catalog.json\ntemplates.lock.json",
+    "materialized": false
+  },
+  "remaining": [
+    "Root must review and commit existing catalog/release inputs and required publisher integration with this selection evidence.",
+    "Personalize new UK dealers through existing workflow.",
+    "Qualify actual six-family Cloudflare pilot and each final dealer hosted release."
+  ],
+  "limitations": [
+    "No production build or new browser campaign was run in this source-selection task. Existing evidence remains bound to its original exact source.",
+    "Signature source acceptance does not assert mounted dealer or Cloudflare package acceptance.",
+    "Newer native Oct10 envelopes, App artwork/navigation commits and Mobile desktop/service edits were deliberately not adopted."
+  ]
+}

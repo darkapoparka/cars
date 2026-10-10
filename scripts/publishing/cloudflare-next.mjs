@@ -180,6 +180,19 @@ export function freezeCloudflareNextDependencies(inputFiles, frozenLocks) {
   return files;
 }
 
+// Resolve npm only inside the selected Node installation. Windows archives put
+// it beside node.exe; official Unix archives and setup-node use ../lib.
+export function resolveCloudflareNpmCli(nodeExecutable, io, paths) {
+  const directory = paths.dirname(io.realpathSync(nodeExecutable));
+  const candidates = [
+    paths.join(directory, 'node_modules', 'npm', 'bin', 'npm-cli.js'),
+    paths.resolve(directory, '..', 'lib', 'node_modules', 'npm', 'bin', 'npm-cli.js'),
+  ];
+  const selected = candidates.find(file => io.existsSync(file) && io.statSync(file).isFile());
+  if (!selected) throw Error('npm CLI is missing from the pinned Node installation');
+  return selected;
+}
+
 export function cloudflareNextBuildHelper() {
   return `import fs from 'node:fs';
 import path from 'node:path';
@@ -203,7 +216,8 @@ const environment={...process.env,...target.environment,NODE_ENV:phase==='build'
 for(const name of Object.keys(environment))if(name.toLowerCase()==='path')delete environment[name];
 environment[process.platform==='win32'?'Path':'PATH']=path.dirname(process.execPath)+path.delimiter+(Object.entries(process.env).find(([name])=>name.toLowerCase()==='path')?.[1]??'');
 function run(args,where=cwd){const r=spawnSync(process.execPath,args,{cwd:where,env:environment,stdio:'inherit',windowsHide:true});if(r.error||r.status!==0)throw Error('Next Cloudflare command failed: '+(r.error?.message??r.status));}
-const npmCli=path.join(path.dirname(process.execPath),'node_modules/npm/bin/npm-cli.js');
+${resolveCloudflareNpmCli.toString()}
+const npmCli=resolveCloudflareNpmCli(process.execPath,fs,path);
 const require=createRequire(path.join(cwd,'package.json'));
 function packageInfo(name){for(const directory of require.resolve.paths(name)??[]){const file=path.join(directory,name,'package.json');if(fs.existsSync(file)){const pkg=JSON.parse(fs.readFileSync(file,'utf8'));if(pkg.name===name)return {directory:path.dirname(file),pkg};}}throw Error('Installed package is missing: '+name);}
 function bin(name,command){const info=packageInfo(name),relative=typeof info.pkg.bin==='string'?info.pkg.bin:info.pkg.bin?.[command];if(!relative)throw Error('Installed compiler has no expected bin: '+name);return path.resolve(info.directory,relative);}
