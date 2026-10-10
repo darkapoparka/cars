@@ -1,5 +1,6 @@
 /** Restore reviewed native presentation contracts without changing dealer facts. */
 import {createHash} from 'node:crypto';
+import {repairVarnaCopyContracts} from './varna-copy-contracts.mjs';
 export const FAMILY_NODE = Object.freeze({'auto-best':'22.23.2',modern:'22.23.2',import:'24.21.0',app:'22.23.2',mobile:'22.23.2','karento-best':'24.21.0'});
 const sha = text => createHash('sha256').update(text).digest('hex');
 function once(text, before, after) {
@@ -29,6 +30,11 @@ export function repairDealerTemplateContracts(files) {
     }
     pending.set(name,Buffer.isBuffer(input)?Buffer.from(output):output);
     receipts.push({path:name,beforeSha256:sha(input),afterSha256:sha(output),factsPreserved:true});
+  }
+  if(files.has('auto-best/src/lib/config/locale.ts') || files.has('import/src/lib/content/localized.ts')) {
+    const copyFiles=new Map(files),copy=repairVarnaCopyContracts(copyFiles);
+    for(const change of copy.changes)pending.set(change.path,copyFiles.get(change.path));
+    receipts.push(...copy.changes);
   }
   for(const [name,bytes]of pending)files.set(name,bytes);
   return {schemaVersion:1,kind:'native-presentation-contract-repair',changes:receipts,templateMastersChanged:false};

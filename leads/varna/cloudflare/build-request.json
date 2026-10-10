@@ -1,17 +1,7 @@
 {
   "schemaVersion": 1,
-  "request": "cloudflare-remaining-nine-01",
-  "dealers": [
-    "kolarov-cars",
-    "dynamic-auto-varna",
-    "car-point-trade-varna",
-    "pm-select-automotive",
-    "dream-drive-varna",
-    "prime-auto-varna",
-    "autoroad-varna",
-    "autofest-varna",
-    "city-cars-varna"
-  ],
-  "sourceBaseline": "06fcad9c0a8a5ac6b4f27c1a4e0df5445a6c8f5e",
-  "scope": "Build-only native Cloudflare candidates. Exact deployed D&M pilot and hosted checks are required before publishing the remaining public routers. No Vercel, billing, DNS or outreach changes."
+  "request": "varna-bilingual-copy-20261011",
+  "dealers": ["dm-auto-varna", "kolarov-cars", "dynamic-auto-varna", "car-point-trade-varna", "pm-select-automotive", "dream-drive-varna", "prime-auto-varna", "autoroad-varna", "autofest-varna", "city-cars-varna"],
+  "targets": ["auto-best", "import"],
+  "scope": "Rebuild only the two affected families after completing the sourced addressShort field and explicit English listing-snapshot disclosure. No template masters or stock facts changed. Strict missing-copy errors retained. Hosted acceptance remains separate."
 }
