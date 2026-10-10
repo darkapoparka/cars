@@ -434,6 +434,23 @@ export function addLegacyDetailUpgrade({ files, dealerRoot, manifest, pins }) {
   return {entries:mapping.artifact.entries.length,retired:mapping.artifact.retired.length,reference:mapping.reference};
 }
 
+/** Receipt hashes and emitted source must use the same normalized UTF-8 bytes. */
+export function normalizeAppSourceForReceipt(files) {
+  if (!(files instanceof Map)) throw Error('App receipt requires an explicit source Map');
+  const app = new Map();
+  for (const [name, bytes] of files) {
+    if (!name.startsWith('app/') || !packageRetainsPath(name)) continue;
+    const text = bytes.toString('utf8');
+    const normalized = !bytes.includes(0) && Buffer.from(text).equals(bytes)
+      ? Buffer.from(text.replace(/\r\n/g, '\n')) : bytes;
+    // Previously only the hash input changed, leaving retained dealer CRLF bytes
+    // in the candidate and causing the immediate strict App assertion to fail.
+    files.set(name, normalized);
+    app.set(name.slice(4), normalized);
+  }
+  return app;
+}
+
 async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {carsRoot, refreshedAt, extendedAdaptations = {}, candidateAssetPool} = {}) {
   if (!['2', APP_PACKAGING_VERSION, SIX_DESIGN_PACKAGING_CANDIDATE].includes(plan.manifest.packaging.version)) {
     reconcilePlanWithCandidate({ source: dealerRoot, plan, candidateDirectory });
@@ -454,12 +471,7 @@ async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {ca
   if ([APP_PACKAGING_VERSION,SIX_DESIGN_PACKAGING_CANDIDATE].includes(candidateManifest.packaging.version) && plan.pins.app) {
     const appSource = candidateManifest.templateSources.app;
     candidateManifest.appVariant = { ...candidateManifest.appVariant, source: appSource };
-    const appFiles = new Map();
-    // Binary assets retain their exact bytes; normalize only valid UTF-8 text.
-    for (const [name, bytes] of adopted) if (name.startsWith('app/') && packageRetainsPath(name)) {
-      const text = bytes.toString('utf8');
-      appFiles.set(name.slice(4), !bytes.includes(0) && Buffer.from(text).equals(bytes) ? Buffer.from(text.replace(/\r\n/g, '\n')) : bytes);
-    }
+    const appFiles = normalizeAppSourceForReceipt(adopted);
     const receipt = JSON.parse(adopted.get('.cars-app.json').toString('utf8'));
     receipt.template = appSource;
     receipt.appDigest = sha256(Buffer.from(JSON.stringify([...appFiles].sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0).map(([name, bytes]) => [name, sha256(bytes)]))));

@@ -1,8 +1,9 @@
 {
   "schemaVersion": 1,
-  "request": "preservation-aware-nine-candidates-v1",
+  "request": "navara-retained-text-receipt-consistency",
+  "dealers": [
+    "navara-car"
+  ],
   "sourceReviewRun": 38092372478,
-  "sourceReviewCommit": "38c30f0a4652c3f8a91bf06972b1903e51eadbc0",
-  "dealerCount": 9,
-  "scope": "Resolve only previously reviewed bounded conflicts, preserve all source identity and stock, build separate immutable candidate transports. No canonical source, hosting or billing writes."
+  "reason": "New local Navara source retained CRLF. Normalize emitted valid UTF-8 bytes and receipt inputs identically, with unchanged strict assertion and binary logo preservation. Other eight successful candidate artifacts remain reusable."
 }
