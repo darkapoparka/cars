@@ -68,7 +68,7 @@ function FeatureLandingContent({kind, serviceSearch}: {kind: FeatureKind; servic
       {kind === 'service' && serviceSearch ? <ServiceSearchField state={serviceSearch} onDark plainOnMobile={alternative}/> : kind === 'finance' ? <DealerBannerAction label="Choose your car" icon={<Search size={20} aria-hidden="true"/>} searchEntry plainOnMobile={alternative} expanded={financeView !== null} onClick={() => setFinanceView('cars')}/> : alternative ? <SellCarEntry expanded={sellIntent !== null} onClick={() => start()}/> : <DealerBannerAction label="Value my car" icon={<ClipboardCheck size={20} aria-hidden="true"/>} expanded={sellIntent !== null} onClick={() => start()}/>}
     </DealerMobileBanner>
     <ShowroomBanner title={current.title} control={desktopControl}/>
-    <LandingContentFrame><main data-landing-content {...stylex.props(landingContent.panel, s.content, alternative && s.alternativeContent)}>
+    <LandingContentFrame><main data-landing-content {...stylex.props(landingContent.panel, s.content, kind === 'service' && s.serviceContent, alternative && s.alternativeContent)}>
       {kind === 'finance' ? <><ImportCountryPicker country={importCountry} onCountryChange={setImportCountry}/><FinanceCalculatorLauncher view={financeView} onViewChange={setFinanceView} backNavigation={alternative}/></> : null}
       <FeatureContent kind={kind} onStart={start} serviceSearch={serviceSearch}/>
     </main></LandingContentFrame>
@@ -83,4 +83,6 @@ const s = stylex.create({
   alternativeDiscovery: {display: {[media.mobile]: 'none', default: 'contents'}},
   alternativeContent: {paddingTop: {[media.mobile]: 0, default: 8}, borderTopLeftRadius: {[media.mobile]: 0, default: 32}, borderTopRightRadius: {[media.mobile]: 0, default: 32}},
   content: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}},
+  // Contain the category row's top margin inside the rounded mobile panel.
+  serviceContent: {paddingTop: {[media.mobile]: 0, default: 8}, display: {[media.mobile]: 'flow-root', default: 'block'}},
 });

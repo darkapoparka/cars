@@ -63,7 +63,7 @@ export default function HomePage() {
       <div {...stylex.props(s.contents, alternative && s.hideAlternativePhone)}><BrandRow showTitle={false} /></div>
       <section aria-label={tx('Your showroom, your way')} {...stylex.props(s.offers, alternative && s.hideAlternativeOffers)}><ShowroomHighlights /></section>
       <section aria-label={tx('Available cars')}>
-        <div {...stylex.props(s.feed)}>{firstFeed.map(vehicle => <VehicleCard key={vehicle.slug} vehicle={vehicle} desktopTile showDiscount={false} />)}</div>
+        <div {...stylex.props(s.feed, s.firstFeed)}>{firstFeed.map(vehicle => <VehicleCard key={vehicle.slug} vehicle={vehicle} desktopTile showDiscount={false} />)}</div>
       </section>
       <div {...stylex.props(s.contents)}>{recent.length ? <section {...stylex.props(s.recent)}>
         <h2 {...stylex.props(s.heading)}>{tx("Recently viewed cars")}</h2>
@@ -99,12 +99,13 @@ const s = stylex.create({
   hideAlternativePhone:{display:{[media.mobile]:'none',default:'contents'}},
   alternativeMoreCars:{display:{[media.mobile]:'grid',default:'none'}},
   screen: {minHeight: '100vh', backgroundColor: '#fff'},
-  content: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}, paddingBottom: {[media.mobile]: 16, [media.desktop]: 48, default: 170}},
+  content: {maxWidth: $.content, marginInline: 'auto', paddingTop: {[media.mobile]: 0, default: 8}, paddingInline: {[media.mobile]: 12, default: 28}, paddingBottom: {[media.mobile]: 16, [media.desktop]: 48, default: 170}},
   heading: {fontSize: {[media.mobile]: 18, default: 25}, fontWeight: {[media.mobile]: 600, default: 500}, lineHeight: 1.35, letterSpacing: 0},
   recent: {marginTop: 27},
   recentRail: {display: 'flex', gap: 12, overflowX: 'auto', marginTop: 12, paddingBottom: 6, scrollbarWidth: 'none'},
   offers: {marginTop: {[media.mobile]: $.mobileBrandGap, default: 24}},
   feed: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', [media.desktop]: 'repeat(4,minmax(0,1fr))', default: 'repeat(2,minmax(0,1fr))'}, gap: {[media.mobile]: $.mobileSectionGap, default: 14}, marginTop: {[media.mobile]: $.mobileSectionGap, default: 14}},
+  firstFeed: {marginTop: {[media.mobile]: 4, default: 14}},
   hotDeals: {marginTop: {[media.mobile]: 24, default: 26}, paddingTop: {[media.mobile]: 0, default: 18}, paddingBottom: {[media.mobile]: 0, default: 8},},
   mobileCollectionBanner: {display: {[media.mobile]: 'block', default: 'none'}, position: 'relative', height: 156, overflow: 'hidden', color: '#fff', borderRadius: 18, backgroundColor: '#242428'},
   collectionBannerImage: {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center'},

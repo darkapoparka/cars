@@ -21,7 +21,7 @@ export default function DealerMobileBanner({title, description, secondary, child
         {title ? <><h1 id={titleId} {...stylex.props(s.title)}>{tx(title)}</h1>{description ? <p {...stylex.props(s.description)}>{tx(description)}</p> : null}</> : <h1 id={titleId} {...stylex.props(s.brand)}><DealerBrand hero onDark mobileOnLight/></h1>}
         {secondary}
       </div>
-      <div {...stylex.props(s.control, !title && !controlOnly && s.homeControl, controlOnly && s.compactControl)}>{children}</div>
+      <div {...stylex.props(s.control, controlOnly && s.compactControl)}>{children}</div>
     </section>
   </ShowroomBannerFrame></div>;
 }
@@ -45,7 +45,6 @@ const s = stylex.create({
   title: {fontSize: {[media.mobile]: 24, default: 28}, fontWeight: 500, lineHeight: 1.2, textWrap: 'balance'},
   description: {color: {[media.mobile]: $.muted, default: '#d1d1d5'}, fontSize: 14, lineHeight: '20px'},
   control: {position: 'relative', width: '100%', maxWidth: 640, marginInline: 'auto', padding: {[media.mobile]: '0 12px 20px', default: '0 28px 24px'}},
-  homeControl: {padding: {[media.mobile]: '0 12px 12px', default: null}},
   compactControl: {padding: {[media.mobile]: '4px 12px 0', default: null}},
   action: {width: '100%', color: '#202024', backgroundColor: {default: $.surface, ':hover': $.surfaceAlt}, textAlign: 'left', cursor: 'pointer', outlineColor: {':focus-visible': {[media.mobile]: $.ink, default: '#fff'}}, outlineOffset: 3},
   plainMobileAction: {backgroundColor: {default: $.surface, ':hover': $.surfaceAlt}, outlineColor: {':focus-visible': {default: '#fff', [media.mobile]: '#242428'}}, outlineOffset: {[media.mobile]: 2, default: 3}},
