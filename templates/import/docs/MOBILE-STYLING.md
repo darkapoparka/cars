@@ -98,6 +98,9 @@ sets their 12px control corners (`--bc-radius-control`), 40px visible height,
 44px tap area, 18px text and padding; use
 `.mobile-quick-pill--icon` for an icon-only quick filter. Keep page-specific
 rail layout, selected states, flags and label truncation in the component.
+The icon-only filter keeps the same 40px surface and 20px glyph, with a 2.25
+stroke for clearer visual weight beside text pills. Preserve the matching rail
+height rather than widening or raising the filter button.
 The owner chose these corners on 10 October 2026 after the matched mobile comparison.
 Quick pills use the shared 8px horizontal padding and 4px inline gap. Avoid
 page-specific padding or font overrides that make the same control look larger.

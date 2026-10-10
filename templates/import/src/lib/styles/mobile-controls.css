@@ -69,6 +69,7 @@
 		width: var(--bc-mobile-control-glyph-size);
 		height: var(--bc-mobile-control-glyph-size);
 		flex: 0 0 auto;
+		stroke-width: 2.25;
 	}
 	/* Selection sheets share a surface; full-screen searches keep their existing frame. */
 	.mobile-selection-surface {
