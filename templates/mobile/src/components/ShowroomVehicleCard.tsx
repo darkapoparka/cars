@@ -168,7 +168,7 @@ const s = stylex.create({
       '@media (min-width: 1024px)': { default: 22, '@container (max-width: 250px)': 20 },
     },
     lineHeight: 1.25,
-    fontWeight: 700,
+    fontWeight: 600,
     fontVariantNumeric: 'tabular-nums',
     whiteSpace: 'nowrap',
   },

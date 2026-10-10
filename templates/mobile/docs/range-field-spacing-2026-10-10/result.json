@@ -1,0 +1,85 @@
+{
+  "route": "http://127.0.0.1:6474/?filter=make&panel=all",
+  "change": "8px separation and individual borders for grouped range fields at desktop widths only",
+  "before": [
+    {
+      "fieldBorder": "0px",
+      "gap": 0,
+      "height": 60,
+      "label": "Цена от",
+      "parentBorder": "1px",
+      "rowGap": "0px"
+    },
+    {
+      "fieldBorder": "0px",
+      "gap": 0,
+      "height": 60,
+      "label": "Година от",
+      "parentBorder": "1px",
+      "rowGap": "0px"
+    },
+    {
+      "fieldBorder": "0px",
+      "gap": 0,
+      "height": 60,
+      "label": "Пробег от",
+      "parentBorder": "1px",
+      "rowGap": "0px"
+    }
+  ],
+  "after": [
+    {
+      "fieldBorder": "1px",
+      "gap": 8,
+      "height": 62,
+      "inputFits": true,
+      "label": "Цена от",
+      "parentBorder": "0px",
+      "rowGap": "8px"
+    },
+    {
+      "fieldBorder": "1px",
+      "gap": 8,
+      "height": 62,
+      "inputFits": true,
+      "label": "Година от",
+      "parentBorder": "0px",
+      "rowGap": "8px"
+    },
+    {
+      "fieldBorder": "1px",
+      "gap": 8,
+      "height": 62,
+      "inputFits": true,
+      "label": "Пробег от",
+      "parentBorder": "0px",
+      "rowGap": "8px"
+    }
+  ],
+  "narrowDesktop": [
+    {
+      "gap": 8,
+      "inputFits": true,
+      "label": "Цена от"
+    },
+    {
+      "gap": 8,
+      "inputFits": true,
+      "label": "Година от"
+    },
+    {
+      "gap": 8,
+      "inputFits": true,
+      "label": "Пробег от"
+    }
+  ],
+  "inputCheck": {
+    "from": "10000",
+    "to": "60000",
+    "clearedAfterCheck": true
+  },
+  "retainedCaptures": [
+    "before-desktop.jpg",
+    "after-desktop.jpg"
+  ]
+}
