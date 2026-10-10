@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-09-30T16:49:33.857Z",
+  "updatedAt": "2026-10-10T15:08:58.524Z",
   "githubOwner": "darkapoparka",
   "vercelTeam": "tyj5",
-  "model": "One canonical dealer folder; one publishing repository and Vercel project; actual variants declared per dealer.",
+  "model": "One canonical dealer folder and publishing repository; deployment provider and actual variants are declared per dealer.",
   "aliases": {
     "asko96": "asko-96",
     "tesi-car": "tesi-car-varna",
@@ -12054,6 +12054,2356 @@
       "aliases": [],
       "repository": null,
       "packagingVersion": null
+    },
+    {
+      "slug": "stockport-broadbent-car-and-servicing",
+      "name": "Broadbent Car and Servicing",
+      "id": null,
+      "aliases": [],
+      "localPath": "clients/stockport-broadbent-car-and-servicing",
+      "localPresent": true,
+      "localStorage": {
+        "mode": "sparse-checkout",
+        "applicationDirectoriesMaterialized": false
+      },
+      "repository": "darkapoparka/cars-uk-stockport-broadbent-car-and-servicing",
+      "defaultBranch": "main",
+      "provider": "cloudflare",
+      "packagingVersion": "5",
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "db9736812d9f2d4ffbbc4a6f6f29d4f6f136666a",
+      "buildSourceCommit": "db9736812d9f2d4ffbbc4a6f6f29d4f6f136666a",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": "",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-stockport-broadbent-car-and-servicing.darkapoparka1.workers.dev/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+            "path": "templates/auto-best",
+            "tree": "5be83ea8685a3e99d517ced43af67d9d3d7a24db",
+            "digest": "bc08eb6123546c0e0cb0f4d21e2209450bfe642e542515b53f557016d14416d2"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38051534504,
+            "artifactId": 11669304264,
+            "compiledDigest": "ca9ecdc271a4128c4b231044cc02a3a126fc7fcc320d7c14bf8293c4cb01ac87"
+          }
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-stockport-broadbent-car-and-servicing.darkapoparka1.workers.dev/variant-2/cars",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
+            "path": "templates/modern",
+            "tree": "c2b3b3e74815c1e5eba0c82cfb1352c795921dcf",
+            "digest": "f097bc4802e62ffb0b752bc5523f3fe1b00df83f67b16843d698d276d10344a3"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38051534504,
+            "artifactId": 11669359399,
+            "compiledDigest": "e58cc9538b201ddfd1d5f66d161d67d4e40eeb842007f544f3d478b7399f66d3"
+          }
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-stockport-broadbent-car-and-servicing.darkapoparka1.workers.dev/variant-3/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
+            "path": "templates/import",
+            "tree": "874b601a661045dd0e265bb14a9b0af762a17d0f",
+            "digest": "25cc87e3d71101be065333c5d5d8c124516a936281b1b3c81aba6e674253a4b1"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38051534504,
+            "artifactId": 11669444404,
+            "compiledDigest": "27d83110cf7512d4330cb0dc4883abc1e1fc830dfd7000f117723732f58cefb2"
+          }
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-stockport-broadbent-car-and-servicing.darkapoparka1.workers.dev/variant-4/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "70c2b80671e217ab299549a938a537c0b9559611",
+            "path": "templates/app",
+            "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
+            "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38051534504,
+            "artifactId": 11669329703,
+            "compiledDigest": "b683e1999d5544eafad18c4ea3df3c2c7429889080c21e980ecefd904a94652f"
+          }
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-stockport-broadbent-car-and-servicing.darkapoparka1.workers.dev/variant-5/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "876590474d01178413feccf3153a0859230158a1",
+            "path": "templates/mobile",
+            "tree": "7b1f0878715aa1bc0f5942c7e654a6a1bb091510",
+            "digest": "380b153972039a80dccee73f53760a87e963d007b83a921020c5ab5353c942fc"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38051534504,
+            "artifactId": 11669479673,
+            "compiledDigest": "523f9e839a6ba5229a57b903f8ca73b4e8ce54ca2014f5f57496c50d2893e6b7"
+          }
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-stockport-broadbent-car-and-servicing.darkapoparka1.workers.dev/variant-6/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+            "path": "templates/karento-best",
+            "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
+            "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38051534504,
+            "artifactId": 11669574896,
+            "compiledDigest": "6633edc50ced1514036fad7721b236ad323ab29b8dd1a4a22addb5956416a2f5"
+          }
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "cloudflare-device-approval-required",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-uk-stockport-broadbent-car-and-servicing.darkapoparka1.workers.dev",
+        "publicUrl": null,
+        "packageDigest": "8605b6108a7f13b89549af19a7521ec0a67859d00303b0c5c45d38e56140343d",
+        "privatePublication": {
+          "state": "published_verified_private_main",
+          "repositoryId": 1413030633,
+          "commit": "fc895efe0b54cd6847e6f9efe46b8f2fd03517f3",
+          "commitUrl": "https://github.com/darkapoparka/cars-uk-stockport-broadbent-car-and-servicing/commit/fc895efe0b54cd6847e6f9efe46b8f2fd03517f3",
+          "sourceCommit": "db9736812d9f2d4ffbbc4a6f6f29d4f6f136666a",
+          "packageTree": "9bea571b02e0c3cb9a7d2cb44eabb4064f412da5",
+          "packageDigest": "8605b6108a7f13b89549af19a7521ec0a67859d00303b0c5c45d38e56140343d",
+          "exportTree": "ac1d6ca54a266a61fdce981b679bd1ac2531a582",
+          "parent": "cb2319bb18315fcee3f20560f378eaf049464a09",
+          "private": true,
+          "defaultBranch": "main",
+          "visibilityVerifiedAt": "2026-10-10T13:10:01.807Z",
+          "verifiedAt": "2026-10-10T13:10:55.464Z",
+          "verificationScope": "Saved successful publisher verification; no new remote-head query by this documentation generator.",
+          "publishedReceipt": {
+            "path": "runtime/dealer-exports/stockport-broadbent-car-and-servicing/proposal-GGg4Ac/published.json",
+            "bytes": 966,
+            "sha256": "ea5cd5db5653b752ab84d75fcf3e465f5f424e676ba01ddd251f6aa7f6aafb6b"
+          },
+          "exportReceipt": {
+            "path": "runtime/dealer-exports/stockport-broadbent-car-and-servicing/proposal-GGg4Ac/export.json",
+            "bytes": 793065,
+            "sha256": "f1f8dd06c04123c349b1f83e02d194cc4f392d30cfce89d8547bbf757779b6f8"
+          }
+        },
+        "previewEnabled": false,
+        "note": "All six application builds passed; public upload, hosted review and Free runtime qualification are pending."
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "db9736812d9f2d4ffbbc4a6f6f29d4f6f136666a",
+          "buildSourceCommit": "db9736812d9f2d4ffbbc4a6f6f29d4f6f136666a"
+        },
+        "personalization": {
+          "state": "sealed",
+          "sourceManifestSha256": "03ddbd25bfd8343fa0882c16eb0a788de56662b9e74701fb8cc8cb7e8f588ce1"
+        },
+        "build": {
+          "state": "passed",
+          "runId": 38051534504,
+          "url": "https://github.com/darkapoparka/cars/actions/runs/38051534504",
+          "applicationTargets": 6,
+          "routerDryRun": "passed",
+          "packageTree": "9bea571b02e0c3cb9a7d2cb44eabb4064f412da5",
+          "packageDigest": "8605b6108a7f13b89549af19a7521ec0a67859d00303b0c5c45d38e56140343d"
+        },
+        "publication": {
+          "state": "verified-private-main",
+          "commit": "fc895efe0b54cd6847e6f9efe46b8f2fd03517f3",
+          "receiptSha256": "ea5cd5db5653b752ab84d75fcf3e465f5f424e676ba01ddd251f6aa7f6aafb6b"
+        },
+        "deployment": {
+          "state": "device-approval-required",
+          "verified": false
+        },
+        "browser": {
+          "state": "not-run",
+          "verified": false
+        },
+        "ownerReview": {
+          "state": "pending"
+        },
+        "freeRuntime": {
+          "state": "not-run",
+          "qualified": false
+        }
+      }
+    },
+    {
+      "slug": "motherwell-motors-castle",
+      "name": "Motors Castle",
+      "id": null,
+      "aliases": [],
+      "localPath": "clients/motherwell-motors-castle",
+      "localPresent": true,
+      "localStorage": {
+        "mode": "sparse-checkout",
+        "applicationDirectoriesMaterialized": false
+      },
+      "repository": "darkapoparka/cars-uk-motherwell-motors-castle",
+      "defaultBranch": "main",
+      "provider": "cloudflare",
+      "packagingVersion": "5",
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "40a4a3c9fdb387259e55b32a265986fca3fd6339",
+      "buildSourceCommit": "40a4a3c9fdb387259e55b32a265986fca3fd6339",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": "",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-motherwell-motors-castle.darkapoparka1.workers.dev/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+            "path": "templates/auto-best",
+            "tree": "5be83ea8685a3e99d517ced43af67d9d3d7a24db",
+            "digest": "bc08eb6123546c0e0cb0f4d21e2209450bfe642e542515b53f557016d14416d2"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052809278,
+            "artifactId": 11670736184,
+            "compiledDigest": "eb8ee003cba39f63944c17ac620a9974054eefa76708baa326ba51aa495be99a"
+          }
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-motherwell-motors-castle.darkapoparka1.workers.dev/variant-2/cars",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
+            "path": "templates/modern",
+            "tree": "c2b3b3e74815c1e5eba0c82cfb1352c795921dcf",
+            "digest": "f097bc4802e62ffb0b752bc5523f3fe1b00df83f67b16843d698d276d10344a3"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052809278,
+            "artifactId": 11669907343,
+            "compiledDigest": "690dd39dc86f8d23450248349c8026af38a0b7e97c6b3873f243e86740b7f6da"
+          }
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-motherwell-motors-castle.darkapoparka1.workers.dev/variant-3/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
+            "path": "templates/import",
+            "tree": "874b601a661045dd0e265bb14a9b0af762a17d0f",
+            "digest": "25cc87e3d71101be065333c5d5d8c124516a936281b1b3c81aba6e674253a4b1"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052809278,
+            "artifactId": 11670851361,
+            "compiledDigest": "e03d50a5374371a6fe2ba34cfffe68dc1eb6a7d4df792d0225752ed49bb63dbb"
+          }
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-motherwell-motors-castle.darkapoparka1.workers.dev/variant-4/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "70c2b80671e217ab299549a938a537c0b9559611",
+            "path": "templates/app",
+            "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
+            "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052809278,
+            "artifactId": 11670726568,
+            "compiledDigest": "b560f3366408fd261dabd03905b11048a62852ae77820f836d0f2c2cef861cd8"
+          }
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-motherwell-motors-castle.darkapoparka1.workers.dev/variant-5/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "876590474d01178413feccf3153a0859230158a1",
+            "path": "templates/mobile",
+            "tree": "7b1f0878715aa1bc0f5942c7e654a6a1bb091510",
+            "digest": "380b153972039a80dccee73f53760a87e963d007b83a921020c5ab5353c942fc"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052809278,
+            "artifactId": 11670152474,
+            "compiledDigest": "bccceb7d3094b85cca796d7589c14618a317a26b59566b8a05f48884eedd757b"
+          }
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-motherwell-motors-castle.darkapoparka1.workers.dev/variant-6/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+            "path": "templates/karento-best",
+            "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
+            "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052809278,
+            "artifactId": 11670816686,
+            "compiledDigest": "8d4e93cf2a634446ce7d28b3eeaa9bb7a12dcda7c4b5de7d1d92be8f426c1fb0"
+          }
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "cloudflare-device-approval-required",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-uk-motherwell-motors-castle.darkapoparka1.workers.dev",
+        "publicUrl": null,
+        "packageDigest": "c9a0b78f8520addf0aba07a1f026760d31b86e2b5778a304db8b5e3dc59871e5",
+        "privatePublication": {
+          "state": "published_verified_private_main",
+          "repositoryId": 1413030444,
+          "commit": "05718eb7d7d1362bba2bfd4db5aae07fa414ea4a",
+          "commitUrl": "https://github.com/darkapoparka/cars-uk-motherwell-motors-castle/commit/05718eb7d7d1362bba2bfd4db5aae07fa414ea4a",
+          "sourceCommit": "40a4a3c9fdb387259e55b32a265986fca3fd6339",
+          "packageTree": "96034fc81443dd12b44c251f76c3cf7f8b7a1f82",
+          "packageDigest": "c9a0b78f8520addf0aba07a1f026760d31b86e2b5778a304db8b5e3dc59871e5",
+          "exportTree": "36a7faedaf6e566b9fdcc61cd9dbd71cc72717ae",
+          "parent": "3e6ad672887b4cb447b0d7bf62ef21cf4202a0a4",
+          "private": true,
+          "defaultBranch": "main",
+          "visibilityVerifiedAt": "2026-10-10T13:44:24.284Z",
+          "verifiedAt": "2026-10-10T13:45:20.379Z",
+          "verificationScope": "Saved successful publisher verification; no new remote-head query by this documentation generator.",
+          "publishedReceipt": {
+            "path": "runtime/dealer-exports/motherwell-motors-castle/proposal-a3734w/published.json",
+            "bytes": 927,
+            "sha256": "00c7e1d22cdfac3820d856195b889965345243b557e625364703808bc7d8d332"
+          },
+          "exportReceipt": {
+            "path": "runtime/dealer-exports/motherwell-motors-castle/proposal-a3734w/export.json",
+            "bytes": 792983,
+            "sha256": "5c86131fd127d933e5fcd9815c030e86e8421a4e69738f8603c46c6c57806157"
+          }
+        },
+        "previewEnabled": false,
+        "note": "All six application builds passed; public upload, hosted review and Free runtime qualification are pending."
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "40a4a3c9fdb387259e55b32a265986fca3fd6339",
+          "buildSourceCommit": "40a4a3c9fdb387259e55b32a265986fca3fd6339"
+        },
+        "personalization": {
+          "state": "sealed",
+          "sourceManifestSha256": "2489c34a52c2df9b5014770d5d8961756c07361585c00e3cb9ab394974229acb"
+        },
+        "build": {
+          "state": "passed",
+          "runId": 38052809278,
+          "url": "https://github.com/darkapoparka/cars/actions/runs/38052809278",
+          "applicationTargets": 6,
+          "routerDryRun": "passed",
+          "packageTree": "96034fc81443dd12b44c251f76c3cf7f8b7a1f82",
+          "packageDigest": "c9a0b78f8520addf0aba07a1f026760d31b86e2b5778a304db8b5e3dc59871e5"
+        },
+        "publication": {
+          "state": "verified-private-main",
+          "commit": "05718eb7d7d1362bba2bfd4db5aae07fa414ea4a",
+          "receiptSha256": "00c7e1d22cdfac3820d856195b889965345243b557e625364703808bc7d8d332"
+        },
+        "deployment": {
+          "state": "device-approval-required",
+          "verified": false
+        },
+        "browser": {
+          "state": "not-run",
+          "verified": false
+        },
+        "ownerReview": {
+          "state": "pending"
+        },
+        "freeRuntime": {
+          "state": "not-run",
+          "qualified": false
+        }
+      }
+    },
+    {
+      "slug": "birmingham-trade-car-sales-grasmere",
+      "name": "Trade Car Sales",
+      "id": null,
+      "aliases": [],
+      "localPath": "clients/birmingham-trade-car-sales-grasmere",
+      "localPresent": true,
+      "localStorage": {
+        "mode": "sparse-checkout",
+        "applicationDirectoriesMaterialized": false
+      },
+      "repository": "darkapoparka/cars-uk-birmingham-trade-car-sales-grasmere",
+      "defaultBranch": "main",
+      "provider": "cloudflare",
+      "packagingVersion": "5",
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "960068b2fe8fe5776298335e0e619f7be4f80f9f",
+      "buildSourceCommit": "960068b2fe8fe5776298335e0e619f7be4f80f9f",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": "",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-birmingham-trade-car-sales-grasmere.darkapoparka1.workers.dev/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+            "path": "templates/auto-best",
+            "tree": "5be83ea8685a3e99d517ced43af67d9d3d7a24db",
+            "digest": "bc08eb6123546c0e0cb0f4d21e2209450bfe642e542515b53f557016d14416d2"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052065880,
+            "artifactId": 11670076165,
+            "compiledDigest": "df3d4725ec0f48e011b8f14f5730f6a8e7ee8ccaafe41bef8b15cb4216ecc2f6"
+          }
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-birmingham-trade-car-sales-grasmere.darkapoparka1.workers.dev/variant-2/cars",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
+            "path": "templates/modern",
+            "tree": "c2b3b3e74815c1e5eba0c82cfb1352c795921dcf",
+            "digest": "f097bc4802e62ffb0b752bc5523f3fe1b00df83f67b16843d698d276d10344a3"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052065880,
+            "artifactId": 11669564971,
+            "compiledDigest": "30f45ada0ff71927b83fe342380af61d44204ce4021bae0df49f69a7027b47c3"
+          }
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-birmingham-trade-car-sales-grasmere.darkapoparka1.workers.dev/variant-3/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
+            "path": "templates/import",
+            "tree": "874b601a661045dd0e265bb14a9b0af762a17d0f",
+            "digest": "25cc87e3d71101be065333c5d5d8c124516a936281b1b3c81aba6e674253a4b1"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052065880,
+            "artifactId": 11669931580,
+            "compiledDigest": "2730e4cc81395c57479e1b7324eb550d968eed8afc05456562fef408bddd6d46"
+          }
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-birmingham-trade-car-sales-grasmere.darkapoparka1.workers.dev/variant-4/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "70c2b80671e217ab299549a938a537c0b9559611",
+            "path": "templates/app",
+            "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
+            "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052065880,
+            "artifactId": 11670300784,
+            "compiledDigest": "9723e0145985894fda4c4e0b78b46e166a54ed04709b013ac64f6f3232f10f31"
+          }
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-birmingham-trade-car-sales-grasmere.darkapoparka1.workers.dev/variant-5/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "876590474d01178413feccf3153a0859230158a1",
+            "path": "templates/mobile",
+            "tree": "7b1f0878715aa1bc0f5942c7e654a6a1bb091510",
+            "digest": "380b153972039a80dccee73f53760a87e963d007b83a921020c5ab5353c942fc"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052065880,
+            "artifactId": 11670400819,
+            "compiledDigest": "30e6b6fc872ad67ed125cb50e7105add1292baa8e75157d0a011e04a2f230ab4"
+          }
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-birmingham-trade-car-sales-grasmere.darkapoparka1.workers.dev/variant-6/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+            "path": "templates/karento-best",
+            "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
+            "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052065880,
+            "artifactId": 11670495840,
+            "compiledDigest": "cd7a7221183b76ee35fa4e5f40a159c0268fb833ab5588a6bebd4e64c5fecd02"
+          }
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "cloudflare-device-approval-required",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-uk-birmingham-trade-car-sales-grasmere.darkapoparka1.workers.dev",
+        "publicUrl": null,
+        "packageDigest": "941acfcfedf98398394744afe620caec1929d89e8b6e08633a71a40cf3a205a1",
+        "privatePublication": {
+          "state": "published_verified_private_main",
+          "repositoryId": 1413030267,
+          "commit": "3eaa7f0183796160dcfb4a22ecc7460080987951",
+          "commitUrl": "https://github.com/darkapoparka/cars-uk-birmingham-trade-car-sales-grasmere/commit/3eaa7f0183796160dcfb4a22ecc7460080987951",
+          "sourceCommit": "960068b2fe8fe5776298335e0e619f7be4f80f9f",
+          "packageTree": "447b68424cde15bfc34b76f114a86931aa625602",
+          "packageDigest": "941acfcfedf98398394744afe620caec1929d89e8b6e08633a71a40cf3a205a1",
+          "exportTree": "6a24d817adb7b67e217edbdc57cd340f60d0d678",
+          "parent": "387e4d123bbde063c578e1bdf7c0f8375b6cecd7",
+          "private": true,
+          "defaultBranch": "main",
+          "visibilityVerifiedAt": "2026-10-10T13:54:54.625Z",
+          "verifiedAt": "2026-10-10T13:55:48.563Z",
+          "verificationScope": "Saved successful publisher verification; no new remote-head query by this documentation generator.",
+          "publishedReceipt": {
+            "path": "runtime/dealer-exports/birmingham-trade-car-sales-grasmere/proposal-cnY4y9/published.json",
+            "bytes": 960,
+            "sha256": "78bdd1b31d35202e7ec2b6dcbe08d4919cb0154ddbe809475d2ca0834a55e874"
+          },
+          "exportReceipt": {
+            "path": "runtime/dealer-exports/birmingham-trade-car-sales-grasmere/proposal-cnY4y9/export.json",
+            "bytes": 794026,
+            "sha256": "e0fe8eb8062155d176038a8f8d24f00f4fe813f99f4276812804b68892a34d08"
+          }
+        },
+        "previewEnabled": false,
+        "note": "All six application builds passed; public upload, hosted review and Free runtime qualification are pending."
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "960068b2fe8fe5776298335e0e619f7be4f80f9f",
+          "buildSourceCommit": "960068b2fe8fe5776298335e0e619f7be4f80f9f"
+        },
+        "personalization": {
+          "state": "sealed",
+          "sourceManifestSha256": "6c03ff458722ba6d0727e4ac788ed96421a5c860533df0103eb748edd03886cf"
+        },
+        "build": {
+          "state": "passed",
+          "runId": 38052065880,
+          "url": "https://github.com/darkapoparka/cars/actions/runs/38052065880",
+          "applicationTargets": 6,
+          "routerDryRun": "passed",
+          "packageTree": "447b68424cde15bfc34b76f114a86931aa625602",
+          "packageDigest": "941acfcfedf98398394744afe620caec1929d89e8b6e08633a71a40cf3a205a1"
+        },
+        "publication": {
+          "state": "verified-private-main",
+          "commit": "3eaa7f0183796160dcfb4a22ecc7460080987951",
+          "receiptSha256": "78bdd1b31d35202e7ec2b6dcbe08d4919cb0154ddbe809475d2ca0834a55e874"
+        },
+        "deployment": {
+          "state": "device-approval-required",
+          "verified": false
+        },
+        "browser": {
+          "state": "not-run",
+          "verified": false
+        },
+        "ownerReview": {
+          "state": "pending"
+        },
+        "freeRuntime": {
+          "state": "not-run",
+          "qualified": false
+        }
+      }
+    },
+    {
+      "slug": "birmingham-square-one-motors",
+      "name": "Square One Motors",
+      "id": null,
+      "aliases": [],
+      "localPath": "clients/birmingham-square-one-motors",
+      "localPresent": true,
+      "localStorage": {
+        "mode": "sparse-checkout",
+        "applicationDirectoriesMaterialized": false
+      },
+      "repository": "darkapoparka/cars-uk-birmingham-square-one-motors",
+      "defaultBranch": "main",
+      "provider": "cloudflare",
+      "packagingVersion": "5",
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "2c54ec1e0612b95910825bd885ba3e4b7d40d1cd",
+      "buildSourceCommit": "2c54ec1e0612b95910825bd885ba3e4b7d40d1cd",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": "",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-birmingham-square-one-motors.darkapoparka1.workers.dev/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+            "path": "templates/auto-best",
+            "tree": "5be83ea8685a3e99d517ced43af67d9d3d7a24db",
+            "digest": "bc08eb6123546c0e0cb0f4d21e2209450bfe642e542515b53f557016d14416d2"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38051685809,
+            "artifactId": 11669524407,
+            "compiledDigest": "bbf89a01d4b5df681f2a822fa59c8eeb977f64e9719587f1034c8f37d2d1982a"
+          }
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-birmingham-square-one-motors.darkapoparka1.workers.dev/variant-2/cars",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
+            "path": "templates/modern",
+            "tree": "c2b3b3e74815c1e5eba0c82cfb1352c795921dcf",
+            "digest": "f097bc4802e62ffb0b752bc5523f3fe1b00df83f67b16843d698d276d10344a3"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38051685809,
+            "artifactId": 11669224578,
+            "compiledDigest": "820d9420dc836cbf2ea5bc36537e71428dd02e02fc2c50716d3c94a67fafeb81"
+          }
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-birmingham-square-one-motors.darkapoparka1.workers.dev/variant-3/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
+            "path": "templates/import",
+            "tree": "874b601a661045dd0e265bb14a9b0af762a17d0f",
+            "digest": "25cc87e3d71101be065333c5d5d8c124516a936281b1b3c81aba6e674253a4b1"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38051685809,
+            "artifactId": 11669574752,
+            "compiledDigest": "7904d2a615070ea3b8030d24cec52c8820c07413872bcf2e12e74f6357890290"
+          }
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-birmingham-square-one-motors.darkapoparka1.workers.dev/variant-4/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "70c2b80671e217ab299549a938a537c0b9559611",
+            "path": "templates/app",
+            "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
+            "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38051685809,
+            "artifactId": 11669344729,
+            "compiledDigest": "d46dc146d90f79a5f563cb3e0b14885488acff221aa678d1b0fbada00c5189fa"
+          }
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-birmingham-square-one-motors.darkapoparka1.workers.dev/variant-5/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "876590474d01178413feccf3153a0859230158a1",
+            "path": "templates/mobile",
+            "tree": "7b1f0878715aa1bc0f5942c7e654a6a1bb091510",
+            "digest": "380b153972039a80dccee73f53760a87e963d007b83a921020c5ab5353c942fc"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38051685809,
+            "artifactId": 11669886516,
+            "compiledDigest": "01f1b8cab71756c9ad2ca7ef58062d2354b6311105d87b608d5658d34641a2ed"
+          }
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-birmingham-square-one-motors.darkapoparka1.workers.dev/variant-6/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+            "path": "templates/karento-best",
+            "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
+            "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38051685809,
+            "artifactId": 11669669812,
+            "compiledDigest": "6ef8ea7eae07a933b3fc4ec0c31db6406a07ee5adfdf2ee1eb090d6d9c042ca5"
+          }
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "cloudflare-device-approval-required",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-uk-birmingham-square-one-motors.darkapoparka1.workers.dev",
+        "publicUrl": null,
+        "packageDigest": "f198f0499c93652e73a9ee465572adf545f2a0da31f31b657922af316f395ef3",
+        "privatePublication": {
+          "state": "published_verified_private_main",
+          "repositoryId": 1413030195,
+          "commit": "63b3a6921b03d1af3e068689b623c58613e5f61e",
+          "commitUrl": "https://github.com/darkapoparka/cars-uk-birmingham-square-one-motors/commit/63b3a6921b03d1af3e068689b623c58613e5f61e",
+          "sourceCommit": "2c54ec1e0612b95910825bd885ba3e4b7d40d1cd",
+          "packageTree": "ed7daddcc55d7f073f833b3f762ccbc58425aa2d",
+          "packageDigest": "f198f0499c93652e73a9ee465572adf545f2a0da31f31b657922af316f395ef3",
+          "exportTree": "bd9c723763aee9162bfdfe5dcc731d4f63a02790",
+          "parent": "5c8e18eff8f68c6e744a715b27b8ddc5e23a7af3",
+          "private": true,
+          "defaultBranch": "main",
+          "visibilityVerifiedAt": "2026-10-10T14:03:03.875Z",
+          "verifiedAt": "2026-10-10T14:03:58.221Z",
+          "verificationScope": "Saved successful publisher verification; no new remote-head query by this documentation generator.",
+          "publishedReceipt": {
+            "path": "runtime/dealer-exports/birmingham-square-one-motors/proposal-oEAwEF/published.json",
+            "bytes": 939,
+            "sha256": "509b1713c0bdda72d5e650de1075b54bbe8fa6d6129b758e69e3c701513df8d0"
+          },
+          "exportReceipt": {
+            "path": "runtime/dealer-exports/birmingham-square-one-motors/proposal-oEAwEF/export.json",
+            "bytes": 793697,
+            "sha256": "fbac8090bb2e9704500c115a6b989f4d7992acf6c6ec0326a69613a6ad819455"
+          }
+        },
+        "previewEnabled": false,
+        "note": "All six application builds passed; public upload, hosted review and Free runtime qualification are pending."
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "2c54ec1e0612b95910825bd885ba3e4b7d40d1cd",
+          "buildSourceCommit": "2c54ec1e0612b95910825bd885ba3e4b7d40d1cd"
+        },
+        "personalization": {
+          "state": "sealed",
+          "sourceManifestSha256": "1c8b91d67fa2583dc7c6d9193249904edf16f31bbd1ec48185e3d1a33e377f2e"
+        },
+        "build": {
+          "state": "passed",
+          "runId": 38051685809,
+          "url": "https://github.com/darkapoparka/cars/actions/runs/38051685809",
+          "applicationTargets": 6,
+          "routerDryRun": "passed",
+          "packageTree": "ed7daddcc55d7f073f833b3f762ccbc58425aa2d",
+          "packageDigest": "f198f0499c93652e73a9ee465572adf545f2a0da31f31b657922af316f395ef3"
+        },
+        "publication": {
+          "state": "verified-private-main",
+          "commit": "63b3a6921b03d1af3e068689b623c58613e5f61e",
+          "receiptSha256": "509b1713c0bdda72d5e650de1075b54bbe8fa6d6129b758e69e3c701513df8d0"
+        },
+        "deployment": {
+          "state": "device-approval-required",
+          "verified": false
+        },
+        "browser": {
+          "state": "not-run",
+          "verified": false
+        },
+        "ownerReview": {
+          "state": "pending"
+        },
+        "freeRuntime": {
+          "state": "not-run",
+          "qualified": false
+        }
+      }
+    },
+    {
+      "slug": "dewsbury-car-market-yorkshire",
+      "name": "Car Market Yorkshire",
+      "id": null,
+      "aliases": [],
+      "localPath": "clients/dewsbury-car-market-yorkshire",
+      "localPresent": true,
+      "localStorage": {
+        "mode": "sparse-checkout",
+        "applicationDirectoriesMaterialized": false
+      },
+      "repository": "darkapoparka/cars-uk-dewsbury-car-market-yorkshire",
+      "defaultBranch": "main",
+      "provider": "cloudflare",
+      "packagingVersion": "5",
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "e1fd3d4720b7cfca47728da53519fb61527aa83a",
+      "buildSourceCommit": "e1fd3d4720b7cfca47728da53519fb61527aa83a",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": "",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-dewsbury-car-market-yorkshire.darkapoparka1.workers.dev/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+            "path": "templates/auto-best",
+            "tree": "5be83ea8685a3e99d517ced43af67d9d3d7a24db",
+            "digest": "bc08eb6123546c0e0cb0f4d21e2209450bfe642e542515b53f557016d14416d2"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052587430,
+            "artifactId": 11670810241,
+            "compiledDigest": "50f0fa3ef681d1453b40254e292e263e560bd165790f93d1c6bb02f28b30c086"
+          }
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-dewsbury-car-market-yorkshire.darkapoparka1.workers.dev/variant-2/cars",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
+            "path": "templates/modern",
+            "tree": "c2b3b3e74815c1e5eba0c82cfb1352c795921dcf",
+            "digest": "f097bc4802e62ffb0b752bc5523f3fe1b00df83f67b16843d698d276d10344a3"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052587430,
+            "artifactId": 11669917115,
+            "compiledDigest": "119adfb4102423faecf3f7f7a82b8b77aafc094bdc27e75492d0adab5580655f"
+          }
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-dewsbury-car-market-yorkshire.darkapoparka1.workers.dev/variant-3/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
+            "path": "templates/import",
+            "tree": "874b601a661045dd0e265bb14a9b0af762a17d0f",
+            "digest": "25cc87e3d71101be065333c5d5d8c124516a936281b1b3c81aba6e674253a4b1"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052587430,
+            "artifactId": 11670356424,
+            "compiledDigest": "ddeba1a8e167e26b075e3aded7f3d2de086d4a0826dec589bbbd46acfa736d0b"
+          }
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-dewsbury-car-market-yorkshire.darkapoparka1.workers.dev/variant-4/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "70c2b80671e217ab299549a938a537c0b9559611",
+            "path": "templates/app",
+            "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
+            "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052587430,
+            "artifactId": 11670366619,
+            "compiledDigest": "717b764439d4cc732bf7ab8f943b9b061134f1e99235659d14dc5f839a9375e1"
+          }
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-dewsbury-car-market-yorkshire.darkapoparka1.workers.dev/variant-5/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "876590474d01178413feccf3153a0859230158a1",
+            "path": "templates/mobile",
+            "tree": "7b1f0878715aa1bc0f5942c7e654a6a1bb091510",
+            "digest": "380b153972039a80dccee73f53760a87e963d007b83a921020c5ab5353c942fc"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052587430,
+            "artifactId": 11670027381,
+            "compiledDigest": "0b097ec52fab3f2b62adb45c341296fe970fb867cc96b455890e7dc86fb7ea36"
+          }
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-dewsbury-car-market-yorkshire.darkapoparka1.workers.dev/variant-6/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+            "path": "templates/karento-best",
+            "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
+            "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052587430,
+            "artifactId": 11670526590,
+            "compiledDigest": "c25e1e66a502742028abeeee9b403b907cdcc3dc01df139a640b7b52d946cbd6"
+          }
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "cloudflare-device-approval-required",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-uk-dewsbury-car-market-yorkshire.darkapoparka1.workers.dev",
+        "publicUrl": null,
+        "packageDigest": "382192b3bc98c9f3799cb55034909ed08d9715aae7b6ce72041e12bf1c49617a",
+        "privatePublication": {
+          "state": "published_verified_private_main",
+          "repositoryId": 1413030378,
+          "commit": "01a5ab433b73d2d78900150fc31ef58bf59b5456",
+          "commitUrl": "https://github.com/darkapoparka/cars-uk-dewsbury-car-market-yorkshire/commit/01a5ab433b73d2d78900150fc31ef58bf59b5456",
+          "sourceCommit": "e1fd3d4720b7cfca47728da53519fb61527aa83a",
+          "packageTree": "612402a3d64d6c2247f85df7531f5efaee8a9108",
+          "packageDigest": "382192b3bc98c9f3799cb55034909ed08d9715aae7b6ce72041e12bf1c49617a",
+          "exportTree": "9976933c7ea918b57316447e085effec3cd332a0",
+          "parent": "bb515fd9cb573c1ccac26cda4814f75d9607cd8b",
+          "private": true,
+          "defaultBranch": "main",
+          "visibilityVerifiedAt": "2026-10-10T14:11:44.414Z",
+          "verifiedAt": "2026-10-10T14:12:41.497Z",
+          "verificationScope": "Saved successful publisher verification; no new remote-head query by this documentation generator.",
+          "publishedReceipt": {
+            "path": "runtime/dealer-exports/dewsbury-car-market-yorkshire/proposal-dd3nxK/published.json",
+            "bytes": 942,
+            "sha256": "e5006f96fb191ec4602445f751a91ec5614328ea3a59296a47f83c486bd17b59"
+          },
+          "exportReceipt": {
+            "path": "runtime/dealer-exports/dewsbury-car-market-yorkshire/proposal-dd3nxK/export.json",
+            "bytes": 793990,
+            "sha256": "273ab6ef943948516848b2997bd561dd2d6d0ce9eae806b541ae66f2747ec09f"
+          }
+        },
+        "previewEnabled": false,
+        "note": "All six application builds passed; public upload, hosted review and Free runtime qualification are pending."
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "e1fd3d4720b7cfca47728da53519fb61527aa83a",
+          "buildSourceCommit": "e1fd3d4720b7cfca47728da53519fb61527aa83a"
+        },
+        "personalization": {
+          "state": "sealed",
+          "sourceManifestSha256": "827019714c210fc26683f6f30d1e7993a5a803a1203014e47c4414f514de038c"
+        },
+        "build": {
+          "state": "passed",
+          "runId": 38052587430,
+          "url": "https://github.com/darkapoparka/cars/actions/runs/38052587430",
+          "applicationTargets": 6,
+          "routerDryRun": "passed",
+          "packageTree": "612402a3d64d6c2247f85df7531f5efaee8a9108",
+          "packageDigest": "382192b3bc98c9f3799cb55034909ed08d9715aae7b6ce72041e12bf1c49617a"
+        },
+        "publication": {
+          "state": "verified-private-main",
+          "commit": "01a5ab433b73d2d78900150fc31ef58bf59b5456",
+          "receiptSha256": "e5006f96fb191ec4602445f751a91ec5614328ea3a59296a47f83c486bd17b59"
+        },
+        "deployment": {
+          "state": "device-approval-required",
+          "verified": false
+        },
+        "browser": {
+          "state": "not-run",
+          "verified": false
+        },
+        "ownerReview": {
+          "state": "pending"
+        },
+        "freeRuntime": {
+          "state": "not-run",
+          "qualified": false
+        }
+      }
+    },
+    {
+      "slug": "nottingham-s-a-motors",
+      "name": "S A Motors",
+      "id": null,
+      "aliases": [],
+      "localPath": "clients/nottingham-s-a-motors",
+      "localPresent": true,
+      "localStorage": {
+        "mode": "sparse-checkout",
+        "applicationDirectoriesMaterialized": false
+      },
+      "repository": "darkapoparka/cars-uk-nottingham-s-a-motors",
+      "defaultBranch": "main",
+      "provider": "cloudflare",
+      "packagingVersion": "5",
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "9a887cb9a033d1af0514c377b9f010489fd3f221",
+      "buildSourceCommit": "9a887cb9a033d1af0514c377b9f010489fd3f221",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": "",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-nottingham-s-a-motors.darkapoparka1.workers.dev/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+            "path": "templates/auto-best",
+            "tree": "5be83ea8685a3e99d517ced43af67d9d3d7a24db",
+            "digest": "bc08eb6123546c0e0cb0f4d21e2209450bfe642e542515b53f557016d14416d2"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38053383555,
+            "artifactId": 11670752272,
+            "compiledDigest": "90bf7b4a3cce97afa9491210b837ce0b83fc184dc88622a5cb6363e8913c04ed"
+          }
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-nottingham-s-a-motors.darkapoparka1.workers.dev/variant-2/cars",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
+            "path": "templates/modern",
+            "tree": "c2b3b3e74815c1e5eba0c82cfb1352c795921dcf",
+            "digest": "f097bc4802e62ffb0b752bc5523f3fe1b00df83f67b16843d698d276d10344a3"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38053383555,
+            "artifactId": 11670337603,
+            "compiledDigest": "9b9711ba06e60cd2cbc2a3cc483eca5c0e9e8f221e9d26ef64e827a2093c5b48"
+          }
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-nottingham-s-a-motors.darkapoparka1.workers.dev/variant-3/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
+            "path": "templates/import",
+            "tree": "874b601a661045dd0e265bb14a9b0af762a17d0f",
+            "digest": "25cc87e3d71101be065333c5d5d8c124516a936281b1b3c81aba6e674253a4b1"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38053383555,
+            "artifactId": 11669704293,
+            "compiledDigest": "7b0e3406077d899c8fba04e9da9e348e01a7aa0d8159205947f337530411d6c2"
+          }
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-nottingham-s-a-motors.darkapoparka1.workers.dev/variant-4/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "70c2b80671e217ab299549a938a537c0b9559611",
+            "path": "templates/app",
+            "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
+            "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38053383555,
+            "artifactId": 11670832307,
+            "compiledDigest": "93325be0b9cf4f8ead99645fbb71bc89024d27682ae1263a6e3ecbbc5e2daf57"
+          }
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-nottingham-s-a-motors.darkapoparka1.workers.dev/variant-5/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "876590474d01178413feccf3153a0859230158a1",
+            "path": "templates/mobile",
+            "tree": "7b1f0878715aa1bc0f5942c7e654a6a1bb091510",
+            "digest": "380b153972039a80dccee73f53760a87e963d007b83a921020c5ab5353c942fc"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38053383555,
+            "artifactId": 11670597835,
+            "compiledDigest": "119121203137a82c41714b053e105431e18c19d9463c0d52e2d8c82ac35a3d2a"
+          }
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-nottingham-s-a-motors.darkapoparka1.workers.dev/variant-6/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+            "path": "templates/karento-best",
+            "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
+            "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38053383555,
+            "artifactId": 11670732806,
+            "compiledDigest": "3f7b1345f026e17888a0371fe2924c41733e61fed3c3c461aa49d3904620a52a"
+          }
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "cloudflare-device-approval-required",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-uk-nottingham-s-a-motors.darkapoparka1.workers.dev",
+        "publicUrl": null,
+        "packageDigest": "82693990ba639d50e20475936dada7d90fb7fbddb89581809031993fd01a4109",
+        "privatePublication": {
+          "state": "published_verified_private_main",
+          "repositoryId": 1413030583,
+          "commit": "017b6ec63cf9e0ba29654d83246aa9a0a1351415",
+          "commitUrl": "https://github.com/darkapoparka/cars-uk-nottingham-s-a-motors/commit/017b6ec63cf9e0ba29654d83246aa9a0a1351415",
+          "sourceCommit": "9a887cb9a033d1af0514c377b9f010489fd3f221",
+          "packageTree": "1886ae15b2d18cc15b02b83c19661c028cc07fab",
+          "packageDigest": "82693990ba639d50e20475936dada7d90fb7fbddb89581809031993fd01a4109",
+          "exportTree": "ef44c7381cd309c135b3f8122a7210fd6ea40877",
+          "parent": "cc80a5de10f9a4330667dadee00c2502e2fca946",
+          "private": true,
+          "defaultBranch": "main",
+          "visibilityVerifiedAt": "2026-10-10T14:24:17.018Z",
+          "verifiedAt": "2026-10-10T14:25:08.986Z",
+          "verificationScope": "Saved successful publisher verification; no new remote-head query by this documentation generator.",
+          "publishedReceipt": {
+            "path": "runtime/dealer-exports/nottingham-s-a-motors/proposal-UGx2Hr/published.json",
+            "bytes": 918,
+            "sha256": "838c3fff0f3e6e0d359c4e02bcbff3423d330fc4e7c98ea446e590844668cb8c"
+          },
+          "exportReceipt": {
+            "path": "runtime/dealer-exports/nottingham-s-a-motors/proposal-UGx2Hr/export.json",
+            "bytes": 793007,
+            "sha256": "52c9c632bd2b4eabd06f583bf6aa9e597bd955ac904bd244498921a89def23dc"
+          }
+        },
+        "previewEnabled": false,
+        "note": "All six application builds passed; public upload, hosted review and Free runtime qualification are pending."
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "9a887cb9a033d1af0514c377b9f010489fd3f221",
+          "buildSourceCommit": "9a887cb9a033d1af0514c377b9f010489fd3f221"
+        },
+        "personalization": {
+          "state": "sealed",
+          "sourceManifestSha256": "a608933966acc3532cd0c700785b4ba0937d1e11cda35e962b0190f125cb3326"
+        },
+        "build": {
+          "state": "passed",
+          "runId": 38053383555,
+          "url": "https://github.com/darkapoparka/cars/actions/runs/38053383555",
+          "applicationTargets": 6,
+          "routerDryRun": "passed",
+          "packageTree": "1886ae15b2d18cc15b02b83c19661c028cc07fab",
+          "packageDigest": "82693990ba639d50e20475936dada7d90fb7fbddb89581809031993fd01a4109"
+        },
+        "publication": {
+          "state": "verified-private-main",
+          "commit": "017b6ec63cf9e0ba29654d83246aa9a0a1351415",
+          "receiptSha256": "838c3fff0f3e6e0d359c4e02bcbff3423d330fc4e7c98ea446e590844668cb8c"
+        },
+        "deployment": {
+          "state": "device-approval-required",
+          "verified": false
+        },
+        "browser": {
+          "state": "not-run",
+          "verified": false
+        },
+        "ownerReview": {
+          "state": "pending"
+        },
+        "freeRuntime": {
+          "state": "not-run",
+          "qualified": false
+        }
+      }
+    },
+    {
+      "slug": "batley-as-motor-group",
+      "name": "AS Motor Group",
+      "id": null,
+      "aliases": [],
+      "localPath": "clients/batley-as-motor-group",
+      "localPresent": true,
+      "localStorage": {
+        "mode": "sparse-checkout",
+        "applicationDirectoriesMaterialized": false
+      },
+      "repository": "darkapoparka/cars-uk-batley-as-motor-group",
+      "defaultBranch": "main",
+      "provider": "cloudflare",
+      "packagingVersion": "5",
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "ad07e51e4776c1a8030394740874b6d0d9476241",
+      "buildSourceCommit": "2c54ec1e0612b95910825bd885ba3e4b7d40d1cd",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": "",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-batley-as-motor-group.darkapoparka1.workers.dev/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+            "path": "templates/auto-best",
+            "tree": "5be83ea8685a3e99d517ced43af67d9d3d7a24db",
+            "digest": "bc08eb6123546c0e0cb0f4d21e2209450bfe642e542515b53f557016d14416d2"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38051656813,
+            "artifactId": 11670200128,
+            "compiledDigest": "5cf50c5ddf00d1ed028e742910ca015fba7c749301484a3943b53ded6f504cff"
+          }
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-batley-as-motor-group.darkapoparka1.workers.dev/variant-2/cars",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
+            "path": "templates/modern",
+            "tree": "c2b3b3e74815c1e5eba0c82cfb1352c795921dcf",
+            "digest": "f097bc4802e62ffb0b752bc5523f3fe1b00df83f67b16843d698d276d10344a3"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38051656813,
+            "artifactId": 11669554192,
+            "compiledDigest": "547468cb4a0e6d8ac9af6ef2b0c775777a9e5bc9e345bdaaac4b906b97183eae"
+          }
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-batley-as-motor-group.darkapoparka1.workers.dev/variant-3/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
+            "path": "templates/import",
+            "tree": "874b601a661045dd0e265bb14a9b0af762a17d0f",
+            "digest": "25cc87e3d71101be065333c5d5d8c124516a936281b1b3c81aba6e674253a4b1"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38051656813,
+            "artifactId": 11669981177,
+            "compiledDigest": "f6b9ee337188f0f98d6c030676bb9505901d4c5bd583ac8337da3159124c0cd4"
+          }
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-batley-as-motor-group.darkapoparka1.workers.dev/variant-4/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "70c2b80671e217ab299549a938a537c0b9559611",
+            "path": "templates/app",
+            "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
+            "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38051656813,
+            "artifactId": 11670046122,
+            "compiledDigest": "b57788c16f95a0f712e3711deb7986030caaed0b6b0c54c87012f3d61e9bd8f4"
+          }
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-batley-as-motor-group.darkapoparka1.workers.dev/variant-5/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "876590474d01178413feccf3153a0859230158a1",
+            "path": "templates/mobile",
+            "tree": "7b1f0878715aa1bc0f5942c7e654a6a1bb091510",
+            "digest": "380b153972039a80dccee73f53760a87e963d007b83a921020c5ab5353c942fc"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38051656813,
+            "artifactId": 11670555182,
+            "compiledDigest": "8dca3b8bdaa9e8320d96f116dd2b21fa2e5bbc175961ee2800d20604f97768a4"
+          }
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-batley-as-motor-group.darkapoparka1.workers.dev/variant-6/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+            "path": "templates/karento-best",
+            "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
+            "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38051656813,
+            "artifactId": 11669766612,
+            "compiledDigest": "863afbef600d2d2475636ab404234733fda617aae042d13a90c828ddd9e1b3b2"
+          }
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "cloudflare-device-approval-required",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-uk-batley-as-motor-group.darkapoparka1.workers.dev",
+        "publicUrl": null,
+        "packageDigest": "82198398d82e21e6572ff7b1e5157c98fc67c29b4752962962f8f7bdbe574860",
+        "privatePublication": {
+          "state": "published_verified_private_main",
+          "repositoryId": 1413030136,
+          "commit": "9846637d70286d4624c0cfca5ad05d6a5b766c5d",
+          "commitUrl": "https://github.com/darkapoparka/cars-uk-batley-as-motor-group/commit/9846637d70286d4624c0cfca5ad05d6a5b766c5d",
+          "sourceCommit": "2c54ec1e0612b95910825bd885ba3e4b7d40d1cd",
+          "packageTree": "041684bc915c73bfc23a7f29cc250beaaaa736f6",
+          "packageDigest": "82198398d82e21e6572ff7b1e5157c98fc67c29b4752962962f8f7bdbe574860",
+          "exportTree": "e835bddc59779e588df90445968603fbf0d4a8ce",
+          "parent": "2cf26c8b7b98d24772141198fed54a821fdb1388",
+          "private": true,
+          "defaultBranch": "main",
+          "visibilityVerifiedAt": "2026-10-10T14:41:07.817Z",
+          "verifiedAt": "2026-10-10T14:42:00.992Z",
+          "verificationScope": "Saved successful publisher verification; no new remote-head query by this documentation generator.",
+          "publishedReceipt": {
+            "path": "runtime/dealer-exports/batley-as-motor-group/proposal-pdtmbU/published.json",
+            "bytes": 918,
+            "sha256": "19ce7072671b7659fd1f591aa44cfd57bc1e03dcc6bfccd680861cbf41f797f7"
+          },
+          "exportReceipt": {
+            "path": "runtime/dealer-exports/batley-as-motor-group/proposal-pdtmbU/export.json",
+            "bytes": 792959,
+            "sha256": "ccdd93b9b989963028848ea7cfa2d159f6e8fa2df5ec7df05d116d559d627435"
+          }
+        },
+        "previewEnabled": false,
+        "note": "All six application builds passed; public upload, hosted review and Free runtime qualification are pending."
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "ad07e51e4776c1a8030394740874b6d0d9476241",
+          "buildSourceCommit": "2c54ec1e0612b95910825bd885ba3e4b7d40d1cd"
+        },
+        "personalization": {
+          "state": "sealed",
+          "sourceManifestSha256": "816176892f6f94633fb6fd418cb7e468487990273dfb7d79cc4f2ff37a62cafc"
+        },
+        "build": {
+          "state": "passed",
+          "runId": 38051656813,
+          "url": "https://github.com/darkapoparka/cars/actions/runs/38051656813",
+          "applicationTargets": 6,
+          "routerDryRun": "passed",
+          "packageTree": "041684bc915c73bfc23a7f29cc250beaaaa736f6",
+          "packageDigest": "82198398d82e21e6572ff7b1e5157c98fc67c29b4752962962f8f7bdbe574860"
+        },
+        "publication": {
+          "state": "verified-private-main",
+          "commit": "9846637d70286d4624c0cfca5ad05d6a5b766c5d",
+          "receiptSha256": "19ce7072671b7659fd1f591aa44cfd57bc1e03dcc6bfccd680861cbf41f797f7"
+        },
+        "deployment": {
+          "state": "device-approval-required",
+          "verified": false
+        },
+        "browser": {
+          "state": "not-run",
+          "verified": false
+        },
+        "ownerReview": {
+          "state": "pending"
+        },
+        "freeRuntime": {
+          "state": "not-run",
+          "qualified": false
+        }
+      }
+    },
+    {
+      "slug": "bradford-cherry-tree-cars",
+      "name": "Cherry Tree Cars Ltd",
+      "id": null,
+      "aliases": [],
+      "localPath": "clients/bradford-cherry-tree-cars",
+      "localPresent": true,
+      "localStorage": {
+        "mode": "sparse-checkout",
+        "applicationDirectoriesMaterialized": false
+      },
+      "repository": "darkapoparka/cars-uk-bradford-cherry-tree-cars",
+      "defaultBranch": "main",
+      "provider": "cloudflare",
+      "packagingVersion": "5",
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "104c4f46eb9f528e581bee9a692183c421c58e67",
+      "buildSourceCommit": "104c4f46eb9f528e581bee9a692183c421c58e67",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": "",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-bradford-cherry-tree-cars.darkapoparka1.workers.dev/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+            "path": "templates/auto-best",
+            "tree": "5be83ea8685a3e99d517ced43af67d9d3d7a24db",
+            "digest": "bc08eb6123546c0e0cb0f4d21e2209450bfe642e542515b53f557016d14416d2"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052273101,
+            "artifactId": 11670126438,
+            "compiledDigest": "58d12712de86e98a3ffb751fbc37599260b14967780c76f415094ed87fed2bb9"
+          }
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-bradford-cherry-tree-cars.darkapoparka1.workers.dev/variant-2/cars",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
+            "path": "templates/modern",
+            "tree": "c2b3b3e74815c1e5eba0c82cfb1352c795921dcf",
+            "digest": "f097bc4802e62ffb0b752bc5523f3fe1b00df83f67b16843d698d276d10344a3"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052273101,
+            "artifactId": 11670635471,
+            "compiledDigest": "04166dff0504aed4dd5ebfdd4291e7b11d981ca7559ca33c5b5e99137dcc363e"
+          }
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-bradford-cherry-tree-cars.darkapoparka1.workers.dev/variant-3/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
+            "path": "templates/import",
+            "tree": "874b601a661045dd0e265bb14a9b0af762a17d0f",
+            "digest": "25cc87e3d71101be065333c5d5d8c124516a936281b1b3c81aba6e674253a4b1"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052273101,
+            "artifactId": 11670865425,
+            "compiledDigest": "3ef3e02b6600fcc4e67b52a386c538a25ffe016f936201041abe3f937d2afa04"
+          }
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-bradford-cherry-tree-cars.darkapoparka1.workers.dev/variant-4/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "70c2b80671e217ab299549a938a537c0b9559611",
+            "path": "templates/app",
+            "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
+            "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052273101,
+            "artifactId": 11670091683,
+            "compiledDigest": "4b595eb4f6499bb60ba35dc9651093d5042232f6769d41aea786a769a8d2aaf1"
+          }
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-bradford-cherry-tree-cars.darkapoparka1.workers.dev/variant-5/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "876590474d01178413feccf3153a0859230158a1",
+            "path": "templates/mobile",
+            "tree": "7b1f0878715aa1bc0f5942c7e654a6a1bb091510",
+            "digest": "380b153972039a80dccee73f53760a87e963d007b83a921020c5ab5353c942fc"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052273101,
+            "artifactId": 11670840690,
+            "compiledDigest": "12db2176a73b2346fb52145e1da5af4fa277903e5f44f0cd7ecf3496a8fc727a"
+          }
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-bradford-cherry-tree-cars.darkapoparka1.workers.dev/variant-6/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+            "path": "templates/karento-best",
+            "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
+            "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38052273101,
+            "artifactId": 11670521167,
+            "compiledDigest": "c8cc795acb7752ffbf76cab3147ea3411f92774fab57e70fc6995e429bcb2561"
+          }
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "cloudflare-device-approval-required",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-uk-bradford-cherry-tree-cars.darkapoparka1.workers.dev",
+        "publicUrl": null,
+        "packageDigest": "ec0e86030c53cb5e143fd812e95c907ff2e878b8bff638d4fdcf14118f1e5e0a",
+        "privatePublication": {
+          "state": "published_verified_private_main",
+          "repositoryId": 1413030316,
+          "commit": "c1478daeec04cb89fc40f51822088d502b6a2d58",
+          "commitUrl": "https://github.com/darkapoparka/cars-uk-bradford-cherry-tree-cars/commit/c1478daeec04cb89fc40f51822088d502b6a2d58",
+          "sourceCommit": "104c4f46eb9f528e581bee9a692183c421c58e67",
+          "packageTree": "ebef8f6695ad0ea37ab8f4b16074a8bfb38d3969",
+          "packageDigest": "ec0e86030c53cb5e143fd812e95c907ff2e878b8bff638d4fdcf14118f1e5e0a",
+          "exportTree": "6ba462262868aaaad47f49d0c10d557075db2018",
+          "parent": "26ea0ba01acdaf923494f24bfaa7a4a5156c0a16",
+          "private": true,
+          "defaultBranch": "main",
+          "visibilityVerifiedAt": "2026-10-10T14:48:40.470Z",
+          "verifiedAt": "2026-10-10T14:49:37.228Z",
+          "verificationScope": "Saved successful publisher verification; no new remote-head query by this documentation generator.",
+          "publishedReceipt": {
+            "path": "runtime/dealer-exports/bradford-cherry-tree-cars/proposal-HYYmxN/published.json",
+            "bytes": 930,
+            "sha256": "7171c7198af03b85741db7ecd4e0604f05e18b8d2b1f9ad58098680a82829682"
+          },
+          "exportReceipt": {
+            "path": "runtime/dealer-exports/bradford-cherry-tree-cars/proposal-HYYmxN/export.json",
+            "bytes": 793974,
+            "sha256": "1468a9a775b6cb0181629474b2ab4e425adc13c863b3bb6d1f865065e075ca07"
+          }
+        },
+        "previewEnabled": false,
+        "note": "All six application builds passed; public upload, hosted review and Free runtime qualification are pending."
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "104c4f46eb9f528e581bee9a692183c421c58e67",
+          "buildSourceCommit": "104c4f46eb9f528e581bee9a692183c421c58e67"
+        },
+        "personalization": {
+          "state": "sealed",
+          "sourceManifestSha256": "54bf72848a210114c11ab282747351b3bb9e357bced66ed15eed1fb02c034dee"
+        },
+        "build": {
+          "state": "passed",
+          "runId": 38052273101,
+          "url": "https://github.com/darkapoparka/cars/actions/runs/38052273101",
+          "applicationTargets": 6,
+          "routerDryRun": "passed",
+          "packageTree": "ebef8f6695ad0ea37ab8f4b16074a8bfb38d3969",
+          "packageDigest": "ec0e86030c53cb5e143fd812e95c907ff2e878b8bff638d4fdcf14118f1e5e0a"
+        },
+        "publication": {
+          "state": "verified-private-main",
+          "commit": "c1478daeec04cb89fc40f51822088d502b6a2d58",
+          "receiptSha256": "7171c7198af03b85741db7ecd4e0604f05e18b8d2b1f9ad58098680a82829682"
+        },
+        "deployment": {
+          "state": "device-approval-required",
+          "verified": false
+        },
+        "browser": {
+          "state": "not-run",
+          "verified": false
+        },
+        "ownerReview": {
+          "state": "pending"
+        },
+        "freeRuntime": {
+          "state": "not-run",
+          "qualified": false
+        }
+      }
+    },
+    {
+      "slug": "stockton-norton-grange-trade-cars",
+      "name": "Norton Grange Trade Cars",
+      "id": null,
+      "aliases": [],
+      "localPath": "clients/stockton-norton-grange-trade-cars",
+      "localPresent": true,
+      "localStorage": {
+        "mode": "sparse-checkout",
+        "applicationDirectoriesMaterialized": false
+      },
+      "repository": "darkapoparka/cars-uk-stockton-norton-grange-trade-cars",
+      "defaultBranch": "main",
+      "provider": "cloudflare",
+      "packagingVersion": "5",
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "c13243c6de041480eeb7164ba89782ef992f8c93",
+      "buildSourceCommit": "c13243c6de041480eeb7164ba89782ef992f8c93",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": "",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-stockton-norton-grange-trade-cars.darkapoparka1.workers.dev/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+            "path": "templates/auto-best",
+            "tree": "5be83ea8685a3e99d517ced43af67d9d3d7a24db",
+            "digest": "bc08eb6123546c0e0cb0f4d21e2209450bfe642e542515b53f557016d14416d2"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38053704792,
+            "artifactId": 11670018267,
+            "compiledDigest": "9e4ae9c5c833b4bef8d47dc762652f22c67bf7b5ea5222f9e1850a3eed039f60"
+          }
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-stockton-norton-grange-trade-cars.darkapoparka1.workers.dev/variant-2/cars",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
+            "path": "templates/modern",
+            "tree": "c2b3b3e74815c1e5eba0c82cfb1352c795921dcf",
+            "digest": "f097bc4802e62ffb0b752bc5523f3fe1b00df83f67b16843d698d276d10344a3"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38053704792,
+            "artifactId": 11670787608,
+            "compiledDigest": "7d0bc17210cf9feef107dedf574a559e93c21fa876c35218a678a9c208407873"
+          }
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-stockton-norton-grange-trade-cars.darkapoparka1.workers.dev/variant-3/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
+            "path": "templates/import",
+            "tree": "874b601a661045dd0e265bb14a9b0af762a17d0f",
+            "digest": "25cc87e3d71101be065333c5d5d8c124516a936281b1b3c81aba6e674253a4b1"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38053704792,
+            "artifactId": 11670718159,
+            "compiledDigest": "b7399babde5432fdbc7d3f16070f644e3235c1329655db706859b22ab071ad87"
+          }
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-stockton-norton-grange-trade-cars.darkapoparka1.workers.dev/variant-4/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "70c2b80671e217ab299549a938a537c0b9559611",
+            "path": "templates/app",
+            "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
+            "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38053704792,
+            "artifactId": 11670653093,
+            "compiledDigest": "670d14b71439fa3c7c0d22c4909ce449277f49a3bde414a7b3f9c660345ca485"
+          }
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-stockton-norton-grange-trade-cars.darkapoparka1.workers.dev/variant-5/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "876590474d01178413feccf3153a0859230158a1",
+            "path": "templates/mobile",
+            "tree": "7b1f0878715aa1bc0f5942c7e654a6a1bb091510",
+            "digest": "380b153972039a80dccee73f53760a87e963d007b83a921020c5ab5353c942fc"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38053704792,
+            "artifactId": 11670053821,
+            "compiledDigest": "366991839e9099760723c298f19717c16c7e63516c62b7e36ec452df8f6923ef"
+          }
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-stockton-norton-grange-trade-cars.darkapoparka1.workers.dev/variant-6/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+            "path": "templates/karento-best",
+            "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
+            "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38053704792,
+            "artifactId": 11669873859,
+            "compiledDigest": "3e2c3a6362455297fe8f44c33b034478b1dc902289a260437510fbb2adf9cae7"
+          }
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "cloudflare-device-approval-required",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-uk-stockton-norton-grange-trade-cars.darkapoparka1.workers.dev",
+        "publicUrl": null,
+        "packageDigest": "8f88de949311f873e5e2ffa9ee8ae0388c547ed6a2aaf8081aaad753692f5af4",
+        "privatePublication": {
+          "state": "published_verified_private_main",
+          "repositoryId": 1413030698,
+          "commit": "7dc885fa19fe7c2254c3c125ae0795d393b29dc0",
+          "commitUrl": "https://github.com/darkapoparka/cars-uk-stockton-norton-grange-trade-cars/commit/7dc885fa19fe7c2254c3c125ae0795d393b29dc0",
+          "sourceCommit": "c13243c6de041480eeb7164ba89782ef992f8c93",
+          "packageTree": "5c4f940956593aeb450d7298092555e71d2bbe8e",
+          "packageDigest": "8f88de949311f873e5e2ffa9ee8ae0388c547ed6a2aaf8081aaad753692f5af4",
+          "exportTree": "7684a43bdd509f7ee45dbacbd68f399c1c4f9312",
+          "parent": "a7fc59fd887a363a9149e9cfbef5f90a5e92cfab",
+          "private": true,
+          "defaultBranch": "main",
+          "visibilityVerifiedAt": "2026-10-10T14:57:41.476Z",
+          "verifiedAt": "2026-10-10T14:58:33.115Z",
+          "verificationScope": "Saved successful publisher verification; no new remote-head query by this documentation generator.",
+          "publishedReceipt": {
+            "path": "runtime/dealer-exports/stockton-norton-grange-trade-cars/proposal-W1Rpv8/published.json",
+            "bytes": 954,
+            "sha256": "262972f8e9f80095af2dfbb3cf729b05744a83854ad11f9c665edb277d56e9a0"
+          },
+          "exportReceipt": {
+            "path": "runtime/dealer-exports/stockton-norton-grange-trade-cars/proposal-W1Rpv8/export.json",
+            "bytes": 793007,
+            "sha256": "c9370f50807dcb06725934f755663182bcafe93999ee5d80da17025e763502cc"
+          }
+        },
+        "previewEnabled": false,
+        "note": "All six application builds passed; public upload, hosted review and Free runtime qualification are pending."
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "c13243c6de041480eeb7164ba89782ef992f8c93",
+          "buildSourceCommit": "c13243c6de041480eeb7164ba89782ef992f8c93"
+        },
+        "personalization": {
+          "state": "sealed",
+          "sourceManifestSha256": "2a01640b16cc1bc015bc5722e22c11cf30008002bd65c115d7a1b90c636d2378"
+        },
+        "build": {
+          "state": "passed",
+          "runId": 38053704792,
+          "url": "https://github.com/darkapoparka/cars/actions/runs/38053704792",
+          "applicationTargets": 6,
+          "routerDryRun": "passed",
+          "packageTree": "5c4f940956593aeb450d7298092555e71d2bbe8e",
+          "packageDigest": "8f88de949311f873e5e2ffa9ee8ae0388c547ed6a2aaf8081aaad753692f5af4"
+        },
+        "publication": {
+          "state": "verified-private-main",
+          "commit": "7dc885fa19fe7c2254c3c125ae0795d393b29dc0",
+          "receiptSha256": "262972f8e9f80095af2dfbb3cf729b05744a83854ad11f9c665edb277d56e9a0"
+        },
+        "deployment": {
+          "state": "device-approval-required",
+          "verified": false
+        },
+        "browser": {
+          "state": "not-run",
+          "verified": false
+        },
+        "ownerReview": {
+          "state": "pending"
+        },
+        "freeRuntime": {
+          "state": "not-run",
+          "qualified": false
+        }
+      }
+    },
+    {
+      "slug": "north-norfolk-car-sales",
+      "name": "North Norfolk Car Sales",
+      "id": null,
+      "aliases": [],
+      "localPath": "clients/north-norfolk-car-sales",
+      "localPresent": true,
+      "localStorage": {
+        "mode": "sparse-checkout",
+        "applicationDirectoriesMaterialized": false
+      },
+      "repository": "darkapoparka/cars-uk-north-norfolk-car-sales",
+      "defaultBranch": "main",
+      "provider": "cloudflare",
+      "packagingVersion": "5",
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "e37e17fd753d362671a9b4b2525697292279a400",
+      "buildSourceCommit": "e37e17fd753d362671a9b4b2525697292279a400",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": "",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-north-norfolk-car-sales.darkapoparka1.workers.dev/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+            "path": "templates/auto-best",
+            "tree": "5be83ea8685a3e99d517ced43af67d9d3d7a24db",
+            "digest": "bc08eb6123546c0e0cb0f4d21e2209450bfe642e542515b53f557016d14416d2"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38053168814,
+            "artifactId": 11670242560,
+            "compiledDigest": "da527d7a636060005f8814d80b57a0a140823b60ddcc4212dc25766d7a2226ee"
+          }
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-north-norfolk-car-sales.darkapoparka1.workers.dev/variant-2/cars",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
+            "path": "templates/modern",
+            "tree": "c2b3b3e74815c1e5eba0c82cfb1352c795921dcf",
+            "digest": "f097bc4802e62ffb0b752bc5523f3fe1b00df83f67b16843d698d276d10344a3"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38053168814,
+            "artifactId": 11670896397,
+            "compiledDigest": "a02ac6437cfa925045c9520278fc762e66d96d5f67cdb05d1a338566cf6260b3"
+          }
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-north-norfolk-car-sales.darkapoparka1.workers.dev/variant-3/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
+            "path": "templates/import",
+            "tree": "874b601a661045dd0e265bb14a9b0af762a17d0f",
+            "digest": "25cc87e3d71101be065333c5d5d8c124516a936281b1b3c81aba6e674253a4b1"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38053168814,
+            "artifactId": 11669963058,
+            "compiledDigest": "dce2688d8f75b97ff758a92cdcc2f39afd38feff3033a135dbce86f7742738be"
+          }
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-north-norfolk-car-sales.darkapoparka1.workers.dev/variant-4/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "70c2b80671e217ab299549a938a537c0b9559611",
+            "path": "templates/app",
+            "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
+            "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38053168814,
+            "artifactId": 11670807100,
+            "compiledDigest": "7eb9624909d2cdaf92d6efa5f841b937e28ede7c380462517d18104a9cd5fa5d"
+          }
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-north-norfolk-car-sales.darkapoparka1.workers.dev/variant-5/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "876590474d01178413feccf3153a0859230158a1",
+            "path": "templates/mobile",
+            "tree": "7b1f0878715aa1bc0f5942c7e654a6a1bb091510",
+            "digest": "380b153972039a80dccee73f53760a87e963d007b83a921020c5ab5353c942fc"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38053168814,
+            "artifactId": 11670482694,
+            "compiledDigest": "ae14303fe88a00a44bde8d63de3805e2fd3dc27807b3c9d3f2a47895173271c3"
+          }
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6",
+          "state": "built-awaiting-deployment",
+          "localPresent": false,
+          "qaRecorded": false,
+          "publicUrl": null,
+          "plannedPublicUrl": "https://cars-uk-north-norfolk-car-sales.darkapoparka1.workers.dev/variant-6/",
+          "templateSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+            "path": "templates/karento-best",
+            "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
+            "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+          },
+          "build": {
+            "state": "passed",
+            "runId": 38053168814,
+            "artifactId": 11670847207,
+            "compiledDigest": "1db20279af16edd960f5372cf6d295a2da555616f314ecd2bddb97996e4c5cf1"
+          }
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "cloudflare-device-approval-required",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-uk-north-norfolk-car-sales.darkapoparka1.workers.dev",
+        "publicUrl": null,
+        "packageDigest": "c6052c05d95f455df9f9c1bfbe0bbd505e9f48b0d8102c6405f81d56f7b65971",
+        "privatePublication": {
+          "state": "published_verified_private_main",
+          "repositoryId": 1413030505,
+          "commit": "06355167f08fc0ffd445fcded2eee760cda040ed",
+          "commitUrl": "https://github.com/darkapoparka/cars-uk-north-norfolk-car-sales/commit/06355167f08fc0ffd445fcded2eee760cda040ed",
+          "sourceCommit": "e37e17fd753d362671a9b4b2525697292279a400",
+          "packageTree": "62136de81a712b42c46dd8405ebc51a3142ca82a",
+          "packageDigest": "c6052c05d95f455df9f9c1bfbe0bbd505e9f48b0d8102c6405f81d56f7b65971",
+          "exportTree": "cad7314b1283db658ef44e363bf92851afffa68c",
+          "parent": "3709402329b472c6ac1a0b0b18791cf5f72d760b",
+          "private": true,
+          "defaultBranch": "main",
+          "visibilityVerifiedAt": "2026-10-10T15:06:11.184Z",
+          "verifiedAt": "2026-10-10T15:07:04.437Z",
+          "verificationScope": "Saved successful publisher verification; no new remote-head query by this documentation generator.",
+          "publishedReceipt": {
+            "path": "runtime/dealer-exports/north-norfolk-car-sales/proposal-WvhKhz/published.json",
+            "bytes": 924,
+            "sha256": "bf9871ac9dcc2f9efa69ace5d57433767ee9f5a55a9660edb23d7b215631c507"
+          },
+          "exportReceipt": {
+            "path": "runtime/dealer-exports/north-norfolk-car-sales/proposal-WvhKhz/export.json",
+            "bytes": 792642,
+            "sha256": "833cd3393f6b199322afb2bff3e1957890f730ed1b791e3d489fc53691c27a99"
+          }
+        },
+        "previewEnabled": false,
+        "note": "All six application builds passed; public upload, hosted review and Free runtime qualification are pending."
+      },
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "e37e17fd753d362671a9b4b2525697292279a400",
+          "buildSourceCommit": "e37e17fd753d362671a9b4b2525697292279a400"
+        },
+        "personalization": {
+          "state": "sealed",
+          "sourceManifestSha256": "2afa773895e53917c384685abbba38f59712bae5708e09ac2f5e36bc3cfd465e"
+        },
+        "build": {
+          "state": "passed",
+          "runId": 38053168814,
+          "url": "https://github.com/darkapoparka/cars/actions/runs/38053168814",
+          "applicationTargets": 6,
+          "routerDryRun": "passed",
+          "packageTree": "62136de81a712b42c46dd8405ebc51a3142ca82a",
+          "packageDigest": "c6052c05d95f455df9f9c1bfbe0bbd505e9f48b0d8102c6405f81d56f7b65971"
+        },
+        "publication": {
+          "state": "verified-private-main",
+          "commit": "06355167f08fc0ffd445fcded2eee760cda040ed",
+          "receiptSha256": "bf9871ac9dcc2f9efa69ace5d57433767ee9f5a55a9660edb23d7b215631c507"
+        },
+        "deployment": {
+          "state": "device-approval-required",
+          "verified": false
+        },
+        "browser": {
+          "state": "not-run",
+          "verified": false
+        },
+        "ownerReview": {
+          "state": "pending"
+        },
+        "freeRuntime": {
+          "state": "not-run",
+          "qualified": false
+        }
+      }
     }
   ],
   "campaignCandidatesWithoutFolders": [

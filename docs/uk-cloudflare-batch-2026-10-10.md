@@ -4,15 +4,30 @@ The owner requested ten saved UK leads, each with Auto Best, Modern, Import, App
 
 ## Current delivery checkpoint
 
-As of 10 October, 10:10 UTC:
+As of 2026-10-10 15:08:58 UTC:
 
-- All ten dated business, stock, logo, icon and locale packs pass input validation. They contain 71 sourced listing samples with real advertised GBP prices and original mileage.
-- All six exact approved template versions passed Cloudflare production compilation and frozen dependency qualification on GitHub Actions.
-- Ten private publishing repositories exist on `main`. They currently contain the GitHub initialization README; actual package exports are still pending. [Verified repository inventory](qa/uk-publishing-repositories-2026-10-10.json).
-- The first canonical dealer source run stopped before committing because the approved Signature version used different contact and discovery boundaries. The narrowly scoped compatibility fix passed the complete pinned Signature adapter against all ten actual packs, including contacts, stock, GBP filters, disclosure text, TypeScript and Svelte checks.
-- No complete branded UK origin has been deployed or accepted yet. Template compilation, source personalization, private export, upload, hosted behavior and Free CPU qualification remain distinct evidence.
+- All ten canonical dealer sources are committed, with Auto Best, Modern, Import, App, Mobile and Signature in each project.
+- All 60 personalized application builds and all ten router dry-runs passed on GitHub Actions from their exact sealed package trees.
+- 10 of 10 private package publications verified. The [repository evidence](qa/uk-publishing-repositories-2026-10-10.json) retains actual source commits, private commits, receipt hashes, build run IDs and compiled artifact identities.
+- **Build ready · Cloudflare device approval required.** The latest Broadbent upload attempt stopped at 2026-10-10 13:38:20.364 UTC because Wrangler could not use an authenticated CLI session. The normal device-approval attempt then timed out after five minutes without a verified login; a fresh Cloudflare device approval is required.
+- No successful UK Worker receipt or public-preview acceptance has been recorded. Hosted browser, visual and Cloudflare Free runtime checks remain pending; all public board buttons stay disabled.
 
-Broadbent is the first complete six-design dealer pilot. The remaining nine use the same reviewed source creation and publishing workflow once the pilot establishes the necessary behavior.
+This is a saved checkpoint. Public deployment awaits normal Cloudflare device approval. The existing local coach can be used for design practice.
+
+| Dealer | Six-design Cloudflare build | Private package | Public preview |
+| --- | --- | --- | --- |
+| Broadbent Car and Servicing | [Passed · 38051534504](https://github.com/darkapoparka/cars/actions/runs/38051534504) | [fc895efe0b54](https://github.com/darkapoparka/cars-uk-stockport-broadbent-car-and-servicing/commit/fc895efe0b54cd6847e6f9efe46b8f2fd03517f3) | Device approval and hosted checks pending |
+| Motors Castle | [Passed · 38052809278](https://github.com/darkapoparka/cars/actions/runs/38052809278) | [05718eb7d7d1](https://github.com/darkapoparka/cars-uk-motherwell-motors-castle/commit/05718eb7d7d1362bba2bfd4db5aae07fa414ea4a) | Device approval and hosted checks pending |
+| Trade Car Sales | [Passed · 38052065880](https://github.com/darkapoparka/cars/actions/runs/38052065880) | [3eaa7f018379](https://github.com/darkapoparka/cars-uk-birmingham-trade-car-sales-grasmere/commit/3eaa7f0183796160dcfb4a22ecc7460080987951) | Device approval and hosted checks pending |
+| Square One Motors | [Passed · 38051685809](https://github.com/darkapoparka/cars/actions/runs/38051685809) | [63b3a6921b03](https://github.com/darkapoparka/cars-uk-birmingham-square-one-motors/commit/63b3a6921b03d1af3e068689b623c58613e5f61e) | Device approval and hosted checks pending |
+| Car Market Yorkshire | [Passed · 38052587430](https://github.com/darkapoparka/cars/actions/runs/38052587430) | [01a5ab433b73](https://github.com/darkapoparka/cars-uk-dewsbury-car-market-yorkshire/commit/01a5ab433b73d2d78900150fc31ef58bf59b5456) | Device approval and hosted checks pending |
+| S A Motors | [Passed · 38053383555](https://github.com/darkapoparka/cars/actions/runs/38053383555) | [017b6ec63cf9](https://github.com/darkapoparka/cars-uk-nottingham-s-a-motors/commit/017b6ec63cf9e0ba29654d83246aa9a0a1351415) | Device approval and hosted checks pending |
+| AS Motor Group | [Passed · 38051656813](https://github.com/darkapoparka/cars/actions/runs/38051656813) | [9846637d7028](https://github.com/darkapoparka/cars-uk-batley-as-motor-group/commit/9846637d70286d4624c0cfca5ad05d6a5b766c5d) | Device approval and hosted checks pending |
+| Cherry Tree Cars Ltd | [Passed · 38052273101](https://github.com/darkapoparka/cars/actions/runs/38052273101) | [c1478daeec04](https://github.com/darkapoparka/cars-uk-bradford-cherry-tree-cars/commit/c1478daeec04cb89fc40f51822088d502b6a2d58) | Device approval and hosted checks pending |
+| Norton Grange Trade Cars | [Passed · 38053704792](https://github.com/darkapoparka/cars/actions/runs/38053704792) | [7dc885fa19fe](https://github.com/darkapoparka/cars-uk-stockton-norton-grange-trade-cars/commit/7dc885fa19fe7c2254c3c125ae0795d393b29dc0) | Device approval and hosted checks pending |
+| North Norfolk Car Sales | [Passed · 38053168814](https://github.com/darkapoparka/cars/actions/runs/38053168814) | [06355167f08f](https://github.com/darkapoparka/cars-uk-north-norfolk-car-sales/commit/06355167f08fc0ffd445fcded2eee760cda040ed) | Device approval and hosted checks pending |
+
+Compilation artifacts are retained for three days. The first compiled artifact expires at 2026-10-13 12:25:15 UTC. Each target retains its own expiry in the build evidence. Delivery requires an unexpired verified artifact; after its expiry, a fresh verified build is required even if an older ZIP remains locally. The committed sources and published packages remain independently retained.
 
 ## Dealer inputs
 
@@ -64,13 +79,13 @@ The first run, [38043022224](https://github.com/darkapoparka/cars/actions/runs/3
 
 The manual `build-uk-cloudflare` workflow prepares one sealed package from committed dealer source, using the existing `package-dealer` provider path. All six applications and the router compile from that identical package tree. Share images use the retained approved rendering toolchain. No Cloudflare credentials enter GitHub Actions.
 
-A thin Git bundle transports the package tree with its canonical source commit as a prerequisite. The local exporter verifies the retained blobs directly, using an isolated index and the existing private repository reconciliation. This avoids another complete source directory on the PC. Transport ancestry is not published into dealer repositories. Each compiled target is downloaded and deployed separately, retaining its hash inventory and actual deployment receipt.
+A Git bundle transports the package tree with its canonical source commit as a prerequisite. The approved strict unpack path deduplicates objects already retained in the local repository; the first actual import added only 556 objects (about 3.77 MB). The local exporter verifies the retained blobs directly, using an isolated index and the existing private repository reconciliation. This avoids another complete source directory on the PC. Transport ancestry is not published into dealer repositories. Each compiled target is downloaded and deployed separately, retaining its hash inventory and actual deployment receipt.
 
 The six-source set measured 1,661,899,116 bytes before dependencies. Ten complete local copies would exceed 16 GB. [Storage accounting](qa/uk-source-storage-2026-10-10.json) and [the 60 exact sparse exclusions](qa/uk-2026-10-10-sparse-exclusions.txt) retain local metadata while keeping the new family trees off disk. No pre-existing caches or unrelated projects are removed.
 
 ## Public routing and UK behavior
 
-Each dealer has one public origin in the connected `darkapoparka1.workers.dev` subdomain, named `cars-uk-<slug>`, with six internal application Workers.
+Each dealer is configured for one public origin in the connected `darkapoparka1.workers.dev` subdomain, named `cars-uk-<slug>`, with six internal application Workers.
 
 | Design | Public route |
 | --- | --- |
@@ -91,7 +106,7 @@ Published contact information is used without inventing missing details. Preview
 
 The account has four historical Priselci Workers and two framework qualification Workers. The ten six-family origins would add seventy Workers, within the Free account count limit. Asset and CPU limits still require actual measured outputs and requests; upload success alone is insufficient.
 
-Two earlier framework qualifications were hosted with the existing Wrangler OAuth session:
+Two earlier framework qualifications were hosted:
 
 - Auto Best: `cars-cf-qualification-auto-best`, version `451c0cf6-6e1a-4f95-bcd8-7d03cbb7d791`. Nineteen hosted HTTP checks passed across locale, catalogue/filter, detail, contact, robots, 404 and imagery.
 - Mobile: `cars-cf-qualification-mobile`, corrected version `ff5a4997-4912-4ba0-be73-ebe6cf32b7d5`. Seventeen hosted checks passed; all 23 distinct rendered image URLs passed production checks. Browser inspection verified loaded images, no horizontal overflow and the saved-car interaction.

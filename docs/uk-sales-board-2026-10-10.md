@@ -27,11 +27,30 @@ The positioning below is our recommendation. Features describe existing template
 
 Feature references: [Auto Best](../templates/auto-best/REUSE_GUIDE.md), [Modern](../templates/modern/TEMPLATE.md), [Import](../templates/import/TEMPLATE.md), [App](../templates/app/TEMPLATE.md), [Mobile](../templates/mobile/TEMPLATE.md), [Signature](../templates/karento-best/README.md).
 
+## Which design to show first
+
+These recommendations from the [saved lead research](../leads/uk-2026-10-10.md) choose the opening demonstration. All six designs remain available for every dealer.
+
+| Dealer | Opening design |
+| --- | --- |
+| Broadbent Car and Servicing | Modern |
+| Motors Castle | Mobile |
+| Trade Car Sales | App |
+| Square One Motors | Modern |
+| Car Market Yorkshire | App |
+| S A Motors | Import, only if import or sourcing services are confirmed |
+| AS Motor Group | Modern |
+| Cherry Tree Cars Ltd | Auto Best |
+| Norton Grange Trade Cars | Mobile |
+| North Norfolk Car Sales | Modern |
+
+The first four (Broadbent, Motors Castle, Trade Car Sales and Square One Motors) remain the priority to qualify. Buying interest, budget and permission to use dealer stock remain unconfirmed. Confirm that S A Motors offers import or sourcing services before choosing Import as its opening demonstration.
+
 ## A 90-second demonstration
 
 1. **0–15 seconds:** State the dealer's main need and why this design fits. Point to their identity and the first useful action.
 2. **15–35 seconds:** Browse the stock and apply one relevant filter. Show the result changing.
-3. **35–60 seconds:** Open one actual car. Show photographs, price, mileage and the available factual details.
+3. **35–60 seconds:** Open one retained listing sample. Show its price, mileage and factual details, and identify the picture as an illustration.
 4. **60–75 seconds:** Show the contact or viewing entry and the location. Explain honestly whether it currently opens a draft or a working contact destination.
 5. **75–90 seconds:** Explain what will be personalized and ask which part matters most. Agree one concrete next step, such as a scoped proposal.
 
@@ -61,32 +80,35 @@ The shared Admin site is a demonstration. Signature account, shop, booking, wall
 
 ## Source and release status
 
-This board was checked against the current Cars files and template chats on **10 October 2026**. The approved lock contains the following October 9 source snapshots; further polish in the chats must be reconciled before claiming that it is included in a dealer release.
+All ten UK projects now have committed, personalized six-design source packages. All **60 application builds and ten Cloudflare router dry-runs passed**. 10 of 10 private package publications verified. Public previews and hosted acceptance remain pending until Cloudflare device approval and hosted checks are complete.
+
+The exact approved source versions used by this batch are:
 
 | Family | Approved source commit |
 | --- | --- |
 | Auto Best | `2afd974c23d4f4cfb290ed99a00f46074793be3a` |
 | Modern | `827d75b9a53666c6feb09f04e3f8e7f255e95a30` |
 | Import | `a51f329b0b9e8e4d21665e16abf2734505d02e07` |
-| App | `e75bdac63f3d81771f51c18d4434ee98e01330a2` |
+| App | `70c2b80671e217ab299549a938a537c0b9559611` |
 | Mobile | `876590474d01178413feccf3153a0859230158a1` |
+| Signature | `cc130e432a41a3a60cc80bc2b3461c6416893b4a` |
 
-[The release lock](../templates.lock.json) selects actual approved sources. App's master production deployment was verified **READY through the Vercel API today**; that establishes its provider state, not acceptance of a combined six-design dealer release or a fleet refresh.
-
-Signature has 25 personalized local drafts and a successful representative local Promosale build/journey qualification. Its draft candidate is `03b70f633d1ab3191379b8d976a9dd35a84271bc`. Those drafts have made **zero dealer deployments**. Final source selection, combined mounting, provider runtime checks and hosted acceptance remain release work. See [the exact preparation record](karento/SIGNATURE-LOCAL-DRAFTS-2026-10-10.md).
+The [release selection evidence](qa/uk-approved-six-selection-2026-10-10.json) binds these versions. Newer template drafts are outside this batch. The [delivery checkpoint](uk-cloudflare-batch-2026-10-10.md) and [repository evidence](qa/uk-publishing-repositories-2026-10-10.json) show the actual per-dealer source, build and publication records.
 
 ## A proper UK configuration
 
-- **Business location:** verified UK address, town, postcode, map/directions and telephone links in `+44` format. Use country code `GB` for the UK dealer profile; do not infer the dealer's location from the visitor.
-- **Language:** English by default, with `en-GB` formatting and reviewed UK wording. Explicit URL language and saved preference take precedence over supported browser-language suggestions and the dealer default. Preserve the preference for that dealer and design mount.
-- **Currency:** display the actual listing currency, normally GBP for these dealers. Country or language selection must never silently convert prices. Mobile currently has a hardcoded EUR formatter; that needs a dealer-owned currency boundary.
-- **Mileage:** retain whether the source record is in miles or kilometres. Use a consistent unit contract for cards, details, search, sorting and filters; convert only with a known source unit. Import and Auto Best currently include kilometre presentation.
-- **Country hint:** on Cloudflare, a trusted request country hint can suggest a language or region. Manual choices win. Avoid an automatic IP-based redirect or a location-permission prompt just to browse a single dealer's showroom. Auto Best's current server hint is Vercel-specific and needs an adapter boundary.
+- **Business identity:** each package uses the retained dealer facts, raster logo and real PNG/ICO icons. Country is GB. Unpublished telephone, email and street-address values stay blank; an existing town can identify the display location.
+- **Language:** English is the default, with en-GB presentation. Native en/bg catalogs and explicit language/preferences remain part of the six-design contract.
+- **Currency:** actual advertised prices remain GBP. Choosing a language or country never converts a listing price.
+- **Mileage:** original miles are retained for display. Where native filters require canonical kilometres, their bounds use the corresponding conversion.
+- **Images and availability:** the 71 records are dated listing samples, with availability unconfirmed. Vehicle pictures are labelled generated category illustrations, not photographs of the advertised vehicles.
 
-Relevant boundaries: [Auto Best locale facts](../templates/auto-best/src/lib/config/locale.ts), [Auto Best server hint](../templates/auto-best/src/lib/locale/server.ts), [Modern locale configuration](../templates/modern/apps/web/lib/locale-configuration.ts), [Mobile currency](../templates/mobile/src/lib/locale.ts), [Import units](../templates/import/src/lib/i18n/vehicle-units.ts).
+Source and compilation checks cover these dealer adaptations. The mounted public journeys still need their actual hosted review. Use the [UK integration record](qa/uk-personalization-integration-2026-10-10.json) and current [batch checkpoint](uk-cloudflare-batch-2026-10-10.md) when explaining the evidence.
 
 ## Next delivery checkpoint
 
-Research and presentation preparation can proceed while template polishing finishes. After final accepted source selection, use the existing Cars workflow to personalize the UK dealer facts and stock, assemble the six families and qualify one Cloudflare pilot before wider publication. Check the actual mounted routes, assets, contact behavior, UK presentation and public origin. Source push, build success, provider READY state and hosted visual acceptance are separate evidence.
+**Build ready · Cloudflare device approval required.** The board shows build readiness and actual private-project links. Every public preview action stays disabled until deployment, hosted browser checks, visual review and Cloudflare Free runtime qualification are recorded.
 
-The owner intends Cloudflare for these UK proposals. This board makes no deployment, paid-plan purchase, DNS change or outreach authorization. Follow [Workflow](WORKFLOW.md), [Hosting and release decision](HOSTING-AND-RELEASE-DECISION-2026-10-04.md), [Lead publishing](LEAD-PUBLISHING.md) and the current six-design release records at that checkpoint.
+After normal Cloudflare device approval succeeds, deliver the already compiled pilot one target at a time, verify its seven actual Worker receipts, then inspect the six public designs at phone and desktop widths. Demonstrations must keep the dated-stock, generated-image and non-sending form disclosures.
+
+Continue using the existing Cars release, source ownership, payload verification and remote reconciliation workflow. These UK projects target Cloudflare; existing Vercel projects remain outside this batch. No outreach has been sent.

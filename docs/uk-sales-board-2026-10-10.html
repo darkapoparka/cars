@@ -5,11 +5,112 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Cars Sales Coach</title>
+<title>UK Dealer Previews and Sales Coach</title>
 <style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
 
+<style id="uk-dealer-board-style">
+.uk-dealer-board{--uk-fg:light-dark(#1a1c1f,#fff);--uk-muted:light-dark(#626970,#b5bac1);--uk-panel:light-dark(#f2f2f2,#272727);--uk-line:light-dark(#e1e3e6,#45484d);--uk-link:light-dark(#075ea8,#89c7ff);color:var(--uk-fg);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;margin:0 0 2rem}
+.uk-dealer-board *{box-sizing:border-box}
+.uk-board-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:1.5rem;margin-bottom:1.25rem}
+.uk-board-kicker{color:var(--uk-muted);font-size:.8125rem;font-weight:500;margin:0 0 .35rem}
+.uk-dealer-board h1{font-size:1.875rem;line-height:1.2;font-weight:650;letter-spacing:-.035em;margin:0 0 .6rem}
+.uk-board-intro{max-width:48rem;margin:0;color:var(--uk-muted)}
+.uk-board-link{color:var(--uk-link);text-underline-offset:3px}
+.uk-board-coach-link{white-space:nowrap;margin-top:.45rem;min-height:44px;display:inline-flex;align-items:center}
+.uk-board-status{display:flex;flex-wrap:wrap;gap:.45rem .7rem;align-items:center;margin:.9rem 0 0;color:var(--uk-muted);font-size:.875rem}
+.uk-board-status strong{font-weight:600;color:var(--uk-fg)}
+.uk-board-status span+span::before{content:"·";margin-right:.7rem}
+.uk-board-table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--uk-line);border-radius:16px;overflow:clip}
+.uk-board-table thead th{background:var(--uk-panel);font-size:.8125rem;color:var(--uk-muted);font-weight:500;text-align:left;padding:.7rem 1rem;border-bottom:1px solid var(--uk-line)}
+.uk-board-table thead th:first-child{width:52%}
+.uk-board-table tbody th,.uk-board-table tbody td{text-align:left;padding:.8rem 1rem;border-bottom:1px solid var(--uk-line);vertical-align:middle}
+.uk-board-table tbody tr:last-child>*{border-bottom:0}
+.uk-board-name{display:block;font-weight:600}
+.uk-board-city{display:block;font-size:.8125rem;font-weight:400;color:var(--uk-muted);margin-top:.12rem}
+.uk-board-preview{font-family:inherit;font-size:.875rem;font-weight:500;line-height:1.3;min-height:40px;padding:.55rem .85rem;border:1px solid var(--uk-line);border-radius:999px;color:var(--uk-muted);background:var(--uk-panel);cursor:default}
+.uk-board-project{display:inline-flex;align-items:center;min-height:44px;font-size:.875rem}
+.uk-board-note{font-size:.8125rem;color:var(--uk-muted);margin:.8rem 0 0}
+.uk-dealer-board a:focus-visible{outline:2px solid light-dark(#1687df,#89c7ff);outline-offset:4px;border-radius:3px}
+.uk-coach-heading{font:600 1.125rem/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;color:light-dark(#1a1c1f,#fff);margin:0 0 1rem}
+@media(max-width:640px){
+ .uk-board-heading{display:block;margin-bottom:1rem}
+ .uk-dealer-board h1{font-size:1.6rem;letter-spacing:-.025em}
+ .uk-board-coach-link{margin-top:.55rem}
+ .uk-board-status span+span::before{display:none}
+ .uk-board-table{display:block;border:0;border-radius:0;overflow:visible}
+ .uk-board-table thead{position:absolute;inline-size:1px;block-size:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+ .uk-board-table tbody{display:grid;gap:.6rem}
+ .uk-board-table tr{display:grid;grid-template-columns:minmax(0,1fr) auto;border:1px solid var(--uk-line);border-radius:14px;padding:.85rem}
+ .uk-board-table tbody th{grid-column:1/-1;padding:0 0 .55rem;border:0}
+ .uk-board-table tbody td{padding:0;border:0}
+ .uk-board-table tbody td:last-child{text-align:right}
+ .uk-board-preview{min-height:44px;padding:.55rem .75rem}
+ .uk-board-note{line-height:1.55}
+}
+</style>
 </head>
 <body>
+<section class="uk-dealer-board" id="uk-dealer-previews" aria-labelledby="uk-dealer-title">
+<header class="uk-board-heading"><div>
+<p class="uk-board-kicker">UK leads · 10 dealer projects · Cloudflare</p>
+<h1 id="uk-dealer-title">Dealer previews</h1>
+<p class="uk-board-intro">All ten dealer projects have six compiled designs. Public previews are waiting for Cloudflare device approval and hosted checks. Use the six-design coach below to practise the fit, features and demonstration.</p>
+<p class="uk-board-status"><span><strong>60 builds ready</strong></span><span>Cloudflare device approval required</span><span>10 private packages published</span></p>
+</div><a class="uk-board-link uk-board-coach-link" href="#uk-design-coach">Practise the six designs ↓</a></header>
+<table class="uk-board-table" aria-label="UK dealer preview and project status"><thead><tr><th scope="col">Dealer</th><th scope="col">Cloudflare preview</th><th scope="col">Project</th></tr></thead>
+<tbody><tr data-dealer="stockport-broadbent-car-and-servicing">
+<th scope="row"><span class="uk-board-name">Broadbent Car and Servicing</span><span class="uk-board-city">Bredbury, Stockport</span></th>
+<td><button class="uk-board-preview" type="button" disabled data-preview-origin="https://cars-uk-stockport-broadbent-car-and-servicing.darkapoparka1.workers.dev" aria-label="Broadbent Car and Servicing — build ready; Cloudflare device approval and preview checks pending">Build ready</button></td>
+<td><a class="uk-board-link uk-board-project" href="https://github.com/darkapoparka/cars-uk-stockport-broadbent-car-and-servicing" target="_blank" rel="noopener noreferrer" aria-label="Open private project for Broadbent Car and Servicing">Private project&nbsp;↗</a></td>
+</tr>
+<tr data-dealer="motherwell-motors-castle">
+<th scope="row"><span class="uk-board-name">Motors Castle</span><span class="uk-board-city">Cleland / Motherwell, Scotland</span></th>
+<td><button class="uk-board-preview" type="button" disabled data-preview-origin="https://cars-uk-motherwell-motors-castle.darkapoparka1.workers.dev" aria-label="Motors Castle — build ready; Cloudflare device approval and preview checks pending">Build ready</button></td>
+<td><a class="uk-board-link uk-board-project" href="https://github.com/darkapoparka/cars-uk-motherwell-motors-castle" target="_blank" rel="noopener noreferrer" aria-label="Open private project for Motors Castle">Private project&nbsp;↗</a></td>
+</tr>
+<tr data-dealer="birmingham-trade-car-sales-grasmere">
+<th scope="row"><span class="uk-board-name">Trade Car Sales</span><span class="uk-board-city">Birmingham</span></th>
+<td><button class="uk-board-preview" type="button" disabled data-preview-origin="https://cars-uk-birmingham-trade-car-sales-grasmere.darkapoparka1.workers.dev" aria-label="Trade Car Sales — build ready; Cloudflare device approval and preview checks pending">Build ready</button></td>
+<td><a class="uk-board-link uk-board-project" href="https://github.com/darkapoparka/cars-uk-birmingham-trade-car-sales-grasmere" target="_blank" rel="noopener noreferrer" aria-label="Open private project for Trade Car Sales">Private project&nbsp;↗</a></td>
+</tr>
+<tr data-dealer="birmingham-square-one-motors">
+<th scope="row"><span class="uk-board-name">Square One Motors</span><span class="uk-board-city">Birmingham</span></th>
+<td><button class="uk-board-preview" type="button" disabled data-preview-origin="https://cars-uk-birmingham-square-one-motors.darkapoparka1.workers.dev" aria-label="Square One Motors — build ready; Cloudflare device approval and preview checks pending">Build ready</button></td>
+<td><a class="uk-board-link uk-board-project" href="https://github.com/darkapoparka/cars-uk-birmingham-square-one-motors" target="_blank" rel="noopener noreferrer" aria-label="Open private project for Square One Motors">Private project&nbsp;↗</a></td>
+</tr>
+<tr data-dealer="dewsbury-car-market-yorkshire">
+<th scope="row"><span class="uk-board-name">Car Market Yorkshire</span><span class="uk-board-city">Dewsbury, West Yorkshire</span></th>
+<td><button class="uk-board-preview" type="button" disabled data-preview-origin="https://cars-uk-dewsbury-car-market-yorkshire.darkapoparka1.workers.dev" aria-label="Car Market Yorkshire — build ready; Cloudflare device approval and preview checks pending">Build ready</button></td>
+<td><a class="uk-board-link uk-board-project" href="https://github.com/darkapoparka/cars-uk-dewsbury-car-market-yorkshire" target="_blank" rel="noopener noreferrer" aria-label="Open private project for Car Market Yorkshire">Private project&nbsp;↗</a></td>
+</tr>
+<tr data-dealer="nottingham-s-a-motors">
+<th scope="row"><span class="uk-board-name">S A Motors</span><span class="uk-board-city">Nottingham</span></th>
+<td><button class="uk-board-preview" type="button" disabled data-preview-origin="https://cars-uk-nottingham-s-a-motors.darkapoparka1.workers.dev" aria-label="S A Motors — build ready; Cloudflare device approval and preview checks pending">Build ready</button></td>
+<td><a class="uk-board-link uk-board-project" href="https://github.com/darkapoparka/cars-uk-nottingham-s-a-motors" target="_blank" rel="noopener noreferrer" aria-label="Open private project for S A Motors">Private project&nbsp;↗</a></td>
+</tr>
+<tr data-dealer="batley-as-motor-group">
+<th scope="row"><span class="uk-board-name">AS Motor Group</span><span class="uk-board-city">Batley, West Yorkshire</span></th>
+<td><button class="uk-board-preview" type="button" disabled data-preview-origin="https://cars-uk-batley-as-motor-group.darkapoparka1.workers.dev" aria-label="AS Motor Group — build ready; Cloudflare device approval and preview checks pending">Build ready</button></td>
+<td><a class="uk-board-link uk-board-project" href="https://github.com/darkapoparka/cars-uk-batley-as-motor-group" target="_blank" rel="noopener noreferrer" aria-label="Open private project for AS Motor Group">Private project&nbsp;↗</a></td>
+</tr>
+<tr data-dealer="bradford-cherry-tree-cars">
+<th scope="row"><span class="uk-board-name">Cherry Tree Cars Ltd</span><span class="uk-board-city">Bradford, West Yorkshire</span></th>
+<td><button class="uk-board-preview" type="button" disabled data-preview-origin="https://cars-uk-bradford-cherry-tree-cars.darkapoparka1.workers.dev" aria-label="Cherry Tree Cars Ltd — build ready; Cloudflare device approval and preview checks pending">Build ready</button></td>
+<td><a class="uk-board-link uk-board-project" href="https://github.com/darkapoparka/cars-uk-bradford-cherry-tree-cars" target="_blank" rel="noopener noreferrer" aria-label="Open private project for Cherry Tree Cars Ltd">Private project&nbsp;↗</a></td>
+</tr>
+<tr data-dealer="stockton-norton-grange-trade-cars">
+<th scope="row"><span class="uk-board-name">Norton Grange Trade Cars</span><span class="uk-board-city">Stockton-on-Tees</span></th>
+<td><button class="uk-board-preview" type="button" disabled data-preview-origin="https://cars-uk-stockton-norton-grange-trade-cars.darkapoparka1.workers.dev" aria-label="Norton Grange Trade Cars — build ready; Cloudflare device approval and preview checks pending">Build ready</button></td>
+<td><a class="uk-board-link uk-board-project" href="https://github.com/darkapoparka/cars-uk-stockton-norton-grange-trade-cars" target="_blank" rel="noopener noreferrer" aria-label="Open private project for Norton Grange Trade Cars">Private project&nbsp;↗</a></td>
+</tr>
+<tr data-dealer="north-norfolk-car-sales">
+<th scope="row"><span class="uk-board-name">North Norfolk Car Sales</span><span class="uk-board-city">North Walsham, Norfolk</span></th>
+<td><button class="uk-board-preview" type="button" disabled data-preview-origin="https://cars-uk-north-norfolk-car-sales.darkapoparka1.workers.dev" aria-label="North Norfolk Car Sales — build ready; Cloudflare device approval and preview checks pending">Build ready</button></td>
+<td><a class="uk-board-link uk-board-project" href="https://github.com/darkapoparka/cars-uk-north-norfolk-car-sales" target="_blank" rel="noopener noreferrer" aria-label="Open private project for North Norfolk Car Sales">Private project&nbsp;↗</a></td>
+</tr></tbody></table>
+<p class="uk-board-note">0 public previews verified. Links activate after deployment, hosted website checks, visual review and Cloudflare Free runtime qualification. Private projects require GitHub access.</p>
+</section>
+<h2 class="uk-coach-heading" id="uk-design-coach">Practise the six designs</h2>
 <iframe id="codex-visualization" sandbox="allow-scripts" referrerpolicy="no-referrer" title="Cars Sales Coach" data-srcdoc="&lt;!doctype html&gt;
 &lt;html lang=&quot;en&quot; data-visualize-standalone&gt;
 &lt;head&gt;
