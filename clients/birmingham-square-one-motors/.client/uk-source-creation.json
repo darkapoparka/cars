@@ -623,6 +623,109 @@
       "hosted": false,
       "dealerQa": false,
       "readyToPublish": false
+    },
+    {
+      "id": "gb-modern-card-city-v1",
+      "at": "2026-10-10T12:20:39.859Z",
+      "workflowCommit": "7e501bd86f32add912e9eb707de230b3137a2a53",
+      "previousSourceCommit": "e0ad934b8d2da8141110cf29495c71c1e473e132",
+      "reason": "Preserve the complete factual city as a quoted key in the native vehicle-card policy; retain the already repaired other city maps, locale outputs and optional contacts.",
+      "modernCardCityPaths": [
+        "modern/packages/marketplace-ui/lib/vehicle-card-view-policy.ts"
+      ],
+      "changedFiles": [
+        {
+          "path": "localization/adoption.json",
+          "before": "67f3b6e459c89f02220e6643742cd999d8c6e3bb499c8dd24715317e60f270ab",
+          "after": "b0553c7883bf78c8443ae2c440efe9a88b8ccdd81a09356d23069f26f263cb4d"
+        },
+        {
+          "path": "modern/packages/marketplace-ui/lib/vehicle-card-view-policy.ts",
+          "before": "2c27f1298673a4d81c62ecc84421a5d37e072c9d83cdd5ca6f31658610e3a616",
+          "after": "0c84e4c2ef7c5c113f258f8984d852c20f4b5293c211d5c8c54e26dd348a8935"
+        }
+      ],
+      "sourceBefore": {
+        "files": 12259,
+        "sha256": "347eac324ac3a23af70582c77c02ba9342443b79817c88c7ac77bc8f18372e1e"
+      },
+      "sourceAfter": {
+        "files": 12259,
+        "sha256": "df2db966864465f65938ea1f9e17a8e8993c88394563b33080d87a0584e21832"
+      },
+      "familiesBefore": {
+        "auto-best": {
+          "files": 1248,
+          "sha256": "21f5c093a1e4f7fde9934375c3c814d73c42a7b8d6f68bb62d5ac6e691c169f4"
+        },
+        "modern": {
+          "files": 3981,
+          "sha256": "8f6c4178d271e0ef51f2a4537074b515d9028daf25affb247f41afe07519b6e4"
+        },
+        "import": {
+          "files": 3400,
+          "sha256": "c078a4fb3e7f5f6c3f05b7c28e21d587194d5b210954f874732f320de48d0c9d"
+        },
+        "app": {
+          "files": 1649,
+          "sha256": "973a25e007a3881f2940c808e5d075757da5541afdf7b64e49a38dcc04653c9c"
+        },
+        "mobile": {
+          "files": 835,
+          "sha256": "aa3f16df35bfa32e6bbac21bf6215a21611bb9eea80f0bd3168a5566c5cb0b56"
+        },
+        "karento-best": {
+          "files": 1126,
+          "sha256": "8e8e8a865d8c8d96233436871cd17da3b5939c1a725d30281c9736d5eff56bb3"
+        }
+      },
+      "familiesAfter": {
+        "auto-best": {
+          "files": 1248,
+          "sha256": "21f5c093a1e4f7fde9934375c3c814d73c42a7b8d6f68bb62d5ac6e691c169f4"
+        },
+        "modern": {
+          "files": 3981,
+          "sha256": "b3d157123d18afd3190a57989af2399c13da88a5c2831a0f02ea575e1b67b4dd"
+        },
+        "import": {
+          "files": 3400,
+          "sha256": "c078a4fb3e7f5f6c3f05b7c28e21d587194d5b210954f874732f320de48d0c9d"
+        },
+        "app": {
+          "files": 1649,
+          "sha256": "973a25e007a3881f2940c808e5d075757da5541afdf7b64e49a38dcc04653c9c"
+        },
+        "mobile": {
+          "files": 835,
+          "sha256": "aa3f16df35bfa32e6bbac21bf6215a21611bb9eea80f0bd3168a5566c5cb0b56"
+        },
+        "karento-best": {
+          "files": 1126,
+          "sha256": "8e8e8a865d8c8d96233436871cd17da3b5939c1a725d30281c9736d5eff56bb3"
+        }
+      },
+      "nativeAdoptionBefore": "67f3b6e459c89f02220e6643742cd999d8c6e3bb499c8dd24715317e60f270ab",
+      "nativeAdoptionAfter": "b0553c7883bf78c8443ae2c440efe9a88b8ccdd81a09356d23069f26f263cb4d",
+      "verification": {
+        "originalSixSourceSeals": true,
+        "repairedSixSourceSeals": true,
+        "unaffectedFamilies": [
+          "auto-best",
+          "import",
+          "app",
+          "mobile",
+          "karento-best"
+        ],
+        "unaffectedFamiliesByteIdentical": true,
+        "factualStockBytesUnchanged": true,
+        "factsAndSourcePinsUnchanged": true,
+        "previousNativeLocaleCheckPreserved": true
+      },
+      "build": false,
+      "hosted": false,
+      "dealerQa": false,
+      "readyToPublish": false
     }
   ]
 }

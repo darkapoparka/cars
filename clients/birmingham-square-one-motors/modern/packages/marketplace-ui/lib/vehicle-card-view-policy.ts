@@ -94,7 +94,7 @@ const locationLabelsBg: Record<string, string> = {
   Plovdiv: "Пловдив",
   Romania: "Румъния",
   Ruse: "Русе",
-  Birmingham: "Birmingham",
+  "Birmingham": "Birmingham",
   "Birmingham City": "Birmingham-град",
   "Stara Zagora": "Стара Загора",
   Varna: "Варна",
