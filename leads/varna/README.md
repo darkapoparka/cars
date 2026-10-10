@@ -1,8 +1,10 @@
 # Varna dealer research and six-design batch
 
-Canonical research: **Cars / main / leads/varna**. Dealer implementation is isolated on the **varna** branch. This is not the separate cars marketplace/platform.
+Canonical research: **Cars / main / leads/varna**. Dealer implementation remains isolated on the **varna** branch. This is not the separate cars marketplace/platform.
 
-**10 October 2026 status: ten personalized projects, 60/60 real framework builds passed. Hosting is not complete.** See [BUILD-STATUS.md](BUILD-STATUS.md) and [the verification receipt](build-verification-2026-10-10.json). The D&M Vercel pilot was rejected by the team's daily deployment quota; no public dealer URL is verified for this batch.
+**11 October 2026 Sofia update: eight public Cloudflare proposals, 59/60 internal design Workers and 8/10 public routers. 192 baseline browser cases and 200 supplemental checks passed for those eight sites.** PRIME AUTO and AUTOROAD remain held; this is not a 10/10 completion claim. Read [CLOUDFLARE-DELIVERY.md](CLOUDFLARE-DELIVERY.md) for public URLs, exact source/build identities, remaining work and resume evidence, and [the deployment ledger](cloudflare-delivery-2026-10-11.json) for Worker versions and browser-report hashes.
+
+The earlier [BUILD-STATUS.md](BUILD-STATUS.md) and [native build verification](build-verification-2026-10-10.json) retain the historical 60/60 compilation and rejected Vercel pilot. The [Vercel quota audit](vercel-quota-audit-2026-10-10.json) explains the shared-team activity: 102 of 137 deployment records in the audited 24-hour window belonged to treido-bg-shop. Those historical records are not all successful deployments.
 
 ## Coverage
 
@@ -32,14 +34,14 @@ Each source pack contains eight dated representative vehicle listings and four l
 
 ## Application contract
 
-One dealer, one shared fact/asset pack, six real template applications: Auto Best / Modern / Import / App / Mobile / Signature (internal key karento-best), plus the shared external Admin demo. Standard mounts are /, /variant-2/cars, /variant-3/, /variant-4/, /variant-5/, /variant-6/. One public dealer origin and a shared six-design FAB; Admin is not a seventh design or a duplicated backend.
+One dealer, one shared fact/asset pack, six real template applications: Auto Best / Modern / Import / App / Mobile / Signature (internal key karento-best), plus the shared external Admin demo. Standard mounts are /, /variant-2/cars, /variant-3/, /variant-4/, /variant-5/, /variant-6/. The Cloudflare delivery preserves one public dealer origin through internal service bindings and a shared six-design FAB. Admin is not a seventh design or duplicated backend.
 
-The verified source is [06fcad9c](https://github.com/darkapoparka/cars/commit/06fcad9c0a8a5ac6b4f27c1a4e0df5445a6c8f5e) on [varna](https://github.com/darkapoparka/cars/tree/varna). All ten sources were regenerated from the then-current approved template pins, including the final App commit 4e184777. Exact six-family pins are recorded in the verification receipt. Dealer candidate release approval, framework compilation, branding acceptance and hosted browser verification remain separate.
+The original verified native source is [06fcad9c](https://github.com/darkapoparka/cars/commit/06fcad9c0a8a5ac6b4f27c1a4e0df5445a6c8f5e) on [varna](https://github.com/darkapoparka/cars/tree/varna). All ten sources were regenerated from the then-current approved template pins, including final App 4e184777. The Cloudflare build/repair commits, source trees and provider-specific receipts are recorded in the current delivery ledger. Framework compilation, hosted technical verification, owner visual acceptance, branding and outreach approval remain separate.
 
-## Current evidence
+## Current evidence and remaining work
 
-[GitHub Actions run 38075636982](https://github.com/darkapoparka/cars/actions/runs/38075636982) completed successfully at 18:38:51 UTC on 10 October 2026. All **60 native framework build jobs**, six for each dealer, passed with no failed, skipped or cancelled build jobs. The planning job also passed seven presentation-contract regression tests.
+[GitHub Actions run 38075636982](https://github.com/darkapoparka/cars/actions/runs/38075636982) completed successfully at 18:38:51 UTC on 10 October 2026. All **60 native framework build jobs**, six per dealer, passed. Cloudflare then compiled its own provider outputs, corrected two pilot content errors and uploaded the exact compiled artifacts documented in CLOUDFLARE-DELIVERY.md.
 
-The original dealer logos are present and were visually reviewed; the requested high-quality branding refresh is **not completed**. In particular, Autofest's original PNG is only 100 x 26 pixels. The ten dedicated publishing repositories are **not created or linked yet**. D&M's Vercel project exists, but the attempted deployment was rejected with api-deployments-free-per-day, and no deployment or public alias was created. The remaining nine have not been submitted.
+The original dealer logos are present; the requested high-quality branding refresh is **not complete**, and Autofest's original is only 100 x 26 pixels. The ten dedicated private publishing repositories are **not created or linked yet**. Eight Cloudflare public demos have passed the bounded technical checks; PRIME AUTO lacks its public router and AUTOROAD lacks Auto Best plus its public router following tool safety blocks. Do not treat the two held dealers as live.
 
-preflight.json remains an older dry run, and verification.json remains data-only evidence. Neither is the 60-build result. No dealership was contacted and no outreach status was changed. Do not send this batch to leads before branding, release qualification and hosted acceptance are finished.
+preflight.json is an older dry run and verification.json is data-only evidence. No dealership was contacted and no outreach status was changed. Owner review, branding and outreach acceptance remain pending.
