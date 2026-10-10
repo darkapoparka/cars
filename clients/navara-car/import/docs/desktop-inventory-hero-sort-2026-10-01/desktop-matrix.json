@@ -1,0 +1,1658 @@
+[
+  {
+    "activeChipsInHero": true,
+    "allFiltersInsideHero": true,
+    "cars": [
+      {
+        "height": 240,
+        "width": 360,
+        "x": -198,
+        "y": 238
+      },
+      {
+        "height": 240,
+        "width": 360,
+        "x": 591,
+        "y": 238
+      }
+    ],
+    "filterFields": [
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Марка",
+        "width": 135.796875,
+        "x": 37,
+        "y": 318.546875
+      },
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Модел",
+        "width": 135.796875,
+        "x": 172.796875,
+        "y": 318.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Цена",
+        "width": 239.390625,
+        "x": 32,
+        "y": 395.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Пробег",
+        "width": 239.390625,
+        "x": 279.390625,
+        "y": 395.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Гориво",
+        "width": 239.390625,
+        "x": 32,
+        "y": 451.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Купе",
+        "width": 239.390625,
+        "x": 279.390625,
+        "y": 451.546875
+      }
+    ],
+    "filtersOutsideHero": 0,
+    "gridX": 32,
+    "hero": {
+      "height": 450,
+      "width": 753,
+      "x": 0,
+      "y": 133
+    },
+    "locale": "bg",
+    "overflow": false,
+    "overviewX": 32,
+    "sortButtons": [
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Най-подходящи",
+        "selected": "true",
+        "width": 137.828125,
+        "x": 161.3125,
+        "y": 607
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Цена ↑",
+        "selected": "false",
+        "width": 137.828125,
+        "x": 303.140625,
+        "y": 607
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Цена ↓",
+        "selected": "false",
+        "width": 137.828125,
+        "x": 444.96875,
+        "y": 607
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Пробег ↑",
+        "selected": "false",
+        "width": 137.828125,
+        "x": 161.3125,
+        "y": 655
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Нови обяви",
+        "selected": "false",
+        "width": 137.828125,
+        "x": 303.140625,
+        "y": 655
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Година ↓",
+        "selected": "false",
+        "width": 137.828125,
+        "x": 444.96875,
+        "y": 655
+      }
+    ],
+    "sortInsideResults": true,
+    "viewTarget": 44,
+    "width": 768
+  },
+  {
+    "activeChipsInHero": true,
+    "allFiltersInsideHero": true,
+    "cars": [
+      {
+        "height": 240,
+        "width": 360,
+        "x": -198,
+        "y": 238
+      },
+      {
+        "height": 240,
+        "width": 360,
+        "x": 723,
+        "y": 238
+      }
+    ],
+    "filterFields": [
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Марка",
+        "width": 162.1875,
+        "x": 37,
+        "y": 318.546875
+      },
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Модел",
+        "width": 162.203125,
+        "x": 199.1875,
+        "y": 318.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Цена",
+        "width": 305.390625,
+        "x": 32,
+        "y": 395.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Пробег",
+        "width": 305.390625,
+        "x": 345.390625,
+        "y": 395.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Гориво",
+        "width": 305.390625,
+        "x": 32,
+        "y": 451.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Купе",
+        "width": 305.390625,
+        "x": 345.390625,
+        "y": 451.546875
+      }
+    ],
+    "filtersOutsideHero": 0,
+    "gridX": 32,
+    "hero": {
+      "height": 450,
+      "width": 885,
+      "x": 0,
+      "y": 133
+    },
+    "locale": "bg",
+    "overflow": false,
+    "overviewX": 32,
+    "sortButtons": [
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Най-подходящи",
+        "selected": "true",
+        "width": 181.828125,
+        "x": 161.3125,
+        "y": 607
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Цена ↑",
+        "selected": "false",
+        "width": 181.828125,
+        "x": 347.140625,
+        "y": 607
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Цена ↓",
+        "selected": "false",
+        "width": 181.828125,
+        "x": 532.96875,
+        "y": 607
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Пробег ↑",
+        "selected": "false",
+        "width": 181.828125,
+        "x": 161.3125,
+        "y": 655
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Нови обяви",
+        "selected": "false",
+        "width": 181.828125,
+        "x": 347.140625,
+        "y": 655
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Година ↓",
+        "selected": "false",
+        "width": 181.828125,
+        "x": 532.96875,
+        "y": 655
+      }
+    ],
+    "sortInsideResults": true,
+    "viewTarget": 44,
+    "width": 900
+  },
+  {
+    "activeChipsInHero": true,
+    "allFiltersInsideHero": true,
+    "cars": [
+      {
+        "height": 240,
+        "width": 360,
+        "x": -198,
+        "y": 213
+      },
+      {
+        "height": 240,
+        "width": 360,
+        "x": 847,
+        "y": 213
+      }
+    ],
+    "filterFields": [
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Марка",
+        "width": 174,
+        "x": 69.5,
+        "y": 321.546875
+      },
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Модел",
+        "width": 174,
+        "x": 243.5,
+        "y": 321.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Цена",
+        "width": 163.4375,
+        "x": 64.5,
+        "y": 398.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Пробег",
+        "width": 163.453125,
+        "x": 235.9375,
+        "y": 398.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Гориво",
+        "width": 163.4375,
+        "x": 407.390625,
+        "y": 398.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Купе",
+        "width": 163.453125,
+        "x": 578.828125,
+        "y": 398.546875
+      }
+    ],
+    "filtersOutsideHero": 0,
+    "gridX": 32,
+    "hero": {
+      "height": 400,
+      "width": 1009,
+      "x": 0,
+      "y": 133
+    },
+    "locale": "bg",
+    "overflow": false,
+    "overviewX": 32,
+    "sortButtons": [
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Най-подходящи",
+        "selected": "true",
+        "width": 141.734375,
+        "x": 221.140625,
+        "y": 557
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Цена ↑",
+        "selected": "false",
+        "width": 79.265625,
+        "x": 366.875,
+        "y": 557
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Цена ↓",
+        "selected": "false",
+        "width": 79.265625,
+        "x": 450.140625,
+        "y": 557
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Пробег ↑",
+        "selected": "false",
+        "width": 96.3125,
+        "x": 533.40625,
+        "y": 557
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Нови обяви",
+        "selected": "false",
+        "width": 108.34375,
+        "x": 633.71875,
+        "y": 557
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Година ↓",
+        "selected": "false",
+        "width": 92.734375,
+        "x": 746.0625,
+        "y": 557
+      }
+    ],
+    "sortInsideResults": true,
+    "viewTarget": 44,
+    "width": 1024
+  },
+  {
+    "activeChipsInHero": true,
+    "allFiltersInsideHero": true,
+    "cars": [
+      {
+        "height": 290.125,
+        "width": 435.1875,
+        "x": -121.85250091552734,
+        "y": 148.9375
+      },
+      {
+        "height": 290.125,
+        "width": 435.18756103515625,
+        "x": 951.6649780273438,
+        "y": 148.9375
+      }
+    ],
+    "filterFields": [
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Марка",
+        "width": 174,
+        "x": 197.5,
+        "y": 283.890625
+      },
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Модел",
+        "width": 174,
+        "x": 371.5,
+        "y": 283.890625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Цена",
+        "width": 163.4375,
+        "x": 192.5,
+        "y": 360.890625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Пробег",
+        "width": 163.453125,
+        "x": 363.9375,
+        "y": 360.890625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Гориво",
+        "width": 163.4375,
+        "x": 535.390625,
+        "y": 360.890625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Купе",
+        "width": 163.453125,
+        "x": 706.828125,
+        "y": 360.890625
+      }
+    ],
+    "filtersOutsideHero": 0,
+    "gridX": 32,
+    "hero": {
+      "height": 400,
+      "width": 1265,
+      "x": 0,
+      "y": 94
+    },
+    "locale": "bg",
+    "overflow": false,
+    "overviewX": 32,
+    "sortButtons": [
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Най-подходящи",
+        "selected": "true",
+        "width": 141.734375,
+        "x": 477.140625,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Цена ↑",
+        "selected": "false",
+        "width": 79.265625,
+        "x": 622.875,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Цена ↓",
+        "selected": "false",
+        "width": 79.265625,
+        "x": 706.140625,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Пробег ↑",
+        "selected": "false",
+        "width": 96.3125,
+        "x": 789.40625,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Нови обяви",
+        "selected": "false",
+        "width": 108.34375,
+        "x": 889.71875,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Година ↓",
+        "selected": "false",
+        "width": 92.734375,
+        "x": 1002.0625,
+        "y": 518
+      }
+    ],
+    "sortInsideResults": true,
+    "viewTarget": 44,
+    "width": 1280
+  },
+  {
+    "activeChipsInHero": true,
+    "allFiltersInsideHero": true,
+    "cars": [
+      {
+        "height": 326.390625,
+        "width": 489.59375,
+        "x": -137.08624267578125,
+        "y": 130.8046875
+      },
+      {
+        "height": 326.390625,
+        "width": 489.59375,
+        "x": 1072.492431640625,
+        "y": 130.8046875
+      }
+    ],
+    "filterFields": [
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Марка",
+        "width": 174,
+        "x": 277.5,
+        "y": 286.578125
+      },
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Модел",
+        "width": 174,
+        "x": 451.5,
+        "y": 286.578125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Цена",
+        "width": 163.4375,
+        "x": 272.5,
+        "y": 363.578125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Пробег",
+        "width": 163.453125,
+        "x": 443.9375,
+        "y": 363.578125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Гориво",
+        "width": 163.4375,
+        "x": 615.390625,
+        "y": 363.578125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Купе",
+        "width": 163.453125,
+        "x": 786.828125,
+        "y": 363.578125
+      }
+    ],
+    "filtersOutsideHero": 0,
+    "gridX": 52.5,
+    "hero": {
+      "height": 400,
+      "width": 1425,
+      "x": 0,
+      "y": 94
+    },
+    "locale": "bg",
+    "overflow": false,
+    "overviewX": 52.5,
+    "sortButtons": [
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Най-подходящи",
+        "selected": "true",
+        "width": 141.734375,
+        "x": 616.640625,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Цена ↑",
+        "selected": "false",
+        "width": 79.265625,
+        "x": 762.375,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Цена ↓",
+        "selected": "false",
+        "width": 79.265625,
+        "x": 845.640625,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Пробег ↑",
+        "selected": "false",
+        "width": 96.3125,
+        "x": 928.90625,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Нови обяви",
+        "selected": "false",
+        "width": 108.34375,
+        "x": 1029.21875,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Година ↓",
+        "selected": "false",
+        "width": 92.734375,
+        "x": 1141.5625,
+        "y": 518
+      }
+    ],
+    "sortInsideResults": true,
+    "viewTarget": 44,
+    "width": 1440
+  },
+  {
+    "activeChipsInHero": true,
+    "allFiltersInsideHero": true,
+    "cars": [
+      {
+        "height": 426.65625,
+        "width": 640,
+        "x": -179.1999969482422,
+        "y": 80.671875
+      },
+      {
+        "height": 426.65625,
+        "width": 640,
+        "x": 1444.199951171875,
+        "y": 80.671875
+      }
+    ],
+    "filterFields": [
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Марка",
+        "width": 174,
+        "x": 517.5,
+        "y": 287.03125
+      },
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Модел",
+        "width": 174,
+        "x": 691.5,
+        "y": 287.03125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Цена",
+        "width": 163.4375,
+        "x": 512.5,
+        "y": 364.03125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Пробег",
+        "width": 163.453125,
+        "x": 683.9375,
+        "y": 364.03125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Гориво",
+        "width": 163.4375,
+        "x": 855.390625,
+        "y": 364.03125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Купе",
+        "width": 163.453125,
+        "x": 1026.828125,
+        "y": 364.03125
+      }
+    ],
+    "filtersOutsideHero": 0,
+    "gridX": 292.5,
+    "hero": {
+      "height": 400,
+      "width": 1905,
+      "x": 0,
+      "y": 94
+    },
+    "locale": "bg",
+    "overflow": false,
+    "overviewX": 292.5,
+    "sortButtons": [
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Най-подходящи",
+        "selected": "true",
+        "width": 141.734375,
+        "x": 856.640625,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Цена ↑",
+        "selected": "false",
+        "width": 79.265625,
+        "x": 1002.375,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Цена ↓",
+        "selected": "false",
+        "width": 79.265625,
+        "x": 1085.640625,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Пробег ↑",
+        "selected": "false",
+        "width": 96.3125,
+        "x": 1168.90625,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Нови обяви",
+        "selected": "false",
+        "width": 108.34375,
+        "x": 1269.21875,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Година ↓",
+        "selected": "false",
+        "width": 92.734375,
+        "x": 1381.5625,
+        "y": 518
+      }
+    ],
+    "sortInsideResults": true,
+    "viewTarget": 44,
+    "width": 1920
+  },
+  {
+    "activeChipsInHero": true,
+    "allFiltersInsideHero": true,
+    "cars": [
+      {
+        "height": 240,
+        "width": 360,
+        "x": -198,
+        "y": 238
+      },
+      {
+        "height": 240,
+        "width": 360,
+        "x": 591,
+        "y": 238
+      }
+    ],
+    "filterFields": [
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Make",
+        "width": 135.796875,
+        "x": 37,
+        "y": 318.546875
+      },
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Model",
+        "width": 135.796875,
+        "x": 172.796875,
+        "y": 318.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Price",
+        "width": 268.71875,
+        "x": 32,
+        "y": 395.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Mileage",
+        "width": 268.734375,
+        "x": 308.71875,
+        "y": 395.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Fuel",
+        "width": 268.71875,
+        "x": 32,
+        "y": 451.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Body",
+        "width": 268.734375,
+        "x": 308.71875,
+        "y": 451.546875
+      }
+    ],
+    "filtersOutsideHero": 0,
+    "gridX": 32,
+    "hero": {
+      "height": 450,
+      "width": 753,
+      "x": 0,
+      "y": 133
+    },
+    "locale": "en",
+    "overflow": false,
+    "overviewX": 32,
+    "sortButtons": [
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Recommended",
+        "selected": "true",
+        "width": 164.6875,
+        "x": 100.015625,
+        "y": 607
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Price ↑",
+        "selected": "false",
+        "width": 164.703125,
+        "x": 268.703125,
+        "y": 607
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Price ↓",
+        "selected": "false",
+        "width": 164.703125,
+        "x": 437.40625,
+        "y": 607
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Mileage ↑",
+        "selected": "false",
+        "width": 164.6875,
+        "x": 100.015625,
+        "y": 655
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Latest",
+        "selected": "false",
+        "width": 164.703125,
+        "x": 268.703125,
+        "y": 655
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Year ↓",
+        "selected": "false",
+        "width": 164.703125,
+        "x": 437.40625,
+        "y": 655
+      }
+    ],
+    "sortInsideResults": true,
+    "viewTarget": 44,
+    "width": 768
+  },
+  {
+    "activeChipsInHero": true,
+    "allFiltersInsideHero": true,
+    "cars": [
+      {
+        "height": 240,
+        "width": 360,
+        "x": -198,
+        "y": 238
+      },
+      {
+        "height": 240,
+        "width": 360,
+        "x": 723,
+        "y": 238
+      }
+    ],
+    "filterFields": [
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Make",
+        "width": 162.1875,
+        "x": 37,
+        "y": 318.546875
+      },
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Model",
+        "width": 162.203125,
+        "x": 199.1875,
+        "y": 318.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Price",
+        "width": 334.71875,
+        "x": 32,
+        "y": 395.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Mileage",
+        "width": 334.734375,
+        "x": 374.71875,
+        "y": 395.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Fuel",
+        "width": 334.71875,
+        "x": 32,
+        "y": 451.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Body",
+        "width": 334.734375,
+        "x": 374.71875,
+        "y": 451.546875
+      }
+    ],
+    "filtersOutsideHero": 0,
+    "gridX": 32,
+    "hero": {
+      "height": 450,
+      "width": 885,
+      "x": 0,
+      "y": 133
+    },
+    "locale": "en",
+    "overflow": false,
+    "overviewX": 32,
+    "sortButtons": [
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Recommended",
+        "selected": "true",
+        "width": 208.6875,
+        "x": 100.015625,
+        "y": 607
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Price ↑",
+        "selected": "false",
+        "width": 208.703125,
+        "x": 312.703125,
+        "y": 607
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Price ↓",
+        "selected": "false",
+        "width": 208.703125,
+        "x": 525.40625,
+        "y": 607
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Mileage ↑",
+        "selected": "false",
+        "width": 208.6875,
+        "x": 100.015625,
+        "y": 655
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Latest",
+        "selected": "false",
+        "width": 208.703125,
+        "x": 312.703125,
+        "y": 655
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Year ↓",
+        "selected": "false",
+        "width": 208.703125,
+        "x": 525.40625,
+        "y": 655
+      }
+    ],
+    "sortInsideResults": true,
+    "viewTarget": 44,
+    "width": 900
+  },
+  {
+    "activeChipsInHero": true,
+    "allFiltersInsideHero": true,
+    "cars": [
+      {
+        "height": 240,
+        "width": 360,
+        "x": -198,
+        "y": 213
+      },
+      {
+        "height": 240,
+        "width": 360,
+        "x": 847,
+        "y": 213
+      }
+    ],
+    "filterFields": [
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Make",
+        "width": 174,
+        "x": 69.5,
+        "y": 321.546875
+      },
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Model",
+        "width": 174,
+        "x": 243.5,
+        "y": 321.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Price",
+        "width": 178.109375,
+        "x": 64.5,
+        "y": 398.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Mileage",
+        "width": 178.109375,
+        "x": 250.609375,
+        "y": 398.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Fuel",
+        "width": 178.109375,
+        "x": 436.71875,
+        "y": 398.546875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Body",
+        "width": 178.125,
+        "x": 622.828125,
+        "y": 398.546875
+      }
+    ],
+    "filtersOutsideHero": 0,
+    "gridX": 32,
+    "hero": {
+      "height": 400,
+      "width": 1009,
+      "x": 0,
+      "y": 133
+    },
+    "locale": "en",
+    "overflow": false,
+    "overviewX": 32,
+    "sortButtons": [
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Recommended",
+        "selected": "true",
+        "width": 130.421875,
+        "x": 311.21875,
+        "y": 557
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Price ↑",
+        "selected": "false",
+        "width": 78.59375,
+        "x": 445.640625,
+        "y": 557
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Price ↓",
+        "selected": "false",
+        "width": 78.59375,
+        "x": 528.234375,
+        "y": 557
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Mileage ↑",
+        "selected": "false",
+        "width": 96.53125,
+        "x": 610.828125,
+        "y": 557
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Latest",
+        "selected": "false",
+        "width": 69.390625,
+        "x": 711.359375,
+        "y": 557
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Year ↓",
+        "selected": "false",
+        "width": 73.359375,
+        "x": 784.75,
+        "y": 557
+      }
+    ],
+    "sortInsideResults": true,
+    "viewTarget": 44,
+    "width": 1024
+  },
+  {
+    "activeChipsInHero": true,
+    "allFiltersInsideHero": true,
+    "cars": [
+      {
+        "height": 290.125,
+        "width": 435.1875,
+        "x": -121.85250091552734,
+        "y": 148.9375
+      },
+      {
+        "height": 290.125,
+        "width": 435.18756103515625,
+        "x": 951.6649780273438,
+        "y": 148.9375
+      }
+    ],
+    "filterFields": [
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Make",
+        "width": 174,
+        "x": 197.5,
+        "y": 283.890625
+      },
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Model",
+        "width": 174,
+        "x": 371.5,
+        "y": 283.890625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Price",
+        "width": 178.109375,
+        "x": 192.5,
+        "y": 360.890625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Mileage",
+        "width": 178.109375,
+        "x": 378.609375,
+        "y": 360.890625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Fuel",
+        "width": 178.109375,
+        "x": 564.71875,
+        "y": 360.890625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Body",
+        "width": 178.125,
+        "x": 750.828125,
+        "y": 360.890625
+      }
+    ],
+    "filtersOutsideHero": 0,
+    "gridX": 32,
+    "hero": {
+      "height": 400,
+      "width": 1265,
+      "x": 0,
+      "y": 94
+    },
+    "locale": "en",
+    "overflow": false,
+    "overviewX": 32,
+    "sortButtons": [
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Recommended",
+        "selected": "true",
+        "width": 130.421875,
+        "x": 567.21875,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Price ↑",
+        "selected": "false",
+        "width": 78.59375,
+        "x": 701.640625,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Price ↓",
+        "selected": "false",
+        "width": 78.59375,
+        "x": 784.234375,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Mileage ↑",
+        "selected": "false",
+        "width": 96.53125,
+        "x": 866.828125,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Latest",
+        "selected": "false",
+        "width": 69.390625,
+        "x": 967.359375,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Year ↓",
+        "selected": "false",
+        "width": 73.359375,
+        "x": 1040.75,
+        "y": 518
+      }
+    ],
+    "sortInsideResults": true,
+    "viewTarget": 44,
+    "width": 1280
+  },
+  {
+    "activeChipsInHero": true,
+    "allFiltersInsideHero": true,
+    "cars": [
+      {
+        "height": 326.390625,
+        "width": 489.59375,
+        "x": -137.08624267578125,
+        "y": 130.8046875
+      },
+      {
+        "height": 326.390625,
+        "width": 489.59375,
+        "x": 1072.492431640625,
+        "y": 130.8046875
+      }
+    ],
+    "filterFields": [
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Make",
+        "width": 174,
+        "x": 277.5,
+        "y": 286.578125
+      },
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Model",
+        "width": 174,
+        "x": 451.5,
+        "y": 286.578125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Price",
+        "width": 178.109375,
+        "x": 272.5,
+        "y": 363.578125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Mileage",
+        "width": 178.109375,
+        "x": 458.609375,
+        "y": 363.578125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Fuel",
+        "width": 178.109375,
+        "x": 644.71875,
+        "y": 363.578125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Body",
+        "width": 178.125,
+        "x": 830.828125,
+        "y": 363.578125
+      }
+    ],
+    "filtersOutsideHero": 0,
+    "gridX": 52.5,
+    "hero": {
+      "height": 400,
+      "width": 1425,
+      "x": 0,
+      "y": 94
+    },
+    "locale": "en",
+    "overflow": false,
+    "overviewX": 52.5,
+    "sortButtons": [
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Recommended",
+        "selected": "true",
+        "width": 130.421875,
+        "x": 706.71875,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Price ↑",
+        "selected": "false",
+        "width": 78.59375,
+        "x": 841.140625,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Price ↓",
+        "selected": "false",
+        "width": 78.59375,
+        "x": 923.734375,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Mileage ↑",
+        "selected": "false",
+        "width": 96.53125,
+        "x": 1006.328125,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Latest",
+        "selected": "false",
+        "width": 69.390625,
+        "x": 1106.859375,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Year ↓",
+        "selected": "false",
+        "width": 73.359375,
+        "x": 1180.25,
+        "y": 518
+      }
+    ],
+    "sortInsideResults": true,
+    "viewTarget": 44,
+    "width": 1440
+  },
+  {
+    "activeChipsInHero": true,
+    "allFiltersInsideHero": true,
+    "cars": [
+      {
+        "height": 426.65625,
+        "width": 640,
+        "x": -179.1999969482422,
+        "y": 80.671875
+      },
+      {
+        "height": 426.65625,
+        "width": 640,
+        "x": 1444.199951171875,
+        "y": 80.671875
+      }
+    ],
+    "filterFields": [
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Make",
+        "width": 174,
+        "x": 517.5,
+        "y": 287.03125
+      },
+      {
+        "clipped": false,
+        "height": 56,
+        "label": "Model",
+        "width": 174,
+        "x": 691.5,
+        "y": 287.03125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Price",
+        "width": 178.109375,
+        "x": 512.5,
+        "y": 364.03125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Mileage",
+        "width": 178.109375,
+        "x": 698.609375,
+        "y": 364.03125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Fuel",
+        "width": 178.109375,
+        "x": 884.71875,
+        "y": 364.03125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Body",
+        "width": 178.125,
+        "x": 1070.828125,
+        "y": 364.03125
+      }
+    ],
+    "filtersOutsideHero": 0,
+    "gridX": 292.5,
+    "hero": {
+      "height": 400,
+      "width": 1905,
+      "x": 0,
+      "y": 94
+    },
+    "locale": "en",
+    "overflow": false,
+    "overviewX": 292.5,
+    "sortButtons": [
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Recommended",
+        "selected": "true",
+        "width": 130.421875,
+        "x": 946.71875,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Price ↑",
+        "selected": "false",
+        "width": 78.59375,
+        "x": 1081.140625,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Price ↓",
+        "selected": "false",
+        "width": 78.59375,
+        "x": 1163.734375,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Mileage ↑",
+        "selected": "false",
+        "width": 96.53125,
+        "x": 1246.328125,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Latest",
+        "selected": "false",
+        "width": 69.390625,
+        "x": 1346.859375,
+        "y": 518
+      },
+      {
+        "clipped": false,
+        "height": 44,
+        "label": "Year ↓",
+        "selected": "false",
+        "width": 73.359375,
+        "x": 1420.25,
+        "y": 518
+      }
+    ],
+    "sortInsideResults": true,
+    "viewTarget": 44,
+    "width": 1920
+  }
+]

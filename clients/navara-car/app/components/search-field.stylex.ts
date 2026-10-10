@@ -3,7 +3,7 @@ import {tokens as $} from '@/app/tokens.stylex';
 
 /** Shared geometry and typography for editable search fields and their entry link. */
 export const searchField = stylex.create({
-  field: {display: 'flex', alignItems: 'center', gap: 8, minHeight: 44, paddingInline: 12, color: $.subtle, fontFamily: $.fontSans, fontSize: 16, fontWeight: 400, lineHeight: 1.5, borderWidth: 1, borderStyle: 'solid', borderColor: '#e4e4e7', borderRadius: 9999, backgroundColor: '#f7f7f8', outline: {default: 'none', ':focus-visible': '2px solid #242428'}, outlineOffset: 2},
+  field: {display: 'flex', alignItems: 'center', gap: 8, minHeight: 44, paddingInline: 12, color: $.subtle, fontFamily: $.fontSans, fontSize: 16, fontWeight: 400, lineHeight: 1.5, borderWidth: 1, borderStyle: 'solid', borderColor: $.surfaceBorder, borderRadius: 9999, backgroundColor: $.surface, outline: {default: 'none', ':focus-visible': '2px solid #242428', ':focus-within': '2px solid #242428'}, outlineOffset: 2},
   input: {flexGrow: 1, width: '100%', minWidth: 0, minHeight: 40, padding: 0, color: {default: $.ink, '::placeholder': $.muted}, opacity: {default: 1, '::placeholder': 1}, fontFamily: $.fontSans, fontSize: 16, fontWeight: 400, lineHeight: 1.5, borderWidth: 0, outlineStyle: 'none', backgroundColor: 'transparent'},
   icon: {width: 20, height: 20, flexShrink: 0, color: $.ink},
   copy: {display: 'inline-flex', alignItems: 'center', gap: 4, minWidth: 0},

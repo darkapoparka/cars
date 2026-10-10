@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Import — final desktop polish comparison</title>
+		<style>
+			:root {
+				color-scheme: light;
+				font-family: system-ui, sans-serif;
+				color: #17191c;
+				background: #f6f6f7;
+			}
+			body {
+				max-width: 1800px;
+				margin: 0 auto;
+				padding: 24px;
+			}
+			h1 {
+				margin: 0 0 8px;
+				font-size: 24px;
+			}
+			p {
+				margin: 0 0 20px;
+				line-height: 1.5;
+			}
+			nav {
+				display: flex;
+				gap: 8px;
+				flex-wrap: wrap;
+				margin-bottom: 24px;
+			}
+			button,
+			.receipt {
+				padding: 10px 16px;
+				border: 1px solid #ddd;
+				border-radius: 10px;
+				background: white;
+				color: inherit;
+				font: inherit;
+				cursor: pointer;
+			}
+			button[aria-pressed='true'] {
+				background: #17191c;
+				color: white;
+			}
+			button:focus-visible,
+			a:focus-visible {
+				outline: 3px solid #b9161c;
+				outline-offset: 4px;
+			}
+			.pairs {
+				display: grid;
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+				gap: 16px;
+			}
+			figure {
+				margin: 0;
+			}
+			figcaption {
+				margin-bottom: 8px;
+				font-weight: 600;
+			}
+			img {
+				display: block;
+				width: 100%;
+				border-radius: 12px;
+			}
+			footer {
+				margin-top: 24px;
+				display: flex;
+				gap: 16px;
+				align-items: center;
+				flex-wrap: wrap;
+			}
+			@media (max-width: 700px) {
+				.pairs {
+					grid-template-columns: 1fr;
+				}
+				body {
+					padding: 16px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Final desktop polish — About and Contact</h1>
+		<p>
+			Calmer social icons and portrait crops on About; a direct location and enquiry layout on
+			Contact. Matched screenshots at 1440 × 1000. Select a route and language, or inspect the
+			full-page captures below.
+		</p>
+		<nav aria-label="Screenshot comparisons">
+			<button type="button" data-pair="about-bg" aria-pressed="true">About · BG</button>
+			<button type="button" data-pair="contact-bg" aria-pressed="false">Contact · BG</button>
+			<button type="button" data-pair="about-en" aria-pressed="false">About · EN</button>
+			<button type="button" data-pair="contact-en" aria-pressed="false">Contact · EN</button>
+		</nav>
+		<div class="pairs">
+			<figure>
+				<figcaption>Before</figcaption>
+				<a
+					id="before-link"
+					href="final-polish-2026-10-03/before/about-bg.png"
+					target="_blank"
+					rel="noopener"
+					><img
+						id="before-image"
+						src="final-polish-2026-10-03/before/about-bg.png"
+						alt="About BG before"
+						width="1440"
+						height="1000"
+				/></a>
+			</figure>
+			<figure>
+				<figcaption>After</figcaption>
+				<a
+					id="after-link"
+					href="final-polish-2026-10-03/after/about-bg.png"
+					target="_blank"
+					rel="noopener"
+					><img
+						id="after-image"
+						src="final-polish-2026-10-03/after/about-bg.png"
+						alt="About BG after"
+						width="1440"
+						height="1000"
+				/></a>
+			</figure>
+		</div>
+		<footer>
+			<a class="receipt" href="final-polish-2026-10-03/README.md">Verification receipt</a
+			><a
+				id="before-full"
+				href="final-polish-2026-10-03/before/about-bg-full.png"
+				target="_blank"
+				rel="noopener"
+				>Before · full page</a
+			><a
+				id="after-full"
+				href="final-polish-2026-10-03/after/about-bg-full.png"
+				target="_blank"
+				rel="noopener"
+				>After · full page</a
+			><a href="http://127.0.0.1:6790/bg/about">Live About</a
+			><a href="http://127.0.0.1:6790/bg/contact">Live Contact</a>
+		</footer>
+		<script>
+			document.querySelectorAll('[data-pair]').forEach((button) => {
+				button.addEventListener('click', () => {
+					document
+						.querySelectorAll('[data-pair]')
+						.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+					for (const phase of ['before', 'after']) {
+						const source = `final-polish-2026-10-03/${phase}/${button.dataset.pair}.png`;
+						document.getElementById(`${phase}-image`).src = source;
+						document.getElementById(`${phase}-image`).alt = `${button.textContent} ${phase}`;
+						document.getElementById(`${phase}-link`).href = source;
+						document.getElementById(`${phase}-full`).href = source.replace('.png', '-full.png');
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

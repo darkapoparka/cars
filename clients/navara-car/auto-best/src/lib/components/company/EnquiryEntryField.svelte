@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { trapDialogTab } from '$lib/ui/overlay';
+  import { preserveScrollOffset, trapDialogTab } from '$lib/ui/overlay';
 
 
   import { getI18n } from '$lib/locale/context';
@@ -31,7 +31,7 @@
   let error = $state('');
   let errorField = $state<'entry-value' | 'entry-budget'>('entry-value');
   let returnFocus: HTMLElement | undefined;
-  let scrollY = 0;
+  let releaseScroll: ((restoreScroll?: boolean) => void) | undefined;
   let opened = false;
 
   export async function edit(returnTo?: HTMLElement) {
@@ -39,20 +39,22 @@
     budgetDraft = budget;
     error = '';
     returnFocus = returnTo ?? trigger;
-    scrollY = window.scrollY;
-    document.body.style.setProperty('--dn-entry-editor-scroll', `-${scrollY}px`);
+    if (!opened) releaseScroll = preserveScrollOffset('--dn-entry-editor-scroll');
     opened = true;
     dialog.showModal();
     await tick();
+    if (!dialog?.open || !dialog.isConnected) return;
     form.querySelector<HTMLInputElement | HTMLTextAreaElement>('[name="entry-value"]')?.focus();
   }
 
-  function restore() {
+  function restore() { release(true); }
+
+  function release(restoreScroll: boolean) {
     if (!opened) return;
     opened = false;
-    document.body.style.removeProperty('--dn-entry-editor-scroll');
-    window.scrollTo({ top: scrollY, behavior: 'instant' });
-    if (returnFocus?.isConnected) returnFocus.focus({ preventScroll: true });
+    releaseScroll?.(restoreScroll);
+    releaseScroll = undefined;
+    if (restoreScroll && returnFocus?.isConnected) returnFocus.focus({ preventScroll: true });
   }
 
   function save(event: SubmitEvent) {
@@ -79,8 +81,8 @@
   }
 
   onDestroy(() => {
+    release(false);
     if (dialog?.open) dialog.close();
-    restore();
   });
 </script>
 
@@ -107,9 +109,9 @@
       {/if}
       {#if error}<p class="dn-entry-editor-error" id={`${id}-error`} role="alert">{error}</p>{/if}
     </div>
-    <footer>
-      <button type="button" class="dn-entry-editor-cancel" onclick={() => dialog.close()}>{i18n.t("m_19766ed6ccb2")}</button>
-      <button type="submit" class="dn-entry-editor-save">{i18n.t("m_1509f561f241")}</button>
+    <footer class="dn-overlay-footer">
+      <button type="button" class="dn-entry-editor-cancel dn-overlay-secondary" onclick={() => dialog.close()}>{i18n.t("m_19766ed6ccb2")}</button>
+      <button type="submit" class="dn-entry-editor-save dn-overlay-primary">{i18n.t("m_1509f561f241")}</button>
     </footer>
   </form>
 </dialog>
@@ -138,8 +140,8 @@
   footer { display: flex; flex-shrink: 0; align-items: center; justify-content: space-between; gap: var(--dn-space-3); padding: var(--dn-space-3) var(--dn-space-6); border-top: 1px solid var(--dn-line); }
   footer button { min-height: var(--dn-overlay-control-height); padding: var(--dn-space-2) var(--dn-space-6); border: 0; border-radius: var(--dn-radius-button); cursor: pointer; }
   .dn-entry-editor-cancel { background: var(--dn-home-panel); color: var(--dn-ink); font: var(--dn-overlay-option-font); }
-  .dn-entry-editor-save { min-width: 132px; background: var(--dn-red); color: var(--dn-white); font: var(--dn-overlay-action-font); }
-  .dn-entry-editor-save:hover { background: var(--dn-red-hover); }
+  .dn-entry-editor-save { min-width: 132px; background: var(--dn-primary-action-surface); color: var(--dn-white); font: var(--dn-overlay-action-font); }
+  .dn-entry-editor-save:hover { background: var(--dn-primary-action-surface-hover); }
   .dn-entry-editor :is(button,input,textarea):focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 2px; }
   @media (max-width: 767px) {
     .dn-entry-editor-trigger { height: var(--dn-entry-action-height); min-height: var(--dn-entry-action-height); }

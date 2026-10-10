@@ -7,7 +7,7 @@ import ts from 'typescript';
 // Exercise the real helper implementation without requiring a running web server.
 const output = path.resolve('artifacts/overlay-unit');
 await mkdir(output, { recursive: true });
-for (const name of ['focus', 'overlay']) {
+for (const name of ['focus', 'overlay', 'dialog-viewport']) {
   const source = await readFile(`src/lib/ui/${name}.ts`, 'utf8');
   const code = ts.transpileModule(source, { compilerOptions: {
     target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ES2022
@@ -15,6 +15,7 @@ for (const name of ['focus', 'overlay']) {
   await writeFile(path.join(output, `${name}.mjs`), code);
 }
 const { lockPageScroll, preserveScrollOffset } = await import(pathToFileURL(path.join(output, 'overlay.mjs')));
+const { dialogViewport } = await import(pathToFileURL(path.join(output, 'dialog-viewport.mjs')));
 class Style {
   values = new Map();
   setProperty(key, value, priority = '') { this.values.set(key, { value, priority }); }
@@ -52,6 +53,47 @@ try {
     assert.deepEqual(calls, restore ? [{ top: 375, behavior: 'instant' }] : []);
     results.push({ name: `offset restoration ${restore}`, passed: true });
   }
+  const viewport = Object.assign(new EventTarget(), { height: 844, offsetTop: 0 });
+  globalThis.window = { visualViewport: viewport };
+  const first = { style: new Style() };
+  const releaseFirst = dialogViewport(first);
+  assert.equal(first.style.getPropertyValue('--dn-dialog-viewport-height'), '844px');
+  assert.equal(first.style.getPropertyValue('--dn-dialog-viewport-top'), '0px');
+  results.push({ name: 'dialog starts within the visible viewport', passed: true });
+
+  viewport.height = 410;
+  viewport.dispatchEvent(new Event('resize'));
+  assert.equal(first.style.getPropertyValue('--dn-dialog-viewport-height'), '410px');
+  results.push({ name: 'dialog follows keyboard viewport resize', passed: true });
+
+  viewport.offsetTop = 32;
+  viewport.dispatchEvent(new Event('scroll'));
+  assert.equal(first.style.getPropertyValue('--dn-dialog-viewport-top'), '32px');
+  results.push({ name: 'dialog follows viewport panning', passed: true });
+
+  const nested = { style: new Style() };
+  const releaseNested = dialogViewport(nested);
+  releaseFirst();
+  viewport.height = 844;
+  viewport.offsetTop = 0;
+  viewport.dispatchEvent(new Event('resize'));
+  assert.equal(first.style.getPropertyValue('--dn-dialog-viewport-height'), '');
+  assert.equal(nested.style.getPropertyValue('--dn-dialog-viewport-height'), '844px');
+  assert.equal(nested.style.getPropertyValue('--dn-dialog-viewport-top'), '0px');
+  results.push({ name: 'nested dialog retains independent viewport ownership', passed: true });
+
+  releaseNested();
+  viewport.dispatchEvent(new Event('resize'));
+  viewport.dispatchEvent(new Event('scroll'));
+  assert.equal(nested.style.getPropertyValue('--dn-dialog-viewport-height'), '');
+  assert.equal(nested.style.getPropertyValue('--dn-dialog-viewport-top'), '');
+  results.push({ name: 'dialog unmount releases viewport listeners and styles', passed: true });
+
+  globalThis.window = { visualViewport: null };
+  const fallback = { style: new Style() };
+  assert.equal(dialogViewport(fallback), undefined);
+  assert.equal(fallback.style.getPropertyValue('--dn-dialog-viewport-height'), '');
+  results.push({ name: 'missing visual viewport preserves CSS fallback', passed: true });
 } finally { delete globalThis.document; delete globalThis.window; }
 await writeFile(path.join(output, 'report.json'), JSON.stringify({ generatedAt: new Date().toISOString(), results }, null, 2));
-console.log(`PASS ${results.length} scroll ownership and restoration checks`);
+console.log(`PASS ${results.length} scroll ownership, restoration and dialog viewport checks`);

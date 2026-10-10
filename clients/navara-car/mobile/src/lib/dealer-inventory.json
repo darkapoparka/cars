@@ -1,0 +1,364 @@
+[
+  {
+    "id": "1",
+    "make": "Nissan",
+    "model": "Micra",
+    "variant": "",
+    "price": 10500,
+    "sample": false,
+    "year": 2021,
+    "registration": "2021",
+    "mileage": 63800,
+    "power": 92,
+    "fuel": "Бензин",
+    "transmission": "Ръчна",
+    "body": "Хечбек",
+    "color": "Черен",
+    "seats": 0,
+    "doors": 0,
+    "dealer": "Навара кар",
+    "location": "Варна",
+    "rating": 0,
+    "reviews": 0,
+    "country": "BG",
+    "images": [
+      "/navara/vehicles/11786363468065195-1.webp",
+      "/navara/vehicles/11786363468065195-2.webp"
+    ],
+    "category": "car",
+    "features": [
+      "Навигация",
+      "Парктроник",
+      "Подгряване на седалки",
+      "Apple CarPlay / Android Auto"
+    ],
+    "attributes": {
+      "description": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.\nСелекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
+      "availability": "listing-sample",
+      "source": "https://navara.mobile.bg/obiava-11786363468065195-nissan-micra-1-0-n-sport",
+      "observedAt": "2026-09-08"
+    }
+  },
+  {
+    "id": "2",
+    "make": "Volkswagen",
+    "model": "Polo",
+    "variant": "",
+    "price": 10000,
+    "sample": false,
+    "year": 2018,
+    "registration": "2018",
+    "mileage": 125902,
+    "power": 80,
+    "fuel": "Дизел",
+    "transmission": "Ръчна",
+    "body": "Хечбек",
+    "color": "Сив",
+    "seats": 0,
+    "doors": 0,
+    "dealer": "Навара кар",
+    "location": "Варна",
+    "rating": 0,
+    "reviews": 0,
+    "country": "BG",
+    "images": [
+      "/navara/vehicles/11782409246983224-1.webp",
+      "/navara/vehicles/11782409246983224-2.webp"
+    ],
+    "category": "car",
+    "features": [
+      "Bluetooth",
+      "Климатик",
+      "ISOFIX",
+      "Сензор за дъжд"
+    ],
+    "attributes": {
+      "description": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.\nСелекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
+      "availability": "listing-sample",
+      "source": "https://navara.mobile.bg/obiava-11782409246983224-vw-polo-1-6-tdi",
+      "observedAt": "2026-09-08"
+    }
+  },
+  {
+    "id": "3",
+    "make": "Tesla",
+    "model": "Model 3",
+    "variant": "",
+    "price": 32999,
+    "sample": false,
+    "year": 2022,
+    "registration": "2022",
+    "mileage": 63900,
+    "power": 534,
+    "fuel": "Електрически",
+    "transmission": "Автоматик",
+    "body": "Седан",
+    "color": "Перла",
+    "seats": 0,
+    "doors": 0,
+    "dealer": "Навара кар",
+    "location": "Варна",
+    "rating": 0,
+    "reviews": 0,
+    "country": "BG",
+    "images": [
+      "/navara/vehicles/11787311216769974-1.webp",
+      "/navara/vehicles/11787311216769974-2.webp"
+    ],
+    "category": "car",
+    "features": [
+      "4x4",
+      "Навигация",
+      "Парктроник",
+      "Подгряване на седалки",
+      "Термопомпа"
+    ],
+    "attributes": {
+      "description": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.\nСелекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
+      "availability": "listing-sample",
+      "source": "https://navara.mobile.bg/obiava-11787311216769974-tesla-model-3-peformance-dual-motor",
+      "observedAt": "2026-09-08"
+    }
+  },
+  {
+    "id": "4",
+    "make": "Nissan",
+    "model": "Qashqai",
+    "variant": "",
+    "price": 18499,
+    "sample": false,
+    "year": 2023,
+    "registration": "2023",
+    "mileage": 57000,
+    "power": 141,
+    "fuel": "Бензин",
+    "transmission": "Автоматик",
+    "body": "SUV",
+    "color": "Бордо",
+    "seats": 0,
+    "doors": 0,
+    "dealer": "Навара кар",
+    "location": "Варна",
+    "rating": 0,
+    "reviews": 0,
+    "country": "BG",
+    "images": [
+      "/navara/vehicles/21780735125049477-1.webp",
+      "/navara/vehicles/21780735125049477-2.webp"
+    ],
+    "category": "car",
+    "features": [
+      "4x4",
+      "Парктроник",
+      "Подгряване на седалки",
+      "Камера за заден ход",
+      "Шибедах"
+    ],
+    "attributes": {
+      "description": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.\nСелекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
+      "availability": "listing-sample",
+      "source": "https://navara.mobile.bg/obiava-21780735125049477-nissan-qashqai-2-0i-4x4-automatic-sv-awd",
+      "observedAt": "2026-09-08"
+    }
+  },
+  {
+    "id": "5",
+    "make": "Peugeot",
+    "model": "2008",
+    "variant": "",
+    "price": 19999,
+    "sample": false,
+    "year": 2022,
+    "registration": "2022",
+    "mileage": 59079,
+    "power": 136,
+    "fuel": "Електрически",
+    "transmission": "Автоматик",
+    "body": "SUV",
+    "color": "Керемиден",
+    "seats": 0,
+    "doors": 0,
+    "dealer": "Навара кар",
+    "location": "Варна",
+    "rating": 0,
+    "reviews": 0,
+    "country": "BG",
+    "images": [
+      "/navara/vehicles/11787212062225914-1.webp",
+      "/navara/vehicles/11787212062225914-2.webp"
+    ],
+    "category": "car",
+    "features": [
+      "Парктроник",
+      "Подгряване на седалки",
+      "Apple CarPlay / Android Auto",
+      "Климатроник"
+    ],
+    "attributes": {
+      "description": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.\nСелекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
+      "availability": "listing-sample",
+      "source": "https://navara.mobile.bg/obiava-11787212062225914-peugeot-2008-e-2008-allure",
+      "observedAt": "2026-09-08"
+    }
+  },
+  {
+    "id": "6",
+    "make": "Opel",
+    "model": "Mokka",
+    "variant": "",
+    "price": 6999,
+    "sample": false,
+    "year": 2015,
+    "registration": "2015",
+    "mileage": 182000,
+    "power": 140,
+    "fuel": "Бензин / LPG",
+    "transmission": "Ръчна",
+    "body": "SUV",
+    "color": "Бял",
+    "seats": 0,
+    "doors": 0,
+    "dealer": "Навара кар",
+    "location": "Варна",
+    "rating": 0,
+    "reviews": 0,
+    "country": "BG",
+    "images": [
+      "/navara/vehicles/21774534756506554-1.webp",
+      "/navara/vehicles/21774534756506554-2.webp"
+    ],
+    "category": "car",
+    "features": [
+      "Газова уредба",
+      "Парктроник",
+      "Климатроник",
+      "ISOFIX"
+    ],
+    "attributes": {
+      "description": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.\nСелекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
+      "availability": "listing-sample",
+      "source": "https://navara.mobile.bg/obiava-21774534756506554-opel-mokka-1-4-i-gaz-benzin",
+      "observedAt": "2026-09-08"
+    }
+  },
+  {
+    "id": "7",
+    "make": "Audi",
+    "model": "A4",
+    "variant": "",
+    "price": 6999,
+    "sample": false,
+    "year": 2009,
+    "registration": "2009",
+    "mileage": 212000,
+    "power": 160,
+    "fuel": "Бензин",
+    "transmission": "Ръчна",
+    "body": "Комби",
+    "color": "Бял",
+    "seats": 0,
+    "doors": 0,
+    "dealer": "Навара кар",
+    "location": "Варна",
+    "rating": 0,
+    "reviews": 0,
+    "country": "BG",
+    "images": [
+      "/navara/vehicles/11784982235652112-1.webp",
+      "/navara/vehicles/11784982235652112-2.webp"
+    ],
+    "category": "car",
+    "features": [
+      "4x4",
+      "Парктроник",
+      "Подгряване на седалки",
+      "Панорамен люк"
+    ],
+    "attributes": {
+      "description": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.\nСелекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
+      "availability": "listing-sample",
+      "source": "https://navara.mobile.bg/obiava-11784982235652112-audi-a4-1-8-i-quattro",
+      "observedAt": "2026-09-08"
+    }
+  },
+  {
+    "id": "8",
+    "make": "Mercedes-Benz",
+    "model": "B 250",
+    "variant": "",
+    "price": 9999,
+    "sample": false,
+    "year": 2016,
+    "registration": "2016",
+    "mileage": 106000,
+    "power": 180,
+    "fuel": "Електрически",
+    "transmission": "Автоматик",
+    "body": "Хечбек",
+    "color": "Червен",
+    "seats": 0,
+    "doors": 0,
+    "dealer": "Навара кар",
+    "location": "Варна",
+    "rating": 0,
+    "reviews": 0,
+    "country": "BG",
+    "images": [
+      "/navara/vehicles/11772183782578045-1.webp",
+      "/navara/vehicles/11772183782578045-2.webp"
+    ],
+    "category": "car",
+    "features": [
+      "Навигация",
+      "Парктроник",
+      "Климатроник",
+      "ISOFIX"
+    ],
+    "attributes": {
+      "description": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.\nСелекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
+      "availability": "listing-sample",
+      "source": "https://navara.mobile.bg/obiava-11772183782578045-mercedes-benz-b-250-b250-e",
+      "observedAt": "2026-09-08"
+    }
+  },
+  {
+    "id": "9",
+    "make": "Smart",
+    "model": "Fortwo",
+    "variant": "",
+    "price": 4500,
+    "sample": false,
+    "year": 2011,
+    "registration": "2011",
+    "mileage": 66121,
+    "power": 72,
+    "fuel": "Бензин",
+    "transmission": "Автоматик",
+    "body": "Хечбек",
+    "color": "Черен",
+    "seats": 0,
+    "doors": 0,
+    "dealer": "Навара кар",
+    "location": "Варна",
+    "rating": 0,
+    "reviews": 0,
+    "country": "BG",
+    "images": [
+      "/navara/vehicles/11780755712824361-1.webp",
+      "/navara/vehicles/11780755712824361-2.webp"
+    ],
+    "category": "car",
+    "features": [
+      "Климатик",
+      "Панорамен люк",
+      "Ел. стъкла",
+      "Бордкомпютър"
+    ],
+    "attributes": {
+      "description": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.\nСелекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
+      "availability": "listing-sample",
+      "source": "https://navara.mobile.bg/obiava-11780755712824361-smart-fortwo-1-0i",
+      "observedAt": "2026-09-08"
+    }
+  }
+]

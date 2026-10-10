@@ -6,6 +6,7 @@
   import type { Vehicle } from '$data/inventory';
   import ContactVehicle from './ContactVehicle.svelte';
   import Icon from '$components/ui/Icon.svelte';
+  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
   import { brand } from '$config/brand';
   import { contactPreparation, type ContactTopic } from '$data/company';
   import SocialBrandIcon from './SocialBrandIcon.svelte';
@@ -26,13 +27,17 @@
 </script>
 
 <div class="dn-contact-intent" class:dn-contact-intent--general={topic.id === 'general'} class:dn-contact-intent--workflow={topic.id === 'trade-in' || topic.id === 'import'} class:dn-contact-intent--tradein={topic.id === 'trade-in'} class:dn-contact-intent--import={topic.id === 'import'}>
-  <div class="dn-contact-intent__main">
+  <div class="dn-contact-intent__main" class:dn-information-card={topic.id === 'general'}>
     {#if topic.id === 'trade-in' || topic.id === 'import'}
       <h1 class="dn-contact-workflow-title">{topic.id === 'trade-in' ? i18n.t("m_cd386206fba4") : i18n.text(topic.title)}</h1>
       {#if topic.id === 'import'}<p class="dn-contact-workflow-hint">{i18n.t("m_4028a7f4ea80")}</p>{/if}
     {/if}
     <div class="dn-contact-intent__heading">
-      <h2><span class:dn-contact-mobile-copy={topic.id === 'general'}>{i18n.t("m_d7def4b82f7c")}</span>{#if topic.id === 'general'}<span class="dn-contact-desktop-copy">{i18n.t("m_5c9190347136")}</span>{/if}</h2>
+      {#if topic.id === 'general'}
+        <h1 id="contact-intro-title">{i18n.t("m_2b5c3d26721a")}</h1>
+      {:else}
+        <h2>{i18n.t("m_d7def4b82f7c")}</h2>
+      {/if}
     </div>
 
     {#if vehicle && topic.id !== 'leasing'}
@@ -48,7 +53,7 @@
     {#if topic.id === 'trade-in'}
       <TradeInEnquiry />
     {:else if topic.id === 'import'}
-      {#key topic.id}<VehicleEnquiry kind="import" {importUrl} />{/key}
+      {#key topic.id}<VehicleEnquiry {importUrl} />{/key}
     {:else if preparation}
       <div class="dn-contact-preparation">
         <h2>{i18n.text(preparation.title)}</h2>
@@ -61,11 +66,21 @@
     {/if}
 
     {#if topic.id !== 'trade-in' && topic.id !== 'import'}
+    {#if topic.id === 'general'}
+    <div class="dn-contact-primary-actions">
+      <a class="dn-compact-control dn-entry-action dn-compact-primary" href={brand.phoneHref} aria-label={i18n.t("m_772c70f449af", { p0: brand.phone })}>
+        <MobileActionIcon name="phone" size={18} /><span class="dn-contact-call-number">{brand.phone}</span>
+      </a>
+      <a class="dn-contact-primary-directions dn-compact-control dn-entry-action dn-compact-pill" href={directionsUrl} target="_blank" rel="noopener noreferrer">
+        <MobileActionIcon name="location" size={18} /><span>{i18n.t("m_c95356784006")}</span>
+      </a>
+    </div>
+    {:else}
     <a class="dn-contact-button dn-contact-button--call" href={i18n.href(brand.phoneHref)} aria-label={i18n.t("m_772c70f449af", { p0: brand.phone })}>
       <span class="dn-contact-call-icon" aria-hidden="true"><Icon name="phone" size={20} /></span>
       <span class="dn-contact-call-label">{i18n.t("m_cbd2ed38b295")} </span><span class="dn-contact-call-number">{brand.phone}</span>
     </a>
-
+    {/if}
 
     {#if socialPlatforms.some(profile => profile.href)}
     <div class="dn-contact-social" role="group" aria-label={i18n.t("m_b16446d4331a")}>
@@ -110,7 +125,7 @@
         <span class="dn-contact-card__icon"><Icon name="map-pin" size={24} strokeWidth={1.8} /></span>
         <span class="dn-contact-card__copy">
           <strong>{i18n.t("m_56ef8f20955f")}</strong>
-          <span>{i18n.dealer('address')}</span>
+          <span>{i18n.dealer('address', topic.id === 'general')}</span>
         </span>
         <span class="dn-contact-card__cue" aria-hidden="true">
           <Icon name="arrow-right" size={20} strokeWidth={1.8} />
@@ -126,7 +141,7 @@
         <span class="dn-contact-card__icon"><Icon name="clock" size={24} strokeWidth={1.8} /></span>
         <span class="dn-contact-card__copy">
           <strong>{i18n.t("m_f514c310bd9e")}</strong>
-          <span>{i18n.dealer('appointment')}</span>
+          <span>{i18n.dealer('appointment', topic.id === 'general')}</span>
         </span>
         <span class="dn-contact-card__cue" aria-hidden="true">
           <Icon name="arrow-right" size={20} strokeWidth={1.8} />

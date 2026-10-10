@@ -1,4 +1,6 @@
 'use client';
+import {displayMake} from '@/lib/inventory-labels';
+import {hasPublishedMonthlyPayment} from '@/lib/vehicle-values';
 import {assetPath} from '@/lib/paths';
 import {useCopy} from '@/lib/locale';
 import Link from '@/components/AppLink';
@@ -8,7 +10,7 @@ import {Heart} from 'lucide-react';
 import {CurrencyLabel} from '@/components/ReferenceUI';
 import {useSavedVehicle} from '@/components/useVehicleState';
 import {formatPrice, type Vehicle} from '@/lib/data';
-import {media} from '@/app/tokens.stylex';
+import {media, tokens as $} from '@/app/tokens.stylex';
 
 export default function MiniVehicleCard({vehicle, green = false, featured = false}: {vehicle: Vehicle; green?: boolean; featured?: boolean}) {
   const tx = useCopy();
@@ -17,9 +19,9 @@ export default function MiniVehicleCard({vehicle, green = false, featured = fals
   const href = `/cars/${vehicle.slug}`;
   const badge = /coming/i.test(vehicle.badges[0] || '') ? 'Coming soon' : '';
   const luxe = vehicle.tier === 'Luxe' || vehicle.slug === '2024-toyota-fortuner-exr';
-  return <article aria-label={tx(`${vehicle.year} ${vehicle.make} ${vehicle.model}`)} {...stylex.props(s.card, featured && s.featuredCard)}>
-    <Link href={href} aria-label={tx(`View ${vehicle.year} ${vehicle.make} ${vehicle.model}`)} {...stylex.props(s.photo, featured && s.featuredPhoto)}>
-      <img src={assetPath(vehicle.image)} alt={vehicle.imagePlaceholder ? tx('Photo unavailable') : tx(`${vehicle.make} ${vehicle.model}`)} width={160} height={90} loading="lazy" {...stylex.props(s.image, vehicle.imagePlaceholder && s.placeholderImage)} />
+  return <article aria-label={tx(`${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}`)} {...stylex.props(s.card, featured && s.featuredCard)}>
+    <Link href={href} aria-label={tx(`View ${vehicle.year} ${displayMake(vehicle.make)} ${vehicle.model}`)} {...stylex.props(s.photo, featured && s.featuredPhoto)}>
+      <img src={assetPath(vehicle.image)} alt={vehicle.imagePlaceholder ? tx('Photo unavailable') : tx(`${displayMake(vehicle.make)} ${vehicle.model}`)} width={160} height={90} loading="lazy" {...stylex.props(s.image, vehicle.imagePlaceholder && s.placeholderImage)} />
       {vehicle.imagePlaceholder ? <span {...stylex.props(s.placeholderLabel)}>{tx('Photo unavailable')}</span> : null}
       {badge ? <span {...stylex.props(s.badge, green && s.greenBadge, s.comingBadge)}>{tx(badge)}</span> : null}
       {luxe && !badge ? <span {...stylex.props(s.photoTier)}><ShowroomBadge premium/></span> : null}
@@ -28,15 +30,15 @@ export default function MiniVehicleCard({vehicle, green = false, featured = fals
       <Heart size={19} strokeWidth={1.2} fill={saved ? 'currentColor' : '#fafafa'} />
     </button>
     <Link href={href} {...stylex.props(s.body)}>
-      <h3 {...stylex.props(s.title)}>{tx(vehicle.year)} {tx(vehicle.make)} {tx(vehicle.model)}</h3>
+      <h3 {...stylex.props(s.title)}>{tx(vehicle.year)} {tx(displayMake(vehicle.make))} {tx(vehicle.model)}</h3>
       <p {...stylex.props(s.price)}>{vehicle.priceOnRequest ? tx('Price on request') : <><CurrencyLabel size={11} />{tx(formatPrice(vehicle.price))}</>}</p>
-      {vehicle.monthly > 0 ? <p {...stylex.props(s.monthly)}><CurrencyLabel size={10} />{tx(formatPrice(vehicle.monthly))}{tx("/mo* est.")}</p> : null}
+      {hasPublishedMonthlyPayment(vehicle) ? <p {...stylex.props(s.monthly)}><CurrencyLabel size={10} />{tx(formatPrice(vehicle.monthly))}{tx("/mo* est.")}</p> : null}
     </Link>
     {error ? <p role="alert" {...stylex.props(s.error)}>{tx(error)}</p> : null}
   </article>;
 }
 const s = stylex.create({
-  card: {position: 'relative', flexShrink: 0, width: 192, alignSelf: 'start', overflow: 'hidden', borderColor: '#e3e3e3', borderStyle: 'solid', borderWidth: 1, borderRadius: 16, backgroundColor: '#fff', boxShadow: '0 3px 8px rgba(0,0,0,.06)'},
+  card: {position: 'relative', flexShrink: 0, width: 192, alignSelf: 'start', overflow: 'hidden', borderColor: $.surfaceBorder, borderStyle: 'solid', borderWidth: 1, borderRadius: 16, backgroundColor: $.surface, boxShadow: $.shadowSoft},
   featuredCard: {width: {[media.mobile]: 192, default: 210}},
   photo: {position: 'relative', display: 'block', height: 108, overflow: 'hidden'},
   featuredPhoto: {height: {[media.mobile]: 116, default: 126}},

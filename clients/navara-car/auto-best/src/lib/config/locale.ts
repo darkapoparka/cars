@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Varna",
     "addressLine": "Tsar Osvoboditel Blvd., Kaysieva Gradina",
     "address": "Tsar Osvoboditel Blvd., Kaysieva Gradina, Varna",
-    "appointment": "Visits by appointment."
+    "appointment": "Visits by appointment.",
+    "addressShort": "Tsar Osvoboditel Blvd., Kaysieva Gradina",
+    "appointmentShort": "Visits by appointment."
   },
   "bg": {
     "city": "Варна",
     "addressLine": "бул. „Цар Освободител“, Кайсиева градина",
     "address": "бул. „Цар Освободител“, Кайсиева градина, Варна",
-    "appointment": "Посещения с предварителна уговорка."
+    "appointment": "Посещения с предварителна уговорка.",
+    "addressShort": "бул. „Цар Освободител“, Кайсиева градина",
+    "appointmentShort": "Посещения с предварителна уговорка."
   }
 } as const;
 

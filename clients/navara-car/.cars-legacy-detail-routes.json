@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "dealer": "navara-car",
+  "family": "import",
+  "base": "/variant-3",
+  "defaultLocale": "bg",
+  "source": {
+    "inventory": {
+      "path": "carwow/src/lib/data/daynight-current-inventory.ts",
+      "sha256": "fbb5178c0f851fbdd7fdeb440d04658778a8c20b82f02e7d7910c6612d7e674b"
+    },
+    "vehicles": {
+      "path": "carwow/src/lib/data/daynight-vehicles.ts",
+      "sha256": "58507cc762f0d0763f6d521a86d8474729fd6cf112b7dd072170f350a2c11d84"
+    },
+    "routeFactorySha256": "094d5128ad5e689e41486a228b1de6d11c54efbe051ce0e75c0170709d8571c9"
+  },
+  "profileSha256": "2c9f5f990ee1817faee7d8fc3c780fe1a7ff7dd04356c0aea34cc54f1fc66c0e",
+  "entries": [
+    {
+      "sourceId": "11786363468065195",
+      "slug": "nissan-micra-1-0-065195",
+      "targetId": "11786363468065195"
+    },
+    {
+      "sourceId": "11782409246983224",
+      "slug": "vw-polo-1-6-983224",
+      "targetId": "11782409246983224"
+    },
+    {
+      "sourceId": "11787311216769974",
+      "slug": "tesla-model-3-769974",
+      "targetId": "11787311216769974"
+    },
+    {
+      "sourceId": "21780735125049477",
+      "slug": "nissan-qashqai-2-0i-049477",
+      "targetId": "21780735125049477"
+    },
+    {
+      "sourceId": "11787212062225914",
+      "slug": "peugeot-e-2008-allure-225914",
+      "targetId": "11787212062225914"
+    },
+    {
+      "sourceId": "21774534756506554",
+      "slug": "opel-mokka-1-4i-506554",
+      "targetId": "21774534756506554"
+    },
+    {
+      "sourceId": "11784982235652112",
+      "slug": "audi-a4-652112",
+      "targetId": "11784982235652112"
+    },
+    {
+      "sourceId": "11772183782578045",
+      "slug": "mercedes-benz-b-578045",
+      "targetId": "11772183782578045"
+    },
+    {
+      "sourceId": "11780755712824361",
+      "slug": "smart-fortwo-1-0i-824361",
+      "targetId": "11780755712824361"
+    }
+  ],
+  "retired": []
+}
