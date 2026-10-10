@@ -1,17 +1,19 @@
 {
   "schemaVersion": 1,
-  "request": "pilot-six-01",
+  "request": "remaining-nine-01",
   "sourceCandidateCommit": "0ee5393e7fb5feb2238d18518f2bbcf7112443cd",
+  "successfulPilotRun": 38070168949,
   "dealers": [
-    "dm-auto-varna"
+    "kolarov-cars",
+    "dynamic-auto-varna",
+    "car-point-trade-varna",
+    "pm-select-automotive",
+    "dream-drive-varna",
+    "prime-auto-varna",
+    "autoroad-varna",
+    "autofest-varna",
+    "city-cars-varna"
   ],
-  "families": [
-    "auto-best",
-    "modern",
-    "import",
-    "app",
-    "mobile",
-    "karento-best"
-  ],
+  "families": ["auto-best", "modern", "import", "app", "mobile", "karento-best"],
   "scope": "Framework compile and derived candidate assembly only; no publication, production access or release approval."
 }
