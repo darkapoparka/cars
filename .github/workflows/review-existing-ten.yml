@@ -7,7 +7,7 @@ permissions:
   contents: read
 concurrency:
   group: cars-existing-ten-source-review
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   review:
     if: github.repository == 'darkapoparka/cars' && github.ref == 'refs/heads/codex/cloudflare-existing25-20261011'
@@ -51,3 +51,18 @@ jobs:
           include-hidden-files: true
           retention-days: 7
           if-no-files-found: error
+  summary:
+    needs: review
+    if: always() && !cancelled()
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        with:
+          pattern: existing-ten-review-*-${{ github.run_id }}
+          path: reviews
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: existing-ten-all-reviews-${{ github.run_id }}
+          path: reviews
+          if-no-files-found: error
+          retention-days: 7
