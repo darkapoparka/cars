@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {selectedDealer,buildMatrix} from './build-existing-fleet-cloudflare.mjs';
+const day={slug:'day-and-night-auto-group',proposedRepository:'darkapoparka/day-and-night-autodeal'};
+test('mandatory Day and Night keeps its existing repository instead of creating a cars-prefixed replacement',()=>{assert.deepEqual(selectedDealer(day.slug,[day]),day);assert.equal(buildMatrix({schemaVersion:1,dealers:[day.slug]},[day]).include.length,7);});
+test('Day and Night repository exception cannot be used for another dealer',()=>{assert.throws(()=>selectedDealer('another-dealer',[{...day,slug:'another-dealer'}]),/Unregistered/);assert.throws(()=>selectedDealer(day.slug,[{...day,proposedRepository:'someone-else/day-and-night-autodeal'}]),/Unregistered/);});
+test('ordinary registered dealer identifiers stay strict',()=>{const d={slug:'navara-car',proposedRepository:'darkapoparka/cars-navaracar'};assert.deepEqual(selectedDealer(d.slug,[d]),d);assert.throws(()=>selectedDealer('unknown',[d]),/Unregistered/);});

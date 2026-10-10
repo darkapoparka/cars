@@ -34,7 +34,8 @@ const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const selection=()=>read(path.join(ROOT,'docs/releases/cloudflare-existing25-20261011/selection.json')).leads;
 export function selectedDealer(slug,leads=selection()) {
  const dealer=leads.find(d=>d.slug===slug);
- if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug||'')||!dealer||!/^darkapoparka\/cars-[a-z0-9]+$/.test(dealer.proposedRepository))throw Error('Unregistered Varna dealer');
+ const validRepository = dealer && (/^darkapoparka\/cars-[a-z0-9]+$/.test(dealer.proposedRepository) || (slug === 'day-and-night-auto-group' && dealer.proposedRepository === 'darkapoparka/day-and-night-autodeal'));
+ if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug||'')||!validRepository)throw Error('Unregistered existing dealer');
  return dealer;
 }
 export function buildMatrix(request,leads=selection()) {

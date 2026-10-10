@@ -1,10 +1,46 @@
 {
   "schemaVersion": 1,
-  "scope": "Existing 25-dealer cohort; first Cloudflare pilot only. New Varna cohort remains separate.",
+  "scope": "Existing selected ten; Day and Night mandatory; existing repositories retained",
   "leads": [
+    {
+      "slug": "navara-car",
+      "proposedRepository": "darkapoparka/cars-navaracar"
+    },
+    {
+      "slug": "day-and-night-auto-group",
+      "proposedRepository": "darkapoparka/day-and-night-autodeal"
+    },
     {
       "slug": "promosale-varna",
       "proposedRepository": "darkapoparka/cars-promosalevarna"
+    },
+    {
+      "slug": "priselci",
+      "proposedRepository": "darkapoparka/cars-priselci"
+    },
+    {
+      "slug": "isauto-varna",
+      "proposedRepository": "darkapoparka/cars-isautovarna"
+    },
+    {
+      "slug": "automarket-varna",
+      "proposedRepository": "darkapoparka/cars-automarketvarna"
+    },
+    {
+      "slug": "outletcars-varna",
+      "proposedRepository": "darkapoparka/cars-outletcarsvarna"
+    },
+    {
+      "slug": "perfect-auto-varna",
+      "proposedRepository": "darkapoparka/cars-perfectauto"
+    },
+    {
+      "slug": "avangard-auto",
+      "proposedRepository": "darkapoparka/cars-avangardauto"
+    },
+    {
+      "slug": "legend-auto",
+      "proposedRepository": "darkapoparka/cars-legendauto"
     }
   ]
 }

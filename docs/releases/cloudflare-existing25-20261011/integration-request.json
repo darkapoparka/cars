@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "request": "exact-source-nine-integration-v1",
+  "sources": [
+    {
+      "dealer": "navara-car",
+      "run": 38094097346
+    },
+    {
+      "dealer": "day-and-night-auto-group",
+      "run": 38093790826
+    },
+    {
+      "dealer": "priselci",
+      "run": 38093790826
+    },
+    {
+      "dealer": "isauto-varna",
+      "run": 38093790826
+    },
+    {
+      "dealer": "automarket-varna",
+      "run": 38093790826
+    },
+    {
+      "dealer": "outletcars-varna",
+      "run": 38094169958
+    },
+    {
+      "dealer": "perfect-auto-varna",
+      "run": 38093790826
+    },
+    {
+      "dealer": "avangard-auto",
+      "run": 38093790826
+    },
+    {
+      "dealer": "legend-auto",
+      "run": 38093790826
+    }
+  ],
+  "scope": "Publish reviewed source only to the isolated release branch. No canonical main, Cloudflare, billing, Vercel, DNS or outreach writes.",
+  "sourceTransport": "GitHub artifacts remain on ephemeral GitHub runners; no repeated large source copy on owner PC"
+}

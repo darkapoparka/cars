@@ -1,0 +1,102 @@
+name: Integrate reviewed existing dealer source
+on:
+  push:
+    branches: [codex/cloudflare-existing25-20261011]
+    paths: [docs/releases/cloudflare-existing25-20261011/integration-request.json]
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: cars-existing-ten-source-integration
+  cancel-in-progress: false
+jobs:
+  integrate:
+    if: github.repository == 'darkapoparka/cars' && github.ref == 'refs/heads/codex/cloudflare-existing25-20261011'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: true
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/integrate-existing-candidates.mjs
+            /docs/releases/cloudflare-existing25-20261011/wave-selection.json
+            /docs/releases/cloudflare-existing25-20261011/approved-inputs.json
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '22.23.2'
+          package-manager-cache: false
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        with:
+          repository: darkapoparka/cars
+          run-id: 38094097346
+          github-token: ${{ github.token }}
+          name: existing-ten-candidate-navara-car-38094097346
+          path: input/navara-car
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        with:
+          repository: darkapoparka/cars
+          run-id: 38093790826
+          github-token: ${{ github.token }}
+          name: existing-ten-candidate-day-and-night-auto-group-38093790826
+          path: input/day-and-night-auto-group
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        with:
+          repository: darkapoparka/cars
+          run-id: 38093790826
+          github-token: ${{ github.token }}
+          name: existing-ten-candidate-priselci-38093790826
+          path: input/priselci
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        with:
+          repository: darkapoparka/cars
+          run-id: 38093790826
+          github-token: ${{ github.token }}
+          name: existing-ten-candidate-isauto-varna-38093790826
+          path: input/isauto-varna
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        with:
+          repository: darkapoparka/cars
+          run-id: 38093790826
+          github-token: ${{ github.token }}
+          name: existing-ten-candidate-automarket-varna-38093790826
+          path: input/automarket-varna
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        with:
+          repository: darkapoparka/cars
+          run-id: 38094169958
+          github-token: ${{ github.token }}
+          name: existing-ten-candidate-outletcars-varna-38094169958
+          path: input/outletcars-varna
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        with:
+          repository: darkapoparka/cars
+          run-id: 38093790826
+          github-token: ${{ github.token }}
+          name: existing-ten-candidate-perfect-auto-varna-38093790826
+          path: input/perfect-auto-varna
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        with:
+          repository: darkapoparka/cars
+          run-id: 38093790826
+          github-token: ${{ github.token }}
+          name: existing-ten-candidate-avangard-auto-38093790826
+          path: input/avangard-auto
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        with:
+          repository: darkapoparka/cars
+          run-id: 38093790826
+          github-token: ${{ github.token }}
+          name: existing-ten-candidate-legend-auto-38093790826
+          path: input/legend-auto
+      - name: Verify all original receipts and integrate only the named source trees
+        run: node scripts/integrate-existing-candidates.mjs
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: existing-ten-integration-${{ github.run_id }}
+          path: runtime/integration/*.json
+          if-no-files-found: error
+          retention-days: 7
