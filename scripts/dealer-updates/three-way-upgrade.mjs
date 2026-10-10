@@ -180,12 +180,20 @@ function gitMerge(pathname, dealerBytes, baseBytes, templateBytes, tempRoot) {
     fs.writeFileSync(dealer, normalizedText(dealerBytes));
     fs.writeFileSync(base, normalizedText(baseBytes));
     fs.writeFileSync(template, normalizedText(templateBytes));
-    const result = spawnSync('git', [
-      'merge-file', '-p', '-L', 'dealer', '-L', 'old-template', '-L', 'new-template',
-      dealer, base, template
-    ], { encoding: null, maxBuffer: 16 * 1024 * 1024, windowsHide: true });
-    if (result.error) throw result.error;
-    const output = Buffer.from(result.stdout || []);
+    // Large generated catalogs/SVGs can exceed spawnSync's stdout buffer.
+    // Keep the complete merge output on this owned temporary file; never truncate
+    // actual candidate bytes or turn a merge conflict into an accepted result.
+    const outputFile = path.join(files, 'merged');
+    const descriptor = fs.openSync(outputFile, 'wx');
+    let result;
+    try {
+      result = spawnSync('git', [
+        'merge-file', '-p', '-L', 'dealer', '-L', 'old-template', '-L', 'new-template',
+        dealer, base, template
+      ], { encoding: null, stdio: ['ignore', descriptor, 'pipe'], maxBuffer: 1024 * 1024, windowsHide: true });
+    } finally { fs.closeSync(descriptor); }
+    if (result.error) throw new Error('git merge-file failed for ' + pathname + ': ' + result.error.message);
+    const output = fs.readFileSync(outputFile);
     if (result.status === 0) return { clean: true, bytes: output };
     const preview = output.toString('utf8');
     const hasConflictMarkers = /^<<<<<<< .+\r?$/m.test(preview) && /^>>>>>>> .+\r?$/m.test(preview);
@@ -515,6 +523,20 @@ export function unifiedDiff(beforeBytes, afterBytes, labels = ['dealer', 'candid
   diffCache.set(key,result);return result;
 }
 function computeUnifiedDiff(beforeBytes, afterBytes, labels) {
+  const beforeContent = beforeBytes ?? Buffer.alloc(0), afterContent = afterBytes ?? Buffer.alloc(0);
+  if (beforeContent.equals(afterContent)) return '';
+  // Review text is informational: conflict decisions and complete source bytes
+  // remain unchanged. Avoid a Git process and duplicate temp assets for images.
+  if (tryUtf8(beforeContent) === null || tryUtf8(afterContent) === null) {
+    return 'Binary files ' + labels[0] + ' and ' + labels[1] + ' differ\n';
+  }
+  // Bound only the displayed patch. Exact before/after hashes and the complete
+  // immutable source/candidate remain available for explicit large-file review.
+  if (beforeContent.length + afterContent.length > 4 * 1024 * 1024) {
+    return 'Large text patch omitted from review display (full source retained).\n'
+      + labels[0] + ': ' + beforeContent.length + ' bytes; sha256=' + sha256(beforeContent) + '\n'
+      + labels[1] + ': ' + afterContent.length + ' bytes; sha256=' + sha256(afterContent) + '\n';
+  }
   const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'cars-upgrade-diff-'));
   try {
     const before = path.join(temp, 'before');
