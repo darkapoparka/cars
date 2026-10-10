@@ -1,8 +1,0 @@
-@media (min-width: 1024px) {
-  .financePanel {
-    overflow: visible;
-  }
-  .financePanel [data-slot="lease-vehicle-selector"] {
-    margin-top: 0;
-  }
-}

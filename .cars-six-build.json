@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "packagingVersion": "5",
+  "dealer": "motherwell-motors-castle",
+  "transformation": "six-design-cloudflare-v1",
+  "signature": {
+    "provider": "cloudflare",
+    "adapterReceipt": ".cars-cloudflare-svelte.json",
+    "buildVerified": false
+  },
+  "families": {
+    "app": {
+      "base": "/variant-4",
+      "digest": "2cff1e13a8a3c749b9613b3f0ba5814bc37612f43dd15993893ae7bf49f5dc7c"
+    },
+    "mobile": {
+      "base": "/variant-5",
+      "digest": "7c14a22c2c5363a259b8c310b7b951832f2433d1f931bb2cb53b60f788dde7e7"
+    },
+    "karento-best": {
+      "base": "/variant-6",
+      "digest": "3a6a24edadf934728d343175243976e6bc4f04d1f6d531e97e5deab4e04925c7"
+    }
+  },
+  "sourceReceipts": {
+    ".cars-app.json": "3f49124c504d7e43babe0cf4a186b2e79953f862e2143ce125cc5a1735745f6e",
+    ".cars-mobile.json": "aeb5082954cb9fddd783ea44559650b5aabbbf161b1fcef8486a8da0662aba87",
+    ".cars-signature.json": "d89d1ac5cb15fe1efaaea667d7d94c68f78ceefd45c66346956e4fd572224b9d"
+  }
+}

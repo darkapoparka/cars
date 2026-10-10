@@ -1,9 +1,0 @@
-{
-  "$schema": "https://turborepo.com/schema.json",
-  "extends": ["//"],
-  "tasks": {
-    "e2e": {
-      "env": ["CAPTURE_*", "E2E_*"]
-    }
-  }
-}
