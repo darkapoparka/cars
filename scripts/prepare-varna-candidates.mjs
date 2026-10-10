@@ -160,7 +160,7 @@ export async function prepareBatch({selection='all',attempt,base}){
  const reportHash=git(ROOT,['hash-object','-w','--stdin'],{input:encode(report)});
  git(ROOT,['-c','core.sparseCheckout=false','update-index','-z','--index-info'],{env,input:Buffer.from('100644 '+reportHash+'\t'+reportName+'\0')});
  const tree=git(ROOT,['write-tree'],{env});
- const changed=git(ROOT,['diff-tree','--no-commit-id','--name-only','-r','--no-renames',base,tree]).split('\n').filter(Boolean);
+ const changed=git(ROOT,['diff-tree','--no-commit-id','--name-only','-r','--no-renames','-z',base,tree],{encoding:null}).toString('utf8').split('\0').filter(Boolean);
  if(changed.some(name=>name!==reportName&&!report.dealers.some(d=>name.startsWith('clients/'+d.slug+'/'))))throw Error('Candidate tree changed an out-of-scope path');
  const commit=git(ROOT,['commit-tree',tree,'-p',base],{input:'feat(varna): personalize '+report.dealers.length+' six-template source candidates\n\nExact committed sources; original assets retained; native release and hosted QA remain pending.\n'});
  const ref='refs/cars-candidates/varna/'+attempt;git(ROOT,['update-ref',ref,commit,'0'.repeat(40)]);
