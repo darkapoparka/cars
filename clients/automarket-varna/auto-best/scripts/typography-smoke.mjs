@@ -77,7 +77,7 @@ try {
           assert.equal((await typeOf(page.locator('.dn-quick-search__mobile-footer button'))).size,18);
           await readable(page,`${width}-home-filters`);
           await page.keyboard.press('Escape');
-          await page.goto(`${base}/listing-grid`,{waitUntil:'networkidle'});
+          await page.goto(`${base}/cars`,{waitUntil:'networkidle'});
           await page.locator('[aria-controls="dn-listing-filter-dialog"]:visible').first().click();
           assert.equal((await typeOf(page.locator('.dn-listing-filter__dialog-submit'))).size,18);
           await readable(page,`${width}-inventory-filters`);
@@ -135,11 +135,11 @@ try {
           const [navBox, actionBox] = await Promise.all([page.locator('.dn-mobile-bottom-nav').boundingBox(), action.boundingBox()]);
           assert(actionBox && navBox && actionBox.y >= 0 && actionBox.y + actionBox.height <= navBox.y + 1);
           assert.equal(await page.locator('.dn-service-process li').count(), 3);
-          const bannerCall = page.locator('.dn-service-banner a');
-          await bannerCall.scrollIntoViewIfNeeded();
-          const callBox = await bannerCall.boundingBox();
-          assert(callBox.y >= 0 && callBox.y + callBox.height <= navBox.y + 1);
-          assert.match(await bannerCall.getAttribute('href'), /^tel:/);
+          const guide = page.locator('.dn-service-guide button[aria-haspopup=dialog]');
+          await guide.scrollIntoViewIfNeeded();
+          const guideBox = await guide.boundingBox();
+          assert(guideBox.y >= 0 && guideBox.y + guideBox.height <= navBox.y + 1);
+          assert.equal(await guide.getAttribute('aria-haspopup'), 'dialog');
 
         }
       } finally { await page.close(); }

@@ -5,10 +5,10 @@ import { createHash } from 'node:crypto';
 import { launchBrowser, previewUrl } from './browser.mjs';
 const base = previewUrl();
 const root = path.resolve(import.meta.dirname, '..');
-const output = path.resolve(root, process.env.ARTIFACT_DIR || 'artifacts/localization/mobile-copy-browser');
+const output = path.resolve(root, process.env.LOCALE_QA_OUT || process.env.ARTIFACT_DIR || 'artifacts/localization/mobile-copy-browser');
 assert.ok(output.startsWith(root + path.sep), 'Evidence must remain in this checkout');
 fs.mkdirSync(output, { recursive: true });
-const sources = ['src/lib/locale/catalog.ts', 'src/lib/components/home/SearchBox.svelte', 'src/lib/components/company/ServiceLanding.svelte', 'src/lib/components/company/ServiceCallBanner.svelte', 'src/lib/components/company/VehicleEnquiry.svelte', 'src/lib/styles/tokens.css'];
+const sources = ['src/lib/locale/catalog.ts', 'src/lib/components/home/SearchBox.svelte', 'src/lib/components/company/ServiceLanding.svelte', 'src/lib/components/company/ServiceEntryField.svelte', 'src/lib/components/company/VehicleEnquiry.svelte', 'src/lib/styles/tokens.css'];
 const hashes = () => Object.fromEntries(sources.map(p => [p, createHash('sha256').update(fs.readFileSync(path.join(root, p))).digest('hex')]));
 const before = hashes();
 const results = [];
@@ -43,7 +43,7 @@ try {
     });
     await page.context().addCookies([{ name: 'cars_locale', value: locale, url: base }, { name: 'cars_prompt', value: 'v1', url: base }]);
     try {
-      const expected = locale === 'bg' ? ['Внос', 'Заяви внос', 'Обади се'] : ['Import', 'Request import', 'Call'];
+      const expected = locale === 'bg' ? ['Внос', 'Заяви внос'] : ['Import', 'Request import'];
       assert.equal((await page.goto(`${base}/${locale}/`, { waitUntil: 'networkidle' })).status(), 200);
       await page.evaluate(() => document.fonts.ready);
       await page.locator('#home-import-tab').click();
@@ -51,14 +51,13 @@ try {
       assert.equal((await page.goto(`${base}/${locale}/contact?topic=import`, { waitUntil: 'networkidle' })).status(), 200);
       await page.evaluate(() => document.fonts.ready);
       labels.push(await labelFit(page.locator('.dn-service-entry__submit:visible'), expected[1]));
-      const banner = page.locator('.dn-service-banner');
-      const call = banner.locator('a');
-      labels.push(await labelFit(call, expected[2]));
+      // The current template uses an entry card and guide, not the retired photo banner.
+      const call = page.locator('a[href^="tel:"]:visible').first();
       assert.match(await call.getAttribute('href'), /^tel:/);
+      assert.ok(await call.getAttribute('aria-label'), 'The icon-only call action needs a localized accessible name');
       assert.equal(await page.locator('.dn-service-faq').isVisible(), false);
-      await banner.scrollIntoViewIfNeeded();
-      await banner.locator('img').evaluate(image => image.decode());
-      await page.screenshot({ path: path.join(output, `${locale}-${width}-import-banner.png`) });
+      assert.equal(await page.locator('.dn-service-guide').isVisible(), true);
+      await page.screenshot({ path: path.join(output, `${locale}-${width}-import-entry.png`) });
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
       assert.equal(await page.locator('html').getAttribute('lang'), locale);
       assert.deepEqual(errors, []);
@@ -71,6 +70,6 @@ try {
   await browser.close();
   const after = hashes();
   const stable = JSON.stringify(before) === JSON.stringify(after);
-  fs.writeFileSync(path.join(output, 'report.json'), JSON.stringify({ at: new Date().toISOString(), base, scope: 'Native mobile EN/BG import labels, one-line text fit, photo banner telephone action and disabled writes; not full localization release acceptance', sourceBefore: before, sourceAfter: after, stable, results }, null, 2) + '\n');
+  fs.writeFileSync(path.join(output, 'report.json'), JSON.stringify({ at: new Date().toISOString(), base, scope: 'Native mobile EN/BG import labels, one-line text fit, current entry/guide and accessible telephone action and disabled writes; not full localization release acceptance', sourceBefore: before, sourceAfter: after, stable, results }, null, 2) + '\n');
   if (!stable || results.some(r => !r.pass)) process.exitCode = 1;
 }

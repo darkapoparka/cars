@@ -1,0 +1,44 @@
+{
+	"reference": "http://127.0.0.1:6464/bg/services",
+	"description": "Existing reference artwork copied byte for byte from the Cars Carwow master. Illustrative campaign and service imagery; no claims of actual inventory, staff or premises. Original donor source and images are unchanged. Mobile imagery is unchanged. About and Contact use the existing shared side-profile hero artwork, also used by the reference project.",
+	"date": "2026-10-02",
+	"sourceCommit": "6998a7ce8092b99422cdb9cccc0b18449ff2f541",
+	"assets": [
+		{
+			"source": "templates/carwow/static/assets/images/home-promos/gclass-urus-pair-v4.webp",
+			"destination": "static/assets/daynight/services/desktop/sourcing-reference-v4.webp",
+			"sha256": "8058b8f6443e4e1c4c2e7eae31884e662bbdfe4541f3240547d8897e459517ab",
+			"key": "sourcing"
+		},
+		{
+			"source": "templates/carwow/static/assets/images/services/service-card-inspection-daynight-v2.webp",
+			"destination": "static/assets/daynight/services/desktop/inspection-reference-v4.webp",
+			"sha256": "3a21f0a22993c22c6452b4cadb298b6dd27f9d6481abc8bd3838873d8361618d",
+			"key": "inspection"
+		},
+		{
+			"source": "templates/carwow/static/assets/images/services/service-card-trade-in-daynight-v2.webp",
+			"destination": "static/assets/daynight/services/desktop/selling-reference-v4.webp",
+			"sha256": "e7d3cc7a987b860034bbe81b2a430bf6ec510a965c2a14c028a0c3192a7c22e5",
+			"key": "selling"
+		},
+		{
+			"source": "templates/carwow/static/assets/images/services/service-card-documents-daynight-v2.webp",
+			"destination": "static/assets/daynight/services/desktop/documents-reference-v4.webp",
+			"sha256": "512bca07e2407d2758433a91f66a2f22e559ad12558337c64a3085d6085412f8",
+			"key": "documents"
+		},
+		{
+			"source": "templates/carwow/static/assets/images/home-promos/campaign-viewing-v4.webp",
+			"destination": "static/assets/daynight/services/desktop/viewing-reference-v4.webp",
+			"sha256": "b7b3cb7ce6100552adee349b7fd88400d778346065f26434b3ac22242d339c20",
+			"key": "viewing"
+		},
+		{
+			"source": "templates/carwow/static/assets/images/services/service-card-sourcing-daynight-v2.webp",
+			"destination": "static/assets/daynight/services/desktop/comparison-reference-v4.webp",
+			"sha256": "d551c07929c473e2aa0233d6d7719a25e087140c2a6aaeb6a8276d2874bef7fd",
+			"key": "comparison"
+		}
+	]
+}

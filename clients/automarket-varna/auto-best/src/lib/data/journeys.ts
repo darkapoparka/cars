@@ -13,13 +13,15 @@ export function vehicleContactHref(id: number, topic: 'inspection' | 'leasing' =
 }
 
 /** Return links are confined to their own list, including its filters and anchor. */
-export function listReturn(value: string | null, list: '/listing-grid' | '/blog'): string {
+export function listReturn(value: string | null, list: '/cars' | '/blog'): string {
   if (!value || /[\\\u0000-\u001f]/.test(value)) return list;
   try {
     const url = new URL(value, 'https://template.invalid');
     const parts = routeParts(url.pathname);
-    return value.startsWith('/') && url.origin === 'https://template.invalid' && !parts.base && parts.path === list
-      ? `${url.pathname}${url.search}${url.hash}` : list;
+    const legacyInventory = list === '/cars' && parts.path === '/listing-grid';
+    if (!value.startsWith('/') || url.origin !== 'https://template.invalid' || parts.base || (parts.path !== list && !legacyInventory)) return list;
+    if (legacyInventory) url.pathname = url.pathname.slice(0, -parts.path.length) + '/cars';
+    return `${url.pathname}${url.search}${url.hash}`;
   } catch { return list; }
 }
 

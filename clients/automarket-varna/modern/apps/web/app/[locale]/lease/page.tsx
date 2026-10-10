@@ -40,7 +40,6 @@ const leadingYearPattern = /^\d{4}\s+/;
 const pageCopy = {
   bg: {
     badge: `Финансиране от ${leadSite.shortName}`,
-    formTitle: "Условия на лизинга",
     faqTitle: "Често задавани въпроси",
     faqs: [
       {
@@ -67,7 +66,6 @@ const pageCopy = {
   },
   en: {
     badge: `Financing from ${leadSite.shortName}`,
-    formTitle: "Financing preferences",
     faqTitle: "Frequently asked questions",
     faqs: [
       {
@@ -144,6 +142,7 @@ export default async function LeasePage({
     mileageLabel: formatMileage(listing.spec.mileageValue, normalizedLocale),
     ...(listing.monthlyEstimate
       ? {
+          monthlyEstimate: listing.monthlyEstimate,
           monthlyLabel: `${formatMoney(
             listing.monthlyEstimate,
             normalizedLocale
@@ -174,6 +173,7 @@ export default async function LeasePage({
     >
       <main className="lg:min-h-[38rem]">
         <DealerDesktopHero
+          locale={normalizedLocale}
           title={
             normalizedLocale === "bg"
               ? "Финансиране на автомобил"
@@ -207,7 +207,6 @@ export default async function LeasePage({
                   )}
                   <LeaseVehicleSelector
                     contactHref={localize("/contact")}
-                    desktopTitle={copy.formTitle}
                     faqs={copy.faqs}
                     key={initialVehicleId}
                     locale={normalizedLocale}
