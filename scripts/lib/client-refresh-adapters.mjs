@@ -1,5 +1,5 @@
 import { ensureImportMenuKeys } from './import-menu-keys.mjs';
-import { UK_MODERN_PATHS, personalizeModernUk, ukSourceMileage } from './client-refresh-uk-next.mjs';
+import { UK_MODERN_PATHS, personalizeModernUk, modernUkTransmission, ukSourceMileage } from './client-refresh-uk-next.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { applyDealerLogoContract } from './client-logo-contract.mjs';
@@ -622,7 +622,7 @@ function modernListing(item, index, id, profile) {
   }
   const fuel = ['gasoline', 'diesel', 'hybrid', 'plug_in_hybrid', 'electric', 'lpg', 'cng'].includes(item.fuelType)
     ? item.fuelType : 'other';
-  const transmission = item.transmissionType === 'manual' ? 'manual' :
+  const transmission = uk ? modernUkTransmission(item) : item.transmissionType === 'manual' ? 'manual' :
     item.transmissionType === 'automatic' ? 'automatic' : 'semi_automatic';
   const body = ['hatchback', 'sedan', 'wagon', 'suv', 'coupe', 'convertible', 'pickup', 'van', 'minibus', 'motorcycle', 'scooter', 'truck'].includes(item.bodyType)
     ? item.bodyType : 'other';

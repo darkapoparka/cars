@@ -1,0 +1,62 @@
+name: Repair UK Modern unpublished transmission
+on:
+  workflow_dispatch:
+    inputs:
+      dealer:
+        description: Apply the reviewed factual correction to the original Broadbent six-design source
+        required: true
+        type: choice
+        default: stockport-broadbent-car-and-servicing
+        options:
+          - stockport-broadbent-car-and-servicing
+permissions:
+  contents: read
+concurrency:
+  group: cars-uk-dealer-source-creation
+  cancel-in-progress: false
+jobs:
+  repair:
+    if: github.repository == 'darkapoparka/cars' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    permissions:
+      contents: write
+    steps:
+      - name: Check out the exact source and reviewed repair implementation
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: true
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /AGENTS.md
+            /.gitignore
+            /.gitattributes
+            /package.json
+            /package-lock.json
+            /templates.lock.json
+            /catalog.json
+            /workspace.json
+            /scripts/
+            /.github/workflows/
+            /docs/
+            /leads/uk-2026-10-10-build-manifest.json
+            /leads/uk-2026-10-10-briefs/
+            /clients/stockport-broadbent-car-and-servicing/
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '22.23.2'
+      - name: Verify all six sources, repair the unknown fact, reseal and push scoped source
+        env:
+          UK_DEALER_SLUG: ${{ inputs.dealer }}
+        run: node scripts/repair-uk-modern-transmission.mjs "$UK_DEALER_SLUG"
+      - name: Retain actual source verification and commit evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: uk-modern-transmission-repair-${{ github.run_id }}-${{ github.run_attempt }}
+          path: runtime/uk-modern-transmission-repair/${{ github.run_id }}-${{ github.run_attempt }}/
+          if-no-files-found: warn
+          include-hidden-files: true
+          retention-days: 7

@@ -91,6 +91,103 @@ function transaction(files, profile, run) {
   return changed;
 }
 
+
+export const UK_MODERN_TRANSMISSION_PATHS = Object.freeze([
+  'packages/marketplace-domain/types.ts',
+  'packages/marketplace-domain/taxonomy.ts',
+  'packages/marketplace-domain/testing/mock-data.ts',
+  'packages/marketplace/format.ts',
+  'packages/marketplace/filters.ts',
+  'packages/marketplace-ui/lib/marketplace-filter-config.ts',
+  'packages/marketplace-ui/lib/vehicle-card-policy.ts',
+  'packages/marketplace-ui/components/listing-specs.tsx',
+  'packages/marketplace-ui/components/marketplace-filter-options.tsx',
+  'apps/web/app/[locale]/imports/components/external-import-listings.tsx',
+  'apps/app/app/(authenticated)/sell/components/listing-form.tsx'
+]);
+
+export const modernUkTransmission = item =>
+  ['manual', 'automatic', 'semi_automatic'].includes(item.transmissionType)
+    ? item.transmissionType : 'unknown';
+
+function modernTransmissionContracts({patch}) {
+  const bg = 'Не е посочена';
+  patch('packages/marketplace-domain/types.ts',
+    'export type Transmission = "automatic" | "manual" | "semi_automatic";',
+    'export type Transmission = "automatic" | "manual" | "semi_automatic" | "unknown";');
+  for (const name of ['packages/marketplace-domain/taxonomy.ts',
+    'packages/marketplace-ui/lib/marketplace-filter-config.ts']) {
+    patch(name, '  "semi_automatic",\n', '  "semi_automatic",\n  "unknown",\n');
+  }
+  patch('packages/marketplace/format.ts',
+    '  semi_automatic: "Semi-auto",', '  semi_automatic: "Semi-auto",\n  unknown: "Not published",');
+  patch('packages/marketplace/format.ts',
+    '  semi_automatic: "Полуавтоматична",', '  semi_automatic: "Полуавтоматична",\n  unknown: "' + bg + '",');
+  patch('packages/marketplace/filters.ts',
+    '    semi_automatic: "Semi-auto",', '    semi_automatic: "Semi-auto",\n    unknown: "Not published",');
+  patch('packages/marketplace-ui/lib/marketplace-filter-config.ts',
+    '  semi_automatic: "Полуавтоматик",', '  semi_automatic: "Полуавтоматик",\n  unknown: "' + bg + '",');
+  for (const name of ['packages/marketplace-ui/lib/vehicle-card-policy.ts',
+    'packages/marketplace-ui/components/listing-specs.tsx']) {
+    patch(name, '  semi_automatic: { bg: "Полуавтоматик", en: "Semi-auto" },',
+      '  semi_automatic: { bg: "Полуавтоматик", en: "Semi-auto" },\n  unknown: { bg: "' + bg + '", en: "Not published" },');
+  }
+  patch('packages/marketplace-ui/components/marketplace-filter-options.tsx',
+    '          ["semi_automatic", copy.options.semiAutomatic],',
+    '          ["semi_automatic", copy.options.semiAutomatic],\n          ["unknown", isBulgarianMarketplaceLocale(locale) ? "' + bg + '" : "Not published"],');
+  patch('apps/web/app/[locale]/imports/components/external-import-listings.tsx',
+    '    semi_automatic: "Полуавтоматик",', '    semi_automatic: "Полуавтоматик",\n    unknown: "' + bg + '",');
+  patch('apps/app/app/(authenticated)/sell/components/listing-form.tsx',
+    '  semi_automatic: "Полуавтоматична",', '  semi_automatic: "Полуавтоматична",\n  unknown: "' + bg + '",');
+}
+
+/**
+ * Repair only an already-personalized GB Modern source map. Contracts and the
+ * canonical JSON inventory must match the reviewed old adapter before any write.
+ * Caller owns the all-family integrity checks and genuine adoption reseal.
+ */
+export function repairModernUkTransmission(files, profile) {
+  if (!isUk(profile)) throw new Error('Modern transmission repair requires a GB miles profile');
+  return transaction(files, profile, api => {
+    modernTransmissionContracts(api);
+    const name = 'packages/marketplace-domain/testing/mock-data.ts';
+    const source = api.get(name);
+    const matches = [...source.matchAll(/^export const mockListings: VehicleListing\[\] = (\[\n[\s\S]*?\n\]);$/gm)];
+    if (matches.length !== 1) throw new Error('Modern transmission repair requires one reviewed JSON inventory boundary');
+    const match = matches[0], stock = JSON.parse(match[1]);
+    const slotIds = ['am-1001', 'am-1010', 'am-1011', 'am-1012', 'am-1013', 'am-1014',
+      'am-1002', 'am-1003', 'am-1004', 'am-1005', 'am-1006', 'am-1007', 'am-1008', 'am-1009'];
+    if (!Array.isArray(stock) || JSON.stringify(stock, null, 2) !== match[1] ||
+        JSON.stringify(stock.map(item => item.id)) !== JSON.stringify(slotIds) ||
+        !profile.listings.length || profile.listings.length > slotIds.length) {
+      throw new Error('Modern transmission repair inventory shape changed');
+    }
+    const facts = new Map(profile.listings.map(item => [item.slug, item]));
+    if (facts.size !== profile.listings.length || facts.has(undefined) || facts.has('')) {
+      throw new Error('Modern transmission repair requires unique factual stock slugs');
+    }
+    let repaired = 0;
+    for (const [index, item] of stock.entries()) {
+      const fact = profile.listings[index % profile.listings.length];
+      if (!fact || item.slug !== fact.slug || item.title !== fact.title ||
+          item.spec?.make !== fact.make || item.spec.model !== fact.model ||
+          item.spec.year !== fact.year || item.price?.amount !== fact.priceAmount ||
+          item.price.currency !== fact.currency) throw new Error('Modern transmission repair factual inventory mismatch: ' + item.slug);
+      const expected = modernUkTransmission(fact);
+      const previous = expected === 'unknown' ? 'semi_automatic' : expected;
+      if (item.spec.transmission !== previous) {
+        throw new Error('Modern transmission repair found an unexpected transmission: ' + item.slug);
+      }
+      if (expected === 'unknown') {
+        item.spec.transmission = expected;
+        repaired++;
+      }
+    }
+    if (!repaired) throw new Error('No unpublished Modern transmission requires this repair');
+    api.patch(name, match[1], JSON.stringify(stock, null, 2));
+  });
+}
+
 const modernDisplayPaths = [
   'packages/marketplace-ui/components/listing-specs.tsx',
   'packages/marketplace-ui/components/mobile-inventory-search.tsx',
@@ -118,11 +215,14 @@ export const UK_MODERN_PATHS = [
   'apps/web/app/[locale]/lease/lease-finance-policy.ts',
   'apps/web/app/[locale]/contact/actions/contact.tsx',
   'apps/web/app/[locale]/contact/sell-contact-handoff.tsx',
-  'apps/web/app/[locale]/sell/page.tsx', ...modernDisplayPaths, ...modernRangePaths
+  'apps/web/app/[locale]/sell/page.tsx', ...modernDisplayPaths, ...modernRangePaths,
+  'apps/web/app/[locale]/imports/components/external-import-listings.tsx',
+  'apps/app/app/(authenticated)/sell/components/listing-form.tsx'
 ];
 
 export function personalizeModernUk(files, profile) {
   return transaction(files, profile, ({patch, use, put}) => {
+    modernTransmissionContracts({patch});
     patch('packages/marketplace-domain/site-config.ts', 'z.enum(["AED", "BGN", "EUR", "USD"])', 'z.enum(["AED", "BGN", "EUR", "GBP", "USD"])');
     patch('packages/marketplace-domain/types.ts', 'export type PriceCurrency = "BGN" | "EUR";', 'export type PriceCurrency = "BGN" | "EUR" | "GBP";');
     patch('packages/marketplace-domain/types.ts', '  mileageUnit: "km";', '  mileageUnit: "km";\n  mileageSourceValue?: number;\n  mileageSourceUnit?: "km" | "mi";');

@@ -145,6 +145,10 @@ async function qualifiedLocks(area,batch,runIds) {
   return evidence;
 }
 
+export function assertShareToolVersions(sharp,ts) {
+  if (sharp.versions?.sharp!=='0.35.5'||ts.version!=='6.0.3') throw Error('Actual share rendering tools differ from the retained source lock.');
+}
+
 async function installShareTooling(area,batch,dealer) {
   if (process.version!=='v26.10.0') throw Error('Share tooling uses the exact approved Signature Node 26.10.0.');
   const tooling=path.join(area,'share-tooling');fs.mkdirSync(tooling);
@@ -158,7 +162,7 @@ async function installShareTooling(area,batch,dealer) {
   stage(area,'share-tooling-install',process.execPath,[npm,'ci','--include=dev','--ignore-scripts','--cache',path.join(area,'npm-cache')],tooling,
     {PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD:'1',GH_TOKEN:''});
   const require=createRequire(path.join(tooling,'package.json')), sharp=require('sharp'), ts=require('typescript');
-  if (require('sharp/package.json').version!=='0.35.5'||ts.version!=='6.0.3') throw Error('Actual share rendering tools differ from the retained source lock.');
+  assertShareToolVersions(sharp,ts);
   const icon=await sharp(fs.readFileSync(path.join(ROOT,dealer.brief,dealer.appIcon))).metadata();
   if (icon.format!=='png'||!icon.width||icon.width!==icon.height) throw Error('Share renderer did not decode the supplied square icon.');
   const receipt={schemaVersion:1,source,inputs,node:process.version,sharp:'0.35.5',typescript:ts.version,

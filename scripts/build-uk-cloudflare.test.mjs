@@ -7,7 +7,7 @@ import { spawnSync } from 'node:child_process';
 import { sha256, normalized } from './lib/workflow.mjs';
 import { UK_FAMILY_NODES,parseQualificationRuns,validateFileInventory,verifyInventoryBytes,
   validateQualification,artifactInventory,verifyArtifactDirectory,generatedBuildPath,assertPackagePayload,assertCompiledConfig } from './lib/uk-cloudflare-artifacts.mjs';
-import { buildMatrix } from './build-uk-cloudflare.mjs';
+import { buildMatrix, assertShareToolVersions } from './build-uk-cloudflare.mjs';
 
 const clone=value=>structuredClone(value);
 function qualificationFixture(key='modern') {
@@ -161,4 +161,13 @@ test('portable emitted config must resolve the exact named target and asset dire
     x=>{x.assets.directory='../../client';},x=>{x.workers_dev=true;},x=>{x.assets.binding='OTHER';}]){
     const next=clone(config);alter(next);assert.throws(()=>assertCompiledConfig(next,target),/Emitted Wrangler config/);
   }
+});
+
+test('share tooling preserves exact renderer and TypeScript version pins through the supported API', ()=>{
+  const sharp={versions:{sharp:'0.35.5'}},ts={version:'6.0.3'};
+  assert.doesNotThrow(()=>assertShareToolVersions(sharp,ts));
+  assert.throws(()=>assertShareToolVersions({versions:{sharp:'0.35.4'}},ts),/retained source lock/);
+  assert.throws(()=>assertShareToolVersions({versions:{}},ts),/retained source lock/);
+  assert.throws(()=>assertShareToolVersions({},ts),/retained source lock/);
+  assert.throws(()=>assertShareToolVersions(sharp,{version:'5.9.3'}),/retained source lock/);
 });
