@@ -1,0 +1,187 @@
+{
+	"ref": "HEAD",
+	"paths": 1667,
+	"matchingGitBlobs": 1623,
+	"taskOwnedSourcePaths": 53,
+	"allTaskOwnedSourceMatches": true,
+	"comparison": "Git clean filters apply the repository end-of-line rules; source-snapshot records original canonical/tested file SHA-256 bytes.",
+	"preservedExceptions": [
+		{
+			"path": ".prettierignore",
+			"reason": "Inherited working-file change excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-polish-2026-10-01/after/about-full.jpg",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-polish-2026-10-01/after/about.jpg",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-polish-2026-10-01/after/contact-full.jpg",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-polish-2026-10-01/after/contact.jpg",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-polish-2026-10-01/after/home-1024.jpg",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-polish-2026-10-01/after/home.jpg",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-polish-2026-10-01/after/inventory-1024.jpg",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-polish-2026-10-01/after/inventory.jpg",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-polish-2026-10-01/after/services-full.jpg",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-polish-2026-10-01/after/services.jpg",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-polish-2026-10-01/before/about-full.jpg",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-polish-2026-10-01/before/about.jpg",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-polish-2026-10-01/before/contact-full.jpg",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-polish-2026-10-01/before/contact.jpg",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-polish-2026-10-01/before/home-1024.jpg",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-polish-2026-10-01/before/home.jpg",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-polish-2026-10-01/before/inventory-1024.jpg",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-polish-2026-10-01/before/inventory.jpg",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-polish-2026-10-01/before/services-full.jpg",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-polish-2026-10-01/before/services.jpg",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-polish-2026-10-01/index.html",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-refinement-2026-10-01/about-after-1440.webp",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-refinement-2026-10-01/about-after-viewport.webp",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-refinement-2026-10-01/about-before-1440.webp",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-refinement-2026-10-01/about-before-viewport.webp",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-refinement-2026-10-01/contact-after-1440.webp",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-refinement-2026-10-01/contact-after-viewport.webp",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-refinement-2026-10-01/contact-before-1440.webp",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-refinement-2026-10-01/contact-before-viewport.webp",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-refinement-2026-10-01/home-after-1440.webp",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-refinement-2026-10-01/home-after-viewport.webp",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-refinement-2026-10-01/home-before-1440.webp",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-refinement-2026-10-01/home-before-viewport.webp",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-refinement-2026-10-01/index.html",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-refinement-2026-10-01/inventory-after-1440.webp",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-refinement-2026-10-01/inventory-after-viewport.webp",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-refinement-2026-10-01/inventory-before-1440.webp",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-refinement-2026-10-01/inventory-before-viewport.webp",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-refinement-2026-10-01/services-after-1440.webp",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-refinement-2026-10-01/services-after-viewport.webp",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-refinement-2026-10-01/services-before-1440.webp",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/_previews/desktop-refinement-2026-10-01/services-before-viewport.webp",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		},
+		{
+			"path": "static/assets/daynight/banners/about-editorial.webp",
+			"reason": "Inherited unused untracked asset excluded from scope"
+		}
+	],
+	"commit": "3f891e7e59edc607cad0c90d63063252c996a976"
+}

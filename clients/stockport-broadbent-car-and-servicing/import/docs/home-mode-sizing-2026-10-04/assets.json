@@ -1,0 +1,78 @@
+{
+	"method": "Resize existing generated originals; preserve subjects, color, aspect ratio and transparent alpha.",
+	"changed": [
+		{
+			"key": "buy",
+			"width": 64,
+			"height": 48,
+			"visibleWidth": 58,
+			"original": "C:/Users/radev/.codex/generated_images/01a10434-ddd7-7361-ae8e-48bd3e8da469/exec-66017723-ca30-4b4d-adbe-01f3f4fd099e.png",
+			"originalSha256": "31b8b64ab2e22ec472ceaf3e123bae422e67d4a35e3f9a56ec37251e20d7f74b",
+			"visibleHeight": 28.8,
+			"variants": [
+				{
+					"path": "static/assets/daynight/home-modes/buy-graphite-v3-64.webp",
+					"width": 64,
+					"height": 48,
+					"density": 1,
+					"bytes": 2004,
+					"sha256": "4e895687eae8a649461ec2ccc2ed7265c021a9a6a826ddda3fe36a3a86396411"
+				},
+				{
+					"path": "static/assets/daynight/home-modes/buy-graphite-v3-128.webp",
+					"width": 128,
+					"height": 96,
+					"density": 2,
+					"bytes": 4588,
+					"sha256": "889302ca12b231aec6d2a532623d1abd6c3840ff62fa74468faf7b0d4806c61c"
+				},
+				{
+					"path": "static/assets/daynight/home-modes/buy-graphite-v3-192.webp",
+					"width": 192,
+					"height": 144,
+					"density": 3,
+					"bytes": 7894,
+					"sha256": "279ee4f1aa6eac7cdf8654c7df9ecdcef04a9f248fed0440d0a9293d0a4048c9"
+				}
+			]
+		},
+		{
+			"key": "finance",
+			"width": 48,
+			"height": 48,
+			"visibleHeight": 27,
+			"original": "C:/Users/radev/.codex/generated_images/01a10434-ddd7-7361-ae8e-48bd3e8da469/exec-49d99c94-0769-40d4-8c30-7ea5ddaa33a9.png",
+			"originalSha256": "75f784038567dffabeb411df05f5523558080c4bb3948b80a79816c61aea86c0",
+			"visibleWidth": 27.9,
+			"variants": [
+				{
+					"path": "static/assets/daynight/home-modes/finance-graphite-v3-48.webp",
+					"width": 48,
+					"height": 48,
+					"density": 1,
+					"bytes": 1602,
+					"sha256": "7121cdc90046f2487226b16296240e1cbb726d36332fedf3c3d0a1f365346838"
+				},
+				{
+					"path": "static/assets/daynight/home-modes/finance-graphite-v3-96.webp",
+					"width": 96,
+					"height": 96,
+					"density": 2,
+					"bytes": 3648,
+					"sha256": "3457ef757d5badd5fc52062f5e7bcf50cfa3de1dee6ddb55c9d0ce4bec0cc6f6"
+				},
+				{
+					"path": "static/assets/daynight/home-modes/finance-graphite-v3-144.webp",
+					"width": 144,
+					"height": 144,
+					"density": 3,
+					"bytes": 5866,
+					"sha256": "8dc3b0f6fbfc2f69b9bc813ece689d0826a585090075f2e3ea96254ccf67777f"
+				}
+			]
+		}
+	],
+	"preserved": ["sell", "import"],
+	"quality": 90,
+	"alphaQuality": 100
+}

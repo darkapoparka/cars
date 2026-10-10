@@ -1,0 +1,15 @@
+{
+	"contact": {
+		"directionsBackground": "rgb(185, 22, 28)",
+		"directionsFont": "20px",
+		"locationBackground": "rgb(255, 255, 255)",
+		"locationRadius": "16px",
+		"url": "http://127.0.0.1:6790/bg/contact"
+	},
+	"inventory": {
+		"padding": "20px",
+		"radius": "20px",
+		"url": "http://127.0.0.1:6790/bg/inventory",
+		"width": 880
+	}
+}

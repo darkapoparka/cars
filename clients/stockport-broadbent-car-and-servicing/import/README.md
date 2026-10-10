@@ -1,0 +1,35 @@
+# Import automotive template
+
+**Working branch: `main`.** Coordinate overlapping files and shared Git/build writes; independent files may be edited concurrently. Read [AGENTS.md](AGENTS.md) before starting; temporary branches/worktrees require an explicit request and a completed integration/cleanup handoff.
+
+Canonical standalone master: **`darkapoparka/cars-template-import`**. This repository is a reusable dealership design, not a dealer-specific project and not evidence that any sample business data is current.
+
+**AI/agent entry point:** read `AGENTS.md`, then `TEMPLATE.md`, `docs/LEAD-BUILD.md`, and `docs/QA.md` before editing.
+
+## Portfolio role
+
+- Template key: `import`
+- Role: Design 2 option in an Import trio
+- Design position: import/sourcing specialist for dealers that actively sell the import journey
+- Standard dealer offer: `auto-best + carwow + modern`
+- Import is Design 2 in the intentional Import trio; it does not add a fourth design.
+
+## Rule of ownership
+
+Improve this repository only when the task is a **shared template improvement**. For a **lead build**, use canonical Cars clients/<slug>/ through its approved-release clone workflow; never personalize this master.
+
+## Quick start
+
+`npm ci`
+
+Preview command: `npm run dev -- --host 127.0.0.1 --port 6790 --strictPort`
+
+Entry route: `/`
+
+See `TEMPLATE.md` for template-specific boundaries and `docs/LEAD-BUILD.md` for the complete lead workflow. Historical pre-split root docs are preserved under `docs/legacy/from-cars-2026-09-10/` for provenance only; they do not override the current instructions.
+
+Current cross-repository ownership, approved releases, dealer-copy workflow and standalone/mounted limits: [Cars integration](docs/CARS-INTEGRATION.md).
+
+## Implemented architecture and checks
+
+See [Architecture](docs/ARCHITECTURE.md) for native public routing, token ownership, dealer configuration and the deliberately retained legacy/demo boundary. Run `npm run verify`, `npm run build` and `npm run test:e2e` for source qualification. Current implementation evidence and remaining release gates are in [Localization handoff](docs/localization/HANDOFF.md).

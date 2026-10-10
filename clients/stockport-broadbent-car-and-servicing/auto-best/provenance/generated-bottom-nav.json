@@ -1,0 +1,23 @@
+{
+  "family": "Auto Best generated bottom navbar",
+  "version": "refined-v3",
+  "status": "rejected",
+  "retiredDate": "2026-10-04",
+  "generator": "Built-in image_gen",
+  "date": "2026-10-03",
+  "file": "static/assets/images/template/generated-bottom-nav-v3.png",
+  "publicPath": "/assets/images/template/generated-bottom-nav-v3.png",
+  "sha256": "b772663e88c737faa73ab8c162957fcec0b5fd49dfa13ae76570c12893950228",
+  "width": 2172,
+  "height": 724,
+  "frame": 24,
+  "referenceInkHeight": 20,
+  "roles": {
+    "home": { "x": 100, "y": 203, "width": 287, "height": 266 },
+    "cars": { "x": 527, "y": 262, "width": 315, "height": 204 },
+    "sell": { "x": 967, "y": 217, "width": 258, "height": 259 },
+    "import": { "x": 1367, "y": 203, "width": 280, "height": 284 },
+    "menu": { "x": 1801, "y": 266, "width": 265, "height": 170 }
+  },
+  "prompts": "docs/generated-nav-icons-2026-10-03/prompts.json"
+}

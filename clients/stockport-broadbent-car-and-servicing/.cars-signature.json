@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "format": "signature-preview-v1",
+  "dealer": "stockport-broadbent-car-and-servicing",
+  "name": "Broadbent Car and Servicing",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+    "path": "templates/karento-best",
+    "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
+    "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+  },
+  "sourceDigest": "346a19e2d5f4c1ad8ce2b19d190f05ac1f36f08aea5c139d6bc3109ce0b94c75",
+  "inventory": {
+    "mode": "dated-listing-snapshot",
+    "count": 10,
+    "observedAt": "2026-10-10"
+  },
+  "personalization": {
+    "profileSha256": "756b8574748c302ffef23fca4e915719684e1e5e85f74eed0ad33ceaaf42b672",
+    "logoPaths": [
+      "/dealer-brand/logo.webp"
+    ],
+    "mediaPaths": [
+      "/dealer-stock/van.webp",
+      "/dealer-stock/hatchback.webp"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "karento-best/src/lib/content.ts",
+      "karento-best/src/lib/data/vehicles.ts",
+      "karento-best/src/lib/data/vehicle-listing.ts",
+      "karento-best/src/lib/data/dealer-vehicles.json",
+      "karento-best/src/lib/data/vehicle-detail.ts",
+      "karento-best/src/lib/data/dealer-detail.ts",
+      "karento-best/src/lib/pages/cars-details-3.svelte",
+      "karento-best/src/lib/components/vehicle-detail/VehicleReservationCard.svelte",
+      "karento-best/src/lib/components/vehicle-detail/VehicleDetailPanels.svelte",
+      "karento-best/src/lib/data/editorial.ts",
+      "karento-best/src/lib/data/home-stories.ts",
+      "karento-best/src/lib/cards/VehicleEditorialCard.svelte",
+      "karento-best/src/lib/cards/VehicleFeaturedCard.svelte",
+      "karento-best/src/lib/cards/VehicleGridCard.svelte",
+      "karento-best/src/lib/components/Footer.svelte",
+      "karento-best/src/lib/components/contact/ContactLocationCard.svelte",
+      "karento-best/src/lib/components/vehicle-detail/ReviewSummary.svelte",
+      "karento-best/src/lib/components/vehicle-detail/VehicleHeading.svelte",
+      "karento-best/src/lib/sections/CustomerReviewCarousel.svelte",
+      "karento-best/src/lib/sections/FeaturedVehicleCarousel.svelte",
+      "karento-best/src/lib/sections/FeaturedVehicleGrid.svelte",
+      "karento-best/src/lib/sections/MostSearchedVehicles.svelte",
+      "karento-best/src/lib/sections/PopularVehicleCarousel.svelte",
+      "karento-best/src/lib/sections/PopularVehicleGrid.svelte",
+      "karento-best/src/routes/2/discovery.ts",
+      "karento-best/src/routes/2/DiscoveryHome.svelte",
+      "karento-best/src/routes/2/DiscoverySearch.svelte"
+    ],
+    "nativeDealerFacts": true
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

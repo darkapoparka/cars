@@ -1,0 +1,17 @@
+<svelte:options runes={true} />
+
+<script lang="ts">
+  import { useLocale } from "#lib/i18n/context.svelte.ts";
+  const locale = useLocale();
+  import PageMetadata from "#lib/components/PageMetadata.svelte";
+  import MemberSettingsHeading from "#lib/sections/MemberSettingsHeading.svelte";
+  import MemberSettingsDashboard from "#lib/sections/MemberSettingsDashboard.svelte";
+  import Footer from "#lib/components/Footer.svelte";
+</script>
+
+<PageMetadata title={locale.t("ui.user-dashboard-setting.member-settings")} />
+<main class="main"
+  ><MemberSettingsHeading />
+  <MemberSettingsDashboard />
+  <Footer /></main
+>

@@ -1,0 +1,231 @@
+{
+	"desktop": [
+		{
+			"cardCount": 3,
+			"cards": [
+				{
+					"headingSize": "24px",
+					"height": 253.1875,
+					"overflow": false,
+					"title": "Основни данни",
+					"width": 349
+				},
+				{
+					"headingSize": "24px",
+					"height": 218.1875,
+					"overflow": false,
+					"title": "Детайли",
+					"width": 349
+				},
+				{
+					"headingSize": "24px",
+					"height": 290,
+					"overflow": false,
+					"title": "Оборудване",
+					"width": 349
+				}
+			],
+			"columns": "349px",
+			"disclosure": {
+				"bottom": 750.53125,
+				"height": 36,
+				"left": 202.78125,
+				"right": 356,
+				"top": 714.53125,
+				"width": 153.21875,
+				"x": 202.78125,
+				"y": 714.53125
+			},
+			"documentOverflow": false,
+			"equipmentCount": 6,
+			"factCount": 9,
+			"width": 768
+		},
+		{
+			"cardCount": 3,
+			"cards": [
+				{
+					"headingSize": "24px",
+					"height": 253.1875,
+					"overflow": false,
+					"title": "Основни данни",
+					"width": 543
+				},
+				{
+					"headingSize": "24px",
+					"height": 218.1875,
+					"overflow": false,
+					"title": "Детайли",
+					"width": 543
+				},
+				{
+					"headingSize": "24px",
+					"height": 290,
+					"overflow": false,
+					"title": "Оборудване",
+					"width": 543
+				}
+			],
+			"columns": "543px",
+			"disclosure": {
+				"bottom": 625.375,
+				"height": 36,
+				"left": 396.78125,
+				"right": 550,
+				"top": 589.375,
+				"width": 153.21875,
+				"x": 396.78125,
+				"y": 589.375
+			},
+			"documentOverflow": false,
+			"equipmentCount": 6,
+			"factCount": 9,
+			"width": 1024
+		},
+		{
+			"cardCount": 3,
+			"cards": [
+				{
+					"headingSize": "24px",
+					"height": 253.1875,
+					"overflow": false,
+					"title": "Основни данни",
+					"width": 447
+				},
+				{
+					"headingSize": "24px",
+					"height": 253.1875,
+					"overflow": false,
+					"title": "Детайли",
+					"width": 447
+				},
+				{
+					"headingSize": "24px",
+					"height": 194,
+					"overflow": false,
+					"title": "Оборудване",
+					"width": 918
+				}
+			],
+			"columns": "447px 447px",
+			"disclosure": {
+				"bottom": 413.5,
+				"height": 36,
+				"left": 792.28125,
+				"right": 945.5,
+				"top": 377.5,
+				"width": 153.21875,
+				"x": 792.28125,
+				"y": 377.5
+			},
+			"documentOverflow": false,
+			"equipmentCount": 6,
+			"factCount": 9,
+			"width": 1440
+		},
+		{
+			"cardCount": 3,
+			"cards": [
+				{
+					"headingSize": "24px",
+					"height": 253.1875,
+					"overflow": false,
+					"title": "Основни данни",
+					"width": 447
+				},
+				{
+					"headingSize": "24px",
+					"height": 253.1875,
+					"overflow": false,
+					"title": "Детайли",
+					"width": 447
+				},
+				{
+					"headingSize": "24px",
+					"height": 194,
+					"overflow": false,
+					"title": "Оборудване",
+					"width": 918
+				}
+			],
+			"columns": "447px 447px",
+			"disclosure": {
+				"bottom": 413.875,
+				"height": 36,
+				"left": 1032.28125,
+				"right": 1185.5,
+				"top": 377.875,
+				"width": 153.21875,
+				"x": 1032.28125,
+				"y": 377.875
+			},
+			"documentOverflow": false,
+			"equipmentCount": 6,
+			"factCount": 9,
+			"width": 1920
+		}
+	],
+	"matchedScreenshot": {
+		"cardCount": 3,
+		"factCount": 9,
+		"height": 1000,
+		"previewCount": 6,
+		"price": "33000",
+		"scrollY": 808,
+		"width": 1440
+	},
+	"navigation": {
+		"cardCount": 3,
+		"expanded": "false",
+		"facts": [
+			"123 000 км",
+			"2020",
+			"Бензин",
+			"3000 куб.см / 510 к.с.",
+			"Автомат",
+			"Зелен",
+			"Пловдив, гр. Пловдив",
+			"По запитване",
+			"21778068579001193"
+		],
+		"financePrice": "43500",
+		"headingCount": 1,
+		"path": "/bg/inventory/21778068579001193",
+		"previewCount": 6,
+		"title": "BMW X4 M Competition"
+	},
+	"english": {
+		"buttonLabel": "View all 18 features",
+		"buttonText": "View all (18)",
+		"headings": ["Vehicle details", "Details", "Equipment"],
+		"previewCount": 6,
+		"expandedCount": 18
+	},
+	"mobile": [
+		{
+			"desktopCards": 0,
+			"documentOverflow": false,
+			"mobilePdp": 1,
+			"scrollY": 0,
+			"width": 320
+		},
+		{
+			"desktopCards": 0,
+			"documentOverflow": false,
+			"mobilePdp": 1,
+			"scrollY": 0,
+			"width": 390
+		}
+	],
+	"mobileScreenshotBytesMatchPrevious": true,
+	"keyboard": {
+		"enterExpanded": true,
+		"spaceExpanded": true,
+		"allEquipmentCount": 18,
+		"disclosureControlsMatches": true
+	},
+	"console": {
+		"errors": 0,
+		"warnings": 0
+	}
+}

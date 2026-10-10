@@ -1,0 +1,51 @@
+{
+  "name": "cars-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run lint && npm run typecheck && npm test && npm run build",
+    "qa:routes": "node scripts/qa-production.mjs",
+    "qa:screenshots": "node scripts/qa-visual.mjs",
+    "qa:loan": "node --experimental-strip-types --test scripts/test-reference-loan.mjs",
+    "clean": "shx rm -rf .next .next-qa .next-build-check runtime/unit-tests",
+    "preview": "next start",
+    "test": "node scripts/test.mjs",
+    "validate": "node scripts/validate-dealer.mjs",
+    "prebuild": "npm run validate",
+    "predev": "npm run validate",
+    "test:browser": "playwright test"
+  },
+  "dependencies": {
+    "@stylexjs/stylex": "0.19.1",
+    "lucide-react": "^1.48.0",
+    "next": "16.3.8",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.0",
+    "@stylexjs/eslint-plugin": "0.19.1",
+    "@stylexjs/postcss-plugin": "0.19.1",
+    "@types/json-schema": "^7.0.15",
+    "@types/node": "^22.7.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@typescript-eslint/parser": "^8.48.1",
+    "autoprefixer": "^10.4.20",
+    "client-only": "0.0.1",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "16.3.8",
+    "shx": "^0.4.0",
+    "typescript": "^5.9.3",
+    "zod": "^4.6.5"
+  },
+  "engines": {
+    "node": ">=22.20.0 <23"
+  },
+  "packageManager": "npm@11.3.0"
+}

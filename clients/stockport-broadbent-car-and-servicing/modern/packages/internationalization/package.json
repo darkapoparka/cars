@@ -1,0 +1,36 @@
+{
+  "name": "@repo/internationalization",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    ".": "./index.ts",
+    "./config": "./config.ts",
+    "./format": "./format.ts",
+    "./proxy": "./proxy.ts",
+    "./policy": "./policy.ts",
+    "./paths": "./paths.ts",
+    "./preferences-messages": "./preferences-messages.ts",
+    "./focus": "./focus.ts",
+    "./request": "./request.ts",
+    "./public-messages": "./public-messages.ts",
+    "./request-origin": "./request-origin.ts"
+  },
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "@formatjs/intl-localematcher": "^0.8.1",
+    "negotiator": "^1.0.0",
+    "next-international": "^1.3.1",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/negotiator": "^0.6.4",
+    "@types/node": "22.20.2",
+    "next": "16.3.8",
+    "vitest": "^4.0.18"
+  }
+}

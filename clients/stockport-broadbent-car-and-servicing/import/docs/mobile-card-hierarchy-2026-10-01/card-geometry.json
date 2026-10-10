@@ -1,0 +1,302 @@
+{
+	"origin": "http://127.0.0.1:6791",
+	"checks": [
+		{
+			"locale": "bg",
+			"width": 320,
+			"route": "/",
+			"overflow": false,
+			"imageWidth": 262.390625,
+			"cardWidth": 262.390625,
+			"titleSize": 18,
+			"badgeSize": 12,
+			"clippedBadges": [],
+			"imageLoaded": true
+		},
+		{
+			"locale": "bg",
+			"width": 320,
+			"route": "/inventory",
+			"overflow": false,
+			"imageWidth": 122.625,
+			"cardWidth": 292,
+			"titleSize": 18,
+			"badgeSize": 12,
+			"clippedBadges": [],
+			"imageLoaded": true
+		},
+		{
+			"locale": "bg",
+			"width": 320,
+			"route": "/inventory",
+			"largeText": true,
+			"overflow": false,
+			"clippedNavigation": [],
+			"card": {
+				"x": 14,
+				"y": 116,
+				"width": 292,
+				"height": 150,
+				"top": 116,
+				"right": 306,
+				"bottom": 266,
+				"left": 14
+			},
+			"body": {
+				"x": 136.625,
+				"y": 116,
+				"width": 169.375,
+				"height": 150,
+				"top": 116,
+				"right": 306,
+				"bottom": 266,
+				"left": 136.625
+			},
+			"photo": {
+				"x": 14,
+				"y": 116,
+				"width": 122.625,
+				"height": 150,
+				"top": 116,
+				"right": 136.625,
+				"bottom": 266,
+				"left": 14
+			}
+		},
+		{
+			"locale": "bg",
+			"width": 320,
+			"route": "/import",
+			"overflow": false,
+			"imageWidth": 122.625,
+			"cardWidth": 292,
+			"titleSize": 18,
+			"badgeSize": 12,
+			"clippedBadges": [],
+			"imageLoaded": true
+		},
+		{
+			"locale": "bg",
+			"width": 320,
+			"route": "/import",
+			"largeText": true,
+			"overflow": false,
+			"clippedNavigation": [],
+			"card": {
+				"x": 14,
+				"y": 315,
+				"width": 292,
+				"height": 144,
+				"top": 315,
+				"right": 306,
+				"bottom": 459,
+				"left": 14
+			},
+			"body": {
+				"x": 136.625,
+				"y": 315,
+				"width": 169.375,
+				"height": 144,
+				"top": 315,
+				"right": 306,
+				"bottom": 459,
+				"left": 136.625
+			},
+			"photo": {
+				"x": 14,
+				"y": 315,
+				"width": 122.625,
+				"height": 144,
+				"top": 315,
+				"right": 136.625,
+				"bottom": 459,
+				"left": 14
+			}
+		},
+		{
+			"locale": "bg",
+			"width": 390,
+			"route": "/",
+			"overflow": false,
+			"imageWidth": 319.796875,
+			"cardWidth": 319.796875,
+			"titleSize": 18,
+			"badgeSize": 12,
+			"clippedBadges": [],
+			"imageLoaded": true
+		},
+		{
+			"locale": "bg",
+			"width": 390,
+			"route": "/inventory",
+			"overflow": false,
+			"imageWidth": 152.03125,
+			"cardWidth": 362,
+			"titleSize": 18,
+			"badgeSize": 12,
+			"clippedBadges": [],
+			"imageLoaded": true
+		},
+		{
+			"locale": "bg",
+			"width": 390,
+			"route": "/import",
+			"overflow": false,
+			"imageWidth": 152.03125,
+			"cardWidth": 362,
+			"titleSize": 18,
+			"badgeSize": 12,
+			"clippedBadges": [],
+			"imageLoaded": true
+		},
+		{
+			"locale": "en",
+			"width": 320,
+			"route": "/",
+			"overflow": false,
+			"imageWidth": 262.390625,
+			"cardWidth": 262.390625,
+			"titleSize": 18,
+			"badgeSize": 12,
+			"clippedBadges": [],
+			"imageLoaded": true
+		},
+		{
+			"locale": "en",
+			"width": 320,
+			"route": "/inventory",
+			"overflow": false,
+			"imageWidth": 122.625,
+			"cardWidth": 292,
+			"titleSize": 18,
+			"badgeSize": 12,
+			"clippedBadges": [],
+			"imageLoaded": true
+		},
+		{
+			"locale": "en",
+			"width": 320,
+			"route": "/inventory",
+			"largeText": true,
+			"overflow": false,
+			"clippedNavigation": [],
+			"card": {
+				"x": 14,
+				"y": 119.984375,
+				"width": 292,
+				"height": 444.65625,
+				"top": 119.984375,
+				"right": 306,
+				"bottom": 564.640625,
+				"left": 14
+			},
+			"body": {
+				"x": 14,
+				"y": 314.640625,
+				"width": 292,
+				"height": 250,
+				"top": 314.640625,
+				"right": 306,
+				"bottom": 564.640625,
+				"left": 14
+			},
+			"photo": {
+				"x": 14,
+				"y": 119.984375,
+				"width": 292,
+				"height": 194.65625,
+				"top": 119.984375,
+				"right": 306,
+				"bottom": 314.640625,
+				"left": 14
+			}
+		},
+		{
+			"locale": "en",
+			"width": 320,
+			"route": "/import",
+			"overflow": false,
+			"imageWidth": 122.625,
+			"cardWidth": 292,
+			"titleSize": 18,
+			"badgeSize": 12,
+			"clippedBadges": [],
+			"imageLoaded": true
+		},
+		{
+			"locale": "en",
+			"width": 320,
+			"route": "/import",
+			"largeText": true,
+			"overflow": false,
+			"clippedNavigation": [],
+			"card": {
+				"x": 14,
+				"y": 315,
+				"width": 292,
+				"height": 144,
+				"top": 315,
+				"right": 306,
+				"bottom": 459,
+				"left": 14
+			},
+			"body": {
+				"x": 136.625,
+				"y": 315,
+				"width": 169.375,
+				"height": 144,
+				"top": 315,
+				"right": 306,
+				"bottom": 459,
+				"left": 136.625
+			},
+			"photo": {
+				"x": 14,
+				"y": 315,
+				"width": 122.625,
+				"height": 144,
+				"top": 315,
+				"right": 136.625,
+				"bottom": 459,
+				"left": 14
+			}
+		},
+		{
+			"locale": "en",
+			"width": 390,
+			"route": "/",
+			"overflow": false,
+			"imageWidth": 319.796875,
+			"cardWidth": 319.796875,
+			"titleSize": 18,
+			"badgeSize": 12,
+			"clippedBadges": [],
+			"imageLoaded": true
+		},
+		{
+			"locale": "en",
+			"width": 390,
+			"route": "/inventory",
+			"overflow": false,
+			"imageWidth": 152.03125,
+			"cardWidth": 362,
+			"titleSize": 18,
+			"badgeSize": 12,
+			"clippedBadges": [],
+			"imageLoaded": true
+		},
+		{
+			"locale": "en",
+			"width": 390,
+			"route": "/import",
+			"overflow": false,
+			"imageWidth": 152.03125,
+			"cardWidth": 362,
+			"titleSize": 18,
+			"badgeSize": 12,
+			"clippedBadges": [],
+			"imageLoaded": true
+		}
+	],
+	"pageErrors": []
+}

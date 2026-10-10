@@ -1,0 +1,36 @@
+{
+	"baselineImportCommit": "6861dad21711ef36b0954df33eccc456e094ba3d",
+	"frozenPathCount": 1679,
+	"frozenManifestSha256": "834ee026103be0246b045b31f12b372738ff149b6f24f097de837fb3e123b714",
+	"frozenManifest": "C:/Users/radev/.codex/tmp/cars-import-review-labels-2026-10-04/evidence/source-manifest.json",
+	"lockfile": {
+		"path": "package-lock.json",
+		"sha256": "aa596db7046c3f226ce50b488e283e30121eb49122d5006c60035ef57a952e1c"
+	},
+	"changedSource": [
+		{
+			"path": "src/lib/content/reviews.ts",
+			"sha256": "064e55648115eab3c474e88f9e9dc64d783030095aa13df0b188125cae63e544"
+		},
+		{
+			"path": "src/lib/auxero/home-five.ts",
+			"sha256": "b05d07486a7259c92d9b8da3e29de02ffbc199ca6192c1b91c613215e979739d"
+		},
+		{
+			"path": "src/lib/auxero/reviews.ts",
+			"sha256": "c262b57a09b7be1ad8e3db9ad5202119e23fea7a9e2849ed53aab7dabea2bacd"
+		},
+		{
+			"path": "src/lib/components/reviews/ReviewCard.svelte",
+			"sha256": "b3e4cbcb5a12c99bbda75113130f344c1a58b9dfe0f256c39a575df18ee79b46"
+		},
+		{
+			"path": "src/lib/components/home/HomePage.svelte",
+			"sha256": "04b9f018f23df17bf32ec7b3571ebdc3c3cdb096e2031e5a6ab6fee4e6b42c87"
+		},
+		{
+			"path": "src/routes/(site)/reviews/+page.svelte",
+			"sha256": "a299aa6c9f312ff858ff10a2d64c9333d5266fb07f50737cf75667a0277c8647"
+		}
+	]
+}

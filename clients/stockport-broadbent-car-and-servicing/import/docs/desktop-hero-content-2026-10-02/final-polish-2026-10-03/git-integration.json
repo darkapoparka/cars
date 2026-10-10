@@ -1,0 +1,98 @@
+{
+	"commit": "49ec634509298a55583767ccb91712cc93c4fb93",
+	"parent": "7d03b2c31a5b806f0e83c080085520a2fb452c2a",
+	"changedPaths": [
+		"templates/import/docs/ARCHITECTURE.md",
+		"templates/import/docs/DESKTOP-STYLING.md",
+		"templates/import/docs/QA.md",
+		"templates/import/docs/desktop-hero-content-2026-10-02/README.md",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/README.md",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/after-matrix.json",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/after/about-bg-full.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/after/about-bg.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/after/about-en-full.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/after/about-en.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/after/about-mobile.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/after/contact-bg-full.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/after/contact-bg.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/after/contact-en-full.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/after/contact-en.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/after/contact-mobile.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/before-matrix.json",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/before/about-bg-full.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/before/about-bg.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/before/about-en-full.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/before/about-en.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/before/about-mobile.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/before/contact-bg-full.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/before/contact-bg.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/before/contact-en-full.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/before/contact-en.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/before/contact-mobile.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/gallery-check.json",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/gallery.png",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/interactions.json",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/mobile-screenshots.json",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/preservation.json",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/source-snapshot.json",
+		"templates/import/docs/desktop-hero-content-2026-10-02/final-polish-2026-10-03/verification.json",
+		"templates/import/docs/desktop-hero-content-2026-10-02/screenshots.html",
+		"templates/import/src/lib/auxero/about.ts",
+		"templates/import/src/lib/auxero/agents.ts",
+		"templates/import/src/lib/components/common/SocialLinks.svelte",
+		"templates/import/src/lib/components/common/TeamMemberCard.svelte",
+		"templates/import/src/lib/components/contact/ContactHeroDetails.svelte",
+		"templates/import/src/lib/content/site-shell.ts",
+		"templates/import/src/routes/(site)/about/+page.svelte",
+		"templates/import/src/routes/(site)/contact/+page.svelte",
+		"templates/import/tests/typography-contact.e2e.ts"
+	],
+	"frozenSourceProof": [
+		{
+			"path": "src/lib/components/common/SocialLinks.svelte",
+			"gitBlob": "295da4d0c4209fd6fa05e4348edc13d585c62a99",
+			"matchesReviewedWorkingSource": true
+		},
+		{
+			"path": "src/lib/components/common/TeamMemberCard.svelte",
+			"gitBlob": "351287618537a42f663f983979377dc85abd97c2",
+			"matchesReviewedWorkingSource": true
+		},
+		{
+			"path": "src/lib/components/contact/ContactHeroDetails.svelte",
+			"gitBlob": "b7b54a4191cfe773fc02a193711d1e096e633d4c",
+			"matchesReviewedWorkingSource": true
+		},
+		{
+			"path": "src/routes/(site)/about/+page.svelte",
+			"gitBlob": "576602ab6cf0f439dcb22d9ea13d25cc4bd0a976",
+			"matchesReviewedWorkingSource": true
+		},
+		{
+			"path": "src/routes/(site)/contact/+page.svelte",
+			"gitBlob": "ac0dd9133bc533ed24f2669d3bc956637e6aa1d7",
+			"matchesReviewedWorkingSource": true
+		},
+		{
+			"path": "src/lib/auxero/agents.ts",
+			"gitBlob": "8895ad0cce2aeb2119917c160a86ebd832593610",
+			"matchesReviewedWorkingSource": true
+		},
+		{
+			"path": "src/lib/auxero/about.ts",
+			"gitBlob": "77fc61087d5df08408a55307b24bd99a38d444e6",
+			"matchesReviewedWorkingSource": true
+		},
+		{
+			"path": "src/lib/content/site-shell.ts",
+			"gitBlob": "5f887b413651aa1c900aa905d0f23c2f4ab7fe41",
+			"matchesReviewedWorkingSource": true
+		},
+		{
+			"path": "tests/typography-contact.e2e.ts",
+			"gitBlob": "ca092a9375a3097b83becf7f21bcb84813991a11",
+			"matchesReviewedWorkingSource": true
+		}
+	],
+	"foreignIndexPreserved": true
+}

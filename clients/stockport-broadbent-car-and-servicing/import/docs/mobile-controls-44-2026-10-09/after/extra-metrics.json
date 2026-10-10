@@ -1,0 +1,195 @@
+{
+  "base": "http://127.0.0.1:6794",
+  "phase": "after",
+  "capturedAt": "2026-10-09T15:45:07.833Z",
+  "results": [
+    {
+      "locale": "bg",
+      "width": 390,
+      "errors": [],
+      "states": {
+        "home-import-search": {
+          "label": "Затвори търсенето",
+          "hit": [
+            44,
+            44
+          ],
+          "paint": [
+            44,
+            44
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "position": [
+            330,
+            12
+          ]
+        },
+        "selling-close": {
+          "label": "Затвори",
+          "hit": [
+            44,
+            44
+          ],
+          "paint": [
+            44,
+            44
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "position": [
+            14,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "errors": [],
+      "states": {
+        "home-import-search": {
+          "label": "Затвори търсенето",
+          "hit": [
+            44,
+            44
+          ],
+          "paint": [
+            44,
+            44
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "position": [
+            260,
+            18
+          ]
+        },
+        "selling-close": {
+          "label": "Затвори",
+          "hit": [
+            44,
+            44
+          ],
+          "paint": [
+            44,
+            44
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "position": [
+            14,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "errors": [],
+      "states": {
+        "home-import-search": {
+          "label": "Close search",
+          "hit": [
+            44,
+            44
+          ],
+          "paint": [
+            44,
+            44
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "position": [
+            330,
+            12
+          ]
+        },
+        "selling-close": {
+          "label": "Close",
+          "hit": [
+            44,
+            44
+          ],
+          "paint": [
+            44,
+            44
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "position": [
+            14,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "errors": [],
+      "states": {
+        "home-import-search": {
+          "label": "Close search",
+          "hit": [
+            44,
+            44
+          ],
+          "paint": [
+            44,
+            44
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "position": [
+            260,
+            12
+          ]
+        },
+        "selling-close": {
+          "label": "Close",
+          "hit": [
+            44,
+            44
+          ],
+          "paint": [
+            44,
+            44
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "position": [
+            14,
+            8
+          ]
+        }
+      }
+    }
+  ]
+}

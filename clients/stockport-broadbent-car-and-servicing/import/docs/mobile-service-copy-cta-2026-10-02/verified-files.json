@@ -1,0 +1,26 @@
+[
+	{
+		"path": "src/lib/components/common/ContactBanner.svelte",
+		"sha256": "84aacbf8ab372854e694789db81044ca7e87415bd3739498ee79671cb4fba4a7"
+	},
+	{
+		"path": "src/lib/content/service-directory.ts",
+		"sha256": "a90db7d01b3dcbc45b81962b1830fe092ed10eb6a2384228ece3424879127e3e"
+	},
+	{
+		"path": "tests/mobile-secondary.e2e.ts",
+		"sha256": "0e5995815e2b33a7a28220ca26e793bca1ea801bb3eab1bf69d2a6de014a1e83"
+	},
+	{
+		"path": "static/assets/daynight/banners/contact-cta-mobile-v1-small.webp",
+		"sha256": "608513a1fa3a2acff03c94c5f91c83edb897052e52e26af5b423459a9e05ed10"
+	},
+	{
+		"path": "static/assets/daynight/banners/contact-cta-mobile-v1.webp",
+		"sha256": "4fa711b87e963909bbb1b8841108fbf7249f346552c62c830318adc723d08f23"
+	},
+	{
+		"path": "static/assets/daynight/banners/contact-cta-mobile-v1-large.webp",
+		"sha256": "0c96ae113558b730e3801919d80e4ceaa7216135374a44a2bd770ecef440fa9e"
+	}
+]

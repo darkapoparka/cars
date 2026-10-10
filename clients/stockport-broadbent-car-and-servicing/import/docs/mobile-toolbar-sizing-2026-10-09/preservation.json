@@ -1,0 +1,26 @@
+{
+  "comparison": "Previous actual production versus changed actual rendered output",
+  "differences": [
+    {
+      "file": "bg-390-home.png",
+      "changedPixels": 79,
+      "maxChannelDelta": 1
+    },
+    {
+      "file": "bg-390-pdp.png",
+      "changedPixels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "file": "bg-1440-inventory.png",
+      "changedPixels": 63,
+      "maxChannelDelta": 5
+    }
+  ],
+  "desktopPresentation": {
+    "elements": 517,
+    "differences": 0,
+    "hash": "93c7e2799c97bf0e6ccaca3fac2b72d4a5e783cb9b41e8f1cc43a419daafd1e3"
+  },
+  "note": "Desktop has 63 differing pixels with at most 5/255 channel variation; all 517 visible elements have identical geometry and measured computed styles. PDP is pixel-identical; Home has 79 pixels differing by at most 1/255."
+}

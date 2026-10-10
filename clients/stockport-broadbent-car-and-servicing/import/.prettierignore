@@ -1,0 +1,47 @@
+# Package Managers
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+bun.lock
+bun.lockb
+
+# Miscellaneous
+/static/
+/.template-ref/
+PROJECT_PLAN.md
+
+# Local audit artifacts
+*.log
+*.tmp
+/.audit/
+/.audit-ba/
+/.audit-desktop/
+/.codex-audit/
+/.codex-artifacts/
+/codex-screenshots/
+/.codex-review-screens/
+/.codex-screenshots/
+/.playwright-mcp/
+/outputs/
+/runtime/
+/test-results/
+/tmp/
+*.audit.png
+tmp-vite*.log
+.tmp-*.log
+.tmp-*.png
+
+# Local QA snapshots and Claude tooling config (not project source)
+/.claude/
+inv-snap*.md
+
+# Cars owns this canonical script; repository tests require identical template copies.
+/scripts/public-asset-retention.mjs
+
+# Generated browser measurements and reports; authored Markdown stays checked.
+/docs/**/*.json
+/docs/**/e2e-output/
+/docs/**/playwright-report/
+
+# Archived rendered previews retain their original markup.
+/docs/**/index.html

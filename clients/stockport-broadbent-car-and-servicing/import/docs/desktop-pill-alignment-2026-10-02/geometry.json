@@ -1,0 +1,281 @@
+{
+  "capturedOn": "2026-10-02",
+  "server": "http://127.0.0.1:6790",
+  "desktop": [
+    {
+      "scenario": "bg-default",
+      "viewport": 768,
+      "overflow": false,
+      "pillWidth": 155.75,
+      "widthDifference": 0,
+      "heights": [
+        48
+      ],
+      "arrowInsets": [
+        13
+      ],
+      "padding": [
+        "12px",
+        "12px"
+      ],
+      "fontSize": "16px",
+      "textAlign": "center",
+      "ellipsizedValues": []
+    },
+    {
+      "scenario": "bg-default",
+      "viewport": 900,
+      "overflow": false,
+      "pillWidth": 188.75,
+      "widthDifference": 0,
+      "heights": [
+        48
+      ],
+      "arrowInsets": [
+        13
+      ],
+      "padding": [
+        "12px",
+        "12px"
+      ],
+      "fontSize": "16px",
+      "textAlign": "center",
+      "ellipsizedValues": []
+    },
+    {
+      "scenario": "bg-default",
+      "viewport": 1024,
+      "overflow": false,
+      "pillWidth": 104.3,
+      "widthDifference": 0.02,
+      "heights": [
+        48
+      ],
+      "arrowInsets": [
+        13
+      ],
+      "padding": [
+        "12px",
+        "12px"
+      ],
+      "fontSize": "16px",
+      "textAlign": "center",
+      "ellipsizedValues": []
+    },
+    {
+      "scenario": "bg-default",
+      "viewport": 1440,
+      "overflow": false,
+      "pillWidth": 104.3,
+      "widthDifference": 0.02,
+      "heights": [
+        48
+      ],
+      "arrowInsets": [
+        13
+      ],
+      "padding": [
+        "12px",
+        "12px"
+      ],
+      "fontSize": "16px",
+      "textAlign": "center",
+      "ellipsizedValues": []
+    },
+    {
+      "scenario": "bg-default",
+      "viewport": 1920,
+      "overflow": false,
+      "pillWidth": 104.3,
+      "widthDifference": 0.02,
+      "heights": [
+        48
+      ],
+      "arrowInsets": [
+        13
+      ],
+      "padding": [
+        "12px",
+        "12px"
+      ],
+      "fontSize": "16px",
+      "textAlign": "center",
+      "ellipsizedValues": []
+    },
+    {
+      "scenario": "en-default",
+      "viewport": 768,
+      "overflow": false,
+      "pillWidth": 155.75,
+      "widthDifference": 0,
+      "heights": [
+        48
+      ],
+      "arrowInsets": [
+        13
+      ],
+      "padding": [
+        "12px",
+        "12px"
+      ],
+      "fontSize": "16px",
+      "textAlign": "center",
+      "ellipsizedValues": []
+    },
+    {
+      "scenario": "en-default",
+      "viewport": 1024,
+      "overflow": false,
+      "pillWidth": 112.98,
+      "widthDifference": 0.02,
+      "heights": [
+        48
+      ],
+      "arrowInsets": [
+        13
+      ],
+      "padding": [
+        "12px",
+        "12px"
+      ],
+      "fontSize": "16px",
+      "textAlign": "center",
+      "ellipsizedValues": []
+    },
+    {
+      "scenario": "en-default",
+      "viewport": 1440,
+      "overflow": false,
+      "pillWidth": 112.98,
+      "widthDifference": 0.02,
+      "heights": [
+        48
+      ],
+      "arrowInsets": [
+        13
+      ],
+      "padding": [
+        "12px",
+        "12px"
+      ],
+      "fontSize": "16px",
+      "textAlign": "center",
+      "ellipsizedValues": []
+    },
+    {
+      "scenario": "en-BMW-X3-ui-selected",
+      "viewport": 1024,
+      "overflow": false,
+      "pillWidth": 112.98,
+      "widthDifference": 0.02,
+      "heights": [
+        48
+      ],
+      "arrowInsets": [
+        13
+      ],
+      "padding": [
+        "12px",
+        "12px"
+      ],
+      "fontSize": "16px",
+      "textAlign": "center",
+      "ellipsizedValues": []
+    },
+    {
+      "scenario": "en-BMW-X3-ui-selected",
+      "viewport": 1440,
+      "overflow": false,
+      "pillWidth": 112.98,
+      "widthDifference": 0.02,
+      "heights": [
+        48
+      ],
+      "arrowInsets": [
+        13
+      ],
+      "padding": [
+        "12px",
+        "12px"
+      ],
+      "fontSize": "16px",
+      "textAlign": "center",
+      "ellipsizedValues": []
+    },
+    {
+      "scenario": "bg-multiple-makes-and-price",
+      "viewport": 1440,
+      "overflow": false,
+      "pillWidth": 104.3,
+      "widthDifference": 0.02,
+      "heights": [
+        48
+      ],
+      "arrowInsets": [
+        13
+      ],
+      "padding": [
+        "12px",
+        "12px"
+      ],
+      "fontSize": "16px",
+      "textAlign": "center",
+      "ellipsizedValues": [
+        "BMW + Audi",
+        "BMW X3",
+        "До 50 000 EUR"
+      ]
+    }
+  ],
+  "mobile": [
+    {
+      "desktopFilterRulesApplied": false,
+      "desktopRowVisible": false,
+      "overflow": false,
+      "width": 320
+    },
+    {
+      "desktopFilterRulesApplied": false,
+      "desktopRowVisible": false,
+      "overflow": false,
+      "width": 390
+    }
+  ],
+  "selectedUrl": "http://127.0.0.1:6790/en/inventory?sort=best-match&view=4&keyword=&brand=BMW&q=X3",
+  "escape": {
+    "dialogs": 0,
+    "focus": "Model: X3"
+  },
+  "longValues": [
+    {
+      "accessibleLabel": "Марка: BMW + Audi",
+      "text": "BMW + Audi",
+      "title": "BMW + Audi"
+    },
+    {
+      "accessibleLabel": "Модел: BMW X3",
+      "text": "BMW X3",
+      "title": "BMW X3"
+    },
+    {
+      "accessibleLabel": "Цена: До 50 000 EUR",
+      "text": "До 50 000 EUR",
+      "title": "До 50 000 EUR"
+    },
+    {
+      "accessibleLabel": "Пробег",
+      "text": "Пробег",
+      "title": "Пробег"
+    },
+    {
+      "accessibleLabel": "Гориво",
+      "text": "Гориво",
+      "title": "Гориво"
+    },
+    {
+      "accessibleLabel": "Купе",
+      "text": "Купе",
+      "title": "Купе"
+    }
+  ]
+}

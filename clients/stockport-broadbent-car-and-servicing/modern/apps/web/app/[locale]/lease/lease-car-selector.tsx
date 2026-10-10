@@ -1,0 +1,139 @@
+"use client";
+
+import {
+  MobileMarketplaceOverlay,
+  MobileMarketplaceOverlayCloseAction,
+} from "@repo/marketplace-ui";
+import { DealerUiIcon } from "@repo/marketplace-ui/components/dealer-ui-icon";
+import {
+  MobileMarketplaceOverlayField,
+  mobileMarketplaceOverlayFieldRowClassName,
+} from "@repo/marketplace-ui/components/mobile-marketplace-overlay";
+import {
+  mobileSearchIconClassName,
+  mobileSearchTriggerClassName,
+  mobileSearchTriggerLabelClassName,
+} from "@repo/marketplace-ui/lib/mobile-form-control";
+import { useRef, useState } from "react";
+import {
+  type FinancingVehicleOption,
+  leaseSelectorCopy,
+  searchLeaseVehicles,
+} from "./lease-finance-policy";
+import { LeaseSelectedVehicle } from "./lease-selected-vehicle";
+
+export function LeaseCarSelector({
+  locale,
+  vehicles,
+  selectedVehicle,
+  onSelect,
+}: {
+  locale: "bg" | "en";
+  vehicles: FinancingVehicleOption[];
+  selectedVehicle?: FinancingVehicleOption;
+  onSelect: (id: string) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const [query, setQuery] = useState("");
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const didSelect = useRef(false);
+  const copy = leaseSelectorCopy[locale];
+  const matches = searchLeaseVehicles(vehicles, query, locale);
+  return (
+    <>
+      <button
+        aria-haspopup="dialog"
+        className={`${mobileSearchTriggerClassName} bg-white ring-black/5 focus-visible:outline-ring active:bg-zinc-100`}
+        data-slot="lease-mobile-vehicle-trigger"
+        id="finance-vehicle"
+        onClick={() => {
+          setQuery("");
+          didSelect.current = false;
+          setOpen(true);
+        }}
+        ref={triggerRef}
+        type="button"
+      >
+        <DealerUiIcon className={mobileSearchIconClassName} name="search" />
+        <span className={mobileSearchTriggerLabelClassName}>
+          {selectedVehicle ? copy.changeVehicle : copy.vehicleLabel}
+        </span>
+        <DealerUiIcon
+          className={mobileSearchIconClassName}
+          name="chevronRight"
+        />
+      </button>
+      <MobileMarketplaceOverlay
+        bodyClassName="bg-zinc-50"
+        contentDataSlot="lease-car-selector"
+        description={copy.searchPlaceholder}
+        onCloseAutoFocus={(event) => {
+          event.preventDefault();
+          if (didSelect.current) {
+            document
+              .querySelector<HTMLElement>('[data-slot="lease-finance-action"]')
+              ?.focus({ preventScroll: true });
+          } else {
+            triggerRef.current?.focus({ preventScroll: true });
+          }
+        }}
+        onOpenChange={setOpen}
+        open={open}
+        rightAction={
+          <MobileMarketplaceOverlayCloseAction
+            ariaLabel={
+              locale === "bg" ? "Затвори избора" : "Close vehicle selection"
+            }
+          />
+        }
+        title={locale === "bg" ? "Избери" : "Choose"}
+      >
+        <div
+          className={`sticky top-0 z-10 ${mobileMarketplaceOverlayFieldRowClassName}`}
+        >
+          <MobileMarketplaceOverlayField
+            aria-label={copy.searchPlaceholder}
+            clearAction={{
+              label: locale === "bg" ? "Изчисти търсенето" : "Clear search",
+              onClear: () => setQuery(""),
+            }}
+            icon={
+              <DealerUiIcon
+                className="size-[18px] shrink-0 text-zinc-600"
+                name="search"
+              />
+            }
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder={copy.searchPlaceholder}
+            type="search"
+            value={query}
+          />
+        </div>
+        <div className="grid gap-2 p-4">
+          {matches.length ? (
+            matches.map((vehicle) => (
+              <LeaseSelectedVehicle
+                key={vehicle.id}
+                locale={locale}
+                onSelect={() => {
+                  didSelect.current = true;
+                  onSelect(vehicle.id);
+                  setOpen(false);
+                  window.scrollTo({ top: 0, behavior: "instant" });
+                }}
+                selected={selectedVehicle?.id === vehicle.id}
+                vehicle={vehicle}
+              />
+            ))
+          ) : (
+            <output className="py-8 text-center text-sm text-zinc-600">
+              {locale === "bg"
+                ? "Няма намерени автомобили. Опитайте друга марка или модел."
+                : "No vehicles found. Try another make or model."}
+            </output>
+          )}
+        </div>
+      </MobileMarketplaceOverlay>
+    </>
+  );
+}

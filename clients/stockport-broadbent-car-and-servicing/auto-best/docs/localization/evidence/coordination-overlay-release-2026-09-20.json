@@ -1,0 +1,69 @@
+{
+  "at": "2026-09-20T13:41:09.414Z",
+  "kind": "read-only-coordination-SSR-probe",
+  "base": "http://127.0.0.1:6462",
+  "buildHold": "released-by-overlay-peer",
+  "applicationEdits": false,
+  "buildPerformed": false,
+  "processLifecycleChanges": false,
+  "browserAcceptance": false,
+  "cssHashesBefore": {
+    "src/lib/components/home/VehicleQuickSearch.svelte": "1747d78ecaa38ff072ce9a2060f7e8707528fa1b79a80c454d70f8322090ae76",
+    "src/lib/components/listing/VehicleSearchDialog.svelte": "4a2e86d74265ab84bf5542e7177e1d7b03dd1b41f2ae58eb40f3d3e778fdce0d",
+    "src/lib/components/listing/QuickFilterSheet.svelte": "8f297dc4301edcfefe431369b33c8f1bcf694d9186bebf110d1cb8fddf2aba77",
+    "src/lib/components/company/EnquiryEntryField.svelte": "fe674c5f092fb1e37ad489c91fad24aeb9e1e8dc882cac01f21c5cf8d6740f8c",
+    "src/lib/styles/tokens.css": "0db2b0939a070a084cd56e9983ca23c9144c0682f7e1a7b5cef6fdeeb3b42dd7"
+  },
+  "cssHashesAfter": {
+    "src/lib/components/home/VehicleQuickSearch.svelte": "1747d78ecaa38ff072ce9a2060f7e8707528fa1b79a80c454d70f8322090ae76",
+    "src/lib/components/listing/VehicleSearchDialog.svelte": "4a2e86d74265ab84bf5542e7177e1d7b03dd1b41f2ae58eb40f3d3e778fdce0d",
+    "src/lib/components/listing/QuickFilterSheet.svelte": "8f297dc4301edcfefe431369b33c8f1bcf694d9186bebf110d1cb8fddf2aba77",
+    "src/lib/components/company/EnquiryEntryField.svelte": "fe674c5f092fb1e37ad489c91fad24aeb9e1e8dc882cac01f21c5cf8d6740f8c",
+    "src/lib/styles/tokens.css": "0db2b0939a070a084cd56e9983ca23c9144c0682f7e1a7b5cef6fdeeb3b42dd7"
+  },
+  "cssStableDuringProbe": true,
+  "results": [
+    {
+      "path": "/en/contact?topic=trade-in",
+      "status": 200,
+      "lang": "en",
+      "title": "Contact — Auto Best",
+      "genericInternalError": false
+    },
+    {
+      "path": "/bg/contact?topic=trade-in",
+      "status": 200,
+      "lang": "bg",
+      "title": "Контакти — Auto Best",
+      "genericInternalError": false
+    },
+    {
+      "path": "/en/listing-grid",
+      "status": 200,
+      "lang": "en",
+      "title": "Demo inventory — Auto Best",
+      "genericInternalError": false
+    },
+    {
+      "path": "/bg/listing-grid",
+      "status": 200,
+      "lang": "bg",
+      "title": "Примерни автомобили — Auto Best",
+      "genericInternalError": false
+    },
+    {
+      "path": "/en/contact?topic=import",
+      "status": 200,
+      "lang": "en",
+      "title": "Import enquiry demo — Auto Best",
+      "genericInternalError": false
+    },
+    {
+      "path": "/bg/contact?topic=import",
+      "status": 200,
+      "lang": "bg",
+      "title": "Демонстрация на запитване за внос — Auto Best",
+      "genericInternalError": false
+    }
+  ]
+}

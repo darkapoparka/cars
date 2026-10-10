@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "client": "stockport-broadbent-car-and-servicing",
+  "templateKey": "karento-best",
+  "templateVersion": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+  "createdAt": "2026-10-10T10:27:34.673Z",
+  "state": "personalized-needs-build",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": "gb-stockport-broadbent-car-and-servicing",
+    "demoProjectId": null,
+    "registered": false
+  },
+  "templateSource": {
+    "repository": "darkapoparka/cars",
+    "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+    "path": "templates/karento-best",
+    "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
+    "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "5",
+    "entry": "/variant-6/"
+  },
+  "workflowCommit": "70ecf182c266225b9413e59a4a402d9e8e2834a0",
+  "hosting": {
+    "provider": "cloudflare",
+    "status": "not-deployed"
+  },
+  "readyToPublish": false
+}

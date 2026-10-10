@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "client": "stockport-broadbent-car-and-servicing",
+  "state": "personalized-needs-build",
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": "gb-stockport-broadbent-car-and-servicing",
+    "demoProjectId": null,
+    "registered": false
+  },
+  "hosting": {
+    "provider": "cloudflare",
+    "status": "not-deployed"
+  },
+  "readyToPublish": false,
+  "sourceOwnership": "cars-canonical",
+  "repository": "darkapoparka/cars-uk-stockport-broadbent-car-and-servicing",
+  "designSet": "six",
+  "workflowCommit": "70ecf182c266225b9413e59a4a402d9e8e2834a0",
+  "templateRevisions": {
+    "auto-best": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+    "modern": "827d75b9a53666c6feb09f04e3f8e7f255e95a30",
+    "import": "a51f329b0b9e8e4d21665e16abf2734505d02e07",
+    "app": "70c2b80671e217ab299549a938a537c0b9559611",
+    "mobile": "876590474d01178413feccf3153a0859230158a1",
+    "karento-best": "cc130e432a41a3a60cc80bc2b3461c6416893b4a"
+  }
+}

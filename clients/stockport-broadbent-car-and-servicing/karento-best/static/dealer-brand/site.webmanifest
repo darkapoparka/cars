@@ -1,0 +1,20 @@
+{
+  "id": "../",
+  "name": "Broadbent Car and Servicing",
+  "short_name": "Broadbent Car and Servicing",
+  "description": "Independent design preview for discussion, not an official dealership website. Forms do not send messages or create reservations.",
+  "lang": "en",
+  "start_url": "../",
+  "scope": "../",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#C21C2A",
+  "icons": [
+    {
+      "src": "app-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

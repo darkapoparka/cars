@@ -1,0 +1,197 @@
+{
+  "date": "2026-10-03",
+  "baseHeadAtVerification": "5b111b173b058c8da9910833d93b6ecec490ddd5",
+  "sourceState": "working tree with preserved unrelated changes",
+  "runtime": "v22.20.0",
+  "font": "Inter Variable v4.1 unchanged",
+  "icons": {
+    "family": "Microsoft Fluent System Icons",
+    "style": "Regular",
+    "nativeSize": 24,
+    "commit": "a563cf9166f4f91aa617557ed272612b7f0a2f72"
+  },
+  "build": {
+    "command": "npm run validate",
+    "passed": true,
+    "svelteErrors": 0,
+    "svelteWarnings": 0
+  },
+  "browser": {
+    "manualOrigin": "http://127.0.0.1:6461",
+    "productionOrigin": "http://127.0.0.1:6498",
+    "matchedViews": [
+      "BG Home 390x844",
+      "BG Menu 390x844"
+    ],
+    "additionalViews": [
+      "BG Home 320x844",
+      "EN Home 390x844"
+    ],
+    "geometry": "Official native paths; currentColor paint; Regular in every selection state"
+  },
+  "suites": [
+    {
+      "script": "scripts/mobile-polish-smoke.mjs",
+      "generatedAt": "2026-10-03T19:31:10.880Z",
+      "base": "http://127.0.0.1:6498",
+      "results": [
+        {
+          "name": "bg mobile polish 320",
+          "passed": true,
+          "evidence": {
+            "locale": "bg",
+            "width": 320,
+            "passed": true
+          },
+          "durationMs": 13042
+        },
+        {
+          "name": "bg mobile polish 390",
+          "passed": true,
+          "evidence": {
+            "locale": "bg",
+            "width": 390,
+            "passed": true
+          },
+          "durationMs": 7956
+        },
+        {
+          "name": "bg mobile polish 430",
+          "passed": true,
+          "evidence": {
+            "locale": "bg",
+            "width": 430,
+            "passed": true
+          },
+          "durationMs": 8349
+        },
+        {
+          "name": "bg mobile polish 1440",
+          "passed": true,
+          "evidence": {
+            "locale": "bg",
+            "width": 1440,
+            "passed": true
+          },
+          "durationMs": 4979
+        },
+        {
+          "name": "en mobile polish 320",
+          "passed": true,
+          "evidence": {
+            "locale": "en",
+            "width": 320,
+            "passed": true
+          },
+          "durationMs": 11350
+        },
+        {
+          "name": "en mobile polish 390",
+          "passed": true,
+          "evidence": {
+            "locale": "en",
+            "width": 390,
+            "passed": true
+          },
+          "durationMs": 9409
+        },
+        {
+          "name": "en mobile polish 430",
+          "passed": true,
+          "evidence": {
+            "locale": "en",
+            "width": 430,
+            "passed": true
+          },
+          "durationMs": 8496
+        },
+        {
+          "name": "en mobile polish 1440",
+          "passed": true,
+          "evidence": {
+            "locale": "en",
+            "width": 1440,
+            "passed": true
+          },
+          "durationMs": 4586
+        }
+      ]
+    },
+    {
+      "script": "scripts/mobile-final-smoke.mjs",
+      "generatedAt": "2026-10-03T19:31:10.908Z",
+      "base": "http://127.0.0.1:6498",
+      "results": [
+        {
+          "name": "en 320: enlarged text, motion, focus and image loading",
+          "passed": true,
+          "evidence": {
+            "cards": 4,
+            "enlargedText": "200%",
+            "hiddenDock": "inert",
+            "reducedMotion": true
+          },
+          "durationMs": 3268
+        },
+        {
+          "name": "en 390: enlarged text, motion, focus and image loading",
+          "passed": true,
+          "evidence": {
+            "cards": 4,
+            "enlargedText": "200%",
+            "hiddenDock": "inert",
+            "reducedMotion": true
+          },
+          "durationMs": 3019
+        },
+        {
+          "name": "en 430: enlarged text, motion, focus and image loading",
+          "passed": true,
+          "evidence": {
+            "cards": 4,
+            "enlargedText": "200%",
+            "hiddenDock": "inert",
+            "reducedMotion": true
+          },
+          "durationMs": 2924
+        },
+        {
+          "name": "bg 320: enlarged text, motion, focus and image loading",
+          "passed": true,
+          "evidence": {
+            "cards": 4,
+            "enlargedText": "200%",
+            "hiddenDock": "inert",
+            "reducedMotion": true
+          },
+          "durationMs": 3008
+        },
+        {
+          "name": "bg 390: enlarged text, motion, focus and image loading",
+          "passed": true,
+          "evidence": {
+            "cards": 4,
+            "enlargedText": "200%",
+            "hiddenDock": "inert",
+            "reducedMotion": true
+          },
+          "durationMs": 2853
+        },
+        {
+          "name": "bg 430: enlarged text, motion, focus and image loading",
+          "passed": true,
+          "evidence": {
+            "cards": 4,
+            "enlargedText": "200%",
+            "hiddenDock": "inert",
+            "reducedMotion": true
+          },
+          "durationMs": 2625
+        }
+      ]
+    }
+  ],
+  "ownerAcceptance": "pending owner visual review",
+  "templateRelease": "not requested",
+  "dealerDeployment": "not requested"
+}

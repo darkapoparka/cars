@@ -1,0 +1,173 @@
+{
+	"date": "2026-10-04",
+	"responsive": {
+		"before": {
+			"states": 24,
+			"failures": 0,
+			"path": "L:/CODEX/cars/templates/import/runtime/desktop-discovery-type-2026-10-04/evidence/before-matrix.json",
+			"sha256": "52d88fd84f60efb0a18f84f7230dc322bccb4579a88a6d1a2b4cc276407b7bc4"
+		},
+		"after": {
+			"states": 48,
+			"failures": 0,
+			"path": "L:/CODEX/cars/templates/import/runtime/desktop-discovery-type-2026-10-04/evidence/after-matrix.json",
+			"sha256": "94b2533b3dd273cd719de929dfd7adb936d6972ed7a806edc23bf4016438d203"
+		},
+		"production": {
+			"states": 8,
+			"failures": 0,
+			"path": "L:/CODEX/cars/templates/import/runtime/desktop-discovery-type-2026-10-04/evidence/production-matrix.json",
+			"sha256": "a589f226c41bd4b36a8f82ee51348a1916613d9e98c3d467f03d704f3aeba884"
+		}
+	},
+	"typography": {
+		"beforeStates": 66,
+		"afterStates": 66,
+		"productionStates": 88,
+		"checkedEntryAndTabControls": 168,
+		"routes": [
+			"home",
+			"inventory",
+			"services",
+			"about",
+			"contact",
+			"sell-your-car",
+			"import",
+			"financing"
+		],
+		"widths": [768, 1024, 1440, 1920],
+		"locales": ["bg", "en"],
+		"productionPath": "L:/CODEX/cars/templates/import/runtime/desktop-discovery-type-2026-10-04/evidence/production-type.json",
+		"sha256": "806b802afb174a902c948dfc3cac65dd08c3409a1b7464a181de9edecdb41152"
+	},
+	"mobile": {
+		"matched": 16,
+		"pixelsIdentical": true,
+		"presentationIdentical": true,
+		"path": "L:/CODEX/cars/templates/import/runtime/desktop-discovery-type-2026-10-04/evidence/mobile-comparison.json",
+		"sha256": "3454d2e92bb36e575e290013ed5fa0f95a9b6d65d0726290bd2a16c31aa704b4"
+	},
+	"productionProbe": {
+		"modeStates": 32,
+		"keyboardCases": 32,
+		"accessibility": 8,
+		"noJavaScript": 2,
+		"selectionPreservedOnInactiveHover": true,
+		"noInactiveHoverUnderline": true,
+		"mobileArtworkRequests": [
+			{
+				"locale": "bg",
+				"width": 320,
+				"requested": []
+			},
+			{
+				"locale": "bg",
+				"width": 390,
+				"requested": []
+			},
+			{
+				"locale": "en",
+				"width": 320,
+				"requested": []
+			},
+			{
+				"locale": "en",
+				"width": 390,
+				"requested": []
+			}
+		],
+		"path": "L:/CODEX/cars/templates/import/runtime/desktop-discovery-type-2026-10-04/evidence/probe.json"
+	},
+	"forms": {
+		"states": 12,
+		"values": 36,
+		"failures": 0,
+		"path": "L:/CODEX/cars/templates/import/runtime/desktop-discovery-type-2026-10-04/evidence/forms.json"
+	},
+	"browser": {
+		"startTime": "2026-10-03T23:38:19.390Z",
+		"duration": 62022.5,
+		"expected": 9,
+		"skipped": 3,
+		"unexpected": 0,
+		"flaky": 0
+	},
+	"gallery": {
+		"states": 36,
+		"failures": 0,
+		"path": "L:/CODEX/cars/templates/import/runtime/desktop-discovery-type-2026-10-04/evidence/gallery.json"
+	},
+	"gates": [
+		{
+			"name": "svelte",
+			"exitCode": 0,
+			"log": "C:/Users/radev/.codex/tmp/cars-import-discovery-type-2026-10-04/qa/runtime/svelte.log",
+			"logSha256": "e6fa62d083f735b2ce90c40daedef1f8cd4c42936688f64ea8375b5c488c19e5"
+		},
+		{
+			"name": "scoped-format",
+			"exitCode": 0,
+			"log": "C:/Users/radev/.codex/tmp/cars-import-discovery-type-2026-10-04/qa/runtime/scoped-format.log",
+			"logSha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+		},
+		{
+			"name": "full-format",
+			"exitCode": 1,
+			"log": "C:/Users/radev/.codex/tmp/cars-import-discovery-type-2026-10-04/qa/runtime/full-format.log",
+			"logSha256": "f190e6f90f0c2369386737332d8993b118c41ef3f37fe55be3d9e268f13d28c2"
+		},
+		{
+			"name": "full-lint",
+			"exitCode": 0,
+			"log": "C:/Users/radev/.codex/tmp/cars-import-discovery-type-2026-10-04/qa/runtime/full-lint.log",
+			"logSha256": "ddefde2c1fec4a2f883d2deed235be018316249ceaa26b8412c8718b4e19fb56"
+		},
+		{
+			"name": "architecture",
+			"exitCode": 0,
+			"log": "C:/Users/radev/.codex/tmp/cars-import-discovery-type-2026-10-04/qa/runtime/architecture.log",
+			"logSha256": "8fa1e36a40640167c8c47f239147570688c88beec18cce162a4799d5d5a73a54"
+		},
+		{
+			"name": "assets",
+			"exitCode": 0,
+			"log": "C:/Users/radev/.codex/tmp/cars-import-discovery-type-2026-10-04/qa/runtime/assets.log",
+			"logSha256": "8afcd43fe41d19ee3aae69db38486278776a5179a2c9e7d20a3c6d1c9be31456"
+		},
+		{
+			"name": "build",
+			"exitCode": 0,
+			"log": "C:/Users/radev/.codex/tmp/cars-import-discovery-type-2026-10-04/qa/runtime/build.log",
+			"logSha256": "7fbb8595e78b6fe705963f6cb302f5b4b879093b8085c21fcbffb1520a233732"
+		}
+	],
+	"screenshots": [
+		{
+			"path": "before-buy.png",
+			"source": "L:/CODEX/cars/templates/import/runtime/desktop-discovery-type-2026-10-04/evidence/before/box-buy-bg.png",
+			"sha256": "2a61ebe9d9102bf39a9738d38c0984d335312fe4e93601f1f07c7a565655d0dd"
+		},
+		{
+			"path": "after-buy.png",
+			"source": "L:/CODEX/cars/templates/import/runtime/desktop-discovery-type-2026-10-04/evidence/production/box-buy-bg.png",
+			"sha256": "c7846f0ef0e62d2a257e3dd738e2b45c71948abafcbb0b16e49de06995ecb6a4"
+		},
+		{
+			"path": "before-import.png",
+			"source": "L:/CODEX/cars/templates/import/runtime/desktop-discovery-type-2026-10-04/evidence/before/box-import-bg.png",
+			"sha256": "b818363886ef8261de82825dcd5770fdb3047cc8bac9ea764447b4117c2bc4de"
+		},
+		{
+			"path": "after-import.png",
+			"source": "L:/CODEX/cars/templates/import/runtime/desktop-discovery-type-2026-10-04/evidence/production/box-import-bg.png",
+			"sha256": "8032e688e4865acdc58e1830dc5d9774d5d2905b0f26d14fda658cc1ab56175f"
+		},
+		{
+			"path": "hover-current.png",
+			"source": "L:/CODEX/cars/templates/import/runtime/desktop-discovery-type-2026-10-04/evidence/hover-current.png",
+			"sha256": "e997f862f9ea855dc08912abd13390ca5b02e057ba697b1edc87f1264b36296c"
+		}
+	],
+	"unitTests": "Not repeated for this CSS typography follow-up; domain, copy and query rules remain unchanged.",
+	"qaRoot": "C:/Users/radev/.codex/tmp/cars-import-discovery-type-2026-10-04/qa"
+}

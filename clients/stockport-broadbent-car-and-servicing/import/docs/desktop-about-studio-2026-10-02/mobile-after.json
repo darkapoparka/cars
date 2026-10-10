@@ -1,0 +1,2762 @@
+[
+	{
+		"locale": "bg",
+		"elements": [
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/hero/about-daynight-process-banner.webp",
+				"rect": [0, 0, 320, 260],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "flex",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "/bg",
+				"rect": [16, 4, 170, 48],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/brand/daynight-logo-generated-600.webp",
+				"rect": [16, 4.063, 168, 47.875],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+				"rect": [264, 6, 44, 44],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "999px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"32px"
+				],
+				"href": null,
+				"rect": [14, 68, 292, 32],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "H1",
+				"text": "За нас"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [14, 108, 292, 48],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(196, 199, 203)", "0px"],
+				"tag": "P",
+				"text": "Подбор, внос и проверка на автомобили."
+			},
+			{
+				"display": "flex",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"400",
+					"24.75px"
+				],
+				"href": "/bg/inventory",
+				"rect": [14, 172, 140, 48],
+				"surface": ["rgb(245, 247, 249)", "rgba(0, 0, 0, 0)", "999px"],
+				"tag": "A",
+				"text": "Коли"
+			},
+			{
+				"display": "flex",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"400",
+					"24.75px"
+				],
+				"href": "/bg/contact",
+				"rect": [166, 172, 140, 48],
+				"surface": ["rgba(255, 255, 255, 0.12)", "rgba(255, 255, 255, 0.4)", "999px"],
+				"tag": "A",
+				"text": "Контакти"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"22px",
+					"600",
+					"28px"
+				],
+				"href": null,
+				"rect": [100.781, 276, 118.438, 28],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H2",
+				"text": "Как работим"
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [14, 320, 292, 386],
+				"surface": ["rgb(255, 255, 255)", "rgb(216, 221, 227)", "16px"],
+				"tag": "OL",
+				"text": "1 Заявка Изпрати линк, VIN или предпочитан модел.2 Проверка Проверяваме история, документи и разходи.3 Решение Обсъждаме автомобила и крайните разходи.4 Оглед и предаване Уговаряме оглед, документи и предаване."
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [31, 337, 258, 76],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "16px"],
+				"tag": "LI",
+				"text": "1 Заявка Изпрати линк, VIN или предпочитан модел."
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 337, 206, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Заявка"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 365, 206, 48],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Изпрати линк, VIN или предпочитан модел."
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [31, 429, 258, 76],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "16px"],
+				"tag": "LI",
+				"text": "2 Проверка Проверяваме история, документи и разходи."
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 429, 206, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Проверка"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 457, 206, 48],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Проверяваме история, документи и разходи."
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [31, 521, 258, 76],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "16px"],
+				"tag": "LI",
+				"text": "3 Решение Обсъждаме автомобила и крайните разходи."
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 521, 206, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Решение"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 549, 206, 48],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Обсъждаме автомобила и крайните разходи."
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [31, 613, 258, 76],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "16px"],
+				"tag": "LI",
+				"text": "4 Оглед и предаване Уговаряме оглед, документи и предаване."
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 613, 206, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Оглед и предаване"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 641, 206, 48],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Уговаряме оглед, документи и предаване."
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"22px",
+					"600",
+					"28px"
+				],
+				"href": null,
+				"rect": [124.688, 738, 70.609, 28],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H2",
+				"text": "Екипът"
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [14, 782, 292, 166],
+				"surface": ["rgb(255, 255, 255)", "rgb(216, 221, 227)", "16px"],
+				"tag": "ARTICLE",
+				"text": "Кристиян Кирилов Изпълнителен директор · CEO"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/team/kristian-kirilov-public.jpg",
+				"rect": [31, 833, 64, 64],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "999px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [107, 799, 140.375, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Кристиян Кирилов"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [107, 827, 182, 52],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Изпълнителен директор · CEO"
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "https://www.instagram.com/kristiankirilov13/",
+				"rect": [107, 883, 48, 48],
+				"surface": ["rgb(245, 247, 249)", "rgb(23, 25, 28)", "999px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/icons/brands/instagram.svg",
+				"rect": [119, 895, 24, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [14, 960, 292, 114],
+				"surface": ["rgb(255, 255, 255)", "rgb(216, 221, 227)", "16px"],
+				"tag": "ARTICLE",
+				"text": "Мария Петрова Продажби и огледи · Демо профил"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/team/demo-mariya.png",
+				"rect": [31, 985, 64, 64],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "999px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [107, 977, 117.984, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Мария Петрова"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [107, 1005, 182, 52],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Продажби и огледи · Демо профил"
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [14, 1086, 292, 114],
+				"surface": ["rgb(255, 255, 255)", "rgb(216, 221, 227)", "16px"],
+				"tag": "ARTICLE",
+				"text": "Александър Иванов Внос и консултации · Демо профил"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/team/demo-aleksandar.png",
+				"rect": [31, 1111, 64, 64],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "999px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [107, 1103, 143.375, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Александър Иванов"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [107, 1131, 182, 52],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Внос и консултации · Демо профил"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/banners/contact-cta-mobile-v1-small.webp",
+				"rect": [14, 1232, 292, 188],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"22px",
+					"600",
+					"28px"
+				],
+				"href": null,
+				"rect": [30, 1252, 260, 56],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "H2",
+				"text": "Посети Day Night Auto Group"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [30, 1316, 260, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "P",
+				"text": "гр. София, Студентски град, ул. Атанас Манчев 18Огледи с предварителна уговорка"
+			},
+			{
+				"display": "flex",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"22px"
+				],
+				"href": "tel:0877733110",
+				"rect": [30, 1356, 117.969, 44],
+				"surface": ["rgb(185, 22, 28)", "rgba(0, 0, 0, 0)", "999px"],
+				"tag": "A",
+				"text": "0877 733 110Обади се"
+			},
+			{
+				"display": "flex",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"22px"
+				],
+				"href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+				"rect": [155.969, 1356, 101.203, 44],
+				"surface": ["rgb(245, 247, 249)", "rgba(0, 0, 0, 0)", "999px"],
+				"tag": "A",
+				"text": "Как да стигнешКарта"
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "https://www.facebook.com/deninoshtautogroup/?locale=bg_BG",
+				"rect": [76, 1444, 48, 48],
+				"surface": ["rgb(245, 247, 249)", "rgb(23, 25, 28)", "999px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/icons/brands/facebook.svg",
+				"rect": [88, 1456, 24, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "https://www.instagram.com/kristiankirilov13/",
+				"rect": [136, 1444, 48, 48],
+				"surface": ["rgb(245, 247, 249)", "rgb(23, 25, 28)", "999px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/icons/brands/instagram.svg",
+				"rect": [148, 1456, 24, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "https://www.tiktok.com/@kristiankirilov13",
+				"rect": [196, 1444, 48, 48],
+				"surface": ["rgb(245, 247, 249)", "rgb(23, 25, 28)", "999px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/icons/brands/tiktok.svg",
+				"rect": [208, 1456, 24, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			}
+		],
+		"scrollWidth": 320,
+		"text": "Към съдържанието\nЗа нас\n\nПодбор, внос и проверка на автомобили.\n\nКоли\nКонтакти\nКак работим\n1\nЗаявка\n\nИзпрати линк, VIN или предпочитан модел.\n\n2\nПроверка\n\nПроверяваме история, документи и разходи.\n\n3\nРешение\n\nОбсъждаме автомобила и крайните разходи.\n\n4\nОглед и предаване\n\nУговаряме оглед, документи и предаване.\n\nЕкипът\nКристиян Кирилов\n\nИзпълнителен директор · CEO\n\nМария Петрова\n\nПродажби и огледи · Демо профил\n\nАлександър Иванов\n\nВнос и консултации · Демо профил\n\nПосети Day Night Auto Group\n\nОгледи с предварителна уговорка\n\nОбади се\nКарта\nНачало\nКоли\nПродай\nВнос\nМеню",
+		"width": 320
+	},
+	{
+		"locale": "bg",
+		"elements": [
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/hero/about-daynight-process-banner.webp",
+				"rect": [0, 0, 390, 236],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "flex",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "/bg",
+				"rect": [16, 4, 170, 48],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/brand/daynight-logo-generated-600.webp",
+				"rect": [16, 4.063, 168, 47.875],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+				"rect": [334, 6, 44, 44],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "999px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"32px"
+				],
+				"href": null,
+				"rect": [14, 68, 362, 32],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "H1",
+				"text": "За нас"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [14, 108, 362, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(196, 199, 203)", "0px"],
+				"tag": "P",
+				"text": "Подбор, внос и проверка на автомобили."
+			},
+			{
+				"display": "flex",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"400",
+					"24.75px"
+				],
+				"href": "/bg/inventory",
+				"rect": [14, 148, 175, 48],
+				"surface": ["rgb(245, 247, 249)", "rgba(0, 0, 0, 0)", "999px"],
+				"tag": "A",
+				"text": "Коли"
+			},
+			{
+				"display": "flex",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"400",
+					"24.75px"
+				],
+				"href": "/bg/contact",
+				"rect": [201, 148, 175, 48],
+				"surface": ["rgba(255, 255, 255, 0.12)", "rgba(255, 255, 255, 0.4)", "999px"],
+				"tag": "A",
+				"text": "Контакти"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"22px",
+					"600",
+					"28px"
+				],
+				"href": null,
+				"rect": [135.781, 252, 118.438, 28],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H2",
+				"text": "Как работим"
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [14, 296, 362, 386],
+				"surface": ["rgb(255, 255, 255)", "rgb(216, 221, 227)", "16px"],
+				"tag": "OL",
+				"text": "1 Заявка Изпрати линк, VIN или предпочитан модел.2 Проверка Проверяваме история, документи и разходи.3 Решение Обсъждаме автомобила и крайните разходи.4 Оглед и предаване Уговаряме оглед, документи и предаване."
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [31, 313, 328, 76],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "16px"],
+				"tag": "LI",
+				"text": "1 Заявка Изпрати линк, VIN или предпочитан модел."
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 313, 276, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Заявка"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 341, 276, 48],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Изпрати линк, VIN или предпочитан модел."
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [31, 405, 328, 76],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "16px"],
+				"tag": "LI",
+				"text": "2 Проверка Проверяваме история, документи и разходи."
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 405, 276, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Проверка"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 433, 276, 48],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Проверяваме история, документи и разходи."
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [31, 497, 328, 76],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "16px"],
+				"tag": "LI",
+				"text": "3 Решение Обсъждаме автомобила и крайните разходи."
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 497, 276, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Решение"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 525, 276, 48],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Обсъждаме автомобила и крайните разходи."
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [31, 589, 328, 76],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "16px"],
+				"tag": "LI",
+				"text": "4 Оглед и предаване Уговаряме оглед, документи и предаване."
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 589, 276, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Оглед и предаване"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 617, 276, 48],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Уговаряме оглед, документи и предаване."
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"22px",
+					"600",
+					"28px"
+				],
+				"href": null,
+				"rect": [159.688, 714, 70.609, 28],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H2",
+				"text": "Екипът"
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [14, 758, 362, 140],
+				"surface": ["rgb(255, 255, 255)", "rgb(216, 221, 227)", "16px"],
+				"tag": "ARTICLE",
+				"text": "Кристиян Кирилов Изпълнителен директор · CEO"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/team/kristian-kirilov-public.jpg",
+				"rect": [31, 796, 64, 64],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "999px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [107, 775, 140.375, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Кристиян Кирилов"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [107, 803, 221.703, 26],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Изпълнителен директор · CEO"
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "https://www.instagram.com/kristiankirilov13/",
+				"rect": [107, 833, 48, 48],
+				"surface": ["rgb(245, 247, 249)", "rgb(23, 25, 28)", "999px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/icons/brands/instagram.svg",
+				"rect": [119, 845, 24, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [14, 910, 362, 98],
+				"surface": ["rgb(255, 255, 255)", "rgb(216, 221, 227)", "16px"],
+				"tag": "ARTICLE",
+				"text": "Мария Петрова Продажби и огледи · Демо профил"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/team/demo-mariya.png",
+				"rect": [31, 927, 64, 64],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "999px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [107, 932, 117.984, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Мария Петрова"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [107, 960, 241.109, 26],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Продажби и огледи · Демо профил"
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [14, 1020, 362, 98],
+				"surface": ["rgb(255, 255, 255)", "rgb(216, 221, 227)", "16px"],
+				"tag": "ARTICLE",
+				"text": "Александър Иванов Внос и консултации · Демо профил"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/team/demo-aleksandar.png",
+				"rect": [31, 1037, 64, 64],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "999px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [107, 1042, 143.375, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Александър Иванов"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [107, 1070, 249.328, 26],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Внос и консултации · Демо профил"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/banners/contact-cta-mobile-v1.webp",
+				"rect": [14, 1150, 362, 160],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"22px",
+					"600",
+					"28px"
+				],
+				"href": null,
+				"rect": [30, 1170, 330, 28],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "H2",
+				"text": "Посети Day Night Auto Group"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [30, 1206, 330, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "P",
+				"text": "гр. София, Студентски град, ул. Атанас Манчев 18Огледи с предварителна уговорка"
+			},
+			{
+				"display": "flex",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"22px"
+				],
+				"href": "tel:0877733110",
+				"rect": [30, 1246, 117.969, 44],
+				"surface": ["rgb(185, 22, 28)", "rgba(0, 0, 0, 0)", "999px"],
+				"tag": "A",
+				"text": "0877 733 110Обади се"
+			},
+			{
+				"display": "flex",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"22px"
+				],
+				"href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+				"rect": [155.969, 1246, 101.203, 44],
+				"surface": ["rgb(245, 247, 249)", "rgba(0, 0, 0, 0)", "999px"],
+				"tag": "A",
+				"text": "Как да стигнешКарта"
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "https://www.facebook.com/deninoshtautogroup/?locale=bg_BG",
+				"rect": [111, 1334, 48, 48],
+				"surface": ["rgb(245, 247, 249)", "rgb(23, 25, 28)", "999px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/icons/brands/facebook.svg",
+				"rect": [123, 1346, 24, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "https://www.instagram.com/kristiankirilov13/",
+				"rect": [171, 1334, 48, 48],
+				"surface": ["rgb(245, 247, 249)", "rgb(23, 25, 28)", "999px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/icons/brands/instagram.svg",
+				"rect": [183, 1346, 24, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "https://www.tiktok.com/@kristiankirilov13",
+				"rect": [231, 1334, 48, 48],
+				"surface": ["rgb(245, 247, 249)", "rgb(23, 25, 28)", "999px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/icons/brands/tiktok.svg",
+				"rect": [243, 1346, 24, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			}
+		],
+		"scrollWidth": 390,
+		"text": "Към съдържанието\nЗа нас\n\nПодбор, внос и проверка на автомобили.\n\nКоли\nКонтакти\nКак работим\n1\nЗаявка\n\nИзпрати линк, VIN или предпочитан модел.\n\n2\nПроверка\n\nПроверяваме история, документи и разходи.\n\n3\nРешение\n\nОбсъждаме автомобила и крайните разходи.\n\n4\nОглед и предаване\n\nУговаряме оглед, документи и предаване.\n\nЕкипът\nКристиян Кирилов\n\nИзпълнителен директор · CEO\n\nМария Петрова\n\nПродажби и огледи · Демо профил\n\nАлександър Иванов\n\nВнос и консултации · Демо профил\n\nПосети Day Night Auto Group\n\nОгледи с предварителна уговорка\n\nОбади се\nКарта\nНачало\nКоли\nПродай\nВнос\nМеню",
+		"width": 390
+	},
+	{
+		"locale": "en",
+		"elements": [
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/hero/about-daynight-process-banner.webp",
+				"rect": [0, 0, 320, 260],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "flex",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "/en?lang=en",
+				"rect": [16, 4, 170, 48],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/brand/daynight-logo-generated-600.webp",
+				"rect": [16, 4.063, 168, 47.875],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+				"rect": [264, 6, 44, 44],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "999px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"32px"
+				],
+				"href": null,
+				"rect": [14, 68, 292, 32],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "H1",
+				"text": "About us"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [14, 108, 292, 48],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(196, 199, 203)", "0px"],
+				"tag": "P",
+				"text": "Car sourcing, import and checks before you buy."
+			},
+			{
+				"display": "flex",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"400",
+					"24.75px"
+				],
+				"href": "/en/inventory",
+				"rect": [14, 172, 140, 48],
+				"surface": ["rgb(245, 247, 249)", "rgba(0, 0, 0, 0)", "999px"],
+				"tag": "A",
+				"text": "Cars"
+			},
+			{
+				"display": "flex",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"400",
+					"24.75px"
+				],
+				"href": "/en/contact",
+				"rect": [166, 172, 140, 48],
+				"surface": ["rgba(255, 255, 255, 0.12)", "rgba(255, 255, 255, 0.4)", "999px"],
+				"tag": "A",
+				"text": "Contact"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"22px",
+					"600",
+					"28px"
+				],
+				"href": null,
+				"rect": [103.047, 276, 113.906, 28],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H2",
+				"text": "How we work"
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [14, 320, 292, 386],
+				"surface": ["rgb(255, 255, 255)", "rgb(216, 221, 227)", "16px"],
+				"tag": "OL",
+				"text": "1 Request Send a listing, VIN or the model you want.2 Review Review the history, documents and costs.3 Decision Discuss the car and its total cost.4 Viewing and handover Arrange viewing, documents and handover."
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [31, 337, 258, 76],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "16px"],
+				"tag": "LI",
+				"text": "1 Request Send a listing, VIN or the model you want."
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 337, 206, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Request"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 365, 206, 48],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Send a listing, VIN or the model you want."
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [31, 429, 258, 76],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "16px"],
+				"tag": "LI",
+				"text": "2 Review Review the history, documents and costs."
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 429, 206, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Review"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 457, 206, 48],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Review the history, documents and costs."
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [31, 521, 258, 76],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "16px"],
+				"tag": "LI",
+				"text": "3 Decision Discuss the car and its total cost."
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 521, 206, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Decision"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 549, 206, 48],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Discuss the car and its total cost."
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [31, 613, 258, 76],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "16px"],
+				"tag": "LI",
+				"text": "4 Viewing and handover Arrange viewing, documents and handover."
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 613, 206, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Viewing and handover"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 641, 206, 48],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Arrange viewing, documents and handover."
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"22px",
+					"600",
+					"28px"
+				],
+				"href": null,
+				"rect": [119.563, 738, 80.875, 28],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H2",
+				"text": "The team"
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [14, 782, 292, 166],
+				"surface": ["rgb(255, 255, 255)", "rgb(216, 221, 227)", "16px"],
+				"tag": "ARTICLE",
+				"text": "Кристиян Кирилов Chief Executive Officer · CEO"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/team/kristian-kirilov-public.jpg",
+				"rect": [31, 833, 64, 64],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "999px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [107, 799, 140.375, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Кристиян Кирилов"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [107, 827, 182, 52],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Chief Executive Officer · CEO"
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "https://www.instagram.com/kristiankirilov13/",
+				"rect": [107, 883, 48, 48],
+				"surface": ["rgb(245, 247, 249)", "rgb(23, 25, 28)", "999px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/icons/brands/instagram.svg",
+				"rect": [119, 895, 24, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [14, 960, 292, 114],
+				"surface": ["rgb(255, 255, 255)", "rgb(216, 221, 227)", "16px"],
+				"tag": "ARTICLE",
+				"text": "Мария Петрова Sales and viewings · Demo profile"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/team/demo-mariya.png",
+				"rect": [31, 985, 64, 64],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "999px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [107, 977, 117.984, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Мария Петрова"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [107, 1005, 182, 52],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Sales and viewings · Demo profile"
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [14, 1086, 292, 114],
+				"surface": ["rgb(255, 255, 255)", "rgb(216, 221, 227)", "16px"],
+				"tag": "ARTICLE",
+				"text": "Александър Иванов Imports and advice · Demo profile"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/team/demo-aleksandar.png",
+				"rect": [31, 1111, 64, 64],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "999px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [107, 1103, 143.375, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Александър Иванов"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [107, 1131, 182, 52],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Imports and advice · Demo profile"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/banners/contact-cta-mobile-v1.webp",
+				"rect": [14, 1232, 292, 184],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"22px",
+					"600",
+					"28px"
+				],
+				"href": null,
+				"rect": [30, 1252, 260, 28],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "H2",
+				"text": "Visit Day Night Auto Group"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [30, 1288, 260, 48],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "P",
+				"text": "18 Atanas Manchev Street, Studentski Grad, SofiaViewings by appointment. Please call before visiting."
+			},
+			{
+				"display": "flex",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"22px"
+				],
+				"href": "tel:0877733110",
+				"rect": [30, 1352, 98.703, 44],
+				"surface": ["rgb(185, 22, 28)", "rgba(0, 0, 0, 0)", "999px"],
+				"tag": "A",
+				"text": "0877 733 110Call us"
+			},
+			{
+				"display": "flex",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"22px"
+				],
+				"href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+				"rect": [136.703, 1352, 82.813, 44],
+				"surface": ["rgb(245, 247, 249)", "rgba(0, 0, 0, 0)", "999px"],
+				"tag": "A",
+				"text": "DirectionsMap"
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "https://www.facebook.com/deninoshtautogroup/?locale=bg_BG",
+				"rect": [76, 1440, 48, 48],
+				"surface": ["rgb(245, 247, 249)", "rgb(23, 25, 28)", "999px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/icons/brands/facebook.svg",
+				"rect": [88, 1452, 24, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "https://www.instagram.com/kristiankirilov13/",
+				"rect": [136, 1440, 48, 48],
+				"surface": ["rgb(245, 247, 249)", "rgb(23, 25, 28)", "999px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/icons/brands/instagram.svg",
+				"rect": [148, 1452, 24, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "https://www.tiktok.com/@kristiankirilov13",
+				"rect": [196, 1440, 48, 48],
+				"surface": ["rgb(245, 247, 249)", "rgb(23, 25, 28)", "999px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/icons/brands/tiktok.svg",
+				"rect": [208, 1452, 24, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			}
+		],
+		"scrollWidth": 320,
+		"text": "Skip to content\nAbout us\n\nCar sourcing, import and checks before you buy.\n\nCars\nContact\nHow we work\n1\nRequest\n\nSend a listing, VIN or the model you want.\n\n2\nReview\n\nReview the history, documents and costs.\n\n3\nDecision\n\nDiscuss the car and its total cost.\n\n4\nViewing and handover\n\nArrange viewing, documents and handover.\n\nThe team\nКристиян Кирилов\n\nChief Executive Officer · CEO\n\nМария Петрова\n\nSales and viewings · Demo profile\n\nАлександър Иванов\n\nImports and advice · Demo profile\n\nVisit Day Night Auto Group\n\nViewings by appointment. Please call before visiting.\n\nCall us\nMap\nHome\nCars\nSell\nImport\nMenu",
+		"width": 320
+	},
+	{
+		"locale": "en",
+		"elements": [
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/hero/about-daynight-process-banner.webp",
+				"rect": [0, 0, 390, 236],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "flex",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "/en?lang=en",
+				"rect": [16, 4, 170, 48],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/brand/daynight-logo-generated-600.webp",
+				"rect": [16, 4.063, 168, 47.875],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+				"rect": [334, 6, 44, 44],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "999px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"28px",
+					"600",
+					"32px"
+				],
+				"href": null,
+				"rect": [14, 68, 362, 32],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "H1",
+				"text": "About us"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [14, 108, 362, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(196, 199, 203)", "0px"],
+				"tag": "P",
+				"text": "Car sourcing, import and checks before you buy."
+			},
+			{
+				"display": "flex",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"400",
+					"24.75px"
+				],
+				"href": "/en/inventory",
+				"rect": [14, 148, 175, 48],
+				"surface": ["rgb(245, 247, 249)", "rgba(0, 0, 0, 0)", "999px"],
+				"tag": "A",
+				"text": "Cars"
+			},
+			{
+				"display": "flex",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"400",
+					"24.75px"
+				],
+				"href": "/en/contact",
+				"rect": [201, 148, 175, 48],
+				"surface": ["rgba(255, 255, 255, 0.12)", "rgba(255, 255, 255, 0.4)", "999px"],
+				"tag": "A",
+				"text": "Contact"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"22px",
+					"600",
+					"28px"
+				],
+				"href": null,
+				"rect": [138.047, 252, 113.906, 28],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H2",
+				"text": "How we work"
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [14, 296, 362, 362],
+				"surface": ["rgb(255, 255, 255)", "rgb(216, 221, 227)", "16px"],
+				"tag": "OL",
+				"text": "1 Request Send a listing, VIN or the model you want.2 Review Review the history, documents and costs.3 Decision Discuss the car and its total cost.4 Viewing and handover Arrange viewing, documents and handover."
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [31, 313, 328, 76],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "16px"],
+				"tag": "LI",
+				"text": "1 Request Send a listing, VIN or the model you want."
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 313, 276, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Request"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 341, 276, 48],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Send a listing, VIN or the model you want."
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [31, 405, 328, 76],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "16px"],
+				"tag": "LI",
+				"text": "2 Review Review the history, documents and costs."
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 405, 276, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Review"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 433, 276, 48],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Review the history, documents and costs."
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [31, 497, 328, 52],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "16px"],
+				"tag": "LI",
+				"text": "3 Decision Discuss the car and its total cost."
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 497, 276, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Decision"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 525, 276, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Discuss the car and its total cost."
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [31, 565, 328, 76],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "16px"],
+				"tag": "LI",
+				"text": "4 Viewing and handover Arrange viewing, documents and handover."
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 565, 276, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Viewing and handover"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [83, 593, 276, 48],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Arrange viewing, documents and handover."
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"22px",
+					"600",
+					"28px"
+				],
+				"href": null,
+				"rect": [154.563, 690, 80.875, 28],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H2",
+				"text": "The team"
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [14, 734, 362, 140],
+				"surface": ["rgb(255, 255, 255)", "rgb(216, 221, 227)", "16px"],
+				"tag": "ARTICLE",
+				"text": "Кристиян Кирилов Chief Executive Officer · CEO"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/team/kristian-kirilov-public.jpg",
+				"rect": [31, 772, 64, 64],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "999px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [107, 751, 140.375, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Кристиян Кирилов"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [107, 779, 197.938, 26],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Chief Executive Officer · CEO"
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "https://www.instagram.com/kristiankirilov13/",
+				"rect": [107, 809, 48, 48],
+				"surface": ["rgb(245, 247, 249)", "rgb(23, 25, 28)", "999px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/icons/brands/instagram.svg",
+				"rect": [119, 821, 24, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [14, 886, 362, 98],
+				"surface": ["rgb(255, 255, 255)", "rgb(216, 221, 227)", "16px"],
+				"tag": "ARTICLE",
+				"text": "Мария Петрова Sales and viewings · Demo profile"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/team/demo-mariya.png",
+				"rect": [31, 903, 64, 64],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "999px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [107, 908, 117.984, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Мария Петрова"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [107, 936, 226.875, 26],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Sales and viewings · Demo profile"
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [14, 996, 362, 98],
+				"surface": ["rgb(255, 255, 255)", "rgb(216, 221, 227)", "16px"],
+				"tag": "ARTICLE",
+				"text": "Александър Иванов Imports and advice · Demo profile"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/team/demo-aleksandar.png",
+				"rect": [31, 1013, 64, 64],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "999px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"18px",
+					"600",
+					"24px"
+				],
+				"href": null,
+				"rect": [107, 1018, 143.375, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "H3",
+				"text": "Александър Иванов"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"rect": [107, 1046, 229.734, 26],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(79, 89, 101)", "0px"],
+				"tag": "P",
+				"text": "Imports and advice · Demo profile"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/daynight/banners/contact-cta-mobile-v1.webp",
+				"rect": [14, 1126, 362, 184],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"22px",
+					"600",
+					"28px"
+				],
+				"href": null,
+				"rect": [30, 1146, 330, 28],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "H2",
+				"text": "Visit Day Night Auto Group"
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"24px"
+				],
+				"href": null,
+				"rect": [30, 1182, 330, 48],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(255, 255, 255)", "0px"],
+				"tag": "P",
+				"text": "18 Atanas Manchev Street, Studentski Grad, SofiaViewings by appointment. Please call before visiting."
+			},
+			{
+				"display": "flex",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"22px"
+				],
+				"href": "tel:0877733110",
+				"rect": [30, 1246, 98.703, 44],
+				"surface": ["rgb(185, 22, 28)", "rgba(0, 0, 0, 0)", "999px"],
+				"tag": "A",
+				"text": "0877 733 110Call us"
+			},
+			{
+				"display": "flex",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"22px"
+				],
+				"href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+				"rect": [136.703, 1246, 82.813, 44],
+				"surface": ["rgb(245, 247, 249)", "rgba(0, 0, 0, 0)", "999px"],
+				"tag": "A",
+				"text": "DirectionsMap"
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "https://www.facebook.com/deninoshtautogroup/?locale=bg_BG",
+				"rect": [111, 1334, 48, 48],
+				"surface": ["rgb(245, 247, 249)", "rgb(23, 25, 28)", "999px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/icons/brands/facebook.svg",
+				"rect": [123, 1346, 24, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "https://www.instagram.com/kristiankirilov13/",
+				"rect": [171, 1334, 48, 48],
+				"surface": ["rgb(245, 247, 249)", "rgb(23, 25, 28)", "999px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/icons/brands/instagram.svg",
+				"rect": [183, 1346, 24, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			},
+			{
+				"display": "grid",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": "https://www.tiktok.com/@kristiankirilov13",
+				"rect": [231, 1334, 48, 48],
+				"surface": ["rgb(245, 247, 249)", "rgb(23, 25, 28)", "999px"],
+				"tag": "A",
+				"text": ""
+			},
+			{
+				"display": "block",
+				"font": [
+					"\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+					"16px",
+					"400",
+					"26px"
+				],
+				"href": null,
+				"image": "http://127.0.0.1:6790/assets/icons/brands/tiktok.svg",
+				"rect": [243, 1346, 24, 24],
+				"surface": ["rgba(0, 0, 0, 0)", "rgb(23, 25, 28)", "0px"],
+				"tag": "IMG",
+				"text": ""
+			}
+		],
+		"scrollWidth": 390,
+		"text": "Skip to content\nAbout us\n\nCar sourcing, import and checks before you buy.\n\nCars\nContact\nHow we work\n1\nRequest\n\nSend a listing, VIN or the model you want.\n\n2\nReview\n\nReview the history, documents and costs.\n\n3\nDecision\n\nDiscuss the car and its total cost.\n\n4\nViewing and handover\n\nArrange viewing, documents and handover.\n\nThe team\nКристиян Кирилов\n\nChief Executive Officer · CEO\n\nМария Петрова\n\nSales and viewings · Demo profile\n\nАлександър Иванов\n\nImports and advice · Demo profile\n\nVisit Day Night Auto Group\n\nViewings by appointment. Please call before visiting.\n\nCall us\nMap\nHome\nCars\nSell\nImport\nMenu",
+		"width": 390
+	}
+]

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "format": "mobile-preview-v1",
+  "dealer": "stockport-broadbent-car-and-servicing",
+  "name": "Broadbent Car and Servicing",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "876590474d01178413feccf3153a0859230158a1",
+    "path": "templates/mobile",
+    "tree": "7b1f0878715aa1bc0f5942c7e654a6a1bb091510",
+    "digest": "380b153972039a80dccee73f53760a87e963d007b83a921020c5ab5353c942fc"
+  },
+  "sourceDigest": "e5af9b156e836a7a86ee6ab2919f754bd3bdb2ded74bd53df3f89b004b803612",
+  "inventory": {
+    "mode": "dated-listing-snapshot",
+    "count": 10,
+    "observedAt": "2026-10-10"
+  },
+  "personalization": {
+    "profileSha256": "756b8574748c302ffef23fca4e915719684e1e5e85f74eed0ad33ceaaf42b672",
+    "logoPaths": [
+      "/dealer-brand/logo.webp"
+    ],
+    "mediaPaths": [
+      "/dealer-stock/van.webp",
+      "/dealer-stock/hatchback.webp"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "mobile/src/lib/showroom-config.ts",
+      "mobile/src/lib/catalog.ts",
+      "mobile/src/lib/dealers.ts",
+      "mobile/src/lib/dealer-inventory.json",
+      "mobile/src/lib/locale.ts",
+      "mobile/src/lib/search.ts",
+      "mobile/src/components/NativeDealerCards.tsx",
+      "mobile/src/components/DealerScreens.tsx",
+      "mobile/src/components/VehicleCard.tsx",
+      "mobile/src/components/ShowroomVehicleCard.tsx",
+      "mobile/src/components/VehicleSections.tsx",
+      "mobile/src/lib/dealer-mileage.ts",
+      "mobile/src/lib/filter-fields.ts",
+      "mobile/src/lib/native-filter-options.ts",
+      "mobile/src/components/DesktopVehicleSummary.tsx",
+      "mobile/src/components/NativeCarPark.tsx",
+      "mobile/src/components/ShowroomFilterSheet.tsx",
+      "mobile/src/lib/vehicle-copy.ts",
+      "mobile/src/components/ShowroomInventoryScreen.tsx",
+      "mobile/src/components/ShowroomDesktopFilterFields.tsx",
+      "mobile/src/components/ShowroomServiceRequest.tsx",
+      "mobile/src/lib/service-requests.ts",
+      "mobile/src/lib/enquiry.ts",
+      "mobile/src/lib/assistant.ts"
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

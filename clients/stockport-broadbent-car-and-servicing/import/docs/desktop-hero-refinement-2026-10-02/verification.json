@@ -1,0 +1,82 @@
+{
+  "created": "2026-10-02T00:58:02.347Z",
+  "node": "24.21.0",
+  "dev": "http://127.0.0.1:6790/bg/inventory",
+  "reference": "http://127.0.0.1:6461/bg",
+  "checkedPreview": "http://127.0.0.1:6832",
+  "checks": [
+    {
+      "name": "check",
+      "exit": 0,
+      "seconds": 77
+    },
+    {
+      "name": "format",
+      "exit": 0,
+      "seconds": 14
+    },
+    {
+      "name": "lint",
+      "exit": 0,
+      "seconds": 93
+    },
+    {
+      "name": "architecture",
+      "exit": 0,
+      "seconds": 1
+    },
+    {
+      "name": "assets",
+      "exit": 0,
+      "seconds": 9
+    },
+    {
+      "name": "build",
+      "exit": 0,
+      "seconds": 89
+    },
+    {
+      "name": "final-toolbar-format",
+      "exit": 0,
+      "seconds": 10
+    },
+    {
+      "name": "final-toolbar-lint",
+      "exit": 0,
+      "seconds": 85
+    }
+  ],
+  "browserChecks": [
+    {
+      "name": "desktop-search",
+      "exit": 0,
+      "seconds": 40,
+      "summary": "6 passed (33.2s)",
+      "baseURL": "http://127.0.0.1:6832"
+    },
+    {
+      "name": "inventory-controls",
+      "exit": 0,
+      "seconds": 23,
+      "summary": "3 passed (20.0s)",
+      "baseURL": "http://127.0.0.1:6832"
+    },
+    {
+      "name": "hero-frames",
+      "exit": 0,
+      "seconds": 57,
+      "summary": "2 passed (53.5s)",
+      "baseURL": "http://127.0.0.1:6832"
+    },
+    {
+      "name": "accessibility",
+      "exit": 0,
+      "seconds": 33,
+      "summary": "4 passed (31.2s)",
+      "baseURL": "http://127.0.0.1:6832"
+    }
+  ],
+  "geometryStates": 23,
+  "scope": "Desktop Home/Inventory decorative artwork, pill spacing and circular search control. Mobile owners untouched.",
+  "limits": "Frozen working-source check, not a template release or dealer deployment. Independent dirty work is excluded from this scoped commit. Temporary QA candidate retained after earlier automatic approval review rejected cleanup."
+}

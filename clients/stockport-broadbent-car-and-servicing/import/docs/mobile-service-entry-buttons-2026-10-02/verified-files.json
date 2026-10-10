@@ -1,0 +1,14 @@
+[
+	{
+		"path": "src/lib/components/layout/MobileNavigationMenu.svelte",
+		"sha256": "26beec9f74203900657affad73a5e6158c9130801c554da8b44c154102dde89e"
+	},
+	{
+		"path": "src/lib/components/services/ServiceCard.svelte",
+		"sha256": "9b45d4d93c8b0824e76a3a8e2eaba28b85b65b4f6910544f9fa784e314401ac6"
+	},
+	{
+		"path": "tests/mobile-secondary.e2e.ts",
+		"sha256": "8c5f22c0957b6285fe23ebf44594e18d638c772d9e535c20156ebde6b3174dc9"
+	}
+]

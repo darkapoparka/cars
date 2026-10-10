@@ -1,0 +1,2215 @@
+{
+  "scope": "Mobile navigation surface and shared dock clearance; retained desktop/detail treatment",
+  "frame": {
+    "width": 390,
+    "height": 844,
+    "scrollY": 0,
+    "font": "Local Inter v4.1"
+  },
+  "before": {
+    "home": {
+      "canvas": 375,
+      "nav": {
+        "left": 0,
+        "right": 375,
+        "top": 783.40625,
+        "bottom": 844,
+        "height": 60.59375
+      }
+    },
+    "import": {
+      "canvas": 390,
+      "nav": {
+        "left": 0,
+        "right": 390,
+        "top": 783.40625,
+        "bottom": 844,
+        "height": 60.59375
+      }
+    }
+  },
+  "nativeCases": [
+    {
+      "nav": {
+        "background": "rgb(255, 255, 255)",
+        "display": "grid",
+        "items": [
+          {
+            "current": "page",
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/en",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 35.296875,
+              "right": 59.296875,
+              "top": 784.40625,
+              "width": 24,
+              "x": 35.296875,
+              "y": 784.40625
+            },
+            "label": "Home",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 30.21875,
+              "right": 64.375,
+              "top": 812.40625,
+              "width": 34.15625,
+              "x": 30.21875,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 21,
+              "right": 73.59375,
+              "top": 779.40625,
+              "width": 52.59375,
+              "x": 21,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/en/listing-grid",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 87.890625,
+              "right": 111.890625,
+              "top": 784.40625,
+              "width": 24,
+              "x": 87.890625,
+              "y": 784.40625
+            },
+            "label": "Cars",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 86.53125,
+              "right": 113.25,
+              "top": 812.40625,
+              "width": 26.71875,
+              "x": 86.53125,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 73.59375,
+              "right": 126.1875,
+              "top": 779.40625,
+              "width": 52.59375,
+              "x": 73.59375,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/en/contact?topic=trade-in",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 140.484375,
+              "right": 164.484375,
+              "top": 784.40625,
+              "width": 24,
+              "x": 140.484375,
+              "y": 784.40625
+            },
+            "label": "Sell",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 142.0625,
+              "right": 162.921875,
+              "top": 812.40625,
+              "width": 20.859375,
+              "x": 142.0625,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 126.1875,
+              "right": 178.796875,
+              "top": 779.40625,
+              "width": 52.609375,
+              "x": 126.1875,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/en/contact?topic=import",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 193.09375,
+              "right": 217.09375,
+              "top": 784.40625,
+              "width": 24,
+              "x": 193.09375,
+              "y": 784.40625
+            },
+            "label": "Import",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 186.328125,
+              "right": 223.859375,
+              "top": 812.40625,
+              "width": 37.53125,
+              "x": 186.328125,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 178.796875,
+              "right": 231.390625,
+              "top": 779.40625,
+              "width": 52.59375,
+              "x": 178.796875,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": null,
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 245.6875,
+              "right": 269.6875,
+              "top": 784.40625,
+              "width": 24,
+              "x": 245.6875,
+              "y": 784.40625
+            },
+            "label": "Menu",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 241.46875,
+              "right": 273.90625,
+              "top": 812.40625,
+              "width": 32.4375,
+              "x": 241.46875,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 231.390625,
+              "right": 283.984375,
+              "top": 779.40625,
+              "width": 52.59375,
+              "x": 231.390625,
+              "y": 779.40625
+            }
+          }
+        ],
+        "offset": "8px",
+        "radius": "20px",
+        "rect": {
+          "bottom": 836,
+          "height": 61.59375,
+          "left": 12,
+          "right": 293,
+          "top": 774.40625,
+          "width": 281,
+          "x": 12,
+          "y": 774.40625
+        },
+        "shadow": "rgba(32, 35, 41, 0.07) 0px 2px 10px 0px",
+        "visibility": "visible"
+      },
+      "overflow": 0,
+      "passed": true,
+      "scrollY": 0,
+      "url": "/en",
+      "viewport": {
+        "canvas": 305,
+        "height": 844,
+        "width": 320
+      }
+    },
+    {
+      "nav": {
+        "background": "rgb(255, 255, 255)",
+        "display": "grid",
+        "items": [
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "../",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 36.796875,
+              "right": 60.796875,
+              "top": 784.40625,
+              "width": 24,
+              "x": 36.796875,
+              "y": 784.40625
+            },
+            "label": "Home",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 31.84375,
+              "right": 65.734375,
+              "top": 812.40625,
+              "width": 33.890625,
+              "x": 31.84375,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 21,
+              "right": 76.59375,
+              "top": 779.40625,
+              "width": 55.59375,
+              "x": 21,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "../listing-grid",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 92.390625,
+              "right": 116.390625,
+              "top": 784.40625,
+              "width": 24,
+              "x": 92.390625,
+              "y": 784.40625
+            },
+            "label": "Cars",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 91.03125,
+              "right": 117.75,
+              "top": 812.40625,
+              "width": 26.71875,
+              "x": 91.03125,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 76.59375,
+              "right": 132.1875,
+              "top": 779.40625,
+              "width": 55.59375,
+              "x": 76.59375,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "../contact?topic=trade-in",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 147.984375,
+              "right": 171.984375,
+              "top": 784.40625,
+              "width": 24,
+              "x": 147.984375,
+              "y": 784.40625
+            },
+            "label": "Sell",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 149.5625,
+              "right": 170.421875,
+              "top": 812.40625,
+              "width": 20.859375,
+              "x": 149.5625,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 132.1875,
+              "right": 187.796875,
+              "top": 779.40625,
+              "width": 55.609375,
+              "x": 132.1875,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": "page",
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "../contact?topic=import",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 203.59375,
+              "right": 227.59375,
+              "top": 784.40625,
+              "width": 24,
+              "x": 203.59375,
+              "y": 784.40625
+            },
+            "label": "Import",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 196.515625,
+              "right": 234.65625,
+              "top": 812.40625,
+              "width": 38.140625,
+              "x": 196.515625,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 187.796875,
+              "right": 243.390625,
+              "top": 779.40625,
+              "width": 55.59375,
+              "x": 187.796875,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": null,
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 259.1875,
+              "right": 283.1875,
+              "top": 784.40625,
+              "width": 24,
+              "x": 259.1875,
+              "y": 784.40625
+            },
+            "label": "Menu",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 254.96875,
+              "right": 287.40625,
+              "top": 812.40625,
+              "width": 32.4375,
+              "x": 254.96875,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 243.390625,
+              "right": 298.984375,
+              "top": 779.40625,
+              "width": 55.59375,
+              "x": 243.390625,
+              "y": 779.40625
+            }
+          }
+        ],
+        "offset": "8px",
+        "radius": "20px",
+        "rect": {
+          "bottom": 836,
+          "height": 61.59375,
+          "left": 12,
+          "right": 308,
+          "top": 774.40625,
+          "width": 296,
+          "x": 12,
+          "y": 774.40625
+        },
+        "shadow": "rgba(32, 35, 41, 0.07) 0px 2px 10px 0px",
+        "visibility": "visible"
+      },
+      "overflow": 0,
+      "passed": true,
+      "scrollY": 0,
+      "url": "/en/contact?topic=import",
+      "viewport": {
+        "canvas": 320,
+        "height": 844,
+        "width": 320
+      }
+    },
+    {
+      "nav": {
+        "background": "rgb(255, 255, 255)",
+        "display": "grid",
+        "items": [
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "../",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 43.796875,
+              "right": 67.796875,
+              "top": 784.40625,
+              "width": 24,
+              "x": 43.796875,
+              "y": 784.40625
+            },
+            "label": "Home",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 39.296875,
+              "right": 72.296875,
+              "top": 812.40625,
+              "width": 33,
+              "x": 39.296875,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 21,
+              "right": 90.59375,
+              "top": 779.40625,
+              "width": 69.59375,
+              "x": 21,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "../listing-grid",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 113.390625,
+              "right": 137.390625,
+              "top": 784.40625,
+              "width": 24,
+              "x": 113.390625,
+              "y": 784.40625
+            },
+            "label": "Cars",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 113.671875,
+              "right": 137.09375,
+              "top": 812.40625,
+              "width": 23.421875,
+              "x": 113.671875,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 90.59375,
+              "right": 160.1875,
+              "top": 779.40625,
+              "width": 69.59375,
+              "x": 90.59375,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "../contact?topic=trade-in",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 182.984375,
+              "right": 206.984375,
+              "top": 784.40625,
+              "width": 24,
+              "x": 182.984375,
+              "y": 784.40625
+            },
+            "label": "Sell",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 185.390625,
+              "right": 204.578125,
+              "top": 812.40625,
+              "width": 19.1875,
+              "x": 185.390625,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 160.1875,
+              "right": 229.796875,
+              "top": 779.40625,
+              "width": 69.609375,
+              "x": 160.1875,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": "page",
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "../contact?topic=import",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 252.59375,
+              "right": 276.59375,
+              "top": 784.40625,
+              "width": 24,
+              "x": 252.59375,
+              "y": 784.40625
+            },
+            "label": "Import",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 245.765625,
+              "right": 283.421875,
+              "top": 812.40625,
+              "width": 37.65625,
+              "x": 245.765625,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 229.796875,
+              "right": 299.390625,
+              "top": 779.40625,
+              "width": 69.59375,
+              "x": 229.796875,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": null,
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 322.1875,
+              "right": 346.1875,
+              "top": 784.40625,
+              "width": 24,
+              "x": 322.1875,
+              "y": 784.40625
+            },
+            "label": "Menu",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 318.4375,
+              "right": 349.921875,
+              "top": 812.40625,
+              "width": 31.484375,
+              "x": 318.4375,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 299.390625,
+              "right": 368.984375,
+              "top": 779.40625,
+              "width": 69.59375,
+              "x": 299.390625,
+              "y": 779.40625
+            }
+          }
+        ],
+        "offset": "8px",
+        "radius": "20px",
+        "rect": {
+          "bottom": 836,
+          "height": 61.59375,
+          "left": 12,
+          "right": 378,
+          "top": 774.40625,
+          "width": 366,
+          "x": 12,
+          "y": 774.40625
+        },
+        "shadow": "rgba(32, 35, 41, 0.07) 0px 2px 10px 0px",
+        "visibility": "visible"
+      },
+      "overflow": 0,
+      "passed": true,
+      "scrollY": 0,
+      "url": "/en/contact?topic=import",
+      "viewport": {
+        "canvas": 390,
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "nav": {
+        "background": "rgb(255, 255, 255)",
+        "display": "grid",
+        "items": [
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "../",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 47.796875,
+              "right": 71.796875,
+              "top": 784.40625,
+              "width": 24,
+              "x": 47.796875,
+              "y": 784.40625
+            },
+            "label": "Home",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 43.296875,
+              "right": 76.296875,
+              "top": 812.40625,
+              "width": 33,
+              "x": 43.296875,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 21,
+              "right": 98.59375,
+              "top": 779.40625,
+              "width": 77.59375,
+              "x": 21,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "../listing-grid",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 125.390625,
+              "right": 149.390625,
+              "top": 784.40625,
+              "width": 24,
+              "x": 125.390625,
+              "y": 784.40625
+            },
+            "label": "Cars",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 125.671875,
+              "right": 149.09375,
+              "top": 812.40625,
+              "width": 23.421875,
+              "x": 125.671875,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 98.59375,
+              "right": 176.1875,
+              "top": 779.40625,
+              "width": 77.59375,
+              "x": 98.59375,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "../contact?topic=trade-in",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 202.984375,
+              "right": 226.984375,
+              "top": 784.40625,
+              "width": 24,
+              "x": 202.984375,
+              "y": 784.40625
+            },
+            "label": "Sell",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 205.390625,
+              "right": 224.578125,
+              "top": 812.40625,
+              "width": 19.1875,
+              "x": 205.390625,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 176.1875,
+              "right": 253.796875,
+              "top": 779.40625,
+              "width": 77.609375,
+              "x": 176.1875,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": "page",
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "../contact?topic=import",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 280.59375,
+              "right": 304.59375,
+              "top": 784.40625,
+              "width": 24,
+              "x": 280.59375,
+              "y": 784.40625
+            },
+            "label": "Import",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 273.765625,
+              "right": 311.421875,
+              "top": 812.40625,
+              "width": 37.65625,
+              "x": 273.765625,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 253.796875,
+              "right": 331.390625,
+              "top": 779.40625,
+              "width": 77.59375,
+              "x": 253.796875,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": null,
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 358.1875,
+              "right": 382.1875,
+              "top": 784.40625,
+              "width": 24,
+              "x": 358.1875,
+              "y": 784.40625
+            },
+            "label": "Menu",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 354.4375,
+              "right": 385.921875,
+              "top": 812.40625,
+              "width": 31.484375,
+              "x": 354.4375,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 331.390625,
+              "right": 408.984375,
+              "top": 779.40625,
+              "width": 77.59375,
+              "x": 331.390625,
+              "y": 779.40625
+            }
+          }
+        ],
+        "offset": "8px",
+        "radius": "20px",
+        "rect": {
+          "bottom": 836,
+          "height": 61.59375,
+          "left": 12,
+          "right": 418,
+          "top": 774.40625,
+          "width": 406,
+          "x": 12,
+          "y": 774.40625
+        },
+        "shadow": "rgba(32, 35, 41, 0.07) 0px 2px 10px 0px",
+        "visibility": "visible"
+      },
+      "overflow": 0,
+      "passed": true,
+      "scrollY": 0,
+      "url": "/en/contact?topic=import",
+      "viewport": {
+        "canvas": 430,
+        "height": 844,
+        "width": 430
+      }
+    },
+    {
+      "nav": {
+        "background": "rgb(255, 255, 255)",
+        "display": "grid",
+        "items": [
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/bg",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 36.796875,
+              "right": 60.796875,
+              "top": 784.40625,
+              "width": 24,
+              "x": 36.796875,
+              "y": 784.40625
+            },
+            "label": "Начало",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 26.859375,
+              "right": 70.71875,
+              "top": 812.40625,
+              "width": 43.859375,
+              "x": 26.859375,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 21,
+              "right": 76.59375,
+              "top": 779.40625,
+              "width": 55.59375,
+              "x": 21,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/bg/listing-grid",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 92.390625,
+              "right": 116.390625,
+              "top": 784.40625,
+              "width": 24,
+              "x": 92.390625,
+              "y": 784.40625
+            },
+            "label": "Коли",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 89.75,
+              "right": 119.015625,
+              "top": 812.40625,
+              "width": 29.265625,
+              "x": 89.75,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 76.59375,
+              "right": 132.1875,
+              "top": 779.40625,
+              "width": 55.59375,
+              "x": 76.59375,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/bg/contact?topic=trade-in",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 147.984375,
+              "right": 171.984375,
+              "top": 784.40625,
+              "width": 24,
+              "x": 147.984375,
+              "y": 784.40625
+            },
+            "label": "Продай",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 137.390625,
+              "right": 182.578125,
+              "top": 812.40625,
+              "width": 45.1875,
+              "x": 137.390625,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 132.1875,
+              "right": 187.796875,
+              "top": 779.40625,
+              "width": 55.609375,
+              "x": 132.1875,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": "page",
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/bg/contact?topic=import",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 203.59375,
+              "right": 227.59375,
+              "top": 784.40625,
+              "width": 24,
+              "x": 203.59375,
+              "y": 784.40625
+            },
+            "label": "Внос",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 200.828125,
+              "right": 230.359375,
+              "top": 812.40625,
+              "width": 29.53125,
+              "x": 200.828125,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 187.796875,
+              "right": 243.390625,
+              "top": 779.40625,
+              "width": 55.59375,
+              "x": 187.796875,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": null,
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 259.1875,
+              "right": 283.1875,
+              "top": 784.40625,
+              "width": 24,
+              "x": 259.1875,
+              "y": 784.40625
+            },
+            "label": "Меню",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 253.484375,
+              "right": 288.890625,
+              "top": 812.40625,
+              "width": 35.40625,
+              "x": 253.484375,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 243.390625,
+              "right": 298.984375,
+              "top": 779.40625,
+              "width": 55.59375,
+              "x": 243.390625,
+              "y": 779.40625
+            }
+          }
+        ],
+        "offset": "8px",
+        "radius": "20px",
+        "rect": {
+          "bottom": 836,
+          "height": 61.59375,
+          "left": 12,
+          "right": 308,
+          "top": 774.40625,
+          "width": 296,
+          "x": 12,
+          "y": 774.40625
+        },
+        "shadow": "rgba(32, 35, 41, 0.07) 0px 2px 10px 0px",
+        "visibility": "visible"
+      },
+      "overflow": 0,
+      "passed": true,
+      "scrollY": 0,
+      "url": "/bg/contact?topic=import",
+      "viewport": {
+        "canvas": 320,
+        "height": 844,
+        "width": 320
+      }
+    },
+    {
+      "nav": {
+        "background": "rgb(255, 255, 255)",
+        "display": "grid",
+        "items": [
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/bg",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 43.796875,
+              "right": 67.796875,
+              "top": 784.40625,
+              "width": 24,
+              "x": 43.796875,
+              "y": 784.40625
+            },
+            "label": "Начало",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 33.859375,
+              "right": 77.71875,
+              "top": 812.40625,
+              "width": 43.859375,
+              "x": 33.859375,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 21,
+              "right": 90.59375,
+              "top": 779.40625,
+              "width": 69.59375,
+              "x": 21,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/bg/listing-grid",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 113.390625,
+              "right": 137.390625,
+              "top": 784.40625,
+              "width": 24,
+              "x": 113.390625,
+              "y": 784.40625
+            },
+            "label": "Коли",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 110.75,
+              "right": 140.015625,
+              "top": 812.40625,
+              "width": 29.265625,
+              "x": 110.75,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 90.59375,
+              "right": 160.1875,
+              "top": 779.40625,
+              "width": 69.59375,
+              "x": 90.59375,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/bg/contact?topic=trade-in",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 182.984375,
+              "right": 206.984375,
+              "top": 784.40625,
+              "width": 24,
+              "x": 182.984375,
+              "y": 784.40625
+            },
+            "label": "Продай",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 172.390625,
+              "right": 217.578125,
+              "top": 812.40625,
+              "width": 45.1875,
+              "x": 172.390625,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 160.1875,
+              "right": 229.796875,
+              "top": 779.40625,
+              "width": 69.609375,
+              "x": 160.1875,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": "page",
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/bg/contact?topic=import",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 252.59375,
+              "right": 276.59375,
+              "top": 784.40625,
+              "width": 24,
+              "x": 252.59375,
+              "y": 784.40625
+            },
+            "label": "Внос",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 249.828125,
+              "right": 279.359375,
+              "top": 812.40625,
+              "width": 29.53125,
+              "x": 249.828125,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 229.796875,
+              "right": 299.390625,
+              "top": 779.40625,
+              "width": 69.59375,
+              "x": 229.796875,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": null,
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 322.1875,
+              "right": 346.1875,
+              "top": 784.40625,
+              "width": 24,
+              "x": 322.1875,
+              "y": 784.40625
+            },
+            "label": "Меню",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 316.484375,
+              "right": 351.890625,
+              "top": 812.40625,
+              "width": 35.40625,
+              "x": 316.484375,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 299.390625,
+              "right": 368.984375,
+              "top": 779.40625,
+              "width": 69.59375,
+              "x": 299.390625,
+              "y": 779.40625
+            }
+          }
+        ],
+        "offset": "8px",
+        "radius": "20px",
+        "rect": {
+          "bottom": 836,
+          "height": 61.59375,
+          "left": 12,
+          "right": 378,
+          "top": 774.40625,
+          "width": 366,
+          "x": 12,
+          "y": 774.40625
+        },
+        "shadow": "rgba(32, 35, 41, 0.07) 0px 2px 10px 0px",
+        "visibility": "visible"
+      },
+      "overflow": 0,
+      "passed": true,
+      "scrollY": 0,
+      "url": "/bg/contact?topic=import",
+      "viewport": {
+        "canvas": 390,
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "nav": {
+        "background": "rgb(255, 255, 255)",
+        "display": "grid",
+        "items": [
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/bg",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 47.796875,
+              "right": 71.796875,
+              "top": 784.40625,
+              "width": 24,
+              "x": 47.796875,
+              "y": 784.40625
+            },
+            "label": "Начало",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 37.859375,
+              "right": 81.71875,
+              "top": 812.40625,
+              "width": 43.859375,
+              "x": 37.859375,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 21,
+              "right": 98.59375,
+              "top": 779.40625,
+              "width": 77.59375,
+              "x": 21,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/bg/listing-grid",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 125.390625,
+              "right": 149.390625,
+              "top": 784.40625,
+              "width": 24,
+              "x": 125.390625,
+              "y": 784.40625
+            },
+            "label": "Коли",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 122.75,
+              "right": 152.015625,
+              "top": 812.40625,
+              "width": 29.265625,
+              "x": 122.75,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 98.59375,
+              "right": 176.1875,
+              "top": 779.40625,
+              "width": 77.59375,
+              "x": 98.59375,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/bg/contact?topic=trade-in",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 202.984375,
+              "right": 226.984375,
+              "top": 784.40625,
+              "width": 24,
+              "x": 202.984375,
+              "y": 784.40625
+            },
+            "label": "Продай",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 192.390625,
+              "right": 237.578125,
+              "top": 812.40625,
+              "width": 45.1875,
+              "x": 192.390625,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 176.1875,
+              "right": 253.796875,
+              "top": 779.40625,
+              "width": 77.609375,
+              "x": 176.1875,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": "page",
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/bg/contact?topic=import",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 280.59375,
+              "right": 304.59375,
+              "top": 784.40625,
+              "width": 24,
+              "x": 280.59375,
+              "y": 784.40625
+            },
+            "label": "Внос",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 277.828125,
+              "right": 307.359375,
+              "top": 812.40625,
+              "width": 29.53125,
+              "x": 277.828125,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 253.796875,
+              "right": 331.390625,
+              "top": 779.40625,
+              "width": 77.59375,
+              "x": 253.796875,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": null,
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 358.1875,
+              "right": 382.1875,
+              "top": 784.40625,
+              "width": 24,
+              "x": 358.1875,
+              "y": 784.40625
+            },
+            "label": "Меню",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 352.484375,
+              "right": 387.890625,
+              "top": 812.40625,
+              "width": 35.40625,
+              "x": 352.484375,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 331.390625,
+              "right": 408.984375,
+              "top": 779.40625,
+              "width": 77.59375,
+              "x": 331.390625,
+              "y": 779.40625
+            }
+          }
+        ],
+        "offset": "8px",
+        "radius": "20px",
+        "rect": {
+          "bottom": 836,
+          "height": 61.59375,
+          "left": 12,
+          "right": 418,
+          "top": 774.40625,
+          "width": 406,
+          "x": 12,
+          "y": 774.40625
+        },
+        "shadow": "rgba(32, 35, 41, 0.07) 0px 2px 10px 0px",
+        "visibility": "visible"
+      },
+      "overflow": 0,
+      "passed": true,
+      "scrollY": 0,
+      "url": "/bg/contact?topic=import",
+      "viewport": {
+        "canvas": 430,
+        "height": 844,
+        "width": 430
+      }
+    },
+    {
+      "nav": {
+        "background": "rgb(255, 255, 255)",
+        "display": "grid",
+        "items": [
+          {
+            "current": "page",
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/bg",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 42.296875,
+              "right": 66.296875,
+              "top": 784.40625,
+              "width": 24,
+              "x": 42.296875,
+              "y": 784.40625
+            },
+            "label": "Начало",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 32.140625,
+              "right": 76.4375,
+              "top": 812.40625,
+              "width": 44.296875,
+              "x": 32.140625,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 21,
+              "right": 87.59375,
+              "top": 779.40625,
+              "width": 66.59375,
+              "x": 21,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/bg/listing-grid",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 108.890625,
+              "right": 132.890625,
+              "top": 784.40625,
+              "width": 24,
+              "x": 108.890625,
+              "y": 784.40625
+            },
+            "label": "Коли",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 106.25,
+              "right": 135.515625,
+              "top": 812.40625,
+              "width": 29.265625,
+              "x": 106.25,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 87.59375,
+              "right": 154.1875,
+              "top": 779.40625,
+              "width": 66.59375,
+              "x": 87.59375,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/bg/contact?topic=trade-in",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 175.484375,
+              "right": 199.484375,
+              "top": 784.40625,
+              "width": 24,
+              "x": 175.484375,
+              "y": 784.40625
+            },
+            "label": "Продай",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 164.890625,
+              "right": 210.078125,
+              "top": 812.40625,
+              "width": 45.1875,
+              "x": 164.890625,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 154.1875,
+              "right": 220.796875,
+              "top": 779.40625,
+              "width": 66.609375,
+              "x": 154.1875,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/bg/contact?topic=import",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 242.09375,
+              "right": 266.09375,
+              "top": 784.40625,
+              "width": 24,
+              "x": 242.09375,
+              "y": 784.40625
+            },
+            "label": "Внос",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 239.46875,
+              "right": 268.71875,
+              "top": 812.40625,
+              "width": 29.25,
+              "x": 239.46875,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 220.796875,
+              "right": 287.390625,
+              "top": 779.40625,
+              "width": 66.59375,
+              "x": 220.796875,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": null,
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 308.6875,
+              "right": 332.6875,
+              "top": 784.40625,
+              "width": 24,
+              "x": 308.6875,
+              "y": 784.40625
+            },
+            "label": "Меню",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 302.984375,
+              "right": 338.390625,
+              "top": 812.40625,
+              "width": 35.40625,
+              "x": 302.984375,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 287.390625,
+              "right": 353.984375,
+              "top": 779.40625,
+              "width": 66.59375,
+              "x": 287.390625,
+              "y": 779.40625
+            }
+          }
+        ],
+        "offset": "8px",
+        "radius": "20px",
+        "rect": {
+          "bottom": 836,
+          "height": 61.59375,
+          "left": 12,
+          "right": 363,
+          "top": 774.40625,
+          "width": 351,
+          "x": 12,
+          "y": 774.40625
+        },
+        "shadow": "rgba(32, 35, 41, 0.07) 0px 2px 10px 0px",
+        "visibility": "visible"
+      },
+      "overflow": 0,
+      "passed": true,
+      "scrollY": 0,
+      "url": "/bg",
+      "viewport": {
+        "canvas": 375,
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "nav": {
+        "background": "rgb(255, 255, 255)",
+        "display": "grid",
+        "items": [
+          {
+            "current": "page",
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/bg",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 35.296875,
+              "right": 59.296875,
+              "top": 784.40625,
+              "width": 24,
+              "x": 35.296875,
+              "y": 784.40625
+            },
+            "label": "Начало",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 25.140625,
+              "right": 69.4375,
+              "top": 812.40625,
+              "width": 44.296875,
+              "x": 25.140625,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 21,
+              "right": 73.59375,
+              "top": 779.40625,
+              "width": 52.59375,
+              "x": 21,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/bg/listing-grid",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 87.890625,
+              "right": 111.890625,
+              "top": 784.40625,
+              "width": 24,
+              "x": 87.890625,
+              "y": 784.40625
+            },
+            "label": "Коли",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 85.25,
+              "right": 114.515625,
+              "top": 812.40625,
+              "width": 29.265625,
+              "x": 85.25,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 73.59375,
+              "right": 126.1875,
+              "top": 779.40625,
+              "width": 52.59375,
+              "x": 73.59375,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/bg/contact?topic=trade-in",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 140.484375,
+              "right": 164.484375,
+              "top": 784.40625,
+              "width": 24,
+              "x": 140.484375,
+              "y": 784.40625
+            },
+            "label": "Продай",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 129.890625,
+              "right": 175.078125,
+              "top": 812.40625,
+              "width": 45.1875,
+              "x": 129.890625,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 126.1875,
+              "right": 178.796875,
+              "top": 779.40625,
+              "width": 52.609375,
+              "x": 126.1875,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": "/bg/contact?topic=import",
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 193.09375,
+              "right": 217.09375,
+              "top": 784.40625,
+              "width": 24,
+              "x": 193.09375,
+              "y": 784.40625
+            },
+            "label": "Внос",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 190.46875,
+              "right": 219.71875,
+              "top": 812.40625,
+              "width": 29.25,
+              "x": 190.46875,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 178.796875,
+              "right": 231.390625,
+              "top": 779.40625,
+              "width": 52.59375,
+              "x": 178.796875,
+              "y": 779.40625
+            }
+          },
+          {
+            "current": null,
+            "family": "fluent-system-regular",
+            "fits": true,
+            "font": "12px",
+            "href": null,
+            "iconRect": {
+              "bottom": 808.40625,
+              "height": 24,
+              "left": 245.6875,
+              "right": 269.6875,
+              "top": 784.40625,
+              "width": 24,
+              "x": 245.6875,
+              "y": 784.40625
+            },
+            "label": "Меню",
+            "labelRect": {
+              "bottom": 828,
+              "height": 15.59375,
+              "left": 239.984375,
+              "right": 275.390625,
+              "top": 812.40625,
+              "width": 35.40625,
+              "x": 239.984375,
+              "y": 812.40625
+            },
+            "rect": {
+              "bottom": 831,
+              "height": 51.59375,
+              "left": 231.390625,
+              "right": 283.984375,
+              "top": 779.40625,
+              "width": 52.59375,
+              "x": 231.390625,
+              "y": 779.40625
+            }
+          }
+        ],
+        "offset": "8px",
+        "radius": "20px",
+        "rect": {
+          "bottom": 836,
+          "height": 61.59375,
+          "left": 12,
+          "right": 293,
+          "top": 774.40625,
+          "width": 281,
+          "x": 12,
+          "y": 774.40625
+        },
+        "shadow": "rgba(32, 35, 41, 0.07) 0px 2px 10px 0px",
+        "visibility": "visible"
+      },
+      "overflow": 0,
+      "passed": true,
+      "scrollY": 0,
+      "url": "/bg",
+      "viewport": {
+        "canvas": 305,
+        "height": 844,
+        "width": 320
+      }
+    }
+  ],
+  "menu": {
+    "open": {
+      "dock": "none",
+      "focusInMenu": true,
+      "open": true
+    },
+    "closed": {
+      "dock": "grid",
+      "focus": "Меню",
+      "focusVisible": true,
+      "open": false,
+      "outline": "solid"
+    }
+  },
+  "desktop": {
+    "display": "none",
+    "header": {
+      "bottom": 139,
+      "height": 84,
+      "left": 26,
+      "right": 1399,
+      "top": 55,
+      "width": 1373,
+      "x": 26,
+      "y": 55
+    },
+    "overflow": 0,
+    "url": "/bg/contact?topic=import",
+    "width": 1440
+  },
+  "checks": {
+    "cssPolicy": "passed",
+    "tokens": "passed",
+    "typography": "passed",
+    "svelte": "0 errors, 0 warnings",
+    "build": "passed",
+    "node": "22.20.0",
+    "finalMobile": [
+      {
+        "name": "en 320: enlarged text, motion, focus and image loading",
+        "passed": true,
+        "evidence": {
+          "cards": 4,
+          "enlargedText": "200%",
+          "hiddenDock": "inert",
+          "reducedMotion": true
+        },
+        "durationMs": 6597
+      },
+      {
+        "name": "en 390: enlarged text, motion, focus and image loading",
+        "passed": true,
+        "evidence": {
+          "cards": 4,
+          "enlargedText": "200%",
+          "hiddenDock": "inert",
+          "reducedMotion": true
+        },
+        "durationMs": 6098
+      },
+      {
+        "name": "en 430: enlarged text, motion, focus and image loading",
+        "passed": true,
+        "evidence": {
+          "cards": 4,
+          "enlargedText": "200%",
+          "hiddenDock": "inert",
+          "reducedMotion": true
+        },
+        "durationMs": 4696
+      },
+      {
+        "name": "bg 320: enlarged text, motion, focus and image loading",
+        "passed": true,
+        "evidence": {
+          "cards": 4,
+          "enlargedText": "200%",
+          "hiddenDock": "inert",
+          "reducedMotion": true
+        },
+        "durationMs": 6801
+      },
+      {
+        "name": "bg 390: enlarged text, motion, focus and image loading",
+        "passed": true,
+        "evidence": {
+          "cards": 4,
+          "enlargedText": "200%",
+          "hiddenDock": "inert",
+          "reducedMotion": true
+        },
+        "durationMs": 6342
+      },
+      {
+        "name": "bg 430: enlarged text, motion, focus and image loading",
+        "passed": true,
+        "evidence": {
+          "cards": 4,
+          "enlargedText": "200%",
+          "hiddenDock": "inert",
+          "reducedMotion": true
+        },
+        "durationMs": 6110
+      }
+    ],
+    "mobilePolish": [
+      {
+        "name": "bg mobile polish 320",
+        "passed": true,
+        "evidence": {
+          "locale": "bg",
+          "width": 320,
+          "passed": true
+        },
+        "durationMs": 19644
+      },
+      {
+        "name": "bg mobile polish 390",
+        "passed": true,
+        "evidence": {
+          "locale": "bg",
+          "width": 390,
+          "passed": true
+        },
+        "durationMs": 12488
+      },
+      {
+        "name": "bg mobile polish 430",
+        "passed": true,
+        "evidence": {
+          "locale": "bg",
+          "width": 430,
+          "passed": true
+        },
+        "durationMs": 12873
+      },
+      {
+        "name": "bg mobile polish 1440",
+        "passed": true,
+        "evidence": {
+          "locale": "bg",
+          "width": 1440,
+          "passed": true
+        },
+        "durationMs": 6607
+      },
+      {
+        "name": "en mobile polish 320",
+        "passed": true,
+        "evidence": {
+          "locale": "en",
+          "width": 320,
+          "passed": true
+        },
+        "durationMs": 13668
+      },
+      {
+        "name": "en mobile polish 390",
+        "passed": true,
+        "evidence": {
+          "locale": "en",
+          "width": 390,
+          "passed": true
+        },
+        "durationMs": 23542
+      },
+      {
+        "name": "en mobile polish 430",
+        "passed": true,
+        "evidence": {
+          "locale": "en",
+          "width": 430,
+          "passed": true
+        },
+        "durationMs": 42396
+      },
+      {
+        "name": "en mobile polish 1440",
+        "passed": true,
+        "evidence": {
+          "locale": "en",
+          "width": 1440,
+          "passed": true
+        },
+        "durationMs": 7827
+      }
+    ]
+  },
+  "notes": [
+    "Native before/after captures use the existing dev origin; interaction suites use the built preview.",
+    "Two dev-server navigation timeouts were rerun successfully on the built preview.",
+    "Device safe-area handling uses CSS environment insets; physical iOS/Android behavior was not independently tested."
+  ]
+}

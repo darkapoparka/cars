@@ -1,0 +1,38 @@
+[
+	{
+		"locale": "bg",
+		"width": 320,
+		"height": 844,
+		"byteIdentical": true,
+		"differenceBounds": null,
+		"changedPixels": 0,
+		"maxChannelDifference": 0
+	},
+	{
+		"locale": "bg",
+		"width": 390,
+		"height": 844,
+		"byteIdentical": true,
+		"differenceBounds": null,
+		"changedPixels": 0,
+		"maxChannelDifference": 0
+	},
+	{
+		"locale": "en",
+		"width": 320,
+		"height": 844,
+		"byteIdentical": true,
+		"differenceBounds": null,
+		"changedPixels": 0,
+		"maxChannelDifference": 0
+	},
+	{
+		"locale": "en",
+		"width": 390,
+		"height": 844,
+		"byteIdentical": false,
+		"differenceBounds": [288, 224, 296, 544],
+		"changedPixels": 66,
+		"maxChannelDifference": 1
+	}
+]

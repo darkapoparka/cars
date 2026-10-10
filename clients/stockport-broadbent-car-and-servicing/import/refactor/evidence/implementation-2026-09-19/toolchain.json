@@ -1,0 +1,18 @@
+{
+	"capturedAt": "2026-09-19T11:21:47.666Z",
+	"node": "v24.21.0",
+	"sourceHead": "5ff9805ebe0211343e7a025465d8d71e306180fa",
+	"workingBranch": "main",
+	"locked": {
+		"svelte": "5.57.1",
+		"@sveltejs/kit": "2.70.3",
+		"vite": "8.3.0",
+		"tailwindcss": "4.3.3",
+		"@tailwindcss/vite": "4.3.3",
+		"bits-ui": "2.18.1",
+		"@playwright/test": "1.60.0",
+		"vitest": "4.1.11",
+		"typescript": "6.0.3",
+		"@sveltejs/adapter-vercel": "6.3.4"
+	}
+}

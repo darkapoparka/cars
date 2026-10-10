@@ -1,0 +1,196 @@
+{
+	"date": "2026-10-04",
+	"sources": [
+		{
+			"path": "src/lib/styles/tokens.css",
+			"sha256": "ec87481a8e5be96052dd1ba485d51804d78efc981112eea0d986dcf5ad2831ab"
+		},
+		{
+			"path": "src/lib/styles/app.css",
+			"sha256": "13848fa6fdc6a95526b81d47927c4fc4956c8d6a248fe090acd2165e28983b63"
+		},
+		{
+			"path": "src/lib/components/common/PageIntro.svelte",
+			"sha256": "fd59a862d07cf588ab6b0f63837958ed75d7287a054b7071515bfa230869a24f"
+		},
+		{
+			"path": "src/lib/components/common/ContactBanner.svelte",
+			"sha256": "2ea6a063d4e39299d0138b710e8683a6bf9a6575cc82af88f8ca7ce03944962d"
+		},
+		{
+			"path": "src/lib/components/common/YouTubeSection.svelte",
+			"sha256": "6c7fb05c1177a9251ed5cc3faaf1089a3a078e50c70c7f2adfda4ff1157c5ea9"
+		},
+		{
+			"path": "src/lib/components/contact/ContactLocation.svelte",
+			"sha256": "d72b0a32b7c544a7f3ae00468b178c7289215422870d1c62c6e7ff53958e44c4"
+		},
+		{
+			"path": "src/routes/(site)/about/+page.svelte",
+			"sha256": "b2b2b053a841865726894ac709a7e6b554bb9e1ae654b5e2c744580a4d9fe880"
+		},
+		{
+			"path": "src/routes/(site)/blog/[slug]/+page.svelte",
+			"sha256": "60bc28bb0eec682d5e989be4a3582a11dbfcddbd38e31eb7d0ea832400ae1892"
+		},
+		{
+			"path": "tests/typography-contact.e2e.ts",
+			"sha256": "47211d82a8707ef7ee5c48d7f04d4cf62830f2fc5df562bd59d219f0962096f9"
+		}
+	],
+	"frozenQA": {
+		"workspace": "C:/Users/radev/.codex/tmp/cars-import-desktop-continuation-2026-10-04-qa",
+		"matchedBuildInputs": 689
+	},
+	"reference": {
+		"url": "https://www.carwow.co.uk/",
+		"width": 1440,
+		"ordinarySections": {
+			"font": "gt-walsheim",
+			"size": 32,
+			"weight": 700,
+			"leading": 42
+		},
+		"prominentHeadings": {
+			"font": "south-east-cn",
+			"size": 56,
+			"weight": 700,
+			"leading": 52
+		},
+		"observation": "Read-only rendered CSS and screenshot inspection; no reference fonts or assets copied"
+	},
+	"desktop": {
+		"font": "Sofia Sans",
+		"section": {
+			"range": [32, 36],
+			"weight": 700,
+			"leading": 1.2
+		},
+		"hero": {
+			"range": [40, 52],
+			"weight": 700,
+			"leading": 1.08,
+			"topAnchor": 56
+		},
+		"retained": {
+			"controlWeight": 400,
+			"vehicleCardTitle": 18,
+			"fontAssets": true
+		},
+		"browserObservations": 19,
+		"homeAbout": {
+			"locales": ["bg", "en"],
+			"widths": [768, 1440, 1920]
+		},
+		"inventoryServicesContact": {
+			"locales": ["bg", "en"],
+			"width": 1440
+		},
+		"vehicleDetail": {
+			"route": "/bg/inventory/21754658377544573",
+			"width": 1440,
+			"titleSize": 36,
+			"titleWeight": 600
+		},
+		"horizontalOverflow": false,
+		"headingClipping": false
+	},
+	"mobile": [
+		{
+			"route": "home",
+			"locale": "bg",
+			"width": 320,
+			"comparedDOMElements": 100,
+			"computedTypeCopyAndGeometryEqual": true,
+			"viewportChangedPixels": 4539
+		},
+		{
+			"route": "about",
+			"locale": "bg",
+			"width": 320,
+			"comparedDOMElements": 34,
+			"computedTypeCopyAndGeometryEqual": true,
+			"viewportChangedPixels": 67079
+		},
+		{
+			"route": "home",
+			"locale": "en",
+			"width": 320,
+			"comparedDOMElements": 100,
+			"computedTypeCopyAndGeometryEqual": true,
+			"viewportChangedPixels": 0
+		},
+		{
+			"route": "about",
+			"locale": "en",
+			"width": 320,
+			"comparedDOMElements": 34,
+			"computedTypeCopyAndGeometryEqual": true,
+			"viewportChangedPixels": 43369
+		},
+		{
+			"route": "home",
+			"locale": "bg",
+			"width": 390,
+			"comparedDOMElements": 100,
+			"computedTypeCopyAndGeometryEqual": true,
+			"viewportChangedPixels": 0
+		},
+		{
+			"route": "about",
+			"locale": "bg",
+			"width": 390,
+			"comparedDOMElements": 34,
+			"computedTypeCopyAndGeometryEqual": true,
+			"viewportChangedPixels": 61574
+		},
+		{
+			"route": "home",
+			"locale": "en",
+			"width": 390,
+			"comparedDOMElements": 100,
+			"computedTypeCopyAndGeometryEqual": true,
+			"viewportChangedPixels": 0
+		},
+		{
+			"route": "about",
+			"locale": "en",
+			"width": 390,
+			"comparedDOMElements": 34,
+			"computedTypeCopyAndGeometryEqual": true,
+			"viewportChangedPixels": 58624
+		}
+	],
+	"mobileComparison": "Settled complete-DOM metrics for visible headings, paragraphs, buttons, inputs and links match in all eight cases. Screen pixel comparisons cover only the captured viewport; no complete-page pixel identity is claimed. Bulgarian Home at 390px was remeasured after hydration and responsive short-label selection.",
+	"checks": {
+		"node": "24.21.0",
+		"svelteCheck": "0 errors, 0 warnings",
+		"scopedPrettier": "passed",
+		"scopedEslint": "passed",
+		"architecture": "57 native routes, 230 reachable modules, one Tailwind entry",
+		"assetSignatures": "955 local images passed",
+		"productionBuild": "passed in frozen QA output (exit 0)",
+		"buildWarnings": ["Retained dashboard @reference minifier warning"],
+		"focusedBrowserChecks": "5 initially passed; the failed public-action check passed after aligning its existing expectation with the previously approved compact team CTA role",
+		"heroCoverage": {
+			"locales": ["bg", "en"],
+			"widths": [768, 1440, 1920],
+			"routes": [
+				"home",
+				"inventory",
+				"services",
+				"about",
+				"contact",
+				"sell-your-car",
+				"financing",
+				"import"
+			]
+		}
+	},
+	"actualBrowser": {
+		"finalURL": "http://127.0.0.1:6790/bg",
+		"viewportOverrideReset": true
+	},
+	"scope": "Reusable Import public desktop title hierarchy. Mobile type and geometry, controls, card text, accepted canvas and frames remain under their existing owners. Local verification; no release promotion or dealer deployment.",
+	"integration": "Scoped canonical main commit and non-force push; actual result recorded in the task handoff"
+}

@@ -1,0 +1,752 @@
+{
+  "desktop": [
+    {
+      "locale": "en",
+      "identical": true,
+      "changedPixels": 0
+    },
+    {
+      "locale": "bg",
+      "identical": true,
+      "changedPixels": 0
+    }
+  ],
+  "mobile": [
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "controls": [
+        {
+          "label": "Back",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 20,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Compare",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Save",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Share",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        }
+      ],
+      "cta": [
+        {
+          "label": "Inquire",
+          "height": 44,
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "icon": {
+            "width": 16,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Call",
+          "height": 44,
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "icon": {
+            "width": 16,
+            "stroke": "2"
+          }
+        }
+      ],
+      "panelHeightChange": 0,
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 844,
+      "controls": [
+        {
+          "label": "Back",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 20,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Compare",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Save",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Share",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        }
+      ],
+      "cta": [
+        {
+          "label": "Inquire",
+          "height": 44,
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "icon": {
+            "width": 16,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Call",
+          "height": 44,
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "icon": {
+            "width": 16,
+            "stroke": "2"
+          }
+        }
+      ],
+      "panelHeightChange": 0,
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "height": 540,
+      "controls": [
+        {
+          "label": "Back",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 20,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Compare",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Save",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Share",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        }
+      ],
+      "cta": [
+        {
+          "label": "Inquire",
+          "height": 44,
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "icon": {
+            "width": 16,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Call",
+          "height": 44,
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "icon": {
+            "width": 16,
+            "stroke": "2"
+          }
+        }
+      ],
+      "panelHeightChange": 0,
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "height": 540,
+      "controls": [
+        {
+          "label": "Back",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 20,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Compare",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Save",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Share",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        }
+      ],
+      "cta": [
+        {
+          "label": "Inquire",
+          "height": 44,
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "icon": {
+            "width": 16,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Call",
+          "height": 44,
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "icon": {
+            "width": 16,
+            "stroke": "2"
+          }
+        }
+      ],
+      "panelHeightChange": 0,
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "height": 844,
+      "controls": [
+        {
+          "label": "Назад",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 20,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Сравни",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Запази",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Сподели",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        }
+      ],
+      "cta": [
+        {
+          "label": "Запитване",
+          "height": 44,
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "icon": {
+            "width": 16,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Обади се",
+          "height": 44,
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "icon": {
+            "width": 16,
+            "stroke": "2"
+          }
+        }
+      ],
+      "panelHeightChange": 0,
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 844,
+      "controls": [
+        {
+          "label": "Назад",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 20,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Сравни",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Запази",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Сподели",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        }
+      ],
+      "cta": [
+        {
+          "label": "Запитване",
+          "height": 44,
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "icon": {
+            "width": 16,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Обади се",
+          "height": 44,
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "icon": {
+            "width": 16,
+            "stroke": "2"
+          }
+        }
+      ],
+      "panelHeightChange": 0,
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "height": 540,
+      "controls": [
+        {
+          "label": "Назад",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 20,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Сравни",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Запази",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Сподели",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        }
+      ],
+      "cta": [
+        {
+          "label": "Запитване",
+          "height": 44,
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "icon": {
+            "width": 16,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Обади се",
+          "height": 44,
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "icon": {
+            "width": 16,
+            "stroke": "2"
+          }
+        }
+      ],
+      "panelHeightChange": 0,
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 540,
+      "controls": [
+        {
+          "label": "Назад",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 20,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Сравни",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Запази",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Сподели",
+          "hit": [
+            44,
+            44
+          ],
+          "paintedFace": [
+            "36px",
+            "36px"
+          ],
+          "icon": {
+            "width": 18,
+            "stroke": "2"
+          }
+        }
+      ],
+      "cta": [
+        {
+          "label": "Запитване",
+          "height": 44,
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "icon": {
+            "width": 16,
+            "stroke": "2"
+          }
+        },
+        {
+          "label": "Обади се",
+          "height": 44,
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "icon": {
+            "width": 16,
+            "stroke": "2"
+          }
+        }
+      ],
+      "panelHeightChange": 0,
+      "overflow": 0,
+      "errors": []
+    }
+  ]
+}

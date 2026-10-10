@@ -1,0 +1,166 @@
+{
+  "previewOnly": true,
+  "changedStyle": "Active tab background only",
+  "measurements": [
+    {
+      "width": 390,
+      "variant": "Current grey",
+      "tabs": [
+        {
+          "text": "Инфо",
+          "selected": "true",
+          "background": "rgb(245, 247, 249)",
+          "fontSize": "18px",
+          "weight": "600",
+          "x": 14,
+          "y": 433.9599914550781,
+          "width": 120.65625,
+          "height": 44
+        },
+        {
+          "text": "Данни",
+          "selected": "false",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "18px",
+          "weight": "400",
+          "x": 134.65625,
+          "y": 433.9599914550781,
+          "width": 120.671875,
+          "height": 44
+        },
+        {
+          "text": "Екстри",
+          "selected": "false",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "18px",
+          "weight": "400",
+          "x": 255.328125,
+          "y": 433.9599914550781,
+          "width": 120.65625,
+          "height": 44
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 390,
+      "variant": "White preview",
+      "tabs": [
+        {
+          "text": "Инфо",
+          "selected": "true",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "18px",
+          "weight": "600",
+          "x": 14,
+          "y": 433.9599914550781,
+          "width": 120.65625,
+          "height": 44
+        },
+        {
+          "text": "Данни",
+          "selected": "false",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "18px",
+          "weight": "400",
+          "x": 134.65625,
+          "y": 433.9599914550781,
+          "width": 120.671875,
+          "height": 44
+        },
+        {
+          "text": "Екстри",
+          "selected": "false",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "18px",
+          "weight": "400",
+          "x": 255.328125,
+          "y": 433.9599914550781,
+          "width": 120.65625,
+          "height": 44
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 320,
+      "variant": "Current grey",
+      "tabs": [
+        {
+          "text": "Инфо",
+          "selected": "true",
+          "background": "rgb(245, 247, 249)",
+          "fontSize": "18px",
+          "weight": "600",
+          "x": 14,
+          "y": 433.9599914550781,
+          "width": 97.328125,
+          "height": 44
+        },
+        {
+          "text": "Данни",
+          "selected": "false",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "18px",
+          "weight": "400",
+          "x": 111.328125,
+          "y": 433.9599914550781,
+          "width": 97.328125,
+          "height": 44
+        },
+        {
+          "text": "Екстри",
+          "selected": "false",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "18px",
+          "weight": "400",
+          "x": 208.65625,
+          "y": 433.9599914550781,
+          "width": 97.34375,
+          "height": 44
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 320,
+      "variant": "White preview",
+      "tabs": [
+        {
+          "text": "Инфо",
+          "selected": "true",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "18px",
+          "weight": "600",
+          "x": 14,
+          "y": 433.9599914550781,
+          "width": 97.328125,
+          "height": 44
+        },
+        {
+          "text": "Данни",
+          "selected": "false",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "18px",
+          "weight": "400",
+          "x": 111.328125,
+          "y": 433.9599914550781,
+          "width": 97.328125,
+          "height": 44
+        },
+        {
+          "text": "Екстри",
+          "selected": "false",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "18px",
+          "weight": "400",
+          "x": 208.65625,
+          "y": 433.9599914550781,
+          "width": 97.34375,
+          "height": 44
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

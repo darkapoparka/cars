@@ -1,0 +1,1659 @@
+<script lang="ts">
+	import { assetHref } from '$lib/utils/assets';
+	import { optionLabel } from '$lib/i18n/options';
+	import { contentText } from '$lib/content/localized';
+	const ct = (value: string) => contentText(page.data.locale === 'en' ? 'en' : 'bg', value);
+	import { nativeMessage } from '$lib/i18n/native';
+
+	const nt = (key: import('$lib/i18n/native').NativeKey) =>
+		nativeMessage(page.data.locale === 'en' ? 'en' : 'bg', key);
+	import { submitIntake } from '$lib/browser/submit-intake';
+	import { receiptMessage, type InquiryReceipt } from '$lib/domain/inquiry';
+	import { page } from '$app/state';
+	import { pushState } from '$app/navigation';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
+	import Check from '@lucide/svelte/icons/check';
+	import ChevronLeft from '@lucide/svelte/icons/chevron-left';
+	import Link2 from '@lucide/svelte/icons/link-2';
+	import Search from '@lucide/svelte/icons/search';
+	import X from '@lucide/svelte/icons/x';
+	import { browser } from '$app/environment';
+	import {
+		readSessionDraft,
+		saveSessionDraft,
+		clearSessionDraft
+	} from '$lib/browser/session-draft';
+	import { site } from '$lib/config/site';
+	import { mobileServiceCopy } from '$lib/content/service-mobile';
+	import { translateVehicleTerm } from '$lib/i18n/messages';
+	import { onMount, tick } from 'svelte';
+	import type { Snippet } from 'svelte';
+	import { templateInquiryCopy } from '$lib/data/template-settings';
+	import MobileIntakeChoiceField from '$lib/components/common/MobileIntakeChoiceField.svelte';
+	import MobileIntakeChoiceList from '$lib/components/common/MobileIntakeChoiceList.svelte';
+	import { mobileIntakeCopy } from '$lib/content/mobile-intake';
+	import {
+		emptyVehicleIntakeOptions,
+		type VehicleIntakeOptions
+	} from '$lib/domain/vehicle-intake-options';
+	import DesktopImportEntry from './DesktopImportEntry.svelte';
+	import { importEntryComplete, type ImportIntent } from '$lib/domain/import-entry';
+	import { importEntryCopy } from '$lib/content/import-entry';
+	import Modal from '$lib/components/common/Modal.svelte';
+	import { publicPageCopy } from '$lib/content/desktop-copy';
+	import {
+		emptyImportCriteria,
+		importBodyTypes,
+		importCountries,
+		importCriteriaSummary,
+		importFuels,
+		importTransmissions,
+		type ImportCriteria
+	} from '$lib/data/import-criteria';
+
+	type Props = {
+		embedded?: boolean;
+		mobile?: boolean;
+		intakeOptions?: VehicleIntakeOptions;
+		dialog?: boolean;
+		open?: boolean;
+		onCloseAutoFocus?: (event: Event) => void;
+		desktopLayout?: Snippet<[Snippet, boolean]>;
+		initialIntent: ImportIntent;
+		initialVehicle?: string;
+		initialCriteria?: ImportCriteria;
+		initialStep?: 0 | 1;
+		onclose: () => void;
+	};
+
+	let {
+		embedded = false,
+		mobile = false,
+		intakeOptions = emptyVehicleIntakeOptions,
+		dialog = false,
+		open = $bindable(false),
+		onCloseAutoFocus,
+		desktopLayout,
+		initialIntent,
+		initialVehicle = '',
+		initialCriteria = emptyImportCriteria,
+		initialStep,
+		onclose
+	}: Props = $props();
+
+	const wizardId = $props.id();
+	const fieldId = (field: string) => `import-wizard-${field}-${wizardId}`;
+
+	const stepLabels = $derived([nt('ui167'), nt('ui238'), nt('ui137')] as const);
+	const timeframeOptions = ['Без значение', 'До 1 месец', 'До 3 месеца', 'До 6 месеца'];
+
+	// The keyed parent recreates the wizard for each new intake session.
+	// svelte-ignore state_referenced_locally
+	let step = $state<number>(
+		initialStep ?? (initialIntent === 'listing' && initialVehicle.trim() ? 1 : 0)
+	);
+	// svelte-ignore state_referenced_locally
+	let intent = $state<ImportIntent>(initialIntent);
+	// svelte-ignore state_referenced_locally
+	let vehicle = $state(initialVehicle);
+	// svelte-ignore state_referenced_locally
+	let make = $state(initialCriteria.make);
+	// svelte-ignore state_referenced_locally
+	let model = $state(initialCriteria.model);
+	// svelte-ignore state_referenced_locally
+	let bodyType = $state(initialCriteria.bodyType);
+	// svelte-ignore state_referenced_locally
+	let budget = $state(initialCriteria.maxPrice);
+	// svelte-ignore state_referenced_locally
+	let origin = $state(initialCriteria.origin);
+	// svelte-ignore state_referenced_locally
+	let minYear = $state(initialCriteria.minYear);
+	// svelte-ignore state_referenced_locally
+	let fuel = $state(initialCriteria.fuel);
+	// svelte-ignore state_referenced_locally
+	let transmission = $state(initialCriteria.transmission);
+	let timeframe = $state('Без значение');
+	let notes = $state('');
+	let name = $state('');
+	let phone = $state('');
+	let email = $state('');
+	let submitted = $state(false);
+	let receipt = $state<InquiryReceipt | null>(null);
+	let submitting = $state(false);
+	let submitError = $state('');
+	let validationMessage = $state('');
+	let draftReady = $state(false);
+	let wizardRoot = $state<HTMLDivElement | null>(null);
+	type ChoiceField = 'origin' | 'make' | 'model' | 'bodyType' | 'timeframe' | 'fuel';
+	let activeChoice = $state<ChoiceField | null>(null);
+	let choiceHistoryActive = false;
+	let choiceScrollTop = 0;
+	let choiceOpener = '';
+	const locale = $derived(page.data.locale === 'en' ? 'en' : 'bg');
+	const intakeCopy = $derived(mobileIntakeCopy[locale]);
+	const serviceCopy = $derived(mobileServiceCopy[locale]);
+	const choiceTitle = $derived(
+		activeChoice === 'origin'
+			? intakeCopy.selectCountry
+			: activeChoice === 'make'
+				? intakeCopy.selectMake
+				: activeChoice === 'model'
+					? intakeCopy.selectModel
+					: activeChoice === 'timeframe'
+						? intakeCopy.selectTimeframe
+						: activeChoice === 'fuel'
+							? intakeCopy.selectFuel
+							: intakeCopy.selectType
+	);
+	const choiceValue = $derived(
+		activeChoice === 'origin'
+			? origin
+			: activeChoice === 'make'
+				? make
+				: activeChoice === 'model'
+					? model
+					: activeChoice === 'timeframe'
+						? timeframe
+						: activeChoice === 'fuel'
+							? fuel
+							: bodyType
+	);
+	const selectedCountry = $derived(
+		importCountries.find((country) => country.value === origin) ?? importCountries[0]
+	);
+	const choiceOptions = $derived.by(() => {
+		if (activeChoice === 'timeframe')
+			return timeframeOptions.map((value) => ({ value, label: optionLabel(value, locale) }));
+		if (activeChoice === 'fuel')
+			return [
+				{ value: '', label: intakeCopy.anyFuel },
+				...importFuels.map((value) => ({ value, label: optionLabel(value, locale) }))
+			];
+		if (activeChoice === 'origin')
+			return importCountries.map((country) => ({
+				value: country.value,
+				label: country.value ? optionLabel(country.label, locale) : serviceCopy.anyCountry,
+				flag: country.flagSrc
+			}));
+		if (activeChoice === 'bodyType')
+			return [
+				{ value: '', label: serviceCopy.anyType },
+				...importBodyTypes.map((value) => ({
+					value,
+					label: translateVehicleTerm(locale, 'bodyTypes', value)
+				}))
+			];
+		const values =
+			activeChoice === 'make'
+				? intakeOptions.makes
+				: Object.hasOwn(intakeOptions.modelsByMake, make)
+					? intakeOptions.modelsByMake[make]
+					: [];
+		return [
+			{ value: '', label: activeChoice === 'make' ? serviceCopy.anyMake : serviceCopy.anyModel },
+			...values.map((value) => ({ value, label: value }))
+		];
+	});
+
+	async function restoreChoice() {
+		activeChoice = null;
+		await tick();
+		wizardRoot
+			?.querySelector<HTMLElement>('.bc-import-wizard__body')
+			?.scrollTo({ top: choiceScrollTop, behavior: 'auto' });
+		wizardRoot
+			?.querySelector<HTMLElement>('[id="' + choiceOpener + '"]')
+			?.focus({ preventScroll: true });
+	}
+	function openChoice(field: ChoiceField) {
+		choiceScrollTop =
+			wizardRoot?.querySelector<HTMLElement>('.bc-import-wizard__body')?.scrollTop ?? 0;
+		choiceOpener = fieldId(field === 'bodyType' ? 'type' : field === 'origin' ? 'country' : field);
+		pushState('', { ...page.state, __daynightWizard: historyId });
+		choiceHistoryActive = true;
+		activeChoice = field;
+	}
+	function closeChoice() {
+		if (choiceHistoryActive) history.back();
+		else void restoreChoice();
+	}
+	function selectChoice(value: string) {
+		if (activeChoice === 'origin') origin = value;
+		else if (activeChoice === 'make' && make !== value) {
+			make = value;
+			model = '';
+		} else if (activeChoice === 'model') model = value;
+		else if (activeChoice === 'bodyType') bodyType = value;
+		else if (activeChoice === 'timeframe') timeframe = value;
+		else if (activeChoice === 'fuel') fuel = value;
+		validationMessage = '';
+		closeChoice();
+	}
+	const heroEntry = $derived(Boolean(desktopLayout) && step === 0 && !submitted);
+	const draftKey = $derived(
+		'template:import:v2:' +
+			site.identity.origin +
+			':' +
+			initialIntent +
+			':' +
+			JSON.stringify(initialCriteria) +
+			(desktopLayout || dialog
+				? (dialog ? ':dialog:' : ':desktop:') + JSON.stringify({ initialVehicle, initialStep })
+				: '')
+	);
+	const historyId = `daynight-import-wizard-${Math.random().toString(36).slice(2)}`;
+	let historyEntryActive = false;
+	let closeAfterHistory = false;
+	const requestCriteria = $derived({
+		origin,
+		make,
+		model,
+		bodyType,
+		minYear,
+		maxPrice: budget,
+		fuel,
+		transmission
+	});
+	const criteriaSummary = $derived(
+		importCriteriaSummary(requestCriteria, page.data.locale === 'en' ? 'en' : 'bg')
+	);
+
+	const clearDraft = () => {
+		clearSessionDraft(draftKey);
+	};
+
+	const requestClose = () => {
+		if (!browser || embedded || !historyEntryActive) {
+			onclose();
+			return;
+		}
+		closeAfterHistory = true;
+		historyEntryActive = false;
+		history.back();
+	};
+
+	const handleHistoryBack = () => {
+		if (choiceHistoryActive) {
+			choiceHistoryActive = false;
+			void restoreChoice();
+			return;
+		}
+		if (closeAfterHistory) {
+			closeAfterHistory = false;
+			onclose();
+			return;
+		}
+		if (!historyEntryActive) return;
+		historyEntryActive = false;
+		validationMessage = '';
+		if (!submitted && step > 0) {
+			step -= 1;
+			queueMicrotask(() => {
+				pushState('', { ...page.state, __daynightWizard: historyId });
+				historyEntryActive = true;
+			});
+			return;
+		}
+		onclose();
+	};
+
+	onMount(() => {
+		if (!browser) return;
+		try {
+			clearSessionDraft('daynight-import-request-draft-v1');
+			const draft = readSessionDraft(draftKey);
+			if (!draft) return;
+			if (!mobile && (draft.intent === 'listing' || draft.intent === 'source'))
+				intent = draft.intent;
+			if (typeof draft.step === 'number' && draft.step >= 0 && draft.step <= 2) step = draft.step;
+			if (typeof draft.vehicle === 'string') vehicle = draft.vehicle;
+			if (typeof draft.make === 'string') make = draft.make;
+			if (typeof draft.model === 'string') model = draft.model;
+			if (typeof draft.bodyType === 'string') bodyType = draft.bodyType;
+			if (typeof draft.budget === 'string') budget = draft.budget;
+			if (typeof draft.origin === 'string') origin = draft.origin;
+			if (typeof draft.minYear === 'string') minYear = draft.minYear;
+			if (typeof draft.fuel === 'string') fuel = draft.fuel;
+			if (typeof draft.transmission === 'string') transmission = draft.transmission;
+			if (typeof draft.timeframe === 'string') timeframe = draft.timeframe;
+			if (typeof draft.notes === 'string') notes = draft.notes;
+			if (typeof draft.name === 'string') name = draft.name;
+			if (typeof draft.phone === 'string') phone = draft.phone;
+			if (typeof draft.email === 'string') email = draft.email;
+		} catch {
+			clearDraft();
+		} finally {
+			draftReady = true;
+		}
+	});
+
+	onMount(() => {
+		if (embedded) return;
+		pushState('', { ...page.state, __daynightWizard: historyId });
+		historyEntryActive = true;
+		window.addEventListener('popstate', handleHistoryBack);
+		return () => window.removeEventListener('popstate', handleHistoryBack);
+	});
+
+	$effect(() => {
+		if (!browser || !draftReady || submitted) return;
+		saveSessionDraft(draftKey, {
+			step,
+			intent,
+			vehicle,
+			make,
+			model,
+			bodyType,
+			budget,
+			origin,
+			minYear,
+			fuel,
+			transmission,
+			timeframe
+		});
+	});
+
+	let canContinue = $derived(
+		step === 0
+			? desktopLayout || dialog
+				? importEntryComplete(intent, vehicle, { make, model, origin })
+				: intent === 'listing'
+					? vehicle.trim().length > 3
+					: Boolean(origin) || make.trim().length > 1 || model.trim().length > 1
+			: step === 2
+				? name.trim().length >= 2 && phone.trim().length >= 6
+				: true
+	);
+
+	const focusFirstInvalid = async () => {
+		let selector: string;
+		if (step === 0 && intent === 'listing') {
+			validationMessage =
+				desktopLayout || dialog
+					? importEntryCopy[page.data.locale === 'en' ? 'en' : 'bg'].invalidListing
+					: nt('ui243');
+			selector = '[id^="import-wizard-vehicle-"]';
+		} else if (step === 0) {
+			validationMessage = nt('ui244');
+			selector = '[id^="import-wizard-make-"]';
+		} else if (name.trim().length < 2) {
+			validationMessage = nt('ui245');
+			selector = '[id^="import-wizard-name-"]';
+		} else {
+			validationMessage = nt('ui191');
+			selector = '[id^="import-wizard-phone-"]';
+		}
+		await tick();
+		wizardRoot?.querySelector<HTMLElement>(selector)?.focus({ preventScroll: false });
+	};
+
+	const focusDesktopStep = async () => {
+		if (!desktopLayout && !dialog) return;
+		await tick();
+		if (dialog) wizardRoot?.closest<HTMLElement>('[role="dialog"]')?.focus({ preventScroll: true });
+		else wizardRoot?.querySelector<HTMLElement>('input, select')?.focus();
+	};
+
+	const goBack = () => {
+		validationMessage = '';
+		if (step > 0) {
+			step -= 1;
+			void focusDesktopStep();
+		}
+	};
+
+	const goNext = async () => {
+		if (submitting) return;
+		if (!canContinue) {
+			await focusFirstInvalid();
+			return;
+		}
+		validationMessage = '';
+		if (step < stepLabels.length - 1) {
+			step += 1;
+			await focusDesktopStep();
+			return;
+		}
+		submitting = true;
+		submitError = '';
+		try {
+			receipt = await submitIntake('/api/inquiries', {
+				name,
+				phone,
+				email,
+				source: 'import-request',
+				routePath: 'import',
+				vehicle: intent === 'listing' ? vehicle : [make, model].filter(Boolean).join(' '),
+				message: [nt('ui214'), criteriaSummary, `Срок: ${timeframe}`, notes]
+					.filter(Boolean)
+					.join('\n')
+			});
+			clearDraft();
+			submitted = true;
+		} catch {
+			submitError = nt('ui246');
+		} finally {
+			submitting = false;
+		}
+	};
+</script>
+
+{#snippet navigationActions()}
+	{#if step > 0}
+		<button
+			type="button"
+			class="bc-import-wizard__back"
+			data-intake-back
+			onclick={goBack}
+			disabled={submitting}
+		>
+			<ChevronLeft size={18} strokeWidth={2.4} aria-hidden="true" />
+			<span>{nt('ui183')}</span>
+		</button>
+	{/if}
+	<button
+		type="button"
+		class="bc-import-wizard__next"
+		data-intake-next
+		disabled={submitting}
+		onclick={goNext}
+	>
+		<span
+			>{submitting ? nt('ui184') : step < stepLabels.length - 1 ? nt('ui185') : nt('ui237')}</span
+		>
+		<ArrowRight size={18} strokeWidth={2.4} aria-hidden="true" />
+	</button>
+{/snippet}
+
+{#snippet dialogFooter()}
+	<div class="bc-import-wizard__nav bc-import-wizard__nav--dialog" aria-busy={submitting}>
+		{#if submitted}
+			<button type="button" class="bc-import-wizard__next" onclick={requestClose}
+				>{nt('ui33')}</button
+			>
+		{:else}
+			{@render navigationActions()}
+		{/if}
+	</div>
+{/snippet}
+
+{#snippet wizardContent()}
+	<div
+		class="bc-import-wizard"
+		class:bc-import-wizard--embedded={embedded}
+		class:bc-import-wizard--mobile={mobile}
+		class:bc-import-wizard--selecting={mobile && activeChoice !== null}
+		class:bc-import-wizard--hero-entry={heroEntry}
+		class:bc-import-wizard--dialog={dialog}
+		class:desktop-intake={embedded}
+		bind:this={wizardRoot}
+	>
+		{#if submitted}
+			<div class="bc-import-wizard__success" role="status">
+				<span><Check size={25} strokeWidth={2.4} aria-hidden="true" /></span>
+				<h2>{nt('ui215')}</h2>
+				<p>
+					{receipt ? receiptMessage(receipt, page.data.locale === 'en') : ''}
+				</p>
+				{#if !dialog}<button type="button" onclick={requestClose}>{nt('ui33')}</button>{/if}
+			</div>
+		{:else if mobile && activeChoice}
+			<MobileIntakeChoiceList
+				title={choiceTitle}
+				options={choiceOptions}
+				value={choiceValue}
+				{locale}
+				backLabel={nt('ui183')}
+				searchLabel={activeChoice === 'make'
+					? intakeCopy.searchMake
+					: activeChoice === 'model'
+						? intakeCopy.searchModel
+						: undefined}
+				allowCustom={activeChoice === 'make' || activeChoice === 'model'}
+				maxLength={activeChoice === 'make' ? 60 : 80}
+				onback={closeChoice}
+				onselect={selectChoice}
+			/>
+		{:else}
+			{#if !dialog}<header class="bc-import-wizard__header" data-intake-header>
+					<div>
+						<p>{nt('ui165')} {step + 1} {nt('ui216')} {stepLabels.length}</p>
+						<h2>{stepLabels[step]}</h2>
+					</div>
+					<button type="button" aria-label={nt('ui33')} onclick={requestClose}>
+						<X size={20} strokeWidth={2.3} aria-hidden="true" />
+					</button>
+				</header>{/if}
+
+			<div
+				class="bc-import-wizard__progress"
+				role="progressbar"
+				aria-valuemin={0}
+				aria-valuemax={3}
+				aria-valuenow={step + 1}
+				aria-label={`${nt('ui165')} ${step + 1} ${nt('ui216')} 3`}
+			>
+				{#each stepLabels as label, index (label)}
+					<span class:done={index <= step}></span>
+				{/each}
+			</div>
+
+			<div class="bc-import-wizard__body">
+				{#if dialog && step > 0 && (intent === 'listing' ? vehicle : criteriaSummary)}
+					<p
+						class="bc-import-wizard__context"
+						title={intent === 'listing' ? vehicle : criteriaSummary}
+					>
+						{intent === 'listing' ? vehicle : criteriaSummary}
+					</p>
+				{/if}
+				{#if step === 0 && heroEntry}
+					<DesktopImportEntry
+						{intent}
+						bind:vehicle
+						bind:make
+						bind:model
+						bind:bodyType
+						bind:origin
+						locale={page.data.locale === 'en' ? 'en' : 'bg'}
+						fieldIds={{
+							vehicle: fieldId('vehicle'),
+							make: fieldId('make'),
+							model: fieldId('model'),
+							type: fieldId('type')
+						}}
+						error={validationMessage}
+						oncontinue={goNext}
+					/>
+				{:else if step === 0}
+					<div class="bc-import-wizard__intro" data-intake-intro>
+						<h3>{mobile && intent === 'source' ? intakeCopy.sourceTitle : nt('ui217')}</h3>
+						<p>
+							{mobile
+								? intent === 'listing'
+									? intakeCopy.listingHelp
+									: intakeCopy.sourceHelp
+								: nt('ui218')}
+						</p>
+					</div>
+
+					{#if (!embedded || dialog) && !mobile}<div
+							class="bc-import-wizard__intent"
+							aria-label={nt('ui219')}
+						>
+							<button
+								type="button"
+								class:active={intent === 'listing'}
+								aria-pressed={intent === 'listing'}
+								onclick={() => (intent = 'listing')}
+							>
+								<Link2 size={17} strokeWidth={2.2} aria-hidden="true" />
+								<span>{nt('ui220')}</span>
+							</button>
+							<button
+								type="button"
+								class:active={intent === 'source'}
+								aria-pressed={intent === 'source'}
+								onclick={() => (intent = 'source')}
+							>
+								<Search size={17} strokeWidth={2.2} aria-hidden="true" />
+								<span>{nt('ui221')}</span>
+							</button>
+						</div>{/if}
+
+					{#if mobile}
+						<div class="bc-import-wizard__fields" data-intake-fields>
+							{#if intent === 'listing'}
+								<label class="bc-import-wizard__field--wide" for={fieldId('vehicle')}>
+									<span>{nt('ui222')}</span>
+									<input
+										id={fieldId('vehicle')}
+										type="text"
+										placeholder={nt('ui223')}
+										required
+										bind:value={vehicle}
+									/>
+								</label>
+							{:else}
+								<div class="bc-import-wizard__field--wide">
+									<MobileIntakeChoiceField
+										id={fieldId('make')}
+										label={nt('ui171')}
+										value={make}
+										placeholder={intakeCopy.selectMake}
+										onopen={() => openChoice('make')}
+									/>
+								</div>
+								<div class="bc-import-wizard__field--wide">
+									<MobileIntakeChoiceField
+										id={fieldId('model')}
+										label={nt('ui172')}
+										value={model}
+										placeholder={make ? intakeCopy.selectModel : intakeCopy.makeFirst}
+										disabled={!make.trim()}
+										onopen={() => openChoice('model')}
+									/>
+								</div>
+							{/if}
+							<div class="bc-import-wizard__field--wide">
+								<MobileIntakeChoiceField
+									id={fieldId('country')}
+									label={nt('ui224')}
+									value={origin
+										? optionLabel(selectedCountry.label, locale)
+										: serviceCopy.anyCountry}
+									placeholder={intakeCopy.selectCountry}
+									flag={selectedCountry.flagSrc}
+									onopen={() => openChoice('origin')}
+								/>
+							</div>
+							{#if intent === 'source'}<div class="bc-import-wizard__field--wide">
+									<MobileIntakeChoiceField
+										id={fieldId('type')}
+										label={serviceCopy.type}
+										value={bodyType
+											? translateVehicleTerm(locale, 'bodyTypes', bodyType)
+											: serviceCopy.anyType}
+										placeholder={intakeCopy.selectType}
+										onopen={() => openChoice('bodyType')}
+									/>
+								</div>{/if}
+						</div>
+					{:else}
+						<div class="bc-import-wizard__fields" data-intake-fields>
+							{#if intent === 'listing'}
+								<label class="bc-import-wizard__field--wide" for={fieldId('vehicle')}>
+									<span class:sr-only={heroEntry}>{nt('ui222')}</span>
+									<input
+										id={fieldId('vehicle')}
+										type="text"
+										placeholder={nt('ui223')}
+										required
+										bind:value={vehicle}
+									/>
+								</label>
+							{/if}
+							<fieldset class="bc-import-wizard__field--wide">
+								<legend class:sr-only={heroEntry}>{nt('ui224')}</legend>
+								<div class="bc-import-wizard__country-grid" data-intake-choices>
+									{#each importCountries as country (country.value)}
+										<button
+											type="button"
+											class:active={origin === country.value}
+											aria-pressed={origin === country.value}
+											onclick={() => (origin = country.value)}
+										>
+											<img
+												src={assetHref(country.flagSrc)}
+												alt=""
+												aria-hidden="true"
+												width="24"
+												height="18"
+											/><strong
+												>{optionLabel(
+													country.label,
+													page.data.locale === 'en' ? 'en' : 'bg'
+												)}</strong
+											>
+										</button>
+									{/each}
+								</div>
+							</fieldset>
+							{#if intent === 'source'}
+								<label for={fieldId('make')}>
+									<span class:sr-only={heroEntry}>{nt('ui171')}</span>
+									<input
+										id={fieldId('make')}
+										type="text"
+										placeholder={nt('ui225')}
+										bind:value={make}
+									/>
+								</label>
+								<label for={fieldId('model')}>
+									<span class:sr-only={heroEntry}>{nt('ui172')}</span>
+									<input
+										id={fieldId('model')}
+										type="text"
+										placeholder={nt('ui226')}
+										bind:value={model}
+									/>
+								</label>
+								<label
+									class="bc-import-wizard__field--wide bc-import-wizard__source-type"
+									for={fieldId('type')}
+								>
+									<span class:sr-only={heroEntry}
+										>{mobileServiceCopy[page.data.locale === 'en' ? 'en' : 'bg'].type}</span
+									>
+									<select id={fieldId('type')} bind:value={bodyType}>
+										<option value=""
+											>{mobileServiceCopy[page.data.locale === 'en' ? 'en' : 'bg'].anyType}</option
+										>
+										{#each importBodyTypes as value (value)}
+											<option {value}
+												>{translateVehicleTerm(
+													page.data.locale === 'en' ? 'en' : 'bg',
+													'bodyTypes',
+													value
+												)}</option
+											>
+										{/each}
+									</select>
+								</label>
+							{/if}
+						</div>
+					{/if}
+				{:else if step === 1}
+					<div class="bc-import-wizard__intro" data-intake-intro>
+						<h3>{nt('ui227')}</h3>
+						<p>{nt('ui228')}</p>
+					</div>
+					<div class="bc-import-wizard__fields" data-intake-fields>
+						<label for={fieldId('year')}>
+							<span>{nt('ui130')}</span>
+							<input
+								id={fieldId('year')}
+								type="text"
+								inputmode="numeric"
+								maxlength="4"
+								placeholder="2021"
+								bind:value={minYear}
+							/>
+						</label>
+						<label for={fieldId('budget')}>
+							<span>{nt('ui229')}</span>
+							<input
+								id={fieldId('budget')}
+								type="text"
+								inputmode="numeric"
+								placeholder="EUR"
+								bind:value={budget}
+							/>
+						</label>
+						{#if mobile}
+							<div class="bc-import-wizard__field--wide">
+								<MobileIntakeChoiceField
+									id={fieldId('timeframe')}
+									label={nt('ui230')}
+									value={optionLabel(timeframe, locale)}
+									placeholder={optionLabel(timeframeOptions[0], locale)}
+									onopen={() => openChoice('timeframe')}
+								/>
+							</div>
+							<div class="bc-import-wizard__field--wide">
+								<MobileIntakeChoiceField
+									id={fieldId('fuel')}
+									label={nt('ui61')}
+									value={fuel ? optionLabel(fuel, locale) : ''}
+									placeholder={intakeCopy.anyFuel}
+									onopen={() => openChoice('fuel')}
+								/>
+							</div>
+						{:else}
+							<fieldset class="bc-import-wizard__field--wide">
+								<legend>{nt('ui230')}</legend>
+								<div class="bc-import-wizard__chips" data-intake-choices>
+									{#each timeframeOptions as option (option)}
+										<button
+											type="button"
+											class:active={timeframe === option}
+											aria-pressed={timeframe === option}
+											onclick={() => (timeframe = option)}
+											>{optionLabel(option, page.data.locale === 'en' ? 'en' : 'bg')}</button
+										>
+									{/each}
+								</div>
+							</fieldset>
+							<fieldset class="bc-import-wizard__field--wide">
+								<legend>{nt('ui61')}</legend>
+								<div class="bc-import-wizard__chips" data-intake-choices>
+									{#each importFuels as option (option)}
+										<button
+											type="button"
+											class:active={fuel === option}
+											aria-pressed={fuel === option}
+											onclick={() => (fuel = fuel === option ? '' : option)}
+											>{optionLabel(option, page.data.locale === 'en' ? 'en' : 'bg')}</button
+										>
+									{/each}
+								</div>
+							</fieldset>
+						{/if}
+						<fieldset class="bc-import-wizard__field--wide">
+							<legend>{nt('ui231')}</legend>
+							<div class="bc-import-wizard__chips" data-intake-choices>
+								{#each importTransmissions as option (option)}
+									<button
+										type="button"
+										class:active={transmission === option}
+										aria-pressed={transmission === option}
+										onclick={() => (transmission = transmission === option ? '' : option)}
+										>{optionLabel(option, page.data.locale === 'en' ? 'en' : 'bg')}</button
+									>
+								{/each}
+							</div>
+						</fieldset>
+						<label class="bc-import-wizard__field--wide" for={fieldId('notes')}>
+							<span>{nt('ui232')}</span>
+							<textarea id={fieldId('notes')} rows="4" placeholder={nt('ui233')} bind:value={notes}
+							></textarea>
+						</label>
+					</div>
+				{:else}
+					<div class="bc-import-wizard__intro" data-intake-intro>
+						<h3>{nt('ui41')}</h3>
+						<p>{nt('ui234')}</p>
+						{#if criteriaSummary && !dialog}<p class="bc-import-wizard__summary">
+								{criteriaSummary}
+							</p>{/if}
+					</div>
+					<div class="bc-import-wizard__fields" data-intake-fields>
+						<label class="bc-import-wizard__field--wide" for={fieldId('phone')}>
+							<span>{nt('ui178')}</span>
+							<input
+								id={fieldId('phone')}
+								type="tel"
+								inputmode="tel"
+								autocomplete="tel"
+								placeholder={nt('ui235')}
+								required
+								bind:value={phone}
+							/>
+						</label>
+						<label for={fieldId('name')}>
+							<span>{nt('ui236')}</span>
+							<input
+								id={fieldId('name')}
+								type="text"
+								autocomplete="name"
+								required
+								minlength="2"
+								bind:value={name}
+							/>
+						</label>
+						<label for={fieldId('email')}>
+							<span>{nt('ui22')}</span>
+							<input
+								id={fieldId('email')}
+								type="email"
+								inputmode="email"
+								autocomplete="email"
+								bind:value={email}
+							/>
+						</label>
+					</div>
+					<p class="bc-import-wizard__promise">{ct(templateInquiryCopy.notice)}</p>
+				{/if}
+			</div>
+
+			{#if validationMessage && !heroEntry}<p class="bc-import-wizard__error" role="alert">
+					{validationMessage}
+				</p>{/if}
+			{#if submitError}<p class="bc-import-wizard__error" role="alert">{submitError}</p>{/if}
+			{#if !heroEntry && !dialog}<footer class="bc-import-wizard__nav" aria-busy={submitting}>
+					{@render navigationActions()}
+				</footer>{/if}
+		{/if}
+	</div>
+{/snippet}
+
+{#if dialog}
+	<Modal
+		bind:open
+		title={publicPageCopy[page.data.locale === 'en' ? 'en' : 'bg'].import.title}
+		description={submitted
+			? undefined
+			: `${nt('ui165')} ${step + 1} ${nt('ui216')} ${stepLabels.length} · ${stepLabels[step]}`}
+		class="desktop-import-request"
+		{onCloseAutoFocus}
+		footer={dialogFooter}
+	>
+		{@render wizardContent()}
+	</Modal>
+{:else if desktopLayout}{@render desktopLayout(
+		wizardContent,
+		heroEntry
+	)}{:else}{@render wizardContent()}{/if}
+
+<style>
+	.bc-import-wizard--mobile .bc-import-wizard__chips {
+		flex-wrap: nowrap;
+	}
+	.bc-import-wizard--mobile .bc-import-wizard__chips button {
+		min-width: 0;
+		min-height: var(--bc-control-height-standard);
+		flex: 1;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.bc-import-wizard.bc-import-wizard--selecting {
+		display: block;
+	}
+	.bc-import-wizard--mobile .bc-import-wizard__header p {
+		font-size: 11px;
+		line-height: 1.2;
+	}
+	.bc-import-wizard__error {
+		color: var(--bc-accent-hover);
+		font-size: var(--bc-mobile-body);
+		line-height: var(--bc-mobile-body-leading);
+		margin: 0;
+		font-weight: var(--bc-weight-body);
+	}
+	.bc-import-wizard__intro .bc-import-wizard__summary {
+		margin-top: 8px;
+		color: var(--bc-ink);
+		overflow-wrap: anywhere;
+	}
+	.bc-import-wizard {
+		display: grid;
+		height: calc(100dvh - var(--bc-kb-inset, 0px));
+		min-height: 0;
+		color: var(--bc-ink);
+	}
+
+	.bc-import-wizard__header {
+		justify-content: space-between;
+	}
+
+	.bc-import-wizard__header > div {
+		display: grid;
+	}
+
+	.bc-import-wizard__header h2,
+	.bc-import-wizard__header p {
+		margin: 0;
+	}
+
+	.bc-import-wizard__header h2 {
+		letter-spacing: -0.02em;
+	}
+
+	.bc-import-wizard__header > button {
+		display: flex;
+		flex: 0 0 44px;
+		align-items: center;
+		justify-content: center;
+		border: 0;
+		border-radius: 999px;
+		cursor: pointer;
+		padding: 0;
+	}
+
+	.bc-import-wizard__progress {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	.bc-import-wizard__progress span {
+		border-radius: 999px;
+	}
+
+	.bc-import-wizard__progress span.done {
+		background: var(--bc-accent);
+	}
+
+	.bc-import-wizard__body {
+		display: grid;
+		min-height: 0;
+		overflow-y: auto;
+		overscroll-behavior: contain;
+		scrollbar-width: none;
+	}
+	.bc-import-wizard__body::-webkit-scrollbar {
+		display: none;
+	}
+
+	.bc-import-wizard__intro {
+		display: grid;
+	}
+
+	.bc-import-wizard__intro h3,
+	.bc-import-wizard__intro p {
+		margin: 0;
+	}
+
+	.bc-import-wizard__intro h3 {
+		letter-spacing: -0.015em;
+	}
+
+	.bc-import-wizard__intro p {
+		max-width: 52ch;
+		color: var(--bc-muted);
+	}
+
+	.bc-import-wizard__intent {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.bc-import-wizard__intent button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 7px;
+		color: var(--bc-ink);
+		cursor: pointer;
+	}
+
+	.bc-import-wizard__intent button.active {
+		border-color: var(--bc-accent);
+	}
+
+	.bc-import-wizard__fields {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.bc-import-wizard__fields label {
+		display: grid;
+		min-width: 0;
+		gap: 6px;
+	}
+
+	.bc-import-wizard__field--wide {
+		grid-column: 1 / -1;
+	}
+
+	.bc-import-wizard__fields span {
+		color: var(--bc-copy);
+		font-size: var(--bc-mobile-label);
+		font-weight: var(--bc-weight-heading);
+		line-height: var(--bc-mobile-label-leading);
+	}
+
+	.bc-import-wizard__fields input,
+	.bc-import-wizard__fields select,
+	.bc-import-wizard__fields textarea {
+		display: block;
+		width: 100%;
+		box-shadow: none;
+		color: var(--bc-ink);
+		font-size: var(--bc-text-control);
+		font-weight: var(--bc-weight-control);
+		line-height: var(--bc-leading-control);
+		outline: 0;
+	}
+
+	.bc-import-wizard__fields textarea {
+		resize: vertical;
+	}
+
+	.bc-import-wizard__fields input::placeholder,
+	.bc-import-wizard__fields textarea::placeholder {
+		color: var(--bc-muted);
+		opacity: 1;
+	}
+
+	.bc-import-wizard__fields input:focus-visible:focus-visible,
+	.bc-import-wizard__fields select:focus-visible,
+	.bc-import-wizard__fields textarea:focus-visible {
+		border-color: var(--bc-accent);
+		background: var(--bc-white);
+	}
+
+	.bc-import-wizard__fields fieldset {
+		display: grid;
+		min-width: 0;
+		gap: var(--bc-space-2);
+		margin: 0;
+		border: 0;
+		padding: 0;
+	}
+	.bc-import-wizard__fields legend {
+		color: var(--bc-copy);
+		font-size: var(--bc-mobile-label);
+		font-weight: var(--bc-weight-heading);
+		line-height: var(--bc-mobile-label-leading);
+		padding: 0;
+	}
+	.bc-import-wizard__country-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+	.bc-import-wizard__country-grid button {
+		place-items: center;
+		color: var(--bc-ink);
+		cursor: pointer;
+	}
+	.bc-import-wizard__country-grid button > img {
+		display: block;
+		border-radius: 3px;
+		object-fit: cover;
+	}
+	.bc-import-wizard__country-grid button strong {
+		font-size: var(--bc-text-control);
+		line-height: var(--bc-leading-control);
+		font-weight: var(--bc-weight-control);
+	}
+	.bc-import-wizard__country-grid button.active {
+		border-color: var(--bc-accent);
+	}
+
+	.bc-import-wizard__chips {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.bc-import-wizard__chips button {
+		display: inline-flex;
+		align-items: center;
+		color: var(--bc-ink);
+		cursor: pointer;
+		font-size: var(--bc-text-control);
+		font-weight: var(--bc-weight-control);
+		line-height: var(--bc-leading-control);
+	}
+	.bc-import-wizard__chips button.active {
+		border-color: var(--bc-accent);
+	}
+
+	.bc-import-wizard__promise {
+		margin: -4px 0 0;
+		color: var(--bc-accent-hover);
+		font-size: var(--bc-mobile-meta);
+		font-weight: var(--bc-weight-body);
+		line-height: var(--bc-mobile-meta-leading);
+	}
+
+	.bc-import-wizard__nav {
+		display: flex;
+		padding-top: var(--bc-space-3);
+	}
+
+	.bc-import-wizard__back,
+	.bc-import-wizard__next {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 6px;
+		cursor: pointer;
+		font-size: var(--bc-text-cta);
+		font-weight: var(--bc-weight-action);
+		line-height: var(--bc-leading-cta);
+	}
+
+	.bc-import-wizard__back {
+		flex: 0 0 auto;
+		color: var(--bc-ink);
+		padding: 0 13px;
+	}
+
+	.bc-import-wizard__next {
+		flex: 1 1 auto;
+		border: 0;
+		color: var(--bc-white);
+		padding: 0 16px;
+	}
+
+	.bc-import-wizard__next:disabled {
+		cursor: not-allowed;
+	}
+
+	.bc-import-wizard__success {
+		display: grid;
+		gap: 10px;
+		justify-items: start;
+		padding-top: 8px;
+	}
+
+	.bc-import-wizard__success > span {
+		display: flex;
+		width: 52px;
+		height: 52px;
+		align-items: center;
+		justify-content: center;
+		border-radius: 999px;
+		background: rgba(196, 1, 1, 0.1);
+		color: var(--bc-accent-hover);
+	}
+
+	.bc-import-wizard__success h2,
+	.bc-import-wizard__success p {
+		margin: 0;
+	}
+
+	.bc-import-wizard__success h2 {
+		font-size: 22px;
+		font-weight: 700;
+		line-height: 27px;
+	}
+
+	.bc-import-wizard__success p {
+		max-width: 52ch;
+		color: var(--bc-muted);
+		font-size: var(--bc-mobile-body);
+		font-weight: var(--bc-weight-body);
+		line-height: var(--bc-mobile-body-leading);
+	}
+
+	.bc-import-wizard__success button {
+		display: flex;
+		width: 100%;
+		min-height: var(--bc-control-height-primary);
+		align-items: center;
+		justify-content: center;
+		margin-top: 4px;
+		border: 0;
+		border-radius: var(--bc-radius-control);
+		background: var(--bc-ink);
+		color: var(--bc-white);
+		cursor: pointer;
+		font-size: var(--bc-text-cta);
+		font-weight: var(--bc-weight-action);
+	}
+
+	.bc-import-wizard__nav :global(svg),
+	.bc-import-wizard__header button :global(svg),
+	.bc-import-wizard__intent :global(svg),
+	.bc-import-wizard__success :global(svg) {
+		color: currentColor;
+		stroke: currentColor;
+	}
+
+	/* overlay-polish-v2: full-screen, compact import flow */
+	.bc-import-wizard {
+		gap: 0;
+		background: var(--bc-bg-strong);
+		padding: 0;
+		grid-template-rows: max-content max-content minmax(0, 1fr) max-content;
+	}
+	.bc-import-wizard__header {
+		display: grid;
+		grid-template-columns: 40px minmax(0, 1fr) 40px;
+		align-items: center;
+		gap: 8px;
+		background: var(--bc-bg-strong);
+		color: var(--bc-ink);
+		padding: max(8px, env(safe-area-inset-top)) var(--bc-mobile-gutter) 7px;
+	}
+	.bc-import-wizard__header > div {
+		grid-column: 2;
+		grid-row: 1;
+		gap: 1px;
+		text-align: center;
+	}
+	.bc-import-wizard__header > button {
+		grid-column: 1;
+		grid-row: 1;
+		width: 40px;
+		height: 40px;
+		background: var(--bc-white);
+		color: var(--bc-ink);
+	}
+	.bc-import-wizard__header::after {
+		content: '';
+		grid-column: 3;
+		grid-row: 1;
+		width: 40px;
+		height: 40px;
+	}
+	.bc-import-wizard__header h2 {
+		color: var(--bc-ink);
+		font-size: var(--bc-mobile-section-title);
+		line-height: var(--bc-mobile-section-title-leading);
+		font-weight: var(--bc-weight-heading);
+	}
+	.bc-import-wizard__header p {
+		color: var(--bc-muted);
+		font-size: var(--bc-mobile-meta);
+		line-height: var(--bc-mobile-meta-leading);
+		font-weight: var(--bc-weight-body);
+	}
+	.bc-import-wizard__progress {
+		gap: 4px;
+		padding: 0 var(--bc-mobile-gutter) 8px;
+	}
+	.bc-import-wizard__progress span {
+		height: 3px;
+		background: var(--bc-border);
+	}
+
+	.bc-import-wizard__body {
+		gap: 10px;
+		align-content: start;
+		grid-auto-rows: max-content;
+		background: var(--bc-bg-strong);
+		padding: 8px var(--bc-mobile-gutter) 18px;
+	}
+	.bc-import-wizard__intro {
+		gap: 2px;
+	}
+	.bc-import-wizard__intro h3 {
+		font-size: var(--bc-mobile-section-title);
+		line-height: var(--bc-mobile-section-title-leading);
+		font-weight: var(--bc-weight-heading);
+	}
+	.bc-import-wizard__intro p {
+		font-size: var(--bc-mobile-body);
+		line-height: var(--bc-mobile-body-leading);
+		font-weight: var(--bc-weight-body);
+	}
+	.bc-import-wizard__intent {
+		gap: 6px;
+	}
+	.bc-import-wizard__intent button {
+		min-height: 42px;
+		border: 0;
+		border-radius: 10px;
+		background: var(--bc-white);
+		font-size: var(--bc-text-control);
+		padding: 0 10px;
+		line-height: var(--bc-leading-control);
+		font-weight: var(--bc-weight-control);
+	}
+	.bc-import-wizard__intent button.active {
+		background: var(--bc-accent);
+		color: var(--bc-white);
+	}
+	.bc-import-wizard__fields {
+		gap: 10px 8px;
+	}
+	.bc-import-wizard__fields label,
+	.bc-import-wizard__fields fieldset {
+		gap: 5px;
+	}
+	.bc-import-wizard__fields span,
+	.bc-import-wizard__fields legend {
+		font-size: var(--bc-mobile-label);
+		line-height: var(--bc-mobile-label-leading);
+		font-weight: var(--bc-weight-heading);
+	}
+	.bc-import-wizard__fields input,
+	.bc-import-wizard__fields select,
+	.bc-import-wizard__fields textarea {
+		border: 0;
+		border-radius: 10px;
+		background: var(--bc-white);
+	}
+	.bc-import-wizard__fields input,
+	.bc-import-wizard__fields select {
+		height: var(--bc-control-height-standard);
+		padding: 0 11px;
+	}
+	.bc-import-wizard__fields textarea {
+		min-height: 70px;
+		padding: 9px 11px;
+	}
+	.bc-import-wizard__fields input:focus,
+	.bc-import-wizard__fields select:focus,
+	.bc-import-wizard__fields textarea:focus {
+		box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--bc-accent) 48%, transparent);
+	}
+
+	.bc-import-wizard__country-grid {
+		display: flex;
+		gap: 6px;
+		overflow-x: auto;
+		padding: 1px 0 3px;
+		scrollbar-width: none;
+		-webkit-overflow-scrolling: touch;
+	}
+	.bc-import-wizard__country-grid::-webkit-scrollbar {
+		display: none;
+	}
+	.bc-import-wizard__country-grid button {
+		display: inline-flex;
+		min-height: 40px;
+		flex: 0 0 auto;
+		align-items: center;
+		justify-content: center;
+		gap: 7px;
+		border: 0;
+		border-radius: 10px;
+		background: var(--bc-white);
+		padding: 0 12px;
+	}
+	.bc-import-wizard__country-grid button.active {
+		background: var(--bc-accent);
+		color: var(--bc-white);
+	}
+	.bc-import-wizard__country-grid button > img {
+		width: 20px;
+		height: 14px;
+	}
+	.bc-import-wizard__chips {
+		gap: 6px;
+	}
+	.bc-import-wizard__chips button {
+		min-height: 38px;
+		border: 0;
+		border-radius: 10px;
+		background: var(--bc-white);
+		padding: 0 12px;
+	}
+	.bc-import-wizard__chips button.active {
+		background: var(--bc-accent);
+		color: var(--bc-white);
+	}
+	.bc-import-wizard__nav {
+		gap: 8px;
+		border-top: 1px solid var(--bc-border);
+		background: var(--bc-bg-strong);
+		padding: 9px var(--bc-mobile-gutter) calc(9px + env(safe-area-inset-bottom));
+	}
+	.bc-import-wizard__back,
+	.bc-import-wizard__next {
+		min-height: 46px;
+		border-radius: 11px;
+	}
+	.bc-import-wizard__back {
+		border: 0;
+		background: var(--bc-white);
+	}
+	.bc-import-wizard__next {
+		background: var(--bc-accent);
+	}
+	.bc-import-wizard__next:disabled {
+		background: var(--bc-border);
+		color: var(--bc-muted);
+	}
+
+	.bc-import-wizard:not(.bc-import-wizard--embedded) .bc-import-wizard__success {
+		grid-row: 1 / -1;
+		align-content: center;
+		padding: max(var(--bc-space-6), env(safe-area-inset-top)) var(--bc-mobile-gutter)
+			max(var(--bc-space-6), env(safe-area-inset-bottom));
+	}
+
+	.bc-import-wizard--embedded {
+		height: auto;
+		min-height: 0;
+		background: var(--bc-surface-raised);
+		padding: 0;
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__header {
+		display: block;
+		padding: 0 0 var(--bc-space-4);
+		background: transparent;
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__header > div {
+		text-align: left;
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__header h2 {
+		font-size: var(--bc-text-h4);
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__header > button,
+	.bc-import-wizard--embedded .bc-import-wizard__header::after {
+		display: none;
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__progress {
+		padding: 0;
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__body {
+		padding: var(--bc-space-5) 0;
+		background: transparent;
+		overflow: visible;
+		gap: var(--bc-space-4);
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__country-grid,
+	.bc-import-wizard--embedded .bc-import-wizard__chips {
+		flex-wrap: wrap;
+		overflow: visible;
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__fields {
+		gap: var(--bc-form-gap);
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__fields input,
+	.bc-import-wizard--embedded .bc-import-wizard__fields textarea {
+		border: 1px solid var(--bc-border-strong);
+		border-radius: var(--bc-radius-control);
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__nav {
+		padding: var(--bc-space-4) 0 0;
+		background: transparent;
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__next {
+		background: var(--bc-accent);
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__success {
+		min-height: 320px;
+		align-content: center;
+	}
+	@media (max-width: 767.98px) {
+		.bc-import-wizard__back,
+		.bc-import-wizard__next {
+			min-width: 0;
+		}
+		.bc-import-wizard__back > span,
+		.bc-import-wizard__next > span {
+			min-width: 0;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.bc-import-wizard__back :global(svg),
+		.bc-import-wizard__next :global(svg) {
+			flex: 0 0 auto;
+		}
+	}
+	@media (max-width: 359.98px) {
+		.bc-import-wizard__back {
+			width: var(--bc-control-height-standard);
+			padding-inline: 0;
+		}
+		.bc-import-wizard__back > span {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			clip-path: inset(50%);
+		}
+	}
+	@media (min-width: 768px) {
+		.bc-import-wizard__context {
+			max-width: 100%;
+			margin: 0;
+			overflow: hidden;
+			color: var(--bc-copy);
+			font-size: var(--bc-text-label);
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.bc-import-wizard--dialog {
+			grid-template-rows: auto;
+			gap: var(--bc-space-4);
+		}
+		.bc-import-wizard--dialog .bc-import-wizard__body {
+			padding: 0;
+		}
+		.bc-import-wizard--dialog .bc-import-wizard__fields :is(input, select, textarea),
+		.bc-import-wizard--dialog .bc-import-wizard__chips button,
+		.bc-import-wizard--dialog .bc-import-wizard__country-grid button,
+		.bc-import-wizard--dialog .bc-import-wizard__intent button {
+			border: 0;
+			border-radius: var(--bc-radius-md);
+			background: var(--bc-control);
+			font-size: var(--bc-text-control);
+			font-weight: var(--bc-weight-control);
+		}
+		.bc-import-wizard--dialog .bc-import-wizard__fields :is(input, select),
+		.bc-import-wizard--dialog .bc-import-wizard__intent button,
+		.bc-import-wizard__nav--dialog button {
+			min-height: var(--bc-control-height-primary);
+		}
+		.bc-import-wizard--dialog .bc-import-wizard__fields :is(span, legend),
+		.bc-import-wizard--dialog .bc-import-wizard__intro p {
+			font-size: var(--bc-text-body);
+			line-height: var(--bc-leading-body);
+		}
+		.bc-import-wizard--dialog .bc-import-wizard__intro h3 {
+			font-size: var(--bc-text-h4);
+			line-height: var(--bc-leading-h4);
+		}
+		.bc-import-wizard--dialog .bc-import-wizard__country-grid button:hover,
+		.bc-import-wizard--dialog .bc-import-wizard__chips button:hover,
+		.bc-import-wizard--dialog .bc-import-wizard__intent button:hover {
+			background: var(--bc-control-hover);
+		}
+		.bc-import-wizard--dialog .bc-import-wizard__country-grid button.active,
+		.bc-import-wizard--dialog .bc-import-wizard__chips button.active,
+		.bc-import-wizard--dialog .bc-import-wizard__intent button.active {
+			background: var(--bc-ink);
+			color: var(--bc-white);
+		}
+		.bc-import-wizard--dialog .bc-import-wizard__success {
+			min-height: 0;
+		}
+		.bc-import-wizard__nav--dialog {
+			padding: 0;
+			border: 0;
+			background: transparent;
+		}
+		.bc-import-wizard__nav--dialog button {
+			flex: none;
+			border-radius: var(--bc-radius-md);
+			font-size: var(--bc-text-control);
+		}
+		.bc-import-wizard__nav--dialog .bc-import-wizard__back {
+			background: var(--bc-control);
+		}
+		.bc-import-wizard__nav--dialog .bc-import-wizard__next {
+			margin-left: auto;
+			background: var(--bc-ink);
+		}
+		.bc-import-wizard--hero-entry {
+			grid-template-columns: minmax(0, 1fr);
+			grid-template-rows: auto;
+			gap: var(--bc-space-4);
+		}
+		.bc-import-wizard--hero-entry
+			:is(.bc-import-wizard__header, .bc-import-wizard__progress, .bc-import-wizard__intro) {
+			display: none;
+		}
+		.bc-import-wizard--hero-entry :is(.bc-import-wizard__body, .bc-import-wizard__fields) {
+			display: contents;
+		}
+		.bc-import-wizard--hero-entry .bc-import-wizard__fields > label {
+			grid-row: 1;
+		}
+		.bc-import-wizard--hero-entry .bc-import-wizard__field--wide {
+			grid-column: 1 / span 3;
+		}
+		.bc-import-wizard--hero-entry .bc-import-wizard__source-type {
+			grid-column: auto;
+		}
+		.bc-import-wizard--hero-entry .bc-import-wizard__fields > fieldset {
+			grid-column: 1 / -1;
+			grid-row: 2;
+		}
+		.bc-import-wizard--hero-entry .bc-import-wizard__nav {
+			grid-column: 4;
+			grid-row: 1;
+			padding: 0;
+			border: 0;
+		}
+		:global(.site-shell .site-desktop-only)
+			.bc-import-wizard--hero-entry
+			[data-intake-fields]
+			:is(input, select),
+		:global(.site-shell .site-desktop-only) .bc-import-wizard--hero-entry [data-intake-next] {
+			min-height: var(--bc-desktop-search-height);
+		}
+		.bc-import-wizard--hero-entry .bc-import-wizard__country-grid {
+			justify-content: center;
+			padding: 0;
+		}
+		.bc-import-wizard--hero-entry .bc-import-wizard__error {
+			grid-column: 1 / -1;
+		}
+	}
+</style>

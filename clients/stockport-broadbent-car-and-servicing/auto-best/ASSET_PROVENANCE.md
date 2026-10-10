@@ -1,0 +1,68 @@
+# Asset reference and provenance
+
+Runtime media is stored under `static/`; its public URL omits that directory name. Source dimensions, crop regions and vehicle bounds are defined in the artwork/content modules. This page explains the media families without maintaining a second list of file counts.
+
+## Runtime families
+
+| Family | Main location / consumers | Notes |
+| --- | --- | --- |
+| Template identity | Auto Best logo under `assets/images/template`; icon selected in `src/app.html` | Template branding |
+| Vehicle photography | Inventory records and `assets/images/lead/day-night-stock-*` | Source/sample stock photos; some fixtures reuse images |
+| Hero cutouts | `vehicle-artwork.ts`, `HeroVehicles`, `VehicleCutout` | Generated vehicles with measured visible bounds |
+| Service/menu illustrations | `feature-artwork.ts`, `service-artwork.ts` | Generated conceptual service imagery |
+| Discovery background | `leadSite.artwork.discoveryBackground`, Home route and `DesktopHeroScene.svelte` | All four desktop Home section headers and the Home/Inventory/Advice vehicle heroes share one graphite-dot WebP. The three heroes omit their native dots and red curves. [Current prompt and provenance](provenance/home-shared-background-2026-10-03.json) record generation, delivery and reuse. [Original backgrounds](provenance/home-section-backgrounds-2026-10-02.json) and the [Featured texture](provenance/home-inventory-texture-2026-10-03.json) remain archived without runtime requests. |
+| Desktop Import/Leasing cutouts | `leadSite.artwork.desktopActionScenes`, `TrustActions.svelte` | Front-facing G-Class with small logistics details and Urus with a percentage symbol/coins, normalized by main-car area. Separate desktop picture sources preserve mobile artwork. [Prompts and provenance](provenance/desktop-service-cutouts-2026-10-03.json). |
+| Body/brand discovery | `home.ts`, `assets/images/icon-box`, `assets/images/partner` | Category art and marque graphics |
+| Editorial images | `editorial.ts`, `assets/images/blog` | Mixed reference and photo-derived imagery; see credits |
+| Videos | `videos.ts`, local thumbnails | Selected third-party YouTube content |
+| Detail/enquiry banners | Current working-preview component references | Some generated images contain baked text or identity |
+| Optional team/partners | `demo-content.ts` and related components | Sample presentation; team is enabled in desktop preview, partners remain disabled |
+| Icons | Native SVG components | Retained source notices below |
+
+A filename does not prove a file is currently rendered. Component/data references and `npm run check:assets` determine active ownership. Older revisions may contain intentionally retained source assets.
+
+## Generation and photo records
+
+| Record | Contents |
+| --- | --- |
+| [Vehicle cutouts](provenance/vehicle-cutouts-2026-09-06.md) | Generated vehicle imagery and encoding |
+| [Side profiles](provenance/vehicle-side-profiles-2026-09-06.md) | Broadside artwork and original inputs |
+| [Hero pairs](provenance/hero-vehicle-pairs-2026-09-06.md) | Distinct route vehicle pairs |
+| [Desktop hero scenes](provenance/desktop-hero-scenes-2026-09-23.json) | Four built-in image-generation prompts: ivory Home studio, graphite Inventory studio, warm About architecture and blue-hour Contact architecture. Decorative concepts, not photos of the dealer's premises. WebP files retain the original 2172×724 dimensions. |
+| [Desktop campaign heroes](provenance/desktop-campaign-heroes-2026-10-02.json) | About uses the approved graphite Home proposal; Contact uses the approved graphite Inventory proposal. Home/Inventory/Advice retain the original transparent [vehicle pairs](provenance/hero-vehicle-pairs-2026-09-06.md) over the shared [Discovery background](provenance/home-shared-background-2026-10-03.json), without native dot or red-curve decorations. Blog/Contact proposals remain archived after distorted props were rejected; the warm About photograph is also retired. This background reuse needed no new image generation or pixel edits. |
+| [Collection lineup](provenance/collection-lineup-2026-09-06.md) | Homepage collection art |
+| [Browse campaign pair](provenance/browse-campaign-pair-2026-09-06.md) | Collection/sell illustrations |
+| [Mobile services](provenance/mobile-service-artwork-2026-09-06.md) | Mobile sell/import assets |
+| [Mobile cutout](provenance/mobile-service-cutout-2026-09-10.md) | Later mobile cutout treatment |
+| [Service cards](provenance/service-cards-2026-09-10.md) | Service-card imagery |
+| [Desktop service illustrations](provenance/desktop-service-cards-2026-10-03.md) | Four coordinated generated cutouts for the About service cards; mobile icons and source PNGs are retained. |
+| [Desktop service vignettes](provenance/desktop-service-vignettes-2026-10-04.md) | Reception and car-with-container revisions plus aligned leasing artwork; shared by desktop About cards and navigation. |
+| [Homepage brand marks](provenance/homepage-brand-marks-2026-09-15.md) | Curated Land Rover, Mercedes-Benz and Audi card assets, source limits and optical sizing |
+| [Mobile Audi chrome mark](provenance/mobile-audi-chrome-2026-10-02.md) | Unchanged transparent Import-template source; mobile rings crop and desktop source preserved |
+| [Mobile Volkswagen badge](provenance/mobile-volkswagen-badge-2026-10-02.md) | Unchanged pinned Cardog emblem; curated mobile trio with existing Mercedes-Benz and BMW artwork |
+| [Mobile BMW roundel](provenance/mobile-bmw-roundel-2026-10-02.md) | Unchanged pinned Cardog vector for sharp mobile rendering; compact Mercedes label retains the canonical make filter |
+| [Menu services](provenance/menu-service-assets-2026-09-08.md) | Reception, import and leasing concepts |
+| [Editorial photos](provenance/editorial-photos-2026-09-08.md) | Photo sources and credits |
+| [Borderless editorial](provenance/borderless-editorial-2026-09-08.md) | Generated edits of photo inputs |
+
+The dated records preserve historical filenames and generation descriptions; current runtime can use a later encoding. Decorative cars, facilities and documents are not evidence of real stock, a showroom or a finance agreement. Changing a file extension is not an image conversion.
+
+## Icons and font
+
+Mobile header, menu, bottom navbar and other actions use [official Microsoft Fluent System Icons Regular](provenance/fluent-icons.md), with the pinned native 24px sources, [MIT license](provenance/fluent-icons-LICENSE.txt) and [upstream notice](provenance/fluent-icons-NOTICE.txt). `BottomNavIcon.svelte` shares the SVG renderer with `MobileActionIcon.svelte`. The rejected [generated dock trial](provenance/generated-bottom-nav.md) remains archived as history. Icon history also includes Material Symbols, Phosphor, Hugeicons and Simple Icons. The components determine which geometry is rendered. Retained notices are [Material Symbols](provenance/material-symbols-LICENSE.txt), [Phosphor](provenance/phosphor-icons-LICENSE.txt), [Hugeicons](provenance/hugeicons-LICENSE.txt) and [Simple Icons](provenance/simple-icons-LICENSE.md). These notices are preserved as received.
+
+Inter v4.1 is bundled locally under SIL Open Font License 1.1. See [font provenance](provenance/inter.md), the [subset manifest](provenance/inter.json), retained [license](provenance/inter-OFL.txt), and [SOURCE_LICENSE.md](SOURCE_LICENSE.md).
+
+## Replacing media
+
+Keep source dimensions accurate and update the consuming record. Bounds use left/top/right/bottom; crop regions use x/y/width/height. Preserve transparent edges where present, use photo framing for stock and containment for decorative cutouts, and inspect text-bearing image pixels during dealer personalization.
+
+Record the asset origin and limitations alongside the dated provenance notes. The presence of a dealer logo, portrait, stock photo or video thumbnail does not itself establish wider reuse rights. [Source notices](SOURCE_LICENSE.md) describes the inherited record.
+
+## Mobile delivery encodings, 29–30 September 2026
+
+The `auto-best-logo-v2*.webp` assets are transparent, lossless 640px rasterizations of the retained matching SVGs. `body-wagon-v1.webp` is a 916×429px WebP encoding of the retained PNG, with its bounds scaled to the new dimensions. The collection banner (480/720px), front-facing sell/import artwork (480px), stock photos (640px) and first three blog photos (640px) are resized encodings of the matching full-size files. Sharp/libvips performed the resizing and encoding; no imagery or identity was generated or replaced. The wagon uses quality 92 and the responsive photograph/artwork derivatives use quality 90. All originals and their source notices remain available.
+
+`src/lib/config/lead-site.ts` registers these variants by their exact original source path. A personalized image without a matching registry entry continues to use its own original. The homepage preload and rendered hero share the same source set and size hint.
+
+The mobile inventory revision adds 960×640px WebP encodings of the five retained `day-night-stock-*` source photographs. Sharp/libvips resized the 1600×1067px originals using quality 82 and effort 6. These variants fill the gap between the existing 640px and original 1600px sources for larger mobile cards at 2× pixel density. Their sizes range from 46,414 to 68,160 bytes. The subjects, source files, and source notices are retained.

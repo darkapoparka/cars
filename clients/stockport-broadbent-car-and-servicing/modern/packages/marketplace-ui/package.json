@@ -1,0 +1,61 @@
+{
+  "name": "@repo/marketplace-ui",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./lib/mobile-form-control": "./lib/mobile-form-control.ts",
+    "./lib/mobile-overlay-styles": "./lib/mobile-overlay-styles.ts",
+    "./components/listing-price-intelligence": "./components/listing-price-intelligence.tsx",
+    "./components/listing-trust-panel": "./components/listing-trust-panel.tsx",
+    "./components/mobile-marketplace-overlay": "./components/mobile-marketplace-overlay.tsx",
+    "./components/vehicle-card": "./components/vehicle-card.tsx",
+    "./components/vehicle-card-money": "./components/vehicle-card-money.tsx",
+    "./components/dealer-mobile-header-icon": "./components/dealer-mobile-header-icon.tsx",
+    "./components/dealer-social-links": "./components/dealer-social-links.tsx",
+    "./components/dealer-ui-icon": "./components/dealer-ui-icon.tsx",
+    "./components/dealer-vehicle-facts": "./components/dealer-vehicle-facts.tsx",
+    "./components/mobile-marketplace-drawer": "./components/mobile-marketplace-drawer.ts",
+    "./components/mobile-pill-rail": "./components/mobile-pill-rail.tsx",
+    "./components/vehicle-category-artwork": "./components/vehicle-category-artwork.tsx",
+    "./lib/mobile-header-icon-action": "./lib/mobile-header-icon-action.ts",
+    "./lib/mobile-dealer-title": "./lib/mobile-dealer-title.ts",
+    "./lib/mobile-vehicle-card-layout": "./lib/mobile-vehicle-card-layout.ts",
+    "./lib/vehicle-card-policy": "./lib/vehicle-card-policy.ts",
+    "./components/dealer-desktop-discovery-content": "./components/dealer-desktop-discovery-content.tsx",
+    "./components/desktop-action-panel": "./components/desktop-action-panel.tsx",
+    "./components/dealer-desktop-hero": "./components/dealer-desktop-hero.tsx",
+    "./components/dealer-desktop-header": "./components/dealer-desktop-header.tsx",
+    "./components/dealer-desktop-locale-menu": "./components/dealer-desktop-locale-menu.tsx",
+    "./components/dealer-desktop-logo": "./components/dealer-desktop-logo.tsx",
+    "./components/desktop-saved-cars": "./components/desktop-saved-cars.tsx",
+    "./components/dealer-desktop-toolbar": "./components/dealer-desktop-toolbar.tsx",
+    "./components/locale-preferences": "./components/locale-preferences.tsx",
+    "./components/language-select": "./components/language-select.tsx",
+    "./components/public-image": "./components/public-image.tsx"
+  },
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "@repo/internationalization": "workspace:*",
+    "@repo/design-system": "workspace:*",
+    "@repo/marketplace": "workspace:*",
+    "lucide-react": "^0.577.0",
+    "next": "16.3.8",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "22.20.2",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  }
+}

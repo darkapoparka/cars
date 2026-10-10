@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "client": "stockport-broadbent-car-and-servicing",
+  "templateKey": "auto-best",
+  "templateVersion": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+  "createdAt": "2026-10-10T10:27:13.084Z",
+  "state": "personalized-needs-build",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": "gb-stockport-broadbent-car-and-servicing",
+    "demoProjectId": null,
+    "registered": false
+  },
+  "templateSource": {
+    "repository": "darkapoparka/cars",
+    "revision": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+    "path": "templates/auto-best",
+    "tree": "5be83ea8685a3e99d517ced43af67d9d3d7a24db",
+    "digest": "bc08eb6123546c0e0cb0f4d21e2209450bfe642e542515b53f557016d14416d2",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "5",
+    "entry": "/"
+  },
+  "workflowCommit": "70ecf182c266225b9413e59a4a402d9e8e2834a0",
+  "hosting": {
+    "provider": "cloudflare",
+    "status": "not-deployed"
+  },
+  "readyToPublish": false
+}

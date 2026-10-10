@@ -1,0 +1,151 @@
+import { cn } from "@repo/design-system/lib/utils";
+import {
+  formatFuelType,
+  formatMileage,
+  formatMoney,
+  type VehicleListing,
+} from "@repo/marketplace";
+import { localizeListingCopy } from "@repo/marketplace/listing-copy";
+import { isDealershipSite } from "@repo/marketplace/site-config";
+import { Car, MapPin, Truck } from "lucide-react";
+import Link from "next/link";
+import {
+  formatVehicleLocation,
+  getApproximateConvertedPrice,
+  getDeliveryTruth,
+  getPhysicalVehicleLocation,
+  getPrimaryListingPrice,
+  getSourceLabel,
+} from "../lib/listing-truth";
+import Image from "./public-image";
+import styles from "./related-listing-card.module.css";
+import { VehicleCard } from "./vehicle-card";
+
+interface RelatedListingCardProps {
+  readonly href: string;
+  readonly listing: VehicleListing;
+  readonly locale?: string;
+}
+
+const DesktopRelatedListingCard = ({
+  href,
+  listing: sourceListing,
+  locale,
+}: RelatedListingCardProps) => {
+  const listing = localizeListingCopy(sourceListing, locale);
+  const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
+  const primaryImage = listing.images[0];
+  const primaryPrice = getPrimaryListingPrice(listing);
+  const approximatePrice = getApproximateConvertedPrice(listing);
+  const physicalLocation = getPhysicalVehicleLocation(listing);
+  const deliveryTruth = getDeliveryTruth(listing, locale);
+
+  if (isDealershipSite) {
+    return (
+      <VehicleCard
+        desktopHeadingLevel={3}
+        desktopImageSizes="(max-width: 1199px) calc((100vw - 126px) / 3), (max-width: 1399px) calc((100vw - 148px) / 4), 313px"
+        desktopLayout="grid"
+        href={href}
+        listing={listing}
+        locale={locale}
+        presentation="showroom"
+        viewMode="grid"
+      />
+    );
+  }
+
+  return (
+    <article className="overflow-hidden rounded-lg border border-border bg-card">
+      <Link
+        aria-label={`${isBg ? "Преглед на" : "View"} ${listing.title}`}
+        className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+        href={href}
+      >
+        <div className="relative aspect-[4/3] bg-muted">
+          {primaryImage ? (
+            <Image
+              alt={primaryImage.alt || listing.title}
+              className="object-cover transition-transform duration-200 group-hover:scale-[1.02]"
+              fill
+              referrerPolicy="no-referrer"
+              sizes="(max-width: 767px) 100vw, 33vw"
+              src={primaryImage.url}
+            />
+          ) : (
+            <div className="flex size-full items-center justify-center text-muted-foreground">
+              <Car aria-hidden="true" className="size-8" />
+            </div>
+          )}
+        </div>
+        <div className="p-3">
+          <p className="font-semibold text-price tracking-heading">
+            {formatMoney(primaryPrice, locale)}
+          </p>
+          {approximatePrice ? (
+            <p className="text-meta text-muted-foreground">
+              ≈ {formatMoney(approximatePrice, locale)}
+            </p>
+          ) : null}
+          <h3 className="mt-1 line-clamp-2 font-semibold text-card-title tracking-heading">
+            {listing.title}
+          </h3>
+          <p className="mt-2 text-meta text-muted-foreground">
+            {formatMileage(listing.spec.mileageValue, locale, listing.spec)} ·{" "}
+            {formatFuelType(listing.spec.fuelType, locale)}
+          </p>
+          <p className="mt-2 flex items-center gap-1.5 text-meta text-muted-foreground">
+            <MapPin aria-hidden="true" className="size-3.5" />
+            {isBg ? "Автомобил в" : "Vehicle in"}{" "}
+            {formatVehicleLocation(physicalLocation, locale)}
+          </p>
+          {deliveryTruth ? (
+            <p className="mt-1.5 flex items-center gap-1.5 text-meta text-muted-foreground">
+              <Truck aria-hidden="true" className="size-3.5" />
+              {deliveryTruth.label}
+            </p>
+          ) : null}
+          {listing.supply ? (
+            <p className="mt-2 text-micro text-muted-foreground">
+              {getSourceLabel(listing, locale)}
+            </p>
+          ) : null}
+        </div>
+      </Link>
+    </article>
+  );
+};
+
+export const RelatedListingCard = ({
+  href,
+  listing,
+  locale,
+}: RelatedListingCardProps) => (
+  <>
+    <div
+      className={cn(
+        styles.mobileCard,
+        "min-w-0 snap-start overflow-hidden rounded-2xl bg-zinc-100 lg:hidden"
+      )}
+      data-slot="listing-related-card"
+    >
+      <VehicleCard
+        density="compact"
+        desktopHeadingLevel={3}
+        desktopLayout="grid"
+        href={href}
+        listing={listing}
+        locale={locale}
+        presentation="discovery"
+        viewMode="grid"
+      />
+    </div>
+    <div className="hidden lg:contents">
+      <DesktopRelatedListingCard
+        href={href}
+        listing={listing}
+        locale={locale}
+      />
+    </div>
+  </>
+);

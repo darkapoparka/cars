@@ -1,0 +1,58 @@
+{
+	"qa": "C:/Users/radev/.codex/tmp/cars-import-inventory-hierarchy-2026-10-05-qa",
+	"baselineCommit": "fa902e319c2433f1ee8455f92260b0bcdbe13ba3",
+	"node": "v24.21.0",
+	"lockfile": "aa596db7046c3f226ce50b488e283e30121eb49122d5006c60035ef57a952e1c",
+	"taskSources": [
+		{
+			"path": "src/lib/components/inventory/InventoryPage.svelte",
+			"sha256": "d95913b03b2ce93e1210bc3caedbf19102c09079d079be200beaec9d740a701c"
+		},
+		{
+			"path": "src/lib/components/inventory/InventoryFilter.svelte",
+			"sha256": "f8a6df09c5b087330425a645e1a8557e1dafb3517d0806a30f2ad4a59f0faca3"
+		},
+		{
+			"path": "src/lib/components/inventory/InventoryToolbar.svelte",
+			"sha256": "e5dd4ed122e67c8c59f84ae99053f19f6ae62ab172ae0d817175441dcb45751e"
+		},
+		{
+			"path": "src/lib/components/inventory/InventoryTypeShortcuts.svelte",
+			"sha256": "9ce5e82049c8e62d2ca02aa492a221505f0d947467e25d7f89951f796d0d57eb"
+		}
+	],
+	"dependencies": {
+		"svelte": "5.57.1",
+		"@sveltejs/kit": "2.70.3",
+		"vite": "8.3.0"
+	},
+	"canonicalTaskSourcesMatchFrozenQa": true,
+	"compiled": [
+		{
+			"path": ".svelte-kit/output/server/index.js",
+			"sha256": "5ceaf3d256f7e98e530180c594f3c037627a11281f358f43b34752f957efa7bd"
+		},
+		{
+			"path": ".svelte-kit/output/client/.vite/manifest.json",
+			"sha256": "5544c841dea673f606b49769955ec51d7639256a65b33bccf3e34d7beb9eaef3"
+		}
+	],
+	"productionBuild": "Passed, including retained adapter and public asset packaging, from the frozen QA source.",
+	"browserChecks": {
+		"passed": 9,
+		"baseUrl": "http://127.0.0.1:6792",
+		"project": "desktop",
+		"filter": "inventory|compact filters|all-filters search|desktop catalogue"
+	},
+	"finalPreview": "http://127.0.0.1:6790/bg/inventory",
+	"capture": {
+		"viewport": {
+			"width": 1440,
+			"height": 1000
+		},
+		"nativeCanvas": {
+			"width": 1425,
+			"height": 990
+		}
+	}
+}

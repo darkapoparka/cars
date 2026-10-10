@@ -1,0 +1,26 @@
+.karento-gallery-thumb { display: block; border: 0; background: transparent; padding: 0; width: 100%; color: inherit; }
+/* Retain the fourth variant's adjacent-photo peeks inside the page viewport. */
+.cars-details4 { overflow: clip; }
+.karento-gallery-thumb:focus-visible { outline: 2px solid var(--karento-accent); outline-offset: 3px; border-radius: 8px; }
+.karento-calendar { z-index: 1050; max-width: calc(100vw - 20px); }
+.karento-calendar button { border: 0; background: transparent; color: inherit; font: inherit; line-height: inherit; padding: 0; width: 100%; text-align: center; }
+.karento-calendar th button { min-height: 26px; }
+.karento-calendar button:focus-visible { outline: 2px solid var(--karento-accent); outline-offset: 2px; border-radius: 4px; }
+.karento-calendar .active button:focus-visible { outline-color: var(--karento-accent-contrast); }
+.karento-calendar-options { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.karento-calendar-options button { padding: 12px; }
+.karento-calendar-options button:hover { background: var(--karento-accent-soft); border-radius: 4px; }
+@media (max-width: 390px) { .karento-calendar table tr td, .karento-calendar table tr th { padding-inline: 12px; } }
+.karento-photo-viewer { width: min(1000px, calc(100vw - 24px)); max-height: calc(100dvh - 24px); padding: 16px; border: 0; border-radius: 12px; background: var(--bs-background-body); color: var(--bs-neutral-1000); }
+.karento-photo-viewer::backdrop { background: rgba(0, 0, 0, .8); }
+.karento-photo-controls { display: flex; justify-content: end; }
+.karento-photo-viewer button { width: 44px; height: 44px; flex: 0 0 44px; border: 0; border-radius: 8px; background: var(--karento-accent-soft); color: var(--bs-neutral-1000); font-size: 28px; }
+.karento-photo-viewer button:focus-visible { outline: 2px solid var(--karento-accent); outline-offset: 2px; }
+.karento-photo-image { display: flex; align-items: center; justify-content: center; gap: 8px; }
+.karento-photo-image img { min-width: 0; max-width: calc(100% - 104px); max-height: calc(100dvh - 160px); object-fit: contain; }
+.karento-photo-viewer p { margin: 12px 0 0; text-align: center; }
+.noUi-base,
+.noUi-handle {
+  /* Keep the legacy slider geometry without a needless 3D text layer. */
+  transform: translate(0, 0);
+}

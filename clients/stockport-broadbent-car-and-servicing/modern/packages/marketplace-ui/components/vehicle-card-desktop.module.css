@@ -1,0 +1,407 @@
+/* Shared desktop discovery card: the mobile hierarchy expanded into a grid. */
+@media (min-width: 1024px) {
+  .card[data-presentation="discovery"] {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--panel);
+    border: var(--desktop-border-width) solid var(--desktop-border-card);
+    border-radius: var(--radius-vehicle);
+    box-shadow: var(--desktop-surface-shadow);
+  }
+
+  .card[data-presentation="discovery"] [data-slot="vehicle-card-media"] {
+    width: 100%;
+    aspect-ratio: var(--desktop-gallery-aspect);
+  }
+
+  .card[data-presentation="discovery"] [data-slot="vehicle-card-content"] {
+    display: grid;
+    flex: 1;
+    grid-template-rows: minmax(0, 1fr) auto auto;
+    gap: calc(var(--spacing) * 2);
+    padding: calc(var(--spacing) * 4);
+  }
+
+  .card[data-presentation="discovery"] [data-slot="vehicle-card-title-row"] {
+    min-height: 0;
+  }
+
+  .card[data-presentation="discovery"] [data-slot="vehicle-card-title"] {
+    display: block;
+    min-height: 0;
+    overflow: visible;
+    -webkit-line-clamp: unset;
+    font-size: var(--text-desktop-lead);
+    font-weight: var(--font-weight-semibold);
+    line-height: calc(var(--spacing) * 5.5);
+    letter-spacing: var(--tracking-heading);
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+
+  .card[data-presentation="discovery"] [data-slot="vehicle-card-price"] {
+    font-size: var(--text-section-title);
+    font-weight: var(--font-weight-semibold);
+    font-variant-numeric: tabular-nums;
+    line-height: calc(var(--spacing) * 7);
+  }
+
+  .card[data-presentation="discovery"] [data-slot="vehicle-card-spec-pills"] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing) calc(var(--spacing) * 3);
+    padding-top: var(--spacing);
+    margin-top: auto;
+    font-size: var(--text-card-spec);
+    line-height: calc(var(--spacing) * 5);
+    color: var(--muted-foreground);
+    border-top: 0;
+  }
+
+  .card[data-presentation="discovery"]
+    [data-slot="vehicle-card-spec-pills"]
+    li {
+    display: flex;
+    align-items: center;
+    min-height: calc(var(--spacing) * 5);
+    padding: 0;
+    font-weight: var(--font-weight-normal);
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .card[data-presentation="discovery"][data-view-mode="list"] {
+    display: grid;
+    grid-template-columns: clamp(
+        calc(var(--spacing) * 64),
+        25%,
+        calc(var(--spacing) * 80)
+      ) minmax(0, 1fr);
+    height: auto;
+    min-height: calc(var(--spacing) * 52);
+  }
+
+  .card[data-presentation="discovery"][data-view-mode="list"]
+    [data-slot="vehicle-card-media"] {
+    align-self: stretch;
+    width: 100%;
+    height: 100%;
+    min-height: calc(var(--spacing) * 52);
+    aspect-ratio: auto;
+  }
+
+  .card[data-presentation="discovery"][data-view-mode="list"]
+    [data-slot="vehicle-card-content"] {
+    display: grid;
+    grid-template-areas:
+      "title price"
+      "specs price"
+      "location price"
+      "seller seller"
+      "provenance provenance";
+    grid-template-rows: auto;
+    grid-template-columns: minmax(0, 1fr) minmax(
+        calc(var(--spacing) * 44),
+        auto
+      );
+    gap: calc(var(--spacing) * 2) calc(var(--spacing) * 6);
+    align-content: center;
+    padding: calc(var(--spacing) * 5) calc(var(--spacing) * 6);
+  }
+
+  .card[data-presentation="discovery"][data-view-mode="list"]
+    [data-slot="vehicle-card-title"] {
+    grid-area: title;
+    align-self: end;
+    min-height: 0;
+    font-size: var(--text-card-title-lg);
+    line-height: var(--text-card-title-lg--line-height);
+  }
+
+  .card[data-presentation="discovery"][data-view-mode="list"]
+    [data-slot="vehicle-card-title-row"] {
+    min-height: 0;
+  }
+
+  .card[data-presentation="discovery"][data-view-mode="list"]
+    [data-slot="vehicle-card-price-summary"] {
+    grid-area: price;
+    align-self: center;
+    justify-self: end;
+    text-align: right;
+  }
+
+  .card[data-presentation="discovery"][data-view-mode="list"]
+    [data-slot="vehicle-card-spec-pills"] {
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: specs;
+    gap: var(--spacing) 0;
+    align-self: start;
+    padding-top: 0;
+    margin-top: 0;
+    color: var(--muted-foreground);
+    border-top: 0;
+  }
+
+  .card[data-presentation="discovery"][data-view-mode="list"]
+    [data-slot="vehicle-card-spec-pills"]
+    li {
+    min-height: 0;
+    padding: 0;
+    white-space: nowrap;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .card[data-presentation="discovery"][data-view-mode="list"]
+    [data-slot="vehicle-card-spec-pills"]
+    li
+    + li::before {
+    width: calc(var(--spacing) * 0.75);
+    height: calc(var(--spacing) * 0.75);
+    margin-inline: calc(var(--spacing) * 2.25);
+    content: "";
+    background: var(--desktop-spec-divider);
+    border-radius: var(--radius-pill);
+  }
+
+  .card[data-presentation="discovery"][data-view-mode="list"]
+    [data-slot="vehicle-card-location"] {
+    grid-area: location;
+    padding-top: 0;
+  }
+
+  .card[data-presentation="discovery"][data-view-mode="list"]
+    [data-slot="vehicle-card-seller"] {
+    grid-area: seller;
+    padding-top: 0;
+    margin-top: var(--spacing);
+    border-top: 0;
+  }
+
+  .card[data-presentation="discovery"][data-view-mode="list"]
+    [data-slot="vehicle-card-provenance"] {
+    grid-area: provenance;
+    margin-top: calc(var(--spacing) * 0.5);
+  }
+
+  .card[data-presentation="discovery"] a:focus-visible {
+    outline: var(--desktop-focus-width) solid var(--ring);
+    outline-offset: calc(var(--desktop-focus-width) * -1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+}
+
+/* The showroom presentation is exclusive to desktop. */
+@media (min-width: 1024px) {
+  .card[data-presentation="showroom"] {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--panel);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 4);
+    box-shadow: var(--desktop-surface-shadow);
+    transition: box-shadow var(--duration-interaction);
+  }
+  .card[data-presentation="showroom"]:hover {
+    box-shadow: var(--desktop-surface-hover-shadow);
+  }
+  .card[data-presentation="showroom"] [data-slot="vehicle-card-media"] {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+  }
+  .card[data-presentation="showroom"] [data-slot="vehicle-card-content"] {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0;
+    padding: calc(var(--spacing) * 4);
+  }
+  .card[data-presentation="showroom"] [data-slot="showroom-vehicle-heading"] {
+    min-height: 0;
+  }
+  .card[data-presentation="showroom"] [data-slot="vehicle-card-title"] {
+    display: block;
+    min-height: 0;
+    margin-bottom: calc(var(--spacing) * 2.5);
+    overflow: visible;
+    font-size: var(--text-desktop-card);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--text-desktop-card--line-height);
+    letter-spacing: normal;
+  }
+  .card[data-presentation="showroom"] [data-slot="showroom-vehicle-facts"] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--spacing) * 1.5);
+    padding: 0;
+    margin-bottom: calc(var(--spacing) * 3);
+    font-size: var(--text-desktop-support);
+    line-height: var(--text-desktop-support--line-height);
+    color: var(--desktop-prose-text);
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+  }
+  .card[data-presentation="showroom"] [data-slot="showroom-vehicle-facts"] li {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    max-width: 100%;
+    min-height: calc(var(--spacing) * 6.5);
+    padding: var(--spacing) calc(var(--spacing) * 2);
+    text-align: left;
+    background: var(--control);
+    border-radius: calc(var(--spacing) * 1.5);
+  }
+  .card[data-presentation="showroom"] [data-slot="showroom-vehicle-price-row"] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--spacing) * 2);
+    align-items: center;
+    justify-content: space-between;
+    min-height: calc(var(--spacing) * 14.25);
+    padding: var(--spacing) 0 0;
+    margin-top: auto;
+    border-top: 0;
+  }
+  .card[data-presentation="showroom"]
+    [data-slot="showroom-vehicle-facts"]
+    :where(li span) {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .card[data-presentation="showroom"] [data-slot="vehicle-card-price"] {
+    font-size: var(--text-desktop-price);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--text-desktop-price--line-height);
+    letter-spacing: normal;
+  }
+  .card[data-presentation="showroom"]
+    [data-slot="showroom-vehicle-price-row"]
+    > div
+    > p:not([data-slot]) {
+    margin-top: calc(var(--spacing) * 0.5);
+    font-size: var(--text-desktop-support);
+    line-height: var(--text-desktop-support--line-height);
+  }
+  .card[data-presentation="showroom"] [data-slot="showroom-vehicle-open"] {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: calc(var(--spacing) * 9);
+    height: calc(var(--spacing) * 9);
+    padding: 0;
+    color: var(--foreground);
+    background: var(--control);
+    border-radius: calc(var(--spacing) * 2);
+    transition:
+      color var(--duration-interaction),
+      background-color var(--duration-interaction);
+  }
+  .card[data-presentation="showroom"]
+    :where(
+      [data-slot="vehicle-card-content"]:hover,
+      [data-slot="vehicle-card-content"]:focus-visible
+    )
+    [data-slot="showroom-vehicle-open"] {
+    color: var(--foreground);
+    background: var(--control-hover);
+  }
+  .card[data-presentation="showroom"] [data-slot="vehicle-card-media-badges"] {
+    top: calc(var(--spacing) * 3.5);
+    left: calc(var(--spacing) * 3.5);
+    max-width: calc(100% - calc(var(--spacing) * 15));
+  }
+  .card[data-presentation="showroom"]
+    [data-slot="vehicle-card-media-badges"]
+    > span {
+    height: calc(var(--spacing) * 7);
+    padding-inline: calc(var(--spacing) * 3);
+    font-size: calc(var(--spacing) * 3);
+    color: var(--desktop-surface);
+    background: var(--brand);
+    border-radius: calc(var(--spacing) * 7.5);
+    box-shadow: none;
+  }
+  .card[data-presentation="showroom"] a:focus-visible {
+    outline: var(--desktop-focus-width) solid var(--ring);
+    outline-offset: calc(var(--spacing) * -0.5);
+  }
+}
+
+@media (min-width: 1024px) and (prefers-reduced-motion: reduce) {
+  .card[data-presentation="showroom"],
+  .card[data-presentation="showroom"] [data-slot="showroom-vehicle-open"] {
+    transition: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card[data-presentation="showroom"][data-view-mode="list"] {
+    display: grid;
+    grid-template-columns: var(--desktop-list-media-width) minmax(0, 1fr);
+  }
+  .card[data-presentation="showroom"][data-view-mode="list"]
+    [data-slot="vehicle-card-media"] {
+    height: 100%;
+    min-height: calc(var(--spacing) * 46);
+    aspect-ratio: auto;
+  }
+  .card[data-presentation="showroom"][data-view-mode="list"]
+    [data-slot="vehicle-card-content"] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(
+        calc(var(--spacing) * 40),
+        auto
+      );
+    column-gap: calc(var(--spacing) * 8);
+    align-content: center;
+    padding: calc(var(--spacing) * 6);
+  }
+  .card[data-presentation="showroom"][data-view-mode="list"]
+    [data-slot="showroom-vehicle-heading"] {
+    grid-column: 1;
+    min-height: 0;
+  }
+  .card[data-presentation="showroom"][data-view-mode="list"]
+    [data-slot="showroom-vehicle-facts"] {
+    grid-column: 1;
+    min-height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .card[data-presentation="showroom"][data-view-mode="list"]
+    [data-slot="showroom-vehicle-price-row"] {
+    grid-area: 1 / 2 / 3 / 3;
+    gap: calc(var(--spacing) * 5);
+    align-self: center;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .card[data-presentation="showroom"][data-view-mode="list"]
+    [data-slot="vehicle-card-content"] {
+    grid-template-columns: minmax(0, 1fr);
+    padding: calc(var(--spacing) * 5);
+  }
+  .card[data-presentation="showroom"][data-view-mode="list"]
+    [data-slot="showroom-vehicle-price-row"] {
+    grid-area: auto;
+  }
+}

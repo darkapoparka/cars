@@ -1,0 +1,190 @@
+[
+	{
+		"cardLeft": 14,
+		"overflow": 0,
+		"pillLeft": 14,
+		"pillToCards": 12,
+		"route": "/en/inventory",
+		"searchFont": "18px",
+		"searchWeight": "400",
+		"width": 320
+	},
+	{
+		"cardLeft": 14,
+		"overflow": 0,
+		"pillLeft": 14,
+		"pillToCards": 12,
+		"route": "/en/inventory",
+		"searchFont": "18px",
+		"searchWeight": "400",
+		"width": 390
+	},
+	{
+		"overflow": 0,
+		"route": "/en",
+		"tabs": [
+			{
+				"height": 44,
+				"size": "20px",
+				"text": "Buy",
+				"top": 66,
+				"weight": "400"
+			},
+			{
+				"height": 44,
+				"size": "20px",
+				"text": "Import",
+				"top": 66,
+				"weight": "400"
+			}
+		],
+		"width": 320
+	},
+	{
+		"overflow": 0,
+		"route": "/en/sell-your-car",
+		"tabs": [
+			{
+				"height": 44,
+				"size": "20px",
+				"text": "VIN",
+				"top": 66,
+				"weight": "400"
+			},
+			{
+				"height": 44,
+				"size": "20px",
+				"text": "No VIN?",
+				"top": 66,
+				"weight": "400"
+			}
+		],
+		"width": 320
+	},
+	{
+		"overflow": 0,
+		"route": "/en/sell-your-car",
+		"tabs": [
+			{
+				"height": 44,
+				"size": "20px",
+				"text": "VIN",
+				"top": 66,
+				"weight": "400"
+			},
+			{
+				"height": 44,
+				"size": "20px",
+				"text": "No VIN?",
+				"top": 66,
+				"weight": "400"
+			}
+		],
+		"width": 320
+	},
+	{
+		"overflow": 0,
+		"route": "/en/import",
+		"tabs": [
+			{
+				"height": 44,
+				"size": "20px",
+				"text": "LINK / VIN",
+				"top": 66,
+				"weight": "400"
+			},
+			{
+				"height": 44,
+				"size": "20px",
+				"text": "Find a car",
+				"top": 66,
+				"weight": "400"
+			}
+		],
+		"width": 320
+	},
+	{
+		"overflow": 0,
+		"route": "/en/import",
+		"tabs": [
+			{
+				"height": 44,
+				"size": "20px",
+				"text": "LINK / VIN",
+				"top": 66,
+				"weight": "400"
+			},
+			{
+				"height": 44,
+				"size": "20px",
+				"text": "Find a car",
+				"top": 66,
+				"weight": "400"
+			}
+		],
+		"width": 320
+	},
+	{
+		"overflow": 0,
+		"route": "/en",
+		"tabs": [
+			{
+				"height": 44,
+				"size": "20px",
+				"text": "Buy",
+				"top": 66,
+				"weight": "400"
+			},
+			{
+				"height": 44,
+				"size": "20px",
+				"text": "Import",
+				"top": 66,
+				"weight": "400"
+			}
+		],
+		"width": 390
+	},
+	{
+		"overflow": 0,
+		"route": "/en/sell-your-car",
+		"tabs": [
+			{
+				"height": 44,
+				"size": "20px",
+				"text": "VIN",
+				"top": 66,
+				"weight": "400"
+			},
+			{
+				"height": 44,
+				"size": "20px",
+				"text": "No VIN?",
+				"top": 66,
+				"weight": "400"
+			}
+		],
+		"width": 390
+	},
+	{
+		"overflow": 0,
+		"route": "/en/import",
+		"tabs": [
+			{
+				"height": 44,
+				"size": "20px",
+				"text": "LINK / VIN",
+				"top": 66,
+				"weight": "400"
+			},
+			{
+				"height": 44,
+				"size": "20px",
+				"text": "Find a car",
+				"top": 66,
+				"weight": "400"
+			}
+		],
+		"width": 390
+	}
+]

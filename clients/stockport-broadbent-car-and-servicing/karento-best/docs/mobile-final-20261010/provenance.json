@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-10",
+  "browser": "Codex @Browser",
+  "origin": "http://127.0.0.1:6466",
+  "baseHead": "fc267cef378316516258936ad4cac843e78df710",
+  "sourceState": "Shared Cars main checkout; uncommitted source; six files changed in this pass",
+  "pairs": [
+    {
+      "name": "filters",
+      "filename": "filters-before-after.png",
+      "sourceDimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scaling": "none",
+      "language": "en",
+      "state": "Home vehicle filters, default"
+    },
+    {
+      "name": "menu",
+      "filename": "menu-before-after.png",
+      "sourceDimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scaling": "none",
+      "language": "en",
+      "state": "Home guest menu, Explore closed"
+    },
+    {
+      "name": "photos",
+      "filename": "photos-before-after.png",
+      "sourceDimensions": {
+        "width": 390,
+        "height": 844
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scaling": "none",
+      "language": "en",
+      "state": "Vehicle photo viewer, photo 1 of 5"
+    }
+  ],
+  "closeoutHead": "14b3cbe71f7d84d0e16a0140467899319e00d4be",
+  "concurrentWork": "Cars HEAD advanced during this local pass; no Git/index mutations were made by this pass."
+}

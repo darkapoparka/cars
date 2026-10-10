@@ -1,0 +1,101 @@
+{
+  "capturedAt": "2026-10-09T15:07:40.281Z",
+  "runtime": "v24.21.0",
+  "baselineCommit": "526b39e0e91a1ca3f246687ef815aebff6c2ca72",
+  "qaDigest": "6b14397c77bd884d2b59782ffd553483e9ffade2c4037d12fcc1d79db3ef97d0",
+  "sourcePaths": [
+    "src/lib/components/inventory/InventoryMobilePage.svelte"
+  ],
+  "checks": [
+    {
+      "name": "sync",
+      "code": 0,
+      "durationMs": 12321
+    },
+    {
+      "name": "svelte-check",
+      "code": 0,
+      "durationMs": 61478
+    },
+    {
+      "name": "eslint",
+      "code": 0,
+      "durationMs": 38710
+    },
+    {
+      "name": "format",
+      "code": 0,
+      "durationMs": 4904
+    },
+    {
+      "name": "architecture",
+      "code": 0,
+      "durationMs": 1374
+    },
+    {
+      "name": "assets",
+      "code": 0,
+      "durationMs": 520
+    },
+    {
+      "name": "build",
+      "code": 0,
+      "durationMs": 169989
+    }
+  ],
+  "browser": {
+    "expected": 5,
+    "unexpected": 0,
+    "flaky": 0,
+    "skipped": 0
+  },
+  "actualMobileCases": 4,
+  "searchHeight": 44,
+  "filterSort": {
+    "target": 44,
+    "surface": 44,
+    "icon": 20,
+    "stroke": 2
+  },
+  "compactUtilities": {
+    "target": 44,
+    "surface": 36,
+    "icon": 20,
+    "stroke": 2
+  },
+  "preservation": {
+    "comparison": "Previous actual production versus changed actual rendered output",
+    "differences": [
+      {
+        "file": "bg-390-home.png",
+        "changedPixels": 79,
+        "maxChannelDelta": 1
+      },
+      {
+        "file": "bg-390-pdp.png",
+        "changedPixels": 0,
+        "maxChannelDelta": 0
+      },
+      {
+        "file": "bg-1440-inventory.png",
+        "changedPixels": 63,
+        "maxChannelDelta": 5
+      }
+    ],
+    "desktopPresentation": {
+      "elements": 517,
+      "differences": 0,
+      "hash": "93c7e2799c97bf0e6ccaca3fac2b72d4a5e783cb9b41e8f1cc43a419daafd1e3"
+    },
+    "note": "Desktop has 63 differing pixels with at most 5/255 channel variation; all 517 visible elements have identical geometry and measured computed styles. PDP is pixel-identical; Home has 79 pixels differing by at most 1/255."
+  },
+  "foreignWork": {
+    "paths": 8,
+    "allUntouchedSinceStart": true,
+    "concurrentChanges": []
+  },
+  "beforeAlias": {
+    "id": "dpl_6x3DuQSLMm2UX3nyovHW6ZM8Tqta",
+    "mirrorCommit": "a16fa6c3fe59a9f0290659e7817525d4b16309b9"
+  }
+}

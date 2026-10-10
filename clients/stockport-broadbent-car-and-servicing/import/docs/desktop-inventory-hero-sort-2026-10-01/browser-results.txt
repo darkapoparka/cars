@@ -1,0 +1,69 @@
+
+Running 48 tests using 1 worker
+
+
+
+(node:6056) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+(node:6056) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1/48] [desktop] › tests\desktop-search.e2e.ts:9:1 › reference-style icon tabs connect to compact fields without changing the mobile tab variant
+[2/48] [desktop] › tests\desktop-search.e2e.ts:50:1 › search entry opens a focused dialog with one intact focus outline and pinned actions
+[3/48] [desktop] › tests\desktop-search.e2e.ts:88:1 › nested make selection returns to search, keeps the draft, and submits the same canonical query
+[4/48] [desktop] › tests\desktop-search.e2e.ts:121:1 › empty results and an unavailable preview never manufacture a result count
+[5/48] [desktop] › tests\desktop-search.e2e.ts:151:1 › header search reuses the same focused result dialog
+[6/48] [desktop] › tests\desktop-search.e2e.ts:165:1 › home Search follows the selected filters directly and discovery pills open real results
+[7/48] [desktop] › tests\filter-inputs.e2e.ts:10:2 › en: fields and first option retain their position across categories
+[8/48] [desktop] › tests\filter-inputs.e2e.ts:10:2 › bg: fields and first option retain their position across categories
+[9/48] [desktop] › tests\filter-inputs.e2e.ts:63:1 › clearing a category retains other drafts and returns focus to its input
+[10/48] [desktop] › tests\filter-inputs.e2e.ts:91:1 › desktop categories stay readable and stationary across viewport sizes
+[11/48] [desktop] › tests\filter-inputs.e2e.ts:131:1 › category tabs and search stay visible while long choices scroll
+[12/48] [desktop] › tests\filter-inputs.e2e.ts:165:1 › draft makes update models and ranges submit the same filters as the preview
+[13/48] [desktop] › tests\filter-inputs.e2e.ts:203:1 › invalid ranges reveal their category and focus the invalid input
+[14/48] [desktop] › tests\filter-inputs.e2e.ts:226:1 › searched-out choices survive switching categories and closing discards the draft
+[15/48] [desktop] › tests\filter-inputs.e2e.ts:247:1 › clear removes visible and passthrough filters while retaining the view
+[16/48] [desktop] › tests\filter-inputs.e2e.ts:264:1 › zero results recover and unavailable counts do not block filtering
+[17/48] [desktop] › tests\filter-inputs.e2e.ts:290:1 › free-text inventory search is retained when adding a filter
+[18/48] [desktop] › tests\inventory.e2e.ts:5:1 › inventory remains server-rendered without JavaScript
+[19/48] [desktop] › tests\inventory.e2e.ts:20:1 › filters and detail return retain the original URL
+[20/48] [desktop] › tests\inventory.e2e.ts:30:1 › desktop filter search does not discard a previously selected make
+[21/48] [desktop] › tests\inventory.e2e.ts:45:1 › desktop sidebar submits canonical filters, keeps searched-out choices and preserves layout on clear
+[22/48] [desktop] › tests\inventory.e2e.ts:91:1 › desktop keyword search replaces its previous value and preserves model and presentation state
+[23/48] [desktop] › tests\inventory.e2e.ts:114:1 › desktop sidebar maximums and choices submit without JavaScript
+[24/48] [desktop] › tests\inventory.e2e.ts:154:1 › desktop sorting and view changes retain filters and keyboard menu behavior
+
+
+(node:28168) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:28168) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[25/48] [mobile] › tests\desktop-search.e2e.ts:9:1 › reference-style icon tabs connect to compact fields without changing the mobile tab variant
+[26/48] [mobile] › tests\desktop-search.e2e.ts:50:1 › search entry opens a focused dialog with one intact focus outline and pinned actions
+[27/48] [mobile] › tests\desktop-search.e2e.ts:88:1 › nested make selection returns to search, keeps the draft, and submits the same canonical query
+[28/48] [mobile] › tests\desktop-search.e2e.ts:121:1 › empty results and an unavailable preview never manufacture a result count
+[29/48] [mobile] › tests\desktop-search.e2e.ts:151:1 › header search reuses the same focused result dialog
+[30/48] [mobile] › tests\desktop-search.e2e.ts:165:1 › home Search follows the selected filters directly and discovery pills open real results
+[31/48] [mobile] › tests\filter-inputs.e2e.ts:10:2 › en: fields and first option retain their position across categories
+[32/48] [mobile] › tests\filter-inputs.e2e.ts:10:2 › bg: fields and first option retain their position across categories
+[33/48] [mobile] › tests\filter-inputs.e2e.ts:63:1 › clearing a category retains other drafts and returns focus to its input
+[34/48] [mobile] › tests\filter-inputs.e2e.ts:91:1 › desktop categories stay readable and stationary across viewport sizes
+[35/48] [mobile] › tests\filter-inputs.e2e.ts:131:1 › category tabs and search stay visible while long choices scroll
+[36/48] [mobile] › tests\filter-inputs.e2e.ts:165:1 › draft makes update models and ranges submit the same filters as the preview
+[37/48] [mobile] › tests\filter-inputs.e2e.ts:203:1 › invalid ranges reveal their category and focus the invalid input
+[38/48] [mobile] › tests\filter-inputs.e2e.ts:226:1 › searched-out choices survive switching categories and closing discards the draft
+[39/48] [mobile] › tests\filter-inputs.e2e.ts:247:1 › clear removes visible and passthrough filters while retaining the view
+[40/48] [mobile] › tests\filter-inputs.e2e.ts:264:1 › zero results recover and unavailable counts do not block filtering
+[41/48] [mobile] › tests\filter-inputs.e2e.ts:290:1 › free-text inventory search is retained when adding a filter
+[42/48] [mobile] › tests\inventory.e2e.ts:5:1 › inventory remains server-rendered without JavaScript
+[43/48] [mobile] › tests\inventory.e2e.ts:20:1 › filters and detail return retain the original URL
+[44/48] [mobile] › tests\inventory.e2e.ts:30:1 › desktop filter search does not discard a previously selected make
+[45/48] [mobile] › tests\inventory.e2e.ts:45:1 › desktop sidebar submits canonical filters, keeps searched-out choices and preserves layout on clear
+[46/48] [mobile] › tests\inventory.e2e.ts:91:1 › desktop keyword search replaces its previous value and preserves model and presentation state
+[47/48] [mobile] › tests\inventory.e2e.ts:114:1 › desktop sidebar maximums and choices submit without JavaScript
+[48/48] [mobile] › tests\inventory.e2e.ts:154:1 › desktop sorting and view changes retain filters and keyboard menu behavior
+  22 skipped
+  26 passed (1.7m)

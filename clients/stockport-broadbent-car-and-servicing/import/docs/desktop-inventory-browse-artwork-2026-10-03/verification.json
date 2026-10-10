@@ -1,0 +1,748 @@
+{
+	"baselineHead": "f47a5c684f17cd4af8f180b726d9785b73c273e1",
+	"sourceDigest": "18f346b144f75221506af578925be95694da6b0e6b545577af2ce435e56355fd",
+	"paths": 1678,
+	"changedSource": [
+		"src/lib/utils/assets.ts",
+		"src/lib/components/common/HeroCars.svelte",
+		"src/lib/content/home-discovery.ts",
+		"src/lib/auxero/home-five.ts",
+		"src/lib/components/home/HomePage.svelte",
+		"src/lib/components/home/HomeBrowseCard.svelte"
+	],
+	"qaRoot": "C:/Users/radev/.codex/tmp/cars-import-inventory-browse-artwork-2026-10-03/qa",
+	"rawEvidenceRoot": "C:/Users/radev/.codex/tmp/cars-import-inventory-browse-artwork-2026-10-03/evidence",
+	"beforeStates": 16,
+	"afterStates": 16,
+	"productionStates": 2,
+	"mobile": [
+		{
+			"pixels": true,
+			"presentation": true,
+			"id": "home-bg-320"
+		},
+		{
+			"pixels": true,
+			"presentation": true,
+			"id": "about-bg-320"
+		},
+		{
+			"pixels": true,
+			"presentation": true,
+			"id": "home-bg-390"
+		},
+		{
+			"pixels": true,
+			"presentation": true,
+			"id": "about-bg-390"
+		},
+		{
+			"pixels": true,
+			"presentation": true,
+			"id": "home-en-320"
+		},
+		{
+			"pixels": true,
+			"presentation": true,
+			"id": "about-en-320"
+		},
+		{
+			"pixels": true,
+			"presentation": true,
+			"id": "home-en-390"
+		},
+		{
+			"pixels": true,
+			"presentation": true,
+			"id": "about-en-390"
+		}
+	],
+	"gates": [
+		{
+			"name": "verify",
+			"args": ["L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js", "run", "verify"],
+			"started": "2026-10-03T20:51:27.645Z",
+			"completed": "2026-10-03T20:52:56.249Z",
+			"exitCode": 1,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-inventory-browse-artwork-2026-10-03\\qa/runtime/verify.log",
+			"logSha256": "6f6d8352c83624ac8e185bfe71a6bedcc6c1e96ea35444b812214876cb7b703b"
+		},
+		{
+			"name": "scoped-format",
+			"args": [
+				"node_modules/prettier/bin/prettier.cjs",
+				"--check",
+				"src/lib/utils/assets.ts",
+				"src/lib/components/common/HeroCars.svelte",
+				"src/lib/content/home-discovery.ts",
+				"src/lib/auxero/home-five.ts",
+				"src/lib/components/home/HomePage.svelte",
+				"src/lib/components/home/HomeBrowseCard.svelte"
+			],
+			"started": "2026-10-03T20:52:56.251Z",
+			"completed": "2026-10-03T20:52:57.4Z",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-inventory-browse-artwork-2026-10-03\\qa/runtime/scoped-format.log",
+			"logSha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+		},
+		{
+			"name": "scoped-lint",
+			"args": [
+				"node_modules/eslint/bin/eslint.js",
+				"src/lib/utils/assets.ts",
+				"src/lib/components/common/HeroCars.svelte",
+				"src/lib/content/home-discovery.ts",
+				"src/lib/auxero/home-five.ts",
+				"src/lib/components/home/HomePage.svelte",
+				"src/lib/components/home/HomeBrowseCard.svelte"
+			],
+			"started": "2026-10-03T20:52:57.4Z",
+			"completed": "2026-10-03T20:53:09.731Z",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-inventory-browse-artwork-2026-10-03\\qa/runtime/scoped-lint.log",
+			"logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+		},
+		{
+			"name": "architecture",
+			"args": [
+				"L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js",
+				"run",
+				"check:architecture"
+			],
+			"started": "2026-10-03T20:53:09.732Z",
+			"completed": "2026-10-03T20:53:11.079Z",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-inventory-browse-artwork-2026-10-03\\qa/runtime/architecture.log",
+			"logSha256": "a13fae8e803a81d5f3a47374f6da51533f382d894ac89843c389f71eafd8dab7"
+		},
+		{
+			"name": "assets",
+			"args": ["L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js", "run", "check:assets"],
+			"started": "2026-10-03T20:53:11.08Z",
+			"completed": "2026-10-03T20:53:11.52Z",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-inventory-browse-artwork-2026-10-03\\qa/runtime/assets.log",
+			"logSha256": "b98cbb4d013072e79e1bd8765db3905ed8c6f5fae74e56356eca4fd5a28ef995"
+		},
+		{
+			"name": "unit",
+			"args": [
+				"L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js",
+				"run",
+				"test:unit",
+				"--",
+				"--run"
+			],
+			"started": "2026-10-03T20:53:11.521Z",
+			"completed": "2026-10-03T20:53:24.901Z",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-inventory-browse-artwork-2026-10-03\\qa/runtime/unit.log",
+			"logSha256": "b2cc246bc2c5f891069df864cf8bb3de9e8d95a3aab3a9d7e0941d780f124e75"
+		},
+		{
+			"name": "full-lint",
+			"args": ["L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js", "run", "lint:code"],
+			"started": "2026-10-03T20:53:24.902Z",
+			"completed": "2026-10-03T20:55:00.742Z",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-inventory-browse-artwork-2026-10-03\\qa/runtime/full-lint.log",
+			"logSha256": "ddefde2c1fec4a2f883d2deed235be018316249ceaa26b8412c8718b4e19fb56"
+		},
+		{
+			"name": "build",
+			"args": ["L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js", "run", "build"],
+			"started": "2026-10-03T20:55:00.743Z",
+			"completed": "2026-10-03T20:56:28.015Z",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-inventory-browse-artwork-2026-10-03\\qa/runtime/build.log",
+			"logSha256": "2199b752449be935cb0d5883b627ce669ccaa3e7eb991524bb795d1a8b6586dd"
+		}
+	],
+	"browser": {
+		"startTime": "2026-10-03T20:58:34.89Z",
+		"duration": 15591.12,
+		"expected": 9,
+		"skipped": 3,
+		"unexpected": 0,
+		"flaky": 0
+	},
+	"devBrowse": {
+		"startTime": "2026-10-03T20:51:40.438Z",
+		"duration": 22294.83,
+		"expected": 3,
+		"skipped": 0,
+		"unexpected": 0,
+		"flaky": 0
+	},
+	"media": [
+		{
+			"locale": "bg",
+			"width": 320,
+			"media": {
+				"src": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+				"natural": [1, 1],
+				"imageBounds": [0, 0, 0, 0],
+				"cardBounds": [0, 0, 0, 0],
+				"contained": true
+			},
+			"heights": [0, 0, 0, 0],
+			"errors": []
+		},
+		{
+			"locale": "bg",
+			"width": 390,
+			"media": {
+				"src": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+				"natural": [1, 1],
+				"imageBounds": [0, 0, 0, 0],
+				"cardBounds": [0, 0, 0, 0],
+				"contained": true
+			},
+			"heights": [0, 0, 0, 0],
+			"errors": []
+		},
+		{
+			"locale": "bg",
+			"width": 768,
+			"media": {
+				"src": "http://127.0.0.1:6792/assets/daynight/body-types/all-cars-front.webp",
+				"natural": [720, 264],
+				"imageBounds": [411.5, 390.3125, 284.5, 104.3125],
+				"cardBounds": [386.5, 304.78125, 334.5, 390.390625],
+				"contained": true
+			},
+			"heights": [390.390625, 390.390625, 390.390625, 390.390625],
+			"errors": []
+		},
+		{
+			"locale": "bg",
+			"width": 1024,
+			"media": {
+				"src": "http://127.0.0.1:6792/assets/daynight/body-types/all-cars-front.webp",
+				"natural": [720, 264],
+				"imageBounds": [539.5, 366.84375, 412.5, 151.25],
+				"cardBounds": [514.5, 264.78125, 462.5, 470.390625],
+				"contained": true
+			},
+			"heights": [470.390625, 470.390625, 470.390625, 470.390625],
+			"errors": []
+		},
+		{
+			"locale": "bg",
+			"width": 1440,
+			"media": {
+				"src": "http://127.0.0.1:6792/assets/daynight/body-types/all-cars-front.webp",
+				"natural": [720, 264],
+				"imageBounds": [1082.5, 669.40625, 265, 97.15625],
+				"cardBounds": [1057.5, 586.390625, 315, 378.203125],
+				"contained": true
+			},
+			"heights": [378.203125, 378.203125, 378.203125, 378.203125],
+			"errors": []
+		},
+		{
+			"locale": "bg",
+			"width": 1920,
+			"media": {
+				"src": "http://127.0.0.1:6792/assets/daynight/body-types/all-cars-front.webp",
+				"natural": [720, 264],
+				"imageBounds": [1322.5, 669.40625, 265, 97.15625],
+				"cardBounds": [1297.5, 586.390625, 315, 378.203125],
+				"contained": true
+			},
+			"heights": [378.203125, 378.203125, 378.203125, 378.203125],
+			"errors": []
+		},
+		{
+			"locale": "en",
+			"width": 320,
+			"media": {
+				"src": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+				"natural": [1, 1],
+				"imageBounds": [0, 0, 0, 0],
+				"cardBounds": [0, 0, 0, 0],
+				"contained": true
+			},
+			"heights": [0, 0, 0, 0],
+			"errors": []
+		},
+		{
+			"locale": "en",
+			"width": 390,
+			"media": {
+				"src": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+				"natural": [1, 1],
+				"imageBounds": [0, 0, 0, 0],
+				"cardBounds": [0, 0, 0, 0],
+				"contained": true
+			},
+			"heights": [0, 0, 0, 0],
+			"errors": []
+		},
+		{
+			"locale": "en",
+			"width": 768,
+			"media": {
+				"src": "http://127.0.0.1:6792/assets/daynight/body-types/all-cars-front.webp",
+				"natural": [720, 264],
+				"imageBounds": [411.5, 390.3125, 284.5, 104.3125],
+				"cardBounds": [386.5, 304.78125, 334.5, 390.390625],
+				"contained": true
+			},
+			"heights": [390.390625, 390.390625, 390.390625, 390.390625],
+			"errors": []
+		},
+		{
+			"locale": "en",
+			"width": 1024,
+			"media": {
+				"src": "http://127.0.0.1:6792/assets/daynight/body-types/all-cars-front.webp",
+				"natural": [720, 264],
+				"imageBounds": [539.5, 366.84375, 412.5, 151.25],
+				"cardBounds": [514.5, 264.78125, 462.5, 470.390625],
+				"contained": true
+			},
+			"heights": [470.390625, 470.390625, 470.390625, 470.390625],
+			"errors": []
+		},
+		{
+			"locale": "en",
+			"width": 1440,
+			"media": {
+				"src": "http://127.0.0.1:6792/assets/daynight/body-types/all-cars-front.webp",
+				"natural": [720, 264],
+				"imageBounds": [1082.5, 669.40625, 265, 97.15625],
+				"cardBounds": [1057.5, 586.390625, 315, 378.203125],
+				"contained": true
+			},
+			"heights": [378.203125, 378.203125, 378.203125, 378.203125],
+			"errors": []
+		},
+		{
+			"locale": "en",
+			"width": 1920,
+			"media": {
+				"src": "http://127.0.0.1:6792/assets/daynight/body-types/all-cars-front.webp",
+				"natural": [720, 264],
+				"imageBounds": [1322.5, 669.40625, 265, 97.15625],
+				"cardBounds": [1297.5, 586.390625, 315, 378.203125],
+				"contained": true
+			},
+			"heights": [378.203125, 378.203125, 378.203125, 378.203125],
+			"errors": []
+		}
+	],
+	"interactions": [
+		{
+			"locale": "bg",
+			"width": 768,
+			"cards": 5,
+			"normal": {
+				"background": "rgb(255, 255, 255)",
+				"border": "rgb(229, 229, 231)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"hover": {
+				"background": "rgb(238, 238, 240)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"focus": {
+				"visible": true,
+				"outline": "rgb(185, 22, 28)",
+				"width": "3px"
+			},
+			"pageErrors": []
+		},
+		{
+			"locale": "bg",
+			"width": 1024,
+			"cards": 5,
+			"normal": {
+				"background": "rgb(255, 255, 255)",
+				"border": "rgb(229, 229, 231)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"hover": {
+				"background": "rgb(238, 238, 240)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"focus": {
+				"visible": true,
+				"outline": "rgb(185, 22, 28)",
+				"width": "3px"
+			},
+			"pageErrors": []
+		},
+		{
+			"locale": "bg",
+			"width": 1440,
+			"cards": 5,
+			"normal": {
+				"background": "rgb(255, 255, 255)",
+				"border": "rgb(229, 229, 231)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"hover": {
+				"background": "rgb(238, 238, 240)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"focus": {
+				"visible": true,
+				"outline": "rgb(185, 22, 28)",
+				"width": "3px"
+			},
+			"pageErrors": []
+		},
+		{
+			"locale": "bg",
+			"width": 1920,
+			"cards": 5,
+			"normal": {
+				"background": "rgb(255, 255, 255)",
+				"border": "rgb(229, 229, 231)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"hover": {
+				"background": "rgb(238, 238, 240)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"focus": {
+				"visible": true,
+				"outline": "rgb(185, 22, 28)",
+				"width": "3px"
+			},
+			"pageErrors": []
+		},
+		{
+			"locale": "en",
+			"width": 768,
+			"cards": 5,
+			"normal": {
+				"background": "rgb(255, 255, 255)",
+				"border": "rgb(229, 229, 231)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"hover": {
+				"background": "rgb(238, 238, 240)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"focus": {
+				"visible": true,
+				"outline": "rgb(185, 22, 28)",
+				"width": "3px"
+			},
+			"pageErrors": []
+		},
+		{
+			"locale": "en",
+			"width": 1024,
+			"cards": 5,
+			"normal": {
+				"background": "rgb(255, 255, 255)",
+				"border": "rgb(229, 229, 231)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"hover": {
+				"background": "rgb(238, 238, 240)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"focus": {
+				"visible": true,
+				"outline": "rgb(185, 22, 28)",
+				"width": "3px"
+			},
+			"pageErrors": []
+		},
+		{
+			"locale": "en",
+			"width": 1440,
+			"cards": 5,
+			"normal": {
+				"background": "rgb(255, 255, 255)",
+				"border": "rgb(229, 229, 231)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"hover": {
+				"background": "rgb(238, 238, 240)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"focus": {
+				"visible": true,
+				"outline": "rgb(185, 22, 28)",
+				"width": "3px"
+			},
+			"pageErrors": []
+		},
+		{
+			"locale": "en",
+			"width": 1920,
+			"cards": 5,
+			"normal": {
+				"background": "rgb(255, 255, 255)",
+				"border": "rgb(229, 229, 231)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"hover": {
+				"background": "rgb(238, 238, 240)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"focus": {
+				"visible": true,
+				"outline": "rgb(185, 22, 28)",
+				"width": "3px"
+			},
+			"pageErrors": []
+		}
+	],
+	"screenshots": [
+		{
+			"filename": "before-vehicles.png",
+			"sha256": "829a1bfd8ec9681550e44c6fa69a699345555dfc2f741cbc3f52cfc97358d512"
+		},
+		{
+			"filename": "after-vehicles.png",
+			"sha256": "220446f0f6ea0b80d59bc7036d6a21368a11802e624467b1617970e14eed90ab"
+		},
+		{
+			"filename": "before-home-full.png",
+			"sha256": "34f2d6875f0589f26baf0f5f37adc1d5e463c4d08c63786cd06f1941577a8563"
+		},
+		{
+			"filename": "after-home-full.png",
+			"sha256": "5f4cc0fe4e3e0396edae62b5730799e3e075f617867c6c450b55f265407a22bb"
+		}
+	],
+	"artwork": {
+		"src": "/assets/daynight/body-types/all-cars-front.webp",
+		"width": 720,
+		"height": 264,
+		"sha256": "e277009ed79c84eedbf802a60d3f282b287385f799cb008e758f0a12ff9e6db1",
+		"kind": "Existing decorative illustration; not listing photography"
+	},
+	"scope": "Standalone Import master, actual source-rendered before and frozen-production after; no injected styles, promotion or deployment",
+	"galleryCheck": {
+		"records": [
+			{
+				"width": 390,
+				"route": "vehicles",
+				"mode": "compare",
+				"visible": 2,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "vehicles",
+				"mode": "before",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "vehicles",
+				"mode": "after",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "home-full",
+				"mode": "compare",
+				"visible": 2,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "home-full",
+				"mode": "before",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "home-full",
+				"mode": "after",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "vehicles",
+				"mode": "compare",
+				"visible": 2,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "vehicles",
+				"mode": "before",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "vehicles",
+				"mode": "after",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "home-full",
+				"mode": "compare",
+				"visible": 2,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "home-full",
+				"mode": "before",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "home-full",
+				"mode": "after",
+				"visible": 1,
+				"overflow": 0
+			}
+		],
+		"failures": 0
+	}
+}

@@ -1,0 +1,327 @@
+.desktopSearch {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .desktopSearch {
+    display: grid;
+    width: 100%;
+    min-width: 0;
+    color: var(--foreground);
+  }
+  .desktopSearch .panel {
+    min-height: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .form,
+  .fields,
+  .primaryFields,
+  .advancedFields {
+    display: grid;
+    gap: calc(var(--spacing) * 5);
+    min-width: 0;
+  }
+  .searchHeading {
+    margin: 0 0 calc(var(--spacing) * 1);
+    font-size: calc(var(--spacing) * 5);
+    font-weight: var(--font-weight-bold);
+    line-height: calc(var(--spacing) * 6);
+  }
+  .searchRow,
+  .filterField {
+    display: grid;
+    gap: calc(var(--spacing) * 2);
+    min-width: 0;
+  }
+  .filterLabel {
+    font-size: calc(var(--spacing) * 3.5);
+    font-weight: var(--font-weight-medium);
+    line-height: calc(var(--spacing) * 5);
+    color: var(--muted-foreground);
+  }
+  .query {
+    position: relative;
+    min-width: 0;
+  }
+  .query label {
+    height: calc(var(--spacing) * 13);
+    padding-inline: calc(var(--spacing) * 3.5);
+    background: var(--control);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 3);
+    box-shadow: none;
+  }
+  .query label:focus-within {
+    border-color: var(--ring);
+  }
+  .query input {
+    font-size: calc(var(--spacing) * 3.75);
+  }
+  .desktopSearch .field {
+    justify-content: space-between;
+    width: 100%;
+    height: calc(var(--spacing) * 13);
+    min-height: calc(var(--spacing) * 13);
+    padding-inline: calc(var(--spacing) * 4);
+    overflow: hidden;
+    font-size: calc(var(--spacing) * 3.75);
+    font-weight: var(--font-weight-normal);
+    color: var(--foreground);
+    background: var(--control);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 3);
+    box-shadow: none;
+  }
+  .field > span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .field svg {
+    flex-shrink: 0;
+  }
+  .desktopSearch .field:hover,
+  .desktopSearch .field[aria-pressed="true"] {
+    background: var(--control-hover);
+    border-color: var(--border);
+  }
+  .advancedFields[hidden] {
+    display: none;
+  }
+  .desktopSearch .submit {
+    gap: calc(var(--spacing) * 2.5);
+    width: 100%;
+    height: calc(var(--spacing) * 14);
+    min-height: calc(var(--spacing) * 14);
+    padding-inline: calc(var(--spacing) * 6.5);
+    font-size: calc(var(--spacing) * 3.75);
+    font-weight: var(--font-weight-medium);
+    color: var(--brand-foreground);
+    background: var(--brand);
+    border: 0;
+    border-radius: calc(var(--spacing) * 3);
+    box-shadow: none;
+  }
+  .desktopSearch .submit:hover {
+    color: var(--brand-hover-foreground);
+    background: var(--lead-site-accent-hover);
+  }
+  .desktopSearch .submit:active {
+    color: var(--brand-active-foreground);
+    background: var(--lead-site-accent-active);
+  }
+  .footer {
+    display: flex;
+    gap: calc(var(--spacing) * 2);
+    align-items: center;
+    justify-content: space-between;
+    font-size: calc(var(--spacing) * 3);
+    color: var(--muted-foreground);
+  }
+  .textAction {
+    padding: 0;
+    font-size: calc(var(--spacing) * 3.25);
+    color: var(--brand-text);
+  }
+  .desktopSearch[data-surface="hero"] .form {
+    display: flex;
+    gap: 0;
+    align-items: center;
+    height: calc(var(--spacing) * 16);
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 2.5);
+    background: var(--panel);
+    border: 0;
+    border-radius: calc(var(--spacing) * 12.5);
+  }
+  .desktopSearch[data-surface="hero"]
+    :is(
+      .searchHeading,
+      .searchRow,
+      .filterLabel,
+      .advancedFields,
+      .expandFilters,
+      .footer,
+      [data-field="year"],
+      [data-field="mileage"]
+    ) {
+    display: none;
+  }
+  .desktopSearch[data-surface="hero"] :is(.fields, .primaryFields) {
+    display: contents;
+  }
+  .desktopSearch[data-surface="hero"] .filterField {
+    position: relative;
+    display: flex;
+    flex: 1 1 0;
+    height: calc(var(--spacing) * 12);
+  }
+  .desktopSearch[data-surface="hero"]
+    .filterField:is([data-field="year"], [data-field="mileage"]) {
+    display: none;
+  }
+  .desktopSearch[data-surface="hero"] .filterField + .filterField::before {
+    position: absolute;
+    top: calc(var(--spacing) * 2.5);
+    bottom: calc(var(--spacing) * 2.5);
+    left: 0;
+    width: calc(var(--spacing) * 0.25);
+    content: "";
+    background: var(--border);
+    transition: opacity var(--duration-interaction);
+  }
+  .desktopSearch[data-surface="hero"]
+    .filterField:has(.field:is(:hover, :focus-visible))::before,
+  .desktopSearch[data-surface="hero"]
+    .filterField:has(.field:is(:hover, :focus-visible))
+    + .filterField::before {
+    opacity: 0;
+  }
+  .desktopSearch[data-surface="hero"] .field {
+    height: calc(var(--spacing) * 12);
+    min-height: calc(var(--spacing) * 12);
+    padding-inline: var(
+      --desktop-discovery-field-padding,
+      calc(var(--spacing) * 6)
+    );
+    font-size: calc(var(--spacing) * 3.75);
+    background: transparent;
+    border: 0;
+    border-radius: var(--radius-pill);
+    transition: background-color var(--duration-interaction);
+  }
+  .desktopSearch[data-surface="hero"] .field:is(:hover, :focus-visible) {
+    color: var(--foreground);
+    background: var(--control-hover);
+  }
+  .desktopSearch[data-surface="hero"] .submit {
+    flex: 0 0 calc(var(--spacing) * 12);
+    width: calc(var(--spacing) * 12);
+    height: calc(var(--spacing) * 12);
+    min-height: calc(var(--spacing) * 12);
+    padding: 0;
+    border-radius: calc(var(--spacing) * 10);
+  }
+  .desktopSearch[data-surface="hero"] .submit > span {
+    display: none;
+  }
+  .desktopSearch[data-surface="hero"] .submit svg {
+    width: calc(var(--spacing) * 5);
+    height: calc(var(--spacing) * 5);
+  }
+  .desktopSearch[data-surface="hero"] {
+    gap: var(--desktop-hero-pills-gap);
+  }
+  .categoryPills {
+    display: flex;
+    gap: var(--desktop-hero-pill-gap);
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  .desktopSearch .categoryPill {
+    gap: calc(var(--spacing) * 2);
+    height: var(--desktop-hero-pill-height);
+    min-height: var(--desktop-hero-pill-height);
+    padding: 0 var(--desktop-hero-pill-padding);
+    font-size: var(--text-desktop-control);
+    font-weight: var(--font-weight-medium);
+    color: var(--desktop-hero-type-foreground, var(--inverse-foreground));
+    background: var(--desktop-hero-type-background);
+    border: var(--desktop-border-width) solid var(--desktop-hero-type-border);
+    border-radius: var(--radius-pill);
+    backdrop-filter: blur(calc(var(--spacing) * 2));
+  }
+  .desktopSearch .categoryPill:hover {
+    background: var(--desktop-hero-type-hover);
+    border-color: var(
+      --desktop-hero-type-hover-border,
+      var(--desktop-hero-type-border)
+    );
+  }
+  .desktopSearch .categoryPill[aria-pressed="true"] {
+    color: var(--desktop-hero-type-selected-foreground, var(--foreground));
+    background: var(--desktop-hero-type-selected-background, var(--panel));
+    border-color: var(--desktop-hero-type-selected-background, var(--panel));
+  }
+  .categoryPill:focus-visible {
+    outline: var(--desktop-focus-width) solid
+      var(--desktop-hero-type-focus, var(--inverse-foreground));
+    outline-offset: var(--desktop-focus-offset);
+  }
+  .desktopSearch .categoryPill[aria-pressed="true"]:hover {
+    background: var(
+      --desktop-hero-type-selected-hover-background,
+      var(--lead-site-accent-hover)
+    );
+    border-color: var(
+      --desktop-hero-type-selected-hover-background,
+      var(--lead-site-accent-hover)
+    );
+  }
+  .desktopSearch .categoryArtwork {
+    flex: none;
+    width: calc(var(--spacing) * 11);
+    height: calc(var(--spacing) * 6);
+    object-fit: contain;
+  }
+  .desktopSearch[data-surface="hero"][data-search-context="inventory"] .form {
+    min-inline-size: 0;
+    margin: 0;
+  }
+  .desktopSearch[data-surface="hero"][data-search-context="inventory"] .field {
+    height: calc(var(--spacing) * 12);
+    min-height: calc(var(--spacing) * 12);
+    padding-inline: var(
+      --desktop-discovery-field-padding,
+      calc(var(--spacing) * 5)
+    );
+  }
+  .desktopSearch[data-surface="hero"] .field.typeField {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .typeValue {
+    display: inline-flex;
+    gap: calc(var(--spacing) * 2);
+    align-items: center;
+    min-width: 0;
+  }
+  .typeArtwork {
+    flex: none;
+    width: calc(var(--spacing) * 9);
+    height: calc(var(--spacing) * 5);
+  }
+  .typeArtwork img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .typeLabel {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .desktopSearch[data-surface="hero"] :is(.field, .submit):focus-visible {
+    outline: var(--desktop-focus-width) solid var(--ring);
+    outline-offset: var(--desktop-focus-offset);
+    border-radius: calc(var(--spacing) * 10);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .desktopSearch[data-surface="hero"] .field {
+    padding-inline: var(
+      --desktop-discovery-field-padding,
+      calc(var(--spacing) * 3.5)
+    );
+    font-size: calc(var(--spacing) * 3.5);
+  }
+}

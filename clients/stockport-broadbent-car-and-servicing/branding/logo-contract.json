@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "stockport-broadbent-car-and-servicing",
+  "approvalStatus": "independent_design_proposal_not_dealer_approved",
+  "assets": {
+    "onLight": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "280f985f5f3da17b23aad58e72c8466960a901f09e3f9b9f94911675ec3003fe",
+      "width": 1024,
+      "background": "opaque_white"
+    },
+    "onDark": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "280f985f5f3da17b23aad58e72c8466960a901f09e3f9b9f94911675ec3003fe",
+      "width": 1024,
+      "background": "opaque_white"
+    },
+    "onAccent": {
+      "publicPath": "/dealer-brand/logo.webp",
+      "sha256": "280f985f5f3da17b23aad58e72c8466960a901f09e3f9b9f94911675ec3003fe",
+      "width": 1024,
+      "background": "opaque_white"
+    }
+  },
+  "icon": {
+    "localPath": "assets/app-icon.png",
+    "sha256": "1acf89fca3d357ce6683d30cf4f1ba63eed266575d7975f772abd639c94146b9",
+    "width": 512,
+    "height": 512
+  },
+  "provenance": {
+    "creationMethod": "built_in_image_generation",
+    "date": "2026-10-10",
+    "sources": [
+      "exec-cb30ef83-b204-4e6d-b187-ef488f3d2ed5.png",
+      "exec-45f3f6ee-4df1-475f-8a03-a836b158e8ff.png"
+    ],
+    "deliveryEncoding": "Proportional size and delivery-format encoding only; no crop, recolouring or compositing.",
+    "visualInspection": "Spelling, complete emblem, contrasting white surface, clear square icon checked in generated output; application surfaces await browser QA."
+  },
+  "favicon": {
+    "localPath": "assets/favicon.ico",
+    "sha256": "521de1fa95b8d90a13b4205535f1ce7568918f3608bf2b2f1ad507ad1310e95e",
+    "sizes": [
+      16,
+      32,
+      48,
+      64,
+      128,
+      256
+    ],
+    "encoding": "ICO with PNG image entries from the actual generated square icon"
+  }
+}

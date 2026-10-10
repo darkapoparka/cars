@@ -1,0 +1,42 @@
+{
+	"checkedAt": "2026-09-19T11:31:41.565Z",
+	"head": "5ff9805ebe0211343e7a025465d8d71e306180fa",
+	"branch": "main",
+	"runtimeSourceSha256": "b3bd68140a7d88cf0be2b2cffd4332395584bdb24d88569890fffad8f289a0b2",
+	"sourceMatchesFrozenBuild": true,
+	"commands": {
+		"install": 0,
+		"verify": 0,
+		"build": 0,
+		"browser": 0,
+		"audit": 1
+	},
+	"unit": {
+		"files": 12,
+		"passed": 57
+	},
+	"browser": {
+		"passed": 68,
+		"skipped": 8,
+		"failed": 0,
+		"projects": ["390px Chromium", "1440px Chromium"]
+	},
+	"architecture": {
+		"nativeRouteModules": 56,
+		"reachableModules": 167,
+		"tailwindEntries": 1
+	},
+	"sourceImagesChecked": 806,
+	"dependencyAudit": {
+		"info": 0,
+		"low": 6,
+		"moderate": 4,
+		"high": 0,
+		"critical": 0,
+		"total": 10
+	},
+	"releaseApproved": false,
+	"committed": false,
+	"pushed": false,
+	"deployed": false
+}

@@ -1,0 +1,49 @@
+node_modules/
+.svelte-kit/
+build/
+.vercel/
+vite.config.*.timestamp-*
+static/generated/
+
+# Local secrets and machine-specific environment overrides
+.env
+.env.*
+!.env.example
+
+# Generated verification and coverage evidence
+/runtime/
+/artifacts/
+/playwright-report/
+/test-results/
+/coverage/
+/.impeccable/
+*.tsbuildinfo
+
+# Agency OS identity is source; local QA captures are not
+.agency-os/*
+!.agency-os/project.json
+
+# Local runtime and malformed browser-probe output
+*.log
+/document.documentElement.clientWidth*
+/innerWidth
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+
+.vercel
+
+# Local visual audit captures
+/.audit-output/
+
+# Archived captures must not return to the source tree.
+/docs/audits/2026-09-12-mobile-finalization/evidence/
+
+# Superseded one-off QA: use ignored runtime, not archived source.
+/docs/audits/pre-refactor-2026-09-12/**/*.py
+/docs/audits/pre-refactor-2026-09-12/**/*.mjs
+/docs/audits/pre-refactor-2026-09-12/**/*.json
+/docs/audits/pre-refactor-2026-09-12/**/*.png
+/docs/audits/pre-refactor-2026-09-12/**/*.jpg
+/docs/audits/pre-refactor-2026-09-12/**/*.jpeg

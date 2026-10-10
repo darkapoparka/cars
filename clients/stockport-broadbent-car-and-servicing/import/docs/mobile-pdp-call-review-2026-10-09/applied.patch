@@ -1,0 +1,13 @@
+diff --git "a/L:\\CODEX\\cars\\runtime\\import-mobile-pdp-call-review-20261009\\AuxeroVehicleMobilePdp.svelte.before-call" "b/src\\lib\\components\\detail\\AuxeroVehicleMobilePdp.svelte"
+index 69c8455..51c0a94 100644
+--- "a/L:\\CODEX\\cars\\runtime\\import-mobile-pdp-call-review-20261009\\AuxeroVehicleMobilePdp.svelte.before-call"
++++ "b/src\\lib\\components\\detail\\AuxeroVehicleMobilePdp.svelte"
+@@ -1262,7 +1262,7 @@
+ 
+ 		.daynight-mobile-pdp__cta--call {
+ 			border: 1px solid var(--bc-border-strong);
+-			background: var(--bc-white);
++			background: var(--bc-surface);
+ 			color: var(--bc-ink);
+ 		}
+ 

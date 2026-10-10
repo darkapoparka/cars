@@ -1,0 +1,44 @@
+{
+  "qa": "C:/Users/radev/.codex/tmp/cars-import-inventory-search-2026-10-05-qa",
+  "baseline": "C:/Users/radev/.codex/tmp/cars-import-inventory-simplification-2026-10-05-qa",
+  "baselineCommit": "4a60675574ec1d312c82df8d6caed3cd954a12e8",
+  "node": "v24.21.0",
+  "dependencies": {
+    "svelte": "5.57.1",
+    "@sveltejs/kit": "2.70.3",
+    "vite": "8.3.0"
+  },
+  "lockfile": "aa596db7046c3f226ce50b488e283e30121eb49122d5006c60035ef57a952e1c",
+  "sourceInputDigest": "0686c015f48212eaba622fc7541457fbacffa7e101e64848bcc8d6313600a488",
+  "inputFileCount": 1769,
+  "compiledOutputDigest": "822665b7370124527ea5fe18b9c5735adcc2128ebf7aec113f56125574b9cce4",
+  "compiledFileCount": 1772,
+  "canonicalInputsMatchFrozenQa": true,
+  "taskSources": [
+    {
+      "path": "src/lib/components/common/DesktopSearchControl.svelte",
+      "sha256": "e4e8c46e6fcc4941309e44cc129d9b834562c267447048c8527e5b1fc224eb3d"
+    },
+    {
+      "path": "src/lib/components/inventory/InventoryPage.svelte",
+      "sha256": "c4acfdea38e00ce372b4e6bef11e41e18ddc304b6714c54f788083f5b3ac1832"
+    },
+    {
+      "path": "src/lib/components/inventory/InventorySearch.svelte",
+      "sha256": "54cf8a709280a1ff56414ade373050b53db3418f7180b8eba72dbb98d28034ec"
+    },
+    {
+      "path": "src/lib/components/inventory/InventoryTypeShortcuts.svelte",
+      "sha256": "375ae1af13b202e81837ef30c5930933eab919070d1c9ffc9ab1b2928e86e5a4"
+    },
+    {
+      "path": "src/lib/content/inventory-desktop-controls.ts",
+      "sha256": "4a20298f22dc2101dad720c10c6654829b6963e28f24bb2c54a936c062811562"
+    },
+    {
+      "path": "tests/desktop-search.e2e.ts",
+      "sha256": "6633b1e28d190fd249798d8321d8bae91bd8cdf42006d7d8449b8a0a733dd10c"
+    }
+  ],
+  "build": "Canonical and frozen QA production builds succeeded. Screenshots and the final 22 browser cases use the frozen QA rebuild through Vite preview at port 6790."
+}

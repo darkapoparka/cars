@@ -1,0 +1,794 @@
+{
+  "inventory.search.placeholder": {
+    "en": "Search makes, models or filters…",
+    "bg": "Търси марка, модел или филтър…"
+  },
+  "inventory.search.within": {
+    "en": "Search…",
+    "bg": "Търси…"
+  },
+  "inventory.search.context": {
+    "en": "Search {context}…",
+    "bg": "Търси {context}…"
+  },
+  "inventory.search.addFilter": {
+    "en": "Add filter",
+    "bg": "Добави филтър"
+  },
+  "inventory.search.clearQuery": {
+    "en": "Clear search",
+    "bg": "Изчисти търсенето"
+  },
+  "inventory.search.clearFilter": {
+    "en": "Clear filter",
+    "bg": "Изчисти филтъра"
+  },
+  "inventory.search.clearAll": {
+    "en": "Clear all",
+    "bg": "Изчисти всички"
+  },
+  "inventory.search.makeModel": {
+    "en": "Make and model",
+    "bg": "Марка и модел"
+  },
+  "inventory.filters.priceYearMileage": {
+    "en": "Price, year & mileage",
+    "bg": "Цена, година и пробег"
+  },
+  "inventory.filters.specifications": {
+    "en": "Specifications",
+    "bg": "Характеристики"
+  },
+  "inventory.filters.main": {
+    "en": "Main",
+    "bg": "Основни"
+  },
+  "inventory.filters.mileageLimit": {
+    "en": "Mileage up to",
+    "bg": "Пробег до"
+  },
+  "inventory.filters.more": {
+    "en": "More",
+    "bg": "Още"
+  },
+  "inventory.filters.details": {
+    "en": "Details",
+    "bg": "Данни"
+  },
+  "inventory.equipment.search": {
+    "en": "Search features…",
+    "bg": "Търсене на екстри…"
+  },
+  "inventory.equipment.comfort": {
+    "en": "Comfort",
+    "bg": "Комфорт"
+  },
+  "inventory.equipment.assistance": {
+    "en": "Driver assistance",
+    "bg": "Помощни системи"
+  },
+  "inventory.equipment.multimedia": {
+    "en": "Multimedia",
+    "bg": "Мултимедия"
+  },
+  "inventory.equipment.drivetrain": {
+    "en": "Drivetrain",
+    "bg": "Задвижване"
+  },
+  "inventory.equipment.other": {
+    "en": "Other features",
+    "bg": "Други екстри"
+  },
+  "inventory.search.clearMakeModel": {
+    "en": "Clear make and model",
+    "bg": "Изчисти марка и модел"
+  },
+  "inventory.search.allMakes": {
+    "en": "All makes",
+    "bg": "Всички марки"
+  },
+  "inventory.search.allModels": {
+    "en": "All models",
+    "bg": "Всички модели"
+  },
+  "inventory.search.empty": {
+    "en": "No matches found",
+    "bg": "Няма съвпадения"
+  },
+  "inventory.search.matches": {
+    "en": "Matches",
+    "bg": "Съвпадения"
+  },
+  "inventory.search.keyword": {
+    "en": "Search for “{query}”",
+    "bg": "Търси „{query}“"
+  },
+  "inventory.search.keywordLabel": {
+    "en": "Keyword",
+    "bg": "Ключова дума"
+  },
+  "inventory.search.navigate": {
+    "en": "Navigate",
+    "bg": "Навигация"
+  },
+  "inventory.search.select": {
+    "en": "Select",
+    "bg": "Избери"
+  },
+  "inventory.search.any": {
+    "en": "Any",
+    "bg": "Без ограничение"
+  },
+  "inventory.search.upTo": {
+    "en": "Up to {value} {currency}",
+    "bg": "До {value} {currency}"
+  },
+  "inventory.search.fromYear": {
+    "en": "From {year}",
+    "bg": "От {year}"
+  },
+  "inventory.search.kilometres": {
+    "en": "mi",
+    "bg": "мили"
+  },
+  "label.map": {
+    "en": "Map",
+    "bg": "Карта"
+  },
+  "action.openMap": {
+    "en": "Open map",
+    "bg": "Отвори картата"
+  },
+  "detail.viewMore": {
+    "en": "View more",
+    "bg": "Виж още"
+  },
+  "action.calculate": {
+    "en": "Calculate",
+    "bg": "Изчисли"
+  },
+  "action.readArticle": {
+    "en": "Read more",
+    "bg": "Прочетете"
+  },
+  "home.editorial.read": {
+    "en": "Read",
+    "bg": "Прочети"
+  },
+  "vehicle.photo.open": {
+    "en": "View photo",
+    "bg": "Вижте снимката"
+  },
+  "vehicle.photo.close": {
+    "en": "Close photo",
+    "bg": "Затворете снимката"
+  },
+  "home.viewAllCount": {
+    "en": "View all ({count})",
+    "bg": "Виж всички ({count})"
+  },
+  "service.purpose": {
+    "en": "What would you like to do?",
+    "bg": "Какво предпочиташ?"
+  },
+  "service.entry.vehicle": {
+    "en": "Add your car",
+    "bg": "Добави автомобил"
+  },
+  "service.entry.criteria": {
+    "en": "Make, model…",
+    "bg": "Марка, модел…"
+  },
+  "service.entry.vehicleTitle": {
+    "en": "Your car",
+    "bg": "Твоят автомобил"
+  },
+  "service.entry.criteriaTitle": {
+    "en": "Find a car",
+    "bg": "Каква кола търсиш?"
+  },
+  "service.entry.preferences": {
+    "en": "Other preferences (optional)",
+    "bg": "Други предпочитания (по желание)"
+  },
+  "service.sell.heading": {
+    "en": "Sell or trade in",
+    "bg": "Продажба и бартер"
+  },
+  "service.sell.processPreview": {
+    "en": "Viewing, valuation and terms",
+    "bg": "Оглед, оценка и условия"
+  },
+  "service.import.processPreview": {
+    "en": "Checks, transport and budget",
+    "bg": "Проверки, транспорт и бюджет"
+  },
+  "service.method": {
+    "en": "How would you like to start?",
+    "bg": "Как искаш да започнеш?"
+  },
+  "service.listing": {
+    "en": "Listing link",
+    "bg": "Обява"
+  },
+  "service.manual": {
+    "en": "Enter details",
+    "bg": "Въведи данни"
+  },
+  "service.search": {
+    "en": "Find a car",
+    "bg": "Търся кола"
+  },
+  "service.brief.error": {
+    "en": "Describe the car you are looking for.",
+    "bg": "Опиши автомобила, който търсиш."
+  },
+  "service.reference": {
+    "en": "Listing link or VIN",
+    "bg": "Линк към обява или VIN"
+  },
+  "service.url": {
+    "en": "Listing link",
+    "bg": "Линк към обявата"
+  },
+  "service.url.placeholder": {
+    "en": "https://…",
+    "bg": "https://…"
+  },
+  "service.reference.hint": {
+    "en": "Paste a listing link or the 17-character VIN.",
+    "bg": "Постави линк към обява или 17-символния VIN."
+  },
+  "service.useListing": {
+    "en": "Use a listing or VIN instead",
+    "bg": "Използвай обява или VIN"
+  },
+  "service.useDetails": {
+    "en": "Enter the car details instead",
+    "bg": "Въведи данните ръчно"
+  },
+  "service.url.error": {
+    "en": "Enter a valid car listing link, starting with https://.",
+    "bg": "Въведи валиден линк към обява, започващ с https://."
+  },
+  "service.brief": {
+    "en": "What car are you looking for?",
+    "bg": "Каква кола търсиш?"
+  },
+  "service.brief.placeholder": {
+    "en": "E.g. a family SUV, automatic, petrol. Tell us your preferred models and must-haves.",
+    "bg": "Напр. семеен SUV, автоматик, бензин. Опиши предпочитани модели и важното за теб."
+  },
+  "service.budget": {
+    "en": "Budget (€)",
+    "bg": "Бюджет (€)"
+  },
+  "service.make.placeholder": {
+    "en": "BMW",
+    "bg": "BMW"
+  },
+  "service.model.placeholder": {
+    "en": "530d",
+    "bg": "530d"
+  },
+  "service.yearFrom": {
+    "en": "Year from",
+    "bg": "Година от"
+  },
+  "service.demo": {
+    "en": "Demo enquiry · Review and copy or share. Nothing is sent automatically.",
+    "bg": "Демо запитване · Прегледай и копирай или сподели. Не се изпраща автоматично."
+  },
+  "service.process": {
+    "en": "How it works",
+    "bg": "Как се случва"
+  },
+  "service.sell.banner.title": {
+    "en": "Time for a change?",
+    "bg": "Време за промяна?"
+  },
+  "service.sell.banner.copy": {
+    "en": "Sell or trade in.",
+    "bg": "Продажба или бартер."
+  },
+  "service.import.banner.title": {
+    "en": "Your next car",
+    "bg": "Твоята следваща кола"
+  },
+  "service.import.banner.copy": {
+    "en": "Sourced for you.",
+    "bg": "Внос по заявка."
+  },
+  "inventory.spec.automaticCompact": {
+    "en": "Auto",
+    "bg": "Автомат"
+  },
+  "inventory.spec.electricCompact": {
+    "en": "Electric",
+    "bg": "Електр."
+  },
+  "inventory.spec.petrolLpg": {
+    "en": "Petrol/LPG",
+    "bg": "Бензин/ЛПГ"
+  },
+  "inventory.spec.petrolLpgCompact": {
+    "en": "P/LPG",
+    "bg": "Б/ЛПГ"
+  },
+  "service.sell.step1.copy": {
+    "en": "Add your car details and photos.",
+    "bg": "Добави данни и снимки на автомобила."
+  },
+  "service.sell.step2.copy": {
+    "en": "Arrange a viewing and valuation.",
+    "bg": "Уговаряме оглед и оценка."
+  },
+  "service.sell.step3.copy": {
+    "en": "Discuss the sale or trade-in terms.",
+    "bg": "Обсъждаме условията за продажба или бартер."
+  },
+  "service.import.step1.copy": {
+    "en": "Share a listing or describe the car you want.",
+    "bg": "Добави обява или опиши каква кола търсиш."
+  },
+  "service.import.step2.copy": {
+    "en": "Discuss the checks, transport and total budget.",
+    "bg": "Уточняваме проверките, транспорта и общия бюджет."
+  },
+  "service.import.step3.copy": {
+    "en": "Review the terms before deciding to buy.",
+    "bg": "Преглеждаш условията, преди да решиш за покупката."
+  },
+  "footer.inventory.all": {
+    "en": "All cars",
+    "bg": "Всички коли"
+  },
+  "footer.inventory.used": {
+    "en": "Used cars",
+    "bg": "Употребявани"
+  },
+  "footer.inventory.latest": {
+    "en": "Latest arrivals",
+    "bg": "Нови обяви"
+  },
+  "home.action.cars.title": {
+    "en": "Cars",
+    "bg": "Коли"
+  },
+  "home.action.cars.detail": {
+    "en": "Find your car",
+    "bg": "Избери своята"
+  },
+  "home.action.cars.availableCount": {
+    "en": "{count} available",
+    "bg": "{count} налични"
+  },
+  "home.action.cars.previewCount": {
+    "en": "{count} sample cars",
+    "bg": "{count} примерни"
+  },
+  "home.action.sell.title": {
+    "en": "Sell",
+    "bg": "Продай"
+  },
+  "home.action.sell.detail": {
+    "en": "Quick valuation",
+    "bg": "Бърза оценка"
+  },
+  "home.action.import.title": {
+    "en": "Import",
+    "bg": "Внос"
+  },
+  "home.action.import.detail": {
+    "en": "On request",
+    "bg": "По заявка"
+  },
+  "home.action.finance.title": {
+    "en": "Finance",
+    "bg": "Лизинг"
+  },
+  "home.action.finance.detail": {
+    "en": "Flexible plans",
+    "bg": "Гъвкав план"
+  },
+  "home.services.title": {
+    "en": "All services",
+    "bg": "Всички услуги"
+  },
+  "home.services.detail": {
+    "en": "For your car",
+    "bg": "За вашата кола"
+  },
+  "home.services.action": {
+    "en": "See services",
+    "bg": "Виж услугите"
+  },
+  "home.services.actionShort": {
+    "en": "View",
+    "bg": "Виж"
+  },
+  "locale.title": {
+    "en": "Country and language",
+    "bg": "Държава и език"
+  },
+  "locale.welcome": {
+    "en": "Welcome to {dealerName}",
+    "bg": "Добре дошли в {dealerName}"
+  },
+  "locale.description": {
+    "en": "Choose your browsing preferences. You can change them at any time.",
+    "bg": "Изберете предпочитанията си за разглеждане. Можете да ги промените по всяко време."
+  },
+  "locale.country": {
+    "en": "Your country or region",
+    "bg": "Вашата държава или регион"
+  },
+  "locale.language": {
+    "en": "Website language",
+    "bg": "Език на сайта"
+  },
+  "locale.suggested": {
+    "en": "Suggested",
+    "bg": "Предложение"
+  },
+  "locale.suggestion": {
+    "en": "Suggested region: {country}",
+    "bg": "Предложен регион: {country}"
+  },
+  "locale.save": {
+    "en": "Save preferences",
+    "bg": "Запази избора"
+  },
+  "locale.dismiss": {
+    "en": "Not now",
+    "bg": "Не сега"
+  },
+  "locale.close": {
+    "en": "Close country and language preferences",
+    "bg": "Затвори предпочитанията за държава и език"
+  },
+  "locale.saving": {
+    "en": "Saving…",
+    "bg": "Запазване…"
+  },
+  "locale.error": {
+    "en": "Your preferences could not be saved. Please try again.",
+    "bg": "Предпочитанията не бяха запазени. Опитайте отново."
+  },
+  "locale.facts": {
+    "en": "Your preferences do not change the dealer’s location or the currency shown for each vehicle.",
+    "bg": "Предпочитанията ви не променят местоположението на дилъра или валутата, посочена за всеки автомобил."
+  },
+  "locale.arabic": {
+    "en": "More languages will be available after translation and layout review.",
+    "bg": "Още езици ще бъдат достъпни след проверка на преводите и оформлението."
+  },
+  "locale.trigger": {
+    "en": "Change country and language",
+    "bg": "Промени държавата и езика"
+  },
+  "locale.back": {
+    "en": "Back to the website",
+    "bg": "Назад към сайта"
+  },
+  "locale.unsupported": {
+    "en": "This language is not available",
+    "bg": "Този език не е наличен"
+  },
+  "demo.notice": {
+    "en": "Website demonstration. Confirm vehicle availability and details with the dealer. Forms and Admin do not send enquiries or update a live business.",
+    "bg": "Демонстрационен уебсайт. Потвърдете наличността и данните за автомобилите с дилъра. Формулярите и административният панел не изпращат запитвания и не променят данни на реален бизнес."
+  },
+  "demo.readOnly": {
+    "en": "Demonstration only. No enquiry or data was sent.",
+    "bg": "Само демонстрация. Не е изпратено запитване или данни."
+  },
+  "design.label": {
+    "en": "Design",
+    "bg": "Дизайн"
+  },
+  "design.choose": {
+    "en": "Choose a design",
+    "bg": "Избери дизайн"
+  },
+  "design.title": {
+    "en": "Choose a design for the site",
+    "bg": "Избери дизайн за сайта"
+  },
+  "admin.label": {
+    "en": "Admin dashboard (English)",
+    "bg": "Админ панел (английски)"
+  },
+  "admin.open": {
+    "en": "Admin dashboard — English-only separate demo, opens in a new tab",
+    "bg": "Административен панел — отделна демонстрация само на английски, отваря се в нов раздел"
+  },
+  "form.required": {
+    "en": "Please complete this field.",
+    "bg": "Моля, попълнете това поле."
+  },
+  "form.email": {
+    "en": "Enter a valid email address.",
+    "bg": "Въведете валиден имейл адрес."
+  },
+  "form.invalid": {
+    "en": "Please check this value.",
+    "bg": "Моля, проверете въведената стойност."
+  },
+  "form.minimum": {
+    "en": "Enter a value of at least {min}.",
+    "bg": "Въведете стойност поне {min}."
+  },
+  "form.maximum": {
+    "en": "Enter a value no greater than {max}.",
+    "bg": "Въведете стойност не по-голяма от {max}."
+  },
+  "form.tooShort": {
+    "en": "Enter at least {min} characters.",
+    "bg": "Въведете поне {min} знака."
+  },
+  "form.tooLong": {
+    "en": "Use no more than {max} characters.",
+    "bg": "Използвайте най-много {max} знака."
+  },
+  "nav.carsCompact": {
+    "en": "Cars",
+    "bg": "Коли"
+  },
+  "nav.sellCompact": {
+    "en": "Sell",
+    "bg": "Продай"
+  },
+  "a11y.skipToContent": {
+    "en": "Skip to content",
+    "bg": "Към основното съдържание"
+  },
+  "media.illustrativeVehicle": {
+    "en": "Illustrative {vehicle}",
+    "bg": "Примерен {vehicle}"
+  },
+  "inventory.count.one": {
+    "en": "{count} car",
+    "bg": "{count} автомобил"
+  },
+  "inventory.count.other": {
+    "en": "{count} cars",
+    "bg": "{count} автомобила"
+  },
+  "action.callShort": {
+    "en": "Call",
+    "bg": "Обади се"
+  },
+  "action.locationShort": {
+    "en": "Location",
+    "bg": "Адрес"
+  },
+  "action.viewingShort": {
+    "en": "Viewing info",
+    "bg": "За оглед"
+  },
+  "action.importDemo": {
+    "en": "Import demo",
+    "bg": "Внос (демо)"
+  },
+  "action.valuationDemo": {
+    "en": "Valuation demo",
+    "bg": "Демо оценка"
+  },
+  "action.showCount": {
+    "en": "Show ({count})",
+    "bg": "Покажи ({count})"
+  },
+  "action.clearShort": {
+    "en": "Clear",
+    "bg": "Изчисти"
+  },
+  "action.applyShort": {
+    "en": "Apply",
+    "bg": "Приложи"
+  },
+  "enquiry.purpose.sell": {
+    "en": "Sell",
+    "bg": "Продажба"
+  },
+  "enquiry.purpose.tradeIn": {
+    "en": "Trade-in",
+    "bg": "Бартер"
+  },
+  "inventory.condition.used": {
+    "en": "Used",
+    "bg": "Употребявани"
+  },
+  "inventory.condition.new": {
+    "en": "New",
+    "bg": "Нови"
+  },
+  "inventory.range.unlimited": {
+    "en": "No limit",
+    "bg": "Без ограничение"
+  },
+  "inventory.year.from": {
+    "en": "From {p0}",
+    "bg": "От {p0} г."
+  },
+  "inventory.year.to": {
+    "en": "To {p0}",
+    "bg": "До {p0} г."
+  },
+  "inventory.spec.transmission": {
+    "en": "Transmission",
+    "bg": "Скоростна кутия"
+  },
+  "inventory.spec.automatic": {
+    "en": "Automatic",
+    "bg": "Автоматик"
+  },
+  "inventory.spec.sportback": {
+    "en": "Sportback",
+    "bg": "Спортбек"
+  },
+  "inventory.spec.pickup": {
+    "en": "Pickup",
+    "bg": "Пикап"
+  },
+  "inventory.facet.make": {
+    "en": "Make",
+    "bg": "Марка"
+  },
+  "inventory.facet.model": {
+    "en": "Model",
+    "bg": "Модел"
+  },
+  "inventory.facet.body": {
+    "en": "Body style",
+    "bg": "Купе"
+  },
+  "inventory.facet.bodyShort": {
+    "en": "Body",
+    "bg": "Купе"
+  },
+  "inventory.facet.price": {
+    "en": "Budget",
+    "bg": "Бюджет"
+  },
+  "inventory.facet.year": {
+    "en": "Year",
+    "bg": "Година"
+  },
+  "inventory.facet.fuel": {
+    "en": "Fuel",
+    "bg": "Гориво"
+  },
+  "inventory.facet.mileage_max": {
+    "en": "Mileage",
+    "bg": "Пробег"
+  },
+  "inventory.facet.transmission": {
+    "en": "Transmission",
+    "bg": "Скорости"
+  },
+  "inventory.facet.version": {
+    "en": "Variant",
+    "bg": "Версия"
+  },
+  "inventory.facet.condition": {
+    "en": "Condition",
+    "bg": "Състояние"
+  },
+  "inventory.facet.equipment": {
+    "en": "Features",
+    "bg": "Екстри"
+  },
+  "inventory.facet.sort": {
+    "en": "Sort",
+    "bg": "Сортиране"
+  },
+  "action.importShort": {
+    "en": "Import",
+    "bg": "Внос"
+  },
+  "action.requestImport": {
+    "en": "Request import",
+    "bg": "Заяви внос"
+  },
+  "action.requestValuation": {
+    "en": "Request valuation",
+    "bg": "Заяви оценка"
+  },
+  "inventory.facet.type": {
+    "en": "Type",
+    "bg": "Тип"
+  },
+  "inventory.type.all": {
+    "en": "All vehicles",
+    "bg": "Всички"
+  },
+  "inventory.type.car": {
+    "en": "Cars",
+    "bg": "Коли"
+  },
+  "inventory.type.motorbike": {
+    "en": "Motorbikes",
+    "bg": "Мотори"
+  },
+  "inventory.type.van": {
+    "en": "Vans",
+    "bg": "Бусове"
+  },
+  "inventory.type.truck": {
+    "en": "Trucks",
+    "bg": "Камиони"
+  },
+  "inventory.budget.short": {
+    "en": "≤ {currency}{amount}k",
+    "bg": "≤ {amount}k {currency}"
+  },
+  "inventory.budget.accessible": {
+    "en": "Vehicles up to {amount}",
+    "bg": "Автомобили до {amount}"
+  },
+  "contact.social.title": {
+    "en": "Social media",
+    "bg": "Социални мрежи"
+  },
+  "contact.social.placeholder": {
+    "en": "Sample profile",
+    "bg": "Примерен профил"
+  },
+  "company.team.title": {
+    "en": "Our team",
+    "bg": "Нашият екип"
+  },
+  "company.team.demo": {
+    "en": "Demo profiles",
+    "bg": "Демонстрационни профили"
+  },
+  "company.team.contact": {
+    "en": "Contact",
+    "bg": "Контакт"
+  },
+  "company.team.contactUs": {
+    "en": "Contact us",
+    "bg": "Свържете се"
+  },
+  "company.team.sales": {
+    "en": "Sales",
+    "bg": "Продажби"
+  },
+  "company.team.import": {
+    "en": "Vehicle imports",
+    "bg": "Внос на автомобили"
+  },
+  "company.team.finance": {
+    "en": "Financing",
+    "bg": "Финансиране"
+  },
+  "company.team.support": {
+    "en": "Customer support",
+    "bg": "Обслужване на клиенти"
+  },
+  "home.bannerPreview.title": {
+    "en": "Banner preview",
+    "bg": "Банери"
+  },
+  "home.bannerPreview.stripes": {
+    "en": "Stripes",
+    "bg": "Ивици"
+  },
+  "home.bannerPreview.kerb": {
+    "en": "Kerbs",
+    "bg": "Бордюри"
+  },
+  "home.bannerPreview.circuit": {
+    "en": "Nordschleife",
+    "bg": "Нюрбургринг"
+  },
+  "home.bannerPreview.headlights": {
+    "en": "Headlights",
+    "bg": "Фарове"
+  },
+  "home.bannerPreview.taillights": {
+    "en": "Taillights",
+    "bg": "Стопове"
+  }
+}

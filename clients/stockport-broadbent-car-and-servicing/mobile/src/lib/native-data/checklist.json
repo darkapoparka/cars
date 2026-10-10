@@ -1,0 +1,161 @@
+{
+  "sections": [
+    {
+      "id": 1,
+      "title": "Documents",
+      "items": [
+        {
+          "id": 1,
+          "title": "Certificate and letter ok?",
+          "text": "Are certificate and letter present (and vehicle registration certificates I and II)?"
+        },
+        {
+          "id": 2,
+          "title": "All documents present?",
+          "text": "Are TUV protocols, maintenance documents (full service history) and (repair) receipts present? Has the service schedule been adhered to?"
+        },
+        {
+          "id": 3,
+          "title": "Chassis number correct?",
+          "text": "Do the chassis no. (or Vehicle Identification No., VIN) on the certificate and on the vehicle (windscreen or engine compartment) match?"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Damage, accidents",
+      "items": [
+        {
+          "id": 1,
+          "title": "Bodywork ok?",
+          "text": "Check the bodywork for rust and dents and look out for uneven clearances. For damage: What are the repair costs?"
+        },
+        {
+          "id": 2,
+          "title": "Paintwork ok?",
+          "text": "Check the paintwork for scratches, blank spots or other damage."
+        },
+        {
+          "id": 3,
+          "title": "Windscreen ok?",
+          "text": "Are all windows ok? Look out for scratches and cracks."
+        },
+        {
+          "id": 4,
+          "title": "Vehicle accident-free?",
+          "text": "Can the seller guarantee it hasn't been involved in an accident? For a first owner you should insist on this. Look out for changes in colour, uneven clearances and stiff doors (signs of an accident)."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Around the car",
+      "items": [
+        {
+          "id": 1,
+          "title": "Are wheels and tyres ok?",
+          "text": "Are tyres and tread depth ok (at least 1.6mm)? Check that the tread is evenly worn."
+        },
+        {
+          "id": 2,
+          "title": "Locks ok?",
+          "text": "Do all the locks work? Are all keys present?"
+        },
+        {
+          "id": 3,
+          "title": "Equipment complete?",
+          "text": "Are the spare wheel, first-aid kit and vehicle tool kit present and complete, and in good/up-to-date condition?"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Engine compartment",
+      "items": [
+        {
+          "id": 1,
+          "title": "Engine ok?",
+          "text": "Does the engine appear ok from the outside? Ask whether the engine has been cleaned recently. Check whether any oil spills are visible."
+        },
+        {
+          "id": 2,
+          "title": "Battery ok?",
+          "text": "Is the battery ok? Pay attention to charging levels and correctly secured contacts."
+        },
+        {
+          "id": 3,
+          "title": "Tubes and cables ok?",
+          "text": "Check that the tubes and cables are ok and not spongy. The toothed belt and fan belt should not have any rips or slack."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Interior",
+      "items": [
+        {
+          "id": 1,
+          "title": "Seats and padding ok?",
+          "text": "Can the seats be adjusted easily? Does the padding have holes, rips or bare patches?"
+        },
+        {
+          "id": 2,
+          "title": "No dampness?",
+          "text": "Check for dampness under the foot mats. Steamed up windows can indicate defective seals.  Are all seals on windows and doors ok?"
+        },
+        {
+          "id": 3,
+          "title": "Seatbelts in perfect condition?",
+          "text": "Do the seatbelts slide smoothly out and back again? Do the seatbelt clips fasten correctly? Are the seatbelts free from rips?"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Electrics/electronics",
+      "items": [
+        {
+          "id": 1,
+          "title": "Are the warning lights ok?",
+          "text": "Do all the warning lights go out after the engine has been started? Look out for flickering lights."
+        },
+        {
+          "id": 2,
+          "title": "Lights and electrics ok?",
+          "text": "Check the lights and vehicle electrics: wipers, electric windows, rear windscreen heater, electric mirrors. Is the interior lighting ok? Lights should not be steamed up on the inside."
+        },
+        {
+          "id": 3,
+          "title": "Dashboard electrics ok?",
+          "text": "Do the satnav, radio, cd player, etc. work perfectly?"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Test-drive",
+      "items": [
+        {
+          "id": 1,
+          "title": "Cold start without problems?",
+          "text": "Does the vehicle start smoothly, even with a cold engine? This can't be checked with an engine that is already warmed up."
+        },
+        {
+          "id": 2,
+          "title": "Steering ok?",
+          "text": "The steering must not have any slack and the steering wheel must not vibrate whilst driving. The vehicle shouldn't pull in one direction."
+        },
+        {
+          "id": 3,
+          "title": "Brakes ok?",
+          "text": "Is the brake efficiency good? The brakes must respond smoothly, the car must hold course whilst braking."
+        },
+        {
+          "id": 4,
+          "title": "Gears ok?",
+          "text": "The gears should switch noiselessly, the clutch should not slip."
+        }
+      ]
+    }
+  ]
+}

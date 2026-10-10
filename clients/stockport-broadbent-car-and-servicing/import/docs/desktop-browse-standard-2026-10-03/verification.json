@@ -1,0 +1,624 @@
+{
+	"sourceDigest": "c81ba78f3603c4d20445e28b468b1041654bbb995a935d25c0ca632172e5bc6a",
+	"paths": 1678,
+	"baselineHead": "598b46c34e010d2ce185c33b167fb4314460454d",
+	"changedSource": [
+		"src/lib/auxero/home-five.ts",
+		"src/lib/components/home/HomePage.svelte",
+		"tests/storefront-controls.e2e.ts",
+		"tests/visual-hierarchy.e2e.ts"
+	],
+	"widths": [320, 390, 768, 1024, 1440, 1920],
+	"locales": ["bg", "en"],
+	"beforeStates": 16,
+	"afterStates": 16,
+	"productionStates": 2,
+	"mobile": [
+		{
+			"id": "home-bg-320",
+			"pixels": true,
+			"presentation": true
+		},
+		{
+			"id": "about-bg-320",
+			"pixels": true,
+			"presentation": true
+		},
+		{
+			"id": "home-bg-390",
+			"pixels": true,
+			"presentation": true
+		},
+		{
+			"id": "about-bg-390",
+			"pixels": true,
+			"presentation": true
+		},
+		{
+			"id": "home-en-320",
+			"pixels": true,
+			"presentation": true
+		},
+		{
+			"id": "about-en-320",
+			"pixels": true,
+			"presentation": true
+		},
+		{
+			"id": "home-en-390",
+			"pixels": true,
+			"presentation": true
+		},
+		{
+			"id": "about-en-390",
+			"pixels": true,
+			"presentation": true
+		}
+	],
+	"gates": [
+		{
+			"name": "verify",
+			"args": ["L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js", "run", "verify"],
+			"started": "2026-10-03T19:51:35.874Z",
+			"completed": "2026-10-03T19:52:40.651Z",
+			"exitCode": 1,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-browse-standard-2026-10-03\\qa/runtime/verify.log",
+			"logSha256": "7f0170c7fdf7036fca121f9257cada3fa322b50aadd274aca69bf2f937ab4192"
+		},
+		{
+			"name": "scoped-format",
+			"args": [
+				"node_modules/prettier/bin/prettier.cjs",
+				"--check",
+				"src/lib/auxero/home-five.ts",
+				"src/lib/components/home/HomePage.svelte",
+				"tests/storefront-controls.e2e.ts",
+				"tests/visual-hierarchy.e2e.ts"
+			],
+			"started": "2026-10-03T19:52:40.652Z",
+			"completed": "2026-10-03T19:52:41.537Z",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-browse-standard-2026-10-03\\qa/runtime/scoped-format.log",
+			"logSha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+		},
+		{
+			"name": "scoped-lint",
+			"args": [
+				"node_modules/eslint/bin/eslint.js",
+				"src/lib/auxero/home-five.ts",
+				"src/lib/components/home/HomePage.svelte",
+				"tests/storefront-controls.e2e.ts",
+				"tests/visual-hierarchy.e2e.ts"
+			],
+			"started": "2026-10-03T19:52:41.537Z",
+			"completed": "2026-10-03T19:52:51.296Z",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-browse-standard-2026-10-03\\qa/runtime/scoped-lint.log",
+			"logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+		},
+		{
+			"name": "architecture",
+			"args": [
+				"L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js",
+				"run",
+				"check:architecture"
+			],
+			"started": "2026-10-03T19:52:51.297Z",
+			"completed": "2026-10-03T19:52:52.275Z",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-browse-standard-2026-10-03\\qa/runtime/architecture.log",
+			"logSha256": "a13fae8e803a81d5f3a47374f6da51533f382d894ac89843c389f71eafd8dab7"
+		},
+		{
+			"name": "assets",
+			"args": ["L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js", "run", "check:assets"],
+			"started": "2026-10-03T19:52:52.276Z",
+			"completed": "2026-10-03T19:52:52.572Z",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-browse-standard-2026-10-03\\qa/runtime/assets.log",
+			"logSha256": "b98cbb4d013072e79e1bd8765db3905ed8c6f5fae74e56356eca4fd5a28ef995"
+		},
+		{
+			"name": "unit",
+			"args": [
+				"L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js",
+				"run",
+				"test:unit",
+				"--",
+				"--run"
+			],
+			"started": "2026-10-03T19:52:52.572Z",
+			"completed": "2026-10-03T19:53:04.335Z",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-browse-standard-2026-10-03\\qa/runtime/unit.log",
+			"logSha256": "bb35ff868644f271d239f9b00b3cde5e62e5bc0bad462b7823d2cfde8705339a"
+		},
+		{
+			"name": "build",
+			"args": ["L:/Toolchains/Node/24.21.0/node_modules/npm/bin/npm-cli.js", "run", "build"],
+			"started": "2026-10-03T19:53:04.336Z",
+			"completed": "2026-10-03T19:54:34.781Z",
+			"exitCode": 0,
+			"log": "C:\\Users\\radev\\.codex\\tmp\\cars-import-browse-standard-2026-10-03\\qa/runtime/build.log",
+			"logSha256": "90b47e70564f2614cde91594edee00515f95067117eef0421171d1c1f8a2cf63"
+		}
+	],
+	"fullLint": {
+		"exitCode": 0,
+		"log": "C:/Users/radev/.codex/tmp/cars-import-browse-standard-2026-10-03/qa/runtime/full-lint.log",
+		"sha256": "464b95a7ca6fad4fe437a0615cd7c28475e1770222814d0300bfce4ba7d6e8c4"
+	},
+	"browser": {
+		"startTime": "2026-10-03T19:56:55.048Z",
+		"duration": 52126.608,
+		"expected": 26,
+		"skipped": 10,
+		"unexpected": 0,
+		"flaky": 0
+	},
+	"browse": {
+		"startTime": "2026-10-03T19:56:55.174Z",
+		"duration": 37961.899,
+		"expected": 3,
+		"skipped": 3,
+		"unexpected": 0,
+		"flaky": 0
+	},
+	"interactions": [
+		{
+			"locale": "bg",
+			"width": 768,
+			"cards": 5,
+			"normal": {
+				"background": "rgb(255, 255, 255)",
+				"border": "rgb(229, 229, 231)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"hover": {
+				"background": "rgb(238, 238, 240)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"focus": {
+				"visible": true,
+				"outline": "rgb(185, 22, 28)",
+				"width": "3px"
+			},
+			"pageErrors": []
+		},
+		{
+			"locale": "bg",
+			"width": 1024,
+			"cards": 5,
+			"normal": {
+				"background": "rgb(255, 255, 255)",
+				"border": "rgb(229, 229, 231)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"hover": {
+				"background": "rgb(238, 238, 240)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"focus": {
+				"visible": true,
+				"outline": "rgb(185, 22, 28)",
+				"width": "3px"
+			},
+			"pageErrors": []
+		},
+		{
+			"locale": "bg",
+			"width": 1440,
+			"cards": 5,
+			"normal": {
+				"background": "rgb(255, 255, 255)",
+				"border": "rgb(229, 229, 231)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"hover": {
+				"background": "rgb(238, 238, 240)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"focus": {
+				"visible": true,
+				"outline": "rgb(185, 22, 28)",
+				"width": "3px"
+			},
+			"pageErrors": []
+		},
+		{
+			"locale": "bg",
+			"width": 1920,
+			"cards": 5,
+			"normal": {
+				"background": "rgb(255, 255, 255)",
+				"border": "rgb(229, 229, 231)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"hover": {
+				"background": "rgb(238, 238, 240)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"focus": {
+				"visible": true,
+				"outline": "rgb(185, 22, 28)",
+				"width": "3px"
+			},
+			"pageErrors": []
+		},
+		{
+			"locale": "en",
+			"width": 768,
+			"cards": 5,
+			"normal": {
+				"background": "rgb(255, 255, 255)",
+				"border": "rgb(229, 229, 231)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"hover": {
+				"background": "rgb(238, 238, 240)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"focus": {
+				"visible": true,
+				"outline": "rgb(185, 22, 28)",
+				"width": "3px"
+			},
+			"pageErrors": []
+		},
+		{
+			"locale": "en",
+			"width": 1024,
+			"cards": 5,
+			"normal": {
+				"background": "rgb(255, 255, 255)",
+				"border": "rgb(229, 229, 231)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"hover": {
+				"background": "rgb(238, 238, 240)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"focus": {
+				"visible": true,
+				"outline": "rgb(185, 22, 28)",
+				"width": "3px"
+			},
+			"pageErrors": []
+		},
+		{
+			"locale": "en",
+			"width": 1440,
+			"cards": 5,
+			"normal": {
+				"background": "rgb(255, 255, 255)",
+				"border": "rgb(229, 229, 231)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"hover": {
+				"background": "rgb(238, 238, 240)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"focus": {
+				"visible": true,
+				"outline": "rgb(185, 22, 28)",
+				"width": "3px"
+			},
+			"pageErrors": []
+		},
+		{
+			"locale": "en",
+			"width": 1920,
+			"cards": 5,
+			"normal": {
+				"background": "rgb(255, 255, 255)",
+				"border": "rgb(229, 229, 231)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"hover": {
+				"background": "rgb(238, 238, 240)",
+				"border": "color(srgb 0.84902 0.84902 0.862745)",
+				"radius": "16px",
+				"shadow": "rgba(23, 25, 28, 0.04) 0px 1px 2px 0px, rgba(23, 25, 28, 0.024) 0px 8px 24px 0px",
+				"transform": "none",
+				"font": "20px",
+				"weight": "400",
+				"ink": "rgb(23, 25, 28)",
+				"arrow": "rgb(185, 22, 28)",
+				"arrowFill": "rgb(242, 244, 247)",
+				"arrowSize": [48, 48]
+			},
+			"focus": {
+				"visible": true,
+				"outline": "rgb(185, 22, 28)",
+				"width": "3px"
+			},
+			"pageErrors": []
+		}
+	],
+	"screenshots": [
+		{
+			"filename": "before-brands.png",
+			"sha256": "d900a5f0da2bf575bd4f943ec33836ccbb5d033f7b26bb47ea71f637c5303dc2"
+		},
+		{
+			"filename": "after-brands.png",
+			"sha256": "0253cf2e563a0cb8839491b948f3a9ae2ce38b3245b30a3e9c4fc0cb2432263c"
+		},
+		{
+			"filename": "before-types.png",
+			"sha256": "3bf7ec08dfe8d633e9ee861284b43ea94ccdb9b61090ce3d6ec7681d63f9e065"
+		},
+		{
+			"filename": "after-types.png",
+			"sha256": "030ac90fe8c864516dc34efa8715d7646793a04bfb9a3a7262125d445e42a0ba"
+		},
+		{
+			"filename": "before-home-full.png",
+			"sha256": "8a44e29525284beb4d830c47e9062a57d909e2961b2792ca44f8a271b256686b"
+		},
+		{
+			"filename": "after-home-full.png",
+			"sha256": "34f2d6875f0589f26baf0f5f37adc1d5e463c4d08c63786cd06f1941577a8563"
+		}
+	],
+	"screenshotOrigin": "Actual before source and frozen after production build; no injected styles",
+	"scope": "Standalone canonical master; no template promotion or dealer deployment",
+	"gallery": {
+		"records": [
+			{
+				"width": 390,
+				"route": "brands",
+				"mode": "compare",
+				"visible": 2,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "brands",
+				"mode": "before",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "brands",
+				"mode": "after",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "types",
+				"mode": "compare",
+				"visible": 2,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "types",
+				"mode": "before",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "types",
+				"mode": "after",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "home-full",
+				"mode": "compare",
+				"visible": 2,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "home-full",
+				"mode": "before",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 390,
+				"route": "home-full",
+				"mode": "after",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "brands",
+				"mode": "compare",
+				"visible": 2,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "brands",
+				"mode": "before",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "brands",
+				"mode": "after",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "types",
+				"mode": "compare",
+				"visible": 2,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "types",
+				"mode": "before",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "types",
+				"mode": "after",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "home-full",
+				"mode": "compare",
+				"visible": 2,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "home-full",
+				"mode": "before",
+				"visible": 1,
+				"overflow": 0
+			},
+			{
+				"width": 1440,
+				"route": "home-full",
+				"mode": "after",
+				"visible": 1,
+				"overflow": 0
+			}
+		],
+		"failures": 0
+	}
+}

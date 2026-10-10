@@ -1,0 +1,15 @@
+@reference '../../lib/styles/app.css';
+
+@layer base {
+	.admin-cms * {
+		@apply border-border outline-ring/50;
+	}
+
+	.admin-cms {
+		@apply bg-background font-sans text-foreground;
+	}
+
+	.admin-cms :is(h1, h2, h3, h4, h5, h6) {
+		font-family: var(--bc-font-dashboard) !important;
+	}
+}

@@ -1,0 +1,65 @@
+{
+	"tool": "built-in image_gen",
+	"modelVersionSelector": false,
+	"generatedOn": "2026-10-02",
+	"reference": "static/assets/daynight/banners/commerce-collection.webp",
+	"description": "Illustrative automotive scenes, not photographs of the dealer's premises or actual inventory. Existing mobile imagery remains unchanged. WebP encoding with Sharp at quality 85; width is reduced without cropping. Original PNGs are preserved in the Codex generated_images directory. The About process image is also used for the inspection service; the visit image is also used for the viewing service and vehicle seller banner.",
+	"assets": [
+		{
+			"key": "contact-call",
+			"prompt": "Use case: ads-marketing. Generate a polished automotive website card background in landscape 16:9. Input Image 1 is STYLE REFERENCE ONLY: match its charcoal black studio, silver car material, soft rim light, subtly reflective floor and subdued premium automotive campaign aesthetic. This is a new asset, not an edit. Composition must place the subject in the right 55%, leaving the left 45% dark and uncluttered for live HTML text. No words, numbers, lettering, readable signs, logos, watermarks, UI labels, people, faces, maps, map pins, oversize decorative icons or collages. A coherent single scene with physically believable proportions. Subject: a premium silver sports sedan in a dark studio, cropped three-quarter side view at the right. In the lower right foreground, a slim black smartphone lies naturally on a dark leather console with a small modern car key beside it. Phone screen unlit, subtle glossy highlights. Clear foreground phone and refined car silhouette. Dark negative space at left and along the lower left.",
+			"source": "C:\\Users\\radev\\.codex\\generated_images\\01a0f65e-8f57-7092-81bd-18f54b4a7634\\exec-3f55e8ac-109f-40b6-b06d-ea845921f671.png",
+			"destination": "static/assets/daynight/banners/contact-call-desktop-v3.webp",
+			"width": 960
+		},
+		{
+			"key": "contact-visit",
+			"prompt": "Use case: ads-marketing. Generate a polished automotive website card background in landscape 16:9. Input Image 1 is STYLE REFERENCE ONLY: match its charcoal black studio, silver car material, soft rim light, subtly reflective floor and subdued premium automotive campaign aesthetic. This is a new asset, not an edit. Composition must place the subject in the right 55%, leaving the left 45% dark and uncluttered for live HTML text. No words, numbers, lettering, readable signs, logos, watermarks, UI labels, people, faces, maps, map pins, oversize decorative icons or collages. A coherent single scene with physically believable proportions. Subject: a silver premium SUV arriving at a contemporary automotive showroom at night, three-quarter front view positioned on the right, restrained glass facade and a thin white roof-light line behind it. Dark clear forecourt on the left. This is illustrative campaign art, not a photo claiming to depict a real dealer location. No map pin or symbol. Keep vehicle body and wheels fully recognizable in a wide crop.",
+			"source": "C:\\Users\\radev\\.codex\\generated_images\\01a0f65e-8f57-7092-81bd-18f54b4a7634\\exec-02dbccf8-152e-4e8d-a9bd-39c46593d54a.png",
+			"destination": "static/assets/daynight/banners/contact-visit-desktop-v3.webp",
+			"width": 960
+		},
+		{
+			"key": "contact-message",
+			"prompt": "Use case: ads-marketing. Generate a polished automotive website card background in landscape 16:9. Input Image 1 is STYLE REFERENCE ONLY: match its charcoal black studio, silver car material, soft rim light, subtly reflective floor and subdued premium automotive campaign aesthetic. This is a new asset, not an edit. Composition must place the subject in the right 55%, leaving the left 45% dark and uncluttered for live HTML text. No words, numbers, lettering, readable signs, logos, watermarks, UI labels, people, faces, maps, map pins, oversize decorative icons or collages. A coherent single scene with physically believable proportions. Subject: a slim modern smartphone upright in the lower right on a dark automotive console, screen showing only a few soft neutral rounded conversation shapes with absolutely no letters or numbers. A silver premium sedan is softly out of focus behind it at the far right, restrained ambient lighting and brushed-metal car key nearby. The phone must feel like a photographic product in an automotive scene, not a huge floating app icon. Left half charcoal and clear.",
+			"source": "C:\\Users\\radev\\.codex\\generated_images\\01a0f65e-8f57-7092-81bd-18f54b4a7634\\exec-25bbe3d9-e986-488e-8713-bd7003ee97f6.png",
+			"destination": "static/assets/daynight/banners/contact-message-desktop-v3.webp",
+			"width": 960
+		},
+		{
+			"key": "about-process",
+			"prompt": "Use case: photorealistic-natural. Generate an editorial premium automotive website image, landscape 4:3, for a How we work section. Input Image 1 is STYLE REFERENCE ONLY for charcoal palette, silver vehicle materials and soft studio light. Scene: close three-quarter view of a refined silver performance estate car in a calm inspection studio. A diagnostic tablet and a single modern car key rest on a small black inspection stand in the right foreground; a second vehicle subtly visible in the deep background. Natural believable scale, purposeful inspection environment, clear silhouette and fine material detail, soft neutral lighting, no glossy science-fiction lighting. No people, fictional staff, words, numbers, legible screens, logos, watermarks, map pins or decorative giant icons. Illustrative automotive process imagery, not documentary evidence of a particular business.",
+			"source": "C:\\Users\\radev\\.codex\\generated_images\\01a0f65e-8f57-7092-81bd-18f54b4a7634\\exec-59980906-9f44-4672-8804-a637c76f1dc3.png",
+			"destination": "static/assets/daynight/banners/about-process-desktop-v3.webp",
+			"width": 1200
+		},
+		{
+			"key": "service-sourcing",
+			"prompt": "Use case: photorealistic-natural. Asset: premium automotive website SERVICE CARD IMAGE, landscape 16:9, a single coherent scene with the main subject large enough to read at 320px wide. Input Image 1 is STYLE REFERENCE ONLY for the charcoal studio palette, soft silver rim lighting and restrained reflective floor. Do not copy its vehicle shape. Realistic editorial automotive materials and plausible proportions. No text, numbers, logos, watermarks, map pins, giant check marks, arrows, magnifying-glass symbols, floating icons, people, staff portraits or collages. No empty left half required; use the full frame, because live text is below the image. Scene: a refined silver European executive sedan and a deep graphite performance estate car presented together in a dark automotive studio. Three-quarter front views, staggered depth, recognizable different body shapes, clean believable selection display, elegant and simple.",
+			"source": "C:\\Users\\radev\\.codex\\generated_images\\01a0f65e-8f57-7092-81bd-18f54b4a7634\\exec-c4845d29-a3d5-40d6-bcd5-171a975e1a37.png",
+			"destination": "static/assets/daynight/services/desktop/sourcing-v3.webp",
+			"width": 960
+		},
+		{
+			"key": "service-selling",
+			"prompt": "Use case: photorealistic-natural. Asset: premium automotive website SERVICE CARD IMAGE, landscape 16:9, a single coherent scene with the main subject large enough to read at 320px wide. Input Image 1 is STYLE REFERENCE ONLY for the charcoal studio palette, soft silver rim lighting and restrained reflective floor. Do not copy its vehicle shape. Realistic editorial automotive materials and plausible proportions. No text, numbers, logos, watermarks, map pins, giant check marks, arrows, magnifying-glass symbols, floating icons, people, staff portraits or collages. No empty left half required; use the full frame, because live text is below the image. Scene: a modern dark metallic performance coupe in a calm preparation studio, three-quarter side view. In the lower right foreground a single premium car key lies on a black leather inspection stand. Clean car ready for valuation and sale, realistic scale, no documents or phone.",
+			"source": "C:\\Users\\radev\\.codex\\generated_images\\01a0f65e-8f57-7092-81bd-18f54b4a7634\\exec-8d1c7de4-4a2e-466c-8989-83a142c44b52.png",
+			"destination": "static/assets/daynight/services/desktop/selling-v3.webp",
+			"width": 960
+		},
+		{
+			"key": "service-registration",
+			"prompt": "Use case: photorealistic-natural. Asset: premium automotive website SERVICE CARD IMAGE, landscape 16:9, a single coherent scene with the main subject large enough to read at 320px wide. Input Image 1 is STYLE REFERENCE ONLY for the charcoal studio palette, soft silver rim lighting and restrained reflective floor. Do not copy its vehicle shape. Realistic editorial automotive materials and plausible proportions. No text, numbers, logos, watermarks, map pins, giant check marks, arrows, magnifying-glass symbols, floating icons, people, staff portraits or collages. No empty left half required; use the full frame, because live text is below the image. Scene: an understated silver premium sedan in a refined dark studio. In the lower right foreground a closed plain vehicle-document folder and a modern car key lie on a small black desk. No readable paper or stamped markings. Suggest paperwork and vehicle handover without a giant symbolic graphic.",
+			"source": "C:\\Users\\radev\\.codex\\generated_images\\01a0f65e-8f57-7092-81bd-18f54b4a7634\\exec-d20732a7-694e-4e41-9d21-8766d27f90c9.png",
+			"destination": "static/assets/daynight/services/desktop/registration-v3.webp",
+			"width": 960
+		},
+		{
+			"key": "service-comparison",
+			"prompt": "Use case: photorealistic-natural. Asset: premium automotive website SERVICE CARD IMAGE, landscape 16:9, a single coherent scene with the main subject large enough to read at 320px wide. Input Image 1 is STYLE REFERENCE ONLY for the charcoal studio palette, soft silver rim lighting and restrained reflective floor. Do not copy its vehicle shape. Realistic editorial automotive materials and plausible proportions. No text, numbers, logos, watermarks, map pins, giant check marks, arrows, magnifying-glass symbols, floating icons, people, staff portraits or collages. No empty left half required; use the full frame, because live text is below the image. Scene: two distinct vehicles side by side in a charcoal automotive studio, a pearl silver sport sedan at the left and a dark premium SUV at the right. Both fully recognizable in three-quarter front views, similar scale, restrained lighting that clearly shows their different body proportions. No linking arrows or floating interface graphics.",
+			"source": "C:\\Users\\radev\\.codex\\generated_images\\01a0f65e-8f57-7092-81bd-18f54b4a7634\\exec-baa80513-c737-4659-8e8c-fd20d83b0e6b.png",
+			"destination": "static/assets/daynight/services/desktop/comparison-v3.webp",
+			"width": 960
+		}
+	]
+}

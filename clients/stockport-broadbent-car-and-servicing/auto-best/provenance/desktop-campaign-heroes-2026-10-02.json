@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-02",
+  "tool": "Built-in image_gen",
+  "purpose": "Decorative automotive campaign backgrounds inspired by the owner's App mobile banner reference. No new imagery claims to depict dealer premises or inventory.",
+  "reference": "http://127.0.0.1:6483/bg/",
+  "prompts": {
+    "home": "Use case: ads-marketing.\nAsset type: one finished ultrawide 3:1 raster background for an automotive website hero, approximately 2172x724.\nStyle: polished automotive campaign artwork, deep graphite black (#15181d) backdrop, delicate low-contrast silver halftone dots sweeping along the lower OUTER corners, one restrained thin red arc near an outer corner, realistic clean automotive product photography integrated into a designed graphic backdrop. Like premium car banner artwork on a black field. No invented dealership, buildings, rooms or scenic landscapes.\nLayout requirements: center 68% of the canvas is calm EMPTY charcoal negative space from top to bottom; no cars, props, light streaks or high-contrast dots in the center. Website title will sit at x=50%, y=42%, and a wide white search/control panel across the central 68% at y=64-96%, so keep all recognisable subjects confined to far-left 16% and far-right 16%, outside that panel. Objects sit on the same low baseline at 83% canvas height. Top 25% is quiet black behind a white navigation overlay. The background tone, low floor reflection, image framing and pattern density must be consistent across this asset family. Subjects can be partly cropped by the outer frame; do not make them tiny floating thumbnails. A little natural colour in cars/props is welcome, black remains dominant.\nConstraints: no people, no UI, no lettering, no readable manufacturer badges, no logos, no signage, no watermarks, no huge cartoon coins, no cartoon perspective, no architecture. This is decorative automotive campaign artwork and does not depict a real dealer's premises.\nPrimary request: a Home banner. Far left: cropped three-quarter nose and front wheel of a handsome pearl silver performance estate. Far right: cropped nose and front wheel of a graphite premium coupe. Beautiful studio lighting and accurate vehicle proportions, inward-facing composition. Very subtle red accent along an extreme edge.",
+    "inventory": "Use case: ads-marketing.\nAsset type: one finished ultrawide 3:1 raster background for an automotive website hero, approximately 2172x724.\nStyle: polished automotive campaign artwork, deep graphite black (#15181d) backdrop, delicate low-contrast silver halftone dots sweeping along the lower OUTER corners, one restrained thin red arc near an outer corner, realistic clean automotive product photography integrated into a designed graphic backdrop. Like premium car banner artwork on a black field. No invented dealership, buildings, rooms or scenic landscapes.\nLayout requirements: center 68% of the canvas is calm EMPTY charcoal negative space from top to bottom; no cars, props, light streaks or high-contrast dots in the center. Website title will sit at x=50%, y=42%, and a wide white search/control panel across the central 68% at y=64-96%, so keep all recognisable subjects confined to far-left 16% and far-right 16%, outside that panel. Objects sit on the same low baseline at 83% canvas height. Top 25% is quiet black behind a white navigation overlay. The background tone, low floor reflection, image framing and pattern density must be consistent across this asset family. Subjects can be partly cropped by the outer frame; do not make them tiny floating thumbnails. A little natural colour in cars/props is welcome, black remains dominant.\nConstraints: no people, no UI, no lettering, no readable manufacturer badges, no logos, no signage, no watermarks, no huge cartoon coins, no cartoon perspective, no architecture. This is decorative automotive campaign artwork and does not depict a real dealer's premises.\nPrimary request: an Inventory/catalogue banner. Far left: cropped three-quarter front of a deep metallic blue performance saloon, far right: cropped three-quarter front of a pearl white performance SUV. Beautiful studio lighting and accurate vehicle proportions. Visually distinct vehicles from the Home version, identical arrangement and scale.",
+    "blog": "Use case: ads-marketing.\nAsset type: one finished ultrawide 3:1 raster background for an automotive website hero, approximately 2172x724.\nStyle: polished automotive campaign artwork, deep graphite black (#15181d) backdrop, delicate low-contrast silver halftone dots sweeping along the lower OUTER corners, one restrained thin red arc near an outer corner, realistic clean automotive product photography integrated into a designed graphic backdrop. Like premium car banner artwork on a black field. No invented dealership, buildings, rooms or scenic landscapes.\nLayout requirements: center 68% of the canvas is calm EMPTY charcoal negative space from top to bottom; no cars, props, light streaks or high-contrast dots in the center. Website title will sit at x=50%, y=42%, and a wide white search/control panel across the central 68% at y=64-96%, so keep all recognisable subjects confined to far-left 16% and far-right 16%, outside that panel. Objects sit on the same low baseline at 83% canvas height. Top 25% is quiet black behind a white navigation overlay. The background tone, low floor reflection, image framing and pattern density must be consistent across this asset family. Subjects can be partly cropped by the outer frame; do not make them tiny floating thumbnails. A little natural colour in cars/props is welcome, black remains dominant.\nConstraints: no people, no UI, no lettering, no readable manufacturer badges, no logos, no signage, no watermarks, no huge cartoon coins, no cartoon perspective, no architecture. This is decorative automotive campaign artwork and does not depict a real dealer's premises.\nPrimary request: an automotive buying advice/editorial banner. Far left: cropped silver car front wing, wheel and opened bonnet edge, mechanically believable. Far right: a neat photographic inspection clipboard with blank paper and a small diagnostic handheld tablet beside it; restrained, real physical objects, no written characters. Keep props as secondary accents inside the extreme outer 16%; dominant impression is calm, expert automotive advice.",
+    "contact": "Use case: ads-marketing.\nAsset type: one finished ultrawide 3:1 raster background for an automotive website hero, approximately 2172x724.\nStyle: polished automotive campaign artwork, deep graphite black (#15181d) backdrop, delicate low-contrast silver halftone dots sweeping along the lower OUTER corners, one restrained thin red arc near an outer corner, realistic clean automotive product photography integrated into a designed graphic backdrop. Like premium car banner artwork on a black field. No invented dealership, buildings, rooms or scenic landscapes.\nLayout requirements: center 68% of the canvas is calm EMPTY charcoal negative space from top to bottom; no cars, props, light streaks or high-contrast dots in the center. Website title will sit at x=50%, y=42%, and a wide white search/control panel across the central 68% at y=64-96%, so keep all recognisable subjects confined to far-left 16% and far-right 16%, outside that panel. Objects sit on the same low baseline at 83% canvas height. Top 25% is quiet black behind a white navigation overlay. The background tone, low floor reflection, image framing and pattern density must be consistent across this asset family. Subjects can be partly cropped by the outer frame; do not make them tiny floating thumbnails. A little natural colour in cars/props is welcome, black remains dominant.\nConstraints: no people, no UI, no lettering, no readable manufacturer badges, no logos, no signage, no watermarks, no huge cartoon coins, no cartoon perspective, no architecture. This is decorative automotive campaign artwork and does not depict a real dealer's premises.\nPrimary request: a Contact/visit banner. Far left: cropped rear quarter, wheel and red tail-light of a graphite coupe with a small realistic car key beside it. Far right: a restrained upright black smartphone displaying only a simple map-like line with one small red destination pin, and a small folded blank road map, all confined to the far-right 16%. No visible text. Sophisticated product-photo composition, no giant icons or cartoon objects."
+  },
+  "processing": "Encoded as 2160x720 WebP at quality 86 with centered fit; no text, compositing or image content changes. Original PNG outputs remain in the Codex generated_images directory.",
+  "assets": [
+    {
+      "route": "home",
+      "source": "C:/Users/radev/.codex/generated_images/01a0f637-14fa-7292-8291-55b0b4f0e12f/exec-b4ef87ee-38cc-4a97-9036-dcfa3e7b2c83.png",
+      "output": "static/assets/images/lead/auto-best-desktop-home-v2.webp",
+      "width": 2160,
+      "height": 720,
+      "bytes": 71128,
+      "sha256": "5d97345baf16a02ff3f02504b9a6771b9c993773bf559b7ce94c1e949b22de81"
+    },
+    {
+      "route": "inventory",
+      "source": "C:/Users/radev/.codex/generated_images/01a0f637-14fa-7292-8291-55b0b4f0e12f/exec-b2adc79b-d88c-4b27-8eca-a49a51300deb.png",
+      "output": "static/assets/images/lead/auto-best-desktop-inventory-v2.webp",
+      "width": 2160,
+      "height": 720,
+      "bytes": 70094,
+      "sha256": "feb4d030056a8805a5f52fdbf171b45064ba6fa91766f53a835c484cd14a836d"
+    },
+    {
+      "route": "blog",
+      "source": "C:/Users/radev/.codex/generated_images/01a0f637-14fa-7292-8291-55b0b4f0e12f/exec-f80ee90d-a9de-462d-8c40-a80ab395f150.png",
+      "output": "static/assets/images/lead/auto-best-desktop-blog-v2.webp",
+      "width": 2160,
+      "height": 720,
+      "bytes": 69198,
+      "sha256": "ce84022d5506cec82f09cb7b78f174626078590260af4907d1c7bfaa77200010"
+    },
+    {
+      "route": "contact",
+      "source": "C:/Users/radev/.codex/generated_images/01a0f637-14fa-7292-8291-55b0b4f0e12f/exec-a2a79aad-66bf-4bf8-9f66-6ab26090c59c.png",
+      "output": "static/assets/images/lead/auto-best-desktop-contact-v2.webp",
+      "width": 2160,
+      "height": 720,
+      "bytes": 53034,
+      "sha256": "99d53ff5d87cd8d3ddc4da8732a9ce2f17dc3c287b1eaa6e88f784850fc2e99d"
+    }
+  ]
+}

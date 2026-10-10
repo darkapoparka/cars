@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "dealer": "stockport-broadbent-car-and-servicing",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "70c2b80671e217ab299549a938a537c0b9559611",
+    "path": "templates/app",
+    "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
+    "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f"
+  },
+  "appDigest": "b79650d3356927e6c6a9f48ac4cac0a76f56d1c6c330c9a740790476d13cba1a",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "stockport-broadbent-car-and-servicing",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "1db5865e5d54b3f7ba52de474983a9f9ba3f3c1f03d88bca0221168d0da39178",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 10,
+    "currency": "GBP",
+    "observedAt": "2026-10-10",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo.webp",
+        "output": "public/dealer-app/logo-light-280f985f5f3da17b23aa.webp",
+        "sha256": "280f985f5f3da17b23aad58e72c8466960a901f09e3f9b9f94911675ec3003fe",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo.webp",
+        "output": "public/dealer-app/logo-dark-280f985f5f3da17b23aa.webp",
+        "sha256": "280f985f5f3da17b23aad58e72c8466960a901f09e3f9b9f94911675ec3003fe",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/van.webp",
+        "output": "public/dealer-app/vehicle-72396847dfc15c2091e3.webp",
+        "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/van.webp",
+        "output": "public/dealer-app/vehicle-72396847dfc15c2091e3.webp",
+        "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/van.webp",
+        "output": "public/dealer-app/vehicle-72396847dfc15c2091e3.webp",
+        "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/van.webp",
+        "output": "public/dealer-app/vehicle-72396847dfc15c2091e3.webp",
+        "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/van.webp",
+        "output": "public/dealer-app/vehicle-72396847dfc15c2091e3.webp",
+        "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/van.webp",
+        "output": "public/dealer-app/vehicle-72396847dfc15c2091e3.webp",
+        "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "peugeot-partner-2017-860026521888",
+        "sourceValue": 119000,
+        "sourceUnit": "mi",
+        "canonicalKm": 191512
+      },
+      {
+        "slug": "ford-transit-2020-860026533399",
+        "sourceValue": 92000,
+        "sourceUnit": "mi",
+        "canonicalKm": 148060
+      },
+      {
+        "slug": "ford-transit-custom-2017-860026522289",
+        "sourceValue": 144000,
+        "sourceUnit": "mi",
+        "canonicalKm": 231746
+      },
+      {
+        "slug": "ford-transit-2018-860023676019",
+        "sourceValue": 132000,
+        "sourceUnit": "mi",
+        "canonicalKm": 212433
+      },
+      {
+        "slug": "ford-transit-2021-860023304847",
+        "sourceValue": 48000,
+        "sourceUnit": "mi",
+        "canonicalKm": 77249
+      },
+      {
+        "slug": "ford-mondeo-2016-860022996391",
+        "sourceValue": 93500,
+        "sourceUnit": "mi",
+        "canonicalKm": 150474
+      },
+      {
+        "slug": "ford-fiesta-2014-860019450163",
+        "sourceValue": 85000,
+        "sourceUnit": "mi",
+        "canonicalKm": 136794
+      },
+      {
+        "slug": "renault-clio-2010-860015804779",
+        "sourceValue": 59000,
+        "sourceUnit": "mi",
+        "canonicalKm": 94951
+      },
+      {
+        "slug": "peugeot-partner-2013-860011683310",
+        "sourceValue": 109000,
+        "sourceUnit": "mi",
+        "canonicalKm": 175418
+      },
+      {
+        "slug": "vauxhall-astra-2014-860011314014",
+        "sourceValue": 77000,
+        "sourceUnit": "mi",
+        "canonicalKm": 123919
+      }
+    ],
+    "ukPresentation": {
+      "distanceUnit": "mi",
+      "canonicalDistanceUnit": "km",
+      "originalMileageRetained": true,
+      "contentPaths": [
+        "lib/dealer-mileage.ts",
+        "lib/currency.ts",
+        "lib/inventory-filters.ts",
+        "lib/inventory-settings.ts",
+        "components/DesktopInventoryFilters.tsx",
+        "components/NativeFilterPane.tsx",
+        "components/VehicleCard.tsx",
+        "components/VehicleBelowFold.tsx",
+        "components/VehicleComparison.tsx",
+        "components/VehicleDetailClient.tsx",
+        "components/SellEnquirySheet.tsx"
+      ]
+    }
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

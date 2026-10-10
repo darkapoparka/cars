@@ -1,0 +1,641 @@
+{
+	"date": "2026-10-04",
+	"sources": [
+		{
+			"path": "src/app.html",
+			"sha256": "6def965e3ed95f2cd794d5ea20646eb13c39ec90e2ee5df804ed755a9eead356"
+		},
+		{
+			"path": "src/hooks.server.ts",
+			"sha256": "e10a524b87e25ab39aa149a965676e5c21674c6bc001e0280e70cf135650fa9e"
+		},
+		{
+			"path": "src/lib/config/dealer.ts",
+			"sha256": "48e1a37f60b757e9957885c3bfff145b164235d1f2bf003af6109aebd616bc91"
+		},
+		{
+			"path": "src/lib/styles/tokens.css",
+			"sha256": "0e2c11450628e0ba78bf238ed637c4348029896469ebd708689677903b204c4d"
+		},
+		{
+			"path": "src/lib/styles/daynight.css",
+			"sha256": "05281bf92bf24f2223bb55f15625571a582605b62eeb8eb212ed4011aa1dfd72"
+		},
+		{
+			"path": "src/lib/styles/forms.css",
+			"sha256": "70f3b44848cee2fbbfa33f85da63162e445858d45aaa9b9e82a2029dc60d06cb"
+		},
+		{
+			"path": "src/routes/(site)/services/+page.svelte",
+			"sha256": "d1fdf86dc77f120a318f264785b5c411665c439d925a3f68a6c6d6d613b71216"
+		},
+		{
+			"path": "src/lib/components/detail/AuxeroVehicleMobilePdp.svelte",
+			"sha256": "e9e7079efb15f394e57e50c3252dc45fa36b00c3916c60b8aa79f5deaecf9e01"
+		},
+		{
+			"path": "src/lib/components/inventory/InventoryFilter.svelte",
+			"sha256": "b70e3334036f9b4c99cc6933e69c86dcd07fd916466299aebda946fe0da08d6f"
+		},
+		{
+			"path": "src/lib/components/inventory/InventoryFiltersDialog.svelte",
+			"sha256": "0f2448f90fe11e6560233f55628957a43b9ea00f1865ba72e55d5e70a0e15303"
+		},
+		{
+			"path": "src/lib/components/home/HomeFiveHero.svelte",
+			"sha256": "f76f60a5ae141f17856add64d8b7c4af4b2d61cfbfcedb16034d39688fb2f03f"
+		},
+		{
+			"path": "src/lib/components/home/HomeFiveVehicleCard.svelte",
+			"sha256": "564331b46a64d953a5a25a0ca94ed3a787b10057180d272ab176d4d6964716c9"
+		},
+		{
+			"path": "src/lib/components/common/YouTubeSection.svelte",
+			"sha256": "9e9abe9a78c7b3d11dec44528f30e8dcccf5d980c80aae47ffd3faa84e720535"
+		}
+	],
+	"ui": {
+		"phase": "after",
+		"pages": [
+			{
+				"route": "",
+				"locale": "en",
+				"width": 1440,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "inventory",
+				"locale": "en",
+				"width": 1440,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "services",
+				"locale": "en",
+				"width": 1440,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "about",
+				"locale": "en",
+				"width": 1440,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "contact",
+				"locale": "en",
+				"width": 1440,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "import",
+				"locale": "en",
+				"width": 1440,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "sell-your-car",
+				"locale": "en",
+				"width": 1440,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "financing",
+				"locale": "en",
+				"width": 1440,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "calculator",
+				"locale": "en",
+				"width": 1440,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "compare",
+				"locale": "en",
+				"width": 1440,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "account/favorites",
+				"locale": "en",
+				"width": 1440,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "reviews",
+				"locale": "en",
+				"width": 1440,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "faqs",
+				"locale": "en",
+				"width": 1440,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "blog",
+				"locale": "en",
+				"width": 1440,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "locale-settings",
+				"locale": "en",
+				"width": 1440,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "privacy",
+				"locale": "en",
+				"width": 1440,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "terms",
+				"locale": "en",
+				"width": 1440,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "cookies",
+				"locale": "en",
+				"width": 1440,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "inventory/21764342419542174?lang=en",
+				"locale": "en",
+				"width": 1440,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": null
+			},
+			{
+				"route": "blog/vnos-ot-kanada-proverka?lang=en",
+				"locale": "en",
+				"width": 1440,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": null
+			},
+			{
+				"route": "",
+				"locale": "bg",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(9, 10, 11)"
+			},
+			{
+				"route": "inventory",
+				"locale": "bg",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(9, 10, 11)"
+			},
+			{
+				"route": "services",
+				"locale": "bg",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(9, 10, 11)"
+			},
+			{
+				"route": "about",
+				"locale": "bg",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(9, 10, 11)"
+			},
+			{
+				"route": "contact",
+				"locale": "bg",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(9, 10, 11)"
+			},
+			{
+				"route": "import",
+				"locale": "bg",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(9, 10, 11)"
+			},
+			{
+				"route": "sell-your-car",
+				"locale": "bg",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(9, 10, 11)"
+			},
+			{
+				"route": "financing",
+				"locale": "bg",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(9, 10, 11)"
+			},
+			{
+				"route": "calculator",
+				"locale": "bg",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(245, 247, 249)"
+			},
+			{
+				"route": "compare",
+				"locale": "bg",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(245, 247, 249)"
+			},
+			{
+				"route": "account/favorites",
+				"locale": "bg",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(245, 247, 249)"
+			},
+			{
+				"route": "reviews",
+				"locale": "bg",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(245, 247, 249)"
+			},
+			{
+				"route": "faqs",
+				"locale": "bg",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(245, 247, 249)"
+			},
+			{
+				"route": "blog",
+				"locale": "bg",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(245, 247, 249)"
+			},
+			{
+				"route": "locale-settings",
+				"locale": "bg",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(245, 247, 249)"
+			},
+			{
+				"route": "privacy",
+				"locale": "bg",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(245, 247, 249)"
+			},
+			{
+				"route": "terms",
+				"locale": "bg",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(245, 247, 249)"
+			},
+			{
+				"route": "cookies",
+				"locale": "bg",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(245, 247, 249)"
+			},
+			{
+				"route": "inventory/21764342419542174",
+				"locale": "bg",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": null
+			},
+			{
+				"route": "blog/vnos-ot-kanada-proverka",
+				"locale": "bg",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": null
+			},
+			{
+				"route": "",
+				"locale": "bg",
+				"width": 390,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(9, 10, 11)"
+			},
+			{
+				"route": "about",
+				"locale": "bg",
+				"width": 390,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(9, 10, 11)"
+			},
+			{
+				"route": "services",
+				"locale": "bg",
+				"width": 390,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(9, 10, 11)"
+			},
+			{
+				"route": "about",
+				"locale": "en",
+				"width": 768,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "services",
+				"locale": "en",
+				"width": 768,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "inventory",
+				"locale": "en",
+				"width": 768,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "",
+				"locale": "en",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(9, 10, 11)"
+			},
+			{
+				"route": "about",
+				"locale": "en",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(9, 10, 11)"
+			},
+			{
+				"route": "services",
+				"locale": "en",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(9, 10, 11)"
+			},
+			{
+				"route": "contact",
+				"locale": "en",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(9, 10, 11)"
+			},
+			{
+				"route": "inventory",
+				"locale": "en",
+				"width": 320,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(9, 10, 11)"
+			},
+			{
+				"route": "",
+				"locale": "bg",
+				"width": 1440,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "about",
+				"locale": "bg",
+				"width": 1440,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "services",
+				"locale": "bg",
+				"width": 1440,
+				"overflow": false,
+				"accent": "#17191c",
+				"themeColor": "#17191c",
+				"remainingRed": [],
+				"hero": "rgb(229, 237, 244)"
+			},
+			{
+				"route": "services-selected",
+				"locale": "bg",
+				"width": 1440,
+				"state": {
+					"background": "rgb(23, 25, 28)",
+					"color": "rgb(255, 255, 255)",
+					"label": "Всички"
+				}
+			}
+		],
+		"errors": []
+	},
+	"actualBrowser": {
+		"url": "http://127.0.0.1:6790/bg/about",
+		"viewportOverrideReset": true,
+		"themeColor": "#17191c",
+		"primary": "rgb(23, 25, 28)",
+		"hover": "rgb(52, 56, 61)",
+		"contrast": "rgb(255, 255, 255)",
+		"hero": "rgb(229, 237, 244)",
+		"selectedService": {
+			"label": "Проверка / VIN",
+			"background": "rgb(23, 25, 28)",
+			"color": "rgb(255, 255, 255)",
+			"filteredCards": 1
+		}
+	},
+	"validation": {
+		"scopedEslint": "passed",
+		"scopedPrettier": "passed",
+		"svelteCheck": {
+			"errors": 0,
+			"warnings": 0
+		},
+		"existingBrowserTests": 8,
+		"productionBuild": "passed in the isolated QA workspace",
+		"node": "24.21.0"
+	},
+	"scope": "Canonical reusable Import source; no template promotion or dealer deployment. Inherited ignore edits, other templates and older draft assets were preserved.",
+	"visualEvidence": "Current source-rendered browser captures. The attempted previous-build preview did not respond, so these are not represented as a matched production before/after comparison."
+}

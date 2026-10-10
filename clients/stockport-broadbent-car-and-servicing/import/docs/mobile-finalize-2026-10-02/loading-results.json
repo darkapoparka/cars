@@ -1,0 +1,5198 @@
+{
+	"profile": {
+		"viewport": "390x844",
+		"cpuSlowdown": 4,
+		"latencyMs": 150,
+		"downloadBytesPerSecond": 200000,
+		"uploadBytesPerSecond": 93750,
+		"cacheDisabled": true,
+		"source": "production preview 6795",
+		"repeats": 3,
+		"observation": "five seconds after hydration and font readiness; no scroll; no input; language prompt already acknowledged; third parties included"
+	},
+	"sourceDigests": {
+		"baseline": "580c3d536334f71605382d999f68df833c3782119ad40d68b1c2e89cc263e23a",
+		"final": "cf33fae34a9004f69b3e06e650b03f0199e8376b82456298728dd4fa11429fdb"
+	},
+	"limits": [
+		"Local Chromium lab only; no field/physical-device/INP qualification.",
+		"PDP baseline LCP describes the wrong desktop fallback and is not directly comparable.",
+		"compositionPresentMs means the native DOM composition exists, not that interactive controls are ready.",
+		"Concurrent desktop work is preserved in source snapshots; small timing changes are not assigned to a single optimization.",
+		"Font preloads were removed after an inconclusive trial."
+	],
+	"routes": [
+		{
+			"name": "home",
+			"path": "/bg",
+			"baseline": {
+				"medians": {
+					"lcpMs": 1948,
+					"fcpMs": 832,
+					"cls": 0,
+					"ttfbMs": 39.7,
+					"hydrationMs": 5094.8,
+					"mobilePdpReadyMs": null
+				},
+				"samples": [
+					{
+						"sample": 0,
+						"lcpMs": 4584,
+						"fcpMs": 824,
+						"cls": 0.00009324683425107943,
+						"ttfbMs": 204.1,
+						"hydrationMs": 4379.5,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 4584,
+							"size": 50294,
+							"url": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+							"element": "IMG:card--img svelte-zp0yyd"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic4.focus.bg/mobile/photosorg/460/2/21775141376627460_BG.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/008/1/11752855706606008_pf.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic4.focus.bg/mobile/photosorg/460/2/21775141376627460_BG.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/008/1/11752855706606008_pf.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-1.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-2.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-3.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brands/porsche.webp",
+								"complete": true,
+								"naturalWidth": 240
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-10.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-4.webp",
+								"complete": true,
+								"naturalWidth": 160
+							}
+						],
+						"longTaskCount": 11,
+						"longTaskMs": 1357,
+						"transferredBytes": 977237,
+						"scriptBytes": 234609,
+						"httpErrors": []
+					},
+					{
+						"sample": 1,
+						"lcpMs": 1948,
+						"fcpMs": 832,
+						"cls": 0.00009324683425107943,
+						"ttfbMs": 35.9,
+						"hydrationMs": 5094.8,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 1948,
+							"size": 50294,
+							"url": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+							"element": "IMG:card--img svelte-zp0yyd"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic4.focus.bg/mobile/photosorg/460/2/21775141376627460_BG.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/008/1/11752855706606008_pf.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic4.focus.bg/mobile/photosorg/460/2/21775141376627460_BG.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/008/1/11752855706606008_pf.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-1.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-2.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-3.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brands/porsche.webp",
+								"complete": true,
+								"naturalWidth": 240
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-10.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-4.webp",
+								"complete": true,
+								"naturalWidth": 160
+							}
+						],
+						"longTaskCount": 13,
+						"longTaskMs": 1519,
+						"transferredBytes": 977237,
+						"scriptBytes": 234609,
+						"httpErrors": []
+					},
+					{
+						"sample": 2,
+						"lcpMs": 1844,
+						"fcpMs": 844,
+						"cls": 0.00009324683425107943,
+						"ttfbMs": 39.7,
+						"hydrationMs": 5224.3,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 1844,
+							"size": 50294,
+							"url": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+							"element": "IMG:card--img svelte-zp0yyd"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic4.focus.bg/mobile/photosorg/460/2/21775141376627460_BG.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/008/1/11752855706606008_pf.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic4.focus.bg/mobile/photosorg/460/2/21775141376627460_BG.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/008/1/11752855706606008_pf.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-1.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-2.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-3.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brands/porsche.webp",
+								"complete": true,
+								"naturalWidth": 240
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-10.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-4.webp",
+								"complete": true,
+								"naturalWidth": 160
+							}
+						],
+						"longTaskCount": 11,
+						"longTaskMs": 1556,
+						"transferredBytes": 977237,
+						"scriptBytes": 234609,
+						"httpErrors": []
+					}
+				]
+			},
+			"final": {
+				"medians": {
+					"lcpMs": 2464,
+					"fcpMs": 852,
+					"cls": 0,
+					"ttfbMs": 60,
+					"hydrationMs": 8288.3,
+					"mobilePdpReadyMs": null
+				},
+				"samples": [
+					{
+						"sample": 0,
+						"lcpMs": 2464,
+						"fcpMs": 852,
+						"cls": 0,
+						"ttfbMs": 312.5,
+						"hydrationMs": 7144.5,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 2464,
+							"size": 50294,
+							"url": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+							"element": "IMG:card--img svelte-zp0yyd"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic4.focus.bg/mobile/photosorg/460/2/21775141376627460_BG.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/008/1/11752855706606008_pf.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic4.focus.bg/mobile/photosorg/460/2/21775141376627460_BG.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/008/1/11752855706606008_pf.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-1.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-2.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-3.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brands/porsche.webp",
+								"complete": true,
+								"naturalWidth": 240
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-10.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-4.webp",
+								"complete": true,
+								"naturalWidth": 160
+							}
+						],
+						"longTaskCount": 15,
+						"longTaskMs": 4487,
+						"transferredBytes": 974572,
+						"scriptBytes": 235219,
+						"httpErrors": []
+					},
+					{
+						"sample": 1,
+						"lcpMs": 2552,
+						"fcpMs": 972,
+						"cls": 0,
+						"ttfbMs": 60,
+						"hydrationMs": 8675.1,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 2552,
+							"size": 50294,
+							"url": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+							"element": "IMG:card--img svelte-zp0yyd"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic4.focus.bg/mobile/photosorg/460/2/21775141376627460_BG.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/008/1/11752855706606008_pf.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic4.focus.bg/mobile/photosorg/460/2/21775141376627460_BG.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/008/1/11752855706606008_pf.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-1.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-2.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-3.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brands/porsche.webp",
+								"complete": true,
+								"naturalWidth": 240
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-10.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-4.webp",
+								"complete": true,
+								"naturalWidth": 160
+							}
+						],
+						"longTaskCount": 17,
+						"longTaskMs": 6564,
+						"transferredBytes": 974573,
+						"scriptBytes": 235219,
+						"httpErrors": []
+					},
+					{
+						"sample": 2,
+						"lcpMs": 1672,
+						"fcpMs": 628,
+						"cls": 0.00009324683425107943,
+						"ttfbMs": 49.9,
+						"hydrationMs": 8288.3,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 1672,
+							"size": 50294,
+							"url": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+							"element": "IMG:card--img svelte-zp0yyd"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic4.focus.bg/mobile/photosorg/460/2/21775141376627460_BG.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/008/1/11752855706606008_pf.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic4.focus.bg/mobile/photosorg/460/2/21775141376627460_BG.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/008/1/11752855706606008_pf.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-1.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-2.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-3.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brands/porsche.webp",
+								"complete": true,
+								"naturalWidth": 240
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-10.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-4.webp",
+								"complete": true,
+								"naturalWidth": 160
+							}
+						],
+						"longTaskCount": 14,
+						"longTaskMs": 4893,
+						"transferredBytes": 974573,
+						"scriptBytes": 235219,
+						"httpErrors": []
+					}
+				]
+			},
+			"fontPreloadTrial": {
+				"medians": {
+					"lcpMs": 1592,
+					"fcpMs": 1544,
+					"cls": 0,
+					"ttfbMs": 244,
+					"hydrationMs": 6418.9,
+					"mobilePdpReadyMs": null
+				},
+				"samples": [
+					{
+						"sample": 0,
+						"lcpMs": 1832,
+						"fcpMs": 1720,
+						"cls": 0.00009324683425107943,
+						"ttfbMs": 554.2,
+						"hydrationMs": 6418.9,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 1832,
+							"size": 50294,
+							"url": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+							"element": "IMG:card--img svelte-zp0yyd"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic4.focus.bg/mobile/photosorg/460/2/21775141376627460_BG.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/008/1/11752855706606008_pf.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic4.focus.bg/mobile/photosorg/460/2/21775141376627460_BG.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/008/1/11752855706606008_pf.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-1.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-2.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-3.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brands/porsche.webp",
+								"complete": true,
+								"naturalWidth": 240
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-10.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-4.webp",
+								"complete": true,
+								"naturalWidth": 160
+							}
+						],
+						"longTaskCount": 15,
+						"longTaskMs": 4304,
+						"transferredBytes": 974987,
+						"scriptBytes": 235458,
+						"httpErrors": []
+					},
+					{
+						"sample": 1,
+						"lcpMs": 1508,
+						"fcpMs": 1360,
+						"cls": 0.00009324683425107943,
+						"ttfbMs": 244,
+						"hydrationMs": 6859.6,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 1508,
+							"size": 50294,
+							"url": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+							"element": "IMG:card--img svelte-zp0yyd"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic4.focus.bg/mobile/photosorg/460/2/21775141376627460_BG.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/008/1/11752855706606008_pf.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic4.focus.bg/mobile/photosorg/460/2/21775141376627460_BG.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/008/1/11752855706606008_pf.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-1.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-2.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-3.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brands/porsche.webp",
+								"complete": true,
+								"naturalWidth": 240
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-10.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-4.webp",
+								"complete": true,
+								"naturalWidth": 160
+							}
+						],
+						"longTaskCount": 16,
+						"longTaskMs": 5504,
+						"transferredBytes": 974987,
+						"scriptBytes": 235458,
+						"httpErrors": []
+					},
+					{
+						"sample": 2,
+						"lcpMs": 1592,
+						"fcpMs": 1544,
+						"cls": 0.00009324683425107943,
+						"ttfbMs": 77.3,
+						"hydrationMs": 5585.5,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 1592,
+							"size": 50294,
+							"url": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+							"element": "IMG:card--img svelte-zp0yyd"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic4.focus.bg/mobile/photosorg/460/2/21775141376627460_BG.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/008/1/11752855706606008_pf.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic4.focus.bg/mobile/photosorg/460/2/21775141376627460_BG.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/008/1/11752855706606008_pf.webp",
+								"complete": false,
+								"naturalWidth": 280
+							},
+							{
+								"src": "",
+								"complete": false,
+								"naturalWidth": 0
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-1.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-2.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-3.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brands/porsche.webp",
+								"complete": true,
+								"naturalWidth": 240
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-10.webp",
+								"complete": true,
+								"naturalWidth": 160
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/brand/brand-4.webp",
+								"complete": true,
+								"naturalWidth": 160
+							}
+						],
+						"longTaskCount": 13,
+						"longTaskMs": 3490,
+						"transferredBytes": 974987,
+						"scriptBytes": 235458,
+						"httpErrors": []
+					}
+				]
+			}
+		},
+		{
+			"name": "inventory",
+			"path": "/bg/inventory",
+			"baseline": {
+				"medians": {
+					"lcpMs": 3600,
+					"fcpMs": 732,
+					"cls": 0.027,
+					"ttfbMs": 51.9,
+					"hydrationMs": 3545.4,
+					"mobilePdpReadyMs": null
+				},
+				"samples": [
+					{
+						"sample": 0,
+						"lcpMs": 4052,
+						"fcpMs": 732,
+						"cls": 0.027160286212437778,
+						"ttfbMs": 51.9,
+						"hydrationMs": 3850.5,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 4052,
+							"size": 24624,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-48-400.webp",
+							"element": "IMG:svelte-5sd996"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-48-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-bmw-x4m-cutout-v2-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-audi-sq5-cutout-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-audi-a7-cutout-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-38-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							}
+						],
+						"longTaskCount": 11,
+						"longTaskMs": 1945,
+						"transferredBytes": 603805,
+						"scriptBytes": 196547,
+						"httpErrors": []
+					},
+					{
+						"sample": 1,
+						"lcpMs": 3360,
+						"fcpMs": 752,
+						"cls": 0.027160286212437778,
+						"ttfbMs": 64.7,
+						"hydrationMs": 3268.5,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 3360,
+							"size": 24624,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-audi-a7-cutout-400.webp",
+							"element": "IMG:svelte-5sd996"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-48-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-bmw-x4m-cutout-v2-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-audi-sq5-cutout-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-audi-a7-cutout-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-38-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							}
+						],
+						"longTaskCount": 10,
+						"longTaskMs": 1050,
+						"transferredBytes": 603805,
+						"scriptBytes": 196547,
+						"httpErrors": []
+					},
+					{
+						"sample": 2,
+						"lcpMs": 3600,
+						"fcpMs": 592,
+						"cls": 0.025844686947556154,
+						"ttfbMs": 37.8,
+						"hydrationMs": 3545.4,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 3600,
+							"size": 24624,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-48-400.webp",
+							"element": "IMG:svelte-5sd996"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-48-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-bmw-x4m-cutout-v2-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-audi-sq5-cutout-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-audi-a7-cutout-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-38-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							}
+						],
+						"longTaskCount": 6,
+						"longTaskMs": 1198,
+						"transferredBytes": 603805,
+						"scriptBytes": 196547,
+						"httpErrors": []
+					}
+				]
+			},
+			"final": {
+				"medians": {
+					"lcpMs": 3232,
+					"fcpMs": 1196,
+					"cls": 0.024,
+					"ttfbMs": 56.9,
+					"hydrationMs": 5572.4,
+					"mobilePdpReadyMs": null
+				},
+				"samples": [
+					{
+						"sample": 0,
+						"lcpMs": 3232,
+						"fcpMs": 1900,
+						"cls": 0,
+						"ttfbMs": 136.7,
+						"hydrationMs": 5572.4,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 3232,
+							"size": 24624,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-audi-a7-cutout-400.webp",
+							"element": "IMG:svelte-5sd996"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-48-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-bmw-x4m-cutout-v2-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-audi-sq5-cutout-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-audi-a7-cutout-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-38-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							}
+						],
+						"longTaskCount": 11,
+						"longTaskMs": 3452,
+						"transferredBytes": 601132,
+						"scriptBytes": 197163,
+						"httpErrors": []
+					},
+					{
+						"sample": 1,
+						"lcpMs": 3208,
+						"fcpMs": 1196,
+						"cls": 0.023580344395240736,
+						"ttfbMs": 56.9,
+						"hydrationMs": 5640,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 3208,
+							"size": 24624,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-audi-a7-cutout-400.webp",
+							"element": "IMG:svelte-5sd996"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-48-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-bmw-x4m-cutout-v2-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-audi-sq5-cutout-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-audi-a7-cutout-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-38-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							}
+						],
+						"longTaskCount": 7,
+						"longTaskMs": 3157,
+						"transferredBytes": 601132,
+						"scriptBytes": 197163,
+						"httpErrors": []
+					},
+					{
+						"sample": 2,
+						"lcpMs": 4476,
+						"fcpMs": 876,
+						"cls": 0.027160286212437778,
+						"ttfbMs": 51.6,
+						"hydrationMs": 4030.2,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 4476,
+							"size": 24624,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-48-400.webp",
+							"element": "IMG:svelte-5sd996"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-48-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-bmw-x4m-cutout-v2-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-audi-sq5-cutout-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-audi-a7-cutout-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-38-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							}
+						],
+						"longTaskCount": 9,
+						"longTaskMs": 2488,
+						"transferredBytes": 601132,
+						"scriptBytes": 197163,
+						"httpErrors": []
+					}
+				]
+			},
+			"fontPreloadTrial": {
+				"medians": {
+					"lcpMs": 3496,
+					"fcpMs": 716,
+					"cls": 0.023,
+					"ttfbMs": 40.1,
+					"hydrationMs": 3356.8,
+					"mobilePdpReadyMs": null
+				},
+				"samples": [
+					{
+						"sample": 0,
+						"lcpMs": 3496,
+						"fcpMs": 668,
+						"cls": 0.024622779569883183,
+						"ttfbMs": 71.5,
+						"hydrationMs": 3356.8,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 3496,
+							"size": 24624,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-48-400.webp",
+							"element": "IMG:svelte-5sd996"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-48-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-bmw-x4m-cutout-v2-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-audi-sq5-cutout-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-audi-a7-cutout-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-38-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							}
+						],
+						"longTaskCount": 12,
+						"longTaskMs": 1886,
+						"transferredBytes": 601482,
+						"scriptBytes": 197396,
+						"httpErrors": []
+					},
+					{
+						"sample": 1,
+						"lcpMs": 3692,
+						"fcpMs": 868,
+						"cls": 0.021222309955716664,
+						"ttfbMs": 40.1,
+						"hydrationMs": 3439.9,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 3692,
+							"size": 24624,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-48-400.webp",
+							"element": "IMG:svelte-5sd996"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-48-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-bmw-x4m-cutout-v2-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-audi-sq5-cutout-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-audi-a7-cutout-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-38-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							}
+						],
+						"longTaskCount": 10,
+						"longTaskMs": 1944,
+						"transferredBytes": 601482,
+						"scriptBytes": 197396,
+						"httpErrors": []
+					},
+					{
+						"sample": 2,
+						"lcpMs": 3484,
+						"fcpMs": 716,
+						"cls": 0.02330718030500156,
+						"ttfbMs": 37.2,
+						"hydrationMs": 3337.3,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 3484,
+							"size": 24624,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-48-400.webp",
+							"element": "IMG:svelte-5sd996"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-48-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-bmw-x4m-cutout-v2-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-audi-sq5-cutout-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/inventory-audi-a7-cutout-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/vehicles/card-38-400.webp",
+								"complete": true,
+								"naturalWidth": 163
+							}
+						],
+						"longTaskCount": 11,
+						"longTaskMs": 1621,
+						"transferredBytes": 601482,
+						"scriptBytes": 197396,
+						"httpErrors": []
+					}
+				]
+			}
+		},
+		{
+			"name": "services",
+			"path": "/bg/services",
+			"baseline": {
+				"medians": {
+					"lcpMs": 2604,
+					"fcpMs": 600,
+					"cls": 0.001,
+					"ttfbMs": 24.8,
+					"hydrationMs": 2547.1,
+					"mobilePdpReadyMs": null
+				},
+				"samples": [
+					{
+						"sample": 0,
+						"lcpMs": 2516,
+						"fcpMs": 600,
+						"cls": 0.0002024208613163825,
+						"ttfbMs": 35.6,
+						"hydrationMs": 2485.4,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 2516,
+							"size": 79560,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+							"element": "IMG:mobile-page-hero__image svelte-hrvvwn"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+								"complete": true,
+								"naturalWidth": 390
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/evaluate-link-service-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/sell-car-service-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/footer-premium-request-v2-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							}
+						],
+						"longTaskCount": 6,
+						"longTaskMs": 676,
+						"transferredBytes": 479614,
+						"scriptBytes": 177188,
+						"httpErrors": []
+					},
+					{
+						"sample": 1,
+						"lcpMs": 2736,
+						"fcpMs": 548,
+						"cls": 0.0008031494401734359,
+						"ttfbMs": 24.8,
+						"hydrationMs": 2663.2,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 2736,
+							"size": 79560,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+							"element": "IMG:mobile-page-hero__image svelte-hrvvwn"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+								"complete": true,
+								"naturalWidth": 390
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/evaluate-link-service-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/sell-car-service-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/footer-premium-request-v2-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							}
+						],
+						"longTaskCount": 5,
+						"longTaskMs": 770,
+						"transferredBytes": 479614,
+						"scriptBytes": 177188,
+						"httpErrors": []
+					},
+					{
+						"sample": 2,
+						"lcpMs": 2604,
+						"fcpMs": 608,
+						"cls": 0.0008031494401734359,
+						"ttfbMs": 20.8,
+						"hydrationMs": 2547.1,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 2604,
+							"size": 79560,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+							"element": "IMG:mobile-page-hero__image svelte-hrvvwn"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+								"complete": true,
+								"naturalWidth": 390
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/evaluate-link-service-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/sell-car-service-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/footer-premium-request-v2-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							}
+						],
+						"longTaskCount": 3,
+						"longTaskMs": 567,
+						"transferredBytes": 479614,
+						"scriptBytes": 177188,
+						"httpErrors": []
+					}
+				]
+			},
+			"final": {
+				"medians": {
+					"lcpMs": 2872,
+					"fcpMs": 660,
+					"cls": 0,
+					"ttfbMs": 23.1,
+					"hydrationMs": 2798.9,
+					"mobilePdpReadyMs": null
+				},
+				"samples": [
+					{
+						"sample": 0,
+						"lcpMs": 2872,
+						"fcpMs": 660,
+						"cls": 0.0003499295105406898,
+						"ttfbMs": 34.4,
+						"hydrationMs": 2798.9,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 2872,
+							"size": 79560,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+							"element": "IMG:mobile-page-hero__image svelte-hrvvwn"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+								"complete": true,
+								"naturalWidth": 390
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/evaluate-link-service-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/sell-car-service-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/footer-premium-request-v2-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							}
+						],
+						"longTaskCount": 6,
+						"longTaskMs": 1157,
+						"transferredBytes": 476489,
+						"scriptBytes": 177804,
+						"httpErrors": []
+					},
+					{
+						"sample": 1,
+						"lcpMs": 2796,
+						"fcpMs": 628,
+						"cls": 0,
+						"ttfbMs": 23.1,
+						"hydrationMs": 2680.9,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 2796,
+							"size": 79560,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+							"element": "IMG:mobile-page-hero__image svelte-hrvvwn"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+								"complete": true,
+								"naturalWidth": 390
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/evaluate-link-service-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/sell-car-service-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/footer-premium-request-v2-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							}
+						],
+						"longTaskCount": 9,
+						"longTaskMs": 1502,
+						"transferredBytes": 476489,
+						"scriptBytes": 177804,
+						"httpErrors": []
+					},
+					{
+						"sample": 2,
+						"lcpMs": 2976,
+						"fcpMs": 1092,
+						"cls": 0.00040622508198378296,
+						"ttfbMs": 18,
+						"hydrationMs": 2877.2,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 2976,
+							"size": 79560,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+							"element": "IMG:mobile-page-hero__image svelte-hrvvwn"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+								"complete": true,
+								"naturalWidth": 390
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/evaluate-link-service-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/sell-car-service-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/footer-premium-request-v2-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							}
+						],
+						"longTaskCount": 11,
+						"longTaskMs": 1890,
+						"transferredBytes": 476489,
+						"scriptBytes": 177804,
+						"httpErrors": []
+					}
+				]
+			},
+			"fontPreloadTrial": {
+				"medians": {
+					"lcpMs": 2992,
+					"fcpMs": 836,
+					"cls": 0,
+					"ttfbMs": 33.2,
+					"hydrationMs": 2688.2,
+					"mobilePdpReadyMs": null
+				},
+				"samples": [
+					{
+						"sample": 0,
+						"lcpMs": 3552,
+						"fcpMs": 884,
+						"cls": 0.0004606564141583431,
+						"ttfbMs": 33.2,
+						"hydrationMs": 3272.7,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 3552,
+							"size": 79560,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+							"element": "IMG:mobile-page-hero__image svelte-hrvvwn"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+								"complete": true,
+								"naturalWidth": 390
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/evaluate-link-service-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/sell-car-service-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/footer-premium-request-v2-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							}
+						],
+						"longTaskCount": 4,
+						"longTaskMs": 1737,
+						"transferredBytes": 476842,
+						"scriptBytes": 178034,
+						"httpErrors": []
+					},
+					{
+						"sample": 1,
+						"lcpMs": 2580,
+						"fcpMs": 784,
+						"cls": 0.0004606564141583431,
+						"ttfbMs": 16.6,
+						"hydrationMs": 2467.8,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 2580,
+							"size": 79560,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+							"element": "IMG:mobile-page-hero__image svelte-hrvvwn"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+								"complete": true,
+								"naturalWidth": 390
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/evaluate-link-service-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/sell-car-service-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/footer-premium-request-v2-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							}
+						],
+						"longTaskCount": 6,
+						"longTaskMs": 1011,
+						"transferredBytes": 476842,
+						"scriptBytes": 178034,
+						"httpErrors": []
+					},
+					{
+						"sample": 2,
+						"lcpMs": 2992,
+						"fcpMs": 836,
+						"cls": 0.0004606564141583431,
+						"ttfbMs": 48.6,
+						"hydrationMs": 2688.2,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 2992,
+							"size": 79560,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+							"element": "IMG:mobile-page-hero__image svelte-hrvvwn"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+								"complete": true,
+								"naturalWidth": 390
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/premium-cars-banner-generated-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/evaluate-link-service-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/sell-car-service-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/footer-premium-request-v2-400.webp",
+								"complete": true,
+								"naturalWidth": 320
+							}
+						],
+						"longTaskCount": 7,
+						"longTaskMs": 1540,
+						"transferredBytes": 476842,
+						"scriptBytes": 178034,
+						"httpErrors": []
+					}
+				]
+			}
+		},
+		{
+			"name": "contact",
+			"path": "/bg/contact",
+			"baseline": {
+				"medians": {
+					"lcpMs": 3140,
+					"fcpMs": 624,
+					"cls": 0,
+					"ttfbMs": 23.7,
+					"hydrationMs": 3802.1,
+					"mobilePdpReadyMs": null
+				},
+				"samples": [
+					{
+						"sample": 0,
+						"lcpMs": 3480,
+						"fcpMs": 1020,
+						"cls": 0.00029403787822830944,
+						"ttfbMs": 572.5,
+						"hydrationMs": 4173.3,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 3480,
+							"size": 90000,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/services/proof-studio-import-handoff-400.webp",
+							"element": "IMG:mobile-page-hero__image svelte-hrvvwn"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/proof-studio-import-handoff-400.webp",
+								"complete": true,
+								"naturalWidth": 390
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/facebook.svg",
+								"complete": true,
+								"naturalWidth": 150
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/instagram.svg",
+								"complete": true,
+								"naturalWidth": 150
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/tiktok.svg",
+								"complete": true,
+								"naturalWidth": 150
+							}
+						],
+						"longTaskCount": 14,
+						"longTaskMs": 1821,
+						"transferredBytes": 1063547,
+						"scriptBytes": 745083,
+						"httpErrors": []
+					},
+					{
+						"sample": 1,
+						"lcpMs": 3140,
+						"fcpMs": 576,
+						"cls": 0.00022874529662320116,
+						"ttfbMs": 23.7,
+						"hydrationMs": 3676.7,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 3140,
+							"size": 90000,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/services/proof-studio-import-handoff-400.webp",
+							"element": "IMG:mobile-page-hero__image svelte-hrvvwn"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/proof-studio-import-handoff-400.webp",
+								"complete": true,
+								"naturalWidth": 390
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/facebook.svg",
+								"complete": true,
+								"naturalWidth": 150
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/instagram.svg",
+								"complete": true,
+								"naturalWidth": 150
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/tiktok.svg",
+								"complete": true,
+								"naturalWidth": 150
+							}
+						],
+						"longTaskCount": 12,
+						"longTaskMs": 1603,
+						"transferredBytes": 1009317,
+						"scriptBytes": 745413,
+						"httpErrors": []
+					},
+					{
+						"sample": 2,
+						"lcpMs": 3112,
+						"fcpMs": 624,
+						"cls": 0.00022874529662320116,
+						"ttfbMs": 23.2,
+						"hydrationMs": 3802.1,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 3112,
+							"size": 90000,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/services/proof-studio-import-handoff-400.webp",
+							"element": "IMG:mobile-page-hero__image svelte-hrvvwn"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/proof-studio-import-handoff-400.webp",
+								"complete": true,
+								"naturalWidth": 390
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/facebook.svg",
+								"complete": true,
+								"naturalWidth": 150
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/instagram.svg",
+								"complete": true,
+								"naturalWidth": 150
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/tiktok.svg",
+								"complete": true,
+								"naturalWidth": 150
+							}
+						],
+						"longTaskCount": 11,
+						"longTaskMs": 1923,
+						"transferredBytes": 1022226,
+						"scriptBytes": 745405,
+						"httpErrors": []
+					}
+				]
+			},
+			"final": {
+				"medians": {
+					"lcpMs": 3140,
+					"fcpMs": 676,
+					"cls": 0,
+					"ttfbMs": 14.8,
+					"hydrationMs": 3699.9,
+					"mobilePdpReadyMs": null
+				},
+				"samples": [
+					{
+						"sample": 0,
+						"lcpMs": 3652,
+						"fcpMs": 1048,
+						"cls": 0.00029403787822830944,
+						"ttfbMs": 618.2,
+						"hydrationMs": 4298.9,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 3652,
+							"size": 90000,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/services/proof-studio-import-handoff-400.webp",
+							"element": "IMG:mobile-page-hero__image svelte-hrvvwn"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/proof-studio-import-handoff-400.webp",
+								"complete": true,
+								"naturalWidth": 390
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/facebook.svg",
+								"complete": true,
+								"naturalWidth": 150
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/instagram.svg",
+								"complete": true,
+								"naturalWidth": 150
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/tiktok.svg",
+								"complete": true,
+								"naturalWidth": 150
+							}
+						],
+						"longTaskCount": 10,
+						"longTaskMs": 1540,
+						"transferredBytes": 991445,
+						"scriptBytes": 748428,
+						"httpErrors": []
+					},
+					{
+						"sample": 1,
+						"lcpMs": 3136,
+						"fcpMs": 536,
+						"cls": 0.00029403787822830944,
+						"ttfbMs": 13.7,
+						"hydrationMs": 3604.6,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 3136,
+							"size": 90000,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/services/proof-studio-import-handoff-400.webp",
+							"element": "IMG:mobile-page-hero__image svelte-hrvvwn"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/proof-studio-import-handoff-400.webp",
+								"complete": true,
+								"naturalWidth": 390
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/facebook.svg",
+								"complete": true,
+								"naturalWidth": 150
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/instagram.svg",
+								"complete": true,
+								"naturalWidth": 150
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/tiktok.svg",
+								"complete": true,
+								"naturalWidth": 150
+							}
+						],
+						"longTaskCount": 11,
+						"longTaskMs": 1425,
+						"transferredBytes": 991437,
+						"scriptBytes": 748428,
+						"httpErrors": []
+					},
+					{
+						"sample": 2,
+						"lcpMs": 3140,
+						"fcpMs": 676,
+						"cls": 0.00029403787822830944,
+						"ttfbMs": 14.8,
+						"hydrationMs": 3699.9,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 3140,
+							"size": 90000,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/services/proof-studio-import-handoff-400.webp",
+							"element": "IMG:mobile-page-hero__image svelte-hrvvwn"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/proof-studio-import-handoff-400.webp",
+								"complete": true,
+								"naturalWidth": 390
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/facebook.svg",
+								"complete": true,
+								"naturalWidth": 150
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/instagram.svg",
+								"complete": true,
+								"naturalWidth": 150
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/tiktok.svg",
+								"complete": true,
+								"naturalWidth": 150
+							}
+						],
+						"longTaskCount": 10,
+						"longTaskMs": 1405,
+						"transferredBytes": 1007417,
+						"scriptBytes": 748419,
+						"httpErrors": []
+					}
+				]
+			},
+			"fontPreloadTrial": {
+				"medians": {
+					"lcpMs": 3120,
+					"fcpMs": 688,
+					"cls": 0,
+					"ttfbMs": 22.5,
+					"hydrationMs": 3822.7,
+					"mobilePdpReadyMs": null
+				},
+				"samples": [
+					{
+						"sample": 0,
+						"lcpMs": 3776,
+						"fcpMs": 1408,
+						"cls": 0.00020523583673996538,
+						"ttfbMs": 884.4,
+						"hydrationMs": 4381.2,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 3776,
+							"size": 90000,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/services/proof-studio-import-handoff-400.webp",
+							"element": "IMG:mobile-page-hero__image svelte-hrvvwn"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/proof-studio-import-handoff-400.webp",
+								"complete": true,
+								"naturalWidth": 390
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/facebook.svg",
+								"complete": true,
+								"naturalWidth": 150
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/instagram.svg",
+								"complete": true,
+								"naturalWidth": 150
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/tiktok.svg",
+								"complete": true,
+								"naturalWidth": 150
+							}
+						],
+						"longTaskCount": 12,
+						"longTaskMs": 1877,
+						"transferredBytes": 930835,
+						"scriptBytes": 671736,
+						"httpErrors": []
+					},
+					{
+						"sample": 1,
+						"lcpMs": 3120,
+						"fcpMs": 672,
+						"cls": 0.00037767915018783993,
+						"ttfbMs": 12,
+						"hydrationMs": 3822.7,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 3120,
+							"size": 90000,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/services/proof-studio-import-handoff-400.webp",
+							"element": "IMG:mobile-page-hero__image svelte-hrvvwn"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/proof-studio-import-handoff-400.webp",
+								"complete": true,
+								"naturalWidth": 390
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/facebook.svg",
+								"complete": true,
+								"naturalWidth": 150
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/instagram.svg",
+								"complete": true,
+								"naturalWidth": 150
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/tiktok.svg",
+								"complete": true,
+								"naturalWidth": 150
+							}
+						],
+						"longTaskCount": 12,
+						"longTaskMs": 1839,
+						"transferredBytes": 1009974,
+						"scriptBytes": 748649,
+						"httpErrors": []
+					},
+					{
+						"sample": 2,
+						"lcpMs": 3088,
+						"fcpMs": 688,
+						"cls": 0.00020523583673996538,
+						"ttfbMs": 22.5,
+						"hydrationMs": 3745.5,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 3088,
+							"size": 90000,
+							"url": "http://127.0.0.1:6795/assets/daynight/delivery/services/proof-studio-import-handoff-400.webp",
+							"element": "IMG:mobile-page-hero__image svelte-hrvvwn"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/delivery/services/proof-studio-import-handoff-400.webp",
+								"complete": true,
+								"naturalWidth": 390
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/facebook.svg",
+								"complete": true,
+								"naturalWidth": 150
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/instagram.svg",
+								"complete": true,
+								"naturalWidth": 150
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/brands/tiktok.svg",
+								"complete": true,
+								"naturalWidth": 150
+							}
+						],
+						"longTaskCount": 12,
+						"longTaskMs": 1891,
+						"transferredBytes": 930820,
+						"scriptBytes": 671724,
+						"httpErrors": []
+					}
+				]
+			}
+		},
+		{
+			"name": "pdp",
+			"path": "/bg/inventory/21754658377544573",
+			"baseline": {
+				"medians": {
+					"lcpMs": 880,
+					"fcpMs": 696,
+					"cls": 0,
+					"ttfbMs": 25.1,
+					"hydrationMs": 3505,
+					"mobilePdpReadyMs": 3505.1
+				},
+				"samples": [
+					{
+						"sample": 0,
+						"lcpMs": 880,
+						"fcpMs": 880,
+						"cls": 0.0000625656831348387,
+						"ttfbMs": 54.3,
+						"hydrationMs": 3533.9,
+						"compositionPresentMs": 3534.1,
+						"lcpElement": {
+							"startTime": 880,
+							"size": 75168,
+							"url": "",
+							"element": "P:detail-description svelte-9yogp8"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/palette.svg",
+								"complete": true,
+								"naturalWidth": 28
+							}
+						],
+						"longTaskCount": 10,
+						"longTaskMs": 1715,
+						"transferredBytes": 554444,
+						"scriptBytes": 238971,
+						"httpErrors": []
+					},
+					{
+						"sample": 1,
+						"lcpMs": 696,
+						"fcpMs": 696,
+						"cls": 0.0000625656831348387,
+						"ttfbMs": 25.1,
+						"hydrationMs": 3505,
+						"compositionPresentMs": 3505.1,
+						"lcpElement": {
+							"startTime": 696,
+							"size": 75168,
+							"url": "",
+							"element": "P:detail-description svelte-9yogp8"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/palette.svg",
+								"complete": true,
+								"naturalWidth": 28
+							}
+						],
+						"longTaskCount": 7,
+						"longTaskMs": 877,
+						"transferredBytes": 554444,
+						"scriptBytes": 238971,
+						"httpErrors": []
+					},
+					{
+						"sample": 2,
+						"lcpMs": 1100,
+						"fcpMs": 616,
+						"cls": 0.0000625656831348387,
+						"ttfbMs": 19.9,
+						"hydrationMs": 3478.1,
+						"compositionPresentMs": 3478.1,
+						"lcpElement": {
+							"startTime": 1100,
+							"size": 50390,
+							"url": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+							"element": "IMG:svelte-143gty4"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/palette.svg",
+								"complete": true,
+								"naturalWidth": 28
+							}
+						],
+						"longTaskCount": 11,
+						"longTaskMs": 1083,
+						"transferredBytes": 554444,
+						"scriptBytes": 238971,
+						"httpErrors": []
+					}
+				]
+			},
+			"final": {
+				"medians": {
+					"lcpMs": 1048,
+					"fcpMs": 732,
+					"cls": 0.015,
+					"ttfbMs": 19.2,
+					"hydrationMs": 3313,
+					"mobilePdpReadyMs": 490.4
+				},
+				"samples": [
+					{
+						"sample": 0,
+						"lcpMs": 1048,
+						"fcpMs": 532,
+						"cls": 0.01546837735462205,
+						"ttfbMs": 39.7,
+						"hydrationMs": 3446.5,
+						"compositionPresentMs": 471.5,
+						"lcpElement": {
+							"startTime": 1048,
+							"size": 50350,
+							"url": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+							"element": "IMG:daynight-mobile-pdp__image svelte-1iwtzlu"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/palette.svg",
+								"complete": true,
+								"naturalWidth": 28
+							}
+						],
+						"longTaskCount": 6,
+						"longTaskMs": 1233,
+						"transferredBytes": 451294,
+						"scriptBytes": 240405,
+						"httpErrors": []
+					},
+					{
+						"sample": 1,
+						"lcpMs": 948,
+						"fcpMs": 732,
+						"cls": 0.01546837735462205,
+						"ttfbMs": 19.2,
+						"hydrationMs": 3274.7,
+						"compositionPresentMs": 519.5,
+						"lcpElement": {
+							"startTime": 948,
+							"size": 50350,
+							"url": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+							"element": "IMG:daynight-mobile-pdp__image svelte-1iwtzlu"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/palette.svg",
+								"complete": true,
+								"naturalWidth": 28
+							}
+						],
+						"longTaskCount": 6,
+						"longTaskMs": 1077,
+						"transferredBytes": 451295,
+						"scriptBytes": 240405,
+						"httpErrors": []
+					},
+					{
+						"sample": 2,
+						"lcpMs": 1124,
+						"fcpMs": 780,
+						"cls": 0.015575615713472008,
+						"ttfbMs": 19.2,
+						"hydrationMs": 3313,
+						"compositionPresentMs": 490.4,
+						"lcpElement": {
+							"startTime": 1124,
+							"size": 50350,
+							"url": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+							"element": "IMG:daynight-mobile-pdp__image svelte-1iwtzlu"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/palette.svg",
+								"complete": true,
+								"naturalWidth": 28
+							}
+						],
+						"longTaskCount": 8,
+						"longTaskMs": 1455,
+						"transferredBytes": 451294,
+						"scriptBytes": 240405,
+						"httpErrors": []
+					}
+				]
+			},
+			"fontPreloadTrial": {
+				"medians": {
+					"lcpMs": 1024,
+					"fcpMs": 856,
+					"cls": 0.015,
+					"ttfbMs": 148.7,
+					"hydrationMs": 3351,
+					"mobilePdpReadyMs": 493
+				},
+				"samples": [
+					{
+						"sample": 0,
+						"lcpMs": 1024,
+						"fcpMs": 964,
+						"cls": 0,
+						"ttfbMs": 148.7,
+						"hydrationMs": 3351,
+						"compositionPresentMs": 493,
+						"lcpElement": {
+							"startTime": 1024,
+							"size": 50350,
+							"url": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+							"element": "IMG:daynight-mobile-pdp__image svelte-1iwtzlu"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/palette.svg",
+								"complete": true,
+								"naturalWidth": 28
+							}
+						],
+						"longTaskCount": 8,
+						"longTaskMs": 2001,
+						"transferredBytes": 451636,
+						"scriptBytes": 240638,
+						"httpErrors": []
+					},
+					{
+						"sample": 1,
+						"lcpMs": 980,
+						"fcpMs": 808,
+						"cls": 0.015478808905506422,
+						"ttfbMs": 167.5,
+						"hydrationMs": 3525.1,
+						"compositionPresentMs": 501.6,
+						"lcpElement": {
+							"startTime": 980,
+							"size": 50350,
+							"url": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+							"element": "IMG:daynight-mobile-pdp__image svelte-1iwtzlu"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/palette.svg",
+								"complete": true,
+								"naturalWidth": 28
+							}
+						],
+						"longTaskCount": 8,
+						"longTaskMs": 1825,
+						"transferredBytes": 451636,
+						"scriptBytes": 240638,
+						"httpErrors": []
+					},
+					{
+						"sample": 2,
+						"lcpMs": 1080,
+						"fcpMs": 856,
+						"cls": 0.015586047264356378,
+						"ttfbMs": 87.7,
+						"hydrationMs": 3052.8,
+						"compositionPresentMs": 478.2,
+						"lcpElement": {
+							"startTime": 1080,
+							"size": 50350,
+							"url": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+							"element": "IMG:daynight-mobile-pdp__image svelte-1iwtzlu"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+								"complete": true,
+								"naturalWidth": 280
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/palette.svg",
+								"complete": true,
+								"naturalWidth": 28
+							}
+						],
+						"longTaskCount": 9,
+						"longTaskMs": 1665,
+						"transferredBytes": 451636,
+						"scriptBytes": 240638,
+						"httpErrors": []
+					}
+				]
+			}
+		},
+		{
+			"name": "account",
+			"path": "/account/listings",
+			"baseline": {
+				"medians": {
+					"lcpMs": 1512,
+					"fcpMs": 1368,
+					"cls": 0.001,
+					"ttfbMs": 74.9,
+					"hydrationMs": 3187,
+					"mobilePdpReadyMs": null
+				},
+				"samples": [
+					{
+						"sample": 0,
+						"lcpMs": 1576,
+						"fcpMs": 1416,
+						"cls": 0.0005030757596962309,
+						"ttfbMs": 140.7,
+						"hydrationMs": 3187,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 1576,
+							"size": 13975,
+							"url": "",
+							"element": "P:mobile-account-car__description svelte-7mjfhk"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-50.jpg",
+								"complete": true,
+								"naturalWidth": 690
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-51.jpg",
+								"complete": true,
+								"naturalWidth": 920
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/mileage.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/years.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/fuel.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/color.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/location.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/interior.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/engine.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/transmission.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/VIN.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/QrCode.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/facebook.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/Google.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/Twitter.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/pages/newletter.jpg",
+								"complete": true,
+								"naturalWidth": 880
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-3.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-4.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-4.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							}
+						],
+						"longTaskCount": 10,
+						"longTaskMs": 1184,
+						"transferredBytes": 1019392,
+						"scriptBytes": 148766,
+						"httpErrors": []
+					},
+					{
+						"sample": 1,
+						"lcpMs": 1512,
+						"fcpMs": 1368,
+						"cls": 0.0005030757596962309,
+						"ttfbMs": 58.3,
+						"hydrationMs": 3386,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 1512,
+							"size": 13975,
+							"url": "",
+							"element": "P:mobile-account-car__description svelte-7mjfhk"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-50.jpg",
+								"complete": true,
+								"naturalWidth": 690
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-51.jpg",
+								"complete": true,
+								"naturalWidth": 920
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/mileage.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/years.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/fuel.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/color.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/location.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/interior.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/engine.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/transmission.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/VIN.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/QrCode.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/facebook.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/Google.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/Twitter.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/pages/newletter.jpg",
+								"complete": true,
+								"naturalWidth": 880
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-3.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-4.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-4.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							}
+						],
+						"longTaskCount": 11,
+						"longTaskMs": 1369,
+						"transferredBytes": 1019392,
+						"scriptBytes": 148766,
+						"httpErrors": []
+					},
+					{
+						"sample": 2,
+						"lcpMs": 1496,
+						"fcpMs": 1316,
+						"cls": 0.0005030757596962309,
+						"ttfbMs": 74.9,
+						"hydrationMs": 3168.8,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 1496,
+							"size": 13975,
+							"url": "",
+							"element": "P:mobile-account-car__description svelte-7mjfhk"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-50.jpg",
+								"complete": true,
+								"naturalWidth": 690
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-51.jpg",
+								"complete": true,
+								"naturalWidth": 920
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/mileage.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/years.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/fuel.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/color.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/location.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/interior.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/engine.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/transmission.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/VIN.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/QrCode.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/facebook.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/Google.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/Twitter.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/pages/newletter.jpg",
+								"complete": true,
+								"naturalWidth": 880
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-3.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-4.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-4.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							}
+						],
+						"longTaskCount": 7,
+						"longTaskMs": 730,
+						"transferredBytes": 1019392,
+						"scriptBytes": 148766,
+						"httpErrors": []
+					}
+				]
+			},
+			"final": {
+				"medians": {
+					"lcpMs": 1736,
+					"fcpMs": 1508,
+					"cls": 0.001,
+					"ttfbMs": 64.7,
+					"hydrationMs": 3522.7,
+					"mobilePdpReadyMs": null
+				},
+				"samples": [
+					{
+						"sample": 0,
+						"lcpMs": 1928,
+						"fcpMs": 1532,
+						"cls": 0.0005030757596962309,
+						"ttfbMs": 246.3,
+						"hydrationMs": 3315.4,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 1928,
+							"size": 13975,
+							"url": "",
+							"element": "P:mobile-account-car__description svelte-7mjfhk"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-50.jpg",
+								"complete": true,
+								"naturalWidth": 690
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-51.jpg",
+								"complete": true,
+								"naturalWidth": 920
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/mileage.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/years.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/fuel.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/color.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/location.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/interior.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/engine.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/transmission.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/VIN.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/QrCode.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/facebook.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/Google.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/Twitter.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/pages/newletter.jpg",
+								"complete": true,
+								"naturalWidth": 880
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-3.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-4.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-4.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							}
+						],
+						"longTaskCount": 13,
+						"longTaskMs": 1544,
+						"transferredBytes": 1016021,
+						"scriptBytes": 148918,
+						"httpErrors": []
+					},
+					{
+						"sample": 1,
+						"lcpMs": 1736,
+						"fcpMs": 1508,
+						"cls": 0.0005030757596962309,
+						"ttfbMs": 64.7,
+						"hydrationMs": 4261.5,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 1736,
+							"size": 13975,
+							"url": "",
+							"element": "P:mobile-account-car__description svelte-7mjfhk"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-50.jpg",
+								"complete": true,
+								"naturalWidth": 690
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-51.jpg",
+								"complete": true,
+								"naturalWidth": 920
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/mileage.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/years.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/fuel.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/color.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/location.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/interior.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/engine.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/transmission.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/VIN.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/QrCode.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/facebook.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/Google.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/Twitter.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/pages/newletter.jpg",
+								"complete": true,
+								"naturalWidth": 880
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-3.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-4.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-4.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							}
+						],
+						"longTaskCount": 12,
+						"longTaskMs": 2174,
+						"transferredBytes": 1016021,
+						"scriptBytes": 148918,
+						"httpErrors": []
+					},
+					{
+						"sample": 2,
+						"lcpMs": 1536,
+						"fcpMs": 1420,
+						"cls": 0.0005030757596962309,
+						"ttfbMs": 63.6,
+						"hydrationMs": 3522.7,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 1536,
+							"size": 13975,
+							"url": "",
+							"element": "P:mobile-account-car__description svelte-7mjfhk"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-50.jpg",
+								"complete": true,
+								"naturalWidth": 690
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-51.jpg",
+								"complete": true,
+								"naturalWidth": 920
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/mileage.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/years.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/fuel.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/color.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/location.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/interior.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/engine.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/transmission.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/VIN.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/QrCode.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/facebook.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/Google.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/Twitter.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/pages/newletter.jpg",
+								"complete": true,
+								"naturalWidth": 880
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-3.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-4.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-4.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							}
+						],
+						"longTaskCount": 10,
+						"longTaskMs": 1395,
+						"transferredBytes": 1016021,
+						"scriptBytes": 148918,
+						"httpErrors": []
+					}
+				]
+			},
+			"fontPreloadTrial": {
+				"medians": {
+					"lcpMs": 2272,
+					"fcpMs": 2272,
+					"cls": 0,
+					"ttfbMs": 283.5,
+					"hydrationMs": 5413.6,
+					"mobilePdpReadyMs": null
+				},
+				"samples": [
+					{
+						"sample": 0,
+						"lcpMs": 2116,
+						"fcpMs": 1864,
+						"cls": 0.00042238782159269127,
+						"ttfbMs": 561,
+						"hydrationMs": 4686.8,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 2116,
+							"size": 13975,
+							"url": "",
+							"element": "P:mobile-account-car__description svelte-7mjfhk"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-50.jpg",
+								"complete": true,
+								"naturalWidth": 690
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-51.jpg",
+								"complete": true,
+								"naturalWidth": 920
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/mileage.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/years.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/fuel.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/color.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/location.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/interior.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/engine.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/transmission.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/VIN.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/QrCode.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/facebook.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/Google.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/Twitter.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/pages/newletter.jpg",
+								"complete": true,
+								"naturalWidth": 880
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-3.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-4.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-4.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							}
+						],
+						"longTaskCount": 15,
+						"longTaskMs": 2117,
+						"transferredBytes": 1016365,
+						"scriptBytes": 149143,
+						"httpErrors": []
+					},
+					{
+						"sample": 1,
+						"lcpMs": 2272,
+						"fcpMs": 2272,
+						"cls": 0.0003182018972320179,
+						"ttfbMs": 283.5,
+						"hydrationMs": 5413.6,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 2272,
+							"size": 13975,
+							"url": "",
+							"element": "P:mobile-account-car__description svelte-7mjfhk"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-50.jpg",
+								"complete": true,
+								"naturalWidth": 690
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-51.jpg",
+								"complete": true,
+								"naturalWidth": 920
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/mileage.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/years.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/fuel.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/color.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/location.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/interior.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/engine.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/transmission.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/VIN.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/QrCode.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/facebook.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/Google.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/Twitter.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/pages/newletter.jpg",
+								"complete": true,
+								"naturalWidth": 880
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-3.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-4.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-4.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							}
+						],
+						"longTaskCount": 12,
+						"longTaskMs": 3040,
+						"transferredBytes": 1016365,
+						"scriptBytes": 149143,
+						"httpErrors": []
+					},
+					{
+						"sample": 2,
+						"lcpMs": 3376,
+						"fcpMs": 3376,
+						"cls": 0,
+						"ttfbMs": 112.4,
+						"hydrationMs": 7348.4,
+						"compositionPresentMs": null,
+						"lcpElement": {
+							"startTime": 3376,
+							"size": 12915,
+							"url": "",
+							"element": "P:mobile-account-car__description svelte-7mjfhk"
+						},
+						"rootOverflow": false,
+						"visibleImages": [
+							{
+								"src": "http://127.0.0.1:6795/assets/daynight/brand/daynight-logo-generated-600.webp",
+								"complete": true,
+								"naturalWidth": 600
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-50.jpg",
+								"complete": true,
+								"naturalWidth": 690
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-51.jpg",
+								"complete": true,
+								"naturalWidth": 920
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/mileage.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/years.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/fuel.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/color.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/location.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/interior.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/engine.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/transmission.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/VIN.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/QrCode.svg",
+								"complete": true,
+								"naturalWidth": 28
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/facebook.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/Google.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/Twitter.svg",
+								"complete": true,
+								"naturalWidth": 24
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/pages/newletter.jpg",
+								"complete": true,
+								"naturalWidth": 880
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-3.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-4.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/close-modal.svg",
+								"complete": true,
+								"naturalWidth": 40
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/images/card/card-4.jpg",
+								"complete": true,
+								"naturalWidth": 495
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/icon-gauge.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/calendar.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/gaspump.svg",
+								"complete": true,
+								"naturalWidth": 16
+							},
+							{
+								"src": "http://127.0.0.1:6795/assets/icons/auto.svg",
+								"complete": true,
+								"naturalWidth": 20
+							}
+						],
+						"longTaskCount": 8,
+						"longTaskMs": 3715,
+						"transferredBytes": 1016365,
+						"scriptBytes": 149143,
+						"httpErrors": []
+					}
+				]
+			}
+		}
+	]
+}

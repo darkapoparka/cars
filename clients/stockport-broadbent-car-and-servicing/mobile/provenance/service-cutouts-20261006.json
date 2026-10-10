@@ -1,0 +1,46 @@
+{
+  "generatedAt": "2026-10-06T10:37:54.525Z",
+  "tool": "image_gen.imagegen",
+  "transparentBackground": true,
+  "treatment": "Matte white, charcoal and coral compact 3D illustrations matching the contact artwork.",
+  "status": "Three design samples; previewed in compact mobile rows, not mapped into the service configuration.",
+  "derivativeOperations": [
+    "resize",
+    "WebP encoding"
+  ],
+  "assets": [
+    {
+      "id": "import",
+      "source": "exec-879e57f7-0173-4210-93d2-09e25ce4835e.png",
+      "concept": "Generic white car on a folded charcoal map with a coral location pin.",
+      "original": "C:\\Users\\radev\\.codex\\generated_images\\01a10aaf-2314-7de0-9b09-b5dfe4f3c810\\exec-879e57f7-0173-4210-93d2-09e25ce4835e.png",
+      "originalPreserved": true,
+      "width": 256,
+      "bytes": 8720,
+      "sha256": "ef3ff09ad70b78d1f0ef99cf86b0c31bfdf41513efef9e9d09b5aa8a6ac28ac1",
+      "publicPath": "/images/service-cutouts/import-20261006.webp"
+    },
+    {
+      "id": "sell",
+      "source": "exec-5030fc6c-0ed4-4628-a1f4-9cb6c2474d5d.png",
+      "concept": "Charcoal car key fob with a blank white valuation tag and coral corner.",
+      "original": "C:\\Users\\radev\\.codex\\generated_images\\01a10aaf-2314-7de0-9b09-b5dfe4f3c810\\exec-5030fc6c-0ed4-4628-a1f4-9cb6c2474d5d.png",
+      "originalPreserved": true,
+      "width": 256,
+      "bytes": 11326,
+      "sha256": "a0aa35ded05aeffc305bdc8622d19474ee2c30b70013dc2d2ba9478b232c04da",
+      "publicPath": "/images/service-cutouts/sell-20261006.webp"
+    },
+    {
+      "id": "servicing",
+      "source": "exec-ae0dd8d1-8fd6-4ed6-8cd0-16c470c81ae6.png",
+      "concept": "Charcoal spanner over a white gear with a coral hub.",
+      "original": "C:\\Users\\radev\\.codex\\generated_images\\01a10aaf-2314-7de0-9b09-b5dfe4f3c810\\exec-ae0dd8d1-8fd6-4ed6-8cd0-16c470c81ae6.png",
+      "originalPreserved": true,
+      "width": 256,
+      "bytes": 10056,
+      "sha256": "11e20fa281dd279f6cc0398c0c53956354a0306a3557dd18f99f1976557aecfd",
+      "publicPath": "/images/service-cutouts/servicing-20261006.webp"
+    }
+  ]
+}
