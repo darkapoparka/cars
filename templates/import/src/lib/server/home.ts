@@ -20,7 +20,11 @@ import { isPreviewMode } from './runtime-config';
 export function homePageData(url: URL, requestLocale?: import('$lib/locale/core').Locale) {
 	const locale = requestLocale ?? localeFromUrl(url);
 	const inventory = listPublicVehicles();
-	const state = getInventoryState('listing-grid4-columns.html', { searchParams: url.searchParams });
+	const state = getInventoryState(
+		'listing-grid4-columns.html',
+		{ searchParams: url.searchParams },
+		inventory
+	);
 	// The featured photo row must not present illustrations or known-unavailable media as stock photos.
 	const featured = inventory.filter((vehicle) => vehicle.mediaKind === 'listing').slice(0, 8);
 	return {
@@ -40,8 +44,8 @@ export function homePageData(url: URL, requestLocale?: import('$lib/locale/core'
 		},
 		featured: inventoryCardsFromVehicles(featured, locale),
 		mobileFeatured: homeFiveVehicleCardsFromVehicles(featured, 8, locale),
-		brands: homeFiveBrandCardsForLocale(locale),
-		types: homeFiveTypeCardsForLocale(locale),
+		brands: homeFiveBrandCardsForLocale(locale, inventory),
+		types: homeFiveTypeCardsForLocale(locale, inventory),
 		reviewItems: isPreviewMode() ? localizedCopy(homeFiveReviewItems, locale) : [],
 		posts: localizedCopy(posts, locale)
 	};

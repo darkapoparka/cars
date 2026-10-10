@@ -11,6 +11,8 @@ This is the authoritative reusable master at templates/import in darkapoparka/ca
 
 Read [Architecture](docs/ARCHITECTURE.md) for current source boundaries. Read [TEMPLATE](TEMPLATE.md) for runtime/content boundaries and [docs/QA.md](docs/QA.md) when verification needs it. [Cars template releases](../../docs/TEMPLATE-PROMOTION.md) owns the source and release contract. Do not load every historical task ledger or resume its backlog.
 
+For mobile control, icon or label changes, follow [Mobile styling](docs/MOBILE-STYLING.md). Action icons use half the visible control height (36/18, 40/20, 44/22, 48/24, 56/28), through the shared sizing tokens. Preserve the native tap area around smaller inset surfaces. Text uses the existing typography tokens and approved component overrides; never calculate label font size as half the button height. Check matched BG/EN views at 320px and 390px and desktop preservation when shared owners change.
+
 ## Implementation and preservation
 
 Confirm physical checkout, remote, current branch/HEAD, relevant dirty paths and listener ownership. Independent files may be edited concurrently. Coordinate only overlapping files and shared Git/index/build output. Preserve unrelated staged, unstaged, untracked and unique branch work; no blanket staging, clean/reset, deletion of unmerged work or force-push. Keep existing lockfiles, runtime, licenses and provenance. Do not switch a working branch or overwrite another template or dealer merely to synchronize it.

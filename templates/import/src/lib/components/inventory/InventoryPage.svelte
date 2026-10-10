@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { inventoryDesktopControlsCopy } from '$lib/content/inventory-desktop-controls';
 	import { replaceState } from '$app/navigation';
 	import type {
 		AuxeroInventoryDesktopData,
@@ -14,6 +13,7 @@
 	import InventorySearch from './InventorySearch.svelte';
 	import InventoryTypeShortcuts from './InventoryTypeShortcuts.svelte';
 	import InventoryDisplayControls from './InventoryDisplayControls.svelte';
+	import InventoryActiveFilters from './InventoryActiveFilters.svelte';
 	import InventoryFiltersDialog from './InventoryFiltersDialog.svelte';
 	import VehicleCard from './VehicleCard.svelte';
 	import Action from '$lib/components/common/Action.svelte';
@@ -49,7 +49,6 @@
 			daynightInventoryProgress: { cardSetKey: key, count: Math.min(cards.length, count + 12) }
 		});
 	const english = $derived(locale === 'en');
-	const controlsCopy = $derived(inventoryDesktopControlsCopy[locale]);
 	let allOpen = $state(false);
 	let activeFilter = $state<AuxeroInventoryFilter | null>(null);
 	let dialog = $state<InventoryFiltersDialog>();
@@ -64,7 +63,7 @@
 					{#snippet header()}
 						<InventoryTypeShortcuts {english} />
 					{/snippet}
-					<InventorySearch {english} />
+					<InventorySearch {english} resultCount={desktop.resultCount} />
 					<InventoryToolbar {desktop} {english} {allOpen} {activeFilter} onopen={openFilters} />
 				</DesktopDiscoveryPanel>
 			{/snippet}
@@ -76,10 +75,15 @@
 		>
 			<div class="inventory-results__controls">
 				<div class="site-container inventory-results__overview">
-					<p role="status">
-						<strong>{desktop.resultCount}</strong>
-						{controlsCopy.vehicleNoun(desktop.resultCount)}
-					</p>
+					<div class="inventory-results__summary">
+						{#if desktop.activeFilters}
+							<InventoryActiveFilters
+								filters={desktop.activeFilters}
+								{english}
+								onedit={() => openFilters()}
+							/>
+						{/if}
+					</div>
 					<InventoryDisplayControls {desktop} {english} />
 				</div>
 			</div>
@@ -150,19 +154,15 @@
 	}
 	.inventory-results__overview {
 		display: grid;
-		grid-template-columns: auto minmax(0, 1fr);
+		grid-template-columns: minmax(0, 1fr) auto;
 		align-items: center;
 		gap: var(--bc-space-2) var(--bc-space-4);
 	}
-	.inventory-results__overview p {
-		margin: 0;
-		color: var(--bc-copy);
-		font-size: var(--bc-text-body);
-	}
-	.inventory-results__overview strong {
-		color: var(--bc-ink);
-		font-size: var(--bc-text-control);
-		font-weight: var(--bc-weight-heading);
+	.inventory-results__summary {
+		display: flex;
+		align-items: center;
+		gap: var(--bc-space-3);
+		min-width: 0;
 	}
 	.inventory-grid {
 		display: grid;

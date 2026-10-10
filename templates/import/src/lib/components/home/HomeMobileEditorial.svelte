@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { homeDiscoveryCopy } from '$lib/content/home-discovery';
 	import { mobileHomeCopy } from '$lib/content/mobile-home';
+	import { reviewPresentationCopy } from '$lib/content/reviews';
 	import type { homePageData } from '$lib/server/home';
 	import { linkHref } from '$lib/utils/links';
 	import ReviewCard from '$lib/components/reviews/ReviewCard.svelte';
@@ -20,14 +21,15 @@
 	{#if data.reviewItems.length}
 		<section class="site-container editorial-section">
 			<header>
-				<h2>{copy.reviews}</h2>
+				<h2>{copy.mobileReviews}</h2>
+				<span class="sample-label">{reviewPresentationCopy[data.locale].sample}</span>
 			</header>
 			<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
-			<div class="review-rail" tabindex="0" role="region" aria-label={copy.reviews}>
+			<div class="review-rail" tabindex="0" role="region" aria-label={copy.mobileReviews}>
 				{#each data.reviewItems as review (review.name)}
-					<ReviewCard {review} {english} compactRole={copy.customer} />
+					<ReviewCard {review} {english} compactRole={copy.customer} compact sample />
 				{/each}
-				<HomeBrowseCard href={href('/reviews')} label={copy.viewAll} context={copy.reviews} />
+				<HomeBrowseCard href={href('/reviews')} label={copy.viewAll} context={copy.mobileReviews} />
 			</div>
 		</section>
 	{/if}
@@ -53,12 +55,12 @@
 	{#if data.posts.length}
 		<section class="site-container editorial-section guide-section">
 			<header>
-				<h2>{copy.guides}</h2>
+				<h2>{copy.mobileGuides}</h2>
 			</header>
 			<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
-			<div class="guide-list" tabindex="0" role="region" aria-label={copy.guides}>
+			<div class="guide-list" tabindex="0" role="region" aria-label={copy.mobileGuides}>
 				{#each data.posts as post (post.slug)}
-					<ArticleCard {post} {english} compact mobileRow readLabel={mobileCopy.read} />
+					<ArticleCard {post} {english} compact readLabel={mobileCopy.read} />
 				{/each}
 			</div>
 		</section>
@@ -74,106 +76,112 @@
 			display: block;
 		}
 		.editorial-section {
-			padding-block: 24px 8px;
+			padding-block: var(--bc-space-6) var(--bc-space-2);
 		}
 		header {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			gap: 12px;
-			margin-bottom: 12px;
+			gap: var(--bc-space-3);
+			margin-bottom: var(--bc-space-3);
 		}
 		h2 {
 			margin: 0;
-			font: var(--bc-weight-heading) 24px/1.25 var(--bc-font-body);
-			letter-spacing: -0.025em;
+			font: var(--bc-mobile-home-section-font);
+			letter-spacing: var(--bc-tracking-tight);
 			color: var(--bc-ink);
+		}
+		.sample-label {
+			color: var(--bc-muted);
+			font: var(--bc-weight-body) var(--bc-mobile-meta)/var(--bc-mobile-meta-leading)
+				var(--bc-font-body);
 		}
 		.review-rail {
 			display: grid;
 			grid-auto-flow: column;
 			grid-auto-columns: 88%;
-			gap: 12px;
+			gap: var(--bc-space-3);
 			overflow-x: auto;
 			scroll-snap-type: x proximity;
-			padding-block: 2px 8px;
+			padding-block: calc(var(--bc-space-1) / 2) var(--bc-space-2);
 			scrollbar-width: none;
 		}
 		.review-rail :global(.review-card) {
-			padding: 16px;
-			gap: 14px;
+			padding: var(--bc-space-4);
+			gap: var(--bc-space-3);
 			background: var(--bc-surface-raised);
 			scroll-snap-align: start;
 		}
-		.review-rail :global(.review-card__avatar) {
-			flex-basis: 40px;
-			width: 40px;
-			height: 40px;
-		}
 		.review-rail :global(.review-card__person strong) {
-			font-size: 16px;
+			font: var(--bc-weight-emphasis) var(--bc-mobile-label)/var(--bc-mobile-label-leading)
+				var(--bc-font-body);
 		}
 		.guide-list {
 			display: grid;
 			grid-auto-flow: column;
 			grid-auto-columns: 88%;
-			gap: 12px;
+			gap: var(--bc-space-3);
 			overflow-x: auto;
 			scroll-snap-type: x proximity;
 			overscroll-behavior-x: contain;
-			padding-block: 2px 8px;
+			padding-block: calc(var(--bc-space-1) / 2) var(--bc-space-2);
 			scrollbar-width: none;
 		}
 		.guide-list :global(.article-card) {
 			scroll-snap-align: start;
 		}
 		.guide-section {
-			padding-bottom: 24px;
-		}
-		.guide-list :global(.article-card__image) {
-			min-height: 120px;
-			object-fit: cover;
-		}
-		.guide-list :global(.article-card__link) {
-			grid-template-columns: 28% minmax(0, 1fr);
+			padding-bottom: var(--bc-space-6);
 		}
 		.guide-list :global(.article-card__title) {
 			display: block;
 			overflow: visible;
-			font-size: 16px;
-			line-height: 1.3;
+			min-height: 0;
+			font: var(--bc-weight-heading) var(--bc-mobile-label)/var(--bc-mobile-label-leading)
+				var(--bc-font-body);
 		}
 		.guide-list :global(.article-card__meta span:last-child) {
 			display: none;
 		}
 		.guide-list :global(.article-card__meta) {
 			display: flex;
-			font-size: 12px;
+			font: var(--bc-weight-body) var(--bc-mobile-stat)/var(--bc-mobile-stat-leading)
+				var(--bc-font-body);
 		}
 		.guide-list :global(.article-card__meta span:first-child) {
 			display: block;
 		}
+		.guide-list :global(.article-card p) {
+			display: none;
+		}
 		.guide-list :global(.article-card__more) {
 			display: flex;
-			justify-content: flex-end;
-			gap: 6px;
-			min-height: 28px;
-			font-size: 13px;
-			font-weight: var(--bc-weight-body);
+			justify-content: space-between;
+			gap: var(--bc-space-2);
+			min-height: var(--bc-space-6);
+			padding: 0;
+			font: var(--bc-weight-body) var(--bc-mobile-meta)/var(--bc-mobile-meta-leading)
+				var(--bc-font-body);
 			color: var(--bc-muted);
+		}
+		.guide-list :global(.article-card__more svg) {
+			width: var(--bc-control-icon-size-compact);
+			height: var(--bc-control-icon-size-compact);
 		}
 		.guide-list :global(.article-card__body) {
 			justify-content: flex-start;
-			gap: 6px;
-			padding: 12px;
+			gap: var(--bc-space-2);
+			padding: var(--bc-space-4);
 		}
 		.contact-section :global(.commerce-banner) {
 			aspect-ratio: auto;
 			min-height: 148px;
 			padding: 16px;
 		}
-		.contact-section :global(h3) {
+		.contact-section :global(.commerce-banner h3) {
 			max-width: 65%;
+			font: var(--bc-weight-heading) var(--bc-mobile-section-title)/var(--bc-leading-h3)
+				var(--bc-font-body);
 		}
 	}
 </style>

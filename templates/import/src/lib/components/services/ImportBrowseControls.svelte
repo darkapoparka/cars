@@ -49,12 +49,6 @@
 		make: copy.anyMake,
 		model: copy.anyModel
 	});
-	const helps = $derived({
-		origin: copy.countryHelp,
-		bodyType: copy.typeHelp,
-		make: copy.makeHelp,
-		model: copy.modelHelp
-	});
 	const country = $derived(
 		importCountries.find((market) => market.value === criteria.origin) ?? importCountries[0]
 	);
@@ -164,13 +158,12 @@
 <MobileSheet
 	bind:open
 	title={overview ? copy.filters : labels[field]}
-	description={overview ? copy.preferences : helps[field]}
 	onclose={finishClose}
 	surface="selection"
 	backLabel={copy.back}
 	onback={overview ? undefined : () => (overview = true)}
 	mode={!overview && (field === 'make' || field === 'model') ? 'full' : 'sheet'}
-	contentClass={`import-preferences-sheet ${!overview && (field === 'make' || field === 'model') ? 'import-preferences-sheet--searchable' : ''}`}
+	contentClass={`mobile-filter-surface import-preferences-sheet ${!overview && (field === 'make' || field === 'model') ? 'import-preferences-sheet--searchable' : ''}`}
 >
 	<form
 		class="import-preferences"
@@ -245,9 +238,10 @@
 		{/if}
 	</form>
 	{#snippet footer()}
-		<div class="import-preferences__actions">
+		<div class="mobile-filter-actions">
 			<button
 				type="button"
+				class="mobile-filter-action mobile-filter-action--clear"
 				onclick={() => {
 					if (overview) {
 						pendingHref = importCriteriaUrl(page.url, emptyImportCriteria);
@@ -260,6 +254,7 @@
 			>
 			<button
 				type="button"
+				class="mobile-filter-action mobile-filter-action--apply"
 				onclick={() => {
 					if (overview) open = false;
 					else apply();
@@ -290,11 +285,6 @@
 	.import-browse__empty button :global(svg) {
 		width: var(--bc-control-icon-size-standard);
 		height: var(--bc-control-icon-size-standard);
-		flex: 0 0 auto;
-	}
-	.import-preferences__actions button :global(svg) {
-		width: var(--bc-control-icon-size-primary);
-		height: var(--bc-control-icon-size-primary);
 		flex: 0 0 auto;
 	}
 
@@ -440,34 +430,6 @@
 		overscroll-behavior: contain;
 	}
 
-	.import-preferences__actions {
-		display: grid;
-		grid-template-columns: minmax(80px, 1fr) 2fr;
-		gap: var(--bc-space-3);
-	}
-	.import-preferences__actions button {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: var(--bc-space-2);
-		min-height: 48px;
-		padding: 0 12px;
-		border: 0;
-		border-radius: var(--bc-radius-control);
-		background: var(--bc-bg-strong);
-		color: var(--bc-ink);
-		font-family: var(--bc-font-body);
-		font-size: var(--bc-text-control);
-		line-height: var(--bc-leading-control);
-		cursor: pointer;
-		white-space: nowrap;
-		min-width: 0;
-	}
-	.import-preferences__actions button:last-child {
-		border-color: transparent;
-		background: var(--bc-accent);
-		color: var(--bc-white);
-	}
 	button:focus-visible,
 	a:focus-visible,
 	input:focus-visible {

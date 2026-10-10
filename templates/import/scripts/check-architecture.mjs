@@ -70,9 +70,15 @@ const blocked = new Set([
 	'src/lib/server/auxero-public-shell.ts',
 	'src/lib/components/layout/AuxeroRuntimeScripts.svelte'
 ]);
-const entries = source.filter(
-	(file) => relative(file).startsWith('src/routes/(site)/') && /\+.*\.(ts|svelte)$/.test(file)
-);
+const entries = source.filter((file) => {
+	const name = relative(file);
+	// Public routes inherit the root layout and hooks, so their dependencies share this boundary.
+	return (
+		(name.startsWith('src/routes/(site)/') && /\+.*\.(ts|svelte)$/.test(file)) ||
+		/^src\/routes\/\+layout(?:\.server)?\.(ts|js|svelte)$/.test(name) ||
+		/^src\/hooks(?:\.(server|client))?\.(ts|js)$/.test(name)
+	);
+});
 const checked = new Set();
 const problems = [];
 const inspect = (file, chain = []) => {
@@ -96,7 +102,7 @@ if (problems.length) {
 	console.log(
 		'Architecture checks passed: ' +
 			entries.length +
-			' native route modules, ' +
+			' native entry modules, ' +
 			checked.size +
 			' reachable modules, one Tailwind generation entry.'
 	);

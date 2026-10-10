@@ -109,6 +109,12 @@ export const extraEnglish = {
 		'We arrange a viewing, documents, registration or sale by appointment.',
 	'Уговаряме оглед, документи и предаване.': 'Arrange viewing, documents and handover.',
 	'Клиент на Day Night Auto': 'Day Night Auto customer',
+	'Историята, транспортът и регистрацията бяха обяснени ясно. Спокойно и прозрачно предаване.':
+		'History, transport and registration were explained clearly. A calm, transparent handover.',
+	'Ясни снимки, документи, пробег и разходи. Практичен разговор преди доставката.':
+		'Clear photos, documents, mileage and costs. A practical conversation before delivery.',
+	'Получих ясна обратна връзка за цената, документите и представянето на автомобила.':
+		'Clear feedback on the price, documents and how to present my car.',
 	'Екипът ми обясни историята на автомобила, транспорта и стъпките по регистрацията, преди да поема ангажимент. Предаването беше спокойно и прозрачно.':
 		'The team explained the car’s history, transport and registration steps before I committed. Handover was calm and transparent.',
 	'Клиент с внос': 'Import customer',

@@ -64,7 +64,7 @@
 	@media (min-width: 768px) {
 		.site-filter-trigger {
 			display: grid;
-			grid-template-columns: minmax(0, 1fr) auto;
+			grid-template-columns: minmax(0, 1fr) 16px;
 			font-size: var(--bc-text-body);
 			font-weight: var(--bc-weight-control);
 			min-height: var(--bc-control-height-standard);
@@ -92,6 +92,7 @@
 			background: var(--bc-accent-hover);
 		}
 		.site-filter-trigger :global(svg) {
+			justify-self: end;
 			width: 16px;
 			height: 16px;
 			color: var(--bc-muted);

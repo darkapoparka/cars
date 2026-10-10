@@ -9,7 +9,7 @@
 	import { submitIntake } from '$lib/browser/submit-intake';
 	import { receiptMessage } from '$lib/domain/inquiry';
 	import { browser } from '$app/environment';
-	import { goto } from '$app/navigation';
+	import { afterNavigate, goto } from '$app/navigation';
 	import { linkHref as resolve } from '$lib/utils/links';
 	import type { AuxeroVehicleDetailData, AuxeroVehicleDetailDrawerTabId } from '$lib/auxero/detail';
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
@@ -193,8 +193,13 @@
 		openImageViewer(selectedImageIndex);
 	};
 
+	let hasPreviousAppPage = false;
+	afterNavigate(({ from }) => {
+		hasPreviousAppPage = from?.route.id != null;
+	});
+
 	const goBack = () => {
-		if (browser && window.history.length > 1) {
+		if (browser && hasPreviousAppPage && window.history.length > 1) {
 			window.history.back();
 			return;
 		}
@@ -360,7 +365,7 @@
 			</p>
 		{/if}
 
-		<div class="daynight-mobile-pdp__topbar" data-mobile-pdp-topbar>
+		<div class="daynight-mobile-pdp__topbar mobile-utility-bar" data-mobile-pdp-topbar>
 			<MobileIconAction label={detail.mobileDrawer.backLabel} appearance="overlay" onclick={goBack}>
 				<ArrowLeft size={20} strokeWidth={2} aria-hidden="true" />
 			</MobileIconAction>
@@ -600,7 +605,7 @@
 		showHandle={false}
 		contentClass="daynight-mobile-pdp__viewer-sheet"
 	>
-		<div class="daynight-mobile-pdp__viewer" data-mobile-pdp-viewer>
+		<div class="daynight-mobile-pdp__viewer mobile-utility-bar" data-mobile-pdp-viewer>
 			<MobileIconAction
 				class="daynight-mobile-pdp__viewer-close"
 				label={detail.mobileDrawer.closeLabel}
@@ -719,9 +724,9 @@
 		}
 
 		.daynight-mobile-pdp__topbar {
-			top: calc(14px + env(safe-area-inset-top));
-			right: 14px;
-			left: 14px;
+			top: calc(var(--bc-space-2) + env(safe-area-inset-top));
+			right: var(--bc-mobile-gutter);
+			left: var(--bc-mobile-gutter);
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
@@ -730,7 +735,7 @@
 		.daynight-mobile-pdp__topbar-actions {
 			display: flex;
 			align-items: center;
-			gap: 4px;
+			gap: var(--bc-mobile-utility-gap);
 		}
 
 		.daynight-mobile-pdp__photo-count {
@@ -1017,7 +1022,7 @@
 
 		.daynight-mobile-pdp__eyebrow {
 			margin: 0;
-			color: #728093;
+			color: var(--bc-copy);
 			font-size: var(--bc-mobile-label);
 			font-weight: var(--bc-weight-heading);
 			line-height: var(--bc-mobile-label-leading);
@@ -1059,7 +1064,7 @@
 		}
 
 		.daynight-mobile-pdp__finance span {
-			color: #728093;
+			color: var(--bc-copy);
 			font-size: var(--bc-mobile-label);
 			font-weight: var(--bc-weight-heading);
 			line-height: var(--bc-mobile-label-leading);
@@ -1402,7 +1407,8 @@
 			grid-template-rows: auto minmax(0, 1fr) auto;
 			background: #050505;
 			color: #ffffff;
-			padding: calc(14px + env(safe-area-inset-top)) 14px calc(16px + env(safe-area-inset-bottom));
+			padding: calc(var(--bc-space-2) + env(safe-area-inset-top)) var(--bc-mobile-gutter)
+				calc(var(--bc-space-4) + env(safe-area-inset-bottom));
 		}
 
 		:global(.daynight-mobile-pdp__viewer-sheet.bc-mobile-sheet__content) {
@@ -1412,8 +1418,8 @@
 
 		.daynight-mobile-pdp__viewer :global(.daynight-mobile-pdp__viewer-close) {
 			position: absolute;
-			top: calc(14px + env(safe-area-inset-top));
-			right: 14px;
+			top: calc(var(--bc-space-2) + env(safe-area-inset-top));
+			right: var(--bc-mobile-gutter);
 			z-index: 2;
 		}
 

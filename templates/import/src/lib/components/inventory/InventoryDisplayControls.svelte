@@ -122,7 +122,7 @@
 		align-items: center;
 		gap: var(--bc-space-2);
 		border: 1px solid transparent;
-		border-radius: var(--bc-desktop-control-radius);
+		border-radius: var(--bc-radius-pill);
 		min-height: var(--bc-control-height-primary);
 		padding: 0 var(--bc-space-4);
 		background: var(--bc-control);
@@ -160,7 +160,7 @@
 		max-width: min(360px, calc(100vw - var(--bc-page-x) * 2));
 		padding: var(--bc-space-2);
 		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-panel);
+		border-radius: var(--bc-radius-modal);
 		background: var(--bc-surface-raised);
 		box-shadow: var(--bc-shadow-card);
 		display: grid;
@@ -176,7 +176,7 @@
 		gap: var(--bc-space-4);
 		min-height: var(--bc-control-height-primary);
 		padding: var(--bc-space-2) var(--bc-space-3);
-		border-radius: var(--bc-radius-md);
+		border-radius: var(--bc-radius-lg);
 		text-decoration: none;
 		color: var(--bc-ink);
 		font-size: var(--bc-text-control);
@@ -214,7 +214,7 @@
 		justify-content: flex-start;
 		width: 100%;
 		font-weight: var(--bc-weight-control);
-		border-radius: var(--bc-radius-md);
+		border-radius: var(--bc-radius-lg);
 		padding-inline: var(--bc-space-3);
 		white-space: normal;
 	}

@@ -187,9 +187,11 @@ Configured live staff sessions still use the retained process-local session impl
 
 ## Verification
 
-Use Node 24 from .node-version and the retained npm lockfile. npm run verify covers Svelte checking, formatting, ESLint, the native dependency boundary, local image signatures and unit tests. npm run build verifies the Vercel adapter output. npm run test:e2e covers desktop/mobile smoke, forms, URL state, dialogs/navigation, accessibility and regressions. The managed browser test server is deliberately configured with synthetic preview data and no provider credentials.
+Use Node 24 from .node-version and the retained npm lockfile. npm run verify covers Svelte checking, formatting, ESLint, the native dependency boundary, local image signatures and unit tests. The architecture check traverses native public routes and shared root layouts/hooks transitively, rejecting legacy renderer and script-replay dependencies. npm run build verifies the Vercel adapter output. npm run test:e2e covers desktop/mobile smoke, forms, URL state, dialogs/navigation, accessibility and regressions. The managed browser test server is deliberately configured with synthetic preview data and no provider credentials.
 
-Do not rebuild into the output directory of a preview another task is reviewing. Use a temporary verification copy containing the complete current working source, including untracked files, with its own npm ci and no .env/.git/deployment bindings. This is QA output, not a second source branch or worktree. Test the frozen build, then record the source digest and any gaps in docs/localization/HANDOFF.md.
+Follow the change-sized checks and retention rules in [QA](QA.md). Reuse the stable dependency installation and live preview for focused local checks; production builds and broader regression checks belong at an integration/release checkpoint or when build, dependency, routing or server changes warrant them. Do not repeat passed checks without a new change, failure or unresolved concern.
+
+Do not rebuild into the output directory of a preview another task is reviewing. If isolation is necessary, reuse one bounded generated output per active owner across the batch, without versioned full project, dependency or static-asset copies per iteration. Preserve other owners' previews and useful evidence. At an integration/release checkpoint, test the frozen reviewed source and record its exact commit, source digest and any gaps in docs/localization/HANDOFF.md; a full source release still requires exact-commit evidence.
 
 Cars still owns mounted /variant-2 compatibility, immutable release selection and dealer deployment. A standalone local build does not prove those boundaries. No template commit is automatic visual approval or a dealer rollout.
 

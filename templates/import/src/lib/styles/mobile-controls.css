@@ -5,10 +5,11 @@
 		--bc-mobile-choice-mark-size: 18px;
 		--bc-mobile-choice-divider: color-mix(in srgb, var(--bc-border) 55%, transparent);
 	}
-	/* Search and its adjacent actions share the standard toolbar height. */
-	.daynight-inventory-mobile__search {
+	/* Page utilities share one geometry; inset sheet actions keep the compact role. */
+	.mobile-utility-bar {
 		--bc-mobile-icon-action-surface-size: var(--bc-control-height-standard);
 		--bc-mobile-icon-action-glyph-size: var(--bc-control-icon-size-standard);
+		--bc-mobile-utility-gap: var(--bc-space-2);
 	}
 	/* Match the borderless search surface; active actions keep their existing fill. */
 	.daynight-inventory-mobile__search .bc-mobile-icon-action:not(.active) {
@@ -25,9 +26,13 @@
 
 	.mobile-quick-rail {
 		display: flex;
+		box-sizing: border-box;
+		width: calc(100% + var(--bc-mobile-gutter));
+		min-width: 0;
 		gap: var(--bc-space-2);
 		overflow-x: auto;
 		padding-block: var(--bc-mobile-control-inset);
+		padding-inline-end: var(--bc-mobile-gutter);
 		scrollbar-width: none;
 	}
 	.mobile-quick-rail::-webkit-scrollbar {
@@ -156,5 +161,101 @@
 	.mobile-disclosure-row:focus-visible {
 		outline: 2px solid var(--bc-accent);
 		outline-offset: -2px;
+	}
+
+	/* Filter sheets use spacing and plain utility icons instead of dividers. */
+	.mobile-filter-surface .mobile-choice-row::before,
+	.mobile-filter-surface .mobile-disclosure-row::before,
+	.mobile-filter-surface .bc-mobile-icon-action::before {
+		display: none;
+	}
+	.mobile-filter-surface.mobile-selection-surface > header {
+		display: grid;
+		grid-template-columns:
+			var(--bc-mobile-control-hit-size) minmax(0, 1fr)
+			var(--bc-mobile-control-hit-size);
+		grid-template-rows: var(--bc-mobile-control-hit-size);
+		align-items: center;
+		gap: var(--bc-space-2);
+	}
+	.mobile-filter-surface > header > :is(div, [data-dialog-title]) {
+		grid-column: 2;
+		grid-row: 1;
+		min-width: 0;
+		width: 100%;
+		margin: 0;
+		text-align: center;
+	}
+	.mobile-filter-surface > header > .bc-mobile-icon-action {
+		grid-column: 1;
+		grid-row: 1;
+		align-self: center;
+		justify-self: center;
+	}
+	.mobile-filter-surface > header > .bc-mobile-icon-action:last-child {
+		grid-column: 3;
+	}
+	.mobile-filter-surface > header .bc-mobile-icon-action > svg {
+		display: block;
+		width: var(--bc-mobile-control-glyph-size);
+		height: var(--bc-mobile-control-glyph-size);
+		stroke-width: var(--bc-mobile-icon-action-stroke);
+	}
+	.mobile-filter-surface :is(.bc-mobile-sheet__title, .daynight-inventory-mobile-drawer__title) {
+		display: block;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.mobile-filter-actions {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: var(--bc-space-2);
+	}
+	.mobile-filter-action {
+		position: relative;
+		display: inline-flex;
+		min-width: 0;
+		min-height: var(--bc-mobile-control-surface-size);
+		align-items: center;
+		justify-content: center;
+		gap: var(--bc-space-2);
+		margin-block: var(--bc-mobile-control-inset);
+		border: 0;
+		border-radius: var(--bc-radius-control);
+		background: transparent;
+		padding: 0;
+		appearance: none;
+		color: var(--bc-ink);
+		font: var(--bc-weight-control) var(--bc-text-cta)/var(--bc-leading-cta) var(--bc-font-body);
+		cursor: pointer;
+		white-space: nowrap;
+	}
+	.mobile-filter-action::before {
+		position: absolute;
+		inset-block: calc(-1 * var(--bc-mobile-control-inset));
+		inset-inline: 0;
+		content: '';
+	}
+	.mobile-filter-action--apply {
+		background: var(--bc-accent);
+		padding-inline: var(--bc-space-2);
+		color: var(--bc-white);
+	}
+	.mobile-filter-action > svg {
+		width: var(--bc-mobile-control-glyph-size);
+		height: var(--bc-mobile-control-glyph-size);
+		flex: 0 0 auto;
+	}
+	.mobile-filter-action:focus-visible {
+		outline: 2px solid var(--bc-accent);
+		outline-offset: 2px;
+	}
+}
+
+@media (max-width: 374px) {
+	.mobile-utility-bar {
+		--bc-mobile-utility-gap: var(--bc-space-1);
 	}
 }

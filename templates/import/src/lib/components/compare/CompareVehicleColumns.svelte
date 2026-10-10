@@ -249,6 +249,10 @@
 		}
 	}
 	@media (max-width: 767.98px) {
+		.compare-remove :global(svg) {
+			width: calc(var(--bc-control-icon-size-chip) - var(--bc-space-2));
+			height: calc(var(--bc-control-icon-size-chip) - var(--bc-space-2));
+		}
 		table {
 			width: max(100%, calc(100% * var(--compare-count) / 2));
 		}

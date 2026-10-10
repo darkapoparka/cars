@@ -97,7 +97,8 @@ Home, Cars and Import country quick filters share `.mobile-quick-pill` from
 sets their 12px control corners (`--bc-radius-control`), 40px visible height,
 44px tap area, 18px text and padding; use
 `.mobile-quick-pill--icon` for an icon-only quick filter. Keep page-specific
-rail layout, selected states, flags and label truncation in the component.
+selected states, flags and label truncation in the component. Shared rail layout
+belongs to `.mobile-quick-rail`.
 The icon-only filter keeps the same 40px surface and 20px glyph, with a 2.25
 stroke for clearer visual weight beside text pills. Preserve the matching rail
 height rather than widening or raising the filter button.
@@ -106,8 +107,11 @@ Quick pills use the shared 8px horizontal padding and 4px inline gap. Avoid
 page-specific padding or font overrides that make the same control look larger.
 Ordinary form fields and action buttons retain their existing component shapes.
 
-Home and Import use `.mobile-quick-rail` for shared scrolling, gaps and 2px block
-padding. Their quick-filter rows start at the shared 14px mobile gutter.
+Home, Cars and Import use `.mobile-quick-rail` for shared scrolling and gaps.
+Rows start at the shared 14px mobile gutter and reach the right viewport edge,
+with 14px trailing padding so the final pill is fully visible after scrolling.
+A partially visible next pill signals more choices. Home and Import keep 2px
+block padding; Cars retains its existing vertical toolbar spacing.
 
 Final Home corner roles, confirmed on 10 October 2026: quick filters, brand cards
 and type cards use 12px corners; vehicle cards retain their existing 10px corners.
@@ -125,11 +129,15 @@ transparent pseudo-element outsets to retain the 44px rail footprint and tap are
 Icon-only pills extend the target on all four sides. `MobileIconAction` retains
 its native 44px box around the 40px painted circle.
 
-Controls next to a search field share its visible height. The Cars search toolbar
-sets the shared icon-action surface and glyph tokens to the standard role:
-44px Search, Filter and Sort surfaces, with 22px action icons. Quick filters in
-the separate row remain 40px high. Home and Import header utilities occupy a
-different row from their 48px search fields and keep the compact 40px circles.
+Page utility bars use `.mobile-utility-bar`: 44px visible circles with 22px icons
+for Home/Import contact and map, Cars Filter/Sort, PDP Back/Compare/Save/Share and
+the photo-viewer Close action. Use 14px edge gutters, an 8px top inset plus the
+safe area, and 8px action gaps (4px below 375px). Dark and image-overlay tones
+retain the contrast needed by their backgrounds. Sheet controls keep their
+compact role. Quick filters in the separate row remain 40px high.
+The header map pin has the owner's approved 2px optical correction (24px)
+beside the 22px call glyph. Its narrow silhouette needs the extra size; the
+button surface, stroke, spacing and tap area remain shared.
 Search fields keep their existing dimensions and independent 20px typography.
 The toolbar sizing applies below 768px and preserves desktop styling.
 Default Filter and Sort circles share Search's borderless white surface; keep
@@ -152,7 +160,16 @@ single selection into multiple selection or discard a draft.
 
 Use `.mobile-disclosure-row` for filter category overviews and
 `.mobile-choice-list` for stacked options. Quick-filter rails remain pills.
-The shared list style owns faint inset separators. Keep numeric inventory counts
+The shared list style owns faint inset separators outside filter overlays. Filter
+overlays opt into `.mobile-filter-surface`: omit helper descriptions, row/footer
+dividers and painted back/close circles. Keep the 44px icon targets and useful
+selection summaries/counts. Footer actions use `.mobile-filter-actions` and
+`.mobile-filter-action`, with a plain Clear action and a content-sized 40px
+primary surface inside a 44px tap area. This follows the owner's 10 October 2026
+filter simplification request. Filter headers use one 44px grid row with equal
+Back/Close columns and a centered title. Reserve the Back column when absent;
+truncate long titles with an ellipsis and retain the full accessible title.
+Home/Inventory and Import use the same Back arrow. Keep numeric inventory counts
 in the option data and merge them through the domain helper, rather than parsing
 display labels inside a component.
 Short selection sheets use the shared white inset surface; searchable and long

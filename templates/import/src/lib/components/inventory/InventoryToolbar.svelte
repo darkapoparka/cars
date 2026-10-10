@@ -2,11 +2,9 @@
 	import { page } from '$app/state';
 	import { inventoryDesktopControlsCopy } from '$lib/content/inventory-desktop-controls';
 	import SlidersHorizontal from '@lucide/svelte/icons/sliders-horizontal';
-	import X from '@lucide/svelte/icons/x';
 	import { inventoryFilterParam } from '$lib/domain/inventory-query';
 	import InventoryFilter from './InventoryFilter.svelte';
 	import Action from '$lib/components/common/Action.svelte';
-	import { linkHref } from '$lib/utils/links';
 	import type {
 		AuxeroInventoryDesktopData,
 		AuxeroInventoryFilter
@@ -67,15 +65,6 @@
 			></Action
 		>
 	</div>
-	{#if desktop.activeFilters}<div class="inventory-toolbar__active">
-			{#each desktop.activeFilters.chips as chip (chip.href)}<a
-					href={linkHref(chip.href)}
-					aria-label={controlsCopy.removeFilter + chip.label}
-					>{chip.label}<X size={14} aria-hidden="true" /></a
-				>{/each}<a class="inventory-toolbar__clear" href={linkHref(desktop.activeFilters.clearHref)}
-				>{desktop.activeFilters.clearLabel}</a
-			>
-		</div>{/if}
 </div>
 
 <style>
@@ -89,32 +78,6 @@
 		justify-content: flex-start;
 		align-items: center;
 		gap: var(--bc-space-2);
-	}
-	.inventory-toolbar__active {
-		display: flex;
-		flex-wrap: wrap;
-		gap: var(--bc-space-2);
-		padding-top: var(--bc-space-4);
-	}
-	.inventory-toolbar__active a {
-		display: inline-flex;
-		align-items: center;
-		gap: var(--bc-space-2);
-		color: var(--bc-ink);
-		font-size: var(--bc-text-label);
-		text-decoration: none;
-		min-height: var(--bc-control-height-standard);
-		padding: var(--bc-space-1) var(--bc-space-2);
-		border-radius: var(--bc-radius-sm);
-		border: 1px solid var(--bc-border);
-		background: var(--bc-control);
-	}
-	.inventory-toolbar__active .inventory-toolbar__clear {
-		background: transparent;
-		border-color: transparent;
-		color: var(--desktop-discovery-copy, var(--bc-ink));
-		text-decoration: underline;
-		text-underline-offset: var(--bc-space-1);
 	}
 	.inventory-toolbar__row :global(.inventory-toolbar__all) {
 		flex: none;
@@ -134,23 +97,8 @@
 		}
 		.inventory-toolbar__field :global(.site-filter-trigger) {
 			width: 100%;
-			padding-inline: var(--bc-space-2);
-			gap: var(--bc-space-1);
-		}
-		.inventory-toolbar__active {
-			padding-top: var(--bc-space-3);
-		}
-		.inventory-toolbar__active a {
-			min-height: var(--bc-space-8);
 			padding-inline: var(--bc-space-3);
-			border-radius: var(--bc-radius-pill);
-			background: var(--bc-surface-raised);
-			border-color: transparent;
-			font-size: var(--bc-text-meta);
-		}
-		.inventory-toolbar__active a:hover {
-			border-color: transparent;
-			background: var(--bc-control-hover);
+			gap: var(--bc-space-2);
 		}
 		.inventory-toolbar__row :global(.inventory-toolbar__all) {
 			min-height: var(--bc-control-height-standard);

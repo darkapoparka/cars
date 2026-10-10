@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Search from '@lucide/svelte/icons/search';
 	import InventoryFilterChoice from './InventoryFilterChoice.svelte';
+	import { inventoryDialogCopy } from '$lib/content/inventory-desktop-controls';
 	import type { AuxeroInventoryFilter } from '$lib/server/inventory-options';
 	let {
 		filter,
@@ -8,6 +9,7 @@
 		selection = $bindable<string[]>([])
 	}: { filter: AuxeroInventoryFilter; english?: boolean; selection?: string[] } = $props();
 	const id = $props.id();
+	const copy = $derived(inventoryDialogCopy[english ? 'en' : 'bg']);
 	let query = $state('');
 	let input = $state<HTMLInputElement>();
 	let root = $state<HTMLDivElement>();
@@ -64,17 +66,27 @@
 				/></label
 			>
 		</div>{/if}
-	<div class="desktop-picker__options filter-options" bind:this={options}>
-		{#each matching as option (option.value)}<InventoryFilterChoice
-				label={option.label}
-				image={option.image}
-				mode={filter.mode}
-				name={id + '-choice'}
-				form={id + '-options'}
-				checked={selection.includes(option.value)}
-				onchange={() => toggle(option.value)}
-			/>{:else}<p role="status">{english ? 'No matches' : 'Няма съвпадения'}</p>{/each}
-	</div>
+	<section
+		class="filter-options-group"
+		class:filter-options-group--compact={!searchable}
+		aria-labelledby={id + '-options-heading'}
+	>
+		<header class="filter-options-group__header">
+			<h3 id={id + '-options-heading'}>{filter.label}</h3>
+			<span>{copy.optionCount(matching.length)}</span>
+		</header>
+		<div class="desktop-picker__options filter-options" bind:this={options}>
+			{#each matching as option (option.value)}<InventoryFilterChoice
+					label={option.label}
+					image={option.image}
+					mode={filter.mode}
+					name={id + '-choice'}
+					form={id + '-options'}
+					checked={selection.includes(option.value)}
+					onchange={() => toggle(option.value)}
+				/>{:else}<p role="status">{english ? 'No matches' : 'Няма съвпадения'}</p>{/each}
+		</div>
+	</section>
 </div>
 
 <style>

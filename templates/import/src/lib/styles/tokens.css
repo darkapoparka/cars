@@ -292,12 +292,16 @@
 	--bc-mobile-page-title-leading: 32px;
 	--bc-mobile-section-title: 22px;
 	--bc-mobile-section-title-leading: 28px;
+	/* Home section headings retain the approved prominence across discovery and editorial rails. */
+	--bc-mobile-home-section-font: var(--bc-weight-heading)
+		var(--bc-mobile-page-title)/var(--bc-mobile-page-title-leading) var(--bc-font-heading);
 	--bc-mobile-card-title: 1.125rem;
 	--bc-mobile-card-title-leading: 24px;
 	--bc-mobile-body: var(--bc-text-body);
 	--bc-mobile-body-leading: 24px;
 	--bc-mobile-label: var(--bc-text-label);
 	--bc-mobile-label-leading: 20px;
+	--bc-mobile-review-avatar-size: var(--bc-control-height-primary);
 	--bc-mobile-meta: var(--bc-text-meta);
 	--bc-mobile-meta-leading: 18px;
 	--bc-mobile-stat: 0.75rem;

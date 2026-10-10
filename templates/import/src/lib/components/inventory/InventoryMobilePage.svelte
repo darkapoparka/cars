@@ -12,7 +12,7 @@
 	import ArrowUpDown from '@lucide/svelte/icons/arrow-up-down';
 	import ChevronDown from '@lucide/svelte/icons/chevron-down';
 	import ChevronRight from '@lucide/svelte/icons/chevron-right';
-	import ChevronLeft from '@lucide/svelte/icons/chevron-left';
+	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
 	import Search from '@lucide/svelte/icons/search';
 	import SlidersHorizontal from '@lucide/svelte/icons/sliders-horizontal';
 	import X from '@lucide/svelte/icons/x';
@@ -704,7 +704,7 @@
 		<svelte:element this={embedded ? 'section' : 'main'} class="daynight-inventory-mobile__main">
 			<h1 class="sr-only">{inventoryHeading}</h1>
 			<div class="daynight-inventory-mobile__sticky" aria-busy={filterNavigationPending}>
-				<div class="daynight-inventory-mobile__search">
+				<div class="daynight-inventory-mobile__search mobile-utility-bar">
 					<button
 						type="button"
 						class="daynight-inventory-mobile__search-field"
@@ -745,7 +745,10 @@
 					</MobileIconAction>
 				</div>
 
-				<nav class="daynight-inventory-mobile__tools" aria-label={mobile.filterLabel}>
+				<nav
+					class="daynight-inventory-mobile__tools mobile-quick-rail"
+					aria-label={mobile.filterLabel}
+				>
 					<button
 						type="button"
 						class="daynight-inventory-mobile__tool-choice mobile-quick-pill"
@@ -971,24 +974,22 @@
 		</Drawer.Overlay>
 		<Drawer.Content
 			id={filterDrawerId}
-			class={`mobile-selection-surface ${filterDrawerFullscreen ? 'mobile-selection-surface--full' : ''} daynight-inventory-mobile-drawer__sheet daynight-inventory-mobile-drawer__sheet--filters ${filterDrawerFullscreen ? 'daynight-inventory-mobile-drawer__sheet--fullscreen' : ''} ${filterDrawerMode === 'all' ? 'daynight-inventory-mobile-drawer__sheet--full' : 'daynight-inventory-mobile-drawer__sheet--compact'} ${filterDrawerMode === 'brand' || filterDrawerMode === 'model' ? 'daynight-inventory-mobile-drawer__sheet--searchable' : ''} ${filterDrawerHasActions ? 'daynight-inventory-mobile-drawer__sheet--with-actions' : ''}`}
+			class={`mobile-filter-surface mobile-selection-surface ${filterDrawerFullscreen ? 'mobile-selection-surface--full' : ''} daynight-inventory-mobile-drawer__sheet daynight-inventory-mobile-drawer__sheet--filters ${filterDrawerFullscreen ? 'daynight-inventory-mobile-drawer__sheet--fullscreen' : ''} ${filterDrawerMode === 'all' ? 'daynight-inventory-mobile-drawer__sheet--full' : 'daynight-inventory-mobile-drawer__sheet--compact'} ${filterDrawerMode === 'brand' || filterDrawerMode === 'model' ? 'daynight-inventory-mobile-drawer__sheet--searchable' : ''} ${filterDrawerHasActions ? 'daynight-inventory-mobile-drawer__sheet--with-actions' : ''}`}
 		>
 			{#if !filterDrawerFullscreen}<Drawer.Handle
 					class="daynight-inventory-mobile-drawer__handle"
 				/>{/if}
 			<header>
-				<div class="daynight-inventory-mobile-drawer__heading">
-					{#if filterOverview && filterDrawerMode !== 'all'}
-						<MobileIconAction label={nt('ui183')} onclick={() => (filterDrawerMode = 'all')}>
-							<ChevronLeft size={20} strokeWidth={2} aria-hidden="true" />
-						</MobileIconAction>
-					{/if}
-					<Drawer.Title>
-						<span class="daynight-inventory-mobile-drawer__title">
-							{filterDrawerTitle}
-						</span>
-					</Drawer.Title>
-				</div>
+				{#if filterOverview && filterDrawerMode !== 'all'}
+					<MobileIconAction label={nt('ui183')} onclick={() => (filterDrawerMode = 'all')}>
+						<ArrowLeft size={20} strokeWidth={2} aria-hidden="true" />
+					</MobileIconAction>
+				{/if}
+				<Drawer.Title>
+					<span class="daynight-inventory-mobile-drawer__title">
+						{filterDrawerTitle}
+					</span>
+				</Drawer.Title>
 				<MobileIconAction label={mobile.closeLabel} onclick={closeFilterDrawer}>
 					<X size={20} strokeWidth={2} aria-hidden="true" />
 				</MobileIconAction>
@@ -1218,17 +1219,17 @@
 				{/if}
 			</div>
 			{#if filterDrawerHasActions}
-				<div class="daynight-inventory-mobile-drawer__actions">
+				<div class="daynight-inventory-mobile-drawer__actions mobile-filter-actions">
 					<button
 						type="button"
-						class="daynight-inventory-mobile-drawer__clear"
+						class="mobile-filter-action mobile-filter-action--clear"
 						onclick={clearFilterDraft}
 					>
 						{mobile.clearLabel}
 					</button>
 					<button
 						type="button"
-						class="daynight-inventory-mobile-drawer__done"
+						class="mobile-filter-action mobile-filter-action--apply"
 						onclick={() => {
 							if (filterOverview && filterDrawerMode !== 'all') filterDrawerMode = 'all';
 							else applyFilterDraft();
@@ -1294,7 +1295,7 @@
 		display: grid;
 		grid-template-columns: minmax(0, 1fr) repeat(2, var(--bc-mobile-icon-action-hit-size));
 		align-items: center;
-		gap: var(--bc-space-1);
+		gap: var(--bc-mobile-utility-gap);
 		min-width: 0;
 	}
 
@@ -1352,19 +1353,8 @@
 	.daynight-inventory-mobile__tools {
 		--bc-text-filter: var(--bc-text-quick-pill);
 		--bc-leading-filter: var(--bc-leading-quick-pill);
-		display: flex;
-		min-width: 0;
-		gap: var(--bc-space-2);
-		margin: 0 calc(-1 * var(--bc-mobile-gutter));
-		overflow-x: auto;
-		padding: 0 var(--bc-mobile-gutter);
-		scrollbar-width: none;
-		-webkit-mask-image: linear-gradient(to right, var(--bc-ink) calc(100% - 34px), transparent);
-		mask-image: linear-gradient(to right, var(--bc-ink) calc(100% - 34px), transparent);
-	}
-
-	.daynight-inventory-mobile__tools::-webkit-scrollbar {
-		display: none;
+		margin: 0;
+		padding-block: 0;
 	}
 
 	.daynight-inventory-mobile__tools :is(button, a).active {
@@ -1636,11 +1626,6 @@
 	:global(.daynight-inventory-mobile-drawer__sheet header div) {
 		min-width: 0;
 	}
-	.daynight-inventory-mobile-drawer__heading {
-		display: flex;
-		align-items: center;
-		gap: var(--bc-space-2);
-	}
 	.daynight-inventory-mobile-drawer__categories {
 		display: flex;
 		flex-direction: column;
@@ -1725,13 +1710,6 @@
 	.daynight-inventory-mobile-drawer__search-box:focus-within {
 		box-shadow: inset 0 0 0 2px var(--bc-focus);
 	}
-
-	.daynight-inventory-mobile-drawer__clear:focus-visible,
-	.daynight-inventory-mobile-drawer__done:focus-visible {
-		outline: 2px solid var(--bc-ink);
-		outline-offset: 2px;
-	}
-
 	.daynight-inventory-mobile-drawer__body {
 		display: grid;
 		min-height: 0;
@@ -1799,34 +1777,6 @@
 		display: grid;
 		gap: var(--bc-space-2);
 	}
-
-	.daynight-inventory-mobile-drawer__clear {
-		display: inline-flex;
-		min-width: 0;
-		max-width: 100%;
-		min-height: var(--bc-control-height-standard);
-		align-items: center;
-		gap: var(--bc-space-2);
-		border: 0;
-		border-radius: var(--bc-radius-pill);
-		background: var(--bc-white);
-		padding: 0 var(--bc-space-3);
-		appearance: none;
-		color: var(--bc-ink);
-		cursor: pointer;
-		font-size: var(--bc-text-filter);
-		font-weight: var(--bc-weight-control);
-		line-height: var(--bc-leading-control);
-		text-align: left;
-		text-decoration: none;
-		white-space: nowrap;
-	}
-
-	.daynight-inventory-mobile-drawer__clear,
-	.daynight-inventory-mobile-drawer__done {
-		white-space: nowrap;
-	}
-
 	.daynight-inventory-mobile-drawer__empty-option {
 		display: inline-flex;
 		min-height: var(--bc-control-height-standard);
@@ -1841,41 +1791,9 @@
 	}
 
 	.daynight-inventory-mobile-drawer__actions {
-		position: sticky;
-		bottom: 0;
 		z-index: 3;
-		display: grid;
-		grid-template-columns: 1fr 1.5fr;
-		gap: var(--bc-space-2);
-		margin: 2px calc(-1 * var(--bc-space-4)) 0;
-		border-top: 1px solid var(--bc-border);
+		flex: 0 0 auto;
 		background: var(--bc-white);
-		padding: var(--bc-space-3) var(--bc-space-4)
-			max(var(--bc-mobile-gutter), env(safe-area-inset-bottom));
-		box-shadow: none;
-	}
-
-	.daynight-inventory-mobile-drawer__clear {
-		justify-content: center;
-		min-height: var(--bc-control-height-primary);
-		border-radius: var(--bc-radius-control);
-		background: var(--bc-bg-strong);
-		color: var(--bc-ink);
-	}
-
-	.daynight-inventory-mobile-drawer__done {
-		display: inline-flex;
-		min-height: var(--bc-control-height-primary);
-		align-items: center;
-		justify-content: center;
-		border: 0;
-		border-radius: var(--bc-radius-control);
-		background: var(--bc-accent);
-		appearance: none;
-		color: var(--bc-white);
-		cursor: pointer;
-		font-size: var(--bc-text-cta);
-		font-weight: var(--bc-weight-heading);
-		line-height: var(--bc-leading-cta);
+		padding-top: var(--bc-space-3);
 	}
 </style>
