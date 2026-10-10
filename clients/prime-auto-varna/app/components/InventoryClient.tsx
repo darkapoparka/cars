@@ -218,7 +218,7 @@ const s=stylex.create({
  compactToolbar:{paddingTop:{[media.mobile]:4,default:12}},
  compactContent:{paddingTop:{[media.mobile]:6,default:10}},
  searchRing:{outlineOffset:-3},
- searchEntry:{display:'flex',alignItems:'center',flexGrow:1,gap:8,minWidth:0,minHeight:40,padding:0,color:$.ink,fontFamily:$.fontSans,fontSize:16,fontWeight:400,lineHeight:1.5,textAlign:'left',borderWidth:0,backgroundColor:'transparent',outlineStyle:'none',cursor:'pointer'},
+ searchEntry:{display:'flex',alignItems:'center',flexGrow:1,gap:8,minWidth:0,minHeight:{[media.mobile]:44,default:40},padding:0,color:$.ink,fontFamily:$.fontSans,fontSize:16,fontWeight:400,lineHeight:1.5,textAlign:'left',borderWidth:0,backgroundColor:'transparent',outlineStyle:'none',cursor:'pointer'},
  searchPrompt:{minWidth:0,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'},
  searchPlaceholder:{color:$.muted},
  toolbar:{display:'flex',position:'sticky',top:{[media.mobile]:'calc(56px + env(safe-area-inset-top))',[media.desktop]:137,default:'calc(68px + env(safe-area-inset-top))'},zIndex:45,gap:{[media.mobile]:8,default:6},overflowX:'auto',overscrollBehaviorX:'contain',maxWidth:$.content,marginInline:'auto',paddingTop:{[media.mobile]:$.mobilePillGap,default:12},paddingBottom:{[media.mobile]:0,default:12},paddingInline:{[media.mobile]:12,default:28},backgroundColor:'#fff',scrollbarWidth:'none'},

@@ -1,8 +1,26 @@
 {
   "schemaVersion": 1,
-  "request": "pilot-six-native-contract-repair-03",
-  "sourceCandidateCommit": "0ee5393e7fb5feb2238d18518f2bbcf7112443cd",
-  "dealers": ["dm-auto-varna"],
-  "families": ["auto-best", "modern", "import", "app", "mobile", "karento-best"],
-  "scope": "Real six-family compilation after repairing the native price-label export, typed logo prop, and Import Node 24 engine. Stock, assets and source approvals are preserved. No release approval or deployment is implied."
+  "request": "all-ten-final-app-native-contracts-04",
+  "sourceCandidateCommit": "f18cbf63793cead0a6fb30a33c63464d2bc44ff8",
+  "dealers": [
+    "dm-auto-varna",
+    "kolarov-cars",
+    "dynamic-auto-varna",
+    "car-point-trade-varna",
+    "pm-select-automotive",
+    "dream-drive-varna",
+    "prime-auto-varna",
+    "autoroad-varna",
+    "autofest-varna",
+    "city-cars-varna"
+  ],
+  "families": [
+    "auto-best",
+    "modern",
+    "import",
+    "app",
+    "mobile",
+    "karento-best"
+  ],
+  "scope": "Compile all 60 dealer applications from latest qualified template snapshots, including final App 4e184777. Source-specific stock, logo and shared FAB are preserved. Build success does not imply hosted or outreach approval."
 }

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "dealer": "pm-select-automotive",
-  "createdAt": "2026-10-10T16:51:13.085Z",
-  "workflowCommit": "d2d891166fee31339eca3450f6704a5fc1c8fdcb",
+  "createdAt": "2026-10-10T18:19:47.723Z",
+  "workflowCommit": "bbfa4cfd0310fd68ffbc4611492dd8c50f4a9a62",
   "sourceBranch": "varna",
   "kind": "personalized-source-candidate-not-an-approved-release",
   "inputPackDigest": "1df87d2c61194cbc992ef4b86474779cfd7dc160bbec000ba71eed2b2139619d",
@@ -30,10 +30,10 @@
     },
     "app": {
       "repository": "darkapoparka/cars",
-      "revision": "e79078da8934de1333fd0488fb26193a3f5dc17d",
+      "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
       "path": "templates/app",
-      "tree": "e3f761d7b4b5555e6e394ef4d170728efafc7306",
-      "digest": "85bbf1455a45ee7021bf30cc6770e2e5e999a0e509592c0196bbbb0d190c250a"
+      "tree": "749512ff762c25272d1474225ff653dd4c88f0fe",
+      "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541"
     },
     "mobile": {
       "repository": "darkapoparka/cars",
@@ -52,10 +52,10 @@
   },
   "sourceMaterializedInGit": true,
   "sharedTemplateBlobs": true,
-  "independentTemplateFiles": 12679,
+  "independentTemplateFiles": 12687,
   "personalizationApplied": true,
   "appAndExtendedInputSealsVerified": true,
-  "candidateSourceDigest": "c9badacfd0a62dd879b7f837812849fec25e703f85b96d524f08d955330d684d",
+  "candidateSourceDigest": "9cb98871cf0dd1815345dc317276b77ac5cece9b9e2f59a6e45bf67d5948d1d8",
   "nativeChanges": {
     "auto-best": [
       "src/lib/config/brand.ts",

@@ -3,10 +3,10 @@
   "exportPolicy": "cars-source-v1",
   "source": {
     "repository": "darkapoparka/cars",
-    "revision": "e79078da8934de1333fd0488fb26193a3f5dc17d",
+    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
     "path": "templates/app",
-    "tree": "e3f761d7b4b5555e6e394ef4d170728efafc7306",
-    "digest": "85bbf1455a45ee7021bf30cc6770e2e5e999a0e509592c0196bbbb0d190c250a"
+    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe",
+    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541"
   },
   "files": [
     {
@@ -295,7 +295,7 @@
     },
     {
       "path": "components/FeatureLanding.tsx",
-      "sha256": "0caad4527ced3bcda783fb05aa1138d99266a06225ec3eb42816177c04c23de9"
+      "sha256": "1585e1c953865ecf407f52a12d6acfe1223448db0bb8906736f20e50f22df431"
     },
     {
       "path": "components/FilterPill.tsx",
@@ -331,7 +331,7 @@
     },
     {
       "path": "components/InventoryClient.tsx",
-      "sha256": "1a4f21a008773c71feac605b05f9376033b2aa9fc373538588755f97bb373d54"
+      "sha256": "6459e462b021388257f35c62c176bec68d9748807afdb9e80a79a66e7b6fa9e4"
     },
     {
       "path": "components/LandingContentFrame.tsx",
@@ -435,7 +435,7 @@
     },
     {
       "path": "components/ShowroomIcon.tsx",
-      "sha256": "02eb790ee59820a1f618a546055cf0d0aa3bf3167490bdd10c3257c73de25193"
+      "sha256": "276549e4bebf7f0388b0a2f77213aebb9027b4c542e68f3a8db214a5a06aa8f4"
     },
     {
       "path": "components/ShowroomMenu.tsx",
@@ -948,6 +948,38 @@
     {
       "path": "docs/mobile-nav-final-2026-10-10/verification.json",
       "sha256": "1945a53f0bc13b3c402694771dc14da91e2d3b2b58607b6228d31b76bce6a296"
+    },
+    {
+      "path": "docs/mobile-spacing-audit-2026-10-10/README.md",
+      "sha256": "ed43ecd1cb92d65cae57462e1feb89c007b7da15e4d0c319dcdbac3156890c1a"
+    },
+    {
+      "path": "docs/mobile-spacing-audit-2026-10-10/after-sell-390.png",
+      "sha256": "17f18c346d7aa30045b3340fa8a10bee18c0c25e1be80555a65f5bc449c180fd"
+    },
+    {
+      "path": "docs/mobile-spacing-audit-2026-10-10/audit-alternative.png",
+      "sha256": "2e56f96683c4d3b428e086940431e32b31b3f109d3cffc504451b8d1847f3fcc"
+    },
+    {
+      "path": "docs/mobile-spacing-audit-2026-10-10/audit-regular.png",
+      "sha256": "692b41f5409e9381f99eac52f383f31d2cfe3ceac178e5b246ad0af8aff31efc"
+    },
+    {
+      "path": "docs/mobile-spacing-audit-2026-10-10/before-sell-390.png",
+      "sha256": "beacca6187968818425a456423f34d70cc872fcecf5ed5aa8f2dd1fc5e2507a8"
+    },
+    {
+      "path": "docs/mobile-spacing-audit-2026-10-10/final-checks.json",
+      "sha256": "e75ca50a8287a2b26e271df49985bcd6df8f768e7402db71e8970e7f012ed3cb"
+    },
+    {
+      "path": "docs/mobile-spacing-audit-2026-10-10/luxe-target-checks.json",
+      "sha256": "d7c9a4924fc8e7821b3bcc961b17d04e7fba733fcbd8c954f62e97e3477a938a"
+    },
+    {
+      "path": "docs/mobile-spacing-audit-2026-10-10/route-checks.json",
+      "sha256": "561026217335b033b1bec3e5914951424708d874956e2f6ea07501b19aed565c"
     },
     {
       "path": "docs/pro-integration-2026-10-09/README.md",
@@ -6696,5 +6728,5 @@
   ],
   "candidate": true,
   "approved": false,
-  "workflowCommit": "d2d891166fee31339eca3450f6704a5fc1c8fdcb"
+  "workflowCommit": "bbfa4cfd0310fd68ffbc4611492dd8c50f4a9a62"
 }

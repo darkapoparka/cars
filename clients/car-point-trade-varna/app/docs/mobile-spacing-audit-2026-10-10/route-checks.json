@@ -1,0 +1,398 @@
+{
+  "results": [
+    {
+      "route": "/en/2",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "heading": [],
+      "panelTop": 276,
+      "firstSellingCardInset": null,
+      "broken": [],
+      "smallControls": [],
+      "dock": [
+        {
+          "name": "home",
+          "size": 22,
+          "ink": "18x19.000478744506836",
+          "stroke": "2.1818181818181817"
+        },
+        {
+          "name": "cars",
+          "size": 26,
+          "ink": "20x12",
+          "stroke": "1.5230769230769228"
+        },
+        {
+          "name": "service",
+          "size": 22,
+          "ink": "20.00415802001953x20.004657745361328",
+          "stroke": "1.7999999999999998"
+        },
+        {
+          "name": "more",
+          "size": 22,
+          "ink": "16x14",
+          "stroke": "1.7999999999999998"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/en/2/cars",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "heading": [],
+      "firstSellingCardInset": null,
+      "broken": [],
+      "smallControls": [],
+      "dock": [
+        {
+          "name": "home",
+          "size": 22,
+          "ink": "18x19.000478744506836",
+          "stroke": "1.7999999999999998"
+        },
+        {
+          "name": "cars",
+          "size": 26,
+          "ink": "20x12",
+          "stroke": "1.8461538461538463"
+        },
+        {
+          "name": "service",
+          "size": 22,
+          "ink": "20.00415802001953x20.004657745361328",
+          "stroke": "1.7999999999999998"
+        },
+        {
+          "name": "more",
+          "size": 22,
+          "ink": "16x14",
+          "stroke": "1.7999999999999998"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/en/2/sell",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "heading": [
+        "Sell your car"
+      ],
+      "panelTop": 148,
+      "firstSellingCardInset": 0,
+      "broken": [],
+      "smallControls": [],
+      "dock": [
+        {
+          "name": "home",
+          "size": 22,
+          "ink": "18x19.000478744506836",
+          "stroke": "1.7999999999999998"
+        },
+        {
+          "name": "cars",
+          "size": 26,
+          "ink": "20x12",
+          "stroke": "1.5230769230769228"
+        },
+        {
+          "name": "service",
+          "size": 22,
+          "ink": "20.00415802001953x20.004657745361328",
+          "stroke": "2.1818181818181817"
+        },
+        {
+          "name": "more",
+          "size": 22,
+          "ink": "16x14",
+          "stroke": "1.7999999999999998"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/en/2/sell/details",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "heading": [
+        "Sell or part-exchange"
+      ],
+      "firstSellingCardInset": null,
+      "broken": [],
+      "smallControls": [],
+      "dock": [],
+      "errors": []
+    },
+    {
+      "route": "/en/2/finance",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "heading": [
+        "Finance calculator"
+      ],
+      "panelTop": 104,
+      "firstSellingCardInset": null,
+      "broken": [],
+      "smallControls": [],
+      "dock": [
+        {
+          "name": "home",
+          "size": 22,
+          "ink": "18x19.000478744506836",
+          "stroke": "1.7999999999999998"
+        },
+        {
+          "name": "cars",
+          "size": 26,
+          "ink": "20x12",
+          "stroke": "1.5230769230769228"
+        },
+        {
+          "name": "service",
+          "size": 22,
+          "ink": "20.00415802001953x20.004657745361328",
+          "stroke": "2.1818181818181817"
+        },
+        {
+          "name": "more",
+          "size": 22,
+          "ink": "16x14",
+          "stroke": "1.7999999999999998"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/en/2/service",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "heading": [
+        "Car services"
+      ],
+      "panelTop": 104,
+      "firstSellingCardInset": null,
+      "broken": [],
+      "smallControls": [],
+      "dock": [
+        {
+          "name": "home",
+          "size": 22,
+          "ink": "18x19.000478744506836",
+          "stroke": "1.7999999999999998"
+        },
+        {
+          "name": "cars",
+          "size": 26,
+          "ink": "20x12",
+          "stroke": "1.5230769230769228"
+        },
+        {
+          "name": "service",
+          "size": 22,
+          "ink": "20.00415802001953x20.004657745361328",
+          "stroke": "2.1818181818181817"
+        },
+        {
+          "name": "more",
+          "size": 22,
+          "ink": "16x14",
+          "stroke": "1.7999999999999998"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/en/2/service/details",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "heading": [
+        "Vehicle service enquiry"
+      ],
+      "firstSellingCardInset": null,
+      "broken": [],
+      "smallControls": [],
+      "dock": [],
+      "errors": []
+    },
+    {
+      "route": "/en/2/saved",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "heading": [
+        "Saved cars"
+      ],
+      "firstSellingCardInset": null,
+      "broken": [],
+      "smallControls": [],
+      "dock": [
+        {
+          "name": "home",
+          "size": 22,
+          "ink": "18x19.000478744506836",
+          "stroke": "1.7999999999999998"
+        },
+        {
+          "name": "cars",
+          "size": 26,
+          "ink": "20x12",
+          "stroke": "1.5230769230769228"
+        },
+        {
+          "name": "service",
+          "size": 22,
+          "ink": "20.00415802001953x20.004657745361328",
+          "stroke": "1.7999999999999998"
+        },
+        {
+          "name": "more",
+          "size": 22,
+          "ink": "16x14",
+          "stroke": "2.1818181818181817"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/en/2/more",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "heading": [
+        "Menu"
+      ],
+      "firstSellingCardInset": null,
+      "broken": [],
+      "smallControls": [],
+      "dock": [
+        {
+          "name": "home",
+          "size": 22,
+          "ink": "18x19.000478744506836",
+          "stroke": "1.7999999999999998"
+        },
+        {
+          "name": "cars",
+          "size": 26,
+          "ink": "20x12",
+          "stroke": "1.5230769230769228"
+        },
+        {
+          "name": "service",
+          "size": 22,
+          "ink": "20.00415802001953x20.004657745361328",
+          "stroke": "1.7999999999999998"
+        },
+        {
+          "name": "more",
+          "size": 22,
+          "ink": "16x14",
+          "stroke": "2.1818181818181817"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/en/2/search",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "heading": [
+        "Search"
+      ],
+      "firstSellingCardInset": null,
+      "broken": [],
+      "smallControls": [],
+      "dock": [],
+      "errors": []
+    },
+    {
+      "route": "/en/2/stores",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "heading": [
+        "About us"
+      ],
+      "firstSellingCardInset": null,
+      "broken": [],
+      "smallControls": [],
+      "dock": [
+        {
+          "name": "home",
+          "size": 22,
+          "ink": "18x19.000478744506836",
+          "stroke": "1.7999999999999998"
+        },
+        {
+          "name": "cars",
+          "size": 26,
+          "ink": "20x12",
+          "stroke": "1.5230769230769228"
+        },
+        {
+          "name": "service",
+          "size": 22,
+          "ink": "20.00415802001953x20.004657745361328",
+          "stroke": "1.7999999999999998"
+        },
+        {
+          "name": "more",
+          "size": 22,
+          "ink": "16x14",
+          "stroke": "1.7999999999999998"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "route": "/en/2/services",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "heading": [
+        "Services"
+      ],
+      "panelTop": 0,
+      "firstSellingCardInset": null,
+      "broken": [],
+      "smallControls": [],
+      "dock": [
+        {
+          "name": "home",
+          "size": 22,
+          "ink": "18x19.000478744506836",
+          "stroke": "1.7999999999999998"
+        },
+        {
+          "name": "cars",
+          "size": 26,
+          "ink": "20x12",
+          "stroke": "1.5230769230769228"
+        },
+        {
+          "name": "service",
+          "size": 22,
+          "ink": "20.00415802001953x20.004657745361328",
+          "stroke": "2.1818181818181817"
+        },
+        {
+          "name": "more",
+          "size": 22,
+          "ink": "16x14",
+          "stroke": "1.7999999999999998"
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

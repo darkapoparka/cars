@@ -3,12 +3,12 @@
   "dealer": "dynamic-auto-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "e79078da8934de1333fd0488fb26193a3f5dc17d",
+    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
     "path": "templates/app",
-    "tree": "e3f761d7b4b5555e6e394ef4d170728efafc7306",
-    "digest": "85bbf1455a45ee7021bf30cc6770e2e5e999a0e509592c0196bbbb0d190c250a"
+    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe",
+    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541"
   },
-  "appDigest": "6119c9c231cdbc0ac49c9f47b82d42a3121a6232e520701ba1b750e91fcab130",
+  "appDigest": "5c14cd63cc4a1865b53eea97443a669ff68a64b6d6a038ad314a22187f39c829",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "dynamic-auto-varna",
@@ -38,9 +38,9 @@
         "role": "vehicle"
       },
       {
-        "source": "auto-best/static/assets/vehicles/11755636345481695/3.webp",
-        "output": "public/dealer-app/vehicle-0229e424dfca768c895a.webp",
-        "sha256": "0229e424dfca768c895a83b70fbb879a6e9daa8f7d7db49183326ab8b836e463",
+        "source": "auto-best/static/assets/vehicles/11755636345481695/2.webp",
+        "output": "public/dealer-app/vehicle-98c822a9617957018221.webp",
+        "sha256": "98c822a961795701822102a2c34f2c90afc15ec979337a5f0b71c4ed47fecd8b",
         "role": "vehicle"
       },
       {
@@ -50,15 +50,15 @@
         "role": "vehicle"
       },
       {
-        "source": "auto-best/static/assets/vehicles/11755636345481695/2.webp",
-        "output": "public/dealer-app/vehicle-98c822a9617957018221.webp",
-        "sha256": "98c822a961795701822102a2c34f2c90afc15ec979337a5f0b71c4ed47fecd8b",
+        "source": "auto-best/static/assets/vehicles/11755636345481695/3.webp",
+        "output": "public/dealer-app/vehicle-0229e424dfca768c895a.webp",
+        "sha256": "0229e424dfca768c895a83b70fbb879a6e9daa8f7d7db49183326ab8b836e463",
         "role": "vehicle"
       },
       {
-        "source": "auto-best/static/assets/vehicles/11774253415129356/1.webp",
-        "output": "public/dealer-app/vehicle-af589cf3975338042f56.webp",
-        "sha256": "af589cf3975338042f56b4e3d4b095cebef300f77d01ddc4accb7f76d74af646",
+        "source": "auto-best/static/assets/vehicles/11774253415129356/2.webp",
+        "output": "public/dealer-app/vehicle-71cd336c5979973c30ed.webp",
+        "sha256": "71cd336c5979973c30ed75e02ad5f5a9ebb792a75cd51c25c696bc40be1492ed",
         "role": "vehicle"
       },
       {
@@ -74,15 +74,21 @@
         "role": "vehicle"
       },
       {
-        "source": "auto-best/static/assets/vehicles/11774253415129356/2.webp",
-        "output": "public/dealer-app/vehicle-71cd336c5979973c30ed.webp",
-        "sha256": "71cd336c5979973c30ed75e02ad5f5a9ebb792a75cd51c25c696bc40be1492ed",
+        "source": "auto-best/static/assets/vehicles/11774253415129356/1.webp",
+        "output": "public/dealer-app/vehicle-af589cf3975338042f56.webp",
+        "sha256": "af589cf3975338042f56b4e3d4b095cebef300f77d01ddc4accb7f76d74af646",
         "role": "vehicle"
       },
       {
         "source": "auto-best/static/assets/vehicles/11780920338607763/1.webp",
         "output": "public/dealer-app/vehicle-c1b53e20a99c7f3159c9.webp",
         "sha256": "c1b53e20a99c7f3159c96bedaf7880f1544280b9f8553f8662bb3ed02efe1471",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/vehicles/11780920338607763/4.webp",
+        "output": "public/dealer-app/vehicle-b815eb9aee9ec080f4f1.webp",
+        "sha256": "b815eb9aee9ec080f4f15d16f8746f22c123dd4273bc0e48dfaa093f13e417ad",
         "role": "vehicle"
       },
       {
@@ -98,21 +104,15 @@
         "role": "vehicle"
       },
       {
-        "source": "auto-best/static/assets/vehicles/11780920338607763/4.webp",
-        "output": "public/dealer-app/vehicle-b815eb9aee9ec080f4f1.webp",
-        "sha256": "b815eb9aee9ec080f4f15d16f8746f22c123dd4273bc0e48dfaa093f13e417ad",
-        "role": "vehicle"
-      },
-      {
         "source": "auto-best/static/assets/vehicles/11785227540991935/1.webp",
         "output": "public/dealer-app/vehicle-ac38df3d0437097e9add.webp",
         "sha256": "ac38df3d0437097e9add0e74da232d2c0e869b480bf873e19d5468e2e9062cd6",
         "role": "vehicle"
       },
       {
-        "source": "auto-best/static/assets/vehicles/11785227540991935/3.webp",
-        "output": "public/dealer-app/vehicle-5d482c377310c5057623.webp",
-        "sha256": "5d482c377310c5057623cac1f2ca34ac7e66d44117a72c0087fa45325375cd3c",
+        "source": "auto-best/static/assets/vehicles/11785227540991935/4.webp",
+        "output": "public/dealer-app/vehicle-6970abcde8590966deb4.webp",
+        "sha256": "6970abcde8590966deb466e3f7b5d2f2b31f0e3d1757910b85bc8fcef6c309ba",
         "role": "vehicle"
       },
       {
@@ -122,9 +122,9 @@
         "role": "vehicle"
       },
       {
-        "source": "auto-best/static/assets/vehicles/11785227540991935/4.webp",
-        "output": "public/dealer-app/vehicle-6970abcde8590966deb4.webp",
-        "sha256": "6970abcde8590966deb466e3f7b5d2f2b31f0e3d1757910b85bc8fcef6c309ba",
+        "source": "auto-best/static/assets/vehicles/11785227540991935/3.webp",
+        "output": "public/dealer-app/vehicle-5d482c377310c5057623.webp",
+        "sha256": "5d482c377310c5057623cac1f2ca34ac7e66d44117a72c0087fa45325375cd3c",
         "role": "vehicle"
       },
       {
@@ -158,12 +158,6 @@
         "role": "vehicle"
       },
       {
-        "source": "auto-best/static/assets/vehicles/11784058872993223/3.webp",
-        "output": "public/dealer-app/vehicle-2370d818987966eabbe8.webp",
-        "sha256": "2370d818987966eabbe85457ea65798216a7cc7a1891370533ac0c8ed03049b0",
-        "role": "vehicle"
-      },
-      {
         "source": "auto-best/static/assets/vehicles/11784058872993223/2.webp",
         "output": "public/dealer-app/vehicle-2f0de344cd2fce581f76.webp",
         "sha256": "2f0de344cd2fce581f76a52a020176101d47425e22098742ae961ba828552a61",
@@ -176,9 +170,15 @@
         "role": "vehicle"
       },
       {
-        "source": "auto-best/static/assets/vehicles/11790879613801923/3.webp",
-        "output": "public/dealer-app/vehicle-be25469170d755e95ea2.webp",
-        "sha256": "be25469170d755e95ea2415a3e2b363916fee69d5662db2e97c15d6105a7dc82",
+        "source": "auto-best/static/assets/vehicles/11784058872993223/3.webp",
+        "output": "public/dealer-app/vehicle-2370d818987966eabbe8.webp",
+        "sha256": "2370d818987966eabbe85457ea65798216a7cc7a1891370533ac0c8ed03049b0",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/vehicles/11790879613801923/1.webp",
+        "output": "public/dealer-app/vehicle-2577bb1e78284c9b70c5.webp",
+        "sha256": "2577bb1e78284c9b70c5839f067f5d0a720e52dac85d2868f31441fd15e90874",
         "role": "vehicle"
       },
       {
@@ -194,21 +194,15 @@
         "role": "vehicle"
       },
       {
-        "source": "auto-best/static/assets/vehicles/11790879613801923/1.webp",
-        "output": "public/dealer-app/vehicle-2577bb1e78284c9b70c5.webp",
-        "sha256": "2577bb1e78284c9b70c5839f067f5d0a720e52dac85d2868f31441fd15e90874",
+        "source": "auto-best/static/assets/vehicles/11790879613801923/3.webp",
+        "output": "public/dealer-app/vehicle-be25469170d755e95ea2.webp",
+        "sha256": "be25469170d755e95ea2415a3e2b363916fee69d5662db2e97c15d6105a7dc82",
         "role": "vehicle"
       },
       {
         "source": "auto-best/static/assets/vehicles/11787907499756917/1.webp",
         "output": "public/dealer-app/vehicle-8bbc83f34ee92e424523.webp",
         "sha256": "8bbc83f34ee92e424523cffa0e20cbaca9b028e185aa4c6127683e34fa4e440b",
-        "role": "vehicle"
-      },
-      {
-        "source": "auto-best/static/assets/vehicles/11787907499756917/4.webp",
-        "output": "public/dealer-app/vehicle-f962c9a8299aa6dcd69c.webp",
-        "sha256": "f962c9a8299aa6dcd69cc4da439a58aac7caa7f1ea8d08c18d2b856281d43144",
         "role": "vehicle"
       },
       {
@@ -221,6 +215,12 @@
         "source": "auto-best/static/assets/vehicles/11787907499756917/3.webp",
         "output": "public/dealer-app/vehicle-d6872f64a829c2240f1e.webp",
         "sha256": "d6872f64a829c2240f1e72eb7c23b06206f669a647260a6c8ca466d930223abe",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/vehicles/11787907499756917/4.webp",
+        "output": "public/dealer-app/vehicle-f962c9a8299aa6dcd69c.webp",
+        "sha256": "f962c9a8299aa6dcd69cc4da439a58aac7caa7f1ea8d08c18d2b856281d43144",
         "role": "vehicle"
       }
     ],
