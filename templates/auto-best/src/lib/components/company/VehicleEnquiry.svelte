@@ -347,7 +347,8 @@
     .dn-enquiry-panel { height: 100%; max-height: 100%; }
     .dn-enquiry--review { inset: auto 0 max(0px, calc(100dvh - var(--dn-dialog-viewport-height, 100dvh) - var(--dn-dialog-viewport-top, 0px))); height: auto; max-height: calc(var(--dn-dialog-viewport-height, 100dvh) - var(--dn-space-6) - env(safe-area-inset-top, 0px)); border-radius: var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0; }
     .dn-enquiry--review .dn-enquiry-panel { height: auto; max-height: calc(var(--dn-dialog-viewport-height, 100dvh) - var(--dn-space-6) - env(safe-area-inset-top, 0px)); }
-    .dn-enquiry--review .dn-enquiry-body { flex: 0 1 auto; }
+    .dn-enquiry--review .dn-enquiry-body { flex: 0 1 auto; background: var(--dn-surface-raised); }
+    .dn-enquiry-summary { padding: var(--dn-space-3); background: var(--dn-surface-panel); }
     .dn-enquiry-review-vehicle, .dn-enquiry-review-section { padding: var(--dn-space-4); }
 
     .dn-enquiry-header { padding: var(--dn-overlay-header-padding); }
