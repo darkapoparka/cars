@@ -1,9 +1,8 @@
 {
-  "schemaVersion": 1,
-  "request": "navara-retained-text-receipt-consistency",
-  "dealers": [
-    "navara-car"
-  ],
-  "sourceReviewRun": 38092372478,
-  "reason": "New local Navara source retained CRLF. Normalize emitted valid UTF-8 bytes and receipt inputs identically, with unchanged strict assertion and binary logo preservation. Other eight successful candidate artifacts remain reusable."
+    "reason":  "Original published Outlet source exposes auxeroReviewCards=[]; preserve its empty factual reviews in the new template baseReviews schema.",
+    "schemaVersion":  1,
+    "request":  "outlet-current-reviewed-empty-review-list",
+    "dealers":  [
+                    "outletcars-varna"
+                ]
 }

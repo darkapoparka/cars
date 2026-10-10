@@ -6,7 +6,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: cars-existing-ten-candidates-navara-repair
+  group: cars-existing-ten-candidates-outlet-repair
   cancel-in-progress: true
 jobs:
   review:
@@ -17,7 +17,7 @@ jobs:
       fail-fast: false
       max-parallel: 3
       matrix:
-        dealer: [navara-car]
+        dealer: [outletcars-varna]
     env:
       DEALER_SLUG: ${{ matrix.dealer }}
       NODE_OPTIONS: --max-old-space-size=4608
