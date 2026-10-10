@@ -57,8 +57,8 @@
   <div class="dn-home-slot dn-home-slot--body" style:--dn-home-section-background={`url("${bannerBackground}")`}><BodyTypes /></div>
   <div class="dn-home-slot dn-home-slot--brands" style:--dn-home-section-background={`url("${bannerBackground}")`}><BrandSection /></div>
   <div class="dn-home-slot dn-home-slot--ownership-actions"><TrustActions group="ownership" mobileArtwork={false} /></div>
-  <div class="dn-home-slot dn-home-slot--services"><MobileServicesOverview /></div>
   <div class="dn-home-slot dn-home-slot--editorial" style:--dn-home-section-background={`url("${bannerBackground}")`}><Editorial /></div>
+  <div class="dn-home-slot dn-home-slot--services"><MobileServicesOverview /></div>
   <div class="dn-home-slot dn-home-slot--videos"><VideoSection /></div>
 </div>
 
