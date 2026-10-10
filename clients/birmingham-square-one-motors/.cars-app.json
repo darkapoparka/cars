@@ -8,29 +8,17 @@
     "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
     "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
   },
-  "appDigest": "d3effe92d94e73c481f5b8fe2d1efab80a4024ef7dce6375fb3870c96be75cc8",
+  "appDigest": "826b408ce8877d61a6cb1db6897f56714527a987032763f099895c953063f450",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "birmingham-square-one-motors",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
     "profileSha256": "3e2fc0110635bb2c79f549480da711fad068eeb28564fc7339d97da557ae0852",
-    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "logoPolicy": "Use exact dark mark on light surfaces; exact white mark on dark and neutral accent surfaces. Never use CSS inversion, white plates or crop the emblem.",
     "vehicles": 7,
     "currency": "GBP",
     "observedAt": "2026-10-10",
     "assets": [
-      {
-        "source": "auto-best/static/dealer-brand/logo.webp",
-        "output": "public/dealer-app/logo-light-cad5a4c01d4881deb032.webp",
-        "sha256": "cad5a4c01d4881deb0320f25323ae598f3ca520e38a83eff7a41581e0dd7f8bf",
-        "role": "logo-light"
-      },
-      {
-        "source": "auto-best/static/dealer-brand/logo.webp",
-        "output": "public/dealer-app/logo-dark-cad5a4c01d4881deb032.webp",
-        "sha256": "cad5a4c01d4881deb0320f25323ae598f3ca520e38a83eff7a41581e0dd7f8bf",
-        "role": "logo-dark"
-      },
       {
         "source": "auto-best/static/dealer-stock/hatchback.webp",
         "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
@@ -72,6 +60,18 @@
         "output": "public/dealer-app/vehicle-72396847dfc15c2091e3.webp",
         "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5",
         "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light-20261011.webp",
+        "output": "public/dealer-brand/logo-on-light-20261011.webp",
+        "sha256": "9a56a237f6645b97aab08c9117fdf968b8b39b46104af3fcb4c1b553ec68cafe",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark-20261011.webp",
+        "output": "public/dealer-brand/logo-on-dark-20261011.webp",
+        "sha256": "e7f53a1e1f406459fb23abe03808a8af5a8c1340a82f65a25134982a4054e018",
+        "role": "logo-dark"
       }
     ],
     "mileageFacts": [
@@ -138,6 +138,5 @@
     }
   },
   "needsDealerQA": true,
-  "readyToPublish": false,
-  "refreshedAt": "2026-10-10T21:15:31.176Z"
+  "readyToPublish": false
 }

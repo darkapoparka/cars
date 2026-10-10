@@ -6,7 +6,7 @@ import type {
 } from "@repo/marketplace-domain/site-config";
 import { inventoryCopy } from "./content/inventory-copy";
 
-export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "USD";
+export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "GBP" | "USD";
 
 export interface LeadSiteCopy {
   readonly address: string;
@@ -114,7 +114,7 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Broadbent Car and Servicing — vehicles and dealer support in Bredbury, Stockport."
   }
 },
-  accent: "#C21C2A",
+  accent: "#18181B",
   desktopAccent: "#4b5057",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
@@ -127,7 +127,7 @@ export const leadSite: LeadSiteConfig = {
       en: "Find your next car.",
     },
   },
-  address: "ул. „Атанас Манчев“ 18, Bredbury, Stockport",
+  address: "Oldmoor Road, Bredbury, Stockport SK6 2QE",
   city: "Bredbury, Stockport",
   district: { bg: "Bredbury, Stockport", en: "Bredbury, Stockport" },
   sellCategoryAssets: {
@@ -141,16 +141,17 @@ export const leadSite: LeadSiteConfig = {
   mobileShowroomArtworkPath:
     "/images/lease/mobile-pdp-showroom-blue-hour-v1.webp",
   contactUrl: "tel:+447398540293",
-  country: "България",
+  country: "United Kingdom",
   countryCode: carsLocale.dealerCountry,
   currency: carsLocale.inventoryCurrency,
   email: "transitsellers2020@gmail.com",
   heroPath: "/lead-hero.jpg",
   locale: "en-GB",
-  logoPath: "/dealer-brand/logo.webp",
-  logoOnLight: "/dealer-brand/logo.webp",
-  logoOnDark: "/dealer-brand/logo.webp",
-  logoOnAccent: "/dealer-brand/logo.webp",
+  logoInversePath: "/dealer-brand/logo-on-dark-20261011.webp",
+  logoPath: "/dealer-brand/logo-on-light-20261011.webp",
+  logoOnLight: "/dealer-brand/logo-on-light-20261011.webp",
+  logoOnDark: "/dealer-brand/logo-on-dark-20261011.webp",
+  logoOnAccent: "/dealer-brand/logo-on-accent-20261011.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Broadbent%20Car%20and%20Servicing%2C%20Oldmoor%20Road%2C%20Bredbury%2C%20Stockport%20SK6%202QE&z=16&output=embed",
   mapsUrl:
@@ -162,6 +163,6 @@ export const leadSite: LeadSiteConfig = {
   slug: "stockport-broadbent-car-and-servicing",
   socialLinks: {},
   staticDemoMode: true,
-  tagline: "Премиум автомобили, внос и собствен лизинг в Bredbury, Stockport.",
+  tagline: "Explore cars and vans in Stockport.",
 };
 // LEAD_SITE_CONFIG_END

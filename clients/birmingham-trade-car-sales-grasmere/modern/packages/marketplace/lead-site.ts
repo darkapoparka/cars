@@ -6,7 +6,7 @@ import type {
 } from "@repo/marketplace-domain/site-config";
 import { inventoryCopy } from "./content/inventory-copy";
 
-export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "USD";
+export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "GBP" | "USD";
 
 export interface LeadSiteCopy {
   readonly address: string;
@@ -114,7 +114,7 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Trade Car Sales — vehicles and dealer support in Birmingham."
   }
 },
-  accent: "#9C1018",
+  accent: "#18181B",
   desktopAccent: "#4b5057",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
@@ -127,7 +127,7 @@ export const leadSite: LeadSiteConfig = {
       en: "Find your next car.",
     },
   },
-  address: "ул. „Атанас Манчев“ 18, Birmingham",
+  address: "Birmingham",
   city: "Birmingham",
   district: { bg: "Бирмингам", en: "Birmingham" },
   sellCategoryAssets: {
@@ -140,17 +140,18 @@ export const leadSite: LeadSiteConfig = {
   mobileFinancingArtworkPath: "/images/lease/mobile-pdp-finance-studio-v2.webp",
   mobileShowroomArtworkPath:
     "/images/lease/mobile-pdp-showroom-blue-hour-v1.webp",
-  contactUrl: "",
-  country: "България",
+  contactUrl: "https://cars-uk-birmingham-trade-car-sales-grasmere.darkapoparka1.workers.dev/variant-2/en/contact",
+  country: "United Kingdom",
   countryCode: carsLocale.dealerCountry,
   currency: carsLocale.inventoryCurrency,
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "en-GB",
-  logoPath: "/dealer-brand/logo.webp",
-  logoOnLight: "/dealer-brand/logo.webp",
-  logoOnDark: "/dealer-brand/logo.webp",
-  logoOnAccent: "/dealer-brand/logo.webp",
+  logoInversePath: "/dealer-brand/logo-on-dark-20261011.webp",
+  logoPath: "/dealer-brand/logo-on-light-20261011.webp",
+  logoOnLight: "/dealer-brand/logo-on-light-20261011.webp",
+  logoOnDark: "/dealer-brand/logo-on-dark-20261011.webp",
+  logoOnAccent: "/dealer-brand/logo-on-accent-20261011.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Trade%20Car%20Sales%2C%20Birmingham&z=16&output=embed",
   mapsUrl:
@@ -162,6 +163,6 @@ export const leadSite: LeadSiteConfig = {
   slug: "birmingham-trade-car-sales-grasmere",
   socialLinks: {},
   staticDemoMode: true,
-  tagline: "Премиум автомобили, внос и собствен лизинг в Birmingham.",
+  tagline: "Browse used cars in Birmingham.",
 };
 // LEAD_SITE_CONFIG_END

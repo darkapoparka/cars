@@ -4,22 +4,28 @@
   "approvalStatus": "independent_design_proposal_not_dealer_approved",
   "assets": {
     "onLight": {
-      "publicPath": "/dealer-brand/logo.webp",
-      "sha256": "280f985f5f3da17b23aad58e72c8466960a901f09e3f9b9f94911675ec3003fe",
-      "width": 1024,
-      "background": "opaque_white"
+      "publicPath": "/dealer-brand/logo-on-light-20261011.webp",
+      "sha256": "4172f088ec97b45aa5be866c28e9e1a0d7fca520cf8f50502b97925ad9dcea6c",
+      "width": 1005,
+      "height": 184,
+      "background": "transparent",
+      "foreground": "dark"
     },
     "onDark": {
-      "publicPath": "/dealer-brand/logo.webp",
-      "sha256": "280f985f5f3da17b23aad58e72c8466960a901f09e3f9b9f94911675ec3003fe",
-      "width": 1024,
-      "background": "opaque_white"
+      "publicPath": "/dealer-brand/logo-on-dark-20261011.webp",
+      "sha256": "82522e84d93e362858d1a65e185c1182548f30e28215894f6d59c3f89d296f3a",
+      "width": 1005,
+      "height": 184,
+      "background": "transparent",
+      "foreground": "white"
     },
     "onAccent": {
-      "publicPath": "/dealer-brand/logo.webp",
-      "sha256": "280f985f5f3da17b23aad58e72c8466960a901f09e3f9b9f94911675ec3003fe",
-      "width": 1024,
-      "background": "opaque_white"
+      "publicPath": "/dealer-brand/logo-on-accent-20261011.webp",
+      "sha256": "82522e84d93e362858d1a65e185c1182548f30e28215894f6d59c3f89d296f3a",
+      "width": 1005,
+      "height": 184,
+      "background": "transparent",
+      "foreground": "white"
     }
   },
   "icon": {
@@ -50,5 +56,14 @@
       256
     ],
     "encoding": "ICO with PNG image entries from the actual generated square icon"
-  }
+  },
+  "surfacePreparation": {
+    "width": 1005,
+    "height": 184,
+    "sourceSha256": "280f985f5f3da17b23aad58e72c8466960a901f09e3f9b9f94911675ec3003fe",
+    "foregroundPixels": 88505,
+    "method": "Exact retained emblem and lettering; deterministic white-background alpha separation and monochrome raster encoding. No new generative model call succeeded or is claimed.",
+    "preparedAt": "2026-10-10T23:43:06.968Z"
+  },
+  "rules": "Use exact dark mark on light surfaces; exact white mark on dark and neutral accent surfaces. Never use CSS inversion, white plates or crop the emblem."
 }

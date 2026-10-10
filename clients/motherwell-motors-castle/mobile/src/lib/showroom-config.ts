@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Motors Castle",
-  "logo": "/dealer-brand/logo.webp",
+  "logo": "/variant-5/dealer-brand/logo-on-light-20261011.webp",
   "phone": "+447850472427",
   "email": "davidautodesign5@gmail.com",
   "address": "23a Biggar Road, Cleland Industrial Estate, Motherwell ML1 5PB",

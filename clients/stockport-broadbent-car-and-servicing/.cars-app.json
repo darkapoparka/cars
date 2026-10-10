@@ -8,88 +8,88 @@
     "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
     "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
   },
-  "appDigest": "836ee82038ac129f4e8f165aae3d1cdc9b8762e28c973d40fc238e9d37d118e6",
+  "appDigest": "7b68d2f982b45f405222cc7d67a3f297230ae1cdee28a11c7c5f2af021f1ac0a",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "stockport-broadbent-car-and-servicing",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
     "profileSha256": "1db5865e5d54b3f7ba52de474983a9f9ba3f3c1f03d88bca0221168d0da39178",
-    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "logoPolicy": "Use exact dark mark on light surfaces; exact white mark on dark and neutral accent surfaces. Never use CSS inversion, white plates or crop the emblem.",
     "vehicles": 10,
     "currency": "GBP",
     "observedAt": "2026-10-10",
     "assets": [
       {
-        "source": "auto-best/static/dealer-brand/logo.webp",
-        "output": "public/dealer-app/logo-light-280f985f5f3da17b23aa.webp",
-        "sha256": "280f985f5f3da17b23aad58e72c8466960a901f09e3f9b9f94911675ec3003fe",
+        "source": "auto-best/static/dealer-stock/van.webp",
+        "output": "public/dealer-app/vehicle-72396847dfc15c2091e3.webp",
+        "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/van.webp",
+        "output": "public/dealer-app/vehicle-72396847dfc15c2091e3.webp",
+        "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/van.webp",
+        "output": "public/dealer-app/vehicle-72396847dfc15c2091e3.webp",
+        "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/van.webp",
+        "output": "public/dealer-app/vehicle-72396847dfc15c2091e3.webp",
+        "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/van.webp",
+        "output": "public/dealer-app/vehicle-72396847dfc15c2091e3.webp",
+        "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/van.webp",
+        "output": "public/dealer-app/vehicle-72396847dfc15c2091e3.webp",
+        "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light-20261011.webp",
+        "output": "public/dealer-brand/logo-on-light-20261011.webp",
+        "sha256": "4172f088ec97b45aa5be866c28e9e1a0d7fca520cf8f50502b97925ad9dcea6c",
         "role": "logo-light"
       },
       {
-        "source": "auto-best/static/dealer-brand/logo.webp",
-        "output": "public/dealer-app/logo-dark-280f985f5f3da17b23aa.webp",
-        "sha256": "280f985f5f3da17b23aad58e72c8466960a901f09e3f9b9f94911675ec3003fe",
+        "source": "auto-best/static/dealer-brand/logo-on-dark-20261011.webp",
+        "output": "public/dealer-brand/logo-on-dark-20261011.webp",
+        "sha256": "82522e84d93e362858d1a65e185c1182548f30e28215894f6d59c3f89d296f3a",
         "role": "logo-dark"
-      },
-      {
-        "source": "auto-best/static/dealer-stock/van.webp",
-        "output": "public/dealer-app/vehicle-72396847dfc15c2091e3.webp",
-        "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5",
-        "role": "vehicle"
-      },
-      {
-        "source": "auto-best/static/dealer-stock/van.webp",
-        "output": "public/dealer-app/vehicle-72396847dfc15c2091e3.webp",
-        "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5",
-        "role": "vehicle"
-      },
-      {
-        "source": "auto-best/static/dealer-stock/van.webp",
-        "output": "public/dealer-app/vehicle-72396847dfc15c2091e3.webp",
-        "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5",
-        "role": "vehicle"
-      },
-      {
-        "source": "auto-best/static/dealer-stock/van.webp",
-        "output": "public/dealer-app/vehicle-72396847dfc15c2091e3.webp",
-        "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5",
-        "role": "vehicle"
-      },
-      {
-        "source": "auto-best/static/dealer-stock/van.webp",
-        "output": "public/dealer-app/vehicle-72396847dfc15c2091e3.webp",
-        "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5",
-        "role": "vehicle"
-      },
-      {
-        "source": "auto-best/static/dealer-stock/hatchback.webp",
-        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
-        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
-        "role": "vehicle"
-      },
-      {
-        "source": "auto-best/static/dealer-stock/hatchback.webp",
-        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
-        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
-        "role": "vehicle"
-      },
-      {
-        "source": "auto-best/static/dealer-stock/hatchback.webp",
-        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
-        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
-        "role": "vehicle"
-      },
-      {
-        "source": "auto-best/static/dealer-stock/van.webp",
-        "output": "public/dealer-app/vehicle-72396847dfc15c2091e3.webp",
-        "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5",
-        "role": "vehicle"
-      },
-      {
-        "source": "auto-best/static/dealer-stock/hatchback.webp",
-        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
-        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
-        "role": "vehicle"
       }
     ],
     "mileageFacts": [
@@ -174,6 +174,5 @@
     }
   },
   "needsDealerQA": true,
-  "readyToPublish": false,
-  "refreshedAt": "2026-10-10T21:56:36.041Z"
+  "readyToPublish": false
 }

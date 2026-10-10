@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "type": "uk-five-surface-contact-repair",
+  "dealer": "birmingham-square-one-motors",
+  "at": "2026-10-10T23:43:31.041Z",
+  "originalLogoSha256": "cad5a4c01d4881deb0320f25323ae598f3ca520e38a83eff7a41581e0dd7f8bf",
+  "logoAssets": {
+    "onLight": {
+      "publicPath": "/dealer-brand/logo-on-light-20261011.webp",
+      "sha256": "9a56a237f6645b97aab08c9117fdf968b8b39b46104af3fcb4c1b553ec68cafe",
+      "width": 952,
+      "height": 185,
+      "background": "transparent",
+      "foreground": "dark"
+    },
+    "onDark": {
+      "publicPath": "/dealer-brand/logo-on-dark-20261011.webp",
+      "sha256": "e7f53a1e1f406459fb23abe03808a8af5a8c1340a82f65a25134982a4054e018",
+      "width": 952,
+      "height": 185,
+      "background": "transparent",
+      "foreground": "white"
+    },
+    "onAccent": {
+      "publicPath": "/dealer-brand/logo-on-accent-20261011.webp",
+      "sha256": "e7f53a1e1f406459fb23abe03808a8af5a8c1340a82f65a25134982a4054e018",
+      "width": 952,
+      "height": 185,
+      "background": "transparent",
+      "foreground": "white"
+    }
+  },
+  "protectedInputsPreserved": {
+    "business-facts.json": "6262810b268eb15f5fb1f0b41e188d1813c03ef25c246feb8fa3ec7e698e9f7e",
+    "stock.json": "8c38328afa1e376c3f788235fced753f84985230024d3959138363c4da0d7670",
+    "locale-config.json": "f3cd092268422f0aa2ac35d3aa646a681d6870a113b0cd1054343d471d61e737"
+  },
+  "modernNeutralHeroAccent": "#18181B",
+  "modernNeutralDesktopAccent": "#4b5057",
+  "optionalPhoneSupported": true,
+  "unknownPhonesInvented": false,
+  "country": "GB",
+  "currency": "GBP",
+  "allSixSourceSealsRefreshed": true,
+  "hostedVerified": false
+}

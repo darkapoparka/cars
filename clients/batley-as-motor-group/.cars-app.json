@@ -8,58 +8,58 @@
     "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
     "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
   },
-  "appDigest": "12b5afeb78a2fcc10f7c2cf340f42a29a8c49e8ec22f09804403dce935ce7342",
+  "appDigest": "3028771d538f68eb8d86195fee153e3d5f4ad641eac28e497217757a25542ffd",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "batley-as-motor-group",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
     "profileSha256": "9732c623eec3a0b27fa1cb2961fcd4fb5925fc5aaf4e89645b359e3b28c3d564",
-    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "logoPolicy": "Use exact dark mark on light surfaces; exact white mark on dark and neutral accent surfaces. Never use CSS inversion, white plates or crop the emblem.",
     "vehicles": 5,
     "currency": "GBP",
     "observedAt": "2026-10-10",
     "assets": [
       {
-        "source": "auto-best/static/dealer-brand/logo.webp",
-        "output": "public/dealer-app/logo-light-6caa1b29976e04784a56.webp",
-        "sha256": "6caa1b29976e04784a567581823d517af961510c2e8c4aad4453b51c66db6df1",
+        "source": "auto-best/static/dealer-stock/suv.webp",
+        "output": "public/dealer-app/vehicle-67094fedb8305304ba8b.webp",
+        "sha256": "67094fedb8305304ba8b0d2842f5d2c7d47979ed1bb42fe51688ab3f77b765ff",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/suv.webp",
+        "output": "public/dealer-app/vehicle-67094fedb8305304ba8b.webp",
+        "sha256": "67094fedb8305304ba8b0d2842f5d2c7d47979ed1bb42fe51688ab3f77b765ff",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/suv.webp",
+        "output": "public/dealer-app/vehicle-67094fedb8305304ba8b.webp",
+        "sha256": "67094fedb8305304ba8b0d2842f5d2c7d47979ed1bb42fe51688ab3f77b765ff",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light-20261011.webp",
+        "output": "public/dealer-brand/logo-on-light-20261011.webp",
+        "sha256": "f80f4cc9294c233a7f7a6b713c016e7811f8187fef4c111abbd26279b7000663",
         "role": "logo-light"
       },
       {
-        "source": "auto-best/static/dealer-brand/logo.webp",
-        "output": "public/dealer-app/logo-dark-6caa1b29976e04784a56.webp",
-        "sha256": "6caa1b29976e04784a567581823d517af961510c2e8c4aad4453b51c66db6df1",
+        "source": "auto-best/static/dealer-brand/logo-on-dark-20261011.webp",
+        "output": "public/dealer-brand/logo-on-dark-20261011.webp",
+        "sha256": "e4d58e0d6257459d0d70afac1dc2571c70e9dbe19b6f48018b612737b107f436",
         "role": "logo-dark"
-      },
-      {
-        "source": "auto-best/static/dealer-stock/suv.webp",
-        "output": "public/dealer-app/vehicle-67094fedb8305304ba8b.webp",
-        "sha256": "67094fedb8305304ba8b0d2842f5d2c7d47979ed1bb42fe51688ab3f77b765ff",
-        "role": "vehicle"
-      },
-      {
-        "source": "auto-best/static/dealer-stock/hatchback.webp",
-        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
-        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
-        "role": "vehicle"
-      },
-      {
-        "source": "auto-best/static/dealer-stock/suv.webp",
-        "output": "public/dealer-app/vehicle-67094fedb8305304ba8b.webp",
-        "sha256": "67094fedb8305304ba8b0d2842f5d2c7d47979ed1bb42fe51688ab3f77b765ff",
-        "role": "vehicle"
-      },
-      {
-        "source": "auto-best/static/dealer-stock/hatchback.webp",
-        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
-        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
-        "role": "vehicle"
-      },
-      {
-        "source": "auto-best/static/dealer-stock/suv.webp",
-        "output": "public/dealer-app/vehicle-67094fedb8305304ba8b.webp",
-        "sha256": "67094fedb8305304ba8b0d2842f5d2c7d47979ed1bb42fe51688ab3f77b765ff",
-        "role": "vehicle"
       }
     ],
     "mileageFacts": [
@@ -114,6 +114,5 @@
     }
   },
   "needsDealerQA": true,
-  "readyToPublish": false,
-  "refreshedAt": "2026-10-10T21:10:06.659Z"
+  "readyToPublish": false
 }

@@ -6,7 +6,7 @@ import type {
 } from "@repo/marketplace-domain/site-config";
 import { inventoryCopy } from "./content/inventory-copy";
 
-export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "USD";
+export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "GBP" | "USD";
 
 export interface LeadSiteCopy {
   readonly address: string;
@@ -114,7 +114,7 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "AS Motor Group — vehicles and dealer support in Batley, West Yorkshire."
   }
 },
-  accent: "#A57F4D",
+  accent: "#18181B",
   desktopAccent: "#4b5057",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
@@ -127,7 +127,7 @@ export const leadSite: LeadSiteConfig = {
       en: "Find your next car.",
     },
   },
-  address: "ул. „Атанас Манчев“ 18, Batley, West Yorkshire",
+  address: "Unit 2-3 Chopdat Industrial Estate, Soothill Lane, Batley WF17 5SS",
   city: "Batley, West Yorkshire",
   district: { bg: "Batley, West Yorkshire", en: "Batley, West Yorkshire" },
   sellCategoryAssets: {
@@ -140,17 +140,18 @@ export const leadSite: LeadSiteConfig = {
   mobileFinancingArtworkPath: "/images/lease/mobile-pdp-finance-studio-v2.webp",
   mobileShowroomArtworkPath:
     "/images/lease/mobile-pdp-showroom-blue-hour-v1.webp",
-  contactUrl: "",
-  country: "България",
+  contactUrl: "https://cars-uk-batley-as-motor-group.darkapoparka1.workers.dev/variant-2/en/contact",
+  country: "United Kingdom",
   countryCode: carsLocale.dealerCountry,
   currency: carsLocale.inventoryCurrency,
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "en-GB",
-  logoPath: "/dealer-brand/logo.webp",
-  logoOnLight: "/dealer-brand/logo.webp",
-  logoOnDark: "/dealer-brand/logo.webp",
-  logoOnAccent: "/dealer-brand/logo.webp",
+  logoInversePath: "/dealer-brand/logo-on-dark-20261011.webp",
+  logoPath: "/dealer-brand/logo-on-light-20261011.webp",
+  logoOnLight: "/dealer-brand/logo-on-light-20261011.webp",
+  logoOnDark: "/dealer-brand/logo-on-dark-20261011.webp",
+  logoOnAccent: "/dealer-brand/logo-on-accent-20261011.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=AS%20Motor%20Group%2C%20Unit%202-3%20Chopdat%20Industrial%20Estate%2C%20Soothill%20Lane%2C%20Batley%20WF17%205SS&z=16&output=embed",
   mapsUrl:
@@ -162,6 +163,6 @@ export const leadSite: LeadSiteConfig = {
   slug: "batley-as-motor-group",
   socialLinks: {},
   staticDemoMode: true,
-  tagline: "Премиум автомобили, внос и собствен лизинг в Batley, West Yorkshire.",
+  tagline: "Explore used cars in Batley.",
 };
 // LEAD_SITE_CONFIG_END

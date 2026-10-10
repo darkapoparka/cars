@@ -12,7 +12,7 @@ export const publicAssetPathSchema = z
 const httpsUrl = z
   .url()
   .max(2048)
-  .refine((value) => new URL(value).protocol === "https:", "Use HTTPS");
+  .refine((value) => { try { const url = new URL(value); return url.protocol === "https:" && !url.username && !url.password; } catch { return false; } }, "Use HTTPS");
 const phoneHref = z
   .string()
   .regex(/^tel:\+[1-9]\d{6,14}$/, "Use an international tel: link");
@@ -142,8 +142,8 @@ export const publicSiteSchema = z
     contact: z.object({
       address: z.string().trim().min(1).max(300),
       city: z.string().trim().min(1).max(120),
-      phoneDisplay: z.string().trim().min(1).max(40),
-      phoneHref,
+      phoneDisplay: z.string().trim().max(40),
+      phoneHref: z.union([phoneHref, z.literal("")]),
       contactUrl: z.union([phoneHref, httpsUrl]),
       email: z.union([z.email(), z.literal("")]),
       mapsUrl: httpsUrl,
@@ -185,6 +185,7 @@ export const publicSiteSchema = z
     artwork: publicArtworkSchema,
   })
   .superRefine((site, context) => {
+    if (Boolean(site.contact.phoneDisplay) !== Boolean(site.contact.phoneHref)) { context.addIssue({code: "custom", path: ["contact", "phoneHref"], message: "Published phone label and destination must be provided together"}); }
     if (!site.market.locales.includes(site.market.defaultLocale)) {
       context.addIssue({
         code: "custom",

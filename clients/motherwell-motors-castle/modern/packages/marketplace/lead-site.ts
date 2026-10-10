@@ -6,7 +6,7 @@ import type {
 } from "@repo/marketplace-domain/site-config";
 import { inventoryCopy } from "./content/inventory-copy";
 
-export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "USD";
+export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "GBP" | "USD";
 
 export interface LeadSiteCopy {
   readonly address: string;
@@ -114,7 +114,7 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Motors Castle — vehicles and dealer support in Cleland / Motherwell, Scotland."
   }
 },
-  accent: "#B87943",
+  accent: "#18181B",
   desktopAccent: "#4b5057",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
@@ -127,7 +127,7 @@ export const leadSite: LeadSiteConfig = {
       en: "Find your next car.",
     },
   },
-  address: "ул. „Атанас Манчев“ 18, Cleland / Motherwell, Scotland",
+  address: "23a Biggar Road, Cleland Industrial Estate, Motherwell ML1 5PB",
   city: "Cleland / Motherwell, Scotland",
   district: { bg: "Cleland / Motherwell, Scotland", en: "Cleland / Motherwell, Scotland" },
   sellCategoryAssets: {
@@ -141,16 +141,17 @@ export const leadSite: LeadSiteConfig = {
   mobileShowroomArtworkPath:
     "/images/lease/mobile-pdp-showroom-blue-hour-v1.webp",
   contactUrl: "tel:+447850472427",
-  country: "България",
+  country: "United Kingdom",
   countryCode: carsLocale.dealerCountry,
   currency: carsLocale.inventoryCurrency,
   email: "davidautodesign5@gmail.com",
   heroPath: "/lead-hero.jpg",
   locale: "en-GB",
-  logoPath: "/dealer-brand/logo.webp",
-  logoOnLight: "/dealer-brand/logo.webp",
-  logoOnDark: "/dealer-brand/logo.webp",
-  logoOnAccent: "/dealer-brand/logo.webp",
+  logoInversePath: "/dealer-brand/logo-on-dark-20261011.webp",
+  logoPath: "/dealer-brand/logo-on-light-20261011.webp",
+  logoOnLight: "/dealer-brand/logo-on-light-20261011.webp",
+  logoOnDark: "/dealer-brand/logo-on-dark-20261011.webp",
+  logoOnAccent: "/dealer-brand/logo-on-accent-20261011.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Motors%20Castle%2C%2023a%20Biggar%20Road%2C%20Cleland%20Industrial%20Estate%2C%20Motherwell%20ML1%205PB&z=16&output=embed",
   mapsUrl:
@@ -162,6 +163,6 @@ export const leadSite: LeadSiteConfig = {
   slug: "motherwell-motors-castle",
   socialLinks: {},
   staticDemoMode: true,
-  tagline: "Премиум автомобили, внос и собствен лизинг в Cleland / Motherwell, Scotland.",
+  tagline: "Explore used cars in Motherwell.",
 };
 // LEAD_SITE_CONFIG_END

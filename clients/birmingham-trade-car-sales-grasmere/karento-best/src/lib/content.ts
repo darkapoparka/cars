@@ -99,9 +99,9 @@ export const dealer: DealerContent = {
   "name": "Trade Car Sales",
   "locale": "en-GB",
   "logo": {
-    "light": "/dealer-brand/logo.webp",
-    "footer": "/dealer-brand/logo.webp",
-    "archivedDark": "/dealer-brand/logo.webp",
+    "light": "/variant-6/dealer-brand/logo-on-light-20261011.webp",
+    "footer": "/variant-6/dealer-brand/logo-on-dark-20261011.webp",
+    "archivedDark": "/variant-6/dealer-brand/logo-on-dark-20261011.webp",
     "alt": "Trade Car Sales",
     "favicon": "/dealer-brand/app-icon.png",
     "monochromeOnDark": false

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "type": "uk-five-surface-contact-repair",
+  "dealer": "stockport-broadbent-car-and-servicing",
+  "at": "2026-10-10T23:43:12.889Z",
+  "originalLogoSha256": "280f985f5f3da17b23aad58e72c8466960a901f09e3f9b9f94911675ec3003fe",
+  "logoAssets": {
+    "onLight": {
+      "publicPath": "/dealer-brand/logo-on-light-20261011.webp",
+      "sha256": "4172f088ec97b45aa5be866c28e9e1a0d7fca520cf8f50502b97925ad9dcea6c",
+      "width": 1005,
+      "height": 184,
+      "background": "transparent",
+      "foreground": "dark"
+    },
+    "onDark": {
+      "publicPath": "/dealer-brand/logo-on-dark-20261011.webp",
+      "sha256": "82522e84d93e362858d1a65e185c1182548f30e28215894f6d59c3f89d296f3a",
+      "width": 1005,
+      "height": 184,
+      "background": "transparent",
+      "foreground": "white"
+    },
+    "onAccent": {
+      "publicPath": "/dealer-brand/logo-on-accent-20261011.webp",
+      "sha256": "82522e84d93e362858d1a65e185c1182548f30e28215894f6d59c3f89d296f3a",
+      "width": 1005,
+      "height": 184,
+      "background": "transparent",
+      "foreground": "white"
+    }
+  },
+  "protectedInputsPreserved": {
+    "business-facts.json": "1c80d119b909d694a533396f2c83aa65cc8d184a8a50ef68aeb24605cacb04ad",
+    "stock.json": "0de2376c2ba951c349a59bab08239b96508ee7aa53315d79e561371f13ad611f",
+    "locale-config.json": "ea87394e327ce5dc6e98b41f2e00e6fdbd05e9aef12a96a12a556a8768007826"
+  },
+  "modernNeutralHeroAccent": "#18181B",
+  "modernNeutralDesktopAccent": "#4b5057",
+  "optionalPhoneSupported": true,
+  "unknownPhonesInvented": false,
+  "country": "GB",
+  "currency": "GBP",
+  "allSixSourceSealsRefreshed": true,
+  "hostedVerified": false
+}

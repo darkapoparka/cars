@@ -4,25 +4,28 @@
   "approvalStatus": "independent_design_proposal_not_dealer_approved",
   "assets": {
     "onLight": {
-      "publicPath": "/dealer-brand/logo.webp",
-      "sha256": "48aedfea403dcaed8c715bd5cb0c3aa53f1c046a41e1ff11ddf3a0d5d2cc6dcc",
-      "width": 1024,
-      "height": 341,
-      "background": "opaque_white"
+      "publicPath": "/dealer-brand/logo-on-light-20261011.webp",
+      "sha256": "1786b58acf80bfcaf3ef7e186e1567cb8026f60fa4fdfa0dee13b3ffb4509abd",
+      "width": 1017,
+      "height": 137,
+      "background": "transparent",
+      "foreground": "dark"
     },
     "onDark": {
-      "publicPath": "/dealer-brand/logo.webp",
-      "sha256": "48aedfea403dcaed8c715bd5cb0c3aa53f1c046a41e1ff11ddf3a0d5d2cc6dcc",
-      "width": 1024,
-      "height": 341,
-      "background": "opaque_white"
+      "publicPath": "/dealer-brand/logo-on-dark-20261011.webp",
+      "sha256": "566203a774ab9cde2dce74f5e6677db5cd1239a697d5efe8b421182dcc218e77",
+      "width": 1017,
+      "height": 137,
+      "background": "transparent",
+      "foreground": "white"
     },
     "onAccent": {
-      "publicPath": "/dealer-brand/logo.webp",
-      "sha256": "48aedfea403dcaed8c715bd5cb0c3aa53f1c046a41e1ff11ddf3a0d5d2cc6dcc",
-      "width": 1024,
-      "height": 341,
-      "background": "opaque_white"
+      "publicPath": "/dealer-brand/logo-on-accent-20261011.webp",
+      "sha256": "566203a774ab9cde2dce74f5e6677db5cd1239a697d5efe8b421182dcc218e77",
+      "width": 1017,
+      "height": 137,
+      "background": "transparent",
+      "foreground": "white"
     }
   },
   "icon": {
@@ -59,5 +62,14 @@
     "deliveryEncoding": "Proportional size and delivery-format encoding only; no crop, recolouring or compositing.",
     "visualInspection": "Original reference where available, full business-name spelling, emblem completeness, white surface and square icon checked in generated output. Application consumers await browser QA.",
     "dealerApproval": false
-  }
+  },
+  "surfacePreparation": {
+    "width": 1017,
+    "height": 137,
+    "sourceSha256": "48aedfea403dcaed8c715bd5cb0c3aa53f1c046a41e1ff11ddf3a0d5d2cc6dcc",
+    "foregroundPixels": 52140,
+    "method": "Exact retained emblem and lettering; deterministic white-background alpha separation and monochrome raster encoding. No new generative model call succeeded or is claimed.",
+    "preparedAt": "2026-10-10T23:43:19.250Z"
+  },
+  "rules": "Use exact dark mark on light surfaces; exact white mark on dark and neutral accent surfaces. Never use CSS inversion, white plates or crop the emblem."
 }

@@ -10,16 +10,18 @@
     "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
     "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
   },
-  "sourceDigest": "98a77ccebd85164f577593994440c6f260f9fd0f1470a9298fc0940c2dc55954",
+  "sourceDigest": "80974f82ae7f37b75796c8db5b6cc46fd0ec9947cb7066de7a4846c215eb1449",
   "inventory": {
     "mode": "dated-listing-snapshot",
     "count": 5,
     "observedAt": "2026-10-10"
   },
   "personalization": {
-    "profileSha256": "5ce1406e17ba84318faddd320e033b3a67e33e2a055aec02af1927fd8e7b5775",
+    "profileSha256": "15cd856e2b7aa52b5c2ee314d18e4485d2034e3512125eade484944533097b57",
     "logoPaths": [
-      "/dealer-brand/logo.webp"
+      "/dealer-brand/logo-on-light-20261011.webp",
+      "/dealer-brand/logo-on-dark-20261011.webp",
+      "/dealer-brand/logo-on-accent-20261011.webp"
     ],
     "mediaPaths": [
       "/dealer-stock/suv.webp",

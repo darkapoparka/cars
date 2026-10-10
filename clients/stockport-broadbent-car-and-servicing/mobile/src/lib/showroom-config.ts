@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Broadbent Car and Servicing",
-  "logo": "/dealer-brand/logo.webp",
+  "logo": "/variant-5/dealer-brand/logo-on-light-20261011.webp",
   "phone": "+447398540293",
   "email": "transitsellers2020@gmail.com",
   "address": "Oldmoor Road, Bredbury, Stockport SK6 2QE",

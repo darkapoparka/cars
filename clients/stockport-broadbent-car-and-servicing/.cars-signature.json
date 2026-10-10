@@ -10,16 +10,18 @@
     "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
     "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
   },
-  "sourceDigest": "346a19e2d5f4c1ad8ce2b19d190f05ac1f36f08aea5c139d6bc3109ce0b94c75",
+  "sourceDigest": "8a63db4bf3bae1cf4afff847cfa9b33258cb65634e88eb79883ba82a757dd572",
   "inventory": {
     "mode": "dated-listing-snapshot",
     "count": 10,
     "observedAt": "2026-10-10"
   },
   "personalization": {
-    "profileSha256": "756b8574748c302ffef23fca4e915719684e1e5e85f74eed0ad33ceaaf42b672",
+    "profileSha256": "305bf080f5cdc9b5dacce8eb0a0a98a241d254e2d1ca2df0381f8d0bdc15149a",
     "logoPaths": [
-      "/dealer-brand/logo.webp"
+      "/dealer-brand/logo-on-light-20261011.webp",
+      "/dealer-brand/logo-on-dark-20261011.webp",
+      "/dealer-brand/logo-on-accent-20261011.webp"
     ],
     "mediaPaths": [
       "/dealer-stock/van.webp",

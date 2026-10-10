@@ -10,16 +10,18 @@
     "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
     "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
   },
-  "sourceDigest": "2336ac8d3f43fc076366b8405b0a1988a0386bfe6f946c41163f0b1d0b7bda53",
+  "sourceDigest": "b8b00d798a6e2f5c52358c642df49e46e7facb0fef43ba57424814924a1d1997",
   "inventory": {
     "mode": "dated-listing-snapshot",
     "count": 8,
     "observedAt": "2026-10-10"
   },
   "personalization": {
-    "profileSha256": "ce7370d8eaa79f9beac9855b0b149c854f47bcf3cf96c40e9d3c9dbd3704abaa",
+    "profileSha256": "70abef65f1faa1e7199924b821101b79dfb1e86f3c2f4ce268a06f74cdfaca4f",
     "logoPaths": [
-      "/dealer-brand/logo.webp"
+      "/dealer-brand/logo-on-light-20261011.webp",
+      "/dealer-brand/logo-on-dark-20261011.webp",
+      "/dealer-brand/logo-on-accent-20261011.webp"
     ],
     "mediaPaths": [
       "/dealer-stock/hatchback.webp",
