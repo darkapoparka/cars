@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "publisherVersion": "1",
+  "provider": "cloudflare",
+  "dealer": "birmingham-trade-car-sales-grasmere",
+  "worker": "cars-uk-birmingham-trade-car-sales-grasmere",
+  "workerCount": 7,
+  "variants": [
+    {
+      "key": "auto-best",
+      "entry": "/",
+      "base": "",
+      "binding": "CARS_AUTO_BEST",
+      "worker": "cars-uk-birmingham-trade-car-sales-grasmere-auto-best"
+    },
+    {
+      "key": "modern",
+      "entry": "/variant-2/cars",
+      "base": "/variant-2",
+      "binding": "CARS_MODERN",
+      "worker": "cars-uk-birmingham-trade-car-sales-grasmere-modern"
+    },
+    {
+      "key": "import",
+      "entry": "/variant-3/",
+      "base": "/variant-3",
+      "binding": "CARS_IMPORT",
+      "worker": "cars-uk-birmingham-trade-car-sales-grasmere-import"
+    },
+    {
+      "key": "app",
+      "entry": "/variant-4/",
+      "base": "/variant-4",
+      "binding": "CARS_APP",
+      "worker": "cars-uk-birmingham-trade-car-sales-grasmere-app"
+    },
+    {
+      "key": "mobile",
+      "entry": "/variant-5/",
+      "base": "/variant-5",
+      "binding": "CARS_MOBILE",
+      "worker": "cars-uk-birmingham-trade-car-sales-grasmere-mobile"
+    },
+    {
+      "key": "karento-best",
+      "entry": "/variant-6/",
+      "base": "/variant-6",
+      "binding": "CARS_KARENTO_BEST",
+      "worker": "cars-uk-birmingham-trade-car-sales-grasmere-signature"
+    }
+  ],
+  "redirects": [],
+  "configuration": {
+    "name": "cars-uk-birmingham-trade-car-sales-grasmere",
+    "main": "router.mjs",
+    "compatibility_date": "2026-10-10",
+    "workers_dev": true,
+    "observability": {
+      "enabled": true,
+      "head_sampling_rate": 1
+    },
+    "assets": {
+      "directory": "./public",
+      "binding": "ASSETS",
+      "run_worker_first": false
+    },
+    "services": [
+      {
+        "binding": "CARS_AUTO_BEST",
+        "service": "cars-uk-birmingham-trade-car-sales-grasmere-auto-best"
+      },
+      {
+        "binding": "CARS_MODERN",
+        "service": "cars-uk-birmingham-trade-car-sales-grasmere-modern"
+      },
+      {
+        "binding": "CARS_IMPORT",
+        "service": "cars-uk-birmingham-trade-car-sales-grasmere-import"
+      },
+      {
+        "binding": "CARS_APP",
+        "service": "cars-uk-birmingham-trade-car-sales-grasmere-app"
+      },
+      {
+        "binding": "CARS_MOBILE",
+        "service": "cars-uk-birmingham-trade-car-sales-grasmere-mobile"
+      },
+      {
+        "binding": "CARS_KARENTO_BEST",
+        "service": "cars-uk-birmingham-trade-car-sales-grasmere-signature"
+      }
+    ]
+  },
+  "adapterReceipts": [
+    {
+      "path": ".cars-cloudflare-svelte.json",
+      "sha256": "d89046ead813610cefd6c7017a977e03540368292a42cc1bfdab4ec479275a75"
+    },
+    {
+      "path": ".cars-cloudflare-next.json",
+      "sha256": "f91fde0c09299b053184d3ffe519cfb2940767f10552f0e43fd2edd96e9ee978"
+    }
+  ],
+  "routerDependencyLock": {
+    "path": "cloudflare/package-lock.json",
+    "sha256": "43d61c1a6932cc9c6f1d7c653c3ba6789921aa0880ea2e948ac76a408e114f80",
+    "status": "frozen"
+  },
+  "acceptance": {
+    "dependencyLocksFrozen": true,
+    "buildVerified": false,
+    "hostedVerified": false,
+    "freePlanQualified": false
+  },
+  "assets": {
+    "mode": "family-owned",
+    "vercelExternalization": false
+  },
+  "countryHint": {
+    "source": "request.cf.country",
+    "header": "x-cars-country",
+    "ingress": "router-only",
+    "precedence": "URL, saved preference, browser language, country hint, dealer default"
+  }
+}
