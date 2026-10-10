@@ -350,6 +350,8 @@
     .dn-enquiry--review .dn-enquiry-body { flex: 0 1 auto; background: var(--dn-surface-raised); }
     .dn-enquiry-summary { padding: var(--dn-space-3); background: var(--dn-surface-panel); }
     .dn-enquiry-review-vehicle, .dn-enquiry-review-section { padding: var(--dn-space-4); }
+    .dn-enquiry-copy { --dn-compact-control-inset: calc(var(--dn-space-1) + var(--dn-space-half)); position: relative; isolation: isolate; display: inline-flex; align-items: center; justify-content: center; padding: var(--dn-compact-control-inset) var(--dn-space-3); border: 0; background: transparent; font: var(--dn-overlay-action-font); }
+    .dn-enquiry-copy::before { position: absolute; z-index: -1; inset: var(--dn-compact-control-inset) 0; border: 1px solid var(--dn-line-strong); border-radius: inherit; background: var(--dn-surface-raised); content: ''; pointer-events: none; }
 
     .dn-enquiry-header { padding: var(--dn-overlay-header-padding); }
     .dn-enquiry-header h2 { font-size: var(--dn-text-subheading); }
