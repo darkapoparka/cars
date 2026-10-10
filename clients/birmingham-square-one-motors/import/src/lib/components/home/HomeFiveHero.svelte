@@ -494,10 +494,10 @@
 						<Navigation size={18} strokeWidth={2.25} aria-hidden="true" />
 						{isEnglish ? 'Open map' : nt('ui44')}
 					</a>
-					<a href={resolve(mobileShowroomPhoneHref)}>
+					{#if mobileShowroomPhoneHref}<a href={resolve(mobileShowroomPhoneHref)}>
 						<PhoneCall size={18} strokeWidth={2.25} aria-hidden="true" />
 						{isEnglish ? 'Call showroom' : nt('ui37')}
-					</a>
+					</a>{/if}
 				</div>
 			</div>
 		</MobileSheet>

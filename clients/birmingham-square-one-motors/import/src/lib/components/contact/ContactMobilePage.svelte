@@ -70,9 +70,9 @@
 		>
 			{#snippet actions()}
 				<nav class="daynight-contact-mobile__actions" aria-label={nt('ui36')}>
-					<Action href={info.phoneHref} variant="secondary" size="compact"
+					{#if info.phoneHref}<Action href={info.phoneHref} variant="secondary" size="compact"
 						><PhoneCall size={18} strokeWidth={2.25} aria-hidden="true" />{nt('ui37')}</Action
-					>
+					>{/if}
 					<Action href={daynightContact.viberHref} variant="glass" size="compact"
 						><MessageCircle size={18} strokeWidth={2.25} aria-hidden="true" />{nt('ui38')}</Action
 					>

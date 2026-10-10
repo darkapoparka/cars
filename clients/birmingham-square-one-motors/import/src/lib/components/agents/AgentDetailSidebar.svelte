@@ -35,22 +35,22 @@
 					</div>
 				</li>
 			</ul>
-			<ul class="contact-info mb-28">
+			{#if sidebar.callHref && sidebar.phone}<ul class="contact-info mb-28">
 				<li class="items-center">
 					<p class="icon"><img src="/assets/icons/PhoneCall.svg" alt="phone" /></p>
 					<div class="flex flex-col">
 						<a {...externalHref(sidebar.callHref)}>{sidebar.phone}</a>
 					</div>
 				</li>
-			</ul>
+			</ul>{/if}
 
-			<a
+			{#if sidebar.callHref && sidebar.phone}<a
 				{...externalHref(sidebar.callHref)}
 				class="btn btn-medium btn-primary-3 font-weight-600 mb-12 gap-5"
 			>
 				<img src="/assets/icons/PhoneCall-2.svg" alt="phone" />
 				{sidebar.callLabel}
-			</a>
+			</a>{/if}
 
 			<a
 				{...externalHref(sidebar.viberHref)}

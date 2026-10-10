@@ -72,13 +72,13 @@
 		</nav>
 		<div class="site-header__actions">
 			<LocaleSettingsMenu />
-			<a
+			{#if site.contact.phoneHref}<a
 				class="site-header__icon"
 				href={linkHref(site.contact.phoneHref)}
 				aria-label={copy.call}
 				title={copy.callPhonePrefix + site.contact.phoneHref.replace('tel:', '')}
 				><PhoneCall size={22} strokeWidth={1.7} aria-hidden="true" /></a
-			>
+			>{/if}
 			<button
 				class="site-header__icon"
 				type="button"

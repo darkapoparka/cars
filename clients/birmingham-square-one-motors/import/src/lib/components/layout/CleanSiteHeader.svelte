@@ -196,14 +196,14 @@
 
 			<!-- Desktop actions -->
 			<div class="hidden flex-[0_1_430px] items-center justify-end gap-1 md:flex">
-				<a
+				{#if header.contact.phoneHref && header.contact.phoneLabel}<a
 					href={linkHref(header.contact.phoneHref)}
 					aria-label={header.contact.phoneLabel}
 					title={header.contact.phoneLabel}
 					class="hidden h-11 w-11 shrink-0 items-center justify-center text-white/82 transition-colors hover:text-white focus-visible:text-white xl:flex"
 				>
 					<PhoneCall size={21} strokeWidth={1.8} aria-hidden="true" />
-				</a>
+				</a>{/if}
 
 				<div class="hidden xl:block"><LocaleSettingsMenu /></div>
 
@@ -272,7 +272,7 @@
 				>
 					<MapPin size={isHome ? 19 : 18} strokeWidth={2.35} aria-hidden="true" />
 				</a>
-				<a
+				{#if header.contact.phoneHref && header.contact.phoneLabel}<a
 					href={linkHref(header.contact.phoneHref)}
 					aria-label={header.contact.phoneLabel}
 					title={header.contact.phoneLabel}
@@ -281,7 +281,7 @@
 					]}
 				>
 					<PhoneCall size={isHome ? 19 : 18} strokeWidth={2.35} aria-hidden="true" />
-				</a>
+				</a>{/if}
 			</div>
 		</div>
 	</div>

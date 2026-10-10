@@ -128,11 +128,11 @@
 
 			<!-- Contact + social -->
 			<div>
-				<p class="mb-2">
+				{#if footer.contact.phoneHref && footer.contact.phoneLabel}<p class="mb-2">
 					<a {...externalHref(footer.contact.phoneHref)} class="text-lg font-medium text-white">
 						{footer.contact.phoneLabel}
 					</a>
-				</p>
+				</p>{/if}
 				<a href={resolve('/contact')} class="mb-5 block text-lg font-medium text-white">
 					{footer.contact.address}
 				</a>

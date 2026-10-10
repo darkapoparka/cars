@@ -51,14 +51,14 @@
 			{/each}
 		</ol>
 		<div class="sell-valuation__contact">
-			<a href={resolve(site.contact.phoneHref)}>
+			{#if site.contact.phoneHref}<a href={resolve(site.contact.phoneHref)}>
 				<span>
 					<PhoneCall size={14} aria-hidden="true" />
 					<span
 						><span class="sell-valuation__question">{copy.questions}</span> {copy.callAction}</span
 					>
 				</span>
-			</a>
+			</a>{/if}
 		</div>
 	</div>
 </section>

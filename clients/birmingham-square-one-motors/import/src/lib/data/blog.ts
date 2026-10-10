@@ -7,7 +7,7 @@ export const posts: BlogPost[] = [{
   "image": "/assets/daynight/codex-generated-v2/blog/blog-cover-import-check-v2.webp",
   "excerpt": "Vehicle images are generated illustrations, not photographs of the advertised vehicles. Listing details were observed on 10 October 2026; confirm each original advert, price, condition and availability with the dealership.",
   "content": [
-    "Contact the dealership on  and identify the exact vehicle before visiting.",
+    "Contact the dealership and identify the exact vehicle before visiting.",
     "Independent design preview for discussion, not an official dealership website. Forms do not send messages or create reservations."
   ]
 }];

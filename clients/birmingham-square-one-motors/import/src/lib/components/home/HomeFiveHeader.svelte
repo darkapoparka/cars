@@ -228,14 +228,14 @@
 						<!-- Menu -->
 
 						<div class="daynight-desktop-utilities">
-							<a
+							{#if header.contact.phoneHref && header.contact.phoneLabel}<a
 								{...hrefAttributes(header.contact.phoneHref)}
 								class="daynight-header-icon-button daynight-desktop-action"
 								aria-label={header.contact.phoneLabel}
 								title={header.contact.phoneLabel}
 							>
 								<Phone size={21} strokeWidth={1.8} aria-hidden="true" />
-							</a>
+							</a>{/if}
 							<LocaleSettingsMenu />
 						</div>
 
@@ -290,7 +290,7 @@
 									<span class="daynight-mobile-action__label">Карта</span>
 								</a>
 							{/if}
-							<a
+							{#if header.contact.phoneHref && header.contact.phoneLabel}<a
 								{...hrefAttributes(header.contact.phoneHref)}
 								class="daynight-mobile-call"
 								aria-label={header.contact.phoneLabel}
@@ -298,7 +298,7 @@
 							>
 								<Phone size={18} strokeWidth={2.35} aria-hidden="true" />
 								<span class="daynight-mobile-action__label">Обади се</span>
-							</a>
+							</a>{/if}
 							<div class="header-search-wrapper">
 								<button
 									type="button"

@@ -84,8 +84,8 @@
 	<ServiceIntakeFrame
 		steps={data.steps}
 		processTitle={copy.process}
-		actionHref={data.site.contact.phoneHref}
-		actionLabel={copy.discuss + ' · ' + data.site.contact.phone}
+		actionHref={data.site.contact.phoneHref || data.site.contact.contactHref}
+		actionLabel={copy.discuss + (data.site.contact.phone ? ' · ' + data.site.contact.phone : '')}
 		children={entry ? undefined : laterSteps}
 	/>
 {/snippet}

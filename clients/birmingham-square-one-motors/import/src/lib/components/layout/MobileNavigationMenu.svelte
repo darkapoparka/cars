@@ -96,9 +96,9 @@
 				>{dealerCopy[english ? 'en' : 'bg'].address}</span
 			>
 		</a>
-		<a href={site.contact.phoneHref} class="mobile-navigation-menu__phone">
+		{#if site.contact.phoneHref}<a href={site.contact.phoneHref} class="mobile-navigation-menu__phone">
 			<PhoneCall size={16} strokeWidth={1.8} aria-hidden="true" /><span>{site.contact.phone}</span>
-		</a>
+		</a>{/if}
 	</div>
 </section>
 
@@ -107,12 +107,12 @@
 	role="group"
 	aria-label={english ? 'Quick contact' : 'Бърз контакт'}
 >
-	<MobileMenuAction
+	{#if site.contact.phoneHref}<MobileMenuAction
 		href={site.contact.phoneHref}
 		label={english ? 'Call' : 'Обади се'}
 		icon={PhoneCall}
 		variant="primary"
-	/>
+	/>{/if}
 	<MobileMenuAction
 		href={site.contact.messageHref}
 		label={english ? 'Message' : 'Пиши ни'}

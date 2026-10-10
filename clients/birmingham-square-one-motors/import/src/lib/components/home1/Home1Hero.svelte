@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import { site } from '$lib/config/site';
 	import type {
 		HomeFiveHeroAction,
 		HomeFiveHeroActionMode,
@@ -25,7 +26,7 @@
 
 	const mobileShowroomMapHref =
 		'https://www.google.com/maps/search/?api=1&query=Square One Motors%20Plovdiv%20South%20Industrial%20Zone';
-	const mobileShowroomPhoneHref = 'tel:';
+	const mobileShowroomPhoneHref = site.contact.phoneHref;
 	const inventoryFilterHref = (name: string, value: string) =>
 		`/inventory?${encodeURIComponent(name)}=${encodeURIComponent(value)}`;
 	const isEnglish = $derived(hero?.searchSubmitPrefix === 'Show');
@@ -487,10 +488,10 @@
 						<Navigation size={18} strokeWidth={2.25} aria-hidden="true" />
 						{isEnglish ? 'Open map' : 'Отвори карта'}
 					</a>
-					<a href={mobileShowroomPhoneHref}>
+					{#if mobileShowroomPhoneHref}<a href={mobileShowroomPhoneHref}>
 						<PhoneCall size={18} strokeWidth={2.25} aria-hidden="true" />
 						{isEnglish ? 'Call showroom' : 'Обади се'}
-					</a>
+					</a>{/if}
 				</div>
 			</div>
 		</div>

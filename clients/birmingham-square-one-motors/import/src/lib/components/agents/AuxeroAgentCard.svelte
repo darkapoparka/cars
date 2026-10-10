@@ -46,11 +46,11 @@
 		</div>
 
 		<ul class="contact">
-			<li>
+			{#if card.phoneHref}<li>
 				<a {...externalHref(card.phoneHref)} aria-label={`Call ${card.name}`}>
 					<img src="/assets/icons/PhoneCall.svg" alt="phone" />
 				</a>
-			</li>
+			</li>{/if}
 			<li>
 				<a {...externalHref(card.emailHref)} aria-label={`Email ${card.name}`}>
 					<img src="/assets/icons/input-telegram.svg" alt="email" />

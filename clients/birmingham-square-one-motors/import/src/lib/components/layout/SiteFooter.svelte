@@ -44,7 +44,7 @@
 		<div>
 			<p class="footer-title">Square One Motors онлайн</p>
 			<div class="app-buttons">
-				<a href={resolve('/contact')}>{daynightContact.primaryPhoneLabel}</a>
+				{#if daynightContact.primaryPhoneLabel}<a href={resolve('/contact')}>{daynightContact.primaryPhoneLabel}</a>{/if}
 				<a href={resolve('/contact')}>Viber</a>
 			</div>
 		</div>

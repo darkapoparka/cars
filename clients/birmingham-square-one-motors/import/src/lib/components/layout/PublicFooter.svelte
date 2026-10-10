@@ -37,7 +37,7 @@
 				{#each links as link (link.href)}<a href={linkHref(link.href)}>{link.label}</a>{/each}
 			</nav>
 			<address>
-				<a href={linkHref(site.contact.phoneHref)}>{site.contact.phone}</a><a
+				{#if site.contact.phoneHref}<a href={linkHref(site.contact.phoneHref)}>{site.contact.phone}</a>{/if}<a
 					href={linkHref(site.contact.mapHref)}
 					target="_blank"
 					rel="noreferrer">{dealerCopy[english ? 'en' : 'bg'].address}</a

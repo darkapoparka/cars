@@ -444,7 +444,7 @@ const countryNameFormatters = {
 } as const;
 
 const cityLabelsBg: Record<string, string> = {
-  Birmingham: "Birmingham",
+  "Birmingham": "Birmingham",
   Plovdiv: "Пловдив",
   Varna: "Варна",
   Burgas: "Бургас",
