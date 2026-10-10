@@ -1,0 +1,20 @@
+{
+  "id": "../",
+  "name": "Car Market Yorkshire",
+  "short_name": "Car Market Yorkshire",
+  "description": "Independent design preview for discussion, not an official dealership website. Forms do not send messages or create reservations.",
+  "lang": "en",
+  "start_url": "/variant-3/",
+  "scope": "/variant-3/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0849AC",
+  "icons": [
+    {
+      "src": "https://cars-uk-dewsbury-car-market-yorkshire.darkapoparka1.workers.dev/dealer-share/aeefa1f47d9369d5d95d/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

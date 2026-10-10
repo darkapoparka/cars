@@ -1,0 +1,300 @@
+{
+  "schemaVersion": 1,
+  "adapter": "cars-cloudflare-vinext-v1",
+  "version": "1",
+  "dealer": "dewsbury-car-market-yorkshire",
+  "pins": {
+    "vinext": "1.1.0",
+    "vite": "8.3.4",
+    "@vitejs/plugin-rsc": "0.5.36",
+    "@cloudflare/vite-plugin": "1.63.1",
+    "wrangler": "4.149.0",
+    "@vinext/cloudflare": "1.1.0",
+    "@stylexjs/unplugin": "0.19.1",
+    "unplugin": "2.3.11"
+  },
+  "targets": [
+    {
+      "key": "modern",
+      "root": "modern/apps/web",
+      "base": "/variant-2",
+      "workerName": "cars-uk-dewsbury-car-market-yorkshire-modern",
+      "node": "22.23.2",
+      "packageManager": "pnpm@11.4.0",
+      "config": "modern/apps/web/wrangler.jsonc",
+      "generatedConfig": "modern/apps/web/dist/server/wrangler.json",
+      "assets": "modern/apps/web/dist/client",
+      "main": "modern/apps/web/dist/server/index.js",
+      "react": "19.2.6",
+      "environment": {
+        "NEXT_PUBLIC_BASE_PATH": "/variant-2",
+        "CARS_CLOUDFLARE_PROVIDER": "1"
+      },
+      "sourcePackageSha256": "eaa99864d9cf141353f502e7ec83f0cb23d00c978263802e5dbbd01f8a3bfaad",
+      "sourceLockSha256": "cef08186ab53f1ec5614108da85d0481ff1f5d180819df22ed6e502bad558bc2",
+      "generatedPackageSha256": "b996ed837c6882db2a6e866023f002a156b77ec3b596c79829c6b702a9df6142",
+      "lockPath": "modern/pnpm-lock.yaml"
+    },
+    {
+      "key": "app",
+      "root": "app",
+      "base": "/variant-4",
+      "workerName": "cars-uk-dewsbury-car-market-yorkshire-app",
+      "node": "22.23.2",
+      "packageManager": "npm",
+      "config": "app/wrangler.jsonc",
+      "generatedConfig": "app/dist/server/wrangler.json",
+      "assets": "app/dist/client",
+      "main": "app/dist/server/index.js",
+      "react": "19.3.0",
+      "environment": {
+        "NEXT_PUBLIC_BASE_PATH": "/variant-4",
+        "CARS_CLOUDFLARE_PROVIDER": "1"
+      },
+      "sourcePackageSha256": "629e4a7cf417aaac2646cc0e1db57a952653904cc518dafca0a4550b649cf733",
+      "sourceLockSha256": "bd4232c9fc9d1caec7bd295baa03a184df039d34e5391a3d5b4d43ce329896ac",
+      "generatedPackageSha256": "8e49da86acc13fde4df19ac54d09c35a350e7a923876a240060e59757470c83a",
+      "lockPath": "app/package-lock.json"
+    },
+    {
+      "key": "mobile",
+      "root": "mobile",
+      "base": "/variant-5",
+      "workerName": "cars-uk-dewsbury-car-market-yorkshire-mobile",
+      "node": "22.23.2",
+      "packageManager": "npm",
+      "config": "mobile/wrangler.jsonc",
+      "generatedConfig": "mobile/dist/server/wrangler.json",
+      "assets": "mobile/dist/client",
+      "main": "mobile/dist/server/index.js",
+      "react": "19.3.0",
+      "environment": {
+        "NEXT_PUBLIC_BASE_PATH": "/variant-5",
+        "CARS_CLOUDFLARE_PROVIDER": "1"
+      },
+      "sourcePackageSha256": "09ad2f8f27debcfd24b551b3083a940931d6c38144d919e90241c3d7336c08c9",
+      "sourceLockSha256": "21ab65ba4c763a65f2747a9dc3610428f37628b3932a0f467023b5064f60fe66",
+      "generatedPackageSha256": "9d11c58007e75d14c684db359aaf18a3e0f63d30319d25ee2b6f182e94701c5a",
+      "lockPath": "mobile/package-lock.json"
+    }
+  ],
+  "adaptations": [
+    {
+      "file": "modern/apps/web/package.json",
+      "operation": "expose-shared-css-plugin-at-vite-entry",
+      "dependency": "@tailwindcss/typography",
+      "version": "0.5.20",
+      "sourcePackage": "modern/packages/design-system/package.json",
+      "sourcePackageSha256": "6ef94cec4ce5bac9cc50518efd39f9210939a5cab7b80127cc07f908339096c9",
+      "sourceLockSha256": "cef08186ab53f1ec5614108da85d0481ff1f5d180819df22ed6e502bad558bc2"
+    },
+    {
+      "file": "modern/apps/api/package.json",
+      "field": "dependencies",
+      "dependency": "react",
+      "from": "19.2.4",
+      "to": "19.2.6"
+    },
+    {
+      "file": "modern/apps/api/package.json",
+      "field": "dependencies",
+      "dependency": "react-dom",
+      "from": "19.2.4",
+      "to": "19.2.6"
+    },
+    {
+      "file": "modern/apps/app/package.json",
+      "field": "dependencies",
+      "dependency": "react",
+      "from": "19.2.4",
+      "to": "19.2.6"
+    },
+    {
+      "file": "modern/apps/app/package.json",
+      "field": "dependencies",
+      "dependency": "react-dom",
+      "from": "19.2.4",
+      "to": "19.2.6"
+    },
+    {
+      "file": "modern/apps/email/package.json",
+      "field": "devDependencies",
+      "dependency": "react",
+      "from": "19.2.4",
+      "to": "19.2.6"
+    },
+    {
+      "file": "modern/apps/storybook/package.json",
+      "field": "dependencies",
+      "dependency": "react",
+      "from": "19.2.4",
+      "to": "19.2.6"
+    },
+    {
+      "file": "modern/apps/storybook/package.json",
+      "field": "dependencies",
+      "dependency": "react-dom",
+      "from": "19.2.4",
+      "to": "19.2.6"
+    },
+    {
+      "file": "modern/apps/web/package.json",
+      "field": "dependencies",
+      "dependency": "react",
+      "from": "19.2.4",
+      "to": "19.2.6"
+    },
+    {
+      "file": "modern/apps/web/package.json",
+      "field": "dependencies",
+      "dependency": "react-dom",
+      "from": "19.2.4",
+      "to": "19.2.6"
+    },
+    {
+      "file": "modern/packages/analytics/package.json",
+      "field": "dependencies",
+      "dependency": "react",
+      "from": "19.2.4",
+      "to": "19.2.6"
+    },
+    {
+      "file": "modern/packages/auth/package.json",
+      "field": "dependencies",
+      "dependency": "react",
+      "from": "19.2.4",
+      "to": "19.2.6"
+    },
+    {
+      "file": "modern/packages/cms/package.json",
+      "field": "dependencies",
+      "dependency": "react",
+      "from": "19.2.4",
+      "to": "19.2.6"
+    },
+    {
+      "file": "modern/packages/collaboration/package.json",
+      "field": "dependencies",
+      "dependency": "react",
+      "from": "19.2.4",
+      "to": "19.2.6"
+    },
+    {
+      "file": "modern/packages/design-system/package.json",
+      "field": "dependencies",
+      "dependency": "react",
+      "from": "19.2.4",
+      "to": "19.2.6"
+    },
+    {
+      "file": "modern/packages/email/package.json",
+      "field": "dependencies",
+      "dependency": "react",
+      "from": "19.2.4",
+      "to": "19.2.6"
+    },
+    {
+      "file": "modern/packages/email/package.json",
+      "field": "dependencies",
+      "dependency": "react-dom",
+      "from": "19.2.4",
+      "to": "19.2.6"
+    },
+    {
+      "file": "modern/packages/feature-flags/package.json",
+      "field": "dependencies",
+      "dependency": "react",
+      "from": "19.2.4",
+      "to": "19.2.6"
+    },
+    {
+      "file": "modern/packages/marketplace-ui/package.json",
+      "field": "dependencies",
+      "dependency": "react",
+      "from": "19.2.4",
+      "to": "19.2.6"
+    },
+    {
+      "file": "modern/packages/marketplace-ui/package.json",
+      "field": "dependencies",
+      "dependency": "react-dom",
+      "from": "19.2.4",
+      "to": "19.2.6"
+    },
+    {
+      "file": "modern/packages/notifications/package.json",
+      "field": "dependencies",
+      "dependency": "react",
+      "from": "19.2.4",
+      "to": "19.2.6"
+    },
+    {
+      "file": "modern/packages/observability/package.json",
+      "field": "dependencies",
+      "dependency": "react",
+      "from": "19.2.4",
+      "to": "19.2.6"
+    },
+    {
+      "file": "modern/packages/seo/package.json",
+      "field": "dependencies",
+      "dependency": "react",
+      "from": "19.2.4",
+      "to": "19.2.6"
+    },
+    {
+      "file": "modern/pnpm-workspace.yaml",
+      "operation": "allow-pinned-cloudflare-native-build",
+      "dependency": "workerd",
+      "version": "1.20261006.1",
+      "sourceSha256": "f52d36b989176e3c144668245c16fe58ce586e0677d466bd526dc4d42d5d1c6d",
+      "generatedSha256": "8a9f96f5d269c1cd7f368c8cada8de6f787ad044327d87fbf3c6601d4b73e965"
+    },
+    {
+      "file": "app/next.config.mjs",
+      "operation": "delegate-original-commonjs",
+      "sourceSha256": "723da311e0fe0bce48dd3fe66b9b15447bea58898d69a6ac80d2663c45e3e656"
+    },
+    {
+      "file": "app/vite.config.ts",
+      "operation": "stylex-vite",
+      "compilerSha256": "f20fa8bd219cfd21d3a7022872f316a68570ce31b0264f90b593b9e116c405bd",
+      "postcssSha256": "72cbdaddea58a235fb7eeefcede91269daf22250b0a2c4a39e7a810250a39b4e"
+    },
+    {
+      "file": "mobile/next.config.mjs",
+      "operation": "delegate-original-commonjs",
+      "sourceSha256": "9962ce7b420789dd2f681ed24513622a73f9ffb6b9e36b050f76ea2d871c5415"
+    },
+    {
+      "file": "mobile/vite.config.ts",
+      "operation": "stylex-vite",
+      "compilerSha256": "1e94d78139ecff4602678daf8568cde584c9beb34397dff1653b2eddb371d2b0",
+      "postcssSha256": "70c16b3a9eb488ff397c9a4df1e1953c27140617defb772696b897e785235bc5"
+    }
+  ],
+  "dependencyLock": "frozen",
+  "build": "unverified",
+  "hosted": "unverified",
+  "freeTier": "unverified",
+  "locks": [
+    {
+      "key": "modern",
+      "path": "modern/pnpm-lock.yaml",
+      "sha256": "fc047019d806caabfe337b143c0b437d0d69dc54dd1f37d0008c974bb121503e",
+      "generatedPackageSha256": "b996ed837c6882db2a6e866023f002a156b77ec3b596c79829c6b702a9df6142"
+    },
+    {
+      "key": "app",
+      "path": "app/package-lock.json",
+      "sha256": "76ab06198a19460db5fc22dd04836873853d6189c6520dccb4ae40f68430bce2",
+      "generatedPackageSha256": "8e49da86acc13fde4df19ac54d09c35a350e7a923876a240060e59757470c83a"
+    },
+    {
+      "key": "mobile",
+      "path": "mobile/package-lock.json",
+      "sha256": "cc51064e4de5314043ee566a36157840eb23e9a3cf5157fd4249b1a1c5b36df8",
+      "generatedPackageSha256": "9d11c58007e75d14c684db359aaf18a3e0f63d30319d25ee2b6f182e94701c5a"
+    }
+  ]
+}

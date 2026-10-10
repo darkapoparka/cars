@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "packagingVersion": "5",
+  "dealer": "dewsbury-car-market-yorkshire",
+  "transformation": "six-design-cloudflare-v1",
+  "signature": {
+    "provider": "cloudflare",
+    "adapterReceipt": ".cars-cloudflare-svelte.json",
+    "buildVerified": false
+  },
+  "families": {
+    "app": {
+      "base": "/variant-4",
+      "digest": "b47e248a846723ab8f359d0abbbaa2e4cadda8a7fbfd06921e85697386d46720"
+    },
+    "mobile": {
+      "base": "/variant-5",
+      "digest": "87c1a991d75f2d7c8695622a72b52b66943abc3ab599c51ad7e0fc14f8b595bc"
+    },
+    "karento-best": {
+      "base": "/variant-6",
+      "digest": "8accc02f28cd3a3c3b3fbc6961c4bad892a59edc1cf1e6108e9bce040fb58d45"
+    }
+  },
+  "sourceReceipts": {
+    ".cars-app.json": "313e1fe0b206b55124315d99dbe189acab1e9332e9c35c369dffdcfba36acd69",
+    ".cars-mobile.json": "0258d3e5d4abb23bcd86c5c1efb114c5424691b8891ea0e89ad81c7d0cebcbc5",
+    ".cars-signature.json": "3e8d8df32c80c1f0278bb976a33a468fab4293b07240be9af2bf92d6e7af2520"
+  }
+}

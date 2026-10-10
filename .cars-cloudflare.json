@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "publisherVersion": "1",
+  "provider": "cloudflare",
+  "dealer": "dewsbury-car-market-yorkshire",
+  "worker": "cars-uk-dewsbury-car-market-yorkshire",
+  "workerCount": 7,
+  "variants": [
+    {
+      "key": "auto-best",
+      "entry": "/",
+      "base": "",
+      "binding": "CARS_AUTO_BEST",
+      "worker": "cars-uk-dewsbury-car-market-yorkshire-auto-best"
+    },
+    {
+      "key": "modern",
+      "entry": "/variant-2/cars",
+      "base": "/variant-2",
+      "binding": "CARS_MODERN",
+      "worker": "cars-uk-dewsbury-car-market-yorkshire-modern"
+    },
+    {
+      "key": "import",
+      "entry": "/variant-3/",
+      "base": "/variant-3",
+      "binding": "CARS_IMPORT",
+      "worker": "cars-uk-dewsbury-car-market-yorkshire-import"
+    },
+    {
+      "key": "app",
+      "entry": "/variant-4/",
+      "base": "/variant-4",
+      "binding": "CARS_APP",
+      "worker": "cars-uk-dewsbury-car-market-yorkshire-app"
+    },
+    {
+      "key": "mobile",
+      "entry": "/variant-5/",
+      "base": "/variant-5",
+      "binding": "CARS_MOBILE",
+      "worker": "cars-uk-dewsbury-car-market-yorkshire-mobile"
+    },
+    {
+      "key": "karento-best",
+      "entry": "/variant-6/",
+      "base": "/variant-6",
+      "binding": "CARS_KARENTO_BEST",
+      "worker": "cars-uk-dewsbury-car-market-yorkshire-signature"
+    }
+  ],
+  "redirects": [],
+  "configuration": {
+    "name": "cars-uk-dewsbury-car-market-yorkshire",
+    "main": "router.mjs",
+    "compatibility_date": "2026-10-10",
+    "workers_dev": true,
+    "observability": {
+      "enabled": true,
+      "head_sampling_rate": 1
+    },
+    "assets": {
+      "directory": "./public",
+      "binding": "ASSETS",
+      "run_worker_first": false
+    },
+    "services": [
+      {
+        "binding": "CARS_AUTO_BEST",
+        "service": "cars-uk-dewsbury-car-market-yorkshire-auto-best"
+      },
+      {
+        "binding": "CARS_MODERN",
+        "service": "cars-uk-dewsbury-car-market-yorkshire-modern"
+      },
+      {
+        "binding": "CARS_IMPORT",
+        "service": "cars-uk-dewsbury-car-market-yorkshire-import"
+      },
+      {
+        "binding": "CARS_APP",
+        "service": "cars-uk-dewsbury-car-market-yorkshire-app"
+      },
+      {
+        "binding": "CARS_MOBILE",
+        "service": "cars-uk-dewsbury-car-market-yorkshire-mobile"
+      },
+      {
+        "binding": "CARS_KARENTO_BEST",
+        "service": "cars-uk-dewsbury-car-market-yorkshire-signature"
+      }
+    ]
+  },
+  "adapterReceipts": [
+    {
+      "path": ".cars-cloudflare-svelte.json",
+      "sha256": "0acdf6fdb7ed088b365d3797a5a7d7513a6bc4c7d5cd06f003aba1aa679c46e7"
+    },
+    {
+      "path": ".cars-cloudflare-next.json",
+      "sha256": "00dadd7d5ddaa4874c25bf2856d8cd0b9259e3f523a0f8d58ec36d7a28cd2f28"
+    }
+  ],
+  "routerDependencyLock": {
+    "path": "cloudflare/package-lock.json",
+    "sha256": "43d61c1a6932cc9c6f1d7c653c3ba6789921aa0880ea2e948ac76a408e114f80",
+    "status": "frozen"
+  },
+  "acceptance": {
+    "dependencyLocksFrozen": true,
+    "buildVerified": false,
+    "hostedVerified": false,
+    "freePlanQualified": false
+  },
+  "assets": {
+    "mode": "family-owned",
+    "vercelExternalization": false
+  },
+  "countryHint": {
+    "source": "request.cf.country",
+    "header": "x-cars-country",
+    "ingress": "router-only",
+    "precedence": "URL, saved preference, browser language, country hint, dealer default"
+  }
+}

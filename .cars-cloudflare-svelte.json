@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "provider": "cloudflare",
+  "dealer": "dewsbury-car-market-yorkshire",
+  "workerPrefix": "cars-uk-dewsbury-car-market-yorkshire",
+  "compatibilityDate": "2026-10-10",
+  "services": [
+    {
+      "key": "auto-best",
+      "base": "",
+      "workerName": "cars-uk-dewsbury-car-market-yorkshire-auto-best",
+      "kitVersion": "2.70.3",
+      "node": "22.23.2",
+      "dependencies": {
+        "@sveltejs/adapter-cloudflare": "7.2.9",
+        "wrangler": "4.118.0"
+      },
+      "input": {
+        "packageSha256": "5225f62da4a676df3129ca35cd5277cb0ff46a829473c2fd1314d3f124eba233",
+        "lockSha256": "de0dafd0d699f3872c1a462936e369dd3304d088654ee26f2f8b2d63f74e5fb2"
+      },
+      "packageSha256": "b4b12372b30987a8644706a2089e94ea18122a9dfed121f04b0c4bb9d585c004",
+      "configSha256": "2e93359b5bdad0e923c5935f47057ec7450fecf91beefa74b8b7b2cd4674bfe4",
+      "lockSha256": "ff932e9175a1d1be4424e7583fcac366e3156cd5153f9c25a556e63243fbca92",
+      "output": {
+        "main": ".svelte-kit/cloudflare-worker/index.js",
+        "assets": ".svelte-kit/cloudflare",
+        "bundle": ".cars-cloudflare/worker"
+      },
+      "dependencyLockStatus": "frozen",
+      "buildStatus": "unverified"
+    },
+    {
+      "key": "import",
+      "base": "/variant-3",
+      "workerName": "cars-uk-dewsbury-car-market-yorkshire-import",
+      "kitVersion": "2.70.3",
+      "node": "24.21.0",
+      "dependencies": {
+        "@sveltejs/adapter-cloudflare": "7.2.9",
+        "wrangler": "4.118.0"
+      },
+      "input": {
+        "packageSha256": "6dbf9a733ede96621c589c29bd4335d20b719bb18fc68b463e946507a029ff6d",
+        "lockSha256": "3b71e3fc2ddbe832e70424a252733f2e36781f94d741c786833b5fbfeea70fd8"
+      },
+      "packageSha256": "2d807e22707589fc98303038689fc6e3d44df4b3df3f5859a3a62f1c94919be5",
+      "configSha256": "be08db2a97a5f5317be3d46c1372a5fac2a499bd704eba9d9d5c615f55228a2d",
+      "lockSha256": "c017259c5254c2c5121abb0ac0b0ce3d4d41ef87725a3f561081b5abca95f24d",
+      "output": {
+        "main": ".svelte-kit/cloudflare-worker/index.js",
+        "assets": ".svelte-kit/cloudflare",
+        "bundle": ".cars-cloudflare/worker"
+      },
+      "dependencyLockStatus": "frozen",
+      "buildStatus": "unverified"
+    },
+    {
+      "key": "karento-best",
+      "base": "/variant-6",
+      "workerName": "cars-uk-dewsbury-car-market-yorkshire-signature",
+      "kitVersion": "3.0.1",
+      "node": "26.10.0",
+      "dependencies": {
+        "@sveltejs/adapter-cloudflare": "8.0.0",
+        "wrangler": "4.118.0"
+      },
+      "input": {
+        "packageSha256": "af0df4fff164ea2473c80746b5d57102100e8f977e3a0c29e987a3ec1768c937",
+        "lockSha256": "d6ea4d6bc8db1689f94e4637e008530b5147458b3225a22774c96ce99c7f57c1"
+      },
+      "packageSha256": "dd6e741406bf1b782934c2285e6b8695a1b9e8c0f8581c700d2f579032e9bc60",
+      "configSha256": "ee6c167df986e15cc6fb5d1caa510ccb508899859d4cefb1dc79c312aa8a897b",
+      "lockSha256": "3db3f6e0fe8b818ddb28e9492205f9d74e9a8574fea745d252c6359a3bd5815d",
+      "output": {
+        "main": ".svelte-kit/cloudflare-worker/index.js",
+        "assets": ".svelte-kit/cloudflare",
+        "bundle": ".cars-cloudflare/worker"
+      },
+      "dependencyLockStatus": "frozen",
+      "buildStatus": "unverified"
+    }
+  ],
+  "qualification": {
+    "built": false,
+    "hosted": false,
+    "freeRuntimeQualified": false
+  }
+}
