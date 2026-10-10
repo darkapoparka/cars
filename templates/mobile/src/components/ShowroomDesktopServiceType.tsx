@@ -71,7 +71,9 @@ export function ShowroomDesktopServiceType({
             open && field.hideDivider,
           )}
         >
-          <span {...stylex.props(s.label, field.value)}>{t(label)}</span>
+          <span {...stylex.props(s.label, field.value)}>
+            {t(selected === 'services' ? 'Service category' : label)}
+          </span>
           <Icon name="down" size={16} />
         </button>
       </DropdownMenu.Trigger>
