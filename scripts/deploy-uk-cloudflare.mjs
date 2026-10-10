@@ -18,6 +18,7 @@ const UUID=/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i;
 const KEYS=[...FAMILIES,'router'], encode=value=>JSON.stringify(value,null,2)+'\n';
 const NEXT_CLI='runtime/uk-cloudflare-next-adapter-20261010/qualification/mobile/node_modules/wrangler/bin/wrangler.js';
 const SVELTE_CLI='runtime/uk-cloudflare-svelte-adapter-20261010/qualification/auto-best/node_modules/wrangler/bin/wrangler.js';
+const WRANGLER_NODE_ARGUMENTS=Object.freeze(['--no-warnings','--preserve-symlinks','--preserve-symlinks-main']);
 const expectedWorker=(dealer,key)=>key==='router'?dealer.workerName:dealer.workerName+'-'+(key==='karento-best'?'signature':key);
 const numberId=value=>/^[1-9][0-9]{0,14}$/.test(String(value));
 
@@ -164,7 +165,7 @@ function uploader(key) {
   const pkg=json(packageFile),entryFile=path.join(path.dirname(cli),'..','wrangler-dist','cli.js');
   if(pkg.name!=='wrangler'||pkg.version!==version||!fs.statSync(cli).isFile())throw Error('Existing local Wrangler differs from the qualified uploader.');
   return {file:cli,entryFile,version,sha256:sha256(fs.readFileSync(cli)),entrySha256:sha256(fs.readFileSync(entryFile)),
-    packageSha256:sha256(fs.readFileSync(packageFile)),node:process.version};
+    packageSha256:sha256(fs.readFileSync(packageFile)),node:process.version,nodeArguments:[...WRANGLER_NODE_ARGUMENTS]};
 }
 
 export function validatePrivatePublication({published,exported,publishMeta,remoteHead,commitTree,commitParent},dealer,deploy) {
@@ -294,7 +295,7 @@ function runWrangler(context,label,args,{structured=false}={}) {
     WRANGLER_OUTPUT_FILE_PATH:output,WRANGLER_CACHE_DIR:path.join(folder,'wrangler-cache'),
     WRANGLER_LOG_PATH:path.join(folder,'wrangler-debug'),WRANGLER_LOG_SANITIZE:'true',NO_COLOR:'1'});
   console.log(JSON.stringify({phase:label,dealer:context.dealer.slug,key:context.input.key,workerName:context.identity.workerName}));
-  const result=spawnSync(process.execPath,['--no-warnings',context.identity.tool.entryFile,...args],{
+  const result=spawnSync(process.execPath,[...context.identity.tool.nodeArguments,context.identity.tool.entryFile,...args],{
     cwd:folder,env,encoding:'utf8',windowsHide:true,timeout:30*60*1000,maxBuffer:32*1024**2});
   fs.writeFileSync(file,(result.stdout??'')+'\n'+(result.stderr??''),{flag:'wx'});
   if(result.error||result.status!==0)throw Error('Wrangler '+label+' failed; inspect '+file+' and reconcile any partial upload. '+(result.error?.message??result.status));
