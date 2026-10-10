@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "dealer": "dewsbury-car-market-yorkshire",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "70c2b80671e217ab299549a938a537c0b9559611",
+    "path": "templates/app",
+    "tree": "d3cb91b496d8d04f9c9c9ed57aaf4d430a958710",
+    "digest": "012d4701d226951cfbac7d978a1c0bff2339f1b1ae54c88f38c3a485861dab1f"
+  },
+  "appDigest": "5b2eaf9b38f4f78a3399a335eb5d9f44f0fd989883f2e79d6102109988547b2c",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "dewsbury-car-market-yorkshire",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "755f20202946804ca9c85de756cccd6526821f99b3ab4e118f32a2a16b394d0e",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 6,
+    "currency": "GBP",
+    "observedAt": "2026-10-10",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo.webp",
+        "output": "public/dealer-app/logo-light-cadb9c07122892749d4b.webp",
+        "sha256": "cadb9c07122892749d4b0ff128ba3ac51f6b0e15e3f17fe8c56ece5dbf177f46",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo.webp",
+        "output": "public/dealer-app/logo-dark-cadb9c07122892749d4b.webp",
+        "sha256": "cadb9c07122892749d4b0ff128ba3ac51f6b0e15e3f17fe8c56ece5dbf177f46",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/coupe.webp",
+        "output": "public/dealer-app/vehicle-740d09a56a3524ef81d7.webp",
+        "sha256": "740d09a56a3524ef81d76298cf0b3f1953c2f921395c0d05ac4d69c309f77d44",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/sedan.webp",
+        "output": "public/dealer-app/vehicle-63c0cba6517e48278680.webp",
+        "sha256": "63c0cba6517e482786809a18e5217140aec2e64ff1c8a31a09b3ad7582d278c6",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/suv.webp",
+        "output": "public/dealer-app/vehicle-67094fedb8305304ba8b.webp",
+        "sha256": "67094fedb8305304ba8b0d2842f5d2c7d47979ed1bb42fe51688ab3f77b765ff",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/suv.webp",
+        "output": "public/dealer-app/vehicle-67094fedb8305304ba8b.webp",
+        "sha256": "67094fedb8305304ba8b0d2842f5d2c7d47979ed1bb42fe51688ab3f77b765ff",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/hatchback.webp",
+        "output": "public/dealer-app/vehicle-aafb8fc639fa0f2693f4.webp",
+        "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/van.webp",
+        "output": "public/dealer-app/vehicle-72396847dfc15c2091e3.webp",
+        "sha256": "72396847dfc15c2091e30fd11f84f3747bf12b497e837c4c3fa12d88b7b75cd5",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "nissan-gt-r-2010-at-sample-1",
+        "sourceValue": 71715,
+        "sourceUnit": "mi",
+        "canonicalKm": 115414
+      },
+      {
+        "slug": "audi-a6-saloon-2022-at-sample-2",
+        "sourceValue": 34981,
+        "sourceUnit": "mi",
+        "canonicalKm": 56296
+      },
+      {
+        "slug": "land-rover-range-rover-velar-2019-at-sample-3",
+        "sourceValue": 66313,
+        "sourceUnit": "mi",
+        "canonicalKm": 106720
+      },
+      {
+        "slug": "mercedes-benz-glc-2018-at-sample-4",
+        "sourceValue": 120952,
+        "sourceUnit": "mi",
+        "canonicalKm": 194653
+      },
+      {
+        "slug": "volkswagen-golf-2017-at-sample-5",
+        "sourceValue": 82391,
+        "sourceUnit": "mi",
+        "canonicalKm": 132595
+      },
+      {
+        "slug": "mercedes-benz-citan-2018-at-sample-6",
+        "sourceValue": 105906,
+        "sourceUnit": "mi",
+        "canonicalKm": 170439
+      }
+    ],
+    "ukPresentation": {
+      "distanceUnit": "mi",
+      "canonicalDistanceUnit": "km",
+      "originalMileageRetained": true,
+      "contentPaths": [
+        "lib/dealer-mileage.ts",
+        "lib/currency.ts",
+        "lib/inventory-filters.ts",
+        "lib/inventory-settings.ts",
+        "components/DesktopInventoryFilters.tsx",
+        "components/NativeFilterPane.tsx",
+        "components/VehicleCard.tsx",
+        "components/VehicleBelowFold.tsx",
+        "components/VehicleComparison.tsx",
+        "components/VehicleDetailClient.tsx",
+        "components/SellEnquirySheet.tsx"
+      ]
+    }
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

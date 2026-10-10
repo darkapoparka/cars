@@ -1,0 +1,308 @@
+export type SiteAssetPath = `/${string}`;
+export type HomeBannerVariant = 'motorsport' | 'kerb' | 'circuit' | 'headlights' | 'taillights';
+
+type RouteHeroAsset = 'cars' | 'keys' | 'guide' | 'silver' | 'graphite' | 'portrait' | 'phone' | 'showroom' | 'email';
+type RouteHeroVariant = 'cars' | 'keys' | 'guide' | 'about' | 'contact' | 'sell';
+type VehicleArtworkKey = 'silver' | 'graphite' | 'gclass' | 'urus' | 'golf' | 'a45' | 'porsche' | 'amggt' | 'm5' | 'e63' | 'm4' | 'rs5';
+type HeroVehiclePair = 'home' | 'inventory' | 'about' | 'blog' | 'contact';
+type DesktopHeroArtwork = { kind: 'image'; src: SiteAssetPath } | { kind: 'vehicles'; pair: HeroVehiclePair };
+
+type LeadSiteConfig = {
+  theme: {
+    accent: string;
+    accentHover: string;
+    accentRgb: string;
+    workflowCanvas: string;
+    heroSurface: string;
+    heroSurfaceDeep: string;
+    heroSurfaceMid: string;
+    heroAccentDeep: string;
+    contactSurface: string;
+    contactSurfaceEnd: string;
+    campaignSurface: string;
+    campaignAccent: string;
+    blogHeroSurface: string;
+    actionTones: {
+      blue: readonly [string, string];
+      red: readonly [string, string];
+      ice: readonly [string, string];
+      iceInk: string;
+      dark: readonly [string, string];
+    };
+  };
+  artwork: {
+    responsiveImages: Partial<Record<SiteAssetPath, readonly { src: SiteAssetPath; width: number }[]>>;
+    desktopHeroScenes: Record<HeroVehiclePair, DesktopHeroArtwork>;
+    contactHero: { desktop: SiteAssetPath; generalMobile: SiteAssetPath; sellMobile: SiteAssetPath; importMobile: SiteAssetPath; support: SiteAssetPath };
+    serviceBanners: { sell: SiteAssetPath; import: SiteAssetPath };
+    serviceBackground: SiteAssetPath;
+    homeActionScenes: { sell: SiteAssetPath; import: SiteAssetPath; finance: SiteAssetPath };
+    desktopActionScenes: { import: SiteAssetPath; finance: SiteAssetPath };
+    desktopServiceCards: Record<'inspection' | 'import' | 'leasing' | 'trade-in', SiteAssetPath>;
+    serviceIllustrations: Record<'collection' | 'showroom' | 'sell' | 'import' | 'finance' | 'car' | 'overview', SiteAssetPath>;
+    blogHero: SiteAssetPath;
+    editorialBanner: SiteAssetPath;
+    sectionBanners: { graphite: SiteAssetPath; crimson: SiteAssetPath };
+    discoveryBackground: SiteAssetPath;
+    homeSectionBanner: { variant: HomeBannerVariant; mobile: 'featured' | 'none' };
+    homeSectionBannerAssets: Record<HomeBannerVariant, SiteAssetPath>;
+    homeSectionBannerMobileAssets: Record<HomeBannerVariant, SiteAssetPath>;
+    homeCircuitOutline: SiteAssetPath;
+    home: { collection: SiteAssetPath; sell: SiteAssetPath; sellCompact: SiteAssetPath; import: SiteAssetPath };
+    routeHero: {
+      standard: Record<RouteHeroAsset, SiteAssetPath>;
+      colored: Partial<Record<RouteHeroAsset, SiteAssetPath>>;
+      pairs: Record<RouteHeroVariant, readonly [RouteHeroAsset, RouteHeroAsset]>;
+    };
+    vehicleCutouts: Record<VehicleArtworkKey, SiteAssetPath>;
+    heroVehiclePairs: Record<HeroVehiclePair, readonly [VehicleArtworkKey, VehicleArtworkKey]>;
+    mobileHero: { car: SiteAssetPath; sell: SiteAssetPath; import: SiteAssetPath; home: SiteAssetPath };
+    inventoryDemo: Record<'stock01' | 'stock02' | 'stock03' | 'stock04' | 'stock06', SiteAssetPath>;
+    pdp: { importGuide: SiteAssetPath };
+  };
+};
+
+const collection = '/assets/images/lead/day-night-collection-banner-v2.webp' as const;
+const mobileSell = '/assets/images/template/service-sell-front-v3.webp' as const;
+const mobileImport = '/assets/images/template/service-import-front-v3.webp' as const;
+const mobileContact = '/assets/images/template/contact-showroom-banner-v1.webp' as const;
+const mobileGuides = '/assets/images/template/blog-advice-banner-v1.webp' as const;
+
+// One approved silver family feeds Home, About, menus and service journeys.
+const serviceIllustrations = {
+  collection: '/assets/images/template/home-collection-silver-v1.webp',
+  showroom: '/assets/images/template/desktop-service-inspection-v2.webp',
+  sell: '/assets/images/template/service-valuation-silver-v2.webp',
+  import: '/assets/images/template/desktop-service-import-v2.webp',
+  finance: '/assets/images/template/service-leasing-silver-v3.webp',
+  car: '/assets/images/template/service-car-silver-v2.webp',
+  overview: '/assets/images/template/home-services-silver-v1.webp'
+} as const satisfies LeadSiteConfig['artwork']['serviceIllustrations'];
+
+const vehicleCutouts = {
+  silver: '/assets/images/lead/day-night-cutout-silver-v1.webp?v=profile-1',
+  graphite: '/assets/images/lead/day-night-cutout-graphite-v1.webp?v=profile-1',
+  gclass: '/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1',
+  urus: '/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1',
+  golf: '/assets/images/lead/day-night-cutout-golf-v1.webp?v=profile-1',
+  a45: '/assets/images/lead/day-night-cutout-a45-v1.webp?v=profile-1',
+  porsche: '/assets/images/lead/day-night-cutout-porsche-v1.webp?v=profile-1',
+  amggt: '/assets/images/lead/day-night-cutout-amggt-v1.webp?v=profile-1',
+  m5: '/assets/images/lead/day-night-cutout-m5-v1.webp?v=profile-1',
+  e63: '/assets/images/lead/day-night-cutout-e63-v1.webp?v=profile-1',
+  m4: '/assets/images/lead/day-night-cutout-m4-v1.webp?v=profile-1',
+  rs5: '/assets/images/lead/day-night-cutout-rs5-v1.webp?v=profile-1'
+} as const satisfies Record<VehicleArtworkKey, SiteAssetPath>;
+
+export const leadSite = {
+  theme: {
+    accent: '#c40101',
+    accentHover: '#a90000',
+    accentRgb: '196 1 1',
+    workflowCanvas: '#a90f1c',
+    heroSurface: '#171a1f',
+    heroSurfaceDeep: '#15181d',
+    heroSurfaceMid: '#202329',
+    heroAccentDeep: '#78000f',
+    contactSurface: '#1d1f23',
+    contactSurfaceEnd: '#191c20',
+    campaignSurface: '#18191c',
+    campaignAccent: '#b80024',
+    blogHeroSurface: '#f0c84b',
+    actionTones: {
+      blue: ['#135da8', '#0d3d72'],
+      red: ['#d00832', '#9b001f'],
+      ice: ['#e8f4ff', '#c8e3f8'],
+      iceInk: '#15202c',
+      dark: ['#23262b', '#111317']
+    }
+  },
+  artwork: {
+    // Exact source keys keep customized dealer imagery on its own fallback asset.
+    responsiveImages: {
+      [collection]: [
+        { src: '/assets/images/lead/day-night-collection-banner-v2-480.webp', width: 480 },
+        { src: '/assets/images/lead/day-night-collection-banner-v2-720.webp', width: 720 },
+        { src: collection, width: 1200 }
+      ],
+      [mobileSell]: [
+        { src: '/assets/images/template/service-sell-front-v3-480.webp', width: 480 },
+        { src: mobileSell, width: 1200 }
+      ],
+      [mobileImport]: [
+        { src: '/assets/images/template/service-import-front-v3-480.webp', width: 480 },
+        { src: mobileImport, width: 1200 }
+      ],
+      [mobileContact]: [
+        { src: '/assets/images/template/contact-showroom-banner-v1-480.webp', width: 480 },
+        { src: mobileContact, width: 960 }
+      ],
+      [mobileGuides]: [
+        { src: '/assets/images/template/blog-advice-banner-v1-480.webp', width: 480 },
+        { src: mobileGuides, width: 960 }
+      ],
+      '/assets/images/lead/day-night-stock-01.webp': [
+        { src: '/assets/images/lead/day-night-stock-01-640.webp', width: 640 },
+        { src: '/assets/images/lead/day-night-stock-01-960.webp', width: 960 },
+        { src: '/assets/images/lead/day-night-stock-01.webp', width: 1600 }
+      ],
+      '/assets/images/lead/day-night-stock-02.webp': [
+        { src: '/assets/images/lead/day-night-stock-02-640.webp', width: 640 },
+        { src: '/assets/images/lead/day-night-stock-02-960.webp', width: 960 },
+        { src: '/assets/images/lead/day-night-stock-02.webp', width: 1600 }
+      ],
+      '/assets/images/lead/day-night-stock-03.webp': [
+        { src: '/assets/images/lead/day-night-stock-03-640.webp', width: 640 },
+        { src: '/assets/images/lead/day-night-stock-03-960.webp', width: 960 },
+        { src: '/assets/images/lead/day-night-stock-03.webp', width: 1600 }
+      ],
+      '/assets/images/lead/day-night-stock-04.webp': [
+        { src: '/assets/images/lead/day-night-stock-04-640.webp', width: 640 },
+        { src: '/assets/images/lead/day-night-stock-04-960.webp', width: 960 },
+        { src: '/assets/images/lead/day-night-stock-04.webp', width: 1600 }
+      ],
+      '/assets/images/lead/day-night-stock-06.webp': [
+        { src: '/assets/images/lead/day-night-stock-06-640.webp', width: 640 },
+        { src: '/assets/images/lead/day-night-stock-06-960.webp', width: 960 },
+        { src: '/assets/images/lead/day-night-stock-06.webp', width: 1600 }
+      ],
+      '/assets/images/blog/blog-1.jpg': [
+        { src: '/assets/images/blog/blog-1-640.webp', width: 640 },
+        { src: '/assets/images/blog/blog-1.jpg', width: 1200 }
+      ],
+      '/assets/images/blog/blog-2.jpg': [
+        { src: '/assets/images/blog/blog-2-640.webp', width: 640 },
+        { src: '/assets/images/blog/blog-2.jpg', width: 1200 }
+      ],
+      '/assets/images/blog/blog-3.jpg': [
+        { src: '/assets/images/blog/blog-3-640.webp', width: 640 },
+        { src: '/assets/images/blog/blog-3.jpg', width: 1200 }
+      ]
+    },
+    desktopHeroScenes: {
+      home: { kind: 'vehicles', pair: 'home' },
+      inventory: { kind: 'vehicles', pair: 'inventory' },
+      about: { kind: 'image', src: '/assets/images/lead/auto-best-desktop-home-v3.webp' },
+      blog: { kind: 'vehicles', pair: 'blog' },
+      contact: { kind: 'image', src: '/assets/images/lead/auto-best-desktop-inventory-v3.webp' }
+    },
+    contactHero: {
+      desktop: '/assets/images/lead/day-night-contact-hero-v2.webp',
+      generalMobile: mobileContact,
+      sellMobile: serviceIllustrations.sell,
+      importMobile: serviceIllustrations.import,
+      support: '/assets/images/lead/day-night-contact-phone-red-v1.webp'
+    },
+    serviceBanners: {
+      sell: serviceIllustrations.sell,
+      import: serviceIllustrations.import
+    },
+    serviceBackground: '/assets/images/template/home-section-body-backdrop-v1.webp',
+    homeActionScenes: {
+      sell: serviceIllustrations.sell,
+      import: serviceIllustrations.import,
+      finance: serviceIllustrations.finance
+    },
+    desktopActionScenes: {
+      import: serviceIllustrations.import,
+      finance: serviceIllustrations.finance
+    },
+    desktopServiceCards: {
+      inspection: serviceIllustrations.showroom,
+      import: serviceIllustrations.import,
+      leasing: serviceIllustrations.finance,
+      'trade-in': serviceIllustrations.sell
+    },
+    serviceIllustrations,
+    blogHero: mobileGuides,
+    editorialBanner: '/assets/images/lead/day-night-editorial-banner-v2.webp',
+    sectionBanners: {
+      graphite: '/assets/images/lead/auto-best-banner-graphite-v1.png',
+      crimson: '/assets/images/lead/auto-best-banner-crimson-v1.png'
+    },
+    discoveryBackground: '/assets/images/template/home-section-shared-backdrop-v1.webp',
+    // Client copies can choose one retained style and a compact mobile placement.
+    homeSectionBanner: { variant: 'kerb', mobile: 'featured' },
+    homeSectionBannerAssets: {
+      motorsport: '/assets/images/template/home-section-matte-graphite-comparison-v1.webp',
+      kerb: '/assets/images/template/home-section-kerb-photographic-v5.webp',
+      circuit: '/assets/images/template/home-section-circuit-asphalt-v3.webp',
+      headlights: '/assets/images/template/home-section-headlights-v1.webp',
+      taillights: '/assets/images/template/home-section-taillights-v1.webp'
+    },
+    homeSectionBannerMobileAssets: {
+      motorsport: '/assets/images/template/home-section-matte-graphite-comparison-v1.webp',
+      kerb: '/assets/images/template/home-section-kerb-photographic-v5-960.webp',
+      circuit: '/assets/images/template/home-section-circuit-asphalt-v3-960.webp',
+      headlights: '/assets/images/template/home-section-headlights-v1.webp',
+      taillights: '/assets/images/template/home-section-taillights-v1.webp'
+    },
+    homeCircuitOutline: '/assets/images/template/home-section-nordschleife-outline-v2.svg',
+    home: {
+      collection: serviceIllustrations.collection,
+      sell: serviceIllustrations.sell,
+      sellCompact: serviceIllustrations.sell,
+      import: serviceIllustrations.import
+    },
+    routeHero: {
+      standard: {
+        cars: '/assets/images/lead/day-night-studio-cars-v1.webp',
+        keys: '/assets/images/lead/day-night-studio-keys-v1.webp',
+        guide: '/assets/images/lead/day-night-studio-guide-v1.webp',
+        silver: '/assets/images/lead/day-night-hero-silver-v1.webp',
+        graphite: '/assets/images/lead/day-night-hero-graphite-v1.webp',
+        portrait: '/assets/images/lead/day-night-about-kristian-v1-light.webp',
+        phone: '/assets/images/lead/day-night-contact-kristian-phone-v1-light.webp',
+        showroom: '/assets/images/lead/day-night-about-showroom-v1-light.webp',
+        email: '/assets/images/lead/day-night-contact-email-v1-light.webp'
+      },
+      colored: {
+        silver: '/assets/images/lead/day-night-silver-color-v1.webp',
+        graphite: '/assets/images/lead/day-night-graphite-color-v1.webp',
+        showroom: '/assets/images/lead/day-night-showroom-color-v1.webp',
+        portrait: '/assets/images/lead/day-night-portrait-color-v1.webp',
+        guide: '/assets/images/lead/day-night-guide-yellow-v1.webp',
+        keys: '/assets/images/lead/day-night-keys-yellow-v1.webp',
+        phone: '/assets/images/lead/day-night-contact-phone-red-v1.webp',
+        email: '/assets/images/lead/day-night-contact-email-red-v1.webp'
+      },
+      pairs: {
+        cars: ['silver', 'graphite'],
+        keys: ['cars', 'keys'],
+        guide: ['guide', 'keys'],
+        about: ['showroom', 'portrait'],
+        contact: ['phone', 'email'],
+        sell: ['portrait', 'keys']
+      }
+    },
+    vehicleCutouts,
+    heroVehiclePairs: {
+      home: ['urus', 'urus'],
+      inventory: ['gclass', 'gclass'],
+      about: ['porsche', 'amggt'],
+      blog: ['m5', 'e63'],
+      contact: ['m4', 'rs5']
+    },
+    mobileHero: {
+      car: '/assets/images/lead/day-night-urus-front-v1.webp',
+      sell: mobileSell,
+      import: mobileImport,
+      home: collection
+    },
+    inventoryDemo: {
+      stock01: '/assets/images/lead/day-night-stock-01.webp',
+      stock02: '/assets/images/lead/day-night-stock-02.webp',
+      stock03: '/assets/images/lead/day-night-stock-03.webp',
+      stock04: '/assets/images/lead/day-night-stock-04.webp',
+      stock06: '/assets/images/lead/day-night-stock-06.webp'
+    },
+    pdp: {
+      importGuide: '/assets/images/lead/import-how-generated-v1.webp'
+    }
+  }
+} as const satisfies LeadSiteConfig;
+
+export type LeadRouteHeroVariant = keyof typeof leadSite.artwork.routeHero.pairs;
+export type LeadRouteHeroAsset = keyof typeof leadSite.artwork.routeHero.standard;
+export type LeadVehicleArtwork = keyof typeof leadSite.artwork.vehicleCutouts;
+export type LeadHeroVehiclePair = keyof typeof leadSite.artwork.heroVehiclePairs;

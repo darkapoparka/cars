@@ -1,0 +1,703 @@
+{
+  "cases": [
+    {
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "items": [
+        {
+          "active": true,
+          "color": "rgb(16, 17, 20)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Начало",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "home",
+          "target": [
+            70.1875,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Коли",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "cars",
+          "target": [
+            70.203125,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Продай",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "sell",
+          "target": [
+            70.203125,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Внос",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "import",
+          "target": [
+            70.203125,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Меню",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "menu",
+          "target": [
+            70.1875,
+            51.59375
+          ]
+        }
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:6461/bg",
+      "valid": true,
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "items": [
+        {
+          "active": true,
+          "color": "rgb(16, 17, 20)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Начало",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "home",
+          "target": [
+            56.1875,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Коли",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "cars",
+          "target": [
+            56.203125,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Продай",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "sell",
+          "target": [
+            56.203125,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Внос",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "import",
+          "target": [
+            56.203125,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Меню",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "menu",
+          "target": [
+            56.203125,
+            51.59375
+          ]
+        }
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:6461/bg",
+      "valid": true,
+      "viewport": [
+        320,
+        844
+      ]
+    },
+    {
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "items": [
+        {
+          "active": true,
+          "color": "rgb(16, 17, 20)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Home",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "home",
+          "target": [
+            56.1875,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Cars",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "cars",
+          "target": [
+            56.203125,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Sell",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "sell",
+          "target": [
+            56.203125,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Import",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "import",
+          "target": [
+            56.203125,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Menu",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "menu",
+          "target": [
+            56.203125,
+            51.59375
+          ]
+        }
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:6461/en",
+      "valid": true,
+      "viewport": [
+        320,
+        844
+      ]
+    },
+    {
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "items": [
+        {
+          "active": true,
+          "color": "rgb(16, 17, 20)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Home",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "home",
+          "target": [
+            70.1875,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Cars",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "cars",
+          "target": [
+            70.203125,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Sell",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "sell",
+          "target": [
+            70.203125,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Import",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "import",
+          "target": [
+            70.203125,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Menu",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "menu",
+          "target": [
+            70.1875,
+            51.59375
+          ]
+        }
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:6461/en",
+      "valid": true,
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "items": [
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Home",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "home",
+          "target": [
+            70.1875,
+            51.59375
+          ]
+        },
+        {
+          "active": true,
+          "color": "rgb(16, 17, 20)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Cars",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "cars",
+          "target": [
+            70.203125,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Sell",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "sell",
+          "target": [
+            70.203125,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Import",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "import",
+          "target": [
+            70.203125,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Menu",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "menu",
+          "target": [
+            70.1875,
+            51.59375
+          ]
+        }
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:6461/en/listing-grid",
+      "valid": true,
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "items": [
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Home",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "home",
+          "target": [
+            73.1875,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Cars",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "cars",
+          "target": [
+            73.203125,
+            51.59375
+          ]
+        },
+        {
+          "active": true,
+          "color": "rgb(16, 17, 20)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Sell",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "sell",
+          "target": [
+            73.203125,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Import",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "import",
+          "target": [
+            73.203125,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Menu",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "menu",
+          "target": [
+            73.1875,
+            51.59375
+          ]
+        }
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:6461/en/contact?topic=trade-in",
+      "valid": true,
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "items": [
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Home",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "home",
+          "target": [
+            73.1875,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Cars",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "cars",
+          "target": [
+            73.203125,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Sell",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "sell",
+          "target": [
+            73.203125,
+            51.59375
+          ]
+        },
+        {
+          "active": true,
+          "color": "rgb(16, 17, 20)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Import",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "import",
+          "target": [
+            73.203125,
+            51.59375
+          ]
+        },
+        {
+          "active": false,
+          "color": "rgb(98, 104, 115)",
+          "family": "imagegen-generated-nav",
+          "frame": [
+            24,
+            24
+          ],
+          "label": "Menu",
+          "labelFits": true,
+          "mask": "url(\"http://127.0.0.1:6461/assets/images/template/generated-bottom-nav-v3.png\")",
+          "name": "menu",
+          "target": [
+            73.1875,
+            51.59375
+          ]
+        }
+      ],
+      "overflow": false,
+      "url": "http://127.0.0.1:6461/en/contact?topic=import",
+      "valid": true,
+      "viewport": [
+        390,
+        844
+      ]
+    }
+  ],
+  "interactions": [
+    {
+      "case": "BG 320 menu Escape",
+      "expanded": "false",
+      "focus": "Меню",
+      "passed": true
+    },
+    {
+      "case": "EN Cars navigation",
+      "passed": true
+    }
+  ],
+  "desktop": {
+    "dockVisible": false,
+    "font": "\"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+    "overflow": false,
+    "width": 1440
+  },
+  "errors": [],
+  "allPassed": true
+}
