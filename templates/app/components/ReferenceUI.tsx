@@ -21,7 +21,7 @@ export function ServiceTabs({active,compact=false,onDark=false}: {active:Service
 
   return <nav aria-label={tx("Car services")} {...stylex.props(s.tabs)}>{showroom.services.map(tab => <Link key={tab.key} href={tab.href} aria-label={tx(tab.key === 'finance' ? 'Finance navigation' : tab.label)} aria-current={active===tab.key?'page':undefined} {...stylex.props(s.tab,active===tab.key&&s.tabActive,onDark&&active===tab.key&&s.tabOnDarkActive,compact&&s.tabCompact)}>
     <span {...stylex.props(s.tabTitle,t.navigation,active===tab.key&&s.tabTitleActive,compact&&s.tabTitleCompact,compact&&active===tab.key&&s.tabTitleCompactActive,compact&&onDark&&s.tabTitleOnDark,compact&&onDark&&active===tab.key&&s.tabTitleOnDarkActive)}>{tx(tab.key === 'finance' ? 'Finance navigation' : tab.label)}</span>
-    {!compact ? <span aria-hidden="true" {...stylex.props(s.tabArtworkBox)}><ServiceTabArtwork image={tab.image} mobileImage={tab.mobileTabImage} sell={tab.key === 'sell'}/></span> : null}
+    {!compact ? <span aria-hidden="true" {...stylex.props(s.tabArtworkBox)}><ServiceTabArtwork image={tab.image} mobileImage={tab.mobileTabImage} service={tab.key}/></span> : null}
     {active===tab.key?<span aria-hidden="true" {...stylex.props(s.tabIndicator,compact&&s.tabIndicatorCompact)}/>:null}
   </Link>)}</nav>;
 }
@@ -30,18 +30,18 @@ export function ShowroomPromotion() {
   return <DealerHomeBanner/>;
 }
 
-function ServiceTabArtwork({image, mobileImage, sell}: {image: string; mobileImage: string; sell: boolean}) {
+function ServiceTabArtwork({image, mobileImage, service}: {image: string; mobileImage: string; service: ServiceKey}) {
   const common = {alt: '', fill: true, sizes: '(max-width: 767px) 90px, 160px'};
   const {props: desktop} = getImageProps({...common, src: assetPath(image)});
   const {props: mobile} = getImageProps({...common, src: assetPath(mobileImage)});
-  return <picture><source media="(max-width: 767px)" srcSet={mobile.srcSet} sizes={mobile.sizes}/><img {...desktop} alt="" {...stylex.props(s.tabArt, sell && s.tabArtSell)}/></picture>;
+  return <picture><source media="(max-width: 767px)" srcSet={mobile.srcSet} sizes={mobile.sizes}/><img {...desktop} alt="" {...stylex.props(s.tabArt, service === 'sell' && s.tabArtSell, service === 'finance' && s.tabArtFinance)}/></picture>;
 }
 
 export function BrandEmblem({make,plain=false}: {make: string;plain?: boolean}) {
   const artwork = brandLogo(make);
   const framed = artwork?.presentation === 'framed' && !(plain && artwork.plainSymbolViewBox);
   const image = artwork ? getImageProps({src: assetPath(artwork.src), width: 72, height: 72, alt: ''}).props : null;
-  const logo = framed ? <img data-brand-logo {...image} alt="" {...stylex.props(s.brandImageFramed)}/> : artwork ? <svg data-brand-logo viewBox={plain ? artwork.plainSymbolViewBox ?? artwork.symbolViewBox : artwork.symbolViewBox} aria-hidden="true" focusable="false" {...stylex.props(s.brandImage, artwork.wide && s.brandImageWide, artwork.compact && s.brandImageCompact, plain && s.brandImagePlain, plain && artwork.compact && s.brandImagePlainCompact)}><image href={image?.src} width={artwork.sourceSize?.[0]} height={artwork.sourceSize?.[1]}/></svg> : <span {...stylex.props(s.brandName)}>{make}</span>;
+  const logo = framed ? <svg data-brand-logo viewBox={artwork.frameViewBox} aria-hidden="true" focusable="false" {...stylex.props(s.brandImageFramed)}><image href={image?.src} width={artwork.sourceSize?.[0]} height={artwork.sourceSize?.[1]}/></svg> : artwork ? <svg data-brand-logo viewBox={plain ? artwork.plainSymbolViewBox ?? artwork.symbolViewBox : artwork.symbolViewBox} aria-hidden="true" focusable="false" {...stylex.props(s.brandImage, artwork.wide && s.brandImageWide, artwork.compact && s.brandImageCompact, plain && s.brandImagePlain, plain && artwork.compact && s.brandImagePlainCompact)}><image href={image?.src} width={artwork.sourceSize?.[0]} height={artwork.sourceSize?.[1]}/></svg> : <span {...stylex.props(s.brandName)}>{make}</span>;
   return <span aria-hidden="true" {...stylex.props(s.brandIcon, artwork?.presentation === 'framed' && s.brandIconFramed, plain && s.brandIconPlain)}>{logo}</span>;
 }
 
@@ -95,6 +95,7 @@ const s=stylex.create({
  tabArtworkBox:{position:{[media.mobile]:'relative',default:'absolute'},flexShrink:0,left:{[media.mobile]:'auto',default:'50%'},transform:{[media.mobile]:'translateY(-1px)',default:'translateX(-50%)'},bottom:{[media.mobile]:'auto',default:2},width:{[media.mobile]:64,default:'100%'},height:{[media.mobile]:42,default:'64%'},maxWidth:160},
  tabArt:{objectFit:'contain'},
  tabArtSell:{transform:{[media.mobile]:'scaleX(1.16)',default:'none'}},
+ tabArtFinance:{transform:{[media.mobile]:'scale(0.96)',default:'none'}},
  tabTitle:{position:{[media.mobile]:'static',default:'absolute'},top:16,left:0,right:0,maxWidth:'100%',textAlign:'center',zIndex:1,whiteSpace:'pre-line',overflowWrap:'anywhere',letterSpacing:0},
  tabTitleActive:{fontWeight:{[media.mobile]:500,default:400}},
  sectionTitle:{fontSize:{[media.mobile]:18,default:25},fontWeight:{[media.mobile]:600,default:500},lineHeight:1.35,color:$.text},
@@ -103,13 +104,13 @@ const s=stylex.create({
  brandRow:{display:'flex',gap:{[media.mobile]:10,default:12},overflowX:'auto',overscrollBehaviorX:'contain',marginTop:12,marginRight:{[media.mobile]:-12,default:0},paddingRight:{[media.mobile]:12,default:0},paddingBlock:4,scrollbarWidth:'none'},
  brandRowWithoutTitle:{marginTop:0},
  brand:{display:'flex',flexShrink:0,alignItems:'center',flexDirection:'column',gap:8,width:{[media.mobile]:72,default:108},padding:0,textAlign:'center',color:$.text,borderWidth:0,backgroundColor:'transparent',cursor:'pointer'},
- brandIcon:{display:'grid',placeItems:'center',width:'100%',aspectRatio:'1',overflow:'hidden',borderWidth:1,borderStyle:'solid',borderColor:$.surfaceBorder,borderRadius:'50%',backgroundColor:$.surface},
+ brandIcon:{display:'grid',placeItems:'center',width:'100%',aspectRatio:'1',overflow:'hidden',borderWidth:1,borderStyle:'solid',borderColor:'#e2e8f0',borderRadius:'50%',backgroundColor:$.surface},
  brandIconFramed:{borderWidth:0},
  brandIconPlain:{borderWidth:0,borderRadius:0,backgroundColor:'transparent'},
  brandImage:{display:'block',width:'60%',height:'auto',maxHeight:'60%',overflow:'hidden'},
  brandImageWide:{width:'76%'},
  brandImageCompact:{width:'50%',maxHeight:'50%'},
- brandImageFramed:{display:'block',width:'100%',height:'100%',objectFit:'cover'},
+ brandImageFramed:{display:'block',width:'100%',height:'100%'},
  brandImagePlain:{width:'100%',height:'100%',maxHeight:'100%',mixBlendMode:'multiply'},
  brandImagePlainCompact:{width:'80%',height:'80%',maxHeight:'80%'},
  brandName:{maxWidth:'90%',fontSize:11,fontWeight:600,overflowWrap:'anywhere'},

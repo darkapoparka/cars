@@ -7,6 +7,6 @@ const dockIcons = {...icons, more: TextAlignJustify};
 /** Shared navigation symbols; size changes by context, colour follows the theme. */
 export default function ShowroomIcon({name, size = 28, strokeWidth = 1.75, dock = false}: {name: ShowroomIconName; size?: number; strokeWidth?: number; dock?: boolean}) {
   const Icon = (dock ? dockIcons : icons)[name];
-  const iconSize = dock && name === 'cars' ? size + 2 : dock && (name === 'more' || name === 'service') ? size - 2 : size;
+  const iconSize = dock && name === 'cars' ? size + 1 : dock && (name === 'more' || name === 'service') ? size - 2 : size;
   return <Icon size={iconSize} strokeWidth={strokeWidth} absoluteStrokeWidth={dock} aria-hidden="true"/>;
 }
