@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "dealer": "batley-as-motor-group",
+  "sourceCommit": "de38979624e04da73afcd90dff9daf993cac0a17",
+  "sourceTree": "d843277874dd6e3f61d47b268584332bcaf837cb",
+  "sourceReleases": {
+    "auto-best": {
+      "revision": "696230a404abd9b20b6f907b9cfb139175298c7a",
+      "tree": "b07ff2273be554ef64a039ac8f4f023ae60a33ac",
+      "digest": "90f131aa0ead6ae4fcb06d30c054ca4d0c5d39097a2927cca8f298c7d2dfb3ca"
+    },
+    "modern": {
+      "revision": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+      "tree": "51d68e5dd6e3b305191df94e877403fd7b7414e1",
+      "digest": "b035a849efb41d3ed18d97fcf3511850469162c0a990397b74be588179d43588"
+    },
+    "import": {
+      "revision": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+      "tree": "b64c4a4939c4244ba3f408e5c0311c586a913e67",
+      "digest": "eef4c3544b28bb3a62cad4c2a07e4ff64301fb4c9e9925ba002077bda7f63bd3"
+    },
+    "app": {
+      "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+      "tree": "749512ff762c25272d1474225ff653dd4c88f0fe",
+      "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541"
+    },
+    "mobile": {
+      "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+      "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b",
+      "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d"
+    },
+    "karento-best": {
+      "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+      "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
+      "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+    }
+  },
+  "selected": [
+    "auto-best",
+    "modern",
+    "import",
+    "app",
+    "mobile"
+  ],
+  "protectedInputs": [
+    {
+      "path": "assets/app-icon.png",
+      "sha256": "cfa07cd586e7355aece15f887796773d5bd5ee6f845945c1f850c44119fce96c"
+    },
+    {
+      "path": "assets/favicon.ico",
+      "sha256": "0837193a895a7973ca158e9b3cdf2b69c673aa7f151013f645e72dedaca7c1e9"
+    },
+    {
+      "path": "assets/provenance.json",
+      "sha256": "38d5756ae38661e72cc4558d7ee8b32f48e0eee17cc2499b1d87299ba4db7af8"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "8edf618f694fd11b8999cae8dd9735e19bc7f031ecabfb14553b81b74f2918db"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "sha256": "79823a06c1518fe8af6fafe839900a5a911ae115b8eda260764bb9c657930400"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "c01ff963ef8f1277aef78e5d5bd957aae180df55f18edb7a933d5c534ed1db3d"
+    },
+    {
+      "path": "dealer-brand/logo.webp",
+      "sha256": "6caa1b29976e04784a567581823d517af961510c2e8c4aad4453b51c66db6df1"
+    },
+    {
+      "path": "dealer-stock/hatchback.webp",
+      "sha256": "aafb8fc639fa0f2693f4a1c5e969975c757b00dfa0573bf36a48b40a90ecede2"
+    },
+    {
+      "path": "dealer-stock/suv.webp",
+      "sha256": "67094fedb8305304ba8b0d2842f5d2c7d47979ed1bb42fe51688ab3f77b765ff"
+    },
+    {
+      "path": "locale-config.json",
+      "sha256": "1ff088a4456ad5caf755aa9bdc9124d8038914ea95b2e969f8917330aa7dfa0b"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "e0deb9f20a9a25c416467f8951dab0c50de33ac757f09612265c46f16eeee008"
+    }
+  ],
+  "installed": true,
+  "sourceSealsVerified": true,
+  "protectedInputsPreserved": true,
+  "build": false,
+  "hosted": false
+}

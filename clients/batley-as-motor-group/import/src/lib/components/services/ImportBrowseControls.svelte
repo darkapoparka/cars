@@ -12,10 +12,10 @@
 	} from '$lib/data/import-criteria';
 	import type { ImportBrowseData } from '$lib/server/import-browse';
 	import MobileSheet from '$lib/components/common/MobileSheet.svelte';
-	import ChevronDown from '@lucide/svelte/icons/chevron-down';
-	import ChevronLeft from '@lucide/svelte/icons/chevron-left';
+	import MobileChoiceRow from '$lib/components/common/MobileChoiceRow.svelte';
+	import ChevronRight from '@lucide/svelte/icons/chevron-right';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
-	import Check from '@lucide/svelte/icons/check';
+	import Search from '@lucide/svelte/icons/search';
 	import SlidersHorizontal from '@lucide/svelte/icons/sliders-horizontal';
 
 	let {
@@ -48,12 +48,6 @@
 		bodyType: copy.anyType,
 		make: copy.anyMake,
 		model: copy.anyModel
-	});
-	const helps = $derived({
-		origin: copy.countryHelp,
-		bodyType: copy.typeHelp,
-		make: copy.makeHelp,
-		model: copy.modelHelp
 	});
 	const country = $derived(
 		importCountries.find((market) => market.value === criteria.origin) ?? importCountries[0]
@@ -125,9 +119,10 @@
 </script>
 
 <section class="import-browse" aria-label={copy.preferences}>
-	<nav class="import-browse__countries" aria-label={copy.countryHelp}>
+	<nav class="import-browse__countries mobile-quick-rail" aria-label={copy.countryHelp}>
 		<button
 			type="button"
+			class="mobile-quick-pill mobile-quick-pill--icon"
 			aria-label={copy.filters}
 			aria-haspopup="dialog"
 			aria-expanded={open}
@@ -137,6 +132,7 @@
 		</button>
 		{#each importCountries as market (market.value)}
 			<a
+				class="mobile-quick-pill"
 				href={importCriteriaUrl(page.url, { ...criteria, origin: market.value })}
 				data-sveltekit-noscroll
 				class:active={criteria.origin === market.value}
@@ -162,9 +158,12 @@
 <MobileSheet
 	bind:open
 	title={overview ? copy.filters : labels[field]}
-	description={overview ? copy.preferences : helps[field]}
 	onclose={finishClose}
-	contentClass="import-preferences-sheet"
+	surface="selection"
+	backLabel={copy.back}
+	onback={overview ? undefined : () => (overview = true)}
+	mode={!overview && (field === 'make' || field === 'model') ? 'full' : 'sheet'}
+	contentClass={`mobile-filter-surface import-preferences-sheet ${!overview && (field === 'make' || field === 'model') ? 'import-preferences-sheet--searchable' : ''}`}
 >
 	<form
 		class="import-preferences"
@@ -178,6 +177,7 @@
 				{#each pills as pill (pill.key)}
 					<button
 						type="button"
+						class="mobile-disclosure-row"
 						class:active={Boolean(criteria[pill.key])}
 						aria-label={criteria[pill.key] ? `${labels[pill.key]}: ${pill.text}` : labels[pill.key]}
 						title={pill.text}
@@ -187,59 +187,61 @@
 							><strong>{labels[pill.key]}</strong>{#if criteria[pill.key]}<small>{pill.text}</small
 								>{/if}</span
 						>
-						<ChevronDown size={15} aria-hidden="true" />
+						<ChevronRight size={18} aria-hidden="true" />
 					</button>
 				{/each}
 			</div>
 		{:else}
-			<button class="import-preferences__back" type="button" onclick={() => (overview = true)}>
-				<ChevronLeft size={18} aria-hidden="true" />{copy.back}
-			</button>
 			{#if field === 'make' || field === 'model'}
-				<label for={`import-preference-${id}`}>{labels[field]}</label>
-				<input
-					id={`import-preference-${id}`}
-					type="search"
-					maxlength={field === 'make' ? 60 : 80}
-					placeholder={labels[field]}
-					value={draft}
-					autocomplete="off"
-					oninput={(event) => {
-						draft = event.currentTarget.value;
-						query = draft;
-					}}
-				/>
+				<label class="import-preferences__search" for={`import-preference-${id}`}>
+					<Search size={22} aria-hidden="true" />
+					<span class="sr-only">{labels[field]}</span>
+					<input
+						id={`import-preference-${id}`}
+						type="search"
+						maxlength={field === 'make' ? 60 : 80}
+						placeholder={labels[field]}
+						value={draft}
+						autocomplete="off"
+						enterkeyhint="done"
+						onkeydown={(event) => {
+							if (event.key === 'Enter') {
+								event.preventDefault();
+								event.currentTarget.blur();
+							}
+						}}
+						oninput={(event) => {
+							draft = event.currentTarget.value;
+							query = draft;
+						}}
+					/>
+				</label>
 			{/if}
 			<div
-				class="import-preferences__choices"
-				class:import-preferences__choices--countries={field === 'origin'}
+				class="import-preferences__choices mobile-choice-list"
 				role="group"
 				aria-label={labels[field]}
 			>
 				{#each visibleChoices as choice (choice.value)}
-					<button
-						type="button"
-						class:active={draft === choice.value}
-						aria-pressed={draft === choice.value}
-						onclick={() => {
+					<MobileChoiceRow
+						label={choice.label}
+						selected={draft === choice.value}
+						image={choice.flag}
+						imageKind="flag"
+						onselect={() => {
 							draft = choice.value;
 							query = '';
 						}}
-					>
-						{#if choice.flag}<img src={assetHref(choice.flag)} width="24" height="18" alt="" />{/if}
-						<span>{choice.label}</span>{#if draft === choice.value}<Check
-								size={17}
-								aria-hidden="true"
-							/>{/if}
-					</button>
+					/>
 				{/each}
 			</div>
 		{/if}
 	</form>
 	{#snippet footer()}
-		<div class="import-preferences__actions">
+		<div class="mobile-filter-actions">
 			<button
 				type="button"
+				class="mobile-filter-action mobile-filter-action--clear"
 				onclick={() => {
 					if (overview) {
 						pendingHref = importCriteriaUrl(page.url, emptyImportCriteria);
@@ -252,6 +254,7 @@
 			>
 			<button
 				type="button"
+				class="mobile-filter-action mobile-filter-action--apply"
 				onclick={() => {
 					if (overview) open = false;
 					else apply();
@@ -274,41 +277,17 @@
 	.import-browse__countries {
 		--bc-text-filter: var(--bc-text-quick-pill);
 		--bc-leading-filter: var(--bc-leading-quick-pill);
-		display: flex;
-		gap: var(--bc-space-2);
-		overflow-x: auto;
-		padding: 2px 0;
-		scrollbar-width: none;
 	}
-	.import-browse__countries::-webkit-scrollbar {
-		display: none;
-	}
-	/* Market pills share the same height, padding, typography and radius.
-	   Labels and flags determine their width, including the unrestricted market,
-	   so translations follow the same sizing rule within the scrolling rail. */
-	.import-browse__countries :is(a, button) {
-		display: inline-flex;
-		flex: 0 0 auto;
-		align-items: center;
-		justify-content: center;
-		gap: 7px;
+	.import-browse__countries a {
 		min-width: var(--bc-control-height-chip);
 		max-width: 180px;
-		min-height: var(--bc-control-height-chip);
-		padding: 0 12px;
-		border: 1px solid transparent;
-		border-radius: var(--bc-radius-control);
-		background: var(--bc-white);
-		color: var(--bc-ink);
-		font: var(--bc-weight-control) var(--bc-text-filter)/var(--bc-leading-filter)
-			var(--bc-font-body);
-		text-decoration: none;
-		cursor: pointer;
 	}
-	.import-browse__countries button {
-		width: var(--bc-control-height-chip);
-		padding: 0;
+	.import-browse__empty button :global(svg) {
+		width: var(--bc-control-icon-size-standard);
+		height: var(--bc-control-icon-size-standard);
+		flex: 0 0 auto;
 	}
+
 	.import-browse__countries a.active {
 		background: var(--bc-accent);
 		color: var(--bc-white);
@@ -319,8 +298,7 @@
 		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
-	.import-browse__countries img,
-	.import-preferences__choices img {
+	.import-browse__countries img {
 		position: static;
 		inset: auto;
 		width: 20px;
@@ -341,7 +319,7 @@
 		background: var(--bc-accent);
 		color: white;
 		font-family: var(--bc-font-body);
-		font-size: var(--bc-mobile-body);
+		font-size: var(--bc-text-cta);
 		cursor: pointer;
 		min-width: 0;
 		white-space: nowrap;
@@ -349,14 +327,7 @@
 	.import-browse__empty :global(svg) {
 		flex: 0 0 auto;
 	}
-	.import-browse a {
-		display: flex;
-		align-items: center;
-		gap: 6px;
-		min-height: var(--bc-control-height-chip);
-		color: var(--bc-copy);
-		font-size: var(--bc-text-quick-pill);
-	}
+
 	.import-browse__empty {
 		display: grid;
 		gap: var(--bc-space-2);
@@ -380,33 +351,14 @@
 		gap: var(--bc-space-3);
 	}
 	.import-preferences__categories {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: var(--bc-space-2);
-	}
-	.import-preferences__categories button {
 		display: flex;
-		min-width: 0;
-		min-height: var(--bc-control-height-standard);
-		align-items: center;
-		justify-content: space-between;
-		gap: var(--bc-space-2);
-		padding: 0 12px;
-		border: 1px solid transparent;
-		border-radius: var(--bc-radius-control);
-		background: var(--bc-white);
-		color: var(--bc-ink);
-		font: var(--bc-weight-control) var(--bc-text-filter)/var(--bc-leading-filter)
-			var(--bc-font-body);
-		cursor: pointer;
+		flex-direction: column;
 	}
-	.import-preferences__categories button.active {
-		border-color: var(--bc-accent);
-	}
+
 	.import-preferences__categories button > span {
 		display: flex;
 		min-width: 0;
-		gap: 6px;
+		gap: var(--bc-space-3);
 		align-items: baseline;
 	}
 	.import-preferences__categories strong,
@@ -419,108 +371,65 @@
 	}
 	.import-preferences__categories small {
 		color: var(--bc-muted);
-		font-size: var(--bc-mobile-meta);
+		font-size: var(--bc-mobile-label);
+		margin-left: auto;
 	}
 	.import-preferences__categories :global(svg) {
 		flex: 0 0 auto;
 	}
-	.import-preferences__back {
+
+	.import-preferences__search {
 		display: flex;
-		width: fit-content;
+		min-width: 0;
 		min-height: var(--bc-control-height-standard);
+		flex: 0 0 auto;
 		align-items: center;
-		gap: 6px;
-		padding: 0 4px;
-		border: 0;
-		border-radius: var(--bc-radius-control);
-		background: transparent;
-		color: var(--bc-ink);
-		font: var(--bc-weight-control) var(--bc-text-filter)/var(--bc-leading-filter)
-			var(--bc-font-body);
-		cursor: pointer;
+		gap: var(--bc-space-2);
+		border-radius: var(--bc-radius-pill);
+		background: var(--bc-bg-strong);
+		padding: 0 var(--bc-space-4);
 	}
-	.import-preferences label {
-		font-size: var(--bc-mobile-label);
+	.import-preferences__search :global(svg) {
+		width: var(--bc-control-icon-size-standard);
+		height: var(--bc-control-icon-size-standard);
+		flex: 0 0 auto;
+		color: var(--bc-copy);
 	}
-	.import-preferences input {
-		min-height: var(--bc-control-height-standard);
+	.import-preferences__search input[type='search'] {
+		--control-focus-outline: none;
+		--control-focus-shadow: none;
 		width: 100%;
 		min-width: 0;
-		padding: 0 14px;
-		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-control);
-		background: var(--bc-white);
-		font-family: var(--bc-font-body);
-		font-size: 18px;
-	}
-	.import-preferences__choices {
-		display: grid;
-		gap: var(--bc-space-2);
-	}
-	.import-preferences__choices--countries {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-	.import-preferences__choices button {
-		display: flex;
-		min-width: 0;
-		align-items: center;
-		gap: var(--bc-space-2);
-		min-height: var(--bc-control-height-standard);
-		padding: 0 12px;
-		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-control);
-		background: var(--bc-white);
+		height: var(--bc-control-height-standard);
+		border: 0 !important;
+		border-radius: 0 !important;
+		background: transparent !important;
+		box-shadow: none !important;
+		padding: 0 !important;
 		color: var(--bc-ink);
-		text-align: left;
-		font-family: var(--bc-font-body);
-		font-size: var(--bc-text-filter);
-		line-height: var(--bc-leading-filter);
-		cursor: pointer;
+		font: var(--bc-weight-body) var(--bc-text-search)/var(--bc-leading-search) var(--bc-font-body);
+		outline: 0;
 	}
-	.import-preferences__choices button span {
-		flex: 1;
-		min-width: 0;
+	.import-preferences__search:focus-within {
+		box-shadow: inset 0 0 0 2px var(--bc-accent);
+	}
+	:global(.import-preferences-sheet--searchable .bc-mobile-sheet__body) {
+		display: flex;
 		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
 	}
-	.import-preferences__choices button img,
-	.import-preferences__choices button :global(svg) {
-		flex-shrink: 0;
-	}
-	.import-preferences__choices button.active {
-		background: var(--bc-white);
-		border-color: var(--bc-accent);
-		color: var(--bc-ink);
-	}
-	.import-preferences__actions {
-		display: grid;
-		grid-template-columns: minmax(80px, 1fr) 2fr;
-		gap: var(--bc-space-3);
-	}
-	.import-preferences__actions button {
+	:global(.import-preferences-sheet--searchable) .import-preferences {
 		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: var(--bc-space-2);
-		min-height: 48px;
-		padding: 0 12px;
-		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-control);
-		background: var(--bc-white);
-		color: var(--bc-ink);
-		font-family: var(--bc-font-body);
-		font-size: var(--bc-text-control);
-		line-height: var(--bc-leading-control);
-		cursor: pointer;
-		white-space: nowrap;
-		min-width: 0;
+		min-height: 0;
+		flex: 1;
+		flex-direction: column;
 	}
-	.import-preferences__actions button:last-child {
-		border-color: transparent;
-		background: var(--bc-accent);
-		color: var(--bc-white);
+	:global(.import-preferences-sheet--searchable) .import-preferences__choices {
+		min-height: 0;
+		flex: 1;
+		overflow-y: auto;
+		overscroll-behavior: contain;
 	}
+
 	button:focus-visible,
 	a:focus-visible,
 	input:focus-visible {
