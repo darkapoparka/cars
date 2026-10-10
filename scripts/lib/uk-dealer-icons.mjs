@@ -62,7 +62,7 @@ export function applyDealerIcons({files,manifest,profile,png,ico}) {
     return replaceOne(source,/<link rel="icon"[^>]+\/>/,icon+extra,'AutoBest favicon');
   });
   edit('modern/apps/web/app/[locale]/layout.tsx',source=>replaceOne(source,
-    /icons:\s*\{\s*icon:\s*\[\{ type: "image\/png", url: withBasePath\(leadSite\.logoPath\) \}\],\s*\}/,
+    /icons:\s*\{\s*icon:\s*\[\{ type: "image\/png", url: withBasePath\(leadSite\.logo(?:Path|OnLight)\) \}\],\s*\}/,
     'icons: {\n    icon: [{ type: "image/png", url: withBasePath("'+DEALER_ICON_PATH+'") }],\n'+
     '    apple: [{ type: "image/png", url: withBasePath("'+DEALER_ICON_PATH+'") }],\n'+
     '  },\n  manifest: withBasePath("'+DEALER_MANIFEST_PATH+'")','Modern metadata'));
