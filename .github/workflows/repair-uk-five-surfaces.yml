@@ -41,7 +41,7 @@ jobs:
       - name: Correct exact existing dealer sources and verify their seals
         run: |
           for dealer in batley-as-motor-group stockport-broadbent-car-and-servicing motherwell-motors-castle birmingham-trade-car-sales-grasmere birmingham-square-one-motors; do
-            node --max-old-space-size=4096 scripts/repair-uk-five-surfaces.mjs "$dealer"
+            node --max-old-space-size=4096 scripts/repair-uk-five-surfaces.mjs "$dealer" --contact-only
           done
       - name: Publish only the five corrected dealer prefixes
         run: |
@@ -50,7 +50,7 @@ jobs:
           git add --sparse --force clients/batley-as-motor-group clients/stockport-broadbent-car-and-servicing clients/motherwell-motors-castle clients/birmingham-trade-car-sales-grasmere clients/birmingham-square-one-motors
           git diff --cached --name-only > runtime/uk-five-changed-paths.txt
           node --input-type=module -e "import fs from 'node:fs';import {UK_FIVE} from './scripts/repair-uk-five-surfaces.mjs';const names=fs.readFileSync('runtime/uk-five-changed-paths.txt','utf8').trim().split('\n');if(!names.length||names.some(n=>!UK_FIVE.some(s=>n.startsWith('clients/'+s+'/'))))throw Error('Commit escaped five-dealer scope');"
-          git commit -m 'Repair UK five dealer logo surfaces and Modern missing-contact runtime'
+          git commit -m 'Repair UK native contact and about consumers without changing dealer facts'
           git fetch --filter=blob:none --no-tags origin main
           git rebase origin/main
           git push origin HEAD:main
@@ -72,4 +72,5 @@ jobs:
             runtime/uk-five-changed-paths.txt
             runtime/uk-five-repair-commit.txt
             clients/*/.client/surface-repair-20261011.json
+            clients/*/.client/contact-repair-20261011.json
           retention-days: 7

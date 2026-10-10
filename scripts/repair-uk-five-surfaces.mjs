@@ -61,4 +61,27 @@ async function repair(slug){
  for(const n of protectedNames)assert(hash(fs.readFileSync(client+'/'+n))===protectedHashes[n],'Factual inputs changed '+n);
  const repairReceipt={schemaVersion:1,type:'uk-five-surface-contact-repair',dealer:slug,at:new Date().toISOString(),originalLogoSha256:logos.sourceSha256,logoAssets:contract.assets,protectedInputsPreserved:protectedHashes,modernNeutralHeroAccent:'#18181B',modernNeutralDesktopAccent:'#4b5057',optionalPhoneSupported:true,unknownPhonesInvented:false,country:'GB',currency:'GBP',allSixSourceSealsRefreshed:true,hostedVerified:false};write(client+'/.client/surface-repair-20261011.json',repairReceipt);console.log(JSON.stringify({dealer:slug,repaired:true,protectedInputsPreserved:true,logoWidth:logos.width,logoHeight:logos.height}));
 }
-if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))repair(process.argv[2]).catch(error=>{console.error(error.stack);process.exitCode=1;});
+
+export function repairUkDealerLabelFallback(source){
+ const before="const value = compact ? labels[\x60\x24{field}Short\x60] ?? labels[field] : labels[field];";
+ const after="const value = (compact ? labels[\x60\x24{field}Short\x60] ?? labels[field] : labels[field]) ?? (field.endsWith('Short') ? labels[field.slice(0, -5)] : undefined);";
+ assert(source.split(before).length===2,'Reviewed native dealer label boundary changed');
+ return source.replace(before,after);
+}
+async function repairContactOnly(slug){
+ assert(UK_FIVE.includes(slug),'Dealer outside five-source repair');
+ const client=path.join(ROOT,'clients',slug),manifest=read(client+'/dealer.json');
+ const factual=hash(fs.readFileSync(client+'/business-facts.json')),stock=hash(fs.readFileSync(client+'/stock.json'));
+ const labels=client+'/auto-best/src/lib/locale/messages.ts';write(labels,repairUkDealerLabelFallback(fs.readFileSync(labels,'utf8')));
+ const about=client+'/auto-best/src/lib/components/company/AboutProcess.svelte';let text=fs.readFileSync(about,'utf8');
+ for(const key of ['title','description','cta']){const before='i18n.text(service.'+key+')';assert(text.split(before).length===2,'Expected the precise dealer-owned service text consumer');text=text.replace(before,'service.'+key);}
+ write(about,text);
+ const files=await collectSource(client,manifest),before=new Map(files);
+ sealNativeAdoption(files,baseNativeManifest(manifest),read(ROOT+'/templates.lock.json').templates);assertNativeAdoption(files,baseNativeManifest(manifest));
+ for(const [name,bytes]of files)if(!before.get(name)?.equals(bytes))write(client+'/'+name,bytes);
+ assert(factual===hash(fs.readFileSync(client+'/business-facts.json'))&&stock===hash(fs.readFileSync(client+'/stock.json')),'Factual stock or identity changed');
+ write(client+'/.client/contact-repair-20261011.json',{schemaVersion:1,dealer:slug,at:new Date().toISOString(),missingShortAddressUsesVerifiedFullAddress:true,unknownDealerFieldsStillThrow:true,aboutServiceTextUsesDealerDataDirectly:true,strictTemplateCopyValidationUnchanged:true,factsSha256:factual,stockSha256:stock,hostedVerified:false});
+ console.log(JSON.stringify({dealer:slug,contactAndAboutRepaired:true,factsPreserved:true}));
+}
+if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))(process.argv.includes('--contact-only')?repairContactOnly(process.argv[2]):repair(process.argv[2])).catch(error=>{console.error(error.stack);process.exitCode=1;});
+

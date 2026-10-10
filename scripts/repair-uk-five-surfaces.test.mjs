@@ -3,3 +3,13 @@ import {repairModernPublicSchema,replaceConfigString,UK_FIVE} from './repair-uk-
 test('only five existing UK identities are selected',()=>{assert.equal(UK_FIVE.length,5);assert.equal(new Set(UK_FIVE).size,5);assert.ok(UK_FIVE.includes('stockport-broadbent-car-and-servicing'));});
 test('configuration replacement preserves surrounding composition and rejects ambiguous fields',()=>{const s='const config = {\n  accent: "#ff0000",\n  city: "Leeds",\n  address: "Unchanged"\n};';const changed=replaceConfigString(s,'accent','#18181B');assert.equal(changed,s.replace('#ff0000','#18181B'));assert.throws(()=>replaceConfigString(s,'missing','x'));assert.throws(()=>replaceConfigString(s+'\n accent: "#ee2222"','accent','x'));});
 test('HTTPS refinement becomes total and missing telephone remains an explicit absence, not invented data',()=>{const s='const httpsUrl = z.url().refine((value) => new URL(value).protocol === "https:");\nconst config = z.object({\n      phoneDisplay: z.string().trim().min(1).max(40),\n      phoneHref,\n      contactUrl: z.union([phoneHref, httpsUrl]),\n})\n  .superRefine((site, context) => {\n});';const next=repairModernPublicSchema(s);assert.ok(next.includes('catch { return false; }'));assert.ok(next.includes('phoneHref: z.union([phoneHref, z.literal("")])'));assert.ok(next.includes('Boolean(site.contact.phoneDisplay) !== Boolean(site.contact.phoneHref)'));assert.ok(next.includes('contactUrl: z.union([phoneHref, httpsUrl])'));assert.throws(()=>repairModernPublicSchema('unreviewed schema'));});
+
+import {repairUkDealerLabelFallback} from './repair-uk-five-surfaces.mjs';
+test('short dealer address falls back only to existing reviewed full field; unknown fields still fail',()=>{
+ const source='function get(labels,field,compact=false){const value = compact ? labels[`${field}Short`] ?? labels[field] : labels[field];if(typeof value!=="string"||!value.trim())throw Error("Missing reviewed field");return value;}';
+ const compiled=new Function(repairUkDealerLabelFallback(source)+';return get;')();
+ assert.equal(compiled({address:'Verified dealer address'},'addressShort'),'Verified dealer address');
+ assert.equal(compiled({address:'Full address',addressShort:'Short address'},'addressShort'),'Short address');
+ assert.throws(()=>compiled({address:'Verified dealer address'},'unknown'),/Missing reviewed/);
+ assert.throws(()=>repairUkDealerLabelFallback('unknown source'));
+});
