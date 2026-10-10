@@ -1,4 +1,5 @@
 import { ensureImportMenuKeys } from './import-menu-keys.mjs';
+import { repairAutoBestUkInventoryContract } from './client-refresh-uk-auto-best.mjs';
 import { UK_MODERN_PATHS, personalizeModernUk, modernUkTransmission, ukSourceMileage } from './client-refresh-uk-next.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -415,7 +416,7 @@ function autoBestInventory(profile) {
     priceEur: Number(item.priceAmount || 0),
     href: `/listing-detail-v1/${index + 1}`
   }));
-  return `import { formatPrice, localeContract, type Locale } from '$lib/locale/core';
+  const source = `import { formatPrice, localeContract, type Locale } from '$lib/locale/core';
 import { templateText } from '$lib/locale/messages';
 
 export const vehicleTypes = ['car', 'motorbike', 'van', 'truck'] as const;
@@ -464,6 +465,9 @@ export const formatVehiclePrice = (
   locale: Locale = localeContract.defaultLocale
 ) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
 `;
+  const files = new Map([['src/lib/data/inventory.ts', source]]);
+  repairAutoBestUkInventoryContract(files, profile);
+  return files.get('src/lib/data/inventory.ts');
 }
 
 function autoBestCompany(profile) {

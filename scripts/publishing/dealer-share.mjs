@@ -147,7 +147,7 @@ export function removeIdentityHeadTags(source) {
 function svelteMetadata(identity, assets, key) {
   const signature = key === 'karento-best';
   const canonical = signature ? "const canonical = $derived.by(() => {\n    const url = new URL(identity.publicOrigin + page.url.pathname);\n    url.searchParams.set('lang', locale.locale);\n    const id = page.url.searchParams.get('id');\n    if (/\\/vehicle\\/?$/.test(page.url.pathname) && id) url.searchParams.set('id', id);\n    return url.href;\n  });" : 'const canonical = $derived(identity.publicOrigin + page.url.pathname);';
-  const localeScript = signature ? "import { useLocale } from '$lib/i18n/context.svelte';\n  const locale = useLocale();\n  " : '';
+  const localeScript = signature ? "import { useLocale } from './i18n/context.svelte.ts';\n  const locale = useLocale();\n  " : '';
   const imageAlt = signature ? "locale.t('metadata.websitePreview', { dealer: identity.name })" : "identity.name + ' dealer website preview'";
   return `<script lang="ts">\n  import { page } from '$app/state';\n  ${localeScript}const identity = ${JSON.stringify({name: identity.name, publicOrigin: identity.publicOrigin, description: identity.description})};\n  const directory = ${JSON.stringify(identity.publicOrigin + assets.publicDirectory)};\n  ${canonical}\n</script>\n\n<svelte:head>\n  <link rel="canonical" href={canonical} />\n  <link rel="icon" type="image/png" sizes="32x32" href={directory + '/icon-32.png'} />\n  <link rel="shortcut icon" href={directory + '/favicon.ico'} />\n  <link rel="apple-touch-icon" sizes="180x180" href={directory + '/icon-180.png'} />\n  <meta property="og:type" content="website" />\n  <meta property="og:site_name" content={identity.name} />\n  <meta property="og:title" content={identity.name} />\n  <meta property="og:description" content={identity.description} />\n  <meta property="og:url" content={canonical} />\n  <meta property="og:image" content={directory + '/social.png'} />\n  <meta property="og:image:secure_url" content={directory + '/social.png'} />\n  <meta property="og:image:type" content="image/png" />\n  <meta property="og:image:width" content="1200" />\n  <meta property="og:image:height" content="630" />\n  <meta property="og:image:alt" content={${imageAlt}} />\n  <meta name="twitter:card" content="summary_large_image" />\n  <meta name="twitter:title" content={identity.name} />\n  <meta name="twitter:description" content={identity.description} />\n  <meta name="twitter:image" content={directory + '/social.png'} />\n  <meta name="twitter:image:alt" content={${imageAlt}} />\n</svelte:head>\n`;
 }
@@ -214,7 +214,7 @@ function patchNextMetadataSource(source, filename, helper, ts) {
   const ast = ts.createSourceFile(filename, source, ts.ScriptTarget.Latest, true, filename.endsWith('.tsx') ? ts.ScriptKind.TSX : ts.ScriptKind.TS);
   const edits = [];
   const exported = node => node.modifiers?.some(modifier => modifier.kind === ts.SyntaxKind.ExportKeyword);
-  let wrapper = '', originals = 0;
+  let wrapper = '', originals = 0, staticMetadata = false;
   for (const statement of ast.statements) {
     if (ts.isFunctionDeclaration(statement) && statement.name?.text === 'generateMetadata' && exported(statement)) {
       edits.push({start: statement.getStart(ast), end: statement.end, text: statement.getText(ast).replace(/^export\s+/, '').replace(/\bgenerateMetadata\b/, 'carsOriginalGenerateMetadata')});
@@ -224,6 +224,7 @@ function patchNextMetadataSource(source, filename, helper, ts) {
       if (!metadata.length) continue;
       if (metadata.length !== 1 || statement.declarationList.declarations.length !== 1) throw Error('Unsupported combined Next metadata declaration: ' + filename);
       const name = metadata[0].name.text;
+      staticMetadata = name === 'metadata';
       const renamed = name === 'metadata' ? 'carsOriginalMetadata' : 'carsOriginalGenerateMetadata';
       edits.push({start: statement.getStart(ast), end: statement.end, text: statement.getText(ast).replace(/^export\s+/, '').replace(new RegExp('\\b' + name + '\\b'), renamed)});
       wrapper = name === 'metadata' ? 'export async function generateMetadata() {\n  return dealerShareMetadata(carsOriginalMetadata);\n}\n' : 'export async function generateMetadata(...args: Parameters<typeof carsOriginalGenerateMetadata>) {\n  return dealerShareMetadata(carsOriginalGenerateMetadata(...args));\n}\n'; originals++;
@@ -242,13 +243,51 @@ function patchNextMetadataSource(source, filename, helper, ts) {
   let result = source;
   for (const edit of edits.sort((a, b) => b.start - a.start)) result = result.slice(0, edit.start) + edit.text + result.slice(edit.end);
   if (originals) result = `import {dealerShareMetadata} from ${JSON.stringify(helper)};\n` + result + '\n' + wrapper;
-  return {source: result, metadata: originals > 0};
+  return {source: result, metadata: originals > 0, staticMetadata};
+}
+
+/** Keep route aliases attached to the metadata declaration converted in this package.
+ * Re-export chains are followed only through exact relative, retained source modules. */
+function patchNextMetadataReexports(files, app, converted, changed, ts) {
+  let count = 0, progress = true;
+  while (progress) {
+    progress = false;
+    for (const [name, bytes] of files) {
+      if (!name.startsWith(app) || !/\.(?:tsx?|jsx?)$/.test(name) || /\.(?:test|spec)\./.test(name)) continue;
+      const before = bytes.toString('utf8');
+      const ast = ts.createSourceFile(name, before, ts.ScriptTarget.Latest, true, name.endsWith('.tsx') ? ts.ScriptKind.TSX : ts.ScriptKind.TS);
+      const edits = [];
+      for (const statement of ast.statements) {
+        if (!ts.isExportDeclaration(statement) || statement.isTypeOnly || !statement.moduleSpecifier ||
+            !ts.isStringLiteral(statement.moduleSpecifier) || !statement.moduleSpecifier.text.startsWith('.') ||
+            !statement.exportClause || !ts.isNamedExports(statement.exportClause)) continue;
+        const elements = statement.exportClause.elements.filter(element => !element.isTypeOnly && (element.propertyName ?? element.name).text === 'metadata');
+        if (!elements.length) continue;
+        const target = path.posix.normalize(path.posix.join(path.posix.dirname(name), statement.moduleSpecifier.text));
+        const candidates = [target, ...['.ts', '.tsx', '.js', '.jsx', '/index.ts', '/index.tsx', '/index.js', '/index.jsx'].map(extension => target + extension)].filter(candidate => files.has(candidate));
+        if (!candidates.some(candidate => converted.has(candidate))) continue;
+        if (candidates.length !== 1 || elements.length !== 1 || elements[0].name.text !== 'metadata' || converted.has(name) ||
+            statement.exportClause.elements.some(element => element.name.text === 'generateMetadata')) {
+          throw Error('Unsupported converted Next metadata re-export: ' + name);
+        }
+        edits.push({start: elements[0].getStart(ast), end: elements[0].end, text: 'generateMetadata'});
+      }
+      if (!edits.length) continue;
+      if (edits.length !== 1) throw Error('Next route re-exports conflicting metadata: ' + name);
+      let after = before;
+      for (const edit of edits.sort((a, b) => b.start - a.start)) after = after.slice(0, edit.start) + edit.text + after.slice(edit.end);
+      files.set(name, Buffer.from(after)); changed.push(name); converted.add(name);
+      count++; progress = true;
+    }
+  }
+  return count;
 }
 
 function patchNext(files, variant, identity, assets, changed, ts) {
   const prefix = nextRoots[variant.key], app = prefix + 'app/';
   const helper = prefix + 'lib/cars-dealer-share.ts';
   let count = 0;
+  const staticConversions = new Set();
   for (const [name, bytes] of files) {
     if (!name.startsWith(app) || !/\.(?:tsx?|jsx?)$/.test(name) || /\.(?:test|spec)\./.test(name)) continue;
     let relative = path.posix.relative(path.posix.dirname(name), helper).replace(/\.ts$/, '');
@@ -256,7 +295,9 @@ function patchNext(files, variant, identity, assets, changed, ts) {
     const before = bytes.toString('utf8'), result = patchNextMetadataSource(before, name, relative, ts);
     if (result.source !== before) {files.set(name, Buffer.from(result.source)); changed.push(name);}
     if (result.metadata) count++;
+    if (result.staticMetadata) staticConversions.add(name);
   }
+  count += patchNextMetadataReexports(files, app, staticConversions, changed, ts);
   if (!count) throw Error('Missing reviewed Next metadata boundary: ' + variant.key);
   files.set(helper, Buffer.from(nextMetadataModule(identity, assets, variant))); changed.push(helper);
   const proxy = variant.key === 'mobile' && files.has('mobile/proxy.ts') ? 'mobile/proxy.ts' : prefix + 'proxy.ts';

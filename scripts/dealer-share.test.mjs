@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
 import {createRequire} from 'node:module';
 import path from 'node:path';
 import vm from 'node:vm';
@@ -35,7 +36,7 @@ async function fixture() {
 }
 
 function evaluate(source, modules) {
-  const output = ts.transpileModule(source, {compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true},reportDiagnostics:true});
+  const output = ts.transpileModule(source, {compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true,jsx:ts.JsxEmit.ReactJSX},reportDiagnostics:true});
   assert.equal(output.diagnostics.filter(d => d.category === ts.DiagnosticCategory.Error).length, 0);
   const module = {exports:{}};
   vm.runInNewContext(output.outputText, {module,exports:module.exports,require:name => {assert.ok(Object.hasOwn(modules,name),'Unexpected generated import '+name);return modules[name]},URL,Headers,Error});
@@ -202,4 +203,123 @@ test('Signature share identity requires its approved locale contract',async()=>{
   const {files,manifest}=await fixture();
   await assert.rejects(()=>applyDealerShare(new Map(files),{...manifest,localization:undefined}),/approved enabledLocales contract/);
   await assert.rejects(()=>applyDealerShare(new Map(files),{...manifest,localization:{enabledLocales:['bg','bg']}}),/approved enabledLocales contract/);
+});
+
+const packagedSourcePin='eb4f0136fa8d5da7606df363fcf1b4963faf6937';
+function actualBroadbentFile(file) {
+  return execFileSync('git',['-C',path.resolve(import.meta.dirname,'..'),'show',
+    packagedSourcePin+':clients/stockport-broadbent-car-and-servicing/'+file],{maxBuffer:1024*1024,stdio:['ignore','pipe','pipe']});
+}
+
+/** Type-check the real importing route against its transformed target in memory.
+ * The framework/component contracts are supplied as declarations; no app copy or build is created. */
+function routeConsumerDiagnostics(files,entry) {
+  const virtualRoot=path.resolve(import.meta.dirname,'../runtime/dealer-share-test-virtual');
+  const normalized=value=>path.resolve(value).replaceAll('\\','/');
+  const virtual=new Map([...files].filter(([name])=>name.startsWith('app/')).map(([name,bytes])=>[normalized(path.join(virtualRoot,name)),bytes.toString()]));
+  const declarations={
+    'next.d.ts':'export type Metadata = any;',
+    'headers.d.ts':'export declare function headers(): Promise<Headers>;',
+    'search-client.d.ts':'export default function SearchClient(props: {initialQuery: string}): any;',
+  };
+  for(const [name,source]of Object.entries(declarations))virtual.set(normalized(path.join(virtualRoot,name)),source);
+  const options={noEmit:true,strict:true,skipLibCheck:true,target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ESNext,
+    moduleResolution:ts.ModuleResolutionKind.Bundler,jsx:ts.JsxEmit.Preserve};
+  const base=ts.createCompilerHost(options),host={...base};
+  host.fileExists=file=>virtual.has(normalized(file))||base.fileExists(file);
+  host.readFile=file=>virtual.get(normalized(file))??base.readFile(file);
+  host.getSourceFile=(file,version,onError,createNew)=>virtual.has(normalized(file))?
+    ts.createSourceFile(file,virtual.get(normalized(file)),version,true):base.getSourceFile(file,version,onError,createNew);
+  host.resolveModuleNames=(names,containing)=>names.map(name=>{
+    const stub={'next':'next.d.ts','next/headers':'headers.d.ts','@/components/SearchClient':'search-client.d.ts'}[name];
+    const target=stub?normalized(path.join(virtualRoot,stub)):normalized(path.resolve(path.dirname(containing),name));
+    const found=[target,target+'.ts',target+'.tsx'].find(file=>virtual.has(file));
+    return found?{resolvedFileName:found,extension:found.endsWith('.d.ts')?ts.Extension.Dts:found.endsWith('.tsx')?ts.Extension.Tsx:ts.Extension.Ts}:
+      ts.resolveModuleName(name,containing,options,host).resolvedModule;
+  });
+  const program=ts.createProgram([normalized(path.join(virtualRoot,entry))],options,host);
+  return ts.getPreEmitDiagnostics(program).filter(d=>d.category===ts.DiagnosticCategory.Error);
+}
+
+test('actual App search alias type-checks and forwards dynamic sharing metadata after packaging',async()=>{
+  const {files,manifest}=await fixture();
+  const target='app/app/[locale]/search/page.tsx',alias='app/app/[locale]/2/search/page.tsx';
+  const originalTarget=actualBroadbentFile(target),originalAlias=actualBroadbentFile(alias);
+  assert.equal(sha(originalTarget),'da5d5f4ecc0f4a710192c225034c0caee13ae4798d2f1ec7cb0437f8a3d3b8b4');
+  assert.equal(sha(originalAlias),'a039b33ce16ae794e3e2c8548e77abb003745379af4b32c7bed275ccbe11631c');
+  files.set(target,originalTarget);files.set(alias,originalAlias);
+  const dynamicAlias='app/app/[locale]/2/cars/page.tsx',dynamicBytes=actualBroadbentFile(dynamicAlias);
+  files.set(dynamicAlias,dynamicBytes);
+  const receipt=await applyDealerShare(files,manifest);
+  const stale=new Map(files);stale.set(alias,originalAlias);
+  const staleDiagnostics=routeConsumerDiagnostics(stale,alias);
+  assert.ok(staleDiagnostics.some(d=>[2305,2614,2724].includes(d.code)&&ts.flattenDiagnosticMessageText(d.messageText,' ').includes('metadata')),
+    'The exact old importing route must reproduce the missing-export error: '+staleDiagnostics.map(d=>d.code+': '+ts.flattenDiagnosticMessageText(d.messageText,' ')).join('; '));
+  const diagnostics=routeConsumerDiagnostics(files,alias);
+  assert.deepEqual(diagnostics.map(d=>ts.flattenDiagnosticMessageText(d.messageText,' ')),[]);
+  assert.deepEqual(files.get(dynamicAlias),dynamicBytes,'Existing generateMetadata aliases retain their bytes.');
+  const share=evaluate(files.get('app/lib/cars-dealer-share.ts').toString(),{
+    'next/headers':{headers:async()=>new Headers({'x-cars-public-path':'/variant-4/en/2/search?q=Ford'})},
+  });
+  const SearchClient=()=>null;
+  const targetModule=evaluate(files.get(target).toString(),{
+    '../../../lib/cars-dealer-share':share,
+    '@/components/SearchClient':{__esModule:true,default:SearchClient},
+    'react/jsx-runtime':{jsx:(type,props)=>({type,props})},
+  });
+  const aliasModule=evaluate(files.get(alias).toString(),{'../../search/page':targetModule});
+  assert.equal(aliasModule.default,targetModule.default);
+  assert.equal(aliasModule.generateMetadata,targetModule.generateMetadata);
+  assert.equal(Object.hasOwn(aliasModule,'metadata'),false);
+  const metadata=await aliasModule.generateMetadata();
+  assert.equal(metadata.title,'Search cars');
+  assert.equal(metadata.alternates.canonical,'https://dealer.example/variant-4/en/2/search');
+  assert.equal(metadata.openGraph.url,metadata.alternates.canonical);
+  assert.equal((await aliasModule.default({searchParams:Promise.resolve({q:['Ford','ignored']})})).props.initialQuery,'Ford');
+  const boundary=receipt.transformations.find(row=>row.path===alias);
+  assert.equal(boundary.inputSha256,sha(originalAlias));assert.equal(boundary.outputSha256,sha(files.get(alias)));
+  assert.equal(sha(originalTarget),'da5d5f4ecc0f4a710192c225034c0caee13ae4798d2f1ec7cb0437f8a3d3b8b4');
+});
+
+test('converted metadata re-export chains follow retained modules and reject ambiguous renames',async()=>{
+  const {files,manifest}=await fixture();
+  const target='app/app/[locale]/search/page.tsx',alias='app/app/[locale]/2/search/page.tsx',chain='app/app/[locale]/3/search/page.tsx';
+  files.set(chain,Buffer.from("export {default, metadata} from '../../2/search/page';"));
+  files.set(alias,actualBroadbentFile(alias));files.set(target,actualBroadbentFile(target));
+  const external='app/app/external/page.tsx',externalBytes=Buffer.from("export {metadata} from 'external-config';");
+  files.set(external,externalBytes);
+  await applyDealerShare(files,manifest);
+  assert.match(files.get(chain).toString(),/export \{default, generateMetadata\}/);
+  assert.deepEqual(routeConsumerDiagnostics(files,chain).map(d=>ts.flattenDiagnosticMessageText(d.messageText,' ')),[]);
+  assert.deepEqual(files.get(external),externalBytes);
+  const bad=await fixture();
+  bad.files.set(target,actualBroadbentFile(target));
+  bad.files.set(alias,Buffer.from("export {metadata as alternateMetadata} from '../../search/page';"));
+  await assert.rejects(()=>applyDealerShare(bad.files,bad.manifest),/Unsupported converted Next metadata re-export/);
+});
+
+test('generated Signature sharing component resolves the actual SvelteKit 3 locale module',async()=>{
+  const {files,manifest}=await fixture();
+  const packageBytes=actualBroadbentFile('karento-best/package.json');
+  const localePath='karento-best/src/lib/i18n/context.svelte.ts';
+  files.set('karento-best/package.json',packageBytes);
+  files.set(localePath,actualBroadbentFile(localePath));
+  files.set('karento-best/src/routes/+layout.svelte',actualBroadbentFile('karento-best/src/routes/+layout.svelte'));
+  const packageMetadata=JSON.parse(packageBytes);
+  assert.equal(packageMetadata.devDependencies['@sveltejs/kit'],'3.0.1');
+  assert.equal(packageMetadata.imports['#lib/*'],'./src/lib/*');
+  assert.equal(packageMetadata.imports['$lib/*'],undefined);
+  await applyDealerShare(files,manifest);
+  const component='karento-best/src/lib/CarsDealerShare.svelte',source=files.get(component).toString();
+  const localeImport=source.match(/import \{ useLocale \} from '([^']+)'/)[1];
+  assert.equal(localeImport,'./i18n/context.svelte.ts');
+  assert.equal(path.posix.normalize(path.posix.join(path.posix.dirname(component),localeImport)),localePath);
+  assert.ok(files.has(localePath));assert.doesNotMatch(source,/\$lib\//);
+  const {compile}=require('svelte/compiler');
+  for(const generate of ['client','server']) {
+    const compiled=compile(source,{filename:component,generate});
+    assert.match(compiled.js.code,/\.\/i18n\/context\.svelte\.ts/);
+    assert.match(compiled.js.code,/useLocale/);
+  }
+  assert.deepEqual(files.get('karento-best/package.json'),packageBytes);
 });
