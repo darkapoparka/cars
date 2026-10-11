@@ -5,6 +5,8 @@ on:
     paths:
       - leads/varna/cloudflare/build-request.json
       - scripts/build-varna-cloudflare.mjs
+      - scripts/package-dealer.mjs
+      - scripts/packaging-locale-facts.test.mjs
       - scripts/publishing/lead-branding.mjs
       - scripts/publishing/cloudflare-root-composition.mjs
       - scripts/bundle-varna-artifacts.mjs
@@ -42,7 +44,7 @@ jobs:
       - name: Install pinned raster verification tools
         run: npm install --prefix runtime/varna-tools --no-audit --no-fund --ignore-scripts --save-exact sharp@0.35.5 typescript@6.0.3
       - name: Require branding, palette, source and routing regressions to pass
-        run: node --test scripts/varna-cloudflare-builds.test.mjs scripts/modern-demo-database.test.mjs scripts/dealer-reference-package.test.mjs scripts/lead-branding.test.mjs scripts/cloudflare-root-composition.test.mjs
+        run: node --test scripts/packaging-locale-facts.test.mjs scripts/varna-cloudflare-builds.test.mjs scripts/modern-demo-database.test.mjs scripts/dealer-reference-package.test.mjs scripts/lead-branding.test.mjs scripts/cloudflare-root-composition.test.mjs
       - id: matrix
         run: |
           node scripts/build-varna-cloudflare.mjs matrix >> "$GITHUB_OUTPUT"
