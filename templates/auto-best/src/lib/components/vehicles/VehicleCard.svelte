@@ -119,7 +119,7 @@
     </div>
     {#if layout !== 'showcase'}
       <ul class="dn-vehicle-card__mobile-meta" aria-label={i18n.t("m_148a9be6e575")}>
-        <li class="dn-vehicle-card__fact"><span>{vehicle.year}</span></li>
+        <li class="dn-vehicle-card__fact dn-vehicle-card__fact--year"><span>{vehicle.year}</span></li>
         <li class="dn-vehicle-card__fact" title={formatMileage(vehicle.mileageKm, i18n.locale)}><span>{formatMileage(vehicle.mileageKm, i18n.locale)}</span></li>
         {#each specifications.filter(spec => layout === 'listing' || spec.icon === 'fuel') as spec (spec.icon)}
           <li class="dn-vehicle-card__fact dn-vehicle-card__fact--spec" class:dn-vehicle-card__fact--transmission={spec.icon === 'transmission'} title={spec.label}><span aria-hidden="true">{spec.compactLabel}</span><span class="dn-sr-only">{spec.label}</span></li>
@@ -545,8 +545,8 @@
       padding-inline: var(--dn-space-2);
     }
 
-    /* The first fact is the year; variable-length facts absorb truncation. */
-    .dn-vehicle-card__fact:first-child { flex-shrink: 0; }
+    /* Keep the year readable; variable-length facts absorb truncation. */
+    .dn-vehicle-card__fact--year { flex-shrink: 0; }
 
     .dn-vehicle-card__fact > span:not(.dn-sr-only) {
       display: block;

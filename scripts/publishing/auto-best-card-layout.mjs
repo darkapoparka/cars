@@ -1,10 +1,10 @@
 import {createHash} from 'node:crypto';
 
-export const AUTO_BEST_CARD_LAYOUT_VERSION = 'single-row-mobile-filters-v2';
+export const AUTO_BEST_CARD_LAYOUT_VERSION = 'single-row-mobile-filters-v3';
 export const AUTO_BEST_CARD_LAYOUT_CSS = `@media (max-width: 767px) {
   html .dn-vehicle-card.dn-vehicle-card .dn-vehicle-card__mobile-meta { flex-wrap: nowrap; }
   html .dn-vehicle-card.dn-vehicle-card .dn-vehicle-card__fact { flex: 1 1 auto; min-width: 0; }
-  html .dn-vehicle-card.dn-vehicle-card .dn-vehicle-card__fact:first-child { flex-shrink: 0; }
+  html .dn-vehicle-card.dn-vehicle-card .dn-vehicle-card__fact--year { flex-shrink: 0; }
   html .dn-vehicle-card.dn-vehicle-card .dn-vehicle-card__fact > span:not(.dn-sr-only) { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .dn-detail-finance-trigger__logo img { object-position: left center; }
   html .dn-app-shell dialog .dn-mobile-overlay-heading.dn-mobile-filter-header { display: grid; grid-template-columns: var(--dn-control-hit-height) minmax(0, 1fr) var(--dn-control-hit-height); }
@@ -39,8 +39,16 @@ export function applyAutoBestCardLayout(files, manifest) {
   const detail='auto-best/src/routes/listing-detail-v1/[id]/detail.css';
   const beforeCard=files.get(card),beforeDetail=files.get(detail);
   if (!beforeCard || !beforeDetail) throw Error('Missing Auto Best card layout inputs');
-  const text=beforeCard.toString('utf8');
+  let text=beforeCard.toString('utf8');
   if (text.split('</style>').length!==2 || !text.includes('dn-vehicle-card__mobile-meta') || !beforeDetail.toString('utf8').includes('.dn-detail-finance-trigger__logo img')) throw Error('Auto Best layout boundary changed');
+  const yearMarkup='<li class="dn-vehicle-card__fact dn-vehicle-card__fact--year"><span>{vehicle.year}</span></li>';
+  if (!text.includes(yearMarkup)) {
+    const previousYear='<li class="dn-vehicle-card__fact"><span>{vehicle.year}</span></li>';
+    if (text.split(previousYear).length!==2) throw Error('Auto Best year fact boundary changed');
+    text=text.replace(previousYear,yearMarkup);
+  }
+  // Upgrade earlier repair output without leaving positional CSS behind.
+  text=text.replaceAll('.dn-vehicle-card__fact:first-child','.dn-vehicle-card__fact--year');
   const pending=new Map(files);
   applyAutoBestFilterLayout(pending);
   const marker='/* '+AUTO_BEST_CARD_LAYOUT_VERSION+' */';
