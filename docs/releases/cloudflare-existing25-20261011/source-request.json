@@ -1,38 +1,85 @@
 {
   "schemaVersion": 1,
+  "mode": "existing-migration",
   "dealers": [
-    "priselci"
+    "promosale-varna",
+    "navara-car",
+    "day-and-night-auto-group"
   ],
   "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
   "approvedParentLockDigest": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
   "inputs": {
-    "priselci": {
+    "promosale-varna": {
       "candidateLock": {
-        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/qualification-lock.json",
-        "sha256": "37b9b5262ccee1129081a1c89ea7ad88f9b25156f10f5880b4a2d708492cfb01"
+        "path": "docs/releases/cloudflare-existing25-20261011/existing-wave01-b1f/promosale-varna/qualification-lock.json",
+        "sha256": "ea22e2b5833057839072b7253c3eef5dbb6d74314650bf4c3c196ebd875b1854"
       },
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/qualification-context.json",
-        "sha256": "1ad4b86583d78e5aa6cd6f776fb3c6b9ea743453b5ee2d9e7cbd008fcdabed35"
+        "path": "docs/releases/cloudflare-existing25-20261011/existing-wave01-b1f/promosale-varna/qualification-context.json",
+        "sha256": "9185902b2f3c9f90542c6bda9e75361f74f7c741922d3f72b9366fdb66b2c5e9"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
         "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
       },
       "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/branding-review.json",
-        "sha256": "715a3afe70511b3bd17f38c2c9fbdbf4ce1ac2e3f5daaa6aff421382838fbf10"
+        "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/promosale-varna/branding.json",
+        "sha256": "ce5843b0dbbfeeff374c5cbc9a0ea8e10be2ac62138b6e8e2f4e106abdc31f4b"
       },
       "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-resolutions.json",
-        "sha256": "8196cfd85a58a89cbb97533897cb3e5e56f3966ac94be97c503ebe9d9e68c85c"
+        "path": "docs/releases/cloudflare-existing25-20261011/existing-wave01-b1f/promosale-varna/resolutions.json",
+        "sha256": "9ee0fd2d8f0c196e7b1b1a2e45a02826d6eaf9f2e6c1a599bc3368653d393e3f"
+      }
+    },
+    "navara-car": {
+      "candidateLock": {
+        "path": "docs/releases/cloudflare-existing25-20261011/existing-wave01-b1f/navara-car/qualification-lock.json",
+        "sha256": "b8c32b97f5d00e10180d7841f42f9925a080db71ec1ed615c51ad9f58fee623b"
+      },
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/existing-wave01-b1f/navara-car/qualification-context.json",
+        "sha256": "7eea6dfc97812c3772157a70af6e82b441114e569b0005324c450047fb2fc879"
+      },
+      "sourceDeltaReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+        "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
+      },
+      "branding": {
+        "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/navara-car/branding.json",
+        "sha256": "00abf8e08ee5d5ec12d2bf205c3fb27913b1cef1d36ba47e71fb192f0992d603"
+      },
+      "resolutions": {
+        "path": "docs/releases/cloudflare-existing25-20261011/existing-wave01-b1f/navara-car/resolutions.json",
+        "sha256": "837c8b140145ee14228d224f31315a19c7debc8027f5c0175bd84bd999ae2943"
+      }
+    },
+    "day-and-night-auto-group": {
+      "candidateLock": {
+        "path": "docs/releases/cloudflare-existing25-20261011/existing-wave01-b1f/day-and-night-auto-group/qualification-lock.json",
+        "sha256": "e61760adf5f62eae4aba6f601e29ae9bc714b8ede7770c2b2440703071cdbb7c"
+      },
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/existing-wave01-b1f/day-and-night-auto-group/qualification-context.json",
+        "sha256": "8a3faef4c4fde54427c08bfd7763707f0a5dcb1303f948783578e97e8c8fdaa2"
+      },
+      "sourceDeltaReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+        "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
+      },
+      "branding": {
+        "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/day-and-night-auto-group/branding.json",
+        "sha256": "c1927e01cf02b9595731b1e168fd606a592b71ff4f01b150da0606481ffeb55e"
+      },
+      "resolutions": {
+        "path": "docs/releases/cloudflare-existing25-20261011/existing-wave01-b1f/day-and-night-auto-group/resolutions.json",
+        "sha256": "04b033c6c445be4e15dc40cb65bf1669502a757a7059bbc11f6af41953a637a9"
       }
     }
   },
   "draft": false,
-  "publishable": true,
+  "publishable": false,
   "reviewed": true,
-  "reviewedAt": "2026-10-11T22:10:21.429Z",
+  "reviewedAt": "2026-10-11T23:09:11.300Z",
   "qualificationOnly": true,
   "approved": false,
   "nativeApproval": false,
@@ -40,12 +87,25 @@
   "globalReleaseApproval": false,
   "allSixFrozen": true,
   "pending": [
-    "All twelve current native acceptance checks remain pending at the selected immutable b1f source.",
-    "Exact current168 preservation-stage choices are independently reviewed; maintained CI must apply final approved branding and native/catalog/App/extended/source-marker seals and produce the actual final source artifact for independent review.",
-    "Combined hosted pilot and owner visual acceptance remain pending. Global templates.lock.json is unchanged."
+    "Own source-only60 conflict choices and exact3 clean Import template-palette targets are concrete and reviewed; the guarded producer is actually published at 3d758430eb41beb3f3666bf7114d7ee0fc378d3c.",
+    "Actual source CI must replay each unchanged own baseline, mounted target and factual consumer proof, then seal final native/catalog/branding/App/source envelopes before candidate publication.",
+    "Actual S2 pilot qualification, per-dealer build and hosted acceptance remain deployment gates; all native/hosted/global/owner approval flags remain false."
   ],
   "sourcePreparationCode": {
-    "sourceCommit": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-    "scope": "Exact published geometry4 and reviewed producer2 at b1f; source event must descend this commit."
+    "sourceCommit": "3d758430eb41beb3f3666bf7114d7ee0fc378d3c",
+    "scope": "Actual published maintained producer with explicit reviewed ordinary clean Import consumer choices; current CI event ancestry/exact producer and unchanged own client trees must be checked."
+  },
+  "sourceOnlyReview": {
+    "baselineCommit": "3d758430eb41beb3f3666bf7114d7ee0fc378d3c",
+    "ownPlansCommit": "4175d7b33a1dde15954e472d6b0c5c632ae4d943",
+    "ownClientTrees": {
+      "promosale-varna": "d1d5b70378d1e50de0d24aeba966444977d0c928",
+      "navara-car": "7e96fbb667d48411cd6c9cf1a18065e0181f7cb7",
+      "day-and-night-auto-group": "6be11ade23ec553ac8206d5dfaa7d2a705f87e09"
+    },
+    "preservationChoices": 60,
+    "reviewedCleanTargets": 3,
+    "independentReviewPending": true,
+    "producerCodeAccepted": true
   }
 }
