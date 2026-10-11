@@ -339,7 +339,7 @@ export function personalizeAppUk(files, profile, mileageFacts) {
   if (!isUk(profile)) return [];
   const facts = Object.fromEntries(mileageFacts.map(item => [item.slug,
     item.sourceValue === null ? null : {value: item.sourceValue, unit: item.sourceUnit}]));
-  return transaction(files, profile, ({put, patch, use}) => {
+  return transaction(files, profile, ({get, put, patch, use}) => {
     put('lib/dealer-mileage.ts', ukMileageModule(facts));
     patch('lib/currency.ts', "dealer.currency === 'EUR' ? '€' : dealer.currency", "dealer.currency === 'GBP' ? '£' : dealer.currency === 'EUR' ? '€' : dealer.currency");
     use('lib/inventory-filters.ts', 'dealerMileageValue', './dealer-mileage');
@@ -365,6 +365,12 @@ export function personalizeAppUk(files, profile, mileageFacts) {
     if (profile.listings.some(item => (item.mediaKind || item.raw?.mediaKind) === 'generated_category_illustration')) {
       for (const name of ['components/VehicleCard.tsx', 'components/VehicleDetailClient.tsx']) {
         patch(name, "tx('Photo unavailable')", "tx('Illustration — not the advertised vehicle')", 2);
+        // Keep descriptive alt text and one visible inventory notice, without stamping every image.
+        patch(name, /\{vehicle\.imagePlaceholder\s*\?\s*<span \{\.\.\.stylex\.props\(s\.(?:placeholderLabel|photoUnavailable)\)\}>\{tx\('Illustration — not the advertised vehicle'\)\}<\/span>\s*:\s*null\}/, '');
+      }
+      const detail = 'components/VehicleDetailClient.tsx';
+      if (!get(detail).includes('data-vehicle-media-notice')) {
+        patch(detail, '<p {...stylex.props(s.summary)}>{summary}</p></header>', '<p {...stylex.props(s.summary)}>{summary}</p></header>{dealer.inventoryNotice?<p data-vehicle-media-notice {...stylex.props(s.summary)}>{tx(dealer.inventoryNotice)}</p>:null}');
       }
     }
   });

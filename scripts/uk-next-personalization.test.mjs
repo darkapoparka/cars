@@ -4,6 +4,7 @@ import {execFileSync} from 'node:child_process';
 import {createRequire, stripTypeScriptTypes} from 'node:module';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
+import {readFileSync} from 'node:fs';
 import {refreshAdapterInternals as adapters} from './lib/client-refresh-adapters.mjs';
 import {prepareAppDealer, sealAppDealerSource} from './lib/app-dealer-adapter.mjs';
 import {assertAppVariant} from './publishing/app-variant.mjs';
@@ -49,6 +50,19 @@ for(const key of Object.keys(pins)) {
  }
  changed.set(key,files);
 }
+
+test('current App master keeps one illustration disclosure and descriptive image alt text after personalization',()=>{
+ const files=new Map(UK_APP_PATHS.map(name=>[name,readFileSync(new URL('../templates/app/'+name,import.meta.url),'utf8')]));
+ const illustrated=structuredClone(profile);
+ illustrated.listings[0].raw.mediaKind='generated_category_illustration';
+ personalizeAppUk(files,illustrated,mileageFacts);
+ const card=files.get('components/VehicleCard.tsx'), detail=files.get('components/VehicleDetailClient.tsx');
+ assert.match(card,/Illustration — not the advertised vehicle/);
+ assert.match(detail,/Illustration — not the advertised vehicle/);
+ assert.doesNotMatch(card,/<span \{\.\.\.stylex\.props\(s\.placeholderLabel\)/);
+ assert.doesNotMatch(detail,/<span \{\.\.\.stylex\.props\(s\.photoUnavailable\)/);
+ assert.equal(detail.split('data-vehicle-media-notice').length-1,1);
+});
 
 test('all three exact reviewed sources retain original mileage and compare without km rounding error',async()=>{
  for(const [key,files] of changed) {
@@ -242,6 +256,9 @@ test('App initial personalization and exact source seal include metadata and nev
  assert.equal(prepared.config.inventoryNotice,input.business.inventoryNotice);
  assert.match(prepared.files.get('components/VehicleCard.tsx').toString(),/Illustration — not the advertised vehicle/);
  assert.match(prepared.files.get('components/VehicleDetailClient.tsx').toString(),/Illustration — not the advertised vehicle/);
+ assert.doesNotMatch(prepared.files.get('components/VehicleCard.tsx').toString(),/<span \{\.\.\.stylex\.props\(s\.placeholderLabel\)/);
+ assert.doesNotMatch(prepared.files.get('components/VehicleDetailClient.tsx').toString(),/<span \{\.\.\.stylex\.props\(s\.photoUnavailable\)/);
+ assert.match(prepared.files.get('components/VehicleDetailClient.tsx').toString(),/data-vehicle-media-notice/);
  assert.equal(prepared.provenance.ukPresentation.distanceUnit,'mi');
  for(const [name,bytes] of prepared.files)source.set('app/'+name,bytes);
  source.set('app/.client/project.json',Buffer.from('{"dealer":"uk-fixture"}'));
@@ -256,4 +273,10 @@ test('App initial personalization and exact source seal include metadata and nev
  assert.throws(()=>assertAppVariant(source,manifest),/source changed/);
  source.set('auto-best/src/lib/data/dealer-profile.json',Buffer.from('{}'));
  assert.throws(()=>sealAppDealerSource({files:source,manifest,provenance:prepared.provenance}),/facts changed/);
+ const missingNotice=structuredClone(input);missingNotice.business.inventoryNotice='';
+ source.set('auto-best/src/lib/data/dealer-profile.json',Buffer.from(JSON.stringify(missingNotice)));
+ const disclosed=await prepareAppDealer('',manifest,{appFiles:immutable('app'),readFile:async name=>{
+  if(source.has(name))return source.get(name);const e=new Error('Missing fixture');e.code='ENOENT';throw e;
+ }});
+ assert.match(disclosed.config.inventoryNotice,/Illustrated images are representative/);
 });

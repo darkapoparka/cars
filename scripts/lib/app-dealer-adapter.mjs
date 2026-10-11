@@ -97,6 +97,8 @@ export async function prepareAppDealer(sourceRoot, manifest, {readFile, appFiles
    color:text(listing.exteriorColor||listing.color),featureLabels:(listing.features||[]).filter(v=>typeof v==='string')});
  }
  const observedAt=[...new Set(profile.listings.map(l=>text(l.observedAt)).filter(Boolean))].sort().join(', ');
+ const inventoryNotice=text(business.inventoryNotice) || 'Dated listing samples. Confirm price, availability and vehicle information with the dealer.';
+ const illustrated=profile.listings.some(item=>(item.mediaKind || item.raw?.mediaKind)==='generated_category_illustration');
  const config={mode:'dealer',id:manifest.slug,name:text(business.name),shortName:text(business.name).slice(0,40),
   logo:{light,dark,icon:'/dealer-app/icon.png'},defaultLocale:manifest.localization?.defaultLocale==='bg'?'bg':'en',enabledLocales:['en','bg'],
   country:manifest.localization?.dealerCountry||text(business.country),currency,city:text(business.city),address:text(business.address),
@@ -104,7 +106,7 @@ export async function prepareAppDealer(sourceRoot, manifest, {readFile, appFiles
   email:/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(text(business.email))?text(business.email):'',
   mapsUrl:url(business.mapsUrl),website:url(business.website),whatsappUrl:url(business.whatsappUrl||business.socialLinks?.whatsapp),
   services:(business.services||[]).map(s=>typeof s==='string'?s:text(s.title)).filter(Boolean),observedAt,
-  inventoryNotice:text(business.inventoryNotice) || 'Dated listing samples. Confirm price, availability and vehicle information with the dealer.',
+  inventoryNotice:illustrated && !/illustrat/i.test(inventoryNotice) ? 'Illustrated images are representative, not photos of the advertised vehicles. '+inventoryNotice : inventoryNotice,
   previewNotice:'Independent design preview. No purchase, reservation or message is submitted by this website.'};
  files.set('lib/dealer.json',Buffer.from(JSON.stringify(config,null,2)+'\n'));
  files.set('lib/dealer-inventory.json',Buffer.from(JSON.stringify(inventory,null,2)+'\n'));

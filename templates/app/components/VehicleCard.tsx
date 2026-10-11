@@ -104,7 +104,7 @@ const s = stylex.create({
   priceOnRequest: {fontSize: {[media.desktop]: $.desktopTextSize, default: 15}, fontWeight: 600, lineHeight: {[media.desktop]: '24px', default: '22px'}, letterSpacing: 0},
   discount: {paddingInline: 4, color: '#008c36', fontSize: {[media.desktop]: $.desktopLabelSize, default: 11}, fontWeight: 500, lineHeight: {[media.desktop]: '18px', default: '16px'}, whiteSpace: 'nowrap', borderRadius: 12, backgroundColor: '#effbf1'},
   monthly: {display: 'flex', alignItems: 'center', gap: 4, marginTop: 1, whiteSpace: 'nowrap', lineHeight: {[media.desktop]: '20px', default: '18px'}},
-  monthlyPrice: {display: 'inline-flex', alignItems: 'center', gap: 2, fontSize: {[media.desktop]: $.desktopSupportSize, default: 13}, fontWeight: 400},
+  monthlyPrice: {display: 'inline-flex', alignItems: 'center', gap: 2, color: $.muted, fontSize: {[media.desktop]: $.desktopSupportSize, default: 13}, fontWeight: 400},
   monthlyNote: {overflow: 'hidden', color: $.muted, fontSize: 12, fontWeight: 400, textOverflow: 'ellipsis'},
   benefits: {marginTop: 6},
   benefitLabel: {display: 'block', marginBottom: 3, color: '#7a8087', fontSize: {[media.desktop]: $.desktopLabelSize, default: 8}, fontWeight: 700, lineHeight: {[media.desktop]: '18px', default: '11px'}, letterSpacing: '.04em', textTransform: 'uppercase'},
