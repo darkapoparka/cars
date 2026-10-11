@@ -1672,5 +1672,153 @@
       "after": "0b9dbe3120d53ae2974f8cdb0008582eacc7350d2f163e6dc7373357efe5196d"
     }
   ],
-  "hostedQa": false
+  "hostedQa": false,
+  "consumerReferences": [
+    {
+      "path": "app/lib/dealer.json",
+      "urls": [
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-dark.webp",
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/app-icon.png"
+      ]
+    },
+    {
+      "path": "auto-best/src/lib/config/brand.ts",
+      "urls": [
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-dark.webp"
+      ]
+    },
+    {
+      "path": "import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after-matrix.json",
+      "urls": [
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      ]
+    },
+    {
+      "path": "import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/before-matrix.json",
+      "urls": [
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      ]
+    },
+    {
+      "path": "import/docs/desktop-home-entry-2026-10-03/after-matrix.json",
+      "urls": [
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      ]
+    },
+    {
+      "path": "import/docs/desktop-home-entry-2026-10-03/before-matrix.json",
+      "urls": [
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      ]
+    },
+    {
+      "path": "import/src/lib/components/home/HomeFiveFeaturedVehicles.svelte",
+      "urls": [
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      ]
+    },
+    {
+      "path": "import/src/lib/config/dealer.ts",
+      "urls": [
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-dark.webp"
+      ]
+    },
+    {
+      "path": "import/src/lib/content/sell-your-car.ts",
+      "urls": [
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      ]
+    },
+    {
+      "path": "import/src/lib/data/dealer-profile.json",
+      "urls": [
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-dark.webp"
+      ]
+    },
+    {
+      "path": "import/src/lib/server/auxero-listing-data.ts",
+      "urls": [
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      ]
+    },
+    {
+      "path": "import/src/lib/server/inventory-options.ts",
+      "urls": [
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      ]
+    },
+    {
+      "path": "import/src/routes/offer/+page.svelte",
+      "urls": [
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      ]
+    },
+    {
+      "path": "karento-best/src/lib/content.ts",
+      "urls": [
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-dark.webp"
+      ]
+    },
+    {
+      "path": "karento-best/src/lib/data/dealer-detail.ts",
+      "urls": [
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      ]
+    },
+    {
+      "path": "karento-best/src/lib/data/vehicle-detail.ts",
+      "urls": [
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      ]
+    },
+    {
+      "path": "mobile/src/lib/dealers.ts",
+      "urls": [
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      ]
+    },
+    {
+      "path": "mobile/src/lib/showroom-config.ts",
+      "urls": [
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      ]
+    },
+    {
+      "path": "modern/packages/internationalization/paths.test.ts",
+      "urls": [
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      ]
+    },
+    {
+      "path": "modern/packages/internationalization/proxy.test.ts",
+      "urls": [
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      ]
+    },
+    {
+      "path": "modern/packages/marketplace-domain/testing/dealer-profile.json",
+      "urls": [
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-dark.webp"
+      ]
+    },
+    {
+      "path": "modern/packages/marketplace-domain/testing/mock-data.ts",
+      "urls": [
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp"
+      ]
+    },
+    {
+      "path": "modern/packages/marketplace/lead-site.ts",
+      "urls": [
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
+        "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-dark.webp"
+      ]
+    }
+  ]
 }

@@ -1,5 +1,7 @@
 # Lead build guardrails
 
+Current branding authority: [LEAD-BRANDING](LEAD-BRANDING.md). Lead builds preserve template palettes, require versioned light/dark raster packs, and do not inherit dealer accent colours.
+
 Owner-requested standard, 8 September 2026; branding/template-preservation rules tightened 13 September 2026. Read this with the root `AGENTS.md`, `docs/WORKFLOW.md`, `catalog.json` and the selected masters' `TEMPLATE.md` files before any lead implementation. Current explicit owner instructions determine scope. These rules are acceptance requirements, not an automated QA system.
 
 The old multi-session campaign is closed; its execution contract and assignments remain historical evidence. [WORKFLOW](WORKFLOW.md) owns current implementation and [LEAD-PUBLISHING](LEAD-PUBLISHING.md) owns publication. A research record is not application data, a sale, a contact event or a passed check.

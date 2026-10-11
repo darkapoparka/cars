@@ -2,60 +2,72 @@ name: Varna Cloudflare compiled candidates
 on:
   push:
     branches: [varna]
-    paths: [leads/varna/cloudflare/build-request.json]
+    paths:
+      - leads/varna/cloudflare/build-request.json
+      - scripts/build-varna-cloudflare.mjs
+      - scripts/publishing/lead-branding.mjs
+      - scripts/publishing/cloudflare-root-composition.mjs
+      - scripts/bundle-varna-artifacts.mjs
+      - scripts/lead-branding.test.mjs
+      - scripts/cloudflare-root-composition.test.mjs
+      - .github/workflows/varna-cloudflare-builds.yml
 permissions:
   contents: read
-defaults:
-  run:
-    shell: bash
+  actions: read
 concurrency:
-  group: cars-varna-cloudflare-builds
+  group: varna-cloudflare-${{ github.ref }}
   cancel-in-progress: false
 jobs:
   plan:
-    if: github.repository == 'darkapoparka/cars' && github.ref == 'refs/heads/varna'
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
     outputs:
       matrix: ${{ steps.matrix.outputs.matrix }}
+      dealers: ${{ steps.matrix.outputs.dealers }}
+      bundle_ready: ${{ steps.matrix.outputs.bundle_ready }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
+          ref: ${{ github.sha }}
           persist-credentials: false
           sparse-checkout-cone-mode: false
           sparse-checkout: |
             /scripts/
             /leads/varna/selected-10.json
             /leads/varna/cloudflare/build-request.json
+            /leads/varna/branding/generated-masters.json.gz
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
         with:
-          node-version: '22.23.2'
+          node-version: '26.10.0'
           package-manager-cache: false
-      - run: node --test scripts/dealer-template-contracts.test.mjs scripts/dealer-reference-package.test.mjs scripts/varna-cloudflare-builds.test.mjs scripts/modern-demo-database.test.mjs
+      - name: Install pinned raster verification tools
+        run: npm install --prefix runtime/varna-tools --no-audit --no-fund --ignore-scripts --save-exact sharp@0.35.5 typescript@6.0.3
+      - name: Require branding, palette, source and routing regressions to pass
+        run: node --test scripts/varna-cloudflare-builds.test.mjs scripts/modern-demo-database.test.mjs scripts/dealer-reference-package.test.mjs scripts/lead-branding.test.mjs scripts/cloudflare-root-composition.test.mjs
       - id: matrix
-        run: node scripts/build-varna-cloudflare.mjs matrix >> "$GITHUB_OUTPUT"
+        run: |
+          node scripts/build-varna-cloudflare.mjs matrix >> "$GITHUB_OUTPUT"
+          node --input-type=module -e "import fs from 'node:fs';const r=JSON.parse(fs.readFileSync('leads/varna/cloudflare/build-request.json'));console.log('dealers='+JSON.stringify(r.dealers));console.log('bundle_ready='+(!r.targets||r.targets.length===7));" >> "$GITHUB_OUTPUT"
   compile:
     needs: plan
-    name: ${{ matrix.slug }} / ${{ matrix.key }}
     runs-on: ubuntu-24.04
     timeout-minutes: 60
     strategy:
       fail-fast: false
-      max-parallel: 14
+      max-parallel: 12
       matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
-    env:
-      DEALER_SLUG: ${{ matrix.slug }}
-      DEALER_FAMILY: ${{ matrix.key }}
-      NODE_OPTIONS: --max-old-space-size=4608
-      NEXT_TELEMETRY_DISABLED: '1'
-      WRANGLER_SEND_METRICS: 'false'
+    name: ${{ matrix.slug }} / ${{ matrix.key }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
           persist-credentials: false
           sparse-checkout-cone-mode: false
           sparse-checkout: |
             /scripts/
+            /catalog.json
+            /workspace.json
+            /templates.lock.json
             /leads/varna/selected-10.json
             /leads/varna/cloudflare/build-request.json
             /clients/${{ matrix.slug }}/
@@ -63,20 +75,62 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           package-manager-cache: false
-      - name: Install pinned share tooling without Cloudflare credentials
-        run: |
-          mkdir -p runtime/varna-tools
-          printf '{"private":true}\n' > runtime/varna-tools/package.json
-          npm install --prefix runtime/varna-tools --ignore-scripts --save-exact sharp@0.35.5 typescript@6.0.3
-      - name: Compile current dealer with maintained native Cloudflare adapters
-        run: node scripts/build-varna-cloudflare.mjs compile "$DEALER_SLUG" "$DEALER_FAMILY"
-      - name: Retain exact compiled Worker, assets, locks and evidence
+      - name: Install pinned asset tools outside client source
+        run: npm install --prefix runtime/varna-tools --no-audit --no-fund --ignore-scripts --save-exact sharp@0.35.5 typescript@6.0.3
+      - name: Compile exact branded candidate without credentials or deployment
+        env:
+          DEALER: ${{ matrix.slug }}
+          FAMILY: ${{ matrix.key }}
+          WRANGLER_SEND_METRICS: 'false'
+        run: node scripts/build-varna-cloudflare.mjs build "$DEALER" "$FAMILY"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: varna-cf-${{ matrix.slug }}-${{ matrix.key }}-${{ github.run_id }}-${{ github.run_attempt }}
           path: runtime/varna-cloudflare/${{ matrix.slug }}/${{ matrix.key }}/artifact/
           include-hidden-files: true
+          if-no-files-found: warn
+          compression-level: 0
+          retention-days: 1
+  bundle:
+    needs: [plan, compile]
+    if: needs.plan.outputs.bundle_ready == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        slug: ${{ fromJSON(needs.plan.outputs.dealers) }}
+    name: Verify six-Worker delivery / ${{ matrix.slug }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.10.0'
+          package-manager-cache: false
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        with:
+          pattern: varna-cf-${{ matrix.slug }}-*-${{ github.run_id }}-${{ github.run_attempt }}
+          path: runtime/varna-delivery/${{ matrix.slug }}/
+      - name: Install pinned composition validator
+        run: npm install --prefix runtime/varna-compose-tools --no-audit --no-fund --save-exact wrangler@4.149.0
+      - name: Verify every native artifact and qualify Auto Best inside the public root
+        env:
+          DEALER: ${{ matrix.slug }}
+          WRANGLER_SEND_METRICS: 'false'
+        run: node scripts/bundle-varna-artifacts.mjs "$DEALER"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: varna-delivery-${{ matrix.slug }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: runtime/varna-delivery/${{ matrix.slug }}/
+          include-hidden-files: true
           if-no-files-found: error
-          retention-days: 7
-          compression-level: 1
+          compression-level: 0
+          retention-days: 5
