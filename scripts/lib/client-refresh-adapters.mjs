@@ -7,7 +7,7 @@ import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { applyDealerLogoContract } from './client-logo-contract.mjs';
 import { dealerLocalizedCopy } from './dealer-localized-copy.mjs';
-import { applyCarwowSafeContent, applyImportSafeContent } from './client-refresh-safe-content.mjs';
+import { applyCarwowSafeContent, applyImportSafeContent, applyModernSafeContent } from './client-refresh-safe-content.mjs';
 
 const exists = (file) => fs.existsSync(file);
 const read = (file) => fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, '');
@@ -840,6 +840,55 @@ function patchModernDealerText(candidate, profile) {
     new Set(['node_modules', '.next', 'dist', 'build'])));
 }
 
+
+function patchModernAssignedDirectory(candidate, profile) {
+  const relative = 'packages/marketplace/mock-directory.ts';
+  const file = path.join(candidate, relative);
+  if (!exists(file)) return [];
+  const before = read(file);
+  for (const name of ['mockOrganizationDirectoryCoreEntries', 'createMockOrganizationDirectoryScaleEntries', 'mockOrganizationDirectoryEntries']) {
+    if ((before.match(new RegExp('export const ' + name + '\\b', 'g')) || []).length !== 1) throw new Error('Modern assigned directory export shape changed: ' + name);
+  }
+  if (!before.includes('organizationDirectoryEntriesSchema') || !before.includes('"./directory"') || !before.includes('"./mock-data"')) throw new Error('Modern assigned directory import shape changed');
+  const b = profile.business;
+  if (!b?.name?.trim() || !b.slug?.trim()) throw new Error('Modern assigned directory requires recorded dealer identity');
+  const rows = profile.listings;
+  if (!Array.isArray(rows) || !rows.length) throw new Error('Modern assigned directory requires inventory rows');
+  const illustrative = profile.stockKind === 'illustrative-not-dealer-stock' || rows.some(row => row.availability === 'illustrative-not-dealer-stock');
+  const historical = !illustrative && rows.every(row => {
+    const date = row.observedAt || '', stamp = Date.parse(date + 'T00:00:00.000Z');
+    return /^\d{4}-\d{2}-\d{2}$/.test(date) && Number.isFinite(stamp) && new Date(stamp).toISOString().slice(0, 10) === date && /^https?:\/\//.test(row.sourceUrl || '');
+  });
+  const contact = {};
+  for (const [key,value] of [['email',b.email],['phone',b.phoneDisplay || b.phoneE164],['websiteUrl',b.website]]) if (typeof value === 'string' && value.trim()) contact[key] = value;
+  const entry = {
+    brandCoverage: [], claimStatus: 'unclaimed', contact, dealerOrgId: 'dealer-' + b.slug,
+    description: b.inventoryNotice || b.previewNotice || (illustrative ? 'Illustrative listings; dealer availability is not confirmed.' : 'Dealer availability is not confirmed.'),
+    displayName: b.name, id: 'directory-' + b.slug,
+    inventory: {activeListingCount: 0, inTransitCount: 0, localCount: 0, orderableCount: 0, sourceStockCount: historical ? rows.length : 0},
+    orgType: 'dealer', representativeVehicles: [], slug: b.slug, tradeLanes: [],
+    verification: {businessVerified: false, inventoryCurrent: false, trustedSupplier: false}
+  };
+  if (typeof b.countryCode === 'string' && /^[A-Z]{2}$/.test(b.countryCode)) {
+    entry.headquarters = {countryCode: b.countryCode};
+    for (const key of ['city','region']) if (typeof b[key] === 'string' && b[key].trim()) entry.headquarters[key] = b[key];
+  }
+  const output = 'import { type OrganizationDirectoryEntry, organizationDirectoryEntriesSchema } from "./directory";\n'
+    + 'import { mockListings } from "./mock-data";\n\n'
+    + '// Assigned dealer snapshot. Directory scale does not authorize donor organizations or current-stock claims.\n'
+    + 'const assignedDealer: OrganizationDirectoryEntry = ' + JSON.stringify(entry, null, 2) + ';\n'
+    + (historical ? 'const representative = mockListings[0];\nif (!representative || !representative.images[0]) throw new Error("Missing recorded assigned-dealer representative listing");\n'
+      + 'assignedDealer.representativeVehicles = [{ availability: "source_stock", href: "/listing/" + representative.slug, id: representative.id, image: representative.images[0], price: representative.price, title: representative.title }];\n' : '')
+    + 'export const mockOrganizationDirectoryCoreEntries = organizationDirectoryEntriesSchema.parse([assignedDealer]);\n'
+    + 'export const createMockOrganizationDirectoryScaleEntries = (totalOrganizations = 1) => {\n'
+    + '  if (!Number.isSafeInteger(totalOrganizations) || totalOrganizations < 1) throw new Error("Invalid assigned-directory count");\n'
+    + '  return organizationDirectoryEntriesSchema.parse(mockOrganizationDirectoryCoreEntries);\n};\n'
+    + 'export const mockOrganizationDirectoryEntries = createMockOrganizationDirectoryScaleEntries();\n';
+  if (before === output) return [];
+  write(file, output);
+  return [relative];
+}
+
 function patchModern({ oldVariant, candidate, profile }) {
   const b = profile.business;
   const localized = dealerLocalizedCopy(profile);
@@ -910,11 +959,13 @@ function patchModern({ oldVariant, candidate, profile }) {
       dealerTextFiles.push(name);
     }
   }
+  const directoryFiles = patchModernAssignedDirectory(candidate, profile);
+  const safeContent = applyModernSafeContent({ candidate, profile });
   return [
     'packages/marketplace-domain/testing/mock-data.ts',
     'packages/marketplace/lead-site.ts',
     'packages/marketplace-domain/testing/dealer-profile.json',
-    ...dealerTextFiles
+    ...dealerTextFiles, ...directoryFiles, ...safeContent.changed
   ];
 }
 
@@ -1557,5 +1608,7 @@ export const refreshAdapterInternals = {
   rasterLogoCandidates,
   requireRasterLogo,
   replaceModernListings,
-  replaceLeadScalar
+  replaceLeadScalar,
+  patchModernAssignedDirectory,
+  patchModern
 };

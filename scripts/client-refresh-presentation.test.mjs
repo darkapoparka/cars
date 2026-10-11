@@ -1,3 +1,5 @@
+import vm from 'node:vm';
+import { stripTypeScriptTypes } from 'node:module';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
@@ -233,4 +235,48 @@ test('Modern scalar refresh updates top-level facts while preserving nested copy
   const refreshed=refreshAdapterInternals.replaceLeadScalar(withAddress,'tagline','Priselci — vehicles and dealer support in Varna.');
   assert.equal(refreshed,source.replace("  address: 'Donor address',",'  address: "бул. „Цар Освободител“ 285",').replace("  tagline: 'Unsupported donor claim',",'  tagline: "Priselci — vehicles and dealer support in Varna.",'));
   assert.throws(()=>refreshAdapterInternals.replaceLeadScalar(source.replace("  address: 'Donor address',","  address: 'One',\n  address: 'Two',"),'address','Dealer'),/Ambiguous top-level/);
+});
+
+
+test('Modern assigned directory initializes with actual scattered native IDs and never adds donor organizations', t => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'cars-modern-directory-'));
+  t.after(() => { const real=fs.realpathSync(root); assert.equal(path.dirname(real),fs.realpathSync(os.tmpdir())); assert(path.basename(real).startsWith('cars-modern-directory-')); fs.rmSync(real,{recursive:true,force:true}); });
+  const relative='packages/marketplace/mock-directory.ts';
+  const original='import { organizationDirectoryEntriesSchema } from "./directory";\nimport { getMockListingById } from "./mock-data";\nexport const mockOrganizationDirectoryCoreEntries = organizationDirectoryEntriesSchema.parse([]);\nexport const createMockOrganizationDirectoryScaleEntries = () => [];\nexport const mockOrganizationDirectoryEntries = [];\n';
+  const profile={business:{slug:'recorded-dealer',name:'Recorded "Dealer"',countryCode:'BG',city:'Varna',phoneDisplay:'+359 1',email:'',website:'https://recorded.example',inventoryNotice:'Dated snapshot; current availability unconfirmed.'},listings:Array.from({length:16},(_,i)=>({sourceUrl:'https://source.example/'+i,observedAt:'2026-09-07'}))};
+  const nativeRows=[{id:'am-1010',slug:'actual-native-slug',images:[{url:'/source.webp',alt:'Recorded car'}],price:{amount:4299,currency:'EUR'},title:'Recorded car'}];
+  const execute=() => {
+    let code=stripTypeScriptTypes(fs.readFileSync(path.join(root,relative),'utf8')).replace(/^import .*;\n/gm,'').replaceAll('export const ','const ');
+    code+='\nresult={core:mockOrganizationDirectoryCoreEntries,all:mockOrganizationDirectoryEntries,scale:createMockOrganizationDirectoryScaleEntries(120)};';
+    const context={mockListings:nativeRows,organizationDirectoryEntriesSchema:{parse:rows=>structuredClone(rows)}};
+    vm.runInNewContext(code,context); return context.result;
+  };
+  write(root,relative,original);
+  assert.deepEqual(refreshAdapterInternals.patchModernAssignedDirectory(root,profile),[relative]);
+  const result=execute(),entry=result.all[0];
+  assert.equal(result.core.length,1); assert.equal(result.all.length,1); assert.equal(result.scale.length,1);
+  assert.equal(entry.displayName,profile.business.name); assert.equal(entry.dealerOrgId,'dealer-recorded-dealer');
+  assert.equal(entry.representativeVehicles[0].id,'am-1010'); assert.equal(entry.representativeVehicles[0].href,'/listing/actual-native-slug');
+  assert.equal(entry.inventory.sourceStockCount,16); assert.equal(entry.inventory.activeListingCount,0); assert.equal(entry.inventory.localCount,0);
+  assert.deepEqual(entry.verification,{businessVerified:false,inventoryCurrent:false,trustedSupplier:false});
+  assert.deepEqual(entry.brandCoverage,[]); assert.deepEqual(entry.tradeLanes,[]); assert.equal(entry.services,undefined); assert.equal(entry.profileImage,undefined);
+  assert.equal(entry.contact.email,undefined); assert.equal(entry.contact.phone,'+359 1');
+  assert.deepEqual(refreshAdapterInternals.patchModernAssignedDirectory(root,profile),[],'Same assigned snapshot must be idempotent');
+  for(const count of [6,8]) {
+    const demo={...profile,stockKind:'illustrative-not-dealer-stock',listings:profile.listings.slice(0,count)};
+    refreshAdapterInternals.patchModernAssignedDirectory(root,demo);
+    const [assigned]=execute().all; assert.equal(assigned.inventory.sourceStockCount,0); assert.deepEqual(assigned.representativeVehicles,[]);
+  }
+  for(const observedAt of ['2026-99-99','2026-02-30','2025-02-29']) {
+    refreshAdapterInternals.patchModernAssignedDirectory(root,{...profile,listings:[{observedAt,sourceUrl:'https://source.example/invalid-date'}]});
+    const [invalidDateEntry]=execute().all; assert.equal(invalidDateEntry.inventory.sourceStockCount,0); assert.deepEqual(invalidDateEntry.representativeVehicles,[]);
+  }
+  const mixed={...profile,listings:[...profile.listings.slice(0,1),{availability:'illustrative-not-dealer-stock'}]};
+  refreshAdapterInternals.patchModernAssignedDirectory(root,mixed); assert.deepEqual(execute().all[0].representativeVehicles,[]);
+  const unknown={business:{slug:'unknown-dealer',name:'Recorded unknown'},listings:[{}]};
+  refreshAdapterInternals.patchModernAssignedDirectory(root,unknown); const [unknownEntry]=execute().all;
+  assert.equal(unknownEntry.headquarters,undefined); assert.deepEqual(unknownEntry.contact,{}); assert.equal(unknownEntry.logoUrl,undefined); assert.equal(unknownEntry.inventory.sourceStockCount,0);
+  const drift=original.replace('export const mockOrganizationDirectoryEntries','export const unknownEntries');
+  write(root,relative,drift); assert.throws(()=>refreshAdapterInternals.patchModernAssignedDirectory(root,profile),/export shape changed/); assert.equal(fs.readFileSync(path.join(root,relative),'utf8'),drift);
+  assert.deepEqual(refreshAdapterInternals.patchModernAssignedDirectory(path.join(root,'absent'),profile),[]);
 });
