@@ -8,7 +8,7 @@ export const AUTO_BEST_CARD_LAYOUT_CSS = `@media (max-width: 767px) {
   .dn-detail-finance-trigger__logo img { object-position: left center; }
   html .dn-app-shell dialog .dn-mobile-overlay-heading.dn-mobile-filter-header { display: grid; grid-template-columns: var(--dn-control-hit-height) minmax(0, 1fr) var(--dn-control-hit-height); }
   html .dn-app-shell dialog .dn-mobile-filter-header > h2 { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; text-align: center; }
-  html .dn-app-shell dialog .dn-mobile-filter-header > .back { margin-inline-start: 0; }
+  html .dn-app-shell dialog .dn-mobile-overlay-heading.dn-mobile-filter-header > button { margin-inline: 0; }
   html .dn-app-shell dialog :is(.dn-mobile-filter-choice, .dn-mobile-overlay-option) { align-items: flex-start; }
   html .dn-app-shell dialog :is(.dn-mobile-filter-choice .choice-label, .dn-mobile-overlay-option .option-label) { display: -webkit-box; min-width: 0; overflow: hidden; white-space: normal; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; }
   html .dn-app-shell dialog :is(.dn-mobile-filter-checkbox, .dn-mobile-overlay-option .identity-check, .dn-mobile-filter-choice > input) { margin-block-start: max(0px, calc((1lh - var(--dn-space-5)) / 2)); }
