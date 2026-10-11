@@ -7,11 +7,18 @@ import { spawnSync } from 'node:child_process';
 import { readRequest, validateOriginalProofs, guardHostedContext, assertBoundary, sha256, REQUEST_BASENAME } from './lib/hosted-native-qa.mjs';
 import { githubIdentity } from './verify-existing-fleet-hosted-native.mjs';
 
-export const PIN = Object.freeze({ sourceCommit:'b6eb5f8e209f83d273101a3e26d8d4a8659026de', sourceTree:'168a0b043467a517757ba1544c88969b013fd53f',
-  versionId:'31b65368-5bec-4deb-8592-18b1980ea895', deploymentId:'569d7c89-3501-477a-8adb-bd0d059443de', buildRunId:38169149692,
-  artifactId:11713191454, publicOrigin:'https://cars-priselci.darkapoparka1.workers.dev' });
+// Exact immutable tuple from accepted S2 build and original deployment receipts.
+export const PIN = Object.freeze({
+  "sourceCommit": "4175d7b33a1dde15954e472d6b0c5c632ae4d943",
+  "sourceTree": "9b5ad1a83b3442a4f1453169517195afb6fe5a4b",
+  "versionId": "5139c933-7f9f-4eba-b18a-b0fe60aba37d",
+  "deploymentId": "12ca3f5c-95c9-4d88-bc3d-5e546fccadc6",
+  "buildRunId": 38180650445,
+  "artifactId": 11716709914,
+  "publicOrigin": "https://cars-priselci.darkapoparka1.workers.dev"
+});
 export const SOURCE_ID = '11784527405061757';
-const S1='32ac4ebcbafff38df6306e9919ce6113b2d10503';
+const SELECTED_TEMPLATE_REVISION='b1f0f5609c7c249cfd0649c122849ff2cbb8dfde';
 export function assertCi(env=process.env) {
   assert.equal(process.platform,'linux');assert.equal(process.version,'v26.10.0');
   assert.equal(env.GITHUB_ACTIONS,'true');assert.equal(env.GITHUB_REPOSITORY,'darkapoparka/cars');assert.equal(env.GITHUB_EVENT_NAME,'workflow_dispatch');assert.equal(env.GITHUB_REF,'refs/heads/main');
@@ -22,12 +29,16 @@ export function prepareBrowserDependencies(root,env=process.env) {
   assertCi(env);
   const git=(...args)=>{const r=spawnSync('git',args,{cwd:root,env:{...env,GIT_NO_LAZY_FETCH:'0'},encoding:'utf8',maxBuffer:8*1024**2});assert.equal(r.status,0,r.stderr);return r.stdout.trim();};
   assert.equal(git('rev-parse','HEAD'),env.GITHUB_SHA);assert.equal(git('remote','get-url','origin').replace(/\.git$/,''),'https://github.com/darkapoparka/cars');
-  // Same immutable-S1 preparation rule as hosted55, scoped to this runner's two dependency inputs. Its strict workflow-specific API cannot admit this workflow.
+  // Same immutable-S2 preparation rule as hosted55, scoped to this runner's two dependency inputs. Its strict workflow-specific API cannot admit this workflow.
   const files=['templates/auto-best/package.json','templates/auto-best/package-lock.json'];
-  git('restore','--source='+S1,'--worktree','--',...files);
-  return files.map(relative=>{const file=path.join(root,relative);assert.equal(fs.realpathSync(file),file);assert.equal(git('hash-object',file),git('rev-parse',S1+':'+relative));return{path:relative,sha256:sha256(fs.readFileSync(file))};});
+  git('restore','--source='+SELECTED_TEMPLATE_REVISION,'--worktree','--',...files);
+  return files.map(relative=>{const file=path.join(root,relative);assert.equal(fs.realpathSync(file),file);assert.equal(git('hash-object',file),git('rev-parse',SELECTED_TEMPLATE_REVISION+':'+relative));return{path:relative,sha256:sha256(fs.readFileSync(file))};});
 }
+const pinFieldsSealed = () => ['sourceCommit','sourceTree'].every(key => /^[a-f0-9]{40}$/.test(PIN[key] ?? '')) &&
+  ['versionId','deploymentId'].every(key => /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/i.test(PIN[key] ?? '')) &&
+  ['buildRunId','artifactId'].every(key => Number.isSafeInteger(PIN[key]) && PIN[key] > 0);
 export function assertPilot(request) {
+  assert(pinFieldsSealed(), 'Held S2 pilot tuple is not sealed');
   for (const [key,value] of Object.entries(PIN)) assert.equal(request[key],value,'Pilot identity differs: '+key);
   return request;
 }

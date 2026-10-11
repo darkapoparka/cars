@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {legacyClipRegion,selectSourceLink,dismissAppWelcome,assertPilot,PIN,routePlan,designLinks,galleryLabels,manifestAsset,validateGeometry,paintedHeading,assertLocale,controlFit,SOURCE_ID} from './verify-priselci-public-browser.mjs';
 test('release guard rejects a different hosted version, origin, source and artifact',()=>{
-  assertPilot({...PIN});for(const key of ['versionId','publicOrigin','sourceCommit','artifactId']) assert.throws(()=>assertPilot({...PIN,[key]:'changed'}));
+  if(PIN.sourceCommit === null){assert.throws(()=>assertPilot({...PIN}),/Held S2 pilot tuple is not sealed/);return;}
+  assertPilot({...PIN});for(const key of ['versionId','deploymentId','publicOrigin','sourceCommit','sourceTree','buildRunId','artifactId']) assert.throws(()=>assertPilot({...PIN,[key]:'changed'}));
 });
 test('actual Signature320 offscreen carousel clones are excluded, partly painted clipped text remains a failure',()=>{
   const headings=[-339,16,371,726].map(left=>({left,right:left+273,top:200,bottom:250,width:273,height:50,hidden:false,clips:[{left:16,right:304,top:0,bottom:844,x:true,y:false}],textRects:[{left,right:left+273,top:200,bottom:250}]}));
