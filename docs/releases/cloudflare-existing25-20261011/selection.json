@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "scope": "Existing 25-dealer cohort: 24 Cars-owned dealer sources selected for qualification preparation; independent Al Reef remains in fleet totals and is excluded from parent Cars source export. Selection authorizes no build or deployment.",
+  "scope": "Existing 25-dealer cohort: 24 Cars-owned dealer sources selected for qualification preparation; independent Al Reef remains in fleet totals and is excluded from parent Cars source export. Selection authorizes no build or deployment. Append the 10 preserved Cars-owned UK sources and 10 canonically adopted Varna sources for individual qualification preparation only; the original 25-dealer cohort counts and saved Worker observations remain historical and unchanged.",
   "qualifiedSourcePreparation": true,
   "originalSelection": {
     "repository": "darkapoparka/cars",
@@ -126,6 +126,86 @@
     {
       "slug": "the-dealers-point",
       "proposedRepository": "darkapoparka/cars-thedealerspoint"
+    },
+    {
+      "slug": "stockport-broadbent-car-and-servicing",
+      "proposedRepository": "darkapoparka/cars-uk-stockport-broadbent-car-and-servicing"
+    },
+    {
+      "slug": "motherwell-motors-castle",
+      "proposedRepository": "darkapoparka/cars-uk-motherwell-motors-castle"
+    },
+    {
+      "slug": "birmingham-trade-car-sales-grasmere",
+      "proposedRepository": "darkapoparka/cars-uk-birmingham-trade-car-sales-grasmere"
+    },
+    {
+      "slug": "birmingham-square-one-motors",
+      "proposedRepository": "darkapoparka/cars-uk-birmingham-square-one-motors"
+    },
+    {
+      "slug": "dewsbury-car-market-yorkshire",
+      "proposedRepository": "darkapoparka/cars-uk-dewsbury-car-market-yorkshire"
+    },
+    {
+      "slug": "nottingham-s-a-motors",
+      "proposedRepository": "darkapoparka/cars-uk-nottingham-s-a-motors"
+    },
+    {
+      "slug": "batley-as-motor-group",
+      "proposedRepository": "darkapoparka/cars-uk-batley-as-motor-group"
+    },
+    {
+      "slug": "bradford-cherry-tree-cars",
+      "proposedRepository": "darkapoparka/cars-uk-bradford-cherry-tree-cars"
+    },
+    {
+      "slug": "stockton-norton-grange-trade-cars",
+      "proposedRepository": "darkapoparka/cars-uk-stockton-norton-grange-trade-cars"
+    },
+    {
+      "slug": "north-norfolk-car-sales",
+      "proposedRepository": "darkapoparka/cars-uk-north-norfolk-car-sales"
+    },
+    {
+      "slug": "autofest-varna",
+      "proposedRepository": "darkapoparka/cars-autofestvarna"
+    },
+    {
+      "slug": "autoroad-varna",
+      "proposedRepository": "darkapoparka/cars-autoroadvarna"
+    },
+    {
+      "slug": "car-point-trade-varna",
+      "proposedRepository": "darkapoparka/cars-carpointtradevarna"
+    },
+    {
+      "slug": "city-cars-varna",
+      "proposedRepository": "darkapoparka/cars-citycarsvarna"
+    },
+    {
+      "slug": "dm-auto-varna",
+      "proposedRepository": "darkapoparka/cars-dmautovarna"
+    },
+    {
+      "slug": "dream-drive-varna",
+      "proposedRepository": "darkapoparka/cars-dreamdrivevarna"
+    },
+    {
+      "slug": "dynamic-auto-varna",
+      "proposedRepository": "darkapoparka/cars-dynamicautovarna"
+    },
+    {
+      "slug": "kolarov-cars",
+      "proposedRepository": "darkapoparka/cars-kolarovcars"
+    },
+    {
+      "slug": "pm-select-automotive",
+      "proposedRepository": "darkapoparka/cars-pmselectautomotive"
+    },
+    {
+      "slug": "prime-auto-varna",
+      "proposedRepository": "darkapoparka/cars-primeautovarna"
     }
   ],
   "workerIdentities": {
@@ -377,5 +457,55 @@
         "variant2": "modern"
       }
     ]
+  },
+  "sourceAdmissionExtension": {
+    "schemaVersion": 1,
+    "kind": "cars-owned-maintained-source-selection-extension",
+    "baseSelection": {
+      "repository": "darkapoparka/cars",
+      "commit": "a70f42ababa300cc00dddd5f911262059d120525",
+      "path": "docs/releases/cloudflare-existing25-20261011/selection.json",
+      "sha256": "6528734c9114c759f0acbe690deb654a26a726a7f68295339bcd37b0dc5d7682",
+      "gitBlob": "dd4b02bdcbf0c6485cd0736180aa49f23252fe92"
+    },
+    "registry": {
+      "path": "docs/DEPLOYMENT-INVENTORY.json",
+      "sha256": "1e80721527f7de675e3e1b6949361ad7663be29e708903fe7440ad3f19b3e7ed",
+      "gitBlob": "4efd9c434c180fa56d6560aee3e7a8346643404a"
+    },
+    "preservedHistoricalCohort": 25,
+    "preservedCarsOwnedSelections": 24,
+    "addedCarsOwnedSources": 20,
+    "totalCarsOwnedSelections": 44,
+    "addedSlugs": [
+      "stockport-broadbent-car-and-servicing",
+      "motherwell-motors-castle",
+      "birmingham-trade-car-sales-grasmere",
+      "birmingham-square-one-motors",
+      "dewsbury-car-market-yorkshire",
+      "nottingham-s-a-motors",
+      "batley-as-motor-group",
+      "bradford-cherry-tree-cars",
+      "stockton-norton-grange-trade-cars",
+      "north-norfolk-car-sales",
+      "autofest-varna",
+      "autoroad-varna",
+      "car-point-trade-varna",
+      "city-cars-varna",
+      "dm-auto-varna",
+      "dream-drive-varna",
+      "dynamic-auto-varna",
+      "kolarov-cars",
+      "pm-select-automotive",
+      "prime-auto-varna"
+    ],
+    "sourceAdmissionOnly": true,
+    "perRequestDealerLimit": 25,
+    "perDealerQualificationRequired": true,
+    "independentExcluded": true,
+    "sourceApproval": false,
+    "nativeApproval": false,
+    "hostedApproval": false,
+    "globalReleaseApproval": false
   }
 }
