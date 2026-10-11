@@ -53,6 +53,8 @@ jobs:
       DEALER_SLUG: ${{ matrix.slug }}
       NODE_OPTIONS: --max-old-space-size=4608
       NEXT_TELEMETRY_DISABLED: '1'
+      # Hydrate exact pinned blob IDs in bounded multi-want batches, not one lazy fetch per file.
+      CARS_SOURCE_BATCH_PREFETCH: '1'
     steps:
       - name: Check out published source, exact historical bases and bounded review inputs
         id: source_checkout

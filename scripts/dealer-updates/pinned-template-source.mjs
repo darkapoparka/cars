@@ -74,10 +74,57 @@ export function exportPinnedTemplate({ repositoryPath, repository, revision, des
   return { directory: path.resolve(destination), repository: normalizedRepo, revision, path: prefix, digest: actual.digest, files: actual.files.length };
 }
 
+/** Hydrate only enumerated missing blob IDs in the authenticated source CI checkout. */
+export function prefetchPinnedSourceBlobs({ repositoryPath, entries, env = process.env, readGit = git }) {
+  if (env.CARS_SOURCE_BATCH_PREFETCH !== '1') return { enabled: false, fetched: 0, bytes: 0 };
+  if (env.GITHUB_ACTIONS !== 'true' || env.GITHUB_REPOSITORY !== 'darkapoparka/cars' ||
+      env.GITHUB_WORKFLOW !== 'Existing dealer reviewed source proposals' || env.GITHUB_REF !== 'refs/heads/main' ||
+      !/^[a-f0-9]{40}$/.test(env.GITHUB_SHA || '') || !/^[1-9][0-9]*$/.test(env.GITHUB_RUN_ID || '')) {
+    throw new Error('Pinned blob batch prefetch is restricted to canonical main source CI');
+  }
+  if (normalizedRepository(readGit(repositoryPath, ['remote', 'get-url', 'origin'])) !== 'darkapoparka/cars' ||
+      readGit(repositoryPath, ['rev-parse', 'HEAD']) !== env.GITHUB_SHA) {
+    throw new Error('Pinned blob batch prefetch source identity differs');
+  }
+  if (!Array.isArray(entries) || entries.length > 50000 || entries.some(row => !/^[a-f0-9]{40}$/.test(row?.blob || ''))) {
+    throw new Error('Pinned blob batch prefetch requires bounded exact Git IDs');
+  }
+  const ids = [...new Set(entries.map(row => row.blob))].sort();
+  const localEnv = { GIT_NO_LAZY_FETCH: '1', GIT_TERMINAL_PROMPT: '0' };
+  function inspect(wants) {
+    if (!wants.length) return [];
+    const rows = readGit(repositoryPath, ['cat-file', '--batch-check=%(objectname) %(objecttype) %(objectsize)'], {
+      input: wants.join('\n') + '\n', env: localEnv
+    }).split(/\r?\n/).filter(Boolean);
+    if (rows.length !== wants.length) throw new Error('Pinned blob batch inspection count differs');
+    return rows.map((row, index) => {
+      if (row === wants[index] + ' missing') return null;
+      const [id, type, sizeText, extra] = row.split(' '), bytes = Number(sizeText);
+      if (id !== wants[index] || type !== 'blob' || extra !== undefined || !Number.isSafeInteger(bytes) || bytes < 0 || bytes > 150 * 1024 * 1024) {
+        throw new Error('Pinned blob batch inspection returned an invalid blob');
+      }
+      return bytes;
+    });
+  }
+  const sizes = inspect(ids), missing = ids.filter((_, index) => sizes[index] === null);
+  let bytes = 0;
+  for (let offset = 0; offset < missing.length; offset += 256) {
+    const wants = missing.slice(offset, offset + 256);
+    readGit(repositoryPath, ['-c', 'gc.auto=0', 'fetch', '--no-tags', '--no-write-fetch-head',
+      '--no-auto-maintenance', '--no-recurse-submodules', '--filter=blob:none', 'origin', ...wants], { env: localEnv });
+    const fetched = inspect(wants);
+    if (fetched.some(size => size === null)) throw new Error('Pinned blob batch fetch did not supply every exact wanted blob');
+    bytes += fetched.reduce((total, size) => total + size, 0);
+    if (bytes > 8 * 1024 ** 3) throw new Error('Pinned source blob prefetch exceeds its bounded source read');
+  }
+  return { enabled: true, fetched: missing.length, bytes };
+}
+
 /** Read a pinned Git tree into memory; useful for provenance without another checkout/export. */
 export function readRepositoryTreeMap({ repositoryPath, revision, prefix = '', filter }) {
   if (!/^[a-f0-9]{40}$/.test(revision || '')) throw new Error('Repository tree reads require an immutable commit SHA');
   const entries = gitFiles(repositoryPath, revision, { prefix, ...(filter ? { filter } : {}) });
+  prefetchPinnedSourceBlobs({ repositoryPath, entries });
   const files = new Map();
   // Read sizes once and bound batches by bytes as well as file count.
   // Small source files share one Git process; large assets do not overflow it.
