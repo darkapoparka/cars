@@ -42,6 +42,25 @@ function nativeLanguageControls(scope) {
   };
 }
 // Native language radio policy: end
+// Native desktop preference flow: begin
+async function openClientPreferences(page, width) {
+  if (width < 1024) {
+    return openPreferences(page, width);
+  }
+  const locale = await page.locator("html").getAttribute("lang");
+  assert.ok(["en", "bg"].includes(locale), "Unsupported native page language");
+  const menuLabel = locale === "bg" ? "Още страници" : "More pages";
+  await page
+    .locator('[data-slot="dealer-desktop-header"]')
+    .getByRole("button", { name: menuLabel, exact: true })
+    .click();
+  // Native DropdownMenuContent is portaled, outside the desktop header.
+  const menu = page.getByRole("menu", { name: menuLabel, exact: true });
+  await menu.waitFor({ state: "visible" });
+  await menu.locator("[data-locale-trigger]").click();
+  await page.locator("dialog[data-locale-dialog][open]").waitFor();
+}
+// Native desktop preference flow: end
 const browser = await chromium.launch({ headless: true });
 async function fixture(
   locale,
@@ -260,7 +279,7 @@ try {
             assert.ok(
               !(await f.page.locator("dialog[data-locale-dialog]").isVisible())
             );
-            await openPreferences(f.page, width);
+            await openClientPreferences(f.page, width);
             await f.page
               .locator('dialog select[name="country"]')
               .selectOption("GB");
@@ -333,7 +352,7 @@ try {
           try {
             await f.page.goto(url(`/${locale}/cars`));
             await ready(f.page);
-            await openPreferences(f.page, width);
+            await openClientPreferences(f.page, width);
             f.control.mode = "hold";
             await nativeLanguageControls(f.page.locator("dialog[data-locale-dialog]"))
               .choose(locale === "en" ? "bg" : "en");
@@ -348,7 +367,7 @@ try {
             await f.page
               .locator("dialog[data-locale-dialog]")
               .waitFor({ state: "hidden" });
-            await openPreferences(f.page, width);
+            await openClientPreferences(f.page, width);
             assert.ok(
               await f.page.locator('dialog button[type="submit"]').isEnabled()
             );

@@ -31,3 +31,58 @@ test('missing or duplicate radio groups remain failures, preserving the original
   }
 });
 
+
+const desktopBlock = source.match(/\/\/ Native desktop preference flow: begin\n([\s\S]*?)\/\/ Native desktop preference flow: end/);
+assert(desktopBlock, 'Native desktop preference flow missing');
+function desktopFixture(locale) {
+  const calls = [];
+  let menuOpen = false, dialogOpen = false;
+  const menuLabel = locale === 'bg' ? 'Още страници' : 'More pages';
+  const page = {
+    locator(selector) {
+      if (selector === 'html') return {getAttribute: async name => {assert.equal(name,'lang'); calls.push('language:'+locale); return locale;}};
+      if (selector === '[data-slot="dealer-desktop-header"]') return {
+        getByRole(role, options) {
+          assert.equal(role,'button'); assert.deepEqual({...options}, {name:menuLabel,exact:true});
+          return {click: async () => {calls.push('native-more:'+locale); menuOpen=true;}};
+        }
+      };
+      if (selector === 'dialog[data-locale-dialog][open]') return {
+        waitFor: async () => {assert(dialogOpen, 'Native dialog did not open'); calls.push('native-dialog');}
+      };
+      throw new Error('Wrong or stale selector: '+selector);
+    },
+    getByRole(role, options) {
+      assert.equal(role,'menu'); assert.deepEqual({...options},{name:menuLabel,exact:true});
+      return {
+        waitFor: async options => {assert.equal(options.state,'visible'); assert(menuOpen,'Portaled menu must first be opened'); calls.push('portaled-menu:'+locale);},
+        locator(selector) {
+          assert.equal(selector,'[data-locale-trigger]');
+          return {click: async () => {assert(menuOpen,'Locale item is absent until native menu opens'); calls.push('native-locale:'+locale); dialogOpen=true;}};
+        }
+      };
+    }
+  };
+  const flow = vm.runInNewContext(desktopBlock[1]+'; openClientPreferences', {assert, openPreferences:async (_page,width)=>calls.push('existing-mobile:'+width)});
+  return {page,calls,flow};
+}
+for (const locale of ['en','bg']) test('desktop '+locale+' follows closed native More menu into portaled locale item', async () => {
+  const f=desktopFixture(locale);
+  assert.throws(()=>f.page.locator('[data-slot="dealer-desktop-header"] [data-locale-trigger]'),/Wrong or stale selector/);
+  await f.flow(f.page,1440);
+  assert.deepEqual(f.calls, ['language:'+locale,'native-more:'+locale,'portaled-menu:'+locale,'native-locale:'+locale,'native-dialog']);
+});
+test('mobile delegates to the unchanged native drawer flow',async()=>{
+  for(const width of [320,390]) {
+    const f=desktopFixture('en');await f.flow(f.page,width);
+    assert.deepEqual(f.calls,['existing-mobile:'+width]);
+  }
+});
+test('unsupported desktop language fails before menu controls; all three client call sites retain native flow',async()=>{
+  const f=desktopFixture('de');
+  await assert.rejects(()=>f.flow(f.page,1440),/Unsupported native page language/);
+  assert.deepEqual(f.calls,['language:de']);
+  assert.equal((source.match(/await openClientPreferences\(f\.page, width\);/g)||[]).length,3);
+  assert.equal((source.match(/await openPreferences\(f\.page, width\);/g)||[]).length,0);
+  assert(source.includes("form.locator('[name=\"locale\"]').selectOption(other)"));
+});

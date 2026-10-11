@@ -102,14 +102,14 @@ export function leaseSourceInput(relative, physicalBytes, oid, canonicalBytes) {
     new TextDecoder('utf8',{fatal:true}).decode(physicalBytes);
     consumed = NORMALIZED(physicalBytes); expected = NORMALIZED(canonicalBytes);
   }
-  assert(consumed.equals(expected),'Application/catalog/test/lock input changed from S1: '+relative);
+  assert(consumed.equals(expected),'Application/catalog/test/lock input changed from selected template: '+relative);
   return {path:relative,blob:oid,sha256:sha256(consumed),canonicalSha256:sha256(canonicalBytes),
     canonicalBytes:canonicalBytes.length,consumedBytes:consumed.length};
 }
 
 export const PINNED_QA_OVERRIDES = Object.freeze(QA_FILES.filter(name => name.startsWith('templates/')));
 export function preparePinnedQaSources({root=ROOT,env=process.env,platform=process.platform,version=process.version,gitRead=git,readBlobs=readCanonicalSourceBlobs,
-  restore=(paths)=>{const result=spawnSync('git',['restore','--source='+TEMPLATE_REVISION,'--worktree','--',...paths],{cwd:root,env:{...env,GIT_NO_LAZY_FETCH:'0'},encoding:'utf8',maxBuffer:16*1024**2});assert.equal(result.status,0,result.stderr||'Immutable S1 restoration failed');},
+  restore=(paths)=>{const result=spawnSync('git',['restore','--source='+TEMPLATE_REVISION,'--worktree','--',...paths],{cwd:root,env:{...env,GIT_NO_LAZY_FETCH:'0'},encoding:'utf8',maxBuffer:16*1024**2});assert.equal(result.status,0,result.stderr||'Immutable selected template restoration failed');},
   validateSources=()=>sourceLeases(root)}={}) {
   assert(platform==='linux'&&version==='v26.10.0'&&env.GITHUB_ACTIONS==='true'&&env.GITHUB_REPOSITORY==='darkapoparka/cars'&&
     env.GITHUB_EVENT_NAME==='workflow_dispatch'&&env.GITHUB_REF==='refs/heads/main'&&/^[a-f0-9]{40}$/.test(env.GITHUB_SHA??'')&&
@@ -121,22 +121,22 @@ export function preparePinnedQaSources({root=ROOT,env=process.env,platform=proce
   const originals=readBlobs(root,[...retained.values()].map(row=>row.oid));
   for(const [name,row] of retained){const original=originals.get(row.oid);assert(original,'Missing canonical QA override: '+name);try {row.lease=leaseSourceInput(name,row.bytes,row.oid,original);} catch(error) {throw new Error('Reviewed QA override differs from canonical event: '+name,{cause:error});}} 
   const paths=Object.keys(FAMILIES).map(key=>'templates/'+key);restore(paths);
-  for(const [name,{bytes,file}] of retained){assert(fs.realpathSync(file)===file&&fs.statSync(file).isFile(),'Restored S1 override path must remain physical: '+name);fs.writeFileSync(file,bytes);assert(fs.readFileSync(file).equals(bytes),'Reviewed QA override restore differs');}
-  const sources=validateSources();return {schemaVersion:1,type:'cars-hosted-native-immutable-s1-test-source',qaToolCommit:env.GITHUB_SHA,templateRevision:TEMPLATE_REVISION,templatePaths:paths,overrides:[...retained].map(([name,r])=>({path:name,gitBlob:r.oid,sha256:sha256(r.bytes),canonicalSha256:r.lease.canonicalSha256,normalizedSha256:r.lease.sha256})),sourceLeaseCount:sources.leases.length,clientSourceChanged:false,providerMutation:false};
+  for(const [name,{bytes,file}] of retained){assert(fs.realpathSync(file)===file&&fs.statSync(file).isFile(),'Restored selected template override path must remain physical: '+name);fs.writeFileSync(file,bytes);assert(fs.readFileSync(file).equals(bytes),'Reviewed QA override restore differs');}
+  const sources=validateSources();return {schemaVersion:1,type:'cars-hosted-native-immutable-s2-test-source',qaToolCommit:env.GITHUB_SHA,templateRevision:TEMPLATE_REVISION,templatePaths:paths,overrides:[...retained].map(([name,r])=>({path:name,gitBlob:r.oid,sha256:sha256(r.bytes),canonicalSha256:r.lease.canonicalSha256,normalizedSha256:r.lease.sha256})),sourceLeaseCount:sources.leases.length,clientSourceChanged:false,providerMutation:false};
 }
 
 export function sourceLeases(root = ROOT, request = null) {
   const leases = [], files = new Map(), inputs = [];
-  if (request) for (const key of APPLICATIONS) assert.equal(git(root, 'rev-parse', TEMPLATE_REVISION + ':templates/' + key), request.sourceReleases[key].tree, 'Selected S1 subtree differs: ' + key);
+  if (request) for (const key of APPLICATIONS) assert.equal(git(root, 'rev-parse', TEMPLATE_REVISION + ':templates/' + key), request.sourceReleases[key].tree, 'Selected selected template subtree differs: ' + key);
   for (const key of Object.keys(FAMILIES)) {
     const prefix = 'templates/' + key + '/';
     const rows = git(root, 'ls-tree', '-r', TEMPLATE_REVISION, '--', prefix).split('\n').filter(Boolean);
-    assert(rows.length, 'Missing exact S1 source tree: ' + key);
+    assert(rows.length, 'Missing exact selected template source tree: ' + key);
     for (const line of rows) {
       const match = line.match(/^(\d+) blob ([a-f0-9]{40})\t(.+)$/);
       if (!match || QA_FILES.includes(match[3]) || !consumedSourceInput(key, match[3].slice(prefix.length))) continue;
       const relative = match[3], filename = path.resolve(root, relative);
-      assert(fs.existsSync(filename) && fs.realpathSync(filename) === filename && fs.statSync(filename).isFile(), 'Missing physical S1 input: ' + relative);
+      assert(fs.existsSync(filename) && fs.realpathSync(filename) === filename && fs.statSync(filename).isFile(), 'Missing physical selected template input: ' + relative);
       inputs.push({key,prefix,relative,filename,oid:match[2]});
     }
   }
@@ -293,7 +293,7 @@ export async function verifyHostedNative({root=ROOT,basename=REQUEST_BASENAME,re
   fs.writeFileSync(path.join(outputRoot,'evidence','evidence-manifest.json'),JSON.stringify({schemaVersion:1,type:'cars-hosted-native-qa-evidence-inventory',files:inventory,digest:sha256(JSON.stringify(inventory)),nativeApproval:false,hostedApproval:false,globalReleaseApproval:false},null,2)+'\n',{flag:'wx'});
   return {outputRoot,report:reportFile,status:report.status,error:report.error??null,browserCases:report.browserCases??report.browserSuites.reduce((n,suite)=>n+suite.caseCount,0),sha256:sha256(fs.readFileSync(reportFile)),nativeApproval:false,hostedApproval:false,globalReleaseApproval:false};
 }
-function sameSourceLeases(left,right){assert.equal(canonical(left),canonical(right),'S1 source input changed during QA');}
+function sameSourceLeases(left,right){assert.equal(canonical(left),canonical(right),'selected template source input changed during QA');}
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)) {
   try {
     const args=process.argv.slice(2);if(args.includes('--help'))console.log('Usage: node scripts/verify-existing-fleet-hosted-native.mjs --request priselci-request.json --sha256 RAW_SHA256 [--run]. Default validates exact reviewed proofs and prints a plan without live requests. --run requires the isolated manual Actions job; all release approvals remain false.');
