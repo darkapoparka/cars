@@ -12,9 +12,16 @@ const root = fileURLToPath(new URL('..', import.meta.url));
 const dealerRoot = path.join(root, 'clients/promosale-varna');
 const oldManifest = JSON.parse(fs.readFileSync(path.join(dealerRoot, 'dealer.json')));
 const profile = loadDealerProfile(dealerRoot, oldManifest.slug);
-const manifest = family => ({ ...oldManifest, packaging: { version: '5' },
-  variants: planSixDesignSelection(oldManifest.variants.map(variant => variant.base === '/variant-2'
-    ? { ...variant, key: family === 'modern' ? 'import' : 'modern', entry: family === 'modern' ? '/variant-2/' : '/variant-2/cars' } : variant)).variants });
+// Each target fixture is independent of the already published dealer's route receipt.
+const { legacyDetailRoutes: retainedLegacyDetailRoutes, ...legacyFixtureManifest } = oldManifest;
+const manifest = family => ({ ...legacyFixtureManifest, packaging: { version: '5' },
+  variants: planSixDesignSelection(oldManifest.variants.map(variant => {
+    if (variant.base === '/variant-2') return { ...variant, key: family === 'modern' ? 'import' : 'modern',
+      entry: family === 'modern' ? '/variant-2/' : '/variant-2/cars' };
+    if (variant.base === '/variant-3') return { ...variant, key: family,
+      entry: family === 'modern' ? '/variant-3/cars' : '/variant-3/' };
+    return variant;
+  })).variants });
 const source = {
   inventoryBytes: fs.readFileSync(path.join(dealerRoot, 'carwow/src/lib/data/daynight-current-inventory.ts')),
   vehicleBytes: fs.readFileSync(path.join(dealerRoot, 'carwow/src/lib/data/daynight-vehicles.ts'))

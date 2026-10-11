@@ -255,3 +255,16 @@ test('Modern partial sell pair fails transactionally for either missing consumer
   const other=name.includes('/sell/page')?'apps/web/app/[locale]/components/mobile-sell-vehicle-policy.ts':'apps/web/app/[locale]/sell/page.tsx';assert.equal(fs.existsSync(path.join(candidate,other)),false);
  }
 });
+
+test('Modern sell preserves the maintained GB miles placeholder pair through strict safe-copy adaptation',()=>{
+ const p={...profile('GB'),business:{...profile('GB').business,distanceUnit:'mi'}};
+ const miles=modernSellFixture.replace('mileagePlaceholder: "62 000 км"','mileagePlaceholder: "62 000 mi"').replace('mileagePlaceholder: "62,000 km"','mileagePlaceholder: "62,000 mi"');
+ const output=personalizeModernSellCopy(miles,p),copy=readTypeScriptCatalog(output,'pageCopy');
+ assert.equal(copy.bg.mileagePlaceholder,'62 000 mi');assert.equal(copy.en.mileagePlaceholder,'62,000 mi');
+ assert.equal(withoutModernCopy(output),withoutModernCopy(miles));
+ assert.match(copy.en.description,/does not submit/);assert.doesNotMatch(output,/Our team will contact you|final appraisal follows/);
+ assert.equal(personalizeModernSellCopy(output,p),output);
+ for(const bad of [miles.replace('62,000 mi','62,000 km'),miles.replace('62 000 mi','62001 mi'),miles.replace('Our team will contact you','Guaranteed valuation')])assert.throws(()=>personalizeModernSellCopy(bad,p),/mileage copy pair changed|unreviewed copy or factual shape/);
+ assert.throws(()=>personalizeModernSellCopy(miles,profile('BG')),/unreviewed copy or factual shape/);
+ assert.throws(()=>personalizeModernSellCopy(miles,{business:{...p.business,distanceUnit:'km'}}),/unreviewed copy or factual shape/);
+});

@@ -21,6 +21,7 @@ jobs:
       NODE_PATH: ${{ github.workspace }}/templates/import/node_modules
       CARS_ESBUILD_RESOLVE_FROM: ${{ github.workspace }}/templates/import/package.json
       CARS_SVELTE_QA_DEPS: ${{ github.workspace }}/templates/import/node_modules
+      CARS_BRAND_TEST_SHARP: ${{ github.workspace }}/templates/import/package.json
     outputs:
       matrix: ${{ steps.matrix.outputs.matrix }}
     steps:
@@ -72,6 +73,129 @@ jobs:
             /templates/app/lib/
             /templates/modern/apps/e2e/
             /templates/import/tests/
+            /dashboard/registry.mjs
+            /leads/varna/branding/generated-masters.json.gz
+            /templates/carwow/static/site.webmanifest
+            /templates/import/static/assets/daynight/hero/home-05-showroom-exterior.webp
+            /clients/al-basma-motors/dealer.json
+            /clients/al-basma-motors/business-facts.json
+            /clients/al-basma-motors/stock.json
+            /clients/al-basma-motors/branding/logo-contract.json
+            /clients/al-basma-motors/dealer-brand/logo-on-light.webp
+            /clients/al-basma-motors/dealer-brand/logo-on-dark.webp
+            /clients/al-basma-motors/dealer-brand/logo-on-accent.webp
+            /clients/al-hamoor-al-thahabi/dealer.json
+            /clients/al-hamoor-al-thahabi/business-facts.json
+            /clients/al-hamoor-al-thahabi/stock.json
+            /clients/al-hamoor-al-thahabi/branding/logo-contract.json
+            /clients/al-hamoor-al-thahabi/dealer-brand/logo-on-light.webp
+            /clients/al-hamoor-al-thahabi/dealer-brand/logo-on-dark.webp
+            /clients/al-hamoor-al-thahabi/dealer-brand/logo-on-accent.webp
+            /clients/asko-96/dealer.json
+            /clients/asko-96/business-facts.json
+            /clients/asko-96/stock.json
+            /clients/asko-96/branding/logo-contract.json
+            /clients/asko-96/dealer-brand/logo-on-light.webp
+            /clients/asko-96/dealer-brand/logo-on-dark.webp
+            /clients/asko-96/dealer-brand/logo-on-accent.webp
+            /clients/astracar/dealer.json
+            /clients/astracar/business-facts.json
+            /clients/astracar/stock.json
+            /clients/astracar/branding/logo-contract.json
+            /clients/astracar/dealer-brand/logo-on-light.webp
+            /clients/astracar/dealer-brand/logo-on-dark.webp
+            /clients/astracar/dealer-brand/logo-on-accent.webp
+            /clients/autolife/dealer.json
+            /clients/autolife/business-facts.json
+            /clients/autolife/stock.json
+            /clients/autolife/branding/logo-contract.json
+            /clients/autolife/dealer-brand/logo-on-light-20260919.webp
+            /clients/autolife/dealer-brand/logo-on-dark-20260919.webp
+            /clients/autolife/dealer-brand/logo-on-accent-20260919.webp
+            /clients/automarket-varna/dealer.json
+            /clients/automarket-varna/business-facts.json
+            /clients/automarket-varna/stock.json
+            /clients/automarket-varna/branding/logo-contract.json
+            /clients/automarket-varna/dealer-brand/logo-on-light.webp
+            /clients/automarket-varna/dealer-brand/logo-on-dark.webp
+            /clients/automarket-varna/dealer-brand/logo-on-accent.webp
+            /clients/avangard-auto/dealer.json
+            /clients/avangard-auto/business-facts.json
+            /clients/avangard-auto/stock.json
+            /clients/avangard-auto/branding/logo-contract.json
+            /clients/avangard-auto/dealer-brand/logo-on-light-20260919.webp
+            /clients/avangard-auto/dealer-brand/logo-on-dark-20260919.webp
+            /clients/avangard-auto/dealer-brand/logo-on-accent-20260919.webp
+            /clients/champion-auto-pro/dealer.json
+            /clients/champion-auto-pro/business-facts.json
+            /clients/champion-auto-pro/stock.json
+            /clients/champion-auto-pro/branding/logo-contract.json
+            /clients/champion-auto-pro/dealer-brand/logo-on-light.webp
+            /clients/champion-auto-pro/dealer-brand/logo-on-dark.webp
+            /clients/champion-auto-pro/dealer-brand/logo-on-accent.webp
+            /clients/elit-auto-import/dealer.json
+            /clients/elit-auto-import/business-facts.json
+            /clients/elit-auto-import/stock.json
+            /clients/elit-auto-import/branding/logo-contract.json
+            /clients/elit-auto-import/dealer-brand/logo-on-light.webp
+            /clients/elit-auto-import/dealer-brand/logo-on-dark.webp
+            /clients/elit-auto-import/dealer-brand/logo-on-accent.webp
+            /clients/excellent-cars/dealer.json
+            /clients/excellent-cars/business-facts.json
+            /clients/excellent-cars/stock.json
+            /clients/excellent-cars/branding/logo-contract.json
+            /clients/excellent-cars/dealer-brand/logo-on-light.webp
+            /clients/excellent-cars/dealer-brand/logo-on-dark.webp
+            /clients/excellent-cars/dealer-brand/logo-on-accent.webp
+            /clients/f1rst-motors/dealer.json
+            /clients/f1rst-motors/business-facts.json
+            /clients/f1rst-motors/stock.json
+            /clients/f1rst-motors/branding/logo-contract.json
+            /clients/f1rst-motors/dealer-brand/logo-on-light.webp
+            /clients/f1rst-motors/dealer-brand/logo-on-dark.webp
+            /clients/f1rst-motors/dealer-brand/logo-on-accent.webp
+            /clients/ivo-auto/dealer.json
+            /clients/ivo-auto/business-facts.json
+            /clients/ivo-auto/stock.json
+            /clients/ivo-auto/branding/logo-contract.json
+            /clients/ivo-auto/dealer-brand/logo-on-light.webp
+            /clients/ivo-auto/dealer-brand/logo-on-dark.webp
+            /clients/ivo-auto/dealer-brand/logo-on-accent.webp
+            /clients/legend-auto/dealer.json
+            /clients/legend-auto/business-facts.json
+            /clients/legend-auto/stock.json
+            /clients/legend-auto/branding/logo-contract.json
+            /clients/legend-auto/dealer-brand/logo-on-light.webp
+            /clients/legend-auto/dealer-brand/logo-on-dark.webp
+            /clients/legend-auto/dealer-brand/logo-on-accent.webp
+            /clients/outletcars-varna/dealer.json
+            /clients/outletcars-varna/business-facts.json
+            /clients/outletcars-varna/stock.json
+            /clients/outletcars-varna/branding/logo-contract.json
+            /clients/outletcars-varna/dealer-brand/logo-on-light.webp
+            /clients/outletcars-varna/dealer-brand/logo-on-dark.webp
+            /clients/outletcars-varna/dealer-brand/logo-on-accent.webp
+            /clients/priselci/dealer.json
+            /clients/priselci/business-facts.json
+            /clients/priselci/stock.json
+            /clients/priselci/branding/logo-contract.json
+            /clients/priselci/dealer-brand/logo-on-light-20260919.webp
+            /clients/priselci/dealer-brand/logo-on-dark-20260919.webp
+            /clients/priselci/dealer-brand/logo-on-accent-20260919.webp
+            /clients/texas-drive-auto/dealer.json
+            /clients/texas-drive-auto/business-facts.json
+            /clients/texas-drive-auto/stock.json
+            /clients/texas-drive-auto/branding/logo-contract.json
+            /clients/texas-drive-auto/dealer-brand/logo-on-light.webp
+            /clients/texas-drive-auto/dealer-brand/logo-on-dark.webp
+            /clients/texas-drive-auto/dealer-brand/logo-on-accent.webp
+            /clients/the-dealers-point/dealer.json
+            /clients/the-dealers-point/business-facts.json
+            /clients/the-dealers-point/stock.json
+            /clients/the-dealers-point/branding/logo-contract.json
+            /clients/the-dealers-point/dealer-brand/logo-on-light.webp
+            /clients/the-dealers-point/dealer-brand/logo-on-dark.webp
+            /clients/the-dealers-point/dealer-brand/logo-on-accent.webp
             /clients/navara-car/*.json
             /clients/navara-car/branding/
             /clients/navara-car/dealer-brand/
@@ -187,6 +311,7 @@ jobs:
           NODE
       - name: Run the required executable workflow integration checkpoint once
         run: |
+          mkdir -p runtime audits/2026-09-06
           node scripts/check-workflow.mjs
           node --test scripts/*.test.mjs
       - id: matrix

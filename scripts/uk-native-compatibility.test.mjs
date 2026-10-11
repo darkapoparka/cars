@@ -51,7 +51,7 @@ const importFixed=originalImport(), importBefore=new Map([...importFixed].map(([
 const changedImport=repairImportUkOptionalPhone(importFixed,asProfile);
 
 test('the complete pinned Modern bare-city property set is covered by the three-map adapter',()=>{
-  const matches=git(['grep','-n','-E','^[[:space:]]*Sofia[[:space:]]*:',modernPin,'--','templates/modern']);
+  const matches=git(['grep','-n','-E','^[[:space:]]*Sofia[[:space:]]*:',modernPin,'--',':(glob)templates/modern/**/*.ts',':(glob)templates/modern/**/*.tsx',':(glob)templates/modern/**/*.js',':(glob)templates/modern/**/*.jsx',':(glob)templates/modern/**/*.mjs',':(glob)templates/modern/**/*.svelte']);
   const names=matches.split('\n').filter(Boolean).map(line=>{
     const match=/^[a-f0-9]{40}:templates\/modern\/(.+?):[0-9]+:/.exec(line);assert.ok(match);return match[1];
   });

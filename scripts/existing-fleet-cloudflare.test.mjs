@@ -175,3 +175,26 @@ test('committed fleet inputs reject physical aliases and uncommitted or duplicat
  const f=newApprovedFixture(t),p=f.request.newSources[0].inputMapping;assert(readPinnedFleetInput(f.root,p,f.commit).length>0);const hidden=path.join(f.root,'runtime','linked');fs.mkdirSync(hidden);fs.writeFileSync(path.join(hidden,'proof.json'),jsonBytes({fixture:true}));fs.symlinkSync(hidden,path.join(f.root,f.prefix,'linked'),process.platform==='win32'?'junction':'dir');assert.throws(()=>readPinnedFleetInput(f.root,{path:f.prefix+'/linked/proof.json',sha256:sha256(jsonBytes({fixture:true}))},f.commit),/physical input link/);
  const duplicate=Buffer.from('{"reviewed":true,"reviewed":false}');f.request.newSources[0].publication=f.write(f.prefix+'/source-publication.json',duplicate);const commit=f.commitAll();await assert.rejects(()=>newApprovedFleetSource({...f.options,commit}),/duplicate/i);
 });
+
+test('new-approved branch-count receipt parity admits 128, 139 and 256 and rejects 257 or invalid proof',async t=>{
+ const f=newApprovedFixture(t),originalDigest=f.prep.branchAbsence.digest;
+ async function replay(branchAbsence){
+  const prep={...f.prep,branchAbsence},preparation=f.write(f.prefix+'/source-preparation.json',prep);
+  f.request.newSources[0].preparation=preparation;
+  f.request.newSources[0].publication=f.write(f.prefix+'/source-publication.json',{...f.publication,preparation});
+  const commit=f.commitAll();return newApprovedFleetSource({...f.options,commit,request:f.request});
+ }
+ for(const branches of [128,139,256]){
+  const result=await replay({...f.prep.branchAbsence,branches});
+  assert.equal(result.sourceTree,f.prep.preparedTree);
+  assert.equal(result.sourcePublication.commit,f.publication.sourcePublication.commit);
+  assert.equal(f.prep.branchAbsence.digest,originalDigest);
+  assert.equal(result.nativeSource.kind,'approved-native-adoption');
+ }
+ for(const branchAbsence of [
+  {...f.prep.branchAbsence,branches:257},{...f.prep.branchAbsence,branches:0},
+  {...f.prep.branchAbsence,branches:139.5},{...f.prep.branchAbsence,branches:'139'},
+  {...f.prep.branchAbsence,branches:139,digest:'bad'},
+  {...f.prep.branchAbsence,branches:139,absence:'assumed-absence'}
+ ])await assert.rejects(()=>replay(branchAbsence),/original request\/input\/source\/branch lease differs/);
+});
