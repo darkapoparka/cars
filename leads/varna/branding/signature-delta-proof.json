@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "kind": "signature-only-source-delta",
+  "baseCommit": "5b49eff72dc2f3b8db2d769060b19b336fe264a9",
+  "dealers": [
+    {
+      "slug": "dm-auto-varna",
+      "clientTree": "4b69d7e782e4109721609be210f6566e13219536",
+      "unchangedFamilies": {
+        "auto-best": "f467c3b406aa53b5182001a97f27ca1cfc804724",
+        "modern": "ab6f02471a27e91de52397883031b71f29390ab9",
+        "import": "f1970bdf3b2e233e2b9fc97295d13e635dbdcae4",
+        "app": "21a2d8409e37b5c7af812feb7ad07597f4c48d9b",
+        "mobile": "b11c13b6aa76395aa244a4980e9016d7bff2dc1a"
+      },
+      "unchangedSharedInputs": {
+        "dealer.json": "17dea27246bd3bd8c2bc90c81fc439e9a19687df",
+        ".cars-branding.json": "53f29acece7314b392f6617f8240e2bc535fedb1",
+        "business-facts.json": "227925016596b23defb424a552fb7e02a1583e79",
+        "stock.json": "aa4a7d5c880ab48745168c2095e8105a665104b8",
+        "locale.json": "713dcd664507a149e24afb1ae7149eebb2ebb98e"
+      }
+    },
+    {
+      "slug": "kolarov-cars",
+      "clientTree": "9e1993eacd4ce51ab0371a3c1879003da52693ab",
+      "unchangedFamilies": {
+        "auto-best": "b4f88501d096697d1b2058d9f6f349571a457401",
+        "modern": "f8827e2a3c058908f856f790834899dc1ebe0c33",
+        "import": "95afd75aaab91b03802c08b0ba2d155d06004027",
+        "app": "8e0d065d900aa38af22cdd08ba0022c9969aa98b",
+        "mobile": "ab4cf675ed4ca5b4f9c25b3a9c5a14e323f58b69"
+      },
+      "unchangedSharedInputs": {
+        "dealer.json": "3087aef59dec6cb957a52065deef9820a40d5068",
+        ".cars-branding.json": "92ed9a36413778b0ca5696de064c0b786d286d3a",
+        "business-facts.json": "7fd477ae94c1ed0f738a74dc899ff99679149e24",
+        "stock.json": "e085fcd267d5513ccbef3ab64a5a6aa329a476b6",
+        "locale.json": "332cb49d43e48b581d3718f38641b0bd4f357be2"
+      }
+    },
+    {
+      "slug": "dynamic-auto-varna",
+      "clientTree": "3d06523f766ea9c364ce782988fb8c3db10a28e8",
+      "unchangedFamilies": {
+        "auto-best": "7741881bd9acdcb58e3fd0c89b84a313b6ee3b41",
+        "modern": "e3d928eb9ecf4cdf35bdd2415fc2de1e6bd500ed",
+        "import": "05d9b085924870a4d62712ca21a87ba4f30faffd",
+        "app": "b90a6a9d3cc7a4f23da76679627a310cdf9152e0",
+        "mobile": "250c62cc380401e83d09d4518e7788c1bf34f62e"
+      },
+      "unchangedSharedInputs": {
+        "dealer.json": "cda0f7799f27476f7c3d2eb0a7946233c0ca85c2",
+        ".cars-branding.json": "fb0dc52fb5a9da55b690e7b241bf0b8005219fb3",
+        "business-facts.json": "b71c1cd5252e1dd57cfabd25a606b36a332ede8f",
+        "stock.json": "a646fe0c455ec5a97f66c774be3bef14fba221fd",
+        "locale.json": "19faf8b12f84e8fd693251d4d68c4d533b642f7e"
+      }
+    },
+    {
+      "slug": "car-point-trade-varna",
+      "clientTree": "9b2d7ef5bd870732e80bb7d0b47453d3dbfb6578",
+      "unchangedFamilies": {
+        "auto-best": "692a0b18e0c49a06c6b7406effeb9cd2a2fff84e",
+        "modern": "553bff6ae6a76fcb0c9993bca672cafb93ee9dfe",
+        "import": "a0300eaa6c368ae41d18c4cb2645fd6cff951266",
+        "app": "8ac680a32ee922b05a22dfbb045016b20e2d8c04",
+        "mobile": "4889b177240d2c8189699b3d14ed70a51402c8b9"
+      },
+      "unchangedSharedInputs": {
+        "dealer.json": "063841def0b88d35156b1ce32a10ecdd6b194d7d",
+        ".cars-branding.json": "3e98ac2230fa7460fc5c6fd749e8bca630b965da",
+        "business-facts.json": "0bc2faacd99b5ad8a1e5465c96a64ac5c34353bc",
+        "stock.json": "9632c8e57e2222607f7ac31ce40cfb905d3cefcb",
+        "locale.json": "6991af4babdec4551c991f74723bb923dc681e39"
+      }
+    },
+    {
+      "slug": "pm-select-automotive",
+      "clientTree": "cb0a44adc1cca3c6bda50173891662e5a8f54edb",
+      "unchangedFamilies": {
+        "auto-best": "69be083585b23fedda7b334bc9bea629e70d6c8c",
+        "modern": "ced95c658fab0f6d1c3400a0c5798ba1a9a56d26",
+        "import": "6c9b30be5553d96b4673a8746ea471fdc5163af9",
+        "app": "d3069f9e15c03104cf2c0c88a657b3dd0c2361e9",
+        "mobile": "f58db8dba84d8927b362afb413b61dd5a76f9723"
+      },
+      "unchangedSharedInputs": {
+        "dealer.json": "cea7f2d3a6696c846e646b9a7699fddf84a3c071",
+        ".cars-branding.json": "b748f479c6fc0eed8f22ba67c70767787f5947a9",
+        "business-facts.json": "32ede23a6b48ca391037d76a047eeecde08812ea",
+        "stock.json": "7ee6d49c8bda3090f76a2d9ee1b7988625535606",
+        "locale.json": "31555b6cf9b03a97bec2edbc981d74068890fafa"
+      }
+    },
+    {
+      "slug": "dream-drive-varna",
+      "clientTree": "91faab897f8fb64bbcdc982ca9c2efc6659f56d0",
+      "unchangedFamilies": {
+        "auto-best": "fddfc24a435a136935d276792339c54aa9c53e1f",
+        "modern": "9463229015133ac2d9e09fcd463a51b100e30de5",
+        "import": "e177b39c504a1f206bf7461e0a18aca3ea631d7b",
+        "app": "47711fd1f291ab057127ded4a0414735b91949a4",
+        "mobile": "d5d7d8f899f1747e56055cfd9bdc17aaa6bd9728"
+      },
+      "unchangedSharedInputs": {
+        "dealer.json": "e9027af8fabb05101e67161e4a4bc57bbf8acc71",
+        ".cars-branding.json": "ed090eaf2e710756c01c361ee118cc8ee1012e4f",
+        "business-facts.json": "9a9fa79d4e562846db67dd8a2e2727e108e78b36",
+        "stock.json": "bb3e9794945ef58a4ca728d3cf2dafb5dd59ff3f",
+        "locale.json": "cb2ff80b7a288990e6cfa8a62ab23884e161e565"
+      }
+    },
+    {
+      "slug": "prime-auto-varna",
+      "clientTree": "2729137fdc945f9c957035bfd49d5ebe3c851d50",
+      "unchangedFamilies": {
+        "auto-best": "08ed288b31c4020467b2d0b81a34c2b4fa1d5a86",
+        "modern": "5ee2322e05baf7e3c2c13557e9042189334091cc",
+        "import": "ab51ddcdf5d7fae5a8b60b3335f999862aca2cc0",
+        "app": "995e26d17bc944e8de5e9b43c5e17153aff7a783",
+        "mobile": "f20fdab10bca8b4ad8e870bd411c8ee275fb3122"
+      },
+      "unchangedSharedInputs": {
+        "dealer.json": "47acbe8080c4d0662b48b70dcc19c38cf5e59a02",
+        ".cars-branding.json": "e35d2b4d9ffbd701d2ee889cafa25317d8943b1b",
+        "business-facts.json": "4d2a9ef4d650635d78c5729809645a7606d3a7b9",
+        "stock.json": "5fd68c18dc88115579b93e496cb0a1adf5f19f0d",
+        "locale.json": "10363c91d023b192278f22f88fd03eaa41b5c1b8"
+      }
+    },
+    {
+      "slug": "autoroad-varna",
+      "clientTree": "48e866055081e4bc11e67106b1f9cd100d556019",
+      "unchangedFamilies": {
+        "auto-best": "9dda6cb68d2c1360ea5b57dd5ba97ed44ebb8f05",
+        "modern": "8dbef416c46b6138e69e8ffa77964c2109bb9525",
+        "import": "b507593a35e27eeef0bacd06f9fb2eab28729a7f",
+        "app": "4ad25d5df8aa5b03038b593fde088e36ce01dc8b",
+        "mobile": "a6996e962ef07a132b1c019a95aa3da75049f9c7"
+      },
+      "unchangedSharedInputs": {
+        "dealer.json": "595f44135ce351352cc39f1d1b93a25b66f3b6ef",
+        ".cars-branding.json": "e614ced05d238bb55ff8859569cdcd3c56760458",
+        "business-facts.json": "bbc6f7f7e5f60475079d852b807feed6ff4cd388",
+        "stock.json": "1ae20216bf65491301e32646796f3e1de03da0c6",
+        "locale.json": "d16480a0e4796364258c7280c7838081b6a0a17c"
+      }
+    },
+    {
+      "slug": "autofest-varna",
+      "clientTree": "fe66d1ea7edb8ced1b6ccfd1d6dad631612e9950",
+      "unchangedFamilies": {
+        "auto-best": "4c0005b353d41ec12c03c8228354d7fef46a2ea1",
+        "modern": "70f9115dcc81ae101965c57de6543f02c9da2145",
+        "import": "b9c61af7e35131b69f7b9f275808d811458b9613",
+        "app": "2b0618019180d41be01cbb6fa26f17ec3fe1c5ed",
+        "mobile": "3aa91c688e08f4d2c7476cee93399b8fabb0ecb1"
+      },
+      "unchangedSharedInputs": {
+        "dealer.json": "2ad7fd8f73821229be2edc7878cc638a0b6d3b63",
+        ".cars-branding.json": "e425d53fbfd97a48312c5b4bb43e32a96b8dde62",
+        "business-facts.json": "7dd3e934e7c0fa963c9d386ef905558f09bb1cdf",
+        "stock.json": "6e152cef2c4681b9631695868629247f5953a58b",
+        "locale.json": "cdb12a3571222abf14410c6801923131fe01c176"
+      }
+    },
+    {
+      "slug": "city-cars-varna",
+      "clientTree": "be2774f69c79f54c6adc0c7553db3d8863c5514e",
+      "unchangedFamilies": {
+        "auto-best": "c10e41351de2c525ffd429d4c0879c76369cf604",
+        "modern": "2edcfb7bed6af46eae41eeefbe35e6c3cf07d10a",
+        "import": "c7045604645b267ef1353342ab8d27d70e783ad6",
+        "app": "7adc1aeb3aaad97b222974710ff0d6f185ca89c8",
+        "mobile": "296618175416b1d7ca9eef4543cbe4bedad0ef72"
+      },
+      "unchangedSharedInputs": {
+        "dealer.json": "beb6c39e01538d134a2e297549dab2f8b287d229",
+        ".cars-branding.json": "c93f9b993c125b37adf0a360b9485dba3584e3e4",
+        "business-facts.json": "7f563d697f242edc58861e2e58a75b94f45dd274",
+        "stock.json": "d653f2a68174a9550b29ac4d8be30111518aed9a",
+        "locale.json": "1525a727cc955e5ef59834b0cb1dd87a3a1bf5d9"
+      }
+    }
+  ]
+}

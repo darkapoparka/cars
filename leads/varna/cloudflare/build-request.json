@@ -13,13 +13,7 @@
     "city-cars-varna"
   ],
   "targets": [
-    "auto-best",
-    "modern",
-    "import",
-    "app",
-    "mobile",
-    "karento-best",
-    "router"
+    "karento-best"
   ],
   "reason": "Source-bound generated logo packs, pinned native palettes and a six-Worker public architecture. Compile and qualify before deployment.",
   "runtimeArchitecture": "root-auto-best-v1"

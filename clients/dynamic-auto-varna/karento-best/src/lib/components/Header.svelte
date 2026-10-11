@@ -17,8 +17,7 @@
   const phone = new MediaQuery("(max-width: 767.98px)");
   // Keep the comparison page's existing header controls.
   const phoneControls = $derived(phone.current && page.route.id !== "/2");
-  const heroHeader = $derived(
-    phone.current &&
+  const heroRoute = $derived(
       [
         "index-3",
         "cars-list-1",
@@ -36,6 +35,7 @@
         "blog-details",
       ].includes(resolveRoute(page.params.path ?? "") ?? ""),
   );
+  const heroHeader = $derived(phone.current && heroRoute);
   const preview = usePreview();
   const activePath = $derived(
     "/" +
@@ -95,6 +95,8 @@
             aria-current={activePath === "/" ? "page" : undefined}
             aria-label={`${dealer.name} ${locale.t("navigation.home")}`}
           >
+            <picture data-signature-logo-surfaces style="display: contents">
+              <source media="(max-width: 767.98px)" srcset={heroRoute && scrollY <= 20 ? dealer.logo.archivedDark : dealer.logo.light} />
             <img
               class="light-mode"
               alt={dealer.logo.alt}
@@ -108,6 +110,7 @@
                   : "none"
                 : undefined}
             />
+            </picture>
             <img
               class="dark-mode"
               alt={dealer.logo.alt}
