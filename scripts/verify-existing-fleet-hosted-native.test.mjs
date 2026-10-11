@@ -137,3 +137,23 @@ test('workflow is manual and read-only, with exact dependency/runtime pins and n
   for(const version of ['22.23.2','24.21.0','26.10.0','pnpm@11.4.0'])assert(text.includes(version));
   assert(text.includes('persist-credentials: false')&&text.includes('--frozen-lockfile')&&text.includes('npm ci --ignore-scripts'));
 });
+
+
+test('workflow runner browser cache uses supported step env contexts and the same install/run path',()=>{
+  const text=fs.readFileSync(new URL('../.github/workflows/existing-fleet-hosted-native-qa.yml',import.meta.url),'utf8');
+  // https://docs.github.com/en/actions/reference/workflows-and-actions/contexts#context-availability
+  const check=workflow=>{
+    const nl=String.fromCharCode(10),envStart=workflow.indexOf(nl+'    env:'+nl),stepsStart=workflow.indexOf(nl+'    steps:'+nl);
+    assert(envStart>=0&&stepsStart>envStart);
+    const allowed=new Set(['github','needs','strategy','matrix','vars','secrets','inputs']);
+    const jobEnv=workflow.slice(envStart,stepsStart),open=String.fromCharCode(36)+'{{';
+    for(const expression of jobEnv.split(open).slice(1)){const context=expression.trimStart().split('.')[0];assert(allowed.has(context),'unsupported job env context: '+context);}
+    const names=['Install lockfile-pinned Auto Best and Modern QA dependencies','Install lockfile-pinned Import QA dependencies','Verify exact deployment pins and collect existing native browser checks'];
+    const steps=workflow.slice(stepsStart).split(nl+'      - ').slice(1),cache='          PLAYWRIGHT_BROWSERS_PATH: '+open+' runner.temp }}/cars-hosted-native-browsers';
+    for(const name of names){const block=steps.find(step=>step.startsWith('name: '+name+nl));assert(block,'missing browser step: '+name);assert(block.includes(nl+'        env:'+nl)&&block.split(nl).includes(cache),'missing step cache: '+name);}
+    assert.equal(workflow.split('PLAYWRIGHT_BROWSERS_PATH:').length-1,3);
+  };
+  check(text);
+  assert.throws(()=>check(text.replace('      NEXT_TELEMETRY_DISABLED:', '      PLAYWRIGHT_BROWSERS_PATH: '+String.fromCharCode(36)+'{{ runner.temp }}/browser-cache'+String.fromCharCode(10)+'      NEXT_TELEMETRY_DISABLED:')),/unsupported job env context: runner/);
+  assert.throws(()=>check(text.replace('          PLAYWRIGHT_BROWSERS_PATH:', '          REMOVED_BROWSER_CACHE:')),/missing step cache/);
+});
