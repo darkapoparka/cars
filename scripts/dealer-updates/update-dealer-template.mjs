@@ -28,6 +28,7 @@ import {
 import { readPinnedTemplateTree } from './pinned-template-source.mjs';
 import { baseNativeManifest, APP_PACKAGING_VERSION, assertAppVariant } from '../publishing/app-variant.mjs';
 import { buildLegacyDetailRouteMap, legacyDetailArtifact, LEGACY_DETAIL_FILE } from '../publishing/legacy-detail-routes.mjs';
+import {readRegisteredDealerAdoption,assertRegisteredAdoptionPlan,registeredAdoptionTarget} from '../registered-dealer-adoption.mjs';
 
 const TEMPLATE_KEYS = ['auto-best', 'modern', 'carwow', 'import', 'app', 'mobile', 'karento-best'];
 const sha256 = value => crypto.createHash('sha256').update(value).digest('hex');
@@ -44,6 +45,7 @@ Opt in to a template update for one existing dealer.
        [--candidate-asset-pool <path>] [--asset-pool <installation-path>]
        [--design-set six] [--template-palette] [--variants karento-best]
        [--qualification <reviewed-context-json> --lock-file <candidate-lock-json>]
+       [--registered-adoption <reviewed-receipt-json> --registered-adoption-sha256 <hash>]
   node update-dealer-template.mjs install --run-dir <path>
   node update-dealer-template.mjs rollback --run-dir <path> [--dealer-root <path>]
 
@@ -57,7 +59,7 @@ function parseCommand(argv) {
   const [action, ...rest] = argv;
   if (!['plan', 'install', 'rollback'].includes(action)) throw new Error(`Unknown action: ${action}\n${updateDealerTemplateUsage}`);
   const allowed = {
-    plan: new Set(['dealer-root', 'cars-root', 'template-root', 'lock-file', 'run-dir', 'candidate-dir', 'resolutions-file', 'asset-pool', 'candidate-asset-pool', 'design-set', 'variants', 'template-palette', 'qualification']),
+    plan: new Set(['dealer-root', 'cars-root', 'template-root', 'lock-file', 'run-dir', 'candidate-dir', 'resolutions-file', 'asset-pool', 'candidate-asset-pool', 'design-set', 'variants', 'template-palette', 'qualification', 'registered-adoption', 'registered-adoption-sha256']),
     install: new Set(['run-dir']),
     rollback: new Set(['run-dir', 'dealer-root'])
   }[action];
@@ -225,7 +227,13 @@ export function registeredDeliveryOrigin(record, manifest) {
   return origin;
 }
 
-export function targetManifestForUpgrade({ dealerRoot, manifest, pins, targetVariants = manifest.variants, carsRoot }) {
+export function targetManifestForUpgrade({ dealerRoot, manifest, pins, targetVariants = manifest.variants, carsRoot, registeredAdoption }) {
+  if (registeredAdoption) {
+    assertRegisteredAdoptionPlan(registeredAdoption,{dealerRoot,manifest});
+    const next=registeredAdoptionTarget(registeredAdoption,pins);
+    if(JSON.stringify(next.variants)!==JSON.stringify(targetVariants))throw new Error('Registered adoption requires its reviewed six-family selection');
+    return validatePackagingManifest(next);
+  }
   const next = updateManifestPins(manifest, pins);
   next.variants = structuredClone(targetVariants);
   if (targetVariants.length === 6) {
@@ -272,14 +280,17 @@ export function targetManifestForUpgrade({ dealerRoot, manifest, pins, targetVar
   return validatePackagingManifest(next);
 }
 
-async function adaptPinnedBases({ keys, oldBases, newBases, manifest, targetManifest }) {
+export async function adaptPinnedBases({ keys, oldBases, newBases, manifest, targetManifest, registeredAdoption }) {
   let oldFiles = new Map(), newFiles = new Map();
   for (const key of keys) {
     if (oldBases[key]?.size) addPrefixedTree(oldFiles, key, oldBases[key]);
     addPrefixedTree(newFiles, key, newBases[key]);
   }
   let fromAdapter, targetAdapter;
-  if (manifest.packaging.version === '1') {
+  if (registeredAdoption) {
+    assertRegisteredAdoptionPlan(registeredAdoption,{manifest});
+    fromAdapter='registered-raw-unmounted-applications';
+  } else if (manifest.packaging.version === '1') {
     fromAdapter = 'cars-package-v1-mounts';
     await applyMounts(oldFiles, manifest);
   } else if (['2', APP_PACKAGING_VERSION, SIX_DESIGN_PACKAGING_CANDIDATE].includes(manifest.packaging.version)) {
@@ -388,10 +399,10 @@ export function updateSelection(manifest, { designSet, variants } = {}) {
 }
 
 /** Newly selected families reuse the same fact pack and adapters as ordinary dealer work. */
-async function personalizeAddedBases({ pins, newBases, dealerRoot, manifest }) {
+async function personalizeAddedBases({ pins, newBases, dealerRoot, manifest, registeredAdoption }) {
   const added = Object.entries(pins).filter(([,pin])=>pin.from === null);
   if (!added.length) return {};
-  const profile = loadDealerProfile(dealerRoot,manifest.slug), adaptation = {};
+  const profile = registeredAdoption?.profile ?? loadDealerProfile(dealerRoot,manifest.slug), adaptation = {};
   for (const [key] of added) {
     if (Object.hasOwn(EXTENDED_VARIANT_RECEIPTS,key)) {
       const files = new Map([...newBases[key]].map(([name,bytes])=>[key+'/'+name,bytes]));
@@ -419,7 +430,8 @@ async function personalizeAddedBases({ pins, newBases, dealerRoot, manifest }) {
 }
 
 /** Preserve exact old Carwow links while the published third family changes. */
-export function addLegacyDetailUpgrade({ files, dealerRoot, manifest, pins }) {
+export function addLegacyDetailUpgrade({ files, dealerRoot, manifest, pins, registeredAdoption }) {
+  if(registeredAdoption){assertRegisteredAdoptionPlan(registeredAdoption,{dealerRoot});return null;}
   if (manifest.packaging?.version !== SIX_DESIGN_PACKAGING_CANDIDATE) return null;
   const original=readJson(path.join(dealerRoot,'dealer.json'));
   const migration=original.variants?.some(variant=>variant.key==='carwow'&&variant.base==='/variant-3');
@@ -470,7 +482,8 @@ function reviewedUpgradeReport(plan) {
   return review;
 }
 
-async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {carsRoot, refreshedAt, extendedAdaptations = {}, candidateAssetPool, templatePalette = false, templatePaletteConfigs, qualification} = {}) {
+async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {carsRoot, refreshedAt, extendedAdaptations = {}, candidateAssetPool, templatePalette = false, templatePaletteConfigs, qualification, registeredAdoption} = {}) {
+  if(registeredAdoption){assertRegisteredAdoptionPlan(registeredAdoption,{dealerRoot});const before=readDirectoryTree(candidateDirectory),after=new Map(before);for(const [name,bytes]of registeredAdoption.files){if(after.has(name)&&!after.get(name).equals(bytes))throw new Error('Registered adoption input destination is occupied');after.set(name,bytes);}writeDirectoryTreeChanges(candidateDirectory,before,after,candidateAssetPool);}
   plan.templatePalette = restorePinnedTemplatePalettes({plan,candidateDirectory,templatePalette,templatePaletteConfigs});
   if (!['2', APP_PACKAGING_VERSION, SIX_DESIGN_PACKAGING_CANDIDATE].includes(plan.manifest.packaging.version)) {
     reconcilePlanWithCandidate({ source: dealerRoot, plan, candidateDirectory });
@@ -480,7 +493,7 @@ async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {ca
   const files = readDirectoryTree(candidateDirectory);
   const before = new Map([...files].map(([name, bytes]) => [name, Buffer.from(bytes)]));
   const candidateManifest = JSON.parse(files.get('dealer.json').toString('utf8').replace(/^\uFEFF/, ''));
-  addLegacyDetailUpgrade({files,dealerRoot,manifest:candidateManifest,pins:plan.pins});
+  addLegacyDetailUpgrade({files,dealerRoot,manifest:candidateManifest,pins:plan.pins,registeredAdoption});
   plan.manifest=candidateManifest;
   validatePackagingManifest(candidateManifest);
   const baseManifest = baseNativeManifest(candidateManifest);
@@ -510,7 +523,7 @@ async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {ca
     plan.manifest = candidateManifest;
   }
   if (candidateManifest.packaging.version === SIX_DESIGN_PACKAGING_CANDIDATE) {
-    const profile = loadDealerProfile(dealerRoot,candidateManifest.slug);
+    const profile = registeredAdoption?.profile ?? loadDealerProfile(dealerRoot,candidateManifest.slug);
     for (const key of Object.keys(EXTENDED_VARIANT_RECEIPTS).filter(key=>plan.pins[key])) {
       const current = files.has(EXTENDED_VARIANT_RECEIPTS[key]) ? JSON.parse(files.get(EXTENDED_VARIANT_RECEIPTS[key]).toString()) : null;
       const p = current?.personalization;
@@ -677,6 +690,11 @@ export function validateDealerSourceQualification({carsRoot,dealer,lockFile,cont
   return loadQualification({carsRoot:root,dealer,lockFile:file,lockBytes,lock,requested:contextFile});
 }
 
+export function assertUpgradeSourceAdmission({manifest,qualification,registeredAdoption,dealerRoot}) {
+  if(registeredAdoption){assertRegisteredAdoptionPlan(registeredAdoption,{dealerRoot,manifest});if(!qualification)throw new Error('Registered adoption requires a reviewed native qualification context');validateNativeQualificationContext(qualification,{dealer:manifest.slug});return;}
+  if(qualification&&!['2',APP_PACKAGING_VERSION,SIX_DESIGN_PACKAGING_CANDIDATE].includes(manifest.packaging?.version))throw new Error('Qualification uses the existing native dealer source workflow');
+}
+
 async function runPlan(values) {
   const createdAt = new Date().toISOString();
   const carsRoot = fs.realpathSync(path.resolve(values['cars-root'] || defaultCarsRoot()));
@@ -684,18 +702,25 @@ async function runPlan(values) {
   const manifestPath = path.join(dealerRoot, 'dealer.json');
   const lockFile = path.resolve(values['lock-file'] || path.join(carsRoot, 'templates.lock.json'));
   const templateRoot = path.resolve(values['template-root'] || path.join(path.dirname(carsRoot), 'template-repos'));
-  if (!fs.existsSync(manifestPath)) throw new Error(`Dealer manifest not found: ${manifestPath}`);
+  if(Boolean(values['registered-adoption'])!==Boolean(values['registered-adoption-sha256']))throw new Error('Registered adoption requires its exact reviewed receipt path/hash');
+  let registeredAdoption;
+  if(values['registered-adoption']){
+    if(values['design-set']!=='six'||values.variants)throw new Error('Registered adoption prepares every six-family source together');
+    const receiptPath=path.relative(carsRoot,path.resolve(carsRoot,values['registered-adoption'])).replaceAll('\\','/');
+    registeredAdoption=await readRegisteredDealerAdoption({root:carsRoot,dealer:path.basename(dealerRoot),pin:{path:receiptPath,sha256:values['registered-adoption-sha256']}});
+  }
+  if (!registeredAdoption&&!fs.existsSync(manifestPath)) throw new Error(`Dealer manifest not found: ${manifestPath}`);
   if (!fs.existsSync(lockFile)) throw new Error(`Template approval lock not found: ${lockFile}`);
   const sourceBeforeSha256=fingerprint(dealerRoot).digest;
-  const manifest = readJson(manifestPath);
+  const manifest = registeredAdoption?.manifest ?? readJson(manifestPath);
   validatePackagingManifest(manifest);
   const lockBytes = fs.readFileSync(lockFile);
   const lock = JSON.parse(lockBytes.toString('utf8').replace(/^\uFEFF/, ''));
   const selection = updateSelection(manifest,{designSet:values['design-set'],variants:values.variants});
   const qualification=loadQualification({carsRoot,dealer:manifest.slug,lockFile,lockBytes,lock,requested:values.qualification});
   const pins = selectPinnedRevisions(manifest, lock,{targetVariants:selection.targetVariants,keys:selection.selectedKeys,qualification:qualification?.context,root:carsRoot});
-  if(qualification&&!['2',APP_PACKAGING_VERSION,SIX_DESIGN_PACKAGING_CANDIDATE].includes(manifest.packaging?.version))throw new Error('Qualification uses the existing native dealer source workflow');
-  const targetManifest = targetManifestForUpgrade({ dealerRoot, manifest, pins,targetVariants:selection.targetVariants,carsRoot });
+  assertUpgradeSourceAdmission({manifest,qualification:qualification?.context,registeredAdoption,dealerRoot});
+  const targetManifest = targetManifestForUpgrade({ dealerRoot, manifest, pins,targetVariants:selection.targetVariants,carsRoot,registeredAdoption });
   const resolutionBytes = values['resolutions-file'] ? fs.readFileSync(path.resolve(values['resolutions-file'])) : null;
   const resolutions = parseResolutions(resolutionBytes, pins);
   const paths = repositoryPaths(carsRoot, templateRoot);
@@ -731,16 +756,16 @@ async function runPlan(values) {
   }
   const templatePalette=values['template-palette'] === true;
   const templatePaletteConfigs=pinnedPaletteConfigs(newBases,pins,templatePalette);
-  const extendedAdaptations=await personalizeAddedBases({pins,newBases,dealerRoot,manifest});
+  const extendedAdaptations=await personalizeAddedBases({pins,newBases,dealerRoot,manifest,registeredAdoption});
 
-  const adapted = await adaptPinnedBases({ keys: Object.keys(pins), oldBases, newBases, manifest, targetManifest });
+  const adapted = await adaptPinnedBases({ keys: Object.keys(pins), oldBases, newBases, manifest, targetManifest,registeredAdoption });
   const assetPool=values['asset-pool']?ensureCandidateDirectory({carsRoot,dealerRoot,repositoryPaths:paths,runDirectory,requested:values['asset-pool'],explicit:true}):null;
   if(assetPool&&pathsOverlap(assetPool,candidatePath))throw new Error('Derived asset pool must be separate from the candidate');
   const candidateAssetPool=values['candidate-asset-pool']?ensureCandidateDirectory({carsRoot,dealerRoot,repositoryPaths:paths,runDirectory,requested:values['candidate-asset-pool'],explicit:true}):assetPool;
   if(candidateAssetPool&&pathsOverlap(candidateAssetPool,candidatePath))throw new Error('Candidate asset pool must be separate from the candidate');
   if(assetPool&&candidateAssetPool&&!samePath(assetPool,candidateAssetPool)&&pathsOverlap(assetPool,candidateAssetPool))throw new Error('Candidate and installation asset pools must not contain each other');
   const candidateAssetPoolStats={pool:candidateAssetPool,objectsWritten:0,objectsReused:0,filesLinked:0,filesCopied:0,bytesLinked:0};
-  const plan = planDealerUpgrade({ dealerRoot, lock, oldBases: adapted.oldBases, newBases: adapted.newBases, targetManifest: adapted.targetManifest, selectedKeys:selection.selectedKeys, resolutions, qualification:qualification?.context,root:carsRoot });
+  const plan = planDealerUpgrade({ dealerRoot, lock, oldBases: adapted.oldBases, newBases: adapted.newBases, targetManifest: adapted.targetManifest, selectedKeys:selection.selectedKeys, resolutions, qualification:qualification?.context,root:carsRoot,registeredAdoption });
   let candidateDirectory = null, candidateDigest = null;
   if (plan.ready) {
     candidateDirectory = materializeUpgradeCandidate({
@@ -748,7 +773,7 @@ async function runPlan(values) {
       plan,
       destination: candidatePath, assetPool:candidateAssetPool, assetPoolStats:candidateAssetPoolStats
     });
-    await addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {carsRoot, refreshedAt: createdAt, extendedAdaptations, candidateAssetPool, templatePalette, templatePaletteConfigs,qualification:qualification?.context});
+    await addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {carsRoot, refreshedAt: createdAt, extendedAdaptations, candidateAssetPool, templatePalette, templatePaletteConfigs,qualification:qualification?.context,registeredAdoption});
     candidateDigest = fingerprint(candidateDirectory).digest;
   }
   const review = reviewedUpgradeReport(plan);
@@ -776,6 +801,7 @@ async function runPlan(values) {
     selection:{designSet:values['design-set'] || null,selectedKeys:selection.selectedKeys || null,templatePalette},
     templatePalette:plan.templatePalette ?? null,
     qualification,
+    registeredAdoption:registeredAdoption?{inputPin:registeredAdoption.inputPin,receiptSha256:registeredAdoption.receiptSha256,personalizationSha256:registeredAdoption.personalizationSha256,baseline:registeredAdoption.baseline,proposalOnly:true}:null,
     nativeQualification:plan.nativeQualification ?? null,
     bases,
     ready: plan.ready,
@@ -813,6 +839,7 @@ function loadRun(runDirectory) {
 
 async function runInstall(values) {
   const { runDirectory, metadata } = loadRun(required(values, 'run-dir'));
+  if(metadata.registeredAdoption)throw new Error('Registered adoption is a source publication proposal only; local install cannot adopt an existing registered identity');
   if (!metadata.ready || !metadata.candidateDirectory || !metadata.candidateDigest) {
     throw new Error('This update has unresolved conflicts and no buildable candidate');
   }

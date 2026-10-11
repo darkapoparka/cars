@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 import { fingerprint } from '../lib/workflow.mjs';
 import { applyMounts } from '../publishing/mounts.mjs';
-import { targetManifestForUpgrade } from './update-dealer-template.mjs';
+import { targetManifestForUpgrade, assertUpgradeSourceAdmission } from './update-dealer-template.mjs';
 
 const wrapper = fileURLToPath(new URL('./update-dealer-template.mjs', import.meta.url));
 const keys = ['auto-best', 'modern', 'carwow'];
@@ -342,4 +342,11 @@ test('Cars subtree targets migrate a v1 dealer manifest to native v2 with exact 
   const pins=Object.fromEntries(keys.map(key=>[key,{to:'b'.repeat(40),targetSource:{repository:'darkapoparka/cars',revision:'b'.repeat(40),path:`templates/${key}`,digest:'c'.repeat(64),tree:'d'.repeat(40)}}]));
   const next=targetManifestForUpgrade({dealerRoot:root,manifest,pins});
   assert.equal(next.packaging.version,'2'); assert.equal(next.localization.defaultLocale,'en'); assert.equal(next.localization.dealerCountry,'AE'); assert.equal(next.localization.inventoryCurrency,'AED'); assert.equal(next.templateSources.modern.tree,'d'.repeat(40));
+});
+
+test('registered source admission cannot relax ordinary native qualification guards', () => {
+  const manifest={slug:'retained',packaging:{version:'1'}};
+  assert.throws(()=>assertUpgradeSourceAdmission({manifest,qualification:{}}),/existing native dealer/);
+  assert.throws(()=>assertUpgradeSourceAdmission({manifest,qualification:{},registeredAdoption:{manifest}}),/validated unmodified/);
+  for(const version of ['2','3','5'])assert.doesNotThrow(()=>assertUpgradeSourceAdmission({manifest:{...manifest,packaging:{version}},qualification:{}}));
 });

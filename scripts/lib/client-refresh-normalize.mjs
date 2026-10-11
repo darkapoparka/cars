@@ -1,6 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { loadLogoContract } from './client-logo-contract.mjs';
+import {inside,sha256} from './workflow.mjs';
+import {normalizeDealerLocale} from './dealer-locale.mjs';
+import {parseCatalogJson} from './native-localization.mjs';
+import {stockPriceFrom} from './stock-price.mjs';
 
 const exists = (file) => fs.existsSync(file);
 const readText = (file) => fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, '');
@@ -205,12 +209,12 @@ function normalizedFeatures(item) {
   }));
 }
 function inferCurrency(item, business) {
-  if (numberFrom(item.priceEur) !== null) return 'EUR';
-  if (numberFrom(item.priceUsd) !== null) return 'USD';
+  if (stockPriceFrom(item.priceEur) !== null) return 'EUR';
+  if (stockPriceFrom(item.priceUsd) !== null) return 'USD';
   return firstString(item.currency, item.priceCurrency, business.currency, 'EUR').toUpperCase();
 }
 function inferPrice(item) {
-  return numberFrom(item.priceEur, item.priceUsd, item.priceAmount, item.price, item.amount, item.rawPriceText, item.sourcePrice);
+  return stockPriceFrom(item.priceEur, item.priceUsd, item.priceAmount, item.price, item.amount, item.rawPriceText, item.sourcePrice);
 }
 function inferMileage(item, business) {
   const fallbackUnit = firstString(item.mileageUnit, item.distanceUnit, business.distanceUnit, 'km');
@@ -319,13 +323,44 @@ function normalizeListing(item, index, business) {
   };
 }
 
+/** Optional sealed derived input for adopted registered source. Ordinary facts
+ * remain authoritative and byte-identical; this explicitly reviewed overlay
+ * preserves their original source references and unknown values. */
+export function originalListingIdRecorded(bytes,id){const value=id.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');return new RegExp(`(?:["']?(?:id|sourceId|stockId|listingId|advertId)["']?\\s*:\\s*)(?:["']${value}["']|${value}(?=[,\\s}]))`).test(bytes.toString('utf8'));}
+
+export function readRegisteredPersonalization(client, slug) {
+  const manifestFile=path.join(client,'dealer.json');
+  if (!exists(manifestFile)) return null;
+  const manifest=readJson(manifestFile),binding=manifest.registeredSourceAdoption;
+  if (!binding) return null;
+  const fail=message=>{throw new Error('Registered personalization: '+message);};
+  const sameKeys=(v,k)=>v&&JSON.stringify(Object.keys(v).sort())===JSON.stringify([...k].sort());
+  if (manifest.slug!==slug||!sameKeys(binding,['receipt','personalization'])) fail('manifest binding differs');
+  const pinned=(pin,expected)=>{
+    if(!sameKeys(pin,['path','sha256'])||pin.path!==expected||!/^[a-f0-9]{64}$/.test(pin.sha256??''))fail('exact bounded path/hash required');
+    const file=inside(client,pin.path,{mustExist:true});if(!fs.lstatSync(file).isFile())fail('regular input file required');
+    const bytes=fs.readFileSync(file);if(bytes.length>2*1024**2||sha256(bytes)!==pin.sha256)fail('reviewed input bytes changed');return parseCatalogJson(new TextDecoder('utf-8',{fatal:true}).decode(bytes).replace(/^\uFEFF/,''));
+  };
+  const receipt=pinned(binding.receipt,'.client/registered-source-adoption.json'),input=pinned(binding.personalization,'.client/registered-personalization.json');
+  if(receipt.schemaVersion!==1||receipt.kind!=='cars-registered-dealer-source-adoption'||receipt.dealer!==slug||receipt.reviewed!==true||!Number.isFinite(Date.parse(receipt.reviewedAt))||receipt.nativeApproval!==false||receipt.hostedApproval!==false||receipt.globalReleaseApproval!==false||receipt.identity?.dealerId!==manifest.dealerId||receipt.identity?.repository!==manifest.repository||receipt.personalization?.sha256!==binding.personalization.sha256)fail('receipt identity or derived-input seal differs');
+  if(input.schemaVersion!==1||input.kind!=='cars-registered-dealer-derived-inputs'||input.dealer!==slug||input.reviewed!==true||!Number.isFinite(Date.parse(input.reviewedAt))||input.locale?.dealerId!==manifest.dealerId)fail('reviewed derived inputs required');
+  normalizeDealerLocale(input.locale,manifest.dealerId);
+  if(!Array.isArray(input.sourceEvidence)||!input.sourceEvidence.length||input.sourceEvidence.length>50)fail('original factual references required');
+  for(const p of input.sourceEvidence){if(!sameKeys(p,['path','sha256'])||typeof p.path!=='string'||!/^[a-zA-Z0-9._/-]+$/.test(p.path)||p.path.startsWith('/')||p.path.split('/').some(s=>!s||s==='.'||s==='..')||p.path.startsWith('auto-best/')||p.path.startsWith('modern/')||!/^[a-f0-9]{64}$/.test(p.sha256??''))fail('unsafe or mutable original proof');const file=inside(client,p.path,{mustExist:true});if(!fs.lstatSync(file).isFile()||sha256(fs.readFileSync(file))!==p.sha256)fail('original factual proof bytes changed');}
+  const business=input.facts?.business??input.facts;
+  if(!business?.name||business.countryCode!==input.locale.dealerCountry||business.currency!==input.locale.inventoryCurrency||!Array.isArray(input.stock?.listings)||!input.stock.listings.length||input.stock.listings.length>400)fail('explicit normalized business and stock required');
+  const ids=new Set();for(const item of input.stock.listings){const p=item.sourceRecord;if(typeof item.id!=='string'||!item.id||ids.has(item.id)||p?.id!==item.id||!input.sourceEvidence.some(e=>e.path===p.path&&e.sha256===p.sha256))fail('original listing identity/reference differs');ids.add(item.id);const bytes=fs.readFileSync(inside(client,p.path,{mustExist:true}));if(!originalListingIdRecorded(bytes,item.id)||typeof item.sourceUrl!=='string'||!item.sourceUrl||!bytes.toString('utf8').includes(item.sourceUrl))fail('listing ID/source URL absent from original factual proof');}
+  return input;
+}
+
 export function loadDealerProfile(client, slug) {
+  const derived=readRegisteredPersonalization(client,slug);
   const factsFile = path.join(client, 'business-facts.json');
-  const rawFacts = exists(factsFile) ? readJson(factsFile) : {};
+  const rawFacts = derived?.facts ?? (exists(factsFile) ? readJson(factsFile) : {});
   const business = normalizeBusiness(client, slug, rawFacts);
   const logoContract = loadLogoContract(client);
   if (logoContract) { business.logo = logoContract.assets.onLight.publicPath; business.logoLight = logoContract.assets.onLight.publicPath; business.logoDark = logoContract.assets.onDark.publicPath; }
-  const inventory = loadInventory(client, rawFacts, slug), rawListings = inventory.listings;
+  const inventory = derived ? {listings:derived.stock.listings,kind:derived.stock.kind} : loadInventory(client, rawFacts, slug), rawListings = inventory.listings;
   const listings = rawListings.map((item, index) => normalizeListing(item, index, business))
     .filter((item) => item.title && item.image);
   if (!business.name) throw new Error(`Dealer ${slug} has no reusable business name.`);

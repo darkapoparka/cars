@@ -108,3 +108,10 @@ test('source and build workflows establish history before work and end read auth
  assert.match(source,/\/templates\.lock\.json/);assert.match(source,/\/clients\/index\.json/);assert.match(source,/\/\.github\/workflows\/existing-fleet-cloudflare\.yml/);assert.match(source.split('  prepare_source:')[0],/new-source\/\*\*\/\*\.json/);assert.match(prepare,/\$\{\{ matrix\.sourceInputs \}\}/);assert.match(prepare,/if: matrix\.mode == 'new-approved'/);assert.match(prepare,/git fetch --no-tags --filter=blob:none origin '\+refs\/heads\/\*:refs\/remotes\/origin\/\*'/);assert.match(prepare,/git switch -C main "\$GITHUB_SHA"/);assert(prepare.indexOf('git switch -C main')<prepare.indexOf('prepare-existing-fleet-source.mjs prepare'));assert.match(prepare,/new-dealer-source/);
  assert.match(compile,/id: compile_checkout/);assert.match(compile,/fetch-depth: 0/);assert.match(compile,/persist-credentials: true/);assert.match(compile,/new-source\/\$\{\{ matrix\.slug \}\}\//);assert.match(compile,/\/templates\.lock\.json/);assert.match(compile,/\/clients\/index\.json/);assert.match(compile,/if: always\(\) && steps\.compile_checkout\.outcome == 'success'/);const work=compile.indexOf('build-existing-fleet-cloudflare.mjs compile'),cleanup=compile.indexOf('End historical-build Git read authentication'),upload=compile.indexOf('uses: actions/upload-artifact@');assert(work<cleanup&&cleanup<upload);assert.doesNotMatch(compile,/secrets\.|--get-all.*extraheader|wrangler deploy/);
 });
+
+test('registered adoption is an explicit envelope and cannot forge preserved mount ownership',()=>{
+ assert.equal(sourceRequestMode({mode:'registered-adoption'}),'registered-adoption');
+ assert.equal(sourceRequestMode({}),'existing-migration');
+ assert.throws(()=>assertPreparedMountOwnership({slug:'retained',variants:[]},baseline(),{}),/validated unmodified/);
+ assert.throws(()=>validateSourceRequest({schemaVersion:1,mode:'registered-adoption',sourceRevision:'1'.repeat(40),approvedParentLockDigest:'2'.repeat(64),dealers:['retained'],inputs:{retained:{}}},{}, {dealers:[]}),/existing|request|dealer|mode|fields/i);
+});
