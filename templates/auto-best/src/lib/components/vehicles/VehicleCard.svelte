@@ -546,7 +546,7 @@
     }
 
     /* Keep the year readable; variable-length facts absorb truncation. */
-    .dn-vehicle-card__fact--year { flex-shrink: 0; }
+    .dn-vehicle-card__mobile-meta .dn-vehicle-card__fact--year { flex-shrink: 0; }
 
     .dn-vehicle-card__fact > span:not(.dn-sr-only) {
       display: block;
