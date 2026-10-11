@@ -43,7 +43,8 @@ export function applyAutoBestCardLayout(files, manifest) {
   const pending=new Map(files);
   applyAutoBestFilterLayout(pending);
   const marker='/* '+AUTO_BEST_CARD_LAYOUT_VERSION+' */';
-  const cardCss=AUTO_BEST_CARD_LAYOUT_CSS.split('  .dn-detail-finance-trigger')[0]+'}';
+  const cardCss=(AUTO_BEST_CARD_LAYOUT_CSS.split('  .dn-detail-finance-trigger')[0]+'}')
+    .replace(/(html [^{]+) \{/g, ':global($1) {');
   const afterCard=Buffer.from(text.includes(marker)?text:text.replace('</style>',marker+'\n'+cardCss+'\n</style>'));
   const detailText=beforeDetail.toString('utf8');
   const afterDetail=Buffer.from(detailText.includes(marker)?detailText:detailText+'\n'+marker+'\n@media (max-width: 767px) {\n  .dn-detail-finance-trigger__logo img { object-position: left center; }\n}\n');
