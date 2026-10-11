@@ -1,5 +1,10 @@
 # Cars workspace instructions
 
+## Lead branding policy — owner instruction, 11 October 2026
+
+For new six-design leads, preserve the exact template palette, including heroes, banners, section backgrounds and buttons. Dealer logos or researched colours never authorize palette overrides. Read [LEAD-BRANDING](docs/LEAD-BRANDING.md): commit reviewed transparent light/dark raster packs, bind inverse and responsive consumers explicitly, and pass the mandatory branding contract before packaging. A generated image or a green build is not proof of live visual acceptance. Existing suitable identities remain source material; required creative refreshes use image generation, never CSS/text/SVG substitutes. Do not report an unexposed image-model version or invent resolution, visual approval or deployment evidence.
+
+
 Cars owns the four reusable templates and dealer demos. The owner's current request takes precedence over workflow guidance; use judgment for routine implementation choices and finish the authorized scope.
 
 ## Ownership

@@ -1,0 +1,27 @@
+name: Lead branding policy
+on:
+  push:
+    branches: [main]
+    paths: ['scripts/publishing/lead-branding.mjs', 'scripts/publishing/logo-surface-bindings.mjs', 'scripts/*branding*.test.mjs', 'scripts/logo-surface-bindings.test.mjs', 'scripts/packaging-locale-facts.test.mjs', 'scripts/package-dealer.mjs', 'scripts/new-client.mjs', '.github/workflows/lead-branding-policy.yml']
+  pull_request:
+    paths: ['scripts/publishing/lead-branding.mjs', 'scripts/publishing/logo-surface-bindings.mjs', 'scripts/package-dealer.mjs', 'scripts/new-client.mjs']
+permissions:
+  contents: read
+jobs:
+  branding:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/
+            /leads/varna/branding/generated-masters.json.gz
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.10.0'
+          package-manager-cache: false
+      - run: npm install --prefix runtime/varna-tools --no-audit --no-fund --ignore-scripts --save-exact sharp@0.35.5
+      - run: node --test scripts/lead-branding.test.mjs scripts/logo-surface-bindings.test.mjs scripts/packaging-locale-facts.test.mjs

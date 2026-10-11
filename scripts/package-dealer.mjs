@@ -1,3 +1,4 @@
+import {assertLeadBranding} from './publishing/lead-branding.mjs';
 import { APP_PACKAGING_VERSION, baseNativeManifest, assertAppVariant, appendAppService } from './publishing/app-variant.mjs';
 import { assertCarsOwnedDealer } from './lib/dealer-source.mjs';
 import fs from 'node:fs/promises';
@@ -21,7 +22,7 @@ import {LEGACY_DETAIL_FILE,legacyDetailArtifact,legacyDetailRedirects} from './p
 export const PACKAGING_VERSION = '1';
 const ROOT = path.resolve(import.meta.dirname, '..');
 const OMITTED = new Set(['node_modules', '.git', '.vercel', '.netlify', '.wrangler', '.open-next', '.vinext', '.cloudflare', '.cars-cloudflare', '.cars-build-assets', '.agency-os', '.codex', '.claude', '.agents', '.openai', '.auth', '.template', '.qa', '.runtime', '.svelte-kit', '.turbo', '.cache', '.pnpm-store', 'build', 'dist', 'runtime', 'artifacts', 'audits', 'qa', 'qa-final', 'evidence', 'test-results', 'playwright-report', 'coverage']);
-const ROOT_FILES = new Set(['.gitignore', 'AGENTS.md', 'CLIENT.md', 'README.md', 'DEPLOYMENT.md', 'business-facts.json', 'stock.json', 'FACTS-AND-INVENTORY.json', '.cars-app.json', '.cars-mobile.json', '.cars-signature.json', LEGACY_DETAIL_FILE]);
+const ROOT_FILES = new Set(['.gitignore', 'AGENTS.md', 'CLIENT.md', 'README.md', 'DEPLOYMENT.md', 'business-facts.json', 'stock.json', 'locale.json', '.cars-branding.json', 'FACTS-AND-INVENTORY.json', '.cars-app.json', '.cars-mobile.json', '.cars-signature.json', LEGACY_DETAIL_FILE]);
 const nativePackaging = version => [NATIVE_PACKAGING_VERSION, APP_PACKAGING_VERSION, SIX_PACKAGING_VERSION].includes(version);
 const json = (value) => `${JSON.stringify(value, null, 2)}\n`;
 const sha256 = (value) => createHash('sha256').update(value).digest('hex');
@@ -220,6 +221,7 @@ async function prepare({ source, manifest, sourceCommit, guidance, canonicalFile
   const retained = canonicalFiles ? new Map([...canonicalFiles].map(([name, bytes]) => [name, Buffer.from(bytes)])) : undefined;
   if (!native) assertLegacyLocaleCompatible({ manifest, files: retained, source: resolvedSource });
   const sourceFiles = await collectSource(resolvedSource, manifest);
+  if (manifest.branding?.required) assertLeadBranding(sourceFiles, manifest);
   const inputDigest = sourceMapDigest(sourceFiles);
   const manifestInput = await fs.readFile(path.join(resolvedSource, 'dealer.json')).catch(error => { if (error.code === 'ENOENT') return null; throw error; });
   let files = retained ?? new Map(sourceFiles);

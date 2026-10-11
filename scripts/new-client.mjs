@@ -45,7 +45,7 @@ export function planNewClient({ root = ROOT, client, repository, preset = 'stand
   const manifest = validateManifest({ schemaVersion: 1, slug: client, dealerId, repository, defaultBranch: 'main', variants: selected.map((t, i) => {
     const base = i === 0 ? '' : `/variant-${i + 1}`;
     return { key: t.key, entry: t.key === 'modern' ? `${base}/cars` : `${base}/`, base };
-  }), extraAssets: [], packaging: { version: six ? '5' : '1' }, ...(six ? { localization: normalizeDealerLocale(localeConfig, dealerId || client) } : {}) });
+  }), extraAssets: [], packaging: { version: six ? '5' : '1' }, ...(six ? { branding: { schemaVersion: 1, required: true, policy: 'template-default', contract: '.cars-branding.json', surfaceBindingsVersion: 1 } } : {}), ...(six ? { localization: normalizeDealerLocale(localeConfig, dealerId || client) } : {}) });
   const registryPath = path.join(root, 'docs/DEPLOYMENT-INVENTORY.json');
   const existingRepository = fs.existsSync(registryPath) && json(registryPath).dealers?.find(d => d.repository?.toLowerCase() === manifest.repository.toLowerCase());
   if (existingRepository) throw new Error('Publishing repository already belongs to ' + existingRepository.slug + '; reuse its canonical dealer.');
