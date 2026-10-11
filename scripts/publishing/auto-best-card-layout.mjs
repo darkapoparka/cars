@@ -1,6 +1,6 @@
 import {createHash} from 'node:crypto';
 
-export const AUTO_BEST_CARD_LAYOUT_VERSION = 'single-row-mobile-filters-v1';
+export const AUTO_BEST_CARD_LAYOUT_VERSION = 'single-row-mobile-filters-v2';
 export const AUTO_BEST_CARD_LAYOUT_CSS = `@media (max-width: 767px) {
   html .dn-vehicle-card.dn-vehicle-card .dn-vehicle-card__mobile-meta { flex-wrap: nowrap; }
   html .dn-vehicle-card.dn-vehicle-card .dn-vehicle-card__fact { flex: 1 1 auto; min-width: 0; }
