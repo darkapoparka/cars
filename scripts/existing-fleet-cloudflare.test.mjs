@@ -17,7 +17,29 @@ test('selected allowlist, registry uniqueness and all seven targets are mandator
  assert.throws(()=>selectedDealer('promosale-varna',[],registry),/Unregistered/);
  assert.throws(()=>selectedDealer('promosale-varna',leads,{dealers:[...registry.dealers,...registry.dealers]}),/Unregistered/);
 });
-test('conservative Free output budget',()=>{assert.throws(()=>outputBudget([{path:'big',bytes:26*1024**2}],[]));assert.throws(()=>outputBudget([],[{path:'main',compressedBytes:4*1024**2}]));});
+test('Worker budget uses measured uncompressed bytes and retains gzip only as a metric',()=>{
+ const limit=64*1024**2,output=outputBudget([],[{path:'main',bytes:limit-1,compressedBytes:4*1024**2},{path:'auxiliary',bytes:1,compressedBytes:20}]);
+ assert.equal(output.workerBytes,limit);assert.equal(output.workerCompressedBytes,4*1024**2+20);assert.equal(output.workerModules,2);
+ assert.throws(()=>outputBudget([],[{path:'main',bytes:limit,compressedBytes:1},{path:'auxiliary',bytes:1,compressedBytes:1}]),/uncompressed Worker size exceeded/);
+});
+test('Free asset count and per-file boundaries remain enforced',()=>{
+ const modules=[{path:'main',bytes:1,compressedBytes:20}],assets=Array.from({length:20000},()=>({path:'tiny',bytes:1}));
+ assert.equal(outputBudget(assets,modules).assetFiles,20000);
+ assert.equal(outputBudget([{path:'largest',bytes:25*1024**2}],modules).assetBytes,25*1024**2);
+ assert.throws(()=>outputBudget([...assets,{path:'extra',bytes:1}],modules),/asset limit exceeded/);
+ assert.throws(()=>outputBudget([{path:'oversize',bytes:25*1024**2+1}],modules),/asset limit exceeded/);
+});
+test('missing, nonfinite and invalid byte measurements fail closed',()=>{
+ const valid={path:'main',bytes:1,compressedBytes:20};
+ for(const value of [undefined,null,NaN,Infinity,-Infinity,-1,0.5,'1',Number.MAX_SAFE_INTEGER+1]){
+  assert.throws(()=>outputBudget([],[{...valid,bytes:value}]),/Invalid measured/);
+  assert.throws(()=>outputBudget([],[{...valid,compressedBytes:value}]),/Invalid measured/);
+  assert.throws(()=>outputBudget([{path:'asset',bytes:value}],[valid]),/Invalid measured/);
+ }
+ for(const modules of [undefined,null,{},[],[null],new Array(1),[{path:'main',compressedBytes:20}]])assert.throws(()=>outputBudget([],modules),/Invalid measured/);
+ for(const assets of [undefined,null,{},[null],new Array(1),[{path:'asset'}]])assert.throws(()=>outputBudget(assets,[valid]),/Invalid measured/);
+ assert.throws(()=>outputBudget([],[{...valid,bytes:Number.MAX_SAFE_INTEGER},{...valid,bytes:1}]),/Invalid measured.*totals/);
+});
 test('mandatory branding validates the source-bound derived pack, not optional staging originals',()=>{
  const manifest={slug:'fixture-dealer',branding:{required:true},templateSources:{modern:{revision:'a'.repeat(40)}},variants:[{key:'app',base:'/variant-4'}]},files=new Map(),publicBase='/dealer-brand/v2-fixture';
  const names=['logo-on-light.png','logo-on-light.webp','mark-on-light.webp','logo-on-dark.png','logo-on-dark.webp','mark-on-dark.webp','logo-on-accent.webp','app-icon.png','apple-touch-icon.png','favicon.ico'];

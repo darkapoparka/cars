@@ -4,7 +4,7 @@ import path from 'node:path';
 import { clientSourceGuide } from './lib/client-source-guide.mjs';
 import {ROOT,json,writeJson,validateManifest,git} from './lib/workflow.mjs';
 
-const supported=['auto-best','modern','import','carwow','app','rencar','autodeal','showroom','boxcar','motoria','nusavo'];
+const supported=['auto-best','modern','import','carwow','app','mobile','karento-best','rencar','autodeal','showroom','boxcar','motoria','nusavo'];
 const read = file => fs.existsSync(file) ? json(file) : null;
 export function validateIndexedManifest(manifest,record){
  const legacy=record?.publishingException;
@@ -30,7 +30,12 @@ export function indexDeployments(root=ROOT) {
     if(fs.existsSync(path.join(dir,'.git')) || manifest?.sourceOwnership==='independent-repository') throw new Error('Register independent source ownership before indexing: '+slug);
     if(manifest)validateIndexedManifest(manifest,prior);
     const facts=read(path.join(dir,'business-facts.json'));
-    const keys=supported.filter(v=>(v!=='app'||manifest?.packaging.version==='3')&&fs.existsSync(path.join(dir,v,'package.json')));
+    const keys=supported.filter(v=>{
+      const version=manifest?.packaging?.version;
+      if(v==='app'&&!['3','5'].includes(version))return false;
+      if(['mobile','karento-best'].includes(v)&&version!=='5')return false;
+      return fs.existsSync(path.join(dir,v,'package.json'));
+    });
     const ordered=[...keys,...(prior.variants||[]).map(v=>v.key).filter(k=>!keys.includes(k))];
     const variants=ordered.map(key=>{
       const metadata=read(path.join(dir,key,'.client/project.json'))||{},old=prior.variants?.find(v=>v.key===key)||{},offered=manifest?.variants.find(v=>v.key===key);

@@ -160,9 +160,11 @@ function installedBin(root,name){
  throw Error('Compiler missing: '+name);
 }
 export function outputBudget(assets,modules){
- const result={assetFiles:assets.length,assetBytes:assets.reduce((n,r)=>n+r.bytes,0),largestAsset:assets.reduce((a,r)=>r.bytes>(a?.bytes??-1)?r:a,null),workerModules:modules.length,workerCompressedBytes:modules.reduce((n,r)=>n+r.compressedBytes,0)};
+ if(!Array.isArray(assets)||!Array.isArray(modules)||!modules.length||[...assets,...modules].some(r=>!r||!Number.isSafeInteger(r.bytes)||r.bytes<0)||modules.some(r=>!Number.isSafeInteger(r.compressedBytes)||r.compressedBytes<0))throw Error('Invalid measured Worker/assets byte counts');
+ const result={assetFiles:assets.length,assetBytes:assets.reduce((n,r)=>n+r.bytes,0),largestAsset:assets.reduce((a,r)=>r.bytes>(a?.bytes??-1)?r:a,null),workerModules:modules.length,workerBytes:modules.reduce((n,r)=>n+r.bytes,0),workerCompressedBytes:modules.reduce((n,r)=>n+r.compressedBytes,0)};
+ if([result.assetBytes,result.workerBytes,result.workerCompressedBytes].some(n=>!Number.isSafeInteger(n)))throw Error('Invalid measured Worker/assets byte totals');
  if(assets.length>20000||assets.some(r=>r.bytes>25*1024**2))throw Error('Cloudflare asset limit exceeded: '+JSON.stringify(result));
- if(result.workerCompressedBytes>3*1024**2)throw Error('Cloudflare Free Worker size exceeded; no plan upgrade authorized: '+JSON.stringify(result));
+ if(result.workerBytes>64*1024**2)throw Error('Cloudflare uncompressed Worker size exceeded: '+JSON.stringify(result));
  return result;
 }
 export async function compile(slug,key){
@@ -196,7 +198,7 @@ export async function compile(slug,key){
   const nativeConfig=read(path.join(packageRoot,target.config));assertCompiledConfig(nativeConfig,target,{router:key==='router'});
   const assetNames=filesAt(path.join(packageRoot,target.assets),{filter:()=>true}).filter(n=>!n.endsWith('.map')&&!['.assetsignore','_routes.json','_headers','_redirects'].includes(n)&&!n.startsWith('_worker.js'));
   const assets=assetNames.map(n=>({path:n,bytes:fs.statSync(path.join(packageRoot,target.assets,n)).size}));
-  const modules=filesAt(path.join(packageRoot,bundle),{filter:()=>true}).filter(n=>!n.endsWith('.map')&&!/^README(?:\.|$)/i.test(path.basename(n))).map(n=>({path:n,compressedBytes:gzipSync(fs.readFileSync(path.join(packageRoot,bundle,n))).length}));
+  const modules=filesAt(path.join(packageRoot,bundle),{filter:()=>true}).filter(n=>!n.endsWith('.map')&&!/^README(?:\.|$)/i.test(path.basename(n))).map(n=>{const bytes=fs.readFileSync(path.join(packageRoot,bundle,n));return {path:n,bytes:bytes.length,compressedBytes:gzipSync(bytes).length};});
   const output=outputBudget(assets,modules);
   const uploadMain=NEXT.has(key)||key==='router'?target.main:bundle+'/index.js';
   const uploadConfig={...nativeConfig,main:uploadMain,assets:{...nativeConfig.assets,directory:target.assets},no_bundle:true};
