@@ -6,6 +6,33 @@ export const PUBLIC_ROOTS = Object.freeze({'auto-best':'auto-best/static/',moder
 const sha = b => createHash('sha256').update(b).digest('hex');
 const encode = v => Buffer.from(JSON.stringify(v,null,2)+'\n');
 const read = (files,name) => {if(!files.has(name))throw Error('Missing branding input: '+name);return Buffer.from(files.get(name)).toString('utf8');};
+const PROFILE_LOGO_CONSUMERS=Object.freeze({'auto-best':'auto-best/src/lib/data/dealer-profile.json',import:'import/src/lib/data/dealer-profile.json',modern:'modern/packages/marketplace-domain/testing/dealer-profile.json'});
+function derivedProfileLogoRows(files,publicBase,originalFiles=files){
+ if(!(files instanceof Map)||!(originalFiles instanceof Map)||!/^\/dealer-brand\/v2-[a-f0-9]{16}$/.test(publicBase))throw Error('Exact final profile logo pack required');
+ const rows=[];
+ for(const [key,name]of Object.entries(PROFILE_LOGO_CONSUMERS)){
+  if(!files.has(name))continue;const before=Buffer.from(files.get(name)),profile=JSON.parse(before.toString('utf8'));
+  if(profile.logoContract===undefined||profile.logoContract===null)continue;
+  const original=JSON.parse(read(originalFiles,name)),assets=profile.logoContract?.assets;
+  if(!original.logoContract?.assets||!profile.business||!assets||Array.isArray(assets))throw Error('Malformed derived profile logo contract: '+name);
+  const bindings={};for(const [surface,tone]of [['onLight','on-light'],['onDark','on-dark'],['onAccent','on-accent']]){
+   const prior=assets[surface];if(!prior||typeof prior.publicPath!=='string'||!/^\/[A-Za-z0-9/._-]+$/.test(prior.publicPath)||prior.publicPath.includes('..')||!/^[a-f0-9]{64}$/.test(prior.sha256)||!Number.isSafeInteger(prior.bytes)||prior.bytes<1)throw Error('Malformed derived profile logo surface: '+name+'/'+surface);
+   const publicPath=publicBase+'/logo-'+tone+'.webp',physicalPath=PUBLIC_ROOTS[key]+publicPath.slice(1),bytes=files.get(physicalPath);if(!Buffer.isBuffer(bytes)||bytes.length<1)throw Error('Missing final profile logo asset: '+physicalPath);
+   bindings[surface]={publicPath,sha256:sha(bytes),bytes:bytes.length};profile.logoContract.assets[surface]={...prior,...bindings[surface]};
+  }
+  for(const [field,surface]of [['logo','onLight'],['logoLight','onLight'],['logoDark','onDark']]){if(typeof profile.business[field]!=='string')throw Error('Malformed derived business logo binding: '+name+'/'+field);profile.business[field]=bindings[surface].publicPath;}
+  // Restore only the declared derived logo fields to prove all facts/stock/custom fields survive.
+  const factual=JSON.parse(JSON.stringify(profile));for(const field of ['logo','logoLight','logoDark'])factual.business[field]=original.business[field];for(const surface of ['onLight','onDark','onAccent'])for(const field of ['publicPath','sha256','bytes'])factual.logoContract.assets[surface][field]=original.logoContract.assets[surface][field];
+  if(JSON.stringify(factual)!==JSON.stringify(original))throw Error('Branding changed non-logo profile facts: '+name);
+  const after=encode(profile);rows.push({path:name,beforeSha256:sha(Buffer.from(originalFiles.get(name))),afterSha256:sha(after),assets:bindings,factualFieldsUnchanged:true,before,after});
+ }return rows;
+}
+export function rebindDerivedProfileLogoContracts(files,publicBase,{originalFiles=files}={}){
+ const rows=derivedProfileLogoRows(files,publicBase,originalFiles);for(const row of rows)files.set(row.path,row.after);return rows.map(({before,after,...proof})=>proof);
+}
+export function assertDerivedProfileLogoContracts(files,publicBase){
+ for(const row of derivedProfileLogoRows(files,publicBase)){const actual=JSON.parse(row.before.toString('utf8')),expected=JSON.parse(row.after.toString('utf8'));for(const field of ['logo','logoLight','logoDark'])if(actual.business[field]!==expected.business[field])throw Error('Final derived profile business logo differs: '+row.path);for(const surface of ['onLight','onDark','onAccent'])for(const field of ['publicPath','sha256','bytes'])if(actual.logoContract.assets[surface][field]!==expected.logoContract.assets[surface][field])throw Error('Final derived profile logo bytes differ: '+row.path+'/'+surface+'/'+field);}
+}
 const cssColors = text => (text.match(/#[\da-f]{3,8}\b|\brgba?\([^)]*\)|\bhsla?\([^)]*\)/gi)||[]).map(v=>v.toLowerCase().replace(/\s+/g,''));
 const PALETTES = Object.freeze([
  {key:'modern',file:'packages/marketplace/lead-site.ts',start:'// LEAD_SITE_CONFIG_START',fields:['accent','desktopAccent']},
@@ -120,9 +147,11 @@ export async function applyLeadBranding(files,manifest,{master,sharp,readTemplat
  for(const name of ['branding/logo-on-light.png','branding/logo-on-dark.png','assets/app-icon.png','assets/favicon.ico']){const prior=original.get(name);if(prior)files.set('branding/retained-originals/'+sha(prior).slice(0,16)+'-'+name.split('/').pop(),prior);files.set(name,name.endsWith('.ico')?pack.assets.get('favicon.ico'):name.includes('app-icon')?pack.assets.get('app-icon.png'):pack.assets.get(name.split('/').pop()));}
  files.set('branding/generated-master.png',pack.masterPng);files.set('branding/generated-mark.png',pack.markPng);for(const [name,bytes]of pack.assets)files.set('branding/'+name,bytes);
  for(const input of pack.reviewedInputs||[])files.set(input.assetPath,input.png);
+ const derivedProfileLogoBindings=rebindDerivedProfileLogoContracts(files,publicBase,{originalFiles:original});
+ for(const row of derivedProfileLogoBindings)if(Object.hasOwn(facts,row.path))facts[row.path]=row.afterSha256;
  for(const [name,wanted]of Object.entries(facts))if(sha(files.get(name))!==wanted)throw Error('Branding changed dealer facts: '+name);
  const changes=[...files].filter(([name,bytes])=>!original.has(name)||!Buffer.from(original.get(name)).equals(Buffer.from(bytes))).map(([name,bytes])=>({path:name,before:original.has(name)?sha(original.get(name)):null,after:sha(bytes)}));
- const contract={schemaVersion:BRANDING_SCHEMA,surfaceBindingsVersion,dealer:manifest.slug,policy:'template-default',packId,publicBase,creationMethod:usesReviewedSurfaces?'image-generation-reviewed-surface-variants':'image-generation-derived-raster',generation:{tool:generation.tool,id:generation.generationId,modelVersion:generation.modelVersion??null,sourceSha256:generation.sourceFileSha256},approval:'independent-proposal-not-dealer-approved',nativeMaster:pack.nativeMaster,consumerReferences:captureBrandConsumers(files,publicBase),...(usesReviewedSurfaces?{reviewedSurfaceVariants:pack.reviewedSurfaceVariants,packInputs:pack.packInputs,markSource:pack.markSource}: {alphaSha256:pack.alphaSha256}),monochromePairFromOneMaster:!usesReviewedSurfaces,palette,assets:publicPaths,facts,changes,hostedQa:false};
+ const contract={schemaVersion:BRANDING_SCHEMA,surfaceBindingsVersion,dealer:manifest.slug,policy:'template-default',packId,publicBase,creationMethod:usesReviewedSurfaces?'image-generation-reviewed-surface-variants':'image-generation-derived-raster',generation:{tool:generation.tool,id:generation.generationId,modelVersion:generation.modelVersion??null,sourceSha256:generation.sourceFileSha256},approval:'independent-proposal-not-dealer-approved',nativeMaster:pack.nativeMaster,consumerReferences:captureBrandConsumers(files,publicBase),...(usesReviewedSurfaces?{reviewedSurfaceVariants:pack.reviewedSurfaceVariants,packInputs:pack.packInputs,markSource:pack.markSource}: {alphaSha256:pack.alphaSha256}),monochromePairFromOneMaster:!usesReviewedSurfaces,palette,assets:publicPaths,facts,changes,...(derivedProfileLogoBindings.length?{derivedProfileLogoBindings}:{}),hostedQa:false};
  files.set('.cars-branding.json',encode(contract));files.set('branding/brand-policy.json',encode({schemaVersion:1,palettePolicy:'template-default',heroOverride:false,bannerOverride:false,sectionOverride:false,dealerAccentForUi:false,logoSurfacePolicy:'explicit-light-dark',packId,source:'generated-master.png',approval:contract.approval}));assertLeadBranding(files,manifest);for(const [name,bytes]of files)targetFiles.set(name,bytes);return contract;
 }
 export function captureBrandConsumers(files,publicBase){
@@ -152,5 +181,7 @@ export function assertLeadBranding(files,manifest){
 
  for(const row of contract.assets)if(!files.has(row.path)||sha(files.get(row.path))!==row.sha256)throw Error('Branding asset missing or changed: '+row.path);
  for(const check of contract.palette.checks){const text=read(files,check.path);if(check.field){const rule=PALETTES.find(r=>r.key===check.path.split('/')[0]);if(scalar(text,check.field,rule.start).value!==check.value)throw Error('Template palette override after branding: '+check.path);}else if(sha(JSON.stringify(cssColors(text)))!==check.colorSequenceSha256)throw Error('Template CSS colours changed after branding: '+check.path);}
+ assertDerivedProfileLogoContracts(files,contract.publicBase);
+ for(const row of contract.derivedProfileLogoBindings||[])if(!Object.values(PROFILE_LOGO_CONSUMERS).includes(row.path)||row.factualFieldsUnchanged!==true||!files.has(row.path)||sha(files.get(row.path))!==row.afterSha256)throw Error('Derived profile branding proof changed: '+row.path);
  for(const [name,wanted]of Object.entries(contract.facts))if(sha(files.get(name))!==wanted)throw Error('Factual source changed since branding: '+name);return contract;
 }
