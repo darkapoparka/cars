@@ -169,6 +169,20 @@ export function applyDealerLogoContract({ key, oldVariant, candidate, profile })
     } else {
       edit('src/lib/data/daynight.ts', text => scalar(scalar(text, 'logoLight', p.onDark), 'logoDark', p.onLight));
     }
+    for (const relative of [
+      'src/lib/content/sell-your-car.ts',
+      'src/lib/server/auxero-listing-data.ts',
+      'src/lib/server/inventory-options.ts',
+      'src/routes/offer/+page.svelte'
+    ]) {
+      if (!fs.existsSync(path.join(candidate, relative))) continue;
+      edit(relative, text => {
+        const fallback = /(['"])\/brand\/daynight-wordmark\.svg\1/g;
+        const matches = [...text.matchAll(fallback)];
+        if (matches.length > 1) throw Error(`Ambiguous Import fallback logo: ${relative}`);
+        return text.replace(fallback, () => JSON.stringify(p.onLight));
+      });
+    }
   }
   return changed;
 }
