@@ -82,7 +82,7 @@ jobs:
           DEALER: ${{ matrix.slug }}
           FAMILY: ${{ matrix.key }}
           WRANGLER_SEND_METRICS: 'false'
-        run: node scripts/build-varna-cloudflare.mjs build "$DEALER" "$FAMILY"
+        run: node scripts/build-varna-cloudflare.mjs compile "$DEALER" "$FAMILY"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
