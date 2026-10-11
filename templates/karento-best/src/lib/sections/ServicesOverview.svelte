@@ -2,6 +2,7 @@
 
 <script lang="ts">
   import { useLocale } from "#lib/i18n/context.svelte.ts";
+  import { dealer } from "#lib/content.ts";
   const locale = useLocale();
   import "#lib/styles/home-section-headings.css";
   import { MediaQuery } from "svelte/reactivity";
@@ -21,7 +22,9 @@
       <MobileSectionHeading
         title={locale.t("ui.services-overview.our-services")}
         description={locale.t(
-          "ui.services-overview.serving-you-with-quality-comfort-and-convenience",
+          dealer.businessPreview
+            ? "referenceHome.services.previewDescription"
+            : "ui.services-overview.serving-you-with-quality-comfort-and-convenience",
         )}
         actionLabel={locale.t("action.viewMore")}
         actionHref="/services"
@@ -37,7 +40,7 @@
           <p
             class="text-lg-medium neutral-500 home-section-description desktop-type-lead"
             >{locale.t(
-              desktop.current
+              desktop.current || dealer.businessPreview
                 ? "referenceHome.services.previewDescription"
                 : "ui.services-overview.serving-you-with-quality-comfort-and-convenience",
             )}</p

@@ -185,7 +185,12 @@
   .header.mobile-hero-header:not(.mobile-header-scrolled)
     .header-logo
     .light-mode {
-    filter: brightness(0) invert(1);
+    display: none !important;
+  }
+  .header.mobile-hero-header:not(.mobile-header-scrolled)
+    .header-logo
+    .dark-mode {
+    display: block !important;
   }
   .header.mobile-hero-header:not(.mobile-header-scrolled)
     :is(.karento-header-cta, .karento-menu-toggle) {

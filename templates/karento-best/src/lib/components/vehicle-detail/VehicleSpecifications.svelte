@@ -51,11 +51,23 @@
 <style>
   @media (max-width: 767.98px) {
     .list-feature-car {
+      display: flex;
+      flex-wrap: wrap;
       align-items: stretch !important;
+      gap: 8px;
     }
 
     .list-feature-car .item-feature-car {
       display: grid;
+      flex: 1 1 0;
+      width: auto;
+      min-width: max-content;
+      padding-inline: 0;
+      margin-bottom: 0;
+    }
+
+    .list-feature-car .item-feature-car-inner {
+      padding: 12px 8px;
     }
 
     .feature-info {
@@ -63,7 +75,8 @@
     }
 
     .feature-info p {
-      overflow-wrap: anywhere;
+      white-space: nowrap;
+      overflow-wrap: normal;
     }
   }
 

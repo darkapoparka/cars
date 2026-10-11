@@ -23,7 +23,7 @@ function config(overrides = {}) {
 
 // In-memory DOM contract harness. No servers, network, browser profiles or files
 // are created. This checks executable routing/focus logic, not visual acceptance.
-function render(input = config(), address = 'https://dealer.example/bg', documentLanguage = 'bg', viewport = { mobile: true }) {
+function render(input = config(), address = 'https://dealer.example/bg', documentLanguage = 'bg', viewport = { mobile: true }, localeDialogs) {
   let shadow;
   class Element {
     constructor(tag = 'div') { this.tagName = tag; this.children = []; this.dataset = {}; this.attributes = {}; this.listeners = {}; this.hidden = false; this.style = { setProperty() {} }; }
@@ -72,6 +72,14 @@ function render(input = config(), address = 'https://dealer.example/bg', documen
   const context = vm.createContext({ document, location, URL, URLSearchParams,
     matchMedia: () => media, setTimeout: fn => { timers.push(fn); return timers.length; }, clearTimeout() {}, queueMicrotask: fn => fn(),
   });
+  if (localeDialogs) {
+    document.querySelectorAll = () => localeDialogs.dialogs;
+    document.activeElement = localeDialogs.activeElement;
+    context.MutationObserver = class {
+      constructor(callback) { localeDialogs.changed = callback; }
+      observe() {}
+    };
+  }
   const script = source.replace('__CARS_SWITCHER_CONFIG__', () => JSON.stringify(input).replaceAll('<', '\\u003c'));
   vm.runInContext(script, context, { timeout: 1000 });
   return { document, location, navigations, timers, script, context,
@@ -287,6 +295,30 @@ test('six-design packages inject the native locale presentation once without ano
   vm.runInContext(r.script, r.context, { timeout: 1000 });
   assert.equal(r.document.head.children.length, 1);
   assert.equal(r.document.body.children.length, 1);
+});
+
+test('welcome dialog initially focuses its title, preserves user focus, and resets on reopen', () => {
+  let count = 0;
+  const heading = {focus(options) { count++; assert.equal(options.preventScroll, true); }};
+  const close = {};
+  const dialog = {open: true, querySelector: () => heading, contains: element => element === close};
+  const state = {dialogs: [dialog], activeElement: close};
+  const r = render(sixHomesConfiguration(), undefined, undefined, undefined, state);
+  assert.equal(count, 1);
+  assert.equal(heading.tabIndex, -1);
+  state.changed();
+  assert.equal(count, 1, 'unrelated mutations must not steal focus');
+  dialog.open = false;
+  state.changed();
+  dialog.open = true;
+  state.changed();
+  assert.equal(count, 2);
+  dialog.open = false;
+  state.changed();
+  r.document.activeElement = {};
+  dialog.open = true;
+  state.changed();
+  assert.equal(count, 2, 'do not override focus outside the dialog');
 });
 
 test('home controls are sibling links inside six cards and preserve each native locale scheme', () => {

@@ -13,7 +13,7 @@
       if (document.querySelector('dealer-design-switcher, excellent-design-switcher')) return;
       const config = globalThis.__CARS_SWITCHER_CONFIG__;
       if (!config) return;
-      // Shared presentation leaves each app's locale, request and focus logic intact.
+      // Reuse each app's preference submission and keyboard handling.
       if (config.localePresentation === 'compact-v1') {
         const presentation = document.createElement('style');
         presentation.dataset.carsLocalePresentation = 'compact-v1';
@@ -50,9 +50,27 @@
           dialog[data-locale-dialog] .cars-locale-actions button[type=submit],dialog[data-locale-dialog] [data-locale-actions] button[type=submit]{background:#1d1e22!important;color:#fff!important}
           dialog[data-locale-dialog] button[type=submit]:disabled{opacity:.55!important}
           dialog[data-locale-dialog] :is(button,select,input):focus-visible{outline:2px solid #1d1e22!important;outline-offset:3px!important}
+          dialog[data-locale-dialog] h2:focus{outline:none!important}
           @media(max-width:360px){dialog[data-locale-dialog] .cars-locale-header,dialog[data-locale-dialog]>div>div:has(#locale-preferences-title){padding:24px 16px 12px!important}dialog[data-locale-dialog] .cars-locale-content,dialog[data-locale-dialog] [data-locale-fields]{padding-inline:16px!important}dialog[data-locale-dialog] [data-locale-actions]{padding-inline:16px!important}dialog[data-locale-dialog] .cars-locale-header h2,dialog[data-locale-dialog] #locale-preferences-title{font-size:20px!important;line-height:26px!important}}
         `;
         document.head.append(presentation);
+        const introduced = new WeakSet();
+        const focusIntroduction = () => {
+          document.querySelectorAll('dialog[data-locale-dialog]').forEach(dialog => {
+            if (!dialog.open) { introduced.delete(dialog); return; }
+            if (introduced.has(dialog)) return;
+            introduced.add(dialog);
+            const heading = dialog.querySelector('h2');
+            if (!heading || !dialog.contains(document.activeElement)) return;
+            heading.tabIndex = -1;
+            heading.focus({ preventScroll: true });
+          });
+        };
+        if (typeof MutationObserver !== 'undefined') {
+          const observer = new MutationObserver(focusIntroduction);
+          observer.observe(document.documentElement, { subtree: true, childList: true, attributes: true, attributeFilter: ['open'] });
+          focusIntroduction();
+        }
       }
       const mount = config.variants.find(({base}) => base && (location.pathname === base || location.pathname.startsWith(`${base}/`)))?.base || '';
       const selectedFamily = config.variants.find(choice => choice.base === mount)?.key;

@@ -3,7 +3,6 @@
 <script lang="ts">
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   const locale = useLocale();
-  import { dealer } from "#lib/content.ts";
   import { page } from "$app/state";
   import { resolveRoute } from "#lib/routes.ts";
   import { usePreview } from "#lib/preview.svelte.ts";
@@ -11,46 +10,41 @@
 
   const preview = usePreview();
   const route = $derived(resolveRoute(page.params.path ?? ""));
-  const links = $derived(
-    [
-      {
-        href: "/",
-        label: locale.t("navigation.home"),
-        icon: "home" as const,
-        routes: ["index-3", "index-2", "index"],
-      },
-      {
-        href: "/vehicles",
-        label: locale.t("navigation.vehicles"),
-        icon: "vehicles" as const,
-        routes: [
-          "cars-list-1",
-          "cars-list-2",
-          "cars-list-3",
-          "cars-list-4",
-          "cars-details-1",
-          "cars-details-2",
-          "cars-details-3",
-          "cars-details-4",
-        ],
-      },
-      {
-        href: "/services",
-        label: locale.t("navigation.services"),
-        icon: "services" as const,
-        routes: ["services"],
-      },
-      {
-        href: "/shop",
-        label: locale.t("navigation.shop"),
-        icon: "shop" as const,
-        routes: ["shop-list", "shop-details"],
-      },
-    ].filter(
-      (link) =>
-        !dealer.businessPreview || ["/", "/vehicles"].includes(link.href),
-    ),
-  );
+  const links = $derived([
+    {
+      href: "/",
+      label: locale.t("navigation.home"),
+      icon: "home" as const,
+      routes: ["index-3", "index-2", "index"],
+    },
+    {
+      href: "/vehicles",
+      label: locale.t("navigation.vehicles"),
+      icon: "vehicles" as const,
+      routes: [
+        "cars-list-1",
+        "cars-list-2",
+        "cars-list-3",
+        "cars-list-4",
+        "cars-details-1",
+        "cars-details-2",
+        "cars-details-3",
+        "cars-details-4",
+      ],
+    },
+    {
+      href: "/services",
+      label: locale.t("navigation.services"),
+      icon: "services" as const,
+      routes: ["services"],
+    },
+    {
+      href: "/shop",
+      label: locale.t("navigation.shop"),
+      icon: "shop" as const,
+      routes: ["shop-list", "shop-details"],
+    },
+  ]);
   const vehicleDetail = $derived(route?.startsWith("cars-details-") ?? false);
 </script>
 

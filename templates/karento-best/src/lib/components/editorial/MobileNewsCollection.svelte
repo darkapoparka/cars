@@ -2,6 +2,7 @@
 
 <script lang="ts">
   import { useLocale } from "#lib/i18n/context.svelte.ts";
+  import { dealer } from "#lib/content.ts";
   const locale = useLocale();
   import ResponsiveCollection from "#lib/components/ResponsiveCollection.svelte";
   import MobileSectionHeading from "#lib/components/mobile/MobileSectionHeading.svelte";
@@ -22,6 +23,9 @@
   <div class="container">
     <MobileSectionHeading
       title={locale.t("referenceHome.news.title")}
+      description={dealer.businessPreview && !dealer.news
+        ? locale.t("editorial.list.sampleSummary")
+        : undefined}
       actionLabel={locale.t("referenceHome.news.viewMore")}
       actionHref="/news"
     />

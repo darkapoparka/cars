@@ -36,18 +36,19 @@
   </div>
   {#if phone.current}
     <PopularVehicleGrid />
-    {#if !dealer.businessPreview}
-      <HomeBrandLinks compactMobile />
-      <VehicleTypeShowcase mobileLayout="grid" />
+    <HomeBrandLinks compactMobile />
+    <VehicleTypeShowcase mobileLayout="grid" />
+    {#if !dealer.businessPreview || dealer.finance}
       <LoanCalculatorPanel mobileFeatured />
     {/if}
     <FeaturedVehicleGrid compactMobile />
     <VehiclePurchaseSteps />
+    <ServicesOverview />
+    <UpcomingVehicleNews />
     {#if !dealer.businessPreview}
       <CustomerReviewGrid />
       <VehicleReviewCarousel />
       <AgentTeamCompact />
-      <UpcomingVehicleNews />
     {/if}
   {:else}
     <PopularVehicleGrid />
@@ -56,16 +57,18 @@
     {#if !dealer.businessPreview}
       <RentalOfferCardsCompact />
       <SellAndRentalOffers />
-      <VehicleTypeShowcase />
+    {/if}
+    <VehicleTypeShowcase />
+    {#if !dealer.businessPreview || dealer.finance}
       <LoanCalculatorPanel />
     {/if}
     <FeaturedVehicleGrid />
+    <ServicesOverview />
+    <UpcomingVehicleNews />
     {#if !dealer.businessPreview}
       <CustomerReviewGrid />
-      <ServicesOverview />
       <VehicleReviewCarousel />
       <AgentTeamCompact />
-      <UpcomingVehicleNews />
       <AppDownloadPromotion />
     {/if}
   {/if}
