@@ -1,0 +1,20 @@
+{
+  "id": "../",
+  "name": "Broadbent Car and Servicing",
+  "short_name": "Broadbent Car and Servicing",
+  "description": "Independent design preview for discussion, not an official dealership website. Forms do not send messages or create reservations.",
+  "lang": "en",
+  "start_url": "/variant-6/",
+  "scope": "/variant-6/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#C21C2A",
+  "icons": [
+    {
+      "src": "https://cars-uk-stockport-broadbent-car-and-servicing.darkapoparka1.workers.dev/dealer-share/04fa393d850e0e1d666c/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
