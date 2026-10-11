@@ -54,8 +54,61 @@ const git = (root, ...args) => {
   assert.equal(result.status, 0, result.stderr || 'Git read failed'); return result.stdout.trim();
 };
 
+
+// Canonical Git OIDs describe raw objects. Normalize only the compared UTF-8 text,
+// while retaining the immutable raw identity and the bytes consumed by QA.
+export function readCanonicalSourceBlobs(root, requested) {
+  assert(Array.isArray(requested) && requested.length > 0 && requested.length <= 20000, 'Bounded immutable source batch required');
+  const ids = [...new Set(requested)]; for (const id of ids) assert.match(id, /^[a-f0-9]{40}$/);
+  const limit = 16*1024**2, read = (option, batch) => {
+    const result = spawnSync('git', ['cat-file',option], {cwd:root,env:{...process.env,GIT_NO_LAZY_FETCH:'1'},
+      input:Buffer.from(batch.join('\n')+'\n'),encoding:null,maxBuffer:limit});
+    assert(!result.error, result.error?.message); assert.equal(result.status, 0, result.stderr?.toString() || 'Immutable source batch read failed');
+    assert(result.stdout.length <= limit, 'Immutable source batch exceeds existing byte limit'); return result.stdout;
+  };
+  const descriptions = read('--batch-check',ids).toString('ascii').split('\n');
+  assert.equal(descriptions.pop(),''); assert.equal(descriptions.length,ids.length);
+  const sizes = new Map(), batches = []; let batch = [], framed = 0, total = 0;
+  for (let i=0;i<ids.length;i++) {
+    const id = ids[i], header = descriptions[i].match(/^([a-f0-9]{40}) blob (\d+)$/);
+    assert(header && header[1] === id, 'Missing or non-blob immutable source object: '+id);
+    const size = Number(header[2]), bytes = size + descriptions[i].length + 2;
+    assert(Number.isSafeInteger(size) && size >= 0 && bytes <= limit, 'Immutable source object exceeds existing byte limit');
+    total += size; assert(total <= 128*1024**2, 'Immutable source set exceeds bounded byte limit'); sizes.set(id,size);
+    if(framed+bytes>limit) {batches.push(batch);batch=[];framed=0;}
+    batch.push(id);framed+=bytes;
+  }
+  if(batch.length)batches.push(batch);
+  const values = new Map();
+  for (const selected of batches) {
+    const output = read('--batch',selected); let offset = 0;
+    for (const id of selected) {
+      const end = output.indexOf(10,offset);assert(end>=offset,'Truncated immutable source header');
+      const expected = id+' blob '+sizes.get(id);assert.equal(output.subarray(offset,end).toString('ascii'),expected,'Immutable source header differs');
+      const size = sizes.get(id);offset=end+1;assert(offset+size<output.length&&output[offset+size]===10,'Truncated immutable source body');
+      const bytes = output.subarray(offset,offset+size);assert.equal(gitBlob(bytes),id,'Raw immutable Git object differs');
+      values.set(id,bytes);offset+=size+1;
+    }
+    assert.equal(offset,output.length,'Unexpected immutable source batch suffix');
+  }
+  return values;
+}
+export function leaseSourceInput(relative, physicalBytes, oid, canonicalBytes) {
+  assert(Buffer.isBuffer(physicalBytes) && Buffer.isBuffer(canonicalBytes), 'Raw source buffers required');
+  assert.equal(gitBlob(canonicalBytes),oid,'Raw canonical source OID differs: '+relative);
+  let text = !canonicalBytes.includes(0); if (text) try {new TextDecoder('utf8',{fatal:true}).decode(canonicalBytes);} catch {text = false;}
+  let consumed = physicalBytes, expected = canonicalBytes;
+  if (text) {
+    new TextDecoder('utf8',{fatal:true}).decode(physicalBytes);
+    consumed = NORMALIZED(physicalBytes); expected = NORMALIZED(canonicalBytes);
+  }
+  assert(consumed.equals(expected),'Application/catalog/test/lock input changed from S1: '+relative);
+  return {path:relative,blob:oid,sha256:sha256(consumed),canonicalSha256:sha256(canonicalBytes),
+    canonicalBytes:canonicalBytes.length,consumedBytes:consumed.length};
+}
+
 export const PINNED_QA_OVERRIDES = Object.freeze(QA_FILES.filter(name => name.startsWith('templates/')));
-export function preparePinnedQaSources({root=ROOT,env=process.env,platform=process.platform,version=process.version,gitRead=git,
+export function preparePinnedQaSources({root=ROOT,env=process.env,platform=process.platform,version=process.version,gitRead=git,readBlobs=readCanonicalSourceBlobs,
   restore=(paths)=>{const result=spawnSync('git',['restore','--source='+TEMPLATE_REVISION,'--worktree','--',...paths],{cwd:root,env:{...env,GIT_NO_LAZY_FETCH:'0'},encoding:'utf8',maxBuffer:16*1024**2});assert.equal(result.status,0,result.stderr||'Immutable S1 restoration failed');},
   validateSources=()=>sourceLeases(root)}={}) {
   assert(platform==='linux'&&version==='v26.10.0'&&env.GITHUB_ACTIONS==='true'&&env.GITHUB_REPOSITORY==='darkapoparka/cars'&&
@@ -64,14 +117,16 @@ export function preparePinnedQaSources({root=ROOT,env=process.env,platform=proce
   assert.equal(gitRead(root,'rev-parse','HEAD'),env.GITHUB_SHA,'QA checkout differs from event');
   assert.equal(gitRead(root,'remote','get-url','origin').replace(/\.git$/,''),'https://github.com/darkapoparka/cars','Unreviewed QA source origin');
   const retained=new Map(),rootPhysical=fs.realpathSync(root);assert.equal(PINNED_QA_OVERRIDES.length,4);
-  for(const name of PINNED_QA_OVERRIDES){const file=path.resolve(root,name),relative=path.relative(rootPhysical,file);assert(relative&&!relative.startsWith('..')&&!path.isAbsolute(relative)&&fs.realpathSync(file)===file&&fs.statSync(file).isFile(),'Physical reviewed QA override required');const bytes=fs.readFileSync(file);assert(bytes.length>0&&bytes.length<=2*1024**2);new TextDecoder('utf8',{fatal:true}).decode(bytes);const oid=gitRead(root,'rev-parse',env.GITHUB_SHA+':'+name);assert.equal(gitBlob(NORMALIZED(bytes)),oid,'Reviewed QA override differs from canonical event: '+name);retained.set(name,{bytes,oid,file});}
+  for(const name of PINNED_QA_OVERRIDES){const file=path.resolve(root,name),relative=path.relative(rootPhysical,file);assert(relative&&!relative.startsWith('..')&&!path.isAbsolute(relative)&&fs.realpathSync(file)===file&&fs.statSync(file).isFile(),'Physical reviewed QA override required');const bytes=fs.readFileSync(file);assert(bytes.length>0&&bytes.length<=2*1024**2);new TextDecoder('utf8',{fatal:true}).decode(bytes);const oid=gitRead(root,'rev-parse',env.GITHUB_SHA+':'+name);retained.set(name,{bytes,oid,file});}
+  const originals=readBlobs(root,[...retained.values()].map(row=>row.oid));
+  for(const [name,row] of retained){const original=originals.get(row.oid);assert(original,'Missing canonical QA override: '+name);try {row.lease=leaseSourceInput(name,row.bytes,row.oid,original);} catch(error) {throw new Error('Reviewed QA override differs from canonical event: '+name,{cause:error});}} 
   const paths=Object.keys(FAMILIES).map(key=>'templates/'+key);restore(paths);
   for(const [name,{bytes,file}] of retained){assert(fs.realpathSync(file)===file&&fs.statSync(file).isFile(),'Restored S1 override path must remain physical: '+name);fs.writeFileSync(file,bytes);assert(fs.readFileSync(file).equals(bytes),'Reviewed QA override restore differs');}
-  const sources=validateSources();return {schemaVersion:1,type:'cars-hosted-native-immutable-s1-test-source',qaToolCommit:env.GITHUB_SHA,templateRevision:TEMPLATE_REVISION,templatePaths:paths,overrides:[...retained].map(([name,r])=>({path:name,gitBlob:r.oid,sha256:sha256(r.bytes)})),sourceLeaseCount:sources.leases.length,clientSourceChanged:false,providerMutation:false};
+  const sources=validateSources();return {schemaVersion:1,type:'cars-hosted-native-immutable-s1-test-source',qaToolCommit:env.GITHUB_SHA,templateRevision:TEMPLATE_REVISION,templatePaths:paths,overrides:[...retained].map(([name,r])=>({path:name,gitBlob:r.oid,sha256:sha256(r.bytes),canonicalSha256:r.lease.canonicalSha256,normalizedSha256:r.lease.sha256})),sourceLeaseCount:sources.leases.length,clientSourceChanged:false,providerMutation:false};
 }
 
 export function sourceLeases(root = ROOT, request = null) {
-  const leases = [], files = new Map();
+  const leases = [], files = new Map(), inputs = [];
   if (request) for (const key of APPLICATIONS) assert.equal(git(root, 'rev-parse', TEMPLATE_REVISION + ':templates/' + key), request.sourceReleases[key].tree, 'Selected S1 subtree differs: ' + key);
   for (const key of Object.keys(FAMILIES)) {
     const prefix = 'templates/' + key + '/';
@@ -82,11 +137,13 @@ export function sourceLeases(root = ROOT, request = null) {
       if (!match || QA_FILES.includes(match[3]) || !consumedSourceInput(key, match[3].slice(prefix.length))) continue;
       const relative = match[3], filename = path.resolve(root, relative);
       assert(fs.existsSync(filename) && fs.realpathSync(filename) === filename && fs.statSync(filename).isFile(), 'Missing physical S1 input: ' + relative);
-      const bytes = NORMALIZED(fs.readFileSync(filename));
-      assert.equal(gitBlob(bytes), match[2], 'Application/catalog/test/lock input changed from S1: ' + relative);
-      leases.push({path:relative,blob:match[2],sha256:sha256(bytes)});
-      if (CATALOGS[key].some(item => relative === prefix + item.path)) files.set(key + '/' + relative.slice(prefix.length), bytes);
+      inputs.push({key,prefix,relative,filename,oid:match[2]});
     }
+  }
+  const originals = readCanonicalSourceBlobs(root,inputs.map(row=>row.oid));
+  for (const {key,prefix,relative,filename,oid} of inputs) {
+    const bytes = fs.readFileSync(filename), lease = leaseSourceInput(relative,bytes,oid,originals.get(oid)); leases.push(lease);
+    if (CATALOGS[key].some(item => relative === prefix + item.path)) files.set(key + '/' + relative.slice(prefix.length), NORMALIZED(bytes));
   }
   return {leases,catalogs:Object.fromEntries(Object.keys(FAMILIES).map(key => [key,auditNativeCatalogs(files,key,CATALOGS[key])]))};
 }

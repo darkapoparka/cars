@@ -10,7 +10,7 @@ import { pathToFileURL } from 'node:url';
 import { APPLICATIONS, FAMILIES, HOSTED_QA_ACCOUNT, HOSTED_QA_ORIGIN, HOSTED_QA_PROFILE, TEMPLATE_REVISION,
   assertBoundary, guardHostedContext, parseHelperResults, readHostedProfile, requestDecision, sha256,
   validateHelperTarget, validateProviderAfter, validateRequest } from './lib/hosted-native-qa.mjs';
-import { githubIdentity, helperPlan, preparePinnedQaSources, PINNED_QA_OVERRIDES } from './verify-existing-fleet-hosted-native.mjs';
+import { githubIdentity, helperPlan, preparePinnedQaSources, PINNED_QA_OVERRIDES, readCanonicalSourceBlobs, leaseSourceInput } from './verify-existing-fleet-hosted-native.mjs';
 
 const h='a'.repeat(64),c='b'.repeat(40),id='242efab6-9a8b-4f48-af9a-848029e6cdaf';
 const request=()=>({schemaVersion:1,type:'cars-existing-fleet-hosted-native-qa-request',client:'priselci',workerName:'cars-priselci',publicOrigin:HOSTED_QA_ORIGIN,accountId:HOSTED_QA_ACCOUNT,sourceCommit:c,sourceTree:c,inputDigest:h,
@@ -163,11 +163,51 @@ test('immutable S1 restoration retains only four canonical QA overrides and leav
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'cars-qa-s1-')),head='a'.repeat(40),files=new Map();for(const name of PINNED_QA_OVERRIDES){const file=path.join(root,name);fs.mkdirSync(path.dirname(file),{recursive:true});const bytes=Buffer.from('canonical reviewed QA override '+name+'\n');fs.writeFileSync(file,bytes);files.set(name,bytes);}
  const architecture=path.join(root,'templates/auto-best/scripts/check-architecture.mjs'),client=path.join(root,'clients/priselci/stock.json');fs.writeFileSync(architecture,'current architecture drift');fs.mkdirSync(path.dirname(client),{recursive:true});fs.writeFileSync(client,'unchanged original dealer facts');
  const oid=bytes=>createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex'),env={GITHUB_ACTIONS:'true',GITHUB_REPOSITORY:'darkapoparka/cars',GITHUB_EVENT_NAME:'workflow_dispatch',GITHUB_REF:'refs/heads/main',GITHUB_SHA:head,GITHUB_WORKFLOW_REF:'darkapoparka/cars/.github/workflows/existing-fleet-hosted-native-qa.yml@refs/heads/main'},gitRead=(_root,...args)=>args.join(' ')==='rev-parse HEAD'?head:args[0]==='remote'?'https://github.com/darkapoparka/cars.git':oid(files.get(args[1].slice(head.length+1)));let restores=0;
- const options={root,env,platform:'linux',version:'v26.10.0',gitRead,restore:paths=>{restores++;assert.deepEqual(paths,['templates/auto-best','templates/modern','templates/import']);fs.writeFileSync(architecture,'exact immutable S1 architecture');for(const name of PINNED_QA_OVERRIDES)fs.writeFileSync(path.join(root,name),'raw S1 helper');},validateSources:()=>{assert.equal(fs.readFileSync(architecture,'utf8'),'exact immutable S1 architecture');for(const [name,bytes]of files)assert(fs.readFileSync(path.join(root,name)).equals(bytes));return {leases:[{path:'verified immutable input'}]};}};
+ const options={root,env,platform:'linux',version:'v26.10.0',gitRead,readBlobs:()=>new Map([...files.values()].map(bytes=>[oid(bytes),bytes])),restore:paths=>{restores++;assert.deepEqual(paths,['templates/auto-best','templates/modern','templates/import']);fs.writeFileSync(architecture,'exact immutable S1 architecture');for(const name of PINNED_QA_OVERRIDES)fs.writeFileSync(path.join(root,name),'raw S1 helper');},validateSources:()=>{assert.equal(fs.readFileSync(architecture,'utf8'),'exact immutable S1 architecture');for(const [name,bytes]of files)assert(fs.readFileSync(path.join(root,name)).equals(bytes));return {leases:[{path:'verified immutable input'}]};}};
  const result=preparePinnedQaSources(options);assert.equal(restores,1);assert.equal(result.overrides.length,4);assert.equal(result.templateRevision,TEMPLATE_REVISION);assert.equal(fs.readFileSync(client,'utf8'),'unchanged original dealer facts');assert.equal(result.clientSourceChanged,false);
  assert.throws(()=>preparePinnedQaSources({...options,env:{...env,GITHUB_EVENT_NAME:'push'}}));assert.equal(restores,1);
  fs.writeFileSync(path.join(root,PINNED_QA_OVERRIDES[0]),'unreviewed override');assert.throws(()=>preparePinnedQaSources(options),/differs from canonical/);assert.equal(restores,1);
 });
 test('workflow restores immutable S1 before dependency installation without changing browser cases or proof guards',()=>{
  const text=fs.readFileSync(new URL('../.github/workflows/existing-fleet-hosted-native-qa.yml',import.meta.url),'utf8');assert.equal(text.split('--prepare-source').length-1,1);assert(text.indexOf('--prepare-source')<text.indexOf('Install lockfile-pinned Auto Best and Modern'));assert(text.includes('--request "$QA_REQUEST" --sha256 "$QA_REQUEST_SHA256" --run'));
+});
+
+
+test('real immutable Git blobs retain raw OIDs while equivalent LF, CRLF and mixed text are leased',()=>{
+  const root=fs.mkdtempSync(path.join(os.tmpdir(),'cars-native-raw-blobs-'));
+  const git=(args,input)=>{const result=spawnSync('git',args,{cwd:root,input,env:{...process.env,GIT_NO_LAZY_FETCH:'1'},encoding:null});assert.equal(result.status,0,result.stderr.toString());return result.stdout;};
+  git(['init','--bare','--quiet']);
+  const lf=Buffer.from('export const count = 16;\nexport const mode = "dated-source";\n');
+  const crlf=Buffer.from(lf.toString().replaceAll('\n','\r\n'));
+  const mixed=Buffer.from('export const count = 16;\r\nexport const mode = "dated-source";\n');
+  const raw=[lf,crlf,mixed],ids=raw.map(bytes=>git(['hash-object','-w','--stdin'],bytes).toString().trim());
+  assert.equal(new Set(ids).size,3,'Real Git preserves raw newline identity');
+  const originals=readCanonicalSourceBlobs(root,[...ids,ids[0]]);assert.equal(originals.size,3);
+  for(let i=0;i<ids.length;i++) {
+    assert(originals.get(ids[i]).equals(raw[i]),'Raw batch content must retain every newline and suffix');
+    for(const physical of raw) {const lease=leaseSourceInput('fixture/source.mjs',physical,ids[i],originals.get(ids[i]));
+      assert.equal(lease.blob,ids[i]);assert.equal(lease.canonicalSha256,sha256(raw[i]));assert.equal(lease.sha256,sha256(lf));}
+    assert.throws(()=>leaseSourceInput('fixture/source.mjs',Buffer.from(lf.toString().replace('16','17')),ids[i],originals.get(ids[i])),/changed from S1/);
+  }
+  assert.throws(()=>readCanonicalSourceBlobs(root,['f'.repeat(40)]),/Missing or non-blob/);
+  assert.throws(()=>leaseSourceInput('fixture/source.mjs',lf,ids[0],mixed),/Raw canonical source OID differs/);
+});
+test('binary inputs and malformed physical UTF-8 cannot hide changed source bytes',()=>{
+  const raw=Buffer.from([255,13,10,0]),oid=createHash('sha1').update('blob '+raw.length+'\0').update(raw).digest('hex');
+  const lease=leaseSourceInput('fixture/image.bin',raw,oid,raw);assert.equal(lease.sha256,sha256(raw));
+  assert.throws(()=>leaseSourceInput('fixture/image.bin',Buffer.from([254,13,10,0]),oid,raw),/changed from S1/);
+  const nul=Buffer.from([0,13,10,65]),nulOid=createHash('sha1').update('blob '+nul.length+'\0').update(nul).digest('hex');
+  assert.equal(leaseSourceInput('fixture/image.bin',nul,nulOid,nul).consumedBytes,4);
+  assert.throws(()=>leaseSourceInput('fixture/image.bin',Buffer.from([0,10,65]),nulOid,nul),/changed from S1/);
+  const text=Buffer.from('canonical text\n'),textOid=createHash('sha1').update('blob '+text.length+'\0').update(text).digest('hex');
+  assert.throws(()=>leaseSourceInput('fixture/source.mjs',Buffer.from([255,10]),textOid,text));
+});
+test('immutable source batches stay below the existing per-process byte limit',()=>{
+  const root=fs.mkdtempSync(path.join(os.tmpdir(),'cars-native-batched-blobs-'));
+  const git=(args,input)=>{const result=spawnSync('git',args,{cwd:root,input,env:{...process.env,GIT_NO_LAZY_FETCH:'1'},encoding:null});assert.equal(result.status,0,result.stderr.toString());return result.stdout;};
+  git(['init','--bare','--quiet']);
+  // Repetitive in-memory fixtures compress to small Git objects; no asset or source copies.
+  const raw=[Buffer.alloc(9*1024**2,97),Buffer.alloc(9*1024**2,98)];
+  const ids=raw.map(bytes=>git(['hash-object','-w','--stdin'],bytes).toString().trim());
+  const originals=readCanonicalSourceBlobs(root,ids);for(let i=0;i<ids.length;i++)assert(originals.get(ids[i]).equals(raw[i]));
 });
