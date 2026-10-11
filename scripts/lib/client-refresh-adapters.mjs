@@ -483,7 +483,53 @@ export const formatVehiclePrice = (
 `;
   const files = new Map([['src/lib/data/inventory.ts', source]]);
   repairAutoBestUkInventoryContract(files, profile);
-  return files.get('src/lib/data/inventory.ts');
+  return completeAutoBestInventoryPresentationContract(files.get('src/lib/data/inventory.ts'));
+}
+
+/** Preserve the selected Auto Best presentation ABI after the UK factual repair.
+ * Native inventory blob38f7dd8325a9f2555285d3e85638bc392b0c75f0, subtree827df14f.
+ * Only optional type members and the price-label formatter are completed.
+ */
+function completeAutoBestInventoryPresentationContract(source) {
+  const priceBoundary = [
+    'export const formatVehiclePrice = (',
+    '  amount: number,',
+    '  locale: Locale = localeContract.defaultLocale',
+    ") => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');"
+  ].join('\n');
+  const nativeLabel = [
+    '',
+    "/** Allow a currency line break while preserving the locale's grouped digits. */",
+    'export const formatVehiclePriceLabel = (amount: number, locale: Locale = localeContract.defaultLocale) =>',
+    "  formatVehiclePrice(amount, locale).replace(/([A-Z]{3}|\\p{Sc})\\s+/u, '$1 ').replace(/\\s+([A-Z]{3}|\\p{Sc})$/u, ' $1');",
+    ''
+  ].join('\n');
+  const ukLabel = nativeLabel.replaceAll('|\\p{Sc}', '');
+  const plainIdentity = '  make: string;\n  title: string;';
+  const ukIdentity = [
+    '  make: string;',
+    '  /** Optional manufacturer sub-brand used by compact card identity. */',
+    '  cardBrand?: string;',
+    '  title: string;'
+  ].join('\n');
+  const nativeIdentity = ukIdentity.replace('  title: string;',[
+    '  /** Seller-supplied highlight by locale; import/condition claims require record-specific evidence. */',
+    '  cardNote?: Partial<Record<Locale, string>>;',
+    '  title: string;'
+  ].join('\n'));
+  const exports = [...source.matchAll(/^export (?:const|type) ([A-Za-z_$][\w$]*)/gm)].map(match=>match[1]);
+  const expected = ['vehicleTypes','VehicleType','VehicleCondition','VehicleEquipment','Vehicle','featuredVehicles','formatVehiclePrice'];
+  if (exports.at(-1) === 'formatVehiclePriceLabel') expected.push('formatVehiclePriceLabel');
+  const identities = [plainIdentity,ukIdentity,nativeIdentity].filter(value=>source.split(value).length===2);
+  const labels = [ukLabel,nativeLabel].filter(value=>source.endsWith(value));
+  if (JSON.stringify(exports)!==JSON.stringify(expected)||source.split(priceBoundary).length!==2||identities.length!==1||
+      (exports.includes('formatVehiclePriceLabel') ? labels.length!==1 : labels.length!==0)) {
+    throw new Error('Auto Best native price-label presentation boundary changed');
+  }
+  let output = labels.length ? source.slice(0,-labels[0].length) : source;
+  if (!output.endsWith(priceBoundary+'\n')) throw new Error('Auto Best native price-label footer changed');
+  output = output.replace(identities[0],nativeIdentity) + nativeLabel;
+  return output;
 }
 
 function autoBestCompany(profile) {
@@ -1598,6 +1644,7 @@ export const refreshAdapterInternals = {
   autoBestBody,
   autoBestEquipment,
   autoBestInventory,
+  completeAutoBestInventoryPresentationContract,
   originalMileageFacts,
   personalizeSvelteMileage,
   modernListing,
