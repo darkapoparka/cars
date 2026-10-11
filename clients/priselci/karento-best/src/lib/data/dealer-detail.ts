@@ -125,7 +125,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -273,7 +273,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -414,7 +414,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -534,7 +534,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -678,7 +678,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -822,7 +822,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -973,7 +973,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -1122,7 +1122,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -1267,7 +1267,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -1411,7 +1411,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -1558,7 +1558,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -1698,7 +1698,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -1845,7 +1845,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -1984,7 +1984,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -2129,7 +2129,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",
@@ -2276,7 +2276,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Автокъща Приселци",
       "location": "бул. „Цар Освободител“ 285",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
       "mobile": "0886 251 705",
       "email": "",
       "whatsapp": "",

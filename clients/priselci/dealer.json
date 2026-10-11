@@ -50,55 +50,55 @@
     "accent": "#2563eb"
   },
   "templateRevisions": {
-    "auto-best": "696230a404abd9b20b6f907b9cfb139175298c7a",
-    "modern": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
-    "import": "b9373e9ed5453bc7d208898ae140eae4d596a232",
-    "app": "4e184777567849a2c5b4a9e4a3e652252179c29c",
-    "mobile": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
-    "karento-best": "cc130e432a41a3a60cc80bc2b3461c6416893b4a"
+    "auto-best": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+    "modern": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+    "import": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+    "app": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+    "mobile": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+    "karento-best": "32ac4ebcbafff38df6306e9919ce6113b2d10503"
   },
   "templateSources": {
     "auto-best": {
       "repository": "darkapoparka/cars",
-      "revision": "696230a404abd9b20b6f907b9cfb139175298c7a",
+      "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
       "path": "templates/auto-best",
-      "digest": "90f131aa0ead6ae4fcb06d30c054ca4d0c5d39097a2927cca8f298c7d2dfb3ca",
-      "tree": "b07ff2273be554ef64a039ac8f4f023ae60a33ac"
+      "digest": "c4f4deef61d9a823aa20d3117d4f48ad4c393e0a9039376c199b4f537086eaae",
+      "tree": "827df14f05eb5814fd2b2c7026ba83996fd7544e"
     },
     "modern": {
       "repository": "darkapoparka/cars",
-      "revision": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+      "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
       "path": "templates/modern",
-      "digest": "b035a849efb41d3ed18d97fcf3511850469162c0a990397b74be588179d43588",
-      "tree": "51d68e5dd6e3b305191df94e877403fd7b7414e1"
+      "digest": "8f1d6ce675929ab677315bb08e3fb06e9bd1ebef42ebf8f037cd4f6ecf73f530",
+      "tree": "ae6999491c8d4faa7d1081457a07f177fc741243"
     },
     "import": {
       "repository": "darkapoparka/cars",
-      "revision": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+      "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
       "path": "templates/import",
-      "digest": "eef4c3544b28bb3a62cad4c2a07e4ff64301fb4c9e9925ba002077bda7f63bd3",
-      "tree": "b64c4a4939c4244ba3f408e5c0311c586a913e67"
+      "digest": "c18dc74d9f72c88c8c0959fe36331c75178e71a5563cfc21b4d060c094044f36",
+      "tree": "12a7688546d04362156f600b3eea9cbd66d119cc"
     },
     "app": {
       "repository": "darkapoparka/cars",
-      "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+      "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
       "path": "templates/app",
-      "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
-      "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
+      "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+      "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
     },
     "mobile": {
       "repository": "darkapoparka/cars",
-      "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+      "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
       "path": "templates/mobile",
-      "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d",
-      "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b"
+      "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
+      "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
     },
     "karento-best": {
       "repository": "darkapoparka/cars",
-      "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+      "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
       "path": "templates/karento-best",
-      "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30",
-      "tree": "c661129affb32649c8fcecea097fc9a6487783d0"
+      "digest": "b034d5d98ac5080d7f90ad281d309bdaca70a891326458a6957165cf4e1d6356",
+      "tree": "cd09ed79c2368585acfb915a4e459e656e434c5d"
     }
   },
   "appVariant": {
@@ -106,10 +106,10 @@
     "format": "app-preview-v1",
     "source": {
       "repository": "darkapoparka/cars",
-      "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+      "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
       "path": "templates/app",
-      "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
-      "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
+      "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+      "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
     },
     "baseDeployment": {
       "id": "dpl_9YZJVviuYC2w8xv7vxNP6fPXjdNk",
@@ -133,8 +133,10 @@
     "publicOrigin": "https://cars-priselci.vercel.app",
     "description": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
     "logo": {
-      "sourcePath": "dealer-brand/logo-on-light-20260919.webp",
-      "sha256": "c6427ddf1f5c073cd1a54333a305364ca8c3814295c3f9ec52428d69dd8667b8"
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "6d6d5c53e6a52500eab737cbb28fecf7951ea79b5f14b9a5eb6ad7d6261b4fb1",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "2b7aabe2dd885c8d95b5579171250c63a5d0251059b3dc5cc55df2f040273a38"
     }
   },
   "legacyDetailRoutes": {
@@ -144,5 +146,9 @@
   },
   "presentation": {
     "version": "neutral-services-v1"
+  },
+  "branding": {
+    "required": true,
+    "surfaceBindingsVersion": 1
   }
 }

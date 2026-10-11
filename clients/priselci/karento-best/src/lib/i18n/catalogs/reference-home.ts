@@ -58,6 +58,9 @@ export const referenceHomeEn = {
   "referenceHome.reviews.description":
     "The Tucson Plug-in Hybrid is easy to drive and provides a sufficient all-electric range.",
   "referenceHome.news.escalade": "2025 Cadillac Escalade costs more money",
+  "referenceHome.news.escalade.mobile": "Cadillac Escalade 2025: price update",
+  "referenceHome.news.bmw.mobile": "BMW 5 Series 2025: review",
+  "referenceHome.news.rodeo.mobile": "Ruf Rodeo 2025: off road",
   "referenceHome.news.bmw": "2025 BMW 5 Series Review: A balanced luxury sedan",
   "referenceHome.news.rodeo":
     "2025 Ruf Rodeo is ready to wrangle some rough roads",
@@ -131,6 +134,9 @@ export const referenceHomeBg = {
   "referenceHome.reviews.description":
     "Tucson Plug-In Hybrid е лесен за управление и предлага достатъчен пробег само на ток.",
   "referenceHome.news.escalade": "Cadillac Escalade 2025 е с по-висока цена",
+  "referenceHome.news.escalade.mobile": "Cadillac Escalade 2025: нова цена",
+  "referenceHome.news.bmw.mobile": "BMW Серия 5 2025: преглед",
+  "referenceHome.news.rodeo.mobile": "Ruf Rodeo 2025: извън асфалта",
   "referenceHome.news.bmw":
     "Преглед на BMW Серия 5 2025: балансиран луксозен седан",
   "referenceHome.news.rodeo": "Ruf Rodeo 2025 е готов за трудните пътища",

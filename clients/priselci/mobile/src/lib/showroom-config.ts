@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Автокъща Приселци",
-  "logo": "/dealer-brand/logo-on-light-20260919.webp",
+  "logo": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
   "phone": "+359886251705",
   "email": null,
   "address": "бул. „Цар Освободител“ 285",

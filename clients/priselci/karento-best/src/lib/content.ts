@@ -99,11 +99,11 @@ export const dealer: DealerContent = {
   "name": "Автокъща Приселци",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/logo-on-light-20260919.webp",
-    "footer": "/dealer-brand/logo-on-dark-20260919.webp",
-    "archivedDark": "/dealer-brand/logo-on-dark-20260919.webp",
+    "light": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-dark.webp",
     "alt": "Автокъща Приселци",
-    "favicon": "/dealer-brand/logo-on-light-20260919.webp",
+    "favicon": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
     "monochromeOnDark": false
   },
   "contacts": {
