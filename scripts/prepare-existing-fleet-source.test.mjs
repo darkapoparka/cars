@@ -1,9 +1,19 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import {spawnSync} from 'node:child_process';
 import {sha256} from './lib/workflow.mjs';import {tinyArea,writeFixture} from './test-fixtures/fleet-single-worker.mjs';
-import {gitObjectId,gitTreeId,createSourcePatch,verifySourcePatch,validateSourceRequest,sourceCiContext,readBrandingInputs,bindPreparedShareLogo,SOURCE_CAMPAIGN} from './prepare-existing-fleet-source.mjs';
+import {gitObjectId,gitTreeId,createSourcePatch,verifySourcePatch,validateSourceRequest,sourceCiContext,readBrandingInputs,bindPreparedShareLogo,sourceQualificationFiles,assertPreparedMountOwnership,SOURCE_CAMPAIGN} from './prepare-existing-fleet-source.mjs';
+import {QUALIFICATION_LOCK_PATH} from './build-existing-fleet-cloudflare.mjs';import {planSixDesignSelection} from './lib/six-design-release.mjs';
 
 function baseline(){const files=new Map([['business-facts.json',Buffer.from('{"dealer":"truthful"}')],['scripts/run.mjs',Buffer.from('#!/usr/bin/env node\nold();\n')],['branding/original.png',Buffer.from([0,1,2,255])],['.client/recovery.json',Buffer.from('{"retain":true}')]]),entries=[...files].map(([path,bytes])=>({path,mode:path==='scripts/run.mjs'?'100755':'100644',blob:gitObjectId('blob',bytes)}));return {commit:'1'.repeat(40),files,entries,tree:gitTreeId(entries)};}
 function proposal(){const base=baseline(),candidate=new Map(base.files),binary=Buffer.from([0,9,8,255]);candidate.set('scripts/run.mjs',Buffer.from('#!/usr/bin/env node\nupdated();\n'));candidate.set('auto-best/static/dealer/logo.png',binary);candidate.set('mobile/public/dealer/logo.png',binary);candidate.delete('.client/recovery.json');return {base,result:createSourcePatch({baseline:base,candidateFiles:candidate,dealer:'priselci',sourceRevision:'2'.repeat(40),contextFileSha256:'3'.repeat(64)})};}
+function qualificationInput(){
+ const original={slug:'priselci',repository:'darkapoparka/cars-priselci',variants:[{key:'auto-best',base:'',entry:'/'},{key:'import',base:'/variant-2',entry:'/variant-2/'},{key:'carwow',base:'/variant-3',entry:'/variant-3/'}]},manifest={...original,packaging:{version:'5'},variants:planSixDesignSelection(original.variants).variants,templateRevisions:{},templateSources:{}},releases={};
+ for(const [i,{key}]of manifest.variants.entries()){const revision=String(i+1).repeat(40),digest=String(i+1).repeat(64);releases[key]={status:'approved',repository:'darkapoparka/cars-template-'+key,commit:revision,digest,qa:{evidence:'docs/releases/synthetic-'+key+'.json',verifiedAt:'2026-10-10T00:00:00Z'}};manifest.templateRevisions[key]=revision;manifest.templateSources[key]={repository:releases[key].repository,revision,path:'',digest};}
+ const context={schemaVersion:1,kind:'cars-native-source-qualification-context',id:'synthetic-source-test',dealer:manifest.slug,scope:'existing-dealer-pilot',sourceCommit:'9'.repeat(40),reviewed:true,reviewedAt:'2026-10-11T10:00:00Z',nativeApproval:false,hostedApproval:false,globalReleaseApproval:false,approvedLockSha256:'a'.repeat(64),candidateLockSha256:'b'.repeat(64),sourceDeltaReview:{reference:'docs/releases/synthetic-delta.json',sha256:'c'.repeat(64),reviewedAt:'2026-10-11T10:00:00Z'}},parent=structuredClone(releases.app),source={repository:'darkapoparka/cars',revision:context.sourceCommit,path:'templates/app',tree:'8'.repeat(40),digest:'7'.repeat(64)};
+ releases.app={status:'qualification',repository:source.repository,commit:source.revision,digest:source.digest,source,snapshotPath:source.path,qualification:{contextId:context.id,sourceQA:{approvedRelease:parent,releaseSha256:sha256(JSON.stringify(parent)),reference:parent.qa.evidence,sha256:'d'.repeat(64),verifiedAt:parent.qa.verifiedAt},sourceDeltaReview:context.sourceDeltaReview,catalogs:[]}};
+ manifest.templateRevisions.app=source.revision;manifest.templateSources.app=source;
+ const qualificationLockBytes=Buffer.from(JSON.stringify({schemaVersion:1,templates:releases},null,2)+'\r\n');context.candidateLockSha256=sha256(qualificationLockBytes);
+ return {original,context,manifest,qualificationBytes:Buffer.from(JSON.stringify(context)),qualificationLockBytes,sourceRevision:context.sourceCommit,candidateSourceDigest:'e'.repeat(64)};
+}
 
 test('raw Git blob/tree hashes match Git without writing objects or an index',()=>{
  assert.equal(gitTreeId([]),'4b825dc642cb6eb9a060e54bf8d69288fbee4904');
@@ -16,6 +26,22 @@ test('minimal patch deduplicates binary aliases, preserves executable modes and 
  const {base,result}=proposal(),restored=verifySourcePatch({baseline:base,...result});assert.equal(result.patch.changes.length,3);assert.equal(result.blobs.size,2);assert.equal(result.patch.changes.find(r=>r.path==='scripts/run.mjs').mode,'100755');
  assert.equal(result.patch.changes.filter(r=>r.blob?.includes(sha256(Buffer.from([0,9,8,255])))).length,2);assert.equal(restored.files.get('.client/recovery.json').toString(),'{"retain":true}');assert.equal(restored.tree,result.patch.preparedTree);assert.equal(result.patch.reviewed,false);assert.equal(result.patch.published,false);
  assert(result.patch.uniqueBlobBytes<result.patch.changedBytes);assert.equal([...result.blobs.values()].find(b=>b.encoding==='base64').data,Buffer.from([0,9,8,255]).toString('base64'));
+});
+test('source preparation retains the exact raw reviewed lock and context in its managed Git patch',()=>{
+ const input=qualificationInput(),files=sourceQualificationFiles(input),marker=JSON.parse(files.get('.client/cloudflare-existing-source.json'));
+ assert(files.get(QUALIFICATION_LOCK_PATH).equals(input.qualificationLockBytes));assert(files.get('.client/native-qualification-context.json').equals(input.qualificationBytes));
+ assert.equal(marker.qualificationLockPath,QUALIFICATION_LOCK_PATH);assert.equal(marker.qualificationLockSha256,input.context.candidateLockSha256);assert.equal(marker.nativeApproval,false);assert.equal(marker.hostedApproval,false);
+ const base=baseline(),result=createSourcePatch({baseline:base,candidateFiles:new Map([...base.files,...files]),dealer:'priselci',sourceRevision:input.sourceRevision,contextFileSha256:sha256(input.qualificationBytes)}),restored=verifySourcePatch({baseline:base,...result});
+ assert(result.patch.changes.some(row=>row.path===QUALIFICATION_LOCK_PATH));assert(restored.files.get(QUALIFICATION_LOCK_PATH).equals(input.qualificationLockBytes));assert.equal(restored.files.get('business-facts.json').toString(),base.files.get('business-facts.json').toString());
+ assert.throws(()=>sourceQualificationFiles({...input,qualificationLockBytes:Buffer.concat([input.qualificationLockBytes,Buffer.from(' ')])}),/exact reviewed qualification lock/i);
+ const manifest=structuredClone(input.manifest);manifest.templateSources.app.tree='f'.repeat(40);assert.throws(()=>sourceQualificationFiles({...input,manifest}),/app:.*reviewed qualification lock/);
+});
+test('prepared variant-2 ownership comes from the immutable original dealer manifest, not a new global expectation',()=>{
+ const input=qualificationInput(),base=baseline();base.files.set('dealer.json',Buffer.from(JSON.stringify(input.original)));
+ const proof=assertPreparedMountOwnership(input.manifest,base);assert.equal(proof.variants[1].key,'import');assert.equal(proof.manifestSha256,sha256(base.files.get('dealer.json')));assert.equal(proof.baseCommit,base.commit);
+ const swapped={...input.manifest,variants:planSixDesignSelection({...input.original,variants:input.original.variants.map((row,i)=>i===1?{key:'modern',base:'/variant-2',entry:'/variant-2/cars'}:row)}.variants).variants};
+ assert.throws(()=>assertPreparedMountOwnership(swapped,base),/immutable original dealer ownership/);
+ assert.throws(()=>assertPreparedMountOwnership({...input.manifest,repository:'darkapoparka/invented'},base),/immutable original dealer ownership/);
 });
 test('patch conflicts, byte tampering, forged tree and authoritative fact edits are refused',()=>{
  const {base,result}=proposal();for(const mutate of [p=>p.patch.baseTree='f'.repeat(40),p=>p.patch.preparedTree='f'.repeat(40),p=>p.patch.changes[0].beforeSha256='f'.repeat(64),p=>p.patch.changes[0].path='../escape',p=>[...p.blobs.values()][0].data+='tampered']){const copy=structuredClone(result);mutate(copy);assert.throws(()=>verifySourcePatch({baseline:base,...copy}),/baseline|tree|conflicts|member|bytes/);}
