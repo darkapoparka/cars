@@ -3,13 +3,14 @@ import fs from 'node:fs';import path from 'node:path';import assert from 'node:a
 import {packageFiles,verifyPackage,verifyPackageTree} from './export-dealer.mjs';
 const root=process.cwd(),[mode,slug,key]=process.argv.slice(2),request=JSON.parse(fs.readFileSync('docs/releases/vercel-presentation-20261011/request.json'));
 if(process.env.GITHUB_ACTIONS!=='true'||process.env.GITHUB_REPOSITORY!=='darkapoparka/cars'||process.env.GITHUB_REF!=='refs/heads/main'||!request.dealers.some(d=>d.slug===slug))throw Error('Only the selected existing dealers on exact main CI are allowed');
-const sha=process.env.GITHUB_SHA;const g=(args,options={})=>execFileSync('git',args,{cwd:root,encoding:'utf8',maxBuffer:32*1024**2,timeout:15*60*1000,...options}).trimEnd();assert.equal(g(['rev-parse','HEAD']),sha);
+// These commands operate on an explicit package index or immutable objects, not the sparse source worktree.
+const sha=process.env.GITHUB_SHA;const g=(args,options={})=>execFileSync('git',['-c','core.sparseCheckout=false',...args],{cwd:root,encoding:'utf8',maxBuffer:32*1024**2,timeout:15*60*1000,...options}).trimEnd();assert.equal(g(['rev-parse','HEAD']),sha);
 const hash=b=>createHash('sha256').update(b).digest('hex'),record=request.dealers.find(d=>d.slug===slug),area=path.join(root,'runtime/vercel-presentation',slug);fs.mkdirSync(area,{recursive:true});
 let phase='start';
 process.on('uncaughtException',error=>{
  const pack=path.join(root,'runtime/dealer-packages/vercel-presentation-'+slug),read=p=>fs.existsSync(p)?JSON.parse(fs.readFileSync(p)):null;
  const meta=read(pack+'/.cars-package.json'),presentation=read(pack+'/.cars-dealer-presentation.json');
- const diagnosis={schemaVersion:1,kind:'packaging-failure-not-a-release',slug,mode,key,phase,sourceCommit:sha,node:process.version,error:error.stack,sourceModules:['scripts/export-dealer.mjs','scripts/package-dealer.mjs','scripts/publishing/dealer-presentation.mjs'].map(p=>({path:p,sha256:hash(fs.readFileSync(p))})),metadata:meta?{keys:Object.keys(meta),packagingVersion:meta.packagingVersion,payloadCount:meta.payload?.length,payloadDigest:meta.payloadDigest}:null,presentation,deploymentsCreated:0};
+ const diagnosis={schemaVersion:1,kind:'packaging-failure-not-a-release',slug,mode,key,phase,sourceCommit:sha,node:process.version,error:String(error.stack).slice(0,7000),sourceModules:['scripts/export-dealer.mjs','scripts/package-dealer.mjs','scripts/publishing/dealer-presentation.mjs'].map(p=>({path:p,sha256:hash(fs.readFileSync(p))})),metadata:meta?{keys:Object.keys(meta),packagingVersion:meta.packagingVersion,payloadCount:meta.payload?.length,payloadDigest:meta.payloadDigest}:null,presentation,deploymentsCreated:0};
  fs.writeFileSync(area+'/diagnostic.json',JSON.stringify(diagnosis,null,2)+'\n');console.error(JSON.stringify(diagnosis));process.exitCode=1;
 });
 function run(command,args,options={}){const r=spawnSync(command,args,{cwd:root,env:process.env,stdio:'inherit',timeout:40*60*1000,...options});if(r.error||r.status!==0)throw Error(command+' failed: '+(r.error?.message??r.status));}
