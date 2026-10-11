@@ -363,11 +363,6 @@
   }
 
   /* All image introductions share the Home title anchor and phone geometry. */
-  .karento-dealership-home .original-home-hero {
-    --karento-mobile-hero-copy-top: calc(
-      var(--karento-space-8) + var(--karento-touch-target)
-    );
-  }
   .block-banner-home3 .swiper-group-1 {
     min-height: var(--karento-mobile-hero-height);
     height: auto !important;

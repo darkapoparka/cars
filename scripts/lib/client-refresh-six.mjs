@@ -435,8 +435,48 @@ function bindSignatureDetail(files,profile,logos,nativeFacts=false) {
   return [detailFile,derived,...factualPagePaths,...detailHostPaths,reservationFile,panelsFile];
 }
 
+/** Preserve native Signature composition while removing factual fallback drift. */
+export function personalizeSignatureNativeCopy(files) {
+  const prefix='karento-best/src/lib/',serviceFile=prefix+'components/ServiceSpotCard.svelte',brandsFile=prefix+'sections/HomeBrandLinks.svelte',catalogFile=prefix+'i18n/catalogs/reference-home.ts';
+  const paths=[serviceFile,brandsFile,catalogFile],present=paths.filter(name=>files.has(name));
+  if(!present.length)return [];
+  if(present.length!==paths.length)throw new Error('Signature native preview copy requires its complete reviewed consumer/catalog boundary');
+  // Compute every change before publishing any of this boundary's three outputs.
+  const reviewed=(source,before,after,label)=>{
+    const oldCount=source.split(before).length-1,afterCount=source.split(after).length-1;
+    if(afterCount===1&&oldCount===(after.includes(before)?1:0))return source;
+    if(afterCount)throw new Error('Reviewed dealer consumer changed: '+label);
+    return replaceOne(source,before,after,label);
+  };
+  let service=text(files,serviceFile),brands=text(files,brandsFile),catalog=text(files,catalogFile);
+  if(service.includes('import { dealer }')&&!service.includes('const previewServiceSpot = $derived('))throw new Error('Signature preview service import changed');
+  if(brands.includes('const brandsIntro')&&!brands.includes('const brandsIntro = $derived('))throw new Error('Signature preview brands boundary changed');
+  service=reviewed(service,'  const desktop = new MediaQuery("(min-width: 992px)");',
+    '  const desktop = new MediaQuery("(min-width: 992px)");\n  import { dealer } from "#lib/content.ts";\n  const previewServiceSpot = $derived(\n    Boolean(dealer.businessPreview) &&\n      ["referenceHome.services.import", "referenceHome.services.sell", "referenceHome.services.buy", "referenceHome.services.lease"].includes(spot.desktopTitleKey ?? ""),\n  );','Signature reviewed native preview service keys');
+  service=reviewed(service,'    desktop.current && spot.desktopTitleKey','    (desktop.current || previewServiceSpot) && spot.desktopTitleKey','Signature SSR/hydrated native service category');
+  service=reviewed(service,'    spot.descriptionKey ? locale.t(spot.descriptionKey) : spot.description,',
+    '    previewServiceSpot\n      ? locale.t("referenceHome.services.exampleDescription")\n      : spot.descriptionKey ? locale.t(spot.descriptionKey) : spot.description,','Signature neutral native service example');
+  brands=reviewed(brands,'  const mobile = new MediaQuery("(max-width: 767.98px)");',
+    '  const mobile = new MediaQuery("(max-width: 767.98px)");\n  const brandsIntro = $derived(\n    dealer.copy["home.brandsIntro"] === "Explore our dated vehicle examples." &&\n      (dealer.businessPreview?.mode === "dated-listing-snapshot" || dealer.businessPreview?.mode === "illustrative-not-dealer-stock")\n      ? locale.t(dealer.businessPreview.mode === "illustrative-not-dealer-stock"\n          ? "referenceHome.brands.illustrativeIntro"\n          : "referenceHome.brands.datedIntro")\n      : dealer.copy["home.brandsIntro"] ?? "Explore a range of leading car manufacturers.",\n  );','Signature known generated preview brands intro');
+  brands=reviewed(brands,'{dealer.copy["home.brandsIntro"] ??\n              "Explore a range of leading car manufacturers."}','{brandsIntro}','Signature native brands intro consumer');
+  for(const [lang,anchor,values] of [
+    ['En','    "Explore sample vehicle services and discuss what you need.",',[['referenceHome.services.exampleDescription','Service example'],['referenceHome.brands.datedIntro','Explore examples from dated vehicle listings.'],['referenceHome.brands.illustrativeIntro','Explore sample vehicles for this demo.']]],
+    ['Bg','    "Разгледайте примерните автомобилни услуги и обсъдете от какво имате нужда.",',[['referenceHome.services.exampleDescription','Примерна услуга'],['referenceHome.brands.datedIntro','Разгледайте примерите от датираните обяви.'],['referenceHome.brands.illustrativeIntro','Разгледайте примерните автомобили в това демо.']]]
+  ]) {
+    const addition=values.map(([key,value])=>'\n  '+JSON.stringify(key)+': '+JSON.stringify(value)+',').join('');
+    catalog=reviewed(catalog,anchor,anchor+addition,'Signature native '+lang+' preview copy keys');
+  }
+  for(const key of ['referenceHome.services.exampleDescription','referenceHome.brands.datedIntro','referenceHome.brands.illustrativeIntro'])
+    if(catalog.split(JSON.stringify(key)+':').length-1!==2)throw new Error('Signature native preview catalog keys must be unique in both locales');
+  if((service.match(/\bconst previewServiceSpot\b/g)||[]).length!==1||
+    (service.match(/import \{ dealer \} from "#lib\/content\.ts";/g)||[]).length!==1||
+    (brands.match(/\bconst brandsIntro\b/g)||[]).length!==1)throw new Error('Signature native preview derived boundaries must be unique');
+  const changed=[];for(const [name,value]of [[serviceFile,service],[brandsFile,brands],[catalogFile,catalog]])if(value!==text(files,name)){put(files,name,value);changed.push(name);}
+  return changed;
+}
+
 function personalizeSignatureCopy(files,profile) {
-  const prefix='karento-best/',changed=[],b=profile.business;
+  const prefix='karento-best/',changed=personalizeSignatureNativeCopy(files),b=profile.business;
   const footerFile=prefix+'src/lib/components/Footer.svelte';
   let footer=text(files,footerFile);
   if(!footer.includes('businessPreview')) {
