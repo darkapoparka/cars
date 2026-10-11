@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-fleet-artifact-transport-request",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T14:22:40Z",
+  "source": {
+    "repository": "darkapoparka/cars",
+    "workflowPath": ".github/workflows/existing-fleet-cloudflare.yml",
+    "runId": 38145301107,
+    "runAttempt": 1,
+    "headSha": "875e4c2859a33ba528e7e9a1bdfcc257d7396c8a",
+    "event": "push",
+    "ref": "refs/heads/main"
+  },
+  "artifact": {
+    "id": 11705210421,
+    "name": "existing-cf-single-worker-priselci-38145301107-1",
+    "sizeInBytes": 605590607,
+    "sha256": "f3371a5790c0e2b42f11150fa5b42711d192b1ff4ae4b174bc80896634cf229a"
+  },
+  "chunkSizeBytes": 209715200
+}
