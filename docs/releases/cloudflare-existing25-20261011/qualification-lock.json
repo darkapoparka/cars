@@ -5,28 +5,28 @@
     "auto-best": {
       "repository": "darkapoparka/cars",
       "status": "qualification",
-      "commit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
-      "release": "auto-best-2534187-source-qualification-2026-10-11",
+      "commit": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+      "release": "auto-best-32ac4eb-source-qualification-2026-10-11",
       "snapshotPath": "templates/auto-best",
-      "digest": "e3113f494f046ae8ea1d5ea58bbecf9d3082522ce0c383dad1936411170899cb",
+      "digest": "c4f4deef61d9a823aa20d3117d4f48ad4c393e0a9039376c199b4f537086eaae",
       "exportPolicy": "cars-source-v1",
       "source": {
         "repository": "darkapoparka/cars",
-        "revision": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
+        "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
         "path": "templates/auto-best",
-        "tree": "05b9df71239d59059533a665b0559a86dd8efe48",
-        "digest": "e3113f494f046ae8ea1d5ea58bbecf9d3082522ce0c383dad1936411170899cb"
+        "tree": "827df14f05eb5814fd2b2c7026ba83996fd7544e",
+        "digest": "c4f4deef61d9a823aa20d3117d4f48ad4c393e0a9039376c199b4f537086eaae"
       },
       "runtime": {
         "node": "22.20.0"
       },
       "modes": {
-        "standalone": "Bounded source QA recorded; current exact-source full acceptance pending.",
-        "mounted": "qualification pilot pending",
-        "dealer": "not accepted by this source review"
+        "standalone": "Recorded focused owner checks only; current complete acceptance pending.",
+        "mounted": "Priselci qualification pilot pending",
+        "dealer": "Reviewed Priselci-only source qualification; hosted pilot pending"
       },
       "qualification": {
-        "contextId": "fleet-priselci-fixed-pilot-20261011",
+        "contextId": "fleet-priselci-final-six-pilot-20261011",
         "sourceQA": {
           "approvedRelease": {
             "repository": "darkapoparka/cars",
@@ -496,8 +496,8 @@
         },
         "sourceDeltaReview": {
           "reference": "docs/releases/cloudflare-existing25-20261011/source-delta-review.json",
-          "sha256": "efa772cd2c872239dc9b3657a379ae0f1063622fc57bcac165064330f8d94c99",
-          "reviewedAt": "2026-10-11T09:37:25.155Z"
+          "sha256": "010e8104d1db1ed7dde83f67bb4104fee80ee517feb1680660c88c9ee32d422c",
+          "reviewedAt": "2026-10-11T12:45:51.683Z"
         },
         "catalogs": [
           {
@@ -506,34 +506,49 @@
             "en": "en",
             "bg": "bg"
           }
-        ]
+        ],
+        "pendingNativeChecks": [
+          "catalog-completeness",
+          "hardcoded-ui",
+          "native-routing",
+          "standalone-journeys",
+          "mounted-journeys",
+          "public-journeys",
+          "preferences-no-js",
+          "preferences-storage-disabled",
+          "preferences-races",
+          "request-isolation",
+          "security-write-blocking",
+          "assets-preserved"
+        ],
+        "sourceState": "published-final-owner-source"
       }
     },
     "modern": {
       "repository": "darkapoparka/cars",
       "status": "qualification",
-      "commit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
-      "release": "modern-2534187-source-qualification-2026-10-11",
+      "commit": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+      "release": "modern-32ac4eb-source-qualification-2026-10-11",
       "snapshotPath": "templates/modern",
-      "digest": "46bfd2136c4c7d439363a7f57147ff354e0442ab37d448849c26dde586f556b6",
+      "digest": "8f1d6ce675929ab677315bb08e3fb06e9bd1ebef42ebf8f037cd4f6ecf73f530",
       "exportPolicy": "cars-source-v1",
       "source": {
         "repository": "darkapoparka/cars",
-        "revision": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
+        "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
         "path": "templates/modern",
-        "tree": "a1ca9ada23fa84ab34bf8e183f1f929c2670e894",
-        "digest": "46bfd2136c4c7d439363a7f57147ff354e0442ab37d448849c26dde586f556b6"
+        "tree": "ae6999491c8d4faa7d1081457a07f177fc741243",
+        "digest": "8f1d6ce675929ab677315bb08e3fb06e9bd1ebef42ebf8f037cd4f6ecf73f530"
       },
       "runtime": {
         "node": "22.x"
       },
       "modes": {
-        "standalone": "Bounded source QA recorded; current exact-source full acceptance pending.",
-        "mounted": "qualification pilot pending",
-        "dealer": "not accepted by this source review"
+        "standalone": "Recorded focused owner checks only; current complete acceptance pending.",
+        "mounted": "Priselci qualification pilot pending",
+        "dealer": "Reviewed Priselci-only source qualification; hosted pilot pending"
       },
       "qualification": {
-        "contextId": "fleet-priselci-fixed-pilot-20261011",
+        "contextId": "fleet-priselci-final-six-pilot-20261011",
         "sourceQA": {
           "approvedRelease": {
             "repository": "darkapoparka/cars",
@@ -1019,8 +1034,8 @@
         },
         "sourceDeltaReview": {
           "reference": "docs/releases/cloudflare-existing25-20261011/source-delta-review.json",
-          "sha256": "efa772cd2c872239dc9b3657a379ae0f1063622fc57bcac165064330f8d94c99",
-          "reviewedAt": "2026-10-11T09:37:25.155Z"
+          "sha256": "010e8104d1db1ed7dde83f67bb4104fee80ee517feb1680660c88c9ee32d422c",
+          "reviewedAt": "2026-10-11T12:45:51.683Z"
         },
         "catalogs": [
           {
@@ -1045,7 +1060,22 @@
             "path": "packages/marketplace-ui/lib/marketplace-control-copy.ts",
             "export": "copyByLanguage"
           }
-        ]
+        ],
+        "pendingNativeChecks": [
+          "catalog-completeness",
+          "hardcoded-ui",
+          "native-routing",
+          "standalone-journeys",
+          "mounted-journeys",
+          "public-journeys",
+          "preferences-no-js",
+          "preferences-storage-disabled",
+          "preferences-races",
+          "request-isolation",
+          "security-write-blocking",
+          "assets-preserved"
+        ],
+        "sourceState": "published-final-owner-source"
       }
     },
     "carwow": {
@@ -1253,28 +1283,28 @@
     "import": {
       "repository": "darkapoparka/cars",
       "status": "qualification",
-      "commit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
-      "release": "import-2534187-source-qualification-2026-10-11",
+      "commit": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+      "release": "import-32ac4eb-source-qualification-2026-10-11",
       "snapshotPath": "templates/import",
-      "digest": "42bf029ce6f23eb979b4ae4bf0a0f666693f777e905f75793c742ad269c348f7",
+      "digest": "c18dc74d9f72c88c8c0959fe36331c75178e71a5563cfc21b4d060c094044f36",
       "exportPolicy": "cars-source-v1",
       "source": {
         "repository": "darkapoparka/cars",
-        "revision": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
+        "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
         "path": "templates/import",
-        "tree": "e8f628321259169fcbd0f9acd8ff7185cac4dacf",
-        "digest": "42bf029ce6f23eb979b4ae4bf0a0f666693f777e905f75793c742ad269c348f7"
+        "tree": "12a7688546d04362156f600b3eea9cbd66d119cc",
+        "digest": "c18dc74d9f72c88c8c0959fe36331c75178e71a5563cfc21b4d060c094044f36"
       },
       "runtime": {
         "node": "24.21.0"
       },
       "modes": {
-        "standalone": "Bounded source QA recorded; current exact-source full acceptance pending.",
-        "mounted": "qualification pilot pending",
-        "dealer": "not accepted by this source review"
+        "standalone": "Recorded focused owner checks only; current complete acceptance pending.",
+        "mounted": "Priselci qualification pilot pending",
+        "dealer": "Reviewed Priselci-only source qualification; hosted pilot pending"
       },
       "qualification": {
-        "contextId": "fleet-priselci-fixed-pilot-20261011",
+        "contextId": "fleet-priselci-final-six-pilot-20261011",
         "sourceQA": {
           "approvedRelease": {
             "repository": "darkapoparka/cars",
@@ -1763,8 +1793,8 @@
         },
         "sourceDeltaReview": {
           "reference": "docs/releases/cloudflare-existing25-20261011/source-delta-review.json",
-          "sha256": "efa772cd2c872239dc9b3657a379ae0f1063622fc57bcac165064330f8d94c99",
-          "reviewedAt": "2026-10-11T09:37:25.155Z"
+          "sha256": "010e8104d1db1ed7dde83f67bb4104fee80ee517feb1680660c88c9ee32d422c",
+          "reviewedAt": "2026-10-11T12:45:51.683Z"
         },
         "catalogs": [
           {
@@ -1795,208 +1825,278 @@
             "path": "src/lib/content/extra-localized.ts",
             "export": "extraEnglish"
           }
-        ]
+        ],
+        "pendingNativeChecks": [
+          "catalog-completeness",
+          "hardcoded-ui",
+          "native-routing",
+          "standalone-journeys",
+          "mounted-journeys",
+          "public-journeys",
+          "preferences-no-js",
+          "preferences-storage-disabled",
+          "preferences-races",
+          "request-isolation",
+          "security-write-blocking",
+          "assets-preserved"
+        ],
+        "sourceState": "published-final-owner-source"
       }
     },
     "app": {
-      "snapshotPath": "templates/app",
-      "status": "approved",
       "repository": "darkapoparka/cars",
-      "commit": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+      "status": "qualification",
+      "commit": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+      "release": "app-32ac4eb-source-qualification-2026-10-11",
+      "snapshotPath": "templates/app",
+      "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+      "exportPolicy": "cars-source-v1",
       "source": {
         "repository": "darkapoparka/cars",
-        "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+        "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
         "path": "templates/app",
-        "tree": "749512ff762c25272d1474225ff653dd4c88f0fe",
-        "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541"
+        "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+        "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
       },
-      "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
-      "exportPolicy": "cars-source-v1",
-      "release": "app-final-spacing-dock-2026-10-10",
-      "reason": "Reviewed immutable Cars template source; dealer adoption is explicit.",
       "runtime": {
         "node": "22.23.2",
         "next": "16.3.8",
         "declaredNode": ">=22.20.0 <23"
       },
       "modes": {
-        "standalone": "Owner final viewport checks and current 149-test regression passed.",
-        "mounted": "Requires exact final complete dealer build and mounted pilot acceptance before production publication."
+        "standalone": "Recorded focused owner checks only; current complete acceptance pending.",
+        "mounted": "Priselci qualification pilot pending",
+        "dealer": "Reviewed Priselci-only source qualification; hosted pilot pending"
       },
-      "qa": {
-        "evidence": "docs/releases/six-design-2026-10-10/app-4e18477-release.json",
-        "verifiedAt": "2026-10-10T17:17:10.799Z",
-        "checks": [
-          {
-            "name": "current-source-unit-tests",
-            "status": "passed",
-            "count": 149,
-            "evidence": [
-              {
-                "path": "runtime/vercel-six-rollout-20261010-execute/app-latest-tests.log",
-                "sha256": "cb7a7b085df0cbcfb7f2ea18accd1d3e7bf2ef6677000fae81cabbebeac1353f"
-              },
-              {
-                "path": "runtime/vercel-six-rollout-20261010-execute/app-latest-types.log",
-                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "qualification": {
+        "contextId": "fleet-priselci-final-six-pilot-20261011",
+        "sourceQA": {
+          "approvedRelease": {
+            "snapshotPath": "templates/app",
+            "status": "approved",
+            "repository": "darkapoparka/cars",
+            "commit": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+            "source": {
+              "repository": "darkapoparka/cars",
+              "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+              "path": "templates/app",
+              "tree": "749512ff762c25272d1474225ff653dd4c88f0fe",
+              "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541"
+            },
+            "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
+            "exportPolicy": "cars-source-v1",
+            "release": "app-final-spacing-dock-2026-10-10",
+            "reason": "Reviewed immutable Cars template source; dealer adoption is explicit.",
+            "runtime": {
+              "node": "22.23.2",
+              "next": "16.3.8",
+              "declaredNode": ">=22.20.0 <23"
+            },
+            "modes": {
+              "standalone": "Owner final viewport checks and current 149-test regression passed.",
+              "mounted": "Requires exact final complete dealer build and mounted pilot acceptance before production publication."
+            },
+            "qa": {
+              "evidence": "docs/releases/six-design-2026-10-10/app-4e18477-release.json",
+              "verifiedAt": "2026-10-10T17:17:10.799Z",
+              "checks": [
+                {
+                  "name": "current-source-unit-tests",
+                  "status": "passed",
+                  "count": 149,
+                  "evidence": [
+                    {
+                      "path": "runtime/vercel-six-rollout-20261010-execute/app-latest-tests.log",
+                      "sha256": "cb7a7b085df0cbcfb7f2ea18accd1d3e7bf2ef6677000fae81cabbebeac1353f"
+                    },
+                    {
+                      "path": "runtime/vercel-six-rollout-20261010-execute/app-latest-types.log",
+                      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                    }
+                  ]
+                },
+                {
+                  "name": "final-owner-viewport-and-interaction-checks",
+                  "status": "passed",
+                  "scope": "Committed owner checks cover 30 page layouts plus Sell/Finance/Services EN/BG, drawer Escape, dock navigation, collection search and desktop spacing; original results retained.",
+                  "evidence": [
+                    {
+                      "path": "templates/app/docs/mobile-spacing-audit-2026-10-10/final-checks.json",
+                      "sha256": "e75ca50a8287a2b26e271df49985bcd6df8f768e7402db71e8970e7f012ed3cb",
+                      "cases": 43,
+                      "widths": [
+                        320,
+                        390,
+                        1440
+                      ]
+                    },
+                    {
+                      "path": "templates/app/docs/mobile-spacing-audit-2026-10-10/luxe-target-checks.json",
+                      "sha256": "d7c9a4924fc8e7821b3bcc961b17d04e7fba733fcbd8c954f62e97e3477a938a",
+                      "cases": 3,
+                      "widths": [
+                        320,
+                        390,
+                        1440
+                      ]
+                    },
+                    {
+                      "path": "templates/app/docs/finance-pill-alignment-2026-10-10/after-checks.json",
+                      "sha256": "5196378ed6f223892f42be922984c2f8e9fdad1f2bd03718601006b6a58bba4f",
+                      "cases": 6,
+                      "widths": [
+                        390,
+                        320,
+                        1440
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "reviewed-delta-from-qualified-production",
+                  "status": "passed",
+                  "scope": "Only FeatureLanding panel containment, InventoryClient mobile search target, and ShowroomIcon dock car glyph changed. Prior production source remains 410b84a; no claim that 4e1847775 is hosted or production-compiled yet.",
+                  "sourceChanges": [
+                    "templates/app/components/FeatureLanding.tsx",
+                    "templates/app/components/InventoryClient.tsx",
+                    "templates/app/components/ShowroomIcon.tsx"
+                  ],
+                  "baseline": {
+                    "path": "docs/releases/six-design-2026-10-10/app-410b84a-release.json",
+                    "sha256": "415913a75a2a47be2ec0e29c3dab10235972de21bce278bf4647ade8840ff58b"
+                  }
+                }
+              ],
+              "standalone": {
+                "mobile": {
+                  "verified": true,
+                  "widths": [
+                    320,
+                    390
+                  ],
+                  "evidence": [
+                    {
+                      "path": "templates/app/docs/mobile-spacing-audit-2026-10-10/final-checks.json",
+                      "sha256": "e75ca50a8287a2b26e271df49985bcd6df8f768e7402db71e8970e7f012ed3cb",
+                      "cases": 43,
+                      "widths": [
+                        320,
+                        390,
+                        1440
+                      ]
+                    },
+                    {
+                      "path": "templates/app/docs/mobile-spacing-audit-2026-10-10/luxe-target-checks.json",
+                      "sha256": "d7c9a4924fc8e7821b3bcc961b17d04e7fba733fcbd8c954f62e97e3477a938a",
+                      "cases": 3,
+                      "widths": [
+                        320,
+                        390,
+                        1440
+                      ]
+                    },
+                    {
+                      "path": "templates/app/docs/finance-pill-alignment-2026-10-10/after-checks.json",
+                      "sha256": "5196378ed6f223892f42be922984c2f8e9fdad1f2bd03718601006b6a58bba4f",
+                      "cases": 6,
+                      "widths": [
+                        390,
+                        320,
+                        1440
+                      ]
+                    }
+                  ]
+                },
+                "desktop": {
+                  "verified": true,
+                  "widths": [
+                    1440
+                  ],
+                  "evidence": [
+                    {
+                      "path": "templates/app/docs/mobile-spacing-audit-2026-10-10/final-checks.json",
+                      "sha256": "e75ca50a8287a2b26e271df49985bcd6df8f768e7402db71e8970e7f012ed3cb",
+                      "cases": 43,
+                      "widths": [
+                        320,
+                        390,
+                        1440
+                      ]
+                    },
+                    {
+                      "path": "templates/app/docs/mobile-spacing-audit-2026-10-10/luxe-target-checks.json",
+                      "sha256": "d7c9a4924fc8e7821b3bcc961b17d04e7fba733fcbd8c954f62e97e3477a938a",
+                      "cases": 3,
+                      "widths": [
+                        320,
+                        390,
+                        1440
+                      ]
+                    },
+                    {
+                      "path": "templates/app/docs/finance-pill-alignment-2026-10-10/after-checks.json",
+                      "sha256": "5196378ed6f223892f42be922984c2f8e9fdad1f2bd03718601006b6a58bba4f",
+                      "cases": 6,
+                      "widths": [
+                        390,
+                        320,
+                        1440
+                      ]
+                    }
+                  ]
+                }
               }
-            ]
-          },
-          {
-            "name": "final-owner-viewport-and-interaction-checks",
-            "status": "passed",
-            "scope": "Committed owner checks cover 30 page layouts plus Sell/Finance/Services EN/BG, drawer Escape, dock navigation, collection search and desktop spacing; original results retained.",
-            "evidence": [
-              {
-                "path": "templates/app/docs/mobile-spacing-audit-2026-10-10/final-checks.json",
-                "sha256": "e75ca50a8287a2b26e271df49985bcd6df8f768e7402db71e8970e7f012ed3cb",
-                "cases": 43,
-                "widths": [
-                  320,
-                  390,
-                  1440
-                ]
-              },
-              {
-                "path": "templates/app/docs/mobile-spacing-audit-2026-10-10/luxe-target-checks.json",
-                "sha256": "d7c9a4924fc8e7821b3bcc961b17d04e7fba733fcbd8c954f62e97e3477a938a",
-                "cases": 3,
-                "widths": [
-                  320,
-                  390,
-                  1440
-                ]
-              },
-              {
-                "path": "templates/app/docs/finance-pill-alignment-2026-10-10/after-checks.json",
-                "sha256": "5196378ed6f223892f42be922984c2f8e9fdad1f2bd03718601006b6a58bba4f",
-                "cases": 6,
-                "widths": [
-                  390,
-                  320,
-                  1440
-                ]
-              }
-            ]
-          },
-          {
-            "name": "reviewed-delta-from-qualified-production",
-            "status": "passed",
-            "scope": "Only FeatureLanding panel containment, InventoryClient mobile search target, and ShowroomIcon dock car glyph changed. Prior production source remains 410b84a; no claim that 4e1847775 is hosted or production-compiled yet.",
-            "sourceChanges": [
-              "templates/app/components/FeatureLanding.tsx",
-              "templates/app/components/InventoryClient.tsx",
-              "templates/app/components/ShowroomIcon.tsx"
-            ],
-            "baseline": {
-              "path": "docs/releases/six-design-2026-10-10/app-410b84a-release.json",
-              "sha256": "415913a75a2a47be2ec0e29c3dab10235972de21bce278bf4647ade8840ff58b"
+            },
+            "legacySource": {
+              "path": "",
+              "tree": null,
+              "evidence": null,
+              "nativeDeployment": null
             }
-          }
-        ],
-        "standalone": {
-          "mobile": {
-            "verified": true,
-            "widths": [
-              320,
-              390
-            ],
-            "evidence": [
-              {
-                "path": "templates/app/docs/mobile-spacing-audit-2026-10-10/final-checks.json",
-                "sha256": "e75ca50a8287a2b26e271df49985bcd6df8f768e7402db71e8970e7f012ed3cb",
-                "cases": 43,
-                "widths": [
-                  320,
-                  390,
-                  1440
-                ]
-              },
-              {
-                "path": "templates/app/docs/mobile-spacing-audit-2026-10-10/luxe-target-checks.json",
-                "sha256": "d7c9a4924fc8e7821b3bcc961b17d04e7fba733fcbd8c954f62e97e3477a938a",
-                "cases": 3,
-                "widths": [
-                  320,
-                  390,
-                  1440
-                ]
-              },
-              {
-                "path": "templates/app/docs/finance-pill-alignment-2026-10-10/after-checks.json",
-                "sha256": "5196378ed6f223892f42be922984c2f8e9fdad1f2bd03718601006b6a58bba4f",
-                "cases": 6,
-                "widths": [
-                  390,
-                  320,
-                  1440
-                ]
-              }
-            ]
           },
-          "desktop": {
-            "verified": true,
-            "widths": [
-              1440
-            ],
-            "evidence": [
-              {
-                "path": "templates/app/docs/mobile-spacing-audit-2026-10-10/final-checks.json",
-                "sha256": "e75ca50a8287a2b26e271df49985bcd6df8f768e7402db71e8970e7f012ed3cb",
-                "cases": 43,
-                "widths": [
-                  320,
-                  390,
-                  1440
-                ]
-              },
-              {
-                "path": "templates/app/docs/mobile-spacing-audit-2026-10-10/luxe-target-checks.json",
-                "sha256": "d7c9a4924fc8e7821b3bcc961b17d04e7fba733fcbd8c954f62e97e3477a938a",
-                "cases": 3,
-                "widths": [
-                  320,
-                  390,
-                  1440
-                ]
-              },
-              {
-                "path": "templates/app/docs/finance-pill-alignment-2026-10-10/after-checks.json",
-                "sha256": "5196378ed6f223892f42be922984c2f8e9fdad1f2bd03718601006b6a58bba4f",
-                "cases": 6,
-                "widths": [
-                  390,
-                  320,
-                  1440
-                ]
-              }
-            ]
-          }
-        }
-      },
-      "legacySource": {
-        "path": "",
-        "tree": null,
-        "evidence": null,
-        "nativeDeployment": null
+          "releaseSha256": "e432aeca9affafa52aff0a4c7d0e832c5d674fc37d068bb15c64f412f9259454",
+          "reference": "docs/releases/six-design-2026-10-10/app-4e18477-release.json",
+          "sha256": "a2057805c85ecdca6b44817dc35dc0ade2e40a78b81faedadd8410f3daaeb64f",
+          "verifiedAt": "2026-10-10T17:17:10.799Z"
+        },
+        "sourceDeltaReview": {
+          "reference": "docs/releases/cloudflare-existing25-20261011/source-delta-review.json",
+          "sha256": "010e8104d1db1ed7dde83f67bb4104fee80ee517feb1680660c88c9ee32d422c",
+          "reviewedAt": "2026-10-11T12:45:51.683Z"
+        },
+        "catalogs": [],
+        "pendingNativeChecks": [
+          "catalog-completeness",
+          "hardcoded-ui",
+          "native-routing",
+          "standalone-journeys",
+          "mounted-journeys",
+          "public-journeys",
+          "preferences-no-js",
+          "preferences-storage-disabled",
+          "preferences-races",
+          "request-isolation",
+          "security-write-blocking",
+          "assets-preserved"
+        ],
+        "sourceState": "published-final-owner-source"
       }
     },
     "mobile": {
-      "snapshotPath": "templates/mobile",
-      "status": "approved",
       "repository": "darkapoparka/cars",
-      "commit": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+      "status": "qualification",
+      "commit": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+      "release": "mobile-32ac4eb-source-qualification-2026-10-11",
+      "snapshotPath": "templates/mobile",
+      "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
+      "exportPolicy": "cars-source-v1",
       "source": {
         "repository": "darkapoparka/cars",
-        "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+        "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
         "path": "templates/mobile",
-        "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b",
-        "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d"
+        "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+        "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
       },
-      "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d",
-      "exportPolicy": "cars-source-v1",
-      "release": "mobile-services-production-qualified-2026-10-10",
-      "reason": "Reviewed immutable Cars template source; dealer adoption is explicit.",
       "runtime": {
         "node": "22.23.2",
         "declaredNode": ">=22.20.0 <23",
@@ -2004,112 +2104,170 @@
         "browser": "Installed Playwright Chromium; isolated production build"
       },
       "modes": {
-        "standalone": "Verified local production build, source stability, 161 tests, types, lint and 48 EN/BG service-detail browser checks.",
-        "mounted": "Requires exact personalized six-design pilot qualification before dealer production release.",
-        "dealer": "Existing dealer customization and inventory must pass candidate and hosted verification."
+        "standalone": "Recorded focused owner checks only; current complete acceptance pending.",
+        "mounted": "Priselci qualification pilot pending",
+        "dealer": "Reviewed Priselci-only source qualification; hosted pilot pending"
       },
-      "qa": {
-        "evidence": "docs/releases/six-design-2026-10-10/mobile-8a97176-release.json",
-        "verifiedAt": "2026-10-10T16:55:06.595Z",
-        "checks": [
-          {
-            "name": "exact-reviewed-source-commit",
-            "status": "passed",
-            "scope": "Only the 12 reviewed existing service-detail/navigation source paths and their QA record were committed; compiled source hashes stayed stable.",
-            "evidence": [
-              {
-                "path": "docs/releases/six-design-2026-10-10/mobile-service-source-qa.json",
-                "sha256": "d4e9dd0f0601041f139fc13ec557bca0f3177ae16598b0a025a211e25f31ff69"
+      "qualification": {
+        "contextId": "fleet-priselci-final-six-pilot-20261011",
+        "sourceQA": {
+          "approvedRelease": {
+            "snapshotPath": "templates/mobile",
+            "status": "approved",
+            "repository": "darkapoparka/cars",
+            "commit": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+            "source": {
+              "repository": "darkapoparka/cars",
+              "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+              "path": "templates/mobile",
+              "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b",
+              "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d"
+            },
+            "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d",
+            "exportPolicy": "cars-source-v1",
+            "release": "mobile-services-production-qualified-2026-10-10",
+            "reason": "Reviewed immutable Cars template source; dealer adoption is explicit.",
+            "runtime": {
+              "node": "22.23.2",
+              "declaredNode": ">=22.20.0 <23",
+              "next": "16.3.8",
+              "browser": "Installed Playwright Chromium; isolated production build"
+            },
+            "modes": {
+              "standalone": "Verified local production build, source stability, 161 tests, types, lint and 48 EN/BG service-detail browser checks.",
+              "mounted": "Requires exact personalized six-design pilot qualification before dealer production release.",
+              "dealer": "Existing dealer customization and inventory must pass candidate and hosted verification."
+            },
+            "qa": {
+              "evidence": "docs/releases/six-design-2026-10-10/mobile-8a97176-release.json",
+              "verifiedAt": "2026-10-10T16:55:06.595Z",
+              "checks": [
+                {
+                  "name": "exact-reviewed-source-commit",
+                  "status": "passed",
+                  "scope": "Only the 12 reviewed existing service-detail/navigation source paths and their QA record were committed; compiled source hashes stayed stable.",
+                  "evidence": [
+                    {
+                      "path": "docs/releases/six-design-2026-10-10/mobile-service-source-qa.json",
+                      "sha256": "d4e9dd0f0601041f139fc13ec557bca0f3177ae16598b0a025a211e25f31ff69"
+                    }
+                  ]
+                },
+                {
+                  "name": "production-build",
+                  "status": "passed",
+                  "buildId": "zmhjbzqTNroA6LktHDoDX",
+                  "evidenceSha256": "bf1fe8835a4a9ed4655d1f1cd9e9b2e8dcf755523188ef8823f489de7908546c",
+                  "sourceClosureSha256": "8582a5f98d0242aa9ee2afbe494bd42000adc0167e4733780106c8389eab5bb7"
+                },
+                {
+                  "name": "mobile-final-tests",
+                  "status": "passed",
+                  "exitCode": 0,
+                  "evidence": [
+                    {
+                      "path": "runtime/vercel-six-release-20261010-web/mobile-final-tests.log",
+                      "sha256": "565c7392597cad24a93c65d86c751ace0c71dea5d4f7d08ca17b3f1f3222eafa"
+                    }
+                  ]
+                },
+                {
+                  "name": "mobile-final-types",
+                  "status": "passed",
+                  "exitCode": 0,
+                  "evidence": [
+                    {
+                      "path": "runtime/vercel-six-release-20261010-web/mobile-final-types.log",
+                      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                    }
+                  ]
+                },
+                {
+                  "name": "mobile-final-lint",
+                  "status": "passed",
+                  "exitCode": 0,
+                  "evidence": [
+                    {
+                      "path": "runtime/vercel-six-release-20261010-web/mobile-final-lint.log",
+                      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                    }
+                  ]
+                },
+                {
+                  "name": "production-service-browser",
+                  "status": "passed",
+                  "checks": 48,
+                  "scope": "Production service routes, EN/BG 320/390/1440, tabs/FAQ, truthful contact actions, Escape/focus, direct reload, unknown-route 404; all business writes blocked.",
+                  "evidenceSha256": "aac345e991c1dcff856b08e84b641312c92650e35812de4e53b3301788a8ad13"
+                }
+              ],
+              "standalone": {
+                "mobile": {
+                  "verified": true,
+                  "widths": [
+                    320,
+                    390
+                  ],
+                  "locales": [
+                    "en",
+                    "bg"
+                  ]
+                },
+                "desktop": {
+                  "verified": true,
+                  "widths": [
+                    1440
+                  ],
+                  "locales": [
+                    "en",
+                    "bg"
+                  ]
+                }
               }
-            ]
+            }
           },
-          {
-            "name": "production-build",
-            "status": "passed",
-            "buildId": "zmhjbzqTNroA6LktHDoDX",
-            "evidenceSha256": "bf1fe8835a4a9ed4655d1f1cd9e9b2e8dcf755523188ef8823f489de7908546c",
-            "sourceClosureSha256": "8582a5f98d0242aa9ee2afbe494bd42000adc0167e4733780106c8389eab5bb7"
-          },
-          {
-            "name": "mobile-final-tests",
-            "status": "passed",
-            "exitCode": 0,
-            "evidence": [
-              {
-                "path": "runtime/vercel-six-release-20261010-web/mobile-final-tests.log",
-                "sha256": "565c7392597cad24a93c65d86c751ace0c71dea5d4f7d08ca17b3f1f3222eafa"
-              }
-            ]
-          },
-          {
-            "name": "mobile-final-types",
-            "status": "passed",
-            "exitCode": 0,
-            "evidence": [
-              {
-                "path": "runtime/vercel-six-release-20261010-web/mobile-final-types.log",
-                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-              }
-            ]
-          },
-          {
-            "name": "mobile-final-lint",
-            "status": "passed",
-            "exitCode": 0,
-            "evidence": [
-              {
-                "path": "runtime/vercel-six-release-20261010-web/mobile-final-lint.log",
-                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-              }
-            ]
-          },
-          {
-            "name": "production-service-browser",
-            "status": "passed",
-            "checks": 48,
-            "scope": "Production service routes, EN/BG 320/390/1440, tabs/FAQ, truthful contact actions, Escape/focus, direct reload, unknown-route 404; all business writes blocked.",
-            "evidenceSha256": "aac345e991c1dcff856b08e84b641312c92650e35812de4e53b3301788a8ad13"
-          }
+          "releaseSha256": "f00030c15bd35607773a7a3fb6792a38aff8f026568576056769958b80d38c6a",
+          "reference": "docs/releases/six-design-2026-10-10/mobile-8a97176-release.json",
+          "sha256": "afbba652e162b7bbada337014fd9f7f607118d7e5f3dae232d10e19a6883c0fd",
+          "verifiedAt": "2026-10-10T16:55:06.595Z"
+        },
+        "sourceDeltaReview": {
+          "reference": "docs/releases/cloudflare-existing25-20261011/source-delta-review.json",
+          "sha256": "010e8104d1db1ed7dde83f67bb4104fee80ee517feb1680660c88c9ee32d422c",
+          "reviewedAt": "2026-10-11T12:45:51.683Z"
+        },
+        "catalogs": [],
+        "pendingNativeChecks": [
+          "catalog-completeness",
+          "hardcoded-ui",
+          "native-routing",
+          "standalone-journeys",
+          "mounted-journeys",
+          "public-journeys",
+          "preferences-no-js",
+          "preferences-storage-disabled",
+          "preferences-races",
+          "request-isolation",
+          "security-write-blocking",
+          "assets-preserved"
         ],
-        "standalone": {
-          "mobile": {
-            "verified": true,
-            "widths": [
-              320,
-              390
-            ],
-            "locales": [
-              "en",
-              "bg"
-            ]
-          },
-          "desktop": {
-            "verified": true,
-            "widths": [
-              1440
-            ],
-            "locales": [
-              "en",
-              "bg"
-            ]
-          }
-        }
+        "sourceState": "published-final-owner-source"
       }
     },
     "karento-best": {
       "repository": "darkapoparka/cars",
       "status": "qualification",
-      "commit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
-      "release": "karento-best-2534187-source-qualification-2026-10-11",
+      "commit": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+      "release": "karento-best-32ac4eb-source-qualification-2026-10-11",
       "snapshotPath": "templates/karento-best",
-      "digest": "da247d4d1c9fa45fec8d3748e087375ace062790f861c8ecebcb20620a39125f",
+      "digest": "b034d5d98ac5080d7f90ad281d309bdaca70a891326458a6957165cf4e1d6356",
       "exportPolicy": "cars-source-v1",
       "source": {
         "repository": "darkapoparka/cars",
-        "revision": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
+        "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
         "path": "templates/karento-best",
-        "tree": "d95a86112165b229026b8fc732084548d3e42299",
-        "digest": "da247d4d1c9fa45fec8d3748e087375ace062790f861c8ecebcb20620a39125f"
+        "tree": "cd09ed79c2368585acfb915a4e459e656e434c5d",
+        "digest": "b034d5d98ac5080d7f90ad281d309bdaca70a891326458a6957165cf4e1d6356"
       },
       "runtime": {
         "node": "26.10.0",
@@ -2123,12 +2281,12 @@
         }
       },
       "modes": {
-        "standalone": "Bounded source QA recorded; current exact-source full acceptance pending.",
-        "mounted": "qualification pilot pending",
-        "dealer": "not accepted by this source review"
+        "standalone": "Recorded focused owner checks only; current complete acceptance pending.",
+        "mounted": "Priselci qualification pilot pending",
+        "dealer": "Reviewed Priselci-only source qualification; hosted pilot pending"
       },
       "qualification": {
-        "contextId": "fleet-priselci-fixed-pilot-20261011",
+        "contextId": "fleet-priselci-final-six-pilot-20261011",
         "sourceQA": {
           "approvedRelease": {
             "snapshotPath": "templates/karento-best",
@@ -2328,25 +2486,65 @@
         },
         "sourceDeltaReview": {
           "reference": "docs/releases/cloudflare-existing25-20261011/source-delta-review.json",
-          "sha256": "efa772cd2c872239dc9b3657a379ae0f1063622fc57bcac165064330f8d94c99",
-          "reviewedAt": "2026-10-11T09:37:25.155Z"
+          "sha256": "010e8104d1db1ed7dde83f67bb4104fee80ee517feb1680660c88c9ee32d422c",
+          "reviewedAt": "2026-10-11T12:45:51.683Z"
         },
-        "catalogs": []
+        "catalogs": [],
+        "pendingNativeChecks": [
+          "catalog-completeness",
+          "hardcoded-ui",
+          "native-routing",
+          "standalone-journeys",
+          "mounted-journeys",
+          "public-journeys",
+          "preferences-no-js",
+          "preferences-storage-disabled",
+          "preferences-races",
+          "request-isolation",
+          "security-write-blocking",
+          "assets-preserved"
+        ],
+        "sourceState": "published-final-owner-source"
       }
     }
   },
   "qualification": {
     "schemaVersion": 1,
-    "contextId": "fleet-priselci-fixed-pilot-20261011",
+    "contextId": "fleet-priselci-final-six-pilot-20261011",
+    "draft": false,
+    "publishable": true,
+    "reviewed": true,
+    "reviewedAt": "2026-10-11T12:45:51.683Z",
     "qualificationOnly": true,
+    "approved": false,
     "nativeApproval": false,
     "hostedApproval": false,
     "globalReleaseApproval": false,
-    "sourceCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
+    "allSixFrozen": true,
+    "sourceCommit": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
     "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
     "sourceReview": {
       "reference": "docs/releases/cloudflare-existing25-20261011/source-review.json",
-      "sha256": "fb5f7b4140a7c486e806d42e3cb4bd3a167feb2ebc25dfce66133e7291ead523"
-    }
+      "sha256": "08b5b50b8afdea5e65860bfe6e1a7f0559f32405ad44e107c908f8ac55e1a5db"
+    },
+    "pending": [
+      "All twelve current native acceptance checks remain pending at the selected source.",
+      "Maintained source CI preservation plan, reviewed raster consumer checks, native qualification/App/extended reseals and provider compilation remain required.",
+      "Combined mounted/public browser pilot and owner visual acceptance of that hosted pilot remain pending. Global templates.lock.json is unchanged."
+    ],
+    "pendingNativeChecks": [
+      "catalog-completeness",
+      "hardcoded-ui",
+      "native-routing",
+      "standalone-journeys",
+      "mounted-journeys",
+      "public-journeys",
+      "preferences-no-js",
+      "preferences-storage-disabled",
+      "preferences-races",
+      "request-isolation",
+      "security-write-blocking",
+      "assets-preserved"
+    ]
   }
 }
