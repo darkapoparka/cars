@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Basic shapes created with Inkscape (http://www.inkscape.org/) -->
+<!-- Combined and expanded Richard Walledge (www.geocities.com/kesmaster.geo) -->
+<svg version="1.0" id="svg2767" width="480" height="640"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:version="0.32" inkscape:version="0.44.1"
+   sodipodi:docname="nordschleife.svg" sodipodi:docbase="C:\Program Files\Inkscape">
+  <metadata id="metadata1877">
+    <rdf:RDF>
+      <cc:Work rdf:about="Racing/Test course, the Nurburgring">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title>Nurburgring, aka 'the Green Hell'</dc:title>
+        <dc:date>07-AUG-2007</dc:date>
+        <dc:creator>
+          <cc:Agent><dc:title>Richard Walledge</dc:title></cc:Agent>
+        </dc:creator>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <style type="text/css">
+  #grid      {fill:none;fill-opacity:0.75;fill-rule:evenodd; stroke:#1e90ff; stroke-width:1.5}
+  .sand      {fill:#ffffd0}
+  .brid      {opacity:0.7; stroke:white; stroke-width:2; stroke-opacity:0.7}
+  #cor text {font-family: 'Arial'; font-size:15px; fill-opacity:0.5}
+  #cor text:hover {fill-opacity:1; stroke:black; stroke-width:0.3}
+  .chfl { fill:black;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0}
+  #v_ctrls {}
+</style>
+  <sodipodi:namedview id="base"
+     inkscape:window-height="808" inkscape:window-width="1152"
+     inkscape:pageshadow="2" inkscape:pageopacity="0"
+     guidetolerance="10" gridtolerance="10" objecttolerance="10"
+     borderopacity="1" bordercolor="#666666" pagecolor="#ffffff"
+     inkscape:zoom="1"
+     inkscape:cx="402" inkscape:cy="128"
+     inkscape:window-x="-4" inkscape:window-y="-4"
+     inkscape:current-layer="svg2767" />
+  <defs id="defs2769">
+    <linearGradient id="linearGradient1372">
+      <stop id="stop1374" style="stop-color:#ff0000;stop-opacity:1;" offset="0" />
+      <stop id="stop1381" offset="1" style="stop-color:#ffffd0;stop-opacity:1;" />
+      <stop id="stop1376" style="stop-color:#a08070;stop-opacity:0;" offset="1" />
+    </linearGradient>
+    <linearGradient id="linearGradient1385"
+       inkscape:collect="always"
+       xlink:href="#linearGradient1372"
+       gradientUnits="userSpaceOnUse"
+       x1="412" y1="200"
+       x2="426" y2="197"
+       gradientTransform="translate(90,299)" />
+  </defs>
+  <path id="backrect"
+     d="M 29,7 L 441,7 C 478,9 478,19 478,34 L 478,603 C 483,617 464,636 448,629 L 29,629 C 15,629 3,627 3,603 L 3,34 C 3,11 15,8 29,8 L 29,7 z"
+     fill="#4682b4" stroke="white" stroke-width="2" />
+  <g id="grid">
+    <path d="M 74,9 L 74,630" id="path8926" />
+    <path d="M 149,9 L 149,630" id="path8928" />
+    <path d="M 224,9 L 224,630" id="path8930" />
+    <path d="M 299,9 L 299,630" id="path8932" />
+    <path d="M 374,9 L 374,630" id="path8934" />
+    <path d="M 449,9 L 449,630" id="path8936" />
+    <path d="M 4,75 L 478,75" id="path8938" />
+    <path d="M 4,150 L 478,150" id="path8940" />
+    <path d="M 4,225 L 478,225" id="path8942" />
+    <path d="M 4,300 L 478,300" id="path8944" />
+    <path d="M 4,375 L 478,375" id="path8946" />
+    <path d="M 4,450 L 478,450" id="path8948" />
+    <path d="M 4,525 L 478,525" id="path8950" />
+    <path d="M 4,600 L 478,600" id="path8952" />
+  </g>
+  <rect id="bord"
+     fill="none" stroke="#1e90ff" stroke-width="2.5"
+     ry="26" rx="26"
+     y="8" x="3"
+     height="621" width="474" />
+  <path id="path2402"
+     d="M 1,-60 L 2.06,-53 L 3.06,-46 L -2,-49 L -9,-51 L -3,-56 L 1,-60 z"
+     style="fill:#ffffd0;fill-rule:nonzero;stroke:#a08070;stroke-width:0.93;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;display:inline" />
+  <g class="sand">
+    <circle cx="15" cy="275" r="5"/>
+    <circle cx="463" cy="183" r="5"/>
+    <circle cx="430" cy="230" r="5"/>
+    <circle cx="340" cy="270" r="5"/>
+  </g>
+  <circle id="castle" cx="200" cy="380" r="6" fill="#999999"/>
+  <path id="pathroadb257"
+     opacity="0.5" fill="none" stroke="black" stroke-width="2" stroke-opacity="0.4"
+     d="M 150,65 C 184,147 172,237 142,318 C 94,439 6.6,469 6.6,469"
+     sodipodi:nodetypes="ccc" />
+  <path id="pathnord"
+     d="M 174,446 L 163,434 C 152,443 148,452 142,452 C 140,450 136,449 135,449 C 126,446 122,448 115,448 C 113,448 112,446 111,445 C 103,438 109,441 113,447 M 107,441 C 102,436 101,433 100,431 C 96,430 90,431 88,428 C 86,424 85,420 81,416 C 77,414 73,411 69,408 C 64,403 59,398 53,389 C 46,379 46,376 49,368 C 52,360 53,352 53,344 C 53,327 46,312 39,298 C 36,290 30,285 23,281 C 18,278 16,277 16,275 C 15,274 17,271 18,271 C 23,266 23,269 25,268 M 24,267 C 32,263 41,258 47,251 C 52,244 60,241 64,234 L 70,224 C 70,214 70,212 74,208 C 78,205 78,205 77,203 C 77,201 76,199 78,197 C 91,183 115,163 105,145 C 102,142 99,143 96,141 C 93,140 89,136 89,133 C 88,130 90,128 94,127 C 96,127 97,126 98,125 C 101,123 103,119 103,118 C 109,95.07 122,102 133,116 C 135,120 134,115 139,114 C 141,113 147,112 152,111 C 157,111 162,112 167,113 C 169,113 171,112 173,109 C 175,106 173,101 174,99 C 177,95 182,94 186,92 C 195,87 208,88 215,83 C 219,82 223,76 227,77 C 228,77 229,78 230,78 L 230,80 L 231,95 C 231,101 231,109 232,117 M 232,117 C 238,125 248,127 257,131 C 268,133 280,132 292,135 C 303,136 311,143 319,149 C 324,151 324,151 327,152 C 330,152 331,151 335,150 C 336,149 339,148 343,143 C 348,139 362,131 369,133 C 369,136 366,138 361,141 L 351,149 C 350,150 359,154 373,140 C 376,138 379,137 383,135 C 384,132 389,128 394,119 M 394,119 C 405,114 404,113 415,116 C 419,116 422,117 424,118 C 427,120 430,120 432,124 C 433,125 436,126 440,127 C 443,129 443,129 446,133 C 452,139 453,140 451,148 C 449,155 449,160 458,163 C 462,163 464,166 464,173 C 463,180 462,181 456,182 C 454,183 450,181 447,182 L 443,182 C 440,185 438,189 437,192 C 432,199 431,202 431,214 C 431,221 431,222 430,224 C 428,228 427,228 421,230 C 418,231 415,233 413,237 C 407,244 404,254 397,260 C 395,262 392,264 391,265 C 388,267 384,269 379,270 C 377,271 368,273 366,274 M 366,273.5 C 363,273 360,273 357,272 C 346,267 343,269 337,277 C 335,280 337,281 339,283 C 343,286 348,286 353,288 C 356,289 357,291 362,295 C 364,302 365,308 358,313.5 C 354,315.5 354,316 351,318 L 235,392 M 235,392 C 235,392 225,400 224,401 C 211,411 204,425 193,437 C 191,441 190,441 190,443 C 190,445 186,445 182,446 C 180,448 176,447 174,446" fill="none" stroke="red" stroke-width="2"/> 
+
+  <path id="pathroad258" 
+     opacity="0.5" fill="none" stroke="black" stroke-width="2" stroke-opacity="0.4"
+     d="M 6,495 L 224,524" sodipodi:nodetypes="cc" />
+  <path id="patht2" class="brid"
+     d="M 15,255 L 30,280" sodipodi:nodetypes="cc" />
+  <path id="patht11" class="brid"
+     d="M 230,385 L 245,405" sodipodi:nodetypes="cc" />
+  <path id="pathsud" fill="purple"
+     d="M 144,619 C 139,615 137,607 135,601 C 135,599 102,577 99,576 C 90,578 86.7,585 77,585 C 72,585 70,584 68,583 C 60,577 61,564 58,556 C 57,552 59,550 73.34,539 C 85.6,529 96,518 105,505 C 108,500 109,499 111,500 C 114,500 117,504 117,508 C 116,511 119,514 122,514 C 130,509 131,507 140,506 C 147,504 154,505 159,498 C 161,493 164,487 168,483 L 170,481 L 179,487 C 184,491 188,494 189,494 C 188,520 190,547 182,572 C 177,589 178,594 163,606 C 155,608 154,620 148,621 C 147,621 146,620 144,619 z M 161,601 C 171,594 173,591 174,584 C 184,555 184,527 184,496 C 183,495 171,486 170,486 C 163,497 162,508 147.1,509 C 141,509.1 134,512 128,515 C 123,519 123,519 119,518 C 114,515 113,514 113,509 C 112,503 111,503 108,508 C 100,521 88,532 76,542 C 63,552 62,553 64,559 C 65,568 65,581 77.2,581 C 82,581 83,580 88,576 C 97,568 98,569 121,584 L 139,597 C 141,603 142,609 146,614 C 148,617 157,604 161,601 z"/>  
+
+  <path id="pathf1"
+     sodipodi:nodetypes="cccczcccccccsscccccc"
+     d="M 153,492 C 152,496 147,497 148,491 C 149,485 143,484 140,486 C 138,486 134,490 137,491 C 142,490 144,496 142,500 C 141,504.3 140,511 138,514 C 137,518 136,524 139,526.1 C 145,528 147,533 140,535 C 131,541 125,551 124,556 C 123,559 119,562 118,556 C 121,549 128,544 131,538 C 132,533 130,533 131,528 C 131,522 138,501 137,498 C 136,496 128,495 127,491 C 126,488 137,473 141,466 C 145,464 162,458.4 167,457 C 168,456 168,451 174,451 C 179,448.2 182,450 181,455 L 164,478 L 153,492 z"
+     fill="none" fill-opacity="0.75" stroke="#ffed00" stroke-width="2.4" />
+
+  <g id="g2464" style="display:inline" transform="translate(170,344)">
+    <path sodipodi:type="arc"
+       style="fill:white;fill-rule:nonzero;stroke:white;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path2462"
+       sodipodi:cx="335" sodipodi:cy="111"
+       sodipodi:rx="3.001" sodipodi:ry="1"
+       d="M 339 111 A 3.001 1 0 1 1  332,111 A 3.001 1 0 1 1  339 111 z"
+       transform="translate(1,0)" />
+    <g transform="matrix(0,0,0,0,337,81)"
+       inkscape:label="Layer 1" id="g4210" style="display:inline">
+      <g id="g3226" transform="matrix(1,0,0,1,50,19)">
+        <rect id="rect1430" y="1" x="0" height="298"  width="398"
+           style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;" />
+        <g class="chfl">
+        <rect id="rect1432" y="200" x="0" height="50" width="50"/>
+        <rect id="rect2307" y="250" x="50" height="50" width="50"/>
+        <rect id="rect2309" y="200" x="99" height="50" width="50"/>
+        <rect id="rect2311" y="250" x="149" height="50" width="50"/>
+        <rect id="rect2313" y="199" x="199" height="50" width="50"/>
+        <rect id="rect2315" y="250" x="249" height="50" width="50"/>
+        <rect id="rect2317" y="199" x="299" height="50" width="50"/>
+        <rect id="rect2319" y="250" x="349" height="50" width="50"/>
+        <rect id="rect3194" y="150" x="49" height="50" width="50"/>
+        <rect id="rect3196" y="149" x="149" height="50" width="50"/>
+        <rect id="rect3198" y="149" x="249" height="50" width="50"/>
+        <rect id="rect3200" y="150" x="349" height="50" width="50"/>
+        <rect id="rect3202" y="100" x="299" height="50" width="50"/>
+        <rect id="rect3204" y="99" x="199" height="50" width="50"/>
+        <rect id="rect3206" y="100" x="99" height="50" width="50"/>
+        <rect id="rect3208" y="100" x="0" height="50" width="50"/>
+        <rect id="rect3210" y="7.e-006" x="0" height="50" width="50"/>
+        <rect id="rect3212" y="50" x="50" height="50"  width="50"/>
+        <rect id="rect3214" y="7.e-006" x="99.5" height="50" width="50"/>
+        <rect id="rect3216" y="50" x="150" height="50" width="50"/>
+        <rect id="rect3218" y="-7.e-006" x="199" height="50" width="50"/>
+        <rect id="rect3220" y="50" x="250" height="50" width="50"/>
+        <rect id="rect3222" y="-7.e-006" x="299" height="50" width="50"/>
+        <rect id="rect3224" y="50" x="349" height="50" width="50"/>
+        </g>
+      </g>
+      <path id="path4238"
+         style="fill:none;fill-rule:evenodd;stroke:black;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;"
+         d="M 50,21 L 5,555"  />
+    </g>
+  </g>
+  <path
+     style="fill:url(#linearGradient1385);fill-rule:nonzero;stroke:#a08070;stroke-width:0.93;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;display:inline"
+     d="M 516,503 L 509,501 L 502,499 L 507,494 L 512,489 L 514,496 L 516,503 z"
+     id="path1383" />
+  <text y="50px" x="30px"
+     style="font-family:'Century Gothic','Bookman Old Style','Arial black'; font-size:21px; font-weight:bold; fill:white"
+     id="title">Nurburgring Nordschleife, Germany</text>
+  <g id="cor">
+    <text x="185px" y="470px" id="text1940">Start</text>
+    <text x="70px"  y="400px" id="text1942">Quiddelbach</text>
+    <text x="60px"  y="350px" id="text1944">Flugplatz</text>
+    <text x="75px" y="230px"  id="text1946">Metzgesfeld</text>
+    <text x="20px" y="120px"  id="text1948">Breidscheid</text>
+    <text x="200px" y="110px" id="text1950">Bergwerk</text>
+    <text x="290px" y="125px" id="text1952">Karussell</text>
+    <text x="375px" y="100px" id="text1954">Hohe Acht</text>
+    <text x="360px" y="175px" id="text1956">Wippermann</text>
+    <text x="320px" y="240px" id="text1958">Pflanzgarten</text>
+    <text x="290px" y="380px" id="text1960">Dottinger-Hohe</text>
+    <text x="130px" y="570px" id="text1962">Dunlop Kehre</text>
+  </g>
+</svg>
