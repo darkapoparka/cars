@@ -245,6 +245,10 @@ function signatureDetail(listing, profile, logo, nativeFacts=false) {
   if(card.mileage)specifications.push(specification('km',card.mileage,{labelKey:'vehicle.field.mileage',valueNumber:card.mileageValue,unit:card.mileageUnit}));
   if(card.transmission&&card.transmission!=='Not published')specifications.push(specification('auto',card.transmission,{labelKey:'vehicle.field.transmission',valueKey:'transmission.'+listing.transmissionType}));
   if(card.fuel&&card.fuel!=='Not published')specifications.push(specification('diesel',card.fuel,{labelKey:'vehicle.field.fuel',valueKey:'fuel.'+listing.fuelType}));
+  // The normalizer supplies a fallback year; only a matching published fact is a specification.
+  const suppliedYear=Number(listing.raw?.year??listing.raw?.production??listing.raw?.date);
+  if(Number.isInteger(suppliedYear)&&suppliedYear>=1900&&suppliedYear<=2100&&suppliedYear===listing.year)
+    specifications.push({...specification('year',String(suppliedYear),{labelKey:'vehicle.field.year'}),icon:'/assets/imgs/template/icons/calendar.svg'});
   if (listing.powerHp>0) specifications.push(specification('lit',String(listing.powerHp)+' hp',{labelKey:'vehicle.field.power',valueNumber:listing.powerHp,unit:'hp'}));
   const overview=unique([listing.description]).filter(value=>value!==business.inventoryNotice&&value!==business.previewNotice);
   const gallery={slides:listing.images.map(src=>({src,alt:listing.title})),thumbnails:listing.images.map(src=>({src,alt:listing.title}))};

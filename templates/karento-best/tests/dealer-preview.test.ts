@@ -45,13 +45,21 @@ test("business previews retain the complete website navigation", () => {
   }
 });
 
-test("phone specifications keep complete values on one line with content-sized cells", () => {
+test("phone specifications keep complete values in compact two-column cells", () => {
   const specifications = source(
     "src/lib/components/vehicle-detail/VehicleSpecifications.svelte",
   );
   assert.match(specifications, /\.list-feature-car\s*\{\s*display:\s*flex;/);
   assert.match(specifications, /flex-wrap:\s*wrap/);
+  assert.match(specifications, /flex:\s*0 0 calc\(\(100% - 8px\) \/ 2\)/);
   assert.match(specifications, /min-width:\s*max-content/);
+  const phone = specifications.slice(
+    specifications.indexOf("@media (max-width: 767.98px)"),
+    specifications.indexOf("@media (min-width: 992px)"),
+  );
+  assert.match(phone, /item-feature-car-inner\s*\{\s*gap:\s*6px/);
+  assert.match(phone, /feature-image\s*\{[^}]*flex:\s*0 0 20px/);
+  assert.match(phone, /feature-image\s*\{[^}]*margin-right:\s*0/);
   assert.match(specifications, /white-space:\s*nowrap/);
   assert.match(specifications, /overflow-wrap:\s*normal/);
   assert.match(specifications, /locale\.number\(specification\.valueNumber\)/);
