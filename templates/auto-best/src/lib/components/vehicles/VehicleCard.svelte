@@ -516,7 +516,7 @@
 
     .dn-vehicle-card--listing .dn-vehicle-card__mobile-meta {
       grid-area: facts;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       gap: var(--dn-space-1);
       margin: 0;
     }
@@ -541,7 +541,7 @@
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__fact {
-      flex: 0 1 auto;
+      flex: 1 1 auto;
       padding-inline: var(--dn-space-2);
     }
 

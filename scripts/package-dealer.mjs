@@ -1,4 +1,5 @@
 import {assertLeadBranding} from './publishing/lead-branding.mjs';
+import {applyAutoBestCardLayout} from './publishing/auto-best-card-layout.mjs';
 import { APP_PACKAGING_VERSION, baseNativeManifest, assertAppVariant, appendAppService } from './publishing/app-variant.mjs';
 import { assertCarsOwnedDealer } from './lib/dealer-source.mjs';
 import fs from 'node:fs/promises';
@@ -261,6 +262,7 @@ async function prepare({ source, manifest, sourceCommit, guidance, canonicalFile
     if (nativeReleases) throw new Error('Native releases require packaging version 2');
     await applyMounts(files, manifest);
   }
+  applyAutoBestCardLayout(files, manifest);
   const ignore=(files.get('.gitignore')?.toString('utf8')||'').split(/\r?\n/).filter(Boolean);
   const generatedIgnores=['# Cars generated package exclusions','**/node_modules/','**/.vercel/','**/.wrangler/','**/.open-next/','**/.vinext/','**/.cloudflare/','**/.cars-cloudflare/','**/.cars-build-assets/','.cars-next-*-dependencies.json','.cars-next-*-frozen-lock.json','.cars-cloudflare-svelte-locks.json','**/.svelte-kit/','**/.next*/','**/.turbo/','**/build/','**/dist/','**/.agency-os/','**/.auth/','**/.env*','!**/.env.example','!**/.env.sample','!**/.env.template','runtime/','*.log','*.tsbuildinfo'];
   files.set('.gitignore',Buffer.from([...new Set([...ignore,...generatedIgnores])].join('\n')+'\n'));

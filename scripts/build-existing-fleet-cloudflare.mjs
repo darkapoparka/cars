@@ -17,6 +17,7 @@ import {ADOPTION_FILE,NATIVE_QUALIFICATION_KIND,assertNativeAdoption,assertNativ
 import {assertExtendedVariantSources,applySixVariantMounts} from './publishing/six-variant.mjs';
 import {bindModernMobileWordmarkLogo} from './lib/client-logo-contract.mjs';
 import {applyDealerPresentation} from './publishing/dealer-presentation.mjs';
+import {applyAutoBestCardLayout} from './publishing/auto-best-card-layout.mjs';
 import {applyOptionalContactFallback} from './publishing/dealer-contact-fallback.mjs';
 import {applyDealerShare} from './publishing/dealer-share.mjs';
 import {assertLeadBranding} from './publishing/lead-branding.mjs';
@@ -113,6 +114,7 @@ async function prepare(slug,key,sha,area){
  manifest.shareIdentity={...manifest.shareIdentity,publicOrigin};manifest.candidate={...(manifest.candidate||{}),approved:false,nativeReleaseQualification:false};
  const contactFallback=applyOptionalContactFallback(files,manifest);
  const presentation=applyDealerPresentation(files,manifest);
+ applyAutoBestCardLayout(files,manifest);
  files=applySixVariantMounts(files,manifest,{provider:'cloudflare'});
  const logoFile='modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx',originalLogo=files.get(logoFile);if(!originalLogo)throw Error('Modern logo consumer missing');
  const fixedLogo=Buffer.from(bindModernMobileWordmarkLogo(originalLogo.toString('utf8')));files.set(logoFile,fixedLogo);
