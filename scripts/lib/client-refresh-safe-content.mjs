@@ -410,6 +410,9 @@ export function personalizeModernMobileSellCopy(source,profile) {
 }
 export function applyModernSafeContent({candidate,profile}) {
  const files = [['apps/web/app/[locale]/sell/page.tsx',personalizeModernSellCopy],['apps/web/app/[locale]/components/mobile-sell-vehicle-policy.ts',personalizeModernMobileSellCopy]];
+ const present = files.map(([name])=>fs.existsSync(path.join(candidate,name)));
+ if(present.every(value=>!value)) return {changed:[]};
+ if(present.some(value=>!value)) throw Error('Modern sell requires both known copy consumers');
  const updates = files.map(([name,transform])=>{const file=path.join(candidate,name),before=read(file),after=transform(before,profile);return {name,file,before,after};});
  const changed=[];
  for(const row of updates) if(row.before!==row.after){write(row.file,row.after);changed.push(row.name);}

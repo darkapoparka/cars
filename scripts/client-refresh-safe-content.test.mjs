@@ -238,3 +238,20 @@ test('Modern two-path apply validates both before writes and reports only change
  assert.deepEqual(applyModernSafeContent({candidate,profile:profile('BG')}),{changed:[]});
  assert.equal(withoutModernCopy(fs.readFileSync(path.join(candidate,pagePath),'utf8')),withoutModernCopy(modernSellFixture));
 });
+
+
+test('Modern sparse ordinary candidate without both sell consumers remains a no-op',t=>{
+ const candidate=tinyArea(t),retained=path.join(candidate,'packages/marketplace/lead-site.ts'),content='export const retained = "original sparse fixture";\n';
+ writeFixture(retained,content);const before=fs.readdirSync(candidate);
+ assert.deepEqual(applyModernSafeContent({candidate,profile:profile('BG')}),{changed:[]});
+ assert.deepEqual(fs.readdirSync(candidate),before);assert.equal(fs.readFileSync(retained,'utf8'),content);
+ assert.equal(fs.existsSync(path.join(candidate,'apps')),false);
+});
+test('Modern partial sell pair fails transactionally for either missing consumer',t=>{
+ for(const [name,source] of [['apps/web/app/[locale]/sell/page.tsx',modernSellFixture],['apps/web/app/[locale]/components/mobile-sell-vehicle-policy.ts',modernMobileSellFixture]]){
+  const candidate=tinyArea(t);writeFixture(path.join(candidate,name),source);
+  assert.throws(()=>applyModernSafeContent({candidate,profile:profile('BG')}),/requires both known copy consumers/);
+  assert.equal(fs.readFileSync(path.join(candidate,name),'utf8'),source);
+  const other=name.includes('/sell/page')?'apps/web/app/[locale]/components/mobile-sell-vehicle-policy.ts':'apps/web/app/[locale]/sell/page.tsx';assert.equal(fs.existsSync(path.join(candidate,other)),false);
+ }
+});
