@@ -240,7 +240,7 @@ function record(pathname, kind, before, after, extra = {}) {
 }
 
 /** Select immutable revisions from the current Cars approval lock, never from a floating branch label. */
-export function selectPinnedRevisions(manifest, lock, { targetVariants = manifest?.variants, keys: selectedKeys, qualification } = {}) {
+export function selectPinnedRevisions(manifest, lock, { targetVariants = manifest?.variants, keys: selectedKeys, qualification, root } = {}) {
   if (qualification) validateNativeQualificationContext(qualification,{dealer:manifest?.slug});
   if (!Array.isArray(manifest?.variants) || ![3, 4, 5, 6].includes(manifest.variants.length)) {
     throw new Error('Template update requires the dealer’s recorded three-, four-, five- or six-design manifest');
@@ -292,7 +292,7 @@ export function selectPinnedRevisions(manifest, lock, { targetVariants = manifes
     const validStandalone = targetRepository === `darkapoparka/cars-template-${key}` && targetPath === '';
     const validCarsSubtree = targetRepository === 'darkapoparka/cars' && targetPath === `templates/${key}`;
     const provisional = approved?.status === 'qualification';
-    if (provisional && qualification) validateTemplateQualification(key,approved,qualification);
+    if (provisional && qualification) validateTemplateQualification(key,approved,qualification,{root});
     if ((approved?.status !== 'approved' && !(provisional && qualification)) || (!validStandalone && !validCarsSubtree) ||
         !/^[a-f0-9]{40}$/.test(targetRevision || '') || !/^[a-f0-9]{64}$/.test(targetDigest || '') ||
         (targetTree !== null && !/^[a-f0-9]{40}$/.test(targetTree || ''))) {
@@ -352,13 +352,13 @@ export function upgradeReviewReport(plan) {
 }
 
 /** Build one dealer-root plan for its exact recorded trio and an approved lock. */
-export function planDealerUpgrade({ dealerRoot, lock, oldBases, newBases, targetManifest, selectedKeys, qualification, manifestPath = 'dealer.json', resolutions = {}, tempRoot = os.tmpdir() }) {
+export function planDealerUpgrade({ dealerRoot, lock, oldBases, newBases, targetManifest, selectedKeys, qualification, root, manifestPath = 'dealer.json', resolutions = {}, tempRoot = os.tmpdir() }) {
   const source = path.resolve(dealerRoot);
   const safeManifestPath = safeRelative(manifestPath);
   const manifestFile = path.join(source, safeManifestPath);
   const manifestBytes = fs.readFileSync(manifestFile);
   const manifest = JSON.parse(manifestBytes.toString('utf8').replace(/^\uFEFF/, ''));
-  const pins = selectPinnedRevisions(manifest, lock, { targetVariants: targetManifest?.variants || manifest.variants, keys: selectedKeys, qualification });
+  const pins = selectPinnedRevisions(manifest, lock, { targetVariants: targetManifest?.variants || manifest.variants, keys: selectedKeys, qualification, root });
   const candidate = new Map(), changes = [], conflicts = [], perDesign = {};
   for (const key of Object.keys(pins)) {
     if ((!oldBases?.[key] && pins[key].from !== null) || !newBases?.[key]) throw new Error(`Missing exact old/new template trees for ${key}`);

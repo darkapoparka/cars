@@ -210,7 +210,7 @@ function fallbackGuidance(manifest, provider) {
   return `# ${manifest.slug} dealer package\n\nThis repository is a derived deployment package. Canonical dealer source lives under clients/${manifest.slug} in the Cars repository. Read dealer.json and .cars-package.json for identity and provenance. Make source changes in Cars and regenerate the package; do not silently edit generated mounting code or template masters.\n\nAll ${manifest.variants.length} designs share one Vercel project. Preserve retained lockfiles, source layouts, licensing and provenance. Run each app's documented checks and test every mounted entry, inventory, detail, contact and enquiry destination at 390 and 1440 px. Check the design switcher at 320 px, including Escape and focus return. A build is not public-preview proof. Publishing does not authorize outreach.\n`;
 }
 
-async function prepare({ source, manifest, sourceCommit, guidance, canonicalFiles, nativeReleases, provider = 'vercel', cloudflareLocks }) {
+async function prepare({ root = ROOT, source, manifest, sourceCommit, guidance, canonicalFiles, nativeReleases, provider = 'vercel', cloudflareLocks }) {
   manifest = structuredClone(manifest);
   validatePackagingManifest(manifest);
   if (!['vercel', 'cloudflare'].includes(provider)) throw new Error('Unsupported publishing provider');
@@ -234,8 +234,8 @@ async function prepare({ source, manifest, sourceCommit, guidance, canonicalFile
     files.set(name, preserveExtraBytes(name) ? bytes : normalized(bytes));
   }
   if (native) {
-    if (nativeReleases) files = adoptNativeSource(files, baseNativeManifest(manifest), nativeReleases);
-    else { assertNativeAdoption(files, baseNativeManifest(manifest)); files = applyNativeMounts(files, baseNativeManifest(manifest)); assertNativeAdoption(files, baseNativeManifest(manifest)); }
+    if (nativeReleases) files = adoptNativeSource(files, baseNativeManifest(manifest), nativeReleases,{root});
+    else { assertNativeAdoption(files, baseNativeManifest(manifest),{root}); files = applyNativeMounts(files, baseNativeManifest(manifest)); assertNativeAdoption(files, baseNativeManifest(manifest),{root}); }
     assertAppVariant(files, manifest);
     if (manifest.packaging.version === SIX_PACKAGING_VERSION) {
       assertExtendedVariantSources(files, manifest);

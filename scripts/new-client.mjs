@@ -75,7 +75,7 @@ export function planNewClient({ root = ROOT, client, repository, preset = 'stand
   if (six) {
     const base = baseNativeManifest(manifest);
     nativeContract(base);
-    for (const { key } of base.variants) validateNativeRelease(key, plans.find(p => p.template === key).release);
+    for (const { key } of base.variants) validateNativeRelease(key, plans.find(p => p.template === key).release,{root});
   }
   return { root, client, dealerId, clientRoot, manifest, checkout, plans, state: 'needs-personalization' };
 }

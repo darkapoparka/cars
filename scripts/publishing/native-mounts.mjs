@@ -149,13 +149,13 @@ function bindInternationalizationDefaults(files, contract) {
   nativeWrite(files, name, text);
   nativeWrite(files, generated, generatedContract(contract));
 }
-export function adoptNativeSource(files, manifest, releases) {
+export function adoptNativeSource(files, manifest, releases, options) {
   const adopted = applyNativeMounts(files, manifest);
-  sealNativeAdoption(adopted, manifest, releases);
+  sealNativeAdoption(adopted, manifest, releases, options);
   return adopted;
 }
-export function adoptNativeQualification(files, manifest, releases, context) {
+export function adoptNativeQualification(files, manifest, releases, context, options) {
   const candidate = applyNativeMounts(files,manifest);
-  sealNativeQualification(candidate,manifest,releases,context);
+  sealNativeQualification(candidate,manifest,releases,context,options);
   return candidate;
 }

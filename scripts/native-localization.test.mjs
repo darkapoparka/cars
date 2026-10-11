@@ -5,8 +5,10 @@ import path from 'node:path';
 import test from 'node:test';
 import vm from 'node:vm';
 import { packageDealer, planDealerPackage } from './package-dealer.mjs';
-import { fingerprint } from './lib/workflow.mjs';
-import { parseCatalogJson, auditNativeCatalogs, assertNativeAdoption, nativeReleaseReadiness, validateNativeRelease } from './lib/native-localization.mjs';
+import { fingerprint, sha256 } from './lib/workflow.mjs';
+import { parseCatalogJson, auditNativeCatalogs, assertNativeAdoption, nativeReleaseReadiness, validateNativeRelease,
+  sealNativeAdoption, validateTemplateQualification, sealNativeQualification, assertNativeQualification, NATIVE_CHECKS } from './lib/native-localization.mjs';
+import { fixtureReleases, writeTinySingleton } from './test-fixtures/fleet-single-worker.mjs';
 import { adoptNativeSource, configureObject } from './publishing/native-mounts.mjs';
 import { nativeBuildPlan, runNativeBuild } from './publishing/build-native-service.mjs';
 import { nativeFixture } from './test-fixtures/native-source.mjs';
@@ -19,6 +21,149 @@ function setup(t, middle = 'modern') {
 }
 const read = (root, name) => fs.readFileSync(path.join(root, name));
 const options = (fixture, destination) => ({ source: fixture.source, destination, manifest: fixture.manifest, sourceCommit: commit, nativeReleases: fixture.releases });
+
+// Synthetic originals and independent acceptance for tiny tests; never rollout proof.
+function cloudflareFixture(t) {
+  const f = setup(t), release = f.releases.modern, review = release.qa.nativeLocalization;
+  f.manifest.templateSources = {};
+  for (const [key, current] of Object.entries(f.releases)) {
+    current.repository = 'darkapoparka/cars'; current.snapshotPath = 'templates/' + key;
+    current.source = { repository: current.repository, revision: current.commit, path: current.snapshotPath, tree: 'a'.repeat(40), digest: current.digest };
+    Object.assign(current.qa.nativeLocalization, { repository: current.repository, sourcePath: current.source.path, sourceTree: current.source.tree });
+    f.manifest.templateSources[key] = current.source;
+  }
+  review.verifiedAt = '2026-10-11T10:02:00Z';
+  const sourceReleases = { ...fixtureReleases(), 'auto-best': f.releases['auto-best'].source, modern: release.source };
+  const bundle = writeTinySingleton(path.join(f.root, 'tiny-bundle'), { client: f.manifest.slug, sourceReleases });
+  const proofRoot = path.join(f.root, 'docs/releases/cloudflare-fixture'); fs.mkdirSync(proofRoot, { recursive: true });
+  const pin = (name, value) => {
+    const bytes = Buffer.isBuffer(value) ? value : Buffer.from(JSON.stringify(value, null, 2) + '\n');
+    fs.writeFileSync(path.join(proofRoot, name), bytes);
+    return { reference: 'docs/releases/cloudflare-fixture/' + name, sha256: sha256(bytes) };
+  };
+  const refs = { artifactManifest: pin('artifact-manifest.json', fs.readFileSync(path.join(bundle.directory, 'artifact-manifest.json'))),
+    singleWorkerReceipt: pin('single-worker-receipt.json', fs.readFileSync(path.join(bundle.directory, 'single-worker-receipt.json'))) };
+  const common = { ...Object.fromEntries(['accountId','workerName','publicOrigin','sourceCommit','sourceTree','inputDigest','sourceReleases','outputDigest','workerCount','applicationCount'].map(name => [name, bundle.receipt[name]])),
+    artifactDigest: bundle.inventory.digest, serviceBindings: [], deploymentId: '11111111-1111-4111-8111-111111111111', versionId: '22222222-2222-4222-8222-222222222222',
+    versionTraffic: [{ version_id: '22222222-2222-4222-8222-222222222222', percentage: 100 }], liveBindings: [{ type: 'assets', name: 'ASSETS' }],
+    sourcePublication: { repository: 'darkapoparka/cars', commit: bundle.receipt.sourceCommit, sourceTree: bundle.receipt.sourceTree, ref: 'refs/heads/main', publishedAt: '2026-10-11T09:00:00Z', evidence: 'synthetic authenticated source proof', verifiedMainCommit: '9'.repeat(40) } };
+  const deployed = { ...structuredClone(common), schemaVersion: 1, type: 'cars-existing-fleet-single-worker-deployment', status: 'deployed', client: f.manifest.slug,
+    runId: bundle.receipt.runId, attempt: bundle.receipt.attempt, deployments: 1, hostedVerified: false, ownerAccepted: false, finishedAt: '2026-10-11T10:00:00Z' };
+  refs.deploymentReceipt = pin('deployment.json', deployed);
+  const acceptance = structuredClone(review); delete acceptance.deployment;
+  const hosted = { ...structuredClone(common), schemaVersion: 1, type: 'cars-existing-fleet-single-worker-hosted-acceptance', status: 'passed', client: f.manifest.slug,
+    unauthenticated: true, verifiedAt: '2026-10-11T10:03:00Z', ...refs,
+    applications: Object.fromEntries(Object.entries(sourceReleases).map(([key, source]) => [key, { status: 'passed', source,
+      checks: ['mounted-journeys','public-journeys','assets-preserved'].map(name => ({ name, status: 'passed', evidenceSha256: 'c'.repeat(64) })) }])),
+    nativeLocalization: Object.fromEntries(['auto-best','modern','import'].map(key => { const source = sourceReleases[key]; return [key,
+      { ...structuredClone(acceptance), repository: source.repository, commit: source.revision, sourcePath: source.path, sourceTree: source.tree, sourceDigest: source.digest }]; })) };
+  refs.hostedReceipt = pin('hosted.json', hosted);
+  review.deployment = { ...structuredClone(common), provider: 'cloudflare', publicAlias: common.publicOrigin, ...refs }; delete review.deployment.publicOrigin;
+  return { ...f, release, review, bundle, deployed, hosted, pin };
+}
+
+test('Cloudflare native proof binds the deployed dealer source separately from all six template pins', t => {
+  const f = cloudflareFixture(t);
+  assert.notEqual(f.review.deployment.sourceCommit, f.release.commit);
+  assert.equal(validateNativeRelease('modern', f.release, { root: f.root }), f.review);
+  assert.equal(nativeReleaseReadiness([{key:'modern'}], f.releases, { root: f.root }).ready, true);
+  assert.equal(f.deployed.hostedVerified, false);
+  assert.equal(f.deployed.ownerAccepted, false);
+});
+
+test('Cloudflare rejects altered metadata, incomplete traffic/bindings and unsafe proof references', t => {
+  const f = cloudflareFixture(t);
+  const mutations = [
+    d => { d.provider = 'unknown'; }, d => { d.state = 'READY'; }, d => { d.versionId = 'not-a-version'; },
+    d => { d.accountId = 'f'.repeat(32); }, d => { d.workerName = 'another-worker'; },
+    d => { d.publicAlias = 'https://another.example/'; }, d => { d.sourceCommit = f.release.commit; },
+    d => { d.sourceTree = 'e'.repeat(40); }, d => { d.sourcePublication.commit = f.release.commit; },
+    d => { d.sourcePublication.verifiedMainCommit = ''; }, d => { d.inputDigest = 'e'.repeat(64); },
+    d => { d.artifactDigest = 'e'.repeat(64); }, d => { d.outputDigest = 'e'.repeat(64); },
+    d => { d.applicationCount = 5; }, d => { d.workerCount = 7; }, d => { d.serviceBindings.push('CARS_APP'); },
+    d => { d.versionTraffic[0].percentage = 99; }, d => { d.versionTraffic[0].version_id = d.deploymentId; },
+    d => { d.versionTraffic.push({...d.versionTraffic[0]}); }, d => { d.liveBindings.push({type:'service',name:'APP'}); },
+    d => { d.liveBindings[0].type = 'service'; }, d => { d.liveBindings[0].name = 'OTHER'; },
+    d => { d.liveBindings[0].entrypoint = 'fetch'; }, d => { delete d.sourceReleases.mobile; },
+    ...['repository','revision','path','tree','digest'].map(field => d => { d.sourceReleases.modern[field] = field === 'path' ? 'templates/import' : 'e'.repeat(field === 'digest' ? 64 : 40); }),
+    d => { d.sourceReleases.app.digest = 'e'.repeat(64); },
+    d => { d.hostedReceipt.sha256 = 'e'.repeat(64); }, d => { delete d.deploymentReceipt; },
+    ...['../escape.json','docs/releases/../escape.json','/absolute.json','C:/absolute.json','runtime/proof.json','docs/releases\\proof.json'].map(reference => d => { d.hostedReceipt.reference = reference; })
+  ];
+  for (const mutate of mutations) {
+    const release = structuredClone(f.release); mutate(release.qa.nativeLocalization.deployment);
+    assert.throws(() => validateNativeRelease('modern', release, { root: f.root }));
+  }
+  assert.throws(() => validateNativeRelease('import', f.release, { root: f.root }), /invalid selected release/);
+});
+
+test('original hashed receipts and every hosted family remain mandatory even when references are resealed', t => {
+  for (const mutate of [
+    h => { h.unauthenticated = false; }, h => { h.versionTraffic[0].percentage = 50; },
+    h => { h.sourceReleases.app.digest = 'e'.repeat(64); }, h => { delete h.applications.mobile; },
+    h => { h.applications['karento-best'].checks[0].status = 'failed'; },
+    h => { h.applications.app.source.tree = 'e'.repeat(40); }, h => { delete h.nativeLocalization.import; },
+    h => { h.nativeLocalization['auto-best'].checks.pop(); },
+    h => { h.nativeLocalization.import.checks[0].evidenceSha256 = ''; },
+    h => { h.nativeLocalization.import.checks[0].status = 'failed'; },
+    h => { h.nativeLocalization.import.widths = [390,1440]; },
+    h => { h.nativeLocalization.modern.catalogs = []; }, h => { h.verifiedAt = '2026-10-11T09:00:00Z'; }
+  ]) {
+    const f = cloudflareFixture(t), hosted = structuredClone(f.hosted); mutate(hosted);
+    f.review.deployment.hostedReceipt = f.pin('hosted.json', hosted);
+    assert.throws(() => validateNativeRelease('modern', f.release, { root: f.root }));
+  }
+  const f = cloudflareFixture(t), original = fs.readFileSync(path.join(f.root, f.review.deployment.deploymentReceipt.reference));
+  fs.appendFileSync(path.join(f.root, f.review.deployment.deploymentReceipt.reference), ' ');
+  assert.throws(() => validateNativeRelease('modern', f.release, { root: f.root }), /original proof bytes differ/);
+  fs.writeFileSync(path.join(f.root, f.review.deployment.deploymentReceipt.reference), original);
+  const duplicate = Buffer.from(JSON.stringify(f.hosted).replace('"schemaVersion":1', '"schemaVersion":1,"schemaVersion":1'));
+  f.review.deployment.hostedReceipt = f.pin('hosted.json', duplicate);
+  assert.throws(() => validateNativeRelease('modern', f.release, { root: f.root }), /duplicate/i);
+});
+
+test('Cloudflare release references cannot link into ignored runtime even inside the repository', t => {
+  const f=cloudflareFixture(t),runtime=path.join(f.root,'runtime'),link=path.join(f.root,'docs/releases/runtime-link');
+  fs.mkdirSync(runtime);fs.writeFileSync(path.join(runtime,'hosted.json'),fs.readFileSync(path.join(f.root,f.review.deployment.hostedReceipt.reference)));
+  fs.symlinkSync(runtime,link,'junction');
+  f.review.deployment.hostedReceipt.reference='docs/releases/runtime-link/hosted.json';
+  assert.throws(()=>validateNativeRelease('modern',f.release,{root:f.root}),/canonical physical/);
+});
+
+test('Cloudflare provider/source/evidence fields survive adoption seals; Vercel bytes remain compatible', t => {
+  const f = cloudflareFixture(t);
+  const sealed = sealNativeAdoption(f.files, f.manifest, f.releases, { root: f.root });
+  assert.deepEqual(sealed.releases.modern.qa.nativeLocalization.deployment, f.review.deployment);
+  assertNativeAdoption(f.files, f.manifest, { root: f.root });
+  const altered = structuredClone(sealed); altered.releases.modern.qa.nativeLocalization.deployment.sourceReleases.app.tree = 'e'.repeat(40);
+  const changed = new Map(f.files); changed.set('localization/adoption.json', Buffer.from(JSON.stringify(altered)));
+  assert.throws(() => assertNativeAdoption(changed, f.manifest, { root: f.root }), /identity differs/);
+  const legacy = setup(t), first = sealNativeAdoption(legacy.files, legacy.manifest, legacy.releases);
+  const before = Buffer.from(legacy.files.get('localization/adoption.json'));
+  for (const release of Object.values(legacy.releases)) release.qa.nativeLocalization.deployment.provider = 'vercel';
+  sealNativeAdoption(legacy.files, legacy.manifest, legacy.releases);
+  assert.deepEqual(legacy.files.get('localization/adoption.json'), before);
+  assert.deepEqual(Object.keys(first.releases.modern.qa.nativeLocalization.deployment), ['id','projectId','state','sourceCommit','publicAlias']);
+});
+
+test('qualification can retain a Cloudflare approved parent without promoting provisional native acceptance', t => {
+  const f = cloudflareFixture(t), context = { schemaVersion:1,kind:'cars-native-source-qualification-context',id:'fixture-source',dealer:f.manifest.slug,
+    scope:'existing-dealer-pilot',sourceCommit:'7'.repeat(40),reviewed:true,reviewedAt:'2026-10-11T10:04:00Z',nativeApproval:false,hostedApproval:false,globalReleaseApproval:false,
+    approvedLockSha256:'a'.repeat(64),candidateLockSha256:'b'.repeat(64),sourceDeltaReview:{reference:'docs/releases/delta.json',sha256:'c'.repeat(64),reviewedAt:'2026-10-11T10:04:00Z'} };
+  const parent = structuredClone(f.release); parent.qa.evidence = 'docs/releases/accepted.json'; parent.qa.verifiedAt = f.review.verifiedAt;
+  const qualified = { ...structuredClone(f.release), status:'qualification',commit:context.sourceCommit,
+    source:{...f.release.source,revision:context.sourceCommit},qa:{},qualification:{contextId:context.id,sourceDeltaReview:context.sourceDeltaReview,
+      sourceQA:{approvedRelease:parent,releaseSha256:sha256(JSON.stringify(parent)),reference:parent.qa.evidence,sha256:'d'.repeat(64),verifiedAt:parent.qa.verifiedAt},catalogs:f.review.catalogs} };
+  validateTemplateQualification('modern', qualified, context, {root:f.root});
+  const releases = {...f.releases,modern:qualified}, manifest = structuredClone(f.manifest);
+  manifest.templateRevisions.modern = context.sourceCommit; manifest.templateSources.modern = qualified.source;
+  sealNativeQualification(f.files, manifest, releases, context, {root:f.root});
+  const receipt = assertNativeQualification(f.files, manifest, context, {root:f.root});
+  assert.equal(receipt.nativeApproval, false); assert.deepEqual(receipt.pendingNativeChecks, NATIVE_CHECKS);
+  assert.throws(() => assertNativeAdoption(f.files, manifest, {root:f.root}), /Provisional/);
+  fs.appendFileSync(path.join(f.root, f.review.deployment.hostedReceipt.reference), ' ');
+  assert.throws(() => assertNativeQualification(f.files, manifest, context, {root:f.root}), /original proof bytes differ/);
+});
 
 test('catalog JSON rejects escaped duplicate keys, truncation, executable input and blank values', () => {
   for (const text of ['{"title":"A","title":"B"}', '{"title":"A","\\u0074itle":"B"}', '{"a":', '{a:"x"}', '{"a":()=>1}', '{"a":1,}', '[1,]', '{"a":1};globalThis.x=1']) assert.throws(() => parseCatalogJson(text));

@@ -8,10 +8,13 @@ import test from 'node:test';
 import {nativeFixture} from './test-fixtures/native-source.mjs';
 import {fingerprint} from './lib/workflow.mjs';
 import {assertNativeAdoption,assertNativeQualification,NATIVE_CHECKS,validateNativeRelease} from './lib/native-localization.mjs';
-import {adoptNativeSource} from './publishing/native-mounts.mjs';
+import {adoptNativeSource,adoptNativeQualification} from './publishing/native-mounts.mjs';
+import {fixtureReleases,writeTinySingleton} from './test-fixtures/fleet-single-worker.mjs';
 import {selectPinnedRevisions} from './dealer-updates/three-way-upgrade.mjs';
 import {finalizeDealerTemplateCandidate,validateDealerSourceQualification} from './dealer-updates/update-dealer-template.mjs';
 import {planDealerPackage} from './package-dealer.mjs';
+import {existingFleetNativeSource,existingFleetQualifiedSources} from './build-existing-fleet-cloudflare.mjs';
+import {sourceQualificationFiles} from './prepare-existing-fleet-source.mjs';
 
 const sha=value=>createHash('sha256').update(value).digest('hex');
 const wrapper=path.resolve(import.meta.dirname,'dealer-updates/update-dealer-template.mjs');
@@ -20,7 +23,7 @@ const write=(root,name,bytes)=>{const target=path.join(root,name);fs.mkdirSync(p
 const writeJson=(file,value)=>{fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,JSON.stringify(value,null,2)+'\n');};
 function filesAt(root){const result=new Map();function walk(current,relative=''){for(const entry of fs.readdirSync(current,{withFileTypes:true})){if(entry.name==='.git')continue;const name=relative?relative+'/'+entry.name:entry.name;if(entry.isDirectory())walk(path.join(current,entry.name),name);else if(entry.isFile())result.set(name,fs.readFileSync(path.join(current,entry.name)));}}walk(root);return result;}
 function init(root,origin){fs.mkdirSync(root,{recursive:true});execFileSync('git',['init','--initial-branch=main',root],{stdio:'ignore'});git(root,['config','core.autocrlf','false']);git(root,['remote','add','origin',origin]);}
-async function fixture(t){
+async function fixture(t,{cloudflareParent=false}={}){
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'cars-native-qualification-'));
  t.after(()=>{const exact=fs.realpathSync(root),relative=path.relative(fs.realpathSync(os.tmpdir()),exact);assert(relative.startsWith('cars-native-qualification-')&&!relative.includes(path.sep)&&!path.isAbsolute(relative));fs.rmSync(exact,{recursive:true,force:true});});
  const carsRoot=path.join(root,'cars'),dealerRoot=path.join(root,'dealer'),templateRoot=path.join(root,'template-repos');
@@ -43,6 +46,29 @@ async function fixture(t){
  for(const [name,bytes]of adopted)write(dealerRoot,name,bytes);
  for(const [name,bytes]of filesAt(oldRepo))write(carsRoot,'templates/modern/'+name,bytes);
  git(carsRoot,['add','.']);git(carsRoot,['commit','-m','Preserved approved integration baseline fixture']);
+ if(cloudflareParent){
+  // Real tiny Git identities and original composer bytes; synthetic acceptance is test-only.
+  const revision=git(carsRoot,['rev-parse','HEAD']),parent=f.releases.modern;
+  const source={repository:'darkapoparka/cars',revision,path:'templates/modern',tree:git(carsRoot,['rev-parse',revision+':templates/modern']),digest:fingerprint(path.join(carsRoot,'templates/modern')).digest};
+  Object.assign(parent,{repository:source.repository,commit:revision,source,snapshotPath:source.path,digest:source.digest});
+  write(carsRoot,'clients/'+f.manifest.slug+'/source.json','{"syntheticFixture":true}\n');
+  git(carsRoot,['add','clients']);git(carsRoot,['commit','-m','Synthetic compiled dealer source fixture']);
+  const compiledCommit=git(carsRoot,['rev-parse','HEAD']),sourceReleases={...fixtureReleases(),modern:source};
+  const bundle=writeTinySingleton(path.join(carsRoot,'runtime/tiny-cloudflare-proof'),{client:f.manifest.slug,sourceCommit:compiledCommit,sourceTree:git(carsRoot,['rev-parse',compiledCommit+':clients/'+f.manifest.slug]),sourceReleases});
+  const prefix='docs/releases/qualification-cloudflare-parent/';
+  const pin=(name,value)=>{const bytes=Buffer.isBuffer(value)?value:Buffer.from(JSON.stringify(value,null,2)+'\n');write(carsRoot,prefix+name,bytes);return {reference:prefix+name,sha256:sha(bytes)};};
+  const refs={artifactManifest:pin('artifact-manifest.json',fs.readFileSync(path.join(bundle.directory,'artifact-manifest.json'))),singleWorkerReceipt:pin('single-worker-receipt.json',fs.readFileSync(path.join(bundle.directory,'single-worker-receipt.json')))};
+  const common={...Object.fromEntries(['accountId','workerName','publicOrigin','sourceCommit','sourceTree','inputDigest','sourceReleases','outputDigest','workerCount','applicationCount'].map(name=>[name,bundle.receipt[name]])),artifactDigest:bundle.inventory.digest,serviceBindings:[],deploymentId:'11111111-1111-4111-8111-111111111111',versionId:'22222222-2222-4222-8222-222222222222',versionTraffic:[{version_id:'22222222-2222-4222-8222-222222222222',percentage:100}],liveBindings:[{type:'assets',name:'ASSETS'}],sourcePublication:{repository:'darkapoparka/cars',commit:compiledCommit,sourceTree:bundle.receipt.sourceTree,ref:'refs/heads/main',publishedAt:'2026-10-11T09:00:00Z',evidence:'Synthetic tiny Git main proof; never rollout acceptance',verifiedMainCommit:compiledCommit}};
+  const deployed={...structuredClone(common),schemaVersion:1,type:'cars-existing-fleet-single-worker-deployment',status:'deployed',client:f.manifest.slug,runId:bundle.receipt.runId,attempt:bundle.receipt.attempt,deployments:1,hostedVerified:false,ownerAccepted:false,finishedAt:'2026-10-11T10:00:00Z'};
+  refs.deploymentReceipt=pin('deployment.json',deployed);
+  const acceptance={...structuredClone(parent.qa.nativeLocalization),repository:source.repository,commit:source.revision,sourcePath:source.path,sourceTree:source.tree,sourceDigest:source.digest,verifiedAt:'2026-10-11T10:02:00Z'};delete acceptance.deployment;
+  const hosted={...structuredClone(common),schemaVersion:1,type:'cars-existing-fleet-single-worker-hosted-acceptance',status:'passed',client:f.manifest.slug,unauthenticated:true,verifiedAt:'2026-10-11T10:03:00Z',...refs,applications:Object.fromEntries(Object.entries(sourceReleases).map(([key,selected])=>[key,{status:'passed',source:selected,checks:['mounted-journeys','public-journeys','assets-preserved'].map(name=>({name,status:'passed',evidenceSha256:'d'.repeat(64)}))}])),nativeLocalization:Object.fromEntries(['auto-best','modern','import'].map(key=>{const selected=sourceReleases[key];return [key,{...structuredClone(acceptance),repository:selected.repository,commit:selected.revision,sourcePath:selected.path,sourceTree:selected.tree,sourceDigest:selected.digest}];}))};
+  refs.hostedReceipt=pin('hosted.json',hosted);
+  const deployment={...structuredClone(common),provider:'cloudflare',publicAlias:common.publicOrigin,...refs};delete deployment.publicOrigin;
+  parent.qa.nativeLocalization={...acceptance,deployment};parent.qa.verifiedAt=acceptance.verifiedAt;
+  writeJson(path.join(carsRoot,parent.qa.evidence),{schemaVersion:1,kind:'synthetic-original-QA',nativeLocalization:parent.qa.nativeLocalization,note:'Fixture only; not rollout acceptance'});
+  writeJson(globalLock,approvedLock);
+ }
  write(carsRoot,'templates/modern/packages/marketplace/fix.ts','export const fixed = true;\n');git(carsRoot,['add','.']);git(carsRoot,['commit','-m','Published fixed source fixture']);
  const sourceCommit=git(carsRoot,['rev-parse','HEAD']);git(carsRoot,['update-ref','refs/remotes/origin/main',sourceCommit]);
  const source={repository:'darkapoparka/cars',revision:sourceCommit,path:'templates/modern',tree:git(carsRoot,['rev-parse',sourceCommit+':templates/modern']),digest:fingerprint(path.join(carsRoot,'templates/modern')).digest};
@@ -55,10 +81,44 @@ async function fixture(t){
  const lockFile=path.join(directory,'candidate-lock.json');writeJson(lockFile,candidateLock);
  const context={schemaVersion:1,kind:'cars-native-source-qualification-context',id,dealer:f.manifest.slug,scope:'existing-dealer-pilot',sourceCommit,reviewed:true,reviewedAt:delta.reviewedAt,nativeApproval:false,hostedApproval:false,globalReleaseApproval:false,approvedLockSha256:sha(fs.readFileSync(globalLock)),candidateLockSha256:sha(fs.readFileSync(lockFile)),sourceDeltaReview};
  const contextFile=path.join(directory,'context.json');writeJson(contextFile,context);
- return {root,carsRoot,dealerRoot,templateRoot,globalLock,lockFile,contextFile,deltaFile,context,candidateLock,manifest:f.manifest,configName};
+ return {root,carsRoot,dealerRoot,templateRoot,globalLock,lockFile,contextFile,deltaFile,context,candidateLock,manifest:f.manifest,configName,releases:f.releases};
 }
 const cli=args=>JSON.parse(execFileSync(process.execPath,[wrapper,...args],{encoding:'utf8'}));
 function planArgs(f,name='plan'){return ['plan','--dealer-root',f.dealerRoot,'--cars-root',f.carsRoot,'--template-root',f.templateRoot,'--lock-file',f.lockFile,'--qualification',f.contextFile,'--variants','modern','--template-palette','--run-dir',path.join(f.carsRoot,'runtime',name)];}
+
+test('alternate Cars root reaches original Cloudflare proofs through adoption, pin selection and CLI plan/install',async t=>{
+ const f=await fixture(t,{cloudflareParent:true}),parent=f.releases.modern,originalLock=fs.readFileSync(f.globalLock);
+ assert.notEqual(parent.commit,parent.qa.nativeLocalization.deployment.sourceCommit);
+ const approvedManifest=structuredClone(f.manifest);approvedManifest.templateRevisions.modern=parent.commit;approvedManifest.templateSources.modern=parent.source;
+ const adopted=adoptNativeSource(filesAt(f.dealerRoot),approvedManifest,f.releases,{root:f.carsRoot});
+ assertNativeAdoption(adopted,approvedManifest,{root:f.carsRoot});
+ assert.equal(existingFleetNativeSource(adopted,approvedManifest,{root:f.carsRoot}).kind,'approved-native-adoption');
+ assert.throws(()=>existingFleetNativeSource(adopted,approvedManifest,{root:f.root}),/Missing path/);
+ assert.throws(()=>adoptNativeSource(filesAt(f.dealerRoot),approvedManifest,f.releases,{root:f.root}),/Missing path/);
+ const pins=selectPinnedRevisions(f.manifest,f.candidateLock,{keys:['modern'],qualification:f.context,root:f.carsRoot});assert.equal(pins.modern.to,f.context.sourceCommit);
+ assert.throws(()=>selectPinnedRevisions(f.manifest,f.candidateLock,{keys:['modern'],qualification:f.context,root:f.root}),/Missing path/);
+ const sixSources={...fixtureReleases(),modern:f.candidateLock.templates.modern.source};
+ const sixManifest={...structuredClone(f.manifest),packaging:{version:'5'},variants:['auto-best','modern','import','app','mobile','karento-best'].map((key,index)=>({key,base:index?'/variant-'+(index+1):'',entry:key==='modern'?'/variant-2/cars':index?'/variant-'+(index+1)+'/':'/'})),templateSources:sixSources,templateRevisions:Object.fromEntries(Object.entries(sixSources).map(([key,source])=>[key,source.revision]))};
+ const sixLock={schemaVersion:1,templates:Object.fromEntries(Object.entries(sixSources).map(([key,source])=>[key,key==='modern'?f.candidateLock.templates.modern:{status:'approved',repository:source.repository,commit:source.revision,source,snapshotPath:source.path,digest:source.digest}]))};
+ const qualificationLockBytes=Buffer.from(JSON.stringify(sixLock,null,2)+'\n'),sixContext={...f.context,candidateLockSha256:sha(qualificationLockBytes)},qualificationBytes=Buffer.from(JSON.stringify(sixContext,null,2)+'\n');
+ assert.equal(existingFleetQualifiedSources(sixManifest,sixContext,qualificationLockBytes,{root:f.carsRoot}).modern.revision,f.context.sourceCommit);
+ assert.throws(()=>existingFleetQualifiedSources(sixManifest,sixContext,qualificationLockBytes,{root:f.root}),/Missing path/);
+ const preparationOptions={manifest:sixManifest,qualificationBytes,qualificationLockBytes,sourceRevision:f.context.sourceCommit,candidateSourceDigest:sha('synthetic candidate'),root:f.carsRoot};
+ assert.deepEqual(sourceQualificationFiles(preparationOptions).get('.client/native-qualification-lock.json'),qualificationLockBytes);
+ assert.throws(()=>sourceQualificationFiles({...preparationOptions,root:f.root}),/Missing path/);
+ const qualifiedManifest=structuredClone(f.manifest);qualifiedManifest.templateRevisions.modern=f.context.sourceCommit;qualifiedManifest.templateSources.modern=f.candidateLock.templates.modern.source;
+ const qualified=adoptNativeQualification(filesAt(f.dealerRoot),qualifiedManifest,f.candidateLock.templates,f.context,{root:f.carsRoot});
+ assertNativeQualification(qualified,qualifiedManifest,f.context,{root:f.carsRoot});
+ const packageOptions={root:f.carsRoot,source:f.dealerRoot,destination:path.join(f.carsRoot,'runtime/package-plan'),manifest:approvedManifest,canonicalFiles:adopted,sourceCommit:f.context.sourceCommit};
+ await planDealerPackage(packageOptions);await assert.rejects(planDealerPackage({...packageOptions,root:f.root}),/Missing path/);
+ const planned=cli(planArgs(f,'alternate-root-plan'));assert.equal(planned.ready,true);
+ const manifest=JSON.parse(fs.readFileSync(path.join(planned.candidateDirectory,'dealer.json')));
+ assertNativeQualification(filesAt(planned.candidateDirectory),manifest,f.context,{root:f.carsRoot});
+ const installed=cli(['install','--run-dir',planned.runDirectory]);assert.equal(installed.noOp,false);
+ assertNativeQualification(filesAt(f.dealerRoot),manifest,f.context,{root:f.carsRoot});assert.deepEqual(fs.readFileSync(f.globalLock),originalLock);
+ fs.appendFileSync(path.join(f.carsRoot,parent.qa.nativeLocalization.deployment.hostedReceipt.reference),' ');
+ assert.throws(()=>selectPinnedRevisions(manifest,f.candidateLock,{keys:['modern'],qualification:f.context,root:f.carsRoot}),/original proof bytes differ/);
+});
 
 test('explicit qualification uses actual merge/adapt/palette/seal and install recomputation without changing global approval',async t=>{
  const f=await fixture(t),originalLock=fs.readFileSync(f.globalLock),sourceBefore=fingerprint(f.dealerRoot).digest,planned=cli(planArgs(f));

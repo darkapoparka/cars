@@ -66,6 +66,7 @@ jobs:
             /docs/DEPLOYMENT-INVENTORY.json
             /docs/releases/cloudflare-existing25-20261011/selection.json
             /docs/releases/cloudflare-existing25-20261011/build-request.json
+            /docs/releases/**/*.json
             /clients/${{ matrix.slug }}/
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
         with:
@@ -107,6 +108,7 @@ jobs:
             /docs/DEPLOYMENT-INVENTORY.json
             /docs/releases/cloudflare-existing25-20261011/selection.json
             /docs/releases/cloudflare-existing25-20261011/build-request.json
+            /docs/releases/**/*.json
             /clients/${{ matrix.slug }}/
       - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
         with:

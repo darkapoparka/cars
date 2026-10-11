@@ -68,12 +68,12 @@ export function existingFleetBranding(files,manifest){
  // Optional staging logo contracts describe originals, not these derived aliases.
  return assertLeadBranding(files,manifest);
 }
-export function existingFleetQualifiedSources(manifest,context,qualificationLockBytes){
+export function existingFleetQualifiedSources(manifest,context,qualificationLockBytes,{root=ROOT}={}){
  if(!Buffer.isBuffer(qualificationLockBytes)||qualificationLockBytes.length>2*1024**2||hash(qualificationLockBytes)!==context.candidateLockSha256)throw Error('Exact reviewed qualification lock bytes are required');
  const lock=JSON.parse(qualificationLockBytes.toString('utf8'));
  if(lock.schemaVersion!==1||!lock.templates)throw Error('Invalid reviewed qualification lock');
  assertSixDesignSelection(manifest.variants);
- const pins=selectPinnedRevisions(manifest,lock,{qualification:context}),sources={};
+ const pins=selectPinnedRevisions(manifest,lock,{qualification:context,root}),sources={};
  for(const {key}of manifest.variants){
   const selected=pins[key].targetSource,actual=manifest.templateSources?.[key];
   if(manifest.templateRevisions?.[key]!==pins[key].to||!actual||['repository','revision','path','tree','digest'].some(field=>(actual[field]??null)!==(selected[field]??null)))throw Error(key+': selected source differs from the reviewed qualification lock');
@@ -81,16 +81,16 @@ export function existingFleetQualifiedSources(manifest,context,qualificationLock
  }
  return sources;
 }
-export function existingFleetNativeSource(files,manifest,{candidate,qualificationBytes,qualificationLockBytes}={}){
+export function existingFleetNativeSource(files,manifest,{candidate,qualificationBytes,qualificationLockBytes,root=ROOT}={}){
  const adoption=files.has(ADOPTION_FILE)?JSON.parse(files.get(ADOPTION_FILE).toString('utf8')):null,base=baseNativeManifest(manifest);
- if(adoption?.kind!==NATIVE_QUALIFICATION_KIND&&adoption?.schemaVersion!==2)return {kind:'approved-native-adoption',receipt:assertNativeAdoption(files,base)};
+ if(adoption?.kind!==NATIVE_QUALIFICATION_KIND&&adoption?.schemaVersion!==2)return {kind:'approved-native-adoption',receipt:assertNativeAdoption(files,base,{root})};
  if(candidate?.schemaVersion!==1||candidate.kind!=='personalized-source-candidate-not-an-approved-release'||candidate.dealer!==manifest.slug||candidate.qualificationContextPath!=='.client/native-qualification-context.json'||
    !Buffer.isBuffer(qualificationBytes)||!/^[a-f0-9]{64}$/.test(candidate.qualificationContextSha256??'')||hash(qualificationBytes)!==candidate.qualificationContextSha256||candidate.nativeApproval!==false||candidate.hostedApproval!==false)throw Error('Explicit pinned pilot qualification context is required');
  const context=JSON.parse(qualificationBytes.toString('utf8'));
  if(candidate.sourceRevision!==context.sourceCommit||JSON.stringify(candidate.sourceDeltaReview)!==JSON.stringify(context.sourceDeltaReview))throw Error('Candidate and qualification source review differ');
  if(candidate.qualificationLockPath!==QUALIFICATION_LOCK_PATH||candidate.qualificationLockSha256!==context.candidateLockSha256)throw Error('Candidate must bind the exact reviewed qualification lock');
- const sourceReleases=existingFleetQualifiedSources(manifest,context,qualificationLockBytes);
- return {kind:'native-source-qualification',contextSha256:hash(qualificationBytes),qualificationLockSha256:hash(qualificationLockBytes),sourceReleases,receipt:assertNativeQualification(files,base,context)};
+ const sourceReleases=existingFleetQualifiedSources(manifest,context,qualificationLockBytes,{root});
+ return {kind:'native-source-qualification',contextSha256:hash(qualificationBytes),qualificationLockSha256:hash(qualificationLockBytes),sourceReleases,receipt:assertNativeQualification(files,base,context,{root})};
 }
 function exactCi(key){
  if(process.platform!=='linux'||process.env.GITHUB_ACTIONS!=='true'||process.env.GITHUB_EVENT_NAME!=='push'||process.env.GITHUB_REPOSITORY!=='darkapoparka/cars'||process.env.GITHUB_REF!=='refs/heads/main'||process.version!=='v'+NODES[key]||!/^\d+$/.test(process.env.GITHUB_RUN_ID||'')||!/^\d+$/.test(process.env.GITHUB_RUN_ATTEMPT||''))throw Error('Compile only the declared family in isolated existing-fleet main CI');

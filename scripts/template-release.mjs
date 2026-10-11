@@ -87,7 +87,7 @@ export function approveCarsTemplate({root=ROOT,key,commit,evidence,write=false})
  if(prior.repository&&prior.commit&&!prior.source&&!prior.legacySource)entry.legacySource={...selectedTemplateSource(prior),
   evidence:prior.qa?.evidence||null,nativeDeployment:prior.qa?.nativeLocalization?.deployment||null};
  const sourceFiles=new Map(gitFiles(root,commit,{prefix}).map(f=>[f.path,Buffer.alloc(0)]));
- if(nativeLocaleSources(sourceFiles).length||qa.nativeLocalization)validateNativeRelease(key,entry);
+ if(nativeLocaleSources(sourceFiles).length||qa.nativeLocalization)validateNativeRelease(key,entry,{root});
  if(write) {
   if(!fs.readFileSync(lockFile).equals(before))throw new Error('Release lock changed during review; preserve the newer selection.');
   lock.templates[key]=entry;
