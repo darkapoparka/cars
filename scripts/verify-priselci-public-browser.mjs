@@ -34,6 +34,17 @@ export function prepareBrowserDependencies(root,env=process.env) {
   git('restore','--source='+SELECTED_TEMPLATE_REVISION,'--worktree','--',...files);
   return files.map(relative=>{const file=path.join(root,relative);assert.equal(fs.realpathSync(file),file);assert.equal(git('hash-object',file),git('rev-parse',SELECTED_TEMPLATE_REVISION+':'+relative));return{path:relative,sha256:sha256(fs.readFileSync(file))};});
 }
+export function nativeCardTarget(family,locale) {
+  const routes=routePlan(family,locale);
+  if(family!=='app') return PIN.publicOrigin+routes.detail;
+  const slug=routes.detail.split('/').at(-1);
+  return PIN.publicOrigin+routes.inventory+'#vehicle='+encodeURIComponent(slug);
+}
+export async function exactNativeBack(page,expected) {
+  await page.goBack({waitUntil:'domcontentloaded'});
+  await page.waitForURL(expected,{waitUntil:'domcontentloaded',timeout:10000});
+  assert.equal(page.url(),expected,'Native Back target differs');
+}
 const pinFieldsSealed = () => ['sourceCommit','sourceTree'].every(key => /^[a-f0-9]{40}$/.test(PIN[key] ?? '')) &&
   ['versionId','deploymentId'].every(key => /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/i.test(PIN[key] ?? '')) &&
   ['buildRunId','artifactId'].every(key => Number.isSafeInteger(PIN[key]) && PIN[key] > 0);
@@ -48,7 +59,7 @@ export function routePlan(family,locale) {
   if(family==='app') { const home='/variant-4/'+locale,detail=home+'/cars/vw-golf-1-4-2007-'+SOURCE_ID;
     return {home,inventory:home+'/cars',detail,gallery:detail+'/gallery',contact:home+'/stores'}; }
   if(family==='mobile') return {home:'/variant-5/?lang='+locale,inventory:'/variant-5/?lang='+locale,
-    detail:'/variant-5/vehicle/'+SOURCE_ID+'?lang='+locale,gallery:'/variant-5/vehicle/'+SOURCE_ID+'/gallery?lang='+locale,contact:'/variant-5/contact?lang='+locale};
+    detail:'/variant-5/vehicle/'+SOURCE_ID,gallery:'/variant-5/vehicle/'+SOURCE_ID+'/gallery',contact:'/variant-5/contact'};
   return {home:'/variant-6/?lang='+locale,inventory:'/variant-6/vehicles?lang='+locale,
     detail:'/variant-6/vehicle?id='+SOURCE_ID+'&lang='+locale,gallery:null,contact:'/variant-6/contact?lang='+locale};
 }
@@ -162,7 +173,7 @@ async function followDesignLinks(page,locale) {
     const target=PIN.publicOrigin+relative;if(target===initial) {followed.push({key,target,sameRoute:true});continue;}
     const host=page.locator('dealer-design-switcher').first();await host.locator('.fab').click();
     await Promise.all([page.waitForURL(target,{waitUntil:'domcontentloaded'}),host.locator('a.design[data-design-key="'+key+'"]').click()]);
-    followed.push({key,target,actual:page.url()});await page.goBack({waitUntil:'domcontentloaded'});assert.equal(page.url(),initial);await page.locator('dealer-design-switcher .fab').waitFor({state:'visible'});
+    followed.push({key,target,actual:page.url()});await exactNativeBack(page,initial);await page.locator('dealer-design-switcher .fab').waitFor({state:'visible'});
     if(await host.locator('.fab').getAttribute('aria-expanded')==='true') await host.locator('.close').click();
   }
   return followed;
@@ -228,14 +239,23 @@ export async function runComplement({root,requestSha,env=process.env}) {
         await goto(page,routes.inventory,locale);if(family==='app')await dismissAppWelcome(page,locale);const links=page.locator('a[href]');
         const candidates=await links.evaluateAll(nodes=>nodes.map(a=>{const r=a.getBoundingClientRect(),s=getComputedStyle(a);return{href:a.href,text:a.textContent,visible:r.width>0&&r.height>0&&s.visibility!=='hidden'&&s.display!=='none'};}));
         const index=selectSourceLink(candidates,routes.detail),selected=candidates[index];record.sourceLink={href:selected.href,text:selected.text.trim()};
-        await Promise.all([page.waitForURL(selected.href,{waitUntil:'domcontentloaded'}),links.nth(index).click()]);
-        assert.equal(page.url(),selected.href,'Native source card navigation differs');await page.waitForFunction(expected=>document.documentElement.lang===expected||document.documentElement.lang.startsWith(expected+'-'),locale,{timeout:10000});assertLocale(await page.locator('html').getAttribute('lang')||'',locale);
+        const nativeTarget=nativeCardTarget(family,locale);
+        if(family==='app') await page.locator('[data-vehicle-drawers-ready="true"]').waitFor({state:'attached'});
+        await Promise.all([page.waitForURL(nativeTarget,{waitUntil:'domcontentloaded'}),links.nth(index).click()]);
+        assert.equal(page.url(),nativeTarget,'Native source card navigation differs');
+        if(family==='app') {
+          const drawer=page.locator('[data-vehicle-drawer]');await drawer.waitFor({state:'visible'});
+          await drawer.getByRole('heading',{name:/Golf/i}).first().waitFor({state:'visible'});
+          assert.match(await drawer.innerText(),/3[\s\u00a0.,]?600/,'Native drawer source price absent');
+          record.nativeDrawer={expected:nativeTarget,actual:page.url(),visible:true};
+          await goto(page,routes.detail,locale);
+        }await page.waitForFunction(expected=>document.documentElement.lang===expected||document.documentElement.lang.startsWith(expected+'-'),locale,{timeout:10000});assertLocale(await page.locator('html').getAttribute('lang')||'',locale);
         const title=page.getByRole('heading',{name:/Golf/i}).first();await title.waitFor({state:'visible'});
         assert.match(await page.locator('body').innerText(),/3[\s\u00a0.,]?600/,'Dated source price absent');record.steps.push({stage:'source-detail',geometry:await geometry(page,width,title)});
         if(locale==='en'&&width===1440) {assets.set(family+'/photo',await paintedAssets(page,proofs.artifactManifest.value.files,'photo'));const filename=family+'-en-1440-detail.png';await page.screenshot({path:path.join(output,filename)});screenshots.push(filename);}
         if(routes.gallery) await goto(page,routes.gallery,locale);record.gallery=await gallery(page,family,locale,width);record.steps.push({stage:'gallery',geometry:await geometry(page,width)});
         const prior=page.url();await goto(page,routes.contact,locale);record.steps.push({stage:'contact',geometry:await geometry(page,width)});
-        await page.goBack({waitUntil:'domcontentloaded'});await page.waitForFunction(expected=>document.documentElement.lang===expected||document.documentElement.lang.startsWith(expected+'-'),locale,{timeout:10000});
+        await exactNativeBack(page,prior);await page.waitForFunction(expected=>document.documentElement.lang===expected||document.documentElement.lang.startsWith(expected+'-'),locale,{timeout:10000});
         assert.equal(page.url(),prior,'Native back lost the exact source/gallery URL or locale query');assertLocale(await page.locator('html').getAttribute('lang')||'',locale);
         record.nativeBack={expected:prior,actual:page.url(),documentLocale:await page.locator('html').getAttribute('lang')};
         assertBoundary(blocked);record.passed=true;

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import {readComplementGithubIdentity,legacyClipRegion,selectSourceLink,dismissAppWelcome,assertPilot,PIN,routePlan,designLinks,galleryLabels,manifestAsset,validateGeometry,paintedHeading,assertLocale,controlFit,SOURCE_ID} from './verify-priselci-public-browser.mjs';
+import {nativeCardTarget,exactNativeBack,readComplementGithubIdentity,legacyClipRegion,selectSourceLink,dismissAppWelcome,assertPilot,PIN,routePlan,designLinks,galleryLabels,manifestAsset,validateGeometry,paintedHeading,assertLocale,controlFit,SOURCE_ID} from './verify-priselci-public-browser.mjs';
 test('release guard rejects a different hosted version, origin, source and artifact',()=>{
   if(PIN.sourceCommit === null){assert.throws(()=>assertPilot({...PIN}),/Held S2 pilot tuple is not sealed/);return;}
   assertPilot({...PIN});for(const key of ['versionId','deploymentId','publicOrigin','sourceCommit','sourceTree','buildRunId','artifactId']) assert.throws(()=>assertPilot({...PIN,[key]:'changed'}));
@@ -19,7 +19,7 @@ test('native locale and visible control geometry must match actual document, not
   controlFit({x:270,y:20,width:44,height:44},320);assert.throws(()=>controlFit({x:310,y:20,width:44,height:44},320));
 });
 test('exact source route joins retain locale and actual native IDs without arbitrary route admission',()=>{
-  for(const locale of ['bg','en']) for(const family of ['app','mobile','karento-best']) {const row=routePlan(family,locale);assert(row.detail.includes(SOURCE_ID));assert(row.contact.includes(locale));assert(Object.values(row).every(value=>value===null||value.startsWith('/variant-')));}
+  for(const locale of ['bg','en']) for(const family of ['app','mobile','karento-best']) {const row=routePlan(family,locale);assert(row.detail.includes(SOURCE_ID));assert((family==='mobile'?row.home:row.contact).includes(locale));assert(Object.values(row).every(value=>value===null||value.startsWith('/variant-')));}
   assert.throws(()=>routePlan('modern','bg'));assert.throws(()=>routePlan('app','fr'));assert.equal(Object.keys(designLinks('en')).length,6);
   assert.equal(galleryLabels('karento-best','bg').close,'Затворете снимките');assert.notEqual(galleryLabels('app','bg').close,galleryLabels('mobile','bg').close);
   assert.throws(()=>galleryLabels('app','fr'));
@@ -77,4 +77,23 @@ test('authority wrapper preserves successful identity and exact GET timeout, rej
  const identityImpl=async(request,{fetchImpl})=>{await fetchImpl(authorityUrl,{method:'GET',redirect:'error',signal:AbortSignal.timeout(30000)});return identity;};
  assert.equal(await readComplementGithubIdentity({...PIN},output,{identityImpl,fetchImpl:async(url,init)=>{seen={url,init};return {};}}),identity);assert.equal(seen.url,authorityUrl);assert.equal(seen.init.method,'GET');assert.equal(seen.init.redirect,'error');assert(seen.init.signal instanceof AbortSignal);assert(!fs.existsSync(path.join(output,'results.json')));
  const rejected=authorityOutput(t);let calls=0;await assert.rejects(()=>readComplementGithubIdentity({...PIN},rejected,{identityImpl:async(request,{fetchImpl})=>fetchImpl('https://example.com/business-enquiry',{method:'POST',redirect:'error'}),fetchImpl:async()=>{calls++;}}));assert.equal(calls,0);const result=JSON.parse(fs.readFileSync(path.join(rejected,'results.json')));assert.equal(result.failure.endpoint,null);assert.equal(result.attemptedJourneys,0);
+});
+
+test('native App opens the source drawer and Mobile keeps native bare paths with language asserted separately',()=>{
+ for(const locale of ['en','bg']){
+  const app=routePlan('app',locale),target=new URL(nativeCardTarget('app',locale));
+  assert.equal(target.origin,PIN.publicOrigin);assert.equal(target.pathname,app.inventory);
+  assert.equal(new URLSearchParams(target.hash.slice(1)).get('vehicle'),app.detail.split('/').at(-1));assert(target.hash.includes(SOURCE_ID));
+  const mobile=routePlan('mobile',locale);assert.equal(mobile.home,'/variant-5/?lang='+locale);assert.equal(mobile.detail,'/variant-5/vehicle/'+SOURCE_ID);assert.equal(mobile.gallery,mobile.detail+'/gallery');assert.equal(mobile.contact,'/variant-5/contact');
+  assert.equal(nativeCardTarget('mobile',locale),PIN.publicOrigin+mobile.detail);assertLocale(locale,locale);assert.throws(()=>assertLocale(locale,locale==='en'?'bg':'en'));
+ }
+ assert.throws(()=>nativeCardTarget('unknown','en'));assert.throws(()=>nativeCardTarget('mobile','fr'));
+});
+
+test('native Back waits for its exact target and still rejects a wrong final URL',async()=>{
+ const target=PIN.publicOrigin+routePlan('app','bg').home,calls=[];let current=PIN.publicOrigin+'/bg';
+ const page={goBack:async x=>calls.push(['back',x]),waitForURL:async(u,o)=>{calls.push(['wait',u,o]);current=u;},url:()=>current};
+ await exactNativeBack(page,target);assert.deepEqual(calls,[['back',{waitUntil:'domcontentloaded'}],['wait',target,{waitUntil:'domcontentloaded',timeout:10000}]]);
+ await assert.rejects(()=>exactNativeBack({...page,waitForURL:async()=>{},url:()=>PIN.publicOrigin+'/bg'},target),/Native Back target differs/);
+ const original=new Error('Exact target never arrived');await assert.rejects(()=>exactNativeBack({...page,waitForURL:async()=>{throw original;}},target),e=>e===original);
 });
