@@ -47,6 +47,8 @@ jobs:
           package-manager-cache: false
       - name: Verify QA authority and result parsing contracts
         run: node --test scripts/verify-existing-fleet-hosted-native.test.mjs
+      - name: Restore exact immutable S1 sources and retain reviewed QA overrides
+        run: node scripts/verify-existing-fleet-hosted-native.mjs --prepare-source
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
         with:
           node-version: '22.23.2'

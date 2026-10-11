@@ -1,4 +1,5 @@
 import test from 'node:test';
+import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -9,7 +10,7 @@ import { pathToFileURL } from 'node:url';
 import { APPLICATIONS, FAMILIES, HOSTED_QA_ACCOUNT, HOSTED_QA_ORIGIN, HOSTED_QA_PROFILE, TEMPLATE_REVISION,
   assertBoundary, guardHostedContext, parseHelperResults, readHostedProfile, requestDecision, sha256,
   validateHelperTarget, validateProviderAfter, validateRequest } from './lib/hosted-native-qa.mjs';
-import { githubIdentity, helperPlan } from './verify-existing-fleet-hosted-native.mjs';
+import { githubIdentity, helperPlan, preparePinnedQaSources, PINNED_QA_OVERRIDES } from './verify-existing-fleet-hosted-native.mjs';
 
 const h='a'.repeat(64),c='b'.repeat(40),id='242efab6-9a8b-4f48-af9a-848029e6cdaf';
 const request=()=>({schemaVersion:1,type:'cars-existing-fleet-hosted-native-qa-request',client:'priselci',workerName:'cars-priselci',publicOrigin:HOSTED_QA_ORIGIN,accountId:HOSTED_QA_ACCOUNT,sourceCommit:c,sourceTree:c,inputDigest:h,
@@ -156,4 +157,17 @@ test('workflow runner browser cache uses supported step env contexts and the sam
   check(text);
   assert.throws(()=>check(text.replace('      NEXT_TELEMETRY_DISABLED:', '      PLAYWRIGHT_BROWSERS_PATH: '+String.fromCharCode(36)+'{{ runner.temp }}/browser-cache'+String.fromCharCode(10)+'      NEXT_TELEMETRY_DISABLED:')),/unsupported job env context: runner/);
   assert.throws(()=>check(text.replace('          PLAYWRIGHT_BROWSERS_PATH:', '          REMOVED_BROWSER_CACHE:')),/missing step cache/);
+});
+
+test('immutable S1 restoration retains only four canonical QA overrides and leaves dealer source intact',()=>{
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'cars-qa-s1-')),head='a'.repeat(40),files=new Map();for(const name of PINNED_QA_OVERRIDES){const file=path.join(root,name);fs.mkdirSync(path.dirname(file),{recursive:true});const bytes=Buffer.from('canonical reviewed QA override '+name+'\n');fs.writeFileSync(file,bytes);files.set(name,bytes);}
+ const architecture=path.join(root,'templates/auto-best/scripts/check-architecture.mjs'),client=path.join(root,'clients/priselci/stock.json');fs.writeFileSync(architecture,'current architecture drift');fs.mkdirSync(path.dirname(client),{recursive:true});fs.writeFileSync(client,'unchanged original dealer facts');
+ const oid=bytes=>createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex'),env={GITHUB_ACTIONS:'true',GITHUB_REPOSITORY:'darkapoparka/cars',GITHUB_EVENT_NAME:'workflow_dispatch',GITHUB_REF:'refs/heads/main',GITHUB_SHA:head,GITHUB_WORKFLOW_REF:'darkapoparka/cars/.github/workflows/existing-fleet-hosted-native-qa.yml@refs/heads/main'},gitRead=(_root,...args)=>args.join(' ')==='rev-parse HEAD'?head:args[0]==='remote'?'https://github.com/darkapoparka/cars.git':oid(files.get(args[1].slice(head.length+1)));let restores=0;
+ const options={root,env,platform:'linux',version:'v26.10.0',gitRead,restore:paths=>{restores++;assert.deepEqual(paths,['templates/auto-best','templates/modern','templates/import']);fs.writeFileSync(architecture,'exact immutable S1 architecture');for(const name of PINNED_QA_OVERRIDES)fs.writeFileSync(path.join(root,name),'raw S1 helper');},validateSources:()=>{assert.equal(fs.readFileSync(architecture,'utf8'),'exact immutable S1 architecture');for(const [name,bytes]of files)assert(fs.readFileSync(path.join(root,name)).equals(bytes));return {leases:[{path:'verified immutable input'}]};}};
+ const result=preparePinnedQaSources(options);assert.equal(restores,1);assert.equal(result.overrides.length,4);assert.equal(result.templateRevision,TEMPLATE_REVISION);assert.equal(fs.readFileSync(client,'utf8'),'unchanged original dealer facts');assert.equal(result.clientSourceChanged,false);
+ assert.throws(()=>preparePinnedQaSources({...options,env:{...env,GITHUB_EVENT_NAME:'push'}}));assert.equal(restores,1);
+ fs.writeFileSync(path.join(root,PINNED_QA_OVERRIDES[0]),'unreviewed override');assert.throws(()=>preparePinnedQaSources(options),/differs from canonical/);assert.equal(restores,1);
+});
+test('workflow restores immutable S1 before dependency installation without changing browser cases or proof guards',()=>{
+ const text=fs.readFileSync(new URL('../.github/workflows/existing-fleet-hosted-native-qa.yml',import.meta.url),'utf8');assert.equal(text.split('--prepare-source').length-1,1);assert(text.indexOf('--prepare-source')<text.indexOf('Install lockfile-pinned Auto Best and Modern'));assert(text.includes('--request "$QA_REQUEST" --sha256 "$QA_REQUEST_SHA256" --run'));
 });

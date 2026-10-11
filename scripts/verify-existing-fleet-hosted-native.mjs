@@ -54,6 +54,22 @@ const git = (root, ...args) => {
   assert.equal(result.status, 0, result.stderr || 'Git read failed'); return result.stdout.trim();
 };
 
+export const PINNED_QA_OVERRIDES = Object.freeze(QA_FILES.filter(name => name.startsWith('templates/')));
+export function preparePinnedQaSources({root=ROOT,env=process.env,platform=process.platform,version=process.version,gitRead=git,
+  restore=(paths)=>{const result=spawnSync('git',['restore','--source='+TEMPLATE_REVISION,'--worktree','--',...paths],{cwd:root,env:{...env,GIT_NO_LAZY_FETCH:'0'},encoding:'utf8',maxBuffer:16*1024**2});assert.equal(result.status,0,result.stderr||'Immutable S1 restoration failed');},
+  validateSources=()=>sourceLeases(root)}={}) {
+  assert(platform==='linux'&&version==='v26.10.0'&&env.GITHUB_ACTIONS==='true'&&env.GITHUB_REPOSITORY==='darkapoparka/cars'&&
+    env.GITHUB_EVENT_NAME==='workflow_dispatch'&&env.GITHUB_REF==='refs/heads/main'&&/^[a-f0-9]{40}$/.test(env.GITHUB_SHA??'')&&
+    env.GITHUB_WORKFLOW_REF==='darkapoparka/cars/.github/workflows/existing-fleet-hosted-native-qa.yml@refs/heads/main','Immutable QA source preparation is CI-only');
+  assert.equal(gitRead(root,'rev-parse','HEAD'),env.GITHUB_SHA,'QA checkout differs from event');
+  assert.equal(gitRead(root,'remote','get-url','origin').replace(/\.git$/,''),'https://github.com/darkapoparka/cars','Unreviewed QA source origin');
+  const retained=new Map(),rootPhysical=fs.realpathSync(root);assert.equal(PINNED_QA_OVERRIDES.length,4);
+  for(const name of PINNED_QA_OVERRIDES){const file=path.resolve(root,name),relative=path.relative(rootPhysical,file);assert(relative&&!relative.startsWith('..')&&!path.isAbsolute(relative)&&fs.realpathSync(file)===file&&fs.statSync(file).isFile(),'Physical reviewed QA override required');const bytes=fs.readFileSync(file);assert(bytes.length>0&&bytes.length<=2*1024**2);new TextDecoder('utf8',{fatal:true}).decode(bytes);const oid=gitRead(root,'rev-parse',env.GITHUB_SHA+':'+name);assert.equal(gitBlob(NORMALIZED(bytes)),oid,'Reviewed QA override differs from canonical event: '+name);retained.set(name,{bytes,oid,file});}
+  const paths=Object.keys(FAMILIES).map(key=>'templates/'+key);restore(paths);
+  for(const [name,{bytes,file}] of retained){assert(fs.realpathSync(file)===file&&fs.statSync(file).isFile(),'Restored S1 override path must remain physical: '+name);fs.writeFileSync(file,bytes);assert(fs.readFileSync(file).equals(bytes),'Reviewed QA override restore differs');}
+  const sources=validateSources();return {schemaVersion:1,type:'cars-hosted-native-immutable-s1-test-source',qaToolCommit:env.GITHUB_SHA,templateRevision:TEMPLATE_REVISION,templatePaths:paths,overrides:[...retained].map(([name,r])=>({path:name,gitBlob:r.oid,sha256:sha256(r.bytes)})),sourceLeaseCount:sources.leases.length,clientSourceChanged:false,providerMutation:false};
+}
+
 export function sourceLeases(root = ROOT, request = null) {
   const leases = [], files = new Map();
   if (request) for (const key of APPLICATIONS) assert.equal(git(root, 'rev-parse', TEMPLATE_REVISION + ':templates/' + key), request.sourceReleases[key].tree, 'Selected S1 subtree differs: ' + key);
@@ -224,6 +240,7 @@ function sameSourceLeases(left,right){assert.equal(canonical(left),canonical(rig
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)) {
   try {
     const args=process.argv.slice(2);if(args.includes('--help'))console.log('Usage: node scripts/verify-existing-fleet-hosted-native.mjs --request priselci-request.json --sha256 RAW_SHA256 [--run]. Default validates exact reviewed proofs and prints a plan without live requests. --run requires the isolated manual Actions job; all release approvals remain false.');
+    else if(args.length===1&&args[0]==='--prepare-source')console.log(JSON.stringify(preparePinnedQaSources(),null,2));
     else {const options={};for(let i=0;i<args.length;i++){if(args[i]==='--run'){assert(!options.run);options.run=true;}else{assert(['--request','--sha256'].includes(args[i])&&args[i+1],'Unknown QA option');const key=args[i]==='--request'?'basename':'requestSha256';assert(!options[key],'Repeated QA option');options[key]=args[++i];}}assert(options.requestSha256,'Expected request SHA256 required');const result=await verifyHostedNative(options);console.log(JSON.stringify(result,null,2));if(result.status==='failed')process.exitCode=1;}
   }catch(error){console.error(error.message);process.exitCode=1;}
 }

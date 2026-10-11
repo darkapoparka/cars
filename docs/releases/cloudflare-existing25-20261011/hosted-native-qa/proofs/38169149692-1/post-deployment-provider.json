@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-11T20:06:13.655Z",
+  "checkedAt": "2026-10-11T20:28:46.595Z",
   "accountId": "cb0007f242077bd759331f096eb75531",
   "workerName": "cars-priselci",
   "publicOrigin": "https://cars-priselci.darkapoparka1.workers.dev",
@@ -161,7 +161,7 @@
     {
       "kind": "scripts",
       "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts",
-      "query": {},
+      "query": null,
       "status": 200,
       "success": true,
       "resultInfo": null
@@ -169,7 +169,7 @@
     {
       "kind": "settings",
       "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts/cars-priselci/settings",
-      "query": {},
+      "query": null,
       "status": 200,
       "success": true,
       "resultInfo": null
@@ -177,7 +177,7 @@
     {
       "kind": "deployments",
       "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts/cars-priselci/deployments",
-      "query": {},
+      "query": null,
       "status": 200,
       "success": true,
       "resultInfo": {
@@ -191,7 +191,7 @@
     {
       "kind": "subdomain",
       "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts/cars-priselci/subdomain",
-      "query": {},
+      "query": null,
       "status": 200,
       "success": true,
       "resultInfo": null
@@ -199,7 +199,7 @@
     {
       "kind": "schedules",
       "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts/cars-priselci/schedules",
-      "query": {},
+      "query": null,
       "status": 200,
       "success": true,
       "resultInfo": null
@@ -207,7 +207,7 @@
     {
       "kind": "domains",
       "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/domains",
-      "query": {},
+      "query": null,
       "status": 200,
       "success": true,
       "resultInfo": {
@@ -220,7 +220,7 @@
     {
       "kind": "accountSubdomain",
       "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/subdomain",
-      "query": {},
+      "query": null,
       "status": 200,
       "success": true,
       "resultInfo": null
@@ -246,7 +246,7 @@
     {
       "kind": "version",
       "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts/cars-priselci/versions/31b65368-5bec-4deb-8592-18b1980ea895",
-      "query": {},
+      "query": null,
       "status": 200,
       "success": true,
       "resultInfo": null
