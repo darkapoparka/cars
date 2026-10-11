@@ -1,6 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {legacyClipRegion,selectSourceLink,dismissAppWelcome,assertPilot,PIN,routePlan,designLinks,galleryLabels,manifestAsset,validateGeometry,paintedHeading,assertLocale,controlFit,SOURCE_ID} from './verify-priselci-public-browser.mjs';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import {readComplementGithubIdentity,legacyClipRegion,selectSourceLink,dismissAppWelcome,assertPilot,PIN,routePlan,designLinks,galleryLabels,manifestAsset,validateGeometry,paintedHeading,assertLocale,controlFit,SOURCE_ID} from './verify-priselci-public-browser.mjs';
 test('release guard rejects a different hosted version, origin, source and artifact',()=>{
   if(PIN.sourceCommit === null){assert.throws(()=>assertPilot({...PIN}),/Held S2 pilot tuple is not sealed/);return;}
   assertPilot({...PIN});for(const key of ['versionId','deploymentId','publicOrigin','sourceCommit','sourceTree','buildRunId','artifactId']) assert.throws(()=>assertPilot({...PIN,[key]:'changed'}));
@@ -51,4 +54,27 @@ test('welcome closes through exact native local control with no force or busines
     assert.equal(await dismissAppWelcome(page,locale),true);assert.equal(calls[0].options.name,locale==='bg'?'Затвори приветствието':'Close welcome');assert.deepEqual(calls[1].clickArgs,[]);assert.deepEqual(calls[2].wait,{state:'hidden'});
   }
   assert.equal(await dismissAppWelcome({locator:()=>({isVisible:async()=>false})},'bg'),false);
+});
+
+function authorityOutput(t){const output=fs.mkdtempSync(path.join(os.tmpdir(),'cars-complement-authority-'));t.after(()=>fs.rmSync(output,{recursive:true,force:true}));return output;}
+const authorityUrl='https://api.github.com/repos/darkapoparka/cars/actions/runs/38180650445';
+test('authority timeout before browser retains exact GET context and zero attempted journeys without secrets',async t=>{
+ const output=authorityOutput(t),secret='must-not-appear-in-artifact';let calls=0;
+ const identityImpl=async(request,{fetchImpl})=>fetchImpl(authorityUrl,{method:'GET',redirect:'error',signal:AbortSignal.timeout(30000),headers:{authorization:'Bearer '+secret}});
+ await assert.rejects(()=>readComplementGithubIdentity({...PIN},output,{requestSha256:'a'.repeat(64),identityImpl,fetchImpl:async()=>{calls++;throw new DOMException(secret,'TimeoutError');}}),/GitHub authority GET failed before browser/);
+ const raw=fs.readFileSync(path.join(output,'results.json'),'utf8'),result=JSON.parse(raw);assert.equal(calls,1);assert.equal(result.attemptedJourneys,0);assert.deepEqual(result.records,[]);assert.equal(result.failure.endpoint,'/repos/darkapoparka/cars/actions/runs/38180650445');assert.equal(result.failure.timeout,true);assert.equal(result.failure.errorName,'TimeoutError');assert.equal(result.phase,'pre-browser-github-authority');assert.equal(result.passed,false);assert(!raw.includes(secret));assert(!raw.includes('authorization'));assert.deepEqual(result.acceptance,{source:false,native:false,hosted:false,owner:false,global:false});
+});
+test('authority body timeout and immutable validation failures remain failures without retries or product-case inflation',async t=>{
+ for(const kind of ['body','guard']){
+  const output=authorityOutput(t);let calls=0;
+  const identityImpl=async(request,{fetchImpl})=>{const response=await fetchImpl(authorityUrl,{method:'GET',redirect:'error',signal:AbortSignal.timeout(30000)});await response.text();assert.equal('changed-source',request.sourceCommit,'immutable metadata differs');};
+  await assert.rejects(()=>readComplementGithubIdentity({...PIN},output,{identityImpl,fetchImpl:async()=>{calls++;return{text:async()=>{if(kind==='body')throw new DOMException('private response text','TimeoutError');return '{}';}};}}));
+  const raw=fs.readFileSync(path.join(output,'results.json'),'utf8'),result=JSON.parse(raw);assert.equal(calls,1);assert.equal(result.records.length,0);assert.equal(result.attemptedJourneys,0);assert.equal(result.failure.timeout,kind==='body');assert.equal(result.failure.errorName,kind==='body'?'TimeoutError':'AssertionError');assert(!raw.includes('private response text'));assert(!raw.includes('changed-source'));
+ }
+});
+test('authority wrapper preserves successful identity and exact GET timeout, rejecting off-repository requests before network',async t=>{
+ const output=authorityOutput(t),identity={runId:38180650445,compiledCommit:PIN.sourceCommit};let seen;
+ const identityImpl=async(request,{fetchImpl})=>{await fetchImpl(authorityUrl,{method:'GET',redirect:'error',signal:AbortSignal.timeout(30000)});return identity;};
+ assert.equal(await readComplementGithubIdentity({...PIN},output,{identityImpl,fetchImpl:async(url,init)=>{seen={url,init};return {};}}),identity);assert.equal(seen.url,authorityUrl);assert.equal(seen.init.method,'GET');assert.equal(seen.init.redirect,'error');assert(seen.init.signal instanceof AbortSignal);assert(!fs.existsSync(path.join(output,'results.json')));
+ const rejected=authorityOutput(t);let calls=0;await assert.rejects(()=>readComplementGithubIdentity({...PIN},rejected,{identityImpl:async(request,{fetchImpl})=>fetchImpl('https://example.com/business-enquiry',{method:'POST',redirect:'error'}),fetchImpl:async()=>{calls++;}}));assert.equal(calls,0);const result=JSON.parse(fs.readFileSync(path.join(rejected,'results.json')));assert.equal(result.failure.endpoint,null);assert.equal(result.attemptedJourneys,0);
 });

@@ -182,12 +182,37 @@ async function gallery(page,family,locale,width) {
   await close.click();await dialog.waitFor({state:'hidden'});
   return {opened:true,nextImageChanged:true,close:closeBounds,dismissed:true};
 }
+
+/** Preserve a metadata transport/authority failure without inventing attempted browser journeys. */
+export async function readComplementGithubIdentity(request,output,{requestSha256,fetchImpl=fetch,identityImpl=githubIdentity}={}) {
+  let endpoint=null;
+  const authorityFetch=async(url,init)=>{
+    const parsed=new URL(url);
+    assert.equal(parsed.origin,'https://api.github.com');assert(parsed.pathname.startsWith('/repos/darkapoparka/cars/'));assert.equal(parsed.search,'');assert.equal(parsed.hash,'');
+    assert.equal(init?.method,'GET');assert.equal(init?.redirect,'error');
+    endpoint=parsed.pathname;
+    try{return await fetchImpl(url,init);}catch(cause){throw new Error('GitHub authority GET failed before browser: '+endpoint,{cause});}
+  };
+  try{return await identityImpl(request,{fetchImpl:authorityFetch});}
+  catch(error){
+    const name=error.cause?.name??error.name;
+    const result={schemaVersion:1,type:'cars-priselci-public-browser-complement',phase:'pre-browser-github-authority',checkedAt:new Date().toISOString(),requestSha256,pilot:PIN,
+      attemptedJourneys:0,records:[],assets:{},screenshots:[],passed:false,
+      failure:{stage:'github-identity',method:'GET',endpoint,errorName:['TimeoutError','AbortError','AssertionError','SyntaxError','TypeError','Error'].includes(name)?name:'Error',timeout:name==='TimeoutError'},
+      acceptance:{source:false,native:false,hosted:false,owner:false,global:false},postCollectionProviderRecheckRequired:true};
+    // Never serialize headers, tokens, signed URLs, remote body/error text or a cause/stack.
+    fs.writeFileSync(path.join(output,'results.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+    throw error;
+  }
+}
+
 export async function runComplement({root,requestSha,env=process.env}) {
   assertCi(env);
   assert.match(env.GITHUB_RUN_ID||'',/^\d+$/);assert.match(env.GITHUB_RUN_ATTEMPT||'',/^\d+$/);
   const loaded=readRequest(root,REQUEST_BASENAME,requestSha),request=assertPilot(loaded.request),proofs=validateOriginalProofs(root,request,{fresh:true});
-  const identity=await githubIdentity(request),base=fs.realpathSync(env.RUNNER_TEMP),output=path.join(base,'priselci-public-browser-'+env.GITHUB_RUN_ID+'-'+env.GITHUB_RUN_ATTEMPT);
+  const base=fs.realpathSync(env.RUNNER_TEMP),output=path.join(base,'priselci-public-browser-'+env.GITHUB_RUN_ID+'-'+env.GITHUB_RUN_ATTEMPT);
   assert(!fs.existsSync(output),'Evidence output already exists');fs.mkdirSync(output);assert.equal(fs.realpathSync(output),output);
+  const identity=await readComplementGithubIdentity(request,output,{requestSha256:requestSha});
   const require=createRequire(path.join(root,'templates/auto-best/package.json'));
   assert.equal(require('./package.json').devDependencies.playwright,'1.62.1','Selected browser runtime changed');
   const {chromium}=require('playwright'),browser=await chromium.launch({headless:true}),records=[],screenshots=[],assets=new Map();
