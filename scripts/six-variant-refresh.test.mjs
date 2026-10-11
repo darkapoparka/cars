@@ -4,13 +4,15 @@ import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
 import { execFileSync } from 'node:child_process';
+import { createRequire, stripTypeScriptTypes } from 'node:module';
 import { planSixDesignSelection } from './lib/six-design-release.mjs';
 import { selectPinnedRevisions, updateManifestPins, planDealerUpgrade, materializeUpgradeCandidate } from './dealer-updates/three-way-upgrade.mjs';
 import { updateSelection, addLegacyDetailUpgrade } from './dealer-updates/update-dealer-template.mjs';
 import { LEGACY_DETAIL_FILE, legacyDetailArtifact } from './publishing/legacy-detail-routes.mjs';
 import { applyExtendedRefreshAdapter, extendedVariantSourceDigest, sealExtendedVariant, retainDealerVariantAssets } from './lib/client-refresh-six.mjs';
 import { signatureBusinessPreview, signaturePriceFacts, signatureMileageFacts } from './lib/client-refresh-signature.mjs';
-import { loadDealerProfile } from './lib/client-refresh-normalize.mjs';
+import { loadDealerProfile, refreshNormalizeInternals } from './lib/client-refresh-normalize.mjs';
+import { UK_MOBILE_PATHS } from './lib/client-refresh-uk-next.mjs';
 import { normalized, sha256, filesAt } from './lib/workflow.mjs';
 
 const previous = '1'.repeat(40), next = '2'.repeat(40);
@@ -158,16 +160,22 @@ test('Signature discovery removes currency comparisons for mixed feeds and discl
   assert.doesNotMatch(x.files.get('karento-best/src/routes/2/DiscoverySearch.svelte').toString(),/budget-section/);
 });
 
-test('Mobile adapter uses real identity/media, isolates saved data and removes captured dealer stock from the active feed',t=>{
+function mobileFixture(t,uk=false) {
   const x=extendedFixture(t,'mobile');
-  x.profile.business.currency='USD'; // Explicit stock remains AED; never relabel amounts from stale business defaults.
   x.files.set('mobile/src/lib/showroom-config.ts',Buffer.from('export const showroom = defineShowroom({\n  name: "Your showroom"\n});\n'));
   x.files.set('mobile/src/lib/catalog.ts',Buffer.from('import type { Vehicle } from "./types";\nexport const vehicles: Vehicle[] = [oldVehicle];\nexport const makes = ["Audi"];\n'));
   x.files.set('mobile/src/lib/dealers.ts',Buffer.from('export const capturedDealers: Record<string,CapturedDealer> = {};\n'));
-  for(const name of ['NativeDealerCards.tsx','DealerScreens.tsx','VehicleCard.tsx','VehicleSections.tsx'])x.files.set('mobile/src/components/'+name,fs.readFileSync(path.join('templates/mobile/src/components',name)));
-  const donorCover='const desktopCovers: Record<string, string> = { "vehicle-1": "/images/donor-bmw.webp" };\nconst desktopCover = desktopCovers[v.id] || v.images[0];';
-  x.files.set('mobile/src/components/ShowroomVehicleCard.tsx',Buffer.from(donorCover));
-  for(const name of ['locale.ts','search.ts'])x.files.set('mobile/src/lib/'+name,fs.readFileSync(path.join('templates/mobile/src/lib',name)));
+  const names=[...['NativeDealerCards','DealerScreens','VehicleCard','VehicleSections','DesktopVehicleSummary','ShowroomVehicleCard','NativeCarPark','ShowroomFilterSheet'].map(name=>'src/components/'+name+'.tsx'),
+    ...['locale','search','types','vehicle-copy'].map(name=>'src/lib/'+name+'.ts'),...(uk?UK_MOBILE_PATHS:[])];
+  for(const name of new Set(names))x.files.set('mobile/'+name,fs.readFileSync(path.join('templates/mobile',name)));
+  return x;
+}
+
+test('Mobile adapter uses real identity/media, isolates saved data and removes captured dealer stock from the active feed',t=>{
+  const x=mobileFixture(t);
+  x.profile.business.currency='USD'; // Explicit stock remains AED; never relabel amounts from stale business defaults.
+  const card='mobile/src/components/ShowroomVehicleCard.tsx';
+  x.files.set(card,Buffer.from(x.files.get(card).toString().replace(/const desktopCovers:[\s\S]*?};/,'const desktopCovers: Record<string, string> = { "vehicle-1": "/images/donor-bmw.webp" };')));
   const adaptation=applyExtendedRefreshAdapter({...x,key:'mobile'});
   assert.match(x.files.get('mobile/src/lib/showroom-config.ts').toString(),/"storageNamespace": "fixture"/);
   assert.match(x.files.get('mobile/src/lib/showroom-config.ts').toString(),/"contactPreview": false/);
@@ -177,7 +185,8 @@ test('Mobile adapter uses real identity/media, isolates saved data and removes c
   const showroomCard=x.files.get('mobile/src/components/ShowroomVehicleCard.tsx').toString();
   assert.match(showroomCard,/const desktopCovers: Record<string, string> = \{\};/);
   assert.doesNotMatch(showroomCard,/donor-bmw/);
-  assert.match(showroomCard,/desktopCovers\[v\.id\] \|\| v\.images\[0\]/);
+  assert.match(showroomCard,/desktopCovers\[vehicle\.id\]/);
+  assert.match(showroomCard,/cover && photos.includes\(cover\) \? cover : photos\[0\]/);
   assert.ok(adaptation.contentPaths.includes('mobile/src/components/ShowroomVehicleCard.tsx'));
   assert.ok(x.files.has('mobile/public/dealer-brand/light.webp'));
   assert.match(x.files.get('mobile/src/lib/catalog.ts').toString(),/dealerInventory as Vehicle\[\]/);
@@ -205,6 +214,89 @@ test('new family media uses retained legacy mounted assets without depending on 
   fs.mkdirSync(path.dirname(competing),{recursive:true});fs.writeFileSync(competing,Buffer.from([82,73,70,70,0,9]));
   x.profile.listings.push({...x.profile.listings[0],id:'different',image:'/assets/dealer/current/source-id.webp',images:['/assets/dealer/current/source-id.webp']});
   assert.throws(()=>retainDealerVariantAssets(x.files,'mobile',x.profile,x.client),/Ambiguous retained media/);
+});
+
+const mobileTsModule = source => import('data:text/javascript;base64,' + Buffer.from(stripTypeScriptTypes(source,{disableExperimentalWarning:true})).toString('base64'));
+const withoutMobileImports = source => source.replace(/(?:import|export)\s+(?:type\s+)?[^;]*?\sfrom\s*['"][^'"]+['"];\s*/g,'');
+const generatedMobileLogic = files => 'const bgMessages: Record<string,string>={};const modelGroupsFor=()=>[];\n' +
+  ['lib/mobile-mileage.ts','lib/types.ts'].map(name=>files.get('mobile/src/'+name).toString()).join('\n')+'\n'+
+  withoutMobileImports(fs.readFileSync('templates/mobile/src/lib/filters.ts','utf8'))+'\n'+
+  ['lib/locale.ts','lib/search.ts'].map(name=>withoutMobileImports(files.get('mobile/src/'+name).toString())).join('\n');
+
+test('Mobile normalized missing, unknown and invalid mileage stays unknown across generated display, filters and sorting',async t=>{
+  const x=mobileFixture(t),business={...x.profile.business,distanceUnit:'km'},base={id:'rqs-source-id',make:'Peugeot',model:'308',year:2016,priceAmount:7600,currency:'EUR',images:['/dealer/vehicle.webp']};
+  x.profile.business=business;
+  const cases=[['missing',{}],['11791638081929344',{mileageKm:null}],['unpublished',{mileageKm:'Not published'}],['negative',{mileageKm:-1}],
+    ['nan',{mileageKm:NaN}],['infinite',{mileageKm:Infinity}],['explicit-unknown',{mileageKm:185200,mileageOnRequest:true}],
+    ['known',{mileageKm:75000}],['published-zero',{mileageKm:0}],['miles',{mileageMiles:60000}]];
+  x.profile.listings=cases.map(([id,fields],index)=>refreshNormalizeInternals.normalizeListing({...base,id,...fields},index,business));
+  x.profile.listings.push({...x.profile.listings[0],id:'invalid-unit',mileageValue:12000,mileageUnit:'invalid',mileageOnRequest:false},
+    {...x.profile.listings[0],id:'invalid-number',mileageValue:NaN,mileageOnRequest:false},
+    {...x.profile.listings[0],id:'unproven-zero',mileageValue:0,mileageOnRequest:undefined});
+  const before=JSON.stringify(x.profile),adaptation=applyExtendedRefreshAdapter({...x,key:'mobile'});
+  assert.equal(JSON.stringify(x.profile),before,'normalizer facts and individual source IDs are immutable');
+  const vehicles=JSON.parse(x.files.get('mobile/src/lib/dealer-inventory.json')),module=await mobileTsModule(generatedMobileLogic(x.files));
+  assert.deepEqual(vehicles.map(v=>v.id),x.profile.listings.map(v=>v.id),'each original listing identity reaches the Mobile feed');
+  assert.equal(vehicles.find(v=>v.id==='11791638081929344').mileageKnown,false,'RQS conflicting source mileage remains explicitly unknown');
+  for(const vehicle of vehicles.filter(v=>!['known','published-zero','miles'].includes(v.id))){
+    assert.equal(vehicle.mileageKnown,false,vehicle.id);assert.equal(vehicle.mileageOnRequest,true,vehicle.id);
+    assert.equal(module.hasMobileMileage(vehicle),false,vehicle.id);assert.ok(Number.isNaN(module.mobileMileageValue(vehicle)),vehicle.id);
+    assert.equal(module.formatMobileMileage(vehicle,'en'),'Mileage on request',vehicle.id);
+    assert.equal(module.formatMobileMileage(vehicle,'bg'),'Пробег при запитване',vehicle.id);
+    assert.deepEqual(module.filterVehicles([vehicle],module.normalizeFilters({maxMileage:'200000'})),[],vehicle.id+' max');
+    assert.deepEqual(module.filterVehicles([vehicle],module.normalizeFilters({minMileage:'0'})),[],vehicle.id+' min');
+    for(const condition of ['New','Used',"Employee's Car"])assert.deepEqual(module.filterVehicles([vehicle],module.normalizeFilters({condition:[condition]})),[],vehicle.id+' '+condition);
+  }
+  const ids=input=>input.map(v=>v.id);
+  assert.deepEqual(ids(module.filterVehicles(vehicles,module.normalizeFilters({}))),ids(vehicles),'unknown listings remain visible without fact filters');
+  assert.deepEqual(ids(module.filterVehicles(vehicles,module.normalizeFilters({maxMileage:'0'}))),['published-zero'],'real zero remains a published fact');
+  const known=vehicles.find(v=>v.id==='known'),zero=vehicles.find(v=>v.id==='published-zero'),miles=vehicles.find(v=>v.id==='miles');
+  assert.equal(known.mileage,75000);assert.equal(zero.mileage,0);assert.equal(zero.mileageKnown,true);assert.equal(miles.mileage,96561);
+  assert.equal(module.formatMobileMileage(known,'en'),'75,000 km');assert.match(module.formatMobileMileage(known,'bg'),/^75\s000 км$/);
+  assert.equal(module.formatMobileMileage(zero,'en'),'0 km');assert.equal(module.formatMobileMileage(miles,'en'),'96,561 km');
+  assert.deepEqual(ids(module.sortVehicles(vehicles,'mileage')).slice(0,3),['published-zero','known','miles']);
+  assert.deepEqual(ids(module.sortVehicles(vehicles,'mileage-desc')).slice(0,3),['miles','known','published-zero']);
+  assert.match(x.files.get('mobile/src/components/ShowroomVehicleCard.tsx').toString(),/hasMobileMileage\(vehicle\) && <span data-vehicle-fact="mileage"/);
+  assert.match(x.files.get('mobile/src/components/VehicleCard.tsx').toString(),/!hasMobileMileage\(v\)\s*\? 'Not published'/);
+  assert.match(x.files.get('mobile/src/components/VehicleSections.tsx').toString(),/Vehicle condition', !hasMobileMileage\(v\) \? 'Not published'/);
+  assert.match(x.files.get('mobile/src/components/ShowroomFilterSheet.tsx').toString(),/const \{ t, locale, money, number \} = useLocale\(\)/);
+  assert.equal(x.files.get('mobile/src/components/ShowroomFilterSheet.tsx').toString().split('formatMobileMileage(vehicle, locale)').length,3,'both filter previews retain Bulgarian number formatting');
+  const ts=createRequire(path.resolve('templates/mobile/package.json'))('typescript');
+  for(const name of adaptation.contentPaths.filter(name=>/\.(?:ts|tsx)$/.test(name))){
+    const source=x.files.get(name).toString(),parsed=ts.createSourceFile(name,source,ts.ScriptTarget.Latest,true,name.endsWith('.tsx')?ts.ScriptKind.TSX:ts.ScriptKind.TS);
+    assert.deepEqual(parsed.parseDiagnostics.map(d=>ts.flattenDiagnosticMessageText(d.messageText,' ')),[],name);
+  }
+});
+
+test('Mobile UK preserves original miles presentation, canonical km and strict published mileage guards',async t=>{
+  const x=mobileFixture(t,true);
+  Object.assign(x.profile.business,{countryCode:'GB',distanceUnit:'mi',currency:'GBP'});
+  const base=x.profile.listings[0];
+  x.profile.listings=[{...base,id:'uk-miles',currency:'GBP',mileageValue:60000,mileageUnit:'mi',mileageOnRequest:false,raw:{year:2020,mileageMiles:60000}},
+    {...base,id:'uk-km',currency:'GBP',mileageValue:90000,mileageUnit:'km',mileageOnRequest:false,raw:{year:2020,mileageKm:90000}},
+    {...base,id:'uk-zero',currency:'GBP',mileageValue:0,mileageUnit:'mi',mileageOnRequest:false,raw:{year:2020,mileageMiles:0}}];
+  const before=JSON.stringify(x.profile);applyExtendedRefreshAdapter({...x,key:'mobile'});
+  assert.equal(JSON.stringify(x.profile),before);
+  const vehicles=JSON.parse(x.files.get('mobile/src/lib/dealer-inventory.json')),module=await mobileTsModule(x.files.get('mobile/src/lib/dealer-mileage.ts').toString());
+  assert.deepEqual(vehicles.map(v=>v.mileage),[96561,90000,0]);assert.ok(vehicles.every(v=>v.mileageKnown&&!v.mileageOnRequest));
+  assert.deepEqual(vehicles.map(v=>module.formatStockMileage(v)),['60,000 mi','90,000 km','0 mi']);
+  assert.equal(x.files.has('mobile/src/lib/mobile-mileage.ts'),false,'the maintained UK consumer overlay remains authoritative');
+  for(const fields of [{mileageOnRequest:true},{mileageValue:-1},{mileageValue:NaN},{mileageValue:0,mileageOnRequest:undefined,raw:{year:2020}}]){
+    const candidate=mobileFixture(t,true);Object.assign(candidate.profile.business,x.profile.business);
+    candidate.profile.listings=[{...x.profile.listings[0],...fields}];
+    assert.throws(()=>applyExtendedRefreshAdapter({...candidate,key:'mobile'}),/Mobile UK requires source mileage|Invalid UK source mileage/);
+  }
+});
+
+test('Mobile unknown-mileage overlay refuses unreviewed display or filter consumers',t=>{
+  for(const [name,before,after] of [
+    ['src/components/ShowroomVehicleCard.tsx',"number(vehicle.mileage) + ' ' + t('km')",'String(vehicle.mileage)'],
+    ['src/lib/search.ts','v.mileage <= Number(f.maxMileage)','v.mileage < Number(f.maxMileage)'],
+    ['src/lib/types.ts','  mileage: number;','  mileage: string;']]){
+    const x=mobileFixture(t),file='mobile/'+name;
+    assert.ok(x.files.get(file).toString().includes(before));x.files.set(file,Buffer.from(x.files.get(file).toString().replace(before,after)));
+    assert.throws(()=>applyExtendedRefreshAdapter({...x,key:'mobile'}),/Reviewed dealer consumer changed/);
+  }
 });
 
 test('Signature dealer facts preserve explicit offer currencies and distinguish unknown mileage from real zero',t=>{

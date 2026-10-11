@@ -115,6 +115,11 @@ function showroomVehicle(listing, profile) {
   const price = listing.priceAmount;
   if (!Number.isFinite(price) || price < 0) throw new Error(`Mobile cannot display an unpublished price as a numeric offer: ${listing.id}`);
   if (!Number.isFinite(listing.year) || !/\d{4}/.test(String(raw.year || raw.production || raw.date || ''))) throw new Error(`Mobile needs the source year for ${listing.id}`);
+  const sourceMileage = ['mileageKm','mileageMiles','mileageValue','km','mileage'].some(key => raw[key] !== undefined && raw[key] !== null && raw[key] !== '');
+  const canonicalMileage = Math.round(listing.mileageUnit === 'mi' ? listing.mileageValue * 1.609344 : listing.mileageValue);
+  const mileageKnown = listing.mileageOnRequest !== true && raw.mileageOnRequest !== true && listing.mileageKnown !== false && raw.mileageKnown !== false &&
+    Number.isFinite(listing.mileageValue) && listing.mileageValue >= 0 && ['km','mi'].includes(listing.mileageUnit) && Number.isFinite(canonicalMileage) &&
+    (listing.mileageValue !== 0 || listing.mileageOnRequest === false || sourceMileage);
   const attribute = {
     description: `${listing.description}\n${profile.business.inventoryNotice}`,
     availability: listing.availability,
@@ -124,7 +129,8 @@ function showroomVehicle(listing, profile) {
   return {
     id: listing.id, make: listing.make, model: listing.model, variant: listing.trim,
     price, sample: false, year: listing.year, registration: String(raw.registration || raw.production || listing.year),
-    mileage: Math.round(listing.mileageUnit === 'mi' ? listing.mileageValue * 1.609344 : listing.mileageValue),
+    // The numeric sentinel satisfies the native shape; only mileageKnown establishes a mileage fact.
+    mileage: mileageKnown ? canonicalMileage : 0, mileageKnown, mileageOnRequest: !mileageKnown,
     power: listing.powerHp || 0, fuel: listing.fuel, transmission: listing.transmission, body: listing.body,
     color: listing.color, seats: Number(raw.seats) || 0, doors: Number(raw.doors) || 0,
     dealer: profile.business.name, location: listing.location || profile.business.city,
@@ -176,6 +182,75 @@ function guardMobileFacts(files,profile) {
   return changed;
 }
 
+function guardMobileMileage(files, profile) {
+  // The UK overlay already formats original mi/km facts and rejects unpublished mileage.
+  if (profile.business.countryCode === 'GB' && profile.business.distanceUnit === 'mi') return [];
+  const prefix='mobile/src/',changed=[];
+  const patch=(name,transform)=>{
+    const file=prefix+name;if(!files.has(file))return;
+    put(files,file,transform(text(files,file)));changed.push(file);
+  };
+  const use=(source,names,relative='../lib/mobile-mileage')=>{
+    const line=`import { ${names} } from '${relative}';\n`;
+    return source.replace(/^(['"]use client['"];\r?\n)?/,(_,directive='')=>directive+line);
+  };
+  const helper=prefix+'lib/mobile-mileage.ts';
+  put(files,helper,`type MileageStock = { mileage: number; mileageKnown?: boolean; mileageOnRequest?: boolean };
+export function hasMobileMileage(stock: MileageStock): boolean {
+  return stock.mileageKnown !== false && stock.mileageOnRequest !== true && Number.isFinite(stock.mileage) && stock.mileage >= 0;
+}
+export const mobileMileageValue = (stock: MileageStock): number => hasMobileMileage(stock) ? stock.mileage : NaN;
+export function formatMobileMileage(stock: MileageStock, locale = 'en'): string {
+  if (!hasMobileMileage(stock)) return locale.startsWith('bg') ? 'Пробег при запитване' : 'Mileage on request';
+  return new Intl.NumberFormat(locale.startsWith('bg') ? 'bg-BG' : 'en-GB', { maximumFractionDigits: 0 }).format(stock.mileage) + ' ' + (locale.startsWith('bg') ? 'км' : 'km');
+}
+export function compareMobileMileage(a: MileageStock, b: MileageStock, direction = 1): number {
+  const aKnown = hasMobileMileage(a), bKnown = hasMobileMileage(b);
+  return aKnown && bKnown ? direction * (a.mileage - b.mileage) : Number(bKnown) - Number(aKnown);
+}
+`);
+  changed.push(helper);
+  patch('lib/types.ts',source=>replaceOne(source,'  mileage: number;','  mileage: number;\n  mileageKnown?: boolean;\n  mileageOnRequest?: boolean;','Mobile mileage state'));
+  patch('lib/search.ts',source=>{
+    source=replaceOne(source,'v.mileage >= Number(f.minMileage)','mobileMileageValue(v) >= Number(f.minMileage)','Mobile known minimum mileage');
+    source=replaceOne(source,'v.mileage <= Number(f.maxMileage)','mobileMileageValue(v) <= Number(f.maxMileage)','Mobile known maximum mileage');
+    source=replaceOne(source,"f.condition.includes(v.mileage ? 'Used' : 'New')","(hasMobileMileage(v) && f.condition.includes(v.mileage ? 'Used' : 'New'))",'Mobile published condition filter');
+    source=replaceOne(source,'v.mileage > 0 && f.condition.includes', 'hasMobileMileage(v) && v.mileage > 0 && f.condition.includes','Mobile published employee condition');
+    source=replaceOne(source,'mileage: (a, b) => a.mileage - b.mileage','mileage: (a, b) => compareMobileMileage(a, b)','Mobile unknown mileage sort');
+    source=replaceOne(source,"'mileage-desc': (a, b) => b.mileage - a.mileage","'mileage-desc': (a, b) => compareMobileMileage(a, b, -1)",'Mobile unknown descending mileage sort');
+    return use(source,'hasMobileMileage, mobileMileageValue, compareMobileMileage','./mobile-mileage');
+  });
+  patch('components/ShowroomVehicleCard.tsx',source=>{
+    source=replaceOne(source,"number(vehicle.mileage) + ' ' + t('km')",'formatMobileMileage(vehicle, locale)','Mobile showroom mileage');
+    source=replaceOne(source,'<span data-vehicle-fact="mileage">{specs.mileage}</span>','{hasMobileMileage(vehicle) && <span data-vehicle-fact="mileage">{specs.mileage}</span>}', 'Mobile unpublished compact mileage badge');
+    return use(source,'hasMobileMileage, formatMobileMileage');
+  });
+  for(const name of ['components/VehicleSections.tsx','components/DesktopVehicleSummary.tsx'])patch(name,source=>{
+    const before="number(v.mileage) + ' ' + t('km')",expected=name.includes('VehicleSections')?2:1;
+    if(source.split(before).length!==expected+1)throw new Error('Reviewed Mobile mileage specification consumers changed: '+name);
+    source=source.replaceAll(before,'formatMobileMileage(v, locale)');
+    if(name.includes('VehicleSections'))source=replaceOne(source,"['Vehicle condition', v.mileage ? 'Used vehicle' : 'New vehicle']","['Vehicle condition', !hasMobileMileage(v) ? 'Not published' : v.mileage ? 'Used vehicle' : 'New vehicle']",'Mobile unknown vehicle condition');
+    else source=replaceOne(source,/v\.mileage > 0\r?\n            \? \['First registered', v\.registration\]/,"!hasMobileMileage(v)\n            ? ['Vehicle condition', t('Not published')]\n            : v.mileage > 0 ? ['First registered', v.registration]",'Mobile unknown summary condition');
+    return use(source,'hasMobileMileage, formatMobileMileage');
+  });
+  patch('components/DealerScreens.tsx',source=>use(replaceOne(source,"number(v.mileage) + ' km'",'formatMobileMileage(v)','Mobile compared mileage'),'formatMobileMileage'));
+  patch('components/VehicleCard.tsx',source=>{
+    if(source.split('{number(v.mileage)} km').length!==3)throw new Error('Reviewed Mobile card mileage consumers changed');
+    source=source.replaceAll('{number(v.mileage)} km','{formatMobileMileage(v)}');
+    source=replaceOne(source,/\{v\.mileage === 0\r?\n              \? 'New vehicle'/,"{!hasMobileMileage(v)\n              ? 'Not published'\n              : v.mileage === 0 ? 'New vehicle'",'Mobile unknown card condition');
+    return use(source,'hasMobileMileage, formatMobileMileage');
+  });
+  patch('components/NativeCarPark.tsx',source=>use(replaceOne(source,'{number(v.mileage)} km','{formatMobileMileage(v)}','Mobile saved mileage'),'formatMobileMileage'));
+  patch('components/ShowroomFilterSheet.tsx',source=>{
+    source=replaceOne(source,'const { t, money, number } = useLocale();','const { t, locale, money, number } = useLocale();','Mobile filter mileage locale');
+    source=replaceOne(source,/number\(vehicle\.mileage\) \+\s*' ' \+\s*t\('km'\)/,'formatMobileMileage(vehicle, locale)','Mobile filter vehicle aria mileage');
+    source=replaceOne(source,"{number(vehicle.mileage)} {t('km')}",'{formatMobileMileage(vehicle, locale)}','Mobile filter vehicle mileage');
+    return use(source,'formatMobileMileage');
+  });
+  patch('lib/vehicle-copy.ts',source=>use(replaceOne(source,"localeNumber(vehicle.mileage, locale) + ' ' + t('km')",'formatMobileMileage(vehicle, locale)','Mobile vehicle copy mileage'),'formatMobileMileage','./mobile-mileage'));
+  return changed;
+}
+
 function patchMobile(files, profile, logos) {
   const prefix = 'mobile/', business = profile.business;
   const currencies=unique(profile.listings.map(listing=>listing.currency));
@@ -210,7 +285,7 @@ function patchMobile(files, profile, logos) {
   if (files.has(localeFile)) put(files,localeFile,replaceOne(text(files,localeFile),"currency: 'EUR'","currency: " + JSON.stringify(currency),'Mobile explicit stock currency'));
   if (files.has(searchFile)) put(files,searchFile,text(files,searchFile).replace(/'€' \+ new Intl.NumberFormat\('en-GB', \{ maximumFractionDigits: 0 \}\).format\(amount\)/,
     `new Intl.NumberFormat('en-GB', { style: 'currency', currency: ${JSON.stringify(currency)}, maximumFractionDigits: 0 }).format(amount)`));
-  const contentPaths = [file,catalog,dealerFile,prefix+'src/lib/dealer-inventory.json',...[localeFile,searchFile].filter(name=>files.has(name)),...guardMobileFacts(files,profile)];
+  const contentPaths = [file,catalog,dealerFile,prefix+'src/lib/dealer-inventory.json',...[localeFile,searchFile].filter(name=>files.has(name)),...guardMobileFacts(files,profile),...guardMobileMileage(files,profile)];
   if (business.countryCode === 'GB' && business.distanceUnit === 'mi') {
     const generated = new Map(UK_MOBILE_PATHS.map(name => [name, text(files, prefix + name)]));
     for (const name of personalizeMobileUk(generated, profile)) {
