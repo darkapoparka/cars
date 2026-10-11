@@ -148,6 +148,7 @@ export const leadSite: LeadSiteConfig = {
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
   logoPath: "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-dark.webp",
   logoOnLight: "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
   logoOnDark: "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-dark.webp",
   logoOnAccent: "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-dark.webp",

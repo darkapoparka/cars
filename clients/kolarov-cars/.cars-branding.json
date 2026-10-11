@@ -1820,5 +1820,14 @@
         "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-dark.webp"
       ]
     }
-  ]
+  ],
+  "surfaceBindingsVersion": 1,
+  "surfaceRemediation": {
+    "kind": "explicit-raster-surface-bindings",
+    "paths": [
+      "modern/packages/marketplace/lead-site.ts",
+      "mobile/src/components/Header.tsx"
+    ],
+    "priorSource": "590230d48c44fceac96e60a5dcb1c37085c64171"
+  }
 }

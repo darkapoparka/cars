@@ -128,6 +128,7 @@
     "required": true,
     "policy": "template-default",
     "contract": ".cars-branding.json",
-    "packId": "f0a9cb9e0a0fb982"
+    "packId": "f0a9cb9e0a0fb982",
+    "surfaceBindingsVersion": 1
   }
 }

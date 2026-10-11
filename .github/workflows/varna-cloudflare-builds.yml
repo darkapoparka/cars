@@ -44,7 +44,7 @@ jobs:
       - name: Install pinned raster verification tools
         run: npm install --prefix runtime/varna-tools --no-audit --no-fund --ignore-scripts --save-exact sharp@0.35.5 typescript@6.0.3
       - name: Require branding, palette, source and routing regressions to pass
-        run: node --test scripts/packaging-locale-facts.test.mjs scripts/varna-cloudflare-builds.test.mjs scripts/modern-demo-database.test.mjs scripts/dealer-reference-package.test.mjs scripts/lead-branding.test.mjs scripts/cloudflare-root-composition.test.mjs
+        run: node --test scripts/logo-surface-bindings.test.mjs scripts/packaging-locale-facts.test.mjs scripts/varna-cloudflare-builds.test.mjs scripts/modern-demo-database.test.mjs scripts/dealer-reference-package.test.mjs scripts/lead-branding.test.mjs scripts/cloudflare-root-composition.test.mjs
       - id: matrix
         run: |
           node scripts/build-varna-cloudflare.mjs matrix >> "$GITHUB_OUTPUT"
@@ -55,7 +55,7 @@ jobs:
     timeout-minutes: 60
     strategy:
       fail-fast: false
-      max-parallel: 12
+      max-parallel: 20
       matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
     name: ${{ matrix.slug }} / ${{ matrix.key }}
     steps:
@@ -92,7 +92,7 @@ jobs:
           path: runtime/varna-cloudflare/${{ matrix.slug }}/${{ matrix.key }}/artifact/
           include-hidden-files: true
           if-no-files-found: warn
-          compression-level: 0
+          compression-level: 6
           retention-days: 1
   bundle:
     needs: [plan, compile]
@@ -134,5 +134,5 @@ jobs:
           path: runtime/varna-delivery/${{ matrix.slug }}/
           include-hidden-files: true
           if-no-files-found: error
-          compression-level: 0
+          compression-level: 6
           retention-days: 5
