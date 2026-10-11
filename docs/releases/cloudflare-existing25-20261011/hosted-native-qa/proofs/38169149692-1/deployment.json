@@ -1,0 +1,708 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-existing-fleet-single-worker-deployment",
+  "client": "priselci",
+  "repository": "darkapoparka/cars-priselci",
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "b6eb5f8e209f83d273101a3e26d8d4a8659026de",
+    "sourceTree": "168a0b043467a517757ba1544c88969b013fd53f",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-11T20:02:16.972Z",
+    "evidence": "authenticated-github-connector",
+    "verifiedMainCommit": "a70f42ababa300cc00dddd5f911262059d120525"
+  },
+  "privatePublishingMirror": {
+    "repository": "darkapoparka/cars-priselci",
+    "state": "not-verified-by-this-bridge",
+    "verifiedByBridge": false
+  },
+  "accountId": "cb0007f242077bd759331f096eb75531",
+  "workerName": "cars-priselci",
+  "publicOrigin": "https://cars-priselci.darkapoparka1.workers.dev",
+  "sourceCommit": "b6eb5f8e209f83d273101a3e26d8d4a8659026de",
+  "sourceTree": "168a0b043467a517757ba1544c88969b013fd53f",
+  "inputDigest": "16ab3f99d8c01220ba153597bb9e38eb8c99ba7c04a57f1c65ce01a50ae50bca",
+  "sourceReleases": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+      "path": "templates/auto-best",
+      "digest": "c4f4deef61d9a823aa20d3117d4f48ad4c393e0a9039376c199b4f537086eaae",
+      "tree": "827df14f05eb5814fd2b2c7026ba83996fd7544e"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+      "path": "templates/modern",
+      "digest": "8f1d6ce675929ab677315bb08e3fb06e9bd1ebef42ebf8f037cd4f6ecf73f530",
+      "tree": "ae6999491c8d4faa7d1081457a07f177fc741243"
+    },
+    "import": {
+      "repository": "darkapoparka/cars",
+      "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+      "path": "templates/import",
+      "digest": "c18dc74d9f72c88c8c0959fe36331c75178e71a5563cfc21b4d060c094044f36",
+      "tree": "12a7688546d04362156f600b3eea9cbd66d119cc"
+    },
+    "app": {
+      "repository": "darkapoparka/cars",
+      "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+      "path": "templates/app",
+      "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+      "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+    },
+    "mobile": {
+      "repository": "darkapoparka/cars",
+      "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+      "path": "templates/mobile",
+      "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
+      "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
+    },
+    "karento-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+      "path": "templates/karento-best",
+      "digest": "b034d5d98ac5080d7f90ad281d309bdaca70a891326458a6957165cf4e1d6356",
+      "tree": "cd09ed79c2368585acfb915a4e459e656e434c5d"
+    }
+  },
+  "runId": 38169149692,
+  "attempt": 1,
+  "artifactId": 11713191454,
+  "archiveDigest": "sha256:77473494d463084fefbf8b98f2178139eb429162d29b1f2f696f7b9119b0dfb8",
+  "artifactDigest": "af9d2c9e4dd352eef94c826b381ed16bfa59fc619c9f87496822d4ebaae20a49",
+  "outputDigest": "801fcd579654470b39f7d8e1cd2fe19b05bef41e6470fb68a1d1f64e069047ae",
+  "applicationCount": 6,
+  "workerCount": 1,
+  "serviceBindings": [],
+  "deploymentMode": "update-existing",
+  "readyToDeploy": true,
+  "deployments": 1,
+  "hostedVerified": false,
+  "ownerAccepted": false,
+  "status": "deployed",
+  "versionId": "31b65368-5bec-4deb-8592-18b1980ea895",
+  "deploymentId": "569d7c89-3501-477a-8adb-bd0d059443de",
+  "versionTraffic": [
+    {
+      "version_id": "31b65368-5bec-4deb-8592-18b1980ea895",
+      "percentage": 100
+    }
+  ],
+  "liveBindings": [
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    }
+  ],
+  "scriptCountSnapshot": {
+    "count": 101,
+    "allowed": 100,
+    "checkedAt": "2026-10-11T19:59:51.893Z",
+    "evidence": "authenticated-cloudflare-connector"
+  },
+  "scriptCountVerifiedAfter": false,
+  "rollback": {
+    "schemaVersion": 1,
+    "accountId": "cb0007f242077bd759331f096eb75531",
+    "workerName": "cars-priselci",
+    "publicOrigin": "https://cars-priselci.darkapoparka1.workers.dev",
+    "checkedAt": "2026-10-11T20:04:34.141Z",
+    "exists": true,
+    "workersDev": true,
+    "previewsEnabled": false,
+    "routes": [],
+    "domains": [],
+    "tailConsumers": [],
+    "schedules": [],
+    "bindings": [
+      {
+        "name": "ASSETS",
+        "type": "assets"
+      }
+    ],
+    "versionId": "242efab6-9a8b-4f48-af9a-848029e6cdaf",
+    "deploymentId": "6c5be983-bf53-4525-b522-7a18d4629857",
+    "versionTraffic": [
+      {
+        "version_id": "242efab6-9a8b-4f48-af9a-848029e6cdaf",
+        "percentage": 100
+      }
+    ],
+    "scriptCount": 101,
+    "allowedScripts": 100,
+    "evidence": "authenticated-cloudflare-connector",
+    "scriptInventory": {
+      "complete": true,
+      "endpoint": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts",
+      "names": [
+        "cars-autofestvarna",
+        "cars-autofestvarna-app",
+        "cars-autofestvarna-auto-best",
+        "cars-autofestvarna-import",
+        "cars-autofestvarna-mobile",
+        "cars-autofestvarna-modern",
+        "cars-autofestvarna-signature",
+        "cars-autoroadvarna",
+        "cars-autoroadvarna-app",
+        "cars-autoroadvarna-import",
+        "cars-autoroadvarna-mobile",
+        "cars-autoroadvarna-modern",
+        "cars-autoroadvarna-signature",
+        "cars-carpointtradevarna",
+        "cars-carpointtradevarna-app",
+        "cars-carpointtradevarna-auto-best",
+        "cars-carpointtradevarna-import",
+        "cars-carpointtradevarna-mobile",
+        "cars-carpointtradevarna-modern",
+        "cars-carpointtradevarna-signature",
+        "cars-cf-qualification-auto-best",
+        "cars-cf-qualification-mobile",
+        "cars-citycarsvarna",
+        "cars-citycarsvarna-app",
+        "cars-citycarsvarna-auto-best",
+        "cars-citycarsvarna-import",
+        "cars-citycarsvarna-mobile",
+        "cars-citycarsvarna-modern",
+        "cars-citycarsvarna-signature",
+        "cars-dmautovarna",
+        "cars-dmautovarna-app",
+        "cars-dmautovarna-auto-best",
+        "cars-dmautovarna-import",
+        "cars-dmautovarna-mobile",
+        "cars-dmautovarna-modern",
+        "cars-dmautovarna-signature",
+        "cars-dreamdrivevarna",
+        "cars-dreamdrivevarna-app",
+        "cars-dreamdrivevarna-auto-best",
+        "cars-dreamdrivevarna-import",
+        "cars-dreamdrivevarna-mobile",
+        "cars-dreamdrivevarna-modern",
+        "cars-dreamdrivevarna-signature",
+        "cars-dynamicautovarna",
+        "cars-dynamicautovarna-app",
+        "cars-dynamicautovarna-auto-best",
+        "cars-dynamicautovarna-import",
+        "cars-dynamicautovarna-mobile",
+        "cars-dynamicautovarna-modern",
+        "cars-dynamicautovarna-signature",
+        "cars-kolarovcars",
+        "cars-kolarovcars-app",
+        "cars-kolarovcars-auto-best",
+        "cars-kolarovcars-import",
+        "cars-kolarovcars-mobile",
+        "cars-kolarovcars-modern",
+        "cars-kolarovcars-signature",
+        "cars-navaracar",
+        "cars-navaracar-app",
+        "cars-navaracar-auto-best",
+        "cars-navaracar-import",
+        "cars-navaracar-mobile",
+        "cars-navaracar-modern",
+        "cars-navaracar-signature",
+        "cars-pmselectautomotive",
+        "cars-pmselectautomotive-app",
+        "cars-pmselectautomotive-auto-best",
+        "cars-pmselectautomotive-import",
+        "cars-pmselectautomotive-mobile",
+        "cars-pmselectautomotive-modern",
+        "cars-pmselectautomotive-signature",
+        "cars-primeautovarna",
+        "cars-primeautovarna-app",
+        "cars-primeautovarna-auto-best",
+        "cars-primeautovarna-import",
+        "cars-primeautovarna-mobile",
+        "cars-primeautovarna-modern",
+        "cars-primeautovarna-signature",
+        "cars-priselci",
+        "cars-priselci-app",
+        "cars-priselci-carwow",
+        "cars-priselci-modern",
+        "cars-promosalevarna",
+        "cars-promosalevarna-app",
+        "cars-promosalevarna-auto-best",
+        "cars-promosalevarna-import",
+        "cars-promosalevarna-mobile",
+        "cars-promosalevarna-modern",
+        "cars-promosalevarna-signature",
+        "cars-uk-batley-as-motor-group",
+        "cars-uk-birmingham-square-one-motors",
+        "cars-uk-birmingham-trade-car-sales-grasmere",
+        "cars-uk-motherwell-motors-castle",
+        "cars-uk-stockport-broadbent-car-and-servicing",
+        "day-and-night-autodeal",
+        "day-and-night-autodeal-app",
+        "day-and-night-autodeal-auto-best",
+        "day-and-night-autodeal-import",
+        "day-and-night-autodeal-mobile",
+        "day-and-night-autodeal-modern",
+        "day-and-night-autodeal-signature"
+      ]
+    },
+    "routesEvidence": {
+      "complete": true,
+      "accountId": "cb0007f242077bd759331f096eb75531",
+      "zones": [],
+      "reason": "Authenticated filtered account zones collection empty"
+    },
+    "responses": [
+      {
+        "kind": "settings",
+        "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts/cars-priselci/settings",
+        "response": {
+          "result": {
+            "placement": {},
+            "compatibility_date": "2026-10-10",
+            "compatibility_flags": [
+              "nodejs_compat"
+            ],
+            "usage_model": "standard",
+            "tags": [],
+            "tail_consumers": [],
+            "logpush": false,
+            "observability": {
+              "enabled": true,
+              "head_sampling_rate": 1,
+              "redact_query_string": false,
+              "logs": {
+                "enabled": true,
+                "head_sampling_rate": 1,
+                "persist": true,
+                "invocation_logs": true
+              },
+              "traces": {
+                "enabled": false,
+                "persist": true,
+                "head_sampling_rate": 1
+              }
+            },
+            "annotations": {
+              "workers/triggered_by": "version_upload"
+            },
+            "bindings": [
+              {
+                "name": "ASSETS",
+                "type": "assets"
+              }
+            ]
+          },
+          "success": true,
+          "errors": [],
+          "messages": [],
+          "status": 200
+        }
+      },
+      {
+        "kind": "deployments",
+        "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts/cars-priselci/deployments",
+        "response": {
+          "result": {
+            "deployments": [
+              {
+                "id": "6c5be983-bf53-4525-b522-7a18d4629857",
+                "source": "wrangler",
+                "strategy": "percentage",
+                "annotations": {
+                  "workers/triggered_by": "deployment"
+                },
+                "versions": [
+                  {
+                    "version_id": "242efab6-9a8b-4f48-af9a-848029e6cdaf",
+                    "percentage": 100
+                  }
+                ],
+                "created_on": "2026-10-11T14:32:36.80089Z"
+              },
+              {
+                "id": "63c475d4-2d2e-4fc4-92d1-a923775a3bfc",
+                "source": "wrangler",
+                "strategy": "percentage",
+                "annotations": {
+                  "workers/triggered_by": "deployment"
+                },
+                "versions": [
+                  {
+                    "version_id": "6c161883-f4df-494e-b79b-f3370eb306d8",
+                    "percentage": 100
+                  }
+                ],
+                "created_on": "2026-10-02T02:09:53.01761Z"
+              },
+              {
+                "id": "03993528-9d61-4a72-96ae-aa83d9c3ebb7",
+                "source": "wrangler",
+                "strategy": "percentage",
+                "annotations": {
+                  "workers/message": "Cloudflare migration pilot from Vercel source f...",
+                  "workers/triggered_by": "upload"
+                },
+                "versions": [
+                  {
+                    "version_id": "0f162e72-4948-4522-a7e0-0a81a250b569",
+                    "percentage": 100
+                  }
+                ],
+                "created_on": "2026-10-02T01:05:57.026249Z"
+              }
+            ]
+          },
+          "success": true,
+          "errors": [],
+          "messages": [],
+          "result_info": {
+            "page": 1,
+            "per_page": 10,
+            "count": 3,
+            "total_count": 3,
+            "total_pages": 1
+          },
+          "status": 200
+        }
+      },
+      {
+        "kind": "subdomain",
+        "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts/cars-priselci/subdomain",
+        "response": {
+          "result": {
+            "enabled": true,
+            "previews_enabled": false
+          },
+          "success": true,
+          "errors": [],
+          "messages": [],
+          "status": 200
+        }
+      },
+      {
+        "kind": "schedules",
+        "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts/cars-priselci/schedules",
+        "response": {
+          "result": {
+            "schedules": []
+          },
+          "success": true,
+          "errors": [],
+          "messages": [],
+          "status": 200
+        }
+      },
+      {
+        "kind": "domains",
+        "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/domains",
+        "response": {
+          "result": [],
+          "success": true,
+          "errors": null,
+          "messages": null,
+          "result_info": {
+            "page": 1,
+            "per_page": 0,
+            "count": 0,
+            "total_count": 0
+          },
+          "status": 200
+        }
+      },
+      {
+        "kind": "zones",
+        "path": "/zones",
+        "response": {
+          "result": [],
+          "result_info": {
+            "page": 1,
+            "per_page": 20,
+            "total_pages": 0,
+            "count": 0,
+            "total_count": 0
+          },
+          "success": true,
+          "errors": [],
+          "messages": [],
+          "status": 200
+        }
+      },
+      {
+        "kind": "version",
+        "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts/cars-priselci/versions/242efab6-9a8b-4f48-af9a-848029e6cdaf",
+        "response": {
+          "result": {
+            "id": "242efab6-9a8b-4f48-af9a-848029e6cdaf",
+            "number": 3,
+            "metadata": {
+              "created_on": "2026-10-11T14:32:31.514193Z",
+              "source": "wrangler",
+              "has_preview": true
+            },
+            "annotations": {
+              "workers/triggered_by": "version_upload"
+            },
+            "resources": {
+              "script": {
+                "etag": "9f01db07999374f438633f9bba5ed0fdb02d11a1b683dd7b712f6753663452e2",
+                "handlers": [
+                  "fetch"
+                ],
+                "last_deployed_from": "wrangler"
+              },
+              "script_runtime": {
+                "assets": {
+                  "headers": {
+                    "version": 2,
+                    "rules": {
+                      "/*": {
+                        "set": {
+                          "x-robots-tag": "noindex, nofollow"
+                        },
+                        "unset": []
+                      },
+                      "/_app/*": {
+                        "set": {
+                          "cache-control": "no-cache",
+                          "x-robots-tag": "noindex"
+                        },
+                        "unset": []
+                      },
+                      "/_app/immutable/*": {
+                        "set": {
+                          "cache-control": "public, immutable, max-age=31536000"
+                        },
+                        "unset": [
+                          "Cache-Control"
+                        ]
+                      },
+                      "/variant-2/_next/static/*": {
+                        "set": {
+                          "cache-control": "public, max-age=31536000, immutable"
+                        },
+                        "unset": []
+                      },
+                      "/variant-3/_app/*": {
+                        "set": {
+                          "cache-control": "no-cache",
+                          "x-robots-tag": "noindex"
+                        },
+                        "unset": []
+                      },
+                      "/variant-3/_app/immutable/*": {
+                        "set": {
+                          "cache-control": "public, immutable, max-age=31536000"
+                        },
+                        "unset": [
+                          "Cache-Control"
+                        ]
+                      },
+                      "/variant-4/_next/static/*": {
+                        "set": {
+                          "cache-control": "public, max-age=31536000, immutable"
+                        },
+                        "unset": []
+                      },
+                      "/variant-5/_next/static/*": {
+                        "set": {
+                          "cache-control": "public, max-age=31536000, immutable"
+                        },
+                        "unset": []
+                      },
+                      "/variant-6/_app/*": {
+                        "set": {
+                          "cache-control": "no-cache",
+                          "x-robots-tag": "noindex"
+                        },
+                        "unset": []
+                      },
+                      "/variant-6/_app/immutable/*": {
+                        "set": {
+                          "cache-control": "public, immutable, max-age=31536000"
+                        },
+                        "unset": [
+                          "Cache-Control"
+                        ]
+                      }
+                    }
+                  },
+                  "raw_headers": "/*\n  X-Robots-Tag: noindex, nofollow\n\n\n# === START AUTOGENERATED SVELTE IMMUTABLE HEADERS ===\n/_app/*\n  X-Robots-Tag: noindex\n\tCache-Control: no-cache\n/_app/immutable/*\n  ! Cache-Control\n\tCache-Control: public, immutable, max-age=31536000\n# === END AUTOGENERATED SVELTE IMMUTABLE HEADERS ===\n\n# Cache content-hashed assets immutably (generated by vinext)\n/variant-2/_next/static/*\n  Cache-Control: public, max-age=31536000, immutable\n\n\n\n# === START AUTOGENERATED SVELTE IMMUTABLE HEADERS ===\n/variant-3/_app/*\n  X-Robots-Tag: noindex\n\tCache-Control: no-cache\n/variant-3/_app/immutable/*\n  ! Cache-Control\n\tCache-Control: public, immutable, max-age=31536000\n# === END AUTOGENERATED SVELTE IMMUTABLE HEADERS ===\n\n# Cache content-hashed assets immutably (generated by vinext)\n/variant-4/_next/static/*\n  Cache-Control: public, max-age=31536000, immutable\n\n\n# Cache content-hashed assets immutably (generated by vinext)\n/variant-5/_next/static/*\n  Cache-Control: public, max-age=31536000, immutable\n\n\n# === START AUTOGENERATED SVELTE IMMUTABLE HEADERS ===\n/variant-6/_app/*\n  X-Robots-Tag: noindex\n  Cache-Control: no-cache\n# === END AUTOGENERATED SVELTE IMMUTABLE HEADERS ===\n# === START AUTOGENERATED SVELTE IMMUTABLE HEADERS ===\n/variant-6/_app/immutable/*\n  ! Cache-Control\n  Cache-Control: public, immutable, max-age=31536000\n# === END AUTOGENERATED SVELTE IMMUTABLE HEADERS ===\n",
+                  "serve_directly": true,
+                  "raw_run_worker_first": false,
+                  "base_path": "/"
+                },
+                "compatibility_date": "2026-10-10",
+                "compatibility_flags": [
+                  "nodejs_compat"
+                ],
+                "usage_model": "standard"
+              },
+              "bindings": [
+                {
+                  "name": "ASSETS",
+                  "type": "assets"
+                }
+              ]
+            }
+          },
+          "success": true,
+          "errors": [],
+          "messages": [],
+          "status": 200
+        }
+      },
+      {
+        "kind": "accountSubdomain",
+        "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/subdomain",
+        "response": {
+          "result": {
+            "subdomain": "darkapoparka1"
+          },
+          "success": true,
+          "errors": [],
+          "messages": [],
+          "status": 200
+        }
+      },
+      {
+        "kind": "accountZones",
+        "path": "/zones",
+        "response": {
+          "result": [],
+          "result_info": {
+            "page": 1,
+            "per_page": 50,
+            "total_pages": 0,
+            "count": 0,
+            "total_count": 0
+          },
+          "success": true,
+          "errors": [],
+          "messages": [],
+          "status": 200
+        }
+      }
+    ],
+    "activeVersion": {
+      "id": "242efab6-9a8b-4f48-af9a-848029e6cdaf",
+      "number": 3,
+      "metadata": {
+        "created_on": "2026-10-11T14:32:31.514193Z",
+        "source": "wrangler",
+        "has_preview": true
+      },
+      "annotations": {
+        "workers/triggered_by": "version_upload"
+      },
+      "resources": {
+        "script": {
+          "etag": "9f01db07999374f438633f9bba5ed0fdb02d11a1b683dd7b712f6753663452e2",
+          "handlers": [
+            "fetch"
+          ],
+          "last_deployed_from": "wrangler"
+        },
+        "script_runtime": {
+          "assets": {
+            "headers": {
+              "version": 2,
+              "rules": {
+                "/*": {
+                  "set": {
+                    "x-robots-tag": "noindex, nofollow"
+                  },
+                  "unset": []
+                },
+                "/_app/*": {
+                  "set": {
+                    "cache-control": "no-cache",
+                    "x-robots-tag": "noindex"
+                  },
+                  "unset": []
+                },
+                "/_app/immutable/*": {
+                  "set": {
+                    "cache-control": "public, immutable, max-age=31536000"
+                  },
+                  "unset": [
+                    "Cache-Control"
+                  ]
+                },
+                "/variant-2/_next/static/*": {
+                  "set": {
+                    "cache-control": "public, max-age=31536000, immutable"
+                  },
+                  "unset": []
+                },
+                "/variant-3/_app/*": {
+                  "set": {
+                    "cache-control": "no-cache",
+                    "x-robots-tag": "noindex"
+                  },
+                  "unset": []
+                },
+                "/variant-3/_app/immutable/*": {
+                  "set": {
+                    "cache-control": "public, immutable, max-age=31536000"
+                  },
+                  "unset": [
+                    "Cache-Control"
+                  ]
+                },
+                "/variant-4/_next/static/*": {
+                  "set": {
+                    "cache-control": "public, max-age=31536000, immutable"
+                  },
+                  "unset": []
+                },
+                "/variant-5/_next/static/*": {
+                  "set": {
+                    "cache-control": "public, max-age=31536000, immutable"
+                  },
+                  "unset": []
+                },
+                "/variant-6/_app/*": {
+                  "set": {
+                    "cache-control": "no-cache",
+                    "x-robots-tag": "noindex"
+                  },
+                  "unset": []
+                },
+                "/variant-6/_app/immutable/*": {
+                  "set": {
+                    "cache-control": "public, immutable, max-age=31536000"
+                  },
+                  "unset": [
+                    "Cache-Control"
+                  ]
+                }
+              }
+            },
+            "raw_headers": "/*\n  X-Robots-Tag: noindex, nofollow\n\n\n# === START AUTOGENERATED SVELTE IMMUTABLE HEADERS ===\n/_app/*\n  X-Robots-Tag: noindex\n\tCache-Control: no-cache\n/_app/immutable/*\n  ! Cache-Control\n\tCache-Control: public, immutable, max-age=31536000\n# === END AUTOGENERATED SVELTE IMMUTABLE HEADERS ===\n\n# Cache content-hashed assets immutably (generated by vinext)\n/variant-2/_next/static/*\n  Cache-Control: public, max-age=31536000, immutable\n\n\n\n# === START AUTOGENERATED SVELTE IMMUTABLE HEADERS ===\n/variant-3/_app/*\n  X-Robots-Tag: noindex\n\tCache-Control: no-cache\n/variant-3/_app/immutable/*\n  ! Cache-Control\n\tCache-Control: public, immutable, max-age=31536000\n# === END AUTOGENERATED SVELTE IMMUTABLE HEADERS ===\n\n# Cache content-hashed assets immutably (generated by vinext)\n/variant-4/_next/static/*\n  Cache-Control: public, max-age=31536000, immutable\n\n\n# Cache content-hashed assets immutably (generated by vinext)\n/variant-5/_next/static/*\n  Cache-Control: public, max-age=31536000, immutable\n\n\n# === START AUTOGENERATED SVELTE IMMUTABLE HEADERS ===\n/variant-6/_app/*\n  X-Robots-Tag: noindex\n  Cache-Control: no-cache\n# === END AUTOGENERATED SVELTE IMMUTABLE HEADERS ===\n# === START AUTOGENERATED SVELTE IMMUTABLE HEADERS ===\n/variant-6/_app/immutable/*\n  ! Cache-Control\n  Cache-Control: public, immutable, max-age=31536000\n# === END AUTOGENERATED SVELTE IMMUTABLE HEADERS ===\n",
+            "serve_directly": true,
+            "raw_run_worker_first": false,
+            "base_path": "/"
+          },
+          "compatibility_date": "2026-10-10",
+          "compatibility_flags": [
+            "nodejs_compat"
+          ],
+          "usage_model": "standard"
+        },
+        "bindings": [
+          {
+            "name": "ASSETS",
+            "type": "assets"
+          }
+        ]
+      }
+    },
+    "accountSubdomain": "darkapoparka1",
+    "resourceSnapshotCheckedAt": "2026-10-11T19:59:51.893Z",
+    "scriptCountVerifiedAfter": false
+  },
+  "reviewSha256": "6c71ffb377298f6facfe2bb0936c2e9cad4bbd864a9cbfca1c3747358ddc88b8",
+  "tool": {
+    "node": "v26.10.0",
+    "version": "4.149.0",
+    "packageSha256": "a55b192868faa5aee1061ace714422a8824b30cd9e622aadb149a07305758d81",
+    "entrySha256": "31866b9a3686777254819158e60ebe4920d1d91141cde68846c62b52f75d7a66",
+    "authentication": "standard-wrangler-profile-or-environment"
+  },
+  "finishedAt": "2026-10-11T20:05:34.999Z"
+}

@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "type": "cars-existing-fleet-hosted-native-qa-request",
+  "client": "priselci",
+  "workerName": "cars-priselci",
+  "publicOrigin": "https://cars-priselci.darkapoparka1.workers.dev",
+  "accountId": "cb0007f242077bd759331f096eb75531",
+  "sourceCommit": "b6eb5f8e209f83d273101a3e26d8d4a8659026de",
+  "sourceTree": "168a0b043467a517757ba1544c88969b013fd53f",
+  "inputDigest": "16ab3f99d8c01220ba153597bb9e38eb8c99ba7c04a57f1c65ce01a50ae50bca",
+  "sourceReleases": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+      "path": "templates/auto-best",
+      "digest": "c4f4deef61d9a823aa20d3117d4f48ad4c393e0a9039376c199b4f537086eaae",
+      "tree": "827df14f05eb5814fd2b2c7026ba83996fd7544e"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+      "path": "templates/modern",
+      "digest": "8f1d6ce675929ab677315bb08e3fb06e9bd1ebef42ebf8f037cd4f6ecf73f530",
+      "tree": "ae6999491c8d4faa7d1081457a07f177fc741243"
+    },
+    "import": {
+      "repository": "darkapoparka/cars",
+      "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+      "path": "templates/import",
+      "digest": "c18dc74d9f72c88c8c0959fe36331c75178e71a5563cfc21b4d060c094044f36",
+      "tree": "12a7688546d04362156f600b3eea9cbd66d119cc"
+    },
+    "app": {
+      "repository": "darkapoparka/cars",
+      "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+      "path": "templates/app",
+      "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+      "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+    },
+    "mobile": {
+      "repository": "darkapoparka/cars",
+      "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+      "path": "templates/mobile",
+      "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
+      "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
+    },
+    "karento-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+      "path": "templates/karento-best",
+      "digest": "b034d5d98ac5080d7f90ad281d309bdaca70a891326458a6957165cf4e1d6356",
+      "tree": "cd09ed79c2368585acfb915a4e459e656e434c5d"
+    }
+  },
+  "artifactDigest": "af9d2c9e4dd352eef94c826b381ed16bfa59fc619c9f87496822d4ebaae20a49",
+  "outputDigest": "801fcd579654470b39f7d8e1cd2fe19b05bef41e6470fb68a1d1f64e069047ae",
+  "buildRunId": 38169149692,
+  "buildAttempt": 1,
+  "artifactId": 11713191454,
+  "artifactArchiveDigest": "77473494d463084fefbf8b98f2178139eb429162d29b1f2f696f7b9119b0dfb8",
+  "versionId": "31b65368-5bec-4deb-8592-18b1980ea895",
+  "deploymentId": "569d7c89-3501-477a-8adb-bd0d059443de",
+  "proofs": {
+    "artifactManifest": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/hosted-native-qa/proofs/38169149692-1/artifact-manifest.json",
+      "sha256": "210f7559c506222a265a3a8c554a60c0d3dccbbbdf7a3c762a4c760e63408738"
+    },
+    "singleWorkerReceipt": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/hosted-native-qa/proofs/38169149692-1/single-worker-receipt.json",
+      "sha256": "27a0b3d7a73ba6f820c384178350cc215063b7ded476d65c6ff78e11649b8ff5"
+    },
+    "deploymentReceipt": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/hosted-native-qa/proofs/38169149692-1/deployment.json",
+      "sha256": "e792e34d99db44fc226e89c9ea509cf58a88712f5ced2ceca2cf2defa0cbb0d0"
+    },
+    "providerSnapshot": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/hosted-native-qa/proofs/38169149692-1/post-deployment-provider.json",
+      "sha256": "0bb116cf9171fcb4c9d8ccda4f127886c061818d3816e80b912ccbc9634ad5eb"
+    }
+  }
+}

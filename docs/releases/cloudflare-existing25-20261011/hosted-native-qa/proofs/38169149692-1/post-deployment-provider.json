@@ -1,0 +1,255 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-11T20:06:13.655Z",
+  "accountId": "cb0007f242077bd759331f096eb75531",
+  "workerName": "cars-priselci",
+  "publicOrigin": "https://cars-priselci.darkapoparka1.workers.dev",
+  "exists": true,
+  "workersDev": true,
+  "previewsEnabled": false,
+  "routes": [],
+  "domains": [],
+  "tailConsumers": [],
+  "schedules": [],
+  "bindings": [
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    }
+  ],
+  "versionId": "31b65368-5bec-4deb-8592-18b1980ea895",
+  "deploymentId": "569d7c89-3501-477a-8adb-bd0d059443de",
+  "versionTraffic": [
+    {
+      "version_id": "31b65368-5bec-4deb-8592-18b1980ea895",
+      "percentage": 100
+    }
+  ],
+  "scriptCount": 101,
+  "allowedScripts": 100,
+  "evidence": "authenticated-cloudflare-connector",
+  "scriptInventory": {
+    "complete": true,
+    "endpoint": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts",
+    "names": [
+      "cars-autofestvarna",
+      "cars-autofestvarna-app",
+      "cars-autofestvarna-auto-best",
+      "cars-autofestvarna-import",
+      "cars-autofestvarna-mobile",
+      "cars-autofestvarna-modern",
+      "cars-autofestvarna-signature",
+      "cars-autoroadvarna",
+      "cars-autoroadvarna-app",
+      "cars-autoroadvarna-import",
+      "cars-autoroadvarna-mobile",
+      "cars-autoroadvarna-modern",
+      "cars-autoroadvarna-signature",
+      "cars-carpointtradevarna",
+      "cars-carpointtradevarna-app",
+      "cars-carpointtradevarna-auto-best",
+      "cars-carpointtradevarna-import",
+      "cars-carpointtradevarna-mobile",
+      "cars-carpointtradevarna-modern",
+      "cars-carpointtradevarna-signature",
+      "cars-cf-qualification-auto-best",
+      "cars-cf-qualification-mobile",
+      "cars-citycarsvarna",
+      "cars-citycarsvarna-app",
+      "cars-citycarsvarna-auto-best",
+      "cars-citycarsvarna-import",
+      "cars-citycarsvarna-mobile",
+      "cars-citycarsvarna-modern",
+      "cars-citycarsvarna-signature",
+      "cars-dmautovarna",
+      "cars-dmautovarna-app",
+      "cars-dmautovarna-auto-best",
+      "cars-dmautovarna-import",
+      "cars-dmautovarna-mobile",
+      "cars-dmautovarna-modern",
+      "cars-dmautovarna-signature",
+      "cars-dreamdrivevarna",
+      "cars-dreamdrivevarna-app",
+      "cars-dreamdrivevarna-auto-best",
+      "cars-dreamdrivevarna-import",
+      "cars-dreamdrivevarna-mobile",
+      "cars-dreamdrivevarna-modern",
+      "cars-dreamdrivevarna-signature",
+      "cars-dynamicautovarna",
+      "cars-dynamicautovarna-app",
+      "cars-dynamicautovarna-auto-best",
+      "cars-dynamicautovarna-import",
+      "cars-dynamicautovarna-mobile",
+      "cars-dynamicautovarna-modern",
+      "cars-dynamicautovarna-signature",
+      "cars-kolarovcars",
+      "cars-kolarovcars-app",
+      "cars-kolarovcars-auto-best",
+      "cars-kolarovcars-import",
+      "cars-kolarovcars-mobile",
+      "cars-kolarovcars-modern",
+      "cars-kolarovcars-signature",
+      "cars-navaracar",
+      "cars-navaracar-app",
+      "cars-navaracar-auto-best",
+      "cars-navaracar-import",
+      "cars-navaracar-mobile",
+      "cars-navaracar-modern",
+      "cars-navaracar-signature",
+      "cars-pmselectautomotive",
+      "cars-pmselectautomotive-app",
+      "cars-pmselectautomotive-auto-best",
+      "cars-pmselectautomotive-import",
+      "cars-pmselectautomotive-mobile",
+      "cars-pmselectautomotive-modern",
+      "cars-pmselectautomotive-signature",
+      "cars-primeautovarna",
+      "cars-primeautovarna-app",
+      "cars-primeautovarna-auto-best",
+      "cars-primeautovarna-import",
+      "cars-primeautovarna-mobile",
+      "cars-primeautovarna-modern",
+      "cars-primeautovarna-signature",
+      "cars-priselci",
+      "cars-priselci-app",
+      "cars-priselci-carwow",
+      "cars-priselci-modern",
+      "cars-promosalevarna",
+      "cars-promosalevarna-app",
+      "cars-promosalevarna-auto-best",
+      "cars-promosalevarna-import",
+      "cars-promosalevarna-mobile",
+      "cars-promosalevarna-modern",
+      "cars-promosalevarna-signature",
+      "cars-uk-batley-as-motor-group",
+      "cars-uk-birmingham-square-one-motors",
+      "cars-uk-birmingham-trade-car-sales-grasmere",
+      "cars-uk-motherwell-motors-castle",
+      "cars-uk-stockport-broadbent-car-and-servicing",
+      "day-and-night-autodeal",
+      "day-and-night-autodeal-app",
+      "day-and-night-autodeal-auto-best",
+      "day-and-night-autodeal-import",
+      "day-and-night-autodeal-mobile",
+      "day-and-night-autodeal-modern",
+      "day-and-night-autodeal-signature"
+    ]
+  },
+  "routesEvidence": {
+    "complete": true,
+    "accountId": "cb0007f242077bd759331f096eb75531",
+    "zones": []
+  },
+  "scriptCountVerifiedAfter": true,
+  "activeVersion": {
+    "id": "31b65368-5bec-4deb-8592-18b1980ea895",
+    "number": 4,
+    "createdOn": "2026-10-11T20:05:15.366164Z",
+    "script": {
+      "etag": "4a71be197c85cd681c314a92bbd8a990251ec574d3341d23de5d34d20182f4d6",
+      "handlers": [
+        "fetch"
+      ],
+      "last_deployed_from": "wrangler"
+    },
+    "compatibilityDate": "2026-10-10",
+    "compatibilityFlags": [
+      "nodejs_compat"
+    ]
+  },
+  "authenticatedEndpoints": [
+    {
+      "kind": "scripts",
+      "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts",
+      "query": {},
+      "status": 200,
+      "success": true,
+      "resultInfo": null
+    },
+    {
+      "kind": "settings",
+      "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts/cars-priselci/settings",
+      "query": {},
+      "status": 200,
+      "success": true,
+      "resultInfo": null
+    },
+    {
+      "kind": "deployments",
+      "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts/cars-priselci/deployments",
+      "query": {},
+      "status": 200,
+      "success": true,
+      "resultInfo": {
+        "page": 1,
+        "per_page": 10,
+        "count": 4,
+        "total_count": 4,
+        "total_pages": 1
+      }
+    },
+    {
+      "kind": "subdomain",
+      "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts/cars-priselci/subdomain",
+      "query": {},
+      "status": 200,
+      "success": true,
+      "resultInfo": null
+    },
+    {
+      "kind": "schedules",
+      "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts/cars-priselci/schedules",
+      "query": {},
+      "status": 200,
+      "success": true,
+      "resultInfo": null
+    },
+    {
+      "kind": "domains",
+      "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/domains",
+      "query": {},
+      "status": 200,
+      "success": true,
+      "resultInfo": {
+        "page": 1,
+        "per_page": 0,
+        "count": 0,
+        "total_count": 0
+      }
+    },
+    {
+      "kind": "accountSubdomain",
+      "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/subdomain",
+      "query": {},
+      "status": 200,
+      "success": true,
+      "resultInfo": null
+    },
+    {
+      "kind": "zones",
+      "path": "/zones",
+      "query": {
+        "account.id": "cb0007f242077bd759331f096eb75531",
+        "per_page": 50,
+        "page": 1
+      },
+      "status": 200,
+      "success": true,
+      "resultInfo": {
+        "page": 1,
+        "per_page": 50,
+        "total_pages": 0,
+        "count": 0,
+        "total_count": 0
+      }
+    },
+    {
+      "kind": "version",
+      "path": "/accounts/cb0007f242077bd759331f096eb75531/workers/scripts/cars-priselci/versions/31b65368-5bec-4deb-8592-18b1980ea895",
+      "query": {},
+      "status": 200,
+      "success": true,
+      "resultInfo": null
+    }
+  ]
+}
