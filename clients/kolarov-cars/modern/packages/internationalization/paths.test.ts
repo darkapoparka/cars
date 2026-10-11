@@ -19,7 +19,7 @@ describe("native mounted link boundaries", () => {
   it.each([
     "/en/cars",
     "/api/preferences",
-    "/lead-logo.png",
+    "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
   ])("adds mount once for raw destination %s", (href) => {
     expect(withBasePath(href, "/variant-2")).toBe(`/variant-2${href}`);
     expect(withBasePath(`/variant-2${href}`, "/variant-2")).toBe(

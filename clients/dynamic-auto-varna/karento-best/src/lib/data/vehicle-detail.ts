@@ -149,7 +149,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Dynamic Auto Varna",
   "location": "бул. Цар Освободител 289, Варна, България",
-  "avatar": "/dealer-brand/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-45006e0c34f113db/logo-on-light.webp",
   "mobile": "0889616721",
   "email": "",
   "whatsapp": "",

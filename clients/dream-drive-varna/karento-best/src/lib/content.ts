@@ -99,9 +99,9 @@ export const dealer: DealerContent = {
   "name": "DREAM DRIVE",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/logo-on-light.webp",
-    "footer": "/dealer-brand/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-bd2059e137647692/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-bd2059e137647692/logo-on-dark.webp",
     "alt": "DREAM DRIVE",
     "favicon": "/dealer-brand/app-icon.png",
     "monochromeOnDark": false

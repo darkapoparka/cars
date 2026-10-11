@@ -99,9 +99,9 @@ export const dealer: DealerContent = {
   "name": "PM SELECT AUTOMOTIVE",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/logo-on-light.webp",
-    "footer": "/dealer-brand/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-67ce81cba54450ce/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-67ce81cba54450ce/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-67ce81cba54450ce/logo-on-dark.webp",
     "alt": "PM SELECT AUTOMOTIVE",
     "favicon": "/dealer-brand/app-icon.png",
     "monochromeOnDark": false

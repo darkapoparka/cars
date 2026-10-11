@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "DREAM DRIVE",
-  "logo": "/dealer-brand/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp",
   "phone": "+359895395980",
   "email": null,
   "address": "бул. Цар Освободител 289, Варна, България",

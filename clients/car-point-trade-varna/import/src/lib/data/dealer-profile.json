@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=CAR%20POINT%20TRADE%20LTD%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=CAR%20POINT%20TRADE%20LTD%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
     "accent": "#c40101",
-    "logo": "/dealer-brand/logo-on-light.webp",
-    "logoLight": "/dealer-brand/logo-on-light.webp",
-    "logoDark": "/dealer-brand/logo-on-dark.webp",
+    "logo": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -758,15 +758,15 @@
     "schemaVersion": 1,
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/logo-on-light.webp",
+        "publicPath": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp",
         "sha256": "728c407fe02839e80088d5157c92e853eb470bfdca1cbe5f165320fd366ca716"
       },
       "onDark": {
-        "publicPath": "/dealer-brand/logo-on-dark.webp",
+        "publicPath": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-dark.webp",
         "sha256": "728c407fe02839e80088d5157c92e853eb470bfdca1cbe5f165320fd366ca716"
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/logo-on-accent.webp",
+        "publicPath": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-dark.webp",
         "sha256": "728c407fe02839e80088d5157c92e853eb470bfdca1cbe5f165320fd366ca716"
       }
     },

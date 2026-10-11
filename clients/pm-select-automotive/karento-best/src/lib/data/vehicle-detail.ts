@@ -149,7 +149,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "PM SELECT AUTOMOTIVE",
   "location": "бул. Цар Освободител 122, Варна, България",
-  "avatar": "/dealer-brand/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-67ce81cba54450ce/logo-on-light.webp",
   "mobile": "0887083275",
   "email": "",
   "whatsapp": "",

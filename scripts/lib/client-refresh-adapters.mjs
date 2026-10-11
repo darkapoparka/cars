@@ -796,7 +796,7 @@ function patchModern({ oldVariant, candidate, profile }) {
   let text = read(file);
   const logo = requireRasterLogo(pickLogo(oldVariant, 'modern', b, false), 'modern', 'primary surfaces');
   const values = {
-    accent: b.accent,
+    // Dealer artwork must not recolour the native template palette.
     address: b.address,
     city: b.city,
     contactUrl: b.phoneHref,
@@ -1285,9 +1285,7 @@ function patchImportDayNight(candidate, oldVariant, profile) {
       `\tformatLocales: { en: ${q(englishFormatLocale)}, bg: 'bg-BG' },`)
     .replace(/\tsuggestedLanguages:\s*\{[^\n]*\},/,
       `\tsuggestedLanguages: ${JSON.stringify(suggestedLanguages)},`);
-  if (/^#[0-9a-f]{6}$/i.test(b.accent || '')) {
-    dealerText = dealerText.replace(/(\taccent:\s*)'#[0-9a-f]{6}'/i, `$1${q(b.accent)}`);
-  }
+  // Keep dealerTheme from the selected Import template source.
   const dealerCopy = {
     bg: {
       appointment: localized.bg.appointment,

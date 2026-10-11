@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "бул. Трети Март 22 Б, Варна, България",
   appointment: "Понеделник–петък 09:00–17:00; събота 10:00–14:00; неделя почивен ден. Извън работно време — с предварителна уговорка.",
-  logo: "/dealer-brand/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-4b62d6973091f5ff/logo-on-dark.webp"
 } as const satisfies BrandConfig;

@@ -104,7 +104,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Аутофест",
       "location": "бул.'Цар Освободител' 1000 метра след Метро, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp",
       "mobile": "0897855097",
       "email": "",
       "whatsapp": "",
@@ -224,7 +224,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Аутофест",
       "location": "бул.'Цар Освободител' 1000 метра след Метро, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp",
       "mobile": "0897855097",
       "email": "",
       "whatsapp": "",
@@ -344,7 +344,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Аутофест",
       "location": "бул.'Цар Освободител' 1000 метра след Метро, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp",
       "mobile": "0897855097",
       "email": "",
       "whatsapp": "",
@@ -464,7 +464,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Аутофест",
       "location": "бул.'Цар Освободител' 1000 метра след Метро, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp",
       "mobile": "0897855097",
       "email": "",
       "whatsapp": "",
@@ -584,7 +584,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Аутофест",
       "location": "бул.'Цар Освободител' 1000 метра след Метро, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp",
       "mobile": "0897855097",
       "email": "",
       "whatsapp": "",
@@ -704,7 +704,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Аутофест",
       "location": "бул.'Цар Освободител' 1000 метра след Метро, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp",
       "mobile": "0897855097",
       "email": "",
       "whatsapp": "",
@@ -824,7 +824,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Аутофест",
       "location": "бул.'Цар Освободител' 1000 метра след Метро, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp",
       "mobile": "0897855097",
       "email": "",
       "whatsapp": "",
@@ -944,7 +944,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Аутофест",
       "location": "бул.'Цар Освободител' 1000 метра след Метро, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp",
       "mobile": "0897855097",
       "email": "",
       "whatsapp": "",

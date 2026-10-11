@@ -1,0 +1,260 @@
+{
+  "schemaVersion": 1,
+  "base": "eb436d5e9e2662408c3f73025bb0ba58becefcff",
+  "masterArchiveSha256": "df7bfa9b6aaa96b0ba5334cbe824b2f6b90ab521ef6292433e9d448e60c2e565",
+  "generation": "b2923a70-8ebe-4889-beb9-b546b1fca7b9",
+  "dealers": [
+    {
+      "slug": "dm-auto-varna",
+      "tree": "c81be32c745dfc4df736a3d2c22c5c924a55960b",
+      "packId": "02b0848664dfab2b",
+      "changed": 171,
+      "paletteChanges": [
+        {
+          "path": "modern/packages/marketplace/lead-site.ts",
+          "field": "accent",
+          "from": "#c40101",
+          "to": "#30343b"
+        },
+        {
+          "path": "import/src/lib/config/dealer.ts",
+          "field": "accent",
+          "from": "#c40101",
+          "to": "#17191c"
+        }
+      ],
+      "assets": 60,
+      "nativeMaster": {
+        "width": 194,
+        "height": 64
+      }
+    },
+    {
+      "slug": "kolarov-cars",
+      "tree": "fc8a0d6a00e85bdcc3056dd356fe001812932a04",
+      "packId": "f0a9cb9e0a0fb982",
+      "changed": 171,
+      "paletteChanges": [
+        {
+          "path": "modern/packages/marketplace/lead-site.ts",
+          "field": "accent",
+          "from": "#c40101",
+          "to": "#30343b"
+        },
+        {
+          "path": "import/src/lib/config/dealer.ts",
+          "field": "accent",
+          "from": "#c40101",
+          "to": "#17191c"
+        }
+      ],
+      "assets": 60,
+      "nativeMaster": {
+        "width": 198,
+        "height": 65
+      }
+    },
+    {
+      "slug": "dynamic-auto-varna",
+      "tree": "cd4c1a74b005a8b6cc1596e22aa30d0a2e618fd4",
+      "packId": "45006e0c34f113db",
+      "changed": 171,
+      "paletteChanges": [
+        {
+          "path": "modern/packages/marketplace/lead-site.ts",
+          "field": "accent",
+          "from": "#c40101",
+          "to": "#30343b"
+        },
+        {
+          "path": "import/src/lib/config/dealer.ts",
+          "field": "accent",
+          "from": "#c40101",
+          "to": "#17191c"
+        }
+      ],
+      "assets": 60,
+      "nativeMaster": {
+        "width": 225,
+        "height": 65
+      }
+    },
+    {
+      "slug": "car-point-trade-varna",
+      "tree": "1e917a158e49ee04cccb2dfd8555463304467737",
+      "packId": "023b7b5db6ae9faf",
+      "changed": 171,
+      "paletteChanges": [
+        {
+          "path": "modern/packages/marketplace/lead-site.ts",
+          "field": "accent",
+          "from": "#c40101",
+          "to": "#30343b"
+        },
+        {
+          "path": "import/src/lib/config/dealer.ts",
+          "field": "accent",
+          "from": "#c40101",
+          "to": "#17191c"
+        }
+      ],
+      "assets": 60,
+      "nativeMaster": {
+        "width": 199,
+        "height": 75
+      }
+    },
+    {
+      "slug": "pm-select-automotive",
+      "tree": "7c5da5ade654ac3efc6e8168a04650f52f7ac6fc",
+      "packId": "67ce81cba54450ce",
+      "changed": 171,
+      "paletteChanges": [
+        {
+          "path": "modern/packages/marketplace/lead-site.ts",
+          "field": "accent",
+          "from": "#c40101",
+          "to": "#30343b"
+        },
+        {
+          "path": "import/src/lib/config/dealer.ts",
+          "field": "accent",
+          "from": "#c40101",
+          "to": "#17191c"
+        }
+      ],
+      "assets": 60,
+      "nativeMaster": {
+        "width": 186,
+        "height": 64
+      }
+    },
+    {
+      "slug": "dream-drive-varna",
+      "tree": "9c7f7d7f04568f11231e2c1385d254df432862f0",
+      "packId": "bd2059e137647692",
+      "changed": 171,
+      "paletteChanges": [
+        {
+          "path": "modern/packages/marketplace/lead-site.ts",
+          "field": "accent",
+          "from": "#c40101",
+          "to": "#30343b"
+        },
+        {
+          "path": "import/src/lib/config/dealer.ts",
+          "field": "accent",
+          "from": "#c40101",
+          "to": "#17191c"
+        }
+      ],
+      "assets": 60,
+      "nativeMaster": {
+        "width": 196,
+        "height": 67
+      }
+    },
+    {
+      "slug": "prime-auto-varna",
+      "tree": "cfc7016a69d8220a226bdd24b52182387f92d715",
+      "packId": "e801f6ca8cc29905",
+      "changed": 171,
+      "paletteChanges": [
+        {
+          "path": "modern/packages/marketplace/lead-site.ts",
+          "field": "accent",
+          "from": "#c40101",
+          "to": "#30343b"
+        },
+        {
+          "path": "import/src/lib/config/dealer.ts",
+          "field": "accent",
+          "from": "#c40101",
+          "to": "#17191c"
+        }
+      ],
+      "assets": 60,
+      "nativeMaster": {
+        "width": 166,
+        "height": 77
+      }
+    },
+    {
+      "slug": "autoroad-varna",
+      "tree": "bd5d3bf78e4c9e416c28ee53dd66263c1474c497",
+      "packId": "4b62d6973091f5ff",
+      "changed": 171,
+      "paletteChanges": [
+        {
+          "path": "modern/packages/marketplace/lead-site.ts",
+          "field": "accent",
+          "from": "#c40101",
+          "to": "#30343b"
+        },
+        {
+          "path": "import/src/lib/config/dealer.ts",
+          "field": "accent",
+          "from": "#c40101",
+          "to": "#17191c"
+        }
+      ],
+      "assets": 60,
+      "nativeMaster": {
+        "width": 203,
+        "height": 69
+      }
+    },
+    {
+      "slug": "autofest-varna",
+      "tree": "72c251f723d647661fedadd5c9dfbac772d6fd14",
+      "packId": "1b8e62f1172699ff",
+      "changed": 171,
+      "paletteChanges": [
+        {
+          "path": "modern/packages/marketplace/lead-site.ts",
+          "field": "accent",
+          "from": "#c40101",
+          "to": "#30343b"
+        },
+        {
+          "path": "import/src/lib/config/dealer.ts",
+          "field": "accent",
+          "from": "#c40101",
+          "to": "#17191c"
+        }
+      ],
+      "assets": 60,
+      "nativeMaster": {
+        "width": 221,
+        "height": 74
+      }
+    },
+    {
+      "slug": "city-cars-varna",
+      "tree": "230c05a998d6e6bfa585674a385a386b1c52c486",
+      "packId": "cb4338735a59835f",
+      "changed": 171,
+      "paletteChanges": [
+        {
+          "path": "modern/packages/marketplace/lead-site.ts",
+          "field": "accent",
+          "from": "#c40101",
+          "to": "#30343b"
+        },
+        {
+          "path": "import/src/lib/config/dealer.ts",
+          "field": "accent",
+          "from": "#c40101",
+          "to": "#17191c"
+        }
+      ],
+      "assets": 60,
+      "nativeMaster": {
+        "width": 193,
+        "height": 86
+      }
+    }
+  ],
+  "hostedQa": false,
+  "sourceTree": "fcf7079c06c6752435d788d65fdb4cb7ebbfc8e6"
+}

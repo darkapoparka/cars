@@ -149,7 +149,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Сити Карс",
   "location": "ул. 'Перекоп' 2, Варна, България",
-  "avatar": "/dealer-brand/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-cb4338735a59835f/logo-on-light.webp",
   "mobile": "0899867804",
   "email": "",
   "whatsapp": "",

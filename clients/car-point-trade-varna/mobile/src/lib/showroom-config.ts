@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "CAR POINT TRADE LTD",
-  "logo": "/dealer-brand/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp",
   "phone": "+359883530713",
   "email": null,
   "address": "бул. Цар Освободител 285, Варна, България",

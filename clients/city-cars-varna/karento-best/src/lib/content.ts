@@ -99,9 +99,9 @@ export const dealer: DealerContent = {
   "name": "Сити Карс",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/logo-on-light.webp",
-    "footer": "/dealer-brand/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-cb4338735a59835f/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-cb4338735a59835f/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-cb4338735a59835f/logo-on-dark.webp",
     "alt": "Сити Карс",
     "favicon": "/dealer-brand/app-icon.png",
     "monochromeOnDark": false

@@ -1,3 +1,4 @@
+import {assertLeadBranding} from './publishing/lead-branding.mjs';
 /** Compile existing Varna candidates with the maintained Cloudflare adapters.
  * No template/dealer generation, Vercel write, credential export or release approval.
  * The resulting exact artifacts are staged for separately authorized local deployment.
@@ -76,7 +77,7 @@ async function prepare(slug,key,sha,area){
  const candidate=read(path.join(source,'.client/varna-source-candidate.json'));
  if(manifest.slug!==slug||manifest.repository!==dealer.proposedRepository||candidate.dealer!==slug||candidate.kind!=='personalized-source-candidate-not-an-approved-release')throw Error('Candidate identity mismatch');
  validatePackagingManifest(manifest);
- let files=await collectSource(source,manifest);assertAppVariant(files,manifest);assertExtendedVariantSources(files,manifest);
+ let files=await collectSource(source,manifest);assertAppVariant(files,manifest);assertExtendedVariantSources(files,manifest);const brandingContract=assertLeadBranding(files,manifest);
  const inputRows=sourceRows(files),profile=loadDealerProfile(source,slug),workerPrefix=manifest.repository.split('/')[1];
  const publicOrigin='https://'+workerPrefix+'.darkapoparka1.workers.dev';
  manifest.cloudflare={workerPrefix};manifest.shareIdentity={name:profile.business.name,publicOrigin,description:profile.business.name+' — независим демонстрационен каталог. Наличността и условията се потвърждават с търговеца.',logo:{sourcePath:'branding/logo-on-light.png',sha256:hash(files.get('branding/logo-on-light.png')),faviconSourcePath:'assets/app-icon.png',faviconSha256:hash(files.get('assets/app-icon.png'))}};
@@ -85,7 +86,7 @@ async function prepare(slug,key,sha,area){
  const databaseSpecialization=specializeModernDemoDatabase(files,manifest);
  const tools=createRequire(path.join(ROOT,'runtime/varna-tools/package.json')),sharp=tools('sharp'),typescript=tools('typescript');
  if(sharp.versions.sharp!=='0.35.5'||typescript.version!=='6.0.3')throw Error('Unexpected share compiler');
- await applyDealerShare(files,manifest,{sharp,typescript});
+ await applyDealerShare(files,manifest,{sharp,typescript});assertLeadBranding(files,manifest);
  const config=switcherConfiguration(manifest,read(path.join(ROOT,'scripts/publishing/switcher-messages.json')),files);
  const switcher=fs.readFileSync(path.join(ROOT,'scripts/publishing/preview-switcher.js'),'utf8').replace('__CARS_SWITCHER_CONFIG__',()=>JSON.stringify(config).replace(/</g,'\\u003c'));
  files.set('auto-best/static/preview-switcher.js',Buffer.from(switcher));files.set('dealer.json',encode(manifest));
@@ -97,7 +98,7 @@ async function prepare(slug,key,sha,area){
  const root=key==='router'?'cloudflare':key;
  const retained=new Map([...files].filter(([name])=>name.startsWith(root+'/')||name.startsWith('scripts/')||!name.includes('/')));
  const packageRoot=path.join(area,'package');writeFiles(packageRoot,retained);
- const provenance={schemaVersion:1,dealer:slug,key,sourceCommit:sha,sourceTree:git(ROOT,['rev-parse',sha+':clients/'+slug]),inputDigest:hash(JSON.stringify(inputRows)),sourceCandidate:candidate.candidateSourceDigest,sourceReleases:manifest.templateSources,manifest,workerPrefix,publicOrigin,originalSourceUnchanged:true,assembledDigest:hash(JSON.stringify(assembledRows)),targetBeforeDependencies:sourceRows(retained),contracts,reference,databaseSpecialization,retention:pruned.receipts,nativeApproval:false,hosted:false};
+ const provenance={schemaVersion:1,dealer:slug,key,sourceCommit:sha,sourceTree:git(ROOT,['rev-parse',sha+':clients/'+slug]),inputDigest:hash(JSON.stringify(inputRows)),sourceCandidate:candidate.candidateSourceDigest,sourceReleases:manifest.templateSources,manifest,workerPrefix,publicOrigin,originalSourceUnchanged:true,branding:brandingContract,assembledDigest:hash(JSON.stringify(assembledRows)),targetBeforeDependencies:sourceRows(retained),contracts,reference,databaseSpecialization,retention:pruned.receipts,nativeApproval:false,hosted:false};
  writeJson(path.join(area,'receipts/source.json'),provenance);return {packageRoot,manifest,provenance};
 }
 function installedBin(root,name){
@@ -149,7 +150,7 @@ export async function compile(slug,key){
   if(uploadConfig.build?.command||uploadConfig.route||uploadConfig.routes?.length||uploadConfig.durable_objects?.bindings?.length||uploadConfig.containers?.length)throw Error('Unexpected deployment-side build or resource');
   writeJson(path.join(artifact,'compiled/deploy.json'),uploadConfig);
   const compiledFiles=filesAt(path.join(artifact,'compiled'),{filter:()=>true}).map(name=>{const b=fs.readFileSync(path.join(artifact,'compiled',name));return {path:'compiled/'+name,bytes:b.length,sha256:hash(b)};});
-  const deploy={schemaVersion:1,kind:'varna-cloudflare-compiled-candidate',dealer:slug,key,provider:'cloudflare',accountId:'cb0007f242077bd759331f096eb75531',workerName:target.workerName,publicOrigin:provenance.publicOrigin,sourceCommit:sha,sourceTree:provenance.sourceTree,inputDigest:provenance.inputDigest,sourceReleases:manifest.templateSources,configPath:'compiled/deploy.json',mainPath:'compiled/'+uploadMain,assetPath:'compiled/'+target.assets,compiledFiles,compiledDigest:hash(JSON.stringify(compiledFiles)),output,runId:process.env.GITHUB_RUN_ID,attempt:process.env.GITHUB_RUN_ATTEMPT,compiled:true,dryRun:true,hosted:false,credentialsIncluded:false,nativeApproval:false};
+  const deploy={schemaVersion:1,kind:'varna-cloudflare-compiled-candidate',dealer:slug,key,provider:'cloudflare',accountId:'cb0007f242077bd759331f096eb75531',workerName:target.workerName,publicOrigin:provenance.publicOrigin,branding:provenance.branding,sourceCommit:sha,sourceTree:provenance.sourceTree,inputDigest:provenance.inputDigest,sourceReleases:manifest.templateSources,configPath:'compiled/deploy.json',mainPath:'compiled/'+uploadMain,assetPath:'compiled/'+target.assets,compiledFiles,compiledDigest:hash(JSON.stringify(compiledFiles)),output,runId:process.env.GITHUB_RUN_ID,attempt:process.env.GITHUB_RUN_ATTEMPT,compiled:true,dryRun:true,hosted:false,credentialsIncluded:false,nativeApproval:false};
   writeJson(path.join(artifact,'deploy.json'),deploy);Object.assign(result,{status:'passed',compiled:true,dryRun:true,workerName:target.workerName,compiledDigest:deploy.compiledDigest,output});
  }catch(error){Object.assign(result,{status:'failed',error:error.message});throw error;}
  finally{result.finishedAt=new Date().toISOString();writeJson(path.join(area,'receipts/build.json'),result);copyBuildArtifact(path.join(area,'receipts'),path.join(artifact,'receipts'));artifactInventory(artifact,{kind:'varna-cloudflare-compiled-candidate',dealer:slug,key,status:result.status});console.log(JSON.stringify(result));}

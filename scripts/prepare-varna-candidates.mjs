@@ -33,7 +33,8 @@ export function sourceManifest(dealer,sources,locale){
  return validateManifest({schemaVersion:1,slug:dealer.slug,dealerId:dealer.slug,repository:dealer.proposedRepository,
   defaultBranch:'main',sourceBranch:'varna',sourceOwnership:'cars-canonical',language:'bg',
   variants:FAMILIES.map((key,i)=>({key,base:i?'/variant-'+(i+1):'',entry:i?(key==='modern'?'/variant-2/cars':'/variant-'+(i+1)+'/'):'/'})),
-  packaging:{version:'5'},extraAssets:['assets','branding','dealer-brand'],
+  packaging:{version:'5'},
+    branding: { schemaVersion: 1, required: true, policy: 'template-default', contract: '.cars-branding.json' },extraAssets:['assets','branding','dealer-brand'],
   localization:normalizeDealerLocale(locale,dealer.slug),
   templateRevisions:Object.fromEntries(FAMILIES.map(k=>[k,sources[k].revision])),templateSources:sources,
   switcher:{language:'bg',accent:'#2563eb'},candidate:{approved:false,releaseSelection:'exact-latest-committed-snapshots',nativeReleaseQualification:false,build:false,hosted:false,admin:'https://cars-admin-blue.vercel.app/'}});

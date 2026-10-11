@@ -114,7 +114,7 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Kolarov Cars — vehicles and dealer support in Varna."
   }
 },
-  accent: "#c40101",
+  accent: "#30343b",
   desktopAccent: "#4b5057",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
@@ -147,10 +147,10 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/logo-on-dark.webp",
-  logoOnLight: "/dealer-brand/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark.webp",
-  logoOnAccent: "/dealer-brand/logo-on-accent.webp",
+  logoPath: "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
+  logoOnLight: "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Kolarov%20Cars%2C%20%D0%91%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%20%D0%9F%D0%B0%D1%80%D0%BA%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D1%81%D0%B3%D1%80%D0%B0%D0%B4%D0%B0%20%D0%928%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
   mapsUrl:

@@ -104,7 +104,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AUTOROAD",
       "location": "бул. Трети Март 22 Б, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp",
       "mobile": "+359899230001",
       "email": "dragotd@gmail.com",
       "whatsapp": "",
@@ -224,7 +224,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AUTOROAD",
       "location": "бул. Трети Март 22 Б, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp",
       "mobile": "+359899230001",
       "email": "dragotd@gmail.com",
       "whatsapp": "",
@@ -344,7 +344,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AUTOROAD",
       "location": "бул. Трети Март 22 Б, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp",
       "mobile": "+359899230001",
       "email": "dragotd@gmail.com",
       "whatsapp": "",
@@ -464,7 +464,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AUTOROAD",
       "location": "бул. Трети Март 22 Б, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp",
       "mobile": "+359899230001",
       "email": "dragotd@gmail.com",
       "whatsapp": "",
@@ -584,7 +584,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AUTOROAD",
       "location": "бул. Трети Март 22 Б, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp",
       "mobile": "+359899230001",
       "email": "dragotd@gmail.com",
       "whatsapp": "",
@@ -704,7 +704,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AUTOROAD",
       "location": "бул. Трети Март 22 Б, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp",
       "mobile": "+359899230001",
       "email": "dragotd@gmail.com",
       "whatsapp": "",
@@ -824,7 +824,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AUTOROAD",
       "location": "бул. Трети Март 22 Б, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp",
       "mobile": "+359899230001",
       "email": "dragotd@gmail.com",
       "whatsapp": "",
@@ -944,7 +944,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "AUTOROAD",
       "location": "бул. Трети Март 22 Б, Варна, България",
-      "avatar": "/dealer-brand/logo-on-light.webp",
+      "avatar": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp",
       "mobile": "+359899230001",
       "email": "dragotd@gmail.com",
       "whatsapp": "",

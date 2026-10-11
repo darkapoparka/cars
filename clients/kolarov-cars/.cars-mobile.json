@@ -10,7 +10,7 @@
     "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b",
     "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d"
   },
-  "sourceDigest": "a1bc766d07c4b57b8fe1ef878923312578f430ac59e2332c4c0d0bde308da16d",
+  "sourceDigest": "e3e46595c0e39385845298e199a2d145251caacd061d72c945fc658897adc042",
   "inventory": {
     "mode": "dated-listing-snapshot",
     "count": 8,
@@ -19,8 +19,8 @@
   "personalization": {
     "profileSha256": "c3d177057dad83160ec0ea34275316edb0f9bb81d616d7d1e11345c377ac58c5",
     "logoPaths": [
-      "/dealer-brand/logo-on-light.webp",
-      "/dealer-brand/logo-on-dark.webp"
+      "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
+      "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-dark.webp"
     ],
     "mediaPaths": [
       "/assets/vehicles/11791553575767854/1.webp",
@@ -72,5 +72,9 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false
+  "readyToPublish": false,
+  "branding": {
+    "packId": "f0a9cb9e0a0fb982",
+    "previousSourceDigest": "a1bc766d07c4b57b8fe1ef878923312578f430ac59e2332c4c0d0bde308da16d"
+  }
 }

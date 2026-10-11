@@ -45,7 +45,8 @@
   "extraAssets": [
     "assets",
     "branding",
-    "dealer-brand"
+    "dealer-brand",
+    ".cars-branding.json"
   ],
   "localization": {
     "schemaVersion": 1,
@@ -121,5 +122,12 @@
     "build": false,
     "hosted": false,
     "admin": "https://cars-admin-blue.vercel.app/"
+  },
+  "branding": {
+    "schemaVersion": 1,
+    "required": true,
+    "policy": "template-default",
+    "contract": ".cars-branding.json",
+    "packId": "1b8e62f1172699ff"
   }
 }

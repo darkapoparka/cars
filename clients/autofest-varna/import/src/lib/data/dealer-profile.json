@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D1%84%D0%B5%D1%81%D1%82%2C%20%D0%B1%D1%83%D0%BB.'%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB'%201000%20%D0%BC%D0%B5%D1%82%D1%80%D0%B0%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%9C%D0%B5%D1%82%D1%80%D0%BE%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=%D0%90%D1%83%D1%82%D0%BE%D1%84%D0%B5%D1%81%D1%82%2C%20%D0%B1%D1%83%D0%BB.'%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB'%201000%20%D0%BC%D0%B5%D1%82%D1%80%D0%B0%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%9C%D0%B5%D1%82%D1%80%D0%BE%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
     "accent": "#c40101",
-    "logo": "/dealer-brand/logo-on-light.webp",
-    "logoLight": "/dealer-brand/logo-on-light.webp",
-    "logoDark": "/dealer-brand/logo-on-dark.webp",
+    "logo": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -754,15 +754,15 @@
     "schemaVersion": 1,
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/logo-on-light.webp",
+        "publicPath": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-light.webp",
         "sha256": "97fae592552912cc31f100d3e50a7d026b93002ae3efc30fdb9f62584be3b913"
       },
       "onDark": {
-        "publicPath": "/dealer-brand/logo-on-dark.webp",
+        "publicPath": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-dark.webp",
         "sha256": "97fae592552912cc31f100d3e50a7d026b93002ae3efc30fdb9f62584be3b913"
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/logo-on-accent.webp",
+        "publicPath": "/dealer-brand/v2-1b8e62f1172699ff/logo-on-dark.webp",
         "sha256": "97fae592552912cc31f100d3e50a7d026b93002ae3efc30fdb9f62584be3b913"
       }
     },

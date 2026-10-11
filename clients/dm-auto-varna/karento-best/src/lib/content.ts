@@ -99,9 +99,9 @@ export const dealer: DealerContent = {
   "name": "D&M - Auto Varna",
   "locale": "bg-BG",
   "logo": {
-    "light": "/dealer-brand/logo-on-light.webp",
-    "footer": "/dealer-brand/logo-on-dark.webp",
-    "archivedDark": "/dealer-brand/logo-on-dark.webp",
+    "light": "/dealer-brand/v2-02b0848664dfab2b/logo-on-light.webp",
+    "footer": "/dealer-brand/v2-02b0848664dfab2b/logo-on-dark.webp",
+    "archivedDark": "/dealer-brand/v2-02b0848664dfab2b/logo-on-dark.webp",
     "alt": "D&M - Auto Varna",
     "favicon": "/dealer-brand/app-icon.png",
     "monochromeOnDark": false

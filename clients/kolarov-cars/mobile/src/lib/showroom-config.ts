@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "Kolarov Cars",
-  "logo": "/dealer-brand/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
   "phone": "+359876999800",
   "email": null,
   "address": "Бизнес Парк Варна, сграда В8, Варна, България",

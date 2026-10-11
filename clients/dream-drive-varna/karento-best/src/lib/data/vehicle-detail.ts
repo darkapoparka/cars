@@ -149,7 +149,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "DREAM DRIVE",
   "location": "бул. Цар Освободител 289, Варна, България",
-  "avatar": "/dealer-brand/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-bd2059e137647692/logo-on-light.webp",
   "mobile": "0895395980",
   "email": "",
   "whatsapp": "",

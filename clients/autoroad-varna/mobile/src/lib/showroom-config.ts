@@ -94,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   "name": "AUTOROAD",
-  "logo": "/dealer-brand/logo-on-light.webp",
+  "logo": "/dealer-brand/v2-4b62d6973091f5ff/logo-on-light.webp",
   "phone": "+359899230001",
   "email": "dragotd@gmail.com",
   "address": "бул. Трети Март 22 Б, Варна, България",

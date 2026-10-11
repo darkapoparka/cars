@@ -149,7 +149,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Kolarov Cars",
   "location": "Бизнес Парк Варна, сграда В8, Варна, България",
-  "avatar": "/dealer-brand/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-f0a9cb9e0a0fb982/logo-on-light.webp",
   "mobile": "0876999800",
   "email": "",
   "whatsapp": "",

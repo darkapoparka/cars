@@ -1,3 +1,4 @@
+import {assertLeadBranding} from './publishing/lead-branding.mjs';
 import { APP_PACKAGING_VERSION, baseNativeManifest, assertAppVariant, appendAppService } from './publishing/app-variant.mjs';
 import { assertCarsOwnedDealer } from './lib/dealer-source.mjs';
 import fs from 'node:fs/promises';
@@ -220,6 +221,7 @@ async function prepare({ source, manifest, sourceCommit, guidance, canonicalFile
   const retained = canonicalFiles ? new Map([...canonicalFiles].map(([name, bytes]) => [name, Buffer.from(bytes)])) : undefined;
   if (!native) assertLegacyLocaleCompatible({ manifest, files: retained, source: resolvedSource });
   const sourceFiles = await collectSource(resolvedSource, manifest);
+  if (manifest.branding?.required) assertLeadBranding(sourceFiles, manifest);
   const inputDigest = sourceMapDigest(sourceFiles);
   const manifestInput = await fs.readFile(path.join(resolvedSource, 'dealer.json')).catch(error => { if (error.code === 'ENOENT') return null; throw error; });
   let files = retained ?? new Map(sourceFiles);

@@ -20,7 +20,7 @@
 	import Wrench from '@lucide/svelte/icons/wrench';
 
 	const heroImage = '/assets/daynight/offer/offer-poster-background.webp';
-	const logo = '/brand/daynight-wordmark.svg';
+	const logo = "/dealer-brand/v2-67ce81cba54450ce/logo-on-light.webp";
 
 	const stats = [
 		{ value: '42', label: 'реални автомобила в каталога' },

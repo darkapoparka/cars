@@ -149,7 +149,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "CAR POINT TRADE LTD",
   "location": "бул. Цар Освободител 285, Варна, България",
-  "avatar": "/dealer-brand/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-023b7b5db6ae9faf/logo-on-light.webp",
   "mobile": "0883530713",
   "email": "",
   "whatsapp": "",
