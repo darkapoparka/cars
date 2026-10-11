@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { readTypeScriptCatalog } from './catalog-literal.mjs';
 
@@ -364,4 +365,53 @@ export function getPostBySlug(slug: string) { return posts.find((post) => post.s
     'src/lib/data/blog.ts',
     'src/lib/components/detail/AuxeroVehicleDetailStaticContent.svelte'
   ];
+}
+
+// Known S1 proposal copy only; control, composition and recorded identity stay outside these boundaries.
+const modernCopySha = value => createHash('sha256').update(value.replaceAll('\r\n', '\n')).digest('hex');
+const modernRecordedCityMask = value => value.replace(/(\$\{leadSite\.district\.(?:bg|en)\}, )[^`\r\n]+/g, '$1CARS_RECORDED_CITY.');
+function modernCopyBoundary(source, anchor, end, hashes, mask = value => value) {
+ if(typeof source !== 'string' || source.split(anchor).length !== 2) throw Error('Modern sell known copy boundary changed');
+ const start = source.indexOf(anchor), finish = source.indexOf(end,start);
+ if(finish < 0) throw Error('Modern sell known copy boundary changed');
+ const value = source.slice(start,finish + end.length);
+ if(!hashes.includes(modernCopySha(mask(value)))) throw Error('Modern sell unreviewed copy or factual shape changed');
+ return {start,end:finish + end.length,value};
+}
+function modernLiteralPairs(source,pairs) {
+ for(const [before,after] of pairs) {
+  const from = JSON.stringify(before),to = JSON.stringify(after);
+  if(source.split(from).length >= 2) source = source.replaceAll(from,()=>to);
+  else if(source.split(to).length < 2) throw Error('Modern sell known literal slot changed');
+ }
+ return source;
+}
+function assertModernSellProfile(profile) {
+ if(!profile?.business || typeof profile.business.name !== 'string' || !profile.business.name.trim()) throw Error('Modern sell requires a recorded dealer identity');
+}
+export function personalizeModernSellCopy(source,profile) {
+ assertModernSellProfile(profile);
+ const page = modernCopyBoundary(source,'const pageCopy = ','} as const;',["539d887f97c66da2f6210a8f5dff549bf67a8f7ee53dbb2e2bd7511ff1beda25","d01cd8f034d74383df3e73f0bd753239c882c9f2bc22990935d48f310c2a2278"],modernRecordedCityMask);
+ const meta = modernCopyBoundary(source,'return createPublicLocalizedMetadata({','  });',["9a265151912a1e9feaabeee0aff32ca26c07cbddea41197cc95be309ee41309c","e686763b5027c5851a9cf0601a5def0d72bcd54f419e471649b8b5f110a7c44c"]);
+ if(!source.includes('action={localize("/contact")}') || !source.includes('method="get"') || !source.includes('contactHref={localize("/contact")}')) throw Error('Modern sell native preview contact route changed');
+ let copy = modernLiteralPairs(page.value,[["Дайте ни основните данни за автомобила. Екипът ни ще се свърже с вас за оглед и конкретна оферта.","Подгответе данни и попитайте автокъщата дали разглежда предложения за автомобил. Демото не изпраща заявка."],["Как протича оценката","Какво да уточните"],["Не. Можете да предложите автомобила за директно изкупуване, без да купувате друг.","Публичните данни не потвърждават изкупуване или бартер. Попитайте автокъщата дали разглежда такива предложения."],["Задължителен ли е бартерът?","Предлагате ли изкупуване или бартер?"],["Марка, модел, година и пробег са достатъчни за първоначалния разговор. Подгответе и телефон за връзка.","Марка, модел, година, пробег и състояние са отправна точка за разговор. Не изпращайте лични документи през демото."],["Може ли оценка само по снимки?","Какво показват снимките?"],["Регистрационните документи, сервизната история и информацията за ремонти помагат за по-бърза оценка.","Ако автокъщата разглежда предложението, уточнете дали е нужен оглед и къде. Не е потвърдена услуга за оценка."],["Какво да подготвя за огледа?","Нужен ли е оглед?"],["Без регистрация. Започнете с основните данни, а ние ще уточним следващата стъпка.","Формата подготвя данни за контакт. Тя не изпраща заявка, не оценява и не приема автомобил."],["Посочете марка, модел, година и пробег. Добавете екстри и бележки, ако желаете.","Въведете данни за контактната стъпка. Демото не изпраща заявка и не извършва оценка."],["Заявете оценка на автомобил","Подгответе данни за автомобил"],["Продайте ни автомобила си","Вашият автомобил"],["Give us the essentials about your vehicle. Our team will contact you to arrange an inspection and a concrete offer.","Prepare vehicle details and ask whether the dealership considers vehicle offers. This demo does not submit a request."],["How the appraisal works","What to confirm"],["No. You can offer the vehicle for direct purchase without buying another car.","Public information does not confirm purchase or trade-in services. Ask whether the dealership considers such offers."],["Is a trade-in required?","Do you consider purchase or trade-in?"],["Make, model, year, and mileage are enough for the initial conversation. Please also leave a phone number.","Make, model, year, mileage and condition are a starting point for a conversation. Do not submit personal documents through this demo."],["Can you appraise it from photos only?","What do photos show?"],["Registration documents, service history, and repair information help us appraise the car faster.","If the dealership considers the offer, confirm whether an inspection is needed and where. An appraisal service is unconfirmed."],["What should I prepare?","Is an inspection needed?"],["No account required. Start with the essentials and we will agree the next step with you.","The form prepares details for the contact step. It does not submit a request, appraise or accept a vehicle."],["Enter the make, model, year and mileage. Add extras and notes if you wish.","Enter details for the contact step. This demo does not submit a request or perform an appraisal."],["Request a vehicle appraisal","Prepare vehicle details"],["Sell us your vehicle","Your vehicle"]]);
+ copy = copy.replace(/`Финалната оценка се прави след оглед на място в шоурума ни в \$\{leadSite\.district\.bg\}, [^`\r\n]+`/,()=>"\"Снимките помагат за разговор, но не представляват оценка. Потвърдете следващите стъпки директно.\"").replace(/`The final appraisal follows an in-person inspection at our showroom in \$\{leadSite\.district\.en\}, [^`\r\n]+`/,()=>"\"Photos can help a conversation but are not an appraisal. Confirm the next steps directly.\"");
+ let metaCopy = meta.value;
+ for(const [before,after] of [["`Предложете автомобила си за изкупуване или бартер на ${leadSite.name}.`","`Подгответе данни и попитайте ${leadSite.name} дали разглежда предложения за автомобил. Демото не изпраща заявка.`"],["`Offer your vehicle to ${leadSite.name} for purchase or trade-in.`","`Prepare details and ask whether ${leadSite.name} considers vehicle offers. This demo does not submit a request.`"],["\"Продайте ни автомобил\"","\"Вашият автомобил\""],["\"Sell us your vehicle\"","\"Your vehicle\""]]) if(metaCopy.includes(before)) metaCopy = metaCopy.replace(before,()=>after);
+ if(modernCopySha(copy)!=="d01cd8f034d74383df3e73f0bd753239c882c9f2bc22990935d48f310c2a2278" || modernCopySha(metaCopy)!=="e686763b5027c5851a9cf0601a5def0d72bcd54f419e471649b8b5f110a7c44c") throw Error('Modern sell output copy proof changed');
+ return source.slice(0,page.start) + copy + source.slice(page.end,meta.start) + metaCopy + source.slice(meta.end);
+}
+export function personalizeModernMobileSellCopy(source,profile) {
+ assertModernSellProfile(profile);
+ const copy = modernCopyBoundary(source,'export const mobileSellVehicleCopy = ','} as const;',["3bd45c0338c50d7dd4e8eb5be83ea9fd6661cebd88113a4e7ff01237705109e7","6de2712fda21385068b4513fd24d66b5fa1bdf176f7c79f69690ff0ad47a76dc"]);
+ const result = modernLiteralPairs(copy.value,[["Назад към продажбата","Назад към автомобила"],["Три ясни стъпки от данните до конкретна оферта.","Подгответе данни и потвърдете възможностите директно. Демото не изпраща заявка."],["Продажба на автомобил","Вашият автомобил"],["Обади ни се с данните, за да обсъдим удобен час за оглед.","Попитайте дали автокъщата разглежда предложения за автомобил."],["Организираме оглед","Попитайте директно"],["След огледа получаваш конкретни условия за изкупуване или бартер.","Изкупуване, бартер и оценка не са потвърдени услуги. Уточнете условията с автокъщата."],["Получаваш оферта","Уточнете възможностите"],["Как протича продажбата","Какво да уточните"],["Отворете формата за оценка","Отворете данните за автомобил"],["Продай автомобил","Вашият автомобил"],["Добавете VIN или марка, модел, година и пробег.","Добавете данни за контактния преглед. Демото не изпраща заявка и не извършва оценка."],["Back to selling","Back to your vehicle"],["Three clear steps from vehicle details to a concrete offer.","Prepare details and confirm the options directly. This demo does not submit a request."],["Sell your vehicle","Your vehicle"],["Call us with the details to discuss a convenient inspection time.","Ask whether the dealership considers vehicle offers."],["Arrange an inspection","Ask directly"],["After inspection you receive concrete purchase or trade-in terms.","Purchase, trade-in and appraisal services are unconfirmed. Ask the dealership about the terms."],["Receive an offer","Confirm the options"],["How selling works","What to confirm"],["Open appraisal form","Open vehicle details"],["Add a VIN or the make, model, year and mileage.","Add details for the contact preview. This demo does not submit a request or perform an appraisal."]]);
+ if(modernCopySha(result)!=="6de2712fda21385068b4513fd24d66b5fa1bdf176f7c79f69690ff0ad47a76dc") throw Error('Modern mobile sell output copy proof changed');
+ return source.slice(0,copy.start) + result + source.slice(copy.end);
+}
+export function applyModernSafeContent({candidate,profile}) {
+ const files = [['apps/web/app/[locale]/sell/page.tsx',personalizeModernSellCopy],['apps/web/app/[locale]/components/mobile-sell-vehicle-policy.ts',personalizeModernMobileSellCopy]];
+ const updates = files.map(([name,transform])=>{const file=path.join(candidate,name),before=read(file),after=transform(before,profile);return {name,file,before,after};});
+ const changed=[];
+ for(const row of updates) if(row.before!==row.after){write(row.file,row.after);changed.push(row.name);}
+ return {changed};
 }
