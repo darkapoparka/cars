@@ -1,77 +1,38 @@
-# Cars workspace instructions
+# Cars: automotive delivery
 
-## Lead branding policy — owner instruction, 11 October 2026
+## Current owner direction: 11 October 2026
 
-For new six-design leads, preserve the exact template palette, including heroes, banners, section backgrounds and buttons. Dealer logos or researched colours never authorize palette overrides. Read [LEAD-BRANDING](docs/LEAD-BRANDING.md): commit reviewed transparent light/dark raster packs, bind inverse and responsive consumers explicitly, and pass the mandatory branding contract before packaging. A generated image or a green build is not proof of live visual acceptance. Existing suitable identities remain source material; required creative refreshes use image generation, never CSS/text/SVG substitutes. Do not report an unexposed image-model version or invent resolution, visual approval or deployment evidence.
+Follow [the six-design fleet contract](docs/FLEET-ROLLOUT-2026-10-11.md) for current lead creation and migration. Each dealer offers Auto Best, Modern, Import, App, Mobile and Signature (`karento-best`) through exactly one Cloudflare Worker, including all six applications and assets. Preserve the existing Modern/Import slot at `/variant-2`; mount the other at `/variant-3`, Mobile at `/variant-5` and Signature at `/variant-6`. This supersedes older three/five-design and per-design-Worker guidance below.
 
+Keep the selected templates' hero/banner/button/accent colors and composition. Personalize transparent Image Gen logo treatments, factual concise copy, locations/contacts and sourced inventory or disclosed demo listings. Check every logo surface/consumer and rendered copy fit. Coordinate active template fixes, qualify the latest source and a combined hosted pilot, then migrate the authorized cohort in bounded waves. Preserve existing Vercel identities and independent dealer ownership; billing, DNS and destructive provider cleanup require separate scope.
 
-Cars owns the four reusable templates and dealer demos. The owner's current request takes precedence over workflow guidance; use judgment for routine implementation choices and finish the authorized scope.
+Read [LEAD-BRANDING](docs/LEAD-BRANDING.md) and enforce its committed raster, explicit surface binding, native palette and factual-source contracts before packaging. Generated proposal identities remain proposals; do not claim an unexposed image model version or confuse generation/build evidence with hosted visual acceptance.
 
-## Ownership
+## Current deployment direction: 4 October 2026
 
-- The four editable masters are `J:/cars/templates/{auto-best,modern,carwow,import}` in `darkapoparka/cars` on `main`. Make shared frontend/code improvements here.
-- `templates.lock.json` selects tested, immutable Cars commits and template subtrees for dealer creation and explicit updates. Development edits do not automatically change any dealer.
-- Former repositories under `J:/template-repos/cars-template-*` are retained migration/recovery sources, not active masters. Preserve their history and any unique files; do not resume frontend work there.
-- `clients/<slug>/` is canonical editable dealer source, with all selected designs together. Dedicated dealer repositories are publishing mirrors; preserve unmatched mirror fixes before exporting.
-- Use this Cars checkout at `J:/cars`. Keep its current `main` checkout and unrelated work intact; do not create another Cars worktree or sibling session copy. Derived packages and evidence go in ignored `runtime/`.
-- `docs/DEPLOYMENT-INVENTORY.json` owns technical project/deployment records. Regional `leads/*.json` owns public research. Agency OS remains the private CRM authority; never put sales notes, credentials or CRM exports in this public repository.
+Read [the hosting and five-design release decision](docs/HOSTING-AND-RELEASE-DECISION-2026-10-04.md) before publishing. The owner selected Auto Best, Modern, Import, App and Mobile for every dealer; remove Carwow from the published choices, not from preserved source/history. Target Cloudflare for the next dealer-demo release after a qualified pilot and plan approval; do not bulk-redeploy to the near-exhausted Vercel Hobby team. The separate marketplace platforms are unchanged. Five-design publication still requires versioned publisher integration, approved source and hosted checks.
 
-## Route the task
+Use the existing Cars repository at L:/CODEX/cars on main. Cars is independently openable and is also included in L:/CODEX/agency/Agency.code-workspace. Agency OS owns private agency operations; Cars owns automotive templates, public lead research, dealer source and publishing tools.
 
-| Request | Read / use |
-| --- | --- |
-| New dealer or dealer correction | [WORKFLOW](docs/WORKFLOW.md), `cars-lead-build` skill |
-| Shared template polish | Edit `templates/<key>` in Cars; read its AGENTS and relevant technical reference |
-| Localization / country-language rollout | [Execution prompt](docs/prompts/LOCALIZATION-ROLLOUT.md), [stored candidate and evidence](docs/localization/README.md); all inputs are in Git, no chat attachments needed |
-| Review/select a template release | [TEMPLATE-PROMOTION](docs/TEMPLATE-PROMOTION.md), `cars-template-release` skill |
-| Package/publish one dealer | [LEAD-PUBLISHING](docs/LEAD-PUBLISHING.md), `cars-publish` skill |
-| Audit or status | Inspect relevant source/evidence; remain read-only unless fixes are requested |
-| Research | [Lead index](leads/README.md) and [coverage](leads/COVERAGE.md) |
+## Default job
+Read the lead list -> select the lead -> resolve its approved design manifest -> assemble pinned template sources -> personalize assets and copy -> test -> deploy the requested proposal through the accepted publisher. Do routine selection, adaptation and QA without requesting permission for every step.
+The five-design set is Auto Best, Modern, Import, App, Mobile, exactly once each. Preserve each dealer's existing Modern or Import at /variant-2, replace Carwow at /variant-3 with the other family, keep App at /variant-4, and add Mobile at /variant-5 after release acceptance. For new dealers default to Modern at /variant-2 and Import at /variant-3. Existing manifests and the approved lock remain authoritative until the tested migration; never silently omit App or substitute another fifth family.
 
-Read only the references needed for the task. Historical campaigns and old source task ledgers are evidence, not an active queue. The old branch name `astra` is unrelated to model selection.
+## Source ownership
+The currently released masters include templates/auto-best, templates/modern, templates/carwow, templates/import and templates/app. templates/mobile is the selected fifth dealer design pending full publisher/release acceptance. Shared polish belongs in these Cars source boundaries. templates.lock.json selects reviewed immutable releases; unfinished drafts do not silently update dealers. The agent uses the existing release tools rather than making the owner track hashes.
+All dealer checkouts, including Al Reef, are physically under clients/<slug>. [Client source directory](clients/README.md) maps every registered public Vercel project to its local folder and publishing repository. Existing clients/<slug> folders are Cars-owned unless the registry records an independent repository. Al Reef keeps its own .git and is excluded from the parent Cars index; do not export or regenerate it as Cars-owned source. Preserve independent dealer ownership, publishing-only fixes and paid customization. Former J:/template-repos sources are recovery-only.
+Public research lives in leads/; docs/DEPLOYMENT-INVENTORY.json owns the technical map. Private sales/CRM state stays in Agency OS. Work notes and screenshots belong in this project's docs/ or ignored runtime/, not another top-level operations folder.
 
-## Working contract
+## Read the relevant workflow
+Dealer work: [WORKFLOW](docs/WORKFLOW.md) and cars-lead-build. Release selection: [TEMPLATE-PROMOTION](docs/TEMPLATE-PROMOTION.md) and cars-template-release. Publishing: [LEAD-PUBLISHING](docs/LEAD-PUBLISHING.md) and cars-publish. Visual checks: [QA](docs/QA.md). Source map: [WORKSPACE](docs/WORKSPACE.md). Read the selected template's technical instructions as needed; historical plans are not an active queue.
 
-Confirm physical path, Git remote/branch/HEAD and relevant dirty paths before writing. One writer owns each checkout/index/build output. Verify listener/process ownership before using a port; never stop an unrelated server or silently substitute ports. Preserve staged, unstaged, untracked and unique branch work. No blanket staging, resets, cleans, force-pushes or history deletion. Use scoped commits or a separate temporary index for reviewed paths when the owner's index is occupied.
+## Personalization
+Copy first, then replace the logo, colors, permitted imagery, business copy, contacts, locale, metadata and listings through existing boundaries. Preserve useful template composition unless shared polish or customization is requested. Use the actual recognizable logo when suitable and keep reviewed raster assets; generated proposal identity should be clearly identified. Inspect small-size contrast, crop and all logo consumers.
+Never carry another dealer's phone number, YouTube channel, staff or testimonials into a proposal. Use neutral mock/default videos and truthful inventory mode. Keep sample disclosure unobtrusive rather than bloating every heading. A mock form must not pretend an enquiry, purchase or finance approval succeeded. Detailed asset/content rules are in [LEAD-BUILD-GUARDRAILS](docs/LEAD-BUILD-GUARDRAILS.md).
 
-New dealer work uses the actual template source and preserves layout, spacing, typography, components, routes and interactions while changing sourced identity/content. [LEAD-BUILD-GUARDRAILS](docs/LEAD-BUILD-GUARDRAILS.md) owns branding, content and source requirements. Do not inherit another dealer's facts or claim sample forms deliver messages.
-
-## Dealer adaptation invariants
-
-Dealer personalization is a controlled content/identity layer, not permission to redesign a template. Unless the owner explicitly requests shared template work, preserve the selected template's composition, component geometry, typography, spacing, breakpoints, navigation, interactions and intended media treatment.
-
-- Keep the master hero system as designed. Do not invent replacement hero layouts, collages, masks or one-off compositions, and do not change crop/zoom/object-position behavior so dealer media becomes awkwardly framed. A dealer-specific hero asset is allowed only when the template already exposes that content boundary or the owner explicitly requests it; it must fit the existing composition at mobile and desktop widths.
-- Normal dealer changes are sourced logo/identity assets, theme colors within existing boundaries, inventory/listing data and permitted vehicle media, business facts, localized copy, contact destinations, metadata and other factual content.
-- A dealer-specific styling defect that requires changing reusable layout behavior belongs upstream in the authoritative template. Do not hide it with client-only redesigns unless the smallest local consumer fix is required for correctness.
-
-Logo handling is mandatory visual research, not text-only inference. Check the dealer's rendered website and public visual sources such as search/image results, business listings, marketplace profiles, social profiles, signage/banner imagery and listing watermarks where useful. Use a suitable permitted original logo when one exists. If the recognizable source is too blurry, dated or unusable for the required surfaces, use the available image-generation tool to create a professional refresh of that same identity. If no recognizable branding exists after documented visual checks, use image generation to create a clearly labeled proposal/demo identity. Do not skip a needed image-generation step for convenience.
-
-Final dealer branding must be integrated as committed image assets. CSS-only wordmarks, plain text fallbacks, font tricks, quick text SVGs and similar workaround logos are temporary development aids only and cannot satisfy completion. Do not replace a suitable real logo with generated artwork merely to make it different. When image generation is required but cannot be completed, record the branding blocker and keep the build incomplete rather than shipping a workaround as final.
-
-Verify the chosen logo asset and appropriate surface variants in every offered design and all relevant consumers: desktop header, mobile header/drawer, sticky navigation, footer, dealer cards where present, metadata, favicon/touch icon and manifest. Verify bytes are committed and inspect clipping, transparent padding, backgrounds, masks, filters, dimensions and small-size legibility. The detailed acceptance rules and provenance fields live in [LEAD-BUILD-GUARDRAILS](docs/LEAD-BUILD-GUARDRAILS.md).
-
-A requested new dealer build includes appropriate QA, scoped commit/push, its private publishing repository, one Vercel project and hosted verification, unless the user narrows the scope. Standard trio: Auto Best, Modern, Carwow. An intentional Import trio uses Auto Best, Import, Carwow. Existing manifests determine actual offered designs; four available templates do not imply four designs. Reuse recorded names and domains. Publishing never authorizes outreach or mass deployment.
-
-Run focused checks for the changed behavior. [QA](docs/QA.md) defines application and mounted-preview evidence. Source, build, deployment, browser verification and owner review are separate facts. Report gaps honestly and continue independent authorized work. If a specific instruction blocks completion, identify its file and exact requirement rather than inventing a new approval step.
-
-## Maintenance
-
-Workflow commands, release compatibility and publishing changes update their authoritative docs and relevant tests together. [Documentation index](docs/README.md) and [coordination](docs/COORDINATION.md) locate references and handoff conventions. Run `node scripts/check-workflow.mjs` and `node --test scripts/*.test.mjs` for workflow changes.
-## Main is the working branch
-
-The owner chose a main-only workflow on 13 September 2026. Use the saved checkout on `main` for routine work. Do not create another branch or worktree unless the owner explicitly requests one. One task owns writes to a checkout; concurrent tasks may review read-only or work in a different repository. Fetch and inspect status before writing, preserve other tasks' work, and finish authorized implementation with scoped commits and a non-force push to main.
-
-An explicitly requested temporary branch/worktree must be integrated, verified and removed before the task is called complete. If blocked, record its exact repository, ref, commit, paths and next action in the handoff. Do not leave unfinished source discoverable only through a task title or old branch. Source consolidation preserves work; template release, owner visual acceptance and dealer deployment keep their separate checks.
-## Workspace and admin delivery
-
-Read [WORKSPACE](docs/WORKSPACE.md) for the Cars template/dealer map, main synchronization, shared public admin and Agency OS boundary. Open Cars.code-workspace: Cars contains all four masters; Cars Admin is separate. Use node scripts/workspace-doctor.mjs --fetch before writing; resolve blockers in the checkout being used without disturbing other writers. Ignored runtime/ holds generated packages, logs and evidence, never another editable template master. Routine template previews start from templates/<key>.
-
-The shared admin is a synthetic browser-local demo, not the private agency CRM. Keep three design choices plus one admin link, preserve existing routes, and replace older CRM links instead of adding a fifth. Verify the actual public alias and served switcher; READY or hand-set Git metadata alone does not prove uploaded source. Do not duplicate deployment triggers or upload from a stale checkout.
-
-Architecture changes follow [PREVIEW-ARCHITECTURE](docs/PREVIEW-ARCHITECTURE.md): shared source with hybrid delivery. Do not equate one workspace or one repository with one deployment, and do not move existing dealer URLs to an unproven shared runtime. The September local reconciliation is recorded in [RECONCILIATION](docs/workspace/2026-09-19/RECONCILIATION.md); retained recovery copies are not editable masters.
-
-New-lead creation remains three actual template copies in one canonical dealer folder. Use the checked-in new-client command: it checks synchronized main and the selected release and installs a verified trio atomically. Completed template work includes exact-source release review for future leads; unfinished drafts are not released. Existing dealers update only when requested, preserving logos, inventory, assets and custom changes. Do not make the owner track SHAs or manually synchronize source.
-
-## Independent dealer pilot
-
-For an explicitly requested new independent dealer, use scripts/create-independent-dealer.mjs and docs/INDEPENDENT-DEALERS.md. Its dedicated repository is the sole editable source in the registered independentClientsRoot. Do not also add its application tree under Cars/clients or regenerate over it with the legacy exporter. Existing dealers keep their recorded legacy source ownership until deliberately reconciled.
+## Preserve work and finish the task
+Inspect remote, branch, HEAD and relevant staged/unstaged/untracked changes before writing. Independent files may be edited concurrently. Coordinate overlapping files and serialize shared Git/index/build-output operations. No blanket staging, reset, clean, force-push or history deletion. Keep existing branch/worktree recovery and scoped-commit rules in [COORDINATION](docs/COORDINATION.md); do not create another editable source copy.
+Use node scripts/workspace-doctor.mjs --fetch before integration/publishing; ordinary local edits do not require this portfolio-wide check. Resolve applicable source drift without discarding other work. An unrelated draft does not justify an unrelated rewrite.
+A requested new dealer build includes focused QA, scoped commit/push, its private publishing repository, one public dealer origin on the accepted hosting target and hosted verification unless the owner narrows scope. Existing Vercel project IDs and aliases are preserved during Cloudflare qualification; no billing or DNS change is implicit. Existing dealer/fleet refreshes need that scope. Keep public URLs, the approved design FAB and shared admin-demo link; the selected five-design rollout preserves the four mount positions while intentionally replacing Carwow and mapping any old detail URLs. Admin demo is not the private agency CRM.
+Follow the change-sized checks and bounded artifact retention in [QA](docs/QA.md). Small local edits use focused checks on the existing preview; production builds and broad journeys belong at the relevant integration/release checkpoint, not every iteration. Include 320px when the changed control/layout affects that width. Fix inherited identities, clipped banners/badges, poor assets and broken primary actions. Source, build, public alias and visual acceptance are separate facts. Publishing never authorizes outreach. Protect secrets and private data.
+For workflow documentation changes run node scripts/check-workflow.mjs and relevant focused workflow tests. Run the full workflow suite when executable workflow behavior changes or at an integration checkpoint. Use the existing new-client, create-independent-dealer, release and publishing tools; do not write a second generator for ordinary proposals. [Docs index](docs/README.md) provides the detailed references.

@@ -111,6 +111,35 @@ test('Mobile actual normalized filters and URL roundtrip use miles with English 
  assert.equal(module.money(12345),'GBP 12,345');
 });
 
+const inventoryScreen='src/components/ShowroomInventoryScreen.tsx';
+const approvedMobilePin='8a97176e3adfbd95dce69b3096abc84e3eecd9c8';
+const approvedInventory=execFileSync('git',['show',approvedMobilePin+':templates/mobile/'+inventoryScreen],{encoding:'utf8',maxBuffer:2097152}).replace(/\r\n/g,'\n');
+function mobileOverlayFixture(inventory=approvedInventory){
+ const files=immutable('mobile');
+ files.set('src/lib/locale.ts',files.get('src/lib/locale.ts').replace("currency: 'EUR'","currency: 'GBP'"));
+ files.set(inventoryScreen,inventory);
+ return files;
+}
+
+test('approved Mobile inventory range and selected-filter summary both use miles without changing surrounding source',()=>{
+ assert.equal(approvedInventory.split("t('km')").length-1,2);
+ const files=mobileOverlayFixture();personalizeMobileUk(files,profile);
+ const inventory=files.get(inventoryScreen);
+ assert.match(inventory,/filters\.minMileage \|\| filters\.maxMileage \? mileageLabel \+ ' ' \+ 'mi' : ''/);
+ assert.match(inventory,/' ' \+\s*'mi'\s*:\s*'Mileage'/);
+ assert.doesNotMatch(inventory,/t\('km'\)/);
+ assert.equal(inventory.replaceAll("'mi'","t('km')"),approvedInventory,'Palette, markup and unrelated copy retain exact approved bytes');
+});
+
+test('an extra or changed Mobile mileage boundary refuses the entire overlay atomically',()=>{
+ const summary="filters.minMileage || filters.maxMileage ? mileageLabel + ' ' + t('km') : ''";
+ for(const source of [approvedInventory+"\nconst unrelatedDistance = t('km');\n",approvedInventory.replace(summary,summary.replace('mileageLabel','unreviewedMileageLabel'))]){
+  const files=mobileOverlayFixture(source),before=[...files];
+  assert.throws(()=>personalizeMobileUk(files,profile),/ShowroomInventoryScreen\.tsx.*expected 1, found 2/);
+  assert.deepEqual([...files],before);
+ }
+});
+
 function appBody(files,vehicles=[]) {
  return 'const dealer={currency:"GBP",defaultLocale:"en"};const isDealer=true;const dealerInventory='+JSON.stringify(vehicles)+';\n'+
  withoutImports(pinned('app','lib/vehicle-values.ts'))+'\n'+pinned('app','lib/inventory-identity.ts')+'\n'+

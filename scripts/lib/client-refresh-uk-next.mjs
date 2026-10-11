@@ -299,7 +299,14 @@ export function personalizeMobileUk(files, profile) {
     patch(mobileDisplayPaths[7], "localeNumber(vehicle.mileage, locale) + ' ' + t('km')", 'formatStockMileage(vehicle, locale)');
     patch('src/components/ShowroomFilterSheet.tsx', 'unit="km"', 'unit="mi"');
     patch('src/components/ShowroomFilterSheet.tsx', 'unit="€"', 'unit="£"');
-    patch('src/components/ShowroomInventoryScreen.tsx', "t('km')", "'mi'");
+    const inventoryScreen = 'src/components/ShowroomInventoryScreen.tsx';
+    const mileageSummary = "filters.minMileage || filters.maxMileage ? mileageLabel + ' ' + t('km') : ''";
+    // The approved Mobile source also names the unit in its selected-filter summary.
+    // Older reviewed sources have only the range label; unknown extra uses still fail.
+    if (get(inventoryScreen).includes(mileageSummary)) {
+      patch(inventoryScreen, mileageSummary, "filters.minMileage || filters.maxMileage ? mileageLabel + ' ' + 'mi' : ''");
+    }
+    patch(inventoryScreen, "t('km')", "'mi'");
     patch('src/components/ShowroomDesktopFilterFields.tsx', "0, 200000, 5000, 'km'", "0, 200000, 5000, 'mi'");
     patch('src/components/ShowroomDesktopFilterFields.tsx', "0, 100000, 500, '€'", "0, 100000, 500, '£'");
     patch('src/components/ShowroomServiceRequest.tsx', "'en-IE'", "'en-GB'");

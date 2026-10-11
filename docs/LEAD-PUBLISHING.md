@@ -1,6 +1,12 @@
 # Publishing one dealer
 
+Current lead migrations follow the owner's [11 October six-design fleet contract](FLEET-ROLLOUT-2026-10-11.md): exactly one Cloudflare Worker per dealer contains all six designs and assets. The preservation/reconciliation requirements below remain applicable; the legacy three-design Vercel routing/trigger defaults are not the current rollout target. Preserve old provider identities while qualifying the new origin.
+
 [Root instructions](../AGENTS.md) own authorization and [WORKFLOW](WORKFLOW.md) owns lead completion. This procedure packages canonical source, preserves the dedicated remote's history/fixes and uses one Git-to-Vercel deployment trigger.
+
+## Locate the source first
+
+Use [clients/README.md](../clients/README.md). All dealer folders are under Cars/clients, but Git ownership still matters. Most are Cars-owned sources exported to dedicated deployment repositories. Al Reef is an ignored, independently versioned checkout in that same directory; publish its own main branch and do not use the legacy exporter. The commands below are for Cars-owned dealers.
 
 ## Identity and routes
 

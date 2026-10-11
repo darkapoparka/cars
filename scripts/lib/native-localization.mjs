@@ -4,6 +4,7 @@ import { normalizeDealerLocale, LocalePackagingError } from './dealer-locale.mjs
 
 export const NATIVE_PACKAGING_VERSION = '2';
 export const ADOPTION_FILE = 'localization/adoption.json';
+export const NATIVE_QUALIFICATION_KIND = 'cars-native-source-qualification';
 export const NATIVE_CHECKS = Object.freeze([
   'catalog-completeness', 'hardcoded-ui', 'native-routing', 'standalone-journeys',
   'mounted-journeys', 'public-journeys', 'preferences-no-js', 'preferences-storage-disabled',
@@ -143,6 +144,38 @@ export function nativeReleaseReadiness(variants, releases) {
   }
   return { ready: blockers.length === 0, blockers };
 }
+export function validateNativeQualificationContext(context, {dealer} = {}) {
+  if (context?.schemaVersion !== 1 || context.kind !== 'cars-native-source-qualification-context' ||
+      !/^[a-z0-9][a-z0-9-]{0,95}$/.test(context.id || '') || !/^[a-z0-9][a-z0-9-]{0,63}$/.test(context.dealer || '') ||
+      (dealer && context.dealer !== dealer) || context.scope !== 'existing-dealer-pilot' || context.reviewed !== true ||
+      !Number.isFinite(Date.parse(context.reviewedAt)) || !commitPattern.test(context.sourceCommit || '') ||
+      context.nativeApproval !== false || context.hostedApproval !== false || context.globalReleaseApproval !== false ||
+      !hashPattern.test(context.approvedLockSha256 || '') || !hashPattern.test(context.candidateLockSha256 || '')) {
+    throw new Error('Explicit reviewed dealer source qualification context is required; this is not native release approval');
+  }
+  const delta = context.sourceDeltaReview;
+  if (!delta || !nativePath(delta.reference) || !hashPattern.test(delta.sha256 || '') || !Number.isFinite(Date.parse(delta.reviewedAt))) throw new Error('Qualification requires a dated hashed source delta review');
+  return context;
+}
+
+/** Candidate-only provenance. The old accepted release stays attached to its original source. */
+export function validateTemplateQualification(key, release, context) {
+  validateNativeQualificationContext(context);
+  const source = release?.source, qualification = release?.qualification, qa = qualification?.sourceQA;
+  if (release?.status !== 'qualification' || release.repository !== 'darkapoparka/cars' || release.commit !== context.sourceCommit ||
+      source?.repository !== release.repository || source.revision !== release.commit || source.path !== `templates/${key}` ||
+      release.snapshotPath !== source.path || !commitPattern.test(source.tree || '') || !hashPattern.test(source.digest || '') || source.digest !== release.digest ||
+      qualification?.contextId !== context.id || release.qa?.nativeLocalization ||
+      JSON.stringify(qualification.sourceDeltaReview) !== JSON.stringify(context.sourceDeltaReview)) throw new Error(`${key}: invalid provisional source qualification or false native acceptance`);
+  const parent = qa?.approvedRelease;
+  if (parent?.status !== 'approved' || !commitPattern.test(parent.commit || '') || !hashPattern.test(parent.digest || '') ||
+      !hashPattern.test(qa.releaseSha256 || '') || stableHash(parent) !== qa.releaseSha256 ||
+      qa.reference !== parent.qa?.evidence || !nativePath(qa.reference) || !hashPattern.test(qa.sha256 || '') ||
+      qa.verifiedAt !== parent.qa?.verifiedAt || !Number.isFinite(Date.parse(qa.verifiedAt))) throw new Error(`${key}: qualification has no exact approved source QA parent`);
+  if (['auto-best','modern','import','carwow'].includes(key)) validateNativeRelease(key, parent);
+  if (JSON.stringify(qualification.catalogs) !== JSON.stringify(parent.qa?.nativeLocalization?.catalogs || [])) throw new Error(`${key}: qualification catalog descriptors differ from the reviewed source QA parent`);
+  return qualification;
+}
 export function nativeContract(manifest) {
   if (manifest.packaging?.version !== NATIVE_PACKAGING_VERSION) throw new Error('Native localization requires packaging version 2');
   const contract = normalizeDealerLocale(manifest.localization, manifest.dealerId || manifest.slug);
@@ -187,9 +220,51 @@ export function sealNativeAdoption(files, manifest, releases) {
   nativeWrite(files, ADOPTION_FILE, JSON.stringify(receipt, null, 2) + '\n');
   return receipt;
 }
+export function sealNativeQualification(files, manifest, releases, context) {
+  validateNativeQualificationContext(context, {dealer:manifest.slug});
+  const contract = nativeContract(manifest), selected = {}, catalogs = {};
+  for (const {key} of manifest.variants) {
+    const release = releases[key];
+    const descriptors = release?.status === 'qualification' ? validateTemplateQualification(key,release,context).catalogs : validateNativeRelease(key,release).catalogs;
+    if ((release.source?.revision || release.commit) !== manifest.templateRevisions[key] ||
+        (release.source && !sameSource(manifest.templateSources?.[key],release.source))) throw new Error(`${key}: qualification source differs from selected dealer source`);
+    catalogs[key] = auditNativeCatalogs(files,key,descriptors);
+    selected[key] = structuredClone(release);
+  }
+  nativeWrite(files,'localization/contract.json',JSON.stringify(contract,null,2)+'\n');
+  const receipt = {schemaVersion:2,kind:NATIVE_QUALIFICATION_KIND,packagingVersion:NATIVE_PACKAGING_VERSION,
+    dealerId:contract.dealerId,contractDigest:stableHash(contract),context:structuredClone(context),contextDigest:stableHash(context),
+    releases:selected,catalogs,input:nativeInputDigest(files,manifest),nativeApproval:false,hostedApproval:false,globalReleaseApproval:false,
+    pendingNativeChecks:[...NATIVE_CHECKS],dealerAcceptance:'requires-current-source-build-and-hosted-native-journeys'};
+  nativeWrite(files,ADOPTION_FILE,JSON.stringify(receipt,null,2)+'\n');
+  return receipt;
+}
+
+export function assertNativeQualification(files, manifest, context) {
+  validateNativeQualificationContext(context,{dealer:manifest.slug});
+  const contract = nativeContract(manifest), receipt = parseCatalogJson(nativeText(files,ADOPTION_FILE));
+  if (receipt.schemaVersion !== 2 || receipt.kind !== NATIVE_QUALIFICATION_KIND || receipt.packagingVersion !== NATIVE_PACKAGING_VERSION ||
+      receipt.dealerId !== contract.dealerId || receipt.contractDigest !== stableHash(contract) || receipt.contextDigest !== stableHash(context) ||
+      stableHash(receipt.context) !== stableHash(context) || receipt.nativeApproval !== false || receipt.hostedApproval !== false || receipt.globalReleaseApproval !== false ||
+      JSON.stringify(receipt.pendingNativeChecks) !== JSON.stringify(NATIVE_CHECKS)) throw new Error('Native source qualification identity/context changed or falsely claims acceptance');
+  const stored = normalizeDealerLocale(parseCatalogJson(nativeText(files,'localization/contract.json')),contract.dealerId);
+  if (stableHash(stored) !== stableHash(contract)) throw new Error('Native qualification locale contract changed');
+  if (JSON.stringify(Object.keys(receipt.releases || {}).sort()) !== JSON.stringify(manifest.variants.map(v=>v.key).sort())) throw new Error('Native qualification release set differs from dealer source');
+  for (const {key} of manifest.variants) {
+    const release = receipt.releases[key];
+    const descriptors = release?.status === 'qualification' ? validateTemplateQualification(key,release,context).catalogs : validateNativeRelease(key,release).catalogs;
+    if ((release.source?.revision || release.commit) !== manifest.templateRevisions[key] ||
+        (release.source && !sameSource(manifest.templateSources?.[key],release.source))) throw new Error(`${key}: stale qualification source locator`);
+    if (stableHash(auditNativeCatalogs(files,key,descriptors)) !== stableHash(receipt.catalogs?.[key])) throw new Error(`${key}: qualification catalog audit changed`);
+  }
+  const actual = nativeInputDigest(files,manifest);
+  if (!hashPattern.test(receipt.input?.digest || '') || receipt.input.digest !== actual.digest || receipt.input.files !== actual.files) throw new Error('Native source changed after qualification; reseal and review the candidate');
+  return receipt;
+}
 export function assertNativeAdoption(files, manifest) {
   const contract = nativeContract(manifest);
   const receipt = parseCatalogJson(nativeText(files, ADOPTION_FILE));
+  if (receipt.kind === NATIVE_QUALIFICATION_KIND || receipt.schemaVersion === 2) throw new Error('Provisional native source qualification is not an approved release; ordinary publication is refused');
   if (receipt.schemaVersion !== 1 || receipt.packagingVersion !== NATIVE_PACKAGING_VERSION || receipt.dealerId !== contract.dealerId || receipt.contractDigest !== stableHash(contract)) throw new Error('Native adoption identity/contract mismatch');
   const stored = normalizeDealerLocale(parseCatalogJson(nativeText(files, 'localization/contract.json')), contract.dealerId);
   if (stableHash(stored) !== stableHash(contract)) throw new Error('Native contract changed after adoption');

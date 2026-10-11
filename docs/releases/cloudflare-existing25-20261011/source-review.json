@@ -1,0 +1,1037 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-qualification-source-review",
+  "repository": "darkapoparka/cars",
+  "sourceCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
+  "parentCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T09:37:25.155Z",
+  "qualificationOnly": true,
+  "approved": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "scope": "Published initial twenty-file source correction plus exact five-file Signature followup: twenty-five publication events, two superseded paths, twenty-three unique current files (seventeen template files across four keys and six maintained publisher/support files). Existing accepted baseline evidence applies only to its original recorded revisions. This review prepares one existing-dealer qualification pilot.",
+  "sourceFiles": [
+    {
+      "path": "templates/karento-best/src/lib/components/Header.svelte",
+      "sha256": "f92d65f62a46808dfd82cb76232f4d43f3b2be511298626863b8e4444bd016a7",
+      "bytes": 29041,
+      "blob": "0a9f81052b464d022d068f9639768f56e73041ff",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/MobileNavigation.svelte",
+      "sha256": "ccee8bab89b39dceac7f1cf953c4405d05d426f220e03e270b3f0f8db3b6ee32",
+      "bytes": 2862,
+      "blob": "a84d79e7cc1450d04a7f004ec10f9b8fbe6aad5d",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/vehicle-detail/VehicleSpecifications.svelte",
+      "previousFrozenSha256": "6dfbff88c30118d5d44626a3666d5fcf16c2288d9b8398d641a9495cb41a40c5",
+      "sha256": "a28f804cbb1f1dc65b88a9c8a260f71349a61aade654173914dd4bde52561e0d",
+      "bytes": 3577,
+      "blob": "c2d478cf303e4a6d22e3b9cef725c99c1d8b565c",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1"
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/editorial/MobileNewsCollection.svelte",
+      "sha256": "6b588625826b25ae2761e841b7187b9cc90ddb19a7bef40a3d588ddaf0678cb5",
+      "bytes": 6457,
+      "blob": "50e1744b2b46c4b02e1f6e7fbb4f255676777667",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/karento-best/src/lib/pages/index-3.svelte",
+      "sha256": "a2e41c3583a0d158aaa507658db3dd76c2d8d5112e7323184d002fecdbf808ec",
+      "bytes": 3273,
+      "blob": "004a400002eed311f672f22d9fb8c41916cf2827",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/karento-best/src/lib/sections/ServicesOverview.svelte",
+      "sha256": "230b20359c2e6a77ad43362dc83479aa0594642fd56ead58a687b3d0c3edbaff",
+      "bytes": 3425,
+      "blob": "f9c36e120266592e6acf00dc69cb7a818743229d",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/karento-best/src/lib/sections/VehicleTypeShowcase.svelte",
+      "sha256": "0289480c461fcb3e9a007cd2cfa348fbd701e6227accb68fb884b1b98f44b393",
+      "bytes": 20970,
+      "blob": "b3061aa97a5f2da49c0d9dffb098282dd0947f29",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/karento-best/src/lib/sections/UpcomingVehicleNews.svelte",
+      "sha256": "14afc1ace19b5b19bae131372834dc652186d4c53fc20b7b48c165c84ec6751f",
+      "bytes": 14448,
+      "blob": "3df01cf40518e3aaf7ee1e2e7e873e67df4816b0",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/karento-best/src/routes/+layout.svelte",
+      "sha256": "d23f5f9867991ce59f7149fe4a080ed316a4f73da90f91316be825f41374adf5",
+      "bytes": 2632,
+      "blob": "b88793d0c5136df13ff87afce8b15a671af3a5e5",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/karento-best/src/routes/2/DiscoveryNavigation.svelte",
+      "sha256": "9bd64d5619249da42f84961436b17fc54a2b8cb990d3d585f754f671614819c7",
+      "bytes": 2172,
+      "blob": "be2f3f0389dd4994385e13ae485371e948b1db1d",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/karento-best/static/mobile.css",
+      "sha256": "6a8202f11dd8b84258db83c537a47304dcd39cdd6d9455a3e09c4a5a560ddb29",
+      "bytes": 49743,
+      "blob": "74aede64420bef70aa5983fc1085ec5d8fabbcfc",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/karento-best/tests/dealer-preview.test.ts",
+      "previousFrozenSha256": "40b75c274c59c3e0d88b4c7a038c8c552f1089b49ec6ef19b6896be478c3d7bb",
+      "sha256": "1e3d4e57eab8e078f9dbf45a5deeb7d197412da53d9f9624ccabbfee738c8e6f",
+      "bytes": 3278,
+      "blob": "9a02aa45da5dd079fe8cd5410f011210b0bc18c2",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1"
+    },
+    {
+      "path": "scripts/publishing/preview-switcher.js",
+      "sha256": "093eff504d6460cd92dd684226c963736aca5376b1d1cdede16f71bbf458065a",
+      "bytes": 177531,
+      "blob": "7922502aead84fe50025b577f229f86446d51341",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "scripts/preview-switcher-release.test.mjs",
+      "sha256": "e80bbfadd46a28ff48a1b614c2c46839b070bcd25b9c8caad14d6d61c87c931a",
+      "bytes": 23938,
+      "blob": "a9dd0f3f3a72edb2319148d236c0a44455fb4439",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/auto-best/src/lib/locale/LocalePreferences.svelte",
+      "sha256": "045e557a15784473186bab45f989d0efe690cd27dd24ef2ec956d4a4e1dd7312",
+      "bytes": 12575,
+      "blob": "2a78f46bdc57eb5cddd109a8aa71d5d86d7bf892",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/import/src/lib/locale/LocalePreferences.svelte",
+      "sha256": "f47ee3df17cbf74544bc2922c09649d30bd61aad1659427eca81f742c125dce2",
+      "bytes": 10105,
+      "blob": "06eac352485ee87bb733ae9e557c14e57986b328",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/locale-preferences.tsx",
+      "sha256": "156a86190d4498dc205a430a7854982ee869c4b26245266d429a90dd9cbcb3b7",
+      "bytes": 15593,
+      "blob": "97ddb9fd376edd608343cb1462bd91a7071159d2",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/locale-preferences.test.tsx",
+      "sha256": "ad15821b2fa206e8790886c3b877ee13ab7843fdd5aabcb13ca9a8dd15717201",
+      "bytes": 2551,
+      "blob": "ae2aabb63975f57b31da1e76daf78646b701680d",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "scripts/publishing/dealer-presentation.mjs",
+      "sha256": "2de162632a62ebcc06cb25a574cba0da76d3ce6cd48297bd360f9abc3c726d7e",
+      "bytes": 6928,
+      "blob": "558652876d7667c5aad7faa3cb2762df0f1f6c12",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "scripts/dealer-presentation.test.mjs",
+      "sha256": "37ad863161cb157feeb3e03180b9cb5e4f4f7d4816b5abf98a24021c1a1181e2",
+      "bytes": 2890,
+      "blob": "0ca83f4583110a9ff14940c241a96738f24ae710",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/karento-best/src/lib/i18n/catalogs/core.ts",
+      "sha256": "77c9c4a85856b6d2fde841b27ed8bf58c8a241f6f95afa10be9fe03782a25d83",
+      "bytes": 25301,
+      "blob": "e3be3436ec9f5ce4452852a91ee7b0370bb413dc",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1"
+    },
+    {
+      "path": "scripts/lib/client-refresh-six.mjs",
+      "sha256": "caf84785bd399defafea578da31c21cdf2372f80b7bba6b832cc383f30805051",
+      "bytes": 49909,
+      "blob": "69c29c48170aec5c5c39d50a9870d246ff1ec9ca",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1"
+    },
+    {
+      "path": "scripts/uk-signature-personalization.test.mjs",
+      "sha256": "e6607e01193bf3397f8c020ebddba0cc39dcf2b4b6aea94829a6e71e50c2d404",
+      "bytes": 14849,
+      "blob": "3e509507586c8a014440768d0717a4a1d2f8af39",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1"
+    }
+  ],
+  "changedTemplateKeys": [
+    "auto-best",
+    "modern",
+    "import",
+    "karento-best"
+  ],
+  "templates": [
+    {
+      "key": "auto-best",
+      "tree": "05b9df71239d59059533a665b0559a86dd8efe48",
+      "digest": "e3113f494f046ae8ea1d5ea58bbecf9d3082522ce0c383dad1936411170899cb",
+      "files": 1602,
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
+        "path": "templates/auto-best",
+        "tree": "05b9df71239d59059533a665b0559a86dd8efe48",
+        "digest": "e3113f494f046ae8ea1d5ea58bbecf9d3082522ce0c383dad1936411170899cb"
+      },
+      "baseline": {
+        "source": {
+          "repository": "darkapoparka/cars",
+          "revision": "696230a404abd9b20b6f907b9cfb139175298c7a",
+          "path": "templates/auto-best",
+          "tree": "b07ff2273be554ef64a039ac8f4f023ae60a33ac",
+          "digest": "90f131aa0ead6ae4fcb06d30c054ca4d0c5d39097a2927cca8f298c7d2dfb3ca"
+        },
+        "approvedReleaseSha256": "fb04fd0978d4aa143ef64de9ccaa9dd8fbc346ad2837ad850d482b76fe10de5c",
+        "evidence": {
+          "reference": "docs/releases/six-design-2026-10-10/native-execution/auto-best-696230a-release.json",
+          "sha256": "aa1e593f7438210920ae7b2e0dae7a5ea9ffd116cd1a33d3e95f3056f0c88e0e",
+          "verifiedAt": "2026-10-10T17:33:58.141Z"
+        },
+        "acceptanceAppliesToOriginalRevisionOnly": true
+      },
+      "changedPaths": [
+        "templates/auto-best/src/lib/locale/LocalePreferences.svelte"
+      ]
+    },
+    {
+      "key": "modern",
+      "tree": "a1ca9ada23fa84ab34bf8e183f1f929c2670e894",
+      "digest": "46bfd2136c4c7d439363a7f57147ff354e0442ab37d448849c26dde586f556b6",
+      "files": 3977,
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
+        "path": "templates/modern",
+        "tree": "a1ca9ada23fa84ab34bf8e183f1f929c2670e894",
+        "digest": "46bfd2136c4c7d439363a7f57147ff354e0442ab37d448849c26dde586f556b6"
+      },
+      "baseline": {
+        "source": {
+          "repository": "darkapoparka/cars",
+          "revision": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+          "path": "templates/modern",
+          "tree": "51d68e5dd6e3b305191df94e877403fd7b7414e1",
+          "digest": "b035a849efb41d3ed18d97fcf3511850469162c0a990397b74be588179d43588"
+        },
+        "approvedReleaseSha256": "d87c0276a4a340a39dc9c8322869d6e1fc3c2a1471d2a2b2cc6d09fa654fb900",
+        "evidence": {
+          "reference": "docs/releases/six-design-2026-10-10/native-execution/modern-6f87470-release.json",
+          "sha256": "5017517697ec17dcefae2270e47c4fa93a46677e54fbce5f701a8b21be25d94c",
+          "verifiedAt": "2026-10-10T17:34:01.221Z"
+        },
+        "acceptanceAppliesToOriginalRevisionOnly": true
+      },
+      "changedPaths": [
+        "templates/modern/packages/marketplace-ui/components/locale-preferences.tsx",
+        "templates/modern/packages/marketplace-ui/components/locale-preferences.test.tsx"
+      ]
+    },
+    {
+      "key": "import",
+      "tree": "e8f628321259169fcbd0f9acd8ff7185cac4dacf",
+      "digest": "42bf029ce6f23eb979b4ae4bf0a0f666693f777e905f75793c742ad269c348f7",
+      "files": 3423,
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
+        "path": "templates/import",
+        "tree": "e8f628321259169fcbd0f9acd8ff7185cac4dacf",
+        "digest": "42bf029ce6f23eb979b4ae4bf0a0f666693f777e905f75793c742ad269c348f7"
+      },
+      "baseline": {
+        "source": {
+          "repository": "darkapoparka/cars",
+          "revision": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+          "path": "templates/import",
+          "tree": "b64c4a4939c4244ba3f408e5c0311c586a913e67",
+          "digest": "eef4c3544b28bb3a62cad4c2a07e4ff64301fb4c9e9925ba002077bda7f63bd3"
+        },
+        "approvedReleaseSha256": "59574c885f7ea779c791e83389aa9f59be234fe2d8a7c7d2616f8c89cf946a89",
+        "evidence": {
+          "reference": "docs/releases/six-design-2026-10-10/native-execution/import-b9373e9-release.json",
+          "sha256": "805aabac442322c36c5a65eafbedaff7ba3afb0d5989d686c7b0774a1f768f91",
+          "verifiedAt": "2026-10-10T17:34:09.318Z"
+        },
+        "acceptanceAppliesToOriginalRevisionOnly": true
+      },
+      "changedPaths": [
+        "templates/import/src/lib/locale/LocalePreferences.svelte"
+      ]
+    },
+    {
+      "key": "karento-best",
+      "tree": "d95a86112165b229026b8fc732084548d3e42299",
+      "digest": "da247d4d1c9fa45fec8d3748e087375ace062790f861c8ecebcb20620a39125f",
+      "files": 1117,
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
+        "path": "templates/karento-best",
+        "tree": "d95a86112165b229026b8fc732084548d3e42299",
+        "digest": "da247d4d1c9fa45fec8d3748e087375ace062790f861c8ecebcb20620a39125f"
+      },
+      "baseline": {
+        "source": {
+          "repository": "darkapoparka/cars",
+          "revision": "cc130e432a41a3a60cc80bc2b3461c6416893b4a",
+          "path": "templates/karento-best",
+          "tree": "c661129affb32649c8fcecea097fc9a6487783d0",
+          "digest": "bf8c6628be5f28b7e3358b121b7cf9e236d36a2fc0138bf640d72113c7e17f30"
+        },
+        "approvedReleaseSha256": "e8978c013534e1584f1c770e53df606cc9804806f717339d7ed4cc362df101a0",
+        "evidence": {
+          "reference": "docs/releases/six-design-2026-10-10/signature-release.json",
+          "sha256": "c219f867b02094020f190cf3d89739b03c5a1fd83869269fbe4df627a0932c72",
+          "verifiedAt": "2026-10-10T08:10:04.839Z"
+        },
+        "acceptanceAppliesToOriginalRevisionOnly": true
+      },
+      "changedPaths": [
+        "templates/karento-best/src/lib/components/Header.svelte",
+        "templates/karento-best/src/lib/components/MobileNavigation.svelte",
+        "templates/karento-best/src/lib/components/vehicle-detail/VehicleSpecifications.svelte",
+        "templates/karento-best/src/lib/components/editorial/MobileNewsCollection.svelte",
+        "templates/karento-best/src/lib/pages/index-3.svelte",
+        "templates/karento-best/src/lib/sections/ServicesOverview.svelte",
+        "templates/karento-best/src/lib/sections/VehicleTypeShowcase.svelte",
+        "templates/karento-best/src/lib/sections/UpcomingVehicleNews.svelte",
+        "templates/karento-best/src/routes/+layout.svelte",
+        "templates/karento-best/src/routes/2/DiscoveryNavigation.svelte",
+        "templates/karento-best/static/mobile.css",
+        "templates/karento-best/tests/dealer-preview.test.ts",
+        "templates/karento-best/src/lib/i18n/catalogs/core.ts"
+      ]
+    }
+  ],
+  "retainedApprovedSources": [
+    {
+      "key": "app",
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+        "path": "templates/app",
+        "tree": "749512ff762c25272d1474225ff653dd4c88f0fe",
+        "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541"
+      },
+      "treeAtPublishedCommit": "749512ff762c25272d1474225ff653dd4c88f0fe",
+      "originalApprovedPinPreserved": true,
+      "reason": "Published source content is unchanged; preserve original approval and provenance."
+    },
+    {
+      "key": "mobile",
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+        "path": "templates/mobile",
+        "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b",
+        "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d"
+      },
+      "treeAtPublishedCommit": "9a4db757e788ee236712b8eac25956a6a8a61d0b",
+      "originalApprovedPinPreserved": true,
+      "reason": "Published source content is unchanged; preserve original approval and provenance."
+    }
+  ],
+  "approvedLock": {
+    "reference": "templates.lock.json",
+    "sha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+    "unchanged": true
+  },
+  "currentBoundedChecks": {
+    "publishedTwentyFileScopeAndHashes": true,
+    "immutableSubtreeIdentities": true,
+    "approvedBaselineNativeEvidenceValid": true,
+    "currentDeclaredNativeCatalogParity": [
+      {
+        "key": "auto-best",
+        "originalApprovedNativeEvidenceValid": true,
+        "sourceCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f",
+        "result": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/catalog.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 1128,
+              "contentDigest": "093531b4870cdbc28f797b5ad9f343d183851d2ffb78a00ca7625562da5079cf"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        },
+        "scope": "Earlier declared source catalog parity retained at its recorded source revision; this exact template subtree is unchanged at the final published source. Key counts are not linguistic, behavior or hosted acceptance.",
+        "unchangedSubtreeAtSourceCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1"
+      },
+      {
+        "key": "modern",
+        "originalApprovedNativeEvidenceValid": true,
+        "sourceCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f",
+        "result": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/preferences-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 26,
+              "contentDigest": "89d3278de72c828f268800cb538a436c2bfd8a7868b6e4c0044e989158d1a368"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/public-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 27,
+              "contentDigest": "5bffa6e066509d415a0730f5b7c39d7b6d13ff563c8f447cde59c95fc3d86a8a"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-rows",
+                "path": "packages/marketplace/content/inventory-copy.ts",
+                "export": "inventoryCopy"
+              },
+              "keys": 28,
+              "contentDigest": "7c9e8fd4f189c9f76c6eaafeb93d3c8c910bf149685a659feaa7b185e2893c07"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-locale-object",
+                "path": "packages/marketplace-ui/lib/marketplace-control-copy.ts",
+                "export": "copyByLanguage"
+              },
+              "keys": 118,
+              "contentDigest": "c0f9822da9bc3b6c01911e80b400d026d7f063581657196c12cece13820d0fc4"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        },
+        "scope": "Earlier declared source catalog parity retained at its recorded source revision; this exact template subtree is unchanged at the final published source. Key counts are not linguistic, behavior or hosted acceptance.",
+        "unchangedSubtreeAtSourceCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1"
+      },
+      {
+        "key": "import",
+        "originalApprovedNativeEvidenceValid": true,
+        "sourceCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f",
+        "result": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 15,
+              "contentDigest": "06dead7dfa79c57f0872d960d112141262b5a5ca4998d76523cc6351d101ab6f"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/i18n/native.ts",
+                "en": "nativeEn",
+                "bg": "nativeBg"
+              },
+              "keys": 254,
+              "contentDigest": "66b25993df9cb487bb1efc81a80a27af0edeab104f581aae0451c2c5bd1286b6"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/content/localized.ts",
+                "en": "contentEn",
+                "bg": "contentBg"
+              },
+              "keys": 158,
+              "contentDigest": "631c6d046ccb14d7b34934e4f6f5db535876af1a7cf76cd886533f09d18f1b61"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-rows",
+                "path": "src/lib/content/inventory-localized.ts",
+                "export": "inventoryCopy"
+              },
+              "keys": 119,
+              "contentDigest": "195a0cdb2850ed419adfbccb5e9900b7b5a5376f42c6e4ce9a57f30b1c6b748f"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-source-map",
+                "path": "src/lib/content/extra-localized.ts",
+                "export": "extraEnglish"
+              },
+              "keys": 90,
+              "contentDigest": "f1451cb59cc1247baa11419ecff9d8c46534b866fea8d14001ef9b70bd410f0d"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        },
+        "scope": "Earlier declared source catalog parity retained at its recorded source revision; this exact template subtree is unchanged at the final published source. Key counts are not linguistic, behavior or hosted acceptance.",
+        "unchangedSubtreeAtSourceCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1"
+      }
+    ],
+    "unchangedAppAndMobileTrees": true,
+    "presentation": {
+      "reference": "docs/releases/cloudflare-existing25-20261011/presentation-v2-check.json",
+      "sha256": "9a0e1d8eb7c428205182eee376578496b5fdbb86277d86397c87e481a8cf6b2c",
+      "checkedAt": "2026-10-11T09:14:43.502Z",
+      "passed": 7,
+      "failed": 0,
+      "scope": "Seven focused tests passed at initial published source96859; dated receipt retained unchanged. Presentation inputs checked by this receipt were outside the exact five-file followup. No claim that these tests were rerun on final253, and no hosted approval.",
+      "sourceCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    "originalTwentyFileSourceCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f",
+    "publishedFiveFileFollowupScopeAndHashes": true,
+    "uniqueCurrentPublishedSourceFiles": 23
+  },
+  "frozenMasterQa": {
+    "reference": "runtime/signature-diagnostic-20261011/source-handoff.json",
+    "sha256": "d68eeab5b064e43186dc59ace77c00e246ddc74b3e5b5eef93ddba69dad5fd0c",
+    "sourceBaseCommit": "3bc5a0ea33969f18ccc34d5e4b0e8cab1513e6a2",
+    "sourcePublicationSnapshot": {
+      "reference": "runtime/fleet-rollout-20261011/source-publication-template-fixes.json",
+      "sha256": "1c64cc9898b16efc481fd83b20432b71748653cf5fc0d3bc3344c8360ec84775",
+      "frozenAt": "2026-10-11T09:01:24.352Z"
+    },
+    "checksRetainedFromOwnerHandoff": {
+      "signatureFullCheck": "pass, 0 errors and warnings",
+      "signatureCompleteNativeTests": "pass at integration checkpoint before final mobile spacing adjustment",
+      "signatureFinalFocusedRegressions": {
+        "pass": 4,
+        "fail": 0
+      },
+      "signatureFinalProductionBuild": "pass",
+      "sharedSelectorTests": {
+        "pass": 29,
+        "fail": 0
+      },
+      "autoBestSvelteCheck": "pass, 0 errors and warnings",
+      "importSvelteCheck": "pass, 0 errors and warnings",
+      "modernLocaleTests": {
+        "pass": 3,
+        "fail": 0
+      },
+      "svelteAutofixer": "pass on changed components"
+    },
+    "evidenceStatus": "Historical check fields retained in an owner handoff whose metadata was later updated for a followup. These fields are recorded source QA, not current followup or new-source complete native acceptance.",
+    "currentReceiptStatus": "owner-requested-specification-followup-in-progress",
+    "currentFollowup": {
+      "reason": "Owner rejected inherited icon spacing and the full-width orphan specification badge",
+      "paths": [
+        "templates/karento-best/src/lib/components/vehicle-detail/VehicleSpecifications.svelte",
+        "templates/karento-best/tests/dealer-preview.test.ts",
+        "templates/karento-best/src/lib/i18n/catalogs/core.ts",
+        "scripts/lib/client-refresh-six.mjs",
+        "scripts/uk-signature-personalization.test.mjs"
+      ],
+      "checksPending": true,
+      "integrationNote": "Re-read this receipt before source integration; prior specification hash is superseded by the owner-requested followup"
+    },
+    "outOfScope": true,
+    "scopeAttribution": "Historical initial-source owner handoff snapshot. Its later followup metadata was pending at the first review; the final published followup has a separate sourcePublication and followupSourceQa record here."
+  },
+  "pending": {
+    "nativeChecks": [
+      "catalog-completeness",
+      "hardcoded-ui",
+      "native-routing",
+      "standalone-journeys",
+      "mounted-journeys",
+      "public-journeys",
+      "preferences-no-js",
+      "preferences-storage-disabled",
+      "preferences-races",
+      "request-isolation",
+      "security-write-blocking",
+      "assets-preserved"
+    ],
+    "mountedSixDesignBuild": true,
+    "hostedPilot": true,
+    "ownerVisualAcceptance": true
+  },
+  "excludedWork": {
+    "reason": "Unrelated dirty workspace files, later edits and dealer source changes are outside exact published253 and this qualification review.",
+    "followupPaths": [],
+    "adoptedFollowupPaths": [
+      "templates/karento-best/src/lib/components/vehicle-detail/VehicleSpecifications.svelte",
+      "templates/karento-best/tests/dealer-preview.test.ts",
+      "templates/karento-best/src/lib/i18n/catalogs/core.ts",
+      "scripts/lib/client-refresh-six.mjs",
+      "scripts/uk-signature-personalization.test.mjs"
+    ],
+    "worktreeSourceUsed": false
+  },
+  "operations": {
+    "registryChanged": false,
+    "globalLockChanged": false,
+    "gitIndexChanged": false,
+    "sourceBuilds": 0,
+    "deployments": 0
+  },
+  "baselineCommit": "3bc5a0ea33969f18ccc34d5e4b0e8cab1513e6a2",
+  "sourcePublications": [
+    {
+      "sourceCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f",
+      "parentCommit": "3bc5a0ea33969f18ccc34d5e4b0e8cab1513e6a2",
+      "reviewedAt": "2026-10-11T09:17:28.883Z",
+      "frozenAt": "2026-10-11T09:01:24.352Z",
+      "receipt": {
+        "reference": "runtime/fleet-rollout-20261011/source-publication-template-fixes.json",
+        "sha256": "1c64cc9898b16efc481fd83b20432b71748653cf5fc0d3bc3344c8360ec84775"
+      },
+      "sourceFiles": [
+        {
+          "path": "templates/karento-best/src/lib/components/Header.svelte",
+          "sha256": "f92d65f62a46808dfd82cb76232f4d43f3b2be511298626863b8e4444bd016a7",
+          "bytes": 29041,
+          "blob": "0a9f81052b464d022d068f9639768f56e73041ff",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/src/lib/components/MobileNavigation.svelte",
+          "sha256": "ccee8bab89b39dceac7f1cf953c4405d05d426f220e03e270b3f0f8db3b6ee32",
+          "bytes": 2862,
+          "blob": "a84d79e7cc1450d04a7f004ec10f9b8fbe6aad5d",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/src/lib/components/vehicle-detail/VehicleSpecifications.svelte",
+          "sha256": "6dfbff88c30118d5d44626a3666d5fcf16c2288d9b8398d641a9495cb41a40c5",
+          "bytes": 3205,
+          "blob": "3b6b038965e9d9ecc72d0656ed0b8094dda264fe",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/src/lib/components/editorial/MobileNewsCollection.svelte",
+          "sha256": "6b588625826b25ae2761e841b7187b9cc90ddb19a7bef40a3d588ddaf0678cb5",
+          "bytes": 6457,
+          "blob": "50e1744b2b46c4b02e1f6e7fbb4f255676777667",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/src/lib/pages/index-3.svelte",
+          "sha256": "a2e41c3583a0d158aaa507658db3dd76c2d8d5112e7323184d002fecdbf808ec",
+          "bytes": 3273,
+          "blob": "004a400002eed311f672f22d9fb8c41916cf2827",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/src/lib/sections/ServicesOverview.svelte",
+          "sha256": "230b20359c2e6a77ad43362dc83479aa0594642fd56ead58a687b3d0c3edbaff",
+          "bytes": 3425,
+          "blob": "f9c36e120266592e6acf00dc69cb7a818743229d",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/src/lib/sections/VehicleTypeShowcase.svelte",
+          "sha256": "0289480c461fcb3e9a007cd2cfa348fbd701e6227accb68fb884b1b98f44b393",
+          "bytes": 20970,
+          "blob": "b3061aa97a5f2da49c0d9dffb098282dd0947f29",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/src/lib/sections/UpcomingVehicleNews.svelte",
+          "sha256": "14afc1ace19b5b19bae131372834dc652186d4c53fc20b7b48c165c84ec6751f",
+          "bytes": 14448,
+          "blob": "3df01cf40518e3aaf7ee1e2e7e873e67df4816b0",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/src/routes/+layout.svelte",
+          "sha256": "d23f5f9867991ce59f7149fe4a080ed316a4f73da90f91316be825f41374adf5",
+          "bytes": 2632,
+          "blob": "b88793d0c5136df13ff87afce8b15a671af3a5e5",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/src/routes/2/DiscoveryNavigation.svelte",
+          "sha256": "9bd64d5619249da42f84961436b17fc54a2b8cb990d3d585f754f671614819c7",
+          "bytes": 2172,
+          "blob": "be2f3f0389dd4994385e13ae485371e948b1db1d",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/static/mobile.css",
+          "sha256": "6a8202f11dd8b84258db83c537a47304dcd39cdd6d9455a3e09c4a5a560ddb29",
+          "bytes": 49743,
+          "blob": "74aede64420bef70aa5983fc1085ec5d8fabbcfc",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/tests/dealer-preview.test.ts",
+          "sha256": "40b75c274c59c3e0d88b4c7a038c8c552f1089b49ec6ef19b6896be478c3d7bb",
+          "bytes": 2852,
+          "blob": "6878a90800e987ce07a6466166a824c2544e3454",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "scripts/publishing/preview-switcher.js",
+          "sha256": "093eff504d6460cd92dd684226c963736aca5376b1d1cdede16f71bbf458065a",
+          "bytes": 177531,
+          "blob": "7922502aead84fe50025b577f229f86446d51341",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "scripts/preview-switcher-release.test.mjs",
+          "sha256": "e80bbfadd46a28ff48a1b614c2c46839b070bcd25b9c8caad14d6d61c87c931a",
+          "bytes": 23938,
+          "blob": "a9dd0f3f3a72edb2319148d236c0a44455fb4439",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/auto-best/src/lib/locale/LocalePreferences.svelte",
+          "sha256": "045e557a15784473186bab45f989d0efe690cd27dd24ef2ec956d4a4e1dd7312",
+          "bytes": 12575,
+          "blob": "2a78f46bdc57eb5cddd109a8aa71d5d86d7bf892",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/import/src/lib/locale/LocalePreferences.svelte",
+          "sha256": "f47ee3df17cbf74544bc2922c09649d30bd61aad1659427eca81f742c125dce2",
+          "bytes": 10105,
+          "blob": "06eac352485ee87bb733ae9e557c14e57986b328",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/modern/packages/marketplace-ui/components/locale-preferences.tsx",
+          "sha256": "156a86190d4498dc205a430a7854982ee869c4b26245266d429a90dd9cbcb3b7",
+          "bytes": 15593,
+          "blob": "97ddb9fd376edd608343cb1462bd91a7071159d2",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/modern/packages/marketplace-ui/components/locale-preferences.test.tsx",
+          "sha256": "ad15821b2fa206e8790886c3b877ee13ab7843fdd5aabcb13ca9a8dd15717201",
+          "bytes": 2551,
+          "blob": "ae2aabb63975f57b31da1e76daf78646b701680d",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "scripts/publishing/dealer-presentation.mjs",
+          "sha256": "2de162632a62ebcc06cb25a574cba0da76d3ce6cd48297bd360f9abc3c726d7e",
+          "bytes": 6928,
+          "blob": "558652876d7667c5aad7faa3cb2762df0f1f6c12",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "scripts/dealer-presentation.test.mjs",
+          "sha256": "37ad863161cb157feeb3e03180b9cb5e4f4f7d4816b5abf98a24021c1a1181e2",
+          "bytes": 2890,
+          "blob": "0ca83f4583110a9ff14940c241a96738f24ae710",
+          "matchesFrozenSource": true
+        }
+      ],
+      "ownerHandoffSnapshot": {
+        "reference": "runtime/signature-diagnostic-20261011/source-handoff.json",
+        "sha256": "d68eeab5b064e43186dc59ace77c00e246ddc74b3e5b5eef93ddba69dad5fd0c",
+        "sourceBaseCommit": "3bc5a0ea33969f18ccc34d5e4b0e8cab1513e6a2",
+        "sourcePublicationSnapshot": {
+          "reference": "runtime/fleet-rollout-20261011/source-publication-template-fixes.json",
+          "sha256": "1c64cc9898b16efc481fd83b20432b71748653cf5fc0d3bc3344c8360ec84775",
+          "frozenAt": "2026-10-11T09:01:24.352Z"
+        },
+        "checksRetainedFromOwnerHandoff": {
+          "signatureFullCheck": "pass, 0 errors and warnings",
+          "signatureCompleteNativeTests": "pass at integration checkpoint before final mobile spacing adjustment",
+          "signatureFinalFocusedRegressions": {
+            "pass": 4,
+            "fail": 0
+          },
+          "signatureFinalProductionBuild": "pass",
+          "sharedSelectorTests": {
+            "pass": 29,
+            "fail": 0
+          },
+          "autoBestSvelteCheck": "pass, 0 errors and warnings",
+          "importSvelteCheck": "pass, 0 errors and warnings",
+          "modernLocaleTests": {
+            "pass": 3,
+            "fail": 0
+          },
+          "svelteAutofixer": "pass on changed components"
+        },
+        "evidenceStatus": "Historical check fields retained in an owner handoff whose metadata was later updated for a followup. These fields are recorded source QA, not current followup or new-source complete native acceptance.",
+        "currentReceiptStatus": "owner-requested-specification-followup-in-progress",
+        "currentFollowup": {
+          "reason": "Owner rejected inherited icon spacing and the full-width orphan specification badge",
+          "paths": [
+            "templates/karento-best/src/lib/components/vehicle-detail/VehicleSpecifications.svelte",
+            "templates/karento-best/tests/dealer-preview.test.ts",
+            "templates/karento-best/src/lib/i18n/catalogs/core.ts",
+            "scripts/lib/client-refresh-six.mjs",
+            "scripts/uk-signature-personalization.test.mjs"
+          ],
+          "checksPending": true,
+          "integrationNote": "Re-read this receipt before source integration; prior specification hash is superseded by the owner-requested followup"
+        },
+        "outOfScope": true
+      },
+      "scope": "Original twenty-file publication and dated original source QA; retained without attributing full acceptance to either new revision."
+    },
+    {
+      "sourceCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
+      "parentCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f",
+      "tree": "51c44509ddb5bc5832f50fd0a9e7d2738b0b3915",
+      "receipt": {
+        "reference": "runtime/fleet-rollout-20261011/source-publication-specification-followup.json",
+        "sha256": "cd113aeefb92268ac9eac30d078802fbea3a64a04e8eca87df52aa687521e74c"
+      },
+      "sourceFiles": [
+        {
+          "path": "templates/karento-best/src/lib/components/vehicle-detail/VehicleSpecifications.svelte",
+          "previousFrozenSha256": "6dfbff88c30118d5d44626a3666d5fcf16c2288d9b8398d641a9495cb41a40c5",
+          "sha256": "a28f804cbb1f1dc65b88a9c8a260f71349a61aade654173914dd4bde52561e0d",
+          "bytes": 3577,
+          "blob": "c2d478cf303e4a6d22e3b9cef725c99c1d8b565c",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/tests/dealer-preview.test.ts",
+          "previousFrozenSha256": "40b75c274c59c3e0d88b4c7a038c8c552f1089b49ec6ef19b6896be478c3d7bb",
+          "sha256": "1e3d4e57eab8e078f9dbf45a5deeb7d197412da53d9f9624ccabbfee738c8e6f",
+          "bytes": 3278,
+          "blob": "9a02aa45da5dd079fe8cd5410f011210b0bc18c2",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/src/lib/i18n/catalogs/core.ts",
+          "sha256": "77c9c4a85856b6d2fde841b27ed8bf58c8a241f6f95afa10be9fe03782a25d83",
+          "bytes": 25301,
+          "blob": "e3be3436ec9f5ce4452852a91ee7b0370bb413dc",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "scripts/lib/client-refresh-six.mjs",
+          "sha256": "caf84785bd399defafea578da31c21cdf2372f80b7bba6b832cc383f30805051",
+          "bytes": 49909,
+          "blob": "69c29c48170aec5c5c39d50a9870d246ff1ec9ca",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "scripts/uk-signature-personalization.test.mjs",
+          "sha256": "e6607e01193bf3397f8c020ebddba0cc39dcf2b4b6aea94829a6e71e50c2d404",
+          "bytes": 14849,
+          "blob": "3e509507586c8a014440768d0717a4a1d2f8af39",
+          "matchesFrozenSource": true
+        }
+      ],
+      "checks": {
+        "signatureFocusedPreviewTests": {
+          "pass": 4,
+          "fail": 0
+        },
+        "ukSignaturePersonalizationTests": {
+          "pass": 6,
+          "fail": 0
+        },
+        "existingSignatureRefreshRegressionTests": {
+          "pass": 11,
+          "fail": 0
+        },
+        "scopedPrettier": "pass on component, core catalog and preview tests",
+        "svelteAutofixer": "pass with no issues or suggestions",
+        "canonicalProductionBuild": "pass from canonical L:/CODEX/cars path; J: junction manifest-path attempt failed before corrected canonical run",
+        "retainedPersonalizedFixtureBuild": "pass"
+      },
+      "publicationMethod": "Authenticated GitHub API scoped tree and expected-parent ref lease",
+      "scope": "Exact five-file followup published by the coordinator after the upstream handoff; reported focused source checks reused, with no hosted or native release acceptance."
+    }
+  ],
+  "sourcePublicationAccounting": {
+    "publicationEvents": 25,
+    "uniqueCurrentFiles": 23,
+    "supersededPaths": [
+      {
+        "path": "templates/karento-best/src/lib/components/vehicle-detail/VehicleSpecifications.svelte",
+        "previousSourceCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f",
+        "previousSha256": "6dfbff88c30118d5d44626a3666d5fcf16c2288d9b8398d641a9495cb41a40c5",
+        "currentSourceCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
+        "currentSha256": "a28f804cbb1f1dc65b88a9c8a260f71349a61aade654173914dd4bde52561e0d"
+      },
+      {
+        "path": "templates/karento-best/tests/dealer-preview.test.ts",
+        "previousSourceCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f",
+        "previousSha256": "40b75c274c59c3e0d88b4c7a038c8c552f1089b49ec6ef19b6896be478c3d7bb",
+        "currentSourceCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
+        "currentSha256": "1e3d4e57eab8e078f9dbf45a5deeb7d197412da53d9f9624ccabbfee738c8e6f"
+      }
+    ],
+    "templateFiles": 17,
+    "maintainedPublisherSupportFiles": 6
+  },
+  "immutableSourceVerification": {
+    "method": "Bounded GitHub API exact commit/parent/root/template metadata, exact five published file bytes, and in-memory previous immutable Signature subtree plus three verified replacements. Git lazy fetching disabled for local previous-object reads.",
+    "verifiedAt": "2026-10-11T09:37:25.155Z",
+    "repositoryRootTree": "51c44509ddb5bc5832f50fd0a9e7d2738b0b3915",
+    "templatesTree": "29c5ba4fdf0ad5b1a44f214a8bb4b716ec151bcb",
+    "publishedCommitMetadata": {
+      "reference": "https://api.github.com/repos/darkapoparka/cars/commits/2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
+      "exactChangedPaths": [
+        "templates/karento-best/src/lib/components/vehicle-detail/VehicleSpecifications.svelte",
+        "templates/karento-best/tests/dealer-preview.test.ts",
+        "templates/karento-best/src/lib/i18n/catalogs/core.ts",
+        "scripts/lib/client-refresh-six.mjs",
+        "scripts/uk-signature-personalization.test.mjs"
+      ],
+      "allStatuses": "modified",
+      "exactParent": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    "signature": {
+      "previousSourceCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f",
+      "previousTree": "577c1b958ced87d6b2cedfc6e66a696d2ea1af0b",
+      "previousDigest": "ea3e08542103d25de32a12ab83c8adff1e6eeefb14fc851f34ac14baab9e535f",
+      "previousNormalizedFingerprintVerified": true,
+      "tree": "d95a86112165b229026b8fc732084548d3e42299",
+      "digest": "da247d4d1c9fa45fec8d3748e087375ace062790f861c8ecebcb20620a39125f",
+      "files": 1117,
+      "unchangedRetainedBlobIdentities": 1114,
+      "verifiedReplacedTemplateBlobs": 3
+    },
+    "otherFiveTemplateTreesUnchanged": true,
+    "unmodifiedInitialSourcePathsPreservedByExactFivePathCommit": true
+  },
+  "followupSourceQa": {
+    "reference": "runtime/signature-diagnostic-20261011/specification-followup-handoff.json",
+    "sha256": "d2f2cdfd6385a59676f6fa9a173c7c877ca4f67294cdd3cc6415dd3321987a81",
+    "recordedOwnerStatus": "focused-verified-working-tree-not-integrated",
+    "recordedWorkingTreeBaseCommit": "3bc5a0ea33969f18ccc34d5e4b0e8cab1513e6a2",
+    "reportedChecks": {
+      "signatureFocusedPreviewTests": {
+        "pass": 4,
+        "fail": 0
+      },
+      "ukSignaturePersonalizationTests": {
+        "pass": 6,
+        "fail": 0
+      },
+      "existingSignatureRefreshRegressionTests": {
+        "pass": 11,
+        "fail": 0
+      },
+      "scopedPrettier": "pass on component, core catalog and preview tests",
+      "svelteAutofixer": "pass with no issues or suggestions",
+      "canonicalProductionBuild": "pass from canonical L:/CODEX/cars path; J: junction manifest-path attempt failed before corrected canonical run",
+      "retainedPersonalizedFixtureBuild": "pass"
+    },
+    "reportedChecksSourceSha256": "cd113aeefb92268ac9eac30d078802fbea3a64a04e8eca87df52aa687521e74c",
+    "personalizedVisual": {
+      "dealer": "stockport-broadbent-car-and-servicing",
+      "listing": "860026533399",
+      "locale": "bg",
+      "viewport320": {
+        "height": 782,
+        "captureWidth": 305,
+        "dpr": 1,
+        "scale": 1,
+        "badgeWidths": [
+          122.5,
+          122.5,
+          122.5,
+          122.5
+        ],
+        "lineCounts": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "mileageIconTextGapPx": 6,
+        "twoRowsOfTwo": true,
+        "horizontalOverflow": false
+      },
+      "viewport390": {
+        "height": 782,
+        "badgeWidths": [
+          157.5,
+          157.5,
+          157.5,
+          157.5
+        ],
+        "lineCounts": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "twoRowsOfTwo": true,
+        "horizontalOverflow": false
+      },
+      "publishingApproved": false,
+      "hostedAfterVerified": false,
+      "fixtureYearSource": "Existing stock.json supplies year 2020. Regression test checks generated adapter output. Only this retained fixture's selected detail was refreshed for the bounded visual check."
+    },
+    "retainedEvidence": {
+      "matchedBefore": "runtime/signature-diagnostic-20261011/mileage-320-bg-after.png",
+      "matchedAfter": "runtime/signature-diagnostic-20261011/mileage-320-bg-compact.png",
+      "metrics": "runtime/signature-diagnostic-20261011/specification-compact-visual.json"
+    },
+    "changes": [
+      "Mobile specifications use two non-growing columns with content minimums and unwrapped values",
+      "20px icon slots replace inherited 24px slots and 5px margins; mileage icon-to-value gap is 6px",
+      "Shared dealer adapter adds a calendar/year badge only for a matching supplied integer year between 1900 and 2100",
+      "Missing, invalid and normalizer-fallback years remain omitted; no seat or power facts are invented"
+    ],
+    "coordinatorPublication": {
+      "sourceCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
+      "parentCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f",
+      "receipt": {
+        "reference": "runtime/fleet-rollout-20261011/source-publication-specification-followup.json",
+        "sha256": "cd113aeefb92268ac9eac30d078802fbea3a64a04e8eca87df52aa687521e74c"
+      }
+    },
+    "scope": "Owner-reported focused source and one retained personalized fixture checks, reused after exact byte verification. Owner handoff phase fields remain historical. No claim of all-dealer, full native or current hosted acceptance."
+  }
+}

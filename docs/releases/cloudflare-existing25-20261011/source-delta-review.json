@@ -1,0 +1,529 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-source-delta-review",
+  "sourceCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
+  "parentCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T09:37:25.155Z",
+  "qualificationOnly": true,
+  "approved": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "scope": "Exact initial20 plus published followup5:23 unique current source paths. Complete native/public acceptance remains pending.",
+  "sourceReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/source-review.json",
+    "sha256": "fb5f7b4140a7c486e806d42e3cb4bd3a167feb2ebc25dfce66133e7291ead523"
+  },
+  "sourceFiles": [
+    {
+      "path": "templates/karento-best/src/lib/components/Header.svelte",
+      "sha256": "f92d65f62a46808dfd82cb76232f4d43f3b2be511298626863b8e4444bd016a7",
+      "bytes": 29041,
+      "blob": "0a9f81052b464d022d068f9639768f56e73041ff",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/MobileNavigation.svelte",
+      "sha256": "ccee8bab89b39dceac7f1cf953c4405d05d426f220e03e270b3f0f8db3b6ee32",
+      "bytes": 2862,
+      "blob": "a84d79e7cc1450d04a7f004ec10f9b8fbe6aad5d",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/vehicle-detail/VehicleSpecifications.svelte",
+      "previousFrozenSha256": "6dfbff88c30118d5d44626a3666d5fcf16c2288d9b8398d641a9495cb41a40c5",
+      "sha256": "a28f804cbb1f1dc65b88a9c8a260f71349a61aade654173914dd4bde52561e0d",
+      "bytes": 3577,
+      "blob": "c2d478cf303e4a6d22e3b9cef725c99c1d8b565c",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1"
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/editorial/MobileNewsCollection.svelte",
+      "sha256": "6b588625826b25ae2761e841b7187b9cc90ddb19a7bef40a3d588ddaf0678cb5",
+      "bytes": 6457,
+      "blob": "50e1744b2b46c4b02e1f6e7fbb4f255676777667",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/karento-best/src/lib/pages/index-3.svelte",
+      "sha256": "a2e41c3583a0d158aaa507658db3dd76c2d8d5112e7323184d002fecdbf808ec",
+      "bytes": 3273,
+      "blob": "004a400002eed311f672f22d9fb8c41916cf2827",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/karento-best/src/lib/sections/ServicesOverview.svelte",
+      "sha256": "230b20359c2e6a77ad43362dc83479aa0594642fd56ead58a687b3d0c3edbaff",
+      "bytes": 3425,
+      "blob": "f9c36e120266592e6acf00dc69cb7a818743229d",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/karento-best/src/lib/sections/VehicleTypeShowcase.svelte",
+      "sha256": "0289480c461fcb3e9a007cd2cfa348fbd701e6227accb68fb884b1b98f44b393",
+      "bytes": 20970,
+      "blob": "b3061aa97a5f2da49c0d9dffb098282dd0947f29",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/karento-best/src/lib/sections/UpcomingVehicleNews.svelte",
+      "sha256": "14afc1ace19b5b19bae131372834dc652186d4c53fc20b7b48c165c84ec6751f",
+      "bytes": 14448,
+      "blob": "3df01cf40518e3aaf7ee1e2e7e873e67df4816b0",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/karento-best/src/routes/+layout.svelte",
+      "sha256": "d23f5f9867991ce59f7149fe4a080ed316a4f73da90f91316be825f41374adf5",
+      "bytes": 2632,
+      "blob": "b88793d0c5136df13ff87afce8b15a671af3a5e5",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/karento-best/src/routes/2/DiscoveryNavigation.svelte",
+      "sha256": "9bd64d5619249da42f84961436b17fc54a2b8cb990d3d585f754f671614819c7",
+      "bytes": 2172,
+      "blob": "be2f3f0389dd4994385e13ae485371e948b1db1d",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/karento-best/static/mobile.css",
+      "sha256": "6a8202f11dd8b84258db83c537a47304dcd39cdd6d9455a3e09c4a5a560ddb29",
+      "bytes": 49743,
+      "blob": "74aede64420bef70aa5983fc1085ec5d8fabbcfc",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/karento-best/tests/dealer-preview.test.ts",
+      "previousFrozenSha256": "40b75c274c59c3e0d88b4c7a038c8c552f1089b49ec6ef19b6896be478c3d7bb",
+      "sha256": "1e3d4e57eab8e078f9dbf45a5deeb7d197412da53d9f9624ccabbfee738c8e6f",
+      "bytes": 3278,
+      "blob": "9a02aa45da5dd079fe8cd5410f011210b0bc18c2",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1"
+    },
+    {
+      "path": "scripts/publishing/preview-switcher.js",
+      "sha256": "093eff504d6460cd92dd684226c963736aca5376b1d1cdede16f71bbf458065a",
+      "bytes": 177531,
+      "blob": "7922502aead84fe50025b577f229f86446d51341",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "scripts/preview-switcher-release.test.mjs",
+      "sha256": "e80bbfadd46a28ff48a1b614c2c46839b070bcd25b9c8caad14d6d61c87c931a",
+      "bytes": 23938,
+      "blob": "a9dd0f3f3a72edb2319148d236c0a44455fb4439",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/auto-best/src/lib/locale/LocalePreferences.svelte",
+      "sha256": "045e557a15784473186bab45f989d0efe690cd27dd24ef2ec956d4a4e1dd7312",
+      "bytes": 12575,
+      "blob": "2a78f46bdc57eb5cddd109a8aa71d5d86d7bf892",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/import/src/lib/locale/LocalePreferences.svelte",
+      "sha256": "f47ee3df17cbf74544bc2922c09649d30bd61aad1659427eca81f742c125dce2",
+      "bytes": 10105,
+      "blob": "06eac352485ee87bb733ae9e557c14e57986b328",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/locale-preferences.tsx",
+      "sha256": "156a86190d4498dc205a430a7854982ee869c4b26245266d429a90dd9cbcb3b7",
+      "bytes": 15593,
+      "blob": "97ddb9fd376edd608343cb1462bd91a7071159d2",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/locale-preferences.test.tsx",
+      "sha256": "ad15821b2fa206e8790886c3b877ee13ab7843fdd5aabcb13ca9a8dd15717201",
+      "bytes": 2551,
+      "blob": "ae2aabb63975f57b31da1e76daf78646b701680d",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "scripts/publishing/dealer-presentation.mjs",
+      "sha256": "2de162632a62ebcc06cb25a574cba0da76d3ce6cd48297bd360f9abc3c726d7e",
+      "bytes": 6928,
+      "blob": "558652876d7667c5aad7faa3cb2762df0f1f6c12",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "scripts/dealer-presentation.test.mjs",
+      "sha256": "37ad863161cb157feeb3e03180b9cb5e4f4f7d4816b5abf98a24021c1a1181e2",
+      "bytes": 2890,
+      "blob": "0ca83f4583110a9ff14940c241a96738f24ae710",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f"
+    },
+    {
+      "path": "templates/karento-best/src/lib/i18n/catalogs/core.ts",
+      "sha256": "77c9c4a85856b6d2fde841b27ed8bf58c8a241f6f95afa10be9fe03782a25d83",
+      "bytes": 25301,
+      "blob": "e3be3436ec9f5ce4452852a91ee7b0370bb413dc",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1"
+    },
+    {
+      "path": "scripts/lib/client-refresh-six.mjs",
+      "sha256": "caf84785bd399defafea578da31c21cdf2372f80b7bba6b832cc383f30805051",
+      "bytes": 49909,
+      "blob": "69c29c48170aec5c5c39d50a9870d246ff1ec9ca",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1"
+    },
+    {
+      "path": "scripts/uk-signature-personalization.test.mjs",
+      "sha256": "e6607e01193bf3397f8c020ebddba0cc39dcf2b4b6aea94829a6e71e50c2d404",
+      "bytes": 14849,
+      "blob": "3e509507586c8a014440768d0717a4a1d2f8af39",
+      "matchesFrozenSource": true,
+      "sourcePublicationCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1"
+    }
+  ],
+  "checks": [
+    {
+      "name": "published-initial-twenty-and-followup-five-file-scope-and-byte-hashes",
+      "status": "passed",
+      "evidenceSha256": "fb5f7b4140a7c486e806d42e3cb4bd3a167feb2ebc25dfce66133e7291ead523",
+      "reference": "docs/releases/cloudflare-existing25-20261011/source-review.json",
+      "scope": "Bounded provenance/source check; original approvals remain revision-specific."
+    },
+    {
+      "name": "exact-four-final-template-subtree-identities",
+      "status": "passed",
+      "evidenceSha256": "fb5f7b4140a7c486e806d42e3cb4bd3a167feb2ebc25dfce66133e7291ead523",
+      "reference": "docs/releases/cloudflare-existing25-20261011/source-review.json",
+      "scope": "Bounded provenance/source check; original approvals remain revision-specific."
+    },
+    {
+      "name": "original-approved-native-baselines-and-retained-parity-of-three-unchanged-template-catalogs",
+      "status": "passed",
+      "evidenceSha256": "fb5f7b4140a7c486e806d42e3cb4bd3a167feb2ebc25dfce66133e7291ead523",
+      "reference": "docs/releases/cloudflare-existing25-20261011/source-review.json",
+      "scope": "Bounded provenance/source check; original approvals remain revision-specific."
+    },
+    {
+      "name": "unchanged-App-and-Mobile-source-content",
+      "status": "passed",
+      "evidenceSha256": "fb5f7b4140a7c486e806d42e3cb4bd3a167feb2ebc25dfce66133e7291ead523",
+      "reference": "docs/releases/cloudflare-existing25-20261011/source-review.json",
+      "scope": "Bounded provenance/source check; original approvals remain revision-specific."
+    },
+    {
+      "name": "followup-Signature-focused-preview-four-tests",
+      "status": "passed",
+      "evidenceSha256": "fb5f7b4140a7c486e806d42e3cb4bd3a167feb2ebc25dfce66133e7291ead523",
+      "reference": "docs/releases/cloudflare-existing25-20261011/source-review.json",
+      "scope": "Frozen owner-reported focused source/fixture checks, reused after exact publication byte verification; no full native or hosted acceptance."
+    },
+    {
+      "name": "followup-UK-Signature-personalization-six-tests",
+      "status": "passed",
+      "evidenceSha256": "fb5f7b4140a7c486e806d42e3cb4bd3a167feb2ebc25dfce66133e7291ead523",
+      "reference": "docs/releases/cloudflare-existing25-20261011/source-review.json",
+      "scope": "Frozen owner-reported focused source/fixture checks, reused after exact publication byte verification; no full native or hosted acceptance."
+    },
+    {
+      "name": "followup-existing-Signature-refresh-eleven-regressions",
+      "status": "passed",
+      "evidenceSha256": "fb5f7b4140a7c486e806d42e3cb4bd3a167feb2ebc25dfce66133e7291ead523",
+      "reference": "docs/releases/cloudflare-existing25-20261011/source-review.json",
+      "scope": "Frozen owner-reported focused source/fixture checks, reused after exact publication byte verification; no full native or hosted acceptance."
+    },
+    {
+      "name": "followup-scoped-format-and-Svelte-autofixer",
+      "status": "passed",
+      "evidenceSha256": "fb5f7b4140a7c486e806d42e3cb4bd3a167feb2ebc25dfce66133e7291ead523",
+      "reference": "docs/releases/cloudflare-existing25-20261011/source-review.json",
+      "scope": "Frozen owner-reported focused source/fixture checks, reused after exact publication byte verification; no full native or hosted acceptance."
+    },
+    {
+      "name": "followup-canonical-and-retained-personalized-fixture-builds",
+      "status": "passed",
+      "evidenceSha256": "fb5f7b4140a7c486e806d42e3cb4bd3a167feb2ebc25dfce66133e7291ead523",
+      "reference": "docs/releases/cloudflare-existing25-20261011/source-review.json",
+      "scope": "Frozen owner-reported focused source/fixture checks, reused after exact publication byte verification; no full native or hosted acceptance."
+    },
+    {
+      "name": "followup-retained-personalized-320-and-390-specification-geometry",
+      "status": "passed",
+      "evidenceSha256": "fb5f7b4140a7c486e806d42e3cb4bd3a167feb2ebc25dfce66133e7291ead523",
+      "reference": "docs/releases/cloudflare-existing25-20261011/source-review.json",
+      "scope": "Frozen owner-reported focused source/fixture checks, reused after exact publication byte verification; no full native or hosted acceptance."
+    },
+    {
+      "name": "initial-source-presentation-seven-focused-tests",
+      "status": "passed",
+      "sourceCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f",
+      "evidenceSha256": "9a0e1d8eb7c428205182eee376578496b5fdbb86277d86397c87e481a8cf6b2c",
+      "reference": "docs/releases/cloudflare-existing25-20261011/presentation-v2-check.json",
+      "scope": "Dated initial-source receipt retained unchanged; no rerun on final source claimed."
+    }
+  ],
+  "pendingNativeChecks": [
+    "catalog-completeness",
+    "hardcoded-ui",
+    "native-routing",
+    "standalone-journeys",
+    "mounted-journeys",
+    "public-journeys",
+    "preferences-no-js",
+    "preferences-storage-disabled",
+    "preferences-races",
+    "request-isolation",
+    "security-write-blocking",
+    "assets-preserved"
+  ],
+  "limitations": [
+    "Source-delta review, catalog parity and focused tests do not constitute linguistic or complete native behavior acceptance.",
+    "Original accepted baseline deployment IDs and dates remain attributed to their original revisions.",
+    "Final published five-file followup is included; unrelated or later worktree changes remain excluded.",
+    "Presentation seven-test receipt was produced on source96859 and has not been relabeled as a final253 rerun.",
+    "Reported fixture visual checks cover one Stockport listing in Bulgarian at320 and390 only; hosted and owner pilot acceptance remain pending."
+  ],
+  "baselineCommit": "3bc5a0ea33969f18ccc34d5e4b0e8cab1513e6a2",
+  "sourcePublicationAccounting": {
+    "publicationEvents": 25,
+    "uniqueCurrentFiles": 23,
+    "supersededPaths": [
+      {
+        "path": "templates/karento-best/src/lib/components/vehicle-detail/VehicleSpecifications.svelte",
+        "previousSourceCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f",
+        "previousSha256": "6dfbff88c30118d5d44626a3666d5fcf16c2288d9b8398d641a9495cb41a40c5",
+        "currentSourceCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
+        "currentSha256": "a28f804cbb1f1dc65b88a9c8a260f71349a61aade654173914dd4bde52561e0d"
+      },
+      {
+        "path": "templates/karento-best/tests/dealer-preview.test.ts",
+        "previousSourceCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f",
+        "previousSha256": "40b75c274c59c3e0d88b4c7a038c8c552f1089b49ec6ef19b6896be478c3d7bb",
+        "currentSourceCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
+        "currentSha256": "1e3d4e57eab8e078f9dbf45a5deeb7d197412da53d9f9624ccabbfee738c8e6f"
+      }
+    ],
+    "templateFiles": 17,
+    "maintainedPublisherSupportFiles": 6
+  },
+  "sourcePublications": [
+    {
+      "sourceCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f",
+      "parentCommit": "3bc5a0ea33969f18ccc34d5e4b0e8cab1513e6a2",
+      "receipt": {
+        "reference": "runtime/fleet-rollout-20261011/source-publication-template-fixes.json",
+        "sha256": "1c64cc9898b16efc481fd83b20432b71748653cf5fc0d3bc3344c8360ec84775"
+      },
+      "sourceFiles": [
+        {
+          "path": "templates/karento-best/src/lib/components/Header.svelte",
+          "sha256": "f92d65f62a46808dfd82cb76232f4d43f3b2be511298626863b8e4444bd016a7",
+          "bytes": 29041,
+          "blob": "0a9f81052b464d022d068f9639768f56e73041ff",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/src/lib/components/MobileNavigation.svelte",
+          "sha256": "ccee8bab89b39dceac7f1cf953c4405d05d426f220e03e270b3f0f8db3b6ee32",
+          "bytes": 2862,
+          "blob": "a84d79e7cc1450d04a7f004ec10f9b8fbe6aad5d",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/src/lib/components/vehicle-detail/VehicleSpecifications.svelte",
+          "sha256": "6dfbff88c30118d5d44626a3666d5fcf16c2288d9b8398d641a9495cb41a40c5",
+          "bytes": 3205,
+          "blob": "3b6b038965e9d9ecc72d0656ed0b8094dda264fe",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/src/lib/components/editorial/MobileNewsCollection.svelte",
+          "sha256": "6b588625826b25ae2761e841b7187b9cc90ddb19a7bef40a3d588ddaf0678cb5",
+          "bytes": 6457,
+          "blob": "50e1744b2b46c4b02e1f6e7fbb4f255676777667",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/src/lib/pages/index-3.svelte",
+          "sha256": "a2e41c3583a0d158aaa507658db3dd76c2d8d5112e7323184d002fecdbf808ec",
+          "bytes": 3273,
+          "blob": "004a400002eed311f672f22d9fb8c41916cf2827",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/src/lib/sections/ServicesOverview.svelte",
+          "sha256": "230b20359c2e6a77ad43362dc83479aa0594642fd56ead58a687b3d0c3edbaff",
+          "bytes": 3425,
+          "blob": "f9c36e120266592e6acf00dc69cb7a818743229d",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/src/lib/sections/VehicleTypeShowcase.svelte",
+          "sha256": "0289480c461fcb3e9a007cd2cfa348fbd701e6227accb68fb884b1b98f44b393",
+          "bytes": 20970,
+          "blob": "b3061aa97a5f2da49c0d9dffb098282dd0947f29",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/src/lib/sections/UpcomingVehicleNews.svelte",
+          "sha256": "14afc1ace19b5b19bae131372834dc652186d4c53fc20b7b48c165c84ec6751f",
+          "bytes": 14448,
+          "blob": "3df01cf40518e3aaf7ee1e2e7e873e67df4816b0",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/src/routes/+layout.svelte",
+          "sha256": "d23f5f9867991ce59f7149fe4a080ed316a4f73da90f91316be825f41374adf5",
+          "bytes": 2632,
+          "blob": "b88793d0c5136df13ff87afce8b15a671af3a5e5",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/src/routes/2/DiscoveryNavigation.svelte",
+          "sha256": "9bd64d5619249da42f84961436b17fc54a2b8cb990d3d585f754f671614819c7",
+          "bytes": 2172,
+          "blob": "be2f3f0389dd4994385e13ae485371e948b1db1d",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/static/mobile.css",
+          "sha256": "6a8202f11dd8b84258db83c537a47304dcd39cdd6d9455a3e09c4a5a560ddb29",
+          "bytes": 49743,
+          "blob": "74aede64420bef70aa5983fc1085ec5d8fabbcfc",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/tests/dealer-preview.test.ts",
+          "sha256": "40b75c274c59c3e0d88b4c7a038c8c552f1089b49ec6ef19b6896be478c3d7bb",
+          "bytes": 2852,
+          "blob": "6878a90800e987ce07a6466166a824c2544e3454",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "scripts/publishing/preview-switcher.js",
+          "sha256": "093eff504d6460cd92dd684226c963736aca5376b1d1cdede16f71bbf458065a",
+          "bytes": 177531,
+          "blob": "7922502aead84fe50025b577f229f86446d51341",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "scripts/preview-switcher-release.test.mjs",
+          "sha256": "e80bbfadd46a28ff48a1b614c2c46839b070bcd25b9c8caad14d6d61c87c931a",
+          "bytes": 23938,
+          "blob": "a9dd0f3f3a72edb2319148d236c0a44455fb4439",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/auto-best/src/lib/locale/LocalePreferences.svelte",
+          "sha256": "045e557a15784473186bab45f989d0efe690cd27dd24ef2ec956d4a4e1dd7312",
+          "bytes": 12575,
+          "blob": "2a78f46bdc57eb5cddd109a8aa71d5d86d7bf892",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/import/src/lib/locale/LocalePreferences.svelte",
+          "sha256": "f47ee3df17cbf74544bc2922c09649d30bd61aad1659427eca81f742c125dce2",
+          "bytes": 10105,
+          "blob": "06eac352485ee87bb733ae9e557c14e57986b328",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/modern/packages/marketplace-ui/components/locale-preferences.tsx",
+          "sha256": "156a86190d4498dc205a430a7854982ee869c4b26245266d429a90dd9cbcb3b7",
+          "bytes": 15593,
+          "blob": "97ddb9fd376edd608343cb1462bd91a7071159d2",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/modern/packages/marketplace-ui/components/locale-preferences.test.tsx",
+          "sha256": "ad15821b2fa206e8790886c3b877ee13ab7843fdd5aabcb13ca9a8dd15717201",
+          "bytes": 2551,
+          "blob": "ae2aabb63975f57b31da1e76daf78646b701680d",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "scripts/publishing/dealer-presentation.mjs",
+          "sha256": "2de162632a62ebcc06cb25a574cba0da76d3ce6cd48297bd360f9abc3c726d7e",
+          "bytes": 6928,
+          "blob": "558652876d7667c5aad7faa3cb2762df0f1f6c12",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "scripts/dealer-presentation.test.mjs",
+          "sha256": "37ad863161cb157feeb3e03180b9cb5e4f4f7d4816b5abf98a24021c1a1181e2",
+          "bytes": 2890,
+          "blob": "0ca83f4583110a9ff14940c241a96738f24ae710",
+          "matchesFrozenSource": true
+        }
+      ]
+    },
+    {
+      "sourceCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
+      "parentCommit": "96859d08ca7e63fb135524319ab06f1d6a1c5d5f",
+      "receipt": {
+        "reference": "runtime/fleet-rollout-20261011/source-publication-specification-followup.json",
+        "sha256": "cd113aeefb92268ac9eac30d078802fbea3a64a04e8eca87df52aa687521e74c"
+      },
+      "sourceFiles": [
+        {
+          "path": "templates/karento-best/src/lib/components/vehicle-detail/VehicleSpecifications.svelte",
+          "previousFrozenSha256": "6dfbff88c30118d5d44626a3666d5fcf16c2288d9b8398d641a9495cb41a40c5",
+          "sha256": "a28f804cbb1f1dc65b88a9c8a260f71349a61aade654173914dd4bde52561e0d",
+          "bytes": 3577,
+          "blob": "c2d478cf303e4a6d22e3b9cef725c99c1d8b565c",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/tests/dealer-preview.test.ts",
+          "previousFrozenSha256": "40b75c274c59c3e0d88b4c7a038c8c552f1089b49ec6ef19b6896be478c3d7bb",
+          "sha256": "1e3d4e57eab8e078f9dbf45a5deeb7d197412da53d9f9624ccabbfee738c8e6f",
+          "bytes": 3278,
+          "blob": "9a02aa45da5dd079fe8cd5410f011210b0bc18c2",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "templates/karento-best/src/lib/i18n/catalogs/core.ts",
+          "sha256": "77c9c4a85856b6d2fde841b27ed8bf58c8a241f6f95afa10be9fe03782a25d83",
+          "bytes": 25301,
+          "blob": "e3be3436ec9f5ce4452852a91ee7b0370bb413dc",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "scripts/lib/client-refresh-six.mjs",
+          "sha256": "caf84785bd399defafea578da31c21cdf2372f80b7bba6b832cc383f30805051",
+          "bytes": 49909,
+          "blob": "69c29c48170aec5c5c39d50a9870d246ff1ec9ca",
+          "matchesFrozenSource": true
+        },
+        {
+          "path": "scripts/uk-signature-personalization.test.mjs",
+          "sha256": "e6607e01193bf3397f8c020ebddba0cc39dcf2b4b6aea94829a6e71e50c2d404",
+          "bytes": 14849,
+          "blob": "3e509507586c8a014440768d0717a4a1d2f8af39",
+          "matchesFrozenSource": true
+        }
+      ]
+    }
+  ]
+}

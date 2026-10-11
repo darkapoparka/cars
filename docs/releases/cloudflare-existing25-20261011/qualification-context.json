@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-native-source-qualification-context",
+  "id": "fleet-priselci-fixed-pilot-20261011",
+  "dealer": "priselci",
+  "scope": "existing-dealer-pilot",
+  "sourceCommit": "2534187ed3d88d7c33bdd1a2d50f341ebb174ab1",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T09:37:25.155Z",
+  "qualificationOnly": true,
+  "approved": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+  "candidateLockSha256": "6a831d47eedbae919fc111ae34bdf8ee8b42ddd07229bb9d7e597f5c6884b244",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/source-delta-review.json",
+    "sha256": "efa772cd2c872239dc9b3657a379ae0f1063622fc57bcac165064330f8d94c99",
+    "reviewedAt": "2026-10-11T09:37:25.155Z"
+  },
+  "sourceReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/source-review.json",
+    "sha256": "fb5f7b4140a7c486e806d42e3cb4bd3a167feb2ebc25dfce66133e7291ead523"
+  }
+}

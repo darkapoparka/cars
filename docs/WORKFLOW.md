@@ -1,5 +1,7 @@
 # Dealer workflow
 
+For current work, the owner's [11 October six-design fleet contract](FLEET-ROLLOUT-2026-10-11.md) supersedes the legacy trio/Vercel defaults below: one Cloudflare Worker per dealer, six designs, transparent Image Gen logos and preserved template colors/composition. Apply the [lead guardrails](LEAD-BUILD-GUARDRAILS.md) before creation or refresh.
+
 ## Ownership and completion
 
 Cars owns canonical dealer source at `clients/<slug>/`. The four masters in templates/<key> own reusable improvements; immutable Cars template releases are selected by [templates.lock.json](../templates.lock.json). [Root instructions](../AGENTS.md) own task scope and publication authorization.
@@ -39,6 +41,8 @@ Any unchecked branding/hero item is an incomplete dealer build, not a harmless c
 Read its manifest, brief, variant metadata and registry before editing. Confirm which source was deployed. Preserve the current offered trio, business identity and public paths. Compare unmatched publishing changes before regenerating. Make the smallest requested correction in canonical source or the shared packaging layer, verify affected journeys and complete publication only within the request's scope.
 
 A dealer does not receive newer template source automatically. Port a selected reusable fix when requested; a whole-template refresh is an explicit migration with preserved dealer content and route/interaction QA. A refresh must also repeat the branding/template preflight above so old client-specific hero or logo workarounds are not carried into the new template release.
+
+For a dealer offering App, repeat the [App first-banner and discovery rules](APP-VARIANT.md#first-home-banner-and-discovery-rules--1-october-2026): its own logo/location/call banner comes first, its car-discovery banner and filters precede the feed, all stocked makes are shown, and card facts/result counts use the shared responsive layout. Apply this on later requested App updates and verify the actual dealer data before regenerating receipts or publishing.
 
 ## Fact pack and records
 

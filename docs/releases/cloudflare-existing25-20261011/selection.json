@@ -1,0 +1,381 @@
+{
+  "schemaVersion": 1,
+  "scope": "Existing 25-dealer cohort: 24 Cars-owned dealer sources selected for qualification preparation; independent Al Reef remains in fleet totals and is excluded from parent Cars source export. Selection authorizes no build or deployment.",
+  "qualifiedSourcePreparation": true,
+  "originalSelection": {
+    "repository": "darkapoparka/cars",
+    "commit": "ec9505086e465b37f185c65e02e1aa05c7f3e33a",
+    "path": "docs/releases/cloudflare-existing25-20261011/selection.json",
+    "sha256": "d56d3ea1c0a194cd60fb6385dd1f34761184ef37095668a9942110164a30fce3",
+    "preservedEntries": 10
+  },
+  "registrySnapshot": {
+    "path": "docs/DEPLOYMENT-INVENTORY.json",
+    "sha256": "60a4200bbee2f4b56c42ca9d1c2d51b12e7b9860b0d56bc771084b0f9a14632e",
+    "workingSnapshot": true,
+    "modifiedRegistryPreserved": true
+  },
+  "counts": {
+    "cohort": 25,
+    "carsOwnedSourcePhase": 24,
+    "independentDeferred": 1,
+    "providerObservedExistingWorkers": 4,
+    "proposedWorkerTargets": 20
+  },
+  "excludedSourcePhase": [
+    {
+      "slug": "al-reef-used-cars",
+      "repository": "darkapoparka/cars-alreefusedcars",
+      "sourceOwnership": "independent-repository",
+      "reason": "Preserve own repository and .git; refresh and compile separately from its own source."
+    }
+  ],
+  "leads": [
+    {
+      "slug": "navara-car",
+      "proposedRepository": "darkapoparka/cars-navaracar"
+    },
+    {
+      "slug": "day-and-night-auto-group",
+      "proposedRepository": "darkapoparka/day-and-night-autodeal"
+    },
+    {
+      "slug": "promosale-varna",
+      "proposedRepository": "darkapoparka/cars-promosalevarna"
+    },
+    {
+      "slug": "priselci",
+      "proposedRepository": "darkapoparka/cars-priselci"
+    },
+    {
+      "slug": "isauto-varna",
+      "proposedRepository": "darkapoparka/cars-isautovarna"
+    },
+    {
+      "slug": "automarket-varna",
+      "proposedRepository": "darkapoparka/cars-automarketvarna"
+    },
+    {
+      "slug": "outletcars-varna",
+      "proposedRepository": "darkapoparka/cars-outletcarsvarna"
+    },
+    {
+      "slug": "perfect-auto-varna",
+      "proposedRepository": "darkapoparka/cars-perfectauto"
+    },
+    {
+      "slug": "avangard-auto",
+      "proposedRepository": "darkapoparka/cars-avangardauto"
+    },
+    {
+      "slug": "legend-auto",
+      "proposedRepository": "darkapoparka/cars-legendauto"
+    },
+    {
+      "slug": "al-basma-motors",
+      "proposedRepository": "darkapoparka/cars-albasmamotors"
+    },
+    {
+      "slug": "al-hamoor-al-thahabi",
+      "proposedRepository": "darkapoparka/cars-alhamooralthahabi"
+    },
+    {
+      "slug": "asko-96",
+      "proposedRepository": "darkapoparka/cars-asko96"
+    },
+    {
+      "slug": "astracar",
+      "proposedRepository": "darkapoparka/cars-astracar"
+    },
+    {
+      "slug": "autolife",
+      "proposedRepository": "darkapoparka/cars-autolife"
+    },
+    {
+      "slug": "champion-auto-pro",
+      "proposedRepository": "darkapoparka/cars-championautopro"
+    },
+    {
+      "slug": "eliqauto",
+      "proposedRepository": "darkapoparka/cars-eliqauto"
+    },
+    {
+      "slug": "elit-auto-import",
+      "proposedRepository": "darkapoparka/cars-elitautoimport"
+    },
+    {
+      "slug": "excellent-cars",
+      "proposedRepository": "darkapoparka/excellent-cars"
+    },
+    {
+      "slug": "f1rst-motors",
+      "proposedRepository": "darkapoparka/cars-f1rstmotors"
+    },
+    {
+      "slug": "ivo-auto",
+      "proposedRepository": "darkapoparka/cars-ivoauto"
+    },
+    {
+      "slug": "kg-team-auto",
+      "proposedRepository": "darkapoparka/cars-kgteamauto"
+    },
+    {
+      "slug": "texas-drive-auto",
+      "proposedRepository": "darkapoparka/cars-texasdriveauto"
+    },
+    {
+      "slug": "the-dealers-point",
+      "proposedRepository": "darkapoparka/cars-thedealerspoint"
+    }
+  ],
+  "workerIdentities": {
+    "scope": "Saved authenticated provider observation, not a new provider query or deployment approval",
+    "evidence": {
+      "path": "runtime/fleet-rollout-20261011/provider-inventory.json",
+      "sha256": "3827bedff813dbe326961481209900b718422ae25474151c592cd49e1e0e56ec",
+      "checkedAt": "2026-10-11T08:19:57Z"
+    },
+    "rows": [
+      {
+        "slug": "navara-car",
+        "repository": "darkapoparka/cars-navaracar",
+        "workerName": "cars-navaracar",
+        "publicOrigin": "https://cars-navaracar.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": true,
+        "state": "observed-existing",
+        "variant2": "modern"
+      },
+      {
+        "slug": "day-and-night-auto-group",
+        "repository": "darkapoparka/day-and-night-autodeal",
+        "workerName": "day-and-night-autodeal",
+        "publicOrigin": "https://day-and-night-autodeal.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": true,
+        "state": "observed-existing",
+        "variant2": "modern"
+      },
+      {
+        "slug": "promosale-varna",
+        "repository": "darkapoparka/cars-promosalevarna",
+        "workerName": "cars-promosalevarna",
+        "publicOrigin": "https://cars-promosalevarna.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": true,
+        "state": "observed-existing",
+        "variant2": "import"
+      },
+      {
+        "slug": "priselci",
+        "repository": "darkapoparka/cars-priselci",
+        "workerName": "cars-priselci",
+        "publicOrigin": "https://cars-priselci.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": true,
+        "state": "observed-existing",
+        "variant2": "modern"
+      },
+      {
+        "slug": "isauto-varna",
+        "repository": "darkapoparka/cars-isautovarna",
+        "workerName": "cars-isautovarna",
+        "publicOrigin": "https://cars-isautovarna.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": false,
+        "state": "proposed-target-not-observed-existing",
+        "variant2": "modern"
+      },
+      {
+        "slug": "automarket-varna",
+        "repository": "darkapoparka/cars-automarketvarna",
+        "workerName": "cars-automarketvarna",
+        "publicOrigin": "https://cars-automarketvarna.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": false,
+        "state": "proposed-target-not-observed-existing",
+        "variant2": "modern"
+      },
+      {
+        "slug": "outletcars-varna",
+        "repository": "darkapoparka/cars-outletcarsvarna",
+        "workerName": "cars-outletcarsvarna",
+        "publicOrigin": "https://cars-outletcarsvarna.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": false,
+        "state": "proposed-target-not-observed-existing",
+        "variant2": "import"
+      },
+      {
+        "slug": "perfect-auto-varna",
+        "repository": "darkapoparka/cars-perfectauto",
+        "workerName": "cars-perfectauto",
+        "publicOrigin": "https://cars-perfectauto.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": false,
+        "state": "proposed-target-not-observed-existing",
+        "variant2": "modern"
+      },
+      {
+        "slug": "avangard-auto",
+        "repository": "darkapoparka/cars-avangardauto",
+        "workerName": "cars-avangardauto",
+        "publicOrigin": "https://cars-avangardauto.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": false,
+        "state": "proposed-target-not-observed-existing",
+        "variant2": "modern"
+      },
+      {
+        "slug": "legend-auto",
+        "repository": "darkapoparka/cars-legendauto",
+        "workerName": "cars-legendauto",
+        "publicOrigin": "https://cars-legendauto.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": false,
+        "state": "proposed-target-not-observed-existing",
+        "variant2": "modern"
+      },
+      {
+        "slug": "al-basma-motors",
+        "repository": "darkapoparka/cars-albasmamotors",
+        "workerName": "cars-albasmamotors",
+        "publicOrigin": "https://cars-albasmamotors.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": false,
+        "state": "proposed-target-not-observed-existing",
+        "variant2": "modern"
+      },
+      {
+        "slug": "al-hamoor-al-thahabi",
+        "repository": "darkapoparka/cars-alhamooralthahabi",
+        "workerName": "cars-alhamooralthahabi",
+        "publicOrigin": "https://cars-alhamooralthahabi.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": false,
+        "state": "proposed-target-not-observed-existing",
+        "variant2": "modern"
+      },
+      {
+        "slug": "asko-96",
+        "repository": "darkapoparka/cars-asko96",
+        "workerName": "cars-asko96",
+        "publicOrigin": "https://cars-asko96.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": false,
+        "state": "proposed-target-not-observed-existing",
+        "variant2": "modern"
+      },
+      {
+        "slug": "astracar",
+        "repository": "darkapoparka/cars-astracar",
+        "workerName": "cars-astracar",
+        "publicOrigin": "https://cars-astracar.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": false,
+        "state": "proposed-target-not-observed-existing",
+        "variant2": "modern"
+      },
+      {
+        "slug": "autolife",
+        "repository": "darkapoparka/cars-autolife",
+        "workerName": "cars-autolife",
+        "publicOrigin": "https://cars-autolife.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": false,
+        "state": "proposed-target-not-observed-existing",
+        "variant2": "modern"
+      },
+      {
+        "slug": "champion-auto-pro",
+        "repository": "darkapoparka/cars-championautopro",
+        "workerName": "cars-championautopro",
+        "publicOrigin": "https://cars-championautopro.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": false,
+        "state": "proposed-target-not-observed-existing",
+        "variant2": "modern"
+      },
+      {
+        "slug": "eliqauto",
+        "repository": "darkapoparka/cars-eliqauto",
+        "workerName": "cars-eliqauto",
+        "publicOrigin": "https://cars-eliqauto.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": false,
+        "state": "proposed-target-not-observed-existing",
+        "variant2": "modern"
+      },
+      {
+        "slug": "elit-auto-import",
+        "repository": "darkapoparka/cars-elitautoimport",
+        "workerName": "cars-elitautoimport",
+        "publicOrigin": "https://cars-elitautoimport.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": false,
+        "state": "proposed-target-not-observed-existing",
+        "variant2": "modern"
+      },
+      {
+        "slug": "excellent-cars",
+        "repository": "darkapoparka/excellent-cars",
+        "workerName": "excellent-cars",
+        "publicOrigin": "https://excellent-cars.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": false,
+        "state": "proposed-target-not-observed-existing",
+        "variant2": "modern"
+      },
+      {
+        "slug": "f1rst-motors",
+        "repository": "darkapoparka/cars-f1rstmotors",
+        "workerName": "cars-f1rstmotors",
+        "publicOrigin": "https://cars-f1rstmotors.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": false,
+        "state": "proposed-target-not-observed-existing",
+        "variant2": "modern"
+      },
+      {
+        "slug": "ivo-auto",
+        "repository": "darkapoparka/cars-ivoauto",
+        "workerName": "cars-ivoauto",
+        "publicOrigin": "https://cars-ivoauto.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": false,
+        "state": "proposed-target-not-observed-existing",
+        "variant2": "modern"
+      },
+      {
+        "slug": "kg-team-auto",
+        "repository": "darkapoparka/cars-kgteamauto",
+        "workerName": "cars-kgteamauto",
+        "publicOrigin": "https://cars-kgteamauto.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": false,
+        "state": "proposed-target-not-observed-existing",
+        "variant2": "modern"
+      },
+      {
+        "slug": "texas-drive-auto",
+        "repository": "darkapoparka/cars-texasdriveauto",
+        "workerName": "cars-texasdriveauto",
+        "publicOrigin": "https://cars-texasdriveauto.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": false,
+        "state": "proposed-target-not-observed-existing",
+        "variant2": "modern"
+      },
+      {
+        "slug": "the-dealers-point",
+        "repository": "darkapoparka/cars-thedealerspoint",
+        "workerName": "cars-thedealerspoint",
+        "publicOrigin": "https://cars-thedealerspoint.darkapoparka1.workers.dev",
+        "identityBasis": "stable-repository-name",
+        "existingAtObservation": false,
+        "state": "proposed-target-not-observed-existing",
+        "variant2": "modern"
+      }
+    ]
+  }
+}

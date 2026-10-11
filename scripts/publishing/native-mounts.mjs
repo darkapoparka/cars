@@ -1,4 +1,4 @@
-import { nativeContract, nativeText, nativeWrite, sealNativeAdoption } from '../lib/native-localization.mjs';
+import { nativeContract, nativeText, nativeWrite, sealNativeAdoption, sealNativeQualification } from '../lib/native-localization.mjs';
 
 // These are configuration adapters, not URL/proxy/HTML translation transforms.
 // Every application continues to own its request handling and rendered catalogs.
@@ -153,4 +153,9 @@ export function adoptNativeSource(files, manifest, releases) {
   const adopted = applyNativeMounts(files, manifest);
   sealNativeAdoption(adopted, manifest, releases);
   return adopted;
+}
+export function adoptNativeQualification(files, manifest, releases, context) {
+  const candidate = applyNativeMounts(files,manifest);
+  sealNativeQualification(candidate,manifest,releases,context);
+  return candidate;
 }
