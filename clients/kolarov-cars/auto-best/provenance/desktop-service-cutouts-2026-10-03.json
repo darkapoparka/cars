@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-03",
+  "tool": "built-in image_gen",
+  "modelVersion": "Not exposed by built-in tool",
+  "purpose": "Desktop Home Import and Leasing cutouts. Decorative generated vehicle/service concepts, not evidence of real stock or financial rates.",
+  "integration": "leadSite.artwork.desktopActionScenes supplies sources to TrustActions; normalize the main vehicle area independently of small supporting props, preserve original proportions, and use desktop-only picture sources. Mobile action and service artwork is unchanged.",
+  "encoding": "Full original canvas converted to WebP quality 86, alphaQuality 100, effort 6. No pixel retouching, compositing or cropping.",
+  "assets": [
+    {
+      "key": "import",
+      "file": "static/assets/images/template/home-import-front-v4.webp",
+      "source": "C:/Users/radev/.codex/generated_images/01a0f637-14fa-7292-8291-55b0b4f0e12f/exec-60fbbc36-ec53-4d5c-9821-a927794a55d8.png",
+      "prompt": "Use case: ads-marketing.\nAsset type: transparent cutout for the right-hand artwork area of a desktop automotive Import service banner.\nInput images: Image 1 is an identity reference for the black Mercedes-Benz G-Class, including its boxy body, black finish and realistic vehicle detailing. Image 2 is a style reference for the existing isolated front-facing Audi service composition; match its realistic studio cutout look, crisp edges and subordinate logistics details.\nPrimary request: a new premium photorealistic black G-Class seen exactly straight head-on, full roof, both mirrors, grille, tyres and bumper visible. The car is the clear main subject, bilaterally symmetric and centered at 50% of the canvas width. Use a landscape 3:2 canvas, with the main vehicle about 50% of the canvas width and 75% of its height. At the lower left, place one small realistic cargo ship with a restrained stack of shipping containers; at the lower right, one small neutral grey/red shipping container. Each logistics detail is no more than 20% of the total canvas width and 30% of the vehicle height. Clear transparent separation from the car, all objects on the same tyre baseline. The vehicle must be visually much more prominent than its supporting objects.\nStyle: detailed automotive studio photography with soft cool-white edge highlights that make the black car readable against a deep red or graphite website banner. Genuine transparent alpha background; tight soft contact shadows only, no solid ground plane.\nConstraints: preserve recognizable G-Class shape, natural front-view proportions and black finish. Do not use a side profile or a three-quarter vehicle angle. No scene, ocean, warehouse, scenery, vignette, rectangle, gradient backdrop, text, labels, watermarks or UI. No extra cars. Do not copy the side-profile pose from Image 1.",
+      "references": [
+        "static/assets/images/lead/day-night-cutout-gclass-v1.webp",
+        "static/assets/images/template/service-import-front-v3.webp"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bounds": [
+        32,
+        144,
+        1498,
+        927
+      ],
+      "normalizationBounds": [
+        357,
+        148,
+        1199,
+        928
+      ],
+      "transparentFraction": 0.5824820200602213,
+      "bytes": 141502,
+      "sha256": "7ac90e6351b179727114c3a8c410a7b07b2a13111f7d52101c38787b873e7bd5"
+    },
+    {
+      "key": "finance",
+      "file": "static/assets/images/template/home-finance-front-v4.webp",
+      "source": "C:/Users/radev/.codex/generated_images/01a0f637-14fa-7292-8291-55b0b4f0e12f/exec-ced2c8ec-b84b-4a4a-9f30-c8039087facc.png",
+      "prompt": "Use case: ads-marketing.\nAsset type: transparent cutout for the right-hand artwork area of a desktop automotive Leasing service banner.\nInput images: Image 1 is the matching newly generated Import composition: use its 3:2 canvas, centred dominant front-facing car, restrained lower side objects, realistic studio detailing and shared tyre baseline. Image 2 is the vehicle identity reference: use this white Lamborghini Urus, viewed exactly head-on.\nPrimary request: a premium photorealistic pearl-white Lamborghini Urus facing exactly straight towards the viewer. Full roof, both mirrors, grille, tyres and bumper visible, centred at 50% of the canvas width, bilaterally symmetric. Use the same 1536x1024 landscape 3:2 framing as the Import reference. The Urus should occupy about 58% of the canvas width and 65% of the canvas height, with equal visual prominence to the G-Class in the Import reference. At the lower left, place one small clean freestanding brushed-metal percentage symbol, and at the lower right one restrained small stack of euro coins. Each financial detail is no more than 20% of the total canvas width and 30% of the main vehicle height. Keep clear transparent separation from the vehicle. All objects rest on the same tyre baseline, with only tight soft contact shadows.\nStyle: detailed realistic automotive studio photography matching the existing cutout assets, natural white paint, crisp headlights and grille, subtle soft lighting. Genuinely transparent alpha background; the empty canvas must be fully transparent.\nConstraints: the vehicle is strictly straight head-on, never angled or a side profile. Preserve the Urus shape, white finish, roof, mirrors and natural proportions from Image 2. Replace the black G-Class and all logistics objects from Image 1 with the white Urus and the two small finance details. No ship, container, extra cars, calculator, scenery, floor plane, solid rectangle, background, glow field or vignette. No banknotes, numerical rates, labels, slogans, watermarks or UI. Only the isolated car, small percentage symbol and coins.",
+      "references": [
+        "C:/Users/radev/.codex/generated_images/01a0f637-14fa-7292-8291-55b0b4f0e12f/exec-60fbbc36-ec53-4d5c-9821-a927794a55d8.png",
+        "static/assets/images/lead/day-night-urus-front-v1.webp"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bounds": [
+        45,
+        161,
+        1503,
+        945
+      ],
+      "normalizationBounds": [
+        263,
+        161,
+        1281,
+        940
+      ],
+      "transparentFraction": 0.5278835296630859,
+      "bytes": 129802,
+      "sha256": "fbf6f4c4991c99751fea73ee188ac16ea94ca92d3d6f0edd9acf7319a1c9670d"
+    }
+  ]
+}

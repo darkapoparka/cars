@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "dealer": "avangard-auto",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:30:46.584Z",
+  "reviewScope": "Hash-identical selected current raster inputs and retained genuine surface-review provenance only; actual dealer integration, native and hosted checks pending.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-1fc74c10-1df2-476e-b802-5f5af177f4d1",
+    "modelVersion": null,
+    "sourceSha256": "18edc3377e694bdb49d95d423bc702dc41272c758723021f5f52342d54a1bf76",
+    "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avangard-auto/source/native-onLight.png",
+      "sha256": "18edc3377e694bdb49d95d423bc702dc41272c758723021f5f52342d54a1bf76"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avangard-auto/source/generation-receipt.json",
+      "sha256": "6776fdd403885f266b13fb20ac02f495bace59adcaa29d6f4eab8c553492e870"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avangard-auto/branding/master.png",
+    "sha256": "193aa97ced0679cf1eee8bef8b655855d560c4037cd38f279bc5b202ef91c4d0"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avangard-auto/branding/onLight.png",
+      "sha256": "193aa97ced0679cf1eee8bef8b655855d560c4037cd38f279bc5b202ef91c4d0",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avangard-auto/source/generation-receipt.json#sha256=6776fdd403885f266b13fb20ac02f495bace59adcaa29d6f4eab8c553492e870; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-1fc74c10-1df2-476e-b802-5f5af177f4d1",
+        "modelVersion": null,
+        "sourceSha256": "18edc3377e694bdb49d95d423bc702dc41272c758723021f5f52342d54a1bf76",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avangard-auto/source/native-onLight.png",
+          "sha256": "18edc3377e694bdb49d95d423bc702dc41272c758723021f5f52342d54a1bf76"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avangard-auto/source/generation-receipt.json",
+          "sha256": "6776fdd403885f266b13fb20ac02f495bace59adcaa29d6f4eab8c553492e870"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avangard-auto/branding/onDark.png",
+      "sha256": "8ee5c00d87e8599f74e849de62773bb2e53bfa25c4d9271a4f3783afc316fc81",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avangard-auto/source/generation-receipt.json#sha256=6776fdd403885f266b13fb20ac02f495bace59adcaa29d6f4eab8c553492e870; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-1fc74c10-1df2-476e-b802-5f5af177f4d1",
+        "modelVersion": null,
+        "sourceSha256": "18edc3377e694bdb49d95d423bc702dc41272c758723021f5f52342d54a1bf76",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avangard-auto/source/native-onDark.png",
+          "sha256": "18edc3377e694bdb49d95d423bc702dc41272c758723021f5f52342d54a1bf76"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avangard-auto/source/generation-receipt.json",
+          "sha256": "6776fdd403885f266b13fb20ac02f495bace59adcaa29d6f4eab8c553492e870"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avangard-auto/branding/onAccent.png",
+      "sha256": "8ee5c00d87e8599f74e849de62773bb2e53bfa25c4d9271a4f3783afc316fc81",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avangard-auto/source/generation-receipt.json#sha256=6776fdd403885f266b13fb20ac02f495bace59adcaa29d6f4eab8c553492e870; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-1fc74c10-1df2-476e-b802-5f5af177f4d1",
+        "modelVersion": null,
+        "sourceSha256": "18edc3377e694bdb49d95d423bc702dc41272c758723021f5f52342d54a1bf76",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avangard-auto/source/native-onAccent.png",
+          "sha256": "18edc3377e694bdb49d95d423bc702dc41272c758723021f5f52342d54a1bf76"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avangard-auto/source/generation-receipt.json",
+          "sha256": "6776fdd403885f266b13fb20ac02f495bace59adcaa29d6f4eab8c553492e870"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avangard-auto/source/generation-receipt.json",
+    "sha256": "6776fdd403885f266b13fb20ac02f495bace59adcaa29d6f4eab8c553492e870"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "baseline",
+    "proof": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/avangard-auto/surface-review.png",
+      "sha256": "ceaa8d1ac0f9aab9723b79583985212dbec781bb19710bafe7c20df69a625d26",
+      "bytes": 115103,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Actual master and compact native-palette swatches inspected; retained pixels remain identical.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-baseline-review.json"
+  },
+  "sourceOwnershipUnchanged": true
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "slug": "evropavarna-varna",
+  "name": "Европа",
+  "shortName": "Европа",
+  "city": "Варна",
+  "country": "BG",
+  "countryCode": "BG",
+  "locale": "bg-BG",
+  "currency": "EUR",
+  "distanceUnit": "km",
+  "phone": "0887600565",
+  "phoneDisplay": "0887600565",
+  "phoneE164": "+359887600565",
+  "phones": [
+    "0887600565",
+    "0887616655"
+  ],
+  "addressLine": "бул. Хр.Смирненски / до Вятърна мелница/",
+  "address": "бул. Хр.Смирненски / до Вятърна мелница/, Варна, България",
+  "hours": "Потвърдете работното време директно с автокъщата.",
+  "email": "",
+  "sourceUrl": "https://evropavarna.mobile.bg/",
+  "stockUrl": "https://evropavarna.mobile.bg/",
+  "contactSourceUrl": "https://evropavarna.mobile.bg/contacts",
+  "observedAt": "2026-10-11T11:46:39.742Z",
+  "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+  "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+  "services": [],
+  "socialLinks": {}
+}

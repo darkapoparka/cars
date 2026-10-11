@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "kind": "dated-marketplace-listing-sample",
+  "candidate": true,
+  "observedAt": "2026-10-11T11:46:39.781Z",
+  "sourceProfile": "https://multizaza.mobile.bg/",
+  "sourcePageVisibleListingCount": 22,
+  "sourceProfileCountObservedAt": "2026-10-11T11:46:39.722Z",
+  "profileCountIsAvailableStock": false,
+  "profileCountIsClassifiedOrdinaryRetail": false,
+  "liveInventory": false,
+  "mediaPermission": "unconfirmed",
+  "localMediaReady": true,
+  "records": [
+    {
+      "id": "11789398419243895",
+      "sourceId": "11789398419243895",
+      "title": "BMW 730",
+      "make": "BMW",
+      "model": "730",
+      "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+      "year": 2010,
+      "productionMonth": 9,
+      "priceEur": 8999,
+      "currency": "EUR",
+      "sourcePriceText": "8 999 €",
+      "priceVatNotice": "Не се начислява ДДС",
+      "mileageKm": 268000,
+      "sourceMileageText": "268000 км",
+      "fieldConflicts": [],
+      "body": "Стреч лимузина",
+      "fuel": "Дизелов",
+      "transmission": "Автоматична",
+      "powerHp": 245,
+      "images": [
+        "/assets/vehicles/11789398419243895/1.webp",
+        "/assets/vehicles/11789398419243895/2.webp"
+      ],
+      "sourceUrl": "https://multizaza.mobile.bg/obiava-11789398419243895-bmw-730-long-individual-full-max-ekstri-top",
+      "sourceHtmlSha256": "87478d7942a314a09bd6deef34d989ca03509a6d7b54acd503d71568ab463574",
+      "sourcePublicationText": "Публикувана в 18:06 часа на 14.09.2026 год.",
+      "observedAt": "2026-10-11T11:46:39.781Z",
+      "availability": "unconfirmed",
+      "availabilityConfirmed": false,
+      "partsListing": false,
+      "conditionMarker": null,
+      "conditionIndependentlyConfirmed": false,
+      "arrivalNotice": null,
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+      "mediaPermission": "Not independently established",
+      "telHrefCandidates": [
+        "0896700702"
+      ],
+      "visibleSellerContact": "Контакти с продавача Multi ZaZa 0887236046",
+      "sellerPhoneMatchesPrimary": true,
+      "telHrefMatchesPrimary": false,
+      "sourceTitleExact": "BMW 730 Long/Individual FULL MAX ЕКСТРИ -ТОП!",
+      "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+      "retailReadyForAssembly": false,
+      "sourcePhotoUrls": [
+        "https://cdn2.focus.bg/mobile/photosorg/895/1/big1/11789398419243895_v.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/895/1/big1/11789398419243895_T3.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/895/1/big1/11789398419243895_kg.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/895/1/big1/11789398419243895_w5.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/895/1/big1/11789398419243895_gn.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/895/1/big1/11789398419243895_RF.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/895/1/big1/11789398419243895_H5.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/895/1/big1/11789398419243895_r8.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/895/1/big1/11789398419243895_9m.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/895/1/big1/11789398419243895_p5.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/895/1/big1/11789398419243895_SV.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/895/1/big1/11789398419243895_Ot.webp"
+      ],
+      "sourcePhotoEvidence": {
+        "sourceId": "11789398419243895",
+        "sourceUrl": "https://multizaza.mobile.bg/obiava-11789398419243895-bmw-730-long-individual-full-max-ekstri-top",
+        "observedAt": "2026-10-11T12:09:28.697Z",
+        "responseSha256": "5ddec43657fe93e6d337028590f96e2d44dacd23be41b3dd0f090a5da3e52a9a",
+        "association": "primary gallery URLs contain exact source listing ID",
+        "remoteBytesFetched": false
+      }
+    }
+  ],
+  "localMediaHydration": {
+    "candidateOnly": true,
+    "technicalRasterPresent": true,
+    "rightsApproved": false,
+    "availabilityConfirmed": false,
+    "assets": [
+      {
+        "publicPath": "/assets/vehicles/11789398419243895/1.webp",
+        "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/895/1/big1/11789398419243895_v.webp",
+        "sha256": "dfa1d7cdc583f49c4388d45bb44266ca72418ae02ab93488715f3f3a07f30f9e",
+        "bytes": 258390,
+        "downloadObservedAt": "2026-10-11T12:20:29.071Z"
+      },
+      {
+        "publicPath": "/assets/vehicles/11789398419243895/2.webp",
+        "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/895/1/big1/11789398419243895_T3.webp",
+        "sha256": "f76cc5ad4de52f44b19f3a3d7fef836b93c801f1a3182959f3d41234136e1a71",
+        "bytes": 233246,
+        "downloadObservedAt": "2026-10-11T12:20:29.287Z"
+      }
+    ],
+    "sourceStockSha256": "8f4d98a8824c1e83bcafd44046fcabb009a534602352a363aa35841e51385dec"
+  }
+}

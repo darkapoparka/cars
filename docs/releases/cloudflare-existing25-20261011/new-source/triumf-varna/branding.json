@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "dealer": "triumf-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:01:13.451Z",
+  "reviewScope": "Exact final accepted logo assets and prior genuine surface review retained; actual six-template integration and hosted acceptance remain pending.",
+  "identityStatus": "Final improved disclosed demo/proposal treatment for same qualified business; materially polished artwork, not official rebrand or owner/dealer approval.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-8d7efcf6-6056-452d-a413-8c6c3145a1b0",
+    "modelVersion": null,
+    "sourceSha256": "9bd3492b1cda4a508808adb8c57bf91ed759eec811bc93db64b68b98888a8b39",
+    "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/source/native-onLight.png",
+      "sha256": "9bd3492b1cda4a508808adb8c57bf91ed759eec811bc93db64b68b98888a8b39"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/source/generation-receipt.json",
+      "sha256": "e33ce06add1ae7a72e3db98ec9445255f657420a4d550f7fc2b4e9d947b3cb47"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/branding/master.png",
+    "sha256": "a9cf7f8d851e8905bbce5f423feced2bbdc0909f233262bea35289a229889595"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/branding/onLight.png",
+      "sha256": "a9cf7f8d851e8905bbce5f423feced2bbdc0909f233262bea35289a229889595",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/source/generation-receipt.json#sha256=e33ce06add1ae7a72e3db98ec9445255f657420a4d550f7fc2b4e9d947b3cb47; reviewed onLight PNG from exact accepted final logo manifest b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8d7efcf6-6056-452d-a413-8c6c3145a1b0",
+        "modelVersion": null,
+        "sourceSha256": "9bd3492b1cda4a508808adb8c57bf91ed759eec811bc93db64b68b98888a8b39",
+        "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/source/native-onLight.png",
+          "sha256": "9bd3492b1cda4a508808adb8c57bf91ed759eec811bc93db64b68b98888a8b39"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/source/generation-receipt.json",
+          "sha256": "e33ce06add1ae7a72e3db98ec9445255f657420a4d550f7fc2b4e9d947b3cb47"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/branding/onDark.png",
+      "sha256": "67730c5925f188741ae97bc8124def9ec59221947ce4e4cec72f5b2265391dab",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/source/generation-receipt.json#sha256=e33ce06add1ae7a72e3db98ec9445255f657420a4d550f7fc2b4e9d947b3cb47; reviewed onDark PNG from exact accepted final logo manifest b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8d7efcf6-6056-452d-a413-8c6c3145a1b0",
+        "modelVersion": null,
+        "sourceSha256": "9bd3492b1cda4a508808adb8c57bf91ed759eec811bc93db64b68b98888a8b39",
+        "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/source/native-onDark.png",
+          "sha256": "9bd3492b1cda4a508808adb8c57bf91ed759eec811bc93db64b68b98888a8b39"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/source/generation-receipt.json",
+          "sha256": "e33ce06add1ae7a72e3db98ec9445255f657420a4d550f7fc2b4e9d947b3cb47"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/branding/onAccent.png",
+      "sha256": "67730c5925f188741ae97bc8124def9ec59221947ce4e4cec72f5b2265391dab",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/source/generation-receipt.json#sha256=e33ce06add1ae7a72e3db98ec9445255f657420a4d550f7fc2b4e9d947b3cb47; reviewed onAccent PNG from exact accepted final logo manifest b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8d7efcf6-6056-452d-a413-8c6c3145a1b0",
+        "modelVersion": null,
+        "sourceSha256": "9bd3492b1cda4a508808adb8c57bf91ed759eec811bc93db64b68b98888a8b39",
+        "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/source/native-onAccent.png",
+          "sha256": "9bd3492b1cda4a508808adb8c57bf91ed759eec811bc93db64b68b98888a8b39"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/source/generation-receipt.json",
+          "sha256": "e33ce06add1ae7a72e3db98ec9445255f657420a4d550f7fc2b4e9d947b3cb47"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/source/generation-receipt.json",
+    "sha256": "e33ce06add1ae7a72e3db98ec9445255f657420a4d550f7fc2b4e9d947b3cb47"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "new-a",
+    "proof": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/triumf-varna/surface-review.png",
+      "sha256": "98153b37d08473fbcd02a1506ae0c246230eaef1c4f206d790e14d05ab8158dd",
+      "bytes": 117189,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Actual master and compact native-palette swatches inspected; retained pixels remain identical.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-new-a-review.json"
+  },
+  "identityHeld": false
+}

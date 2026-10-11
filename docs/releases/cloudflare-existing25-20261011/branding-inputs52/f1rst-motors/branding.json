@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "dealer": "f1rst-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:30:46.791Z",
+  "reviewScope": "Hash-identical selected current raster inputs and retained genuine surface-review provenance only; actual dealer integration, native and hosted checks pending.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-c4235782-5cb9-4bf2-a632-f8d9fdca2e16",
+    "modelVersion": null,
+    "sourceSha256": "d24c689ab65609cd0c690b991c39f792fed1e7b6d92879fca6b6b1247bf6c247",
+    "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/f1rst-motors/source/native-onLight.png",
+      "sha256": "d24c689ab65609cd0c690b991c39f792fed1e7b6d92879fca6b6b1247bf6c247"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/f1rst-motors/source/generation-receipt.json",
+      "sha256": "0e74f80e1ab91dc5c7bea73b842773398e347607e3e9d8fbc08758ae01e92a29"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/f1rst-motors/branding/master.png",
+    "sha256": "977674e5ad8077bc81f29b5f16197fc90ef56eef103beebf7892ed12989b6dc8"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/f1rst-motors/branding/onLight.png",
+      "sha256": "977674e5ad8077bc81f29b5f16197fc90ef56eef103beebf7892ed12989b6dc8",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/f1rst-motors/source/generation-receipt.json#sha256=0e74f80e1ab91dc5c7bea73b842773398e347607e3e9d8fbc08758ae01e92a29; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c4235782-5cb9-4bf2-a632-f8d9fdca2e16",
+        "modelVersion": null,
+        "sourceSha256": "d24c689ab65609cd0c690b991c39f792fed1e7b6d92879fca6b6b1247bf6c247",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/f1rst-motors/source/native-onLight.png",
+          "sha256": "d24c689ab65609cd0c690b991c39f792fed1e7b6d92879fca6b6b1247bf6c247"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/f1rst-motors/source/generation-receipt.json",
+          "sha256": "0e74f80e1ab91dc5c7bea73b842773398e347607e3e9d8fbc08758ae01e92a29"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/f1rst-motors/branding/onDark.png",
+      "sha256": "21fcf855e80bbefd6be5bd20cd41385671ff01b10f24844c1caeb884e1615af7",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/f1rst-motors/source/generation-receipt.json#sha256=0e74f80e1ab91dc5c7bea73b842773398e347607e3e9d8fbc08758ae01e92a29; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c4235782-5cb9-4bf2-a632-f8d9fdca2e16",
+        "modelVersion": null,
+        "sourceSha256": "d24c689ab65609cd0c690b991c39f792fed1e7b6d92879fca6b6b1247bf6c247",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/f1rst-motors/source/native-onDark.png",
+          "sha256": "d24c689ab65609cd0c690b991c39f792fed1e7b6d92879fca6b6b1247bf6c247"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/f1rst-motors/source/generation-receipt.json",
+          "sha256": "0e74f80e1ab91dc5c7bea73b842773398e347607e3e9d8fbc08758ae01e92a29"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/f1rst-motors/branding/onAccent.png",
+      "sha256": "21fcf855e80bbefd6be5bd20cd41385671ff01b10f24844c1caeb884e1615af7",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/f1rst-motors/source/generation-receipt.json#sha256=0e74f80e1ab91dc5c7bea73b842773398e347607e3e9d8fbc08758ae01e92a29; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c4235782-5cb9-4bf2-a632-f8d9fdca2e16",
+        "modelVersion": null,
+        "sourceSha256": "d24c689ab65609cd0c690b991c39f792fed1e7b6d92879fca6b6b1247bf6c247",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/f1rst-motors/source/native-onAccent.png",
+          "sha256": "d24c689ab65609cd0c690b991c39f792fed1e7b6d92879fca6b6b1247bf6c247"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/f1rst-motors/source/generation-receipt.json",
+          "sha256": "0e74f80e1ab91dc5c7bea73b842773398e347607e3e9d8fbc08758ae01e92a29"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/f1rst-motors/source/generation-receipt.json",
+    "sha256": "0e74f80e1ab91dc5c7bea73b842773398e347607e3e9d8fbc08758ae01e92a29"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "baseline",
+    "proof": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/f1rst-motors/surface-review.png",
+      "sha256": "8db70abd280863e94a392f8c23b46cae12dcbed998681693e3151d1cead20e6c",
+      "bytes": 98476,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Actual master and compact native-palette swatches inspected; retained pixels remain identical.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-baseline-review.json"
+  },
+  "sourceOwnershipUnchanged": true
+}

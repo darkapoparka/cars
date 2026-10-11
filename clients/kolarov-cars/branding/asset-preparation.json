@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dealer": "kolarov-cars",
+  "createdAt": "2026-10-10T16:40:40.700Z",
+  "original": {
+    "width": 981,
+    "height": 160,
+    "sha256": "e87d95ebc981edd0670881765b2336d2c1a0032e5c57971e4abcb8f837afc27e"
+  },
+  "method": "Lossless raster format conversion of the published logo; no AI refresh or creative replacement.",
+  "icon": {
+    "input": "assets/brand/logo.png",
+    "png": "assets/app-icon.png",
+    "ico": "assets/favicon.ico",
+    "originalIdentityRetained": true
+  },
+  "finalLogoRefresh": "pending-surface-review",
+  "visualQa": false
+}

@@ -1,0 +1,149 @@
+@font-face {
+  font-family: 'AndroidReference';
+  src: url('/fonts/android-roboto-regular.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --font-base: 'Mobile Base';
+  --font-hero: 'Mobile Hero';
+}
+@font-face {
+  font-family: 'Mobile Base';
+  src: url('/fonts/base-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Mobile Base';
+  src: url('/fonts/base-medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Mobile Base';
+  src: url('/fonts/base-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Mobile Hero';
+  src: url('/fonts/hero-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Mobile Hero';
+  src: url('/fonts/hero-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@layer resets {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    font-family: var(--font-base), Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    -webkit-tap-highlight-color: transparent;
+  }
+  button {
+    cursor: pointer;
+  }
+  a {
+    color: inherit;
+  }
+  img {
+    max-width: 100%;
+  }
+  :focus-visible {
+    outline: 3px solid #8864b5;
+    outline-offset: 3px;
+  }
+  dialog:not([open]) {
+    display: none;
+  }
+  dialog::backdrop {
+    background: rgb(0 0 0 / 66%);
+  }
+  input[type='range'],
+  input[type='checkbox'] {
+    accent-color: #db3000;
+  }
+  /* Overlapping range inputs show keyboard focus on the active thumb. */
+  [data-range-track] input[type='range']:focus-visible::-webkit-slider-thumb {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+  [data-range-track] input[type='range']:focus-visible::-moz-range-thumb {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+@stylex;
+
+@media (min-width: 1024px) {
+  html {
+    scrollbar-gutter: stable;
+  }
+}
+
+@font-face {
+  font-family: 'Mobile Hero';
+  src: url('/fonts/hero-medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mobile UI';
+  src: url('/fonts/inter-variable-v4.1.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@media (max-width: 699px) {
+  :root {
+    --font-base: 'Mobile UI';
+    --font-hero: 'Mobile UI';
+  }
+  dialog[data-mobile-keyboard='true'] [data-filter-footer],
+  dialog[data-mobile-keyboard='true'] [data-service-search-footer] {
+    display: none;
+  }
+}

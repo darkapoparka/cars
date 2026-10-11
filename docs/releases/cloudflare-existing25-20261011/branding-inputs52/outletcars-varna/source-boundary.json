@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-existing-dealer-branding-input-boundary",
+  "dealer": "outletcars-varna",
+  "identityKey": "existing-slug:outletcars-varna",
+  "cohort": "existing-vercel25",
+  "ownership": "maintained-main",
+  "branding": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/outletcars-varna/branding.json",
+    "sha256": "889778f38fa01bde01b99a30bc19ef0bc396b777578f6d2b79f4c59463530e9b"
+  },
+  "originalManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/outletcars-varna/source/original-dealer.json",
+    "sha256": "a123ddec451865b47a47ad04bb5ad12564e3a27cdf2610eb798bdde0fea6a414"
+  },
+  "originalManifestGitBlob": "8d9e1d756181e86859efc0fdc6d83af71730e467",
+  "originalRepository": "darkapoparka/cars-outletcarsvarna",
+  "sourceRef": {
+    "ref": "main",
+    "commit": "c5c6b0da611a3bf2756c1be2ff9764f6903536ec",
+    "tree": "f234c31038f9638c20020ac469fb48f6ea3a374b"
+  },
+  "originalData": [
+    {
+      "path": "clients/outletcars-varna/business-facts.json",
+      "gitBlob": "2070086a44970fd8c35f8a0369f0ea970c95bfa6",
+      "bytes": 1559
+    },
+    {
+      "path": "clients/outletcars-varna/dealer.json",
+      "gitBlob": "8d9e1d756181e86859efc0fdc6d83af71730e467",
+      "bytes": 4701
+    },
+    {
+      "path": "clients/outletcars-varna/stock.json",
+      "gitBlob": "a3455105d5e83f0eb9c19a0ce195fcd643e7f1ee",
+      "bytes": 30392
+    }
+  ],
+  "sourceProof": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/original-source-proof.json",
+    "sha256": "477c4eedc097eb2e105b1d50cf1bc3701b558679e8f6c3c3681a3ccd6626e08c"
+  },
+  "roster": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/accepted-roster.json",
+    "sha256": "c23c6c4ea10acaca9fdc8d09351fd64735a9e2245385fb12a0f95d71f9f0080d"
+  },
+  "sourceCreation": false,
+  "clientIntegration": false,
+  "buildApproval": false,
+  "hostedApproval": false,
+  "eligibleForExistingQualifiedRequest": true,
+  "holds": [
+    "Exact latest template/source-delta/pilot qualification and preservation-aware updater remain required."
+  ]
+}

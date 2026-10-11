@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "slug": "autobora-varna",
+  "name": "Ауто-бора",
+  "shortName": "Ауто-бора",
+  "city": "Варна",
+  "country": "BG",
+  "countryCode": "BG",
+  "locale": "bg-BG",
+  "currency": "EUR",
+  "distanceUnit": "km",
+  "phone": "0897447696",
+  "phoneDisplay": "0897447696",
+  "phoneE164": "+359897447696",
+  "phones": [
+    "0897447696"
+  ],
+  "addressLine": "бул. Цар Освободител",
+  "address": "бул. Цар Освободител, Варна, България",
+  "hours": "Понеделник 09:00 - 17:00 ч. Вторник 09:00 - 17:00 ч. Сряда 09:00 - 17:00 ч. Четвъртък 09:00 - 17:00 ч. Петък 09:00 - 17:00 ч. Събота 09:30 - 15:00 ч. Неделя Почивен ден",
+  "email": "",
+  "sourceUrl": "https://autobora.mobile.bg/",
+  "stockUrl": "https://autobora.mobile.bg/",
+  "contactSourceUrl": "https://autobora.mobile.bg/contacts",
+  "observedAt": "2026-10-11T11:47:27.031Z",
+  "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+  "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+  "services": [],
+  "socialLinks": {}
+}

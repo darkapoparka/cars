@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-existing-dealer-branding-input-boundary",
+  "dealer": "day-and-night-auto-group",
+  "identityKey": "existing-slug:day-and-night-auto-group",
+  "cohort": "existing-vercel25",
+  "ownership": "maintained-main",
+  "branding": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/day-and-night-auto-group/branding.json",
+    "sha256": "c1927e01cf02b9595731b1e168fd606a592b71ff4f01b150da0606481ffeb55e"
+  },
+  "originalManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/day-and-night-auto-group/source/original-dealer.json",
+    "sha256": "e1e4ac67e1a98aec45f89cb17d27a525d6a6c5cbb15670923509c5c552bbb2a1"
+  },
+  "originalManifestGitBlob": "92cbb52424f4e6ff31a59e08f08fa0fd2c98fda1",
+  "originalRepository": "darkapoparka/day-and-night-autodeal",
+  "sourceRef": {
+    "ref": "main",
+    "commit": "c5c6b0da611a3bf2756c1be2ff9764f6903536ec",
+    "tree": "6be11ade23ec553ac8206d5dfaa7d2a705f87e09"
+  },
+  "originalData": [
+    {
+      "path": "clients/day-and-night-auto-group/business-facts.json",
+      "gitBlob": "e957d458d1714675f3dcd43e3892621a0fea5bf8",
+      "bytes": 476
+    },
+    {
+      "path": "clients/day-and-night-auto-group/dealer.json",
+      "gitBlob": "92cbb52424f4e6ff31a59e08f08fa0fd2c98fda1",
+      "bytes": 4832
+    },
+    {
+      "path": "clients/day-and-night-auto-group/stock.json",
+      "gitBlob": "015b93ed8a1ad573c163ef7a26550e6047c61aa8",
+      "bytes": 51548
+    }
+  ],
+  "sourceProof": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/original-source-proof.json",
+    "sha256": "477c4eedc097eb2e105b1d50cf1bc3701b558679e8f6c3c3681a3ccd6626e08c"
+  },
+  "roster": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/accepted-roster.json",
+    "sha256": "c23c6c4ea10acaca9fdc8d09351fd64735a9e2245385fb12a0f95d71f9f0080d"
+  },
+  "sourceCreation": false,
+  "clientIntegration": false,
+  "buildApproval": false,
+  "hostedApproval": false,
+  "eligibleForExistingQualifiedRequest": true,
+  "holds": [
+    "Exact latest template/source-delta/pilot qualification and preservation-aware updater remain required."
+  ]
+}

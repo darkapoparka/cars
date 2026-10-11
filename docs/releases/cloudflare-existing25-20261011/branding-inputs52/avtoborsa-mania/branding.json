@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "dealer": "avtoborsa-mania",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:30:48.015Z",
+  "reviewScope": "Hash-identical selected current raster inputs and retained genuine surface-review provenance only; actual dealer integration, native and hosted checks pending.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-15ae6800-2a15-46e9-ae46-b10e3ff0dedc",
+    "modelVersion": null,
+    "sourceSha256": "039a9265fd53574fe3c80ed6e7539dd67f5b5573304ab786214764319a9d5646",
+    "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avtoborsa-mania/source/native-onLight.png",
+      "sha256": "039a9265fd53574fe3c80ed6e7539dd67f5b5573304ab786214764319a9d5646"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avtoborsa-mania/source/generation-receipt.json",
+      "sha256": "48f20e9e278f827a735dc7b8169fb09181c4d39b8150cbeb8aa31673bc18c514"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avtoborsa-mania/branding/master.png",
+    "sha256": "ba9ab3bbc61eeb37c104f67c91f7053d1082c09986743ee321290cc78f7c9c8c"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avtoborsa-mania/branding/onLight.png",
+      "sha256": "ba9ab3bbc61eeb37c104f67c91f7053d1082c09986743ee321290cc78f7c9c8c",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avtoborsa-mania/source/generation-receipt.json#sha256=48f20e9e278f827a735dc7b8169fb09181c4d39b8150cbeb8aa31673bc18c514; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-15ae6800-2a15-46e9-ae46-b10e3ff0dedc",
+        "modelVersion": null,
+        "sourceSha256": "039a9265fd53574fe3c80ed6e7539dd67f5b5573304ab786214764319a9d5646",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avtoborsa-mania/source/native-onLight.png",
+          "sha256": "039a9265fd53574fe3c80ed6e7539dd67f5b5573304ab786214764319a9d5646"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avtoborsa-mania/source/generation-receipt.json",
+          "sha256": "48f20e9e278f827a735dc7b8169fb09181c4d39b8150cbeb8aa31673bc18c514"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avtoborsa-mania/branding/onDark.png",
+      "sha256": "bd1ef8ee76b34205066c715ac50aea0d0d39a9d826df2fa013c9ea07de496d2f",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avtoborsa-mania/source/generation-receipt.json#sha256=48f20e9e278f827a735dc7b8169fb09181c4d39b8150cbeb8aa31673bc18c514; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-15ae6800-2a15-46e9-ae46-b10e3ff0dedc",
+        "modelVersion": null,
+        "sourceSha256": "039a9265fd53574fe3c80ed6e7539dd67f5b5573304ab786214764319a9d5646",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avtoborsa-mania/source/native-onDark.png",
+          "sha256": "039a9265fd53574fe3c80ed6e7539dd67f5b5573304ab786214764319a9d5646"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avtoborsa-mania/source/generation-receipt.json",
+          "sha256": "48f20e9e278f827a735dc7b8169fb09181c4d39b8150cbeb8aa31673bc18c514"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avtoborsa-mania/branding/onAccent.png",
+      "sha256": "bd1ef8ee76b34205066c715ac50aea0d0d39a9d826df2fa013c9ea07de496d2f",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avtoborsa-mania/source/generation-receipt.json#sha256=48f20e9e278f827a735dc7b8169fb09181c4d39b8150cbeb8aa31673bc18c514; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-15ae6800-2a15-46e9-ae46-b10e3ff0dedc",
+        "modelVersion": null,
+        "sourceSha256": "039a9265fd53574fe3c80ed6e7539dd67f5b5573304ab786214764319a9d5646",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avtoborsa-mania/source/native-onAccent.png",
+          "sha256": "039a9265fd53574fe3c80ed6e7539dd67f5b5573304ab786214764319a9d5646"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avtoborsa-mania/source/generation-receipt.json",
+          "sha256": "48f20e9e278f827a735dc7b8169fb09181c4d39b8150cbeb8aa31673bc18c514"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/avtoborsa-mania/source/generation-receipt.json",
+    "sha256": "48f20e9e278f827a735dc7b8169fb09181c4d39b8150cbeb8aa31673bc18c514"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "root",
+    "proof": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/avtoborsa-mania/surface-review.png",
+      "sha256": "6e28ed574f078fa88bec0d3241d2ac32369201fa3fabd7007540af687a16c79c",
+      "bytes": 125449,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Current master and120/180 light/dark rendered contact sheets inspected; existing320/all-native-swatches review remains applicable to identical pixels.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-root-review.json"
+  },
+  "sourceOwnershipUnchanged": true
+}

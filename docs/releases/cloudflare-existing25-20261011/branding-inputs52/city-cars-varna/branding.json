@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "dealer": "city-cars-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:30:47.936Z",
+  "reviewScope": "Hash-identical selected current raster inputs and retained genuine surface-review provenance only; actual dealer integration, native and hosted checks pending.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-c240b5f1-1e91-4f05-855c-b3f50ba18c42",
+    "modelVersion": null,
+    "sourceSha256": "ba19e596fcd21f7add552ad34fd6c84dde3dd78a3f38de0c336a9c252b438c94",
+    "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/city-cars-varna/source/native-onLight.png",
+      "sha256": "ba19e596fcd21f7add552ad34fd6c84dde3dd78a3f38de0c336a9c252b438c94"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/city-cars-varna/source/generation-receipt.json",
+      "sha256": "05fa74b57752b3636138c3c334f18ca19ca3a491e06c745d829d8c9e18ec1d8b"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/city-cars-varna/branding/master.png",
+    "sha256": "d4fe0bc028a4f78df02a4bff128cb83af3a2678c15837024484af63014da6d14"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/city-cars-varna/branding/onLight.png",
+      "sha256": "d4fe0bc028a4f78df02a4bff128cb83af3a2678c15837024484af63014da6d14",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/city-cars-varna/source/generation-receipt.json#sha256=05fa74b57752b3636138c3c334f18ca19ca3a491e06c745d829d8c9e18ec1d8b; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c240b5f1-1e91-4f05-855c-b3f50ba18c42",
+        "modelVersion": null,
+        "sourceSha256": "ba19e596fcd21f7add552ad34fd6c84dde3dd78a3f38de0c336a9c252b438c94",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/city-cars-varna/source/native-onLight.png",
+          "sha256": "ba19e596fcd21f7add552ad34fd6c84dde3dd78a3f38de0c336a9c252b438c94"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/city-cars-varna/source/generation-receipt.json",
+          "sha256": "05fa74b57752b3636138c3c334f18ca19ca3a491e06c745d829d8c9e18ec1d8b"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/city-cars-varna/branding/onDark.png",
+      "sha256": "fbde5938f1a1db17c89bd44f518eadcfb1376f292610ccb9b00be7d34442998c",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/city-cars-varna/source/generation-receipt.json#sha256=05fa74b57752b3636138c3c334f18ca19ca3a491e06c745d829d8c9e18ec1d8b; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c240b5f1-1e91-4f05-855c-b3f50ba18c42",
+        "modelVersion": null,
+        "sourceSha256": "ba19e596fcd21f7add552ad34fd6c84dde3dd78a3f38de0c336a9c252b438c94",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/city-cars-varna/source/native-onDark.png",
+          "sha256": "ba19e596fcd21f7add552ad34fd6c84dde3dd78a3f38de0c336a9c252b438c94"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/city-cars-varna/source/generation-receipt.json",
+          "sha256": "05fa74b57752b3636138c3c334f18ca19ca3a491e06c745d829d8c9e18ec1d8b"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/city-cars-varna/branding/onAccent.png",
+      "sha256": "fbde5938f1a1db17c89bd44f518eadcfb1376f292610ccb9b00be7d34442998c",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/city-cars-varna/source/generation-receipt.json#sha256=05fa74b57752b3636138c3c334f18ca19ca3a491e06c745d829d8c9e18ec1d8b; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-c240b5f1-1e91-4f05-855c-b3f50ba18c42",
+        "modelVersion": null,
+        "sourceSha256": "ba19e596fcd21f7add552ad34fd6c84dde3dd78a3f38de0c336a9c252b438c94",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/city-cars-varna/source/native-onAccent.png",
+          "sha256": "ba19e596fcd21f7add552ad34fd6c84dde3dd78a3f38de0c336a9c252b438c94"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/city-cars-varna/source/generation-receipt.json",
+          "sha256": "05fa74b57752b3636138c3c334f18ca19ca3a491e06c745d829d8c9e18ec1d8b"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/city-cars-varna/source/generation-receipt.json",
+    "sha256": "05fa74b57752b3636138c3c334f18ca19ca3a491e06c745d829d8c9e18ec1d8b"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "existing",
+    "proof": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/city-cars-varna/surface-review.png",
+      "sha256": "7aa5cc6de4dc85d6fc2e9910ab7ed15e4a993597425b6ed886fa8ab5fc12d36c",
+      "bytes": 126548,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Actual master and compact native-palette swatches inspected; retained pixels remain identical.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-existing-review.json"
+  },
+  "sourceOwnershipUnchanged": true
+}

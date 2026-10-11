@@ -1,0 +1,201 @@
+{
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-918ba97d-d918-4721-9fcd-d04aea021e55.png",
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Separate single-row redesigned proposal; historical identity/name/colors informed artwork. Awaiting owner/dealer style selection.",
+  "sourceUrls": [
+    "https://automarket.mobile.bg/"
+  ],
+  "sourceLogoUrl": "https://cdn2.focus.bg/mobile/images/housespicts/h12015396395487220.pic",
+  "workingLogoPath": "leads/branding/fleet-20261011/automarket-varna/source/published-logo.png",
+  "derivation": {
+    "historicalReceipt": "L:/CODEX/cars/leads/branding/fleet-20261011/automarket-varna/receipt.json",
+    "historicalMaster": "L:/CODEX/cars/leads/branding/fleet-20261011/automarket-varna/branding/logo-master.png",
+    "historicalMasterSha256": "d699ca6542730c653d1f983012aaa00c2f3bd8310c9054b6ede467f57d129e84",
+    "historicalGeneration": {
+      "reference": "exec-ff854d39-ed07-4f12-a04b-5201e3aea0c7",
+      "path": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-ff854d39-ed07-4f12-a04b-5201e3aea0c7.png",
+      "sha256": "022fd5f2fce16f7ad855df159755cc4427bbbce25386cfd031eb500bec7d3d5c"
+    },
+    "publicIdentityObservation": {
+      "observedAt": "2026-10-11",
+      "visualReference": "CUA header/banner and saved published mark."
+    },
+    "styleReference": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png",
+    "styleReferenceScope": "Composition/expressive lettering only; not a dealer identity or color source",
+    "referenceFiles": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/automarket-varna/branding/logo-master.png",
+        "sha256": "d699ca6542730c653d1f983012aaa00c2f3bd8310c9054b6ede467f57d129e84"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png",
+        "sha256": "dc84d9283929362bd17d0b765c1ab219eb3c093ccb52e4d3c05ada2ddfcb37ce"
+      }
+    ],
+    "styleReferenceSha256": "dc84d9283929362bd17d0b765c1ab219eb3c093ccb52e4d3c05ada2ddfcb37ce"
+  },
+  "imageGeneration": {
+    "reference": "exec-918ba97d-d918-4721-9fcd-d04aea021e55",
+    "tool": "image_gen.imagegen",
+    "transparent_background": true,
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/automarket-varna/branding/logo-master.png",
+      "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png"
+    ],
+    "prompt": "Improve reference1 for EXACT name AUTOMARKET. Source red rectangular outline and graphite name are identity clues. Replace the full enclosing box with a small distinctive red angular open AM emblem at left incorporating two clean bracket corners from that outline; keep interior gaps open. Large AUTOMARKET to right with bold confident mildly italic custom automotive letter shapes, chamfered A/M and soft square curves; not widely tracked plain sans. Red #b90023 emblem, graphite #25272c name. Entire name one row. Use reference2 only as the style anchor for confident custom automotive letters and compact one-row composition; do not copy its name, monogram, blue color or exact mark. The owner wants expressive, slightly forward-slanted, sculpted motorsport lettering with purposeful chamfers and softened corners, not a plain upright system sans serif. ONE NAME ROW ONLY: no line beneath, captions, slogans, descriptors or facts. Emblem to left at approximately letter cap height, fully separate from the name and at most18percent of logo width. Main name large and readable at120px. Preserve exact name and meaningful individual identity. Flat clean ink, restrained color, crisp open counters/negative spaces, complete unclipped true RGBA transparency including all counters. No opaque panel/plaque/background, checkerboard, shadow, halo, shiny texture or hairline ornaments. Modest transparent margins. This is a separate redesigned PROPOSAL awaiting owner/dealer style selection; original reference remains historical.",
+    "output_hint": "Generated images are saved to C:\\Users\\radev\\.codex\\generated_images\\01a12a34-3dcd-7920-8e75-5eb5eac386bd as C:\\Users\\radev\\.codex\\generated_images\\01a12a34-3dcd-7920-8e75-5eb5eac386bd\\exec-918ba97d-d918-4721-9fcd-d04aea021e55.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  "onLight": "original",
+  "onDark": "white",
+  "onAccent": "white",
+  "visualAccepted": true,
+  "styleSelected": false,
+  "ownerApproved": false,
+  "selectionStatus": "technically-selected-preferred-candidate-awaiting-owner-style-selection",
+  "surfaceReviewPath": "C:\\Users\\radev\\.codex\\visualizations\\2026\\10\\11\\01a12a0e-8374-7732-9e28-580ceda2a0fc\\fleet-logo-work\\single-row-stage\\automarket-varna/surface-review.png",
+  "visualChecks": {
+    "spelling": "Exact full dealer name compared with historical source",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "treatments": "Original brand colors onLight; same geometry white onDark/onAccent",
+    "heightLimit": 76,
+    "residue": "No material fringe, plaque, clipping or filled counters at compact sizes",
+    "scope": "Technical raster candidate only; owner/dealer style selection, integration and hosted pending",
+    "layout": "Emblem beside full name, one row, no captions"
+  },
+  "schemaVersion": 1,
+  "dealer": "automarket-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-918ba97d-d918-4721-9fcd-d04aea021e55.png",
+    "sha256": "229383e78e91c6a96a0a7c47211abf9dfccc3d88847136fee82581b71b982710",
+    "bytes": 349254,
+    "format": "png",
+    "width": 2171,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8517957709739892,
+      "opaqueRatio": 0.12632809179770504
+    },
+    "visibleBounds": {
+      "x": 66,
+      "y": 242,
+      "width": 2043,
+      "height": 240
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/automarket-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "28d867e539eab4efe3211dc8b2366698ed7b863ffbb934608803723ade677c65",
+      "bytes": 52274,
+      "format": "webp",
+      "width": 1496,
+      "height": 238,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6892160607558532,
+        "opaqueRatio": 0.2587572462139936
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1400,
+        "height": 164
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/automarket-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "8d983873bf13dd840545ba8493b7036f3aac1abb86f97359e06dd09c4982c4fa",
+      "bytes": 31246,
+      "format": "webp",
+      "width": 1496,
+      "height": 238,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6892160607558532,
+        "opaqueRatio": 0.2587572462139936
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1400,
+        "height": 164
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/automarket-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "8d983873bf13dd840545ba8493b7036f3aac1abb86f97359e06dd09c4982c4fa",
+      "bytes": 31246,
+      "format": "webp",
+      "width": 1496,
+      "height": 238,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6892160607558532,
+        "opaqueRatio": 0.2587572462139936
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1400,
+        "height": 164
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/automarket-varna/branding/logo-master.png",
+    "sha256": "82b310f20dd8466fe6032c54e3b2898c0208956e20768a192e793f7df1eeef39",
+    "bytes": 143648,
+    "format": "png",
+    "width": 1496,
+    "height": 238,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.6892160607558532,
+      "opaqueRatio": 0.2587572462139936
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 37,
+      "width": 1400,
+      "height": 164
+    }
+  },
+  "technicalAcceptance": {
+    "spelling": "Exact full dealer name compared with historical source",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "treatments": "Original brand colors onLight; same geometry white onDark/onAccent",
+    "heightLimit": 76,
+    "residue": "No material fringe, plaque, clipping or filled counters at compact sizes",
+    "scope": "Technical raster candidate only; owner/dealer style selection, integration and hosted pending",
+    "layout": "Emblem beside full name, one row, no captions"
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-existing-export",
+  "updatedAt": "2026-10-11T11:24:47.71Z"
+}

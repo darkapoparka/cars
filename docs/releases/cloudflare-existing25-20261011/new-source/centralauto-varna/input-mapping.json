@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "centralauto-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/facts.json",
+      "sha256": "5cf61d83b529f82be7bb1322e40e58a695112d074e6252f67fcf03130a4c9335"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/stock.json",
+      "sha256": "5f15bfd02d767ff6a2f9b2baa0eba049419dbe9a903075f76e747b83f686505b"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/locale.json",
+      "sha256": "11112cfc390ea52fa75e2317bc5630b0265cd9ad553986b86fedd075c81a0eee"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/branding.json",
+      "sha256": "535f2087123ad0b0e58e596523f57633e4bdd8bd5d821af3ecc96fcd837eedf5"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/source/business-facts.json",
+      "sha256": "1dd5746ea8c858ba179bb886bd5ac0f1f2ed51dfe4f72b2dab4b7ee9e955d58c"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/source/locale.json",
+      "sha256": "11112cfc390ea52fa75e2317bc5630b0265cd9ad553986b86fedd075c81a0eee"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/source/stock.json",
+      "sha256": "0f49c8026048821e8fd65a8dab425960c8d72daa09ab1113a696f103838acd42"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/source/generation-receipt.json",
+      "sha256": "b3db37e7bfe826d399efa3fbaa5fa21f46ff59ede00203013c2e3b930ad50445"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/source/native-onLight.png",
+      "sha256": "54eb4e561c196d30d67752468330cced0f811e9402cbc52d564628e6d10640fb"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/source/native-onDark.png",
+      "sha256": "54eb4e561c196d30d67752468330cced0f811e9402cbc52d564628e6d10640fb"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/source/native-onAccent.png",
+      "sha256": "54eb4e561c196d30d67752468330cced0f811e9402cbc52d564628e6d10640fb"
+    }
+  ],
+  "transformations": {
+    "facts": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/source/business-facts.json",
+        "sha256": "1dd5746ea8c858ba179bb886bd5ac0f1f2ed51dfe4f72b2dab4b7ee9e955d58c"
+      },
+      "kind": "flat-original-facts-to-business-consumer",
+      "allOriginalEvidenceUnchanged": true,
+      "derivedNameDelta": null,
+      "otherFactsUnchanged": true
+    },
+    "stock": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/source/stock.json",
+        "sha256": "0f49c8026048821e8fd65a8dab425960c8d72daa09ab1113a696f103838acd42"
+      },
+      "originalSourceRecordPreserved": true,
+      "sourceId": "11791547125620834",
+      "normalizer": "loadDealerProfile",
+      "retention": "retainDealerVariantAssets",
+      "sourceKind": "dated-marketplace-listing-sample",
+      "consumerKind": "dated-listing-snapshot",
+      "availabilityUnconfirmed": true,
+      "mediaRightsNotClaimed": true,
+      "mileageUnknownMeansOnRequest": true
+    },
+    "media": [
+      {
+        "sourceId": "11791547125620834",
+        "sourcePublicPath": "/assets/vehicles/11791547125620834/1.webp",
+        "publicPath": "/dealer-stock/11791547125620834-1.webp",
+        "destination": "dealer-stock/11791547125620834-1.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/media/11791547125620834-1.webp",
+        "sha256": "c85e4705068adc2ee7bd20e078d3f54ab78c8d4713047d67e418e3290b33c3a5",
+        "bytes": 246670
+      },
+      {
+        "sourceId": "11791547125620834",
+        "sourcePublicPath": "/assets/vehicles/11791547125620834/2.webp",
+        "publicPath": "/dealer-stock/11791547125620834-2.webp",
+        "destination": "dealer-stock/11791547125620834-2.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/media/11791547125620834-2.webp",
+        "sha256": "6de7993fe6349ba48097e18ffb3e3febafc129d7629a17b2b450610e54e5ee41",
+        "bytes": 210888
+      }
+    ],
+    "branding": {
+      "acceptedManifest": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+        "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+      },
+      "originalGenerationReceipt": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/source/generation-receipt.json",
+        "sha256": "b3db37e7bfe826d399efa3fbaa5fa21f46ff59ede00203013c2e3b930ad50445"
+      },
+      "noNewGeneration": true,
+      "modelVersion": null,
+      "pixelsUnchanged": true
+    },
+    "identity": null
+  }
+}

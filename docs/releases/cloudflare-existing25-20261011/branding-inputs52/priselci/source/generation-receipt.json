@@ -1,0 +1,248 @@
+{
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Owner-requested existing demonstration identity refined; not official dealer artwork or dealer approval",
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-4c9e214e-84e5-4f61-b4ca-3ef6ebb472b4.png",
+  "generatedPaths": {
+    "onLight": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-4c9e214e-84e5-4f61-b4ca-3ef6ebb472b4.png",
+    "onDark": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-7ecd9e07-f1eb-4959-b618-884046caba71.png",
+    "onAccent": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-7ecd9e07-f1eb-4959-b618-884046caba71.png"
+  },
+  "surfaceGeneration": {
+    "onDarkAndAccent": {
+      "tool": "image_gen.imagegen",
+      "reference": "exec-7ecd9e07-f1eb-4959-b618-884046caba71",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-4c9e214e-84e5-4f61-b4ca-3ef6ebb472b4.png"
+      ],
+      "prompt": "Convert this same Priselci dealership identity into a clean dark-surface treatment using precise flat artwork. Exact Bulgarian Cyrillic top АВТОКЪЩА and large ПРИСЕЛЦИ. Preserve the italic block lettering, car side profile, underline, proportions and placement. Main lettering filled opaque white with open transparent letter counters and subtle thin green inner accent lines. Car shown as crisp white-and-green outline; its WINDOW and open areas MUST be transparent, not a solid white filled blob. Keep windows, space between lines, and all letter holes transparent. Remove all chrome gradient shading, black shadows, grain, irregular speckles, stray fringe pixels and background remnants; clean antialiased boundaries only. Vivid original green roof/body accent retained. No outer rectangle, no plaque, no glow, no slogan, no new illustration. Same identity, clearly readable at 180px header width over charcoal, red and blue. True transparent RGBA background outside strokes. One complete wide logo."
+    }
+  },
+  "sourceUrls": [
+    "https://priselci.mobile.bg/",
+    "https://priselci.mobile.bg/about",
+    "https://www.auto.bg/dealer/priselci"
+  ],
+  "sourceReference": "clients/priselci/branding/logo-master.png",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-4c9e214e-84e5-4f61-b4ca-3ef6ebb472b4",
+    "transparent_background": true,
+    "referenced_image_paths": [
+      "C:/Users/radev/.codex/generated_images/01a12a02-c755-77c3-b78c-c95e7a55f22d/exec-2bd88294-200a-4e56-ab9d-76852d40648d.png"
+    ],
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-4c9e214e-84e5-4f61-b4ca-3ef6ebb472b4.png",
+    "prompt": "Refine the referenced existing dealership logo into a clean production raster. Preserve exact spelling top АВТОКЪЩА and large ПРИСЕЛЦИ, the current italic block lettering, sports-car outline, vivid green, silver and dark charcoal identity. Preserve composition and proportions. Clean all ragged, speckled, stray fringe pixels and all leftover outlines/background remnants. Finish each edge smoothly and sharply; transparent holes should be deliberate clean counters. Use less deep gradient in the main green lettering so it is legible compact at 180px width on white, while retaining recognizable green/chrome appearance. No additional text, no slogan, no plaque or rectangle, no checkerboard texture. True RGBA transparent background only. One landscape logo with modest clear padding. This is a cleanup of the same identity, not a new logo."
+  },
+  "priorCandidates": [
+    {
+      "reference": "exec-2bd88294-200a-4e56-ab9d-76852d40648d",
+      "ownerThread": "01a12a02-c755-77c3-b78c-c95e7a55f22d",
+      "path": "C:/Users/radev/.codex/generated_images/01a12a02-c755-77c3-b78c-c95e7a55f22d/exec-2bd88294-200a-4e56-ab9d-76852d40648d.png",
+      "status": "reused as requested; refined edges"
+    },
+    {
+      "reference": "exec-7047a49e-0772-48a8-a559-c54550dbbd14",
+      "path": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-7047a49e-0772-48a8-a559-c54550dbbd14.png",
+      "status": "rejected: stray white edge remnants"
+    }
+  ],
+  "visualAccepted": true,
+  "visualChecks": {
+    "scope": "Isolated raster surface review; actual six-design consumers remain pending",
+    "spelling": "АВТОКЪЩА and ПРИСЕЛЦИ inspected visually; Cyrillic letter forms retained",
+    "identity": "Existing owner-requested green/car demonstration identity preserved. Published Mobile.bg profile has plain heading; vehicle photo shows red/yellow storefront signage. This package makes no official-brand claim.",
+    "publicSourceReview": [
+      "2026-10-11 CUA screenshot https://priselci.mobile.bg/",
+      "web image search Автокъща Приселци Варна logo was inconclusive; existing source/proposal contract reviewed"
+    ],
+    "headerWidths": [
+      120,
+      180,
+      320
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "contrast": "Business name readable on all tested swatches. Small descriptor is secondary and is less readable at 120px. Dark/accent preserve open windows and counters; generic white recolor rejected because it filled car windows.",
+    "bounds": "Modest tooling padding; no clipped mark or opaque external rectangle",
+    "surfacePaletteSources": [
+      "templates/auto-best/src/lib/styles/tokens.css",
+      "templates/modern/packages/marketplace/lead-site.ts",
+      "templates/import/src/lib/config/dealer.ts"
+    ],
+    "remainingAcceptance": "Actual consumer dimensions, mobile/desktop headers, sticky bars, drawers, footers, cards, metadata, favicons/manifests and owner review belong to rollout integration.",
+    "widths": [
+      120,
+      180,
+      320
+    ]
+  },
+  "schemaVersion": 1,
+  "dealer": "priselci",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-4c9e214e-84e5-4f61-b4ca-3ef6ebb472b4.png",
+    "sha256": "2736bbc059c50b4eb8691f8d06121f686434be7ef815033b151d09bc56b3e98a",
+    "bytes": 1142312,
+    "format": "png",
+    "width": 2172,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.48311381418963606,
+      "opaqueRatio": 0.4732405400730543
+    },
+    "visibleBounds": {
+      "x": 17,
+      "y": 65,
+      "width": 2120,
+      "height": 576
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/priselci/dealer-brand/logo-on-light.webp",
+      "sha256": "bfaa68056afce6728467081dc485dbecb7fabb79ab9285835b7bd69f36f5aa77",
+      "bytes": 167304,
+      "format": "webp",
+      "width": 1496,
+      "height": 453,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.4757956463741427,
+        "opaqueRatio": 0.47620438904038437
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 381
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/priselci/dealer-brand/logo-on-dark.webp",
+      "sha256": "72001f5d26c6253df7c97301737c68b5fb49757f47246bdf571baa7b30ed3455",
+      "bytes": 224918,
+      "format": "webp",
+      "width": 1496,
+      "height": 451,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.540819865539443,
+        "opaqueRatio": 0.34593209386153173
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1399,
+        "height": 379
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/priselci/dealer-brand/logo-on-accent.webp",
+      "sha256": "72001f5d26c6253df7c97301737c68b5fb49757f47246bdf571baa7b30ed3455",
+      "bytes": 224918,
+      "format": "webp",
+      "width": 1496,
+      "height": 451,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.540819865539443,
+        "opaqueRatio": 0.34593209386153173
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1399,
+        "height": 379
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/priselci/branding/logo-master.png",
+    "sha256": "6d6d5c53e6a52500eab737cbb28fecf7951ea79b5f14b9a5eb6ad7d6261b4fb1",
+    "bytes": 506969,
+    "format": "png",
+    "width": 1496,
+    "height": 453,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.4757956463741427,
+      "opaqueRatio": 0.47620438904038437
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 381
+    }
+  },
+  "technicalAcceptance": {
+    "scope": "Isolated raster surface review; actual six-design consumers remain pending",
+    "spelling": "АВТОКЪЩА and ПРИСЕЛЦИ inspected visually; Cyrillic letter forms retained",
+    "identity": "Existing owner-requested green/car demonstration identity preserved. Published Mobile.bg profile has plain heading; vehicle photo shows red/yellow storefront signage. This package makes no official-brand claim.",
+    "publicSourceReview": [
+      "2026-10-11 CUA screenshot https://priselci.mobile.bg/",
+      "web image search Автокъща Приселци Варна logo was inconclusive; existing source/proposal contract reviewed"
+    ],
+    "headerWidths": [
+      120,
+      180,
+      320
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "contrast": "Business name readable on all tested swatches. Small descriptor is secondary and is less readable at 120px. Dark/accent preserve open windows and counters; generic white recolor rejected because it filled car windows.",
+    "bounds": "Modest tooling padding; no clipped mark or opaque external rectangle",
+    "surfacePaletteSources": [
+      "templates/auto-best/src/lib/styles/tokens.css",
+      "templates/modern/packages/marketplace/lead-site.ts",
+      "templates/import/src/lib/config/dealer.ts"
+    ],
+    "remainingAcceptance": "Actual consumer dimensions, mobile/desktop headers, sticky bars, drawers, footers, cards, metadata, favicons/manifests and owner review belong to rollout integration.",
+    "widths": [
+      120,
+      180,
+      320
+    ]
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "ownerApproved": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "L:/CODEX/cars/runtime/fleet-logo-20261011/export",
+  "updatedAt": "2026-10-11T08:36:18.237Z",
+  "surfaceReviewPath": "L:/CODEX/cars/leads/branding/fleet-20261011/priselci/surface-review.png",
+  "sourceEvidence": [],
+  "provenanceFile": "L:/CODEX/cars/leads/branding/fleet-20261011/priselci/provenance.json"
+}

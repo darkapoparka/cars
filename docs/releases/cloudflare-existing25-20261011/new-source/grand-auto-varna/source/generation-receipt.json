@@ -1,0 +1,236 @@
+{
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Final improved disclosed demo/proposal treatment for same qualified business; materially polished artwork, not official rebrand or owner/dealer approval.",
+  "sourceUrls": [
+    "https://grand-auto.mobile.bg"
+  ],
+  "sourceLimitations": "Disclosed new proposal for qualified ГРАНД АУТО ВАРНА profile; plain public heading and vehicle photos with no clearly attributable recognizable logo in bounded review; not official approval",
+  "priorPreferredPack": "L:/CODEX/cars/leads/branding/fleet-20261011/grand-auto-varna",
+  "priorPreferredFiles": {
+    "branding/logo-master.png": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/grand-auto-varna/branding/logo-master.png",
+      "sha256": "af3617dae490b1ebc115cef19bd21e4282fc26699a6dc4c55ea50f5607140365"
+    },
+    "branding/logo-on-light.png": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/grand-auto-varna/branding/logo-on-light.png",
+      "sha256": "af3617dae490b1ebc115cef19bd21e4282fc26699a6dc4c55ea50f5607140365"
+    },
+    "branding/logo-on-dark.png": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/grand-auto-varna/branding/logo-on-dark.png",
+      "sha256": "7651ad45575eae34b87bad9a7d6039cdd8cb84a205eeebfac1aca937827863e4"
+    },
+    "branding/logo-on-accent.png": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/grand-auto-varna/branding/logo-on-accent.png",
+      "sha256": "7651ad45575eae34b87bad9a7d6039cdd8cb84a205eeebfac1aca937827863e4"
+    },
+    "dealer-brand/logo-on-light.webp": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/grand-auto-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "fb6a222b4451e19dbd3b8aa6e229650e58c4aad29d20a976e71ad730587ca04f"
+    },
+    "dealer-brand/logo-on-dark.webp": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/grand-auto-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "462b24b804dcd10ef6f323778e156e166c3cd0dad2a2bbba6951e71d10243887"
+    },
+    "dealer-brand/logo-on-accent.webp": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/grand-auto-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "462b24b804dcd10ef6f323778e156e166c3cd0dad2a2bbba6951e71d10243887"
+    },
+    "receipt.json": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/grand-auto-varna/receipt.json",
+      "sha256": "74be92e310f880780dd2748cad581153e40426981393c3cba43895595ba4c50e"
+    },
+    "surface-review.png": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/grand-auto-varna/surface-review.png",
+      "sha256": "7c41b5f1ac7074750d04af6151c679940e605a95f02e6b3c2cb35edd768bfa3d"
+    }
+  },
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-d799874e-db8b-4e9d-999c-5ce799cd6087.png",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-d799874e-db8b-4e9d-999c-5ce799cd6087",
+    "prompt": "Polish the supplied current dealer proposal for SAME factual business, clearly disclosed improved proposal, not official rebrand. Exact ONLY name \"ГРАНД АУТО\". Keep distinctive two open road-like bronze Г strokes at left. Add customized bold Cyrillic automotive lettering, rounded-square arches, clipped ends and restrained forward slant; broad readable counters. Retain navy and warm bronze colors and recognizable individual motif. Compact single horizontal row, prominent name beside secondary emblem, no tiny caption or extra text above/below, underline, roof above name or enclosing plate. Purposefully customized automotive typography with crisp individual clipped corners, restrained forward slant, broad clean strokes and open counters; no plain stock sans. Legible at120px totalwidth. Flat clean solid opaque inks without gradient, texture, noisy edges, shadow, glow, shading, grit, white fill or residue. Genuine RGBA transparent background including gaps and counters with safe padding. Exact Cyrillic spelling and spacing, no fabricated claims.",
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/grand-auto-varna/branding/logo-master.png"
+    ],
+    "referenceMetadata": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/grand-auto-varna/branding/logo-master.png",
+        "sha256": "af3617dae490b1ebc115cef19bd21e4282fc26699a6dc4c55ea50f5607140365",
+        "bytes": 128843,
+        "width": 1496,
+        "height": 293,
+        "hasAlpha": true,
+        "role": "Previously preferred dealer treatment; published source identity and limitations preserved separately."
+      }
+    ],
+    "transparent_background": true,
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-d799874e-db8b-4e9d-999c-5ce799cd6087.png",
+    "modelVersion": "not exposed by tool"
+  },
+  "variantDerivation": {
+    "onLight": "Existing approved raster exporter crops/scales ImageGen original colored ink and alpha.",
+    "onDark": "White raster ink derived by existing approved exporter from same native output alpha; not independently generated.",
+    "onAccent": "White raster ink derived by existing approved exporter from same native output alpha; not independently generated."
+  },
+  "visualAccepted": true,
+  "ownerApproved": false,
+  "selectionStatus": "Final preferred technical candidate; owner acceptance and integration pending.",
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/grand-auto-varna/surface-review.png",
+  "visualChecks": {
+    "spelling": "Exact sourced/qualified core business name",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "result": "Balanced compact readable treatment; no caption, spelling drift, clipping, filled counters, background or residue observed; owner style acceptance pending."
+  },
+  "schemaVersion": 1,
+  "dealer": "grand-auto-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-d799874e-db8b-4e9d-999c-5ce799cd6087.png",
+    "sha256": "7e29752f7222f295727cef5b3059abe28fb3c25e9890a654e4e2da942f07859a",
+    "bytes": 369524,
+    "format": "png",
+    "width": 2171,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.828570228858051,
+      "opaqueRatio": 0.1516531323243865
+    },
+    "visibleBounds": {
+      "x": 62,
+      "y": 199,
+      "width": 2049,
+      "height": 311
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/grand-auto-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "237c6616a1f9320d50ff309a0478c0764544ccefa0031856e718f9aba3dc8a04",
+      "bytes": 54740,
+      "format": "webp",
+      "width": 1496,
+      "height": 286,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7032202423245204,
+        "opaqueRatio": 0.2584304064919038
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 214
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/grand-auto-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "0265ff651287b5a1b75ccdf7944c0c5ce1069f5a98e2b66229163fe9f0d194fc",
+      "bytes": 29304,
+      "format": "webp",
+      "width": 1496,
+      "height": 286,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7032202423245204,
+        "opaqueRatio": 0.2584304064919038
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 214
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/grand-auto-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "0265ff651287b5a1b75ccdf7944c0c5ce1069f5a98e2b66229163fe9f0d194fc",
+      "bytes": 29304,
+      "format": "webp",
+      "width": 1496,
+      "height": 286,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7032202423245204,
+        "opaqueRatio": 0.2584304064919038
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 214
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/grand-auto-varna/branding/logo-master.png",
+    "sha256": "e307c69d3e326439a89ef02a244c06fa3b22d6ef462d9df3746b297375dba4b9",
+    "bytes": 140410,
+    "format": "png",
+    "width": 1496,
+    "height": 286,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7032202423245204,
+      "opaqueRatio": 0.2584304064919038
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 214
+    }
+  },
+  "technicalAcceptance": {
+    "spelling": "Exact sourced/qualified core business name",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "result": "Balanced compact readable treatment; no caption, spelling drift, clipping, filled counters, background or residue observed; owner style acceptance pending."
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-new-a-export",
+  "updatedAt": "2026-10-11T12:04:32.282Z"
+}

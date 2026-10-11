@@ -1,0 +1,608 @@
+{
+  "recordedAt": "2026-10-07T12:50:51.789Z",
+  "status": "audit-candidate-not-approved",
+  "baselineCommit": "93ff0fd13bcb4f2953df3417d349bd8e309ba52a",
+  "branch": "astra",
+  "node": "v26.10.0",
+  "browser": "installed Chrome via Playwright",
+  "target": "fresh Node adapter production build",
+  "applicationInputs": {
+    "count": 741,
+    "sha256": "6eaf03ed1d8a04e27e788c40bde91a20afe73f245a03b4b953e130f20bc78606",
+    "scope": "src, scripts, tests, static, package/config/runtime pins"
+  },
+  "gates": {
+    "strict": {
+      "status": "passed",
+      "errors": 0,
+      "warnings": 0
+    },
+    "formatting": "passed",
+    "unit": {
+      "status": "passed",
+      "count": 13
+    },
+    "preservedSourceHashes": {
+      "status": "passed",
+      "count": 607
+    },
+    "staticAssetHashes": "passed",
+    "build": "passed",
+    "ssr": {
+      "status": "passed",
+      "compositionAliases": 102,
+      "designed404Paths": 9
+    },
+    "browserInteractions": {
+      "status": "passed",
+      "passed": [
+        "drawer opens, focuses close button, traps Tab, closes on Escape and returns focus",
+        "overlay closes drawer and only one overlay is mounted",
+        "native dropdown selects and dismisses",
+        "owner demo login and sign-out do not imply saved authentication",
+        "member demo role persists across routes and reload",
+        "route transitions, back/forward and repeated gallery disposal",
+        "gallery arrows change the active slide",
+        "quantity stays positive and contact form truthfully reports preview-only behavior",
+        "accordion state and native tab selection",
+        "calendar opens, selects and disposes on navigation",
+        "membership period and catalog filter sections toggle",
+        "guest and member previews are isolated between browser contexts",
+        "SPA mounts preserve the document and do not accumulate global listeners",
+        "mobile navigation opens and closes with Escape"
+      ],
+      "errors": []
+    },
+    "smoke": {
+      "status": "passed",
+      "canonicalPages": 30
+    },
+    "coreVisual": "failed: /vehicles at 390px has four differing pixels above threshold",
+    "completeFinalVisualMatrix": "not completed",
+    "ownerApproval": "pending",
+    "remoteCI": "not established by local verification"
+  },
+  "visual": [
+    {
+      "route": "/",
+      "width": 320,
+      "exactRawMatch": true,
+      "differentPixels": 0,
+      "differencePercent": 0,
+      "heightBaseline": 23534,
+      "heightNative": 23534,
+      "sectionDeltas": [
+        {
+          "class": "box-section block-banner-home3 position-relative",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "box-section box-search-advance-home10 @@bg",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box background-body py-96",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "karento-home-brands background-100",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "karento-how-it-works background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box-banner-2 background-body py-96",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-cta-4 position-relative overflow-hidden",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box background-body py-96",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "box-cta-7 background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box box-flights background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box py-96 background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box box-properties-area pt-96 pb-50 background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "background-body pt-0",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-team-1 py-96 background-body pb-0",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box box-news background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "box-app-2 position-relative pb-80",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "footer",
+          "y": 0,
+          "height": 0
+        }
+      ],
+      "nativeErrors": [],
+      "widgetErrors": []
+    },
+    {
+      "route": "/vehicles",
+      "width": 320,
+      "exactRawMatch": true,
+      "differentPixels": 0,
+      "differencePercent": 0,
+      "heightBaseline": 13270,
+      "heightNative": 13270,
+      "sectionDeltas": [
+        {
+          "class": "page-header-2 pt-30 background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "box-section box-search-advance-home10 background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box pt-50 background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "box-section block-content-tourlist background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "footer",
+          "y": 0,
+          "height": 0
+        }
+      ],
+      "nativeErrors": [],
+      "widgetErrors": []
+    },
+    {
+      "route": "/vehicle",
+      "width": 320,
+      "exactRawMatch": true,
+      "differentPixels": 0,
+      "differencePercent": 0,
+      "heightBaseline": 12181,
+      "heightNative": 12181,
+      "sectionDeltas": [
+        {
+          "class": "box-section box-breadcrumb background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "box-section box-content-tour-detail background-body pt-0",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "footer",
+          "y": 0,
+          "height": 0
+        }
+      ],
+      "nativeErrors": [],
+      "widgetErrors": []
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "exactRawMatch": false,
+      "differentPixels": 0,
+      "differencePercent": 0,
+      "heightBaseline": 24169,
+      "heightNative": 24169,
+      "sectionDeltas": [
+        {
+          "class": "box-section block-banner-home3 position-relative",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "box-section box-search-advance-home10 @@bg",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box background-body py-96",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "karento-home-brands background-100",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "karento-how-it-works background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box-banner-2 background-body py-96",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-cta-4 position-relative overflow-hidden",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box background-body py-96",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "box-cta-7 background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box box-flights background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box py-96 background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box box-properties-area pt-96 pb-50 background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "background-body pt-0",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-team-1 py-96 background-body pb-0",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box box-news background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "box-app-2 position-relative pb-80",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "footer",
+          "y": 0,
+          "height": 0
+        }
+      ],
+      "nativeErrors": [],
+      "widgetErrors": []
+    },
+    {
+      "route": "/vehicles",
+      "width": 390,
+      "exactRawMatch": false,
+      "differentPixels": 4,
+      "differencePercent": 0.00007439728896279019,
+      "heightBaseline": 13786,
+      "heightNative": 13786,
+      "sectionDeltas": [
+        {
+          "class": "page-header-2 pt-30 background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "box-section box-search-advance-home10 background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box pt-50 background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "box-section block-content-tourlist background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "footer",
+          "y": 0,
+          "height": 0
+        }
+      ],
+      "nativeErrors": [],
+      "widgetErrors": []
+    },
+    {
+      "route": "/vehicle",
+      "width": 390,
+      "exactRawMatch": true,
+      "differentPixels": 0,
+      "differencePercent": 0,
+      "heightBaseline": 11181,
+      "heightNative": 11181,
+      "sectionDeltas": [
+        {
+          "class": "box-section box-breadcrumb background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "box-section box-content-tour-detail background-body pt-0",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "footer",
+          "y": 0,
+          "height": 0
+        }
+      ],
+      "nativeErrors": [],
+      "widgetErrors": []
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "exactRawMatch": false,
+      "differentPixels": 0,
+      "differencePercent": 0,
+      "heightBaseline": 11331,
+      "heightNative": 11331,
+      "sectionDeltas": [
+        {
+          "class": "box-section block-banner-home3 position-relative",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "box-section box-search-advance-home10 @@bg",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box background-body py-96",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "karento-home-brands background-100",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "karento-how-it-works background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box-banner-2 background-body py-96",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-cta-4 position-relative overflow-hidden",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box background-body py-96",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "box-cta-7 background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box box-flights background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box py-96 background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box box-properties-area pt-96 pb-50 background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "background-body pt-0",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-team-1 py-96 background-body pb-0",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box box-news background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "box-app-2 position-relative pb-80",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "footer",
+          "y": 0,
+          "height": 0
+        }
+      ],
+      "nativeErrors": [],
+      "widgetErrors": []
+    },
+    {
+      "route": "/vehicles",
+      "width": 1440,
+      "exactRawMatch": true,
+      "differentPixels": 0,
+      "differencePercent": 0,
+      "heightBaseline": 4235,
+      "heightNative": 4235,
+      "sectionDeltas": [
+        {
+          "class": "page-header-2 pt-30 background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "box-section box-search-advance-home10 background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "section-box pt-50 background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "box-section block-content-tourlist background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "footer",
+          "y": 0,
+          "height": 0
+        }
+      ],
+      "nativeErrors": [],
+      "widgetErrors": []
+    },
+    {
+      "route": "/vehicle",
+      "width": 1440,
+      "exactRawMatch": true,
+      "differentPixels": 0,
+      "differencePercent": 0,
+      "heightBaseline": 5911,
+      "heightNative": 5911,
+      "sectionDeltas": [
+        {
+          "class": "box-section box-breadcrumb background-body",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "box-section box-content-tour-detail background-body pt-0",
+          "y": 0,
+          "height": 0
+        },
+        {
+          "class": "footer",
+          "y": 0,
+          "height": 0
+        }
+      ],
+      "nativeErrors": [],
+      "widgetErrors": []
+    },
+    {
+      "route": "/#drawer",
+      "width": 320,
+      "exactRawMatch": null,
+      "differentPixels": 0,
+      "differencePercent": 0,
+      "heightBaseline": null,
+      "heightNative": null,
+      "sectionDeltas": null,
+      "nativeErrors": [],
+      "widgetErrors": []
+    },
+    {
+      "route": "/#drawer",
+      "width": 390,
+      "exactRawMatch": null,
+      "differentPixels": 0,
+      "differencePercent": 0,
+      "heightBaseline": null,
+      "heightNative": null,
+      "sectionDeltas": null,
+      "nativeErrors": [],
+      "widgetErrors": []
+    },
+    {
+      "route": "/#drawer",
+      "width": 1440,
+      "exactRawMatch": null,
+      "differentPixels": 0,
+      "differencePercent": 0,
+      "heightBaseline": null,
+      "heightNative": null,
+      "sectionDeltas": null,
+      "nativeErrors": [],
+      "widgetErrors": []
+    }
+  ],
+  "untouchedBoundaries": [
+    "main",
+    "original Cars templates",
+    "fleet registration",
+    "lead projects",
+    "deployments"
+  ],
+  "limitations": [
+    "Full final 39-variant responsive visual matrix and owner approval pending",
+    "Compatibility widgets include jQuery/Slick/datepicker",
+    "Cars publisher, mounted base path and comprehensive content/localization integration not completed",
+    "Reference business/account/commerce data and actions remain demos"
+  ]
+}

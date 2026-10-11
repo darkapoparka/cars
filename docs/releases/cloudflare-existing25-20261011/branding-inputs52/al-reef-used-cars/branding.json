@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-reef-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:30:46.387Z",
+  "reviewScope": "Hash-identical selected current raster inputs and retained genuine surface-review provenance only; actual dealer integration, native and hosted checks pending.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-05eea37d-11ba-4d6e-a98c-15cee7f9b75b",
+    "modelVersion": null,
+    "sourceSha256": "8da1422dc157168ee9846201d41d38dabbc7edf32d8fa223b63995e742205f03",
+    "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/al-reef-used-cars/source/native-onLight.png",
+      "sha256": "8da1422dc157168ee9846201d41d38dabbc7edf32d8fa223b63995e742205f03"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/al-reef-used-cars/source/generation-receipt.json",
+      "sha256": "8b8cd3eb314a09420e473b7532baebc9080cf284d5523bb75d902ff0a109523a"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/al-reef-used-cars/branding/master.png",
+    "sha256": "52d4b898a39c361e15725e077d041f7c28a725c5edee7dee438be3c1e2e7f6a3"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/al-reef-used-cars/branding/onLight.png",
+      "sha256": "52d4b898a39c361e15725e077d041f7c28a725c5edee7dee438be3c1e2e7f6a3",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/al-reef-used-cars/source/generation-receipt.json#sha256=8b8cd3eb314a09420e473b7532baebc9080cf284d5523bb75d902ff0a109523a; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-05eea37d-11ba-4d6e-a98c-15cee7f9b75b",
+        "modelVersion": null,
+        "sourceSha256": "8da1422dc157168ee9846201d41d38dabbc7edf32d8fa223b63995e742205f03",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/al-reef-used-cars/source/native-onLight.png",
+          "sha256": "8da1422dc157168ee9846201d41d38dabbc7edf32d8fa223b63995e742205f03"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/al-reef-used-cars/source/generation-receipt.json",
+          "sha256": "8b8cd3eb314a09420e473b7532baebc9080cf284d5523bb75d902ff0a109523a"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/al-reef-used-cars/branding/onDark.png",
+      "sha256": "309b9c05eef2f4fe747797da49af9f1723717b16c20660f1e664299c1923889c",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/al-reef-used-cars/source/generation-receipt.json#sha256=8b8cd3eb314a09420e473b7532baebc9080cf284d5523bb75d902ff0a109523a; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-05eea37d-11ba-4d6e-a98c-15cee7f9b75b",
+        "modelVersion": null,
+        "sourceSha256": "8da1422dc157168ee9846201d41d38dabbc7edf32d8fa223b63995e742205f03",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/al-reef-used-cars/source/native-onDark.png",
+          "sha256": "8da1422dc157168ee9846201d41d38dabbc7edf32d8fa223b63995e742205f03"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/al-reef-used-cars/source/generation-receipt.json",
+          "sha256": "8b8cd3eb314a09420e473b7532baebc9080cf284d5523bb75d902ff0a109523a"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/al-reef-used-cars/branding/onAccent.png",
+      "sha256": "309b9c05eef2f4fe747797da49af9f1723717b16c20660f1e664299c1923889c",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/al-reef-used-cars/source/generation-receipt.json#sha256=8b8cd3eb314a09420e473b7532baebc9080cf284d5523bb75d902ff0a109523a; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-05eea37d-11ba-4d6e-a98c-15cee7f9b75b",
+        "modelVersion": null,
+        "sourceSha256": "8da1422dc157168ee9846201d41d38dabbc7edf32d8fa223b63995e742205f03",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/al-reef-used-cars/source/native-onAccent.png",
+          "sha256": "8da1422dc157168ee9846201d41d38dabbc7edf32d8fa223b63995e742205f03"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/al-reef-used-cars/source/generation-receipt.json",
+          "sha256": "8b8cd3eb314a09420e473b7532baebc9080cf284d5523bb75d902ff0a109523a"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/al-reef-used-cars/source/generation-receipt.json",
+    "sha256": "8b8cd3eb314a09420e473b7532baebc9080cf284d5523bb75d902ff0a109523a"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "new-a",
+    "proof": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/al-reef-used-cars/surface-review.png",
+      "sha256": "216dbe9a3c59a3ef6ea36aca49ca46e74cd11ca3704246cbe02df1f9b0d854f8",
+      "bytes": 120528,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Actual master and compact native-palette swatches inspected; retained pixels remain identical.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-new-a-review.json"
+  },
+  "sourceOwnershipUnchanged": true
+}

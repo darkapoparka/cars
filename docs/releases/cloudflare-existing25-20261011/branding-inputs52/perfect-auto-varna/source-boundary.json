@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-existing-dealer-branding-input-boundary",
+  "dealer": "perfect-auto-varna",
+  "identityKey": "existing-slug:perfect-auto-varna",
+  "cohort": "existing-vercel25",
+  "ownership": "maintained-main",
+  "branding": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/perfect-auto-varna/branding.json",
+    "sha256": "be0c10e0e1d8b8c7df65a715bcf7814ea180d2af6cce24bad207d081c5deeb0b"
+  },
+  "originalManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/perfect-auto-varna/source/original-dealer.json",
+    "sha256": "8ec5e3e96e099a97cd28382f38c961a9981561e8b98c31d9847a055e6c95ccaf"
+  },
+  "originalManifestGitBlob": "c3dec4d7f86733b87fd14368ec42b5e147a45d68",
+  "originalRepository": "darkapoparka/cars-perfectauto",
+  "sourceRef": {
+    "ref": "main",
+    "commit": "c5c6b0da611a3bf2756c1be2ff9764f6903536ec",
+    "tree": "d4f04fcd2b9f36cdf175b90b047e1e36f4ed0880"
+  },
+  "originalData": [
+    {
+      "path": "clients/perfect-auto-varna/business-facts.json",
+      "gitBlob": "1f9b529347d118e140050eef510e849a534d17be",
+      "bytes": 2516
+    },
+    {
+      "path": "clients/perfect-auto-varna/dealer.json",
+      "gitBlob": "c3dec4d7f86733b87fd14368ec42b5e147a45d68",
+      "bytes": 4664
+    },
+    {
+      "path": "clients/perfect-auto-varna/stock.json",
+      "gitBlob": "268884b4463c8a0e19191f5782d225d1d5bfb77e",
+      "bytes": 6871
+    }
+  ],
+  "sourceProof": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/original-source-proof.json",
+    "sha256": "477c4eedc097eb2e105b1d50cf1bc3701b558679e8f6c3c3681a3ccd6626e08c"
+  },
+  "roster": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/accepted-roster.json",
+    "sha256": "c23c6c4ea10acaca9fdc8d09351fd64735a9e2245385fb12a0f95d71f9f0080d"
+  },
+  "sourceCreation": false,
+  "clientIntegration": false,
+  "buildApproval": false,
+  "hostedApproval": false,
+  "eligibleForExistingQualifiedRequest": true,
+  "holds": [
+    "Exact latest template/source-delta/pilot qualification and preservation-aware updater remain required."
+  ]
+}

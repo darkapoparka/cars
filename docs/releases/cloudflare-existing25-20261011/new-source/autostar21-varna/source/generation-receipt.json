@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 1,
+  "rejectedOutputs": [],
+  "slug": "autostar21-varna",
+  "displayName": "AutoStar",
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Disclosed proposed improvement of AutoStar under owner single-row direction; recognizable source palette/name retained. Not official dealer rebrand or owner approval.",
+  "sourceUrls": [
+    "https://autostar21.mobile.bg",
+    "https://cdn2.focus.bg/mobile/images/housespicts/h16158943803375288.pic"
+  ],
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-9c819a9c-15ab-47e0-b49b-0d8137cd49ed.png",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-9c819a9c-15ab-47e0-b49b-0d8137cd49ed",
+    "prompt": "Create one polished automotive proposal logo as an improvement of the referenced treatment. Keep a compact distinctive emblem at left, beside custom expressive lettering on exactly ONE horizontal text row; same baseline and substantial letter height. Logo should have coherent strong silhouette and precise designer-adjusted spacing, readable at 120px header width. No text underneath, no captions, no slogans, no location claims, no repeated variation. Flat opaque colors; all outside regions, open emblem gaps and letter counters fully transparent. No gradients, no bevels, shadows, glow, texture, mockup or background plaque. One complete wide landscape logo with modest transparent margins. True RGBA alpha. Preserve business spelling and recognizable palette; this is a disclosed proposed improvement, not an official rebrand. Exact Latin AUTOSTAR on ONE row, AUTO deep red #b00020 and STAR charcoal #25272c. Preserve the source recognizable star concept as a compact distinctive open asymmetric five-point star with one short red speed tail at left; star height no taller than letters. No car roof above text. Custom bold slightly slanted automotive letters with softened chamfered corners, generous counters, clean spacing. Do not add 21 or dealership descriptor.",
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/autostar21-varna/branding/logo-master.png"
+    ],
+    "transparent_background": true,
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-9c819a9c-15ab-47e0-b49b-0d8137cd49ed.png",
+    "toolOutputHint": "Generated images are saved to C:\\Users\\radev\\.codex\\generated_images\\01a12a0e-8374-7732-9e28-580ceda2a0fc as C:\\Users\\radev\\.codex\\generated_images\\01a12a0e-8374-7732-9e28-580ceda2a0fc\\exec-9c819a9c-15ab-47e0-b49b-0d8137cd49ed.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+    "modelVersion": "not exposed by tool"
+  },
+  "styleDirection": "Compact distinctive emblem beside expressive trading name on one row; no subtitle",
+  "styleSelectionStatus": "technically-selected-awaiting-owner-review",
+  "ownerApproved": false,
+  "integrated": false,
+  "hostedVerified": false,
+  "onLight": "original",
+  "onDark": "white",
+  "onAccent": "white",
+  "accentColor": "#b00020",
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autostar21-varna/surface-review.png",
+  "supersededPack": "L:/CODEX/cars/leads/branding/fleet-20261011/autostar21-varna",
+  "revisionReason": "Large star and roof reduced to compact left star/motion symbol; stronger one-row AUTOSTAR, source red/charcoal retained.",
+  "surfaceDerivation": {
+    "onLight": "native ImageGen transparent master, fit/pad only",
+    "onDark": "contextual all-white raster export derived from the same native alpha",
+    "onAccent": "contextual all-white raster export derived from the same native alpha",
+    "nativeImageGenCalls": 1
+  },
+  "visualAccepted": true,
+  "visualChecks": {
+    "reviewedAt": "2026-10-11T11:37:58.067Z",
+    "reviewer": "root asset review",
+    "spelling": "passed visually",
+    "geometry": "complete single-row trading name; distinctive compact left emblem; no caption",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "swatches": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "contrast": "light colored treatment and contextual white treatments clear across swatches",
+    "templateConsumers": "not integrated; rendered all six application surfaces remain rollout owner responsibility",
+    "ownerApproval": false
+  },
+  "dealer": "autostar21-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-9c819a9c-15ab-47e0-b49b-0d8137cd49ed.png",
+    "sha256": "2e4eee01e9e6b539ffbdebbc732fad14af5b1e167c2f6a0d6ac274a9b48851a1",
+    "bytes": 366276,
+    "format": "png",
+    "width": 2087,
+    "height": 754,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8359930554055102,
+      "opaqueRatio": 0.1431928612008912
+    },
+    "visibleBounds": {
+      "x": 55,
+      "y": 169,
+      "width": 1984,
+      "height": 400
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autostar21-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "8921c5a3f7fb89cae2587830ba505acfa2540981add37e6f1d8b103a0b97bae3",
+      "bytes": 57568,
+      "format": "webp",
+      "width": 1496,
+      "height": 354,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7553683646031603,
+        "opaqueRatio": 0.20988927157920179
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 282
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autostar21-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "f079b81f4d3bae1fa52b63dbc003dcb0a9ec7b8dfa5faf8bbae468cab1668cdd",
+      "bytes": 33092,
+      "format": "webp",
+      "width": 1496,
+      "height": 354,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7553683646031603,
+        "opaqueRatio": 0.20988927157920179
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 282
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autostar21-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "f079b81f4d3bae1fa52b63dbc003dcb0a9ec7b8dfa5faf8bbae468cab1668cdd",
+      "bytes": 33092,
+      "format": "webp",
+      "width": 1496,
+      "height": 354,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7553683646031603,
+        "opaqueRatio": 0.20988927157920179
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 282
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autostar21-varna/branding/logo-master.png",
+    "sha256": "82915fb5fcbd92a57104329240743858dbf1ce58ed67f741b7f7f606b74f5ea2",
+    "bytes": 157418,
+    "format": "png",
+    "width": 1496,
+    "height": 354,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7553683646031603,
+      "opaqueRatio": 0.20988927157920179
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 282
+    }
+  },
+  "technicalAcceptance": {
+    "reviewedAt": "2026-10-11T11:37:58.067Z",
+    "reviewer": "root asset review",
+    "spelling": "passed visually",
+    "geometry": "complete single-row trading name; distinctive compact left emblem; no caption",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "swatches": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "contrast": "light colored treatment and contextual white treatments clear across swatches",
+    "templateConsumers": "not integrated; rendered all six application surfaces remain rollout owner responsibility",
+    "ownerApproval": false
+  },
+  "integrationVerified": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-root-export",
+  "updatedAt": "2026-10-11T11:37:58.316Z",
+  "technicalCheck": "technical-check.json",
+  "preferredCandidate": true,
+  "selectionBasis": "Asset review only; owner and dealer acceptance not established",
+  "exportScratchState": "inactive; final asset bytes and compact exporter traces verified; generated input native path preserved"
+}

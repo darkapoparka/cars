@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "triumf-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/facts.json",
+      "sha256": "d46b726efa45ec49ca3af79b74a48441e877dff55ccc355e5a6235c2c923c874"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/stock.json",
+      "sha256": "be217a5475c852603ba231464f2881f79cdede036b9d84733bbecf69f70f8ad2"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/locale.json",
+      "sha256": "b3f00e64022b6483fb8fb516cb59b49de229bf9e86076641f4508c96ffbe081a"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/branding.json",
+      "sha256": "10fb318738bb8f387ffe88c176f09ecc179f39373a5ec5d5d784579efa108f0f"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/source/business-facts.json",
+      "sha256": "9f7bccf717d3930d55e590b6102fffff73d7252c7bec4dca8560556ecf9b0d9f"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/source/locale.json",
+      "sha256": "b3f00e64022b6483fb8fb516cb59b49de229bf9e86076641f4508c96ffbe081a"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/source/stock.json",
+      "sha256": "b658e14b3a7002a52585fc4dcf500babf3af32baa95214b8d7612dfc79210a1d"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/source/generation-receipt.json",
+      "sha256": "e33ce06add1ae7a72e3db98ec9445255f657420a4d550f7fc2b4e9d947b3cb47"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/source/native-onLight.png",
+      "sha256": "9bd3492b1cda4a508808adb8c57bf91ed759eec811bc93db64b68b98888a8b39"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/source/native-onDark.png",
+      "sha256": "9bd3492b1cda4a508808adb8c57bf91ed759eec811bc93db64b68b98888a8b39"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/source/native-onAccent.png",
+      "sha256": "9bd3492b1cda4a508808adb8c57bf91ed759eec811bc93db64b68b98888a8b39"
+    }
+  ],
+  "transformations": {
+    "facts": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/source/business-facts.json",
+        "sha256": "9f7bccf717d3930d55e590b6102fffff73d7252c7bec4dca8560556ecf9b0d9f"
+      },
+      "kind": "flat-original-facts-to-business-consumer",
+      "allOriginalEvidenceUnchanged": true,
+      "derivedNameDelta": null,
+      "otherFactsUnchanged": true
+    },
+    "stock": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/source/stock.json",
+        "sha256": "b658e14b3a7002a52585fc4dcf500babf3af32baa95214b8d7612dfc79210a1d"
+      },
+      "originalSourceRecordPreserved": true,
+      "sourceId": "11786001673149613",
+      "normalizer": "loadDealerProfile",
+      "retention": "retainDealerVariantAssets",
+      "sourceKind": "dated-marketplace-listing-sample",
+      "consumerKind": "dated-listing-snapshot",
+      "availabilityUnconfirmed": true,
+      "mediaRightsNotClaimed": true,
+      "mileageUnknownMeansOnRequest": true
+    },
+    "media": [
+      {
+        "sourceId": "11786001673149613",
+        "sourcePublicPath": "/assets/vehicles/11786001673149613/1.webp",
+        "publicPath": "/dealer-stock/11786001673149613-1.webp",
+        "destination": "dealer-stock/11786001673149613-1.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/media/11786001673149613-1.webp",
+        "sha256": "45e3a1807ff0215eef998eeb83b8b2cdbf2ef7dcd4bf4fa0de51c29bca5cfe30",
+        "bytes": 136202
+      },
+      {
+        "sourceId": "11786001673149613",
+        "sourcePublicPath": "/assets/vehicles/11786001673149613/2.webp",
+        "publicPath": "/dealer-stock/11786001673149613-2.webp",
+        "destination": "dealer-stock/11786001673149613-2.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/media/11786001673149613-2.webp",
+        "sha256": "705e1b68673e675347afd3680efb67b1c4956a72068d770d31ab5327e93c2f8b",
+        "bytes": 160116
+      }
+    ],
+    "branding": {
+      "acceptedManifest": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+        "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+      },
+      "originalGenerationReceipt": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/source/generation-receipt.json",
+        "sha256": "e33ce06add1ae7a72e3db98ec9445255f657420a4d550f7fc2b4e9d947b3cb47"
+      },
+      "noNewGeneration": true,
+      "modelVersion": null,
+      "pixelsUnchanged": true
+    },
+    "identity": null
+  }
+}

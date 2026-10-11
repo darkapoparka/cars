@@ -1,0 +1,202 @@
+{
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-70d77276-38a6-483d-b86f-20e67fa217e1.png",
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Material redesigned proposal; Detailed eagle/tiny caption and many stripes replaced by bold wings and cleaner Cyrillic type. Not owner/dealer approved.",
+  "sourceUrls": [
+    "https://asko96.bg/"
+  ],
+  "sourceLogoUrl": "https://asko96.bg/wp-content/uploads/2024/03/29logo.png",
+  "workingLogoPath": "leads/branding/fleet-20261011/asko-96/source/published-logo.png",
+  "publishedBranding": {
+    "observedAt": "2026-10-11",
+    "visualReference": "CUA website header and saved published source."
+  },
+  "imageGeneration": {
+    "reference": "exec-70d77276-38a6-483d-b86f-20e67fa217e1",
+    "tool": "image_gen.imagegen",
+    "transparent_background": true,
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/asko-96/source/published-logo.png"
+    ],
+    "prompt": "Design a polished contemporary PROPOSAL logo for exact Bulgarian dealer name АСКО96, referencing this published eagle/red-speed-lines identity. Keep exact Cyrillic АСКО96 name and recognizable red/graphite spirit, but modernize the detailed eagle into a clean bold geometric paired-wing mark with one open V-shaped center; no feathers or tiny details. Large confident italic custom Cyrillic АСКО96 wordmark to right, clear К and О shapes and distinct96, professional moderately condensed geometry. One restrained deep-red speed accent beneath, no busy row of many stripes. Remove АВТОКЪЩИ caption, anniversary badge, slogan and phone. Dark graphite #25272c and deep red #b90023 flat ink. Modern wide compact mark that remains strong at120px. True RGBA transparency including every letter/wing counter; no background/plaque, shadow, glow, metallic effects, checkerboard. Complete unclipped outline with modest margins. Material redesign proposal, not exact original or dealer approved.",
+    "output_hint": "Generated images are saved to C:\\Users\\radev\\.codex\\generated_images\\01a12a34-3dcd-7920-8e75-5eb5eac386bd as C:\\Users\\radev\\.codex\\generated_images\\01a12a34-3dcd-7920-8e75-5eb5eac386bd\\exec-70d77276-38a6-483d-b86f-20e67fa217e1.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  "visualAccepted": true,
+  "surfaceReviewPath": "L:/CODEX/cars/leads/branding/fleet-20261011/asko-96/surface-review.png",
+  "previousTreatment": {
+    "receipt": "previous-treatment/receipt.json",
+    "contract": "previous-treatment/branding/logo-contract.json",
+    "compactQA": "previous-treatment/surface-review.png",
+    "reason": "Detailed eagle/tiny caption and many stripes replaced by bold wings and cleaner Cyrillic type."
+  },
+  "visualChecks": {
+    "treatments": "Graphite/red onLight; white onDark/onAccent",
+    "scope": "Disclosed proposal; technical isolated asset only; owner/dealer/integration/hosted pending",
+    "heightLimit": 76,
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "spelling": "Exact АСКО96",
+    "geometry": "Disclosed geometric wings replacing detailed eagle; source spirit retained with cleaner italic Cyrillic type",
+    "residue": "No material compact fringe, clipped geometry, plaque or filled counters"
+  },
+  "schemaVersion": 1,
+  "dealer": "asko-96",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-70d77276-38a6-483d-b86f-20e67fa217e1.png",
+    "sha256": "ee5bc57335d9197ff14ec9bc252b18581ed6a5e7783848dcbf9e4b559ac488e9",
+    "bytes": 521607,
+    "format": "png",
+    "width": 2170,
+    "height": 725,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7473510249483554,
+      "opaqueRatio": 0.22456697918321944
+    },
+    "visibleBounds": {
+      "x": 106,
+      "y": 130,
+      "width": 2009,
+      "height": 498
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/asko-96/dealer-brand/logo-on-light.webp",
+      "sha256": "865263bdd0cd118bc1437fae0e7b648efdecf7ec62f186eefafb73c949112e38",
+      "bytes": 74706,
+      "format": "webp",
+      "width": 1496,
+      "height": 419,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6882394420124309,
+        "opaqueRatio": 0.27139994639643666
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 347
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/asko-96/dealer-brand/logo-on-dark.webp",
+      "sha256": "34738c46f9ac387e75e0c54c6f2c3d208ce2ea103ecfa59365bf5225837f59e0",
+      "bytes": 44728,
+      "format": "webp",
+      "width": 1496,
+      "height": 419,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6882394420124309,
+        "opaqueRatio": 0.27139994639643666
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 347
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/asko-96/dealer-brand/logo-on-accent.webp",
+      "sha256": "34738c46f9ac387e75e0c54c6f2c3d208ce2ea103ecfa59365bf5225837f59e0",
+      "bytes": 44728,
+      "format": "webp",
+      "width": 1496,
+      "height": 419,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6882394420124309,
+        "opaqueRatio": 0.27139994639643666
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 347
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/asko-96/branding/logo-master.png",
+    "sha256": "717c5106d610102e6faf0376726dc6abf599673b09d18a01ef3ee8f7cc82e021",
+    "bytes": 226965,
+    "format": "png",
+    "width": 1496,
+    "height": 419,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.6882394420124309,
+      "opaqueRatio": 0.27139994639643666
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 347
+    }
+  },
+  "technicalAcceptance": {
+    "treatments": "Graphite/red onLight; white onDark/onAccent",
+    "scope": "Disclosed proposal; technical isolated asset only; owner/dealer/integration/hosted pending",
+    "heightLimit": 76,
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "spelling": "Exact АСКО96",
+    "geometry": "Disclosed geometric wings replacing detailed eagle; source spirit retained with cleaner italic Cyrillic type",
+    "residue": "No material compact fringe, clipped geometry, plaque or filled counters"
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "ownerApproved": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "L:/CODEX/cars/runtime/fleet-logo-20261011/existing-export",
+  "updatedAt": "2026-10-11T09:52:59.889Z",
+  "sourceEvidence": [
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/asko-96/source/published-logo.png",
+      "sha256": "eb89af2db8c1580309a204c161fc474a7da0e2725e90c8d2d771015a6333dd6c",
+      "bytes": 64298,
+      "format": "png",
+      "width": 801,
+      "height": 189,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6816743620738627,
+        "opaqueRatio": 0.29124308899589796
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 1,
+        "width": 801,
+        "height": 188
+      }
+    }
+  ],
+  "provenanceFile": "L:/CODEX/cars/leads/branding/fleet-20261011/asko-96/provenance.json"
+}

@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "transcar-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/facts.json",
+      "sha256": "db75a18cff027a3c89e04ceb6b350c93cc296d2129592308bec45f92181a343c"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/stock.json",
+      "sha256": "2c2bf5a127b9e65a76164542b8d977728491bc310f45cfc92c51e59663fffb1b"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/locale.json",
+      "sha256": "7d2b95da58908f29fb0dd29f12a7f3bd7663f03bef8f460152fc225860887180"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/branding.json",
+      "sha256": "82d9f100a422dd3df54042663e22fbe5732bd15d4195c204ebcdd321626ff3e4"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/source/business-facts.json",
+      "sha256": "7d97b62d601ba1d060831a3ae14adf96d9891713d56068976b0bf030bbdc6a42"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/source/locale.json",
+      "sha256": "7d2b95da58908f29fb0dd29f12a7f3bd7663f03bef8f460152fc225860887180"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/source/stock.json",
+      "sha256": "137460473947964c2e5c230e815589367d099cc775be5927c957cedcb75d6159"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/source/generation-receipt.json",
+      "sha256": "667a3007fdcbd316d0f346ac804f50822b7f48503e9b804fa2f3073a1d57b0cd"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/source/native-onLight.png",
+      "sha256": "a727ead46d81c07ffb91270310f714e75aa4dc49552b7e848d984e8d6dd26c85"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/source/native-onDark.png",
+      "sha256": "a727ead46d81c07ffb91270310f714e75aa4dc49552b7e848d984e8d6dd26c85"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/source/native-onAccent.png",
+      "sha256": "a727ead46d81c07ffb91270310f714e75aa4dc49552b7e848d984e8d6dd26c85"
+    }
+  ],
+  "transformations": {
+    "facts": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/source/business-facts.json",
+        "sha256": "7d97b62d601ba1d060831a3ae14adf96d9891713d56068976b0bf030bbdc6a42"
+      },
+      "kind": "flat-original-facts-to-business-consumer",
+      "allOriginalEvidenceUnchanged": true,
+      "derivedNameDelta": null,
+      "otherFactsUnchanged": true
+    },
+    "stock": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/source/stock.json",
+        "sha256": "137460473947964c2e5c230e815589367d099cc775be5927c957cedcb75d6159"
+      },
+      "originalSourceRecordPreserved": true,
+      "sourceId": "11772031596218515",
+      "normalizer": "loadDealerProfile",
+      "retention": "retainDealerVariantAssets",
+      "sourceKind": "dated-marketplace-listing-sample",
+      "consumerKind": "dated-listing-snapshot",
+      "availabilityUnconfirmed": true,
+      "mediaRightsNotClaimed": true,
+      "mileageUnknownMeansOnRequest": true
+    },
+    "media": [
+      {
+        "sourceId": "11772031596218515",
+        "sourcePublicPath": "/assets/vehicles/11772031596218515/1.webp",
+        "publicPath": "/dealer-stock/11772031596218515-1.webp",
+        "destination": "dealer-stock/11772031596218515-1.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/media/11772031596218515-1.webp",
+        "sha256": "2c212f01fdb22444c6098e5bdfe6c67d528dfa1eeebe2c17dae0ea376f116aca",
+        "bytes": 216838
+      },
+      {
+        "sourceId": "11772031596218515",
+        "sourcePublicPath": "/assets/vehicles/11772031596218515/2.webp",
+        "publicPath": "/dealer-stock/11772031596218515-2.webp",
+        "destination": "dealer-stock/11772031596218515-2.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/media/11772031596218515-2.webp",
+        "sha256": "38e4bf34a754419b5bb4780c2f8c4bbdcf32928788c59e3096b581cb7a47ab6c",
+        "bytes": 288202
+      }
+    ],
+    "branding": {
+      "acceptedManifest": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+        "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+      },
+      "originalGenerationReceipt": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/source/generation-receipt.json",
+        "sha256": "667a3007fdcbd316d0f346ac804f50822b7f48503e9b804fa2f3073a1d57b0cd"
+      },
+      "noNewGeneration": true,
+      "modelVersion": null,
+      "pixelsUnchanged": true
+    },
+    "identity": null
+  }
+}

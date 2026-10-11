@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dealer": "dynamic-auto-varna",
+  "createdAt": "2026-10-10T16:40:40.766Z",
+  "original": {
+    "width": 444,
+    "height": 160,
+    "sha256": "f6104bfbd1a98ae022769700b20b5b24efc9ced432a50b69def53cad53506c01"
+  },
+  "method": "Lossless raster format conversion of the published logo; no AI refresh or creative replacement.",
+  "icon": {
+    "input": "assets/brand/logo.png",
+    "png": "assets/app-icon.png",
+    "ico": "assets/favicon.ico",
+    "originalIdentityRetained": true
+  },
+  "finalLogoRefresh": "pending-surface-review",
+  "visualQa": false
+}

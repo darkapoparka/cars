@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "wildivaka-varna",
+  "dealerId": "wildivaka-varna",
+  "business": {
+    "schemaVersion": 1,
+    "slug": "wildivaka-varna",
+    "name": "Axe Cars",
+    "shortName": "Axe Cars",
+    "city": "Варна",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "phone": "0898467497",
+    "phoneDisplay": "0898467497",
+    "phoneE164": "+359898467497",
+    "phones": [
+      "0898467497",
+      "0879370777"
+    ],
+    "addressLine": "Бул. Цар Освободител 302",
+    "address": "Бул. Цар Освободител 302, Варна, България",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "email": "",
+    "sourceUrl": "https://wildivaka.mobile.bg/",
+    "stockUrl": "https://wildivaka.mobile.bg/",
+    "contactSourceUrl": "https://wildivaka.mobile.bg/contacts",
+    "observedAt": "2026-10-11T11:54:04.048Z",
+    "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "services": [],
+    "socialLinks": {},
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sourceFacts": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/wildivaka-varna/source/business-facts.json",
+    "sha256": "60d7b24eb03e63d3bb430439e6880051534b1905de1f484f3300464d70600f0a"
+  },
+  "originalBusinessLiteralsUnchanged": true
+}

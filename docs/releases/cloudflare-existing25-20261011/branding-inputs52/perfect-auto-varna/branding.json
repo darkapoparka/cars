@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "dealer": "perfect-auto-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:30:47.039Z",
+  "reviewScope": "Hash-identical selected current raster inputs and retained genuine surface-review provenance only; actual dealer integration, native and hosted checks pending.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-7b72c850-5738-4c17-a568-f6968d911260",
+    "modelVersion": null,
+    "sourceSha256": "22beccccbd729c506b2697550d4a0b0f73b98bb0c8d46a9757a0d78b027d09d7",
+    "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/perfect-auto-varna/source/native-onLight.png",
+      "sha256": "22beccccbd729c506b2697550d4a0b0f73b98bb0c8d46a9757a0d78b027d09d7"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/perfect-auto-varna/source/generation-receipt.json",
+      "sha256": "9f37d20b7e132f64fdd7917c9bb4b582551a8e51a6a092bdd862a7582cc2b0db"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/perfect-auto-varna/branding/master.png",
+    "sha256": "f4502f937a21399901e591a41e39a1341e69cdb0830a3eb6ae3720c0cbb5cd44"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/perfect-auto-varna/branding/onLight.png",
+      "sha256": "f4502f937a21399901e591a41e39a1341e69cdb0830a3eb6ae3720c0cbb5cd44",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/perfect-auto-varna/source/generation-receipt.json#sha256=9f37d20b7e132f64fdd7917c9bb4b582551a8e51a6a092bdd862a7582cc2b0db; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-7b72c850-5738-4c17-a568-f6968d911260",
+        "modelVersion": null,
+        "sourceSha256": "22beccccbd729c506b2697550d4a0b0f73b98bb0c8d46a9757a0d78b027d09d7",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/perfect-auto-varna/source/native-onLight.png",
+          "sha256": "22beccccbd729c506b2697550d4a0b0f73b98bb0c8d46a9757a0d78b027d09d7"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/perfect-auto-varna/source/generation-receipt.json",
+          "sha256": "9f37d20b7e132f64fdd7917c9bb4b582551a8e51a6a092bdd862a7582cc2b0db"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/perfect-auto-varna/branding/onDark.png",
+      "sha256": "4c90c8c772a48670a4423d4e2bd2bdc90733313460af720435e9cccb98b0cc6d",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/perfect-auto-varna/source/generation-receipt.json#sha256=9f37d20b7e132f64fdd7917c9bb4b582551a8e51a6a092bdd862a7582cc2b0db; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-7b72c850-5738-4c17-a568-f6968d911260",
+        "modelVersion": null,
+        "sourceSha256": "22beccccbd729c506b2697550d4a0b0f73b98bb0c8d46a9757a0d78b027d09d7",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/perfect-auto-varna/source/native-onDark.png",
+          "sha256": "22beccccbd729c506b2697550d4a0b0f73b98bb0c8d46a9757a0d78b027d09d7"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/perfect-auto-varna/source/generation-receipt.json",
+          "sha256": "9f37d20b7e132f64fdd7917c9bb4b582551a8e51a6a092bdd862a7582cc2b0db"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/perfect-auto-varna/branding/onAccent.png",
+      "sha256": "4c90c8c772a48670a4423d4e2bd2bdc90733313460af720435e9cccb98b0cc6d",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/perfect-auto-varna/source/generation-receipt.json#sha256=9f37d20b7e132f64fdd7917c9bb4b582551a8e51a6a092bdd862a7582cc2b0db; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-7b72c850-5738-4c17-a568-f6968d911260",
+        "modelVersion": null,
+        "sourceSha256": "22beccccbd729c506b2697550d4a0b0f73b98bb0c8d46a9757a0d78b027d09d7",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/perfect-auto-varna/source/native-onAccent.png",
+          "sha256": "22beccccbd729c506b2697550d4a0b0f73b98bb0c8d46a9757a0d78b027d09d7"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/perfect-auto-varna/source/generation-receipt.json",
+          "sha256": "9f37d20b7e132f64fdd7917c9bb4b582551a8e51a6a092bdd862a7582cc2b0db"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/perfect-auto-varna/source/generation-receipt.json",
+    "sha256": "9f37d20b7e132f64fdd7917c9bb4b582551a8e51a6a092bdd862a7582cc2b0db"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "new-a",
+    "proof": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/perfect-auto-varna/surface-review.png",
+      "sha256": "453380bb1a2c0bbb8813a8daeb8c8b1cacca2494d1c33818eb53869d3423ccb6",
+      "bytes": 161111,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Actual master and compact native-palette swatches inspected; retained pixels remain identical.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-new-a-review.json"
+  },
+  "sourceOwnershipUnchanged": true
+}

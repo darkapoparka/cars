@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "dealer": "tesi-car-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:30:47.985Z",
+  "reviewScope": "Hash-identical selected current raster inputs and retained genuine surface-review provenance only; actual dealer integration, native and hosted checks pending.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-839f20c3-fdc5-4d6c-8297-55e416c92cec",
+    "modelVersion": null,
+    "sourceSha256": "7daaade19adc6e2fa2516d5d9f31d2c46f73d50451a2d766aae37ed27b838cea",
+    "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/tesi-car-varna/source/native-onLight.png",
+      "sha256": "7daaade19adc6e2fa2516d5d9f31d2c46f73d50451a2d766aae37ed27b838cea"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/tesi-car-varna/source/generation-receipt.json",
+      "sha256": "99ca46896d67f59b0d3b920b3ce127ed2b0fee1b850b68527ed5a6d46d1bca17"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/tesi-car-varna/branding/master.png",
+    "sha256": "6c7362b70c0ead215e7b5d343314d78584592c267d9e9fdb998fe8a8102bb7d3"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/tesi-car-varna/branding/onLight.png",
+      "sha256": "6c7362b70c0ead215e7b5d343314d78584592c267d9e9fdb998fe8a8102bb7d3",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/tesi-car-varna/source/generation-receipt.json#sha256=99ca46896d67f59b0d3b920b3ce127ed2b0fee1b850b68527ed5a6d46d1bca17; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-839f20c3-fdc5-4d6c-8297-55e416c92cec",
+        "modelVersion": null,
+        "sourceSha256": "7daaade19adc6e2fa2516d5d9f31d2c46f73d50451a2d766aae37ed27b838cea",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/tesi-car-varna/source/native-onLight.png",
+          "sha256": "7daaade19adc6e2fa2516d5d9f31d2c46f73d50451a2d766aae37ed27b838cea"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/tesi-car-varna/source/generation-receipt.json",
+          "sha256": "99ca46896d67f59b0d3b920b3ce127ed2b0fee1b850b68527ed5a6d46d1bca17"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/tesi-car-varna/branding/onDark.png",
+      "sha256": "6d7c50811a343efd24d9e970003c480d2831a178b470c44bde35796688c2eaed",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/tesi-car-varna/source/generation-receipt.json#sha256=99ca46896d67f59b0d3b920b3ce127ed2b0fee1b850b68527ed5a6d46d1bca17; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-839f20c3-fdc5-4d6c-8297-55e416c92cec",
+        "modelVersion": null,
+        "sourceSha256": "7daaade19adc6e2fa2516d5d9f31d2c46f73d50451a2d766aae37ed27b838cea",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/tesi-car-varna/source/native-onDark.png",
+          "sha256": "7daaade19adc6e2fa2516d5d9f31d2c46f73d50451a2d766aae37ed27b838cea"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/tesi-car-varna/source/generation-receipt.json",
+          "sha256": "99ca46896d67f59b0d3b920b3ce127ed2b0fee1b850b68527ed5a6d46d1bca17"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/tesi-car-varna/branding/onAccent.png",
+      "sha256": "6d7c50811a343efd24d9e970003c480d2831a178b470c44bde35796688c2eaed",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/tesi-car-varna/source/generation-receipt.json#sha256=99ca46896d67f59b0d3b920b3ce127ed2b0fee1b850b68527ed5a6d46d1bca17; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-839f20c3-fdc5-4d6c-8297-55e416c92cec",
+        "modelVersion": null,
+        "sourceSha256": "7daaade19adc6e2fa2516d5d9f31d2c46f73d50451a2d766aae37ed27b838cea",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/tesi-car-varna/source/native-onAccent.png",
+          "sha256": "7daaade19adc6e2fa2516d5d9f31d2c46f73d50451a2d766aae37ed27b838cea"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/tesi-car-varna/source/generation-receipt.json",
+          "sha256": "99ca46896d67f59b0d3b920b3ce127ed2b0fee1b850b68527ed5a6d46d1bca17"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/tesi-car-varna/source/generation-receipt.json",
+    "sha256": "99ca46896d67f59b0d3b920b3ce127ed2b0fee1b850b68527ed5a6d46d1bca17"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "root",
+    "proof": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/tesi-car-varna/surface-review.png",
+      "sha256": "13668aa25e1c996e1423f1c52bd68facd9c59bd0a7126a412f7ecfb66bc8d3aa",
+      "bytes": 123642,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Current master and120/180 light/dark rendered contact sheets inspected; existing320/all-native-swatches review remains applicable to identical pixels.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-root-review.json"
+  },
+  "sourceOwnershipUnchanged": true
+}

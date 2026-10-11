@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "dealer": "specialcarood-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:01:13.451Z",
+  "reviewScope": "Exact final accepted logo assets and prior genuine surface review retained; actual six-template integration and hosted acceptance remain pending.",
+  "identityStatus": "Disclosed improved proposal of published СПЕЦИАЛ КАР red-roof/gray-wheel identity; cleaner horizontal hierarchy and no tiny generic descriptor, not official approval",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-894ff64e-5739-4abb-857a-68b80aec984a",
+    "modelVersion": null,
+    "sourceSha256": "2291894223859847a391c8833f14760a2a33f041e726c59cf1ae041318e1283b",
+    "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/source/native-onLight.png",
+      "sha256": "2291894223859847a391c8833f14760a2a33f041e726c59cf1ae041318e1283b"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/source/generation-receipt.json",
+      "sha256": "552f44cdced68a2aba05257a36a37d6234fbc8e28513e23a728bbb5c42d1301f"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/branding/master.png",
+    "sha256": "5dc7f91faee34a214a23158a6ce5163448a42eb7f08e00113e1fa5d828f49b24"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/branding/onLight.png",
+      "sha256": "5dc7f91faee34a214a23158a6ce5163448a42eb7f08e00113e1fa5d828f49b24",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/source/generation-receipt.json#sha256=552f44cdced68a2aba05257a36a37d6234fbc8e28513e23a728bbb5c42d1301f; reviewed onLight PNG from exact accepted final logo manifest b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-894ff64e-5739-4abb-857a-68b80aec984a",
+        "modelVersion": null,
+        "sourceSha256": "2291894223859847a391c8833f14760a2a33f041e726c59cf1ae041318e1283b",
+        "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/source/native-onLight.png",
+          "sha256": "2291894223859847a391c8833f14760a2a33f041e726c59cf1ae041318e1283b"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/source/generation-receipt.json",
+          "sha256": "552f44cdced68a2aba05257a36a37d6234fbc8e28513e23a728bbb5c42d1301f"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/branding/onDark.png",
+      "sha256": "e70870da81064d535682018cfb9a74f292f0b7cdeecbafae4ad34fdc3b1802c9",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/source/generation-receipt.json#sha256=552f44cdced68a2aba05257a36a37d6234fbc8e28513e23a728bbb5c42d1301f; reviewed onDark PNG from exact accepted final logo manifest b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-894ff64e-5739-4abb-857a-68b80aec984a",
+        "modelVersion": null,
+        "sourceSha256": "2291894223859847a391c8833f14760a2a33f041e726c59cf1ae041318e1283b",
+        "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/source/native-onDark.png",
+          "sha256": "2291894223859847a391c8833f14760a2a33f041e726c59cf1ae041318e1283b"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/source/generation-receipt.json",
+          "sha256": "552f44cdced68a2aba05257a36a37d6234fbc8e28513e23a728bbb5c42d1301f"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/branding/onAccent.png",
+      "sha256": "e70870da81064d535682018cfb9a74f292f0b7cdeecbafae4ad34fdc3b1802c9",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/source/generation-receipt.json#sha256=552f44cdced68a2aba05257a36a37d6234fbc8e28513e23a728bbb5c42d1301f; reviewed onAccent PNG from exact accepted final logo manifest b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-894ff64e-5739-4abb-857a-68b80aec984a",
+        "modelVersion": null,
+        "sourceSha256": "2291894223859847a391c8833f14760a2a33f041e726c59cf1ae041318e1283b",
+        "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/source/native-onAccent.png",
+          "sha256": "2291894223859847a391c8833f14760a2a33f041e726c59cf1ae041318e1283b"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/source/generation-receipt.json",
+          "sha256": "552f44cdced68a2aba05257a36a37d6234fbc8e28513e23a728bbb5c42d1301f"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/source/generation-receipt.json",
+    "sha256": "552f44cdced68a2aba05257a36a37d6234fbc8e28513e23a728bbb5c42d1301f"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "new-a",
+    "proof": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/specialcarood-varna/surface-review.png",
+      "sha256": "176a0661cfb6e2bfb2dcc975be35a57f5eb56a63c1e2214cfbef2fbbf4759bbd",
+      "bytes": 118796,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Actual master and compact native-palette swatches inspected; retained pixels remain identical.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-new-a-review.json"
+  },
+  "identityHeld": false
+}

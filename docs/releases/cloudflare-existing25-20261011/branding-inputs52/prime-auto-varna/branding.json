@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "dealer": "prime-auto-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:30:47.824Z",
+  "reviewScope": "Hash-identical selected current raster inputs and retained genuine surface-review provenance only; actual dealer integration, native and hosted checks pending.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-ba1e8b29-6d78-4b71-86de-ad7754ef69ef",
+    "modelVersion": null,
+    "sourceSha256": "be875fafef8d2f868deb6b146ee6523d0d058bea8b4c29fc28dee109470caf9c",
+    "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/prime-auto-varna/source/native-onLight.png",
+      "sha256": "be875fafef8d2f868deb6b146ee6523d0d058bea8b4c29fc28dee109470caf9c"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/prime-auto-varna/source/generation-receipt.json",
+      "sha256": "c52a222ed8ffabfc61936eacc31e991286fea0eeac75c49062d99137386d3b10"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/prime-auto-varna/branding/master.png",
+    "sha256": "ab53582e5e560e47abe8183e392cd7406c31158a415317047b4ba3c8675eec23"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/prime-auto-varna/branding/onLight.png",
+      "sha256": "ab53582e5e560e47abe8183e392cd7406c31158a415317047b4ba3c8675eec23",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/prime-auto-varna/source/generation-receipt.json#sha256=c52a222ed8ffabfc61936eacc31e991286fea0eeac75c49062d99137386d3b10; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-ba1e8b29-6d78-4b71-86de-ad7754ef69ef",
+        "modelVersion": null,
+        "sourceSha256": "be875fafef8d2f868deb6b146ee6523d0d058bea8b4c29fc28dee109470caf9c",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/prime-auto-varna/source/native-onLight.png",
+          "sha256": "be875fafef8d2f868deb6b146ee6523d0d058bea8b4c29fc28dee109470caf9c"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/prime-auto-varna/source/generation-receipt.json",
+          "sha256": "c52a222ed8ffabfc61936eacc31e991286fea0eeac75c49062d99137386d3b10"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/prime-auto-varna/branding/onDark.png",
+      "sha256": "e1e497c8fbc677187f3d83f4334dcb2080a109ab832b82fbb30d5359a9b80ce2",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/prime-auto-varna/source/generation-receipt.json#sha256=c52a222ed8ffabfc61936eacc31e991286fea0eeac75c49062d99137386d3b10; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-ba1e8b29-6d78-4b71-86de-ad7754ef69ef",
+        "modelVersion": null,
+        "sourceSha256": "be875fafef8d2f868deb6b146ee6523d0d058bea8b4c29fc28dee109470caf9c",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/prime-auto-varna/source/native-onDark.png",
+          "sha256": "be875fafef8d2f868deb6b146ee6523d0d058bea8b4c29fc28dee109470caf9c"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/prime-auto-varna/source/generation-receipt.json",
+          "sha256": "c52a222ed8ffabfc61936eacc31e991286fea0eeac75c49062d99137386d3b10"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/prime-auto-varna/branding/onAccent.png",
+      "sha256": "e1e497c8fbc677187f3d83f4334dcb2080a109ab832b82fbb30d5359a9b80ce2",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/prime-auto-varna/source/generation-receipt.json#sha256=c52a222ed8ffabfc61936eacc31e991286fea0eeac75c49062d99137386d3b10; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-ba1e8b29-6d78-4b71-86de-ad7754ef69ef",
+        "modelVersion": null,
+        "sourceSha256": "be875fafef8d2f868deb6b146ee6523d0d058bea8b4c29fc28dee109470caf9c",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/prime-auto-varna/source/native-onAccent.png",
+          "sha256": "be875fafef8d2f868deb6b146ee6523d0d058bea8b4c29fc28dee109470caf9c"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/prime-auto-varna/source/generation-receipt.json",
+          "sha256": "c52a222ed8ffabfc61936eacc31e991286fea0eeac75c49062d99137386d3b10"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/prime-auto-varna/source/generation-receipt.json",
+    "sha256": "c52a222ed8ffabfc61936eacc31e991286fea0eeac75c49062d99137386d3b10"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "existing",
+    "proof": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/prime-auto-varna/surface-review.png",
+      "sha256": "afa333ae6c53a1e6f4206f2eb54e7babb126c03bdb5630b17f7f786e16382c33",
+      "bytes": 112149,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Actual master and compact native-palette swatches inspected; retained pixels remain identical.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-existing-review.json"
+  },
+  "sourceOwnershipUnchanged": true
+}

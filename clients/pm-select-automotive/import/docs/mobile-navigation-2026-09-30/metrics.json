@@ -1,0 +1,164 @@
+[
+	{
+		"overflow": false,
+		"tabs": [
+			{
+				"font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+				"height": 44,
+				"left": 16,
+				"line": "24px",
+				"size": "20px",
+				"text": "Buy",
+				"top": 66,
+				"weight": "400"
+			},
+			{
+				"font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+				"height": 44,
+				"left": 160.921875,
+				"line": "24px",
+				"size": "20px",
+				"text": "Import",
+				"top": 66,
+				"weight": "400"
+			}
+		],
+		"url": "http://127.0.0.1:5174/en?lang=en",
+		"width": 320
+	},
+	{
+		"overflow": false,
+		"tabs": [
+			{
+				"font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+				"height": 44,
+				"left": 16,
+				"line": "24px",
+				"size": "20px",
+				"text": "VIN",
+				"top": 66,
+				"weight": "400"
+			},
+			{
+				"font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+				"height": 44,
+				"left": 160,
+				"line": "24px",
+				"size": "20px",
+				"text": "No VIN?",
+				"top": 66,
+				"weight": "400"
+			}
+		],
+		"url": "http://127.0.0.1:5174/en/sell-your-car?lang=en",
+		"width": 320
+	},
+	{
+		"overflow": false,
+		"tabs": [
+			{
+				"font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+				"height": 44,
+				"left": 16,
+				"line": "24px",
+				"size": "20px",
+				"text": "LINK / VIN",
+				"top": 66,
+				"weight": "400"
+			},
+			{
+				"font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+				"height": 44,
+				"left": 160,
+				"line": "24px",
+				"size": "20px",
+				"text": "Find a car",
+				"top": 66,
+				"weight": "400"
+			}
+		],
+		"url": "http://127.0.0.1:5174/en/import?lang=en",
+		"width": 320
+	},
+	{
+		"overflow": false,
+		"tabs": [
+			{
+				"font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+				"height": 44,
+				"left": 16,
+				"line": "24px",
+				"size": "20px",
+				"text": "Buy",
+				"top": 66,
+				"weight": "400"
+			},
+			{
+				"font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+				"height": 44,
+				"left": 195,
+				"line": "24px",
+				"size": "20px",
+				"text": "Import",
+				"top": 66,
+				"weight": "400"
+			}
+		],
+		"url": "http://127.0.0.1:5174/en?lang=en",
+		"width": 390
+	},
+	{
+		"overflow": false,
+		"tabs": [
+			{
+				"font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+				"height": 44,
+				"left": 16,
+				"line": "24px",
+				"size": "20px",
+				"text": "VIN",
+				"top": 66,
+				"weight": "400"
+			},
+			{
+				"font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+				"height": 44,
+				"left": 195,
+				"line": "24px",
+				"size": "20px",
+				"text": "No VIN?",
+				"top": 66,
+				"weight": "400"
+			}
+		],
+		"url": "http://127.0.0.1:5174/en/sell-your-car?lang=en",
+		"width": 390
+	},
+	{
+		"overflow": false,
+		"tabs": [
+			{
+				"font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+				"height": 44,
+				"left": 16,
+				"line": "24px",
+				"size": "20px",
+				"text": "LINK / VIN",
+				"top": 66,
+				"weight": "400"
+			},
+			{
+				"font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+				"height": 44,
+				"left": 195,
+				"line": "24px",
+				"size": "20px",
+				"text": "Find a car",
+				"top": 66,
+				"weight": "400"
+			}
+		],
+		"url": "http://127.0.0.1:5174/en/import?lang=en",
+		"width": 390
+	}
+]

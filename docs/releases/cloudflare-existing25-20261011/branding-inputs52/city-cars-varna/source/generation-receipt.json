@@ -1,0 +1,329 @@
+{
+  "slug": "city-cars-varna",
+  "coreName": "СИТИ КАРС",
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-c240b5f1-1e91-4f05-855c-b3f50ba18c42.png",
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "New disclosed single-row expressive automotive proposal; owner/style and dealer approval pending",
+  "onLight": "original",
+  "onDark": "white",
+  "onAccent": "white",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-c240b5f1-1e91-4f05-855c-b3f50ba18c42",
+    "prompt": "Use the attached AVTOMOTOR identity ONLY as a reference for expressive confident automotive letter shapes. Do not copy its emblem or words or stacked layout. Create ONE complete fresh proposed identity, with a small distinctive business-specific emblem LEFT of the name on ONE horizontal row, all on one common visual axis. No text above/below, subtitles, slogans, phone, location caption, descriptors beyond the exact requested core name, underline, stacked layout, multiple options, chrome, gradients, shadow, glow, texture or background plate. True transparent RGBA canvas. Flat solid opaque shapes with clean transparent counters, generous open counters, balanced kerning and modest clear padding. Name charcoal #20252b, useful identity accent confined to emblem. Custom automotive lettering with a restrained forward slant; no plain generic sans typesetting. Distinctive emblem must relate to this name, not a fleet-wide symbol. Exact name: СИТИ КАРС. Exact Cyrillic. A compact charcoal Cyrillic C-shaped emblem containing a deep-green #155b43 gently turning road cutout; no skyline, generic car silhouette or equalizer bars. Broad slightly slanted rounded-square Cyrillic wordmark, distinctive К terminals. Complete wide landscape logo, all requested words equally prominent on the same row. Proposed dealer demo identity, no official approval claim.",
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/am-varna-varna/branding/logo-master.png"
+    ],
+    "transparent_background": true,
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-c240b5f1-1e91-4f05-855c-b3f50ba18c42.png",
+    "actualOutputHint": "Generated images are saved to C:\\Users\\radev\\.codex\\generated_images\\01a12a34-877e-73a2-9a3d-346e546742c6 as C:\\Users\\radev\\.codex\\generated_images\\01a12a34-877e-73a2-9a3d-346e546742c6\\exec-c240b5f1-1e91-4f05-855c-b3f50ba18c42.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  "derivation": {
+    "kind": "new-proposed-identity",
+    "styleReferenceOnly": true,
+    "businessIdentityBasis": "Published source or previous disclosed proposal inspected in original surface QA; recognizable name-specific cues and useful identity colors preserved.",
+    "directionPath": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/DIRECTION.md",
+    "changeReason": "One line and green C road cue but generic typography; expressive Cyrillic lettering improves character."
+  },
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/city-cars-varna/surface-review.png",
+  "visualAccepted": true,
+  "ownerStyleStatus": "pending",
+  "originalPackage": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/city-cars-varna",
+    "files": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/city-cars-varna/branding/logo-master.png",
+        "sha256": "a6a432dbf6cb68af5cb7d17647577943e3fce6cf5acb414d77613cac50f035e4"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/city-cars-varna/branding/logo-on-light.png",
+        "sha256": "a6a432dbf6cb68af5cb7d17647577943e3fce6cf5acb414d77613cac50f035e4"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/city-cars-varna/branding/logo-on-dark.png",
+        "sha256": "b1593f0ff87d904aae13118758ad60b463606bd0e720f571ad243b95934c7eaf"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/city-cars-varna/branding/logo-on-accent.png",
+        "sha256": "b1593f0ff87d904aae13118758ad60b463606bd0e720f571ad243b95934c7eaf"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/city-cars-varna/dealer-brand/logo-on-light.webp",
+        "sha256": "4c58dc7075bd2401e88f57584607ef1685338f7e31d941ab1cd2d2520d808edf"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/city-cars-varna/dealer-brand/logo-on-dark.webp",
+        "sha256": "4785c0504fc60f6130ad27fe4b548e1df750b19191d6fa45208c5351d17e74fc"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/city-cars-varna/dealer-brand/logo-on-accent.webp",
+        "sha256": "4785c0504fc60f6130ad27fe4b548e1df750b19191d6fa45208c5351d17e74fc"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/city-cars-varna/receipt.json",
+        "sha256": "7aa41eeac7e2de481799cadcb5fb15757298893fd27ba6512ad4fcf5ce7f6d8c"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/city-cars-varna/branding/logo-contract.json",
+        "sha256": "f98f18a3161e8223f18cc3068e9f6635762ee0d88a671ec09ec3d1092413c0d0"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/city-cars-varna/technical-check.json",
+        "sha256": "55a0777610f06f19c5057903056f349364d503079166c7472ab8f27e0cfa64f9"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/city-cars-varna/surface-review.png",
+        "sha256": "a6975812f58f3991ab22226e052cc48915dcba7cd68c979a780cdda8f4c7c3d5"
+      }
+    ]
+  },
+  "sourceUrls": [
+    "https://city_cars.mobile.bg/",
+    "https://cdn2.focus.bg/mobile/images/houseslogos/h17436859446175481.pic"
+  ],
+  "publishedBranding": {
+    "profileUrl": "https://city_cars.mobile.bg/",
+    "sourceLogoUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h17436859446175481.pic",
+    "observedAt": "2026-10-11T09:19:47.279Z",
+    "visualEvidence": "Previously inspected published identity retained in source evidence and compared visually in this triage. Fresh proposal created from the exact factual business name; no reference image supplied to generation.",
+    "decision": "User authorized a fresh disclosed proposal for this weak identity. Existing source brand remains evidence; owner/dealer approval pending.",
+    "retainedEvidence": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/city-cars-varna/source-evidence/published-logo.jpg"
+    ]
+  },
+  "sourceEvidence": [
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/city-cars-varna/source-evidence/published-logo.jpg",
+      "sha256": "cb89ff58a53b1c336f04d79d5a7698205d66e19c9ad00b778a801a39239b5124",
+      "bytes": 15122,
+      "format": "jpeg",
+      "width": 320,
+      "height": 160,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 160
+      }
+    }
+  ],
+  "previousTreatment": {
+    "receipt": "L:/CODEX/cars/leads/branding/fleet-20261011/city-cars-varna/receipt.json",
+    "sha256": "7aa41eeac7e2de481799cadcb5fb15757298893fd27ba6512ad4fcf5ce7f6d8c",
+    "imageGeneration": {
+      "tool": "image_gen.imagegen",
+      "reference": "image_gen.imagegen output exec-9067730c-8fd5-4fa7-8ae3-8f5cd7a8f7dc",
+      "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-9067730c-8fd5-4fa7-8ae3-8f5cd7a8f7dc.png",
+      "transparent_background": true,
+      "modelVersion": "not exposed by tool",
+      "prompt": "Create one fresh sophisticated proposed dealership logo for the Bulgarian business Сити Карс. Exact visible Cyrillic text only: СИТИ КАРС. These are Cyrillic letters, spell precisely СИТИ КАРС. A clean bold contemporary sans-serif wordmark in one horizontal line, deep charcoal #17212b. At the left a compact geometric Cyrillic С monogram with one simple forest-green #176343 accent that subtly suggests a road turn or city corner, without literal skyline detail. Compact wide horizontal lockup with readable substantial text at 120px. No equalizer bars, no multicolor pixels, no skyscraper illustration, no serif display lettering, no car photo, no slogan, no phone, no fine detail, no enclosing plate, no border, no gradients or texture, no shadow. Flat opaque inks; letter holes and gaps empty alpha. True RGBA transparent background. One complete logo with modest transparent padding, no presentation mockup. This is a new disclosed proposal for the same factual business, not a claim of official branding.",
+      "toolOutputHint": "Generated images are saved to C:\\Users\\radev\\.codex\\generated_images\\01a12a34-877e-73a2-9a3d-346e546742c6 as C:\\Users\\radev\\.codex\\generated_images\\01a12a34-877e-73a2-9a3d-346e546742c6\\exec-9067730c-8fd5-4fa7-8ae3-8f5cd7a8f7dc.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  },
+  "styleReferenceEvidence": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/am-varna-varna/branding/logo-master.png",
+    "sha256": "11a4f802dc2725817c409f1b669446cc51763849e5a29467af7b951c01808ffa"
+  },
+  "factualNameTreatment": {
+    "fullPublishedName": "СИТИ КАРС",
+    "displayedCoreName": "СИТИ КАРС",
+    "explicitlyOmitted": null,
+    "authorization": "Owner permits recognizable trading name and visibly secondary generic descriptive captions omitted; no alternate trading name invented"
+  },
+  "selectionStatus": "technically-selected-preferred-revised-pack",
+  "visualChecks": {
+    "reviewer": "baseline asset agent",
+    "spelling": "СИТИ КАРС",
+    "layout": "Compact unique emblem beside one expressive name row; no secondary captions",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "transparency": "Master and contextual exports visually inspected; no matte, filled counters, clipped strokes or residue visible",
+    "smallSize": "Correct name and distinctive emblem readable at120/180/320 width in isolated raster swatches",
+    "reviewedAt": "2026-10-11T11:35:52.504Z",
+    "approval": "Technical asset selection only; owner/style, dealer, all actual six-design consumers and hosted review pending"
+  },
+  "schemaVersion": 1,
+  "dealer": "city-cars-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-c240b5f1-1e91-4f05-855c-b3f50ba18c42.png",
+    "sha256": "ba19e596fcd21f7add552ad34fd6c84dde3dd78a3f38de0c336a9c252b438c94",
+    "bytes": 410248,
+    "format": "png",
+    "width": 2172,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7978884954671713,
+      "opaqueRatio": 0.17971317521850166
+    },
+    "visibleBounds": {
+      "x": 40,
+      "y": 209,
+      "width": 2106,
+      "height": 278
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/city-cars-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "f36a5dea81364998bffff30e0a46b68fd8018a2ad25412fb28a152a62027be5b",
+      "bytes": 51558,
+      "format": "webp",
+      "width": 1496,
+      "height": 258,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.632635348008125,
+        "opaqueRatio": 0.3214670646271193
+      },
+      "visibleBounds": {
+        "x": 49,
+        "y": 36,
+        "width": 1399,
+        "height": 185
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/city-cars-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "1e9f58614c99c6c107ddd6afe527fde134c180ab0837fbe7989f6c2c4ab81d33",
+      "bytes": 32144,
+      "format": "webp",
+      "width": 1496,
+      "height": 258,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.632635348008125,
+        "opaqueRatio": 0.3214670646271193
+      },
+      "visibleBounds": {
+        "x": 49,
+        "y": 36,
+        "width": 1399,
+        "height": 185
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/city-cars-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "1e9f58614c99c6c107ddd6afe527fde134c180ab0837fbe7989f6c2c4ab81d33",
+      "bytes": 32144,
+      "format": "webp",
+      "width": 1496,
+      "height": 258,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.632635348008125,
+        "opaqueRatio": 0.3214670646271193
+      },
+      "visibleBounds": {
+        "x": 49,
+        "y": 36,
+        "width": 1399,
+        "height": 185
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/city-cars-varna/branding/logo-master.png",
+    "sha256": "d4fe0bc028a4f78df02a4bff128cb83af3a2678c15837024484af63014da6d14",
+    "bytes": 161827,
+    "format": "png",
+    "width": 1496,
+    "height": 258,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.632635348008125,
+      "opaqueRatio": 0.3214670646271193
+    },
+    "visibleBounds": {
+      "x": 49,
+      "y": 36,
+      "width": 1399,
+      "height": 185
+    }
+  },
+  "technicalAcceptance": {
+    "reviewer": "baseline asset agent",
+    "spelling": "СИТИ КАРС",
+    "layout": "Compact unique emblem beside one expressive name row; no secondary captions",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "transparency": "Master and contextual exports visually inspected; no matte, filled counters, clipped strokes or residue visible",
+    "smallSize": "Correct name and distinctive emblem readable at120/180/320 width in isolated raster swatches",
+    "reviewedAt": "2026-10-11T11:35:52.504Z",
+    "approval": "Technical asset selection only; owner/style, dealer, all actual six-design consumers and hosted review pending"
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "ownerApproved": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-baseline-export",
+  "updatedAt": "2026-10-11T11:35:52.839Z",
+  "pngTreatments": {
+    "on-light": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/city-cars-varna/branding/logo-on-light.png",
+      "sha256": "d4fe0bc028a4f78df02a4bff128cb83af3a2678c15837024484af63014da6d14"
+    },
+    "on-dark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/city-cars-varna/branding/logo-on-dark.png",
+      "sha256": "fbde5938f1a1db17c89bd44f518eadcfb1376f292610ccb9b00be7d34442998c"
+    },
+    "on-accent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/city-cars-varna/branding/logo-on-accent.png",
+      "sha256": "fbde5938f1a1db17c89bd44f518eadcfb1376f292610ccb9b00be7d34442998c"
+    }
+  },
+  "exportRetention": {
+    "nativeImageGenOriginalRetained": true,
+    "compactQAPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/city-cars-varna/surface-review.png",
+    "historicalExportScratch": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-baseline-export",
+    "retirementReceipt": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/baseline-single-row-retention.json"
+  }
+}

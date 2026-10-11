@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "kind": "dated-listing-snapshot",
+  "candidate": true,
+  "observedAt": "2026-10-11T11:54:04.528Z",
+  "sourceProfile": "https://triumf.mobile.bg/",
+  "sourcePageVisibleListingCount": 7,
+  "sourceProfileCountObservedAt": "2026-10-11T11:54:04.441Z",
+  "profileCountIsAvailableStock": false,
+  "profileCountIsClassifiedOrdinaryRetail": false,
+  "liveInventory": false,
+  "mediaPermission": "unconfirmed",
+  "localMediaReady": true,
+  "records": [
+    {
+      "id": "11786001673149613",
+      "sourceId": "11786001673149613",
+      "title": "VW Touran",
+      "sourceTitleExact": "VW Touran 2.0TDI-170к.с Confort line",
+      "make": "VW",
+      "model": "Touran",
+      "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+      "year": 2010,
+      "productionMonth": 10,
+      "currency": "EUR",
+      "sourcePriceText": "6 899 €",
+      "priceVatNotice": "Цената е с включено ДДС",
+      "sourceMileageText": "212000 км",
+      "fieldConflicts": [],
+      "body": "Миниван",
+      "fuel": "Дизелов",
+      "transmission": "Автоматична",
+      "powerHp": 170,
+      "images": [
+        "/dealer-stock/11786001673149613-1.webp",
+        "/dealer-stock/11786001673149613-2.webp"
+      ],
+      "sourceUrl": "https://triumf.mobile.bg/obiava-11786001673149613-vw-touran-2-0tdi-170k-s-confort-line",
+      "sourceHtmlSha256": "8525c48920069d553f5f2ee56305bdd726e856e135ab628bee92823f0438227a",
+      "sourcePublicationText": "Публикувана в 10:34 часа на 06.08.2026 год.",
+      "observedAt": "2026-10-11T11:54:04.528Z",
+      "availability": "unconfirmed",
+      "availabilityConfirmed": false,
+      "partsListing": false,
+      "conditionMarker": null,
+      "conditionIndependentlyConfirmed": false,
+      "arrivalNotice": null,
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+      "mediaPermission": "Not independently established",
+      "telHrefCandidates": [
+        "0898547765"
+      ],
+      "visibleSellerContact": "Контакти с продавача Триумф 0898547765",
+      "sellerPhoneMatchesPrimary": true,
+      "telHrefMatchesPrimary": true,
+      "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+      "retailReadyForAssembly": false,
+      "sourcePhotoUrls": [
+        "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_Dp.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_3H.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_D8.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_Cz.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_ad.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_q2.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_xg.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_Sn.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_uX.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_9e.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_OA.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_xC.webp"
+      ],
+      "sourcePhotoEvidence": {
+        "sourceId": "11786001673149613",
+        "sourceUrl": "https://triumf.mobile.bg/obiava-11786001673149613-vw-touran-2-0tdi-170k-s-confort-line",
+        "observedAt": "2026-10-11T12:09:34.280Z",
+        "responseSha256": "cd61c1eab48e450036bf6b4b09c566c93598e47bf5fae00fc8399e4a01d39092",
+        "association": "primary gallery URLs contain exact source listing ID",
+        "remoteBytesFetched": false
+      },
+      "sourceRecord": {
+        "id": "11786001673149613",
+        "sourceId": "11786001673149613",
+        "title": "VW Touran",
+        "sourceTitleExact": "VW Touran 2.0TDI-170к.с Confort line",
+        "make": "VW",
+        "model": "Touran",
+        "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+        "year": 2010,
+        "productionMonth": 10,
+        "priceEur": 6899,
+        "currency": "EUR",
+        "sourcePriceText": "6 899 €",
+        "priceVatNotice": "Цената е с включено ДДС",
+        "mileageKm": 212000,
+        "sourceMileageText": "212000 км",
+        "fieldConflicts": [],
+        "body": "Миниван",
+        "fuel": "Дизелов",
+        "transmission": "Автоматична",
+        "powerHp": 170,
+        "images": [
+          "/assets/vehicles/11786001673149613/1.webp",
+          "/assets/vehicles/11786001673149613/2.webp"
+        ],
+        "sourceUrl": "https://triumf.mobile.bg/obiava-11786001673149613-vw-touran-2-0tdi-170k-s-confort-line",
+        "sourceHtmlSha256": "8525c48920069d553f5f2ee56305bdd726e856e135ab628bee92823f0438227a",
+        "sourcePublicationText": "Публикувана в 10:34 часа на 06.08.2026 год.",
+        "observedAt": "2026-10-11T11:54:04.528Z",
+        "availability": "unconfirmed",
+        "availabilityConfirmed": false,
+        "partsListing": false,
+        "conditionMarker": null,
+        "conditionIndependentlyConfirmed": false,
+        "arrivalNotice": null,
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+        "mediaPermission": "Not independently established",
+        "telHrefCandidates": [
+          "0898547765"
+        ],
+        "visibleSellerContact": "Контакти с продавача Триумф 0898547765",
+        "sellerPhoneMatchesPrimary": true,
+        "telHrefMatchesPrimary": true,
+        "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+        "retailReadyForAssembly": false,
+        "sourcePhotoUrls": [
+          "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_Dp.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_3H.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_D8.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_Cz.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_ad.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_q2.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_xg.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_Sn.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_uX.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_9e.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_OA.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_xC.webp"
+        ],
+        "sourcePhotoEvidence": {
+          "sourceId": "11786001673149613",
+          "sourceUrl": "https://triumf.mobile.bg/obiava-11786001673149613-vw-touran-2-0tdi-170k-s-confort-line",
+          "observedAt": "2026-10-11T12:09:34.280Z",
+          "responseSha256": "cd61c1eab48e450036bf6b4b09c566c93598e47bf5fae00fc8399e4a01d39092",
+          "association": "primary gallery URLs contain exact source listing ID",
+          "remoteBytesFetched": false
+        }
+      },
+      "priceAmount": 6899,
+      "mileageValue": 212000,
+      "mileageUnit": "km"
+    }
+  ],
+  "localMediaHydration": {
+    "candidateOnly": true,
+    "technicalRasterPresent": true,
+    "rightsApproved": false,
+    "availabilityConfirmed": false,
+    "assets": [
+      {
+        "publicPath": "/assets/vehicles/11786001673149613/1.webp",
+        "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_Dp.webp",
+        "sha256": "45e3a1807ff0215eef998eeb83b8b2cdbf2ef7dcd4bf4fa0de51c29bca5cfe30",
+        "bytes": 136202,
+        "downloadObservedAt": "2026-10-11T12:20:41.624Z"
+      },
+      {
+        "publicPath": "/assets/vehicles/11786001673149613/2.webp",
+        "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/613/1/big1/11786001673149613_3H.webp",
+        "sha256": "705e1b68673e675347afd3680efb67b1c4956a72068d770d31ab5327e93c2f8b",
+        "bytes": 160116,
+        "downloadObservedAt": "2026-10-11T12:20:41.777Z"
+      }
+    ],
+    "sourceStockSha256": "801575935608e2bdc19d54c857955a9c1ff1520aca3c47241c14e0a301dbc0a4"
+  },
+  "dealer": "triumf-varna",
+  "sourceKind": "dated-marketplace-listing-sample",
+  "sourceStock": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/source/stock.json",
+    "sha256": "b658e14b3a7002a52585fc4dcf500babf3af32baa95214b8d7612dfc79210a1d"
+  },
+  "sourceRecordsUnchanged": true,
+  "mediaPathMappings": [
+    {
+      "sourcePublicPath": "/assets/vehicles/11786001673149613/1.webp",
+      "publicPath": "/dealer-stock/11786001673149613-1.webp",
+      "sha256": "45e3a1807ff0215eef998eeb83b8b2cdbf2ef7dcd4bf4fa0de51c29bca5cfe30",
+      "bytes": 136202,
+      "sourceId": "11786001673149613"
+    },
+    {
+      "sourcePublicPath": "/assets/vehicles/11786001673149613/2.webp",
+      "publicPath": "/dealer-stock/11786001673149613-2.webp",
+      "sha256": "705e1b68673e675347afd3680efb67b1c4956a72068d770d31ab5327e93c2f8b",
+      "bytes": 160116,
+      "sourceId": "11786001673149613"
+    }
+  ]
+}

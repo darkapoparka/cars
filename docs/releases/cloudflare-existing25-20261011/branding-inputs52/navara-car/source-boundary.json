@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-existing-dealer-branding-input-boundary",
+  "dealer": "navara-car",
+  "identityKey": "existing-slug:navara-car",
+  "cohort": "existing-vercel25",
+  "ownership": "maintained-main",
+  "branding": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/navara-car/branding.json",
+    "sha256": "00abf8e08ee5d5ec12d2bf205c3fb27913b1cef1d36ba47e71fb192f0992d603"
+  },
+  "originalManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/navara-car/source/original-dealer.json",
+    "sha256": "b7efe0c3f0225e262714e7c33738f32d533be2710722da23ae1dde884f2addb0"
+  },
+  "originalManifestGitBlob": "6d41f2bffb3c94ed8355558c03591f004eafa1f9",
+  "originalRepository": "darkapoparka/cars-navaracar",
+  "sourceRef": {
+    "ref": "main",
+    "commit": "c5c6b0da611a3bf2756c1be2ff9764f6903536ec",
+    "tree": "7e96fbb667d48411cd6c9cf1a18065e0181f7cb7"
+  },
+  "originalData": [
+    {
+      "path": "clients/navara-car/business-facts.json",
+      "gitBlob": "0f5a8c251fe77e058516bc38f9545bf0972bf2c5",
+      "bytes": 17835
+    },
+    {
+      "path": "clients/navara-car/dealer.json",
+      "gitBlob": "6d41f2bffb3c94ed8355558c03591f004eafa1f9",
+      "bytes": 4585
+    }
+  ],
+  "sourceProof": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/original-source-proof.json",
+    "sha256": "477c4eedc097eb2e105b1d50cf1bc3701b558679e8f6c3c3681a3ccd6626e08c"
+  },
+  "roster": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/accepted-roster.json",
+    "sha256": "c23c6c4ea10acaca9fdc8d09351fd64735a9e2245385fb12a0f95d71f9f0080d"
+  },
+  "sourceCreation": false,
+  "clientIntegration": false,
+  "buildApproval": false,
+  "hostedApproval": false,
+  "eligibleForExistingQualifiedRequest": true,
+  "holds": [
+    "Exact latest template/source-delta/pilot qualification and preservation-aware updater remain required."
+  ]
+}

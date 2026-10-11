@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "richicar-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/richicar-varna/facts.json",
+      "sha256": "18e0e53245f97b5db36918dd1b55ae0949341ff0c609b6721360cd63a469ddaa"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/richicar-varna/stock.json",
+      "sha256": "2ccc52cb1243f49b4611387ed63f589bb5f39983bc7e703f11b19d5b6ba0f064"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/richicar-varna/locale.json",
+      "sha256": "980be426b206f0ca6a3ccf3f1d490392bf0554580d738db9f7d5377b170ec9b0"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/richicar-varna/branding.json",
+      "sha256": "110091bd770b4ebd5b538470e6287c92faf6a9a2432de39b7e1007ec9b3c0b79"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/richicar-varna/source/business-facts.json",
+      "sha256": "bd2782c62a1d706eed1e9e8e2b1fa84b1e516685991d422072455a535d654195"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/richicar-varna/source/locale.json",
+      "sha256": "980be426b206f0ca6a3ccf3f1d490392bf0554580d738db9f7d5377b170ec9b0"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/richicar-varna/source/stock.json",
+      "sha256": "6115dbf8c8cdc82b51407013d10bf0aac96c586672817b058ed8ad258507ff6a"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/richicar-varna/source/generation-receipt.json",
+      "sha256": "bb6c9efc5cfbd42b09bf6280c7227ab2e8f814253c53c3acbfa1e3a29b20107a"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/richicar-varna/source/native-onLight.png",
+      "sha256": "eb8b15f0cf87fe308cfbd6cccf5875476ed9d5d5d03a5337431b7f75db794bbe"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/richicar-varna/source/native-onDark.png",
+      "sha256": "eb8b15f0cf87fe308cfbd6cccf5875476ed9d5d5d03a5337431b7f75db794bbe"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/richicar-varna/source/native-onAccent.png",
+      "sha256": "eb8b15f0cf87fe308cfbd6cccf5875476ed9d5d5d03a5337431b7f75db794bbe"
+    }
+  ],
+  "transformations": {
+    "facts": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/richicar-varna/source/business-facts.json",
+        "sha256": "bd2782c62a1d706eed1e9e8e2b1fa84b1e516685991d422072455a535d654195"
+      },
+      "kind": "flat-original-facts-to-business-consumer",
+      "allOriginalEvidenceUnchanged": true,
+      "derivedNameDelta": null,
+      "otherFactsUnchanged": true
+    },
+    "stock": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/richicar-varna/source/stock.json",
+        "sha256": "6115dbf8c8cdc82b51407013d10bf0aac96c586672817b058ed8ad258507ff6a"
+      },
+      "originalSourceRecordPreserved": true,
+      "sourceId": "11738763051346766",
+      "normalizer": "loadDealerProfile",
+      "retention": "retainDealerVariantAssets",
+      "sourceKind": "dated-marketplace-listing-sample",
+      "consumerKind": "dated-listing-snapshot",
+      "availabilityUnconfirmed": true,
+      "mediaRightsNotClaimed": true,
+      "mileageUnknownMeansOnRequest": true
+    },
+    "media": [
+      {
+        "sourceId": "11738763051346766",
+        "sourcePublicPath": "/assets/vehicles/11738763051346766/1.webp",
+        "publicPath": "/dealer-stock/11738763051346766-1.webp",
+        "destination": "dealer-stock/11738763051346766-1.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/richicar-varna/media/11738763051346766-1.webp",
+        "sha256": "906c26ea07ccda6d40e4ced2d1a036356696d8e1f235975f3b91c9b256c4fd52",
+        "bytes": 196078
+      },
+      {
+        "sourceId": "11738763051346766",
+        "sourcePublicPath": "/assets/vehicles/11738763051346766/2.webp",
+        "publicPath": "/dealer-stock/11738763051346766-2.webp",
+        "destination": "dealer-stock/11738763051346766-2.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/richicar-varna/media/11738763051346766-2.webp",
+        "sha256": "26bb669e33742c9bdeddac055847e1d5f3ab399bff1449372e66515311de95d1",
+        "bytes": 183700
+      }
+    ],
+    "branding": {
+      "acceptedManifest": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+        "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+      },
+      "originalGenerationReceipt": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/richicar-varna/source/generation-receipt.json",
+        "sha256": "bb6c9efc5cfbd42b09bf6280c7227ab2e8f814253c53c3acbfa1e3a29b20107a"
+      },
+      "noNewGeneration": true,
+      "modelVersion": null,
+      "pixelsUnchanged": true
+    },
+    "identity": null
+  }
+}

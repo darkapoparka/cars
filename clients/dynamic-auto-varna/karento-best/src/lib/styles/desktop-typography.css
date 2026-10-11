@@ -1,0 +1,366 @@
+/* Desktop type roles. Layout, surfaces and mobile values remain component-owned. */
+@media (min-width: 992px) {
+  html:root {
+    --karento-type-counter-leading: 1;
+    --karento-font-sans: "Urbanist", system-ui, "Segoe UI", sans-serif;
+    --karento-type-hero-size: 3rem;
+    --karento-type-hero-weight: 700;
+    --karento-type-hero-leading: 1.15;
+    --karento-type-hero-tracking: -0.025em;
+    --karento-type-page-size: 2.5rem;
+    --karento-type-page-weight: 600;
+    --karento-type-page-leading: 1.2;
+    --karento-type-page-tracking: -0.02em;
+    --karento-type-section-size: 2.375rem;
+    --karento-type-section-weight: 600;
+    --karento-type-section-leading: 1.2;
+    --karento-type-section-tracking: -0.02em;
+    --karento-type-collection-size: 2rem;
+    --karento-type-collection-weight: 600;
+    --karento-type-collection-leading: 1.25;
+    --karento-type-collection-tracking: -0.02em;
+    --karento-type-faq-group-size: 1.75rem;
+    --karento-type-faq-group-weight: 600;
+    --karento-type-faq-group-leading: 1.25;
+    --karento-type-faq-group-tracking: -0.015em;
+    --karento-type-banner-size: 2.25rem;
+    --karento-type-banner-weight: 600;
+    --karento-type-banner-leading: 1.2;
+    --karento-type-banner-tracking: -0.02em;
+    --karento-type-detail-size: 2rem;
+    --karento-type-detail-weight: 600;
+    --karento-type-detail-leading: 1.25;
+    --karento-type-detail-tracking: -0.02em;
+    --karento-type-panel-size: 1.375rem;
+    --karento-type-panel-weight: 600;
+    --karento-type-panel-leading: 1.3;
+    --karento-type-panel-tracking: -0.01em;
+    --karento-type-card-size: 1.25rem;
+    --karento-type-card-weight: 600;
+    --karento-type-card-leading: 1.35;
+    --karento-type-card-tracking: -0.01em;
+    --karento-type-compact-card-size: 1.125rem;
+    --karento-type-compact-card-weight: 600;
+    --karento-type-compact-card-leading: 1.35;
+    --karento-type-compact-card-tracking: -0.01em;
+    --karento-type-article-subhead-size: 1.5rem;
+    --karento-type-article-subhead-weight: 600;
+    --karento-type-article-subhead-leading: 1.35;
+    --karento-type-article-subhead-tracking: -0.01em;
+    --karento-type-lead-size: 1.125rem;
+    --karento-type-lead-weight: 400;
+    --karento-type-lead-leading: 1.65;
+    --karento-type-lead-tracking: 0;
+    --karento-type-body-size: 1rem;
+    --karento-type-body-weight: 400;
+    --karento-type-body-leading: 1.6;
+    --karento-type-body-tracking: 0;
+    --karento-type-body-small-size: 0.875rem;
+    --karento-type-body-small-weight: 400;
+    --karento-type-body-small-leading: 1.55;
+    --karento-type-body-small-tracking: 0;
+    --karento-type-prose-size: 1rem;
+    --karento-type-prose-weight: 400;
+    --karento-type-prose-leading: 1.75;
+    --karento-type-prose-tracking: 0;
+    --karento-type-meta-size: 0.8125rem;
+    --karento-type-meta-weight: 400;
+    --karento-type-meta-leading: 1.5;
+    --karento-type-meta-tracking: 0;
+    --karento-type-eyebrow-size: 0.8125rem;
+    --karento-type-eyebrow-weight: 500;
+    --karento-type-eyebrow-leading: 1.4;
+    --karento-type-eyebrow-tracking: 0.06em;
+    --karento-type-badge-size: 0.75rem;
+    --karento-type-badge-weight: 500;
+    --karento-type-badge-leading: 1.4;
+    --karento-type-badge-tracking: 0;
+    --karento-type-label-size: 0.8125rem;
+    --karento-type-label-weight: 500;
+    --karento-type-label-leading: 1.4;
+    --karento-type-label-tracking: 0;
+    --karento-type-control-size: 0.875rem;
+    --karento-type-control-weight: 600;
+    --karento-type-control-leading: 1.4;
+    --karento-type-control-tracking: 0;
+    --karento-type-pill-size: 0.8125rem;
+    --karento-type-pill-weight: 500;
+    --karento-type-pill-leading: 1.4;
+    --karento-type-pill-tracking: 0;
+    --karento-type-price-size: 1.375rem;
+    --karento-type-price-weight: 700;
+    --karento-type-price-leading: 1.2;
+    --karento-type-price-tracking: -0.01em;
+    --karento-type-buy-price-size: 1.75rem;
+    --karento-type-buy-price-weight: 700;
+    --karento-type-buy-price-leading: 1.15;
+    --karento-type-buy-price-tracking: -0.02em;
+    --karento-type-plan-price-size: 2.375rem;
+    --karento-type-plan-price-weight: 700;
+    --karento-type-plan-price-leading: 1.15;
+    --karento-type-plan-price-tracking: -0.02em;
+    --karento-type-stat-size: 2.75rem;
+    --karento-type-stat-weight: 600;
+    --karento-type-stat-leading: 1.15;
+    --karento-type-stat-tracking: -0.02em;
+    --karento-type-stat-compact-size: 2.125rem;
+    --karento-type-stat-compact-weight: 600;
+    --karento-type-stat-compact-leading: 1.2;
+    --karento-type-stat-compact-tracking: -0.02em;
+    --karento-type-nav-size: 0.875rem;
+    --karento-type-nav-weight: 500;
+    --karento-type-nav-leading: 1.4;
+    --karento-type-nav-tracking: 0;
+    --karento-desktop-hero-title-size: var(--karento-type-hero-size);
+    --karento-desktop-page-title-size: var(--karento-type-page-size);
+    --karento-desktop-section-title-size: var(--karento-type-section-size);
+    --karento-desktop-banner-title-size: var(--karento-type-banner-size);
+    --karento-desktop-panel-title-size: var(--karento-type-panel-size);
+    --karento-desktop-card-title-size: var(--karento-type-card-size);
+    --karento-desktop-compact-card-title-size: var(
+      --karento-type-compact-card-size
+    );
+  }
+
+  /* Explicit roles outrank the preserved template's bold/size utilities.
+     They never infer a visual size from an h1–h6 tag or style icon fonts. */
+  html:root .desktop-type-hero,
+  .main .desktop-hero-title {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-hero-size) !important;
+    font-weight: var(--karento-type-hero-weight) !important;
+    line-height: var(--karento-type-hero-leading) !important;
+    letter-spacing: var(--karento-type-hero-tracking) !important;
+  }
+
+  html:root .desktop-type-page,
+  .main .desktop-page-title {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-page-size) !important;
+    font-weight: var(--karento-type-page-weight) !important;
+    line-height: var(--karento-type-page-leading) !important;
+    letter-spacing: var(--karento-type-page-tracking) !important;
+  }
+
+  html:root .desktop-type-section,
+  .main .desktop-section-title {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-section-size) !important;
+    font-weight: var(--karento-type-section-weight) !important;
+    line-height: var(--karento-type-section-leading) !important;
+    letter-spacing: var(--karento-type-section-tracking) !important;
+  }
+
+  html:root .desktop-type-banner,
+  .main .desktop-banner-title {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-banner-size) !important;
+    font-weight: var(--karento-type-banner-weight) !important;
+    line-height: var(--karento-type-banner-leading) !important;
+    letter-spacing: var(--karento-type-banner-tracking) !important;
+  }
+
+  html:root .desktop-type-detail {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-detail-size) !important;
+    font-weight: var(--karento-type-detail-weight) !important;
+    line-height: var(--karento-type-detail-leading) !important;
+    letter-spacing: var(--karento-type-detail-tracking) !important;
+  }
+
+  html:root .desktop-type-collection {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-collection-size) !important;
+    font-weight: var(--karento-type-collection-weight) !important;
+    line-height: var(--karento-type-collection-leading) !important;
+    letter-spacing: var(--karento-type-collection-tracking) !important;
+  }
+
+  html:root .desktop-type-faq-group {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-faq-group-size) !important;
+    font-weight: var(--karento-type-faq-group-weight) !important;
+    line-height: var(--karento-type-faq-group-leading) !important;
+    letter-spacing: var(--karento-type-faq-group-tracking) !important;
+  }
+
+  html:root .desktop-type-panel,
+  .footer .phone-support,
+  .footer .footer-top h5 {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-panel-size) !important;
+    font-weight: var(--karento-type-panel-weight) !important;
+    line-height: var(--karento-type-panel-leading) !important;
+    letter-spacing: var(--karento-type-panel-tracking) !important;
+  }
+
+  html:root .desktop-type-card,
+  .main .desktop-card-title {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-card-size) !important;
+    font-weight: var(--karento-type-card-weight) !important;
+    line-height: var(--karento-type-card-leading) !important;
+    letter-spacing: var(--karento-type-card-tracking) !important;
+  }
+
+  html:root .desktop-type-compact-card {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-compact-card-size) !important;
+    font-weight: var(--karento-type-compact-card-weight) !important;
+    line-height: var(--karento-type-compact-card-leading) !important;
+    letter-spacing: var(--karento-type-compact-card-tracking) !important;
+  }
+
+  html:root .desktop-type-article-subhead {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-article-subhead-size) !important;
+    font-weight: var(--karento-type-article-subhead-weight) !important;
+    line-height: var(--karento-type-article-subhead-leading) !important;
+    letter-spacing: var(--karento-type-article-subhead-tracking) !important;
+  }
+
+  html:root .desktop-type-lead {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-lead-size) !important;
+    font-weight: var(--karento-type-lead-weight) !important;
+    line-height: var(--karento-type-lead-leading) !important;
+    letter-spacing: var(--karento-type-lead-tracking) !important;
+  }
+
+  html:root .desktop-type-body {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-body-size) !important;
+    font-weight: var(--karento-type-body-weight) !important;
+    line-height: var(--karento-type-body-leading) !important;
+    letter-spacing: var(--karento-type-body-tracking) !important;
+  }
+
+  html:root .desktop-type-body-small,
+  .footer :is(.text-md, .text-md-medium) {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-body-small-size) !important;
+    font-weight: var(--karento-type-body-small-weight) !important;
+    line-height: var(--karento-type-body-small-leading) !important;
+    letter-spacing: var(--karento-type-body-small-tracking) !important;
+  }
+
+  html:root .desktop-type-prose {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-prose-size) !important;
+    font-weight: var(--karento-type-prose-weight) !important;
+    line-height: var(--karento-type-prose-leading) !important;
+    letter-spacing: var(--karento-type-prose-tracking) !important;
+  }
+
+  html:root .desktop-type-meta {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-meta-size) !important;
+    font-weight: var(--karento-type-meta-weight) !important;
+    line-height: var(--karento-type-meta-leading) !important;
+    letter-spacing: var(--karento-type-meta-tracking) !important;
+  }
+
+  html:root .desktop-type-eyebrow {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-eyebrow-size) !important;
+    font-weight: var(--karento-type-eyebrow-weight) !important;
+    line-height: var(--karento-type-eyebrow-leading) !important;
+    letter-spacing: var(--karento-type-eyebrow-tracking) !important;
+  }
+
+  html:root .desktop-type-badge {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-badge-size) !important;
+    font-weight: var(--karento-type-badge-weight) !important;
+    line-height: var(--karento-type-badge-leading) !important;
+    letter-spacing: var(--karento-type-badge-tracking) !important;
+  }
+
+  html:root .desktop-type-label {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-label-size) !important;
+    font-weight: var(--karento-type-label-weight) !important;
+    line-height: var(--karento-type-label-leading) !important;
+    letter-spacing: var(--karento-type-label-tracking) !important;
+  }
+
+  html:root .desktop-type-control,
+  .header .karento-header-cta,
+  .footer input[type="submit"] {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-control-size) !important;
+    font-weight: var(--karento-type-control-weight) !important;
+    line-height: var(--karento-type-control-leading) !important;
+    letter-spacing: var(--karento-type-control-tracking) !important;
+  }
+
+  html:root .desktop-type-pill {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-pill-size) !important;
+    font-weight: var(--karento-type-pill-weight) !important;
+    line-height: var(--karento-type-pill-leading) !important;
+    letter-spacing: var(--karento-type-pill-tracking) !important;
+  }
+
+  html:root .desktop-type-price {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-price-size) !important;
+    font-weight: var(--karento-type-price-weight) !important;
+    line-height: var(--karento-type-price-leading) !important;
+    letter-spacing: var(--karento-type-price-tracking) !important;
+  }
+
+  html:root .desktop-type-buy-price {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-buy-price-size) !important;
+    font-weight: var(--karento-type-buy-price-weight) !important;
+    line-height: var(--karento-type-buy-price-leading) !important;
+    letter-spacing: var(--karento-type-buy-price-tracking) !important;
+  }
+
+  html:root .desktop-type-plan-price {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-plan-price-size) !important;
+    font-weight: var(--karento-type-plan-price-weight) !important;
+    line-height: var(--karento-type-plan-price-leading) !important;
+    letter-spacing: var(--karento-type-plan-price-tracking) !important;
+  }
+
+  html:root .desktop-type-stat {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-stat-size) !important;
+    font-weight: var(--karento-type-stat-weight) !important;
+    line-height: var(--karento-type-stat-leading) !important;
+    letter-spacing: var(--karento-type-stat-tracking) !important;
+  }
+
+  html:root .desktop-type-stat-compact,
+  .main .section-cta-4 .desktop-type-stat {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-stat-compact-size) !important;
+    font-weight: var(--karento-type-stat-compact-weight) !important;
+    line-height: var(--karento-type-stat-compact-leading) !important;
+    letter-spacing: var(--karento-type-stat-compact-tracking) !important;
+  }
+
+  html:root .desktop-type-nav,
+  .header .main-menu a,
+  .footer .menu-footer a {
+    font-family: var(--karento-font-sans);
+    font-size: var(--karento-type-nav-size) !important;
+    font-weight: var(--karento-type-nav-weight) !important;
+    line-height: var(--karento-type-nav-leading) !important;
+    letter-spacing: var(--karento-type-nav-tracking) !important;
+  }
+
+  .main
+    :is(
+      .desktop-type-price,
+      .desktop-type-buy-price,
+      .desktop-type-plan-price,
+      .desktop-type-stat,
+      .desktop-type-stat-compact
+    ) {
+    font-variant-numeric: tabular-nums;
+  }
+}

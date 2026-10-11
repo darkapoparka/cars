@@ -1,0 +1,261 @@
+{
+  "before": {
+    "home": {
+      "images": [
+        {
+          "rect": {
+            "bottom": 242.203125,
+            "height": 240.375,
+            "left": 7.109375,
+            "right": 367.90625,
+            "top": 1.828125,
+            "width": 360.796875,
+            "x": 7.109375,
+            "y": 1.828125
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/home-collection-silver-v1.webp"
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ],
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    "trade-in": {
+      "images": [
+        {
+          "rect": {
+            "bottom": 192,
+            "height": 120,
+            "left": 15,
+            "right": 375,
+            "top": 72,
+            "width": 360,
+            "x": 15,
+            "y": 72
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/service-sell-front-v3-480.webp"
+        },
+        {
+          "rect": {
+            "bottom": 185.359375,
+            "height": 140.1875,
+            "left": 95.25,
+            "right": 306.078125,
+            "top": 45.171875,
+            "width": 210.828125,
+            "x": 95.25,
+            "y": 45.171875
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/service-car-silver-v2.webp"
+        },
+        {
+          "rect": {
+            "bottom": 192,
+            "height": 120,
+            "left": 15,
+            "right": 375,
+            "top": 72,
+            "width": 360,
+            "x": 15,
+            "y": 72
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/service-sell-front-v3-480.webp"
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ],
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    "import": {
+      "images": [
+        {
+          "rect": {
+            "bottom": 192,
+            "height": 120,
+            "left": 15,
+            "right": 375,
+            "top": 72,
+            "width": 360,
+            "x": 15,
+            "y": 72
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/service-import-front-v3-480.webp"
+        },
+        {
+          "rect": {
+            "bottom": 185.359375,
+            "height": 140.1875,
+            "left": 95.25,
+            "right": 306.078125,
+            "top": 45.171875,
+            "width": 210.828125,
+            "x": 95.25,
+            "y": 45.171875
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/service-car-silver-v2.webp"
+        },
+        {
+          "rect": {
+            "bottom": 192,
+            "height": 114.28125,
+            "left": 32.15625,
+            "right": 375,
+            "top": 77.71875,
+            "width": 342.84375,
+            "x": 32.15625,
+            "y": 77.71875
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/service-import-front-v3-480.webp"
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ],
+      "viewport": [
+        390,
+        844
+      ]
+    }
+  },
+  "after": {
+    "home": {
+      "images": [
+        {
+          "rect": {
+            "bottom": 227.140625,
+            "height": 204.8125,
+            "left": 5.546875,
+            "right": 373.75,
+            "top": 22.328125,
+            "width": 368.203125,
+            "x": 5.546875,
+            "y": 22.328125
+          },
+          "src": "http://127.0.0.1:6461/assets/images/lead/day-night-collection-banner-v2-480.webp"
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ],
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    "trade-in": {
+      "images": [
+        {
+          "rect": {
+            "bottom": 192,
+            "height": 120,
+            "left": 15,
+            "right": 375,
+            "top": 72,
+            "width": 360,
+            "x": 15,
+            "y": 72
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/service-sell-front-v3-480.webp"
+        },
+        {
+          "rect": {
+            "bottom": 192,
+            "height": 120,
+            "left": 15.453125,
+            "right": 375.453125,
+            "top": 72,
+            "width": 360,
+            "x": 15.453125,
+            "y": 72
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/service-sell-front-v3-480.webp"
+        },
+        {
+          "rect": {
+            "bottom": 192,
+            "height": 120,
+            "left": 15,
+            "right": 375,
+            "top": 72,
+            "width": 360,
+            "x": 15,
+            "y": 72
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/service-sell-front-v3-480.webp"
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ],
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    "import": {
+      "images": [
+        {
+          "rect": {
+            "bottom": 192,
+            "height": 120,
+            "left": 15,
+            "right": 375,
+            "top": 72,
+            "width": 360,
+            "x": 15,
+            "y": 72
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/service-import-front-v3-480.webp"
+        },
+        {
+          "rect": {
+            "bottom": 192,
+            "height": 120,
+            "left": 15.453125,
+            "right": 375.453125,
+            "top": 72,
+            "width": 360,
+            "x": 15.453125,
+            "y": 72
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/service-sell-front-v3-480.webp"
+        },
+        {
+          "rect": {
+            "bottom": 192,
+            "height": 114.28125,
+            "left": 32.15625,
+            "right": 375,
+            "top": 77.71875,
+            "width": 342.84375,
+            "x": 32.15625,
+            "y": 77.71875
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/service-import-front-v3-480.webp"
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ],
+      "viewport": [
+        390,
+        844
+      ]
+    }
+  },
+  "console": []
+}

@@ -1,0 +1,217 @@
+{
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-b0db0c34-407a-48ae-933c-ea80a9308e15.png",
+  "strategy": "REFINE OFFICIAL LOGO",
+  "identityStatus": "Published IS AUTO lettering and dotted semicircle refined; graphite AUTO contextual treatment. Not dealer approved.",
+  "sourceUrls": [
+    "https://isautovarna.mobile.bg/"
+  ],
+  "sourceLogoUrl": "https://cdn2.focus.bg/mobile/images/housespicts/h15361436253475389.pic",
+  "workingLogoPath": "leads/branding/fleet-20261011/isauto-varna/source/published-banner.png",
+  "publishedBranding": {
+    "observedAt": "2026-10-11",
+    "visualReference": "CUA Mobile.bg public cover banner and saved published source."
+  },
+  "imageGeneration": {
+    "reference": "exec-b0db0c34-407a-48ae-933c-ea80a9308e15",
+    "tool": "image_gen.imagegen",
+    "transparent_background": true,
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/isauto-varna/source/published-banner.png"
+    ],
+    "prompt": "Refine this EXACT published IS AUTO dealer mark into true transparent RGBA raster. Preserve red uppercase IS at left, red dotted semicircle arc opening toward right between IS and AUTO, and exact bold AUTO lettering at right. Preserve count/position/size progression of the red dots and all letter shapes/spacing/proportions. Source AUTO is white; use graphite #25272c AUTO as its on-light contextual treatment, with published deep red #bc001c IS and dotted arc retained. Remove every gray banner/background, no black/gray rectangle or diagonal stripe. All letter counters and arc interior transparent. No new car icon, no VARNA subtitle, no new slogan. Clean crisp complete compact high-resolution identity, no shadow/fringe/halo, modest transparent padding.",
+    "output_hint": "Generated images are saved to C:\\Users\\radev\\.codex\\generated_images\\01a12a34-3dcd-7920-8e75-5eb5eac386bd as C:\\Users\\radev\\.codex\\generated_images\\01a12a34-3dcd-7920-8e75-5eb5eac386bd\\exec-b0db0c34-407a-48ae-933c-ea80a9308e15.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  "visualAccepted": true,
+  "surfaceReviewPath": "L:/CODEX/cars/leads/branding/fleet-20261011/isauto-varna/surface-review.png",
+  "visualChecks": {
+    "treatments": "Red IS/arc and graphite AUTO onLight; white onDark/onAccent",
+    "scope": "Isolated asset surfaces only; dealer, owner, integration and hosted acceptance pending",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "spelling": "Exact IS AUTO",
+    "geometry": "Published bold lettering and tapered dotted semicircle retained; open counters verified",
+    "residue": "No material halo, filled counter or clipping visible at compact widths",
+    "heightLimit": 76
+  },
+  "schemaVersion": 1,
+  "dealer": "isauto-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-b0db0c34-407a-48ae-933c-ea80a9308e15.png",
+    "sha256": "9af13307cdd0db88b41fe0de3ea75414e19682cd864fab4adf8b2dc2e035f6af",
+    "bytes": 310384,
+    "format": "png",
+    "width": 2170,
+    "height": 725,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8579126013030351,
+      "opaqueRatio": 0.12703003337041158
+    },
+    "visibleBounds": {
+      "x": 324,
+      "y": 172,
+      "width": 1529,
+      "height": 408
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/isauto-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "2b973d5edae85ef5f8a65edbe4b53dc4db39fb3c0e5318ee14909172a6a2c33a",
+      "bytes": 66716,
+      "format": "webp",
+      "width": 1496,
+      "height": 446,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7178514903719335,
+        "opaqueRatio": 0.24959233591520588
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1399,
+        "height": 373
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/isauto-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "ce6f7b06fe838c3aa752d78256e7846e0be5721607f3920f1c97a02706fd1081",
+      "bytes": 37156,
+      "format": "webp",
+      "width": 1496,
+      "height": 446,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7178514903719335,
+        "opaqueRatio": 0.24959233591520588
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1399,
+        "height": 373
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/isauto-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "ce6f7b06fe838c3aa752d78256e7846e0be5721607f3920f1c97a02706fd1081",
+      "bytes": 37156,
+      "format": "webp",
+      "width": 1496,
+      "height": 446,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7178514903719335,
+        "opaqueRatio": 0.24959233591520588
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1399,
+        "height": 373
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/isauto-varna/branding/logo-master.png",
+    "sha256": "aeda6096fcf8207bc395a9f0e095193eeae6bcecbfcee0913c65709219ceabb4",
+    "bytes": 200934,
+    "format": "png",
+    "width": 1496,
+    "height": 446,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7178514903719335,
+      "opaqueRatio": 0.24959233591520588
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 37,
+      "width": 1399,
+      "height": 373
+    }
+  },
+  "technicalAcceptance": {
+    "treatments": "Red IS/arc and graphite AUTO onLight; white onDark/onAccent",
+    "scope": "Isolated asset surfaces only; dealer, owner, integration and hosted acceptance pending",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "spelling": "Exact IS AUTO",
+    "geometry": "Published bold lettering and tapered dotted semicircle retained; open counters verified",
+    "residue": "No material halo, filled counter or clipping visible at compact widths",
+    "heightLimit": 76
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "ownerApproved": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "L:/CODEX/cars/runtime/fleet-logo-20261011/existing-export",
+  "updatedAt": "2026-10-11T09:36:12.309Z",
+  "sourceEvidence": [
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/isauto-varna/source/published-banner.pic",
+      "sha256": "dde0846a9224118d741b6dd63d53b450327503e320aa1aceb89a6fefa2bc5360",
+      "bytes": 18946,
+      "format": "jpeg",
+      "width": 980,
+      "height": 200,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 980,
+        "height": 200
+      }
+    },
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/isauto-varna/source/published-banner.png",
+      "sha256": "d8ad2e01b32c732ebf30fd49e9e4816d5b9761ee6436346f6670cf38e3a8bae1",
+      "bytes": 76390,
+      "format": "png",
+      "width": 980,
+      "height": 200,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 980,
+        "height": 200
+      }
+    }
+  ],
+  "provenanceFile": "L:/CODEX/cars/leads/branding/fleet-20261011/isauto-varna/provenance.json"
+}

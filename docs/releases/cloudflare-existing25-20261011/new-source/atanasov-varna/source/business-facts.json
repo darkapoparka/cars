@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "slug": "atanasov-varna",
+  "name": "Атанасов",
+  "shortName": "Атанасов",
+  "city": "Варна",
+  "country": "BG",
+  "countryCode": "BG",
+  "locale": "bg-BG",
+  "currency": "EUR",
+  "distanceUnit": "km",
+  "phone": "0988 864 133",
+  "phoneDisplay": "0988 864 133",
+  "phoneE164": "+359988864133",
+  "phones": [
+    "0988 864 133"
+  ],
+  "addressLine": null,
+  "address": "Варна, България",
+  "hours": "Потвърдете работното време директно с автокъщата.",
+  "email": "",
+  "sourceUrl": "https://atanasov.mobile.bg/",
+  "stockUrl": "https://atanasov.mobile.bg/",
+  "contactSourceUrl": "https://atanasov.mobile.bg/contacts",
+  "observedAt": "2026-10-11T11:46:40.088Z",
+  "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+  "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+  "services": [],
+  "socialLinks": {}
+}

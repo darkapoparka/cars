@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-29",
+  "method": "Built-in image_gen; transparent PNG output converted to WebP quality 90 at 768px width with Pillow.",
+  "purpose": "Illustrative category artwork, not inventory photography.",
+  "assets": [
+    {
+      "path": "static/assets/images/template/body-sedan-v2.webp",
+      "prompt": "Use case: product-mockup. Create ONE crisp photorealistic automotive body-type catalog cutout: a sedan with four doors and a distinct separate trunk, silver paint. Exact side profile, nose facing left, wheels aligned horizontally, whole vehicle visible, centered with modest equal margins. Wide landscape canvas. Neutral studio lighting, sharp realistic body panels, windows, tires and alloy wheels. Actual transparent background, no ground plane, no large shadow, no scenery, no text, no logos, no watermark. A clean understated website category illustration, not a dramatic advertisement.",
+      "source": "C:\\Users\\radev\\.codex\\generated_images\\01a0eddb-49ad-7c73-b007-77a5d5800a6a\\exec-bca8222d-209d-4a7a-940e-e3945fabb8db.png"
+    },
+    {
+      "path": "static/assets/images/template/body-hatchback-v2.webp",
+      "prompt": "Use case: product-mockup. Create ONE crisp photorealistic automotive body-type catalog cutout: a compact five-door hatchback with a short rear overhang and upright rear hatch, silver paint. Exact side profile, nose facing left, wheels aligned horizontally, whole vehicle visible, centered with modest equal margins. Wide landscape canvas. Neutral studio lighting, sharp realistic body panels, windows, tires and alloy wheels. Actual transparent background, no ground plane, no large shadow, no scenery, no text, no logos, no watermark. A clean understated website category illustration, not a dramatic advertisement.",
+      "source": "C:\\Users\\radev\\.codex\\generated_images\\01a0eddb-49ad-7c73-b007-77a5d5800a6a\\exec-f8d73e3a-dfa2-4afb-a352-068ec4cdfd96.png"
+    },
+    {
+      "path": "static/assets/images/template/body-pickup-v2.webp",
+      "prompt": "Use case: product-mockup. Create ONE crisp photorealistic automotive body-type catalog cutout: a double-cab pickup truck with a visible open cargo bed, metallic gray paint. Exact side profile, nose facing left, wheels aligned horizontally, whole vehicle visible, centered with modest equal margins. Wide landscape canvas. Neutral studio lighting, sharp realistic body panels, windows, tires and alloy wheels. Actual transparent background, no ground plane, no large shadow, no scenery, no text, no logos, no watermark. A clean understated website category illustration, not a dramatic advertisement.",
+      "source": "C:\\Users\\radev\\.codex\\generated_images\\01a0eddb-49ad-7c73-b007-77a5d5800a6a\\exec-a157139d-3032-462a-bae0-1a0c12e65fdb.png"
+    },
+    {
+      "path": "static/assets/images/template/body-convertible-v2.webp",
+      "prompt": "Use case: product-mockup. Create ONE crisp photorealistic automotive body-type catalog cutout: a two-door convertible with roof fully down, silver paint. Exact side profile, nose facing left, wheels aligned horizontally, whole vehicle visible, centered with modest equal margins. Wide landscape canvas. Neutral studio lighting, sharp realistic body panels, windows, tires and alloy wheels. Actual transparent background, no ground plane, no large shadow, no scenery, no text, no logos, no watermark. A clean understated website category illustration, not a dramatic advertisement.",
+      "source": "C:\\Users\\radev\\.codex\\generated_images\\01a0eddb-49ad-7c73-b007-77a5d5800a6a\\exec-2ec39cb3-a461-4c47-ad49-345184c99694.png"
+    }
+  ]
+}

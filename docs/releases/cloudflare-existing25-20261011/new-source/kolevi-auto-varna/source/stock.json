@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "kind": "dated-marketplace-listing-sample",
+  "candidate": true,
+  "observedAt": "2026-10-11T11:46:40.584Z",
+  "sourceProfile": "https://kolevi_auto.mobile.bg/",
+  "sourcePageVisibleListingCount": 19,
+  "sourceProfileCountObservedAt": "2026-10-11T11:46:40.523Z",
+  "profileCountIsAvailableStock": false,
+  "profileCountIsClassifiedOrdinaryRetail": false,
+  "liveInventory": false,
+  "mediaPermission": "unconfirmed",
+  "localMediaReady": true,
+  "records": [
+    {
+      "id": "11789979969434970",
+      "sourceId": "11789979969434970",
+      "title": "Skoda Octavia",
+      "make": "Skoda",
+      "model": "Octavia",
+      "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+      "year": 2014,
+      "productionMonth": 8,
+      "priceEur": 6799,
+      "currency": "EUR",
+      "sourcePriceText": "6 799 €",
+      "priceVatNotice": "Цената е с включено ДДС",
+      "mileageKm": 182500,
+      "sourceMileageText": "182500 км",
+      "fieldConflicts": [],
+      "body": "Комби",
+      "fuel": "Бензинов",
+      "transmission": "Ръчна",
+      "powerHp": 180,
+      "images": [
+        "/assets/vehicles/11789979969434970/1.webp",
+        "/assets/vehicles/11789979969434970/2.webp"
+      ],
+      "sourceUrl": "https://kolevi_auto.mobile.bg/obiava-11789979969434970-skoda-octavia-top-180hp-euro-6",
+      "sourceHtmlSha256": "f830f3b47b502c32eaf198f86637ff22f6de8f3689267ba2052585b3036d0904",
+      "sourcePublicationText": "Редактирана в 15:34 часа на 08.10.2026 год.",
+      "observedAt": "2026-10-11T11:46:40.584Z",
+      "availability": "unconfirmed",
+      "availabilityConfirmed": false,
+      "partsListing": false,
+      "conditionMarker": null,
+      "conditionIndependentlyConfirmed": false,
+      "arrivalNotice": null,
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+      "mediaPermission": "Not independently established",
+      "telHrefCandidates": [
+        "0878431141"
+      ],
+      "visibleSellerContact": "Контакти с продавача Колеви Ауто 0878431141",
+      "sellerPhoneMatchesPrimary": true,
+      "telHrefMatchesPrimary": true,
+      "sourceTitleExact": "Skoda Octavia ТОП/180hp/EURO 6",
+      "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+      "retailReadyForAssembly": false,
+      "sourcePhotoUrls": [
+        "https://mobistatic1.focus.bg/mobile/photosorg/970/1/big1/11789979969434970_d9.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/970/1/big1/11789979969434970_7T.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/970/1/big1/11789979969434970_Fn.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/970/1/big1/11789979969434970_os.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/970/1/big1/11789979969434970_xW.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/970/1/big1/11789979969434970_Jx.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/970/1/big1/11789979969434970_y6.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/970/1/big1/11789979969434970_Ce.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/970/1/big1/11789979969434970_KI.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/970/1/big1/11789979969434970_CR.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/970/1/big1/11789979969434970_GB.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/970/1/big1/11789979969434970_ge.webp"
+      ],
+      "sourcePhotoEvidence": {
+        "sourceId": "11789979969434970",
+        "sourceUrl": "https://kolevi_auto.mobile.bg/obiava-11789979969434970-skoda-octavia-top-180hp-euro-6",
+        "observedAt": "2026-10-11T12:09:29.234Z",
+        "responseSha256": "984c9b18b3be79e0b7f4394247e70a5010a871ead62d60cb3bd2d11e9014b258",
+        "association": "primary gallery URLs contain exact source listing ID",
+        "remoteBytesFetched": false
+      }
+    }
+  ],
+  "localMediaHydration": {
+    "candidateOnly": true,
+    "technicalRasterPresent": true,
+    "rightsApproved": false,
+    "availabilityConfirmed": false,
+    "assets": [
+      {
+        "publicPath": "/assets/vehicles/11789979969434970/1.webp",
+        "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/970/1/big1/11789979969434970_d9.webp",
+        "sha256": "19965d6b74dc664ead78e552b8d07bc1b51f01869a2f47506d55a1d30d3110cc",
+        "bytes": 226666,
+        "downloadObservedAt": "2026-10-11T12:20:30.274Z"
+      },
+      {
+        "publicPath": "/assets/vehicles/11789979969434970/2.webp",
+        "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/970/1/big1/11789979969434970_7T.webp",
+        "sha256": "1fd504b5e1eff443234f84ab44349cac40eed75964ccf75656d769f489f50729",
+        "bytes": 211098,
+        "downloadObservedAt": "2026-10-11T12:20:30.458Z"
+      }
+    ],
+    "sourceStockSha256": "79d3719c5af8edf49aba139f2ce10b4be3e0a400560ba4042e087e7bbee063ec"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "kind": "dated-marketplace-listing-sample",
+  "candidate": true,
+  "observedAt": "2026-10-11T11:47:26.709Z",
+  "sourceProfile": "https://vichenca.mobile.bg/",
+  "sourcePageVisibleListingCount": 18,
+  "sourceProfileCountObservedAt": "2026-10-11T11:47:26.642Z",
+  "profileCountIsAvailableStock": false,
+  "profileCountIsClassifiedOrdinaryRetail": false,
+  "liveInventory": false,
+  "mediaPermission": "unconfirmed",
+  "localMediaReady": true,
+  "records": [
+    {
+      "id": "11790920424243530",
+      "sourceId": "11790920424243530",
+      "title": "BMW 740",
+      "sourceTitleExact": "BMW 740 BMW-740-Avtomat2011-300kc-Dizel Top e",
+      "make": "BMW",
+      "model": "740",
+      "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+      "year": 2011,
+      "productionMonth": 9,
+      "priceEur": 11600,
+      "currency": "EUR",
+      "sourcePriceText": "11 600 €",
+      "priceVatNotice": "Не се начислява ДДС",
+      "mileageKm": 222000,
+      "sourceMileageText": "222000 км",
+      "fieldConflicts": [],
+      "body": "Седан",
+      "fuel": "Дизелов",
+      "transmission": "Автоматична",
+      "powerHp": 300,
+      "images": [
+        "/assets/vehicles/11790920424243530/1.webp",
+        "/assets/vehicles/11790920424243530/2.webp"
+      ],
+      "sourceUrl": "https://vichenca.mobile.bg/obiava-11790920424243530-bmw-740-bmw-740-avtomat2011-300kc-dizel-top-e",
+      "sourceHtmlSha256": "3c6bae9a35d5ee22eb4d1117bb76f054e391f469f37557fb7c27cca263eeef76",
+      "sourcePublicationText": "Публикувана в 08:53 часа на 02.10.2026 год.",
+      "observedAt": "2026-10-11T11:47:26.709Z",
+      "availability": "unconfirmed",
+      "availabilityConfirmed": false,
+      "partsListing": false,
+      "conditionMarker": null,
+      "conditionIndependentlyConfirmed": false,
+      "arrivalNotice": null,
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+      "mediaPermission": "Not independently established",
+      "telHrefCandidates": [
+        "0877778669"
+      ],
+      "visibleSellerContact": "Контакти с продавача VICHENCA 0877 778 669",
+      "sellerPhoneMatchesPrimary": true,
+      "telHrefMatchesPrimary": true,
+      "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+      "retailReadyForAssembly": false,
+      "sourcePhotoUrls": [
+        "https://cdn2.focus.bg/mobile/photosorg/530/1/big1/11790920424243530_wH.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/530/1/big1/11790920424243530_kg.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/530/1/big1/11790920424243530_xV.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/530/1/big1/11790920424243530_Fi.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/530/1/big1/11790920424243530_e8.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/530/1/big1/11790920424243530_dz.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/530/1/big1/11790920424243530_nF.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/530/1/big1/11790920424243530_6x.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/530/1/big1/11790920424243530_tI.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/530/1/big1/11790920424243530_AU.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/530/1/big1/11790920424243530_48.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/530/1/big1/11790920424243530_kA.webp"
+      ],
+      "sourcePhotoEvidence": {
+        "sourceId": "11790920424243530",
+        "sourceUrl": "https://vichenca.mobile.bg/obiava-11790920424243530-bmw-740-bmw-740-avtomat2011-300kc-dizel-top-e",
+        "observedAt": "2026-10-11T12:09:29.670Z",
+        "responseSha256": "9e7dfd0cd6e62c9d66f6ed856826cd6cea7a0e4ce5027e561627e3194ee14403",
+        "association": "primary gallery URLs contain exact source listing ID",
+        "remoteBytesFetched": false
+      }
+    }
+  ],
+  "localMediaHydration": {
+    "candidateOnly": true,
+    "technicalRasterPresent": true,
+    "rightsApproved": false,
+    "availabilityConfirmed": false,
+    "assets": [
+      {
+        "publicPath": "/assets/vehicles/11790920424243530/1.webp",
+        "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/530/1/big1/11790920424243530_wH.webp",
+        "sha256": "7088e48ff2b9f3e14340da4502dc4f2417d0f3fbb3b5e02c6be5cc719d6cca55",
+        "bytes": 198200,
+        "downloadObservedAt": "2026-10-11T12:20:31.581Z"
+      },
+      {
+        "publicPath": "/assets/vehicles/11790920424243530/2.webp",
+        "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/530/1/big1/11790920424243530_kg.webp",
+        "sha256": "067f22b58d88b0d3093b7cfc26d2d5ba95b09d2b16f4a94b1fc0800196152eb9",
+        "bytes": 205824,
+        "downloadObservedAt": "2026-10-11T12:20:31.776Z"
+      }
+    ],
+    "sourceStockSha256": "dfdc310dcf7f38b859ee1366d2a60b0cb3d806250f868810020b6820c528ea76"
+  }
+}

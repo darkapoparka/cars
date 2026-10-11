@@ -1,0 +1,170 @@
+{
+	"runtime": {
+		"node": "24.21.0",
+		"npm": "11.19.0",
+		"liveDev": "http://127.0.0.1:6790/bg/",
+		"productionPreview": "http://127.0.0.1:6792/bg/",
+		"source": "L:/CODEX/cars/templates/import",
+		"frozenQa": "C:/Users/radev/AppData/Local/Temp/cars-import-desktop-contact-about-services-2026-10-02"
+	},
+	"sourceSnapshot": {
+		"paths": 1667,
+		"sha256": "24728e7f0424f5785767a16f4aa4c3a46ae273f0029bf0595fda18d39a08449c",
+		"lockfileSha256": "aa596db7046c3f226ce50b488e283e30121eb49122d5006c60035ef57a952e1c"
+	},
+	"sourceChecks": {
+		"svelte": "0 errors, 0 warnings",
+		"prettier": "Task-owned source and documentation passed",
+		"eslint": "Task-owned TS/Svelte passed",
+		"architecture": {
+			"nativeRoutes": 57,
+			"reachableModules": 226,
+			"tailwindEntries": 1
+		},
+		"assets": {
+			"canonical": 946,
+			"frozenQa": 948,
+			"unusedExtraQaAssets": 2
+		}
+	},
+	"logs": [
+		{
+			"name": "Svelte / TypeScript",
+			"command": "npm run check",
+			"path": "C:/Users/radev/AppData/Local/Temp/cars-import-desktop-contact-about-services-2026-10-02/runtime/desktop-editorial-copy-check.log",
+			"sha256": "51567a03438808e9dea18c88d4b569546e86ff16e3f70adc6048e3033f85684e",
+			"lastWriteUtc": "2026-10-02T18:02:35.951Z",
+			"result": "0 errors, 0 warnings"
+		},
+		{
+			"name": "Unit tests",
+			"command": "npm run test:unit -- --run --maxWorkers=1 --no-file-parallelism --reporter=dot",
+			"path": "C:/Users/radev/AppData/Local/Temp/cars-import-desktop-contact-about-services-2026-10-02/runtime/desktop-editorial-copy-unit.log",
+			"sha256": "1dd6a515945692f50fa8321ce43017787bb72cebe665e75dc842b828634f9de1",
+			"lastWriteUtc": "2026-10-02T18:05:58.842Z",
+			"result": "18 files, 124 tests passed"
+		},
+		{
+			"name": "Production build",
+			"command": "npm run build (NODE_OPTIONS=--max-old-space-size=4096)",
+			"path": "C:/Users/radev/AppData/Local/Temp/cars-import-desktop-contact-about-services-2026-10-02/runtime/desktop-editorial-copy-build.log",
+			"sha256": "2b704c5886f5e655108e25b47be5b641d5a8f0d1059e4ef82983aeec9258efe8",
+			"lastWriteUtc": "2026-10-02T18:04:29.749Z",
+			"result": "Passed"
+		},
+		{
+			"name": "Initial complete browser run",
+			"command": "playwright test --workers=1",
+			"path": "C:/Users/radev/AppData/Local/Temp/cars-import-desktop-contact-about-services-2026-10-02/runtime/desktop-editorial-e2e-initial.log",
+			"sha256": "02ee951991b4b354f535dfeb885dd4f08ad753977799857193dfc67cbdb884bd",
+			"lastWriteUtc": "2026-10-02T17:09:33.406Z",
+			"result": "340 passed, 157 viewport skips, 11 failures investigated and resolved"
+		},
+		{
+			"name": "Broad desktop recheck",
+			"command": "playwright test --project=desktop --workers=1 desktop-page-patterns desktop-search filter-inputs forms-and-detail inventory smoke storefront-controls style-parity typography-contact",
+			"path": "C:/Users/radev/AppData/Local/Temp/cars-import-desktop-contact-about-services-2026-10-02/runtime/desktop-editorial-desktop-final.log",
+			"sha256": "05bfeebdf6aa285321f5a16f0d7a65b1905857373d87aa805514398b12ae4a58",
+			"lastWriteUtc": "2026-10-02T17:24:05.401Z",
+			"result": "69 passed; 2 selector assertions corrected and rerun below"
+		},
+		{
+			"name": "Contact focused recheck",
+			"command": "playwright test --project=desktop --workers=1 --grep=\"page actions|Contact pairs\"",
+			"path": "C:/Users/radev/AppData/Local/Temp/cars-import-desktop-contact-about-services-2026-10-02/runtime/desktop-editorial-desktop-recheck.log",
+			"sha256": "8a6150843017a3165af1e0ccac13b23aacdba6d0180538953f3a7f013274de1b",
+			"lastWriteUtc": "2026-10-02T17:25:22.556Z",
+			"result": "Contact passed; page action assertion corrected and rerun below"
+		},
+		{
+			"name": "Page actions focused recheck",
+			"command": "playwright test --project=desktop --workers=1 --grep=\"page actions\"",
+			"path": "C:/Users/radev/AppData/Local/Temp/cars-import-desktop-contact-about-services-2026-10-02/runtime/desktop-editorial-actions-final.log",
+			"sha256": "8a9c1538b6e254555b9d69635a2af1110f4d5ccdc3f6308bb67f967cf0ac408b",
+			"lastWriteUtc": "2026-10-02T17:27:38.721Z",
+			"result": "1 passed; all 71 distinct desktop cases now pass"
+		},
+		{
+			"name": "Fresh-fixture account recheck",
+			"command": "playwright test --project=mobile --workers=1 account-integration",
+			"path": "C:/Users/radev/AppData/Local/Temp/cars-import-desktop-contact-about-services-2026-10-02/runtime/desktop-editorial-account-final.log",
+			"sha256": "21d0ab83eb0ab6575965415c659a1f9f727d008c7da9f021dacced1bad31fe53",
+			"lastWriteUtc": "2026-10-02T17:17:59.477Z",
+			"result": "6 passed, 1 viewport skip"
+		},
+		{
+			"name": "Final desktop recheck after all copy moves",
+			"command": "playwright test --project=desktop --workers=1 desktop-page-patterns desktop-search filter-inputs forms-and-detail inventory smoke storefront-controls style-parity typography-contact",
+			"path": "C:/Users/radev/AppData/Local/Temp/cars-import-desktop-contact-about-services-2026-10-02/runtime/desktop-editorial-copy-desktop.log",
+			"sha256": "42bf428e59b8c4edea74261ff38830d50fc6accaba725feefe3ebd7cb4a91497",
+			"lastWriteUtc": "2026-10-02T18:09:27.211Z",
+			"result": "71 passed, 0 failures"
+		},
+		{
+			"name": "Final affected mobile recheck after all copy moves",
+			"command": "playwright test --project=mobile --workers=1 smoke mobile-navigation mobile-sheet-regressions mobile-secondary service-discovery typography-contact forms-and-detail",
+			"path": "C:/Users/radev/AppData/Local/Temp/cars-import-desktop-contact-about-services-2026-10-02/runtime/desktop-editorial-copy-mobile.log",
+			"sha256": "f18d9ff56e49ab3311868d097235cad24644efc121deb5604fecfa989c1eccfb",
+			"lastWriteUtc": "2026-10-02T18:14:37.808Z",
+			"result": "77 passed, 6 viewport skips"
+		},
+		{
+			"name": "Production responsive audit",
+			"path": "runtime/desktop-editorial-2026-10-02/audit-copy-final.log",
+			"sha256": "066b6e9bcdfdd75d91e20ec3d4d3f0b5f987b105bb7ea726d89e6a258d00ab0b",
+			"result": "383 states passed; 1 Home hydration timeout passed the same-threshold full-state recheck and 3 fresh-context probes"
+		},
+		{
+			"name": "Production responsive audit",
+			"path": "runtime/desktop-editorial-2026-10-02/audit-home-repair.log",
+			"sha256": "858b3bad779bfd9c41a7b742e8a32ea850ca999e526e7c803dcc006ca628fb21",
+			"result": "6 Home recheck states, 0 failures"
+		},
+		{
+			"name": "Production responsive audit",
+			"path": "runtime/desktop-editorial-2026-10-02/audit-copy-supplement.log",
+			"sha256": "f66e462881c4373e95675cb349bf25cbda94f8d6ef5f47c536fb179981d79c87",
+			"result": "24 states, 0 failures"
+		}
+	],
+	"matrices": [
+		{
+			"phase": "before",
+			"states": 184,
+			"desktop": 64,
+			"mobile": 120,
+			"failures": 0,
+			"sha256": "cccb8b8d74935f2d5925d620b2b91eca27a2a3f1d5d8bb76293924af20b56cfa"
+		},
+		{
+			"phase": "after",
+			"states": 384,
+			"desktop": 264,
+			"mobile": 120,
+			"failures": 0,
+			"sha256": "eeea87e3d3fa256c2661cda1577213f808c73a9b5db93f207ed3d6f045072cbd"
+		},
+		{
+			"phase": "supplement",
+			"states": 24,
+			"desktop": 16,
+			"mobile": 8,
+			"failures": 0,
+			"sha256": "d7ae4f3ebe2514807d54786c2aa14967b4d68f1bfe7bb59686352822944c9560"
+		}
+	],
+	"mobilePreservation": {
+		"states": 120,
+		"additionalQueryStates": 8,
+		"aboutDesktopStates": 2,
+		"substantiveStyleOrContentChanges": 0,
+		"geometryOnlyDifferences": "Off-screen Home images <=1.53px; BG Sell at 320px 0.39px; production line-height serialization <=0.001px"
+	},
+	"references": {
+		"automotiveDonor": "6464 Home/Services inspected read-only",
+		"treidoStudio": "6418 was unavailable initially, then Studio and Shop frontend were inspected live read-only before integration; 28px/500 introduction, 24px cards, 7px media inset observed",
+		"externalMaps": "Iframe rendering unavailable before/after; configured links and geometry inspected"
+	},
+	"mobileIntegrationCommit": "f190421c4a2a80630a2170ec5c52a27a3c1df05b",
+	"verificationBoundary": "Standalone local Chromium, no deployment or release promotion"
+}

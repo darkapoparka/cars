@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-existing-dealer-branding-input-boundary",
+  "dealer": "motherwell-motors-castle",
+  "identityKey": "existing-slug:motherwell-motors-castle",
+  "cohort": "uk-selected10",
+  "ownership": "maintained-main",
+  "branding": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/motherwell-motors-castle/branding.json",
+    "sha256": "c6f053dcb607cbcb112ac1a6b534799a837cdc8f8083c7ff24adb5f8d39cd946"
+  },
+  "originalManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/motherwell-motors-castle/source/original-dealer.json",
+    "sha256": "394205c049de7d2055aad1d67cfee4088ca3f3b295e7843e525a3f5e40637e6b"
+  },
+  "originalManifestGitBlob": "c51525a3258c50672ca8782ae4f033582beb8c3d",
+  "originalRepository": "darkapoparka/cars-uk-motherwell-motors-castle",
+  "sourceRef": {
+    "ref": "main",
+    "commit": "c5c6b0da611a3bf2756c1be2ff9764f6903536ec",
+    "tree": "199bd6aa4da3a71f90a626f06e46a97ffc9a8b20"
+  },
+  "originalData": [
+    {
+      "path": "clients/motherwell-motors-castle/business-facts.json",
+      "gitBlob": "fc71c16a183676911d730d891bf05a43f6284277",
+      "bytes": 11141
+    },
+    {
+      "path": "clients/motherwell-motors-castle/dealer.json",
+      "gitBlob": "c51525a3258c50672ca8782ae4f033582beb8c3d",
+      "bytes": 4322
+    },
+    {
+      "path": "clients/motherwell-motors-castle/stock.json",
+      "gitBlob": "f5a4923b8fdbf3138fb8ef8d5a5139f7b8c273a4",
+      "bytes": 13221
+    }
+  ],
+  "sourceProof": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/original-source-proof.json",
+    "sha256": "477c4eedc097eb2e105b1d50cf1bc3701b558679e8f6c3c3681a3ccd6626e08c"
+  },
+  "roster": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/accepted-roster.json",
+    "sha256": "c23c6c4ea10acaca9fdc8d09351fd64735a9e2245385fb12a0f95d71f9f0080d"
+  },
+  "sourceCreation": false,
+  "clientIntegration": false,
+  "buildApproval": false,
+  "hostedApproval": false,
+  "eligibleForExistingQualifiedRequest": true,
+  "holds": [
+    "Exact latest template/source-delta/pilot qualification and preservation-aware updater remain required."
+  ]
+}

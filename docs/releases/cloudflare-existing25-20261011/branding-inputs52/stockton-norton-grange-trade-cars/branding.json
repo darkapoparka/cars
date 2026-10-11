@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "dealer": "stockton-norton-grange-trade-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:30:47.555Z",
+  "reviewScope": "Hash-identical selected current raster inputs and retained genuine surface-review provenance only; actual dealer integration, native and hosted checks pending.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-fdea1ecd-b0eb-4309-b239-93967006d1aa",
+    "modelVersion": null,
+    "sourceSha256": "8f217ee1e86f9f9388861896b653fd6f0f02f1a3434c489f0e36b62f2336f623",
+    "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/stockton-norton-grange-trade-cars/source/native-onLight.png",
+      "sha256": "8f217ee1e86f9f9388861896b653fd6f0f02f1a3434c489f0e36b62f2336f623"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/stockton-norton-grange-trade-cars/source/generation-receipt.json",
+      "sha256": "09e982efe2f50f1f361d55e9cd504eb0813f511201851598da69921d3ff52241"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/stockton-norton-grange-trade-cars/branding/master.png",
+    "sha256": "030e126b66a89b3ea1372eb30286303fedb284e8787205fc8501495d0a7d03d0"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/stockton-norton-grange-trade-cars/branding/onLight.png",
+      "sha256": "030e126b66a89b3ea1372eb30286303fedb284e8787205fc8501495d0a7d03d0",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/stockton-norton-grange-trade-cars/source/generation-receipt.json#sha256=09e982efe2f50f1f361d55e9cd504eb0813f511201851598da69921d3ff52241; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-fdea1ecd-b0eb-4309-b239-93967006d1aa",
+        "modelVersion": null,
+        "sourceSha256": "8f217ee1e86f9f9388861896b653fd6f0f02f1a3434c489f0e36b62f2336f623",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/stockton-norton-grange-trade-cars/source/native-onLight.png",
+          "sha256": "8f217ee1e86f9f9388861896b653fd6f0f02f1a3434c489f0e36b62f2336f623"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/stockton-norton-grange-trade-cars/source/generation-receipt.json",
+          "sha256": "09e982efe2f50f1f361d55e9cd504eb0813f511201851598da69921d3ff52241"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/stockton-norton-grange-trade-cars/branding/onDark.png",
+      "sha256": "56daafe2a7ece12690da33c30bb3723f3fd357ef569e244c53f4cc39dcd72b6b",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/stockton-norton-grange-trade-cars/source/generation-receipt.json#sha256=09e982efe2f50f1f361d55e9cd504eb0813f511201851598da69921d3ff52241; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-fdea1ecd-b0eb-4309-b239-93967006d1aa",
+        "modelVersion": null,
+        "sourceSha256": "8f217ee1e86f9f9388861896b653fd6f0f02f1a3434c489f0e36b62f2336f623",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/stockton-norton-grange-trade-cars/source/native-onDark.png",
+          "sha256": "8f217ee1e86f9f9388861896b653fd6f0f02f1a3434c489f0e36b62f2336f623"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/stockton-norton-grange-trade-cars/source/generation-receipt.json",
+          "sha256": "09e982efe2f50f1f361d55e9cd504eb0813f511201851598da69921d3ff52241"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/stockton-norton-grange-trade-cars/branding/onAccent.png",
+      "sha256": "56daafe2a7ece12690da33c30bb3723f3fd357ef569e244c53f4cc39dcd72b6b",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/stockton-norton-grange-trade-cars/source/generation-receipt.json#sha256=09e982efe2f50f1f361d55e9cd504eb0813f511201851598da69921d3ff52241; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-fdea1ecd-b0eb-4309-b239-93967006d1aa",
+        "modelVersion": null,
+        "sourceSha256": "8f217ee1e86f9f9388861896b653fd6f0f02f1a3434c489f0e36b62f2336f623",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/stockton-norton-grange-trade-cars/source/native-onAccent.png",
+          "sha256": "8f217ee1e86f9f9388861896b653fd6f0f02f1a3434c489f0e36b62f2336f623"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/stockton-norton-grange-trade-cars/source/generation-receipt.json",
+          "sha256": "09e982efe2f50f1f361d55e9cd504eb0813f511201851598da69921d3ff52241"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/stockton-norton-grange-trade-cars/source/generation-receipt.json",
+    "sha256": "09e982efe2f50f1f361d55e9cd504eb0813f511201851598da69921d3ff52241"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "existing",
+    "proof": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/stockton-norton-grange-trade-cars/surface-review.png",
+      "sha256": "97bbe9f4ca4c8b1996faf62b9d13d4dbcb8d02db4db23434afebde2f43a33058",
+      "bytes": 125093,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Actual master and compact native-palette swatches inspected; retained pixels remain identical.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-existing-review.json"
+  },
+  "sourceOwnershipUnchanged": true
+}

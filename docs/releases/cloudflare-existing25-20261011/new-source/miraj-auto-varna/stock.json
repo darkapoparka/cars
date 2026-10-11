@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "kind": "dated-listing-snapshot",
+  "candidate": true,
+  "observedAt": "2026-10-11T11:27:14.626Z",
+  "sourceProfile": "https://miraj_auto.mobile.bg/",
+  "sourcePageVisibleListingCount": 24,
+  "sourceProfileCountObservedAt": "2026-10-11T11:25:26.007Z",
+  "profileCountIsAvailableStock": false,
+  "profileCountIsClassifiedOrdinaryRetail": false,
+  "liveInventory": false,
+  "mediaPermission": "unconfirmed",
+  "localMediaReady": true,
+  "records": [
+    {
+      "id": "21791636012392100",
+      "sourceId": "21791636012392100",
+      "title": "BMW X1 M-Paket",
+      "make": "BMW",
+      "model": "X1",
+      "year": 2012,
+      "productionMonth": 12,
+      "currency": "EUR",
+      "priceVatNotice": "Не се начислява ДДС",
+      "body": "Джип",
+      "fuel": "Дизелов",
+      "transmission": "Автоматична",
+      "powerHp": null,
+      "images": [
+        "/dealer-stock/21791636012392100-1.webp",
+        "/dealer-stock/21791636012392100-2.webp"
+      ],
+      "sourceUrl": "https://miraj_auto.mobile.bg/obiava-21791636012392100-bmw-x1-m-paket-218p-s",
+      "sourceHtmlSha256": "f1d2afb6772327976d408aefbc9ac9654fc4e29a1a94cdb8f6d01fd5ed4c6674",
+      "sourcePriceVerifiedInWebText": true,
+      "sourcePublicationText": "Публикувана в 15:40 часа на 10.10.2026 год.",
+      "observedAt": "2026-10-11T11:27:14.626Z",
+      "availability": "Датирана обява; потвърдете цената и наличността с автокъщата.",
+      "availabilityConfirmed": false,
+      "partsListing": false,
+      "arrivalNotice": null,
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "mediaState": "not-collected; rights/reuse and truthful per-record media decision pending",
+      "mediaPermission": "Not independently established",
+      "fieldConflicts": [],
+      "sourcePhotoUrls": [
+        "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_ER.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_Iv.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_zb.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_Oq.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_pD.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_BL.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_xI.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_FL.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_Y2.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_DM.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_iv.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_J8.webp"
+      ],
+      "sourcePhotoEvidence": {
+        "sourceId": "21791636012392100",
+        "sourceUrl": "https://miraj_auto.mobile.bg/obiava-21791636012392100-bmw-x1-m-paket-218p-s",
+        "observedAt": "2026-10-11T12:09:28.010Z",
+        "responseSha256": "0af5404f43cf8d72f8a1ee90db232b21adb128c57506cb47791b03c3c3fadfc9",
+        "association": "primary gallery URLs contain exact source listing ID",
+        "remoteBytesFetched": false
+      },
+      "conditionIndependentlyConfirmed": false,
+      "sourceRecord": {
+        "id": "21791636012392100",
+        "sourceId": "21791636012392100",
+        "title": "BMW X1 M-Paket",
+        "make": "BMW",
+        "model": "X1",
+        "year": 2012,
+        "productionMonth": 12,
+        "priceEur": 9900,
+        "currency": "EUR",
+        "priceVatNotice": "Не се начислява ДДС",
+        "mileageKm": 200000,
+        "body": "Джип",
+        "fuel": "Дизелов",
+        "transmission": "Автоматична",
+        "powerHp": null,
+        "images": [
+          "/assets/vehicles/21791636012392100/1.webp",
+          "/assets/vehicles/21791636012392100/2.webp"
+        ],
+        "sourceUrl": "https://miraj_auto.mobile.bg/obiava-21791636012392100-bmw-x1-m-paket-218p-s",
+        "sourceHtmlSha256": "f1d2afb6772327976d408aefbc9ac9654fc4e29a1a94cdb8f6d01fd5ed4c6674",
+        "sourcePriceVerifiedInWebText": true,
+        "sourcePublicationText": "Публикувана в 15:40 часа на 10.10.2026 год.",
+        "observedAt": "2026-10-11T11:27:14.626Z",
+        "availability": "Датирана обява; потвърдете цената и наличността с автокъщата.",
+        "availabilityConfirmed": false,
+        "partsListing": false,
+        "arrivalNotice": null,
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "mediaState": "not-collected; rights/reuse and truthful per-record media decision pending",
+        "mediaPermission": "Not independently established",
+        "fieldConflicts": [],
+        "sourcePhotoUrls": [
+          "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_ER.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_Iv.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_zb.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_Oq.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_pD.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_BL.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_xI.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_FL.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_Y2.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_DM.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_iv.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_J8.webp"
+        ],
+        "sourcePhotoEvidence": {
+          "sourceId": "21791636012392100",
+          "sourceUrl": "https://miraj_auto.mobile.bg/obiava-21791636012392100-bmw-x1-m-paket-218p-s",
+          "observedAt": "2026-10-11T12:09:28.010Z",
+          "responseSha256": "0af5404f43cf8d72f8a1ee90db232b21adb128c57506cb47791b03c3c3fadfc9",
+          "association": "primary gallery URLs contain exact source listing ID",
+          "remoteBytesFetched": false
+        },
+        "conditionIndependentlyConfirmed": false
+      },
+      "priceAmount": 9900,
+      "mileageValue": 200000,
+      "mileageUnit": "km"
+    }
+  ],
+  "localMediaHydration": {
+    "candidateOnly": true,
+    "technicalRasterPresent": true,
+    "rightsApproved": false,
+    "availabilityConfirmed": false,
+    "assets": [
+      {
+        "publicPath": "/assets/vehicles/21791636012392100/1.webp",
+        "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_ER.webp",
+        "sha256": "d6b54053212518882bba58444db79c1ead84e39365f59d426fe3ac8413903134",
+        "bytes": 291038,
+        "downloadObservedAt": "2026-10-11T12:20:26.176Z"
+      },
+      {
+        "publicPath": "/assets/vehicles/21791636012392100/2.webp",
+        "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/100/2/big1/21791636012392100_Iv.webp",
+        "sha256": "86f2f5645420e6cc490cfa18a4cc9f8b4c1eb29e2083ca62834cfe375647380a",
+        "bytes": 273692,
+        "downloadObservedAt": "2026-10-11T12:20:26.406Z"
+      }
+    ],
+    "sourceStockSha256": "a9585387d7205b4849275eeecbc6c7e480d121fb65f07401ef9d27e486469a64"
+  },
+  "dealer": "miraj-auto-varna",
+  "sourceKind": "dated-marketplace-listing-sample",
+  "sourceStock": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/source/stock.json",
+    "sha256": "c3d4a8744834902a7336cbdbb04fd53ce1871bc17c6f391e1ae49d2a29d79324"
+  },
+  "sourceRecordsUnchanged": true,
+  "mediaPathMappings": [
+    {
+      "sourcePublicPath": "/assets/vehicles/21791636012392100/1.webp",
+      "publicPath": "/dealer-stock/21791636012392100-1.webp",
+      "sha256": "d6b54053212518882bba58444db79c1ead84e39365f59d426fe3ac8413903134",
+      "bytes": 291038,
+      "sourceId": "21791636012392100"
+    },
+    {
+      "sourcePublicPath": "/assets/vehicles/21791636012392100/2.webp",
+      "publicPath": "/dealer-stock/21791636012392100-2.webp",
+      "sha256": "86f2f5645420e6cc490cfa18a4cc9f8b4c1eb29e2083ca62834cfe375647380a",
+      "bytes": 273692,
+      "sourceId": "21791636012392100"
+    }
+  ]
+}

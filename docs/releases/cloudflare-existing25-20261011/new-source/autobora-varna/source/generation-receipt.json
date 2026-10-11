@@ -1,0 +1,229 @@
+{
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Improved demo/proposal identity based on qualified primary name and preserved source evidence; material redesign, not official or owner-approved.",
+  "publishedBranding": "Text-only Ауто-бора primary profile; image search BORA AUTO is a different Dupnitsa business, not used",
+  "sourceUrls": [
+    "https://autobora.mobile.bg/",
+    "https://www.google.com/search?tbm=isch&q=Ауто+бора+Варна+лого"
+  ],
+  "sourceLimitations": "generated improved demo/proposal identity; not official or approved",
+  "originalReceiptPath": "L:/CODEX/cars/leads/branding/fleet-20261011/autobora-varna/receipt.json",
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-33b5c078-e5bd-4bd9-96d4-e96e7e79f832.png",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-33b5c078-e5bd-4bd9-96d4-e96e7e79f832",
+    "transparent_background": true,
+    "prompt": "Improve reference1 into a disclosed dealer demo proposal, reference2 illustrates customized athletic automotive lettering ONLY, never copy its name/emblem. Exact ONLY name \"АУТО-БОРА\". Keep B/curving-road emblem left. Create confident customized broad forward-slant Cyrillic automotive lettering, open counters and angular clipped corners, exact hyphen. Palette charcoal and deep blue. Strict single horizontal row: modest individual emblem LEFT beside prominent name on single baseline. Customized expressive strong automotive lettering with restrained forward slant, squared curved arches, purposeful corner cuts, broad crisp strokes and open counters. No generic stock sans, caption, subtitle, slogan, text above/below, car roof above, underline, badge, plate, shadow, white fill, gradients or texture. Clean solid inks; no noisy edges, residue or isolated pixels. Genuine RGBA transparent background including gaps/counters with safe padding. Exact script/case/spaces/punctuation. Compact automotive header, readable at120px total width.",
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/autobora-varna/branding/logo-master.png",
+      "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png"
+    ],
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-33b5c078-e5bd-4bd9-96d4-e96e7e79f832.png",
+    "modelVersion": "not exposed by tool",
+    "referenceMetadata": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/autobora-varna/branding/logo-master.png",
+        "sha256": "7a5c56091c94e7b4ce5c21a7b4ddd7c1d11bde0ef727d5a374e505daa8821932",
+        "bytes": 185413,
+        "width": 1496,
+        "height": 313,
+        "format": "png",
+        "hasAlpha": true,
+        "role": "Prior dealer treatment or preceding candidate; identity/source history preserved separately."
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png",
+        "sha256": "dc84d9283929362bd17d0b765c1ab219eb3c093ccb52e4d3c05ada2ddfcb37ce",
+        "bytes": 142920,
+        "width": 1496,
+        "height": 240,
+        "format": "png",
+        "hasAlpha": true,
+        "role": "Style direction only; no name or emblem borrowed."
+      }
+    ]
+  },
+  "variantDerivation": {
+    "onLight": "Existing raster exporter crops/scales the real ImageGen master preserving colored ink and alpha.",
+    "onDark": "Existing raster exporter derives white ink from same master alpha; not independently generated.",
+    "onAccent": "Existing raster exporter derives white ink from same master alpha; not independently generated."
+  },
+  "selectionStatus": "Preferred technically selected single-row candidate; owner style acceptance pending",
+  "ownerApproved": false,
+  "visualAccepted": true,
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autobora-varna/surface-review.png",
+  "visualChecks": {
+    "spelling": "Exact qualified main name; no captions",
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "result": "Compact one-row individualized mark beside expressive name; clear counters, no clipping, opaque background or residue observed. Owner style acceptance pending."
+  },
+  "schemaVersion": 1,
+  "dealer": "autobora-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-33b5c078-e5bd-4bd9-96d4-e96e7e79f832.png",
+    "sha256": "816eaf3c2edc2dc5664a0326cdb3b4f5a8451d97acb4123ffb202d9d1a5f8ce6",
+    "bytes": 442912,
+    "format": "png",
+    "width": 2171,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7982681046746286,
+      "opaqueRatio": 0.17808263625744686
+    },
+    "visibleBounds": {
+      "x": 40,
+      "y": 223,
+      "width": 2090,
+      "height": 295
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autobora-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "3e3fb9c9bda838af8d479706e515e86e987aacbb7e2a60110d5024e9b3a10bf1",
+      "bytes": 61340,
+      "format": "webp",
+      "width": 1496,
+      "height": 272,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6475822782321484,
+        "opaqueRatio": 0.30636108052846805
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1400,
+        "height": 198
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autobora-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "bf912aca24b4e8bf51cf309af7c47d34d94d902521851c6182a41dafb40cbaf9",
+      "bytes": 34338,
+      "format": "webp",
+      "width": 1496,
+      "height": 272,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6475822782321484,
+        "opaqueRatio": 0.30636108052846805
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1400,
+        "height": 198
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autobora-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "bf912aca24b4e8bf51cf309af7c47d34d94d902521851c6182a41dafb40cbaf9",
+      "bytes": 34338,
+      "format": "webp",
+      "width": 1496,
+      "height": 272,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6475822782321484,
+        "opaqueRatio": 0.30636108052846805
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1400,
+        "height": 198
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autobora-varna/branding/logo-master.png",
+    "sha256": "583a675da68f8746992c8f0a88992d31cbb8d14feb1abbaf3c673cb326423624",
+    "bytes": 180609,
+    "format": "png",
+    "width": 1496,
+    "height": 272,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.6475822782321484,
+      "opaqueRatio": 0.30636108052846805
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 37,
+      "width": 1400,
+      "height": 198
+    }
+  },
+  "technicalAcceptance": {
+    "spelling": "Exact qualified main name; no captions",
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "result": "Compact one-row individualized mark beside expressive name; clear counters, no clipping, opaque background or residue observed. Owner style acceptance pending."
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-new-a-export",
+  "updatedAt": "2026-10-11T11:35:02.854Z",
+  "sourceEvidence": {
+    "originalReceipt": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/autobora-varna/receipt.json",
+      "sha256": "f257c979f1d5a8754bf34dadc25d7bfce7e32c107ae50a0b8bc1b6f77d587073"
+    },
+    "originalMaster": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/autobora-varna/branding/logo-master.png",
+      "sha256": "7a5c56091c94e7b4ce5c21a7b4ddd7c1d11bde0ef727d5a374e505daa8821932"
+    },
+    "publishedBranding": "Text-only Ауто-бора primary profile; image search BORA AUTO is a different Dupnitsa business, not used",
+    "sourceUrls": [
+      "https://autobora.mobile.bg/",
+      "https://www.google.com/search?tbm=isch&q=Ауто+бора+Варна+лого"
+    ],
+    "sourceLimitation": "generated improved demo/proposal identity; not official or approved",
+    "sourceEvidenceDirectory": "L:/CODEX/cars/leads/branding/fleet-20261011/autobora-varna/source"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "kind": "dated-marketplace-listing-sample",
+  "candidate": true,
+  "observedAt": "2026-10-11T11:47:27.795Z",
+  "sourceProfile": "https://stefancar.mobile.bg/",
+  "sourcePageVisibleListingCount": 17,
+  "sourceProfileCountObservedAt": "2026-10-11T11:47:27.736Z",
+  "profileCountIsAvailableStock": false,
+  "profileCountIsClassifiedOrdinaryRetail": false,
+  "liveInventory": false,
+  "mediaPermission": "unconfirmed",
+  "localMediaReady": true,
+  "records": [
+    {
+      "id": "11790858680832903",
+      "sourceId": "11790858680832903",
+      "title": "Hyundai Ioniq 5",
+      "sourceTitleExact": "Hyundai Ioniq 5 58kw очакван внос Германия",
+      "make": "Hyundai",
+      "model": "Ioniq 5",
+      "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+      "year": 2024,
+      "productionMonth": 7,
+      "priceEur": 29500,
+      "currency": "EUR",
+      "sourcePriceText": "29 500 €",
+      "priceVatNotice": "Не се начислява ДДС",
+      "mileageKm": 85000,
+      "sourceMileageText": "85000 км",
+      "fieldConflicts": [],
+      "body": "Хечбек",
+      "fuel": "Електрически",
+      "transmission": "Автоматична",
+      "powerHp": 170,
+      "images": [
+        "/assets/vehicles/11790858680832903/1.webp",
+        "/assets/vehicles/11790858680832903/2.webp"
+      ],
+      "sourceUrl": "https://stefancar.mobile.bg/obiava-11790858680832903-hyundai-ioniq-5-58kw-ochakvan-vnos-germaniya",
+      "sourceHtmlSha256": "84de1f3b83adf9125a174e9491149c117bfdae0b572fb70ab3c03809e71ec35c",
+      "sourcePublicationText": "Публикувана в 15:44 часа на 01.10.2026 год.",
+      "observedAt": "2026-10-11T11:47:27.795Z",
+      "availability": "unconfirmed",
+      "availabilityConfirmed": false,
+      "partsListing": false,
+      "conditionMarker": null,
+      "conditionIndependentlyConfirmed": false,
+      "arrivalNotice": "очакван внос",
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+      "mediaPermission": "Not independently established",
+      "telHrefCandidates": [
+        "0888229977"
+      ],
+      "visibleSellerContact": "Контакти с продавача СТЕФАН КАР -внос и продажба на автомобили 0888229977",
+      "sellerPhoneMatchesPrimary": true,
+      "telHrefMatchesPrimary": true,
+      "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+      "retailReadyForAssembly": false,
+      "sourcePhotoUrls": [
+        "https://mobistatic1.focus.bg/mobile/photosorg/903/1/big1/11790858680832903_NC.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/903/1/big1/11790858680832903_XB.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/903/1/big1/11790858680832903_1p.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/903/1/big1/11790858680832903_KK.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/903/1/big1/11790858680832903_vP.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/903/1/big1/11790858680832903_kK.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/903/1/big1/11790858680832903_Vs.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/903/1/big1/11790858680832903_ve.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/903/1/big1/11790858680832903_gR.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/903/1/big1/11790858680832903_7x.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/903/1/big1/11790858680832903_aU.webp",
+        "https://mobistatic1.focus.bg/mobile/photosorg/903/1/big1/11790858680832903_oN.webp"
+      ],
+      "sourcePhotoEvidence": {
+        "sourceId": "11790858680832903",
+        "sourceUrl": "https://stefancar.mobile.bg/obiava-11790858680832903-hyundai-ioniq-5-58kw-ochakvan-vnos-germaniya",
+        "observedAt": "2026-10-11T12:09:29.795Z",
+        "responseSha256": "475d0e87c5b279543bf94045a990a64b60033c24dea1743f6b64f7504efb90b6",
+        "association": "primary gallery URLs contain exact source listing ID",
+        "remoteBytesFetched": false
+      }
+    }
+  ],
+  "localMediaHydration": {
+    "candidateOnly": true,
+    "technicalRasterPresent": true,
+    "rightsApproved": false,
+    "availabilityConfirmed": false,
+    "assets": [
+      {
+        "publicPath": "/assets/vehicles/11790858680832903/1.webp",
+        "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/903/1/big1/11790858680832903_NC.webp",
+        "sha256": "416b2d4cac5e05dfde69776edfa825be326d05564f6155aa926d10c8db9167fd",
+        "bytes": 353720,
+        "downloadObservedAt": "2026-10-11T12:20:32.381Z"
+      },
+      {
+        "publicPath": "/assets/vehicles/11790858680832903/2.webp",
+        "sourceUrl": "https://mobistatic1.focus.bg/mobile/photosorg/903/1/big1/11790858680832903_XB.webp",
+        "sha256": "77007a102577437a829951bf1e1b823d547065ceb03185db7a2440ced2c8afe3",
+        "bytes": 357022,
+        "downloadObservedAt": "2026-10-11T12:20:32.845Z"
+      }
+    ],
+    "sourceStockSha256": "5fb88f86dbc9601e4a74b53dfad865e741b7da3745370c8623ee726807a9a2cf"
+  }
+}

@@ -1,0 +1,842 @@
+{
+  "generatedAt": "2026-09-29T23:46:20.010Z",
+  "baseCommit": "2ae29f06db596140dfcb91ebd6701849f300d519",
+  "productionPreview": "http://127.0.0.1:5185",
+  "livePreview": "http://127.0.0.1:5173/en/listing-grid",
+  "taskSourceBlobs": {
+    "templates/auto-best/src/lib/components/layout/Header.svelte": "a1677119c2c444e1a82560aa7e7a8998f7a1f888",
+    "templates/auto-best/src/lib/components/vehicles/VehicleCard.svelte": "b0b4febad1ba195b5c3a43b2f4d544e56fb990ce",
+    "templates/auto-best/src/lib/components/listing/ListingResults.svelte": "018d8d412668cc787255c1b7fe978683a707fe2c",
+    "templates/auto-best/src/lib/config/lead-site.ts": "2f6576ca4081478ddcf7183adac4e8557472f302",
+    "templates/auto-best/src/lib/styles/tokens.css": "df3f2ba842b717b746e7091944516b9032f85b7c",
+    "templates/auto-best/scripts/mobile-polish-smoke.mjs": "49ebed1dba3a99e2df0c24502096caa53e877034",
+    "templates/auto-best/scripts/mobile-final-smoke.mjs": "7e863af1359fc65ece724fd3e982441e255bcad4",
+    "templates/auto-best/scripts/mobile-reflow-smoke.mjs": "818873a5cab8e49381d127aa846d0bac1782d65a"
+  },
+  "build": {
+    "runtime": "Node 22.20.0",
+    "validatePassed": true,
+    "finalBuildPassed": true,
+    "svelteErrors": 0,
+    "svelteWarnings": 0
+  },
+  "suites": [
+    {
+      "name": "Chromium reflow",
+      "base": "http://127.0.0.1:5185",
+      "generatedAt": "2026-09-29T23:29:38.853Z",
+      "cases": 66,
+      "passed": 66,
+      "results": [
+        {
+          "name": "en 320 / reflow",
+          "passed": true,
+          "durationMs": 2274
+        },
+        {
+          "name": "en 320 /listing-grid reflow",
+          "passed": true,
+          "durationMs": 1437
+        },
+        {
+          "name": "en 320 /listing-detail-v1/1 reflow",
+          "passed": true,
+          "durationMs": 1195
+        },
+        {
+          "name": "en 320 /about-us reflow",
+          "passed": true,
+          "durationMs": 1174
+        },
+        {
+          "name": "en 320 /blog reflow",
+          "passed": true,
+          "durationMs": 1211
+        },
+        {
+          "name": "en 320 /contact reflow",
+          "passed": true,
+          "durationMs": 1361
+        },
+        {
+          "name": "en 320 /locale-settings reflow",
+          "passed": true,
+          "durationMs": 1265
+        },
+        {
+          "name": "en 320 make dialog reflow",
+          "passed": true,
+          "durationMs": 1824
+        },
+        {
+          "name": "en 320 preferences dialog reflow",
+          "passed": true,
+          "durationMs": 2360
+        },
+        {
+          "name": "en 320 import dialog reflow",
+          "passed": true,
+          "durationMs": 1455
+        },
+        {
+          "name": "en 320 sell dialog reflow",
+          "passed": true,
+          "durationMs": 1558
+        },
+        {
+          "name": "en 390 / reflow",
+          "passed": true,
+          "durationMs": 1692
+        },
+        {
+          "name": "en 390 /listing-grid reflow",
+          "passed": true,
+          "durationMs": 1483
+        },
+        {
+          "name": "en 390 /listing-detail-v1/1 reflow",
+          "passed": true,
+          "durationMs": 1233
+        },
+        {
+          "name": "en 390 /about-us reflow",
+          "passed": true,
+          "durationMs": 1157
+        },
+        {
+          "name": "en 390 /blog reflow",
+          "passed": true,
+          "durationMs": 1243
+        },
+        {
+          "name": "en 390 /contact reflow",
+          "passed": true,
+          "durationMs": 1299
+        },
+        {
+          "name": "en 390 /locale-settings reflow",
+          "passed": true,
+          "durationMs": 1310
+        },
+        {
+          "name": "en 390 make dialog reflow",
+          "passed": true,
+          "durationMs": 1627
+        },
+        {
+          "name": "en 390 preferences dialog reflow",
+          "passed": true,
+          "durationMs": 2261
+        },
+        {
+          "name": "en 390 import dialog reflow",
+          "passed": true,
+          "durationMs": 1515
+        },
+        {
+          "name": "en 390 sell dialog reflow",
+          "passed": true,
+          "durationMs": 1715
+        },
+        {
+          "name": "en 430 / reflow",
+          "passed": true,
+          "durationMs": 1714
+        },
+        {
+          "name": "en 430 /listing-grid reflow",
+          "passed": true,
+          "durationMs": 1535
+        },
+        {
+          "name": "en 430 /listing-detail-v1/1 reflow",
+          "passed": true,
+          "durationMs": 1207
+        },
+        {
+          "name": "en 430 /about-us reflow",
+          "passed": true,
+          "durationMs": 1403
+        },
+        {
+          "name": "en 430 /blog reflow",
+          "passed": true,
+          "durationMs": 1334
+        },
+        {
+          "name": "en 430 /contact reflow",
+          "passed": true,
+          "durationMs": 1293
+        },
+        {
+          "name": "en 430 /locale-settings reflow",
+          "passed": true,
+          "durationMs": 1406
+        },
+        {
+          "name": "en 430 make dialog reflow",
+          "passed": true,
+          "durationMs": 1680
+        },
+        {
+          "name": "en 430 preferences dialog reflow",
+          "passed": true,
+          "durationMs": 2367
+        },
+        {
+          "name": "en 430 import dialog reflow",
+          "passed": true,
+          "durationMs": 1448
+        },
+        {
+          "name": "en 430 sell dialog reflow",
+          "passed": true,
+          "durationMs": 1537
+        },
+        {
+          "name": "bg 320 / reflow",
+          "passed": true,
+          "durationMs": 1666
+        },
+        {
+          "name": "bg 320 /listing-grid reflow",
+          "passed": true,
+          "durationMs": 1396
+        },
+        {
+          "name": "bg 320 /listing-detail-v1/1 reflow",
+          "passed": true,
+          "durationMs": 1222
+        },
+        {
+          "name": "bg 320 /about-us reflow",
+          "passed": true,
+          "durationMs": 1372
+        },
+        {
+          "name": "bg 320 /blog reflow",
+          "passed": true,
+          "durationMs": 1234
+        },
+        {
+          "name": "bg 320 /contact reflow",
+          "passed": true,
+          "durationMs": 1266
+        },
+        {
+          "name": "bg 320 /locale-settings reflow",
+          "passed": true,
+          "durationMs": 1356
+        },
+        {
+          "name": "bg 320 make dialog reflow",
+          "passed": true,
+          "durationMs": 1671
+        },
+        {
+          "name": "bg 320 preferences dialog reflow",
+          "passed": true,
+          "durationMs": 2332
+        },
+        {
+          "name": "bg 320 import dialog reflow",
+          "passed": true,
+          "durationMs": 1464
+        },
+        {
+          "name": "bg 320 sell dialog reflow",
+          "passed": true,
+          "durationMs": 1464
+        },
+        {
+          "name": "bg 390 / reflow",
+          "passed": true,
+          "durationMs": 1716
+        },
+        {
+          "name": "bg 390 /listing-grid reflow",
+          "passed": true,
+          "durationMs": 1335
+        },
+        {
+          "name": "bg 390 /listing-detail-v1/1 reflow",
+          "passed": true,
+          "durationMs": 2641
+        },
+        {
+          "name": "bg 390 /about-us reflow",
+          "passed": true,
+          "durationMs": 1183
+        },
+        {
+          "name": "bg 390 /blog reflow",
+          "passed": true,
+          "durationMs": 1261
+        },
+        {
+          "name": "bg 390 /contact reflow",
+          "passed": true,
+          "durationMs": 1396
+        },
+        {
+          "name": "bg 390 /locale-settings reflow",
+          "passed": true,
+          "durationMs": 1488
+        },
+        {
+          "name": "bg 390 make dialog reflow",
+          "passed": true,
+          "durationMs": 1577
+        },
+        {
+          "name": "bg 390 preferences dialog reflow",
+          "passed": true,
+          "durationMs": 2124
+        },
+        {
+          "name": "bg 390 import dialog reflow",
+          "passed": true,
+          "durationMs": 1299
+        },
+        {
+          "name": "bg 390 sell dialog reflow",
+          "passed": true,
+          "durationMs": 1431
+        },
+        {
+          "name": "bg 430 / reflow",
+          "passed": true,
+          "durationMs": 1672
+        },
+        {
+          "name": "bg 430 /listing-grid reflow",
+          "passed": true,
+          "durationMs": 1310
+        },
+        {
+          "name": "bg 430 /listing-detail-v1/1 reflow",
+          "passed": true,
+          "durationMs": 1243
+        },
+        {
+          "name": "bg 430 /about-us reflow",
+          "passed": true,
+          "durationMs": 1227
+        },
+        {
+          "name": "bg 430 /blog reflow",
+          "passed": true,
+          "durationMs": 1283
+        },
+        {
+          "name": "bg 430 /contact reflow",
+          "passed": true,
+          "durationMs": 1301
+        },
+        {
+          "name": "bg 430 /locale-settings reflow",
+          "passed": true,
+          "durationMs": 1370
+        },
+        {
+          "name": "bg 430 make dialog reflow",
+          "passed": true,
+          "durationMs": 1702
+        },
+        {
+          "name": "bg 430 preferences dialog reflow",
+          "passed": true,
+          "durationMs": 2139
+        },
+        {
+          "name": "bg 430 import dialog reflow",
+          "passed": true,
+          "durationMs": 1219
+        },
+        {
+          "name": "bg 430 sell dialog reflow",
+          "passed": true,
+          "durationMs": 1267
+        }
+      ]
+    },
+    {
+      "name": "WebKit reflow",
+      "base": "http://127.0.0.1:5185",
+      "generatedAt": "2026-09-29T23:29:38.686Z",
+      "cases": 66,
+      "passed": 66,
+      "results": [
+        {
+          "name": "en 320 / reflow",
+          "passed": true,
+          "durationMs": 3563
+        },
+        {
+          "name": "en 320 /listing-grid reflow",
+          "passed": true,
+          "durationMs": 1993
+        },
+        {
+          "name": "en 320 /listing-detail-v1/1 reflow",
+          "passed": true,
+          "durationMs": 1597
+        },
+        {
+          "name": "en 320 /about-us reflow",
+          "passed": true,
+          "durationMs": 1640
+        },
+        {
+          "name": "en 320 /blog reflow",
+          "passed": true,
+          "durationMs": 2123
+        },
+        {
+          "name": "en 320 /contact reflow",
+          "passed": true,
+          "durationMs": 1670
+        },
+        {
+          "name": "en 320 /locale-settings reflow",
+          "passed": true,
+          "durationMs": 1527
+        },
+        {
+          "name": "en 320 make dialog reflow",
+          "passed": true,
+          "durationMs": 3665
+        },
+        {
+          "name": "en 320 preferences dialog reflow",
+          "passed": true,
+          "durationMs": 3462
+        },
+        {
+          "name": "en 320 import dialog reflow",
+          "passed": true,
+          "durationMs": 1876
+        },
+        {
+          "name": "en 320 sell dialog reflow",
+          "passed": true,
+          "durationMs": 2248
+        },
+        {
+          "name": "en 390 / reflow",
+          "passed": true,
+          "durationMs": 2713
+        },
+        {
+          "name": "en 390 /listing-grid reflow",
+          "passed": true,
+          "durationMs": 2135
+        },
+        {
+          "name": "en 390 /listing-detail-v1/1 reflow",
+          "passed": true,
+          "durationMs": 2211
+        },
+        {
+          "name": "en 390 /about-us reflow",
+          "passed": true,
+          "durationMs": 2136
+        },
+        {
+          "name": "en 390 /blog reflow",
+          "passed": true,
+          "durationMs": 2280
+        },
+        {
+          "name": "en 390 /contact reflow",
+          "passed": true,
+          "durationMs": 1857
+        },
+        {
+          "name": "en 390 /locale-settings reflow",
+          "passed": true,
+          "durationMs": 2151
+        },
+        {
+          "name": "en 390 make dialog reflow",
+          "passed": true,
+          "durationMs": 2775
+        },
+        {
+          "name": "en 390 preferences dialog reflow",
+          "passed": true,
+          "durationMs": 3521
+        },
+        {
+          "name": "en 390 import dialog reflow",
+          "passed": true,
+          "durationMs": 2643
+        },
+        {
+          "name": "en 390 sell dialog reflow",
+          "passed": true,
+          "durationMs": 2788
+        },
+        {
+          "name": "en 430 / reflow",
+          "passed": true,
+          "durationMs": 2461
+        },
+        {
+          "name": "en 430 /listing-grid reflow",
+          "passed": true,
+          "durationMs": 2390
+        },
+        {
+          "name": "en 430 /listing-detail-v1/1 reflow",
+          "passed": true,
+          "durationMs": 1827
+        },
+        {
+          "name": "en 430 /about-us reflow",
+          "passed": true,
+          "durationMs": 1992
+        },
+        {
+          "name": "en 430 /blog reflow",
+          "passed": true,
+          "durationMs": 1862
+        },
+        {
+          "name": "en 430 /contact reflow",
+          "passed": true,
+          "durationMs": 1792
+        },
+        {
+          "name": "en 430 /locale-settings reflow",
+          "passed": true,
+          "durationMs": 1511
+        },
+        {
+          "name": "en 430 make dialog reflow",
+          "passed": true,
+          "durationMs": 2761
+        },
+        {
+          "name": "en 430 preferences dialog reflow",
+          "passed": true,
+          "durationMs": 2965
+        },
+        {
+          "name": "en 430 import dialog reflow",
+          "passed": true,
+          "durationMs": 2083
+        },
+        {
+          "name": "en 430 sell dialog reflow",
+          "passed": true,
+          "durationMs": 2594
+        },
+        {
+          "name": "bg 320 / reflow",
+          "passed": true,
+          "durationMs": 2685
+        },
+        {
+          "name": "bg 320 /listing-grid reflow",
+          "passed": true,
+          "durationMs": 1883
+        },
+        {
+          "name": "bg 320 /listing-detail-v1/1 reflow",
+          "passed": true,
+          "durationMs": 1542
+        },
+        {
+          "name": "bg 320 /about-us reflow",
+          "passed": true,
+          "durationMs": 1619
+        },
+        {
+          "name": "bg 320 /blog reflow",
+          "passed": true,
+          "durationMs": 1981
+        },
+        {
+          "name": "bg 320 /contact reflow",
+          "passed": true,
+          "durationMs": 1850
+        },
+        {
+          "name": "bg 320 /locale-settings reflow",
+          "passed": true,
+          "durationMs": 1678
+        },
+        {
+          "name": "bg 320 make dialog reflow",
+          "passed": true,
+          "durationMs": 2925
+        },
+        {
+          "name": "bg 320 preferences dialog reflow",
+          "passed": true,
+          "durationMs": 3455
+        },
+        {
+          "name": "bg 320 import dialog reflow",
+          "passed": true,
+          "durationMs": 1794
+        },
+        {
+          "name": "bg 320 sell dialog reflow",
+          "passed": true,
+          "durationMs": 1872
+        },
+        {
+          "name": "bg 390 / reflow",
+          "passed": true,
+          "durationMs": 1530
+        },
+        {
+          "name": "bg 390 /listing-grid reflow",
+          "passed": true,
+          "durationMs": 1251
+        },
+        {
+          "name": "bg 390 /listing-detail-v1/1 reflow",
+          "passed": true,
+          "durationMs": 1150
+        },
+        {
+          "name": "bg 390 /about-us reflow",
+          "passed": true,
+          "durationMs": 1690
+        },
+        {
+          "name": "bg 390 /blog reflow",
+          "passed": true,
+          "durationMs": 1119
+        },
+        {
+          "name": "bg 390 /contact reflow",
+          "passed": true,
+          "durationMs": 1179
+        },
+        {
+          "name": "bg 390 /locale-settings reflow",
+          "passed": true,
+          "durationMs": 1020
+        },
+        {
+          "name": "bg 390 make dialog reflow",
+          "passed": true,
+          "durationMs": 1745
+        },
+        {
+          "name": "bg 390 preferences dialog reflow",
+          "passed": true,
+          "durationMs": 2069
+        },
+        {
+          "name": "bg 390 import dialog reflow",
+          "passed": true,
+          "durationMs": 1335
+        },
+        {
+          "name": "bg 390 sell dialog reflow",
+          "passed": true,
+          "durationMs": 1498
+        },
+        {
+          "name": "bg 430 / reflow",
+          "passed": true,
+          "durationMs": 1529
+        },
+        {
+          "name": "bg 430 /listing-grid reflow",
+          "passed": true,
+          "durationMs": 1277
+        },
+        {
+          "name": "bg 430 /listing-detail-v1/1 reflow",
+          "passed": true,
+          "durationMs": 1087
+        },
+        {
+          "name": "bg 430 /about-us reflow",
+          "passed": true,
+          "durationMs": 1337
+        },
+        {
+          "name": "bg 430 /blog reflow",
+          "passed": true,
+          "durationMs": 1208
+        },
+        {
+          "name": "bg 430 /contact reflow",
+          "passed": true,
+          "durationMs": 1412
+        },
+        {
+          "name": "bg 430 /locale-settings reflow",
+          "passed": true,
+          "durationMs": 1126
+        },
+        {
+          "name": "bg 430 make dialog reflow",
+          "passed": true,
+          "durationMs": 2104
+        },
+        {
+          "name": "bg 430 preferences dialog reflow",
+          "passed": true,
+          "durationMs": 2159
+        },
+        {
+          "name": "bg 430 import dialog reflow",
+          "passed": true,
+          "durationMs": 1609
+        },
+        {
+          "name": "bg 430 sell dialog reflow",
+          "passed": true,
+          "durationMs": 1398
+        }
+      ]
+    },
+    {
+      "name": "Mobile polish",
+      "base": "http://127.0.0.1:5185",
+      "generatedAt": "2026-09-29T23:34:21.353Z",
+      "cases": 8,
+      "passed": 8,
+      "results": [
+        {
+          "name": "bg mobile polish 320",
+          "passed": true,
+          "durationMs": 5904
+        },
+        {
+          "name": "bg mobile polish 390",
+          "passed": true,
+          "durationMs": 5577
+        },
+        {
+          "name": "bg mobile polish 430",
+          "passed": true,
+          "durationMs": 5049
+        },
+        {
+          "name": "bg mobile polish 1440",
+          "passed": true,
+          "durationMs": 4868
+        },
+        {
+          "name": "en mobile polish 320",
+          "passed": true,
+          "durationMs": 5079
+        },
+        {
+          "name": "en mobile polish 390",
+          "passed": true,
+          "durationMs": 5276
+        },
+        {
+          "name": "en mobile polish 430",
+          "passed": true,
+          "durationMs": 5123
+        },
+        {
+          "name": "en mobile polish 1440",
+          "passed": true,
+          "durationMs": 4844
+        }
+      ]
+    },
+    {
+      "name": "Mobile navigation, focus and loading",
+      "base": "http://127.0.0.1:5185",
+      "generatedAt": "2026-09-29T23:40:06.949Z",
+      "cases": 6,
+      "passed": 6,
+      "results": [
+        {
+          "name": "en 320: enlarged text, motion, focus and image loading",
+          "passed": true,
+          "durationMs": 2644
+        },
+        {
+          "name": "en 390: enlarged text, motion, focus and image loading",
+          "passed": true,
+          "durationMs": 2550
+        },
+        {
+          "name": "en 430: enlarged text, motion, focus and image loading",
+          "passed": true,
+          "durationMs": 2458
+        },
+        {
+          "name": "bg 320: enlarged text, motion, focus and image loading",
+          "passed": true,
+          "durationMs": 2547
+        },
+        {
+          "name": "bg 390: enlarged text, motion, focus and image loading",
+          "passed": true,
+          "durationMs": 2466
+        },
+        {
+          "name": "bg 430: enlarged text, motion, focus and image loading",
+          "passed": true,
+          "durationMs": 2499
+        }
+      ]
+    }
+  ],
+  "axe": {
+    "version": "4.13.0",
+    "states": 42,
+    "violations": 0,
+    "tags": [
+      "wcag2a",
+      "wcag2aa",
+      "wcag21a",
+      "wcag21aa",
+      "wcag22aa"
+    ],
+    "locales": [
+      "en",
+      "bg"
+    ],
+    "widths": [
+      320,
+      360,
+      390,
+      430,
+      767,
+      768,
+      1440
+    ],
+    "modes": [
+      "normal",
+      "spacing",
+      "enlarged"
+    ],
+    "retinaViewport": {
+      "width": 390,
+      "deviceScaleFactor": 2
+    }
+  },
+  "screenshots": {
+    "browser": "Codex in-app browser",
+    "fontSize": "16px",
+    "height": 844,
+    "widths": [
+      320,
+      390
+    ],
+    "scrollPosition": "top of inventory"
+  },
+  "interactiveCheck": {
+    "viewport": 320,
+    "locale": "en",
+    "journey": "inventory → vehicle 1 → inventory #vehicle-1",
+    "passed": true
+  },
+  "limits": "Working previews include preserved drafts. These checks do not constitute complete WCAG conformance, physical-device verification, a template release or a dealer deployment."
+}

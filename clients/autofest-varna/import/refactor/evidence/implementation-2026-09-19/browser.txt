@@ -1,0 +1,85 @@
+
+> cars-template-import@0.0.1 test:e2e
+> playwright test --workers=2 --reporter=line
+
+
+Running 76 tests using 2 workers
+
+[1/76] [desktop] ΓÇ║ tests\accessibility.e2e.ts:6:2 ΓÇ║ accessible landmarks and controls on /inventory
+[2/76] [desktop] ΓÇ║ tests\accessibility.e2e.ts:6:2 ΓÇ║ accessible landmarks and controls on /
+[3/76] [desktop] ΓÇ║ tests\accessibility.e2e.ts:6:2 ΓÇ║ accessible landmarks and controls on /contact
+[4/76] [desktop] ΓÇ║ tests\accessibility.e2e.ts:6:2 ΓÇ║ accessible landmarks and controls on /import
+[5/76] [desktop] ΓÇ║ tests\accessibility.e2e.ts:6:2 ΓÇ║ accessible landmarks and controls on /sell-your-car
+[6/76] [desktop] ΓÇ║ tests\accessibility.e2e.ts:6:2 ΓÇ║ accessible landmarks and controls on /financing
+[7/76] [desktop] ΓÇ║ tests\forms-and-detail.e2e.ts:13:1 ΓÇ║ contact submission works without JavaScript at both widths
+[8/76] [desktop] ΓÇ║ tests\forms-and-detail.e2e.ts:35:1 ΓÇ║ desktop enquiry reports saving separately from delivery
+[9/76] [desktop] ΓÇ║ tests\forms-and-detail.e2e.ts:49:1 ΓÇ║ PDP opens the gallery and enquiry without legacy styles
+[10/76] [desktop] ΓÇ║ tests\forms-and-detail.e2e.ts:67:1 ΓÇ║ native route changes do not leave old modal or body cleanup behind
+[11/76] [desktop] ΓÇ║ tests\inventory.e2e.ts:4:1 ΓÇ║ inventory remains server-rendered without JavaScript
+[12/76] [desktop] ΓÇ║ tests\inventory.e2e.ts:18:1 ΓÇ║ filters and detail return retain the original URL
+[13/76] [desktop] ΓÇ║ tests\inventory.e2e.ts:28:1 ΓÇ║ desktop filter search does not discard a previously selected make
+[14/76] [desktop] ΓÇ║ tests\mobile-navigation.e2e.ts:4:1 ΓÇ║ menu restores focus and browser back dismisses it exactly once
+[15/76] [desktop] ΓÇ║ tests\mobile-navigation.e2e.ts:23:1 ΓÇ║ navigation from the menu does not leave a stale overlay or scroll lock
+[16/76] [desktop] ΓÇ║ tests\refactor-contracts.e2e.ts:5:1 ΓÇ║ failed vehicle photos recover even when the request fails before hydration
+[17/76] [desktop] ΓÇ║ tests\refactor-contracts.e2e.ts:29:1 ΓÇ║ language-specific pages have distinct canonicals and matching HTML language
+[18/76] [desktop] ΓÇ║ tests\refactor-contracts.e2e.ts:48:1 ΓÇ║ mobile menu is accessible and preserves language during navigation
+[19/76] [desktop] ΓÇ║ tests\refactor-contracts.e2e.ts:69:1 ΓÇ║ desktop content reflows at intermediate and wide widths
+[20/76] [desktop] ΓÇ║ tests\refactor-contracts.e2e.ts:81:1 ΓÇ║ desktop import country choices do not clip or need horizontal scrolling
+[21/76] [desktop] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders / without errors or horizontal overflow
+[22/76] [desktop] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /inventory without errors or horizontal overflow
+[23/76] [desktop] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /import without errors or horizontal overflow
+[24/76] [desktop] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /sell-your-car without errors or horizontal overflow
+[25/76] [desktop] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /financing without errors or horizontal overflow
+[26/76] [desktop] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /contact without errors or horizontal overflow
+[27/76] [desktop] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /about without errors or horizontal overflow
+[28/76] [desktop] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /services without errors or horizontal overflow
+[29/76] [desktop] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /blog without errors or horizontal overflow
+[30/76] [desktop] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /faqs without errors or horizontal overflow
+[31/76] [desktop] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /reviews without errors or horizontal overflow
+[32/76] [desktop] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /privacy without errors or horizontal overflow
+[33/76] [desktop] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /terms without errors or horizontal overflow
+[34/76] [desktop] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /cookies without errors or horizontal overflow
+[35/76] [desktop] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /calculator without errors or horizontal overflow
+[36/76] [desktop] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /compare without errors or horizontal overflow
+[37/76] [desktop] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /account/favorites without errors or horizontal overflow
+[38/76] [desktop] ΓÇ║ tests\smoke.e2e.ts:38:1 ΓÇ║ preview responses cannot be indexed
+[39/76] [mobile] ΓÇ║ tests\accessibility.e2e.ts:6:2 ΓÇ║ accessible landmarks and controls on /
+[40/76] [mobile] ΓÇ║ tests\accessibility.e2e.ts:6:2 ΓÇ║ accessible landmarks and controls on /inventory
+[41/76] [mobile] ΓÇ║ tests\accessibility.e2e.ts:6:2 ΓÇ║ accessible landmarks and controls on /contact
+[42/76] [mobile] ΓÇ║ tests\accessibility.e2e.ts:6:2 ΓÇ║ accessible landmarks and controls on /import
+[43/76] [mobile] ΓÇ║ tests\accessibility.e2e.ts:6:2 ΓÇ║ accessible landmarks and controls on /sell-your-car
+[44/76] [mobile] ΓÇ║ tests\accessibility.e2e.ts:6:2 ΓÇ║ accessible landmarks and controls on /financing
+[45/76] [mobile] ΓÇ║ tests\forms-and-detail.e2e.ts:13:1 ΓÇ║ contact submission works without JavaScript at both widths
+[46/76] [mobile] ΓÇ║ tests\forms-and-detail.e2e.ts:35:1 ΓÇ║ desktop enquiry reports saving separately from delivery
+[47/76] [mobile] ΓÇ║ tests\forms-and-detail.e2e.ts:49:1 ΓÇ║ PDP opens the gallery and enquiry without legacy styles
+[48/76] [mobile] ΓÇ║ tests\forms-and-detail.e2e.ts:67:1 ΓÇ║ native route changes do not leave old modal or body cleanup behind
+[49/76] [mobile] ΓÇ║ tests\inventory.e2e.ts:4:1 ΓÇ║ inventory remains server-rendered without JavaScript
+[50/76] [mobile] ΓÇ║ tests\inventory.e2e.ts:18:1 ΓÇ║ filters and detail return retain the original URL
+[51/76] [mobile] ΓÇ║ tests\inventory.e2e.ts:28:1 ΓÇ║ desktop filter search does not discard a previously selected make
+[52/76] [mobile] ΓÇ║ tests\mobile-navigation.e2e.ts:4:1 ΓÇ║ menu restores focus and browser back dismisses it exactly once
+[53/76] [mobile] ΓÇ║ tests\mobile-navigation.e2e.ts:23:1 ΓÇ║ navigation from the menu does not leave a stale overlay or scroll lock
+[54/76] [mobile] ΓÇ║ tests\refactor-contracts.e2e.ts:5:1 ΓÇ║ failed vehicle photos recover even when the request fails before hydration
+[55/76] [mobile] ΓÇ║ tests\refactor-contracts.e2e.ts:29:1 ΓÇ║ language-specific pages have distinct canonicals and matching HTML language
+[56/76] [mobile] ΓÇ║ tests\refactor-contracts.e2e.ts:48:1 ΓÇ║ mobile menu is accessible and preserves language during navigation
+[57/76] [mobile] ΓÇ║ tests\refactor-contracts.e2e.ts:69:1 ΓÇ║ desktop content reflows at intermediate and wide widths
+[58/76] [mobile] ΓÇ║ tests\refactor-contracts.e2e.ts:81:1 ΓÇ║ desktop import country choices do not clip or need horizontal scrolling
+[59/76] [mobile] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders / without errors or horizontal overflow
+[60/76] [mobile] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /inventory without errors or horizontal overflow
+[61/76] [mobile] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /import without errors or horizontal overflow
+[62/76] [mobile] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /sell-your-car without errors or horizontal overflow
+[63/76] [mobile] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /financing without errors or horizontal overflow
+[64/76] [mobile] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /contact without errors or horizontal overflow
+[65/76] [mobile] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /about without errors or horizontal overflow
+[66/76] [mobile] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /services without errors or horizontal overflow
+[67/76] [mobile] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /blog without errors or horizontal overflow
+[68/76] [mobile] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /faqs without errors or horizontal overflow
+[69/76] [mobile] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /reviews without errors or horizontal overflow
+[70/76] [mobile] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /privacy without errors or horizontal overflow
+[71/76] [mobile] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /terms without errors or horizontal overflow
+[72/76] [mobile] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /cookies without errors or horizontal overflow
+[73/76] [mobile] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /calculator without errors or horizontal overflow
+[74/76] [mobile] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /compare without errors or horizontal overflow
+[75/76] [mobile] ΓÇ║ tests\smoke.e2e.ts:23:2 ΓÇ║ renders /account/favorites without errors or horizontal overflow
+[76/76] [mobile] ΓÇ║ tests\smoke.e2e.ts:38:1 ΓÇ║ preview responses cannot be indexed
+  8 skipped
+  68 passed (36.8s)

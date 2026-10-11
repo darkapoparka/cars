@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-existing-dealer-branding-input-boundary",
+  "dealer": "birmingham-square-one-motors",
+  "identityKey": "existing-slug:birmingham-square-one-motors",
+  "cohort": "uk-selected10",
+  "ownership": "maintained-main",
+  "branding": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/birmingham-square-one-motors/branding.json",
+    "sha256": "03bc0d5298dcf8eafc3f16b09d33dc3b0766a3e6ed9e187e911b3390555a70c8"
+  },
+  "originalManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/birmingham-square-one-motors/source/original-dealer.json",
+    "sha256": "eb31191d8b3e5a4b5f081166a11bbf0519edf7da7c4126581f89e89a2798030f"
+  },
+  "originalManifestGitBlob": "ae3dd4fdb9d81fe9fa566c61bc26895852b78957",
+  "originalRepository": "darkapoparka/cars-uk-birmingham-square-one-motors",
+  "sourceRef": {
+    "ref": "main",
+    "commit": "c5c6b0da611a3bf2756c1be2ff9764f6903536ec",
+    "tree": "396c9d0162f60ea92c536ec76d5c0c7708fb08d2"
+  },
+  "originalData": [
+    {
+      "path": "clients/birmingham-square-one-motors/business-facts.json",
+      "gitBlob": "f566ad387f586f3fb6b4734daf29c284b3e02b71",
+      "bytes": 10404
+    },
+    {
+      "path": "clients/birmingham-square-one-motors/dealer.json",
+      "gitBlob": "ae3dd4fdb9d81fe9fa566c61bc26895852b78957",
+      "bytes": 4346
+    },
+    {
+      "path": "clients/birmingham-square-one-motors/stock.json",
+      "gitBlob": "037e9bbfdcc1696a9bb966985b969ad0d71786fd",
+      "bytes": 11390
+    }
+  ],
+  "sourceProof": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/original-source-proof.json",
+    "sha256": "477c4eedc097eb2e105b1d50cf1bc3701b558679e8f6c3c3681a3ccd6626e08c"
+  },
+  "roster": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/accepted-roster.json",
+    "sha256": "c23c6c4ea10acaca9fdc8d09351fd64735a9e2245385fb12a0f95d71f9f0080d"
+  },
+  "sourceCreation": false,
+  "clientIntegration": false,
+  "buildApproval": false,
+  "hostedApproval": false,
+  "eligibleForExistingQualifiedRequest": true,
+  "holds": [
+    "Exact latest template/source-delta/pilot qualification and preservation-aware updater remain required."
+  ]
+}

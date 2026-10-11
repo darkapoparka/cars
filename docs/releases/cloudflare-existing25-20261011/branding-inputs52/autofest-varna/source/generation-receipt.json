@@ -1,0 +1,329 @@
+{
+  "slug": "autofest-varna",
+  "coreName": "АУТОФЕСТ",
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-555b7a86-8c8f-4c47-a8fb-2499b75ab0be.png",
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "New disclosed single-row expressive automotive proposal; owner/style and dealer approval pending",
+  "onLight": "original",
+  "onDark": "white",
+  "onAccent": "white",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-555b7a86-8c8f-4c47-a8fb-2499b75ab0be",
+    "prompt": "Use the attached AVTOMOTOR identity ONLY as a reference for expressive confident automotive letter shapes. Do not copy its emblem or words or stacked layout. Create ONE complete fresh proposed identity, with a small distinctive business-specific emblem LEFT of the name on ONE horizontal row, all on one common visual axis. No text above/below, subtitles, slogans, phone, location caption, descriptors beyond the exact requested core name, underline, stacked layout, multiple options, chrome, gradients, shadow, glow, texture or background plate. True transparent RGBA canvas. Flat solid opaque shapes with clean transparent counters, generous open counters, balanced kerning and modest clear padding. Name charcoal #20252b, useful identity accent confined to emblem. Custom automotive lettering with a restrained forward slant; no plain generic sans typesetting. Distinctive emblem must relate to this name, not a fleet-wide symbol. Exact name: АУТОФЕСТ. Exact Cyrillic. Compact angular Cyrillic А emblem with charcoal structure and warm ochre #b58925 rising-road facet. Heavy custom rounded-square Cyrillic lettering, angled terminals and subtle forward lean. Avoid Latin lookalike spelling, one row. Complete wide landscape logo, all requested words equally prominent on the same row. Proposed dealer demo identity, no official approval claim.",
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/am-varna-varna/branding/logo-master.png"
+    ],
+    "transparent_background": true,
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-555b7a86-8c8f-4c47-a8fb-2499b75ab0be.png",
+    "actualOutputHint": "Generated images are saved to C:\\Users\\radev\\.codex\\generated_images\\01a12a34-877e-73a2-9a3d-346e546742c6 as C:\\Users\\radev\\.codex\\generated_images\\01a12a34-877e-73a2-9a3d-346e546742c6\\exec-555b7a86-8c8f-4c47-a8fb-2499b75ab0be.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  "derivation": {
+    "kind": "new-proposed-identity",
+    "styleReferenceOnly": true,
+    "businessIdentityBasis": "Published source or previous disclosed proposal inspected in original surface QA; recognizable name-specific cues and useful identity colors preserved.",
+    "directionPath": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/DIRECTION.md",
+    "changeReason": "One line and gold A cue but plain typography; expressive Cyrillic lettering needed to meet owner direction."
+  },
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autofest-varna/surface-review.png",
+  "visualAccepted": true,
+  "ownerStyleStatus": "pending",
+  "originalPackage": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/autofest-varna",
+    "files": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/autofest-varna/branding/logo-master.png",
+        "sha256": "da4ac28ac6d0468d3d742fe535ade6588a300c37ce78dc6ed39b9a6bd4b6e417"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/autofest-varna/branding/logo-on-light.png",
+        "sha256": "da4ac28ac6d0468d3d742fe535ade6588a300c37ce78dc6ed39b9a6bd4b6e417"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/autofest-varna/branding/logo-on-dark.png",
+        "sha256": "e898cd5ffcc1d44faf25537e6423f56232b61e5567f51e65b23fc35c4c3a499f"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/autofest-varna/branding/logo-on-accent.png",
+        "sha256": "e898cd5ffcc1d44faf25537e6423f56232b61e5567f51e65b23fc35c4c3a499f"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/autofest-varna/dealer-brand/logo-on-light.webp",
+        "sha256": "be0d2633a98299ae97d632e63eb18500b18cabd553450cc684a22bfaa765a746"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/autofest-varna/dealer-brand/logo-on-dark.webp",
+        "sha256": "7bf2c59d067b64cd1f5d77493bb01a9087dfeee47c490d5faabfe341ea78840c"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/autofest-varna/dealer-brand/logo-on-accent.webp",
+        "sha256": "7bf2c59d067b64cd1f5d77493bb01a9087dfeee47c490d5faabfe341ea78840c"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/autofest-varna/receipt.json",
+        "sha256": "fda7894a486a980d243c3076ffe8188ef9c016b0c6facc84b21abd02444750c7"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/autofest-varna/branding/logo-contract.json",
+        "sha256": "4b144254429599b669e2369d577a1c0cca1f7338471636c8763a68eea8ec5eb2"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/autofest-varna/technical-check.json",
+        "sha256": "b8a6389221425493d98423b27bb11be41f87aad228d47ad58c426d01f6463a4b"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/autofest-varna/surface-review.png",
+        "sha256": "e7b7f22f011b134a9606796f0537d3f58cbca359674179e6c84d0768285c7293"
+      }
+    ]
+  },
+  "sourceUrls": [
+    "https://autofest.mobile.bg/",
+    "https://cdn2.focus.bg/mobile/images/houseslogos/h11685301970088360.pic"
+  ],
+  "publishedBranding": {
+    "profileUrl": "https://autofest.mobile.bg/",
+    "sourceLogoUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h11685301970088360.pic",
+    "observedAt": "2026-10-11T09:19:47.249Z",
+    "visualEvidence": "Previously inspected published identity retained in source evidence and compared visually in this triage. Fresh proposal created from the exact factual business name; no reference image supplied to generation.",
+    "decision": "User authorized a fresh disclosed proposal for this weak identity. Existing source brand remains evidence; owner/dealer approval pending.",
+    "retainedEvidence": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/autofest-varna/source-evidence/published-logo.jpg"
+    ]
+  },
+  "sourceEvidence": [
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/autofest-varna/source-evidence/published-logo.jpg",
+      "sha256": "23e6746d1775b10e2f52f5cdcfb72ba174e7698b0ac59beac77aa972b6c866ad",
+      "bytes": 1767,
+      "format": "jpeg",
+      "width": 100,
+      "height": 26,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 100,
+        "height": 26
+      }
+    }
+  ],
+  "previousTreatment": {
+    "receipt": "L:/CODEX/cars/leads/branding/fleet-20261011/autofest-varna/receipt.json",
+    "sha256": "fda7894a486a980d243c3076ffe8188ef9c016b0c6facc84b21abd02444750c7",
+    "imageGeneration": {
+      "tool": "image_gen.imagegen",
+      "reference": "image_gen.imagegen output exec-e1fa7cc4-64ee-483e-94c9-872ba79b5914",
+      "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-e1fa7cc4-64ee-483e-94c9-872ba79b5914.png",
+      "transparent_background": true,
+      "modelVersion": "not exposed by tool",
+      "prompt": "Design one fresh refined proposed identity for a Bulgarian car dealership whose exact Cyrillic business name is АУТОФЕСТ. Visible text must be exactly АУТОФЕСТ, correctly spelled in Cyrillic; no descriptor or slogan. A clean modern horizontal wordmark in bold elegant sans-serif lettering with open normal Cyrillic letter counters and calm spacing. A small distinctive geometric Cyrillic А monogram at the left, with one restrained warm gold #a87915 accent and deep charcoal #17212b strokes; wordmark dark charcoal. Use solid flat opaque inks, no bubble letters, no chunky rounded retro lettering, no embossed yellow/red outline, no car drawing, no detailed symbol, no star, no crest, no phone, no slogan, no badge background, no metallic effect, no gradients, no texture or shadow. Strong simple geometry readable at 120px. True RGBA transparent background outside all logo strokes and inside every counter/gap. One complete logo centered on landscape canvas, modest transparent margin, no mockup or variations. This is an original disclosed proposed identity, not an edit of the previous logo.",
+      "toolOutputHint": "Generated images are saved to C:\\Users\\radev\\.codex\\generated_images\\01a12a34-877e-73a2-9a3d-346e546742c6 as C:\\Users\\radev\\.codex\\generated_images\\01a12a34-877e-73a2-9a3d-346e546742c6\\exec-e1fa7cc4-64ee-483e-94c9-872ba79b5914.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  },
+  "styleReferenceEvidence": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/am-varna-varna/branding/logo-master.png",
+    "sha256": "11a4f802dc2725817c409f1b669446cc51763849e5a29467af7b951c01808ffa"
+  },
+  "factualNameTreatment": {
+    "fullPublishedName": "АУТОФЕСТ",
+    "displayedCoreName": "АУТОФЕСТ",
+    "explicitlyOmitted": null,
+    "authorization": "Owner permits recognizable trading name and visibly secondary generic descriptive captions omitted; no alternate trading name invented"
+  },
+  "selectionStatus": "technically-selected-preferred-revised-pack",
+  "visualChecks": {
+    "reviewer": "baseline asset agent",
+    "spelling": "АУТОФЕСТ",
+    "layout": "Compact unique emblem beside one expressive name row; no secondary captions",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "transparency": "Master and contextual exports visually inspected; no matte, filled counters, clipped strokes or residue visible",
+    "smallSize": "Correct name and distinctive emblem readable at120/180/320 width in isolated raster swatches",
+    "reviewedAt": "2026-10-11T11:35:51.666Z",
+    "approval": "Technical asset selection only; owner/style, dealer, all actual six-design consumers and hosted review pending"
+  },
+  "schemaVersion": 1,
+  "dealer": "autofest-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-555b7a86-8c8f-4c47-a8fb-2499b75ab0be.png",
+    "sha256": "02467913e9d510252ca8ee2869d5ec76cf70f10e7ab3597d472ed3fb247e6f3d",
+    "bytes": 370623,
+    "format": "png",
+    "width": 2172,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8277900298118698,
+      "opaqueRatio": 0.14841452743607744
+    },
+    "visibleBounds": {
+      "x": 65,
+      "y": 188,
+      "width": 2042,
+      "height": 302
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autofest-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "c0351a13d32faa7c580ebd29f88f08c22670224afa0384de0db2488f136f1842",
+      "bytes": 52060,
+      "format": "webp",
+      "width": 1496,
+      "height": 280,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6945760122230711,
+        "opaqueRatio": 0.2603872230710466
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 208
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autofest-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "ad2487e5180ede40caab0d4a86214f81173e12651d8ecc90ee21758b21ee72b6",
+      "bytes": 31244,
+      "format": "webp",
+      "width": 1496,
+      "height": 280,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6945760122230711,
+        "opaqueRatio": 0.2603872230710466
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 208
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autofest-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "ad2487e5180ede40caab0d4a86214f81173e12651d8ecc90ee21758b21ee72b6",
+      "bytes": 31244,
+      "format": "webp",
+      "width": 1496,
+      "height": 280,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6945760122230711,
+        "opaqueRatio": 0.2603872230710466
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 208
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autofest-varna/branding/logo-master.png",
+    "sha256": "0282e7acb7570f3d668961010689fb76196a0a9a3d85c0bc5deea73dab33d63c",
+    "bytes": 153678,
+    "format": "png",
+    "width": 1496,
+    "height": 280,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.6945760122230711,
+      "opaqueRatio": 0.2603872230710466
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 208
+    }
+  },
+  "technicalAcceptance": {
+    "reviewer": "baseline asset agent",
+    "spelling": "АУТОФЕСТ",
+    "layout": "Compact unique emblem beside one expressive name row; no secondary captions",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "transparency": "Master and contextual exports visually inspected; no matte, filled counters, clipped strokes or residue visible",
+    "smallSize": "Correct name and distinctive emblem readable at120/180/320 width in isolated raster swatches",
+    "reviewedAt": "2026-10-11T11:35:51.666Z",
+    "approval": "Technical asset selection only; owner/style, dealer, all actual six-design consumers and hosted review pending"
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "ownerApproved": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-baseline-export",
+  "updatedAt": "2026-10-11T11:35:51.974Z",
+  "pngTreatments": {
+    "on-light": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autofest-varna/branding/logo-on-light.png",
+      "sha256": "0282e7acb7570f3d668961010689fb76196a0a9a3d85c0bc5deea73dab33d63c"
+    },
+    "on-dark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autofest-varna/branding/logo-on-dark.png",
+      "sha256": "2d06c0c0f637f12ec517e5c7cbb3086465c683b5abad6160a4f005ac3d379d97"
+    },
+    "on-accent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autofest-varna/branding/logo-on-accent.png",
+      "sha256": "2d06c0c0f637f12ec517e5c7cbb3086465c683b5abad6160a4f005ac3d379d97"
+    }
+  },
+  "exportRetention": {
+    "nativeImageGenOriginalRetained": true,
+    "compactQAPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/autofest-varna/surface-review.png",
+    "historicalExportScratch": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-baseline-export",
+    "retirementReceipt": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/baseline-single-row-retention.json"
+  }
+}

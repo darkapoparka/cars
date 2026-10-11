@@ -1,0 +1,202 @@
+{
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-f0707854-94c6-403c-8239-46db105c7c56.png",
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Separate single-row redesigned proposal; historical identity/name/colors informed artwork. Awaiting owner/dealer style selection.",
+  "sourceUrls": [
+    "https://albasmamotors.com/",
+    "https://albasmamotors.com/logo.webp"
+  ],
+  "sourceLogoUrl": "https://albasmamotors.com/logo.webp",
+  "workingLogoPath": "leads/branding/fleet-20261011/al-basma-motors/source/published-logo.webp",
+  "derivation": {
+    "historicalReceipt": "L:/CODEX/cars/leads/branding/fleet-20261011/al-basma-motors/receipt.json",
+    "historicalMaster": "L:/CODEX/cars/leads/branding/fleet-20261011/al-basma-motors/branding/logo-master.png",
+    "historicalMasterSha256": "327f5ee26c0bef853c516bd377bb1ac09d174f8c86661068d1c00a66236f3622",
+    "historicalGeneration": {
+      "reference": "exec-40f49c24-d093-4023-999a-0b386aee8490",
+      "path": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-40f49c24-d093-4023-999a-0b386aee8490.png",
+      "sha256": "0aca19db8e2a6eb889a58f9f50c2dac9afcb10dab3ded178aad6b07c6c44d3d7"
+    },
+    "publicIdentityObservation": {
+      "observedAt": "2026-10-11",
+      "visualReference": "CUA website header screenshot shows silver AL BASMA oval/L emblem."
+    },
+    "styleReference": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png",
+    "styleReferenceScope": "Composition/expressive lettering only; not a dealer identity or color source",
+    "referenceFiles": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/al-basma-motors/branding/logo-master.png",
+        "sha256": "327f5ee26c0bef853c516bd377bb1ac09d174f8c86661068d1c00a66236f3622"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png",
+        "sha256": "dc84d9283929362bd17d0b765c1ab219eb3c093ccb52e4d3c05ada2ddfcb37ce"
+      }
+    ],
+    "styleReferenceSha256": "dc84d9283929362bd17d0b765c1ab219eb3c093ccb52e4d3c05ada2ddfcb37ce"
+  },
+  "imageGeneration": {
+    "reference": "exec-f0707854-94c6-403c-8239-46db105c7c56",
+    "tool": "image_gen.imagegen",
+    "transparent_background": true,
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/al-basma-motors/branding/logo-master.png",
+      "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png"
+    ],
+    "prompt": "Recompose reference1, the recognizable AL BASMA oval/L-like emblem, into a sophisticated compact proposal. Keep its swooping oval/L geometry as a small standalone graphite emblem at left; remove its embedded tiny AL BASMA lettering because the full dealer name AL BASMA MOTORS must appear to right on ONE horizontal line. EXACT text AL BASMA MOTORS. Give full name strong futuristic mildly italic automotive letter forms that relate to the source lettering. Preserve graphite #30343b identity, no new unrelated icon. Use reference2 only as the style anchor for confident custom automotive letters and compact one-row composition; do not copy its name, monogram, blue color or exact mark. The owner wants expressive, slightly forward-slanted, sculpted motorsport lettering with purposeful chamfers and softened corners, not a plain upright system sans serif. ONE NAME ROW ONLY: no line beneath, captions, slogans, descriptors or facts. Emblem to left at approximately letter cap height, fully separate from the name and at most18percent of logo width. Main name large and readable at120px. Preserve exact name and meaningful individual identity. Flat clean ink, restrained color, crisp open counters/negative spaces, complete unclipped true RGBA transparency including all counters. No opaque panel/plaque/background, checkerboard, shadow, halo, shiny texture or hairline ornaments. Modest transparent margins. This is a separate redesigned PROPOSAL awaiting owner/dealer style selection; original reference remains historical.",
+    "output_hint": "Generated images are saved to C:\\Users\\radev\\.codex\\generated_images\\01a12a34-3dcd-7920-8e75-5eb5eac386bd as C:\\Users\\radev\\.codex\\generated_images\\01a12a34-3dcd-7920-8e75-5eb5eac386bd\\exec-f0707854-94c6-403c-8239-46db105c7c56.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  "onLight": "original",
+  "onDark": "white",
+  "onAccent": "white",
+  "visualAccepted": true,
+  "styleSelected": false,
+  "ownerApproved": false,
+  "selectionStatus": "technically-selected-preferred-candidate-awaiting-owner-style-selection",
+  "surfaceReviewPath": "C:\\Users\\radev\\.codex\\visualizations\\2026\\10\\11\\01a12a0e-8374-7732-9e28-580ceda2a0fc\\fleet-logo-work\\single-row-stage\\al-basma-motors/surface-review.png",
+  "visualChecks": {
+    "spelling": "Exact full dealer name compared with historical source",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "treatments": "Original brand colors onLight; same geometry white onDark/onAccent",
+    "heightLimit": 76,
+    "residue": "No material fringe, plaque, clipping or filled counters at compact sizes",
+    "scope": "Technical raster candidate only; owner/dealer style selection, integration and hosted pending",
+    "layout": "Emblem beside full name, one row, no captions"
+  },
+  "schemaVersion": 1,
+  "dealer": "al-basma-motors",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-f0707854-94c6-403c-8239-46db105c7c56.png",
+    "sha256": "14f35ad34a3db4f798f1a741749f84ae9a26c0ae08b3fd10974dc93f967b217a",
+    "bytes": 266210,
+    "format": "png",
+    "width": 2171,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8983053866767103,
+      "opaqueRatio": 0.08278703960544699
+    },
+    "visibleBounds": {
+      "x": 63,
+      "y": 247,
+      "width": 2060,
+      "height": 209
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/al-basma-motors/dealer-brand/logo-on-light.webp",
+      "sha256": "01d1d77bb2c54b3d984ffa044bc869212bd20b392340733e8a17a783701ab393",
+      "bytes": 41074,
+      "format": "webp",
+      "width": 1496,
+      "height": 215,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7686201964929735,
+        "opaqueRatio": 0.18443290635493098
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1400,
+        "height": 142
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/al-basma-motors/dealer-brand/logo-on-dark.webp",
+      "sha256": "fc44878f6ffdda8c645a20e93c3e00293b7ad975cf102f45ee31fa369c9bafea",
+      "bytes": 24418,
+      "format": "webp",
+      "width": 1496,
+      "height": 215,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7686201964929735,
+        "opaqueRatio": 0.18443290635493098
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1400,
+        "height": 142
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/al-basma-motors/dealer-brand/logo-on-accent.webp",
+      "sha256": "fc44878f6ffdda8c645a20e93c3e00293b7ad975cf102f45ee31fa369c9bafea",
+      "bytes": 24418,
+      "format": "webp",
+      "width": 1496,
+      "height": 215,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7686201964929735,
+        "opaqueRatio": 0.18443290635493098
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 37,
+        "width": 1400,
+        "height": 142
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/al-basma-motors/branding/logo-master.png",
+    "sha256": "40b38f4bd26a69c9f1073187609c587cda942afe72f417754811c765d03fe540",
+    "bytes": 104952,
+    "format": "png",
+    "width": 1496,
+    "height": 215,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7686201964929735,
+      "opaqueRatio": 0.18443290635493098
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 37,
+      "width": 1400,
+      "height": 142
+    }
+  },
+  "technicalAcceptance": {
+    "spelling": "Exact full dealer name compared with historical source",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "treatments": "Original brand colors onLight; same geometry white onDark/onAccent",
+    "heightLimit": 76,
+    "residue": "No material fringe, plaque, clipping or filled counters at compact sizes",
+    "scope": "Technical raster candidate only; owner/dealer style selection, integration and hosted pending",
+    "layout": "Emblem beside full name, one row, no captions"
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-existing-export",
+  "updatedAt": "2026-10-11T11:24:47.249Z"
+}

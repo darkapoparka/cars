@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "dealer": "electricauto-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:01:13.451Z",
+  "reviewScope": "Exact final accepted logo assets and prior genuine surface review retained; actual six-template integration and hosted acceptance remain pending.",
+  "identityStatus": "Disclosed Image Gen demonstration proposal; no recognizable dealership logo observed on its plain-heading Mobile.bg profile; not claimed official or dealer-approved",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-618dac18-49d5-419f-838e-d19f13d310c4",
+    "modelVersion": null,
+    "sourceSha256": "276c78a0f4f587514a060d1fca5c00e460c7f2dd4041681890472eec6ccb6505",
+    "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/source/native-onLight.png",
+      "sha256": "276c78a0f4f587514a060d1fca5c00e460c7f2dd4041681890472eec6ccb6505"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/source/generation-receipt.json",
+      "sha256": "c803764d97b07e687ce6649ec1a858fb009688d382317f6d967703ad26ff0582"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/branding/master.png",
+    "sha256": "b9869448e2d0790bb353194b1ed75e3b888c08e719ff64c87548170d2092aa7e"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/branding/onLight.png",
+      "sha256": "b9869448e2d0790bb353194b1ed75e3b888c08e719ff64c87548170d2092aa7e",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/source/generation-receipt.json#sha256=c803764d97b07e687ce6649ec1a858fb009688d382317f6d967703ad26ff0582; reviewed onLight PNG from exact accepted final logo manifest b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-618dac18-49d5-419f-838e-d19f13d310c4",
+        "modelVersion": null,
+        "sourceSha256": "276c78a0f4f587514a060d1fca5c00e460c7f2dd4041681890472eec6ccb6505",
+        "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/source/native-onLight.png",
+          "sha256": "276c78a0f4f587514a060d1fca5c00e460c7f2dd4041681890472eec6ccb6505"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/source/generation-receipt.json",
+          "sha256": "c803764d97b07e687ce6649ec1a858fb009688d382317f6d967703ad26ff0582"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/branding/onDark.png",
+      "sha256": "6bc4776ef76e567ffad84c98fe95c49c7af6caae5448d1fa8d53dea9e5f67dc1",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/source/generation-receipt.json#sha256=c803764d97b07e687ce6649ec1a858fb009688d382317f6d967703ad26ff0582; reviewed onDark PNG from exact accepted final logo manifest b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-618dac18-49d5-419f-838e-d19f13d310c4",
+        "modelVersion": null,
+        "sourceSha256": "276c78a0f4f587514a060d1fca5c00e460c7f2dd4041681890472eec6ccb6505",
+        "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/source/native-onDark.png",
+          "sha256": "276c78a0f4f587514a060d1fca5c00e460c7f2dd4041681890472eec6ccb6505"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/source/generation-receipt.json",
+          "sha256": "c803764d97b07e687ce6649ec1a858fb009688d382317f6d967703ad26ff0582"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/branding/onAccent.png",
+      "sha256": "6bc4776ef76e567ffad84c98fe95c49c7af6caae5448d1fa8d53dea9e5f67dc1",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/source/generation-receipt.json#sha256=c803764d97b07e687ce6649ec1a858fb009688d382317f6d967703ad26ff0582; reviewed onAccent PNG from exact accepted final logo manifest b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-618dac18-49d5-419f-838e-d19f13d310c4",
+        "modelVersion": null,
+        "sourceSha256": "276c78a0f4f587514a060d1fca5c00e460c7f2dd4041681890472eec6ccb6505",
+        "sourceRole": "native ImageGen output used to derive this exact retained reviewed raster; not asserted to be an image-edit input",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/source/native-onAccent.png",
+          "sha256": "276c78a0f4f587514a060d1fca5c00e460c7f2dd4041681890472eec6ccb6505"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/source/generation-receipt.json",
+          "sha256": "c803764d97b07e687ce6649ec1a858fb009688d382317f6d967703ad26ff0582"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/electricauto-varna/source/generation-receipt.json",
+    "sha256": "c803764d97b07e687ce6649ec1a858fb009688d382317f6d967703ad26ff0582"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "new-a",
+    "proof": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/electricauto-varna/surface-review.png",
+      "sha256": "442b395dc68c23e840588090ed70661daa7c24bc3765595893ef0bdc1a94ca9b",
+      "bytes": 118681,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Actual master and compact native-palette swatches inspected; retained pixels remain identical.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-new-a-review.json"
+  },
+  "identityHeld": false
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "assets": {
+    "onLight": {
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "6739a21c6ec58aa5b180a6d48d13bad873f55fa646405e735fcabd48635922d6"
+    },
+    "onDark": {
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "6739a21c6ec58aa5b180a6d48d13bad873f55fa646405e735fcabd48635922d6"
+    },
+    "onAccent": {
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "6739a21c6ec58aa5b180a6d48d13bad873f55fa646405e735fcabd48635922d6"
+    }
+  },
+  "source": "assets/brand/logo.png",
+  "sourceSha256": "833816ae776a3a2bcd26202bcca5b3c12cccfe4adc56b8401af36e3014ebab87",
+  "creationMethod": "Lossless raster format conversion of the published logo; no AI refresh or creative replacement.",
+  "approvalStatus": "candidate-only; original backgrounds retained; final surface and logo visual review pending",
+  "visualAcceptance": false
+}

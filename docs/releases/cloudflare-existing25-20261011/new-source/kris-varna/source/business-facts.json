@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "slug": "kris-varna",
+  "name": "Крис",
+  "shortName": "Крис",
+  "city": "Варна",
+  "country": "BG",
+  "countryCode": "BG",
+  "locale": "bg-BG",
+  "currency": "EUR",
+  "distanceUnit": "km",
+  "phone": "0899927244",
+  "phoneDisplay": "0899927244",
+  "phoneE164": "+359899927244",
+  "phones": [
+    "0899927244"
+  ],
+  "addressLine": "гр. Варна, бул. ,,Цар Освободител Номер#355А",
+  "address": "гр. Варна, бул. ,,Цар Освободител Номер#355А, Варна, България",
+  "hours": "Потвърдете работното време директно с автокъщата.",
+  "email": "",
+  "sourceUrl": "https://kris.mobile.bg/",
+  "stockUrl": "https://kris.mobile.bg/",
+  "contactSourceUrl": "https://kris.mobile.bg/contacts",
+  "observedAt": "2026-10-11T11:49:54.319Z",
+  "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+  "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+  "services": [],
+  "socialLinks": {}
+}

@@ -1,0 +1,237 @@
+{
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Final improved disclosed demo/proposal treatment for same qualified business; materially polished artwork, not official rebrand or owner/dealer approval.",
+  "sourceUrls": [
+    "https://kris.mobile.bg",
+    "https://cdn2.focus.bg/mobile/images/housespicts/h15411555320780691.pic"
+  ],
+  "sourceLimitations": "Disclosed improved proposal replacing a weak/cluttered published logo under owner direction; factual published business name retained, not official approval",
+  "priorPreferredPack": "L:/CODEX/cars/leads/branding/fleet-20261011/kris-varna",
+  "priorPreferredFiles": {
+    "branding/logo-master.png": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/kris-varna/branding/logo-master.png",
+      "sha256": "fe7619fc34672d659048549ee7bd596262b172bd7eb42e797e85a3f5ce80ac21"
+    },
+    "branding/logo-on-light.png": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/kris-varna/branding/logo-on-light.png",
+      "sha256": "fe7619fc34672d659048549ee7bd596262b172bd7eb42e797e85a3f5ce80ac21"
+    },
+    "branding/logo-on-dark.png": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/kris-varna/branding/logo-on-dark.png",
+      "sha256": "df2520e3adbb792a5ab90ba4cb4ed72a82553f5c7876fc4221e9cc8a1720633c"
+    },
+    "branding/logo-on-accent.png": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/kris-varna/branding/logo-on-accent.png",
+      "sha256": "df2520e3adbb792a5ab90ba4cb4ed72a82553f5c7876fc4221e9cc8a1720633c"
+    },
+    "dealer-brand/logo-on-light.webp": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/kris-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "30fa20c3a3813b68573b64d6b1ba1bb90a50fd12b206c4c29bb0556d1122b429"
+    },
+    "dealer-brand/logo-on-dark.webp": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/kris-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "d855a2cc096898976a227e8fc157b1aa23596a0dd1631ca57e91a5693b503eff"
+    },
+    "dealer-brand/logo-on-accent.webp": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/kris-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "d855a2cc096898976a227e8fc157b1aa23596a0dd1631ca57e91a5693b503eff"
+    },
+    "receipt.json": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/kris-varna/receipt.json",
+      "sha256": "6b5af0facf581fc531122c5d61fca15186fff6113807a992bf186944139cbd52"
+    },
+    "surface-review.png": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/kris-varna/surface-review.png",
+      "sha256": "080fba8061a36e8e2bf3a502b01e55e7dcff2d5ddb814b7c45c0f7a088d1c8ea"
+    }
+  },
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-bb419e25-d96b-42ef-b365-ff6377c4c020.png",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-bb419e25-d96b-42ef-b365-ff6377c4c020",
+    "prompt": "Polish the supplied current dealer treatment into a clearly disclosed improved proposal for SAME factual business. Exact ONLY name \"AUTOHOUSE\". Keep the small simple source-inspired two-stroke side car-roof emblem LEFT. AUTO deep red, HOUSE charcoal; customized geometric automotive letters with crisp corner cuts and modest forward slant; no roof above name. Preserve deep red and dark graphite colors and meaningful individual motif. Compact one horizontal row, name dominant, emblem modest if present. No tiny caption/subtitle/extra words/text above or below, no enclosing plate/background. Preserve script personality where requested; other lettering deliberately customized automotive letter shapes with clean broad open counters, crisp individual cuts and restrained forward slant. Readable at120px totalwidth. Flat solid inks, no gradients, texture, mottling, shadow, glow, shading, grit or stray pixels. Genuine RGBA transparent background including gaps/counters with safe padding. Exact name/script/case/spaces, no business rename or invented claims.",
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/kris-varna/branding/logo-master.png"
+    ],
+    "referenceMetadata": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/kris-varna/branding/logo-master.png",
+        "sha256": "fe7619fc34672d659048549ee7bd596262b172bd7eb42e797e85a3f5ce80ac21",
+        "bytes": 117699,
+        "width": 1496,
+        "height": 204,
+        "hasAlpha": true,
+        "role": "Previously preferred dealer treatment; published source identity and limitations preserved separately."
+      }
+    ],
+    "transparent_background": true,
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-bb419e25-d96b-42ef-b365-ff6377c4c020.png",
+    "modelVersion": "not exposed by tool"
+  },
+  "variantDerivation": {
+    "onLight": "Existing approved raster exporter crops/scales ImageGen original colored ink and alpha.",
+    "onDark": "White raster ink derived by existing approved exporter from same native output alpha; not independently generated.",
+    "onAccent": "White raster ink derived by existing approved exporter from same native output alpha; not independently generated."
+  },
+  "visualAccepted": true,
+  "ownerApproved": false,
+  "selectionStatus": "Final preferred technical candidate; owner acceptance and integration pending.",
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/kris-varna/surface-review.png",
+  "visualChecks": {
+    "spelling": "Exact sourced/qualified core business name",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "result": "Balanced compact readable treatment; no caption, spelling drift, clipping, filled counters, background or residue observed; owner style acceptance pending."
+  },
+  "schemaVersion": 1,
+  "dealer": "kris-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-bb419e25-d96b-42ef-b365-ff6377c4c020.png",
+    "sha256": "8201c6766bb30bbd6d3056d6dfc55cc98a7abfea98e4e4fd2fc4c25d538fd503",
+    "bytes": 284491,
+    "format": "png",
+    "width": 2171,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.889045326262053,
+      "opaqueRatio": 0.09180088611557166
+    },
+    "visibleBounds": {
+      "x": 54,
+      "y": 260,
+      "width": 2063,
+      "height": 178
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/kris-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "b478a093fa255875c4db8c1e287c17891c36956eceb13a0edb6be9b4629a7e07",
+      "bytes": 50288,
+      "format": "webp",
+      "width": 1496,
+      "height": 193,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.717755119004738,
+        "opaqueRatio": 0.2277160510930703
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 121
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/kris-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "e0538f5c8f4f5060ad705466f9527302e05dd8db96caf03bf83b87e01bd86407",
+      "bytes": 27104,
+      "format": "webp",
+      "width": 1496,
+      "height": 193,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.717755119004738,
+        "opaqueRatio": 0.2277160510930703
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 121
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/kris-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "e0538f5c8f4f5060ad705466f9527302e05dd8db96caf03bf83b87e01bd86407",
+      "bytes": 27104,
+      "format": "webp",
+      "width": 1496,
+      "height": 193,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.717755119004738,
+        "opaqueRatio": 0.2277160510930703
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 121
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/kris-varna/branding/logo-master.png",
+    "sha256": "14bc59680a55f36f0ef53c481b8785a84dcced03054b598bb8eacd1282c38877",
+    "bytes": 111891,
+    "format": "png",
+    "width": 1496,
+    "height": 193,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.717755119004738,
+      "opaqueRatio": 0.2277160510930703
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 121
+    }
+  },
+  "technicalAcceptance": {
+    "spelling": "Exact sourced/qualified core business name",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "result": "Balanced compact readable treatment; no caption, spelling drift, clipping, filled counters, background or residue observed; owner style acceptance pending."
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-new-a-export",
+  "updatedAt": "2026-10-11T12:01:16.761Z"
+}

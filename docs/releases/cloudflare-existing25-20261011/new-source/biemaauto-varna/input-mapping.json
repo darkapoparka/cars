@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "biemaauto-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/facts.json",
+      "sha256": "b5805dd6ddba20a4565cfe186e1f67814d1749c01ef3b9ad64f0c25cb6578cb1"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/stock.json",
+      "sha256": "e955cc94da408a0a0317c1a69782f2a4ca21a6e1a23475b84965bc1aef3b32d5"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/locale.json",
+      "sha256": "269d8206855348b5a64bede437cc1d725277893ed243ab5ff3f0e054b7913778"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/branding.json",
+      "sha256": "cf8277a4f75c5781b399ecfba7ef592b6dc9e17628896fe42d025ae68f37ff29"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/source/business-facts.json",
+      "sha256": "76a58e3e2b0e488cd20e294833820d72911b1420aaf0bc3cd152d7557f4b2279"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/source/locale.json",
+      "sha256": "269d8206855348b5a64bede437cc1d725277893ed243ab5ff3f0e054b7913778"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/source/stock.json",
+      "sha256": "3f9e27bac29962d75e9ba8db3d88b1db1f981416621f50781fe118a98ed9ba7b"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/source/generation-receipt.json",
+      "sha256": "ab5319cadfb4cf1881a2a683e698c1171630020d19d2594bb31eddfc050bcfbe"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/source/native-onLight.png",
+      "sha256": "2b3f17d2757767bef2869d350655ef4e25a7282adc0a3d0d5e2fba9d11d84040"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/source/native-onDark.png",
+      "sha256": "2b3f17d2757767bef2869d350655ef4e25a7282adc0a3d0d5e2fba9d11d84040"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/source/native-onAccent.png",
+      "sha256": "2b3f17d2757767bef2869d350655ef4e25a7282adc0a3d0d5e2fba9d11d84040"
+    }
+  ],
+  "transformations": {
+    "facts": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/source/business-facts.json",
+        "sha256": "76a58e3e2b0e488cd20e294833820d72911b1420aaf0bc3cd152d7557f4b2279"
+      },
+      "kind": "flat-original-facts-to-business-consumer",
+      "allOriginalEvidenceUnchanged": true,
+      "derivedNameDelta": null,
+      "otherFactsUnchanged": true
+    },
+    "stock": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/source/stock.json",
+        "sha256": "3f9e27bac29962d75e9ba8db3d88b1db1f981416621f50781fe118a98ed9ba7b"
+      },
+      "originalSourceRecordPreserved": true,
+      "sourceId": "11789634848837677",
+      "normalizer": "loadDealerProfile",
+      "retention": "retainDealerVariantAssets",
+      "sourceKind": "dated-marketplace-listing-sample",
+      "consumerKind": "dated-listing-snapshot",
+      "availabilityUnconfirmed": true,
+      "mediaRightsNotClaimed": true,
+      "mileageUnknownMeansOnRequest": true
+    },
+    "media": [
+      {
+        "sourceId": "11789634848837677",
+        "sourcePublicPath": "/assets/vehicles/11789634848837677/1.webp",
+        "publicPath": "/dealer-stock/11789634848837677-1.webp",
+        "destination": "dealer-stock/11789634848837677-1.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/media/11789634848837677-1.webp",
+        "sha256": "13e48fb0f109dc0297c1190dc98f73afb317b1da69d6af2a55dec655a13bee3f",
+        "bytes": 257638
+      },
+      {
+        "sourceId": "11789634848837677",
+        "sourcePublicPath": "/assets/vehicles/11789634848837677/2.webp",
+        "publicPath": "/dealer-stock/11789634848837677-2.webp",
+        "destination": "dealer-stock/11789634848837677-2.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/media/11789634848837677-2.webp",
+        "sha256": "a3c7565dea5b89435dfbcf774721191ac4b084cd9d9a7bca4bbe14331778daaa",
+        "bytes": 230928
+      }
+    ],
+    "branding": {
+      "acceptedManifest": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+        "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+      },
+      "originalGenerationReceipt": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/biemaauto-varna/source/generation-receipt.json",
+        "sha256": "ab5319cadfb4cf1881a2a683e698c1171630020d19d2594bb31eddfc050bcfbe"
+      },
+      "noNewGeneration": true,
+      "modelVersion": null,
+      "pixelsUnchanged": true
+    },
+    "identity": null
+  }
+}

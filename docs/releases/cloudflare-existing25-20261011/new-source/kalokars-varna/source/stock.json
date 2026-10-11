@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "kind": "dated-marketplace-listing-sample",
+  "candidate": true,
+  "observedAt": "2026-10-11T11:27:14.708Z",
+  "sourceProfile": "https://kalokars.mobile.bg/",
+  "sourcePageVisibleListingCount": 24,
+  "sourceProfileCountObservedAt": "2026-10-11T11:25:26.418Z",
+  "profileCountIsAvailableStock": false,
+  "profileCountIsClassifiedOrdinaryRetail": false,
+  "liveInventory": false,
+  "mediaPermission": "unconfirmed",
+  "localMediaReady": true,
+  "records": [
+    {
+      "id": "11787740471095305",
+      "sourceId": "11787740471095305",
+      "title": "VW Touran 7 места",
+      "make": "VW",
+      "model": "Touran",
+      "year": 2011,
+      "productionMonth": 10,
+      "priceEur": 7390,
+      "currency": "EUR",
+      "priceVatNotice": "Не се начислява ДДС",
+      "mileageKm": 191000,
+      "body": "Ван",
+      "fuel": "Дизелов",
+      "transmission": "Ръчна",
+      "powerHp": 140,
+      "images": [
+        "/assets/vehicles/11787740471095305/1.webp",
+        "/assets/vehicles/11787740471095305/2.webp"
+      ],
+      "sourceUrl": "https://kalokars.mobile.bg/obiava-11787740471095305-vw-touran-7-mesta-webasto",
+      "sourceHtmlSha256": "8b49a7f329b5db18b311f8633297be7889fae266a13ac5564516060a04d2c943",
+      "sourcePriceVerifiedInWebText": true,
+      "sourcePublicationText": "Редактирана в 17:57 часа на 07.10.2026 год.",
+      "observedAt": "2026-10-11T11:27:14.708Z",
+      "availability": "Датирана обява; потвърдете цената и наличността с автокъщата.",
+      "availabilityConfirmed": false,
+      "partsListing": false,
+      "arrivalNotice": null,
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "mediaState": "not-collected; rights/reuse and truthful per-record media decision pending",
+      "mediaPermission": "Not independently established",
+      "fieldConflicts": [],
+      "sourcePhotoUrls": [
+        "https://mobistatic2.focus.bg/mobile/photosorg/305/1/big1/11787740471095305_kh.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/305/1/big1/11787740471095305_Oo.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/305/1/big1/11787740471095305_k2.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/305/1/big1/11787740471095305_ss.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/305/1/big1/11787740471095305_2b.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/305/1/big1/11787740471095305_Aj.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/305/1/big1/11787740471095305_SK.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/305/1/big1/11787740471095305_qB.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/305/1/big1/11787740471095305_mh.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/305/1/big1/11787740471095305_X7.webp",
+        "https://mobistatic2.focus.bg/mobile/photosorg/305/1/big1/11787740471095305_o2.webp"
+      ],
+      "sourcePhotoEvidence": {
+        "sourceId": "11787740471095305",
+        "sourceUrl": "https://kalokars.mobile.bg/obiava-11787740471095305-vw-touran-7-mesta-webasto",
+        "observedAt": "2026-10-11T12:09:28.397Z",
+        "responseSha256": "42c57471d90c39d9272930867d2960ce96a29be36a45a3dc330131c56c8111be",
+        "association": "primary gallery URLs contain exact source listing ID",
+        "remoteBytesFetched": false
+      },
+      "conditionIndependentlyConfirmed": false
+    }
+  ],
+  "localMediaHydration": {
+    "candidateOnly": true,
+    "technicalRasterPresent": true,
+    "rightsApproved": false,
+    "availabilityConfirmed": false,
+    "assets": [
+      {
+        "publicPath": "/assets/vehicles/11787740471095305/1.webp",
+        "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/305/1/big1/11787740471095305_kh.webp",
+        "sha256": "1887bafb0ba8ae5dbd4693dd95f6ad33a6df9c0346204aca4a435f46008e888f",
+        "bytes": 262344,
+        "downloadObservedAt": "2026-10-11T12:20:26.628Z"
+      },
+      {
+        "publicPath": "/assets/vehicles/11787740471095305/2.webp",
+        "sourceUrl": "https://mobistatic2.focus.bg/mobile/photosorg/305/1/big1/11787740471095305_Oo.webp",
+        "sha256": "d80f172ae39e5a4aea8c1cf63ae80bc18bb34c440da2692f11c3b75027e5c2c8",
+        "bytes": 270246,
+        "downloadObservedAt": "2026-10-11T12:20:26.846Z"
+      }
+    ],
+    "sourceStockSha256": "ae9116a243be4735f11837c8e9a936bee826d66661812f4b24b14c4c9e45f02b"
+  }
+}

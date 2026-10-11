@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "slug": "centralauto-varna",
+  "name": "Ц Е Н Т Р А Л-АВТОСАЛОН",
+  "shortName": "ЦЕНТРАЛ АВТОСАЛОН",
+  "city": "Варна",
+  "country": "BG",
+  "countryCode": "BG",
+  "locale": "bg-BG",
+  "currency": "EUR",
+  "distanceUnit": "km",
+  "phone": "0888602290",
+  "phoneDisplay": "0888602290",
+  "phoneE164": "+359888602290",
+  "phones": [
+    "0888602290",
+    "052500177"
+  ],
+  "addressLine": "бул. 'Ян Хуняди' 23 /под музей 'Вл. Варненчик'/",
+  "address": "бул. 'Ян Хуняди' 23 /под музей 'Вл. Варненчик'/, Варна, България",
+  "hours": "Потвърдете работното време директно с автокъщата.",
+  "email": "",
+  "sourceUrl": "https://centralauto.mobile.bg/",
+  "stockUrl": "https://centralauto.mobile.bg/",
+  "contactSourceUrl": "https://centralauto.mobile.bg/contacts",
+  "observedAt": "2026-10-11T11:32:26.570Z",
+  "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+  "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+  "services": [],
+  "socialLinks": {}
+}

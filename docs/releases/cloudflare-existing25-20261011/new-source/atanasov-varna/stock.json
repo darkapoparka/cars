@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "kind": "dated-listing-snapshot",
+  "candidate": true,
+  "observedAt": "2026-10-11T11:46:40.235Z",
+  "sourceProfile": "https://atanasov.mobile.bg/",
+  "sourcePageVisibleListingCount": 20,
+  "sourceProfileCountObservedAt": "2026-10-11T11:46:40.163Z",
+  "profileCountIsAvailableStock": false,
+  "profileCountIsClassifiedOrdinaryRetail": false,
+  "liveInventory": false,
+  "mediaPermission": "unconfirmed",
+  "localMediaReady": true,
+  "records": [
+    {
+      "id": "11791661554744525",
+      "sourceId": "11791661554744525",
+      "title": "VW Golf",
+      "make": "VW",
+      "model": "Golf",
+      "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+      "year": 2016,
+      "productionMonth": 2,
+      "currency": "EUR",
+      "sourcePriceText": "5 999 €",
+      "priceVatNotice": "Не се начислява ДДС",
+      "sourceMileageText": "169000 км",
+      "fieldConflicts": [],
+      "body": "Комби",
+      "fuel": "Дизелов",
+      "transmission": "Ръчна",
+      "powerHp": 110,
+      "images": [
+        "/dealer-stock/11791661554744525-1.webp",
+        "/dealer-stock/11791661554744525-2.webp"
+      ],
+      "sourceUrl": "https://atanasov.mobile.bg/obiava-11791661554744525-vw-golf-kato-chisto-nova",
+      "sourceHtmlSha256": "f772a9544a3016997e326f55e1002c2a871cbc19e025d54e599c97113ff477da",
+      "sourcePublicationText": "Публикувана в 22:45 часа на 10.10.2026 год.",
+      "observedAt": "2026-10-11T11:46:40.235Z",
+      "availability": "unconfirmed",
+      "availabilityConfirmed": false,
+      "partsListing": false,
+      "conditionMarker": null,
+      "conditionIndependentlyConfirmed": false,
+      "arrivalNotice": null,
+      "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+      "mediaPermission": "Not independently established",
+      "telHrefCandidates": [
+        "0988864133"
+      ],
+      "visibleSellerContact": "Контакти с продавача Атанасов 0988 864 133",
+      "sellerPhoneMatchesPrimary": true,
+      "telHrefMatchesPrimary": true,
+      "sourceTitleExact": "VW Golf КАТО ЧИСТО НОВА",
+      "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+      "retailReadyForAssembly": false,
+      "sourcePhotoUrls": [
+        "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_LQ.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_YK.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_WM.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_DT.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_An.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_S6.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_aM.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_76.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_R.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_C3.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_l0.webp",
+        "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_ul.webp"
+      ],
+      "sourcePhotoEvidence": {
+        "sourceId": "11791661554744525",
+        "sourceUrl": "https://atanasov.mobile.bg/obiava-11791661554744525-vw-golf-kato-chisto-nova",
+        "observedAt": "2026-10-11T12:09:28.982Z",
+        "responseSha256": "3ad04f9e5defe457fe3faed00fe0139c2593b3bb4f5c7f892ccb40af88d9587f",
+        "association": "primary gallery URLs contain exact source listing ID",
+        "remoteBytesFetched": false
+      },
+      "sourceRecord": {
+        "id": "11791661554744525",
+        "sourceId": "11791661554744525",
+        "title": "VW Golf",
+        "make": "VW",
+        "model": "Golf",
+        "modelExtraction": "literal make/model prefix from exact primary advert title; canonical market normalization and trim not asserted",
+        "year": 2016,
+        "productionMonth": 2,
+        "priceEur": 5999,
+        "currency": "EUR",
+        "sourcePriceText": "5 999 €",
+        "priceVatNotice": "Не се начислява ДДС",
+        "mileageKm": 169000,
+        "sourceMileageText": "169000 км",
+        "fieldConflicts": [],
+        "body": "Комби",
+        "fuel": "Дизелов",
+        "transmission": "Ръчна",
+        "powerHp": 110,
+        "images": [
+          "/assets/vehicles/11791661554744525/1.webp",
+          "/assets/vehicles/11791661554744525/2.webp"
+        ],
+        "sourceUrl": "https://atanasov.mobile.bg/obiava-11791661554744525-vw-golf-kato-chisto-nova",
+        "sourceHtmlSha256": "f772a9544a3016997e326f55e1002c2a871cbc19e025d54e599c97113ff477da",
+        "sourcePublicationText": "Публикувана в 22:45 часа на 10.10.2026 год.",
+        "observedAt": "2026-10-11T11:46:40.235Z",
+        "availability": "unconfirmed",
+        "availabilityConfirmed": false,
+        "partsListing": false,
+        "conditionMarker": null,
+        "conditionIndependentlyConfirmed": false,
+        "arrivalNotice": null,
+        "description": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+        "mediaState": "not-collected; reviewed rights/reuse or explicit illustration decision pending",
+        "mediaPermission": "Not independently established",
+        "telHrefCandidates": [
+          "0988864133"
+        ],
+        "visibleSellerContact": "Контакти с продавача Атанасов 0988 864 133",
+        "sellerPhoneMatchesPrimary": true,
+        "telHrefMatchesPrimary": true,
+        "sourceTitleExact": "VW Golf КАТО ЧИСТО НОВА",
+        "sampleRole": "dated published vehicle advert; dealer availability, condition and media reuse require confirmation",
+        "retailReadyForAssembly": false,
+        "sourcePhotoUrls": [
+          "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_LQ.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_YK.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_WM.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_DT.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_An.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_S6.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_aM.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_76.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_R.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_C3.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_l0.webp",
+          "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_ul.webp"
+        ],
+        "sourcePhotoEvidence": {
+          "sourceId": "11791661554744525",
+          "sourceUrl": "https://atanasov.mobile.bg/obiava-11791661554744525-vw-golf-kato-chisto-nova",
+          "observedAt": "2026-10-11T12:09:28.982Z",
+          "responseSha256": "3ad04f9e5defe457fe3faed00fe0139c2593b3bb4f5c7f892ccb40af88d9587f",
+          "association": "primary gallery URLs contain exact source listing ID",
+          "remoteBytesFetched": false
+        }
+      },
+      "priceAmount": 5999,
+      "mileageValue": 169000,
+      "mileageUnit": "km"
+    }
+  ],
+  "localMediaHydration": {
+    "candidateOnly": true,
+    "technicalRasterPresent": true,
+    "rightsApproved": false,
+    "availabilityConfirmed": false,
+    "assets": [
+      {
+        "publicPath": "/assets/vehicles/11791661554744525/1.webp",
+        "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_LQ.webp",
+        "sha256": "ab4b959b00d7b0c7d6b12740e625e2cb3d4daac58ce14b7ecd861732d8ae6cb1",
+        "bytes": 171438,
+        "downloadObservedAt": "2026-10-11T12:20:29.952Z"
+      },
+      {
+        "publicPath": "/assets/vehicles/11791661554744525/2.webp",
+        "sourceUrl": "https://cdn2.focus.bg/mobile/photosorg/525/1/big1/11791661554744525_YK.webp",
+        "sha256": "a286a2d7f547733d3cea12c4eec2760bd5f31cec95b5f3cea77068a3ddd82ab5",
+        "bytes": 157116,
+        "downloadObservedAt": "2026-10-11T12:20:30.114Z"
+      }
+    ],
+    "sourceStockSha256": "0c4cf39200860b3888c067b581991a131d7ebd5bd9c055a19eb9d7b5348837fc"
+  },
+  "dealer": "atanasov-varna",
+  "sourceKind": "dated-marketplace-listing-sample",
+  "sourceStock": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/atanasov-varna/source/stock.json",
+    "sha256": "19e61dfe07b55323937648fe4317662dc2e3405972067cee300eabc8ed16b72e"
+  },
+  "sourceRecordsUnchanged": true,
+  "mediaPathMappings": [
+    {
+      "sourcePublicPath": "/assets/vehicles/11791661554744525/1.webp",
+      "publicPath": "/dealer-stock/11791661554744525-1.webp",
+      "sha256": "ab4b959b00d7b0c7d6b12740e625e2cb3d4daac58ce14b7ecd861732d8ae6cb1",
+      "bytes": 171438,
+      "sourceId": "11791661554744525"
+    },
+    {
+      "sourcePublicPath": "/assets/vehicles/11791661554744525/2.webp",
+      "publicPath": "/dealer-stock/11791661554744525-2.webp",
+      "sha256": "a286a2d7f547733d3cea12c4eec2760bd5f31cec95b5f3cea77068a3ddd82ab5",
+      "bytes": 157116,
+      "sourceId": "11791661554744525"
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-e1fec24e-678c-464b-b942-ca6e093e965f.png",
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Separate single-row redesigned proposal; historical identity/name/colors informed artwork. Awaiting owner/dealer style selection.",
+  "sourceUrls": [
+    "https://astracar.mobile.bg/"
+  ],
+  "sourceLogoUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h10303657271230948.pic",
+  "workingLogoPath": "leads/branding/fleet-20261011/astracar/source/published-logo.png",
+  "derivation": {
+    "historicalReceipt": "L:/CODEX/cars/leads/branding/fleet-20261011/astracar/receipt.json",
+    "historicalMaster": "L:/CODEX/cars/leads/branding/fleet-20261011/astracar/branding/logo-master.png",
+    "historicalMasterSha256": "d45cedf36545535998d7249716764ae9853a88e931a22d15965fe0c54f348d18",
+    "historicalGeneration": {
+      "reference": "exec-b9fe2111-43ef-4793-bd3f-0c9e5c391985",
+      "path": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-b9fe2111-43ef-4793-bd3f-0c9e5c391985.png",
+      "sha256": "79fcbaec245ddfe1059ee0c4bee076fac9601a462597480e0f4b73c002c4b4b0"
+    },
+    "publicIdentityObservation": {
+      "observedAt": "2026-10-11",
+      "visualReference": "CUA marketplace header/source image."
+    },
+    "styleReference": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png",
+    "styleReferenceScope": "Composition/expressive lettering only; not a dealer identity or color source",
+    "referenceFiles": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/astracar/branding/logo-master.png",
+        "sha256": "d45cedf36545535998d7249716764ae9853a88e931a22d15965fe0c54f348d18"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png",
+        "sha256": "dc84d9283929362bd17d0b765c1ab219eb3c093ccb52e4d3c05ada2ddfcb37ce"
+      }
+    ],
+    "styleReferenceSha256": "dc84d9283929362bd17d0b765c1ab219eb3c093ccb52e4d3c05ada2ddfcb37ce"
+  },
+  "imageGeneration": {
+    "reference": "exec-e1fec24e-678c-464b-b942-ca6e093e965f",
+    "tool": "image_gen.imagegen",
+    "transparent_background": true,
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/astracar/branding/logo-master.png",
+      "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png"
+    ],
+    "prompt": "Improve reference1 into a compact distinctive proposal for EXACT Cyrillic name АСТРАКАР. Keep the blue four-point astral spark at left and its open center, and make a custom bold sculpted mildly forward-slanted Cyrillic automotive name to right; all eight letters same cap height and one row. Keep graphite #25272c name and source deep-blue #174986 emblem. No Latin letters/substitutions, no АВТОСАЛОН descriptor. Use reference2 only as the style anchor for confident custom automotive letters and compact one-row composition; do not copy its name, monogram, blue color or exact mark. The owner wants expressive, slightly forward-slanted, sculpted motorsport lettering with purposeful chamfers and softened corners, not a plain upright system sans serif. ONE NAME ROW ONLY: no line beneath, captions, slogans, descriptors or facts. Emblem to left at approximately letter cap height, fully separate from the name and at most18percent of logo width. Main name large and readable at120px. Preserve exact name and meaningful individual identity. Flat clean ink, restrained color, crisp open counters/negative spaces, complete unclipped true RGBA transparency including all counters. No opaque panel/plaque/background, checkerboard, shadow, halo, shiny texture or hairline ornaments. Modest transparent margins. This is a separate redesigned PROPOSAL awaiting owner/dealer style selection; original reference remains historical.",
+    "output_hint": "Generated images are saved to C:\\Users\\radev\\.codex\\generated_images\\01a12a34-3dcd-7920-8e75-5eb5eac386bd as C:\\Users\\radev\\.codex\\generated_images\\01a12a34-3dcd-7920-8e75-5eb5eac386bd\\exec-e1fec24e-678c-464b-b942-ca6e093e965f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  "onLight": "original",
+  "onDark": "white",
+  "onAccent": "white",
+  "visualAccepted": true,
+  "styleSelected": false,
+  "ownerApproved": false,
+  "selectionStatus": "technically-selected-preferred-candidate-awaiting-owner-style-selection",
+  "surfaceReviewPath": "C:\\Users\\radev\\.codex\\visualizations\\2026\\10\\11\\01a12a0e-8374-7732-9e28-580ceda2a0fc\\fleet-logo-work\\single-row-stage\\astracar/surface-review.png",
+  "visualChecks": {
+    "spelling": "Exact full dealer name compared with historical source",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "treatments": "Original brand colors onLight; same geometry white onDark/onAccent",
+    "heightLimit": 76,
+    "residue": "No material fringe, plaque, clipping or filled counters at compact sizes",
+    "scope": "Technical raster candidate only; owner/dealer style selection, integration and hosted pending",
+    "layout": "Emblem beside full name, one row, no captions"
+  },
+  "schemaVersion": 1,
+  "dealer": "astracar",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-e1fec24e-678c-464b-b942-ca6e093e965f.png",
+    "sha256": "9736eafc942971cd5b2b3e86ec8496a0f43b5585023a73fb3974163dd745f47a",
+    "bytes": 362771,
+    "format": "png",
+    "width": 2171,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8383659794732676,
+      "opaqueRatio": 0.14237080450234252
+    },
+    "visibleBounds": {
+      "x": 43,
+      "y": 191,
+      "width": 2090,
+      "height": 316
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/astracar/dealer-brand/logo-on-light.webp",
+      "sha256": "d033b2225ee63245ad0f89c95081ae63f38fb7a85e18c200affe724c78faae98",
+      "bytes": 46892,
+      "format": "webp",
+      "width": 1496,
+      "height": 284,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7286072719740906,
+        "opaqueRatio": 0.23422554040822474
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 212
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/astracar/dealer-brand/logo-on-dark.webp",
+      "sha256": "956a34b1e5f929a8a9929c95df35b0f3c1c137db299bf0e0c9482396c43aed74",
+      "bytes": 29228,
+      "format": "webp",
+      "width": 1496,
+      "height": 284,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7286072719740906,
+        "opaqueRatio": 0.23422554040822474
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 212
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/astracar/dealer-brand/logo-on-accent.webp",
+      "sha256": "956a34b1e5f929a8a9929c95df35b0f3c1c137db299bf0e0c9482396c43aed74",
+      "bytes": 29228,
+      "format": "webp",
+      "width": 1496,
+      "height": 284,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7286072719740906,
+        "opaqueRatio": 0.23422554040822474
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 212
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/astracar/branding/logo-master.png",
+    "sha256": "dee4b03d62993b48127980cde8978b4cb04e0815320e0e302c7e12b3a4e8830f",
+    "bytes": 145847,
+    "format": "png",
+    "width": 1496,
+    "height": 284,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7286072719740906,
+      "opaqueRatio": 0.23422554040822474
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 212
+    }
+  },
+  "technicalAcceptance": {
+    "spelling": "Exact full dealer name compared with historical source",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "treatments": "Original brand colors onLight; same geometry white onDark/onAccent",
+    "heightLimit": 76,
+    "residue": "No material fringe, plaque, clipping or filled counters at compact sizes",
+    "scope": "Technical raster candidate only; owner/dealer style selection, integration and hosted pending",
+    "layout": "Emblem beside full name, one row, no captions"
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-existing-export",
+  "updatedAt": "2026-10-11T11:24:47.482Z"
+}

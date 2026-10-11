@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-existing-dealer-branding-input-boundary",
+  "dealer": "stockport-broadbent-car-and-servicing",
+  "identityKey": "existing-slug:stockport-broadbent-car-and-servicing",
+  "cohort": "uk-selected10",
+  "ownership": "maintained-main",
+  "branding": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/stockport-broadbent-car-and-servicing/branding.json",
+    "sha256": "340da30166bb531e687397f61e5fddbb9d427880c8b27ac4e578b869b1d3d6c7"
+  },
+  "originalManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/stockport-broadbent-car-and-servicing/source/original-dealer.json",
+    "sha256": "80984453518406a6d23b4bc221a60b2220d24d94ee21882ba4076fbea9038f53"
+  },
+  "originalManifestGitBlob": "c9bdf98e3d48658d004f86f7b6a41793b9047305",
+  "originalRepository": "darkapoparka/cars-uk-stockport-broadbent-car-and-servicing",
+  "sourceRef": {
+    "ref": "main",
+    "commit": "c5c6b0da611a3bf2756c1be2ff9764f6903536ec",
+    "tree": "caa0557d8c477a9e4adc8a3dcafe1ba35a67f4f0"
+  },
+  "originalData": [
+    {
+      "path": "clients/stockport-broadbent-car-and-servicing/business-facts.json",
+      "gitBlob": "452bffea76169504abf912d772a6d1435e2af006",
+      "bytes": 11178
+    },
+    {
+      "path": "clients/stockport-broadbent-car-and-servicing/dealer.json",
+      "gitBlob": "c9bdf98e3d48658d004f86f7b6a41793b9047305",
+      "bytes": 4401
+    },
+    {
+      "path": "clients/stockport-broadbent-car-and-servicing/stock.json",
+      "gitBlob": "dbec8db0e557b3d109c690429d478f073d84b217",
+      "bytes": 16579
+    }
+  ],
+  "sourceProof": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/original-source-proof.json",
+    "sha256": "477c4eedc097eb2e105b1d50cf1bc3701b558679e8f6c3c3681a3ccd6626e08c"
+  },
+  "roster": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/accepted-roster.json",
+    "sha256": "c23c6c4ea10acaca9fdc8d09351fd64735a9e2245385fb12a0f95d71f9f0080d"
+  },
+  "sourceCreation": false,
+  "clientIntegration": false,
+  "buildApproval": false,
+  "hostedApproval": false,
+  "eligibleForExistingQualifiedRequest": true,
+  "holds": [
+    "Exact latest template/source-delta/pilot qualification and preservation-aware updater remain required."
+  ]
+}

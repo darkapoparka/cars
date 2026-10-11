@@ -1,0 +1,244 @@
+{
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-07094859-bff4-4db5-a9ef-4edb95b89e4b.png",
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Separate final-polish proposal based on prior selected raster/name/colors; owner/dealer approval pending.",
+  "sourceUrls": [
+    "https://kolarovcars.mobile.bg/",
+    "https://cdn2.focus.bg/mobile/images/housespicts/h16291912244144702.pic"
+  ],
+  "sourceLogoUrl": null,
+  "workingLogoPath": null,
+  "derivation": {
+    "priorSelectedReceipt": "L:/CODEX/cars/leads/branding/fleet-20261011/kolarov-cars/receipt.json",
+    "priorSelectedMaster": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/kolarov-cars/branding/logo-master.png",
+      "sha256": "5017023e5f4136ea1bf21b1d75d3e6de7f4d47aeef8ba234ab347ed486e363ba",
+      "bytes": 68487,
+      "width": 1496,
+      "height": 259,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "priorSelectedGenerationReference": "functions.exec cell6 image_gen.imagegen output exec-38b65fe8-d8c7-4063-8fda-598f4fba195d",
+    "priorSelectedGenerationOriginal": {
+      "path": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-38b65fe8-d8c7-4063-8fda-598f4fba195d.png",
+      "sha256": "f5cf863bfbd58d4ea0ca2cb6e18a8fe0605bbe8489028c4c684557f4ddd9dfb4",
+      "bytes": 155899,
+      "format": "png",
+      "width": 2170,
+      "height": 725,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.9596923565866836,
+        "opaqueRatio": 0.02578166216430955
+      },
+      "visibleBounds": {
+        "x": 134,
+        "y": 231,
+        "width": 1904,
+        "height": 254
+      }
+    },
+    "referenceFiles": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/kolarov-cars/branding/logo-master.png",
+        "sha256": "5017023e5f4136ea1bf21b1d75d3e6de7f4d47aeef8ba234ab347ed486e363ba"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png",
+        "sha256": "dc84d9283929362bd17d0b765c1ab219eb3c093ccb52e4d3c05ada2ddfcb37ce"
+      }
+    ],
+    "styleReference": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png",
+    "styleReferenceScope": "Automotive lettering character and compact composition only; no copied brand or palette.",
+    "publicSourceObservation": "Historical prior-source evidence retained; no fresh public-source verification claimed."
+  },
+  "imageGeneration": {
+    "reference": "exec-07094859-bff4-4db5-a9ef-4edb95b89e4b",
+    "tool": "image_gen.imagegen",
+    "transparent_background": true,
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/kolarov-cars/branding/logo-master.png",
+      "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png"
+    ],
+    "prompt": "Final polish of reference1 for exact name KOLAROV CARS. The original is overly thin and widely tracked. Make elegant but assertive compact custom automotive lettering, moderately bold, restrained forward slant, sculpted softened-square O/C and chamfered K/R, real open counters, normal close readable tracking. Full KOLAROV CARS on exactly ONE name row. Replace tall plain divider with a compact distinctive interlocking KC monogram at LEFT, at cap height and at most15percent width; clever K diagonal engaging open C arc, no generic car roof or stock shield. Preserve original monochrome near-black #17191f identity, no new color accents. Full name big and readable at120px. Reference2 guides only automotive character and compact composition; do not copy BIEMA name, blue, monogram or geometry. Clean flat ink, no slogans or captions below, no tiny details, no shadows, plaque, glow, gradients, chrome or texture. Complete unclipped name/emblem with modest transparent margins. True RGBA transparency including all spaces/counters. Separate improved proposal awaiting owner/dealer approval, original preserved.",
+    "output_hint": "Generated images are saved to C:\\Users\\radev\\.codex\\generated_images\\01a12a34-3dcd-7920-8e75-5eb5eac386bd as C:\\Users\\radev\\.codex\\generated_images\\01a12a34-3dcd-7920-8e75-5eb5eac386bd\\exec-07094859-bff4-4db5-a9ef-4edb95b89e4b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  "onLight": "original",
+  "onDark": "white",
+  "onAccent": "white",
+  "visualAccepted": true,
+  "styleSelected": false,
+  "ownerApproved": false,
+  "selectionStatus": "technically-selected-final-polish-preferred-proposal-owner-dealer-approval-pending",
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/kolarov-cars/surface-review.png",
+  "visualChecks": {
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "swatches": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "spelling": "KOLAROV CARS",
+    "layout": "Exact full core name on one row; no caption beneath.",
+    "geometry": "Complete separate/letter-derived emblem, open counters and no clipping.",
+    "proportion": "Name dominates and compact name-specific monogram fits the row.",
+    "residue": "No material fringe, filled counters or opaque plaque visible at reviewed compact widths.",
+    "treatment": "Original color/monochrome ink on light; white geometry-preserving exporter treatment on dark/accent.",
+    "scope": "Asset-only final independent visual judgment; integration and hosted consumer checks not performed."
+  },
+  "schemaVersion": 1,
+  "dealer": "kolarov-cars",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-07094859-bff4-4db5-a9ef-4edb95b89e4b.png",
+    "sha256": "9dd01e63de54e0102a5d9f884e42605fc80f939144b19b011a96284c90c1c8a6",
+    "bytes": 285564,
+    "format": "png",
+    "width": 2171,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8746033220426974,
+      "opaqueRatio": 0.10624352654656688
+    },
+    "visibleBounds": {
+      "x": 38,
+      "y": 259,
+      "width": 2099,
+      "height": 194
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/kolarov-cars/dealer-brand/logo-on-light.webp",
+      "sha256": "b82b44f82e43eed6329168bc064edcd028c20fbcc51a013f890f12b2c931af4c",
+      "bytes": 36128,
+      "format": "webp",
+      "width": 1496,
+      "height": 202,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7068122253401811,
+        "opaqueRatio": 0.24315335945359243
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 130
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/kolarov-cars/dealer-brand/logo-on-dark.webp",
+      "sha256": "a20b3dfe12169dc9573cc7c668ea04617192e64af2e158ed0ae54daff36f9dd3",
+      "bytes": 27072,
+      "format": "webp",
+      "width": 1496,
+      "height": 202,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7068122253401811,
+        "opaqueRatio": 0.24315335945359243
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 130
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/kolarov-cars/dealer-brand/logo-on-accent.webp",
+      "sha256": "a20b3dfe12169dc9573cc7c668ea04617192e64af2e158ed0ae54daff36f9dd3",
+      "bytes": 27072,
+      "format": "webp",
+      "width": 1496,
+      "height": 202,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7068122253401811,
+        "opaqueRatio": 0.24315335945359243
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 130
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-polish-stage/kolarov-cars/branding/logo-master.png",
+    "sha256": "c91e54a9bbc4a981cf67006886c30c240cd542d44a6c5a6717414e2f81669664",
+    "bytes": 109095,
+    "format": "png",
+    "width": 1496,
+    "height": 202,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7068122253401811,
+      "opaqueRatio": 0.24315335945359243
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 130
+    }
+  },
+  "technicalAcceptance": {
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "swatches": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "spelling": "KOLAROV CARS",
+    "layout": "Exact full core name on one row; no caption beneath.",
+    "geometry": "Complete separate/letter-derived emblem, open counters and no clipping.",
+    "proportion": "Name dominates and compact name-specific monogram fits the row.",
+    "residue": "No material fringe, filled counters or opaque plaque visible at reviewed compact widths.",
+    "treatment": "Original color/monochrome ink on light; white geometry-preserving exporter treatment on dark/accent.",
+    "scope": "Asset-only final independent visual judgment; integration and hosted consumer checks not performed."
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-existing-export",
+  "updatedAt": "2026-10-11T11:57:17.930Z"
+}

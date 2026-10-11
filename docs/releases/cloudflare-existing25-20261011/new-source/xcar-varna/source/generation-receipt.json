@@ -1,0 +1,241 @@
+{
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "generated improved demo/proposal identity; not official or approved",
+  "publishedBranding": "Published red brush X, gray car word and detailed speedometer/car; improved proposal simplifies X CAR",
+  "sourceUrls": [
+    "https://xcar.mobile.bg/"
+  ],
+  "sourceLogoUrl": "https://cdn2.focus.bg/mobile/images/housespicts/h17391835586939972.pic",
+  "workingLogoPath": "C:/Users/radev/Downloads/h17391835586939972.pic",
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-437ac77d-8244-4aa4-820b-5fdaea9102cb.png",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-437ac77d-8244-4aa4-820b-5fdaea9102cb",
+    "transparent_background": true,
+    "prompt": "Create a clearly disclosed improved demo proposal for dealer X CAR. Exact Latin uppercase X CAR, large distinctive red X with two crisp tapered crossing strokes, charcoal CAR word in clean bold slightly extended geometric sans. Horizontal refined lockup, X itself is the icon; do not duplicate a monogram. Retain red/charcoal cue, omit old car drawing and speedometer. No tiny subtitle, extra words, manufacturer symbols or claims. Genuine transparent background/counters/gaps, crisp flat high-resolution raster modest transparent padding no shadow/glow/border.",
+    "referenced_image_paths": [],
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-437ac77d-8244-4aa4-820b-5fdaea9102cb.png",
+    "modelVersion": "not exposed by tool"
+  },
+  "surfaceReviewPath": "L:/CODEX/cars/leads/branding/fleet-20261011/xcar-varna/surface-review.png",
+  "visualAccepted": true,
+  "visualChecks": {
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "surfaces": [
+      "white",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "result": "Exact spelling including Cyrillic and Auto-bora hyphen; open counters/monogram geometry, no clipping or backdrop residue, readable and contrasting at every width/surface."
+  },
+  "authorization": "Owner 11 October 2026 approved fresh disclosed proposals for weak/cluttered source logos; preserve strong marks.",
+  "schemaVersion": 1,
+  "dealer": "xcar-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-437ac77d-8244-4aa4-820b-5fdaea9102cb.png",
+    "sha256": "8d5e8069c6dd44058f140fe10dd067dfe268657de63d1b74a31ba7ca1ad09a55",
+    "bytes": 464566,
+    "format": "png",
+    "width": 2086,
+    "height": 754,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7689300401056939,
+      "opaqueRatio": 0.21351704301253016
+    },
+    "visibleBounds": {
+      "x": 79,
+      "y": 90,
+      "width": 1928,
+      "height": 580
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/xcar-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "ac7e887a561c81ef0691c953fecb44abc96f1ea66a103b0467c24a86bef5d263",
+      "bytes": 57062,
+      "format": "webp",
+      "width": 1496,
+      "height": 492,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7375535302812921,
+        "opaqueRatio": 0.23984555019346984
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1399,
+        "height": 420
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/xcar-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "20dfa0dcfbbfb2e625e844bed09a379c5ff3f9620488c63a5e5210835488997a",
+      "bytes": 30324,
+      "format": "webp",
+      "width": 1496,
+      "height": 492,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7375535302812921,
+        "opaqueRatio": 0.23984555019346984
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1399,
+        "height": 420
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/xcar-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "20dfa0dcfbbfb2e625e844bed09a379c5ff3f9620488c63a5e5210835488997a",
+      "bytes": 30324,
+      "format": "webp",
+      "width": 1496,
+      "height": 492,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7375535302812921,
+        "opaqueRatio": 0.23984555019346984
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1399,
+        "height": 420
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/xcar-varna/branding/logo-master.png",
+    "sha256": "103577be4a3b2ecd3f5399d9c5ca66e5f32edcea774f276541553b2ad7be3706",
+    "bytes": 216662,
+    "format": "png",
+    "width": 1496,
+    "height": 492,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7375535302812921,
+      "opaqueRatio": 0.23984555019346984
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1399,
+      "height": 420
+    }
+  },
+  "technicalAcceptance": {
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "surfaces": [
+      "white",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "result": "Exact spelling including Cyrillic and Auto-bora hyphen; open counters/monogram geometry, no clipping or backdrop residue, readable and contrasting at every width/surface."
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "ownerApproved": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "L:/CODEX/cars/runtime/fleet-logo-20261011/new-a-export",
+  "updatedAt": "2026-10-11T09:58:30.868Z",
+  "preservedSourceOriginal": {
+    "originalPath": "C:/Users/radev/Downloads/h17391835586939972.pic",
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/xcar-varna/source/published-original.pic",
+    "sha256": "4f5897caa2e9289355aa6746c5c986a4a9a3058fc65366a93271e063a00c281f",
+    "bytes": 40056,
+    "width": 828,
+    "height": 532,
+    "format": "jpeg"
+  },
+  "exportSurfaceReviewPath": "L:/CODEX/cars/runtime/fleet-logo-20261011/new-a-export/xcar-varna-review.png",
+  "retention": {
+    "finalQASheet": "L:/CODEX/cars/leads/branding/fleet-20261011/xcar-varna/surface-review.png",
+    "toolOriginals": "Preserved on C: at exact recorded paths",
+    "sourceOriginal": "Preserved when available; screenshots and source limitations retained",
+    "scratch": "Owned inactive exporter outputs eligible for retirement; no live consumer binding",
+    "priorAcceptance": null
+  },
+  "sourceEvidence": [
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/xcar-varna/source/profile.png",
+      "sha256": "c0e0eb6f001e560584d3956fa1742250f78392d33b6c9bf9a7abac0719f3f608",
+      "bytes": 80949,
+      "format": "jpeg",
+      "width": 1265,
+      "height": 712,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1265,
+        "height": 712
+      }
+    },
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/xcar-varna/source/published-original.pic",
+      "sha256": "4f5897caa2e9289355aa6746c5c986a4a9a3058fc65366a93271e063a00c281f",
+      "bytes": 40056,
+      "format": "jpeg",
+      "width": 828,
+      "height": 532,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 828,
+        "height": 532
+      }
+    }
+  ],
+  "provenanceFile": "L:/CODEX/cars/leads/branding/fleet-20261011/xcar-varna/provenance.json"
+}

@@ -1,0 +1,223 @@
+{
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-76189c35-f007-4adc-bce6-619a9d19d486.png",
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Redesigned bilingual Al Hamoor Al Thahabi proposal; simplified roof/typography and removed tiny legal lines. Not owner/dealer approved.",
+  "sourceUrls": [
+    "https://auto.ae/alhamooralthahabi/"
+  ],
+  "sourceLogoUrl": "https://auto-ae-prod-storage.storage.googleapis.com/3b7f50116c9a4e65bedcb7ae56a949c0",
+  "workingLogoPath": "leads/branding/fleet-20261011/al-hamoor-al-thahabi/source/published-logo-reference.png",
+  "publishedBranding": {
+    "observedAt": "2026-10-11",
+    "visualReference": "CUA public site/profile branding and saved source raster."
+  },
+  "imageGeneration": {
+    "reference": "exec-76189c35-f007-4adc-bce6-619a9d19d486",
+    "tool": "image_gen.imagegen",
+    "transparent_background": true,
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/al-hamoor-al-thahabi/source/published-logo-reference.png"
+    ],
+    "prompt": "Improve this public Al Hamoor Al Thahabi logo into a cleaner contemporary bilingual dealer PROPOSAL identity with true transparent RGBA. Preserve exact recognizable Arabic name الحمور الذهبي, correct Arabic writing and source charcoal/deep-red palette. Remove ALL tiny Arabic legal descriptor, used-car-trade descriptor and small English legal suffix. Make large beautiful clean Arabic lettering top and a single readable English name AL HAMOOR AL THAHABI below in a clean moderately condensed sans serif; no USED CAR TR. Use charcoal #30343b main lettering and deep red #b90023 for الذهبي. Simplify the existing roof into one restrained clean red/charcoal line, no detailed car. Carefully balance bilingual lettering into a wide compact two-line mark; the English letters must remain readable at120px. No shield, badge, slogan or new business facts. Exact Arabic and English spelling, open transparent counters, complete edges, no white/background/plaque/halo/shadow/checkerboard. Material redesigned proposal, not dealer approved.",
+    "output_hint": "Generated images are saved to C:\\Users\\radev\\.codex\\generated_images\\01a12a34-3dcd-7920-8e75-5eb5eac386bd as C:\\Users\\radev\\.codex\\generated_images\\01a12a34-3dcd-7920-8e75-5eb5eac386bd\\exec-76189c35-f007-4adc-bce6-619a9d19d486.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  "visualAccepted": true,
+  "surfaceReviewPath": "L:/CODEX/cars/leads/branding/fleet-20261011/al-hamoor-al-thahabi/surface-review.png",
+  "previousTreatment": {
+    "receipt": "previous-treatment/receipt.json",
+    "contract": "previous-treatment/branding/logo-contract.json",
+    "compactQA": "previous-treatment/surface-review.png",
+    "reason": "Owner requested upgrading weak/cluttered marks; tiny legal lines and roof clutter hurt compact header."
+  },
+  "visualChecks": {
+    "scope": "Technical isolated asset only. Proposals disclosed where redesigned; owner/dealer/integration/hosted pending",
+    "heightLimit": 76,
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "spelling": "Arabic الحمور الذهبي and AL HAMOOR AL THAHABI checked against source",
+    "geometry": "Redesigned cleaner bilingual lockup; tiny legal lines removed, main Arabic shape recognizable",
+    "residue": "No compact material fringe, plaque, clipped geometry or filled counters",
+    "treatments": "Charcoal/deep red onLight, white onDark/onAccent"
+  },
+  "schemaVersion": 1,
+  "dealer": "al-hamoor-al-thahabi",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-76189c35-f007-4adc-bce6-619a9d19d486.png",
+    "sha256": "787d5f5e2c905289f22f7a7b07a22852d42283410f3acb3d4fe4bdd9216cee2f",
+    "bytes": 622886,
+    "format": "png",
+    "width": 2172,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7145189147665415,
+      "opaqueRatio": 0.23781134580751503
+    },
+    "visibleBounds": {
+      "x": 89,
+      "y": 71,
+      "width": 1997,
+      "height": 590
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/al-hamoor-al-thahabi/dealer-brand/logo-on-light.webp",
+      "sha256": "8773db84bdedb7c122ccde93b0601cca1fd3c530a7d10502afb3ea8bf42b9e53",
+      "bytes": 124068,
+      "format": "webp",
+      "width": 1496,
+      "height": 487,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.693649869878883,
+        "opaqueRatio": 0.2498929383214925
+      },
+      "visibleBounds": {
+        "x": 49,
+        "y": 37,
+        "width": 1399,
+        "height": 414
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/al-hamoor-al-thahabi/dealer-brand/logo-on-dark.webp",
+      "sha256": "7dc02158346f158f528c0168da044ee0fcd37fc6d0690700c3bd7eb370bbad1b",
+      "bytes": 64990,
+      "format": "webp",
+      "width": 1496,
+      "height": 487,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.693649869878883,
+        "opaqueRatio": 0.2498929383214925
+      },
+      "visibleBounds": {
+        "x": 49,
+        "y": 37,
+        "width": 1399,
+        "height": 414
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/al-hamoor-al-thahabi/dealer-brand/logo-on-accent.webp",
+      "sha256": "7dc02158346f158f528c0168da044ee0fcd37fc6d0690700c3bd7eb370bbad1b",
+      "bytes": 64990,
+      "format": "webp",
+      "width": 1496,
+      "height": 487,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.693649869878883,
+        "opaqueRatio": 0.2498929383214925
+      },
+      "visibleBounds": {
+        "x": 49,
+        "y": 37,
+        "width": 1399,
+        "height": 414
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/al-hamoor-al-thahabi/branding/logo-master.png",
+    "sha256": "d9eed8cc53bc97fc2989c59f440f006e93638996ae8e0ca5cb859f01fb5700f8",
+    "bytes": 296255,
+    "format": "png",
+    "width": 1496,
+    "height": 487,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.693649869878883,
+      "opaqueRatio": 0.2498929383214925
+    },
+    "visibleBounds": {
+      "x": 49,
+      "y": 37,
+      "width": 1399,
+      "height": 414
+    }
+  },
+  "technicalAcceptance": {
+    "scope": "Technical isolated asset only. Proposals disclosed where redesigned; owner/dealer/integration/hosted pending",
+    "heightLimit": 76,
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "spelling": "Arabic الحمور الذهبي and AL HAMOOR AL THAHABI checked against source",
+    "geometry": "Redesigned cleaner bilingual lockup; tiny legal lines removed, main Arabic shape recognizable",
+    "residue": "No compact material fringe, plaque, clipped geometry or filled counters",
+    "treatments": "Charcoal/deep red onLight, white onDark/onAccent"
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "ownerApproved": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "L:/CODEX/cars/runtime/fleet-logo-20261011/existing-export",
+  "updatedAt": "2026-10-11T09:50:02.812Z",
+  "sourceEvidence": [
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/al-hamoor-al-thahabi/source/published-logo-reference.png",
+      "sha256": "a128c0ac5bb39dd49e0721e7a59bb7e9b22589003a1850fe81978be6b8d12906",
+      "bytes": 1707463,
+      "format": "png",
+      "width": 1217,
+      "height": 1216,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1217,
+        "height": 1216
+      }
+    },
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/al-hamoor-al-thahabi/source/published-profile-image",
+      "sha256": "fc0223ee13061d3bfcb7d947bf11aa45ad0fe45b1c1d50c31d06cca17494d4be",
+      "bytes": 223086,
+      "format": "jpeg",
+      "width": 1217,
+      "height": 1216,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1217,
+        "height": 1216
+      }
+    }
+  ],
+  "provenanceFile": "L:/CODEX/cars/leads/branding/fleet-20261011/al-hamoor-al-thahabi/provenance.json"
+}

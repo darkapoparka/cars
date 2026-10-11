@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "slug": "pm-select-automotive",
+  "repository": "darkapoparka/cars-pmselectautomotive",
+  "canonicalClientPath": "clients/pm-select-automotive",
+  "designSet": "six",
+  "designs": [
+    "auto-best",
+    "modern",
+    "import",
+    "app",
+    "mobile",
+    "karento-best"
+  ],
+  "adminUrl": "https://cars-admin-blue.vercel.app/",
+  "sharedInputs": [
+    "business-facts.json",
+    "stock.json",
+    "locale.json",
+    "assets/"
+  ],
+  "sourceState": "not-created-release-selection-blocked",
+  "buildState": "not-built",
+  "deploymentState": "not-created",
+  "deploymentUrl": null,
+  "buildApprovedByUser": true,
+  "outreachApproved": false,
+  "contactHistory": "not-checked"
+}

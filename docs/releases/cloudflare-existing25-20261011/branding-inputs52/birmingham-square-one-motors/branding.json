@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "dealer": "birmingham-square-one-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:30:47.263Z",
+  "reviewScope": "Hash-identical selected current raster inputs and retained genuine surface-review provenance only; actual dealer integration, native and hosted checks pending.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-8730288b-64a5-4d9a-a199-64791350a7fa",
+    "modelVersion": null,
+    "sourceSha256": "c3ff7c39cf3f5745509d75c0e4b6f986055f99914de308347bd7d933db6d8954",
+    "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/birmingham-square-one-motors/source/native-onLight.png",
+      "sha256": "c3ff7c39cf3f5745509d75c0e4b6f986055f99914de308347bd7d933db6d8954"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/birmingham-square-one-motors/source/generation-receipt.json",
+      "sha256": "fb1dc61d9b0974fcce7a6124658d989a9ee8ad295605d8a908084d721fa85943"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/birmingham-square-one-motors/branding/master.png",
+    "sha256": "13230c476d3746b6b92285f722f352425e13eed737a769a3adacbd8d0650a327"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/birmingham-square-one-motors/branding/onLight.png",
+      "sha256": "13230c476d3746b6b92285f722f352425e13eed737a769a3adacbd8d0650a327",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/birmingham-square-one-motors/source/generation-receipt.json#sha256=fb1dc61d9b0974fcce7a6124658d989a9ee8ad295605d8a908084d721fa85943; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8730288b-64a5-4d9a-a199-64791350a7fa",
+        "modelVersion": null,
+        "sourceSha256": "c3ff7c39cf3f5745509d75c0e4b6f986055f99914de308347bd7d933db6d8954",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/birmingham-square-one-motors/source/native-onLight.png",
+          "sha256": "c3ff7c39cf3f5745509d75c0e4b6f986055f99914de308347bd7d933db6d8954"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/birmingham-square-one-motors/source/generation-receipt.json",
+          "sha256": "fb1dc61d9b0974fcce7a6124658d989a9ee8ad295605d8a908084d721fa85943"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/birmingham-square-one-motors/branding/onDark.png",
+      "sha256": "320f717fbd362e328c428b7da32d5f5a5f2ceab1dffed95f53f23cb1fbb5bd55",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/birmingham-square-one-motors/source/generation-receipt.json#sha256=fb1dc61d9b0974fcce7a6124658d989a9ee8ad295605d8a908084d721fa85943; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8730288b-64a5-4d9a-a199-64791350a7fa",
+        "modelVersion": null,
+        "sourceSha256": "c3ff7c39cf3f5745509d75c0e4b6f986055f99914de308347bd7d933db6d8954",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/birmingham-square-one-motors/source/native-onDark.png",
+          "sha256": "c3ff7c39cf3f5745509d75c0e4b6f986055f99914de308347bd7d933db6d8954"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/birmingham-square-one-motors/source/generation-receipt.json",
+          "sha256": "fb1dc61d9b0974fcce7a6124658d989a9ee8ad295605d8a908084d721fa85943"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/birmingham-square-one-motors/branding/onAccent.png",
+      "sha256": "320f717fbd362e328c428b7da32d5f5a5f2ceab1dffed95f53f23cb1fbb5bd55",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/birmingham-square-one-motors/source/generation-receipt.json#sha256=fb1dc61d9b0974fcce7a6124658d989a9ee8ad295605d8a908084d721fa85943; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8730288b-64a5-4d9a-a199-64791350a7fa",
+        "modelVersion": null,
+        "sourceSha256": "c3ff7c39cf3f5745509d75c0e4b6f986055f99914de308347bd7d933db6d8954",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/birmingham-square-one-motors/source/native-onAccent.png",
+          "sha256": "c3ff7c39cf3f5745509d75c0e4b6f986055f99914de308347bd7d933db6d8954"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/birmingham-square-one-motors/source/generation-receipt.json",
+          "sha256": "fb1dc61d9b0974fcce7a6124658d989a9ee8ad295605d8a908084d721fa85943"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/birmingham-square-one-motors/source/generation-receipt.json",
+    "sha256": "fb1dc61d9b0974fcce7a6124658d989a9ee8ad295605d8a908084d721fa85943"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "existing",
+    "proof": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/birmingham-square-one-motors/surface-review.png",
+      "sha256": "70ad549907ba1e0fed42db5e4663d441e289f6b80e00b674f9edf10720eb1d1e",
+      "bytes": 115764,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Actual master and compact native-palette swatches inspected; retained pixels remain identical.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-existing-review.json"
+  },
+  "sourceOwnershipUnchanged": true
+}

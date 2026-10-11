@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "evrocarvarna09-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/evrocarvarna09-varna/facts.json",
+      "sha256": "4e696695ab76661cd826b63fb3bc433e13acd4a3a8d90405e74699678257bb3f"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/evrocarvarna09-varna/stock.json",
+      "sha256": "b2b95692e97bbf85cb1c525c466e0e10cc4189a92695c76dd30215c2ec2558c1"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/evrocarvarna09-varna/locale.json",
+      "sha256": "ad5e9de4cfe2269154d6cec380de4cec4d7dd09533fac2c7e7d8340700898dd5"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/evrocarvarna09-varna/branding.json",
+      "sha256": "f91235aa9dc3d87ad7e56e67d9df15146530bb0e1b6bc3ae60b75362d6b61899"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/evrocarvarna09-varna/source/business-facts.json",
+      "sha256": "494ab8693de40b9bebd434be031e32be759e993997362229e2c3a765a2e3639d"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/evrocarvarna09-varna/source/locale.json",
+      "sha256": "ad5e9de4cfe2269154d6cec380de4cec4d7dd09533fac2c7e7d8340700898dd5"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/evrocarvarna09-varna/source/stock.json",
+      "sha256": "88319ab3635458318ec3a690104f08545478848016db8083cbb91f82da653800"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/evrocarvarna09-varna/source/generation-receipt.json",
+      "sha256": "c8fae506647a4561376d8b034cd0c3b3ce1daf5044552ab55605699f4bcdc854"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/evrocarvarna09-varna/source/native-onLight.png",
+      "sha256": "316fee1c6925c2a82dc64f2f0e6def398c25b91e34dc96bdf3cc052a87adea0f"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/evrocarvarna09-varna/source/native-onDark.png",
+      "sha256": "316fee1c6925c2a82dc64f2f0e6def398c25b91e34dc96bdf3cc052a87adea0f"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/evrocarvarna09-varna/source/native-onAccent.png",
+      "sha256": "316fee1c6925c2a82dc64f2f0e6def398c25b91e34dc96bdf3cc052a87adea0f"
+    }
+  ],
+  "transformations": {
+    "facts": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evrocarvarna09-varna/source/business-facts.json",
+        "sha256": "494ab8693de40b9bebd434be031e32be759e993997362229e2c3a765a2e3639d"
+      },
+      "kind": "flat-original-facts-to-business-consumer",
+      "allOriginalEvidenceUnchanged": true,
+      "derivedNameDelta": null,
+      "otherFactsUnchanged": true
+    },
+    "stock": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evrocarvarna09-varna/source/stock.json",
+        "sha256": "88319ab3635458318ec3a690104f08545478848016db8083cbb91f82da653800"
+      },
+      "originalSourceRecordPreserved": true,
+      "sourceId": "11769659165544744",
+      "normalizer": "loadDealerProfile",
+      "retention": "retainDealerVariantAssets",
+      "sourceKind": "dated-marketplace-listing-sample",
+      "consumerKind": "dated-listing-snapshot",
+      "availabilityUnconfirmed": true,
+      "mediaRightsNotClaimed": true,
+      "mileageUnknownMeansOnRequest": true
+    },
+    "media": [
+      {
+        "sourceId": "11769659165544744",
+        "sourcePublicPath": "/assets/vehicles/11769659165544744/1.webp",
+        "publicPath": "/dealer-stock/11769659165544744-1.webp",
+        "destination": "dealer-stock/11769659165544744-1.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evrocarvarna09-varna/media/11769659165544744-1.webp",
+        "sha256": "8861d0979939dc230ce298af411e838aa814af5208bee3a18902ba75273e4dba",
+        "bytes": 253346
+      },
+      {
+        "sourceId": "11769659165544744",
+        "sourcePublicPath": "/assets/vehicles/11769659165544744/2.webp",
+        "publicPath": "/dealer-stock/11769659165544744-2.webp",
+        "destination": "dealer-stock/11769659165544744-2.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evrocarvarna09-varna/media/11769659165544744-2.webp",
+        "sha256": "e123ec8d175820c643a2d7ada137a75aca2ae19fb06021b083caef198563883d",
+        "bytes": 203216
+      }
+    ],
+    "branding": {
+      "acceptedManifest": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+        "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+      },
+      "originalGenerationReceipt": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evrocarvarna09-varna/source/generation-receipt.json",
+        "sha256": "c8fae506647a4561376d8b034cd0c3b3ce1daf5044552ab55605699f4bcdc854"
+      },
+      "noNewGeneration": true,
+      "modelVersion": null,
+      "pixelsUnchanged": true
+    },
+    "identity": null
+  }
+}

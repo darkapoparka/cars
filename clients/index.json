@@ -1082,6 +1082,316 @@
       ],
       "sourceState": "source-on-main",
       "reviewState": "unknown"
+    },
+    {
+      "slug": "stockport-broadbent-car-and-servicing",
+      "name": "Broadbent Car and Servicing",
+      "path": "clients/stockport-broadbent-car-and-servicing",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "pending"
+    },
+    {
+      "slug": "motherwell-motors-castle",
+      "name": "Motors Castle",
+      "path": "clients/motherwell-motors-castle",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "pending"
+    },
+    {
+      "slug": "birmingham-trade-car-sales-grasmere",
+      "name": "Trade Car Sales",
+      "path": "clients/birmingham-trade-car-sales-grasmere",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "pending"
+    },
+    {
+      "slug": "birmingham-square-one-motors",
+      "name": "Square One Motors",
+      "path": "clients/birmingham-square-one-motors",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "pending"
+    },
+    {
+      "slug": "dewsbury-car-market-yorkshire",
+      "name": "Car Market Yorkshire",
+      "path": "clients/dewsbury-car-market-yorkshire",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "pending"
+    },
+    {
+      "slug": "nottingham-s-a-motors",
+      "name": "S A Motors",
+      "path": "clients/nottingham-s-a-motors",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "pending"
+    },
+    {
+      "slug": "batley-as-motor-group",
+      "name": "AS Motor Group",
+      "path": "clients/batley-as-motor-group",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "pending"
+    },
+    {
+      "slug": "bradford-cherry-tree-cars",
+      "name": "Cherry Tree Cars Ltd",
+      "path": "clients/bradford-cherry-tree-cars",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "pending"
+    },
+    {
+      "slug": "stockton-norton-grange-trade-cars",
+      "name": "Norton Grange Trade Cars",
+      "path": "clients/stockton-norton-grange-trade-cars",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "pending"
+    },
+    {
+      "slug": "north-norfolk-car-sales",
+      "name": "North Norfolk Car Sales",
+      "path": "clients/north-norfolk-car-sales",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "pending"
+    },
+    {
+      "slug": "autofest-varna",
+      "name": "Аутофест",
+      "path": "clients/autofest-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown",
+      "leadId": "bg-varna-autofest"
+    },
+    {
+      "slug": "autoroad-varna",
+      "name": "AUTOROAD",
+      "path": "clients/autoroad-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown",
+      "leadId": "bg-varna-autoroad"
+    },
+    {
+      "slug": "car-point-trade-varna",
+      "name": "CAR POINT TRADE LTD",
+      "path": "clients/car-point-trade-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown",
+      "leadId": "bg-varna-carpointtrade"
+    },
+    {
+      "slug": "city-cars-varna",
+      "name": "Сити Карс",
+      "path": "clients/city-cars-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown",
+      "leadId": "bg-varna-city-cars"
+    },
+    {
+      "slug": "dm-auto-varna",
+      "name": "D&M - Auto Varna",
+      "path": "clients/dm-auto-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown",
+      "leadId": "bg-varna-dmautovarna"
+    },
+    {
+      "slug": "dream-drive-varna",
+      "name": "DREAM DRIVE",
+      "path": "clients/dream-drive-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown",
+      "leadId": "bg-varna-dreamdrive"
+    },
+    {
+      "slug": "dynamic-auto-varna",
+      "name": "Dynamic Auto Varna",
+      "path": "clients/dynamic-auto-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown",
+      "leadId": "bg-varna-dynamicautovarna"
+    },
+    {
+      "slug": "kolarov-cars",
+      "name": "Kolarov Cars",
+      "path": "clients/kolarov-cars",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown",
+      "leadId": "bg-varna-kolarovcars"
+    },
+    {
+      "slug": "pm-select-automotive",
+      "name": "PM SELECT AUTOMOTIVE",
+      "path": "clients/pm-select-automotive",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown",
+      "leadId": "bg-varna-pmselect"
+    },
+    {
+      "slug": "prime-auto-varna",
+      "name": "PRIME AUTO",
+      "path": "clients/prime-auto-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "source-on-main",
+      "reviewState": "unknown",
+      "leadId": "bg-varna-prime-auto"
     }
   ],
   "campaignCandidatesWithoutFolders": [

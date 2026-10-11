@@ -1,0 +1,207 @@
+{
+  "slug": "wildivaka-varna",
+  "strategy": "USE GENERATED CANDIDATE",
+  "sourceReference": "leads/branding/fleet-20261011/wildivaka-varna/source/published-logo.jpg",
+  "sourceUrls": [
+    "https://wildivaka.mobile.bg",
+    "https://cdn2.focus.bg/mobile/images/housespicts/h17225118406471988.pic"
+  ],
+  "identityStatus": "Disclosed improved AXE CARS proposal on qualified Axe Cars profile; removed dated chrome, flares and dense overlapping layout; actual source name retained, not official approval",
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-9902d485-7bd8-4fba-b25a-7bbd54474486.png",
+  "visualAccepted": true,
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-9902d485-7bd8-4fba-b25a-7bbd54474486",
+    "prompt": "Design a polished modern transparent improved proposal logo for a vehicle dealer named exactly AXE CARS. Wide horizontal composition, AXE in bold dark graphite angular sans-serif at left with a subtle cobalt-blue diagonal accent cut within the X, and CARS at right in smaller clean dark graphite uppercase, aligned to the same baseline. A single minimal cobalt-blue car-roof stroke over AXE, with lots of transparent breathing space and clear separation from letters. Retain the actual source name and angular typography idea while replacing dated chrome, blue flares and overlapping stacked letters. No literal axe weapon, badge, slogan, claim or other text. All ink flat opaque; open letter counters and no filled panel. No gradients, metallic effect, shadow, glow, grit, texture, white highlights or background matte. True RGBA transparent background, one complete landscape logo centered with modest padding.",
+    "transparent_background": true,
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-9902d485-7bd8-4fba-b25a-7bbd54474486.png"
+  },
+  "surfaceReviewPath": "L:/CODEX/cars/leads/branding/fleet-20261011/wildivaka-varna/surface-review.png",
+  "surfaceDerivation": "Existing exporter contextual onLight and white onDark/onAccent; compact review passed",
+  "visualChecks": {
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "scope": "Isolated exported raster review; six-design consumers and favicon/touch integration remain pending",
+    "transparency": "True alpha, open letter counters and gaps; no visible matte/residue at compact widths",
+    "spelling": "Visible wordmark compared with retained published source, or named disclosed proposal",
+    "reviewedAt": "2026-10-11T09:54:24.081Z"
+  },
+  "schemaVersion": 1,
+  "dealer": "wildivaka-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a0e-8374-7732-9e28-580ceda2a0fc/exec-9902d485-7bd8-4fba-b25a-7bbd54474486.png",
+    "sha256": "7282af24e2c48cd834c221aad4d488e20dc6de6d1469189e945ece79b77c89b6",
+    "bytes": 382504,
+    "format": "png",
+    "width": 2172,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8302917340740514,
+      "opaqueRatio": 0.14585304681379282
+    },
+    "visibleBounds": {
+      "x": 163,
+      "y": 140,
+      "width": 1846,
+      "height": 420
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/wildivaka-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "45c24a10a42ee6190457313760e5e56ec037a43a4b0dd097c5988967c2d64d2d",
+      "bytes": 72544,
+      "format": "webp",
+      "width": 1496,
+      "height": 391,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7352906984695762,
+        "opaqueRatio": 0.22439036065484086
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 319
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/wildivaka-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "983316f2fccf76bf461054fdd6f73253f5913e4deabbc76fbdd7296c3327f479",
+      "bytes": 35642,
+      "format": "webp",
+      "width": 1496,
+      "height": 391,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7352906984695762,
+        "opaqueRatio": 0.22439036065484086
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 319
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/wildivaka-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "983316f2fccf76bf461054fdd6f73253f5913e4deabbc76fbdd7296c3327f479",
+      "bytes": 35642,
+      "format": "webp",
+      "width": 1496,
+      "height": 391,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7352906984695762,
+        "opaqueRatio": 0.22439036065484086
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 319
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/wildivaka-varna/branding/logo-master.png",
+    "sha256": "1e11a39a387b141c0a8c0c631034e81f4e4520f61a91e9562a86e9685dfa4dab",
+    "bytes": 196856,
+    "format": "png",
+    "width": 1496,
+    "height": 391,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7352906984695762,
+      "opaqueRatio": 0.22439036065484086
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 319
+    }
+  },
+  "technicalAcceptance": {
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "scope": "Isolated exported raster review; six-design consumers and favicon/touch integration remain pending",
+    "transparency": "True alpha, open letter counters and gaps; no visible matte/residue at compact widths",
+    "spelling": "Visible wordmark compared with retained published source, or named disclosed proposal",
+    "reviewedAt": "2026-10-11T09:54:24.081Z"
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "ownerApproved": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/export",
+  "updatedAt": "2026-10-11T09:54:24.933Z",
+  "sourceEvidence": [
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/wildivaka-varna/source/published-logo.jpg",
+      "sha256": "8ab11b6d0453942740009a79f0950f4107368ca0fa49126470ac870895fb14d4",
+      "bytes": 89503,
+      "format": "jpeg",
+      "width": 980,
+      "height": 489,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 980,
+        "height": 489
+      }
+    }
+  ],
+  "provenanceFile": "L:/CODEX/cars/leads/branding/fleet-20261011/wildivaka-varna/provenance.json"
+}

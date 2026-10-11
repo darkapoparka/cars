@@ -1,0 +1,229 @@
+{
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Improved demo/proposal identity based on qualified primary name and preserved source evidence; material redesign, not official or owner-approved.",
+  "publishedBranding": "Published vehicle dealer plates read EUROCAR09 in red Latin uppercase",
+  "sourceUrls": [
+    "https://evrocarvarna09.mobile.bg/",
+    "https://www.google.com/search?tbm=isch&q=Еврокар+Варна+09+лого"
+  ],
+  "sourceLimitations": "publishedBranding refined for demo; dealer/owner approval pending",
+  "originalReceiptPath": "L:/CODEX/cars/leads/branding/fleet-20261011/evrocarvarna09-varna/receipt.json",
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-c2ecfa9b-2cf5-4535-96fc-757349185524.png",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-c2ecfa9b-2cf5-4535-96fc-757349185524",
+    "transparent_background": true,
+    "prompt": "Improve reference 1 as a clearly disclosed dealer demo proposal, reference 2 only illustrates customized automotive lettering quality, never copy its emblem/name. ONLY exact text \"EUROCAR09\". Create a compact distinctive red E/09 speed motif LEFT; exact Latin name in confident condensed automotive custom italic lettering. Use red. Strict ONE horizontal row, compact individual emblem to LEFT of name on one baseline, no subtitle/caption/text above/below/underline/car above. Custom broad confident athletic lettering, restrained forward slant, deliberate angular corners and open counters; name prominent and emblem modest. Clean flat solid inks, no texture, mottling, gradients, shadow, glow, white fill, plate or frame. Genuine RGBA transparent background, transparent gaps and counters, no stray pixels or residue. Wide compact shape with safe transparent padding, readable at 120px total width. Exact spelling/script/case/punctuation.",
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/evrocarvarna09-varna/branding/logo-master.png",
+      "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png"
+    ],
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-c2ecfa9b-2cf5-4535-96fc-757349185524.png",
+    "modelVersion": "not exposed by tool",
+    "referenceMetadata": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/evrocarvarna09-varna/branding/logo-master.png",
+        "sha256": "f706228b49374e920bcd62365c9f66ac4028b4a94928809bb9b43d9785ca0daf",
+        "bytes": 220529,
+        "width": 1496,
+        "height": 365,
+        "format": "png",
+        "hasAlpha": true,
+        "role": "Prior dealer treatment or preceding candidate; identity/source history preserved separately."
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png",
+        "sha256": "dc84d9283929362bd17d0b765c1ab219eb3c093ccb52e4d3c05ada2ddfcb37ce",
+        "bytes": 142920,
+        "width": 1496,
+        "height": 240,
+        "format": "png",
+        "hasAlpha": true,
+        "role": "Style direction only; no name or emblem borrowed."
+      }
+    ]
+  },
+  "variantDerivation": {
+    "onLight": "Existing raster exporter crops/scales the real ImageGen master preserving colored ink and alpha.",
+    "onDark": "Existing raster exporter derives white ink from same master alpha; not independently generated.",
+    "onAccent": "Existing raster exporter derives white ink from same master alpha; not independently generated."
+  },
+  "selectionStatus": "Preferred technically selected single-row candidate; owner style acceptance pending",
+  "ownerApproved": false,
+  "visualAccepted": true,
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/evrocarvarna09-varna/surface-review.png",
+  "visualChecks": {
+    "spelling": "Exact qualified main name; no captions",
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "result": "Compact one-row individualized mark beside expressive name; clear counters, no clipping, opaque background or residue observed. Owner style acceptance pending."
+  },
+  "schemaVersion": 1,
+  "dealer": "evrocarvarna09-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-c2ecfa9b-2cf5-4535-96fc-757349185524.png",
+    "sha256": "316fee1c6925c2a82dc64f2f0e6def398c25b91e34dc96bdf3cc052a87adea0f",
+    "bytes": 412475,
+    "format": "png",
+    "width": 2171,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7922202768284087,
+      "opaqueRatio": 0.18303618008352188
+    },
+    "visibleBounds": {
+      "x": 65,
+      "y": 229,
+      "width": 2036,
+      "height": 241
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/evrocarvarna09-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "5d202afbfd53d170215db9aca98a1ba5c484edc6d74591b8d257effbeb0d67ce",
+      "bytes": 67032,
+      "format": "webp",
+      "width": 1496,
+      "height": 239,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.5682601302217349,
+        "opaqueRatio": 0.37873100933032017
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 166
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/evrocarvarna09-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "722425cc451f429f33ed8a761534a5c435195c4adb9d279a9e424c25666a10dc",
+      "bytes": 34992,
+      "format": "webp",
+      "width": 1496,
+      "height": 239,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.5682601302217349,
+        "opaqueRatio": 0.37873100933032017
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 166
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/evrocarvarna09-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "722425cc451f429f33ed8a761534a5c435195c4adb9d279a9e424c25666a10dc",
+      "bytes": 34992,
+      "format": "webp",
+      "width": 1496,
+      "height": 239,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.5682601302217349,
+        "opaqueRatio": 0.37873100933032017
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 166
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/evrocarvarna09-varna/branding/logo-master.png",
+    "sha256": "ba3cd857daabe77af5619fe2a2a32db430ed98c14c848b6a62634650ed8772f1",
+    "bytes": 131237,
+    "format": "png",
+    "width": 1496,
+    "height": 239,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.5682601302217349,
+      "opaqueRatio": 0.37873100933032017
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 166
+    }
+  },
+  "technicalAcceptance": {
+    "spelling": "Exact qualified main name; no captions",
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "result": "Compact one-row individualized mark beside expressive name; clear counters, no clipping, opaque background or residue observed. Owner style acceptance pending."
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-new-a-export",
+  "updatedAt": "2026-10-11T11:28:51.616Z",
+  "sourceEvidence": {
+    "originalReceipt": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/evrocarvarna09-varna/receipt.json",
+      "sha256": "c5f766b07049f83da8574577cded60bef4bdb27a60a1365364ff0e84a5e637e9"
+    },
+    "originalMaster": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/evrocarvarna09-varna/branding/logo-master.png",
+      "sha256": "f706228b49374e920bcd62365c9f66ac4028b4a94928809bb9b43d9785ca0daf"
+    },
+    "publishedBranding": "Published vehicle dealer plates read EUROCAR09 in red Latin uppercase",
+    "sourceUrls": [
+      "https://evrocarvarna09.mobile.bg/",
+      "https://www.google.com/search?tbm=isch&q=Еврокар+Варна+09+лого"
+    ],
+    "sourceLimitation": "publishedBranding refined for demo; dealer/owner approval pending",
+    "sourceEvidenceDirectory": "L:/CODEX/cars/leads/branding/fleet-20261011/evrocarvarna09-varna/source"
+  }
+}

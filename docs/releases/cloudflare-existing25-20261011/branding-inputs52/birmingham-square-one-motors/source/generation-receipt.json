@@ -1,0 +1,340 @@
+{
+  "slug": "birmingham-square-one-motors",
+  "coreName": "SQUARE ONE MOTORS",
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-8730288b-64a5-4d9a-a199-64791350a7fa.png",
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "New disclosed single-row expressive automotive proposal; technically preferred when selected; owner/style and dealer approval pending",
+  "onLight": "original",
+  "onDark": "white",
+  "onAccent": "white",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-8730288b-64a5-4d9a-a199-64791350a7fa",
+    "prompt": "Use the attached AVTOMOTOR identity ONLY as a reference for expressive confident automotive letter shapes. Do not copy its emblem or words or stacked layout. Create ONE complete fresh proposed identity, with a small distinctive business-specific emblem LEFT of the name on ONE horizontal row, all on one common visual axis. No text above/below, subtitles, slogans, phone, location caption, descriptors beyond the exact requested core name, underline, stacked layout, multiple options, chrome, gradients, shadow, glow, texture or background plate. True transparent RGBA canvas. Flat solid opaque shapes with clean transparent counters, generous open counters, balanced kerning and modest clear padding. Name charcoal #20252b, useful identity accent confined to emblem. Custom automotive lettering with a restrained forward slant; no plain generic sans typesetting. Distinctive emblem must relate to this name, not a fleet-wide symbol. Exact name: SQUARE ONE MOTORS. Red #b40024 square numeral1, open square corners and a compact forward-stepping silhouette. Wordmark subtly condensed squared-rounded, a distinctive cut in Q and angled N terminals. Complete wide landscape logo, all requested words equally prominent on the same row. Proposed dealer demo identity, no official approval claim.",
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/am-varna-varna/branding/logo-master.png"
+    ],
+    "transparent_background": true,
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-8730288b-64a5-4d9a-a199-64791350a7fa.png",
+    "actualOutputHint": "Generated images are saved to C:\\Users\\radev\\.codex\\generated_images\\01a12a34-877e-73a2-9a3d-346e546742c6 as C:\\Users\\radev\\.codex\\generated_images\\01a12a34-877e-73a2-9a3d-346e546742c6\\exec-8730288b-64a5-4d9a-a199-64791350a7fa.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  "derivation": {
+    "kind": "new-proposed-identity",
+    "styleReferenceOnly": true,
+    "businessIdentityBasis": "Published source or prior disclosed proposal inspected through original compact surface QA; useful established colors/name-specific emblem cue carried into a fresh proposal.",
+    "directionPath": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/DIRECTION.md",
+    "changeReason": "Stacked name and generic round typography; retain square numeral1 red cue."
+  },
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/birmingham-square-one-motors/surface-review.png",
+  "visualAccepted": true,
+  "selectionStatus": "technically-selected-preferred-revised-pack",
+  "ownerStyleStatus": "pending",
+  "originalPackage": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-square-one-motors",
+    "files": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-square-one-motors/branding/logo-master.png",
+        "sha256": "9d9291946984bf393553c3e8d9a9d1934bf277d45e9ba88d43df556587fdda56"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-square-one-motors/branding/logo-on-light.png",
+        "sha256": "9d9291946984bf393553c3e8d9a9d1934bf277d45e9ba88d43df556587fdda56"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-square-one-motors/branding/logo-on-dark.png",
+        "sha256": "eaa392c66b1311480106e2ba975d05728cb2a63d02ed96e15cb7b22c80978d76"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-square-one-motors/branding/logo-on-accent.png",
+        "sha256": "eaa392c66b1311480106e2ba975d05728cb2a63d02ed96e15cb7b22c80978d76"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-square-one-motors/dealer-brand/logo-on-light.webp",
+        "sha256": "d185fa0e66311fb0ab26b18e2b7c7c7d2c7277b394c7103a3ad26dae540636a6"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-square-one-motors/dealer-brand/logo-on-dark.webp",
+        "sha256": "5d189674dabb91ddfab007c69401e396ea688965af066614fb70ce7ad6188a43"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-square-one-motors/dealer-brand/logo-on-accent.webp",
+        "sha256": "5d189674dabb91ddfab007c69401e396ea688965af066614fb70ce7ad6188a43"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-square-one-motors/receipt.json",
+        "sha256": "62d7c2341e9afcd23cc67304247407741f7ecac41fb7232105f181e7fbe0a871"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-square-one-motors/branding/logo-contract.json",
+        "sha256": "9a40dc7e2562db6416b97dd9d3a1be2cdcd9ef158d5e17f2b302b9b8b53fc319"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-square-one-motors/technical-check.json",
+        "sha256": "2fc18ae6386f9cf44e6150d16edeaa817c3da5943113d2595108702e0add776f"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-square-one-motors/surface-review.png",
+        "sha256": "97aa74460cc23136949de5d3187006895e3eb8616494671f97b05456f7c55a92"
+      }
+    ]
+  },
+  "sourceUrls": [
+    "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+    "https://www.google.com/search?q=Square+One+Motors+Birmingham+logo&udm=2"
+  ],
+  "publishedBranding": {
+    "profileUrl": "https://www.autotrader.co.uk/dealers/birmingham/birmingham/square-one-motors-10042456",
+    "sourceLogoUrl": null,
+    "observedAt": "2026-10-11T09:24:02.351Z",
+    "visualEvidence": "Primary profile and focused Google Images screenshot inspected through CUA. No same-business recognizable logo verified; unrelated same-name sources rejected.",
+    "decision": "Generated proposal only; no claim of official identity or approval",
+    "retainedEvidence": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-square-one-motors/source-evidence/visual-source.jpg"
+    ]
+  },
+  "sourceEvidence": [
+    {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-square-one-motors/source-evidence/visual-source.jpg",
+      "sha256": "a8f3fb5bed9beb389a2cfc7a22eb2f28c8ca32e1ae280c94e913edf64dc8bd40",
+      "bytes": 100604,
+      "format": "jpeg",
+      "width": 1265,
+      "height": 712,
+      "hasAlpha": false,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentRatio": 0,
+        "opaqueRatio": 1
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1265,
+        "height": 712
+      }
+    }
+  ],
+  "previousTreatment": {
+    "receipt": "L:/CODEX/cars/leads/branding/fleet-20261011/birmingham-square-one-motors/receipt.json",
+    "sha256": "62d7c2341e9afcd23cc67304247407741f7ecac41fb7232105f181e7fbe0a871",
+    "imageGeneration": {
+      "tool": "image_gen.imagegen",
+      "reference": "functions.exec cell33 image_gen.imagegen output exec-62d69b7d-f703-4907-a404-ce8c96c58273",
+      "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-62d69b7d-f703-4907-a404-ce8c96c58273.png",
+      "transparent_background": true,
+      "modelVersion": "not exposed by tool",
+      "prompt": "Create a restrained high quality PROPOSAL logo for exact name Square One Motors, Birmingham UK. A simple squared outline mark containing a clear numeral 1 at left, exact two-row wordmark Square One above Motors at right, dark charcoal bold geometric sans serif, discreet deep red accent in mark. Wide compact lockup readable at 120 pixels. Transparent alpha background including mark gaps, no plate, gradient, shadow, tagline or invented badge. No existing third-party Square One Auto logo. Generated demo proposal only.",
+      "promptProvenance": {
+        "kind": "exact-original-tool-input",
+        "transcript": "C:/Users/radev/.codex/sessions/2026/10/11/rollout-2026-10-11T12-04-08-01a12a34-877e-73a2-9a3d-346e546742c6.jsonl",
+        "toolCallLine": 402,
+        "toolCallId": "call_8f95d539a911470997d0255315916301",
+        "toolCallTimestamp": "2026-10-11T09:16:36.009Z",
+        "generationEventLine": 418,
+        "generationId": "exec-62d69b7d-f703-4907-a404-ce8c96c58273",
+        "generationEventTimestamp": "2026-10-11T09:16:56.413Z",
+        "extraction": "JSON-decoded original prompt string literal; unchanged wording. Completed image_gen.generation revisedPrompt exactly matches it.",
+        "referencedImagesProvided": false
+      }
+    }
+  },
+  "styleReferenceEvidence": {
+    "path": "L:/CODEX/cars/leads/branding/fleet-20261011/am-varna-varna/branding/logo-master.png",
+    "sha256": "11a4f802dc2725817c409f1b669446cc51763849e5a29467af7b951c01808ffa"
+  },
+  "factualNameTreatment": {
+    "fullPublishedName": "SQUARE ONE MOTORS",
+    "displayedCoreName": "SQUARE ONE MOTORS",
+    "explicitlyOmitted": null,
+    "authorization": "Owner permits recognizable trading name and visibly secondary generic descriptive captions omitted; no alternate trading name invented"
+  },
+  "visualChecks": {
+    "reviewer": "baseline asset agent",
+    "spelling": "SQUARE ONE MOTORS",
+    "layout": "Compact unique emblem beside one expressive name row; no secondary captions",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "transparency": "Master and contextual exports visually inspected; no matte, filled counters, clipped strokes or residue visible",
+    "smallSize": "Correct name and distinctive emblem readable at120/180/320 width in isolated raster swatches",
+    "reviewedAt": "2026-10-11T11:25:44.667Z",
+    "approval": "Technical asset selection only; owner/style, dealer, all actual six-design consumers and hosted review pending"
+  },
+  "schemaVersion": 1,
+  "dealer": "birmingham-square-one-motors",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-877e-73a2-9a3d-346e546742c6/exec-8730288b-64a5-4d9a-a199-64791350a7fa.png",
+    "sha256": "c3ff7c39cf3f5745509d75c0e4b6f986055f99914de308347bd7d933db6d8954",
+    "bytes": 319707,
+    "format": "png",
+    "width": 2172,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8640990812246269,
+      "opaqueRatio": 0.11075414873375863
+    },
+    "visibleBounds": {
+      "x": 30,
+      "y": 234,
+      "width": 2115,
+      "height": 252
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/birmingham-square-one-motors/dealer-brand/logo-on-light.webp",
+      "sha256": "cf227a46cd46d1dbe88a62b9db3cbb448932267cf5e997dfbbe95b30f4413fee",
+      "bytes": 50250,
+      "format": "webp",
+      "width": 1496,
+      "height": 240,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7348902629233511,
+        "opaqueRatio": 0.20923573975044563
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 168
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/birmingham-square-one-motors/dealer-brand/logo-on-dark.webp",
+      "sha256": "43f86631ed8c71b62833e899f62d9b2f6a6f67b3119f0fa913f7691377d4f4c0",
+      "bytes": 30006,
+      "format": "webp",
+      "width": 1496,
+      "height": 240,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7348902629233511,
+        "opaqueRatio": 0.20923573975044563
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 168
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/birmingham-square-one-motors/dealer-brand/logo-on-accent.webp",
+      "sha256": "43f86631ed8c71b62833e899f62d9b2f6a6f67b3119f0fa913f7691377d4f4c0",
+      "bytes": 30006,
+      "format": "webp",
+      "width": 1496,
+      "height": 240,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7348902629233511,
+        "opaqueRatio": 0.20923573975044563
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 168
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/birmingham-square-one-motors/branding/logo-master.png",
+    "sha256": "13230c476d3746b6b92285f722f352425e13eed737a769a3adacbd8d0650a327",
+    "bytes": 124346,
+    "format": "png",
+    "width": 1496,
+    "height": 240,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7348902629233511,
+      "opaqueRatio": 0.20923573975044563
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 168
+    }
+  },
+  "technicalAcceptance": {
+    "reviewer": "baseline asset agent",
+    "spelling": "SQUARE ONE MOTORS",
+    "layout": "Compact unique emblem beside one expressive name row; no secondary captions",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "backgrounds": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "transparency": "Master and contextual exports visually inspected; no matte, filled counters, clipped strokes or residue visible",
+    "smallSize": "Correct name and distinctive emblem readable at120/180/320 width in isolated raster swatches",
+    "reviewedAt": "2026-10-11T11:25:44.667Z",
+    "approval": "Technical asset selection only; owner/style, dealer, all actual six-design consumers and hosted review pending"
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "ownerApproved": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-baseline-export",
+  "updatedAt": "2026-10-11T11:25:44.942Z",
+  "pngTreatments": {
+    "on-light": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/birmingham-square-one-motors/branding/logo-on-light.png",
+      "sha256": "13230c476d3746b6b92285f722f352425e13eed737a769a3adacbd8d0650a327"
+    },
+    "on-dark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/birmingham-square-one-motors/branding/logo-on-dark.png",
+      "sha256": "320f717fbd362e328c428b7da32d5f5a5f2ceab1dffed95f53f23cb1fbb5bd55"
+    },
+    "on-accent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/birmingham-square-one-motors/branding/logo-on-accent.png",
+      "sha256": "320f717fbd362e328c428b7da32d5f5a5f2ceab1dffed95f53f23cb1fbb5bd55"
+    }
+  },
+  "exportRetention": {
+    "nativeImageGenOriginalRetained": true,
+    "compactQAPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/birmingham-square-one-motors/surface-review.png",
+    "historicalExportScratch": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-baseline-export",
+    "retirementReceipt": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/baseline-single-row-retention.json"
+  }
+}

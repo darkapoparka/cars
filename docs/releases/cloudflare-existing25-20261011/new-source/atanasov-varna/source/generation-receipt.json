@@ -1,0 +1,229 @@
+{
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Improved demo/proposal identity based on qualified primary name and preserved source evidence; material redesign, not official or owner-approved.",
+  "publishedBranding": "Primary profile has plain Атанасов heading, focused image search vehicles and unrelated repair/climate/parts identities; no identifiable same-dealer logo",
+  "sourceUrls": [
+    "https://atanasov.mobile.bg/",
+    "https://www.google.com/search?tbm=isch&q=Автокъща+Атанасов+Варна+лого"
+  ],
+  "sourceLimitations": "generated demo/proposal identity; not official or approved",
+  "originalReceiptPath": "L:/CODEX/cars/leads/branding/fleet-20261011/atanasov-varna/receipt.json",
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-9d686126-c0b7-4b33-9041-53b4d107e027.png",
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "reference": "exec-9d686126-c0b7-4b33-9041-53b4d107e027",
+    "transparent_background": true,
+    "prompt": "Improve reference1 into a clearly disclosed dealer demo proposal; reference2 ONLY shows bold customized automotive character and compact one-row typography, never copy its emblem/text. Exact ONLY text \"АТАНАСОВ\". Keep A-road individual triangular open emblem. Use confident customized condensed forward italic Cyrillic lettering with squared arches and angular cuts. Palette charcoal. Strict SINGLE horizontal row, modest individual emblem LEFT beside prominent name on one baseline. Custom confident broad automotive lettering, restrained forward slant, angular ends, open counters. No plain stock sans, captions, slogans, subtitles, text above/below, roof above, underline, plate, badge, shadow, gradient, texture, speckles, noise, residue or white fill. Genuine RGBA transparent background including gaps and counters; safe padding and exact script/case/spaces/punctuation, readable at120px total width.",
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/atanasov-varna/branding/logo-master.png",
+      "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png"
+    ],
+    "outputPath": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-9d686126-c0b7-4b33-9041-53b4d107e027.png",
+    "modelVersion": "not exposed by tool",
+    "referenceMetadata": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/atanasov-varna/branding/logo-master.png",
+        "sha256": "3fa10cbf0982e930b24b0f0a20badec289f843481419e79bfa18553fb5285c6c",
+        "bytes": 149631,
+        "width": 1496,
+        "height": 372,
+        "format": "png",
+        "hasAlpha": true,
+        "role": "Prior dealer treatment or preceding candidate; identity/source history preserved separately."
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png",
+        "sha256": "dc84d9283929362bd17d0b765c1ab219eb3c093ccb52e4d3c05ada2ddfcb37ce",
+        "bytes": 142920,
+        "width": 1496,
+        "height": 240,
+        "format": "png",
+        "hasAlpha": true,
+        "role": "Style direction only; no name or emblem borrowed."
+      }
+    ]
+  },
+  "variantDerivation": {
+    "onLight": "Existing raster exporter crops/scales the real ImageGen master preserving colored ink and alpha.",
+    "onDark": "Existing raster exporter derives white ink from same master alpha; not independently generated.",
+    "onAccent": "Existing raster exporter derives white ink from same master alpha; not independently generated."
+  },
+  "selectionStatus": "Preferred technically selected single-row candidate; owner style acceptance pending",
+  "ownerApproved": false,
+  "visualAccepted": true,
+  "surfaceReviewPath": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/atanasov-varna/surface-review.png",
+  "visualChecks": {
+    "spelling": "Exact qualified main name; no captions",
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "result": "Compact one-row individualized mark beside expressive name; clear counters, no clipping, opaque background or residue observed. Owner style acceptance pending."
+  },
+  "schemaVersion": 1,
+  "dealer": "atanasov-varna",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-d2d7-7571-930a-1ed37e54ff8e/exec-9d686126-c0b7-4b33-9041-53b4d107e027.png",
+    "sha256": "b1f94a1d0d361ae2ff0cd2dcc5316b2865556d27f92ed127d922d377264ee7c7",
+    "bytes": 371915,
+    "format": "png",
+    "width": 2171,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8318575343999633,
+      "opaqueRatio": 0.14662260688991757
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 169,
+      "width": 2075,
+      "height": 374
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/atanasov-varna/dealer-brand/logo-on-light.webp",
+      "sha256": "ff2130dece66be9e45467f8d1470cde61074d32bef42a735c6fe0be2108a44d4",
+      "bytes": 45084,
+      "format": "webp",
+      "width": 1496,
+      "height": 324,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7489663794810854,
+        "opaqueRatio": 0.21479088268303956
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 252
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/atanasov-varna/dealer-brand/logo-on-dark.webp",
+      "sha256": "7addbda1d6b53931cd26525d8fdc62342d4fd2d0073a6b6e629073afda98e197",
+      "bytes": 31494,
+      "format": "webp",
+      "width": 1496,
+      "height": 324,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7489663794810854,
+        "opaqueRatio": 0.21479088268303956
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 252
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/atanasov-varna/dealer-brand/logo-on-accent.webp",
+      "sha256": "7addbda1d6b53931cd26525d8fdc62342d4fd2d0073a6b6e629073afda98e197",
+      "bytes": 31494,
+      "format": "webp",
+      "width": 1496,
+      "height": 324,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.7489663794810854,
+        "opaqueRatio": 0.21479088268303956
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 252
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/atanasov-varna/branding/logo-master.png",
+    "sha256": "49090c8539f8503e48505e0aed165d0d22dfc0e3ca72c069b3c44872a6d757c2",
+    "bytes": 149381,
+    "format": "png",
+    "width": 1496,
+    "height": 324,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.7489663794810854,
+      "opaqueRatio": 0.21479088268303956
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 252
+    }
+  },
+  "technicalAcceptance": {
+    "spelling": "Exact qualified main name; no captions",
+    "surfaces": [
+      "#ffffff",
+      "#30343b",
+      "#17191c",
+      "#202023",
+      "#19171d",
+      "#171717",
+      "#b00020",
+      "#405ff2"
+    ],
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "result": "Compact one-row individualized mark beside expressive name; clear counters, no clipping, opaque background or residue observed. Owner style acceptance pending."
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-new-a-export",
+  "updatedAt": "2026-10-11T11:33:11.962Z",
+  "sourceEvidence": {
+    "originalReceipt": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/atanasov-varna/receipt.json",
+      "sha256": "68dcd1a4a7961659ea0946df9bca1becb4bcdda4cadbbda2361a1ed9e9e411fb"
+    },
+    "originalMaster": {
+      "path": "L:/CODEX/cars/leads/branding/fleet-20261011/atanasov-varna/branding/logo-master.png",
+      "sha256": "3fa10cbf0982e930b24b0f0a20badec289f843481419e79bfa18553fb5285c6c"
+    },
+    "publishedBranding": "Primary profile has plain Атанасов heading, focused image search vehicles and unrelated repair/climate/parts identities; no identifiable same-dealer logo",
+    "sourceUrls": [
+      "https://atanasov.mobile.bg/",
+      "https://www.google.com/search?tbm=isch&q=Автокъща+Атанасов+Варна+лого"
+    ],
+    "sourceLimitation": "generated demo/proposal identity; not official or approved",
+    "sourceEvidenceDirectory": "L:/CODEX/cars/leads/branding/fleet-20261011/atanasov-varna/source"
+  }
+}

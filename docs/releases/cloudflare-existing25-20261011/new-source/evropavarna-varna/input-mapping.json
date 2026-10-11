@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "evropavarna-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/evropavarna-varna/facts.json",
+      "sha256": "bcf63b236e0886d6a70a5cd597283705ae2096f3c2905306c9509a1b0aee8f1a"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/evropavarna-varna/stock.json",
+      "sha256": "63cbea09054bacfbb2ba8a27260d941cd62f46a254576af3590d5ebad009bb90"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/evropavarna-varna/locale.json",
+      "sha256": "bb990c72f8b9746eb7db4b81f8faa146644b7c13595c15c28eb3311175f1f395"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/evropavarna-varna/branding.json",
+      "sha256": "5f1c057992e1eac4179d2d10c02a5cedc204760afb2946c9ae283a854e7cdf16"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/evropavarna-varna/source/business-facts.json",
+      "sha256": "b33e5f32e4deae906876f8a05b90a71b6c347025ddc98df8bed50b7902a1df3c"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/evropavarna-varna/source/locale.json",
+      "sha256": "bb990c72f8b9746eb7db4b81f8faa146644b7c13595c15c28eb3311175f1f395"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/evropavarna-varna/source/stock.json",
+      "sha256": "11380a7425f609d4848889c14e30097b9aeac92c205c0d492120938df9e6c150"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/evropavarna-varna/source/generation-receipt.json",
+      "sha256": "965468f86a947c1c3fdff06dc0f91b6b93cca0a3ce365c4e73d491beec73f349"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/evropavarna-varna/source/native-onLight.png",
+      "sha256": "3e1732c4e4d24f0296473218f2ed23b2ae62446667af384c718c31277d6257ca"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/evropavarna-varna/source/native-onDark.png",
+      "sha256": "3e1732c4e4d24f0296473218f2ed23b2ae62446667af384c718c31277d6257ca"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/evropavarna-varna/source/native-onAccent.png",
+      "sha256": "3e1732c4e4d24f0296473218f2ed23b2ae62446667af384c718c31277d6257ca"
+    }
+  ],
+  "transformations": {
+    "facts": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evropavarna-varna/source/business-facts.json",
+        "sha256": "b33e5f32e4deae906876f8a05b90a71b6c347025ddc98df8bed50b7902a1df3c"
+      },
+      "kind": "flat-original-facts-to-business-consumer",
+      "allOriginalEvidenceUnchanged": true,
+      "derivedNameDelta": null,
+      "otherFactsUnchanged": true
+    },
+    "stock": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evropavarna-varna/source/stock.json",
+        "sha256": "11380a7425f609d4848889c14e30097b9aeac92c205c0d492120938df9e6c150"
+      },
+      "originalSourceRecordPreserved": true,
+      "sourceId": "11781719220439552",
+      "normalizer": "loadDealerProfile",
+      "retention": "retainDealerVariantAssets",
+      "sourceKind": "dated-marketplace-listing-sample",
+      "consumerKind": "dated-listing-snapshot",
+      "availabilityUnconfirmed": true,
+      "mediaRightsNotClaimed": true,
+      "mileageUnknownMeansOnRequest": true
+    },
+    "media": [
+      {
+        "sourceId": "11781719220439552",
+        "sourcePublicPath": "/assets/vehicles/11781719220439552/1.webp",
+        "publicPath": "/dealer-stock/11781719220439552-1.webp",
+        "destination": "dealer-stock/11781719220439552-1.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evropavarna-varna/media/11781719220439552-1.webp",
+        "sha256": "4e7f6f6738b0f6dadb94a63c002ea239d463820159a1282b89e5333f431a02ad",
+        "bytes": 241744
+      },
+      {
+        "sourceId": "11781719220439552",
+        "sourcePublicPath": "/assets/vehicles/11781719220439552/2.webp",
+        "publicPath": "/dealer-stock/11781719220439552-2.webp",
+        "destination": "dealer-stock/11781719220439552-2.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evropavarna-varna/media/11781719220439552-2.webp",
+        "sha256": "339bea22be674d9ee32cadd16b781471eb6245f591fa87f8a1594bc6c3c93167",
+        "bytes": 210926
+      }
+    ],
+    "branding": {
+      "acceptedManifest": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+        "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+      },
+      "originalGenerationReceipt": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evropavarna-varna/source/generation-receipt.json",
+        "sha256": "965468f86a947c1c3fdff06dc0f91b6b93cca0a3ce365c4e73d491beec73f349"
+      },
+      "noNewGeneration": true,
+      "modelVersion": null,
+      "pixelsUnchanged": true
+    },
+    "identity": null
+  }
+}

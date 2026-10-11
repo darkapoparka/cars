@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "slug": "miraj-auto-varna",
+  "name": "МИРАЖ АУТО",
+  "shortName": "МИРАЖ АУТО",
+  "city": "Варна",
+  "country": "BG",
+  "countryCode": "BG",
+  "locale": "bg-BG",
+  "currency": "EUR",
+  "distanceUnit": "km",
+  "phone": "0893777706",
+  "phoneDisplay": "0893777706",
+  "phoneE164": "+359893777706",
+  "phones": [
+    "0893777706"
+  ],
+  "addressLine": "бул. Цар Освободител 230, срещу МЕТРО до автогуми Жижо",
+  "address": "бул. Цар Освободител 230, срещу МЕТРО до автогуми Жижо, Варна, България",
+  "hours": "Потвърдете работното време директно с автокъщата.",
+  "email": "",
+  "sourceUrl": "https://miraj_auto.mobile.bg/",
+  "stockUrl": "https://miraj_auto.mobile.bg/",
+  "contactSourceUrl": "https://miraj_auto.mobile.bg/contacts",
+  "observedAt": "2026-10-11T11:32:27.482Z",
+  "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+  "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+  "services": [],
+  "socialLinks": {}
+}

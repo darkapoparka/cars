@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-input-mapping",
+  "dealer": "promotors82-varna",
+  "inputs": {
+    "facts": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/facts.json",
+      "sha256": "2adb13fdef36eaa1912868875f3f5d9bd89bbdcb185973bfee261902beacd757"
+    },
+    "stock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/stock.json",
+      "sha256": "bd491aeca93ccbbe4b3bef31875c51dd8398fba50cdde3bac88d90c969690e86"
+    },
+    "locale": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/locale.json",
+      "sha256": "5fb156441915b77688372af5b61337e37d44f3879c457994e914d51b838af23f"
+    },
+    "branding": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/branding.json",
+      "sha256": "08aff74158dfe2724150fb33034df92228ed94a24d6742f2820abef3b4e7bcc2"
+    }
+  },
+  "sources": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/source/business-facts.json",
+      "sha256": "6c60ab74b2d9ce81da8faccbeec809dca3096ed374239ceccd02b8cc10515022"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/source/locale.json",
+      "sha256": "5fb156441915b77688372af5b61337e37d44f3879c457994e914d51b838af23f"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/source/stock.json",
+      "sha256": "70d0e5c9726ea9a53fe3c7142eacc0fbbaafd4770a02356504a132e96ef8d825"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/source/generation-receipt.json",
+      "sha256": "f3cc9fb3c7557d9b1702146ece9356fc77141b9a233cc19d1419066565d24be4"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/source/native-onLight.png",
+      "sha256": "bf0118fb51785446087ec48f4b9148cc6b81623eed0fa92ade29e487bcbc6b9b"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/source/native-onDark.png",
+      "sha256": "bf0118fb51785446087ec48f4b9148cc6b81623eed0fa92ade29e487bcbc6b9b"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/source/native-onAccent.png",
+      "sha256": "bf0118fb51785446087ec48f4b9148cc6b81623eed0fa92ade29e487bcbc6b9b"
+    }
+  ],
+  "transformations": {
+    "facts": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/source/business-facts.json",
+        "sha256": "6c60ab74b2d9ce81da8faccbeec809dca3096ed374239ceccd02b8cc10515022"
+      },
+      "kind": "flat-original-facts-to-business-consumer",
+      "allOriginalEvidenceUnchanged": true,
+      "derivedNameDelta": null,
+      "otherFactsUnchanged": true
+    },
+    "stock": {
+      "source": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/source/stock.json",
+        "sha256": "70d0e5c9726ea9a53fe3c7142eacc0fbbaafd4770a02356504a132e96ef8d825"
+      },
+      "originalSourceRecordPreserved": true,
+      "sourceId": "11791111366122197",
+      "normalizer": "loadDealerProfile",
+      "retention": "retainDealerVariantAssets",
+      "sourceKind": "dated-marketplace-listing-sample",
+      "consumerKind": "dated-listing-snapshot",
+      "availabilityUnconfirmed": true,
+      "mediaRightsNotClaimed": true,
+      "mileageUnknownMeansOnRequest": true
+    },
+    "media": [
+      {
+        "sourceId": "11791111366122197",
+        "sourcePublicPath": "/assets/vehicles/11791111366122197/1.webp",
+        "publicPath": "/dealer-stock/11791111366122197-1.webp",
+        "destination": "dealer-stock/11791111366122197-1.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/media/11791111366122197-1.webp",
+        "sha256": "6f9b5b729519c1496cf23312eae2c01f8293d21cf5da7af7aeac826d2c7396e1",
+        "bytes": 121912
+      },
+      {
+        "sourceId": "11791111366122197",
+        "sourcePublicPath": "/assets/vehicles/11791111366122197/2.webp",
+        "publicPath": "/dealer-stock/11791111366122197-2.webp",
+        "destination": "dealer-stock/11791111366122197-2.webp",
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/media/11791111366122197-2.webp",
+        "sha256": "024fabbf09632d6a4d687c29db4b99f7e2e66ab30f1567a8746d1033b7167422",
+        "bytes": 155574
+      }
+    ],
+    "branding": {
+      "acceptedManifest": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/evidence/final-logo-handoff.json",
+        "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+      },
+      "originalGenerationReceipt": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/source/generation-receipt.json",
+        "sha256": "f3cc9fb3c7557d9b1702146ece9356fc77141b9a233cc19d1419066565d24be4"
+      },
+      "noNewGeneration": true,
+      "modelVersion": null,
+      "pixelsUnchanged": true
+    },
+    "identity": null
+  }
+}

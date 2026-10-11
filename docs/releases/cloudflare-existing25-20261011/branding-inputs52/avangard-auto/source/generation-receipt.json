@@ -1,0 +1,203 @@
+{
+  "generatedPath": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-1fc74c10-1df2-476e-b802-5f5af177f4d1.png",
+  "strategy": "USE GENERATED CANDIDATE",
+  "identityStatus": "Separate single-row redesigned proposal; exact core name and historical identity/colors retained as references. Awaiting owner/dealer style selection.",
+  "sourceUrls": [
+    "https://avangard-auto.mobile.bg/"
+  ],
+  "sourceLogoUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h14628795864514771.pic",
+  "workingLogoPath": "leads/branding/fleet-20261011/avangard-auto/source/published-logo.png",
+  "derivation": {
+    "historicalReceipt": "L:/CODEX/cars/leads/branding/fleet-20261011/avangard-auto/receipt.json",
+    "historicalMaster": "L:/CODEX/cars/leads/branding/fleet-20261011/avangard-auto/branding/logo-master.png",
+    "historicalMasterSha256": "5387e624b7b83726b7f0e0c1003acbc5b19f315cae1e73812b0b66dbe3357b0e",
+    "historicalGeneration": {
+      "reference": "exec-ddfc04b0-2a4f-4b7d-8bfb-e9c7ddb2b6af",
+      "path": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-ddfc04b0-2a4f-4b7d-8bfb-e9c7ddb2b6af.png",
+      "sha256": "7b2dae6c710b12cef5392a093b58de6c7f091b9c2222dc0ffddb2b60c6f828c1"
+    },
+    "publicIdentityObservation": {
+      "observedAt": "2026-10-11",
+      "visualReference": "CUA dealer header and retained public profile image."
+    },
+    "styleReference": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png",
+    "styleReferenceSha256": "dc84d9283929362bd17d0b765c1ab219eb3c093ccb52e4d3c05ada2ddfcb37ce",
+    "styleReferenceScope": "Composition/expressive lettering only; not dealer identity or palette",
+    "referenceFiles": [
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/avangard-auto/branding/logo-master.png",
+        "sha256": "5387e624b7b83726b7f0e0c1003acbc5b19f315cae1e73812b0b66dbe3357b0e"
+      },
+      {
+        "path": "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png",
+        "sha256": "dc84d9283929362bd17d0b765c1ab219eb3c093ccb52e4d3c05ada2ddfcb37ce"
+      }
+    ]
+  },
+  "imageGeneration": {
+    "reference": "exec-1fc74c10-1df2-476e-b802-5f5af177f4d1",
+    "tool": "image_gen.imagegen",
+    "transparent_background": true,
+    "referenced_image_paths": [
+      "L:/CODEX/cars/leads/branding/fleet-20261011/avangard-auto/branding/logo-master.png",
+      "L:/CODEX/cars/leads/branding/fleet-20261011/style-revision/single-row/biemaauto-varna/branding/logo-master.png"
+    ],
+    "prompt": "Rework reference1 for EXACT full name AVANGARD AUTO on ONE row. Preserve the recognizable condensed strong source lettering character and deep red identity; add a compact distinctive AV/forward-point geometric emblem at left relating to Avangard. Make confident moderately forward-slanted custom automotive capitals with purposeful angle cuts and thick strokes, readable counter shapes. Deep red #bc0026 emblem and all lettering. Remove VARNA entirely; it is a location caption, not a core brand word. No new descriptor or separate AUTO line. Use reference2 only as the style anchor for confident custom automotive letters and compact one-row composition; do not copy its name, monogram, blue color or exact mark. The owner wants expressive, slightly forward-slanted, sculpted motorsport lettering with purposeful chamfers and softened corners, not a plain upright system sans serif. ONE NAME ROW ONLY: no line beneath, captions, slogans, descriptors or facts. Emblem to left at approximately letter cap height, fully separate from the name and at most18percent of logo width. Main name large and readable at120px. Preserve exact name and meaningful individual identity. Flat clean ink, restrained color, crisp open counters/negative spaces, complete unclipped true RGBA transparency including all counters. No opaque panel/plaque/background, checkerboard, shadow, halo, shiny texture or hairline ornaments. Modest transparent margins. This is a separate redesigned PROPOSAL awaiting owner/dealer style selection; original reference remains historical.",
+    "output_hint": "Generated images are saved to C:\\Users\\radev\\.codex\\generated_images\\01a12a34-3dcd-7920-8e75-5eb5eac386bd as C:\\Users\\radev\\.codex\\generated_images\\01a12a34-3dcd-7920-8e75-5eb5eac386bd\\exec-1fc74c10-1df2-476e-b802-5f5af177f4d1.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  "onLight": "original",
+  "onDark": "white",
+  "onAccent": "white",
+  "visualAccepted": true,
+  "styleSelected": false,
+  "ownerApproved": false,
+  "selectionStatus": "technically-selected-preferred-candidate-awaiting-owner-style-selection",
+  "surfaceReviewPath": "C:\\Users\\radev\\.codex\\visualizations\\2026\\10\\11\\01a12a0e-8374-7732-9e28-580ceda2a0fc\\fleet-logo-work\\single-row-stage\\avangard-auto/surface-review.png",
+  "visualChecks": {
+    "layout": "Emblem beside full name, one row, no captions",
+    "treatments": "Original identity colors onLight; geometry-preserving white onDark/onAccent",
+    "spelling": "AVANGARD AUTO",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "heightLimit": 76,
+    "geometry": "Distinct AV/forward emblem, red source identity; VARNA location caption omitted",
+    "scope": "Technical raster candidate only; owner/dealer style selection, integration and hosted pending",
+    "residue": "No material fringe, plaque, clipping or filled counters at compact sizes"
+  },
+  "schemaVersion": 1,
+  "dealer": "avangard-auto",
+  "state": "asset-verified",
+  "generated": {
+    "path": "C:/Users/radev/.codex/generated_images/01a12a34-3dcd-7920-8e75-5eb5eac386bd/exec-1fc74c10-1df2-476e-b802-5f5af177f4d1.png",
+    "sha256": "18edc3377e694bdb49d95d423bc702dc41272c758723021f5f52342d54a1bf76",
+    "bytes": 362111,
+    "format": "png",
+    "width": 2171,
+    "height": 724,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.8422067891416487,
+      "opaqueRatio": 0.13722703339602138
+    },
+    "visibleBounds": {
+      "x": 28,
+      "y": 270,
+      "width": 2108,
+      "height": 175
+    }
+  },
+  "assets": {
+    "onLight": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/avangard-auto/dealer-brand/logo-on-light.webp",
+      "sha256": "2803d750bcb9006db77dc071f61ce23cf4005aa543b2958511549b18e199e474",
+      "bytes": 56544,
+      "format": "webp",
+      "width": 1496,
+      "height": 189,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6091340576634694,
+        "opaqueRatio": 0.33449339331692274
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 117
+      },
+      "publicPath": "/dealer-brand/logo-on-light.webp"
+    },
+    "onDark": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/avangard-auto/dealer-brand/logo-on-dark.webp",
+      "sha256": "c38b418703f5f68c530c4e827f48da9227e12183c7d73d6fe87f4f4c22206d88",
+      "bytes": 29110,
+      "format": "webp",
+      "width": 1496,
+      "height": 189,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6091340576634694,
+        "opaqueRatio": 0.33449339331692274
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 117
+      },
+      "publicPath": "/dealer-brand/logo-on-dark.webp"
+    },
+    "onAccent": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/avangard-auto/dealer-brand/logo-on-accent.webp",
+      "sha256": "c38b418703f5f68c530c4e827f48da9227e12183c7d73d6fe87f4f4c22206d88",
+      "bytes": 29110,
+      "format": "webp",
+      "width": 1496,
+      "height": 189,
+      "hasAlpha": true,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentRatio": 0.6091340576634694,
+        "opaqueRatio": 0.33449339331692274
+      },
+      "visibleBounds": {
+        "x": 48,
+        "y": 36,
+        "width": 1400,
+        "height": 117
+      },
+      "publicPath": "/dealer-brand/logo-on-accent.webp"
+    }
+  },
+  "master": {
+    "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/avangard-auto/branding/logo-master.png",
+    "sha256": "193aa97ced0679cf1eee8bef8b655855d560c4037cd38f279bc5b202ef91c4d0",
+    "bytes": 141399,
+    "format": "png",
+    "width": 1496,
+    "height": 189,
+    "hasAlpha": true,
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparentRatio": 0.6091340576634694,
+      "opaqueRatio": 0.33449339331692274
+    },
+    "visibleBounds": {
+      "x": 48,
+      "y": 36,
+      "width": 1400,
+      "height": 117
+    }
+  },
+  "technicalAcceptance": {
+    "layout": "Emblem beside full name, one row, no captions",
+    "treatments": "Original identity colors onLight; geometry-preserving white onDark/onAccent",
+    "spelling": "AVANGARD AUTO",
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "heightLimit": 76,
+    "geometry": "Distinct AV/forward emblem, red source identity; VARNA location caption omitted",
+    "scope": "Technical raster candidate only; owner/dealer style selection, integration and hosted pending",
+    "residue": "No material fringe, plaque, clipping or filled counters at compact sizes"
+  },
+  "integrationVerified": false,
+  "hostedVerified": false,
+  "exportTool": "docs/logo-refresh/2026-09-18/tools/build-approved-logo-pack.mjs",
+  "exportToolSha256": "7fab60c4000210eff6bbb91f9c35e869bad90834d3bdd09d282a9a51835f0dbc",
+  "exportIsolation": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/style-existing-export",
+  "updatedAt": "2026-10-11T11:28:22.36Z"
+}

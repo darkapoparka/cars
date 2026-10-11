@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "dealer": "astracar",
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T13:30:46.468Z",
+  "reviewScope": "Hash-identical selected current raster inputs and retained genuine surface-review provenance only; actual dealer integration, native and hosted checks pending.",
+  "officialDealerArtwork": false,
+  "dealerApproval": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-e1fec24e-678c-464b-b942-ca6e093e965f",
+    "modelVersion": null,
+    "sourceSha256": "9736eafc942971cd5b2b3e86ec8496a0f43b5585023a73fb3974163dd745f47a",
+    "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+    "nativeOutput": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/astracar/source/native-onLight.png",
+      "sha256": "9736eafc942971cd5b2b3e86ec8496a0f43b5585023a73fb3974163dd745f47a"
+    },
+    "originalGenerationReceipt": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/astracar/source/generation-receipt.json",
+      "sha256": "71b2f611059d51c792dfa555a4150890549db80d6cc56a8b1b61976d806cf2fb"
+    },
+    "derivation": "one ImageGen master exported to context raster"
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/astracar/branding/master.png",
+    "sha256": "dee4b03d62993b48127980cde8978b4cb04e0815320e0e302c7e12b3a4e8830f"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/astracar/branding/onLight.png",
+      "sha256": "dee4b03d62993b48127980cde8978b4cb04e0815320e0e302c7e12b3a4e8830f",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/astracar/source/generation-receipt.json#sha256=71b2f611059d51c792dfa555a4150890549db80d6cc56a8b1b61976d806cf2fb; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-e1fec24e-678c-464b-b942-ca6e093e965f",
+        "modelVersion": null,
+        "sourceSha256": "9736eafc942971cd5b2b3e86ec8496a0f43b5585023a73fb3974163dd745f47a",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/astracar/source/native-onLight.png",
+          "sha256": "9736eafc942971cd5b2b3e86ec8496a0f43b5585023a73fb3974163dd745f47a"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/astracar/source/generation-receipt.json",
+          "sha256": "71b2f611059d51c792dfa555a4150890549db80d6cc56a8b1b61976d806cf2fb"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/astracar/branding/onDark.png",
+      "sha256": "54ae7cd5a899636c2252451074bb440ec21a71ccb58cde64db9d0edd5b4e710d",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/astracar/source/generation-receipt.json#sha256=71b2f611059d51c792dfa555a4150890549db80d6cc56a8b1b61976d806cf2fb; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-e1fec24e-678c-464b-b942-ca6e093e965f",
+        "modelVersion": null,
+        "sourceSha256": "9736eafc942971cd5b2b3e86ec8496a0f43b5585023a73fb3974163dd745f47a",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/astracar/source/native-onDark.png",
+          "sha256": "9736eafc942971cd5b2b3e86ec8496a0f43b5585023a73fb3974163dd745f47a"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/astracar/source/generation-receipt.json",
+          "sha256": "71b2f611059d51c792dfa555a4150890549db80d6cc56a8b1b61976d806cf2fb"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/astracar/branding/onAccent.png",
+      "sha256": "54ae7cd5a899636c2252451074bb440ec21a71ccb58cde64db9d0edd5b4e710d",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/astracar/source/generation-receipt.json#sha256=71b2f611059d51c792dfa555a4150890549db80d6cc56a8b1b61976d806cf2fb; exact selected handoff b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-e1fec24e-678c-464b-b942-ca6e093e965f",
+        "modelVersion": null,
+        "sourceSha256": "9736eafc942971cd5b2b3e86ec8496a0f43b5585023a73fb3974163dd745f47a",
+        "sourceRole": "Native ImageGen output behind exact retained selected raster; no new generation or claimed model version.",
+        "nativeOutput": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/astracar/source/native-onAccent.png",
+          "sha256": "9736eafc942971cd5b2b3e86ec8496a0f43b5585023a73fb3974163dd745f47a"
+        },
+        "originalGenerationReceipt": {
+          "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/astracar/source/generation-receipt.json",
+          "sha256": "71b2f611059d51c792dfa555a4150890549db80d6cc56a8b1b61976d806cf2fb"
+        },
+        "derivation": "one ImageGen master exported to context raster"
+      }
+    }
+  },
+  "originalGenerationReceipt": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/astracar/source/generation-receipt.json",
+    "sha256": "71b2f611059d51c792dfa555a4150890549db80d6cc56a8b1b61976d806cf2fb"
+  },
+  "acceptedLogoManifest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/evidence/final-logo-handoff.json",
+    "sha256": "b481fc2e2a35ff091bea1817b7ab77bb5d3d51d05894c374242028076510a46a"
+  },
+  "assetReview": {
+    "status": "completed",
+    "owner": "baseline",
+    "proof": {
+      "path": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/single-row-stage/astracar/surface-review.png",
+      "sha256": "beabbc4ab48f5423b70e9b1b382e33d6bcf7ccd537ecad3fd049e2b513811b13",
+      "bytes": 118192,
+      "width": 740,
+      "height": 864,
+      "format": "png",
+      "hasAlpha": true
+    },
+    "widths": [
+      120,
+      180,
+      320
+    ],
+    "scope": "Actual master and compact native-palette swatches inspected; retained pixels remain identical.",
+    "report": "C:/Users/radev/.codex/visualizations/2026/10/11/01a12a0e-8374-7732-9e28-580ceda2a0fc/fleet-logo-work/final-baseline-review.json"
+  },
+  "sourceOwnershipUnchanged": true
+}
