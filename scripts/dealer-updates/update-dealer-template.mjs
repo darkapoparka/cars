@@ -437,7 +437,12 @@ async function personalizeAddedBases({ pins, newBases, dealerRoot, manifest, reg
 export async function personalizeFactualTargetBases({pins,newBases,dealerRoot,manifest}) {
   const keys=['auto-best','modern','import','app','mobile','karento-best'];
   if(JSON.stringify(Object.keys(pins).sort())!==JSON.stringify([...keys].sort()) || manifest.packaging?.version!=='5')throw new Error('Factual refresh requires all six qualified target families');
-  const profile=loadDealerProfile(dealerRoot,manifest.slug),consumerPaths=new Set(),adaptations={};
+  return personalizePinnedTargetBases({pins,newBases,dealerRoot,manifest,profile:loadDealerProfile(dealerRoot,manifest.slug)});
+}
+
+async function personalizePinnedTargetBases({pins,newBases,dealerRoot,manifest,profile}) {
+  const keys=['auto-best','modern','import','app','mobile','karento-best'];
+  const consumerPaths=new Set(),adaptations={};
   const note=(before,after,prefix='')=>{
     for(const name of new Set([...before.keys(),...after.keys()])) {
       const prior=before.get(name),next=after.get(name);
@@ -520,6 +525,47 @@ export function assertRegisteredPersonalizationPreservation({before,after,newBas
   return {schemaVersion:1,stage:'personalization-before-native-catalogs-and-branding',mode:'mounted-template-text-consumers-only',consumerHashes};
 }
 
+/** Derive registered consumer ownership through the maintained target adapters. */
+export async function deriveRegisteredConsumerTargets({registeredAdoption,assetView,newBases,manifest}) {
+  assertRegisteredAdoptionPlan(registeredAdoption);assertRegisteredAssetView(registeredAdoption,assetView);
+  assertRegisteredMountOwnership(manifest,{files:new Map(),commit:registeredAdoption.baseline.commit,tree:registeredAdoption.baseline.tree},registeredAdoption);
+  const keys=['auto-best','modern','import','app','mobile','karento-best'];
+  if(keys.some(key=>!(newBases?.[key] instanceof Map))||JSON.stringify(Object.keys(newBases).sort())!==JSON.stringify([...keys].sort()))throw new Error('Registered resolution requires exact six mounted targets');
+  const personalizedBases=Object.fromEntries(keys.map(key=>[key,new Map(newBases[key])])),pins=Object.fromEntries(keys.map(key=>[key,{targetSource:manifest.templateSources[key]}]));
+  await personalizePinnedTargetBases({pins,newBases:personalizedBases,dealerRoot:assetView,manifest,profile:registeredAdoption.profile});
+  assertRegisteredAssetView(registeredAdoption,assetView);return personalizedBases;
+}
+
+/** Pure registered review planner; generic three-way resolution behavior stays unchanged. */
+export function planReviewedRegisteredConsumerResolutions({before,original,newBases,personalizedBases,review,dealer,baseline,targetSources}) {
+  if(!(before instanceof Map)||!(original instanceof Map))throw new Error('Exact registered source and merged maps required');
+  if(review===null||review===undefined)return {candidate:new Map(before),proof:null};
+  const keys=['auto-best','modern','import','app','mobile','karento-best'],equal=(a,b)=>JSON.stringify(a)===JSON.stringify(b),digest=bytes=>bytes?sha256(bytes):null;
+  if(review.schemaVersion!==1||review.kind!=='cars-registered-consumer-template-resolutions'||review.reviewed!==true||review.dealer!==dealer||!equal(review.baseline,baseline)||!equal(review.targetSources,targetSources)||!Array.isArray(review.paths)||!review.paths.length||review.paths.length>256||keys.some(key=>!(newBases?.[key] instanceof Map)||!(personalizedBases?.[key] instanceof Map)))throw new Error('Exact reviewed registered consumer resolution receipt required');
+  const names=review.paths.map(item=>item?.path);if(new Set(names).size!==names.length||!equal(names,[...names].sort()))throw new Error('Registered consumer paths must be unique and sorted');
+  const changes=[];
+  for(const item of review.paths){
+    const name=item.path;if(typeof name!=='string'||name.includes('\\')||name.split('/').some(part=>!part||part==='.'||part==='..')||!keys.includes(name.split('/')[0])||/\.(?:png|webp|jpe?g|gif|ico|avif|woff2?|ttf|eot)$/i.test(name)||item.choice!=='template')throw new Error('Only exact adapter-owned text template resolutions are allowed');
+    const slash=name.indexOf('/'),key=name.slice(0,slash),relative=name.slice(slash+1),target=newBases[key].get(relative),personalized=personalizedBases[key].get(relative),merged=before.get(name),raw=original.get(name);
+    if(!target||!personalized||!merged||target.equals(personalized)||target.includes(0)||personalized.includes(0)||!Buffer.from(target.toString('utf8')).equals(target)||!Buffer.from(personalized.toString('utf8')).equals(personalized))throw new Error('Unknown or unchanged registered adapter consumer: '+name);
+    if(merged.equals(target))throw new Error('Registered consumer already has the exact mounted target: '+name);
+    if(item.originalSha256!==digest(raw)||item.mergedSha256!==digest(merged)||item.targetSha256!==digest(target)||item.personalizedTargetSha256!==digest(personalized))throw new Error('Registered consumer path/hash lease changed: '+name);
+    changes.push({path:name,choice:'template',originalSha256:digest(raw),mergedSha256:digest(merged),targetSha256:digest(target),personalizedTargetSha256:digest(personalized)});
+  }
+  const candidate=new Map(before);for(const item of changes){const slash=item.path.indexOf('/');candidate.set(item.path,Buffer.from(newBases[item.path.slice(0,slash)].get(item.path.slice(slash+1))));}
+  return {candidate,proof:{schemaVersion:1,stage:'preservation-merge-before-personalization',mode:'explicit-reviewed-registered-template-consumers',dealer,baseline:structuredClone(baseline),targetSources:structuredClone(targetSources),reviewSha256:sha256(JSON.stringify(review)),paths:changes}};
+}
+
+async function applyReviewedRegisteredConsumerResolutions({registeredAdoption,assetView,candidateDirectory,dealerRoot,manifest,newBases,review,assetPool}) {
+  assertRegisteredAdoptionPlan(registeredAdoption,{dealerRoot});assertRegisteredAssetView(registeredAdoption,assetView);assertRegisteredCandidateDirectory(registeredAdoption,candidateDirectory);
+  if(review?.schemaVersion!==1||review.kind!=='cars-registered-consumer-template-resolutions'||review.reviewed!==true||review.dealer!==registeredAdoption.dealer||JSON.stringify(review.baseline)!==JSON.stringify(registeredAdoption.baseline)||JSON.stringify(review.targetSources)!==JSON.stringify(manifest.templateSources)||!Array.isArray(review.paths)||!review.paths.length)throw new Error('Exact reviewed registered consumer resolution receipt required');
+  const personalizedBases=await deriveRegisteredConsumerTargets({registeredAdoption,assetView,newBases,manifest}),before=readDirectoryTree(candidateDirectory),original=new Map();
+  for(const item of review?.paths??[]){const name=item?.path;if(typeof name!=='string'||name.includes('\\')||name.split('/').some(part=>!part||part==='.'||part==='..')||name.startsWith('/')||/^[a-z]:/i.test(name))throw new Error('Unsafe registered resolution source path');const file=path.join(dealerRoot,name);if(fs.existsSync(file)){if(!fs.lstatSync(file).isFile())throw new Error('Registered resolution source is not a physical file');original.set(name,fs.readFileSync(file));}}
+  const planned=planReviewedRegisteredConsumerResolutions({before,original,newBases,personalizedBases,review,dealer:registeredAdoption.dealer,baseline:registeredAdoption.baseline,targetSources:manifest.templateSources});
+  writeDirectoryTreeChanges(candidateDirectory,before,planned.candidate,assetPool);assertRegisteredAssetView(registeredAdoption,assetView);return planned.proof;
+}
+
+
 /** Reuse maintained adapters after merge; only the authenticated asset view supplies inputs. */
 export async function personalizeRegisteredCandidate({registeredAdoption,assetView,candidateDirectory,manifest,assetPool,newBases}) {
   assertRegisteredAdoptionPlan(registeredAdoption);assertRegisteredAssetView(registeredAdoption,assetView);assertRegisteredCandidateDirectory(registeredAdoption,candidateDirectory);assertRegisteredMountOwnership(manifest,{files:new Map(),commit:registeredAdoption.baseline.commit,tree:registeredAdoption.baseline.tree},registeredAdoption);
@@ -597,9 +643,10 @@ function reviewedUpgradeReport(plan) {
   return review;
 }
 
-async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {carsRoot, refreshedAt, extendedAdaptations = {}, candidateAssetPool, templatePalette = false, templatePaletteConfigs, qualification, registeredAdoption,registeredAssetView,registeredTargetBases,factualAppProvenance} = {}) {
+async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {carsRoot, refreshedAt, extendedAdaptations = {}, candidateAssetPool, templatePalette = false, templatePaletteConfigs, qualification, registeredAdoption,registeredAssetView,registeredTargetBases,factualAppProvenance,registeredConsumerReview} = {}) {
+  if(registeredConsumerReview&&(!registeredAdoption||!registeredAssetView||!registeredTargetBases))throw new Error('Reviewed consumer resolutions require authenticated registered profile/view/targets');
   if(registeredAdoption){assertRegisteredAdoptionPlan(registeredAdoption,{dealerRoot});const before=readDirectoryTree(candidateDirectory),after=new Map(before);for(const [name,bytes]of registeredAdoption.files){if(after.has(name)&&!after.get(name).equals(bytes))throw new Error('Registered adoption input destination is occupied');after.set(name,bytes);}writeDirectoryTreeChanges(candidateDirectory,before,after,candidateAssetPool);}
-  if(registeredAssetView){const derived=await personalizeRegisteredCandidate({registeredAdoption,assetView:registeredAssetView,candidateDirectory,manifest:plan.manifest,assetPool:candidateAssetPool,newBases:registeredTargetBases});extendedAdaptations=derived.adaptations;plan.registeredPersonalizationPreservation=derived.preservation;}
+  if(registeredAssetView){const resolutionProof=registeredConsumerReview?await applyReviewedRegisteredConsumerResolutions({registeredAdoption,assetView:registeredAssetView,candidateDirectory,dealerRoot,manifest:plan.manifest,newBases:registeredTargetBases,review:registeredConsumerReview,assetPool:candidateAssetPool}):null;const derived=await personalizeRegisteredCandidate({registeredAdoption,assetView:registeredAssetView,candidateDirectory,manifest:plan.manifest,assetPool:candidateAssetPool,newBases:registeredTargetBases});extendedAdaptations=derived.adaptations;plan.registeredPersonalizationPreservation=resolutionProof?{...derived.preservation,templateResolutions:resolutionProof}:derived.preservation;}
   plan.templatePalette = restorePinnedTemplatePalettes({plan,candidateDirectory,templatePalette,templatePaletteConfigs});
   if (!['2', APP_PACKAGING_VERSION, SIX_DESIGN_PACKAGING_CANDIDATE].includes(plan.manifest.packaging.version)) {
     reconcilePlanWithCandidate({ source: dealerRoot, plan, candidateDirectory });
@@ -846,6 +893,8 @@ async function runPlan(values) {
   const targetManifest = targetManifestForUpgrade({ dealerRoot, manifest, pins,targetVariants:selection.targetVariants,carsRoot,registeredAdoption });
   const resolutionBytes = values['resolutions-file'] ? fs.readFileSync(path.resolve(values['resolutions-file'])) : null;
   const resolutions = parseResolutions(resolutionBytes, pins);
+  const registeredConsumerReview=resolutionBytes?JSON.parse(resolutionBytes.toString('utf8').replace(/^\uFEFF/,'')).registeredConsumerResolutions??null:null;
+  if(registeredConsumerReview&&!registeredAdoption)throw new Error('Reviewed consumer resolutions are registered-only');
   const paths = repositoryPaths(carsRoot, templateRoot);
   validateRepositoryPaths(pins, paths);
   const runDirectory = createRunDirectory(carsRoot, manifest.slug, values['run-dir']);
@@ -899,7 +948,7 @@ async function runPlan(values) {
       destination: candidatePath, assetPool:candidateAssetPool, assetPoolStats:candidateAssetPoolStats
     });
     const registeredAssetView=registeredAdoption?materializeRegisteredAssetView(registeredAdoption,{runDirectory,candidateDirectory}):undefined;
-    await addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {carsRoot, refreshedAt: createdAt, extendedAdaptations, candidateAssetPool, templatePalette, templatePaletteConfigs,qualification:qualification?.context,registeredAdoption,registeredAssetView,registeredTargetBases:adapted.newBases,factualAppProvenance:factual?.appProvenance});
+    await addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {carsRoot, refreshedAt: createdAt, extendedAdaptations, candidateAssetPool, templatePalette, templatePaletteConfigs,qualification:qualification?.context,registeredAdoption,registeredAssetView,registeredTargetBases:adapted.newBases,factualAppProvenance:factual?.appProvenance,registeredConsumerReview});
     candidateDigest = fingerprint(candidateDirectory).digest;
   }
   const review = reviewedUpgradeReport(plan);

@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
 import { execFileSync, spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import os from 'node:os';
@@ -7,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 import { fingerprint } from '../lib/workflow.mjs';
 import { applyMounts } from '../publishing/mounts.mjs';
-import { targetManifestForUpgrade, assertUpgradeSourceAdmission, personalizeRegisteredCandidate, assertFactualRefreshAdmission, assertFactualRefreshCandidate, assertFactualRefreshReplay, assertRegisteredPersonalizationPreservation } from './update-dealer-template.mjs';
+import { targetManifestForUpgrade, assertUpgradeSourceAdmission, personalizeRegisteredCandidate, assertFactualRefreshAdmission, assertFactualRefreshCandidate, assertFactualRefreshReplay, assertRegisteredPersonalizationPreservation, planReviewedRegisteredConsumerResolutions, deriveRegisteredConsumerTargets } from './update-dealer-template.mjs';
 import {planThreeWayUpgrade} from './three-way-upgrade.mjs';
 
 const wrapper = fileURLToPath(new URL('./update-dealer-template.mjs', import.meta.url));
@@ -390,4 +391,29 @@ test('registered personalization rejects overwritten custom consumers and preser
   const proof=assertRegisteredPersonalizationPreservation({before,after,newBases});assert.equal(proof.consumerHashes.length,1);assert.equal(proof.stage,'personalization-before-native-catalogs-and-branding');assert(before.get('modern/src/paid-customization.ts').equals(after.get('modern/src/paid-customization.ts')));
   const custom=new Map(before);custom.set(name,Buffer.from('export const name="template";\nexport const paidCustom = true;\n'));assert.throws(()=>assertRegisteredPersonalizationPreservation({before:custom,after,newBases}),/overwrite a custom consumer/);
   const removed=new Map(after);removed.delete(name);assert.throws(()=>assertRegisteredPersonalizationPreservation({before,after:removed,newBases}),/removed a preserved path/);assert.throws(()=>assertRegisteredPersonalizationPreservation({before,after}),/exact mounted target bases/);
+});
+
+function registeredConsumerFixture(){
+ const keys=['auto-best','modern','import','app','mobile','karento-best'],name='modern/src/dealer.ts',target=Buffer.from('export const name="template";\n'),custom=Buffer.from('export const name="old dealer";\n'),derived=Buffer.from('export const name="reviewed registered dealer";\n'),newBases=Object.fromEntries(keys.map(key=>[key,new Map()])),personalizedBases=Object.fromEntries(keys.map(key=>[key,new Map()]));newBases.modern.set('src/dealer.ts',target);personalizedBases.modern.set('src/dealer.ts',derived);
+ const before=new Map([[name,custom],['modern/src/paid.ts',Buffer.from('preserved paid behavior\n')]]),original=new Map(before),baseline={commit:'a'.repeat(40),tree:'b'.repeat(40)},targetSources=Object.fromEntries(keys.map(key=>[key,{repository:'darkapoparka/cars',revision:'c'.repeat(40),path:'templates/'+key,tree:'d'.repeat(40)}])),digest=bytes=>createHash('sha256').update(bytes).digest('hex'),review={schemaVersion:1,kind:'cars-registered-consumer-template-resolutions',reviewed:true,dealer:'retained',baseline,targetSources,paths:[{path:name,choice:'template',originalSha256:digest(custom),mergedSha256:digest(custom),targetSha256:digest(target),personalizedTargetSha256:digest(derived)}]};return{before,original,newBases,personalizedBases,review,dealer:'retained',baseline,targetSources,name,digest,target,derived};
+}
+
+test('registered reviewed clean choices preserve generic and no-resolution behavior',()=>{
+ const f=registeredConsumerFixture(),ordinary=planThreeWayUpgrade({oldBase:f.newBases.modern,newBase:f.newBases.modern,dealer:new Map([['src/dealer.ts',f.original.get(f.name)]]),resolutions:{'src/dealer.ts':'template'}});assert(ordinary.ready);assert(ordinary.candidate.get('src/dealer.ts').equals(f.original.get(f.name)));
+ const unchanged=planReviewedRegisteredConsumerResolutions({...f,review:null});assert.equal(unchanged.proof,null);assert(unchanged.candidate.get(f.name).equals(f.original.get(f.name)));assert.throws(()=>assertRegisteredPersonalizationPreservation({before:f.before,after:new Map([...f.before,[f.name,f.derived]]),newBases:f.newBases}),/overwrite a custom consumer/);
+ const planned=planReviewedRegisteredConsumerResolutions(f);assert(planned.candidate.get(f.name).equals(f.target));assert(planned.candidate.get('modern/src/paid.ts').equals(f.before.get('modern/src/paid.ts')));assert(f.before.get(f.name).equals(f.original.get(f.name)));assert.equal(planned.proof.paths[0].mergedSha256,f.review.paths[0].mergedSha256);assert.equal(planned.proof.stage,'preservation-merge-before-personalization');assertRegisteredPersonalizationPreservation({before:planned.candidate,after:new Map([...planned.candidate,[f.name,f.derived]]),newBases:f.newBases});
+});
+
+test('registered clean choices reject unreviewed, wrong identity/pins/hash and unknown adapter paths atomically',()=>{
+ for(const change of [r=>r.reviewed=false,r=>r.dealer='other',r=>r.baseline.tree='0'.repeat(40),r=>r.targetSources.mobile.revision='0'.repeat(40),r=>r.paths[0].choice='dealer',r=>r.paths[0].path='../escape',r=>r.paths[0].path='modern/src/paid.ts',r=>r.paths[0].path='modern/source.png',r=>r.paths[0].originalSha256=null,r=>r.paths[0].mergedSha256='0'.repeat(64),r=>r.paths[0].targetSha256='0'.repeat(64),r=>r.paths[0].personalizedTargetSha256='0'.repeat(64),r=>r.paths.push({...r.paths[0]})]){const f=registeredConsumerFixture(),review=structuredClone(f.review);change(review);assert.throws(()=>planReviewedRegisteredConsumerResolutions({...f,review}));assert(f.before.get(f.name).equals(f.original.get(f.name)));}
+ const f=registeredConsumerFixture(),unknown=new Map(f.personalizedBases.modern);unknown.set('src/dealer.ts',f.target);assert.throws(()=>planReviewedRegisteredConsumerResolutions({...f,personalizedBases:{...f.personalizedBases,modern:unknown}}),/Unknown or unchanged/);
+});
+
+test('registered clean choices prove real clean three-way auto merges before replacing one reviewed consumer',()=>{
+ const f=registeredConsumerFixture(),gap=Array.from({length:9},(_,i)=>'const spacer'+i+'='+i+';').join('\n')+'\n',old=Buffer.from('const name="base";\n'+gap+'const custom="base";\n'),fresh=Buffer.from('const name="target";\n'+gap+'const custom="base";\n'),dealer=Buffer.from('const name="base";\n'+gap+'const custom="retained";\n'),derived=Buffer.from('const name="registered";\n'+gap+'const custom="base";\n');
+ const merge=planThreeWayUpgrade({oldBase:new Map([['src/dealer.ts',old]]),newBase:new Map([['src/dealer.ts',fresh]]),dealer:new Map([['src/dealer.ts',dealer]]),resolutions:{'src/dealer.ts':'template'}});assert(merge.ready);assert.equal(merge.changes[0].kind,'auto-merged');const actual=merge.candidate.get('src/dealer.ts');assert(!actual.equals(fresh));f.before.set(f.name,actual);f.original.set(f.name,dealer);f.newBases.modern.set('src/dealer.ts',fresh);f.personalizedBases.modern.set('src/dealer.ts',derived);Object.assign(f.review.paths[0],{originalSha256:f.digest(dealer),mergedSha256:f.digest(actual),targetSha256:f.digest(fresh),personalizedTargetSha256:f.digest(derived)});const chosen=planReviewedRegisteredConsumerResolutions(f);assert(chosen.candidate.get(f.name).equals(fresh));assert(f.original.get(f.name).equals(dealer));assert(chosen.candidate.get('modern/src/paid.ts').equals(f.before.get('modern/src/paid.ts')));
+});
+
+test('registered target derivation cannot authenticate invented plans or arbitrary asset views',async()=>{
+ await assert.rejects(()=>deriveRegisteredConsumerTargets({registeredAdoption:{},assetView:'C:/arbitrary',newBases:{},manifest:{}}),/validated unmodified/);
 });
