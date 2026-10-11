@@ -1,19 +1,12 @@
 {
   "schemaVersion": 1,
-  "request": "shared-presentation-vercel-ten-02",
+  "request": "shared-presentation-vercel-ten-03",
   "sourceDonor": "ec9505086e465b37f185c65e02e1aa05c7f3e33a",
   "sourceIntegration": "ea861de6cd8e09fb5a6bce738fb66f4da672a8bc",
-  "triggerNote": "Small explicit request after the large source integration; no dealer or template source changes.",
+  "triggerNote": "Retain compact diagnostic artifacts; no dealer or template source changes.",
   "pilots": ["promosale-varna", "navara-car"],
   "scope": "Package all ten existing six-design dealers; compile two opposite-order pilots. Provider publication remains a separate explicit export/push and hosted verification step.",
-  "templateRevisions": {
-    "auto-best": "696230a404abd9b20b6f907b9cfb139175298c7a",
-    "modern": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
-    "import": "b9373e9ed5453bc7d208898ae140eae4d596a232",
-    "app": "4e184777567849a2c5b4a9e4a3e652252179c29c",
-    "mobile": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
-    "karento-best": "cc130e432a41a3a60cc80bc2b3461c6416893b4a"
-  },
+  "templateRevisions": {"auto-best":"696230a404abd9b20b6f907b9cfb139175298c7a","modern":"6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710","import":"b9373e9ed5453bc7d208898ae140eae4d596a232","app":"4e184777567849a2c5b4a9e4a3e652252179c29c","mobile":"8a97176e3adfbd95dce69b3096abc84e3eecd9c8","karento-best":"cc130e432a41a3a60cc80bc2b3461c6416893b4a"},
   "dealers": [
     {"slug":"navara-car","repository":"darkapoparka/cars-navaracar","projectId":"prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr","projectName":"cars-navaracar","publicOrigin":"https://cars-navaracar.vercel.app"},
     {"slug":"day-and-night-auto-group","repository":"darkapoparka/day-and-night-autodeal","projectId":"prj_enD9orrI6rwguMMtDlS0IP6RAXjr","projectName":"day-and-night-a","publicOrigin":"https://day-and-night-a.vercel.app"},
