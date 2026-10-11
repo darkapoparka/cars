@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {bindCurrentImportLogoAssets} from './client-presentation-policy.mjs';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 
@@ -163,7 +164,11 @@ export function applyDealerLogoContract({ key, oldVariant, candidate, profile })
       if (name === 'SiteHeader.svelte') edit(relative, text => text.replace("variant === 'home' ? daynightSite.logoLight : daynightSite.logoDark", 'daynightSite.logoDark'));
     }
   } else if (key === 'import') {
-    edit('src/lib/data/daynight.ts', text => scalar(scalar(text, 'logoLight', p.onDark), 'logoDark', p.onLight));
+    if (fs.existsSync(path.join(candidate, 'src/lib/config/dealer.ts'))) {
+      edit('src/lib/config/dealer.ts', text => bindCurrentImportLogoAssets(text, p));
+    } else {
+      edit('src/lib/data/daynight.ts', text => scalar(scalar(text, 'logoLight', p.onDark), 'logoDark', p.onLight));
+    }
   }
   return changed;
 }
