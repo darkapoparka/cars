@@ -7,9 +7,11 @@ declare global {
 			nativeSite?: boolean;
 		}
 		interface PageState {
+			__bcCompareDialog?: string;
 			__bcMobileSheet?: string;
 			__daynightHomeSearch?: string;
 			__daynightInventoryOverlay?: string;
+			__daynightInventorySearchChoice?: string;
 			__daynightWizard?: string;
 			daynightInventoryProgress?: { cardSetKey: string; count: number };
 			bcMobileSheet?: string;

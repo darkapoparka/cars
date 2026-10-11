@@ -1,6 +1,7 @@
 import { withCMS } from "@repo/cms/next-config";
 import { withToolbar } from "@repo/feature-flags/lib/toolbar";
 import { publicBasePath } from "@repo/internationalization/paths";
+import { publicImageRemotePatterns } from "@repo/marketplace/public-images";
 import { config } from "@repo/next-config";
 import { withLogging, withSentry } from "@repo/observability/next-config";
 import type { NextConfig } from "next";
@@ -21,6 +22,12 @@ let nextConfig: NextConfig = toolbarEnabled
 
 if (process.env.NODE_ENV !== "production") {
   nextConfig.allowedDevOrigins = ["127.0.0.1"];
+  // Local previews retain their warm compiler state in memory. Persisting it
+  // across restarts also fills the Windows temporary drive with large caches.
+  nextConfig.experimental = {
+    ...nextConfig.experimental,
+    turbopackFileSystemCacheForDev: false,
+  };
   // This app is reviewed as a client demo on mobile. The Next.js indicator
   // otherwise sits above the fixed dealership dock and intercepts Menu taps.
   // Compile and runtime errors still surface when the indicator is disabled.
@@ -36,9 +43,33 @@ if (publicE2E) {
   // Keep the provider-free browser gate isolated from the developer's normal
   // Next cache and from other concurrent browser gates.
   nextConfig.distDir = `.next-public-e2e-${publicE2ERunId}-${publicE2EMode}`;
+  // These isolated QA runs do not share a warm compiler cache. Keep their
+  // development and production compilations from persisting another copy.
+  nextConfig.experimental = {
+    ...nextConfig.experimental,
+    turbopackFileSystemCacheForDev: false,
+    turbopackFileSystemCacheForBuild: false,
+  };
+  const configureWebpack = nextConfig.webpack;
+  nextConfig.webpack = (webpackConfig, options) => {
+    const configured = configureWebpack
+      ? configureWebpack(webpackConfig, options)
+      : webpackConfig;
+    configured.cache = false;
+    return configured;
+  };
 }
 
 nextConfig.basePath = publicBasePath;
+
+if (process.platform === "win32") {
+  // Bound Windows encoder work and avoid libvips operation-cache stalls.
+  nextConfig.experimental = {
+    ...nextConfig.experimental,
+    imgOptConcurrency: 1,
+    imgOptOperationCache: false,
+  };
+}
 
 nextConfig.images = nextConfig.images ?? {};
 // Vercel's mounted multi-app service does not expose Next's image optimizer at
@@ -49,18 +80,7 @@ if (publicBasePath) {
 }
 nextConfig.images.remotePatterns = [
   ...(nextConfig.images.remotePatterns ?? []),
-  {
-    protocol: "https",
-    hostname: "assets.basehub.com",
-  },
-  {
-    protocol: "https",
-    hostname: "images.unsplash.com",
-  },
-  {
-    protocol: "https",
-    hostname: "*.public.blob.vercel-storage.com",
-  },
+  ...publicImageRemotePatterns,
 ];
 
 nextConfig.redirects = async () => [

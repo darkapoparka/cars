@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Varna",
     "addressLine": "Varna Business Park, Building B6",
     "address": "Varna Business Park, Building B6, Varna, Bulgaria",
-    "appointment": "Monday–Friday 09:00–18:00; Saturday 10:00–16:00; Sunday closed"
+    "appointment": "Monday–Friday 09:00–18:00; Saturday 10:00–16:00; Sunday closed",
+    "addressShort": "Varna Business Park, Building B6",
+    "appointmentShort": "Monday–Friday 09:00–18:00; Saturday 10:00–16:00; Sunday closed"
   },
   "bg": {
     "city": "Варна",
     "addressLine": "Бизнес парк Варна, сграда B6",
     "address": "Бизнес парк Варна, сграда B6, Варна, България",
-    "appointment": "Понеделник–петък 09:00–18:00; събота 10:00–16:00; неделя почивен ден"
+    "appointment": "Понеделник–петък 09:00–18:00; събота 10:00–16:00; неделя почивен ден",
+    "addressShort": "Бизнес парк Варна, сграда B6",
+    "appointmentShort": "Понеделник–петък 09:00–18:00; събота 10:00–16:00; неделя почивен ден"
   }
 } as const;
 

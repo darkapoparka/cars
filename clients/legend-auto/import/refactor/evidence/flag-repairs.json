@@ -1,0 +1,22 @@
+{
+	"checkedAt": "2026-09-19T11:03:17.532Z",
+	"reason": "Replaced three corrupt six-byte assets",
+	"license": "static/assets/daynight/flags/LICENSE.flag-icons.txt",
+	"files": [
+		{
+			"file": "cn.svg",
+			"source": "https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/cn.svg",
+			"sha256": "981da9bdf82d48e31691f20578cefcb26cf7d0bd95e4ebd5c0df00bdfe988c1a"
+		},
+		{
+			"file": "kr.svg",
+			"source": "https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/kr.svg",
+			"sha256": "7a6cd5b51d0e2841ed8b79b1147ad8a66cf3c09f6344d4a63b5e4413ffa5d15b"
+		},
+		{
+			"file": "us.svg",
+			"source": "https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/us.svg",
+			"sha256": "e7be4240cf57987926673708f09233be1ab6bdf35acc7b86bd32a263f197a2a7"
+		}
+	]
+}

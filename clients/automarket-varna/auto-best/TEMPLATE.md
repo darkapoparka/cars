@@ -3,7 +3,7 @@
 | Property | Value |
 | --- | --- |
 | Name / key | Auto Best / `auto-best` |
-| Project repository | `darkapoparka/cars-template-auto-best` |
+| Project repository | `darkapoparka/cars`, under `templates/auto-best` |
 | Application | One Svelte 5 / SvelteKit application |
 | Main entry | `/` |
 | Homepage variants | One retained homepage; legacy home URLs redirect to it |
@@ -21,13 +21,13 @@ These are code-level configuration modules. Native English/Bulgarian localizatio
 
 ## Defaults that matter when copying
 
-The template starts in preview/noindex mode. Sample team and partner sections are disabled. Vehicle records are sample data unless explicitly verified by the implementation. The brand name does not make the existing phone, map, social accounts, video selection or inventory generic.
+The template starts in preview/noindex mode. About Us shows a clearly marked demo team on desktop; sample partners remain disabled. Published mode requires sample sections to be disabled. Vehicle records are sample data unless explicitly verified by the implementation. The brand name does not make the existing phone, map, social accounts, video selection or inventory generic.
 
 A client copy retains the application structure and changes its content and relevant imagery. A template version should be identified by its actual source commit, not an old date embedded in an inherited manifest. Historical `.template` records describe acquisition/copy operations rather than an application release service.
 
 ## Source and working preview
 
-The standalone repository owns future shared improvements. The earlier Cars preview at J:/cars/templates/auto-best contains separately preserved refinements; compare and reconcile them before promoting a release. A listener or documentation update does not synchronize either copy. See [Cars integration](docs/CARS-INTEGRATION.md).
+The authoritative reusable master is `templates/auto-best` in `darkapoparka/cars`, edited in the saved Cars checkout on `main`. Former standalone/J: checkouts are recovery history, not editable masters. Shared source changes do not promote a release or update dealer copies; follow [Cars template promotion](../../docs/TEMPLATE-PROMOTION.md) for that separate operation.
 
 ## Reference
 

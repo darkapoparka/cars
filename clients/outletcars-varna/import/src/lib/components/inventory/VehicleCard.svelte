@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { vehicleImageDelivery } from '$lib/utils/vehicle-images';
 	import { imageFallback } from '$lib/browser/image-fallback';
+	import { vehicleCardCopy } from '$lib/content/vehicle-card';
 	import Heart from '@lucide/svelte/icons/heart';
 	import ArrowLeftRight from '@lucide/svelte/icons/arrow-left-right';
 	import { getGarageContext } from '$lib/state/garage.svelte';
@@ -13,6 +14,7 @@
 		english = false
 	}: { card: AuxeroInventoryVehicleCard; priority?: boolean; english?: boolean } = $props();
 	const garage = getGarageContext();
+	const copy = $derived(vehicleCardCopy[english ? 'en' : 'bg']);
 	const deliveryImage = $derived(vehicleImageDelivery(card.image));
 	const href = $derived(
 		'/inventory/' + encodeURIComponent(card.slug) + (english ? '?lang=en' : '')
@@ -20,7 +22,10 @@
 </script>
 
 <article class="site-vehicle-card">
-	<div class="site-vehicle-card__media">
+	<div
+		class="site-vehicle-card__media"
+		class:site-vehicle-card__media--cutout={card.imagePresentation === 'cutout'}
+	>
 		<a href={linkHref(href)} aria-label={card.title}
 			><img
 				use:imageFallback
@@ -39,7 +44,7 @@
 		<button
 			class="site-vehicle-card__favorite"
 			type="button"
-			aria-label={(english ? 'Save ' : 'Запази ') + card.title}
+			aria-label={copy.save + card.title}
 			aria-pressed={garage.isFavorite(card.slug)}
 			onclick={() => garage.toggleFavorite(card.slug)}
 			><Heart
@@ -51,24 +56,26 @@
 	</div>
 	<div class="site-vehicle-card__body">
 		<h2><a href={linkHref(href)} title={card.title}>{card.title}</a></h2>
-		<ul aria-label={english ? 'Specifications' : 'Характеристики'}>
-			<li>{card.year}</li>
-			<li>{card.fuel}</li>
-			<li>{card.transmission}</li>
-		</ul>
+		<div class="site-vehicle-card__metadata">
+			<ul aria-label={copy.specifications}>
+				<li>{card.year}</li>
+				<li title={card.fuel}>{card.fuel}</li>
+				<li title={card.transmission}>{card.transmission}</li>
+				<li class="site-vehicle-card__desktop-mileage">{card.mileageLabel}</li>
+			</ul>
+		</div>
 		<div class="site-vehicle-card__price">
 			<strong>{card.priceLabel}</strong>{#if card.monthlyLabel}<a
 					href={linkHref(
 						'/financing?vehicle=' + encodeURIComponent(card.slug) + (english ? '&lang=en' : '')
 					)}
-					aria-label={(english ? 'Illustrative financing: ' : 'Ориентировъчно финансиране: ') +
-						card.monthlyLabel}>{card.monthlyLabel}</a
+					aria-label={copy.financing + card.monthlyLabel}>{card.monthlyLabel}</a
 				>{/if}
 		</div>
 		<div class="site-vehicle-card__actions">
-			<Action {href}>{english ? 'View details' : 'Виж детайли'}</Action><button
+			<Action {href}>{copy.details}</Action><button
 				type="button"
-				aria-label={(english ? 'Compare ' : 'Сравни ') + card.title}
+				aria-label={copy.compare + card.title}
 				aria-pressed={garage.isCompared(card.slug)}
 				onclick={() => garage.toggleCompare(card.slug)}
 				><ArrowLeftRight size={19} aria-hidden="true" /></button
@@ -146,6 +153,12 @@
 		gap: var(--bc-space-3);
 		min-width: 0;
 	}
+	.site-vehicle-card__metadata {
+		display: contents;
+	}
+	.site-vehicle-card__desktop-mileage {
+		display: none;
+	}
 	h2 {
 		margin: 0;
 		font-family: var(--bc-font-heading);
@@ -221,36 +234,105 @@
 	}
 	@media (min-width: 768px) {
 		.site-vehicle-card {
+			border-radius: var(--bc-desktop-card-radius);
+			box-shadow: var(--bc-editorial-shadow);
+		}
+		.site-vehicle-card:hover,
+		.site-vehicle-card:focus-within {
+			border-color: var(--bc-border);
+			box-shadow: var(--bc-editorial-shadow);
+		}
+		h2 {
+			font-family: var(--bc-font-body);
+			font-size: var(--bc-desktop-card-title);
+			line-height: 1.4;
+		}
+		h2 a {
+			display: block;
+			min-height: 2.8em;
+			overflow: visible;
+			white-space: normal;
+			text-overflow: clip;
+			overflow-wrap: anywhere;
+			text-wrap: pretty;
+		}
+		.site-vehicle-card__body {
+			gap: var(--bc-space-2);
+		}
+		.site-vehicle-card__mileage {
+			display: none;
+		}
+		.site-vehicle-card__metadata {
+			display: block;
+		}
+		.site-vehicle-card__desktop-mileage {
+			display: block;
+			color: var(--bc-copy);
+			font-size: var(--bc-text-meta);
+			line-height: var(--bc-leading-meta);
+			font-variant-numeric: tabular-nums;
+			white-space: nowrap;
+			text-align: right;
+		}
+		.site-vehicle-card__price {
+			margin-top: auto;
+			padding-top: var(--bc-space-1);
+		}
+		ul {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: var(--bc-space-1) var(--bc-space-2);
+		}
+		li {
+			min-width: 0;
+			overflow: visible;
+			padding: 0;
+			background: transparent;
+			text-overflow: clip;
+			white-space: normal;
+			overflow-wrap: anywhere;
+		}
+		li:nth-child(2) {
+			text-align: right;
+		}
+		strong {
+			font-family: var(--bc-font-body);
+			font-size: var(--bc-desktop-card-price);
+			letter-spacing: var(--bc-tracking-tight);
+		}
+		.site-vehicle-card__media {
+			aspect-ratio: 1.6;
+			margin: var(--bc-space-2) var(--bc-space-2) 0;
+			border-radius: var(--bc-desktop-media-radius);
+			overflow: hidden;
+		}
+		.site-vehicle-card__media--cutout img {
+			object-fit: contain;
+			padding: var(--bc-space-3);
+		}
+		.site-vehicle-card {
 			container-type: inline-size;
 			container-name: vehicle-card;
 		}
 		.site-vehicle-card__actions :global(.site-action) {
 			min-width: 0;
-			min-height: var(--bc-control-height-secondary);
+			min-height: var(--bc-control-height-standard);
 			padding-inline: var(--bc-space-3);
 			border-radius: var(--bc-radius-md);
 			font-size: var(--bc-text-control);
 		}
 		.site-vehicle-card__actions > button {
-			flex: 0 0 var(--bc-control-height-secondary);
-			width: var(--bc-control-height-secondary);
+			flex: 0 0 var(--bc-control-height-standard);
+			width: var(--bc-control-height-standard);
 			border-radius: var(--bc-radius-md);
 			color: var(--bc-copy);
 		}
 		.site-vehicle-card__actions > button:hover {
-			background: var(--bc-bg-strong);
+			background: var(--bc-control-hover);
 		}
 		@container vehicle-card (max-width: 280px) {
 			.site-vehicle-card__body {
 				padding: var(--bc-space-3);
-			}
-			.site-vehicle-card__actions :global(.site-action) {
-				min-height: var(--bc-control-height-compact);
-				font-size: var(--bc-text-label);
-			}
-			.site-vehicle-card__actions > button {
-				flex-basis: var(--bc-control-height-compact);
-				width: var(--bc-control-height-compact);
 			}
 		}
 	}

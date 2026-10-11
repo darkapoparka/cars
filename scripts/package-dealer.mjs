@@ -236,6 +236,20 @@ async function prepare({ source, manifest, sourceCommit, guidance, canonicalFile
     assertAppVariant(files, manifest);
     if (manifest.packaging.version === SIX_PACKAGING_VERSION) {
       assertExtendedVariantSources(files, manifest);
+      // Shared presentation is independent of the selected hosting provider.
+      // Opt-in keeps historical releases and separately owned branding policies intact.
+      if (manifest.presentation !== undefined) {
+        const {applyDealerPresentation, DEALER_PRESENTATION_VERSION} = await import('./publishing/dealer-presentation.mjs');
+        const {applyOptionalContactFallback} = await import('./publishing/dealer-contact-fallback.mjs');
+        if (manifest.presentation.version !== DEALER_PRESENTATION_VERSION) throw new Error('Unknown dealer presentation version');
+        const contact = applyOptionalContactFallback(files, manifest);
+        applyDealerPresentation(files, manifest);
+        const {bindModernMobileWordmarkLogo} = await import('./lib/client-logo-contract.mjs');
+        const logoConsumer = 'modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx';
+        if (!files.has(logoConsumer)) throw new Error('Missing Modern mobile logo consumer');
+        files.set(logoConsumer, Buffer.from(bindModernMobileWordmarkLogo(files.get(logoConsumer).toString('utf8'))));
+        files.set('.cars-dealer-contact-fallback.json', Buffer.from(json(contact)));
+      }
       files = applySixVariantMounts(files, manifest, { provider });
       const {applyDealerShare} = await import('./publishing/dealer-share.mjs');
       await applyDealerShare(files, manifest);

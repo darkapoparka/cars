@@ -1,9 +1,11 @@
 export type SiteAssetPath = `/${string}`;
+export type HomeBannerVariant = 'motorsport' | 'kerb' | 'circuit' | 'headlights' | 'taillights';
 
 type RouteHeroAsset = 'cars' | 'keys' | 'guide' | 'silver' | 'graphite' | 'portrait' | 'phone' | 'showroom' | 'email';
 type RouteHeroVariant = 'cars' | 'keys' | 'guide' | 'about' | 'contact' | 'sell';
 type VehicleArtworkKey = 'silver' | 'graphite' | 'gclass' | 'urus' | 'golf' | 'a45' | 'porsche' | 'amggt' | 'm5' | 'e63' | 'm4' | 'rs5';
 type HeroVehiclePair = 'home' | 'inventory' | 'about' | 'blog' | 'contact';
+type DesktopHeroArtwork = { kind: 'image'; src: SiteAssetPath } | { kind: 'vehicles'; pair: HeroVehiclePair };
 
 type LeadSiteConfig = {
   theme: {
@@ -30,13 +32,22 @@ type LeadSiteConfig = {
   };
   artwork: {
     responsiveImages: Partial<Record<SiteAssetPath, readonly { src: SiteAssetPath; width: number }[]>>;
-    desktopHeroScenes: Record<'home' | 'inventory' | 'about' | 'contact', SiteAssetPath>;
-    contactHero: { desktop: SiteAssetPath; sellMobile: SiteAssetPath; importMobile: SiteAssetPath; support: SiteAssetPath };
+    desktopHeroScenes: Record<HeroVehiclePair, DesktopHeroArtwork>;
+    contactHero: { desktop: SiteAssetPath; generalMobile: SiteAssetPath; sellMobile: SiteAssetPath; importMobile: SiteAssetPath; support: SiteAssetPath };
     serviceBanners: { sell: SiteAssetPath; import: SiteAssetPath };
+    serviceBackground: SiteAssetPath;
     homeActionScenes: { sell: SiteAssetPath; import: SiteAssetPath; finance: SiteAssetPath };
+    desktopActionScenes: { import: SiteAssetPath; finance: SiteAssetPath };
+    desktopServiceCards: Record<'inspection' | 'import' | 'leasing' | 'trade-in', SiteAssetPath>;
+    serviceIllustrations: Record<'collection' | 'showroom' | 'sell' | 'import' | 'finance' | 'car' | 'overview', SiteAssetPath>;
     blogHero: SiteAssetPath;
     editorialBanner: SiteAssetPath;
     sectionBanners: { graphite: SiteAssetPath; crimson: SiteAssetPath };
+    discoveryBackground: SiteAssetPath;
+    homeSectionBanner: { variant: HomeBannerVariant; mobile: 'featured' | 'none' };
+    homeSectionBannerAssets: Record<HomeBannerVariant, SiteAssetPath>;
+    homeSectionBannerMobileAssets: Record<HomeBannerVariant, SiteAssetPath>;
+    homeCircuitOutline: SiteAssetPath;
     home: { collection: SiteAssetPath; sell: SiteAssetPath; sellCompact: SiteAssetPath; import: SiteAssetPath };
     routeHero: {
       standard: Record<RouteHeroAsset, SiteAssetPath>;
@@ -54,6 +65,19 @@ type LeadSiteConfig = {
 const collection = '/assets/images/lead/day-night-collection-banner-v2.webp' as const;
 const mobileSell = '/assets/images/template/service-sell-front-v3.webp' as const;
 const mobileImport = '/assets/images/template/service-import-front-v3.webp' as const;
+const mobileContact = '/assets/images/template/contact-showroom-banner-v1.webp' as const;
+const mobileGuides = '/assets/images/template/blog-advice-banner-v1.webp' as const;
+
+// One approved silver family feeds Home, About, menus and service journeys.
+const serviceIllustrations = {
+  collection: '/assets/images/template/home-collection-silver-v1.webp',
+  showroom: '/assets/images/template/desktop-service-inspection-v2.webp',
+  sell: '/assets/images/template/service-valuation-silver-v2.webp',
+  import: '/assets/images/template/desktop-service-import-v2.webp',
+  finance: '/assets/images/template/service-leasing-silver-v3.webp',
+  car: '/assets/images/template/service-car-silver-v2.webp',
+  overview: '/assets/images/template/home-services-silver-v1.webp'
+} as const satisfies LeadSiteConfig['artwork']['serviceIllustrations'];
 
 const vehicleCutouts = {
   silver: '/assets/images/lead/day-night-cutout-silver-v1.webp?v=profile-1',
@@ -109,6 +133,14 @@ export const leadSite = {
         { src: '/assets/images/template/service-import-front-v3-480.webp', width: 480 },
         { src: mobileImport, width: 1200 }
       ],
+      [mobileContact]: [
+        { src: '/assets/images/template/contact-showroom-banner-v1-480.webp', width: 480 },
+        { src: mobileContact, width: 960 }
+      ],
+      [mobileGuides]: [
+        { src: '/assets/images/template/blog-advice-banner-v1-480.webp', width: 480 },
+        { src: mobileGuides, width: 960 }
+      ],
       '/assets/images/lead/day-night-stock-01.webp': [
         { src: '/assets/images/lead/day-night-stock-01-640.webp', width: 640 },
         { src: '/assets/images/lead/day-night-stock-01-960.webp', width: 960 },
@@ -148,37 +180,69 @@ export const leadSite = {
       ]
     },
     desktopHeroScenes: {
-      home: '/assets/images/lead/auto-best-desktop-home-v1.webp',
-      inventory: '/assets/images/lead/auto-best-desktop-inventory-v1.webp',
-      about: '/assets/images/lead/auto-best-desktop-about-v1.webp',
-      contact: '/assets/images/lead/auto-best-desktop-contact-v1.webp'
+      home: { kind: 'vehicles', pair: 'home' },
+      inventory: { kind: 'vehicles', pair: 'inventory' },
+      about: { kind: 'image', src: '/assets/images/template/company-about-studio-v4.webp' },
+      blog: { kind: 'vehicles', pair: 'blog' },
+      contact: { kind: 'image', src: '/assets/images/template/company-contact-studio-v4.webp' }
     },
     contactHero: {
       desktop: '/assets/images/lead/day-night-contact-hero-v2.webp',
-      sellMobile: '/assets/images/lead/day-night-sell-banner-v1.webp',
-      importMobile: '/assets/images/lead/day-night-import-banner-v1.webp',
+      generalMobile: mobileContact,
+      sellMobile: serviceIllustrations.sell,
+      importMobile: serviceIllustrations.import,
       support: '/assets/images/lead/day-night-contact-phone-red-v1.webp'
     },
     serviceBanners: {
-      sell: '/assets/images/template/service-sell-banner-v1.webp',
-      import: '/assets/images/template/service-import-banner-v1.webp'
+      sell: serviceIllustrations.sell,
+      import: serviceIllustrations.import
     },
+    serviceBackground: '/assets/images/template/home-section-body-backdrop-v1.webp',
     homeActionScenes: {
-      sell: mobileSell,
-      import: mobileImport,
-      finance: '/assets/images/template/home-action-finance-v3.webp'
+      sell: serviceIllustrations.sell,
+      import: serviceIllustrations.import,
+      finance: serviceIllustrations.finance
     },
-    blogHero: '/assets/images/lead/day-night-blog-hero-v2.webp',
+    desktopActionScenes: {
+      import: serviceIllustrations.import,
+      finance: serviceIllustrations.finance
+    },
+    desktopServiceCards: {
+      inspection: serviceIllustrations.showroom,
+      import: serviceIllustrations.import,
+      leasing: serviceIllustrations.finance,
+      'trade-in': serviceIllustrations.sell
+    },
+    serviceIllustrations,
+    blogHero: mobileGuides,
     editorialBanner: '/assets/images/lead/day-night-editorial-banner-v2.webp',
     sectionBanners: {
       graphite: '/assets/images/lead/auto-best-banner-graphite-v1.png',
       crimson: '/assets/images/lead/auto-best-banner-crimson-v1.png'
     },
+    discoveryBackground: '/assets/images/template/home-section-shared-backdrop-v1.webp',
+    // Standard for Auto Best lead/client builds; briefs can select another retained style.
+    homeSectionBanner: { variant: 'circuit', mobile: 'featured' },
+    homeSectionBannerAssets: {
+      motorsport: '/assets/images/template/home-section-matte-graphite-comparison-v1.webp',
+      kerb: '/assets/images/template/home-section-kerb-photographic-v5.webp',
+      circuit: '/assets/images/template/home-section-circuit-asphalt-v3.webp',
+      headlights: '/assets/images/template/home-section-headlights-v1.webp',
+      taillights: '/assets/images/template/home-section-taillights-v1.webp'
+    },
+    homeSectionBannerMobileAssets: {
+      motorsport: '/assets/images/template/home-section-matte-graphite-comparison-v1.webp',
+      kerb: '/assets/images/template/home-section-kerb-photographic-v5-960.webp',
+      circuit: '/assets/images/template/home-section-circuit-asphalt-v3-960.webp',
+      headlights: '/assets/images/template/home-section-headlights-v1.webp',
+      taillights: '/assets/images/template/home-section-taillights-v1.webp'
+    },
+    homeCircuitOutline: '/assets/images/template/home-section-nordschleife-outline-v2.svg',
     home: {
-      collection,
-      sell: mobileSell,
-      sellCompact: mobileSell,
-      import: mobileImport
+      collection: serviceIllustrations.collection,
+      sell: serviceIllustrations.sell,
+      sellCompact: serviceIllustrations.sell,
+      import: serviceIllustrations.import
     },
     routeHero: {
       standard: {
@@ -213,8 +277,8 @@ export const leadSite = {
     },
     vehicleCutouts,
     heroVehiclePairs: {
-      home: ['gclass', 'urus'],
-      inventory: ['golf', 'a45'],
+      home: ['urus', 'urus'],
+      inventory: ['gclass', 'gclass'],
       about: ['porsche', 'amggt'],
       blog: ['m5', 'e63'],
       contact: ['m4', 'rs5']

@@ -1,0 +1,6 @@
+{
+	"tool": "Built-in image_gen",
+	"reason": "Restore breathing room and complete front bumper; first result touched the right canvas edge.",
+	"prompt": "Use case: precise-object-edit. Input image 1 is the edit target: preserve this exact graphite-black sedan, its design, black and silver materials, clean lighting and front-left three-quarter direction. Correct the framing only. Re-render the complete vehicle with the entire front bumper, front tip and rear body fully visible. It must be SMALLER: the whole car occupies only 75% of the square canvas width, centered, with at least 12% completely transparent empty margin on LEFT AND RIGHT. Never touch a canvas edge, never crop the front. Keep the car crisp and premium with sharp realistic headlights, black smoked glass and silver wheels. Use genuine transparent alpha everywhere outside the vehicle. No background, writing, logos, labels or extra objects.",
+	"selected": "C:/Users/radev/.codex/generated_images/01a10434-ddd7-7361-ae8e-48bd3e8da469/exec-66017723-ca30-4b4d-adbe-01f3f4fd099e.png"
+}

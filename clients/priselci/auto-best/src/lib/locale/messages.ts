@@ -1,6 +1,7 @@
 import { dealerLocalizedText } from './config';
 import { en, bg, sourceKeys, ambiguousAliases } from './catalog';
-import { localeContract, intlLocale, type Locale } from './core';
+import { localeContract, type Locale } from './core';
+import { localeFormatters } from './formatters';
 export type MessageKey = keyof typeof en;
 export type MessageParameters = Record<string, string | number>;
 
@@ -8,6 +9,8 @@ export type MessageParameters = Record<string, string | number>;
 export function message(locale: Locale, key: MessageKey, parameters: MessageParameters = {}): string {
   const pattern: string = (locale === 'bg' ? bg : en)[key];
   if (typeof pattern !== 'string') throw new Error(`Missing ${locale} message: ${key}`);
+  // Most labels have no interpolation; avoid allocating dealer values for each render.
+  if (!pattern.includes('{')) return pattern;
   const values: MessageParameters = {
     dealerName: localeContract.dealerName,
     dealerCity: dealerLabel(locale, 'city'),
@@ -32,15 +35,17 @@ export function templateText<T>(locale: Locale, value: T): T {
 }
 
 export function vehicleCount(locale: Locale, count: number): string {
-  const category = new Intl.PluralRules(intlLocale(locale)).select(count);
+  const formatters = localeFormatters(locale);
+  const category = formatters.plural.select(count);
   return message(locale, category === 'one' ? 'inventory.count.one' : 'inventory.count.other', {
-    count: new Intl.NumberFormat(intlLocale(locale)).format(count)
+    count: formatters.number.format(count)
   });
 }
 
 export type DealerTextField = keyof typeof dealerLocalizedText.en;
-export function dealerLabel(locale: Locale, field: DealerTextField): string {
-  const value = dealerLocalizedText[locale][field];
+export function dealerLabel(locale: Locale, field: DealerTextField, compact = false): string {
+  const labels = dealerLocalizedText[locale] as Record<string, string>;
+  const value = compact ? labels[`${field}Short`] ?? labels[field] : labels[field];
   if (typeof value !== 'string' || !value.trim()) throw new Error(`Dealer field ${field} requires reviewed EN/BG dealer-owned copy`);
   return value;
 }

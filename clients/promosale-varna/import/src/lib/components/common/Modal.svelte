@@ -5,6 +5,8 @@
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
 	import type { Snippet } from 'svelte';
 	import MobileIconAction from './MobileIconAction.svelte';
+	import { siteShellCopy } from '$lib/content/site-shell';
+	const copy = $derived(siteShellCopy[page.data.locale === 'en' ? 'en' : 'bg']);
 	let {
 		open = $bindable(false),
 		title,
@@ -17,6 +19,7 @@
 		onBack,
 		backLabel,
 		onOpenAutoFocus,
+		onCloseAutoFocus,
 		onEscapeKeydown,
 		headerContent,
 		headerActions,
@@ -33,18 +36,30 @@
 		onBack?: () => void;
 		backLabel?: string;
 		onOpenAutoFocus?: (event: Event) => void;
+		onCloseAutoFocus?: (event: Event) => void;
 		onEscapeKeydown?: (event: KeyboardEvent) => void;
 		headerContent?: Snippet;
 		headerActions?: Snippet;
 		class?: string;
 	} = $props();
+	let contentElement = $state<HTMLElement | null>(null);
+	function focusOnOpen(event: Event) {
+		if (onOpenAutoFocus) onOpenAutoFocus(event);
+		else {
+			event.preventDefault();
+			contentElement?.focus({ preventScroll: true });
+		}
+	}
 </script>
 
 <Dialog.Root bind:open>
 	<Dialog.Portal>
 		<Dialog.Overlay class="site-dialog-backdrop" />
 		<Dialog.Content
-			{onOpenAutoFocus}
+			bind:ref={contentElement}
+			tabindex={-1}
+			onOpenAutoFocus={focusOnOpen}
+			{onCloseAutoFocus}
 			{onEscapeKeydown}
 			class={[
 				'site-dialog',
@@ -58,7 +73,7 @@
 				{#if onBack}<button
 						type="button"
 						class="site-dialog__icon"
-						aria-label={backLabel ?? (page.data.locale === 'en' ? 'Back' : 'Назад')}
+						aria-label={backLabel ?? copy.back}
 						onclick={onBack}><ArrowLeft size={20} aria-hidden="true" /></button
 					>{/if}
 				<div class="site-dialog__heading">
@@ -69,14 +84,11 @@
 				</div>
 				{#if headerActions}{@render headerActions()}{/if}
 				{#if variant === 'filter'}
-					<Dialog.Close
-						class="site-dialog__icon"
-						aria-label={page.data.locale === 'en' ? 'Close' : 'Затвори'}
+					<Dialog.Close class="site-dialog__icon" aria-label={copy.close}
 						><X size={20} aria-hidden="true" /></Dialog.Close
 					>
-				{:else}<MobileIconAction
-						label={page.data.locale === 'en' ? 'Close' : 'Затвори'}
-						onclick={() => (open = false)}><X size={20} aria-hidden="true" /></MobileIconAction
+				{:else}<MobileIconAction label={copy.close} onclick={() => (open = false)}
+						><X size={20} aria-hidden="true" /></MobileIconAction
 					>
 				{/if}
 			</header>
@@ -92,7 +104,7 @@
 		position: fixed;
 		inset: 0;
 		z-index: calc(var(--bc-z-overlay) + var(--bits-dialog-depth, 0) * 2);
-		background: rgb(9 10 11 / 0.48);
+		background: var(--bc-backdrop);
 	}
 	:global(.site-dialog) {
 		position: fixed;
@@ -184,6 +196,16 @@
 		flex-shrink: 0;
 		min-width: 0;
 	}
+	@media (min-width: 768px) {
+		:global(.site-dialog) {
+			border-radius: var(--bc-editorial-radius);
+		}
+		:global(.site-dialog__title) {
+			font-family: var(--bc-font-body);
+			font-size: var(--bc-desktop-card-heading);
+			line-height: var(--bc-leading-h4);
+		}
+	}
 	/* Filter dialogs own their shell here; consumers only arrange their content. */
 	:global(.site-dialog--filter) {
 		padding: 0;
@@ -203,11 +225,9 @@
 	}
 	:global(.site-dialog--filter) .site-dialog__footer {
 		padding: var(--bc-space-5) var(--bc-space-6) var(--bc-space-6);
-	}
-	:global(.site-dialog--filter) .site-dialog__footer :global(.site-action) {
-		font-size: var(--bc-text-control);
-		border-radius: var(--bc-radius-md);
-		min-height: var(--bc-control-height-standard);
+		--action-text: var(--bc-text-control);
+		--action-radius: var(--bc-radius-md);
+		--action-height: var(--bc-control-height-standard);
 	}
 	:global(.site-dialog--filter) .site-dialog__footer :global(.primary) {
 		padding-inline: var(--bc-space-8);
@@ -229,9 +249,18 @@
 		color: var(--bc-ink);
 	}
 	@media (min-width: 768px) {
-		:global(.site-dialog__title) {
-			font-family: var(--bc-font-body);
-			line-height: var(--bc-leading-h4);
+		.site-dialog__footer,
+		:global(.site-dialog--filter) .site-dialog__footer {
+			--action-height: var(--bc-control-height-primary);
+			--action-text: var(--bc-text-control);
+			--action-radius: var(--bc-radius-md);
+		}
+		:global(.site-dialog__icon) {
+			width: var(--bc-control-height-primary);
+			height: var(--bc-control-height-primary);
+		}
+		:global(.site-dialog__icon:hover) {
+			background: var(--bc-control-hover);
 		}
 		:global(.site-dialog:not(.site-dialog--filter):not(.site-dialog--muted)) {
 			padding: 0;
@@ -248,12 +277,13 @@
 			padding: var(--bc-space-4) var(--bc-space-6) var(--bc-space-6);
 		}
 		.site-dialog__header :global(.bc-mobile-icon-action) {
+			--bc-mobile-icon-action-hit-size: var(--bc-control-height-primary);
 			--bc-mobile-icon-surface: transparent;
 			--bc-mobile-icon-border: none;
 			border-radius: var(--bc-radius-md);
 		}
 		.site-dialog__header :global(.bc-mobile-icon-action:hover) {
-			background: var(--bc-surface);
+			background: var(--bc-control-hover);
 		}
 		:global(.filter-picker-dialog) {
 			padding: var(--bc-space-6);
@@ -272,8 +302,6 @@
 		}
 		:global(.filter-picker-dialog) .site-dialog__footer :global(.site-action) {
 			min-width: 96px;
-			font-size: var(--bc-text-control);
-			border-radius: var(--bc-radius-md);
 		}
 	}
 </style>

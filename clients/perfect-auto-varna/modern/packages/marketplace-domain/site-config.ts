@@ -35,19 +35,86 @@ export const publicServicesSchema = z.object({
 });
 export type PublicService = keyof z.infer<typeof publicServicesSchema>;
 
+const publicDesktopVehicleArtworkSchema = z
+  .object({
+    src: publicAssetPathSchema,
+    width: z.number().int().positive().max(10_000),
+    height: z.number().int().positive().max(10_000),
+    baseline: z.number().int().positive(),
+    mirrored: z.boolean().optional(),
+  })
+  .refine((vehicle) => vehicle.baseline <= vehicle.height, {
+    message: "The vehicle baseline must be inside its image",
+    path: ["baseline"],
+  });
+
+const publicDesktopVehiclePairArtworkSchema = z.object({
+  left: publicDesktopVehicleArtworkSchema,
+  right: publicDesktopVehicleArtworkSchema,
+});
+
 export const publicArtworkSchema = z.object({
   heroScene: publicAssetPathSchema.optional(),
+  desktopHeroScene: publicAssetPathSchema.optional(),
+  desktopPageHeroes: z
+    .object({
+      services: publicAssetPathSchema.optional(),
+      about: publicAssetPathSchema.optional(),
+      contact: publicAssetPathSchema.optional(),
+    })
+    .optional(),
+  desktopDiscoveryVehicles: publicDesktopVehiclePairArtworkSchema.optional(),
+  desktopInventoryVehicles: publicDesktopVehiclePairArtworkSchema.optional(),
+  desktopPageVehicles: z
+    .object({
+      guides: publicDesktopVehiclePairArtworkSchema.optional(),
+      services: publicDesktopVehiclePairArtworkSchema.optional(),
+    })
+    .optional(),
+  desktopPageBanner: z
+    .object({ left: publicAssetPathSchema, right: publicAssetPathSchema })
+    .optional(),
   heroLeft: publicAssetPathSchema,
   heroRight: publicAssetPathSchema,
   contactHero: publicAssetPathSchema,
   sellHero: publicAssetPathSchema,
   importHero: publicAssetPathSchema,
   financeHero: publicAssetPathSchema,
+  desktopFinanceHero: publicAssetPathSchema.optional(),
+  desktopVisitBanner: publicAssetPathSchema.optional(),
+  desktopServices: z
+    .object({
+      browse: publicAssetPathSchema,
+      sell: publicAssetPathSchema,
+      finance: publicAssetPathSchema,
+      imports: publicAssetPathSchema,
+    })
+    .optional(),
+  desktopServiceCards: z
+    .object({
+      browse: publicAssetPathSchema,
+      sell: publicAssetPathSchema,
+      finance: publicAssetPathSchema,
+      imports: publicAssetPathSchema,
+    })
+    .optional(),
+  aboutBenefits: z
+    .object({
+      choice: publicAssetPathSchema,
+      details: publicAssetPathSchema,
+      budget: publicAssetPathSchema,
+      viewing: publicAssetPathSchema,
+    })
+    .optional(),
   financePromotion: publicAssetPathSchema,
   bodyTypes: z.record(z.string(), publicAssetPathSchema),
   brands: z.record(z.string(), publicAssetPathSchema),
 });
 export type PublicSiteArtwork = z.infer<typeof publicArtworkSchema>;
+export const publicInventoryFilterLayoutSchema = z.enum(["quick", "sidebar"]);
+export type PublicInventoryFilterLayout = z.infer<
+  typeof publicInventoryFilterLayoutSchema
+>;
 
 export const publicSiteSchema = z
   .object({
@@ -60,6 +127,17 @@ export const publicSiteSchema = z
       logo: publicAssetPathSchema,
       inverseLogo: publicAssetPathSchema,
       icon: publicAssetPathSchema,
+      desktopPreview: z
+        .object({
+          name: z.string().trim().min(1).max(120),
+          shortName: z.string().trim().min(1).max(60),
+          logo: publicAssetPathSchema.optional(),
+          tagline: z.object({
+            bg: z.string().trim().max(300),
+            en: z.string().trim().max(300),
+          }),
+        })
+        .optional(),
     }),
     contact: z.object({
       address: z.string().trim().min(1).max(300),
@@ -97,6 +175,9 @@ export const publicSiteSchema = z
     }),
     services: publicServicesSchema,
     categories: z.array(publicVehicleCategorySchema).min(1).max(4),
+    inventory: z
+      .object({ desktopFilterLayout: publicInventoryFilterLayoutSchema })
+      .optional(),
     theme: z.object({
       accent: brandColorSchema,
       colorMode: z.literal("light"),
@@ -158,6 +239,11 @@ export const isPublicSitePathEnabled = (
   const route = first === "bg" || first === "en" ? segments[1] : first;
   if (!route) {
     return site.services.buy;
+  }
+  if (route === "services") {
+    return ["buy", "sell", "imports", "lease"].some(
+      (service) => site.services[service as PublicService]
+    );
   }
   const service = serviceRoutes[route];
   if (service && !site.services[service]) {

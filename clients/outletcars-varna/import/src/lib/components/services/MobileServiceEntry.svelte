@@ -98,7 +98,7 @@
 		{/if}
 		<div class="mobile-service-entry__vehicles">
 			{#each serviceVehicles as card, index (card.slug)}
-				<MobileVehicleCard {card} priority={index < 2} />
+				<MobileVehicleCard {card} priority={index < 2} variant="import" />
 			{/each}
 		</div>
 	</section>
@@ -179,12 +179,15 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
-		color: var(--bc-muted);
+		color: var(--bc-ink);
+	}
+	.mobile-service-entry__field :global(.service-input__text--placeholder) {
+		color: var(--bc-control-placeholder, var(--bc-muted));
 	}
 	.mobile-service-entry__field :global(input::placeholder) {
 		font: inherit;
 		letter-spacing: inherit;
-		color: var(--bc-muted);
+		color: var(--bc-control-placeholder, var(--bc-muted));
 		opacity: 1;
 	}
 	.mobile-service-entry__field :global(svg) {
@@ -267,7 +270,7 @@
 	.mobile-service-entry__help {
 		display: flex;
 		width: auto;
-		min-height: var(--bc-control-height-standard);
+		min-height: var(--bc-control-height-chip);
 		align-items: center;
 		gap: var(--bc-space-2);
 		margin: 0;
@@ -278,10 +281,10 @@
 		background-clip: padding-box;
 		box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.14);
 		color: var(--bc-white);
-		font-size: var(--bc-text-cta);
+		font-size: var(--bc-text-control);
 		font-weight: var(--bc-weight-control);
 		cursor: pointer;
-		line-height: var(--bc-leading-cta);
+		line-height: var(--bc-leading-control);
 	}
 	.mobile-service-entry__browse {
 		position: relative;
@@ -289,7 +292,7 @@
 		flex: 1;
 		margin-top: -20px;
 		border-radius: 24px 24px 0 0;
-		padding: var(--bc-space-5) var(--bc-mobile-gutter) var(--bc-space-6);
+		padding: var(--bc-mobile-browse-top-inset) var(--bc-mobile-gutter) var(--bc-space-6);
 		background: var(--bc-bg-strong);
 		box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.14);
 	}
@@ -321,6 +324,17 @@
 		display: grid;
 		gap: var(--bc-space-3);
 	}
+	@media (max-width: 767.98px) {
+		.mobile-service-entry__field :global(.service-input > svg) {
+			width: var(--bc-control-icon-size-primary);
+			height: var(--bc-control-icon-size-primary);
+		}
+		.mobile-service-entry__field :global(.service-input button svg),
+		.mobile-service-entry__field :global(.service-input__go svg) {
+			width: var(--bc-control-icon-size-compact);
+			height: var(--bc-control-icon-size-compact);
+		}
+	}
 	@media (max-height: 620px) {
 		header h1 {
 			margin-bottom: var(--bc-space-3);
@@ -329,6 +343,11 @@
 	.mobile-service-entry__help:focus-visible {
 		outline: 2px solid var(--bc-accent);
 		outline-offset: 3px;
+	}
+	.mobile-service-entry__help :global(svg) {
+		width: var(--bc-mobile-control-glyph-size);
+		height: var(--bc-mobile-control-glyph-size);
+		flex: none;
 	}
 	:global(.mobile-service-info-sheet.bc-mobile-sheet__content) {
 		background: var(--bc-bg-strong);

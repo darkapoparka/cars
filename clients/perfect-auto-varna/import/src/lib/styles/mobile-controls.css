@@ -1,0 +1,261 @@
+/* Shared mobile controls and selection surfaces for Home, Cars and Import. */
+@media (max-width: 767.98px) {
+	:root {
+		--bc-mobile-choice-row-height: calc(var(--bc-control-height-standard) + var(--bc-space-3));
+		--bc-mobile-choice-mark-size: 18px;
+		--bc-mobile-choice-divider: color-mix(in srgb, var(--bc-border) 55%, transparent);
+	}
+	/* Page utilities share one geometry; inset sheet actions keep the compact role. */
+	.mobile-utility-bar {
+		--bc-mobile-icon-action-surface-size: var(--bc-control-height-standard);
+		--bc-mobile-icon-action-glyph-size: var(--bc-control-icon-size-standard);
+		--bc-mobile-utility-gap: var(--bc-space-2);
+	}
+	/* Match the borderless search surface; active actions keep their existing fill. */
+	.daynight-inventory-mobile__search .bc-mobile-icon-action:not(.active) {
+		--bc-mobile-icon-border: none;
+	}
+	/* Inset fields need a visible surface inside the white search frame. */
+	.daynight-inventory-mobile-search-overlay__fields {
+		--bc-mobile-field-surface: var(--bc-control);
+	}
+	.compare-picker__controls,
+	.vehicle-picker {
+		--bc-mobile-search-surface: var(--bc-control);
+	}
+
+	.mobile-quick-rail {
+		display: flex;
+		box-sizing: border-box;
+		width: calc(100% + var(--bc-mobile-gutter));
+		min-width: 0;
+		gap: var(--bc-space-2);
+		overflow-x: auto;
+		padding-block: var(--bc-mobile-control-inset);
+		padding-inline-end: var(--bc-mobile-gutter);
+		scrollbar-width: none;
+	}
+	.mobile-quick-rail::-webkit-scrollbar {
+		display: none;
+	}
+
+	.mobile-quick-pill {
+		position: relative;
+		display: inline-flex;
+		min-width: 0;
+		min-height: var(--bc-mobile-control-surface-size);
+		flex: 0 0 auto;
+		align-items: center;
+		justify-content: center;
+		gap: var(--bc-space-1);
+		border: 0;
+		border-radius: var(--bc-radius-control);
+		background: var(--bc-white);
+		margin-block: var(--bc-mobile-control-inset);
+		padding: 0 var(--bc-space-2);
+		appearance: none;
+		color: var(--bc-ink);
+		cursor: pointer;
+		font-family: var(--bc-font-body);
+		font-size: var(--bc-text-quick-pill);
+		font-weight: var(--bc-weight-control);
+		line-height: var(--bc-leading-quick-pill);
+		text-decoration: none;
+		white-space: nowrap;
+		box-shadow: none;
+	}
+	/* Transparent outsets keep the full 44px rail footprint and clickable height. */
+	.mobile-quick-pill::before {
+		position: absolute;
+		inset-block: calc(-1 * var(--bc-mobile-control-inset));
+		inset-inline: 0;
+		content: '';
+	}
+
+	.mobile-quick-pill--icon {
+		width: var(--bc-mobile-control-surface-size);
+		min-width: var(--bc-mobile-control-surface-size);
+		margin-inline: var(--bc-mobile-control-inset);
+		padding: 0;
+	}
+	.mobile-quick-pill--icon::before {
+		inset-inline: calc(-1 * var(--bc-mobile-control-inset));
+	}
+	.mobile-quick-pill--icon > svg {
+		width: var(--bc-mobile-control-glyph-size);
+		height: var(--bc-mobile-control-glyph-size);
+		flex: 0 0 auto;
+		stroke-width: 2.25;
+	}
+	/* Selection sheets share a surface; full-screen searches keep their existing frame. */
+	.mobile-selection-surface {
+		--bc-sheet-inset: var(--bc-mobile-gutter);
+		--bc-sheet-bottom: max(var(--bc-space-3), env(safe-area-inset-bottom));
+		--bc-sheet-radius: 28px;
+		--bc-sheet-background: var(--bc-white);
+	}
+	.mobile-selection-surface--full {
+		--bc-sheet-inset: 0px;
+		--bc-sheet-bottom: 0px;
+		--bc-sheet-radius: 0px;
+	}
+	.mobile-selection-surface::after {
+		display: none;
+	}
+	.mobile-choice-list::-webkit-scrollbar {
+		display: none;
+	}
+	.mobile-choice-list {
+		display: flex;
+		min-width: 0;
+		flex-direction: column;
+		gap: 0;
+		scrollbar-width: none;
+	}
+	.mobile-disclosure-row {
+		position: relative;
+		display: flex;
+		width: 100%;
+		min-width: 0;
+		min-height: var(--bc-mobile-choice-row-height);
+		align-items: center;
+		gap: var(--bc-space-3);
+		border: 0;
+		border-radius: 0;
+		background: transparent;
+		color: var(--bc-ink);
+		padding: var(--bc-space-3);
+		appearance: none;
+		font: var(--bc-weight-control) var(--bc-text-control)/var(--bc-leading-control)
+			var(--bc-font-body);
+		text-align: left;
+		cursor: pointer;
+	}
+	.mobile-choice-list > .mobile-choice-row + .mobile-choice-row,
+	.mobile-choice-list > li + li > .mobile-choice-row,
+	.mobile-disclosure-row + .mobile-disclosure-row {
+		border-top: 0;
+	}
+	.mobile-choice-list > .mobile-choice-row + .mobile-choice-row::before,
+	.mobile-choice-list > li + li > .mobile-choice-row::before,
+	.mobile-disclosure-row + .mobile-disclosure-row::before {
+		position: absolute;
+		top: 0;
+		right: var(--bc-space-3);
+		left: var(--bc-space-3);
+		height: 1px;
+		background: var(--bc-mobile-choice-divider);
+		content: '';
+		pointer-events: none;
+	}
+	.mobile-disclosure-row > span {
+		min-width: 0;
+		flex: 1;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.mobile-disclosure-row > svg {
+		flex: 0 0 auto;
+	}
+	.mobile-disclosure-row:focus-visible {
+		outline: 2px solid var(--bc-accent);
+		outline-offset: -2px;
+	}
+
+	/* Filter sheets use spacing and plain utility icons instead of dividers. */
+	.mobile-filter-surface .mobile-choice-row::before,
+	.mobile-filter-surface .mobile-disclosure-row::before,
+	.mobile-filter-surface .bc-mobile-icon-action::before {
+		display: none;
+	}
+	.mobile-filter-surface.mobile-selection-surface > header {
+		display: grid;
+		grid-template-columns:
+			var(--bc-mobile-control-hit-size) minmax(0, 1fr)
+			var(--bc-mobile-control-hit-size);
+		grid-template-rows: var(--bc-mobile-control-hit-size);
+		align-items: center;
+		gap: var(--bc-space-2);
+	}
+	.mobile-filter-surface > header > :is(div, [data-dialog-title]) {
+		grid-column: 2;
+		grid-row: 1;
+		min-width: 0;
+		width: 100%;
+		margin: 0;
+		text-align: center;
+	}
+	.mobile-filter-surface > header > .bc-mobile-icon-action {
+		grid-column: 1;
+		grid-row: 1;
+		align-self: center;
+		justify-self: center;
+	}
+	.mobile-filter-surface > header > .bc-mobile-icon-action:last-child {
+		grid-column: 3;
+	}
+	.mobile-filter-surface > header .bc-mobile-icon-action > svg {
+		display: block;
+		width: var(--bc-mobile-control-glyph-size);
+		height: var(--bc-mobile-control-glyph-size);
+		stroke-width: var(--bc-mobile-icon-action-stroke);
+	}
+	.mobile-filter-surface :is(.bc-mobile-sheet__title, .daynight-inventory-mobile-drawer__title) {
+		display: block;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.mobile-filter-actions {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: var(--bc-space-2);
+	}
+	.mobile-filter-action {
+		position: relative;
+		display: inline-flex;
+		min-width: 0;
+		min-height: var(--bc-mobile-control-surface-size);
+		align-items: center;
+		justify-content: center;
+		gap: var(--bc-space-2);
+		margin-block: var(--bc-mobile-control-inset);
+		border: 0;
+		border-radius: var(--bc-radius-control);
+		background: transparent;
+		padding: 0;
+		appearance: none;
+		color: var(--bc-ink);
+		font: var(--bc-weight-control) var(--bc-text-cta)/var(--bc-leading-cta) var(--bc-font-body);
+		cursor: pointer;
+		white-space: nowrap;
+	}
+	.mobile-filter-action::before {
+		position: absolute;
+		inset-block: calc(-1 * var(--bc-mobile-control-inset));
+		inset-inline: 0;
+		content: '';
+	}
+	.mobile-filter-action--apply {
+		background: var(--bc-accent);
+		padding-inline: var(--bc-space-2);
+		color: var(--bc-white);
+	}
+	.mobile-filter-action > svg {
+		width: var(--bc-mobile-control-glyph-size);
+		height: var(--bc-mobile-control-glyph-size);
+		flex: 0 0 auto;
+	}
+	.mobile-filter-action:focus-visible {
+		outline: 2px solid var(--bc-accent);
+		outline-offset: 2px;
+	}
+}
+
+@media (max-width: 374px) {
+	.mobile-utility-bar {
+		--bc-mobile-utility-gap: var(--bc-space-1);
+	}
+}

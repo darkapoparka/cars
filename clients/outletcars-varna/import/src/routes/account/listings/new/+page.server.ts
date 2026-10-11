@@ -1,3 +1,4 @@
+import { fail, redirect } from '@sveltejs/kit';
 import type { Actions, PageServerLoad } from './$types';
 import { getAccountDashboardPageData } from '$lib/server/account-dashboard-state';
 import { getAccountListingFormData } from '$lib/server/account-listing-form-state';
@@ -7,8 +8,8 @@ import {
 	renderAuxeroPageSlot
 } from '$lib/server/auxero-page';
 import { requireDayNightPageSession } from '$lib/server/auth';
-import { readInventoryListingFields } from '$lib/server/cms-listing-form';
-import { saveCmsUploadFiles } from '$lib/server/cms-persistence';
+import { readInventoryListingFields, submissionDraftValues } from '$lib/server/cms-listing-form';
+import { saveCmsUploadFiles, validateCmsUploadFiles } from '$lib/server/cms-persistence';
 import { createVehicleSubmission, updateVehicleSubmission } from '$lib/server/inventory';
 
 export const load: PageServerLoad = ({ request, url }) => {
@@ -49,11 +50,30 @@ export const load: PageServerLoad = ({ request, url }) => {
 };
 
 export const actions: Actions = {
-	default: async ({ request, url }) => {
+	default: async ({ request, url, locals }) => {
 		const session = requireDayNightPageSession(request, 'account/listings/new', url.searchParams);
 		const formData = await request.formData();
 		const fields = readInventoryListingFields(formData);
+		const values = submissionDraftValues(fields);
+		if (!fields.title) {
+			return fail(400, {
+				values,
+				error:
+					locals.localeState.locale === 'en' ? 'Enter a make and model.' : 'Въведи марка и модел.'
+			});
+		}
 		const rawStatus = String(formData.get('listingStatus') ?? formData.get('status') ?? '').trim();
+		try {
+			validateCmsUploadFiles(formData);
+		} catch {
+			return fail(400, {
+				values,
+				error:
+					locals.localeState.locale === 'en'
+						? 'Use JPG, PNG or WebP up to 8 MB, or PDF/DOC documents up to 10 MB.'
+						: 'Използвай JPG, PNG или WebP до 8 MB, или PDF/DOC документи до 10 MB.'
+			});
+		}
 		const submission = createVehicleSubmission({
 			email: session.email,
 			expectedPrice: fields.priceLabel,
@@ -75,5 +95,8 @@ export const actions: Actions = {
 			id: submission.id,
 			previewImage: uploads.previewImage
 		});
+		const search = new URLSearchParams({ created: rawStatus === 'draft' ? 'draft' : 'submitted' });
+		if (locals.localeState.locale === 'en') search.set('lang', 'en');
+		redirect(303, `/account/listings/edit/${encodeURIComponent(submission.id)}?${search}`);
 	}
 };

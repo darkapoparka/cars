@@ -1,0 +1,61 @@
+{
+  "base": "http://127.0.0.1:6461",
+  "results": [
+    {
+      "locale": "bg",
+      "width": 320,
+      "label": "Виж услугите",
+      "gaps": [
+        15.828125,
+        15,
+        15,
+        15
+      ],
+      "adviceDestination": "/bg/blog-detail/1",
+      "servicesDestination": "/bg/about-us#process",
+      "passed": true
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "label": "Виж услугите",
+      "gaps": [
+        15,
+        15,
+        15,
+        15
+      ],
+      "adviceDestination": "/bg/blog-detail/1",
+      "servicesDestination": "/bg/about-us#process",
+      "passed": true
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "label": "See services",
+      "gaps": [
+        15.828125,
+        15,
+        15,
+        15
+      ],
+      "adviceDestination": "/en/blog-detail/1",
+      "servicesDestination": "/en/about-us#process",
+      "passed": true
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "label": "See services",
+      "gaps": [
+        15,
+        15,
+        15,
+        15
+      ],
+      "adviceDestination": "/en/blog-detail/1",
+      "servicesDestination": "/en/about-us#process",
+      "passed": true
+    }
+  ]
+}

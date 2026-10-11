@@ -1,0 +1,318 @@
+{
+	"date": "2026-10-04",
+	"origin": "http://127.0.0.1:6790",
+	"scope": "Small reusable desktop hero box refinement",
+	"sources": [
+		{
+			"path": "src/lib/components/common/DesktopDiscoveryPanel.svelte",
+			"sha256": "27135a388c3544ad1f844ce40d5c24b0ce4abf7a217bb95280817173e67d8da2"
+		},
+		{
+			"path": "src/lib/components/common/DesktopSearchControl.svelte",
+			"sha256": "24090cd50d06c878ce861779f9bf9227c865ba9ea842ba9fb55b7731dd76f019"
+		},
+		{
+			"path": "src/lib/components/home/DesktopHomeHero.svelte",
+			"sha256": "1fa45849898e7b59e000fd81ae44eaa5d1ad67ba865dece9211e55f3fb80edcd"
+		},
+		{
+			"path": "src/lib/styles/daynight.css",
+			"sha256": "c8e545ec8bd9d894be75340a08fbf682182f176a21b4b5d870b66c4eeb17550d"
+		}
+	],
+	"changes": {
+		"desktopInset": {
+			"before": 20,
+			"after": 24
+		},
+		"homeHeaderTop": {
+			"before": 12,
+			"after": 16
+		},
+		"searchVisibleDiameter": 36,
+		"searchClickTarget": 44,
+		"localFocusImportantDeclarationsRemoved": 4,
+		"redundantRadiusDeclarationsRemoved": 1
+	},
+	"measured1440": [
+		{
+			"route": "home",
+			"width": 760,
+			"beforeHeight": 232,
+			"afterHeight": 236,
+			"beforeBodyPadding": "12px 20px 20px",
+			"afterBodyPadding": "12px 24px 24px"
+		},
+		{
+			"route": "cars",
+			"width": 880,
+			"beforeHeight": 162,
+			"afterHeight": 162,
+			"beforeBodyPadding": "20px",
+			"afterBodyPadding": "24px"
+		},
+		{
+			"route": "services",
+			"width": 760,
+			"beforeHeight": 162,
+			"afterHeight": 162,
+			"beforeBodyPadding": "20px",
+			"afterBodyPadding": "24px"
+		},
+		{
+			"route": "about",
+			"width": 560,
+			"beforeHeight": 154,
+			"afterHeight": 162,
+			"beforeBodyPadding": "20px",
+			"afterBodyPadding": "24px"
+		},
+		{
+			"route": "contact",
+			"width": 560,
+			"beforeHeight": 188,
+			"afterHeight": 196,
+			"beforeBodyPadding": "20px",
+			"afterBodyPadding": "24px"
+		}
+	],
+	"desktop": [
+		{
+			"locale": "bg",
+			"route": "home",
+			"width": 768,
+			"height": 1000,
+			"horizontalOverflow": false
+		},
+		{
+			"locale": "bg",
+			"route": "home",
+			"width": 1024,
+			"height": 1000,
+			"horizontalOverflow": false
+		},
+		{
+			"locale": "bg",
+			"route": "home",
+			"width": 1440,
+			"height": 1000,
+			"horizontalOverflow": false
+		},
+		{
+			"locale": "bg",
+			"route": "home",
+			"width": 1920,
+			"height": 1000,
+			"horizontalOverflow": false
+		},
+		{
+			"locale": "bg",
+			"route": "cars",
+			"width": 768,
+			"height": 1000,
+			"horizontalOverflow": false
+		},
+		{
+			"locale": "bg",
+			"route": "cars",
+			"width": 1440,
+			"height": 1000,
+			"horizontalOverflow": false
+		},
+		{
+			"locale": "bg",
+			"route": "services",
+			"width": 768,
+			"height": 1000,
+			"horizontalOverflow": false
+		},
+		{
+			"locale": "bg",
+			"route": "services",
+			"width": 1440,
+			"height": 1000,
+			"horizontalOverflow": false
+		},
+		{
+			"locale": "bg",
+			"route": "about",
+			"width": 768,
+			"height": 1000,
+			"horizontalOverflow": false
+		},
+		{
+			"locale": "bg",
+			"route": "about",
+			"width": 1440,
+			"height": 1000,
+			"horizontalOverflow": false
+		},
+		{
+			"locale": "bg",
+			"route": "contact",
+			"width": 768,
+			"height": 1000,
+			"horizontalOverflow": false
+		},
+		{
+			"locale": "bg",
+			"route": "contact",
+			"width": 1440,
+			"height": 1000,
+			"horizontalOverflow": false
+		},
+		{
+			"locale": "en",
+			"route": "home",
+			"width": 768,
+			"height": 1000,
+			"horizontalOverflow": false
+		},
+		{
+			"locale": "en",
+			"route": "home",
+			"width": 1024,
+			"height": 1000,
+			"horizontalOverflow": false
+		},
+		{
+			"locale": "en",
+			"route": "home",
+			"width": 1440,
+			"height": 1000,
+			"horizontalOverflow": false
+		},
+		{
+			"locale": "en",
+			"route": "home",
+			"width": 1920,
+			"height": 1000,
+			"horizontalOverflow": false
+		},
+		{
+			"locale": "en",
+			"route": "cars",
+			"width": 768,
+			"height": 1000,
+			"horizontalOverflow": false
+		},
+		{
+			"locale": "en",
+			"route": "cars",
+			"width": 1440,
+			"height": 1000,
+			"horizontalOverflow": false
+		},
+		{
+			"locale": "en",
+			"route": "services",
+			"width": 768,
+			"height": 1000,
+			"horizontalOverflow": false
+		},
+		{
+			"locale": "en",
+			"route": "services",
+			"width": 1440,
+			"height": 1000,
+			"horizontalOverflow": false
+		},
+		{
+			"locale": "en",
+			"route": "about",
+			"width": 768,
+			"height": 1000,
+			"horizontalOverflow": false
+		},
+		{
+			"locale": "en",
+			"route": "about",
+			"width": 1440,
+			"height": 1000,
+			"horizontalOverflow": false
+		},
+		{
+			"locale": "en",
+			"route": "contact",
+			"width": 768,
+			"height": 1000,
+			"horizontalOverflow": false
+		},
+		{
+			"locale": "en",
+			"route": "contact",
+			"width": 1440,
+			"height": 1000,
+			"horizontalOverflow": false
+		}
+	],
+	"mobile": {
+		"locales": ["bg", "en"],
+		"routes": ["home", "cars", "services", "about", "contact"],
+		"widths": [320, 390],
+		"height": 900,
+		"matchedCases": 20,
+		"inspectedVisibleElements": 184,
+		"differences": 0,
+		"horizontalOverflow": false,
+		"scope": "First-viewport headings and controls, comparing geometry, text, typography, colors and corner roles"
+	},
+	"keyboardFocus": [
+		{
+			"route": "inventory",
+			"focused": true,
+			"inputOutline": "none",
+			"inputShadow": "none",
+			"outerOutline": "solid",
+			"outerWidth": "3px"
+		},
+		{
+			"route": "services",
+			"focused": true,
+			"inputOutline": "none",
+			"inputShadow": "none",
+			"outerOutline": "solid",
+			"outerWidth": "3px"
+		},
+		{
+			"route": "home-action",
+			"focused": true,
+			"outline": "solid",
+			"offset": "3px",
+			"shadow": "rgb(255, 255, 255) 0px 0px 0px 2px"
+		},
+		{
+			"route": "home-entry",
+			"focused": true,
+			"outline": "solid",
+			"offset": "-2px",
+			"shadow": "none"
+		}
+	],
+	"checks": {
+		"svelte": {
+			"errors": 0,
+			"warnings": 0
+		},
+		"isolatedProductionBuild": "passed",
+		"scopedPrettier": "passed",
+		"scopedEslint": "passed",
+		"existingDesktopTestsPassed": 11,
+		"architecture": {
+			"nativeRoutes": 57,
+			"reachableModules": 230,
+			"tailwindEntries": 1
+		},
+		"localImages": 955
+	},
+	"screenshots": {
+		"width": 1440,
+		"height": 1000,
+		"locale": "bg",
+		"matchedRoutes": ["home", "cars", "services", "about", "contact"]
+	},
+	"limits": [
+		"No template release selection or dealer deployment.",
+		"Mobile preservation covers the inspected visible elements rather than full-page image parity."
+	]
+}

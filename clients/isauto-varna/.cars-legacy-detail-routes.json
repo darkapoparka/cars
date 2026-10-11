@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "dealer": "isauto-varna",
+  "family": "import",
+  "base": "/variant-3",
+  "defaultLocale": "bg",
+  "source": {
+    "inventory": {
+      "path": "carwow/src/lib/data/daynight-current-inventory.ts",
+      "sha256": "a25bec596b5c12aaf4aced2ad142adf1c621e68d571d4a19795af5587aa90120"
+    },
+    "vehicles": {
+      "path": "carwow/src/lib/data/daynight-vehicles.ts",
+      "sha256": "58507cc762f0d0763f6d521a86d8474729fd6cf112b7dd072170f350a2c11d84"
+    },
+    "routeFactorySha256": "094d5128ad5e689e41486a228b1de6d11c54efbe051ce0e75c0170709d8571c9"
+  },
+  "profileSha256": "ab90f71f542cf493eeb900ed1474d8b009da173dc62d56932f886a13dae3c6d8",
+  "entries": [
+    {
+      "sourceId": "is-1001",
+      "slug": "audi-r8-s-1001",
+      "targetId": "is-1001"
+    },
+    {
+      "sourceId": "is-1002",
+      "slug": "audi-q7-s-1002",
+      "targetId": "is-1002"
+    },
+    {
+      "sourceId": "is-1003",
+      "slug": "bmw-m5-s-1003",
+      "targetId": "is-1003"
+    },
+    {
+      "sourceId": "is-1004",
+      "slug": "bmw-x5-s-1004",
+      "targetId": "is-1004"
+    },
+    {
+      "sourceId": "is-1005",
+      "slug": "bmw-750-s-1005",
+      "targetId": "is-1005"
+    },
+    {
+      "sourceId": "is-1006",
+      "slug": "audi-a5-s-1006",
+      "targetId": "is-1006"
+    }
+  ],
+  "retired": []
+}

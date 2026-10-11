@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "dealer": "perfect-auto-varna",
+  "family": "import",
+  "base": "/variant-3",
+  "defaultLocale": "bg",
+  "source": {
+    "inventory": {
+      "path": "carwow/src/lib/data/daynight-current-inventory.ts",
+      "sha256": "d456de466da31ae8fa93cc879f214c93628fc8c7aef057424b0437d65cbf8a00"
+    },
+    "vehicles": {
+      "path": "carwow/src/lib/data/daynight-vehicles.ts",
+      "sha256": "58507cc762f0d0763f6d521a86d8474729fd6cf112b7dd072170f350a2c11d84"
+    },
+    "routeFactorySha256": "094d5128ad5e689e41486a228b1de6d11c54efbe051ce0e75c0170709d8571c9"
+  },
+  "profileSha256": "79f8a4d2f2b99c8efb3232e459114ea0760173156c658789cc5c5babca0b540d",
+  "entries": [
+    {
+      "sourceId": "21788859055085650",
+      "slug": "mercedes-benz-ml-085650",
+      "targetId": "21788859055085650"
+    },
+    {
+      "sourceId": "21788174780697334",
+      "slug": "mercedes-benz-g-350-697334",
+      "targetId": "21788174780697334"
+    },
+    {
+      "sourceId": "21788174574608668",
+      "slug": "audi-q7-608668",
+      "targetId": "21788174574608668"
+    },
+    {
+      "sourceId": "21787209952978104",
+      "slug": "lexus-nx-450-978104",
+      "targetId": "21787209952978104"
+    },
+    {
+      "sourceId": "21787209746596224",
+      "slug": "bmw-x6-596224",
+      "targetId": "21787209746596224"
+    },
+    {
+      "sourceId": "11786890129374054",
+      "slug": "ford-mustang-374054",
+      "targetId": "11786890129374054"
+    }
+  ],
+  "retired": []
+}

@@ -31,14 +31,23 @@ for (const width of [320, 390, 1440])
 						.fill('https://listing.example.invalid/synthetic');
 				} else {
 					await expect(wizard.locator('[id^="import-wizard-make-"]')).toBeVisible();
-					await wizard.locator('[id^="import-wizard-make-"]').fill('BMW');
-					await wizard.locator('[id^="import-wizard-model-"]').fill('X5');
+					if (width < 768) {
+						await wizard.locator('[id^="import-wizard-make-"]').click();
+						await wizard.getByRole('button', { name: 'BMW', exact: true }).click();
+						await expect(wizard.locator('[id^="import-wizard-make-"]')).toContainText('BMW');
+						await wizard.locator('[id^="import-wizard-model-"]').click();
+						await wizard.getByRole('button', { name: 'X5', exact: true }).click();
+					} else {
+						await wizard.locator('[id^="import-wizard-make-"]').fill('BMW');
+						await wizard.locator('[id^="import-wizard-model-"]').fill('X5');
+					}
 				}
 				await wizard
 					.getByRole('button', { name: english ? 'Continue' : 'Продължи', exact: true })
 					.click();
 				await expect(wizard.locator('[id^="import-wizard-budget-"]')).toBeVisible();
 				await wizard.locator('[id^="import-wizard-budget-"]').fill('30000');
+				if (width < 768) await wizard.locator('[id^="import-wizard-fuel-"]').click();
 				await wizard
 					.getByRole('button', { name: english ? 'Petrol' : 'Бензин', exact: true })
 					.click();
@@ -94,8 +103,15 @@ for (const width of [320, 390, 1440])
 				await expect(wizard.getByRole('alert')).toBeVisible();
 				if (mode === 'vin') await wizard.locator('#sell-flow-vin').fill('WBA12345678901234');
 				else {
-					await wizard.getByRole('button', { name: 'BMW', exact: true }).click();
-					await wizard.locator('#sell-flow-model').fill('X5');
+					if (width < 768) {
+						await wizard.locator('#sell-mobile-make').click();
+						await wizard.getByRole('button', { name: 'BMW', exact: true }).click();
+						await wizard.locator('#sell-mobile-model').click();
+						await wizard.getByRole('button', { name: 'X5', exact: true }).click();
+					} else {
+						await wizard.getByRole('button', { name: 'BMW', exact: true }).click();
+						await wizard.locator('#sell-flow-model').fill('X5');
+					}
 				}
 				await wizard.locator('.sell-flow__next').click();
 				await wizard.locator('#sell-flow-phone').fill('+359000000000');
@@ -123,9 +139,9 @@ for (const width of [320, 390, 1440])
 			await calculator.locator('input').nth(2).fill('10');
 			await calculator.locator('input').nth(3).fill('20');
 			await calculator.locator('input').nth(4).fill('500');
-			await expect(calculator.locator('output')).toContainText(/41[\s,.]*300/);
+			await expect(calculator.locator('output:visible')).toContainText(/41[\s,.]*300/);
 			await calculator.locator('input').first().fill('-1');
-			await expect(calculator.getByRole('status')).toBeVisible();
+			await expect(calculator.locator('section [role="status"]')).toBeVisible();
 			await page.goto(route(locale, '/financing'), { waitUntil: 'domcontentloaded' });
 			await expect(page.locator('html')).toHaveAttribute('data-daynight-hydrated', 'true');
 			const finance = page.locator('.finance-estimator');
@@ -148,7 +164,7 @@ for (const width of [320, 390, 1440])
 			await form.locator('[name=name]').fill('Synthetic Verification');
 			await form.locator('[name=phone]').fill('+359000000000');
 			await form.locator('[name=email]').fill('synthetic@example.invalid');
-			await form
+			await (width < 768 ? page.getByRole('dialog') : form)
 				.getByRole('button', { name: english ? 'Send request' : 'Изпрати запитване', exact: true })
 				.click();
 			await expect(
@@ -194,14 +210,15 @@ for (const width of [320, 390, 1440])
 				await expect(page.locator('.daynight-mobile-pdp__spec-list')).toContainText(
 					english ? '3000 cc / 340 hp' : '3000 куб.см / 340 к.с.'
 				);
-				await page.getByRole('tab', { name: english ? 'Features' : 'Екстри', exact: true }).click();
+				await page.getByRole('tab', { name: english ? 'Extras' : 'Екстри', exact: true }).click();
 				await expect(page.locator('.daynight-mobile-pdp__feature-groups')).toBeVisible();
 				await page.locator('.daynight-mobile-pdp__actions button').click();
 				const form = page.locator('.daynight-mobile-pdp__inquiry-form');
 				await expect(form).toBeVisible();
 				await form.locator('[name=name]').fill('Synthetic Verification');
 				await form.locator('[name=phone]').fill('+359000000000');
-				await form
+				await page
+					.locator('.daynight-mobile-pdp__inquiry')
 					.getByRole('button', {
 						name: english ? 'Send Inquiry' : 'Изпрати запитване',
 						exact: true

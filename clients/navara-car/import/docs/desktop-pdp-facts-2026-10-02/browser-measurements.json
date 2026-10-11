@@ -1,0 +1,722 @@
+[
+	{
+		"description": {
+			"height": 215.9375,
+			"width": 918,
+			"x": 52.5,
+			"y": 910.375
+		},
+		"desktopFacts": 1,
+		"finance": {
+			"height": 841.984375,
+			"width": 370,
+			"x": 1002.5,
+			"y": 582.09375
+		},
+		"horizontalOverflow": false,
+		"mobilePdp": false,
+		"panelColumns": "447px 447px",
+		"panels": [
+			{
+				"heading": "Основни данни",
+				"rect": {
+					"height": 342.1875,
+					"width": 447,
+					"x": 52.5,
+					"y": 1150.3125
+				},
+				"rows": [
+					{
+						"label": "Пробег",
+						"rect": {
+							"height": 42,
+							"width": 397,
+							"x": 77.5,
+							"y": 1222.5
+						},
+						"value": "123 000 км"
+					},
+					{
+						"label": "Година",
+						"rect": {
+							"height": 54,
+							"width": 397,
+							"x": 77.5,
+							"y": 1264.5
+						},
+						"value": "2020"
+					},
+					{
+						"label": "Гориво",
+						"rect": {
+							"height": 54,
+							"width": 397,
+							"x": 77.5,
+							"y": 1318.5
+						},
+						"value": "Бензин"
+					},
+					{
+						"label": "Двигател",
+						"rect": {
+							"height": 54,
+							"width": 397,
+							"x": 77.5,
+							"y": 1372.5
+						},
+						"value": "3000 куб.см / 510 к.с."
+					},
+					{
+						"label": "Скорости",
+						"rect": {
+							"height": 41,
+							"width": 397,
+							"x": 77.5,
+							"y": 1426.5
+						},
+						"value": "Автомат"
+					}
+				]
+			},
+			{
+				"heading": "Детайли",
+				"rect": {
+					"height": 288.1875,
+					"width": 447,
+					"x": 523.5,
+					"y": 1150.3125
+				},
+				"rows": [
+					{
+						"label": "Цвят",
+						"rect": {
+							"height": 42,
+							"width": 397,
+							"x": 548.5,
+							"y": 1222.5
+						},
+						"value": "Зелен"
+					},
+					{
+						"label": "Локация",
+						"rect": {
+							"height": 54,
+							"width": 397,
+							"x": 548.5,
+							"y": 1264.5
+						},
+						"value": "Пловдив, гр. Пловдив"
+					},
+					{
+						"label": "Интериор",
+						"rect": {
+							"height": 54,
+							"width": 397,
+							"x": 548.5,
+							"y": 1318.5
+						},
+						"value": "По запитване"
+					},
+					{
+						"label": "Складов №",
+						"rect": {
+							"height": 41,
+							"width": 397,
+							"x": 548.5,
+							"y": 1372.5
+						},
+						"value": "21778068579001193"
+					}
+				]
+			}
+		],
+		"titles": 1,
+		"url": "http://127.0.0.1:6790/bg/inventory/21778068579001193#vehicle-finance",
+		"viewport": {
+			"height": 1000,
+			"width": 1440
+		}
+	},
+	{
+		"description": {
+			"height": 305,
+			"width": 543,
+			"x": 32,
+			"y": 679
+		},
+		"desktopFacts": 1,
+		"finance": {
+			"height": 837.5625,
+			"width": 370,
+			"x": 607,
+			"y": 617.046875
+		},
+		"horizontalOverflow": false,
+		"mobilePdp": false,
+		"panelColumns": "543px",
+		"panels": [
+			{
+				"heading": "Основни данни",
+				"rect": {
+					"height": 342.1875,
+					"width": 543,
+					"x": 32,
+					"y": 1008
+				},
+				"rows": [
+					{
+						"label": "Пробег",
+						"rect": {
+							"height": 42,
+							"width": 493,
+							"x": 57,
+							"y": 1080.1875
+						},
+						"value": "123 000 км"
+					},
+					{
+						"label": "Година",
+						"rect": {
+							"height": 54,
+							"width": 493,
+							"x": 57,
+							"y": 1122.1875
+						},
+						"value": "2020"
+					},
+					{
+						"label": "Гориво",
+						"rect": {
+							"height": 54,
+							"width": 493,
+							"x": 57,
+							"y": 1176.1875
+						},
+						"value": "Бензин"
+					},
+					{
+						"label": "Двигател",
+						"rect": {
+							"height": 54,
+							"width": 493,
+							"x": 57,
+							"y": 1230.1875
+						},
+						"value": "3000 куб.см / 510 к.с."
+					},
+					{
+						"label": "Скорости",
+						"rect": {
+							"height": 41,
+							"width": 493,
+							"x": 57,
+							"y": 1284.1875
+						},
+						"value": "Автомат"
+					}
+				]
+			},
+			{
+				"heading": "Детайли",
+				"rect": {
+					"height": 288.1875,
+					"width": 543,
+					"x": 32,
+					"y": 1374.1875
+				},
+				"rows": [
+					{
+						"label": "Цвят",
+						"rect": {
+							"height": 42,
+							"width": 493,
+							"x": 57,
+							"y": 1446.375
+						},
+						"value": "Зелен"
+					},
+					{
+						"label": "Локация",
+						"rect": {
+							"height": 54,
+							"width": 493,
+							"x": 57,
+							"y": 1488.375
+						},
+						"value": "Пловдив, гр. Пловдив"
+					},
+					{
+						"label": "Интериор",
+						"rect": {
+							"height": 54,
+							"width": 493,
+							"x": 57,
+							"y": 1542.375
+						},
+						"value": "По запитване"
+					},
+					{
+						"label": "Складов №",
+						"rect": {
+							"height": 41,
+							"width": 493,
+							"x": 57,
+							"y": 1596.375
+						},
+						"value": "21778068579001193"
+					}
+				]
+			}
+		],
+		"titles": 1,
+		"url": "http://127.0.0.1:6790/bg/inventory/21778068579001193#vehicle-finance",
+		"viewport": {
+			"height": 1000,
+			"width": 1024
+		}
+	},
+	{
+		"description": {
+			"height": 423.75,
+			"width": 349,
+			"x": 32,
+			"y": 549.65625
+		},
+		"desktopFacts": 1,
+		"finance": {
+			"height": 909.15625,
+			"width": 320,
+			"x": 401,
+			"y": 626.046875
+		},
+		"horizontalOverflow": false,
+		"mobilePdp": false,
+		"panelColumns": "349px",
+		"panels": [
+			{
+				"heading": "Основни данни",
+				"rect": {
+					"height": 342.1875,
+					"width": 349,
+					"x": 32,
+					"y": 997.40625
+				},
+				"rows": [
+					{
+						"label": "Пробег",
+						"rect": {
+							"height": 42,
+							"width": 299,
+							"x": 57,
+							"y": 1069.59375
+						},
+						"value": "123 000 км"
+					},
+					{
+						"label": "Година",
+						"rect": {
+							"height": 54,
+							"width": 299,
+							"x": 57,
+							"y": 1111.59375
+						},
+						"value": "2020"
+					},
+					{
+						"label": "Гориво",
+						"rect": {
+							"height": 54,
+							"width": 299,
+							"x": 57,
+							"y": 1165.59375
+						},
+						"value": "Бензин"
+					},
+					{
+						"label": "Двигател",
+						"rect": {
+							"height": 54,
+							"width": 299,
+							"x": 57,
+							"y": 1219.59375
+						},
+						"value": "3000 куб.см / 510 к.с."
+					},
+					{
+						"label": "Скорости",
+						"rect": {
+							"height": 41,
+							"width": 299,
+							"x": 57,
+							"y": 1273.59375
+						},
+						"value": "Автомат"
+					}
+				]
+			},
+			{
+				"heading": "Детайли",
+				"rect": {
+					"height": 288.1875,
+					"width": 349,
+					"x": 32,
+					"y": 1363.59375
+				},
+				"rows": [
+					{
+						"label": "Цвят",
+						"rect": {
+							"height": 42,
+							"width": 299,
+							"x": 57,
+							"y": 1435.78125
+						},
+						"value": "Зелен"
+					},
+					{
+						"label": "Локация",
+						"rect": {
+							"height": 54,
+							"width": 299,
+							"x": 57,
+							"y": 1477.78125
+						},
+						"value": "Пловдив, гр. Пловдив"
+					},
+					{
+						"label": "Интериор",
+						"rect": {
+							"height": 54,
+							"width": 299,
+							"x": 57,
+							"y": 1531.78125
+						},
+						"value": "По запитване"
+					},
+					{
+						"label": "Складов №",
+						"rect": {
+							"height": 41,
+							"width": 299,
+							"x": 57,
+							"y": 1585.78125
+						},
+						"value": "21778068579001193"
+					}
+				]
+			}
+		],
+		"titles": 1,
+		"url": "http://127.0.0.1:6790/bg/inventory/21778068579001193#vehicle-finance",
+		"viewport": {
+			"height": 1000,
+			"width": 768
+		}
+	},
+	{
+		"description": {
+			"height": 186.25,
+			"width": 918,
+			"x": 52.5,
+			"y": 910.375
+		},
+		"desktopFacts": 1,
+		"finance": {
+			"height": 817.984375,
+			"width": 370,
+			"x": 1002.5,
+			"y": 548.09375
+		},
+		"horizontalOverflow": false,
+		"mobilePdp": false,
+		"panelColumns": "447px 447px",
+		"panels": [
+			{
+				"heading": "Vehicle details",
+				"rect": {
+					"height": 342.1875,
+					"width": 447,
+					"x": 52.5,
+					"y": 1120.625
+				},
+				"rows": [
+					{
+						"label": "Mileage",
+						"rect": {
+							"height": 42,
+							"width": 397,
+							"x": 77.5,
+							"y": 1192.8125
+						},
+						"value": "123,000 km"
+					},
+					{
+						"label": "Year",
+						"rect": {
+							"height": 54,
+							"width": 397,
+							"x": 77.5,
+							"y": 1234.8125
+						},
+						"value": "2020"
+					},
+					{
+						"label": "Fuel",
+						"rect": {
+							"height": 54,
+							"width": 397,
+							"x": 77.5,
+							"y": 1288.8125
+						},
+						"value": "Petrol"
+					},
+					{
+						"label": "Engine",
+						"rect": {
+							"height": 54,
+							"width": 397,
+							"x": 77.5,
+							"y": 1342.8125
+						},
+						"value": "3000 cc / 510 hp"
+					},
+					{
+						"label": "Transmission",
+						"rect": {
+							"height": 41,
+							"width": 397,
+							"x": 77.5,
+							"y": 1396.8125
+						},
+						"value": "Automatic"
+					}
+				]
+			},
+			{
+				"heading": "Details",
+				"rect": {
+					"height": 288.1875,
+					"width": 447,
+					"x": 523.5,
+					"y": 1120.625
+				},
+				"rows": [
+					{
+						"label": "Color",
+						"rect": {
+							"height": 42,
+							"width": 397,
+							"x": 548.5,
+							"y": 1192.8125
+						},
+						"value": "Green"
+					},
+					{
+						"label": "Location",
+						"rect": {
+							"height": 54,
+							"width": 397,
+							"x": 548.5,
+							"y": 1234.8125
+						},
+						"value": "Пловдив, гр. Пловдив"
+					},
+					{
+						"label": "Interior",
+						"rect": {
+							"height": 54,
+							"width": 397,
+							"x": 548.5,
+							"y": 1288.8125
+						},
+						"value": "On request"
+					},
+					{
+						"label": "Stock No.",
+						"rect": {
+							"height": 41,
+							"width": 397,
+							"x": 548.5,
+							"y": 1342.8125
+						},
+						"value": "21778068579001193"
+					}
+				]
+			}
+		],
+		"titles": 1,
+		"url": "http://127.0.0.1:6790/en/inventory/21778068579001193",
+		"viewport": {
+			"height": 1000,
+			"width": 1440
+		}
+	},
+	{
+		"description": null,
+		"desktopFacts": 0,
+		"finance": null,
+		"horizontalOverflow": false,
+		"mobilePdp": true,
+		"panelColumns": null,
+		"panels": [],
+		"titles": 0,
+		"url": "http://127.0.0.1:6790/bg/inventory/21778068579001193",
+		"viewport": {
+			"height": 850,
+			"width": 320
+		}
+	},
+	{
+		"description": null,
+		"desktopFacts": 0,
+		"finance": null,
+		"horizontalOverflow": false,
+		"mobilePdp": true,
+		"panelColumns": null,
+		"panels": [],
+		"titles": 0,
+		"url": "http://127.0.0.1:6790/bg/inventory/21778068579001193",
+		"viewport": {
+			"height": 850,
+			"width": 390
+		}
+	},
+	{
+		"description": {
+			"height": 215.9375,
+			"width": 918,
+			"x": 292.5,
+			"y": 915.75
+		},
+		"desktopFacts": 1,
+		"finance": {
+			"height": 849.5625,
+			"width": 370,
+			"x": 1242.5,
+			"y": 589.046875
+		},
+		"horizontalOverflow": false,
+		"mobilePdp": false,
+		"panelColumns": "447px 447px",
+		"panels": [
+			{
+				"heading": "Основни данни",
+				"rect": {
+					"height": 342.1875,
+					"width": 447,
+					"x": 292.5,
+					"y": 1155.6875
+				},
+				"rows": [
+					{
+						"label": "Пробег",
+						"rect": {
+							"height": 42,
+							"width": 397,
+							"x": 317.5,
+							"y": 1227.875
+						},
+						"value": "123 000 км"
+					},
+					{
+						"label": "Година",
+						"rect": {
+							"height": 54,
+							"width": 397,
+							"x": 317.5,
+							"y": 1269.875
+						},
+						"value": "2020"
+					},
+					{
+						"label": "Гориво",
+						"rect": {
+							"height": 54,
+							"width": 397,
+							"x": 317.5,
+							"y": 1323.875
+						},
+						"value": "Бензин"
+					},
+					{
+						"label": "Двигател",
+						"rect": {
+							"height": 54,
+							"width": 397,
+							"x": 317.5,
+							"y": 1377.875
+						},
+						"value": "3000 куб.см / 510 к.с."
+					},
+					{
+						"label": "Скорости",
+						"rect": {
+							"height": 41,
+							"width": 397,
+							"x": 317.5,
+							"y": 1431.875
+						},
+						"value": "Автомат"
+					}
+				]
+			},
+			{
+				"heading": "Детайли",
+				"rect": {
+					"height": 288.1875,
+					"width": 447,
+					"x": 763.5,
+					"y": 1155.6875
+				},
+				"rows": [
+					{
+						"label": "Цвят",
+						"rect": {
+							"height": 42,
+							"width": 397,
+							"x": 788.5,
+							"y": 1227.875
+						},
+						"value": "Зелен"
+					},
+					{
+						"label": "Локация",
+						"rect": {
+							"height": 54,
+							"width": 397,
+							"x": 788.5,
+							"y": 1269.875
+						},
+						"value": "Пловдив, гр. Пловдив"
+					},
+					{
+						"label": "Интериор",
+						"rect": {
+							"height": 54,
+							"width": 397,
+							"x": 788.5,
+							"y": 1323.875
+						},
+						"value": "По запитване"
+					},
+					{
+						"label": "Складов №",
+						"rect": {
+							"height": 41,
+							"width": 397,
+							"x": 788.5,
+							"y": 1377.875
+						},
+						"value": "21778068579001193"
+					}
+				]
+			}
+		],
+		"titles": 1,
+		"url": "http://127.0.0.1:6790/bg/inventory/21778068579001193",
+		"viewport": {
+			"height": 1000,
+			"width": 1920
+		}
+	}
+]

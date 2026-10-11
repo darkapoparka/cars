@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Varna",
     "addressLine": "Tsar Osvoboditel Blvd. — 300 m to the right after Doma na Kamiona, towards Varna Airport",
     "address": "Tsar Osvoboditel Blvd. — 300 m to the right after Doma na Kamiona, towards Varna Airport, Varna",
-    "appointment": "Call ahead to confirm opening hours and a viewing."
+    "appointment": "Call ahead to confirm opening hours and a viewing.",
+    "addressShort": "Tsar Osvoboditel Blvd. — 300 m to the right after Doma na Kamiona, towards Varna Airport",
+    "appointmentShort": "Call ahead to confirm opening hours and a viewing."
   },
   "bg": {
     "city": "Варна",
     "addressLine": "бул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището",
     "address": "бул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището",
-    "appointment": "За работно време и оглед се обадете предварително."
+    "appointment": "За работно време и оглед се обадете предварително.",
+    "addressShort": "бул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището",
+    "appointmentShort": "За работно време и оглед се обадете предварително."
   }
 } as const;
 

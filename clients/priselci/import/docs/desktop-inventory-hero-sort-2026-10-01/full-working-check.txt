@@ -1,0 +1,8 @@
+
+> cars-template-import@0.0.1 check
+> svelte-kit sync && svelte-check --tsconfig ./tsconfig.json
+
+Loading svelte-check in workspace: c:\Users\radev\AppData\Local\Temp\cars-import-desktop-polish-20261001-01a0f65e\hero-sort-full-working
+Getting Svelte diagnostics...
+
+svelte-check found 0 errors and 0 warnings

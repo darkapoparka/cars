@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "base": "dd71b96f6ac93b1c9fba5d4a4c0e9aed33759cd5",
+  "donor": "ec9505086e465b37f185c65e02e1aa05c7f3e33a",
+  "createdAt": "2026-10-11T06:43:06.570Z",
+  "dealers": [
+    {
+      "slug": "navara-car",
+      "sourceBeforeTree": "03f5ce9d15e0cbe2ac534e15b60a845fd91cf523",
+      "reviewedSourceTree": "72ee14c1bbd693e198c1c1941c5fdb0cf287e997",
+      "sourceFiles": 13344,
+      "presentation": "neutral-services-v1",
+      "localSourceNotOverwritten": true
+    },
+    {
+      "slug": "day-and-night-auto-group",
+      "sourceBeforeTree": "bb7e3066156c8fab51a687bbf2e6e34aa3667175",
+      "reviewedSourceTree": "e63ba2df8043303d2ae4b3761547a88695e59883",
+      "sourceFiles": 13335,
+      "presentation": "neutral-services-v1",
+      "localSourceNotOverwritten": true
+    },
+    {
+      "slug": "promosale-varna",
+      "sourceBeforeTree": "abc8e27298513f82a3e3ff261ed1bc350033e8b3",
+      "reviewedSourceTree": "6b49bfbec1c91a0971d348bd475fd0102218c290",
+      "sourceFiles": 13356,
+      "presentation": "neutral-services-v1",
+      "localSourceNotOverwritten": true
+    },
+    {
+      "slug": "priselci",
+      "sourceBeforeTree": "0e69a2152822ec4c66d5afc62a95cfebcfe0d465",
+      "reviewedSourceTree": "778634c0e903c7bcc8ff5aa5c9c8b2dd7aa750f4",
+      "sourceFiles": 13723,
+      "presentation": "neutral-services-v1",
+      "localSourceNotOverwritten": true
+    },
+    {
+      "slug": "isauto-varna",
+      "sourceBeforeTree": "b19826aa22c806f314984f983be7f1118fc330f7",
+      "reviewedSourceTree": "0b1cbb697e9572cfd8998f41e3e6580ab8662e67",
+      "sourceFiles": 13231,
+      "presentation": "neutral-services-v1",
+      "localSourceNotOverwritten": true
+    },
+    {
+      "slug": "automarket-varna",
+      "sourceBeforeTree": "58874b1c7e2f2b374a8e9076ce42dfd062cf94ce",
+      "reviewedSourceTree": "1ce1f5283be7793555ef6284f6faffcd4ac5cb88",
+      "sourceFiles": 13847,
+      "presentation": "neutral-services-v1",
+      "localSourceNotOverwritten": true
+    },
+    {
+      "slug": "outletcars-varna",
+      "sourceBeforeTree": "66eae9327509aa18be9d64d09ecc761392bb4ad5",
+      "reviewedSourceTree": "cd8774334154d6a1ac001b92fac9286189529249",
+      "sourceFiles": 13454,
+      "presentation": "neutral-services-v1",
+      "localSourceNotOverwritten": true
+    },
+    {
+      "slug": "perfect-auto-varna",
+      "sourceBeforeTree": "bf5ddc040d62bfce2ac159f3208b3552d2659a6f",
+      "reviewedSourceTree": "7f35382400dd221aba6a15a1018547e0964396cf",
+      "sourceFiles": 13444,
+      "presentation": "neutral-services-v1",
+      "localSourceNotOverwritten": true
+    },
+    {
+      "slug": "avangard-auto",
+      "sourceBeforeTree": "1026240181c2634e6a51d3ec04a1e4e787ccd7a1",
+      "reviewedSourceTree": "c88426885964687b53d067684062b22f0371a0a6",
+      "sourceFiles": 13712,
+      "presentation": "neutral-services-v1",
+      "localSourceNotOverwritten": true
+    },
+    {
+      "slug": "legend-auto",
+      "sourceBeforeTree": "0aac7eb59de662dbc345df55670d387bf8cff45c",
+      "reviewedSourceTree": "00cf99dd16b83a4f52b2af48e014789a72666fc8",
+      "sourceFiles": 13766,
+      "presentation": "neutral-services-v1",
+      "localSourceNotOverwritten": true
+    }
+  ],
+  "checks": {
+    "actualTenPresentationTests": 10,
+    "sharedGateTest": 1,
+    "sharedRegressionTests": 19,
+    "extendedGuidanceTests": 2
+  },
+  "deployed": 0
+}

@@ -31,12 +31,17 @@
 >
 
 <div class="import-estimator">
+	<div class="import-estimator__mobile-summary">
+		<span>{english ? 'Illustrative total' : 'Ориентировъчна крайна цена'}</span><output
+			aria-live="polite">{totals ? money(totals.total) : '—'}</output
+		>
+	</div>
 	<section class="site-panel site-stack">
 		<h2>{english ? 'Cost assumptions' : 'Данни за изчислението'}</h2>
 		<div class="site-fields">
 			<label class="site-field"
 				><span>{english ? 'Vehicle price' : 'Цена на автомобила'} ({site.locale.currency})</span
-				><input type="number" min="0" step="100" bind:value={price} /></label
+				><input type="number" inputmode="decimal" min="0" step="100" bind:value={price} /></label
 			>
 			<label class="site-field"
 				><span>{english ? 'Transport' : 'Транспорт'} ({site.locale.currency})</span><input
@@ -44,6 +49,7 @@
 					min="0"
 					step="50"
 					bind:value={transport}
+					inputmode="decimal"
 				/></label
 			>
 			<label class="site-field"
@@ -53,6 +59,7 @@
 					max="100"
 					step="0.1"
 					bind:value={dutyRate}
+					inputmode="decimal"
 				/></label
 			>
 			<label class="site-field"
@@ -62,11 +69,12 @@
 					max="100"
 					step="0.1"
 					bind:value={vatRate}
+					inputmode="decimal"
 				/></label
 			>
 			<label class="site-field site-field--wide"
 				><span>{english ? 'Preparation' : 'Подготовка и регистрация'} ({site.locale.currency})</span
-				><input type="number" min="0" step="50" bind:value={prep} /></label
+				><input type="number" inputmode="decimal" min="0" step="50" bind:value={prep} /></label
 			>
 		</div>
 		<p class="site-form-note">
@@ -146,6 +154,34 @@
 	@media (max-width: 767.98px) {
 		.import-estimator {
 			grid-template-columns: 1fr;
+		}
+	}
+
+	.import-estimator__mobile-summary {
+		display: none;
+	}
+	@media (max-width: 767.98px) {
+		.import-estimator {
+			gap: var(--bc-space-3);
+		}
+		.import-estimator__mobile-summary {
+			display: grid;
+			gap: var(--bc-space-1);
+			padding: var(--bc-space-4);
+			border: 1px solid var(--bc-border);
+			border-radius: var(--bc-radius-panel);
+			background: var(--bc-white);
+		}
+		.import-estimator__mobile-summary span {
+			color: var(--bc-copy);
+			font-size: var(--bc-text-body);
+		}
+		.import-estimator__mobile-summary output {
+			font: var(--bc-weight-heading) var(--bc-mobile-page-title)/var(--bc-mobile-page-title-leading)
+				var(--bc-font-heading);
+		}
+		.import-estimator > section .import-estimator__total {
+			display: none;
 		}
 	}
 </style>

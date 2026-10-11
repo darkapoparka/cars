@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "format": "mobile-preview-v1",
+  "dealer": "perfect-auto-varna",
+  "name": "Перфект Ауто",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+    "path": "templates/mobile",
+    "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d",
+    "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b"
+  },
+  "sourceDigest": "c9aa0adfdbe75b32af754387437e2b54bb7c9d6588b5dc3cbd9b62adb2085f20",
+  "inventory": {
+    "mode": "dated-listing-snapshot",
+    "count": 6,
+    "observedAt": "2026-09-10"
+  },
+  "personalization": {
+    "profileSha256": "79f8a4d2f2b99c8efb3232e459114ea0760173156c658789cc5c5babca0b540d",
+    "logoPaths": [
+      "/dealer-brand/logo-on-light.webp",
+      "/dealer-brand/logo-on-dark.webp"
+    ],
+    "mediaPaths": [
+      "/assets/perfect-auto/vehicle-01-1.webp",
+      "/assets/perfect-auto/vehicle-01-2.webp",
+      "/assets/perfect-auto/vehicle-01-3.webp",
+      "/assets/perfect-auto/vehicle-01-4.webp",
+      "/assets/perfect-auto/vehicle-01-5.webp",
+      "/assets/perfect-auto/vehicle-02-1.webp",
+      "/assets/perfect-auto/vehicle-02-2.webp",
+      "/assets/perfect-auto/vehicle-02-3.webp",
+      "/assets/perfect-auto/vehicle-02-4.webp",
+      "/assets/perfect-auto/vehicle-02-5.webp",
+      "/assets/perfect-auto/vehicle-03-1.webp",
+      "/assets/perfect-auto/vehicle-03-2.webp",
+      "/assets/perfect-auto/vehicle-03-3.webp",
+      "/assets/perfect-auto/vehicle-03-4.webp",
+      "/assets/perfect-auto/vehicle-03-5.webp",
+      "/assets/perfect-auto/vehicle-04-1.webp",
+      "/assets/perfect-auto/vehicle-04-2.webp",
+      "/assets/perfect-auto/vehicle-04-3.webp",
+      "/assets/perfect-auto/vehicle-04-4.webp",
+      "/assets/perfect-auto/vehicle-04-5.webp",
+      "/assets/perfect-auto/vehicle-05-1.webp",
+      "/assets/perfect-auto/vehicle-05-2.webp",
+      "/assets/perfect-auto/vehicle-05-3.webp",
+      "/assets/perfect-auto/vehicle-05-4.webp",
+      "/assets/perfect-auto/vehicle-05-5.webp",
+      "/assets/perfect-auto/vehicle-06-1.webp",
+      "/assets/perfect-auto/vehicle-06-2.webp",
+      "/assets/perfect-auto/vehicle-06-3.webp",
+      "/assets/perfect-auto/vehicle-06-4.webp",
+      "/assets/perfect-auto/vehicle-06-5.webp"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "mobile/src/lib/showroom-config.ts",
+      "mobile/src/lib/catalog.ts",
+      "mobile/src/lib/dealers.ts",
+      "mobile/src/lib/dealer-inventory.json",
+      "mobile/src/lib/locale.ts",
+      "mobile/src/lib/search.ts",
+      "mobile/src/components/NativeDealerCards.tsx",
+      "mobile/src/components/DealerScreens.tsx",
+      "mobile/src/components/VehicleCard.tsx",
+      "mobile/src/components/ShowroomVehicleCard.tsx",
+      "mobile/src/components/VehicleSections.tsx"
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

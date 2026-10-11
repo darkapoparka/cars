@@ -21,8 +21,8 @@ export default defineConfig({
 	},
 	server: {
 		watch: {
-			// Generated deployment bundles and audit copies are not development sources.
-			ignored: ['**/.audit/**', '**/.vercel/**']
+			// Audit images can be briefly locked on Windows; these folders are not dev sources.
+			ignored: ['**/.audit/**', '**/.vercel/**', '**/docs/**', '**/runtime/**']
 		}
 	},
 	resolve: {

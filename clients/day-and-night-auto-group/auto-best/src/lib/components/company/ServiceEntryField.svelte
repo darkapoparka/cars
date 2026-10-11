@@ -5,7 +5,7 @@
 <script lang="ts">
   import { tick, onDestroy } from 'svelte';
   import { getI18n } from '$lib/locale/context';
-  import { trapDialogTab } from '$lib/ui/overlay';
+  import { preserveScrollOffset, trapDialogTab } from '$lib/ui/overlay';
   import { dialogViewport } from '$lib/ui/dialog-viewport';
   import { parseVehicleReference } from '$data/vehicle-reference';
   import { resolveImportUrl } from '$data/company';
@@ -13,6 +13,7 @@
 
   let { id, mode, value, onapply }: { id: string; mode: 'sell' | 'listing' | 'criteria'; value: ServiceEntryDraft; onapply: (draft: ServiceEntryDraft) => void } = $props();
   const i18n = getI18n();
+  const title = $derived(i18n.t(mode === 'listing' ? 'service.url' : mode === 'sell' ? 'service.entry.vehicleTitle' : 'service.entry.criteriaTitle'));
   const placeholder = $derived(i18n.t(mode === 'sell' ? 'service.entry.vehicle' : mode === 'listing' ? 'service.url' : 'service.entry.criteria'));
   const summary = $derived(mode === 'listing' ? value.reference : [value.make, value.model, value.year].filter(Boolean).join(' ') || value.reference || value.brief);
   let dialog: HTMLDialogElement;
@@ -22,25 +23,27 @@
   let error = $state('');
   let opened = false;
   let returnFocus: HTMLElement;
-  let scrollY = 0;
+  let releaseScroll: ((restoreScroll?: boolean) => void) | undefined;
 
   export async function edit(returnTo?: HTMLElement) {
     draft = { ...value };
     error = '';
     returnFocus = returnTo ?? trigger;
-    scrollY = window.scrollY;
-    document.body.style.setProperty('--dn-service-editor-scroll', `-${scrollY}px`);
+    if (!opened) releaseScroll = preserveScrollOffset('--dn-service-editor-scroll');
     opened = true;
     dialog.showModal();
     await tick();
+    if (!dialog?.open || !dialog.isConnected) return;
     form.querySelector<HTMLInputElement>('input')?.focus();
   }
-  function restore() {
+  function restore() { release(true); }
+
+  function release(restoreScroll: boolean) {
     if (!opened) return;
     opened = false;
-    document.body.style.removeProperty('--dn-service-editor-scroll');
-    window.scrollTo({ top: scrollY, behavior: 'instant' });
-    if (returnFocus?.isConnected) returnFocus.focus({ preventScroll: true });
+    releaseScroll?.(restoreScroll);
+    releaseScroll = undefined;
+    if (restoreScroll && returnFocus?.isConnected) returnFocus.focus({ preventScroll: true });
   }
   function save(event: SubmitEvent) {
     event.preventDefault();
@@ -53,16 +56,16 @@
     onapply(Object.fromEntries(Object.entries(draft).map(([key, text]) => [key, text.trim()])) as ServiceEntryDraft);
     dialog.close();
   }
-  onDestroy(() => { if (dialog?.open) dialog.close(); restore(); });
+  onDestroy(() => { release(false); if (dialog?.open) dialog.close(); });
 </script>
 
-<button {id} class="dn-service-entry__field dn-entry-field" bind:this={trigger} type="button" onclick={() => edit()} aria-haspopup="dialog" aria-controls={`${id}-dialog`} aria-label={`${placeholder}${summary ? `: ${summary}` : ''}`} title={summary || placeholder}>
+<button {id} class="dn-service-entry__field dn-entry-field dn-entry-field--prominent" bind:this={trigger} type="button" onclick={() => edit()} aria-haspopup="dialog" aria-controls={`${id}-dialog`} aria-label={`${placeholder}${summary ? `: ${summary}` : ''}`} title={summary || placeholder}>
   <MobileActionIcon name={mode === 'listing' ? 'article' : 'search'} size={22} />
   <span class:placeholder={!summary}>{summary || placeholder}</span>
 </button>
 
 <dialog id={`${id}-dialog`} class="dn-service-editor" bind:this={dialog} {@attach dialogViewport} onkeydown={trapDialogTab} aria-labelledby={`${id}-title`} onclose={restore} onclick={(event) => { if (event.target === dialog) dialog.close(); }}>
-  <header class="dn-mobile-overlay-header"><h2 id={`${id}-title`}>{i18n.t(mode === 'listing' ? 'service.url' : mode === 'sell' ? 'service.entry.vehicleTitle' : 'service.entry.criteriaTitle')}</h2><button class="dn-icon-button dn-overlay-close" type="button" aria-label={i18n.t('m_aea2bd97046c')} onclick={() => dialog.close()}><MobileActionIcon name="close" size={22} /></button></header>
+    <header class="dn-mobile-overlay-heading dn-mobile-overlay-header"><h2 id={`${id}-title`}>{title}</h2><button class="dn-icon-button dn-overlay-close" type="button" aria-label={i18n.t('m_aea2bd97046c')} onclick={() => dialog.close()}><MobileActionIcon name="close" size={22} /></button></header>
   <form bind:this={form} onsubmit={save}>
     <div class="dn-service-editor__fields">
       {#if mode === 'listing'}
@@ -80,14 +83,14 @@
       {/if}
       {#if error}<p id={`${id}-error`} role="alert">{error}</p>{/if}
     </div>
-    <footer><button class="dn-service-editor__cancel" type="button" onclick={() => dialog.close()}>{i18n.t('m_19766ed6ccb2')}</button><button class="dn-service-editor__save" type="submit">{i18n.t('m_1509f561f241')}</button></footer>
+    <footer class="dn-mobile-overlay-footer"><button class="dn-service-editor__cancel dn-mobile-overlay-clear" type="button" onclick={() => dialog.close()}>{i18n.t('m_19766ed6ccb2')}</button><button class="dn-service-editor__save dn-mobile-overlay-action" type="submit">{i18n.t('m_1509f561f241')}</button></footer>
   </form>
 </dialog>
 
 <style>
-  .dn-service-entry__field { display: flex; align-items: center; gap: var(--dn-space-3); width: 100%; min-height: var(--dn-control-hit-height); padding: var(--dn-space-2) var(--dn-space-4); color: var(--dn-ink); font: var(--dn-entry-font); text-align: left; cursor: pointer; }
-  .dn-service-entry__field span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .placeholder { color: var(--dn-muted); }
+  .dn-service-entry__field { display: flex; align-items: center; gap: var(--dn-space-2); width: 100%; min-height: var(--dn-entry-height); padding: var(--dn-space-2) var(--dn-space-3); color: var(--dn-entry-prominent-ink); font: var(--dn-entry-prominent-font); text-align: left; cursor: pointer; }
+  .dn-service-entry__field > span { min-width: 0; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .dn-service-entry__field > :global(svg), .placeholder { color: var(--dn-entry-prominent-muted); }
   :global(body:has(.dn-service-editor[open])) { position: fixed; top: var(--dn-service-editor-scroll, 0); width: 100%; overflow: hidden; }
   .dn-service-editor { position: fixed; inset: 0; width: 100%; max-width: none; height: 100dvh; max-height: 100dvh; margin: 0; padding: 0; border: 0; border-radius: 0; background: var(--dn-white); color: var(--dn-ink); overflow: hidden; }
   .dn-service-editor[open] { display: flex; flex-direction: column; }
@@ -98,13 +101,21 @@
   form { display: flex; flex: 1; min-height: 0; flex-direction: column; }
   .dn-service-editor__fields { display: grid; gap: var(--dn-space-4); flex: 1; min-height: 0; align-content: start; padding: var(--dn-space-5) var(--dn-space-4); overflow-y: auto; overscroll-behavior: contain; }
   label { display: grid; min-width: 0; gap: var(--dn-space-2); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-medium); line-height: var(--dn-leading-meta); }
-  input, textarea { width: 100%; min-width: 0; min-height: var(--dn-control-height-editor); padding: var(--dn-space-2) var(--dn-space-3); border: 1px solid var(--dn-entry-line); border-radius: var(--dn-radius-control); background: var(--dn-entry-surface); color: var(--dn-ink); font: var(--dn-overlay-field-font); }
+  input, textarea { width: 100%; min-width: 0; min-height: var(--dn-control-height-editor); padding: var(--dn-space-2) var(--dn-space-3); border: 0; border-radius: var(--dn-radius-control); background: var(--dn-entry-surface); color: var(--dn-ink); font: var(--dn-overlay-field-font); }
   textarea { resize: vertical; }
   .dn-service-editor__pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-3); }
   p { margin: 0; color: var(--dn-red); font-size: var(--dn-text-meta); line-height: var(--dn-leading-body); }
   footer { display: flex; flex-shrink: 0; justify-content: space-between; gap: var(--dn-space-3); padding: var(--dn-space-3) var(--dn-space-4) max(var(--dn-space-3), env(safe-area-inset-bottom)); border-top: 1px solid var(--dn-line); }
   footer button { min-width: 0; min-height: var(--dn-overlay-control-height); padding: var(--dn-space-2) var(--dn-space-5); border: 0; border-radius: var(--dn-radius-button); overflow-wrap: anywhere; cursor: pointer; }
   .dn-service-editor__cancel { background: var(--dn-home-panel); color: var(--dn-ink); font: var(--dn-overlay-option-font); }
-  .dn-service-editor__save { background: var(--dn-red); color: var(--dn-white); font: var(--dn-overlay-action-font); }
+  .dn-service-editor__save { background: var(--dn-primary-action-surface); color: var(--dn-white); font: var(--dn-overlay-action-font); }
   .dn-service-editor :is(button,input,textarea):focus-visible, .dn-service-entry__field:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 2px; }
+  @media (max-width: 767px) {
+    .dn-service-editor { inset: var(--dn-form-dialog-top) 0 auto; height: var(--dn-form-dialog-height); max-height: var(--dn-form-dialog-height); }
+    form { overflow-y: auto; overscroll-behavior: contain; }
+    .dn-service-editor__fields { flex: 0 0 auto; padding: var(--dn-space-3) var(--dn-overlay-gutter) var(--dn-space-5); overflow: visible; }
+    input, textarea { min-height: var(--dn-overlay-control-height); border: 0; background: var(--dn-entry-surface); }
+    .dn-service-editor :is(input, textarea):focus-visible { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
+    footer { border-top: 0; }
+  }
 </style>

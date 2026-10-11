@@ -7,46 +7,53 @@ export function DealerVehicleFacts({
     value: string;
     displayValue?: string;
     mobileDisplayValue?: string;
+    mobileMediumDisplayValue?: string;
   }[];
   readonly label: string;
 }) {
-  const rows = Array.from({ length: Math.ceil(facts.length / 2) }, (_, index) =>
-    facts.slice(index * 2, index * 2 + 2)
-  );
-
   return (
     <>
-      <div className="lg:hidden">
+      <div className="@container/vehicle-facts lg:hidden">
         <ul
           aria-label={label}
-          className="grid gap-1.5 text-card-spec text-secondary-foreground"
+          className="flex gap-1 text-micro text-secondary-foreground min-[360px]:text-card-spec"
           data-slot="vehicle-card-spec-pills"
         >
-          {rows.map((row) => (
-            <li className="grid min-w-0 grid-cols-2 gap-1.5" key={row[0].id}>
-              {row.map((fact) => (
-                <span
-                  className="flex min-h-6 min-w-0 max-w-full items-center justify-center rounded-md border border-border/40 bg-secondary px-1.5 py-0.5 font-normal tabular-nums"
-                  data-fact={fact.id}
-                  data-slot="vehicle-card-spec"
-                  key={fact.id}
-                  title={fact.value}
-                >
-                  <span
-                    aria-hidden={
-                      fact.mobileDisplayValue || fact.displayValue
-                        ? true
-                        : undefined
-                    }
-                    className="min-w-0 truncate"
-                  >
-                    {fact.mobileDisplayValue ?? fact.displayValue ?? fact.value}
-                  </span>
-                  {fact.mobileDisplayValue || fact.displayValue ? (
-                    <span className="sr-only">{fact.value}</span>
-                  ) : null}
-                </span>
-              ))}
+          {facts.map((fact) => (
+            <li
+              className="flex min-h-6 shrink-0 items-center justify-center rounded-md border border-border/40 bg-secondary px-1.5 py-0.5 font-normal tabular-nums"
+              data-fact={fact.id}
+              data-slot="vehicle-card-spec"
+              key={fact.id}
+              title={fact.value}
+            >
+              <span
+                aria-hidden={
+                  fact.mobileDisplayValue || fact.displayValue
+                    ? true
+                    : undefined
+                }
+                className="whitespace-nowrap"
+              >
+                {fact.mobileMediumDisplayValue ? (
+                  <>
+                    <span className="@min-[280px]/vehicle-facts:hidden">
+                      {fact.mobileDisplayValue}
+                    </span>
+                    <span className="@min-[280px]/vehicle-facts:inline @min-[310px]/vehicle-facts:hidden hidden">
+                      {fact.mobileMediumDisplayValue}
+                    </span>
+                    <span className="@min-[310px]/vehicle-facts:inline hidden">
+                      {fact.value}
+                    </span>
+                  </>
+                ) : (
+                  (fact.mobileDisplayValue ?? fact.displayValue ?? fact.value)
+                )}
+              </span>
+              {fact.mobileDisplayValue || fact.displayValue ? (
+                <span className="sr-only">{fact.value}</span>
+              ) : null}
             </li>
           ))}
         </ul>

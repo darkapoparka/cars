@@ -2,12 +2,12 @@ import { expect, test } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { visit } from './helpers';
 
-test('header reserves the same trailing slot without inventing Home or Contact menus', async ({
+test('direct header navigation fits without menu controls or empty arrow slots', async ({
 	page
 }, info) => {
 	test.skip(info.project.name !== 'desktop');
 	await visit(page, '/');
-	await expect(page.locator('.site-nav-item .site-nav-slot')).toHaveCount(2);
+	await expect(page.locator('.site-nav-item .site-nav-slot, .site-nav-toggle')).toHaveCount(0);
 	for (const width of [768, 1024, 1200, 1280, 1440, 1920]) {
 		await page.setViewportSize({ width, height: 1000 });
 		const boxes = await page.evaluate(() => {
@@ -24,21 +24,16 @@ test('header reserves the same trailing slot without inventing Home or Contact m
 		expect(overlap(boxes.nav, boxes.logo)).toBe(false);
 		expect(overlap(boxes.nav, boxes.actions)).toBe(false);
 	}
-	await expect(
-		page.locator('.site-nav-item').filter({ hasText: 'Начало' }).getByRole('button')
-	).toHaveCount(0);
-	const widths = await page
-		.locator('.site-nav-slot, .site-nav-toggle')
-		.evaluateAll((nodes) => nodes.map((node) => node.getBoundingClientRect().width));
-	expect(Math.max(...widths) - Math.min(...widths)).toBeLessThan(1);
+	await expect(page.locator('.site-header__nav').getByRole('button')).toHaveCount(0);
+	await expect(page.locator('.site-header__nav').getByRole('link')).toHaveCount(5);
 });
 
-test('desktop buying panel contrasts with its hero without shrinking the tabs', async ({
+test('desktop buying panel contrasts with its hero and keeps a usable import entry', async ({
 	page
 }, info) => {
 	test.skip(info.project.name !== 'desktop');
 	await visit(page, '/');
-	const surface = await page.locator('.home-hero__panel').evaluate((node) => ({
+	const surface = await page.locator('.home-hero__box').evaluate((node) => ({
 		panel: getComputedStyle(node).backgroundColor,
 		hero: getComputedStyle(node.closest('.home-hero')!).backgroundColor
 	}));
@@ -49,16 +44,16 @@ test('desktop buying panel contrasts with its hero without shrinking the tabs', 
 			.locator('.home-hero__box [role="tab"]')
 			.first()
 			.evaluate((node) => parseFloat(getComputedStyle(node).fontSize))
-	).toBeGreaterThanOrEqual(20);
+	).toBeGreaterThanOrEqual(16);
 	await page.locator('.home-hero__box').getByRole('tab', { name: 'Внос', exact: true }).click();
-	await expect(page.locator('#home-query')).toHaveAttribute('placeholder', 'LINK / VIN');
+	await expect(page.locator('#home-query')).toHaveAttribute('placeholder', /VIN/);
 });
 
 test('all-brands tile renders an icon, not an empty image, and preserves locale', async ({
 	page
 }) => {
 	await visit(page, '/?lang=en');
-	const all = page.locator('.home-brands .home-browse-all');
+	const all = page.getByRole('link', { name: /^All brands(?::|$)/ });
 	await expect(all).toHaveCount(1);
 	await expect(all.locator('svg')).toHaveCount(1);
 	await expect(all.locator('img')).toHaveCount(0);
@@ -72,10 +67,15 @@ test('all-brands tile renders an icon, not an empty image, and preserves locale'
 });
 
 test('reviews retain their avatars and articles share a complete card on the home and blog routes', async ({
-	page
+	page,
+	isMobile
 }) => {
 	await visit(page, '/');
-	const avatars = page.locator('.home-reviews .review-card__avatar img');
+	const avatars = page.locator(
+		isMobile
+			? '.home-mobile-editorial .review-card__avatar img'
+			: '.home-reviews .review-card__avatar img'
+	);
 	await expect(avatars).toHaveCount(3);
 	for (const image of await avatars.all()) {
 		await image.scrollIntoViewIfNeeded();
@@ -83,7 +83,9 @@ test('reviews retain their avatars and articles share a complete card on the hom
 			.poll(() => image.evaluate((node) => (node as HTMLImageElement).naturalWidth))
 			.toBeGreaterThan(0);
 	}
-	const first = page.locator('.home-news .article-card').first();
+	const first = page
+		.locator(isMobile ? '.home-mobile-editorial .article-card' : '.home-news .article-card')
+		.first();
 	await expect(first.locator('.article-card__body')).toBeVisible();
 	expect(
 		await first

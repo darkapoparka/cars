@@ -1,0 +1,342 @@
+{
+	"bg": {
+		"320": {
+			"scrollWidth": 320,
+			"titles": [
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Подбрани автомобили",
+					"width": 266
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Проверка на обява",
+					"width": 266
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Продажба на автомобил",
+					"width": 266
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Документи и регистрация",
+					"width": 266
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Огледи с уговорка",
+					"width": 266
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Сравнение на модели",
+					"width": 266
+				}
+			],
+			"viewport": 320
+		},
+		"360": {
+			"scrollWidth": 360,
+			"titles": [
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Подбрани автомобили",
+					"width": 306
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Проверка на обява",
+					"width": 306
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Продажба на автомобил",
+					"width": 306
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Документи и регистрация",
+					"width": 306
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Огледи с уговорка",
+					"width": 306
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Сравнение на модели",
+					"width": 306
+				}
+			],
+			"viewport": 360
+		},
+		"375": {
+			"scrollWidth": 375,
+			"titles": [
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Подбрани автомобили",
+					"width": 321
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Проверка на обява",
+					"width": 321
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Продажба на автомобил",
+					"width": 321
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Документи и регистрация",
+					"width": 321
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Огледи с уговорка",
+					"width": 321
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Сравнение на модели",
+					"width": 321
+				}
+			],
+			"viewport": 375
+		},
+		"390": {
+			"scrollWidth": 390,
+			"titles": [
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Подбрани автомобили",
+					"width": 228
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Проверка на обява",
+					"width": 228
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Продажба на автомобил",
+					"width": 228
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Документи и регистрация",
+					"width": 228
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Огледи с уговорка",
+					"width": 228
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Сравнение на модели",
+					"width": 228
+				}
+			],
+			"viewport": 390
+		}
+	},
+	"en": {
+		"320": {
+			"scrollWidth": 320,
+			"titles": [
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Selected cars",
+					"width": 266
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Listing review",
+					"width": 266
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Selling a car",
+					"width": 266
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Documents and registration",
+					"width": 266
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Viewings by appointment",
+					"width": 266
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Model comparison",
+					"width": 266
+				}
+			],
+			"viewport": 320
+		},
+		"360": {
+			"scrollWidth": 360,
+			"titles": [
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Selected cars",
+					"width": 306
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Listing review",
+					"width": 306
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Selling a car",
+					"width": 306
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Documents and registration",
+					"width": 306
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Viewings by appointment",
+					"width": 306
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Model comparison",
+					"width": 306
+				}
+			],
+			"viewport": 360
+		},
+		"375": {
+			"scrollWidth": 375,
+			"titles": [
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Selected cars",
+					"width": 321
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Listing review",
+					"width": 321
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Selling a car",
+					"width": 321
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Documents and registration",
+					"width": 321
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Viewings by appointment",
+					"width": 321
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Model comparison",
+					"width": 321
+				}
+			],
+			"viewport": 375
+		},
+		"390": {
+			"scrollWidth": 390,
+			"titles": [
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Selected cars",
+					"width": 228
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Listing review",
+					"width": 228
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Selling a car",
+					"width": 228
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Documents and registration",
+					"width": 228
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Viewings by appointment",
+					"width": 228
+				},
+				{
+					"fontSize": "20px",
+					"lines": 1,
+					"title": "Model comparison",
+					"width": 228
+				}
+			],
+			"viewport": 390
+		}
+	}
+}

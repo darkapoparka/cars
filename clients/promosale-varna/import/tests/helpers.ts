@@ -1,5 +1,5 @@
 import { promptVersion } from './locale-fixture';
-import { expect, test, type Page } from '@playwright/test';
+import { expect, test, type Page, type Locator } from '@playwright/test';
 
 /** Wait for the app's hydration boundary, not a guessed sleep or network-idle timeout. */
 export async function visit(page: Page, url: string) {
@@ -15,4 +15,13 @@ export async function visit(page: Page, url: string) {
 	await expect(page.locator('html')).toHaveAttribute('data-daynight-hydrated', 'true');
 	await page.evaluate(() => document.fonts.ready);
 	return response;
+}
+
+export async function controlHeight(locator: Locator): Promise<number> {
+	const height = await locator.evaluate((node) =>
+		parseFloat(getComputedStyle(node).getPropertyValue('--bc-control-height-standard'))
+	);
+	expect(Number.isFinite(height)).toBe(true);
+	expect(height).toBeGreaterThanOrEqual(42);
+	return height;
 }

@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "dealer": "automarket-varna",
+  "family": "import",
+  "base": "/variant-3",
+  "defaultLocale": "bg",
+  "source": {
+    "inventory": {
+      "path": "carwow/src/lib/data/daynight-current-inventory.ts",
+      "sha256": "f711b9e0d2b06e74146fb2eeb5f6192420f93b9ef29b4cf51edc53e683b74fdb"
+    },
+    "vehicles": {
+      "path": "carwow/src/lib/data/daynight-vehicles.ts",
+      "sha256": "58507cc762f0d0763f6d521a86d8474729fd6cf112b7dd072170f350a2c11d84"
+    },
+    "routeFactorySha256": "094d5128ad5e689e41486a228b1de6d11c54efbe051ce0e75c0170709d8571c9"
+  },
+  "profileSha256": "a5c0bb9015512e039c03e62ed8d83b68806702bf2e0160fb060100a22be03387",
+  "entries": [
+    {
+      "sourceId": "11785576029711434",
+      "slug": "ford-focus-1-6d-711434",
+      "targetId": "11785576029711434"
+    },
+    {
+      "sourceId": "11714813323555032",
+      "slug": "opel-astra-1-4i-555032",
+      "targetId": "11714813323555032"
+    },
+    {
+      "sourceId": "11776340911802527",
+      "slug": "opel-corsa-1-2i-802527",
+      "targetId": "11776340911802527"
+    },
+    {
+      "sourceId": "11749035353735625",
+      "slug": "ford-fiesta-1-25i-735625",
+      "targetId": "11749035353735625"
+    },
+    {
+      "sourceId": "11646385836417474",
+      "slug": "honda-jazz-1-4-417474",
+      "targetId": "11646385836417474"
+    },
+    {
+      "sourceId": "11730904111658789",
+      "slug": "opel-meriva-1-4-658789",
+      "targetId": "11730904111658789"
+    },
+    {
+      "sourceId": "11664339654646848",
+      "slug": "vw-golf-1-6tdi-646848",
+      "targetId": "11664339654646848"
+    },
+    {
+      "sourceId": "21702843989932817",
+      "slug": "nissan-qashqai-1-6i-932817",
+      "targetId": "21702843989932817"
+    },
+    {
+      "sourceId": "21777122320477562",
+      "slug": "dacia-duster-1-5dci-477562",
+      "targetId": "21777122320477562"
+    },
+    {
+      "sourceId": "21777123440688076",
+      "slug": "mazda-cx-3-1-5d-688076",
+      "targetId": "21777123440688076"
+    },
+    {
+      "sourceId": "11764611602990623",
+      "slug": "vw-passat-2-0tdi-990623",
+      "targetId": "11764611602990623"
+    },
+    {
+      "sourceId": "11770373711900410",
+      "slug": "suzuki-swift-1-2-900410",
+      "targetId": "11770373711900410"
+    },
+    {
+      "sourceId": "21732197261233954",
+      "slug": "bmw-x3-233954",
+      "targetId": "21732197261233954"
+    },
+    {
+      "sourceId": "21781689983828599",
+      "slug": "vw-tiguan-2-0tdi-828599",
+      "targetId": "21781689983828599"
+    },
+    {
+      "sourceId": "21784142258144582",
+      "slug": "mercedes-benz-glc-144582",
+      "targetId": "21784142258144582"
+    },
+    {
+      "sourceId": "11750340593495216",
+      "slug": "audi-a4-495216",
+      "targetId": "11750340593495216"
+    }
+  ],
+  "retired": []
+}

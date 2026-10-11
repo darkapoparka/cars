@@ -1,23 +1,21 @@
 <script lang="ts">
+	import { publicPageCopy } from '$lib/content/desktop-copy';
 	import { pageDescriptions } from '$lib/content/seo';
 	import type { PageProps } from './$types';
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
 	import Action from '$lib/components/common/Action.svelte';
 	let { data }: PageProps = $props();
-	const english = $derived(data.locale === 'en');
+	const copy = $derived(publicPageCopy[data.locale].faq);
 </script>
 
 <svelte:head
-	><title
-		>{english ? 'Frequently asked questions' : 'Често задавани въпроси'} — {data.site.identity
-			.name}</title
-	><meta
+	><title>{copy.title} — {data.site.identity.name}</title><meta
 		name="description"
 		content={pageDescriptions.faqs[data.locale === 'en' ? 'en' : 'bg']}
 	/></svelte:head
 >
 <main id="main-content">
-	<PageIntro title={english ? 'Frequently asked questions' : 'Често задавани въпроси'} />
+	<PageIntro title={copy.title} />
 	<div class="site-container faq-page">
 		{#each data.groups as group (group.title)}<section class="site-stack">
 				<h2 class="site-heading">{group.title}</h2>
@@ -28,9 +26,7 @@
 						</details>{/each}
 				</div>
 			</section>{/each}
-		<Action href="/contact" variant="secondary"
-			>{english ? 'Ask a question' : 'Задай въпрос'}</Action
-		>
+		<Action href="/contact" variant="secondary">{copy.ask}</Action>
 	</div>
 </main>
 
@@ -76,12 +72,29 @@
 		line-height: var(--bc-leading-prose);
 	}
 	@media (min-width: 768px) {
+		.faq-group {
+			border-radius: var(--bc-desktop-card-radius);
+			box-shadow: var(--bc-editorial-shadow);
+		}
 		.faq-page > :global(.site-action) {
 			justify-self: center;
 		}
 		summary {
 			font-family: var(--bc-font-body);
 			font-size: var(--bc-text-entry);
+		}
+		summary:hover {
+			background: var(--bc-surface-hover);
+		}
+		summary:focus-visible {
+			outline: 2px solid var(--bc-focus);
+			outline-offset: -3px;
+		}
+		summary span {
+			flex-shrink: 0;
+			width: var(--bc-space-6);
+			text-align: center;
+			color: var(--bc-copy);
 		}
 		p {
 			font-size: var(--bc-text-prose);

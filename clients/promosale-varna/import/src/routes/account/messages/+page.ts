@@ -1,1 +1,2 @@
-export const csr = false;
+// Shared mobile navigation and account controls require hydration.
+export const csr = true;

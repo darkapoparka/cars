@@ -1,0 +1,86 @@
+{
+  "complete": true,
+  "base": "http://127.0.0.1:6791",
+  "results": [
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "passed": true,
+      "checks": [
+        "44px full tap targets",
+        "saved at transparent edge and persisted",
+        "unsaved at transparent edge",
+        "share opened at transparent edge",
+        "native telephone destination",
+        "inquiry opened without editable focus",
+        "inquiry dismissed",
+        "compare opened at transparent edge",
+        "compare dismissed",
+        "back returned to inventory"
+      ],
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 320,
+      "height": 540,
+      "passed": true,
+      "checks": [
+        "44px full tap targets",
+        "saved at transparent edge and persisted",
+        "unsaved at transparent edge",
+        "share opened at transparent edge",
+        "native telephone destination",
+        "inquiry opened without editable focus",
+        "inquiry dismissed",
+        "compare opened at transparent edge",
+        "compare dismissed",
+        "back returned to inventory"
+      ],
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 390,
+      "height": 844,
+      "passed": true,
+      "checks": [
+        "44px full tap targets",
+        "saved at transparent edge and persisted",
+        "unsaved at transparent edge",
+        "share opened at transparent edge",
+        "native telephone destination",
+        "inquiry opened without editable focus",
+        "inquiry dismissed",
+        "compare opened at transparent edge",
+        "compare dismissed",
+        "back returned to inventory"
+      ],
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 320,
+      "height": 540,
+      "passed": true,
+      "checks": [
+        "44px full tap targets",
+        "saved at transparent edge and persisted",
+        "unsaved at transparent edge",
+        "share opened at transparent edge",
+        "native telephone destination",
+        "inquiry opened without editable focus",
+        "inquiry dismissed",
+        "compare opened at transparent edge",
+        "compare dismissed",
+        "back returned to inventory"
+      ],
+      "errors": []
+    }
+  ]
+}

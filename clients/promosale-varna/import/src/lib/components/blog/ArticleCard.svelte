@@ -1,16 +1,31 @@
 <script lang="ts">
 	import { assetHref } from '$lib/utils/assets';
+	import { editorialCopy } from '$lib/content/editorial';
 	import type { BlogPost } from '$lib/data/blog';
 	import { linkHref } from '$lib/utils/links';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	let {
 		post,
 		english = false,
-		level = 3
-	}: { post: BlogPost; english?: boolean; level?: 2 | 3 } = $props();
+		level = 3,
+		compact = false,
+		mobileRow = false,
+		readLabel
+	}: {
+		post: BlogPost;
+		english?: boolean;
+		level?: 2 | 3;
+		compact?: boolean;
+		mobileRow?: boolean;
+		readLabel?: string;
+	} = $props();
 </script>
 
-<article class="article-card">
+<article
+	class="article-card"
+	class:article-card--compact={compact}
+	class:article-card--mobile-row={mobileRow}
+>
 	<a class="article-card__link" href={linkHref('/blog/' + post.slug + (english ? '?lang=en' : ''))}>
 		<img
 			class="article-card__image"
@@ -28,7 +43,7 @@
 			>
 			<p>{post.excerpt}</p>
 			<span class="article-card__more"
-				>{english ? 'Read article' : 'Прочети статията'}<ArrowRight
+				>{readLabel ?? editorialCopy[english ? 'en' : 'bg'].read}<ArrowRight
 					size={18}
 					aria-hidden="true"
 				/></span
@@ -68,7 +83,7 @@
 		height: auto;
 		aspect-ratio: 1.6;
 		object-fit: contain;
-		background: #f1f3f5;
+		background: var(--bc-surface);
 	}
 	.article-card__body {
 		display: flex;
@@ -119,9 +134,43 @@
 		color: var(--bc-accent);
 	}
 	@media (min-width: 768px) {
+		.article-card__link {
+			border-radius: var(--bc-desktop-card-radius);
+		}
+		.article-card__image {
+			width: calc(100% - var(--bc-space-2) * 2);
+			margin: var(--bc-space-2) var(--bc-space-2) 0;
+			border-radius: var(--bc-desktop-media-radius);
+		}
+		.article-card__title {
+			font-family: var(--bc-font-body);
+			font-size: var(--bc-desktop-card-heading);
+		}
+		.article-card__more {
+			font-weight: var(--bc-weight-action);
+		}
+		.article-card--compact .article-card__image {
+			aspect-ratio: 2.4;
+			object-fit: cover;
+		}
+		.article-card--compact .article-card__body {
+			padding: var(--bc-space-5);
+		}
+		.article-card--compact .article-card__title {
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			line-clamp: 2;
+			overflow: hidden;
+			min-height: 2lh;
+			font-size: var(--bc-text-h5);
+		}
+		.article-card--compact p {
+			display: none;
+		}
 		p,
 		.article-card__more {
-			font-size: var(--bc-text-prose);
+			font-size: var(--bc-text-body);
 		}
 		p {
 			line-height: var(--bc-leading-body-lg);
@@ -140,6 +189,39 @@
 			line-clamp: 2;
 			overflow: hidden;
 			min-height: 44px;
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		.article-card--mobile-row .article-card__link {
+			display: grid;
+			grid-template-columns: 32% minmax(0, 1fr);
+		}
+		.article-card--mobile-row .article-card__image {
+			height: 100%;
+			min-height: 160px;
+			aspect-ratio: auto;
+		}
+		.article-card--mobile-row .article-card__body {
+			min-width: 0;
+			gap: var(--bc-space-2);
+			padding: var(--bc-space-3);
+		}
+		.article-card--mobile-row p,
+		.article-card--mobile-row .article-card__meta span:first-child {
+			display: none;
+		}
+		.article-card--mobile-row .article-card__title {
+			font-size: var(--bc-text-control);
+			line-height: 1.25;
+			min-height: 0;
+			-webkit-line-clamp: 3;
+			line-clamp: 3;
+		}
+		.article-card--mobile-row .article-card__more {
+			padding: 0;
+			font-size: var(--bc-text-body);
+			font-weight: var(--bc-weight-action);
 		}
 	}
 </style>

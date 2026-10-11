@@ -1,0 +1,8 @@
+
+> cars-template-import@0.0.1 check
+> svelte-kit sync && svelte-check --tsconfig ./tsconfig.json
+
+Loading svelte-check in workspace: l:\CODEX\cars\templates\import\runtime\astra-review-2026-10-08\verification
+Getting Svelte diagnostics...
+
+svelte-check found 0 errors and 0 warnings

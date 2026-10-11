@@ -7,6 +7,7 @@
 	import ArrowUpRight from '@lucide/svelte/icons/arrow-up-right';
 	import Modal from '$lib/components/common/Modal.svelte';
 	import Action from '$lib/components/common/Action.svelte';
+	import { inventoryDialogCopy } from '$lib/content/inventory-desktop-controls';
 	import { imageFallback } from '$lib/browser/image-fallback';
 	import { linkHref } from '$lib/utils/links';
 	import type { AuxeroInventoryVehicleCard } from '$lib/domain/vehicle-card';
@@ -25,6 +26,7 @@
 		filters?: Snippet;
 		onclear?: () => void;
 	} = $props();
+	const copy = $derived(inventoryDialogCopy[english ? 'en' : 'bg']);
 	const formId = $props.id();
 	let input = $state<HTMLInputElement | null>(null);
 	let cards = $state<AuxeroInventoryVehicleCard[]>([]);
@@ -90,7 +92,7 @@
 
 <Modal
 	bind:open
-	title={english ? 'Find a car' : 'Търсене на автомобили'}
+	title={copy.searchTitle}
 	wide
 	bodyTone="muted"
 	class="vehicle-search-dialog"
@@ -104,9 +106,7 @@
 				{/each}
 				<div class="vehicle-search__input">
 					<Search size={22} aria-hidden="true" />
-					<label class="sr-only" for={formId + '-query'}
-						>{english ? 'Make, model or keyword' : 'Марка, модел или ключова дума'}</label
-					>
+					<label class="sr-only" for={formId + '-query'}>{copy.keyword}</label>
 					<input
 						id={formId + '-query'}
 						bind:this={input}
@@ -114,14 +114,12 @@
 						name="keyword"
 						type="search"
 						autocomplete="off"
-						placeholder={english
-							? 'Search make, model or keyword'
-							: 'Търси марка, модел или ключова дума'}
+						placeholder={copy.searchPlaceholder}
 					/>
 					{#if keyword}<button
 							type="button"
 							class="vehicle-search__clear-query"
-							aria-label={english ? 'Clear search text' : 'Изчисти търсенето'}
+							aria-label={copy.clearSearch}
 							onclick={() => {
 								keyword = '';
 								input?.focus();
@@ -132,34 +130,24 @@
 			{#if filters}<div class="vehicle-search__filters">{@render filters()}</div>{/if}
 		</div>
 	{/snippet}
-	<section
-		class="vehicle-search__results"
-		aria-label={english ? 'Matching cars' : 'Намерени автомобили'}
-		aria-busy={loading}
-	>
+	<section class="vehicle-search__results" aria-label={copy.matchingCars} aria-busy={loading}>
 		{#if failed}
 			<div class="vehicle-search__empty" role="status">
 				<p>
-					{english
-						? 'The preview is unavailable. Open the catalogue to see the results.'
-						: 'Прегледът не се зареди. Отвори каталога, за да видиш резултатите.'}
+					{copy.previewUnavailable}
 				</p>
 			</div>
 		{:else if count === 0}
 			<div class="vehicle-search__empty" role="status">
 				<Search size={28} aria-hidden="true" />
-				<h3>{english ? 'No matching cars' : 'Няма намерени автомобили'}</h3>
+				<h3>{copy.noMatches}</h3>
 				<p>
-					{english
-						? 'Change the search or remove a filter.'
-						: 'Промени търсенето или премахни филтър.'}
+					{copy.adjustSearch}
 				</p>
-				<Action variant="secondary" onclick={clear}
-					>{english ? 'Clear filters' : 'Изчисти филтрите'}</Action
-				>
+				<Action variant="secondary" onclick={clear}>{copy.clearFilters}</Action>
 			</div>
 		{:else if loading && !cards.length}
-			<div class="vehicle-search__loading" role="status">{english ? 'Searching…' : 'Търсене…'}</div>
+			<div class="vehicle-search__loading" role="status">{copy.searching}</div>
 		{:else}
 			<ul class:vehicle-search__list--pending={loading}>
 				{#each cards as card (card.slug)}
@@ -195,14 +183,10 @@
 	</section>
 	{#snippet footer()}
 		<div class="vehicle-search__actions">
-			<Action variant="secondary" onclick={clear}>{english ? 'Clear' : 'Изчисти'}</Action>
+			<Action variant="secondary" onclick={clear}>{copy.clear}</Action>
 			<Action type="submit" form={formId} size="primary">
 				<Search size={19} aria-hidden="true" />
-				{count === null || loading
-					? english
-						? 'Show cars'
-						: 'Покажи автомобили'
-					: (english ? 'Show cars' : 'Покажи автомобили') + ' (' + count + ')'}
+				{count === null || loading ? copy.showCars : copy.showCars + ' (' + count + ')'}
 			</Action>
 		</div>
 	{/snippet}
@@ -365,19 +349,27 @@
 			padding-top: 0;
 		}
 		.vehicle-search__input {
+			border-color: transparent;
 			border-radius: var(--bc-radius-md);
+			background: var(--bc-control);
 		}
-		.vehicle-search__actions :global(.site-action) {
-			min-height: var(--bc-control-height-primary);
-			font-size: var(--bc-text-control);
-			border-radius: var(--bc-radius-md);
+		.vehicle-search__input:hover {
+			border-color: transparent;
+			background: var(--bc-control-hover);
+		}
+		.vehicle-search__input:focus-within {
+			border-color: var(--bc-focus);
+		}
+		.vehicle-search__clear-query:hover {
+			background: var(--bc-control-hover);
 		}
 		li a {
 			border-color: transparent;
 			border-radius: var(--bc-radius-md);
 		}
 		li a:hover {
-			border-color: var(--bc-border-strong);
+			border-color: transparent;
+			background: var(--bc-control-hover);
 		}
 		.vehicle-search__car strong {
 			display: -webkit-box;

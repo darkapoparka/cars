@@ -43,7 +43,7 @@ const s = stylex.create({
   sectionTitle: {display: 'flex', alignItems: 'center', gap: 12, minHeight: 32, fontSize: 14, fontWeight: 600, lineHeight: '21px'},
   icon: {display: 'grid', placeItems: 'center', width: 32, height: 32, color: '#202024', borderRadius: 4, backgroundColor: '#f8f8f8'},
   list: {margin: '9px 0 0', padding: 0, listStyle: 'none'},
-  item: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 15, minHeight: 41, color: '#535353', fontSize: 14, lineHeight: '21px', borderBottomColor: '#fbfbfb', borderBottomStyle: 'solid', borderBottomWidth: 1},
+  item: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 15, minHeight: 41, color: '#535353', fontSize: 14, lineHeight: '21px',},
   information:{display:'inline-flex',alignItems:'center',justifyContent:'center',width:44,height:44,marginLeft:2,padding:0,verticalAlign:'middle',borderWidth:0,backgroundColor:'transparent',cursor:'pointer'},
   check: {display: 'grid', placeItems: 'center', width: 16, height: 16, color: '#00714c', borderRadius: '50%', backgroundColor: '#e4f1e9'},
   empty: {paddingBlock: 30, color: '#535353', fontSize: 14, lineHeight: '22px'},

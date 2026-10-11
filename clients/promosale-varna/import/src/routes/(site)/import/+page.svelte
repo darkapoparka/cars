@@ -1,30 +1,94 @@
 <script lang="ts">
+	import { publicPageCopy } from '$lib/content/desktop-copy';
 	import { nativeMessage } from '$lib/i18n/native';
 	import { page } from '$app/state';
 	const nt = (key: import('$lib/i18n/native').NativeKey) =>
 		nativeMessage(page.data.locale === 'en' ? 'en' : 'bg', key);
 	import type { PageProps } from './$types';
+	import { tick, type Snippet } from 'svelte';
+	import Link2 from '@lucide/svelte/icons/link-2';
+	import Search from '@lucide/svelte/icons/search';
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
-	import ProcessSteps from '$lib/components/common/ProcessSteps.svelte';
+	import DesktopDiscoveryPanel from '$lib/components/common/DesktopDiscoveryPanel.svelte';
+	import ServiceIntakeFrame from '$lib/components/services/ServiceIntakeFrame.svelte';
 	import ModeTabs from '$lib/components/common/MobileModeTabs.svelte';
 	import Action from '$lib/components/common/Action.svelte';
 	import ImportRequestWizard from '$lib/components/services/ImportRequestWizard.svelte';
 	import ImportRequestMobilePage from '$lib/components/services/ImportRequestMobilePage.svelte';
+	import type { ImportIntent } from '$lib/domain/import-entry';
 	let { data }: PageProps = $props();
-	let mode = $state('listing');
+	const copy = $derived(publicPageCopy[data.locale].import);
+	let modeOverride = $state<ImportIntent | null>(null);
+	let overrideKey = $state('');
+	const mode = $derived(
+		overrideKey === data.desktopEntry.key && modeOverride ? modeOverride : data.desktopEntry.intent
+	);
+	function setMode(value: string) {
+		modeOverride = value === 'source' ? 'source' : 'listing';
+		overrideKey = data.desktopEntry.key;
+	}
 	let session = $state(0);
-	const english = $derived(data.locale === 'en');
-	const title = $derived(english ? 'Import a car' : 'Внос на автомобил');
+	const title = $derived(copy.title);
+	const resetSession = async () => {
+		session += 1;
+		await tick();
+		document.getElementById('desktop-import-mode-' + mode)?.focus();
+	};
 </script>
 
 <svelte:head
 	><title>{title} — {data.site.identity.name}</title><meta
 		name="description"
-		content={english
-			? 'Send a listing or VIN, or describe the car you are looking for.'
-			: 'Изпрати линк или VIN, или опиши автомобила, който търсиш.'}
+		content={copy.description}
 	/></svelte:head
 >
+{#snippet modeSelector()}
+	<ModeTabs
+		value={mode}
+		onchange={setMode}
+		surface="light"
+		appearance="choices"
+		class="import-mode-selector"
+		label={copy.requestType}
+		idPrefix="desktop-import-mode"
+		options={[
+			{ value: 'listing', label: copy.linkVin, icon: Link2, panelId: 'desktop-import-intake' },
+			{ value: 'source', label: copy.find, icon: Search, panelId: 'desktop-import-intake' }
+		]}
+	/>
+{/snippet}
+{#snippet intakePanel(wizard: Snippet)}
+	<div id="desktop-import-intake" role="tabpanel" aria-labelledby={'desktop-import-mode-' + mode}>
+		{@render wizard()}
+	</div>
+{/snippet}
+{#snippet importLayout(wizard: Snippet, entry: boolean)}
+	{#snippet heroActions()}
+		<DesktopDiscoveryPanel header={modeSelector}>
+			<p class="sr-only">{copy.heroDescription}</p>
+			{@render intakePanel(wizard)}
+		</DesktopDiscoveryPanel>
+	{/snippet}
+	{#snippet laterSteps()}
+		{@render modeSelector()}
+		{@render intakePanel(wizard)}
+	{/snippet}
+	<PageIntro
+		{title}
+		image="/assets/daynight/services/premium-cars-banner-generated.webp"
+		vehicleArtwork
+		compact={!entry}
+		description={copy.heroDescription}
+		desktopActions={entry ? heroActions : undefined}
+	/>
+	<ServiceIntakeFrame
+		steps={data.steps}
+		processTitle={copy.process}
+		actionHref={data.site.contact.phoneHref}
+		actionLabel={copy.discuss + ' · ' + data.site.contact.phone}
+		children={entry ? undefined : laterSteps}
+	/>
+{/snippet}
 <main id="main-content">
 	<noscript
 		><div class="site-container nojs-request">
@@ -33,62 +97,20 @@
 		</div></noscript
 	>
 	<div class="site-desktop-only">
-		<PageIntro
-			align="center"
-			{title}
-			image="/assets/daynight/services/premium-cars-banner-generated.webp"
-			description={english
-				? 'Send a listing or VIN. Understand the car and the costs before deciding.'
-				: 'Изпрати линк или VIN. Уточни автомобила и разходите преди решение.'}
-		/>
-		<section class="site-section">
-			<div class="site-container import-page">
-				<div class="site-panel site-stack service-intake">
-					<ModeTabs
-						bind:value={mode}
-						surface="light"
-						label={english ? 'Request type' : 'Начин за заявка'}
-						idPrefix="desktop-import-mode"
-						options={[
-							{ value: 'listing', label: 'LINK / VIN', panelId: 'desktop-import-intake' },
-							{
-								value: 'source',
-								label: english ? 'Find a car' : 'Нямам линк',
-								panelId: 'desktop-import-intake'
-							}
-						]}
-					/>
-					<div
-						id="desktop-import-intake"
-						role="tabpanel"
-						aria-labelledby={'desktop-import-mode-' + mode}
-					>
-						{#key mode + session}<ImportRequestWizard
-								initialIntent={mode === 'source' ? 'source' : 'listing'}
-								initialVehicle={data.form.vehicleField.value ?? ''}
-								initialCriteria={data.criteria}
-								embedded
-								onclose={() => (session += 1)}
-							/>{/key}
-					</div>
-				</div>
-				<div class="service-process">
-					<h2 class="site-heading">
-						{english ? 'From a listing to a decision' : 'От обява до решение'}
-					</h2>
-					<ProcessSteps steps={data.steps} horizontal /><Action
-						href={data.site.contact.phoneHref}
-						variant="secondary"
-						>{english ? 'Discuss your search' : 'Обсъди търсенето'} · {data.site.contact
-							.phone}</Action
-					>
-				</div>
-			</div>
-		</section>
+		{#key data.desktopEntry.key + mode + session}<ImportRequestWizard
+				initialIntent={mode === 'source' ? 'source' : 'listing'}
+				initialVehicle={data.form.vehicleField.value ?? ''}
+				initialCriteria={data.criteria}
+				initialStep={mode === data.desktopEntry.intent ? data.desktopEntry.step : 0}
+				embedded
+				desktopLayout={importLayout}
+				onclose={resetSession}
+			/>{/key}
 	</div>
 	<div class="site-mobile-only">
 		<h1 class="sr-only">{title}</h1>
 		<ImportRequestMobilePage
+			intakeOptions={data.intakeOptions}
 			form={data.form}
 			serviceVehicles={data.serviceVehicles}
 			browse={data.browse}
@@ -98,6 +120,12 @@
 </main>
 
 <style>
+	@media (min-width: 768px) {
+		:global(.site-desktop-only .import-mode-selector) {
+			max-width: 420px;
+			margin-inline: auto;
+		}
+	}
 	.nojs-request {
 		display: grid;
 		gap: var(--bc-space-3);
@@ -105,25 +133,5 @@
 		padding: var(--bc-space-4);
 		border-radius: var(--bc-radius-card);
 		background: var(--bc-surface);
-	}
-	.import-page {
-		display: grid;
-		grid-template-columns: minmax(0, 1fr);
-		gap: var(--bc-section-sm);
-	}
-	.service-intake {
-		width: min(100%, 860px);
-		margin-inline: auto;
-		padding: var(--bc-space-8);
-	}
-	.service-process {
-		display: grid;
-		gap: var(--bc-space-6);
-	}
-	.service-process > h2 {
-		text-align: center;
-	}
-	.service-process > :global(.site-action) {
-		justify-self: center;
 	}
 </style>

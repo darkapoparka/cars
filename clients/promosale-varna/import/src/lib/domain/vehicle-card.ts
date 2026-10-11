@@ -8,6 +8,7 @@ export type AuxeroInventoryView = '3' | '4' | '5' | 'map';
 
 export type AuxeroInventoryVehicleCard = {
 	mediaKind?: Vehicle['mediaKind'];
+	imagePresentation?: 'cutout' | 'photo';
 	brand: string;
 	delay: string;
 	description: string;
@@ -57,29 +58,39 @@ const inventoryCardImageOverrides: Record<string, string> = {
 	'21778068579001193': '/assets/daynight/megamenu/inventory-bmw-x4m-cutout-v2.webp'
 };
 
+const inventoryCutoutImages = new Set([
+	...Object.values(inventoryCardImageOverrides),
+	'/assets/daynight/megamenu/inventory-audi-a7-cutout.webp',
+	'/assets/daynight/megamenu/inventory-bmw-x5-cutout.webp'
+]);
+
 export const inventoryCardsFromVehicles = (
 	vehicles: Vehicle[],
 	locale: Locale = 'en'
 ): AuxeroInventoryVehicleCard[] =>
-	vehicles.map((vehicle, index) => ({
-		brand: vehicle.brand,
-		delay: `0.${(index % 4) + 1}s`,
-		description: inventoryText(locale, vehicle.description),
-		fuel: translateVehicleTerm(locale, 'fuels', vehicle.fuel),
-		highlightClass: inventoryCardHighlightClass(),
-		image: inventoryCardImageOverrides[vehicle.slug] ?? vehicle.image,
-		imagesCount: vehicle.images.length || 1,
-		mileageLabel: formatInventoryKm(vehicle.mileage, locale),
-		monthlyLabel: vehicle.monthly > 0 ? formatInventoryMonthly(vehicle.monthly, locale) : '',
-		priceLabel: listedPrice(vehicle.price, locale),
-		slug: vehicle.slug,
-		mediaKind: vehicle.mediaKind,
-		tag: translateVehicleTerm(locale, 'statuses', vehicle.tag ?? 'Available'),
-		title: vehicle.title,
-		transmission: translateVehicleTerm(locale, 'transmissions', vehicle.transmission),
-		videoCount: 0,
-		year: vehicle.year
-	}));
+	vehicles.map((vehicle, index) => {
+		const image = inventoryCardImageOverrides[vehicle.slug] ?? vehicle.image;
+		return {
+			brand: vehicle.brand,
+			delay: `0.${(index % 4) + 1}s`,
+			description: inventoryText(locale, vehicle.description),
+			fuel: translateVehicleTerm(locale, 'fuels', vehicle.fuel),
+			highlightClass: inventoryCardHighlightClass(),
+			image,
+			imagePresentation: inventoryCutoutImages.has(image) ? 'cutout' : 'photo',
+			imagesCount: vehicle.images.length || 1,
+			mileageLabel: formatInventoryKm(vehicle.mileage, locale),
+			monthlyLabel: vehicle.monthly > 0 ? formatInventoryMonthly(vehicle.monthly, locale) : '',
+			priceLabel: listedPrice(vehicle.price, locale),
+			slug: vehicle.slug,
+			mediaKind: vehicle.mediaKind,
+			tag: translateVehicleTerm(locale, 'statuses', vehicle.tag ?? 'Available'),
+			title: vehicle.title,
+			transmission: translateVehicleTerm(locale, 'transmissions', vehicle.transmission),
+			videoCount: 0,
+			year: vehicle.year
+		};
+	});
 
 export type VehicleCardSummary = Pick<
 	AuxeroInventoryVehicleCard,

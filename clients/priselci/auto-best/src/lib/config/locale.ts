@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Varna",
     "addressLine": "285 Tsar Osvoboditel Blvd.",
     "address": "285 Tsar Osvoboditel Blvd., Varna",
-    "appointment": "Call to confirm opening hours."
+    "appointment": "Call to confirm opening hours.",
+    "addressShort": "285 Tsar Osvoboditel Blvd.",
+    "appointmentShort": "Call to confirm opening hours."
   },
   "bg": {
     "city": "Варна",
     "addressLine": "бул. „Цар Освободител“ 285",
     "address": "бул. „Цар Освободител“ 285",
-    "appointment": "Работното време се уточнява по телефона."
+    "appointment": "Работното време се уточнява по телефона.",
+    "addressShort": "бул. „Цар Освободител“ 285",
+    "appointmentShort": "Работното време се уточнява по телефона."
   }
 } as const;
 

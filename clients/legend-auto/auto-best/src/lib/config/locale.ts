@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Varna",
     "addressLine": "289 Tsar Osvoboditel Blvd., opposite MACAO",
     "address": "289 Tsar Osvoboditel Blvd., opposite MACAO, Varna",
-    "appointment": "Viewings by appointment. Please call before visiting."
+    "appointment": "Viewings by appointment. Please call before visiting.",
+    "addressShort": "289 Tsar Osvoboditel Blvd., opposite MACAO",
+    "appointmentShort": "Viewings by appointment. Please call before visiting."
   },
   "bg": {
     "city": "Варна",
     "addressLine": "бул. Цар Освободител 289, срещу МАКАО",
     "address": "бул. Цар Освободител 289, срещу МАКАО",
-    "appointment": "Понеделник – събота: 09:00–17:30 · Неделя: почивен ден"
+    "appointment": "Понеделник – събота: 09:00–17:30 · Неделя: почивен ден",
+    "addressShort": "бул. Цар Освободител 289, срещу МАКАО",
+    "appointmentShort": "Понеделник – събота: 09:00–17:30 · Неделя: почивен ден"
   }
 } as const;
 

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { tick } from 'svelte';
 	import { contentText } from '$lib/content/localized';
 	const english = $derived(page.data.locale === 'en');
 	import { assetHref } from '$lib/utils/assets';
@@ -8,7 +9,7 @@
 	import { submitIntake } from '$lib/browser/submit-intake';
 	import { receiptMessage } from '$lib/domain/inquiry';
 	import { browser } from '$app/environment';
-	import { goto } from '$app/navigation';
+	import { afterNavigate, goto } from '$app/navigation';
 	import { linkHref as resolve } from '$lib/utils/links';
 	import type { AuxeroVehicleDetailData, AuxeroVehicleDetailDrawerTabId } from '$lib/auxero/detail';
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
@@ -22,6 +23,8 @@
 	import { Drawer } from 'vaul-svelte';
 	import { templateInquiryCopy } from '$lib/data/template-settings';
 	import MobileSheet from '$lib/components/common/MobileSheet.svelte';
+	import MobileIconAction from '$lib/components/common/MobileIconAction.svelte';
+	import { trackKeyboardInset } from '$lib/utils/keyboard-inset';
 
 	let { detail }: { detail: AuxeroVehicleDetailData } = $props();
 
@@ -42,10 +45,16 @@
 	let gallerySwiped = $state(false);
 	let shareStatus = $state('');
 	let viewerOpen = $state(false);
+	const inquiryFormId = $props.id();
 	let inquiryOpen = $state(false);
+	$effect(() => {
+		if (!inquiryOpen) return;
+		return trackKeyboardInset();
+	});
 	let inquiryStatus = $state('');
 	let inquirySubmitting = $state(false);
 	let inquirySaved = $state(false);
+	let inquirySession = 0;
 
 	const heroGalleryImages = $derived(Array.from(new Set(detail.galleryImages)));
 	const heroImage = $derived(heroGalleryImages[selectedImageIndex] ?? detail.image);
@@ -184,8 +193,13 @@
 		openImageViewer(selectedImageIndex);
 	};
 
+	let hasPreviousAppPage = false;
+	afterNavigate(({ from }) => {
+		hasPreviousAppPage = from?.route.id != null;
+	});
+
 	const goBack = () => {
-		if (browser && window.history.length > 1) {
+		if (browser && hasPreviousAppPage && window.history.length > 1) {
 			window.history.back();
 			return;
 		}
@@ -219,6 +233,7 @@
 	};
 
 	const openInquiry = () => {
+		inquirySession += 1;
 		// Start each inquiry session clean so a previous success message doesn't linger
 		// under a fresh, empty form when the drawer is reopened.
 		inquiryStatus = '';
@@ -228,6 +243,7 @@
 	};
 
 	const closeInquiry = () => {
+		inquirySession += 1;
 		inquiryOpen = false;
 	};
 
@@ -238,6 +254,7 @@
 		inquiryStatus = '';
 
 		const form = event.currentTarget as HTMLFormElement;
+		const session = inquirySession;
 		const payload = Object.fromEntries(new FormData(form).entries());
 
 		inquirySubmitting = true;
@@ -248,15 +265,21 @@
 				source: 'vehicle-detail-mobile',
 				vehicleSlug: detail.slug
 			});
+			if (!inquiryOpen || session !== inquirySession) return;
 			inquirySaved = true;
 			inquiryStatus = receiptMessage(receipt, english);
 			form.reset();
 		} catch {
+			if (!inquiryOpen || session !== inquirySession) return;
 			inquiryStatus = english
 				? 'The request was not saved. Check the details and try again.'
 				: 'Заявката не е запазена. Провери данните и опитай отново.';
 		} finally {
-			inquirySubmitting = false;
+			if (inquiryOpen && session === inquirySession) {
+				inquirySubmitting = false;
+				await tick();
+				form.querySelector<HTMLElement>('[aria-live]')?.scrollIntoView({ block: 'nearest' });
+			}
 		}
 	};
 
@@ -342,26 +365,30 @@
 			</p>
 		{/if}
 
-		<div class="daynight-mobile-pdp__topbar" data-mobile-pdp-topbar>
-			<button type="button" aria-label={detail.mobileDrawer.backLabel} onclick={goBack}>
-				<ArrowLeft size={22} strokeWidth={2.35} aria-hidden="true" />
-			</button>
+		<div class="daynight-mobile-pdp__topbar mobile-utility-bar" data-mobile-pdp-topbar>
+			<MobileIconAction label={detail.mobileDrawer.backLabel} appearance="overlay" onclick={goBack}>
+				<ArrowLeft size={20} strokeWidth={2} aria-hidden="true" />
+			</MobileIconAction>
 
 			<div class="daynight-mobile-pdp__topbar-actions">
-				<a href={resolve(compareHref)} aria-label={detail.copy.compare}>
-					<GitCompare size={20} strokeWidth={2.35} aria-hidden="true" />
-				</a>
-				<button
-					type="button"
-					aria-label={detail.copy.savePrefix}
-					aria-pressed={garage.isFavorite(detail.slug)}
+				<MobileIconAction href={compareHref} label={detail.copy.compare} appearance="overlay">
+					<GitCompare size={20} strokeWidth={2} aria-hidden="true" />
+				</MobileIconAction>
+				<MobileIconAction
+					label={detail.copy.savePrefix}
+					pressed={garage.isFavorite(detail.slug)}
+					appearance="overlay"
 					onclick={() => garage.toggleFavorite(detail.slug)}
 				>
-					<Heart size={20} strokeWidth={2.35} aria-hidden="true" />
-				</button>
-				<button type="button" aria-label={detail.mobileDrawer.shareLabel} onclick={shareVehicle}>
-					<Share2 size={21} strokeWidth={2.35} aria-hidden="true" />
-				</button>
+					<Heart size={20} strokeWidth={2} aria-hidden="true" />
+				</MobileIconAction>
+				<MobileIconAction
+					label={detail.mobileDrawer.shareLabel}
+					appearance="overlay"
+					onclick={shareVehicle}
+				>
+					<Share2 size={20} strokeWidth={2} aria-hidden="true" />
+				</MobileIconAction>
 			</div>
 		</div>
 
@@ -391,13 +418,13 @@
 			<Drawer.Handle class="daynight-mobile-pdp__handle" preventCycle={true} />
 
 			<div class="daynight-mobile-pdp__drawer-heading">
-				<div>
+				<Drawer.Title level={1} class="daynight-mobile-pdp__heading-title">
+					<span class="daynight-mobile-pdp__drawer-title" title={detail.title}>{detail.title}</span>
+				</Drawer.Title>
+				<div class="daynight-mobile-pdp__price-row">
 					<p>{detail.priceLabel}</p>
-					<Drawer.Title level={1}>
-						<span class="daynight-mobile-pdp__drawer-title">{detail.title}</span>
-					</Drawer.Title>
+					<span>{detail.monthlyLabel}</span>
 				</div>
-				<span>{detail.monthlyLabel}</span>
 			</div>
 
 			<div class="daynight-mobile-pdp__actions" aria-label={detail.copy.inquiryTitle}>
@@ -406,14 +433,14 @@
 					class="daynight-mobile-pdp__cta daynight-mobile-pdp__cta--primary"
 					onclick={openInquiry}
 				>
-					<Send size={17} strokeWidth={2.3} aria-hidden="true" />
+					<Send size={16} strokeWidth={2} aria-hidden="true" />
 					{detail.copy.inquiryCta}
 				</button>
 				<a
 					class="daynight-mobile-pdp__cta daynight-mobile-pdp__cta--call"
 					{...externalHref(detail.contact.primaryPhoneHref)}
 				>
-					<PhoneCall size={17} strokeWidth={2.3} aria-hidden="true" />
+					<PhoneCall size={16} strokeWidth={2} aria-hidden="true" />
 					{detail.copy.callCta}
 				</a>
 			</div>
@@ -512,7 +539,12 @@
 		<p class="daynight-mobile-pdp__inquiry-intro">
 			{contentText(english ? 'en' : 'bg', templateInquiryCopy.notice)}
 		</p>
-		<form class="daynight-mobile-pdp__inquiry-form" onsubmit={submitInquiry}>
+		<form
+			id={inquiryFormId}
+			class="daynight-mobile-pdp__inquiry-form"
+			onsubmit={submitInquiry}
+			aria-busy={inquirySubmitting}
+		>
 			<label>
 				<span>{detail.copy.name}</span>
 				<input name="name" type="text" autocomplete="name" required />
@@ -534,15 +566,6 @@
 				<textarea name="message" rows="3" placeholder={detail.copy.messagePlaceholder}></textarea>
 			</label>
 
-			<button
-				type="submit"
-				class="daynight-mobile-pdp__inquiry-submit"
-				disabled={inquirySubmitting}
-			>
-				<Send size={18} strokeWidth={2.3} aria-hidden="true" />
-				{detail.copy.sendInquiry}
-			</button>
-
 			<p class="daynight-mobile-pdp__inquiry-status" aria-live="polite">
 				{#if inquirySaved}
 					<Check size={16} strokeWidth={2.4} aria-hidden="true" />
@@ -555,6 +578,23 @@
 			<PhoneCall size={18} strokeWidth={2.3} aria-hidden="true" />
 			{detail.contact.primaryPhoneLabel}
 		</a>
+		{#snippet footer()}
+			{#if inquirySaved}
+				<button type="button" class="daynight-mobile-pdp__inquiry-submit" onclick={closeInquiry}>
+					{detail.mobileDrawer.closeLabel}
+				</button>
+			{:else}
+				<button
+					type="submit"
+					form={inquiryFormId}
+					class="daynight-mobile-pdp__inquiry-submit"
+					disabled={inquirySubmitting}
+				>
+					<Send size={18} strokeWidth={2.3} aria-hidden="true" />
+					{inquirySubmitting ? (english ? 'Saving…' : 'Запазване…') : detail.copy.sendInquiry}
+				</button>
+			{/if}
+		{/snippet}
 	</MobileSheet>
 
 	<MobileSheet
@@ -565,15 +605,15 @@
 		showHandle={false}
 		contentClass="daynight-mobile-pdp__viewer-sheet"
 	>
-		<div class="daynight-mobile-pdp__viewer" data-mobile-pdp-viewer>
-			<button
-				type="button"
+		<div class="daynight-mobile-pdp__viewer mobile-utility-bar" data-mobile-pdp-viewer>
+			<MobileIconAction
 				class="daynight-mobile-pdp__viewer-close"
-				aria-label={detail.mobileDrawer.closeLabel}
+				label={detail.mobileDrawer.closeLabel}
+				appearance="overlay"
 				onclick={closeImageViewer}
 			>
-				<X size={24} strokeWidth={2.35} aria-hidden="true" />
-			</button>
+				<X size={20} strokeWidth={2} aria-hidden="true" />
+			</MobileIconAction>
 
 			<p class="daynight-mobile-pdp__viewer-count">
 				{selectedImageIndex + 1} / {heroGalleryImages.length}
@@ -684,48 +724,18 @@
 		}
 
 		.daynight-mobile-pdp__topbar {
-			top: calc(14px + env(safe-area-inset-top));
-			right: 14px;
-			left: 14px;
+			top: calc(var(--bc-space-2) + env(safe-area-inset-top));
+			right: var(--bc-mobile-gutter);
+			left: var(--bc-mobile-gutter);
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
 		}
 
-		.daynight-mobile-pdp__topbar button,
-		.daynight-mobile-pdp__topbar a {
-			display: flex;
-			width: 44px;
-			height: 44px;
-			align-items: center;
-			justify-content: center;
-			border: 0;
-			border-radius: 999px;
-			background: rgba(255, 255, 255, 0.92);
-			color: #1c1c1c;
-			cursor: pointer;
-			text-decoration: none;
-			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-		}
-
-		.daynight-mobile-pdp__topbar button:focus-visible,
-		.daynight-mobile-pdp__topbar a:focus-visible {
-			background: #f3f4f6;
-			outline: 0;
-		}
-
-		@media (hover: hover) and (pointer: fine) {
-			.daynight-mobile-pdp__topbar button:hover,
-			.daynight-mobile-pdp__topbar a:hover {
-				background: #f3f4f6;
-				outline: 0;
-			}
-		}
-
 		.daynight-mobile-pdp__topbar-actions {
 			display: flex;
 			align-items: center;
-			gap: 8px;
+			gap: var(--bc-mobile-utility-gap);
 		}
 
 		.daynight-mobile-pdp__photo-count {
@@ -813,6 +823,9 @@
 			background: #ffffff;
 			color: #1c1c1c;
 			box-shadow: 0 -20px 46px rgba(0, 0, 0, 0.22);
+			/* Match the resting snap before Vaul has measured the viewport. Dragging
+			   and settled snap points use Vaul's inline transform after hydration. */
+			transform: translateY(34dvh);
 			outline: 0;
 			padding: 7px 14px
 				calc(var(--daynight-mobile-pdp-snap-offset, 40dvh) + 12px + env(safe-area-inset-bottom));
@@ -858,11 +871,24 @@
 		}
 
 		.daynight-mobile-pdp__drawer-heading {
-			display: flex;
-			align-items: flex-start;
-			justify-content: space-between;
-			gap: 14px;
+			display: grid;
+			min-width: 0;
+			flex: 0 0 auto;
+			gap: 4px;
 			padding: 4px 0 8px;
+		}
+
+		.daynight-mobile-pdp__drawer-heading :global(.daynight-mobile-pdp__heading-title) {
+			min-width: 0;
+			margin: 0;
+			font: inherit;
+		}
+
+		.daynight-mobile-pdp__price-row {
+			display: flex;
+			align-items: baseline;
+			justify-content: space-between;
+			gap: 12px;
 		}
 
 		.daynight-mobile-pdp__drawer-heading p,
@@ -872,31 +898,28 @@
 		}
 
 		.daynight-mobile-pdp__drawer-heading p {
-			margin-bottom: 3px;
 			color: var(--bc-accent);
 			font-size: var(--bc-mobile-card-title);
-			font-weight: var(--bc-weight-heading);
+			font-weight: var(--bc-weight-body);
 			line-height: var(--bc-mobile-card-title-leading);
+			white-space: nowrap;
 		}
 
 		.daynight-mobile-pdp__drawer-title {
 			display: block;
+			max-width: 100%;
+			overflow: hidden;
 			color: #1c1c1c;
 			font-size: var(--bc-mobile-section-title);
 			font-weight: var(--bc-weight-heading);
 			line-height: var(--bc-mobile-section-title-leading);
-			overflow-wrap: anywhere;
+			text-overflow: ellipsis;
+			white-space: nowrap;
 		}
 
-		.daynight-mobile-pdp__drawer-heading > span {
-			display: inline-flex;
-			min-height: 34px;
-			align-items: center;
+		.daynight-mobile-pdp__price-row > span {
 			flex: 0 0 auto;
-			border-radius: 8px;
-			background: var(--bc-surface);
-			color: #1c1c1c;
-			padding: 0 10px;
+			color: var(--bc-muted);
 			font-size: var(--bc-mobile-meta);
 			font-weight: var(--bc-weight-body);
 			line-height: var(--bc-mobile-meta-leading);
@@ -932,7 +955,7 @@
 			align-items: flex-end;
 			justify-content: center;
 			border: 0;
-			border-radius: 0;
+			border-radius: 8px 8px 0 0;
 			background: transparent;
 			color: #1c1c1c;
 			cursor: pointer;
@@ -943,11 +966,15 @@
 			white-space: nowrap;
 		}
 
-		.daynight-mobile-pdp__tab.active,
-		.daynight-mobile-pdp__tab:focus-visible {
+		.daynight-mobile-pdp__tab.active {
 			background: transparent;
 			color: #1c1c1c;
-			outline: 0;
+			font-weight: var(--bc-weight-heading);
+		}
+
+		.daynight-mobile-pdp__tab:focus-visible {
+			outline: 2px solid var(--bc-focus);
+			outline-offset: -4px;
 		}
 
 		.daynight-mobile-pdp__tab::after {
@@ -961,20 +988,14 @@
 			content: '';
 		}
 
-		.daynight-mobile-pdp__tab.active::after,
-		.daynight-mobile-pdp__tab:focus-visible::after {
+		.daynight-mobile-pdp__tab.active::after {
 			background: var(--bc-accent);
 		}
 
 		@media (hover: hover) and (pointer: fine) {
-			.daynight-mobile-pdp__tab:hover {
-				background: transparent;
+			.daynight-mobile-pdp__tab:not(.active):hover {
+				background: var(--bc-surface-soft);
 				color: #1c1c1c;
-				outline: 0;
-			}
-
-			.daynight-mobile-pdp__tab:hover::after {
-				background: var(--bc-accent);
 			}
 		}
 
@@ -1001,7 +1022,7 @@
 
 		.daynight-mobile-pdp__eyebrow {
 			margin: 0;
-			color: #728093;
+			color: var(--bc-copy);
 			font-size: var(--bc-mobile-label);
 			font-weight: var(--bc-weight-heading);
 			line-height: var(--bc-mobile-label-leading);
@@ -1011,10 +1032,6 @@
 		.daynight-mobile-pdp__description {
 			display: grid;
 			gap: 10px;
-			padding: 16px;
-			border: 1px solid #e4e7eb;
-			border-radius: var(--bc-radius-card);
-			background: #fff;
 		}
 
 		.daynight-mobile-pdp__body-copy {
@@ -1033,8 +1050,7 @@
 			gap: 10px;
 		}
 
-		.daynight-mobile-pdp__finance div,
-		.daynight-mobile-pdp__feature-groups section {
+		.daynight-mobile-pdp__finance div {
 			border-radius: 8px;
 			background: var(--bc-surface);
 			padding: 12px;
@@ -1048,7 +1064,7 @@
 		}
 
 		.daynight-mobile-pdp__finance span {
-			color: #728093;
+			color: var(--bc-copy);
 			font-size: var(--bc-mobile-label);
 			font-weight: var(--bc-weight-heading);
 			line-height: var(--bc-mobile-label-leading);
@@ -1077,6 +1093,15 @@
 			list-style: none;
 		}
 
+		.daynight-mobile-pdp__description,
+		.daynight-mobile-pdp__spec-list,
+		.daynight-mobile-pdp__feature-groups section {
+			border: 1px solid #e4e7eb;
+			border-radius: var(--bc-radius-card);
+			background: var(--bc-white);
+			padding: var(--bc-space-3);
+		}
+
 		.daynight-mobile-pdp__spec-list li {
 			display: grid;
 			grid-template-columns: minmax(0, 1fr) minmax(96px, auto);
@@ -1084,6 +1109,15 @@
 			align-items: center;
 			border-bottom: 1px solid var(--bc-border);
 			padding: 10px 0;
+		}
+
+		.daynight-mobile-pdp__spec-list li:first-child {
+			padding-top: 0;
+		}
+
+		.daynight-mobile-pdp__spec-list li:last-child {
+			border-bottom: 0;
+			padding-bottom: 0;
 		}
 
 		.daynight-mobile-pdp__spec-list span {
@@ -1146,15 +1180,18 @@
 
 		.daynight-mobile-pdp__cta {
 			display: inline-flex;
-			min-height: 44px;
+			min-width: 0;
+			min-height: var(--bc-control-height-standard);
 			align-items: center;
 			justify-content: center;
 			gap: 6px;
 			border: 0;
 			border-radius: var(--bc-radius-control);
-			font-size: var(--bc-text-control);
-			font-weight: var(--bc-weight-heading);
-			line-height: var(--bc-leading-control);
+			padding: 6px var(--bc-space-3);
+			font-size: var(--bc-text-cta);
+			font-weight: var(--bc-weight-action);
+			line-height: var(--bc-leading-cta);
+			white-space: nowrap;
 			text-align: center;
 			text-decoration: none;
 			cursor: pointer;
@@ -1170,6 +1207,18 @@
 			color: inherit;
 		}
 
+		.daynight-mobile-pdp__cta :global(svg) {
+			width: var(--bc-control-icon-size-standard);
+			height: var(--bc-control-icon-size-standard);
+			flex-shrink: 0;
+		}
+		.daynight-mobile-pdp__inquiry-call :global(svg),
+		.daynight-mobile-pdp__inquiry-submit :global(svg) {
+			width: var(--bc-control-icon-size-standard);
+			height: var(--bc-control-icon-size-standard);
+			flex-shrink: 0;
+		}
+
 		.daynight-mobile-pdp__cta--primary {
 			background: var(--bc-accent);
 			color: #ffffff;
@@ -1180,8 +1229,7 @@
 		}
 
 		.daynight-mobile-pdp__cta--call {
-			border: 1px solid var(--bc-border-strong);
-			background: var(--bc-white);
+			background: var(--bc-surface);
 			color: var(--bc-ink);
 		}
 
@@ -1201,8 +1249,8 @@
 
 		.daynight-mobile-pdp :global(.daynight-mobile-pdp__inquiry.bc-mobile-sheet__content) {
 			width: min(100%, 520px);
-			max-height: min(92dvh, 780px);
-			background: var(--bc-white);
+			max-height: min(calc(92dvh - var(--bc-kb-inset, 0px)), 780px);
+			background: var(--bc-bg-strong);
 			color: var(--bc-ink);
 		}
 
@@ -1228,7 +1276,7 @@
 
 		.daynight-mobile-pdp__inquiry-form label {
 			display: grid;
-			gap: 6px;
+			gap: 5px;
 		}
 
 		.daynight-mobile-pdp__inquiry-form label span {
@@ -1242,41 +1290,47 @@
 		.daynight-mobile-pdp__inquiry-form select,
 		.daynight-mobile-pdp__inquiry-form textarea {
 			width: 100%;
-			border: 1px solid var(--bc-border);
+			min-width: 0;
+			border: 0;
 			border-radius: 10px;
-			background: var(--bc-surface-soft);
-			color: #1c1c1c;
-			padding: 12px 13px;
+			background: var(--bc-white);
+			color: var(--bc-ink);
+			padding: 10px 11px;
 			font: inherit;
-			/* >=16px stops iOS Safari from auto-zooming on focus inside the drawer. */
 			font-size: var(--bc-text-control);
-			font-weight: var(--bc-weight-control);
+			font-weight: var(--bc-weight-body);
 			line-height: var(--bc-leading-control);
 		}
-
+		.daynight-mobile-pdp__inquiry-form input,
+		.daynight-mobile-pdp__inquiry-form select {
+			height: var(--bc-control-height-standard);
+			padding-block: 0;
+		}
+		.daynight-mobile-pdp__inquiry-form select {
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
 		.daynight-mobile-pdp__inquiry-form textarea {
+			min-height: 104px;
 			resize: none;
 		}
-
-		.daynight-mobile-pdp__inquiry-form input:focus,
-		.daynight-mobile-pdp__inquiry-form select:focus,
-		.daynight-mobile-pdp__inquiry-form textarea:focus {
-			border-color: var(--bc-accent);
-			background: #ffffff;
-			outline: 0;
+		.daynight-mobile-pdp__inquiry-form :is(input, select, textarea):focus-visible {
+			outline: 2px solid var(--bc-accent);
+			outline-offset: 2px;
 		}
 
 		.daynight-mobile-pdp__inquiry-submit {
 			display: inline-flex;
-			min-height: 50px;
+			width: 100%;
+			min-height: var(--bc-control-height-standard);
 			align-items: center;
 			justify-content: center;
 			gap: 8px;
-			margin-top: 2px;
+			margin-top: 0;
 			border: 0;
 			border-radius: 10px;
-			background: var(--bc-accent);
-			color: #ffffff;
+			background: var(--bc-ink);
+			color: var(--bc-white);
 			cursor: pointer;
 			font-size: var(--bc-text-control);
 			font-weight: var(--bc-weight-heading);
@@ -1285,14 +1339,14 @@
 		}
 
 		.daynight-mobile-pdp__inquiry-submit:focus-visible {
-			background: #b9161c;
-			outline: 0;
+			background: var(--bc-dark-hover);
+			outline: 3px solid var(--bc-focus);
+			outline-offset: 2px;
 		}
 
 		@media (hover: hover) and (pointer: fine) {
 			.daynight-mobile-pdp__inquiry-submit:hover {
-				background: #b9161c;
-				outline: 0;
+				background: var(--bc-dark-hover);
 			}
 		}
 
@@ -1314,12 +1368,12 @@
 		}
 
 		.daynight-mobile-pdp__inquiry-status :global(svg) {
-			color: #b9161c;
+			color: var(--bc-accent);
 		}
 
 		.daynight-mobile-pdp__inquiry-call {
 			display: inline-flex;
-			min-height: 48px;
+			min-height: var(--bc-control-height-standard);
 			align-items: center;
 			justify-content: center;
 			gap: 8px;
@@ -1353,7 +1407,8 @@
 			grid-template-rows: auto minmax(0, 1fr) auto;
 			background: #050505;
 			color: #ffffff;
-			padding: calc(14px + env(safe-area-inset-top)) 14px calc(16px + env(safe-area-inset-bottom));
+			padding: calc(var(--bc-space-2) + env(safe-area-inset-top)) var(--bc-mobile-gutter)
+				calc(var(--bc-space-4) + env(safe-area-inset-bottom));
 		}
 
 		:global(.daynight-mobile-pdp__viewer-sheet.bc-mobile-sheet__content) {
@@ -1361,21 +1416,11 @@
 			background: #050505;
 		}
 
-		.daynight-mobile-pdp__viewer-close {
+		.daynight-mobile-pdp__viewer :global(.daynight-mobile-pdp__viewer-close) {
 			position: absolute;
-			top: calc(14px + env(safe-area-inset-top));
-			right: 14px;
+			top: calc(var(--bc-space-2) + env(safe-area-inset-top));
+			right: var(--bc-mobile-gutter);
 			z-index: 2;
-			display: flex;
-			width: 44px;
-			height: 44px;
-			align-items: center;
-			justify-content: center;
-			border: 0;
-			border-radius: 999px;
-			background: rgba(255, 255, 255, 0.94);
-			color: #111111;
-			cursor: pointer;
 		}
 
 		.daynight-mobile-pdp__viewer-count {
@@ -1455,8 +1500,8 @@
 			gap: 4px;
 		}
 
-		.daynight-mobile-pdp__drawer-heading > span {
-			display: none;
+		.daynight-mobile-pdp__spec-list li {
+			grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
 		}
 
 		.daynight-mobile-pdp__tabs {

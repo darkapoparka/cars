@@ -11,34 +11,67 @@ try {
   for (const width of [390, 1440]) {
     const page = await returningPage(browser, { viewport: { width, height: 900 } });
     page.setDefaultTimeout(8000);
+    page.setDefaultNavigationTimeout(30000);
     await suite.check(`list and article return ${width}`, async () => {
-      await page.goto(`${base}/listing-grid?make=BMW&sort=price-asc`, { waitUntil: 'networkidle' });
+      await page.goto(`${base}/cars?make=BMW&sort=price-asc`, { waitUntil: 'networkidle' });
       const first = page.locator('.dn-listing-results .dn-vehicle-card__link').first();
       const title = await first.getAttribute('aria-label');
       // Exercise the card surface inside its 20px rounded corner, away from title text.
       await first.click({ position: { x: 12, y: 12 } });
       await page.waitForURL('**/listing-detail-v1/**');
       await page.locator(width < 768 ? '.dn-detail-mobile-back' : '.dn-detail-title-card a').click();
-      await page.waitForURL(url => appPath(url) === '/listing-grid');
+      await page.waitForURL(url => appPath(url) === '/cars');
       assert.equal(new URL(page.url()).searchParams.get('make'), 'BMW');
       assert.equal(new URL(page.url()).searchParams.get('sort'), 'price-asc');
       assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card__link').first().getAttribute('aria-label'), title);
       assert(new URL(page.url()).hash.startsWith('#vehicle-'));
       await page.goto(`${base}/blog?category=${encodeURIComponent('Внос')}`, { waitUntil: 'networkidle' });
-      await page.locator('.dn-blog-card__link').first().click();
+      await page.locator('.dn-blog-grid .dn-blog-card__link').first().click();
       await page.waitForURL('**/blog-detail/**');
       await page.locator('.dn-blog-detail__back').click();
       await page.waitForURL(url => appPath(url) === '/blog');
       assert.equal(new URL(page.url()).searchParams.get('category'), 'Внос');
       assert(new URL(page.url()).hash.startsWith('#article-'));
       await page.goto(`${base}/listing-detail-v1/4?return=https://example.com`, { waitUntil: 'networkidle' });
-      assert.equal(await page.locator('.dn-detail-mobile-back').getAttribute('href'), '/bg/listing-grid');
+      assert.equal(await page.locator('.dn-detail-mobile-back').getAttribute('href'), '/bg/cars');
+    });
+    await suite.check(`full photo viewer ${width}`, async () => {
+      await page.goto(`${base}/listing-detail-v1/1`, { waitUntil: 'networkidle' });
+      const trigger = page.locator('.dn-vehicle-photo');
+      const dialog = page.locator('.dn-vehicle-photo-dialog');
+      const overflowBefore = await page.evaluate(() => document.body.style.overflow);
+      assert.equal(await dialog.locator('img').count(), 0, 'Full photo is requested only when opened');
+      await trigger.focus();
+      await page.keyboard.press('Enter');
+      assert(await dialog.evaluate(el => el.matches(':modal')));
+      await dialog.locator('img').waitFor();
+      assert.equal(await dialog.locator('img').evaluate(el => getComputedStyle(el).objectFit), 'contain');
+      assert.equal(await page.evaluate(() => document.body.style.overflow), 'hidden');
+      for (const key of ['Tab', 'Shift+Tab']) {
+        await page.keyboard.press(key);
+        assert(await dialog.evaluate(el => el.contains(document.activeElement)));
+      }
+      await page.keyboard.press('Escape');
+      await dialog.waitFor({ state: 'hidden' });
+      assert(await trigger.evaluate(el => el === document.activeElement));
+      assert.equal(await page.evaluate(() => document.body.style.overflow), overflowBefore);
+      await trigger.click();
+      await dialog.locator('button').click();
+      await dialog.waitFor({ state: 'hidden' });
+      assert(await trigger.evaluate(el => el === document.activeElement));
+      await trigger.click();
+      await page.mouse.click(2, 2);
+      await dialog.waitFor({ state: 'hidden' });
+      assert.equal(await page.evaluate(() => document.body.style.overflow), overflowBefore);
     });
     await suite.check(`vehicle context and finance ${width}`, async () => {
-      for (let id = 1; id <= 8; id++) {
+      await page.goto(`${base}/cars`, { waitUntil: 'networkidle' });
+      const ids = await page.locator('.dn-listing-results .dn-vehicle-card__link').evaluateAll(links => [...new Set(links.map(link => Number(new URL(link.href).pathname.split('/').at(-1))))]);
+      assert(ids.length > 0 && ids.every(Number.isSafeInteger), 'Exercise every actual inventory record');
+      for (const id of ids) {
         await page.goto(`${base}/listing-detail-v1/${id}`, { waitUntil: 'networkidle' });
         const title = await page.locator('h1').innerText();
-        if (width < 768) await page.locator('.dn-detail-finance-trigger').click();
+        if (width < 768) await page.locator('.dn-detail-finance-trigger button').click();
         const finance = page.locator(width < 768 ? '.dn-detail-finance-dialog .dn-finance-calculator' : '.dn-detail-finance-inline .dn-finance-calculator');
         await finance.waitFor({ state: 'visible' });
         const amountBefore = await finance.locator('dd').first().innerText();
@@ -68,7 +101,7 @@ try {
         assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), count, `${route} must reflect actual stock`);
         if (!count) assert(await page.getByText('Няма съвпадения', { exact: true }).isVisible());
       }
-      await page.goto(`${base}/listing-grid?equipment=4x4&equipment=4x4&price_max=0`, { waitUntil: 'networkidle' });
+      await page.goto(`${base}/cars?equipment=4x4&equipment=4x4&price_max=0`, { waitUntil: 'networkidle' });
       assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 0);
       assert(await page.getByText('Няма съвпадения', { exact: true }).isVisible());
     });
@@ -109,9 +142,10 @@ try {
         assert(!media.some(url => url.includes('urus-front-v1')), 'Home uses the refreshed two-car artwork');
         const homeArtwork = await page.locator('.dn-hero-vehicles__pair img').evaluate(image => image.currentSrc);
         assert(width < 768 ? homeArtwork.includes('collection-banner-v2') : homeArtwork.startsWith('data:'));
-        const sources = await page.locator('.dn-hero-vehicles__car img').evaluateAll(images => images.map(image => image.currentSrc));
+        assert.equal(await page.locator('.dn-hero-vehicles__car img').count(), 0, 'Mobile hero omits unused desktop car nodes');
+        const sources = await page.locator('.dn-hero .dn-campaign-vehicles__car img').evaluateAll(images => images.map(image => image.currentSrc));
         assert.equal(sources.length, 2);
-        assert(sources.every(src => width >= 1440 ? src.startsWith('http') : src.startsWith('data:')));
+        assert(sources.every(src => width >= 992 ? src.startsWith('http') : src.startsWith('data:')));
         assert.equal(media.filter(url => /auto-best-desktop-.+-v1\.webp/.test(url)).length, 0, 'Home no longer requests the generated scene');
         evidence.push({ width, heroSources: sources, homeArtwork });
         let sharedServiceCar = null;
@@ -124,8 +158,9 @@ try {
           assert.equal(await scene.locator('.dn-hero-vehicles__shared-car img').count(), 1);
           if (width < 768) {
             const expectedDetails = `service-${service}-front-v3.webp`;
-            assert(support[0].includes(expectedDetails) && support[2].includes(expectedDetails));
-            assert(support[1].includes('service-sell-front-v3.webp'), 'Both services reuse the reviewed central car');
+            const artwork = support.map(src => new URL(src).pathname.replace(/-\d+(?=\.webp$)/, ''));
+            assert(artwork[0].endsWith(expectedDetails) && artwork[2].endsWith(expectedDetails), 'Responsive crops retain the reviewed service artwork');
+            assert(artwork[1].endsWith('service-sell-front-v3.webp'), 'Both services reuse the reviewed central car');
             if (sharedServiceCar === null) sharedServiceCar = support[1];
             else assert.equal(support[1], sharedServiceCar, 'Sell and Import must use the exact same central-car source');
           } else {

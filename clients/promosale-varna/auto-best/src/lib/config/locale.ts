@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Varna",
     "addressLine": "Varna Sea Station",
     "address": "Varna Sea Station, Varna, Bulgaria",
-    "appointment": "Mon–Fri 09:30–18:30; Sat 10:00–14:00; Sun closed"
+    "appointment": "Mon–Fri 09:30–18:30; Sat 10:00–14:00; Sun closed",
+    "addressShort": "Varna Sea Station",
+    "appointmentShort": "Mon–Fri 09:30–18:30; Sat 10:00–14:00; Sun closed"
   },
   "bg": {
     "city": "Варна",
     "addressLine": "Морска гара Варна",
     "address": "Морска гара Варна, Варна, България",
-    "appointment": "Пон.–пет. 09:30–18:30; съб. 10:00–14:00; нед. почивен ден"
+    "appointment": "Пон.–пет. 09:30–18:30; съб. 10:00–14:00; нед. почивен ден",
+    "addressShort": "Морска гара Варна",
+    "appointmentShort": "Пон.–пет. 09:30–18:30; съб. 10:00–14:00; нед. почивен ден"
   }
 } as const;
 

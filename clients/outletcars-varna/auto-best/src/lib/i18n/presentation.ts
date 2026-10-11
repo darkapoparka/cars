@@ -1,7 +1,8 @@
 import { sourceKeys } from '$lib/locale/catalog';
-import { intlLocale, type Locale } from '$lib/locale/core';
+import type { Locale } from '$lib/locale/core';
+import { localeFormatters } from '$lib/locale/formatters';
 import type { getI18n } from '$lib/locale/context';
-import { message, templateText, type MessageKey, type MessageParameters } from '$lib/locale/messages';
+import { message, type MessageKey, type MessageParameters } from '$lib/locale/messages';
 
 /** Immutable template patterns only. Values are interpolated after translation. */
 export function templateMessage(i18n: ReturnType<typeof getI18n>, source: string, parameters: MessageParameters): string {
@@ -18,6 +19,10 @@ export function formatTemplate(locale: Locale, source: string, parameters: Messa
 const specificationCopy: Record<string, MessageKey> = {
   "Комби": "m_3e4e9a166ed6",
   "Бензин": "m_7fc05f87ca8e",
+  "Бензин/ЛПГ": "inventory.spec.petrolLpg",
+  "Бензин / ЛПГ": "inventory.spec.petrolLpg",
+  "Petrol/LPG": "inventory.spec.petrolLpg",
+  "Petrol / LPG": "inventory.spec.petrolLpg",
   "Дизел": "m_0a3408c47c37",
   "Автоматик": "inventory.spec.automatic",
   "Ръчна": "m_b0b9fe24ffa9",
@@ -65,15 +70,16 @@ export const specificationLabel = (value: string, locale: Locale): string =>
   Object.hasOwn(specificationCopy, value) ? message(locale, specificationCopy[value]) : value;
 
 export const formatMileage = (value: number, locale: Locale): string =>
-  new Intl.NumberFormat(intlLocale(locale), { style: 'unit', unit: 'kilometer', unitDisplay: 'short' }).format(value);
+  localeFormatters(locale).mileage.format(value);
 
 // Compact list badges keep their full, unit-bearing label in accessible text.
 export const compactMileage = (value: number, locale: Locale): string =>
-  new Intl.NumberFormat(intlLocale(locale), { useGrouping: false }).format(value);
+  localeFormatters(locale).compactMileage.format(value);
 
 const compactSpecificationCopy: Record<string, MessageKey> = {
   'inventory.spec.automatic': 'inventory.spec.automaticCompact',
-  'm_a76dab2d1c01': 'inventory.spec.electricCompact'
+  'm_a76dab2d1c01': 'inventory.spec.electricCompact',
+  'inventory.spec.petrolLpg': 'inventory.spec.petrolLpgCompact'
 };
 export const compactSpecificationLabel = (value: string, locale: Locale): string => {
   const key = specificationCopy[value];

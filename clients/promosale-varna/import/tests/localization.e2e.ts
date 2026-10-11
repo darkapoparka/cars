@@ -139,7 +139,11 @@ for (const width of [320, 390, 1440])
 		await expect(close).toBeFocused();
 		await dialog.getByRole('button', { name: 'Not now' }).click();
 		await expect(dialog).not.toBeVisible();
-		await expect(page.locator('[data-locale-selector]:focus')).toBeVisible();
+		await expect(
+			width < 768
+				? page.getByRole('button', { name: 'Menu', exact: true })
+				: page.locator('[data-locale-selector]:visible').first()
+		).toBeFocused();
 		await expect
 			.poll(async () => (await context.cookies()).filter((c) => c.name === 'cars_prompt').length)
 			.toBe(1);
@@ -147,7 +151,9 @@ for (const width of [320, 390, 1440])
 			(await context.cookies()).filter((c) => ['cars_locale', 'cars_country'].includes(c.name))
 		).toEqual([]);
 		await page.reload();
+		await expect(page.locator('html')).toHaveAttribute('data-daynight-hydrated', 'true');
 		await expect(dialog).not.toBeVisible();
+		if (width < 768) await page.getByRole('button', { name: 'Menu', exact: true }).click();
 		await page.locator('[data-locale-selector]:visible').first().click();
 		await expect(dialog).toBeVisible();
 		await dialog.locator('[name=country]').selectOption('GB');
@@ -266,9 +272,11 @@ test('both import modes and sell wizard validate without business writes', async
 	await page.goto(route('en', '/import'));
 	await expect(page.locator('html')).toHaveAttribute('data-daynight-hydrated', 'true');
 	const wizard = page.locator('.site-desktop-only .bc-import-wizard');
-	await expect(wizard).toContainText('Which car should we check?');
+	await expect(
+		wizard.getByRole('textbox', { name: 'Listing link or VIN', exact: true })
+	).toBeVisible();
 	await wizard.getByRole('button', { name: 'Continue' }).click();
-	await expect(wizard.getByRole('alert')).toContainText('Add a listing');
+	await expect(wizard.getByRole('alert')).toContainText('valid listing link');
 	await page.getByRole('tab', { name: 'Find a car', exact: true }).click();
 	await expect(wizard.locator('[id^="import-wizard-make-"]')).toBeVisible();
 	await wizard.locator('[id^="import-wizard-make-"]').fill('Synthetic');
@@ -338,7 +346,7 @@ test('client locale navigation and back update language, copy, SEO and links wit
 	);
 	await page.locator('#locale-navigation-check').click();
 	await expect(page.locator('html')).toHaveAttribute('lang', 'en');
-	await expect(page.locator('h1')).toHaveText('About us');
+	await expect(page.getByRole('heading', { level: 1 })).toHaveText('About us');
 	await expect(description).not.toHaveAttribute('content', originalDescription!);
 	expect(await description.getAttribute('content')).not.toMatch(/[А-Яа-я]/);
 	await expect(page.locator('link[rel=canonical]')).toHaveAttribute(
@@ -355,7 +363,7 @@ test('client locale navigation and back update language, copy, SEO and links wit
 	).toHaveAttribute('href', route('en', '/inventory?lang=en'));
 	await page.goBack();
 	await expect(page.locator('html')).toHaveAttribute('lang', 'bg');
-	await expect(page.locator('h1')).toHaveText('За нас');
+	await expect(page.getByRole('heading', { level: 1 })).toHaveText('За нас');
 	await expect(description).toHaveAttribute('content', originalDescription!);
 	await expect(page.locator('link[rel=canonical]')).toHaveAttribute(
 		'href',
@@ -367,7 +375,7 @@ test('client locale navigation and back update language, copy, SEO and links wit
 	);
 	await page.goForward();
 	await expect(page.locator('html')).toHaveAttribute('lang', 'en');
-	await expect(page.locator('h1')).toHaveText('About us');
+	await expect(page.getByRole('heading', { level: 1 })).toHaveText('About us');
 	expect(
 		await page.evaluate(() =>
 			Boolean((window as Window & { localeNavigationSentinel?: boolean }).localeNavigationSentinel)

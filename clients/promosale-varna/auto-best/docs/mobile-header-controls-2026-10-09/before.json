@@ -1,0 +1,967 @@
+[
+  {
+    "locale": "en",
+    "width": 320,
+    "surface": "home",
+    "state": {
+      "overflow": -15,
+      "controls": [
+        {
+          "selector": ".dn-mobile-controls .dn-mobile-control",
+          "width": 44,
+          "height": 44,
+          "x": 199,
+          "y": 11,
+          "icon": {
+            "width": 22,
+            "height": 22,
+            "x": 210,
+            "y": 22
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": "/en/contact",
+          "label": "Location and contact details"
+        },
+        {
+          "selector": ".dn-mobile-controls .dn-mobile-control",
+          "width": 44,
+          "height": 44,
+          "x": 249,
+          "y": 11,
+          "icon": {
+            "width": 22,
+            "height": 22,
+            "x": 260,
+            "y": 22
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": "tel:+359879824625",
+          "label": "Call the showroom: 087 982 4625"
+        }
+      ],
+      "desktop": [
+        {
+          "width": 281,
+          "height": 66,
+          "x": 12,
+          "y": 0
+        },
+        {
+          "width": 1,
+          "height": 1,
+          "x": 11,
+          "y": -1
+        }
+      ]
+    }
+  },
+  {
+    "locale": "en",
+    "width": 320,
+    "surface": "cars",
+    "state": {
+      "overflow": -15,
+      "controls": [
+        {
+          "selector": ".dn-listing-filter__mobile-sort",
+          "width": 44,
+          "height": 44,
+          "x": 201,
+          "y": 12,
+          "icon": {
+            "width": 20,
+            "height": 20,
+            "x": 213,
+            "y": 24
+          },
+          "padding": 2,
+          "paint": 40,
+          "href": null,
+          "label": "Sort: Recommended"
+        },
+        {
+          "selector": ".dn-listing-filter__toggle",
+          "width": 44,
+          "height": 44,
+          "x": 249,
+          "y": 12,
+          "icon": {
+            "width": 20,
+            "height": 20,
+            "x": 261,
+            "y": 24
+          },
+          "padding": 2,
+          "paint": 40,
+          "href": null,
+          "label": "Filters"
+        }
+      ],
+      "desktop": []
+    }
+  },
+  {
+    "locale": "en",
+    "width": 320,
+    "surface": "pdp",
+    "state": {
+      "overflow": -15,
+      "controls": [
+        {
+          "selector": ".dn-detail-mobile-back",
+          "width": 40,
+          "height": 40,
+          "x": 12,
+          "y": 12,
+          "icon": {
+            "width": 24,
+            "height": 24,
+            "x": 20,
+            "y": 20
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": "/en/cars",
+          "label": "Back to cars"
+        },
+        {
+          "selector": ".dn-detail-mobile-actions a",
+          "width": 40,
+          "height": 40,
+          "x": 206,
+          "y": 12,
+          "icon": {
+            "width": 24,
+            "height": 24,
+            "x": 214,
+            "y": 20
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": "tel:+359879824625",
+          "label": "Call the showroom: 087 982 4625"
+        },
+        {
+          "selector": ".dn-detail-mobile-actions button",
+          "width": 40,
+          "height": 40,
+          "x": 253,
+          "y": 12,
+          "icon": {
+            "width": 24,
+            "height": 24,
+            "x": 261,
+            "y": 20
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": null,
+          "label": "Share this car"
+        }
+      ],
+      "desktop": [
+        {
+          "width": 305,
+          "height": 51.875,
+          "x": 0,
+          "y": 202.75
+        },
+        {
+          "width": 305,
+          "height": 228.75,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "surface": "home",
+    "state": {
+      "overflow": -15,
+      "controls": [
+        {
+          "selector": ".dn-mobile-controls .dn-mobile-control",
+          "width": 44,
+          "height": 44,
+          "x": 268,
+          "y": 11,
+          "icon": {
+            "width": 22,
+            "height": 22,
+            "x": 279,
+            "y": 22
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": "/en/contact",
+          "label": "Location and contact details"
+        },
+        {
+          "selector": ".dn-mobile-controls .dn-mobile-control",
+          "width": 44,
+          "height": 44,
+          "x": 319,
+          "y": 11,
+          "icon": {
+            "width": 22,
+            "height": 22,
+            "x": 330,
+            "y": 22
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": "tel:+359879824625",
+          "label": "Call the showroom: 087 982 4625"
+        }
+      ],
+      "desktop": [
+        {
+          "width": 351,
+          "height": 66,
+          "x": 12,
+          "y": 0
+        },
+        {
+          "width": 1,
+          "height": 1,
+          "x": 11,
+          "y": -1
+        }
+      ]
+    }
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "surface": "cars",
+    "state": {
+      "overflow": -15,
+      "controls": [
+        {
+          "selector": ".dn-listing-filter__mobile-sort",
+          "width": 44,
+          "height": 44,
+          "x": 271,
+          "y": 12,
+          "icon": {
+            "width": 20,
+            "height": 20,
+            "x": 283,
+            "y": 24
+          },
+          "padding": 2,
+          "paint": 40,
+          "href": null,
+          "label": "Sort: Recommended"
+        },
+        {
+          "selector": ".dn-listing-filter__toggle",
+          "width": 44,
+          "height": 44,
+          "x": 319,
+          "y": 12,
+          "icon": {
+            "width": 20,
+            "height": 20,
+            "x": 331,
+            "y": 24
+          },
+          "padding": 2,
+          "paint": 40,
+          "href": null,
+          "label": "Filters"
+        }
+      ],
+      "desktop": []
+    }
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "surface": "pdp",
+    "state": {
+      "overflow": -15,
+      "controls": [
+        {
+          "selector": ".dn-detail-mobile-back",
+          "width": 40,
+          "height": 40,
+          "x": 12,
+          "y": 12,
+          "icon": {
+            "width": 24,
+            "height": 24,
+            "x": 20,
+            "y": 20
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": "/en/cars",
+          "label": "Back to cars"
+        },
+        {
+          "selector": ".dn-detail-mobile-actions a",
+          "width": 40,
+          "height": 40,
+          "x": 276,
+          "y": 12,
+          "icon": {
+            "width": 24,
+            "height": 24,
+            "x": 284,
+            "y": 20
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": "tel:+359879824625",
+          "label": "Call the showroom: 087 982 4625"
+        },
+        {
+          "selector": ".dn-detail-mobile-actions button",
+          "width": 40,
+          "height": 40,
+          "x": 323,
+          "y": 12,
+          "icon": {
+            "width": 24,
+            "height": 24,
+            "x": 331,
+            "y": 20
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": null,
+          "label": "Share this car"
+        }
+      ],
+      "desktop": [
+        {
+          "width": 375,
+          "height": 51.875,
+          "x": 0,
+          "y": 255.25
+        },
+        {
+          "width": 375,
+          "height": 281.25,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "locale": "en",
+    "width": 767,
+    "surface": "home",
+    "state": {
+      "overflow": -15,
+      "controls": [
+        {
+          "selector": ".dn-mobile-controls .dn-mobile-control",
+          "width": 44,
+          "height": 44,
+          "x": 643,
+          "y": 11,
+          "icon": {
+            "width": 22,
+            "height": 22,
+            "x": 654,
+            "y": 22
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": "/en/contact",
+          "label": "Location and contact details"
+        },
+        {
+          "selector": ".dn-mobile-controls .dn-mobile-control",
+          "width": 44,
+          "height": 44,
+          "x": 694,
+          "y": 11,
+          "icon": {
+            "width": 22,
+            "height": 22,
+            "x": 705,
+            "y": 22
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": "tel:+359879824625",
+          "label": "Call the showroom: 087 982 4625"
+        }
+      ],
+      "desktop": [
+        {
+          "width": 724,
+          "height": 66,
+          "x": 14,
+          "y": 0
+        },
+        {
+          "width": 1,
+          "height": 1,
+          "x": 13,
+          "y": -1
+        }
+      ]
+    }
+  },
+  {
+    "locale": "en",
+    "width": 767,
+    "surface": "cars",
+    "state": {
+      "overflow": -15,
+      "controls": [
+        {
+          "selector": ".dn-listing-filter__mobile-sort",
+          "width": 44,
+          "height": 44,
+          "x": 648,
+          "y": 12,
+          "icon": {
+            "width": 20,
+            "height": 20,
+            "x": 660,
+            "y": 24
+          },
+          "padding": 2,
+          "paint": 40,
+          "href": null,
+          "label": "Sort: Recommended"
+        },
+        {
+          "selector": ".dn-listing-filter__toggle",
+          "width": 44,
+          "height": 44,
+          "x": 696,
+          "y": 12,
+          "icon": {
+            "width": 20,
+            "height": 20,
+            "x": 708,
+            "y": 24
+          },
+          "padding": 2,
+          "paint": 40,
+          "href": null,
+          "label": "Filters"
+        }
+      ],
+      "desktop": []
+    }
+  },
+  {
+    "locale": "en",
+    "width": 767,
+    "surface": "pdp",
+    "state": {
+      "overflow": -15,
+      "controls": [
+        {
+          "selector": ".dn-detail-mobile-back",
+          "width": 40,
+          "height": 40,
+          "x": 12,
+          "y": 12,
+          "icon": {
+            "width": 24,
+            "height": 24,
+            "x": 20,
+            "y": 20
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": "/en/cars",
+          "label": "Back to cars"
+        },
+        {
+          "selector": ".dn-detail-mobile-actions a",
+          "width": 40,
+          "height": 40,
+          "x": 653,
+          "y": 12,
+          "icon": {
+            "width": 24,
+            "height": 24,
+            "x": 661,
+            "y": 20
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": "tel:+359879824625",
+          "label": "Call the showroom: 087 982 4625"
+        },
+        {
+          "selector": ".dn-detail-mobile-actions button",
+          "width": 40,
+          "height": 40,
+          "x": 700,
+          "y": 12,
+          "icon": {
+            "width": 24,
+            "height": 24,
+            "x": 708,
+            "y": 20
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": null,
+          "label": "Share this car"
+        }
+      ],
+      "desktop": [
+        {
+          "width": 752,
+          "height": 51.875,
+          "x": 0,
+          "y": 538
+        },
+        {
+          "width": 752,
+          "height": 564,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "surface": "home",
+    "state": {
+      "overflow": -15,
+      "controls": [],
+      "desktop": [
+        {
+          "width": 1373,
+          "height": 84,
+          "x": 26,
+          "y": 55
+        },
+        {
+          "width": 1120,
+          "height": 53.75,
+          "x": 152.5,
+          "y": 258.234375
+        }
+      ]
+    }
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "surface": "cars",
+    "state": {
+      "overflow": -15,
+      "controls": [],
+      "desktop": [
+        {
+          "width": 1373,
+          "height": 84,
+          "x": 26,
+          "y": 55
+        },
+        {
+          "width": 1360,
+          "height": 54,
+          "x": 32.5,
+          "y": 556
+        }
+      ]
+    }
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "surface": "pdp",
+    "state": {
+      "overflow": -15,
+      "controls": [],
+      "desktop": [
+        {
+          "width": 1393,
+          "height": 94,
+          "x": 16,
+          "y": 0
+        },
+        {
+          "width": 916,
+          "height": 90,
+          "x": 52.5,
+          "y": 118
+        },
+        {
+          "width": 898,
+          "height": 561.25,
+          "x": 61.5,
+          "y": 237
+        }
+      ]
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 320,
+    "surface": "home",
+    "state": {
+      "overflow": -15,
+      "controls": [
+        {
+          "selector": ".dn-mobile-controls .dn-mobile-control",
+          "width": 44,
+          "height": 44,
+          "x": 199,
+          "y": 11,
+          "icon": {
+            "width": 22,
+            "height": 22,
+            "x": 210,
+            "y": 22
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": "/bg/contact",
+          "label": "Местоположение и контакти"
+        },
+        {
+          "selector": ".dn-mobile-controls .dn-mobile-control",
+          "width": 44,
+          "height": 44,
+          "x": 249,
+          "y": 11,
+          "icon": {
+            "width": 22,
+            "height": 22,
+            "x": 260,
+            "y": 22
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": "tel:+359879824625",
+          "label": "Обадете се на шоурума: 087 982 4625"
+        }
+      ],
+      "desktop": [
+        {
+          "width": 281,
+          "height": 66,
+          "x": 12,
+          "y": 0
+        },
+        {
+          "width": 1,
+          "height": 1,
+          "x": 11,
+          "y": -1
+        }
+      ]
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 320,
+    "surface": "cars",
+    "state": {
+      "overflow": -15,
+      "controls": [
+        {
+          "selector": ".dn-listing-filter__mobile-sort",
+          "width": 44,
+          "height": 44,
+          "x": 201,
+          "y": 12,
+          "icon": {
+            "width": 20,
+            "height": 20,
+            "x": 213,
+            "y": 24
+          },
+          "padding": 2,
+          "paint": 40,
+          "href": null,
+          "label": "Сортиране: Препоръчани"
+        },
+        {
+          "selector": ".dn-listing-filter__toggle",
+          "width": 44,
+          "height": 44,
+          "x": 249,
+          "y": 12,
+          "icon": {
+            "width": 20,
+            "height": 20,
+            "x": 261,
+            "y": 24
+          },
+          "padding": 2,
+          "paint": 40,
+          "href": null,
+          "label": "Филтри"
+        }
+      ],
+      "desktop": []
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 320,
+    "surface": "pdp",
+    "state": {
+      "overflow": -15,
+      "controls": [
+        {
+          "selector": ".dn-detail-mobile-back",
+          "width": 40,
+          "height": 40,
+          "x": 12,
+          "y": 12,
+          "icon": {
+            "width": 24,
+            "height": 24,
+            "x": 20,
+            "y": 20
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": "/bg/cars",
+          "label": "Назад към автомобилите"
+        },
+        {
+          "selector": ".dn-detail-mobile-actions a",
+          "width": 40,
+          "height": 40,
+          "x": 206,
+          "y": 12,
+          "icon": {
+            "width": 24,
+            "height": 24,
+            "x": 214,
+            "y": 20
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": "tel:+359879824625",
+          "label": "Обадете се на шоурума: 087 982 4625"
+        },
+        {
+          "selector": ".dn-detail-mobile-actions button",
+          "width": 40,
+          "height": 40,
+          "x": 253,
+          "y": 12,
+          "icon": {
+            "width": 24,
+            "height": 24,
+            "x": 261,
+            "y": 20
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": null,
+          "label": "Споделете автомобила"
+        }
+      ],
+      "desktop": [
+        {
+          "width": 305,
+          "height": 51.875,
+          "x": 0,
+          "y": 202.75
+        },
+        {
+          "width": 305,
+          "height": 228.75,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 390,
+    "surface": "home",
+    "state": {
+      "overflow": -15,
+      "controls": [
+        {
+          "selector": ".dn-mobile-controls .dn-mobile-control",
+          "width": 44,
+          "height": 44,
+          "x": 268,
+          "y": 11,
+          "icon": {
+            "width": 22,
+            "height": 22,
+            "x": 279,
+            "y": 22
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": "/bg/contact",
+          "label": "Местоположение и контакти"
+        },
+        {
+          "selector": ".dn-mobile-controls .dn-mobile-control",
+          "width": 44,
+          "height": 44,
+          "x": 319,
+          "y": 11,
+          "icon": {
+            "width": 22,
+            "height": 22,
+            "x": 330,
+            "y": 22
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": "tel:+359879824625",
+          "label": "Обадете се на шоурума: 087 982 4625"
+        }
+      ],
+      "desktop": [
+        {
+          "width": 351,
+          "height": 66,
+          "x": 12,
+          "y": 0
+        },
+        {
+          "width": 1,
+          "height": 1,
+          "x": 11,
+          "y": -1
+        }
+      ]
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 390,
+    "surface": "cars",
+    "state": {
+      "overflow": -15,
+      "controls": [
+        {
+          "selector": ".dn-listing-filter__mobile-sort",
+          "width": 44,
+          "height": 44,
+          "x": 271,
+          "y": 12,
+          "icon": {
+            "width": 20,
+            "height": 20,
+            "x": 283,
+            "y": 24
+          },
+          "padding": 2,
+          "paint": 40,
+          "href": null,
+          "label": "Сортиране: Препоръчани"
+        },
+        {
+          "selector": ".dn-listing-filter__toggle",
+          "width": 44,
+          "height": 44,
+          "x": 319,
+          "y": 12,
+          "icon": {
+            "width": 20,
+            "height": 20,
+            "x": 331,
+            "y": 24
+          },
+          "padding": 2,
+          "paint": 40,
+          "href": null,
+          "label": "Филтри"
+        }
+      ],
+      "desktop": []
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 390,
+    "surface": "pdp",
+    "state": {
+      "overflow": -15,
+      "controls": [
+        {
+          "selector": ".dn-detail-mobile-back",
+          "width": 40,
+          "height": 40,
+          "x": 12,
+          "y": 12,
+          "icon": {
+            "width": 24,
+            "height": 24,
+            "x": 20,
+            "y": 20
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": "/bg/cars",
+          "label": "Назад към автомобилите"
+        },
+        {
+          "selector": ".dn-detail-mobile-actions a",
+          "width": 40,
+          "height": 40,
+          "x": 276,
+          "y": 12,
+          "icon": {
+            "width": 24,
+            "height": 24,
+            "x": 284,
+            "y": 20
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": "tel:+359879824625",
+          "label": "Обадете се на шоурума: 087 982 4625"
+        },
+        {
+          "selector": ".dn-detail-mobile-actions button",
+          "width": 40,
+          "height": 40,
+          "x": 323,
+          "y": 12,
+          "icon": {
+            "width": 24,
+            "height": 24,
+            "x": 331,
+            "y": 20
+          },
+          "padding": 0,
+          "paint": 40,
+          "href": null,
+          "label": "Споделете автомобила"
+        }
+      ],
+      "desktop": [
+        {
+          "width": 375,
+          "height": 51.875,
+          "x": 0,
+          "y": 255.25
+        },
+        {
+          "width": 375,
+          "height": 281.25,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  }
+]

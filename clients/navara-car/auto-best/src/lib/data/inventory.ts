@@ -27,6 +27,8 @@ export type Vehicle = {
   make: string;
   /** Optional manufacturer sub-brand used by compact card identity. */
   cardBrand?: string;
+  /** Seller-supplied highlight by locale; import/condition claims require record-specific evidence. */
+  cardNote?: Partial<Record<Locale, string>>;
   title: string;
   year: string;
   yearNumber: number;
@@ -40,6 +42,12 @@ export type Vehicle = {
   href: `/listing-detail-v1/${number}`;
 };
 
+// Equipment facets are limited to recurring features published in Day & Night's
+// current adverts for these model families (daynight.mobile.bg, checked 2026-08-30).
+
+
+// Imported master fixtures are not VIN-verified stock. Preserve source media;
+// client promotion requires replacing and verifying each record, including reused photos.
 export const featuredVehicles: Vehicle[] = [
   {
     "id": 1,
@@ -264,4 +272,4 @@ export const formatVehiclePrice = (amount: number, locale: Locale = localeContra
 
 /** Allow a currency line break while preserving the locale's grouped digits. */
 export const formatVehiclePriceLabel = (amount: number, locale: Locale = localeContract.defaultLocale) =>
-  formatVehiclePrice(amount, locale).replace(/([A-Z]{3})\s+/u, '$1 ').replace(/\s+([A-Z]{3})$/u, ' $1');
+  formatVehiclePrice(amount, locale).replace(/([A-Z]{3}|\p{Sc})\s+/u, '$1 ').replace(/\s+([A-Z]{3}|\p{Sc})$/u, ' $1');

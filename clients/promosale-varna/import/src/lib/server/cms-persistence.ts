@@ -138,6 +138,58 @@ const fileList = (formData: FormData, name: string) =>
 			(value): value is File => value instanceof File && value.size > 0 && Boolean(value.name)
 		);
 
+const uploadGroups = (formData: FormData): Array<{ files: File[]; kind: CmsUploadKind }> => [
+	{ files: fileList(formData, 'previewImage').slice(0, 1), kind: 'preview' },
+	{ files: fileList(formData, 'galleryImages').slice(0, 12), kind: 'gallery' },
+	{ files: fileList(formData, 'documents').slice(0, 8), kind: 'documents' }
+];
+
+/** Validate the entire selection before creating a draft or writing any upload. */
+export const validateCmsUploadFiles = (formData: FormData) => {
+	for (const { files, kind } of uploadGroups(formData)) {
+		for (const file of files) {
+			if (file.size > maxUploadSize(kind))
+				throw new Error(`${file.name} is larger than the allowed upload size.`);
+			if (!isValidUpload(file, kind))
+				throw new Error(`${file.name} is not an allowed ${kind} file.`);
+		}
+	}
+};
+
+/** Build output cannot discover files added after compilation. Serve only the
+ * validated local demo upload namespace through its native resource route. */
+export const readCmsUploadAsset = (resourcePath: string) => {
+	if (!runtimeConfig().uploadsEnabled) return null;
+	const parts = resourcePath.split('/');
+	if (parts.length !== 3) return null;
+	const [record, kind, filename] = parts;
+	if (
+		!/^[a-z0-9-]{1,80}$/.test(record) ||
+		!['preview', 'gallery', 'documents'].includes(kind) ||
+		!/^[a-z0-9.-]+$/.test(filename) ||
+		filename.includes('..')
+	)
+		return null;
+	const mimeTypes: Record<string, string> = {
+		'.jpg': 'image/jpeg',
+		'.jpeg': 'image/jpeg',
+		'.png': 'image/png',
+		'.webp': 'image/webp',
+		'.pdf': 'application/pdf',
+		'.doc': 'application/msword',
+		'.docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+	};
+	const extension = path.extname(filename);
+	if (!(kind === 'documents' ? documentExtensions : imageExtensions).has(extension)) return null;
+	const target = path.resolve(uploadsRoot, ...parts);
+	if (!target.startsWith(path.resolve(uploadsRoot) + path.sep)) return null;
+	try {
+		return { bytes: readFileSync(target), mimeType: mimeTypes[extension] };
+	} catch {
+		return null;
+	}
+};
+
 export const saveCmsUploadFiles = async ({
 	formData,
 	recordId
@@ -146,16 +198,13 @@ export const saveCmsUploadFiles = async ({
 	recordId: string;
 }): Promise<CmsUploadResult> => {
 	if (!runtimeConfig().uploadsEnabled) throw new Error('Uploads are disabled in live mode');
+	validateCmsUploadFiles(formData);
 	const now = new Date().toISOString();
 	const result: CmsUploadResult = {
 		documents: [],
 		galleryImages: []
 	};
-	const groups: Array<{ files: File[]; kind: CmsUploadKind }> = [
-		{ files: fileList(formData, 'previewImage').slice(0, 1), kind: 'preview' },
-		{ files: fileList(formData, 'galleryImages').slice(0, 12), kind: 'gallery' },
-		{ files: fileList(formData, 'documents').slice(0, 8), kind: 'documents' }
-	];
+	const groups = uploadGroups(formData);
 
 	for (const { files, kind } of groups) {
 		if (!files.length) continue;
@@ -165,13 +214,6 @@ export const saveCmsUploadFiles = async ({
 		ensureDirectory(targetDirectory);
 
 		for (const [index, file] of files.entries()) {
-			if (file.size > maxUploadSize(kind)) {
-				throw new Error(`${file.name} is larger than the allowed upload size.`);
-			}
-			if (!isValidUpload(file, kind)) {
-				throw new Error(`${file.name} is not an allowed ${kind} file.`);
-			}
-
 			const extension = extensionFromName(file.name);
 			const base = safeSegment(path.basename(file.name, path.extname(file.name)));
 			const filename = `${Date.now().toString(36)}-${index + 1}-${base}${extension}`;

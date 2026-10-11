@@ -1,0 +1,2434 @@
+{
+  "source": "L:/CODEX/cars/templates",
+  "capturedAt": "2026-10-07T10:55:59.538Z",
+  "files": [
+    {
+      "path": "karento-best/src/app.d.ts",
+      "sha256": "eb5bbac242a8c7ac8b764e62344286eb42596bebcf837be4b607dbc4ba187df3"
+    },
+    {
+      "path": "karento-best/src/app.html",
+      "sha256": "7e5aa0dc09343295be901f748bb8fed8c1c723cd4edbe7bc00c374c7ffe3150c"
+    },
+    {
+      "path": "karento-best/src/lib/components/CapturedPage.svelte",
+      "sha256": "f7d4c0d8b5ae28d75aaabd30d1b6a620da1b129e850f8f5d5f646ca038bb5959"
+    },
+    {
+      "path": "karento-best/src/lib/page-types.ts",
+      "sha256": "7431bd6b5784d8617553a4f42d5de6e3fd60b2ff8cb6b8d060476f4a6742652b"
+    },
+    {
+      "path": "karento-best/src/lib/server/assets/how-it-works/choose-20261006.webp",
+      "sha256": "a300d19d1345ab22a7a52b8b043182cc031acdfe9f07b7550d6f4ba76011a95d"
+    },
+    {
+      "path": "karento-best/src/lib/server/assets/how-it-works/collect-20261006.webp",
+      "sha256": "a7d1e48c6ead5a908bf017ca616471b6ad0a93f0e0c49631228c777dbf165bf2"
+    },
+    {
+      "path": "karento-best/src/lib/server/assets/how-it-works/talk-20261006.webp",
+      "sha256": "ff2d44baa2fbf6230529b5d40a5121a157bc3f41f226903658a917bd0ec51620"
+    },
+    {
+      "path": "karento-best/src/lib/server/assets/how-it-works/view-20261006-v2.webp",
+      "sha256": "a399003fa943150cdb4fde4b8259539fe167b6e7d7728d9ef950233fcc867774"
+    },
+    {
+      "path": "karento-best/src/lib/server/assets/how-it-works/view-20261006.webp",
+      "sha256": "a95d81db05bb838999fe6b7eed760d9e29a3a394f583aefb12ede51cd168d92b"
+    },
+    {
+      "path": "karento-best/src/lib/server/dealer-site.css",
+      "sha256": "520f62c06c6f7fb18c2161873535497765a46c9bcf1dd6336897b7b6765ded47"
+    },
+    {
+      "path": "karento-best/src/lib/server/dealer-ui.js",
+      "sha256": "902ac68c8499bcf67fd68be660a5e23cf425b3ab7a906bc43801904d27a199e9"
+    },
+    {
+      "path": "karento-best/src/lib/server/site.mjs",
+      "sha256": "06e9e35355325e6329ac9d837c6eb3d9022740e88f7cda2ed027b4e073099a1a"
+    },
+    {
+      "path": "karento-best/src/routes/+error.svelte",
+      "sha256": "ec6d044051c0363e3f1d538844ab7cff58b288b2dd0e0926ff2c1566c6a461b9"
+    },
+    {
+      "path": "karento-best/src/routes/assets/karento-best/how-it-works/[image]/+server.ts",
+      "sha256": "306fb2e7b0f96443c3755c27d72efa243c68e32b29f3155c3b2be8a6d6be0fa0"
+    },
+    {
+      "path": "karento-best/src/routes/dealer-site.css/+server.ts",
+      "sha256": "f519b50005ebab6be106c67fff180d24bccf6d086a2981302f93dd9fbc2e28e2"
+    },
+    {
+      "path": "karento-best/src/routes/dealer-ui.js/+server.ts",
+      "sha256": "b703650e7d355cd647927688d21787aab028219b99bf54286757c4ce8ce4a16a"
+    },
+    {
+      "path": "karento-best/src/routes/[...path]/+page.server.ts",
+      "sha256": "c21b923b9a79d8af4ce32691e4219d64e65e6e8c7d88bcce5f31ec2cf3d4009d"
+    },
+    {
+      "path": "karento-best/src/routes/[...path]/+page.svelte",
+      "sha256": "c3d0ac106fb4ac9b8d49246158bfe14851f188b5dafac04a6802a2751e672dd4"
+    },
+    {
+      "path": "karento-best/package.json",
+      "sha256": "9bdf2bdc33c87051a62185e85e17e3b1a83bdac8b0e20303f110e384f4633ab1"
+    },
+    {
+      "path": "karento-best/package-lock.json",
+      "sha256": "42aa715aea6c9292c39c64a0fdb31b79e01573686985cdcfa90697f794f3a306"
+    },
+    {
+      "path": "karento-best/tsconfig.json",
+      "sha256": "b56020524f42057f53057d8ccf04bc14cd4d429575242f1e73e5433d98be34c7"
+    },
+    {
+      "path": "karento-best/vite.config.ts",
+      "sha256": "99b2cd2e635582de5da617c530b17c5307999b336564671ba03a26f162b9a80c"
+    },
+    {
+      "path": "karento-best/README.md",
+      "sha256": "4f3d52efedb299133cf092eeca605f9e190449d680d99cb6d487ba39ccd1643a"
+    },
+    {
+      "path": "karento-best/AGENTS.md",
+      "sha256": "d7c57df758dccbcfb4a5cfc806c661d07639a7cc4364f9361d3c6bb7915f569b"
+    },
+    {
+      "path": "karento-best/.gitignore",
+      "sha256": "e566907156ea47ec0f5b4c11e7ecfaa76559dc3539eab88b0bcb770ad2e24db2"
+    },
+    {
+      "path": "karento-best/scripts/qa.mjs",
+      "sha256": "05355eb2154680d0da5b1ebb5664538397674f971be003ce305ad50aed04254e"
+    },
+    {
+      "path": "karento/src/app.d.ts",
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+    },
+    {
+      "path": "karento/src/app.html",
+      "sha256": "dc49ff0e61934f165d543a6ef31c2a3e6bf226ca7bf2d28c04c2de2ffa136b31"
+    },
+    {
+      "path": "karento/src/lib/server/pages/404.html",
+      "sha256": "04c1fd76b74f78babfdec0c5e61e537345e9c1b39a861b6051e3612eb75c4367"
+    },
+    {
+      "path": "karento/src/lib/server/pages/about-us.html",
+      "sha256": "d16c6db6ad27d20dc30f439057f4139eabd7f9ffe531c07506e2d473a8489c45"
+    },
+    {
+      "path": "karento/src/lib/server/pages/agent-dashboard-add-listing.html",
+      "sha256": "fa1c9ae7468d2d03212967d587ba87f1ded5f1b82bd1c75287aed1607cde5b20"
+    },
+    {
+      "path": "karento/src/lib/server/pages/agent-dashboard-earning.html",
+      "sha256": "0269a8b73998a7ef1219a6e54c4a8438300344731f0c79c372dc5e4a8438622d"
+    },
+    {
+      "path": "karento/src/lib/server/pages/agent-dashboard-home.html",
+      "sha256": "7dbef4bc8f71e3c2c67e5c181b9487e5f4a706748ff3a37727909c8d2771f7ad"
+    },
+    {
+      "path": "karento/src/lib/server/pages/agent-dashboard-listing.html",
+      "sha256": "8745352a72fc107e1946b9862427ee3eb2ef0f01d1d3fa4fb49ce3d67a37dc5c"
+    },
+    {
+      "path": "karento/src/lib/server/pages/agent-dashboard-setting.html",
+      "sha256": "127b3fe6b86dbc038bd8d90aa1484a0113163717aaea3d7dfbf388ea149d6dee"
+    },
+    {
+      "path": "karento/src/lib/server/pages/blog-details.html",
+      "sha256": "8f7a1e3c4a8ab6177576aa14ec65eb50715d55137db60e02f31e08b555496582"
+    },
+    {
+      "path": "karento/src/lib/server/pages/blog-grid.html",
+      "sha256": "e3432aae13d08689d95ed27cdf528ddee3ab3e14f5e6ff1b2ead6445022d9dc1"
+    },
+    {
+      "path": "karento/src/lib/server/pages/blog-list.html",
+      "sha256": "55515769e82d629b38c5cb28b03f3b3d8386b6567a80e2a31640f7b912c256f0"
+    },
+    {
+      "path": "karento/src/lib/server/pages/calculator.html",
+      "sha256": "0c1bfda37e6adc385929c4babebdb632e1be403d9a347bd9f4dd086582cd077e"
+    },
+    {
+      "path": "karento/src/lib/server/pages/cars-details-1.html",
+      "sha256": "7fe654f6ea8c968bfaa21fb7d30343cedbc2894a203455f6c1e9c86883eeda9e"
+    },
+    {
+      "path": "karento/src/lib/server/pages/cars-details-2.html",
+      "sha256": "fc6787389e2331b78082ec60a97fec3351a3697107a6e2b4338d82f1909caf1d"
+    },
+    {
+      "path": "karento/src/lib/server/pages/cars-details-3.html",
+      "sha256": "5191cb680f414220193112ff0b0e3ee37e1f2114182cd3678cc3220ee5bfa703"
+    },
+    {
+      "path": "karento/src/lib/server/pages/cars-details-4.html",
+      "sha256": "b83eeefdec5769b9eb12470822ca3cccf7fe2289927770314d756c14ac7cec62"
+    },
+    {
+      "path": "karento/src/lib/server/pages/cars-list-1.html",
+      "sha256": "ff3b328b021036385222bbaa3f0ec9da6984cc3d29e90f7a9e3b2f11094d7f60"
+    },
+    {
+      "path": "karento/src/lib/server/pages/cars-list-2.html",
+      "sha256": "d10540f75fedb740204c1be1f3dd98d6afde215ce2e5881b0bb7b21141e79c1f"
+    },
+    {
+      "path": "karento/src/lib/server/pages/cars-list-3.html",
+      "sha256": "a5935938c2d81aadc0b09c760da800d9c89bd1bd16a99ee03d63ec0728933fde"
+    },
+    {
+      "path": "karento/src/lib/server/pages/cars-list-4.html",
+      "sha256": "86af0afe0799724b87ccf89e397b400915dbfba6e0db6784c6d9cc40cbe9b8e4"
+    },
+    {
+      "path": "karento/src/lib/server/pages/contact.html",
+      "sha256": "6fb175f79d9cdd89b356d33cf582067b4dd6c6002ee7e6110c92b635c72e88e7"
+    },
+    {
+      "path": "karento/src/lib/server/pages/dealer-details.html",
+      "sha256": "968ee6f9e1b3310f9a32edda85a550341275b298cb62bf37e2a7b08a7cbf2654"
+    },
+    {
+      "path": "karento/src/lib/server/pages/dealer-listing.html",
+      "sha256": "086cf742450b1320c83976f915688d7e5a6cd0ded8908b5d83ba5ef89c7d95b1"
+    },
+    {
+      "path": "karento/src/lib/server/pages/faqs.html",
+      "sha256": "fecbe9bbd1d1d066b67b0cc93521b46c06dc3c840ac720b30ba9b066960dbd8e"
+    },
+    {
+      "path": "karento/src/lib/server/pages/index-2.html",
+      "sha256": "6754e1aea994904ee07b83ed873d48fc1fa88a9b158fb8d25ddcbebb80ec56e2"
+    },
+    {
+      "path": "karento/src/lib/server/pages/index-3.html",
+      "sha256": "a059a321be1b1566223d246b408c03a4ba9be6d3d48bc9617ec12a8e1b6cbbff"
+    },
+    {
+      "path": "karento/src/lib/server/pages/index.html",
+      "sha256": "ef26c88f8410f6077805d0528b72197d0fe7992e1fa9945bfb2404c6302557df"
+    },
+    {
+      "path": "karento/src/lib/server/pages/login.html",
+      "sha256": "41b594b8dd815f8efad7d435dd7e97686124511f129303956851ec16809840e2"
+    },
+    {
+      "path": "karento/src/lib/server/pages/pricing.html",
+      "sha256": "9e00a749b305910c14dc0a010f4290aee612358a8884444e658e46e2cea8952a"
+    },
+    {
+      "path": "karento/src/lib/server/pages/register.html",
+      "sha256": "a88c745ebe73ec202e288759165daae017a30ff94bcd307415acb8ba1c37ffaf"
+    },
+    {
+      "path": "karento/src/lib/server/pages/services.html",
+      "sha256": "c904f37fbed5d4e64b096f5dd96e1adb6ff54fe68a4d9379f29c876fe29d3fdb"
+    },
+    {
+      "path": "karento/src/lib/server/pages/shop-details.html",
+      "sha256": "bcf07db4434ac96f134aeed9b7f62073829f5026d261ed557231c8cf162abd46"
+    },
+    {
+      "path": "karento/src/lib/server/pages/shop-list.html",
+      "sha256": "9c7c48b0fa018ee48ba14a3ac7d3bc14e4cfd08a817d54256aa41217aad8ad91"
+    },
+    {
+      "path": "karento/src/lib/server/pages/term.html",
+      "sha256": "f08f008ad0efc8a403cbfbb486e22ee5ea09768055cc7eea38be6a1c7f081e94"
+    },
+    {
+      "path": "karento/src/lib/server/pages/user-dashboard-bookings.html",
+      "sha256": "7a091a69182354b61e974dd09d570de667b435d7f2fff139abc67c0c05cfd09b"
+    },
+    {
+      "path": "karento/src/lib/server/pages/user-dashboard-home.html",
+      "sha256": "79c8d06b1abcbaa82afa4a338a3877e75fefb9a2c3b780fa75d3629548a1558d"
+    },
+    {
+      "path": "karento/src/lib/server/pages/user-dashboard-profile.html",
+      "sha256": "1b63c226dca3455e2ab6d7878d912f3e03a9cbe8dcf466c91f5f192b0b2d22db"
+    },
+    {
+      "path": "karento/src/lib/server/pages/user-dashboard-setting.html",
+      "sha256": "0a73eb7dfbd071d42e108f390b92be8d92efe13a35b0693bedae1fa0162c4556"
+    },
+    {
+      "path": "karento/src/lib/server/pages/user-dashboard-wallet.html",
+      "sha256": "45972439ce14a8957cd8e79be54be1b41eeb4e967bdab1cad46c178def3b2b3e"
+    },
+    {
+      "path": "karento/src/lib/server/pages/user-dashboard-wishlist.html",
+      "sha256": "96bfe4905517a939626903cdbd83a0049eb6a27c612baa5ba09125de8b6e8716"
+    },
+    {
+      "path": "karento/src/lib/server/pages.json",
+      "sha256": "358c33afe1b4b4faa7c9f2c93eca04f393f935e9b03576b8609f9c39079725aa"
+    },
+    {
+      "path": "karento/src/routes/[...path]/+page.server.ts",
+      "sha256": "416f86538cd52efbf6d57656242de1fadcfc9f1ba0c2493ca3f5d0bfd4d870b5"
+    },
+    {
+      "path": "karento/src/routes/[...path]/+page.svelte",
+      "sha256": "17d45f3d3bcd317bb3842c8ea0036aa9c58cc5ab9ba6fde84a2549c4d85b81f8"
+    },
+    {
+      "path": "karento/package.json",
+      "sha256": "6f6c2473b6b144f2fc2b828980905ed91cae50b4ab0291fb650ef649de94eccc"
+    },
+    {
+      "path": "karento/package-lock.json",
+      "sha256": "b0f02b12d95fc44a637f59f8e0a0074694c484b351397c2b08b198767fdb66f4"
+    },
+    {
+      "path": "karento/tsconfig.json",
+      "sha256": "b56020524f42057f53057d8ccf04bc14cd4d429575242f1e73e5433d98be34c7"
+    },
+    {
+      "path": "karento/vite.config.ts",
+      "sha256": "7eafdc5e2f3de650566f28f5c2711091fabbb36dd14b1831a72f6d5e016f4d7d"
+    },
+    {
+      "path": "karento/README.md",
+      "sha256": "e30c34378669ed5691e3cd2741656044a857d1512579608e8b5d3da7d1475878"
+    },
+    {
+      "path": "karento/AGENTS.md",
+      "sha256": "0b5da68b75beb05c8cb82b8d9627d66c5779020d13ca15943816978820b6a010"
+    },
+    {
+      "path": "karento/scripts/capture.mjs",
+      "sha256": "1595b343d8faef34d65bb45a5caff1c9f9484110f618d07cc61768f350fb71d3"
+    },
+    {
+      "path": "karento/scripts/compare.mjs",
+      "sha256": "cccd7f3036e35baccf4503af2f71d988636954cbc958a985cb5d70e5030c71d5"
+    },
+    {
+      "path": "karento/scripts/localize-fonts.mjs",
+      "sha256": "4585376a49cbe2d9c81347ae5984de7173aff94c2a683b90664afcd3cb7e5d7d"
+    },
+    {
+      "path": "karento/scripts/qa.mjs",
+      "sha256": "81b8c099a4d129a2e68da257be427eda49d019d01be0a5ab126eb6ab457998d3"
+    },
+    {
+      "path": "karento/static/assets/css/main.css",
+      "sha256": "3ca227bf7f187ee41d029c75faeb3e3cef996231e9860a98cd91300f5a9bf957"
+    },
+    {
+      "path": "karento/static/assets/css/plugins/animate.css",
+      "sha256": "c0210f1b417579641c8d7c40e4a0e62a1c1403db976c1476ed7530b8e9a38dc5"
+    },
+    {
+      "path": "karento/static/assets/css/plugins/bootstrap-datepicker.css",
+      "sha256": "6cb3541f348c12fc41868cac044ec45d8948ae6a3bfa7ec5e2826b6b522039a3"
+    },
+    {
+      "path": "karento/static/assets/css/plugins/bootstrap-datepicker3.css",
+      "sha256": "020850103421e895d3375888fc16adc1b207a4944a41c83695acbb0c4e54fd14"
+    },
+    {
+      "path": "karento/static/assets/css/plugins/carouselTicker.css",
+      "sha256": "abd21747aef82c1dc4e85fc289e98ea837e3b4d7625a31b7e8fc661ba356a2d6"
+    },
+    {
+      "path": "karento/static/assets/css/plugins/magnific-popup.css",
+      "sha256": "ea9e6e0ff9d52902eab199fab8c896b89e3e3627e4c27a13d3b5a968a1ea14d9"
+    },
+    {
+      "path": "karento/static/assets/css/plugins/odometer.css",
+      "sha256": "ade68cfe2439fa616fc7b92a04007374d458da79d34cc75bb2520e1ce48b15ea"
+    },
+    {
+      "path": "karento/static/assets/css/plugins/perfect-scrollbar.css",
+      "sha256": "d7112768d2298cf4bf2f5a5e6835cf79579bb4c185ea22c5a754d4c868d59fc6"
+    },
+    {
+      "path": "karento/static/assets/css/plugins/select2.min.css",
+      "sha256": "efb4211a9c2d8490af8bf1cf51795bf9cb25cbcd31bdd8700d3440d21cf3f769"
+    },
+    {
+      "path": "karento/static/assets/css/plugins/slick.css",
+      "sha256": "618adffe579a8f208332b16f1923573b590c9ca0e2f76f3b7513998a1d9f408b"
+    },
+    {
+      "path": "karento/static/assets/css/plugins/swiper-bundle.min.css",
+      "sha256": "d3a31c454111f7bbb00ce5d2d3fcd45a6aea103e106228a1d3a725ab07741bc4"
+    },
+    {
+      "path": "karento/static/assets/css/vendors/bootstrap.min.css",
+      "sha256": "3c8f27e6009ccfd710a905e6dcf12d0ee3c6f2ac7da05b0572d3e0d12e736fc8"
+    },
+    {
+      "path": "karento/static/assets/css/vendors/normalize.css",
+      "sha256": "580818700724d42d7fcc4979b0197971fca1c6d2e0286769237a0ac897df5512"
+    },
+    {
+      "path": "karento/static/assets/css/vendors/uicons-regular-rounded.css",
+      "sha256": "d77519469130bb1056d338949afd3c30d31ca90baef31d350667696bd5b9e91c"
+    },
+    {
+      "path": "karento/static/assets/css/vendors/urbanist.css",
+      "sha256": "383d9d2b0c2a79c09e20df0f3c38743ec77fee13346ce7063f68475551b1a590"
+    },
+    {
+      "path": "karento/static/assets/fonts/uicons/uicons-regular-rounded.eot",
+      "sha256": "c76cd078de750e8cce6ffbd2573ee70508f3196f53f790530a52f9f90d3d1f74"
+    },
+    {
+      "path": "karento/static/assets/fonts/uicons/uicons-regular-rounded.woff",
+      "sha256": "bd0db256f1b8b8dd3f7d9bc99f2aa1909a12f6daa3d32c78f8604d3000ed0c02"
+    },
+    {
+      "path": "karento/static/assets/fonts/uicons/uicons-regular-rounded.woff2",
+      "sha256": "8fad09efc62c2736ee9044034bf975a3f721306605b1589f8f761a852592c528"
+    },
+    {
+      "path": "karento/static/assets/fonts/urbanist/L0x-DF02iFML4hGCyMqlbS0.woff2",
+      "sha256": "7981ef90c246352c7c217081b8d9337b9c95e9d17ae126bf56b0d3753d1e5ffb"
+    },
+    {
+      "path": "karento/static/assets/fonts/urbanist/L0x-DF02iFML4hGCyMqrbS10ig.woff2",
+      "sha256": "f71047c01398a570cabbd2810cb0893992b3dd2e34c966afa0e54b3f12b6f329"
+    },
+    {
+      "path": "karento/static/assets/fonts/urbanist/L0xjDF02iFML4hGCyOCpRdycFsGxSrqD-R4fFg.ttf",
+      "sha256": "7b9e538738641d4243175732167b2a9fe440f139fc783547846673988d87c95c"
+    },
+    {
+      "path": "karento/static/assets/fonts/urbanist/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDFRkfFg.ttf",
+      "sha256": "beb886f39281fdb7f0927346b8d7ff5141a2866a43f21c5251fa73eed783224f"
+    },
+    {
+      "path": "karento/static/assets/fonts/urbanist/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDLBkfFg.ttf",
+      "sha256": "e166b470f65b6c2a7bc8ac8718273ac63882e215caa76e1de7dc25c8875d243d"
+    },
+    {
+      "path": "karento/static/assets/fonts/urbanist/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDlR4fFg.ttf",
+      "sha256": "c6b87c6459b61470cb7b2f46c85fd8ee6933257224cef908128d54e7ab0a55cc"
+    },
+    {
+      "path": "karento/static/assets/fonts/urbanist/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDSx4fFg.ttf",
+      "sha256": "69195e8f23015123798d793a7a2d2cfde42db57776fb18febbf0f3449c2b1c76"
+    },
+    {
+      "path": "karento/static/assets/fonts/urbanist/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDSxkfFg.ttf",
+      "sha256": "2835c1a1d69ad4c936ed2736debf76951b57cd7fa0836ac8695b4a0f05c924e3"
+    },
+    {
+      "path": "karento/static/assets/fonts/urbanist/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDYhkfFg.ttf",
+      "sha256": "ea0fc2180daff145250764c96c4a297671bc58c8a87d2ead300e8a2d02ddfd9b"
+    },
+    {
+      "path": "karento/static/assets/fonts/urbanist/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDyx4fFg.ttf",
+      "sha256": "599ec73b0a0388ba35a861b6f40bb77f9874b77c13f6499b15ad734f5715505c"
+    },
+    {
+      "path": "karento/static/assets/fonts/urbanist/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDyx8fFg.ttf",
+      "sha256": "eaf8b1e0c20812796a9036a11bdd4d47a8f5be45320eee0f2a58a32cd730f33b"
+    },
+    {
+      "path": "karento/static/assets/imgs/app/app-1/background-1.png",
+      "sha256": "839b30d136bdcb2b6b545facb7f4381c87058995b5ad2c29a7dffe59bf2773b1"
+    },
+    {
+      "path": "karento/static/assets/imgs/app/app-1/background.png",
+      "sha256": "90c93f3409d583b72dd3df6ec5c636e98ba3a3e9693117046c668c58ab1616e7"
+    },
+    {
+      "path": "karento/static/assets/imgs/app/app-1/phone.png",
+      "sha256": "063523b0573d5c3360ef7dc7958253d6f3520ab86718d5323a231eb9f545e63c"
+    },
+    {
+      "path": "karento/static/assets/imgs/app/app-1/truck.png",
+      "sha256": "97d657c2415b8c281306c8ace4dff748d28ba61e2041a253e135705065bef694"
+    },
+    {
+      "path": "karento/static/assets/imgs/banners/banners-1/img-1.png",
+      "sha256": "a3963b75d728a60b48f0b87ff497eb73dcaa66d52e6644ac8387a49dfb06ca58"
+    },
+    {
+      "path": "karento/static/assets/imgs/banners/banners-1/img-2.png",
+      "sha256": "4d5caec8689c70a593d9a43fb158b9616922876efeecafca20a0f71777f9253e"
+    },
+    {
+      "path": "karento/static/assets/imgs/banners/banners-2/img-1.png",
+      "sha256": "e5487526ead930e445ff1b31f6e778238252827bc710193f115b46441f8ea123"
+    },
+    {
+      "path": "karento/static/assets/imgs/banners/banners-2/img-2.png",
+      "sha256": "ca4c2d0cb41d7dc1b38f732c6eeb12eedcee4a70a93b56eeadb87d41a12dceba"
+    },
+    {
+      "path": "karento/static/assets/imgs/banners/banners-3/banner.png",
+      "sha256": "4039a53eb59e1ad7a849bf573650a339b26f8aa0312699297a2a41b6d0bc453c"
+    },
+    {
+      "path": "karento/static/assets/imgs/banners/banners-3/banner2.png",
+      "sha256": "9016cd65099b49babbce3b7c1a5df1973388b6fb60ab868133106966fe00e01f"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-1/avatar-1.png",
+      "sha256": "c4b8e459bce113f5d20c59928615bbb415f8f577d4bd2ec486ac396042f78ae8"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-1/avatar-2.png",
+      "sha256": "1412e0a936f8da33848411b4011ece664da1aa6f3d3c5214d2f4fa16f969488b"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-1/avatar-3.png",
+      "sha256": "dcea682d9b9d40a0d76778a68e78d21db8170122bde9eb9e14bbc099ba94cbf4"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-1/img-1.png",
+      "sha256": "8649c1bfae8bcb690e076bf2669d09a5302b5f49fc5b92f3410a9dd9c21882b4"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-1/img-2.png",
+      "sha256": "e9ee256d66762a7806114bab25c6e89726556c659988357105bb8fac0c5d5287"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-1/img-3.png",
+      "sha256": "726fc32a648193695a0f80f0a8370b90b87c608c92443a4a9862305d70a19f6d"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-2/img-1.png",
+      "sha256": "1120424647a91afbfdeb6bee86c8841396897816bd7ca763274ae5b9a45004b2"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-2/img-2.png",
+      "sha256": "7d9123851185026bace03be73eb8a3387435ef43fd938fcf230a017309408e90"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-2/img-3.png",
+      "sha256": "eeb90ca337d3a43c2315e70724034ecb02a9c70bcbe9e532093f03529bbecd01"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-2/img-4.png",
+      "sha256": "40dbd1ae24acbc4b7df83a6dce0e9e4d41375e049980b2cbc7d2b06684e24400"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-details/avatar-1.png",
+      "sha256": "603782eb19ae7a716f76a8010fa423b04cb4e289b1a42c878b1f46ce646ea59d"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-details/avatar-2.png",
+      "sha256": "d920a11fca44acca82831fa04412a2995ee18a2f3a000a2e6778299340593e2c"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-details/avatar-3.png",
+      "sha256": "aa7f55f73f67964aa43914115d8ad55d43e6438a57d89ea2fdc431c636894e61"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-details/banner-car.png",
+      "sha256": "a6659ed4d997a202aaadfe7c34014f23fd5b60184b12ec5a9aed8cff181c88fb"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-details/banner-img.png",
+      "sha256": "7e67dbf3a1e8e4ed7de99fff54fbd075df53e20d80d86437ad04f4732f4bb2ac"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-details/img-1.png",
+      "sha256": "1c0909b311a3bf3fd3167e62d4f140ca8d7d50e383f22aa8b9a85bf7f7f0334a"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-details/img-2.png",
+      "sha256": "8dfa4234ca5461150f2ec6b43db236d29fad6a3a87c9854f2e7c489656f266c8"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-details/img-3.png",
+      "sha256": "e3f3f11ce3290dddef8f0e15ab0c0812a588cb1675ec5bd1ae0ea4e169c05565"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-details/img-4.png",
+      "sha256": "68d0c295e3bec18f3e84d48cb197e5e365279305cc9dfab3f8025a38474781f8"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/avatar.png",
+      "sha256": "3f9e2eb5923d69b8c746a78809fd4b80f78c7681e795dcf71fab64bc15dc05fa"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/avatar1.png",
+      "sha256": "cf846e80243eef068224505600ff2b6845eeb3a8febbdd4e1206e80721aacf34"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/avatar2.png",
+      "sha256": "4a0cecdf1684089695d4608f41d55bd98bb6ba05140776e311f50cc9d4d9c366"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/avatar3.png",
+      "sha256": "5a11e69097073cf6a582bc59753dcc1db8bba6ae271850ff585de0f7d0400c23"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/avatar4.png",
+      "sha256": "3bf1bee2cdfee20fc80d6f3624f838ff6462630f3b63dd1820645268e2f0511e"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/avatar5.png",
+      "sha256": "89a983e3475f6973162baa0d043ed6eed09e6f9983c9a1c1fad9a725489c70aa"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/avatar6.png",
+      "sha256": "08fe7eea9fb769cc1983b2d8fa4c33b5e35c5831f345d64d562fc808277f5f31"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/avatar7.png",
+      "sha256": "4ed9160e4db0c273de6dc6f9f77e1338c48189c44eaf589983f03067217223e0"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/avatar8.png",
+      "sha256": "38d0221deb7a2f27aec28aa4016cbbd66ed174d6bed9496101e2545c0561963d"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/img-1-1.png",
+      "sha256": "e0b182f338ca6158ee7fc81cc5840339018bb12239c07bc8955476de1085172d"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/img-1.png",
+      "sha256": "9a07a0ec4400a137345e28eff0c68995047bd327c573b0fdfada089cdcbca788"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/img-10.png",
+      "sha256": "541a4640a84dfcdf94ad0461778497af8f9c9a14c7df518d590b0f64779746fa"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/img-11.png",
+      "sha256": "7f213b02e9f38acb8c80532dc6999143fbf16ee8f360f529f9923726ef39bb87"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/img-12.png",
+      "sha256": "990ffa6959c08091aac4104fac87b5f32ad474079a4cccfef62fd27aa8a193d8"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/img-13.png",
+      "sha256": "0dacf861147fe86c57b553461874020dde56a4ee3d086173aaa537902f87d508"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/img-14.png",
+      "sha256": "caf9554c7b7e0f80341ec910e37e50d62efa04b8cafbe19642df14335d998edb"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/img-2.png",
+      "sha256": "12060dd82f281dd23b93b4d578f3627ed5127a60188184a43aa6f410111f9850"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/img-3.png",
+      "sha256": "cced6ded03e449116cfe1b27e526402ce3fc0a9c530b1edc6978546ca2e2c735"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/img-4.png",
+      "sha256": "1b6ddbf6ee546ff1ae5a84123214e8515956b3ee590342cf858b58afa68c2ae8"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/img-5.png",
+      "sha256": "756e06c2064104d507b66e28c5bbbc5d23ae12ab04e67417af938ba99609a916"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/img-6.png",
+      "sha256": "faf06438e40b3ccd177ebfd54be234a36bc16a9ae7951d959af70d9c69f4b60e"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/img-7.png",
+      "sha256": "d827e7efeaf71f7d9cd091428888bfc7bf152420c44de89ad1696e403044230f"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/img-8.png",
+      "sha256": "51c4c6e83c43bb4f3d494a5070c7cdac82f110105aabfe021d90c3cf1a2066e5"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-grid/img-9.png",
+      "sha256": "2e5c6ce0eac0519f7ba870534a217932c1b6324a17a0e9a5a45fd4675170c71d"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-list/banner-ads.png",
+      "sha256": "e8c2ae8787ab886b14815a9784df9a92d0aad668d421fc7279c7d326f5856218"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-list/cat.png",
+      "sha256": "4f369f37a128f94d15d70bfae1cf9710b2b65b9765caac96805fa0ab8bd1c901"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-list/cat2.png",
+      "sha256": "3b863bf575b8a576e7703128e35a469b7f125fea1ea0a4c1ed713b455157b6e6"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-list/cat3.png",
+      "sha256": "8588ebd6520a28f4e143c12bd8c32dc021b44766d06f8a634c8c99c3e33fe02a"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-list/cat4.png",
+      "sha256": "f8f76a5ede9354fde33282ac02751de59a28dc4cb7ab7bc46570f09263e0afe3"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-list/cat5.png",
+      "sha256": "141c0b32873df5910b526aee9ff25b42a244923574acb96011ae91d9f4a8bbb4"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-list/cat6.png",
+      "sha256": "d5bbc78150f7ee647b341120263cabc00b225063228f1fe0b3ee371295c9bdff"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-list/cat7.png",
+      "sha256": "7e8c3ae184e38ff984e47a236c3a56799bc1cb67c7beccf4256bf7fec8f20c51"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-list/cat8.png",
+      "sha256": "ebd969a778a94d4998e99c9af9b6c34ce6f1b177af460bc784359cb47170267b"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-list/img-1.png",
+      "sha256": "4dc35533826afc6b6f2591cfc552226b5a28dc53cb0e7c0adb0b44c48a00bc7d"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-list/img-2.png",
+      "sha256": "132ff2e0a731abb818b4990b4a198086ca7c395c85d557abaf081e72399883b7"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-list/img-3.png",
+      "sha256": "bf84e8cc6d633698d41f2105f44117127a699690d7cba1744614c90fd5c50924"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-list/img-4.png",
+      "sha256": "1f62256172db68f39ea25a439c4806cb1bae47a70a1bd1c81c563e7eb547748b"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-list/img-5.png",
+      "sha256": "5ca6ad0c56f23f4e94bb1b843b503e838d500c11fbd21138624e2da247d0728b"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-list/news.png",
+      "sha256": "044100219cfccea62592b4cf1fbb51be1a7a4ed61af25ffc7ad64a6bc8f62e03"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-list/news2.png",
+      "sha256": "8e2fd1704892ad5891b96844d950d3563ac333aaae497586ec994786263caf0e"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-list/news3.png",
+      "sha256": "b2294694fadbefbbba166356a555d015307ba2a40b18e7eb07bed01b84e73a5a"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-list/news4.png",
+      "sha256": "63c3fd24694c74b8a3787ffbd9b02e86583e094d65222bb3c372bc87f7b18ebb"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-list/trending.png",
+      "sha256": "57f15c6c46c4eb277182e86670dce3501ffe33173cef1860c9c2c88f3a0aeeb0"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-list/trending1.png",
+      "sha256": "e246347f3fd3f16da362558cca32c15399a8d06206f0233860e58eba3f59092c"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-list/trending2.png",
+      "sha256": "54b7904ac93e132fd19e4385daf6014e409f67738d01b32a41ded0b9ce2e7a7d"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-list/trending3.png",
+      "sha256": "1867563c3ea08bb885ed17cc32e58b6bcea23ad03bfe0c2cd28e4d7ec4d9537d"
+    },
+    {
+      "path": "karento/static/assets/imgs/blog/blog-list/trending4.png",
+      "sha256": "515ea0bcc27087fc76f0c14b62bebfc0b98bcdfb61547b8ef551b17f000a3dc4"
+    },
+    {
+      "path": "karento/static/assets/imgs/brand/brand-2/icon-1.png",
+      "sha256": "bfff886bcc33811100e7b9967205ac855bc059c963d8d43fcc668b542e79d6c5"
+    },
+    {
+      "path": "karento/static/assets/imgs/brand/brand-2/icon-2.png",
+      "sha256": "8615f321e2972cc5a31c41e373af4f2501181eedf0b7d7907e7970f694c02d01"
+    },
+    {
+      "path": "karento/static/assets/imgs/brand/brand-2/icon-3.png",
+      "sha256": "fa7281ebbb70a54ad8863ed66cb854c511088d4aac68c18fbc683b32bc8a1071"
+    },
+    {
+      "path": "karento/static/assets/imgs/brand/brand-2/icon-4.png",
+      "sha256": "a07beae82227d50bcea9a5be3f227f21c68028dd330515c7a191dbd22b76c3a7"
+    },
+    {
+      "path": "karento/static/assets/imgs/brand/brand-2/icon-5.png",
+      "sha256": "b088b09875e4deef51f2eec2317a63b92b836b75707573b514f8ce84d4ca70a0"
+    },
+    {
+      "path": "karento/static/assets/imgs/brand/brand-2/icon-6.png",
+      "sha256": "513faddd4a673580fd5de2be48cc78931a036d7c003c00aeca5509db09aa22f4"
+    },
+    {
+      "path": "karento/static/assets/imgs/brand/brand-2/icon-7.png",
+      "sha256": "304241d844add491ec09a6a039ed0765415aead726faa6e6c20c3f70c48ae491"
+    },
+    {
+      "path": "karento/static/assets/imgs/brand/brand-2/icon-8.png",
+      "sha256": "3f797771e8be1f632cad79ab43960c11bee9da03e72e80569845cdb800b70891"
+    },
+    {
+      "path": "karento/static/assets/imgs/brand/brand-2/icon-9.png",
+      "sha256": "e4faf812f708c17bc3d3e57e68b1b7549cb2a71d8491228c3b4c656b6c6afaaf"
+    },
+    {
+      "path": "karento/static/assets/imgs/car-review/car-review-1/img-video-1.png",
+      "sha256": "d008c52dd9f2ac0cc98745026627a0a9691130d4152606e5ef0db7c66a7147d4"
+    },
+    {
+      "path": "karento/static/assets/imgs/car-review/car-review-1/img-video-2.png",
+      "sha256": "ede09549acbb39f4c6d4e54599a9105e18593a8153b992d95470f8e7a99082ef"
+    },
+    {
+      "path": "karento/static/assets/imgs/car-review/car-review-1/img-video-3.png",
+      "sha256": "4f79b4bbf23874c86c04d4b0e328b3caa1798abc8e5ee3a589e379d2cba42a25"
+    },
+    {
+      "path": "karento/static/assets/imgs/car-review/car-review-1/img-video-4.png",
+      "sha256": "c0f3e3b130cc69f9349a82c4296a2d6c880e31d1ab6f5d7ec8760a911d1f44d0"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-details/banner.png",
+      "sha256": "0718efbcb3b4e96f9aa6d838047ccaca0f767d183f042189d952390a9267edd8"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-details/banner10.png",
+      "sha256": "85e6b075e08dfdfba33ecaf55229c3613a5a1ef535f18eb321e28b71cb3d0613"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-details/banner2.png",
+      "sha256": "0c4ffe9422828f6de857643095268fce301dfcb49ec7976c3a735028e7f1206f"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-details/banner3.png",
+      "sha256": "81349534da59daed3d357ef45498ad3f99c3743c084b957f72cb994fdb3ce96b"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-details/banner4.png",
+      "sha256": "920ce036907fedc57d60e847bd8818c1916ca9f56341cf0d6ae97be9f45f8e47"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-details/banner5.png",
+      "sha256": "27e6a29ba04f733c12ad06651d2cb77073442302929d980982cc4dfc792ab591"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-details/banner6.png",
+      "sha256": "91da563b9d5534ae36efb2dbbd4946b53b435b18cbc9d2c899d501545e2c7ae0"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-details/banner7.png",
+      "sha256": "e2eb21021f44f89ec607541c4567ae8ebce623f24464d8607d6a7fa86b710ee6"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-details/banner8.png",
+      "sha256": "9a909e1a565e7ecebc85ffed197c86b7a96c85435e034567d81878228f02643a"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-details/banner9.png",
+      "sha256": "5f9c225a446c3ab7274837be874a0e4afbd926efd7f71034f2ab8c7f65f52d00"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-1/car-1.png",
+      "sha256": "ae1f51625a2734418ae3ce3a0b24758b0755474082f2f7f87dae7548284d6ca5"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-1/car-2.png",
+      "sha256": "34a5f0b4d198e05c35ca43736b5836a893bd034f6244c569456dba2f9a726ea2"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-1/car-3.png",
+      "sha256": "f799f767b09e1101e76e1310d6c07285e507bc8d05132a27f54478c4c1e022fc"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-1/car-4.png",
+      "sha256": "03ba32fa4f5ea66c0ea730c808e0c75f04806e4a18c5f8f7e9d21dd115179d83"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-1/car-5.png",
+      "sha256": "479274a258441b56b7d29df3716a15f5005ab0b5fbcda186e7327095aaf52c76"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-1/car-6.png",
+      "sha256": "353836ce5b9e96f5a1d40aa92b38d43b33d3361b396dd2d62ea917bc93a58a51"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-2/car-1.png",
+      "sha256": "8fb35ddd5bfd04644e01a48db910dfea2b9663d9c3bfae7ef4bdbed61e7b5978"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-2/car-10.png",
+      "sha256": "1bcf049bcb26087f859f97144fb58729323b88e01de1a0f34000ad55a87dad95"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-2/car-11.png",
+      "sha256": "bdd6f3b3c37904407866fe1ae199817c2a381a8fbbe24f0318549b83460b6c8a"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-2/car-2.png",
+      "sha256": "e0efd12cb8200e1f1726fdfb00d5315e05d42c584c50546e8be733e7cb0b30dd"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-2/car-3.png",
+      "sha256": "8ad1a675631510ea92956ce9289aca6da8c3f09ff55676facd872e341dfe28a8"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-2/car-4.png",
+      "sha256": "c8de5415a6b05c30c524d11b7bfc023f89ce3945f52d5a25e182298d3b33d530"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-2/car-5.png",
+      "sha256": "61f42d317f284a3067dafe8e505bd9e04a0eff75b0d212f5b078c8f13b40445e"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-2/car-6.png",
+      "sha256": "7d9e3c866f8116f5c6d7ca2ae73f42143a15f564600bff4f5820c3b66a3ea1a6"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-2/car-7.png",
+      "sha256": "f8147b10d777f6522adb5a5c41b75dd3a360019a903aa2911895440d4a2388ea"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-2/car-8.png",
+      "sha256": "b63109f6aeb489d38d6b1463e948c734d76e3624c5d2116003a74de90645eae8"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-2/car-9.png",
+      "sha256": "4aaaaeb3e10a230b2aea7ae761a550911454db390b439e95055d62b6149f6498"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-3/car-1.png",
+      "sha256": "46e8e29157d62ab056f697252b6a1c6c96dd530ee574ecb2ab22621946525953"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-3/car-2.png",
+      "sha256": "080bd89ec743c36166d561e723c0a8efb924d761b74b9b9e97058bf6963ccce4"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-3/car-3.png",
+      "sha256": "46c8909ca4b35a1418c6c16cbb148031e1f1b099b6d90268952aefa6b6813dbd"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-3/car-4.png",
+      "sha256": "639cf184f09b3c0eb91542899e28cfb285b86f28b5c0f418229917e713ea8da3"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-3/car-5.png",
+      "sha256": "5c8c03bbef421c87bba046d2d1806e4e67a0cd91c728d3ae1b678a2ec7ffc446"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-3/car-6.png",
+      "sha256": "8b26c3bc5493e50e593fb70940cb575cba5f584c0a3db2763ce7817cd30ba3bd"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-6/car-1.png",
+      "sha256": "7d9e3c866f8116f5c6d7ca2ae73f42143a15f564600bff4f5820c3b66a3ea1a6"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-6/car-10.png",
+      "sha256": "fed3bfef10c1405e4eb9f4dc4416a8ed0e5a4e59c83fd68ab4a9f80f6b1f9d62"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-6/car-11.png",
+      "sha256": "6359454a6995dc49a6e5a4f0b42e00eae93ec4da0571dd14981355a7834c4689"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-6/car-12.png",
+      "sha256": "77b52dee7175f322fa32e135dd09e108a8d208427fec037a52c517f65c029639"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-6/car-13.png",
+      "sha256": "0260d1bf3ef397fc2b87dbda394cfdf45844999657cdc64f2a31fb87afc2968f"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-6/car-14.png",
+      "sha256": "be0e8592f15aa67f8bd65c9b5c7393291b7fc85693825cc6f8758288e1c618a1"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-6/car-15.png",
+      "sha256": "8c565c611ca2b02434c920efeff1a6735b28ae7600327402a77f5cb6962f2ff9"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-6/car-16.png",
+      "sha256": "7d9e3c866f8116f5c6d7ca2ae73f42143a15f564600bff4f5820c3b66a3ea1a6"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-6/car-17.png",
+      "sha256": "f8147b10d777f6522adb5a5c41b75dd3a360019a903aa2911895440d4a2388ea"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-6/car-18.png",
+      "sha256": "37d6604ac5cd85af97a14a9ca59bd676b71826b0c414b9fc1ad534b92ed929e4"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-6/car-19.png",
+      "sha256": "be0e8592f15aa67f8bd65c9b5c7393291b7fc85693825cc6f8758288e1c618a1"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-6/car-2.png",
+      "sha256": "61f42d317f284a3067dafe8e505bd9e04a0eff75b0d212f5b078c8f13b40445e"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-6/car-20.png",
+      "sha256": "9799693606a9fa1996e4868519a10d932655bfa528f101aaed5618fc771f95c5"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-6/car-3.png",
+      "sha256": "b63109f6aeb489d38d6b1463e948c734d76e3624c5d2116003a74de90645eae8"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-6/car-4.png",
+      "sha256": "4aaaaeb3e10a230b2aea7ae761a550911454db390b439e95055d62b6149f6498"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-6/car-5.png",
+      "sha256": "1bcf049bcb26087f859f97144fb58729323b88e01de1a0f34000ad55a87dad95"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-6/car-6.png",
+      "sha256": "bdd6f3b3c37904407866fe1ae199817c2a381a8fbbe24f0318549b83460b6c8a"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-6/car-7.png",
+      "sha256": "a7208841695f134f61d6ee6e18e4521fd5e6ec9834fe5384c90838d587ac5f85"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-6/car-8.png",
+      "sha256": "4e89030867d7ea320ffeb0b1e3ba7930750d2519ecdbeed32e83009ce895615b"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-6/car-9.png",
+      "sha256": "ba8070f2b4faab08f6914f7ea4f9dff0b36c87edc8ae2cbdefaeee12635144cc"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-8/car-1.png",
+      "sha256": "34a5f0b4d198e05c35ca43736b5836a893bd034f6244c569456dba2f9a726ea2"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-8/car-10.png",
+      "sha256": "b8e3f63afb9906f7b2c042790141d850b9f4bf64c4eeed2f51467055ab937b93"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-8/car-11.png",
+      "sha256": "2baa24b0f716a2f5542de67b75cc21b28aa05e51aac12fbf35eea6f53bc473b2"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-8/car-12.png",
+      "sha256": "f218adc48e6c2547b51a5a658d36b40aa6f509cf4ddb467ae31329d08349317b"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-8/car-2.png",
+      "sha256": "353836ce5b9e96f5a1d40aa92b38d43b33d3361b396dd2d62ea917bc93a58a51"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-8/car-3.png",
+      "sha256": "03ba32fa4f5ea66c0ea730c808e0c75f04806e4a18c5f8f7e9d21dd115179d83"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-8/car-4.png",
+      "sha256": "1143101d8300474ca02751e4681094b7cf185daf851e3a903d3fa238254223a7"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-8/car-5.png",
+      "sha256": "479274a258441b56b7d29df3716a15f5005ab0b5fbcda186e7327095aaf52c76"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-8/car-6.png",
+      "sha256": "f799f767b09e1101e76e1310d6c07285e507bc8d05132a27f54478c4c1e022fc"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-8/car-7.png",
+      "sha256": "ae1f51625a2734418ae3ce3a0b24758b0755474082f2f7f87dae7548284d6ca5"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-8/car-8.png",
+      "sha256": "bf676db51fbaa34a1c41af9649df2c8609869e669f62aa70e59d08f659fc9be6"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-8/car-9.png",
+      "sha256": "c50d662aa23f47c4a6f187e955a82a057584a4dec76fe613e5cc3d3a9774d90f"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-9/car-list.png",
+      "sha256": "e8b51e0cb317f5de21f6a4a5727a74c2d263db69310118f4919d8d3720e4a75c"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-9/car-list2.png",
+      "sha256": "658aaf75fd924f51c5f3606b1e8d31fddf828bc49feec4437656e55b303b62b6"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-9/car-list3.png",
+      "sha256": "3841157d36299d6de17deb7b4c3832c1aba1666a199b289e7dab7adc5b7dd1ac"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-9/car-list4.png",
+      "sha256": "e31b201f2834957541fbc89e9e851a91c724bafaa98877ff04a46c726defafec"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-9/car-list5.png",
+      "sha256": "1c96eea7a48340c6d3504454476b94bd854e79a63ff9fd40e700aa971cdcd5bf"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-9/car-list6.png",
+      "sha256": "fcc050aca33cc63ed1c7fe31e00880745df3071a3cc39ca6f3204b0669b3d2b1"
+    },
+    {
+      "path": "karento/static/assets/imgs/cars-listing/cars-listing-9/sale.png",
+      "sha256": "ad7a9bf7f24d8b27d26c39abccb426e1869cfc5b31025a78fe941045dfae49cb"
+    },
+    {
+      "path": "karento/static/assets/imgs/categories/categories-1/car-1.png",
+      "sha256": "a05d32e9ea23c4c10fc792caf6f07604935cc30f3cab20d1facf79b206bd38be"
+    },
+    {
+      "path": "karento/static/assets/imgs/categories/categories-1/car-2.png",
+      "sha256": "ed7e36fecd3e8e069787e508cee8354f0fdcc2adfef7b09223eaf44fa56eb15d"
+    },
+    {
+      "path": "karento/static/assets/imgs/categories/categories-1/car-3.png",
+      "sha256": "1b1eada95e80ab0065f79da669ca4d0b3056d71c23496266ed5ddbe11432c58f"
+    },
+    {
+      "path": "karento/static/assets/imgs/categories/categories-1/car-4.png",
+      "sha256": "b0e76a60062a1e4e862689637c95ad2e7846d4afefef5ccc8313ec3866dc4da2"
+    },
+    {
+      "path": "karento/static/assets/imgs/categories/categories-1/car-5.png",
+      "sha256": "92434a0bd38b57753ceaccba5aef25bb11ebb355625aeb1b98bf1c6ba6aa30f6"
+    },
+    {
+      "path": "karento/static/assets/imgs/categories/categories-1/car-6.png",
+      "sha256": "2324ad3e020b8783d5784dfe123eac31c0e09eb5cdb603ae8b01472b455b4917"
+    },
+    {
+      "path": "karento/static/assets/imgs/categories/categories-1/car-7.png",
+      "sha256": "d2bb376401bcdf0998239623be0b2fd61c036e1beafe8360ca2e6e351f8b4da0"
+    },
+    {
+      "path": "karento/static/assets/imgs/categories/categories-1/car-8.png",
+      "sha256": "dbdb9d93b2274fd953901d06aaf5dda9621e335de1dd4d0d5d5e5d16aa053bba"
+    },
+    {
+      "path": "karento/static/assets/imgs/categories/categories-2/cross-over.png",
+      "sha256": "774ca2c97904f349a24140a2a78746693c85546c1432e7b1e476c70ef0e6f243"
+    },
+    {
+      "path": "karento/static/assets/imgs/categories/categories-2/hatchback.png",
+      "sha256": "4bdd7e5af9682244252370fabbfbdd4d65b29af29978936c6221eeb8263c24c7"
+    },
+    {
+      "path": "karento/static/assets/imgs/categories/categories-2/minivan.png",
+      "sha256": "41cef1711368aa7948e336d8aac88ba9d4aebebb2763cc00e7c809825a471089"
+    },
+    {
+      "path": "karento/static/assets/imgs/categories/categories-2/sedan.png",
+      "sha256": "226464ce46d8ed50df13a21abee6d9bd1b19f60b3e2c97a0e570e1dcceb6d133"
+    },
+    {
+      "path": "karento/static/assets/imgs/categories/categories-2/sport.png",
+      "sha256": "962cd170c643a066214221db45abf18aef238b6b4fd4b5c8bcf6b7da52b148d1"
+    },
+    {
+      "path": "karento/static/assets/imgs/categories/categories-2/SUV.png",
+      "sha256": "5c08e4cd91a4346dafa192059acd899f2da1ba0f837b2c55dc713c7b24fb6557"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-1/play.png",
+      "sha256": "1e7c8788c81df9bab2163091eb5f1de35c692a3c46e07c302740d31da8c2ec35"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-1/video.png",
+      "sha256": "99ad0c83c052dc9a31c431029f90f7d19c7e0961bdd8aab9258de9ee13fbb61d"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-10/img-1.png",
+      "sha256": "ebd1a663b79135a6eb4e1430131ca4e0f8ff03cfeab621973cca9bc1371903f0"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-11/img-1.png",
+      "sha256": "1918eccdd76424655dd0362c83b356fae9f4feb8a3f4c8a4693262b04675e4dd"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-11/img-2.png",
+      "sha256": "2d862176a33a2990ead0c367c103355906f204291a0dc166d2cf71104791278e"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-11/img-3.png",
+      "sha256": "6087f05752c8b5127780ac943fe8c0121b7b8b27b29b67f1aba769115a7b9113"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-11/img-car.png",
+      "sha256": "8c23cf01f2f9c62639188e564303f8422c0008137d467c60e2cf726dc1de0dd2"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-2/background-2.png",
+      "sha256": "3020c9f732c7e1df5c8e617fa337cddf10acb7f7d469fc59dba0482eec47a96b"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-2/background.png",
+      "sha256": "1beb002d469749a32458e02de6478e52b9df7ef9abef48ace59e23b64bd30c9e"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-3/img-1.png",
+      "sha256": "1af43bd3ccf9d12f622a4ebf7cfd18ab974f905aa7c44162220763602d0c1066"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-3/img-2.png",
+      "sha256": "c930b3db7fa65861a31027c1f8c43fd07fb6ec9752dad040e2299ad828fe377d"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-3/img-3.png",
+      "sha256": "4581fac5d795d0bcb825f5b9280aaba314c11451c4f88fdaba59e40e63cb9d5c"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-3/img-4.png",
+      "sha256": "7a731a3595478c4f9ddf00c8e77acf9902444722e05fa8c7526086afd6b29f18"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-3/img-5.png",
+      "sha256": "9d6c1368cd14269c1804f8d01757a8442c3bdd4b7c618298ccdffbf79a8dd599"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-4/banner.png",
+      "sha256": "3b7cc50c3e6a5a5317314a4dfb826331757aa81c0d5c90735555fdb8c4cd41f0"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-4/car-center.png",
+      "sha256": "8352ac19f85e976a7041596f7ff8df85d9659ed8e27efa4c5809dc0e82242758"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-4/icon-1.svg",
+      "sha256": "2105a0e539cc133af031b23173ee92b34e1c4ed9bea0640af346aa78617ff774"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-4/icon-2.svg",
+      "sha256": "42547a4b6e3b8981bbff2c93b29762723cb2050bc7465b3dde287a2c590332f3"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-6/img-1.png",
+      "sha256": "0348d8465b17952b5ae362ca1ce7e8a67078ecca3e2d97d36ed859b314bc6223"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-6/img-2.png",
+      "sha256": "5e5757359a0213447e1fb63bdadf391255e29a4b636b621a6a6c570433f514c3"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-6/img-3.png",
+      "sha256": "da6edc4eaf1f049d867a30a36c12053b134be8199095c25752ec0f2b54a86d73"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-6/img-4.png",
+      "sha256": "44b088c282980e2dfb2cccb6fa5e756f42a36b341404f4a3c9e0104c0c374768"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-7/background.png",
+      "sha256": "710e81881af14c3b6a4874a0d357d06a79ae8b015df4d71fa7d9828ef592c371"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-8/img-1.png",
+      "sha256": "8748cefdc721dcf7818a07df21e3bc0ca952eb94687270d475ad7c9fa1008409"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-8/img-2.png",
+      "sha256": "e0c67b58dc519d23da81aab02888bea49ff51628bc23d1a6b6112e6a330f8ce1"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-8/img-3.png",
+      "sha256": "9c1e7ab58af2fc7279cdbafebf63c7889fc9970be9be7b1a2e8d37e2e3622cbc"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-8/img-4.png",
+      "sha256": "c8150db01c1de7d037866dee08b83633772863456ab8ae3865b83444135ac18a"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-9/img-1.png",
+      "sha256": "5bc489284a920920c6d98caf0c32072fe03882124e6377535979b70b903edd2d"
+    },
+    {
+      "path": "karento/static/assets/imgs/cta/cta-9/img-2.png",
+      "sha256": "07248ae8e32e2e2f19b65b5332ed07ddf07682c1e81cc857822206606ec6c067"
+    },
+    {
+      "path": "karento/static/assets/imgs/dashboard/logo-amazon.svg",
+      "sha256": "60a60cfd55864e76a5fec5c851ca9898363bac5027e081b9ce6c4a4325fd197a"
+    },
+    {
+      "path": "karento/static/assets/imgs/dashboard/logo-facebook.svg",
+      "sha256": "ba34bb0a9e43fdad665ea2b84d0363046177147e763ec3765641501779356876"
+    },
+    {
+      "path": "karento/static/assets/imgs/dashboard/logo-google.svg",
+      "sha256": "27e968b7449458393dc74a8874b6b946c919e6c3593fe4b662558474c39653c8"
+    },
+    {
+      "path": "karento/static/assets/imgs/dealer/dealer-details/img-1.png",
+      "sha256": "492f6c6d49e037fc9a1d482a62624d86925ddbed84ada79920191743d8d55ec8"
+    },
+    {
+      "path": "karento/static/assets/imgs/dealer/dealer-details/img-2.png",
+      "sha256": "5e81c0bb49c64c585ad0cbd6073fe350ab710dc90d409916525710e78887ad04"
+    },
+    {
+      "path": "karento/static/assets/imgs/dealer/dealer-details/img-3.png",
+      "sha256": "0a1e11285fe3983d03f819cc583a0b1daa3850f693e97482833036098df57157"
+    },
+    {
+      "path": "karento/static/assets/imgs/dealer/dealer-listing/icon-1.svg",
+      "sha256": "b774626453bcfce5b8c45e7b9e5149e1aee9ce966459f5d05ed530af96208be9"
+    },
+    {
+      "path": "karento/static/assets/imgs/dealer/dealer-listing/icon-10.svg",
+      "sha256": "9ff57b8b0db256e70f3d6eb0b474b1df5fcb07f01cc5268c9c1f3e89ee4d6026"
+    },
+    {
+      "path": "karento/static/assets/imgs/dealer/dealer-listing/icon-11.svg",
+      "sha256": "5e97a6908a48aa3f5f90eeed9c6635043cbe7c9867c45007262b6b4d8b2a7fc2"
+    },
+    {
+      "path": "karento/static/assets/imgs/dealer/dealer-listing/icon-12.svg",
+      "sha256": "ceadac403699266c1965ea95e5e3318d63f4bd1171a0c4a7bff75fdaecfa4422"
+    },
+    {
+      "path": "karento/static/assets/imgs/dealer/dealer-listing/icon-13.svg",
+      "sha256": "3a8d185ce13e139ba14ec419a311322be2b937559798d25701b71497de768e94"
+    },
+    {
+      "path": "karento/static/assets/imgs/dealer/dealer-listing/icon-2.svg",
+      "sha256": "a65e7fc7a34e366aca4e6b4531aa6f6c6b18e279c4072691ef04b9133430944b"
+    },
+    {
+      "path": "karento/static/assets/imgs/dealer/dealer-listing/icon-3.svg",
+      "sha256": "9302f36434e9444627a7172ba671caefa7f1c785ff10e50d352b35ba0d84f8d0"
+    },
+    {
+      "path": "karento/static/assets/imgs/dealer/dealer-listing/icon-4.svg",
+      "sha256": "1a297e4b8ce7c60737ce0a3d01cb91acb7561f7548f2f04644f3de5f11d3d98b"
+    },
+    {
+      "path": "karento/static/assets/imgs/dealer/dealer-listing/icon-5.svg",
+      "sha256": "f2315861940163c3652bd6e6522065ebf7df3fd5787da8b8ab0869198d5b3cd4"
+    },
+    {
+      "path": "karento/static/assets/imgs/dealer/dealer-listing/icon-6.svg",
+      "sha256": "4711386a6cd314469df1c55ee49032faa8c9b8fb219ae96b3c2ec765796da6c7"
+    },
+    {
+      "path": "karento/static/assets/imgs/dealer/dealer-listing/icon-7.svg",
+      "sha256": "f05d40982b189d62619597c0c96ddc897f2713f7b72d77d6bb36f2cb390c7588"
+    },
+    {
+      "path": "karento/static/assets/imgs/dealer/dealer-listing/icon-8.svg",
+      "sha256": "66bb87aea00b92c9d7a37743301fd545e7e66ba073be29cf38e0cd580b065c70"
+    },
+    {
+      "path": "karento/static/assets/imgs/dealer/dealer-listing/icon-9.svg",
+      "sha256": "f7ef5496e6d8855b5aa9fb8f44796e2f4f584a1885760b950967d271527f4b5e"
+    },
+    {
+      "path": "karento/static/assets/imgs/hero/hero-1/banner.png",
+      "sha256": "a9fd002d48a51d8fb1bde0d43698563f8921aa8ecdb20681bb2b9d7354a2ba3f"
+    },
+    {
+      "path": "karento/static/assets/imgs/hero/hero-2/banner-2.png",
+      "sha256": "dbb9a0a3b564838a3e048df2c020ec65b7c1752cb9435a1e0113a9837412fd07"
+    },
+    {
+      "path": "karento/static/assets/imgs/hero/hero-2/banner.png",
+      "sha256": "1024270a94ffec2aa8b8e821ffdbe3780e464f868a1868de0a44f8de203884b9"
+    },
+    {
+      "path": "karento/static/assets/imgs/hero/hero-3/banner-2.png",
+      "sha256": "d52fe4a979519b367b50502018e386a91e0219b029b8c20512322b3ece52a432"
+    },
+    {
+      "path": "karento/static/assets/imgs/hero/hero-3/banner.png",
+      "sha256": "973c6b1b0f918fbf954082fc7fd3f90cc075d6e3bd1ea2fad13da03db3d1140c"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/activities/video.svg",
+      "sha256": "5b346033f372b25e26901309a9d61a72c5ed78c8ecd18d7059a0dc9e98a5778d"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/car/auto.svg",
+      "sha256": "b3b11421aff44b4b26e3e45b23ff30008c895899ebbfb375e721d7fec189399e"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/car/bag.svg",
+      "sha256": "6c1cd77860d637d21ca59af57aa4602a2d580044ee3239d9fe65864c333ea66d"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/car/banner-thumn.png",
+      "sha256": "be5dda4d44e68e2089b74ace145f7014a3d8e171524f3cfcbc1cc364d6cdadbe"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/car/banner-thumn2.png",
+      "sha256": "cdb0a44c918a5f8ff23c9b3e643f4cc532221a711cb26409107514f3f970dfbf"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/car/banner-thumn3.png",
+      "sha256": "cb0e8c98ce96d14f744c124b25a756b2cda17e86f786cc4c4bfb3ced0b647125"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/car/banner-thumn4.png",
+      "sha256": "179dd08a11c8efd353e7069b8916972f6f54a58864c52b8adc6eed4bb4d18aee"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/car/banner-thumn5.png",
+      "sha256": "9b5b5520276dfb6e492be42fcc1e778013567b6f641c3eb45997c5b4664c326d"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/car/banner-thumn6.png",
+      "sha256": "dc24a7145c05ab54ed3821e74003931676a46fff9aae74981379d8d516f61ac8"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/car/diesel.svg",
+      "sha256": "ad432b9bbd5ffb642cb61816fa1df246bebd2f97f068e9d2069d3f1a90f3c8fa"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/car/door.svg",
+      "sha256": "8386f551312e9d6aca1e7dcbf63f87499ced78178cc2b7c920a56fdff31b4d4a"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/car/km.svg",
+      "sha256": "27d27a8779bda767e4deaf590a2ca6765716d6f92850328e6ff2fb2dc6a9e210"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/car/lit.svg",
+      "sha256": "547fbe00751b8147c59196c780cd6f2892c9079e61857646cce6adc1aed87220"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/car/seat.svg",
+      "sha256": "0e8ec411813b4517018aa9c4398218b8c212730807b1375559e4adaa6a86f317"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/car/suv.svg",
+      "sha256": "357cf6a4820235de141e144bcc7e3305ba001e025a422efbce333e4f52c76020"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage1/author2.png",
+      "sha256": "9042314ee0b1c713e88f442293f07837386185467da4782ade4b4cbb2edf907a"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage1/avatar.png",
+      "sha256": "2741f7cafd789a8f1402ca281419c9065f41632b69cf97557da6f8012b9f0a35"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage1/testimonial.png",
+      "sha256": "841e9568186e8b0fb4c105a3e694436b6686273b1af3bdc684bd03e455f87245"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage1/testimonial2.png",
+      "sha256": "1b6a2a04418057b600e0d9002a0d69019ad45d9de7f1e5965cebf059ee277a51"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage1/testimonial3.png",
+      "sha256": "14315940fc6992589fe5ae51ea148fd9fa7842497e0842782285a17da7565381"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/acura-w.png",
+      "sha256": "ec0745274d6802228b234f3c36374322b22c649d7238e0e3a6974e8c70c63d37"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/acura.png",
+      "sha256": "8cc0e62de9f1b6d94754d631681c1aee45d3fc783e28ef804e3b090a60bec4b6"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/automatic.svg",
+      "sha256": "9fa0de275ce23cae741f07292850b66f235552384d41deceeaad36d71e59abdb"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/bmw-w.png",
+      "sha256": "a8faca29c30338e31a6b1329d3568c3610a5ecee6245d81f987c5b20f2e7f186"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/bmw.png",
+      "sha256": "bb727cba00561f8a2179fb55a24d7d072ee8f29ff721e84560a8ba03b70faf19"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/bugatti-w.png",
+      "sha256": "6d4dee4dae5d1cc42dc922c27f968db223c7b6b6fd39dcbfb848b0e54758888c"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/bugatti.png",
+      "sha256": "d62bc5dc1599fbda78d7186c745eef620327d4a8db94aa66be9697e35b4861bb"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/calendar.svg",
+      "sha256": "6c4302e9b1eff2923b8d090e46d61da6375a0656ef917859213e4da274926f89"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/chevrolet-w.png",
+      "sha256": "a9886509f2313074b4ac73657b4809398822746efe55570ce17093d287b51618"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/chevrolet.png",
+      "sha256": "ee921e2722e464a8adfc015e13846001b5eab40c9699dad18a6319046a2326d6"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/dropdown-w.svg",
+      "sha256": "367edbeed9eb3bc93480a164a49e49d8a32c4aa8db9f58e78f2fb6b78ac5fba0"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/dropdown.svg",
+      "sha256": "135b6c9216f383d267b51f8a01597e80bda3dc8ebb89c82446185605a74182f2"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/email.svg",
+      "sha256": "2194bec3e405c2cafbc829fca01ab985ce379bd72cd7be94cb477d0a570682d7"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/fuel.svg",
+      "sha256": "d3f51775b14f7dadc9b7a9b130a0da6bc39ed352b540e49b621789fe49b4ef70"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/honda-w.png",
+      "sha256": "b6b32dcef79f7c5d1ec60f4fbd669974bc8acce504e95faa7728fd94a8fcd2af"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/honda.png",
+      "sha256": "924da15342443a9e6311cb318b3086f750808d26add8e50fe1592364120cccad"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/jaguar-w.png",
+      "sha256": "84107b9e9cda5c709a03f59e36fe21e7870241031b57d0deee45cb8ba941961f"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/jaguar.png",
+      "sha256": "5995c076443b0a63134b1daafab20ed3d166d6082e6f7fa0d55bacff5e3b2ed9"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/lexus-w.png",
+      "sha256": "1ddc545846c9e2fb3430a308233df4b9e05f89a564b5284158a22afd60c4f89a"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/lexus.png",
+      "sha256": "ee57850cb528ca2057d1a694f7b44173bd163d7df2332d4fd6d1ff50ba6d5351"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/location.svg",
+      "sha256": "a140bbe1cc421e613129d42aeba1f6dc1a124b12f0fe74af2c2259cd9897c683"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/mer-w.png",
+      "sha256": "8e150fa51d4a0b64fcce230eefdc205b7a18f5112420895b993520a878645b25"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/mer.png",
+      "sha256": "cb8b7402f77e3147fa65d25cd993ac7be2d7a4ff47bf11d266a6beef2cf6e3ef"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/mile.svg",
+      "sha256": "af43a79fad023bb109a48fadc7a4f2d9018ad4c434528b2ca1f882ace88b6766"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/seat.svg",
+      "sha256": "dd068a484ee144df1ae14bf7278846af7f54729b69812a20cbe9c11705210d8b"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/toyota-w.png",
+      "sha256": "a786aefc6df112fbddf984e5a5681a5eed18ce183f5c62fc8f8ae45cc915c556"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/toyota.png",
+      "sha256": "efcd400606a773e6fb5e029560985ee53df9e2c38ce9f8234eb253ecb68b09e7"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage2/user.svg",
+      "sha256": "370fa214b397da7d76d74216a91e1d429f20ad61018107dd3571244a0bfb7134"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage3/bg-faq-dark.png",
+      "sha256": "5c76d69d4851afb6b1f4e0aeda2ffe2f0b1906c2cecf0b0e6f2a7fa1eb763fda"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage3/bg-faq.png",
+      "sha256": "73aed4ad298c16d4c2db26177e8492a4f5db0de57c99969da861e80b075b31a8"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage3/bg-faq2-dark.png",
+      "sha256": "4eccba1dc0532f3cabac98389b2dce6a4490cdcd7bc7b4a15bb4819e23c60aa9"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage3/bg-faq2.png",
+      "sha256": "92a38adc289101458a95ca8b87df20e28970779e3f271ef1d87033b4c9dcb60f"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage5/author.png",
+      "sha256": "76d0b6b48a90255caee7a452dcf81fc7d0b6de69330934c627a6570f93337069"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage5/author2.png",
+      "sha256": "6f2a3a1f338847852803555c5ab884e7a07a1eb39233d88b1767c871a9b2e7db"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage5/author3.png",
+      "sha256": "2f05430798cf42457a7a2e09dc8cd2643b634be274501d02cd2b7f33874eb13c"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage7/bg-trans-video.png",
+      "sha256": "877098829654a0563e80a408c562a70da42b801d086cd091b73628ac34233698"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage7/bg-trans.png",
+      "sha256": "fac080b52ca81e84c54e4bfb8777c8d0505cfe50dc2303e382ffdf42eaf4b284"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage8/engineering.svg",
+      "sha256": "80bf602568614aa2976346ee944e1cba92b4104d1bac88decd8e0762d3cf9669"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage8/fuel.svg",
+      "sha256": "2007af071d0c69f40cda2b6f6ac3ef2ce42534779dc4a03fcc83c5eddc8a1bc8"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage8/seat.svg",
+      "sha256": "f8c6f1c7f69a2ebb78d656f887ad756274d6d79fb5cbf70b505906c47a42add5"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/homepage8/speed.svg",
+      "sha256": "cd25c87b962ad92d1100a490ca5b19a842397d873cfd4dcc93f157e67518b5c4"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/hotel/tick-green.svg",
+      "sha256": "b0e1c76824932c4e85345a8bea1a37b6af0222474d5b4fe5b3fcc20a4f88c140"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/pages/cancel.png",
+      "sha256": "bfe8f0928b9c7bf68515c8b48a9920a00d93d4b7a9b56329bb922e6394c0f7cc"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/pages/tech.png",
+      "sha256": "bcd7ad5f28cf4e750735ac48fe04afac3156fdd01fd8733c2bf876d91b90085c"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/property/email.png",
+      "sha256": "ac49f56c5004f846983c3f51f7b2163e9198e00bf8a80aff3634612d25f4bdb1"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/property/fax.png",
+      "sha256": "ef8d0e81ce7d2c341b1eb8749f6fd65016199662d768939640e4dafbd4d4e7e1"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/property/phone.png",
+      "sha256": "13bfc2246c4642a821fb3c7de992bd957054d29c8a03388c5f0453163b2c3d73"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/property/whatsapp.png",
+      "sha256": "1c52f78bc518abb21150e3c818bb78b4b365419409ad08b0c958288760647fa0"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/tour-detail/question.png",
+      "sha256": "ffcab60d17eb666cb138fc3f36dfee65e4481aa352ecba813f729cbeb068cde3"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/tour-detail/star-big.svg",
+      "sha256": "e5fc236fb8f6ecb19a57f56429e04641d6cf7a1b12c02fbf79f5eb67b579eb20"
+    },
+    {
+      "path": "karento/static/assets/imgs/page/tour-detail/star.svg",
+      "sha256": "5fa43015d602e1222e22d89160d23c7f1cff8dafa3de6fc5c411f29dc63226cc"
+    },
+    {
+      "path": "karento/static/assets/imgs/page-header/banner.png",
+      "sha256": "907ece4a40f2ced7ba6b1290aef3973d6aa0cbcbc6b83ba1a7115cd70862754b"
+    },
+    {
+      "path": "karento/static/assets/imgs/page-header/banner1.png",
+      "sha256": "d86a0b9ebf9e39b61fbb3baac515cfd042b3c68056eaac2fa7e170ed3f817167"
+    },
+    {
+      "path": "karento/static/assets/imgs/page-header/banner2.png",
+      "sha256": "cc2eb1b6d9bf0810a23cfa8809ee6336d6ee0d2f1a62f7379effda577ff0fbfe"
+    },
+    {
+      "path": "karento/static/assets/imgs/page-header/banner3.png",
+      "sha256": "91464697be2cbecb64784d78d1a3fb41e4a6e6bc1d9b30759012fa6c72a81233"
+    },
+    {
+      "path": "karento/static/assets/imgs/page-header/banner4.png",
+      "sha256": "b9e167d91c74608b21e06f1369abaf58d3d895bf48e26fbfaa41633d60fedee1"
+    },
+    {
+      "path": "karento/static/assets/imgs/page-header/banner5.png",
+      "sha256": "5f71be2df451f1369af211121b0b50d283d3b900559eac83451f424b66beb330"
+    },
+    {
+      "path": "karento/static/assets/imgs/page-header/banner6.png",
+      "sha256": "dbb2b6735787b28e3f05286d593631084f58682350ae4e7f435c5445208aad5c"
+    },
+    {
+      "path": "karento/static/assets/imgs/page-header/banner7.png",
+      "sha256": "5208b1c47fa8d9700573fa1ece902de7ba9ffedc966df937ceeb099884e602fa"
+    },
+    {
+      "path": "karento/static/assets/imgs/page-header/banner8.png",
+      "sha256": "317edccc7656e470001ab6b066a8da66cbf75c7bafe872fea6c934ce766c75cd"
+    },
+    {
+      "path": "karento/static/assets/imgs/page-header/banner9.png",
+      "sha256": "062d427e660c6479a7970dd835165f44f8758ee0f6f7eb4c15bb7b0e3a7301d7"
+    },
+    {
+      "path": "karento/static/assets/imgs/pricing-1/check-primary.svg",
+      "sha256": "24f0a9ec143d9f8e75b6552f94295c88cb7bbc71f20c487a35a9c54f39d602c2"
+    },
+    {
+      "path": "karento/static/assets/imgs/section-1/img-1.png",
+      "sha256": "7e6e5055eb562cc43e26f8aa4f30645d5e619d3c1745a3f042da8f489202184a"
+    },
+    {
+      "path": "karento/static/assets/imgs/section-1/img-2.png",
+      "sha256": "3bb3464b2dddbfe1a1f0184adf4663fc0cb8b54adfc801f2bc314057d6b4dc16"
+    },
+    {
+      "path": "karento/static/assets/imgs/section-1/img-3.png",
+      "sha256": "d379ae1b57ce05a5ce18b04584d8f14a86f5d12ba4e10ff945cb9233ecddc06c"
+    },
+    {
+      "path": "karento/static/assets/imgs/services/services-1/img-1.png",
+      "sha256": "5696503342f01e19d1650d04487117c6ab1edb041db1982893fe37cc9748749c"
+    },
+    {
+      "path": "karento/static/assets/imgs/services/services-1/img-2.png",
+      "sha256": "c3a284123aa39a5e8030fd9a9b39c3bdac148d24107923c5377375c5c9ac99e8"
+    },
+    {
+      "path": "karento/static/assets/imgs/services/services-1/img-3.png",
+      "sha256": "3ecd19d58b3bbe2b75853bac1c1a1d0c8816a7e1bb1a84557c0456a07709c836"
+    },
+    {
+      "path": "karento/static/assets/imgs/services/services-1/img-4.png",
+      "sha256": "aab85907fac0878a0ba757e3c7d1d3d9430759985b60c5ba367f0f9b8d3d61db"
+    },
+    {
+      "path": "karento/static/assets/imgs/services/services-list-1/img-1.png",
+      "sha256": "1e26014ca9ee9c92cb2da01983a33b1c8c4112b680b6c532af83d64f994244bd"
+    },
+    {
+      "path": "karento/static/assets/imgs/services/services-list-1/img-2.png",
+      "sha256": "1c4a02f24c0cc673e25ee2ebd0b85845f0b717b8daef2cce58dec8363c914cfc"
+    },
+    {
+      "path": "karento/static/assets/imgs/services/services-list-1/img-3.png",
+      "sha256": "01dd8b73d5e7631a9b0eeb5b15ab87f9189cabc31c274e68f029d48eb322d07f"
+    },
+    {
+      "path": "karento/static/assets/imgs/services/services-list-1/img-4.png",
+      "sha256": "c9dae944366c13264838fabd5e8b2e875185b4faa40dc4d9148c056ef65379dc"
+    },
+    {
+      "path": "karento/static/assets/imgs/services/services-list-1/img-5.png",
+      "sha256": "8b1923b9812c12074cdd88ba8306accb140944c0416b943b37318d5c31f40180"
+    },
+    {
+      "path": "karento/static/assets/imgs/services/services-list-1/img-6.png",
+      "sha256": "7ac6a084876cd9c25eb4179ea490c91dbcfbd838b6df050a2166777d769b6124"
+    },
+    {
+      "path": "karento/static/assets/imgs/services/services-list-1/img-7.png",
+      "sha256": "fcf473138f23a6e08af2344fea4bc0e56641200331c70a825c8c9c6db6e7017e"
+    },
+    {
+      "path": "karento/static/assets/imgs/services/services-list-1/img-8.png",
+      "sha256": "8c73dd752025003060c874ab1be92b5fead69fe48bbe82136c536b906824f625"
+    },
+    {
+      "path": "karento/static/assets/imgs/services/services-list-1/img-9.png",
+      "sha256": "dc5f78aad1b6d9a75ca072e45e5cc7a2a833b448e5bdff0815ee0dc24380c302"
+    },
+    {
+      "path": "karento/static/assets/imgs/shop/shop-details/img-1.png",
+      "sha256": "1ba623f1eaeb0f6ed2ecf7869b5f7da6512ae8c9b0cb436efd0c2f6152cd8f82"
+    },
+    {
+      "path": "karento/static/assets/imgs/shop/shop-details/other-item1.png",
+      "sha256": "0a16d84fe0edebdecfd02533ab0b2b4fc388def527f5fd05587e35f0febf5da2"
+    },
+    {
+      "path": "karento/static/assets/imgs/shop/shop-details/other-item2.png",
+      "sha256": "69f7907fd4697f981ae567bf6ff23091a8fb90ea019360aff60f0e515a8d27e3"
+    },
+    {
+      "path": "karento/static/assets/imgs/shop/shop-details/other-item3.png",
+      "sha256": "6c6d7fda2ec3217f2f49e484632500ad7792d4528b547dafa1aba7327bc1ed8f"
+    },
+    {
+      "path": "karento/static/assets/imgs/shop/shop-details/other-item4.png",
+      "sha256": "cede3592ba7fa486bd5752d7f0a41e66ea6d615d9aab4861e3b466cfe58ca414"
+    },
+    {
+      "path": "karento/static/assets/imgs/shop/shop-details/other-item5.png",
+      "sha256": "1fd5eae554fb902d364cf4ebfd4e7d9f11780c867247a77d8fd0409993969e6c"
+    },
+    {
+      "path": "karento/static/assets/imgs/shop/shop-details/thumb-1.png",
+      "sha256": "870166636fd7c850cc822e377db830b5618a1fad85b7011c32a37a6be5064ffe"
+    },
+    {
+      "path": "karento/static/assets/imgs/shop/shop-details/thumb-2.png",
+      "sha256": "b61b7c3905108276c492b78cf13d8ad58c478a1979eb2c7535d850c92acb4b62"
+    },
+    {
+      "path": "karento/static/assets/imgs/shop/shop-details/thumb-3.png",
+      "sha256": "55e39bbb44022f0fa6cac756f15a3051fe8745f3e391bb18d219b1cd3224569b"
+    },
+    {
+      "path": "karento/static/assets/imgs/shop/shop-details/thumb-4.png",
+      "sha256": "640714ece96bf8dc0e53c5439184a6c1e77db2157b30454ce7f035d033b9f3fb"
+    },
+    {
+      "path": "karento/static/assets/imgs/shop/shop-list/product1.png",
+      "sha256": "d8d46d16338523a4588d50c208a5b554bbdea21bc41ab7bd5a9f4b051832e0d6"
+    },
+    {
+      "path": "karento/static/assets/imgs/shop/shop-list/product10.png",
+      "sha256": "6deaba2888359d4e0c7c49e12c7af9cb08a63d0d734a8c3fcfdf0e34997b2d5f"
+    },
+    {
+      "path": "karento/static/assets/imgs/shop/shop-list/product11.png",
+      "sha256": "e9f5352aec3581a692546c5df7e5e523161bef411ae097d928ccc76886d0e6df"
+    },
+    {
+      "path": "karento/static/assets/imgs/shop/shop-list/product12.png",
+      "sha256": "85483b3abe7ee123c88c741bd0b3aaeb8568b19aedfbad3a454d3f93c1b42045"
+    },
+    {
+      "path": "karento/static/assets/imgs/shop/shop-list/product2.png",
+      "sha256": "b7bbbf2d306a7b6c4c297efd6283b65f7a7f6817e8f404cc02a6df96f6a15171"
+    },
+    {
+      "path": "karento/static/assets/imgs/shop/shop-list/product3.png",
+      "sha256": "4e1eb105b78bcc17bc17e2ca6b8349bf5e1f93ca765a28013c6f39a344cb9d6b"
+    },
+    {
+      "path": "karento/static/assets/imgs/shop/shop-list/product4.png",
+      "sha256": "59ab8a6935e9fa675d4ec67661b66b337add5266ab1ac23adea7b35a3d76a6c5"
+    },
+    {
+      "path": "karento/static/assets/imgs/shop/shop-list/product5.png",
+      "sha256": "1e57edb6ee7ee0d079890455ca109c8622a4f5c08b1de4393a5fd9c5ebc7d740"
+    },
+    {
+      "path": "karento/static/assets/imgs/shop/shop-list/product6.png",
+      "sha256": "e11ca55e3f168f71ebc1277e51bda4af23e00df2cf8cd35b4a8d4aea55512b3e"
+    },
+    {
+      "path": "karento/static/assets/imgs/shop/shop-list/product7.png",
+      "sha256": "2ff53b228962306d181cc4f22f710f1094b0b3046aa522cde064f3eeffd1d9b6"
+    },
+    {
+      "path": "karento/static/assets/imgs/shop/shop-list/product8.png",
+      "sha256": "00f9e761b339d8c12bce38eca61f56e57139cf3b584f7502c9b2b8701aeb28f3"
+    },
+    {
+      "path": "karento/static/assets/imgs/shop/shop-list/product9.png",
+      "sha256": "320b9a6f78db0896ee7b74ac24b88577ff9699528e78d8b42d0ff3a040bd97a2"
+    },
+    {
+      "path": "karento/static/assets/imgs/shop/shop-list/stock.png",
+      "sha256": "e8068792d4f885f92941de2b8d8a5ad66ddcc8b5b8a08369ecf10f58b84bb2c9"
+    },
+    {
+      "path": "karento/static/assets/imgs/team/team-1/arrow-up-right.svg",
+      "sha256": "a4257a63f1991d01b07f8376f34045fc6c8f5abf58f821b66fb99ee3790d30cd"
+    },
+    {
+      "path": "karento/static/assets/imgs/team/team-1/icon-1.svg",
+      "sha256": "b319aa575181e660a572ccf30ad75231013d6ebac80c07d03c4d609cab0551df"
+    },
+    {
+      "path": "karento/static/assets/imgs/team/team-1/icon-2.svg",
+      "sha256": "d7c30c46896655c6fa7bba5c06dd398d9af08c396b35e6e658c8e066bd76e7fa"
+    },
+    {
+      "path": "karento/static/assets/imgs/team/team-1/icon-3.svg",
+      "sha256": "597149513c602dcdd75cb212e60cbb4fe631e6e12a349e3521fa89181dbcb08f"
+    },
+    {
+      "path": "karento/static/assets/imgs/team/team-1/icon-4.svg",
+      "sha256": "f8ee8f19d23afb808301bd340645f64bbb1b31c77437c3052dd7df178f5ea477"
+    },
+    {
+      "path": "karento/static/assets/imgs/team/team-1/portrait-1.png",
+      "sha256": "79ab4cd75c96f87ac35b055af5f3c91183a7ca6a02cb5862827014596494d5c8"
+    },
+    {
+      "path": "karento/static/assets/imgs/team/team-1/portrait-2.png",
+      "sha256": "0e120245d2694bcd0e52860d95cffb646587f25fac4c0588aa40d3a5c3828924"
+    },
+    {
+      "path": "karento/static/assets/imgs/team/team-1/portrait-3.png",
+      "sha256": "9d21e6dc9804840998d1122efef25109374a414972e92323d30517f7ae012e6a"
+    },
+    {
+      "path": "karento/static/assets/imgs/team/team-1/portrait-4.png",
+      "sha256": "874dc4236bb74a2cde8b0168c0a4af3354e259380736728f39f190d63dbc4880"
+    },
+    {
+      "path": "karento/static/assets/imgs/team/team-1/portrait-5.png",
+      "sha256": "be28aab582663bc7cc9c25e25f9f00e7fb89bef7d2bc92a5784c5abd912e9e7b"
+    },
+    {
+      "path": "karento/static/assets/imgs/team/team-1/portrait-6.png",
+      "sha256": "ed2fe75edccc1af683d6fb5a6d0c0aae214d2de5230b75f39bb5d8302632faa3"
+    },
+    {
+      "path": "karento/static/assets/imgs/team/team-1/portrait-7.png",
+      "sha256": "edfe3c8bdb7a1099cefce77a1c10bfd74cd6e8dc66b126d111aa74f4fe33ccdd"
+    },
+    {
+      "path": "karento/static/assets/imgs/team/team-1/portrait-8.png",
+      "sha256": "4d8b7113c854a05f1144cbf7c0ddbd311ad4d2ddc7b726a3b3079c93c6aac873"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/404.png",
+      "sha256": "29d3c71a7fa4d03a4dcf987ceef5d14f445db5f3342b2c41d9b8c93427d55a63"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/appstore.png",
+      "sha256": "023137ced5a4a5087bd4d9cc378cd9e0c1119954585c5fc844572a092f3a0b3d"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/favicon.svg",
+      "sha256": "6c683496962ae701ff0c642ac7b882b01f684a4a5bfcb7cd5bccaf9a9c939107"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/googleplay.png",
+      "sha256": "30768f14034c14fe6b1032bfa2feb8cd01037ce37c9d7ff59b71d35b1d734c33"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/address.svg",
+      "sha256": "0522a4fe668f2760936d52aa95f37b44ff287c193e68626a124482d6bf96416f"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/address2.svg",
+      "sha256": "41187744f1017775eb54813a50dfcafcfc02e8c78e9ac0ec7b48cb81ff6580db"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/arrow-down-big-w.png",
+      "sha256": "1b5959706c33345bcb2b07d5c211926b18b83b7bcf1f214d908387ab70690903"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/arrow-down-big.svg",
+      "sha256": "135b6c9216f383d267b51f8a01597e80bda3dc8ebb89c82446185605a74182f2"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/arrow-down-filter-dark.svg",
+      "sha256": "c9cbb25c0fe440ccabb7b1a41ecb819068ab733b86856fa5efe873878df4e458"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/arrow-down-filter.svg",
+      "sha256": "854bb502442739f9f1dd756ec52af58eec1332921cd0e8025448fc892c71c95e"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/arrow-down-sm-w.svg",
+      "sha256": "3e07fd49209e45bf2825e98a50c83cb11496b0be56bfda04f9d210aef9d9d738"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/arrow-down-sm.svg",
+      "sha256": "d6c9d4eff0408e6069be16e579f9e57f9baca6097bb27dbbb187ffa26c3001c3"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/arrow-down-white.svg",
+      "sha256": "de260ab35618c91f1e4945425bf21be8b51ca426e25c15161b3bc1682d50835c"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/arrow-down.svg",
+      "sha256": "cefbf6ddd928e6df25a1b8c08ff4eab253ae9202a51e7e4fcd7ecaea5d4d70e7"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/arrow-lang.svg",
+      "sha256": "b35c5409a1c36215d52e88aa2e42d91b9f5e82c378fa3dd0490039bf1662ac58"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/arrow-left.svg",
+      "sha256": "0a7d381bf49fa60abde06dcde44983863f387b37c9144fdad6a82ad38a3f7414"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/arrow-right-big-w.png",
+      "sha256": "97e95a4e2dbb579bd9ccd5cf702f06fbd864d298569eb393298f08713dbae820"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/arrow-right-big.svg",
+      "sha256": "877a06e04575784f1edd892b183a5dfc4e9b917d44cc10d5c007ca236cd08f7c"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/arrow-right.svg",
+      "sha256": "b9165471eacf12be6e4cf58a98f5fec593b0a88d379a3ab276aeee498575ee1f"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/arrow-up-dark.svg",
+      "sha256": "4c1002895724a18afeab69026c9f7d7a09acd039988a36e6185cdc015f566297"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/arrow-up.svg",
+      "sha256": "72d7a6352017fac5e14cff4e9ecfe888aa87c7628a0916d339f69b2f28dd4482"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/automatic-dark.svg",
+      "sha256": "2b202357df5b41f02d1f154cc4f081883163a29f4d1afe4562f99a10b3479263"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/automatic.svg",
+      "sha256": "9fa0de275ce23cae741f07292850b66f235552384d41deceeaad36d71e59abdb"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/calendar.svg",
+      "sha256": "61e6ef6a0895f587ea833914fa0431cd6844fd0a06fcb0a246e9a6ea892bee82"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/car-1.png",
+      "sha256": "7568d8bc537ac084535afabcf1f4dd783243a6d13e3d2db95c524b19e2934204"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/car-dark.svg",
+      "sha256": "8306b8bd4c2b4ff3200b76adb32c74fc4d7d66c887cfb309bd58aba96e3b6b6b"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/car-front-fill-1.svg",
+      "sha256": "0247b8af2d33c539402bd7794523e1e082a1a18f04f5161120531722fb94b09a"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/car.svg",
+      "sha256": "2cccb5a6e8e3546fdb1b2dbba2489c65c1397c09add6fd1f453aaf0cb05a9d97"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/check.svg",
+      "sha256": "6ff0d4f07d997bc17d8d70d807cf25af1c699b42788586e5d56a058affd3ab1f"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/checked-dark.svg",
+      "sha256": "b940da8ab02c492ee03552198da5071f9e0fdc50cd48777865850d160bd5d76f"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/checked.svg",
+      "sha256": "9921427b703f80113fab208f01a1d90b1bf01bac69f7fbbcabb9bf80859e37d8"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/clock.svg",
+      "sha256": "d2667c25adc05bea973a91fb4cd77ca6396d257b7d3c089f8ee6959120c913e1"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/close-faq-dark.png",
+      "sha256": "e4ccad1ef54b4e921e82643877718684c1395597722a9d785d70483d12c379ee"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/close-faq.png",
+      "sha256": "4904fcc8113e53fbc63b1a66945dde89e905cd4e5975990a0309c3a1df4d3cce"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/close-filter.svg",
+      "sha256": "3511c8cbc652b4a6e06c4fa2ba3ee5575ca52010a3439be448d59b5d274eba1b"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/close-w.png",
+      "sha256": "137a8915ee94f0ca82069ac01a7d56a1311989549d39db723d35c57aa2662022"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/close.png",
+      "sha256": "a6193d4ed21112fda71cf46274d2fad3a82d0a7f3d0c4e55112a0853f12e0a3b"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/comment.svg",
+      "sha256": "7335ce56519a3557fd236d458c3c147644ac1708d7f29564de0bf9fef120e920"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/contact.svg",
+      "sha256": "cdccce5f43be38ced3011864e43c005cb9b4907bcb71dccec20aa2f98fa0e0e7"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/dropdown-dark.svg",
+      "sha256": "367edbeed9eb3bc93480a164a49e49d8a32c4aa8db9f58e78f2fb6b78ac5fba0"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/dropdown.svg",
+      "sha256": "135b6c9216f383d267b51f8a01597e80bda3dc8ebb89c82446185605a74182f2"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/duration.svg",
+      "sha256": "887af8991cd3fbaac3271e76b7aefd010c85d8a3b9e0d9ee86d98a2887f5e39e"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/email.png",
+      "sha256": "2fd02d82afcc67441a8562aff29ba2945400c30a8bf00991100bb2be094005f6"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/fuel-dark.svg",
+      "sha256": "b1b15a93ef04ef69036e7dc4c7fbd1caaf055c1a9aad065a494bc75a4bebe96d"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/fuel.svg",
+      "sha256": "d3f51775b14f7dadc9b7a9b130a0da6bc39ed352b540e49b621789fe49b4ef70"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/guest.svg",
+      "sha256": "626481c38b9501e17d6024c77014d94deeaf3627cf678d8988ba83c0eb51574c"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/hotel.svg",
+      "sha256": "de51f45129eef9150423c9e5f52f63d6b3148d46497858722fecfb629f57eb49"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/hour-work.svg",
+      "sha256": "8f914016802c3794dac83628cd8982c99ff4557077299142c0ee9fb2d0b4f48c"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/hour-work2.svg",
+      "sha256": "f339c8a74f2db1082e35885a96cc961cdb8dea9a89020663fcbb6ab24ed83f09"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/icon-route.svg",
+      "sha256": "ec1828609b0d58fb73445893e5872115d5596d27ab3c133de3d366cd80401286"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/icon1.svg",
+      "sha256": "c52443a0f13e0199e03c9992bda2dcc5897a5142fd2e48451ea691b156f27f47"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/light-w.svg",
+      "sha256": "a03805bdbb2c0e192d4065d7295a0d091a514d6b082e2e8a0d3ab4b7cd73a797"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/light.svg",
+      "sha256": "9f9fec0a6275c12b2c741f2292c9ca7e6f434c5bd79fba532ffdcaa2e552f7b1"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/lightning.svg",
+      "sha256": "c557d9ec7323bb7de1b5bd6b7a6401199fe679737de1585844d4d043ba9843ec"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/line.png",
+      "sha256": "cd87e4fb7c3ac50c67c1feec9cda11dc5d850a0f90ab24f61cf10d3a18485fdf"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/location-dark.svg",
+      "sha256": "b191a028bd5535330355463dd825a54645b4d757e161fa87a0ec0698c316339e"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/location.svg",
+      "sha256": "fad3e372737e172d3c3a2b882fa0de1e41ff1ae72768e50da547ba09aebde7e2"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/mail.svg",
+      "sha256": "c5d3802c5c43a476647e9aeff2c9c919a7ce7cb96ed7af937adb185a3f23b2fc"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/mail2.svg",
+      "sha256": "f20e00efc8678429b2299c2ee657ea123bc9af4412881fbb73be547167719bef"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/menu.svg",
+      "sha256": "141083c47392da7a601a45ac5dea273b3aeef9a2bafb159ff51f1cec642a82f6"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/mile-dark.svg",
+      "sha256": "a0f7615fa902974f7ddfd67d78b396b5dca170fc30d9b078e4a314e6eb3722ce"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/mile.svg",
+      "sha256": "af43a79fad023bb109a48fadc7a4f2d9018ad4c434528b2ca1f882ace88b6766"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/next-day.png",
+      "sha256": "1fc8b3f8283bd88a382ce95819c31e0dc29af038a0cb8e4d5c0ec77cedc2a110"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/online.svg",
+      "sha256": "23509843ee39c598e19a2b1f6e7db60f212132de0252b589beea7fd9e974d3c7"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/open-faq-dark.png",
+      "sha256": "4084b3d2fd632d2365906c2318f556fe5f5d73643054c2351ce58389316e8240"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/open-faq.png",
+      "sha256": "8844b93b8b43f65963776986bf8f5fb28a2f3e408475cf7979ded1e99ff56d95"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/phone.svg",
+      "sha256": "612edef8300e2d4a1be4fa93a0694364ff0c98cc65be8f3c65af30b4075129d1"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/prev-day.png",
+      "sha256": "6316ff71f14b75b8738eaea5631ca7084a2a5f2467ba942a56f0d7952b5eec46"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/property.svg",
+      "sha256": "86b8189324b9496fce2fb0b2fb33f3d73f9853257b1ab8ec66ee476115ff07c9"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/rental.svg",
+      "sha256": "0fabddf2f9f0833c800aee903bce216132008347ad0acaad72aa4789d694700f"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/resolved.svg",
+      "sha256": "20c98725c8bffc19d84e20abb9eeabc330e980f657a4da436baad7e33fbe605e"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/route.svg",
+      "sha256": "d5f4b58f0c255540fc535ef5513f646c98709316fd9d2e0ba0568762e3f3fce9"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/saved-place.svg",
+      "sha256": "843bb53481d5bf658dde07371c16051332ea70f76d9893598b4f64462768b546"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/search.svg",
+      "sha256": "6eeaa8770fa8874326d9d77217114a66def7a71dd6a42ccebd8cfe07465273a1"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/seat-dark.svg",
+      "sha256": "129285b6259feca2b1d6cccb442ee7e27b1684ae18edff7cadde69c6e2100873"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/seat.svg",
+      "sha256": "dd068a484ee144df1ae14bf7278846af7f54729b69812a20cbe9c11705210d8b"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/sort-w.svg",
+      "sha256": "3a652164c6abd35381278046f763d6849b573e7bba2b64b054846d15d67a60a0"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/sort.svg",
+      "sha256": "d542cb767db693f862f62b1023d99e649fad52e62b674421c5cb296de68a6a80"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/star-black.svg",
+      "sha256": "8a7c565bfe7badf2e273c3b517415720bb44870cfa6df3ca88c2e58081d5aab3"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/star-grey.svg",
+      "sha256": "f747c0a22783061577350dcb1dc7f4a65052a2b2c1dab07ad1c8c1adcc15d58d"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/star-white.svg",
+      "sha256": "30d06783d1d2c3aebc916747f8be159b9fd708d573e8b56d8af34f53f5d55af1"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/star-yellow.svg",
+      "sha256": "99432209e7eab047bbd036e06851b19baec464f5176196469db84315350b1bf5"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/star.svg",
+      "sha256": "606cfd24ca3405e7dd274564848ac10755bc5d3162d5421a8707c1c7f40ac9eb"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/suitcase-dark.svg",
+      "sha256": "18f1f672a46af1394dfd38660aacaf420eb1dbcf6ec0b88d1438ff4628ad7d24"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/suitcase.svg",
+      "sha256": "d80a25a500fcb7339ca86b2b1de4636e5464d081a48c10b629b5c67c8cb0a21a"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/tick-list-2.svg",
+      "sha256": "6a058aa8f3a67579a22cf64861d106e9bc5970da6338ca08265f6339ffc0da12"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/tick-list-w.svg",
+      "sha256": "a56b0edc4d6721187c1e3c1552ed2440cd050acc83d1eddf2dcae320587b6841"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/tick-list.svg",
+      "sha256": "feb16d134c33e0a5e9d76de5d251672e302562a886a858bf73e90dc267dfc4f0"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/time.svg",
+      "sha256": "301c5c6ca8147d154e25f72504f9c0d74bf955619e95e6f0499a47cbb893b4d3"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/user-w.svg",
+      "sha256": "2d09a33c7c6fb8779845f5dbed41dc2fca2ab1f673f6746e66db68726cd8fab8"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/icons/user.svg",
+      "sha256": "bb90ab95b92d9daf0ff37c30ae33285ea1db89ebe4cb4b1320b46ed95ed9bc2b"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/logo-d.svg",
+      "sha256": "74fc03b58f6dcca0718218e557419fa714d60415a594cce0df1b73f15100acbf"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/logo-w.svg",
+      "sha256": "0edaa8990d95fcaef3e4d7fb7ee6ff2cb9c3d01a0c68c0826b6e0a2e2ff831fe"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/popup/apple.svg",
+      "sha256": "3fe39ee40640831ef231bb5c9a9f06cabf81c6d2ec369edc26ef3313ca7748ad"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/popup/email-w.svg",
+      "sha256": "7d7a2ff47d4fc2bb6827f3eece9c24a0f6368db30fff637d83c9b426489839f1"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/popup/email.svg",
+      "sha256": "0f788c3648bc9ab873f133b6f9f83245b32d7cdded7007441c5ffdef73b551f6"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/popup/facebook.svg",
+      "sha256": "befd06de9fbea4f706800ba5ca6f0228d1b47745a39e4d9a906905decefeea42"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/popup/google.svg",
+      "sha256": "e4a8d5ea5de96b57162718d4cd1746c4082b3baad26698088485f69dbaef9e28"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/popup/pass-w.svg",
+      "sha256": "bc0e99fae948255c9428df70021110592173a8e0537a6c4180c7e159d3ac6e62"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/popup/pass.svg",
+      "sha256": "3b4e2ccf4ce3801586efb9cbe29dbfb6c9abbee953dba81e41d92ef01056c659"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/popup/phone.svg",
+      "sha256": "f14b447acacf8abf699ce5c58a4b7702b88806445a27b6a15c0bf2d646d1b8d7"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/popup/username-w.svg",
+      "sha256": "0e772f1397e04d88df37b36c823328a62e80c4752fb4291445f150059a5127ce"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/popup/username.svg",
+      "sha256": "a203b2dd630fbe01962f24e19839c07c22963761a61defa9e19c4dde3446bc89"
+    },
+    {
+      "path": "karento/static/assets/imgs/template/subscriber.png",
+      "sha256": "7f53e55c08777278c65c86d62ae54468bfe52f5aac778b9e10b3249a78100481"
+    },
+    {
+      "path": "karento/static/assets/imgs/testimonials/testimonials-1/author-1.png",
+      "sha256": "3bb80847bddf90f2e6c16f4f7eb0141470bab8c83b86cac2407444fa278e8c6b"
+    },
+    {
+      "path": "karento/static/assets/imgs/testimonials/testimonials-1/author-2.png",
+      "sha256": "c832a09c039306b23d56d54f9eccd4db89285905e014777303c8e56362974a01"
+    },
+    {
+      "path": "karento/static/assets/imgs/testimonials/testimonials-1/author-3.png",
+      "sha256": "84cd308c7cad3fdbd2fc622700feb166ae4817da03460523d774935796cd0285"
+    },
+    {
+      "path": "karento/static/assets/imgs/testimonials/testimonials-2/author-1.png",
+      "sha256": "1c127b7fed0873be1276f31de37c29ec842269f5ef8cd1e75a1b1e587d90c5af"
+    },
+    {
+      "path": "karento/static/assets/imgs/testimonials/testimonials-2/author-2.png",
+      "sha256": "f0c99b47effdb16f8653cd0cba3f9c49a1e3870d53fd5bf20ded2c167269fdac"
+    },
+    {
+      "path": "karento/static/assets/imgs/testimonials/testimonials-2/author-3.png",
+      "sha256": "e1f9ecda00108e0e42b79343df06fee7554f988a3191d6b9ad67e359ea7087df"
+    },
+    {
+      "path": "karento/static/assets/imgs/testimonials/testimonials-2/author-4.png",
+      "sha256": "5e18d52e6edd53a556e9a8e9043ab2ddfcb094fd9b0ee142e9fc570c430cf691"
+    },
+    {
+      "path": "karento/static/assets/js/main.js",
+      "sha256": "c639e376ba1b2652fe5e0226d0412ce1d1e175f7b6a052cbb5af34f44344753b"
+    },
+    {
+      "path": "karento/static/assets/js/plugins/apexcharts.min.js",
+      "sha256": "cdc7944ec08a6bc6364aa8ea6632e389f5d00e7aacbca453993f1f4c8522c7fe"
+    },
+    {
+      "path": "karento/static/assets/js/plugins/bootstrap-datepicker.js",
+      "sha256": "248043456441d27ebbb2332eb13cb8c59f4bd3d57c048345d2777f51450e8b8f"
+    },
+    {
+      "path": "karento/static/assets/js/plugins/chart-data-2.js",
+      "sha256": "06826d6a8e9c9d7809ccb48c6093fc072156c5e601bbcb4b6006402d3a575a99"
+    },
+    {
+      "path": "karento/static/assets/js/plugins/chart-data-3.js",
+      "sha256": "88f12889907808a55f288fdf22a74aba46bc3798f1af05d6eb0a44795f2dcc0d"
+    },
+    {
+      "path": "karento/static/assets/js/plugins/chart-data.js",
+      "sha256": "3a46afaf20cc37d0d7b9725084fa7c687ac4fe1a5ff410abae9dff1002c2f1b8"
+    },
+    {
+      "path": "karento/static/assets/js/plugins/dark.js",
+      "sha256": "af4bfe8df687c29d155b5f25461a1341d60875ea56d395618013aa91b6070e48"
+    },
+    {
+      "path": "karento/static/assets/js/plugins/jquery.appear.js",
+      "sha256": "ca479c482d27d4c0165057d670cb19e8a60feba8c6e57385d4c3b3c78d6bcee7"
+    },
+    {
+      "path": "karento/static/assets/js/plugins/jquery.carouselTicker.js",
+      "sha256": "2689d87db3b8a1206d1518970981c0a24e2743ca28e175cc48cec8aeee79616a"
+    },
+    {
+      "path": "karento/static/assets/js/plugins/jquery.odometer.min.js",
+      "sha256": "45cd87a552a2962ecab5f977c381df31f82adc173512b492cb4a0bd555b2c567"
+    },
+    {
+      "path": "karento/static/assets/js/plugins/magnific-popup.js",
+      "sha256": "558a07e13cd97a7c5f20c3f826bf6987cfa3b855af40c83c0e4e7b31f99926e5"
+    },
+    {
+      "path": "karento/static/assets/js/plugins/masonry.min.js",
+      "sha256": "367d6afdfc741fb48d2d9310e47c3924b693459a74c882c0fc545ec5ed7d55d2"
+    },
+    {
+      "path": "karento/static/assets/js/plugins/noUISlider.js",
+      "sha256": "863b57ecf83755be2d9fd54e1e179fcd3a7e3b026077c09375c106eb012dae9b"
+    },
+    {
+      "path": "karento/static/assets/js/plugins/perfect-scrollbar.min.js",
+      "sha256": "be4b4341faff22486bb6d8bf140faee4ba213733e9152961a7d5e3fab111fd5b"
+    },
+    {
+      "path": "karento/static/assets/js/plugins/scrollup.js",
+      "sha256": "7cc210c7514a60a26380682a6282b6976f09adf2e82d3497342a5bb05b2597e3"
+    },
+    {
+      "path": "karento/static/assets/js/plugins/slick.js",
+      "sha256": "9a8f36a715dce68a2375d6180856fac3f1efcceb4f618a3dae3116eace5f3152"
+    },
+    {
+      "path": "karento/static/assets/js/plugins/slider.js",
+      "sha256": "4f56a4db7d37e7ec3a601e6433ecfb0e62d78f38e4147eb183bdea923a27ef75"
+    },
+    {
+      "path": "karento/static/assets/js/plugins/swiper-bundle.min.js",
+      "sha256": "c3bf317180bcfb9937fbb30d88b5075535be5a1e575776291c560ba974ea12bc"
+    },
+    {
+      "path": "karento/static/assets/js/plugins/waypoints.js",
+      "sha256": "5270ebfbf08a9aba092740ccb6aa1281b2e568f33103879f274cd9ff30f0323d"
+    },
+    {
+      "path": "karento/static/assets/js/plugins/wow.js",
+      "sha256": "83ab06161714292f6bb0fda1ec45df28d5deb8b6d7e3a0e6bd76b1b5631e1f37"
+    },
+    {
+      "path": "karento/static/assets/js/vendor/bootstrap.bundle.min.js",
+      "sha256": "82f64f62bb03c1bc1824b0f9c9e05f70dba33e146818e63cdf5c306c8cf3dedd"
+    },
+    {
+      "path": "karento/static/assets/js/vendor/jquery-3.7.1.min.js",
+      "sha256": "fc9a93dd241f6b045cbff0481cf4e1901becd0e12fb45166a8f17f95823f0b1a"
+    },
+    {
+      "path": "karento/static/assets/js/vendor/jquery-migrate-3.3.0.min.js",
+      "sha256": "c19def3576a41fd9383f4d1f3460256cdd0f929292ca145aefa205cb85753d81"
+    },
+    {
+      "path": "karento/static/assets/js/vendor/jquery.countdown.min.js",
+      "sha256": "2249399b2268c260d0698542503d16afebc80e437c846239f12196744ebbd40f"
+    },
+    {
+      "path": "karento/provenance/capture.json",
+      "sha256": "55a0d3012023a36d38bab80c5c3bd5384d73c81dba01dcfbaf7339d3f34970aa"
+    }
+  ]
+}

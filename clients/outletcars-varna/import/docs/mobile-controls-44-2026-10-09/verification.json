@@ -1,0 +1,143 @@
+{
+  "verifiedAt": "2026-10-09T15:54:25.243Z",
+  "runtime": "v24.21.0",
+  "baselineCommit": "1feccc0b2357cb5148a037879f5da78f8041d86d",
+  "currentMain": "2afd974c23d4f4cfb290ed99a00f46074793be3a",
+  "qaDigest": "27f417146d94b4f81caf5c4dc12702adb817deb26e282666193cc2299f1974b3",
+  "sourcePaths": [
+    "src/lib/styles/tokens.css",
+    "src/lib/components/inventory/InventoryMobilePage.svelte",
+    "src/lib/components/home/HomeFiveHero.svelte",
+    "src/lib/components/common/MobileSearchControl.svelte",
+    "src/lib/components/sell-your-car/SellCarWizard.svelte"
+  ],
+  "checks": [
+    {
+      "name": "sync",
+      "code": 0,
+      "durationMs": 23970
+    },
+    {
+      "name": "svelte-check",
+      "code": 0,
+      "durationMs": 72101
+    },
+    {
+      "name": "eslint",
+      "code": 0,
+      "durationMs": 26754
+    },
+    {
+      "name": "format",
+      "code": 0,
+      "durationMs": 9488
+    },
+    {
+      "name": "architecture",
+      "code": 0,
+      "durationMs": 1312
+    },
+    {
+      "name": "assets",
+      "code": 0,
+      "durationMs": 325
+    },
+    {
+      "name": "build",
+      "code": 0,
+      "durationMs": 130332
+    }
+  ],
+  "browser": {
+    "startTime": "2026-10-09T15:44:56.608Z",
+    "duration": 71623.089,
+    "expected": 19,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "rendered": {
+    "locales": [
+      "bg",
+      "en"
+    ],
+    "widths": [
+      320,
+      390
+    ],
+    "cases": 4,
+    "states": 36,
+    "base": "http://127.0.0.1:6794",
+    "iconTarget": 44,
+    "iconSurface": 44,
+    "iconGlyph": 20,
+    "iconStroke": 2,
+    "searchHeight": 44,
+    "quickFilterHeight": 44
+  },
+  "desktop": [
+    {
+      "state": "home",
+      "width": 1440,
+      "height": 1000,
+      "changedPixels": 5,
+      "maxChannelDelta": 1
+    },
+    {
+      "state": "inventory",
+      "width": 1440,
+      "height": 1000,
+      "changedPixels": 20,
+      "maxChannelDelta": 2
+    },
+    {
+      "state": "pdp",
+      "width": 1440,
+      "height": 1000,
+      "changedPixels": 0,
+      "maxChannelDelta": 0
+    }
+  ],
+  "preservedForeign": [
+    {
+      "path": "src/lib/components/inventory/DesktopFilterPicker.svelte",
+      "unchangedSinceStart": true
+    },
+    {
+      "path": "src/lib/components/inventory/DesktopFilterRange.svelte",
+      "unchangedSinceStart": true
+    },
+    {
+      "path": "src/lib/components/inventory/InventoryDisplayControls.svelte",
+      "unchangedSinceStart": true
+    },
+    {
+      "path": "src/lib/components/inventory/InventoryFilter.svelte",
+      "unchangedSinceStart": true
+    },
+    {
+      "path": "src/lib/components/inventory/InventoryFiltersDialog.svelte",
+      "unchangedSinceStart": true
+    },
+    {
+      "path": "src/lib/components/inventory/InventoryPage.svelte",
+      "unchangedSinceStart": true
+    },
+    {
+      "path": "src/lib/components/inventory/InventorySearch.svelte",
+      "unchangedSinceStart": true
+    },
+    {
+      "path": "src/lib/components/inventory/InventoryToolbar.svelte",
+      "unchangedSinceStart": true
+    },
+    {
+      "path": "src/lib/content/inventory-desktop-controls.ts",
+      "unchangedSinceStart": true
+    },
+    {
+      "path": "src/lib/styles/desktop-filters.css",
+      "unchangedSinceStart": true
+    }
+  ]
+}

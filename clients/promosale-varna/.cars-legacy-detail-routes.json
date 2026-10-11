@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "dealer": "promosale-varna",
+  "family": "modern",
+  "base": "/variant-3",
+  "defaultLocale": "bg",
+  "source": {
+    "inventory": {
+      "path": "carwow/src/lib/data/daynight-current-inventory.ts",
+      "sha256": "c89add65c904067b007ae2d65c03a208275999194f12a7d4d6844f5d86e355fb"
+    },
+    "vehicles": {
+      "path": "carwow/src/lib/data/daynight-vehicles.ts",
+      "sha256": "58507cc762f0d0763f6d521a86d8474729fd6cf112b7dd072170f350a2c11d84"
+    },
+    "routeFactorySha256": "094d5128ad5e689e41486a228b1de6d11c54efbe051ce0e75c0170709d8571c9"
+  },
+  "profileSha256": "9f544cf27245328d99dc3e32b160cecef7fe54eef8f37c7e43798aed859b0cf1",
+  "entries": [
+    {
+      "sourceId": "21788787563552939",
+      "slug": "mercedes-benz-eqe-552939",
+      "targetId": "mercedes-benz-eqe-350-burmester-2022-21788787563552939"
+    },
+    {
+      "sourceId": "11787906058256951",
+      "slug": "peugeot-2008-gt-256951",
+      "targetId": "peugeot-2008-gt-full-pano-2021-11787906058256951"
+    },
+    {
+      "sourceId": "11786461174971809",
+      "slug": "bmw-740-971809",
+      "targetId": "bmw-740-i-long-m-sport-full-individual-2020-11786461174971809"
+    },
+    {
+      "sourceId": "11786375334835370",
+      "slug": "porsche-panamera-4s-835370",
+      "targetId": "porsche-panamera-4s-matrix-nappa-bose-sportchrono-2017-11786375334835370"
+    },
+    {
+      "sourceId": "11786370554050885",
+      "slug": "audi-a1-050885",
+      "targetId": "audi-a1-s-line-tfsi-ultra-alcantara-carplay-2017-11786370554050885"
+    },
+    {
+      "sourceId": "11786106091652576",
+      "slug": "mercedes-benz-eqb-652576",
+      "targetId": "mercedes-benz-eqb-amg-7-2023-11786106091652576"
+    }
+  ],
+  "retired": []
+}

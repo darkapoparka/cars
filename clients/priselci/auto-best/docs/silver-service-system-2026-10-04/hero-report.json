@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "locale": "en",
+      "width": 320,
+      "passed": true
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "locale": "en",
+      "width": 430,
+      "passed": true
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "passed": true
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "locale": "bg",
+      "width": 430,
+      "passed": true
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "passed": true
+    }
+  ]
+}

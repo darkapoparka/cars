@@ -16,6 +16,7 @@ import { Check, ChevronDown, X } from "lucide-react";
 import { type ReactNode, useState } from "react";
 import { localizeMarketplace } from "../lib/marketplace-filter-config";
 import styles from "./desktop-filter-controls.module.css";
+import filterStyles from "./desktop-full-filter-dialog.module.css";
 import {
   NumericRangeFilter,
   type NumericRangePreset,
@@ -28,10 +29,10 @@ interface DesktopQuickOption {
 }
 
 export const desktopQuickFilterRailItemClassName =
-  "w-auto min-w-24 shrink-0 justify-between gap-2 px-4 has-[>svg]:px-4 min-[112rem]:px-[18px] min-[112rem]:has-[>svg]:px-[18px]";
+  "w-auto min-w-24 shrink-0 justify-between gap-2 px-4 has-[>svg]:px-4 desktop-ultra:px-[var(--desktop-control-compact-padding)] desktop-ultra:has-[>svg]:px-[var(--desktop-control-compact-padding)]";
 
 export const desktopQuickFilterOptionClassName =
-  "min-h-12 justify-start rounded-xl border border-transparent bg-zinc-100 px-4 font-medium text-body text-zinc-900 tabular-nums shadow-none transition-colors duration-150 hover:border-zinc-300 hover:bg-zinc-200 active:bg-zinc-300 focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent-ring)] focus-visible:ring-offset-1";
+  "min-h-12 justify-start rounded-xl border border-transparent bg-control px-4 font-medium text-body text-foreground tabular-nums shadow-none transition-colors duration-[var(--duration-interaction)] hover:border-border hover:bg-control-hover active:bg-control-hover focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent-ring)] focus-visible:ring-offset-1";
 
 export const getDesktopQuickFilterClassName = (
   active: boolean,
@@ -40,13 +41,13 @@ export const getDesktopQuickFilterClassName = (
   let surfaceClassName = "bg-control text-foreground hover:bg-control-hover";
   if (active) {
     surfaceClassName =
-      "border-primary bg-primary text-primary-foreground hover:border-primary/90 hover:bg-primary/90";
+      "border-primary bg-primary text-primary-foreground hover:border-[var(--primary-hover)] hover:bg-[var(--primary-hover)] hover:text-[var(--primary-hover-foreground)] active:border-[var(--primary-active)] active:bg-[var(--primary-active)] active:text-[var(--primary-active-foreground)]";
   } else if (elevated) {
     surfaceClassName = "bg-panel text-foreground hover:bg-control";
   }
 
   return cn(
-    "h-10 rounded-full border border-border px-4 font-medium text-compact-control shadow-none transition-colors duration-150 hover:border-muted-foreground/50 focus-visible:[outline-offset:2px] focus-visible:[outline:2px_solid_var(--ring)]",
+    "h-10 rounded-full border border-border px-4 font-medium text-compact-control shadow-none transition-colors duration-[var(--duration-interaction)] hover:border-muted-foreground/50 focus-visible:[outline-offset:var(--desktop-focus-width)] focus-visible:[outline:var(--desktop-focus-width)_solid_var(--ring)]",
     surfaceClassName,
     styles.control
   );
@@ -71,7 +72,7 @@ const ActiveQuickFilterClearButton = ({
     <Button
       aria-label={removeLabel}
       className={cn(
-        "h-10 w-9 shrink-0 rounded-r-full rounded-l-none border-0 border-primary-foreground/25 border-l bg-primary px-0 text-primary-foreground shadow-none transition-colors duration-150 hover:bg-primary/90 hover:text-primary-foreground focus-visible:[outline-offset:2px] focus-visible:[outline:2px_solid_var(--ring)]",
+        "h-10 w-9 shrink-0 rounded-r-full rounded-l-none border-0 border-primary-foreground/25 border-l bg-primary px-0 text-primary-foreground shadow-none transition-colors duration-[var(--duration-interaction)] hover:bg-[var(--primary-hover)] hover:text-[var(--primary-hover-foreground)] active:bg-[var(--primary-active)] active:text-[var(--primary-active-foreground)] focus-visible:[outline-offset:var(--desktop-focus-width)] focus-visible:[outline:var(--desktop-focus-width)_solid_var(--ring)]",
         styles.clear
       )}
       data-slot="desktop-quick-filter-clear"
@@ -116,7 +117,11 @@ export const DesktopQuickFilterButton = ({
       )}
       data-clearable={Boolean(active && onClear)}
       data-slot="desktop-quick-filter"
-      onClick={onOpen}
+      onClick={(event) => {
+        // Safari needs an explicit focus target for the shared overlay coordinator.
+        event.currentTarget.focus({ preventScroll: true });
+        onOpen();
+      }}
       type="button"
       variant={active ? "default" : "secondary"}
     >
@@ -155,6 +160,7 @@ export const DesktopQuickFilterDialog = ({
   label,
   title,
   onClear,
+  onOpen,
   onSelect,
   options,
   selected,
@@ -169,6 +175,7 @@ export const DesktopQuickFilterDialog = ({
   label: string;
   title: string;
   onClear?: () => void;
+  onOpen?: () => void;
   onSelect: (value: string | undefined) => void;
   options: DesktopQuickOption[];
   selected?: string;
@@ -188,6 +195,21 @@ export const DesktopQuickFilterDialog = ({
     onSelect(draftSelected);
     setOpen(false);
   };
+
+  if (onOpen) {
+    return (
+      <DesktopQuickFilterButton
+        active={active}
+        ariaLabel={label}
+        className={className}
+        elevated={elevated}
+        isBg={isBg}
+        label={label}
+        onClear={onClear}
+        onOpen={onOpen}
+      />
+    );
+  }
 
   const trigger = (
     <DialogTrigger asChild>
@@ -238,17 +260,17 @@ export const DesktopQuickFilterDialog = ({
         trigger
       )}
       <DialogContent
-        className="max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-lg gap-0 overflow-hidden rounded-2xl border-zinc-200 bg-white p-0 shadow-2xl"
+        className={cn(filterStyles.dialog, filterStyles.quickDialog)}
         data-slot="desktop-quick-filter-dialog"
         showCloseButton={false}
       >
-        <DialogHeader className="px-5 py-4 text-left">
-          <div className="flex items-start justify-between gap-4">
+        <DialogHeader className={filterStyles.header}>
+          <div className="flex w-full items-center justify-between gap-4">
             <div>
-              <DialogTitle className="text-dialog-title text-zinc-950">
+              <DialogTitle className="text-dialog-title text-foreground">
                 {title}
               </DialogTitle>
-              <DialogDescription className="mt-1 text-body text-zinc-600">
+              <DialogDescription className="sr-only">
                 {localizeMarketplace(
                   isBg,
                   "Изберете една опция и приложете филтъра.",
@@ -259,7 +281,7 @@ export const DesktopQuickFilterDialog = ({
             <DialogClose asChild>
               <Button
                 aria-label={localizeMarketplace(isBg, "Затвори", "Close")}
-                className="-mr-2 size-10 rounded-full text-zinc-600 hover:bg-zinc-100 hover:text-zinc-950"
+                className={filterStyles.close}
                 size="icon"
                 type="button"
                 variant="ghost"
@@ -276,7 +298,7 @@ export const DesktopQuickFilterDialog = ({
               desktopQuickFilterOptionClassName,
               "col-span-2",
               !draftSelected &&
-                "border-transparent bg-brand font-semibold text-brand-foreground hover:border-transparent hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] hover:text-white"
+                "border-transparent bg-brand font-semibold text-brand-foreground hover:border-transparent hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] hover:text-brand-foreground"
             )}
             onClick={() => setDraftSelected(undefined)}
             type="button"
@@ -293,7 +315,7 @@ export const DesktopQuickFilterDialog = ({
               className={cn(
                 desktopQuickFilterOptionClassName,
                 draftSelected === option.value &&
-                  "border-transparent bg-brand font-semibold text-brand-foreground hover:border-transparent hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] hover:text-white"
+                  "border-transparent bg-brand font-semibold text-brand-foreground hover:border-transparent hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] hover:text-brand-foreground"
               )}
               key={option.value}
               onClick={() => setDraftSelected(option.value)}
@@ -307,9 +329,11 @@ export const DesktopQuickFilterDialog = ({
             </Button>
           ))}
         </div>
-        <DialogFooter className="bg-zinc-50 px-5 py-4 sm:justify-end">
+        <DialogFooter
+          className={cn(filterStyles.footer, filterStyles.singleActionFooter)}
+        >
           <Button
-            className="h-11 rounded-xl bg-brand px-6 font-semibold text-brand-foreground text-compact-control hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
+            className={filterStyles.apply}
             onClick={applySelection}
             type="button"
           >
@@ -346,6 +370,7 @@ export const DesktopQuickRangeDialog = ({
   minimumLabel,
   onClear,
   onApply,
+  onOpen,
   presets,
   quickSelectLabel,
   range,
@@ -370,6 +395,7 @@ export const DesktopQuickRangeDialog = ({
   minimumLabel: string;
   onClear?: () => void;
   onApply: (value: { maximum?: number; minimum?: number }) => void;
+  onOpen?: () => void;
   presets: readonly NumericRangePreset[];
   quickSelectLabel: string;
   range: NumericRangeValue;
@@ -401,6 +427,21 @@ export const DesktopQuickRangeDialog = ({
     onApply({ maximum, minimum });
     setOpen(false);
   };
+
+  if (onOpen) {
+    return (
+      <DesktopQuickFilterButton
+        active={active}
+        ariaLabel={label}
+        className={className}
+        elevated={elevated}
+        isBg={isBg}
+        label={label}
+        onClear={onClear}
+        onOpen={onOpen}
+      />
+    );
+  }
 
   const trigger = (
     <DialogTrigger asChild>
@@ -451,13 +492,17 @@ export const DesktopQuickRangeDialog = ({
         trigger
       )}
       <DialogContent
-        className="max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-xl gap-0 overflow-hidden rounded-2xl border-zinc-200 bg-white p-0 shadow-2xl"
+        className={cn(
+          filterStyles.dialog,
+          filterStyles.quickDialog,
+          filterStyles.quickRangeDialog
+        )}
         data-slot="desktop-quick-range-dialog"
         showCloseButton={false}
       >
-        <DialogHeader className="px-5 py-3 text-left">
-          <div className="flex items-center justify-between gap-4">
-            <DialogTitle className="text-card-title-lg text-zinc-950">
+        <DialogHeader className={filterStyles.header}>
+          <div className="flex w-full items-center justify-between gap-4">
+            <DialogTitle className="text-card-title-lg text-foreground">
               {title}
             </DialogTitle>
             <DialogDescription className="sr-only">
@@ -466,7 +511,7 @@ export const DesktopQuickRangeDialog = ({
             <DialogClose asChild>
               <Button
                 aria-label={localizeMarketplace(isBg, "Затвори", "Close")}
-                className="-mr-2 size-10 rounded-full text-zinc-600 hover:bg-zinc-100 hover:text-zinc-950"
+                className={filterStyles.close}
                 size="icon"
                 type="button"
                 variant="ghost"
@@ -476,7 +521,7 @@ export const DesktopQuickRangeDialog = ({
             </DialogClose>
           </div>
         </DialogHeader>
-        <div className="overflow-y-auto border-zinc-100 border-t px-5 py-4">
+        <div className="overflow-y-auto border-border border-t px-5 py-4">
           <NumericRangeFilter
             compact
             formatValue={formatValue}
@@ -498,9 +543,9 @@ export const DesktopQuickRangeDialog = ({
             value={draftRange}
           />
         </div>
-        <DialogFooter className="flex-row justify-between bg-zinc-50 px-5 py-4 sm:justify-between">
+        <DialogFooter className={filterStyles.footer}>
           <Button
-            className="h-11 rounded-xl px-4 font-semibold text-compact-control"
+            className={filterStyles.reset}
             onClick={() => setDraftRange(range)}
             type="button"
             variant="ghost"
@@ -508,7 +553,7 @@ export const DesktopQuickRangeDialog = ({
             {localizeMarketplace(isBg, "Изчисти", "Clear")}
           </Button>
           <Button
-            className="h-11 rounded-xl bg-brand px-6 font-semibold text-brand-foreground text-compact-control hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
+            className={filterStyles.apply}
             onClick={applyRange}
             type="button"
           >

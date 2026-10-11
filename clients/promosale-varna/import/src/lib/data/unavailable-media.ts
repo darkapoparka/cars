@@ -11,6 +11,8 @@ export const unavailableVehiclePhotos = new Set([
 	'21766071200434258',
 	'21778687568946937',
 	'21773157731018688',
-	'11767007851370136'
+	'11767007851370136',
+	// Source CDN returned 404 on 2026-10-01; retain the listing with an honest placeholder.
+	'21775058692833860'
 ]);
 export const unavailableVehicleImage = '/assets/vehicle-placeholder.svg';

@@ -1,0 +1,92 @@
+[
+	{
+		"name": "contact",
+		"height": 900,
+		"newDesktopArtwork": 0,
+		"newDesktopMaps": 0,
+		"overflow": false,
+		"width": 320,
+		"textUnchanged": true,
+		"visibleImagesUnchanged": true,
+		"artworkAndGeometryUnchanged": true
+	},
+	{
+		"name": "contact",
+		"height": 900,
+		"newDesktopArtwork": 0,
+		"newDesktopMaps": 0,
+		"overflow": false,
+		"width": 390,
+		"textUnchanged": true,
+		"visibleImagesUnchanged": true,
+		"artworkAndGeometryUnchanged": true
+	},
+	{
+		"name": "about",
+		"height": 900,
+		"newDesktopArtwork": 0,
+		"newDesktopMaps": 0,
+		"overflow": false,
+		"width": 320,
+		"textUnchanged": true,
+		"visibleImagesUnchanged": false,
+		"artworkAndGeometryUnchanged": true,
+		"sourceSelectionNote": "Only the selected responsive size of the unchanged contact-cta-mobile-v1 banner differs; source markup and rendered dimensions are unchanged."
+	},
+	{
+		"name": "about",
+		"height": 900,
+		"newDesktopArtwork": 0,
+		"newDesktopMaps": 0,
+		"overflow": false,
+		"width": 390,
+		"textUnchanged": true,
+		"visibleImagesUnchanged": true,
+		"artworkAndGeometryUnchanged": true
+	},
+	{
+		"name": "services",
+		"height": 900,
+		"newDesktopArtwork": 0,
+		"newDesktopMaps": 0,
+		"overflow": false,
+		"width": 320,
+		"textUnchanged": true,
+		"visibleImagesUnchanged": false,
+		"artworkAndGeometryUnchanged": true,
+		"sourceSelectionNote": "Only the selected responsive size of the unchanged contact-cta-mobile-v1 banner differs; source markup and rendered dimensions are unchanged."
+	},
+	{
+		"name": "services",
+		"height": 900,
+		"newDesktopArtwork": 0,
+		"newDesktopMaps": 0,
+		"overflow": false,
+		"width": 390,
+		"textUnchanged": true,
+		"visibleImagesUnchanged": true,
+		"artworkAndGeometryUnchanged": true
+	},
+	{
+		"name": "pdp",
+		"height": 900,
+		"newDesktopArtwork": 0,
+		"newDesktopMaps": 0,
+		"overflow": false,
+		"width": 320,
+		"textUnchanged": true,
+		"visibleImagesUnchanged": true,
+		"artworkAndGeometryUnchanged": true
+	},
+	{
+		"name": "pdp",
+		"height": 900,
+		"newDesktopArtwork": 0,
+		"newDesktopMaps": 0,
+		"overflow": false,
+		"width": 390,
+		"textUnchanged": true,
+		"visibleImagesUnchanged": true,
+		"artworkAndGeometryUnchanged": true
+	}
+]

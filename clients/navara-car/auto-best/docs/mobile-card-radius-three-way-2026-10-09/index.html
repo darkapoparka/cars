@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mobile card corners: 12 / 14 / 16px</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #f4f5f7; color: #17191e; font: 15px/1.5 system-ui, sans-serif; }
+  main { max-width: 1240px; margin: 28px auto; padding: 0 20px; }
+  h1 { margin: 0; font-size: 26px; letter-spacing: -.6px; }
+  p { margin: 8px 0 20px; color: #565b65; }
+  .controls { display: flex; flex-wrap: wrap; align-items: end; gap: 16px; margin-bottom: 22px; }
+  label { display: grid; gap: 5px; }
+  select, button { min-height: 40px; border: 1px solid #d8dce2; border-radius: 8px; background: white; color: inherit; font: inherit; padding: 8px 12px; }
+  button { cursor: pointer; }
+  button[aria-pressed="true"] { background: #17191e; color: white; border-color: #17191e; }
+  button:focus-visible, select:focus-visible, a:focus-visible { outline: 3px solid #3875e7; outline-offset: 3px; }
+  .radii { display: flex; gap: 6px; }
+  .stage { padding: 18px; border: 1px solid #dce0e6; border-radius: 12px; background: white; overflow: auto; }
+  .single { display: grid; justify-content: center; min-width: max-content; }
+  figure { margin: 0; }
+  figcaption { margin-bottom: 10px; font-weight: 600; }
+  img { display: block; max-width: none; height: auto; }
+  .columns { display: flex; justify-content: space-between; gap: 20px; min-width: max-content; }
+  [hidden] { display: none !important; }
+  .note { font-size: 13px; }
+  a { color: #315fa4; }
+</style>
+<main>
+  <h1>Mobile card corners</h1>
+  <p>Same cards, content and size. Compare 12px, 14px and 16px.</p>
+  <div class="controls">
+    <label>Cards
+      <select id="surface">
+        <option value="cars">Car cards</option>
+        <option value="body-types">Body types</option>
+        <option value="brands">Brands</option>
+        <option value="services">All services</option>
+        <option value="home-entry">Home search</option>
+        <option value="featured">Featured cars</option>
+        <option value="showroom">Showroom</option>
+        <option value="blog">Blog</option>
+        <option value="sell">Sell</option>
+        <option value="import">Import</option>
+      </select>
+    </label>
+    <label>Mobile width
+      <select id="width"><option value="390">390px</option><option value="320">320px</option></select>
+    </label>
+    <label>View
+      <select id="mode"><option value="switch">Switch in place</option><option value="compare">Side by side</option></select>
+    </label>
+    <div class="radii" role="group" aria-label="Card radius">
+      <button type="button" data-radius="12" aria-pressed="true">12px</button>
+      <button type="button" data-radius="14" aria-pressed="false">14px</button>
+      <button type="button" data-radius="16" aria-pressed="false">16px</button>
+    </div>
+  </div>
+  <div class="stage">
+    <figure class="single" id="single">
+      <figcaption id="caption">12px · Car cards · 390px wide</figcaption>
+      <img id="selected" src="radius-12-cars-390.png" alt="Car cards with 12px outer corners">
+    </figure>
+    <div class="columns" id="columns" hidden>
+      <figure><figcaption>12px</figcaption><a id="link-12" href="radius-12-cars-390.png"><img id="image-12" src="radius-12-cars-390.png" alt="Car cards with 12px outer corners"></a></figure>
+      <figure><figcaption>14px</figcaption><a id="link-14" href="radius-14-cars-390.png"><img id="image-14" src="radius-14-cars-390.png" alt="Car cards with 14px outer corners"></a></figure>
+      <figure><figcaption>16px</figcaption><a id="link-16" href="radius-16-cars-390.png"><img id="image-16" src="radius-16-cars-390.png" alt="Car cards with 16px outer corners"></a></figure>
+    </div>
+  </div>
+  <p class="note">The saved mobile default is 12px. These controls change this comparison only. Car fact badges stay at 6px, inset car photos at 10px, and desktop rounding is unchanged. <a href="README.md">All evidence</a>.</p>
+</main>
+<script>
+  const surface = document.getElementById('surface');
+  const width = document.getElementById('width');
+  const mode = document.getElementById('mode');
+  const selected = document.getElementById('selected');
+  const buttons = [...document.querySelectorAll('[data-radius]')];
+  let radius = 12;
+  const path = value => `radius-${value}-${surface.value}-${width.value}.png`;
+  function render() {
+    const title = surface.selectedOptions[0].text;
+    selected.src = path(radius);
+    selected.alt = `${title} with ${radius}px outer corners`;
+    document.getElementById('caption').textContent = `${radius}px · ${title} · ${width.value}px wide`;
+    for (const value of [12,14,16]) {
+      const image = document.getElementById(`image-${value}`);
+      image.src = path(value);
+      image.alt = `${title} with ${value}px outer corners`;
+      document.getElementById(`link-${value}`).href = path(value);
+    }
+    for (const button of buttons) button.setAttribute('aria-pressed', String(Number(button.dataset.radius) === radius));
+    document.getElementById('single').hidden = mode.value !== 'switch';
+    document.getElementById('columns').hidden = mode.value !== 'compare';
+  }
+  for (const control of [surface,width,mode]) control.addEventListener('change',render);
+  for (const button of buttons) button.addEventListener('click',() => { radius = Number(button.dataset.radius); render(); });
+</script>
+</html>

@@ -1,4 +1,7 @@
 import { daynightAssets, daynightBrand, daynightContact, mainNavigation } from '$lib/data/daynight';
+import { homeBrowseArtwork } from '$lib/content/home-discovery';
+import { filterVehicles } from '$lib/domain/vehicle-search';
+import type { ReviewRoleKind } from '$lib/content/reviews';
 import type { BlogPost } from '$lib/data/blog';
 import { vehicles as inventoryVehicles } from '$lib/data/vehicles';
 import type { Vehicle } from '$lib/data/vehicles';
@@ -14,6 +17,7 @@ import {
 export type HomeFiveBrandCard = {
 	allTile?: boolean;
 	count: string;
+	stockCount: number;
 	href?: string;
 	image: string;
 	name: string;
@@ -24,6 +28,9 @@ export type HomeFiveReview = {
 	avatar: string;
 	name: string;
 	role: string;
+	roleKind?: ReviewRoleKind;
+	rating?: number;
+	excerpt?: string;
 	text: string;
 };
 
@@ -191,8 +198,10 @@ export type HomeFiveModalsData = {
 };
 
 export type HomeFiveTypeCard = {
+	allTile?: boolean;
 	bodyType: string;
-	href: `/inventory${string}` | '/import';
+	stockCount?: number;
+	href: `/inventory${string}` | `/import${string}`;
 	image: string;
 	label: string;
 };
@@ -411,7 +420,7 @@ const inventoryMegaMenu: HomeFiveHeaderInventoryMegaMenu = {
 			]
 		},
 		{
-			title: 'OUTLETCARS.BG Support',
+			title: 'OUTLETCARS.BG — Варна Support',
 			links: [
 				{ href: '/services', label: 'Import & Buying Services' },
 				{ href: '/calculator', label: 'Import Cost Calculator' },
@@ -424,7 +433,7 @@ const inventoryMegaMenu: HomeFiveHeaderInventoryMegaMenu = {
 		copy: 'Filter by body, fuel, price, and mileage before you book a viewing.',
 		ctaHref: '/inventory',
 		ctaLabel: 'View All Inventory',
-		title: `${inventoryVehicles.length} vehicles in the OUTLETCARS.BG stock feed`
+		title: `${inventoryVehicles.length} vehicles in the OUTLETCARS.BG — Варна stock feed`
 	}
 };
 
@@ -447,7 +456,7 @@ const aboutMegaMenu: HomeFiveHeaderContainerMenu = {
 		{ href: '/agents', label: 'Meet Our Consultants' },
 		{ href: '/reviews', label: 'Client Reviews' },
 		{ href: '/faqs', label: 'Frequently Asked Questions' },
-		{ href: '/blog', label: 'OUTLETCARS.BG Notes' },
+		{ href: '/blog', label: 'OUTLETCARS.BG — Варна Notes' },
 		{ href: '/contact', label: 'Visit The Office' }
 	]
 };
@@ -511,7 +520,7 @@ const inventoryMegaMenuForLocale = (locale: Locale): HomeFiveHeaderInventoryMega
 				]
 			},
 			{
-				title: locale === 'bg' ? 'Съдействие от OUTLETCARS.BG' : 'OUTLETCARS.BG Support',
+				title: locale === 'bg' ? 'Съдействие от OUTLETCARS.BG — Варна' : 'OUTLETCARS.BG — Варна Support',
 				links: [
 					{
 						href: '/services',
@@ -542,7 +551,7 @@ const inventoryMegaMenuForLocale = (locale: Locale): HomeFiveHeaderInventoryMega
 			title:
 				locale === 'bg'
 					? `${inventoryVehicles.length} автомобила в наличност`
-					: `${inventoryVehicles.length} vehicles in the OUTLETCARS.BG stock feed`
+					: `${inventoryVehicles.length} vehicles in the OUTLETCARS.BG — Варна stock feed`
 		}
 	};
 };
@@ -571,7 +580,7 @@ const aboutMegaMenuForLocale = (locale: Locale): HomeFiveHeaderContainerMenu => 
 					{ href: '/agents', label: 'Нашите консултанти' },
 					{ href: '/reviews', label: 'Отзиви от клиенти' },
 					{ href: '/faqs', label: 'Често задавани въпроси' },
-					{ href: '/blog', label: 'Съвети от OUTLETCARS.BG' },
+					{ href: '/blog', label: 'Съвети от OUTLETCARS.BG — Варна' },
 					{ href: '/contact', label: 'Посети офиса' }
 				]
 			: aboutMegaMenu.links
@@ -583,8 +592,6 @@ const countBy = (items: string[]) =>
 		counts.set(item, (counts.get(item) ?? 0) + 1);
 		return counts;
 	}, new Map<string, number>());
-
-const brandInventoryCounts = countBy(inventoryVehicles.map((vehicle) => vehicle.brand));
 
 // Stocked brands lead with real inventory counts; the rest are honest
 // "import on request" cards that route to the import flow instead of an
@@ -615,25 +622,28 @@ const showcaseBrandCountLabel = (locale: Locale, count: number) => {
 
 const showcaseBrandCard = (
 	locale: Locale,
-	brand: (typeof homeFiveBrandShowcase)[number]
+	brand: (typeof homeFiveBrandShowcase)[number],
+	source: readonly Vehicle[]
 ): HomeFiveBrandCard => {
-	const stockCount = brandInventoryCounts.get(brand.query) ?? 0;
+	const stockCount = filterVehicles(source, { brand: brand.query }).length;
 
 	if (stockCount === 0) {
 		return {
 			...brand,
+			stockCount,
 			count: locale === 'bg' ? 'Внос по заявка' : 'Import on request',
-			href: '/import'
+			href: `/import?intent=source&make=${encodeURIComponent(brand.query)}`
 		};
 	}
 
-	return { ...brand, count: showcaseBrandCountLabel(locale, stockCount) };
+	return { ...brand, stockCount, count: showcaseBrandCountLabel(locale, stockCount) };
 };
 
 // Closing tile: links to the full inventory with the live total, keeping the wall at 12 cards.
-const allBrandsCard = (locale: Locale): HomeFiveBrandCard => ({
+const allBrandsCard = (locale: Locale, source: readonly Vehicle[]): HomeFiveBrandCard => ({
 	allTile: true,
-	count: showcaseBrandCountLabel(locale, inventoryVehicles.length),
+	count: showcaseBrandCountLabel(locale, source.length),
+	stockCount: source.length,
 	href: '/inventory',
 	image: '',
 	name: locale === 'bg' ? 'Всички марки' : 'All brands',
@@ -641,13 +651,16 @@ const allBrandsCard = (locale: Locale): HomeFiveBrandCard => ({
 });
 
 export const homeFiveBrandCards: HomeFiveBrandCard[] = [
-	...homeFiveBrandShowcase.map((brand) => showcaseBrandCard('en', brand)),
-	allBrandsCard('en')
+	...homeFiveBrandShowcase.map((brand) => showcaseBrandCard('en', brand, inventoryVehicles)),
+	allBrandsCard('en', inventoryVehicles)
 ];
 
-export const homeFiveBrandCardsForLocale = (locale: Locale): HomeFiveBrandCard[] => [
-	...homeFiveBrandShowcase.map((brand) => showcaseBrandCard(locale, brand)),
-	allBrandsCard(locale)
+export const homeFiveBrandCardsForLocale = (
+	locale: Locale,
+	source: readonly Vehicle[] = inventoryVehicles
+): HomeFiveBrandCard[] => [
+	...homeFiveBrandShowcase.map((brand) => showcaseBrandCard(locale, brand, source)),
+	allBrandsCard(locale, source)
 ];
 
 const isHeaderNavActive = (activePath: string, href: string) => {
@@ -722,20 +735,30 @@ export const homeFiveHeaderData: HomeFiveHeaderData = homeFiveHeaderDataForLocal
 export const homeFiveReviewItems: HomeFiveReview[] = [
 	{
 		name: 'Aleksandar Vytev',
-		role: 'Клиент на OUTLETCARS.BG',
+		role: 'Клиент на OUTLETCARS.BG — Варна',
+		roleKind: 'customer',
 		avatar: '/assets/images/avatar/avatar-1.webp',
+		rating: 5,
+		excerpt:
+			'Историята, транспортът и регистрацията бяха обяснени ясно. Спокойно и прозрачно предаване.',
 		text: 'Екипът ми обясни историята на автомобила, транспорта и стъпките по регистрацията, преди да поема ангажимент. Предаването беше спокойно и прозрачно.'
 	},
 	{
 		name: 'Krasimir Georgiev',
 		role: 'Клиент с внос',
+		roleKind: 'import',
 		avatar: '/assets/images/avatar/avatar-2.webp',
-		text: 'OUTLETCARS.BG запазиха разговора практичен: снимки, документи, пробег и разходите, които имат значение преди доставка.'
+		rating: 4,
+		excerpt: 'Ясни снимки, документи, пробег и разходи. Практичен разговор преди доставката.',
+		text: 'OUTLETCARS.BG — Варна запазиха разговора практичен: снимки, документи, пробег и разходите, които имат значение преди доставка.'
 	},
 	{
 		name: 'Iliyan Petrov',
 		role: 'Продава клиентски автомобил',
+		roleKind: 'sale',
 		avatar: '/assets/images/avatar/avatar-3.webp',
+		rating: 5,
+		excerpt: 'Получих ясна обратна връзка за цената, документите и представянето на автомобила.',
 		text: 'Изпратих данните за колата и получих ясна обратна връзка за цената, документите и най-добрия начин да представя автомобила.'
 	}
 ];
@@ -785,12 +808,12 @@ export const homeFiveFooterData: HomeFiveFooterData = {
 	},
 	quickLinks: [
 		{ href: '/about', label: 'About Us' },
-		{ href: '/inventory?view=4', label: 'Buying With OUTLETCARS.BG' },
+		{ href: '/inventory?view=4', label: 'Buying With OUTLETCARS.BG — Варна' },
 		{ href: '/sell-your-car', label: 'Sell Your Car' },
 		{ href: '/services', label: 'Services' },
 		{ href: '/faqs', label: 'FAQ' },
 		{ href: '/blog', label: 'News' },
-		{ href: '/contact', label: 'Contact OUTLETCARS.BG' }
+		{ href: '/contact', label: 'Contact OUTLETCARS.BG — Варна' }
 	],
 	socialLinks: [
 		{ href: daynightContact.facebookHref, icon: 'facebook', label: 'Facebook' },
@@ -829,12 +852,12 @@ export const homeFiveFooterDataForLocale = (locale: Locale): HomeFiveFooterData 
 		],
 		quickLinks: [
 			{ href: '/about', label: 'За нас' },
-			{ href: '/inventory?view=4', label: 'Покупка с OUTLETCARS.BG' },
+			{ href: '/inventory?view=4', label: 'Покупка с OUTLETCARS.BG — Варна' },
 			{ href: '/sell-your-car', label: 'Продай автомобила си' },
 			{ href: '/services', label: 'Услуги' },
 			{ href: '/faqs', label: 'FAQ' },
 			{ href: '/blog', label: 'Новини' },
-			{ href: '/contact', label: 'Контакт с OUTLETCARS.BG' }
+			{ href: '/contact', label: 'Контакт с OUTLETCARS.BG — Варна' }
 		],
 		socialLinks: [
 			{ href: daynightContact.facebookHref, icon: 'facebook', label: 'Facebook' },
@@ -850,7 +873,7 @@ export const homeFiveTypeCards: HomeFiveTypeCard[] = [
 		label: 'Electric',
 		image: '/assets/images/card/card-27.webp',
 		bodyType: 'Electric',
-		href: '/import'
+		href: `/import?intent=source&fuel=${encodeURIComponent('Електрически')}`
 	},
 	{
 		label: 'Sedan',
@@ -868,19 +891,19 @@ export const homeFiveTypeCards: HomeFiveTypeCard[] = [
 		label: 'Pickup Truck',
 		image: '/assets/images/card/card-30.webp',
 		bodyType: 'Pickup Truck',
-		href: '/import'
+		href: '/import?intent=source&bodyType=Pickup%20Truck'
 	},
 	{
 		label: 'Hatchback',
 		image: '/assets/images/card/card-31.webp',
 		bodyType: 'Hatchback',
-		href: '/import'
+		href: '/import?intent=source&bodyType=Hatchback'
 	},
 	{
 		label: 'Crossover',
 		image: '/assets/images/card/card-32.webp',
 		bodyType: 'Crossover',
-		href: '/import'
+		href: '/import?intent=source&bodyType=Crossover'
 	},
 	{
 		label: 'Cabriolet',
@@ -889,18 +912,37 @@ export const homeFiveTypeCards: HomeFiveTypeCard[] = [
 		href: '/inventory?bodyType=Cabriolet'
 	},
 	{
+		allTile: true,
 		label: 'View all',
-		image: '/assets/daynight/body-types/all-cars-front.webp',
+		image: homeBrowseArtwork.inventory.src,
 		bodyType: 'View all',
 		href: '/inventory'
 	}
 ];
 
-export const homeFiveTypeCardsForLocale = (locale: Locale): HomeFiveTypeCard[] =>
-	homeFiveTypeCards.map((card) => ({
-		...card,
-		label: translateVehicleTerm(locale, 'bodyTypes', card.label)
-	}));
+export const homeFiveTypeCardsForLocale = (
+	locale: Locale,
+	source: readonly Vehicle[] = inventoryVehicles
+): Array<HomeFiveTypeCard & { stockCount: number }> =>
+	homeFiveTypeCards.map((card) => {
+		const filters: Record<string, string> = card.allTile
+			? {}
+			: card.bodyType === 'Electric'
+				? { fuel: 'Електрически' }
+				: { bodyType: card.bodyType };
+		const stockCount = filterVehicles(source, filters).length;
+		const query = new URLSearchParams(filters).toString();
+		const href: HomeFiveTypeCard['href'] =
+			card.allTile || stockCount > 0
+				? `/inventory${query ? `?${query}` : ''}`
+				: `/import?intent=source&${query}`;
+		return {
+			...card,
+			stockCount,
+			href,
+			label: translateVehicleTerm(locale, 'bodyTypes', card.label)
+		};
+	});
 
 export const homeFiveVehiclePills: HomeFiveVehiclePill[] = [
 	{
@@ -1186,7 +1228,7 @@ const heroActionsForLocale = (locale: Locale): HomeFiveHeroAction[] =>
 					label: 'Купи',
 					mobileHeading: 'Намери автомобила си.',
 					mode: 'buy',
-					placeholder: 'Търси марка, модел, цена...',
+					placeholder: 'Търси марка или модел',
 					secondaryHref: '/inventory',
 					secondaryLabel: 'Разгледай всички',
 					submitLabel: 'Покажи автомобили',
@@ -1197,7 +1239,7 @@ const heroActionsForLocale = (locale: Locale): HomeFiveHeroAction[] =>
 					drawerKicker: 'Подбрани автомобили',
 					drawerTitle: 'Изпрати линк за проверка',
 					helper:
-						'Постави линк към обява от Европа или VIN. OUTLETCARS.BG ще провери история, снимки, пробег и ориентировъчна крайна цена.',
+						'Постави линк към обява от Европа или VIN. OUTLETCARS.BG — Варна ще провери история, снимки, пробег и ориентировъчна крайна цена.',
 					inputName: 'vehicle',
 					label: 'Внос',
 					mobileHeading: 'Внеси автомобил от Европа.',
@@ -1235,7 +1277,7 @@ const heroActionsForLocale = (locale: Locale): HomeFiveHeroAction[] =>
 					label: 'Buy',
 					mobileHeading: 'Find your car.',
 					mode: 'buy',
-					placeholder: 'Search brand, model, price...',
+					placeholder: 'Search brand or model',
 					secondaryHref: '/inventory',
 					secondaryLabel: 'Browse all',
 					submitLabel: 'Show vehicles',
@@ -1246,7 +1288,7 @@ const heroActionsForLocale = (locale: Locale): HomeFiveHeroAction[] =>
 					drawerKicker: 'Import from Europe',
 					drawerTitle: 'Send a listing link',
 					helper:
-						'Paste a Canadian listing URL or VIN. OUTLETCARS.BG will review history, photos, mileage, and estimated landed cost.',
+						'Paste a European listing URL or VIN. OUTLETCARS.BG — Варна will review history, photos, mileage, and estimated landed cost.',
 					inputName: 'vehicle',
 					label: 'Import',
 					mobileHeading: 'Import from Europe.',
@@ -1410,7 +1452,9 @@ const compareVehicleFrom = (vehicle: Vehicle): HomeFiveCompareVehicle => ({
 const formatKm = (value: number) => `${value.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} km`;
 
 const formatMonthly = (value: number, locale: Locale) =>
-	`${value.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} ${locale === 'bg' ? '€/мес.' : '€/mo'}`;
+	value > 0
+		? `${value.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} ${locale === 'bg' ? '€/мес.' : '€/mo'}`
+		: '';
 
 const compactFuelLabel = (fuel: string, locale: Locale) => {
 	const normalizedFuel = fuel.toLowerCase();

@@ -5,7 +5,7 @@ import { visit } from './helpers';
 test.skip(({ isMobile }) => !isMobile, 'Mobile viewport coverage');
 
 for (const locale of ['en', 'bg']) {
-	test(`mobile ${locale} account menu keeps legacy routes outside the locale prefix`, async ({
+	test(`mobile ${locale} menu uses the shared admin demo and keeps saved cars`, async ({
 		page
 	}) => {
 		await visit(page, `/${locale}`);
@@ -16,25 +16,34 @@ for (const locale of ['en', 'bg']) {
 			.getByRole('button')
 			.click();
 		const menu = page.getByRole('dialog');
-		const account = menu.getByRole('link', {
-			name: locale === 'en' ? 'Account' : 'Вход / профил',
+		const admin = menu.getByRole('link', {
+			name: locale === 'en' ? 'Admin dashboard (demo)' : 'Админ панел (демо)',
 			exact: true
 		});
-		await expect(account).toHaveAttribute(
-			'href',
-			locale === 'en' ? '/account?lang=en' : '/account'
-		);
-		const messages = menu.getByRole('link', {
-			name: locale === 'en' ? 'Messages' : 'Съобщения',
-			exact: true
-		});
-		await expect(messages).toHaveAttribute(
-			'href',
-			locale === 'en' ? '/account/messages?lang=en' : '/account/messages'
-		);
-		await account.click();
-		await expect(page).toHaveURL(/\/account(?:\?lang=en)?$/);
-		await expect(page.locator('body')).not.toContainText('Auxero template route not found');
+		await expect(admin).toHaveAttribute('href', 'https://cars-admin-blue.vercel.app/');
+		await expect(admin).toHaveAttribute('target', '_blank');
+		await expect(admin).toHaveAttribute('rel', 'noopener noreferrer');
+		await expect(menu.locator('a[href^="/account/messages"]')).toHaveCount(0);
+		await expect(menu.locator('a[href="/account"], a[href^="/account?"]')).toHaveCount(0);
+		await expect(
+			menu.getByRole('link', {
+				name: locale === 'en' ? 'Saved cars' : 'Любими автомобили',
+				exact: true
+			})
+		).toHaveAttribute('href', `/${locale}/account/favorites${locale === 'en' ? '?lang=en' : ''}`);
+		// Check the external navigation contract independently of the hosted demo's availability.
+		await page
+			.context()
+			.route('https://cars-admin-blue.vercel.app/**', (route) =>
+				route.fulfill({ contentType: 'text/html', body: '<title>Shared admin destination</title>' })
+			);
+		const storefrontURL = page.url();
+		const popupPromise = page.waitForEvent('popup');
+		await admin.click();
+		const popup = await popupPromise;
+		await expect(popup).toHaveURL('https://cars-admin-blue.vercel.app/');
+		await expect(page).toHaveURL(storefrontURL);
+		await popup.close();
 	});
 }
 
@@ -83,14 +92,23 @@ test('visible mobile inventory photos load delivery renditions and Contact prior
 	);
 	await expect(preload).toHaveAttribute('media', '(max-width: 767px)');
 	await expect(preload).toHaveAttribute('fetchpriority', 'high');
+	await expect(preload).toHaveAttribute(
+		'imagesrcset',
+		/delivery\/services\/proof-studio-import-handoff/
+	);
 });
 
 test('mobile comparison supports adding, removing and clearing cars', async ({ page }) => {
 	await page.setViewportSize({ width: 320, height: 844 });
 	await visit(page, '/en/compare');
-	const choose = page.getByRole('combobox', { name: 'Add a car (up to four)' });
-	await choose.selectOption({ label: 'BMW X3 30e xDrive' });
-	await choose.selectOption({ label: 'BMW X4 M Competition' });
+	for (const title of ['BMW X3 30e xDrive', 'BMW X4 M Competition']) {
+		await page.getByRole('button', { name: /Add a car/ }).click();
+		const picker = page.getByRole('dialog', { name: 'Choose a car', exact: true });
+		await picker.getByRole('searchbox').fill(title);
+		await picker.getByRole('button', { name: 'Add ' + title, exact: true }).click();
+		await expect(picker).not.toBeVisible();
+		await expect(page.getByRole('link', { name: title, exact: true })).toBeVisible();
+	}
 	const table = page.getByRole('table', { name: 'Vehicle specifications' });
 	await expect(table.getByRole('columnheader')).toHaveCount(3);
 	const result = await new AxeBuilder({ page })
@@ -105,6 +123,32 @@ test('mobile comparison supports adding, removing and clearing cars', async ({ p
 	await expect(table.getByRole('columnheader')).toHaveCount(2);
 	await page.getByRole('button', { name: 'Clear comparison' }).click();
 	await expect(page.getByRole('heading', { name: 'Choose cars to compare' })).toBeVisible();
+});
+
+test('mobile service cards load delivery copies of every retained image', async ({ page }) => {
+	const oversizedOrDesktop: string[] = [];
+	page.on('request', (request) => {
+		if (
+			/\/services\/desktop\//.test(request.url()) ||
+			/\/(hero\/home-05-showroom-exterior|footer-premium-request-v2|cta\/premium-cars-banner-v2)\.webp$/.test(
+				request.url()
+			)
+		)
+			oversizedOrDesktop.push(request.url());
+	});
+	await visit(page, '/bg/services');
+	const photos = page.locator('.service-card img');
+	await expect(photos).toHaveCount(6);
+	for (const photo of await photos.all()) {
+		await photo.scrollIntoViewIfNeeded();
+		await expect
+			.poll(() => photo.evaluate((image: HTMLImageElement) => image.naturalWidth))
+			.toBeGreaterThan(0);
+		expect(await photo.evaluate((image: HTMLImageElement) => image.currentSrc)).toContain(
+			'/delivery/services/'
+		);
+	}
+	expect(oversizedOrDesktop).toEqual([]);
 });
 
 for (const width of [320, 390]) {

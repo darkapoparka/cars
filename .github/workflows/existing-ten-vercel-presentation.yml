@@ -1,0 +1,115 @@
+name: Existing ten Vercel presentation release
+on:
+  push:
+    branches: [main]
+    paths: [docs/releases/vercel-presentation-20261011/request.json]
+permissions:
+  contents: read
+concurrency:
+  group: cars-existing-ten-vercel-presentation
+  cancel-in-progress: false
+jobs:
+  plan:
+    if: github.repository == 'darkapoparka/cars'
+    runs-on: ubuntu-24.04
+    outputs:
+      dealers: ${{ steps.matrix.outputs.dealers }}
+      pilots: ${{ steps.matrix.outputs.pilots }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            scripts
+            docs/releases/vercel-presentation-20261011
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '22.23.2'
+          package-manager-cache: false
+      - run: node --test --test-concurrency=1 scripts/dealer-presentation.test.mjs scripts/dealer-contact-fallback.test.mjs scripts/client-logo-contract.test.mjs scripts/package-dealer.test.mjs scripts/six-design-release.test.mjs
+      - id: matrix
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE' >> "$GITHUB_OUTPUT"
+          import fs from 'node:fs';
+          const r=JSON.parse(fs.readFileSync('docs/releases/vercel-presentation-20261011/request.json'));
+          if(r.dealers.length!==10||new Set(r.dealers.map(d=>d.slug)).size!==10)throw Error('Invalid ten-dealer scope');
+          console.log('dealers='+JSON.stringify({include:r.dealers.map(d=>({slug:d.slug}))}));
+          const nodes={'auto-best':'22.23.2',modern:'22.23.2',import:'24.21.0',app:'22.23.2',mobile:'22.23.2','karento-best':'24.21.0'};
+          console.log('pilots='+JSON.stringify({include:['promosale-varna','navara-car'].flatMap(slug=>Object.entries(nodes).map(([key,node])=>({slug,key,node})))}));
+          NODE
+  package:
+    needs: plan
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix: ${{ fromJSON(needs.plan.outputs.dealers) }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          filter: blob:none
+          sparse-checkout: |
+            scripts
+            docs
+            clients/${{ matrix.slug }}
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '22.23.2'
+          package-manager-cache: false
+      - name: Isolated share tooling; no template or dealer dependency edits
+        run: |
+          mkdir -p runtime/vercel-tools
+          printf '{"private":true}\n' > runtime/vercel-tools/package.json
+          npm install --prefix runtime/vercel-tools --ignore-scripts --save-exact sharp@0.35.5 typescript@6.0.3
+      - name: Existing package-dealer with shared fixes and thin verified Git transport
+        env:
+          NODE_PATH: ${{ github.workspace }}/runtime/vercel-tools/node_modules
+          NODE_OPTIONS: --max-old-space-size=6144
+        run: node scripts/prepare-vercel-presentation-release.mjs prepare '${{ matrix.slug }}'
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: vercel-package-${{ matrix.slug }}-${{ github.run_id }}
+          path: runtime/vercel-presentation/${{ matrix.slug }}/artifact/
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 0
+  native:
+    needs: [plan, package]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix: ${{ fromJSON(needs.plan.outputs.pilots) }}
+    name: Native ${{ matrix.slug }} / ${{ matrix.key }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          filter: blob:none
+          sparse-checkout: |
+            scripts
+            docs/releases/vercel-presentation-20261011
+            clients/${{ matrix.slug }}
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: ${{ matrix.node }}
+          package-manager-cache: false
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        with:
+          name: vercel-package-${{ matrix.slug }}-${{ github.run_id }}
+          path: input/package
+      - name: Compile exact generated Vercel service and retain receipt
+        env:
+          NODE_OPTIONS: --max-old-space-size=4608
+          NEXT_TELEMETRY_DISABLED: '1'
+        run: node scripts/prepare-vercel-presentation-release.mjs native '${{ matrix.slug }}' '${{ matrix.key }}'
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: native-${{ matrix.slug }}-${{ matrix.key }}-${{ github.run_id }}
+          path: runtime/vercel-presentation/${{ matrix.slug }}/native-${{ matrix.key }}.json
+          if-no-files-found: error
+          retention-days: 7

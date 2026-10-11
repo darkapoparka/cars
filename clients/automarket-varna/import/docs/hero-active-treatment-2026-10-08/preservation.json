@@ -1,0 +1,58 @@
+[
+  {
+    "name": "desktop-home-hero",
+    "left": "before-home-1440.jpg",
+    "right": "after-home-1440.jpg",
+    "rect": {
+      "left": 50,
+      "top": 90,
+      "width": 1320,
+      "height": 410
+    },
+    "threshold": 16,
+    "changedPixels": 0,
+    "totalPixels": 541200
+  },
+  {
+    "name": "mobile-home-below-hero",
+    "left": "before-home-390.jpg",
+    "right": "after-home-390.jpg",
+    "rect": {
+      "left": 0,
+      "top": 118,
+      "width": 390,
+      "height": 726
+    },
+    "threshold": 16,
+    "changedPixels": 0,
+    "totalPixels": 283140
+  },
+  {
+    "name": "mobile-import-below-hero",
+    "left": "before-import-390.jpg",
+    "right": "after-import-390.jpg",
+    "rect": {
+      "left": 0,
+      "top": 118,
+      "width": 390,
+      "height": 726
+    },
+    "threshold": 16,
+    "changedPixels": 0,
+    "totalPixels": 283140
+  },
+  {
+    "name": "mobile-sell-below-hero",
+    "left": "before-sell-390.jpg",
+    "right": "after-sell-390.jpg",
+    "rect": {
+      "left": 0,
+      "top": 118,
+      "width": 390,
+      "height": 726
+    },
+    "threshold": 16,
+    "changedPixels": 0,
+    "totalPixels": 283140
+  }
+]

@@ -1,0 +1,45 @@
+{
+	"date": "2026-10-04",
+	"tool": "Built-in image_gen.imagegen",
+	"description": "Dealer-neutral About process family. Request is the existing logo-free generated image copied byte for byte. Three precise imagegen edits remove the dealership branding from jacket, notebook and clipboard; the automotive scenes and original branded source files are preserved. Car manufacturer marks remain part of the scenes. This is illustrative template imagery.",
+	"copied": [
+		{
+			"key": "request",
+			"source": "static/assets/daynight/banners/about-request-v1.webp",
+			"destination": "static/assets/process/request-neutral-v1.webp",
+			"originalProvenance": "ABOUT-PROCESS-2026-10-04.json"
+		}
+	],
+	"edited": [
+		{
+			"key": "inspection",
+			"prompt": "Use case: precise-object-edit.\nAsset type: reusable automotive template's About process photo.\nInput Image 1 is the EDIT TARGET.\nRequest: Remove the entire embroidered Day Night Auto Group dealership logo, Cyrillic lettering, red lettering and circular wheel emblem from the technician's black jacket at the right. Replace only that branded patch with natural plain black jacket fabric, preserving fabric folds, seams, texture and lighting.\nInvariants: preserve the exact same landscape 3:2 scene, composition, showroom, vehicles, vehicle badges, hands, equipment, camera perspective and color grade. Preserve all other pixels as closely as possible. Do not zoom, crop, rearrange or stylize. Do not add a replacement logo, company name, lettering, watermark, symbols or decorations. The result must be neutral dealership process imagery usable by different dealers.",
+			"reference": "static/assets/daynight/services/desktop/inspection-reference-v4.webp",
+			"source": "C:/Users/radev/.codex/generated_images/01a10434-ddd7-7361-ae8e-48bd3e8da469/exec-9a14cd99-ce3a-465a-801c-fba9fce292ee.png",
+			"destination": "static/assets/process/inspection-neutral-v1.webp",
+			"width": 900,
+			"height": 600,
+			"delivery": "WebP quality 84; generated PNG and original reference preserved."
+		},
+		{
+			"key": "decision",
+			"prompt": "Use case: precise-object-edit.\nAsset type: reusable automotive template's About process photo.\nInput Image 1 is the EDIT TARGET.\nRequest: Remove the entire Day Night Auto Group dealership logo, Cyrillic lettering, red lettering and circular wheel emblem from the black notebook in the lower right. Replace only the branded patch with unmarked matte black notebook cover material, preserving its elastic strap, edges, pen, perspective and lighting.\nInvariants: preserve the exact same landscape 3:2 scene, composition, showroom, vehicles, vehicle badges, hands, equipment, camera perspective and color grade. Preserve all other pixels as closely as possible. Do not zoom, crop, rearrange or stylize. Do not add a replacement logo, company name, lettering, watermark, symbols or decorations. The result must be neutral dealership process imagery usable by different dealers.",
+			"reference": "static/assets/daynight/services/desktop/comparison-reference-v4.webp",
+			"source": "C:/Users/radev/.codex/generated_images/01a10434-ddd7-7361-ae8e-48bd3e8da469/exec-779d5992-0c18-4277-9c60-0663cb37caf9.png",
+			"destination": "static/assets/process/decision-neutral-v1.webp",
+			"width": 900,
+			"height": 600,
+			"delivery": "WebP quality 84; generated PNG and original reference preserved."
+		},
+		{
+			"key": "handover",
+			"prompt": "Use case: precise-object-edit.\nAsset type: reusable automotive template's About process photo.\nInput Image 1 is the EDIT TARGET.\nRequest: Remove the entire Day Night Auto Group dealership logo, Cyrillic lettering, red lettering and circular wheel emblem from the black clipboard in the lower right. Replace only that branded patch with unmarked matte black clipboard material, preserving the metal clip, keys, hand, edges, perspective and lighting.\nInvariants: preserve the exact same landscape 3:2 scene, composition, showroom, vehicles, vehicle badges, hands, equipment, camera perspective and color grade. Preserve all other pixels as closely as possible. Do not zoom, crop, rearrange or stylize. Do not add a replacement logo, company name, lettering, watermark, symbols or decorations. The result must be neutral dealership process imagery usable by different dealers.",
+			"reference": "static/assets/daynight/services/desktop/selling-reference-v4.webp",
+			"source": "C:/Users/radev/.codex/generated_images/01a10434-ddd7-7361-ae8e-48bd3e8da469/exec-097cb6b2-b7ae-47f2-8653-a282b259bc80.png",
+			"destination": "static/assets/process/handover-neutral-v1.webp",
+			"width": 900,
+			"height": 600,
+			"delivery": "WebP quality 84; generated PNG and original reference preserved."
+		}
+	]
+}

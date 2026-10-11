@@ -47,7 +47,10 @@ export const handle: Handle = async ({ event, resolve }) => {
 	}
 	const resolved = await resolve(event, {
 		transformPageChunk: ({ html }) =>
-			html.replace('%template.locale%', locale).replace('%template.theme%', themeStyle(site))
+			html
+				.replace('%template.locale%', locale)
+				.replace('%template.theme%', themeStyle(site))
+				.replace('%template.theme-color%', site.theme.accent)
 	});
 	// Redirect responses can have immutable headers. Clone before adding security/cache policy.
 	const response = new Response(resolved.body, {

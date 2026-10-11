@@ -33,6 +33,7 @@ import {
   getSellerPanelCopy,
   getSellerPanelDisplayName,
 } from "../lib/seller-contact-policy";
+import { DealerDesktopLogo } from "./dealer-desktop-logo";
 import Image from "./public-image";
 
 const sellerRoleIcons = {
@@ -58,13 +59,7 @@ export const LeadSiteListingIdentityCard = ({
       className="rounded-xl border border-border bg-card p-5"
       data-slot="listing-dealership-card"
     >
-      <Image
-        alt={leadSite.name}
-        className="h-12 w-auto max-w-full object-contain object-left"
-        height={48}
-        src={leadSite.logoOnLight}
-        width={220}
-      />
+      <DealerDesktopLogo className="h-12 w-auto max-w-full object-contain object-left" />
 
       <a
         className="group mt-4 flex items-center justify-between gap-4 rounded-xl bg-control px-4 py-3 transition-colors hover:bg-control-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent)]"
@@ -86,7 +81,10 @@ export const LeadSiteListingIdentityCard = ({
         />
       </a>
 
-      <dl className="mt-4 divide-y divide-border rounded-lg bg-control px-3 text-meta">
+      <dl
+        className="mt-4 divide-y divide-border rounded-lg bg-control px-3 text-meta"
+        data-slot="listing-reference-details"
+      >
         <div className="grid grid-cols-[7rem_minmax(0,1fr)] gap-3 py-3">
           <dt className="text-muted-foreground">
             {isBg ? "Реф. номер" : "Reference"}
@@ -103,15 +101,16 @@ export const LeadSiteListingIdentityCard = ({
         </div>
       </dl>
 
-      <div className="mt-4 h-48 overflow-hidden rounded-lg bg-control">
-        <iframe
-          className="block h-full w-full border-0"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          src={leadSite.mapsEmbedUrl}
-          title={isBg ? "Карта на шоурума" : "Showroom map"}
-        />
-      </div>
+      <a
+        className="mt-4 flex items-center justify-between gap-3 rounded-lg bg-control px-4 py-3 font-medium text-meta hover:bg-control-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        data-slot="listing-showroom-directions"
+        href={withBasePath(leadSite.mapsUrl)}
+        rel="noreferrer"
+        target="_blank"
+      >
+        {isBg ? "Как да ни намерите" : "Get directions"}
+        <ArrowUpRight aria-hidden className="size-4 shrink-0" />
+      </a>
     </section>
   );
 };

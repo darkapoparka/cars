@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "format": "mobile-preview-v1",
+  "dealer": "day-and-night-auto-group",
+  "name": "Day & Night Auto Group",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+    "path": "templates/mobile",
+    "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d",
+    "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b"
+  },
+  "sourceDigest": "701e7a17c4619b3c3503ff62b0beef40652e62ab0c5add1d7ad018010a643739",
+  "inventory": {
+    "mode": "dated-listing-snapshot",
+    "count": 40,
+    "observedAt": ""
+  },
+  "personalization": {
+    "profileSha256": "86df505a9618442751430133108c6f1d6ffe5efb5806eb055ce4997bbae03556",
+    "logoPaths": [
+      "/dealer-brand/logo-on-light.webp",
+      "/dealer-brand/logo-on-dark.webp"
+    ],
+    "mediaPaths": [
+      "/assets/daynight/inventory-current/21784728210405323.webp",
+      "/assets/daynight/inventory-current/11782122632841845.webp",
+      "/assets/daynight/inventory-current/11781786688563618.webp",
+      "/assets/daynight/inventory-current/21781366888650416.webp",
+      "/assets/daynight/inventory-current/21784223776383846.webp",
+      "/assets/daynight/inventory-current/21781186627237038.webp",
+      "/assets/daynight/inventory-current/21775198700636300.webp",
+      "/assets/daynight/inventory-current/21758203454344162.webp",
+      "/assets/daynight/inventory-current/11782540302515038.webp",
+      "/assets/daynight/inventory-current/11784224743668074.webp",
+      "/assets/daynight/inventory-current/11777018671764829.webp",
+      "/assets/daynight/inventory-current/11783434857807146.webp",
+      "/assets/daynight/inventory-current/11782479430635636.webp",
+      "/assets/daynight/inventory-current/11779001443562014.webp",
+      "/assets/daynight/inventory-current/21781097577012835.webp",
+      "/assets/daynight/inventory-current/21783785043166128.webp",
+      "/assets/daynight/inventory-current/21784134153263153.webp",
+      "/assets/daynight/inventory-current/21765900685685588.webp",
+      "/assets/daynight/inventory-current/21777637702876978.webp",
+      "/assets/daynight/inventory-current/21780050061781136.webp",
+      "/assets/daynight/inventory-current/11781282994167628.webp",
+      "/assets/daynight/inventory-current/11775899765171119.webp",
+      "/assets/daynight/inventory-current/11781969350224394.webp",
+      "/assets/daynight/inventory-current/21782920140707096.webp",
+      "/assets/daynight/inventory-current/21782329010196509.webp",
+      "/assets/daynight/inventory-current/21784136402983332.webp",
+      "/assets/daynight/inventory-current/11775198338574112.webp",
+      "/assets/daynight/inventory-current/21781787768273938.webp",
+      "/assets/daynight/inventory-current/11778599312336917.webp",
+      "/assets/daynight/inventory-current/11782541049698048.webp",
+      "/assets/daynight/inventory-current/21762334502775312.webp",
+      "/assets/daynight/inventory-current/21782329865022942.webp",
+      "/assets/daynight/inventory-current/11784380846697521.webp",
+      "/assets/daynight/inventory-current/11784130537689775.webp",
+      "/assets/daynight/inventory-current/11778179700610297.webp",
+      "/assets/daynight/inventory-current/11782329384140338.webp",
+      "/assets/daynight/inventory-current/11778085846169037.webp",
+      "/assets/daynight/inventory-current/11774291387702102.webp",
+      "/assets/daynight/inventory-current/21782661898906066.webp",
+      "/assets/daynight/inventory-current/11781790478711568.webp"
+    ],
+    "mediaMappings": [
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+        "publicPath": "/assets/daynight/inventory-current/21784728210405323.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/11782122632841845.webp",
+        "publicPath": "/assets/daynight/inventory-current/11782122632841845.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/11781786688563618.webp",
+        "publicPath": "/assets/daynight/inventory-current/11781786688563618.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/21781366888650416.webp",
+        "publicPath": "/assets/daynight/inventory-current/21781366888650416.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/21784223776383846.webp",
+        "publicPath": "/assets/daynight/inventory-current/21784223776383846.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/21781186627237038.webp",
+        "publicPath": "/assets/daynight/inventory-current/21781186627237038.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/21775198700636300.webp",
+        "publicPath": "/assets/daynight/inventory-current/21775198700636300.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/21758203454344162.webp",
+        "publicPath": "/assets/daynight/inventory-current/21758203454344162.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/11782540302515038.webp",
+        "publicPath": "/assets/daynight/inventory-current/11782540302515038.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/11784224743668074.webp",
+        "publicPath": "/assets/daynight/inventory-current/11784224743668074.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/11777018671764829.webp",
+        "publicPath": "/assets/daynight/inventory-current/11777018671764829.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/11783434857807146.webp",
+        "publicPath": "/assets/daynight/inventory-current/11783434857807146.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/11782479430635636.webp",
+        "publicPath": "/assets/daynight/inventory-current/11782479430635636.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/11779001443562014.webp",
+        "publicPath": "/assets/daynight/inventory-current/11779001443562014.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/21781097577012835.webp",
+        "publicPath": "/assets/daynight/inventory-current/21781097577012835.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/21783785043166128.webp",
+        "publicPath": "/assets/daynight/inventory-current/21783785043166128.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/21784134153263153.webp",
+        "publicPath": "/assets/daynight/inventory-current/21784134153263153.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/21765900685685588.webp",
+        "publicPath": "/assets/daynight/inventory-current/21765900685685588.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/21777637702876978.webp",
+        "publicPath": "/assets/daynight/inventory-current/21777637702876978.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/21780050061781136.webp",
+        "publicPath": "/assets/daynight/inventory-current/21780050061781136.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/11781282994167628.webp",
+        "publicPath": "/assets/daynight/inventory-current/11781282994167628.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/11775899765171119.webp",
+        "publicPath": "/assets/daynight/inventory-current/11775899765171119.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/11781969350224394.webp",
+        "publicPath": "/assets/daynight/inventory-current/11781969350224394.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/21782920140707096.webp",
+        "publicPath": "/assets/daynight/inventory-current/21782920140707096.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/21782329010196509.webp",
+        "publicPath": "/assets/daynight/inventory-current/21782329010196509.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/21784136402983332.webp",
+        "publicPath": "/assets/daynight/inventory-current/21784136402983332.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/11775198338574112.webp",
+        "publicPath": "/assets/daynight/inventory-current/11775198338574112.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/21781787768273938.webp",
+        "publicPath": "/assets/daynight/inventory-current/21781787768273938.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/11778599312336917.webp",
+        "publicPath": "/assets/daynight/inventory-current/11778599312336917.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/11782541049698048.webp",
+        "publicPath": "/assets/daynight/inventory-current/11782541049698048.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/21762334502775312.webp",
+        "publicPath": "/assets/daynight/inventory-current/21762334502775312.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/21782329865022942.webp",
+        "publicPath": "/assets/daynight/inventory-current/21782329865022942.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/11784380846697521.webp",
+        "publicPath": "/assets/daynight/inventory-current/11784380846697521.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/11784130537689775.webp",
+        "publicPath": "/assets/daynight/inventory-current/11784130537689775.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/11778179700610297.webp",
+        "publicPath": "/assets/daynight/inventory-current/11778179700610297.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/11782329384140338.webp",
+        "publicPath": "/assets/daynight/inventory-current/11782329384140338.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/11778085846169037.webp",
+        "publicPath": "/assets/daynight/inventory-current/11778085846169037.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/11774291387702102.webp",
+        "publicPath": "/assets/daynight/inventory-current/11774291387702102.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/21782661898906066.webp",
+        "publicPath": "/assets/daynight/inventory-current/21782661898906066.webp"
+      },
+      {
+        "sourcePath": "/variant-3/assets/daynight/inventory-current/11781790478711568.webp",
+        "publicPath": "/assets/daynight/inventory-current/11781790478711568.webp"
+      }
+    ],
+    "contentPaths": [
+      "mobile/src/lib/showroom-config.ts",
+      "mobile/src/lib/catalog.ts",
+      "mobile/src/lib/dealers.ts",
+      "mobile/src/lib/dealer-inventory.json",
+      "mobile/src/lib/locale.ts",
+      "mobile/src/lib/search.ts",
+      "mobile/src/components/NativeDealerCards.tsx",
+      "mobile/src/components/DealerScreens.tsx",
+      "mobile/src/components/VehicleCard.tsx",
+      "mobile/src/components/ShowroomVehicleCard.tsx",
+      "mobile/src/components/VehicleSections.tsx"
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

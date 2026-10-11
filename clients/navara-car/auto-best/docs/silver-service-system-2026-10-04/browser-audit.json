@@ -1,0 +1,531 @@
+{
+  "before": {
+    "aboutDesktop": {
+      "cards": [
+        {
+          "rect": {
+            "bottom": 604.78125,
+            "height": 362,
+            "left": 96.5,
+            "right": 386.5,
+            "top": 242.78125,
+            "width": 290,
+            "x": 96.5,
+            "y": 242.78125
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/desktop-service-inspection-v2.webp",
+          "title": "Оглед в София"
+        },
+        {
+          "rect": {
+            "bottom": 604.78125,
+            "height": 362,
+            "left": 410.5,
+            "right": 700.5,
+            "top": 242.78125,
+            "width": 290,
+            "x": 410.5,
+            "y": 242.78125
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/desktop-service-import-v2.webp",
+          "title": "Внос по заявка"
+        },
+        {
+          "rect": {
+            "bottom": 604.78125,
+            "height": 362,
+            "left": 724.5,
+            "right": 1014.5,
+            "top": 242.78125,
+            "width": 290,
+            "x": 724.5,
+            "y": 242.78125
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/desktop-service-leasing-v2.webp",
+          "title": "Собствен лизинг"
+        },
+        {
+          "rect": {
+            "bottom": 604.78125,
+            "height": 362,
+            "left": 1038.5,
+            "right": 1328.5,
+            "top": 242.78125,
+            "width": 290,
+            "x": 1038.5,
+            "y": 242.78125
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/desktop-service-trade-in-v1.webp",
+          "title": "Оценка за бартер"
+        }
+      ],
+      "scroll": [
+        0,
+        540
+      ],
+      "viewport": [
+        1440,
+        900
+      ]
+    },
+    "homeMobile": {
+      "cards": [
+        {
+          "rect": {
+            "bottom": 185.609375,
+            "height": 161.609375,
+            "left": 12,
+            "right": 171.5,
+            "top": 24,
+            "width": 159.5,
+            "x": 12,
+            "y": 24
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/home-collection-silver-v1.webp",
+          "text": "Коли\n7 примерни"
+        },
+        {
+          "rect": {
+            "bottom": 185.609375,
+            "height": 161.609375,
+            "left": 187.5,
+            "right": 347,
+            "top": 24,
+            "width": 159.5,
+            "x": 187.5,
+            "y": 24
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/desktop-service-trade-in-v1.webp",
+          "text": "Продай\nБърза оценка"
+        },
+        {
+          "rect": {
+            "bottom": 363.21875,
+            "height": 161.609375,
+            "left": 12,
+            "right": 171.5,
+            "top": 201.609375,
+            "width": 159.5,
+            "x": 12,
+            "y": 201.609375
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/desktop-service-import-v2.webp",
+          "text": "Внос\nПо заявка"
+        },
+        {
+          "rect": {
+            "bottom": 363.21875,
+            "height": 161.609375,
+            "left": 187.5,
+            "right": 347,
+            "top": 201.609375,
+            "width": 159.5,
+            "x": 187.5,
+            "y": 201.609375
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/desktop-service-leasing-v2.webp",
+          "text": "Лизинг\nГъвкав план"
+        }
+      ],
+      "scroll": [
+        0,
+        442
+      ],
+      "viewport": [
+        374,
+        884
+      ]
+    },
+    "sellMobile": {
+      "car": {
+        "bottom": 192,
+        "height": 119.328125,
+        "left": 97.5,
+        "right": 276.5,
+        "top": 72.671875,
+        "width": 179,
+        "x": 97.5,
+        "y": 72.671875
+      },
+      "card": {
+        "bottom": 398,
+        "height": 198,
+        "left": 12,
+        "right": 362,
+        "top": 200,
+        "width": 350,
+        "x": 12,
+        "y": 200
+      },
+      "hero": {
+        "bottom": 252,
+        "height": 252,
+        "left": 0,
+        "right": 374,
+        "top": 0,
+        "width": 374,
+        "x": 0,
+        "y": 0
+      },
+      "scroll": [
+        0,
+        0
+      ],
+      "viewport": [
+        374,
+        884
+      ]
+    },
+    "homeHero": {
+      "hero": {
+        "bottom": 244,
+        "height": 244,
+        "left": 0,
+        "right": 359,
+        "top": 0,
+        "width": 359,
+        "x": 0,
+        "y": 0
+      },
+      "scene": {
+        "bottom": 192,
+        "height": 129.859375,
+        "left": 8,
+        "right": 351,
+        "top": 62.140625,
+        "width": 343,
+        "x": 8,
+        "y": 62.140625
+      }
+    },
+    "homeDesktop": {
+      "cards": [
+        {
+          "rect": {
+            "bottom": 794,
+            "height": 234,
+            "left": 32.5,
+            "right": 700.5,
+            "top": 560,
+            "width": 668,
+            "x": 32.5,
+            "y": 560
+          },
+          "title": "Вижте колекциятаАвтомобили"
+        },
+        {
+          "rect": {
+            "bottom": 794,
+            "height": 234,
+            "left": 724.5,
+            "right": 1392.5,
+            "top": 560,
+            "width": 668,
+            "x": 724.5,
+            "y": 560
+          },
+          "title": "Продажба или бартерПродай/Бартер"
+        },
+        {
+          "rect": {
+            "bottom": 2939.46875,
+            "height": 234,
+            "left": 32.5,
+            "right": 700.5,
+            "top": 2705.46875,
+            "width": 668,
+            "x": 32.5,
+            "y": 2705.46875
+          },
+          "title": "Внос по заявкаВнос по заявка"
+        },
+        {
+          "rect": {
+            "bottom": 2939.46875,
+            "height": 234,
+            "left": 724.5,
+            "right": 1392.5,
+            "top": 2705.46875,
+            "width": 668,
+            "x": 724.5,
+            "y": 2705.46875
+          },
+          "title": "Собствен лизингЛизинг"
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ],
+      "viewport": [
+        1440,
+        900
+      ]
+    }
+  },
+  "after": {
+    "aboutDesktop": {
+      "cards": [
+        {
+          "rect": {
+            "bottom": 604.78125,
+            "height": 362,
+            "left": 96.5,
+            "right": 386.5,
+            "top": 242.78125,
+            "width": 290,
+            "x": 96.5,
+            "y": 242.78125
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/desktop-service-inspection-v2.webp",
+          "title": "Оглед в София"
+        },
+        {
+          "rect": {
+            "bottom": 604.78125,
+            "height": 362,
+            "left": 410.5,
+            "right": 700.5,
+            "top": 242.78125,
+            "width": 290,
+            "x": 410.5,
+            "y": 242.78125
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/desktop-service-import-v2.webp",
+          "title": "Внос по заявка"
+        },
+        {
+          "rect": {
+            "bottom": 604.78125,
+            "height": 362,
+            "left": 724.5,
+            "right": 1014.5,
+            "top": 242.78125,
+            "width": 290,
+            "x": 724.5,
+            "y": 242.78125
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/service-leasing-silver-v3.webp",
+          "title": "Собствен лизинг"
+        },
+        {
+          "rect": {
+            "bottom": 604.78125,
+            "height": 362,
+            "left": 1038.5,
+            "right": 1328.5,
+            "top": 242.78125,
+            "width": 290,
+            "x": 1038.5,
+            "y": 242.78125
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/service-valuation-silver-v2.webp",
+          "title": "Оценка за бартер"
+        }
+      ],
+      "scroll": [
+        0,
+        540
+      ],
+      "viewport": [
+        1440,
+        900
+      ]
+    },
+    "homeDesktop": {
+      "cards": [
+        {
+          "rect": {
+            "bottom": 794,
+            "height": 234,
+            "left": 32.5,
+            "right": 700.5,
+            "top": 560,
+            "width": 668,
+            "x": 32.5,
+            "y": 560
+          },
+          "title": "Вижте колекциятаАвтомобили"
+        },
+        {
+          "rect": {
+            "bottom": 794,
+            "height": 234,
+            "left": 724.5,
+            "right": 1392.5,
+            "top": 560,
+            "width": 668,
+            "x": 724.5,
+            "y": 560
+          },
+          "title": "Продажба или бартерПродай/Бартер"
+        },
+        {
+          "rect": {
+            "bottom": 2939.46875,
+            "height": 234,
+            "left": 32.5,
+            "right": 700.5,
+            "top": 2705.46875,
+            "width": 668,
+            "x": 32.5,
+            "y": 2705.46875
+          },
+          "title": "Внос по заявкаВнос по заявка"
+        },
+        {
+          "rect": {
+            "bottom": 2939.46875,
+            "height": 234,
+            "left": 724.5,
+            "right": 1392.5,
+            "top": 2705.46875,
+            "width": 668,
+            "x": 724.5,
+            "y": 2705.46875
+          },
+          "title": "Собствен лизингЛизинг"
+        }
+      ],
+      "scroll": [
+        0,
+        0
+      ],
+      "viewport": [
+        1440,
+        900
+      ]
+    },
+    "homeHero": {
+      "hero": {
+        "bottom": 244,
+        "height": 244,
+        "left": 0,
+        "right": 359,
+        "top": 0,
+        "width": 359,
+        "x": 0,
+        "y": 0
+      },
+      "scene": {
+        "bottom": 192,
+        "height": 129.859375,
+        "left": 8,
+        "right": 351,
+        "top": 62.140625,
+        "width": 343,
+        "x": 8,
+        "y": 62.140625
+      }
+    },
+    "homeMobile": {
+      "cards": [
+        {
+          "rect": {
+            "bottom": 185.609375,
+            "height": 161.609375,
+            "left": 12,
+            "right": 171.5,
+            "top": 24,
+            "width": 159.5,
+            "x": 12,
+            "y": 24
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/home-collection-silver-v1.webp",
+          "text": "Коли\n7 примерни"
+        },
+        {
+          "rect": {
+            "bottom": 185.609375,
+            "height": 161.609375,
+            "left": 187.5,
+            "right": 347,
+            "top": 24,
+            "width": 159.5,
+            "x": 187.5,
+            "y": 24
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/service-valuation-silver-v2.webp",
+          "text": "Продай\nБърза оценка"
+        },
+        {
+          "rect": {
+            "bottom": 363.21875,
+            "height": 161.609375,
+            "left": 12,
+            "right": 171.5,
+            "top": 201.609375,
+            "width": 159.5,
+            "x": 12,
+            "y": 201.609375
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/desktop-service-import-v2.webp",
+          "text": "Внос\nПо заявка"
+        },
+        {
+          "rect": {
+            "bottom": 363.21875,
+            "height": 161.609375,
+            "left": 187.5,
+            "right": 347,
+            "top": 201.609375,
+            "width": 159.5,
+            "x": 187.5,
+            "y": 201.609375
+          },
+          "src": "http://127.0.0.1:6461/assets/images/template/service-leasing-silver-v3.webp",
+          "text": "Лизинг\nГъвкав план"
+        }
+      ],
+      "scroll": [
+        0,
+        442
+      ],
+      "viewport": [
+        374,
+        884
+      ]
+    },
+    "sellMobile": {
+      "car": {
+        "bottom": 192,
+        "height": 119.328125,
+        "left": 97.5,
+        "right": 276.5,
+        "top": 72.671875,
+        "width": 179,
+        "x": 97.5,
+        "y": 72.671875
+      },
+      "card": {
+        "bottom": 398,
+        "height": 198,
+        "left": 12,
+        "right": 362,
+        "top": 200,
+        "width": 350,
+        "x": 12,
+        "y": 200
+      },
+      "hero": {
+        "bottom": 252,
+        "height": 252,
+        "left": 0,
+        "right": 374,
+        "top": 0,
+        "width": 374,
+        "x": 0,
+        "y": 0
+      },
+      "scroll": [
+        0,
+        0
+      ],
+      "viewport": [
+        374,
+        884
+      ]
+    },
+    "console": []
+  }
+}
