@@ -10,6 +10,85 @@ const write = (file, value) => {
 const q = (value) => JSON.stringify(String(value ?? ''));
 const isEnglish = (profile) => profile.business.countryCode !== 'BG';
 
+/** Personalize only the selected Import offer's recorded copy and identity slots. */
+export function personalizeImportOfferCopy(source, profile) {
+  if (!Array.isArray(profile.listings)) throw Error('Import offer requires the normalized listing pack');
+  const name = String(profile.business.shortName || profile.business.name || '').trim();
+  if (!name) throw Error('Import offer requires a recorded dealer name');
+  const listings = profile.listings, dates = [...new Set(listings.map(row => row.observedAt))].sort();
+  const illustrative = profile.stockKind === 'illustrative-not-dealer-stock' || (listings.length > 0 && listings.every(row => row.availability === 'illustrative-not-dealer-stock'));
+  const dated = !illustrative && listings.length > 0 && listings.every(row => row.availability !== 'illustrative-not-dealer-stock' && /^https?:\/\//.test(row.sourceUrl || '') && /^\d{4}-\d{2}-\d{2}$/.test(row.observedAt || '') && Number.isFinite(Date.parse(row.observedAt)) && new Date(row.observedAt).toISOString().slice(0, 10) === row.observedAt);
+  const date = dated ? dates.length === 1 ? dates[0] : `${dates[0]} – ${dates.at(-1)}` : '';
+  const enName = String(profile.business.latinName || name);
+  const copy = (english, dealer) => ({
+    name: dealer, count: String(listings.length),
+    inventoryLabel: english ? dated ? 'listings in a dated snapshot' : illustrative ? 'demonstration listings' : 'listings in this preview' : dated ? 'обяви в датирана извадка' : illustrative ? 'демонстрационни обяви' : 'обяви в прегледа',
+    catalogTitle: english ? dated ? 'Catalogue from dated listings' : illustrative ? 'Demonstration catalogue' : 'Preview catalogue' : dated ? 'Каталог от датирани обяви' : illustrative ? 'Демонстрационен каталог' : 'Каталог за преглед',
+    roadmap: english ? 'Preview catalogue, detail pages, comparison, favourites, services and contact. Confirm current price and availability with the dealership.' : 'Каталог за преглед, детайлни страници, сравнение, любими, услуги и контакт. Потвърдете актуалната цена и наличност с автокъщата.',
+    title: english ? `Website proposal for ${dealer}` : `Предложение за сайт на ${dealer}`,
+    description: english ? `Independent website preview for ${dealer}; ${dated ? `dated listings from ${date}` : illustrative ? 'illustrative listings, not confirmed dealer inventory' : 'current dealer availability is unconfirmed'}.` : `Независим преглед на сайт за ${dealer}; ${dated ? `датирани обяви от ${date}` : illustrative ? 'илюстративни обяви, а не потвърдена наличност на автокъщата' : 'актуалната наличност не е потвърдена'}.`,
+    heroLead: english ? dated ? `Website preview for ${dealer} with ${listings.length} listings from ${date}. Prices and availability require direct confirmation; preview forms do not send enquiries.` : `Website preview for ${dealer} with ${listings.length} ${illustrative ? 'illustrative listings' : 'listings in this preview'}. They do not confirm dealer inventory or availability; preview forms do not send enquiries.` : dated ? `Преглед на сайт за ${dealer} с ${listings.length} обяви от ${date}. Цените и наличността се потвърждават директно; формите в прегледа не изпращат запитвания.` : `Преглед на сайт за ${dealer} с ${listings.length} ${illustrative ? 'илюстративни обяви' : 'обяви в прегледа'}. Те не потвърждават наличност на автокъщата; формите в прегледа не изпращат запитвания.`,
+    heading: english ? `Website preview for ${dealer}` : `Демонстрационен сайт за ${dealer}`,
+    headerLabel: english ? `${dealer} website proposal` : `Предложение за сайт на ${dealer}`,
+    homeLabel: english ? `${dealer} home` : `Начална страница на ${dealer}`,
+    openSite: english ? `Open the ${dealer} preview` : `Отвори прегледа на ${dealer}`,
+    proposal: english ? `Proposal for ${dealer}` : `Предложение за ${dealer}`,
+    stackBranding: english ? `Auxero template fidelity + ${dealer} visual adaptation` : `Auxero template fidelity + ${dealer} визуална адаптация`,
+    stackSummary: `SvelteKit + Auxero + ${dealer} data`,
+    product: english ? `Website proposal for ${dealer}.` : `Предложение за сайт на ${dealer}.`,
+    featuresLead: english ? 'Preview browsing, comparison, favourites and contact flows. Forms and administration are demonstration interfaces.' : 'Преглед на търсене, сравнение, любими и контакт. Формите и админ зоната са демонстрационни интерфейси.',
+    closing: english ? `${dealer} can review this proposal before any official publication.` : `${dealer} може да прегледа предложението преди официално публикуване.`
+  });
+  const eol = source.includes('\r\n') ? '\r\n' : '\n';
+  const encode = value => JSON.stringify(value, null, 2).replaceAll('<', '\\u003c').replaceAll('\u2028', '\\u2028').replaceAll('\u2029', '\\u2029').replaceAll('\n', eol);
+  const block = `// CARS_IMPORT_OFFER_COPY_START${eol}\tconst offerCopy = $derived(page.data.locale === 'en' ? ${encode(copy(true, enName))} : ${encode(copy(false, name))});${eol}\t// CARS_IMPORT_OFFER_COPY_END`;
+  if (source.includes('// CARS_IMPORT_OFFER_COPY_START')) {
+    const boundary = /\/\/ CARS_IMPORT_OFFER_COPY_START[\s\S]*?\/\/ CARS_IMPORT_OFFER_COPY_END/g;
+    if ([...source.matchAll(boundary)].length !== 1 || source.split('// CARS_IMPORT_OFFER_COPY_START').length !== 2 || source.split('// CARS_IMPORT_OFFER_COPY_END').length !== 2) throw Error('Import offer generated copy boundary changed');
+    return source.replace(boundary, () => block);
+  }
+  const replace = (before, after) => {
+    if (typeof before === 'string') {
+      if (source.split(before).length !== 2) throw Error('Import offer copy shape changed: ' + before.slice(0, 60));
+      source = source.replace(before, () => after);
+    } else {
+      const matches = [...source.matchAll(before)];
+      if (matches.length !== 1) throw Error('Import offer copy shape changed');
+      source = source.replace(before, () => after);
+    }
+  };
+  const identity = /<title>Оферта за ([^<]+)<\/title>/g;
+  const titles = [...source.matchAll(identity)];
+  if (titles.length !== 1 || (source.match(/<title>/g) || []).length !== 1) throw Error('Import offer title identity boundary changed');
+  const original = titles[0][1];
+  replace('<script lang="ts">', `<script lang="ts">${eol}\timport { page } from '$app/state';${eol}\t${block}`);
+  replace(/\{ value: '\d+', label: 'реални автомобила в каталога' \}/g, '{ value: offerCopy.count, label: offerCopy.inventoryLabel }');
+  replace("title: 'Каталог с реални автомобили'", 'title: offerCopy.catalogTitle');
+  replace("text: 'Работеща потребителска част, реални обяви, детайлни страници, сравнение, любими, услуги и контакт.'", 'text: offerCopy.roadmap');
+  replace(`value: 'Auxero template fidelity + ${original} визуална адаптация'`, 'value: offerCopy.stackBranding');
+  for (const array of ['stats', 'deliveredFeatures', 'roadmap', 'stack']) {
+    const boundary = new RegExp('const ' + array + ' = (\\[[\\s\\S]*?\\r?\\n\\t\\]);', 'g');
+    const matches = [...source.matchAll(boundary)];
+    if (matches.length !== 1) throw Error('Import offer native array changed: ' + array);
+    source = source.replace(boundary, (_all, values) => `const ${array} = $derived(${values});`);
+  }
+  replace(identity, '<title>{offerCopy.title}</title>');
+  replace(`content="Клиентска оферта за новия ${original} сайт: реален каталог, админ панел, услуги, SEO, технологии и следващи стъпки."`, 'content={offerCopy.description}');
+  replace(`aria-label="${original} offer header"`, 'aria-label={offerCopy.headerLabel}');
+  replace(`aria-label="${original} home"`, 'aria-label={offerCopy.homeLabel}');
+  replace(`alt="${original}"`, 'alt={offerCopy.name}');
+  replace(`aria-label="Отвори ${original} сайта"`, 'aria-label={offerCopy.openSite}');
+  replace(`Предложение за ${original}</p>`, '{offerCopy.proposal}</p>');
+  replace('Новият сайт не е идея. Той вече работи.', '{offerCopy.heading}');
+  replace(/Изградих реална версия на [^\r\n]+ върху Auxero визуалната база: каталог с истински\s+автомобили, страници за услуги, админ зона, сравнение, любими, блог, SEO и ясна пътна\s+карта към production\./g, '{offerCopy.heroLead}');
+  replace(`SvelteKit + Auxero + ${original} data</strong>`, '{offerCopy.stackSummary}</strong>');
+  replace(`Не е generic landing page. Това е ${original} продукт.`, '{offerCopy.product}');
+  replace(/Фокусът е практичен: клиентът намира автомобил, разбира услугата, праща запитване,\s+сравнява, запазва и [^\r\n]+ може да управлява съдържанието\./g, '{offerCopy.featuresLead}');
+  replace(`Ако ${original} иска, това може да стане официалният сайт.`, '{offerCopy.closing}');
+  if (source.split('</script>')[1]?.split('<style>')[0]?.includes(original)) throw Error('Import offer retained a template dealer identity');
+  return source;
+}
+
 export function applyCarwowSafeContent({ candidate, profile, logo }) {
   const b = profile.business;
   const english = isEnglish(profile);
@@ -190,6 +269,11 @@ export function applyImportSafeContent({ candidate, profile }) {
   const b = profile.business;
   const english = isEnglish(profile);
   const editorialFiles = [];
+  const offerFile = path.join(candidate, 'src/routes/offer/+page.svelte');
+  if (fs.existsSync(offerFile)) {
+    fs.writeFileSync(offerFile, personalizeImportOfferCopy(read(offerFile), profile));
+    editorialFiles.push('src/routes/offer/+page.svelte');
+  }
   const videoFile = path.join(candidate, 'src/lib/data/about-videos.ts');
   if (fs.existsSync(videoFile)) {
     write(videoFile, `export type AboutVideo = { id: string; title: string };\n\nexport const youtubeChannelHref = ${q(b.socialLinks?.youtube || '')};\nexport const aboutVideos: AboutVideo[] = [];\n`);

@@ -3,7 +3,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { applyCarwowSafeContent, applyImportSafeContent } from './lib/client-refresh-safe-content.mjs';
+import { applyCarwowSafeContent, applyImportSafeContent, personalizeImportOfferCopy } from './lib/client-refresh-safe-content.mjs';
+import { runInNewContext } from 'node:vm';
 import { readTypeScriptCatalog } from './lib/catalog-literal.mjs';
 import {readRegisteredPersonalization,originalListingIdRecorded} from './lib/client-refresh-normalize.mjs';
 import {tinyArea,writeFixture} from './test-fixtures/fleet-single-worker.mjs';
@@ -109,4 +110,90 @@ test('Import review boundary fails closed when native source or its locale catal
  writeFixture(path.join(candidate,'src/lib/auxero/home-five.ts'),homeFixture);
  writeFixture(path.join(candidate,'src/lib/content/extra-localized.ts'),"export const extraEnglish = {generated:computeTranslation()} as const;\n");
  assert.throws(()=>applyImportSafeContent({candidate,profile:profile('BG')}),/expected literal data/);
+});
+
+const offerFixture = `<script lang="ts">
+ const retainedAction = '/admin/inventory';
+ const stats = [
+	{ value: '42', label: 'реални автомобила в каталога' },
+	{ value: '18+', label: 'готови потребителски страници' }
+	];
+ const deliveredFeatures = [
+	{ title: 'Каталог с реални автомобили', text: 'retained native card' }
+	];
+ const roadmap = [
+	{ text: 'Работеща потребителска част, реални обяви, детайлни страници, сравнение, любими, услуги и контакт.' }
+	];
+ const stack = [
+	{ value: 'Auxero template fidelity + Приселци визуална адаптация' }
+	];
+</script>
+<svelte:head><title>Оферта за Приселци</title><meta content="Клиентска оферта за новия Приселци сайт: реален каталог, админ панел, услуги, SEO, технологии и следващи стъпки." /></svelte:head>
+<header aria-label="Приселци offer header"><a aria-label="Приселци home" href="/same-action"><img alt="Приселци" /></a><a aria-label="Отвори Приселци сайта">Open</a></header>
+<p>Предложение за Приселци</p><h1>Новият сайт не е идея. Той вече работи.</h1>
+<p>Изградих реална версия на Приселци върху Auxero визуалната база: каталог с истински
+автомобили, страници за услуги, админ зона, сравнение, любими, блог, SEO и ясна пътна
+карта към production.</p>
+<strong>SvelteKit + Auxero + Приселци data</strong><h2>Не е generic landing page. Това е Приселци продукт.</h2>
+<p>Фокусът е практичен: клиентът намира автомобил, разбира услугата, праща запитване,
+сравнява, запазва и Приселци може да управлява съдържанието.</p>
+<h2>Ако Приселци иска, това може да стане официалният сайт.</h2>
+<style>.native-card{color:#fff;gap:42px}</style>
+`;
+const offerCopy = (source, locale) => {
+ const body=source.match(/\/\/ CARS_IMPORT_OFFER_COPY_START([\s\S]*?)\/\/ CARS_IMPORT_OFFER_COPY_END/)[1];
+ return runInNewContext(body+';offerCopy',{page:{data:{locale}},$derived:value=>value});
+};
+test('Import offer uses the authenticated dated count and quote-safe identity in both native locales',()=>{
+ const dealer=profile('BG');dealer.business.shortName='Fixture "Auto" </script> $$';dealer.business.latinName='Fixture Auto';
+ dealer.listings=Array.from({length:16},(_,i)=>({id:String(i),sourceUrl:'https://official.example/listing/'+i,observedAt:'2026-09-07'}));
+ for(const input of [offerFixture,offerFixture.replaceAll('\n','\r\n')]){
+  const output=personalizeImportOfferCopy(input,dealer),bg=offerCopy(output,'bg'),en=offerCopy(output,'en');
+  assert.equal(bg.count,'16');assert.equal(en.count,'16');assert.match(bg.inventoryLabel,/датирана извадка/);assert.match(en.inventoryLabel,/dated snapshot/);
+  assert.match(bg.heroLead,/2026-09-07/);assert.match(en.heroLead,/2026-09-07/);assert.match(en.heroLead,/direct confirmation/);
+  assert.match(bg.heroLead,/не изпращат запитвания/);assert.match(en.heroLead,/do not send enquiries/);
+  assert.equal(bg.name,dealer.business.shortName);assert.equal(en.name,'Fixture Auto');
+  assert.doesNotMatch(output,/реални автомобила в каталога|Каталог с реални автомобили|реални обяви|каталог с истински|value: '42'|Приселци/);
+  assert.equal(output.split('</script>').length,2);assert.match(output,/\\u003c\/script>/);
+  assert.equal(output.slice(output.indexOf('<style>')),input.slice(input.indexOf('<style>')));
+  assert.match(output,/href="\/same-action"/);assert.match(output,/text: 'retained native card'/);assert.match(output,/value: '18\+'/);
+  for(const array of ['stats','deliveredFeatures','roadmap','stack'])assert(output.includes('const '+array+' = $derived(['));
+  assert.match(output,/import \{ page \} from '\$app\/state'/);assert.match(output,/page.data.locale === 'en'/);
+  assert.equal(personalizeImportOfferCopy(output,dealer),output);
+ }
+});
+test('Import offer demo or unknown provenance cannot become a dated or current stock claim',()=>{
+ const dealer=profile('AE');dealer.stockKind='illustrative-not-dealer-stock';dealer.listings=[{id:'demo',sourceUrl:'',observedAt:''}];
+ const output=personalizeImportOfferCopy(offerFixture,dealer);
+ for(const locale of ['bg','en']){
+  const copy=offerCopy(output,locale);assert.equal(copy.count,'1');
+  assert.doesNotMatch(copy.heroLead,/2026-|dated listings|датирани обяви/);
+ }
+ assert.match(offerCopy(output,'bg').heroLead,/илюстративни обяви/);assert.match(offerCopy(output,'en').heroLead,/do not confirm dealer inventory or availability/);
+ for(const explicitMode of ['pack','every-row']){
+  dealer.stockKind=explicitMode==='pack'?'illustrative-not-dealer-stock':'';
+  dealer.listings=[{id:'dated-demo',sourceUrl:'https://official.example/original-photo-source',observedAt:'2026-09-07',availability:explicitMode==='every-row'?'illustrative-not-dealer-stock':'unknown'}];
+  const datedDemo=personalizeImportOfferCopy(offerFixture,dealer);
+  for(const locale of ['bg','en']){
+   const copy=offerCopy(datedDemo,locale);assert.equal(copy.count,'1');
+   assert.doesNotMatch(JSON.stringify(copy),/2026-09-07|dated snapshot|датирана извадка/);
+  }
+  assert.equal(offerCopy(datedDemo,'en').catalogTitle,'Demonstration catalogue');
+  assert.match(offerCopy(datedDemo,'bg').description,/илюстративни обяви/);
+ }
+ dealer.stockKind='';dealer.listings=[{id:'source',sourceUrl:'https://official.example/listing',observedAt:'2026-09-07'},{id:'demo',sourceUrl:'https://official.example/photo',observedAt:'2026-09-07',availability:'illustrative-not-dealer-stock'}];
+ const mixed=offerCopy(personalizeImportOfferCopy(offerFixture,dealer),'en');
+ assert.equal(mixed.inventoryLabel,'listings in this preview');assert.equal(mixed.catalogTitle,'Preview catalogue');assert.match(mixed.description,/availability is unconfirmed/);assert.doesNotMatch(mixed.heroLead,/2026-09-07|illustrative|dated/);
+ dealer.stockKind='illustrative-not-dealer-stock';
+ dealer.listings=[];assert.equal(offerCopy(personalizeImportOfferCopy(offerFixture,dealer),'en').count,'0');
+ dealer.stockKind='';dealer.listings=[{id:'unknown',sourceUrl:'https://official.example/listing',observedAt:'2026-02-30'}];
+ const unknown=offerCopy(personalizeImportOfferCopy(offerFixture,dealer),'en');
+ assert.equal(unknown.inventoryLabel,'listings in this preview');assert.doesNotMatch(unknown.heroLead,/illustrative|2026-02-30|dated/);
+ assert.equal(unknown.catalogTitle,'Preview catalogue');
+});
+test('Import offer rejects unknown or duplicated copy shape without inventing profile facts',()=>{
+ const dealer=profile('BG');dealer.listings=[];
+ assert.throws(()=>personalizeImportOfferCopy(offerFixture.replace('реални автомобила в каталога','custom unreviewed count'),dealer),/copy shape changed/);
+ assert.throws(()=>personalizeImportOfferCopy(offerFixture.replace('<title>','<title>Unknown</title><title>'),dealer),/identity boundary changed/);
+ assert.throws(()=>personalizeImportOfferCopy(offerFixture,{business:dealer.business}),/normalized listing pack/);
 });
