@@ -24,6 +24,10 @@ export type Vehicle = {
   category: string;
   body: string;
   make: string;
+  /** Optional manufacturer sub-brand used by compact card identity. */
+  cardBrand?: string;
+  /** Seller-supplied highlight by locale; import/condition claims require record-specific evidence. */
+  cardNote?: Partial<Record<Locale, string>>;
   title: string;
   year: string;
   yearNumber: number;
@@ -458,3 +462,7 @@ export const formatVehiclePrice = (
   amount: number,
   locale: Locale = localeContract.defaultLocale
 ) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
+
+/** Allow a currency line break while preserving the locale's grouped digits. */
+export const formatVehiclePriceLabel = (amount: number, locale: Locale = localeContract.defaultLocale) =>
+  formatVehiclePrice(amount, locale).replace(/([A-Z]{3}|\p{Sc})\s+/u, '$1 ').replace(/\s+([A-Z]{3}|\p{Sc})$/u, ' $1');
