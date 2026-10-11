@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "dealers": [
+    "priselci"
+  ],
+  "targets": [
+    "auto-best",
+    "modern",
+    "import",
+    "app",
+    "mobile",
+    "karento-best",
+    "router"
+  ]
+}
