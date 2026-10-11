@@ -363,6 +363,11 @@
   }
 
   /* All image introductions share the Home title anchor and phone geometry. */
+  .karento-dealership-home .original-home-hero {
+    --karento-mobile-hero-copy-top: calc(
+      var(--karento-space-8) + var(--karento-touch-target)
+    );
+  }
   .block-banner-home3 .swiper-group-1 {
     min-height: var(--karento-mobile-hero-height);
     height: auto !important;
@@ -1058,12 +1063,22 @@
     flex: 0 0 24px;
   }
   .list-feature-car .feature-image img {
+    width: 20px;
+    height: 20px;
     max-width: 24px;
+    object-fit: contain;
+    filter: brightness(0);
   }
   .list-feature-car .feature-info p {
+    font-family: var(--karento-font-sans);
     font-size: var(--karento-type-body-small-size);
     line-height: var(--karento-type-body-small-leading);
     font-weight: var(--karento-type-body-small-weight);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0;
+  }
+  html[lang="bg"] .list-feature-car .feature-info p {
+    font-family: Arial, sans-serif;
   }
   .box-collapse-expand .card {
     margin-bottom: 16px;

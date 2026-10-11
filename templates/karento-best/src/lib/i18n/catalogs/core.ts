@@ -9,8 +9,7 @@ export const coreEn = {
     "These vehicles illustrate the website. They are not verified dealer stock. Contact the dealer for current inventory.",
   "dealer.about.illustrativeBody":
     "This website preview shows how {dealer} could present vehicles and contact information. The vehicle examples are illustrative, not verified dealer inventory.",
-  "dealer.home.illustrativeIntro":
-    "Explore this website preview and contact the dealer for current vehicles.",
+  "dealer.home.illustrativeIntro": "Explore example cars.",
   "dealer.faq.illustrativeAvailability":
     "The examples demonstrate the website. They are not verified dealer stock; ask the dealer for their current vehicles and prices.",
   "vehicle.illustrativePrice": "Illustrative price",
@@ -43,6 +42,7 @@ export const coreEn = {
   "locale.switch": "View this page in {language}",
   "navigation.home": "Home",
   "navigation.vehicles": "Vehicles",
+  "navigation.mobileVehicles": "Cars",
   "navigation.services": "Services",
   "navigation.shop": "Shop",
   "navigation.explore": "Explore",
@@ -155,9 +155,8 @@ export const coreEn = {
   "dealer.vehicle.missingBody":
     "This link does not identify a vehicle in the current preview. Browse the vehicles or contact the dealer.",
   "dealer.stock.count": "{count} listings",
-  "dealer.home.heading": "Find your next car.",
-  "dealer.home.intro":
-    "Browse the listing snapshot and contact the dealer about a car.",
+  "dealer.home.heading": "Find your car.",
+  "dealer.home.intro": "Explore the listings.",
   "dealer.contact.heading": "Contact {dealer}",
   "dealer.contact.body": "Ask about a car or arrange a viewing.",
   "dealer.footer.help": "Ask the dealer",
@@ -246,8 +245,7 @@ export const coreBg = {
     "Тези автомобили показват възможностите на сайта и не са потвърдена наличност на автокъщата. Свържете се с нея за актуални предложения.",
   "dealer.about.illustrativeBody":
     "Този демонстрационен сайт показва как {dealer} може да представя автомобили и контакти. Примерните автомобили не са потвърдена наличност на автокъщата.",
-  "dealer.home.illustrativeIntro":
-    "Разгледайте демонстрационния сайт и попитайте автокъщата за актуалните автомобили.",
+  "dealer.home.illustrativeIntro": "Разгледайте примерни коли.",
   "dealer.faq.illustrativeAvailability":
     "Примерите показват възможностите на сайта. Те не са потвърдена наличност; попитайте автокъщата за актуалните автомобили и цени.",
   "vehicle.illustrativePrice": "Примерна цена",
@@ -280,6 +278,7 @@ export const coreBg = {
   "locale.switch": "Отворете тази страница на {language}",
   "navigation.home": "Начало",
   "navigation.vehicles": "Автомобили",
+  "navigation.mobileVehicles": "Коли",
   "navigation.services": "Услуги",
   "navigation.shop": "Магазин",
   "navigation.explore": "Разгледайте",
@@ -392,9 +391,8 @@ export const coreBg = {
   "dealer.vehicle.missingBody":
     "Този адрес не посочва автомобил в текущия преглед. Разгледайте обявите или се свържете с автокъщата.",
   "dealer.stock.count": "{count} обяви",
-  "dealer.home.heading": "Открийте следващия си автомобил.",
-  "dealer.home.intro":
-    "Разгледайте извадката от обяви и се свържете с автокъщата за избран автомобил.",
+  "dealer.home.heading": "Открийте своята кола.",
+  "dealer.home.intro": "Разгледайте обявите.",
   "dealer.contact.heading": "Свържете се с {dealer}",
   "dealer.contact.body": "Попитайте за автомобил или уговорете оглед.",
   "dealer.footer.help": "Попитайте автокъщата",

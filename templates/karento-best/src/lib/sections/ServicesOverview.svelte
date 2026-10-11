@@ -8,10 +8,12 @@
   import { MediaQuery } from "svelte/reactivity";
   import MobileSectionHeading from "#lib/components/mobile/MobileSectionHeading.svelte";
   import ServiceSpotCard from "#lib/components/ServiceSpotCard.svelte";
+  import MobileHomeServiceCard from "#lib/components/mobile/MobileHomeServiceCard.svelte";
   import { serviceSpots } from "#lib/data/services.ts";
   import { slider } from "#lib/vendor.ts";
   const mobile = new MediaQuery("(max-width: 767.98px)");
   const desktop = new MediaQuery("(min-width: 992px)");
+  let { compactMobile = false }: { compactMobile?: boolean } = $props();
 </script>
 
 <section
@@ -21,11 +23,13 @@
     {#if mobile.current}
       <MobileSectionHeading
         title={locale.t("ui.services-overview.our-services")}
-        description={locale.t(
-          dealer.businessPreview
-            ? "referenceHome.services.previewDescription"
-            : "ui.services-overview.serving-you-with-quality-comfort-and-convenience",
-        )}
+        description={compactMobile
+          ? undefined
+          : locale.t(
+              dealer.businessPreview
+                ? "referenceHome.services.previewDescription"
+                : "ui.services-overview.serving-you-with-quality-comfort-and-convenience",
+            )}
         actionLabel={locale.t("action.viewMore")}
         actionHref="/services"
       />
@@ -76,19 +80,35 @@
         </div>
       </div>
     {/if}
-    <div class="box-list-featured">
-      <div class="box-swiper mt-0">
-        <div
-          class="swiper-container swiper-group-4 swiper-group-journey"
-          {@attach slider}
-        >
-          <div class="swiper-wrapper">
-            {#each serviceSpots as spot (spot.id)}
-              <div class="swiper-slide"><ServiceSpotCard {spot} /></div>
-            {/each}
+    {#if mobile.current && compactMobile}
+      <div class="home-service-grid">
+        {#each serviceSpots as spot (spot.id)}
+          <MobileHomeServiceCard {spot} />
+        {/each}
+      </div>
+    {:else}
+      <div class="box-list-featured">
+        <div class="box-swiper mt-0">
+          <div
+            class="swiper-container swiper-group-4 swiper-group-journey"
+            {@attach slider}
+          >
+            <div class="swiper-wrapper">
+              {#each serviceSpots as spot (spot.id)}
+                <div class="swiper-slide"><ServiceSpotCard {spot} /></div>
+              {/each}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    {/if}
   </div>
 </section>
+
+<style>
+  .home-service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--karento-space-3);
+  }
+</style>

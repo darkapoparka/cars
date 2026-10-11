@@ -1,8 +1,32 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import { test } from "node:test";
+import { coreEn, coreBg } from "../src/lib/i18n/catalogs/core.ts";
 
 const source = (file: string) => fs.readFileSync(file, "utf8");
+
+test("shared dealer hero copy stays concise and labels illustrative cars", () => {
+  for (const [catalog, heading, intro, illustrative] of [
+    [
+      coreEn,
+      "Find your car.",
+      "Explore the listings.",
+      "Explore example cars.",
+    ],
+    [
+      coreBg,
+      "Открийте своята кола.",
+      "Разгледайте обявите.",
+      "Разгледайте примерни коли.",
+    ],
+  ] as const) {
+    assert.equal(catalog["dealer.home.heading"], heading);
+    assert.equal(catalog["dealer.home.intro"], intro);
+    assert.equal(catalog["dealer.home.illustrativeIntro"], illustrative);
+  }
+  assert.match(coreEn["dealer.stock.illustrativeNotice"], /not verified/);
+  assert.match(coreBg["dealer.stock.illustrativeNotice"], /не са потвърдена/);
+});
 
 test("hero logo selection is available in SSR and keeps both contrast assets", () => {
   const header = source("src/lib/components/Header.svelte");
@@ -67,6 +91,35 @@ test("phone specifications keep complete values in compact two-column cells", ()
     specifications,
     /locale\.t\(`unit\.\$\{specification\.unit\}`\)/,
   );
+});
+
+test("phone specification text and icons share one visual treatment", () => {
+  const css = source("static/mobile.css");
+  const text = css.match(
+    /\.list-feature-car \.feature-info p\s*\{([^}]+)\}/,
+  )?.[1];
+  assert.ok(text);
+  for (const [property, token] of [
+    ["font-family", "--karento-font-sans"],
+    ["font-size", "--karento-type-body-small-size"],
+    ["font-weight", "--karento-type-body-small-weight"],
+    ["line-height", "--karento-type-body-small-leading"],
+  ]) {
+    assert.ok(text.includes(`${property}: var(${token})`), property);
+  }
+  assert.match(text, /font-variant-numeric:\s*tabular-nums/);
+  assert.match(text, /letter-spacing:\s*0/);
+  assert.match(
+    css,
+    /html\[lang="bg"\] \.list-feature-car \.feature-info p\s*\{\s*font-family:\s*Arial, sans-serif;/,
+  );
+  const icons = css.match(
+    /\.list-feature-car \.feature-image img\s*\{([^}]+)\}/,
+  )?.[1];
+  assert.ok(icons);
+  assert.match(icons, /width:\s*20px/);
+  assert.match(icons, /height:\s*20px/);
+  assert.match(icons, /filter:\s*brightness\(0\)/);
 });
 
 test("restored discovery does not invent dealer stock counts or editorial claims", () => {

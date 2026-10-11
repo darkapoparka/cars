@@ -21,6 +21,7 @@ export interface CarReview {
 export interface NewsStory {
   readonly id: string;
   readonly title: CatalogText;
+  readonly mobileTitle?: CatalogText;
   readonly image: string;
   readonly imageWidth: number;
   readonly imageHeight: number;
@@ -120,6 +121,7 @@ export const referenceUpcomingNews = [
   {
     id: "escalade",
     title: message("referenceHome.news.escalade"),
+    mobileTitle: message("referenceHome.news.escalade.mobile"),
     image: "/assets/imgs/blog/blog-1/img-1.png",
     imageWidth: 400,
     imageHeight: 249,
@@ -134,6 +136,7 @@ export const referenceUpcomingNews = [
   {
     id: "bmw",
     title: message("referenceHome.news.bmw"),
+    mobileTitle: message("referenceHome.news.bmw.mobile"),
     image: "/assets/imgs/blog/blog-1/img-2.png",
     imageWidth: 400,
     imageHeight: 249,
@@ -148,6 +151,7 @@ export const referenceUpcomingNews = [
   {
     id: "rodeo",
     title: message("referenceHome.news.rodeo"),
+    mobileTitle: message("referenceHome.news.rodeo.mobile"),
     image: "/assets/imgs/blog/blog-1/img-3.png",
     imageWidth: 400,
     imageHeight: 249,

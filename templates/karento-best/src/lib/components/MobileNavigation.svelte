@@ -19,7 +19,7 @@
     },
     {
       href: "/vehicles",
-      label: locale.t("navigation.vehicles"),
+      label: locale.t("navigation.mobileVehicles"),
       icon: "vehicles" as const,
       routes: [
         "cars-list-1",

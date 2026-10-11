@@ -130,7 +130,7 @@
   @media (max-width: 767.98px) {
     .mobile-featured-rail {
       grid-auto-flow: column;
-      grid-auto-columns: calc(100% - 28px);
+      grid-auto-columns: calc(100% - var(--karento-space-3));
       align-items: start;
       min-width: 0;
       max-width: 100%;

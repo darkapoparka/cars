@@ -9,6 +9,7 @@
   import HomeVehicleSearch from "#lib/sections/HomeVehicleSearch.svelte";
   import DesktopDealershipHero from "#lib/sections/DesktopDealershipHero.svelte";
   import PopularVehicleGrid from "#lib/sections/PopularVehicleGrid.svelte";
+  import MobileHomeMakes from "#lib/components/mobile/MobileHomeMakes.svelte";
   import HomeBrandLinks from "#lib/sections/HomeBrandLinks.svelte";
   import VehiclePurchaseSteps from "#lib/sections/VehiclePurchaseSteps.svelte";
   import RentalOfferCardsCompact from "#lib/sections/RentalOfferCardsCompact.svelte";
@@ -35,15 +36,15 @@
     <HomeVehicleSearch />
   </div>
   {#if phone.current}
+    <MobileHomeMakes />
     <PopularVehicleGrid />
-    <HomeBrandLinks compactMobile />
-    <VehicleTypeShowcase mobileLayout="grid" />
+    <ServicesOverview compactMobile />
+    <VehiclePurchaseSteps />
+    <FeaturedVehicleGrid compactMobile />
+    <VehicleTypeShowcase mobileLayout="rail" />
     {#if !dealer.businessPreview || dealer.finance}
       <LoanCalculatorPanel mobileFeatured />
     {/if}
-    <FeaturedVehicleGrid compactMobile />
-    <VehiclePurchaseSteps />
-    <ServicesOverview />
     <UpcomingVehicleNews />
     {#if !dealer.businessPreview}
       <CustomerReviewGrid />
@@ -76,6 +77,33 @@
 >
 
 <style>
+  @media (max-width: 767.98px) {
+    .original-home-hero {
+      --karento-mobile-hero-height: 240px;
+      --karento-mobile-hero-copy-top: 88px;
+      --karento-mobile-hero-copy-bottom: 48px;
+      --karento-mobile-hero-shade: linear-gradient(
+        180deg,
+        rgb(0 0 0 / 52%),
+        rgb(0 0 0 / 24%) 40%,
+        rgb(0 0 0 / 68%)
+      );
+    }
+    .original-home-hero :global(.item-banner-slide) {
+      min-height: var(--karento-mobile-hero-height) !important;
+      background-position: 80% center;
+    }
+    .original-home-hero :global(.item-banner-slide .container) {
+      text-align: center !important;
+    }
+    .original-home-hero :global(h1) {
+      max-width: none;
+      margin-inline: auto !important;
+    }
+    .original-home-hero :global(h6) {
+      margin-inline: auto;
+    }
+  }
   @media (min-width: 992px) {
     .original-home-hero {
       display: none;
