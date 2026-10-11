@@ -36,6 +36,74 @@ test('dealer logos must be committed PNG or WebP assets', () => {
   assert.equal(refreshAdapterInternals.isRasterLogo(''), false);
 });
 
+test('unknown showroom coordinates stay unknown and map destinations use recorded facts', () => {
+  const business = { name: 'Автокъща Приселци', address: 'бул. „Цар Освободител“ 285', city: 'Варна' };
+  for (const coordinates of [null, { latitude: 0, longitude: 0 }, { latitude: 91, longitude: 23 }, { latitude: 43, longitude: NaN }]) {
+    assert.equal(refreshAdapterInternals.dealerCoordinates({ ...business, coordinates }), null);
+    assert.equal(refreshAdapterInternals.dealerMapDestination({ ...business, coordinates }), business.address + ', ' + business.city);
+  }
+  assert.equal(refreshAdapterInternals.dealerMapDestination({ ...business, coordinates: { latitude: 51.5, longitude: 0 } }), '51.5,0');
+  assert.equal(refreshAdapterInternals.dealerMapDestination({ name: 'Recorded dealer' }), 'Recorded dealer');
+  assert.throws(() => refreshAdapterInternals.dealerMapDestination({}), /recorded/);
+  const profile = { business: { ...business, locale: 'bg-BG', services: [] } };
+  assert.match(refreshAdapterInternals.autoBestBrand(profile, '/dealer/logo.png'), /showroomCoordinates: null/);
+  assert.match(refreshAdapterInternals.autoBestCompany(profile), /export const showroomCoordinates = null;/);
+});
+
+test('current phone and desktop showroom maps use dealer destination without changing composition', t => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'cars-map-'));
+  t.after(() => {
+    const real = fs.realpathSync(root), parent = fs.realpathSync(os.tmpdir());
+    assert(path.dirname(real) === parent && path.basename(real).startsWith('cars-map-'));
+    fs.rmSync(real, { recursive: true, force: true });
+  });
+  const binding = '  const coordinates = `${brand.showroomCoordinates.latitude},${brand.showroomCoordinates.longitude}`;';
+  const source = '<script>\n' + binding + '\n  const mapUrl = $derived(`https://maps.google.com/maps?q=${encodeURIComponent(coordinates)}&hl=${i18n.locale}&output=embed`);\n</script>\n<iframe src={mapUrl}></iframe>\n<style>.map { background: red; }</style>\n';
+  const paths = ['ShowroomMap.svelte', 'DesktopShowroom.svelte'].map(name => 'src/lib/components/company/' + name);
+  const business = { name: 'Recorded dealer', address: 'Showroom 285', city: 'Varna', mapsEmbedUrl: 'https://maps.google.com/maps?q=Showroom%20285' };
+  for (const relative of paths) write(root, relative, source);
+  const files = refreshAdapterInternals.patchAutoBestMap(root, { business });
+  assert.equal(files.length, 2);
+  for (const relative of paths) assert.equal(fs.readFileSync(path.join(root, relative), 'utf8'), source.replace(binding, '  const coordinates = "Showroom 285, Varna";'));
+  const drift = source.replace(binding, binding + '\n' + binding);
+  write(root, paths[0], drift);
+  assert.throws(() => refreshAdapterInternals.patchAutoBestMap(root, { business }), /map binding changed/);
+  assert.equal(fs.readFileSync(path.join(root, paths[0]), 'utf8'), drift);
+});
+
+test('Modern preserves all supplied facts once instead of repeating or truncating native slots', t => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'cars-modern-count-'));
+  t.after(() => {
+    const real = fs.realpathSync(root), parent = fs.realpathSync(os.tmpdir());
+    assert(path.dirname(real) === parent && path.basename(real).startsWith('cars-modern-count-'));
+    fs.rmSync(real, { recursive: true, force: true });
+  });
+  const file = path.join(root, 'mock-data.ts');
+  const source = 'export const mockListings: VehicleListing[] = [\n' + Array.from({ length: 14 }, (_, index) => '  {\n    id: "am-' + (1001 + index) + '"\n  }').join(',\n') + '\n];\nconst retained = "native behavior";\n';
+  const business = { slug: 'recorded-dealer', name: 'Recorded dealer', countryCode: 'BG', currency: 'EUR', city: 'Varna', region: 'Varna', country: 'Bulgaria' };
+  const listings = Array.from({ length: 16 }, (_, index) => ({ id: 'source-' + index, slug: 'source-' + index, title: 'Car ' + index, priceAmount: 4100 + index, currency: 'EUR', images: ['/photo-' + index + '.webp'], features: [], mileageKm: 100000 + index, year: 2000 + index, make: 'Make', model: 'Model', bodyType: 'sedan', fuelType: 'diesel', transmissionType: 'manual', observedAt: '2026-09-07' }));
+  const rows = () => {
+    const value = fs.readFileSync(file, 'utf8');
+    assert(value.endsWith(';\nconst retained = "native behavior";\n'));
+    return JSON.parse(value.slice(value.indexOf('=') + 1, value.lastIndexOf(';\nconst retained')));
+  };
+  fs.writeFileSync(file, source);
+  refreshAdapterInternals.replaceModernListings(file, { slug: business.slug, business, listings });
+  const expanded = rows();
+  assert.equal(expanded.length, 16);
+  assert.deepEqual(expanded.map(row => row.slug), listings.map(row => row.slug));
+  assert.deepEqual(expanded.map(row => row.price.amount), listings.map(row => row.priceAmount));
+  assert(expanded.every(row => row.publishedAt.startsWith('2026-09-07')));
+  assert.deepEqual(expanded.slice(0, 14).map(row => row.id), Array.from({ length: 14 }, (_, index) => 'am-' + (1001 + index)));
+  assert.equal(new Set(expanded.map(row => row.id)).size, 16);
+  fs.writeFileSync(file, source);
+  refreshAdapterInternals.replaceModernListings(file, { slug: business.slug, business, listings });
+  assert.deepEqual(rows(), expanded, 'Additional source IDs must be deterministic');
+  fs.writeFileSync(file, source);
+  refreshAdapterInternals.replaceModernListings(file, { slug: business.slug, business, listings: listings.slice(0, 6) });
+  assert.deepEqual(rows().map(row => row.slug), listings.slice(0, 6).map(row => row.slug), 'A smaller source must not fill native slots with repeated cars');
+});
+
 test('dealer refresh rejects CSS and hero composition changes', () => {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'cars-presentation-'));
   const template = path.join(root, 'template');

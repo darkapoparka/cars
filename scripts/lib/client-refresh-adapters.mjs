@@ -4,6 +4,7 @@ import { UK_MODERN_CITY_PATHS, UK_IMPORT_PHONE_INPUT_PATHS, repairModernUkCityKe
 import { UK_MODERN_PATHS, personalizeModernUk, modernUkTransmission, ukSourceMileage } from './client-refresh-uk-next.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import { applyDealerLogoContract } from './client-logo-contract.mjs';
 import { dealerLocalizedCopy } from './dealer-localized-copy.mjs';
 import { applyCarwowSafeContent, applyImportSafeContent } from './client-refresh-safe-content.mjs';
@@ -335,18 +336,32 @@ function autoBestEquipment(features) {
   return result;
 }
 
+function dealerCoordinates(business) {
+  const coordinates = business.coordinates;
+  return coordinates && Number.isFinite(coordinates.latitude) && Number.isFinite(coordinates.longitude) &&
+    Math.abs(coordinates.latitude) <= 90 && Math.abs(coordinates.longitude) <= 180 &&
+    (coordinates.latitude !== 0 || coordinates.longitude !== 0)
+    ? { latitude: coordinates.latitude, longitude: coordinates.longitude } : null;
+}
+
+function dealerMapDestination(business) {
+  const coordinates = dealerCoordinates(business);
+  if (coordinates) return `${coordinates.latitude},${coordinates.longitude}`;
+  const address = [business.address || business.addressLine, business.city].filter(Boolean).join(', ');
+  if (address) return address;
+  if (business.name) return business.name;
+  throw new Error('Auto Best map requires recorded coordinates, address, city or dealer name');
+}
+
 function autoBestBrand(profile, logo, logoDark) {
   const b = profile.business;
   const social = b.socialLinks || {};
-  const showroomCoordinates = b.coordinates &&
-    Number.isFinite(b.coordinates.latitude) && Number.isFinite(b.coordinates.longitude)
-    ? b.coordinates
-    : { latitude: 0, longitude: 0 };
+  const showroomCoordinates = dealerCoordinates(b);
   return `export type BrandConfig = {
   name: string;
   shortName: string;
   city: string;
-  showroomCoordinates: { latitude: number; longitude: number };
+  showroomCoordinates: { latitude: number; longitude: number } | null;
   addressLine: string;
   address: string;
   phone: string;
@@ -504,9 +519,7 @@ function autoBestCompany(profile) {
     topic('leasing', english ? 'Financing' : 'Лизинг', 'Finance demo'),
     topic('trade-in', english ? 'Trade-in' : 'Бартер', 'Trade-in enquiry demo')
   ];
-  const coordinates = b.coordinates && Number.isFinite(b.coordinates.latitude) &&
-    Number.isFinite(b.coordinates.longitude)
-    ? b.coordinates : { latitude: 0, longitude: 0 };
+  const coordinates = dealerCoordinates(b);
   return `import { brand } from '$config/brand';
 
 export type CompanyServiceIcon = 'inspection' | 'import' | 'leasing' | 'trade-in';
@@ -530,7 +543,7 @@ export const companyServices: CompanyService[] = ${JSON.stringify(services, null
 export const contactTopics: ContactTopic[] = ${JSON.stringify(topics, null, 2)};
 export const resolveContactTopic = (value: string | null) =>
   contactTopics.find((topic) => topic.id === value) ?? contactTopics[0];
-export const showroomCoordinates = ${JSON.stringify(coordinates)} as const;
+export const showroomCoordinates = ${JSON.stringify(coordinates)}${coordinates ? ' as const' : ''};
 export const dealerAddress = brand.address;
 `;
 }
@@ -538,6 +551,13 @@ export const dealerAddress = brand.address;
 function patchAutoBestMap(candidate, profile) {
   const file = path.join(candidate, 'src/lib/components/company/ShowroomMap.svelte');
   let text = read(file);
+  const coordinateBinding = '  const coordinates = `${brand.showroomCoordinates.latitude},${brand.showroomCoordinates.longitude}`;';
+  const bindCurrentMap = (source, relative) => {
+    if (!source.includes('brand.showroomCoordinates')) return source;
+    if (source.split(coordinateBinding).length !== 2) throw new Error(`Auto Best map binding changed: ${relative}`);
+    return source.replace(coordinateBinding, `  const coordinates = ${q(dealerMapDestination(profile.business))};`);
+  };
+  text = bindCurrentMap(text, 'ShowroomMap.svelte');
   text = text.replace("  import { showroomCoordinates } from '$data/company';\n\n  const mapEmbedUrl = `https://maps.google.com/maps?q=${showroomCoordinates.latitude},${showroomCoordinates.longitude}&z=17&hl=bg&output=embed`;",
     `  const mapEmbedUrl = ${q(profile.business.mapsEmbedUrl)};`);
   text = text.replace('title={`Карта до ${brand.name}`}',
@@ -545,6 +565,16 @@ function patchAutoBestMap(candidate, profile) {
   text = text.replace('>Отворете в Google Maps</a>',
     `>${textFor(profile, 'Отворете в Google Maps', 'Open in Google Maps')}</a>`);
   write(file, text);
+  const files = ['src/lib/components/company/ShowroomMap.svelte (address adapter)'];
+  const desktop = path.join(candidate, 'src/lib/components/company/DesktopShowroom.svelte');
+  if (exists(desktop)) {
+    const before = read(desktop), after = bindCurrentMap(before, 'DesktopShowroom.svelte');
+    if (before !== after) {
+      write(desktop, after);
+      files.push('src/lib/components/company/DesktopShowroom.svelte (address adapter)');
+    }
+  }
+  return files;
 }
 
 function patchAutoBestHero(candidate) {
@@ -602,7 +632,7 @@ function patchAutoBest({ oldVariant, candidate, profile }) {
   write(path.join(candidate, 'src/lib/data/inventory.ts'), autoBestInventory(profile));
   write(path.join(candidate, 'src/lib/data/company.ts'), autoBestCompany(profile));
   write(path.join(candidate, 'src/lib/data/dealer-profile.json'), `${JSON.stringify(profile, null, 2)}\n`);
-  patchAutoBestMap(candidate, profile);
+  const mapFiles = patchAutoBestMap(candidate, profile);
   const localeFiles = patchAutoBestLocale(candidate, profile);
   const identityFile = patchAutoBestIdentity(candidate);
   const mileageFiles = patchSvelteMileage(candidate, 'auto-best', profile);
@@ -612,7 +642,7 @@ function patchAutoBest({ oldVariant, candidate, profile }) {
     'src/lib/data/inventory.ts',
     'src/lib/data/company.ts',
     'src/lib/data/dealer-profile.json',
-    'src/lib/components/company/ShowroomMap.svelte (address adapter)',
+    ...mapFiles,
     identityFile,
     ...mileageFiles
   ];
@@ -745,8 +775,16 @@ function replaceModernListings(file, profile) {
     )
   ].map((match) => match[2]));
   if (!ids.length) throw new Error('No stable modern listing IDs found in ' + file);
-  const listings = ids.map((id, index) =>
-    modernListing(profile.listings[index % profile.listings.length], index, id, profile));
+  if (!Array.isArray(profile.listings) || !profile.listings.length) throw new Error('Modern requires sourced or disclosed demo listings');
+  const claimedIds = new Set();
+  const listings = profile.listings.map((item, index) => {
+    const id = ids[index] || 'dealer-' + createHash('sha256')
+      .update(`${profile.slug || profile.business.slug}\0${item.id || item.slug || index + 1}`)
+      .digest('hex').slice(0, 24);
+    if (claimedIds.has(id)) throw new Error('Modern generated listing ID collision');
+    claimedIds.add(id);
+    return modernListing(item, index, id, profile);
+  });
   const newline = text.includes('\r\n') ? '\r\n' : '\n';
   const serialized = JSON.stringify(listings, null, 2).replaceAll('\n', newline);
   const replacement = 'export const mockListings: VehicleListing[] = ' + serialized;
@@ -1486,6 +1524,11 @@ export function applyRefreshAdapter(options) {
 }
 
 export const refreshAdapterInternals = {
+  dealerCoordinates,
+  dealerMapDestination,
+  autoBestBrand,
+  autoBestCompany,
+  patchAutoBestMap,
   autoBestBody,
   autoBestEquipment,
   autoBestInventory,

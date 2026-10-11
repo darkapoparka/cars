@@ -328,6 +328,25 @@ function normalizeListing(item, index, business) {
  * preserves their original source references and unknown values. */
 export function originalListingIdRecorded(bytes,id){const value=id.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');return new RegExp(`(?:["']?(?:id|sourceId|stockId|listingId|advertId)["']?\\s*:\\s*)(?:["']${value}["']|${value}(?=[,\\s}]))`).test(bytes.toString('utf8'));}
 
+/** The explicit registered fallback never describes template examples as dealer stock. */
+export function assertRegisteredDemoDisclosures(input) {
+  const s=input.stock,b=input.facts?.business??input.facts,fail=m=>{throw Error('Registered template demo: '+m);};
+  if(s?.mode!=='template-demo'||s.kind!=='illustrative-not-dealer-stock'||s.previewOnly!==true||s.actualDealerAvailability!==false||typeof s.disclosure!=='string'||!s.disclosure.trim()||b?.inventoryNotice!==s.disclosure||!b.previewNotice?.trim())fail('explicit preview and stock disclosures required');
+  if(!s.templateDemo?.source||!s.templateDemo.catalog||!s.templateDemo.bindings||!Array.isArray(s.listings)||!s.listings.length||s.listings.length>50)fail('bounded immutable catalog proof required');
+  const ids=new Set();for(const row of s.listings){const p=row.sourceRecord;if(typeof row.id!=='string'||!/^template-demo-auto-best-[0-9]+$/.test(row.id)||ids.has(row.id)||row.id!=='template-demo-auto-best-'+p?.sourceId||p?.catalogPath!==s.templateDemo.catalog.path||p?.catalogSha256!==s.templateDemo.catalog.sha256||row.sourceUrl!==''||row.verification!=='sample'||row.availability!=='illustrative-not-dealer-stock'||row.evidenceUrl||row.href||row.source||row.observedAt||!Array.isArray(row.images)||!row.images.length)fail('example identity, provenance or availability differs');ids.add(row.id);}
+  if(!input.facts?.retainedSourceInventory||input.facts.retainedSourceInventory.renderAsDealerStock!==false||!Array.isArray(input.facts.retainedSourceInventory.records))fail('original factual records must remain separately retained');
+}
+
+export function normalizeRegisteredListings(input,business) {
+  const demo=input.stock?.mode==='template-demo';if(demo)assertRegisteredDemoDisclosures(input);
+  return input.stock.listings.map((row,index)=>{const listing=normalizeListing(row,index,business);return demo?{...listing,sourceUrl:'',sourceId:row.id,observedAt:'',availability:'illustrative-not-dealer-stock',description:business.inventoryNotice}:listing;});
+}
+
+export function normalizeRegisteredBusiness(client,slug,input){
+  const business=normalizeBusiness(client,slug,input.facts);
+  return input.stock?.mode==='template-demo'?{...business,inventoryUrl:'',observedAt:''}:business;
+}
+
 export function readRegisteredPersonalization(client, slug) {
   const manifestFile=path.join(client,'dealer.json');
   if (!exists(manifestFile)) return null;
@@ -349,7 +368,8 @@ export function readRegisteredPersonalization(client, slug) {
   for(const p of input.sourceEvidence){if(!sameKeys(p,['path','sha256'])||typeof p.path!=='string'||!/^[a-zA-Z0-9._/-]+$/.test(p.path)||p.path.startsWith('/')||p.path.split('/').some(s=>!s||s==='.'||s==='..')||p.path.startsWith('auto-best/')||p.path.startsWith('modern/')||!/^[a-f0-9]{64}$/.test(p.sha256??''))fail('unsafe or mutable original proof');const file=inside(client,p.path,{mustExist:true});if(!fs.lstatSync(file).isFile()||sha256(fs.readFileSync(file))!==p.sha256)fail('original factual proof bytes changed');}
   const business=input.facts?.business??input.facts;
   if(!business?.name||business.countryCode!==input.locale.dealerCountry||business.currency!==input.locale.inventoryCurrency||!Array.isArray(input.stock?.listings)||!input.stock.listings.length||input.stock.listings.length>400)fail('explicit normalized business and stock required');
-  const ids=new Set();for(const item of input.stock.listings){const p=item.sourceRecord;if(typeof item.id!=='string'||!item.id||ids.has(item.id)||p?.id!==item.id||!input.sourceEvidence.some(e=>e.path===p.path&&e.sha256===p.sha256))fail('original listing identity/reference differs');ids.add(item.id);const bytes=fs.readFileSync(inside(client,p.path,{mustExist:true}));if(!originalListingIdRecorded(bytes,item.id)||typeof item.sourceUrl!=='string'||!item.sourceUrl||!bytes.toString('utf8').includes(item.sourceUrl))fail('listing ID/source URL absent from original factual proof');}
+  if(input.stock.mode==='template-demo')assertRegisteredDemoDisclosures(input);
+  else {if(input.stock.mode!==undefined&&input.stock.mode!=='retained-dealer-source')fail('unsupported registered stock mode');const ids=new Set();for(const item of input.stock.listings){const p=item.sourceRecord;if(typeof item.id!=='string'||!item.id||ids.has(item.id)||p?.id!==item.id||!input.sourceEvidence.some(e=>e.path===p.path&&e.sha256===p.sha256))fail('original listing identity/reference differs');ids.add(item.id);const bytes=fs.readFileSync(inside(client,p.path,{mustExist:true}));if(!originalListingIdRecorded(bytes,item.id)||typeof item.sourceUrl!=='string'||!item.sourceUrl||!bytes.toString('utf8').includes(item.sourceUrl))fail('listing ID/source URL absent from original factual proof');}}
   return input;
 }
 
@@ -357,11 +377,11 @@ export function loadDealerProfile(client, slug) {
   const derived=readRegisteredPersonalization(client,slug);
   const factsFile = path.join(client, 'business-facts.json');
   const rawFacts = derived?.facts ?? (exists(factsFile) ? readJson(factsFile) : {});
-  const business = normalizeBusiness(client, slug, rawFacts);
+  const business = derived?normalizeRegisteredBusiness(client,slug,derived):normalizeBusiness(client, slug, rawFacts);
   const logoContract = loadLogoContract(client);
   if (logoContract) { business.logo = logoContract.assets.onLight.publicPath; business.logoLight = logoContract.assets.onLight.publicPath; business.logoDark = logoContract.assets.onDark.publicPath; }
   const inventory = derived ? {listings:derived.stock.listings,kind:derived.stock.kind} : loadInventory(client, rawFacts, slug), rawListings = inventory.listings;
-  const listings = rawListings.map((item, index) => normalizeListing(item, index, business))
+  const listings = (derived?normalizeRegisteredListings(derived,business):rawListings.map((item, index) => normalizeListing(item, index, business)))
     .filter((item) => item.title && item.image);
   if (!business.name) throw new Error(`Dealer ${slug} has no reusable business name.`);
   if (!listings.length) throw new Error(`Dealer ${slug} has no reusable inventory with imagery.`);

@@ -4,12 +4,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {tinyArea,writeFixture} from './test-fixtures/fleet-single-worker.mjs';
 import {sha256} from './lib/workflow.mjs';
-import {planRegisteredClientAdoption,assertRegisteredAdoptionPlan,registeredAdoptionTarget,readRegisteredDealerAdoption,validateRegisteredSourceRequest,REGISTERED_TRIO,REGISTERED_INPUT_ROOT,REGISTERED_ADOPTION_FILE,REGISTERED_PROFILE_FILE,originalListingIdRecorded} from './registered-dealer-adoption.mjs';
+import {planRegisteredClientAdoption,assertRegisteredAdoptionPlan,registeredAdoptionTarget,readRegisteredDealerAdoption,validateRegisteredSourceRequest,REGISTERED_TRIO,REGISTERED_INPUT_ROOT,REGISTERED_ADOPTION_FILE,REGISTERED_PROFILE_FILE,originalListingIdRecorded,materializeRegisteredAssetView,assertRegisteredAssetView,assertRegisteredCandidateDirectory} from './registered-dealer-adoption.mjs';
 import {gitObjectId,gitTreeId,assertPreparedMountOwnership,createSourcePatch,verifySourcePatch,sourceMatrix} from './prepare-existing-fleet-source.mjs';
 import {planDealerUpgrade} from './dealer-updates/three-way-upgrade.mjs';
 import {targetManifestForUpgrade,assertUpgradeSourceAdmission,adaptPinnedBases} from './dealer-updates/update-dealer-template.mjs';
 import {loadDealerProfile} from './lib/client-refresh-normalize.mjs';
 import {nativeFixture} from './test-fixtures/native-source.mjs';
+import {refreshAdapterInternals} from './lib/client-refresh-adapters.mjs';
+import {prepareAppDealer} from './lib/app-dealer-adapter.mjs';
 
 const enc=v=>Buffer.from(JSON.stringify(v,null,2)+'\n');
 const families=['auto-best','modern','import','app','mobile','karento-best'];
@@ -47,6 +49,62 @@ test('registered adoption is read-only and retains identity/research/stock unkno
  const f=fixture(t),before=JSON.stringify(f.registry),p=f.plan();assert.equal(p.write,false);assert.equal(p.published,false);assert.equal(fs.existsSync(path.join(f.dealerRoot,'dealer.json')),false);assert.equal(p.profile.listings[0].id,'original-stock-123');assert.equal(p.profile.listings[0].priceAmount,null);assert.equal(p.profile.rawFacts.business.unknownFact,null);assert.equal(JSON.stringify(f.registry),before);assert.equal(assertRegisteredAdoptionPlan(p,{dealerRoot:f.dealerRoot}),p);
  const r=await readRegisteredDealerAdoption({root:f.root,pin:f.pin,dealer:f.dealer,baseline:f.baseline,registry:f.registry,readGit:f.readGit});assert.equal(r.receiptSha256,f.pin.sha256);for(const [name,bytes]of f.baseline.files)assert(fs.readFileSync(path.join(f.dealerRoot,name)).equals(bytes));
 });
+function demoFixture(t){
+ const f=fixture(t),revision='d'.repeat(40),tree='e'.repeat(40),source={repository:'darkapoparka/cars',revision,path:'templates/auto-best',tree,digest:'f'.repeat(64)},gitFiles=new Map();
+ const catalog=Buffer.from("const inventoryRecords: Example[] = [{ id: 1, make: 'Audi', title: 'Audi example', image: leadSite.artwork.inventoryDemo.stock01, yearNumber: 2020, mileageKm: 12000, fuel: 'Petrol', transmission: 'Automatic', equipment: [], condition: 'used', priceEur: 12000 }];\n"),bindings=Buffer.from("export const leadSite = {stock01: '/demo/car.webp'};\n"),photo=Buffer.from([82,73,70,70,3,255]);
+ gitFiles.set(revision+':templates/auto-best/src/lib/data/inventory.ts',catalog);gitFiles.set(revision+':templates/auto-best/src/lib/config/lead-site.ts',bindings);gitFiles.set(revision+':templates/auto-best/static/demo/car.webp',photo);
+ const filePin=(name,bytes)=>({path:name,bytes:bytes.length,sha256:sha256(bytes),gitBlob:gitObjectId('blob',bytes)}),proof={source,catalog:filePin('src/lib/data/inventory.ts',catalog),bindings:filePin('src/lib/config/lead-site.ts',bindings)};
+ writeFixture(path.join(f.root,'templates.lock.json'),enc({templates:{'auto-best':{status:'approved',source}}}));
+ const p=f.personalization;p.stock={kind:'illustrative-not-dealer-stock',mode:'template-demo',previewOnly:true,actualDealerAvailability:false,disclosure:'Demo examples; none are this dealer’s actual stock.',templateDemo:proof,listings:[{id:'template-demo-auto-best-1',make:'Audi',title:'Audi example',image:'/demo/car.webp',yearNumber:2020,mileageKm:12000,fuel:'Petrol',transmission:'Automatic',equipment:[],condition:'used',priceEur:12000,sourceUrl:'',year:2020,currency:'EUR',priceAmount:12000,images:['/demo/car.webp'],availability:'illustrative-not-dealer-stock',verification:'sample',sourceRecord:{sourceId:'1',catalogPath:proof.catalog.path,catalogSha256:proof.catalog.sha256}}]};
+ p.facts.business.inventoryNotice=p.stock.disclosure;p.facts.retainedSourceInventory={records:[{id:'original-stock-123',sourceUrl:'https://example.com/advert/123'}],renderAsDealerStock:false};
+ p.media=p.media.slice(0,1);p.media.push({publicPath:'/demo/car.webp',sourceKind:'immutable-template-demo',templatePath:'static/demo/car.webp',sha256:sha256(photo),gitBlob:gitObjectId('blob',photo),bytes:photo.length});
+ const readGit=(root,args,options)=>{if(args[0]==='merge-base')return '';if(args[0]==='rev-parse'&&args[1]===revision+':templates/auto-best')return tree;
+  const key=args[0]==='show'?args[1]:args[0]==='ls-tree'?args[1]+':'+args[3]:null,bytes=gitFiles.get(key);if(bytes)return args[0]==='show'?bytes:'100644 blob '+gitObjectId('blob',bytes)+'\t'+args[3];return f.readGit(root,args,options);};
+ const plan=()=>{f.receipt.personalization.sha256=sha256(enc(p));return planRegisteredClientAdoption({...f.options(),readGit});};
+ return {...f,readGit,gitFiles,plan};
+}
+
+function addPublishedBranding(f){
+ const prefix='docs/releases/cloudflare-existing25-20261011/branding-inputs52/'+f.dealer,commit=f.baseline.commit,bytes=Buffer.from([137,80,78,71,4,255]);
+ const document={schemaVersion:1,dealer:f.dealer,reviewed:true,reviewedAt:'2026-10-11',dealerApproval:false,nativeApproval:false,hostedApproval:false,surfaces:Object.fromEntries(['onLight','onDark','onAccent'].map(surface=>[surface,{path:prefix+'/branding/'+surface+'.png',sha256:sha256(bytes)}]))};
+ f.gitFiles.set(commit+':'+prefix+'/branding.json',enc(document));for(const pin of Object.values(document.surfaces))f.gitFiles.set(commit+':'+pin.path,bytes);
+ f.personalization.publishedBranding={path:prefix+'/branding.json',sha256:sha256(enc(document)),sourceCommit:commit};f.personalization.media=f.personalization.media.filter(p=>p.publicPath!=='/dealer/logo.png');
+ for(const surface of ['onLight','onDark'])f.personalization.media.push({publicPath:'/registered-branding/'+surface+'.png',sourceKind:'published-branding-input',inputPath:document.surfaces[surface].path,sha256:sha256(bytes),surface});
+ f.personalization.facts.business.logo='/registered-branding/onLight.png';f.personalization.facts.business.logoDark='/registered-branding/onDark.png';return document;
+}
+
+test('explicit template demo is catalog-derived, disclosed, and keeps dealer evidence and source URLs separate',t=>{
+ const f=demoFixture(t);addPublishedBranding(f);const p=f.plan();assert.equal(p.profile.stockKind,'illustrative-not-dealer-stock');assert.equal(p.profile.listings[0].sourceUrl,'');assert.equal(p.profile.listings[0].observedAt,'');assert.equal(p.profile.listings[0].availability,'illustrative-not-dealer-stock');assert.equal(p.profile.rawFacts.retainedSourceInventory.records[0].id,'original-stock-123');
+ const target=registeredAdoptionTarget(p,f.pins);for(const [name,bytes]of p.files)writeFixture(path.join(f.dealerRoot,name),bytes);writeFixture(path.join(f.dealerRoot,'dealer.json'),enc(target));const profile=loadDealerProfile(f.dealerRoot,f.dealer);assert.equal(profile.listings[0].sourceUrl,'');assert.equal(profile.listings[0].priceAmount,12000);assert.equal(profile.stockKind,'illustrative-not-dealer-stock');assert(fs.readFileSync(path.join(f.dealerRoot,'carwow/original-stock.json')).equals(f.baseline.files.get('carwow/original-stock.json')));
+});
+
+test('maintained Auto Best, Modern and App consumers keep the registered demo disclosure and empty advert source',async t=>{
+ const f=demoFixture(t);addPublishedBranding(f);const p=f.plan(),run=path.join(f.root,'runtime','consumer-run');fs.mkdirSync(run,{recursive:true});const view=materializeRegisteredAssetView(p,{runDirectory:run});
+ assert.equal(p.profile.business.inventoryUrl,'');assert.equal(p.profile.business.observedAt,'');assert.match(refreshAdapterInternals.autoBestInventory(p.profile),/evidenceUrl: ""|"evidenceUrl": ""/);
+ const modern=refreshAdapterInternals.modernListing(p.profile.listings[0],0,'demo-id',p.profile);assert.equal(modern.seller.verificationStatus,'unverified');assert.match(modern.description,/Demo examples/);
+ const readFile=name=>name==='auto-best/src/lib/data/dealer-profile.json'?enc(p.profile):fs.readFileSync(path.join(view,name.replace(/^auto-best\/static\//,'')));
+ const app=await prepareAppDealer(view,registeredAdoptionTarget(p,f.pins),{readFile});assert.equal(app.inventory[0].sourceUrl,'');assert.equal(app.inventory[0].observedAt,'');assert.match(app.config.inventoryNotice,/none are this dealer/);
+});
+
+test('demo and published raster inputs reject fabricated facts, source swaps, acceptance claims and catalog drift',t=>{
+ for(const change of [f=>f.personalization.stock.previewOnly=false,f=>f.personalization.stock.actualDealerAvailability=true,f=>f.personalization.stock.listings[0].sourceUrl='https://example.com/advert/123',f=>f.personalization.stock.listings[0].priceAmount=1,f=>f.personalization.stock.listings[0].title='Invented car',f=>f.personalization.stock.listings[0].verification='verified',f=>f.personalization.stock.listings[0].sourceRecord.sourceId='2',f=>f.personalization.stock.templateDemo.catalog.sha256='0'.repeat(64),f=>f.personalization.media[0].sha256='0'.repeat(64),f=>f.personalization.media.find(p=>p.surface).inputPath='docs/other/logo.png',f=>f.personalization.publishedBranding.path=f.personalization.publishedBranding.path.replace(f.dealer,'other'),f=>f.personalization.publishedBranding.sha256='0'.repeat(64),f=>f.personalization.facts.retainedSourceInventory.renderAsDealerStock=true,f=>writeFixture(path.join(f.root,'templates.lock.json'),enc({templates:{'auto-best':{status:'draft',source:f.personalization.stock.templateDemo.source}}}))]){
+  const f=demoFixture(t);addPublishedBranding(f);change(f);assert.throws(f.plan);
+ }
+ const f=demoFixture(t),p=f.plan();fs.appendFileSync(path.join(f.root,'templates.lock.json'),' ');assert.throws(()=>assertRegisteredAdoptionPlan(p),/catalog lease changed/);
+});
+
+test('registered asset view contains only pinned physical assets and rejects tampering or candidate/source overlap',t=>{
+ const f=demoFixture(t);addPublishedBranding(f);const p=f.plan(),run=path.join(f.root,'runtime','owned-run');fs.mkdirSync(run,{recursive:true});const view=materializeRegisteredAssetView(p,{runDirectory:run,candidateDirectory:path.join(run,'candidate')});assertRegisteredAssetView(p,view);
+ assert.equal(fs.existsSync(path.join(view,'dealer.json')),false);assert.equal(fs.existsSync(path.join(view,'auto-best','package.json')),false);assert.equal(fs.readFileSync(path.join(view,'demo','car.webp')).length,6);assert.equal(fs.existsSync(path.join(f.dealerRoot,'dealer.json')),false);assert.throws(()=>materializeRegisteredAssetView(p,{runDirectory:run}),/occupied/);
+ const candidate=path.join(run,'candidate');fs.mkdirSync(candidate);assertRegisteredCandidateDirectory(p,candidate);assert.throws(()=>assertRegisteredCandidateDirectory(p,f.dealerRoot),/distinct runtime/);assert.throws(()=>assertRegisteredCandidateDirectory(p,view),/distinct runtime/);
+ fs.appendFileSync(path.join(view,'demo','car.webp'),'x');assert.throws(()=>assertRegisteredAssetView(p,view),/bytes changed/);
+});
+
+test('registered asset view refuses escaped runtime aliases and invented public media',t=>{
+ const f=demoFixture(t),p=f.plan(),runtime=path.join(f.root,'runtime'),outside=path.join(f.root,'outside');fs.mkdirSync(runtime,{recursive:true});fs.mkdirSync(outside);fs.symlinkSync(outside,path.join(runtime,'redirect'),'junction');assert.throws(()=>materializeRegisteredAssetView(p,{runDirectory:path.join(runtime,'redirect')}),/distinct Cars runtime/);
+ const g=demoFixture(t);g.personalization.media.push({publicPath:'/demo/arbitrary.webp',sourceKind:'immutable-template-demo',templatePath:'static/demo/car.webp',sha256:g.personalization.media[1].sha256,gitBlob:g.personalization.media[1].gitBlob,bytes:6});assert.throws(g.plan,/catalog-bound/);
+});
+
 test('registered source request is an explicit separate bounded envelope',async t=>{
  const f=fixture(t);assert.equal(validateRegisteredSourceRequest(f.request,f.registry),f.request);const matrix=await sourceMatrix(f.request,{root:f.root,registry:f.registry});assert.equal(matrix.include[0].mode,'registered-adoption');assert(matrix.include[0].sourceInputs.includes('/'+f.pin.path));assert(matrix.include[0].sourceInputs.includes('/'+f.receipt.personalization.path));
  for(const change of [r=>r.mode='new-approved',r=>r.mode='existing-migration',r=>r.extraApproval=true,r=>r.dealers.push(r.dealers[0]),r=>r.inputs[f.dealer].adoption.path='clients/'+f.dealer+'/dealer.json']){const copy=structuredClone(f.request);change(copy);assert.throws(()=>validateRegisteredSourceRequest(copy,f.registry));}

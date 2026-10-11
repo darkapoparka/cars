@@ -7,7 +7,8 @@ import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 import { fingerprint } from '../lib/workflow.mjs';
 import { applyMounts } from '../publishing/mounts.mjs';
-import { targetManifestForUpgrade, assertUpgradeSourceAdmission } from './update-dealer-template.mjs';
+import { targetManifestForUpgrade, assertUpgradeSourceAdmission, personalizeRegisteredCandidate, assertFactualRefreshAdmission, assertFactualRefreshCandidate, assertFactualRefreshReplay, assertRegisteredPersonalizationPreservation } from './update-dealer-template.mjs';
+import {planThreeWayUpgrade} from './three-way-upgrade.mjs';
 
 const wrapper = fileURLToPath(new URL('./update-dealer-template.mjs', import.meta.url));
 const keys = ['auto-best', 'modern', 'carwow'];
@@ -349,4 +350,44 @@ test('registered source admission cannot relax ordinary native qualification gua
   assert.throws(()=>assertUpgradeSourceAdmission({manifest,qualification:{}}),/existing native dealer/);
   assert.throws(()=>assertUpgradeSourceAdmission({manifest,qualification:{},registeredAdoption:{manifest}}),/validated unmodified/);
   for(const version of ['2','3','5'])assert.doesNotThrow(()=>assertUpgradeSourceAdmission({manifest:{...manifest,packaging:{version}},qualification:{}}));
+});
+
+test('registered candidate personalization cannot accept an invented plan or arbitrary asset folder', async () => {
+  await assert.rejects(()=>personalizeRegisteredCandidate({registeredAdoption:{profile:{business:{name:'invented'}}},assetView:'C:/arbitrary',candidateDirectory:'C:/arbitrary'}),/validated unmodified/);
+});
+
+const factualKeys=['auto-best','modern','import','app','mobile','karento-best'];
+function factualProofFixture(){
+  const newBases=Object.fromEntries(factualKeys.map(key=>[key,new Map([['src/current-facts.json',Buffer.from('{"price":4299,"id":"retained-stock"}\n')]])]));
+  const proof={schemaVersion:1,stage:'preservation-merge-before-native-catalogs-and-branding',mode:'current-facts-from-pinned-six-targets',dealer:'retained',profileSha256:'a'.repeat(64),targetSources:Object.fromEntries(factualKeys.map(key=>[key,{repository:'darkapoparka/cars',revision:'b'.repeat(40),path:'templates/'+key,tree:'c'.repeat(40),digest:'d'.repeat(64)}])),consumerPaths:factualKeys.map(key=>key+'/src/current-facts.json').sort()};
+  const candidate=new Map(factualKeys.map(key=>[key+'/src/current-facts.json',newBases[key].get('src/current-facts.json')]));return{newBases,proof,candidate};
+}
+
+test('factual refresh is an explicit qualified all-six ordinary source operation',()=>{
+  const qualification={schemaVersion:1,kind:'cars-native-source-qualification-context',id:'test',dealer:'retained',scope:'existing-dealer-pilot',reviewed:true,reviewedAt:'2026-10-11',sourceCommit:'b'.repeat(40),nativeApproval:false,hostedApproval:false,globalReleaseApproval:false,approvedLockSha256:'c'.repeat(64),candidateLockSha256:'d'.repeat(64),sourceDeltaReview:{reference:'docs/releases/delta.json',sha256:'e'.repeat(64),reviewedAt:'2026-10-11'}};
+  const args={enabled:true,designSet:'six',qualification,manifest:{slug:'retained',packaging:{version:'5'}}};assert.doesNotThrow(()=>assertFactualRefreshAdmission(args));assert.doesNotThrow(()=>assertFactualRefreshAdmission({enabled:false}));
+  for(const changed of [{designSet:undefined},{selectedKeys:['modern']},{qualification:null},{registeredAdoption:{}},{manifest:{slug:'retained',packaging:{version:'1'}}},{qualification:{...qualification,nativeApproval:true}}])assert.throws(()=>assertFactualRefreshAdmission({...args,...changed}));
+});
+
+test('factual target merge preserves unrelated customization and blocks stale factual dealer resolutions',()=>{
+  const f=factualProofFixture(),oldBase=new Map(f.candidate),newBase=new Map(f.candidate),dealer=new Map(f.candidate),name='mobile/src/current-facts.json';oldBase.set(name,Buffer.from('{"price":44299,"id":"retained-stock"}\n'));dealer.set(name,oldBase.get(name));dealer.set('mobile/src/paid-customization.ts',Buffer.from('export const paid = true;\n'));
+  const merged=planThreeWayUpgrade({oldBase,newBase,dealer});assert.equal(merged.ready,true);assert.equal(merged.candidate.get('mobile/src/paid-customization.ts').toString(),'export const paid = true;\n');assert.equal(assertFactualRefreshCandidate({...f,candidate:merged.candidate}).consumerHashes.length,6);
+  dealer.set(name,Buffer.from('{"price":44111,"id":"retained-stock"}\n'));const conflict=planThreeWayUpgrade({oldBase,newBase,dealer});assert.equal(conflict.ready,false);assert(conflict.conflicts.some(row=>row.path===name));
+  const stale=planThreeWayUpgrade({oldBase,newBase,dealer,resolutions:{[name]:'dealer'}});assert.equal(stale.ready,true);assert.throws(()=>assertFactualRefreshCandidate({...f,candidate:stale.candidate}),/differs after preservation/);
+  const reviewed=planThreeWayUpgrade({oldBase,newBase,dealer,resolutions:{[name]:'template'}});assert.equal(reviewed.ready,true);assertFactualRefreshCandidate({...f,candidate:reviewed.candidate});
+});
+
+test('factual proof and reconstruction reject missing or changed consumers, profile, pins and flag',()=>{
+  const f=factualProofFixture(),sealed=assertFactualRefreshCandidate(f),metadata={selection:{refreshFacts:true},factualRefresh:sealed};assertFactualRefreshReplay({proof:f.proof,metadata,newBases:f.newBases});
+  for(const mutate of [m=>m.selection.refreshFacts=false,m=>m.factualRefresh.profileSha256='0'.repeat(64),m=>m.factualRefresh.targetSources.app.revision='0'.repeat(40),m=>m.factualRefresh.consumerHashes[0].sha256='0'.repeat(64),m=>m.registeredAdoption={}]){const copy=structuredClone(metadata);mutate(copy);assert.throws(()=>assertFactualRefreshReplay({proof:f.proof,metadata:copy,newBases:f.newBases}),/changed after review/);}
+  const missing=new Map(f.candidate);missing.delete(f.proof.consumerPaths[0]);assert.throws(()=>assertFactualRefreshCandidate({...f,candidate:missing}),/differs after preservation/);assert.throws(()=>assertFactualRefreshCandidate({...f,proof:{...f.proof,consumerPaths:['../outside']}}),/Exact factual target/);
+});
+
+test('registered personalization rejects overwritten custom consumers and preserves unrelated custom paths',()=>{
+  const keys=['auto-best','modern','import','app','mobile','karento-best'],name='modern/src/config/company.ts';
+  const newBases=Object.fromEntries(keys.map(key=>[key,new Map()]));newBases.modern.set('src/config/company.ts',Buffer.from('export const name="template";\n'));
+  const before=new Map([[name,newBases.modern.get('src/config/company.ts')],['modern/src/paid-customization.ts',Buffer.from('retain paid behavior\n')]]),after=new Map(before);after.set(name,Buffer.from('export const name="reviewed dealer";\n'));
+  const proof=assertRegisteredPersonalizationPreservation({before,after,newBases});assert.equal(proof.consumerHashes.length,1);assert.equal(proof.stage,'personalization-before-native-catalogs-and-branding');assert(before.get('modern/src/paid-customization.ts').equals(after.get('modern/src/paid-customization.ts')));
+  const custom=new Map(before);custom.set(name,Buffer.from('export const name="template";\nexport const paidCustom = true;\n'));assert.throws(()=>assertRegisteredPersonalizationPreservation({before:custom,after,newBases}),/overwrite a custom consumer/);
+  const removed=new Map(after);removed.delete(name);assert.throws(()=>assertRegisteredPersonalizationPreservation({before,after:removed,newBases}),/removed a preserved path/);assert.throws(()=>assertRegisteredPersonalizationPreservation({before,after}),/exact mounted target bases/);
 });

@@ -333,7 +333,10 @@ test('Modern refresh preserves the approved hero while retaining stable fixture 
   assert.equal(hash(path.join(root, hero)), hash(path.join(template, hero)));
   const listings = fs.readFileSync(path.join(root, 'packages/marketplace-domain/testing/mock-data.ts'), 'utf8');
   assert.match(listings, /"id": "am-1001"/);
-  assert.match(listings, /"id": "am-1009"/);
+  const generated = JSON.parse(listings.match(/export const mockListings: VehicleListing\[\] = (\[[\s\S]*?\n\]);/)[1]);
+  assert.equal(generated.length, profile.listings.length);
+  assert.deepEqual(generated.map(row => row.slug), profile.listings.map(row => row.slug));
+  assert.equal(new Set(generated.map(row => row.slug)).size, profile.listings.length);
   assert.match(listings, /Nissan Micra 1\.0 N-Sport/);
   const leadSite = fs.readFileSync(path.join(root, 'packages/marketplace/lead-site.ts'), 'utf8');
   assert.match(leadSite, /name: "Навара кар"/);
@@ -372,7 +375,9 @@ test('Modern refresh accepts a previously generated CRLF JSON fixture', () => {
 
   const listings = fs.readFileSync(path.join(root, fixture), 'utf8');
   assert.match(listings, /"id": "am-1001"/);
-  assert.match(listings, /"id": "am-1009"/);
+  const generated = JSON.parse(listings.match(/export const mockListings: VehicleListing\[\] = (\[[\s\S]*?\n\]);/)[1]);
+  assert.equal(generated.length, profile.listings.length);
+  assert.deepEqual(generated.map(row => row.slug), profile.listings.map(row => row.slug));
   assert.match(listings, /\];\n\nconst matchesText/);
   assert.equal(listings.includes('\r'), false);
   fs.rmSync(root, { recursive: true, force: true });
