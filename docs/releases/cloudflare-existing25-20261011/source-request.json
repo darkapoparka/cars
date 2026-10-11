@@ -25,14 +25,14 @@
       },
       "resolutions": {
         "path": "docs/releases/cloudflare-existing25-20261011/priselci-factual-refresh-resolutions.json",
-        "sha256": "df5c48be7ac0ce7f045f99c55fe75c665c479dff6cb59177abdc5a1aad28d7cb"
+        "sha256": "54c0c0b6854ca516cc43ac566b6322d6149c7f70397267037454b1fe71f8e0ee"
       }
     }
   },
   "draft": false,
   "publishable": true,
   "reviewed": true,
-  "reviewedAt": "2026-10-11T18:16:31.553Z",
+  "reviewedAt": "2026-10-11T19:25:05.457Z",
   "qualificationOnly": true,
   "approved": false,
   "nativeApproval": false,
@@ -45,7 +45,7 @@
     "Combined mounted/public browser pilot and owner visual acceptance of that hosted pilot remain pending. Global templates.lock.json is unchanged."
   ],
   "sourcePreparationCode": {
-    "sourceCommit": "5be0fe47c451c7d437d5036b94129acfdfb8c4c8",
+    "sourceCommit": "978a7b8175e431682fbadd0d855a4b2b244d90bf",
     "scope": "The reviewed publication payload is leased against this commit; its source preparation event descends it."
   }
 }
