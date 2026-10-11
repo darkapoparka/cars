@@ -23,7 +23,8 @@ import {
   replaceCandidateFile,
   installUpgrade,
   rollbackUpgrade,
-  updateManifestPins
+  updateManifestPins,
+  unifiedDiff
 } from './three-way-upgrade.mjs';
 import { readPinnedTemplateTree } from './pinned-template-source.mjs';
 import { baseNativeManifest, APP_PACKAGING_VERSION, assertAppVariant } from '../publishing/app-variant.mjs';
@@ -339,6 +340,55 @@ function parseResolutions(bytes, pins) {
   return result;
 }
 
+
+/** An explicit reviewed exception to a clean preservation merge, never to factual equality. */
+export function applyReviewedFactualConsumerResolutions({plan,original,oldBases,newBases,review,manifest,qualification,designSet,selectedKeys,registeredAdoption,refreshFacts,templatePalette,factualProof,baseline,resolutions={}}) {
+  if(review==null)return null;
+  const exact=(value,keys)=>value&&typeof value==='object'&&!Array.isArray(value)&&JSON.stringify(Object.keys(value).sort())===JSON.stringify([...keys].sort());
+  const equal=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+  const keys=['auto-best','modern','import','app','mobile','karento-best'];
+  const pathname='import/src/lib/config/dealer.ts',relative='src/lib/config/dealer.ts';
+  assertFactualRefreshAdmission({enabled:refreshFacts,designSet,selectedKeys,qualification,registeredAdoption,manifest});
+  if(refreshFacts!==true||templatePalette!==true||registeredAdoption||!plan?.ready||!(plan.candidate instanceof Map)||!(original instanceof Map))throw new Error('Reviewed factual consumers require a ready ordinary six-family factual refresh with selected template palettes');
+  if(!exact(review,['schemaVersion','kind','reviewed','dealer','baseline','targetSources','paths'])||review.schemaVersion!==1||review.kind!=='cars-factual-consumer-template-resolutions'||review.reviewed!==true||review.dealer!==manifest.slug||
+     !exact(review.baseline,['commit','tree'])||!Object.values(review.baseline).every(value=>/^[a-f0-9]{40}$/.test(value))||!equal(review.baseline,baseline)||
+     factualProof?.stage!=='preservation-merge-before-native-catalogs-and-branding'||!Array.isArray(factualProof.consumerPaths)||!factualProof.consumerPaths.includes(pathname)||
+     !exact(review.targetSources,keys)||!equal(review.targetSources,factualProof.targetSources)||!equal(review.targetSources,Object.fromEntries(keys.map(key=>[key,renderPins(plan.pins?.[key]?.targetSource)])))||
+     !Array.isArray(review.paths)||review.paths.length!==1)throw new Error('Invalid reviewed factual consumer identity, baseline, pins or scope');
+  if(Object.hasOwn(resolutions,pathname)||plan.changes.some(row=>row.path===pathname&&row.kind?.startsWith('resolved-')))throw new Error('Reviewed clean factual choice cannot overlap an existing conflict decision');
+  const item=review.paths[0];
+  if(!exact(item,['path','choice','originalSha256','oldSha256','targetSha256','mergedSha256'])||item.path!==pathname||item.choice!=='template'||Object.entries(item).some(([key,value])=>key.endsWith('Sha256')&&!/^[a-f0-9]{64}$/.test(value)))throw new Error('Reviewed factual consumer must name only the exact Import dealer config with four byte leases');
+  const current=original.get(pathname),old=oldBases?.import?.get(relative),target=newBases?.import?.get(relative),merged=plan.candidate.get(pathname);
+  const text=bytes=>Buffer.isBuffer(bytes)&&!bytes.includes(0)&&Buffer.from(bytes.toString('utf8')).equals(bytes);
+  if(![current,old,target,merged].every(text)||merged.equals(target)||plan.conflicts?.some(row=>row.path===pathname)||
+     sha256(current)!==item.originalSha256||sha256(old)!==item.oldSha256||sha256(target)!==item.targetSha256||sha256(merged)!==item.mergedSha256)throw new Error('Reviewed factual consumer bytes changed, are not clean UTF-8, or are not a clean target difference');
+  // All validation precedes changes; retain every other candidate and conflict decision.
+  const change={path:pathname,kind:'reviewed-factual-template',beforeSha256:sha256(current),afterSha256:sha256(target),diff:unifiedDiff(current,target,[`dealer/${pathname}`,`candidate/${pathname}`])};
+  plan.candidate.set(pathname,Buffer.from(target));
+  plan.changes=[...plan.changes.filter(row=>row.path!==pathname),change].sort((a,b)=>a.path.localeCompare(b.path));
+  plan.summary={...plan.summary,changed:plan.changes.length,autoMerged:plan.changes.filter(row=>row.kind==='auto-merged').length,dealerOnly:plan.changes.filter(row=>row.kind==='dealer-only').length,templateOnly:plan.changes.filter(row=>row.kind==='template-only').length};
+  const proof={schemaVersion:1,stage:factualProof.stage,mode:'explicit-reviewed-ordinary-factual-template-consumer',dealer:manifest.slug,baseline:structuredClone(baseline),targetSources:structuredClone(review.targetSources),qualificationSha256:sha256(Buffer.from(JSON.stringify(qualification))),reviewSha256:sha256(Buffer.from(JSON.stringify(review))),paths:structuredClone(review.paths)};
+  plan.factualConsumerResolutions=proof;return proof;
+}
+
+function readFactualConsumerReview(bytes) {
+  return bytes?JSON.parse(bytes.toString('utf8').replace(/^\uFEFF/,'')).factualConsumerResolutions??null:null;
+}
+
+function factualConsumerBaseline({review,carsRoot,dealerRoot,dealer}) {
+  if(!review)return null;
+  if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(dealer)||fs.realpathSync(path.join(carsRoot,'clients',dealer))!==fs.realpathSync(dealerRoot)||!review.baseline||!/^[a-f0-9]{40}$/.test(review.baseline.commit)||!/^[a-f0-9]{40}$/.test(review.baseline.tree))throw new Error('Reviewed factual baseline requires the ordinary canonical dealer');
+  if(git(carsRoot,['merge-base','--is-ancestor',review.baseline.commit,'HEAD'],{allowFailure:true})===null||git(carsRoot,['rev-parse',`${review.baseline.commit}:clients/${dealer}`])!==review.baseline.tree||git(carsRoot,['rev-parse',`HEAD:clients/${dealer}`])!==review.baseline.tree)throw new Error('Reviewed factual dealer baseline is no longer the published current source');
+  return structuredClone(review.baseline);
+}
+
+function applyFactualReviewToPlan({plan,dealerRoot,carsRoot,manifest,qualification,selection,registeredAdoption,refreshFacts,templatePalette,factualProof,oldBases,newBases,review,resolutions}) {
+  if(!review)return null;
+  const baseline=factualConsumerBaseline({review,carsRoot,dealerRoot,dealer:manifest.slug});
+  const original=new Map([['import/src/lib/config/dealer.ts',fs.readFileSync(path.join(dealerRoot,'import/src/lib/config/dealer.ts'))]]);
+  return applyReviewedFactualConsumerResolutions({plan,original,oldBases,newBases,review,manifest,qualification,designSet:selection.designSet,selectedKeys:selection.selectedKeys,registeredAdoption,refreshFacts,templatePalette,factualProof,baseline,resolutions});
+}
+
 function readDirectoryTree(root) {
   const files = new Map();
   const walk = (directory, relative = '') => {
@@ -639,6 +689,7 @@ function reviewedUpgradeReport(plan) {
   if (plan.templatePalette) review.templatePalette = plan.templatePalette;
   if (plan.nativeQualification) review.nativeQualification = plan.nativeQualification;
   if (plan.factualRefresh) review.factualRefresh = plan.factualRefresh;
+  if (plan.factualConsumerResolutions) review.factualConsumerResolutions = plan.factualConsumerResolutions;
   if (plan.registeredPersonalizationPreservation) review.registeredPersonalizationPreservation = plan.registeredPersonalizationPreservation;
   return review;
 }
@@ -743,6 +794,7 @@ function verifiedReviewArtifact(runDirectory, metadata) {
       JSON.stringify(review.nativeQualification ?? null) !== JSON.stringify(metadata.nativeQualification ?? null)) throw new Error('Source qualification mode or receipt changed after review');
   if(JSON.stringify(review.registeredPersonalizationPreservation??null)!==JSON.stringify(metadata.registeredPersonalizationPreservation??null))throw new Error('Registered preservation review proof changed');
   if(JSON.stringify(review.factualRefresh??null)!==JSON.stringify(metadata.factualRefresh??null))throw new Error('Factual refresh review proof changed');
+  if(JSON.stringify(review.factualConsumerResolutions??null)!==JSON.stringify(metadata.factualConsumerResolutions??null))throw new Error('Factual consumer resolution review proof changed');
   return review;
 }
 
@@ -895,6 +947,8 @@ async function runPlan(values) {
   const resolutions = parseResolutions(resolutionBytes, pins);
   const registeredConsumerReview=resolutionBytes?JSON.parse(resolutionBytes.toString('utf8').replace(/^\uFEFF/,'')).registeredConsumerResolutions??null:null;
   if(registeredConsumerReview&&!registeredAdoption)throw new Error('Reviewed consumer resolutions are registered-only');
+  const factualConsumerReview=readFactualConsumerReview(resolutionBytes);
+  if(factualConsumerReview&&(!refreshFacts||registeredAdoption||values['template-palette']!==true))throw new Error('Reviewed factual consumers require ordinary --refresh-facts and --template-palette');
   const paths = repositoryPaths(carsRoot, templateRoot);
   validateRepositoryPaths(pins, paths);
   const runDirectory = createRunDirectory(carsRoot, manifest.slug, values['run-dir']);
@@ -940,6 +994,7 @@ async function runPlan(values) {
   const candidateAssetPoolStats={pool:candidateAssetPool,objectsWritten:0,objectsReused:0,filesLinked:0,filesCopied:0,bytesLinked:0};
   const plan = planDealerUpgrade({ dealerRoot, lock, oldBases: adapted.oldBases, newBases: adapted.newBases, targetManifest: adapted.targetManifest, selectedKeys:selection.selectedKeys, resolutions, qualification:qualification?.context,root:carsRoot,registeredAdoption });
   let candidateDirectory = null, candidateDigest = null;
+  if(plan.ready&&factualConsumerReview)applyFactualReviewToPlan({plan,dealerRoot,carsRoot,manifest,qualification:qualification?.context,selection:{...selection,designSet:values['design-set']},registeredAdoption,refreshFacts,templatePalette,factualProof:factual?.proof,oldBases:adapted.oldBases,newBases:adapted.newBases,review:factualConsumerReview,resolutions});
   if(plan.ready&&factual)plan.factualRefresh=assertFactualRefreshCandidate({candidate:plan.candidate,newBases:adapted.newBases,proof:factual.proof});
   if (plan.ready) {
     candidateDirectory = materializeUpgradeCandidate({
@@ -975,6 +1030,7 @@ async function runPlan(values) {
     pins: renderPins(pins),
     selection:{designSet:values['design-set'] || null,selectedKeys:selection.selectedKeys || null,templatePalette,refreshFacts},
     factualRefresh:plan.factualRefresh??null,
+    factualConsumerResolutions:plan.factualConsumerResolutions??null,
     registeredPersonalizationPreservation:plan.registeredPersonalizationPreservation??null,
     templatePalette:plan.templatePalette ?? null,
     qualification,
@@ -1042,6 +1098,9 @@ async function runInstall(values) {
   });
   const resolutions = readResolutionArtifact(runDirectory, metadata);
   const review = verifiedReviewArtifact(runDirectory, metadata);
+  const factualConsumerReview=readFactualConsumerReview(metadata.resolutionsSha256?fs.readFileSync(path.join(runDirectory,'resolutions.json')):null);
+  if(Boolean(factualConsumerReview)!==Boolean(metadata.factualConsumerResolutions)||factualConsumerReview&&(!metadata.selection?.refreshFacts||!metadata.selection?.templatePalette||metadata.registeredAdoption||sha256(Buffer.from(JSON.stringify(factualConsumerReview)))!==metadata.factualConsumerResolutions.reviewSha256))throw new Error('Saved factual consumer resolution input changed');
+  if(factualConsumerReview)factualConsumerBaseline({review:factualConsumerReview,carsRoot:metadata.carsRoot,dealerRoot,dealer:metadata.dealerSlug});
   if (fingerprint(candidateDirectory).digest !== metadata.candidateDigest) {
     throw new Error('Buildable candidate changed after review; create and preview a new update plan');
   }
@@ -1077,6 +1136,7 @@ async function runInstall(values) {
   }
   const adapted = await validatePinnedBaseEvidence(metadata, manifest, lock, paths);
   const plan = planDealerUpgrade({ dealerRoot, lock, oldBases: adapted.oldBases, newBases: adapted.newBases, targetManifest: adapted.targetManifest,selectedKeys:selection.selectedKeys, resolutions,qualification:qualification?.context,root:metadata.carsRoot });
+  if(factualConsumerReview)applyFactualReviewToPlan({plan,dealerRoot,carsRoot:metadata.carsRoot,manifest,qualification:qualification?.context,selection:metadata.selection,refreshFacts:metadata.selection?.refreshFacts,templatePalette:metadata.selection?.templatePalette,factualProof:metadata.factualRefresh,oldBases:adapted.oldBases,newBases:adapted.newBases,review:factualConsumerReview,resolutions});
   if(metadata.factualRefresh)plan.factualRefresh=assertFactualRefreshCandidate({candidate:plan.candidate,newBases:adapted.newBases,proof:metadata.factualRefresh});
   let recomputedReview;
   if (plan.ready) {

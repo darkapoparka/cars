@@ -8,8 +8,8 @@ import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 import { fingerprint } from '../lib/workflow.mjs';
 import { applyMounts } from '../publishing/mounts.mjs';
-import { targetManifestForUpgrade, assertUpgradeSourceAdmission, personalizeRegisteredCandidate, assertFactualRefreshAdmission, assertFactualRefreshCandidate, assertFactualRefreshReplay, assertRegisteredPersonalizationPreservation, planReviewedRegisteredConsumerResolutions, deriveRegisteredConsumerTargets } from './update-dealer-template.mjs';
-import {planThreeWayUpgrade} from './three-way-upgrade.mjs';
+import { targetManifestForUpgrade, assertUpgradeSourceAdmission, personalizeRegisteredCandidate, assertFactualRefreshAdmission, assertFactualRefreshCandidate, assertFactualRefreshReplay, assertRegisteredPersonalizationPreservation, planReviewedRegisteredConsumerResolutions, deriveRegisteredConsumerTargets, applyReviewedFactualConsumerResolutions } from './update-dealer-template.mjs';
+import {planThreeWayUpgrade,materializeUpgradeCandidate} from './three-way-upgrade.mjs';
 
 const wrapper = fileURLToPath(new URL('./update-dealer-template.mjs', import.meta.url));
 const keys = ['auto-best', 'modern', 'carwow'];
@@ -416,4 +416,55 @@ test('registered clean choices prove real clean three-way auto merges before rep
 
 test('registered target derivation cannot authenticate invented plans or arbitrary asset views',async()=>{
  await assert.rejects(()=>deriveRegisteredConsumerTargets({registeredAdoption:{},assetView:'C:/arbitrary',newBases:{},manifest:{}}),/validated unmodified/);
+});
+
+function ordinaryFactualConsumerFixture() {
+ const f=factualProofFixture(),name='import/src/lib/config/dealer.ts',relative='src/lib/config/dealer.ts';
+ const old=Buffer.from('export const dealerTheme="native";\nexport const name="old";\n'),current=Buffer.from('export const dealerTheme="custom";\nexport const name="old";\n'),target=Buffer.from('export const dealerTheme="native";\nexport const name="recorded dealer";\n'),merged=Buffer.from('export const dealerTheme="custom";\nexport const name="recorded dealer";\n');
+ const digest=bytes=>createHash('sha256').update(bytes).digest('hex'),keys=['auto-best','modern','import','app','mobile','karento-best'];
+ f.newBases.import.set(relative,target);f.candidate.set(name,merged);f.proof.consumerPaths.push(name);f.proof.consumerPaths.sort();
+ const original=new Map([[name,current],['import/src/paid.ts',Buffer.from('preserve custom code\n')]]);f.candidate.set('import/src/paid.ts',original.get('import/src/paid.ts'));
+ const qualification={schemaVersion:1,kind:'cars-native-source-qualification-context',id:'test',dealer:'retained',scope:'existing-dealer-pilot',reviewed:true,reviewedAt:'2026-10-11',sourceCommit:'b'.repeat(40),nativeApproval:false,hostedApproval:false,globalReleaseApproval:false,approvedLockSha256:'c'.repeat(64),candidateLockSha256:'d'.repeat(64),sourceDeltaReview:{reference:'docs/releases/delta.json',sha256:'e'.repeat(64),reviewedAt:'2026-10-11'}};
+ const baseline={commit:'a'.repeat(40),tree:'b'.repeat(40)},targetSources=f.proof.targetSources,review={schemaVersion:1,kind:'cars-factual-consumer-template-resolutions',reviewed:true,dealer:'retained',baseline:structuredClone(baseline),targetSources:structuredClone(targetSources),paths:[{path:name,choice:'template',originalSha256:digest(current),oldSha256:digest(old),targetSha256:digest(target),mergedSha256:digest(merged)}]};
+ const plan={ready:true,candidate:f.candidate,changes:[{path:name,kind:'auto-merged',beforeSha256:digest(current),afterSha256:digest(merged)}],conflicts:[],summary:{changed:1,conflicts:0},pins:Object.fromEntries(keys.map(key=>[key,{targetSource:targetSources[key]}]))};
+ return {...f,name,old,current,target,merged,original,oldBases:{import:new Map([[relative,old]])},plan,review,baseline,manifest:{slug:'retained',packaging:{version:'5'}},qualification,designSet:'six',refreshFacts:true,templatePalette:true,factualProof:f.proof,digest};
+}
+
+test('ordinary reviewed factual choice leaves default merge intact and restores only the exact native Import target',()=>{
+ const f=ordinaryFactualConsumerFixture();assert.equal(applyReviewedFactualConsumerResolutions({...f,review:null}),null);assert(f.plan.candidate.get(f.name).equals(f.merged));assert.throws(()=>assertFactualRefreshCandidate({candidate:f.plan.candidate,newBases:f.newBases,proof:f.proof}),/differs after preservation/);
+ const proof=applyReviewedFactualConsumerResolutions(f);assert(f.plan.candidate.get(f.name).equals(f.target));assert(f.original.get(f.name).equals(f.current));assert(f.plan.candidate.get('import/src/paid.ts').equals(f.original.get('import/src/paid.ts')));assert.equal(proof.reviewSha256,f.digest(Buffer.from(JSON.stringify(f.review))));assert.equal(f.plan.changes[0].kind,'reviewed-factual-template');assert.equal(f.plan.changes[0].beforeSha256,f.digest(f.current));assert.equal(f.plan.changes[0].afterSha256,f.digest(f.target));assert.equal(assertFactualRefreshCandidate({candidate:f.plan.candidate,newBases:f.newBases,proof:f.proof}).consumerHashes.length,7);
+ const other='mobile/src/current-facts.json';f.plan.candidate.set(other,Buffer.from('stale unrelated facts'));assert.throws(()=>assertFactualRefreshCandidate({candidate:f.plan.candidate,newBases:f.newBases,proof:f.proof}),/differs after preservation/);
+});
+
+test('ordinary factual choice rejects default, partial, registered, unqualified and non-palette operations atomically',()=>{
+ for(const changed of [{refreshFacts:false},{designSet:null},{selectedKeys:['import']},{registeredAdoption:{}},{qualification:null},{templatePalette:false},{manifest:{slug:'retained',packaging:{version:'1'}}}]){const f=ordinaryFactualConsumerFixture();assert.throws(()=>applyReviewedFactualConsumerResolutions({...f,...changed}));assert(f.plan.candidate.get(f.name).equals(f.merged));}
+ const f=ordinaryFactualConsumerFixture();f.plan.ready=false;assert.throws(()=>applyReviewedFactualConsumerResolutions(f));
+});
+
+test('ordinary factual choice binds dealer, published baseline, all six pins and consumer stage without unknown fields',()=>{
+ for(const mutate of [r=>r.reviewed=false,r=>r.dealer='other',r=>r.baseline.tree='0'.repeat(40),r=>r.baseline.commit='0'.repeat(40),r=>r.baseline.extra=true,r=>r.extra=true,r=>delete r.targetSources.app,r=>r.targetSources.mobile.revision='0'.repeat(40),r=>r.paths[0].path='import/src/paid.ts',r=>r.paths[0].path='../escape',r=>r.paths[0].choice='dealer',r=>r.paths[0].extra=true,r=>r.paths.push({...r.paths[0]})]){const f=ordinaryFactualConsumerFixture();mutate(f.review);assert.throws(()=>applyReviewedFactualConsumerResolutions(f));assert(f.plan.candidate.get(f.name).equals(f.merged));}
+ for(const mutate of [f=>f.factualProof.stage='later',f=>f.factualProof.consumerPaths=f.factualProof.consumerPaths.filter(p=>p!==f.name),f=>f.plan.pins.app.targetSource={...f.plan.pins.app.targetSource,tree:'0'.repeat(40)}]){const f=ordinaryFactualConsumerFixture();mutate(f);assert.throws(()=>applyReviewedFactualConsumerResolutions(f));}
+});
+
+test('ordinary factual choice requires all four exact clean UTF-8 buffer leases before any change',()=>{
+ for(const key of ['originalSha256','oldSha256','targetSha256','mergedSha256']){const f=ordinaryFactualConsumerFixture();f.review.paths[0][key]='0'.repeat(64);assert.throws(()=>applyReviewedFactualConsumerResolutions(f));assert(f.plan.candidate.get(f.name).equals(f.merged));}
+ for(const bad of [Buffer.from([0,13,10,65]),Buffer.from([255,65])]){const f=ordinaryFactualConsumerFixture();f.plan.candidate.set(f.name,bad);f.review.paths[0].mergedSha256=f.digest(bad);assert.throws(()=>applyReviewedFactualConsumerResolutions(f));assert(f.plan.candidate.get(f.name).equals(bad));}
+ const equal=ordinaryFactualConsumerFixture();equal.plan.candidate.set(equal.name,equal.target);equal.review.paths[0].mergedSha256=equal.digest(equal.target);assert.throws(()=>applyReviewedFactualConsumerResolutions(equal));
+ const conflict=ordinaryFactualConsumerFixture();conflict.plan.conflicts=[{path:conflict.name}];assert.throws(()=>applyReviewedFactualConsumerResolutions(conflict));
+});
+
+test('ordinary factual choice change records materialize the reviewed target and retain custom source',()=>{
+ const f=ordinaryFactualConsumerFixture(),root=fs.mkdtempSync(path.join(os.tmpdir(),'cars-reviewed-factual-')),source=path.join(root,'source'),destination=path.join(root,'candidate');
+ try{for(const [name,bytes]of f.original){const file=path.join(source,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,bytes);}applyReviewedFactualConsumerResolutions(f);materializeUpgradeCandidate({source,plan:f.plan,destination});assert(fs.readFileSync(path.join(destination,f.name)).equals(f.target));assert(fs.readFileSync(path.join(destination,'import/src/paid.ts')).equals(f.original.get('import/src/paid.ts')));assert(fs.readFileSync(path.join(source,f.name)).equals(f.current));}finally{fs.rmSync(root,{recursive:true,force:true});}
+});
+
+test('ordinary factual review replay rejects changed merged or old bytes rather than reusing a previous choice',()=>{
+ const f=ordinaryFactualConsumerFixture(),proof=applyReviewedFactualConsumerResolutions(f),replay=ordinaryFactualConsumerFixture();assert.deepEqual(applyReviewedFactualConsumerResolutions(replay),proof);
+ for(const mutate of [f=>f.plan.candidate.set(f.name,Buffer.from('new custom merged code')),f=>f.oldBases.import.set('src/lib/config/dealer.ts',Buffer.from('another old immutable source')),f=>f.newBases.import.set('src/lib/config/dealer.ts',Buffer.from('changed target')),f=>f.original.set(f.name,Buffer.from('new current source'))]){const changed=ordinaryFactualConsumerFixture();mutate(changed);assert.throws(()=>applyReviewedFactualConsumerResolutions(changed));}
+});
+
+test('ordinary clean factual choice rejects overlapping conflict decisions instead of shadowing manual custom code',()=>{
+ for(const decision of ['dealer','template',Buffer.from('manual paid override')]){const f=ordinaryFactualConsumerFixture();assert.throws(()=>applyReviewedFactualConsumerResolutions({...f,resolutions:{[f.name]:decision}}),/cannot overlap/);assert(f.plan.candidate.get(f.name).equals(f.merged));}
+ const f=ordinaryFactualConsumerFixture();f.plan.changes[0].kind='resolved-manual';assert.throws(()=>applyReviewedFactualConsumerResolutions(f),/cannot overlap/);assert(f.plan.candidate.get(f.name).equals(f.merged));
+ const other=ordinaryFactualConsumerFixture();assert.doesNotThrow(()=>applyReviewedFactualConsumerResolutions({...other,resolutions:{'import/src/paid.ts':Buffer.from('another reviewed manual choice')}}));assert(other.plan.candidate.get('import/src/paid.ts').equals(other.original.get('import/src/paid.ts')));
 });
