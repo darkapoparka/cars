@@ -23,6 +23,14 @@ test('missing source refuses the repair atomically',()=>{
   const files=fixture();files.delete('auto-best/src/routes/listing-detail-v1/[id]/detail.css');
   const original=new Map(files);assert.throws(()=>applyAutoBestCardLayout(files,manifest));assert.deepEqual(files,original);
 });
+test('historical package seals remain unchanged and current six-design inputs are required',()=>{
+  for(const version of ['1','2','3']) {
+    const files=fixture(),before=new Map(files);
+    assert.equal(applyAutoBestCardLayout(files,{...manifest,packaging:{version}}),null);
+    assert.deepEqual(files,before);
+  }
+  assert.throws(()=>applyAutoBestCardLayout(new Map(),{...manifest,packaging:{version:'5'}}),/Missing Auto Best/);
+});
 test('pinned card override survives Svelte scoping and compilation',{skip:!compiler},()=>{
   const files=fixture();applyAutoBestCardLayout(files,manifest);
   const source=files.get('auto-best/src/lib/components/vehicles/VehicleCard.svelte').toString();

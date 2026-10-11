@@ -31,12 +31,12 @@ export function autoBestCardLayoutWorkerSource() {
 export function applyAutoBestCardLayout(files, manifest) {
   if (!(files instanceof Map) || !manifest?.slug) throw Error('Named dealer package required');
   if (!manifest.variants.some(v=>v.key==='auto-best')) return null;
+  // Current leads use the six-design contract. Historical package versions
+  // retain their original native input seal and repackaging behavior.
+  if (manifest.packaging?.version && manifest.packaging.version !== '5') return null;
   const card='auto-best/src/lib/components/vehicles/VehicleCard.svelte';
   const detail='auto-best/src/routes/listing-detail-v1/[id]/detail.css';
   const beforeCard=files.get(card),beforeDetail=files.get(detail);
-  // Historical minimal package contracts predate these components. Current
-  // six-design publication requires the complete reusable layout boundary.
-  if (!beforeCard && ['1','2','3'].includes(manifest.packaging?.version)) return null;
   if (!beforeCard || !beforeDetail) throw Error('Missing Auto Best card layout inputs');
   const text=beforeCard.toString('utf8');
   if (text.split('</style>').length!==2 || !text.includes('dn-vehicle-card__mobile-meta') || !beforeDetail.toString('utf8').includes('.dn-detail-finance-trigger__logo img')) throw Error('Auto Best layout boundary changed');
