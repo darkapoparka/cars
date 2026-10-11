@@ -370,8 +370,8 @@ function autoBestBrand(profile, logo, logoDark) {
   logo: \`/\${string}\`;
   logoOnDark: \`/\${string}\`;
   youtubeUrl: \`https://\${string}\` | '';
-  instagramUrl: \`https://\${string}\`;
-  facebookUrl: \`https://\${string}\`;
+  instagramUrl: \`https://\${string}\` | '';
+  facebookUrl: \`https://\${string}\` | '';
 };
 
 const name = ${q(b.name)};
@@ -384,9 +384,9 @@ export const brand = {
   shortName,
   city,
   showroomCoordinates: ${JSON.stringify(showroomCoordinates)},
-  youtubeUrl: ${q(social.youtube || 'https://www.youtube.com/')},
-  instagramUrl: ${q(social.instagram || 'https://www.instagram.com/')},
-  facebookUrl: ${q(social.facebook || 'https://www.facebook.com/')},
+  youtubeUrl: ${q(social.youtube || '')},
+  instagramUrl: ${q(social.instagram || '')},
+  facebookUrl: ${q(social.facebook || '')},
   phone: ${q(b.phoneDisplay)},
   phoneHref: ${q(b.phoneHref || `tel:${b.phoneE164}`)},
   addressLine,
@@ -606,13 +606,16 @@ export function patchAutoBestLocale(candidate, profile) {
   const dealerTextFields = ['city', 'addressLine', 'address', 'appointment'];
   const dealerText = Object.fromEntries(['en', 'bg'].map((locale) => [
     locale,
-    Object.fromEntries(dealerTextFields.map((field) => [field, copy[locale][field]]))
+    { ...Object.fromEntries(dealerTextFields.map((field) => [field, copy[locale][field]])),
+      addressShort: copy[locale].addressLine, appointmentShort: copy[locale].appointment }
   ]));
   const catalogFile = updateDealerCatalog(candidate, {
     'dealer.city': { source: b.city, en: copy.en.city, bg: copy.bg.city, disposition: 'translate', notes: 'Dealer-owned city copy generated from the reviewed Cars dealer profile.' },
     'dealer.addressLine': { source: b.addressLine || b.address || b.city, en: copy.en.addressLine, bg: copy.bg.addressLine, disposition: 'translate', notes: b.addressLine || b.address ? 'Dealer-owned address line; physical location and destination remain unchanged.' : 'Reviewed city-only display; factual street-address fields and visit destinations remain unpublished.' },
     'dealer.address': { source: b.address || b.addressLine || b.city, en: copy.en.address, bg: copy.bg.address, disposition: 'translate', notes: b.address || b.addressLine ? 'Dealer-owned full address; physical location and destination remain unchanged.' : 'Reviewed city-only display; factual street-address fields and visit destinations remain unpublished.' },
-    'dealer.appointment': { source: b.hours, en: copy.en.appointment, bg: copy.bg.appointment, disposition: 'translate', notes: 'Dealer-owned appointment and opening-hours guidance.' }
+    'dealer.appointment': { source: b.hours, en: copy.en.appointment, bg: copy.bg.appointment, disposition: 'translate', notes: 'Dealer-owned appointment and opening-hours guidance.' },
+    'dealer.addressShort': { source: b.addressLine || b.address || b.city, en: copy.en.addressLine, bg: copy.bg.addressLine, disposition: 'translate', notes: 'Native short-address consumer uses the recorded dealer address line.' },
+    'dealer.appointmentShort': { source: b.hours, en: copy.en.appointment, bg: copy.bg.appointment, disposition: 'translate', notes: 'Native short-hours consumer uses the same factual appointment guidance.' }
   });
   const file = path.join(candidate, 'src/lib/config/locale.ts');
   const configured = patchNativeLocaleConfiguration(read(file), profile);
@@ -793,8 +796,20 @@ function replaceModernListings(file, profile) {
 }
 
 function replaceLeadScalar(text, key, value) {
-  const rx = new RegExp(`(^\\s*${key}:\\s*)(?:"[^"]*"|'[^']*'|true|false)(,?)`, 'm');
-  return text.replace(rx, `$1${typeof value === 'boolean' ? String(value) : q(value)}$2`);
+  // S1 nested localizedCopy fields precede the actual two-space leadSite fields.
+  const begin = text.indexOf('// LEAD_SITE_CONFIG_START');
+  const end = text.indexOf('// LEAD_SITE_CONFIG_END', begin);
+  const start = begin >= 0 && end > begin ? begin : 0;
+  const stop = begin >= 0 && end > begin ? end : text.length;
+  const section = text.slice(start, stop);
+  const rx = /^( {2})([A-Za-z]\w*):([ \t\r\n]*)(?:"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|true|false)(,?)/gm;
+  let found = 0;
+  const replacement = section.replace(rx, (match, indent, name, spacing, comma) => {
+    if (name !== key) return match;
+    if (++found > 1) throw new Error('Ambiguous top-level leadSite field: '+key);
+    return indent + name + ':' + spacing + (typeof value === 'boolean' ? String(value) : q(value)) + comma;
+  });
+  return text.slice(0, start) + replacement + text.slice(stop);
 }
 
 function patchModernDealerText(candidate, profile) {
@@ -853,7 +868,7 @@ function patchModern({ oldVariant, candidate, profile }) {
     shortName: b.shortName,
     slug: b.slug,
     staticDemoMode: true,
-    tagline: b.inventoryNotice
+    tagline: localized[localeLanguage(profile)].tagline
   };
   for (const [key, value] of Object.entries(values)) text = replaceLeadScalar(text, key, value);
   const localizedCopy = {
@@ -1541,5 +1556,6 @@ export const refreshAdapterInternals = {
   isRasterLogo,
   rasterLogoCandidates,
   requireRasterLogo,
-  replaceModernListings
+  replaceModernListings,
+  replaceLeadScalar
 };

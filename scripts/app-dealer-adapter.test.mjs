@@ -111,3 +111,23 @@ test('App preserves a normalized formatted published zero while missing source m
  assert.equal(missing.vehicle.mileageOnRequest,true);
  assert.deepEqual(missing.facts,{slug:'car-two',sourceValue:null,sourceUnit:null,canonicalKm:null});
 });
+test('App keeps native welcome and unapproved-reference controls explicit without inventing social profiles',async()=>{
+ const result=await prepareAppDealer('',manifest,{readFile});
+ assert.equal(result.config.welcomeEnabled,true);
+ assert.equal(result.config.referenceClaimsApproved,false);
+ assert.deepEqual(result.config.socialLinks,[{label:'Facebook',url:''},{label:'Instagram',url:''},{label:'Mobile.bg',url:''},{label:'Cars.bg',url:''}]);
+ assert.deepEqual(JSON.parse(result.files.get('lib/dealer.json').toString('utf8')),result.config);
+ assert.equal(result.provenance.profileSha256,createHash('sha256').update(source.get('auto-best/src/lib/data/dealer-profile.json')).digest('hex'));
+});
+
+test('App social controls contain only safe recorded URLs and cannot enable reference claims',async()=>{
+ const configured={...profile,business:{...profile.business,referenceClaimsApproved:true,socialLinks:{
+  facebook:'https://www.facebook.com/recorded-dealer/',instagram:'javascript:alert(1)',
+  youtube:'https://www.youtube.com/@recorded-dealer',tiktok:'https://user:password@example.com/profile',
+  mobilebg:'https://recorded.mobile.bg/',carsbg:'http://example.com/'}}};
+ const bytes=Buffer.from(JSON.stringify(configured));
+ const result=await prepareAppDealer('',manifest,{readFile:async name=>name==='auto-best/src/lib/data/dealer-profile.json'?bytes:readFile(name)});
+ assert.equal(result.config.referenceClaimsApproved,false);
+ assert.deepEqual(result.config.socialLinks,[{label:'Facebook',url:'https://www.facebook.com/recorded-dealer/'},{label:'Instagram',url:''},{label:'Mobile.bg',url:'https://recorded.mobile.bg/'},{label:'Cars.bg',url:''},{label:'YouTube',url:'https://www.youtube.com/@recorded-dealer'}]);
+ assert.equal(result.provenance.profileSha256,createHash('sha256').update(bytes).digest('hex'));
+});

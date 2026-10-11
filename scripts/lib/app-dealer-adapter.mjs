@@ -99,12 +99,17 @@ export async function prepareAppDealer(sourceRoot, manifest, {readFile, appFiles
  const observedAt=[...new Set(profile.listings.map(l=>text(l.observedAt)).filter(Boolean))].sort().join(', ');
  const inventoryNotice=text(business.inventoryNotice) || 'Dated listing samples. Confirm price, availability and vehicle information with the dealer.';
  const illustrated=profile.listings.some(item=>(item.mediaKind || item.raw?.mediaKind)==='generated_category_illustration');
+ const social=business.socialLinks || {};
+ const socialLinks=[{label:'Facebook',url:url(social.facebook)},{label:'Instagram',url:url(social.instagram)},
+  {label:'Mobile.bg',url:url(social.mobilebg)},{label:'Cars.bg',url:url(social.carsbg)},
+  ...[{label:'YouTube',url:url(social.youtube)},{label:'TikTok',url:url(social.tiktok)}].filter(link=>link.url)];
  const config={mode:'dealer',id:manifest.slug,name:text(business.name),shortName:text(business.name).slice(0,40),
-  logo:{light,dark,icon:'/dealer-app/icon.png'},defaultLocale:manifest.localization?.defaultLocale==='bg'?'bg':'en',enabledLocales:['en','bg'],
+  logo:{light,dark,icon:'/dealer-app/icon.png'},defaultLocale:manifest.localization?.defaultLocale==='bg'?'bg':'en',enabledLocales:['en','bg'],welcomeEnabled:true,
   country:manifest.localization?.dealerCountry||text(business.country),currency,city:text(business.city),address:text(business.address),
   phoneDisplay:text(business.phoneDisplay),phoneE164:/^\+[1-9]\d{6,14}$/.test(text(business.phoneE164))?text(business.phoneE164):'',
   email:/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(text(business.email))?text(business.email):'',
   mapsUrl:url(business.mapsUrl),website:url(business.website),whatsappUrl:url(business.whatsappUrl||business.socialLinks?.whatsapp),
+  socialLinks,referenceClaimsApproved:false,
   services:(business.services||[]).map(s=>typeof s==='string'?s:text(s.title)).filter(Boolean),observedAt,
   inventoryNotice:illustrated && !/illustrat/i.test(inventoryNotice) ? 'Illustrated images are representative, not photos of the advertised vehicles. '+inventoryNotice : inventoryNotice,
   previewNotice:'Independent design preview. No purchase, reservation or message is submitted by this website.'};

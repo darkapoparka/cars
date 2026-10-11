@@ -6,7 +6,9 @@ export function bindCurrentImportLogoAssets(source, paths) {
  if(start<0||end<start)throw Error('Current Import asset contract changed');
  let block=source.slice(start,end);
  for(const [key,value]of [['logoLight',paths.onLight],['logoDark',paths.onDark]]){
-  if(!/^\/dealer-brand\/[^/]+\.webp$/.test(value||''))throw Error('Expected reviewed Import raster asset');
+  const webp=/^\/dealer-brand\/[^/]+\.webp$/.test(value||'');
+  const png=/^\/(?:registered-branding|dealer-brand)\/[A-Za-z0-9][A-Za-z0-9._-]*\.png$/.test(value||'');
+  if(!webp&&!png)throw Error('Expected reviewed Import raster asset');
   const re=new RegExp('((?:["\x27])?'+key+'(?:["\x27])?\\s*:\\s*)(["\x27])[^"\x27]*\\2','g');
   let count=0;
   block=block.replace(re,(_all,prefix)=>{count++;return prefix+JSON.stringify(value);});

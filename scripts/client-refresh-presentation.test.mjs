@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
-import { refreshAdapterInternals } from './lib/client-refresh-adapters.mjs';
+import { refreshAdapterInternals, patchAutoBestLocale } from './lib/client-refresh-adapters.mjs';
 import { assertTemplatePresentation, restoreTemplatePalette } from './lib/client-refresh-presentation.mjs';
 
 const write = (root, relative, content) => {
@@ -195,4 +195,42 @@ test('missing, duplicate or computed palette declarations fail without modifying
   }
   const badNative=paletteFixture(t,'modern',`export const leadSite = {name: 'Template'};`,`export const leadSite = {accent: '#176b43'};`);
   assert.throws(()=>restoreTemplatePalette(badNative),/palette fields/);
+});
+test('Auto Best publishes only recorded social profiles, with missing profiles empty', () => {
+  const profile = {business:{name:'Priselci',city:'Варна',address:'Recorded address',phoneE164:'+359886251705',socialLinks:{}}};
+  const empty = refreshAdapterInternals.autoBestBrand(profile, '/dealer/logo.png');
+  for (const platform of ['youtube','instagram','facebook']) assert.match(empty,new RegExp(platform+"Url: \"\""));
+  assert.doesNotMatch(empty,/https:\/\/www\.(youtube|instagram|facebook)\.com\//);
+  const recorded='https://www.youtube.com/@recorded-dealer';
+  const configured=refreshAdapterInternals.autoBestBrand({business:{...profile.business,socialLinks:{youtube:recorded}}},'/dealer/logo.png');
+  assert(configured.includes('youtubeUrl: '+JSON.stringify(recorded)));
+  assert.match(configured,/instagramUrl: \`https:\/\/\$\{string\}\` \| ''/);
+  assert.match(configured,/facebookUrl: \`https:\/\/\$\{string\}\` \| ''/);
+});
+
+test('Auto Best preserves native bilingual short address and hours consumers in config and catalog', t => {
+  const root=fs.mkdtempSync(path.join(os.tmpdir(),'cars-native-dealer-text-'));
+  t.after(()=>{const real=fs.realpathSync(root);assert(path.dirname(real)===fs.realpathSync(os.tmpdir())&&path.basename(real).startsWith('cars-native-dealer-text-'));fs.rmSync(real,{recursive:true,force:true});});
+  const keys=['city','addressLine','address','appointment','addressShort','appointmentShort'];
+  write(root,'localization/dealer.reviewed.json',JSON.stringify(keys.map(key=>({key:'dealer.'+key,source:'Old donor',en:'Old donor',bg:'Old donor'}))));
+  write(root,'src/lib/config/locale.ts',"import {carsLocale} from './cars-locale';\nexport const dealerLocaleConfiguration = { formatLocales: { en: 'en-GB', bg: 'bg-BG' }, suggestedLanguages: { BG: 'bg' } };\nexport const dealerLocalizedText = {} as const;\n");
+  const profile={business:{slug:'priselci',name:'Автокъща Приселци',shortName:'Priselci',city:'Варна',country:'България',countryCode:'BG',addressLine:'бул. „Цар Освободител“ 285',address:'бул. „Цар Освободител“ 285',hours:'Работното време се уточнява по телефона.'}};
+  patchAutoBestLocale(root,profile);
+  const source=fs.readFileSync(path.join(root,'src/lib/config/locale.ts'),'utf8');
+  const text=JSON.parse(source.match(/export const dealerLocalizedText = ([\s\S]*?) as const;/)[1]);
+  assert.equal(text.bg.addressShort,profile.business.addressLine);
+  assert.equal(text.bg.appointmentShort,profile.business.hours);
+  assert.equal(text.en.addressShort,'285 Tsar Osvoboditel Blvd.');
+  assert.equal(text.en.appointmentShort,'Call to confirm opening hours.');
+  const rows=JSON.parse(fs.readFileSync(path.join(root,'localization/dealer.reviewed.json')));
+  for(const locale of ['en','bg']) for(const field of ['addressShort','appointmentShort']) assert.equal(rows.find(r=>r.key==='dealer.'+field)[locale],text[locale][field]);
+  assert.doesNotMatch(source,/Old donor/);
+});
+
+test('Modern scalar refresh updates top-level facts while preserving nested copy and surrounding composition', () => {
+  const source="// outside\n  address: 'Unrelated outside',\n// LEAD_SITE_CONFIG_START\nexport const leadSite = {\n  localizedCopy: {\n    bg: { address: 'Nested address', tagline: 'Nested tagline' },\n  },\n  address: 'Donor address',\n  tagline: 'Unsupported donor claim',\n  accent: '#30343b',\n};\n// LEAD_SITE_CONFIG_END\n";
+  const withAddress=refreshAdapterInternals.replaceLeadScalar(source,'address','бул. „Цар Освободител“ 285');
+  const refreshed=refreshAdapterInternals.replaceLeadScalar(withAddress,'tagline','Priselci — vehicles and dealer support in Varna.');
+  assert.equal(refreshed,source.replace("  address: 'Donor address',",'  address: "бул. „Цар Освободител“ 285",').replace("  tagline: 'Unsupported donor claim',",'  tagline: "Priselci — vehicles and dealer support in Varna.",'));
+  assert.throws(()=>refreshAdapterInternals.replaceLeadScalar(source.replace("  address: 'Donor address',","  address: 'One',\n  address: 'Two',"),'address','Dealer'),/Ambiguous top-level/);
 });

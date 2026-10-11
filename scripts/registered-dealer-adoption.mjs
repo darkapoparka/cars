@@ -171,11 +171,20 @@ export function materializeRegisteredAssetView(plan,{runDirectory,candidateDirec
  if(candidateDirectory){const candidate=path.resolve(candidateDirectory);assert(candidate!==directory&&!candidate.startsWith(directory+path.sep)&&!directory.startsWith(candidate+path.sep),'asset view cannot overlap candidate source');}
  fs.mkdirSync(directory);for(const key of ['auto-best','modern','import'])fs.mkdirSync(path.join(directory,key));
  for(const [publicName,bytes]of proof.assetBytes){const name=publicName.slice(1),file=inside(directory,name);assert(plan.profile.logoContract?.assets&&sha256(bytes)===JSON.parse(plan.files.get(REGISTERED_PROFILE_FILE)).media.find(p=>p.publicPath===publicName)?.sha256,'private reviewed asset bytes differ');fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,bytes,{flag:'wx'});}
- proof.assetView={directory,files:new Map([...proof.assetBytes].map(([name,bytes])=>[name.slice(1),sha256(bytes)]))};return directory;
+ const light=plan.profile.logoContract.assets.onLight,filePins=new Map([...proof.assetBytes].map(([name,bytes])=>[name.slice(1),sha256(bytes)]));let legacyAlias=null;
+ if(/\.png$/i.test(light.publicPath)){
+  const lightBytes=proof.assetBytes.get(light.publicPath);assert(lightBytes&&sha256(lightBytes)===light.sha256,'legacy logo alias requires the sealed onLight PNG');
+  const alias='branding/logo-on-light.png',aliasFile=inside(directory,alias),sourceFile=inside(directory,light.publicPath.slice(1),{mustExist:true});
+  if(fs.existsSync(aliasFile))assert(fs.lstatSync(aliasFile).isFile()&&sha256(fs.readFileSync(aliasFile))===light.sha256,'legacy logo alias destination has different bytes');
+  else{fs.mkdirSync(path.dirname(aliasFile),{recursive:true});fs.linkSync(sourceFile,aliasFile);}
+  filePins.set(alias,light.sha256);legacyAlias={path:alias,sha256:light.sha256,sourcePublicPath:light.publicPath};
+ }
+ proof.assetView={directory,files:filePins,legacyAlias};return directory;
 }
 
 export function assertRegisteredAssetView(plan,directory){
  assertRegisteredAdoptionPlan(plan);const view=plans.get(plan).assetView;assert(view&&fs.realpathSync(directory)===view.directory,'authenticated registered asset view required');
+ const light=plan.profile.logoContract.assets.onLight;if(/\.png$/i.test(light.publicPath))assert(view.legacyAlias?.path==='branding/logo-on-light.png'&&view.legacyAlias.sha256===light.sha256&&view.legacyAlias.sourcePublicPath===light.publicPath&&view.files.get(view.legacyAlias.path)===light.sha256,'legacy logo alias proof changed');else assert(view.legacyAlias===null,'WebP source must not acquire a derived PNG alias');
  assert(same(filesAt(directory,{filter:()=>true}).sort(),[...view.files.keys()].sort()),'registered asset view inventory changed');for(const [name,digest]of view.files){const file=inside(directory,name,{mustExist:true});assert(fs.lstatSync(file).isFile()&&sha256(fs.readFileSync(file))===digest,'registered asset view bytes changed');}return directory;
 }
 

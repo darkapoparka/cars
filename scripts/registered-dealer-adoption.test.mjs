@@ -12,6 +12,7 @@ import {loadDealerProfile} from './lib/client-refresh-normalize.mjs';
 import {nativeFixture} from './test-fixtures/native-source.mjs';
 import {refreshAdapterInternals} from './lib/client-refresh-adapters.mjs';
 import {prepareAppDealer} from './lib/app-dealer-adapter.mjs';
+import {applyDealerLogoContract} from './lib/client-logo-contract.mjs';
 
 const enc=v=>Buffer.from(JSON.stringify(v,null,2)+'\n');
 const families=['auto-best','modern','import','app','mobile','karento-best'];
@@ -157,4 +158,26 @@ test('retained clean Git-tree copy receipts prove the same exact old base and ca
  const f=fixture(t),name='modern/.template/source-manifest.json',value={sourceRepository:'darkapoparka/cars',sourcePath:'templates/modern',sourceCommit:f.receipt.templateSources.modern.revision,sourceTree:f.receipt.templateSources.modern.tree};
  const update=()=>{const bytes=enc(value);writeFixture(path.join(f.dealerRoot,name),bytes);f.baseline.files.set(name,bytes);const existing=f.baseline.entries.findIndex(e=>e.path===name);if(existing>=0)f.baseline.entries.splice(existing,1);f.baseline.entries.push({path:name,mode:'100644',blob:gitObjectId('blob',bytes)});f.baseline.entries.sort((a,b)=>a.path.localeCompare(b.path,'en'));f.baseline.tree=gitTreeId(f.baseline.entries);f.receipt.baseline.tree=f.baseline.tree;f.receipt.provenance.modern.copyReceipt={path:name,sha256:sha256(bytes)};};
  update();assert.equal(f.plan().published,false);value.sourceTree='0'.repeat(40);update();assert.throws(f.plan,/copy receipt does not prove/);value.sourceTree=f.receipt.templateSources.modern.tree;value.git={dirtyStatusRecorded:true};update();assert.throws(f.plan,/dirty copied template base/);
+});
+
+test('registered legacy logo alias uses only the exact sealed onLight PNG and satisfies the maintained alias consumer',t=>{
+    const f=demoFixture(t);addPublishedBranding(f);const p=f.plan(),run=path.join(f.root,'runtime','logo-alias-run');fs.mkdirSync(run,{recursive:true});const view=materializeRegisteredAssetView(p,{runDirectory:run});
+    const light=p.profile.logoContract.assets.onLight,source=path.join(view,light.publicPath.slice(1)),alias=path.join(view,'branding/logo-on-light.png');assert(fs.lstatSync(alias).isFile());assert.equal(sha256(fs.readFileSync(alias)),light.sha256);assert(fs.readFileSync(alias).equals(fs.readFileSync(source)));assertRegisteredAssetView(p,view);
+    const candidate=path.join(run,'logo-consumer');writeFixture(path.join(candidate,'src/lib/config/brand.ts'),'export const brand = {logo: "/old.png",logoOnDark: "/old-dark.png"};\n');writeFixture(path.join(candidate,'src/lib/components/Footer.svelte'),'<img src={brand.logo} />\n');
+    applyDealerLogoContract({key:'auto-best',oldVariant:path.join(view,'auto-best'),candidate,profile:p.profile});assert(fs.readFileSync(path.join(candidate,'static/assets/images/lead/day-night-logo.png')).equals(fs.readFileSync(source)));assert.match(fs.readFileSync(path.join(candidate,'src/lib/components/Footer.svelte'),'utf8'),/brand.logoOnDark/);assertRegisteredAssetView(p,view);assert.equal(fs.existsSync(path.join(f.dealerRoot,'branding/logo-on-light.png')),false);
+  });
+  test('registered legacy logo alias refuses missing or changed exact bytes without adopting source',t=>{
+    for(const mode of ['missing','changed']){const f=demoFixture(t),p=f.plan(),run=path.join(f.root,'runtime',mode+'-alias-run');fs.mkdirSync(run,{recursive:true});const view=materializeRegisteredAssetView(p,{runDirectory:run}),alias=path.join(view,'branding/logo-on-light.png');if(mode==='missing')fs.unlinkSync(alias);else fs.writeFileSync(alias,Buffer.from('changed PNG bytes'));assert.throws(()=>assertRegisteredAssetView(p,view),/inventory changed|bytes changed/);assert.equal(fs.existsSync(path.join(f.dealerRoot,'dealer.json')),false);assertRegisteredAdoptionPlan(p);}
+  });
+
+
+test('registered WebP asset view retains authenticated originals and never relabels them as a PNG alias',t=>{
+ const f=fixture(t),original=f.baseline.files.get('carwow/static/dealer/photo-123.webp');f.personalization.facts.business.logo='/dealer/logo.webp';f.personalization.facts.business.logoDark='/dealer/logo.webp';f.personalization.media[0]={publicPath:'/dealer/logo.webp',sourcePath:'carwow/static/dealer/photo-123.webp',sha256:sha256(original)};f.receipt.personalization.sha256=sha256(enc(f.personalization));
+ const p=f.plan(),run=path.join(f.root,'runtime','webp-view-run');fs.mkdirSync(run,{recursive:true});const view=materializeRegisteredAssetView(p,{runDirectory:run});assertRegisteredAssetView(p,view);const actual=fs.readFileSync(path.join(view,'dealer/logo.webp'));assert(actual.equals(original));assert.equal(sha256(actual),p.profile.logoContract.assets.onLight.sha256);assert.equal(fs.existsSync(path.join(view,'branding/logo-on-light.png')),false);assert(f.baseline.files.get('auto-best/static/dealer/logo.png').equals(fs.readFileSync(path.join(f.dealerRoot,'auto-best/static/dealer/logo.png'))));assertRegisteredAdoptionPlan(p);
+ fs.appendFileSync(path.join(view,'dealer/logo.webp'),'changed');assert.throws(()=>assertRegisteredAssetView(p,view),/bytes changed/);
+});
+
+
+test('registered WebP asset view preserves an independently authenticated original PNG at the legacy path',t=>{
+ const f=fixture(t),webp=f.baseline.files.get('carwow/static/dealer/photo-123.webp'),png=f.baseline.files.get('auto-best/static/dealer/logo.png');f.personalization.facts.business.logo='/dealer/logo.webp';f.personalization.facts.business.logoDark='/dealer/logo.webp';f.personalization.media[0]={publicPath:'/dealer/logo.webp',sourcePath:'carwow/static/dealer/photo-123.webp',sha256:sha256(webp)};f.personalization.media.push({publicPath:'/branding/logo-on-light.png',sourcePath:'auto-best/static/dealer/logo.png',sha256:sha256(png)});f.receipt.personalization.sha256=sha256(enc(f.personalization));const p=f.plan(),run=path.join(f.root,'runtime','webp-original-png-view');fs.mkdirSync(run,{recursive:true});const view=materializeRegisteredAssetView(p,{runDirectory:run});assertRegisteredAssetView(p,view);const retained=fs.readFileSync(path.join(view,'branding/logo-on-light.png'));assert(retained.equals(png));assert(!retained.equals(webp));assert(fs.readFileSync(path.join(view,'dealer/logo.webp')).equals(webp));assertRegisteredAdoptionPlan(p);fs.appendFileSync(path.join(view,'branding/logo-on-light.png'),'changed');assert.throws(()=>assertRegisteredAssetView(p,view),/bytes changed/);
 });
