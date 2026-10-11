@@ -4,6 +4,7 @@ export const AUTO_BEST_CARD_LAYOUT_VERSION = 'single-row-mobile-filters-v1';
 export const AUTO_BEST_CARD_LAYOUT_CSS = `@media (max-width: 767px) {
   html .dn-vehicle-card.dn-vehicle-card .dn-vehicle-card__mobile-meta { flex-wrap: nowrap; }
   html .dn-vehicle-card.dn-vehicle-card .dn-vehicle-card__fact { flex: 1 1 auto; min-width: 0; }
+  html .dn-vehicle-card.dn-vehicle-card .dn-vehicle-card__fact:first-child { flex-shrink: 0; }
   html .dn-vehicle-card.dn-vehicle-card .dn-vehicle-card__fact > span:not(.dn-sr-only) { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .dn-detail-finance-trigger__logo img { object-position: left center; }
   html .dn-app-shell dialog .dn-mobile-overlay-heading.dn-mobile-filter-header { display: grid; grid-template-columns: var(--dn-control-hit-height) minmax(0, 1fr) var(--dn-control-hit-height); }

@@ -545,6 +545,9 @@
       padding-inline: var(--dn-space-2);
     }
 
+    /* The first fact is the year; variable-length facts absorb truncation. */
+    .dn-vehicle-card__fact:first-child { flex-shrink: 0; }
+
     .dn-vehicle-card__fact > span:not(.dn-sr-only) {
       display: block;
       min-width: 0;
