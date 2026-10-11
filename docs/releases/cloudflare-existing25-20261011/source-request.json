@@ -79,7 +79,7 @@
   "draft": false,
   "publishable": false,
   "reviewed": true,
-  "reviewedAt": "2026-10-11T23:09:11.300Z",
+  "reviewedAt": "2026-10-11T23:58:44.827Z",
   "qualificationOnly": true,
   "approved": false,
   "nativeApproval": false,
@@ -88,12 +88,12 @@
   "allSixFrozen": true,
   "pending": [
     "Own source-only60 conflict choices and exact3 clean Import template-palette targets are concrete and reviewed; the guarded producer is actually published at 3d758430eb41beb3f3666bf7114d7ee0fc378d3c.",
-    "Actual source CI must replay each unchanged own baseline, mounted target and factual consumer proof, then seal final native/catalog/branding/App/source envelopes before candidate publication.",
+    "Maintained CI must regenerate the same three source candidates with final derived-logo metadata, preserve reviewed own baselines/facts/raster bytes/choices, and reseal native/catalog/branding/App/source envelopes before candidate publication.",
     "Actual S2 pilot qualification, per-dealer build and hosted acceptance remain deployment gates; all native/hosted/global/owner approval flags remain false."
   ],
   "sourcePreparationCode": {
-    "sourceCommit": "3d758430eb41beb3f3666bf7114d7ee0fc378d3c",
-    "scope": "Actual published maintained producer with explicit reviewed ordinary clean Import consumer choices; current CI event ancestry/exact producer and unchanged own client trees must be checked."
+    "sourceCommit": "cdb71f380e6c5ddfed0fd420b32db23c13989ff5",
+    "scope": "Maintained published producer includes final derived profile logo-contract correction; regenerate the same three held source candidates and reseal native/catalog/branding/App/source receipts. Preserve original identities, facts, stock, raster bytes, mounts and individually reviewed choices."
   },
   "sourceOnlyReview": {
     "baselineCommit": "3d758430eb41beb3f3666bf7114d7ee0fc378d3c",
@@ -107,5 +107,16 @@
     "reviewedCleanTargets": 3,
     "independentReviewPending": true,
     "producerCodeAccepted": true
+  },
+  "regeneration": {
+    "kind": "derived-profile-logo-contract-reseal",
+    "previousRunId": 38183308529,
+    "previousEvent": "79ce1e49e393d1cbea32df51077a27e8a898b8ec",
+    "reason": "Nine final derived profile contracts across three dealers must match physically reviewed raster paths/SHA/bytes after producer correction.",
+    "sourceReady": false,
+    "nativeApproval": false,
+    "hostedApproval": false,
+    "globalReleaseApproval": false,
+    "ownerAccepted": false
   }
 }
