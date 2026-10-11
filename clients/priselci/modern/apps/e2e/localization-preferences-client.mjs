@@ -1,9 +1,11 @@
 import { chromium } from "@playwright/test";
 import {
   assert,
+  assertBoundary,
   blockBusinessWrites,
   check,
   finish,
+  hostedProfile,
   mount,
   openPreferences,
   origin,
@@ -44,7 +46,8 @@ async function fixture(
     locale: locale === "en" ? "en-GB" : "bg-BG",
     javaScriptEnabled,
   });
-  await blockBusinessWrites(context, { preferences: false });
+  const liveNoJs = Boolean(hostedProfile && !javaScriptEnabled);
+  const blocked = await blockBusinessWrites(context, { preferences: liveNoJs });
   if (dismissed) {
     await context.addCookies([
       {
@@ -68,9 +71,18 @@ async function fixture(
   }
   const requests = [],
     waiting = [];
+  const responses = [];
   const control = { mode: "normal" };
-  // All preference POSTs are fulfilled in the test process. No live preference endpoint is called.
-  await context.route(url("/api/preferences"), async (route) => {
+  if (liveNoJs) {
+    context.on('response', response => {
+      if (response.url() === url('/api/preferences') && response.request().method() === 'POST') {
+        requests.push(Object.fromEntries(new URLSearchParams(response.request().postData() ?? '')));
+        responses.push({ status: response.status(), location: response.headers().location ?? null });
+      }
+    });
+  }
+  // Controlled client races stay mocked. The hosted no-JS profile alone uses the live native form endpoint.
+  if (!liveNoJs) await context.route(url("/api/preferences"), async (route) => {
     const request = route.request();
     let data;
     if (request.headers()["content-type"]?.includes("application/json")) {
@@ -148,6 +160,8 @@ async function fixture(
     context,
     page,
     requests,
+    responses,
+    liveNoJs,
     control,
     errors,
     release: () => {
@@ -160,6 +174,7 @@ async function fixture(
         resolve();
       }
       await context.close();
+      if (hostedProfile) assertBoundary(blocked);
     },
   };
 }
@@ -390,9 +405,18 @@ try {
             await f.page.locator("html").getAttribute("lang"),
             other
           );
+          if (f.liveNoJs) {
+            assert.ok(f.responses.some(response => response.status === 303), 'Native preference POST must return its live 303');
+            const cookies = await f.context.cookies();
+            assert.equal(cookies.find(cookie => cookie.name === 'cars_locale')?.value, other);
+            assert.equal(cookies.find(cookie => cookie.name === 'cars_country')?.value, 'DE');
+            await f.page.reload();
+            assert.equal(await f.page.locator('html').getAttribute('lang'), other);
+          }
           return {
             requests: f.requests,
-            endpoint: "mocked 303; actual native form/navigation without JS",
+            responses: f.responses,
+            endpoint: f.liveNoJs ? 'live preference POST/303; actual native form/navigation without JS' : "mocked 303; actual native form/navigation without JS",
           };
         } finally {
           await f.close();

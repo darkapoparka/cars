@@ -2,16 +2,16 @@
   "schemaVersion": 1,
   "dealer": "priselci",
   "kind": "personalized-source-candidate-not-an-approved-release",
-  "sourceRevision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
-  "candidateSourceDigest": "2b61cfc11b74479d35e99ecf9a2b1e13d1c8ff472afd06f583bafc943316cb77",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "917b3857c13176da1483691b17a272c14fb3ff4d062fc6eca2ab523af91937c6",
   "qualificationContextPath": ".client/native-qualification-context.json",
-  "qualificationContextSha256": "94c4dc3299ab665c49321b877f3478ad5a1f9a81f92d3b6d03ed4b94259c7a45",
+  "qualificationContextSha256": "1ad4b86583d78e5aa6cd6f776fb3c6b9ea743453b5ee2d9e7cbd008fcdabed35",
   "qualificationLockPath": ".client/native-qualification-lock.json",
-  "qualificationLockSha256": "8c656270f65688bd10b8ca3699ec2552c65671ba2089e245ee464ce83f239a23",
+  "qualificationLockSha256": "37b9b5262ccee1129081a1c89ea7ad88f9b25156f10f5880b4a2d708492cfb01",
   "sourceDeltaReview": {
-    "reference": "docs/releases/cloudflare-existing25-20261011/source-delta-review.json",
-    "sha256": "004baea237ee6702644791d7877a53f9bf5cf65add62624ac0f3900f32dbde04",
-    "reviewedAt": "2026-10-11T12:45:51.683Z"
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
   },
   "nativeApproval": false,
   "hostedApproval": false

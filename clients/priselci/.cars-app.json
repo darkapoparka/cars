@@ -3,7 +3,7 @@
   "dealer": "priselci",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
     "path": "templates/app",
     "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
     "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
@@ -517,5 +517,5 @@
   },
   "needsDealerQA": true,
   "readyToPublish": false,
-  "refreshedAt": "2026-10-11T19:29:20.030Z"
+  "refreshedAt": "2026-10-11T22:17:46.873Z"
 }

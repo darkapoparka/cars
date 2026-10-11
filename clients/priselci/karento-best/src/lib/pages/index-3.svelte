@@ -79,9 +79,6 @@
 <style>
   @media (max-width: 767.98px) {
     .original-home-hero {
-      --karento-mobile-hero-height: 240px;
-      --karento-mobile-hero-copy-top: 88px;
-      --karento-mobile-hero-copy-bottom: 48px;
       --karento-mobile-hero-shade: linear-gradient(
         180deg,
         rgb(0 0 0 / 52%),
@@ -95,13 +92,6 @@
     }
     .original-home-hero :global(.item-banner-slide .container) {
       text-align: center !important;
-    }
-    .original-home-hero :global(h1) {
-      max-width: none;
-      margin-inline: auto !important;
-    }
-    .original-home-hero :global(h6) {
-      margin-inline: auto;
     }
   }
   @media (min-width: 992px) {

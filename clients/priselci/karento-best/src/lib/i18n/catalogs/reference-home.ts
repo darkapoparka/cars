@@ -5,6 +5,9 @@ export const referenceHomeEn = {
   "referenceHome.services.lease": "Lease",
   "referenceHome.services.previewDescription":
     "Explore sample vehicle services and discuss what you need.",
+  "referenceHome.services.exampleDescription": "Service example",
+  "referenceHome.brands.datedIntro": "Explore examples from dated vehicle listings.",
+  "referenceHome.brands.illustrativeIntro": "Explore sample vehicles for this demo.",
   "referenceHome.testimonials.previewLabel": "Sample testimonials",
   "referenceHome.testimonials.vehicleQuote":
     "The vehicle details helped me compare the options and prepare my questions before contacting the team.",
@@ -80,6 +83,9 @@ export const referenceHomeBg = {
   "referenceHome.services.lease": "Лизинг",
   "referenceHome.services.previewDescription":
     "Разгледайте примерните автомобилни услуги и обсъдете от какво имате нужда.",
+  "referenceHome.services.exampleDescription": "Примерна услуга",
+  "referenceHome.brands.datedIntro": "Разгледайте примерите от датираните обяви.",
+  "referenceHome.brands.illustrativeIntro": "Разгледайте примерните автомобили в това демо.",
   "referenceHome.testimonials.previewLabel": "Примерни отзиви",
   "referenceHome.testimonials.vehicleQuote":
     "Информацията за автомобилите ми помогна да сравня вариантите и да подготвя въпросите си, преди да се свържа с екипа.",
