@@ -1705,7 +1705,7 @@
             "bg": "bg"
           },
           "keys": 1128,
-          "contentDigest": "5fa2cb4079dbf375301f72e2ca5096f4f4c717044132938e7991541aa008c99c"
+          "contentDigest": "4d2ee267743a6ae261fac2940ec4ae92d2ad32ac1a6783cfa1487259650d9a9e"
         }
       ],
       "declaredCatalogParityPassed": true,
@@ -1802,8 +1802,8 @@
             "path": "src/lib/content/extra-localized.ts",
             "export": "extraEnglish"
           },
-          "keys": 90,
-          "contentDigest": "2883202659d2ddcd4ceff12c83aa362cf79c4f307f95b010641df7e06a14448c"
+          "keys": 93,
+          "contentDigest": "730541af9720073a62af473149f9a3d86a2562eee4af29151070c4272c758797"
         }
       ],
       "declaredCatalogParityPassed": true,
@@ -1811,7 +1811,7 @@
     }
   },
   "input": {
-    "digest": "e5a2ee706f0d2abff143ebbad5957bd73296887407149e265166cf95cd1d72b4",
+    "digest": "b79f4d98ba1eac28e61c5ad8257f3f397bfb914501107ed53f90dc22c0a7e2e0",
     "files": 9255
   },
   "nativeApproval": false,

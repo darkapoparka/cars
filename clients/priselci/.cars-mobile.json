@@ -10,14 +10,14 @@
     "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
     "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
   },
-  "sourceDigest": "891986d0b8ec53bfae35b5f16140e785b113c99520351fc6afa62e196d1ae33b",
+  "sourceDigest": "96be3283b976d529e572e4c3852ce367f723816c57c62cc0542deaff7aed0973",
   "inventory": {
     "mode": "dated-listing-snapshot",
     "count": 16,
     "observedAt": "2026-09-07"
   },
   "personalization": {
-    "profileSha256": "8fc3358aaa9af5fd52f1b7b4e03eaf2fac7b8c3557fbb4d30d92bfd469462f6c",
+    "profileSha256": "fa6979c4e08441baf08a12c44e14ae851b7c1368b6a348c7fd9885c2c1561258",
     "logoPaths": [
       "/dealer-brand/logo-on-light-20260919.webp",
       "/dealer-brand/logo-on-dark-20260919.webp"
@@ -100,7 +100,13 @@
       "mobile/src/components/DealerScreens.tsx",
       "mobile/src/components/VehicleCard.tsx",
       "mobile/src/components/ShowroomVehicleCard.tsx",
-      "mobile/src/components/VehicleSections.tsx"
+      "mobile/src/components/VehicleSections.tsx",
+      "mobile/src/lib/mobile-mileage.ts",
+      "mobile/src/lib/types.ts",
+      "mobile/src/components/DesktopVehicleSummary.tsx",
+      "mobile/src/components/NativeCarPark.tsx",
+      "mobile/src/components/ShowroomFilterSheet.tsx",
+      "mobile/src/lib/vehicle-copy.ts"
     ]
   },
   "needsDealerQA": true,

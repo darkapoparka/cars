@@ -1,6 +1,5 @@
 import { formatPrice, localeContract, type Locale } from '$lib/locale/core';
 import { templateText } from '$lib/locale/messages';
-import { leadSite } from '$config/lead-site';
 
 export const vehicleTypes = ['car', 'motorbike', 'van', 'truck'] as const;
 export type VehicleType = typeof vehicleTypes[number];
@@ -25,15 +24,14 @@ export type Vehicle = {
   category: string;
   body: string;
   make: string;
-  /** Optional manufacturer sub-brand used by compact card identity. */
-  cardBrand?: string;
-  /** Seller-supplied highlight by locale; import/condition claims require record-specific evidence. */
-  cardNote?: Partial<Record<Locale, string>>;
   title: string;
   year: string;
   yearNumber: number;
   mileage: string;
   mileageKm: number;
+  mileageKnown?: boolean;
+  mileageValue?: number;
+  mileageUnit?: 'km' | 'mi';
   fuel: string;
   transmission: string;
   equipment: readonly VehicleEquipment[];
@@ -42,16 +40,11 @@ export type Vehicle = {
   href: `/listing-detail-v1/${number}`;
 };
 
-// Equipment facets are limited to recurring features published in Day & Night's
-// current adverts for these model families (daynight.mobile.bg, checked 2026-08-30).
-
-
-// Imported master fixtures are not VIN-verified stock. Preserve source media;
-// client promotion requires replacing and verifying each record, including reused photos.
 export const featuredVehicles: Vehicle[] = [
   {
     "id": 1,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://priselci.mobile.bg/obiava-11784527405061757-vw-golf-1-4-benzin",
     "image": "/assets/priselci/vehicle-01-1.webp",
     "category": "Hatchback",
@@ -62,17 +55,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2007,
     "mileage": "235 193 км",
     "mileageKm": 235193,
+    "mileageKnown": true,
+    "mileageValue": 235193,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Ръчна",
     "equipment": [],
     "condition": "used",
     "priceEur": 3600,
-    "href": "/listing-detail-v1/1",
-    "type": "car"
+    "href": "/listing-detail-v1/1"
   },
   {
     "id": 2,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://priselci.mobile.bg/obiava-11758270885113337-vw-passat-1-4-benzin",
     "image": "/assets/priselci/vehicle-02-1.webp",
     "category": "Wagon",
@@ -83,6 +79,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2010,
     "mileage": "179 848 км",
     "mileageKm": 179848,
+    "mileageKnown": true,
+    "mileageValue": 179848,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Ръчна",
     "equipment": [
@@ -90,12 +89,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 4299,
-    "href": "/listing-detail-v1/2",
-    "type": "car"
+    "href": "/listing-detail-v1/2"
   },
   {
     "id": 3,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://priselci.mobile.bg/obiava-11753962633467246-vw-passat-2-0tdi-commonrail",
     "image": "/assets/priselci/vehicle-03-1.webp",
     "category": "Wagon",
@@ -106,6 +105,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2008,
     "mileage": "210 534 км",
     "mileageKm": 210534,
+    "mileageKnown": true,
+    "mileageValue": 210534,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -113,12 +115,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 3900,
-    "href": "/listing-detail-v1/3",
-    "type": "car"
+    "href": "/listing-detail-v1/3"
   },
   {
     "id": 4,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://priselci.mobile.bg/obiava-11784527857493559-seat-ibiza-1-2-benzin",
     "image": "/assets/priselci/vehicle-04-1.webp",
     "category": "Hatchback",
@@ -129,17 +131,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2010,
     "mileage": "175 532 км",
     "mileageKm": 175532,
+    "mileageKnown": true,
+    "mileageValue": 175532,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Ръчна",
     "equipment": [],
     "condition": "used",
     "priceEur": 3499,
-    "href": "/listing-detail-v1/4",
-    "type": "car"
+    "href": "/listing-detail-v1/4"
   },
   {
     "id": 5,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://priselci.mobile.bg/obiava-21754395406651747-renault-koleos-2-0-dizel-4h4",
     "image": "/assets/priselci/vehicle-05-1.webp",
     "category": "SUV",
@@ -150,19 +155,22 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2010,
     "mileage": "181 246 км",
     "mileageKm": 181246,
+    "mileageKnown": true,
+    "mileageValue": 181246,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
       "4x4"
     ],
     "condition": "used",
-    "priceEur": 44299,
-    "href": "/listing-detail-v1/5",
-    "type": "car"
+    "priceEur": 4299,
+    "href": "/listing-detail-v1/5"
   },
   {
     "id": 6,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://priselci.mobile.bg/obiava-11781856640282742-peugeot-307-cc-kabrio",
     "image": "/assets/priselci/vehicle-06-1.webp",
     "category": "Convertible",
@@ -173,6 +181,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2006,
     "mileage": "205 664 км",
     "mileageKm": 205664,
+    "mileageKnown": true,
+    "mileageValue": 205664,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Ръчна",
     "equipment": [
@@ -181,12 +192,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 2899,
-    "href": "/listing-detail-v1/6",
-    "type": "car"
+    "href": "/listing-detail-v1/6"
   },
   {
     "id": 7,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://priselci.mobile.bg/obiava-11759747090481666-ford-mondeo-2-0-dizel",
     "image": "/assets/priselci/vehicle-07-1.webp",
     "category": "Wagon",
@@ -197,17 +208,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2009,
     "mileage": "235 788 км",
     "mileageKm": 235788,
+    "mileageKnown": true,
+    "mileageValue": 235788,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [],
     "condition": "used",
     "priceEur": 3299,
-    "href": "/listing-detail-v1/7",
-    "type": "car"
+    "href": "/listing-detail-v1/7"
   },
   {
     "id": 8,
-    "verification": "verified",
+    "type": "van",
+    "verification": "sample",
     "evidenceUrl": "https://priselci.mobile.bg/obiava-11776863022154449-peugeot-5008-2-0hdi-150k-s",
     "image": "/assets/priselci/vehicle-08-1.webp",
     "category": "Minivan",
@@ -218,6 +232,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2011,
     "mileage": "210 452 км",
     "mileageKm": 210452,
+    "mileageKnown": true,
+    "mileageValue": 210452,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -227,12 +244,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 5099,
-    "href": "/listing-detail-v1/8",
-    "type": "car"
+    "href": "/listing-detail-v1/8"
   },
   {
     "id": 9,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://priselci.mobile.bg/obiava-11751891575433302-mercedes-benz-c-200-2-2-cdi",
     "image": "/assets/priselci/vehicle-09-1.webp",
     "category": "Wagon",
@@ -243,6 +260,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2004,
     "mileage": "218 432 км",
     "mileageKm": 218432,
+    "mileageKnown": true,
+    "mileageValue": 218432,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -251,12 +271,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 2799,
-    "href": "/listing-detail-v1/9",
-    "type": "car"
+    "href": "/listing-detail-v1/9"
   },
   {
     "id": 10,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://priselci.mobile.bg/obiava-11787126157294169-citroen-c3-picasso-1-6hdi-90k-s",
     "image": "/assets/priselci/vehicle-10-1.webp",
     "category": "Hatchback",
@@ -267,17 +287,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2010,
     "mileage": "185 783 км",
     "mileageKm": 185783,
+    "mileageKnown": true,
+    "mileageValue": 185783,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [],
     "condition": "used",
     "priceEur": 3499,
-    "href": "/listing-detail-v1/10",
-    "type": "car"
+    "href": "/listing-detail-v1/10"
   },
   {
     "id": 11,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://priselci.mobile.bg/obiava-11784638939574277-audi-a3-1-9-tdi-105ps",
     "image": "/assets/priselci/vehicle-11-1.webp",
     "category": "Hatchback",
@@ -288,6 +311,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2009,
     "mileage": "253 746 км",
     "mileageKm": 253746,
+    "mileageKnown": true,
+    "mileageValue": 253746,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -295,12 +321,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 4699,
-    "href": "/listing-detail-v1/11",
-    "type": "car"
+    "href": "/listing-detail-v1/11"
   },
   {
     "id": 12,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://priselci.mobile.bg/obiava-11779190417819998-dacia-sandero-1-4-benzin-gaz",
     "image": "/assets/priselci/vehicle-12-1.webp",
     "category": "Hatchback",
@@ -311,17 +337,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2009,
     "mileage": "136 016 км",
     "mileageKm": 136016,
+    "mileageKnown": true,
+    "mileageValue": 136016,
+    "mileageUnit": "km",
     "fuel": "Бензин",
     "transmission": "Ръчна",
     "equipment": [],
     "condition": "used",
     "priceEur": 2500,
-    "href": "/listing-detail-v1/12",
-    "type": "car"
+    "href": "/listing-detail-v1/12"
   },
   {
     "id": 13,
-    "verification": "verified",
+    "type": "van",
+    "verification": "sample",
     "evidenceUrl": "https://priselci.mobile.bg/obiava-11770812815337634-renault-grand-scenic-1-5dci",
     "image": "/assets/priselci/vehicle-13-1.webp",
     "category": "Minivan",
@@ -332,6 +361,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2012,
     "mileage": "199 811 км",
     "mileageKm": 199811,
+    "mileageKnown": true,
+    "mileageValue": 199811,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -340,12 +372,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 4299,
-    "href": "/listing-detail-v1/13",
-    "type": "car"
+    "href": "/listing-detail-v1/13"
   },
   {
     "id": 14,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://priselci.mobile.bg/obiava-21786691566300206-bmw-x3-2-0-dizel-4h4",
     "image": "/assets/priselci/vehicle-14-1.webp",
     "category": "SUV",
@@ -356,17 +388,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2007,
     "mileage": "207 195 км",
     "mileageKm": 207195,
+    "mileageKnown": true,
+    "mileageValue": 207195,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [],
     "condition": "used",
-    "priceEur": 44399,
-    "href": "/listing-detail-v1/14",
-    "type": "car"
+    "priceEur": 4399,
+    "href": "/listing-detail-v1/14"
   },
   {
     "id": 15,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://priselci.mobile.bg/obiava-21787900875118991-nissan-qashqai-1-5-dci",
     "image": "/assets/priselci/vehicle-15-1.webp",
     "category": "SUV",
@@ -377,6 +412,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2012,
     "mileage": "192 641 км",
     "mileageKm": 192641,
+    "mileageKnown": true,
+    "mileageValue": 192641,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
@@ -384,12 +422,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 5499,
-    "href": "/listing-detail-v1/15",
-    "type": "car"
+    "href": "/listing-detail-v1/15"
   },
   {
     "id": 16,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://priselci.mobile.bg/obiava-11763969547989753-mercedes-benz-e-280-3-0cdi-v6",
     "image": "/assets/priselci/vehicle-16-1.webp",
     "category": "Sedan",
@@ -400,6 +438,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2005,
     "mileage": "208 357 км",
     "mileageKm": 208357,
+    "mileageKnown": true,
+    "mileageValue": 208357,
+    "mileageUnit": "km",
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
@@ -408,14 +449,12 @@ export const featuredVehicles: Vehicle[] = [
       "Парктроник"
     ],
     "condition": "used",
-    "priceEur": 64100,
-    "href": "/listing-detail-v1/16",
-    "type": "car"
+    "priceEur": 4100,
+    "href": "/listing-detail-v1/16"
   }
 ];
 
-export const formatVehiclePrice = (amount: number, locale: Locale = localeContract.defaultLocale) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
-
-/** Allow a currency line break while preserving the locale's grouped digits. */
-export const formatVehiclePriceLabel = (amount: number, locale: Locale = localeContract.defaultLocale) =>
-  formatVehiclePrice(amount, locale).replace(/([A-Z]{3}|\p{Sc})\s+/u, '$1 ').replace(/\s+([A-Z]{3}|\p{Sc})$/u, ' $1');
+export const formatVehiclePrice = (
+  amount: number,
+  locale: Locale = localeContract.defaultLocale
+) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
