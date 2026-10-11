@@ -26,12 +26,9 @@ import {applyCloudflareProvider} from './publishing/cloudflare-provider.mjs';
 import {applyCloudflareSvelte,CLOUDFLARE_SVELTE_OUTPUT} from './publishing/cloudflare-svelte.mjs';
 import {resolveCloudflareNpmCli} from './publishing/cloudflare-next.mjs';
 import {artifactInventory,copyBuildArtifact,assertCompiledConfig,safeArtifactPath} from './lib/uk-cloudflare-artifacts.mjs';
-import {selectPinnedRevisions} from './dealer-updates/three-way-upgrade.mjs';
-import {assertSixDesignSelection} from './lib/six-design-release.mjs';
 
 export const NODES=Object.freeze({'auto-best':'22.23.2',modern:'22.23.2',import:'24.21.0',app:'22.23.2',mobile:'22.23.2','karento-best':'26.10.0',router:'22.23.2'});
 export const FAMILIES=Object.keys(NODES).filter(k=>k!=='router');
-export const QUALIFICATION_LOCK_PATH='.client/native-qualification-lock.json';
 const NEXT=new Set(['modern','app','mobile']);
 const encode=v=>Buffer.from(JSON.stringify(v,null,2)+'\n');
 const hash=b=>createHash('sha256').update(b).digest('hex');
@@ -68,29 +65,14 @@ export function existingFleetBranding(files,manifest){
  // Optional staging logo contracts describe originals, not these derived aliases.
  return assertLeadBranding(files,manifest);
 }
-export function existingFleetQualifiedSources(manifest,context,qualificationLockBytes){
- if(!Buffer.isBuffer(qualificationLockBytes)||qualificationLockBytes.length>2*1024**2||hash(qualificationLockBytes)!==context.candidateLockSha256)throw Error('Exact reviewed qualification lock bytes are required');
- const lock=JSON.parse(qualificationLockBytes.toString('utf8'));
- if(lock.schemaVersion!==1||!lock.templates)throw Error('Invalid reviewed qualification lock');
- assertSixDesignSelection(manifest.variants);
- const pins=selectPinnedRevisions(manifest,lock,{qualification:context}),sources={};
- for(const {key}of manifest.variants){
-  const selected=pins[key].targetSource,actual=manifest.templateSources?.[key];
-  if(manifest.templateRevisions?.[key]!==pins[key].to||!actual||['repository','revision','path','tree','digest'].some(field=>(actual[field]??null)!==(selected[field]??null)))throw Error(key+': selected source differs from the reviewed qualification lock');
-  sources[key]=selected;
- }
- return sources;
-}
-export function existingFleetNativeSource(files,manifest,{candidate,qualificationBytes,qualificationLockBytes}={}){
+export function existingFleetNativeSource(files,manifest,{candidate,qualificationBytes}={}){
  const adoption=files.has(ADOPTION_FILE)?JSON.parse(files.get(ADOPTION_FILE).toString('utf8')):null,base=baseNativeManifest(manifest);
  if(adoption?.kind!==NATIVE_QUALIFICATION_KIND&&adoption?.schemaVersion!==2)return {kind:'approved-native-adoption',receipt:assertNativeAdoption(files,base)};
  if(candidate?.schemaVersion!==1||candidate.kind!=='personalized-source-candidate-not-an-approved-release'||candidate.dealer!==manifest.slug||candidate.qualificationContextPath!=='.client/native-qualification-context.json'||
    !Buffer.isBuffer(qualificationBytes)||!/^[a-f0-9]{64}$/.test(candidate.qualificationContextSha256??'')||hash(qualificationBytes)!==candidate.qualificationContextSha256||candidate.nativeApproval!==false||candidate.hostedApproval!==false)throw Error('Explicit pinned pilot qualification context is required');
  const context=JSON.parse(qualificationBytes.toString('utf8'));
  if(candidate.sourceRevision!==context.sourceCommit||JSON.stringify(candidate.sourceDeltaReview)!==JSON.stringify(context.sourceDeltaReview))throw Error('Candidate and qualification source review differ');
- if(candidate.qualificationLockPath!==QUALIFICATION_LOCK_PATH||candidate.qualificationLockSha256!==context.candidateLockSha256)throw Error('Candidate must bind the exact reviewed qualification lock');
- const sourceReleases=existingFleetQualifiedSources(manifest,context,qualificationLockBytes);
- return {kind:'native-source-qualification',contextSha256:hash(qualificationBytes),qualificationLockSha256:hash(qualificationLockBytes),sourceReleases,receipt:assertNativeQualification(files,base,context)};
+ return {kind:'native-source-qualification',contextSha256:hash(qualificationBytes),receipt:assertNativeQualification(files,base,context)};
 }
 function exactCi(key){
  if(process.platform!=='linux'||process.env.GITHUB_ACTIONS!=='true'||process.env.GITHUB_EVENT_NAME!=='push'||process.env.GITHUB_REPOSITORY!=='darkapoparka/cars'||process.env.GITHUB_REF!=='refs/heads/main'||process.version!=='v'+NODES[key]||!/^\d+$/.test(process.env.GITHUB_RUN_ID||'')||!/^\d+$/.test(process.env.GITHUB_RUN_ATTEMPT||''))throw Error('Compile only the declared family in isolated existing-fleet main CI');
@@ -123,8 +105,7 @@ async function prepare(slug,key,sha,area){
  let files=await collectSource(source,manifest);
  const branding=existingFleetBranding(files,manifest);
  const qualificationFile=path.join(source,'.client/native-qualification-context.json');
- const qualificationLockFile=path.join(source,QUALIFICATION_LOCK_PATH);
- const nativeSource=existingFleetNativeSource(files,manifest,{candidate,qualificationBytes:fs.existsSync(qualificationFile)?fs.readFileSync(qualificationFile):undefined,qualificationLockBytes:fs.existsSync(qualificationLockFile)?fs.readFileSync(qualificationLockFile):undefined});
+ const nativeSource=existingFleetNativeSource(files,manifest,{candidate,qualificationBytes:fs.existsSync(qualificationFile)?fs.readFileSync(qualificationFile):undefined});
  assertAppVariant(files,manifest);assertExtendedVariantSources(files,manifest);
  const inputRows=sourceRows(files),profile=loadDealerProfile(source,slug),workerPrefix=manifest.repository.split('/')[1];
  const publicOrigin='https://'+workerPrefix+'.darkapoparka1.workers.dev';
