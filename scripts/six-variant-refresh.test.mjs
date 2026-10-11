@@ -439,9 +439,23 @@ test('Signature native mobile forwarding permits only the optional trailing shor
   }
 });
 
-test('Al Reef authoritative illustrative pack remains illustrative in the native English and Bulgarian preview',async()=>{
-  const client=path.resolve('clients/al-reef-used-cars'),stockPath=path.join(client,'stock.json'),before=fs.readFileSync(stockPath);
-  const stock=JSON.parse(before),profile=loadDealerProfile(client,'al-reef-used-cars');
+test('an explicit illustrative pack remains illustrative in the native English and Bulgarian preview',async t=>{
+  // Portable test data: these examples do not represent a dealer or available stock.
+  const client=fs.mkdtempSync(path.join(os.tmpdir(),'cars-illustrative-preview-')),stockPath=path.join(client,'stock.json');
+  t.after(()=>{const actual=fs.realpathSync(client),relative=path.relative(fs.realpathSync(os.tmpdir()),actual);assert(relative&&!relative.startsWith('..')&&!path.isAbsolute(relative));fs.rmSync(actual,{recursive:true,force:true});});
+  const factsPath=path.join(client,'business-facts.json'),facts={schemaVersion:1,slug:'illustrative-preview-fixture',name:'Illustrative preview fixture',countryCode:'GB',country:'United Kingdom',locale:'en-GB',currency:'GBP',distanceUnit:'mi',observedAt:'2026-10-01',inventoryNotice:'Illustrative examples only; no dealer availability is claimed.',unknownFact:null};
+  const illustrative={schemaVersion:1,dealer:'illustrative-preview-fixture',kind:'illustrative-not-dealer-stock',listings:[
+    {id:'example-known-gbp',title:'Illustrative petrol hatchback',make:'Example',model:'Hatchback',year:2020,priceAmount:12500,currency:'GBP',mileageValue:42000,mileageUnit:'mi',images:['/illustrative/example-1.webp','/illustrative/example-1-detail.webp'],sourceUrl:'',observedAt:'',availabilityConfirmed:false,unknownSourceField:{retained:true}},
+    {id:'example-known-eur',title:'Illustrative electric saloon',make:'Example',model:'Saloon',year:2022,priceAmount:18000,currency:'EUR',mileageValue:50000,mileageUnit:'km',images:['/illustrative/example-2.webp'],sourceUrl:'',observedAt:'',availabilityConfirmed:false},
+    {id:'example-unknown-price',title:'Illustrative unknown-price estate',make:'Example',model:'Estate',priceAmount:null,currency:'GBP',mileageValue:null,mileageUnit:'mi',images:['/illustrative/example-3.webp'],sourceUrl:'',observedAt:'',availabilityConfirmed:false}
+  ]};
+  fs.writeFileSync(factsPath,JSON.stringify(facts,null,2)+'\n');fs.writeFileSync(stockPath,JSON.stringify(illustrative,null,2)+'\n');
+  const before=fs.readFileSync(stockPath),factsBefore=fs.readFileSync(factsPath),stock=JSON.parse(before),profile=loadDealerProfile(client,'illustrative-preview-fixture');
+  assert.equal(profile.listings.length,3);assert.deepEqual(profile.listings.map(listing=>listing.id),stock.listings.map(listing=>listing.id));
+  assert.deepEqual(profile.listings.slice(0,2).map(({mileageValue,mileageUnit})=>({mileageValue,mileageUnit})),[{mileageValue:42000,mileageUnit:'mi'},{mileageValue:50000,mileageUnit:'km'}]);
+  assert.equal(profile.listings[2].priceAmount,null,'unknown example price must not become a fabricated amount');
+  assert.equal(profile.listings[2].mileageOnRequest,true,'unknown example mileage must stay on request');
+  assert.deepEqual(profile.listings[0].raw.unknownSourceField,{retained:true});
   assert.equal(stock.kind,'illustrative-not-dealer-stock');
   assert.equal(profile.stockKind,stock.kind);
   assert.ok(profile.business.observedAt,'a business observation date cannot verify illustrative stock');
@@ -470,7 +484,8 @@ test('Al Reef authoritative illustrative pack remains illustrative in the native
   const files=new Map([['karento-best/package.json',Buffer.from('{"name":"fixture"}')]]),manifest=manifestFor('modern',true);
   const receipt=sealExtendedVariant({files,key:'karento-best',manifest,profile,adaptation:{nativeFacts:true,logoPaths:['/dealer-brand/logo-on-light.webp'],mediaPaths:[],contentPaths:[]}});
   assert.equal(receipt.inventory.mode,'illustrative-not-dealer-stock','the install/publishing receipt cannot relabel sample inventory');
-  assert.deepEqual(fs.readFileSync(stockPath),before,'the independent dealer is never regenerated or edited');
+  assert.deepEqual(fs.readFileSync(stockPath),before,'the authoritative illustrative fixture is never regenerated or edited');
+  assert.deepEqual(fs.readFileSync(factsPath),factsBefore,'a dated business observation and unknown facts are retained unchanged');
 });
 
 test('six migration records exact preserved Carwow links and a Signature-only refresh preserves that artifact',t=>{

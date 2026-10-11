@@ -1,0 +1,661 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-published-template-source-review",
+  "repository": "darkapoparka/cars",
+  "sourceCommit": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "draft": false,
+  "publishable": true,
+  "reviewed": true,
+  "reviewedAt": "2026-10-11T21:04:02.173Z",
+  "qualificationOnly": true,
+  "approved": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "allSixFrozen": true,
+  "scope": "Priselci-only common-revision source qualification. Exactly eight master-template blob differences from S1: four previously reviewed hosted QA overrides and four owner-reviewed Signature geometry/title files. Producer2 is a separate maintained factual/native-copy boundary. Other five application/artwork/data/palette bytes remain S1.",
+  "approvedLock": {
+    "reference": "templates.lock.json",
+    "sha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+    "unchanged": true
+  },
+  "templates": [
+    {
+      "key": "auto-best",
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+        "path": "templates/auto-best",
+        "tree": "5fb7a2164775050a47c1183371622295dbf63725",
+        "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c"
+      },
+      "retainedPaths": 1602,
+      "changedPaths": [
+        "scripts/qa-locale-storage.mjs"
+      ],
+      "priorSource": {
+        "repository": "darkapoparka/cars",
+        "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+        "path": "templates/auto-best",
+        "tree": "827df14f05eb5814fd2b2c7026ba83996fd7544e",
+        "digest": "c4f4deef61d9a823aa20d3117d4f48ad4c393e0a9039376c199b4f537086eaae"
+      },
+      "applicationArtworkDataPaletteUnchanged": true
+    },
+    {
+      "key": "modern",
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+        "path": "templates/modern",
+        "tree": "3974380670eb388bb16182f94ade33be6d87b1c1",
+        "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25"
+      },
+      "retainedPaths": 3977,
+      "changedPaths": [
+        "apps/e2e/localization-harness.mjs",
+        "apps/e2e/localization-preferences-client.mjs"
+      ],
+      "priorSource": {
+        "repository": "darkapoparka/cars",
+        "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+        "path": "templates/modern",
+        "tree": "ae6999491c8d4faa7d1081457a07f177fc741243",
+        "digest": "8f1d6ce675929ab677315bb08e3fb06e9bd1ebef42ebf8f037cd4f6ecf73f530"
+      },
+      "applicationArtworkDataPaletteUnchanged": true
+    },
+    {
+      "key": "import",
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+        "path": "templates/import",
+        "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086",
+        "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5"
+      },
+      "retainedPaths": 3423,
+      "changedPaths": [
+        "tests/localization.e2e.ts"
+      ],
+      "priorSource": {
+        "repository": "darkapoparka/cars",
+        "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+        "path": "templates/import",
+        "tree": "12a7688546d04362156f600b3eea9cbd66d119cc",
+        "digest": "c18dc74d9f72c88c8c0959fe36331c75178e71a5563cfc21b4d060c094044f36"
+      },
+      "applicationArtworkDataPaletteUnchanged": true
+    },
+    {
+      "key": "app",
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+        "path": "templates/app",
+        "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+        "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+      },
+      "retainedPaths": 1682,
+      "changedPaths": [],
+      "priorSource": {
+        "repository": "darkapoparka/cars",
+        "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+        "path": "templates/app",
+        "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+        "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+      },
+      "applicationArtworkDataPaletteUnchanged": true
+    },
+    {
+      "key": "mobile",
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+        "path": "templates/mobile",
+        "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+        "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
+      },
+      "retainedPaths": 890,
+      "changedPaths": [],
+      "priorSource": {
+        "repository": "darkapoparka/cars",
+        "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+        "path": "templates/mobile",
+        "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+        "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
+      },
+      "applicationArtworkDataPaletteUnchanged": true
+    },
+    {
+      "key": "karento-best",
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+        "path": "templates/karento-best",
+        "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134",
+        "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f"
+      },
+      "retainedPaths": 1119,
+      "changedPaths": [
+        "static/mobile.css",
+        "src/lib/cards/VehicleGridCard.svelte",
+        "src/lib/pages/index-3.svelte",
+        "src/lib/components/vehicle-listing/ListingVehicleRowCard.svelte"
+      ],
+      "priorSource": {
+        "repository": "darkapoparka/cars",
+        "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+        "path": "templates/karento-best",
+        "tree": "cd09ed79c2368585acfb915a4e459e656e434c5d",
+        "digest": "b034d5d98ac5080d7f90ad281d309bdaca70a891326458a6957165cf4e1d6356"
+      },
+      "applicationArtworkDataPaletteUnchanged": false
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "templates/auto-best/scripts/qa-locale-storage.mjs",
+      "key": "auto-best",
+      "relative": "scripts/qa-locale-storage.mjs",
+      "beforeBlob": "7382d22cdfd6d433be40f5b5b72f3e0eaf903d3a",
+      "afterBlob": "325134422553fab15e103e2903a0761340a147ae",
+      "mode": "100644",
+      "bytes": 7612,
+      "rawSha256": "1165f3f67ca4fdbb19912807a842b97231a2cd6000f403d1824fb80b8945953f",
+      "normalizedSha256": "1165f3f67ca4fdbb19912807a842b97231a2cd6000f403d1824fb80b8945953f",
+      "previousNormalizedSha256": "a90cfdb1e99286c5718c4a01c4a0e78bc331b6dc1b817994784776675877d42c",
+      "scope": "Previously reviewed hosted QA override"
+    },
+    {
+      "path": "templates/import/tests/localization.e2e.ts",
+      "key": "import",
+      "relative": "tests/localization.e2e.ts",
+      "beforeBlob": "f006fd3a51bfbb42ca24f1f8dd9aa22fa41d18f9",
+      "afterBlob": "af1f6d5ed39150310fcba80da8f3649513a396ce",
+      "mode": "100644",
+      "bytes": 19862,
+      "rawSha256": "8c19c9d4c154f6051da9424a52e3d3c0ff27bf42153f0bde4563bc7109063393",
+      "normalizedSha256": "8c19c9d4c154f6051da9424a52e3d3c0ff27bf42153f0bde4563bc7109063393",
+      "previousNormalizedSha256": "f9dc4e0923fbc7340f273338ada447182675dfffb2a427dedfce856ec3ff9e8e",
+      "scope": "Previously reviewed hosted QA override"
+    },
+    {
+      "path": "templates/karento-best/static/mobile.css",
+      "key": "karento-best",
+      "relative": "static/mobile.css",
+      "beforeBlob": "96a48014f2930a4df442cfc874c4ea66bd0706e0",
+      "afterBlob": "41c8c931b4393d128dcb377354f680c3eab4f39c",
+      "mode": "100644",
+      "bytes": 50030,
+      "rawSha256": "7e507451c13b9105227ea2e2288a73d64e96c7a8c7f42bd2437f3af59e1efd66",
+      "normalizedSha256": "7e507451c13b9105227ea2e2288a73d64e96c7a8c7f42bd2437f3af59e1efd66",
+      "previousNormalizedSha256": "20f13aaf45c6c34b81b1dfe89724660ceae801adb747c01bdb8635498ce2fc40",
+      "scope": "Reviewed owner geometry/title change"
+    },
+    {
+      "path": "templates/modern/apps/e2e/localization-harness.mjs",
+      "key": "modern",
+      "relative": "apps/e2e/localization-harness.mjs",
+      "beforeBlob": "14c652032b32ca445c415829956ce0dc568f5b4a",
+      "afterBlob": "adb166677a57a3d3e14f6df763a7aba576021045",
+      "mode": "100644",
+      "bytes": 4556,
+      "rawSha256": "8af8f8406d93683ebe0d2c9bcd71a390e7b02f58801d3ffe6fb824f293df9c4b",
+      "normalizedSha256": "8af8f8406d93683ebe0d2c9bcd71a390e7b02f58801d3ffe6fb824f293df9c4b",
+      "previousNormalizedSha256": "ad39de254fc9199a999e3246848303cef7b1a7011930f8631f3b1b6499f075f5",
+      "scope": "Previously reviewed hosted QA override"
+    },
+    {
+      "path": "templates/modern/apps/e2e/localization-preferences-client.mjs",
+      "key": "modern",
+      "relative": "apps/e2e/localization-preferences-client.mjs",
+      "beforeBlob": "773d728939f3e2597a8c2473eef0916d6b3a1ec0",
+      "afterBlob": "07f06326f2e5dceccd83da14d11efb52948eb722",
+      "mode": "100644",
+      "bytes": 15880,
+      "rawSha256": "afb7bd35bf7f874eec29fed02fae79e26aff43ab5e13f51e2593bfcaabe47ded",
+      "normalizedSha256": "afb7bd35bf7f874eec29fed02fae79e26aff43ab5e13f51e2593bfcaabe47ded",
+      "previousNormalizedSha256": "a0a4f77dbd934e267efc2ffe09baf59425f7a031ad53bd91fb4ca2afe4810475",
+      "scope": "Previously reviewed hosted QA override"
+    },
+    {
+      "path": "templates/karento-best/src/lib/cards/VehicleGridCard.svelte",
+      "key": "karento-best",
+      "relative": "src/lib/cards/VehicleGridCard.svelte",
+      "beforeBlob": "8022e8835136909a98538b6b7922f0906803c82f",
+      "afterBlob": "487ae3bb2b52262079d867f5e998f0173f46dc21",
+      "mode": "100644",
+      "bytes": 8253,
+      "rawSha256": "011b68bf82d4470860c97607a35237da4f3579c0a4c783fe5ca8b5016e0d4ec2",
+      "normalizedSha256": "011b68bf82d4470860c97607a35237da4f3579c0a4c783fe5ca8b5016e0d4ec2",
+      "previousNormalizedSha256": "555fb56f0dc90ff3a5b7fa86abab9d4c96b033d39d8b9659e0e096cb4103a7f2",
+      "scope": "Reviewed owner geometry/title change"
+    },
+    {
+      "path": "templates/karento-best/src/lib/pages/index-3.svelte",
+      "key": "karento-best",
+      "relative": "src/lib/pages/index-3.svelte",
+      "beforeBlob": "34ecafaa2d8f1895cb0c65f144932a16422b84f9",
+      "afterBlob": "552326f85fbfe75e6a62cf79a87c386019e35c06",
+      "mode": "100644",
+      "bytes": 3851,
+      "rawSha256": "478a780a6f3efe96ae76b8e9db18c3f67efae2701f0e2c9cc4cd33063bd1ea94",
+      "normalizedSha256": "478a780a6f3efe96ae76b8e9db18c3f67efae2701f0e2c9cc4cd33063bd1ea94",
+      "previousNormalizedSha256": "5a807cd7a361eebb7886ad6fe2abc1a501322e2420bbdd7d8d7efb38ed495b17",
+      "scope": "Reviewed owner geometry/title change"
+    },
+    {
+      "path": "templates/karento-best/src/lib/components/vehicle-listing/ListingVehicleRowCard.svelte",
+      "key": "karento-best",
+      "relative": "src/lib/components/vehicle-listing/ListingVehicleRowCard.svelte",
+      "beforeBlob": "08ff81f9fcabfca9035f96b2986e22a5adde3083",
+      "afterBlob": "b42f94828f16935012abd4e1e3483ce9a49e5964",
+      "mode": "100644",
+      "bytes": 5488,
+      "rawSha256": "e7e6e938df715ead363d13a341eee7bd8238c98f934aee05ea5f256589ecbbfa",
+      "normalizedSha256": "e7e6e938df715ead363d13a341eee7bd8238c98f934aee05ea5f256589ecbbfa",
+      "previousNormalizedSha256": "91be2bf2e1b97401cb979d18e1860aa5ff64c790d943447ac6603234f0a2d0c1",
+      "scope": "Reviewed owner geometry/title change"
+    }
+  ],
+  "priorSourceReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/source-review.json",
+    "sha256": "08b5b50b8afdea5e65860bfe6e1a7f0559f32405ad44e107c908f8ac55e1a5db",
+    "acceptanceAppliesOnlyToOriginalRecordedRevisions": true
+  },
+  "immutableSourceVerification": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-fingerprint-joins.json",
+    "sha256": "9e2fafe4b977d2bf4bbc6dcb95f0f04a8c5e3d0852fb293029942a1aa4b3d3c6",
+    "embeddedReceipt": {
+      "schemaVersion": 1,
+      "kind": "cars-bounded-signature-successor-template-fingerprint-joins",
+      "checkedAt": "2026-10-11T21:04:02.173Z",
+      "repository": "darkapoparka/cars",
+      "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+      "sourceTree": "a1e98f1233d115c78b5c93846a1c8ce2373463a9",
+      "templatesTree": "865a081d52f29debf9ff88f784ac35042c53070d",
+      "priorAudit": {
+        "sha256": "3f880f1edf83be2c747faa56679f6e49e9adc59b0da4f00d162c211e71ce67d8",
+        "bytes": 5971903,
+        "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503"
+      },
+      "treeComparison": {
+        "prunedNonrecursiveCalls": 30,
+        "exactBlobDifferences": [
+          {
+            "path": "templates/auto-best/scripts/qa-locale-storage.mjs",
+            "key": "auto-best",
+            "relative": "scripts/qa-locale-storage.mjs",
+            "beforeBlob": "7382d22cdfd6d433be40f5b5b72f3e0eaf903d3a",
+            "afterBlob": "325134422553fab15e103e2903a0761340a147ae",
+            "mode": "100644",
+            "bytes": 7612,
+            "rawSha256": "1165f3f67ca4fdbb19912807a842b97231a2cd6000f403d1824fb80b8945953f",
+            "normalizedSha256": "1165f3f67ca4fdbb19912807a842b97231a2cd6000f403d1824fb80b8945953f",
+            "previousNormalizedSha256": "a90cfdb1e99286c5718c4a01c4a0e78bc331b6dc1b817994784776675877d42c",
+            "scope": "Previously reviewed hosted QA override"
+          },
+          {
+            "path": "templates/import/tests/localization.e2e.ts",
+            "key": "import",
+            "relative": "tests/localization.e2e.ts",
+            "beforeBlob": "f006fd3a51bfbb42ca24f1f8dd9aa22fa41d18f9",
+            "afterBlob": "af1f6d5ed39150310fcba80da8f3649513a396ce",
+            "mode": "100644",
+            "bytes": 19862,
+            "rawSha256": "8c19c9d4c154f6051da9424a52e3d3c0ff27bf42153f0bde4563bc7109063393",
+            "normalizedSha256": "8c19c9d4c154f6051da9424a52e3d3c0ff27bf42153f0bde4563bc7109063393",
+            "previousNormalizedSha256": "f9dc4e0923fbc7340f273338ada447182675dfffb2a427dedfce856ec3ff9e8e",
+            "scope": "Previously reviewed hosted QA override"
+          },
+          {
+            "path": "templates/karento-best/static/mobile.css",
+            "key": "karento-best",
+            "relative": "static/mobile.css",
+            "beforeBlob": "96a48014f2930a4df442cfc874c4ea66bd0706e0",
+            "afterBlob": "41c8c931b4393d128dcb377354f680c3eab4f39c",
+            "mode": "100644",
+            "bytes": 50030,
+            "rawSha256": "7e507451c13b9105227ea2e2288a73d64e96c7a8c7f42bd2437f3af59e1efd66",
+            "normalizedSha256": "7e507451c13b9105227ea2e2288a73d64e96c7a8c7f42bd2437f3af59e1efd66",
+            "previousNormalizedSha256": "20f13aaf45c6c34b81b1dfe89724660ceae801adb747c01bdb8635498ce2fc40",
+            "scope": "Reviewed owner geometry/title change"
+          },
+          {
+            "path": "templates/modern/apps/e2e/localization-harness.mjs",
+            "key": "modern",
+            "relative": "apps/e2e/localization-harness.mjs",
+            "beforeBlob": "14c652032b32ca445c415829956ce0dc568f5b4a",
+            "afterBlob": "adb166677a57a3d3e14f6df763a7aba576021045",
+            "mode": "100644",
+            "bytes": 4556,
+            "rawSha256": "8af8f8406d93683ebe0d2c9bcd71a390e7b02f58801d3ffe6fb824f293df9c4b",
+            "normalizedSha256": "8af8f8406d93683ebe0d2c9bcd71a390e7b02f58801d3ffe6fb824f293df9c4b",
+            "previousNormalizedSha256": "ad39de254fc9199a999e3246848303cef7b1a7011930f8631f3b1b6499f075f5",
+            "scope": "Previously reviewed hosted QA override"
+          },
+          {
+            "path": "templates/modern/apps/e2e/localization-preferences-client.mjs",
+            "key": "modern",
+            "relative": "apps/e2e/localization-preferences-client.mjs",
+            "beforeBlob": "773d728939f3e2597a8c2473eef0916d6b3a1ec0",
+            "afterBlob": "07f06326f2e5dceccd83da14d11efb52948eb722",
+            "mode": "100644",
+            "bytes": 15880,
+            "rawSha256": "afb7bd35bf7f874eec29fed02fae79e26aff43ab5e13f51e2593bfcaabe47ded",
+            "normalizedSha256": "afb7bd35bf7f874eec29fed02fae79e26aff43ab5e13f51e2593bfcaabe47ded",
+            "previousNormalizedSha256": "a0a4f77dbd934e267efc2ffe09baf59425f7a031ad53bd91fb4ca2afe4810475",
+            "scope": "Previously reviewed hosted QA override"
+          },
+          {
+            "path": "templates/karento-best/src/lib/cards/VehicleGridCard.svelte",
+            "key": "karento-best",
+            "relative": "src/lib/cards/VehicleGridCard.svelte",
+            "beforeBlob": "8022e8835136909a98538b6b7922f0906803c82f",
+            "afterBlob": "487ae3bb2b52262079d867f5e998f0173f46dc21",
+            "mode": "100644",
+            "bytes": 8253,
+            "rawSha256": "011b68bf82d4470860c97607a35237da4f3579c0a4c783fe5ca8b5016e0d4ec2",
+            "normalizedSha256": "011b68bf82d4470860c97607a35237da4f3579c0a4c783fe5ca8b5016e0d4ec2",
+            "previousNormalizedSha256": "555fb56f0dc90ff3a5b7fa86abab9d4c96b033d39d8b9659e0e096cb4103a7f2",
+            "scope": "Reviewed owner geometry/title change"
+          },
+          {
+            "path": "templates/karento-best/src/lib/pages/index-3.svelte",
+            "key": "karento-best",
+            "relative": "src/lib/pages/index-3.svelte",
+            "beforeBlob": "34ecafaa2d8f1895cb0c65f144932a16422b84f9",
+            "afterBlob": "552326f85fbfe75e6a62cf79a87c386019e35c06",
+            "mode": "100644",
+            "bytes": 3851,
+            "rawSha256": "478a780a6f3efe96ae76b8e9db18c3f67efae2701f0e2c9cc4cd33063bd1ea94",
+            "normalizedSha256": "478a780a6f3efe96ae76b8e9db18c3f67efae2701f0e2c9cc4cd33063bd1ea94",
+            "previousNormalizedSha256": "5a807cd7a361eebb7886ad6fe2abc1a501322e2420bbdd7d8d7efb38ed495b17",
+            "scope": "Reviewed owner geometry/title change"
+          },
+          {
+            "path": "templates/karento-best/src/lib/components/vehicle-listing/ListingVehicleRowCard.svelte",
+            "key": "karento-best",
+            "relative": "src/lib/components/vehicle-listing/ListingVehicleRowCard.svelte",
+            "beforeBlob": "08ff81f9fcabfca9035f96b2986e22a5adde3083",
+            "afterBlob": "b42f94828f16935012abd4e1e3483ce9a49e5964",
+            "mode": "100644",
+            "bytes": 5488,
+            "rawSha256": "e7e6e938df715ead363d13a341eee7bd8238c98f934aee05ea5f256589ecbbfa",
+            "normalizedSha256": "e7e6e938df715ead363d13a341eee7bd8238c98f934aee05ea5f256589ecbbfa",
+            "previousNormalizedSha256": "91be2bf2e1b97401cb979d18e1860aa5ff64c790d943447ac6603234f0a2d0c1",
+            "scope": "Reviewed owner geometry/title change"
+          }
+        ]
+      },
+      "templates": [
+        {
+          "key": "auto-best",
+          "source": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/auto-best",
+            "tree": "5fb7a2164775050a47c1183371622295dbf63725",
+            "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c"
+          },
+          "retainedPaths": 1602,
+          "changedPaths": [
+            "scripts/qa-locale-storage.mjs"
+          ],
+          "priorSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+            "path": "templates/auto-best",
+            "tree": "827df14f05eb5814fd2b2c7026ba83996fd7544e",
+            "digest": "c4f4deef61d9a823aa20d3117d4f48ad4c393e0a9039376c199b4f537086eaae"
+          },
+          "applicationArtworkDataPaletteUnchanged": true
+        },
+        {
+          "key": "modern",
+          "source": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/modern",
+            "tree": "3974380670eb388bb16182f94ade33be6d87b1c1",
+            "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25"
+          },
+          "retainedPaths": 3977,
+          "changedPaths": [
+            "apps/e2e/localization-harness.mjs",
+            "apps/e2e/localization-preferences-client.mjs"
+          ],
+          "priorSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+            "path": "templates/modern",
+            "tree": "ae6999491c8d4faa7d1081457a07f177fc741243",
+            "digest": "8f1d6ce675929ab677315bb08e3fb06e9bd1ebef42ebf8f037cd4f6ecf73f530"
+          },
+          "applicationArtworkDataPaletteUnchanged": true
+        },
+        {
+          "key": "import",
+          "source": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/import",
+            "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086",
+            "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5"
+          },
+          "retainedPaths": 3423,
+          "changedPaths": [
+            "tests/localization.e2e.ts"
+          ],
+          "priorSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+            "path": "templates/import",
+            "tree": "12a7688546d04362156f600b3eea9cbd66d119cc",
+            "digest": "c18dc74d9f72c88c8c0959fe36331c75178e71a5563cfc21b4d060c094044f36"
+          },
+          "applicationArtworkDataPaletteUnchanged": true
+        },
+        {
+          "key": "app",
+          "source": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/app",
+            "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+            "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+          },
+          "retainedPaths": 1682,
+          "changedPaths": [],
+          "priorSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+            "path": "templates/app",
+            "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+            "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+          },
+          "applicationArtworkDataPaletteUnchanged": true
+        },
+        {
+          "key": "mobile",
+          "source": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/mobile",
+            "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+            "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
+          },
+          "retainedPaths": 890,
+          "changedPaths": [],
+          "priorSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+            "path": "templates/mobile",
+            "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+            "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
+          },
+          "applicationArtworkDataPaletteUnchanged": true
+        },
+        {
+          "key": "karento-best",
+          "source": {
+            "repository": "darkapoparka/cars",
+            "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+            "path": "templates/karento-best",
+            "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134",
+            "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f"
+          },
+          "retainedPaths": 1119,
+          "changedPaths": [
+            "static/mobile.css",
+            "src/lib/cards/VehicleGridCard.svelte",
+            "src/lib/pages/index-3.svelte",
+            "src/lib/components/vehicle-listing/ListingVehicleRowCard.svelte"
+          ],
+          "priorSource": {
+            "repository": "darkapoparka/cars",
+            "revision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+            "path": "templates/karento-best",
+            "tree": "cd09ed79c2368585acfb915a4e459e656e434c5d",
+            "digest": "b034d5d98ac5080d7f90ad281d309bdaca70a891326458a6957165cf4e1d6356"
+          },
+          "applicationArtworkDataPaletteUnchanged": false
+        }
+      ],
+      "totalRetainedPaths": 12693,
+      "rawAssetReadsRepeated": false,
+      "allSixFullTreesUnchanged": false,
+      "otherFiveApplicationArtworkDataPaletteUnchanged": true,
+      "nativeApproval": false,
+      "hostedApproval": false,
+      "globalReleaseApproval": false
+    }
+  },
+  "publishedSuccessor": {
+    "schemaVersion": 1,
+    "type": "cars-signature-source-and-producer-successor-publication",
+    "publishedAt": "2026-10-11T20:54:57.591Z",
+    "sha": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "tree": "a1e98f1233d115c78b5c93846a1c8ce2373463a9",
+    "parent": "ecfceab479de66c491f53022852dcebdeb97d025",
+    "files": [
+      {
+        "path": "templates/karento-best/src/lib/pages/index-3.svelte",
+        "mode": "100644",
+        "bytes": 3851,
+        "sha256": "478a780a6f3efe96ae76b8e9db18c3f67efae2701f0e2c9cc4cd33063bd1ea94",
+        "gitBlob": "552326f85fbfe75e6a62cf79a87c386019e35c06"
+      },
+      {
+        "path": "templates/karento-best/static/mobile.css",
+        "mode": "100644",
+        "bytes": 50030,
+        "sha256": "7e507451c13b9105227ea2e2288a73d64e96c7a8c7f42bd2437f3af59e1efd66",
+        "gitBlob": "41c8c931b4393d128dcb377354f680c3eab4f39c"
+      },
+      {
+        "path": "templates/karento-best/src/lib/cards/VehicleGridCard.svelte",
+        "mode": "100644",
+        "bytes": 8253,
+        "sha256": "011b68bf82d4470860c97607a35237da4f3579c0a4c783fe5ca8b5016e0d4ec2",
+        "gitBlob": "487ae3bb2b52262079d867f5e998f0173f46dc21"
+      },
+      {
+        "path": "templates/karento-best/src/lib/components/vehicle-listing/ListingVehicleRowCard.svelte",
+        "mode": "100644",
+        "bytes": 5488,
+        "sha256": "e7e6e938df715ead363d13a341eee7bd8238c98f934aee05ea5f256589ecbbfa",
+        "gitBlob": "b42f94828f16935012abd4e1e3483ce9a49e5964"
+      },
+      {
+        "path": "scripts/lib/client-refresh-six.mjs",
+        "mode": "100644",
+        "bytes": 62395,
+        "sha256": "2f8f3b6671d274ee5453c98e1f4a743e45f330b976fd9c6cd4b86ff0e4d6d833",
+        "gitBlob": "af07050725747aefc7dba5c89f075c4c980eef8d"
+      },
+      {
+        "path": "scripts/six-variant-refresh.test.mjs",
+        "mode": "100644",
+        "bytes": 56748,
+        "sha256": "02713030013c63ff4f7b833a05543c3717313d22ea4fde8172ac4d5049dedbac",
+        "gitBlob": "819632f791ef7257c8dd5a2867f68cc4e58f9267"
+      }
+    ],
+    "pathLeases": [
+      {
+        "path": "templates/karento-best/src/lib/pages/index-3.svelte",
+        "parent": "ecfceab479de66c491f53022852dcebdeb97d025",
+        "beforeGitBlob": "34ecafaa2d8f1895cb0c65f144932a16422b84f9"
+      },
+      {
+        "path": "templates/karento-best/static/mobile.css",
+        "parent": "ecfceab479de66c491f53022852dcebdeb97d025",
+        "beforeGitBlob": "96a48014f2930a4df442cfc874c4ea66bd0706e0"
+      },
+      {
+        "path": "templates/karento-best/src/lib/cards/VehicleGridCard.svelte",
+        "parent": "ecfceab479de66c491f53022852dcebdeb97d025",
+        "beforeGitBlob": "8022e8835136909a98538b6b7922f0906803c82f"
+      },
+      {
+        "path": "templates/karento-best/src/lib/components/vehicle-listing/ListingVehicleRowCard.svelte",
+        "parent": "ecfceab479de66c491f53022852dcebdeb97d025",
+        "beforeGitBlob": "08ff81f9fcabfca9035f96b2986e22a5adde3083"
+      },
+      {
+        "path": "scripts/lib/client-refresh-six.mjs",
+        "parent": "ecfceab479de66c491f53022852dcebdeb97d025",
+        "beforeGitBlob": "221fa1c2183bea6e1a977f0dfb2d6e64de0c4788"
+      },
+      {
+        "path": "scripts/six-variant-refresh.test.mjs",
+        "parent": "ecfceab479de66c491f53022852dcebdeb97d025",
+        "beforeGitBlob": "f4708c1df5ecfc909545c368dc04f0693a120671"
+      }
+    ],
+    "independentReviews": {
+      "geometry": "da48c2d4eebacfdb3b89ae6b1ec5f5ad8f275e99dfbcf1f46888b48c3cf34be4",
+      "producer": "5f53d11d4ff6aefd860ba6fa70a1e9431719b5bf286f4b4c3a6989cd12cbb2f3"
+    },
+    "masterSourcePublished": true,
+    "dealerRebuilt": false,
+    "providerMutation": false,
+    "hostedVisualAccepted": false,
+    "globalReleasePromoted": false,
+    "receiptSha256": "3ec183144031cff61ebd264de6da0f93a76c84823bb6e589f23e92efaec995e9"
+  },
+  "producerReview": {
+    "sha256": "5f53d11d4ff6aefd860ba6fa70a1e9431719b5bf286f4b4c3a6989cd12cbb2f3",
+    "canonicalModuleBlob": "af07050725747aefc7dba5c89f075c4c980eef8d",
+    "canonicalTestBlob": "819632f791ef7257c8dd5a2867f68cc4e58f9267",
+    "scope": "Known Signature preview services and generated brand intro use typed native EN/BG catalog keys; unchanged template composition/media/style. Fresh dealer preservation and reseals still required."
+  },
+  "pendingNativeChecks": [
+    "catalog-completeness",
+    "hardcoded-ui",
+    "native-routing",
+    "standalone-journeys",
+    "mounted-journeys",
+    "public-journeys",
+    "preferences-no-js",
+    "preferences-storage-disabled",
+    "preferences-races",
+    "request-isolation",
+    "security-write-blocking",
+    "assets-preserved"
+  ],
+  "pending": [
+    "All twelve current native acceptance checks remain pending at the selected source.",
+    "Maintained source CI preservation plan, reviewed raster consumer checks, native qualification/App/extended reseals and provider compilation remain required.",
+    "Combined mounted/public browser pilot and owner visual acceptance of that hosted pilot remain pending. Global templates.lock.json is unchanged.",
+    "Fresh current168 preservation plan, individual resolutions and exact final application/native/branding/source envelope review remain required."
+  ],
+  "operations": {
+    "sourceWrites": false,
+    "gitWrites": false,
+    "providerWrites": false,
+    "rawAssetAuditRepeated": false
+  }
+}

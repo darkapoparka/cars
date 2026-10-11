@@ -15,32 +15,174 @@ jobs:
   plan:
     if: github.repository == 'darkapoparka/cars' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    timeout-minutes: 35
+    env:
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+      NODE_PATH: ${{ github.workspace }}/templates/import/node_modules
+      CARS_ESBUILD_RESOLVE_FROM: ${{ github.workspace }}/templates/import/package.json
+      CARS_SVELTE_QA_DEPS: ${{ github.workspace }}/templates/import/node_modules
     outputs:
       matrix: ${{ steps.matrix.outputs.matrix }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           ref: ${{ github.sha }}
+          fetch-depth: 0
           persist-credentials: false
           sparse-checkout-cone-mode: false
           sparse-checkout: |
-            /scripts/
+            /AGENTS.md
+            /README.md
+            /Cars.code-workspace
+            /workspace.json
+            /catalog.json
+            /.agents/skills/
+            /.github/workflows/
             /.github/workflows/existing-fleet-source.yml
             /.github/workflows/existing-fleet-cloudflare.yml
-            /docs/DEPLOYMENT-INVENTORY.json
-            /docs/releases/cloudflare-existing25-20261011/*.json
+            /scripts/
+            /docs/
             /docs/releases/cloudflare-existing25-20261011/new-source/**/*.json
-            /docs/releases/cloudflare-existing25-20261011/registered-source/**/*.json
             /templates.lock.json
+            /clients/README.md
             /clients/index.json
+            /templates/*/*.json
+            /templates/*/*.js
+            /templates/*/*.ts
+            /templates/*/*.md
+            /templates/*/src/
+            /templates/*/scripts/
+            /templates/*/localization/
+            /templates/modern/packages/
+            /templates/modern/apps/web/app/
+            /templates/modern/apps/web/lib/
+            /templates/modern/apps/web/*.json
+            /templates/modern/apps/web/*.ts
+            /templates/modern/apps/web/public/lead-hero.jpg
+            /templates/*/static/*.ico
+            /templates/*/static/*.svg
+            /templates/*/public/*.ico
+            /templates/*/public/*.svg
+            /leads/uk-2026-10-10-build-manifest.json
+            /leads/uk-2026-10-10-briefs/
+            /templates/app/app/
+            /templates/app/components/
+            /templates/app/lib/
+            /templates/modern/apps/e2e/
+            /templates/import/tests/
+            /clients/navara-car/*.json
+            /clients/navara-car/branding/
+            /clients/navara-car/dealer-brand/
+            /clients/navara-car/assets/
+            /clients/navara-car/dealer/
+            /clients/navara-car/dealer-stock/
+            /clients/navara-car/stock/
+            /clients/navara-car/auto-best/src/lib/
+            /clients/navara-car/auto-best/static/navara/wordmark.png
+            /clients/navara-car/modern/packages/marketplace-domain/testing/mock-data.ts
+            /clients/navara-car/modern/apps/web/lib/public-marketplace-data.ts
+            /clients/navara-car/carwow/src/lib/data/
+            /clients/promosale-varna/*.json
+            /clients/promosale-varna/branding/
+            /clients/promosale-varna/dealer-brand/
+            /clients/promosale-varna/assets/
+            /clients/promosale-varna/dealer/
+            /clients/promosale-varna/dealer-stock/
+            /clients/promosale-varna/stock/
+            /clients/promosale-varna/auto-best/src/lib/
+            /clients/promosale-varna/auto-best/static/navara/wordmark.png
+            /clients/promosale-varna/modern/packages/marketplace-domain/testing/mock-data.ts
+            /clients/promosale-varna/modern/apps/web/lib/public-marketplace-data.ts
+            /clients/promosale-varna/carwow/src/lib/data/
+            /clients/eliqauto/*.json
+            /clients/eliqauto/branding/
+            /clients/eliqauto/dealer-brand/
+            /clients/eliqauto/assets/
+            /clients/eliqauto/dealer/
+            /clients/eliqauto/dealer-stock/
+            /clients/eliqauto/stock/
+            /clients/eliqauto/auto-best/src/lib/
+            /clients/eliqauto/auto-best/static/navara/wordmark.png
+            /clients/eliqauto/modern/packages/marketplace-domain/testing/mock-data.ts
+            /clients/eliqauto/modern/apps/web/lib/public-marketplace-data.ts
+            /clients/eliqauto/carwow/src/lib/data/
+            /clients/kg-team-auto/*.json
+            /clients/kg-team-auto/branding/
+            /clients/kg-team-auto/dealer-brand/
+            /clients/kg-team-auto/assets/
+            /clients/kg-team-auto/dealer/
+            /clients/kg-team-auto/dealer-stock/
+            /clients/kg-team-auto/stock/
+            /clients/kg-team-auto/auto-best/src/lib/
+            /clients/kg-team-auto/auto-best/static/navara/wordmark.png
+            /clients/kg-team-auto/modern/packages/marketplace-domain/testing/mock-data.ts
+            /clients/kg-team-auto/modern/apps/web/lib/public-marketplace-data.ts
+            /clients/kg-team-auto/carwow/src/lib/data/
+            /clients/perfect-auto-varna/*.json
+            /clients/perfect-auto-varna/branding/
+            /clients/perfect-auto-varna/dealer-brand/
+            /clients/perfect-auto-varna/assets/
+            /clients/perfect-auto-varna/dealer/
+            /clients/perfect-auto-varna/dealer-stock/
+            /clients/perfect-auto-varna/stock/
+            /clients/perfect-auto-varna/auto-best/src/lib/
+            /clients/perfect-auto-varna/auto-best/static/navara/wordmark.png
+            /clients/perfect-auto-varna/modern/packages/marketplace-domain/testing/mock-data.ts
+            /clients/perfect-auto-varna/modern/apps/web/lib/public-marketplace-data.ts
+            /clients/perfect-auto-varna/carwow/src/lib/data/
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
         with:
           node-version: '26.10.0'
           package-manager-cache: false
-      - run: node --test scripts/prepare-existing-fleet-source.test.mjs scripts/prepare-new-dealer-source.test.mjs
+      - name: Install one lock-pinned compiler and test runtime
+        run: |
+          npm ci --prefix templates/import --include=dev --ignore-scripts --no-audit --no-fund
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import assert from 'node:assert/strict';
+          import {createRequire} from 'node:module';
+          const shared=path.resolve('templates/import/node_modules'),lock=JSON.parse(fs.readFileSync('templates/import/package-lock.json'));
+          const require=createRequire(path.resolve('templates/import/package.json'));
+          for(const [name,version]of Object.entries({svelte:'5.57.1',sharp:'0.35.5',typescript:'6.0.3',zod:'4.6.5',esbuild:'0.28.2'})){
+            assert.equal(lock.packages['node_modules/'+name].version,version);
+            assert.equal(JSON.parse(fs.readFileSync(path.join(shared,name,'package.json'))).version,version);
+          }
+          for(const directory of ['.','templates/auto-best','templates/karento-best','templates/mobile','templates/modern/packages/marketplace-domain']){
+            const target=path.resolve(directory,'node_modules');assert(!fs.existsSync(target),'Do not replace another test runtime');
+            fs.symlinkSync(shared,target,'dir');
+          }
+          console.log(JSON.stringify({runtime:'one-import-lock-install',svelte:require('svelte/package.json').version,sharp:require('sharp').versions.sharp}));
+          NODE
+      - name: Hydrate bounded historical text and icon test objects through the maintained source reader
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import {execFileSync} from 'node:child_process';
+          import assert from 'node:assert/strict';
+          import {prefetchPinnedSourceBlobs} from './scripts/dealer-updates/pinned-template-source.mjs';
+          const root=process.cwd(),git=args=>execFileSync('git',['-C',root,...args],{encoding:'utf8',env:{...process.env,GIT_NO_LAZY_FETCH:'1',GIT_TERMINAL_PROMPT:'0'},maxBuffer:32*1024*1024});
+          const lock=JSON.parse(fs.readFileSync('templates.lock.json')),batch=JSON.parse(fs.readFileSync('leads/uk-2026-10-10-build-manifest.json'));
+          const candidates=new Set([process.env.GITHUB_SHA,...Object.values(lock.templates).map(r=>r.commit),...Object.values(batch.sourceReleases).map(r=>r.revision)]);
+          for(const name of fs.readdirSync('scripts').filter(n=>n.endsWith('.test.mjs')))for(const m of fs.readFileSync('scripts/'+name,'utf8').matchAll(/['"]([a-f0-9]{40})['"]/g))candidates.add(m[1]);
+          const ids=[...candidates].filter(id=>/^[a-f0-9]{40}$/.test(id)).sort();assert(ids.length<=256);
+          const check=execFileSync('git',['cat-file','--batch-check=%(objectname) %(objecttype)'],{input:ids.join('\n')+'\n',encoding:'utf8',env:{...process.env,GIT_NO_LAZY_FETCH:'1'}}).trim().split('\n');assert.equal(check.length,ids.length);
+          const commits=ids.filter((id,i)=>check[i]===id+' commit'),entries=new Map();
+          for(const revision of commits){
+            const tree=git(['ls-tree','-rz',revision,'--','templates','clients','scripts']);
+            for(const record of tree.split('\0').filter(Boolean)){const m=/^([0-9]{6}) blob ([a-f0-9]{40})\t(.+)$/.exec(record);if(!m)continue;const name=m[3];
+              if(name.startsWith('scripts/')||(!/(?:^|\/)(?:static|public)(?:\/|$)/.test(name)&&/\.(?:[cm]?[jt]sx?|svelte|html|json|css)$/.test(name))||/\/(?:favicon\.ico|(?:apple-)?icon\.png)$/.test(name)||/^clients\/[^/]+\/dealer-brand\/logo-on-(?:light|dark)\.webp$/.test(name))entries.set(m[2],{blob:m[2]});
+            }
+          }
+          assert(entries.size<=50000);console.log(JSON.stringify({commits:commits.length,uniqueTestObjects:entries.size,...prefetchPinnedSourceBlobs({repositoryPath:root,entries:[...entries.values()],env:{...process.env,CARS_SOURCE_BATCH_PREFETCH:'1'}})}));
+          NODE
+      - name: Run the required executable workflow integration checkpoint once
+        run: |
+          node scripts/check-workflow.mjs
+          node --test scripts/*.test.mjs
       - id: matrix
         run: node scripts/prepare-existing-fleet-source.mjs matrix >> "$GITHUB_OUTPUT"
+
   prepare_source:
     needs: plan
     runs-on: ubuntu-24.04

@@ -73,6 +73,27 @@ export function validateGeometry(value,width) {
 }
 export function assertLocale(actual,expected) {assert(actual===expected||actual.startsWith(expected+'-'),'Actual document locale differs');}
 export function controlFit(bounds,width) {assert(bounds&&bounds.x>=-1&&bounds.y>=-1&&bounds.width>0&&bounds.height>0&&bounds.x+bounds.width<=width+1,'Native control outside viewport');return bounds;}
+export function legacyClipRegion(bounds,clip,position) {
+  if(clip==='auto'||!clip||!['absolute','fixed'].includes(position)) return null;
+  assert(/^rect\(.+\)$/.test(clip),'Unknown painted legacy clip');
+  const parts=clip.slice(5,-1).trim().split(/\s*,\s*|\s+/);assert.equal(parts.length,4,'Unknown legacy clip rectangle');
+  const limits=[bounds.top,bounds.right,bounds.bottom,bounds.left],origins=[bounds.top,bounds.left,bounds.top,bounds.left];
+  const edges=parts.map((part,i)=>{if(part==='auto')return limits[i];assert(/^-?\d+(?:\.\d+)?px$/.test(part),'Unknown legacy clip units');return origins[i]+Number(part.slice(0,-2));});
+  return {top:edges[0],right:edges[1],bottom:edges[2],left:edges[3],x:true,y:true};
+}
+export function selectSourceLink(rows,detail) {
+  const expected=new URL(detail,PIN.publicOrigin);
+  const index=rows.findIndex(row=>{if(!row.visible||!/Golf/i.test(row.text))return false;let actual;try{actual=new URL(row.href,PIN.publicOrigin);}catch{return false;}
+    return actual.origin===PIN.publicOrigin&&actual.pathname===expected.pathname&&actual.searchParams.get('id')===expected.searchParams.get('id')&&
+      (!expected.searchParams.has('lang')||(actual.searchParams.get('lang')||'bg')===expected.searchParams.get('lang'));});
+  assert(index>=0,'Actual source card/detail join absent');return index;
+}
+export async function dismissAppWelcome(page,locale) {
+  assert(['bg','en'].includes(locale));const sheet=page.locator('[data-welcome-sheet][role="dialog"]');
+  if(!await sheet.isVisible())return false;
+  await sheet.getByRole('button',{name:locale==='bg'?'Затвори приветствието':'Close welcome',exact:true}).click();
+  await page.locator('[data-welcome-overlay]').waitFor({state:'hidden'});return true;
+}
 export function paintedHeading(heading,width,height) {
   if(heading.hidden||heading.width<=0||heading.height<=0) return null;
   const region={left:0,right:width,top:0,bottom:height};
@@ -87,11 +108,11 @@ async function geometry(page,width,title=null) {
     return {innerWidth,innerHeight,visualWidth:visualViewport?.width,scrollWidth:Math.max(document.body.scrollWidth,document.documentElement.scrollWidth),
       headings:(title?[title]:[...document.querySelectorAll('h1')]).map(e=>{const range=document.createRange();range.selectNodeContents(e);const clips=[];let hidden=false;
         for(let ancestor=e;ancestor;ancestor=ancestor.parentElement) {const s=getComputedStyle(ancestor);hidden ||= s.visibility==='hidden'||s.display==='none'||Number(s.opacity)===0||ancestor.getAttribute('aria-hidden')==='true';
-          const x=/hidden|clip|scroll|auto/.test(s.overflowX),y=/hidden|clip|scroll|auto/.test(s.overflowY);if(x||y) clips.push({...rect(ancestor),x,y});}
+          const x=/hidden|clip|scroll|auto/.test(s.overflowX),y=/hidden|clip|scroll|auto/.test(s.overflowY);if(x||y) clips.push({...rect(ancestor),x,y});if(s.clip!=='auto') clips.push({legacyClip:s.clip,position:s.position,bounds:rect(ancestor)});}
         return {...rect(e),text:e.textContent.trim().slice(0,180),level:e.tagName,hidden,clips,textRects:[...range.getClientRects()].map(r=>({left:r.left,right:r.right,top:r.top,bottom:r.bottom})),clientWidth:e.clientWidth,clientHeight:e.clientHeight,scrollWidth:e.scrollWidth,scrollHeight:e.scrollHeight};}),
       paintedImages:[...document.images].filter(e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return e.complete&&e.naturalWidth>0&&r.width>0&&r.height>0&&r.bottom>0&&r.top<innerHeight&&s.visibility!=='hidden'&&s.display!=='none'&&Number(s.opacity)>0;}).length};
   },{title:title?await title.elementHandle():null});
-  value.unpaintedHeadingCount=value.headings.length;value.headings=value.headings.map(row=>paintedHeading(row,width,value.innerHeight)).filter(Boolean);value.unpaintedHeadingCount-=value.headings.length;
+  value.unpaintedHeadingCount=value.headings.length;value.headings=value.headings.map(row=>({...row,clips:row.clips.map(clip=>clip.legacyClip?legacyClipRegion(clip.bounds,clip.legacyClip,clip.position):clip).filter(Boolean)})).map(row=>paintedHeading(row,width,value.innerHeight)).filter(Boolean);value.unpaintedHeadingCount-=value.headings.length;
   if(title) assert.equal(value.headings.length,1,'Native source title is not painted in viewport');
   return validateGeometry(value,width);
 }
@@ -165,12 +186,15 @@ export async function runComplement({root,requestSha,env=process.env}) {
       const record={family,locale,width,sourceId:SOURCE_ID,steps:[],passed:false},context=await browser.newContext({viewport:{width,height:width===1440?1000:844},locale:locale==='bg'?'bg-BG':'en-GB'});
       const blocked=await guardHostedContext(context,{publicOrigin:PIN.publicOrigin,output},{preferences:false}),page=await context.newPage(),routes=routePlan(family,locale);
       try {
-        await goto(page,routes.home,locale);record.steps.push({stage:'home',documentLocale:await page.locator('html').getAttribute('lang'),geometry:await geometry(page,width),switcher:await switcher(page,locale,width)});
+        await goto(page,routes.home,locale);if(family==='app')record.welcomeDismissed=await dismissAppWelcome(page,locale);record.steps.push({stage:'home',documentLocale:await page.locator('html').getAttribute('lang'),geometry:await geometry(page,width),switcher:await switcher(page,locale,width)});
         if(family==='app'&&locale==='bg'&&width===390) record.followedDesignLinks=await followDesignLinks(page,locale);
         if(locale==='bg'&&width===390) { assets.set(family+'/logo',await paintedAssets(page,proofs.artifactManifest.value.files,'logo'));const filename=family+'-bg-390-home.png';await page.screenshot({path:path.join(output,filename)});screenshots.push(filename); }
-        await goto(page,routes.inventory,locale);const link=page.locator('a[href]').filter({has:page.locator('img')});
-        const hrefs=await link.evaluateAll(nodes=>nodes.map(a=>a.href));assert(hrefs.some(href=>new URL(href).pathname===new URL(routes.detail,PIN.publicOrigin).pathname&&new URL(href).searchParams.get('id')===new URL(routes.detail,PIN.publicOrigin).searchParams.get('id')),'Actual source card/detail join absent');
-        await goto(page,routes.detail,locale);const title=page.getByRole('heading',{name:/Golf/i}).first();await title.waitFor({state:'visible'});
+        await goto(page,routes.inventory,locale);if(family==='app')await dismissAppWelcome(page,locale);const links=page.locator('a[href]');
+        const candidates=await links.evaluateAll(nodes=>nodes.map(a=>{const r=a.getBoundingClientRect(),s=getComputedStyle(a);return{href:a.href,text:a.textContent,visible:r.width>0&&r.height>0&&s.visibility!=='hidden'&&s.display!=='none'};}));
+        const index=selectSourceLink(candidates,routes.detail),selected=candidates[index];record.sourceLink={href:selected.href,text:selected.text.trim()};
+        await Promise.all([page.waitForURL(selected.href,{waitUntil:'domcontentloaded'}),links.nth(index).click()]);
+        assert.equal(page.url(),selected.href,'Native source card navigation differs');await page.waitForFunction(expected=>document.documentElement.lang===expected||document.documentElement.lang.startsWith(expected+'-'),locale,{timeout:10000});assertLocale(await page.locator('html').getAttribute('lang')||'',locale);
+        const title=page.getByRole('heading',{name:/Golf/i}).first();await title.waitFor({state:'visible'});
         assert.match(await page.locator('body').innerText(),/3[\s\u00a0.,]?600/,'Dated source price absent');record.steps.push({stage:'source-detail',geometry:await geometry(page,width,title)});
         if(locale==='en'&&width===1440) {assets.set(family+'/photo',await paintedAssets(page,proofs.artifactManifest.value.files,'photo'));const filename=family+'-en-1440-detail.png';await page.screenshot({path:path.join(output,filename)});screenshots.push(filename);}
         if(routes.gallery) await goto(page,routes.gallery,locale);record.gallery=await gallery(page,family,locale,width);record.steps.push({stage:'gallery',geometry:await geometry(page,width)});

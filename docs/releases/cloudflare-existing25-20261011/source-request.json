@@ -3,36 +3,36 @@
   "dealers": [
     "priselci"
   ],
-  "sourceRevision": "32ac4ebcbafff38df6306e9919ce6113b2d10503",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
   "approvedParentLockDigest": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
   "inputs": {
     "priselci": {
       "candidateLock": {
-        "path": "docs/releases/cloudflare-existing25-20261011/qualification-lock.json",
-        "sha256": "8c656270f65688bd10b8ca3699ec2552c65671ba2089e245ee464ce83f239a23"
+        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/qualification-lock.json",
+        "sha256": "37b9b5262ccee1129081a1c89ea7ad88f9b25156f10f5880b4a2d708492cfb01"
       },
       "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/qualification-context.json",
-        "sha256": "94c4dc3299ab665c49321b877f3478ad5a1f9a81f92d3b6d03ed4b94259c7a45"
+        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/qualification-context.json",
+        "sha256": "1ad4b86583d78e5aa6cd6f776fb3c6b9ea743453b5ee2d9e7cbd008fcdabed35"
       },
       "sourceDeltaReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/source-delta-review.json",
-        "sha256": "004baea237ee6702644791d7877a53f9bf5cf65add62624ac0f3900f32dbde04"
+        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+        "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
       },
       "branding": {
         "path": "docs/releases/cloudflare-existing25-20261011/branding-review.json",
         "sha256": "715a3afe70511b3bd17f38c2c9fbdbf4ce1ac2e3f5daaa6aff421382838fbf10"
       },
       "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/priselci-factual-refresh-resolutions.json",
-        "sha256": "54c0c0b6854ca516cc43ac566b6322d6149c7f70397267037454b1fe71f8e0ee"
+        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-resolutions.json",
+        "sha256": "8196cfd85a58a89cbb97533897cb3e5e56f3966ac94be97c503ebe9d9e68c85c"
       }
     }
   },
   "draft": false,
   "publishable": true,
   "reviewed": true,
-  "reviewedAt": "2026-10-11T19:25:05.457Z",
+  "reviewedAt": "2026-10-11T21:18:05.547Z",
   "qualificationOnly": true,
   "approved": false,
   "nativeApproval": false,
@@ -40,12 +40,12 @@
   "globalReleaseApproval": false,
   "allSixFrozen": true,
   "pending": [
-    "All twelve current native acceptance checks remain pending at the selected source.",
-    "Maintained source CI preservation plan, reviewed raster consumer checks, native qualification/App/extended reseals and provider compilation remain required.",
-    "Combined mounted/public browser pilot and owner visual acceptance of that hosted pilot remain pending. Global templates.lock.json is unchanged."
+    "All twelve current native acceptance checks remain pending at the selected immutable b1f source.",
+    "Exact current168 preservation-stage choices are independently reviewed; maintained CI must apply final approved branding and native/catalog/App/extended/source-marker seals and produce the actual final source artifact for independent review.",
+    "Combined hosted pilot and owner visual acceptance remain pending. Global templates.lock.json is unchanged."
   ],
   "sourcePreparationCode": {
-    "sourceCommit": "978a7b8175e431682fbadd0d855a4b2b244d90bf",
-    "scope": "The reviewed publication payload is leased against this commit; its source preparation event descends it."
+    "sourceCommit": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "scope": "Exact published geometry4 and reviewed producer2 at b1f; source event must descend this commit."
   }
 }

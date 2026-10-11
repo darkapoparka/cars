@@ -30,6 +30,18 @@ const labels = {
 const locales = ["en", "bg"];
 const widths = [320, 390, 1440];
 const localePrefix = /^\/(?:en|bg)(?=\/|$)/;
+// Native language radio policy: begin
+function nativeLanguageControls(scope) {
+  return {
+    values: () => scope.locator('input[type="radio"][name="locale"]').evaluateAll(nodes => nodes.map(node => node.value).sort()),
+    current: () => scope.locator('input[type="radio"][name="locale"]:checked').inputValue(),
+    choose: async value => {
+      assert.ok(["bg", "en"].includes(value), "Unsupported native language");
+      await scope.locator('input[type="radio"][name="locale"][value="' + value + '"]').check();
+    },
+  };
+}
+// Native language radio policy: end
 const browser = await chromium.launch({ headless: true });
 async function fixture(
   locale,
@@ -192,14 +204,12 @@ try {
             const dialog = f.page.locator("dialog[data-locale-dialog]");
             await dialog.waitFor({ state: "visible" });
             assert.deepEqual(
-              await dialog
-                .locator('select[name="locale"] option')
-                .evaluateAll((nodes) => nodes.map((n) => n.value).sort()),
+              await nativeLanguageControls(dialog).values(),
               ["bg", "en"]
             );
             await dialog.locator('select[name="country"]').selectOption("DE");
             assert.equal(
-              await dialog.locator('select[name="locale"]').inputValue(),
+              await nativeLanguageControls(dialog).current(),
               locale
             );
             const box = await dialog.boundingBox();
@@ -224,7 +234,7 @@ try {
                   ?.contains(document.activeElement)
               )
             );
-            await dialog.locator('select[name="locale"]').selectOption(other);
+            await nativeLanguageControls(dialog).choose(other);
             await dialog
               .getByRole("button", { name: labels[locale].save, exact: true })
               .click();
@@ -325,9 +335,8 @@ try {
             await ready(f.page);
             await openPreferences(f.page, width);
             f.control.mode = "hold";
-            await f.page
-              .locator('dialog select[name="locale"]')
-              .selectOption(locale === "en" ? "bg" : "en");
+            await nativeLanguageControls(f.page.locator("dialog[data-locale-dialog]"))
+              .choose(locale === "en" ? "bg" : "en");
             await f.page.locator('dialog button[type="submit"]').click();
             await f.page.waitForFunction(
               () =>
@@ -438,9 +447,7 @@ try {
             .locator("dialog[data-locale-dialog]")
             .waitFor({ state: "visible" });
           const other = locale === "en" ? "bg" : "en";
-          await f.page
-            .locator('dialog select[name="locale"]')
-            .selectOption(other);
+          await nativeLanguageControls(f.page.locator("dialog[data-locale-dialog]")).choose(other);
           await f.page.locator('dialog button[type="submit"]').click();
           await f.page.waitForURL(url(`/${other}/contact`));
           assert.equal(

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {assertPilot,PIN,routePlan,designLinks,galleryLabels,manifestAsset,validateGeometry,paintedHeading,assertLocale,controlFit,SOURCE_ID} from './verify-priselci-public-browser.mjs';
+import {legacyClipRegion,selectSourceLink,dismissAppWelcome,assertPilot,PIN,routePlan,designLinks,galleryLabels,manifestAsset,validateGeometry,paintedHeading,assertLocale,controlFit,SOURCE_ID} from './verify-priselci-public-browser.mjs';
 test('release guard rejects a different hosted version, origin, source and artifact',()=>{
   assertPilot({...PIN});for(const key of ['versionId','publicOrigin','sourceCommit','artifactId']) assert.throws(()=>assertPilot({...PIN,[key]:'changed'}));
 });
@@ -30,4 +30,24 @@ test('painted image must join exact bounded archive row and original same-origin
 test('reported viewport, painted state and document overflow are asserted, not inferred',()=>{
   const good={innerWidth:390,scrollWidth:390,paintedImages:1,headings:[{width:350,left:20,right:370}]};validateGeometry(good,390);
   for(const changed of [{innerWidth:320},{scrollWidth:410},{paintedImages:0},{headings:[{width:420,left:0,right:420}]},{headings:[{width:350,left:20,right:370,clientWidth:350,scrollWidth:410,clientHeight:40,scrollHeight:40}]}]) assert.throws(()=>validateGeometry({...good,...changed},390));
+});
+test('actual legacy clip excludes fully unpainted accessibility text and rejects partly painted clipping',()=>{
+  const hidden={left:16,right:17,top:100,bottom:101,width:1,height:1,hidden:false,textRects:[{left:16,right:116,top:100,bottom:142}],clientWidth:1,clientHeight:1,scrollWidth:100,scrollHeight:42};
+  const zero=legacyClipRegion(hidden,'rect(0px, 0px, 0px, 0px)','absolute');assert.equal(paintedHeading({...hidden,clips:[zero]},320,844),null);
+  const partial={left:16,right:216,top:100,bottom:142,width:200,height:42,hidden:false,textRects:[{left:16,right:216,top:100,bottom:142}],clips:[legacyClipRegion({left:16,right:216,top:100,bottom:142},'rect(0px, 100px, 42px, 0px)','absolute')]};
+  const painted=paintedHeading(partial,320,844);assert(painted.textClipped);assert.throws(()=>validateGeometry({innerWidth:320,scrollWidth:320,paintedImages:1,headings:[painted]},320));
+  assert.equal(legacyClipRegion(hidden,'auto','absolute'),null);assert.equal(legacyClipRegion(hidden,'rect(0px, 0px, 0px, 0px)','static'),null);assert.throws(()=>legacyClipRegion(hidden,'circle(0px)','absolute'));
+});
+test('native source link admits sibling photos while source, locale and origin joins stay strict',()=>{
+  const detail=routePlan('karento-best','en').detail,valid={href:PIN.publicOrigin+detail,text:'VW Golf 1.4',visible:true};
+  assert.equal(selectSourceLink([{...valid,text:'Other source'},valid],detail),1);
+  for(const changed of [{href:'https://foreign.example'+detail},{href:PIN.publicOrigin+detail.replace(SOURCE_ID,'another')},{href:PIN.publicOrigin+detail.replace('lang=en','lang=bg')},{visible:false},{text:'Other car'}])assert.throws(()=>selectSourceLink([{...valid,...changed}],detail));
+  assert.equal(selectSourceLink([{...valid,href:PIN.publicOrigin+routePlan('karento-best','bg').detail.replace('&lang=bg','')}],routePlan('karento-best','bg').detail),0);
+});
+test('welcome closes through exact native local control with no force or business write',async()=>{
+  for(const locale of ['bg','en']) {const calls=[];const sheet={isVisible:async()=>true,getByRole:(role,options)=>{calls.push({role,options});return{click:async(...args)=>calls.push({clickArgs:args})};}};
+    const page={locator:selector=>selector.includes('sheet')?sheet:{waitFor:async options=>calls.push({wait:options})}};
+    assert.equal(await dismissAppWelcome(page,locale),true);assert.equal(calls[0].options.name,locale==='bg'?'Затвори приветствието':'Close welcome');assert.deepEqual(calls[1].clickArgs,[]);assert.deepEqual(calls[2].wait,{state:'hidden'});
+  }
+  assert.equal(await dismissAppWelcome({locator:()=>({isVisible:async()=>false})},'bg'),false);
 });
