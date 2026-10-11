@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { readTypeScriptCatalog } from './catalog-literal.mjs';
 
 const read = (file) => fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, '');
 const write = (file, value) => {
@@ -188,6 +189,35 @@ export const daynightFaqGroups: readonly FaqGroup[] = ${JSON.stringify(faqGroups
 export function applyImportSafeContent({ candidate, profile }) {
   const b = profile.business;
   const english = isEnglish(profile);
+  const editorialFiles = [];
+  const videoFile = path.join(candidate, 'src/lib/data/about-videos.ts');
+  if (fs.existsSync(videoFile)) {
+    write(videoFile, `export type AboutVideo = { id: string; title: string };\n\nexport const youtubeChannelHref = ${q(b.socialLinks?.youtube || '')};\nexport const aboutVideos: AboutVideo[] = [];\n`);
+    editorialFiles.push('src/lib/data/about-videos.ts');
+  }
+  const homeFile = path.join(candidate, 'src/lib/auxero/home-five.ts');
+  if (fs.existsSync(homeFile)) {
+    const home = read(homeFile);
+    const boundary = /export const homeFiveReviewItems: HomeFiveReview\[\] = \[[\s\S]*?\n\];/g;
+    if ([...home.matchAll(boundary)].length !== 1) throw new Error('Import home review export was not found exactly once');
+    // These are editorial examples, localized by the existing native source-map
+    // catalog. Numbered identities remain language-neutral; no customer is implied.
+    const examples = {
+      'Демо профил': 'Demo profile',
+      'Демонстрационен пример, а не потвърден клиентски отзив.': 'Demonstration example, not a verified customer review.',
+      'Измислен пример за оформлението на отзив. Не описва реален клиент, покупка или доставка.': 'Fictional example of the review layout. It does not describe a real customer, purchase or delivery.'
+    };
+    const catalogFile = path.join(candidate, 'src/lib/content/extra-localized.ts');
+    const catalog = readTypeScriptCatalog(read(catalogFile), 'extraEnglish');
+    const items = [1, 2, 3].map((index) => ({
+      avatar: '', name: `№ ${index}`, role: 'Демо профил', roleKind: 'customer',
+      excerpt: 'Демонстрационен пример, а не потвърден клиентски отзив.',
+      text: 'Измислен пример за оформлението на отзив. Не описва реален клиент, покупка или доставка.'
+    }));
+    write(homeFile, home.replace(boundary, `export const homeFiveReviewItems: HomeFiveReview[] = ${JSON.stringify(items, null, 2)};`));
+    write(catalogFile, `export const extraEnglish = ${JSON.stringify({ ...catalog, ...examples }, null, 2)} as const;\n`);
+    editorialFiles.push('src/lib/auxero/home-five.ts', 'src/lib/content/extra-localized.ts');
+  }
 
   write(path.join(candidate, 'src/lib/auxero/reviews.ts'), `import { daynightContact } from '$lib/data/daynight';
 
@@ -245,6 +275,7 @@ export function getPostBySlug(slug: string) { return posts.find((post) => post.s
   }
 
   return [
+    ...editorialFiles,
     'src/lib/auxero/reviews.ts',
     'src/lib/data/blog.ts',
     'src/lib/components/detail/AuxeroVehicleDetailStaticContent.svelte'

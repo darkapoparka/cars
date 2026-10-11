@@ -3,7 +3,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { applyCarwowSafeContent } from './lib/client-refresh-safe-content.mjs';
+import { applyCarwowSafeContent, applyImportSafeContent } from './lib/client-refresh-safe-content.mjs';
+import { readTypeScriptCatalog } from './lib/catalog-literal.mjs';
 import {readRegisteredPersonalization,originalListingIdRecorded} from './lib/client-refresh-normalize.mjs';
 import {tinyArea,writeFixture} from './test-fixtures/fleet-single-worker.mjs';
 
@@ -46,4 +47,66 @@ test('listing provenance requires the exact recorded ID field, never a substring
  assert.equal(originalListingIdRecorded(Buffer.from('{"id":"123"}'),'123'),true);
  assert.equal(originalListingIdRecorded(Buffer.from("{sourceId: '12.3'}"),'12.3'),true);
  assert.equal(originalListingIdRecorded(Buffer.from('{"id":"12x3"}'),'12.3'),false);
+});
+
+const homeFixture = `export type HomeFiveReview = {avatar:string;name:string;role:string;roleKind?:string;rating?:number;excerpt?:string;text:string};
+export const unchangedBefore = 'native composition';
+export const homeFiveReviewItems: HomeFiveReview[] = [
+ {avatar:'/customer.webp',name:'Aleksandar Vytev',role:'Клиент на Day Night Auto',rating:5,text:'Actual purchase claim'},
+ {avatar:'/customer2.webp',name:'Krasimir Georgiev',role:'Import customer',rating:4,text:'Actual delivery claim'},
+ {avatar:'/customer3.webp',name:'Iliyan Petrov',role:'Sale customer',rating:5,text:'Actual sale claim'}
+];
+export const unchangedAfter = {palette:'native',layout:'three-card rail'};
+`;
+function importEditorialFixture(t) {
+ const candidate=tinyArea(t);
+ writeFixture(path.join(candidate,'src/lib/data/about-videos.ts'),"export type AboutVideo = { id:string;title:string };\nexport const youtubeChannelHref = 'https://www.youtube.com/@kristiankirilov1355/videos';\nexport const aboutVideos: AboutVideo[] = [{id:'6S3dLIgeAT8',title:'Lamborghini Urus'}];\n");
+ writeFixture(path.join(candidate,'src/lib/auxero/home-five.ts'),homeFixture);
+ writeFixture(path.join(candidate,'src/lib/content/extra-localized.ts'),"export const extraEnglish = {'Запазен текст':'Retained text'} as const;\n");
+ // These are the selected S1 consumers' existing bindings and gates.
+ const consumer="import {aboutVideos,youtubeChannelHref} from '$lib/data/about-videos';\n<YouTubeSection videos={aboutVideos} channelHref={youtubeChannelHref} />\n";
+ writeFixture(path.join(candidate,'src/lib/components/home/HomePage.svelte'),consumer);
+ writeFixture(path.join(candidate,'src/lib/components/home/HomeMobileEditorial.svelte'),consumer);
+ return {candidate,consumer};
+}
+for (const countryCode of ['BG','AE']) {
+ test('Import new native video/review consumers receive truthful localized examples for '+countryCode,t=>{
+  const {candidate,consumer}=importEditorialFixture(t),dealer=profile(countryCode);
+  const changed=applyImportSafeContent({candidate,profile:dealer});
+  const videos=fs.readFileSync(path.join(candidate,'src/lib/data/about-videos.ts'),'utf8');
+  assert.match(videos,/export type AboutVideo/);assert.match(videos,/youtubeChannelHref = "";/);
+  assert.deepEqual(readTypeScriptCatalog(videos,'aboutVideos'),[]);
+  assert.doesNotMatch(videos,/kristiankirilov|Lamborghini|6S3dLIgeAT8/);
+  for(const page of ['HomePage','HomeMobileEditorial']) assert.equal(fs.readFileSync(path.join(candidate,'src/lib/components/home',page+'.svelte'),'utf8'),consumer);
+  const home=fs.readFileSync(path.join(candidate,'src/lib/auxero/home-five.ts'),'utf8'),items=readTypeScriptCatalog(home,'homeFiveReviewItems');
+  assert.equal(items.length,3);assert.deepEqual(items.map(r=>r.name),['№ 1','№ 2','№ 3']);
+  assert.match(home,/unchangedBefore = 'native composition'/);assert.match(home,/unchangedAfter = \{palette:'native',layout:'three-card rail'\}/);
+  assert.doesNotMatch(home,/Aleksandar|Krasimir|Iliyan|customer\.webp|purchase claim|delivery claim|sale claim|Day Night Auto/);
+  const en=readTypeScriptCatalog(fs.readFileSync(path.join(candidate,'src/lib/content/extra-localized.ts'),'utf8'),'extraEnglish');
+  assert.equal(en['Запазен текст'],'Retained text');
+  for(const item of items){
+   assert.equal(item.avatar,'');assert(!Object.hasOwn(item,'rating'));assert.match(item.text,/Измислен пример/);
+   for(const field of ['role','excerpt','text']){assert.match(item[field],/[\u0400-\u04ff]/);assert.equal(typeof en[item[field]],'string');assert.doesNotMatch(en[item[field]],/[\u0400-\u04ff]/);}
+   assert.match(en[item.text],/Fictional example/);assert.match(en[item.excerpt],/not a verified customer review/);
+  }
+  for(const name of ['src/lib/data/about-videos.ts','src/lib/auxero/home-five.ts','src/lib/content/extra-localized.ts'])assert(changed.includes(name));
+  const first=[videos,home,fs.readFileSync(path.join(candidate,'src/lib/content/extra-localized.ts'),'utf8')];
+  applyImportSafeContent({candidate,profile:dealer});
+  assert.deepEqual(first,['src/lib/data/about-videos.ts','src/lib/auxero/home-five.ts','src/lib/content/extra-localized.ts'].map(name=>fs.readFileSync(path.join(candidate,name),'utf8')));
+ });
+}
+test('Import new video boundary binds only an explicitly sourced dealer channel',t=>{
+ const {candidate}=importEditorialFixture(t),dealer=profile('BG');dealer.business.socialLinks={youtube:'https://www.youtube.com/@verified-fixture'};
+ applyImportSafeContent({candidate,profile:dealer});
+ const videos=fs.readFileSync(path.join(candidate,'src/lib/data/about-videos.ts'),'utf8');
+ assert.match(videos,/youtubeChannelHref = "https:\/\/www.youtube.com\/@verified-fixture";/);
+ assert.deepEqual(readTypeScriptCatalog(videos,'aboutVideos'),[]);
+});
+test('Import review boundary fails closed when native source or its locale catalog changes',t=>{
+ const {candidate}=importEditorialFixture(t);
+ writeFixture(path.join(candidate,'src/lib/auxero/home-five.ts'),homeFixture.replace('homeFiveReviewItems','renamedUnreviewedItems'));
+ assert.throws(()=>applyImportSafeContent({candidate,profile:profile('BG')}),/review export was not found exactly once/);
+ writeFixture(path.join(candidate,'src/lib/auxero/home-five.ts'),homeFixture);
+ writeFixture(path.join(candidate,'src/lib/content/extra-localized.ts'),"export const extraEnglish = {generated:computeTranslation()} as const;\n");
+ assert.throws(()=>applyImportSafeContent({candidate,profile:profile('BG')}),/expected literal data/);
 });
