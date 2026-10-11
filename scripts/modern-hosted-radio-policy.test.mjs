@@ -86,3 +86,39 @@ test('unsupported desktop language fails before menu controls; all three client 
   assert.equal((source.match(/await openPreferences\(f\.page, width\);/g)||[]).length,0);
   assert(source.includes("form.locator('[name=\"locale\"]').selectOption(other)"));
 });
+
+
+test('JS dialog uses native confirm copy in its starting locale after selecting the opposite radio; no-JS save stays separate', async()=>{
+  const base=new URL('../templates/modern/',import.meta.url);
+  const native=fs.readFileSync(new URL('packages/marketplace-ui/components/locale-preferences.tsx',base),'utf8');
+  const catalog=fs.readFileSync(new URL('packages/internationalization/preferences-messages.ts',base),'utf8');
+  const noJs=fs.readFileSync(new URL('apps/web/app/[locale]/locale-settings/page.tsx',base),'utf8');
+  const labelBlock=source.match(/const labels = (\{[\s\S]*?\n\});/);
+  assert(labelBlock,'Current helper labels missing');
+  const labels=vm.runInNewContext('('+labelBlock[1]+')');
+  const dictionaries={};
+  for(const [locale,suffix]of [['en','as const'],['bg','satisfies PreferenceMessages']]){
+    const escaped=suffix;
+    const match=catalog.match(new RegExp('export const '+locale+' = (\\{[\\s\\S]*?\\n\\}) '+escaped+';'));
+    assert(match,'Native catalog shape changed:'+locale);
+    dictionaries[locale]=vm.runInNewContext('('+match[1]+')');
+  }
+  assert(native.includes('messages[key].replace('),'Native dialog copy must come from its SSR messages prop');
+  assert(native.includes('onChange={() => setLocale(value)}'),'Native radio must only change the selected value');
+  assert(native.includes('t(busy ? "locale.saving" : "locale.confirm")'),'Native JS submit changed its copy contract');
+  assert(noJs.includes('messages: t') && noJs.includes('t["locale.save"]'),'Native no-JS form must keep its full save label through its native alias');
+  assert.equal((source.match(/name: labels\[locale\]\.confirm, exact: true/g)||[]).length,1);
+  assert.equal((source.match(/name: labels\[locale\]\.save, exact: true/g)||[]).length,0);
+  assert(source.includes("form.locator('button[value=\"save\"]').click()"),'No-JS selector must remain native and unchanged');
+  for(const locale of ['en','bg']){
+    const other=locale==='en'?'bg':'en',f=fixture(['en','bg'],locale);
+    const expected=dictionaries[locale]['locale.confirm'];
+    assert.equal(labels[locale].confirm,expected);
+    assert.equal(labels[locale].save,dictionaries[locale]['locale.save']);
+    assert.notEqual(labels[locale].save,expected,'Old full save selector must fail for this JS dialog');
+    await controls(f.scope).choose(other);
+    assert.equal(await controls(f.scope).current(),other);
+    assert.equal(labels[locale].confirm,expected,'Radio selection must not retarget the dialog copy to the unsaved locale');
+    assert.notEqual(labels[other].confirm,expected,'Opposite-locale confirm selector must fail');
+  }
+});

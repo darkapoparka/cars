@@ -16,12 +16,14 @@ import {
 const labels = {
   en: {
     save: "Save preferences",
+    confirm: "Save",
     dismiss: "Not now",
     close: "Close country and language preferences",
     error: "Your preferences could not be saved. Please try again.",
   },
   bg: {
     save: "Запазете предпочитанията",
+    confirm: "Запази",
     dismiss: "Не сега",
     close: "Затворете избора на държава и език",
     error: "Предпочитанията не бяха запазени. Опитайте отново.",
@@ -255,7 +257,7 @@ try {
             );
             await nativeLanguageControls(dialog).choose(other);
             await dialog
-              .getByRole("button", { name: labels[locale].save, exact: true })
+              .getByRole("button", { name: labels[locale].confirm, exact: true })
               .click();
             await f.page.waitForURL(
               url(`/${other}/contact?topic=trade-in#details`)
