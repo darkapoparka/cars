@@ -69,6 +69,16 @@ jobs:
           NODE_PATH: ${{ github.workspace }}/runtime/vercel-tools/node_modules
           NODE_OPTIONS: --max-old-space-size=6144
         run: node scripts/prepare-vercel-presentation-release.mjs prepare '${{ matrix.slug }}'
+      - name: Retain exact error receipt without environment or credentials
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: vercel-diagnostic-${{ matrix.slug }}-${{ github.run_id }}
+          path: |
+            runtime/vercel-presentation/${{ matrix.slug }}/diagnostic.json
+            runtime/vercel-presentation/${{ matrix.slug }}/package-cli.log
+          if-no-files-found: ignore
+          retention-days: 3
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: vercel-package-${{ matrix.slug }}-${{ github.run_id }}
