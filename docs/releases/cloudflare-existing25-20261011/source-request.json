@@ -9,15 +9,15 @@
     "priselci": {
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/qualification-lock.json",
-        "sha256": "6c29ea59d46453bab02d846793a3129760544051fc8887da74d2c7c92e2b1db8"
+        "sha256": "8c656270f65688bd10b8ca3699ec2552c65671ba2089e245ee464ce83f239a23"
       },
       "qualification": {
         "path": "docs/releases/cloudflare-existing25-20261011/qualification-context.json",
-        "sha256": "f608a42e2341cf632a944f10ffe8a53f8229c9af50af1b70a7eeb1d59ba1e542"
+        "sha256": "94c4dc3299ab665c49321b877f3478ad5a1f9a81f92d3b6d03ed4b94259c7a45"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/source-delta-review.json",
-        "sha256": "010e8104d1db1ed7dde83f67bb4104fee80ee517feb1680660c88c9ee32d422c"
+        "sha256": "004baea237ee6702644791d7877a53f9bf5cf65add62624ac0f3900f32dbde04"
       },
       "branding": {
         "path": "docs/releases/cloudflare-existing25-20261011/branding-review.json",
