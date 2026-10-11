@@ -1,6 +1,6 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';
 import {sha256} from './lib/workflow.mjs';
-import {validateSingletonGitHubBuild,validateSourcePublication,validateCurrentSingletonTarget,inspectFleetSingleton,runFleetSingletonDeployment,parseDeploymentArgs} from './deploy-dealer-single-worker.mjs';
+import {validateSingletonGitHubBuild,validateSourcePublication,validateCurrentSingletonTarget,validateAbsentSingletonTarget,validateWranglerAbsentTarget,inspectFleetSingleton,runFleetSingletonDeployment,parseDeploymentArgs} from './deploy-dealer-single-worker.mjs';
 import {SINGLETON_ACCOUNT} from './assemble-existing-fleet-single-worker.mjs';
 import {tinyArea,writeTinySingleton,writeFixture,tinyZip} from './test-fixtures/fleet-single-worker.mjs';
 const oldVersion='11111111-1111-4111-8111-111111111111',newVersion='22222222-2222-4222-8222-222222222222';
@@ -79,4 +79,100 @@ test('CLI remains read-only unless --write is explicitly selected',()=>{
 test('an unqualified uploader is refused before any deployment output is written',async t=>{
  const f=fixture(t);await assert.rejects(runFleetSingletonDeployment({...f.options,write:true,provider:{tool:{version:'wrong'}}}),/qualified Wrangler/);
  assert.equal(fs.existsSync(path.join(f.root,'runtime/dealer-single-worker-deployments')),false);
+});
+
+function creationFixture(t,options){
+ const f=fixture(t,options),snapshot={...f.snapshot,publicOrigin:f.publicOrigin,exists:false,workersDev:false,bindings:[],versionId:null,versionTraffic:[],scriptCount:2,
+  scriptInventory:{complete:true,endpoint:'/accounts/'+SINGLETON_ACCOUNT+'/workers/scripts',names:['preserved-other','retained-qualification']}};
+ f.review.deploymentMode='create-singleton';f.review.providerSnapshot=snapshot;writeFixture(f.reviewFile,f.review);
+ return {...f,snapshot,options:{...f.options,mode:'create-singleton'}};
+}
+function createdSnapshot(f,versionId=newVersion){return {...f.snapshot,exists:true,workersDev:true,versionId,versionTraffic:[{version_id:versionId,percentage:100}],bindings:[{name:'ASSETS',type:'assets'}],deploymentId:'fixture-created-deployment'};}
+
+test('creation requires matching explicit mode and remains read-only during inspection',async t=>{
+ const f=creationFixture(t);let snapshots=0,uploads=0;
+ const plan=await runFleetSingletonDeployment({...f.options,provider:{snapshot(){snapshots++;},upload(){uploads++;}}});
+ assert.equal(plan.deploymentMode,'create-singleton');assert.equal(plan.deployments,0);assert.equal(plan.workerCount,1);assert.equal(plan.applicationCount,6);assert.equal(plan.hostedVerified,false);assert.equal(plan.ownerAccepted,false);
+ assert.equal(snapshots,0);assert.equal(uploads,0);assert.equal(fs.existsSync(path.join(f.root,'runtime/dealer-single-worker-deployments')),false);
+ await assert.rejects(runFleetSingletonDeployment({...f.options,mode:'update-existing'}),/mode differs/);
+ const g=fixture(t);await assert.rejects(runFleetSingletonDeployment({...g.options,mode:'create-singleton'}),/mode differs/);
+ assert.equal(parseDeploymentArgs(['--input','review.json','--mode','create-singleton']).mode,'create-singleton');
+ assert.throws(()=>parseDeploymentArgs(['--input','review.json','--mode','create-singleton','--mode','update-existing']),/Repeated/);
+ assert.throws(()=>parseDeploymentArgs(['--input','review.json','--mode','auto']),/mode/);
+});
+
+test('creation absence evidence rejects existing targets, unknown inventories, occupied names and unavailable capacity',t=>{
+ const f=creationFixture(t);assert.equal(validateAbsentSingletonTarget(f.snapshot,f.workerName,f.publicOrigin).exists,false);
+ for(const change of [{exists:true},{workersDev:true},{accountId:'a'.repeat(32)},{workerName:'cars-another'},{publicOrigin:'https://cars-another.darkapoparka1.workers.dev'},
+  {checkedAt:'2020-01-01T00:00:00Z'},{checkedAt:new Date(Date.now()+60000).toISOString()},{evidence:'unverified'},{routes:[{pattern:'foreign/*'}]},{domains:['example.com']},{schedules:['* * * * *']},{tailConsumers:['foreign']},
+  {bindings:[{type:'assets',name:'ASSETS'}]},{versionId:oldVersion},{versionTraffic:[{version_id:oldVersion,percentage:100}]},{scriptCount:-1},{scriptCount:NaN},{scriptCount:100},{scriptCount:101},{allowedScripts:101},
+  {scriptInventory:{...f.snapshot.scriptInventory,complete:false}},{scriptInventory:{...f.snapshot.scriptInventory,endpoint:'/accounts/foreign/workers/scripts'}},{scriptInventory:{...f.snapshot.scriptInventory,names:['only-one']}},
+  {scriptInventory:{...f.snapshot.scriptInventory,names:['duplicate','duplicate']}},{scriptInventory:{...f.snapshot.scriptInventory,names:['preserved-other',f.workerName]}}]){
+  assert.throws(()=>validateAbsentSingletonTarget({...f.snapshot,...change},f.workerName,f.publicOrigin),/required|capacity|inventory/);
+ }
+});
+
+test('live Wrangler absence accepts only the exact authenticated endpoint error, never general failures or empty deployments',()=>{
+ const workerName='cars-example',endpoint='/accounts/'+SINGLETON_ACCOUNT+'/workers/scripts/'+workerName+'/deployments';
+ const result={status:1,stdout:'',stderr:'A request to the Cloudflare API ('+endpoint+') failed.\nWorker not found [code: 10007]'};
+ assert.equal(validateWranglerAbsentTarget(result,SINGLETON_ACCOUNT,workerName).errorCode,10007);
+ for(const invalid of [{...result,status:0,stdout:'[]'},{...result,error:Error('network failure')},{...result,signal:'SIGTERM'},{...result,stderr:result.stderr.replace('10007','10000')},
+  {...result,stderr:result.stderr.replace(endpoint,endpoint.replace(workerName,'cars-another'))},{...result,stderr:result.stderr+'\nauthentication failed [code: 10000]'},
+  {status:1,stderr:'Worker not found'}, {status:1,stderr:'network unavailable'}])assert.throws(()=>validateWranglerAbsentTarget(invalid,SINGLETON_ACCOUNT,workerName),/absence was not established/);
+ assert.throws(()=>validateWranglerAbsentTarget(result,'a'.repeat(32),workerName),/absence was not established/);
+});
+
+test('one reviewed absent-target creation uploads the sealed singleton and keeps provider evidence distinct from acceptance',async t=>{
+ const f=creationFixture(t);let uploads=0,snapshots=0;
+ const provider={tool:{version:'4.149.0',authentication:'fixture-no-credentials'},snapshot:async(_review,{versionId}={})=>{snapshots++;return versionId?createdSnapshot(f,versionId):f.snapshot;},
+  upload:async()=>{uploads++;return{worker_name:f.workerName,version_id:newVersion,targets:[f.publicOrigin]};}};
+ const result=await runFleetSingletonDeployment({...f.options,write:true,provider});
+ assert.equal(uploads,1);assert.equal(snapshots,3);assert.equal(result.deploymentMode,'create-singleton');assert.equal(result.deployments,1);assert.equal(result.rollback.exists,false);
+ assert.equal(result.versionId,newVersion);assert.deepEqual(result.versionTraffic,[{version_id:newVersion,percentage:100}]);assert.deepEqual(result.liveBindings,[{type:'assets',name:'ASSETS'}]);
+ assert.equal(result.creationEvidence.absentBefore,true);assert.equal(result.creationEvidence.expectedScriptCountAfter,3);assert.match(result.creationEvidence.scriptInventorySha256,/^[a-f0-9]{64}$/);
+ assert.equal(result.scriptCountSnapshot.count,2);assert.equal(result.scriptCountSnapshot.evidence,'authenticated-cloudflare-connector');assert.equal(result.scriptCountVerifiedAfter,false);
+ assert.equal(result.hostedVerified,false);assert.equal(result.ownerAccepted,false);
+ await assert.rejects(runFleetSingletonDeployment({...f.options,write:true,provider}),/earlier deployment/);assert.equal(uploads,1);
+});
+
+test('creation rechecks reviewed absent identity and capacity under the lock before upload',async t=>{
+ for(const phase of ['before','locked'])for(const change of ['existing','inventory']){
+  const f=creationFixture(t);let reads=0,uploads=0;
+  const changed=change==='existing'?createdSnapshot(f):{...f.snapshot,scriptCount:3,scriptInventory:{...f.snapshot.scriptInventory,names:[...f.snapshot.scriptInventory.names,'another-new-worker']}};
+  const provider={tool:{version:'4.149.0'},snapshot:async()=>++reads===(phase==='before'?1:2)?changed:f.snapshot,upload:async()=>{uploads++;throw Error('must not upload');}};
+  await assert.rejects(runFleetSingletonDeployment({...f.options,write:true,provider}),/absent Worker|capacity changed/);assert.equal(uploads,0);
+  if(phase==='locked'){
+   const reports=path.join(f.root,'runtime/dealer-single-worker-deployments'),dir=fs.readdirSync(reports).find(n=>n.startsWith(f.client));
+   assert.equal(fs.existsSync(path.join(reports,dir,'needs-reconciliation.json')),true);
+   await assert.rejects(runFleetSingletonDeployment({...f.options,write:true,provider}),/earlier deployment/);
+  }
+ }
+});
+
+test('creation retains reconciliation evidence for uncertain upload, wrong origin or non-singleton active result',async t=>{
+ for(const mode of ['error','wrong-worker','wrong-origin','extra-target','split-traffic','service']){
+  const f=creationFixture(t);let uploads=0;
+  const provider={tool:{version:'4.149.0'},snapshot:async(_review,{versionId}={})=>{
+   if(!versionId)return f.snapshot;const snapshot=createdSnapshot(f,versionId);
+   if(mode==='split-traffic')snapshot.versionTraffic=[{version_id:versionId,percentage:50}];
+   if(mode==='service')snapshot.bindings.push({name:'CARS_APP',type:'service',service:f.workerName+'-app'});return snapshot;
+  },upload:async()=>{uploads++;if(mode==='error')throw Error('uncertain fixture creation');return{worker_name:mode==='wrong-worker'?'cars-other':f.workerName,version_id:newVersion,
+   targets:mode==='wrong-origin'?['https://cars-other.darkapoparka1.workers.dev']:mode==='extra-target'?[f.publicOrigin,'example.com/*']:[f.publicOrigin]};}};
+  await assert.rejects(runFleetSingletonDeployment({...f.options,write:true,provider}),/uncertain|another Worker|another target|active|service/);
+  const reports=path.join(f.root,'runtime/dealer-single-worker-deployments'),dir=fs.readdirSync(reports).find(n=>n.startsWith(f.client));
+  assert.equal(fs.existsSync(path.join(reports,dir,'needs-reconciliation.json')),true);assert.equal(fs.existsSync(path.join(reports,dir,'deployment.json')),false);
+  await assert.rejects(runFleetSingletonDeployment({...f.options,write:true,provider}),/earlier deployment/);assert.equal(uploads,1);
+ }
+});
+
+test('creation retains exact source, six-release, sealed asset and independent ownership rejection guards',async t=>{
+ const cases=[f=>f.review.sourceCommit='a'.repeat(40),f=>f.review.sourceReleases={...f.review.sourceReleases,mobile:{...f.review.sourceReleases.mobile,digest:'b'.repeat(64)}},
+  f=>f.remote.sourceProof.mainReachable=false,f=>f.remote.sourceProof.sourceTree='a'.repeat(40),f=>f.review.workerName='cars-another',f=>f.review.accountId='a'.repeat(32),
+  f=>f.registry.dealers[0].sourceOwnership='independent-repository',f=>fs.appendFileSync(path.join(f.directory,'public/fixture.txt'),'tampered sealed branding/asset bytes')];
+ for(const change of cases){const f=creationFixture(t);change(f);writeFixture(f.reviewFile,f.review);let uploads=0;
+  await assert.rejects(runFleetSingletonDeployment({...f.options,write:true,provider:{tool:{version:'4.149.0'},upload:async()=>{uploads++;}}}),/pin differs|GitHub proof|Worker differs|artifact pins|Independent|bytes differ|Artifact/);
+  assert.equal(uploads,0);assert.equal(fs.existsSync(path.join(f.root,'runtime/dealer-single-worker-deployments')),false);
+ }
+ const f=creationFixture(t,{reviewed:false});assert.equal((await runFleetSingletonDeployment(f.options)).readyToDeploy,false);
+ await assert.rejects(runFleetSingletonDeployment({...f.options,write:true,provider:{}}),/dated review/);
 });
