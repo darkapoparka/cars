@@ -1,162 +1,29 @@
 {
   "schemaVersion": 1,
-  "request": "shared-presentation-vercel-ten-01",
+  "request": "shared-presentation-vercel-ten-02",
   "sourceDonor": "ec9505086e465b37f185c65e02e1aa05c7f3e33a",
-  "pilots": [
-    "promosale-varna",
-    "navara-car"
-  ],
+  "sourceIntegration": "ea861de6cd8e09fb5a6bce738fb66f4da672a8bc",
+  "triggerNote": "Small explicit request after the large source integration; no dealer or template source changes.",
+  "pilots": ["promosale-varna", "navara-car"],
   "scope": "Package all ten existing six-design dealers; compile two opposite-order pilots. Provider publication remains a separate explicit export/push and hosted verification step.",
+  "templateRevisions": {
+    "auto-best": "696230a404abd9b20b6f907b9cfb139175298c7a",
+    "modern": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
+    "import": "b9373e9ed5453bc7d208898ae140eae4d596a232",
+    "app": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+    "mobile": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+    "karento-best": "cc130e432a41a3a60cc80bc2b3461c6416893b4a"
+  },
   "dealers": [
-    {
-      "slug": "navara-car",
-      "repository": "darkapoparka/cars-navaracar",
-      "projectId": "prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr",
-      "projectName": "cars-navaracar",
-      "publicOrigin": "https://cars-navaracar.vercel.app",
-      "templateRevisions": {
-        "auto-best": "696230a404abd9b20b6f907b9cfb139175298c7a",
-        "modern": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
-        "import": "b9373e9ed5453bc7d208898ae140eae4d596a232",
-        "app": "4e184777567849a2c5b4a9e4a3e652252179c29c",
-        "mobile": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
-        "karento-best": "cc130e432a41a3a60cc80bc2b3461c6416893b4a"
-      }
-    },
-    {
-      "slug": "day-and-night-auto-group",
-      "repository": "darkapoparka/day-and-night-autodeal",
-      "projectId": "prj_enD9orrI6rwguMMtDlS0IP6RAXjr",
-      "projectName": "day-and-night-a",
-      "publicOrigin": "https://day-and-night-a.vercel.app",
-      "templateRevisions": {
-        "auto-best": "696230a404abd9b20b6f907b9cfb139175298c7a",
-        "modern": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
-        "import": "b9373e9ed5453bc7d208898ae140eae4d596a232",
-        "app": "4e184777567849a2c5b4a9e4a3e652252179c29c",
-        "mobile": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
-        "karento-best": "cc130e432a41a3a60cc80bc2b3461c6416893b4a"
-      }
-    },
-    {
-      "slug": "promosale-varna",
-      "repository": "darkapoparka/cars-promosalevarna",
-      "projectId": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
-      "projectName": "cars-promosalevarna",
-      "publicOrigin": "https://cars-promosalevarna.vercel.app",
-      "templateRevisions": {
-        "auto-best": "696230a404abd9b20b6f907b9cfb139175298c7a",
-        "import": "b9373e9ed5453bc7d208898ae140eae4d596a232",
-        "modern": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
-        "app": "4e184777567849a2c5b4a9e4a3e652252179c29c",
-        "mobile": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
-        "karento-best": "cc130e432a41a3a60cc80bc2b3461c6416893b4a"
-      }
-    },
-    {
-      "slug": "priselci",
-      "repository": "darkapoparka/cars-priselci",
-      "projectId": "prj_GwnlfPmyImlJuiocl77NWplzvTTb",
-      "projectName": "cars-priselci",
-      "publicOrigin": "https://cars-priselci.vercel.app",
-      "templateRevisions": {
-        "auto-best": "696230a404abd9b20b6f907b9cfb139175298c7a",
-        "modern": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
-        "import": "b9373e9ed5453bc7d208898ae140eae4d596a232",
-        "app": "4e184777567849a2c5b4a9e4a3e652252179c29c",
-        "mobile": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
-        "karento-best": "cc130e432a41a3a60cc80bc2b3461c6416893b4a"
-      }
-    },
-    {
-      "slug": "isauto-varna",
-      "repository": "darkapoparka/cars-isautovarna",
-      "projectId": "prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv",
-      "projectName": "cars-isautovarna",
-      "publicOrigin": "https://cars-isautovarna.vercel.app",
-      "templateRevisions": {
-        "auto-best": "696230a404abd9b20b6f907b9cfb139175298c7a",
-        "modern": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
-        "import": "b9373e9ed5453bc7d208898ae140eae4d596a232",
-        "app": "4e184777567849a2c5b4a9e4a3e652252179c29c",
-        "mobile": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
-        "karento-best": "cc130e432a41a3a60cc80bc2b3461c6416893b4a"
-      }
-    },
-    {
-      "slug": "automarket-varna",
-      "repository": "darkapoparka/cars-automarketvarna",
-      "projectId": "prj_5H4OESlQ0KpNM5mJvbIEmlUgaMcP",
-      "projectName": "cars-automarketvarna",
-      "publicOrigin": "https://cars-automarketvarna.vercel.app",
-      "templateRevisions": {
-        "auto-best": "696230a404abd9b20b6f907b9cfb139175298c7a",
-        "modern": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
-        "import": "b9373e9ed5453bc7d208898ae140eae4d596a232",
-        "app": "4e184777567849a2c5b4a9e4a3e652252179c29c",
-        "mobile": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
-        "karento-best": "cc130e432a41a3a60cc80bc2b3461c6416893b4a"
-      }
-    },
-    {
-      "slug": "outletcars-varna",
-      "repository": "darkapoparka/cars-outletcarsvarna",
-      "projectId": "prj_1KYEEcbBwAd5iCtAvDGM59INQLe7",
-      "projectName": "cars-outletcarsvarna",
-      "publicOrigin": "https://cars-outletcarsvarna.vercel.app",
-      "templateRevisions": {
-        "auto-best": "696230a404abd9b20b6f907b9cfb139175298c7a",
-        "import": "b9373e9ed5453bc7d208898ae140eae4d596a232",
-        "modern": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
-        "app": "4e184777567849a2c5b4a9e4a3e652252179c29c",
-        "mobile": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
-        "karento-best": "cc130e432a41a3a60cc80bc2b3461c6416893b4a"
-      }
-    },
-    {
-      "slug": "perfect-auto-varna",
-      "repository": "darkapoparka/cars-perfectauto",
-      "projectId": "prj_sqN8Xc2fs7g2Y2pSs0qeSeYJgVZR",
-      "projectName": "cars-perfectauto",
-      "publicOrigin": "https://cars-perfectauto.vercel.app",
-      "templateRevisions": {
-        "auto-best": "696230a404abd9b20b6f907b9cfb139175298c7a",
-        "modern": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
-        "import": "b9373e9ed5453bc7d208898ae140eae4d596a232",
-        "app": "4e184777567849a2c5b4a9e4a3e652252179c29c",
-        "mobile": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
-        "karento-best": "cc130e432a41a3a60cc80bc2b3461c6416893b4a"
-      }
-    },
-    {
-      "slug": "avangard-auto",
-      "repository": "darkapoparka/cars-avangardauto",
-      "projectId": "prj_QqFCB2Zllc60dfPVIo6aJ8P4wlKc",
-      "projectName": "cars-avangardauto",
-      "publicOrigin": "https://cars-avangardauto.vercel.app",
-      "templateRevisions": {
-        "auto-best": "696230a404abd9b20b6f907b9cfb139175298c7a",
-        "modern": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
-        "import": "b9373e9ed5453bc7d208898ae140eae4d596a232",
-        "app": "4e184777567849a2c5b4a9e4a3e652252179c29c",
-        "mobile": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
-        "karento-best": "cc130e432a41a3a60cc80bc2b3461c6416893b4a"
-      }
-    },
-    {
-      "slug": "legend-auto",
-      "repository": "darkapoparka/cars-legendauto",
-      "projectId": "prj_kdnDQxZaPh8xgKBiIXyb9uODrXZw",
-      "projectName": "cars-legendauto",
-      "publicOrigin": "https://cars-legendauto.vercel.app",
-      "templateRevisions": {
-        "auto-best": "696230a404abd9b20b6f907b9cfb139175298c7a",
-        "modern": "6f87470c1e3ec8ade7d9ecc07daf9ebe45cb9710",
-        "import": "b9373e9ed5453bc7d208898ae140eae4d596a232",
-        "app": "4e184777567849a2c5b4a9e4a3e652252179c29c",
-        "mobile": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
-        "karento-best": "cc130e432a41a3a60cc80bc2b3461c6416893b4a"
-      }
-    }
+    {"slug":"navara-car","repository":"darkapoparka/cars-navaracar","projectId":"prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr","projectName":"cars-navaracar","publicOrigin":"https://cars-navaracar.vercel.app"},
+    {"slug":"day-and-night-auto-group","repository":"darkapoparka/day-and-night-autodeal","projectId":"prj_enD9orrI6rwguMMtDlS0IP6RAXjr","projectName":"day-and-night-a","publicOrigin":"https://day-and-night-a.vercel.app"},
+    {"slug":"promosale-varna","repository":"darkapoparka/cars-promosalevarna","projectId":"prj_yjXIu0an7sqCiY26hKWgOGUl5hbY","projectName":"cars-promosalevarna","publicOrigin":"https://cars-promosalevarna.vercel.app"},
+    {"slug":"priselci","repository":"darkapoparka/cars-priselci","projectId":"prj_GwnlfPmyImlJuiocl77NWplzvTTb","projectName":"cars-priselci","publicOrigin":"https://cars-priselci.vercel.app"},
+    {"slug":"isauto-varna","repository":"darkapoparka/cars-isautovarna","projectId":"prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv","projectName":"cars-isautovarna","publicOrigin":"https://cars-isautovarna.vercel.app"},
+    {"slug":"automarket-varna","repository":"darkapoparka/cars-automarketvarna","projectId":"prj_5H4OESlQ0KpNM5mJvbIEmlUgaMcP","projectName":"cars-automarketvarna","publicOrigin":"https://cars-automarketvarna.vercel.app"},
+    {"slug":"outletcars-varna","repository":"darkapoparka/cars-outletcarsvarna","projectId":"prj_1KYEEcbBwAd5iCtAvDGM59INQLe7","projectName":"cars-outletcarsvarna","publicOrigin":"https://cars-outletcarsvarna.vercel.app"},
+    {"slug":"perfect-auto-varna","repository":"darkapoparka/cars-perfectauto","projectId":"prj_sqN8Xc2fs7g2Y2pSs0qeSeYJgVZR","projectName":"cars-perfectauto","publicOrigin":"https://cars-perfectauto.vercel.app"},
+    {"slug":"avangard-auto","repository":"darkapoparka/cars-avangardauto","projectId":"prj_QqFCB2Zllc60dfPVIo6aJ8P4wlKc","projectName":"cars-avangardauto","publicOrigin":"https://cars-avangardauto.vercel.app"},
+    {"slug":"legend-auto","repository":"darkapoparka/cars-legendauto","projectId":"prj_kdnDQxZaPh8xgKBiIXyb9uODrXZw","projectName":"cars-legendauto","publicOrigin":"https://cars-legendauto.vercel.app"}
   ]
 }
