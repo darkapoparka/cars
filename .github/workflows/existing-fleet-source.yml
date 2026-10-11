@@ -27,13 +27,17 @@ jobs:
           sparse-checkout: |
             /scripts/
             /.github/workflows/existing-fleet-source.yml
+            /.github/workflows/existing-fleet-cloudflare.yml
             /docs/DEPLOYMENT-INVENTORY.json
-            /docs/releases/cloudflare-existing25-20261011/
+            /docs/releases/cloudflare-existing25-20261011/*.json
+            /docs/releases/cloudflare-existing25-20261011/new-source/**/*.json
+            /templates.lock.json
+            /clients/index.json
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
         with:
           node-version: '26.10.0'
           package-manager-cache: false
-      - run: node --test scripts/prepare-existing-fleet-source.test.mjs
+      - run: node --test scripts/prepare-existing-fleet-source.test.mjs scripts/prepare-new-dealer-source.test.mjs
       - id: matrix
         run: node scripts/prepare-existing-fleet-source.mjs matrix >> "$GITHUB_OUTPUT"
   prepare_source:
@@ -63,12 +67,21 @@ jobs:
             /templates.lock.json
             /templates/auto-best/scripts/
             /docs/DEPLOYMENT-INVENTORY.json
-            /docs/releases/
+            /docs/releases/cloudflare-existing25-20261011/source-request.json
+            /docs/releases/cloudflare-existing25-20261011/selection.json
+            ${{ matrix.mode != 'new-approved' && '/docs/releases/' || '' }}
             /clients/${{ matrix.slug }}/
+            ${{ matrix.sourceInputs }}
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
         with:
           node-version: '26.10.0'
           package-manager-cache: false
+      - name: Establish actual synchronized main and all branch metadata for new source absence leases
+        if: matrix.mode == 'new-approved'
+        run: |
+          git fetch --no-tags --filter=blob:none origin '+refs/heads/*:refs/remotes/origin/*'
+          git switch -C main "$GITHUB_SHA"
+          [[ "$(git rev-parse HEAD)" == "$GITHUB_SHA" && "$(git branch --show-current)" == main ]]
       - name: Install only the pinned source raster helper
         run: |
           mkdir -p runtime/source-preparation-tools
@@ -87,7 +100,7 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: existing-cf-source-${{ matrix.slug }}-${{ github.run_id }}-${{ github.run_attempt }}
-          path: runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/output/
+          path: runtime/${{ matrix.mode == 'new-approved' && 'new-dealer-source' || 'existing-fleet-source' }}/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/output/
           include-hidden-files: true
           if-no-files-found: error
           compression-level: 6
@@ -100,5 +113,6 @@ jobs:
           path: |
             runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/plan/review.json
             runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/plan/run.json
+            runtime/new-dealer-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/failure.json
           if-no-files-found: warn
           retention-days: 7

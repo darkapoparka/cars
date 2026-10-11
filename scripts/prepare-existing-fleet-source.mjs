@@ -13,7 +13,7 @@ import {packageRetainsPath,collectSource} from './package-dealer.mjs';
 import {applyLeadBranding,assertLeadBranding} from './publishing/lead-branding.mjs';
 import {baseNativeManifest,assertAppVariant} from './publishing/app-variant.mjs';
 import {assertExtendedVariantSources} from './publishing/six-variant.mjs';
-import {ADOPTION_FILE,assertNativeQualification,validateNativeQualificationContext} from './lib/native-localization.mjs';
+import {ADOPTION_FILE,assertNativeQualification,validateNativeQualificationContext,parseCatalogJson} from './lib/native-localization.mjs';
 import {selectedDealer,existingFleetQualifiedSources,QUALIFICATION_LOCK_PATH} from './build-existing-fleet-cloudflare.mjs';
 import {artifactInventory} from './lib/uk-cloudflare-artifacts.mjs';
 import {planSixDesignSelection} from './lib/six-design-release.mjs';
@@ -29,6 +29,61 @@ const safeName=n=>typeof n==='string'&&n&&!n.includes('\\')&&!n.includes('\0')&&
 const markers=new Set(['.client/cloudflare-existing-source.json','.client/native-qualification-context.json',QUALIFICATION_LOCK_PATH]);
 const managed=n=>safeName(n)&&(packageRetainsPath(n)||markers.has(n));
 const factPaths=new Set(['business-facts.json','stock.json','locale.json','FACTS-AND-INVENTORY.json']);
+const strictJson=bytes=>parseCatalogJson(new TextDecoder('utf-8',{fatal:true}).decode(bytes).replace(/^\uFEFF/,''));
+export function sourceRequestMode(request){
+ const mode=request?.mode===undefined?'existing-migration':request.mode;
+ assert(['existing-migration','new-approved'].includes(mode),'Unsupported source mode; branch/research and independent source require prior canonical adoption');return mode;
+}
+/** Only the envelope is new. The maintained creator owns the nested request,
+ * identity/source validation and source creation; defer its import to avoid a cycle. */
+export async function resolveSourceRequest(request,{root=ROOT,leads,registry}={}){
+ const mode=sourceRequestMode(request);
+ if(mode==='existing-migration'){validateSourceRequest(request,leads,registry);return {mode,dealers:request.dealers};}
+ assert(request?.schemaVersion===1&&same(Object.keys(request).sort(),['mode','newSourceRequest','schemaVersion']),'Exact new-approved source envelope required');
+ const p=request.newSourceRequest;
+ assert(p&&same(Object.keys(p).sort(),['path','sha256'])&&safeName(p.path)&&p.path.startsWith(SOURCE_CAMPAIGN+'/new-source/')&&p.path.endsWith('.json')&&hex64(p.sha256),'Exact bounded nested source request pin required');
+ const {readNewSourceInput,validateNewSourceRequest}=await import('./prepare-new-dealer-source.mjs');
+ const nested=strictJson(readNewSourceInput(root,p).bytes),lockBytes=fs.readFileSync(path.join(root,'templates.lock.json')),registryBytes=fs.readFileSync(path.join(root,'docs/DEPLOYMENT-INVENTORY.json')),indexBytes=fs.readFileSync(path.join(root,'clients/index.json'));
+ const inventory=strictJson(registryBytes),index=strictJson(indexBytes),lock=strictJson(lockBytes),occupiedSlugs=git(root,['ls-tree','-z','--name-only','HEAD:clients'],{encoding:null}).toString('utf8').split('\0').filter(Boolean);
+ validateNewSourceRequest(nested,{registry:inventory,clientIndex:index,occupiedSlugs,lock,lockSha256:sha256(lockBytes),registrySha256:sha256(registryBytes),clientIndexSha256:sha256(indexBytes)});
+ return {mode,dealers:nested.dealers.map(r=>r.slug),requestFile:p.path,nested,lock};
+}
+export async function sourceMatrix(request,options={}){
+ const resolved=await resolveSourceRequest(request,options);
+ if(resolved.mode==='existing-migration')return {include:resolved.dealers.map(slug=>({slug}))};
+ const {readNewSourceInput}=await import('./prepare-new-dealer-source.mjs');
+ const matrix={include:resolved.nested.dealers.map(row=>{
+  const prefix=SOURCE_CAMPAIGN+'/new-source/'+row.slug,branding=strictJson(readNewSourceInput(options.root??ROOT,row.inputs.branding,{prefix}).bytes);
+  const inputPaths=[resolved.requestFile,...Object.values(row.inputs).map(p=>p.path),row.identityReview.path,...row.media.map(p=>p.path)];
+  for(const p of [branding.master,branding.mark,...Object.values(branding.surfaces??{})].filter(Boolean)){
+   assert(safeName(p.path)&&p.path.startsWith(prefix+'/')&&hex64(p.sha256),'Exact bounded creator branding pin required');inputPaths.push(p.path);
+  }
+  assert(inputPaths.length<=430,'New source sparse input inventory exceeds its bound');
+  const evidence=[];for(const key of Object.keys(row.sourceReleases)){
+   const qa=resolved.lock.templates[key].qa;if(qa?.evidence){assert(safeName(qa.evidence)&&qa.evidence.startsWith('docs/releases/')&&qa.evidence.endsWith('.json'),'Bounded approved template evidence path required');evidence.push(qa.evidence);}
+   const deployment=qa?.nativeLocalization?.deployment;for(const name of ['artifactManifest','singleWorkerReceipt','deploymentReceipt','hostedReceipt'])if(deployment?.[name]){const p=deployment[name];assert(safeName(p.reference)&&p.reference.startsWith('docs/releases/')&&p.reference.endsWith('.json')&&hex64(p.sha256),'Bounded approved native proof pin required');evidence.push(p.reference);}
+  }
+  const paths=[...new Set(['catalog.json','workspace.json','clients/index.json',...Object.keys(row.sourceReleases).map(k=>'templates/'+k+'/package.json'),...evidence,...inputPaths])].sort();
+  assert(paths.every(p=>safeName(p)&&/^[a-zA-Z0-9._/-]+$/.test(p)),'Source sparse paths must be exact literals without pattern metacharacters');const sourceInputs=paths.map(p=>'/'+p).join('\n');
+  assert(Buffer.byteLength(sourceInputs)<=32768,'Per-dealer sparse input list exceeds the matrix byte limit');return {slug:row.slug,mode:resolved.mode,sourceInputs};
+ })};assert(Buffer.byteLength(JSON.stringify(matrix))<=450*1024,'New source matrix exceeds the bounded CI output limit');return matrix;
+}
+export function assertNewSourceBootstrap({root=ROOT,env=process.env,readGit=git,checkCi=sourceCiContext}={}){
+ const ci=checkCi({root,env,readGit});
+ assert(readGit(root,['branch','--show-current'])==='main'&&readGit(root,['rev-parse','--is-shallow-repository'])==='false','New source CI requires actual main and complete historical commit objects');
+ const remote=readGit(root,['ls-remote','--exit-code','origin','refs/heads/main']).split(/\s+/)[0];
+ assert(remote===ci.commit,'New source event SHA no longer equals synchronized origin main');return ci;
+}
+export async function prepareFleetSource(options={}){
+ const root=options.root??ROOT,request=options.request??strictJson(fs.readFileSync(path.join(root,SOURCE_CAMPAIGN,'source-request.json')));
+ if(sourceRequestMode(request)==='existing-migration')return prepareExistingFleetSource({...options,request});
+ const env=options.env??process.env,ci=assertNewSourceBootstrap({root,env});
+ const envelopeBytes=fs.readFileSync(path.join(root,SOURCE_CAMPAIGN,'source-request.json'));
+ assert(same(strictJson(envelopeBytes),request)&&gitObjectId('blob',envelopeBytes)===git(root,['rev-parse',ci.commit+':'+SOURCE_CAMPAIGN+'/source-request.json']),'Source dispatch envelope differs from committed event bytes');
+ const resolved=await resolveSourceRequest(request,{root});assert(resolved.dealers.includes(options.slug),'Dealer is outside the bounded new source request');
+ const {prepareNewDealerSource}=await import('./prepare-new-dealer-source.mjs');
+ return prepareNewDealerSource({root,requestFile:resolved.requestFile,dealer:options.slug,write:true,env,toolPackage:options.toolPackage??path.join(root,'runtime/source-preparation-tools/package.json')});
+}
 
 export function gitObjectId(type,bytes){return createHash('sha1').update(type+' '+bytes.length+'\0').update(bytes).digest('hex');}
 export function gitTreeId(entries){
@@ -99,6 +154,7 @@ export function verifySourcePatch({baseline,patch,blobs}){
 }
 
 export function validateSourceRequest(request,leads,registry){
+ assert(sourceRequestMode(request)==='existing-migration','New source requests require their maintained nested request validator');
  assert(request?.schemaVersion===1&&hex40(request.sourceRevision)&&hex64(request.approvedParentLockDigest)&&Array.isArray(request.dealers)&&request.dealers.length>0&&request.dealers.length<=25&&new Set(request.dealers).size===request.dealers.length,'Invalid bounded source request');
  assert(same(Object.keys(request.inputs??{}).sort(),[...request.dealers].sort()),'Exactly one input mapping per requested dealer is required');
  for(const slug of request.dealers){selectedDealer(slug,leads,registry);const record=registry.dealers.find(r=>r.slug===slug);assert(record.sourceOwnership!=='independent-repository'&&(!record.canonicalSourceRepository||record.canonicalSourceRepository==='darkapoparka/cars'),'Independent source preparation is excluded');
@@ -163,4 +219,7 @@ export async function prepareExistingFleetSource({slug,root=ROOT,env=process.env
   pathsChanged:proposal.patch.changes.length,uniqueBlobBytes:proposal.patch.uniqueBlobBytes,authoritativeFactsUnchanged:true,canonicalSourceUnchanged:true,originalPlanArtifactsUnchanged:true,reviewed:false,published:false,nativeApproval:false,hostedApproval:false,privatePublishingMirror:{repository:manifest.repository,state:'not-published-by-source-preparation'},createdAt:new Date().toISOString()};
  writeNew(path.join(output,'source-preparation-receipt.json'),encode(receipt));artifactInventory(output,{kind:SOURCE_KIND,dealer:slug,status:'passed'});return {dealer:slug,output,preparedTree:receipt.preparedTree,pathsChanged:receipt.pathsChanged,uniqueBlobBytes:receipt.uniqueBlobBytes,reviewed:false,published:false};
 }
-if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){try{const [command,slug]=process.argv.slice(2);if(command==='matrix'){const request=json(path.join(ROOT,SOURCE_CAMPAIGN,'source-request.json'));validateSourceRequest(request,json(path.join(ROOT,SOURCE_CAMPAIGN,'selection.json')).leads,json(path.join(ROOT,'docs/DEPLOYMENT-INVENTORY.json')));console.log('matrix='+JSON.stringify({include:request.dealers.map(slug=>({slug}))}));}else{assert(command==='prepare'&&slug&&process.argv.length===4,'Use matrix | prepare SLUG (main source CI only)');console.log(JSON.stringify(await prepareExistingFleetSource({slug}),null,2));}}catch(error){console.error(error.message);process.exitCode=1;}}
+// Finish module evaluation before dynamic creator imports: that creator imports
+// the source proposal helpers from this module as its maintained shared seam.
+async function runSourceCli(){const [command,slug]=process.argv.slice(2);if(command==='matrix'){const request=strictJson(fs.readFileSync(path.join(ROOT,SOURCE_CAMPAIGN,'source-request.json')));console.log('matrix='+JSON.stringify(await sourceMatrix(request,{root:ROOT,leads:json(path.join(ROOT,SOURCE_CAMPAIGN,'selection.json')).leads,registry:json(path.join(ROOT,'docs/DEPLOYMENT-INVENTORY.json'))})));}else{assert(command==='prepare'&&slug&&process.argv.length===4,'Use matrix | prepare SLUG (main source CI only)');console.log(JSON.stringify(await prepareFleetSource({slug}),null,2));}}
+if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href)runSourceCli().catch(error=>{console.error(error.message);process.exitCode=1;});
