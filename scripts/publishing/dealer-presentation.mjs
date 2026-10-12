@@ -19,6 +19,14 @@ export function neutralModern(source) {
   // The dealer adapter preserves the approved template accent. Publishing must
   // not introduce a second palette or recolour it from the dealer's logo.
   const read = name => {const m = [...text.matchAll(new RegExp('^  '+name+': (["\'])(.*?)\\1,','gm'))];if(m.length!==1)throw Error('Missing verified Modern logo '+name);return m[0][2];};
+  // Current six-design creators already bind both sealed public surface aliases.
+  // Legacy sources additionally carry logoOnLight/logoOnDark; preserve that path.
+  if (!/^  logoOn(?:Light|Dark):/m.test(text)) {
+    const light=read('logoPath'),dark=read('logoInversePath');
+    const matched=/^\/dealer-brand\/(v2-[a-f0-9]{16})\/logo-on-light\.webp$/.exec(light);
+    if (!matched || dark!=='/dealer-brand/'+matched[1]+'/logo-on-dark.webp') throw Error('Missing verified Modern surface aliases');
+    return text;
+  }
   const light=read('logoOnLight'),dark=read('logoOnDark');
   text=text.replace(/^  logoPath: ["'][^"']*["'],/m,'  logoPath: '+JSON.stringify(light)+',');
   if (/^  logoInversePath:/m.test(text)) text=text.replace(/^  logoInversePath: ["'][^"']*["'],/m,'  logoInversePath: '+JSON.stringify(dark)+',');

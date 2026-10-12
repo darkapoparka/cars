@@ -13,3 +13,12 @@ test('current Signature source keeps its server-safe logo consumers and complete
  assert.equal(signatureNavigation(navigation),navigation);
  assert.throws(()=>signatureHeader(header.replace('src={dealer.logo.archivedDark}','src={dealer.logo.light}')));
 });
+
+test('current generated Modern surface aliases are retained without palette or identity rewriting',()=>{
+ const source='export const leadSite = {\n  accent: "#30343b",\n  logoPath: "/dealer-brand/v2-0e9c59ba68488896/logo-on-light.webp",\n  logoInversePath: "/dealer-brand/v2-0e9c59ba68488896/logo-on-dark.webp",\n};\n';
+ assert.equal(neutralModern(source),source);
+ assert.throws(()=>neutralModern(source.replace('logo-on-dark.webp','logo-on-light.webp')),/Missing verified/);
+ assert.throws(()=>neutralModern(source.replace('v2-0e9c59ba68488896/logo-on-dark','v2-ffffffffffffffff/logo-on-dark')),/Missing verified/);
+ assert.throws(()=>neutralModern(source.replace('  logoInversePath:','  missingInverse:')),/Missing verified/);
+ assert.throws(()=>neutralModern(source.replace('  accent:','  logoOnLight: "broken",\n  accent:')),/Missing verified/);
+});
