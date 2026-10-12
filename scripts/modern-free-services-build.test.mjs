@@ -59,7 +59,12 @@ function emissionFixture(){
  const server='modern/apps/web/dist/server',client='modern/apps/web/dist/client';fs.mkdirSync(path.join(fixtureRoot,client),{recursive:true});
  write(server+'/cars-native-preferences.js','export function resolveCarsNativePreferences(){}\nexport const VINEXT_INTERNAL_HEADERS=["x-vinext-prerender-rewritten"];\nexport async function resolveCarsNativeResponsePolicy(locale){return {...'+JSON.stringify(fixtureSecurity())+',"content-language":locale};}\n');
  write('.cars-modern-native-policy-toolchain.json',JSON.stringify({schemaVersion:1,kind:'cars-modern-native-policy-toolchain',rows:[{name:'@nosecone/next',version:'1.2.0'},{name:'nosecone',version:'1.2.0'}]}));
- for(const env of ['rsc','ssr','client'])write('.cars-modern-free-graph-'+env+'.json',JSON.stringify({schemaVersion:1,environment:env,graph:'original-native',rows:[{file:'index.js',moduleIds:['<package>/modern/apps/web/app/[locale]/services/page.tsx']}]}));
+ for(const env of ['rsc','ssr','client']){
+  const outputDirectory=env==='rsc'?server:env==='ssr'?server+'/ssr':client,file=env==='rsc'?'cars-native-preferences.js':'index.js';if(env!=='rsc')write(outputDirectory+'/'+file,'export const native="'+env+'";\n');
+  const bytes=fs.readFileSync(path.join(fixtureRoot,outputDirectory,file)),rows=[{file,moduleIds:['<package>/modern/apps/web/app/[locale]/services/page.tsx'],bytes:bytes.length,sha256:hash(bytes)}],value={schemaVersion:1,environment:env,graph:'original-native',phase:'final',lifecycle:{plugin:'@vitejs/plugin-rsc',version:'0.5.36',isScanBuild:false,write:true},outputDirectory,rows};
+  write('.cars-modern-free-graph-'+env+'.json',JSON.stringify(value));
+  if(env!=='client')write('.cars-modern-free-graph-scan-'+env+'.json',JSON.stringify({...value,phase:'scan',lifecycle:{...value.lifecycle,isScanBuild:true,write:false},rows:[{...rows[0],sha256:hash('different native scan graph')}]}));
+ }
  const routes=[];for(const locale of ['en','bg']){routes.push({route:'/[locale]/services',status:'rendered',path:'/'+locale+'/services',router:'app',revalidate:false});const bodies={html:'<html lang="'+locale+'"><script type="application/json" id="cars-modern-native-preferences">null</script></html>',rsc:locale+':actual-native-payload-fixture'};for(const kind of ['html','rsc']){write(server+'/prerendered-routes/'+locale+'/services.'+kind,bodies[kind]);write('.cars-modern-native-response-'+locale+'-'+kind+'.json',JSON.stringify({schemaVersion:1,kind:'cars-modern-official-prerender-response',sourceTree:MODERN_FREE_CLIENT_TREE,pathname:'/variant-2/'+locale+'/services',locale,representation:kind,status:200,bytes:Buffer.byteLength(bodies[kind]),sha256:hash(bodies[kind]),headers:fixtureProtocol(locale,kind)}));}}
  routes.push({route:'/404',status:'rendered',router:'app',revalidate:false});write(server+'/prerendered-routes/404.html','official404-fixture');
  const index={buildId:'actual-tagged-build-fixture',trailingSlash:false,routes,pregeneratedConcretePaths:[]};write(server+'/vinext-prerender.json',JSON.stringify(index));
@@ -95,8 +100,45 @@ test('retained native graph receipts preserve exact original bytes and module ID
   const retained=fs.readFileSync(path.join(fixtureRoot,record.path));
   assert.deepEqual(retained,original.get(env));
   assert.deepEqual(JSON.parse(retained).rows[0].moduleIds,['<package>/modern/apps/web/app/[locale]/services/page.tsx']);
+  assert.equal(record.phase,'final');assert.equal(record.writtenOutputJoinVerified,true);
+  if(env!=='client'){const scan=fs.readFileSync(path.join(fixtureRoot,'.cars-modern-free-graph-scan-'+env+'.json')),proof=receipt.graph[env].scan;assert.equal(proof.path,f.server+'/cars-native-graph-scan-'+env+'.json');assert.equal(proof.bytes,scan.length);assert.equal(proof.sha256,hash(scan));assert.deepEqual(fs.readFileSync(path.join(fixtureRoot,proof.path)),scan);assert.equal(JSON.parse(scan).phase,'scan');assert.notEqual(JSON.parse(scan).rows[0].sha256,JSON.parse(retained).rows[0].sha256);}
   assert(!fs.existsSync(path.join(fixtureRoot,f.client,'cars-native-graph-'+env+'.json')));
  }
+});
+
+test('generated plugin follows all five tagged scan/final stages and reuses only exact same-phase owned receipts',async()=>{
+ clearFixture();const write=(name,bytes)=>{const file=path.join(fixtureRoot,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,bytes);};
+ write('.cars-modern-free-build.json',JSON.stringify({mount:'/variant-2',sourceTree:MODERN_FREE_CLIENT_TREE}));
+ const next='modern/packages/security/node_modules/@nosecone/next',nosecone='modern/packages/security/node_modules/nosecone';
+ for(const [name,directory]of [['@nosecone/next',next],['nosecone',nosecone]]){write(directory+'/package.json',JSON.stringify({name,version:'1.2.0',main:'./index.js',...(name==='@nosecone/next'?{dependencies:{nosecone:'1.2.0'}}:{})}));write(directory+'/index.js','export const nativePolicy=true;\n');}
+ const generated=await import('data:text/javascript;base64,'+Buffer.from(modernFreeServicesBuildSource()).toString('base64')),plugin=generated.createModernFreeServicesPlugin({packageRoot:fixtureRoot,cwd:path.join(fixtureRoot,'modern/apps/web')}),manager={isScanBuild:true};plugin.configResolved({plugins:[{name:'rsc:minimal',api:{manager}}]});
+ const originalFetch=globalThis.fetch,key=Symbol.for('cars.modern.native-response-capture'),previousOwner=globalThis[key],exitBefore=process.listenerCount('exit'),emitted=[],roots={rsc:'modern/apps/web/dist/server',ssr:'modern/apps/web/dist/server/ssr',client:'modern/apps/web/dist/client'},environments=Object.fromEntries(Object.entries(roots).map(([name,outDir])=>[name,{name,config:{build:{write:false,outDir:path.join(fixtureRoot,outDir)}}}]));delete globalThis[key];
+ const context=name=>({environment:environments[name],emitFile:row=>emitted.push({phase:manager.isScanBuild?'scan':'final',...row})}),bundle=(name,phase)=>{const file=name==='rsc'?'cars-native-preferences.js':'index.js';return {[file]:{type:'chunk',fileName:file,imports:[],dynamicImports:[],moduleIds:[path.join(fixtureRoot,'modern/apps/web/'+phase+'/'+name+'.tsx')],code:'export const phase="'+phase+'-'+name+'";\n'}};};
+ try{
+  for(const name of ['rsc','ssr']){plugin.buildStart.call(context(name));plugin.generateBundle.handler.call(context(name),{},bundle(name,'scan'));assert(!fs.existsSync(path.join(fixtureRoot,'.cars-modern-free-graph-'+name+'.json')));assert.equal(globalThis.fetch,originalFetch);}
+  const toolchain=fs.readFileSync(path.join(fixtureRoot,'.cars-modern-native-policy-toolchain.json'));manager.isScanBuild=false;for(const environment of Object.values(environments))environment.config.build.write=true;
+  for(const name of ['rsc','client','ssr']){const ctx=context(name),output=bundle(name,'final');plugin.buildStart.call(ctx);plugin.generateBundle.handler.call(ctx,{},output);assert(!fs.existsSync(path.join(fixtureRoot,'.cars-modern-free-graph-'+name+'.json')));
+   // A later generateBundle mutation must be included in the written proof.
+   output[Object.keys(output)[0]].code+='// later native generateBundle output\n';for(const chunk of Object.values(output))write(roots[name]+'/'+chunk.fileName,chunk.code);plugin.writeBundle.handler.call(ctx,{},output);plugin.writeBundle.handler.call(ctx,{},output);
+   const bytes=fs.readFileSync(path.join(fixtureRoot,'.cars-modern-free-graph-'+name+'.json')),row=JSON.parse(bytes);assert.equal(row.phase,'final');assert.equal(row.lifecycle.isScanBuild,false);assert.equal(row.lifecycle.write,true);assert.equal(row.rows[0].sha256,hash(fs.readFileSync(path.join(fixtureRoot,roots[name],row.rows[0].file))));
+   if(name!=='client')assert.notDeepEqual(row.rows,JSON.parse(fs.readFileSync(path.join(fixtureRoot,'.cars-modern-free-graph-scan-'+name+'.json'))).rows);
+   const changed=structuredClone(output);changed[Object.keys(changed)[0]].code+='unequal same phase';assert.throws(()=>plugin.writeBundle.handler.call(ctx,{},changed),/owned native receipt bytes differ/);assert.deepEqual(fs.readFileSync(path.join(fixtureRoot,'.cars-modern-free-graph-'+name+'.json')),bytes);
+  }
+  const wrapper=globalThis.fetch,owner=globalThis[key];plugin.buildStart.call(context('rsc'));assert.equal(globalThis.fetch,wrapper);assert.equal(globalThis[key],owner);assert.equal(process.listenerCount('exit'),exitBefore+1);assert.deepEqual(fs.readFileSync(path.join(fixtureRoot,'.cars-modern-native-policy-toolchain.json')),toolchain);assert.deepEqual(emitted.map(row=>row.phase),['scan','final','final']);assert(emitted.every(row=>row.fileName==='cars-native-preferences.js'));
+  write(next+'/index.js','unequal installed entry');assert.throws(()=>plugin.buildStart.call(context('rsc')),/owned native receipt bytes differ/);assert.deepEqual(fs.readFileSync(path.join(fixtureRoot,'.cars-modern-native-policy-toolchain.json')),toolchain);
+  environments.rsc.config.build.write=false;assert.throws(()=>plugin.buildStart.call(context('rsc')),/write authority differs/);environments.rsc.config.build.write=true;
+  assert.throws(()=>plugin.writeBundle.handler.call(context('rsc'),{},bundle('ssr','missing-resolver')),/graph missing/);
+ }finally{globalThis[key]?.handle.restore();if(previousOwner===undefined)delete globalThis[key];else globalThis[key]=previousOwner;globalThis.fetch=originalFetch;assert.equal(process.listenerCount('exit'),exitBefore);}
+});
+
+test('capture singleton rejects conflicting authority and restores only its own wrapper',()=>{
+ clearFixture();const original=async()=>new Response('native'),scope={fetch:original},env={VINEXT_PRERENDER:'1',NEXT_PHASE:'phase-production-build'},options={packageRoot:fixtureRoot,mount:'/variant-2',sourceTree:MODERN_FREE_CLIENT_TREE,scope,env},first=installModernNativeResponseCapture(options),wrapper=scope.fetch;
+ assert.equal(installModernNativeResponseCapture(options),first);assert.equal(scope.fetch,wrapper);for(const changed of [{mount:'/variant-3'},{sourceTree:'a'.repeat(40)},{env:{...env}}])assert.throws(()=>installModernNativeResponseCapture({...options,...changed}),/authority differs/);assert.equal(scope.fetch,wrapper);
+ const other=async()=>new Response('other owner');scope.fetch=other;assert.throws(()=>first.restore(),/fetch owner changed/);assert.equal(scope.fetch,other);assert.throws(()=>installModernNativeResponseCapture(options),/fetch owner changed/);scope.fetch=wrapper;first.restore();assert.equal(scope.fetch,original);assert.equal(installModernNativeResponseCapture(options),first);assert.equal(scope.fetch,original);
+});
+
+test('snapshot admission rejects final graph body drift before public assets or manifest',async()=>{
+ const f=emissionFixture();f.write(f.server+'/ssr/index.js','same phase output drift');await assert.rejects(()=>emitModernFreeServicesSnapshots({packageRoot:fixtureRoot,target:f.target}),/final native graph does not join written output/);assert(!fs.existsSync(path.join(fixtureRoot,f.server,'cars-free-services.json')));assert(!fs.existsSync(path.join(fixtureRoot,f.client,'_cars/private/modern')));
 });
 
 test('generated matcher excludes exactly the two Services paths only during the official prerender phase',()=>{
