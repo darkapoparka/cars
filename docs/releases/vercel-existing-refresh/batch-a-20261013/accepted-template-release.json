@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-vercel-three-batch-owner-accepted-template-identity",
+  "id": "cars-vercel-b1f0f560-20261013",
+  "coordinator": "Batch A",
+  "canonicalRepository": "darkapoparka/cars",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "sourceSelectionAuthority": "Owner instruction dated 13 October 2026 (Europe/Sofia): templates are approved and pushed; integrate accepted six-template updates into three exclusive existing Vercel batches.",
+  "controlBase": "13152f136105e149129e81c227090955081b994d",
+  "approvedParentLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+  "globalTemplateLockModified": false,
+  "templates": {
+    "auto-best": {"path": "templates/auto-best", "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c"},
+    "modern": {"path": "templates/modern", "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25"},
+    "import": {"path": "templates/import", "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5"},
+    "app": {"path": "templates/app", "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"},
+    "mobile": {"path": "templates/mobile", "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"},
+    "karento-best": {"path": "templates/karento-best", "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f"}
+  },
+  "retainedEvidence": {
+    "repository": "darkapoparka/cars-promosalevarna",
+    "qaRun": 38298986232,
+    "qaControlCommitPrefix": "34923c88",
+    "maintainedSealRun": 38308329102,
+    "maintainedSealControlCommit": "3b663fc9f118a238113aaac3da4d0bfef7bce9fa",
+    "maintainedSealArtifact": 11773496926,
+    "maintainedSealArtifactSha256": "52767200c321505b13c818ad2ddd134844dec22e6630a5e6de96fc3d5e93cdcb",
+    "promosaleScopedReleasesSha256": "7ef6927634947f9dd1869e2735882b459e758a51dc776f86cc9d8c35fc17013f",
+    "scope": "Retained evidence remains bound to its exact inputs and run; the Promosale seal is not qualification of another dealer. No broad QA is rerun solely for this identity record."
+  },
+  "integrationPolicy": "Use maintained integration/package/export tools, preserve dealer-specific source and current repository descendants, and bind current accepted copy/mount corrections to actual per-dealer evidence. Do not promote the Workers-Free Services experiment 0899f1707226a2a45a7b25f79dc82ee8397c1839 as a template release.",
+  "batchADealers": ["promosale-varna", "automarket-varna", "avangard-auto", "day-and-night-auto-group", "isauto-varna", "legend-auto", "navara-car", "outletcars-varna", "perfect-auto-varna"],
+  "otherBatchPublicationAuthorizedHere": false,
+  "productionAcceptance": "pending per stable production origin; protected preview checks and this release identity do not constitute production delivery"
+}
