@@ -3,17 +3,17 @@
   "dealer": "excellent-cars",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
     "path": "templates/app",
-    "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
-    "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
   },
-  "appDigest": "3176bc17a61e54c4952601a30eabb4dd35f97e594e6cc813c4a75be93e6f7041",
+  "appDigest": "61da64388591d5fe86f58d7e00f0e94f4930407c48def924851e46ba9abfc3aa",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "excellent-cars",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "79381a24dfbdf8eb07fbe2b75edee9323d6371795944bdc64bb017d5a94738fc",
+    "profileSha256": "bccac6088b2c7721c70e07cf13762afc6750c1cf2e7ca1c39fed1bd5e26e219d",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 16,
     "currency": "EUR",
@@ -415,13 +415,107 @@
         "sha256": "61a2003c4283e92a86b9b5c4e647fb8a374aa67220bd9912538236911b508ced",
         "role": "vehicle"
       }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "mercedes-benz-gle-350-amg-designo-2016-21781257688134220",
+        "sourceValue": 179000,
+        "sourceUnit": "km",
+        "canonicalKm": 179000
+      },
+      {
+        "slug": "vw-passat-2-0tdi-highline-2011-11785932596351376",
+        "sourceValue": 212000,
+        "sourceUnit": "km",
+        "canonicalKm": 212000
+      },
+      {
+        "slug": "skoda-octavia-2-0tdi-4x4-2022-11788181514006324",
+        "sourceValue": 180000,
+        "sourceUnit": "km",
+        "canonicalKm": 180000
+      },
+      {
+        "slug": "cupra-born-restyling-58kw-2022-11786795820524833",
+        "sourceValue": 67000,
+        "sourceUnit": "km",
+        "canonicalKm": 67000
+      },
+      {
+        "slug": "hyundai-kona-1-6hev-n-line-2020-21786794971218528",
+        "sourceValue": 40000,
+        "sourceUnit": "km",
+        "canonicalKm": 40000
+      },
+      {
+        "slug": "kia-sportage-1-6d-automat-2017-21786455005208728",
+        "sourceValue": 180000,
+        "sourceUnit": "km",
+        "canonicalKm": 180000
+      },
+      {
+        "slug": "vw-tiguan-2-0-di-4motion-2017-21786453972789852",
+        "sourceValue": 199000,
+        "sourceUnit": "km",
+        "canonicalKm": 199000
+      },
+      {
+        "slug": "land-rover-range-rover-evoque-hybrid-nardo-grey-2022-21786451392501339",
+        "sourceValue": 125000,
+        "sourceUnit": "km",
+        "canonicalKm": 125000
+      },
+      {
+        "slug": "audi-q2-2-0tfsi-quattro-2018-21773151499854810",
+        "sourceValue": 133000,
+        "sourceUnit": "km",
+        "canonicalKm": 133000
+      },
+      {
+        "slug": "dodge-challenger-5-7hemi-srt-2014-11768639133016485",
+        "sourceValue": 65000,
+        "sourceUnit": "km",
+        "canonicalKm": 65000
+      },
+      {
+        "slug": "vw-t-cross-1-5i-automat-2023-21775914499512125",
+        "sourceValue": 48000,
+        "sourceUnit": "km",
+        "canonicalKm": 48000
+      },
+      {
+        "slug": "kia-niro-plug-in-hybrid-2019-21785575816054903",
+        "sourceValue": 118000,
+        "sourceUnit": "km",
+        "canonicalKm": 118000
+      },
+      {
+        "slug": "bmw-x3-2-0d-xdrive-2014-21773150110056507",
+        "sourceValue": 188000,
+        "sourceUnit": "km",
+        "canonicalKm": 188000
+      },
+      {
+        "slug": "nissan-juke-1-6-nismo-2014-21785323501482685",
+        "sourceValue": 186000,
+        "sourceUnit": "km",
+        "canonicalKm": 186000
+      },
+      {
+        "slug": "peugeot-308-1-6gt-205h-p-2016-11778320754806394",
+        "sourceValue": 130000,
+        "sourceUnit": "km",
+        "canonicalKm": 130000
+      },
+      {
+        "slug": "mazda-cx-5-2-5i-4x4-2015-21781781688732220",
+        "sourceValue": 192000,
+        "sourceUnit": "km",
+        "canonicalKm": 192000
+      }
     ]
   },
-  "baseDeployment": {
-    "id": "dpl_8nTnC2vutGeLaVGUFTXUhJpn96fW",
-    "url": "https://excellent-cars.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:42.171Z"
-  },
-  "baseReceiptSha256": "a2661340ccb9de4924e38b599aa7c7ab2d48060c1e5410255a3626c02ef62bfc",
-  "refreshedAt": "2026-09-30T11:21:26.631Z"
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-12T22:11:56.197Z"
 }

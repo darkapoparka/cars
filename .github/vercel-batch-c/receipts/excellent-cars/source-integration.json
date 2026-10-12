@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "batch": "C",
+  "dealer": "excellent-cars",
+  "acceptedRelease": {
+    "id": "cars-vercel-b1f0f560-20261013",
+    "coordinatorCommit": "5a5280c2bda62708768850c50cff54ef2bfcdad5",
+    "path": "docs/releases/vercel-existing-refresh/batch-a-20261013/accepted-template-release.json"
+  },
+  "sourceRun": 38314984775,
+  "sourceControlCommit": "4b7a732affc73a811c20af0986d40cbdedf8ba13",
+  "sourceArtifact": {
+    "id": 11776397706,
+    "sha256": "295e512f2c50df038b9de6d86e4a48d38292fe20024ad09320dbfc9df3e557d4"
+  },
+  "sourceBaselineTree": "6011d35697dcb55e891f20e220ac49c4bf84a310",
+  "preparedTree": "ab19cab095c5f55cc5599dc08d1fb9e84e46ec70",
+  "patchSha256": "43c6186beff2af30a4f7675bc491d7cc78db81347f5e328a843467161700b088",
+  "sourceReceiptSha256": "2604917c35ad9f9113fca1fc537b604c67b429a5894b62448d88a9f929275155",
+  "preservationReview": {
+    "sourceRun": 38312623332,
+    "sourceControlCommit": "d690c4cc6c3a4020cd8c9c3728af981608c10ac9",
+    "excellentArtifact": 11775601007,
+    "excellentArtifactSha256": "c018687e468b31e593d1969b06da8218376d698d9d83316582c2534689dc710f",
+    "excellentReviewSha256": "e4ffe70628563ad42fde8d2a12bf3fbc11034a8d65ba420188a09a7a836f2c45",
+    "f1rstArtifact": 11775218047,
+    "f1rstArtifactSha256": "c986bec51fd03741306476a065481af336a50abccab4f3cc8801652dbd0fdfeb",
+    "f1rstReviewSha256": "9a19e915d8e9e2200f9c485dc65d3bf71b0a2beb11fb9f2f0553105695d0f84f",
+    "decision": "Nineteen exact prepared-template paths use the accepted native UI and maintained own-dealer factual consumers. Seller identity card retains the owner's existing light-surface logo binding on the accepted new native component; merged SHA256 43d7e8b4c2dc44755591e94651753783e108ab954db20c6362ffa6d07a0b1819. No donor inventory or contacts are selected. Maintained factual refresh and all downstream publication gates still execute; this is not QA or production acceptance."
+  },
+  "sourcePatchVerified": true,
+  "factualFilesPreserved": true,
+  "mountOwnershipVerified": true,
+  "brandingAppExtendedAndNativeSourceQualificationVerified": true,
+  "nativeInput": {
+    "digest": "4c4e85e62b7ecfb026f2fcdef8771340822b1361d9773c516f919f9a861219fc",
+    "files": 9236
+  },
+  "productionApproval": false,
+  "productionVerified": false,
+  "createdAt": "2026-10-12T22:44:01.118Z"
+}

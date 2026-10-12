@@ -2,7 +2,7 @@ export type BrandConfig = {
   name: string;
   shortName: string;
   city: string;
-  showroomCoordinates: { latitude: number; longitude: number };
+  showroomCoordinates: { latitude: number; longitude: number } | null;
   addressLine: string;
   address: string;
   phone: string;
@@ -24,7 +24,7 @@ export const brand = {
   name,
   shortName,
   city,
-  showroomCoordinates: {"latitude":0,"longitude":0},
+  showroomCoordinates: null,
   youtubeUrl: "",
   instagramUrl: "",
   facebookUrl: "",
@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: "бул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“",
   appointment: "Понеделник – петък: 08:30–19:00; Събота: 09:00–18:00; Неделя: почивен ден",
-  logo: "/dealer-brand/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark.webp"
+  logo: "/dealer-brand/v2-23abd64e1e990a72/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-23abd64e1e990a72/logo-on-dark.webp"
 } as const satisfies BrandConfig;

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-native-source-qualification-context",
+  "id": "vercel-excellent-cars-b1f-source-qualification",
+  "dealer": "excellent-cars",
+  "scope": "existing-dealer-pilot",
+  "sourceCommit": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "draft": false,
+  "publishable": false,
+  "reviewed": true,
+  "reviewedAt": "2026-10-12T02:03:21.830Z",
+  "qualificationOnly": true,
+  "approved": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "allSixFrozen": true,
+  "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+  "candidateLockSha256": "f7b1d9cc0c1a09db9707bd849ffe53dc4152a21be87f61cf63dfa10b1ff63069",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "sourceReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-review.json",
+    "sha256": "888477e39e4dbc3dd15badbf09f66138e2b5ba624ef7b525bea6a7d9905e02f4"
+  },
+  "pending": [
+    "Exact immutable published template pins and original approved QA parent chain were reviewed. Own current factual consumer choices, preservation conflicts and prepared-source artifacts remain pending.",
+    "No native, hosted, global release or owner acceptance; source candidate only."
+  ],
+  "pendingNativeChecks": [
+    "catalog-completeness",
+    "hardcoded-ui",
+    "native-routing",
+    "standalone-journeys",
+    "mounted-journeys",
+    "public-journeys",
+    "preferences-no-js",
+    "preferences-storage-disabled",
+    "preferences-races",
+    "request-isolation",
+    "security-write-blocking",
+    "assets-preserved"
+  ],
+  "sourceOnlyReview": {
+    "baselineCommit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
+    "baselineClientTree": "6011d35697dcb55e891f20e220ac49c4bf84a310",
+    "scope": "Exact published b1f source tuples and original approved QA parent chain only; individual dealer preservation choices, candidate QA, native/hosted/global/owner acceptance remain pending.",
+    "preservationChoicesPending": true,
+    "canonicalSourcePublicationPending": true
+  }
+}
