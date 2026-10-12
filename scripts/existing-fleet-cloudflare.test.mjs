@@ -1,4 +1,4 @@
-import test from 'node:test';import assert from 'node:assert/strict';import path from 'node:path';import fs from 'node:fs';import {spawnSync} from 'node:child_process';import {buildMatrix,selectedDealer,outputBudget,existingFleetBranding,existingFleetNativeSource,QUALIFICATION_LOCK_PATH,fleetSourceMode,newApprovedFleetSource,readPinnedFleetInput} from './build-existing-fleet-cloudflare.mjs';
+import test from 'node:test';import assert from 'node:assert/strict';import path from 'node:path';import fs from 'node:fs';import {spawnSync} from 'node:child_process';import {buildMatrix,selectedDealer,outputBudget,existingFleetBranding,existingFleetNativeSource,QUALIFICATION_LOCK_PATH,fleetSourceMode,newApprovedFleetSource,readPinnedFleetInput,readCommittedFleetMetadata} from './build-existing-fleet-cloudflare.mjs';
 import {sha256,POLICY,fingerprint} from './lib/workflow.mjs';import {PUBLIC_ROOTS} from './publishing/lead-branding.mjs';
 import {nativeFixture} from './test-fixtures/native-source.mjs';import {tinyArea} from './test-fixtures/fleet-single-worker.mjs';import {sealNativeQualification,sealNativeAdoption,ADOPTION_FILE} from './lib/native-localization.mjs';
 import {baseNativeManifest} from './publishing/app-variant.mjs';import {planSixDesignSelection} from './lib/six-design-release.mjs';
@@ -211,4 +211,18 @@ test('new-approved admits full six-app proposal inventories without widening oth
  assert.throws(()=>readPinnedFleetInput(f.root,row.proposal,commit),/bounded regular file/);
  row.proposal=f.write(f.prefix+'/source-patch.json',Buffer.concat([original,Buffer.alloc(16*1024**2+1-original.length,32)]));
  commit=f.commitAll();await assert.rejects(()=>newApprovedFleetSource({...f.options,commit,request:f.request}),/bounded regular file/);
+});
+
+test('new-approved accepts the maintained collector omission of dealer metadata without weakening the manifest lease',async t=>{
+ const f=newApprovedFixture(t),files=new Map(f.files);files.delete('dealer.json');
+ const result=await newApprovedFleetSource({...f.options,files});assert.equal(result.sourceTree,f.prep.preparedTree);assert.equal(files.has('dealer.json'),false);
+ await assert.rejects(()=>newApprovedFleetSource({...f.options,files,manifest:{...f.manifest,repository:'darkapoparka/not-the-published-dealer'}}),/build manifest differs/);
+ const substituted=new Map(files);substituted.set('dealer.json',jsonBytes({...f.manifest,slug:'other'}));
+ await assert.rejects(()=>newApprovedFleetSource({...f.options,files:substituted}),/collected build bytes differ/);
+});
+
+test('fleet metadata reads stay committed, bounded and separate from package inputs',t=>{
+ const f=newApprovedFixture(t);assert.deepEqual(JSON.parse(readCommittedFleetMetadata(f.root,f.slug,'dealer.json',f.commit)),f.manifest);
+ for(const name of ['../dealer.json','stock.json','.git/config'])assert.throws(()=>readCommittedFleetMetadata(f.root,f.slug,name,f.commit),/invalid dealer metadata locator/);
+ f.write('clients/'+f.slug+'/dealer.json',{...f.manifest,repository:'darkapoparka/unpublished'});assert.throws(()=>readCommittedFleetMetadata(f.root,f.slug,'dealer.json',f.commit),/physical input bytes differ/);
 });

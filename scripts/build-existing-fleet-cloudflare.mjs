@@ -88,6 +88,15 @@ export function readPinnedFleetInput(root,p,commit,{prefix=NEW_INPUT_ROOT,maxByt
  requireNew(bytes.equals(committedBytes(root,p.path,commit,p.sha256,maxBytes)),'physical input differs from published bytes');return bytes;
 }
 const proofJson=bytes=>parseCatalogJson(new TextDecoder('utf-8',{fatal:true}).decode(bytes).replace(/^\uFEFF/,''));
+/** Metadata is deliberately outside collectSource; read it as physical, committed proof, never package it. */
+export function readCommittedFleetMetadata(root,slug,name,commit){
+ requireNew(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)&&hex40(commit)&&['dealer.json','.client/cloudflare-existing-source.json','.client/native-qualification-context.json',QUALIFICATION_LOCK_PATH].includes(name),'invalid dealer metadata locator');
+ const metadataPath='clients/'+slug+'/'+name,size=Number(git(root,['cat-file','-s',commit+':'+metadataPath]));
+ requireNew(Number.isSafeInteger(size)&&size>0&&size<=2*1024**2,'dealer metadata exceeds its byte limit');
+ const bytes=git(root,['cat-file','blob',commit+':'+metadataPath],{encoding:null});
+ requireNew(bytes.length===size,'dealer metadata size differs');
+ return readPinnedFleetInput(root,{path:metadataPath,sha256:hash(bytes)},commit,{prefix:'clients/'+slug});
+}
 /** The creator proposal is historical evidence. Only its exact reviewed,
  * published client tree can enter this path; no creation or adoption occurs. */
 export async function newApprovedFleetSource({root=ROOT,slug,commit,request,leads,inventory,manifest,files}){
@@ -108,7 +117,10 @@ export async function newApprovedFleetSource({root=ROOT,slug,commit,request,lead
  requireNew(Array.isArray(proposal.entries)&&proposal.entries.length>0&&proposal.entries.length<=20000&&prep.sourcePaths===proposal.entries.length&&same(entries,[...proposal.entries].map(({path,mode,blob})=>({path,mode,blob})).sort((a,b)=>Buffer.compare(Buffer.from(a.path),Buffer.from(b.path)))),'published proposal path/blob/mode inventory differs');
  const sourceBlobs=new Map(entries.map(({path,blob})=>[path,blob]));
  requireNew(files instanceof Map&&files.size>0&&[...files].every(([name,bytes])=>Buffer.isBuffer(bytes)&&sourceBlobs.get(name)===createHash('sha1').update(Buffer.from('blob '+bytes.length+'\0')).update(bytes).digest('hex')),'collected build bytes differ from the published dealer tree');
- requireNew(files.has('dealer.json')&&same(manifest,proofJson(files.get('dealer.json'))),'build manifest differs from the published dealer manifest');
+ // collectSource intentionally omits dealer.json: it is package metadata, not an application input.
+ // Bind the supplied manifest directly to its already-verified immutable client tree instead.
+ const publishedManifest=readCommittedFleetMetadata(root,slug,'dealer.json',commit);
+ requireNew(same(manifest,proofJson(publishedManifest)),'build manifest differs from the published dealer manifest');
  const originalRequest=proofJson(readPinnedFleetInput(root,prep.request,prep.baseCommit)),originalRows=originalRequest.dealers?.filter(d=>d.slug===slug)??[];requireNew(originalRows.length===1,'original source request lacks exact dealer');const original=originalRows[0];
  const lockBytes=committedBytes(root,'templates.lock.json',prep.baseCommit,originalRequest.approvedLockSha256),oldRegistry=proofJson(committedBytes(root,'docs/DEPLOYMENT-INVENTORY.json',prep.baseCommit,originalRequest.registrySha256)),oldIndex=proofJson(committedBytes(root,'clients/index.json',prep.baseCommit,originalRequest.clientIndexSha256)),lock=proofJson(lockBytes);
  const {validateNewSourceRequest,validateNewDealerFacts}=await import('./prepare-new-dealer-source.mjs');
@@ -148,8 +160,10 @@ export async function newApprovedFleetSource({root=ROOT,slug,commit,request,lead
  requireNew(files.has('.cars-branding.json')&&same(proofJson(files.get('.cars-branding.json')),prep.branding)&&files.has(ADOPTION_FILE)&&hash(files.get(ADOPTION_FILE))===prep.nativeAdoptionSha256,'original branding/native seals required');
  let nativeSource;
  if(sourceQualification){
-  requireNew(files.has('.client/cloudflare-existing-source.json')&&files.get('.client/native-qualification-context.json')?.equals(qualifiedContextBytes)&&files.get(QUALIFICATION_LOCK_PATH)?.equals(qualifiedLockBytes),'published candidate must retain the exact original qualification markers and bytes');
-  nativeSource=existingFleetNativeSource(files,manifest,{candidate:proofJson(files.get('.client/cloudflare-existing-source.json')),qualificationBytes:qualifiedContextBytes,qualificationLockBytes:qualifiedLockBytes,root});
+  const candidateBytes=readCommittedFleetMetadata(root,slug,'.client/cloudflare-existing-source.json',commit);
+  const contextBytes=readCommittedFleetMetadata(root,slug,'.client/native-qualification-context.json',commit),lockBytes=readCommittedFleetMetadata(root,slug,QUALIFICATION_LOCK_PATH,commit);
+  requireNew(contextBytes.equals(qualifiedContextBytes)&&lockBytes.equals(qualifiedLockBytes),'published candidate must retain the exact original qualification markers and bytes');
+  nativeSource=existingFleetNativeSource(files,manifest,{candidate:proofJson(candidateBytes),qualificationBytes:qualifiedContextBytes,qualificationLockBytes:qualifiedLockBytes,root});
   requireNew(nativeSource.kind==='native-source-qualification','new-source qualification cannot be converted into an approved release');
  }else nativeSource={kind:'approved-native-adoption',receipt:assertNativeAdoption(files,baseNativeManifest(manifest),{root})};
  return {mode:'new-approved',workerPrefix:identity.workerName,publicOrigin:identity.publicOrigin,sourceTree,sourceCandidate:row.proposal.sha256,nativeSource,originalRequest:prep.request,inputs:original.inputs,inputMapping:row.inputMapping,preparation:row.preparation,proposal:row.proposal,publication:row.publication,sourcePublication:published,creationBaseCommit:prep.baseCommit,templateSourceRevision:request.sourceRevision};
