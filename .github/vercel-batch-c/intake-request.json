@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "batch": "C",
+  "operation": "verify-and-publish-retained-source-to-batch-c-only",
+  "sourceRun": 38314984775,
+  "sourceCommit": "4b7a732affc73a811c20af0986d40cbdedf8ba13",
+  "dealers": ["excellent-cars", "f1rst-motors"],
+  "acceptedRelease": "cars-vercel-b1f0f560-20261013",
+  "preserveSharedMain": true,
+  "productionAcceptance": false
+}
