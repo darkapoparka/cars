@@ -1,0 +1,67 @@
+name: Vercel Batch C source preparation
+on:
+  push:
+    branches: [codex/vercel-batch-c-20261013]
+    paths: [.github/vercel-batch-c/source-request.json]
+permissions:
+  contents: read
+concurrency:
+  group: cars-vercel-batch-c-source
+  cancel-in-progress: false
+jobs:
+  source:
+    if: github.repository == 'darkapoparka/cars' && github.ref == 'refs/heads/codex/vercel-batch-c-20261013'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        dealer: [excellent-cars, f1rst-motors]
+    env:
+      NODE_OPTIONS: --max-old-space-size=4608
+      NEXT_TELEMETRY_DISABLED: '1'
+    steps:
+      - name: Read exact control and assigned source only
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          filter: blob:none
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /.github/vercel-batch-c/
+            /scripts/
+            /templates.lock.json
+            /templates/auto-best/scripts/
+            /docs/DEPLOYMENT-INVENTORY.json
+            /docs/releases/**/*.json
+            /docs/releases/cloudflare-existing25-20261011/branding-inputs52/${{ matrix.dealer }}/
+            /clients/${{ matrix.dealer }}/
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.10.0'
+          package-manager-cache: false
+      - name: Install maintained pinned raster helper
+        run: |
+          mkdir -p runtime/source-preparation-tools
+          printf '{"private":true}\n' > runtime/source-preparation-tools/package.json
+          npm install --prefix runtime/source-preparation-tools --ignore-scripts --save-exact sharp@0.35.5 --no-audit --no-fund
+      - name: Run maintained preservation-aware integration
+        env:
+          DEALER: ${{ matrix.dealer }}
+        run: node .github/vercel-batch-c/prepare-source.mjs "$DEALER"
+      - name: Retain source proposal and original conflict evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: vercel-batch-c-source-${{ matrix.dealer }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.dealer }}/output/
+            runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.dealer }}/plan/*.json
+            runtime/batch-c-failures/
+          include-hidden-files: true
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 7
