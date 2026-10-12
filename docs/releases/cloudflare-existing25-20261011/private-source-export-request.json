@@ -9,8 +9,9 @@
   "attempt": 1,
   "applicationBuildsRepeated": 0,
   "sourcePreparationRepeated": false,
-  "packagingRevision": 3,
-  "purpose": "Resume failed private-source sealing with original native logo/stock proof files present in the sparse checkout. Reuse the original successful native artifacts and source trees; do not compile, deploy or regenerate dealers.",
+  "packagingRevision": 4,
+  "previousFailedPackagingRun": 38290620928,
+  "purpose": "Retry failed private-source sealing after a reproduced sparse-checkout export-index failure was fixed with command-scoped Git configuration. Preserve canonical sparse checkout/index and all source admission gates. Reuse original successful native artifacts, locks and source trees; do not compile, deploy or regenerate dealers.",
   "dealers": [
     {
       "slug": "centralauto-varna",
