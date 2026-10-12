@@ -9,7 +9,7 @@
   "preserveSharedMain": true,
   "productionAcceptance": false,
   "retry": {
-    "priorIntakeRun": 38316634215,
-    "reason": "Validate native/App/extended/branding seals over maintained packageRetainsPath source input, while exact full-tree patch verification preserves excluded history. No successful source preparation, application build or template-wide QA is repeated."
+    "priorIntakeRun": 38317529114,
+    "reason": "Native/App/extended/branding validation and the exact source tree passed. Parse staged paths with git diff --name-only -z so non-ASCII filenames are checked as literal paths rather than quoted display strings. No source preparation, application builds or template-wide QA are repeated."
   }
 }
