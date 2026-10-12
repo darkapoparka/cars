@@ -121,3 +121,39 @@ test('the maintained adoption API freezes only the exact receipt and proof closu
 });
 
 test('recorded six-build recovery leases retain distinct original proof JSON and helper hashes',t=>{const f=mappedFixture(t),p=structuredClone(f.p),jsonHash='1'.repeat(64),helperHash='2'.repeat(64),moduleHash='3'.repeat(64),sourceRunId=38195093078;p.nativeCompilationSourceRunId=sourceRunId;p.compilationProofRecovery={kind:'recorded-native-compilation-proof-recovery',buildsRepeated:0,originalProofPassed:false,originalProofSha256:jsonHash,actualRetainedDigest:p.compilationInputProof.actualRetainedDigest,moduleSha256:moduleHash,lease:{sourceRunId,packageTree:p.packageTree,packageDigest:p.packageDigest,originalCompilationInputProofSha256:helperHash,files:{proof:{sha256:jsonHash}}}};const lease={...f.lease,nativeCompilationSourceRunId:sourceRunId,originalCompilationInputProofHelperSha256:helperHash,compilationProofRecoverySha256:moduleHash},actual=repin(f,{p,lease});assert.doesNotThrow(()=>validateNativeRelease('modern',actual.releases.modern,{root:f.root}));p.compilationProofRecovery.originalProofSha256=helperHash;const bad=repin(f,{p,lease});assert.throws(()=>validateNativeRelease('modern',bad.releases.modern,{root:f.root}),/recovery lease differs/);});
+
+function protectedFixture(t) {
+ const f=mappedFixture(t),stamp=f.proof.verifiedAt,origin=f.proof.publicOrigin,stable=new URL(f.manifest.shareIdentity.publicOrigin).origin;
+ const access={schemaVersion:1,kind:'cars-vercel-protected-preview-access',executed:true,method:'vercel-existing-temporary-share',anonymous:false,protectionsChanged:false,secretsRetained:false,verifiedAt:stamp,
+  repository:f.proof.repository,projectId:f.proof.projectId,deploymentId:f.proof.deploymentId,privateCommit:f.proof.publishingCommit,origin,stableOrigin:stable,
+  anonymousEntries:f.manifest.variants.map(v=>({key:v.key,route:v.entry,status:302,redirectOrigin:'https://vercel.com',redirectPath:'/sso-api',observedAt:stamp})),
+  authenticatedEntries:f.manifest.variants.map(v=>({key:v.key,route:v.entry,status:200,finalUrl:new URL(v.entry,origin).href,title:'Synthetic dealer fixture',logoSources:[new URL('/dealer-brand/fixture.webp',origin).href],observedAt:stamp}))};
+ const accessRef=f.pin('preview-access',access),stage={acceptanceStage:'protected-preview-qualified',publicAcceptance:false,canonicalPublicOrigin:stable,
+   productionAcceptance:{state:'pending',origin:stable,required:['anonymous-stable-origin','six-designs','admin-demo','exact-production-commit']},previewAccess:accessRef};
+ const deferred={name:'public-journeys',status:'pending-production',evidence:accessRef,evidenceSha256:accessRef.sha256};
+ const hosted=structuredClone(f.hosted);Object.assign(hosted,stage,{schemaVersion:2,unauthenticated:false});
+ for(const a of [...Object.values(hosted.applications),...Object.values(hosted.nativeLocalization)])a.checks=a.checks.map(c=>c.name==='public-journeys'?structuredClone(deferred):c);
+ let result=repin(f,{proof:{...f.proof,...stage,schemaVersion:2},lease:{...f.lease,...stage},hosted});
+ for(const k of f.nativeKeys)result.releases[k].qa.nativeLocalization={...structuredClone(hosted.nativeLocalization[k]),deployment:result.releases[k].qa.nativeLocalization.deployment};
+ return {...result,access};
+}
+test('protected preview source approval retains pending public rows through ordinary adoption',t=>{
+ const f=protectedFixture(t);for(const k of f.nativeKeys)assert.doesNotThrow(()=>validateNativeRelease(k,f.releases[k],{root:f.root}));
+ const adopted=adoptNativeSource(f.files,baseNativeManifest(f.manifest),f.releases,{root:f.root});assertNativeAdoption(adopted,baseNativeManifest(f.manifest),{root:f.root});
+ const receipt=JSON.parse(adopted.get('localization/adoption.json'));assert.equal(receipt.dealerAcceptance,'requires-dealer-build-and-public-journeys');
+ for(const k of f.nativeKeys)assert.equal(receipt.releases[k].qa.nativeLocalization.checks.find(c=>c.name==='public-journeys').status,'pending-production');
+ assert.equal(f.proof.publicAcceptance,false);assert.equal(f.hosted.unauthenticated,false);
+});
+test('protected stage refuses fabricated public passes, mismatched stable origin and missing authentication observations',t=>{
+ const f=protectedFixture(t);
+ for(const mutate of [h=>h.unauthenticated=true,h=>h.publicAcceptance=true,h=>h.canonicalPublicOrigin='https://unrelated.vercel.app',h=>h.applications.mobile.checks.find(c=>c.name==='public-journeys').status='passed']){
+  const hosted=structuredClone(f.hosted);mutate(hosted);const bad=repin(f,{hosted});assert.throws(()=>validateNativeRelease('modern',bad.releases.modern,{root:f.root}));
+ }
+ const access={...f.access,authenticatedEntries:f.access.authenticatedEntries.slice(1)},accessRef=f.pin('missing-access',access),proof={...f.proof,previewAccess:accessRef},lease={...f.lease,previewAccess:accessRef},hosted={...f.hosted,previewAccess:accessRef};
+ const bad=repin(f,{proof,lease,hosted});assert.throws(()=>validateNativeRelease('modern',bad.releases.modern,{root:f.root}),/Every family/);
+});
+test('pending public status requires the fully validated Vercel stage and cannot relax legacy release checks',t=>{
+ const f=mappedFixture(t),release=structuredClone(f.releases.modern);release.qa.nativeLocalization.checks.find(c=>c.name==='public-journeys').status='pending-production';
+ assert.throws(()=>validateNativeRelease('modern',release,{root:f.root}),/stored selected native acceptance differs/);
+ delete release.qa.nativeLocalization.deployment.mappedSource;assert.throws(()=>validateNativeRelease('modern',release,{root:f.root}),/failing, missing/);
+});

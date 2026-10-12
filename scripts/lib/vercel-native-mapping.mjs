@@ -1,3 +1,4 @@
+import {validateVercelPreviewStage,validatePendingVercelPublicCheck} from './vercel-preview-stage.mjs';
 import {validateImportCorrectedPrivateNativeEvidence} from './vercel-native-import-derivative.mjs';
 import {validateCurrentPrivatePackageNativeEvidence} from './vercel-native-current-package.mjs';
 import {observeVercelGithubDeployment} from './vercel-git-observation.mjs';
@@ -21,9 +22,9 @@ export function readVercelNativeProof(root,ref) {
  const value=JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(bytes));
  return {value,bytes,reference:ref};
 }
-function checkedRows(root,rows,names,identity) {
+function checkedRows(root,rows,names,identity,pendingPublic=null) {
  need(Array.isArray(rows)&&rows.length===names.length&&new Set(rows.map(r=>r.name)).size===names.length,'complete distinct checked rows required');
- for(const name of names){const row=rows.find(r=>r.name===name);need(row?.status==='passed'&&h64(row.evidenceSha256)&&row.evidence?.sha256===row.evidenceSha256,'failed or unhashed check: '+name);
+ for(const name of names){const row=rows.find(r=>r.name===name);if(name==='public-journeys'&&pendingPublic){validatePendingVercelPublicCheck(row,pendingPublic);continue;}need(row?.status==='passed'&&h64(row.evidenceSha256)&&row.evidence?.sha256===row.evidenceSha256,'failed or unhashed check: '+name);
   const proof=readVercelNativeProof(root,row.evidence).value;
   need(proof.schemaVersion===1&&proof.kind==='cars-vercel-actual-check'&&proof.status==='passed'&&proof.executed===true&&dated(proof.verifiedAt)&&
     ['dealer','key','deploymentId','projectId','exportCommit','packageDigest'].every(k=>proof[k]===identity[k])&&
@@ -46,7 +47,7 @@ export function validateVercelNativeMapping(key,release,review,root,{nativeCheck
  const d=review.deployment,ref=d.mappedSource;
  need(ref&&same(Object.keys(ref).sort(),['lease','reference','sha256']),'mapping and reviewed hash lease required');
  const proof=readVercelNativeProof(root,{reference:ref.reference,sha256:ref.sha256}).value,lease=readVercelNativeProof(root,ref.lease).value;
- need(proof.schemaVersion===1&&proof.kind==='cars-vercel-dealer-native-acceptance'&&proof.scope==='existing-dealer'&&
+ need([1,2].includes(proof.schemaVersion)&&proof.kind==='cars-vercel-dealer-native-acceptance'&&proof.scope==='existing-dealer'&&
    /^[a-z0-9][a-z0-9-]*$/.test(proof.dealer||'')&&/^darkapoparka\/[A-Za-z0-9_-]+$/.test(proof.repository||'')&&
    /^prj_[A-Za-z0-9]+$/.test(proof.projectId||'')&&h40(proof.sourceCommit)&&h40(proof.sourceTree)&&h40(proof.packageTree)&&
    h64(proof.packageDigest)&&h40(proof.publishingCommit)&&dated(proof.verifiedAt)&&proof.nativeApproval===true&&
@@ -100,14 +101,16 @@ export function validateVercelNativeMapping(key,release,review,root,{nativeCheck
    'exact private pilot export differs');
  }
  observeVercelGithubDeployment(v,{repository:proof.repository,branch:'codex/vercel-refresh-pilot',commit:proof.publishingCommit,deploymentId:d.id,projectId:d.projectId,publicOrigin:proof.publicOrigin});
- need(hosted.schemaVersion===1&&hosted.kind==='cars-vercel-dealer-hosted-acceptance'&&hosted.dealer===proof.dealer&&hosted.executed===true&&
-   hosted.status==='passed'&&hosted.unauthenticated===true&&hosted.sourceCommit===proof.sourceCommit&&hosted.sourceTree===proof.sourceTree&&
+ const canonical=JSON.parse(git(root,['show',proof.sourceCommit+':clients/'+proof.dealer+'/dealer.json'],{encoding:null}).toString('utf8'));
+ const pendingPublic=validateVercelPreviewStage(proof,lease,hosted,{readProof:ref=>readVercelNativeProof(root,ref),canonicalOrigin:canonical.shareIdentity.publicOrigin});
+ need([1,2].includes(hosted.schemaVersion)&&hosted.kind==='cars-vercel-dealer-hosted-acceptance'&&hosted.dealer===proof.dealer&&hosted.executed===true&&
+   hosted.status==='passed'&&(pendingPublic?hosted.unauthenticated===false:hosted.unauthenticated===true)&&hosted.sourceCommit===proof.sourceCommit&&hosted.sourceTree===proof.sourceTree&&
    hosted.packageTree===proof.packageTree&&hosted.packageDigest===proof.packageDigest&&hosted.exportCommit===proof.publishingCommit&&
    hosted.deploymentId===d.id&&hosted.projectId===d.projectId&&hosted.publicOrigin===proof.publicOrigin&&dated(hosted.verifiedAt)&&
    same(Object.keys(hosted.applications||{}).sort(),[...keys].sort()),'current six-family public acceptance differs');
  for(const family of keys){const a=hosted.applications[family],identity={dealer:proof.dealer,key:family,deploymentId:d.id,projectId:d.projectId,exportCommit:proof.publishingCommit,packageDigest:proof.packageDigest,source:proof.sourceReleases[family]};
   need(a.status==='passed'&&same(a.source,identity.source),'hosted family source differs');
-  checkedRows(root,a.checks,['mounted-journeys','public-journeys','assets-preserved','family-contract'],identity);
+  checkedRows(root,a.checks,['mounted-journeys','public-journeys','assets-preserved','family-contract'],identity,pendingPublic);
  }
  for(const family of ['auto-best','modern','import']){const a=hosted.nativeLocalization?.[family],source=proof.sourceReleases[family],
    identity={dealer:proof.dealer,key:family,deploymentId:d.id,projectId:d.projectId,exportCommit:proof.publishingCommit,packageDigest:proof.packageDigest,source};
@@ -115,10 +118,10 @@ export function validateVercelNativeMapping(key,release,review,root,{nativeCheck
     a.sourcePath===source.path&&a.sourceTree===source.tree&&a.sourceDigest===source.digest&&dated(a.verifiedAt)&&
     same([...(a.locales||[])].sort(),['bg','en'])&&[320,390,1440].every(w=>a.widths?.includes(w))&&h64(a.evidenceSha256),
     'current native family acceptance differs');
-  checkedRows(root,a.checks,nativeChecks,identity);
+  checkedRows(root,a.checks,nativeChecks,identity,pendingPublic);
  }
  const accepted=hosted.nativeLocalization[key],fields=['schemaVersion','adapter','repository','commit','sourcePath','sourceTree','sourceDigest','locales','widths','verifiedAt','evidenceSha256','catalogs'];
  need(fields.every(k=>same(accepted[k],review[k]))&&same(accepted.checks.map(({name,status,evidenceSha256})=>({name,status,evidenceSha256})),review.checks.map(({name,status,evidenceSha256})=>({name,status,evidenceSha256}))),
    'stored selected native acceptance differs from original hosted proof');
- return {mapping:proof,lease,hosted};
+ return {mapping:proof,lease,hosted,publicAcceptance:pendingPublic?false:true};
 }

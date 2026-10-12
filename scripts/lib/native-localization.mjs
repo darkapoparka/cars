@@ -244,7 +244,9 @@ export function validateNativeRelease(key, release, { root = ROOT } = {}) {
   if (JSON.stringify([...(review.locales || [])].sort()) !== '["bg","en"]' || ![320, 390, 1440].every(w => review.widths?.includes(w))) fail('missing EN/BG viewport acceptance');
   if (!hashPattern.test(review.evidenceSha256 || '') || !Number.isFinite(Date.parse(review.verifiedAt))) fail('missing hashed acceptance evidence');
   const checks = new Map((review.checks || []).map(c => [c.name, c]));
-  if (checks.size !== review.checks?.length || NATIVE_CHECKS.some(name => checks.get(name)?.status !== 'passed' || !hashPattern.test(checks.get(name)?.evidenceSha256 || ''))) fail('failing, missing or unhashed native check');
+  // The mapper must authenticate the explicit protected-preview stage before this deferred row is usable.
+  const pendingVercelPublic = review.deployment?.provider === 'vercel' && review.deployment?.mappedSource && checks.get('public-journeys')?.status === 'pending-production';
+  if (checks.size !== review.checks?.length || NATIVE_CHECKS.some(name => (checks.get(name)?.status !== 'passed' && !(name === 'public-journeys' && pendingVercelPublic)) || !hashPattern.test(checks.get(name)?.evidenceSha256 || ''))) fail('failing, missing or unhashed native check');
   const deployment = review.deployment;
   if (review.sourceDigest !== release.digest || !deployment) fail('missing exact-source deployed release verification');
   if (deployment.provider === 'cloudflare') {
