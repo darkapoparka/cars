@@ -47,6 +47,11 @@ jobs:
             /templates.lock.json
             /clients/README.md
             /clients/index.json
+            /clients/kapitol-varna/business-facts.json
+            /clients/chernomore-varna/business-facts.json
+            /clients/kapitol-varna/auto-best/svelte.config.js
+            /clients/kapitol-varna/modern/apps/web/next.config.ts
+            /clients/kapitol-varna/carwow/svelte.config.js
             /templates/*/*.json
             /templates/*/*.js
             /templates/*/*.ts
