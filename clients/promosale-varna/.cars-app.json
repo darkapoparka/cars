@@ -3,17 +3,17 @@
   "dealer": "promosale-varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
     "path": "templates/app",
-    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
-    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
   },
-  "appDigest": "3f4d4af301f1cbfdf46ee8b368ee8066dc8452e5376611cac54fd0c6fbca8185",
+  "appDigest": "0aa2c871fe82bff4e86acef659267a472d843057f595f14fbc8e78419bedfcff",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "promosale-varna",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "d3377a1cb930be27418cf9e27918d9d6fa0fed81c13efa44db7c043c6a8c34e3",
+    "profileSha256": "6094d2acebd9d84f568fb583f4c0ebdca8a70b15c9f494c498a416c5e2db9264",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 6,
     "currency": "EUR",
@@ -139,13 +139,47 @@
         "sha256": "81b1e1bc04ac84058a28250ec5e01abcf9eee92157da2ef865e152e40524ec1e",
         "role": "vehicle"
       }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "mercedes-benz-eqe-350-burmester-2022-21788787563552939",
+        "sourceValue": 294900,
+        "sourceUnit": "km",
+        "canonicalKm": 294900
+      },
+      {
+        "slug": "peugeot-2008-gt-full-pano-2021-11787906058256951",
+        "sourceValue": 19900,
+        "sourceUnit": "km",
+        "canonicalKm": 19900
+      },
+      {
+        "slug": "bmw-740-i-long-m-sport-full-individual-2020-11786461174971809",
+        "sourceValue": 149000,
+        "sourceUnit": "km",
+        "canonicalKm": 149000
+      },
+      {
+        "slug": "porsche-panamera-4s-matrix-nappa-bose-sportchrono-2017-11786375334835370",
+        "sourceValue": 179000,
+        "sourceUnit": "km",
+        "canonicalKm": 179000
+      },
+      {
+        "slug": "audi-a1-s-line-tfsi-ultra-alcantara-carplay-2017-11786370554050885",
+        "sourceValue": 150300,
+        "sourceUnit": "km",
+        "canonicalKm": 150300
+      },
+      {
+        "slug": "mercedes-benz-eqb-amg-7-2023-11786106091652576",
+        "sourceValue": 140900,
+        "sourceUnit": "km",
+        "canonicalKm": 140900
+      }
     ]
   },
-  "baseDeployment": {
-    "id": "dpl_N4jjAebRW6s76dsNnfSzwxTExJGG",
-    "url": "https://cars-promosalevarna.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:55.038Z"
-  },
-  "baseReceiptSha256": "9b0c9431292d973f54e0c4eb850700f5be7848050f7fd2fa1ea608e63346a94b",
-  "refreshedAt": "2026-10-10T18:07:55.700Z"
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-12T00:32:36.943Z"
 }

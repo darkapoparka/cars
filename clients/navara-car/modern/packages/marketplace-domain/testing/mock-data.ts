@@ -69,7 +69,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Навара кар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": true
@@ -141,7 +141,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Навара кар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": true
@@ -217,7 +217,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Навара кар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": true
@@ -293,7 +293,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Навара кар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -365,7 +365,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Навара кар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -437,7 +437,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Навара кар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -509,7 +509,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Навара кар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -581,7 +581,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Навара кар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -653,375 +653,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Навара кар",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
-    },
-    "publishedAt": "2026-09-08T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1005",
-    "slug": "nissan-micra-n-sport-065195",
-    "category": "car",
-    "dealerOrgId": "dealer-navara-car",
-    "status": "active",
-    "title": "Nissan Micra 1.0 N-Sport",
-    "description": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
-    "price": {
-      "amount": 10500,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/navara/vehicles/11786363468065195-1.webp",
-        "alt": "Nissan Micra 1.0 N-Sport"
-      },
-      {
-        "url": "/navara/vehicles/11786363468065195-2.webp",
-        "alt": "Nissan Micra 1.0 N-Sport"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "България"
-    },
-    "features": [
-      {
-        "bg": "Навигация",
-        "en": "Навигация"
-      },
-      {
-        "bg": "Парктроник",
-        "en": "Парктроник"
-      },
-      {
-        "bg": "Подгряване на седалки",
-        "en": "Подгряване на седалки"
-      },
-      {
-        "bg": "Apple CarPlay / Android Auto",
-        "en": "Apple CarPlay / Android Auto"
-      }
-    ],
-    "spec": {
-      "make": "Nissan",
-      "model": "Micra",
-      "year": 2021,
-      "bodyType": "hatchback",
-      "fuelType": "gasoline",
-      "transmission": "manual",
-      "mileageValue": 63800,
-      "mileageUnit": "km",
-      "enginePowerHp": 92,
-      "colorExterior": "Черен"
-    },
-    "seller": {
-      "id": "dealer-navara-car",
-      "type": "dealer",
-      "displayName": "Навара кар",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
-    },
-    "publishedAt": "2026-09-08T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1006",
-    "slug": "vw-polo-tdi-983224",
-    "category": "car",
-    "dealerOrgId": "dealer-navara-car",
-    "status": "active",
-    "title": "VW Polo 1.6 TDI",
-    "description": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
-    "price": {
-      "amount": 10000,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/navara/vehicles/11782409246983224-1.webp",
-        "alt": "VW Polo 1.6 TDI"
-      },
-      {
-        "url": "/navara/vehicles/11782409246983224-2.webp",
-        "alt": "VW Polo 1.6 TDI"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "България"
-    },
-    "features": [
-      {
-        "bg": "Bluetooth",
-        "en": "Bluetooth"
-      },
-      {
-        "bg": "Климатик",
-        "en": "Климатик"
-      },
-      {
-        "bg": "ISOFIX",
-        "en": "ISOFIX"
-      },
-      {
-        "bg": "Сензор за дъжд",
-        "en": "Сензор за дъжд"
-      }
-    ],
-    "spec": {
-      "make": "Volkswagen",
-      "model": "Polo",
-      "year": 2018,
-      "bodyType": "hatchback",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 125902,
-      "mileageUnit": "km",
-      "enginePowerHp": 80,
-      "colorExterior": "Сив"
-    },
-    "seller": {
-      "id": "dealer-navara-car",
-      "type": "dealer",
-      "displayName": "Навара кар",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
-    },
-    "publishedAt": "2026-09-08T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1007",
-    "slug": "tesla-model-3-performance-769974",
-    "category": "car",
-    "dealerOrgId": "dealer-navara-car",
-    "status": "active",
-    "title": "Tesla Model 3 Performance Dual Motor",
-    "description": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
-    "price": {
-      "amount": 32999,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/navara/vehicles/11787311216769974-1.webp",
-        "alt": "Tesla Model 3 Performance Dual Motor"
-      },
-      {
-        "url": "/navara/vehicles/11787311216769974-2.webp",
-        "alt": "Tesla Model 3 Performance Dual Motor"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "България"
-    },
-    "features": [
-      {
-        "bg": "4x4",
-        "en": "4x4"
-      },
-      {
-        "bg": "Навигация",
-        "en": "Навигация"
-      },
-      {
-        "bg": "Парктроник",
-        "en": "Парктроник"
-      },
-      {
-        "bg": "Подгряване на седалки",
-        "en": "Подгряване на седалки"
-      },
-      {
-        "bg": "Термопомпа",
-        "en": "Термопомпа"
-      }
-    ],
-    "spec": {
-      "make": "Tesla",
-      "model": "Model 3",
-      "year": 2022,
-      "bodyType": "sedan",
-      "fuelType": "electric",
-      "transmission": "automatic",
-      "mileageValue": 63900,
-      "mileageUnit": "km",
-      "enginePowerHp": 534,
-      "colorExterior": "Перла"
-    },
-    "seller": {
-      "id": "dealer-navara-car",
-      "type": "dealer",
-      "displayName": "Навара кар",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
-    },
-    "publishedAt": "2026-09-08T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1008",
-    "slug": "nissan-qashqai-sv-awd-049477",
-    "category": "car",
-    "dealerOrgId": "dealer-navara-car",
-    "status": "active",
-    "title": "Nissan Qashqai 2.0i SV AWD",
-    "description": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
-    "price": {
-      "amount": 18499,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/navara/vehicles/21780735125049477-1.webp",
-        "alt": "Nissan Qashqai 2.0i SV AWD"
-      },
-      {
-        "url": "/navara/vehicles/21780735125049477-2.webp",
-        "alt": "Nissan Qashqai 2.0i SV AWD"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "България"
-    },
-    "features": [
-      {
-        "bg": "4x4",
-        "en": "4x4"
-      },
-      {
-        "bg": "Парктроник",
-        "en": "Парктроник"
-      },
-      {
-        "bg": "Подгряване на седалки",
-        "en": "Подгряване на седалки"
-      },
-      {
-        "bg": "Камера за заден ход",
-        "en": "Камера за заден ход"
-      },
-      {
-        "bg": "Шибедах",
-        "en": "Шибедах"
-      }
-    ],
-    "spec": {
-      "make": "Nissan",
-      "model": "Qashqai",
-      "year": 2023,
-      "bodyType": "suv",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 57000,
-      "mileageUnit": "km",
-      "enginePowerHp": 141,
-      "colorExterior": "Бордо"
-    },
-    "seller": {
-      "id": "dealer-navara-car",
-      "type": "dealer",
-      "displayName": "Навара кар",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
-    },
-    "publishedAt": "2026-09-08T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1009",
-    "slug": "peugeot-e2008-allure-225914",
-    "category": "car",
-    "dealerOrgId": "dealer-navara-car",
-    "status": "active",
-    "title": "Peugeot e-2008 Allure",
-    "description": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
-    "price": {
-      "amount": 19999,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/navara/vehicles/11787212062225914-1.webp",
-        "alt": "Peugeot e-2008 Allure"
-      },
-      {
-        "url": "/navara/vehicles/11787212062225914-2.webp",
-        "alt": "Peugeot e-2008 Allure"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "България"
-    },
-    "features": [
-      {
-        "bg": "Парктроник",
-        "en": "Парктроник"
-      },
-      {
-        "bg": "Подгряване на седалки",
-        "en": "Подгряване на седалки"
-      },
-      {
-        "bg": "Apple CarPlay / Android Auto",
-        "en": "Apple CarPlay / Android Auto"
-      },
-      {
-        "bg": "Климатроник",
-        "en": "Климатроник"
-      }
-    ],
-    "spec": {
-      "make": "Peugeot",
-      "model": "2008",
-      "year": 2022,
-      "bodyType": "suv",
-      "fuelType": "electric",
-      "transmission": "automatic",
-      "mileageValue": 59079,
-      "mileageUnit": "km",
-      "enginePowerHp": 136,
-      "colorExterior": "Керемиден"
-    },
-    "seller": {
-      "id": "dealer-navara-car",
-      "type": "dealer",
-      "displayName": "Навара кар",
-      "verificationStatus": "unverified",
-      "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
+      "logoUrl": "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false

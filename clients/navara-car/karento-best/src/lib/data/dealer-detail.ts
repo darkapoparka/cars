@@ -36,6 +36,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "valueKey": "fuel.gasoline"
       },
       {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2021",
+        "labelKey": "vehicle.field.year"
+      },
+      {
         "id": "lit",
         "icon": "/assets/imgs/page/car/lit.svg",
         "value": "92 hp",
@@ -91,7 +97,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Навара кар",
       "location": "бул. „Цар Освободител“, Кайсиева градина, Варна",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-light.webp",
       "mobile": "0899 192 300",
       "email": "",
       "whatsapp": "",
@@ -141,6 +147,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Diesel",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.diesel"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2018",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -198,7 +210,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Навара кар",
       "location": "бул. „Цар Освободител“, Кайсиева градина, Варна",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-light.webp",
       "mobile": "0899 192 300",
       "email": "",
       "whatsapp": "",
@@ -248,6 +260,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Electric",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.electric"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2022",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -306,7 +324,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Навара кар",
       "location": "бул. „Цар Освободител“, Кайсиева градина, Варна",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-light.webp",
       "mobile": "0899 192 300",
       "email": "",
       "whatsapp": "",
@@ -356,6 +374,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2023",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -414,7 +438,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Навара кар",
       "location": "бул. „Цар Освободител“, Кайсиева градина, Варна",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-light.webp",
       "mobile": "0899 192 300",
       "email": "",
       "whatsapp": "",
@@ -464,6 +488,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Electric",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.electric"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2022",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -521,7 +551,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Навара кар",
       "location": "бул. „Цар Освободител“, Кайсиева градина, Варна",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-light.webp",
       "mobile": "0899 192 300",
       "email": "",
       "whatsapp": "",
@@ -571,6 +601,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "LPG",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.lpg"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2015",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -628,7 +664,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Навара кар",
       "location": "бул. „Цар Освободител“, Кайсиева градина, Варна",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-light.webp",
       "mobile": "0899 192 300",
       "email": "",
       "whatsapp": "",
@@ -678,6 +714,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2009",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -735,7 +777,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Навара кар",
       "location": "бул. „Цар Освободител“, Кайсиева градина, Варна",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-light.webp",
       "mobile": "0899 192 300",
       "email": "",
       "whatsapp": "",
@@ -785,6 +827,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Electric",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.electric"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2016",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -842,7 +890,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Навара кар",
       "location": "бул. „Цар Освободител“, Кайсиева градина, Варна",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-light.webp",
       "mobile": "0899 192 300",
       "email": "",
       "whatsapp": "",
@@ -892,6 +940,12 @@ export const dealerDetails: readonly DealerDetail[] = [
         "value": "Petrol",
         "labelKey": "vehicle.field.fuel",
         "valueKey": "fuel.gasoline"
+      },
+      {
+        "id": "year",
+        "icon": "/assets/imgs/template/icons/calendar.svg",
+        "value": "2011",
+        "labelKey": "vehicle.field.year"
       },
       {
         "id": "lit",
@@ -949,7 +1003,7 @@ export const dealerDetails: readonly DealerDetail[] = [
     "seller": {
       "name": "Навара кар",
       "location": "бул. „Цар Освободител“, Кайсиева градина, Варна",
-      "avatar": "/dealer-brand/logo-on-light-20260919.webp",
+      "avatar": "/dealer-brand/v2-472ca9a8fa8072b4/logo-on-light.webp",
       "mobile": "0899 192 300",
       "email": "",
       "whatsapp": "",

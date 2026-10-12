@@ -158,7 +158,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Day & Night Auto Group",
   "location": "ул. „Атанас Манчев“ 18, Студентски град, София",
-  "avatar": "/dealer-brand/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp",
   "mobile": "0877 733 110",
   "email": "",
   "whatsapp": "",

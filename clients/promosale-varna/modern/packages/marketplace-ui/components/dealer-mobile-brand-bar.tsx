@@ -16,9 +16,11 @@ type WordmarkTone = "original" | "light" | "dark";
 function DealerMobileWordmark({
   clean,
   wordmarkTone,
+  logoSource,
 }: {
   clean: boolean;
   wordmarkTone: WordmarkTone;
+  readonly logoSource: string;
 }) {
   if (publicSite.identity.desktopPreview) {
     return (
@@ -100,7 +102,7 @@ export const DealerMobileBrandBar = ({
         href={getLocalizedPublicPath(locale, "/")}
         onClick={onNavigate}
       >
-        <DealerMobileWordmark clean={clean} wordmarkTone={wordmarkTone} />
+        <DealerMobileWordmark clean={clean} wordmarkTone={wordmarkTone} logoSource={logoSource} />
       </Link>
 
       {clean

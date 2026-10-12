@@ -1,11 +1,18 @@
 {
   "schemaVersion": 1,
-  "kind": "personalized-source-candidate-not-an-approved-release",
   "dealer": "day-and-night-auto-group",
-  "sourceCommit": "447bb8819725567887019e300ab136829181d2d0",
-  "sourceTree": "bb7e3066156c8fab51a687bbf2e6e34aa3667175",
-  "candidateSourceDigest": "0c83291b3090aca0e6a6985dba42083b2a3ae594c845d3735c3b00d43b1b6d11",
-  "sourcePreparation": "Existing immutable six-design refresh with explicit source-bound resolution; original inputs, branding and stock retained",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "2e0324934e4891d7945c308523dd410d545e47913e1285369c48791b1fe1d139",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "8a3faef4c4fde54427c08bfd7763707f0a5dcb1303f948783578e97e8c8fdaa2",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "e61760adf5f62eae4aba6f601e29ae9bc714b8ede7770c2b2440703071cdbb7c",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
   "nativeApproval": false,
-  "hosted": false
+  "hostedApproval": false
 }

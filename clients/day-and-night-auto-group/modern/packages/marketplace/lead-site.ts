@@ -68,9 +68,9 @@ export interface LeadSiteConfig {
   readonly localizedCopy?: Readonly<Record<"bg" | "en", LeadSiteCopy>>;
   readonly logoInversePath?: string;
   readonly logoPath: string;
-  readonly logoOnAccent: string;
-  readonly logoOnDark: string;
   readonly logoOnLight: string;
+  readonly logoOnDark: string;
+  readonly logoOnAccent: string;
   readonly mapsEmbedUrl: string;
   readonly mapsUrl: string;
   readonly mobileFinancingArtworkPath?: string;
@@ -114,7 +114,7 @@ export const leadSite: LeadSiteConfig = {
     "tagline": "Day & Night — vehicles and dealer support in София."
   }
 },
-  accent: "#c40101",
+  accent: "#30343b",
   desktopAccent: "#4b5057",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
@@ -141,13 +141,17 @@ export const leadSite: LeadSiteConfig = {
   mobileShowroomArtworkPath:
     "/images/lease/mobile-pdp-showroom-blue-hour-v1.webp",
   contactUrl: "tel:+359877733110",
-  country: "България",
+  country: "Bulgaria",
   countryCode: carsLocale.dealerCountry,
   currency: carsLocale.inventoryCurrency,
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/logo-on-light.webp",
+  logoPath: "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp",
+  logoInversePath: "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Day%20%26%20Night%20Auto%20Group%2C%20%D1%83%D0%BB.%20%E2%80%9E%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%E2%80%9C%2018%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F&z=16&output=embed",
   mapsUrl:
@@ -160,9 +164,5 @@ export const leadSite: LeadSiteConfig = {
   socialLinks: {},
   staticDemoMode: true,
   tagline: "Day & Night Auto Group — автомобили и съдействие в София.",
-  logoOnLight: "/dealer-brand/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark.webp",
-  logoOnAccent: "/dealer-brand/logo-on-accent.webp",
-  logoInversePath: "/dealer-brand/logo-on-dark.webp"
 };
 // LEAD_SITE_CONFIG_END

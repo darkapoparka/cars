@@ -1,11 +1,18 @@
 {
   "schemaVersion": 1,
-  "kind": "personalized-source-candidate-not-an-approved-release",
   "dealer": "promosale-varna",
-  "sourceCommit": "d46d832fe651d24300cfb5bff8a3ac437b572eec",
-  "sourceTree": "3d6e447ddbef133cd71235a6cdf000b0a1e0c5e1",
-  "candidateSourceDigest": "5d346f1bb40a45c72eeca740af01f0f0200a45641fd456cfe1eb898c5525c3bc",
-  "sourcePreparation": "Existing preservation-aware six-design refresh; original branding and App fields checked against current main",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "ba2e78356af09c9e976e08dbe37e97a7192b2aae1cb9a8a6cac420a212a15de7",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "9185902b2f3c9f90542c6bda9e75361f74f7c741922d3f72b9366fdb66b2c5e9",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "ea22e2b5833057839072b7253c3eef5dbb6d74314650bf4c3c196ebd875b1854",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
   "nativeApproval": false,
-  "hosted": false
+  "hostedApproval": false
 }

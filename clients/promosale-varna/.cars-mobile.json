@@ -5,12 +5,12 @@
   "name": "Promosale Varna",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "8a97176e3adfbd95dce69b3096abc84e3eecd9c8",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
     "path": "templates/mobile",
-    "digest": "cc126a7c38634c7601ef8c617411d6938d7c9b6efc7b319e87c2c6efc99d8b6d",
-    "tree": "9a4db757e788ee236712b8eac25956a6a8a61d0b"
+    "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
+    "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
   },
-  "sourceDigest": "233e7e4fd950f0faf1a79b7a4961f2ee33bc376f8236812fb62bd023dd1cf2cf",
+  "sourceDigest": "ddf2a78529d89ba30a87faf1ba46ed3c67c0bea7e6b0c6918e3257add6e73573",
   "inventory": {
     "mode": "dated-listing-snapshot",
     "count": 6,
@@ -54,7 +54,13 @@
       "mobile/src/components/DealerScreens.tsx",
       "mobile/src/components/VehicleCard.tsx",
       "mobile/src/components/ShowroomVehicleCard.tsx",
-      "mobile/src/components/VehicleSections.tsx"
+      "mobile/src/components/VehicleSections.tsx",
+      "mobile/src/lib/mobile-mileage.ts",
+      "mobile/src/lib/types.ts",
+      "mobile/src/components/DesktopVehicleSummary.tsx",
+      "mobile/src/components/NativeCarPark.tsx",
+      "mobile/src/components/ShowroomFilterSheet.tsx",
+      "mobile/src/lib/vehicle-copy.ts"
     ]
   },
   "needsDealerQA": true,

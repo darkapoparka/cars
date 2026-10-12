@@ -13,7 +13,7 @@
   import type { Snippet } from "svelte";
   import { createLocale } from "#lib/i18n/context.svelte.ts";
   import type { Locale } from "#lib/i18n/locales.ts";
-  const mobileStyleVersion = "20261008-hero";
+  const mobileStyleVersion = "20261011-specs-font";
   let {
     children,
     data,

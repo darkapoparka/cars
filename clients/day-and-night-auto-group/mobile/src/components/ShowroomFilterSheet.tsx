@@ -1,4 +1,5 @@
 'use client';
+import { formatMobileMileage } from '../lib/mobile-mileage';
 import { useMediaQuery } from '@/lib/use-media-query';
 import Link from 'next/link';
 import { useLocale } from '@/lib/use-locale';
@@ -92,7 +93,7 @@ export function ShowroomFilterSheet({
   onClose: () => void;
   onDesktopDismiss?: () => void;
 }) {
-  const { t, money, number } = useLocale();
+  const { t, locale, money, number } = useLocale();
   const desktop = useMediaQuery('(min-width: 1024px)');
   const [draft, setDraft] = useState(() => structuredClone(filters));
   const [resetVersion, setResetVersion] = useState(0);
@@ -282,9 +283,7 @@ export function ShowroomFilterSheet({
                           ', ' +
                           vehicle.year +
                           ', ' +
-                          number(vehicle.mileage) +
-                          ' ' +
-                          t('km') +
+                          formatMobileMileage(vehicle, locale) +
                           ', ' +
                           money(vehicle.price)
                         }
@@ -299,7 +298,7 @@ export function ShowroomFilterSheet({
                             {vehicle.make} {vehicle.model}
                           </span>
                           <span {...stylex.props(s.suggestionFacts)}>
-                            {vehicle.year} · {number(vehicle.mileage)} {t('km')}
+                            {vehicle.year} · {formatMobileMileage(vehicle, locale)}
                           </span>
                         </span>
                         <span {...stylex.props(s.suggestionTail)}>

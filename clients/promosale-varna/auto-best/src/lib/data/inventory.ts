@@ -1,6 +1,5 @@
 import { formatPrice, localeContract, type Locale } from '$lib/locale/core';
 import { templateText } from '$lib/locale/messages';
-import { leadSite } from '$config/lead-site';
 
 export const vehicleTypes = ['car', 'motorbike', 'van', 'truck'] as const;
 export type VehicleType = typeof vehicleTypes[number];
@@ -34,6 +33,9 @@ export type Vehicle = {
   yearNumber: number;
   mileage: string;
   mileageKm: number;
+  mileageKnown?: boolean;
+  mileageValue?: number;
+  mileageUnit?: 'km' | 'mi';
   fuel: string;
   transmission: string;
   equipment: readonly VehicleEquipment[];
@@ -42,16 +44,11 @@ export type Vehicle = {
   href: `/listing-detail-v1/${number}`;
 };
 
-// Equipment facets are limited to recurring features published in Day & Night's
-// current adverts for these model families (daynight.mobile.bg, checked 2026-08-30).
-
-
-// Imported master fixtures are not VIN-verified stock. Preserve source media;
-// client promotion requires replacing and verifying each record, including reused photos.
 export const featuredVehicles: Vehicle[] = [
   {
     "id": 1,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://promosale_varna.mobile.bg/obiava-21788787563552939-mercedes-benz-eqe-350-burmester-podgrev-lizing",
     "image": "/dealer/inventory/21788787563552939-1.webp",
     "category": "Седан",
@@ -62,6 +59,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2022,
     "mileage": "294 900 км",
     "mileageKm": 294900,
+    "mileageKnown": true,
+    "mileageValue": 294900,
+    "mileageUnit": "km",
     "fuel": "Електрически",
     "transmission": "Автоматична",
     "equipment": [
@@ -74,12 +74,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 26900,
-    "href": "/listing-detail-v1/1",
-    "type": "car"
+    "href": "/listing-detail-v1/1"
   },
   {
     "id": 2,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://promosale_varna.mobile.bg/obiava-11787906058256951-peugeot-2008-gt-full-pano-podgrev-lizing",
     "image": "/dealer/inventory/11787906058256951-1.webp",
     "category": "Хечбек",
@@ -90,6 +90,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2021,
     "mileage": "19 900 км",
     "mileageKm": 19900,
+    "mileageKnown": true,
+    "mileageValue": 19900,
+    "mileageUnit": "km",
     "fuel": "Електрически",
     "transmission": "Автоматична",
     "equipment": [
@@ -102,12 +105,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 24990,
-    "href": "/listing-detail-v1/2",
-    "type": "car"
+    "href": "/listing-detail-v1/2"
   },
   {
     "id": 3,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://promosale_varna.mobile.bg/obiava-11786461174971809-bmw-740-i-long-m-sport-full-individual-lizing",
     "image": "/dealer/inventory/11786461174971809-1.webp",
     "category": "Стреч лимузина",
@@ -118,6 +121,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2020,
     "mileage": "149 000 км",
     "mileageKm": 149000,
+    "mileageKnown": true,
+    "mileageValue": 149000,
+    "mileageUnit": "km",
     "fuel": "Бензинов",
     "transmission": "Автоматична",
     "equipment": [
@@ -131,12 +137,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 44900,
-    "href": "/listing-detail-v1/3",
-    "type": "car"
+    "href": "/listing-detail-v1/3"
   },
   {
     "id": 4,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://promosale_varna.mobile.bg/obiava-11786375334835370-porsche-panamera-4s-matrix-nappa-bose-sportchrono-lizing",
     "image": "/dealer/inventory/11786375334835370-1.webp",
     "category": "Купе",
@@ -147,6 +153,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2017,
     "mileage": "179 000 км",
     "mileageKm": 179000,
+    "mileageKnown": true,
+    "mileageValue": 179000,
+    "mileageUnit": "km",
     "fuel": "Бензинов",
     "transmission": "Автоматична",
     "equipment": [
@@ -160,12 +169,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 44900,
-    "href": "/listing-detail-v1/4",
-    "type": "car"
+    "href": "/listing-detail-v1/4"
   },
   {
     "id": 5,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://promosale_varna.mobile.bg/obiava-11786370554050885-audi-a1-s-line-tfsi-ultra-alcantara-carplay-lizing",
     "image": "/dealer/inventory/11786370554050885-1.webp",
     "category": "Хечбек",
@@ -176,6 +185,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2017,
     "mileage": "150 300 км",
     "mileageKm": 150300,
+    "mileageKnown": true,
+    "mileageValue": 150300,
+    "mileageUnit": "km",
     "fuel": "Бензинов",
     "transmission": "Автоматична",
     "equipment": [
@@ -186,12 +198,12 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 11900,
-    "href": "/listing-detail-v1/5",
-    "type": "car"
+    "href": "/listing-detail-v1/5"
   },
   {
     "id": 6,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://promosale_varna.mobile.bg/obiava-11786106091652576-mercedes-benz-eqb-amg-7-mesten-garantsiya-obsluzhen-lizing",
     "image": "/dealer/inventory/11786106091652576-1.webp",
     "category": "Джип",
@@ -202,6 +214,9 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2023,
     "mileage": "140 900 км",
     "mileageKm": 140900,
+    "mileageKnown": true,
+    "mileageValue": 140900,
+    "mileageUnit": "km",
     "fuel": "Електрически",
     "transmission": "Автоматична",
     "equipment": [
@@ -215,12 +230,14 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 24500,
-    "href": "/listing-detail-v1/6",
-    "type": "car"
+    "href": "/listing-detail-v1/6"
   }
 ];
 
-export const formatVehiclePrice = (amount: number, locale: Locale = localeContract.defaultLocale) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
+export const formatVehiclePrice = (
+  amount: number,
+  locale: Locale = localeContract.defaultLocale
+) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
 
 /** Allow a currency line break while preserving the locale's grouped digits. */
 export const formatVehiclePriceLabel = (amount: number, locale: Locale = localeContract.defaultLocale) =>

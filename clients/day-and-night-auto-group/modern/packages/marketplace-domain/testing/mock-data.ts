@@ -80,7 +80,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": true
@@ -163,7 +163,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": true
@@ -246,7 +246,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": true
@@ -329,7 +329,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -412,7 +412,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -495,7 +495,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -578,7 +578,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -661,7 +661,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -744,7 +744,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -827,7 +827,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -910,7 +910,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -993,7 +993,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -1076,7 +1076,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false
@@ -1159,7 +1159,2165 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Day & Night Auto Group",
       "verificationStatus": "unverified",
       "city": "София",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-21ebd3674b544f2fec9e2bbf",
+    "slug": "2021-21781097577012835",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Land Rover Range Rover Sport Range Rover SPORT SVR* 600HP* PANO* 360CAM* MERIDI",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 54699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/21781097577012835.webp",
+        "alt": "Land Rover Range Rover Sport Range Rover SPORT SVR* 600HP* PANO* 360CAM* MERIDI"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "Land",
+      "model": "Land Rover Range Rover Sport Range Rover SPORT SVR* 600HP* PANO* 360CAM* MERIDI",
+      "year": 2021,
+      "bodyType": "suv",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 155000,
+      "mileageUnit": "km",
+      "colorExterior": "Графит"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-7b7be3452aaa6ce68f38c201",
+    "slug": "2021-21783785043166128",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "BMW X7 Очакван Внос M50d xDrive INDIVIDUAL Swarovski Sky",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 53699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/21783785043166128.webp",
+        "alt": "BMW X7 Очакван Внос M50d xDrive INDIVIDUAL Swarovski Sky"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "BMW",
+      "model": "BMW X7 Очакван Внос M50d xDrive INDIVIDUAL Swarovski Sky",
+      "year": 2021,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 150000,
+      "mileageUnit": "km",
+      "colorExterior": "Перла"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-6870a7473212504c666ab5cf",
+    "slug": "2023-21784134153263153",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "BMW X6 Очакван Вно X6M Compе TVCARBONINDIVIDUALTWO-TonePA",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 71669,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/21784134153263153.webp",
+        "alt": "BMW X6 Очакван Вно X6M Compе TVCARBONINDIVIDUALTWO-TonePA"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "BMW",
+      "model": "BMW X6 Очакван Вно X6M Compе TVCARBONINDIVIDUALTWO-TonePA",
+      "year": 2023,
+      "bodyType": "suv",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 160000,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-61f8fb82dc2676eab32b5457",
+    "slug": "2015-21765900685685588",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "BMW X6 BMW X6 3. 0d M Sport* Digital* CAMERA* ASSISTANCE*",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 28478.45,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/21765900685685588.webp",
+        "alt": "BMW X6 BMW X6 3. 0d M Sport* Digital* CAMERA* ASSISTANCE*"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      },
+      {
+        "bg": "OFFROAD пакет",
+        "en": "OFFROAD пакет"
+      }
+    ],
+    "spec": {
+      "make": "BMW",
+      "model": "BMW X6 BMW X6 3. 0d M Sport* Digital* CAMERA* ASSISTANCE*",
+      "year": 2015,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 185000,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-a5df6be56e98eb052eb42bf4",
+    "slug": "2017-21777637702876978",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "BMW X6 BMW X6 4.0d M Sport* Digital* CAMERA* ASSISTANCE",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 28699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/21777637702876978.webp",
+        "alt": "BMW X6 BMW X6 4.0d M Sport* Digital* CAMERA* ASSISTANCE"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "BMW",
+      "model": "BMW X6 BMW X6 4.0d M Sport* Digital* CAMERA* ASSISTANCE",
+      "year": 2017,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 183000,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-ae76deddf8a3253e13d16b43",
+    "slug": "2020-21780050061781136",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "BMW X6 BMW X6 M50i LASER 360HARMAN FULLMAX",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 55699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/21780050061781136.webp",
+        "alt": "BMW X6 BMW X6 M50i LASER 360HARMAN FULLMAX"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "BMW",
+      "model": "BMW X6 BMW X6 M50i LASER 360HARMAN FULLMAX",
+      "year": 2020,
+      "bodyType": "suv",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 160000,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-5e4727c1cd7c29acbc0e4462",
+    "slug": "2021-11781282994167628",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "BMW M5 Очакван Внос Competition* 625HP* FACE* B&W* LASER*",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 68699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/11781282994167628.webp",
+        "alt": "BMW M5 Очакван Внос Competition* 625HP* FACE* B&W* LASER*"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "BMW",
+      "model": "BMW M5 Очакван Внос Competition* 625HP* FACE* B&W* LASER*",
+      "year": 2021,
+      "bodyType": "other",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 133000,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-1e3269d2c7fcdbf5a7a96913",
+    "slug": "2023-11775899765171119",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "BMW 430 BMW 430xi Gran Coupe* M Sport* Digital* CAM* HARMA",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 41699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/11775899765171119.webp",
+        "alt": "BMW 430 BMW 430xi Gran Coupe* M Sport* Digital* CAM* HARMA"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      },
+      {
+        "bg": "OFFROAD пакет",
+        "en": "OFFROAD пакет"
+      }
+    ],
+    "spec": {
+      "make": "BMW",
+      "model": "BMW 430 BMW 430xi Gran Coupe* M Sport* Digital* CAM* HARMA",
+      "year": 2023,
+      "bodyType": "other",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 35000,
+      "mileageUnit": "km",
+      "colorExterior": "Син"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-a33bb8abc3e3a43f8bebe841",
+    "slug": "2020-11781969350224394",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Audi Rs6 Audi RS6 Avant PERFORMANCE CERAMIC B&O 360",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 69699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/11781969350224394.webp",
+        "alt": "Audi Rs6 Audi RS6 Avant PERFORMANCE CERAMIC B&O 360"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "Audi",
+      "model": "Audi Rs6 Audi RS6 Avant PERFORMANCE CERAMIC B&O 360",
+      "year": 2020,
+      "bodyType": "wagon",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 169000,
+      "mileageUnit": "km",
+      "colorExterior": "Син"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-e08c22c49fa460788e280ad6",
+    "slug": "2021-21782920140707096",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Audi Q8 ОЧАКВАН ВНОС Q8 50 TDI quattro S line Plus Exclus",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 50699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/21782920140707096.webp",
+        "alt": "Audi Q8 ОЧАКВАН ВНОС Q8 50 TDI quattro S line Plus Exclus"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "Audi",
+      "model": "Audi Q8 ОЧАКВАН ВНОС Q8 50 TDI quattro S line Plus Exclus",
+      "year": 2021,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 163000,
+      "mileageUnit": "km",
+      "colorExterior": "Графит"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-a505de3865966b706f2471c3",
+    "slug": "2021-21782329010196509",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Audi Q7 AUDI Q7 FACE* HD MATRIX* ОБДУХВАНЕ 6+ 1",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 41699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/21782329010196509.webp",
+        "alt": "Audi Q7 AUDI Q7 FACE* HD MATRIX* ОБДУХВАНЕ 6+ 1"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "7 места",
+        "en": "7 места"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      }
+    ],
+    "spec": {
+      "make": "Audi",
+      "model": "Audi Q7 AUDI Q7 FACE* HD MATRIX* ОБДУХВАНЕ 6+ 1",
+      "year": 2021,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 160000,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-85629dd9d81d5ba5f2e2bcdd",
+    "slug": "2017-21784136402983332",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Audi Q7 Очакван Внос Q7 3.0TDI MATRIXHUDPANOCAM6+ 1",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 29699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/21784136402983332.webp",
+        "alt": "Audi Q7 Очакван Внос Q7 3.0TDI MATRIXHUDPANOCAM6+ 1"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "7 места",
+        "en": "7 места"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      }
+    ],
+    "spec": {
+      "make": "Audi",
+      "model": "Audi Q7 Очакван Внос Q7 3.0TDI MATRIXHUDPANOCAM6+ 1",
+      "year": 2017,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 188000,
+      "mileageUnit": "km",
+      "colorExterior": "Перла"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-aff37fb78ae08fbb77556eee",
+    "slug": "2016-11775198338574112",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Audi A8 Audi A8 Long 4.2 TDI W12 Pack MEGA FULL | NIGHT",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 27500,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/11775198338574112.webp",
+        "alt": "Audi A8 Audi A8 Long 4.2 TDI W12 Pack MEGA FULL | NIGHT"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      },
+      {
+        "bg": "OFFROAD пакет",
+        "en": "OFFROAD пакет"
+      }
+    ],
+    "spec": {
+      "make": "Audi",
+      "model": "Audi A8 Audi A8 Long 4.2 TDI W12 Pack MEGA FULL | NIGHT",
+      "year": 2016,
+      "bodyType": "other",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 204000,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-97ae76303bb6015c4e7de91f",
+    "slug": "2021-21781787768273938",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Mercedes-Benz GLS 400 ОЧАКВАН ВНОС Mercedes GLS400d AMGLine360BURMPANORA",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 59699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/21781787768273938.webp",
+        "alt": "Mercedes-Benz GLS 400 ОЧАКВАН ВНОС Mercedes GLS400d AMGLine360BURMPANORA"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz GLS 400 ОЧАКВАН ВНОС Mercedes GLS400d AMGLine360BURMPANORA",
+      "year": 2021,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 172000,
+      "mileageUnit": "km",
+      "colorExterior": "Син"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-ed0391700294482907f90367",
+    "slug": "2018-11778599312336917",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Mercedes-Benz E 350 Mercedes 350d * AMG OPTIC* ОБДУХВАНЕ* 360* MULTIBE",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 33699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/11778599312336917.webp",
+        "alt": "Mercedes-Benz E 350 Mercedes 350d * AMG OPTIC* ОБДУХВАНЕ* 360* MULTIBE"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz E 350 Mercedes 350d * AMG OPTIC* ОБДУХВАНЕ* 360* MULTIBE",
+      "year": 2018,
+      "bodyType": "other",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 177000,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-b664b17628112a065ce924b7",
+    "slug": "2017-11782541049698048",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Mercedes-Benz AMG GT S Mercedes-AMG GT S PRIOR DESIGN Designo Exclusive C",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 88699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/11782541049698048.webp",
+        "alt": "Mercedes-Benz AMG GT S Mercedes-AMG GT S PRIOR DESIGN Designo Exclusive C"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz AMG GT S Mercedes-AMG GT S PRIOR DESIGN Designo Exclusive C",
+      "year": 2017,
+      "bodyType": "coupe",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 70000,
+      "mileageUnit": "km",
+      "colorExterior": "Перла"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-fca0659be1de2d3781aa7f5b",
+    "slug": "2021-21762334502775312",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Lamborghini Urus LAMBORGHINI Urus FULLMAXX",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 172669,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/21762334502775312.webp",
+        "alt": "Lamborghini Urus LAMBORGHINI Urus FULLMAXX"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      },
+      {
+        "bg": "OFFROAD пакет",
+        "en": "OFFROAD пакет"
+      }
+    ],
+    "spec": {
+      "make": "Lamborghini",
+      "model": "Lamborghini Urus LAMBORGHINI Urus FULLMAXX",
+      "year": 2021,
+      "bodyType": "suv",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 86000,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-cdf15edc5f444146b4f01df5",
+    "slug": "2020-21782329865022942",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "BMW X5 ОЧАКВАН ВНОС M50d 360SwarovskiSkyPanoHUDОБДУХВАНЕ",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 45699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/21782329865022942.webp",
+        "alt": "BMW X5 ОЧАКВАН ВНОС M50d 360SwarovskiSkyPanoHUDОБДУХВАНЕ"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "BMW",
+      "model": "BMW X5 ОЧАКВАН ВНОС M50d 360SwarovskiSkyPanoHUDОБДУХВАНЕ",
+      "year": 2020,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 167000,
+      "mileageUnit": "km",
+      "colorExterior": "Графит"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-dd7ea8ecee19ac403429e9d2",
+    "slug": "2020-11784380846697521",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Audi A8 Audi A8 5.0TDI* HD MATRIX* 360CAM* Distronic Plus*",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 28699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/11784380846697521.webp",
+        "alt": "Audi A8 Audi A8 5.0TDI* HD MATRIX* 360CAM* Distronic Plus*"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "Audi",
+      "model": "Audi A8 Audi A8 5.0TDI* HD MATRIX* 360CAM* Distronic Plus*",
+      "year": 2020,
+      "bodyType": "other",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 186000,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-bfbcf6af74c0c1d7c7b06c3f",
+    "slug": "2022-11784130537689775",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Mercedes-Benz S 580 Очакван внос S580 Long BRABUS 4Matic BURMES Plug i",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 86699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/11784130537689775.webp",
+        "alt": "Mercedes-Benz S 580 Очакван внос S580 Long BRABUS 4Matic BURMES Plug i"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz S 580 Очакван внос S580 Long BRABUS 4Matic BURMES Plug i",
+      "year": 2022,
+      "bodyType": "other",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 72000,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-8a11eb0a97a276999f93fb8e",
+    "slug": "2018-11778179700610297",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Mercedes-Benz V 300 Mercedes V250d* VIP* BUSINESS* TV* ОБДУХВАНЕ+ ПОДГ",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 54699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/11778179700610297.webp",
+        "alt": "Mercedes-Benz V 300 Mercedes V250d* VIP* BUSINESS* TV* ОБДУХВАНЕ+ ПОДГ"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "7 места",
+        "en": "7 места"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz V 300 Mercedes V250d* VIP* BUSINESS* TV* ОБДУХВАНЕ+ ПОДГ",
+      "year": 2018,
+      "bodyType": "other",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 44500,
+      "mileageUnit": "km",
+      "colorExterior": "Кафяв"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-5880800613e0ecd9f4a9cfa0",
+    "slug": "2016-11782329384140338",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Mercedes-Benz V 300 Очакван Внос V250d LongAMG LineDesignoEdition",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 33699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/11782329384140338.webp",
+        "alt": "Mercedes-Benz V 300 Очакван Внос V250d LongAMG LineDesignoEdition"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz V 300 Очакван Внос V250d LongAMG LineDesignoEdition",
+      "year": 2016,
+      "bodyType": "other",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 187000,
+      "mileageUnit": "km",
+      "colorExterior": "Перла"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-5ba86855451e6b22b9e30625",
+    "slug": "2019-11778085846169037",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Mercedes-Benz E 400 Mercedes E400d AMG LineASSISTANCEMULTIBEAMFULL*",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 29699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/11778085846169037.webp",
+        "alt": "Mercedes-Benz E 400 Mercedes E400d AMG LineASSISTANCEMULTIBEAMFULL*"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz E 400 Mercedes E400d AMG LineASSISTANCEMULTIBEAMFULL*",
+      "year": 2019,
+      "bodyType": "other",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 172000,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-25976d90919c31cfd1512c23",
+    "slug": "2021-11774291387702102",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Audi Rs7 AUDI RS7 Ceramic Масажи Обдухване Full",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 72699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/11774291387702102.webp",
+        "alt": "Audi Rs7 AUDI RS7 Ceramic Масажи Обдухване Full"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Buy back",
+        "en": "Buy back"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      }
+    ],
+    "spec": {
+      "make": "Audi",
+      "model": "Audi Rs7 AUDI RS7 Ceramic Масажи Обдухване Full",
+      "year": 2021,
+      "bodyType": "other",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 144000,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-637adc48d1bbd55dfe206425",
+    "slug": "2017-21782661898906066",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Mercedes-Benz G 63 AMG Очакван внос G63 AMG FACE* 3xTV* CAM* Heat+ Vent",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 61699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/21782661898906066.webp",
+        "alt": "Mercedes-Benz G 63 AMG Очакван внос G63 AMG FACE* 3xTV* CAM* Heat+ Vent"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz G 63 AMG Очакван внос G63 AMG FACE* 3xTV* CAM* Heat+ Vent",
+      "year": 2017,
+      "bodyType": "suv",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 164000,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "dealer-6e23e8612912112d8fc08db5",
+    "slug": "2016-11781790478711568",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Mercedes-Benz S 500 Очакван Внос S500 LongDESIGNOAMG Line3xTV",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 27699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/variant-3/assets/daynight/inventory-current/11781790478711568.webp",
+        "alt": "Mercedes-Benz S 500 Очакван Внос S500 LongDESIGNOAMG Line3xTV"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz S 500 Очакван Внос S500 LongDESIGNOAMG Line3xTV",
+      "year": 2016,
+      "bodyType": "other",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 175000,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp"
     },
     "publishedAt": "2026-07-24T09:00:00.000Z",
     "promoted": false

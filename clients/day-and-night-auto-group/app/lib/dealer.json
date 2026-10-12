@@ -4,9 +4,9 @@
   "name": "Day & Night Auto Group",
   "shortName": "Day & Night Auto Group",
   "logo": {
-    "light": "/dealer-app/logo-light-04bf9a0cd31cd72992a8.webp",
-    "dark": "/dealer-app/logo-dark-019719775d6f0bc08136.webp",
-    "icon": "/dealer-app/icon.png"
+    "light": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-light.webp",
+    "dark": "/dealer-brand/v2-5451a2d8ee3a85cd/logo-on-dark.webp",
+    "icon": "/dealer-brand/v2-5451a2d8ee3a85cd/app-icon.png"
   },
   "defaultLocale": "bg",
   "enabledLocales": [
@@ -42,9 +42,9 @@
       "url": ""
     }
   ],
-  "services": [],
   "referenceClaimsApproved": false,
+  "services": [],
   "observedAt": "2026-07-24",
-  "inventoryNotice": "Dated listing samples. Confirm price, availability and vehicle information with the dealer.",
+  "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
   "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
 }

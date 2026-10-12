@@ -116,6 +116,12 @@ export const referenceSpecifications: readonly DetailSpecification[] = [
     "value": "Electric",
     "labelKey": "vehicle.field.fuel",
     "valueKey": "fuel.electric"
+  },
+  {
+    "id": "year",
+    "icon": "/assets/imgs/template/icons/calendar.svg",
+    "value": "2022",
+    "labelKey": "vehicle.field.year"
   }
 ];
 
@@ -198,7 +204,7 @@ export const referenceReviews: readonly DetailReview[] = [];
 export const referenceSeller: DetailSeller = {
   "name": "Promosale Varna",
   "location": "Морска гара Варна, Варна, България",
-  "avatar": "/dealer-brand/logo-on-light.webp",
+  "avatar": "/dealer-brand/v2-a98706ed9a9b259c/logo-on-light.webp",
   "mobile": "0892 020 208",
   "email": "",
   "whatsapp": "",

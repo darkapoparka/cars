@@ -3,17 +3,17 @@
   "dealer": "navara-car",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "4e184777567849a2c5b4a9e4a3e652252179c29c",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
     "path": "templates/app",
-    "digest": "fad0067e48d7bd7e1c5177c5e91e2bc5767352e2c16621cb458d18a081f7c541",
-    "tree": "749512ff762c25272d1474225ff653dd4c88f0fe"
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
   },
-  "appDigest": "c69093d297671558a77e9a1e4ddb5473936a12393357b9a2ef8f33ab5cffdde1",
+  "appDigest": "6de3f730ca9f2c80bbe1d975d451503904c2968e7fed062c5760bf0dc5b82a1b",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "navara-car",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "cc9ead406811b976b64ed7ba0c8e095c80a0aba0f490be26d14204c66b4fe09c",
+    "profileSha256": "4c6701d900824b20406dc08326ee54526e82a34714191a8e8b7af0cf4b20c522",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 9,
     "currency": "EUR",
@@ -139,13 +139,65 @@
         "sha256": "8e5f89fef021df02130cf487e18d94bf1157178e051d055363f68cf2c82d051d",
         "role": "vehicle"
       }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "nissan-micra-n-sport-065195",
+        "sourceValue": 63800,
+        "sourceUnit": "km",
+        "canonicalKm": 63800
+      },
+      {
+        "slug": "vw-polo-tdi-983224",
+        "sourceValue": 125902,
+        "sourceUnit": "km",
+        "canonicalKm": 125902
+      },
+      {
+        "slug": "tesla-model-3-performance-769974",
+        "sourceValue": 63900,
+        "sourceUnit": "km",
+        "canonicalKm": 63900
+      },
+      {
+        "slug": "nissan-qashqai-sv-awd-049477",
+        "sourceValue": 57000,
+        "sourceUnit": "km",
+        "canonicalKm": 57000
+      },
+      {
+        "slug": "peugeot-e2008-allure-225914",
+        "sourceValue": 59079,
+        "sourceUnit": "km",
+        "canonicalKm": 59079
+      },
+      {
+        "slug": "opel-mokka-lpg-506554",
+        "sourceValue": 182000,
+        "sourceUnit": "km",
+        "canonicalKm": 182000
+      },
+      {
+        "slug": "audi-a4-quattro-652112",
+        "sourceValue": 212000,
+        "sourceUnit": "km",
+        "canonicalKm": 212000
+      },
+      {
+        "slug": "mercedes-b250-electric-578045",
+        "sourceValue": 106000,
+        "sourceUnit": "km",
+        "canonicalKm": 106000
+      },
+      {
+        "slug": "smart-fortwo-824361",
+        "sourceValue": 66121,
+        "sourceUnit": "km",
+        "canonicalKm": 66121
+      }
     ]
   },
-  "baseDeployment": {
-    "id": "dpl_3fq1CB4SaAfzonKoButSPHwcbDuU",
-    "url": "https://cars-navaracar.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:51.038Z"
-  },
-  "baseReceiptSha256": "e3a992b2d5af24146b96e791eba3f19f1b032c09ff7ec4da4a7b7b0fe6154780",
-  "refreshedAt": "2026-10-10T23:11:29.075Z"
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-12T00:32:34.973Z"
 }

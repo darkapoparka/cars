@@ -52,7 +52,8 @@ const s = stylex.create({
     display: { default: 'flex', '@media (min-width: 1024px)': 'grid' },
     gridTemplateColumns: 'minmax(0, 1fr) auto minmax(0, 1fr)',
     columnGap: { default: 4, '@media (min-width: 1024px)': 16 },
-    height: { default: 60, '@media (min-width: 1024px)': 72 },
+    height: { default: 60, '@media (max-width: 699px)': 56, '@media (min-width: 1024px)': 72 },
+    paddingBottom: { default: 4, '@media (max-width: 699px)': 0 },
     paddingLeft: 16,
     paddingRight: { default: 8, '@media (min-width: 1024px)': 16 },
     color: colors.text,
@@ -72,8 +73,8 @@ const s = stylex.create({
     color: { default: colors.text, '@media (min-width: 1024px)': '#fff' },
   },
   overHeroLogo: {
-    // Fallback for personalized artwork without its own light presentation.
-    filter: { default: 'none', '@media (min-width: 1024px)': 'brightness(0) invert(1)' },
+    // Select committed surface artwork; never manufacture a white logo with CSS.
+    filter: 'none',
   },
   overHeroSticky: {
     position: { default: 'sticky', '@media (min-width: 1024px)': 'relative' },
@@ -148,6 +149,8 @@ export function Header({
               {generatedDesktopLogo && (
                 <ShowroomBrandLogo light={overHeroDesktop} label={t(showroom.name)} />
               )}
+              <picture data-dealer-logo-surfaces style={{display: "contents"}}>
+                {overHeroDesktop && !generatedDesktopLogo && <source media="(min-width: 1024px)" srcSet={showroom.logo.replace(/\/logo-on-light\.webp$/, "/logo-on-dark.webp")} />}
               <Image
                 src={showroom.logo}
                 alt={t(showroom.name)}
@@ -161,6 +164,7 @@ export function Header({
                   !generatedDesktopLogo && overHeroDesktop && s.overHeroLogo,
                 )}
               />
+              </picture>
             </>
           ) : (
             <span {...stylex.props(s.placeholder)}>{t(showroom.name)}</span>
