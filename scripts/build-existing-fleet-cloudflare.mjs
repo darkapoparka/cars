@@ -379,4 +379,15 @@ export async function compile(slug,key){
  }
  return result;
 }
-if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))try{const [command,a,b]=process.argv.slice(2);if(command==='matrix')console.log('matrix='+JSON.stringify(buildMatrix(read(path.join(ROOT,'docs/releases/cloudflare-existing25-20261011/build-request.json')))));else if(command==='compile')await compile(a,b);else throw Error('Usage: matrix | compile SLUG FAMILY');}catch(e){console.error(e.stack);process.exitCode=1;}
+/** Finish module evaluation before invoking async CLI work. New-source validators
+ * import shared fleet exports through their maintained preparation module; awaiting
+ * compile at module top level deadlocks that legitimate dynamic import cycle. */
+export async function runExistingFleetCli(argv=process.argv.slice(2)){
+ const [command,a,b]=argv;
+ if(command==='matrix')console.log('matrix='+JSON.stringify(buildMatrix(read(path.join(ROOT,'docs/releases/cloudflare-existing25-20261011/build-request.json')))));
+ else if(command==='compile')await compile(a,b);
+ else throw Error('Usage: matrix | compile SLUG FAMILY');
+}
+if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
+ runExistingFleetCli().catch(e=>{console.error(e.stack);process.exitCode=1;});
+}

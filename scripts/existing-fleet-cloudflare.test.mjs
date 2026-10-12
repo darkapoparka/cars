@@ -226,3 +226,13 @@ test('fleet metadata reads stay committed, bounded and separate from package inp
  for(const name of ['../dealer.json','stock.json','.git/config'])assert.throws(()=>readCommittedFleetMetadata(f.root,f.slug,name,f.commit),/invalid dealer metadata locator/);
  f.write('clients/'+f.slug+'/dealer.json',{...f.manifest,repository:'darkapoparka/unpublished'});assert.throws(()=>readCommittedFleetMetadata(f.root,f.slug,'dealer.json',f.commit),/physical input bytes differ/);
 });
+
+test('actual fleet CLI envelope completes dynamic back-imports and propagates failures',t=>{
+ const directory=fs.mkdtempSync(path.join(process.env.TEMP??process.env.TMPDIR??'/tmp','cars-fleet-cli-cycle-'));t.after(()=>fs.rmSync(directory,{recursive:true,force:true}));
+ const builder=fs.readFileSync(new URL('./build-existing-fleet-cloudflare.mjs',import.meta.url),'utf8'),marker='export async function runExistingFleetCli(';assert.equal(builder.split(marker).length,2);
+ const envelope=builder.slice(builder.indexOf(marker));
+ fs.writeFileSync(path.join(directory,'entry.mjs'),"import path from 'node:path';import {fileURLToPath} from 'node:url';export const QUALIFICATION_LOCK_PATH='.client/native-qualification-lock.json';async function compile(slug){if(slug==='reject')throw Error('expected-cli-rejection');const loaded=await import('./dependent.mjs');if(loaded.proof!==QUALIFICATION_LOCK_PATH)throw Error('back-import mismatch');console.log('CLI_IMPORT_COMPLETE');}\n"+envelope);
+ fs.writeFileSync(path.join(directory,'dependent.mjs'),"import {QUALIFICATION_LOCK_PATH} from './entry.mjs';export const proof=QUALIFICATION_LOCK_PATH;\n");
+ const complete=spawnSync(process.execPath,[path.join(directory,'entry.mjs'),'compile','fixture'],{encoding:'utf8',timeout:15000});assert.equal(complete.status,0,complete.stderr);assert.match(complete.stdout,/CLI_IMPORT_COMPLETE/);assert.doesNotMatch(complete.stderr,/unsettled top-level await/);
+ const rejected=spawnSync(process.execPath,[path.join(directory,'entry.mjs'),'compile','reject'],{encoding:'utf8',timeout:15000});assert.equal(rejected.status,1);assert.match(rejected.stderr,/expected-cli-rejection/);assert.doesNotMatch(rejected.stdout,/CLI_IMPORT_COMPLETE/);
+});
