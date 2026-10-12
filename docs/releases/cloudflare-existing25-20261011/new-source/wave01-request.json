@@ -32,14 +32,14 @@
     {
       "slug": "centralauto-varna",
       "dealerId": "centralauto-varna",
-      "repository": "darkapoparka/centralauto-varna",
+      "repository": "darkapoparka/cars-centralauto-varna",
       "sourceOwnership": "cars-canonical",
       "preset": "standard",
       "workerName": "cars-centralauto-varna",
       "publicOrigin": "https://cars-centralauto-varna.darkapoparka1.workers.dev",
       "identityReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/identity.json",
-        "sha256": "8b0a4daba9d510215c10366ef4141e0a9bd156307cf7e9adf60366129a110845"
+        "sha256": "87b6d22b60425f298c6eef4bc1010e3c12ac1d49565aa43de289e491e751b161"
       },
       "sourceReleases": {
         "auto-best": {
@@ -125,14 +125,14 @@
     {
       "slug": "kalchev-varna",
       "dealerId": "kalchev-varna",
-      "repository": "darkapoparka/kalchev-varna",
+      "repository": "darkapoparka/cars-kalchev-varna",
       "sourceOwnership": "cars-canonical",
       "preset": "standard",
       "workerName": "cars-kalchev-varna",
       "publicOrigin": "https://cars-kalchev-varna.darkapoparka1.workers.dev",
       "identityReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/identity.json",
-        "sha256": "a182a82d90243edaf85ec834e8cb982bb1acea5bdc578510fd9d063c9e6de960"
+        "sha256": "c1713fbba30035a5dee31325b42fc4da2ab6189ebb722172054c674136050d45"
       },
       "sourceReleases": {
         "auto-best": {
@@ -218,14 +218,14 @@
     {
       "slug": "sevicar-varna",
       "dealerId": "sevicar-varna",
-      "repository": "darkapoparka/sevicar-varna",
+      "repository": "darkapoparka/cars-sevicar-varna",
       "sourceOwnership": "cars-canonical",
       "preset": "standard",
       "workerName": "cars-sevicar-varna",
       "publicOrigin": "https://cars-sevicar-varna.darkapoparka1.workers.dev",
       "identityReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/new-source/sevicar-varna/identity.json",
-        "sha256": "d567153c1ed0eb69e9065dcf86bd25dfd264e6a5b08ba173d6918ce2267c85c7"
+        "sha256": "b3c013a6631b8168cd39e9716c436c5a2c1713e436c918593b42c17d5f0ccdff"
       },
       "sourceReleases": {
         "auto-best": {

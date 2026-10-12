@@ -19,6 +19,7 @@ import {writeDerivedFile} from './lib/derived-assets.mjs';
 import {assertSixDesignSelection} from './lib/six-design-release.mjs';
 import {SIX_PACKAGING_VERSION,assertExtendedVariantSources,applySixVariantMounts,sealSixVariantBuild} from './publishing/six-variant.mjs';
 import {LEGACY_DETAIL_FILE,legacyDetailArtifact,legacyDetailRedirects} from './publishing/legacy-detail-routes.mjs';
+import {appLocalePreferenceRedirects} from './lib/vercel-app-locale-preference.mjs';
 
 export const PACKAGING_VERSION = '1';
 const ROOT = path.resolve(import.meta.dirname, '..');
@@ -151,8 +152,9 @@ export function vercelConfiguration(manifest, legacyDetails) {
       services[names[key]] = key === 'app' ? { root:'app',framework:'nextjs',installCommand:'npm ci --include=dev',buildCommand:'node ../scripts/build-app-service.mjs' }
         : { root:key === 'modern' ? 'modern/apps/web' : key,framework:['modern','mobile'].includes(key) ? 'nextjs' : 'sveltekit',installCommand:`node ${helper} install ${key}`,buildCommand:`node ${helper} ${key} --installed` };
       if (base) {
-        // Native App and Mobile canonicalize their bare basePath without a trailing slash.
-        // Dispatch those entries directly; an envelope slash redirect can self-loop.
+        if (key === 'app') redirects.push(...appLocalePreferenceRedirects(manifest));
+        // Native Mobile canonicalizes its bare basePath without a trailing slash.
+        // Dispatch that entry directly; an envelope slash redirect can self-loop.
         if (key === 'mobile' || key === 'app') rewrites.push({source:base,destination:{service:names[key],path:base}});
         else redirects.push({source:base,destination:entry,permanent:false});
         rewrites.push({source:base+'/(.*)',destination:{service:names[key]}});

@@ -92,8 +92,14 @@ test('six-services configuration includes exact legacy redirects before mount ro
   const legacy = legacyDetailRedirects(m, result.artifact);
   assert.deepEqual(config.redirects.slice(0, legacy.length), legacy);
   const mounted = config.redirects.slice(legacy.length);
-  assert.deepEqual(mounted, m.variants.filter(variant => variant.base && !['mobile','app'].includes(variant.key))
+  assert.deepEqual(mounted.filter(rule => !rule.has), m.variants.filter(variant => variant.base && !['mobile','app'].includes(variant.key))
     .map(variant => ({ source: variant.base, destination: variant.entry, permanent: false })));
+  const preferred = mounted.filter(rule => rule.has);
+  assert.equal(preferred.length, m.localization.enabledLocales.length * 2);
+  for (const locale of m.localization.enabledLocales) for (const source of ['/variant-4','/variant-4/']) {
+    assert.deepEqual(preferred.find(rule => rule.source === source && rule.destination === '/variant-4/' + locale),
+      { source, has: [{ type: 'cookie', key: 'cars-app-locale', value: { eq: locale } }], destination: '/variant-4/' + locale, permanent: false });
+  }
   assert.ok(config.redirects.every(rule => rule.source !== rule.destination), 'Bare mounted entries must not redirect to themselves');
   for (const key of ['mobile','app']) {
     const variant = m.variants.find(variant => variant.key === key);
