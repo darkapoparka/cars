@@ -91,7 +91,7 @@ const proofJson=bytes=>parseCatalogJson(new TextDecoder('utf-8',{fatal:true}).de
  * published client tree can enter this path; no creation or adoption occurs. */
 export async function newApprovedFleetSource({root=ROOT,slug,commit,request,leads,inventory,manifest,files}){
  requireNew(fleetSourceMode(request)==='new-approved'&&hex40(commit)&&git(root,['rev-parse','HEAD'])===commit,'exact current source checkout required');
- requireNew(!fs.existsSync(path.join(root,'clients',slug,'.git'))&&!fs.existsSync(path.join(root,'clients',slug,'.client/cloudflare-existing-source.json')),'independent source and existing qualification markers are forbidden');
+ requireNew(!fs.existsSync(path.join(root,'clients',slug,'.git')),'independent source is forbidden');
  const {row,selected,record}=newSourceRow(request,slug,leads,inventory),prefix=NEW_INPUT_ROOT+'/'+slug;
  const proofs=Object.fromEntries(['preparation','proposal','publication','inputMapping'].map(k=>[k,proofJson(readPinnedFleetInput(root,row[k],commit,{prefix}))]));
  const {preparation:prep,proposal,publication,inputMapping}=proofs;
@@ -111,7 +111,20 @@ export async function newApprovedFleetSource({root=ROOT,slug,commit,request,lead
  const lockBytes=committedBytes(root,'templates.lock.json',prep.baseCommit,originalRequest.approvedLockSha256),oldRegistry=proofJson(committedBytes(root,'docs/DEPLOYMENT-INVENTORY.json',prep.baseCommit,originalRequest.registrySha256)),oldIndex=proofJson(committedBytes(root,'clients/index.json',prep.baseCommit,originalRequest.clientIndexSha256)),lock=proofJson(lockBytes);
  const {validateNewSourceRequest,validateNewDealerFacts}=await import('./prepare-new-dealer-source.mjs');
  const oldClients=git(root,['ls-tree','-z','--name-only',prep.baseCommit+':clients'],{encoding:null}).toString('utf8').split('\0').filter(Boolean);
- validateNewSourceRequest(originalRequest,{registry:oldRegistry,clientIndex:oldIndex,occupiedSlugs:oldClients,lock,lockSha256:hash(lockBytes),registrySha256:originalRequest.registrySha256,clientIndexSha256:originalRequest.clientIndexSha256});
+ const sourceQualification=originalRequest.qualification;
+ let qualifiedContextBytes,qualifiedLockBytes;
+ if(sourceQualification){
+  // The explicit creator opt-in remains a proposal, bound to its historical input bytes.
+  qualifiedLockBytes=readPinnedFleetInput(root,sourceQualification.candidateLock,prep.baseCommit);
+  for(const dealer of originalRequest.dealers)readPinnedFleetInput(root,sourceQualification.contexts[dealer.slug],prep.baseCommit);
+  qualifiedContextBytes=readPinnedFleetInput(root,sourceQualification.contexts[slug],prep.baseCommit,{prefix});
+  const context=proofJson(qualifiedContextBytes),qualification=prep.nativeQualification;
+  requireNew(context.scope==='new-dealer-source-proposal'&&context.dealer===slug&&context.sourceCommit===request.sourceRevision&&context.nativeApproval===false&&context.hostedApproval===false&&context.globalReleaseApproval===false,'only the exact new-dealer proposal qualification scope is admitted');
+  requireNew(qualification&&same(Object.keys(qualification).sort(),['contextFileSha256','globalReleaseApproval','hostedApproval','nativeApproval','qualificationLockSha256','receiptSha256'])&&qualification.contextFileSha256===hash(qualifiedContextBytes)&&qualification.qualificationLockSha256===hash(qualifiedLockBytes)&&qualification.receiptSha256===prep.nativeAdoptionSha256&&qualification.nativeApproval===false&&qualification.hostedApproval===false&&qualification.globalReleaseApproval===false,'creator qualification receipt differs from its exact unapproved input pins');
+ }else{
+  requireNew(prep.nativeQualification===undefined&&!fs.existsSync(path.join(root,'clients',slug,'.client/cloudflare-existing-source.json'))&&!files.has('.client/cloudflare-existing-source.json'),'existing qualification markers are forbidden without an explicit new-source request');
+ }
+ validateNewSourceRequest(originalRequest,{registry:oldRegistry,clientIndex:oldIndex,occupiedSlugs:oldClients,lock,lockSha256:hash(lockBytes),registrySha256:originalRequest.registrySha256,clientIndexSha256:originalRequest.clientIndexSha256,root});
  requireNew(originalRequest.sourceRevision===request.sourceRevision&&prep.approvedLockSha256===originalRequest.approvedLockSha256&&same(prep.inputs,original.inputs)&&same(prep.identityReview,original.identityReview)&&same(prep.sourceReleases,original.sourceReleases)&&hex64(prep.branchAbsence?.digest)&&prep.branchAbsence.absence==='normalized-dealer-folder-absent-on-current-origin-branches'&&Number.isInteger(prep.branchAbsence.branches)&&prep.branchAbsence.branches>0&&prep.branchAbsence.branches<=256,'original request/input/source/branch lease differs');
  requireNew(hash(fs.readFileSync(path.join(root,'templates.lock.json')))===originalRequest.approvedLockSha256&&lockBytes.equals(committedBytes(root,'templates.lock.json',commit,originalRequest.approvedLockSha256)),'approved template selection changed after creation');
  requireNew(manifest.slug===slug&&manifest.dealerId===original.dealerId&&manifest.repository===original.repository&&publication.dealerId===original.dealerId&&selected.dealerId===original.dealerId&&same(manifest.templateSources,original.sourceReleases)&&FAMILIES.every(k=>manifest.templateRevisions?.[k]===original.sourceReleases[k].revision),'manifest/registry/selection/source locators differ from reviewed creation');
@@ -130,8 +143,13 @@ export async function newApprovedFleetSource({root=ROOT,slug,commit,request,lead
  let originalBytes=0;for(const p of inputMapping.sources){originalBytes+=readPinnedFleetInput(root,p,commit,{prefix,maxBytes:25*1024**2}).length;requireNew(originalBytes<=256*1024**2,'original mapping sources exceed the per-dealer byte budget');}
  for(const [key,name]of [['facts','business-facts.json'],['stock','stock.json'],['locale','locale.json']])requireNew(files.has(name)&&hash(files.get(name))===original.inputs[key].sha256,'factual input changed in prepared client: '+name);
  for(const image of original.media){const bytes=readPinnedFleetInput(root,{path:image.path,sha256:image.sha256},prep.baseCommit,{prefix,maxBytes:25*1024**2});requireNew(bytes.length===image.bytes&&files.has(image.destination)&&files.get(image.destination).equals(bytes),'retained stock media differs: '+image.destination);}
- requireNew(files.has('.cars-branding.json')&&same(proofJson(files.get('.cars-branding.json')),prep.branding)&&files.has(ADOPTION_FILE)&&hash(files.get(ADOPTION_FILE))===prep.nativeAdoptionSha256&&!files.has('.client/cloudflare-existing-source.json'),'original branding/native seals required; existing qualification markers are forbidden');
- const nativeSource={kind:'approved-native-adoption',receipt:assertNativeAdoption(files,baseNativeManifest(manifest),{root})};
+ requireNew(files.has('.cars-branding.json')&&same(proofJson(files.get('.cars-branding.json')),prep.branding)&&files.has(ADOPTION_FILE)&&hash(files.get(ADOPTION_FILE))===prep.nativeAdoptionSha256,'original branding/native seals required');
+ let nativeSource;
+ if(sourceQualification){
+  requireNew(files.has('.client/cloudflare-existing-source.json')&&files.get('.client/native-qualification-context.json')?.equals(qualifiedContextBytes)&&files.get(QUALIFICATION_LOCK_PATH)?.equals(qualifiedLockBytes),'published candidate must retain the exact original qualification markers and bytes');
+  nativeSource=existingFleetNativeSource(files,manifest,{candidate:proofJson(files.get('.client/cloudflare-existing-source.json')),qualificationBytes:qualifiedContextBytes,qualificationLockBytes:qualifiedLockBytes,root});
+  requireNew(nativeSource.kind==='native-source-qualification','new-source qualification cannot be converted into an approved release');
+ }else nativeSource={kind:'approved-native-adoption',receipt:assertNativeAdoption(files,baseNativeManifest(manifest),{root})};
  return {mode:'new-approved',workerPrefix:identity.workerName,publicOrigin:identity.publicOrigin,sourceTree,sourceCandidate:row.proposal.sha256,nativeSource,originalRequest:prep.request,inputs:original.inputs,inputMapping:row.inputMapping,preparation:row.preparation,proposal:row.proposal,publication:row.publication,sourcePublication:published,creationBaseCommit:prep.baseCommit,templateSourceRevision:request.sourceRevision};
 }
 export function pruneReviewedAssets(input,keys=FAMILIES) {

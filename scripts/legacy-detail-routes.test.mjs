@@ -92,11 +92,14 @@ test('six-services configuration includes exact legacy redirects before mount ro
   const legacy = legacyDetailRedirects(m, result.artifact);
   assert.deepEqual(config.redirects.slice(0, legacy.length), legacy);
   const mounted = config.redirects.slice(legacy.length);
-  assert.deepEqual(mounted, m.variants.filter(variant => variant.base && variant.key !== 'mobile')
+  assert.deepEqual(mounted, m.variants.filter(variant => variant.base && !['mobile','app'].includes(variant.key))
     .map(variant => ({ source: variant.base, destination: variant.entry, permanent: false })));
   assert.ok(config.redirects.every(rule => rule.source !== rule.destination), 'Bare mounted entries must not redirect to themselves');
-  assert.ok(config.rewrites.some(rule => rule.source === '/variant-5/(.*)' && rule.destination.service === 'mobile'),
-    'Mobile bare entry is handled by its mounted service');
+  for (const key of ['mobile','app']) {
+    const variant = m.variants.find(variant => variant.key === key);
+    assert.ok(config.rewrites.some(rule => rule.source === variant.base && rule.destination.service === key && rule.destination.path === variant.base),
+      key + ' bare entry is dispatched directly to its native service');
+  }
   assert.equal(config.redirects[0].source, '/variant-3/en/inventory');
   assert.equal(config.redirects[0].destination, '/variant-3/en/cars');
   assert.ok(packageRetainsPath(LEGACY_DETAIL_FILE));

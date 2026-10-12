@@ -3,6 +3,7 @@ import { ROOT, inside, normalized, sha256 } from './workflow.mjs';
 import { validateFileInventory, verifyInventoryBytes } from './uk-cloudflare-artifacts.mjs';
 import { readTypeScriptCatalog } from './catalog-literal.mjs';
 import { normalizeDealerLocale, LocalePackagingError } from './dealer-locale.mjs';
+import { validateVercelNativeMapping } from './vercel-native-mapping.mjs';
 
 export const NATIVE_PACKAGING_VERSION = '2';
 export const ADOPTION_FILE = 'localization/adoption.json';
@@ -249,8 +250,14 @@ export function validateNativeRelease(key, release, { root = ROOT } = {}) {
   if (deployment.provider === 'cloudflare') {
     try { validateCloudflareNativeDeployment(key, release, review, root); }
     catch (error) { fail(error.message); }
-  } else if ((deployment.provider !== undefined && deployment.provider !== 'vercel') || deployment.state !== 'READY' ||
-      deployment.sourceCommit !== selectedRevision || !/^dpl_[A-Za-z0-9]+$/.test(deployment.id || '') || !/^prj_[A-Za-z0-9]+$/.test(deployment.projectId || '')) fail('missing exact-source deployed release verification');
+  } else {
+    if ((deployment.provider !== undefined && deployment.provider !== 'vercel') || deployment.state !== 'READY' ||
+        !/^dpl_[A-Za-z0-9]+$/.test(deployment.id || '') || !/^prj_[A-Za-z0-9]+$/.test(deployment.projectId || '')) fail('missing exact-source deployed release verification');
+    if (deployment.mappedSource !== undefined) {
+      try { validateVercelNativeMapping(key, release, review, root, {nativeChecks:NATIVE_CHECKS}); }
+      catch (error) { fail(error.message); }
+    } else if (deployment.sourceCommit !== selectedRevision) fail('missing exact-source deployed release verification');
+  }
   try {
     const alias = new URL(deployment.publicAlias);
     if (alias.protocol !== 'https:' || alias.username || alias.password || alias.pathname !== '/' || alias.search || alias.hash) fail('invalid verified public alias');
@@ -332,7 +339,8 @@ export function sealNativeAdoption(files, manifest, releases, options) {
         locales: review.locales, widths: review.widths, verifiedAt: review.verifiedAt,
         evidenceSha256: review.evidenceSha256, catalogs: review.catalogs, sourceDigest: review.sourceDigest,
         deployment: review.deployment.provider === 'cloudflare' ? structuredClone(pick(review.deployment, cloudflareDeploymentFields)) :
-          Object.fromEntries(['id', 'projectId', 'state', 'sourceCommit', 'publicAlias'].map(name => [name, review.deployment[name]])),
+          {...Object.fromEntries(['id', 'projectId', 'state', 'sourceCommit', 'publicAlias'].map(name => [name, review.deployment[name]])),
+            ...(review.deployment.mappedSource ? {provider:'vercel',mappedSource:structuredClone(review.deployment.mappedSource)} : {})},
         checks: review.checks.map(({ name, status, evidenceSha256 }) => ({ name, status, evidenceSha256 }))
       } } };
   }

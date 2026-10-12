@@ -57,6 +57,11 @@ export async function resolveSourceRequest(request,{root=ROOT,leads,registry}={}
  const qualified=readNewSourceQualification(root,nested,nested.dealers[0].slug);
  return {mode,dealers:nested.dealers.map(r=>r.slug),requestFile:p.path,nested,lock:qualified?.lock??lock};
 }
+/** Request validation reads every dealer context before selecting one source job. */
+export function newSourceQualificationCheckoutPins(request){
+ const qualification=request.qualification;
+ return qualification?[qualification.candidateLock,...Object.values(qualification.contexts)]:[];
+}
 export async function sourceMatrix(request,options={}){
  const resolved=await resolveSourceRequest(request,options);
  if(resolved.mode==='existing-migration')return {include:resolved.dealers.map(slug=>({slug}))};
@@ -67,7 +72,7 @@ export async function sourceMatrix(request,options={}){
  const {readNewSourceInput,readNewSourceQualification}=await import('./prepare-new-dealer-source.mjs');
  const matrix={include:resolved.nested.dealers.map(row=>{
   const prefix=SOURCE_CAMPAIGN+'/new-source/'+row.slug,branding=strictJson(readNewSourceInput(options.root??ROOT,row.inputs.branding,{prefix}).bytes);
-  const inputPaths=[...(resolved.nested.qualification?[resolved.nested.qualification.candidateLock.path,resolved.nested.qualification.contexts[row.slug].path]:[]),...(row.copyReview?[row.copyReview.path]:[]),resolved.requestFile,...Object.values(row.inputs).map(p=>p.path),row.identityReview.path,...row.media.map(p=>p.path)];
+  const inputPaths=[...newSourceQualificationCheckoutPins(resolved.nested).map(pin=>pin.path),...(row.copyReview?[row.copyReview.path]:[]),resolved.requestFile,...Object.values(row.inputs).map(p=>p.path),row.identityReview.path,...row.media.map(p=>p.path)];
   for(const p of [branding.master,branding.mark,...Object.values(branding.surfaces??{})].filter(Boolean)){
    assert(safeName(p.path)&&p.path.startsWith(prefix+'/')&&hex64(p.sha256),'Exact bounded creator branding pin required');inputPaths.push(p.path);
   }

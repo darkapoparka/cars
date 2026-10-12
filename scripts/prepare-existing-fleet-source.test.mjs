@@ -1,6 +1,6 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import {spawnSync} from 'node:child_process';
 import {sha256} from './lib/workflow.mjs';import {tinyArea,writeFixture} from './test-fixtures/fleet-single-worker.mjs';
-import {gitObjectId,gitTreeId,createSourcePatch,verifySourcePatch,validateSourceRequest,sourceCiContext,readBrandingInputs,bindPreparedShareLogo,sourceQualificationFiles,assertPreparedMountOwnership,SOURCE_CAMPAIGN,sourceRequestMode,resolveSourceRequest,sourceMatrix,assertNewSourceBootstrap} from './prepare-existing-fleet-source.mjs';
+import {gitObjectId,gitTreeId,createSourcePatch,verifySourcePatch,validateSourceRequest,sourceCiContext,readBrandingInputs,bindPreparedShareLogo,sourceQualificationFiles,assertPreparedMountOwnership,SOURCE_CAMPAIGN,sourceRequestMode,resolveSourceRequest,sourceMatrix,newSourceQualificationCheckoutPins,assertNewSourceBootstrap} from './prepare-existing-fleet-source.mjs';
 import {QUALIFICATION_LOCK_PATH} from './build-existing-fleet-cloudflare.mjs';import {planSixDesignSelection} from './lib/six-design-release.mjs';
 import {sourcePreparationPlanArgs,assertSourceFactualRefresh} from './prepare-existing-fleet-source.mjs';
 import {validateLogoContractResealRequest,assertLogoResealPreservation,bindLogoResealBrandingProof} from './prepare-existing-fleet-source.mjs';
@@ -169,3 +169,18 @@ test('registered adoption is an explicit envelope and cannot forge preserved mou
  assert.throws(()=>assertPreparedMountOwnership({slug:'retained',variants:[]},baseline(),{}),/validated unmodified/);
  assert.throws(()=>validateSourceRequest({schemaVersion:1,mode:'registered-adoption',sourceRevision:'1'.repeat(40),approvedParentLockDigest:'2'.repeat(64),dealers:['retained'],inputs:{retained:{}}},{}, {dealers:[]}),/existing|request|dealer|mode|fields/i);
 });
+
+ test('each qualified source checkout physically includes every peer context read before dealer selection',async(t)=>{
+ const {readNewSourceInput}=await import('./prepare-new-dealer-source.mjs');
+ const root=tinyArea(t),prefix=SOURCE_CAMPAIGN+'/new-source',write=(name,value)=>{
+  const bytes=Buffer.from(JSON.stringify(value)+'\n');writeFixture(path.join(root,name),bytes);return {path:name,sha256:sha256(bytes)};
+ };
+ const contexts=Object.fromEntries(['alpha-dealer','beta-dealer','gamma-dealer'].map(slug=>[slug,write(prefix+'/'+slug+'/qualification-context.json',{dealer:slug,nativeApproval:false})]));
+ const candidateLock=write(prefix+'/qualification-lock.json',{schemaVersion:1}),request={qualification:{candidateLock,contexts}};
+ const sparse=path.join(root,'sparse-source-job');
+ for(const pin of newSourceQualificationCheckoutPins(request))writeFixture(path.join(sparse,pin.path),fs.readFileSync(path.join(root,pin.path)));
+ // The actual bounded reader must be able to fetch peer contexts as well as this job's context.
+ for(const [slug,pin]of Object.entries(contexts))assert.equal(JSON.parse(readNewSourceInput(sparse,pin,{prefix:prefix+'/'+slug}).bytes).dealer,slug);
+ assert.deepEqual(newSourceQualificationCheckoutPins({}),[]);
+ assert.equal(sha256(readNewSourceInput(sparse,candidateLock,{prefix}).bytes),candidateLock.sha256);
+ });

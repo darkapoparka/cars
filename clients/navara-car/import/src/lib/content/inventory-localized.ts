@@ -477,6 +477,60 @@ export const inventoryCopy = {
 		bg: 'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.',
 		en: 'Full Porsche service history. Can be checked at any dealership for the brand. Sport Chrono package. Entirely original factory appearance. Registered, with comprehensive insurance, third-party liability insurance, tax and vignette. No trade-ins. Serious inquiries only.'
 	}
+,
+	"dealerStock_e3e582b72441e4579883a97ce41ef6de1ef91a89b0406c6daf8bea18caee2e17": {
+		"bg": "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
+		"en": "Selected listings as of 08.09.2026, rather than live stock availability. Confirm the price, availability and details with the seller."
+	},
+	"dealerStock_ddccaa432a46aef43f7ba22295e00818f42a344fa017d07626cfd5cb64a5adb1": {
+		"bg": "Подгряване на седалки",
+		"en": "Heated seats"
+	},
+	"dealerStock_f5326490af27f8f164f807afcf021bb931c92fa01d98a6d28bb5d1741d23a41f": {
+		"bg": "Apple CarPlay / Android Auto",
+		"en": "Apple CarPlay / Android Auto"
+	},
+	"dealerStock_8bb29098b369bfcd0069eedd3e4606959b4fb1e567bbb632a58a77205036f3be": {
+		"bg": "Bluetooth",
+		"en": "Bluetooth"
+	},
+	"dealerStock_c78cd581da3aa4de35d6919238c4713939f3b2cac47dd3159756d967f6fd7011": {
+		"bg": "Климатик",
+		"en": "Air conditioning"
+	},
+	"dealerStock_b030a6ac9a47188843f1dd1f5161371c3e667d87521b559bb6b860e752b3f4f6": {
+		"bg": "ISOFIX",
+		"en": "ISOFIX"
+	},
+	"dealerStock_a5f88de5a473a2b747f8c4685b672d9c59138b6db95e6b08a8baca3faf2bc13d": {
+		"bg": "Термопомпа",
+		"en": "Heat pump"
+	},
+	"dealerStock_a90c2550d3a3c7e7cc969add9a838b298f72f9781a56f3ec45e6ed3414922ccd": {
+		"bg": "Перла",
+		"en": "Pearlescent"
+	},
+	"dealerStock_22c206b1e1b6568ac2ff12498d2bc1fbed7fe484a24cd567923466f40656227c": {
+		"bg": "Камера за заден ход",
+		"en": "Rear-view camera"
+	},
+	"dealerStock_18db3c3b47a3c7c91e78481fa2acc09530e07f5faf14b4b9e4b68db425c9ee53": {
+		"bg": "Бордо",
+		"en": "Burgundy"
+	},
+	"dealerStock_5239358fe9af8598e2ca8fbacb2f965c32ce258e0621de7349e4e9c10b8dcb90": {
+		"bg": "Керемиден",
+		"en": "Terracotta color"
+	},
+	"dealerStock_f4b3671be395a055fa8d0cd3288cb6a8d88b42ae3629dcc0894e1d030134ac10": {
+		"bg": "Газова уредба",
+		"en": "Gas fuel system"
+	},
+	"dealerStock_2d5eaf0835da8c277f9aa8072c86e21d1aa9d9264cf4cdb7a55bbd355226d8dd": {
+		"bg": "Ел. стъкла",
+		"en": "Electric windows"
+	}
+
 } satisfies Record<string, Record<Locale, string>>;
 export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventoryCopy>> = {
 	'4(5) Врати': 'term0',
@@ -630,6 +684,21 @@ export const inventorySourceKeys: Readonly<Record<string, keyof typeof inventory
 		'description30',
 	'Автомобилът е с пълна сервизна история в Порше. Може да се провери във всяко представителство на марката. Sport Chrono пакет. Абсолютно автентичен вид както е излезнал от завода. Регистриран с каско, гражданска, данък, винетка. Без бартер. Само сериозни обаждания.':
 		'description31'
+,
+	"Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.": "dealerStock_e3e582b72441e4579883a97ce41ef6de1ef91a89b0406c6daf8bea18caee2e17",
+	"Подгряване на седалки": "dealerStock_ddccaa432a46aef43f7ba22295e00818f42a344fa017d07626cfd5cb64a5adb1",
+	"Apple CarPlay / Android Auto": "dealerStock_f5326490af27f8f164f807afcf021bb931c92fa01d98a6d28bb5d1741d23a41f",
+	"Bluetooth": "dealerStock_8bb29098b369bfcd0069eedd3e4606959b4fb1e567bbb632a58a77205036f3be",
+	"Климатик": "dealerStock_c78cd581da3aa4de35d6919238c4713939f3b2cac47dd3159756d967f6fd7011",
+	"ISOFIX": "dealerStock_b030a6ac9a47188843f1dd1f5161371c3e667d87521b559bb6b860e752b3f4f6",
+	"Термопомпа": "dealerStock_a5f88de5a473a2b747f8c4685b672d9c59138b6db95e6b08a8baca3faf2bc13d",
+	"Перла": "dealerStock_a90c2550d3a3c7e7cc969add9a838b298f72f9781a56f3ec45e6ed3414922ccd",
+	"Камера за заден ход": "dealerStock_22c206b1e1b6568ac2ff12498d2bc1fbed7fe484a24cd567923466f40656227c",
+	"Бордо": "dealerStock_18db3c3b47a3c7c91e78481fa2acc09530e07f5faf14b4b9e4b68db425c9ee53",
+	"Керемиден": "dealerStock_5239358fe9af8598e2ca8fbacb2f965c32ce258e0621de7349e4e9c10b8dcb90",
+	"Газова уредба": "dealerStock_f4b3671be395a055fa8d0cd3288cb6a8d88b42ae3629dcc0894e1d030134ac10",
+	"Ел. стъкла": "dealerStock_2d5eaf0835da8c277f9aa8072c86e21d1aa9d9264cf4cdb7a55bbd355226d8dd"
+
 };
 export function inventoryText(locale: Locale, value: string): string {
 	const key = inventorySourceKeys[value];

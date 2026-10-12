@@ -1794,8 +1794,8 @@
             "path": "src/lib/content/inventory-localized.ts",
             "export": "inventoryCopy"
           },
-          "keys": 119,
-          "contentDigest": "195a0cdb2850ed419adfbccb5e9900b7b5a5376f42c6e4ce9a57f30b1c6b748f"
+          "keys": 143,
+          "contentDigest": "3b5b8a7458a2f3abba5b7487345095ebff9dd862a840f9566bbe4d5a8d411ccb"
         },
         {
           "descriptor": {
@@ -1812,7 +1812,7 @@
     }
   },
   "input": {
-    "digest": "10642f1f3964bb6f003d433751b0848870fd96322365e0e0cf20aedae2a93856",
+    "digest": "70b89c1296a2ac9e0343e31f8b63f1ad8b1937de5b5205b43400f21f4737fcdc",
     "files": 9255
   },
   "nativeApproval": false,
