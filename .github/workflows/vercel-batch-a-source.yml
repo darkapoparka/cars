@@ -5,8 +5,10 @@ on:
     paths:
       - '.github/workflows/vercel-batch-a-source.yml'
       - 'scripts/vercel-batch-a/prepare-assigned-source.mjs'
+      - 'scripts/vercel-batch-a/attach-reviewed-resolutions.mjs'
       - 'scripts/vercel-batch-a/apply-modern-factual-input-fix.mjs'
       - 'scripts/dealer-updates/modern-factual-input-inventory*'
+      - 'docs/releases/vercel-existing-refresh/batch-a-20261013/reviewed-conflict-decisions.json'
       - 'docs/releases/vercel-existing-refresh/batch-a-20261013/reviewed-source-inputs.*.xz.part'
 permissions:
   contents: read
@@ -22,7 +24,7 @@ jobs:
       fail-fast: false
       max-parallel: 2
       matrix:
-        slug: [isauto-varna, outletcars-varna]
+        slug: [outletcars-varna, perfect-auto-varna, automarket-varna, avangard-auto, legend-auto]
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
@@ -46,7 +48,7 @@ jobs:
         run: |
           node --test scripts/dealer-updates/modern-factual-input-inventory.test.mjs
           node scripts/vercel-batch-a/apply-modern-factual-input-fix.mjs
-      - name: Prepare only the assigned dealer with the maintained preservation tools
+      - name: Prepare the assigned dealer with its reviewed exact preservation choices
         env:
           NODE_OPTIONS: --max-old-space-size=6144
         run: node scripts/vercel-batch-a/prepare-assigned-source.mjs '${{ matrix.slug }}'
@@ -61,6 +63,7 @@ jobs:
             runtime/vercel-batch-a-report/tool-fix.json
             runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/plan/review.json
             runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/plan/run.json
+            runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/plan/resolutions.json
           include-hidden-files: true
           if-no-files-found: warn
           retention-days: 7

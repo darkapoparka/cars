@@ -5,6 +5,7 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {prepareExistingFleetSource} from '../prepare-existing-fleet-source.mjs';
+import {attachReviewedResolutions} from './attach-reviewed-resolutions.mjs';
 const ROOT=process.cwd(), BRANCH='refs/heads/codex/vercel-batch-a-20261013';
 const OWNED=['isauto-varna','perfect-auto-varna','outletcars-varna','automarket-varna','avangard-auto','legend-auto'];
 const PREFIX='docs/releases/vercel-existing-refresh/batch-a-20261013';
@@ -18,9 +19,6 @@ const slug=process.argv[2];assert(OWNED.includes(slug));
 const report=path.join(ROOT,'runtime/vercel-batch-a-report',slug);fs.mkdirSync(report,{recursive:true});
 const status={schemaVersion:1,dealer:slug,stage:'preflight',productionUpdated:0,templateRelease:'cars-vercel-b1f0f560-20261013',sourceRevision:'b1f0f5609c7c249cfd0649c122849ff2cbb8dfde'};
 const save=()=>fs.writeFileSync(path.join(report,'status.json'),encode(status));
-// The owner explicitly replaced the all-25/main writer with three isolated batches.
-// Preserve the maintained CI constraints, replacing only the authorized branch scope.
-// Real provider environment values are checked, never fabricated or rewritten.
 function batchContext({root,env}){
  assert.equal(root,ROOT);assert.equal(process.platform,'linux');assert.equal(process.version,'v26.10.0');
  assert.equal(env.GITHUB_ACTIONS,'true');assert.equal(env.GITHUB_EVENT_NAME,'push');assert.equal(env.GITHUB_REPOSITORY,'darkapoparka/cars');assert.equal(env.GITHUB_REF,BRANCH);
@@ -38,6 +36,7 @@ try{
  const inventory=JSON.parse(read(`${PREFIX}/source-input-inventory.json`));
  for(const row of inventory.files){const b=read(row.path);assert.equal(b.length,row.bytes);assert.equal(hash(b),row.sha256);}
  const request=JSON.parse(read(`${PREFIX}/source-request.json`));assert.deepEqual([...request.dealers].sort(),[...OWNED].sort());assert.equal(request.sourceRevision,status.sourceRevision);assert.equal(request.approvedParentLockDigest,LOCK);
+ status.preservationReview=attachReviewedResolutions({root:ROOT,slug,request,report});save();
  const result=await prepareExistingFleetSource({root:ROOT,slug,request,toolPackage:path.join(ROOT,'runtime/source-preparation-tools/package.json'),checkCi:batchContext});
  status.stage='maintained-source-proposal-produced';status.result=result;save();console.log(encode(status));
 }catch(error){status.stage='blocked';status.error={name:error.name,message:error.message,stack:String(error.stack).split('\n').slice(0,8)};save();console.error(encode(status));process.exitCode=1;}
