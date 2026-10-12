@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "dealer": "cali-cars-varna",
+  "copy": {
+    "cali-cars-varna-21785846592411235": {
+      "sourceDescription": "BMW X4 M40i xDrive от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "BMW X4 M40i xDrive from a dated public advert. Confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "BMW X4 M40i xDrive — dated public advert photo 1",
+          "BMW X4 M40i xDrive — dated public advert photo 2"
+        ]
+      },
+      "bg": {
+        "description": "BMW X4 M40i xDrive от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "BMW X4 M40i xDrive — снимка от датирана публична обява 1",
+          "BMW X4 M40i xDrive — снимка от датирана публична обява 2"
+        ]
+      }
+    },
+    "cali-cars-varna-21753383277707999": {
+      "sourceDescription": "Mercedes-Benz GLC 300 4Matic от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Mercedes-Benz GLC 300 4Matic from a dated public advert. Confirm price and availability directly with the dealership.",
+        "imageAlts": [
+          "Mercedes-Benz GLC 300 4Matic — dated public advert photo 1",
+          "Mercedes-Benz GLC 300 4Matic — dated public advert photo 2"
+        ]
+      },
+      "bg": {
+        "description": "Mercedes-Benz GLC 300 4Matic от датирана публична обява. Потвърдете цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Mercedes-Benz GLC 300 4Matic — снимка от датирана публична обява 1",
+          "Mercedes-Benz GLC 300 4Matic — снимка от датирана публична обява 2"
+        ]
+      }
+    }
+  },
+  "consumer": "facts.business.modernInventoryCopy",
+  "donorCopyRetained": false
+}

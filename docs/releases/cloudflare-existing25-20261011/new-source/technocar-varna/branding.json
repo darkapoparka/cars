@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "dealer": "technocar-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-12T12:28:48.644Z",
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-57dc176e-337f-4050-a6d9-357a40834789",
+    "modelVersion": null,
+    "sourceFileSha256": "665b083ec86cbbd2831f57d68317bed63f977fc81b3442f0fbb4e1c261c13bbe",
+    "sourceFileMeaning": "Exact text brief for proposed demo identity",
+    "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/technocar-varna/generation-brief.json",
+    "sourceLogoUrl": null,
+    "creationMethod": "generated-demo-proposal",
+    "approvalStatus": "not-dealer-approved",
+    "nativeOutput": {
+      "path": "C:/Users/radev/.codex/generated_images/01a12d64-9c2d-7b03-85e1-619a359e6894/exec-57dc176e-337f-4050-a6d9-357a40834789.png",
+      "sha256": "c66e0783140816fedd3b09c7beca19d6edc4a0ed3ac32b1d3c9953a402a7a299",
+      "crop": {
+        "left": 83,
+        "top": 211,
+        "width": 2007,
+        "height": 334
+      },
+      "width": 2172,
+      "height": 724,
+      "transparentPixels": 1340733,
+      "opaquePixels": 202254
+    }
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/technocar-varna/branding/generated-master.png",
+    "sha256": "a0a14262f575539348ba5ebf8aff9c6e5528562fe5c3e0316bbd47d6e41f30a8"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/technocar-varna/branding/on-light.png",
+      "sha256": "a0a14262f575539348ba5ebf8aff9c6e5528562fe5c3e0316bbd47d6e41f30a8",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/technocar-varna/branding/generated-master.png",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-57dc176e-337f-4050-a6d9-357a40834789",
+        "modelVersion": null
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/technocar-varna/branding/on-dark.png",
+      "sha256": "cfda73bcabd82edcd988885cf956ba2426a105a00ff46ddaf482dc6f4cc470fd",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/technocar-varna/branding/generated-master.png",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-fdd26c69-0280-414c-b997-7d17b7b5df71",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/technocar-varna/branding/on-accent.png",
+      "sha256": "cfda73bcabd82edcd988885cf956ba2426a105a00ff46ddaf482dc6f4cc470fd",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/technocar-varna/branding/generated-master.png",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-fdd26c69-0280-414c-b997-7d17b7b5df71",
+        "modelVersion": null
+      }
+    }
+  },
+  "provenance": {
+    "sourceLogoUrl": null,
+    "creationMethod": "generated-demo-proposal",
+    "approvalStatus": "not-dealer-approved",
+    "nativeWhiteOutput": {
+      "path": "C:/Users/radev/.codex/generated_images/01a12d64-9c2d-7b03-85e1-619a359e6894/exec-fdd26c69-0280-414c-b997-7d17b7b5df71.png",
+      "sha256": "e29b08f8fedefd34af16343661548562262a5e8e9638835ea5e396430f3d10cc",
+      "crop": {
+        "left": 82,
+        "top": 206,
+        "width": 2010,
+        "height": 337
+      },
+      "width": 2172,
+      "height": 724,
+      "transparentPixels": 1250023,
+      "opaquePixels": 209350
+    },
+    "whiteEditInput": {
+      "path": "C:/Users/radev/.codex/generated_images/01a12d64-9c2d-7b03-85e1-619a359e6894/exec-57dc176e-337f-4050-a6d9-357a40834789.png",
+      "sha256": "c66e0783140816fedd3b09c7beca19d6edc4a0ed3ac32b1d3c9953a402a7a299"
+    },
+    "exports": "Lossless PNG canvas crop only; originals retained",
+    "sameWhiteArtworkUsedOnDarkAndAccent": true,
+    "publishedLogoObserved": false,
+    "observedPrimaryProfile": {
+      "url": "https://technocar.mobile.bg/",
+      "sha256": "20ee9041a5a262cc6a8ac5e924d9adc9cfb685bf65ba917163debe92cb056e44",
+      "observedAt": "2026-10-12T12:12:21.635Z"
+    },
+    "surfaceReviewScope": "Standalone selected native palette; actual six application consumers pending"
+  }
+}

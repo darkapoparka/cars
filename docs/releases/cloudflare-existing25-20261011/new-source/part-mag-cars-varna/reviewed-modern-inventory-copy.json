@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "dealer": "part-mag-cars-varna",
+  "copy": {
+    "part-mag-cars-varna-demo-estate": {
+      "sourceDescription": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+      "en": {
+        "description": "Illustrative demo vehicle with example specifications and price. This is not a real offer or dealership stock. The image is generated decorative artwork.",
+        "imageAlts": [
+          "Generated white estate illustration; not dealer stock photography"
+        ]
+      },
+      "bg": {
+        "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+        "imageAlts": [
+          "Генерирана илюстрация на бяло комби; не е снимка на наличен автомобил"
+        ]
+      }
+    },
+    "part-mag-cars-varna-demo-suv": {
+      "sourceDescription": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+      "en": {
+        "description": "Illustrative demo vehicle with example specifications and price. This is not a real offer or dealership stock. The image is generated decorative artwork.",
+        "imageAlts": [
+          "Generated blue SUV illustration; not dealer stock photography"
+        ]
+      },
+      "bg": {
+        "description": "Илюстративен демонстрационен автомобил с примерни характеристики и цена. Не е действителна оферта или наличност на автокъщата. Изображението е генерирана декоративна илюстрация.",
+        "imageAlts": [
+          "Генерирана илюстрация на син SUV; не е снимка на наличен автомобил"
+        ]
+      }
+    }
+  },
+  "consumer": "facts.business.modernInventoryCopy -> profile.business.raw.modernInventoryCopy -> renderModernDealerInventoryCopy",
+  "generatedListingCount": 2,
+  "donorCopyRetained": false
+}

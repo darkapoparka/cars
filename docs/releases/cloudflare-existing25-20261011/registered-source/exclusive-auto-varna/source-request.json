@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "mode": "registered-adoption",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "approvedParentLockDigest": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+  "dealers": [
+    "exclusive-auto-varna"
+  ],
+  "inputs": {
+    "exclusive-auto-varna": {
+      "adoption": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/exclusive-auto-varna/adoption.json",
+        "sha256": "c58bf3814c6ad58f54b1df056c87c1b724c8dbf0b66ac86b3ca87f6ddc9c0707"
+      },
+      "candidateLock": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/exclusive-auto-varna/qualification-lock.json",
+        "sha256": "1bb60d4b895366e954c613701d20aa9c54982b7395a6ec1593661cd45be62351"
+      },
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/exclusive-auto-varna/qualification-context.json",
+        "sha256": "ea058afee2c0ae0f36844c4468150d77f6398993a859fb7463f9e5ff61820d52"
+      },
+      "sourceDeltaReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+        "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
+      },
+      "branding": {
+        "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/exclusive-auto-varna/branding.json",
+        "sha256": "474407f0ffff40c30f94c5e936e86ec086c311b9424bfb1e1c4e892e2aecc0e9"
+      }
+    }
+  }
+}

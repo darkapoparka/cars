@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "slug": "kapitol-varna",
+  "dealerId": "kapitol-varna",
+  "business": {
+    "schemaVersion": 1,
+    "slug": "kapitol-varna",
+    "name": "Капитол",
+    "shortName": "Капитол",
+    "city": "Варна",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "phone": "0878720052",
+    "phoneDisplay": "0878720052",
+    "phoneE164": "+359878720052",
+    "phones": [
+      "+359878720052"
+    ],
+    "addressLine": "бул. Цар Освободител 236",
+    "address": "бул. Цар Освободител 236, Варна, България",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "email": "",
+    "sourceUrl": "https://kapitol.mobile.bg/",
+    "stockUrl": "https://kapitol.mobile.bg/",
+    "contactSourceUrl": "https://kapitol.mobile.bg/contacts",
+    "observedAt": "2026-10-12T10:44:18.555Z",
+    "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "services": [],
+    "socialLinks": {},
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png",
+    "modernInventoryCopy": {
+      "kapitol-varna-21791385455711977": {
+        "sourceDescription": "Mercedes-Benz GLB 200 D AMG Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "en": {
+          "description": "Mercedes-Benz GLB 200 D AMG Line from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+          "imageAlts": [
+            "Mercedes-Benz GLB 200 D AMG Line — dated public advert photo 1",
+            "Mercedes-Benz GLB 200 D AMG Line — dated public advert photo 2"
+          ]
+        },
+        "bg": {
+          "description": "Mercedes-Benz GLB 200 D AMG Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "imageAlts": [
+            "Mercedes-Benz GLB 200 D AMG Line — снимка от датирана публична обява 1",
+            "Mercedes-Benz GLB 200 D AMG Line — снимка от датирана публична обява 2"
+          ]
+        }
+      },
+      "kapitol-varna-21791028313582431": {
+        "sourceDescription": "Kia Sportage HEV 1.6 T-GDI от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "en": {
+          "description": "Kia Sportage HEV 1.6 T-GDI from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+          "imageAlts": [
+            "Kia Sportage HEV 1.6 T-GDI — dated public advert photo 1",
+            "Kia Sportage HEV 1.6 T-GDI — dated public advert photo 2"
+          ]
+        },
+        "bg": {
+          "description": "Kia Sportage HEV 1.6 T-GDI от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "imageAlts": [
+            "Kia Sportage HEV 1.6 T-GDI — снимка от датирана публична обява 1",
+            "Kia Sportage HEV 1.6 T-GDI — снимка от датирана публична обява 2"
+          ]
+        }
+      }
+    }
+  },
+  "research": {
+    "website": {
+      "status": "identity-not-confirmed",
+      "url": "https://kapitolia.com/",
+      "note": "Workbook URL resolves to Sofia contacts differing from Varna profile. Do not reuse that site's identity or contact facts."
+    },
+    "publicIdentityKey": "mobile-profile:kapitol.mobile.bg",
+    "profileAdvertCount": 42,
+    "availabilityConfirmed": false,
+    "legalEntityOwnershipVerified": false,
+    "addressExactness": "public-contact-as-published",
+    "caveats": [
+      "Preserve existing Cars-owned clients/kapitol-varna; not an absent new-client identity.",
+      "Workbook own-site URL points to a different city and phones; identity unconfirmed."
+    ],
+    "sourceProof": [
+      {
+        "url": "https://kapitol.mobile.bg/",
+        "finalUrl": "https://kapitol.mobile.bg/",
+        "observedAt": "2026-10-12T10:44:18.705Z",
+        "status": 200,
+        "bytes": 213527,
+        "sha256": "fe5a91f137e2e074ff8ae31daf47f41ce4a27a6b9bcab87221b77713e787ddf5"
+      },
+      {
+        "url": "https://kapitol.mobile.bg/contacts",
+        "finalUrl": "https://kapitol.mobile.bg/contacts",
+        "observedAt": "2026-10-12T10:44:18.555Z",
+        "status": 200,
+        "bytes": 42537,
+        "sha256": "bfa3498a861e6ce8fa50196f4a2a7021502b81ec8a7450ad3e5088d4bec698b9"
+      },
+      {
+        "url": "https://kapitol.mobile.bg/about",
+        "finalUrl": "https://kapitol.mobile.bg/about",
+        "observedAt": "2026-10-12T10:44:18.520Z",
+        "status": 200,
+        "bytes": 6443,
+        "sha256": "8a1a0d6a837a135d06faf27989619ee0dbed7271704cf6059279ff7bec44b452"
+      }
+    ],
+    "sourceAction": "preserve-existing-cars-source",
+    "existingSourceTree": "fb3d54604a33890b0e098aea12410f7463ecdffa",
+    "inventoryModeSelection": "dated-listing-snapshot",
+    "productionAssetInputsComplete": true,
+    "stockSnapshotScope": "Two retained public adverts, not a complete/live inventory",
+    "stockMediaAuthority": "Owner-authorized public dated demo scope; original source bytes and watermarks retained"
+  }
+}

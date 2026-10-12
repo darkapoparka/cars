@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "dealer": "porsche-varna",
+  "kind": "dated-listing-snapshot",
+  "records": [
+    {
+      "title": "Audi A5",
+      "make": "Audi",
+      "model": "A5",
+      "year": 2026,
+      "priceAmount": 56980,
+      "mileageValue": 3000,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "body": "Sedan",
+      "description": "Audi A5 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "sourceFieldProof": {
+        "source": "https://porschevarna.mobile.bg/obiava-11790354686274560-audi-a5",
+        "year": "Дата на производство юли 2026",
+        "price": "56 980 €,",
+        "mileage": "Пробег [км] 3000 км",
+        "fuel": "Двигател Дизелов",
+        "transmission": "Скоростна кутия Автоматична",
+        "body": "Категория Седан"
+      },
+      "sourceCaveats": [],
+      "id": "11790354686274560",
+      "slug": "porsche-varna-11790354686274560",
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "mileageOnRequest": false,
+      "mileageUnit": "km",
+      "condition": "used",
+      "images": [
+        "/dealer-stock/11790354686274560-1.webp",
+        "/dealer-stock/11790354686274560-2.webp"
+      ],
+      "sourceUrl": "https://porschevarna.mobile.bg/obiava-11790354686274560-audi-a5",
+      "observedAt": "2026-10-12T12:12:21.638Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "sourceProof": {
+        "sha256": "61de04f22e7525860037882c4c2baae203e6cd232eb21e8e9232f42636c7bdd5",
+        "originalPhotoBytesUnchanged": true,
+        "watermarksPreserved": true
+      }
+    },
+    {
+      "title": "Audi RS6 4.0 biturbo quattro",
+      "make": "Audi",
+      "model": "RS6",
+      "year": 2021,
+      "priceAmount": 99899,
+      "mileageValue": 58000,
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "body": "Estate",
+      "description": "Audi RS6 4.0 biturbo quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "sourceFieldProof": {
+        "source": "https://porschevarna.mobile.bg/obiava-11790324799720879-audi-rs6-4-0-biturbo-quattro",
+        "year": "Дата на производство юли 2021",
+        "price": "99 899 €,",
+        "mileage": "Пробег [км] 58000 км",
+        "fuel": "Двигател Бензинов",
+        "transmission": "Скоростна кутия Автоматична",
+        "body": "Категория Комби"
+      },
+      "sourceCaveats": [],
+      "id": "11790324799720879",
+      "slug": "porsche-varna-11790324799720879",
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "mileageOnRequest": false,
+      "mileageUnit": "km",
+      "condition": "used",
+      "images": [
+        "/dealer-stock/11790324799720879-1.webp",
+        "/dealer-stock/11790324799720879-2.webp"
+      ],
+      "sourceUrl": "https://porschevarna.mobile.bg/obiava-11790324799720879-audi-rs6-4-0-biturbo-quattro",
+      "observedAt": "2026-10-12T12:12:21.638Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "sourceProof": {
+        "sha256": "70a2ffc3277364c0c00ab15de5e006bb3bf269f1385048aed378a11323132ed8",
+        "originalPhotoBytesUnchanged": true,
+        "watermarksPreserved": true
+      }
+    }
+  ],
+  "disclosure": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+  "disclosureEn": "Dated listing samples; confirm price and availability directly with the dealership.",
+  "availabilityConfirmed": false,
+  "completeInventory": false
+}

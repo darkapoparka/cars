@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "dealer": "nordic-auto-varna",
+  "reviewed": true,
+  "reviewedAt": "2026-10-12T11:56:36.649Z",
+  "generation": {
+    "tool": "image_gen",
+    "generationId": "exec-8257b6b7-7e86-4bf1-bf7b-cccf90ef4cc0",
+    "modelVersion": null,
+    "sourceFileSha256": "2f6d2089e62c5698537e8dfa4acaf41bf183935b28ddc64d0b473cc61e93ad77",
+    "sourceFileMeaning": "Exact text brief for proposed demo identity",
+    "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/generation-brief.json",
+    "sourceLogoUrl": null,
+    "creationMethod": "generated-demo-proposal",
+    "approvalStatus": "not-dealer-approved",
+    "nativeOutput": {
+      "path": "C:/Users/radev/.codex/generated_images/01a12d64-9c2d-7b03-85e1-619a359e6894/exec-8257b6b7-7e86-4bf1-bf7b-cccf90ef4cc0.png",
+      "sha256": "74b7ceb5a3f38e3d1e7c0ff74818e373f5b29ede6b4c0b27d7b6cbd61595e982",
+      "crop": {
+        "left": 95,
+        "top": 166,
+        "width": 1945,
+        "height": 347
+      },
+      "width": 2135,
+      "height": 736,
+      "transparentPixels": 1379700,
+      "opaquePixels": 161051
+    }
+  },
+  "master": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/branding/generated-master.png",
+    "sha256": "5cd0386ec99f3dc2914ecd62c9b49f32a0dd3192ef26ce11ccb2fee7f4f2ab57"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/branding/on-light.png",
+      "sha256": "5cd0386ec99f3dc2914ecd62c9b49f32a0dd3192ef26ce11ccb2fee7f4f2ab57",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/branding/generated-master.png",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-8257b6b7-7e86-4bf1-bf7b-cccf90ef4cc0",
+        "modelVersion": null
+      }
+    },
+    "onDark": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/branding/on-dark.png",
+      "sha256": "c368d7b8088a9baa2d21459e416b016b206fc7ce9ec652d420cc339e3c0bf067",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/branding/generated-master.png",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-7f6f5094-7919-402d-b467-4570192e91aa",
+        "modelVersion": null
+      }
+    },
+    "onAccent": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/branding/on-accent.png",
+      "sha256": "c368d7b8088a9baa2d21459e416b016b206fc7ce9ec652d420cc339e3c0bf067",
+      "sourceReference": "docs/releases/cloudflare-existing25-20261011/new-source/nordic-auto-varna/branding/generated-master.png",
+      "generation": {
+        "tool": "image_gen",
+        "generationId": "exec-7f6f5094-7919-402d-b467-4570192e91aa",
+        "modelVersion": null
+      }
+    }
+  },
+  "provenance": {
+    "sourceLogoUrl": null,
+    "creationMethod": "generated-demo-proposal",
+    "approvalStatus": "not-dealer-approved",
+    "nativeWhiteOutput": {
+      "path": "C:/Users/radev/.codex/generated_images/01a12d64-9c2d-7b03-85e1-619a359e6894/exec-7f6f5094-7919-402d-b467-4570192e91aa.png",
+      "sha256": "bf4155c60bb8a9efa7c59d8b44f61f79f5af12ebbc3c2a5896457355b76bd1d7",
+      "crop": {
+        "left": 95,
+        "top": 167,
+        "width": 1955,
+        "height": 347
+      },
+      "width": 2135,
+      "height": 736,
+      "transparentPixels": 1297579,
+      "opaquePixels": 170352
+    },
+    "whiteEditInput": {
+      "path": "C:/Users/radev/.codex/generated_images/01a12d64-9c2d-7b03-85e1-619a359e6894/exec-8257b6b7-7e86-4bf1-bf7b-cccf90ef4cc0.png",
+      "sha256": "74b7ceb5a3f38e3d1e7c0ff74818e373f5b29ede6b4c0b27d7b6cbd61595e982"
+    },
+    "exports": "Lossless PNG canvas crop only; originals retained",
+    "sameWhiteArtworkUsedOnDarkAndAccent": true,
+    "publishedLogoObserved": false,
+    "observedPrimaryProfile": {
+      "url": "https://nordicautos11.mobile.bg/",
+      "sha256": "b346977bef85e706cfe4052c8b21acb081ca86406dcadeab5f61f060e6f97577",
+      "observedAt": "2026-10-12T11:43:24.375Z"
+    },
+    "surfaceReviewScope": "Standalone selected native palette; actual six application consumers pending"
+  }
+}

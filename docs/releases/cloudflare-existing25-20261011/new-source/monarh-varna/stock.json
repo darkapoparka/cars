@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "dealer": "monarh-varna",
+  "kind": "dated-listing-snapshot",
+  "records": [
+    {
+      "title": "Isuzu TFS",
+      "make": "Isuzu",
+      "model": "TFS",
+      "year": 2009,
+      "priceAmount": 8700,
+      "mileageValue": 251000,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "body": "Pickup",
+      "description": "Isuzu TFS от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "sourceFieldProof": {
+        "source": "https://monarh.mobile.bg/obiava-21789634036820538-isuzu-tfs",
+        "year": "Дата на производство август 2009",
+        "price": "8 700 €,",
+        "mileage": "Пробег [км] 251000 км",
+        "fuel": "Двигател Дизелов",
+        "transmission": "Скоростна кутия Автоматична",
+        "body": "Категория Пикап"
+      },
+      "sourceCaveats": [],
+      "id": "21789634036820538",
+      "slug": "monarh-varna-21789634036820538",
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "mileageOnRequest": false,
+      "mileageUnit": "km",
+      "condition": "used",
+      "images": [
+        "/dealer-stock/21789634036820538-1.webp",
+        "/dealer-stock/21789634036820538-2.webp"
+      ],
+      "sourceUrl": "https://monarh.mobile.bg/obiava-21789634036820538-isuzu-tfs",
+      "observedAt": "2026-10-12T12:05:57.083Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "sourceProof": {
+        "sha256": "27ae86b430af8f4ec4e96f3f6dd0608eea84a968a0db8f7e4cf83c8bdc676aa7",
+        "originalPhotoBytesUnchanged": true,
+        "watermarksPreserved": true
+      }
+    },
+    {
+      "title": "SEAT Toledo",
+      "make": "SEAT",
+      "model": "Toledo",
+      "year": 2006,
+      "priceAmount": 4800,
+      "mileageValue": 199000,
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "body": "Hatchback",
+      "description": "SEAT Toledo от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "sourceFieldProof": {
+        "source": "https://monarh.mobile.bg/obiava-11772882774601045-seat-toledo",
+        "year": "Дата на производство юли 2006",
+        "price": "4 800 €,",
+        "mileage": "Пробег [км] 199000 км",
+        "fuel": "Двигател Бензинов",
+        "transmission": "Скоростна кутия Автоматична",
+        "body": "Категория Хечбек"
+      },
+      "sourceCaveats": [],
+      "id": "11772882774601045",
+      "slug": "monarh-varna-11772882774601045",
+      "currency": "EUR",
+      "priceOnRequest": false,
+      "mileageOnRequest": false,
+      "mileageUnit": "km",
+      "condition": "used",
+      "images": [
+        "/dealer-stock/11772882774601045-1.webp",
+        "/dealer-stock/11772882774601045-2.webp"
+      ],
+      "sourceUrl": "https://monarh.mobile.bg/obiava-11772882774601045-seat-toledo",
+      "observedAt": "2026-10-12T12:05:57.084Z",
+      "availability": "Датирана обява; потвърдете цената и наличността директно с автокъщата.",
+      "sourceProof": {
+        "sha256": "cc624245ecf6e49abd4d0745a2be0bfe250d1ba7eb3f7293fd9419303f078f9b",
+        "originalPhotoBytesUnchanged": true,
+        "watermarksPreserved": true
+      }
+    }
+  ],
+  "disclosure": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+  "disclosureEn": "Dated listing samples; confirm price and availability directly with the dealership.",
+  "availabilityConfirmed": false,
+  "completeInventory": false
+}

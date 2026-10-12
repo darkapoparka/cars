@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "dealer": "champion-auto-varna",
+  "media": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/champion-auto-varna/media/21791746826227790-1.webp",
+      "sha256": "76fb984478a731b7d6fe0b2930f6dfd3dc170b6cd2b41be3da151964f8bdd6ab",
+      "bytes": 326324,
+      "destination": "dealer-stock/21791746826227790-1.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/champion-auto-varna/media/21791746826227790-2.webp",
+      "sha256": "936a61e0db51d9a289099ddc17b567e8adbf3840de295f3e334f5014ef54cc30",
+      "bytes": 257044,
+      "destination": "dealer-stock/21791746826227790-2.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/champion-auto-varna/media/11760906472084145-1.webp",
+      "sha256": "c86118f14a96c6e8877b9e31668e2842a17853e9a696ad01b1083e36660025af",
+      "bytes": 251168,
+      "destination": "dealer-stock/11760906472084145-1.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/champion-auto-varna/media/11760906472084145-2.webp",
+      "sha256": "d5ba92219ca67602e55f105868576e3285a837c2fbc9ae79b0d5965a05d21425",
+      "bytes": 231184,
+      "destination": "dealer-stock/11760906472084145-2.webp"
+    }
+  ]
+}

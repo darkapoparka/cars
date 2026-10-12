@@ -1,0 +1,991 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-request",
+  "mode": "new-approved",
+  "reviewed": true,
+  "reviewedAt": "2026-10-12T11:41:11.170Z",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+  "registrySha256": "1e80721527f7de675e3e1b6949361ad7663be29e708903fe7440ad3f19b3e7ed",
+  "clientIndexSha256": "b7edb7667c6837b9c909f9dc4f30289e51ace4b60cbfdf099a820f9c59bec954",
+  "qualification": {
+    "candidateLock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/absent-retained-qualification-lock.json",
+      "sha256": "c28d29acdf39709d38737a972eeb2a1d000cfb1cd96de587c38effd764386ac1"
+    },
+    "contexts": {
+      "eurocar6-varna": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/qualification-context-additional100.json",
+        "sha256": "870fa666ac4fd8ee64f43b26f204e4d3b1eddfdd515ec569bc2fc4ebfd54c535"
+      },
+      "miraj-auto-varna": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/qualification-context-additional100.json",
+        "sha256": "6358f38bf29d60b20ca621b85dcd615664d833efafb86ac419df05928572f2d2"
+      },
+      "kalokars-varna": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/qualification-context-additional100.json",
+        "sha256": "3fd9f82f3aa4ffc11705e19b1300b8a9fec61cc5ec4a3438297b0550f3bd9683"
+      },
+      "vvcars-varna": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/qualification-context-additional100.json",
+        "sha256": "1d26a0fcfd8ce1f49cb83fe9b08f407308bf0c39239668cbd9fdcda9204247b0"
+      },
+      "multizaza-varna": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/multizaza-varna/qualification-context-additional100.json",
+        "sha256": "5cfa8018bc7d9cd358ae4b54f37a6bda399fab8d13a178b08eb6d91956484933"
+      },
+      "nunki-1-varna": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/qualification-context-additional100.json",
+        "sha256": "86c990f03a7daf9697c5b7091962351c4e5145c172ff7bb86502b9fb570a5628"
+      },
+      "atanasov-varna": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/atanasov-varna/qualification-context-additional100.json",
+        "sha256": "1cd61b323bc6965de919c7616354010410cecdba57c73d1bf1c2e9ea3f4b8cc2"
+      },
+      "kolevi-auto-varna": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/qualification-context-additional100.json",
+        "sha256": "9c58206de0a5bbaa8e8fc1922ddb2808aaaec43299d0e25fba9b34d0af30882c"
+      },
+      "transcar-varna": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/qualification-context-additional100.json",
+        "sha256": "1e57c17ba4026993f52d48ffbee6f94823cf036d36cf6c18005c4b8e92336a7e"
+      },
+      "promotors82-varna": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/qualification-context-additional100.json",
+        "sha256": "9b06aa52f1636a0fdc3df9fd0a101b7a5e32e1157762a751c03ac458e82e2853"
+      }
+    }
+  },
+  "dealers": [
+    {
+      "slug": "eurocar6-varna",
+      "dealerId": "eurocar6-varna",
+      "repository": "darkapoparka/cars-eurocar6-varna",
+      "sourceOwnership": "cars-canonical",
+      "preset": "standard",
+      "workerName": "cars-eurocar6-varna",
+      "publicOrigin": "https://cars-eurocar6-varna.darkapoparka1.workers.dev",
+      "identityReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/identity-repository-corrected-additional100.json",
+        "sha256": "8ce678419d4e400f9b12899231b6f450297ba8e542d96fbf5e2f4621bbdd9cf3"
+      },
+      "sourceReleases": {
+        "auto-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/auto-best",
+          "tree": "5fb7a2164775050a47c1183371622295dbf63725",
+          "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c"
+        },
+        "modern": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/modern",
+          "tree": "3974380670eb388bb16182f94ade33be6d87b1c1",
+          "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25"
+        },
+        "import": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/import",
+          "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086",
+          "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5"
+        },
+        "app": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/app",
+          "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+          "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+        },
+        "mobile": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/mobile",
+          "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+          "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
+        },
+        "karento-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/karento-best",
+          "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134",
+          "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f"
+        }
+      },
+      "inputs": {
+        "facts": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/facts.json",
+          "sha256": "8e855fe649eed6e891a2e0504ce536ef89a908a822533180da9c3c8d42bff09b"
+        },
+        "stock": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/stock.json",
+          "sha256": "22a2705dbe3fe9f97ce297b809bad6e0550ca6cfac45b2720637ec2c898c2df3"
+        },
+        "locale": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/locale.json",
+          "sha256": "804b4bbe174cba2c1199fafd933200b63602500bf7fc9fc81aa0a0de27051738"
+        },
+        "branding": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/branding.json",
+          "sha256": "0c73ebb9bce9ac603deb78085a55be58d159cf583f470bd68ab347c1e18a2e38"
+        }
+      },
+      "media": [
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/media/21790941738758845-1.webp",
+          "sha256": "3d3cfd774330f933f8803ae3b090161a35795f520ecbbf42fc984988a40e4a08",
+          "bytes": 166418,
+          "destination": "dealer-stock/21790941738758845-1.webp"
+        },
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/media/21790941738758845-2.webp",
+          "sha256": "6ca4873e0751ff4f54e0c0262b4ffbaded9ebcef3646e9c0df8aed7440c29b3e",
+          "bytes": 291402,
+          "destination": "dealer-stock/21790941738758845-2.webp"
+        }
+      ],
+      "copyReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/eurocar6-varna/copy-review-additional100.json",
+        "sha256": "190ef578a69cde7cb22e643de932674896339256a5c16cdbf056e8e68237f54c"
+      }
+    },
+    {
+      "slug": "miraj-auto-varna",
+      "dealerId": "miraj-auto-varna",
+      "repository": "darkapoparka/cars-miraj-auto-varna",
+      "sourceOwnership": "cars-canonical",
+      "preset": "standard",
+      "workerName": "cars-miraj-auto-varna",
+      "publicOrigin": "https://cars-miraj-auto-varna.darkapoparka1.workers.dev",
+      "identityReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/identity-repository-corrected-additional100.json",
+        "sha256": "c9632d40c891974f625de4db5dd2b20eda8a707699e0af5aadb7f55ab889b60e"
+      },
+      "sourceReleases": {
+        "auto-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/auto-best",
+          "tree": "5fb7a2164775050a47c1183371622295dbf63725",
+          "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c"
+        },
+        "modern": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/modern",
+          "tree": "3974380670eb388bb16182f94ade33be6d87b1c1",
+          "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25"
+        },
+        "import": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/import",
+          "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086",
+          "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5"
+        },
+        "app": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/app",
+          "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+          "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+        },
+        "mobile": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/mobile",
+          "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+          "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
+        },
+        "karento-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/karento-best",
+          "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134",
+          "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f"
+        }
+      },
+      "inputs": {
+        "facts": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/facts.json",
+          "sha256": "aa2bd8894ab994ab277acf97140c5c5e8fa6dcfbf367faa71b6581d0f71b9eb1"
+        },
+        "stock": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/stock.json",
+          "sha256": "11693409e7fff8632e90cc98a5e87f4279c6a668ce80a84b5bd4809a623c8476"
+        },
+        "locale": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/locale.json",
+          "sha256": "8c68f5e85fb4b43bc975001d6bded87b73dc2609d2cb61f269610c61d8109d5b"
+        },
+        "branding": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/branding.json",
+          "sha256": "3b84b751669996df10719b560b526f3b20c80457fa93e46f00e0dfaef08b8773"
+        }
+      },
+      "media": [
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/media/21791636012392100-1.webp",
+          "sha256": "d6b54053212518882bba58444db79c1ead84e39365f59d426fe3ac8413903134",
+          "bytes": 291038,
+          "destination": "dealer-stock/21791636012392100-1.webp"
+        },
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/media/21791636012392100-2.webp",
+          "sha256": "86f2f5645420e6cc490cfa18a4cc9f8b4c1eb29e2083ca62834cfe375647380a",
+          "bytes": 273692,
+          "destination": "dealer-stock/21791636012392100-2.webp"
+        }
+      ],
+      "copyReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/miraj-auto-varna/copy-review-additional100.json",
+        "sha256": "ae32f3710fb3143a2a6d38c8be8ad4765c13a14d2718896d4c1d9c2668b71013"
+      }
+    },
+    {
+      "slug": "kalokars-varna",
+      "dealerId": "kalokars-varna",
+      "repository": "darkapoparka/cars-kalokars-varna",
+      "sourceOwnership": "cars-canonical",
+      "preset": "standard",
+      "workerName": "cars-kalokars-varna",
+      "publicOrigin": "https://cars-kalokars-varna.darkapoparka1.workers.dev",
+      "identityReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/identity-repository-corrected-additional100.json",
+        "sha256": "e171e314ab0e154e79a0519adad1dc465ccbb0b07a8f9711173bc3b03d4a9662"
+      },
+      "sourceReleases": {
+        "auto-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/auto-best",
+          "tree": "5fb7a2164775050a47c1183371622295dbf63725",
+          "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c"
+        },
+        "modern": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/modern",
+          "tree": "3974380670eb388bb16182f94ade33be6d87b1c1",
+          "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25"
+        },
+        "import": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/import",
+          "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086",
+          "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5"
+        },
+        "app": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/app",
+          "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+          "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+        },
+        "mobile": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/mobile",
+          "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+          "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
+        },
+        "karento-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/karento-best",
+          "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134",
+          "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f"
+        }
+      },
+      "inputs": {
+        "facts": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/facts.json",
+          "sha256": "957fed41e81507f60fcc2f9ccfe37911c4a56c7ffdadde70c3d7f50dbc3de564"
+        },
+        "stock": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/stock.json",
+          "sha256": "5c1bbe65ae52af62a062967c13e9ea23ac4fe5dc57252eba9f6f968bb737a78c"
+        },
+        "locale": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/locale.json",
+          "sha256": "d884903d966c4134aa00eab1e59558a6f5749ad05402d82ed076dece00fd4401"
+        },
+        "branding": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/branding.json",
+          "sha256": "2cb0f47cc217955e72a10625d42020aaba9d0f9bb6235a2abd66b2a6154aa665"
+        }
+      },
+      "media": [
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/media/11787740471095305-1.webp",
+          "sha256": "1887bafb0ba8ae5dbd4693dd95f6ad33a6df9c0346204aca4a435f46008e888f",
+          "bytes": 262344,
+          "destination": "dealer-stock/11787740471095305-1.webp"
+        },
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/media/11787740471095305-2.webp",
+          "sha256": "d80f172ae39e5a4aea8c1cf63ae80bc18bb34c440da2692f11c3b75027e5c2c8",
+          "bytes": 270246,
+          "destination": "dealer-stock/11787740471095305-2.webp"
+        }
+      ],
+      "copyReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalokars-varna/copy-review-additional100.json",
+        "sha256": "70177b121ebed8318a540315e013e4335cfc48144c98de611e1c3bbec460c5ef"
+      }
+    },
+    {
+      "slug": "vvcars-varna",
+      "dealerId": "vvcars-varna",
+      "repository": "darkapoparka/cars-vvcars-varna",
+      "sourceOwnership": "cars-canonical",
+      "preset": "standard",
+      "workerName": "cars-vvcars-varna",
+      "publicOrigin": "https://cars-vvcars-varna.darkapoparka1.workers.dev",
+      "identityReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/identity-repository-corrected-additional100.json",
+        "sha256": "a7f25eb1c7f03b153dc79fe7f68f1bf66e14fc073f5cbfcfd80485de71308268"
+      },
+      "sourceReleases": {
+        "auto-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/auto-best",
+          "tree": "5fb7a2164775050a47c1183371622295dbf63725",
+          "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c"
+        },
+        "modern": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/modern",
+          "tree": "3974380670eb388bb16182f94ade33be6d87b1c1",
+          "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25"
+        },
+        "import": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/import",
+          "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086",
+          "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5"
+        },
+        "app": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/app",
+          "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+          "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+        },
+        "mobile": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/mobile",
+          "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+          "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
+        },
+        "karento-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/karento-best",
+          "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134",
+          "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f"
+        }
+      },
+      "inputs": {
+        "facts": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/facts.json",
+          "sha256": "7655c675b5093abec275b5f38c1812f9b27c15b4a844a828382abef7503da470"
+        },
+        "stock": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/stock.json",
+          "sha256": "92dc64d07a7b6b9d0d4972c56827e59cdb5dfba70428562266cb5b31910c4504"
+        },
+        "locale": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/locale.json",
+          "sha256": "0d532beb4848c613bd031d9401a1873f241aad85fb6e84b76f4210a44d706572"
+        },
+        "branding": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/branding.json",
+          "sha256": "4aa54d6fb3fc613ee5af79f77e2ad144aaaa547f7494014ab6cc869af566a473"
+        }
+      },
+      "media": [
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/media/11791631223924420-1.webp",
+          "sha256": "8d556ab28a42644f5ee75cc9b72ec23b01dfe183c56b9c7b90692019c16bc25d",
+          "bytes": 376884,
+          "destination": "dealer-stock/11791631223924420-1.webp"
+        },
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/media/11791631223924420-2.webp",
+          "sha256": "ac40094a0eae5222ad8ce20bdc7bee6ceb0501bebe8270299bfafcddf80c78a2",
+          "bytes": 336402,
+          "destination": "dealer-stock/11791631223924420-2.webp"
+        }
+      ],
+      "copyReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/vvcars-varna/copy-review-additional100.json",
+        "sha256": "d66a3b7ea5459e8c80df7b105a7af0dd7f13924ef0fac77afbc9ed0e6c41ff44"
+      }
+    },
+    {
+      "slug": "multizaza-varna",
+      "dealerId": "multizaza-varna",
+      "repository": "darkapoparka/cars-multizaza-varna",
+      "sourceOwnership": "cars-canonical",
+      "preset": "standard",
+      "workerName": "cars-multizaza-varna",
+      "publicOrigin": "https://cars-multizaza-varna.darkapoparka1.workers.dev",
+      "identityReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/multizaza-varna/identity-repository-corrected-additional100.json",
+        "sha256": "c4855870f910cc07b38ee851c1b88ff93cd10e871c22eec72bda164d41120f74"
+      },
+      "sourceReleases": {
+        "auto-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/auto-best",
+          "tree": "5fb7a2164775050a47c1183371622295dbf63725",
+          "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c"
+        },
+        "modern": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/modern",
+          "tree": "3974380670eb388bb16182f94ade33be6d87b1c1",
+          "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25"
+        },
+        "import": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/import",
+          "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086",
+          "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5"
+        },
+        "app": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/app",
+          "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+          "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+        },
+        "mobile": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/mobile",
+          "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+          "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
+        },
+        "karento-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/karento-best",
+          "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134",
+          "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f"
+        }
+      },
+      "inputs": {
+        "facts": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/multizaza-varna/facts.json",
+          "sha256": "9268b7c37a5d208217bdbc0c21da18552fb3772ac0aaaadc8a2521466f52169b"
+        },
+        "stock": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/multizaza-varna/stock.json",
+          "sha256": "e72458865c540fb093f70646b0459f59b21cbb863460eab9d8ed07d9f323867b"
+        },
+        "locale": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/multizaza-varna/locale.json",
+          "sha256": "b3c7896571e940ce8f9c4a7f234df0d26fa30f636237a2f5b1c49a87c1f29a2b"
+        },
+        "branding": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/multizaza-varna/branding.json",
+          "sha256": "cb7936d3147737fbf65c9334cf5ac4e03c9d3643270e3a63617dd320eff602e5"
+        }
+      },
+      "media": [
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/multizaza-varna/media/11789398419243895-1.webp",
+          "sha256": "dfa1d7cdc583f49c4388d45bb44266ca72418ae02ab93488715f3f3a07f30f9e",
+          "bytes": 258390,
+          "destination": "dealer-stock/11789398419243895-1.webp"
+        },
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/multizaza-varna/media/11789398419243895-2.webp",
+          "sha256": "f76cc5ad4de52f44b19f3a3d7fef836b93c801f1a3182959f3d41234136e1a71",
+          "bytes": 233246,
+          "destination": "dealer-stock/11789398419243895-2.webp"
+        }
+      ],
+      "copyReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/multizaza-varna/copy-review-additional100.json",
+        "sha256": "155675395bb870245a8ad38af5fc0ddf5893b13ab2d87b0c62751c47c2d6d221"
+      }
+    },
+    {
+      "slug": "nunki-1-varna",
+      "dealerId": "nunki-1-varna",
+      "repository": "darkapoparka/cars-nunki-1-varna",
+      "sourceOwnership": "cars-canonical",
+      "preset": "standard",
+      "workerName": "cars-nunki-1-varna",
+      "publicOrigin": "https://cars-nunki-1-varna.darkapoparka1.workers.dev",
+      "identityReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/identity-repository-corrected-additional100.json",
+        "sha256": "50f34131578a55ceb3bd37f17d495612702f126fc5b78dd9bf8a0f503e32ae56"
+      },
+      "sourceReleases": {
+        "auto-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/auto-best",
+          "tree": "5fb7a2164775050a47c1183371622295dbf63725",
+          "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c"
+        },
+        "modern": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/modern",
+          "tree": "3974380670eb388bb16182f94ade33be6d87b1c1",
+          "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25"
+        },
+        "import": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/import",
+          "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086",
+          "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5"
+        },
+        "app": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/app",
+          "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+          "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+        },
+        "mobile": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/mobile",
+          "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+          "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
+        },
+        "karento-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/karento-best",
+          "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134",
+          "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f"
+        }
+      },
+      "inputs": {
+        "facts": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/facts.json",
+          "sha256": "564be7e6af2dfd403fc8f898248043bf801b31cec6be3e3a95111f1f5ec9eba1"
+        },
+        "stock": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/stock.json",
+          "sha256": "1335591d8e7a7b73c5de137afa11bec65b6e0f7fbbeede0a00ed0fe80268a39e"
+        },
+        "locale": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/locale.json",
+          "sha256": "6e41d4dfeca1407e514923d2c7979b500e2668e85932653f3d3c9ac152baa686"
+        },
+        "branding": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/branding.json",
+          "sha256": "151607082400fc611a3604c21153f5aedb189423b23140b1fddbfcc6c74ab961"
+        }
+      },
+      "media": [
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/media/21765900702522886-1.webp",
+          "sha256": "b97aabfbf580251b67ad8cb918afc1b7c96e3d810c6ac248b7c65d9ac81bba07",
+          "bytes": 254466,
+          "destination": "dealer-stock/21765900702522886-1.webp"
+        },
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/media/21765900702522886-2.webp",
+          "sha256": "2910e41a1d1d895591b46712b6f77c15e0df2e2243db5157b64cd3154bae78b6",
+          "bytes": 219692,
+          "destination": "dealer-stock/21765900702522886-2.webp"
+        }
+      ],
+      "copyReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/nunki-1-varna/copy-review-additional100.json",
+        "sha256": "5f9da0a28377383316a393046a4cb03cd77161d8dc43504cbc6d6d1ca928009b"
+      }
+    },
+    {
+      "slug": "atanasov-varna",
+      "dealerId": "atanasov-varna",
+      "repository": "darkapoparka/cars-atanasov-varna",
+      "sourceOwnership": "cars-canonical",
+      "preset": "standard",
+      "workerName": "cars-atanasov-varna",
+      "publicOrigin": "https://cars-atanasov-varna.darkapoparka1.workers.dev",
+      "identityReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/atanasov-varna/identity-repository-corrected-additional100.json",
+        "sha256": "c541247d332c6db3159d2534480960e6c209551a01d53242a5afa094c709a232"
+      },
+      "sourceReleases": {
+        "auto-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/auto-best",
+          "tree": "5fb7a2164775050a47c1183371622295dbf63725",
+          "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c"
+        },
+        "modern": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/modern",
+          "tree": "3974380670eb388bb16182f94ade33be6d87b1c1",
+          "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25"
+        },
+        "import": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/import",
+          "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086",
+          "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5"
+        },
+        "app": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/app",
+          "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+          "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+        },
+        "mobile": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/mobile",
+          "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+          "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
+        },
+        "karento-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/karento-best",
+          "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134",
+          "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f"
+        }
+      },
+      "inputs": {
+        "facts": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/atanasov-varna/facts.json",
+          "sha256": "ca5f70f699da90436f0b24d2c5b1e5a9393c2e4ec9e89622bc2ec3186f2979ac"
+        },
+        "stock": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/atanasov-varna/stock.json",
+          "sha256": "dd55d9de0f5fab265a35b84fff52c6e9b825cf519eb7f6e71b6141086548420b"
+        },
+        "locale": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/atanasov-varna/locale.json",
+          "sha256": "49306120b8b0fc4a83e268aa14603ac641aa70ddc4b0ddbfde7d1d5f6bfa8260"
+        },
+        "branding": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/atanasov-varna/branding.json",
+          "sha256": "757fd3ee13d367df29333f6b2555762483121053d5e538ab9ad88126de8ceeb2"
+        }
+      },
+      "media": [
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/atanasov-varna/media/11791661554744525-1.webp",
+          "sha256": "ab4b959b00d7b0c7d6b12740e625e2cb3d4daac58ce14b7ecd861732d8ae6cb1",
+          "bytes": 171438,
+          "destination": "dealer-stock/11791661554744525-1.webp"
+        },
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/atanasov-varna/media/11791661554744525-2.webp",
+          "sha256": "a286a2d7f547733d3cea12c4eec2760bd5f31cec95b5f3cea77068a3ddd82ab5",
+          "bytes": 157116,
+          "destination": "dealer-stock/11791661554744525-2.webp"
+        }
+      ],
+      "copyReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/atanasov-varna/copy-review-additional100.json",
+        "sha256": "4a52ec64faeefc8aab6a3a6d589dda950542d27cc9ca4ba5a2401594b8686cc1"
+      }
+    },
+    {
+      "slug": "kolevi-auto-varna",
+      "dealerId": "kolevi-auto-varna",
+      "repository": "darkapoparka/cars-kolevi-auto-varna",
+      "sourceOwnership": "cars-canonical",
+      "preset": "standard",
+      "workerName": "cars-kolevi-auto-varna",
+      "publicOrigin": "https://cars-kolevi-auto-varna.darkapoparka1.workers.dev",
+      "identityReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/identity-repository-corrected-additional100.json",
+        "sha256": "296515cb0585cd8449c1a6cfa6c4d18022bb79fbc697eda785c2a4ffcf307c48"
+      },
+      "sourceReleases": {
+        "auto-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/auto-best",
+          "tree": "5fb7a2164775050a47c1183371622295dbf63725",
+          "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c"
+        },
+        "modern": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/modern",
+          "tree": "3974380670eb388bb16182f94ade33be6d87b1c1",
+          "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25"
+        },
+        "import": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/import",
+          "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086",
+          "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5"
+        },
+        "app": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/app",
+          "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+          "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+        },
+        "mobile": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/mobile",
+          "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+          "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
+        },
+        "karento-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/karento-best",
+          "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134",
+          "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f"
+        }
+      },
+      "inputs": {
+        "facts": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/facts.json",
+          "sha256": "76a32f2588b295c0943473940bb9f193510ad8d89481d027e058f56cac62a1cf"
+        },
+        "stock": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/stock.json",
+          "sha256": "ff80472e7ec7a2b3d284591c67816e6662b1c82fefe112e4bcef6f2dad59dd1b"
+        },
+        "locale": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/locale.json",
+          "sha256": "a688c022a96427af6fed6398e08769669ffbf1a9a593f2083c811cb9f0d2abc5"
+        },
+        "branding": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/branding.json",
+          "sha256": "697204a814832942bd4f565b82d6509ca8907269e50d4840195f6dfc0ffd6f73"
+        }
+      },
+      "media": [
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/media/11789979969434970-1.webp",
+          "sha256": "19965d6b74dc664ead78e552b8d07bc1b51f01869a2f47506d55a1d30d3110cc",
+          "bytes": 226666,
+          "destination": "dealer-stock/11789979969434970-1.webp"
+        },
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/media/11789979969434970-2.webp",
+          "sha256": "1fd504b5e1eff443234f84ab44349cac40eed75964ccf75656d769f489f50729",
+          "bytes": 211098,
+          "destination": "dealer-stock/11789979969434970-2.webp"
+        }
+      ],
+      "copyReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kolevi-auto-varna/copy-review-additional100.json",
+        "sha256": "fcfc9af6890c8f3256d6fb2362b71d020833fcbc09bc1adfa7f184c6a3ed7e4a"
+      }
+    },
+    {
+      "slug": "transcar-varna",
+      "dealerId": "transcar-varna",
+      "repository": "darkapoparka/cars-transcar-varna",
+      "sourceOwnership": "cars-canonical",
+      "preset": "standard",
+      "workerName": "cars-transcar-varna",
+      "publicOrigin": "https://cars-transcar-varna.darkapoparka1.workers.dev",
+      "identityReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/identity-repository-corrected-additional100.json",
+        "sha256": "299dd360aabd47b433cad3005713c0f2bbed7b567cafde9471c48877cc5c3102"
+      },
+      "sourceReleases": {
+        "auto-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/auto-best",
+          "tree": "5fb7a2164775050a47c1183371622295dbf63725",
+          "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c"
+        },
+        "modern": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/modern",
+          "tree": "3974380670eb388bb16182f94ade33be6d87b1c1",
+          "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25"
+        },
+        "import": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/import",
+          "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086",
+          "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5"
+        },
+        "app": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/app",
+          "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+          "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+        },
+        "mobile": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/mobile",
+          "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+          "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
+        },
+        "karento-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/karento-best",
+          "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134",
+          "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f"
+        }
+      },
+      "inputs": {
+        "facts": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/facts.json",
+          "sha256": "db75a18cff027a3c89e04ceb6b350c93cc296d2129592308bec45f92181a343c"
+        },
+        "stock": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/stock.json",
+          "sha256": "2c2bf5a127b9e65a76164542b8d977728491bc310f45cfc92c51e59663fffb1b"
+        },
+        "locale": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/locale.json",
+          "sha256": "7d2b95da58908f29fb0dd29f12a7f3bd7663f03bef8f460152fc225860887180"
+        },
+        "branding": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/branding.json",
+          "sha256": "82d9f100a422dd3df54042663e22fbe5732bd15d4195c204ebcdd321626ff3e4"
+        }
+      },
+      "media": [
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/media/11772031596218515-1.webp",
+          "sha256": "2c212f01fdb22444c6098e5bdfe6c67d528dfa1eeebe2c17dae0ea376f116aca",
+          "bytes": 216838,
+          "destination": "dealer-stock/11772031596218515-1.webp"
+        },
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/media/11772031596218515-2.webp",
+          "sha256": "38e4bf34a754419b5bb4780c2f8c4bbdcf32928788c59e3096b581cb7a47ab6c",
+          "bytes": 288202,
+          "destination": "dealer-stock/11772031596218515-2.webp"
+        }
+      ],
+      "copyReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/transcar-varna/copy-review-additional100.json",
+        "sha256": "600531ed59ab63a42c82d2b5565b8f5a3d6f81e014212cbfee2d662160598de7"
+      }
+    },
+    {
+      "slug": "promotors82-varna",
+      "dealerId": "promotors82-varna",
+      "repository": "darkapoparka/cars-promotors82-varna",
+      "sourceOwnership": "cars-canonical",
+      "preset": "standard",
+      "workerName": "cars-promotors82-varna",
+      "publicOrigin": "https://cars-promotors82-varna.darkapoparka1.workers.dev",
+      "identityReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/identity-repository-corrected-additional100.json",
+        "sha256": "88af8b4d103f8add96bd6b9db666ba864df0015836d0cffbc48588ddbffbdc5e"
+      },
+      "sourceReleases": {
+        "auto-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/auto-best",
+          "tree": "5fb7a2164775050a47c1183371622295dbf63725",
+          "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c"
+        },
+        "modern": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/modern",
+          "tree": "3974380670eb388bb16182f94ade33be6d87b1c1",
+          "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25"
+        },
+        "import": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/import",
+          "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086",
+          "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5"
+        },
+        "app": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/app",
+          "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+          "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+        },
+        "mobile": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/mobile",
+          "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+          "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
+        },
+        "karento-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/karento-best",
+          "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134",
+          "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f"
+        }
+      },
+      "inputs": {
+        "facts": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/facts.json",
+          "sha256": "2adb13fdef36eaa1912868875f3f5d9bd89bbdcb185973bfee261902beacd757"
+        },
+        "stock": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/stock.json",
+          "sha256": "bd491aeca93ccbbe4b3bef31875c51dd8398fba50cdde3bac88d90c969690e86"
+        },
+        "locale": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/locale.json",
+          "sha256": "5fb156441915b77688372af5b61337e37d44f3879c457994e914d51b838af23f"
+        },
+        "branding": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/branding.json",
+          "sha256": "08aff74158dfe2724150fb33034df92228ed94a24d6742f2820abef3b4e7bcc2"
+        }
+      },
+      "media": [
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/media/11791111366122197-1.webp",
+          "sha256": "6f9b5b729519c1496cf23312eae2c01f8293d21cf5da7af7aeac826d2c7396e1",
+          "bytes": 121912,
+          "destination": "dealer-stock/11791111366122197-1.webp"
+        },
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/media/11791111366122197-2.webp",
+          "sha256": "024fabbf09632d6a4d687c29db4b99f7e2e66ab30f1567a8746d1033b7167422",
+          "bytes": 155574,
+          "destination": "dealer-stock/11791111366122197-2.webp"
+        }
+      ],
+      "copyReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/promotors82-varna/copy-review-additional100.json",
+        "sha256": "3b4940d81ff1fe965e648edec1f78042a7805318b11924e7d967748834f7cc85"
+      }
+    }
+  ]
+}

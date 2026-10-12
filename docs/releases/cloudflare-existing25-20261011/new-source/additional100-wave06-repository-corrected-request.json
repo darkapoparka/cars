@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-request",
+  "mode": "new-approved",
+  "reviewed": true,
+  "reviewedAt": "2026-10-12T11:41:11.170Z",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+  "registrySha256": "1e80721527f7de675e3e1b6949361ad7663be29e708903fe7440ad3f19b3e7ed",
+  "clientIndexSha256": "b7edb7667c6837b9c909f9dc4f30289e51ace4b60cbfdf099a820f9c59bec954",
+  "qualification": {
+    "candidateLock": {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/absent-retained-qualification-lock.json",
+      "sha256": "c28d29acdf39709d38737a972eeb2a1d000cfb1cd96de587c38effd764386ac1"
+    },
+    "contexts": {
+      "specialcarood-varna": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/qualification-context-additional100.json",
+        "sha256": "c5546f091e0ba53ff1541ca390941f4f8baaa30408b06c76688d19296ed4153b"
+      }
+    }
+  },
+  "dealers": [
+    {
+      "slug": "specialcarood-varna",
+      "dealerId": "specialcarood-varna",
+      "repository": "darkapoparka/cars-specialcarood-varna",
+      "sourceOwnership": "cars-canonical",
+      "preset": "standard",
+      "workerName": "cars-specialcarood-varna",
+      "publicOrigin": "https://cars-specialcarood-varna.darkapoparka1.workers.dev",
+      "identityReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/identity-repository-corrected-additional100.json",
+        "sha256": "7c3aa4aa64d8f669e7396bf1c28bcb7fcf5af234fc295a43234188e24b2b67cf"
+      },
+      "sourceReleases": {
+        "auto-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/auto-best",
+          "tree": "5fb7a2164775050a47c1183371622295dbf63725",
+          "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c"
+        },
+        "modern": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/modern",
+          "tree": "3974380670eb388bb16182f94ade33be6d87b1c1",
+          "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25"
+        },
+        "import": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/import",
+          "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086",
+          "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5"
+        },
+        "app": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/app",
+          "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+          "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+        },
+        "mobile": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/mobile",
+          "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+          "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
+        },
+        "karento-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/karento-best",
+          "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134",
+          "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f"
+        }
+      },
+      "inputs": {
+        "facts": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/facts.json",
+          "sha256": "7bc0836bc191c3c0aa8a5e50bbb9c2be294921f7be9b3b7cff2e9d20dc3ad7ed"
+        },
+        "stock": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/stock.json",
+          "sha256": "ca52a3362d9a81a2aa243eb01c97a4330e6a639bedddcb5da9e931e1b38689a3"
+        },
+        "locale": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/locale.json",
+          "sha256": "bc6fc335d67ec190f91d7c241d62bcc01c48f4a6b4f197ef33cd09fba38a2931"
+        },
+        "branding": {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/branding.json",
+          "sha256": "767ba285159eb44ecb487df72ff94545acc6c74fe5bfbae334846e5ffde3debb"
+        }
+      },
+      "media": [
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/media/21791554713149733-1.webp",
+          "sha256": "57a03296d5d35fea21b9cb831d55dc34ee702b64c25639ad8b47d2a8ff4c1225",
+          "bytes": 229294,
+          "destination": "dealer-stock/21791554713149733-1.webp"
+        },
+        {
+          "path": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/media/21791554713149733-2.webp",
+          "sha256": "5921a9a34c7c45d1f10b71dd5b79219f0b40f931e5c570e7c4ad28de7e98bc50",
+          "bytes": 230942,
+          "destination": "dealer-stock/21791554713149733-2.webp"
+        }
+      ],
+      "copyReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/specialcarood-varna/copy-review-additional100.json",
+        "sha256": "457723b571f3deb5cd0cc01c3484d8afad845542683a40c609a085b0981dac4e"
+      }
+    }
+  ]
+}

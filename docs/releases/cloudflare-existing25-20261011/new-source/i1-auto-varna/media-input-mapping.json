@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "dealer": "i1-auto-varna",
+  "media": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/media/21790672329302787-1.webp",
+      "sha256": "82cab504746784eee0e5d794a1d66ebc243ea88db175374753a6ba88efc6474b",
+      "bytes": 351798,
+      "destination": "dealer-stock/21790672329302787-1.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/media/21790672329302787-2.webp",
+      "sha256": "e70a4b158ec568fe62f4b849fb184b94153fd678d79e7b1fd34c5e22c8fbd68e",
+      "bytes": 203918,
+      "destination": "dealer-stock/21790672329302787-2.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/media/21785858753229590-1.webp",
+      "sha256": "7ec32468d62dad0d2505d54043ab3604156dc3c1538dcdb891029f5db56f04cc",
+      "bytes": 397878,
+      "destination": "dealer-stock/21785858753229590-1.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/i1-auto-varna/media/21785858753229590-2.webp",
+      "sha256": "7fcf59cdcfa65dce0d0177ee03ecbfa7d78f164fa54f7ffb4a143f341b1f997f",
+      "bytes": 270488,
+      "destination": "dealer-stock/21785858753229590-2.webp"
+    }
+  ]
+}

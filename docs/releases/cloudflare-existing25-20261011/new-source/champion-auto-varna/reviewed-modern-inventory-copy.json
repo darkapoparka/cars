@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "dealer": "champion-auto-varna",
+  "copy": {
+    "champion-auto-varna-21791746826227790": {
+      "sourceDescription": "BMW X6 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "BMW X6 from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "BMW X6 — dated public advert photo 1",
+          "BMW X6 — dated public advert photo 2"
+        ]
+      },
+      "bg": {
+        "description": "BMW X6 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "BMW X6 — снимка от датирана публична обява 1",
+          "BMW X6 — снимка от датирана публична обява 2"
+        ]
+      }
+    },
+    "champion-auto-varna-11760906472084145": {
+      "sourceDescription": "Mercedes-Benz CLA 250 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+      "en": {
+        "description": "Mercedes-Benz CLA 250 from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+        "imageAlts": [
+          "Mercedes-Benz CLA 250 — dated public advert photo 1",
+          "Mercedes-Benz CLA 250 — dated public advert photo 2"
+        ]
+      },
+      "bg": {
+        "description": "Mercedes-Benz CLA 250 от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "imageAlts": [
+          "Mercedes-Benz CLA 250 — снимка от датирана публична обява 1",
+          "Mercedes-Benz CLA 250 — снимка от датирана публична обява 2"
+        ]
+      }
+    }
+  },
+  "consumer": "facts.business.modernInventoryCopy",
+  "donorCopyRetained": false
+}

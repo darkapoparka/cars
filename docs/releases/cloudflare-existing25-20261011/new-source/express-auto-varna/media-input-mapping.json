@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "dealer": "express-auto-varna",
+  "media": [
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/express-auto-varna/media/11791655661973701-1.webp",
+      "sha256": "2cbcb392ff5f9dd00b84fa8334d299046d053b3a720df70f15b189ee5111df8e",
+      "bytes": 170140,
+      "destination": "dealer-stock/11791655661973701-1.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/express-auto-varna/media/11791655661973701-2.webp",
+      "sha256": "7c8353bd60519dd54b3bb6dc5ed982239c9903dd1af97b8f6280517fee680adb",
+      "bytes": 190262,
+      "destination": "dealer-stock/11791655661973701-2.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/express-auto-varna/media/11791655386104961-1.webp",
+      "sha256": "d34c1281d9bd5ed4c9b19929441b442b1bb257dc25f78bd26ccf1545d7d90d1d",
+      "bytes": 136492,
+      "destination": "dealer-stock/11791655386104961-1.webp"
+    },
+    {
+      "path": "docs/releases/cloudflare-existing25-20261011/new-source/express-auto-varna/media/11791655386104961-2.webp",
+      "sha256": "cc6e73f793ad3381417265e7af7fe4bff83a49c99cc91125e2fa7b346782832e",
+      "bytes": 184368,
+      "destination": "dealer-stock/11791655386104961-2.webp"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "slug": "chernomore-varna",
+  "dealerId": "chernomore-varna",
+  "business": {
+    "schemaVersion": 1,
+    "slug": "chernomore-varna",
+    "name": "Черно море",
+    "shortName": "Черно море",
+    "city": "Варна",
+    "country": "BG",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "phone": "0888596963",
+    "phoneDisplay": "0888596963, 052/560733",
+    "phoneE164": "+359888596963",
+    "phones": [
+      "+359888596963",
+      "+35952560733"
+    ],
+    "addressLine": "Кръстовището на бул. Цар Освободител и бул. Константин и Фружин",
+    "address": "Кръстовището на бул. Цар Освободител и бул. Константин и Фружин, Варна, България",
+    "hours": "Потвърдете работното време директно с автокъщата.",
+    "email": "",
+    "sourceUrl": "https://chernomore.mobile.bg/",
+    "stockUrl": "https://chernomore.mobile.bg/",
+    "contactSourceUrl": "https://chernomore.mobile.bg/contacts",
+    "observedAt": "2026-10-12T10:44:18.739Z",
+    "inventoryNotice": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "services": [],
+    "socialLinks": {},
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png",
+    "modernInventoryCopy": {
+      "chernomore-varna-21771946973449498": {
+        "sourceDescription": "Audi Q8 50 TDI S-Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "en": {
+          "description": "Audi Q8 50 TDI S-Line from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+          "imageAlts": [
+            "Audi Q8 50 TDI S-Line — dated public advert photo 1",
+            "Audi Q8 50 TDI S-Line — dated public advert photo 2"
+          ]
+        },
+        "bg": {
+          "description": "Audi Q8 50 TDI S-Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "imageAlts": [
+            "Audi Q8 50 TDI S-Line — снимка от датирана публична обява 1",
+            "Audi Q8 50 TDI S-Line — снимка от датирана публична обява 2"
+          ]
+        }
+      },
+      "chernomore-varna-11779358576885782": {
+        "sourceDescription": "Audi A5 Sportback 2.0 TFSI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "en": {
+          "description": "Audi A5 Sportback 2.0 TFSI quattro from a dated public advert. Confirm condition, price and availability directly with the dealership.",
+          "imageAlts": [
+            "Audi A5 Sportback 2.0 TFSI quattro — dated public advert photo 1",
+            "Audi A5 Sportback 2.0 TFSI quattro — dated public advert photo 2"
+          ]
+        },
+        "bg": {
+          "description": "Audi A5 Sportback 2.0 TFSI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "imageAlts": [
+            "Audi A5 Sportback 2.0 TFSI quattro — снимка от датирана публична обява 1",
+            "Audi A5 Sportback 2.0 TFSI quattro — снимка от датирана публична обява 2"
+          ]
+        }
+      }
+    }
+  },
+  "research": {
+    "website": {
+      "status": "confirmed-primary-own-site",
+      "url": "https://chernomoreauto.com/",
+      "phones": [
+        "+35952560733",
+        "+359888596963"
+      ]
+    },
+    "publicIdentityKey": "mobile-profile:chernomore.mobile.bg",
+    "profileAdvertCount": 30,
+    "availabilityConfirmed": false,
+    "legalEntityOwnershipVerified": false,
+    "addressExactness": "public-contact-as-published",
+    "caveats": [
+      "Preserve existing Cars-owned clients/chernomore-varna; not an absent new-client identity."
+    ],
+    "sourceProof": [
+      {
+        "url": "https://chernomore.mobile.bg/",
+        "finalUrl": "https://chernomore.mobile.bg/",
+        "observedAt": "2026-10-12T10:44:18.826Z",
+        "status": 200,
+        "bytes": 182287,
+        "sha256": "3a71c0e4cd06ec28a99b579d1b3b203ddce475356e4a78a07d0c45059c0a2382"
+      },
+      {
+        "url": "https://chernomore.mobile.bg/contacts",
+        "finalUrl": "https://chernomore.mobile.bg/contacts",
+        "observedAt": "2026-10-12T10:44:18.739Z",
+        "status": 200,
+        "bytes": 45386,
+        "sha256": "2d2767985bf2f1ccd3affb0da1c19011f21e8ece6d753047137b37d4a8fd9b58"
+      },
+      {
+        "url": "https://chernomore.mobile.bg/about",
+        "finalUrl": "https://chernomore.mobile.bg/about",
+        "observedAt": "2026-10-12T10:44:18.716Z",
+        "status": 200,
+        "bytes": 8421,
+        "sha256": "bc84e40e95179b1d25757c655dee1acdb7a5fa376b7feade479e06ed132dde3b"
+      }
+    ],
+    "sourceAction": "preserve-existing-cars-source",
+    "existingSourceTree": "3fc884818d7f079b6b60f290fd98856e78b3785d",
+    "inventoryModeSelection": "dated-listing-snapshot",
+    "productionAssetInputsComplete": true,
+    "stockSnapshotScope": "Two retained public adverts, not a complete/live inventory",
+    "stockMediaAuthority": "Owner-authorized public dated demo scope; original source bytes and watermarks retained"
+  }
+}
