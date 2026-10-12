@@ -5,6 +5,7 @@ import {validateFileInventory,safeArtifactPath} from './lib/uk-cloudflare-artifa
 import {filesAt,inside} from './lib/workflow.mjs';
 import {assertSixDesignSelection} from './lib/six-design-release.mjs';
 import {bindImportSurfaceLogos,namespaceImportAssets,importAssetName} from './lib/uk-import-brand-provider.mjs';
+import {validateModernStaticManifest} from './lib/modern-free-static-runtime.mjs';
 const KEYS=['auto-best','modern','import','app','mobile','karento-best','router'],NEXT=new Set(['modern','app','mobile']);
 const hash=b=>createHash('sha256').update(b).digest('hex'),assert=(ok,m)=>{if(!ok)throw Error(m);};
 function walk(root,relative='',out=[]){for(const e of fs.readdirSync(path.join(root,relative),{withFileTypes:true})){assert(!e.isSymbolicLink(),'Linked artifact refused');const n=relative?relative+'/'+e.name:e.name;if(e.isDirectory())walk(root,n,out);else if(e.isFile())out.push(n);else throw Error('Unsupported artifact');}return out.sort();}
@@ -21,10 +22,13 @@ const scope=new Proxy(local,{
 local.globalThis=scope;local.global=scope;local.self=scope;local.fetch=platform.fetch.bind(platform);
 export {scope as frameworkGlobal};
 `;}
-export function singleWorkerSource(){return [
+export function singleWorkerSource(freeStaticExperiment=null){return [
  'import router from "./router.mjs";',
+ ...(freeStaticExperiment?['import {createModernFreeStaticRuntime} from "./modern-free-static-runtime.mjs";','import {resolveCarsNativePreferences} from "./modern/cars-native-preferences.js";']:[]),
  ...KEYS.filter(k=>k!=='router').map(k=>'import design_'+k.replaceAll('-','_')+' from "./'+k+'/'+(NEXT.has(k)?'index.js':'index.mjs')+'";'),
+ ...(freeStaticExperiment?['const modernStatic=createModernFreeStaticRuntime({manifest:'+JSON.stringify(validateModernStaticManifest(freeStaticExperiment))+',resolvePreferences:resolveCarsNativePreferences});']:[]),
  'export default {async fetch(request, env, ctx) {',
+ ...(freeStaticExperiment?[' const experimentResponse=await modernStatic.fetch(request,env);if(experimentResponse)return experimentResponse;']:[]),
  ' const bindings={...env,'+KEYS.filter(k=>k!=='router').map(k=>'CARS_'+k.toUpperCase().replaceAll('-','_')+':{fetch:r=>design_'+k.replaceAll('-','_')+'.fetch(r,env,ctx)}').join(',')+'};',
  ' return router.fetch(request,bindings);',
  '}};',''].join('\n');}
@@ -57,6 +61,31 @@ function validateCompiledFiles(inventory,deploy,key){
 function validateSourceReleases(releases,key){
  assert(releases&&canonical(Object.keys(releases).sort())===canonical(KEYS.filter(name=>name!=='router').sort()),'Missing six exact source releases '+key);
  for(const family of KEYS.filter(name=>name!=='router')){const release=releases[family];assert(release&&release.repository==='darkapoparka/cars'&&release.path==='templates/'+family&&HEX40.test(release.revision??'')&&HEX40.test(release.tree??'')&&HEX64.test(release.digest??''),'Invalid exact source release '+key+': '+family);}
+}
+export function inspectModernFreeStaticExperiment(inspected,modernMount){
+ const entry=inspected.modern,marker=entry.deploy.freeStaticExperiment;
+ for(const [key,value] of Object.entries(inspected)){
+  const reserved=value.deploy.compiledFiles.filter(row=>row.path.startsWith(value.deploy.assetPath+'/_cars/private/modern/')||row.path.startsWith(value.deploy.assetPath+'/_vinext/static-cache/'));
+  assert(key==='modern'&&marker!==undefined||reserved.length===0,'Unadmitted private Modern static outputs');
+ }
+ if(marker===undefined)return null;
+ assert(marker&&typeof marker==='object'&&!Array.isArray(marker)&&canonical(Object.keys(marker).sort())===canonical(['manifestPath','resolverPath'].sort()),'Invalid explicit Modern static opt-in');
+ assert(entry.deploy.mainPath.endsWith('/index.js'),'Modern static main module differs');
+ const root=entry.deploy.mainPath.slice(0,-'index.js'.length);
+ assert(marker.manifestPath===root+'cars-free-services.json'&&marker.resolverPath===root+'cars-native-preferences.js','Modern static native module paths differ');
+ const rows=new Map(entry.deploy.compiledFiles.map(row=>[row.path,row]));
+ const manifestRow=rows.get(marker.manifestPath),resolverRow=rows.get(marker.resolverPath);
+ assert(manifestRow&&manifestRow.bytes<=16384&&resolverRow&&resolverRow.bytes<=256*1024,'Missing bounded compiled native policy or static manifest');
+ const plan=validateModernStaticManifest(JSON.parse(fs.readFileSync(inside(entry.directory,marker.manifestPath,{mustExist:true}),'utf8')));
+ assert(plan.mount===modernMount,'Modern static experiment mount differs');
+ for(const route of plan.routes)for(const key of ['html','rsc']){
+  const asset=route[key],row=rows.get(entry.deploy.assetPath+asset.path);
+  assert(row&&row.bytes===asset.bytes&&row.sha256===asset.sha256,'Sealed native Services snapshot differs');
+ }
+ const privateAssets=entry.deploy.compiledFiles.filter(row=>row.path.startsWith(entry.deploy.assetPath+'/_cars/private/modern/'));
+ assert(privateAssets.length===4,'Only four exact Services snapshots are admitted');
+ assert(!entry.deploy.compiledFiles.some(row=>row.path.startsWith(entry.deploy.assetPath+'/_vinext/static-cache/')),'Unscoped native static cache is not allowed');
+ return plan;
 }
 export function inspectSingleWorkerInputs({inputs,expectedDealer}){
  assert(typeof expectedDealer==='string'&&/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(expectedDealer),'Exact dealer required');
@@ -98,6 +127,8 @@ export function packageUkSingleWorker({inputs,destination,expectedDealer,esbuild
  const variants=JSON.parse(routerPlan[1]).variants;assertSixDesignSelection(variants);
  const importMount=variants.find(row=>row.key==='import').base,modernMount=variants.find(row=>row.key==='modern').base;
  assert(['/variant-2','/variant-3'].includes(importMount)&&modernMount===(importMount==='/variant-2'?'/variant-3':'/variant-2'),'Import/Modern mounts must preserve their reviewed opposite positions');
+ const freeStaticExperiment=inspectModernFreeStaticExperiment(inspected,modernMount);
+ assert(Object.entries(inspected).every(([key,value])=>key==='modern'||value.deploy.freeStaticExperiment===undefined),'Static experiment is Modern-only');
  const importNamespace=importAssetName('variant-3/_app/').slice('variant-3/'.length,-1);
  const importName=name=>name.startsWith(importMount.slice(1)+'/_app/')?importMount.slice(1)+'/'+importNamespace+'/'+name.slice((importMount.slice(1)+'/_app/').length):name;
  const importSource=source=>namespaceImportAssets(inputKind==='uk'?bindImportSurfaceLogos(source).source:source).replaceAll(importMount+'/_app"',importMount+'/'+importNamespace+'"').replaceAll(importMount+'/_app\x60',importMount+'/'+importNamespace+'\x60');
@@ -114,8 +145,10 @@ export function packageUkSingleWorker({inputs,destination,expectedDealer,esbuild
   }else{const source='compiled/'+key+'/.cars-cloudflare/worker/index.js';assert(inspected[key].inventory.files.some(f=>f.path===source),'Missing verified standalone Svelte module');const before=fs.readFileSync(path.join(directory,source)),after=Buffer.from(esbuild.transformSync(key==='import'?importSource(before.toString('utf8')):before.toString('utf8'),{format:'esm',target:'es2022',minify:true,keepNames:true,legalComments:'inline'}).code),out='server/'+key+'/index.mjs';fs.mkdirSync(path.dirname(path.join(base,out)),{recursive:true});fs.writeFileSync(path.join(base,out),after,{flag:'wx'});changes.push({path:out,sourcePath:source,beforeSha256:hash(before),afterSha256:hash(after),method:key==='import'?(inputKind==='uk'?'Verified raster surface bindings and versioned asset namespace; ES module minification':'Retained fleet logo bindings and versioned asset namespace; ES module minification'):'ES module minification only, names retained'});}
   const assets=path.join(directory,deploy.assetPath);for(const name of walk(assets)){if(name==='_headers'){headers.push(fs.readFileSync(path.join(assets,name),'utf8'));continue;}if(name==='.assetsignore'||name==='.vite'||name.startsWith('.vite/')||name==='vinext-client-entry-manifest.json')continue;if(key==='import'&&/\.[cm]?js$/.test(name)){const original=fs.readFileSync(path.join(assets,name)),branded=Buffer.from(importSource(original.toString('utf8'))),target='public/'+importName(name);fs.mkdirSync(path.dirname(path.join(base,target)),{recursive:true});fs.writeFileSync(path.join(base,target),branded,{flag:'wx'});if(!original.equals(branded))changes.push({path:target,beforeSha256:hash(original),afterSha256:hash(branded),method:inputKind==='uk'?'Bind exact dark-on-light and white-on-dark Import logo slots with new immutable asset namespace':'Preserve fleet logo slots with new immutable asset namespace'});}else copy(path.join(assets,name),'public/'+(key==='import'?importName(name):name));}
  }
- fs.writeFileSync(base+'/public/.assetsignore','.vite\n**/.vite\n');fs.writeFileSync(base+'/public/_headers','/*\n  X-Robots-Tag: noindex, nofollow\n\n'+headers.join('\n\n')+'\n');fs.writeFileSync(base+'/server/worker.mjs',singleWorkerSource());
+ fs.writeFileSync(base+'/public/.assetsignore','.vite\n**/.vite\n');fs.writeFileSync(base+'/public/_headers','/*\n  X-Robots-Tag: noindex, nofollow\n\n'+headers.join('\n\n')+'\n');fs.writeFileSync(base+'/server/worker.mjs',singleWorkerSource(freeStaticExperiment));
+ if(freeStaticExperiment)fs.copyFileSync(new URL('./lib/modern-free-static-runtime.mjs',import.meta.url),base+'/server/modern-free-static-runtime.mjs');
  const config={name:identity.workerName,main:'server/worker.mjs',base_dir:'server',compatibility_date:'2026-10-10',compatibility_flags:['nodejs_compat'],workers_dev:true,preview_urls:false,no_bundle:true,find_additional_modules:true,rules:[{type:'ESModule',globs:['**/*.js','**/*.mjs'],fallthrough:true},{type:'CompiledWasm',globs:['**/*.wasm'],fallthrough:true}],observability:{enabled:true},assets:{directory:'./public',binding:'ASSETS',run_worker_first:false}};
+ if(freeStaticExperiment)config.assets.run_worker_first=['/_cars/private/modern/*','/_vinext/static-cache/*'];
  fs.writeFileSync(base+'/wrangler.json',JSON.stringify(config,null,2)+'\n');
  const files=walk(base).map(name=>{const b=fs.readFileSync(path.join(base,name));return {path:name,bytes:b.length,sha256:hash(b)};}),server=files.filter(f=>f.path.startsWith('server/')),serverBytes=server.reduce((s,f)=>s+f.bytes,0),assetFiles=files.filter(f=>f.path.startsWith('public/')).length;
  assert(serverBytes<64*1024**2,'Actual server exceeds the current 64 MiB Worker limit');assert(assetFiles<20000,'Actual static-asset count exceeds Workers Free allowance');assert(files.filter(f=>f.path.startsWith('public/')).every(f=>f.bytes<=25*1024**2),'A static asset exceeds 25 MiB');

@@ -25,7 +25,8 @@ import {assertLeadBranding} from './publishing/lead-branding.mjs';
 import {PUBLIC_ROOTS,familyRetention} from './publishing/vercel-asset-plan.mjs';
 import {applyCloudflareProvider} from './publishing/cloudflare-provider.mjs';
 import {applyCloudflareSvelte,CLOUDFLARE_SVELTE_OUTPUT} from './publishing/cloudflare-svelte.mjs';
-import {resolveCloudflareNpmCli} from './publishing/cloudflare-next.mjs';
+import {resolveCloudflareNpmCli,applyCloudflareNext} from './publishing/cloudflare-next.mjs';
+import {applyModernFreeNativeOverlay,validateModernFreeServicesRequest} from './lib/modern-free-services-build.mjs';
 import {artifactInventory,copyBuildArtifact,assertCompiledConfig,safeArtifactPath} from './lib/uk-cloudflare-artifacts.mjs';
 import {selectPinnedRevisions} from './dealer-updates/three-way-upgrade.mjs';
 import {assertSixDesignSelection} from './lib/six-design-release.mjs';
@@ -209,7 +210,20 @@ async function prepare(slug,key,sha,area,request){
  const newSource=mode==='new-approved'?await newApprovedFleetSource({slug,commit:sha,request,leads:selection(),inventory:registry(),manifest,files}):null;
  const nativeSource=newSource?.nativeSource??existingFleetNativeSource(files,manifest,{candidate,qualificationBytes:fs.existsSync(qualificationFile)?fs.readFileSync(qualificationFile):undefined,qualificationLockBytes:fs.existsSync(qualificationLockFile)?fs.readFileSync(qualificationLockFile):undefined});
  assertAppVariant(files,manifest);assertExtendedVariantSources(files,manifest);
- const inputRows=sourceRows(files),profile=loadDealerProfile(source,slug),workerPrefix=newSource?.workerPrefix??manifest.repository.split('/')[1];
+ const inputRows=sourceRows(files),experimentRequest=request.modernFreeServicesExperiment;
+ let modernFreeServicesExperiment=null;
+ if(experimentRequest!==undefined){
+  const sourceTree=git(ROOT,['rev-parse',sha+':clients/'+slug]);
+  // Validate the request only for its exact selected dealer; no implicit rollout.
+  if(slug!==experimentRequest.dealer)throw Error('Modern experiment request forbids other dealers in this build');
+  validateModernFreeServicesRequest(experimentRequest,{dealer:slug,sourceTree,sourceReleases:manifest.templateSources});
+  if(key==='modern'){
+   git(ROOT,['merge-base','--is-ancestor',experimentRequest.overlayCommit,sha]);
+   const overlaid=applyModernFreeNativeOverlay(files,experimentRequest,{dealer:slug,sourceTree,sourceReleases:manifest.templateSources,sourceCommit:sha,readOverlay:(commit,name)=>Buffer.from(git(ROOT,['show',commit+':'+name],{encoding:null}))});
+   files=overlaid.files;modernFreeServicesExperiment=overlaid.experiment;
+  }
+ }
+ const profile=loadDealerProfile(source,slug),workerPrefix=newSource?.workerPrefix??manifest.repository.split('/')[1];
  const publicOrigin=newSource?.publicOrigin??'https://'+workerPrefix+'.darkapoparka1.workers.dev';
  manifest.cloudflare={workerPrefix};
  if(!manifest.shareIdentity?.logo?.sourcePath||!files.has(manifest.shareIdentity.logo.sourcePath)||hash(files.get(manifest.shareIdentity.logo.sourcePath))!==manifest.shareIdentity.logo.sha256)throw Error('Preserved dealer share-logo contract differs');
@@ -228,14 +242,14 @@ async function prepare(slug,key,sha,area,request){
  const switcher=fs.readFileSync(path.join(ROOT,'scripts/publishing/preview-switcher.js'),'utf8').replace('__CARS_SWITCHER_CONFIG__',()=>JSON.stringify(config).replace(/</g,'\\u003c'));
  files.set('auto-best/static/preview-switcher.js',Buffer.from(switcher));files.set('dealer.json',encode(manifest));
  const pruned=pruneReviewedAssets(files);files=pruned.files;
- files=await applyCloudflareProvider(files,manifest,{workerPrefix,svelteAdapter:(f,m,o)=>applyCloudflareSvelte(f,m,{...o,serviceKeys:!NEXT.has(key)&&key!=='router'?[key]:['auto-best','import','karento-best']})});
+ files=await applyCloudflareProvider(files,manifest,{workerPrefix,...(modernFreeServicesExperiment?{nextAdapter:(f,m,o)=>applyCloudflareNext(f,m,{...o,modernFreeServicesExperiment})}:{}),svelteAdapter:(f,m,o)=>applyCloudflareSvelte(f,m,{...o,serviceKeys:!NEXT.has(key)&&key!=='router'?[key]:['auto-best','import','karento-best']})});
  files.set('scripts/build-cloudflare-svelte.mjs',fs.readFileSync(path.join(ROOT,'scripts/publishing/cloudflare-svelte.mjs')));
  const assembledRows=sourceRows(files);
  // Materialize only this job's real target, not six installed dependency trees.
  const root=key==='router'?'cloudflare':key;
  const retained=new Map([...files].filter(([name])=>name.startsWith(root+'/')||name.startsWith('scripts/')||!name.includes('/')));
  const packageRoot=path.join(area,'package');writeFiles(packageRoot,retained);
- const provenance={schemaVersion:1,dealer:slug,key,sourceCommit:sha,sourceTree:git(ROOT,['rev-parse',sha+':clients/'+slug]),inputDigest:hash(JSON.stringify(inputRows)),sourceCandidate:newSource?.sourceCandidate??candidate.candidateSourceDigest,sourceReleases:manifest.templateSources,manifest,workerPrefix,publicOrigin,originalSourceUnchanged:true,assembledDigest:hash(JSON.stringify(assembledRows)),targetBeforeDependencies:sourceRows(retained),branding,nativeSource,contracts,contactFallback,presentation,reference,databaseSpecialization,retention:pruned.receipts,nativeApproval:false,hosted:false,...(newSource?{sourceMode:mode,sourcePreparation:newSource}:{})};
+ const provenance={schemaVersion:1,dealer:slug,key,sourceCommit:sha,sourceTree:git(ROOT,['rev-parse',sha+':clients/'+slug]),inputDigest:hash(JSON.stringify(inputRows)),sourceCandidate:newSource?.sourceCandidate??candidate.candidateSourceDigest,sourceReleases:manifest.templateSources,manifest,workerPrefix,publicOrigin,originalSourceUnchanged:true,assembledDigest:hash(JSON.stringify(assembledRows)),targetBeforeDependencies:sourceRows(retained),branding,nativeSource,contracts,contactFallback,presentation,reference,databaseSpecialization,retention:pruned.receipts,...(modernFreeServicesExperiment?{modernFreeServicesExperiment}:{}),nativeApproval:false,hosted:false,...(newSource?{sourceMode:mode,sourcePreparation:newSource}:{})};
  writeJson(path.join(area,'receipts/source.json'),provenance);return {packageRoot,manifest,provenance};
 }
 function installedBin(root,name){
@@ -292,6 +306,14 @@ export async function compile(slug,key){
   writeJson(path.join(artifact,'compiled/deploy.json'),uploadConfig);
   const compiledFiles=filesAt(path.join(artifact,'compiled'),{filter:()=>true}).map(name=>{const b=fs.readFileSync(path.join(artifact,'compiled',name));return {path:'compiled/'+name,bytes:b.length,sha256:hash(b)};});
   const deploy={schemaVersion:1,kind:'existing-fleet-cloudflare-compiled-candidate',dealer:slug,key,provider:'cloudflare',accountId:'cb0007f242077bd759331f096eb75531',workerName:target.workerName,publicOrigin:provenance.publicOrigin,sourceCommit:sha,sourceTree:provenance.sourceTree,inputDigest:provenance.inputDigest,sourceReleases:manifest.templateSources,configPath:'compiled/deploy.json',mainPath:'compiled/'+uploadMain,assetPath:'compiled/'+target.assets,compiledFiles,compiledDigest:hash(JSON.stringify(compiledFiles)),output,runId:process.env.GITHUB_RUN_ID,attempt:process.env.GITHUB_RUN_ATTEMPT,compiled:true,dryRun:true,hosted:false,credentialsIncluded:false,nativeApproval:false};
+  if(target.freeStaticExperiment){
+   if(key!=='modern'||!provenance.modernFreeServicesExperiment)throw Error('Unrequested compiled Modern experiment marker');
+   for(const name of Object.values(target.freeStaticExperiment))if(!compiledFiles.some(row=>row.path==='compiled/'+name))throw Error('Missing sealed compiled experiment member');
+   const proof=read(path.join(artifact,'compiled',target.freeStaticExperiment.receiptPath));
+   if(proof.sourceCommit!==sha||proof.overlayCommit!==provenance.modernFreeServicesExperiment.overlayCommit||proof.requestSha256!==provenance.modernFreeServicesExperiment.requestSha256||proof.sourceTree!==provenance.sourceTree)throw Error('Compiled Modern experiment authority differs');
+   deploy.freeStaticExperiment={manifestPath:'compiled/'+target.freeStaticExperiment.manifestPath,resolverPath:'compiled/'+target.freeStaticExperiment.resolverPath};
+   deploy.freeStaticExperimentReceipt={path:'compiled/'+target.freeStaticExperiment.receiptPath,sha256:hash(fs.readFileSync(path.join(artifact,'compiled',target.freeStaticExperiment.receiptPath))),sourceCommit:sha,overlayCommit:proof.overlayCommit,requestSha256:proof.requestSha256};
+  }
   writeJson(path.join(artifact,'deploy.json'),deploy);Object.assign(result,{status:'passed',compiled:true,dryRun:true,workerName:target.workerName,compiledDigest:deploy.compiledDigest,output});
  }catch(error){Object.assign(result,{status:'failed',error:error.message});throw error;}
  finally{result.finishedAt=new Date().toISOString();writeJson(path.join(area,'receipts/build.json'),result);copyBuildArtifact(path.join(area,'receipts'),path.join(artifact,'receipts'));artifactInventory(artifact,{kind:'existing-fleet-cloudflare-compiled-candidate',dealer:slug,key,status:result.status});console.log(JSON.stringify(result));}

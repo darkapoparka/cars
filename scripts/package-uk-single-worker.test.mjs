@@ -2,7 +2,7 @@ import test from 'node:test';import assert from 'node:assert/strict';import {cre
 import fs from 'node:fs';import os from 'node:os';import path from 'node:path';import {createHash} from 'node:crypto';
 import {artifactInventory} from './lib/uk-cloudflare-artifacts.mjs';
 import {planSixDesignSelection} from './lib/six-design-release.mjs';
-import {scopedGlobalsSource,scopeCompiledModule,singleWorkerSource,inspectSingleWorkerInputs,packageUkSingleWorker} from './package-uk-single-worker.mjs';
+import {scopedGlobalsSource,scopeCompiledModule,singleWorkerSource,inspectSingleWorkerInputs,inspectModernFreeStaticExperiment,packageUkSingleWorker} from './package-uk-single-worker.mjs';
 const require=createRequire(process.env.CARS_ESBUILD_RESOLVE_FROM||import.meta.url),esbuild=require('esbuild');
 const uri=(source,tag)=>'data:text/javascript;base64,'+Buffer.from(source+'\n// '+tag).toString('base64');
 test('framework registries are separate while native constructors remain native',async()=>{
@@ -114,4 +114,55 @@ test('Import-first composition namespaces variant-2 assets while preserving Mode
  assert(!fs.existsSync(path.join(destination,'public/variant-2/_app/client.js')));assert(!fs.existsSync(path.join(destination,'public/variant-3/_app-uk-brand-20261011/client.js')));
  assert(fs.readFileSync(path.join(destination,'server/modern/index.js'),'utf8').includes('modern/variant-3'));assert(fs.readFileSync(path.join(destination,'public/variant-3/_next/static/modern.js'),'utf8').includes('/variant-3'));
  assert(fs.existsSync(path.join(f.inputs.import,'compiled/import/public/variant-2/_app/client.js')));assert.equal(inspectSingleWorkerInputs({inputs:f.inputs,expectedDealer:'fixture'}).identity.inputDigest,f.identity.inputDigest);
+});
+
+function addModernServices(f,mount='/variant-2'){
+ const directory=f.inputs.modern,deployFile=path.join(directory,'deploy.json'),deploy=JSON.parse(fs.readFileSync(deployFile,'utf8')),server=deploy.mainPath.slice(0,-'index.js'.length);
+ const write=(name,value)=>{const file=path.join(directory,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,value);};
+ const routes=['en','bg'].map(locale=>{
+  const bodies={html:'<html lang="'+locale+'"><head><script type="application/json" id="cars-modern-native-preferences">null</script></head><body>Native Services '+locale+'</body></html>',rsc:'0:{"nativeServices":"'+locale+'"}\n'};
+  const row={locale,pathname:mount+'/'+locale+'/services'};
+  for(const kind of ['html','rsc']){const body=bodies[kind];row[kind]={path:'/_cars/private/modern/'+sha(body)+'.'+kind,bytes:Buffer.byteLength(body),sha256:sha(body)};write(deploy.assetPath+row[kind].path,body);}return row;
+ });
+ const manifest={schemaVersion:1,kind:'cars-modern-services-static-experiment',mount,routes};
+ write(server+'cars-free-services.json',JSON.stringify(manifest));
+ write(server+'cars-native-preferences.js','export function resolveCarsNativePreferences({locale,returnTo}){return {state:{locale,country:"BG",suggestedCountry:"BG",promptDismissed:false,source:"default"},returnTo};}\n');
+ deploy.freeStaticExperiment={manifestPath:server+'cars-free-services.json',resolverPath:server+'cars-native-preferences.js'};
+ fs.writeFileSync(deployFile,JSON.stringify(deploy));
+ const reseal=()=>{
+  const current=JSON.parse(fs.readFileSync(deployFile,'utf8')),files=[];
+  const visit=(prefix='compiled')=>{for(const item of fs.readdirSync(path.join(directory,prefix),{withFileTypes:true})){const name=prefix+'/'+item.name;if(item.isDirectory())visit(name);else{const b=fs.readFileSync(path.join(directory,name));files.push({path:name,bytes:b.length,sha256:sha(b)});}}};visit();files.sort((a,b)=>a.path.localeCompare(b.path));
+  current.compiledFiles=files;current.compiledDigest=sha(JSON.stringify(files));fs.writeFileSync(deployFile,JSON.stringify(current));
+  const buildFile=path.join(directory,'receipts/build.json'),build=JSON.parse(fs.readFileSync(buildFile,'utf8'));build.compiledDigest=current.compiledDigest;fs.writeFileSync(buildFile,JSON.stringify(build));f.reseal('modern');
+ };
+ reseal();return {manifest,deploy,write,reseal};
+}
+
+test('explicit sealed Modern Services experiment preserves all six native handlers and emits private snapshot guard only when opted in',t=>{
+ const f=fixture(t),s=addModernServices(f),destination=path.join(f.root,'composed'),receipt=packageUkSingleWorker({inputs:f.inputs,destination,expectedDealer:'fixture',esbuild});
+ assert.equal(receipt.applicationCount,6);assert.equal(receipt.workerCount,1);assert.deepEqual(receipt.composition.serviceBindings,[]);assert.equal(receipt.hostedVerified,false);
+ const worker=fs.readFileSync(path.join(destination,'server/worker.mjs'),'utf8');assert(worker.includes('modernStatic.fetch(request,env)'));for(const family of ['AUTO_BEST','MODERN','IMPORT','APP','MOBILE','KARENTO_BEST'])assert(worker.includes('CARS_'+family+':{fetch:r=>'));
+ assert.doesNotThrow(()=>esbuild.transformSync(worker,{format:'esm',target:'es2022'}));assert(fs.existsSync(path.join(destination,'server/modern/cars-native-preferences.js')));assert(fs.existsSync(path.join(destination,'server/modern-free-static-runtime.mjs')));
+ const config=JSON.parse(fs.readFileSync(path.join(destination,'wrangler.json'),'utf8'));assert.deepEqual(config.assets.run_worker_first,['/_cars/private/modern/*','/_vinext/static-cache/*']);
+ for(const route of s.manifest.routes)for(const kind of ['html','rsc'])assert.equal(sha(fs.readFileSync(path.join(destination,'public'+route[kind].path))),route[kind].sha256);
+ assert.equal(inspectModernFreeStaticExperiment(inspectSingleWorkerInputs({inputs:f.inputs,expectedDealer:'fixture'}).inspected,'/variant-2').routes.length,2);
+});
+
+test('static experiment supports preserved opposite Modern mount and rejects incomplete or unadmitted sealed outputs before composition',async t=>{
+ const other=fixture(t,'existing-fleet','import');addModernServices(other,'/variant-3');assert.doesNotThrow(()=>packageUkSingleWorker({inputs:other.inputs,destination:path.join(other.root,'composed'),expectedDealer:'fixture',esbuild}));
+ const cases=[
+  ['no marker',s=>{const file=path.join(s.directory,'deploy.json'),d=JSON.parse(fs.readFileSync(file,'utf8'));delete d.freeStaticExperiment;fs.writeFileSync(file,JSON.stringify(d));},/Unadmitted private/],
+  ['wrong selected mount',s=>s.write(s.deploy.freeStaticExperiment.manifestPath,JSON.stringify({...s.manifest,mount:'/variant-3',routes:s.manifest.routes.map(r=>({...r,pathname:r.pathname.replace('/variant-2/','/variant-3/')}))})),/mount differs/],
+  ['missing pure module',s=>fs.unlinkSync(path.join(s.directory,s.deploy.freeStaticExperiment.resolverPath)),/Missing bounded compiled/],
+  ['changed snapshot bytes',s=>s.write(s.deploy.assetPath+s.manifest.routes[0].html.path,'changed'),/snapshot differs/],
+  ['unscoped adapter cache',s=>s.write(s.deploy.assetPath+'/_vinext/static-cache/index.json','{}'),/Unscoped native/],
+  ['extra private route',s=>s.write(s.deploy.assetPath+'/_cars/private/modern/'+sha('other')+'.html','other'),/Only four/]
+ ];
+ for(const [name,edit,pattern] of cases)await t.test(name,t=>{const f=fixture(t),s=addModernServices(f);s.directory=f.inputs.modern;edit(s);s.reseal();const destination=path.join(f.root,'refused');assert.throws(()=>packageUkSingleWorker({inputs:f.inputs,destination,expectedDealer:'fixture',esbuild}),pattern);assert.equal(fs.existsSync(destination),false);});
+});
+
+test('ordinary package contains no experiment runtime, private-cache admission or changed asset dispatch',t=>{
+ const f=fixture(t),destination=path.join(f.root,'composed');packageUkSingleWorker({inputs:f.inputs,destination,expectedDealer:'fixture',esbuild});
+ const config=JSON.parse(fs.readFileSync(path.join(destination,'wrangler.json'),'utf8'));assert.equal(config.assets.run_worker_first,false);assert.equal(fs.existsSync(path.join(destination,'server/modern-free-static-runtime.mjs')),false);assert.equal(fs.readFileSync(path.join(destination,'server/worker.mjs'),'utf8'),singleWorkerSource());
+ assert.equal(inspectModernFreeStaticExperiment(inspectSingleWorkerInputs({inputs:f.inputs,expectedDealer:'fixture'}).inspected,'/variant-2'),null);
 });
