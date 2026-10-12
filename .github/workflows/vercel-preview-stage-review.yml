@@ -1,0 +1,62 @@
+name: Reviewed Vercel preview stage
+on:
+  push:
+    branches: [codex/vercel-preview-stage-review-20261012]
+    paths: [.github/workflows/vercel-preview-stage-review.yml]
+permissions:
+  contents: write
+jobs:
+  focused-review:
+    if: ${{ github.repository == 'darkapoparka/cars' && startsWith(github.event.head_commit.message, '[vercel-stage-review] ') }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          persist-credentials: false
+          sparse-checkout: |
+            scripts
+            docs/releases/vercel-existing-refresh
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '22.23.2'
+          package-manager-cache: false
+      - name: Apply the bounded reviewed stage patch
+        run: |
+          python3 - <<'PY'
+          import pathlib,hashlib,subprocess
+          before={'scripts/lib/vercel-native-mapping.mjs':'a2f306612ffe8815af15bfd4cb524b8ed2e6aa267fba505bdcf6ea969c584abc','scripts/lib/native-localization.mjs':'0147129082d093ceee48b59c245a45bd14dddbb36d73e6627fa5c8d6c72b7734','scripts/vercel-native-mapping.test.mjs':'ca1c5eb312212688a8f14db8e27ac9e0625826467bceb0af6f7c3474287531f4'}
+          for p,h in before.items():assert hashlib.sha256(pathlib.Path(p).read_bytes()).hexdigest()==h,p
+          patch=pathlib.Path('docs/releases/vercel-existing-refresh/protected-preview-stage.patch')
+          assert hashlib.sha256(patch.read_bytes()).hexdigest()=='2a77cf07ef51a3cee52bbb425184de0a3a8dedd75d7cfc0cbae1d5a0b4f21d61'
+          subprocess.run(['git','apply','--check',str(patch)],check=True)
+          subprocess.run(['git','apply',str(patch)],check=True)
+          PY
+          node --test scripts/vercel-native-mapping.test.mjs
+          git diff --check
+      - name: Store only reviewed source blobs; never move any branch
+        env:
+          SCOPED_BLOB_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import os,json,pathlib,hashlib,urllib.request,subprocess
+          pins={'scripts/lib/vercel-native-mapping.mjs':'6c749fdc73fbb33e1eb3d1fb24e4a12b4ff3f6cc05ccfa3673af46d1c180f31d','scripts/lib/native-localization.mjs':'2119da3eb297586ba3583b5e811fa4e2614bf59f4214c3c92eacee5c9f459b46','scripts/vercel-native-mapping.test.mjs':'70d75873a56f8078e079d325c6aec7ee7b66d97493e793850a537c5966665b60','scripts/lib/vercel-preview-stage.mjs':'4bcb309feabaa2f8076bcd65e533d5f47ad258553c1bff64f3177357a93fe69b'}
+          token=os.environ.pop('SCOPED_BLOB_TOKEN');rows=[]
+          for p,h in pins.items():
+              raw=pathlib.Path(p).read_bytes();assert hashlib.sha256(raw).hexdigest()==h,p
+              expected=hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()
+              request=urllib.request.Request('https://api.github.com/repos/darkapoparka/cars/git/blobs',data=json.dumps({'content':raw.decode(),'encoding':'utf-8'}).encode(),headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','Content-Type':'application/json','X-GitHub-Api-Version':'2022-11-28'},method='POST')
+              with urllib.request.urlopen(request,timeout=30) as response:value=json.load(response)
+              assert value['sha']==expected
+              rows.append({'path':p,'sha':expected,'sha256':h,'mode':'100644','type':'blob'})
+          receipt={'sourceBase':'27275888ef23e2acef8cb237b8b128484c6a2c40','reviewCommit':os.environ['GITHUB_SHA'],'runId':os.environ['GITHUB_RUN_ID'],'files':rows,'focusedTests':8,'refsMoved':0,'providerWrites':0,'publicAcceptance':False}
+          pathlib.Path('stage-review.json').write_text(json.dumps(receipt,indent=2)+'\n')
+          print(json.dumps(receipt))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: reviewed-vercel-preview-stage-${{ github.run_id }}
+          path: stage-review.json
+          retention-days: 7
