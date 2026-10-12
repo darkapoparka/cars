@@ -79,7 +79,7 @@
   "draft": false,
   "publishable": false,
   "reviewed": true,
-  "reviewedAt": "2026-10-11T23:58:44.827Z",
+  "reviewedAt": "2026-10-12T00:09:11.757Z",
   "qualificationOnly": true,
   "approved": false,
   "nativeApproval": false,
@@ -92,8 +92,8 @@
     "Actual S2 pilot qualification, per-dealer build and hosted acceptance remain deployment gates; all native/hosted/global/owner approval flags remain false."
   ],
   "sourcePreparationCode": {
-    "sourceCommit": "cdb71f380e6c5ddfed0fd420b32db23c13989ff5",
-    "scope": "Maintained published producer includes final derived profile logo-contract correction; regenerate the same three held source candidates and reseal native/catalog/branding/App/source receipts. Preserve original identities, facts, stock, raster bytes, mounts and individually reviewed choices."
+    "sourceCommit": "4d161cc31343a89856b04405c3ffed3f8ae97fe9",
+    "scope": "Maintained published producer includes final derived profile logo-contract correction; regenerate the same three held source candidates and reseal native/catalog/branding/App/source receipts. Preserve original identities, facts, stock, raster bytes, mounts and individually reviewed choices. Exact pack validation applies only to present nonnull derived logo contracts, preserving legacy pack fixtures."
   },
   "sourceOnlyReview": {
     "baselineCommit": "3d758430eb41beb3f3666bf7114d7ee0fc378d3c",
@@ -117,6 +117,8 @@
     "nativeApproval": false,
     "hostedApproval": false,
     "globalReleaseApproval": false,
-    "ownerAccepted": false
+    "ownerAccepted": false,
+    "previousFailedRunId": 38186301327,
+    "producerRepairCommit": "4d161cc31343a89856b04405c3ffed3f8ae97fe9"
   }
 }
