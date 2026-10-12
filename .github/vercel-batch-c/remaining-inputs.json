@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "batch": "C",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "approvedParentLockDigest": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+  "dealers": [
+    "ivo-auto",
+    "kg-team-auto",
+    "texas-drive-auto",
+    "the-dealers-point"
+  ],
+  "inputs": {
+    "ivo-auto": {
+      "candidateLock": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/ivo-auto/qualification-lock.json",
+        "sha256": "e8eaa017636451a54a0cda9ccde47152ec5d58faa750a89371ac184b046dd4e0"
+      },
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/ivo-auto/qualification-context.json",
+        "sha256": "7d96c5f725bb8b18e722d1bb771de72b0a8fa4202477d430537fe6aa791d21dd"
+      },
+      "sourceDeltaReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+        "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
+      },
+      "branding": {
+        "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/ivo-auto/branding.json",
+        "sha256": "46ed5c9a1bc9e5ee9059105eb43b38bf25f2cca62afc16faa1b3bf21755e097b"
+      },
+      "modernCopyReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/ivo-auto/modern-copy-review.json",
+        "sha256": "de3333db2119ddd291f392ffd602df0da413140ad85bb7a4bf3eaa6da349acbe"
+      }
+    },
+    "kg-team-auto": {
+      "candidateLock": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/kg-team-auto/qualification-lock.json",
+        "sha256": "3a23baf2dda5cbd7178c807d6f6df84238b4389f74ae5aead90aa51547de53a6"
+      },
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/kg-team-auto/qualification-context.json",
+        "sha256": "4408ce8663c5fa733078a2287ac9d1da7a88844822818a56f02eb9ddd935dd4c"
+      },
+      "sourceDeltaReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+        "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
+      },
+      "branding": {
+        "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/kg-team-auto/branding.json",
+        "sha256": "0ee8bdfd57b3d24c6a128e2950546f297aca4bba73a14634e6c9ade75aa67fcf"
+      },
+      "modernCopyReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/kg-team-auto/modern-copy-review.json",
+        "sha256": "0df328f95db031d89e69838e99cebf7f51679eca770757c3ac339c468163292e"
+      }
+    },
+    "texas-drive-auto": {
+      "candidateLock": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/texas-drive-auto/qualification-lock.json",
+        "sha256": "a69c9324124f6ead0eb27c07fc4f56ee72d5827571600552509af7a112cf5ba6"
+      },
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/texas-drive-auto/qualification-context.json",
+        "sha256": "8952cfbaa1c521a6700319dae7551d0095bd9653791bd21f16dad5376429f0d8"
+      },
+      "sourceDeltaReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+        "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
+      },
+      "branding": {
+        "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/texas-drive-auto/branding.json",
+        "sha256": "70ca49dc75ed75af4bffe5a5752eaf87d64f4738533ba6154009c550ebf7d9d4"
+      }
+    },
+    "the-dealers-point": {
+      "candidateLock": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/the-dealers-point/qualification-lock.json",
+        "sha256": "a4de338de9abfb6997e591f143c8ca30d5b2ddf4a6c270d52b78af519fa854c3"
+      },
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/the-dealers-point/qualification-context.json",
+        "sha256": "dfd718b23980892688f17fd0023b4e86604c657aad8d54880a6ec36b15ff505b"
+      },
+      "sourceDeltaReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+        "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
+      },
+      "branding": {
+        "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/the-dealers-point/branding.json",
+        "sha256": "0476a23439b016f84979bfee7f6fc7603302014a7db174952c504f9391d6667d"
+      },
+      "modernCopyReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/the-dealers-point/modern-copy-review.json",
+        "sha256": "6c517946bf83d3368e643672b13fb1ba798736158c386a2c03163498c4600e25"
+      }
+    }
+  },
+  "provenance": [
+    {
+      "attachmentPath": "remaining-native-proposal/remaining-sixteen-source-envelopes/payload/docs/releases/cloudflare-existing25-20261011/vercel-existing-source/ordinary-wave05-source-request.json",
+      "sha256": "542a76378dccc064a940fc24e79ccf754f9e5114c8ee74eeeb2e8fdd545d1aac",
+      "selectedDealers": [
+        "ivo-auto",
+        "kg-team-auto"
+      ]
+    },
+    {
+      "attachmentPath": "remaining-native-proposal/remaining-sixteen-source-envelopes/payload/docs/releases/cloudflare-existing25-20261011/vercel-existing-source/ordinary-wave06-source-request.json",
+      "sha256": "c7ddf70b1ae0314dafd5c2ea926ec729587b4791f3be6effd7dd92029b4d3680",
+      "selectedDealers": [
+        "texas-drive-auto",
+        "the-dealers-point"
+      ]
+    }
+  ]
+}
