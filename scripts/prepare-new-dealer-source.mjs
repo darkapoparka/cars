@@ -146,11 +146,28 @@ export function assertNewSourceCiContext({env,checkout,platform=process.platform
 export function validateNewSourceBranchAbsence({dealer,mainCommit,branches}){
  assert(slug(dealer)&&hex40(mainCommit)&&Array.isArray(branches)&&branches.length>0&&branches.length<=256,'Bounded authoritative Cars branch inventory required');const refs=new Set();let folders=0;
  for(const row of branches){assert(typeof row.ref==='string'&&/^refs\/heads\/[^\s\u0000-\u001f:]+$/.test(row.ref)&&hex40(row.commit)&&!refs.has(row.ref)&&Array.isArray(row.clients)&&row.clients.length<=4096,'Invalid or duplicate origin branch proof');refs.add(row.ref);folders+=row.clients.length;assert(row.clients.every(s=>typeof s==='string'&&safe(s)&&!s.includes('/'))&&row.clients.every(s=>norm(s)!==norm(dealer)),'Existing preserved branch dealer requires its own source mode');}
- assert(folders<=32768&&branches.some(r=>r.ref==='refs/heads/main'&&r.commit===mainCommit),'Current main branch lease differs');return {digest:sha256(JSON.stringify([...branches].sort((a,b)=>a.ref.localeCompare(b.ref)))),branches:branches.length,absence:'normalized-dealer-folder-absent-on-current-origin-branches'};
+ assert(folders<=32768&&branches.some(r=>r.ref==='refs/heads/main'&&r.commit===mainCommit),'Current main branch lease differs');
+ const absence='normalized-dealer-folder-absent-on-current-origin-branches';
+ return {digest:sha256(JSON.stringify([...branches].sort((a,b)=>a.ref.localeCompare(b.ref)))),branches:branches.length,absence,leaseDigest:sha256(JSON.stringify({dealer:norm(dealer),mainCommit,absence}))};
 }
 function originBranchAbsence(root,dealer,mainCommit){
  const metadataEnv={GIT_NO_LAZY_FETCH:'1'},heads=git(root,['ls-remote','--heads','origin']).split('\n').filter(Boolean);assert(heads.length>0&&heads.length<=256,'Origin branch inventory exceeds bounded source review');
- const branches=heads.map(line=>{const [commit,ref,...extra]=line.split(/\s+/);assert(!extra.length&&hex40(commit),'Exact origin branch head required');assert(git(root,['cat-file','-e',commit+'^{commit}'],{env:metadataEnv,allowFailure:true})!==null,'Origin branch object missing; establish the reviewed all-branch checkout before source planning');
+ const refs=new Set(),advertised=heads.map(line=>{const [commit,ref,...extra]=line.split(/\s+/);assert(!extra.length&&hex40(commit)&&typeof ref==='string'&&/^refs\/heads\/[^\s\u0000-\u001f:]+$/.test(ref)&&!refs.has(ref),'Exact unique origin branch head required');refs.add(ref);return {commit,ref};});
+ assert(advertised.some(r=>r.ref==='refs/heads/main'&&r.commit===mainCommit),'Current main branch lease differs');
+ const metadataPresent=commit=>{
+  if(git(root,['cat-file','-e',commit+'^{commit}'],{env:metadataEnv,allowFailure:true})===null)return false;
+  const entry=git(root,['ls-tree',commit,'--','clients'],{env:metadataEnv,allowFailure:true});
+  if(entry===null)return false;if(!entry)return true;
+  assert(/^040000 tree [a-f0-9]{40}\tclients$/.test(entry),'Unreviewed branch clients source type');
+  return git(root,['cat-file','-e',entry.split(/\s+/)[2]+'^{tree}'],{env:metadataEnv,allowFailure:true})!==null;
+ };
+ const missing=[...new Set(advertised.filter(r=>!metadataPresent(r.commit)).map(r=>r.commit))];
+ if(missing.length){
+  // Hydrate the exact advertised snapshot without updating branch refs, FETCH_HEAD,
+  // the index or the worktree. blob:none retains only commit/tree metadata.
+  git(root,['fetch','--no-tags','--no-auto-maintenance','--no-write-fetch-head','--no-recurse-submodules','--refmap=','--filter=blob:none','--refetch','origin',...missing],{env:metadataEnv});
+ }
+ const branches=advertised.map(({commit,ref})=>{assert(metadataPresent(commit),'Origin branch metadata hydration failed: '+ref+' '+commit);
   const clientEntry=git(root,['ls-tree',commit,'--','clients'],{env:metadataEnv}),clients=[];if(clientEntry){assert(/^040000 tree [a-f0-9]{40}\tclients$/.test(clientEntry),'Unreviewed branch clients source type');const names=git(root,['ls-tree','-z',commit+':clients'],{env:metadataEnv,encoding:null}).toString('utf8').split('\0').filter(Boolean);for(const row of names){const at=row.indexOf('\t'),name=row.slice(at+1),type=row.slice(0,at).split(' ')[1];assert(at>0&&['blob','tree','commit'].includes(type),'Invalid branch source entry');if(type!=='blob')clients.push(name);}}
   return {ref,commit,clients};});return validateNewSourceBranchAbsence({dealer,mainCommit,branches});
 }
@@ -241,7 +258,7 @@ export async function prepareNewDealerSource({root=ROOT,requestFile,dealer:reque
   writeMap(directory,files,before);
   for(const [name,bytes]of stage.slice(0,3))assert(fs.readFileSync(path.join(directory,name)).equals(bytes),'Authoritative source facts changed during personalization');
   const stable=assertMainCheckout(root);if(qualified){const current=readNewSourceQualification(root,request,row.slug);assert(current.candidateLockBytes.equals(qualified.candidateLockBytes)&&current.qualificationBytes.equals(qualified.qualificationBytes),'Qualification input changed during source creation');}assert(stable.head===baseline.commit&&sha256(fs.readFileSync(path.join(root,'templates.lock.json')))===request.approvedLockSha256,'Canonical main or approved lock changed; preserve candidate and review again');
-  assert(originBranchAbsence(root,row.slug,stable.head).digest===branchAbsence.digest,'Origin branch absence lease changed; preserve candidate and review again');
+  assert(originBranchAbsence(root,row.slug,stable.head).leaseDigest===branchAbsence.leaseDigest,'Origin branch absence lease changed; preserve candidate and review again');
   for(const [k,p]of Object.entries({...row.inputs,identityReview:row.identityReview,...(row.copyReview?{copyReview:row.copyReview}: {})}))assert(readNewSourceInput(root,p,{prefix:NEW_SOURCE_INPUT_ROOT+'/'+row.slug,maxBytes:k==='locale'?16384:2*1024**2}).bytes.equals(inputs[k].bytes),'Reviewed input changed during source creation');
   for(const p of [...media,...brandingRows])readNewSourceInput(root,{path:p.path,sha256:p.sha256},{prefix:NEW_SOURCE_INPUT_ROOT+'/'+row.slug,maxBytes:25*1024**2});
   const canonical=fileMap(directory),modes=new Map(sourceRows.map(r=>[r.path,r.mode]));for(const name of canonical.keys())if(!modes.has(name))modes.set(name,process.platform!=='win32'&&(fs.statSync(path.join(directory,name)).mode&0o111)?'100755':'100644');
