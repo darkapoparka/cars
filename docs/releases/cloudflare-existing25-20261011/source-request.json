@@ -1,8 +1,8 @@
 {
-  "schemaVersion": 1,
-  "mode": "new-approved",
-  "newSourceRequest": {
-    "path": "docs/releases/cloudflare-existing25-20261011/new-source/parallel-batch3-biema-pilot-request.json",
-    "sha256": "c670f848f3b29cbd2800e0143e2ee2fddde284f8de18632d608679ab06aa560d"
-  }
+    "schemaVersion": 1,
+    "mode": "new-approved",
+    "newSourceRequest": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/parallel-batch3-biema-pilot-request.json",
+        "sha256": "c670f848f3b29cbd2800e0143e2ee2fddde284f8de18632d608679ab06aa560d"
+    }
 }
