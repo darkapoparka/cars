@@ -1,7 +1,11 @@
 {
   "schemaVersion": 1,
+  "mode": "new-approved",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
   "dealers": [
-    "priselci"
+    "centralauto-varna",
+    "kalchev-varna",
+    "sevicar-varna"
   ],
   "targets": [
     "auto-best",
@@ -12,52 +16,70 @@
     "karento-best",
     "router"
   ],
-  "requestedAt": "2026-10-12T05:37:37.561Z",
-  "attempt": 16,
+  "requestedAt": "2026-10-12T16:36:02.956Z",
+  "attempt": 1,
+  "newSources": [
+    {
+      "slug": "centralauto-varna",
+      "preparation": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/source-preparation-receipt.json",
+        "sha256": "a7d62f4d4af4df1b2289703c5e49f0e036aca335aabe07710ee340d3c851d72e"
+      },
+      "proposal": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/source-patch.json",
+        "sha256": "56357664562e827668f07d708658274738db65051cb56aa6cdf97f8d85febac9"
+      },
+      "inputMapping": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/input-mapping.json",
+        "sha256": "c708e6079f44c9d2a3e411f1e4501b044c28982eafd65edbe229fa0bfe5c5942"
+      },
+      "publication": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/centralauto-varna/source-publication.json",
+        "sha256": "a135801e577608dda5addf80bd9c666b72117f7218f7b0c2261f7b6154acf92b"
+      }
+    },
+    {
+      "slug": "kalchev-varna",
+      "preparation": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/source-preparation-receipt.json",
+        "sha256": "4cdc48a96d21a919df40d27a8df7d878b3b3b98aad7b884d422644776cfbb8fe"
+      },
+      "proposal": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/source-patch.json",
+        "sha256": "00fd8346a989e3f3bb756bc7689532b2d0ada704b25e860fa9ad26e40da06f48"
+      },
+      "inputMapping": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/input-mapping.json",
+        "sha256": "061fdf1202437c105a40146df0c6eddef7790d957f82ae5e6ca0d9c114b9a328"
+      },
+      "publication": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalchev-varna/source-publication.json",
+        "sha256": "73224e29b36ecd7c85b9730d7bbae71733735f1a6714053469aa8658533ac2a2"
+      }
+    },
+    {
+      "slug": "sevicar-varna",
+      "preparation": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/sevicar-varna/source-preparation-receipt.json",
+        "sha256": "8acb11598e2181917fff268b3dc761ab9758eb58519694a38d5c59113d295002"
+      },
+      "proposal": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/sevicar-varna/source-patch.json",
+        "sha256": "aa267b70c7c5bf081f56396eba0ae84f83c51cf64df5428d28769e2c9ecc030c"
+      },
+      "inputMapping": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/sevicar-varna/input-mapping.json",
+        "sha256": "aad69fed7339a57ff3179eaef45e4eb942a566a85cc428ccfb97927b2c0439d6"
+      },
+      "publication": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/sevicar-varna/source-publication.json",
+        "sha256": "c4a699ea1e6e883f2bbffde935d7b5fb1130284ab2580a1f3010abe49efd1acb"
+      }
+    }
+  ],
   "composition": {
     "reviewed": true,
-    "reviewedAt": "2026-10-12T05:37:37.561Z",
-    "reviewScope": "Recompile unchanged Priselci six-application source 5027934 and native overlay 138b9d9 after the narrow publisher repair that restores the existing preview-switcher script in the experimental generated native Layout and routes canonical captured Services HTML/RSC through CARS_MODERN. The existing script remains the design/admin owner. All seven inputs must share this run, attempt and source commit. Integration15 hosted Services HTML/RSC measured 1/2 and 1/0 ms CPU, but was held because the design FAB was absent. Focused real-router/static/RSC/private-boundary and generated-Layout regression tests pass. Full Modern Free, English inventory copy and fleet acceptance remain pending."
-  },
-  "modernFreeServicesExperiment": {
-    "schemaVersion": 1,
-    "kind": "cars-modern-free-services-build-experiment",
-    "dealer": "priselci",
-    "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-    "sourceTree": "5027934141219c6f8373f95bc239e8b9f5eb12cf",
-    "overlayCommit": "138b9d9aa67f5ebdcf37a74ed91880adda44e793",
-    "files": [
-      {
-        "path": "templates/modern/apps/web/lib/locale-preferences.ts",
-        "beforeGitBlob": "2d96a68a4f4d9e7c5b380b2b83773b59975eb649",
-        "beforeSha256": "4f0a8a7aa9051426865f8a1768cb3c3128a231c62157c39831908bcc47e39b9b",
-        "afterGitBlob": "f7f3653475506b77b1ddb2703c4d83acad0e7732",
-        "afterSha256": "1b631daa87b565243ace37ceed4ff1d97d631627d9502a1a71a79a66a6120776"
-      },
-      {
-        "path": "templates/modern/apps/web/app/[locale]/layout.tsx",
-        "beforeGitBlob": "441993d30db70a4a4be1c2e2f612046486ac18fa",
-        "beforeSha256": "47844fe316a659a66cd1f0508239d5ff20adb286f69fc3e06a6920f24ce0cedc",
-        "afterGitBlob": "601b884c017d2e76810d6450780ab86b87eb16f6",
-        "afterSha256": "5bad37546fc0efa02e1b01a550bb5c0a759df0ebe73f93aeabc24ea45842120e"
-      },
-      {
-        "path": "templates/modern/packages/marketplace-ui/components/locale-preferences.tsx",
-        "beforeGitBlob": "97ddb9fd376edd608343cb1462bd91a7071159d2",
-        "beforeSha256": "156a86190d4498dc205a430a7854982ee869c4b26245266d429a90dd9cbcb3b7",
-        "afterGitBlob": "e6aad355b47dfe521e95ebdfe7633c9e14b3f3ad",
-        "afterSha256": "7ddd20c08869da1b0c6bcbce55ef7be510617197fbeff5e230d57460464177ca"
-      }
-    ],
-    "sourceReseal": {
-      "schemaVersion": 1,
-      "kind": "cars-maintained-pilot-logo-contract-reseal",
-      "predecessorSourceTree": "9b5ad1a83b3442a4f1453169517195afb6fe5a4b",
-      "preparedSourceTree": "5027934141219c6f8373f95bc239e8b9f5eb12cf",
-      "publicationCommit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
-      "sourceRunId": 38189987139,
-      "receiptSha256": "032475f943c5c933d767692a6e9a1049b2703ac4bdaa06e86bbe6c204e43e8fe",
-      "independentHandoffSha256": "614eb2d783aa6a28ce7e14d3040219cc61ded71f88c13e43233fc32892c46814"
-    }
+    "reviewedAt": "2026-10-12T16:36:02.956Z",
+    "reviewScope": "Compile the three actually published, hash-reviewed additional100 dealer trees into three self-contained six-application Workers. Original successful source preparation and exact six-template qualification pins are preserved. This authorizes bounded source/CI composition only, not global template promotion, provider deployment, Vercel changes or hosted acceptance. Each dealer requires all seven current-run internal compile artifacts and zero external design services."
   }
 }
