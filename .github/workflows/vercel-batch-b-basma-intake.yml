@@ -1,0 +1,70 @@
+name: Cars Vercel Batch B retained Basma intake
+on:
+  push:
+    branches: [codex/vercel-batch-b-20261013]
+    paths:
+      - .github/vercel-batch-b-20261013/intake-basma.mjs
+      - .github/workflows/vercel-batch-b-basma-intake.yml
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: cars-vercel-batch-b-source-publication
+  cancel-in-progress: false
+jobs:
+  intake:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      NODE_OPTIONS: --max-old-space-size=6144
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          filter: blob:none
+          persist-credentials: true
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /.github/vercel-batch-b-20261013/
+            /scripts/
+            /templates.lock.json
+            /clients/al-basma-motors/
+            /docs/DEPLOYMENT-INVENTORY.json
+            /docs/releases/**/*.json
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.10.0'
+          package-manager-cache: false
+      - name: Retrieve only the completed immutable Basma proposal
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p runtime/vercel-batch-b-intake/summary
+          gh api repos/darkapoparka/cars/actions/artifacts/11775640622 > runtime/vercel-batch-b-intake/artifact-metadata.json
+          gh api repos/darkapoparka/cars/actions/runs/38312219851/jobs > runtime/vercel-batch-b-intake/source-jobs.json
+          gh api repos/darkapoparka/cars/actions/artifacts/11775640622/zip > runtime/vercel-batch-b-intake/retained.zip
+          echo '0e5544cfc841c01abb4a44221853e1c5160facb7cbb5c11440a7e7a9d056851c  runtime/vercel-batch-b-intake/retained.zip' | sha256sum -c -
+          python - <<'PY'
+          import pathlib,zipfile
+          area=pathlib.Path('runtime/vercel-batch-b-intake'); dest=area/'retained'
+          with zipfile.ZipFile(area/'retained.zip') as z:
+              assert len(z.infolist()) < 30000
+              assert sum(i.file_size for i in z.infolist()) < 4*1024**3
+              for i in z.infolist():
+                  p=pathlib.PurePosixPath(i.filename)
+                  assert not p.is_absolute() and '..' not in p.parts and '\\' not in i.filename
+                  assert (i.external_attr >> 16) & 0o170000 != 0o120000
+              z.extractall(dest)
+          PY
+      - name: Verify the maintained source patch and publish only Batch B Al Basma source
+        run: node .github/vercel-batch-b-20261013/intake-basma.mjs
+      - name: Retain compact publication and preservation receipts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: vercel-batch-b-basma-intake-${{ github.run_id }}
+          path: runtime/vercel-batch-b-intake/summary/
+          if-no-files-found: error
+          retention-days: 7
