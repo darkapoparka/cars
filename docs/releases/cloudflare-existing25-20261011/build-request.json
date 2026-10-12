@@ -12,20 +12,20 @@
     "karento-best",
     "router"
   ],
-  "requestedAt": "2026-10-12T00:25:52.786Z",
-  "attempt": 7,
+  "requestedAt": "2026-10-12T01:29:22.222Z",
+  "attempt": 8,
   "composition": {
     "reviewed": true,
-    "reviewedAt": "2026-10-12T00:25:52.786Z",
-    "reviewScope": "Exact original Priselci source 9b5ad1a83b3442a4f1453169517195afb6fe5a4b with pinned six b1f applications and reviewed factual/raster/native palette contracts. Explicit independently reviewed compile overlay emits only EN/BG Modern Services HTML/RSC from the native graph, with compiled pure preferences and graph receipts. Source review and build request only; native, hosted, full Free and owner acceptance remain false."
+    "reviewedAt": "2026-10-12T01:29:22.222Z",
+    "reviewScope": "Exact source-only maintained Priselci logo-contract reseal502793 from predecessor9b5, actual CI38189987139 reviewed and publishedbf6303. Original pinned six b1f applications, factual consumers, reviewed rasters and native3 before leases preserved. Explicit paired schema2 Services protocol producer/runtime only; native, hosted, Free CPU and owner acceptance remain pending."
   },
   "modernFreeServicesExperiment": {
     "schemaVersion": 1,
     "kind": "cars-modern-free-services-build-experiment",
     "dealer": "priselci",
     "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-    "sourceTree": "9b5ad1a83b3442a4f1453169517195afb6fe5a4b",
-    "overlayCommit": "bfe1cc7e53ed8cfe68395aa97c870c4c8e26904c",
+    "sourceTree": "5027934141219c6f8373f95bc239e8b9f5eb12cf",
+    "overlayCommit": "138b9d9aa67f5ebdcf37a74ed91880adda44e793",
     "files": [
       {
         "path": "templates/modern/apps/web/lib/locale-preferences.ts",
@@ -48,6 +48,16 @@
         "afterGitBlob": "e6aad355b47dfe521e95ebdfe7633c9e14b3f3ad",
         "afterSha256": "7ddd20c08869da1b0c6bcbce55ef7be510617197fbeff5e230d57460464177ca"
       }
-    ]
+    ],
+    "sourceReseal": {
+      "schemaVersion": 1,
+      "kind": "cars-maintained-pilot-logo-contract-reseal",
+      "predecessorSourceTree": "9b5ad1a83b3442a4f1453169517195afb6fe5a4b",
+      "preparedSourceTree": "5027934141219c6f8373f95bc239e8b9f5eb12cf",
+      "publicationCommit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
+      "sourceRunId": 38189987139,
+      "receiptSha256": "032475f943c5c933d767692a6e9a1049b2703ac4bdaa06e86bbe6c204e43e8fe",
+      "independentHandoffSha256": "614eb2d783aa6a28ce7e14d3040219cc61ded71f88c13e43233fc32892c46814"
+    }
   }
 }
