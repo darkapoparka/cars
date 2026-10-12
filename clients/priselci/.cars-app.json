@@ -13,7 +13,7 @@
     "schemaVersion": 1,
     "dealer": "priselci",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "a548e477348043505e02bd1c8e07e404db5cd11737f9bce6cf6a7c24ec7c7f76",
+    "profileSha256": "cada5c0e1154745bdf653e94bfdf52f4c4ec7e79aed8c7ae09c84542d037c4e2",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 16,
     "currency": "EUR",
@@ -516,6 +516,5 @@
     ]
   },
   "needsDealerQA": true,
-  "readyToPublish": false,
-  "refreshedAt": "2026-10-11T22:17:46.873Z"
+  "readyToPublish": false
 }

@@ -35,6 +35,14 @@
       ]
     },
     {
+      "path": "auto-best/src/lib/data/dealer-profile.json",
+      "urls": [
+        "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
+        "/dealer-brand/v2-f18b62d1138c7fae/logo-on-dark.webp",
+        "/dealer-brand/v2-f18b62d1138c7fae/logo-on-accent.webp"
+      ]
+    },
+    {
       "path": "import/docs/desktop-hero-content-2026-10-02/charcoal-2026-10-03/after-matrix.json",
       "urls": [
         "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp"
@@ -81,7 +89,8 @@
       "path": "import/src/lib/data/dealer-profile.json",
       "urls": [
         "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
-        "/dealer-brand/v2-f18b62d1138c7fae/logo-on-dark.webp"
+        "/dealer-brand/v2-f18b62d1138c7fae/logo-on-dark.webp",
+        "/dealer-brand/v2-f18b62d1138c7fae/logo-on-accent.webp"
       ]
     },
     {
@@ -149,7 +158,8 @@
       "path": "modern/packages/marketplace-domain/testing/dealer-profile.json",
       "urls": [
         "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
-        "/dealer-brand/v2-f18b62d1138c7fae/logo-on-dark.webp"
+        "/dealer-brand/v2-f18b62d1138c7fae/logo-on-dark.webp",
+        "/dealer-brand/v2-f18b62d1138c7fae/logo-on-accent.webp"
       ]
     },
     {
@@ -1060,7 +1070,7 @@
   "facts": {
     "business-facts.json": "9cee7116c9be211a1b978d5385c74f2a3009e3f2039333f0263f9bf2039895c0",
     "stock.json": "83b7d7aba1ce7858fb92cce5aecf7cdd3e221102021bee9284a46f842999eaa8",
-    "auto-best/src/lib/data/dealer-profile.json": "a548e477348043505e02bd1c8e07e404db5cd11737f9bce6cf6a7c24ec7c7f76"
+    "auto-best/src/lib/data/dealer-profile.json": "cada5c0e1154745bdf653e94bfdf52f4c4ec7e79aed8c7ae09c84542d037c4e2"
   },
   "changes": [
     {
@@ -1111,7 +1121,7 @@
     {
       "path": "import/src/lib/data/dealer-profile.json",
       "before": "a548e477348043505e02bd1c8e07e404db5cd11737f9bce6cf6a7c24ec7c7f76",
-      "after": "a7d1d2646a93b79ce93231116b89677cb1993cec3f305a203bf87d4a235ad6ab"
+      "after": "cada5c0e1154745bdf653e94bfdf52f4c4ec7e79aed8c7ae09c84542d037c4e2"
     },
     {
       "path": "import/src/lib/server/auxero-listing-data.ts",
@@ -1206,7 +1216,7 @@
     {
       "path": "modern/packages/marketplace-domain/testing/dealer-profile.json",
       "before": "a548e477348043505e02bd1c8e07e404db5cd11737f9bce6cf6a7c24ec7c7f76",
-      "after": "a7d1d2646a93b79ce93231116b89677cb1993cec3f305a203bf87d4a235ad6ab"
+      "after": "cada5c0e1154745bdf653e94bfdf52f4c4ec7e79aed8c7ae09c84542d037c4e2"
     },
     {
       "path": "modern/packages/marketplace-domain/testing/mock-data.ts",
@@ -1217,7 +1227,83 @@
       "path": "modern/packages/marketplace/lead-site.ts",
       "before": "51794b26e8590a6a8b14d9f05f869fbf130d739c0724558df67e37b3cb70e502",
       "after": "28595e232deec25e64fd093a9248d14510558f17ed7beaaaff1ab7979ff8be24"
+    },
+    {
+      "path": "auto-best/src/lib/data/dealer-profile.json",
+      "before": "a548e477348043505e02bd1c8e07e404db5cd11737f9bce6cf6a7c24ec7c7f76",
+      "after": "cada5c0e1154745bdf653e94bfdf52f4c4ec7e79aed8c7ae09c84542d037c4e2"
     }
   ],
-  "hostedQa": false
+  "hostedQa": false,
+  "derivedProfileLogoBindings": [
+    {
+      "path": "auto-best/src/lib/data/dealer-profile.json",
+      "beforeSha256": "a548e477348043505e02bd1c8e07e404db5cd11737f9bce6cf6a7c24ec7c7f76",
+      "afterSha256": "cada5c0e1154745bdf653e94bfdf52f4c4ec7e79aed8c7ae09c84542d037c4e2",
+      "assets": {
+        "onLight": {
+          "publicPath": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
+          "sha256": "1d6128e53c349b8dc5efb86466c6fa240f9e28fbceac5d5407e6cf91a84baf47",
+          "bytes": 386972
+        },
+        "onDark": {
+          "publicPath": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-dark.webp",
+          "sha256": "1517a218e600326a13320e8da8b0a2cd4131ae1a2bf97da9a7b41e99483d8394",
+          "bytes": 408164
+        },
+        "onAccent": {
+          "publicPath": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-accent.webp",
+          "sha256": "1517a218e600326a13320e8da8b0a2cd4131ae1a2bf97da9a7b41e99483d8394",
+          "bytes": 408164
+        }
+      },
+      "factualFieldsUnchanged": true
+    },
+    {
+      "path": "import/src/lib/data/dealer-profile.json",
+      "beforeSha256": "a7d1d2646a93b79ce93231116b89677cb1993cec3f305a203bf87d4a235ad6ab",
+      "afterSha256": "cada5c0e1154745bdf653e94bfdf52f4c4ec7e79aed8c7ae09c84542d037c4e2",
+      "assets": {
+        "onLight": {
+          "publicPath": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
+          "sha256": "1d6128e53c349b8dc5efb86466c6fa240f9e28fbceac5d5407e6cf91a84baf47",
+          "bytes": 386972
+        },
+        "onDark": {
+          "publicPath": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-dark.webp",
+          "sha256": "1517a218e600326a13320e8da8b0a2cd4131ae1a2bf97da9a7b41e99483d8394",
+          "bytes": 408164
+        },
+        "onAccent": {
+          "publicPath": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-accent.webp",
+          "sha256": "1517a218e600326a13320e8da8b0a2cd4131ae1a2bf97da9a7b41e99483d8394",
+          "bytes": 408164
+        }
+      },
+      "factualFieldsUnchanged": true
+    },
+    {
+      "path": "modern/packages/marketplace-domain/testing/dealer-profile.json",
+      "beforeSha256": "a7d1d2646a93b79ce93231116b89677cb1993cec3f305a203bf87d4a235ad6ab",
+      "afterSha256": "cada5c0e1154745bdf653e94bfdf52f4c4ec7e79aed8c7ae09c84542d037c4e2",
+      "assets": {
+        "onLight": {
+          "publicPath": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp",
+          "sha256": "1d6128e53c349b8dc5efb86466c6fa240f9e28fbceac5d5407e6cf91a84baf47",
+          "bytes": 386972
+        },
+        "onDark": {
+          "publicPath": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-dark.webp",
+          "sha256": "1517a218e600326a13320e8da8b0a2cd4131ae1a2bf97da9a7b41e99483d8394",
+          "bytes": 408164
+        },
+        "onAccent": {
+          "publicPath": "/dealer-brand/v2-f18b62d1138c7fae/logo-on-accent.webp",
+          "sha256": "1517a218e600326a13320e8da8b0a2cd4131ae1a2bf97da9a7b41e99483d8394",
+          "bytes": 408164
+        }
+      },
+      "factualFieldsUnchanged": true
+    }
+  ]
 }
