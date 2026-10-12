@@ -1,3 +1,8 @@
+export { projectPublicDemoIdentity, projectPublicDemoDestination, projectPublicDemoMarketplaceListings } from "../public-demo-projection";
+export type { PublicDemoIdentity, NativeMarketplaceInventory } from "../public-demo-projection";
+import { filterMarketplaceListings, getRelatedListingsFromInventory } from "../query";
+export { filterMarketplaceListings, projectMarketplaceListings, getRelatedListingsFromInventory } from "../query";
+export type { MarketplaceListingProjection } from "../query";
 import type { MarketplaceSearchParams } from "../search";
 import type { Money, VehicleListing } from "../types";
 
@@ -644,93 +649,10 @@ export const mockListings: VehicleListing[] = [
   },
 ];
 
-const matchesText = (listing: VehicleListing, query: string) => {
-  const haystack = [
-    listing.title,
-    listing.description,
-    listing.spec.make,
-    listing.spec.model,
-    listing.spec.trim,
-    listing.location.city,
-    listing.seller.displayName,
-  ]
-    .filter(Boolean)
-    .join(" ")
-    .toLowerCase();
-
-  return haystack.includes(query.toLowerCase());
-};
-
-type ListingPredicate = (listing: VehicleListing) => boolean;
-type ListingComparator = (a: VehicleListing, b: VehicleListing) => number;
-
-const createListingPredicates = (
-  filters: MarketplaceSearchParams
-): ListingPredicate[] => [
-  (listing) => listing.status === "active",
-  (listing) => listing.category === filters.category,
-  (listing) => !filters.q || matchesText(listing, filters.q),
-  (listing) => !filters.make || listing.spec.make === filters.make,
-  (listing) => !filters.model || listing.spec.model === filters.model,
-  (listing) => !filters.location || listing.location.city === filters.location,
-  (listing) =>
-    !filters.origin ||
-    listing.supply?.origin.countryCode === filters.origin ||
-    (filters.origin === "BG" &&
-      (listing.location.country === "Bulgaria" ||
-        listing.location.country === "България")),
-  (listing) =>
-    !filters.deliverTo ||
-    listing.supply?.delivery.eligibleCountryCodes.includes(filters.deliverTo) ||
-    (filters.deliverTo === "BG" &&
-      (listing.location.country === "Bulgaria" ||
-        listing.location.country === "България")),
-  (listing) => !filters.currency || listing.price.currency === filters.currency,
-  (listing) =>
-    filters.priceMin === undefined || listing.price.amount >= filters.priceMin,
-  (listing) =>
-    filters.priceMax === undefined || listing.price.amount <= filters.priceMax,
-  (listing) =>
-    filters.yearMin === undefined || listing.spec.year >= filters.yearMin,
-  (listing) =>
-    filters.yearMax === undefined || listing.spec.year <= filters.yearMax,
-  (listing) =>
-    filters.mileageMax === undefined ||
-    listing.spec.mileageValue <= filters.mileageMax,
-  (listing) => !filters.fuel || listing.spec.fuelType === filters.fuel,
-  (listing) =>
-    filters.powerMin === undefined ||
-    (listing.spec.enginePowerHp !== undefined &&
-      listing.spec.enginePowerHp >= filters.powerMin),
-  (listing) =>
-    !filters.extra ||
-    Boolean(listing.features?.some((feature) => feature.en === filters.extra)),
-  (listing) =>
-    !filters.transmission || listing.spec.transmission === filters.transmission,
-  (listing) => !filters.body || listing.spec.bodyType === filters.body,
-  (listing) => !filters.seller || listing.seller.type === filters.seller,
-];
-
-const listingComparators: Record<
-  MarketplaceSearchParams["sort"],
-  ListingComparator
-> = {
-  mileage_asc: (a, b) => a.spec.mileageValue - b.spec.mileageValue,
-  newest: (a, b) =>
-    new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
-  price_asc: (a, b) => a.price.amount - b.price.amount,
-  price_desc: (a, b) => b.price.amount - a.price.amount,
-  recommended: (a, b) => Number(b.promoted) - Number(a.promoted),
-  year_desc: (a, b) => b.spec.year - a.spec.year,
-};
-
-export const getMockListings = (filters: MarketplaceSearchParams) => {
-  const predicates = createListingPredicates(filters);
-
-  return mockListings
-    .filter((listing) => predicates.every((predicate) => predicate(listing)))
-    .sort(listingComparators[filters.sort]);
-};
+const matchesText = filterMarketplaceListings;
+// Preserve the historical dealer inventory replacement boundary above.
+export const getMockListings = (filters: MarketplaceSearchParams) =>
+  matchesText(mockListings, filters);
 
 const legacyListingSlugAliases: Readonly<Record<string, string>> = {
   "audi-q5-45-tfsi-quattro-stara-zagora-2021": "bmw-m4-competition-sofia-2021",
@@ -744,28 +666,8 @@ export const getMockListingBySlug = (slug: string) => {
 export const getMockListingById = (id: string) =>
   mockListings.find((listing) => listing.id === id);
 
-const scoreRelatedListing = (
-  source: VehicleListing,
-  candidate: VehicleListing
-) =>
-  Number(candidate.category === source.category) * 4 +
-  Number(candidate.spec.make === source.spec.make) * 3 +
-  Number(candidate.location.city === source.location.city) * 2 +
-  Number(candidate.promoted);
-
 export const getMockRelatedListings = (source: VehicleListing, limit = 3) =>
-  mockListings
-    .filter(
-      (listing) => listing.status === "active" && listing.id !== source.id
-    )
-    .map((listing) => ({
-      listing,
-      score: scoreRelatedListing(source, listing),
-    }))
-    .sort((a, b) => b.score - a.score)
-    .slice(0, limit)
-    .map(({ listing }) => listing);
-
+  getRelatedListingsFromInventory(mockListings, source, limit);
 export const mockSavedListingIds = ["am-1001", "am-1003", "am-1008"];
 
 export const getMockSavedListings = () =>

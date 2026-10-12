@@ -1,3 +1,4 @@
+import type { NativeListingQuery } from "../lib/native-listing-query-policy";
 import { Button } from "@repo/design-system/components/ui/button";
 import {
   buildMarketplaceSearchHref,
@@ -29,6 +30,7 @@ import { RelatedListingCard } from "./related-listing-card";
 export const ListingDetailContent = ({
   backHref,
   destinationCountryCode,
+  nativeQuery,
   listing,
   locale,
   price,
@@ -38,6 +40,7 @@ export const ListingDetailContent = ({
 }: {
   backHref: string;
   destinationCountryCode?: string;
+  nativeQuery?: NativeListingQuery;
   listing: VehicleListing;
   locale?: string;
   price: Money;
@@ -156,11 +159,14 @@ export const ListingDetailContent = ({
         </div>
       ) : null}
 
-      {relatedListings.length > 0 ? (
+      {(relatedListings.length > 0 || nativeQuery) ? (
         <section
           aria-labelledby="similar-heading"
           className="my-6 lg:my-0 lg:py-8"
           data-slot="listing-related"
+          data-native-detail-atom={nativeQuery ? "related-hidden" : undefined}
+          hidden={nativeQuery?.related.hidden}
+          style={nativeQuery?.related.hidden ? { display: "none" } : undefined}
         >
           <div className="mb-4 flex items-center justify-between gap-2">
             <h2
@@ -174,7 +180,7 @@ export const ListingDetailContent = ({
               className="size-11 shrink-0 rounded-lg p-0 text-zinc-600 shadow-none hover:bg-white hover:text-zinc-950 lg:size-9"
               variant="ghost"
             >
-              <Link aria-label={copy.viewAll} href={backHref}>
+              <Link data-native-detail-atom={nativeQuery ? "back-href" : undefined} aria-label={copy.viewAll} href={backHref}>
                 <ArrowRight aria-hidden="true" className="size-5" />
               </Link>
             </Button>
@@ -191,6 +197,7 @@ export const ListingDetailContent = ({
                 )}
                 key={relatedListing.id}
                 listing={relatedListing}
+                nativeInventorySlot={nativeQuery ? { id: relatedListing.id, hidden: nativeQuery.cards.find(row => row.listing.id === relatedListing.id)?.hidden ?? true } : undefined}
                 locale={locale}
               />
             ))}

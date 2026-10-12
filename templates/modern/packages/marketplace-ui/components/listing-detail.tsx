@@ -1,3 +1,4 @@
+import type { NativeListingQuery } from "../lib/native-listing-query-policy";
 import { cn } from "@repo/design-system/lib/utils";
 import {
   buildMarketplaceSearchHref,
@@ -34,7 +35,8 @@ import { MarketplaceMasthead } from "./marketplace-masthead";
 import { MobileContactBar } from "./mobile-contact-bar";
 import { SellerContactPanel } from "./seller-contact-panel";
 
-interface ListingDetailProps {
+export interface ListingDetailProps {
+  readonly nativeQuery?: NativeListingQuery;
   readonly appBaseUrl?: string;
   readonly contactHref?: string;
   readonly destinationCountryCode?: string;
@@ -59,6 +61,7 @@ export const ListingDetail = ({
   listingUrl,
   locale,
   marketplaceHref,
+  nativeQuery,
   priceIntelligence,
   relatedListings = [],
   sellerOrganizationRole,
@@ -99,6 +102,7 @@ export const ListingDetail = ({
           : "pb-[calc(1rem+env(safe-area-inset-bottom))]"
       )}
       data-slot="listing-detail"
+      data-native-detail-root={nativeQuery?.listing.id}
     >
       <MarketplaceMasthead
         appBaseUrl={appBaseUrl}
@@ -116,6 +120,7 @@ export const ListingDetail = ({
         {isDealershipSite ? null : (
           <DesktopListingSummaryHeader
             backHref={backHref}
+            nativeQuery={nativeQuery}
             listing={listing}
             listingUrl={listingUrl}
             locale={locale}
@@ -132,6 +137,7 @@ export const ListingDetail = ({
             {isDealershipSite ? (
               <DesktopListingSummaryHeader
                 backHref={backHref}
+                nativeQuery={nativeQuery}
                 listing={listing}
                 listingUrl={listingUrl}
                 locale={locale}
@@ -153,6 +159,7 @@ export const ListingDetail = ({
               />
               <MobileListingGalleryActions
                 backHref={backHref}
+                nativeQuery={nativeQuery}
                 listing={listing}
                 listingUrl={listingUrl}
                 locale={locale}
@@ -171,6 +178,7 @@ export const ListingDetail = ({
               <ListingDetailContent
                 backHref={backHref}
                 destinationCountryCode={destinationCountryCode}
+                nativeQuery={nativeQuery}
                 listing={listing}
                 locale={locale}
                 price={primaryPrice}

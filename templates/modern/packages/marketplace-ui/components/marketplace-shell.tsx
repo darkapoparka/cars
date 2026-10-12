@@ -1,5 +1,8 @@
 "use client";
+import { NativeInventoryMetadata } from "./native-inventory-metadata";
 
+import { getMarketplaceMobileQuickFilterItems } from "../lib/native-marketplace-query-policy";
+import { NativeMarketplaceQuerySlotsProvider } from "../lib/native-marketplace-query-slots";
 import { publicBasePath } from "@repo/internationalization/paths";
 import {
   buildMarketplaceSearchHref,
@@ -11,6 +14,9 @@ import {
   type VehicleCategory,
   type VehicleListing,
   type VehicleTaxonomyMakeOption,
+  type NativeMarketplaceInventory,
+  projectPublicDemoIdentity,
+  projectPublicDemoDestination,
   withSearchParamUpdates,
 } from "@repo/marketplace";
 import {
@@ -19,15 +25,18 @@ import {
 } from "@repo/marketplace/inventory-presentation";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import { isDealershipSite, publicSite } from "@repo/marketplace/site-config";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import {
   type ReactNode,
+  type ReactElement,
   useEffect,
   useMemo,
   useRef,
   useState,
   useTransition,
 } from "react";
+import { NativeMarketplaceQuerySync } from "./native-marketplace-query-sync";
+import { getNativeMarketplaceDesktopVariant, projectNativeMarketplaceView, readNativeMarketplaceFilters, type NativeMarketplaceRoute } from "../lib/native-marketplace-inventory";
 import { useMarketplaceOverlayCoordinator } from "../hooks/use-marketplace-overlay-coordinator";
 import {
   useMarketplaceListingViewMode,
@@ -88,62 +97,61 @@ interface MarketplaceShellProps {
     Record<VehicleCategory, VehicleTaxonomyMakeOption[]>
   >;
   totalListings: number;
+  nativeInventory?: NativeMarketplaceInventory;
+  nativeInitialHref?: string;
+  nativeRequestSearch?: string;
+  nativeRoute?: NativeMarketplaceRoute;
+  nativeFragment?: "controls" | "results" | "navigation" | "overlays";
 }
 
 const mobileMarketplaceHeaderClassName =
   "relative z-30 bg-background lg:hidden";
 
-const getCanonicalAppliedSearchLabel = (
-  query: string | undefined,
-  taxonomy: readonly VehicleTaxonomyMakeOption[]
-) => {
-  const normalizedQuery = query?.trim();
 
-  if (!normalizedQuery) {
-    return;
-  }
-
-  const canonicalMatch = taxonomy
-    .flatMap((make) => [
-      make.name,
-      ...make.models.flatMap((model) => [
-        model.name,
-        `${make.name} ${model.name}`,
-      ]),
-    ])
-    .find(
-      (label) =>
-        label.localeCompare(normalizedQuery, undefined, {
-          sensitivity: "base",
-        }) === 0
-    );
-
-  return canonicalMatch ?? normalizedQuery;
-};
-
-export const MarketplaceShell = ({
+const MarketplaceShellBody = ({
   assistantSlot,
   appBaseUrl,
   basePath,
-  desktopSearchVariant = "discovery",
+  desktopSearchVariant: ordinaryDesktopSearchVariant = "discovery",
   desktopDiscoverySlot,
   defaultViewMode = "list",
   filters: initialFilters,
-  inventoryFacets,
+  inventoryFacets: ordinaryInventoryFacets,
   initialDesktopFilterLayout = publicSite.inventory?.desktopFilterLayout ??
     "quick",
-  listings,
-  searchListings = listings,
+  listings: ordinaryListings,
+  searchListings: ordinarySearchListings = ordinaryListings,
   locale,
-  taxonomy = fallbackVehicleTaxonomy,
+  taxonomy: ordinaryTaxonomy = fallbackVehicleTaxonomy,
   taxonomyByCategory,
-  totalListings,
+  totalListings: ordinaryTotalListings,
+  nativeInventory,
+  nativeInitialHref,
+  nativeRequestSearch,
+  nativeRoute,
+  nativeFragment,
 }: MarketplaceShellProps) => {
   const router = useRouter();
   const pathname = usePathname();
-  const [filters, setFilters] = useState(initialFilters);
-  const filtersRef = useRef(initialFilters);
-  const [query, setQuery] = useState(initialFilters.q ?? "");
+  const [filters, setFilters] = useState(() =>
+    nativeInventory && nativeRoute
+      ? readNativeMarketplaceFilters(`${nativeInitialHref ?? `https://native-source.invalid${nativeRoute.basePath}`}?${nativeRequestSearch ?? ""}`, nativeRoute) ?? initialFilters
+      : initialFilters
+  );
+  const filtersRef = useRef(filters);
+  const [query, setQuery] = useState(filters.q ?? "");
+  const nativeView = useMemo(() => nativeInventory ? projectNativeMarketplaceView(nativeInventory, filters) : undefined, [nativeInventory, filters]);
+  const listings = nativeView?.listings ?? ordinaryListings;
+  const nativeListings = useMemo(() => nativeInventory?.listings
+    .map((listing) => projectPublicDemoIdentity(listing, nativeInventory.identity))
+    .map((listing) => projectPublicDemoDestination(listing, filters.deliverTo) ?? listing), [nativeInventory, filters.deliverTo]);
+  const inventoryFacets = nativeView?.facets ?? ordinaryInventoryFacets;
+  const totalListings = nativeView?.totalListings ?? ordinaryTotalListings;
+  const searchListings = nativeView?.searchListings ?? ordinarySearchListings;
+  const taxonomy = nativeInventory ? taxonomyByCategory?.[filters.category] ?? ordinaryTaxonomy : ordinaryTaxonomy;
+  const desktopSearchVariant = nativeInventory && nativeRoute
+    ? getNativeMarketplaceDesktopVariant(filters, nativeRoute, isDealershipSite)
+    : ordinaryDesktopSearchVariant;
   const [desktopFilterLayout, setDesktopFilterLayout] = useState(
     initialDesktopFilterLayout
   );
@@ -186,10 +194,11 @@ export const MarketplaceShell = ({
     useMobileCompactMarketplaceHeader();
 
   useEffect(() => {
+    if (nativeInventory) return;
     filtersRef.current = initialFilters;
     setFilters(initialFilters);
     setQuery(initialFilters.q ?? "");
-  }, [initialFilters]);
+  }, [initialFilters, nativeInventory]);
 
   const currentPath = getMarketplaceCurrentPath({ basePath, locale, pathname });
   const commitFilters = (
@@ -277,59 +286,17 @@ export const MarketplaceShell = ({
     });
   };
 
-  const appliedSearchLabel = useMemo(
-    () => getCanonicalAppliedSearchLabel(filters.q, taxonomy),
-    [filters.q, taxonomy]
-  );
-  const mobileConditionQuickFilterItems = (
-    ["price", "year", "mileage", "fuel", "transmission"] as const
-  )
-    .map((id) => {
-      const activeChip = activeFilterChips.find((chip) => chip.id === id);
-      const label = getMarketplaceQuickFilterLabel(id, filters, locale);
-      let clearLabel: string | undefined;
+  const mobileQuickFilterItems = getMarketplaceMobileQuickFilterItems(filters, locale, taxonomy, Boolean(nativeInventory))
+    .map(item => ({
+      ...item,
+      onClick: item.id === "search-query"
+        ? () => { setQuery(""); commitFilters({ page: 1, q: undefined }); }
+        : item.updates
+          ? () => commitFilters({ ...item.updates, page: 1 })
+          : () => openMarketplaceOverlay(() => setActiveQuickFilter(item.id as QuickFilterKey)),
+    }));
 
-      if (activeChip) {
-        clearLabel = isBg
-          ? `Премахни филтъра ${label}`
-          : `Remove ${label} filter`;
-      }
-
-      return {
-        active: Boolean(activeChip),
-        clearLabel,
-        id,
-        label,
-        onClick: activeChip
-          ? () => commitFilters({ ...activeChip.updates, page: 1 })
-          : () => openMarketplaceOverlay(() => setActiveQuickFilter(id)),
-      };
-    })
-    .sort(
-      (firstItem, secondItem) =>
-        Number(secondItem.active) - Number(firstItem.active)
-    );
-  const mobileQuickFilterItems = [
-    ...(appliedSearchLabel
-      ? [
-          {
-            active: true,
-            clearLabel: isBg
-              ? `Премахни филтъра ${appliedSearchLabel}`
-              : `Remove ${appliedSearchLabel} filter`,
-            id: "search-query",
-            label: appliedSearchLabel,
-            onClick: () => {
-              setQuery("");
-              commitFilters({ page: 1, q: undefined });
-            },
-          },
-        ]
-      : []),
-    ...mobileConditionQuickFilterItems,
-  ];
-
-  return (
+  const content = (
     <>
       <a
         className="fixed top-3 left-3 z-[100] -translate-y-24 rounded-lg bg-foreground px-4 py-3 font-semibold text-background shadow-lg focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
@@ -341,6 +308,7 @@ export const MarketplaceShell = ({
         aria-busy={isNavigating}
         className="min-h-[100dvh] bg-background pb-[calc(5rem+env(safe-area-inset-bottom))] text-foreground lg:pb-0"
         data-slot="marketplace-main"
+        data-native-inventory={nativeInventory?.inventorySeal}
         id="main-content"
         tabIndex={-1}
       >
@@ -457,6 +425,7 @@ export const MarketplaceShell = ({
           hideDesktop={showDealerDesktopLanding}
           isBg={isBg}
           listings={listings}
+          nativeListings={nativeListings}
           locale={locale}
           onApply={commitDesktopFilters}
           onChooseCategory={() =>
@@ -560,4 +529,46 @@ export const MarketplaceShell = ({
       </main>
     </>
   );
+  if (!nativeInventory) return content;
+  if (!nativeRoute) throw new Error("Native marketplace inventory requires an exact route binding");
+  if (nativeFragment) {
+    // Select the actual React-authored children; no HTML or RSC is generated here.
+    // Independent fragment roots need an admitted stable-ID/same-root capture contract.
+    const main = content.props.children[1] as ReactElement<{ children: ReactNode[] }>;
+    const children = main.props.children;
+    const parts = { controls: children.slice(1, 5), results: children.slice(5, 7), navigation: children.slice(7, 8), overlays: children.slice(8) };
+    return <NativeMarketplaceQuerySlotsProvider>{parts[nativeFragment]}</NativeMarketplaceQuerySlotsProvider>;
+  }
+  return (
+    <NativeMarketplaceQuerySlotsProvider>
+      <NativeInventoryMetadata initialHref={nativeInitialHref ?? `https://native-source.invalid${nativeRoute.basePath}`} />
+      <NativeMarketplaceQuerySync
+        route={nativeRoute}
+        inventory={nativeInventory}
+        onChange={(next) => {
+          if (JSON.stringify(filtersRef.current) === JSON.stringify(next)) return;
+          filtersRef.current = next;
+          setFilters(next);
+          setQuery(next.q ?? "");
+          setCategoryOpen(false);
+          setMakeModelOpen(false);
+          setSearchOpen(false);
+          setFilterOpen(false);
+          setActiveQuickFilter(null);
+        }}
+      />
+      {content}
+    </NativeMarketplaceQuerySlotsProvider>
+  );
 };
+
+/** Native producer entry; render inside the same compiled graph/root as hydration. */
+export const NativeMarketplaceShellFragment = (props: MarketplaceShellProps & { nativeInventory: NativeMarketplaceInventory; nativeRoute: NativeMarketplaceRoute; nativeFragment: NonNullable<MarketplaceShellProps["nativeFragment"]> }) => <MarketplaceShell {...props} />;
+export type { NativeMarketplaceRoute } from "../lib/native-marketplace-inventory";
+
+const NativeMarketplaceShellRequest = (props: MarketplaceShellProps) => {
+  const search = useSearchParams();
+  return <MarketplaceShellBody {...props} nativeRequestSearch={search.toString()} />;
+};
+export const MarketplaceShell = (props: MarketplaceShellProps) => props.nativeInventory
+  ? <NativeMarketplaceShellRequest {...props} /> : <MarketplaceShellBody {...props} />;

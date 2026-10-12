@@ -1,9 +1,12 @@
+import { getNativeMarketplaceRedirect } from "../../../../../packages/marketplace-ui/lib/native-marketplace-inventory";
+import { createNativeInitialHref, getNativeCompositionInventory } from "@/lib/native-composition-mode";
 import {
   buildMarketplaceSearchHref,
   createMarketplaceSearchParams,
   getVehicleCategory,
   parseMarketplaceSearchParams,
   type VehicleCategory,
+  type NativeMarketplaceInventory,
 } from "@repo/marketplace";
 import {
   getInventoryLayoutCookieName,
@@ -22,6 +25,7 @@ import {
   getPublicVehicleTaxonomies,
   normalizePublicShowroomFilters,
   PUBLIC_LISTING_PAGE_SIZE,
+  getPublicNativeMarketplaceInventory,
 } from "@/lib/public-marketplace-data";
 import { getMarketplacePageRedirect } from "@/lib/public-marketplace-pagination";
 import { requirePublicSitePath } from "@/lib/public-site-access";
@@ -36,16 +40,22 @@ interface CategoryMarketplacePageProps {
   make?: string;
   model?: string;
   routePath?: string;
+  nativeInventory?: NativeMarketplaceInventory;
+  nativeInitialHref?: string;
+  nativeFragment?: "controls" | "results" | "navigation" | "overlays";
   searchParams: Record<string, string | string[] | undefined>;
 }
 
-export const CategoryMarketplacePage = async ({
+const OriginalCategoryMarketplacePage = async ({
   category,
   locale,
   make,
   model,
   routePath,
   searchParams,
+  nativeInventory,
+  nativeInitialHref,
+  nativeFragment,
 }: CategoryMarketplacePageProps) => {
   const normalizedLocale = normalizeSeoLocale(locale);
   const categoryPath = routePath ?? getVehicleCategory(category).path;
@@ -120,6 +130,10 @@ export const CategoryMarketplacePage = async ({
             )?.value,
             publicSite.inventory?.desktopFilterLayout ?? "quick"
           )}
+          nativeInventory={nativeInventory}
+          nativeInitialHref={nativeInitialHref}
+          nativeRoute={nativeInventory ? { basePath, category, make, model, supportsDiscoveryPresentation } : undefined}
+          nativeFragment={nativeFragment}
           inventoryFacets={facets}
           listings={listings}
           locale={normalizedLocale}
@@ -131,7 +145,7 @@ export const CategoryMarketplacePage = async ({
           taxonomyByCategory={taxonomyByCategory}
           totalListings={totalListings}
         />
-        <Footer locale={normalizedLocale} />
+        {nativeFragment ? null : <Footer locale={normalizedLocale} />}
       </>
     );
   } catch (error) {
@@ -146,4 +160,22 @@ export const CategoryMarketplacePage = async ({
       </PublicMarketplaceFrame>
     );
   }
+};
+
+/** Explicit same-graph producer entry; ordinary route exports remain unchanged. */
+export const NativeCategoryMarketplacePage = (props: CategoryMarketplacePageProps & { inventorySeal: string }) =>
+  CategoryMarketplacePage({ ...props, nativeInventory: getPublicNativeMarketplaceInventory(props.inventorySeal) });
+
+/** Provider-only native route consumer binding, including existing make/model callers. */
+export const CategoryMarketplacePage = (props: CategoryMarketplacePageProps) => {
+  const inventory = props.nativeInventory ?? getNativeCompositionInventory();
+  const basePath = getLocalizedPath(normalizeSeoLocale(props.locale), props.routePath ?? getVehicleCategory(props.category).path);
+  if (inventory) {
+    const supportsDiscoveryPresentation = isDealershipSite || ((props.category === "car" || props.category === "lease") && props.make === undefined && props.model === undefined);
+    const target = getNativeMarketplaceRedirect(createNativeInitialHref(basePath, props.searchParams), { basePath, category: props.category, make: props.make, model: props.model, supportsDiscoveryPresentation }, inventory);
+    if (target) redirect(target);
+  }
+  return OriginalCategoryMarketplacePage({ ...props, nativeInventory: inventory,
+    searchParams: inventory ? {} : props.searchParams,
+    nativeInitialHref: inventory ? createNativeInitialHref(basePath, {}) : undefined });
 };

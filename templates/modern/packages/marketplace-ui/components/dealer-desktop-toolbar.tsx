@@ -1,5 +1,6 @@
 "use client";
 
+import { useNativeMarketplaceQuerySlots } from "../lib/native-marketplace-query-slots";
 import type { MarketplaceSearchParams } from "@repo/marketplace";
 import { publicSite } from "@repo/marketplace/site-config";
 import { getMarketplaceResultTitle } from "../lib/marketplace-results-toolbar-policy";
@@ -23,6 +24,7 @@ export type DealerDesktopToolbarProps = {
 );
 
 export const DealerDesktopToolbar = (props: DealerDesktopToolbarProps) => {
+  const nativeSlots = useNativeMarketplaceQuerySlots();
   const { filters, locale } = props;
   const openSection = (section: DesktopFullFilterEntry) => {
     if (!props.loading) {
@@ -43,6 +45,7 @@ export const DealerDesktopToolbar = (props: DealerDesktopToolbarProps) => {
                 publicSite.artwork.heroScene)
           }
           locale={locale}
+          nativeQueryTitle={nativeSlots}
           title={getMarketplaceResultTitle(filters, locale)}
           variant="inventory"
         >

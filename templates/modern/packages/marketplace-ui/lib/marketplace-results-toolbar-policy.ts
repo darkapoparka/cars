@@ -293,3 +293,13 @@ export const getActiveFilterChips = (
 
   return chips;
 };
+
+/** Fixed source-owned slots; labels and removal updates still come from the native evaluator. */
+export const nativeMarketplaceChipIds = ["q", "make-model", "location", "deliver-to", "origin", "price", "year", "mileage", "power", "extra", "body", "fuel", "transmission", "seller"] as const;
+export const getNativeMarketplaceChipSlots = (chips: readonly ActiveFilterChip[]) => {
+  const selected = new Map(chips.map(chip => [chip.id, chip]));
+  if (selected.size !== chips.length || chips.some(chip => !(nativeMarketplaceChipIds as readonly string[]).includes(chip.id))) {
+    throw new Error("Native query chips require the admitted source slot set");
+  }
+  return nativeMarketplaceChipIds.map(id => ({ ...(selected.get(id) ?? { id, label: "", updates: {} }), hidden: !selected.has(id) }));
+};

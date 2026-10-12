@@ -1,3 +1,4 @@
+import type { NativeListingQuery } from "../lib/native-listing-query-policy";
 import { Button } from "@repo/design-system/components/ui/button";
 import {
   formatMoney,
@@ -34,12 +35,14 @@ import { ListingBackLink } from "./listing-back-link";
 
 export const DesktopListingSummaryHeader = ({
   backHref,
+  nativeQuery,
   listing,
   listingUrl,
   locale,
   saveHref,
 }: {
   backHref: string;
+  nativeQuery?: NativeListingQuery;
   listing: VehicleListing;
   listingUrl: string;
   locale?: string;
@@ -52,7 +55,7 @@ export const DesktopListingSummaryHeader = ({
     return (
       <div className="hidden lg:block" data-slot="listing-summary-header">
         <div data-slot="listing-utility-row">
-          <ListingBackLink data-slot="listing-desktop-back" href={backHref}>
+          <ListingBackLink data-native-detail-atom={nativeQuery ? "back-href" : undefined} data-slot="listing-desktop-back" href={backHref}>
             <ArrowLeft aria-hidden size={18} />
             {copy.backToSearch}
           </ListingBackLink>
@@ -95,7 +98,7 @@ export const DesktopListingSummaryHeader = ({
         className="h-10 shrink-0 gap-1.5 rounded-lg px-3 text-foreground shadow-none"
         variant="secondary"
       >
-        <ListingBackLink href={backHref}>
+        <ListingBackLink data-native-detail-atom={nativeQuery ? "back-href" : undefined} href={backHref}>
           <ArrowLeft aria-hidden="true" className="size-4" />
           {copy.backToSearch}
         </ListingBackLink>
@@ -127,12 +130,14 @@ export const DesktopListingSummaryHeader = ({
 
 export const MobileListingGalleryActions = ({
   backHref,
+  nativeQuery,
   listing,
   listingUrl,
   locale,
   saveHref,
 }: {
   backHref: string;
+  nativeQuery?: NativeListingQuery;
   listing: VehicleListing;
   listingUrl: string;
   locale?: string;
@@ -152,7 +157,7 @@ export const MobileListingGalleryActions = ({
         size="icon"
         variant="secondary"
       >
-        <ListingBackLink href={backHref}>
+        <ListingBackLink data-native-detail-atom={nativeQuery ? "back-href" : undefined} href={backHref}>
           <ArrowLeft aria-hidden="true" className="size-5" />
         </ListingBackLink>
       </Button>

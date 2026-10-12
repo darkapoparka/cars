@@ -48,6 +48,7 @@ export const VehicleCard = ({
   desktopSurface = "inventory",
   href,
   listing: sourceListing,
+  nativeInventorySlot,
   locale,
   presentation = "default",
   priceInsight,
@@ -86,7 +87,7 @@ export const VehicleCard = ({
     imageSizes = `(max-width: 1023px) ${mobileVehicleCardImageSizes}, ${desktopImageSizes}`;
   }
 
-  return (
+  const card = (
     <article
       className={cn(
         styles.card,
@@ -104,6 +105,9 @@ export const VehicleCard = ({
       data-desktop-surface={desktopSurface}
       data-presentation={presentation}
       data-slot="vehicle-card"
+      data-native-listing-slot={nativeInventorySlot?.id}
+      hidden={nativeInventorySlot?.hidden}
+      style={nativeInventorySlot?.hidden ? { display: "none" } : undefined}
       data-view-mode={viewMode}
       onClickCapture={() => rememberInventoryReturn(listingHref)}
     >
@@ -126,11 +130,13 @@ export const VehicleCard = ({
           aria-label={getVehicleCardViewListingLabel(listing.title, locale)}
           className="absolute inset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
           href={listingHref}
+          data-native-card-link={nativeInventorySlot?.id}
         >
           <Image
             alt={primaryImage?.alt ?? listing.title}
             className="object-cover object-[center_60%]"
             fill
+            data-native-card-image={nativeInventorySlot?.id}
             loading={priority ? "eager" : "lazy"}
             onError={() => {
               setImageFailed(true);
@@ -190,6 +196,7 @@ export const VehicleCard = ({
       </div>
 
       <VehicleCardContent
+        nativeListingSlot={nativeInventorySlot?.id}
         compactDesktopGrid={hasCompactDesktopGrid}
         desktopHeadingLevel={desktopHeadingLevel}
         isDesktopComparison={isDesktopComparison}
@@ -204,4 +211,11 @@ export const VehicleCard = ({
       />
     </article>
   );
+  return nativeInventorySlot ? (
+    <>
+      <template data-native-listing-start={nativeInventorySlot.id} hidden style={{ display: "none" }} />
+      {card}
+      <template data-native-listing-end={nativeInventorySlot.id} hidden style={{ display: "none" }} />
+    </>
+  ) : card;
 };

@@ -23,6 +23,7 @@ export interface DealerDesktopHeroProps {
   locale?: string;
   sceneTone?: "standard" | "quiet" | "editorial";
   title: string;
+  nativeQueryTitle?: boolean;
   variant?: "landing" | "inventory" | "page" | "compact" | "service";
   vehicleArtwork?: typeof publicSite.artwork.desktopDiscoveryVehicles;
 }
@@ -149,6 +150,7 @@ export function DealerDesktopHero({
   artwork,
   locale,
   title,
+  nativeQueryTitle,
   controls,
   eyebrow,
   loading = false,
@@ -185,7 +187,7 @@ export function DealerDesktopHero({
           {eyebrow}
         </p>
       ) : null}
-      <h1 className={loading ? styles.loadingTitle : undefined} id={titleId}>
+      <h1 data-native-query-slot={nativeQueryTitle && variant === "inventory" ? "inventory-title" : undefined} className={loading ? styles.loadingTitle : undefined} id={titleId}>
         {title}
       </h1>
     </div>

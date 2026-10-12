@@ -1,5 +1,7 @@
 "use client";
 
+import { getMakeModelValue, getConditionsValue } from "../lib/native-marketplace-query-policy";
+import { useNativeMarketplaceQuerySlots } from "../lib/native-marketplace-query-slots";
 import { cn } from "@repo/design-system/lib/utils";
 import type { VehicleCategory } from "@repo/marketplace";
 import {
@@ -83,6 +85,7 @@ interface MobileCompactSearchHeaderProps {
 
 interface MobileQuickFilterItem {
   readonly active: boolean;
+  readonly hidden?: boolean;
   readonly clearLabel?: string;
   readonly id: string;
   readonly label: string;
@@ -105,29 +108,6 @@ const categoryLabels: Record<VehicleCategory, { bg: string; en: string }> = {
   van: { bg: "Бусове", en: "Vans" },
 };
 
-const getMakeModelValue = (label: string, isBg: boolean) => {
-  if (label === "Марка и модел") {
-    return "Всички марки";
-  }
-
-  if (label === "Make and model") {
-    return "All makes";
-  }
-
-  return label || (isBg ? "Всички марки" : "All makes");
-};
-
-const getConditionsValue = (filterCount: number, isBg: boolean) => {
-  if (filterCount > 0) {
-    if (isBg && filterCount === 1) {
-      return "1 активен";
-    }
-
-    return isBg ? `${filterCount} активни` : `${filterCount} active`;
-  }
-
-  return isBg ? "Всички" : "All";
-};
 
 const MobileSearchButton = ({
   hasMakeModelSelection,
@@ -145,7 +125,9 @@ const MobileSearchButton = ({
   readonly onDark?: boolean;
   readonly onOpenSearch: () => void;
   readonly searchLabel: string;
-}) => (
+}) => {
+  const nativeSlots = useNativeMarketplaceQuerySlots();
+  return (
   <button
     aria-haspopup="dialog"
     aria-label={
@@ -160,6 +142,7 @@ const MobileSearchButton = ({
         : "bg-zinc-100 ring-zinc-200/80 hover:bg-zinc-200 focus-visible:outline-ring",
       isCompact ? "h-11 flex-1 px-3" : "w-full"
     )}
+    data-native-query-slot={nativeSlots ? "mobile-search-trigger" : undefined}
     data-slot="mobile-discovery-search"
     onClick={(event) => openFromButton(event, onOpenSearch)}
     type="button"
@@ -169,7 +152,7 @@ const MobileSearchButton = ({
       className={mobileSearchIconClassName}
       strokeWidth={1.75}
     />
-    <span className={mobileSearchTriggerLabelClassName}>
+    <span data-native-query-slot={nativeSlots ? "mobile-search-label" : undefined} className={mobileSearchTriggerLabelClassName}>
       {hasMakeModelSelection ? makeModelValue : searchLabel}
     </span>
     {isCompact ? null : (
@@ -181,6 +164,7 @@ const MobileSearchButton = ({
     )}
   </button>
 );
+};
 
 const MobileCompactDiscoverySurface = ({
   category,
@@ -203,6 +187,7 @@ const MobileCompactDiscoverySurface = ({
   readonly onOpenSearch: () => void;
   readonly searchLabel: string;
 }) => {
+  const nativeSlots = useNativeMarketplaceQuerySlots();
   const makeModelValue = getMakeModelValue(makeModelLabel, isBg);
   const hasMakeModelSelection =
     makeModelValue !== "Всички марки" && makeModelValue !== "All makes";
@@ -241,14 +226,15 @@ const MobileCompactDiscoverySurface = ({
           filterCount > 0 ? ` (${filterCount})` : ""
         }`}
         className={mobileHeaderIconActionClassName}
+        data-native-query-slot={nativeSlots ? "mobile-filter-trigger" : undefined}
         data-slot="mobile-discovery-filters"
         onClick={(event) => openFromButton(event, onOpenFilters)}
         title={getConditionsValue(filterCount, isBg)}
         type="button"
       >
         <DealerMobileHeaderIcon icon={SlidersHorizontal} kind="filters" />
-        {filterCount > 0 ? (
-          <span className="absolute -top-1 -right-1 grid min-h-5 min-w-5 place-items-center rounded-full bg-brand px-1 font-semibold text-brand-foreground text-micro ring-2 ring-zinc-950">
+        {filterCount > 0 || nativeSlots ? (
+          <span data-native-query-slot={nativeSlots ? "mobile-filter-count" : undefined} hidden={nativeSlots ? filterCount === 0 : undefined} style={nativeSlots && filterCount === 0 ? { display: "none" } : undefined} className="absolute -top-1 -right-1 grid min-h-5 min-w-5 place-items-center rounded-full bg-brand px-1 font-semibold text-brand-foreground text-micro ring-2 ring-zinc-950">
             {filterCount}
           </span>
         ) : null}
@@ -260,7 +246,9 @@ const MobileCompactDiscoverySurface = ({
 export const MobileDealerQuickFilters = ({
   items,
   isBg,
-}: MobileDealerQuickFiltersProps) => (
+}: MobileDealerQuickFiltersProps) => {
+  const nativeSlots = useNativeMarketplaceQuerySlots();
+  return (
   <div
     // The pill fill sits 2px inside its tap target; keep each visible gap at 12px.
     className={cn(
@@ -280,12 +268,27 @@ export const MobileDealerQuickFilters = ({
           aria-label={item.clearLabel}
           aria-pressed={item.active}
           className={cn("snap-start", getMobileQuickPillClassName(item.active))}
+          data-native-query-slot={nativeSlots ? `mobile-pill:${item.id}` : undefined}
+          hidden={nativeSlots ? item.hidden : undefined}
+          style={nativeSlots && item.hidden ? { display: "none" } : undefined}
           key={item.id}
           onClick={(event) => openFromButton(event, item.onClick)}
           type="button"
         >
-          <span className="max-w-36 truncate">{item.label}</span>
-          {item.clearLabel ? (
+          <span data-native-query-slot={nativeSlots ? `mobile-pill-label:${item.id}` : undefined} className="max-w-36 truncate">{item.label}</span>
+          {nativeSlots ? <><X
+              data-native-query-slot={nativeSlots ? `mobile-pill-clear:${item.id}` : undefined}
+              style={nativeSlots && !item.clearLabel ? { display: "none" } : undefined}
+              aria-hidden="true"
+              className="size-3.5 opacity-80"
+              strokeWidth={2.5}
+            /><ChevronDown
+              data-native-query-slot={nativeSlots ? `mobile-pill-open:${item.id}` : undefined}
+              style={nativeSlots && item.clearLabel ? { display: "none" } : undefined}
+              aria-hidden="true"
+              className="size-3 opacity-60"
+              strokeWidth={2.5}
+            /></> : item.clearLabel ? (
             <X
               aria-hidden="true"
               className="size-3.5 opacity-80"
@@ -297,12 +300,13 @@ export const MobileDealerQuickFilters = ({
               className="size-3 opacity-60"
               strokeWidth={2.5}
             />
-          )}
+          )} 
         </button>
       ))}
     </MobilePillRail>
   </div>
 );
+};
 
 export const MobileCompactSearchHeader = ({
   category,
@@ -349,6 +353,7 @@ export const MobileDealerDiscoveryHeader = ({
   onOpenFilters,
   onOpenSearch,
 }: MobileDealerDiscoveryHeaderProps) => {
+  const nativeSlots = useNativeMarketplaceQuerySlots();
   const makeModelValue = getMakeModelValue(makeModelLabel, isBg);
   const hasMakeModelSelection =
     makeModelValue !== "Всички марки" && makeModelValue !== "All makes";
@@ -379,14 +384,15 @@ export const MobileDealerDiscoveryHeader = ({
                 filterCount > 0 ? ` (${filterCount})` : ""
               }`}
               className={mobileHeaderIconActionClassName}
-              data-slot="mobile-discovery-filters"
+              data-native-query-slot={nativeSlots ? "mobile-filter-trigger" : undefined}
+        data-slot="mobile-discovery-filters"
               onClick={(event) => openFromButton(event, onOpenFilters)}
               title={getConditionsValue(filterCount, isBg)}
               type="button"
             >
               <DealerMobileHeaderIcon icon={SlidersHorizontal} kind="filters" />
-              {filterCount > 0 ? (
-                <span className="absolute -top-1 -right-1 grid min-h-5 min-w-5 place-items-center rounded-full bg-brand px-1 font-semibold text-brand-foreground text-micro ring-2 ring-zinc-950">
+              {filterCount > 0 || nativeSlots ? (
+                <span data-native-query-slot={nativeSlots ? "mobile-filter-count" : undefined} hidden={nativeSlots ? filterCount === 0 : undefined} style={nativeSlots && filterCount === 0 ? { display: "none" } : undefined} className="absolute -top-1 -right-1 grid min-h-5 min-w-5 place-items-center rounded-full bg-brand px-1 font-semibold text-brand-foreground text-micro ring-2 ring-zinc-950">
                   {filterCount}
                 </span>
               ) : null}

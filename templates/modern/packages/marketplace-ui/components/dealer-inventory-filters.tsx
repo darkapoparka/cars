@@ -1,3 +1,4 @@
+import { useNativeMarketplaceQuerySlots } from "../lib/native-marketplace-query-slots";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -22,7 +23,7 @@ import {
   X,
 } from "lucide-react";
 import { useDesktopMarketplaceViewport } from "../hooks/use-desktop-marketplace-viewport";
-import { getActiveFilterChips } from "../lib/marketplace-results-toolbar-policy";
+import { getActiveFilterChips, getNativeMarketplaceChipSlots } from "../lib/marketplace-results-toolbar-policy";
 import styles from "./dealer-inventory.module.css";
 import { DealerInventorySummary } from "./dealer-inventory-summary";
 
@@ -167,11 +168,14 @@ function DealerInventoryAppliedFilters({
   onApply: (updates: Partial<MarketplaceSearchParams>) => void;
   onClearFilters: () => void;
 }) {
+  const nativeSlots = useNativeMarketplaceQuerySlots();
   const chips = getActiveFilterChips(filters, locale);
+  const chipSlots = nativeSlots ? getNativeMarketplaceChipSlots(chips) : chips.map(chip => ({ ...chip, hidden: false }));
   return (
     <fieldset
       aria-label={isBg ? "Приложени филтри" : "Applied filters"}
       className={styles.activeFilters}
+      data-native-query-slot={nativeSlots ? "applied-filters" : undefined}
       data-slot="dealer-inventory-applied-filters"
       hidden={chips.length === 0}
     >
@@ -187,23 +191,29 @@ function DealerInventoryAppliedFilters({
           }
         }}
       >
-        {chips.map((chip) => (
+        {chipSlots.map((chip) => (
           <button
             aria-label={`${isBg ? "Премахни" : "Remove"}: ${chip.label}`}
             className={styles.activeFilter}
+            data-native-query-slot={nativeSlots ? `chip:${chip.id}` : undefined}
+            hidden={nativeSlots ? chip.hidden : undefined}
+            style={nativeSlots && chip.hidden ? { display: "none" } : undefined}
             data-filter-id={chip.id}
             data-slot="dealer-inventory-active-filter"
             key={chip.id}
             onClick={() => onApply(chip.updates)}
             type="button"
           >
-            <span>{chip.label}</span>
+            <span data-native-query-slot={nativeSlots ? `chip-label:${chip.id}` : undefined}>{chip.label}</span>
             <X aria-hidden="true" size={14} />
           </button>
         ))}
-        {chips.length > 0 && (
+        {(chips.length > 0 || nativeSlots) && (
           <button
             className={styles.clearFilters}
+            data-native-query-slot={nativeSlots ? "clear-all-filters" : undefined}
+            hidden={nativeSlots ? chips.length === 0 : undefined}
+            style={nativeSlots && chips.length === 0 ? { display: "none" } : undefined}
             data-slot="desktop-clear-all-filters"
             onClick={onClearFilters}
             type="button"

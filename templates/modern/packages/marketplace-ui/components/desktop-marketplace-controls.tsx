@@ -1,5 +1,6 @@
 "use client";
 
+import { useNativeMarketplaceQuerySlots } from "../lib/native-marketplace-query-slots";
 import { Button } from "@repo/design-system/components/ui/button";
 import { cn } from "@repo/design-system/lib/utils";
 import type {
@@ -31,6 +32,7 @@ const MobileNarrowFilterTrigger = ({
   isBg: boolean;
   onOpenFilters?: () => void;
 }) => {
+  const nativeSlots = useNativeMarketplaceQuerySlots();
   if (!onOpenFilters) {
     return null;
   }
@@ -38,6 +40,7 @@ const MobileNarrowFilterTrigger = ({
   const label = isBg ? "Филтри" : "Filters";
   return (
     <Button
+      data-native-query-slot={nativeSlots ? "narrow-filter-trigger" : undefined}
       aria-label={`${label}${
         activeFilterCount > 0 ? ` (${activeFilterCount})` : ""
       }`}
@@ -49,8 +52,8 @@ const MobileNarrowFilterTrigger = ({
     >
       <SlidersHorizontal aria-hidden="true" className="size-4" />
       <span>{label}</span>
-      {activeFilterCount > 0 ? (
-        <span className="grid min-h-4 min-w-4 place-items-center rounded-full bg-brand px-1 font-semibold text-brand-foreground text-micro">
+      {activeFilterCount > 0 || nativeSlots ? (
+        <span data-native-query-slot={nativeSlots ? "narrow-filter-count" : undefined} hidden={nativeSlots ? activeFilterCount === 0 : undefined} style={nativeSlots && activeFilterCount === 0 ? { display: "none" } : undefined} className="grid min-h-4 min-w-4 place-items-center rounded-full bg-brand px-1 font-semibold text-brand-foreground text-micro">
           {activeFilterCount}
         </span>
       ) : null}
@@ -78,6 +81,7 @@ export const ResultToolbar = ({
   viewMode: ListingViewMode;
 }) => {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
+  const nativeSlots = useNativeMarketplaceQuerySlots();
   const formattedCount = formatVehicleCount(
     totalListings,
     filters.category,
@@ -89,8 +93,11 @@ export const ResultToolbar = ({
   const ResultsHeading = isDealershipSite ? "h2" : "h1";
 
   const clearFiltersButton =
-    activeFilterCount > 0 && onClearFilters ? (
+    (activeFilterCount > 0 || nativeSlots) && onClearFilters ? (
       <Button
+        data-native-query-slot={nativeSlots ? "toolbar-clear-filters" : undefined}
+        hidden={nativeSlots ? activeFilterCount === 0 : undefined}
+        style={nativeSlots && activeFilterCount === 0 ? { display: "none" } : undefined}
         aria-label={clearFiltersLabel}
         className="h-8 gap-1.5 rounded-lg px-2.5 text-meta max-[359px]:hidden"
         onClick={onClearFilters}
@@ -106,6 +113,7 @@ export const ResultToolbar = ({
     <>
       <ResultsHeading
         className="sr-only"
+        data-native-query-slot={nativeSlots ? "toolbar-result-title" : undefined}
         data-slot="marketplace-results-heading"
       >
         {resultTitle}
@@ -118,12 +126,13 @@ export const ResultToolbar = ({
         }
       >
         <div className="flex min-w-0 items-baseline gap-3">
-          <p className="font-semibold text-foreground text-page-title tracking-heading lg:text-page-title-lg">
+          <p data-native-query-slot={nativeSlots ? "toolbar-result-title" : undefined} className="font-semibold text-foreground text-page-title tracking-heading lg:text-page-title-lg">
             {resultTitle}
           </p>
           <p
             aria-live="polite"
             className="text-meta text-muted-foreground"
+            data-native-query-slot={nativeSlots ? "toolbar-result-count" : undefined}
             data-slot="marketplace-results-count"
           >
             {formattedCount}
@@ -139,12 +148,13 @@ export const ResultToolbar = ({
         )}
       >
         <div className="min-w-0 flex-1">
-          <p className="truncate font-semibold text-card-title tracking-heading">
+          <p data-native-query-slot={nativeSlots ? "toolbar-result-title" : undefined} className="truncate font-semibold text-card-title tracking-heading">
             {resultTitle}
           </p>
           <p
             aria-live="polite"
             className="text-meta text-muted-foreground"
+            data-native-query-slot={nativeSlots ? "toolbar-result-count" : undefined}
             data-slot="marketplace-results-count"
           >
             {formattedCount}

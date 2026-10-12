@@ -1,5 +1,6 @@
 "use client";
 
+import { useNativeMarketplaceQuerySlots } from "../lib/native-marketplace-query-slots";
 import { cn } from "@repo/design-system/lib/utils";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import { useRouter } from "next/navigation";
@@ -72,6 +73,7 @@ export const DesktopSearchAssistant = ({
   searchActionLabel,
   scope,
 }: DesktopSearchAssistantProps) => {
+  const nativeSlots = useNativeMarketplaceQuerySlots();
   const appearanceClasses = getSearchAppearanceClasses(appearance);
   const router = useRouter();
   const [ready, setReady] = useState(false);
@@ -225,6 +227,7 @@ export const DesktopSearchAssistant = ({
             autoComplete="off"
             className="min-w-0 flex-1 bg-transparent text-compact-control outline-none placeholder:text-muted-foreground"
             disabled={!ready}
+            data-native-query-slot={nativeSlots ? "search-query-input" : undefined}
             name="q"
             onChange={(event) => {
               onQueryChange(event.target.value);

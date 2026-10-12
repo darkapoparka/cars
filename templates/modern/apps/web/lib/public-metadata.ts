@@ -1,3 +1,5 @@
+import { getPublicSearchRobots } from "./native-public-search-metadata";
+export { getPublicSearchRobots } from "./native-public-search-metadata";
 import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite } from "@repo/marketplace";
 import { isDealershipSite } from "@repo/marketplace/site-config";
@@ -17,22 +19,6 @@ export type PublicSearchParams = Record<string, string | string[] | undefined>;
 
 export const PUBLIC_SOCIAL_IMAGE_PATH = "/-/opengraph-image.png";
 
-const hasSearchCriteria = (searchParams?: PublicSearchParams): boolean =>
-  Object.values(searchParams ?? {}).some((value) =>
-    Array.isArray(value)
-      ? value.some((entry) => entry.trim().length > 0)
-      : typeof value === "string" && value.trim().length > 0
-  );
-
-export const getPublicSearchRobots = (
-  searchParams?: PublicSearchParams
-): Metadata["robots"] | undefined =>
-  hasSearchCriteria(searchParams)
-    ? {
-        follow: true,
-        index: false,
-      }
-    : undefined;
 
 export const getPublicInventoryRobots = (
   searchParams?: PublicSearchParams

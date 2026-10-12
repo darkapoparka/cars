@@ -1,5 +1,8 @@
 "use client";
 
+import { getHeroCategoryLabel, getHeroPriceLabel, getSearchOptions } from "../lib/native-sidebar-query-policy";
+
+import { useNativeMarketplaceQuerySlots } from "../lib/native-marketplace-query-slots";
 import { Button } from "@repo/design-system/components/ui/button";
 import {
   buildMarketplaceSearchHref,
@@ -59,25 +62,8 @@ const searchActionLabels = {
   hero: ["Търси", "Search"],
   inventory: ["Търси автомобили", "Search cars"],
 } as const;
-function getHeroCategoryLabel(
-  category: MarketplaceSearchParams["category"],
-  isBg: boolean
-) {
-  if (category === "car") {
-    return isBg ? "Автомобили" : "All Cars";
-  }
-  return getLocalizedDesktopCategoryLabel(category, isBg);
-}
-function getHeroPriceLabel(
-  filters: MarketplaceSearchParams,
-  isBg: boolean,
-  formatter: Intl.NumberFormat
-) {
-  if (filters.priceMin || filters.priceMax) {
-    return getDesktopPriceQuickFilterLabel(filters, isBg, formatter);
-  }
-  return isBg ? "Всяка цена" : "Any Price";
-}
+
+
 
 export interface DealerHeroSearchProps {
   assistantSlot?: ReactNode;
@@ -110,6 +96,7 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
     taxonomy = fallbackVehicleTaxonomy,
     taxonomyByCategory,
   } = props;
+  const nativeSlots = useNativeMarketplaceQuerySlots();
   const router = useRouter();
   const isDesktop = useDesktopMarketplaceViewport();
   const [filters, setFilters] = useState(initialFilters);
@@ -205,6 +192,7 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
         data-slot="dealer-desktop-toolbar"
       >
         <form
+          data-native-query-scope={nativeSlots ? "sidebar-search" : undefined}
           aria-busy={pending}
           aria-label={text("Търсене на автомобили", "Vehicle search")}
           className={styles.form}
@@ -291,12 +279,13 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
                   aria-haspopup="dialog"
                   aria-pressed={Boolean(filters.make)}
                   className={fieldClassName}
+                  data-native-query-slot={nativeSlots ? "sidebar-trigger:make" : undefined}
                   data-slot="desktop-hero-make"
                   onClick={() => openOverlay(() => setMakeModelStep("make"))}
                   type="button"
                   variant="outline"
                 >
-                  <span>
+                  <span data-native-query-slot={nativeSlots ? "sidebar-label:make" : undefined}>
                     {filters.make || text("Всички марки", "All Makes")}
                   </span>
                   <ChevronDown aria-hidden="true" className="size-4" />
@@ -311,12 +300,13 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
                   aria-haspopup="dialog"
                   aria-pressed={Boolean(filters.model)}
                   className={fieldClassName}
+                  data-native-query-slot={nativeSlots ? "sidebar-trigger:model" : undefined}
                   data-slot="desktop-hero-model"
                   onClick={() => openOverlay(() => setMakeModelStep("model"))}
                   type="button"
                   variant="outline"
                 >
-                  <span>
+                  <span data-native-query-slot={nativeSlots ? "sidebar-label:model" : undefined}>
                     {filters.model || text("Всички модели", "All Models")}
                   </span>
                   <ChevronDown aria-hidden="true" className="size-4" />
@@ -650,33 +640,7 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
   );
 }
 
-function getSearchOptions(
-  searchListings: readonly InventorySearchListing[] | undefined,
-  filters: MarketplaceSearchParams,
-  isBg: boolean
-) {
-  const locationOptions = [
-    ...new Set([
-      ...(searchListings ?? []).flatMap((listing) =>
-        listing.location?.city ? [listing.location.city] : []
-      ),
-      ...(filters.location ? [filters.location] : []),
-    ]),
-  ]
-    .sort()
-    .map((city) => ({ value: city, label: city }));
-  const equipmentOptions = Array.from(
-    new Map(
-      (searchListings ?? [])
-        .flatMap((listing) => listing.features ?? [])
-        .map((feature) => [
-          feature.en,
-          { value: feature.en, label: isBg ? feature.bg : feature.en },
-        ])
-    ).values()
-  );
-  return { locationOptions, equipmentOptions };
-}
+
 
 function SearchDraftStatus({
   filterCount,
@@ -689,12 +653,13 @@ function SearchDraftStatus({
   isBg: boolean;
   onReset: () => void;
 }) {
-  if (!(filterCount || query)) {
+  const nativeSlots = useNativeMarketplaceQuerySlots();
+  if (!(filterCount || query || nativeSlots)) {
     return null;
   }
   return (
-    <div className={styles.footer}>
-      <span aria-live="polite" className={styles.draftStatus}>
+    <div data-native-query-slot={nativeSlots ? "sidebar-draft-status" : undefined} hidden={nativeSlots ? !(filterCount || query) : undefined} style={nativeSlots && !(filterCount || query) ? { display: "none" } : undefined} className={styles.footer}>
+      <span data-native-query-slot={nativeSlots ? "sidebar-draft-status-text" : undefined} aria-live="polite" className={styles.draftStatus}>
         {filterCount
           ? `${isBg ? "Избрани филтри" : "Filters selected"}: ${filterCount}`
           : `${isBg ? "Търсене" : "Search"}: ${query}`}

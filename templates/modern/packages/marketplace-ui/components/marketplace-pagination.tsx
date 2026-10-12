@@ -1,3 +1,4 @@
+import { getPaginationCopy, getVisiblePages, getNativeMarketplacePaginationSlots } from "../lib/marketplace-pagination-policy";
 import { cn } from "@repo/design-system/lib/utils";
 import {
   buildMarketplaceSearchHref,
@@ -14,39 +15,9 @@ interface MarketplacePaginationProps {
   locale?: string;
   pageSize?: number;
   totalListings: number;
+  nativeSlotTotalListings?: number;
 }
 
-const getPaginationCopy = (locale?: string) => {
-  const isBg = locale?.trim().toLowerCase().startsWith("bg") ?? false;
-
-  return isBg
-    ? {
-        nav: "Страници с резултати от обяви",
-        next: "Напред",
-        nextLabel: "Следваща страница с резултати",
-        pageLabel: (page: number) => `Страница ${page} с резултати`,
-        previous: "Назад",
-        previousLabel: "Предишна страница с резултати",
-      }
-    : {
-        nav: "Marketplace result pages",
-        next: "Next",
-        nextLabel: "Next results page",
-        pageLabel: (page: number) => `Results page ${page}`,
-        previous: "Previous",
-        previousLabel: "Previous results page",
-      };
-};
-
-const getVisiblePages = (currentPage: number, totalPages: number) => {
-  const visibleCount = Math.min(5, totalPages);
-  const firstPage = Math.max(
-    1,
-    Math.min(currentPage - 2, totalPages - visibleCount + 1)
-  );
-
-  return Array.from({ length: visibleCount }, (_, index) => firstPage + index);
-};
 
 export const MarketplacePagination = ({
   basePath,
@@ -54,16 +25,20 @@ export const MarketplacePagination = ({
   locale,
   pageSize = DEFAULT_PAGE_SIZE,
   totalListings,
+  nativeSlotTotalListings,
 }: MarketplacePaginationProps) => {
   const totalPages = Math.ceil(totalListings / pageSize);
 
-  if (totalPages <= 1) {
+  const nativeSlots = nativeSlotTotalListings !== undefined;
+  if (!nativeSlots && totalPages <= 1) {
     return null;
   }
 
   const currentPage = Math.min(Math.max(filters.page, 1), totalPages);
   const copy = getPaginationCopy(locale);
-  const pages = getVisiblePages(currentPage, totalPages);
+  const pages = nativeSlots
+    ? getNativeMarketplacePaginationSlots(currentPage, totalPages, Math.ceil(nativeSlotTotalListings / pageSize))
+    : getVisiblePages(currentPage, totalPages).map(page => ({ page, hidden: false }));
   const getHref = (page: number) =>
     buildMarketplaceSearchHref({ ...filters, page }, basePath);
   const pageLinkClassName =
@@ -71,14 +46,20 @@ export const MarketplacePagination = ({
 
   return (
     <nav
+      data-native-query-slot={nativeSlots ? "pagination" : undefined}
+      hidden={nativeSlots ? totalPages <= 1 : undefined}
+      style={nativeSlots && totalPages <= 1 ? { display: "none" } : undefined}
       aria-label={copy.nav}
       className="mt-5 flex flex-wrap items-center justify-center gap-2 pb-2"
     >
-      {currentPage > 1 && (
+      {(currentPage > 1 || nativeSlots) && (
         <Link
+          data-native-query-slot={nativeSlots ? "pagination-prev" : undefined}
+          hidden={nativeSlots ? currentPage <= 1 : undefined}
+          style={nativeSlots && currentPage <= 1 ? { display: "none" } : undefined}
           aria-label={copy.previousLabel}
           className={pageLinkClassName}
-          href={getHref(currentPage - 1)}
+          href={getHref(Math.max(1, currentPage - 1))}
           rel="prev"
         >
           <ChevronLeft aria-hidden="true" className="h-4 w-4" />
@@ -88,8 +69,11 @@ export const MarketplacePagination = ({
         </Link>
       )}
 
-      {pages.map((page) => (
+      {pages.map(({ page, hidden }) => (
         <Link
+          data-native-query-slot={nativeSlots ? `pagination-page:${page}` : undefined}
+          hidden={nativeSlots ? hidden : undefined}
+          style={nativeSlots && hidden ? { display: "none" } : undefined}
           aria-current={page === currentPage ? "page" : undefined}
           aria-label={copy.pageLabel(page)}
           className={cn(
@@ -104,11 +88,14 @@ export const MarketplacePagination = ({
         </Link>
       ))}
 
-      {currentPage < totalPages && (
+      {(currentPage < totalPages || nativeSlots) && (
         <Link
+          data-native-query-slot={nativeSlots ? "pagination-next" : undefined}
+          hidden={nativeSlots ? currentPage >= totalPages : undefined}
+          style={nativeSlots && currentPage >= totalPages ? { display: "none" } : undefined}
           aria-label={copy.nextLabel}
           className={pageLinkClassName}
-          href={getHref(currentPage + 1)}
+          href={getHref(nativeSlots ? Math.max(1, Math.min(totalPages, currentPage + 1)) : currentPage + 1)}
           rel="next"
         >
           <span className="sr-only sm:not-sr-only sm:mr-1">{copy.next}</span>

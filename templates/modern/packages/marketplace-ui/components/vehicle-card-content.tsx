@@ -320,12 +320,14 @@ const VehicleSellerFooter = ({
 };
 
 const VehicleLocationDetails = ({
+  nativeListingSlot,
   deliveryTruth,
   landedCostTruth,
   listing,
   locale,
   physicalLocation,
 }: {
+  nativeListingSlot?: string;
   deliveryTruth: ReturnType<typeof getDeliveryTruth>;
   landedCostTruth: ReturnType<typeof getLandedCostTruth>;
   listing: VehicleListing;
@@ -356,7 +358,7 @@ const VehicleLocationDetails = ({
       {deliveryTruth ? (
         <p className="flex items-start gap-1.5">
           <Truck aria-hidden="true" className="mt-0.5 h-3.5 w-3.5 shrink-0" />
-          <span>
+          <span data-native-card-delivery={nativeListingSlot}>
             {getLocalizedVehicleCardDeliveryLabel(deliveryTruth, locale)}
           </span>
         </p>
@@ -488,10 +490,12 @@ const VehicleProvenanceFooter = ({
 };
 
 const MobileDealerVehicleCardContent = ({
+  nativeListingSlot,
   listing,
   listingHref,
   locale,
 }: {
+  nativeListingSlot?: string;
   listing: VehicleListing;
   listingHref: string;
   locale?: string;
@@ -505,6 +509,7 @@ const MobileDealerVehicleCardContent = ({
       )}
       data-slot="vehicle-card-mobile-content"
       href={listingHref}
+      data-native-card-link={nativeListingSlot}
     >
       <div className={mobileVehicleCardInfoClassName}>
         {heading.brand ? (
@@ -539,6 +544,7 @@ const MobileDealerVehicleCardContent = ({
 };
 
 const ComparisonVehicleCardContent = ({
+  nativeListingSlot,
   desktopHeadingLevel,
   isDesktopComparison,
   listing,
@@ -548,6 +554,7 @@ const ComparisonVehicleCardContent = ({
   presentation,
   sellerOrganizationRole,
 }: {
+  nativeListingSlot?: string;
   desktopHeadingLevel: 2 | 3;
   isDesktopComparison: boolean;
   listing: VehicleListing;
@@ -569,6 +576,7 @@ const ComparisonVehicleCardContent = ({
       )}
       data-slot="vehicle-card-content"
       href={listingHref}
+      data-native-card-link={nativeListingSlot}
     >
       {presentation === "discovery" ? (
         <div data-slot="vehicle-card-title-row">
@@ -619,11 +627,13 @@ const ComparisonVehicleCardContent = ({
 
 /** Compact desktop presentation using the same title, price, media and fact policies as other cards. */
 const ShowroomVehicleCardContent = ({
+  nativeListingSlot,
   compactDesktopGrid,
   listing,
   listingHref,
   locale,
 }: {
+  nativeListingSlot?: string;
   compactDesktopGrid: boolean;
   listing: VehicleListing;
   listingHref: string;
@@ -643,6 +653,7 @@ const ShowroomVehicleCardContent = ({
       className="min-w-0"
       data-slot="vehicle-card-content"
       href={listingHref}
+      data-native-card-link={nativeListingSlot}
     >
       <div data-slot="showroom-vehicle-heading">
         <h3
@@ -685,6 +696,7 @@ const ShowroomVehicleCardContent = ({
 };
 
 const ListVehicleCardContent = ({
+  nativeListingSlot,
   listing,
   listingHref,
   locale,
@@ -693,6 +705,7 @@ const ListVehicleCardContent = ({
   trustSignals,
   variant,
 }: {
+  nativeListingSlot?: string;
   listing: VehicleListing;
   listingHref: string;
   locale?: string;
@@ -714,6 +727,7 @@ const ListVehicleCardContent = ({
       )}
       data-slot="vehicle-card-content"
       href={listingHref}
+      data-native-card-link={nativeListingSlot}
     >
       <h2
         className="line-clamp-2 font-semibold text-card-title text-foreground tracking-heading lg:text-card-title-lg"
@@ -729,6 +743,7 @@ const ListVehicleCardContent = ({
       />
       <VehicleSpecPills listing={listing} locale={locale} />
       <VehicleLocationDetails
+        nativeListingSlot={nativeListingSlot}
         deliveryTruth={deliveryTruth}
         landedCostTruth={landedCostTruth}
         listing={listing}
@@ -751,6 +766,7 @@ const ListVehicleCardContent = ({
 };
 
 export const VehicleCardContent = ({
+  nativeListingSlot,
   compactDesktopGrid,
   desktopHeadingLevel,
   isDesktopComparison,
@@ -763,6 +779,7 @@ export const VehicleCardContent = ({
   trustSignals,
   variant,
 }: {
+  nativeListingSlot?: string;
   compactDesktopGrid: boolean;
   desktopHeadingLevel: 2 | 3;
   isDesktopComparison: boolean;
@@ -779,6 +796,7 @@ export const VehicleCardContent = ({
   if (presentation === "showroom") {
     desktopContent = (
       <ShowroomVehicleCardContent
+        nativeListingSlot={nativeListingSlot}
         compactDesktopGrid={compactDesktopGrid}
         listing={listing}
         listingHref={listingHref}
@@ -788,6 +806,7 @@ export const VehicleCardContent = ({
   } else if (variant === "comparison") {
     desktopContent = (
       <ComparisonVehicleCardContent
+        nativeListingSlot={nativeListingSlot}
         desktopHeadingLevel={desktopHeadingLevel}
         isDesktopComparison={isDesktopComparison}
         listing={listing}
@@ -801,6 +820,7 @@ export const VehicleCardContent = ({
   } else {
     desktopContent = (
       <ListVehicleCardContent
+        nativeListingSlot={nativeListingSlot}
         listing={listing}
         listingHref={listingHref}
         locale={locale}
@@ -814,6 +834,7 @@ export const VehicleCardContent = ({
   return (
     <>
       <MobileDealerVehicleCardContent
+        nativeListingSlot={nativeListingSlot}
         listing={listing}
         listingHref={listingHref}
         locale={locale}

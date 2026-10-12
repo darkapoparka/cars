@@ -1,3 +1,5 @@
+import { nativeQuerySourceMode } from "./cars-native-composition-binding";
+import { getCurrentPublicDataMode } from "./public-data-policy";
 import {
   getVehicleCategory,
   leadSite,
@@ -27,6 +29,7 @@ export const createCategoryMetadata = ({
   model,
   path,
   searchParams,
+  nativeHeadOwned = nativeQuerySourceMode === "original-public-demo-query-v1" && getCurrentPublicDataMode() === "demo",
 }: {
   category: VehicleCategory;
   locale: string;
@@ -34,6 +37,7 @@ export const createCategoryMetadata = ({
   model?: string;
   path?: string;
   searchParams?: PublicSearchParams;
+  nativeHeadOwned?: boolean;
 }): Metadata => {
   const isBg = locale === "bg";
   const categoryName = isBg
@@ -48,7 +52,7 @@ export const createCategoryMetadata = ({
       : `Browse current ${subject.toLowerCase()} from ${leadSite.name} in ${getLeadCopy(locale).city}, ${getLeadCopy(locale).country}.`,
     locale,
     path: path ?? getVehicleCategory(category).path,
-    robots: getPublicInventoryRobots(searchParams),
+    robots: nativeHeadOwned ? undefined : getPublicInventoryRobots(searchParams),
     title: subject,
   });
 };

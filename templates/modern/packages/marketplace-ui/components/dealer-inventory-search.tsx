@@ -1,11 +1,9 @@
+import { useNativeMarketplaceQuerySlots } from "../lib/native-marketplace-query-slots";
 import { Button } from "@repo/design-system/components/ui/button";
 import { type MarketplaceSearchParams, withCategory } from "@repo/marketplace";
 import { ChevronDown, Search, SlidersHorizontal } from "lucide-react";
 import type { MouseEvent } from "react";
-import {
-  getDesktopPriceQuickFilterLabel,
-  getDesktopQuickFilterLabels,
-} from "../lib/desktop-filter-policy";
+import { getNativeMarketplaceInventoryFields } from "../lib/native-marketplace-query-policy";
 import searchStyles from "./dealer-hero-search.module.css";
 import inventoryStyles from "./dealer-inventory.module.css";
 import styles from "./dealer-inventory-search.module.css";
@@ -28,6 +26,7 @@ function SearchField({
   onOpen,
   slot,
   value,
+  nativeField,
 }: {
   active: boolean;
   disabled: boolean;
@@ -35,7 +34,9 @@ function SearchField({
   onOpen: () => void;
   slot: string;
   value: string;
+  nativeField: "make" | "model";
 }) {
+  const nativeSlots = useNativeMarketplaceQuerySlots();
   return (
     <div className={searchStyles.filterField}>
       <Button
@@ -43,6 +44,7 @@ function SearchField({
         aria-label={label}
         aria-pressed={active}
         className={searchStyles.field}
+        data-native-query-slot={nativeSlots ? `inventory-trigger:${nativeField}` : undefined}
         data-slot={slot}
         disabled={disabled}
         onClick={(event) => openFromButton(event, onOpen)}
@@ -50,7 +52,7 @@ function SearchField({
         type="button"
         variant="ghost"
       >
-        <span>{value}</span>
+        <span data-native-query-slot={nativeSlots ? `inventory-label:${nativeField}` : undefined}>{value}</span>
         <ChevronDown aria-hidden="true" className="size-4" />
       </Button>
     </div>
@@ -81,19 +83,15 @@ export function DealerInventorySearch({
   onSearch?: () => void;
   refinementSections?: readonly DesktopFullFilterEntry[];
 }) {
+  const nativeSlots = useNativeMarketplaceQuerySlots();
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const text = (bg: string, en: string) => (isBg ? bg : en);
-  const numberFormatter = new Intl.NumberFormat(isBg ? "bg-BG" : "en-US");
-  const labels = getDesktopQuickFilterLabels(filters, isBg, numberFormatter);
-  const hasPrice =
-    filters.priceMin !== undefined || filters.priceMax !== undefined;
-  const price = hasPrice
-    ? getDesktopPriceQuickFilterLabel(filters, isBg, numberFormatter)
-    : text("Цена", "Price");
+  const { labels, hasPrice, price, make, model } = getNativeMarketplaceInventoryFields(filters, locale);
 
   return (
     <div
       className={styles.controls}
+      data-native-query-scope={nativeSlots ? "inventory-search" : undefined}
       data-slot="dealer-inventory-search-controls"
     >
       <div
@@ -118,6 +116,7 @@ export function DealerInventorySearch({
             }
           />
           <SearchField
+            nativeField="make"
             active={Boolean(filters.make)}
             disabled={disabled}
             label={text("Марка", "Make")}
@@ -127,9 +126,10 @@ export function DealerInventorySearch({
                 ? "desktop-hero-make"
                 : "dealer-inventory-search-field"
             }
-            value={filters.make || text("Всички марки", "All Makes")}
+            value={make}
           />
           <SearchField
+            nativeField="model"
             active={Boolean(filters.model)}
             disabled={disabled}
             label={text("Модел", "Model")}
@@ -139,7 +139,7 @@ export function DealerInventorySearch({
                 ? "desktop-hero-model"
                 : "dealer-inventory-search-field"
             }
-            value={filters.model || text("Всички модели", "All Models")}
+            value={model}
           />
           <Button
             aria-haspopup={onSearch ? undefined : "dialog"}
@@ -214,6 +214,7 @@ export function DealerInventorySearch({
                 aria-pressed={active}
                 className={`${searchStyles.categoryPill} ${styles.refinement}`}
                 disabled={disabled}
+                data-native-query-slot={nativeSlots ? `inventory-trigger:${section}` : undefined}
                 key={section}
                 onClick={(event) =>
                   openFromButton(event, () => onOpenSection(section))
@@ -222,7 +223,7 @@ export function DealerInventorySearch({
                 type="button"
                 variant="ghost"
               >
-                <span>{label}</span>
+                <span data-native-query-slot={nativeSlots ? `inventory-label:${section}` : undefined}>{label}</span>
                 <ChevronDown aria-hidden="true" className="size-4 shrink-0" />
               </Button>
             ))}
@@ -241,8 +242,8 @@ export function DealerInventorySearch({
           >
             <SlidersHorizontal aria-hidden="true" size={18} />
             <span>{text("Филтри", "Filters")}</span>
-            {filterCount > 0 ? (
-              <span className={inventoryStyles.filterBadge}>{filterCount}</span>
+            {filterCount > 0 || nativeSlots ? (
+              <span data-native-query-slot={nativeSlots ? "inventory-filter-count" : undefined} hidden={nativeSlots ? filterCount === 0 : undefined} style={nativeSlots && filterCount === 0 ? { display: "none" } : undefined} className={inventoryStyles.filterBadge}>{filterCount}</span>
             ) : null}
           </Button>
         </fieldset>

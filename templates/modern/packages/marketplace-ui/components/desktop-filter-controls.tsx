@@ -1,5 +1,6 @@
 "use client";
 
+import { useNativeMarketplaceQuerySlots } from "../lib/native-marketplace-query-slots";
 import { Button } from "@repo/design-system/components/ui/button";
 import {
   Dialog,
@@ -181,6 +182,7 @@ export const DesktopQuickFilterDialog = ({
   selected?: string;
   triggerIcon?: ReactNode;
 }) => {
+  const nativeSlots = useNativeMarketplaceQuerySlots();
   const [open, setOpen] = useState(false);
   const [draftSelected, setDraftSelected] = useState(selected);
 
@@ -227,12 +229,13 @@ export const DesktopQuickFilterDialog = ({
           className
         )}
         data-clearable={Boolean(active && onClear)}
+        data-native-query-slot={nativeSlots && dataSlot ? `sidebar-trigger:${dataSlot}` : undefined}
         data-slot={dataSlot}
         type="button"
         variant={active ? "default" : "secondary"}
       >
         {triggerIcon}
-        <span className="min-w-0 truncate">{label}</span>
+        <span data-native-query-slot={nativeSlots && dataSlot ? `sidebar-label:${dataSlot}` : undefined} className="min-w-0 truncate">{label}</span>
         <ChevronDown
           aria-hidden="true"
           className={cn(
@@ -406,6 +409,7 @@ export const DesktopQuickRangeDialog = ({
   title: string;
   triggerIcon?: ReactNode;
 }) => {
+  const nativeSlots = useNativeMarketplaceQuerySlots();
   const [open, setOpen] = useState(false);
   const [draftRange, setDraftRange] = useState<NumericRangeValue>(() =>
     getNormalizedRange(selectedMinimum, selectedMaximum, range)
@@ -459,12 +463,13 @@ export const DesktopQuickRangeDialog = ({
           className
         )}
         data-clearable={Boolean(active && onClear)}
+        data-native-query-slot={nativeSlots && dataSlot ? `sidebar-trigger:${dataSlot}` : undefined}
         data-slot={dataSlot}
         type="button"
         variant={active ? "default" : "secondary"}
       >
         {triggerIcon}
-        <span className="min-w-0 truncate">{label}</span>
+        <span data-native-query-slot={nativeSlots && dataSlot ? `sidebar-label:${dataSlot}` : undefined} className="min-w-0 truncate">{label}</span>
         <ChevronDown
           aria-hidden="true"
           className={cn(

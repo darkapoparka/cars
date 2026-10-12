@@ -1,3 +1,6 @@
+import { createNativeListingStaticMetadata } from "@/lib/native-public-listing-metadata";
+import { NativeListingDetail } from "../../../../../../packages/marketplace-ui/components/native-listing-detail";
+import { createNativeInitialHref, getNativeCompositionInventory, nativeDetailSourceEligible } from "@/lib/native-composition-mode";
 import { getRelatedMarketplaceListings } from "@repo/database/marketplace";
 import {
   buildMarketplaceSearchHref,
@@ -59,13 +62,6 @@ interface ListingPageProps {
 // DYNAMIC_SERVER_USAGE when a database-backed listing is requested.
 export const dynamic = "force-dynamic";
 
-const getAdvertisedPrice = (listing: VehicleListing) =>
-  listing.supply?.nativePrice ?? listing.price;
-
-const getListingDescription = (listing: VehicleListing, locale: string) =>
-  `${formatMoney(getAdvertisedPrice(listing), locale)} - ${listing.spec.year} ${
-    listing.spec.make
-  } ${listing.spec.model} ${locale === "bg" ? "в" : "in"} ${isDealershipSite ? getLeadCopy(locale).city : listing.location.city}.`;
 
 const getAbsoluteUrl = (path: string): string =>
   getCanonicalUrl(path, { baseUrl: getPublicWebBaseUrl() });
@@ -157,22 +153,7 @@ export const generateMetadata = async ({
     });
   }
 
-  const listingUrl = getAbsoluteUrl(
-    getLocalizedPath(normalizeSeoLocale(locale), getListingPath(listing))
-  );
-
-  return createPublicLocalizedMetadata({
-    baseUrl: getPublicWebBaseUrl(),
-    description: getListingDescription(listing, locale),
-    image: listing.images[0]?.url,
-    locale,
-    openGraph: {
-      url: listingUrl,
-    },
-    path: getListingPath(listing),
-    robots: getPublicInventoryRobots(query),
-    title: listing.title,
-  });
+  return createNativeListingStaticMetadata({ listing, locale, query, nativeHeadOwned: nativeDetailSourceEligible() });
 };
 
 const ListingPage = async ({ params, searchParams }: ListingPageProps) => {
@@ -290,6 +271,17 @@ const ListingPage = async ({ params, searchParams }: ListingPageProps) => {
           locale,
         })}
       />
+      {nativeDetailSourceEligible() ? (
+        <NativeListingDetail
+          contactHref={contactHref}
+          homeHref={getLocalizedPath(normalizedLocale, "/")}
+          listingUrl={listingUrl}
+          locale={normalizedLocale}
+          inventory={getNativeCompositionInventory()!}
+          route={{ pathname: new URL(createNativeInitialHref(getLocalizedPath(normalizedLocale, getListingPath(listing)), {})).pathname, listingId: listing.id, locale: normalizedLocale }}
+          initialHref={createNativeInitialHref(getLocalizedPath(normalizedLocale, getListingPath(listing)), {})}
+        />
+      ) : (
       <ListingDetail
         contactHref={contactHref}
         destinationCountryCode={deliverTo}
@@ -300,6 +292,7 @@ const ListingPage = async ({ params, searchParams }: ListingPageProps) => {
         marketplaceHref={marketplaceHref}
         relatedListings={await getRelatedListings(listing, deliverTo)}
       />
+      )}
       <Footer locale={normalizedLocale} />
     </>
   );

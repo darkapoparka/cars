@@ -1,3 +1,4 @@
+import { getNativeImmutablePublicInventory } from "./native-immutable-public-inventory";
 import { requirePublicInventoryScope } from "./public-site-binding";
 import "server-only";
 
@@ -15,7 +16,10 @@ import {
   buildVehicleTaxonomyOptions,
   curatedVehicleTaxonomy,
   getMockListingBySlug,
-  getMockListings,
+  projectPublicDemoIdentity,
+  projectPublicDemoDestination,
+  projectPublicDemoMarketplaceListings,
+  type NativeMarketplaceInventory,
   leadSite,
   type MarketplaceSearchParams,
   mockListings,
@@ -90,57 +94,12 @@ const getDemoListings = (
   listings: VehicleListing[];
   totalListings: number;
 } => {
-  const categoryCountMap = new Map<VehicleCategory, number>();
-  for (const listing of mockListings) {
-    categoryCountMap.set(
-      listing.category,
-      (categoryCountMap.get(listing.category) ?? 0) + 1
-    );
-  }
-  const filtered = getMockListings({ ...filters, page: 1 });
-  const modelCountListings = getMockListings({
-    ...filters,
-    derivative: undefined,
-    make: undefined,
-    model: undefined,
-    page: 1,
-    trim: undefined,
-  });
-  const modelCountMap = new Map<string, MarketplaceModelInventoryCount>();
-
-  for (const listing of modelCountListings) {
-    const key = `${listing.spec.make}\u0000${listing.spec.model}`;
-    const current = modelCountMap.get(key);
-    modelCountMap.set(key, {
-      count: (current?.count ?? 0) + 1,
-      make: listing.spec.make,
-      model: listing.spec.model,
-    });
-  }
-
-  const offset = (filters.page - 1) * PUBLIC_LISTING_PAGE_SIZE;
-
-  return {
-    facets: {
-      categoryCounts: [...categoryCountMap].map(([category, count]) => ({
-        category,
-        count,
-      })),
-      modelCounts: [...modelCountMap.values()].sort(
-        (left, right) =>
-          left.make.localeCompare(right.make) ||
-          left.model.localeCompare(right.model)
-      ),
-      status: "exact",
-    },
-    listings: filtered
-      .slice(offset, offset + PUBLIC_LISTING_PAGE_SIZE)
-      .map(withLeadSiteDemoIdentity)
-      .map(
-        (listing) => withDemoDestination(listing, filters.deliverTo) ?? listing
-      ),
-    totalListings: filtered.length,
-  };
+  return projectPublicDemoMarketplaceListings(
+    mockListings,
+    filters,
+    PUBLIC_LISTING_PAGE_SIZE,
+    leadSite
+  );
 };
 
 const requireDatabaseOrDemo = () => {
@@ -184,98 +143,10 @@ interface PublicListingOptions {
   destinationCountryCode?: string;
 }
 
-function withDemoDestination(
-  listing: VehicleListing | undefined,
-  destinationCountryCode?: string
-): VehicleListing | null {
-  if (!(listing?.supply && destinationCountryCode)) {
-    return listing ?? null;
-  }
+const withDemoDestination = projectPublicDemoDestination;
+const withLeadSiteDemoIdentity = (listing: VehicleListing): VehicleListing =>
+  projectPublicDemoIdentity(listing, leadSite);
 
-  const destinationIsEligible =
-    listing.supply.delivery.eligibleCountryCodes.includes(
-      destinationCountryCode
-    );
-
-  return {
-    ...listing,
-    supply: {
-      ...listing.supply,
-      delivery: {
-        ...listing.supply.delivery,
-        destinationCountryCode,
-        status: destinationIsEligible
-          ? listing.supply.delivery.status
-          : "unavailable",
-      },
-    },
-  };
-}
-
-const withLeadSiteDemoIdentity = (listing: VehicleListing): VehicleListing => ({
-  ...listing,
-  badges: listing.badges.filter(
-    (badge) => badge !== "certified" && badge !== "verified"
-  ),
-  dealerOrgId: `dealer-${leadSite.slug}`,
-  location: {
-    city: leadSite.city,
-    country: leadSite.country,
-  },
-  ...(listing.monthlyEstimate
-    ? {
-        monthlyEstimate: {
-          ...listing.monthlyEstimate,
-          currency: leadSite.currency,
-        },
-      }
-    : {}),
-  price: {
-    ...listing.price,
-    currency: leadSite.currency,
-  },
-  seller: {
-    ...listing.seller,
-    city: leadSite.city,
-    displayName: leadSite.name,
-    id: `dealer-${leadSite.slug}`,
-    logoUrl: leadSite.logoPath,
-    type: "dealer",
-    verificationStatus: "unverified",
-  },
-  ...(listing.supply
-    ? {
-        supply: {
-          delivery: {
-            ...listing.supply.delivery,
-            destinationCountryCode: leadSite.countryCode,
-            eligibleCountryCodes: [leadSite.countryCode],
-            status: "eligible",
-          },
-          documentCount: 0,
-          landedCostStatus: "unknown",
-          nativePrice: { ...listing.price, currency: leadSite.currency },
-          origin: {
-            city: leadSite.city,
-            country: leadSite.country,
-            countryCode: leadSite.countryCode,
-          },
-          priceConversion: { status: "native" },
-          provenance: {
-            freshnessStatus: "unknown",
-            sourceDisplayName: leadSite.name,
-            sourceKind: "manual",
-          },
-          supplier: {
-            kybStatus: "not_started",
-            orgType: "dealer",
-            trustStatus: "unverified",
-            verifiedImporter: false,
-          },
-        },
-      }
-    : {}),
-});
 
 export const getPublicDemoMarketplaceListing = (
   slug: string,
@@ -523,4 +394,12 @@ export const getPublicSitemapData = async (): Promise<PublicSitemapData> => {
       "Public sitemap inventory enumeration is unavailable"
     );
   }
+};
+
+/** Explicit native producer opt-in; live inventory is never replaced with fixtures. */
+export const getPublicNativeMarketplaceInventory = (inventorySeal: string): NativeMarketplaceInventory => {
+  if (getCurrentPublicDataMode() !== "demo" || !/^[a-f0-9]{64}$/.test(inventorySeal)) {
+    throw new PublicMarketplaceUnavailableError("A sealed public demo inventory is required");
+  }
+  return getNativeImmutablePublicInventory(inventorySeal);
 };

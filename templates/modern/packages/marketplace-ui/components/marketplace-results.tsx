@@ -28,6 +28,8 @@ import { ResultToolbar } from "./desktop-marketplace-controls";
 import { MarketplacePagination } from "./marketplace-pagination";
 import { MarketplaceResultsEmptyState } from "./marketplace-results-empty-state";
 import { VehicleCard } from "./vehicle-card";
+import { getMarketplacePriorityListingCount } from "../lib/native-marketplace-card-policy";
+import { getNativeMarketplaceResultSlots } from "../lib/native-marketplace-result-slots";
 
 // Dealer grid: frame gutters, panel padding, sidebar, grid gaps and card borders.
 const dealerImageSizes = {
@@ -48,6 +50,7 @@ export const MarketplaceResults = ({
   hideDesktop = false,
   isBg,
   listings,
+  nativeListings,
   locale,
   searchListings,
   taxonomy,
@@ -70,6 +73,7 @@ export const MarketplaceResults = ({
   hideDesktop?: boolean;
   isBg: boolean;
   listings: VehicleListing[];
+  nativeListings?: readonly VehicleListing[];
   locale?: string;
   searchListings?: readonly InventorySearchListing[];
   taxonomy?: VehicleTaxonomyMakeOption[];
@@ -86,6 +90,7 @@ export const MarketplaceResults = ({
   viewMode: ListingViewMode;
 }) => {
   const useWideInventoryGrid = viewMode === "grid" && listings.length >= 4;
+  const slotRows = getNativeMarketplaceResultSlots(listings, nativeListings);
   const singularLabel = isBg ? "автомобил" : "vehicle";
   const pluralLabel = isBg ? "автомобила" : "vehicles";
   useEffect(() => {
@@ -103,7 +108,7 @@ export const MarketplaceResults = ({
     ? "discovery"
     : "default";
   const priorityListingCount =
-    useDiscoveryInventoryGrid || useWideInventoryGrid ? 4 : 3;
+    getMarketplacePriorityListingCount(useDiscoveryInventoryGrid, useWideInventoryGrid);
 
   return (
     <section
@@ -112,6 +117,7 @@ export const MarketplaceResults = ({
         isDealershipSite && dealerStyles.results,
         hideDesktop && "lg:hidden"
       )}
+      data-native-query-scope={nativeListings ? "results" : undefined}
       data-desktop-hidden={hideDesktop}
       data-filter-layout={isDealershipSite ? desktopFilterLayout : undefined}
       data-slot={isDealershipSite ? "dealer-inventory-panel" : undefined}
@@ -148,13 +154,14 @@ export const MarketplaceResults = ({
       )}
       <div className="min-w-0">
         <p
+          data-native-query-slot={nativeListings ? "results-mobile-count" : undefined}
           aria-live="polite"
           className={cn(
             "mb-2 text-micro text-muted-foreground tabular-nums lg:hidden",
             activeFilterCount === 0 && "sr-only"
           )}
         >
-          {totalListings} {totalListings === 1 ? singularLabel : pluralLabel}
+          {nativeListings ? `${totalListings} ${totalListings === 1 ? singularLabel : pluralLabel}` : [totalListings, " ", totalListings === 1 ? singularLabel : pluralLabel]}
         </p>
         <div className={isDealershipSite ? "lg:hidden" : undefined}>
           <ResultToolbar
@@ -169,7 +176,7 @@ export const MarketplaceResults = ({
             viewMode={viewMode}
           />
         </div>
-        {listings.length > 0 ? (
+        {listings.length > 0 || nativeListings ? (
           <>
             <div
               className={cn(
@@ -183,9 +190,12 @@ export const MarketplaceResults = ({
                 })
               )}
               data-slot="marketplace-listing-grid"
+              data-native-result-grid={nativeListings ? "stable" : undefined}
+              hidden={nativeListings && listings.length === 0 ? true : undefined}
+              style={nativeListings && listings.length === 0 ? { display: "none" } : undefined}
               data-view={viewMode}
             >
-              {listings.map((listing, index) => (
+              {slotRows.map(({ listing, hidden, visibleIndex }) => (
                 <VehicleCard
                   compactDesktopGrid={isDealershipSite}
                   density="compact"
@@ -203,17 +213,31 @@ export const MarketplaceResults = ({
                   )}
                   key={listing.id}
                   listing={listing}
+                  nativeInventorySlot={nativeListings ? { id: listing.id, hidden } : undefined}
                   locale={locale}
                   presentation={
                     isDealershipSite ? "showroom" : regularPresentation
                   }
-                  priority={index < priorityListingCount}
+                  priority={!hidden && visibleIndex < priorityListingCount}
                   saveHref={getAccountListingSaveFlowHref(appBaseUrl, listing)}
                   viewMode={viewMode}
                 />
               ))}
             </div>
+            {nativeListings ? (
+              <div data-native-result-empty="stable" hidden={listings.length > 0} style={listings.length > 0 ? { display: "none" } : undefined}>
+                <MarketplaceResultsEmptyState
+                  nativeQuerySlots={Boolean(nativeListings)}
+                  currentPath={currentPath}
+                  filtered={activeFilterCount > 0}
+                  filters={filters}
+                  isBg={isBg}
+                  onChooseCategory={onChooseCategory}
+                />
+              </div>
+            ) : null}
             <MarketplacePagination
+              nativeSlotTotalListings={nativeListings?.length}
               basePath={currentPath}
               filters={filters}
               locale={locale}
@@ -222,6 +246,7 @@ export const MarketplaceResults = ({
           </>
         ) : (
           <MarketplaceResultsEmptyState
+                  nativeQuerySlots={Boolean(nativeListings)}
             currentPath={currentPath}
             filtered={activeFilterCount > 0}
             filters={filters}

@@ -23,6 +23,7 @@ export interface VehicleCardProps {
   desktopSurface?: "landing" | "inventory";
   href?: string;
   listing: VehicleListing;
+  nativeInventorySlot?: { id: string; hidden: boolean };
   locale?: string;
   presentation?: "default" | "discovery" | "showroom";
   priceInsight?: VehicleCardPriceInsight;

@@ -1,3 +1,4 @@
+import { useNativeMarketplaceQuerySlots } from "../lib/native-marketplace-query-slots";
 import {
   Select,
   SelectContent,
@@ -11,6 +12,7 @@ import {
   sortOptions,
 } from "@repo/marketplace";
 import { ArrowUpDown } from "lucide-react";
+import { getDealerInventorySortLabel } from "../lib/native-marketplace-query-policy";
 import { marketplaceSortLabelsBg } from "../lib/marketplace-filter-config";
 import { formatVehicleCount } from "../lib/marketplace-results-toolbar-policy";
 import styles from "./dealer-inventory.module.css";
@@ -27,19 +29,16 @@ export function DealerInventorySummary({
   totalListings: number;
   onApply: (updates: Partial<MarketplaceSearchParams>) => void;
 }) {
+  const nativeSlots = useNativeMarketplaceQuerySlots();
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const selectedSort = filters.sort ?? "recommended";
-  const defaultSortLabel = isBg ? "Сортирай" : "Sort";
-  const selectedSortLabel = isBg
-    ? marketplaceSortLabelsBg[selectedSort]
-    : filterLabels.sort[selectedSort];
-  const sortTriggerLabel =
-    selectedSort === "recommended" ? defaultSortLabel : selectedSortLabel;
+  const sortTriggerLabel = getDealerInventorySortLabel(selectedSort, locale);
   return (
     <div className={styles.summary} data-slot="dealer-inventory-summary">
       <output
         aria-live="polite"
         className={styles.resultCount}
+        data-native-query-slot={nativeSlots ? "dealer-result-count" : undefined}
         data-slot="dealer-inventory-count"
       >
         {formatVehicleCount(totalListings, filters.category, locale)}
@@ -54,6 +53,7 @@ export function DealerInventorySummary({
           <SelectTrigger
             aria-label={isBg ? "Подреждане" : "Sort order"}
             className={styles.sort}
+            data-native-query-slot={nativeSlots ? "dealer-sort-trigger" : undefined}
             title={sortTriggerLabel}
           >
             <ArrowUpDown
@@ -62,7 +62,7 @@ export function DealerInventorySummary({
               size={18}
             />
             <SelectValue className={styles.sortValue}>
-              <span className={styles.sortText}>{sortTriggerLabel}</span>
+              <span data-native-query-slot={nativeSlots ? "dealer-sort-label" : undefined} className={styles.sortText}>{sortTriggerLabel}</span>
             </SelectValue>
           </SelectTrigger>
           <SelectContent align="end" className={styles.sortMenu} sideOffset={6}>

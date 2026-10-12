@@ -24,12 +24,14 @@ import { VehicleCard } from "./vehicle-card";
 interface RelatedListingCardProps {
   readonly href: string;
   readonly listing: VehicleListing;
+  readonly nativeInventorySlot?: { id: string; hidden: boolean };
   readonly locale?: string;
 }
 
 const DesktopRelatedListingCard = ({
   href,
   listing: sourceListing,
+  nativeInventorySlot,
   locale,
 }: RelatedListingCardProps) => {
   const listing = localizeListingCopy(sourceListing, locale);
@@ -48,6 +50,7 @@ const DesktopRelatedListingCard = ({
         desktopLayout="grid"
         href={href}
         listing={listing}
+        nativeInventorySlot={nativeInventorySlot}
         locale={locale}
         presentation="showroom"
         viewMode="grid"
@@ -119,6 +122,7 @@ const DesktopRelatedListingCard = ({
 export const RelatedListingCard = ({
   href,
   listing,
+  nativeInventorySlot,
   locale,
 }: RelatedListingCardProps) => (
   <>
@@ -128,6 +132,9 @@ export const RelatedListingCard = ({
         "min-w-0 snap-start overflow-hidden rounded-2xl bg-zinc-100 lg:hidden"
       )}
       data-slot="listing-related-card"
+      data-native-detail-container={nativeInventorySlot?.id}
+      hidden={nativeInventorySlot?.hidden}
+      style={nativeInventorySlot?.hidden ? { display: "none" } : undefined}
     >
       <VehicleCard
         density="compact"
@@ -135,15 +142,20 @@ export const RelatedListingCard = ({
         desktopLayout="grid"
         href={href}
         listing={listing}
+        nativeInventorySlot={nativeInventorySlot}
         locale={locale}
         presentation="discovery"
         viewMode="grid"
       />
     </div>
-    <div className="hidden lg:contents">
+    <div className="hidden lg:contents"
+      data-native-detail-container={nativeInventorySlot?.id}
+      hidden={nativeInventorySlot?.hidden}
+      style={nativeInventorySlot?.hidden ? { display: "none" } : undefined}>
       <DesktopRelatedListingCard
         href={href}
         listing={listing}
+        nativeInventorySlot={nativeInventorySlot}
         locale={locale}
       />
     </div>
