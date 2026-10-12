@@ -65,6 +65,7 @@ jobs:
             /scripts/
             /docs/DEPLOYMENT-INVENTORY.json
             /docs/releases/**/*.json
+            /docs/releases/cloudflare-existing25-20261011/new-source/${{ matrix.slug }}/
             /templates.lock.json
             /clients/index.json
             /clients/${{ matrix.slug }}/
