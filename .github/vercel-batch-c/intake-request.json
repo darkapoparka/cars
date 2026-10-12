@@ -7,5 +7,9 @@
   "dealers": ["excellent-cars", "f1rst-motors"],
   "acceptedRelease": "cars-vercel-b1f0f560-20261013",
   "preserveSharedMain": true,
-  "productionAcceptance": false
+  "productionAcceptance": false,
+  "retry": {
+    "priorIntakeRun": 38316634215,
+    "reason": "Validate native/App/extended/branding seals over maintained packageRetainsPath source input, while exact full-tree patch verification preserves excluded history. No successful source preparation, application build or template-wide QA is repeated."
+  }
 }
