@@ -1,0 +1,192 @@
+--- a/scripts/lib/vercel-native-mapping.mjs
++++ b/scripts/lib/vercel-native-mapping.mjs
+@@ -1,3 +1,4 @@
++import {validateVercelPreviewStage,validatePendingVercelPublicCheck} from './vercel-preview-stage.mjs';
+ import {validateImportCorrectedPrivateNativeEvidence} from './vercel-native-import-derivative.mjs';
+ import {validateCurrentPrivatePackageNativeEvidence} from './vercel-native-current-package.mjs';
+ import {observeVercelGithubDeployment} from './vercel-git-observation.mjs';
+@@ -21,9 +22,9 @@
+  const value=JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(bytes));
+  return {value,bytes,reference:ref};
+ }
+-function checkedRows(root,rows,names,identity) {
++function checkedRows(root,rows,names,identity,pendingPublic=null) {
+  need(Array.isArray(rows)&&rows.length===names.length&&new Set(rows.map(r=>r.name)).size===names.length,'complete distinct checked rows required');
+- for(const name of names){const row=rows.find(r=>r.name===name);need(row?.status==='passed'&&h64(row.evidenceSha256)&&row.evidence?.sha256===row.evidenceSha256,'failed or unhashed check: '+name);
++ for(const name of names){const row=rows.find(r=>r.name===name);if(name==='public-journeys'&&pendingPublic){validatePendingVercelPublicCheck(row,pendingPublic);continue;}need(row?.status==='passed'&&h64(row.evidenceSha256)&&row.evidence?.sha256===row.evidenceSha256,'failed or unhashed check: '+name);
+   const proof=readVercelNativeProof(root,row.evidence).value;
+   need(proof.schemaVersion===1&&proof.kind==='cars-vercel-actual-check'&&proof.status==='passed'&&proof.executed===true&&dated(proof.verifiedAt)&&
+     ['dealer','key','deploymentId','projectId','exportCommit','packageDigest'].every(k=>proof[k]===identity[k])&&
+@@ -46,7 +47,7 @@
+  const d=review.deployment,ref=d.mappedSource;
+  need(ref&&same(Object.keys(ref).sort(),['lease','reference','sha256']),'mapping and reviewed hash lease required');
+  const proof=readVercelNativeProof(root,{reference:ref.reference,sha256:ref.sha256}).value,lease=readVercelNativeProof(root,ref.lease).value;
+- need(proof.schemaVersion===1&&proof.kind==='cars-vercel-dealer-native-acceptance'&&proof.scope==='existing-dealer'&&
++ need([1,2].includes(proof.schemaVersion)&&proof.kind==='cars-vercel-dealer-native-acceptance'&&proof.scope==='existing-dealer'&&
+    /^[a-z0-9][a-z0-9-]*$/.test(proof.dealer||'')&&/^darkapoparka\/[A-Za-z0-9_-]+$/.test(proof.repository||'')&&
+    /^prj_[A-Za-z0-9]+$/.test(proof.projectId||'')&&h40(proof.sourceCommit)&&h40(proof.sourceTree)&&h40(proof.packageTree)&&
+    h64(proof.packageDigest)&&h40(proof.publishingCommit)&&dated(proof.verifiedAt)&&proof.nativeApproval===true&&
+@@ -100,14 +101,16 @@
+    'exact private pilot export differs');
+  }
+  observeVercelGithubDeployment(v,{repository:proof.repository,branch:'codex/vercel-refresh-pilot',commit:proof.publishingCommit,deploymentId:d.id,projectId:d.projectId,publicOrigin:proof.publicOrigin});
+- need(hosted.schemaVersion===1&&hosted.kind==='cars-vercel-dealer-hosted-acceptance'&&hosted.dealer===proof.dealer&&hosted.executed===true&&
+-   hosted.status==='passed'&&hosted.unauthenticated===true&&hosted.sourceCommit===proof.sourceCommit&&hosted.sourceTree===proof.sourceTree&&
++ const canonical=JSON.parse(git(root,['show',proof.sourceCommit+':clients/'+proof.dealer+'/dealer.json'],{encoding:null}).toString('utf8'));
++ const pendingPublic=validateVercelPreviewStage(proof,lease,hosted,{readProof:ref=>readVercelNativeProof(root,ref),canonicalOrigin:canonical.shareIdentity.publicOrigin});
++ need([1,2].includes(hosted.schemaVersion)&&hosted.kind==='cars-vercel-dealer-hosted-acceptance'&&hosted.dealer===proof.dealer&&hosted.executed===true&&
++   hosted.status==='passed'&&(pendingPublic?hosted.unauthenticated===false:hosted.unauthenticated===true)&&hosted.sourceCommit===proof.sourceCommit&&hosted.sourceTree===proof.sourceTree&&
+    hosted.packageTree===proof.packageTree&&hosted.packageDigest===proof.packageDigest&&hosted.exportCommit===proof.publishingCommit&&
+    hosted.deploymentId===d.id&&hosted.projectId===d.projectId&&hosted.publicOrigin===proof.publicOrigin&&dated(hosted.verifiedAt)&&
+    same(Object.keys(hosted.applications||{}).sort(),[...keys].sort()),'current six-family public acceptance differs');
+  for(const family of keys){const a=hosted.applications[family],identity={dealer:proof.dealer,key:family,deploymentId:d.id,projectId:d.projectId,exportCommit:proof.publishingCommit,packageDigest:proof.packageDigest,source:proof.sourceReleases[family]};
+   need(a.status==='passed'&&same(a.source,identity.source),'hosted family source differs');
+-  checkedRows(root,a.checks,['mounted-journeys','public-journeys','assets-preserved','family-contract'],identity);
++  checkedRows(root,a.checks,['mounted-journeys','public-journeys','assets-preserved','family-contract'],identity,pendingPublic);
+  }
+  for(const family of ['auto-best','modern','import']){const a=hosted.nativeLocalization?.[family],source=proof.sourceReleases[family],
+    identity={dealer:proof.dealer,key:family,deploymentId:d.id,projectId:d.projectId,exportCommit:proof.publishingCommit,packageDigest:proof.packageDigest,source};
+@@ -115,10 +118,10 @@
+     a.sourcePath===source.path&&a.sourceTree===source.tree&&a.sourceDigest===source.digest&&dated(a.verifiedAt)&&
+     same([...(a.locales||[])].sort(),['bg','en'])&&[320,390,1440].every(w=>a.widths?.includes(w))&&h64(a.evidenceSha256),
+     'current native family acceptance differs');
+-  checkedRows(root,a.checks,nativeChecks,identity);
++  checkedRows(root,a.checks,nativeChecks,identity,pendingPublic);
+  }
+  const accepted=hosted.nativeLocalization[key],fields=['schemaVersion','adapter','repository','commit','sourcePath','sourceTree','sourceDigest','locales','widths','verifiedAt','evidenceSha256','catalogs'];
+  need(fields.every(k=>same(accepted[k],review[k]))&&same(accepted.checks.map(({name,status,evidenceSha256})=>({name,status,evidenceSha256})),review.checks.map(({name,status,evidenceSha256})=>({name,status,evidenceSha256}))),
+    'stored selected native acceptance differs from original hosted proof');
+- return {mapping:proof,lease,hosted};
++ return {mapping:proof,lease,hosted,publicAcceptance:pendingPublic?false:true};
+ }
+--- a/scripts/lib/native-localization.mjs
++++ b/scripts/lib/native-localization.mjs
+@@ -244,7 +244,9 @@
+   if (JSON.stringify([...(review.locales || [])].sort()) !== '["bg","en"]' || ![320, 390, 1440].every(w => review.widths?.includes(w))) fail('missing EN/BG viewport acceptance');
+   if (!hashPattern.test(review.evidenceSha256 || '') || !Number.isFinite(Date.parse(review.verifiedAt))) fail('missing hashed acceptance evidence');
+   const checks = new Map((review.checks || []).map(c => [c.name, c]));
+-  if (checks.size !== review.checks?.length || NATIVE_CHECKS.some(name => checks.get(name)?.status !== 'passed' || !hashPattern.test(checks.get(name)?.evidenceSha256 || ''))) fail('failing, missing or unhashed native check');
++  // The mapper must authenticate the explicit protected-preview stage before this deferred row is usable.
++  const pendingVercelPublic = review.deployment?.provider === 'vercel' && review.deployment?.mappedSource && checks.get('public-journeys')?.status === 'pending-production';
++  if (checks.size !== review.checks?.length || NATIVE_CHECKS.some(name => (checks.get(name)?.status !== 'passed' && !(name === 'public-journeys' && pendingVercelPublic)) || !hashPattern.test(checks.get(name)?.evidenceSha256 || ''))) fail('failing, missing or unhashed native check');
+   const deployment = review.deployment;
+   if (review.sourceDigest !== release.digest || !deployment) fail('missing exact-source deployed release verification');
+   if (deployment.provider === 'cloudflare') {
+--- a/scripts/vercel-native-mapping.test.mjs
++++ b/scripts/vercel-native-mapping.test.mjs
+@@ -121,3 +121,39 @@
+ });
+ 
+ test('recorded six-build recovery leases retain distinct original proof JSON and helper hashes',t=>{const f=mappedFixture(t),p=structuredClone(f.p),jsonHash='1'.repeat(64),helperHash='2'.repeat(64),moduleHash='3'.repeat(64),sourceRunId=38195093078;p.nativeCompilationSourceRunId=sourceRunId;p.compilationProofRecovery={kind:'recorded-native-compilation-proof-recovery',buildsRepeated:0,originalProofPassed:false,originalProofSha256:jsonHash,actualRetainedDigest:p.compilationInputProof.actualRetainedDigest,moduleSha256:moduleHash,lease:{sourceRunId,packageTree:p.packageTree,packageDigest:p.packageDigest,originalCompilationInputProofSha256:helperHash,files:{proof:{sha256:jsonHash}}}};const lease={...f.lease,nativeCompilationSourceRunId:sourceRunId,originalCompilationInputProofHelperSha256:helperHash,compilationProofRecoverySha256:moduleHash},actual=repin(f,{p,lease});assert.doesNotThrow(()=>validateNativeRelease('modern',actual.releases.modern,{root:f.root}));p.compilationProofRecovery.originalProofSha256=helperHash;const bad=repin(f,{p,lease});assert.throws(()=>validateNativeRelease('modern',bad.releases.modern,{root:f.root}),/recovery lease differs/);});
++
++function protectedFixture(t) {
++ const f=mappedFixture(t),stamp=f.proof.verifiedAt,origin=f.proof.publicOrigin,stable=new URL(f.manifest.shareIdentity.publicOrigin).origin;
++ const access={schemaVersion:1,kind:'cars-vercel-protected-preview-access',executed:true,method:'vercel-existing-temporary-share',anonymous:false,protectionsChanged:false,secretsRetained:false,verifiedAt:stamp,
++  repository:f.proof.repository,projectId:f.proof.projectId,deploymentId:f.proof.deploymentId,privateCommit:f.proof.publishingCommit,origin,stableOrigin:stable,
++  anonymousEntries:f.manifest.variants.map(v=>({key:v.key,route:v.entry,status:302,redirectOrigin:'https://vercel.com',redirectPath:'/sso-api',observedAt:stamp})),
++  authenticatedEntries:f.manifest.variants.map(v=>({key:v.key,route:v.entry,status:200,finalUrl:new URL(v.entry,origin).href,title:'Synthetic dealer fixture',logoSources:[new URL('/dealer-brand/fixture.webp',origin).href],observedAt:stamp}))};
++ const accessRef=f.pin('preview-access',access),stage={acceptanceStage:'protected-preview-qualified',publicAcceptance:false,canonicalPublicOrigin:stable,
++   productionAcceptance:{state:'pending',origin:stable,required:['anonymous-stable-origin','six-designs','admin-demo','exact-production-commit']},previewAccess:accessRef};
++ const deferred={name:'public-journeys',status:'pending-production',evidence:accessRef,evidenceSha256:accessRef.sha256};
++ const hosted=structuredClone(f.hosted);Object.assign(hosted,stage,{schemaVersion:2,unauthenticated:false});
++ for(const a of [...Object.values(hosted.applications),...Object.values(hosted.nativeLocalization)])a.checks=a.checks.map(c=>c.name==='public-journeys'?structuredClone(deferred):c);
++ let result=repin(f,{proof:{...f.proof,...stage,schemaVersion:2},lease:{...f.lease,...stage},hosted});
++ for(const k of f.nativeKeys)result.releases[k].qa.nativeLocalization={...structuredClone(hosted.nativeLocalization[k]),deployment:result.releases[k].qa.nativeLocalization.deployment};
++ return {...result,access};
++}
++test('protected preview source approval retains pending public rows through ordinary adoption',t=>{
++ const f=protectedFixture(t);for(const k of f.nativeKeys)assert.doesNotThrow(()=>validateNativeRelease(k,f.releases[k],{root:f.root}));
++ const adopted=adoptNativeSource(f.files,baseNativeManifest(f.manifest),f.releases,{root:f.root});assertNativeAdoption(adopted,baseNativeManifest(f.manifest),{root:f.root});
++ const receipt=JSON.parse(adopted.get('localization/adoption.json'));assert.equal(receipt.dealerAcceptance,'requires-dealer-build-and-public-journeys');
++ for(const k of f.nativeKeys)assert.equal(receipt.releases[k].qa.nativeLocalization.checks.find(c=>c.name==='public-journeys').status,'pending-production');
++ assert.equal(f.proof.publicAcceptance,false);assert.equal(f.hosted.unauthenticated,false);
++});
++test('protected stage refuses fabricated public passes, mismatched stable origin and missing authentication observations',t=>{
++ const f=protectedFixture(t);
++ for(const mutate of [h=>h.unauthenticated=true,h=>h.publicAcceptance=true,h=>h.canonicalPublicOrigin='https://unrelated.vercel.app',h=>h.applications.mobile.checks.find(c=>c.name==='public-journeys').status='passed']){
++  const hosted=structuredClone(f.hosted);mutate(hosted);const bad=repin(f,{hosted});assert.throws(()=>validateNativeRelease('modern',bad.releases.modern,{root:f.root}));
++ }
++ const access={...f.access,authenticatedEntries:f.access.authenticatedEntries.slice(1)},accessRef=f.pin('missing-access',access),proof={...f.proof,previewAccess:accessRef},lease={...f.lease,previewAccess:accessRef},hosted={...f.hosted,previewAccess:accessRef};
++ const bad=repin(f,{proof,lease,hosted});assert.throws(()=>validateNativeRelease('modern',bad.releases.modern,{root:f.root}),/Every family/);
++});
++test('pending public status requires the fully validated Vercel stage and cannot relax legacy release checks',t=>{
++ const f=mappedFixture(t),release=structuredClone(f.releases.modern);release.qa.nativeLocalization.checks.find(c=>c.name==='public-journeys').status='pending-production';
++ assert.throws(()=>validateNativeRelease('modern',release,{root:f.root}),/stored selected native acceptance differs/);
++ delete release.qa.nativeLocalization.deployment.mappedSource;assert.throws(()=>validateNativeRelease('modern',release,{root:f.root}),/failing, missing/);
++});
+--- /dev/null
++++ b/scripts/lib/vercel-preview-stage.mjs
+@@ -0,0 +1,73 @@
++import assert from 'node:assert/strict';
++
++export const PROTECTED_PREVIEW_STAGE = 'protected-preview-qualified';
++const families = ['auto-best','modern','import','app','mobile','karento-best'];
++const dated = value => typeof value === 'string' && Number.isFinite(Date.parse(value));
++const origin = value => { const u = new URL(value); assert(u.protocol === 'https:' && !u.username && !u.password && u.pathname === '/' && !u.search && !u.hash, 'Invalid release origin'); return u.origin; };
++const same = (a,b) => assert.deepEqual(a,b);
++
++/** A protected preview can qualify source, never anonymous production acceptance. */
++export function validateVercelPreviewStage(proof, lease, hosted, {readProof, canonicalOrigin}) {
++  if (proof.schemaVersion !== 2) {
++    assert.equal(proof.acceptanceStage, undefined, 'Legacy acceptance cannot declare a protected stage');
++    return null;
++  }
++  for (const record of [proof,lease,hosted]) {
++    assert.equal(record.acceptanceStage, PROTECTED_PREVIEW_STAGE, 'Protected stage must be explicitly leased');
++    assert.equal(record.publicAcceptance, false, 'Protected access is not public acceptance');
++    assert.equal(origin(record.canonicalPublicOrigin), origin(canonicalOrigin), 'Stable registered origin changed');
++  }
++  same(proof.productionAcceptance, {state:'pending', origin:origin(canonicalOrigin), required:['anonymous-stable-origin','six-designs','admin-demo','exact-production-commit']});
++  same(lease.productionAcceptance, proof.productionAcceptance);
++  same(hosted.productionAcceptance, proof.productionAcceptance);
++  same(proof.previewAccess, lease.previewAccess);
++  same(proof.previewAccess, hosted.previewAccess);
++  assert.equal(hosted.unauthenticated, false, 'Authenticated preview must not be reported anonymous');
++  const access = readProof(proof.previewAccess).value;
++  assert.equal(access.schemaVersion, 1);
++  assert.equal(access.kind, 'cars-vercel-protected-preview-access');
++  assert.equal(access.executed, true);
++  assert.equal(access.method, 'vercel-existing-temporary-share');
++  assert.equal(access.anonymous, false);
++  assert.equal(access.protectionsChanged, false);
++  assert.equal(access.secretsRetained, false);
++  assert(dated(access.verifiedAt));
++  for (const key of ['repository','projectId','deploymentId']) assert.equal(access[key], proof[key], 'Preview access identity changed: '+key);
++  assert.equal(access.privateCommit, proof.publishingCommit);
++  assert.equal(origin(access.origin), origin(proof.publicOrigin));
++  assert.equal(origin(access.stableOrigin), origin(canonicalOrigin));
++  const seen = JSON.stringify(access);
++  assert(!seen.includes('_vercel_share=') && !seen.includes('x-vercel-protection-bypass') && !seen.includes('authorization'), 'Access proof must not retain credentials');
++  for (const collection of ['anonymousEntries','authenticatedEntries']) {
++    const rows = access[collection];
++    assert.equal(rows?.length, 6, 'Every family needs explicit access evidence');
++    same(rows.map(r=>r.key).sort(), [...families].sort());
++    for (const row of rows) {
++      assert(row.route?.startsWith('/') && !row.route.startsWith('//') && !row.route.includes('..'));
++      assert(dated(row.observedAt));
++      if (collection === 'anonymousEntries') {
++        assert.equal(row.status, 302, 'Only observed SSO redirects qualify protected access');
++        assert.equal(row.redirectOrigin, 'https://vercel.com');
++        assert.equal(row.redirectPath, '/sso-api');
++      } else {
++        assert.equal(row.status, 200, 'Authenticated application must actually load');
++        const final = new URL(row.finalUrl);
++        assert.equal(final.origin, origin(access.origin));
++        assert(!final.searchParams.has('_vercel_share'));
++        assert(typeof row.title === 'string' && row.title.trim().length > 0);
++        assert(Array.isArray(row.logoSources) && row.logoSources.some(s=>new URL(s,final).origin===final.origin && new URL(s,final).pathname.includes('/dealer-brand/')), 'Own logo delivery is required');
++      }
++    }
++  }
++  return proof.previewAccess;
++}
++
++/** Deferred rows have no passing/actual execution claim, and bind the real access record. */
++export function validatePendingVercelPublicCheck(row, accessReference) {
++  assert.equal(row?.name, 'public-journeys');
++  assert.equal(row.status, 'pending-production', 'Never relabel protected journeys as public passes');
++  assert.equal(row.evidenceSha256, accessReference.sha256);
++  same(row.evidence, accessReference);
++  assert.equal(row.executed, undefined);
++  assert.equal(row.actual, undefined);
++}
