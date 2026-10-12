@@ -81,6 +81,13 @@ test('all six icon consumers remain valid after the actual pinned dealer persona
     for(const [name,bytes] of source)write(name,bytes);
     for(const name of filesAt(brief))write(name,fs.readFileSync(path.join(brief,name)));
     const actualProfile=loadDealerProfile(client,slug);
+    // Explicit bilingual fixture disclosure; changing the source requires a fresh review.
+    const reviewedModernCopy=Object.fromEntries(actualProfile.listings.map(listing=>{
+      assert.equal(listing.description,"Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.");
+      return [listing.slug,{sourceDescription:listing.description,
+        en:{description:"Illustration — not the advertised vehicle. These are dated listing details observed on 10 October 2026. Confirm the original advert, price, condition and availability with the dealer.",imageAlts:listing.images.map(()=>listing.title)},
+        bg:{description:"Илюстрация — не е автомобилът от обявата. Това са данни от обяви, наблюдавани на 10 октомври 2026 г. Потвърдете оригиналната обява, цената, състоянието и наличността с автокъщата.",imageAlts:listing.images.map(()=>listing.title)}}];
+    }));
     const actualManifest={...manifest,slug,packaging:{version:'5'},localization:{
       defaultLocale:'en',enabledLocales:['en','bg'],dealerCountry:'GB',inventoryCurrency:'GBP'
     }};
@@ -88,7 +95,7 @@ test('all six icon consumers remain valid after the actual pinned dealer persona
       const assets=new Map();retainDealerVariantAssets(assets,key,actualProfile,client);
       for(const [name,bytes] of assets)write(name,bytes);
       const candidate=path.join(client,key);
-      applyRefreshAdapter({key,oldVariant:candidate,candidate,profile:actualProfile});
+      applyRefreshAdapter({key,oldVariant:candidate,candidate,profile:actualProfile,reviewedModernCopy});
     }
     const files=new Map(filesAt(client).map(name=>[name,fs.readFileSync(path.join(client,name))]));
     const retainedBytes=[...files.values()].reduce((sum,bytes)=>sum+bytes.length,0);

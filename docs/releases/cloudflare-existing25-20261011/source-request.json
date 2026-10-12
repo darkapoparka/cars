@@ -1,8 +1,8 @@
 {
-  "schemaVersion": 1,
-  "mode": "new-approved",
-  "newSourceRequest": {
-    "path": "docs/releases/cloudflare-existing25-20261011/new-source/wave01-request.json",
-    "sha256": "6d5ed8fe31627bc27b29abcaf0c4492a5db5e9a53d468210492f50cc9e0dd140"
-  }
+    "schemaVersion": 1,
+    "mode": "new-approved",
+    "newSourceRequest": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/wave01-request.json",
+        "sha256": "6d5ed8fe31627bc27b29abcaf0c4492a5db5e9a53d468210492f50cc9e0dd140"
+    }
 }

@@ -18,6 +18,14 @@ const profile = loadDealerProfile(NAVARA, 'navara-car');
 const promosaleProfile = loadDealerProfile(PROMOSALE, 'promosale-varna');
 const perfectProfile = loadDealerProfile(PERFECT, 'perfect-auto-varna');
 
+// Explicit reviewed display copy for the fixed Navara fixture; source wording must match.
+const reviewedNavaraCopy = Object.fromEntries(profile.listings.map(listing => {
+  assert.equal(listing.description, "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.");
+  return [listing.slug, { sourceDescription: listing.description,
+    en: { description: "Selected listings as of 08.09.2026, rather than live stock availability. Confirm the price, availability and details with the seller.", imageAlts: listing.images.map(() => listing.title) },
+    bg: { description: "Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.", imageAlts: listing.images.map(() => listing.title) } }];
+}));
+
 const hash = (file) => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 const copy = (source, destination) => {
   fs.mkdirSync(path.dirname(destination), { recursive: true });
@@ -59,6 +67,7 @@ function temporaryCandidate(templateKey, files) {
       'apps/web/app/[locale]/layout.tsx'
     ],
     import: [
+      'src/lib/content/inventory-localized.ts',
       'src/lib/components/home/HomeFiveHeader.svelte',
       'src/lib/config/dealer.ts'
     ]
@@ -327,7 +336,8 @@ test('Modern refresh preserves the approved hero while retaining stable fixture 
     key: 'modern',
     oldVariant: path.join(NAVARA, 'modern'),
     candidate: root,
-    profile
+    profile,
+    reviewedModernCopy: reviewedNavaraCopy
   });
 
   assert.equal(hash(path.join(root, hero)), hash(path.join(template, hero)));
@@ -370,7 +380,8 @@ test('Modern refresh accepts a previously generated CRLF JSON fixture', () => {
     key: 'modern',
     oldVariant: path.join(NAVARA, 'modern'),
     candidate: root,
-    profile
+    profile,
+    reviewedModernCopy: reviewedNavaraCopy
   });
 
   const listings = fs.readFileSync(path.join(root, fixture), 'utf8');

@@ -89,7 +89,14 @@ test('six-services configuration includes exact legacy redirects before mount ro
   const m = manifest('modern'), result = mapLegacyCarwowDetails({ ...source, profile, manifest: m });
   const config = vercelConfiguration(m, result.artifact);
   assert.equal(Object.keys(config.services).length, 6);
-  assert.equal(config.redirects.length, result.artifact.entries.length * 5 + 10);
+  const legacy = legacyDetailRedirects(m, result.artifact);
+  assert.deepEqual(config.redirects.slice(0, legacy.length), legacy);
+  const mounted = config.redirects.slice(legacy.length);
+  assert.deepEqual(mounted, m.variants.filter(variant => variant.base && variant.key !== 'mobile')
+    .map(variant => ({ source: variant.base, destination: variant.entry, permanent: false })));
+  assert.ok(config.redirects.every(rule => rule.source !== rule.destination), 'Bare mounted entries must not redirect to themselves');
+  assert.ok(config.rewrites.some(rule => rule.source === '/variant-5/(.*)' && rule.destination.service === 'mobile'),
+    'Mobile bare entry is handled by its mounted service');
   assert.equal(config.redirects[0].source, '/variant-3/en/inventory');
   assert.equal(config.redirects[0].destination, '/variant-3/en/cars');
   assert.ok(packageRetainsPath(LEGACY_DETAIL_FILE));

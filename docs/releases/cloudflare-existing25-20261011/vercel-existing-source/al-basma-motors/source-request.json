@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "mode": "existing-migration",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "approvedParentLockDigest": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+  "dealers": [
+    "al-basma-motors"
+  ],
+  "inputs": {
+    "al-basma-motors": {
+      "modernCopyReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/al-basma-motors/modern-copy-review.json",
+        "sha256": "ef110291740e0feaa77eab4b8070d0ceaf2d1593688a0a08f098a07c4a418774"
+      },
+      "candidateLock": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/al-basma-motors/qualification-lock.json",
+        "sha256": "514a658fc544d6d26ea3bc70618d6659a9866be3292135b92d13a5aabfb8cdf0"
+      },
+      "qualification": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/al-basma-motors/qualification-context.json",
+        "sha256": "4240c49f1a5305b0e135ff86217643e6b9fcee2b0f0a7393e35a19287146a62f"
+      },
+      "sourceDeltaReview": {
+        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+        "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
+      },
+      "branding": {
+        "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/al-basma-motors/branding.json",
+        "sha256": "2ef5644b4fb593cc8e8d074fb3d4438073bfe6c7a0a4eb0b9742a4a4b011eed3"
+      },
+      "resolutions": {
+        "path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/al-basma-motors/reviewed-resolutions.json",
+        "sha256": "cb2f880f8c38504eeddf215a317fc060f07b677f9d48a9eec039bfcfd44c8716"
+      }
+    }
+  }
+}
