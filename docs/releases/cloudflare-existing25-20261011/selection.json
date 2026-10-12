@@ -129,83 +129,183 @@
     },
     {
       "slug": "stockport-broadbent-car-and-servicing",
-      "proposedRepository": "darkapoparka/cars-uk-stockport-broadbent-car-and-servicing"
+      "proposedRepository": "darkapoparka/cars-uk-stockport-broadbent-car-and-servicing",
+      "dealerId": null,
+      "sourceMode": "existing-migration",
+      "workerName": "cars-uk-stockport-broadbent-car-and-servicing",
+      "publicOrigin": "https://cars-uk-stockport-broadbent-car-and-servicing.darkapoparka1.workers.dev",
+      "preserveVariant2": "modern"
     },
     {
       "slug": "motherwell-motors-castle",
-      "proposedRepository": "darkapoparka/cars-uk-motherwell-motors-castle"
+      "proposedRepository": "darkapoparka/cars-uk-motherwell-motors-castle",
+      "dealerId": null,
+      "sourceMode": "existing-migration",
+      "workerName": "cars-uk-motherwell-motors-castle",
+      "publicOrigin": "https://cars-uk-motherwell-motors-castle.darkapoparka1.workers.dev",
+      "preserveVariant2": "modern"
     },
     {
       "slug": "birmingham-trade-car-sales-grasmere",
-      "proposedRepository": "darkapoparka/cars-uk-birmingham-trade-car-sales-grasmere"
+      "proposedRepository": "darkapoparka/cars-uk-birmingham-trade-car-sales-grasmere",
+      "dealerId": null,
+      "sourceMode": "existing-migration",
+      "workerName": "cars-uk-birmingham-trade-car-sales-grasmere",
+      "publicOrigin": "https://cars-uk-birmingham-trade-car-sales-grasmere.darkapoparka1.workers.dev",
+      "preserveVariant2": "modern"
     },
     {
       "slug": "birmingham-square-one-motors",
-      "proposedRepository": "darkapoparka/cars-uk-birmingham-square-one-motors"
+      "proposedRepository": "darkapoparka/cars-uk-birmingham-square-one-motors",
+      "dealerId": null,
+      "sourceMode": "existing-migration",
+      "workerName": "cars-uk-birmingham-square-one-motors",
+      "publicOrigin": "https://cars-uk-birmingham-square-one-motors.darkapoparka1.workers.dev",
+      "preserveVariant2": "modern"
     },
     {
       "slug": "dewsbury-car-market-yorkshire",
-      "proposedRepository": "darkapoparka/cars-uk-dewsbury-car-market-yorkshire"
+      "proposedRepository": "darkapoparka/cars-uk-dewsbury-car-market-yorkshire",
+      "dealerId": null,
+      "sourceMode": "existing-migration",
+      "workerName": "cars-uk-dewsbury-car-market-yorkshire",
+      "publicOrigin": "https://cars-uk-dewsbury-car-market-yorkshire.darkapoparka1.workers.dev",
+      "preserveVariant2": "modern"
     },
     {
       "slug": "nottingham-s-a-motors",
-      "proposedRepository": "darkapoparka/cars-uk-nottingham-s-a-motors"
+      "proposedRepository": "darkapoparka/cars-uk-nottingham-s-a-motors",
+      "dealerId": null,
+      "sourceMode": "existing-migration",
+      "workerName": "cars-uk-nottingham-s-a-motors",
+      "publicOrigin": "https://cars-uk-nottingham-s-a-motors.darkapoparka1.workers.dev",
+      "preserveVariant2": "modern"
     },
     {
       "slug": "batley-as-motor-group",
-      "proposedRepository": "darkapoparka/cars-uk-batley-as-motor-group"
+      "proposedRepository": "darkapoparka/cars-uk-batley-as-motor-group",
+      "dealerId": null,
+      "sourceMode": "existing-migration",
+      "workerName": "cars-uk-batley-as-motor-group",
+      "publicOrigin": "https://cars-uk-batley-as-motor-group.darkapoparka1.workers.dev",
+      "preserveVariant2": "modern"
     },
     {
       "slug": "bradford-cherry-tree-cars",
-      "proposedRepository": "darkapoparka/cars-uk-bradford-cherry-tree-cars"
+      "proposedRepository": "darkapoparka/cars-uk-bradford-cherry-tree-cars",
+      "dealerId": null,
+      "sourceMode": "existing-migration",
+      "workerName": "cars-uk-bradford-cherry-tree-cars",
+      "publicOrigin": "https://cars-uk-bradford-cherry-tree-cars.darkapoparka1.workers.dev",
+      "preserveVariant2": "modern"
     },
     {
       "slug": "stockton-norton-grange-trade-cars",
-      "proposedRepository": "darkapoparka/cars-uk-stockton-norton-grange-trade-cars"
+      "proposedRepository": "darkapoparka/cars-uk-stockton-norton-grange-trade-cars",
+      "dealerId": null,
+      "sourceMode": "existing-migration",
+      "workerName": "cars-uk-stockton-norton-grange-trade-cars",
+      "publicOrigin": "https://cars-uk-stockton-norton-grange-trade-cars.darkapoparka1.workers.dev",
+      "preserveVariant2": "modern"
     },
     {
       "slug": "north-norfolk-car-sales",
-      "proposedRepository": "darkapoparka/cars-uk-north-norfolk-car-sales"
+      "proposedRepository": "darkapoparka/cars-uk-north-norfolk-car-sales",
+      "dealerId": null,
+      "sourceMode": "existing-migration",
+      "workerName": "cars-uk-north-norfolk-car-sales",
+      "publicOrigin": "https://cars-uk-north-norfolk-car-sales.darkapoparka1.workers.dev",
+      "preserveVariant2": "modern"
     },
     {
       "slug": "autofest-varna",
-      "proposedRepository": "darkapoparka/cars-autofestvarna"
+      "proposedRepository": "darkapoparka/cars-autofestvarna",
+      "dealerId": "autofest-varna",
+      "sourceMode": "existing-migration",
+      "workerName": "cars-autofestvarna",
+      "publicOrigin": "https://cars-autofestvarna.darkapoparka1.workers.dev",
+      "preserveVariant2": "modern"
     },
     {
       "slug": "autoroad-varna",
-      "proposedRepository": "darkapoparka/cars-autoroadvarna"
+      "proposedRepository": "darkapoparka/cars-autoroadvarna",
+      "dealerId": "autoroad-varna",
+      "sourceMode": "existing-migration",
+      "workerName": "cars-autoroadvarna",
+      "publicOrigin": "https://cars-autoroadvarna.darkapoparka1.workers.dev",
+      "preserveVariant2": "modern"
     },
     {
       "slug": "car-point-trade-varna",
-      "proposedRepository": "darkapoparka/cars-carpointtradevarna"
+      "proposedRepository": "darkapoparka/cars-carpointtradevarna",
+      "dealerId": "car-point-trade-varna",
+      "sourceMode": "existing-migration",
+      "workerName": "cars-carpointtradevarna",
+      "publicOrigin": "https://cars-carpointtradevarna.darkapoparka1.workers.dev",
+      "preserveVariant2": "modern"
     },
     {
       "slug": "city-cars-varna",
-      "proposedRepository": "darkapoparka/cars-citycarsvarna"
+      "proposedRepository": "darkapoparka/cars-citycarsvarna",
+      "dealerId": "city-cars-varna",
+      "sourceMode": "existing-migration",
+      "workerName": "cars-citycarsvarna",
+      "publicOrigin": "https://cars-citycarsvarna.darkapoparka1.workers.dev",
+      "preserveVariant2": "modern"
     },
     {
       "slug": "dm-auto-varna",
-      "proposedRepository": "darkapoparka/cars-dmautovarna"
+      "proposedRepository": "darkapoparka/cars-dmautovarna",
+      "dealerId": "dm-auto-varna",
+      "sourceMode": "existing-migration",
+      "workerName": "cars-dmautovarna",
+      "publicOrigin": "https://cars-dmautovarna.darkapoparka1.workers.dev",
+      "preserveVariant2": "modern"
     },
     {
       "slug": "dream-drive-varna",
-      "proposedRepository": "darkapoparka/cars-dreamdrivevarna"
+      "proposedRepository": "darkapoparka/cars-dreamdrivevarna",
+      "dealerId": "dream-drive-varna",
+      "sourceMode": "existing-migration",
+      "workerName": "cars-dreamdrivevarna",
+      "publicOrigin": "https://cars-dreamdrivevarna.darkapoparka1.workers.dev",
+      "preserveVariant2": "modern"
     },
     {
       "slug": "dynamic-auto-varna",
-      "proposedRepository": "darkapoparka/cars-dynamicautovarna"
+      "proposedRepository": "darkapoparka/cars-dynamicautovarna",
+      "dealerId": "dynamic-auto-varna",
+      "sourceMode": "existing-migration",
+      "workerName": "cars-dynamicautovarna",
+      "publicOrigin": "https://cars-dynamicautovarna.darkapoparka1.workers.dev",
+      "preserveVariant2": "modern"
     },
     {
       "slug": "kolarov-cars",
-      "proposedRepository": "darkapoparka/cars-kolarovcars"
+      "proposedRepository": "darkapoparka/cars-kolarovcars",
+      "dealerId": "kolarov-cars",
+      "sourceMode": "existing-migration",
+      "workerName": "cars-kolarovcars",
+      "publicOrigin": "https://cars-kolarovcars.darkapoparka1.workers.dev",
+      "preserveVariant2": "modern"
     },
     {
       "slug": "pm-select-automotive",
-      "proposedRepository": "darkapoparka/cars-pmselectautomotive"
+      "proposedRepository": "darkapoparka/cars-pmselectautomotive",
+      "dealerId": "pm-select-automotive",
+      "sourceMode": "existing-migration",
+      "workerName": "cars-pmselectautomotive",
+      "publicOrigin": "https://cars-pmselectautomotive.darkapoparka1.workers.dev",
+      "preserveVariant2": "modern"
     },
     {
       "slug": "prime-auto-varna",
-      "proposedRepository": "darkapoparka/cars-primeautovarna"
+      "proposedRepository": "darkapoparka/cars-primeautovarna",
+      "dealerId": "prime-auto-varna",
+      "sourceMode": "existing-migration",
+      "workerName": "cars-primeautovarna",
+      "publicOrigin": "https://cars-primeautovarna.darkapoparka1.workers.dev",
+      "preserveVariant2": "modern"
     }
   ],
   "workerIdentities": {

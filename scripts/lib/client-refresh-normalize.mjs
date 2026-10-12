@@ -5,6 +5,9 @@ import {inside,sha256} from './workflow.mjs';
 import {normalizeDealerLocale} from './dealer-locale.mjs';
 import {parseCatalogJson} from './native-localization.mjs';
 import {stockPriceFrom} from './stock-price.mjs';
+import {originalListingSourceRecorded} from './registered-listing-proof.mjs';
+export {originalListingIdRecorded,originalListingSourceRecorded} from './registered-listing-proof.mjs';
+import {validateRegisteredPublishedInputs,REGISTERED_PUBLIC_ROOT} from './registered-reviewed-public-inputs.mjs';
 
 const exists = (file) => fs.existsSync(file);
 const readText = (file) => fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, '');
@@ -326,7 +329,6 @@ function normalizeListing(item, index, business) {
 /** Optional sealed derived input for adopted registered source. Ordinary facts
  * remain authoritative and byte-identical; this explicitly reviewed overlay
  * preserves their original source references and unknown values. */
-export function originalListingIdRecorded(bytes,id){const value=id.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');return new RegExp(`(?:["']?(?:id|sourceId|stockId|listingId|advertId)["']?\\s*:\\s*)(?:["']${value}["']|${value}(?=[,\\s}]))`).test(bytes.toString('utf8'));}
 
 /** The explicit registered fallback never describes template examples as dealer stock. */
 export function assertRegisteredDemoDisclosures(input) {
@@ -368,8 +370,15 @@ export function readRegisteredPersonalization(client, slug) {
   for(const p of input.sourceEvidence){if(!sameKeys(p,['path','sha256'])||typeof p.path!=='string'||!/^[a-zA-Z0-9._/-]+$/.test(p.path)||p.path.startsWith('/')||p.path.split('/').some(s=>!s||s==='.'||s==='..')||p.path.startsWith('auto-best/')||p.path.startsWith('modern/')||!/^[a-f0-9]{64}$/.test(p.sha256??''))fail('unsafe or mutable original proof');const file=inside(client,p.path,{mustExist:true});if(!fs.lstatSync(file).isFile()||sha256(fs.readFileSync(file))!==p.sha256)fail('original factual proof bytes changed');}
   const business=input.facts?.business??input.facts;
   if(!business?.name||business.countryCode!==input.locale.dealerCountry||business.currency!==input.locale.inventoryCurrency||!Array.isArray(input.stock?.listings)||!input.stock.listings.length||input.stock.listings.length>400)fail('explicit normalized business and stock required');
+  if(input.publishedInputs){
+    const originalFacts=parseCatalogJson(fs.readFileSync(inside(client,'business-facts.json',{mustExist:true}),'utf8'));
+    const readBytes=(pin,local,max)=>{const file=inside(client,local,{mustExist:true});let current=fs.realpathSync(client);for(const component of local.split('/')){current=path.join(current,component);if(fs.lstatSync(current).isSymbolicLink())fail('materialized proof contains a link');}if(!fs.lstatSync(file).isFile()||fs.statSync(file).size>max)fail('bounded materialized proof required');return fs.readFileSync(file);};
+    const proof=validateRegisteredPublishedInputs(input,{dealer:slug,identity:receipt.identity,originalFacts,readBytes});
+    const marker=inside(client,REGISTERED_PUBLIC_ROOT+'/input-manifest.json',{mustExist:true});if(!fs.lstatSync(marker).isFile()||!fs.readFileSync(marker).equals(proof.materializedFiles.get(REGISTERED_PUBLIC_ROOT+'/input-manifest.json')))fail('materialized immutable input manifest differs');
+    return input;
+  }
   if(input.stock.mode==='template-demo')assertRegisteredDemoDisclosures(input);
-  else {if(input.stock.mode!==undefined&&input.stock.mode!=='retained-dealer-source')fail('unsupported registered stock mode');const ids=new Set();for(const item of input.stock.listings){const p=item.sourceRecord;if(typeof item.id!=='string'||!item.id||ids.has(item.id)||p?.id!==item.id||!input.sourceEvidence.some(e=>e.path===p.path&&e.sha256===p.sha256))fail('original listing identity/reference differs');ids.add(item.id);const bytes=fs.readFileSync(inside(client,p.path,{mustExist:true}));if(!originalListingIdRecorded(bytes,item.id)||typeof item.sourceUrl!=='string'||!item.sourceUrl||!bytes.toString('utf8').includes(item.sourceUrl))fail('listing ID/source URL absent from original factual proof');}}
+  else {if(input.stock.mode!==undefined&&input.stock.mode!=='retained-dealer-source')fail('unsupported registered stock mode');const ids=new Set();for(const item of input.stock.listings){const p=item.sourceRecord;if(typeof item.id!=='string'||!item.id||ids.has(item.id)||p?.id!==item.id||!input.sourceEvidence.some(e=>e.path===p.path&&e.sha256===p.sha256))fail('original listing identity/reference differs');ids.add(item.id);const bytes=fs.readFileSync(inside(client,p.path,{mustExist:true}));if(!originalListingSourceRecorded(bytes,item.id,item.sourceUrl))fail('listing ID/source URL absent from original factual proof');}}
   return input;
 }
 

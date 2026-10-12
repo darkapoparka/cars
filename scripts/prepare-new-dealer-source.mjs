@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {createRequire} from 'node:module';
+import {validateNewSourceRaster} from './lib/source-input-raster.mjs';
 import {pathToFileURL} from 'node:url';
 import {ROOT,POLICY,git,json,sha256,inside,filesAt,gitFiles,resolveIdentity} from './lib/workflow.mjs';
 import {assertMainCheckout,planNewClient,createNewClient,readNewClientQualification} from './new-client.mjs';
@@ -45,10 +46,7 @@ function assertSixSources(sources){assert(same(Object.keys(sources??{}).sort(),[
 const creatorMetadata=n=>NEW_SOURCE_FAMILIES.some(k=>n===k+'/AGENTS.md'||n===k+'/.template/source-manifest.json');
 const qualificationMarkers=new Set(['.client/cloudflare-existing-source.json','.client/native-qualification-context.json',QUALIFICATION_LOCK_PATH]);
 const proposalRetains=n=>packageRetainsPath(n)||creatorMetadata(n)||qualificationMarkers.has(n);
-export function validateNewSourceRaster(bytes,filename){
- assert(Buffer.isBuffer(bytes)&&bytes.length>=12&&bytes.length<=25*1024**2,'Bounded raster bytes required');const ext=path.extname(filename).toLowerCase();
- assert((ext==='.png'&&bytes.subarray(0,8).toString('hex')==='89504e470d0a1a0a')||(['.jpg','.jpeg'].includes(ext)&&bytes.subarray(0,3).toString('hex')==='ffd8ff')||(ext==='.webp'&&bytes.toString('ascii',0,4)==='RIFF'&&bytes.toString('ascii',8,12)==='WEBP'),'Stock raster bytes do not match the reviewed file extension');return bytes;
-}
+export {validateNewSourceRaster} from './lib/source-input-raster.mjs';
 
 /** A physical regular file, including every ancestor. No links into runtime or
  * another dealer may satisfy a committed input path. */

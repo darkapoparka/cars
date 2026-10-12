@@ -1,9 +1,15 @@
 import test from 'node:test';
+import {stripTypeScriptTypes} from 'node:module';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
+import fs from 'node:fs';
+import path from 'node:path';
+import {loadDealerProfile} from './lib/client-refresh-normalize.mjs';
+import {applyRefreshAdapter} from './lib/client-refresh-adapters.mjs';
+import {newSourceReviewedCopy} from './prepare-new-dealer-source.mjs';
 import {applyLeadBranding,assertLeadBranding,PUBLIC_ROOTS} from './publishing/lead-branding.mjs';
 import {resolveBrandingSharp} from './verify-lead-branding.mjs';
-import {MOBILE_LOGO_HEADER,assertLogoSurfaceBindings} from './publishing/logo-surface-bindings.mjs';
+import {MOBILE_LOGO_HEADER,MODERN_LOGO_CONFIG,applyLogoSurfaceBindings,assertLogoSurfaceBindings} from './publishing/logo-surface-bindings.mjs';
 
 const sharp=resolveBrandingSharp(),sha=bytes=>createHash('sha256').update(bytes).digest('hex'),text=source=>Buffer.from(source),json=value=>text(JSON.stringify(value));
 const modern=`// LEAD_SITE_CONFIG_START
@@ -149,4 +155,159 @@ test('template color drift rejects both modes without mutating source',async()=>
   if(!reviewed){input.master.markPng=input.mark.toString('base64');input.master.markSha256=sha(input.mark);delete input.reviewedSurfaces;}
   const before=digest(state.files);await assert.rejects(()=>apply(state,input),/palette drift/);assert.equal(digest(state.files),before);
  }
+});
+
+const bindingRoot=()=>path.resolve(process.env.CARS_LOGO_BINDING_TEST_ROOT||path.join(import.meta.dirname,'..'));
+const nativeText=name=>fs.readFileSync(path.join(bindingRoot(),'templates',name),'utf8');
+const surfaceBase='/dealer-brand/v2-0123456789abcdef';
+const bindingFiles=source=>new Map([[MODERN_LOGO_CONFIG,text(source)],[MOBILE_LOGO_HEADER,text(nativeText('mobile/src/components/Header.tsx'))]]);
+const inverseLine=/^[ \t]*logoInversePath:[^\n]*\n/m;
+
+test('real Modern config without legacy logoOnLight gains exactly one inverse raster and preserves native source',()=>{
+ const source=nativeText('modern/packages/marketplace/lead-site.ts');
+ assert.match(source,/readonly logoInversePath\?: string/);
+ assert.doesNotMatch(source,/^[ \t]*logoOnLight:/m);
+ const files=bindingFiles(source);applyLogoSurfaceBindings(files,surfaceBase);assertLogoSurfaceBindings(files,surfaceBase);
+ const bound=files.get(MODERN_LOGO_CONFIG).toString();
+ assert.equal(bound.replace(inverseLine,''),source);
+ assert.equal((bound.match(/^[ \t]*logoInversePath:/gm)||[]).length,1);
+ assert.equal(bound.match(/^[ \t]*logoInversePath:[ \t]*("[^"]+")/m)[1],JSON.stringify(surfaceBase+'/logo-on-dark.webp'));
+ const first=Buffer.from(files.get(MODERN_LOGO_CONFIG));applyLogoSurfaceBindings(files,surfaceBase);assert.deepEqual(files.get(MODERN_LOGO_CONFIG),first);
+ const consumer=nativeText('modern/packages/marketplace/site-config.ts');
+ const expression=consumer.match(/inverseLogo: (config\.logoInversePath \?\? config\.logoPath),/)[1];
+ const inverse=JSON.parse(bound.match(/^[ \t]*logoInversePath:[ \t]*("[^"]+")/m)[1]);
+ assert.equal(Function('config','return '+expression)({logoInversePath:inverse,logoPath:'/retained-primary.png'}),surfaceBase+'/logo-on-dark.webp');
+});
+
+test('actual first3 normalization and Modern adapter output retain facts, primary raster and native config after binding',()=>{
+ const original=nativeText('modern/packages/marketplace/lead-site.ts'),nativeListings=nativeText('modern/packages/marketplace-domain/testing/mock-data.ts');
+ const client=path.resolve(process.env.CARS_LOGO_BINDING_TEST_OUTPUT_ROOT||path.join(bindingRoot(),'runtime/modern-logo-binding-tests')),candidate=path.join(client,'modern');
+ const writeFixture=(name,bytes)=>{const target=path.join(client,name);fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,bytes);};
+ for(const slug of ['centralauto-varna','kalchev-varna','sevicar-varna']){
+  const prefix=path.join(bindingRoot(),'docs/releases/cloudflare-existing25-20261011/new-source',slug);
+  const inputs=Object.fromEntries(['facts','stock','locale'].map(key=>[key,fs.readFileSync(path.join(prefix,key+'.json'))]));
+  const branding=JSON.parse(fs.readFileSync(path.join(prefix,'branding.json'),'utf8'));
+  for(const [key,name]of [['facts','business-facts.json'],['stock','stock.json'],['locale','locale.json']])writeFixture(name,inputs[key]);
+  for(const [tone,name]of [['onLight','logo-on-light.png'],['onDark','logo-on-dark.png']]){
+   const bytes=fs.readFileSync(path.join(bindingRoot(),branding.surfaces[tone].path));assert.equal(sha(bytes),branding.surfaces[tone].sha256);writeFixture('dealer-brand/'+name,bytes);
+  }
+  writeFixture('modern/packages/marketplace/lead-site.ts',original);writeFixture('modern/packages/marketplace-domain/testing/mock-data.ts',nativeListings);
+  const profile=loadDealerProfile(client,slug),stock=JSON.parse(inputs.stock);
+  assert.equal(profile.sourceCount,stock.records.length);assert.equal(profile.listings.length,stock.records.length);assert.equal(profile.stockKind,stock.kind);
+  const copyReview=JSON.parse(fs.readFileSync(path.join(prefix,'copy-review.json'),'utf8'));
+  applyRefreshAdapter({key:'modern',oldVariant:candidate,candidate,profile,reviewedModernCopy:newSourceReviewedCopy(profile,copyReview)});
+  const prepared=fs.readFileSync(path.join(candidate,'packages/marketplace/lead-site.ts'),'utf8');assert.doesNotMatch(prepared,/^[ \t]*logoOnLight:/m);
+  assert.match(prepared,/logoPath: "\/dealer-brand\/logo-on-light\.png"/);
+  const files=bindingFiles(prepared);applyLogoSurfaceBindings(files,surfaceBase);assertLogoSurfaceBindings(files,surfaceBase);
+  assert.equal(files.get(MODERN_LOGO_CONFIG).toString().replace(inverseLine,''),prepared,slug);
+  for(const [key,name]of [['facts','business-facts.json'],['stock','stock.json'],['locale','locale.json']])assert.deepEqual(fs.readFileSync(path.join(client,name)),inputs[key],slug+' '+key);
+ }
+});
+
+test('Modern inverse binding preserves supported legacy and existing inverse consumers',()=>{
+ for(const source of [modern,modern.replace('  logoOnLight:', '  logoInversePath: "/old-inverse.webp",\n  logoOnLight:')]){
+  const files=bindingFiles(source),primary=source.match(/^[ \t]*logoPath:[^\n]*/m)[0];
+  applyLogoSurfaceBindings(files,surfaceBase);assertLogoSurfaceBindings(files,surfaceBase);const bound=files.get(MODERN_LOGO_CONFIG).toString();
+  assert.equal((bound.match(/^[ \t]*logoInversePath:/gm)||[]).length,1);assert.equal(bound.match(/^[ \t]*logoPath:[^\n]*/m)[0],primary);
+ }
+});
+
+test('missing, duplicate and unknown Modern assignment boundaries reject without changing the map',()=>{
+ const source=nativeText('modern/packages/marketplace/lead-site.ts');
+ for(const mutate of [
+  s=>s.replace(/^  logoPath:[^\n]*\n/m,''),
+  s=>s.replace(/^  logoPath:[^\n]*$/m,line=>line+'\n'+line),
+  s=>s.replace(/^  logoPath:[^\n]*$/m,'  logoPath: unknownLogo(),'),
+  s=>s.replace(/^  logoPath:[^\n]*$/m,'  logoPath: "missing-comma.png"'),
+  s=>s.replace(/^  logoPath:[^\n]*$/m,line=>line+'\n  logoInversePath: "a.png",\n  logoInversePath: "b.png",'),
+  s=>s.replace(/^  logoPath:[^\n]*$/m,line=>line+'\n  logoInversePath: unknownLogo(),'),
+  s=>s.replace(/^  logoPath:[^\n]*$/m,line=>line+'\n  logoInversePath: "a.png" + unknownLogo(),'),
+  s=>s.replace(/^  logoPath:[^\n]*$/m,'  logoPath: unknownLogo(),\n  logoInversePath: "a.png",')
+ ]){
+  const files=bindingFiles(mutate(source)),before=new Map([...files].map(([name,bytes])=>[name,Buffer.from(bytes)]));
+  assert.throws(()=>applyLogoSurfaceBindings(files,surfaceBase),/Changed logo surface boundary Modern inverse logo/);assert.deepEqual(files,before);
+ }
+ const duplicateLegacy=bindingFiles(modern.replace('  logoOnLight:', '  logoOnLight: "a.png",\n  logoOnLight:'));
+ assert.throws(()=>applyLogoSurfaceBindings(duplicateLegacy,surfaceBase),/Changed logo surface boundary/);
+ const files=bindingFiles(source);applyLogoSurfaceBindings(files,surfaceBase);
+ files.set(MODERN_LOGO_CONFIG,text(files.get(MODERN_LOGO_CONFIG).toString().replace(inverseLine,line=>line+line)));
+ assert.throws(()=>assertLogoSurfaceBindings(files,surfaceBase),/Modern dark footer/);
+});
+
+
+// Parse adversarial native configs as TypeScript data without evaluating them.
+const nativeSyntax=source=>{assert.doesNotThrow(()=>stripTypeScriptTypes('declare function unknownLogo(): string;\n'+source));return source;};
+const logoFieldLine=/^  logoPath:[^\n]*$/m;
+
+test('supported spaced primary and inverse literals preserve the native primary and update exactly one inverse',()=>{
+ const source=nativeText('modern/packages/marketplace/lead-site.ts');
+ for(const spaces of [' ', '\t', ' \t ']){
+  const spaced=nativeSyntax(source.replace(logoFieldLine,line=>line.replace('logoPath:', 'logoPath'+spaces+':')+'\n  logoInversePath'+spaces+': "/old-inverse.webp",'));
+  const files=bindingFiles(spaced),primary=spaced.match(/^[ \t]*logoPath[ \t]*:[^\n]*$/m)[0];
+  applyLogoSurfaceBindings(files,surfaceBase);assertLogoSurfaceBindings(files,surfaceBase);const bound=files.get(MODERN_LOGO_CONFIG).toString();
+  assert.equal(bound.match(/^[ \t]*logoPath[ \t]*:[^\n]*$/m)[0],primary);
+  assert.equal((bound.match(/^[ \t]*logoInversePath[ \t]*:/gm)||[]).length,1);
+  assert.equal(bound.replace(/^([ \t]*logoInversePath[ \t]*:[ \t]*)"[^"\n]*"/m,'$1"/old-inverse.webp"'),spaced);
+  const bytes=Buffer.from(files.get(MODERN_LOGO_CONFIG));applyLogoSurfaceBindings(files,surfaceBase);assert.deepEqual(files.get(MODERN_LOGO_CONFIG),bytes);
+ }
+});
+
+test('spaced computed and duplicate Modern primary or inverse assignments reject before any map changes',()=>{
+ const source=nativeText('modern/packages/marketplace/lead-site.ts');
+ const mutations=[
+  s=>s.replace(logoFieldLine,line=>line+'\n  logoInversePath : unknownLogo(),'),
+  s=>s.replace(logoFieldLine,line=>line+'\n  logoInversePath\t: unknownLogo(),'),
+  s=>s.replace(logoFieldLine,'  logoPath : unknownLogo(),'),
+  s=>s.replace(logoFieldLine,line=>line+'\n  logoPath : unknownLogo(),'),
+  s=>s.replace(logoFieldLine,line=>line+'\n  logoInversePath: "/old.webp",\n  logoInversePath : unknownLogo(),'),
+  s=>s.replace(logoFieldLine,line=>line+'\n  logoInversePath : "/one.webp",\n  logoInversePath\t: "/two.webp",'),
+  s=>s.replace(logoFieldLine,line=>line+'\n  logoInversePath : "/old.webp" + unknownLogo(),'),
+ ];
+ for(const key of ['logoPath','logoInversePath'])for(const alternate of ['"'+key+'"',"'"+key+"'",'["'+key+'"]',"[ '"+key+"' ]"]){
+  mutations.push(s=>s.replace(logoFieldLine,line=>line+'\n  '+alternate+' : unknownLogo(),'));
+  mutations.push(s=>s.replace(logoFieldLine,line=>line+'\n  '+alternate+' : "/later-override.webp",'));
+ }
+ for(const mutate of mutations){const files=bindingFiles(nativeSyntax(mutate(source))),before=new Map([...files].map(([name,bytes])=>[name,Buffer.from(bytes)]));assert.throws(()=>applyLogoSurfaceBindings(files,surfaceBase),/Changed logo surface boundary Modern inverse logo/);assert.deepEqual(files,before);}
+});
+
+test('assert-only Modern checks reject spaced computed replacements and alternate known-key overrides',()=>{
+ const files=bindingFiles(nativeText('modern/packages/marketplace/lead-site.ts'));applyLogoSurfaceBindings(files,surfaceBase);const bound=files.get(MODERN_LOGO_CONFIG).toString();
+ const mutations=[
+  s=>s.replace(/^  logoInversePath:[^\n]*$/m,'  logoInversePath : unknownLogo(),'),
+  s=>s.replace(logoFieldLine,'  logoPath\t: unknownLogo(),'),
+  s=>s.replace(logoFieldLine,line=>line+'\n  logoPath : "/later-primary.webp",'),
+  s=>s.replace(logoFieldLine,line=>line+'\n  logoInversePath\t: unknownLogo(),'),
+ ];
+ for(const key of ['logoPath','logoInversePath'])for(const alternate of ['"'+key+'"',"'"+key+"'",'["'+key+'"]',"[ '"+key+"' ]"]){
+  mutations.push(s=>s.replace(logoFieldLine,line=>line+'\n  '+alternate+' : unknownLogo(),'));
+  mutations.push(s=>s.replace(logoFieldLine,line=>line+'\n  '+alternate+' : "/later-override.webp",'));
+ }
+ for(const mutate of mutations){const candidate=new Map(files);candidate.set(MODERN_LOGO_CONFIG,text(nativeSyntax(mutate(bound))));const before=new Map([...candidate].map(([name,bytes])=>[name,Buffer.from(bytes)]));assert.throws(()=>assertLogoSurfaceBindings(candidate,surfaceBase),/Modern dark footer/);assert.deepEqual(candidate,before);}
+});
+
+test('actual native config rejects computed declarations, spreads and escaped quoted keys atomically',()=>{
+ const source=nativeText('modern/packages/marketplace/lead-site.ts');
+ const applied=bindingFiles(source);applyLogoSurfaceBindings(applied,surfaceBase);
+ const bound=applied.get(MODERN_LOGO_CONFIG).toString();
+ const declarations=[];
+ for(const key of ['logoPath','logoInversePath']){
+  declarations.push('['+String.fromCharCode(96)+key+String.fromCharCode(96)+'] : "/later-override.webp",');
+  declarations.push('["logo" + "'+key.slice(4)+'"] : "/later-override.webp",');
+  declarations.push('["'+key+'" as const] : "/later-override.webp",');
+  declarations.push('"logo\\u0050'+key.slice(5)+'" : "/later-override.webp",');
+  declarations.push('"logo\\x50'+key.slice(5)+'" : "/later-override.webp",');
+  declarations.push('...{'+key+': "/later-override.webp"},');
+ }
+ declarations.push('...unknownLogo(),');
+ for(const declaration of declarations)for(const separator of ['\n  ',' ']){
+  const mutate=original=>original.replace(logoFieldLine,line=>line+separator+declaration);
+  const files=bindingFiles(nativeSyntax(mutate(source))),before=new Map([...files].map(([name,bytes])=>[name,Buffer.from(bytes)]));
+  assert.throws(()=>applyLogoSurfaceBindings(files,surfaceBase),/Changed logo surface boundary Modern inverse logo/,declaration);assert.deepEqual(files,before);
+  const candidate=new Map(applied);candidate.set(MODERN_LOGO_CONFIG,text(nativeSyntax(mutate(bound))));const assertedBefore=new Map([...candidate].map(([name,bytes])=>[name,Buffer.from(bytes)]));
+  assert.throws(()=>assertLogoSurfaceBindings(candidate,surfaceBase),/Modern dark footer/,declaration);assert.deepEqual(candidate,assertedBefore);
+ }
+ // Punctuation in factual string values and comments is never a declaration.
+ const safe=nativeSyntax(source.replace('  websiteKind: "dealership",','  websiteKind: "dealership",\n  // ...["logoInversePath"]: ignored comment\n  displayNote: "... [computed] \\"logoInversePath\\": value",'));
+ const safeFiles=bindingFiles(safe);applyLogoSurfaceBindings(safeFiles,surfaceBase);assertLogoSurfaceBindings(safeFiles,surfaceBase);
+ assert.equal(safeFiles.get(MODERN_LOGO_CONFIG).toString().replace(inverseLine,''),safe);
 });

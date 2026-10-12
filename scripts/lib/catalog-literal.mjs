@@ -1,9 +1,11 @@
 // Read data-only TypeScript catalog literals without evaluating repository code.
 // Imports, calls, spreads, getters and computed expressions are intentionally rejected.
-export function readCatalogLiteral(source, start = 0) {
+export function readCatalogLiteral(source, start = 0, {literalIdentifiers = new Map()} = {}) {
   let at = start;
   const fail = message => { throw new Error(`Invalid catalog literal at ${at}: ${message}`); };
   if (typeof source !== 'string' || source.length > 16 * 1024 * 1024) fail('invalid size');
+  // Explicit data-only string bindings; the default still rejects every identifier.
+  if (!(literalIdentifiers instanceof Map) || literalIdentifiers.size > 16 || [...literalIdentifiers].some(([name,value]) => !/^[A-Za-z_$][A-Za-z0-9_$]*$/.test(name) || typeof value !== 'string')) fail('invalid literal identifiers');
   function white() {
     for (;;) {
       while (/\s/.test(source[at] || '') && at < source.length) at++;
@@ -53,17 +55,19 @@ export function readCatalogLiteral(source, start = 0) {
         if (source[at++] !== ',') fail('expected separator');
       }
     }
+    const identifier = source.slice(at).match(/^[A-Za-z_$][A-Za-z0-9_$]*/);
+    if (identifier && literalIdentifiers.has(identifier[0])) { at += identifier[0].length; return literalIdentifiers.get(identifier[0]); }
     const match = source.slice(at).match(/^(?:true|false|null|-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?)(?![A-Za-z0-9_$])/);
     if (!match) fail('expected literal data, not executable source');
     at += match[0].length; return JSON.parse(match[0]);
   }
   const parsed = value(); return { value: parsed, end: at };
 }
-export function readTypeScriptCatalog(source, name) {
+export function readTypeScriptCatalog(source, name, options) {
   if (!/^[A-Za-z_$][A-Za-z0-9_$]*$/.test(name)) throw new Error('Invalid catalog binding');
   const declarations = [...source.matchAll(new RegExp(`^(?:export\\s+)?const\\s+${name}(?:\\s*:[^=]+)?\\s*=\\s*`, 'gm'))];
   if (declarations.length !== 1) throw new Error(`Expected one static catalog binding: ${name}`);
-  const item = declarations[0], parsed = readCatalogLiteral(source, item.index + item[0].length);
+  const item = declarations[0], parsed = readCatalogLiteral(source, item.index + item[0].length, options);
   if (!/^\s*(?:as\s+const\s*)?(?:satisfies\s+[^;]+)?;/.test(source.slice(parsed.end))) throw new Error(`Catalog ${name} must be an uncomputed literal`);
   return parsed.value;
 }

@@ -19,6 +19,7 @@ import {selectedDealer,existingFleetQualifiedSources,QUALIFICATION_LOCK_PATH} fr
 import {artifactInventory} from './lib/uk-cloudflare-artifacts.mjs';
 import {planSixDesignSelection} from './lib/six-design-release.mjs';
 import {loadDealerProfile} from './lib/client-refresh-normalize.mjs';
+import {isRegisteredPublishedMaterializationPath} from './lib/registered-reviewed-public-inputs.mjs';
 import {validateRegisteredSourceRequest,readRegisteredInput,readRegisteredDealerAdoption,assertRegisteredMountOwnership,REGISTERED_ADOPTION_FILE,REGISTERED_PROFILE_FILE,REGISTERED_INPUT_ROOT} from './registered-dealer-adoption.mjs';
 
 export const SOURCE_CAMPAIGN='docs/releases/cloudflare-existing25-20261011';
@@ -30,7 +31,7 @@ const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
 const writeNew=(file,bytes)=>{fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,bytes,{flag:'wx'});};
 const safeName=n=>typeof n==='string'&&n&&!n.includes('\\')&&!n.includes('\0')&&!n.startsWith('/')&&!/^[a-z]:/i.test(n)&&n.split('/').every(p=>p&&p!=='.'&&p!=='..');
 const markers=new Set(['.client/cloudflare-existing-source.json','.client/native-qualification-context.json',QUALIFICATION_LOCK_PATH,REGISTERED_ADOPTION_FILE,REGISTERED_PROFILE_FILE]);
-const managed=n=>safeName(n)&&(packageRetainsPath(n)||markers.has(n));
+const managed=n=>safeName(n)&&(packageRetainsPath(n)||markers.has(n)||isRegisteredPublishedMaterializationPath(n));
 const factPaths=new Set(['business-facts.json','stock.json','locale.json','FACTS-AND-INVENTORY.json']);
 const strictJson=bytes=>parseCatalogJson(new TextDecoder('utf-8',{fatal:true}).decode(bytes).replace(/^\uFEFF/,''));
 export function sourceRequestMode(request){
