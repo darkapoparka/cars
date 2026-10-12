@@ -1,0 +1,81 @@
+name: Cars Vercel Batch B source integration
+on:
+  push:
+    branches: [codex/vercel-batch-b-20261013]
+    paths:
+      - .github/vercel-batch-b-20261013/prepare-source.mjs
+      - .github/workflows/vercel-batch-b-source-20261013.yml
+permissions:
+  contents: read
+defaults:
+  run:
+    shell: bash
+concurrency:
+  group: cars-vercel-batch-b-source-20261013
+  cancel-in-progress: false
+jobs:
+  prepare_source:
+    if: github.repository == 'darkapoparka/cars' && github.ref == 'refs/heads/codex/vercel-batch-b-20261013'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        slug: [al-basma-motors, al-hamoor-al-thahabi, asko-96, astracar, autolife, champion-auto-pro, eliqauto, elit-auto-import]
+    env:
+      DEALER_SLUG: ${{ matrix.slug }}
+      NODE_OPTIONS: --max-old-space-size=6144
+      NEXT_TELEMETRY_DISABLED: '1'
+    steps:
+      - name: Read the immutable Batch B source and historical template objects
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          filter: blob:none
+          persist-credentials: true
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /.github/vercel-batch-b-20261013/
+            /scripts/
+            /templates.lock.json
+            /templates/auto-best/scripts/
+            /docs/DEPLOYMENT-INVENTORY.json
+            /docs/releases/**/*.json
+            /docs/releases/cloudflare-existing25-20261011/branding-inputs52/${{ matrix.slug }}/
+            /clients/${{ matrix.slug }}/
+            /clients/index.json
+            /catalog.json
+            /workspace.json
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.10.0'
+          package-manager-cache: false
+      - name: Install the existing pinned raster helper only
+        run: |
+          mkdir -p runtime/source-preparation-tools
+          printf '{"private":true}\n' > runtime/source-preparation-tools/package.json
+          npm install --prefix runtime/source-preparation-tools --ignore-scripts --save-exact sharp@0.35.5 --no-audit --no-fund
+      - name: Integrate the owner-accepted release through maintained preservation tools
+        run: node .github/vercel-batch-b-20261013/prepare-source.mjs
+      - name: Retain the exact Batch B source proposal and any unresolved preservation evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: vercel-batch-b-source-${{ matrix.slug }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            runtime/vercel-batch-b/${{ matrix.slug }}/
+            runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/output/
+            runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/plan/review.json
+            runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/plan/run.json
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 7
+      - name: Retain the exact maintained tooling once for subsequent package review
+        if: always() && matrix.slug == 'al-basma-motors'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: vercel-batch-b-maintained-tooling-${{ github.run_id }}
+          path: scripts/
+          retention-days: 7

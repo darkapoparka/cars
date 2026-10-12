@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "batch": "B",
+  "releaseId": "cars-vercel-b1f0f560-20261013",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "coordinatorCommit": "5a5280c2bda62708768850c50cff54ef2bfcdad5",
+  "coordinatorRecord": "docs/releases/vercel-existing-refresh/batch-a-20261013/accepted-template-release.json",
+  "controlBase": "13152f136105e149129e81c227090955081b994d",
+  "reviewedEnvelopeCommit": "211353813091b80329d098a8115a271a6251a27a",
+  "dealers": ["al-basma-motors", "al-hamoor-al-thahabi", "asko-96", "astracar", "autolife", "champion-auto-pro", "eliqauto", "elit-auto-import"],
+  "productionVerified": 0,
+  "scope": "Owner-authorized Batch B only. Shared main, template lock, global source queue, and other batch branches are unchanged. Source proposals are not production acceptance."
+}
