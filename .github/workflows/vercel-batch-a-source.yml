@@ -5,6 +5,8 @@ on:
     paths:
       - '.github/workflows/vercel-batch-a-source.yml'
       - 'scripts/vercel-batch-a/prepare-assigned-source.mjs'
+      - 'scripts/vercel-batch-a/apply-modern-factual-input-fix.mjs'
+      - 'scripts/dealer-updates/modern-factual-input-inventory*'
       - 'docs/releases/vercel-existing-refresh/batch-a-20261013/reviewed-source-inputs.*.xz.part'
 permissions:
   contents: read
@@ -20,7 +22,7 @@ jobs:
       fail-fast: false
       max-parallel: 2
       matrix:
-        slug: [isauto-varna, perfect-auto-varna, outletcars-varna, automarket-varna, avangard-auto, legend-auto]
+        slug: [isauto-varna, outletcars-varna]
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
@@ -40,6 +42,10 @@ jobs:
           mkdir -p runtime/source-preparation-tools
           printf '{"private":true}\n' > runtime/source-preparation-tools/package.json
           npm install --prefix runtime/source-preparation-tools --ignore-scripts --save-exact --no-audit --no-fund sharp@0.35.5
+      - name: Verify exact factual input inventory correction
+        run: |
+          node --test scripts/dealer-updates/modern-factual-input-inventory.test.mjs
+          node scripts/vercel-batch-a/apply-modern-factual-input-fix.mjs
       - name: Prepare only the assigned dealer with the maintained preservation tools
         env:
           NODE_OPTIONS: --max-old-space-size=6144
@@ -52,6 +58,7 @@ jobs:
           path: |
             runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/output
             runtime/vercel-batch-a-report/${{ matrix.slug }}
+            runtime/vercel-batch-a-report/tool-fix.json
             runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/plan/review.json
             runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/plan/run.json
           include-hidden-files: true

@@ -1,0 +1,13 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {assertModernFactualInputInventory as check} from './modern-factual-input-inventory.mjs';
+const base=['business-facts.json','dealer.json'];
+const run=(original=base,current=original,declared=current)=>check({original,current,declared:declared.map(path=>({path}))});
+test('accept reviewed embedded inventory with two exact authoritative files',()=>assert.deepEqual(run(),base));
+test('require stock when immutable source has a separate stock file',()=>assert.deepEqual(run([...base,'stock.json']),[...base,'stock.json']));
+test('reject omitted immutable stock',()=>assert.throws(()=>run([...base,'stock.json'],[...base,'stock.json'],base)));
+test('reject a newly introduced unreviewed stock file',()=>assert.throws(()=>run(base,[...base,'stock.json'])));
+test('reject removed stock file',()=>assert.throws(()=>run([...base,'stock.json'],base)));
+test('reject missing business facts',()=>assert.throws(()=>run(['dealer.json'])));
+test('reject duplicate declarations',()=>assert.throws(()=>run(base,base,[...base,'dealer.json'])));
+test('reject unexpected or traversal input paths',()=>{assert.throws(()=>run([...base,'../stock.json']));assert.throws(()=>run(base,base,[...base,'README.md']));});
