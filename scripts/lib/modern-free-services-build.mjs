@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {pathToFileURL} from 'node:url';
+import {registerHooks} from 'node:module';
 
 // Bounded, explicitly requested Priselci experiment; never a template promotion.
 export const MODERN_FREE_SOURCE_REVISION='b1f0f5609c7c249cfd0649c122849ff2cbb8dfde';
@@ -139,9 +140,12 @@ export function createModernFreeServicesPlugin({packageRoot,cwd}){
  const recordGraph=(environment,bundle,phase)=>{
   const outputDirectory=path.relative(packageRoot,path.resolve(environment.config.build.outDir)).replaceAll('\\','/');inside(packageRoot,outputDirectory);
   const rows=Object.values(bundle).filter(item=>item.type==='chunk').map(item=>({file:item.fileName,imports:item.imports,dynamicImports:item.dynamicImports,moduleIds:item.moduleIds.map(id=>id.replaceAll('\\','/').replace(packageRoot.replaceAll('\\','/')+'/','<package>/')),bytes:Buffer.byteLength(item.code),sha256:hash(item.code)})).sort((a,b)=>a.file.localeCompare(b.file));
+  const wasm=Object.values(bundle).filter(item=>item.type==='asset'&&item.fileName.endsWith('.wasm')).map(item=>{const bytes=Buffer.from(item.source);return {file:item.fileName,bytes:bytes.length,sha256:hash(bytes)};}).sort((a,b)=>a.file.localeCompare(b.file));
   if(!rows.length||(phase==='final'&&environment.name==='rsc'&&!rows.some(row=>row.file==='cars-native-preferences.js')))fail('native '+phase+' '+environment.name+' graph missing');
   const suffix=phase==='scan'?'scan-'+environment.name:environment.name;
-  writeModernOwnedReceipt(packageRoot,'.cars-modern-free-graph-'+suffix+'.json',JSON.stringify({schemaVersion:1,environment:environment.name,graph:'original-native',phase,lifecycle:{plugin:'@vitejs/plugin-rsc',version:'0.5.36',isScanBuild:manager.isScanBuild,write:environment.config.build.write},outputDirectory,rows},null,2)+'\n');
+  const value={schemaVersion:1,environment:environment.name,graph:'original-native',phase,lifecycle:{plugin:'@vitejs/plugin-rsc',version:'0.5.36',isScanBuild:manager.isScanBuild,write:environment.config.build.write},outputDirectory,rows,wasm};
+  writeModernOwnedReceipt(packageRoot,'.cars-modern-free-graph-'+suffix+'.json',JSON.stringify(value,null,2)+'\n');
+  if(phase==='final'&&environment.name==='rsc'){const contract=JSON.parse(fs.readFileSync(inside(packageRoot,'.cars-modern-free-build.json')));installModernNativeWasmModules({packageRoot,graph:value,mount:contract.mount,sourceTree:contract.sourceTree,purpose:'official-prerender'}).registerExitHook();}
  };
  return {name:'cars-modern-free-services-graph',apply:'build',enforce:'post',
   // Same public API lookup as tagged getPluginApi; the manager is shared by all
@@ -172,6 +176,39 @@ function writeModernOwnedReceipt(root,relative,value){
  try{fs.writeFileSync(file,bytes,{flag:'wx'});return;}catch(error){if(error.code!=='EEXIST')throw error;}
  const member=fs.lstatSync(file);
  if(member.isSymbolicLink()||!member.isFile()||!fs.readFileSync(file).equals(bytes))fail('owned native receipt bytes differ: '+relative);
+}
+
+/** Node normally instantiates .wasm ESM imports; Arcjet's workerd entry instead
+ * expects compiled Modules and supplies its own exact component imports. */
+export function installModernNativeWasmModules({packageRoot,graph,mount,sourceTree,purpose,scope=globalThis,env=process.env}={}){
+ packageRoot=fs.realpathSync(packageRoot);
+ if(!['/variant-2','/variant-3'].includes(mount)||sourceTree!==MODERN_FREE_CLIENT_TREE||!['official-prerender','compiled-policy-admission'].includes(purpose)||graph?.environment!=='rsc'||graph.phase!=='final'||graph.lifecycle?.plugin!=='@vitejs/plugin-rsc'||graph.lifecycle?.version!=='0.5.36'||graph.lifecycle?.isScanBuild!==false||graph.lifecycle?.write!==true||!Array.isArray(graph.wasm)||graph.wasm.length!==3)fail('exact final native WASM authority required');
+ const contract=JSON.parse(fs.readFileSync(inside(packageRoot,'.cars-modern-free-build.json')));if(contract.mount!==mount||contract.sourceTree!==sourceTree)fail('native WASM compiled source authority differs');
+ const output=inside(packageRoot,graph.outputDirectory),seen=new Set(),rows=graph.wasm.map(row=>{
+  const match=new RegExp('^'+mount.slice(1)+'/_next/static/media/arcjet_analyze_js_req\\.component\\.(core(?:2|3)?)\\.[A-Za-z0-9_-]+\\.wasm$').exec(row.file);
+  if(!match||seen.has(match[1])||!Number.isSafeInteger(row.bytes)||row.bytes<8||row.bytes>4*1024*1024||!hex(row.sha256,64))fail('bounded exact three Arcjet WASM assets required');seen.add(match[1]);
+  const file=inside(output,row.file),member=fs.lstatSync(file);if(member.isSymbolicLink()||!member.isFile()||fs.realpathSync(file)!==file)fail('linked native WASM asset');const bytes=fs.readFileSync(file);
+  if(bytes.length!==row.bytes||hash(bytes)!==row.sha256)fail('native WASM bytes do not join final graph');const module=new WebAssembly.Module(bytes);
+  return {...row,url:pathToFileURL(file).href,imports:WebAssembly.Module.imports(module),exports:WebAssembly.Module.exports(module)};
+ }).sort((a,b)=>a.file.localeCompare(b.file));
+ const authority=JSON.stringify({packageRoot,mount,sourceTree,purpose,rows}),key=Symbol.for('cars.modern.native-wasm-module-loader'),existing=scope[key];
+ if(existing&&(existing.kind!=='cars-modern-native-wasm-module-loader'||typeof existing.closed!=='boolean'))fail('native WASM scope owner differs');
+ if(existing&&!existing.closed){if(existing.authority!==authority||existing.env!==env)fail('native WASM loader authority differs');return existing.handle;}
+ const receipt={schemaVersion:1,kind:'cars-modern-native-node-wasm-module-contract',sourceTree,mount,purpose,nodeVersion:process.version,graphSha256:hash(JSON.stringify(graph,null,2)+'\n'),representation:'compiled WebAssembly.Module; original Arcjet instantiation/imports unchanged',rows};
+ if(purpose==='official-prerender')writeModernOwnedReceipt(packageRoot,'.cars-modern-native-wasm-prerender.json',JSON.stringify(receipt,null,2)+'\n');
+ const state={kind:'cars-modern-native-wasm-module-loader',authority,env,closed:false,exitRegistered:false,handle:null},loaded=new Set(),hooks=registerHooks(createModernNativeWasmHooks(rows,{env,purpose,loaded}));
+ const restore=()=>{if(state.closed)return;hooks.deregister();state.closed=true;if(state.exitRegistered){process.removeListener('exit',restore);state.exitRegistered=false;}};
+ state.handle={restore,receipt,loaded:()=>[...loaded].sort(),registerExitHook(){if(state.closed||state.exitRegistered)return;process.once('exit',restore);state.exitRegistered=true;}};scope[key]=state;return state.handle;
+}
+
+function createModernNativeWasmHooks(rows,{env,purpose,loaded}){
+ const admitted=new Map(rows.map(row=>[row.url,row]));
+ return {load(url,context,nextLoad){
+  const row=admitted.get(url),phase=purpose==='compiled-policy-admission'||(env.VINEXT_PRERENDER==='1'&&env.NEXT_PHASE==='phase-production-build');
+  if(!row||!phase)return nextLoad(url,context);loaded.add(url);
+  // Re-read and revalidate at evaluation time; no emitted asset is rewritten.
+  return {format:'module',shortCircuit:true,source:'import {readFileSync} from "node:fs";import {createHash} from "node:crypto";const bytes=readFileSync(new URL('+JSON.stringify(url)+'));if(bytes.length!=='+row.bytes+'||createHash("sha256").update(bytes).digest("hex")!=='+JSON.stringify(row.sha256)+')throw new Error("Native WASM graph bytes changed");export default new WebAssembly.Module(bytes);'};
+ }};
 }
 
 function readModernNativeGraph(root,environment,phase){
@@ -241,13 +278,16 @@ export async function emitModernFreeServicesSnapshots({packageRoot,target}){
  if(wanted.some(name=>!seen.has(name)))fail('exact EN/BG Services pair missing');
  const actual=leaves(prerender).sort();if(JSON.stringify(actual)!==JSON.stringify(allowedFiles.sort()))fail('extra/missing official prerender product');
  if(fs.existsSync(inside(client,'_vinext/static-cache')))fail('unreviewed framework static cache');
- const graph={};for(const env of ['rsc','ssr','client']){
+ const graph={};let rscGraph;for(const env of ['rsc','ssr','client']){
   const {bytes,value}=readModernNativeGraph(packageRoot,env,'final'),retainedPath=target.root+'/dist/server/cars-native-graph-'+env+'.json';fs.writeFileSync(inside(packageRoot,retainedPath),bytes,{flag:'wx'});graph[env]={path:retainedPath,bytes:bytes.length,sha256:hash(bytes),chunks:value.rows.length,phase:'final',writtenOutputJoinVerified:true};
+  if(env==='rsc')rscGraph=value;
   if(env!=='client'){const scan=readModernNativeGraph(packageRoot,env,'scan'),scanPath=target.root+'/dist/server/cars-native-graph-scan-'+env+'.json';fs.writeFileSync(inside(packageRoot,scanPath),scan.bytes,{flag:'wx'});graph[env].scan={path:scanPath,bytes:scan.bytes.length,sha256:hash(scan.bytes),chunks:scan.value.rows.length,phase:'scan'};}
  }
  const resolver=inside(server,'cars-native-preferences.js'),resolverBytes=fs.readFileSync(resolver);if(!resolverBytes.toString().includes('resolveCarsNativePreferences'))fail('compiled pure resolver export missing');
- const producer=await import(pathToFileURL(resolver).href+'?cars-policy='+hash(resolverBytes));if(typeof producer.resolveCarsNativeResponsePolicy!=='function'||!Array.isArray(producer.VINEXT_INTERNAL_HEADERS))fail('same native graph response policy export missing');
  const policyReceipts=[],routes=[],products=[];let identities=null;
+ const wasm=installModernNativeWasmModules({packageRoot,graph:rscGraph,mount:contract.mount,sourceTree:contract.sourceTree,purpose:'compiled-policy-admission'});
+ try {
+ const producer=await import(pathToFileURL(resolver).href+'?cars-policy='+hash(resolverBytes));if(typeof producer.resolveCarsNativeResponsePolicy!=='function'||!Array.isArray(producer.VINEXT_INTERNAL_HEADERS))fail('same native graph response policy export missing');
  for(const pathname of wanted){
   const locale=pathname.split('/')[1],route={locale,pathname:target.base+pathname},security=await producer.resolveCarsNativeResponsePolicy(locale);
   for(const kind of ['html','rsc']){
@@ -260,20 +300,24 @@ export async function emitModernFreeServicesSnapshots({packageRoot,target}){
    const sha256=hash(bytes),relative='_cars/private/modern/'+sha256+'.'+kind;route[kind]={path:'/'+relative,bytes:bytes.length,sha256,headers:sealed.headers};products.push({relative,bytes});
   }routes.push(route);
  }
+ } finally {wasm.restore();}
  if(new Set(routes.flatMap(row=>[row.html.path,row.rsc.path])).size!==4)fail('duplicate snapshots');
  for(const row of routes)for(const kind of ['html','rsc']){const deployment=row[kind].headers['x-deployment-id'];if(deployment!==undefined&&deployment!==identities.deploymentId)fail('native representation deployment identity differs');}
  const responsePolicy={vinextVersion:'1.1.0',sourceTree:contract.sourceTree,producerSha256:hash(resolverBytes),identities},manifest={schemaVersion:2,kind:'cars-modern-services-static-experiment',mount:target.base,routes,responsePolicy},manifestBytes=Buffer.from(JSON.stringify(manifest,null,2)+'\n');
  const toolchainBytes=fs.readFileSync(inside(packageRoot,'.cars-modern-native-policy-toolchain.json')),toolchain=JSON.parse(toolchainBytes);if(toolchain.kind!=='cars-modern-native-policy-toolchain'||toolchain.rows?.length!==2||toolchain.rows.some(row=>row.version!=='1.2.0'))fail('actual native policy toolchain proof missing');
  const policyPath=target.root+'/dist/server/cars-native-response-policy.json',policyBytes=Buffer.from(JSON.stringify({schemaVersion:1,kind:'cars-modern-native-response-policy-proof',...responsePolicy,policySources:contract.policySources,policyDependencies:contract.policyDependencies,toolchain:{bytes:toolchainBytes.length,sha256:hash(toolchainBytes),receipt:toolchain},rows:policyReceipts},null,2)+'\n');
+ const prerenderWasmBytes=fs.readFileSync(inside(packageRoot,'.cars-modern-native-wasm-prerender.json')),prerenderWasm=JSON.parse(prerenderWasmBytes);
+ if(prerenderWasm.kind!=='cars-modern-native-node-wasm-module-contract'||prerenderWasm.purpose!=='official-prerender'||prerenderWasm.sourceTree!==contract.sourceTree||prerenderWasm.mount!==target.base||prerenderWasm.graphSha256!==graph.rsc.sha256||JSON.stringify(prerenderWasm.rows)!==JSON.stringify(wasm.receipt.rows))fail('both native WASM process authorities must join final graph');
+ const wasmPath=target.root+'/dist/server/cars-native-node-wasm.json',wasmBytes=Buffer.from(JSON.stringify({schemaVersion:1,kind:'cars-modern-native-node-wasm-proof',prerender:{bytes:prerenderWasmBytes.length,sha256:hash(prerenderWasmBytes),receipt:prerenderWasm},compiledPolicy:{...wasm.receipt,loadedUrls:wasm.loaded(),hookRestored:true},emittedWasmBytesUnchanged:true},null,2)+'\n');fs.writeFileSync(inside(packageRoot,wasmPath),wasmBytes,{flag:'wx'});
  for(const {relative,bytes}of products){const dest=inside(client,relative);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,bytes,{flag:'wx'});}
  fs.writeFileSync(inside(packageRoot,policyPath),policyBytes,{flag:'wx'});fs.writeFileSync(inside(server,'cars-free-services.json'),manifestBytes,{flag:'wx'});
- const receipt={...contract,schemaVersion:2,kind:'cars-modern-free-services-compiled-experiment',buildId:index.buildId,nativePrerenderIndexSha256:hash(indexBytes),discardedGenerated404:seen.has('/404'),emitted:routes,responsePolicy,manifest:{path:target.root+'/dist/server/cars-free-services.json',bytes:manifestBytes.length,sha256:hash(manifestBytes)},nativeResponsePolicy:{path:policyPath,bytes:policyBytes.length,sha256:hash(policyBytes),callableVerified:true,actualRscBodyJoinVerified:true},resolver:{path:target.root+'/dist/server/cars-native-preferences.js',bytes:resolverBytes.length,sha256:hash(resolverBytes),callableVerified:false},graph,originalClientSourceTreeUnchanged:true,queryCache:false,nativeApproved:false,hostedApproved:false,freeCpuQualified:false};
+ const receipt={...contract,schemaVersion:2,kind:'cars-modern-free-services-compiled-experiment',buildId:index.buildId,nativePrerenderIndexSha256:hash(indexBytes),discardedGenerated404:seen.has('/404'),emitted:routes,responsePolicy,manifest:{path:target.root+'/dist/server/cars-free-services.json',bytes:manifestBytes.length,sha256:hash(manifestBytes)},nativeResponsePolicy:{path:policyPath,bytes:policyBytes.length,sha256:hash(policyBytes),callableVerified:true,actualRscBodyJoinVerified:true},nativeNodeWasm:{path:wasmPath,bytes:wasmBytes.length,sha256:hash(wasmBytes)},resolver:{path:target.root+'/dist/server/cars-native-preferences.js',bytes:resolverBytes.length,sha256:hash(resolverBytes),callableVerified:false},graph,originalClientSourceTreeUnchanged:true,queryCache:false,nativeApproved:false,hostedApproved:false,freeCpuQualified:false};
  fs.writeFileSync(inside(server,'cars-free-services-build.json'),JSON.stringify(receipt,null,2)+'\n',{flag:'wx'});
  removeOwnedLeaves(prerender,actual);fs.unlinkSync(indexPath);
  return {manifestPath:target.root+'/dist/server/cars-free-services.json',resolverPath:target.root+'/dist/server/cars-native-preferences.js',receiptPath:target.root+'/dist/server/cars-free-services-build.json'};
 }
 
 export function modernFreeServicesBuildSource(){
- const functions=[installModernNativeResponseCapture,readModernCapturedBody,createModernFreeServicesPlugin,verifyModernNativePolicyToolchain,writeModernOwnedReceipt,readModernNativeGraph,inside,leaves,removeOwnedLeaves,sealModernNativeResponseHeaders,nativeResponseIdentities,emitModernFreeServicesSnapshots];
- return "import fs from 'node:fs';\nimport path from 'node:path';\nimport {createHash} from 'node:crypto';\nimport {pathToFileURL} from 'node:url';\nconst MODERN_FREE_CLIENT_TREE="+JSON.stringify(MODERN_FREE_CLIENT_TREE)+";\nconst hash="+hash.toString()+";\nconst hex="+hex.toString()+";\nconst fail="+fail.toString()+";\nconst modernNativeRequiredHeaders="+JSON.stringify(modernNativeRequiredHeaders)+";\nconst modernNativeOptionalHeaders="+JSON.stringify(modernNativeOptionalHeaders)+";\nconst modernNativeVary="+JSON.stringify(modernNativeVary)+";\n"+functions.map(fn=>'export '+fn.toString()).join('\n')+'\n';
+ const functions=[installModernNativeResponseCapture,readModernCapturedBody,createModernFreeServicesPlugin,verifyModernNativePolicyToolchain,writeModernOwnedReceipt,installModernNativeWasmModules,createModernNativeWasmHooks,readModernNativeGraph,inside,leaves,removeOwnedLeaves,sealModernNativeResponseHeaders,nativeResponseIdentities,emitModernFreeServicesSnapshots];
+ return "import fs from 'node:fs';\nimport path from 'node:path';\nimport {createHash} from 'node:crypto';\nimport {pathToFileURL} from 'node:url';\nimport {registerHooks} from 'node:module';\nconst MODERN_FREE_CLIENT_TREE="+JSON.stringify(MODERN_FREE_CLIENT_TREE)+";\nconst hash="+hash.toString()+";\nconst hex="+hex.toString()+";\nconst fail="+fail.toString()+";\nconst modernNativeRequiredHeaders="+JSON.stringify(modernNativeRequiredHeaders)+";\nconst modernNativeOptionalHeaders="+JSON.stringify(modernNativeOptionalHeaders)+";\nconst modernNativeVary="+JSON.stringify(modernNativeVary)+";\n"+functions.map(fn=>'export '+fn.toString()).join('\n')+'\n';
 }
