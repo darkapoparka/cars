@@ -78,6 +78,8 @@ export function inspectModernFreeStaticExperiment(inspected,modernMount){
  assert(manifestRow&&manifestRow.bytes<=16384&&resolverRow&&resolverRow.bytes<=256*1024,'Missing bounded compiled native policy or static manifest');
  const plan=validateModernStaticManifest(JSON.parse(fs.readFileSync(inside(entry.directory,marker.manifestPath,{mustExist:true}),'utf8')));
  assert(plan.mount===modernMount,'Modern static experiment mount differs');
+ assert(plan.responsePolicy.sourceTree===entry.deploy.sourceTree,'Modern static response source tree differs');
+ assert(plan.responsePolicy.producerSha256===resolverRow.sha256,'Modern static response producer differs from compiled native resolver');
  for(const route of plan.routes)for(const key of ['html','rsc']){
   const asset=route[key],row=rows.get(entry.deploy.assetPath+asset.path);
   assert(row&&row.bytes===asset.bytes&&row.sha256===asset.sha256,'Sealed native Services snapshot differs');

@@ -119,14 +119,22 @@ test('Import-first composition namespaces variant-2 assets while preserving Mode
 function addModernServices(f,mount='/variant-2'){
  const directory=f.inputs.modern,deployFile=path.join(directory,'deploy.json'),deploy=JSON.parse(fs.readFileSync(deployFile,'utf8')),server=deploy.mainPath.slice(0,-'index.js'.length);
  const write=(name,value)=>{const file=path.join(directory,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,value);};
+ const resolver='export function resolveCarsNativePreferences({locale,returnTo}){return {state:{locale,country:"BG",suggestedCountry:"BG",promptDismissed:false,source:"default"},returnTo};}\n';
+ const nativeVary='RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Interception-Id, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode, X-Vinext-Rsc-State-Fingerprint';
+ const policy=(locale,kind)=>({
+  'cache-control':'private, no-store','cdn-cache-control':'no-store','vercel-cdn-cache-control':'no-store','content-language':locale,'content-type':kind==='rsc'?'text/x-component':'text/html; charset=utf-8',vary:nativeVary,
+  'content-security-policy':"default-src 'self'; script-src 'self' 'unsafe-inline'",'cross-origin-opener-policy':'same-origin','cross-origin-resource-policy':'same-origin','origin-agent-cluster':'?1','referrer-policy':'no-referrer','strict-transport-security':'max-age=31536000; includeSubDomains',
+  'x-content-type-options':'nosniff','x-dns-prefetch-control':'off','x-download-options':'noopen','x-frame-options':'SAMEORIGIN','x-permitted-cross-domain-policies':'none','x-xss-protection':'0',
+  ...(kind==='rsc'?{'x-vinext-params':encodeURIComponent(JSON.stringify({locale})),'x-vinext-rendered-path-and-search':encodeURIComponent('/'+locale+'/services'),'x-vinext-rsc-build-id':'fixture-build','x-vinext-rsc-compatibility-id':'fixture-compatibility'}:{link:'</native-fixture.woff2>; rel=preload; as=font'}),
+ });
  const routes=['en','bg'].map(locale=>{
   const bodies={html:'<html lang="'+locale+'"><head><script type="application/json" id="cars-modern-native-preferences">null</script></head><body>Native Services '+locale+'</body></html>',rsc:'0:{"nativeServices":"'+locale+'"}\n'};
   const row={locale,pathname:mount+'/'+locale+'/services'};
-  for(const kind of ['html','rsc']){const body=bodies[kind];row[kind]={path:'/_cars/private/modern/'+sha(body)+'.'+kind,bytes:Buffer.byteLength(body),sha256:sha(body)};write(deploy.assetPath+row[kind].path,body);}return row;
+  for(const kind of ['html','rsc']){const body=bodies[kind];row[kind]={path:'/_cars/private/modern/'+sha(body)+'.'+kind,bytes:Buffer.byteLength(body),sha256:sha(body),headers:policy(locale,kind)};write(deploy.assetPath+row[kind].path,body);}return row;
  });
- const manifest={schemaVersion:1,kind:'cars-modern-services-static-experiment',mount,routes};
+ const manifest={schemaVersion:2,kind:'cars-modern-services-static-experiment',mount,routes,responsePolicy:{vinextVersion:'1.1.0',sourceTree:deploy.sourceTree,producerSha256:sha(resolver),identities:{buildId:'fixture-build',compatibilityId:'fixture-compatibility',deploymentId:null}}};
  write(server+'cars-free-services.json',JSON.stringify(manifest));
- write(server+'cars-native-preferences.js','export function resolveCarsNativePreferences({locale,returnTo}){return {state:{locale,country:"BG",suggestedCountry:"BG",promptDismissed:false,source:"default"},returnTo};}\n');
+ write(server+'cars-native-preferences.js',resolver);
  deploy.freeStaticExperiment={manifestPath:server+'cars-free-services.json',resolverPath:server+'cars-native-preferences.js'};
  fs.writeFileSync(deployFile,JSON.stringify(deploy));
  const reseal=()=>{
@@ -152,6 +160,8 @@ test('static experiment supports preserved opposite Modern mount and rejects inc
  const other=fixture(t,'existing-fleet','import');addModernServices(other,'/variant-3');assert.doesNotThrow(()=>packageUkSingleWorker({inputs:other.inputs,destination:path.join(other.root,'composed'),expectedDealer:'fixture',esbuild}));
  const cases=[
   ['no marker',s=>{const file=path.join(s.directory,'deploy.json'),d=JSON.parse(fs.readFileSync(file,'utf8'));delete d.freeStaticExperiment;fs.writeFileSync(file,JSON.stringify(d));},/Unadmitted private/],
+  ['different response source tree',s=>s.write(s.deploy.freeStaticExperiment.manifestPath,JSON.stringify({...s.manifest,responsePolicy:{...s.manifest.responsePolicy,sourceTree:'9'.repeat(40)}})),/response source tree differs/],
+  ['different compiled response producer',s=>s.write(s.deploy.freeStaticExperiment.manifestPath,JSON.stringify({...s.manifest,responsePolicy:{...s.manifest.responsePolicy,producerSha256:'9'.repeat(64)}})),/response producer differs/],
   ['wrong selected mount',s=>s.write(s.deploy.freeStaticExperiment.manifestPath,JSON.stringify({...s.manifest,mount:'/variant-3',routes:s.manifest.routes.map(r=>({...r,pathname:r.pathname.replace('/variant-2/','/variant-3/')}))})),/mount differs/],
   ['missing pure module',s=>fs.unlinkSync(path.join(s.directory,s.deploy.freeStaticExperiment.resolverPath)),/Missing bounded compiled/],
   ['changed snapshot bytes',s=>s.write(s.deploy.assetPath+s.manifest.routes[0].html.path,'changed'),/snapshot differs/],

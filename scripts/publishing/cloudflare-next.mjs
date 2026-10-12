@@ -296,7 +296,7 @@ if(phase==='prove'){
   if(phase==='build'){
     if(key==='modern')run([npmCli,'exec','--yes','--package=pnpm@11.4.0','--','pnpm','--filter','@repo/database','build'],dependencyRoot);
     run([bin('vite','vite'),'build']);
-    if(proof.sourceDigest!==sourceInputs())throw Error('Generated Next Cloudflare source changed during build');${modernFreeServicesExperiment ? "\n    if(target.freeStaticExperiment)emitModernFreeServicesSnapshots({packageRoot,target});" : ''}
+    if(proof.sourceDigest!==sourceInputs())throw Error('Generated Next Cloudflare source changed during build');${modernFreeServicesExperiment ? "\n    if(target.freeStaticExperiment)await emitModernFreeServicesSnapshots({packageRoot,target});" : ''}
     for(const file of [target.generatedConfig,target.main])if(!fs.existsSync(path.join(packageRoot,file)))throw Error('Missing Cloudflare build artifact: '+file);
     // Vite emits compiled assets beneath basePath but copies public namespaces
     // to the asset root. Place only generated copies at their published mount.
