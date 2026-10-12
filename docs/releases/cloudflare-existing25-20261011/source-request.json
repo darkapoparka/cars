@@ -79,7 +79,7 @@
   "draft": false,
   "publishable": false,
   "reviewed": true,
-  "reviewedAt": "2026-10-12T00:09:11.757Z",
+  "reviewedAt": "2026-10-12T00:25:52.786Z",
   "qualificationOnly": true,
   "approved": false,
   "nativeApproval": false,
@@ -92,8 +92,8 @@
     "Actual S2 pilot qualification, per-dealer build and hosted acceptance remain deployment gates; all native/hosted/global/owner approval flags remain false."
   ],
   "sourcePreparationCode": {
-    "sourceCommit": "4d161cc31343a89856b04405c3ffed3f8ae97fe9",
-    "scope": "Maintained published producer includes final derived profile logo-contract correction; regenerate the same three held source candidates and reseal native/catalog/branding/App/source receipts. Preserve original identities, facts, stock, raster bytes, mounts and individually reviewed choices. Exact pack validation applies only to present nonnull derived logo contracts, preserving legacy pack fixtures."
+    "sourceCommit": "bfe1cc7e53ed8cfe68395aa97c870c4c8e26904c",
+    "scope": "Maintained published producer includes final derived profile logo-contract correction; regenerate the same three held source candidates and reseal native/catalog/branding/App/source receipts. Preserve original identities, facts, stock, raster bytes, mounts and individually reviewed choices. Exact pack validation applies only to present nonnull derived logo contracts, preserving legacy pack fixtures. Pinned missing blobs hydrate with invocation-scoped noop negotiation matching Git's promisor implementation; exact wants, bounds and hash checks remain enforced."
   },
   "sourceOnlyReview": {
     "baselineCommit": "3d758430eb41beb3f3666bf7114d7ee0fc378d3c",
@@ -119,6 +119,11 @@
     "globalReleaseApproval": false,
     "ownerAccepted": false,
     "previousFailedRunId": 38186301327,
-    "producerRepairCommit": "4d161cc31343a89856b04405c3ffed3f8ae97fe9"
+    "producerRepairCommit": "4d161cc31343a89856b04405c3ffed3f8ae97fe9",
+    "previousFailedRunIds": [
+      38186301327,
+      38186940463
+    ],
+    "prefetchRepairCommit": "bfe1cc7e53ed8cfe68395aa97c870c4c8e26904c"
   }
 }

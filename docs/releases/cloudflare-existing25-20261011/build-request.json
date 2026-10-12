@@ -12,11 +12,42 @@
     "karento-best",
     "router"
   ],
-  "requestedAt": "2026-10-11T22:28:47.008Z",
-  "attempt": 6,
+  "requestedAt": "2026-10-12T00:25:52.786Z",
+  "attempt": 7,
   "composition": {
     "reviewed": true,
-    "reviewedAt": "2026-10-11T22:28:47.008Z",
-    "reviewScope": "Exact independently accepted Priselci S2 source 9b5ad1a83b3442a4f1453169517195afb6fe5a4b; six immutable b1f applications, preserved factual inventory, reviewed transparent logo surfaces and native template palettes, Signature hero/listing geometry and concise copy. Hosted and owner acceptance remain pending."
+    "reviewedAt": "2026-10-12T00:25:52.786Z",
+    "reviewScope": "Exact original Priselci source 9b5ad1a83b3442a4f1453169517195afb6fe5a4b with pinned six b1f applications and reviewed factual/raster/native palette contracts. Explicit independently reviewed compile overlay emits only EN/BG Modern Services HTML/RSC from the native graph, with compiled pure preferences and graph receipts. Source review and build request only; native, hosted, full Free and owner acceptance remain false."
+  },
+  "modernFreeServicesExperiment": {
+    "schemaVersion": 1,
+    "kind": "cars-modern-free-services-build-experiment",
+    "dealer": "priselci",
+    "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "sourceTree": "9b5ad1a83b3442a4f1453169517195afb6fe5a4b",
+    "overlayCommit": "bfe1cc7e53ed8cfe68395aa97c870c4c8e26904c",
+    "files": [
+      {
+        "path": "templates/modern/apps/web/lib/locale-preferences.ts",
+        "beforeGitBlob": "2d96a68a4f4d9e7c5b380b2b83773b59975eb649",
+        "beforeSha256": "4f0a8a7aa9051426865f8a1768cb3c3128a231c62157c39831908bcc47e39b9b",
+        "afterGitBlob": "f7f3653475506b77b1ddb2703c4d83acad0e7732",
+        "afterSha256": "1b631daa87b565243ace37ceed4ff1d97d631627d9502a1a71a79a66a6120776"
+      },
+      {
+        "path": "templates/modern/apps/web/app/[locale]/layout.tsx",
+        "beforeGitBlob": "441993d30db70a4a4be1c2e2f612046486ac18fa",
+        "beforeSha256": "47844fe316a659a66cd1f0508239d5ff20adb286f69fc3e06a6920f24ce0cedc",
+        "afterGitBlob": "601b884c017d2e76810d6450780ab86b87eb16f6",
+        "afterSha256": "5bad37546fc0efa02e1b01a550bb5c0a759df0ebe73f93aeabc24ea45842120e"
+      },
+      {
+        "path": "templates/modern/packages/marketplace-ui/components/locale-preferences.tsx",
+        "beforeGitBlob": "97ddb9fd376edd608343cb1462bd91a7071159d2",
+        "beforeSha256": "156a86190d4498dc205a430a7854982ee869c4b26245266d429a90dd9cbcb3b7",
+        "afterGitBlob": "e6aad355b47dfe521e95ebdfe7633c9e14b3f3ad",
+        "afterSha256": "7ddd20c08869da1b0c6bcbce55ef7be510617197fbeff5e230d57460464177ca"
+      }
+    ]
   }
 }
