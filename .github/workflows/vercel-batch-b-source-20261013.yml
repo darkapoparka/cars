@@ -4,6 +4,7 @@ on:
     branches: [codex/vercel-batch-b-20261013]
     paths:
       - .github/vercel-batch-b-20261013/prepare-source.mjs
+      - .github/vercel-batch-b-20261013/admit-retained-inputs.mjs
       - .github/workflows/vercel-batch-b-source-20261013.yml
 permissions:
   contents: read
@@ -22,7 +23,7 @@ jobs:
       fail-fast: false
       max-parallel: 2
       matrix:
-        slug: [al-basma-motors, al-hamoor-al-thahabi, asko-96, astracar, autolife, champion-auto-pro, eliqauto, elit-auto-import]
+        slug: [al-hamoor-al-thahabi, asko-96, astracar, autolife, champion-auto-pro, eliqauto, elit-auto-import]
     env:
       DEALER_SLUG: ${{ matrix.slug }}
       NODE_OPTIONS: --max-old-space-size=6144
@@ -57,25 +58,42 @@ jobs:
           mkdir -p runtime/source-preparation-tools
           printf '{"private":true}\n' > runtime/source-preparation-tools/package.json
           npm install --prefix runtime/source-preparation-tools --ignore-scripts --save-exact sharp@0.35.5 --no-audit --no-fund
+      - name: Bind byte-identical retained inputs to the existing Batch B controller
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import assert from 'node:assert/strict';
+          const file='.github/vercel-batch-b-20261013/prepare-source.mjs';
+          let text=fs.readFileSync(file,'utf8');
+          const old=" const requestBytes=git(['show',originRef+':'+originalPath],{raw:true});";
+          assert.equal(text.split(old).length,2);
+          text=text.replace(old," const {admitRetainedInputs}=await import('./admit-retained-inputs.mjs'); const requestBytes=Buffer.from(JSON.stringify(admitRetainedInputs(slug),null,2)+'\\n');");
+          const origin="requestProvenance:{commit:originRef,path:originalPath,sha256:hash(requestBytes)}";
+          assert.equal(text.split(origin).length,2);
+          text=text.replace(origin,"requestProvenance:{kind:'exact-owner-attached-inputs-batch-slice',path:originalPath,sha256:hash(requestBytes),inputHashesVerified:true}");
+          fs.writeFileSync(file,text);
+          NODE
       - name: Integrate the owner-accepted release through maintained preservation tools
         run: node .github/vercel-batch-b-20261013/prepare-source.mjs
-      - name: Retain the exact Batch B source proposal and any unresolved preservation evidence
+      - name: Retain compact integration and preservation evidence separately
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: vercel-batch-b-source-${{ matrix.slug }}-${{ github.run_id }}-${{ github.run_attempt }}
+          name: vercel-batch-b-summary-${{ matrix.slug }}-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
             runtime/vercel-batch-b/${{ matrix.slug }}/
-            runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/output/
+            runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/output/*.json
             runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/plan/review.json
             runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/plan/run.json
           include-hidden-files: true
           if-no-files-found: warn
           retention-days: 7
-      - name: Retain the exact maintained tooling once for subsequent package review
-        if: always() && matrix.slug == 'al-basma-motors'
+      - name: Retain the exact native source payload for subsequent maintained packaging
+        if: success()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: vercel-batch-b-maintained-tooling-${{ github.run_id }}
-          path: scripts/
+          name: vercel-batch-b-source-${{ matrix.slug }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/output/
+          include-hidden-files: true
+          if-no-files-found: error
           retention-days: 7
