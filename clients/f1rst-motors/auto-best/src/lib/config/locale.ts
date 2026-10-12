@@ -23,13 +23,17 @@ export const dealerLocalizedText = {
     "city": "Dubai",
     "addressLine": "Danube Building - 409 Sheikh Zayed Rd - Al Quoz 1",
     "address": "Danube Building - 409 Sheikh Zayed Rd - Al Quoz - Al Quoz 1 - Dubai, UAE",
-    "appointment": "Mon-Thu 10:00-21:00; Friday 14:00-21:00; Saturday 10:00-21:00; Sunday Closed"
+    "appointment": "Mon-Thu 10:00-21:00; Friday 14:00-21:00; Saturday 10:00-21:00; Sunday Closed",
+    "addressShort": "Danube Building - 409 Sheikh Zayed Rd - Al Quoz 1",
+    "appointmentShort": "Mon-Thu 10:00-21:00; Friday 14:00-21:00; Saturday 10:00-21:00; Sunday Closed"
   },
   "bg": {
     "city": "Дубай",
     "addressLine": "Danube сграда - 409 Sheikh Zayed Rd - Al Quoz 1",
     "address": "Danube сграда - 409 Sheikh Zayed Rd - Al Quoz - Al Quoz 1 - Dubai, ОАЕ",
-    "appointment": "Понеделник–четвъртък 10:00–21:00; петък 14:00–21:00; събота 10:00–21:00; неделя почивен ден"
+    "appointment": "Понеделник–четвъртък 10:00–21:00; петък 14:00–21:00; събота 10:00–21:00; неделя почивен ден",
+    "addressShort": "Danube сграда - 409 Sheikh Zayed Rd - Al Quoz 1",
+    "appointmentShort": "Понеделник–четвъртък 10:00–21:00; петък 14:00–21:00; събота 10:00–21:00; неделя почивен ден"
   }
 } as const;
 

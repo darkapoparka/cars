@@ -5,6 +5,7 @@
   import type { Snippet } from 'svelte';
   import type { Attachment } from 'svelte/attachments';
   import { leadSite } from '$config/lead-site';
+  import { template } from '$config/template';
   import type { ShellPresentation } from '$data/shell';
   import Header from './Header.svelte';
   import Footer from './Footer.svelte';
@@ -57,5 +58,5 @@
   <a class="dn-skip-link" href="#main-content">{i18n.t("m_ac576a66d456")}</a>
   <Header presentation={presentation.header} {mobileFooterVisible} />
   <main id="main-content" data-layout={presentation.mainLayout} tabindex="-1">{@render children()}</main>
-  <Footer showActions={presentation.showFooterActions} showMobileFooter={presentation.showMobileFooter} {observeFooter} />
+  <Footer showActions={presentation.showFooterActions} hideDesktopActions={(presentation.route === 'contact' && presentation.contactTopic === 'general') || (presentation.route === 'about' && template.sections.demoTeam)} showMobileFooter={presentation.showMobileFooter} {observeFooter} />
 </div>

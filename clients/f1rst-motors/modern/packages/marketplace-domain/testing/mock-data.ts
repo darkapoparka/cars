@@ -45,7 +45,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "F1rst Motors",
       "verificationStatus": "unverified",
       "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-2541ff14c5022a0c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -93,7 +93,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "F1rst Motors",
       "verificationStatus": "unverified",
       "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-2541ff14c5022a0c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -141,7 +141,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "F1rst Motors",
       "verificationStatus": "unverified",
       "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-2541ff14c5022a0c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": true
@@ -189,7 +189,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "F1rst Motors",
       "verificationStatus": "unverified",
       "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-2541ff14c5022a0c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -237,7 +237,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "F1rst Motors",
       "verificationStatus": "unverified",
       "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-2541ff14c5022a0c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -285,7 +285,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "F1rst Motors",
       "verificationStatus": "unverified",
       "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-2541ff14c5022a0c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -333,7 +333,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "F1rst Motors",
       "verificationStatus": "unverified",
       "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-2541ff14c5022a0c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -381,7 +381,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "F1rst Motors",
       "verificationStatus": "unverified",
       "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-2541ff14c5022a0c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -429,7 +429,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "F1rst Motors",
       "verificationStatus": "unverified",
       "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-2541ff14c5022a0c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
@@ -477,199 +477,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "F1rst Motors",
       "verificationStatus": "unverified",
       "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-09T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1006",
-    "slug": "koenigsegg-jesko-attack-2023-1",
-    "category": "car",
-    "dealerOrgId": "dealer-f1rst-motors",
-    "status": "active",
-    "title": "Koenigsegg Jesko Attack 2023",
-    "description": "Dated public stock sample, not a live feed. Confirm price, specifications and availability directly with F1rst Motors. Demo forms do not send messages.",
-    "price": {
-      "amount": 21000000,
-      "currency": "AED"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/stock/1.svg",
-        "alt": "Koenigsegg Jesko Attack 2023"
-      }
-    ],
-    "badges": [
-      "new"
-    ],
-    "location": {
-      "city": "Dubai",
-      "region": "Dubai",
-      "country": "United Arab Emirates"
-    },
-    "spec": {
-      "make": "Koenigsegg",
-      "model": "Jesko Attack",
-      "year": 2023,
-      "bodyType": "coupe",
-      "fuelType": "other",
-      "transmission": "semi_automatic",
-      "mileageValue": 0,
-      "mileageUnit": "km"
-    },
-    "seller": {
-      "id": "dealer-f1rst-motors",
-      "type": "dealer",
-      "displayName": "F1rst Motors",
-      "verificationStatus": "unverified",
-      "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-09T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1007",
-    "slug": "bugatti-w16-mistral-2025-2",
-    "category": "car",
-    "dealerOrgId": "dealer-f1rst-motors",
-    "status": "active",
-    "title": "Bugatti W16 Mistral 2025",
-    "description": "Dated public stock sample, not a live feed. Confirm price, specifications and availability directly with F1rst Motors. Demo forms do not send messages.",
-    "price": {
-      "amount": 34000000,
-      "currency": "AED"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/stock/2.svg",
-        "alt": "Bugatti W16 Mistral 2025"
-      }
-    ],
-    "badges": [
-      "new"
-    ],
-    "location": {
-      "city": "Dubai",
-      "region": "Dubai",
-      "country": "United Arab Emirates"
-    },
-    "spec": {
-      "make": "Bugatti",
-      "model": "W16 Mistral",
-      "year": 2025,
-      "bodyType": "convertible",
-      "fuelType": "other",
-      "transmission": "semi_automatic",
-      "mileageValue": 0,
-      "mileageUnit": "km"
-    },
-    "seller": {
-      "id": "dealer-f1rst-motors",
-      "type": "dealer",
-      "displayName": "F1rst Motors",
-      "verificationStatus": "unverified",
-      "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-09T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1008",
-    "slug": "ford-gt-2017-3",
-    "category": "car",
-    "dealerOrgId": "dealer-f1rst-motors",
-    "status": "active",
-    "title": "Ford GT 2017",
-    "description": "Dated public stock sample, not a live feed. Confirm price, specifications and availability directly with F1rst Motors. Demo forms do not send messages.",
-    "price": {
-      "amount": 2599995,
-      "currency": "AED"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/stock/3.svg",
-        "alt": "Ford GT 2017"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Dubai",
-      "region": "Dubai",
-      "country": "United Arab Emirates"
-    },
-    "spec": {
-      "make": "Ford",
-      "model": "GT",
-      "year": 2017,
-      "bodyType": "coupe",
-      "fuelType": "other",
-      "transmission": "semi_automatic",
-      "mileageValue": 5669,
-      "mileageUnit": "km"
-    },
-    "seller": {
-      "id": "dealer-f1rst-motors",
-      "type": "dealer",
-      "displayName": "F1rst Motors",
-      "verificationStatus": "unverified",
-      "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
-    },
-    "publishedAt": "2026-09-09T09:00:00.000Z",
-    "promoted": false
-  },
-  {
-    "id": "am-1009",
-    "slug": "porsche-carrera-gt-2006-4",
-    "category": "car",
-    "dealerOrgId": "dealer-f1rst-motors",
-    "status": "active",
-    "title": "Porsche Carrera GT 2006",
-    "description": "Dated public stock sample, not a live feed. Confirm price, specifications and availability directly with F1rst Motors. Demo forms do not send messages.",
-    "price": {
-      "amount": 11000000,
-      "currency": "AED"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/dealer/stock/4.svg",
-        "alt": "Porsche Carrera GT 2006"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Dubai",
-      "region": "Dubai",
-      "country": "United Arab Emirates"
-    },
-    "spec": {
-      "make": "Porsche",
-      "model": "Carrera GT",
-      "year": 2006,
-      "bodyType": "coupe",
-      "fuelType": "other",
-      "transmission": "semi_automatic",
-      "mileageValue": 13000,
-      "mileageUnit": "km"
-    },
-    "seller": {
-      "id": "dealer-f1rst-motors",
-      "type": "dealer",
-      "displayName": "F1rst Motors",
-      "verificationStatus": "unverified",
-      "city": "Dubai",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/v2-2541ff14c5022a0c/logo-on-light.webp"
     },
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false

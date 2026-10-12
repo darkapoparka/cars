@@ -5,13 +5,9 @@ import {
   ArrowRight,
   BadgeCheck,
   Boxes,
-  CalendarDays,
   Clock3,
   Factory,
-  Fuel,
-  Gauge,
   MapPin,
-  Settings2,
   ShieldCheck,
   Ship,
   Store,
@@ -32,6 +28,7 @@ import {
   type ListingSellerRole,
 } from "../lib/listing-truth";
 import {
+  mobileVehicleCardBrandClassName,
   mobileVehicleCardContentClassName,
   mobileVehicleCardFactsClassName,
   mobileVehicleCardInfoClassName,
@@ -41,6 +38,8 @@ import {
 } from "../lib/mobile-vehicle-card-layout";
 import {
   formatVehicleCardMoney,
+  getMobileVehicleCardHeading,
+  getShowroomVehicleCardSpecFacts,
   getShowroomVehicleHeading,
   getVehicleCardBadgeLabels,
   getVehicleCardPricePolicy,
@@ -496,34 +495,48 @@ const MobileDealerVehicleCardContent = ({
   listing: VehicleListing;
   listingHref: string;
   locale?: string;
-}) => (
-  <Link
-    className={cn(
-      mobileVehicleCardContentClassName,
-      "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:hidden"
-    )}
-    data-slot="vehicle-card-mobile-content"
-    href={listingHref}
-  >
-    <div className={mobileVehicleCardInfoClassName}>
-      <h2
-        className={mobileVehicleCardTitleClassName}
-        data-slot="vehicle-card-title"
-        title={getVehicleCardTitle(listing, "comparison")}
-      >
-        {getVehicleCardTitle(listing, "comparison")}
-      </h2>
-      <VehiclePriceSummary
-        listing={listing}
-        locale={locale}
-        variant="comparison"
-      />
-    </div>
-    <div className={mobileVehicleCardFactsClassName}>
-      <VehicleSpecPills listing={listing} locale={locale} />
-    </div>
-  </Link>
-);
+}) => {
+  const heading = getMobileVehicleCardHeading(listing);
+  return (
+    <Link
+      className={cn(
+        mobileVehicleCardContentClassName,
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:hidden"
+      )}
+      data-slot="vehicle-card-mobile-content"
+      href={listingHref}
+    >
+      <div className={mobileVehicleCardInfoClassName}>
+        {heading.brand ? (
+          <p
+            aria-hidden="true"
+            className={mobileVehicleCardBrandClassName}
+            data-slot="vehicle-card-brand"
+            title={heading.brand}
+          >
+            {heading.brand}
+          </p>
+        ) : null}
+        <h2
+          aria-label={heading.fullTitle}
+          className={mobileVehicleCardTitleClassName}
+          data-slot="vehicle-card-title"
+          title={heading.fullTitle}
+        >
+          {heading.title}
+        </h2>
+        <VehiclePriceSummary
+          listing={listing}
+          locale={locale}
+          variant="comparison"
+        />
+      </div>
+      <div className={mobileVehicleCardFactsClassName}>
+        <VehicleSpecPills listing={listing} locale={locale} />
+      </div>
+    </Link>
+  );
+};
 
 const ComparisonVehicleCardContent = ({
   desktopHeadingLevel,
@@ -604,27 +617,27 @@ const ComparisonVehicleCardContent = ({
   );
 };
 
-const showroomFactIcons = {
-  year: CalendarDays,
-  mileage: Gauge,
-  fuel: Fuel,
-  transmission: Settings2,
-} as const;
-
 /** Compact desktop presentation using the same title, price, media and fact policies as other cards. */
 const ShowroomVehicleCardContent = ({
+  compactDesktopGrid,
   listing,
   listingHref,
   locale,
 }: {
+  compactDesktopGrid: boolean;
   listing: VehicleListing;
   listingHref: string;
   locale?: string;
 }) => {
   const heading = getShowroomVehicleHeading(listing, locale);
-  const facts = getVehicleCardSpecFacts(listing, locale).filter(
-    (fact) => fact.id !== "year"
-  );
+  const title = heading.title.slice(`${listing.spec.year} `.length);
+  const fullTitle = heading.detail ? `${title} ${heading.detail}` : title;
+  const facts = compactDesktopGrid
+    ? getVehicleCardSpecFacts(listing, locale).map((fact) => ({
+        ...fact,
+        displayValue: fact.mobileDisplayValue ?? fact.displayValue,
+      }))
+    : getShowroomVehicleCardSpecFacts(listing, locale);
   return (
     <Link
       className="min-w-0"
@@ -632,22 +645,30 @@ const ShowroomVehicleCardContent = ({
       href={listingHref}
     >
       <div data-slot="showroom-vehicle-heading">
-        <h3 data-slot="vehicle-card-title">{heading.title}</h3>
-        <p data-slot="showroom-vehicle-subtitle">{heading.subtitle}</p>
+        <h3
+          aria-label={compactDesktopGrid ? fullTitle : undefined}
+          data-slot="vehicle-card-title"
+          title={compactDesktopGrid ? fullTitle : undefined}
+        >
+          {title}
+        </h3>
       </div>
       <ul
         aria-label={getVehicleCardCopy(locale).specs}
         data-slot="showroom-vehicle-facts"
       >
-        {facts.map((fact) => {
-          const Icon = showroomFactIcons[fact.id];
-          return (
-            <li data-fact={fact.id} key={fact.id}>
-              <Icon aria-hidden="true" size={13} strokeWidth={1.6} />
-              <span>{fact.value}</span>
-            </li>
-          );
-        })}
+        {facts.map((fact) => (
+          <li
+            aria-label={fact.displayValue ? fact.value : undefined}
+            data-fact={fact.id}
+            key={fact.id}
+            title={fact.value}
+          >
+            <span aria-hidden={fact.displayValue ? true : undefined}>
+              {fact.displayValue ?? fact.value}
+            </span>
+          </li>
+        ))}
       </ul>
       <div data-slot="showroom-vehicle-price-row">
         <VehiclePriceSummary
@@ -656,7 +677,7 @@ const ShowroomVehicleCardContent = ({
           variant="comparison"
         />
         <span aria-hidden="true" data-slot="showroom-vehicle-open">
-          <ArrowRight size={17} />
+          <ArrowRight size={20} />
         </span>
       </div>
     </Link>
@@ -730,6 +751,7 @@ const ListVehicleCardContent = ({
 };
 
 export const VehicleCardContent = ({
+  compactDesktopGrid,
   desktopHeadingLevel,
   isDesktopComparison,
   listing,
@@ -741,6 +763,7 @@ export const VehicleCardContent = ({
   trustSignals,
   variant,
 }: {
+  compactDesktopGrid: boolean;
   desktopHeadingLevel: 2 | 3;
   isDesktopComparison: boolean;
   listing: VehicleListing;
@@ -756,6 +779,7 @@ export const VehicleCardContent = ({
   if (presentation === "showroom") {
     desktopContent = (
       <ShowroomVehicleCardContent
+        compactDesktopGrid={compactDesktopGrid}
         listing={listing}
         listingHref={listingHref}
         locale={locale}

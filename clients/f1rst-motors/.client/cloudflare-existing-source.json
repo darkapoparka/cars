@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "f1rst-motors",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "6f3e2f325869d617c4df754c16fcbda1099784820ce6e7514771eacc8cb8f774",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "0462d3b7a98e25973c7ea8cc2190cfab0266ee96b0f4cb3dbdf1187b13aa2f17",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "ab6f48acf3f3d1346017044ceff19b276418af8b60ddaeb47d6944420c011e41",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

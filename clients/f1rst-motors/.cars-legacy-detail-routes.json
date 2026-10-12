@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "dealer": "f1rst-motors",
+  "family": "import",
+  "base": "/variant-3",
+  "defaultLocale": "en",
+  "source": {
+    "inventory": {
+      "path": "carwow/src/lib/data/daynight-current-inventory.ts",
+      "sha256": "54c7c87c6e5226c4946c71225697072560572a509fb18af47896071098d6e83e"
+    },
+    "vehicles": {
+      "path": "carwow/src/lib/data/daynight-vehicles.ts",
+      "sha256": "9e47a8b634fca18bdcf379e086cde39c82c1db530a243dd62ab278c91bd32fd7"
+    },
+    "routeFactorySha256": "094d5128ad5e689e41486a228b1de6d11c54efbe051ce0e75c0170709d8571c9"
+  },
+  "profileSha256": "db8cacf21e5a0ff3f7e67ea6bc6bad7b466cea00456d1c01a141f5a405a23759",
+  "entries": [
+    {
+      "sourceId": "jesko-attack-2023",
+      "slug": "koenigsegg-jesko-attack-k-2023",
+      "targetId": "jesko-attack-2023"
+    },
+    {
+      "sourceId": "w16-mistral-2025",
+      "slug": "bugatti-w16-mistral-l-2025",
+      "targetId": "w16-mistral-2025"
+    },
+    {
+      "sourceId": "ford-gt-2017",
+      "slug": "ford-gt-2017-t-2017",
+      "targetId": "ford-gt-2017"
+    },
+    {
+      "sourceId": "carrera-gt-2006",
+      "slug": "porsche-carrera-gt-t-2006",
+      "targetId": "carrera-gt-2006"
+    },
+    {
+      "sourceId": "ford-gt-2020",
+      "slug": "ford-gt-2020-t-2020",
+      "targetId": "ford-gt-2020"
+    },
+    {
+      "sourceId": "sf90xx-stradale-2024",
+      "slug": "ferrari-sf90xx-stradale-e-2024",
+      "targetId": "sf90xx-stradale-2024"
+    },
+    {
+      "sourceId": "battista-furiosa-2024",
+      "slug": "pininfarina-battista-furiosa-a-2024",
+      "targetId": "battista-furiosa-2024"
+    },
+    {
+      "sourceId": "valhalla-2026",
+      "slug": "aston-martin-valhalla-a-2026",
+      "targetId": "valhalla-2026"
+    },
+    {
+      "sourceId": "chiron-sport-noire-2021",
+      "slug": "bugatti-chiron-sport-e-2021",
+      "targetId": "chiron-sport-noire-2021"
+    },
+    {
+      "sourceId": "porsche-911-st-2024",
+      "slug": "porsche-911-s-t-t-2024",
+      "targetId": "porsche-911-st-2024"
+    }
+  ],
+  "retired": []
+}

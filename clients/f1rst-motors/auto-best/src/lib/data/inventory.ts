@@ -1,6 +1,5 @@
 import { formatPrice, localeContract, type Locale } from '$lib/locale/core';
 import { templateText } from '$lib/locale/messages';
-import { leadSite } from '$config/lead-site';
 
 export const vehicleTypes = ['car', 'motorbike', 'van', 'truck'] as const;
 export type VehicleType = typeof vehicleTypes[number];
@@ -27,11 +26,16 @@ export type Vehicle = {
   make: string;
   /** Optional manufacturer sub-brand used by compact card identity. */
   cardBrand?: string;
+  /** Seller-supplied highlight by locale; import/condition claims require record-specific evidence. */
+  cardNote?: Partial<Record<Locale, string>>;
   title: string;
   year: string;
   yearNumber: number;
   mileage: string;
   mileageKm: number;
+  mileageKnown?: boolean;
+  mileageValue?: number;
+  mileageUnit?: 'km' | 'mi';
   fuel: string;
   transmission: string;
   equipment: readonly VehicleEquipment[];
@@ -43,7 +47,8 @@ export type Vehicle = {
 export const featuredVehicles: Vehicle[] = [
   {
     "id": 1,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://f1rstmotors.com/cars/available",
     "image": "/dealer/stock/1.svg",
     "category": "Coupe",
@@ -54,17 +59,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2023,
     "mileage": "0 км",
     "mileageKm": 0,
+    "mileageKnown": true,
+    "mileageValue": 0,
+    "mileageUnit": "km",
     "fuel": "Not published in source summary",
     "transmission": "Not published in source summary",
     "equipment": [],
     "condition": "new",
     "priceEur": 21000000,
-    "href": "/listing-detail-v1/1",
-    "type": "car"
+    "href": "/listing-detail-v1/1"
   },
   {
     "id": 2,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://f1rstmotors.com/cars/available",
     "image": "/dealer/stock/2.svg",
     "category": "Convertible",
@@ -75,17 +83,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2025,
     "mileage": "0 км",
     "mileageKm": 0,
+    "mileageKnown": true,
+    "mileageValue": 0,
+    "mileageUnit": "km",
     "fuel": "Not published in source summary",
     "transmission": "Not published in source summary",
     "equipment": [],
     "condition": "new",
     "priceEur": 34000000,
-    "href": "/listing-detail-v1/2",
-    "type": "car"
+    "href": "/listing-detail-v1/2"
   },
   {
     "id": 3,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://f1rstmotors.com/cars/available",
     "image": "/dealer/stock/3.svg",
     "category": "Coupe",
@@ -96,17 +107,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2017,
     "mileage": "5,669 км",
     "mileageKm": 5669,
+    "mileageKnown": true,
+    "mileageValue": 5669,
+    "mileageUnit": "km",
     "fuel": "Not published in source summary",
     "transmission": "Not published in source summary",
     "equipment": [],
     "condition": "used",
     "priceEur": 2599995,
-    "href": "/listing-detail-v1/3",
-    "type": "car"
+    "href": "/listing-detail-v1/3"
   },
   {
     "id": 4,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://f1rstmotors.com/cars/available",
     "image": "/dealer/stock/4.svg",
     "category": "Coupe",
@@ -117,17 +131,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2006,
     "mileage": "13,000 км",
     "mileageKm": 13000,
+    "mileageKnown": true,
+    "mileageValue": 13000,
+    "mileageUnit": "km",
     "fuel": "Not published in source summary",
     "transmission": "Not published in source summary",
     "equipment": [],
     "condition": "used",
     "priceEur": 11000000,
-    "href": "/listing-detail-v1/4",
-    "type": "car"
+    "href": "/listing-detail-v1/4"
   },
   {
     "id": 5,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://f1rstmotors.com/cars/available",
     "image": "/dealer/stock/5.svg",
     "category": "Coupe",
@@ -138,17 +155,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2020,
     "mileage": "3,250 км",
     "mileageKm": 3250,
+    "mileageKnown": true,
+    "mileageValue": 3250,
+    "mileageUnit": "km",
     "fuel": "Not published in source summary",
     "transmission": "Not published in source summary",
     "equipment": [],
     "condition": "used",
     "priceEur": 2899995,
-    "href": "/listing-detail-v1/5",
-    "type": "car"
+    "href": "/listing-detail-v1/5"
   },
   {
     "id": 6,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://f1rstmotors.com/cars/available",
     "image": "/dealer/stock/6.svg",
     "category": "Coupe",
@@ -159,17 +179,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2024,
     "mileage": "0 км",
     "mileageKm": 0,
+    "mileageKnown": true,
+    "mileageValue": 0,
+    "mileageUnit": "km",
     "fuel": "Not published in source summary",
     "transmission": "Not published in source summary",
     "equipment": [],
     "condition": "new",
     "priceEur": 5400000,
-    "href": "/listing-detail-v1/6",
-    "type": "car"
+    "href": "/listing-detail-v1/6"
   },
   {
     "id": 7,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://f1rstmotors.com/cars/available",
     "image": "/dealer/stock/7.svg",
     "category": "Coupe",
@@ -180,17 +203,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2024,
     "mileage": "10,200 км",
     "mileageKm": 10200,
+    "mileageKnown": true,
+    "mileageValue": 10200,
+    "mileageUnit": "km",
     "fuel": "Not published in source summary",
     "transmission": "Not published in source summary",
     "equipment": [],
     "condition": "used",
     "priceEur": 11000000,
-    "href": "/listing-detail-v1/7",
-    "type": "car"
+    "href": "/listing-detail-v1/7"
   },
   {
     "id": 8,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://f1rstmotors.com/cars/available",
     "image": "/dealer/stock/8.svg",
     "category": "Coupe",
@@ -201,17 +227,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2026,
     "mileage": "692 км",
     "mileageKm": 692,
+    "mileageKnown": true,
+    "mileageValue": 692,
+    "mileageUnit": "km",
     "fuel": "Not published in source summary",
     "transmission": "Not published in source summary",
     "equipment": [],
     "condition": "used",
     "priceEur": 5500000,
-    "href": "/listing-detail-v1/8",
-    "type": "car"
+    "href": "/listing-detail-v1/8"
   },
   {
     "id": 9,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://f1rstmotors.com/cars/available",
     "image": "/dealer/stock/9.svg",
     "category": "Coupe",
@@ -222,17 +251,20 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2021,
     "mileage": "2,550 км",
     "mileageKm": 2550,
+    "mileageKnown": true,
+    "mileageValue": 2550,
+    "mileageUnit": "km",
     "fuel": "Not published in source summary",
     "transmission": "Not published in source summary",
     "equipment": [],
     "condition": "used",
     "priceEur": 15500000,
-    "href": "/listing-detail-v1/9",
-    "type": "car"
+    "href": "/listing-detail-v1/9"
   },
   {
     "id": 10,
-    "verification": "verified",
+    "type": "car",
+    "verification": "sample",
     "evidenceUrl": "https://f1rstmotors.com/cars/available",
     "image": "/dealer/stock/10.svg",
     "category": "Coupe",
@@ -243,18 +275,23 @@ export const featuredVehicles: Vehicle[] = [
     "yearNumber": 2024,
     "mileage": "0 км",
     "mileageKm": 0,
+    "mileageKnown": true,
+    "mileageValue": 0,
+    "mileageUnit": "km",
     "fuel": "Not published in source summary",
     "transmission": "Not published in source summary",
     "equipment": [],
     "condition": "new",
     "priceEur": 1779995,
-    "href": "/listing-detail-v1/10",
-    "type": "car"
+    "href": "/listing-detail-v1/10"
   }
 ];
 
-export const formatVehiclePrice = (amount: number, locale: Locale = localeContract.defaultLocale) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
+export const formatVehiclePrice = (
+  amount: number,
+  locale: Locale = localeContract.defaultLocale
+) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
 
 /** Allow a currency line break while preserving the locale's grouped digits. */
 export const formatVehiclePriceLabel = (amount: number, locale: Locale = localeContract.defaultLocale) =>
-  formatVehiclePrice(amount, locale).replace(/([A-Z]{3})\s+/u, '$1 ').replace(/\s+([A-Z]{3})$/u, ' $1');
+  formatVehiclePrice(amount, locale).replace(/([A-Z]{3}|\p{Sc})\s+/u, '$1 ').replace(/\s+([A-Z]{3}|\p{Sc})$/u, ' $1');

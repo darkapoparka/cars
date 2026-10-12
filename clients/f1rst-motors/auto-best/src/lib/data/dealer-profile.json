@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=F1rst%20Motors%2C%20Danube%20Building%20-%20409%20Sheikh%20Zayed%20Rd%20-%20Al%20Quoz%20-%20Al%20Quoz%201%20-%20Dubai%2C%20UAE",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=F1rst%20Motors%2C%20Danube%20Building%20-%20409%20Sheikh%20Zayed%20Rd%20-%20Al%20Quoz%20-%20Al%20Quoz%201%20-%20Dubai%2C%20UAE&z=16&output=embed",
     "accent": "#c40101",
-    "logo": "/dealer-brand/logo-on-light.webp",
-    "logoLight": "/dealer-brand/logo-on-light.webp",
-    "logoDark": "/dealer-brand/logo-on-dark.webp",
+    "logo": "/dealer-brand/v2-2541ff14c5022a0c/logo-on-light.webp",
+    "logoLight": "/dealer-brand/v2-2541ff14c5022a0c/logo-on-light.webp",
+    "logoDark": "/dealer-brand/v2-2541ff14c5022a0c/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -93,6 +93,7 @@
       "currency": "AED",
       "mileageValue": 0,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Not published in source summary",
@@ -148,6 +149,7 @@
       "currency": "AED",
       "mileageValue": 0,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Convertible",
       "bodyType": "convertible",
       "fuel": "Not published in source summary",
@@ -203,6 +205,7 @@
       "currency": "AED",
       "mileageValue": 5669,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Not published in source summary",
@@ -258,6 +261,7 @@
       "currency": "AED",
       "mileageValue": 13000,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Not published in source summary",
@@ -313,6 +317,7 @@
       "currency": "AED",
       "mileageValue": 3250,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Not published in source summary",
@@ -368,6 +373,7 @@
       "currency": "AED",
       "mileageValue": 0,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Not published in source summary",
@@ -423,6 +429,7 @@
       "currency": "AED",
       "mileageValue": 10200,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Not published in source summary",
@@ -478,6 +485,7 @@
       "currency": "AED",
       "mileageValue": 692,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Not published in source summary",
@@ -533,6 +541,7 @@
       "currency": "AED",
       "mileageValue": 2550,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Not published in source summary",
@@ -588,6 +597,7 @@
       "currency": "AED",
       "mileageValue": 0,
       "mileageUnit": "km",
+      "mileageOnRequest": false,
       "body": "Coupe",
       "bodyType": "coupe",
       "fuel": "Not published in source summary",
@@ -665,6 +675,7 @@
     "disclosure": "Dated public stock sample, not a live feed. Confirm price, specifications and availability directly with F1rst Motors. Demo forms do not send messages."
   },
   "sourceCount": 10,
+  "stockKind": "",
   "logoContract": {
     "schemaVersion": 1,
     "dealer": "f1rst-motors",
@@ -673,19 +684,19 @@
     "originalSha256": "43d4c903900bfdce276720f57cf3c638cd890e99d4ea504e6c7bd5789b41ef70",
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/logo-on-light.webp",
-        "sha256": "833105e3bee3f1f81afa6ce7ebbfa4e4e2b2d51fa5e72efc28335d74b3d5f624",
-        "bytes": 110642
+        "publicPath": "/dealer-brand/v2-2541ff14c5022a0c/logo-on-light.webp",
+        "sha256": "0550daa48f7d5896a0bbf965dad79290cffde334956a7e31913b31e79cd35c3e",
+        "bytes": 28782
       },
       "onDark": {
-        "publicPath": "/dealer-brand/logo-on-dark.webp",
-        "sha256": "789523ed4d11bf57d34bedf8800745bae3f7db54b93fe35ce6e45aad16933665",
-        "bytes": 109150
+        "publicPath": "/dealer-brand/v2-2541ff14c5022a0c/logo-on-dark.webp",
+        "sha256": "520907908280ad162e8e37e293a347f78bbc01adc8643f768099406099925d6e",
+        "bytes": 23676
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/logo-on-accent.webp",
-        "sha256": "fa265cd54c49a56be62284c02a85ef2400c67321641c66a3849295966f4bc6e1",
-        "bytes": 89242
+        "publicPath": "/dealer-brand/v2-2541ff14c5022a0c/logo-on-accent.webp",
+        "sha256": "520907908280ad162e8e37e293a347f78bbc01adc8643f768099406099925d6e",
+        "bytes": 23676
       }
     },
     "preparedAt": "2026-09-19T04:59:48.789Z",

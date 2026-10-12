@@ -1,42 +1,51 @@
 'use client';
 
-import {useState} from 'react';
+import {useId, useState} from 'react';
 import {X, Phone, Mail, Copy, MessageCircle} from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import {dealer} from '@/lib/dealer-config';
 import {useCopy, useLocale} from '@/lib/locale';
 import {useModal} from './useModal';
 import {media, tokens as $} from '@/app/tokens.stylex';
-function DealerEnquiryContent({open, onClose, vehicleTitle, intent = 'enquiry'}: {open: boolean; onClose: () => void; vehicleTitle?: string; intent?: 'enquiry' | 'viewing'}) {
+export type DealerEnquiryIntent='enquiry'|'viewing'|'condition'|'service-history'|'selling'|'part-exchange'|'importing';
+export function DealerEnquiryDraft({vehicleTitle, intent = 'enquiry'}: {vehicleTitle?: string; intent?: DealerEnquiryIntent}) {
   const tx = useCopy(), locale = useLocale();
-  const panel = useModal(open, onClose);
+  const messageId = useId();
   const [message, setMessage] = useState(() => {
     const subject = vehicleTitle || (locale === 'bg' ? 'вашите автомобили' : 'your cars');
-    const greeting = intent === 'viewing' ? (locale === 'bg' ? 'Здравейте, искам да уговоря оглед на ' : 'Hello, I would like to arrange a viewing of ') : (locale === 'bg' ? 'Здравейте, интересувам се от ' : 'Hello, I would like to enquire about ');
-    return greeting + subject + '.\n' + (typeof window === 'undefined' ? '' : window.location.href);
+    const greeting = intent === 'importing' ? (locale === 'bg' ? 'Здравейте, интересувам се от внос на автомобил.\n' : 'Hello, I would like to enquire about importing a car.\n') : intent === 'selling' || intent === 'part-exchange' ? (locale === 'bg' ? 'Здравейте, искам да обсъдя ' : 'Hello, I would like to discuss ') : intent === 'viewing' ? (locale === 'bg' ? 'Здравейте, искам да уговоря оглед на ' : 'Hello, I would like to arrange a viewing of ') : (locale === 'bg' ? 'Здравейте, интересувам се от ' : 'Hello, I would like to enquire about ');
+    const request=intent==='condition'?tx('Please share the inspection report and current condition details.'):intent==='service-history'?tx('Please share the service history and supporting documents.'):'';
+    return greeting + subject + (intent === 'importing' || /[.!?]$/.test(subject.trim()) ? '\n' : '.\n') + (request?request+'\n':'') + (typeof window === 'undefined' ? '' : window.location.href);
   });
   const [status, setStatus] = useState('');
   const mail = dealer.email ? `mailto:${dealer.email}?subject=${encodeURIComponent(vehicleTitle || dealer.name)}&body=${encodeURIComponent(message)}` : '';
   const whatsapp = dealer.whatsappUrl ? dealer.whatsappUrl + (dealer.whatsappUrl.includes('?') ? '&' : '?') + 'text=' + encodeURIComponent(message) : '';
   async function copyDraft() {try {await navigator.clipboard.writeText(message); setStatus(tx('Draft copied. Nothing has been sent.'));} catch {setStatus(tx('Select and copy the draft below.'));}}
-  return <div {...stylex.props(s.backdrop)} onMouseDown={event => event.target === event.currentTarget && onClose()}>
-    <section ref={panel} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby="dealer-enquiry-title" {...stylex.props(s.sheet)}>
-      <header {...stylex.props(s.header)}><div><p {...stylex.props(s.eyebrow)}>{dealer.name}</p><h2 id="dealer-enquiry-title" {...stylex.props(s.title)}>{tx(intent === 'viewing' ? 'Request a viewing' : 'Contact the dealer')}</h2></div><button type="button" aria-label={tx('Close enquiry')} onClick={onClose} {...stylex.props(s.close)}><X size={22}/></button></header>
-      <p {...stylex.props(s.note)}>{tx('This preview prepares an enquiry only. No booking, purchase or message is submitted here.')}</p>
-      <label htmlFor="dealer-message" {...stylex.props(s.label)}>{tx('Your enquiry draft')}</label>
-      <textarea id="dealer-message" value={message} onChange={event => setMessage(event.target.value)} rows={5} {...stylex.props(s.textarea)}/>
+  return <>
+      <label htmlFor={messageId} {...stylex.props(s.label)}>{tx('Your enquiry draft')}</label>
+      <textarea id={messageId} value={message} onChange={event => setMessage(event.target.value)} rows={5} {...stylex.props(s.textarea)}/>
       <div {...stylex.props(s.actions)}>
         {dealer.phoneE164 ? <a href={'tel:' + dealer.phoneE164} {...stylex.props(s.action)}><Phone size={19}/>{tx('Call dealer')} · {dealer.phoneDisplay}</a> : null}
         {mail ? <a href={mail} {...stylex.props(s.action)}><Mail size={19}/>{tx('Open email draft')}</a> : null}
         {whatsapp ? <a href={whatsapp} target="_blank" rel="noopener noreferrer" {...stylex.props(s.action)}><MessageCircle size={19}/>{tx('Open WhatsApp draft')}</a> : null}
         <button type="button" onClick={copyDraft} {...stylex.props(s.secondary)}><Copy size={18}/>{tx('Copy draft')}</button>
       </div>
-      {!dealer.phoneE164 && !mail && !whatsapp ? <p {...stylex.props(s.note)}>{tx('No verified contact destination is available for this preview.')}</p> : null}
-      <p role="status" {...stylex.props(s.note)}>{status || tx('Availability, prices and service terms must be confirmed directly with the dealer.')}</p>
+      <p {...stylex.props(s.note)}>{tx(!dealer.phoneE164 && !mail && !whatsapp ? 'Contact details are not available. Copy the draft to send it separately.' : 'Review the draft before sending it. Nothing is sent automatically.')}</p>
+      <p role="status" aria-live="polite" aria-atomic="true" {...stylex.props(Boolean(status) && s.note)}>{status}</p>
+  </>;
+}
+function DealerEnquiryContent({open, onClose, vehicleTitle, intent = 'enquiry'}: {open: boolean; onClose: () => void; vehicleTitle?: string; intent?: DealerEnquiryIntent}) {
+  const tx = useCopy();
+  const titleId = useId();
+  const panel = useModal(open, onClose);
+  return <div {...stylex.props(s.backdrop)} onMouseDown={event => event.target === event.currentTarget && onClose()}>
+    <section ref={panel} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby={titleId} {...stylex.props(s.sheet)}>
+      <header {...stylex.props(s.header)}><div><p {...stylex.props(s.eyebrow)}>{dealer.name}</p><h2 id={titleId} {...stylex.props(s.title)}>{tx(intent === 'importing' ? 'Import enquiry' : intent === 'selling' ? 'Selling enquiry' : intent === 'part-exchange' ? 'Part-exchange enquiry' : intent === 'viewing' ? 'Request a viewing' : 'Contact the dealer')}</h2></div><button type="button" aria-label={tx('Close enquiry')} onClick={onClose} {...stylex.props(s.close)}><X size={22}/></button></header>
+      <DealerEnquiryDraft vehicleTitle={vehicleTitle} intent={intent}/>
     </section>
   </div>;
 }
-export default function DealerEnquirySheet(props: {open: boolean; onClose: () => void; vehicleTitle?: string; intent?: 'enquiry' | 'viewing'}) {
+export default function DealerEnquirySheet(props: {open: boolean; onClose: () => void; vehicleTitle?: string; intent?: DealerEnquiryIntent}) {
   const locale = useLocale();
   return props.open ? <DealerEnquiryContent key={locale + ':' + (props.vehicleTitle || '') + ':' + (props.intent || 'enquiry')} {...props}/> : null;
 }
