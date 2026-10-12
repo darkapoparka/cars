@@ -2,21 +2,21 @@
   "schemaVersion": 1,
   "kind": "cars-fleet-artifact-transport-request",
   "reviewed": true,
-  "reviewedAt": "2026-10-11T22:36:56.796Z",
+  "reviewedAt": "2026-10-12T04:44:35.802Z",
   "source": {
     "repository": "darkapoparka/cars",
     "workflowPath": ".github/workflows/existing-fleet-cloudflare.yml",
-    "runId": 38180650445,
+    "runId": 38204479138,
     "runAttempt": 1,
-    "headSha": "4175d7b33a1dde15954e472d6b0c5c632ae4d943",
+    "headSha": "9c1f6246625f93a7d46494e0c2b51f879d000518",
     "event": "push",
     "ref": "refs/heads/main"
   },
   "artifact": {
-    "id": 11716709914,
-    "name": "existing-cf-single-worker-priselci-38180650445-1",
-    "sizeInBytes": 605661374,
-    "sha256": "dcce2137e749723e254958902329b58deb7d603f26d8de83068f345d28e805f2"
+    "id": 11726304154,
+    "name": "existing-cf-single-worker-priselci-38204479138-1",
+    "sizeInBytes": 605904642,
+    "sha256": "82182706aea41d7aeae56158034a2bbad767d0a947fad92363d0ca8ef4e0fe00"
   },
   "chunkSizeBytes": 209715200
 }
