@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
   "kind": "cars-modern-native-diagnostic",
-  "id": "priselci-native-capture-12",
+  "id": "priselci-native-capture-13",
   "dealer": "priselci",
   "family": "modern",
   "admittedForDelivery": false,
   "providerWrites": false,
-  "reason": "Diagnose exact original-handler Services body capture while preserving native no-store response headers and the unmodified official dynamic-skip index; one Modern compile only",
-  "previousRun": 38199479483,
-  "previousHead": "90d91e7c067a91725a32de2de543d66a9148be9e",
+  "reason": "Diagnose exact original-handler Services capture with policy export in its preserved native lexical scope and bounded failure evidence retention; one Modern compile only",
+  "previousRun": 38200779902,
+  "previousHead": "4073af36b86e4076ebc971e48085aaef96af8920",
   "expectedClientTree": "5027934141219c6f8373f95bc239e8b9f5eb12cf",
   "selectedTemplateCommit": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde"
 }

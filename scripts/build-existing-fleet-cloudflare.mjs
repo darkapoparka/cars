@@ -26,7 +26,7 @@ import {PUBLIC_ROOTS,familyRetention} from './publishing/vercel-asset-plan.mjs';
 import {applyCloudflareProvider} from './publishing/cloudflare-provider.mjs';
 import {applyCloudflareSvelte,CLOUDFLARE_SVELTE_OUTPUT} from './publishing/cloudflare-svelte.mjs';
 import {resolveCloudflareNpmCli,applyCloudflareNext} from './publishing/cloudflare-next.mjs';
-import {applyModernFreeNativeOverlay,validateModernFreeServicesRequest} from './lib/modern-free-services-build.mjs';
+import {applyModernFreeNativeOverlay,validateModernFreeServicesRequest,modernNativeFailureEvidence} from './lib/modern-free-services-build.mjs';
 import {artifactInventory,copyBuildArtifact,assertCompiledConfig,safeArtifactPath} from './lib/uk-cloudflare-artifacts.mjs';
 import {selectPinnedRevisions} from './dealer-updates/three-way-upgrade.mjs';
 import {assertSixDesignSelection} from './lib/six-design-release.mjs';
@@ -270,8 +270,9 @@ export async function compile(slug,key){
  if(fleetSourceMode(request)==='new-approved'){buildMatrix(request);requireNew(request.dealers.includes(slug),'dealer is outside the exact build request');}
  const area=path.join(ROOT,'runtime/existing-fleet-cloudflare',slug,key);if(fs.existsSync(area))throw Error('Build attempt exists');fs.mkdirSync(path.join(area,'receipts'),{recursive:true});
  const artifact=path.join(area,'artifact');fs.mkdirSync(artifact);const result={schemaVersion:1,dealer:slug,key,sourceCommit:sha,runId:process.env.GITHUB_RUN_ID,attempt:process.env.GITHUB_RUN_ATTEMPT,node:process.version,startedAt:new Date().toISOString(),status:'running',compiled:false,hosted:false};
+ let prepared;
  try{
-  const {packageRoot,manifest,provenance}=await prepare(slug,key,sha,area,request);let target,bundle;
+  prepared=await prepare(slug,key,sha,area,request);const {packageRoot,manifest,provenance}=prepared;let target,bundle;
   if(key==='router'){
    target={config:'cloudflare/wrangler.jsonc',main:'cloudflare/router.mjs',assets:'cloudflare/public',workerName:provenance.workerPrefix,root:'cloudflare'};
    stage(area,'router-install',[resolveCloudflareNpmCli(process.execPath,fs,path),'ci','--include=dev'],path.join(packageRoot,'cloudflare'));
@@ -316,7 +317,13 @@ export async function compile(slug,key){
   }
   writeJson(path.join(artifact,'deploy.json'),deploy);Object.assign(result,{status:'passed',compiled:true,dryRun:true,workerName:target.workerName,compiledDigest:deploy.compiledDigest,output});
  }catch(error){Object.assign(result,{status:'failed',error:error.message});throw error;}
- finally{result.finishedAt=new Date().toISOString();writeJson(path.join(area,'receipts/build.json'),result);copyBuildArtifact(path.join(area,'receipts'),path.join(artifact,'receipts'));artifactInventory(artifact,{kind:'existing-fleet-cloudflare-compiled-candidate',dealer:slug,key,status:result.status});console.log(JSON.stringify(result));}
+ finally{
+  if(result.status==='failed'&&key==='modern'&&prepared?.packageRoot)try{
+   const evidence=modernNativeFailureEvidence({packageRoot:prepared.packageRoot,sourceCommit:sha});
+   if(evidence){const directory=path.join(area,'receipts/modern-native-evidence');for(const row of evidence.files){const copied=path.join(directory,row.path);copyBuildArtifact(path.join(prepared.packageRoot,row.path),copied);const bytes=fs.readFileSync(copied);if(bytes.length!==row.bytes||hash(bytes)!==row.sha256)throw Error('Native failure evidence copy changed');}writeJson(path.join(directory,'retention.json'),evidence);result.nativeFailureEvidence={files:evidence.files.length,bytes:evidence.totalBytes,observational:true};}
+  }catch(error){result.nativeFailureEvidenceError=error.message;console.error('Native failure evidence unavailable: '+error.message);}
+  result.finishedAt=new Date().toISOString();writeJson(path.join(area,'receipts/build.json'),result);copyBuildArtifact(path.join(area,'receipts'),path.join(artifact,'receipts'));artifactInventory(artifact,{kind:'existing-fleet-cloudflare-compiled-candidate',dealer:slug,key,status:result.status});console.log(JSON.stringify(result));
+ }
  return result;
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))try{const [command,a,b]=process.argv.slice(2);if(command==='matrix')console.log('matrix='+JSON.stringify(buildMatrix(read(path.join(ROOT,'docs/releases/cloudflare-existing25-20261011/build-request.json')))));else if(command==='compile')await compile(a,b);else throw Error('Usage: matrix | compile SLUG FAMILY');}catch(e){console.error(e.stack);process.exitCode=1;}
