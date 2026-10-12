@@ -43,28 +43,26 @@ jobs:
         with:
           node-version: '26.10.0'
           package-manager-cache: false
-      - name: Select only this dealer from the exact retained reviewed request
+      - name: Select this dealer from restored Batch C reviewed inputs
         env:
           DEALER: ${{ matrix.dealer }}
         run: |
           node --input-type=module <<'NODE'
           import assert from 'node:assert/strict';import fs from 'node:fs';import {createHash} from 'node:crypto';import {execFileSync} from 'node:child_process';
           const selected={
-            'ivo-auto':{wave:'05',repository:'darkapoparka/cars-ivoauto',tree:'69b8d9a5ca62d9c053f7834499040a06f3d1a473'},
-            'kg-team-auto':{wave:'05',repository:'darkapoparka/cars-kgteamauto',tree:'408eecbf05b75998c5f727f23ae1bb1043b76f8b'},
-            'texas-drive-auto':{wave:'06',repository:'darkapoparka/cars-texasdriveauto',tree:'3cb8505426f905b31fd5c29a1c5366fcad75eeff'},
-            'the-dealers-point':{wave:'06',repository:'darkapoparka/cars-thedealerspoint',tree:'1eed6abaf535d42d7863da7eb4647e0bc4e049b1'}
+            'ivo-auto':{repository:'darkapoparka/cars-ivoauto',tree:'69b8d9a5ca62d9c053f7834499040a06f3d1a473'},
+            'kg-team-auto':{repository:'darkapoparka/cars-kgteamauto',tree:'408eecbf05b75998c5f727f23ae1bb1043b76f8b'},
+            'texas-drive-auto':{repository:'darkapoparka/cars-texasdriveauto',tree:'3cb8505426f905b31fd5c29a1c5366fcad75eeff'},
+            'the-dealers-point':{repository:'darkapoparka/cars-thedealerspoint',tree:'1eed6abaf535d42d7863da7eb4647e0bc4e049b1'}
           };
           const slug=process.env.DEALER,pin=selected[slug];assert(pin);assert.equal(process.env.GITHUB_REF,'refs/heads/codex/vercel-batch-c-20261013');
-          const requestPath='docs/releases/cloudflare-existing25-20261011/vercel-existing-source/ordinary-wave'+pin.wave+'-source-request.json';
-          const bytes=fs.readFileSync(requestPath),sha256=createHash('sha256').update(bytes).digest('hex');
-          assert.equal(sha256,{'05':'542a76378dccc064a940fc24e79ccf754f9e5114c8ee74eeeb2e8fdd545d1aac','06':'c7ddf70b1ae0314dafd5c2ea926ec729587b4791f3be6effd7dd92029b4d3680'}[pin.wave]);
+          const requestPath='.github/vercel-batch-c/remaining-inputs.json';
+          const bytes=fs.readFileSync(requestPath),sha256=createHash('sha256').update(bytes).digest('hex');assert.equal(sha256,'cd9d1aff76329f89e789b0646aea54f75d7c1cb3d119b7d18804dd60559525a1');
           const original=JSON.parse(bytes),control=JSON.parse(fs.readFileSync('.github/vercel-batch-c/source-request.json'));
-          assert.equal(original.sourceRevision,'b1f0f5609c7c249cfd0649c122849ff2cbb8dfde');assert(original.dealers.includes(slug));assert(original.inputs[slug]);
+          assert.equal(original.batch,'C');assert.deepEqual(original.dealers,Object.keys(selected));assert.equal(original.sourceRevision,'b1f0f5609c7c249cfd0649c122849ff2cbb8dfde');assert(original.inputs[slug]);
           const actualTree=execFileSync('git',['rev-parse',process.env.GITHUB_SHA+':clients/'+slug],{encoding:'utf8'}).trim();assert.equal(actualTree,pin.tree,'Current assigned source changed: reconcile');
-          const request={schemaVersion:1,batch:'C',acceptedRelease:control.acceptedRelease,sourceRequest:{schemaVersion:original.schemaVersion,sourceRevision:original.sourceRevision,approvedParentLockDigest:original.approvedParentLockDigest,dealers:[slug],inputs:{[slug]:original.inputs[slug]}},baselines:{[slug]:{repository:pin.repository,tree:pin.tree}},sourceSelection:{originalRequest:requestPath,originalRequestSha256:sha256,selectedDealer:slug,otherCohortRowsExcluded:true}};
-          fs.writeFileSync('.github/vercel-batch-c/source-request.json',JSON.stringify(request,null,2)+'\n');
-          fs.mkdirSync('runtime/batch-c-selected-inputs',{recursive:true});fs.writeFileSync('runtime/batch-c-selected-inputs/'+slug+'.json',JSON.stringify(request,null,2)+'\n');
+          const request={schemaVersion:1,batch:'C',acceptedRelease:control.acceptedRelease,sourceRequest:{schemaVersion:original.schemaVersion,sourceRevision:original.sourceRevision,approvedParentLockDigest:original.approvedParentLockDigest,dealers:[slug],inputs:{[slug]:original.inputs[slug]}},baselines:{[slug]:{repository:pin.repository,tree:pin.tree}},sourceSelection:{originalRequest:requestPath,originalRequestSha256:sha256,selectedDealer:slug,provenance:original.provenance.filter(p=>p.selectedDealers.includes(slug)),otherCohortRowsExcluded:true}};
+          fs.writeFileSync('.github/vercel-batch-c/source-request.json',JSON.stringify(request,null,2)+'\n');fs.mkdirSync('runtime/batch-c-selected-inputs',{recursive:true});fs.writeFileSync('runtime/batch-c-selected-inputs/'+slug+'.json',JSON.stringify(request,null,2)+'\n');
           NODE
       - name: Install maintained pinned raster helper
         run: |
