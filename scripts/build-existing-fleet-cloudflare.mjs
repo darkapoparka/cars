@@ -287,6 +287,8 @@ async function prepare(slug,key,sha,area,request){
  const config=switcherConfiguration(manifest,read(path.join(ROOT,'scripts/publishing/switcher-messages.json')),files);
  const switcher=fs.readFileSync(path.join(ROOT,'scripts/publishing/preview-switcher.js'),'utf8').replace('__CARS_SWITCHER_CONFIG__',()=>JSON.stringify(config).replace(/</g,'\\u003c'));
  files.set('auto-best/static/preview-switcher.js',Buffer.from(switcher));files.set('dealer.json',encode(manifest));
+ const {completeSignatureFontAssets}=await import('./publishing/signature-font-assets.mjs');
+ completeSignatureFontAssets(files);
  const pruned=pruneReviewedAssets(files);files=pruned.files;
  files=await applyCloudflareProvider(files,manifest,{workerPrefix,...(modernFreeServicesExperiment?{nextAdapter:(f,m,o)=>applyCloudflareNext(f,m,{...o,modernFreeServicesExperiment,modernFreeNativeQueryExperiment})}:{}),svelteAdapter:(f,m,o)=>applyCloudflareSvelte(f,m,{...o,serviceKeys:!NEXT.has(key)&&key!=='router'?[key]:['auto-best','import','karento-best']})});
  files.set('scripts/build-cloudflare-svelte.mjs',fs.readFileSync(path.join(ROOT,'scripts/publishing/cloudflare-svelte.mjs')));

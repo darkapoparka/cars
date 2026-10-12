@@ -261,6 +261,8 @@ async function prepare({ root = ROOT, source, manifest, sourceCommit, guidance, 
         files.set(logoConsumer, Buffer.from(bindModernMobileWordmarkLogo(files.get(logoConsumer).toString('utf8'))));
         files.set('.cars-dealer-contact-fallback.json', Buffer.from(json(contact)));
       }
+      const {completeSignatureFontAssets} = await import('./publishing/signature-font-assets.mjs');
+      completeSignatureFontAssets(files);
       files = applySixVariantMounts(files, manifest, { provider });
       const {applyDealerShare} = await import('./publishing/dealer-share.mjs');
       await applyDealerShare(files, manifest);
