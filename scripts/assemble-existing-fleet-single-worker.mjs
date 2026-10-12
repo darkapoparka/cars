@@ -10,6 +10,7 @@ import {ROOT,json,sha256,normalized,filesAt,inside,git,writeJson} from './lib/wo
 import {artifactInventory,validateFileInventory} from './lib/uk-cloudflare-artifacts.mjs';
 import {COMPOSITION_KEYS,registeredCompositionIdentity,reviewedRouterVariants,runDealerSingleWorker} from './package-dealer-single-worker.mjs';
 import {inspectSingleWorkerInputs,singleWorkerSource} from './package-uk-single-worker.mjs';
+import {validateModernStaticManifest} from './lib/modern-free-static-runtime.mjs';
 import {collectSource} from './package-dealer.mjs';
 import {buildMatrix,selectedDealer} from './build-existing-fleet-cloudflare.mjs';
 
@@ -22,12 +23,12 @@ const canonical=value=>JSON.stringify(value,(_,v)=>v&&typeof v==='object'&&!Arra
 const assert=(value,message)=>{if(!value)throw Error(message);};
 export const singletonArtifactName=(slug,runId,attempt)=>'existing-cf-single-worker-'+slug+'-'+runId+'-'+attempt;
 
-export function assertSingletonConfig(config,workerName) {
+export function assertSingletonConfig(config,workerName,modernStatic=null) {
  const allowed=new Set(['name','main','base_dir','compatibility_date','compatibility_flags','workers_dev','preview_urls','no_bundle','find_additional_modules','rules','observability','assets']);
  assert(config&&Object.keys(config).every(k=>allowed.has(k))&&config.name===workerName&&config.main==='server/worker.mjs'&&config.base_dir==='server'&&
   config.compatibility_date==='2026-10-10'&&canonical(config.compatibility_flags)===canonical(['nodejs_compat'])&&config.workers_dev===true&&config.preview_urls===false&&
   config.no_bundle===true&&config.find_additional_modules===true&&canonical(config.rules)===canonical([{type:'ESModule',globs:['**/*.js','**/*.mjs'],fallthrough:true},{type:'CompiledWasm',globs:['**/*.wasm'],fallthrough:true}])&&
-  canonical(config.observability)===canonical({enabled:true})&&canonical(config.assets)===canonical({directory:'./public',binding:'ASSETS',run_worker_first:false}),
+  canonical(config.observability)===canonical({enabled:true})&&canonical(config.assets)===canonical({directory:'./public',binding:'ASSETS',run_worker_first:modernStatic?['/_cars/private/modern/*','/_vinext/static-cache/*']:false}),
   'Singleton configuration differs or includes service bindings, routes or foreign resources');
  return config;
 }
@@ -46,7 +47,27 @@ export function verifySingletonInventory(directory) {
  return inventory;
 }
 
-export function validateFleetSingleton({inventory,receipt,review,delivery,config,entry}) {
+/** Admit only the exact Services opt-in already sealed by the native composer. */
+function sealedModernStaticManifest({rows,receipt,review,modernStatic}) {
+ const manifestPath='server/modern/cars-free-services.json',resolverPath='server/modern/cars-native-preferences.js',runtimePath='server/modern-free-static-runtime.mjs';
+ const reserved=rows.filter(row=>[manifestPath,resolverPath,runtimePath].includes(row.path)||row.path.startsWith('public/_cars/private/modern/')||row.path.startsWith('public/_vinext/static-cache/'));
+ if(modernStatic===null){assert(reserved.length===0,'Unmarked Modern reserved static outputs');return null;}
+ assert(modernStatic&&canonical(Object.keys(modernStatic).sort())===canonical(['manifestBytes','runtimeBytes'])&&Buffer.isBuffer(modernStatic.manifestBytes)&&Buffer.isBuffer(modernStatic.runtimeBytes),'Exact sealed Modern static inputs required');
+ const byPath=new Map(rows.map(row=>[row.path,row])),manifestRow=byPath.get(manifestPath),resolverRow=byPath.get(resolverPath),runtimeRow=byPath.get(runtimePath);
+ assert(manifestRow&&manifestRow.bytes<=16384&&modernStatic.manifestBytes.length===manifestRow.bytes&&sha256(modernStatic.manifestBytes)===manifestRow.sha256&&resolverRow&&resolverRow.bytes<=256*1024&&runtimeRow&&runtimeRow.bytes<=64*1024,'Bounded sealed Modern static modules required');
+ const manifest=validateModernStaticManifest(JSON.parse(modernStatic.manifestBytes));
+ assert(manifest.responsePolicy.sourceTree===receipt.sourceTree,'Singleton Modern static source tree differs');
+ const mounts=review.variants?.filter(row=>row.key==='modern');assert(mounts?.length===1&&mounts[0].base===manifest.mount,'Singleton Modern static mount differs');
+ const changes=receipt.changes?.filter(row=>row.path===resolverPath);assert(changes?.length===1&&changes[0].sourcePath==='compiled/modern/apps/web/dist/server/cars-native-preferences.js'&&changes[0].method==='AST-defined private globals; identifiers retained without keepNames helpers so serialized inline functions remain self-contained'&&changes[0].beforeSha256===manifest.responsePolicy.producerSha256&&changes[0].afterSha256===resolverRow.sha256,'Singleton Modern native resolver transform differs');
+ const expectedRuntime=fs.readFileSync(new URL('./lib/modern-free-static-runtime.mjs',import.meta.url));
+ assert(modernStatic.runtimeBytes.equals(expectedRuntime)&&modernStatic.runtimeBytes.length===runtimeRow.bytes&&sha256(modernStatic.runtimeBytes)===runtimeRow.sha256,'Singleton Modern static runtime source differs');
+ const assets=manifest.routes.flatMap(route=>['html','rsc'].map(kind=>({...route[kind],path:'public'+route[kind].path}))),privateRows=rows.filter(row=>row.path.startsWith('public/_cars/private/modern/'));
+ assert(privateRows.length===4&&assets.every(asset=>{const row=byPath.get(asset.path);return row&&row.bytes===asset.bytes&&row.sha256===asset.sha256;}),'Singleton requires exactly four sealed native Services assets');
+ assert(!rows.some(row=>row.path.startsWith('public/_vinext/static-cache/')),'Unscoped singleton native static cache');
+ return manifest;
+}
+
+export function validateFleetSingleton({inventory,receipt,review,delivery,config,entry,modernStatic=null}) {
  assert(inventory.kind===SINGLETON_KIND&&inventory.status==='passed'&&receipt.schemaVersion===1&&receipt.type==='cars-existing-fleet-single-worker-provider-package'&&
   inventory.dealer===receipt.dealer&&receipt.workerCount===1&&receipt.applicationCount===6&&receipt.accountId===SINGLETON_ACCOUNT&&receipt.hostedVerified===false&&
   receipt.sourceApplicationBytesChanged===false&&receipt.compiledApplicationBytesChanged===true&&hex40(receipt.sourceCommit)&&hex40(receipt.sourceTree)&&hex64(receipt.inputDigest)&&
@@ -74,14 +95,16 @@ export function validateFleetSingleton({inventory,receipt,review,delivery,config
  assert(rows.every(r=>r.path==='wrangler.json'||r.path.startsWith('server/')||r.path.startsWith('public/')),'Unexpected singleton payload');
  const server=rows.filter(r=>r.path.startsWith('server/')),assets=rows.filter(r=>r.path.startsWith('public/'));
  assert(server.reduce((s,r)=>s+r.bytes,0)===receipt.serverBytes&&receipt.serverBytes<64*1024**2&&assets.length===receipt.assetFiles&&assets.length<20000&&assets.every(r=>r.bytes<=25*1024**2),'Singleton exceeds current account Worker/assets limits');
- assert(entry===singleWorkerSource(),'Singleton entry is not the six in-process design router');
- assertSingletonConfig(config,receipt.workerName);
+ const staticManifest=sealedModernStaticManifest({rows,receipt,review,modernStatic});
+ assert(entry===singleWorkerSource(staticManifest),'Singleton entry is not the six in-process design router');
+ assertSingletonConfig(config,receipt.workerName,staticManifest);
  return {inventory,receipt,review,delivery,config};
 }
 
 export function verifyFleetSingletonDirectory(directory) {
  const inventory=verifySingletonInventory(directory),read=name=>json(inside(directory,name,{mustExist:true}));
- return validateFleetSingleton({inventory,receipt:read('single-worker-receipt.json'),review:read('dealer-composition-review.json'),delivery:read('delivery-receipt.json'),config:read('wrangler.json'),entry:fs.readFileSync(inside(directory,'server/worker.mjs',{mustExist:true}),'utf8')});
+ const modernStatic=inventory.files.some(row=>row.path==='server/modern/cars-free-services.json')?{manifestBytes:fs.readFileSync(inside(directory,'server/modern/cars-free-services.json',{mustExist:true})),runtimeBytes:fs.readFileSync(inside(directory,'server/modern-free-static-runtime.mjs',{mustExist:true}))}:null;
+ return validateFleetSingleton({inventory,receipt:read('single-worker-receipt.json'),review:read('dealer-composition-review.json'),delivery:read('delivery-receipt.json'),config:read('wrangler.json'),entry:fs.readFileSync(inside(directory,'server/worker.mjs',{mustExist:true}),'utf8'),modernStatic});
 }
 
 export function assertCiContext({env=process.env,platform=process.platform,version=process.version,root=ROOT,gitRead=git}={}) {
