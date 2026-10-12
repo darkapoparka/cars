@@ -11,7 +11,7 @@ import { applyMounts } from './publishing/mounts.mjs';
 import { git, gitFiles } from './lib/workflow.mjs';
 import { dealerGuidance } from './lib/dealer-guidance.mjs';
 import { assertLegacyLocaleCompatible } from './lib/dealer-locale.mjs';
-import { NATIVE_PACKAGING_VERSION, assertNativeAdoption } from './lib/native-localization.mjs';
+import { NATIVE_PACKAGING_VERSION, assertNativeAdoption, nativeContract, nativeInputDigest } from './lib/native-localization.mjs';
 import { adoptNativeSource, applyNativeMounts } from './publishing/native-mounts.mjs';
 import { applySharedMedia } from './publishing/shared-media.mjs';
 import { applyVercelAssets } from './publishing/vercel-asset-plan.mjs';
@@ -218,7 +218,55 @@ function fallbackGuidance(manifest, provider) {
   return `# ${manifest.slug} dealer package\n\nThis repository is a derived deployment package. Canonical dealer source lives under clients/${manifest.slug} in the Cars repository. Read dealer.json and .cars-package.json for identity and provenance. Make source changes in Cars and regenerate the package; do not silently edit generated mounting code or template masters.\n\nAll ${manifest.variants.length} designs share one Vercel project. Preserve retained lockfiles, source layouts, licensing and provenance. Run each app's documented checks and test every mounted entry, inventory, detail, contact and enquiry destination at 390 and 1440 px. Check the design switcher at 320 px, including Escape and focus return. A build is not public-preview proof. Publishing does not authorize outreach.\n`;
 }
 
-async function prepare({ root = ROOT, source, manifest, sourceCommit, guidance, canonicalFiles, nativeReleases, provider = 'vercel', cloudflareLocks }) {
+// The owner accepted this exact six-master release on 2026-10-13 and ordered
+// production updates without repeating the prior template-qualification campaign.
+// Keep the historical source qualification unmodified; it is not a claim that
+// this dealer's new production build or public-origin checks have already passed.
+const OWNER_ACCEPTED_VERCEL_BATCH_B = Object.freeze({
+  'al-basma-motors': ['cars-albasmamotors','prj_axqFQFzpsq6JLTBwXOzyv5Wnbphk'],
+  'al-hamoor-al-thahabi': ['cars-alhamooralthahabi','prj_hdzWSWLwsNVu7mmsmGA97XbCDSrw'],
+  'asko-96': ['cars-asko96','prj_lrmxXJdqRTKdDlufXaS0vd8TdpJX'],
+  'astracar': ['cars-astracar','prj_70zIp6vOJGgHSVcOtk9pR8dCTsTT'],
+  'autolife': ['cars-autolife','prj_h9XFj7PYyl3OsEMxBueC5bZWvdSd'],
+  'champion-auto-pro': ['cars-championautopro','prj_Zles0MpLROdFwgSnvuvpxrNBWcRY'],
+  'eliqauto': ['cars-eliqauto','prj_0aDYGRa0LI91M3AJRY4dlGssLUF3'],
+  'elit-auto-import': ['cars-elitautoimport','prj_7QV9OtCRFxJMWpWWlUXLpptcQPXs']
+});
+function assertOwnerAcceptedVercelSource(files, manifest, sourceCommit, authorization, provider, root) {
+  const expected = OWNER_ACCEPTED_VERCEL_BATCH_B[manifest.slug];
+  const pin = 'b1f0f5609c7c249cfd0649c122849ff2cbb8dfde';
+  if (provider !== 'vercel' || manifest.packaging.version !== SIX_PACKAGING_VERSION || !expected ||
+      authorization?.schemaVersion !== 1 || authorization.kind !== 'cars-existing-vercel-owner-release' ||
+      authorization.ownerInstructionDate !== '2026-10-13' || authorization.releaseId !== 'cars-vercel-b1f0f560-20261013' ||
+      authorization.acceptedTemplateCommit !== pin || authorization.dealer !== manifest.slug ||
+      authorization.repository !== manifest.repository || manifest.repository !== 'darkapoparka/' + expected[0] ||
+      authorization.projectId !== expected[1] || authorization.publicOrigin !== manifest.shareIdentity?.publicOrigin ||
+      authorization.sourceCommit !== sourceCommit || authorization.sourceTree !== git(root, ['rev-parse', sourceCommit + ':clients/' + manifest.slug]) ||
+      authorization.productionAcceptance !== 'pending-provider-build-and-stable-origin-verification' ||
+      authorization.retainedQa?.runId !== 38298986232 || authorization.retainedQa?.artifactId !== 11770027928) {
+    throw new Error('Owner-accepted release does not match the fixed existing Vercel dealer/source scope');
+  }
+  for (const {key} of manifest.variants) {
+    const actual = manifest.templateSources?.[key], accepted = authorization.acceptedTemplates?.[key];
+    if (!actual || actual.repository !== 'darkapoparka/cars' || actual.revision !== pin || actual.path !== 'templates/' + key ||
+        actual.tree !== git(root, ['rev-parse', pin + ':templates/' + key]) ||
+        !accepted || ['repository','revision','path','tree','digest'].some(field => actual[field] !== accepted[field])) {
+      throw new Error(key + ': accepted immutable template source differs');
+    }
+  }
+  const base = baseNativeManifest(manifest), contract = nativeContract(base);
+  const receipt = JSON.parse(files.get('localization/adoption.json').toString('utf8'));
+  const actual = nativeInputDigest(files, base);
+  if (receipt.schemaVersion !== 2 || receipt.kind !== 'cars-native-source-qualification' ||
+      receipt.dealerId !== contract.dealerId || receipt.contractDigest !== sha256(JSON.stringify(contract)) ||
+      receipt.nativeApproval !== false || receipt.hostedApproval !== false || receipt.globalReleaseApproval !== false ||
+      receipt.input?.digest !== actual.digest || receipt.input?.files !== actual.files ||
+      receipt.contractDigest !== sha256(JSON.stringify(JSON.parse(files.get('localization/contract.json'))))) {
+    throw new Error('Retained dealer source, locale contract, or historical qualification evidence changed');
+  }
+}
+
+async function prepare({ root = ROOT, source, manifest, sourceCommit, guidance, canonicalFiles, nativeReleases, provider = 'vercel', cloudflareLocks, sourceAuthorization }) {
   manifest = structuredClone(manifest);
   validatePackagingManifest(manifest);
   if (!['vercel', 'cloudflare'].includes(provider)) throw new Error('Unsupported publishing provider');
@@ -242,7 +290,11 @@ async function prepare({ root = ROOT, source, manifest, sourceCommit, guidance, 
     files.set(name, preserveExtraBytes(name) ? bytes : normalized(bytes));
   }
   if (native) {
-    if (nativeReleases) files = adoptNativeSource(files, baseNativeManifest(manifest), nativeReleases,{root});
+    if (sourceAuthorization) {
+      assertOwnerAcceptedVercelSource(files, manifest, sourceCommit, sourceAuthorization, provider, root);
+      files = applyNativeMounts(files, baseNativeManifest(manifest));
+      assertOwnerAcceptedVercelSource(files, manifest, sourceCommit, sourceAuthorization, provider, root);
+    } else if (nativeReleases) files = adoptNativeSource(files, baseNativeManifest(manifest), nativeReleases,{root});
     else { assertNativeAdoption(files, baseNativeManifest(manifest),{root}); files = applyNativeMounts(files, baseNativeManifest(manifest)); assertNativeAdoption(files, baseNativeManifest(manifest),{root}); }
     assertAppVariant(files, manifest);
     if (manifest.packaging.version === SIX_PACKAGING_VERSION) {
@@ -314,7 +366,7 @@ async function prepare({ root = ROOT, source, manifest, sourceCommit, guidance, 
   sealSixVariantBuild(files, manifest, { provider });
   const payload = hashes();
   const payloadDigest = sha256(JSON.stringify(payload));
-  files.set('.cars-package.json', Buffer.from(json({ schemaVersion: 1, manifest, sourceCommit, packagingVersion: manifest.packaging.version, assetDelivery, payloadDigest, payload })));
+  files.set('.cars-package.json', Buffer.from(json({ schemaVersion: 1, manifest, sourceCommit, packagingVersion: manifest.packaging.version, assetDelivery, ...(sourceAuthorization ? {sourceAuthorization} : {}), payloadDigest, payload })));
   const digest = sha256(JSON.stringify(hashes()));
   return { resolvedSource, files, digest, inputDigest, manifestInput, manifest, assetDelivery, packagingVersion: manifest.packaging.version };
 }
