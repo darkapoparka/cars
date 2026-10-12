@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {execFileSync} from 'node:child_process';import {createHash} from 'node:crypto';
-import {applyDealerPresentation} from './publishing/dealer-presentation.mjs';
+import {applyDealerPresentation,resolveDealerPresentationVersion,DEALER_PRESENTATION_VERSION} from './publishing/dealer-presentation.mjs';
 import {applyOptionalContactFallback} from './publishing/dealer-contact-fallback.mjs';
 import {bindModernMobileWordmarkLogo} from './lib/client-logo-contract.mjs';
 const source=process.env.CARS_PRESENTATION_SOURCE||'HEAD';
@@ -48,7 +48,9 @@ for(const slug of slugs)test(slug+': the actual preserved six-design source acce
 });
 test('Vercel and Cloudflare share the same explicit presentation gate before mounting and sealing',()=>{
  const s=fs.readFileSync(new URL('./package-dealer.mjs',import.meta.url),'utf8');const a=s.indexOf('if (manifest.presentation !== undefined)'),b=s.indexOf('files = applySixVariantMounts',a),c=s.indexOf('sealSixVariantBuild',s.indexOf('async function prepare('));
- assert.ok(a>0&&b>a&&c>b);assert.match(s.slice(a,b),/applyDealerPresentation/);assert.match(s.slice(a,b),/bindModernMobileWordmarkLogo/);assert.doesNotMatch(s.slice(a,b),/provider ===/);assert.match(s.slice(a,b),/Unknown dealer presentation version/);
+ assert.ok(a>0&&b>a&&c>b);assert.match(s.slice(a,b),/applyDealerPresentation/);assert.match(s.slice(a,b),/bindModernMobileWordmarkLogo/);assert.doesNotMatch(s.slice(a,b),/provider ===/);assert.match(s.slice(a,b),/resolveDealerPresentationVersion\(manifest\.presentation\.version\)/);
+ for(const version of [DEALER_PRESENTATION_VERSION,'neutral-services-v1'])assert.equal(resolveDealerPresentationVersion(version),DEALER_PRESENTATION_VERSION);
+ for(const version of [undefined,null,'','unreviewed-services-v9',{}])assert.throws(()=>resolveDealerPresentationVersion(version),/Unknown dealer presentation version/);
 });
 
 test('current native Signature logo contract rejects changed surfaces, navigation and header controls',()=>{
