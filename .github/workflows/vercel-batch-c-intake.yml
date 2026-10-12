@@ -1,0 +1,74 @@
+name: Vercel Batch C retained source intake
+on:
+  push:
+    branches: [codex/vercel-batch-c-20261013]
+    paths: [.github/vercel-batch-c/intake-request.json]
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: cars-vercel-batch-c-writer
+  cancel-in-progress: false
+jobs:
+  intake:
+    if: github.repository == 'darkapoparka/cars' && github.ref == 'refs/heads/codex/vercel-batch-c-20261013'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      NODE_OPTIONS: --max-old-space-size=4608
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: codex/vercel-batch-c-20261013
+          fetch-depth: 0
+          filter: blob:none
+          persist-credentials: true
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /.github/vercel-batch-c/
+            /scripts/
+            /templates.lock.json
+            /templates/auto-best/scripts/
+            /docs/DEPLOYMENT-INVENTORY.json
+            /docs/releases/**/*.json
+            /clients/excellent-cars/
+            /clients/f1rst-motors/
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.10.0'
+          package-manager-cache: false
+      - name: Verify event lease and configure scoped commit identity
+        env:
+          EVENT_SHA: ${{ github.sha }}
+        run: |
+          test "$(git rev-parse HEAD)" = "$EVENT_SHA"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          node --check .github/vercel-batch-c/intake-source.mjs
+      - name: Intake retained Excellent Cars source
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node .github/vercel-batch-c/intake-source.mjs excellent-cars
+      - name: Intake retained F1rst Motors source
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node .github/vercel-batch-c/intake-source.mjs f1rst-motors
+      - name: Save compact receipts and exact maintained packaging tools
+        if: always()
+        run: |
+          mkdir -p runtime/batch-c-tooling
+          tar -czf runtime/batch-c-tooling/maintained-tools.tar.gz scripts templates.lock.json docs/DEPLOYMENT-INVENTORY.json
+          git rev-parse HEAD > runtime/batch-c-tooling/control-head.txt
+      - name: Retain source publication receipts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: vercel-batch-c-intake-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            runtime/batch-c-intake-receipts/
+            runtime/batch-c-tooling/
+          include-hidden-files: true
+          retention-days: 7
+          compression-level: 6
+          if-no-files-found: error
