@@ -110,7 +110,8 @@ export function prefetchPinnedSourceBlobs({ repositoryPath, entries, env = proce
   let bytes = 0;
   for (let offset = 0; offset < missing.length; offset += 256) {
     const wants = missing.slice(offset, offset + 256);
-    readGit(repositoryPath, ['-c', 'gc.auto=0', 'fetch', '--no-tags', '--no-write-fetch-head',
+    // Match Git's promisor blob hydration: do not negotiate commit haves for missing objects.
+    readGit(repositoryPath, ['-c', 'gc.auto=0', '-c', 'fetch.negotiationAlgorithm=noop', 'fetch', '--no-tags', '--no-write-fetch-head',
       '--no-auto-maintenance', '--no-recurse-submodules', '--filter=blob:none', 'origin', ...wants], { env: localEnv });
     const fetched = inspect(wants);
     if (fetched.some(size => size === null)) throw new Error('Pinned blob batch fetch did not supply every exact wanted blob');

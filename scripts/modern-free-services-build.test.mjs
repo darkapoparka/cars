@@ -71,3 +71,25 @@ test('standalone maintained generated helper is syntactically loadable with opt-
 test.after(()=>{clearFixture();fs.rmdirSync(fixtureRoot);});
 
 test('explicit experiment refreshes the persistent provider on SSR entry as well as prerender',()=>{const f=fixture(),over=applyModernFreeNativeOverlay(f.files,f.request,f.options),out=applyModernFreeBuildOverlay(over.files,over.experiment,{base:'/variant-3'}),layout=out.get('modern/apps/web/app/[locale]/layout.tsx').toString();assert.match(layout,/requestBootstrap = true;/);assert.doesNotMatch(layout,/requestBootstrap = requestBootstrap \|\| carsPrerender/);assert.match(layout,/carsPrerender \? getStaticServicesPreferences\(normalizedLocale\) : await getRequestPreferences/);const receipt=JSON.parse(out.get('.cars-modern-free-build.json'));assert.equal(receipt.mount,'/variant-3');assert.equal(receipt.generated.length,2);assert.equal(receipt.files.length,3);});
+
+test('retained native graph receipts preserve exact original bytes and module IDs in private compiled output',async()=>{
+ const f=emissionFixture(),original=new Map();
+ for(const env of ['rsc','ssr','client'])original.set(env,fs.readFileSync(path.join(fixtureRoot,'.cars-modern-free-graph-'+env+'.json')));
+ // Exercise the exact generated helper used by the CI build, as well as its
+ // retained receipt schema. Source generation must carry the retention seam.
+ const generated=await import('data:text/javascript;base64,'+Buffer.from(modernFreeServicesBuildSource()).toString('base64'));
+ const marker=generated.emitModernFreeServicesSnapshots({packageRoot:fixtureRoot,target:f.target});
+ assert.deepEqual(Object.keys(marker).sort(),['manifestPath','receiptPath','resolverPath']);
+ const receipt=JSON.parse(fs.readFileSync(path.join(fixtureRoot,marker.receiptPath)));
+ for(const env of ['rsc','ssr','client']){
+  const record=receipt.graph[env],expectedPath=f.server+'/cars-native-graph-'+env+'.json';
+  assert.equal(record.path,expectedPath);
+  assert.equal(record.bytes,original.get(env).length);
+  assert.equal(record.sha256,hash(original.get(env)));
+  assert.equal(record.chunks,1);
+  const retained=fs.readFileSync(path.join(fixtureRoot,record.path));
+  assert.deepEqual(retained,original.get(env));
+  assert.deepEqual(JSON.parse(retained).rows[0].moduleIds,['<package>/modern/apps/web/app/[locale]/services/page.tsx']);
+  assert(!fs.existsSync(path.join(fixtureRoot,f.client,'cars-native-graph-'+env+'.json')));
+ }
+});

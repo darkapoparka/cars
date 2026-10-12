@@ -27,11 +27,12 @@ function blobFetchFixture({ count = 2, present = 0, wrongOrigin = false, wrongHe
       assert.equal(options.env.GIT_NO_LAZY_FETCH, '1');
       return options.input.trim().split('\n').map(id => available.has(id) ? id + ' ' + (wrongType ? 'commit' : 'blob') + ' 10' : id + ' missing').join('\n');
     }
-    assert.equal(args[2], 'fetch');
-    assert.deepEqual(args.slice(3, 9), ['--no-tags', '--no-write-fetch-head', '--no-auto-maintenance', '--no-recurse-submodules', '--filter=blob:none', 'origin']);
-    assert(args.length - 9 <= 256);
+    assert.deepEqual(args.slice(0, 4), ['-c', 'gc.auto=0', '-c', 'fetch.negotiationAlgorithm=noop']);
+    assert.equal(args[4], 'fetch');
+    assert.deepEqual(args.slice(5, 11), ['--no-tags', '--no-write-fetch-head', '--no-auto-maintenance', '--no-recurse-submodules', '--filter=blob:none', 'origin']);
+    assert(args.length - 11 <= 256);
     assert.equal(options.env.GIT_TERMINAL_PROMPT, '0');
-    if (!omitted) for (const id of args.slice(9)) available.add(id);
+    if (!omitted) for (const id of args.slice(11)) available.add(id);
     return '';
   };
   return { entries, calls, readGit };
@@ -57,7 +58,7 @@ test('source prefetch fetches only deduplicated missing blob IDs in bounded mult
   const fixture = blobFetchFixture({ count: 258, present: 1 });
   const result = prefetchPinnedSourceBlobs({ repositoryPath: '/unused', entries: [...fixture.entries, fixture.entries[0]], env: sourceCiEnv, readGit: fixture.readGit });
   assert.deepEqual(result, { enabled: true, fetched: 257, bytes: 2570 });
-  const fetched = fixture.calls.filter(c => c.args.includes('fetch')).flatMap(c => c.args.slice(9));
+  const fetched = fixture.calls.filter(c => c.args.includes('fetch')).flatMap(c => c.args.slice(11));
   assert.deepEqual(fetched, fixture.entries.slice(1).map(r => r.blob));
   assert.equal(fixture.calls.filter(c => c.args.includes('fetch')).length, 2);
 });
