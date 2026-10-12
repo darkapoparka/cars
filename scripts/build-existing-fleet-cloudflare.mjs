@@ -15,7 +15,7 @@ import {loadDealerProfile} from './lib/client-refresh-normalize.mjs';
 import {assertAppVariant,baseNativeManifest} from './publishing/app-variant.mjs';
 import {ADOPTION_FILE,NATIVE_QUALIFICATION_KIND,assertNativeAdoption,assertNativeQualification,parseCatalogJson} from './lib/native-localization.mjs';
 import {registeredCompositionIdentity} from './package-dealer-single-worker.mjs';
-import {assertExtendedVariantSources,applySixVariantMounts} from './publishing/six-variant.mjs';
+import {assertExtendedVariantSources,applySixVariantMounts,sealSixVariantBuild} from './publishing/six-variant.mjs';
 import {bindModernMobileWordmarkLogo} from './lib/client-logo-contract.mjs';
 import {applyDealerPresentation} from './publishing/dealer-presentation.mjs';
 import {applyAutoBestCardLayout} from './publishing/auto-best-card-layout.mjs';
@@ -227,7 +227,8 @@ function writeFiles(root,files){
  if(fs.existsSync(root))throw Error('Fresh derived package required');fs.mkdirSync(root,{recursive:true});
  for(const [name,bytes]of files){if(!safeArtifactPath(name))throw Error('Unsafe package member');const p=path.join(root,name);fs.mkdirSync(path.dirname(p),{recursive:true});fs.writeFileSync(p,bytes,{flag:'wx'});}
 }
-async function prepare(slug,key,sha,area,request){
+export async function prepareExistingFleetSourcePackage(slug,key,sha,area,request,{fullSource=false,dependencyLocks}={}){
+ if(fullSource&&(!dependencyLocks||key!=='router'))throw Error('Full source export requires all qualified dependency locks and router preparation');
  const {specializeModernDemoDatabase}=await import('./publishing/modern-demo-database.mjs');
  const {specializeDealerReferencePackage}=await import('./publishing/dealer-reference-package.mjs');
  const dealer=selectedDealer(slug),source=path.join(ROOT,'clients',slug),manifest=read(path.join(source,'dealer.json'));
@@ -290,12 +291,13 @@ async function prepare(slug,key,sha,area,request){
  const {completeSignatureFontAssets}=await import('./publishing/signature-font-assets.mjs');
  completeSignatureFontAssets(files);
  const pruned=pruneReviewedAssets(files);files=pruned.files;
- files=await applyCloudflareProvider(files,manifest,{workerPrefix,...(modernFreeServicesExperiment?{nextAdapter:(f,m,o)=>applyCloudflareNext(f,m,{...o,modernFreeServicesExperiment,modernFreeNativeQueryExperiment})}:{}),svelteAdapter:(f,m,o)=>applyCloudflareSvelte(f,m,{...o,serviceKeys:!NEXT.has(key)&&key!=='router'?[key]:['auto-best','import','karento-best']})});
+ files=await applyCloudflareProvider(files,manifest,{workerPrefix,...(dependencyLocks?{dependencyLocks}:{}),...(modernFreeServicesExperiment?{nextAdapter:(f,m,o)=>applyCloudflareNext(f,m,{...o,modernFreeServicesExperiment,modernFreeNativeQueryExperiment})}:{}),svelteAdapter:(f,m,o)=>applyCloudflareSvelte(f,m,{...o,serviceKeys:!NEXT.has(key)&&key!=='router'?[key]:['auto-best','import','karento-best']})});
  files.set('scripts/build-cloudflare-svelte.mjs',fs.readFileSync(path.join(ROOT,'scripts/publishing/cloudflare-svelte.mjs')));
+ if(fullSource)sealSixVariantBuild(files,manifest,{provider:'cloudflare'});
  const assembledRows=sourceRows(files);
  // Materialize only this job's real target, not six installed dependency trees.
  const root=key==='router'?'cloudflare':key;
- const retained=new Map([...files].filter(([name])=>name.startsWith(root+'/')||name.startsWith('scripts/')||!name.includes('/')));
+ const retained=fullSource?files:new Map([...files].filter(([name])=>name.startsWith(root+'/')||name.startsWith('scripts/')||!name.includes('/')));
  const packageRoot=path.join(area,'package');writeFiles(packageRoot,retained);
  const provenance={schemaVersion:1,dealer:slug,key,sourceCommit:sha,sourceTree:git(ROOT,['rev-parse',sha+':clients/'+slug]),inputDigest:hash(JSON.stringify(inputRows)),sourceCandidate:newSource?.sourceCandidate??candidate.candidateSourceDigest,sourceReleases:manifest.templateSources,manifest,workerPrefix,publicOrigin,originalSourceUnchanged:true,assembledDigest:hash(JSON.stringify(assembledRows)),targetBeforeDependencies:sourceRows(retained),branding,nativeSource,contracts,contactFallback,presentation,reference,databaseSpecialization,retention:pruned.receipts,...(modernFreeServicesExperiment?{modernFreeServicesExperiment}:{}),...(modernFreeNativeQueryExperiment?{modernFreeNativeQueryExperiment}:{}),nativeApproval:false,hosted:false,...(newSource?{sourceMode:mode,sourcePreparation:newSource}:{})};
  writeJson(path.join(area,'receipts/source.json'),provenance);return {packageRoot,manifest,provenance};
@@ -320,7 +322,7 @@ export async function compile(slug,key){
  const artifact=path.join(area,'artifact');fs.mkdirSync(artifact);const result={schemaVersion:1,dealer:slug,key,sourceCommit:sha,runId:process.env.GITHUB_RUN_ID,attempt:process.env.GITHUB_RUN_ATTEMPT,node:process.version,...(diagnostic?{diagnostic}:{}),startedAt:new Date().toISOString(),status:'running',compiled:false,hosted:false};
  let prepared;
  try{
-  prepared=await prepare(slug,key,sha,area,request);const {packageRoot,manifest,provenance}=prepared;let target,bundle;
+  prepared=await prepareExistingFleetSourcePackage(slug,key,sha,area,request);const {packageRoot,manifest,provenance}=prepared;let target,bundle;
   if(key==='router'){
    target={config:'cloudflare/wrangler.jsonc',main:'cloudflare/router.mjs',assets:'cloudflare/public',workerName:provenance.workerPrefix,root:'cloudflare'};
    stage(area,'router-install',[resolveCloudflareNpmCli(process.execPath,fs,path),'ci','--include=dev'],path.join(packageRoot,'cloudflare'));
