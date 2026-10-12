@@ -18,6 +18,7 @@ import { applyVercelAssets } from './publishing/vercel-asset-plan.mjs';
 import { nativeFixture } from './test-fixtures/native-source.mjs';
 import { verifyPackage } from './export-dealer.mjs';
 import { normalized } from './lib/workflow.mjs';
+import { SIGNATURE_FONT_FILES } from './publishing/signature-font-assets.mjs';
 
 const bytes = value => Buffer.from(typeof value === 'string' ? value : JSON.stringify(value));
 function manifest(middle = 'modern') {
@@ -182,6 +183,11 @@ test('six-family package integrates source receipts, common identity, final seal
   files.set('app/lib/dealer-inventory.json', bytes([{slug:'fixture-car',images:['/dealer/car.webp']} ]));
   files.set('app/public/dealer/logo.webp',logo);
   files.set('app/public/dealer/car.webp',logo);
+  // Synthetic binary fixtures satisfy the asset envelope, never hosted font acceptance.
+  for (const name of SIGNATURE_FONT_FILES) {
+    const font = Buffer.alloc(64);font.write('wOF2');font.write('synthetic-test-only',8);
+    files.set('karento-best/static/assets/fonts/sofia-sans/'+name,font);
+  }
   for (const [name, value] of files) files.set(name, normalized(value));
   files.set('.cars-app.json',bytes({schemaVersion:1,dealer:m.slug,template:{revision:m.templateRevisions.app},appDigest:appSourceDigest(new Map([...files].filter(([name])=>name.startsWith('app/')).map(([name,value])=>[name.slice(4),value])))}));
   for (const [key,name,format] of [['mobile','.cars-mobile.json','mobile-preview-v1'],['karento-best','.cars-signature.json','signature-preview-v1']]) files.set(name,bytes({schemaVersion:1,format,dealer:m.slug,name:'Fixture Dealer',template:{revision:m.templateRevisions[key]},sourceDigest:extendedSourceDigest(files,key),personalization:{logoPaths:['dealer/logo.webp']},inventory:{count:1}}));
