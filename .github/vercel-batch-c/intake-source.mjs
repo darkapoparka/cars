@@ -62,8 +62,6 @@ z.extractall(dest)
  assert.equal(manifest.repository,expected.repo);assert.equal(manifest.slug,slug);assert.notEqual(manifest.sourceOwnership,'independent-repository');assertPreparedMountOwnership(manifest,baseline);
  for(const [family,pin]of Object.entries(release.templates)){assert.equal(manifest.templateSources[family].revision,release.sourceRevision);assert.equal(manifest.templateSources[family].digest,pin.digest);}
  const context=JSON.parse(verified.files.get('.client/native-qualification-context.json').toString('utf8'));
- // Patch verification preserves the entire historical tree. Source seals use the
- // maintained packaging boundary, just as the original source preparation did.
  const sealedFiles=new Map([...verified.files].filter(([name])=>packageRetainsPath(name)));
  const excluded=[...verified.files.keys()].filter(name=>!packageRetainsPath(name));
  fs.writeFileSync(path.join(diagnostics,'seal-input-boundary.json'),encode({fullTree:verified.tree,retainedFiles:sealedFiles.size,excludedHistoricalPaths:excluded,filter:'scripts/package-dealer.mjs#packageRetainsPath'}));
@@ -74,7 +72,9 @@ z.extractall(dest)
  git(['--literal-pathspecs','add','--force','--pathspec-from-file=-','--pathspec-file-nul'],{input:changed.map(name=>'clients/'+slug+'/'+name).join('\0')+'\0'});
  const stage=git(['write-tree']);assert.equal(git(['rev-parse',stage+':clients/'+slug]),patch.preparedTree,'Installed source tree differs');
  const note={schemaVersion:1,batch:'C',dealer:slug,acceptedRelease:request.acceptedRelease,sourceRun:RUN,sourceControlCommit:SOURCE,sourceArtifact:{id:expected.artifact,sha256:expected.sha256},sourceBaselineTree:baseline.tree,preparedTree:verified.tree,patchSha256:sha(patchBytes),sourceReceiptSha256:sha(fs.readFileSync(path.join(output,'source-preparation-receipt.json'))),preservationReview:request.preservationReview,sourcePatchVerified:true,factualFilesPreserved:true,mountOwnershipVerified:true,brandingAppExtendedAndNativeSourceQualificationVerified:true,nativeInput:native.input,productionApproval:false,productionVerified:false,createdAt:new Date().toISOString()};
- const receiptPath='.github/vercel-batch-c/receipts/'+slug+'/source-integration.json';fs.mkdirSync(path.dirname(receiptPath),{recursive:true});fs.writeFileSync(receiptPath,encode(note));git(['add','--',receiptPath]);const scoped=git(['diff','--cached','--name-only']).split('\n');assert(scoped.every(p=>p.startsWith('clients/'+slug+'/')||p===receiptPath));
+ const receiptPath='.github/vercel-batch-c/receipts/'+slug+'/source-integration.json';fs.mkdirSync(path.dirname(receiptPath),{recursive:true});fs.writeFileSync(receiptPath,encode(note));git(['add','--',receiptPath]);
+ const scoped=git(['diff','--cached','--name-only','-z']).split('\0').filter(Boolean);
+ assert(scoped.length>0&&scoped.every(p=>p.startsWith('clients/'+slug+'/')||p===receiptPath),'Staged paths must remain within the exact assigned source and its receipt');
  assert.equal(git(['ls-remote','origin','refs/heads/'+BRANCH]).split(/\s+/)[0],parent,'Control lease changed before commit');git(['commit','-m','Integrate '+slug+' accepted six-template source in Batch C only']);const commit=git(['rev-parse','HEAD']);git(['push','origin','HEAD:refs/heads/'+BRANCH],{timeout:600000});assert.equal(git(['ls-remote','origin','refs/heads/'+BRANCH]).split(/\s+/)[0],commit);
  fs.writeFileSync(path.join(diagnostics,'published-source.json'),encode({...note,sourceCommit:commit,privatePublished:false}));console.log(encode({dealer:slug,sourceCommit:commit,sourceTree:verified.tree,privatePublished:false,productionVerified:false}));
 }
