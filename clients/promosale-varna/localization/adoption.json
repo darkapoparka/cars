@@ -1758,8 +1758,8 @@
             "path": "src/lib/content/inventory-localized.ts",
             "export": "inventoryCopy"
           },
-          "keys": 119,
-          "contentDigest": "195a0cdb2850ed419adfbccb5e9900b7b5a5376f42c6e4ce9a57f30b1c6b748f"
+          "keys": 136,
+          "contentDigest": "6ae41b9464c739e5c67c9460f15a515f03e6af99b8faf412e1eda6665d0ad06c"
         },
         {
           "descriptor": {
@@ -1802,8 +1802,8 @@
             "path": "packages/marketplace/content/inventory-copy.ts",
             "export": "inventoryCopy"
           },
-          "keys": 28,
-          "contentDigest": "7c9e8fd4f189c9f76c6eaafeb93d3c8c910bf149685a659feaa7b185e2893c07"
+          "keys": 24,
+          "contentDigest": "735f65546fde19075cc02dd1e1ab63c29e94a0d01d620efc343aa3861fc49755"
         },
         {
           "descriptor": {
@@ -1820,7 +1820,7 @@
     }
   },
   "input": {
-    "digest": "4e0a1f63eb76ad9499b3de50db2e30f1e77a4c96cc2c9821bf85067d66eb838b",
+    "digest": "84c2963bfe519a94b7a87a4c7f947650cda87b57f92adc162b89c922e4665dce",
     "files": 9131
   },
   "nativeApproval": false,

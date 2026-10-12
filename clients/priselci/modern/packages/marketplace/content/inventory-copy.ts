@@ -1,200 +1,340 @@
 import type { DealerInventoryCopy } from "../lead-site";
-/** Reviewed text for the existing sample stock only. */
+/** Dealer-owned display copy from the exact personalized listing set. */
 export const inventoryCopy = {
-  "bmw-x5-m50d-sofia-2020": {
-    sourceDescription:
-      "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-    bg: {
-      description:
-        "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-      imageAlts: ["Черен BMW X5 SUV"],
+  "vw-golf-1-4-2007-11784527405061757": {
+    "sourceDescription": "VW Golf 1.4 БЕНЗИН, 2007 г., 235 193 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+    "en": {
+      "description": "VW Golf 1.4 PETROL, 2007, 235 193 km. Selected listing from 07.09.2026. Confirm availability, equipment and terms with Priselci dealership.",
+      "imageAlts": [
+        "VW Golf 1.4 БЕНЗИН",
+        "VW Golf 1.4 БЕНЗИН",
+        "VW Golf 1.4 БЕНЗИН",
+        "VW Golf 1.4 БЕНЗИН"
+      ]
     },
-    en: {
-      description:
-        "Sample listing for a BMW X5 M50d with 360-degree cameras, panoramic roof, head-up display and ventilated seats. The image is illustrative; availability and terms must be confirmed with the dealership.",
-      imageAlts: ["Black BMW X5 SUV"],
-    },
+    "bg": {
+      "description": "VW Golf 1.4 БЕНЗИН, 2007 г., 235 193 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+      "imageAlts": [
+        "VW Golf 1.4 БЕНЗИН",
+        "VW Golf 1.4 БЕНЗИН",
+        "VW Golf 1.4 БЕНЗИН",
+        "VW Golf 1.4 БЕНЗИН"
+      ]
+    }
   },
-  "mercedes-benz-gls-400d-4matic-amg-sofia-2021": {
-    sourceDescription:
-      "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от Приселци - наличен за оглед в Варна.",
-    bg: {
-      description:
-        "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от {shortName} - наличен за оглед в {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
+  "vw-passat-1-4-2010-11758270885113337": {
+    "sourceDescription": "VW Passat 1.4 БЕНЗИН, 2010 г., 179 848 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+    "en": {
+      "description": "VW Passat 1.4 PETROL, 2010, 179 848 km. Selected listing from 07.09.2026. Confirm availability, equipment and terms with Priselci dealership.",
+      "imageAlts": [
+        "VW Passat 1.4 БЕНЗИН",
+        "VW Passat 1.4 БЕНЗИН",
+        "VW Passat 1.4 БЕНЗИН",
+        "VW Passat 1.4 БЕНЗИН"
+      ]
     },
-    en: {
-      description:
-        "GLS 400d 4MATIC AMG Line with Burmester audio and a panoramic roof. A large family SUV from {shortName}, available to view in {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
-    },
+    "bg": {
+      "description": "VW Passat 1.4 БЕНЗИН, 2010 г., 179 848 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+      "imageAlts": [
+        "VW Passat 1.4 БЕНЗИН",
+        "VW Passat 1.4 БЕНЗИН",
+        "VW Passat 1.4 БЕНЗИН",
+        "VW Passat 1.4 БЕНЗИН"
+      ]
+    }
   },
-  "bmw-750e-xdrive-m-sport-sofia-2024": {
-    sourceDescription:
-      "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - Приселци организира доставка и оглед в Варна.",
-    bg: {
-      description:
-        "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - {shortName} организира доставка и оглед в {city}.",
-      imageAlts: ["BMW 7 Series"],
+  "vw-passat-2-0tdi-commonrail-2008-11753962633467246": {
+    "sourceDescription": "VW Passat 2.0TDI COMMONRAIL, 2008 г., 210 534 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+    "en": {
+      "description": "VW Passat 2.0TDI COMMONRAIL, 2008, 210 534 km. Selected listing from 07.09.2026. Confirm availability, equipment and terms with Priselci dealership.",
+      "imageAlts": [
+        "VW Passat 2.0TDI COMMONRAIL",
+        "VW Passat 2.0TDI COMMONRAIL",
+        "VW Passat 2.0TDI COMMONRAIL",
+        "VW Passat 2.0TDI COMMONRAIL"
+      ]
     },
-    en: {
-      description:
-        "Expected import: 7 Series plug-in hybrid with M Sport. Low mileage; {shortName} arranges delivery and viewing in {city}.",
-      imageAlts: ["BMW 7 Series"],
-    },
+    "bg": {
+      "description": "VW Passat 2.0TDI COMMONRAIL, 2008 г., 210 534 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+      "imageAlts": [
+        "VW Passat 2.0TDI COMMONRAIL",
+        "VW Passat 2.0TDI COMMONRAIL",
+        "VW Passat 2.0TDI COMMONRAIL",
+        "VW Passat 2.0TDI COMMONRAIL"
+      ]
+    }
   },
-  "mercedes-benz-e-63-s-amg-sofia-2021": {
-    sourceDescription:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от Автокъща Приселци.",
-    bg: {
-      description:
-        "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class седан"],
+  "seat-ibiza-1-2-2010-11784527857493559": {
+    "sourceDescription": "Seat Ibiza 1.2 БЕНЗИН, 2010 г., 175 532 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+    "en": {
+      "description": "Seat Ibiza 1.2 PETROL, 2010, 175 532 km. Selected listing from 07.09.2026. Confirm availability, equipment and terms with Priselci dealership.",
+      "imageAlts": [
+        "Seat Ibiza 1.2 БЕНЗИН",
+        "Seat Ibiza 1.2 БЕНЗИН",
+        "Seat Ibiza 1.2 БЕНЗИН",
+        "Seat Ibiza 1.2 БЕНЗИН"
+      ]
     },
-    en: {
-      description:
-        "Facelift E 63 S AMG with 360-degree cameras, head-up display and Burmester audio. A sports saloon from {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class saloon"],
-    },
+    "bg": {
+      "description": "Seat Ibiza 1.2 БЕНЗИН, 2010 г., 175 532 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+      "imageAlts": [
+        "Seat Ibiza 1.2 БЕНЗИН",
+        "Seat Ibiza 1.2 БЕНЗИН",
+        "Seat Ibiza 1.2 БЕНЗИН",
+        "Seat Ibiza 1.2 БЕНЗИН"
+      ]
+    }
   },
-  "mercedes-benz-cls-400d-4matic-sofia-2020": {
-    sourceDescription:
-      "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от Приселци в Варна.",
-    bg: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от {shortName} в {city}.",
-      imageAlts: ["Mercedes CLS"],
+  "renault-koleos-2-0-4-4-2010-21754395406651747": {
+    "sourceDescription": "Renault Koleos 2.0 ДИЗЕЛ 4Х4, 2010 г., 181 246 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+    "en": {
+      "description": "Renault Koleos 2.0 DIESEL 4x4, 2010, 181 246 km. Selected listing from 07.09.2026. Confirm availability, equipment and terms with Priselci dealership.",
+      "imageAlts": [
+        "Renault Koleos 2.0 ДИЗЕЛ 4Х4",
+        "Renault Koleos 2.0 ДИЗЕЛ 4Х4",
+        "Renault Koleos 2.0 ДИЗЕЛ 4Х4",
+        "Renault Koleos 2.0 ДИЗЕЛ 4Х4"
+      ]
     },
-    en: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo with 360-degree cameras. An elegant four-door coupe from {shortName} in {city}.",
-      imageAlts: ["Mercedes CLS"],
-    },
+    "bg": {
+      "description": "Renault Koleos 2.0 ДИЗЕЛ 4Х4, 2010 г., 181 246 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+      "imageAlts": [
+        "Renault Koleos 2.0 ДИЗЕЛ 4Х4",
+        "Renault Koleos 2.0 ДИЗЕЛ 4Х4",
+        "Renault Koleos 2.0 ДИЗЕЛ 4Х4",
+        "Renault Koleos 2.0 ДИЗЕЛ 4Х4"
+      ]
+    }
   },
-  "audi-q8-50-tdi-quattro-s-line-sofia-2021": {
-    sourceDescription:
-      "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на Приселци.",
-    bg: {
-      description:
-        "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на {shortName}.",
-      imageAlts: ["Audi Q8"],
+  "peugeot-307-cc-2006-11781856640282742": {
+    "sourceDescription": "Peugeot 307 CC КАБРИО, 2006 г., 205 664 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+    "en": {
+      "description": "Peugeot 307 CC CONVERTIBLE, 2006, 205 664 km. Selected listing from 07.09.2026. Confirm availability, equipment and terms with Priselci dealership.",
+      "imageAlts": [
+        "Peugeot 307 CC КАБРИО",
+        "Peugeot 307 CC КАБРИО",
+        "Peugeot 307 CC КАБРИО",
+        "Peugeot 307 CC КАБРИО"
+      ]
     },
-    en: {
-      description:
-        "Expected import: Q8 50 TDI quattro S line Plus. A coupe-SUV with quattro for {shortName} customers.",
-      imageAlts: ["Audi Q8"],
-    },
+    "bg": {
+      "description": "Peugeot 307 CC КАБРИО, 2006 г., 205 664 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+      "imageAlts": [
+        "Peugeot 307 CC КАБРИО",
+        "Peugeot 307 CC КАБРИО",
+        "Peugeot 307 CC КАБРИО",
+        "Peugeot 307 CC КАБРИО"
+      ]
+    }
   },
-  "mercedes-benz-gle-400d-coupe-sofia-2021": {
-    sourceDescription:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при Автокъща Приселци - Варна.",
-    bg: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при {dealer} - {city}.",
-      imageAlts: ["Черен Mercedes-Benz GLE SUV"],
+  "ford-mondeo-2-0-dizel-2009-11759747090481666": {
+    "sourceDescription": "Ford Mondeo 2.0 DIZEL, 2009 г., 235 788 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+    "en": {
+      "description": "Ford Mondeo 2.0 DIZEL, 2009, 235 788 km. Selected listing from 07.09.2026. Confirm availability, equipment and terms with Priselci dealership.",
+      "imageAlts": [
+        "Ford Mondeo 2.0 DIZEL",
+        "Ford Mondeo 2.0 DIZEL",
+        "Ford Mondeo 2.0 DIZEL",
+        "Ford Mondeo 2.0 DIZEL"
+      ]
     },
-    en: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG with 360-degree cameras and Burmester audio. Available from {dealer} in {city}.",
-      imageAlts: ["Black Mercedes-Benz GLE SUV"],
-    },
+    "bg": {
+      "description": "Ford Mondeo 2.0 DIZEL, 2009 г., 235 788 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+      "imageAlts": [
+        "Ford Mondeo 2.0 DIZEL",
+        "Ford Mondeo 2.0 DIZEL",
+        "Ford Mondeo 2.0 DIZEL",
+        "Ford Mondeo 2.0 DIZEL"
+      ]
+    }
   },
-  "mercedes-benz-gle-53-amg-coupe-sofia-2022": {
-    sourceDescription:
-      "Очакван внос: GLE 53 AMG Coupe Night Pack. Приселци предлага собствен лизинг след оглед.",
-    bg: {
-      description:
-        "Очакван внос: GLE 53 AMG Coupe Night Pack. {shortName} предлага собствен лизинг след оглед.",
-      imageAlts: ["Бял Mercedes-Benz GLE AMG SUV"],
+  "peugeot-5008-2-0hdi-150-2011-11776863022154449": {
+    "sourceDescription": "Peugeot 5008 2.0HDI 150К.С, 2011 г., 210 452 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+    "en": {
+      "description": "Peugeot 5008 2.0HDI 150hp, 2011, 210 452 km. Selected listing from 07.09.2026. Confirm availability, equipment and terms with Priselci dealership.",
+      "imageAlts": [
+        "Peugeot 5008 2.0HDI 150К.С",
+        "Peugeot 5008 2.0HDI 150К.С",
+        "Peugeot 5008 2.0HDI 150К.С",
+        "Peugeot 5008 2.0HDI 150К.С"
+      ]
     },
-    en: {
-      description:
-        "Expected import: GLE 53 AMG Coupe Night Pack. {shortName} offers in-house leasing after a viewing.",
-      imageAlts: ["White Mercedes-Benz GLE AMG SUV"],
-    },
+    "bg": {
+      "description": "Peugeot 5008 2.0HDI 150К.С, 2011 г., 210 452 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+      "imageAlts": [
+        "Peugeot 5008 2.0HDI 150К.С",
+        "Peugeot 5008 2.0HDI 150К.С",
+        "Peugeot 5008 2.0HDI 150К.С",
+        "Peugeot 5008 2.0HDI 150К.С"
+      ]
+    }
   },
-  "mercedes-benz-s-350d-long-amg-sofia-2019": {
-    sourceDescription:
-      "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от Приселци.",
-    bg: {
-      description:
-        "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class седан"],
+  "mercedes-benz-c-200-2-2-cdi-2004-11751891575433302": {
+    "sourceDescription": "Mercedes-Benz C 200 2.2 CDI, 2004 г., 218 432 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+    "en": {
+      "description": "Mercedes-Benz C 200 2.2 CDI, 2004, 218 432 km. Selected listing from 07.09.2026. Confirm availability, equipment and terms with Priselci dealership.",
+      "imageAlts": [
+        "Mercedes-Benz C 200 2.2 CDI",
+        "Mercedes-Benz C 200 2.2 CDI",
+        "Mercedes-Benz C 200 2.2 CDI",
+        "Mercedes-Benz C 200 2.2 CDI"
+      ]
     },
-    en: {
-      description:
-        "S 350d Long with S63 AMG styling and a chauffeur package. An executive saloon from {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class saloon"],
-    },
+    "bg": {
+      "description": "Mercedes-Benz C 200 2.2 CDI, 2004 г., 218 432 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+      "imageAlts": [
+        "Mercedes-Benz C 200 2.2 CDI",
+        "Mercedes-Benz C 200 2.2 CDI",
+        "Mercedes-Benz C 200 2.2 CDI",
+        "Mercedes-Benz C 200 2.2 CDI"
+      ]
+    }
   },
-  "mercedes-benz-v-250d-vip-business-sofia-2018": {
-    sourceDescription:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от Автокъща Приселци.",
-    bg: {
-      description:
-        "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от {dealer}.",
-      imageAlts: ["V-Class ван"],
+  "citroen-c3-picasso-1-6hdi-90-2010-11787126157294169": {
+    "sourceDescription": "Citroen C3 Picasso 1.6HDI 90К.С, 2010 г., 185 783 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+    "en": {
+      "description": "Citroen C3 Picasso 1.6HDI 90hp, 2010, 185 783 km. Selected listing from 07.09.2026. Confirm availability, equipment and terms with Priselci dealership.",
+      "imageAlts": [
+        "Citroen C3 Picasso 1.6HDI 90К.С",
+        "Citroen C3 Picasso 1.6HDI 90К.С",
+        "Citroen C3 Picasso 1.6HDI 90К.С",
+        "Citroen C3 Picasso 1.6HDI 90К.С"
+      ]
     },
-    en: {
-      description:
-        "V 250d VIP Business with TV, ventilated and heated seats. A business van from {dealer}.",
-      imageAlts: ["V-Class van"],
-    },
+    "bg": {
+      "description": "Citroen C3 Picasso 1.6HDI 90К.С, 2010 г., 185 783 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+      "imageAlts": [
+        "Citroen C3 Picasso 1.6HDI 90К.С",
+        "Citroen C3 Picasso 1.6HDI 90К.С",
+        "Citroen C3 Picasso 1.6HDI 90К.С",
+        "Citroen C3 Picasso 1.6HDI 90К.С"
+      ]
+    }
   },
-  "range-rover-sport-svr-sofia-2021": {
-    sourceDescription:
-      "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от Приселци.",
-    bg: {
-      description:
-        "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от {shortName}.",
-      imageAlts: ["Range Rover Sport"],
+  "audi-a3-1-9-tdi-105ps-2009-11784638939574277": {
+    "sourceDescription": "Audi A3 1.9 TDI 105ps, 2009 г., 253 746 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+    "en": {
+      "description": "Audi A3 1.9 TDI 105ps, 2009, 253 746 km. Selected listing from 07.09.2026. Confirm availability, equipment and terms with Priselci dealership.",
+      "imageAlts": [
+        "Audi A3 1.9 TDI 105ps",
+        "Audi A3 1.9 TDI 105ps",
+        "Audi A3 1.9 TDI 105ps",
+        "Audi A3 1.9 TDI 105ps"
+      ]
     },
-    en: {
-      description:
-        "Range Rover Sport SVR, 600 hp, with a panoramic roof, 360-degree cameras and Meridian audio. A premium SUV from {shortName}.",
-      imageAlts: ["Range Rover Sport"],
-    },
+    "bg": {
+      "description": "Audi A3 1.9 TDI 105ps, 2009 г., 253 746 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+      "imageAlts": [
+        "Audi A3 1.9 TDI 105ps",
+        "Audi A3 1.9 TDI 105ps",
+        "Audi A3 1.9 TDI 105ps",
+        "Audi A3 1.9 TDI 105ps"
+      ]
+    }
   },
-  "bmw-430i-xdrive-gran-coupe-sofia-2023": {
-    sourceDescription:
-      "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. Приселци, Варна.",
-    bg: {
-      description:
-        "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
+  "dacia-sandero-1-4-2009-11779190417819998": {
+    "sourceDescription": "Dacia Sandero 1.4 БЕНЗИН/ГАЗ, 2009 г., 136 016 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+    "en": {
+      "description": "Dacia Sandero 1.4 PETROL/LPG, 2009, 136 016 km. Selected listing from 07.09.2026. Confirm availability, equipment and terms with Priselci dealership.",
+      "imageAlts": [
+        "Dacia Sandero 1.4 БЕНЗИН/ГАЗ",
+        "Dacia Sandero 1.4 БЕНЗИН/ГАЗ",
+        "Dacia Sandero 1.4 БЕНЗИН/ГАЗ",
+        "Dacia Sandero 1.4 БЕНЗИН/ГАЗ"
+      ]
     },
-    en: {
-      description:
-        "430i xDrive Gran Coupe M Sport with a digital cockpit and Harman Kardon audio. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
-    },
+    "bg": {
+      "description": "Dacia Sandero 1.4 БЕНЗИН/ГАЗ, 2009 г., 136 016 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+      "imageAlts": [
+        "Dacia Sandero 1.4 БЕНЗИН/ГАЗ",
+        "Dacia Sandero 1.4 БЕНЗИН/ГАЗ",
+        "Dacia Sandero 1.4 БЕНЗИН/ГАЗ",
+        "Dacia Sandero 1.4 БЕНЗИН/ГАЗ"
+      ]
+    }
   },
-  "bmw-m4-competition-sofia-2021": {
-    sourceDescription:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на Автокъща Приселци.",
-    bg: {
-      description:
-        "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на {dealer}.",
-      imageAlts: ["Червено BMW M4 Competition пред модерен шоурум"],
+  "renault-grand-scenic-1-5dci-2012-11770812815337634": {
+    "sourceDescription": "Renault Grand scenic 1.5DCI, 2012 г., 199 811 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+    "en": {
+      "description": "Renault Grand scenic 1.5DCI, 2012, 199 811 km. Selected listing from 07.09.2026. Confirm availability, equipment and terms with Priselci dealership.",
+      "imageAlts": [
+        "Renault Grand scenic 1.5DCI",
+        "Renault Grand scenic 1.5DCI",
+        "Renault Grand scenic 1.5DCI",
+        "Renault Grand scenic 1.5DCI"
+      ]
     },
-    en: {
-      description:
-        "BMW M4 Competition with M package, sports interior and digital cockpit. A coupe from the {dealer} collection.",
-      imageAlts: ["Red BMW M4 Competition in front of a modern showroom"],
-    },
+    "bg": {
+      "description": "Renault Grand scenic 1.5DCI, 2012 г., 199 811 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+      "imageAlts": [
+        "Renault Grand scenic 1.5DCI",
+        "Renault Grand scenic 1.5DCI",
+        "Renault Grand scenic 1.5DCI",
+        "Renault Grand scenic 1.5DCI"
+      ]
+    }
   },
-  "bmw-x5-xdrive40d-berlin-2022": {
-    sourceDescription:
-      "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от Приселци.",
-    bg: {
-      description:
-        "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от {shortName}.",
-      imageAlts: ["Черен BMW X5 SUV в градска среда"],
+  "bmw-x3-2-0-4-4-2007-21786691566300206": {
+    "sourceDescription": "BMW X3 2.0 ДИЗЕЛ 4Х4, 2007 г., 207 195 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+    "en": {
+      "description": "BMW X3 2.0 DIESEL 4x4, 2007, 207 195 km. Selected listing from 07.09.2026. Confirm availability, equipment and terms with Priselci dealership.",
+      "imageAlts": [
+        "BMW X3 2.0 ДИЗЕЛ 4Х4",
+        "BMW X3 2.0 ДИЗЕЛ 4Х4",
+        "BMW X3 2.0 ДИЗЕЛ 4Х4",
+        "BMW X3 2.0 ДИЗЕЛ 4Х4"
+      ]
     },
-    en: {
-      description:
-        "Cross-border demo inventory with authorized images and delivery rights. Final transport, tax and registration costs are confirmed in a quote from {shortName}.",
-      imageAlts: ["Black BMW X5 SUV in an urban setting"],
-    },
+    "bg": {
+      "description": "BMW X3 2.0 ДИЗЕЛ 4Х4, 2007 г., 207 195 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+      "imageAlts": [
+        "BMW X3 2.0 ДИЗЕЛ 4Х4",
+        "BMW X3 2.0 ДИЗЕЛ 4Х4",
+        "BMW X3 2.0 ДИЗЕЛ 4Х4",
+        "BMW X3 2.0 ДИЗЕЛ 4Х4"
+      ]
+    }
   },
+  "nissan-qashqai-1-5-dci-2012-21787900875118991": {
+    "sourceDescription": "Nissan Qashqai 1.5 DCI, 2012 г., 192 641 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+    "en": {
+      "description": "Nissan Qashqai 1.5 DCI, 2012, 192 641 km. Selected listing from 07.09.2026. Confirm availability, equipment and terms with Priselci dealership.",
+      "imageAlts": [
+        "Nissan Qashqai 1.5 DCI",
+        "Nissan Qashqai 1.5 DCI",
+        "Nissan Qashqai 1.5 DCI",
+        "Nissan Qashqai 1.5 DCI"
+      ]
+    },
+    "bg": {
+      "description": "Nissan Qashqai 1.5 DCI, 2012 г., 192 641 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+      "imageAlts": [
+        "Nissan Qashqai 1.5 DCI",
+        "Nissan Qashqai 1.5 DCI",
+        "Nissan Qashqai 1.5 DCI",
+        "Nissan Qashqai 1.5 DCI"
+      ]
+    }
+  },
+  "mercedes-benz-e-280-3-0cdi-v6-2005-11763969547989753": {
+    "sourceDescription": "Mercedes-Benz E 280 3.0CDI V6, 2005 г., 208 357 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+    "en": {
+      "description": "Mercedes-Benz E 280 3.0CDI V6, 2005, 208 357 km. Selected listing from 07.09.2026. Confirm availability, equipment and terms with Priselci dealership.",
+      "imageAlts": [
+        "Mercedes-Benz E 280 3.0CDI V6",
+        "Mercedes-Benz E 280 3.0CDI V6",
+        "Mercedes-Benz E 280 3.0CDI V6",
+        "Mercedes-Benz E 280 3.0CDI V6"
+      ]
+    },
+    "bg": {
+      "description": "Mercedes-Benz E 280 3.0CDI V6, 2005 г., 208 357 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
+      "imageAlts": [
+        "Mercedes-Benz E 280 3.0CDI V6",
+        "Mercedes-Benz E 280 3.0CDI V6",
+        "Mercedes-Benz E 280 3.0CDI V6",
+        "Mercedes-Benz E 280 3.0CDI V6"
+      ]
+    }
+  }
 } satisfies DealerInventoryCopy;

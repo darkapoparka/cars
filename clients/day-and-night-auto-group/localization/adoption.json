@@ -1748,8 +1748,8 @@
             "path": "packages/marketplace/content/inventory-copy.ts",
             "export": "inventoryCopy"
           },
-          "keys": 28,
-          "contentDigest": "7c9e8fd4f189c9f76c6eaafeb93d3c8c910bf149685a659feaa7b185e2893c07"
+          "keys": 80,
+          "contentDigest": "d5390589bbacd2aa89649387c21fe9baed27912fe0ffd2a3bf26f81bbecce4eb"
         },
         {
           "descriptor": {
@@ -1820,7 +1820,7 @@
     }
   },
   "input": {
-    "digest": "793a48470db67c82f03a75ea07df259ca23fd9363c78b2d8412e4b948365e8cd",
+    "digest": "3e9b81a365327b3d2825da39b5df620becac40d563cb119c191980b96de814b1",
     "files": 9160
   },
   "nativeApproval": false,

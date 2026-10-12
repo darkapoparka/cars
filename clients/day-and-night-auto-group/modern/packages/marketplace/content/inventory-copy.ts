@@ -1,200 +1,604 @@
 import type { DealerInventoryCopy } from "../lead-site";
-/** Reviewed text for the existing sample stock only. */
+/** Dealer-owned display copy from the exact personalized listing set. */
 export const inventoryCopy = {
-  "bmw-x5-m50d-sofia-2020": {
-    sourceDescription:
-      "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-    bg: {
-      description:
-        "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-      imageAlts: ["Черен BMW X5 SUV"],
+  "2016-21784728210405323": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz GLA 45 AMG Очакван внос AMG EDITION 1CARBONPANOHKCAMRED"
+      ]
     },
-    en: {
-      description:
-        "Sample listing for a BMW X5 M50d with 360-degree cameras, panoramic roof, head-up display and ventilated seats. The image is illustrative; availability and terms must be confirmed with the dealership.",
-      imageAlts: ["Black BMW X5 SUV"],
-    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz GLA 45 AMG Очакван внос AMG EDITION 1CARBONPANOHKCAMRED"
+      ]
+    }
   },
-  "mercedes-benz-gls-400d-4matic-amg-sofia-2021": {
-    sourceDescription:
-      "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от Day & Night - наличен за оглед в София.",
-    bg: {
-      description:
-        "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от {shortName} - наличен за оглед в {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
+  "2024-11782122632841845": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz S 63 AMG Mercedes S63 AMGE-PERFORMANCENARDO GREYRED CARBON"
+      ]
     },
-    en: {
-      description:
-        "GLS 400d 4MATIC AMG Line with Burmester audio and a panoramic roof. A large family SUV from {shortName}, available to view in {city}.",
-      imageAlts: ["Mercedes-Benz GLS 4MATIC AMG SUV"],
-    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz S 63 AMG Mercedes S63 AMGE-PERFORMANCENARDO GREYRED CARBON"
+      ]
+    }
   },
-  "bmw-750e-xdrive-m-sport-sofia-2024": {
-    sourceDescription:
-      "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - Day & Night организира доставка и оглед в София.",
-    bg: {
-      description:
-        "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - {shortName} организира доставка и оглед в {city}.",
-      imageAlts: ["BMW 7 Series"],
+  "2019-11781786688563618": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz S 400 ОЧАКВАН ВНОС Mercedes S400d Long* AMG* Chauffeur"
+      ]
     },
-    en: {
-      description:
-        "Expected import: 7 Series plug-in hybrid with M Sport. Low mileage; {shortName} arranges delivery and viewing in {city}.",
-      imageAlts: ["BMW 7 Series"],
-    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz S 400 ОЧАКВАН ВНОС Mercedes S400d Long* AMG* Chauffeur"
+      ]
+    }
   },
-  "mercedes-benz-e-63-s-amg-sofia-2021": {
-    sourceDescription:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от Day & Night Auto Group.",
-    bg: {
-      description:
-        "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class седан"],
+  "2021-21781366888650416": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz GLS 400 ОЧАКВАН ВНОС GLS400d 63 AMG OPTIC* 3xTV* CARBON* B"
+      ]
     },
-    en: {
-      description:
-        "Facelift E 63 S AMG with 360-degree cameras, head-up display and Burmester audio. A sports saloon from {dealer}.",
-      imageAlts: ["Mercedes-Benz E-Class saloon"],
-    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz GLS 400 ОЧАКВАН ВНОС GLS400d 63 AMG OPTIC* 3xTV* CARBON* B"
+      ]
+    }
   },
-  "mercedes-benz-cls-400d-4matic-sofia-2020": {
-    sourceDescription:
-      "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от Day & Night в София.",
-    bg: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от {shortName} в {city}.",
-      imageAlts: ["Mercedes CLS"],
+  "2022-21784223776383846": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz GLE 53 4MATIC Очакван ВносGLE53 AMG Coupe* NIGHT Pack* ОБДУХВАНЕ"
+      ]
     },
-    en: {
-      description:
-        "CLS 400d 4MATIC AMG Line Designo with 360-degree cameras. An elegant four-door coupe from {shortName} in {city}.",
-      imageAlts: ["Mercedes CLS"],
-    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz GLE 53 4MATIC Очакван ВносGLE53 AMG Coupe* NIGHT Pack* ОБДУХВАНЕ"
+      ]
+    }
   },
-  "audi-q8-50-tdi-quattro-s-line-sofia-2021": {
-    sourceDescription:
-      "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на Day & Night.",
-    bg: {
-      description:
-        "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на {shortName}.",
-      imageAlts: ["Audi Q8"],
+  "2021-21781186627237038": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz GLE 400 Coupe AMG360Night PackageBURMHUDP"
+      ]
     },
-    en: {
-      description:
-        "Expected import: Q8 50 TDI quattro S line Plus. A coupe-SUV with quattro for {shortName} customers.",
-      imageAlts: ["Audi Q8"],
-    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz GLE 400 Coupe AMG360Night PackageBURMHUDP"
+      ]
+    }
   },
-  "mercedes-benz-gle-400d-coupe-sofia-2021": {
-    sourceDescription:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при Day & Night Auto Group - София.",
-    bg: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при {dealer} - {city}.",
-      imageAlts: ["Черен Mercedes-Benz GLE SUV"],
+  "2016-21775198700636300": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz GL 63 AMG Mercedes GL63 AMG* 3xTV* 360* VENT+ HEAT* PANORAMA"
+      ]
     },
-    en: {
-      description:
-        "GLE 400d Coupe 4MATIC AMG with 360-degree cameras and Burmester audio. Available from {dealer} in {city}.",
-      imageAlts: ["Black Mercedes-Benz GLE SUV"],
-    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz GL 63 AMG Mercedes GL63 AMG* 3xTV* 360* VENT+ HEAT* PANORAMA"
+      ]
+    }
   },
-  "mercedes-benz-gle-53-amg-coupe-sofia-2022": {
-    sourceDescription:
-      "Очакван внос: GLE 53 AMG Coupe Night Pack. Day & Night предлага собствен лизинг след оглед.",
-    bg: {
-      description:
-        "Очакван внос: GLE 53 AMG Coupe Night Pack. {shortName} предлага собствен лизинг след оглед.",
-      imageAlts: ["Бял Mercedes-Benz GLE AMG SUV"],
+  "2017-21758203454344162": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz G 350 Mercedes G350d AMG FACE* CAM* Heat+ Vent seats* FU"
+      ]
     },
-    en: {
-      description:
-        "Expected import: GLE 53 AMG Coupe Night Pack. {shortName} offers in-house leasing after a viewing.",
-      imageAlts: ["White Mercedes-Benz GLE AMG SUV"],
-    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz G 350 Mercedes G350d AMG FACE* CAM* Heat+ Vent seats* FU"
+      ]
+    }
   },
-  "mercedes-benz-s-350d-long-amg-sofia-2019": {
-    sourceDescription:
-      "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от Day & Night.",
-    bg: {
-      description:
-        "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class седан"],
+  "2021-11782540302515038": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz E 63 AMG Mercedes-Benz E63S AMG* FACELIFT* 360* HUD* BURM*"
+      ]
     },
-    en: {
-      description:
-        "S 350d Long with S63 AMG styling and a chauffeur package. An executive saloon from {shortName}.",
-      imageAlts: ["Mercedes-Benz S-Class saloon"],
-    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz E 63 AMG Mercedes-Benz E63S AMG* FACELIFT* 360* HUD* BURM*"
+      ]
+    }
   },
-  "mercedes-benz-v-250d-vip-business-sofia-2018": {
-    sourceDescription:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от Day & Night Auto Group.",
-    bg: {
-      description:
-        "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от {dealer}.",
-      imageAlts: ["V-Class ван"],
+  "2021-11784224743668074": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz E 400 Очакван внос E400d * Facelift* AMG * 360* 3D BURM*"
+      ]
     },
-    en: {
-      description:
-        "V 250d VIP Business with TV, ventilated and heated seats. A business van from {dealer}.",
-      imageAlts: ["V-Class van"],
-    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz E 400 Очакван внос E400d * Facelift* AMG * 360* 3D BURM*"
+      ]
+    }
   },
-  "range-rover-sport-svr-sofia-2021": {
-    sourceDescription:
-      "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от Day & Night.",
-    bg: {
-      description:
-        "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от {shortName}.",
-      imageAlts: ["Range Rover Sport"],
+  "2018-11777018671764829": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz E 350 ОЧАКВАН ВНОС Mercedes E350d * AMG Line*"
+      ]
     },
-    en: {
-      description:
-        "Range Rover Sport SVR, 600 hp, with a panoramic roof, 360-degree cameras and Meridian audio. A premium SUV from {shortName}.",
-      imageAlts: ["Range Rover Sport"],
-    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz E 350 ОЧАКВАН ВНОС Mercedes E350d * AMG Line*"
+      ]
+    }
   },
-  "bmw-430i-xdrive-gran-coupe-sofia-2023": {
-    sourceDescription:
-      "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. Day & Night, София.",
-    bg: {
-      description:
-        "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
+  "2020-11783434857807146": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz CLS 53 AMG ОЧАКВАН CLS53 AMG * CARBON* 360* HUD* BURM* Assis"
+      ]
     },
-    en: {
-      description:
-        "430i xDrive Gran Coupe M Sport with a digital cockpit and Harman Kardon audio. {shortName}, {city}.",
-      imageAlts: ["BMW 4 Series"],
-    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz CLS 53 AMG ОЧАКВАН CLS53 AMG * CARBON* 360* HUD* BURM* Assis"
+      ]
+    }
   },
-  "bmw-m4-competition-sofia-2021": {
-    sourceDescription:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на Day & Night Auto Group.",
-    bg: {
-      description:
-        "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на {dealer}.",
-      imageAlts: ["Червено BMW M4 Competition пред модерен шоурум"],
+  "2020-11782479430635636": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz CLS 400 Очакван Внос AMG * Designo* 360* Digital FullMax"
+      ]
     },
-    en: {
-      description:
-        "BMW M4 Competition with M package, sports interior and digital cockpit. A coupe from the {dealer} collection.",
-      imageAlts: ["Red BMW M4 Competition in front of a modern showroom"],
-    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz CLS 400 Очакван Внос AMG * Designo* 360* Digital FullMax"
+      ]
+    }
   },
-  "bmw-x5-xdrive40d-berlin-2022": {
-    sourceDescription:
-      "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от Day & Night.",
-    bg: {
-      description:
-        "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от {shortName}.",
-      imageAlts: ["Черен BMW X5 SUV в градска среда"],
+  "2019-11779001443562014": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz AMG GT Mercedes AMG GT43 BURMESTER* * CAM360* DIGITAL* AS"
+      ]
     },
-    en: {
-      description:
-        "Cross-border demo inventory with authorized images and delivery rights. Final transport, tax and registration costs are confirmed in a quote from {shortName}.",
-      imageAlts: ["Black BMW X5 SUV in an urban setting"],
-    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz AMG GT Mercedes AMG GT43 BURMESTER* * CAM360* DIGITAL* AS"
+      ]
+    }
   },
+  "2021-21781097577012835": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Land Rover Range Rover Sport Range Rover SPORT SVR* 600HP* PANO* 360CAM* MERIDI"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Land Rover Range Rover Sport Range Rover SPORT SVR* 600HP* PANO* 360CAM* MERIDI"
+      ]
+    }
+  },
+  "2021-21783785043166128": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "BMW X7 Очакван Внос M50d xDrive INDIVIDUAL Swarovski Sky"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "BMW X7 Очакван Внос M50d xDrive INDIVIDUAL Swarovski Sky"
+      ]
+    }
+  },
+  "2023-21784134153263153": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "BMW X6 Очакван Вно X6M Compе TVCARBONINDIVIDUALTWO-TonePA"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "BMW X6 Очакван Вно X6M Compе TVCARBONINDIVIDUALTWO-TonePA"
+      ]
+    }
+  },
+  "2015-21765900685685588": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "BMW X6 BMW X6 3. 0d M Sport* Digital* CAMERA* ASSISTANCE*"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "BMW X6 BMW X6 3. 0d M Sport* Digital* CAMERA* ASSISTANCE*"
+      ]
+    }
+  },
+  "2017-21777637702876978": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "BMW X6 BMW X6 4.0d M Sport* Digital* CAMERA* ASSISTANCE"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "BMW X6 BMW X6 4.0d M Sport* Digital* CAMERA* ASSISTANCE"
+      ]
+    }
+  },
+  "2020-21780050061781136": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "BMW X6 BMW X6 M50i LASER 360HARMAN FULLMAX"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "BMW X6 BMW X6 M50i LASER 360HARMAN FULLMAX"
+      ]
+    }
+  },
+  "2021-11781282994167628": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "BMW M5 Очакван Внос Competition* 625HP* FACE* B&W* LASER*"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "BMW M5 Очакван Внос Competition* 625HP* FACE* B&W* LASER*"
+      ]
+    }
+  },
+  "2023-11775899765171119": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "BMW 430 BMW 430xi Gran Coupe* M Sport* Digital* CAM* HARMA"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "BMW 430 BMW 430xi Gran Coupe* M Sport* Digital* CAM* HARMA"
+      ]
+    }
+  },
+  "2020-11781969350224394": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Audi Rs6 Audi RS6 Avant PERFORMANCE CERAMIC B&O 360"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Audi Rs6 Audi RS6 Avant PERFORMANCE CERAMIC B&O 360"
+      ]
+    }
+  },
+  "2021-21782920140707096": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Audi Q8 ОЧАКВАН ВНОС Q8 50 TDI quattro S line Plus Exclus"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Audi Q8 ОЧАКВАН ВНОС Q8 50 TDI quattro S line Plus Exclus"
+      ]
+    }
+  },
+  "2021-21782329010196509": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Audi Q7 AUDI Q7 FACE* HD MATRIX* ОБДУХВАНЕ 6+ 1"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Audi Q7 AUDI Q7 FACE* HD MATRIX* ОБДУХВАНЕ 6+ 1"
+      ]
+    }
+  },
+  "2017-21784136402983332": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Audi Q7 Очакван Внос Q7 3.0TDI MATRIXHUDPANOCAM6+ 1"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Audi Q7 Очакван Внос Q7 3.0TDI MATRIXHUDPANOCAM6+ 1"
+      ]
+    }
+  },
+  "2016-11775198338574112": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Audi A8 Audi A8 Long 4.2 TDI W12 Pack MEGA FULL | NIGHT"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Audi A8 Audi A8 Long 4.2 TDI W12 Pack MEGA FULL | NIGHT"
+      ]
+    }
+  },
+  "2021-21781787768273938": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz GLS 400 ОЧАКВАН ВНОС Mercedes GLS400d AMGLine360BURMPANORA"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz GLS 400 ОЧАКВАН ВНОС Mercedes GLS400d AMGLine360BURMPANORA"
+      ]
+    }
+  },
+  "2018-11778599312336917": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz E 350 Mercedes 350d * AMG OPTIC* ОБДУХВАНЕ* 360* MULTIBE"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz E 350 Mercedes 350d * AMG OPTIC* ОБДУХВАНЕ* 360* MULTIBE"
+      ]
+    }
+  },
+  "2017-11782541049698048": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz AMG GT S Mercedes-AMG GT S PRIOR DESIGN Designo Exclusive C"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz AMG GT S Mercedes-AMG GT S PRIOR DESIGN Designo Exclusive C"
+      ]
+    }
+  },
+  "2021-21762334502775312": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Lamborghini Urus LAMBORGHINI Urus FULLMAXX"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Lamborghini Urus LAMBORGHINI Urus FULLMAXX"
+      ]
+    }
+  },
+  "2020-21782329865022942": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "BMW X5 ОЧАКВАН ВНОС M50d 360SwarovskiSkyPanoHUDОБДУХВАНЕ"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "BMW X5 ОЧАКВАН ВНОС M50d 360SwarovskiSkyPanoHUDОБДУХВАНЕ"
+      ]
+    }
+  },
+  "2020-11784380846697521": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Audi A8 Audi A8 5.0TDI* HD MATRIX* 360CAM* Distronic Plus*"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Audi A8 Audi A8 5.0TDI* HD MATRIX* 360CAM* Distronic Plus*"
+      ]
+    }
+  },
+  "2022-11784130537689775": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz S 580 Очакван внос S580 Long BRABUS 4Matic BURMES Plug i"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz S 580 Очакван внос S580 Long BRABUS 4Matic BURMES Plug i"
+      ]
+    }
+  },
+  "2018-11778179700610297": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz V 300 Mercedes V250d* VIP* BUSINESS* TV* ОБДУХВАНЕ+ ПОДГ"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz V 300 Mercedes V250d* VIP* BUSINESS* TV* ОБДУХВАНЕ+ ПОДГ"
+      ]
+    }
+  },
+  "2016-11782329384140338": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz V 300 Очакван Внос V250d LongAMG LineDesignoEdition"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz V 300 Очакван Внос V250d LongAMG LineDesignoEdition"
+      ]
+    }
+  },
+  "2019-11778085846169037": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz E 400 Mercedes E400d AMG LineASSISTANCEMULTIBEAMFULL*"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz E 400 Mercedes E400d AMG LineASSISTANCEMULTIBEAMFULL*"
+      ]
+    }
+  },
+  "2021-11774291387702102": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Audi Rs7 AUDI RS7 Ceramic Масажи Обдухване Full"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Audi Rs7 AUDI RS7 Ceramic Масажи Обдухване Full"
+      ]
+    }
+  },
+  "2017-21782661898906066": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz G 63 AMG Очакван внос G63 AMG FACE* 3xTV* CAM* Heat+ Vent"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz G 63 AMG Очакван внос G63 AMG FACE* 3xTV* CAM* Heat+ Vent"
+      ]
+    }
+  },
+  "2016-11781790478711568": {
+    "sourceDescription": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "en": {
+      "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+      "imageAlts": [
+        "Mercedes-Benz S 500 Очакван Внос S500 LongDESIGNOAMG Line3xTV"
+      ]
+    },
+    "bg": {
+      "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+      "imageAlts": [
+        "Mercedes-Benz S 500 Очакван Внос S500 LongDESIGNOAMG Line3xTV"
+      ]
+    }
+  }
 } satisfies DealerInventoryCopy;
