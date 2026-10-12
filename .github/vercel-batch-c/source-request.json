@@ -17,19 +17,32 @@
         "qualification": {"path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/excellent-cars/qualification-context.json", "sha256": "8f145ce862c956dc1aaae13c81dea4d56792a588454e73d668103e6a871d5023"},
         "sourceDeltaReview": {"path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json", "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"},
         "branding": {"path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/excellent-cars/branding.json", "sha256": "b41a799c5661e0e0ff296f748324b8064e37c6df38cedf0d7c0c73df725d60d3"},
-        "modernCopyReview": {"path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/excellent-cars/modern-copy-review.json", "sha256": "ca93f21b5a01a3c2f4262702d72e6d0679541a222967e4407a574527f57d2b7c"}
+        "modernCopyReview": {"path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/excellent-cars/modern-copy-review.json", "sha256": "ca93f21b5a01a3c2f4262702d72e6d0679541a222967e4407a574527f57d2b7c"},
+        "resolutions": {"path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/batch-c-wave1-resolutions.json", "sha256": "c705477be847af155f672d53105d631fd610c09ea397f0d3ecaf47ad566a3f29"}
       },
       "f1rst-motors": {
         "candidateLock": {"path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/f1rst-motors/qualification-lock.json", "sha256": "ab6f48acf3f3d1346017044ceff19b276418af8b60ddaeb47d6944420c011e41"},
         "qualification": {"path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/f1rst-motors/qualification-context.json", "sha256": "0462d3b7a98e25973c7ea8cc2190cfab0266ee96b0f4cb3dbdf1187b13aa2f17"},
         "sourceDeltaReview": {"path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json", "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"},
         "branding": {"path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/f1rst-motors/branding.json", "sha256": "47af85e8102df84862c01f1d2694f359558adebbd2f7acff38485db73ad53b3c"},
-        "modernCopyReview": {"path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/f1rst-motors/modern-copy-review.json", "sha256": "c0c8d1102b3abe4653fd89117d01ad7adb38f2d29285e615c0fbf2a42176527c"}
+        "modernCopyReview": {"path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/f1rst-motors/modern-copy-review.json", "sha256": "c0c8d1102b3abe4653fd89117d01ad7adb38f2d29285e615c0fbf2a42176527c"},
+        "resolutions": {"path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/batch-c-wave1-resolutions.json", "sha256": "c705477be847af155f672d53105d631fd610c09ea397f0d3ecaf47ad566a3f29"}
       }
     }
   },
   "baselines": {
     "excellent-cars": {"repository": "darkapoparka/excellent-cars", "tree": "6011d35697dcb55e891f20e220ac49c4bf84a310"},
     "f1rst-motors": {"repository": "darkapoparka/cars-f1rstmotors", "tree": "a8bb47ebc204c05545c43073ab16d7d5191a01be"}
+  },
+  "preservationReview": {
+    "sourceRun": 38312623332,
+    "sourceControlCommit": "d690c4cc6c3a4020cd8c9c3728af981608c10ac9",
+    "excellentArtifact": 11775601007,
+    "excellentArtifactSha256": "c018687e468b31e593d1969b06da8218376d698d9d83316582c2534689dc710f",
+    "excellentReviewSha256": "e4ffe70628563ad42fde8d2a12bf3fbc11034a8d65ba420188a09a7a836f2c45",
+    "f1rstArtifact": 11775218047,
+    "f1rstArtifactSha256": "c986bec51fd03741306476a065481af336a50abccab4f3cc8801652dbd0fdfeb",
+    "f1rstReviewSha256": "9a19e915d8e9e2200f9c485dc65d3bf71b0a2beb11fb9f2f0553105695d0f84f",
+    "decision": "Nineteen exact prepared-template paths use the accepted native UI and maintained own-dealer factual consumers. Seller identity card retains the owner's existing light-surface logo binding on the accepted new native component; merged SHA256 43d7e8b4c2dc44755591e94651753783e108ab954db20c6362ffa6d07a0b1819. No donor inventory or contacts are selected. Maintained factual refresh and all downstream publication gates still execute; this is not QA or production acceptance."
   }
 }
