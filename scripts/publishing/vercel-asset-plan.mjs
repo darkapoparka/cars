@@ -28,6 +28,43 @@ export function familyRetention(files, key) {
   return planAssetRetention({ assets, consumers, policy });
 }
 
+
+/** Service destination.path selects routing, but does not change the runtime URL.
+ * Change only exact sealed shared object lookup paths, preserving mounts and
+ * external media routing. No wildcard or user-controlled path is admitted. */
+export function sharedMediaRuntimeRoutes(plan) {
+  if (plan?.schemaVersion !== 1 || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(plan.dealer || '')
+    || !Array.isArray(plan.objects) || !Array.isArray(plan.aliases) || !Array.isArray(plan.removals)
+    || plan.objects.length > 1500) throw Error('Invalid sealed shared media routing plan');
+  const destinations = new Map();
+  for (const object of plan.objects) {
+    const destination = object.publicPath?.slice('auto-best/static'.length);
+    const pattern = new RegExp('^/_cars/media/' + plan.dealer + '/([a-f0-9]{64})\\.(png|jpg|webp|avif|gif|ico|woff2?|ttf|otf|mp4|webm)$');
+    const matched = typeof destination === 'string' && destination.match(pattern);
+    if (!matched || !object.publicPath.startsWith('auto-best/static/')
+      || matched[1] !== object.sha256 || object.path !== '.cars-media' + destination.slice('/_cars/media'.length)
+      || !Number.isSafeInteger(object.bytes) || object.bytes <= 0 || destinations.has(destination))
+      throw Error('Unknown or unsafe sealed shared media destination');
+    destinations.set(destination, object);
+  }
+  const expected = plan.removals.filter(row => row.reason === 'shared-local')
+    .map(row => ({ source: escape(row.sourceUrlPath), destination: { service: 'autobest', path: row.destination } }));
+  if (JSON.stringify(plan.aliases) !== JSON.stringify(expected)
+    || plan.aliases.some(row => row.destination?.service !== 'autobest' || !destinations.has(row.destination.path))
+    || [...destinations.keys()].some(destination => !plan.aliases.some(row => row.destination.path === destination)))
+    throw Error('Shared media aliases differ from sealed objects');
+  return [...destinations.keys()].map(destination => {
+    // Services preserves the original URL for runtimes. Admit only exact
+    // sealed original aliases and the exact shared lookup path in either
+    // route-evaluation form; keep one bounded rule for each sealed object.
+    const sources = [...new Set([escape(destination), ...plan.aliases
+      .filter(row => row.destination.path === destination).map(row => row.source)])];
+    const src = '^(?:' + sources.join('|') + ')$';
+    if (sources.length > 101 || src.length > 8192) throw Error('Shared media exact route group exceeded bounded size');
+    return { src, dest: destination, transforms: [{ type: 'request.path', op: 'set', args: destination }] };
+  });
+}
+
 /** Plan only: source bytes and App/native source seals are never changed. */
 export function planVercelAssets(files, { maxPublicBytes = 384 * 1024 * 1024, maxRoutes = 1500 } = {}) {
   const manifest = parse(files, 'dealer.json'); identity(manifest);
@@ -80,14 +117,14 @@ export function planVercelAssets(files, { maxPublicBytes = 384 * 1024 * 1024, ma
   if (outputBytes > maxPublicBytes) throw Error(`Public asset budget exceeded: ${outputBytes} > ${maxPublicBytes}. Optimize or externalize; never silently drop media.`);
   const config = parse(files, 'vercel.json');
   if (!config?.services || !Array.isArray(config.rewrites)) throw Error('Expected Vercel Services configuration');
-  const routes = aliases.length + config.rewrites.length + (config.headers?.length || 0) + (config.redirects?.length || 0) + 1;
+  const routes = objects.length + aliases.length + config.rewrites.length + (config.headers?.length || 0) + (config.redirects?.length || 0) + 1;
   if (routes > maxRoutes) throw Error('Vercel route budget exceeded');
   const inputBytes = Object.values(family).reduce((n, f) => n + f.inputBytes, 0);
   const externalReferenceBytes = Object.values(family).reduce((n, f) => n + f.externalBytes, 0);
   const unusedBytes = removals.filter(e => e.reason === 'reviewed-unused').reduce((n,e) => n + e.bytes, 0);
   const localDuplicateBytesAvoided = removals.filter(e => e.reason === 'shared-local').reduce((n,e) => n + e.bytes, 0) - objects.reduce((n,e) => n + e.bytes, 0);
   if (outputBytes + externalReferenceBytes + unusedBytes + localDuplicateBytesAvoided !== inputBytes) throw Error('Asset storage accounting does not balance');
-  return { schemaVersion: 1, dealer: manifest.slug, variants: manifest.variants, family, removals, objects, aliases,
+  return { schemaVersion: 1, dealer: manifest.slug, variants: manifest.variants, family, removals, objects, aliases, runtimePathTransforms: true,
     limits: { maxPublicBytes, maxRoutes }, summary: { inputBytes, outputBytes, externalReferenceBytes, unusedBytes, localDuplicateBytesAvoided, accounting: 'Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.', excludedOrExternalBytes: inputBytes - outputBytes, pooledObjects: objects.length, pooledCopies: pooled.size, unusedFiles: removals.filter(e => e.reason === 'reviewed-unused').length, routes } };
 }
 
@@ -108,6 +145,12 @@ export function applyVercelAssets(files, options) {
     const helper = variant.key === 'modern' ? '../../../scripts/vercel-service-assets.mjs' : '../scripts/vercel-service-assets.mjs';
     service.buildCommand = `node ${helper} before ${variant.key} && ${service.buildCommand} && node ${helper} after ${variant.key}`;
   }
+  const runtimeRoutes = sharedMediaRuntimeRoutes(plan);
+  if (runtimeRoutes.length) {
+    const existing = config.services.autobest.routes;
+    if (existing !== undefined && !Array.isArray(existing)) throw Error('Unknown Auto Best service routes');
+    config.services.autobest.routes = [...runtimeRoutes, ...(existing || [])];
+  }
   config.rewrites.unshift(...plan.aliases);
   config.headers ??= [];
   config.headers.push({ source: '/_cars/media/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }] });
@@ -121,6 +164,20 @@ export function clearVercelAssetPlan(files) {
   const prior = parse(files, '.cars-vercel-assets.json'); if (!prior) return null;
   if (!prior.baseConfiguration || prior.schemaVersion !== 1) throw Error('Unknown existing Vercel asset plan');
   const config = parse(files, 'vercel.json'), restored = structuredClone(config);
+  const runtimeRoutes = sharedMediaRuntimeRoutes(prior), currentRoutes = restored.services.autobest.routes;
+  // A maintained additive App extension can receive the previously generated
+  // direct shared-path prefix. Recognize only that exact sealed prefix; all
+  // remaining configuration, aliases, commands and media still reconcile below.
+  const directPathRoutes = runtimeRoutes.map(({ transforms }) => ({
+    src: '^' + escape(transforms[0].args) + '$', transforms
+  }));
+  const previousUnionRoutes = runtimeRoutes.map(({ dest, ...route }) => route);
+  const generatedPrefix = Array.isArray(currentRoutes) && [runtimeRoutes, previousUnionRoutes, directPathRoutes]
+    .some(routes => JSON.stringify(currentRoutes.slice(0, routes.length)) === JSON.stringify(routes));
+  if (runtimeRoutes.length && generatedPrefix) {
+    currentRoutes.splice(0, runtimeRoutes.length);
+    if (prior.baseConfiguration.services.autobest.routes === undefined && !currentRoutes.length) delete restored.services.autobest.routes;
+  } else if (runtimeRoutes.length && prior.runtimePathTransforms === true) throw Error('Generated shared runtime paths changed');
   if (JSON.stringify(restored.rewrites.splice(0, prior.aliases.length)) !== JSON.stringify(prior.aliases)) throw Error('Generated asset routes changed');
   const mediaHeader = { source: '/_cars/media/(.*)', headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }] };
   if (JSON.stringify(restored.headers.pop()) !== JSON.stringify(mediaHeader)) throw Error('Generated asset headers changed');

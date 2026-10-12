@@ -7,6 +7,7 @@ import { fingerprint, filesAt, git } from '../lib/workflow.mjs';
 import { planSixDesignSelection, SIX_DESIGN_PACKAGING_CANDIDATE } from '../lib/six-design-release.mjs';
 import { loadDealerProfile } from '../lib/client-refresh-normalize.mjs';
 import { applyRefreshAdapter } from '../lib/client-refresh-adapters.mjs';
+import {buildModernDealerInventoryCopy} from '../lib/modern-dealer-inventory-copy.mjs';
 import { restoreTemplatePalette, templatePaletteConfigPath } from '../lib/client-refresh-presentation.mjs';
 import { applyExtendedRefreshAdapter, sealExtendedVariant, EXTENDED_VARIANT_RECEIPTS, retainDealerVariantAssets } from '../lib/client-refresh-six.mjs';
 import { validatePackagingManifest, packageRetainsPath } from '../package-dealer.mjs';
@@ -48,6 +49,7 @@ Opt in to a template update for one existing dealer.
        [--design-set six] [--template-palette] [--variants karento-best]
        [--qualification <reviewed-context-json> --lock-file <candidate-lock-json>]
        [--registered-adoption <reviewed-receipt-json> --registered-adoption-sha256 <hash>] [--refresh-facts]
+       [--modern-copy-review <reviewed-display-copy-json> --modern-copy-review-sha256 <hash>]
   node update-dealer-template.mjs install --run-dir <path>
   node update-dealer-template.mjs rollback --run-dir <path> [--dealer-root <path>]
 
@@ -61,7 +63,7 @@ function parseCommand(argv) {
   const [action, ...rest] = argv;
   if (!['plan', 'install', 'rollback'].includes(action)) throw new Error(`Unknown action: ${action}\n${updateDealerTemplateUsage}`);
   const allowed = {
-    plan: new Set(['dealer-root', 'cars-root', 'template-root', 'lock-file', 'run-dir', 'candidate-dir', 'resolutions-file', 'asset-pool', 'candidate-asset-pool', 'design-set', 'variants', 'template-palette', 'qualification', 'registered-adoption', 'registered-adoption-sha256', 'refresh-facts']),
+    plan: new Set(['dealer-root', 'cars-root', 'template-root', 'lock-file', 'run-dir', 'candidate-dir', 'resolutions-file', 'asset-pool', 'candidate-asset-pool', 'design-set', 'variants', 'template-palette', 'qualification', 'registered-adoption', 'registered-adoption-sha256', 'refresh-facts', 'modern-copy-review', 'modern-copy-review-sha256']),
     install: new Set(['run-dir']),
     rollback: new Set(['run-dir', 'dealer-root'])
   }[action];
@@ -483,16 +485,43 @@ async function personalizeAddedBases({ pins, newBases, dealerRoot, manifest, reg
 }
 
 
-/** Explicit factual refresh uses fresh pinned target trees, never a twice-personalized candidate. */
-export async function personalizeFactualTargetBases({pins,newBases,dealerRoot,manifest}) {
-  const keys=['auto-best','modern','import','app','mobile','karento-best'];
-  if(JSON.stringify(Object.keys(pins).sort())!==JSON.stringify([...keys].sort()) || manifest.packaging?.version!=='5')throw new Error('Factual refresh requires all six qualified target families');
-  return personalizePinnedTargetBases({pins,newBases,dealerRoot,manifest,profile:loadDealerProfile(dealerRoot,manifest.slug)});
+/** Exact display-copy input; immutable listing facts and source files stay unchanged. */
+export function assertReviewedModernCopy({profile,value}) {
+  if(value?.schemaVersion!==1||value.kind!=='cars-reviewed-modern-bilingual-copy-input'||value.dealer!==profile.slug||!Number.isSafeInteger(value.listingCount))throw Error('Exact dealer-scoped Modern display-copy input required');
+  if(value.reviewedGeneratorHelper?.path!=='scripts/lib/modern-dealer-inventory-copy.mjs'||value.reviewedGeneratorHelper?.sha256!=='cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b')throw Error('Exact reviewed maintained Modern copy helper required');
+  if(!/^[a-f0-9]{40}$/.test(value.sourceCommit??'')||!/^[a-f0-9]{40}$/.test(value.baselineTree??'')||!/^[a-f0-9]{64}$/.test(value.inputSha256??'')||!/^[a-f0-9]{64}$/.test(value.modernInputRowsSha256??''))throw Error('Exact Modern source/input leases required');
+  for(const key of ['displayCopyOnly','exactSourceDescriptionKeys','listingFactsUnchanged','imageUrlsUnchanged','imageAltsPreserved','interpolationTokensUnchanged'])if(value.review?.[key]!==true)throw Error('Modern display-copy review declaration missing: '+key);
+  if(typeof value.review.reviewedBy!=='string'||!value.review.reviewedBy.trim())throw Error('Modern display-copy reviewer required');
+  const rows=profile.listings.map(item=>({slug:item.slug,description:item.description||profile.business.inventoryNotice,images:item.images.map(url=>({url,alt:item.title}))}));
+  if(value.listingCount!==rows.length||sha256(JSON.stringify(rows))!==value.modernInputRowsSha256||JSON.stringify(Object.keys(value.reviewedCopy??{}).sort())!==JSON.stringify(rows.map(x=>x.slug).sort()))throw Error('Reviewed Modern copy differs from exact normalized listing inputs');
+  const copy=buildModernDealerInventoryCopy(rows,{reviewedCopy:value.reviewedCopy});
+  for(const row of rows)for(const locale of ['en','bg'])if(JSON.stringify(copy[row.slug][locale].imageAlts)!==JSON.stringify(row.images.map(x=>x.alt)))throw Error('Reviewed Modern copy changed factual image alts: '+row.slug);
+  return {rows:rows.length,modernInputRowsSha256:value.modernInputRowsSha256,reviewedCopySha256:sha256(JSON.stringify(copy))};
+}
+export function loadModernCopyReview({carsRoot,dealerRoot,dealer,pin}) {
+  const artifact=qualificationArtifact(carsRoot,pin.path),relative=path.relative(carsRoot,artifact.file).replaceAll('\\','/');
+  if(relative!=='docs/releases/cloudflare-existing25-20261011/vercel-existing-source/'+dealer+'/modern-copy-review.json'||!/^[a-f0-9]{64}$/.test(pin.sha256??'')||artifact.sha256!==pin.sha256)throw Error('Exact bounded dealer Modern copy path/hash required');
+  const value=artifact.value,profile=loadDealerProfile(dealerRoot,dealer);assertReviewedModernCopy({profile,value});
+  if(git(carsRoot,['--no-lazy-fetch','rev-parse',value.sourceCommit+':clients/'+dealer])!==value.baselineTree)throw Error('Reviewed Modern copy immutable client tree differs');
+  if(!Array.isArray(value.profileInputs)||JSON.stringify(value.profileInputs.map(x=>x.path).sort())!==JSON.stringify(['business-facts.json','dealer.json','stock.json']))throw Error('Exact original Modern factual input inventory required');
+  for(const row of value.profileInputs){
+    const file=path.join(dealerRoot,row.path),stat=fs.lstatSync(file),bytes=fs.readFileSync(file);
+    if(!stat.isFile()||stat.isSymbolicLink()||!samePath(fs.realpathSync(file),file)||bytes.length!==row.bytes||sha256(bytes)!==row.sha256||crypto.createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex')!==row.gitBlob||git(carsRoot,['--no-lazy-fetch','rev-parse',value.sourceCommit+':clients/'+dealer+'/'+row.path])!==row.gitBlob)throw Error('Reviewed Modern source facts changed: '+row.path);
+  }
+  return {...artifact,path:relative};
 }
 
-async function personalizePinnedTargetBases({pins,newBases,dealerRoot,manifest,profile}) {
+/** Explicit factual refresh uses fresh pinned target trees, never a twice-personalized candidate. */
+export async function personalizeFactualTargetBases({pins,newBases,dealerRoot,manifest,modernCopyReview=null}) {
+  const keys=['auto-best','modern','import','app','mobile','karento-best'];
+  if(JSON.stringify(Object.keys(pins).sort())!==JSON.stringify([...keys].sort()) || manifest.packaging?.version!=='5')throw new Error('Factual refresh requires all six qualified target families');
+  return personalizePinnedTargetBases({pins,newBases,dealerRoot,manifest,profile:loadDealerProfile(dealerRoot,manifest.slug),modernCopyReview});
+}
+
+async function personalizePinnedTargetBases({pins,newBases,dealerRoot,manifest,profile,modernCopyReview=null}) {
   const keys=['auto-best','modern','import','app','mobile','karento-best'];
   const consumerPaths=new Set(),adaptations={};
+  if(modernCopyReview)assertReviewedModernCopy({profile,value:modernCopyReview.value});
   const note=(before,after,prefix='')=>{
     for(const name of new Set([...before.keys(),...after.keys()])) {
       const prior=before.get(name),next=after.get(name);
@@ -505,7 +534,7 @@ async function personalizePinnedTargetBases({pins,newBases,dealerRoot,manifest,p
     const scratchParent=fs.realpathSync(process.env.TEMP||process.env.TMP||dealerRoot),tempRoot=fs.mkdtempSync(path.join(scratchParent,'cars-factual-target-'));
     try {
       const before=new Map(newBases[key]),textInputs=new Map([...before].filter(([,bytes])=>!bytes.includes(0)&&Buffer.from(bytes.toString('utf8')).equals(bytes)));writeDirectoryTreeChanges(tempRoot,new Map(),textInputs);
-      applyRefreshAdapter({key,oldVariant:path.join(dealerRoot,key),candidate:tempRoot,profile});
+      applyRefreshAdapter({key,oldVariant:path.join(dealerRoot,key),candidate:tempRoot,profile,...(['modern','import'].includes(key)&&modernCopyReview?{reviewedModernCopy:modernCopyReview.value.reviewedCopy}:{})});
       const derived=readDirectoryTree(tempRoot);for(const name of textInputs.keys())if(!derived.has(name))throw new Error('Factual adapter unexpectedly removed a target input: '+key+'/'+name);let after=new Map([...before,...derived]);
       const retained=new Map([...after].map(([name,bytes])=>[key+'/'+name,bytes]));
       retainDealerVariantAssets(retained,key,profile,dealerRoot);
@@ -529,7 +558,7 @@ async function personalizePinnedTargetBases({pins,newBases,dealerRoot,manifest,p
   const split=splitPrefixedTrees(generated,keys);for(const key of keys)newBases[key]=split[key];
   if(keys.some(key=>![...consumerPaths].some(name=>name.startsWith(key+'/'))))throw new Error('Every factual target family needs exact consumer proof');
   return {adaptations,appProvenance:app.provenance,proof:{schemaVersion:1,stage:'preservation-merge-before-native-catalogs-and-branding',mode:'current-facts-from-pinned-six-targets',dealer:manifest.slug,profileSha256:sha256(JSON.stringify(profile)),
-    targetSources:Object.fromEntries(keys.map(key=>[key,renderPins(pins[key].targetSource)])),consumerPaths:[...consumerPaths].sort()}};
+    targetSources:Object.fromEntries(keys.map(key=>[key,renderPins(pins[key].targetSource)])),consumerPaths:[...consumerPaths].sort(),...(modernCopyReview?{modernCopyReview:{path:modernCopyReview.path,sha256:modernCopyReview.sha256,modernInputRowsSha256:modernCopyReview.value.modernInputRowsSha256}}:{})}};
 }
 
 /** A reviewed dealer resolution cannot retain stale facts and receive a new profile seal. */
@@ -838,7 +867,9 @@ async function validatePinnedBaseEvidence(metadata, manifest, lock, paths) {
   }
   const templatePaletteConfigs=pinnedPaletteConfigs(newBases,metadata.pins,metadata.selection?.templatePalette === true);
   const refreshFacts=metadata.selection?.refreshFacts===true;assertFactualRefreshAdmission({enabled:refreshFacts,designSet:metadata.selection?.designSet,selectedKeys:metadata.selection?.selectedKeys,qualification:metadata.qualification?.context,manifest});
-  const factual=refreshFacts?await personalizeFactualTargetBases({pins:metadata.pins,newBases,dealerRoot:metadata.dealerRoot,manifest:metadata.targetManifest}):null;
+  if(metadata.modernCopyReview&&(!refreshFacts||!metadata.selection?.templatePalette||metadata.registeredAdoption))throw new Error('Saved Modern copy review requires ordinary six-family factual source preparation');
+  const modernCopyReview=metadata.modernCopyReview?loadModernCopyReview({carsRoot:metadata.carsRoot,dealerRoot:metadata.dealerRoot,dealer:metadata.dealerSlug,pin:metadata.modernCopyReview}):null;
+  const factual=refreshFacts?await personalizeFactualTargetBases({pins:metadata.pins,newBases,dealerRoot:metadata.dealerRoot,manifest:metadata.targetManifest,modernCopyReview}):null;
   const extendedAdaptations=factual?.adaptations??await personalizeAddedBases({pins:metadata.pins,newBases,dealerRoot:metadata.dealerRoot,manifest});
   const targetManifest = metadata.targetManifest;
   validatePackagingManifest(targetManifest);
@@ -942,6 +973,9 @@ async function runPlan(values) {
   const pins = selectPinnedRevisions(manifest, lock,{targetVariants:selection.targetVariants,keys:selection.selectedKeys,qualification:qualification?.context,root:carsRoot});
   assertUpgradeSourceAdmission({manifest,qualification:qualification?.context,registeredAdoption,dealerRoot});
   const refreshFacts=values['refresh-facts']===true;assertFactualRefreshAdmission({enabled:refreshFacts,designSet:values['design-set'],selectedKeys:selection.selectedKeys,qualification:qualification?.context,registeredAdoption,manifest});
+  if(Boolean(values['modern-copy-review'])!==Boolean(values['modern-copy-review-sha256']))throw new Error('Modern copy review requires its exact path/hash');
+  if(values['modern-copy-review']&&(!refreshFacts||values['template-palette']!==true||registeredAdoption||!qualification))throw new Error('Modern copy review requires ordinary qualified six-family factual preparation and native template palette');
+  const modernCopyReview=values['modern-copy-review']?loadModernCopyReview({carsRoot,dealerRoot,dealer:manifest.slug,pin:{path:values['modern-copy-review'],sha256:values['modern-copy-review-sha256']}}):null;
   const targetManifest = targetManifestForUpgrade({ dealerRoot, manifest, pins,targetVariants:selection.targetVariants,carsRoot,registeredAdoption });
   const resolutionBytes = values['resolutions-file'] ? fs.readFileSync(path.resolve(values['resolutions-file'])) : null;
   const resolutions = parseResolutions(resolutionBytes, pins);
@@ -982,7 +1016,7 @@ async function runPlan(values) {
   }
   const templatePalette=values['template-palette'] === true;
   const templatePaletteConfigs=pinnedPaletteConfigs(newBases,pins,templatePalette);
-  const factual=refreshFacts?await personalizeFactualTargetBases({pins,newBases,dealerRoot,manifest:targetManifest}):null;
+  const factual=refreshFacts?await personalizeFactualTargetBases({pins,newBases,dealerRoot,manifest:targetManifest,modernCopyReview}):null;
   const extendedAdaptations=factual?.adaptations??await personalizeAddedBases({pins,newBases,dealerRoot,manifest,registeredAdoption});
 
   const adapted = await adaptPinnedBases({ keys: Object.keys(pins), oldBases, newBases, manifest, targetManifest,registeredAdoption });
@@ -1026,6 +1060,7 @@ async function runPlan(values) {
     targetManifestSha256: sha256(Buffer.from(JSON.stringify(adapted.targetManifest))),
     resolutionsSha256: resolutionBytes ? sha256(resolutionBytes) : null,
     sourceBeforeSha256,
+    modernCopyReview:modernCopyReview?{path:modernCopyReview.path,sha256:modernCopyReview.sha256}:null,
     runDirectory,
     pins: renderPins(pins),
     selection:{designSet:values['design-set'] || null,selectedKeys:selection.selectedKeys || null,templatePalette,refreshFacts},

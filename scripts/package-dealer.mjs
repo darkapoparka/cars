@@ -150,7 +150,13 @@ export function vercelConfiguration(manifest, legacyDetails) {
       const helper = key === 'modern' ? '../../../scripts/build-native-service.mjs' : '../scripts/build-native-service.mjs';
       services[names[key]] = key === 'app' ? { root:'app',framework:'nextjs',installCommand:'npm ci --include=dev',buildCommand:'node ../scripts/build-app-service.mjs' }
         : { root:key === 'modern' ? 'modern/apps/web' : key,framework:['modern','mobile'].includes(key) ? 'nextjs' : 'sveltekit',installCommand:`node ${helper} install ${key}`,buildCommand:`node ${helper} ${key} --installed` };
-      if (base) { redirects.push({source:base,destination:entry,permanent:false}); rewrites.push({source:base+'/(.*)',destination:{service:names[key]}}); }
+      if (base) {
+        // Native Mobile canonicalizes its bare basePath without a trailing slash.
+        // Dispatch that entry directly; an envelope slash redirect can self-loop.
+        if (key === 'mobile') rewrites.push({source:base,destination:{service:names[key],path:base}});
+        else redirects.push({source:base,destination:entry,permanent:false});
+        rewrites.push({source:base+'/(.*)',destination:{service:names[key]}});
+      }
     }
     rewrites.push({source:'/(.*)',destination:{service:'autobest'}});
     return {$schema:'https://openapi.vercel.sh/vercel.json',services,headers:[{source:'/(.*)',headers:[{key:'X-Robots-Tag',value:'noindex, nofollow'}]}],redirects,rewrites};

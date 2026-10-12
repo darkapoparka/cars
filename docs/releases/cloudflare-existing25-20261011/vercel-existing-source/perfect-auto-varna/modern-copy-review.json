@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "perfect-auto-varna",
+  "sourceCommit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
+  "baselineTree": "d4f04fcd2b9f36cdf175b90b047e1e36f4ed0880",
+  "inputSha256": "f628d5337da4b027793c5e2b0620a46ed54ed62f4dfaa05ea079c94a21965574",
+  "modernInputRowsSha256": "4b7797a6c4d8cfb20e67a829089030697d1203a8f1bcd0b9639dfc7dbd0307d3",
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "c3dec4d7f86733b87fd14368ec42b5e147a45d68",
+      "sha256": "8ec5e3e96e099a97cd28382f38c961a9981561e8b98c31d9847a055e6c95ccaf",
+      "bytes": 4664
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "1f9b529347d118e140050eef510e849a534d17be",
+      "sha256": "b11b9597c077d31641680c244b246a93adddd103de025f922e2a916bbd2068a1",
+      "bytes": 2516
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "268884b4463c8a0e19191f5782d225d1d5bfb77e",
+      "sha256": "b6f1085b8585594456ed33bfdd758192cc3ca702e7790ea1d86169e52a725bf6",
+      "bytes": 6871
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b"
+  },
+  "listingCount": 6,
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "root",
+    "notes": "Translate exact snapshot descriptions and preserve owner vehicle names, facts, dated availability and form disclosure."
+  },
+  "reviewedCopy": {
+    "mercedes-benz-ml-320-cdi-2006-21788859055085650": {
+      "sourceDescription": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
+      "en": {
+        "description": "Published listing from PERFECT AUTO as of 10.09.2026.",
+        "imageAlts": [
+          "Mercedes-Benz ML 320 CDI",
+          "Mercedes-Benz ML 320 CDI",
+          "Mercedes-Benz ML 320 CDI",
+          "Mercedes-Benz ML 320 CDI",
+          "Mercedes-Benz ML 320 CDI"
+        ]
+      },
+      "bg": {
+        "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
+        "imageAlts": [
+          "Mercedes-Benz ML 320 CDI",
+          "Mercedes-Benz ML 320 CDI",
+          "Mercedes-Benz ML 320 CDI",
+          "Mercedes-Benz ML 320 CDI",
+          "Mercedes-Benz ML 320 CDI"
+        ]
+      }
+    },
+    "mercedes-benz-g-350-4-matic-facelift-bluetec-full-2015-21788174780697334": {
+      "sourceDescription": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
+      "en": {
+        "description": "Published listing from PERFECT AUTO as of 10.09.2026.",
+        "imageAlts": [
+          "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *",
+          "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *",
+          "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *",
+          "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *",
+          "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *"
+        ]
+      },
+      "bg": {
+        "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
+        "imageAlts": [
+          "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *",
+          "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *",
+          "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *",
+          "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *",
+          "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *"
+        ]
+      }
+    },
+    "audi-q7-50-tdi-facelift-quattro-s-line-maxton-full-rs-2022-21788174574608668": {
+      "sourceDescription": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
+      "en": {
+        "description": "Published listing from PERFECT AUTO as of 10.09.2026.",
+        "imageAlts": [
+          "Audi Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS",
+          "Audi Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS",
+          "Audi Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS",
+          "Audi Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS",
+          "Audi Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS"
+        ]
+      },
+      "bg": {
+        "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
+        "imageAlts": [
+          "Audi Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS",
+          "Audi Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS",
+          "Audi Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS",
+          "Audi Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS",
+          "Audi Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS"
+        ]
+      }
+    },
+    "lexus-nx-450-full-mark-lev-head-u-2026-21787209952978104": {
+      "sourceDescription": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
+      "en": {
+        "description": "Published listing from PERFECT AUTO as of 10.09.2026.",
+        "imageAlts": [
+          "Lexus NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U",
+          "Lexus NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U",
+          "Lexus NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U",
+          "Lexus NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U",
+          "Lexus NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U"
+        ]
+      },
+      "bg": {
+        "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
+        "imageAlts": [
+          "Lexus NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U",
+          "Lexus NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U",
+          "Lexus NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U",
+          "Lexus NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U",
+          "Lexus NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U"
+        ]
+      }
+    },
+    "bmw-x6-30d-xdrive-swarovski-m-packet-maxton-2022-21787209746596224": {
+      "sourceDescription": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
+      "en": {
+        "description": "Published listing from PERFECT AUTO as of 10.09.2026.",
+        "imageAlts": [
+          "BMW X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *",
+          "BMW X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *",
+          "BMW X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *",
+          "BMW X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *",
+          "BMW X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *"
+        ]
+      },
+      "bg": {
+        "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
+        "imageAlts": [
+          "BMW X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *",
+          "BMW X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *",
+          "BMW X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *",
+          "BMW X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *",
+          "BMW X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *"
+        ]
+      }
+    },
+    "ford-mustang-2016-11786890129374054": {
+      "sourceDescription": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
+      "en": {
+        "description": "Published listing from PERFECT AUTO as of 10.09.2026.",
+        "imageAlts": [
+          "Ford Mustang * КАМЕРА *",
+          "Ford Mustang * КАМЕРА *",
+          "Ford Mustang * КАМЕРА *",
+          "Ford Mustang * КАМЕРА *",
+          "Ford Mustang * КАМЕРА *"
+        ]
+      },
+      "bg": {
+        "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
+        "imageAlts": [
+          "Ford Mustang * КАМЕРА *",
+          "Ford Mustang * КАМЕРА *",
+          "Ford Mustang * КАМЕРА *",
+          "Ford Mustang * КАМЕРА *",
+          "Ford Mustang * КАМЕРА *"
+        ]
+      }
+    }
+  },
+  "canonicalSourcePublished": false,
+  "currentSourceQualification": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false
+}

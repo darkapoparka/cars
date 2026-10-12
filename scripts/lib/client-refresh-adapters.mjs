@@ -7,6 +7,8 @@ import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { applyDealerLogoContract } from './client-logo-contract.mjs';
 import { dealerLocalizedCopy } from './dealer-localized-copy.mjs';
+import {renderModernDealerInventoryCopy} from './modern-dealer-inventory-copy.mjs';
+import {repairImportDealerInventoryCatalog} from './import-dealer-inventory-copy.mjs';
 import { applyCarwowSafeContent, applyImportSafeContent, applyModernSafeContent } from './client-refresh-safe-content.mjs';
 
 const exists = (file) => fs.existsSync(file);
@@ -839,6 +841,7 @@ function replaceModernListings(file, profile) {
   const replacement = 'export const mockListings: VehicleListing[] = ' + serialized;
   text = text.slice(0, start) + replacement + text.slice(arrayEnd + 1);
   write(file, text);
+  return listings;
 }
 
 function replaceLeadScalar(text, key, value) {
@@ -935,11 +938,13 @@ function patchModernAssignedDirectory(candidate, profile) {
   return [relative];
 }
 
-function patchModern({ oldVariant, candidate, profile }) {
+function patchModern({ oldVariant, candidate, profile, reviewedModernCopy }) {
   const b = profile.business;
   const localized = dealerLocalizedCopy(profile);
   const listingFile = path.join(candidate, 'packages/marketplace-domain/testing/mock-data.ts');
-  replaceModernListings(listingFile, profile);
+  const listings = replaceModernListings(listingFile, profile);
+  write(path.join(candidate, 'packages/marketplace/content/inventory-copy.ts'),
+    renderModernDealerInventoryCopy(listings,{reviewedCopy:reviewedModernCopy??profile.business.raw?.modernInventoryCopy}));
   const file = path.join(candidate, 'packages/marketplace/lead-site.ts');
   let text = read(file);
   const logo = requireRasterLogo(pickLogo(oldVariant, 'modern', b, false), 'modern', 'primary surfaces');
@@ -1009,6 +1014,7 @@ function patchModern({ oldVariant, candidate, profile }) {
   const safeContent = applyModernSafeContent({ candidate, profile });
   return [
     'packages/marketplace-domain/testing/mock-data.ts',
+    'packages/marketplace/content/inventory-copy.ts',
     'packages/marketplace/lead-site.ts',
     'packages/marketplace-domain/testing/dealer-profile.json',
     ...dealerTextFiles, ...directoryFiles, ...safeContent.changed
@@ -1589,7 +1595,7 @@ function patchImportText(candidate, profile) {
     .map((file) => path.relative(candidate, file).replaceAll('\\', '/'));
 }
 
-function patchImport({ oldVariant, candidate, profile }) {
+function patchImport({ oldVariant, candidate, profile, reviewedModernCopy }) {
   const feedFile = path.join(candidate, 'src/lib/data/daynight-listings.json');
   write(feedFile, `${JSON.stringify(importListingFeed(profile), null, 2)}\n`);
   patchImportDayNight(candidate, oldVariant, profile);
@@ -1599,6 +1605,16 @@ function patchImport({ oldVariant, candidate, profile }) {
   patchImportAgents(candidate);
   const safeContent = applyImportSafeContent({ candidate, profile });
   const changed = patchImportText(candidate, profile);
+  const inventoryCopyFile = path.join(candidate, 'src/lib/content/inventory-localized.ts');
+  const inventoryCopy = repairImportDealerInventoryCatalog({
+    source: read(inventoryCopyFile), feed: JSON.parse(read(feedFile)),
+    listingSlugs: profile.listings.map((item, index) => item.slug || `${profile.business.slug}-${index + 1}`),
+    reviewedCopy: reviewedModernCopy ?? profile.business.raw?.modernInventoryCopy
+  });
+  if (inventoryCopy.added.length) {
+    write(inventoryCopyFile, inventoryCopy.source);
+    changed.push('src/lib/content/inventory-localized.ts');
+  }
   const heroBinding = patchImportHeroBindings(candidate);
   const menuHeader = path.join(candidate, 'src/lib/components/home/HomeFiveHeader.svelte');
   write(menuHeader, ensureImportMenuKeys(read(menuHeader)));

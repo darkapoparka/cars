@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "al-basma-motors",
+  "sourceCommit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
+  "baselineTree": "7094a2b2cfe73e49701819ca8ac983468106cf7a",
+  "inputSha256": "cb237e32747406c4b4d77316006ee4f0f457608e1c9aa8a00bb27baa0d693a29",
+  "modernInputRowsSha256": "9a43a9035323ee48e10cb0ab6edfab41d39b1411384d1771d7ac798de8b52d85",
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "005df28e18141cf0a60be848dfc440c5e16d91ef",
+      "sha256": "d8dda1ab4396c91c48faee0624a2f92e7886d416f6f659428d30859054318bc1",
+      "bytes": 3021
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "cb37418b10890b6cce849874ada1b9dd5a93c554",
+      "sha256": "e2cf73560b9dedba628b324ff5b285d947f3cc1592f82c3b1096f158f0b80332",
+      "bytes": 1770
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "bfd7139cba85e569d3124b15ec656ef6b49fcfa3",
+      "sha256": "96825b011b59132b7dc4108f834a0fb57ac0cba0248c19c397935d8c18ad26de",
+      "bytes": 27583
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b"
+  },
+  "listingCount": 10,
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "root",
+    "notes": "Replaces the stale unpublished wording with design preview while preserving dated-stock and draft-only disclosure."
+  },
+  "reviewedCopy": {
+    "lexus-ct200h-2018-1": {
+      "sourceDescription": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+      "en": {
+        "description": "Independent design preview. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+        "imageAlts": [
+          "Lexus CT200h Platinum",
+          "Lexus CT200h Platinum",
+          "Lexus CT200h Platinum",
+          "Lexus CT200h Platinum"
+        ]
+      },
+      "bg": {
+        "description": "Независим демонстрационен дизайн. Датирани примерни обяви, а не актуална наличност. Потвърдете цената, характеристиките и наличността директно с шоурума. Формите подготвят само чернови; нищо не се изпраща.",
+        "imageAlts": [
+          "Lexus CT200h Platinum",
+          "Lexus CT200h Platinum",
+          "Lexus CT200h Platinum",
+          "Lexus CT200h Platinum"
+        ]
+      }
+    },
+    "lexus-is300-2023-2": {
+      "sourceDescription": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+      "en": {
+        "description": "Independent design preview. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+        "imageAlts": [
+          "Lexus IS300 Platinum",
+          "Lexus IS300 Platinum",
+          "Lexus IS300 Platinum",
+          "Lexus IS300 Platinum"
+        ]
+      },
+      "bg": {
+        "description": "Независим демонстрационен дизайн. Датирани примерни обяви, а не актуална наличност. Потвърдете цената, характеристиките и наличността директно с шоурума. Формите подготвят само чернови; нищо не се изпраща.",
+        "imageAlts": [
+          "Lexus IS300 Platinum",
+          "Lexus IS300 Platinum",
+          "Lexus IS300 Platinum",
+          "Lexus IS300 Platinum"
+        ]
+      }
+    },
+    "lexus-rc-f-2020-3": {
+      "sourceDescription": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+      "en": {
+        "description": "Independent design preview. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+        "imageAlts": [
+          "Lexus RC-F",
+          "Lexus RC-F",
+          "Lexus RC-F",
+          "Lexus RC-F"
+        ]
+      },
+      "bg": {
+        "description": "Независим демонстрационен дизайн. Датирани примерни обяви, а не актуална наличност. Потвърдете цената, характеристиките и наличността директно с шоурума. Формите подготвят само чернови; нищо не се изпраща.",
+        "imageAlts": [
+          "Lexus RC-F",
+          "Lexus RC-F",
+          "Lexus RC-F",
+          "Lexus RC-F"
+        ]
+      }
+    },
+    "lexus-is350-2024-4": {
+      "sourceDescription": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+      "en": {
+        "description": "Independent design preview. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+        "imageAlts": [
+          "Lexus IS350 F-Sport",
+          "Lexus IS350 F-Sport",
+          "Lexus IS350 F-Sport",
+          "Lexus IS350 F-Sport"
+        ]
+      },
+      "bg": {
+        "description": "Независим демонстрационен дизайн. Датирани примерни обяви, а не актуална наличност. Потвърдете цената, характеристиките и наличността директно с шоурума. Формите подготвят само чернови; нищо не се изпраща.",
+        "imageAlts": [
+          "Lexus IS350 F-Sport",
+          "Lexus IS350 F-Sport",
+          "Lexus IS350 F-Sport",
+          "Lexus IS350 F-Sport"
+        ]
+      }
+    },
+    "lexus-gs250-2015-5": {
+      "sourceDescription": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+      "en": {
+        "description": "Independent design preview. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+        "imageAlts": [
+          "Lexus GS250 Platinum",
+          "Lexus GS250 Platinum",
+          "Lexus GS250 Platinum",
+          "Lexus GS250 Platinum"
+        ]
+      },
+      "bg": {
+        "description": "Независим демонстрационен дизайн. Датирани примерни обяви, а не актуална наличност. Потвърдете цената, характеристиките и наличността директно с шоурума. Формите подготвят само чернови; нищо не се изпраща.",
+        "imageAlts": [
+          "Lexus GS250 Platinum",
+          "Lexus GS250 Platinum",
+          "Lexus GS250 Platinum",
+          "Lexus GS250 Platinum"
+        ]
+      }
+    },
+    "lexus-rc350-2021-6": {
+      "sourceDescription": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+      "en": {
+        "description": "Independent design preview. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+        "imageAlts": [
+          "Lexus RC350 F-Sport",
+          "Lexus RC350 F-Sport",
+          "Lexus RC350 F-Sport",
+          "Lexus RC350 F-Sport"
+        ]
+      },
+      "bg": {
+        "description": "Независим демонстрационен дизайн. Датирани примерни обяви, а не актуална наличност. Потвърдете цената, характеристиките и наличността директно с шоурума. Формите подготвят само чернови; нищо не се изпраща.",
+        "imageAlts": [
+          "Lexus RC350 F-Sport",
+          "Lexus RC350 F-Sport",
+          "Lexus RC350 F-Sport",
+          "Lexus RC350 F-Sport"
+        ]
+      }
+    },
+    "lexus-es350-2023-7": {
+      "sourceDescription": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+      "en": {
+        "description": "Independent design preview. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+        "imageAlts": [
+          "Lexus ES350 F-Sport",
+          "Lexus ES350 F-Sport",
+          "Lexus ES350 F-Sport",
+          "Lexus ES350 F-Sport"
+        ]
+      },
+      "bg": {
+        "description": "Независим демонстрационен дизайн. Датирани примерни обяви, а не актуална наличност. Потвърдете цената, характеристиките и наличността директно с шоурума. Формите подготвят само чернови; нищо не се изпраща.",
+        "imageAlts": [
+          "Lexus ES350 F-Sport",
+          "Lexus ES350 F-Sport",
+          "Lexus ES350 F-Sport",
+          "Lexus ES350 F-Sport"
+        ]
+      }
+    },
+    "lexus-lx570-2016-8": {
+      "sourceDescription": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+      "en": {
+        "description": "Independent design preview. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+        "imageAlts": [
+          "Lexus LX570 Signature",
+          "Lexus LX570 Signature",
+          "Lexus LX570 Signature",
+          "Lexus LX570 Signature"
+        ]
+      },
+      "bg": {
+        "description": "Независим демонстрационен дизайн. Датирани примерни обяви, а не актуална наличност. Потвърдете цената, характеристиките и наличността директно с шоурума. Формите подготвят само чернови; нищо не се изпраща.",
+        "imageAlts": [
+          "Lexus LX570 Signature",
+          "Lexus LX570 Signature",
+          "Lexus LX570 Signature",
+          "Lexus LX570 Signature"
+        ]
+      }
+    },
+    "lexus-tx350-2024-9": {
+      "sourceDescription": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+      "en": {
+        "description": "Independent design preview. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+        "imageAlts": [
+          "Lexus TX350 Platinum",
+          "Lexus TX350 Platinum",
+          "Lexus TX350 Platinum",
+          "Lexus TX350 Platinum"
+        ]
+      },
+      "bg": {
+        "description": "Независим демонстрационен дизайн. Датирани примерни обяви, а не актуална наличност. Потвърдете цената, характеристиките и наличността директно с шоурума. Формите подготвят само чернови; нищо не се изпраща.",
+        "imageAlts": [
+          "Lexus TX350 Platinum",
+          "Lexus TX350 Platinum",
+          "Lexus TX350 Platinum",
+          "Lexus TX350 Platinum"
+        ]
+      }
+    },
+    "lexus-rx350-2024-10": {
+      "sourceDescription": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+      "en": {
+        "description": "Independent design preview. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+        "imageAlts": [
+          "Lexus RX350 Premier",
+          "Lexus RX350 Premier",
+          "Lexus RX350 Premier",
+          "Lexus RX350 Premier"
+        ]
+      },
+      "bg": {
+        "description": "Независим демонстрационен дизайн. Датирани примерни обяви, а не актуална наличност. Потвърдете цената, характеристиките и наличността директно с шоурума. Формите подготвят само чернови; нищо не се изпраща.",
+        "imageAlts": [
+          "Lexus RX350 Premier",
+          "Lexus RX350 Premier",
+          "Lexus RX350 Premier",
+          "Lexus RX350 Premier"
+        ]
+      }
+    }
+  },
+  "canonicalSourcePublished": false,
+  "currentSourceQualification": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false
+}

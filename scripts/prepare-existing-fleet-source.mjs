@@ -173,6 +173,7 @@ export function validateSourceRequest(request,leads,registry){
  for(const slug of request.dealers){selectedDealer(slug,leads,registry);const record=registry.dealers.find(r=>r.slug===slug);assert(record.sourceOwnership!=='independent-repository'&&(!record.canonicalSourceRepository||record.canonicalSourceRepository==='darkapoparka/cars'),'Independent source preparation is excluded');
   for(const name of ['candidateLock','qualification','sourceDeltaReview','branding']){const row=request.inputs[slug][name];assert(row&&safeName(row.path)&&row.path.startsWith(SOURCE_CAMPAIGN+'/')&&hex64(row.sha256),'Exact bounded source input required: '+name);}
   const resolution=request.inputs[slug].resolutions;if(resolution)assert(safeName(resolution.path)&&resolution.path.startsWith(SOURCE_CAMPAIGN+'/')&&hex64(resolution.sha256),'Exact bounded resolutions required');
+  const copy=request.inputs[slug].modernCopyReview;if(copy)assert(copy.path===SOURCE_CAMPAIGN+'/vercel-existing-source/'+slug+'/modern-copy-review.json'&&hex64(copy.sha256),'Exact dealer-bound Modern display copy pin required');
  }validateLogoContractResealRequest(request);return request;
 }
 
@@ -271,9 +272,10 @@ function candidateFiles(directory){return new Map(filesAt(directory,{filter:()=>
 function writeCandidateChanges(directory,before,after,assetPool,replace){for(const [name,bytes]of after){if(before.get(name)?.equals(bytes))continue;const target=inside(directory,name);fs.mkdirSync(path.dirname(target),{recursive:true});replace(target,bytes,{assetPool,expectedPreviousSha256:before.has(name)?sha256(before.get(name)):null});}}
 
 /** Source CI explicitly opts into current facts; ordinary updater plans stay unchanged. */
-export function sourcePreparationPlanArgs({source,root,lockFile,qualificationFile,runDirectory,assetPool,resolutionsFile,registeredAdoptionPin}){
+export function sourcePreparationPlanArgs({source,root,lockFile,qualificationFile,runDirectory,assetPool,resolutionsFile,registeredAdoptionPin,modernCopyReviewPin}){
  const args=['plan','--dealer-root',source,'--cars-root',root,'--lock-file',lockFile,'--qualification',qualificationFile,'--run-dir',runDirectory,'--candidate-asset-pool',assetPool,'--design-set','six','--template-palette'];
  if(resolutionsFile)args.push('--resolutions-file',resolutionsFile);
+ if(modernCopyReviewPin){assert(!registeredAdoptionPin,'Modern copy input is ordinary factual preparation only');args.push('--modern-copy-review',modernCopyReviewPin.path,'--modern-copy-review-sha256',modernCopyReviewPin.sha256);}
  if(registeredAdoptionPin)args.push('--registered-adoption',registeredAdoptionPin.path,'--registered-adoption-sha256',registeredAdoptionPin.sha256);
  else args.push('--refresh-facts');
  return args;
@@ -305,7 +307,7 @@ export async function prepareExistingFleetSource({slug,root=ROOT,env=process.env
  const sourceBefore=fingerprint(source).digest,area=inside(root,'runtime/existing-fleet-source/'+ci.runId+'-'+ci.attempt+'/'+slug);assert(!fs.existsSync(area),'Source preparation attempt already exists');fs.mkdirSync(area,{recursive:true});
  if(request.logoContractReseal!==undefined)return prepareExistingLogoContractReseal({slug,root,request,ci,baseline,qualified,lock,context,area,source,sourceBefore});
  const {runUpdateDealerTemplate,finalizeDealerTemplateCandidate}=await import('./dealer-updates/update-dealer-template.mjs');const {replaceCandidateFile}=await import('./dealer-updates/three-way-upgrade.mjs');
- const runDirectory=path.join(area,'plan'),assetPool=path.join(area,'asset-pool'),args=sourcePreparationPlanArgs({source,root,lockFile:lock.file,qualificationFile:qualified.file,runDirectory,assetPool,resolutionsFile:resolutions?.file,registeredAdoptionPin:registeredAdoption?input.adoption:null});
+ const runDirectory=path.join(area,'plan'),assetPool=path.join(area,'asset-pool'),args=sourcePreparationPlanArgs({source,root,lockFile:lock.file,qualificationFile:qualified.file,runDirectory,assetPool,resolutionsFile:resolutions?.file,registeredAdoptionPin:registeredAdoption?input.adoption:null,modernCopyReviewPin:input.modernCopyReview});
  const planned=await runUpdateDealerTemplate(args);assert(planned.ready===true&&planned.candidateDirectory,'Unresolved preservation conflicts: review the original plan artifact');
  const originalReview=fs.readFileSync(planned.reviewPath),originalRun=fs.readFileSync(path.join(runDirectory,'run.json')),review=JSON.parse(originalReview),metadata=JSON.parse(originalRun),directory=planned.candidateDirectory,beforeBranding=candidateFiles(directory),files=new Map(beforeBranding),manifest=JSON.parse(files.get('dealer.json'));
  assert(manifest.slug===slug&&manifest.repository===(registeredAdoption?.identity.repository??registry.dealers.find(r=>r.slug===slug).repository),'Prepared dealer identity differs');

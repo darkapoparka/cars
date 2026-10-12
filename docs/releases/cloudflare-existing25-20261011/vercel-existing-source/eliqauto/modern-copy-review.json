@@ -1,0 +1,447 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-reviewed-modern-bilingual-copy-input",
+  "dealer": "eliqauto",
+  "sourceCommit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
+  "baselineTree": "96661e391c0567acbe595b204fba2eb62d9a6481",
+  "inputSha256": "44161a1f341600ffe27133b0c92c2f741df6c8373a1740d22460281450fd6564",
+  "modernInputRowsSha256": "a0d586c5c1e42c02980272b7b581d25fe98057add54ea0c8d7b8bc2373734969",
+  "profileInputs": [
+    {
+      "path": "dealer.json",
+      "gitBlob": "7ea85bc9e2c099e45d551f8b38016b44a5feb39b",
+      "sha256": "b98f1f2987ba3a49af1da805b8e8e98204a112d2df1ead6f65c997b934dc3f47",
+      "bytes": 2968
+    },
+    {
+      "path": "business-facts.json",
+      "gitBlob": "06ddd5c1aa509cca1ead2c163de033394d0eb02b",
+      "sha256": "cec24c6ef05bf0ea8197c34bafd1a78856d67b5f3bfb0c2047a29ca78c29b4fe",
+      "bytes": 1953
+    },
+    {
+      "path": "stock.json",
+      "gitBlob": "8397f8867398ca1a2792382bd997a5695d98bd8a",
+      "sha256": "18587563a24e6b863cf316506018af835d34080659d774f0991468ae03096b69",
+      "bytes": 26745
+    }
+  ],
+  "reviewedGeneratorHelper": {
+    "path": "scripts/lib/modern-dealer-inventory-copy.mjs",
+    "sha256": "cbdbaa28dc07911cfe913b4e627671b6556fc25d3bfe59364e29c5ca5a29072b"
+  },
+  "listingCount": 16,
+  "review": {
+    "displayCopyOnly": true,
+    "exactSourceDescriptionKeys": true,
+    "listingFactsUnchanged": true,
+    "imageUrlsUnchanged": true,
+    "imageAltsPreserved": true,
+    "interpolationTokensUnchanged": true,
+    "reviewedBy": "root",
+    "notes": "Translate exact snapshot descriptions and preserve owner vehicle names, facts, dated availability and form disclosure."
+  },
+  "reviewedCopy": {
+    "2014-11779989521200947": {
+      "sourceDescription": "2014 Audi A5 with S Line, facelift. 245 hp, diesel, automatic transmission.",
+      "en": {
+        "description": "2014 Audi A5 with S Line, facelift. 245 hp, diesel, automatic transmission.",
+        "imageAlts": [
+          "Audi A5 3.0TDI S LINE FACELIFT LED NAVI B&O ЛИЗИНГ 100%",
+          "Audi A5 3.0TDI S LINE FACELIFT LED NAVI B&O ЛИЗИНГ 100%",
+          "Audi A5 3.0TDI S LINE FACELIFT LED NAVI B&O ЛИЗИНГ 100%",
+          "Audi A5 3.0TDI S LINE FACELIFT LED NAVI B&O ЛИЗИНГ 100%",
+          "Audi A5 3.0TDI S LINE FACELIFT LED NAVI B&O ЛИЗИНГ 100%",
+          "Audi A5 3.0TDI S LINE FACELIFT LED NAVI B&O ЛИЗИНГ 100%"
+        ]
+      },
+      "bg": {
+        "description": "Audi A5, 2014 г., S Line, фейслифт. 245 к.с., дизел, автоматична скоростна кутия.",
+        "imageAlts": [
+          "Audi A5 3.0TDI S LINE FACELIFT LED NAVI B&O ЛИЗИНГ 100%",
+          "Audi A5 3.0TDI S LINE FACELIFT LED NAVI B&O ЛИЗИНГ 100%",
+          "Audi A5 3.0TDI S LINE FACELIFT LED NAVI B&O ЛИЗИНГ 100%",
+          "Audi A5 3.0TDI S LINE FACELIFT LED NAVI B&O ЛИЗИНГ 100%",
+          "Audi A5 3.0TDI S LINE FACELIFT LED NAVI B&O ЛИЗИНГ 100%",
+          "Audi A5 3.0TDI S LINE FACELIFT LED NAVI B&O ЛИЗИНГ 100%"
+        ]
+      }
+    },
+    "2017-11780007305121982": {
+      "sourceDescription": "2017 BMW 750 with xDrive, long. 450 hp, petrol, automatic transmission.",
+      "en": {
+        "description": "2017 BMW 750 with xDrive, long. 450 hp, petrol, automatic transmission.",
+        "imageAlts": [
+          "BMW 750 I LONG XDRIVE LED NAVI 360 B&W ЛИЗИНГ 100%",
+          "BMW 750 I LONG XDRIVE LED NAVI 360 B&W ЛИЗИНГ 100%",
+          "BMW 750 I LONG XDRIVE LED NAVI 360 B&W ЛИЗИНГ 100%",
+          "BMW 750 I LONG XDRIVE LED NAVI 360 B&W ЛИЗИНГ 100%",
+          "BMW 750 I LONG XDRIVE LED NAVI 360 B&W ЛИЗИНГ 100%"
+        ]
+      },
+      "bg": {
+        "description": "BMW 750, 2017 г., xDrive, дълга база. 450 к.с., бензин, автоматична скоростна кутия.",
+        "imageAlts": [
+          "BMW 750 I LONG XDRIVE LED NAVI 360 B&W ЛИЗИНГ 100%",
+          "BMW 750 I LONG XDRIVE LED NAVI 360 B&W ЛИЗИНГ 100%",
+          "BMW 750 I LONG XDRIVE LED NAVI 360 B&W ЛИЗИНГ 100%",
+          "BMW 750 I LONG XDRIVE LED NAVI 360 B&W ЛИЗИНГ 100%",
+          "BMW 750 I LONG XDRIVE LED NAVI 360 B&W ЛИЗИНГ 100%"
+        ]
+      }
+    },
+    "2009-11780175636720970": {
+      "sourceDescription": "2009 Mercedes-Benz S 500 with facelift, long. 388 hp, petrol, automatic transmission.",
+      "en": {
+        "description": "2009 Mercedes-Benz S 500 with facelift, long. 388 hp, petrol, automatic transmission.",
+        "imageAlts": [
+          "Mercedes-Benz S 500 LONG FACELIFT LED ПАНО H&K 3XTV ЛИЗИНГ 100%",
+          "Mercedes-Benz S 500 LONG FACELIFT LED ПАНО H&K 3XTV ЛИЗИНГ 100%",
+          "Mercedes-Benz S 500 LONG FACELIFT LED ПАНО H&K 3XTV ЛИЗИНГ 100%",
+          "Mercedes-Benz S 500 LONG FACELIFT LED ПАНО H&K 3XTV ЛИЗИНГ 100%",
+          "Mercedes-Benz S 500 LONG FACELIFT LED ПАНО H&K 3XTV ЛИЗИНГ 100%"
+        ]
+      },
+      "bg": {
+        "description": "Mercedes-Benz S 500, 2009 г., фейслифт, дълга база. 388 к.с., бензин, автоматична скоростна кутия.",
+        "imageAlts": [
+          "Mercedes-Benz S 500 LONG FACELIFT LED ПАНО H&K 3XTV ЛИЗИНГ 100%",
+          "Mercedes-Benz S 500 LONG FACELIFT LED ПАНО H&K 3XTV ЛИЗИНГ 100%",
+          "Mercedes-Benz S 500 LONG FACELIFT LED ПАНО H&K 3XTV ЛИЗИНГ 100%",
+          "Mercedes-Benz S 500 LONG FACELIFT LED ПАНО H&K 3XTV ЛИЗИНГ 100%",
+          "Mercedes-Benz S 500 LONG FACELIFT LED ПАНО H&K 3XTV ЛИЗИНГ 100%"
+        ]
+      }
+    },
+    "2014-11780176585830804": {
+      "sourceDescription": "2014 Mercedes-Benz CLA 200 with AMG, facelift. 136 hp, diesel, automatic transmission.",
+      "en": {
+        "description": "2014 Mercedes-Benz CLA 200 with AMG, facelift. 136 hp, diesel, automatic transmission.",
+        "imageAlts": [
+          "Mercedes-Benz CLA 200 D FACELIFT AMG LINE LED NAVI ЛИЗИНГ 100%",
+          "Mercedes-Benz CLA 200 D FACELIFT AMG LINE LED NAVI ЛИЗИНГ 100%",
+          "Mercedes-Benz CLA 200 D FACELIFT AMG LINE LED NAVI ЛИЗИНГ 100%",
+          "Mercedes-Benz CLA 200 D FACELIFT AMG LINE LED NAVI ЛИЗИНГ 100%",
+          "Mercedes-Benz CLA 200 D FACELIFT AMG LINE LED NAVI ЛИЗИНГ 100%",
+          "Mercedes-Benz CLA 200 D FACELIFT AMG LINE LED NAVI ЛИЗИНГ 100%"
+        ]
+      },
+      "bg": {
+        "description": "Mercedes-Benz CLA 200, 2014 г., AMG, фейслифт. 136 к.с., дизел, автоматична скоростна кутия.",
+        "imageAlts": [
+          "Mercedes-Benz CLA 200 D FACELIFT AMG LINE LED NAVI ЛИЗИНГ 100%",
+          "Mercedes-Benz CLA 200 D FACELIFT AMG LINE LED NAVI ЛИЗИНГ 100%",
+          "Mercedes-Benz CLA 200 D FACELIFT AMG LINE LED NAVI ЛИЗИНГ 100%",
+          "Mercedes-Benz CLA 200 D FACELIFT AMG LINE LED NAVI ЛИЗИНГ 100%",
+          "Mercedes-Benz CLA 200 D FACELIFT AMG LINE LED NAVI ЛИЗИНГ 100%",
+          "Mercedes-Benz CLA 200 D FACELIFT AMG LINE LED NAVI ЛИЗИНГ 100%"
+        ]
+      }
+    },
+    "2019-11780177315125298": {
+      "sourceDescription": "2019 Mercedes-Benz S 560 with AMG, facelift, long. 469 hp, petrol, automatic transmission.",
+      "en": {
+        "description": "2019 Mercedes-Benz S 560 with AMG, facelift, long. 469 hp, petrol, automatic transmission.",
+        "imageAlts": [
+          "Mercedes-Benz S 560 LONG FACELIFT AMG LINE ПАНО BURM HUD ЛИЗИНГ 100%",
+          "Mercedes-Benz S 560 LONG FACELIFT AMG LINE ПАНО BURM HUD ЛИЗИНГ 100%",
+          "Mercedes-Benz S 560 LONG FACELIFT AMG LINE ПАНО BURM HUD ЛИЗИНГ 100%",
+          "Mercedes-Benz S 560 LONG FACELIFT AMG LINE ПАНО BURM HUD ЛИЗИНГ 100%",
+          "Mercedes-Benz S 560 LONG FACELIFT AMG LINE ПАНО BURM HUD ЛИЗИНГ 100%",
+          "Mercedes-Benz S 560 LONG FACELIFT AMG LINE ПАНО BURM HUD ЛИЗИНГ 100%"
+        ]
+      },
+      "bg": {
+        "description": "Mercedes-Benz S 560, 2019 г., AMG, фейслифт, дълга база. 469 к.с., бензин, автоматична скоростна кутия.",
+        "imageAlts": [
+          "Mercedes-Benz S 560 LONG FACELIFT AMG LINE ПАНО BURM HUD ЛИЗИНГ 100%",
+          "Mercedes-Benz S 560 LONG FACELIFT AMG LINE ПАНО BURM HUD ЛИЗИНГ 100%",
+          "Mercedes-Benz S 560 LONG FACELIFT AMG LINE ПАНО BURM HUD ЛИЗИНГ 100%",
+          "Mercedes-Benz S 560 LONG FACELIFT AMG LINE ПАНО BURM HUD ЛИЗИНГ 100%",
+          "Mercedes-Benz S 560 LONG FACELIFT AMG LINE ПАНО BURM HUD ЛИЗИНГ 100%",
+          "Mercedes-Benz S 560 LONG FACELIFT AMG LINE ПАНО BURM HUD ЛИЗИНГ 100%"
+        ]
+      }
+    },
+    "2022-11780254722465322": {
+      "sourceDescription": "2022 Mercedes-Benz S 400 with AMG, long. 330 hp, diesel, automatic transmission.",
+      "en": {
+        "description": "2022 Mercedes-Benz S 400 with AMG, long. 330 hp, diesel, automatic transmission.",
+        "imageAlts": [
+          "Mercedes-Benz S 400 D LONG AMG LINE LED ПАНО 5D BURM HUD ЛИЗИНГ 100%",
+          "Mercedes-Benz S 400 D LONG AMG LINE LED ПАНО 5D BURM HUD ЛИЗИНГ 100%",
+          "Mercedes-Benz S 400 D LONG AMG LINE LED ПАНО 5D BURM HUD ЛИЗИНГ 100%",
+          "Mercedes-Benz S 400 D LONG AMG LINE LED ПАНО 5D BURM HUD ЛИЗИНГ 100%",
+          "Mercedes-Benz S 400 D LONG AMG LINE LED ПАНО 5D BURM HUD ЛИЗИНГ 100%",
+          "Mercedes-Benz S 400 D LONG AMG LINE LED ПАНО 5D BURM HUD ЛИЗИНГ 100%"
+        ]
+      },
+      "bg": {
+        "description": "Mercedes-Benz S 400, 2022 г., AMG, дълга база. 330 к.с., дизел, автоматична скоростна кутия.",
+        "imageAlts": [
+          "Mercedes-Benz S 400 D LONG AMG LINE LED ПАНО 5D BURM HUD ЛИЗИНГ 100%",
+          "Mercedes-Benz S 400 D LONG AMG LINE LED ПАНО 5D BURM HUD ЛИЗИНГ 100%",
+          "Mercedes-Benz S 400 D LONG AMG LINE LED ПАНО 5D BURM HUD ЛИЗИНГ 100%",
+          "Mercedes-Benz S 400 D LONG AMG LINE LED ПАНО 5D BURM HUD ЛИЗИНГ 100%",
+          "Mercedes-Benz S 400 D LONG AMG LINE LED ПАНО 5D BURM HUD ЛИЗИНГ 100%",
+          "Mercedes-Benz S 400 D LONG AMG LINE LED ПАНО 5D BURM HUD ЛИЗИНГ 100%"
+        ]
+      }
+    },
+    "2020-11780906851194765": {
+      "sourceDescription": "2020 Audi A8 with quattro, Matrix. 286 hp, diesel, automatic transmission.",
+      "en": {
+        "description": "2020 Audi A8 with quattro, Matrix. 286 hp, diesel, automatic transmission.",
+        "imageAlts": [
+          "Audi A8 50TDI QUATTRO MATRIX ПАНО B&O 3XTV ЛИЗИНГ 100%",
+          "Audi A8 50TDI QUATTRO MATRIX ПАНО B&O 3XTV ЛИЗИНГ 100%",
+          "Audi A8 50TDI QUATTRO MATRIX ПАНО B&O 3XTV ЛИЗИНГ 100%",
+          "Audi A8 50TDI QUATTRO MATRIX ПАНО B&O 3XTV ЛИЗИНГ 100%",
+          "Audi A8 50TDI QUATTRO MATRIX ПАНО B&O 3XTV ЛИЗИНГ 100%",
+          "Audi A8 50TDI QUATTRO MATRIX ПАНО B&O 3XTV ЛИЗИНГ 100%"
+        ]
+      },
+      "bg": {
+        "description": "Audi A8, 2020 г., quattro, Matrix. 286 к.с., дизел, автоматична скоростна кутия.",
+        "imageAlts": [
+          "Audi A8 50TDI QUATTRO MATRIX ПАНО B&O 3XTV ЛИЗИНГ 100%",
+          "Audi A8 50TDI QUATTRO MATRIX ПАНО B&O 3XTV ЛИЗИНГ 100%",
+          "Audi A8 50TDI QUATTRO MATRIX ПАНО B&O 3XTV ЛИЗИНГ 100%",
+          "Audi A8 50TDI QUATTRO MATRIX ПАНО B&O 3XTV ЛИЗИНГ 100%",
+          "Audi A8 50TDI QUATTRO MATRIX ПАНО B&O 3XTV ЛИЗИНГ 100%",
+          "Audi A8 50TDI QUATTRO MATRIX ПАНО B&O 3XTV ЛИЗИНГ 100%"
+        ]
+      }
+    },
+    "2023-11780907716855488": {
+      "sourceDescription": "2023 Mercedes-Benz GLS 450 with AMG, 4MATIC. 367 hp, petrol, automatic transmission.",
+      "en": {
+        "description": "2023 Mercedes-Benz GLS 450 with AMG, 4MATIC. 367 hp, petrol, automatic transmission.",
+        "imageAlts": [
+          "Mercedes-Benz GLS 450 I 4MATIC FULL AMG LINE LED ПАНО BURM ЛИЗИНГ 100%",
+          "Mercedes-Benz GLS 450 I 4MATIC FULL AMG LINE LED ПАНО BURM ЛИЗИНГ 100%",
+          "Mercedes-Benz GLS 450 I 4MATIC FULL AMG LINE LED ПАНО BURM ЛИЗИНГ 100%",
+          "Mercedes-Benz GLS 450 I 4MATIC FULL AMG LINE LED ПАНО BURM ЛИЗИНГ 100%",
+          "Mercedes-Benz GLS 450 I 4MATIC FULL AMG LINE LED ПАНО BURM ЛИЗИНГ 100%",
+          "Mercedes-Benz GLS 450 I 4MATIC FULL AMG LINE LED ПАНО BURM ЛИЗИНГ 100%"
+        ]
+      },
+      "bg": {
+        "description": "Mercedes-Benz GLS 450, 2023 г., AMG, 4MATIC. 367 к.с., бензин, автоматична скоростна кутия.",
+        "imageAlts": [
+          "Mercedes-Benz GLS 450 I 4MATIC FULL AMG LINE LED ПАНО BURM ЛИЗИНГ 100%",
+          "Mercedes-Benz GLS 450 I 4MATIC FULL AMG LINE LED ПАНО BURM ЛИЗИНГ 100%",
+          "Mercedes-Benz GLS 450 I 4MATIC FULL AMG LINE LED ПАНО BURM ЛИЗИНГ 100%",
+          "Mercedes-Benz GLS 450 I 4MATIC FULL AMG LINE LED ПАНО BURM ЛИЗИНГ 100%",
+          "Mercedes-Benz GLS 450 I 4MATIC FULL AMG LINE LED ПАНО BURM ЛИЗИНГ 100%",
+          "Mercedes-Benz GLS 450 I 4MATIC FULL AMG LINE LED ПАНО BURM ЛИЗИНГ 100%"
+        ]
+      }
+    },
+    "2018-11780909888518340": {
+      "sourceDescription": "2018 Mercedes-Benz E 220 with AMG. 194 hp, diesel, automatic transmission.",
+      "en": {
+        "description": "2018 Mercedes-Benz E 220 with AMG. 194 hp, diesel, automatic transmission.",
+        "imageAlts": [
+          "Mercedes-Benz E 220 D FULL AMG LINE LED ПАНО BURM 3XTV ЛИЗИНГ 100%",
+          "Mercedes-Benz E 220 D FULL AMG LINE LED ПАНО BURM 3XTV ЛИЗИНГ 100%",
+          "Mercedes-Benz E 220 D FULL AMG LINE LED ПАНО BURM 3XTV ЛИЗИНГ 100%",
+          "Mercedes-Benz E 220 D FULL AMG LINE LED ПАНО BURM 3XTV ЛИЗИНГ 100%",
+          "Mercedes-Benz E 220 D FULL AMG LINE LED ПАНО BURM 3XTV ЛИЗИНГ 100%",
+          "Mercedes-Benz E 220 D FULL AMG LINE LED ПАНО BURM 3XTV ЛИЗИНГ 100%"
+        ]
+      },
+      "bg": {
+        "description": "Mercedes-Benz E 220, 2018 г., AMG. 194 к.с., дизел, автоматична скоростна кутия.",
+        "imageAlts": [
+          "Mercedes-Benz E 220 D FULL AMG LINE LED ПАНО BURM 3XTV ЛИЗИНГ 100%",
+          "Mercedes-Benz E 220 D FULL AMG LINE LED ПАНО BURM 3XTV ЛИЗИНГ 100%",
+          "Mercedes-Benz E 220 D FULL AMG LINE LED ПАНО BURM 3XTV ЛИЗИНГ 100%",
+          "Mercedes-Benz E 220 D FULL AMG LINE LED ПАНО BURM 3XTV ЛИЗИНГ 100%",
+          "Mercedes-Benz E 220 D FULL AMG LINE LED ПАНО BURM 3XTV ЛИЗИНГ 100%",
+          "Mercedes-Benz E 220 D FULL AMG LINE LED ПАНО BURM 3XTV ЛИЗИНГ 100%"
+        ]
+      }
+    },
+    "2021-11781187597210481": {
+      "sourceDescription": "2021 Mercedes-Benz GLS 450 with 4MATIC, Maybach. 367 hp, petrol, automatic transmission.",
+      "en": {
+        "description": "2021 Mercedes-Benz GLS 450 with 4MATIC, Maybach. 367 hp, petrol, automatic transmission.",
+        "imageAlts": [
+          "Mercedes-Benz GLS 450 I 4MATIC FULL MAYBACH ПАНО BURM 360 ЛИЗИНГ 100%",
+          "Mercedes-Benz GLS 450 I 4MATIC FULL MAYBACH ПАНО BURM 360 ЛИЗИНГ 100%",
+          "Mercedes-Benz GLS 450 I 4MATIC FULL MAYBACH ПАНО BURM 360 ЛИЗИНГ 100%",
+          "Mercedes-Benz GLS 450 I 4MATIC FULL MAYBACH ПАНО BURM 360 ЛИЗИНГ 100%",
+          "Mercedes-Benz GLS 450 I 4MATIC FULL MAYBACH ПАНО BURM 360 ЛИЗИНГ 100%",
+          "Mercedes-Benz GLS 450 I 4MATIC FULL MAYBACH ПАНО BURM 360 ЛИЗИНГ 100%"
+        ]
+      },
+      "bg": {
+        "description": "Mercedes-Benz GLS 450, 2021 г., 4MATIC, Maybach. 367 к.с., бензин, автоматична скоростна кутия.",
+        "imageAlts": [
+          "Mercedes-Benz GLS 450 I 4MATIC FULL MAYBACH ПАНО BURM 360 ЛИЗИНГ 100%",
+          "Mercedes-Benz GLS 450 I 4MATIC FULL MAYBACH ПАНО BURM 360 ЛИЗИНГ 100%",
+          "Mercedes-Benz GLS 450 I 4MATIC FULL MAYBACH ПАНО BURM 360 ЛИЗИНГ 100%",
+          "Mercedes-Benz GLS 450 I 4MATIC FULL MAYBACH ПАНО BURM 360 ЛИЗИНГ 100%",
+          "Mercedes-Benz GLS 450 I 4MATIC FULL MAYBACH ПАНО BURM 360 ЛИЗИНГ 100%",
+          "Mercedes-Benz GLS 450 I 4MATIC FULL MAYBACH ПАНО BURM 360 ЛИЗИНГ 100%"
+        ]
+      }
+    },
+    "2020-11781207164422554": {
+      "sourceDescription": "2020 Mercedes-Benz AMG GT 53 with 4MATIC+, designo. 367 hp, petrol, automatic transmission.",
+      "en": {
+        "description": "2020 Mercedes-Benz AMG GT 53 with 4MATIC+, designo. 367 hp, petrol, automatic transmission.",
+        "imageAlts": [
+          "Mercedes-Benz AMG GT 53 4MATIC+ LED DESIGNO BURM 360 ЛИЗИНГ 100%",
+          "Mercedes-Benz AMG GT 53 4MATIC+ LED DESIGNO BURM 360 ЛИЗИНГ 100%",
+          "Mercedes-Benz AMG GT 53 4MATIC+ LED DESIGNO BURM 360 ЛИЗИНГ 100%",
+          "Mercedes-Benz AMG GT 53 4MATIC+ LED DESIGNO BURM 360 ЛИЗИНГ 100%",
+          "Mercedes-Benz AMG GT 53 4MATIC+ LED DESIGNO BURM 360 ЛИЗИНГ 100%",
+          "Mercedes-Benz AMG GT 53 4MATIC+ LED DESIGNO BURM 360 ЛИЗИНГ 100%"
+        ]
+      },
+      "bg": {
+        "description": "Mercedes-Benz AMG GT 53, 2020 г., 4MATIC+, designo. 367 к.с., бензин, автоматична скоростна кутия.",
+        "imageAlts": [
+          "Mercedes-Benz AMG GT 53 4MATIC+ LED DESIGNO BURM 360 ЛИЗИНГ 100%",
+          "Mercedes-Benz AMG GT 53 4MATIC+ LED DESIGNO BURM 360 ЛИЗИНГ 100%",
+          "Mercedes-Benz AMG GT 53 4MATIC+ LED DESIGNO BURM 360 ЛИЗИНГ 100%",
+          "Mercedes-Benz AMG GT 53 4MATIC+ LED DESIGNO BURM 360 ЛИЗИНГ 100%",
+          "Mercedes-Benz AMG GT 53 4MATIC+ LED DESIGNO BURM 360 ЛИЗИНГ 100%",
+          "Mercedes-Benz AMG GT 53 4MATIC+ LED DESIGNO BURM 360 ЛИЗИНГ 100%"
+        ]
+      }
+    },
+    "2020-11781211980587571": {
+      "sourceDescription": "2020 BMW 750 with xDrive, Black Fire Edition. 400 hp, diesel, automatic transmission.",
+      "en": {
+        "description": "2020 BMW 750 with xDrive, Black Fire Edition. 400 hp, diesel, automatic transmission.",
+        "imageAlts": [
+          "BMW 750 D XDRIVE BLACK FIRE EDITION 1OF150 ЛИЗИНГ 100%",
+          "BMW 750 D XDRIVE BLACK FIRE EDITION 1OF150 ЛИЗИНГ 100%",
+          "BMW 750 D XDRIVE BLACK FIRE EDITION 1OF150 ЛИЗИНГ 100%",
+          "BMW 750 D XDRIVE BLACK FIRE EDITION 1OF150 ЛИЗИНГ 100%",
+          "BMW 750 D XDRIVE BLACK FIRE EDITION 1OF150 ЛИЗИНГ 100%",
+          "BMW 750 D XDRIVE BLACK FIRE EDITION 1OF150 ЛИЗИНГ 100%"
+        ]
+      },
+      "bg": {
+        "description": "BMW 750, 2020 г., xDrive, Black Fire Edition. 400 к.с., дизел, автоматична скоростна кутия.",
+        "imageAlts": [
+          "BMW 750 D XDRIVE BLACK FIRE EDITION 1OF150 ЛИЗИНГ 100%",
+          "BMW 750 D XDRIVE BLACK FIRE EDITION 1OF150 ЛИЗИНГ 100%",
+          "BMW 750 D XDRIVE BLACK FIRE EDITION 1OF150 ЛИЗИНГ 100%",
+          "BMW 750 D XDRIVE BLACK FIRE EDITION 1OF150 ЛИЗИНГ 100%",
+          "BMW 750 D XDRIVE BLACK FIRE EDITION 1OF150 ЛИЗИНГ 100%",
+          "BMW 750 D XDRIVE BLACK FIRE EDITION 1OF150 ЛИЗИНГ 100%"
+        ]
+      }
+    },
+    "2020-11781244995278530": {
+      "sourceDescription": "2020 Audi A8 with Matrix, long. 286 hp, diesel, automatic transmission.",
+      "en": {
+        "description": "2020 Audi A8 with Matrix, long. 286 hp, diesel, automatic transmission.",
+        "imageAlts": [
+          "Audi A8 50TDI LONG MATRIX ПАНО 3XTV B&O ЛИЗИНГ 100%",
+          "Audi A8 50TDI LONG MATRIX ПАНО 3XTV B&O ЛИЗИНГ 100%",
+          "Audi A8 50TDI LONG MATRIX ПАНО 3XTV B&O ЛИЗИНГ 100%",
+          "Audi A8 50TDI LONG MATRIX ПАНО 3XTV B&O ЛИЗИНГ 100%",
+          "Audi A8 50TDI LONG MATRIX ПАНО 3XTV B&O ЛИЗИНГ 100%",
+          "Audi A8 50TDI LONG MATRIX ПАНО 3XTV B&O ЛИЗИНГ 100%"
+        ]
+      },
+      "bg": {
+        "description": "Audi A8, 2020 г., Matrix, дълга база. 286 к.с., дизел, автоматична скоростна кутия.",
+        "imageAlts": [
+          "Audi A8 50TDI LONG MATRIX ПАНО 3XTV B&O ЛИЗИНГ 100%",
+          "Audi A8 50TDI LONG MATRIX ПАНО 3XTV B&O ЛИЗИНГ 100%",
+          "Audi A8 50TDI LONG MATRIX ПАНО 3XTV B&O ЛИЗИНГ 100%",
+          "Audi A8 50TDI LONG MATRIX ПАНО 3XTV B&O ЛИЗИНГ 100%",
+          "Audi A8 50TDI LONG MATRIX ПАНО 3XTV B&O ЛИЗИНГ 100%",
+          "Audi A8 50TDI LONG MATRIX ПАНО 3XTV B&O ЛИЗИНГ 100%"
+        ]
+      }
+    },
+    "2017-11781281410239020": {
+      "sourceDescription": "2017 Mercedes-Benz C 63 with AMG, biturbo. 510 hp, petrol, automatic transmission.",
+      "en": {
+        "description": "2017 Mercedes-Benz C 63 with AMG, biturbo. 510 hp, petrol, automatic transmission.",
+        "imageAlts": [
+          "Mercedes-Benz C 63 AMG S V8 BITURBO LED NAVI BURM ЛИЗИНГ 100%",
+          "Mercedes-Benz C 63 AMG S V8 BITURBO LED NAVI BURM ЛИЗИНГ 100%",
+          "Mercedes-Benz C 63 AMG S V8 BITURBO LED NAVI BURM ЛИЗИНГ 100%",
+          "Mercedes-Benz C 63 AMG S V8 BITURBO LED NAVI BURM ЛИЗИНГ 100%",
+          "Mercedes-Benz C 63 AMG S V8 BITURBO LED NAVI BURM ЛИЗИНГ 100%",
+          "Mercedes-Benz C 63 AMG S V8 BITURBO LED NAVI BURM ЛИЗИНГ 100%"
+        ]
+      },
+      "bg": {
+        "description": "Mercedes-Benz C 63, 2017 г., AMG, biturbo. 510 к.с., бензин, автоматична скоростна кутия.",
+        "imageAlts": [
+          "Mercedes-Benz C 63 AMG S V8 BITURBO LED NAVI BURM ЛИЗИНГ 100%",
+          "Mercedes-Benz C 63 AMG S V8 BITURBO LED NAVI BURM ЛИЗИНГ 100%",
+          "Mercedes-Benz C 63 AMG S V8 BITURBO LED NAVI BURM ЛИЗИНГ 100%",
+          "Mercedes-Benz C 63 AMG S V8 BITURBO LED NAVI BURM ЛИЗИНГ 100%",
+          "Mercedes-Benz C 63 AMG S V8 BITURBO LED NAVI BURM ЛИЗИНГ 100%",
+          "Mercedes-Benz C 63 AMG S V8 BITURBO LED NAVI BURM ЛИЗИНГ 100%"
+        ]
+      }
+    },
+    "2021-11781294210212810": {
+      "sourceDescription": "2021 BMW 330 with M-Pack, xDrive, facelift. 258 hp, petrol, automatic transmission.",
+      "en": {
+        "description": "2021 BMW 330 with M-Pack, xDrive, facelift. 258 hp, petrol, automatic transmission.",
+        "imageAlts": [
+          "BMW 330 I XDRIVE M PACK FACELIFT LED NAVI ЛИЗИНГ 100%",
+          "BMW 330 I XDRIVE M PACK FACELIFT LED NAVI ЛИЗИНГ 100%",
+          "BMW 330 I XDRIVE M PACK FACELIFT LED NAVI ЛИЗИНГ 100%",
+          "BMW 330 I XDRIVE M PACK FACELIFT LED NAVI ЛИЗИНГ 100%",
+          "BMW 330 I XDRIVE M PACK FACELIFT LED NAVI ЛИЗИНГ 100%",
+          "BMW 330 I XDRIVE M PACK FACELIFT LED NAVI ЛИЗИНГ 100%"
+        ]
+      },
+      "bg": {
+        "description": "BMW 330, 2021 г., M-Pack, xDrive, фейслифт. 258 к.с., бензин, автоматична скоростна кутия.",
+        "imageAlts": [
+          "BMW 330 I XDRIVE M PACK FACELIFT LED NAVI ЛИЗИНГ 100%",
+          "BMW 330 I XDRIVE M PACK FACELIFT LED NAVI ЛИЗИНГ 100%",
+          "BMW 330 I XDRIVE M PACK FACELIFT LED NAVI ЛИЗИНГ 100%",
+          "BMW 330 I XDRIVE M PACK FACELIFT LED NAVI ЛИЗИНГ 100%",
+          "BMW 330 I XDRIVE M PACK FACELIFT LED NAVI ЛИЗИНГ 100%",
+          "BMW 330 I XDRIVE M PACK FACELIFT LED NAVI ЛИЗИНГ 100%"
+        ]
+      }
+    },
+    "2012-11781346026930952": {
+      "sourceDescription": "2012 Audi A6 with quattro, RS6 pack. 245 hp, diesel, automatic transmission.",
+      "en": {
+        "description": "2012 Audi A6 with quattro, RS6 pack. 245 hp, diesel, automatic transmission.",
+        "imageAlts": [
+          "Audi A6 3.0TDI QUATTRO FULL RS6 PACK LED NAVI ЛИЗИНГ 100%",
+          "Audi A6 3.0TDI QUATTRO FULL RS6 PACK LED NAVI ЛИЗИНГ 100%",
+          "Audi A6 3.0TDI QUATTRO FULL RS6 PACK LED NAVI ЛИЗИНГ 100%",
+          "Audi A6 3.0TDI QUATTRO FULL RS6 PACK LED NAVI ЛИЗИНГ 100%",
+          "Audi A6 3.0TDI QUATTRO FULL RS6 PACK LED NAVI ЛИЗИНГ 100%",
+          "Audi A6 3.0TDI QUATTRO FULL RS6 PACK LED NAVI ЛИЗИНГ 100%"
+        ]
+      },
+      "bg": {
+        "description": "Audi A6, 2012 г., quattro, RS6 pack. 245 к.с., дизел, автоматична скоростна кутия.",
+        "imageAlts": [
+          "Audi A6 3.0TDI QUATTRO FULL RS6 PACK LED NAVI ЛИЗИНГ 100%",
+          "Audi A6 3.0TDI QUATTRO FULL RS6 PACK LED NAVI ЛИЗИНГ 100%",
+          "Audi A6 3.0TDI QUATTRO FULL RS6 PACK LED NAVI ЛИЗИНГ 100%",
+          "Audi A6 3.0TDI QUATTRO FULL RS6 PACK LED NAVI ЛИЗИНГ 100%",
+          "Audi A6 3.0TDI QUATTRO FULL RS6 PACK LED NAVI ЛИЗИНГ 100%",
+          "Audi A6 3.0TDI QUATTRO FULL RS6 PACK LED NAVI ЛИЗИНГ 100%"
+        ]
+      }
+    }
+  },
+  "canonicalSourcePublished": false,
+  "currentSourceQualification": false,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false
+}
