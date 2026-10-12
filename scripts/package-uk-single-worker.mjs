@@ -24,12 +24,12 @@ export {scope as frameworkGlobal};
 `;}
 export function singleWorkerSource(freeStaticExperiment=null){return [
  'import router from "./router.mjs";',
- ...(freeStaticExperiment?['import {createModernFreeStaticRuntime} from "./modern-free-static-runtime.mjs";','import {resolveCarsNativePreferences} from "./modern/cars-native-preferences.js";']:[]),
+ ...(freeStaticExperiment?['import {createModernFreeStaticRuntime,modernSnapshotRequest} from "./modern-free-static-runtime.mjs";','import {resolveCarsNativePreferences} from "./modern/cars-native-preferences.js";']:[]),
  ...KEYS.filter(k=>k!=='router').map(k=>'import design_'+k.replaceAll('-','_')+' from "./'+k+'/'+(NEXT.has(k)?'index.js':'index.mjs')+'";'),
- ...(freeStaticExperiment?['const modernStatic=createModernFreeStaticRuntime({manifest:'+JSON.stringify(validateModernStaticManifest(freeStaticExperiment))+',resolvePreferences:resolveCarsNativePreferences});']:[]),
+ ...(freeStaticExperiment?['const modernStaticManifest='+JSON.stringify(validateModernStaticManifest(freeStaticExperiment))+';','const modernStatic=createModernFreeStaticRuntime({manifest:modernStaticManifest,resolvePreferences:resolveCarsNativePreferences});']:[]),
  'export default {async fetch(request, env, ctx) {',
- ...(freeStaticExperiment?[' const experimentResponse=await modernStatic.fetch(request,env);if(experimentResponse)return experimentResponse;']:[]),
- ' const bindings={...env,'+KEYS.filter(k=>k!=='router').map(k=>'CARS_'+k.toUpperCase().replaceAll('-','_')+':{fetch:r=>design_'+k.replaceAll('-','_')+'.fetch(r,env,ctx)}').join(',')+'};',
+ ...(freeStaticExperiment?[' if(!modernSnapshotRequest(request,modernStaticManifest)){const experimentResponse=await modernStatic.fetch(request,env);if(experimentResponse)return experimentResponse;}']:[]),
+ ' const bindings={...env,'+KEYS.filter(k=>k!=='router').map(k=>'CARS_'+k.toUpperCase().replaceAll('-','_')+':{fetch:'+((freeStaticExperiment&&k==='modern')?'async r=>(await modernStatic.fetch(r,env))??design_modern.fetch(r,env,ctx)':'r=>design_'+k.replaceAll('-','_')+'.fetch(r,env,ctx)')+'}').join(',')+'};',
  ' return router.fetch(request,bindings);',
  '}};',''].join('\n');}
 export function scopeCompiledModule(source,scopeImport,esbuild){

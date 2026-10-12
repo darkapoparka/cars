@@ -3,6 +3,7 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {pathToFileURL} from 'node:url';
 import {registerHooks} from 'node:module';
+import {headSwitcher} from '../publishing/native-mounts.mjs';
 
 // Bounded, explicitly requested Priselci experiment; never a template promotion.
 export const MODERN_FREE_SOURCE_REVISION='b1f0f5609c7c249cfd0649c122849ff2cbb8dfde';
@@ -64,7 +65,12 @@ export function applyModernFreeBuildOverlay(input,experiment,{base}={}){
  body=replaceOnce(body,'export const dynamic = "force-dynamic";','export const dynamic = '+phase+' ? "auto" : "force-dynamic";');
  body=replaceOnce(body,'export const revalidate = 0;','export const revalidate = '+phase+' ? false : 0;');
  body=replaceOnce(body,'  const preferences = nativePreferences ?? await getRequestPreferences(normalizedLocale);','  const carsPrerender = '+phase+';\n  requestBootstrap = true;\n  const preferences = nativePreferences ?? (carsPrerender ? getStaticServicesPreferences(normalizedLocale) : await getRequestPreferences(normalizedLocale));');
- put(layout,body);
+ // Restore the existing dealer package chrome after the reviewed template overlay.
+ // Its original shared asset owns every design/admin choice; capture and SSR
+ // receive the same native Layout reference before compilation.
+ const chromeFiles=new Map([[layout,Buffer.from(body)]]);
+ headSwitcher(chromeFiles,layout,true);
+ put(layout,chromeFiles.get(layout));
  const page='modern/apps/web/app/[locale]/services/page.tsx',original=files.get(page)?.toString();
  if(!original||/\bexport\s+(?:const|function|async\s+function)\s+(?:generateStaticParams|dynamic|revalidate)\b/.test(original))fail('unknown Services static parameters/config boundary');
  put(page,original+'\n// Exact immutable paths for the owned vinext prerender phase only.\nexport function generateStaticParams() { return [{ locale: "en" }, { locale: "bg" }]; }\n');

@@ -12,12 +12,12 @@
     "karento-best",
     "router"
   ],
-  "requestedAt": "2026-10-12T04:32:28.509Z",
-  "attempt": 15,
+  "requestedAt": "2026-10-12T05:37:37.561Z",
+  "attempt": 16,
   "composition": {
     "reviewed": true,
-    "reviewedAt": "2026-10-12T04:32:28.509Z",
-    "reviewScope": "Compile the six selected applications and router from unchanged Priselci source 5027934 with native overlay 138b9d9. Modern diagnostic 38202324683 passed its original-body, headers, native policy and emitted graph review. Integration 38203252097 passed all seven compiles, then exposed assembly guards that omitted the Services opt-in. This integration uses the corrected strict sealed-manifest entry and private-routing validation. All seven delivery inputs must share this run, attempt and source commit. Services remains experimental; full Modern coverage, English inventory copy, hosted verification and Free CPU qualification are pending."
+    "reviewedAt": "2026-10-12T05:37:37.561Z",
+    "reviewScope": "Recompile unchanged Priselci six-application source 5027934 and native overlay 138b9d9 after the narrow publisher repair that restores the existing preview-switcher script in the experimental generated native Layout and routes canonical captured Services HTML/RSC through CARS_MODERN. The existing script remains the design/admin owner. All seven inputs must share this run, attempt and source commit. Integration15 hosted Services HTML/RSC measured 1/2 and 1/0 ms CPU, but was held because the design FAB was absent. Focused real-router/static/RSC/private-boundary and generated-Layout regression tests pass. Full Modern Free, English inventory copy and fleet acceptance remain pending."
   },
   "modernFreeServicesExperiment": {
     "schemaVersion": 1,

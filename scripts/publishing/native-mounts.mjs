@@ -84,7 +84,7 @@ function bindConfiguration(files, name, exported, replacements, contract) {
   nativeWrite(files, name, configureObject(text, exported, replacements));
   nativeWrite(files, generated, generatedContract(contract));
 }
-function headSwitcher(files, name, jsx = false) {
+export function headSwitcher(files, name, jsx = false) {
   let text = nativeText(files, name);
   if (text.includes('preview-switcher.js')) {
     if ((text.match(/preview-switcher\.js/g) || []).length !== 1 || !text.includes('src="/preview-switcher.js"')) throw new Error(`Unknown design switcher in ${name}`);
