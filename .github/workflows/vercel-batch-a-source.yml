@@ -1,0 +1,59 @@
+name: Vercel Batch A assigned source preparation
+on:
+  push:
+    branches: [codex/vercel-batch-a-20261013]
+    paths:
+      - '.github/workflows/vercel-batch-a-source.yml'
+      - 'scripts/vercel-batch-a/prepare-assigned-source.mjs'
+      - 'docs/releases/vercel-existing-refresh/batch-a-20261013/reviewed-source-inputs.*.xz.part'
+permissions:
+  contents: read
+concurrency:
+  group: cars-vercel-batch-a-assigned-source
+  cancel-in-progress: false
+jobs:
+  prepare:
+    if: github.repository == 'darkapoparka/cars'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        slug: [isauto-varna, perfect-auto-varna, outletcars-varna, automarket-varna, avangard-auto, legend-auto]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          filter: blob:none
+          sparse-checkout: |
+            scripts
+            docs
+            clients/${{ matrix.slug }}
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.10.0'
+          package-manager-cache: false
+      - name: One isolated source helper runtime
+        run: |
+          mkdir -p runtime/source-preparation-tools
+          printf '{"private":true}\n' > runtime/source-preparation-tools/package.json
+          npm install --prefix runtime/source-preparation-tools --ignore-scripts --save-exact --no-audit --no-fund sharp@0.35.5
+      - name: Prepare only the assigned dealer with the maintained preservation tools
+        env:
+          NODE_OPTIONS: --max-old-space-size=6144
+        run: node scripts/vercel-batch-a/prepare-assigned-source.mjs '${{ matrix.slug }}'
+      - name: Keep exact proposal and failure receipts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: vercel-batch-a-source-${{ matrix.slug }}-${{ github.run_id }}
+          path: |
+            runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/output
+            runtime/vercel-batch-a-report/${{ matrix.slug }}
+            runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/plan/review.json
+            runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/plan/run.json
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 7
