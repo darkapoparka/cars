@@ -5,6 +5,9 @@ import path from 'node:path';
 import os from 'node:os';
 import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
+import {refreshNormalizeInternals} from './lib/client-refresh-normalize.mjs';
+import {refreshAdapterInternals} from './lib/client-refresh-adapters.mjs';
+import {buildModernDealerInventoryCopy} from './lib/modern-dealer-inventory-copy.mjs';
 import {nativeInputDigest} from './lib/native-localization.mjs';
 import {sha256,POLICY} from './lib/workflow.mjs';
 import {gitObjectId,gitTreeId} from './prepare-existing-fleet-source.mjs';
@@ -84,18 +87,30 @@ test('target in the final preserved branch and unchanged folder bounds still rej
  assert.throws(()=>validateNewSourceBranchAbsence(perBranch),/Invalid/);
 });
 
-test('dated companion copy binds exact stock bytes, source identity and native image alts without changing stock facts',()=>{
- const f=fixture(),stock={records:[{id:'source-1',sourceId:'source-1',description:'Датирана извадка от публикувана обява.'}]};
+test('dated companion copy survives actual normalization and Modern adapter without changing stock facts',t=>{
+ const f=fixture(),stock={records:[{...f.stock.records[0],id:'source-1',sourceId:'source-1',
+   description:'Датирана извадка от публикувана обява.',images:['/dealer-stock/one.png','/dealer-stock/two.png']}]};
  const review={schemaVersion:1,kind:'cars-new-source-reviewed-companion-copy',dealer:f.dealer.slug,reviewed:true,
    reviewedAt:'2026-10-12T00:00:00Z',stockSha256:f.dealer.inputs.stock.sha256,
    descriptions:[{sourceId:'source-1',sourceDescription:stock.records[0].description,en:'Dated sample; confirm availability directly.',bg:stock.records[0].description}]};
  const before=JSON.stringify(stock);validateNewSourceCopyReview(review,f.dealer,stock);
- const profile={listings:[{slug:'native-slug',sourceId:'source-1',description:stock.records[0].description,images:[{alt:'Original vehicle image'}]}]};
- const copy=newSourceReviewedCopy(profile,review);assert.equal(copy['native-slug'].en.description,review.descriptions[0].en);
- assert.deepEqual(copy['native-slug'].bg.imageAlts,['Original vehicle image']);assert.equal(JSON.stringify(stock),before);
+ const profile={slug:f.dealer.slug,business:f.facts.business,
+   listings:stock.records.map((row,index)=>refreshNormalizeInternals.normalizeListing(row,index,f.facts.business))};
+ assert.deepEqual(profile.listings[0].images,stock.records[0].images,'actual normalized images are URL strings');
+ const mock=path.join(temp(t),'mock-data.ts');
+ fs.writeFileSync(mock,'export const mockListings: VehicleListing[] = [\n  {\n    id: "retained-modern-id"\n  }\n];\n');
+ const personalized=refreshAdapterInternals.replaceModernListings(mock,profile),copy=newSourceReviewedCopy(profile,review);
+ assert.equal(copy[profile.listings[0].slug].en.description,review.descriptions[0].en);
+ const admitted=buildModernDealerInventoryCopy(personalized,{reviewedCopy:copy});
+ for(const locale of ['en','bg'])assert.deepEqual(admitted[profile.listings[0].slug][locale].imageAlts,
+   personalized[0].images.map(image=>image.alt),'reviewed captions match actual Modern image consumers');
+ assert.deepEqual(personalized[0].images.map(image=>image.url),stock.records[0].images);
+ assert.equal(JSON.stringify(stock),before);
  for(const changed of [{...review,stockSha256:'9'.repeat(64)},{...review,descriptions:[{...review.descriptions[0],sourceId:'other'}]},{...review,unknown:true}])
    assert.throws(()=>validateNewSourceCopyReview(changed,f.dealer,stock));
  assert.throws(()=>newSourceReviewedCopy({listings:[{...profile.listings[0],sourceId:'other'}]},review),/identity changed/);
+ const missingAlt=clone(copy);missingAlt[profile.listings[0].slug].en.imageAlts[0]=undefined;
+ assert.throws(()=>buildModernDealerInventoryCopy(personalized,{reviewedCopy:missingAlt}),/Invalid reviewed bilingual/);
  assert.equal(newSourceReviewedCopy(profile,null),undefined);
 });
 

@@ -112,7 +112,7 @@ export function validateNewSourceCopyReview(review,dealer,stock){
 export function newSourceReviewedCopy(profile,review){
  if(!review)return undefined;
  assert(profile.listings.length===review.descriptions.length,'Normalized listing count differs from reviewed copy');
- const out={};for(let i=0;i<profile.listings.length;i++){const listing=profile.listings[i],copy=review.descriptions[i];assert(listing.sourceId===copy.sourceId&&listing.description===copy.sourceDescription&&!Object.hasOwn(out,listing.slug),'Normalized description or listing identity changed');out[listing.slug]={sourceDescription:copy.sourceDescription,en:{description:copy.en,imageAlts:listing.images.map(image=>image.alt)},bg:{description:copy.bg,imageAlts:listing.images.map(image=>image.alt)}};}
+ const out={};for(let i=0;i<profile.listings.length;i++){const listing=profile.listings[i],copy=review.descriptions[i];assert(listing.sourceId===copy.sourceId&&listing.description===copy.sourceDescription&&!Object.hasOwn(out,listing.slug),'Normalized description or listing identity changed');out[listing.slug]={sourceDescription:copy.sourceDescription,en:{description:copy.en,imageAlts:listing.images.map(()=>listing.title)},bg:{description:copy.bg,imageAlts:listing.images.map(()=>listing.title)}};}
  return out;
 }
 
