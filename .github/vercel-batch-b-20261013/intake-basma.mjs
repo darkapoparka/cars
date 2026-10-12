@@ -32,7 +32,8 @@ try{
  for(const change of patch.changes){const name='clients/'+slug+'/'+change.path;if(change.afterBlob===null)lines.push('0 '+'0'.repeat(40)+'\t'+name);else{const bytes=verified.files.get(change.path),entry=entries.get(change.path);assert(bytes&&entry);const actual=git(['hash-object','-w','--stdin'],{input:bytes});assert.equal(actual,entry.blob);lines.push(entry.mode+' '+actual+'\t'+name);}}
  git(['update-index','--index-info'],{index,input:lines.join('\n')+'\n'});
  const sourceTree=git(['write-tree'],{index});assert.equal(git(['rev-parse',sourceTree+':clients/'+slug]),patch.preparedTree);
- const changed=git(['diff-tree','--no-commit-id','--name-only','-r',env.GITHUB_SHA,sourceTree]).split('\n').filter(Boolean);assert(changed.length>0&&changed.every(p=>p.startsWith('clients/'+slug+'/')),'Unexpected source publication scope');
+ // NUL-delimited raw paths keep Git's quoting of Bulgarian filenames out of scope checks.
+ const changed=git(['diff-tree','--no-commit-id','--name-only','-r','-z',env.GITHUB_SHA,sourceTree],{raw:true}).toString('utf8').split('\0').filter(Boolean);write('source-scope.json',{dealer:slug,pathsChanged:changed.length,paths:changed});assert(changed.length>0&&changed.every(p=>p.startsWith('clients/'+slug+'/')),'Unexpected source publication scope');
  git(['config','user.name','Cars Vercel Batch B']);git(['config','user.email','41898282+github-actions[bot]@users.noreply.github.com']);
  const commit=git(['commit-tree',sourceTree,'-p',env.GITHUB_SHA],{input:'Integrate verified retained Al Basma source proposal for Vercel Batch B\n\nSource run 38312219851; artifact 11775640622; accepted release cars-vercel-b1f0f560-20261013. Source-only; production acceptance pending.\n'});
  assert.equal(git(['ls-remote','origin','refs/heads/'+branch]).split(/\s+/)[0],env.GITHUB_SHA,'Own branch moved during verification; no push attempted');
