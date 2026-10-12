@@ -1,0 +1,91 @@
+name: Vercel Batch C source preparation
+on:
+  push:
+    branches: [codex/vercel-batch-c-20261013]
+    paths: [.github/workflows/vercel-batch-c-remaining-source.yml]
+permissions:
+  contents: read
+concurrency:
+  group: cars-vercel-batch-c-source
+  cancel-in-progress: false
+jobs:
+  source:
+    if: github.repository == 'darkapoparka/cars' && github.ref == 'refs/heads/codex/vercel-batch-c-20261013'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        dealer: [ivo-auto, kg-team-auto, texas-drive-auto, the-dealers-point]
+    env:
+      NODE_OPTIONS: --max-old-space-size=4608
+      NEXT_TELEMETRY_DISABLED: '1'
+    steps:
+      - name: Read exact control and this assigned dealer only
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          filter: blob:none
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /.github/vercel-batch-c/
+            /scripts/
+            /templates.lock.json
+            /templates/auto-best/scripts/
+            /docs/DEPLOYMENT-INVENTORY.json
+            /docs/releases/**/*.json
+            /docs/releases/cloudflare-existing25-20261011/branding-inputs52/${{ matrix.dealer }}/
+            /clients/${{ matrix.dealer }}/
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.10.0'
+          package-manager-cache: false
+      - name: Select only this dealer from the exact retained reviewed request
+        env:
+          DEALER: ${{ matrix.dealer }}
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';import fs from 'node:fs';import {createHash} from 'node:crypto';import {execFileSync} from 'node:child_process';
+          const selected={
+            'ivo-auto':{wave:'05',repository:'darkapoparka/cars-ivoauto',tree:'69b8d9a5ca62d9c053f7834499040a06f3d1a473'},
+            'kg-team-auto':{wave:'05',repository:'darkapoparka/cars-kgteamauto',tree:'408eecbf05b75998c5f727f23ae1bb1043b76f8b'},
+            'texas-drive-auto':{wave:'06',repository:'darkapoparka/cars-texasdriveauto',tree:'3cb8505426f905b31fd5c29a1c5366fcad75eeff'},
+            'the-dealers-point':{wave:'06',repository:'darkapoparka/cars-thedealerspoint',tree:'1eed6abaf535d42d7863da7eb4647e0bc4e049b1'}
+          };
+          const slug=process.env.DEALER,pin=selected[slug];assert(pin);assert.equal(process.env.GITHUB_REF,'refs/heads/codex/vercel-batch-c-20261013');
+          const requestPath='docs/releases/cloudflare-existing25-20261011/vercel-existing-source/ordinary-wave'+pin.wave+'-source-request.json';
+          const bytes=fs.readFileSync(requestPath),sha256=createHash('sha256').update(bytes).digest('hex');
+          assert.equal(sha256,{'05':'542a76378dccc064a940fc24e79ccf754f9e5114c8ee74eeeb2e8fdd545d1aac','06':'c7ddf70b1ae0314dafd5c2ea926ec729587b4791f3be6effd7dd92029b4d3680'}[pin.wave]);
+          const original=JSON.parse(bytes),control=JSON.parse(fs.readFileSync('.github/vercel-batch-c/source-request.json'));
+          assert.equal(original.sourceRevision,'b1f0f5609c7c249cfd0649c122849ff2cbb8dfde');assert(original.dealers.includes(slug));assert(original.inputs[slug]);
+          const actualTree=execFileSync('git',['rev-parse',process.env.GITHUB_SHA+':clients/'+slug],{encoding:'utf8'}).trim();assert.equal(actualTree,pin.tree,'Current assigned source changed: reconcile');
+          const request={schemaVersion:1,batch:'C',acceptedRelease:control.acceptedRelease,sourceRequest:{schemaVersion:original.schemaVersion,sourceRevision:original.sourceRevision,approvedParentLockDigest:original.approvedParentLockDigest,dealers:[slug],inputs:{[slug]:original.inputs[slug]}},baselines:{[slug]:{repository:pin.repository,tree:pin.tree}},sourceSelection:{originalRequest:requestPath,originalRequestSha256:sha256,selectedDealer:slug,otherCohortRowsExcluded:true}};
+          fs.writeFileSync('.github/vercel-batch-c/source-request.json',JSON.stringify(request,null,2)+'\n');
+          fs.mkdirSync('runtime/batch-c-selected-inputs',{recursive:true});fs.writeFileSync('runtime/batch-c-selected-inputs/'+slug+'.json',JSON.stringify(request,null,2)+'\n');
+          NODE
+      - name: Install maintained pinned raster helper
+        run: |
+          mkdir -p runtime/source-preparation-tools
+          printf '{"private":true}\n' > runtime/source-preparation-tools/package.json
+          npm install --prefix runtime/source-preparation-tools --ignore-scripts --save-exact sharp@0.35.5 --no-audit --no-fund
+      - name: Run unchanged maintained source integration
+        env:
+          DEALER: ${{ matrix.dealer }}
+        run: node .github/vercel-batch-c/prepare-source.mjs "$DEALER"
+      - name: Retain source proposal or exact conflicts without publishing
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: vercel-batch-c-source-${{ matrix.dealer }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.dealer }}/output/
+            runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.dealer }}/plan/*.json
+            runtime/batch-c-failures/
+            runtime/batch-c-selected-inputs/
+          include-hidden-files: true
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 7
