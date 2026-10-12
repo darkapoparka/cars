@@ -1,0 +1,96 @@
+name: Cars Vercel Batch B source integration
+on:
+  push:
+    branches: [codex/vercel-batch-b-20261013]
+    paths:
+      - .github/vercel-batch-b-20261013/reviewed-ordinary-resolutions.mjs
+      - .github/workflows/vercel-batch-b-reviewed-source.yml
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: cars-vercel-batch-b-reviewed-source
+  cancel-in-progress: false
+jobs:
+  prepare_source:
+    if: github.repository == 'darkapoparka/cars' && github.ref == 'refs/heads/codex/vercel-batch-b-20261013'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        slug: [al-hamoor-al-thahabi, asko-96, astracar, autolife, champion-auto-pro, elit-auto-import]
+    env:
+      DEALER_SLUG: ${{ matrix.slug }}
+      NODE_OPTIONS: --max-old-space-size=6144
+      NEXT_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          filter: blob:none
+          persist-credentials: true
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /.github/vercel-batch-b-20261013/
+            /scripts/
+            /templates.lock.json
+            /templates/auto-best/scripts/
+            /docs/DEPLOYMENT-INVENTORY.json
+            /docs/releases/**/*.json
+            /docs/releases/cloudflare-existing25-20261011/branding-inputs52/${{ matrix.slug }}/
+            /clients/${{ matrix.slug }}/
+            /clients/index.json
+            /catalog.json
+            /workspace.json
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '26.10.0'
+          package-manager-cache: false
+      - name: One bounded existing raster tool runtime
+        run: |
+          mkdir -p runtime/source-preparation-tools
+          printf '{"private":true}\n' > runtime/source-preparation-tools/package.json
+          npm install --prefix runtime/source-preparation-tools --ignore-scripts --save-exact sharp@0.35.5 --no-audit --no-fund
+      - name: Bind reviewed resolutions to the existing maintained source controller
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import assert from 'node:assert/strict';
+          const file='.github/vercel-batch-b-20261013/prepare-source.mjs';let text=fs.readFileSync(file,'utf8');
+          const old=" const requestBytes=git(['show',originRef+':'+originalPath],{raw:true});";assert.equal(text.split(old).length,2);
+          text=text.replace(old," const {reviewedRequest}=await import('./reviewed-ordinary-resolutions.mjs'); const requestBytes=Buffer.from(JSON.stringify(await reviewedRequest(slug),null,2)+'\\n');");
+          const provenance="requestProvenance:{commit:originRef,path:originalPath,sha256:hash(requestBytes)}";assert.equal(text.split(provenance).length,2);
+          text=text.replace(provenance,"requestProvenance:{kind:'owner-attached-inputs-with-exact-run38313225253-preservation-review',sha256:hash(requestBytes)}");
+          fs.writeFileSync(file,text);
+          NODE
+      - name: Integrate reviewed own-dealer resolutions without rerunning completed Basma work
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node .github/vercel-batch-b-20261013/prepare-source.mjs
+      - name: Retain compact source and actual preservation receipts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: vercel-batch-b-reviewed-summary-${{ matrix.slug }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            runtime/vercel-batch-b/${{ matrix.slug }}/
+            runtime/vercel-batch-b-reviewed-inputs/${{ matrix.slug }}/resolution-admission.json
+            docs/releases/cloudflare-existing25-20261011/vercel-existing-source/batch-b-20261013/${{ matrix.slug }}/reviewed-resolutions.json
+            runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/output/*.json
+            runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/plan/review.json
+            runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/plan/run.json
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 7
+      - name: Retain exact native source proposal for verified intake
+        if: success()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: vercel-batch-b-reviewed-source-${{ matrix.slug }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: runtime/existing-fleet-source/${{ github.run_id }}-${{ github.run_attempt }}/${{ matrix.slug }}/output/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 7
