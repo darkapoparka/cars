@@ -250,9 +250,9 @@ async function prepare({ root = ROOT, source, manifest, sourceCommit, guidance, 
       // Shared presentation is independent of the selected hosting provider.
       // Opt-in keeps historical releases and separately owned branding policies intact.
       if (manifest.presentation !== undefined) {
-        const {applyDealerPresentation, DEALER_PRESENTATION_VERSION} = await import('./publishing/dealer-presentation.mjs');
+        const {applyDealerPresentation, resolveDealerPresentationVersion} = await import('./publishing/dealer-presentation.mjs');
         const {applyOptionalContactFallback} = await import('./publishing/dealer-contact-fallback.mjs');
-        if (manifest.presentation.version !== DEALER_PRESENTATION_VERSION) throw new Error('Unknown dealer presentation version');
+        manifest.presentation.version = resolveDealerPresentationVersion(manifest.presentation.version);
         const contact = applyOptionalContactFallback(files, manifest);
         applyDealerPresentation(files, manifest);
         const {bindModernMobileWordmarkLogo} = await import('./lib/client-logo-contract.mjs');
@@ -276,7 +276,7 @@ async function prepare({ root = ROOT, source, manifest, sourceCommit, guidance, 
   files.set('.gitignore',Buffer.from([...new Set([...ignore,...generatedIgnores])].join('\n')+'\n'));
   if (provider === 'vercel') {
   files.set('vercel.json', Buffer.from(json(vercelConfiguration(manifest,manifest.packaging.version === SIX_PACKAGING_VERSION ? legacyDetailArtifact(files,manifest) : undefined))));
-  files.set('.vercelignore', Buffer.from('.git\n**/node_modules\n**/.next*\n**/.svelte-kit\n**/.vercel\n**/.turbo\n**/.env*\n**/*.log\n**/*.tsbuildinfo\n**/build\n**/dist\nruntime\nqa\nqa-final\nevidence\n'));
+  files.set('.vercelignore', Buffer.from('.git\n**/node_modules\n**/.next*\n**/.svelte-kit\n**/.vercel\n**/.turbo\n**/.env*\n!**/.env.example\n!**/.env.sample\n!**/.env.template\n**/*.log\n**/*.tsbuildinfo\n**/build\n**/dist\nruntime\nqa\nqa-final\nevidence\n'));
   files.set('scripts/fix-svelte-service-output.mjs', await fs.readFile(new URL('./publishing/fix-svelte-service-output.mjs', import.meta.url)));
   if (native) files.set('scripts/build-native-service.mjs', await fs.readFile(new URL('./publishing/build-native-service.mjs', import.meta.url)));
   if (manifest.packaging.version === SIX_PACKAGING_VERSION) files.set('scripts/build-app-service.mjs', await fs.readFile(new URL('./publishing/build-app-service.mjs', import.meta.url)));

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "centralauto-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "48e3859e8961045c8ef35b50a379306b570419cba0edf4dfe6a49ffd6bd8abe8",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "centralauto-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "89d03391bc356278223e1cd7cbc8c0313fa98d6eec97db05780f75e6e54b0744",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:27:14.094Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-4d7a5b17c7e5ea8ab38f.png",
+        "sha256": "4d7a5b17c7e5ea8ab38f609bf5320e46a4a6e2838564083ca0c351c3a7700b35",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-de4a0dfc0859fd2851aa.png",
+        "sha256": "de4a0dfc0859fd2851aa183f5cac57c813395986916efc02769fc649cedd1219",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11791547125620834-1.webp",
+        "output": "public/dealer-app/vehicle-c85e4705068adc2ee7bd.webp",
+        "sha256": "c85e4705068adc2ee7bd20e078d3f54ab78c8d4713047d67e418e3290b33c3a5",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11791547125620834-2.webp",
+        "output": "public/dealer-app/vehicle-6de7993fe6349ba48097.webp",
+        "sha256": "6de7993fe6349ba48097e18ffb3e3febafc129d7629a17b2b450610e54e5ee41",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "opel-astra-2002-11791547125620834",
+        "sourceValue": 107000,
+        "sourceUnit": "km",
+        "canonicalKm": 107000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

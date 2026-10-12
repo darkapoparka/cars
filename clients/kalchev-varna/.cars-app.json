@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "dealer": "kalchev-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/app",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76",
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1"
+  },
+  "appDigest": "9bfa2f25b07736e1977d47b5e0f77f7bb62171c34a1f04787155d29acb098806",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "kalchev-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "1bdcaafa06d231aac94343e37754da9c33c8003a1b958966ba053801f5682162",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 1,
+    "currency": "EUR",
+    "observedAt": "2026-10-11T11:27:14.125Z",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.png",
+        "output": "public/dealer-app/logo-light-d3e1ad0df9b19308976f.png",
+        "sha256": "d3e1ad0df9b19308976ffaabfa476b72e27f98054f59793dd9a0beead58781be",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.png",
+        "output": "public/dealer-app/logo-dark-e9fc2db45ca3252905cf.png",
+        "sha256": "e9fc2db45ca3252905cf7de01197adc32a2195e8f8a29b2ed02d19c2a0d9a3c3",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11791360937601498-1.webp",
+        "output": "public/dealer-app/vehicle-9acbadc078fbb384fca5.webp",
+        "sha256": "9acbadc078fbb384fca56fa17f64618bd77208fc30242f5b1f03583f849e57d2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer-stock/11791360937601498-2.webp",
+        "output": "public/dealer-app/vehicle-7233498f5eb3b6a4b116.webp",
+        "sha256": "7233498f5eb3b6a4b1162524dd0f446b1d2de0bcef15c83e4fb011a277f50d9b",
+        "role": "vehicle"
+      }
+    ],
+    "mileageFacts": [
+      {
+        "slug": "citroen-c4-picasso-2008-11791360937601498",
+        "sourceValue": 169000,
+        "sourceUnit": "km",
+        "canonicalKm": 169000
+      }
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

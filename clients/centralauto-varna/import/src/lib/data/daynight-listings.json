@@ -1,0 +1,37 @@
+{
+  "fetchedAt": "2026-10-11",
+  "sources": {
+    "dealerInventory": "https://centralauto.mobile.bg/",
+    "dealerContact": "https://centralauto.mobile.bg/contacts"
+  },
+  "count": 1,
+  "listings": [
+    {
+      "badge": "ОБЯВА",
+      "category": "Хечбек",
+      "color": "",
+      "displacement": "",
+      "euroStandard": "",
+      "features": [],
+      "fuel": "Бензинов",
+      "gearbox": "Ръчна",
+      "href": "https://centralauto.mobile.bg/obiava-11791547125620834-opel-astra-1-4-s-registratsiya-pregled-go-i-vinetka",
+      "id": "11791547125620834",
+      "image": "/dealer-stock/11791547125620834-1.webp",
+      "location": "Варна",
+      "mileage": "107 000 км",
+      "mileageKnown": true,
+      "mileageValue": 107000,
+      "mileageUnit": "km",
+      "photoCount": "2",
+      "power": "60 к.с.",
+      "price": "1 350 €",
+      "priceBgn": "",
+      "production": "2002 г.",
+      "rawPriceText": "1 350 €",
+      "shortDescription": "Датирана извадка от публикувана обява. Състоянието, цената и наличността се потвърждават директно с автокъщата.",
+      "title": "Opel Astra 1.4",
+      "vat": ""
+    }
+  ]
+}

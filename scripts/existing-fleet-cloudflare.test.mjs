@@ -198,3 +198,17 @@ test('new-approved branch-count receipt parity admits 128, 139 and 256 and rejec
   {...f.prep.branchAbsence,branches:139,absence:'assumed-absence'}
  ])await assert.rejects(()=>replay(branchAbsence),/original request\/input\/source\/branch lease differs/);
 });
+
+// Regression: the verified 12,864-path native proposals are approximately 9 MiB.
+test('new-approved admits full six-app proposal inventories without widening other proof limits',async t=>{
+ const f=newApprovedFixture(t),row=f.request.newSources[0],size=9_330_692;
+ const original=jsonBytes(f.proposal),large=Buffer.concat([original,Buffer.alloc(size-original.length,32)]);
+ row.proposal=f.write(f.prefix+'/source-patch.json',large);
+ const prep={...f.prep,patchSha256:row.proposal.sha256};row.preparation=f.write(f.prefix+'/source-preparation.json',prep);
+ row.publication=f.write(f.prefix+'/source-publication.json',{...f.publication,proposal:row.proposal,preparation:row.preparation});
+ let commit=f.commitAll();const result=await newApprovedFleetSource({...f.options,commit,request:f.request});
+ assert.equal(result.sourceTree,f.prep.preparedTree);assert.equal(prep.reviewed,false);assert.equal(prep.buildApproval,false);assert.equal(prep.hostedApproval,false);
+ assert.throws(()=>readPinnedFleetInput(f.root,row.proposal,commit),/bounded regular file/);
+ row.proposal=f.write(f.prefix+'/source-patch.json',Buffer.concat([original,Buffer.alloc(16*1024**2+1-original.length,32)]));
+ commit=f.commitAll();await assert.rejects(()=>newApprovedFleetSource({...f.options,commit,request:f.request}),/bounded regular file/);
+});

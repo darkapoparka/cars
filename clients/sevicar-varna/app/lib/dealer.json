@@ -1,0 +1,50 @@
+{
+  "mode": "dealer",
+  "id": "sevicar-varna",
+  "name": "АВТОКЪЩА СЕВИ КАР",
+  "shortName": "АВТОКЪЩА СЕВИ КАР",
+  "logo": {
+    "light": "/dealer-brand/v2-cec811a67b8c5e20/logo-on-light.webp",
+    "dark": "/dealer-brand/v2-cec811a67b8c5e20/logo-on-dark.webp",
+    "icon": "/dealer-brand/v2-cec811a67b8c5e20/app-icon.png"
+  },
+  "defaultLocale": "bg",
+  "enabledLocales": [
+    "en",
+    "bg"
+  ],
+  "welcomeEnabled": true,
+  "country": "BG",
+  "currency": "EUR",
+  "city": "Варна",
+  "address": "Главен път Е2 ВАРНА-СОФИЯ, 400м. след кръговото под Метро! GPS, Варна, България",
+  "phoneDisplay": "0888205072",
+  "phoneE164": "+359888205072",
+  "email": "",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%92%D0%A2%D0%9E%D0%9A%D0%AA%D0%A9%D0%90%20%D0%A1%D0%95%D0%92%D0%98%20%D0%9A%D0%90%D0%A0%2C%20%D0%93%D0%BB%D0%B0%D0%B2%D0%B5%D0%BD%20%D0%BF%D1%8A%D1%82%20%D0%952%20%D0%92%D0%90%D0%A0%D0%9D%D0%90-%D0%A1%D0%9E%D0%A4%D0%98%D0%AF%2C%20400%D0%BC.%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%BA%D1%80%D1%8A%D0%B3%D0%BE%D0%B2%D0%BE%D1%82%D0%BE%20%D0%BF%D0%BE%D0%B4%20%D0%9C%D0%B5%D1%82%D1%80%D0%BE!%20GPS%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+  "website": "https://sevicar.mobile.bg/",
+  "whatsappUrl": "",
+  "socialLinks": [
+    {
+      "label": "Facebook",
+      "url": ""
+    },
+    {
+      "label": "Instagram",
+      "url": ""
+    },
+    {
+      "label": "Mobile.bg",
+      "url": ""
+    },
+    {
+      "label": "Cars.bg",
+      "url": ""
+    }
+  ],
+  "referenceClaimsApproved": false,
+  "services": [],
+  "observedAt": "2026-10-11T11:27:14.524Z",
+  "inventoryNotice": "Датирана извадка от публични обяви, не складова система в реално време. Потвърдете цената, ДДС и наличността.",
+  "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
+}

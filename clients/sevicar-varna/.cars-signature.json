@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "format": "signature-preview-v1",
+  "dealer": "sevicar-varna",
+  "name": "АВТОКЪЩА СЕВИ КАР",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/karento-best",
+    "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134",
+    "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f"
+  },
+  "sourceDigest": "587b203a06b652110fc2602468ec3c6e7985a4fbd79926ab150270e34522deec",
+  "inventory": {
+    "mode": "dated-listing-snapshot",
+    "count": 1,
+    "observedAt": "2026-10-11T11:32:27.118Z"
+  },
+  "personalization": {
+    "profileSha256": "6ef5db1eb90d7918d5b3ec0f651ac09e6f3a7d549a332b9adc30457ea2bf89eb",
+    "logoPaths": [
+      "/dealer-brand/logo-on-light.png",
+      "/dealer-brand/logo-on-dark.png"
+    ],
+    "mediaPaths": [
+      "/dealer-stock/11781342032890584-1.webp",
+      "/dealer-stock/11781342032890584-2.webp"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "karento-best/src/lib/content.ts",
+      "karento-best/src/lib/data/vehicles.ts",
+      "karento-best/src/lib/data/vehicle-listing.ts",
+      "karento-best/src/lib/data/dealer-vehicles.json",
+      "karento-best/src/lib/data/vehicle-detail.ts",
+      "karento-best/src/lib/data/dealer-detail.ts",
+      "karento-best/src/lib/pages/cars-details-3.svelte",
+      "karento-best/src/lib/components/vehicle-detail/VehicleReservationCard.svelte",
+      "karento-best/src/lib/components/vehicle-detail/VehicleDetailPanels.svelte",
+      "karento-best/src/lib/components/ServiceSpotCard.svelte",
+      "karento-best/src/lib/sections/HomeBrandLinks.svelte",
+      "karento-best/src/lib/i18n/catalogs/reference-home.ts",
+      "karento-best/src/lib/data/editorial.ts",
+      "karento-best/src/lib/data/home-stories.ts",
+      "karento-best/src/lib/cards/VehicleEditorialCard.svelte",
+      "karento-best/src/lib/cards/VehicleFeaturedCard.svelte",
+      "karento-best/src/lib/cards/VehicleGridCard.svelte",
+      "karento-best/src/lib/components/Footer.svelte",
+      "karento-best/src/lib/components/contact/ContactLocationCard.svelte",
+      "karento-best/src/lib/components/vehicle-detail/ReviewSummary.svelte",
+      "karento-best/src/lib/components/vehicle-detail/VehicleHeading.svelte",
+      "karento-best/src/lib/sections/CustomerReviewCarousel.svelte",
+      "karento-best/src/lib/sections/FeaturedVehicleCarousel.svelte",
+      "karento-best/src/lib/sections/FeaturedVehicleGrid.svelte",
+      "karento-best/src/lib/sections/MostSearchedVehicles.svelte",
+      "karento-best/src/lib/sections/PopularVehicleCarousel.svelte",
+      "karento-best/src/lib/sections/PopularVehicleGrid.svelte",
+      "karento-best/src/routes/2/discovery.ts",
+      "karento-best/src/routes/2/DiscoveryHome.svelte",
+      "karento-best/src/routes/2/DiscoverySearch.svelte"
+    ],
+    "nativeDealerFacts": true
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

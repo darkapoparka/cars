@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "sevicar-varna",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "9034db83c0dfb1b7528943c05c102be6cc0b572825e135f77c214d91a91dbc15",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "ff9c6dcab71f2fe5e1bce7b66a9379c30419c57703419bdc30fbb1bc5a992321",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "164d0a3764981463e613304fa8f9c358e2cf1c2e6549230cf50e1f1b6be38591",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

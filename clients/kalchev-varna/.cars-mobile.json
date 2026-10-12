@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "format": "mobile-preview-v1",
+  "dealer": "kalchev-varna",
+  "name": "Kalchev Correct",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "path": "templates/mobile",
+    "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e",
+    "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0"
+  },
+  "sourceDigest": "c0280a047dad7b456fead922c9185f7b27fb0120ed295369fd201256c675f677",
+  "inventory": {
+    "mode": "dated-listing-snapshot",
+    "count": 1,
+    "observedAt": "2026-10-11T11:32:26.767Z"
+  },
+  "personalization": {
+    "profileSha256": "feb4d108c373e1695b20b2cc33b115f43a2fccb690cedaf2edb7575318dbe187",
+    "logoPaths": [
+      "/dealer-brand/logo-on-light.png",
+      "/dealer-brand/logo-on-dark.png"
+    ],
+    "mediaPaths": [
+      "/dealer-stock/11791360937601498-1.webp",
+      "/dealer-stock/11791360937601498-2.webp"
+    ],
+    "mediaMappings": [],
+    "contentPaths": [
+      "mobile/src/lib/showroom-config.ts",
+      "mobile/src/lib/catalog.ts",
+      "mobile/src/lib/dealers.ts",
+      "mobile/src/lib/dealer-inventory.json",
+      "mobile/src/lib/locale.ts",
+      "mobile/src/lib/search.ts",
+      "mobile/src/components/NativeDealerCards.tsx",
+      "mobile/src/components/DealerScreens.tsx",
+      "mobile/src/components/VehicleCard.tsx",
+      "mobile/src/components/ShowroomVehicleCard.tsx",
+      "mobile/src/components/VehicleSections.tsx",
+      "mobile/src/lib/mobile-mileage.ts",
+      "mobile/src/lib/types.ts",
+      "mobile/src/components/DesktopVehicleSummary.tsx",
+      "mobile/src/components/NativeCarPark.tsx",
+      "mobile/src/components/ShowroomFilterSheet.tsx",
+      "mobile/src/lib/vehicle-copy.ts"
+    ]
+  },
+  "needsDealerQA": true,
+  "readyToPublish": false
+}

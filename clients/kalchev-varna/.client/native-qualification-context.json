@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-native-source-qualification-context",
+  "id": "fleet-new-source-wave01-b1f0f56",
+  "dealer": "kalchev-varna",
+  "scope": "new-dealer-source-proposal",
+  "sourceCommit": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "reviewed": true,
+  "reviewedAt": "2026-10-12T10:54:26.153Z",
+  "qualificationOnly": true,
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "globalReleaseApproval": false,
+  "approvedLockSha256": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+  "candidateLockSha256": "164d0a3764981463e613304fa8f9c358e2cf1c2e6549230cf50e1f1b6be38591",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "pendingNativeChecks": [
+    "catalog-completeness",
+    "hardcoded-ui",
+    "native-routing",
+    "standalone-journeys",
+    "mounted-journeys",
+    "public-journeys",
+    "preferences-no-js",
+    "preferences-storage-disabled",
+    "preferences-races",
+    "request-isolation",
+    "security-write-blocking",
+    "assets-preserved"
+  ],
+  "pending": [
+    "Current-source native build, mounted/public hosted journeys and dealer/owner approval remain pending. This is not template promotion or hosted publication."
+  ]
+}

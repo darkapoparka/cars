@@ -1392,6 +1392,60 @@
       "sourceState": "source-on-main",
       "reviewState": "unknown",
       "leadId": "bg-varna-prime-auto"
+    },
+    {
+      "slug": "centralauto-varna",
+      "name": "Ц Е Н Т Р А Л-АВТОСАЛОН",
+      "path": "clients/centralauto-varna",
+      "dealerId": "centralauto-varna",
+      "leadId": "centralauto-varna",
+      "repository": "darkapoparka/cars-centralauto-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "reviewed-source-proposal",
+      "reviewState": "native-build-and-hosted-review-pending"
+    },
+    {
+      "slug": "kalchev-varna",
+      "name": "Kalchev Correct",
+      "path": "clients/kalchev-varna",
+      "dealerId": "kalchev-varna",
+      "leadId": "kalchev-varna",
+      "repository": "darkapoparka/cars-kalchev-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "reviewed-source-proposal",
+      "reviewState": "native-build-and-hosted-review-pending"
+    },
+    {
+      "slug": "sevicar-varna",
+      "name": "АВТОКЪЩА СЕВИ КАР",
+      "path": "clients/sevicar-varna",
+      "dealerId": "sevicar-varna",
+      "leadId": "sevicar-varna",
+      "repository": "darkapoparka/cars-sevicar-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "import",
+        "app",
+        "mobile",
+        "karento-best"
+      ],
+      "sourceState": "reviewed-source-proposal",
+      "reviewState": "native-build-and-hosted-review-pending"
     }
   ],
   "campaignCandidatesWithoutFolders": [

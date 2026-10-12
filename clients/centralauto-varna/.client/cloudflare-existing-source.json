@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "centralauto-varna",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "71f517ba653059d97dc4b106dfe207dae69e2f037b10df44f8b76c720de6d84b",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "1c6cae5d2445e0e0cff9f0dc8d090ac3d098de27f9bf4bace60331a588474afa",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "164d0a3764981463e613304fa8f9c358e2cf1c2e6549230cf50e1f1b6be38591",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

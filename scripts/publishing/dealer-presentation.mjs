@@ -2,6 +2,11 @@ import {createHash} from 'node:crypto';
 const hash = value => createHash('sha256').update(value).digest('hex');
 const marker = '.cars-dealer-presentation.json';
 export const DEALER_PRESENTATION_VERSION = 'template-palette-services-v2';
+/** Historical source annotation; derived packages use the current native palette policy. */
+export function resolveDealerPresentationVersion(version) {
+  if (![DEALER_PRESENTATION_VERSION, 'neutral-services-v1'].includes(version)) throw Error('Unknown dealer presentation version');
+  return DEALER_PRESENTATION_VERSION;
+}
 const notice = `<p class="container dealer-services-disclosure" data-dealer-services-disclosure>{locale.locale === 'bg' ? 'Примерен каталог на услуги за този дизайн. Наличността, условията и цените се потвърждават с автокъщата.' : 'Illustrative service catalogue for this design. Confirm actual availability, terms and prices with the dealership.'}</p>`;
 function once(text, before, after, label) {
   if (text.split(before).length !== 2) throw Error('Dealer presentation boundary changed: '+label);

@@ -3,6 +3,21 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {ROOT,args,json,writeJson,git,inside,filesAt,sha256,normalized,validateManifest} from './lib/workflow.mjs';
 
+const requireVercelQualificationExport = (value, message) => { if (!value) throw new Error('Vercel pilot qualification: ' + message); };
+/** A provisional package can be exported only to its explicitly reviewed preview branch. */
+export function assertVercelQualificationExport(meta, {branch, manifest} = {}) {
+  if (meta.qualification === undefined) return;
+  const proof = meta.qualification;
+  requireVercelQualificationExport(proof.schemaVersion === 1 && proof.kind === 'cars-vercel-native-source-qualification' &&
+    proof.provider === 'vercel' && meta.assetDelivery?.provider === 'vercel' &&
+    proof.production === false && proof.nativeApproval === false && proof.hostedApproval === false &&
+    proof.globalReleaseApproval === false && proof.sourceCommit === meta.sourceCommit &&
+    proof.dealer === manifest?.slug && proof.repository === manifest?.repository &&
+    proof.publicOrigin === manifest?.shareIdentity?.publicOrigin &&
+    /^codex\/[a-z0-9][a-z0-9/-]*$/.test(branch || '') && !branch.includes('..') &&
+    branch === proof.targetBranch, 'provisional source package requires its exact reviewed preview branch');
+}
+
 const PACKAGE_OMITTED = new Set(['.git','node_modules','.vercel','.netlify','.wrangler','.open-next','.vinext','.cloudflare','.cars-cloudflare','.cars-build-assets','.agency-os','.auth','.codex','.claude','.agents','.openai','.template','.svelte-kit','.next','.turbo','.cache','.pnpm-store','build','dist','runtime','audits','artifacts','evidence','qa','qa-final','test-results','playwright-report','coverage']);
 function retainedPackagePath(relative) {
   return !relative.split('/').some(p => PACKAGE_OMITTED.has(p) || (p.startsWith('.env') && !/^\.env\.(example|sample|template)$/.test(p)) || p.startsWith('.next-')) && !/\.(pem|key|pfx|p12|log|pid|tsbuildinfo)$/i.test(relative) && (!/(?:credentials|service-account|purchase-code|license-certificate)/i.test(path.basename(relative)) || /\.(?:[cm]?[jt]sx?|svelte|vue|py|sh|ps1)$/i.test(relative)) && relative !== '.cars-publish.json' && relative !== '.cars-cloudflare-svelte-locks.json' && !/^\.cars-next-(?:modern|app|mobile)-(?:dependencies|frozen-lock)\.json$/.test(relative);
@@ -102,12 +117,28 @@ function treeFiles(root,commit) {
   const raw=git(root,['ls-tree','-r','-z',commit],{encoding:null}).toString();
   return new Map(raw.split('\0').filter(Boolean).map(line=>{const[info,p]=line.split('\t');return[p,info.split(' ')[2]];}));
 }
+export function validatePreservePrefixes(prefixes=[]) {
+  if (!Array.isArray(prefixes) || prefixes.length > 1 || prefixes.some(prefix=>prefix!=='.github')) throw new Error('Only the explicit .github publication envelope may be preserved.');
+  return [...prefixes];
+}
+const inPreservedPrefix = (name,prefixes) => prefixes.some(prefix=>name===prefix||name.startsWith(prefix+'/'));
+export function publicationEnvelope({root,parent,prefixes,packageTree}) {
+  const selected=validatePreservePrefixes(prefixes);
+  if (!selected.length) return null;
+  const candidate=treeFiles(root,packageTree);
+  if ([...candidate.keys()].some(name=>inPreservedPrefix(name,selected))) throw new Error('Preserved publication envelope overlaps the verified package.');
+  const raw=git(root,['ls-tree','-r','-z',parent],{encoding:null}).toString('utf8');
+  const files=raw.split('\0').filter(Boolean).map(line=>{const[info,name]=line.split('\t'),[mode,type,blob]=info.split(' ');return{path:name,mode,type,blob};}).filter(file=>inPreservedPrefix(file.path,selected));
+  for(const file of files) if(!['100644','100755'].includes(file.mode)||file.type!=='blob'||!retainedPackagePath(file.path)||file.path.includes('\\')||file.path.includes(':')||file.path.split('/').some(part=>!part||part==='.'||part==='..')) throw new Error('Unsafe preserved publication path: '+file.path);
+  const proof=files.map(({path,mode,blob})=>({path,mode,blob})).sort((a,b)=>a.path.localeCompare(b.path));
+  return {schemaVersion:1,kind:'exact-remote-publication-envelope',parent,prefixes:selected,packageTree,files:proof,digest:sha256(JSON.stringify(proof))};
+}
 export function validateReview({review,remoteCommit,candidateDigest,changes}) {
   if (!review || review.remoteCommit!==remoteCommit || review.candidateDigest!==candidateDigest) throw new Error('Mirror reconciliation required: review the exact remote commit and candidate digest.');
   const dispositions = new Map((review.changes||[]).map(c=>[c.path,c]));
   for (const p of changes) {const d=dispositions.get(p);if(!d || !['canonical-source','packaging-layer','obsolete-generated-metadata'].includes(d.resolution) || !d.reason?.trim()) throw new Error('Missing reviewed disposition for '+p);}
 }
-export function exportDealer({root=ROOT,slug,packageDir,packageTree,reviewFile,write=false,targetBranch}) {
+export function exportDealer({root=ROOT,slug,packageDir,packageTree,reviewFile,write=false,targetBranch,preservePrefixes=[]}) {
   assertCarsOwnedDealer(root, slug);
   const client=inside(root,'clients/'+slug,{mustExist:true});
   const manifest=validateManifest(json(path.join(client,'dealer.json')));
@@ -122,6 +153,7 @@ export function exportDealer({root=ROOT,slug,packageDir,packageTree,reviewFile,w
   git(root,['cat-file','-e',packageMeta.sourceCommit+'^{commit}']);
   const branch=targetBranch||manifest.defaultBranch||'main';
   if(!/^[a-zA-Z0-9][a-zA-Z0-9/._-]*$/.test(branch)||branch.includes('..'))throw new Error('Invalid target branch.');
+  assertVercelQualificationExport(packageMeta,{branch,manifest:packageManifest});
   const url='https://github.com/'+manifest.repository+'.git';
   const defaultBranch=manifest.defaultBranch||'main';
   const baseHead=remoteHead(root,url,defaultBranch),targetHead=remoteHead(root,url,branch);
@@ -134,19 +166,22 @@ export function exportDealer({root=ROOT,slug,packageDir,packageTree,reviewFile,w
   const g=(a,input)=>git(root,[...(directory?['--work-tree',directory]:[]),...a],{env,input});
   if (treePackage) g(['read-tree','--no-sparse-checkout',treePackage.tree]);
   else {g(['read-tree','--empty']);g(['--literal-pathspecs','add','--force','--pathspec-from-file=-','--pathspec-file-nul'],files.join('\0')+'\0');}
+  const payloadTree=g(['write-tree']);
+  if (treePackage && payloadTree!==treePackage.tree) throw new Error('Verified package tree changed while preparing export.');
+  const envelope=publicationEnvelope({root,parent,prefixes:preservePrefixes,packageTree:payloadTree});
+  if(envelope?.files.length) g(['update-index','-z','--index-info'],envelope.files.map(file=>file.mode+' '+file.blob+'\t'+file.path+'\0').join(''));
   const tree=g(['write-tree']);
-  if (treePackage && tree!==treePackage.tree) throw new Error('Verified package tree changed while preparing export.');
   const remote=treeFiles(root,parent),candidate=treeFiles(root,tree);
   // Tree identifiers are accepted by ls-tree, while commit ancestry is checked separately.
   const changes=[...new Set([...remote.keys(),...candidate.keys()])].filter(p=>p!=='.cars-publish.json'&&remote.get(p)!==candidate.get(p)).sort();
   const priorText=git(root,['show',parent+':.cars-publish.json'],{allowFailure:true});
   let unexpected=[];
-  if(priorText){const prior=JSON.parse(priorText);if(prior.repository!==manifest.repository)throw new Error('Remote publishing metadata has another repository identity.');const managed=new Map(prior.files.map(f=>[f.path,f.blob]));unexpected=[...new Set([...remote.keys(),...managed.keys()])].filter(p=>p!=='.cars-publish.json'&&remote.get(p)!==managed.get(p));}
-  const report={schemaVersion:1,slug,repository:manifest.repository,branch,defaultBranch,baseHead,targetHead,parent,sourceCommit:packageMeta.sourceCommit,candidateDigest:digest.digest,tree,changes,unexpectedRemoteChanges:unexpected,packageDirectory:directory,proposalDirectory:run,...(treePackage?{packageTree:treePackage.tree,packageObject:packageTree,treeVerification:treePackage.io}:{}),...(packageMeta.assetDelivery?.provider === 'cloudflare' ? {provider:'cloudflare'} : {})};
+  if(priorText){const prior=JSON.parse(priorText);if(prior.repository!==manifest.repository)throw new Error('Remote publishing metadata has another repository identity.');const managed=new Map(prior.files.map(f=>[f.path,f.blob]));unexpected=[...new Set([...remote.keys(),...managed.keys()])].filter(p=>p!=='.cars-publish.json'&&remote.get(p)!==managed.get(p)&&!inPreservedPrefix(p,envelope?.prefixes??[]));}
+  const report={schemaVersion:1,slug,repository:manifest.repository,branch,defaultBranch,baseHead,targetHead,parent,sourceCommit:packageMeta.sourceCommit,candidateDigest:digest.digest,tree,changes,unexpectedRemoteChanges:unexpected,packageDirectory:directory,proposalDirectory:run,...(envelope?{publicationEnvelope:envelope,packagePayloadTree:payloadTree}:{}),...(treePackage?{packageTree:treePackage.tree,packageObject:packageTree,treeVerification:treePackage.io}:{}),...(packageMeta.assetDelivery?.provider === 'cloudflare' ? {provider:'cloudflare'} : {})};
   writeJson(path.join(run,'proposal.json'),report);
   if(!write)return report;
   if(!priorText||unexpected.length)validateReview({review:reviewFile?json(reviewFile):null,remoteCommit:parent,candidateDigest:digest.digest,changes:priorText?unexpected:changes});
-  const receipt={schemaVersion:1,repository:manifest.repository,sourceCommit:packageMeta.sourceCommit,packagingVersion:packageMeta.packagingVersion||'1',candidateDigest:digest.digest,files:[...candidate].map(([p,blob])=>({path:p,blob})).sort((a,b)=>a.path.localeCompare(b.path))};
+  const receipt={schemaVersion:1,repository:manifest.repository,sourceCommit:packageMeta.sourceCommit,packagingVersion:packageMeta.packagingVersion||'1',candidateDigest:digest.digest,...(envelope?{publicationEnvelope:envelope}:{}),files:[...candidate].map(([p,blob])=>({path:p,blob})).sort((a,b)=>a.path.localeCompare(b.path))};
   const blob=git(root,['hash-object','-w','--stdin'],{input:JSON.stringify(receipt,null,2)+'\n'});
   git(root,['update-index','--add','--cacheinfo','100644',blob,'.cars-publish.json'],{env});
   const finalTree=g(['write-tree']);
@@ -167,9 +202,10 @@ export function pushExport({root=ROOT,receiptFile}) {
   return{repository:r.repository,branch:r.branch,commit:r.commit,trigger:r.provider === 'cloudflare' ? 'Cloudflare source delivered; deploy and verify this exact package separately.' : 'Git-to-Vercel only; inspect the deployment for this exact commit.'};
 }
 async function main() {
-  if(process.argv.includes('--help')){console.log('Usage: node scripts/export-dealer.mjs --client SLUG (--package PATH | --package-tree SHA) [--branch BRANCH] [--review JSON --write]\nnode scripts/export-dealer.mjs --push-receipt runtime/.../export.json\nDry run fetches and compares the actual remote. Write creates a scoped commit; push is explicit and never forced.');return;}
-  const o=args(process.argv.slice(2),['client','package','package-tree','branch','review','push-receipt'],['write','dry-run']);
-  const result=o['push-receipt']?pushExport({receiptFile:o['push-receipt']}):exportDealer({slug:o.client,packageDir:o.package,packageTree:o['package-tree'],reviewFile:o.review,write:!!o.write,targetBranch:o.branch});
+  if(process.argv.includes('--help')){console.log('Usage: node scripts/export-dealer.mjs --client SLUG (--package PATH | --package-tree SHA) [--branch BRANCH] [--preserve-prefix .github] [--review JSON --write]\nnode scripts/export-dealer.mjs --push-receipt runtime/.../export.json\nDry run fetches and compares the actual remote. Write creates a scoped commit; push is explicit and never forced.');return;}
+  const o=args(process.argv.slice(2),['client','package','package-tree','branch','review','push-receipt','preserve-prefix'],['write','dry-run']);
+  const result=o['push-receipt']?pushExport({receiptFile:o['push-receipt']}):exportDealer({slug:o.client,packageDir:o.package,packageTree:o['package-tree'],reviewFile:o.review,write:!!o.write,targetBranch:o.branch,preservePrefixes:o['preserve-prefix']?[o['preserve-prefix']]:[]});
   console.log(JSON.stringify(result,null,2));
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===import.meta.filename)main().catch(e=>{console.error(e.message);process.exitCode=1;});
+

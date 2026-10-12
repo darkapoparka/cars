@@ -306,6 +306,33 @@
       "workerName": "cars-primeautovarna",
       "publicOrigin": "https://cars-primeautovarna.darkapoparka1.workers.dev",
       "preserveVariant2": "modern"
+    },
+    {
+      "slug": "centralauto-varna",
+      "proposedRepository": "darkapoparka/cars-centralauto-varna",
+      "dealerId": "centralauto-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-centralauto-varna",
+      "publicOrigin": "https://cars-centralauto-varna.darkapoparka1.workers.dev",
+      "preserveVariant2": "modern"
+    },
+    {
+      "slug": "kalchev-varna",
+      "proposedRepository": "darkapoparka/cars-kalchev-varna",
+      "dealerId": "kalchev-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-kalchev-varna",
+      "publicOrigin": "https://cars-kalchev-varna.darkapoparka1.workers.dev",
+      "preserveVariant2": "modern"
+    },
+    {
+      "slug": "sevicar-varna",
+      "proposedRepository": "darkapoparka/cars-sevicar-varna",
+      "dealerId": "sevicar-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-sevicar-varna",
+      "publicOrigin": "https://cars-sevicar-varna.darkapoparka1.workers.dev",
+      "preserveVariant2": "modern"
     }
   ],
   "workerIdentities": {
@@ -607,5 +634,18 @@
     "nativeApproval": false,
     "hostedApproval": false,
     "globalReleaseApproval": false
+  },
+  "firstThreeNewSourcePilot": {
+    "dealers": [
+      "centralauto-varna",
+      "kalchev-varna",
+      "sevicar-varna"
+    ],
+    "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "mode": "new-approved",
+    "qualificationOnly": true,
+    "nativeBuilds": 0,
+    "hostedAcceptances": 0,
+    "originalCohortCountsPreserved": true
   }
 }
