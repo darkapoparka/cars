@@ -69,16 +69,18 @@ test('ordinary factual preparation keeps the copy override absent for every adap
   assert.equal(JSON.stringify(f.profile),f.before);
 });
 
-test('maintained Vercel envelope dispatches bare Mobile without changing the other five mounts',()=>{
+test('maintained Vercel envelope dispatches bare Mobile and App while preserving the other four mounts',()=>{
   for(const order of [['modern','import'],['import','modern']]) {
     const variants=keys.map((key,index)=>({key,base:index?'/'+'variant-'+(index+1):'',entry:index?'/variant-'+(index+1)+'/':'/'}));
     [variants[1].key,variants[2].key]=order;
     for(const variant of variants)if(variant.key==='modern')variant.entry=variant.base+'/cars';
     const out=vercelConfiguration({slug:'dealer-test',packaging:{version:'5'},variants},null);
-    assert(!out.redirects.some(row=>row.source==='/variant-5'));
-    assert.deepEqual(out.rewrites.find(row=>row.source==='/variant-5'),{source:'/variant-5',destination:{service:'mobile',path:'/variant-5'}});
-    assert(out.rewrites.some(row=>row.source==='/variant-5/(.*)'&&row.destination.service==='mobile'));
-    for(const base of ['/variant-2','/variant-3','/variant-4','/variant-6'])assert(out.redirects.some(row=>row.source===base));
+    for(const [base,service] of [['/variant-5','mobile'],['/variant-4','app']]) {
+      assert(!out.redirects.some(row=>row.source===base));
+      assert.deepEqual(out.rewrites.find(row=>row.source===base),{source:base,destination:{service,path:base}});
+      assert(out.rewrites.some(row=>row.source===base+'/(.*)'&&row.destination.service===service));
+    }
+    for(const base of ['/variant-2','/variant-3','/variant-6'])assert(out.redirects.some(row=>row.source===base));
     assert.equal(Object.keys(out.services).length,6);
   }
 });
