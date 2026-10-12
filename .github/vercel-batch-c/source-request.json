@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "batch": "C",
+  "acceptedRelease": {
+    "id": "cars-vercel-b1f0f560-20261013",
+    "coordinatorCommit": "5a5280c2bda62708768850c50cff54ef2bfcdad5",
+    "path": "docs/releases/vercel-existing-refresh/batch-a-20261013/accepted-template-release.json"
+  },
+  "sourceRequest": {
+    "schemaVersion": 1,
+    "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+    "approvedParentLockDigest": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
+    "dealers": ["excellent-cars", "f1rst-motors"],
+    "inputs": {
+      "excellent-cars": {
+        "candidateLock": {"path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/excellent-cars/qualification-lock.json", "sha256": "f7b1d9cc0c1a09db9707bd849ffe53dc4152a21be87f61cf63dfa10b1ff63069"},
+        "qualification": {"path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/excellent-cars/qualification-context.json", "sha256": "8f145ce862c956dc1aaae13c81dea4d56792a588454e73d668103e6a871d5023"},
+        "sourceDeltaReview": {"path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json", "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"},
+        "branding": {"path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/excellent-cars/branding.json", "sha256": "b41a799c5661e0e0ff296f748324b8064e37c6df38cedf0d7c0c73df725d60d3"},
+        "modernCopyReview": {"path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/excellent-cars/modern-copy-review.json", "sha256": "ca93f21b5a01a3c2f4262702d72e6d0679541a222967e4407a574527f57d2b7c"}
+      },
+      "f1rst-motors": {
+        "candidateLock": {"path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/f1rst-motors/qualification-lock.json", "sha256": "ab6f48acf3f3d1346017044ceff19b276418af8b60ddaeb47d6944420c011e41"},
+        "qualification": {"path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/f1rst-motors/qualification-context.json", "sha256": "0462d3b7a98e25973c7ea8cc2190cfab0266ee96b0f4cb3dbdf1187b13aa2f17"},
+        "sourceDeltaReview": {"path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json", "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"},
+        "branding": {"path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/f1rst-motors/branding.json", "sha256": "47af85e8102df84862c01f1d2694f359558adebbd2f7acff38485db73ad53b3c"},
+        "modernCopyReview": {"path": "docs/releases/cloudflare-existing25-20261011/vercel-existing-source/f1rst-motors/modern-copy-review.json", "sha256": "c0c8d1102b3abe4653fd89117d01ad7adb38f2d29285e615c0fbf2a42176527c"}
+      }
+    }
+  },
+  "baselines": {
+    "excellent-cars": {"repository": "darkapoparka/excellent-cars", "tree": "6011d35697dcb55e891f20e220ac49c4bf84a310"},
+    "f1rst-motors": {"repository": "darkapoparka/cars-f1rstmotors", "tree": "a8bb47ebc204c05545c43073ab16d7d5191a01be"}
+  }
+}
