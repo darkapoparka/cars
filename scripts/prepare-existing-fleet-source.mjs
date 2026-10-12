@@ -10,10 +10,11 @@ import {pathToFileURL} from 'node:url';
 import {ROOT,git,json,sha256,inside,filesAt,fingerprint} from './lib/workflow.mjs';
 import {readRepositoryTreeMap,readPinnedTemplateTree} from './dealer-updates/pinned-template-source.mjs';
 import {packageRetainsPath,collectSource} from './package-dealer.mjs';
-import {applyLeadBranding,assertLeadBranding} from './publishing/lead-branding.mjs';
+import {applyLeadBranding,assertLeadBranding,rebindDerivedProfileLogoContracts,captureBrandConsumers} from './publishing/lead-branding.mjs';
 import {baseNativeManifest,assertAppVariant} from './publishing/app-variant.mjs';
 import {assertExtendedVariantSources} from './publishing/six-variant.mjs';
-import {ADOPTION_FILE,assertNativeQualification,validateNativeQualificationContext,parseCatalogJson} from './lib/native-localization.mjs';
+import {ADOPTION_FILE,assertNativeQualification,sealNativeQualification,validateNativeQualificationContext,parseCatalogJson} from './lib/native-localization.mjs';
+import {sealAppDealerSource} from './lib/app-dealer-adapter.mjs';
 import {selectedDealer,existingFleetQualifiedSources,QUALIFICATION_LOCK_PATH} from './build-existing-fleet-cloudflare.mjs';
 import {artifactInventory} from './lib/uk-cloudflare-artifacts.mjs';
 import {planSixDesignSelection} from './lib/six-design-release.mjs';
@@ -172,7 +173,78 @@ export function validateSourceRequest(request,leads,registry){
  for(const slug of request.dealers){selectedDealer(slug,leads,registry);const record=registry.dealers.find(r=>r.slug===slug);assert(record.sourceOwnership!=='independent-repository'&&(!record.canonicalSourceRepository||record.canonicalSourceRepository==='darkapoparka/cars'),'Independent source preparation is excluded');
   for(const name of ['candidateLock','qualification','sourceDeltaReview','branding']){const row=request.inputs[slug][name];assert(row&&safeName(row.path)&&row.path.startsWith(SOURCE_CAMPAIGN+'/')&&hex64(row.sha256),'Exact bounded source input required: '+name);}
   const resolution=request.inputs[slug].resolutions;if(resolution)assert(safeName(resolution.path)&&resolution.path.startsWith(SOURCE_CAMPAIGN+'/')&&hex64(resolution.sha256),'Exact bounded resolutions required');
- }return request;
+ }validateLogoContractResealRequest(request);return request;
+}
+
+/** A single reviewed pilot continuation; never an ordinary source refresh. */
+export function validateLogoContractResealRequest(request){
+ const value=request?.logoContractReseal;if(value===undefined)return null;
+ assert(sourceRequestMode(request)==='existing-migration'&&same(request.dealers,['priselci'])&&request.sourceRevision==='b1f0f5609c7c249cfd0649c122849ff2cbb8dfde','Logo reseal requires the exact existing reviewed pilot');
+ assert(value&&same(Object.keys(value).sort(),['kind','schemaVersion','sourceReceipt','sourceTree'])&&value.schemaVersion===1&&value.kind==='cars-existing-source-derived-logo-reseal'&&value.sourceTree==='9b5ad1a83b3442a4f1453169517195afb6fe5a4b','Exact original logo reseal tree required');
+ const pin=value.sourceReceipt;assert(pin&&same(Object.keys(pin).sort(),['path','sha256'])&&safeName(pin.path)&&pin.path.startsWith(SOURCE_CAMPAIGN+'/pilot-logo-reseal/')&&pin.path.endsWith('.json')&&hex64(pin.sha256),'Hash-pinned original prepared source receipt required');
+ return structuredClone(value);
+}
+
+const derivedLogoProfiles=['auto-best/src/lib/data/dealer-profile.json','import/src/lib/data/dealer-profile.json','modern/packages/marketplace-domain/testing/dealer-profile.json'];
+export function bindLogoResealBrandingProof(branding,profileRows){
+ assert(Array.isArray(branding.changes)&&same(profileRows.map(row=>row.path).sort(),[...derivedLogoProfiles].sort()),'Original branding ledger and exact profile transitions required');
+ for(const row of profileRows){
+  if(Object.hasOwn(branding.facts,row.path)){assert(branding.facts[row.path]===row.beforeSha256,'Original derived factual hash changed');branding.facts[row.path]=row.afterSha256;}
+  const changes=branding.changes.filter(change=>change.path===row.path);assert(changes.length<=1,'Duplicate original profile branding transition');
+  if(changes.length){assert(changes[0].after===row.beforeSha256,'Original profile branding ledger is stale');changes[0].after=row.afterSha256;}
+  else branding.changes.push({path:row.path,before:row.beforeSha256,after:row.afterSha256});
+ }
+ branding.derivedProfileLogoBindings=profileRows;return branding;
+}
+export function assertLogoResealPreservation(before,after,profileRows){
+ assert(before instanceof Map&&after instanceof Map&&same(profileRows.map(row=>row.path).sort(),[...derivedLogoProfiles].sort()),'Exact three derived logo consumers required');
+ const envelopes=new Set(['.cars-branding.json','.cars-app.json',ADOPTION_FILE,'localization/contract.json','.client/cloudflare-existing-source.json']);
+ assert(before.size===after.size&&[...before.keys()].every(name=>after.has(name)),'Logo reseal must retain the exact original file inventory');
+ for(const [name,bytes]of before){
+  if(envelopes.has(name))continue;
+  if(!derivedLogoProfiles.includes(name)){assert(bytes.equals(after.get(name)),'Logo reseal changed unrelated source bytes: '+name);continue;}
+  const original=strictJson(bytes),restored=strictJson(after.get(name));
+  for(const field of ['logo','logoLight','logoDark'])restored.business[field]=original.business[field];
+  for(const surface of ['onLight','onDark','onAccent'])for(const field of ['publicPath','sha256','bytes'])restored.logoContract.assets[surface][field]=original.logoContract.assets[surface][field];
+  assert(same(restored,original),'Logo reseal changed non-logo profile facts: '+name);
+  const row=profileRows.find(row=>row.path===name);assert(row.factualFieldsUnchanged===true&&row.beforeSha256===sha256(bytes)&&row.afterSha256===sha256(after.get(name)),'Exact derived profile transition proof required');
+ }
+ return {unchangedSourceFiles:[...before.keys()].filter(name=>!envelopes.has(name)&&!derivedLogoProfiles.includes(name)).length,profilePaths:[...derivedLogoProfiles],nonLogoFactsUnchanged:true,rastersAndComponentsByteIdentical:true};
+}
+
+/** All mutations stay in a pending map until every maintained seal validates. */
+export function resealExistingProfileLogoContracts(input,{manifest,context,root=ROOT}){
+ const published=new Map([...input].filter(([name])=>packageRetainsPath(name))),base=baseNativeManifest(manifest),priorNative=assertNativeQualification(published,base,context,{root});assertAppVariant(published,manifest);assertExtendedVariantSources(published,manifest);
+ const files=new Map([...published].map(([name,bytes])=>[name,Buffer.from(bytes)])),branding=strictJson(files.get('.cars-branding.json'));
+ const profileRows=rebindDerivedProfileLogoContracts(files,branding.publicBase,{originalFiles:published});
+ assert(same(profileRows.map(row=>row.path).sort(),[...derivedLogoProfiles].sort()),'All three existing profile logo contracts are required');
+ bindLogoResealBrandingProof(branding,profileRows);branding.consumerReferences=captureBrandConsumers(files,branding.publicBase);files.set('.cars-branding.json',encode(branding));
+ assertLeadBranding(files,manifest);
+ const app=strictJson(files.get('.cars-app.json'));assert(app.provenance?.profile===derivedLogoProfiles[0]&&app.provenance.profileSha256===sha256(input.get(derivedLogoProfiles[0])),'Original App profile provenance changed');
+ sealAppDealerSource({files,manifest,provenance:{...app.provenance,profileSha256:sha256(files.get(derivedLogoProfiles[0]))}});
+ const native=sealNativeQualification(files,base,priorNative.releases,context,{root});assert(same(native.catalogs,priorNative.catalogs)&&same(native.context,priorNative.context)&&same(native.releases,priorNative.releases),'Logo reseal changed reviewed catalogs, context or source pins');
+ assertNativeQualification(files,base,context,{root});assertAppVariant(files,manifest);assertExtendedVariantSources(files,manifest);assertLeadBranding(files,manifest);
+ const pending=new Map([...input,...files]),preservation=assertLogoResealPreservation(input,pending,profileRows);
+ return {files:pending,branding,native,profileRows,preservation,previousBrandingSha256:sha256(input.get('.cars-branding.json')),previousNativeSha256:sha256(input.get(ADOPTION_FILE))};
+}
+
+async function prepareExistingLogoContractReseal({slug,root,request,ci,baseline,qualified,lock,context,area,source,sourceBefore}){
+ const value=validateLogoContractResealRequest(request),prior=pinnedInput(root,value.sourceReceipt).value;
+ assert(baseline.tree===value.sourceTree&&prior.kind===SOURCE_KIND&&prior.dealer===slug&&prior.preparedTree===baseline.tree&&prior.sourceRevision===request.sourceRevision&&prior.approvedParentLockDigest===request.approvedParentLockDigest&&same(prior.inputs,request.inputs[slug]),'Original prepared pilot receipt or source bytes differ');
+ assert(prior.canonicalSourceUnchanged===true&&prior.authoritativeFactsUnchanged===true&&prior.originalPlanArtifactsUnchanged===true&&prior.nativeApproval===false&&prior.hostedApproval===false&&prior.originalPlan&&hex64(prior.originalPlan.reviewSha256)&&hex64(prior.originalPlan.runSha256)&&hex64(prior.originalPlan.candidateDigest),'Exact original preservation review chain required');
+ const factual=prior.factualRefresh;assert(factual?.dealer===slug&&factual.mode==='current-facts-from-pinned-six-targets'&&factual.stage==='preservation-merge-before-native-catalogs-and-branding'&&factual.consumerPaths?.length===588&&factual.consumerHashes?.length===588,'Original 588-consumer factual review required');
+ const manifest=strictJson(baseline.files.get('dealer.json'));assert(same(factual.targetSources,manifest.templateSources),'Original factual six-source pins changed');
+ const sourceMarker=strictJson(baseline.files.get('.client/cloudflare-existing-source.json'));assert(sourceMarker.sourceRevision===request.sourceRevision&&sourceMarker.candidateSourceDigest===prior.preparedCandidateDigest&&sourceMarker.qualificationContextSha256===sha256(qualified.bytes)&&sourceMarker.qualificationLockSha256===sha256(lock.bytes),'Original personalized-source envelope differs from its prepared receipt');
+ const result=resealExistingProfileLogoContracts(baseline.files,{manifest,context,root});
+ const candidateSourceDigest=sha256(JSON.stringify([...result.files].filter(([name])=>!markers.has(name)).sort(([a],[b])=>a.localeCompare(b,'en')).map(([name,bytes])=>[name,sha256(bytes)])));
+ for(const [name,bytes]of sourceQualificationFiles({manifest,qualificationBytes:qualified.bytes,qualificationLockBytes:lock.bytes,sourceRevision:request.sourceRevision,candidateSourceDigest,root}))result.files.set(name,bytes);
+ const preservation=assertLogoResealPreservation(baseline.files,result.files,result.profileRows),proposal=createSourcePatch({baseline,candidateFiles:result.files,dealer:slug,sourceRevision:request.sourceRevision,contextFileSha256:sha256(qualified.bytes)});verifySourcePatch({baseline,...proposal});
+ assert(git(root,['rev-parse',ci.commit+':clients/'+slug])===baseline.tree&&fingerprint(source).digest===sourceBefore&&sha256(fs.readFileSync(path.join(root,'templates.lock.json')))===request.approvedParentLockDigest,'Canonical pilot source or approved lock changed');
+ const output=path.join(area,'output');writeNew(path.join(output,'source-patch.json'),encode(proposal.patch));for(const [digest,blob]of proposal.blobs)writeNew(path.join(output,'blobs',digest+'.json'),encode(blob));
+ const review={schemaVersion:1,kind:'cars-existing-source-derived-logo-reseal-review',dealer:slug,priorSourceReceipt:value.sourceReceipt,canonicalBaseline:{commit:baseline.commit,tree:baseline.tree},preparedTree:proposal.patch.preparedTree,profileRows:result.profileRows,preservation,originalPlan:prior.originalPlan,originalFactualRefresh:factual,catalogsUnchanged:true,appSourceBytesUnchanged:true,sourcePinsUnchanged:true,reviewed:false,nativeApproval:false,hostedApproval:false};
+ writeNew(path.join(output,'final-source-review.json'),encode(review));
+ const receipt={schemaVersion:1,kind:SOURCE_KIND,dealer:slug,repository:manifest.repository,canonicalSourceRepository:'darkapoparka/cars',canonicalBaseline:review.canonicalBaseline,preparedTree:proposal.patch.preparedTree,sourceRevision:request.sourceRevision,runId:ci.runId,attempt:ci.attempt,inputs:request.inputs[slug],sourceMode:'existing-migration',approvedParentLockDigest:request.approvedParentLockDigest,originalPlan:prior.originalPlan,factualRefresh:prior.factualRefresh,logoContractReseal:{...review,previousBrandingSha256:result.previousBrandingSha256,previousNativeSha256:result.previousNativeSha256},finalSourceReviewSha256:sha256(encode(review)),preparedCandidateDigest:candidateSourceDigest,patchDigest:sha256(encode(proposal.patch)),branding:result.branding,nativeQualification:{contextFileSha256:sha256(qualified.bytes),qualificationLockSha256:sha256(lock.bytes),contextDigest:result.native.contextDigest,receiptSha256:sha256(result.files.get(ADOPTION_FILE)),nativeInput:result.native.input,pendingNativeChecks:result.native.pendingNativeChecks},pathsChanged:proposal.patch.changes.length,uniqueBlobBytes:proposal.patch.uniqueBlobBytes,authoritativeFactsUnchanged:true,canonicalSourceUnchanged:true,originalPlanArtifactsUnchanged:true,reviewed:false,published:false,nativeApproval:false,hostedApproval:false,createdAt:new Date().toISOString()};
+ writeNew(path.join(output,'source-preparation-receipt.json'),encode(receipt));artifactInventory(output,{kind:SOURCE_KIND,dealer:slug,status:'passed'});return {dealer:slug,output,preparedTree:receipt.preparedTree,pathsChanged:receipt.pathsChanged,uniqueBlobBytes:receipt.uniqueBlobBytes,reviewed:false,published:false};
 }
 export function sourceCiContext({root=ROOT,env=process.env,platform=process.platform,version=process.version,readGit=git}={}){
  assert(platform==='linux'&&version==='v26.10.0'&&env.GITHUB_ACTIONS==='true'&&env.GITHUB_EVENT_NAME==='push'&&env.GITHUB_REPOSITORY==='darkapoparka/cars'&&env.GITHUB_REF==='refs/heads/main'&&hex40(env.GITHUB_SHA)&&/^[1-9][0-9]*$/.test(env.GITHUB_RUN_ID??'')&&/^[1-9][0-9]*$/.test(env.GITHUB_RUN_ATTEMPT??''),'Source preparation requires exact Cars main push CI');
@@ -231,6 +303,7 @@ export async function prepareExistingFleetSource({slug,root=ROOT,env=process.env
  const resolutions=input.resolutions?pinnedInput(root,input.resolutions):null,source=inside(root,'clients/'+slug,{mustExist:true});assert(!fs.existsSync(path.join(source,'.git')),'Independent dealer source excluded');
  const baseline=sourceBaseline(root,slug,ci.commit),registeredAdoption=registered?await readRegisteredDealerAdoption({root,pin:input.adoption,dealer:slug,baseline,registry}):null;
  const sourceBefore=fingerprint(source).digest,area=inside(root,'runtime/existing-fleet-source/'+ci.runId+'-'+ci.attempt+'/'+slug);assert(!fs.existsSync(area),'Source preparation attempt already exists');fs.mkdirSync(area,{recursive:true});
+ if(request.logoContractReseal!==undefined)return prepareExistingLogoContractReseal({slug,root,request,ci,baseline,qualified,lock,context,area,source,sourceBefore});
  const {runUpdateDealerTemplate,finalizeDealerTemplateCandidate}=await import('./dealer-updates/update-dealer-template.mjs');const {replaceCandidateFile}=await import('./dealer-updates/three-way-upgrade.mjs');
  const runDirectory=path.join(area,'plan'),assetPool=path.join(area,'asset-pool'),args=sourcePreparationPlanArgs({source,root,lockFile:lock.file,qualificationFile:qualified.file,runDirectory,assetPool,resolutionsFile:resolutions?.file,registeredAdoptionPin:registeredAdoption?input.adoption:null});
  const planned=await runUpdateDealerTemplate(args);assert(planned.ready===true&&planned.candidateDirectory,'Unresolved preservation conflicts: review the original plan artifact');

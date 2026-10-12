@@ -3,6 +3,7 @@ import {sha256} from './lib/workflow.mjs';import {tinyArea,writeFixture} from '.
 import {gitObjectId,gitTreeId,createSourcePatch,verifySourcePatch,validateSourceRequest,sourceCiContext,readBrandingInputs,bindPreparedShareLogo,sourceQualificationFiles,assertPreparedMountOwnership,SOURCE_CAMPAIGN,sourceRequestMode,resolveSourceRequest,sourceMatrix,assertNewSourceBootstrap} from './prepare-existing-fleet-source.mjs';
 import {QUALIFICATION_LOCK_PATH} from './build-existing-fleet-cloudflare.mjs';import {planSixDesignSelection} from './lib/six-design-release.mjs';
 import {sourcePreparationPlanArgs,assertSourceFactualRefresh} from './prepare-existing-fleet-source.mjs';
+import {validateLogoContractResealRequest,assertLogoResealPreservation,bindLogoResealBrandingProof} from './prepare-existing-fleet-source.mjs';
 
 test('canonical source preparation opts into all-six factual targets while registered adoption keeps its authenticated seam',()=>{
  const input={source:'dealer',root:'cars',lockFile:'lock',qualificationFile:'qualification',runDirectory:'run',assetPool:'pool',resolutionsFile:'reviewed-resolutions'};
@@ -21,6 +22,37 @@ test('source preparation refuses stale-profile reseals, incomplete factual consu
  const forged=structuredClone(review);forged.factualRefresh.consumerHashes[0].sha256='d'.repeat(64);assert.throws(()=>assertSourceFactualRefresh({...input,review:forged}),/Original plan/);
  const finalStage=structuredClone(proof);finalStage.stage='final-branded-source';assert.throws(()=>assertSourceFactualRefresh({...input,metadata:{...metadata,factualRefresh:finalStage},review:{factualRefresh:finalStage}}),/original preparation stage/);
  const missingStage=structuredClone(proof);delete missingStage.stage;assert.throws(()=>assertSourceFactualRefresh({...input,metadata:{...metadata,factualRefresh:missingStage},review:{factualRefresh:missingStage}}),/original preparation stage/);
+});
+
+test('exact pilot logo continuation requires original tree and hash-pinned prepared receipt while opt-out remains absent',()=>{
+ const request={schemaVersion:1,dealers:['priselci'],sourceRevision:'b1f0f5609c7c249cfd0649c122849ff2cbb8dfde',logoContractReseal:{schemaVersion:1,kind:'cars-existing-source-derived-logo-reseal',sourceTree:'9b5ad1a83b3442a4f1453169517195afb6fe5a4b',sourceReceipt:{path:SOURCE_CAMPAIGN+'/pilot-logo-reseal/prior-source-preparation-receipt.json',sha256:'a'.repeat(64)}}};
+ assert.deepEqual(validateLogoContractResealRequest(request),request.logoContractReseal);
+ const ordinary=structuredClone(request);delete ordinary.logoContractReseal;assert.equal(validateLogoContractResealRequest(ordinary),null);
+ for(const mutate of [r=>r.dealers.push('another'),r=>r.mode='registered-adoption',r=>r.sourceRevision='b'.repeat(40),r=>r.logoContractReseal.sourceTree='c'.repeat(40),r=>r.logoContractReseal.extra=true,r=>r.logoContractReseal.sourceReceipt.path='../escape.json',r=>r.logoContractReseal.sourceReceipt.sha256='bad',r=>r.logoContractReseal=null]){const bad=structuredClone(request);mutate(bad);assert.throws(()=>validateLogoContractResealRequest(bad),/reseal|receipt|pilot/);}
+});
+
+test('logo continuation binds final branding ledger hashes and retains the original historical before hashes',()=>{
+ const names=['auto-best/src/lib/data/dealer-profile.json','import/src/lib/data/dealer-profile.json','modern/packages/marketplace-domain/testing/dealer-profile.json'],rows=names.map((path,i)=>({path,beforeSha256:String(i+1).repeat(64),afterSha256:String(i+4).repeat(64)})),branding={facts:{'stock.json':'a'.repeat(64),[names[0]]:rows[0].beforeSha256},changes:[{path:'retained-component.ts',before:'b'.repeat(64),after:'c'.repeat(64)},{path:names[1],before:'d'.repeat(64),after:rows[1].beforeSha256},{path:names[2],before:'e'.repeat(64),after:rows[2].beforeSha256}]},original=structuredClone(branding);
+ bindLogoResealBrandingProof(branding,rows);assert.deepEqual(branding.derivedProfileLogoBindings,rows);assert.equal(branding.facts[names[0]],rows[0].afterSha256);assert.equal(branding.facts['stock.json'],original.facts['stock.json']);assert.deepEqual(branding.changes[0],original.changes[0]);
+ for(const i of [1,2]){assert.equal(branding.changes[i].before,original.changes[i].before);assert.equal(branding.changes[i].after,rows[i].afterSha256);}assert.deepEqual(branding.changes.at(-1),{path:names[0],before:rows[0].beforeSha256,after:rows[0].afterSha256});
+ const stale=structuredClone(original);stale.changes[1].after='f'.repeat(64);assert.throws(()=>bindLogoResealBrandingProof(stale,rows),/ledger is stale/);
+ const duplicate=structuredClone(original);duplicate.changes.push({...duplicate.changes[1]});assert.throws(()=>bindLogoResealBrandingProof(duplicate,rows),/Duplicate original/);
+ const wrongFact=structuredClone(original);wrongFact.facts[names[0]]='f'.repeat(64);assert.throws(()=>bindLogoResealBrandingProof(wrongFact,rows),/factual hash/);
+});
+
+test('logo continuation preservation rejects changes to stock, components, rasters, inventory and file ownership',()=>{
+ const names=['auto-best/src/lib/data/dealer-profile.json','import/src/lib/data/dealer-profile.json','modern/packages/marketplace-domain/testing/dealer-profile.json'],before=new Map();
+ for(const name of names)before.set(name,Buffer.from(JSON.stringify({business:{logo:'/old-light.webp',logoLight:'/old-light.webp',logoDark:'/old-dark.webp',name:'Original factual business'},logoContract:{assets:Object.fromEntries(['onLight','onDark','onAccent'].map(surface=>[surface,{publicPath:'/old.webp',sha256:'a'.repeat(64),bytes:11,source:'original-reviewed-source'}]))},listings:[{id:'retained-stock-id',price:23456,currency:'EUR',mileage:123456,images:['/retained-vehicle.webp']}],custom:{retained:true}},null,2)+'\n'));
+ before.set('stock.json',Buffer.from('{"source":"original"}'));before.set('modern/apps/web/app/[locale]/services/page.tsx',Buffer.from('original native component'));before.set('branding/reviewed-surfaces/on-light.png',Buffer.from([0,255,9,7]));
+ const after=new Map(before),rows=[];
+ for(const name of names){const value=JSON.parse(before.get(name));for(const field of ['logo','logoLight','logoDark'])value.business[field]='/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp';for(const surface of ['onLight','onDark','onAccent'])Object.assign(value.logoContract.assets[surface],{publicPath:'/dealer-brand/v2-f18b62d1138c7fae/logo-on-light.webp',sha256:'b'.repeat(64),bytes:22});after.set(name,Buffer.from(JSON.stringify(value,null,2)+'\n'));rows.push({path:name,beforeSha256:sha256(before.get(name)),afterSha256:sha256(after.get(name)),factualFieldsUnchanged:true});}
+ assert.equal(assertLogoResealPreservation(before,after,rows).rastersAndComponentsByteIdentical,true);
+ for(const name of ['stock.json','modern/apps/web/app/[locale]/services/page.tsx','branding/reviewed-surfaces/on-light.png']){const changed=new Map(after);changed.set(name,Buffer.from('unapproved drift'));assert.throws(()=>assertLogoResealPreservation(before,changed,rows),/unrelated source/);}
+ const inventory=new Map(after),changed=JSON.parse(inventory.get(names[0]));changed.listings[0].mileage=999999;inventory.set(names[0],Buffer.from(JSON.stringify(changed)));assert.throws(()=>assertLogoResealPreservation(before,inventory,rows),/non-logo profile facts/);
+ const expanded=new Map(after);expanded.set('new-source.ts',Buffer.from('unreviewed'));assert.throws(()=>assertLogoResealPreservation(before,expanded,rows),/file inventory/);
+ assert.throws(()=>assertLogoResealPreservation(before,after,rows.slice(1)),/three derived/);
+ assert.throws(()=>assertLogoResealPreservation(before,after,rows.map((row,index)=>index?row:{...row,afterSha256:'c'.repeat(64)})),/transition proof/);
+ assert.deepEqual(before.get('stock.json'),Buffer.from('{"source":"original"}'));
 });
 
 function baseline(){const files=new Map([['business-facts.json',Buffer.from('{"dealer":"truthful"}')],['scripts/run.mjs',Buffer.from('#!/usr/bin/env node\nold();\n')],['branding/original.png',Buffer.from([0,1,2,255])],['.client/recovery.json',Buffer.from('{"retain":true}')]]),entries=[...files].map(([path,bytes])=>({path,mode:path==='scripts/run.mjs'?'100755':'100644',blob:gitObjectId('blob',bytes)}));return {commit:'1'.repeat(40),files,entries,tree:gitTreeId(entries)};}
