@@ -68,6 +68,16 @@ export function applyModernFreeBuildOverlay(input,experiment,{base}={}){
  const page='modern/apps/web/app/[locale]/services/page.tsx',original=files.get(page)?.toString();
  if(!original||/\bexport\s+(?:const|function|async\s+function)\s+(?:generateStaticParams|dynamic|revalidate)\b/.test(original))fail('unknown Services static parameters/config boundary');
  put(page,original+'\n// Exact immutable paths for the owned vinext prerender phase only.\nexport function generateStaticParams() { return [{ locale: "en" }, { locale: "bg" }]; }\n');
+ // Tagged vinext separately discovers warmup paths after prerendering. The
+ // selected slug-only generators have no locale and are outside this pilot.
+ for(const [name,boundary] of [
+  ['modern/apps/web/app/[locale]/guides/[slug]/page.tsx','export const generateStaticParams = () => [\n  ...vehicleGuides.map(({ slug }) => ({ slug })),\n  ...publicBlogPosts.map(({ slug }) => ({ slug })),\n];'],
+  ['modern/apps/web/app/[locale]/legal/[slug]/page.tsx','export const generateStaticParams = (): { slug: string }[] =>\n  fallbackLegalSlugs.map((slug) => ({ slug }));'],
+ ]){
+  const source=files.get(name)?.toString();if(!source)fail('selected discovery source missing: '+name);
+  const replacement=name.includes('/guides/')?boundary.replace('=> [','=> '+phase+' ? [] : ['):'export const generateStaticParams = (): { slug: string }[] =>\n  '+phase+' ? [] : fallbackLegalSlugs.map((slug) => ({ slug }));';
+  put(name,replaceOnce(source,boundary,replacement));
+ }
  const policySources=['modern/apps/web/proxy.ts','modern/packages/security/proxy.ts','modern/packages/internationalization/policy.ts','modern/apps/web/env.ts'].map(name=>{const bytes=files.get(name);if(!bytes)fail('native response policy source missing: '+name);return {path:name,gitBlob:blob(bytes),sha256:hash(bytes),bytes:bytes.length};});
  const proxy='modern/apps/web/proxy.ts';body=files.get(proxy).toString();
  body=replaceOnce(body,'  matcher: [','  get matcher() {\n    const original = [');
@@ -75,34 +85,46 @@ export function applyModernFreeBuildOverlay(input,experiment,{base}={}){
  body+='\n// Same native security configuration; this pure export performs no request or SSR.\nexport async function resolveCarsNativeResponsePolicy(locale: "en" | "bg") {\n  if (locale !== "en" && locale !== "bg") throw new Error("Exact Services locale required");\n  const response = await securityHeaders();\n  const headers = new Headers(response.headers);\n  headers.delete("x-middleware-next");\n  for (const [name, value] of carsPrivateHeaders(locale)) headers.set(name, value);\n  return Object.fromEntries(headers);\n}\n';
  body='import { privateHeaders as carsPrivateHeaders } from "@repo/internationalization/policy";\n'+body;put(proxy,body);
  const receipt={...experiment,mount:base,vinext:'1.1.0',phase:{VINEXT_PRERENDER:'1',NEXT_PHASE:'phase-production-build'},generated,policySources,policyDependencies:{'@nosecone/next':'1.2.0',nosecone:'1.2.0'},graph:'original-native-rsc-ssr-client',queryCache:false,nativeApproved:false,hostedApproved:false,freeCpuQualified:false};
- for(const [name,bytes]of [['.cars-modern-free-build.json',JSON.stringify(receipt,null,2)+'\n'],['scripts/modern-free-services-build.mjs',modernFreeServicesBuildSource()]]){if(files.has(name))fail('occupied generated experiment member '+name);files.set(name,Buffer.from(bytes));}
+ const preload=modernNativePrerenderPreloadSource();receipt.nativeCapture={strategy:'early-owned-node-observer',preloadPath:'scripts/modern-native-prerender-preload.mjs',preloadSha256:hash(preload),activation:'final-native-rsc-disk-graph'};
+ for(const [name,bytes]of [['.cars-modern-free-build.json',JSON.stringify(receipt,null,2)+'\n'],['scripts/modern-free-services-build.mjs',modernFreeServicesBuildSource()],['scripts/modern-native-prerender-preload.mjs',preload]]){if(files.has(name))fail('occupied generated experiment member '+name);files.set(name,Buffer.from(bytes));}
  return files;
 }
 
+export function modernNativePrerenderPreloadSource(){return `import fs from 'node:fs';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
+import {installModernNativeResponseCapture} from './modern-free-services-build.mjs';
+const packageRoot=fs.realpathSync(path.resolve(import.meta.dirname,'..'));
+const contract=JSON.parse(fs.readFileSync(path.join(packageRoot,'.cars-modern-free-build.json'),'utf8'));
+const bytes=fs.readFileSync(import.meta.filename);
+if(process.argv.length!==3||process.argv[2]!=='build'||contract.kind!=='cars-modern-free-services-build-experiment'||contract.dealer!=='priselci'||contract.sourceTree!==${JSON.stringify(MODERN_FREE_CLIENT_TREE)}||contract.nativeCapture?.strategy!=='early-owned-node-observer'||contract.nativeCapture.preloadSha256!==createHash('sha256').update(bytes).digest('hex'))throw Error('Exact owned Modern Vite preload required');
+installModernNativeResponseCapture({packageRoot,mount:contract.mount,sourceTree:contract.sourceTree,deferActivation:true}).registerExitHook();
+`;}
+
 /** Observe the tagged driver's own loopback responses; never replace its body. */
-export function installModernNativeResponseCapture({packageRoot,mount,sourceTree,scope=globalThis,env=process.env}={}){
+export function installModernNativeResponseCapture({packageRoot,mount,sourceTree,scope=globalThis,env=process.env,deferActivation=false,requireExisting=false}={}){
  if(!['/variant-2','/variant-3'].includes(mount)||!hex(sourceTree,40)||typeof scope.fetch!=='function')fail('bounded native capture authority required');
  packageRoot=fs.realpathSync(packageRoot);
  const key=Symbol.for('cars.modern.native-response-capture'),existing=scope[key];
  if(existing){
   if(existing.kind!=='cars-modern-native-response-capture'||typeof existing.closed!=='boolean')fail('native capture scope owner differs');
-  const same=existing.packageRoot===packageRoot&&existing.mount===mount&&existing.sourceTree===sourceTree&&existing.env===env;
-  if(!existing.closed||same){
-   if(!same)fail('native capture authority differs');
-   if(scope.fetch!==(existing.closed?existing.originalFetch:existing.observedFetch))fail('native capture fetch owner changed');
-   return existing.handle;
-  }
-  if(scope.fetch!==existing.originalFetch)fail('native capture fetch owner changed');
+  const same=existing.packageRoot===packageRoot&&existing.mount===mount&&existing.sourceTree===sourceTree&&existing.env===env&&existing.deferred===deferActivation;
+  if(!same)fail('native capture authority differs');
+  return existing.handle;
  }
+ if(requireExisting)fail('early native capture preload missing');
  const originalFetch=scope.fetch,seen=new Set();
- const restore=()=>{if(state.closed)return;if(scope.fetch!==observedFetch)fail('native capture fetch owner changed');scope.fetch=originalFetch;state.closed=true;if(state.exitRegistered){process.removeListener('exit',restore);state.exitRegistered=false;}};
+ // A native wrapper may retain our early observer. Close it into transparent
+ // delegation, and restore global fetch only while we still own that slot.
+ const restore=()=>{if(state.closed)return;state.closed=true;state.active=false;if(scope.fetch===observedFetch)scope.fetch=originalFetch;if(state.exitRegistered){process.removeListener('exit',onExit);state.exitRegistered=false;}};
+ const onExit=()=>{try{reportModernNativeDiscovery(packageRoot,mount,sourceTree);}catch(error){console.error('[cars-modern-native-discovery] diagnostic unavailable: '+error.message);}finally{restore();}};
  const record=async(response,locale,kind,pathname)=>{
-  if(response.status!==200)fail('canonical native '+kind+' response is not 200');
   const bytes=await readModernCapturedBody(response.clone()),headers=Object.fromEntries(response.headers);
-  const value={schemaVersion:1,kind:'cars-modern-official-prerender-response',sourceTree,pathname,locale,representation:kind,status:response.status,bytes:bytes.length,sha256:hash(bytes),headers};
+  const value={schemaVersion:1,kind:'cars-modern-official-prerender-response',sourceTree,graphSha256:state.graphSha256,pathname,locale,representation:kind,status:response.status,bytes:bytes.length,sha256:hash(bytes),headers};
   fs.writeFileSync(inside(packageRoot,'.cars-modern-native-response-'+locale+'-'+kind+'.json'),JSON.stringify(value,null,2)+'\n',{flag:'wx'});
  };
  async function observedFetch(input,init){
+  if(state.closed||!state.active)return originalFetch(input,init);
   const request=new Request(input,init),url=new URL(request.url),locale=['en','bg'].find(value=>url.pathname===mount+'/'+value+'/services');
   const capture=env.VINEXT_PRERENDER==='1'&&env.NEXT_PHASE==='phase-production-build'&&url.protocol==='http:'&&url.hostname==='127.0.0.1'&&url.port&&locale&&request.method==='GET'&&url.search===''&&request.headers.has('x-vinext-prerender-secret')&&request.headers.get('RSC')!=='1';
   if(!capture)return originalFetch(input,init);
@@ -111,21 +133,30 @@ export function installModernNativeResponseCapture({packageRoot,mount,sourceTree
    const response=await originalFetch(input,init);await record(response,locale,'html',url.pathname);
    // The official driver normally extracts Flight from its HTML. Ask its same
    // live handler for canonical RSC metadata and require the emitted bytes join.
-   const rscUrl=new URL(url);rscUrl.search='?_rsc=';const headers=new Headers(request.headers);headers.set('RSC','1');headers.set('Accept','text/x-component');
-   const rsc=await originalFetch(new Request(rscUrl,{method:'GET',headers,redirect:'manual'}));await record(rsc,locale,'rsc',url.pathname);await rsc.body?.cancel();
-   if(seen.size===2)restore();return response;
+   if(response.status===200){const rscUrl=new URL(url);rscUrl.search='?_rsc=';const headers=new Headers(request.headers);headers.set('RSC','1');headers.set('Accept','text/x-component');
+    const rsc=await originalFetch(new Request(rscUrl,{method:'GET',headers,redirect:'manual'}));await record(rsc,locale,'rsc',url.pathname);await rsc.body?.cancel();}
+   if(seen.size===2){reportModernNativeDiscovery(packageRoot,mount,sourceTree);restore();}return response;
   }catch(error){restore();throw error;}
  }
- const state={kind:'cars-modern-native-response-capture',packageRoot,mount,sourceTree,env,originalFetch,observedFetch,closed:false,exitRegistered:false,handle:null};
+ const state={kind:'cars-modern-native-response-capture',packageRoot,mount,sourceTree,env,originalFetch,observedFetch,deferred:deferActivation,active:!deferActivation,graphSha256:null,closed:false,exitRegistered:false,handle:null};
  state.handle={restore,
-  registerExitHook(){if(state.closed||state.exitRegistered)return;process.once('exit',restore);state.exitRegistered=true;},
+  activate(graphSha256){if(state.closed)fail('closed native capture cannot reactivate');if(!state.deferred||!hex(graphSha256,64))fail('exact final native graph activation required');if(state.graphSha256!==null&&state.graphSha256!==graphSha256)fail('native capture graph authority differs');state.graphSha256=graphSha256;state.active=true;},
+  registerExitHook(){if(state.closed||state.exitRegistered)return;process.once('exit',onExit);state.exitRegistered=true;},
  };
  scope[key]=state;scope.fetch=observedFetch;return state.handle;
 }
+
+export function reportModernNativeDiscovery(packageRoot,mount,sourceTree){
+ const read=name=>{const file=inside(packageRoot,name);if(!fs.existsSync(file))return null;const bytes=fs.readFileSync(file);if(bytes.length>2*1024*1024)fail('unbounded native discovery evidence');return JSON.parse(bytes);};
+ const index=read('modern/apps/web/dist/server/vinext-prerender.json'),routes=index?.routes;
+ if(routes!==undefined&&(!Array.isArray(routes)||routes.length>256))fail('unbounded native discovery rows');
+ const captures=[];for(const locale of ['en','bg'])for(const representation of ['html','rsc']){const row=read('.cars-modern-native-response-'+locale+'-'+representation+'.json');if(row)captures.push({locale,representation,status:row.status,bytes:row.bytes,sha256:row.sha256,graphSha256:row.graphSha256,cacheControl:row.headers?.['cache-control']});}
+ console.log('[cars-modern-native-discovery] '+JSON.stringify({schemaVersion:1,sourceTree,mount,officialIndexPresent:Boolean(index),routes:routes?.map(({route,path,status,reason,error})=>({route,path,status,reason,error})),captures}));
+}
 async function readModernCapturedBody(response){
- if(!response.body)fail('native capture body missing');const reader=response.body.getReader(),parts=[];let size=0;
+ if(!response.body)return Buffer.alloc(0);const reader=response.body.getReader(),parts=[];let size=0;
  try{for(;;){const result=await reader.read();if(result.done)break;size+=result.value.byteLength;if(size>2*1024*1024){await reader.cancel();fail('native capture exceeds snapshot bound');}parts.push(Buffer.from(result.value));}}finally{reader.releaseLock();}
- if(!size)fail('native capture body empty');return Buffer.concat(parts,size);
+ return Buffer.concat(parts,size);
 }
 
 /** An additional export in the SAME RSC build, with original source/module IDs. */
@@ -145,7 +176,7 @@ export function createModernFreeServicesPlugin({packageRoot,cwd}){
   const suffix=phase==='scan'?'scan-'+environment.name:environment.name;
   const value={schemaVersion:1,environment:environment.name,graph:'original-native',phase,lifecycle:{plugin:'@vitejs/plugin-rsc',version:'0.5.36',isScanBuild:manager.isScanBuild,write:environment.config.build.write},outputDirectory,rows,wasm};
   writeModernOwnedReceipt(packageRoot,'.cars-modern-free-graph-'+suffix+'.json',JSON.stringify(value,null,2)+'\n');
-  if(phase==='final'&&environment.name==='rsc'){const contract=JSON.parse(fs.readFileSync(inside(packageRoot,'.cars-modern-free-build.json')));installModernNativeWasmModules({packageRoot,graph:value,mount:contract.mount,sourceTree:contract.sourceTree,purpose:'official-prerender'}).registerExitHook();}
+  if(phase==='final'&&environment.name==='rsc'){const contract=JSON.parse(fs.readFileSync(inside(packageRoot,'.cars-modern-free-build.json'))),written=readModernNativeGraph(packageRoot,'rsc','final');installModernNativeWasmModules({packageRoot,graph:written.value,mount:contract.mount,sourceTree:contract.sourceTree,purpose:'official-prerender'}).registerExitHook();installModernNativeResponseCapture({packageRoot,mount:contract.mount,sourceTree:contract.sourceTree,deferActivation:true,requireExisting:true}).activate(hash(written.bytes));}
  };
  return {name:'cars-modern-free-services-graph',apply:'build',enforce:'post',
   // Same public API lookup as tagged getPluginApi; the manager is shared by all
@@ -153,7 +184,7 @@ export function createModernFreeServicesPlugin({packageRoot,cwd}){
   configResolved(config){manager=config.plugins.find(plugin=>plugin.name==='rsc:minimal')?.api?.manager;if(typeof manager?.isScanBuild!=='boolean')fail('pinned native build lifecycle missing');},
   resolveId(id){if(id===virtual)return resolved;},
   load(id){if(id===resolved)return 'export { resolveCarsNativePreferences } from '+JSON.stringify(path.join(cwd,'lib/locale-preferences.ts').replaceAll('\\','/'))+';\nexport { resolveCarsNativeResponsePolicy } from '+JSON.stringify(path.join(cwd,'proxy.ts').replaceAll('\\','/'))+';\nexport { VINEXT_INTERNAL_HEADERS } from "vinext/internal/server/headers";';},
-  buildStart(){const phase=phaseFor(this.environment);if(this.environment.name==='rsc'){const contract=JSON.parse(fs.readFileSync(path.join(packageRoot,'.cars-modern-free-build.json'),'utf8'));verifyModernNativePolicyToolchain(packageRoot);this.emitFile({type:'chunk',id:virtual,fileName:'cars-native-preferences.js',preserveSignature:'strict'});if(phase==='final'){const capture=installModernNativeResponseCapture({packageRoot,mount:contract.mount,sourceTree:contract.sourceTree});capture.registerExitHook();}}},
+  buildStart(){const phase=phaseFor(this.environment);if(this.environment.name==='rsc'){const contract=JSON.parse(fs.readFileSync(path.join(packageRoot,'.cars-modern-free-build.json'),'utf8'));verifyModernNativePolicyToolchain(packageRoot);this.emitFile({type:'chunk',id:virtual,fileName:'cars-native-preferences.js',preserveSignature:'strict'});if(phase==='final'){const capture=installModernNativeResponseCapture({packageRoot,mount:contract.mount,sourceTree:contract.sourceTree,deferActivation:true,requireExisting:true});capture.registerExitHook();}}},
   generateBundle:{order:'post',handler(_options,bundle){const phase=phaseFor(this.environment);if(phase==='scan')recordGraph(this.environment,bundle,phase);}},
   // All generateBundle mutations precede writeBundle. Only written final output
   // is authoritative; scan graphs remain separate immutable evidence.
@@ -267,12 +298,13 @@ export async function emitModernFreeServicesSnapshots({packageRoot,target}){
  const server=inside(packageRoot,target.root+'/dist/server'),client=inside(packageRoot,target.assets),prerender=inside(server,'prerendered-routes'),indexPath=inside(server,'vinext-prerender.json');
  for(const dir of [server,client,prerender])if(fs.lstatSync(dir).isSymbolicLink()||fs.realpathSync(dir)!==dir)fail('linked build output');
  const indexBytes=fs.readFileSync(indexPath),index=JSON.parse(indexBytes);if(!hex(index.buildId,32)&&!(typeof index.buildId==='string'&&index.buildId.length>0&&index.buildId.length<=256))fail('actual native BUILD_ID required');
+ reportModernNativeDiscovery(packageRoot,target.base,contract.sourceTree);
  if(!Array.isArray(index.routes)||index.trailingSlash===true)fail('unexpected official prerender index');
  const wanted=['/en/services','/bg/services'],rendered=index.routes.filter(row=>row.status==='rendered'),seen=new Set(),allowedFiles=[];
  for(const row of index.routes)if(row.status==='error'||!['rendered','skipped'].includes(row.status))fail('unsuccessful native prerender route');
  for(const row of rendered){const pathname=row.path??row.route;
   if(pathname==='/404'&&row.route==='/404'&&row.router==='app'&&row.revalidate===false&&row.path===undefined&&row.responseStatus===undefined&&!row.fallback&&!row.notFound){if(seen.has('/404'))fail('duplicate generated404');seen.add('/404');allowedFiles.push('404.html');continue;}
-  if(!wanted.includes(pathname)||seen.has(pathname)||row.router!=='app'||row.route!=='/[locale]/services'||row.fallback||row.notFound||row.redirectProps||(row.responseStatus!==undefined&&row.responseStatus!==200)||row.revalidate!==false)fail('extra or noncanonical successful prerender route');
+  if(!wanted.includes(pathname)||seen.has(pathname)||row.router!=='app'||row.route!=='/:locale/services'||row.fallback||row.notFound||row.redirectProps||(row.responseStatus!==undefined&&row.responseStatus!==200)||row.revalidate!==false)fail('extra or noncanonical successful prerender route');
   seen.add(pathname);allowedFiles.push(pathname.slice(1)+'.html',pathname.slice(1)+'.rsc');
  }
  if(wanted.some(name=>!seen.has(name)))fail('exact EN/BG Services pair missing');
@@ -293,7 +325,7 @@ export async function emitModernFreeServicesSnapshots({packageRoot,target}){
   for(const kind of ['html','rsc']){
    const bytes=fs.readFileSync(inside(prerender,pathname.slice(1)+'.'+kind));if(bytes.length<1||bytes.length>2*1024*1024)fail('unbounded native '+kind);if(kind==='html'&&bytes.toString().split('<script type="application/json" id="cars-modern-native-preferences">null</script>').length!==2)fail('actual native HTML bootstrap slot differs');
    const capturePath='.cars-modern-native-response-'+locale+'-'+kind+'.json',captureBytes=fs.readFileSync(inside(packageRoot,capturePath)),capture=JSON.parse(captureBytes);
-   if(capture.schemaVersion!==1||capture.kind!=='cars-modern-official-prerender-response'||capture.sourceTree!==contract.sourceTree||capture.pathname!==route.pathname||capture.locale!==locale||capture.representation!==kind||capture.status!==200||capture.bytes!==bytes.length||capture.sha256!==hash(bytes))fail('actual canonical native '+kind+' headers/body do not join emitted snapshot');
+   if(capture.schemaVersion!==1||capture.kind!=='cars-modern-official-prerender-response'||capture.sourceTree!==contract.sourceTree||capture.graphSha256!==graph.rsc.sha256||capture.pathname!==route.pathname||capture.locale!==locale||capture.representation!==kind||capture.status!==200||capture.bytes!==bytes.length||capture.sha256!==hash(bytes))fail('actual canonical native '+kind+' headers/body do not join emitted snapshot');
    const sealed=sealModernNativeResponseHeaders(capture.headers,security,{locale,kind,pathname:route.pathname,internalHeaderNames:producer.VINEXT_INTERNAL_HEADERS});
    if(kind==='rsc'){const next=nativeResponseIdentities(sealed.headers);if(identities&&JSON.stringify(identities)!==JSON.stringify(next))fail('canonical native RSC identities differ');identities=next;}
    policyReceipts.push({locale,representation:kind,captureSha256:hash(captureBytes),captureBytes:captureBytes.length,capture,omitted:sealed.omitted,headers:sealed.headers});
@@ -318,6 +350,6 @@ export async function emitModernFreeServicesSnapshots({packageRoot,target}){
 }
 
 export function modernFreeServicesBuildSource(){
- const functions=[installModernNativeResponseCapture,readModernCapturedBody,createModernFreeServicesPlugin,verifyModernNativePolicyToolchain,writeModernOwnedReceipt,installModernNativeWasmModules,createModernNativeWasmHooks,readModernNativeGraph,inside,leaves,removeOwnedLeaves,sealModernNativeResponseHeaders,nativeResponseIdentities,emitModernFreeServicesSnapshots];
+ const functions=[installModernNativeResponseCapture,reportModernNativeDiscovery,readModernCapturedBody,createModernFreeServicesPlugin,verifyModernNativePolicyToolchain,writeModernOwnedReceipt,installModernNativeWasmModules,createModernNativeWasmHooks,readModernNativeGraph,inside,leaves,removeOwnedLeaves,sealModernNativeResponseHeaders,nativeResponseIdentities,emitModernFreeServicesSnapshots];
  return "import fs from 'node:fs';\nimport path from 'node:path';\nimport {createHash} from 'node:crypto';\nimport {pathToFileURL} from 'node:url';\nimport {registerHooks} from 'node:module';\nconst MODERN_FREE_CLIENT_TREE="+JSON.stringify(MODERN_FREE_CLIENT_TREE)+";\nconst hash="+hash.toString()+";\nconst hex="+hex.toString()+";\nconst fail="+fail.toString()+";\nconst modernNativeRequiredHeaders="+JSON.stringify(modernNativeRequiredHeaders)+";\nconst modernNativeOptionalHeaders="+JSON.stringify(modernNativeOptionalHeaders)+";\nconst modernNativeVary="+JSON.stringify(modernNativeVary)+";\n"+functions.map(fn=>'export '+fn.toString()).join('\n')+'\n';
 }

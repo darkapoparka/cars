@@ -266,7 +266,7 @@ function inputs(){const rows=[];function add(file){if(fs.existsSync(file))rows.p
   return hash(JSON.stringify(rows.sort()));}
 function sourceInputs(){const rows=[];const ignored=new Set(['node_modules','.git','dist','runtime','.vinext','.wrangler','.cloudflare','.turbo']);
   function visit(directory){for(const item of fs.readdirSync(directory,{withFileTypes:true}).sort((a,b)=>a.name.localeCompare(b.name,'en'))){if(ignored.has(item.name)||item.name.startsWith('.next')||item.name==='next-env.d.ts'||item.name.endsWith('.tsbuildinfo'))continue;const file=path.join(directory,item.name);if(/packages[\\\\/]database[\\\\/]generated(?:[\\\\/]|$)/.test(file))continue;if(item.isSymbolicLink())throw Error('Linked generated source requires review: '+file);if(item.isDirectory())visit(file);else if(item.isFile())rows.push([path.relative(packageRoot,file).replaceAll('\\\\','/'),hash(fs.readFileSync(file))]);}}
-  visit(dependencyRoot);for(const name of ['dealer.json','.cars-cloudflare-next.json','scripts/build-cloudflare-next.mjs'${modernFreeServicesExperiment ? ",'.cars-modern-free-build.json','scripts/modern-free-services-build.mjs'" : ''}]){const file=path.join(packageRoot,name);if(fs.existsSync(file))rows.push([name,hash(fs.readFileSync(file))]);}
+  visit(dependencyRoot);for(const name of ['dealer.json','.cars-cloudflare-next.json','scripts/build-cloudflare-next.mjs'${modernFreeServicesExperiment ? ",'.cars-modern-free-build.json','scripts/modern-free-services-build.mjs','scripts/modern-native-prerender-preload.mjs'" : ''}]){const file=path.join(packageRoot,name);if(fs.existsSync(file))rows.push([name,hash(fs.readFileSync(file))]);}
   return hash(JSON.stringify(rows.sort()));}
 function verifyPins(){const pkg=JSON.parse(fs.readFileSync(path.join(cwd,'package.json'),'utf8')),installed={};
   for(const name of ['vinext','vite','@vitejs/plugin-rsc','@cloudflare/vite-plugin','wrangler','react','react-dom','react-server-dom-webpack',...(key==='modern'?[]:['@stylexjs/unplugin','unplugin'])]){
@@ -295,7 +295,7 @@ if(phase==='prove'){
   }else run([bin('vinext','vinext'),'check']);
   if(phase==='build'){
     if(key==='modern')run([npmCli,'exec','--yes','--package=pnpm@11.4.0','--','pnpm','--filter','@repo/database','build'],dependencyRoot);
-    run([bin('vite','vite'),'build']);
+    ${modernFreeServicesExperiment ? "run([...(target.freeStaticExperiment?['--import',new URL('./modern-native-prerender-preload.mjs',import.meta.url).href]:[]),bin('vite','vite'),'build']);" : "run([bin('vite','vite'),'build']);"}
     if(proof.sourceDigest!==sourceInputs())throw Error('Generated Next Cloudflare source changed during build');${modernFreeServicesExperiment ? "\n    if(target.freeStaticExperiment)await emitModernFreeServicesSnapshots({packageRoot,target});" : ''}
     for(const file of [target.generatedConfig,target.main])if(!fs.existsSync(path.join(packageRoot,file)))throw Error('Missing Cloudflare build artifact: '+file);
     // Vite emits compiled assets beneath basePath but copies public namespaces
