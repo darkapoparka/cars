@@ -110,7 +110,7 @@ function modernReact(files, changes) {
   }
 }
 
-export function applyCloudflareNext(inputFiles, manifest, { workerPrefix = 'cars-' + manifest?.slug, dependencyLocks, modernFreeServicesExperiment } = {}) {
+export function applyCloudflareNext(inputFiles, manifest, { workerPrefix = 'cars-' + manifest?.slug, dependencyLocks, modernFreeServicesExperiment, modernFreeNativeQueryExperiment } = {}) {
   if (!(inputFiles instanceof Map)) throw Error('Next Cloudflare adapter requires a source file map');
   if (!/^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/.test(workerPrefix) || workerPrefix.length > 54) throw Error('Invalid Cloudflare Worker prefix');
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(manifest?.slug ?? '')) throw Error('Invalid Next Cloudflare dealer slug');
@@ -118,7 +118,8 @@ export function applyCloudflareNext(inputFiles, manifest, { workerPrefix = 'cars
   if (!selected.length || new Set(selected.map(({ key }) => key)).size !== selected.length) throw Error('Missing or duplicate Next Cloudflare services');
   const modern = selected.find(item => item.key === "modern");
   if (modernFreeServicesExperiment && !modern) throw Error("Modern Free build experiment requires Modern");
-  const files = new Map(applyModernFreeBuildOverlay(inputFiles, modernFreeServicesExperiment, {base:modern?.base})), adaptations = [], targets = [];
+  if(modernFreeNativeQueryExperiment&&!modernFreeServicesExperiment)throw Error("Native query capture requires explicit original native policy experiment");
+  const files = new Map(applyModernFreeBuildOverlay(inputFiles, modernFreeServicesExperiment, {base:modern?.base,nativeQuery:modernFreeNativeQueryExperiment})), adaptations = [], targets = [];
   for (const { key, base } of selected) {
     const allowed = key === 'modern' ? ['/variant-2', '/variant-3'] : [key === 'app' ? '/variant-4' : '/variant-5'];
     if (!allowed.includes(base)) throw Error('Invalid Next Cloudflare native mount: ' + key);
@@ -175,6 +176,7 @@ export function applyCloudflareNext(inputFiles, manifest, { workerPrefix = 'cars
       main: root + '/dist/server/index.js', react,
       environment: { NEXT_PUBLIC_BASE_PATH: base, CARS_CLOUDFLARE_PROVIDER: '1' },
       ...(key === 'modern' && modernFreeServicesExperiment ? {freeStaticExperiment:{manifestPath:root+'/dist/server/cars-free-services.json',resolverPath:root+'/dist/server/cars-native-preferences.js',receiptPath:root+'/dist/server/cars-free-services-build.json'}} : {}),
+      ...(key === 'modern' && modernFreeNativeQueryExperiment ? {nativeQueryExperiment:{manifestPath:root+'/dist/server/cars-free-native-query.json',entryPath:root+'/dist/server/cars-native-marketplace-query.js',receiptPath:root+'/dist/server/cars-free-native-query-build.json'}} : {}),
       sourcePackageSha256: digest(originalPackage), sourceLockSha256, generatedPackageSha256: digest(files.get(packageName)), lockPath });
   }
   generated(files, 'scripts/build-cloudflare-next.mjs', cloudflareNextBuildHelper({modernFreeServicesExperiment:Boolean(modernFreeServicesExperiment)}));

@@ -4,6 +4,7 @@ import {createHash} from 'node:crypto';
 import {pathToFileURL} from 'node:url';
 import {registerHooks} from 'node:module';
 import {headSwitcher} from '../publishing/native-mounts.mjs';
+import {modernNativeQueryBuildRuntimeSource,modernNativeQueryGraphEntrySource,inspectModernNativePureQueryGraph,captureModernNativeQueryRoutes,emitModernNativeQuerySnapshots} from './modern-free-native-query-build.mjs';
 
 // Bounded, explicitly requested Priselci experiment; never a template promotion.
 export const MODERN_FREE_SOURCE_REVISION='b1f0f5609c7c249cfd0649c122849ff2cbb8dfde';
@@ -17,6 +18,9 @@ export const MODERN_FREE_SOURCE_RESEAL=Object.freeze({
  receiptSha256:'032475f943c5c933d767692a6e9a1049b2703ac4bdaa06e86bbe6c204e43e8fe',
  independentHandoffSha256:'614eb2d783aa6a28ce7e14d3040219cc61ded71f88c13e43233fc32892c46814',
 });
+export const MODERN_FREE_SOURCE_UPDATE=Object.freeze({"schemaVersion":1,"kind":"cars-published-localization-source-update","predecessorSourceTree":"5027934141219c6f8373f95bc239e8b9f5eb12cf","sourceTree":"87179bc133606e6d11b5eaa6ae8959c1eed1d657","publicationCommit":"1ffcc3627c1141c26e710bca8e437f7415c1eeaf","publicationReceiptSha256":"b8e0ea10f91103b9af112542a5a37247d67610192004b726a9b7571ceefadde2","changes":[{"path":"clients/priselci/import/src/lib/content/inventory-localized.ts","beforeGitBlob":"167c6b951701896132ef2e57027c2239313c8300","afterGitBlob":"49dd10a0a4bff41ba7d00be04e515ea681520d17","bytes":85942},{"path":"clients/priselci/localization/adoption.json","beforeGitBlob":"118249a22816edd4594b2aedbbe6733639940021","afterGitBlob":"0eacab4c6c9b5671ee220502ccc88f784f6226b4","bytes":95476}]});
+const modernFreeSourceTree=value=>value===MODERN_FREE_CLIENT_TREE||value===MODERN_FREE_SOURCE_UPDATE.sourceTree;
+export function validateModernFreeSourceUpdate(value){if(value===undefined)return null;if(JSON.stringify(value)!==JSON.stringify(MODERN_FREE_SOURCE_UPDATE))fail('exact published localization source update required');return structuredClone(value);}
 export const MODERN_FREE_OVERLAY_PATHS=Object.freeze([
  'templates/modern/apps/web/lib/locale-preferences.ts',
  'templates/modern/apps/web/app/[locale]/layout.tsx',
@@ -31,7 +35,8 @@ function replaceOnce(source,from,to){if(source.split(from).length!==2)fail('unre
 
 export function validateModernFreeServicesRequest(value,{dealer,sourceTree,sourceReleases}={}){
  if(value===undefined)return null;
- if(!exact(value,['schemaVersion','kind','dealer','sourceRevision','sourceTree','sourceReseal','overlayCommit','files'])||value.schemaVersion!==1||value.kind!=='cars-modern-free-services-build-experiment'||value.dealer!=='priselci'||value.dealer!==dealer||value.sourceRevision!==MODERN_FREE_SOURCE_REVISION||value.sourceTree!==MODERN_FREE_CLIENT_TREE||sourceTree!==value.sourceTree||sourceReleases?.modern?.revision!==value.sourceRevision||!hex(value.overlayCommit,40)||!Array.isArray(value.files)||value.files.length!==3||!exact(value.sourceReseal,Object.keys(MODERN_FREE_SOURCE_RESEAL))||Object.entries(MODERN_FREE_SOURCE_RESEAL).some(([key,expected])=>value.sourceReseal[key]!==expected))fail('exact reviewed resealed dealer/source and published overlay request required');
+ if(!exact(value,['schemaVersion','kind','dealer','sourceRevision','sourceTree','sourceReseal','overlayCommit','files',...(value.sourceUpdate===undefined?[]:['sourceUpdate'])])||value.schemaVersion!==1||value.kind!=='cars-modern-free-services-build-experiment'||value.dealer!=='priselci'||value.dealer!==dealer||value.sourceRevision!==MODERN_FREE_SOURCE_REVISION||!modernFreeSourceTree(value.sourceTree)||sourceTree!==value.sourceTree||sourceReleases?.modern?.revision!==value.sourceRevision||!hex(value.overlayCommit,40)||!Array.isArray(value.files)||value.files.length!==3||!exact(value.sourceReseal,Object.keys(MODERN_FREE_SOURCE_RESEAL))||Object.entries(MODERN_FREE_SOURCE_RESEAL).some(([key,expected])=>value.sourceReseal[key]!==expected))fail('exact reviewed resealed dealer/source and published overlay request required');
+ if((value.sourceTree===MODERN_FREE_CLIENT_TREE&&value.sourceUpdate!==undefined)||(value.sourceTree===MODERN_FREE_SOURCE_UPDATE.sourceTree&&!validateModernFreeSourceUpdate(value.sourceUpdate)))fail('source update is required only for the exact published successor');
  const paths=new Set();
  for(const row of value.files){
   if(!exact(row,['path','beforeGitBlob','beforeSha256','afterGitBlob','afterSha256'])||!MODERN_FREE_OVERLAY_PATHS.includes(row.path)||paths.has(row.path)||!hex(row.beforeGitBlob,40)||!hex(row.afterGitBlob,40)||!hex(row.beforeSha256,64)||!hex(row.afterSha256,64)||row.beforeGitBlob===row.afterGitBlob)fail('exact three native before/after leases required');
@@ -50,13 +55,13 @@ export function applyModernFreeNativeOverlay(input,value,{dealer,sourceTree,sour
   if(!Buffer.isBuffer(before)||hash(before)!==row.beforeSha256||blob(before)!==row.beforeGitBlob||hash(after)!==row.afterSha256||blob(after)!==row.afterGitBlob)fail('original or overlay native bytes differ: '+row.path);
   files.set(member,after);rows.push({...row,bytes:after.length});
  }
- const experiment={schemaVersion:1,kind:request.kind,dealer,sourceCommit,sourceTree,sourceRevision:request.sourceRevision,sourceReseal:request.sourceReseal,overlayCommit:request.overlayCommit,requestSha256:hash(JSON.stringify(request)),files:rows,originalSourceUnchanged:true};
+ const experiment={schemaVersion:1,kind:request.kind,dealer,sourceCommit,sourceTree,sourceRevision:request.sourceRevision,sourceReseal:request.sourceReseal,...(request.sourceUpdate?{sourceUpdate:request.sourceUpdate}:{}),overlayCommit:request.overlayCommit,requestSha256:hash(JSON.stringify(request)),files:rows,originalSourceUnchanged:true};
  return {files,experiment};
 }
 
-export function applyModernFreeBuildOverlay(input,experiment,{base}={}){
+export function applyModernFreeBuildOverlay(input,experiment,{base,nativeQuery}={}){
  if(experiment===undefined||experiment===null)return input;
- if(!(input instanceof Map)||!['/variant-2','/variant-3'].includes(base)||experiment.kind!=='cars-modern-free-services-build-experiment'||experiment.dealer!=='priselci'||!hex(experiment.sourceCommit,40)||!hex(experiment.overlayCommit,40)||experiment.sourceTree!==MODERN_FREE_CLIENT_TREE||experiment.sourceRevision!==MODERN_FREE_SOURCE_REVISION||!hex(experiment.requestSha256,64)||experiment.files?.length!==3)fail('sealed native overlay required');
+ if(!(input instanceof Map)||!['/variant-2','/variant-3'].includes(base)||experiment.kind!=='cars-modern-free-services-build-experiment'||experiment.dealer!=='priselci'||!hex(experiment.sourceCommit,40)||!hex(experiment.overlayCommit,40)||!modernFreeSourceTree(experiment.sourceTree)||experiment.sourceRevision!==MODERN_FREE_SOURCE_REVISION||!hex(experiment.requestSha256,64)||experiment.files?.length!==3)fail('sealed native overlay required');
  const files=new Map(input),generated=[];
  const put=(name,bytes)=>{const before=files.get(name);if(!before)fail('missing original graph module '+name);const next=Buffer.from(bytes);files.set(name,next);generated.push({path:name,beforeGitBlob:blob(before),beforeSha256:hash(before),afterGitBlob:blob(next),afterSha256:hash(next)});};
  const layout='modern/apps/web/app/[locale]/layout.tsx';let body=files.get(layout)?.toString();if(!body)fail('native Layout missing');
@@ -93,7 +98,8 @@ export function applyModernFreeBuildOverlay(input,experiment,{base}={}){
  body+='\n// Reuse the original policy in its own lexical security closure.\nexport { resolveCarsNativeResponsePolicy } from "./cars-original-proxy";\n';put(proxy,body);
  const policy='\n// Same native security configuration; this pure export performs no request or SSR.\nexport async function resolveCarsNativeResponsePolicy(locale: "en" | "bg") {\n  if (locale !== "en" && locale !== "bg") throw new Error("Exact Services locale required");\n  const response = await securityHeaders();\n  const headers = new Headers(response.headers);\n  headers.delete("x-middleware-next");\n  for (const [name, value] of carsPrivateHeaders(locale)) headers.set(name, value);\n  return Object.fromEntries(headers);\n}\n';
  put(originalProxy,'import { privateHeaders as carsPrivateHeaders } from "@repo/internationalization/policy";\n'+originalProxySource+policy);
- const receipt={...experiment,mount:base,vinext:'1.1.0',phase:{VINEXT_PRERENDER:'1',NEXT_PHASE:'phase-production-build'},generated,policySources,policyDependencies:{'@nosecone/next':'1.2.0',nosecone:'1.2.0'},graph:'original-native-rsc-ssr-client',queryCache:false,nativeApproved:false,hostedApproved:false,freeCpuQualified:false};
+ if(nativeQuery&&(nativeQuery.kind!=='cars-modern-native-query-build-proposal'||nativeQuery.sourceTree!==experiment.sourceTree||nativeQuery.sourceCommit!==experiment.sourceCommit||!hex(nativeQuery.nativeInventorySeal,64)))fail('native query source overlay differs');
+ const receipt={...experiment,...(nativeQuery?{nativeQuery}:{}),mount:base,vinext:'1.1.0',phase:{VINEXT_PRERENDER:'1',NEXT_PHASE:'phase-production-build'},generated,policySources,policyDependencies:{'@nosecone/next':'1.2.0',nosecone:'1.2.0'},graph:'original-native-rsc-ssr-client',queryCache:false,nativeApproved:false,hostedApproved:false,freeCpuQualified:false};
  const preload=modernNativePrerenderPreloadSource();receipt.nativeCapture={strategy:'early-owned-node-observer',preloadPath:'scripts/modern-native-prerender-preload.mjs',preloadSha256:hash(preload),activation:'final-native-rsc-disk-graph'};
  for(const [name,bytes]of [['.cars-modern-free-build.json',JSON.stringify(receipt,null,2)+'\n'],['scripts/modern-free-services-build.mjs',modernFreeServicesBuildSource()],['scripts/modern-native-prerender-preload.mjs',preload]]){if(files.has(name))fail('occupied generated experiment member '+name);files.set(name,Buffer.from(bytes));}
  return files;
@@ -106,7 +112,7 @@ import {installModernNativeResponseCapture} from './modern-free-services-build.m
 const packageRoot=fs.realpathSync(path.resolve(import.meta.dirname,'..'));
 const contract=JSON.parse(fs.readFileSync(path.join(packageRoot,'.cars-modern-free-build.json'),'utf8'));
 const bytes=fs.readFileSync(import.meta.filename);
-if(process.argv.length!==3||process.argv[2]!=='build'||contract.kind!=='cars-modern-free-services-build-experiment'||contract.dealer!=='priselci'||contract.sourceTree!==${JSON.stringify(MODERN_FREE_CLIENT_TREE)}||contract.nativeCapture?.strategy!=='early-owned-node-observer'||contract.nativeCapture.preloadSha256!==createHash('sha256').update(bytes).digest('hex'))throw Error('Exact owned Modern Vite preload required');
+if(process.argv.length!==3||process.argv[2]!=='build'||contract.kind!=='cars-modern-free-services-build-experiment'||contract.dealer!=='priselci'||![${JSON.stringify(MODERN_FREE_CLIENT_TREE)},${JSON.stringify(MODERN_FREE_SOURCE_UPDATE.sourceTree)}].includes(contract.sourceTree)||contract.nativeCapture?.strategy!=='early-owned-node-observer'||contract.nativeCapture.preloadSha256!==createHash('sha256').update(bytes).digest('hex'))throw Error('Exact owned Modern Vite preload required');
 installModernNativeResponseCapture({packageRoot,mount:contract.mount,sourceTree:contract.sourceTree,deferActivation:true}).registerExitHook();
 `;}
 
@@ -147,12 +153,13 @@ export function installModernNativeResponseCapture({packageRoot,mount,sourceTree
    // live handler for canonical RSC metadata and require the emitted bytes join.
    if(response.status===200){const rscUrl=new URL(url);rscUrl.search='?_rsc=';const headers=new Headers(request.headers);headers.set('RSC','1');headers.set('Accept','text/x-component');
     const rscRequest=new Request(rscUrl,{method:'GET',headers,redirect:'manual'}),rsc=await originalFetch(rscRequest);await record(rsc,locale,'rsc',rscRequest);await rsc.body?.cancel();}
-   if(seen.size===2){reportModernNativeDiscovery(packageRoot,mount,sourceTree);restore();}return response;
+   if(seen.size===2){if(state.captureNativeQuery)await state.captureNativeQuery(request,originalFetch,readModernCapturedBody);reportModernNativeDiscovery(packageRoot,mount,sourceTree);restore();}return response;
   }catch(error){restore();throw error;}
  }
- const state={kind:'cars-modern-native-response-capture',packageRoot,mount,sourceTree,env,originalFetch,observedFetch,deferred:deferActivation,active:!deferActivation,graphSha256:null,closed:false,exitRegistered:false,handle:null};
+ const state={kind:'cars-modern-native-response-capture',packageRoot,mount,sourceTree,env,originalFetch,observedFetch,deferred:deferActivation,active:!deferActivation,graphSha256:null,captureNativeQuery:null,nativeQueryAuthority:null,closed:false,exitRegistered:false,handle:null};
  state.handle={restore,
   activate(graphSha256){if(state.closed)fail('closed native capture cannot reactivate');if(!state.deferred||!hex(graphSha256,64))fail('exact final native graph activation required');if(state.graphSha256!==null&&state.graphSha256!==graphSha256)fail('native capture graph authority differs');state.graphSha256=graphSha256;state.active=true;},
+  setNativeQueryCapture(authority,callback){if(state.closed||!state.active||!hex(authority,64)||typeof callback!=='function')fail('active exact native query capture required');if(state.nativeQueryAuthority!==null){if(state.nativeQueryAuthority!==authority)fail('native query capture authority differs');return;}state.nativeQueryAuthority=authority;state.captureNativeQuery=callback;},
   registerExitHook(){if(state.closed||state.exitRegistered)return;process.once('exit',onExit);state.exitRegistered=true;},
  };
  scope[key]=state;scope.fetch=observedFetch;return state.handle;
@@ -171,9 +178,18 @@ export function modernNativeFailureEvidence({packageRoot,sourceCommit}){
  packageRoot=fs.realpathSync(packageRoot);const contractPath=inside(packageRoot,'.cars-modern-free-build.json');if(!fs.existsSync(contractPath))return null;
  const names=['.cars-modern-free-build.json','.cars-modern-native-policy-toolchain.json','.cars-modern-native-wasm-prerender.json',...['rsc','ssr','client'].map(env=>'.cars-modern-free-graph-'+env+'.json'),...['rsc','ssr'].map(env=>'.cars-modern-free-graph-scan-'+env+'.json'),'modern/apps/web/dist/server/vinext-prerender.json','modern/apps/web/proxy.ts','modern/apps/web/cars-original-proxy.ts','modern/packages/security/proxy.ts'];
  for(const locale of ['en','bg'])for(const kind of ['html','rsc'])names.push('.cars-modern-native-response-'+locale+'-'+kind+'.json','.cars-modern-native-body-'+locale+'-'+kind+'.'+kind);
+ const ownedContract=JSON.parse(fs.readFileSync(contractPath));
+ if(ownedContract.nativeQuery){
+  names.push('.cars-modern-native-query-graph.json','.cars-modern-native-query-capture/index.json');
+  const tuples=[];for(const locale of ['en','bg'])for(const search of ['','?q=Golf'])for(const representation of ['html','rsc'])tuples.push({pathname:ownedContract.mount+'/'+locale+'/cars',search,representation});
+  const queryIndex=inside(packageRoot,'.cars-modern-native-query-capture/index.json');
+  if(fs.existsSync(queryIndex)&&fs.statSync(queryIndex).size<=2*1024*1024){const index=JSON.parse(fs.readFileSync(queryIndex));if(index.sourceTree!==ownedContract.sourceTree||index.inventorySeal!==ownedContract.nativeQuery.nativeInventorySeal)fail('failure query index source differs');for(const locale of ['en','bg']){const listing=index.routes?.find(row=>row.kind==='listing'&&row.locale===locale);if(listing)for(const representation of ['html','rsc'])tuples.push({pathname:listing.pathname,search:'',representation});}}
+  for(const tuple of tuples){const id=hash(JSON.stringify(tuple));names.push('.cars-modern-native-query-capture/'+id+'.json','.cars-modern-native-query-capture/'+id+'.'+tuple.representation+'.gz');}
+ }
+ if(names.length>64)fail('native failure evidence member bound differs');
  const files=[],missing=[];let total=0;
  for(const name of names){const file=inside(packageRoot,name);if(!fs.existsSync(file)){missing.push(name);continue;}const stat=fs.lstatSync(file);if(!stat.isFile()||stat.isSymbolicLink()||fs.realpathSync(file)!==file||stat.size>2*1024*1024)fail('unbounded native failure evidence');const bytes=fs.readFileSync(file);total+=bytes.length;if(total>32*1024*1024)fail('native failure evidence exceeds bound');files.push({path:name,bytes:bytes.length,sha256:hash(bytes)});}
- const contract=JSON.parse(fs.readFileSync(contractPath));if(contract.kind!=='cars-modern-free-services-build-experiment'||contract.dealer!=='priselci'||contract.sourceTree!==MODERN_FREE_CLIENT_TREE||contract.sourceCommit!==sourceCommit||!hex(sourceCommit,40)||!hex(contract.requestSha256,64)||!['/variant-2','/variant-3'].includes(contract.mount))fail('native failure evidence authority differs');
+ const contract=JSON.parse(fs.readFileSync(contractPath));if(contract.kind!=='cars-modern-free-services-build-experiment'||contract.dealer!=='priselci'||!modernFreeSourceTree(contract.sourceTree)||contract.sourceCommit!==sourceCommit||!hex(sourceCommit,40)||!hex(contract.requestSha256,64)||!['/variant-2','/variant-3'].includes(contract.mount))fail('native failure evidence authority differs');
  return {schemaVersion:1,kind:'cars-modern-native-failure-evidence',sourceCommit,sourceTree:contract.sourceTree,overlayCommit:contract.overlayCommit,requestSha256:contract.requestSha256,mount:contract.mount,observational:true,compiled:false,hosted:false,files,missing,totalBytes:total};
 }
 async function readModernCapturedBody(response){
@@ -184,7 +200,7 @@ async function readModernCapturedBody(response){
 
 /** An additional export in the SAME RSC build, with original source/module IDs. */
 export function createModernFreeServicesPlugin({packageRoot,cwd}){
- const virtual='virtual:cars-native-preferences',resolved='\0'+virtual;let manager;
+ const virtual='virtual:cars-native-preferences',resolved='\0'+virtual,queryVirtual='virtual:cars-native-marketplace-query',queryResolved='\0'+queryVirtual;let manager;
  const phaseFor=environment=>{
   if(!['rsc','ssr','client'].includes(environment.name)||typeof manager?.isScanBuild!=='boolean')fail('pinned native build lifecycle missing');
   const phase=manager.isScanBuild?'scan':'final';
@@ -199,19 +215,28 @@ export function createModernFreeServicesPlugin({packageRoot,cwd}){
   const suffix=phase==='scan'?'scan-'+environment.name:environment.name;
   const value={schemaVersion:1,environment:environment.name,graph:'original-native',phase,lifecycle:{plugin:'@vitejs/plugin-rsc',version:'0.5.36',isScanBuild:manager.isScanBuild,write:environment.config.build.write},outputDirectory,rows,wasm};
   writeModernOwnedReceipt(packageRoot,'.cars-modern-free-graph-'+suffix+'.json',JSON.stringify(value,null,2)+'\n');
-  if(phase==='final'&&environment.name==='rsc'){const contract=JSON.parse(fs.readFileSync(inside(packageRoot,'.cars-modern-free-build.json'))),written=readModernNativeGraph(packageRoot,'rsc','final');installModernNativeWasmModules({packageRoot,graph:written.value,mount:contract.mount,sourceTree:contract.sourceTree,purpose:'official-prerender'}).registerExitHook();installModernNativeResponseCapture({packageRoot,mount:contract.mount,sourceTree:contract.sourceTree,deferActivation:true,requireExisting:true}).activate(hash(written.bytes));}
+  if(phase==='final'&&environment.name==='rsc'){
+   const contract=JSON.parse(fs.readFileSync(inside(packageRoot,'.cars-modern-free-build.json'))),written=readModernNativeGraph(packageRoot,'rsc','final');installModernNativeWasmModules({packageRoot,graph:written.value,mount:contract.mount,sourceTree:contract.sourceTree,purpose:'official-prerender'}).registerExitHook();
+   const capture=installModernNativeResponseCapture({packageRoot,mount:contract.mount,sourceTree:contract.sourceTree,deferActivation:true,requireExisting:true}),graphSha256=hash(written.bytes);capture.activate(graphSha256);
+   if(contract.nativeQuery)return (async()=>{
+    const closure=inspectModernNativePureQueryGraph(written.value),entryPath=inside(inside(packageRoot,written.value.outputDirectory),closure.entry),entryBytes=fs.readFileSync(entryPath),entry=await import(pathToFileURL(entryPath).href+'?cars-native-query='+hash(entryBytes));
+    if(entry.nativeInventorySeal!==contract.nativeQuery.nativeInventorySeal||entry.sourceTree!==contract.sourceTree)fail('compiled pure query source binding differs');
+    writeModernOwnedReceipt(packageRoot,'.cars-modern-native-query-graph.json',JSON.stringify({schemaVersion:1,kind:'cars-modern-native-pure-query-final-graph',sourceTree:contract.sourceTree,nativeInventorySeal:entry.nativeInventorySeal,graphSha256,entry:{path:path.relative(packageRoot,entryPath).replaceAll('\\','/'),bytes:entryBytes.length,sha256:hash(entryBytes)},closure},null,2)+'\n');
+    capture.setNativeQueryCapture(hash(JSON.stringify(contract.nativeQuery)),(request,fetchNative,readBody)=>captureModernNativeQueryRoutes({packageRoot,mount:contract.mount,sourceTree:contract.sourceTree,graphSha256,entry,request,fetchNative,readBody}));
+   })();
+  }
  };
  return {name:'cars-modern-free-services-graph',apply:'build',enforce:'post',
   // Same public API lookup as tagged getPluginApi; the manager is shared by all
   // five official stages. Do not infer phase from environment identity/counts.
   configResolved(config){manager=config.plugins.find(plugin=>plugin.name==='rsc:minimal')?.api?.manager;if(typeof manager?.isScanBuild!=='boolean')fail('pinned native build lifecycle missing');},
-  resolveId(id){if(id===virtual)return resolved;},
-  load(id){if(id===resolved)return 'export { resolveCarsNativePreferences } from '+JSON.stringify(path.join(cwd,'lib/locale-preferences.ts').replaceAll('\\','/'))+';\nexport { resolveCarsNativeResponsePolicy } from '+JSON.stringify(path.join(cwd,'proxy.ts').replaceAll('\\','/'))+';\nexport { VINEXT_INTERNAL_HEADERS } from "vinext/internal/server/headers";';},
-  buildStart(){const phase=phaseFor(this.environment);if(this.environment.name==='rsc'){const contract=JSON.parse(fs.readFileSync(path.join(packageRoot,'.cars-modern-free-build.json'),'utf8'));verifyModernNativePolicyToolchain(packageRoot);this.emitFile({type:'chunk',id:virtual,fileName:'cars-native-preferences.js',preserveSignature:'strict'});if(phase==='final'){const capture=installModernNativeResponseCapture({packageRoot,mount:contract.mount,sourceTree:contract.sourceTree,deferActivation:true,requireExisting:true});capture.registerExitHook();}}},
-  generateBundle:{order:'post',handler(_options,bundle){const phase=phaseFor(this.environment);if(phase==='scan')recordGraph(this.environment,bundle,phase);}},
+  resolveId(id){if(id===virtual)return resolved;if(id===queryVirtual)return queryResolved;},
+  load(id){if(id===queryResolved)return modernNativeQueryGraphEntrySource(cwd);if(id===resolved)return 'export { resolveCarsNativePreferences } from '+JSON.stringify(path.join(cwd,'lib/locale-preferences.ts').replaceAll('\\','/'))+';\nexport { resolveCarsNativeResponsePolicy } from '+JSON.stringify(path.join(cwd,'proxy.ts').replaceAll('\\','/'))+';\nexport { VINEXT_INTERNAL_HEADERS } from "vinext/internal/server/headers";';},
+  buildStart(){const phase=phaseFor(this.environment);if(this.environment.name==='rsc'){const contract=JSON.parse(fs.readFileSync(path.join(packageRoot,'.cars-modern-free-build.json'),'utf8'));verifyModernNativePolicyToolchain(packageRoot);this.emitFile({type:'chunk',id:virtual,fileName:'cars-native-preferences.js',preserveSignature:'strict'});if(contract.nativeQuery)this.emitFile({type:'chunk',id:queryVirtual,fileName:'cars-native-marketplace-query.js',preserveSignature:'strict'});if(phase==='final'){const capture=installModernNativeResponseCapture({packageRoot,mount:contract.mount,sourceTree:contract.sourceTree,deferActivation:true,requireExisting:true});capture.registerExitHook();}}},
+  generateBundle:{order:'post',handler(_options,bundle){const phase=phaseFor(this.environment);if(phase==='scan')return recordGraph(this.environment,bundle,phase);}},
   // All generateBundle mutations precede writeBundle. Only written final output
   // is authoritative; scan graphs remain separate immutable evidence.
-  writeBundle:{order:'post',handler(_options,bundle){const phase=phaseFor(this.environment);if(phase!=='final')fail('scan graph was written');recordGraph(this.environment,bundle,phase);}},
+  writeBundle:{order:'post',handler(_options,bundle){const phase=phaseFor(this.environment);if(phase!=='final')fail('scan graph was written');return recordGraph(this.environment,bundle,phase);}},
  };
 }
 
@@ -236,7 +261,7 @@ function writeModernOwnedReceipt(root,relative,value){
  * expects compiled Modules and supplies its own exact component imports. */
 export function installModernNativeWasmModules({packageRoot,graph,mount,sourceTree,purpose,scope=globalThis,env=process.env}={}){
  packageRoot=fs.realpathSync(packageRoot);
- if(!['/variant-2','/variant-3'].includes(mount)||sourceTree!==MODERN_FREE_CLIENT_TREE||!['official-prerender','compiled-policy-admission'].includes(purpose)||graph?.environment!=='rsc'||graph.phase!=='final'||graph.lifecycle?.plugin!=='@vitejs/plugin-rsc'||graph.lifecycle?.version!=='0.5.36'||graph.lifecycle?.isScanBuild!==false||graph.lifecycle?.write!==true||!Array.isArray(graph.wasm)||graph.wasm.length!==3)fail('exact final native WASM authority required');
+ if(!['/variant-2','/variant-3'].includes(mount)||!modernFreeSourceTree(sourceTree)||!['official-prerender','compiled-policy-admission'].includes(purpose)||graph?.environment!=='rsc'||graph.phase!=='final'||graph.lifecycle?.plugin!=='@vitejs/plugin-rsc'||graph.lifecycle?.version!=='0.5.36'||graph.lifecycle?.isScanBuild!==false||graph.lifecycle?.write!==true||!Array.isArray(graph.wasm)||graph.wasm.length!==3)fail('exact final native WASM authority required');
  const contract=JSON.parse(fs.readFileSync(inside(packageRoot,'.cars-modern-free-build.json')));if(contract.mount!==mount||contract.sourceTree!==sourceTree)fail('native WASM compiled source authority differs');
  const output=inside(packageRoot,graph.outputDirectory),seen=new Set(),rows=graph.wasm.map(row=>{
   const match=new RegExp('^'+mount.slice(1)+'/_next/static/media/arcjet_analyze_js_req\\.component\\.(core(?:2|3)?)\\.[A-Za-z0-9_-]+\\.wasm$').exec(row.file);
@@ -288,7 +313,7 @@ function removeOwnedLeaves(root,names){
 const modernNativeRequiredHeaders=['cache-control','cdn-cache-control','vercel-cdn-cache-control','content-language','content-type','vary','content-security-policy','cross-origin-opener-policy','cross-origin-resource-policy','origin-agent-cluster','referrer-policy','strict-transport-security','x-content-type-options','x-dns-prefetch-control','x-download-options','x-frame-options','x-permitted-cross-domain-policies','x-xss-protection'];
 const modernNativeOptionalHeaders=['link','x-edge-runtime','x-vinext-params','x-vinext-dynamic-stale-time','x-nextjs-stale-time','x-vinext-rendered-path-and-search','x-vinext-rsc-build-id','x-vinext-rsc-compatibility-id','x-nextjs-deployment-id','x-deployment-id'];
 const modernNativeVary='RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Interception-Id, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode, X-Vinext-Rsc-State-Fingerprint';
-export function sealModernNativeResponseHeaders(capture,security,{locale,kind,pathname,internalHeaderNames}){
+export function sealModernNativeResponseHeaders(capture,security,{locale,kind,pathname,internalHeaderNames,routeParams={locale},renderedPath="/"+locale+"/services"}){
  const omitted={},headers={},internal=new Set(internalHeaderNames);
  const diagnostics=new Set(['x-modern-public-path','x-vinext-cache','x-nextjs-cache','x-next-cache-tags','x-vinext-timing','server-timing','date','connection','keep-alive','transfer-encoding','content-length','content-encoding']);
  for(const [name,value]of Object.entries(capture)){
@@ -303,7 +328,8 @@ export function sealModernNativeResponseHeaders(capture,security,{locale,kind,pa
  if(Object.keys(headers).length>32||total>32768||modernNativeRequiredHeaders.some(name=>!Object.hasOwn(headers,name)))fail('bounded complete native security policy required');
  if(headers['cache-control']!=='private, no-store'||headers['cdn-cache-control']!=='no-store'||headers['vercel-cdn-cache-control']!=='no-store'||headers['content-language']!==locale||headers.vary!==modernNativeVary||headers['content-type']!==(kind==='rsc'?'text/x-component':'text/html; charset=utf-8'))fail('native representation/private policy differs');
  if(kind==='rsc'){
-  if(headers['x-vinext-params']!==encodeURIComponent(JSON.stringify({locale}))||headers['x-vinext-rendered-path-and-search']!==encodeURIComponent('/'+locale+'/services'))fail('actual native RSC route metadata required');
+  let actualParams;try{actualParams=JSON.parse(decodeURIComponent(headers['x-vinext-params']));}catch{fail('actual native RSC route parameters malformed');}
+  if(JSON.stringify(Object.entries(actualParams).sort())!==JSON.stringify(Object.entries(routeParams).sort())||headers['x-vinext-rendered-path-and-search']!==encodeURIComponent(renderedPath))fail('actual native RSC route metadata required');
  }else if(Object.keys(headers).some(name=>name.startsWith('x-vinext-')||name==='x-nextjs-stale-time'||name==='x-nextjs-deployment-id'))fail('HTML has RSC-only metadata');
  return {headers:Object.fromEntries(Object.entries(headers).sort()),omitted};
 }
@@ -317,7 +343,7 @@ function nativeResponseIdentities(headers){
 export async function emitModernFreeServicesSnapshots({packageRoot,target}){
  if(target.key!=='modern'||!target.freeStaticExperiment)fail('explicit Modern target marker required');
  packageRoot=fs.realpathSync(packageRoot);const contract=JSON.parse(fs.readFileSync(inside(packageRoot,'.cars-modern-free-build.json'),'utf8'));
- if(contract.mount!==target.base||contract.vinext!=='1.1.0'||contract.sourceTree!==MODERN_FREE_CLIENT_TREE||!hex(contract.overlayCommit,40))fail('original compiled overlay contract differs');
+ if(contract.mount!==target.base||contract.vinext!=='1.1.0'||!modernFreeSourceTree(contract.sourceTree)||!hex(contract.overlayCommit,40))fail('original compiled overlay contract differs');
  const server=inside(packageRoot,target.root+'/dist/server'),client=inside(packageRoot,target.assets),prerender=inside(server,'prerendered-routes'),indexPath=inside(server,'vinext-prerender.json');
  for(const dir of [server,client,prerender])if(fs.lstatSync(dir).isSymbolicLink()||fs.realpathSync(dir)!==dir)fail('linked build output');
  const indexBytes=fs.readFileSync(indexPath),index=JSON.parse(indexBytes);if(!hex(index.buildId,32)&&!(typeof index.buildId==='string'&&index.buildId.length>0&&index.buildId.length<=256))fail('actual native BUILD_ID required');
@@ -381,11 +407,12 @@ export async function emitModernFreeServicesSnapshots({packageRoot,target}){
  const snapshotProvenance={method:officialStaticAccepted?'official-prerender-byte-join':'original-handler-no-store-capture',officialStaticAccepted,officialIndex:{path:retainedIndexPath,bytes:indexBytes.length,sha256:hash(indexBytes)},services:serviceRows};
  const receipt={...contract,schemaVersion:2,kind:'cars-modern-free-services-compiled-experiment',buildId:index.buildId,nativePrerenderIndexSha256:hash(indexBytes),snapshotProvenance,discardedGenerated404:seen.has('/404'),emitted:routes,responsePolicy,manifest:{path:target.root+'/dist/server/cars-free-services.json',bytes:manifestBytes.length,sha256:hash(manifestBytes)},nativeResponsePolicy:{path:policyPath,bytes:policyBytes.length,sha256:hash(policyBytes),callableVerified:true,actualRscBodyJoinVerified:true},nativeNodeWasm:{path:wasmPath,bytes:wasmBytes.length,sha256:hash(wasmBytes)},resolver:{path:target.root+'/dist/server/cars-native-preferences.js',bytes:resolverBytes.length,sha256:hash(resolverBytes),callableVerified:false},graph,originalClientSourceTreeUnchanged:true,queryCache:false,nativeApproved:false,hostedApproved:false,freeCpuQualified:false};
  fs.writeFileSync(inside(server,'cars-free-services-build.json'),JSON.stringify(receipt,null,2)+'\n',{flag:'wx'});
+ if(target.nativeQueryExperiment){const queryWasm=installModernNativeWasmModules({packageRoot,graph:rscGraph,mount:contract.mount,sourceTree:contract.sourceTree,purpose:'compiled-policy-admission'});try{const producer=await import(pathToFileURL(resolver).href+'?cars-policy='+hash(resolverBytes));await emitModernNativeQuerySnapshots({packageRoot,target,readGraph:readModernNativeGraph,sealHeaders:sealModernNativeResponseHeaders,nativeResponseIdentities,producer,servicesReceipt:receipt});}finally{queryWasm.restore();}}
  removeOwnedLeaves(prerender,actual);fs.unlinkSync(indexPath);
  return {manifestPath:target.root+'/dist/server/cars-free-services.json',resolverPath:target.root+'/dist/server/cars-native-preferences.js',receiptPath:target.root+'/dist/server/cars-free-services-build.json'};
 }
 
 export function modernFreeServicesBuildSource(){
  const functions=[installModernNativeResponseCapture,reportModernNativeDiscovery,modernNativeFailureEvidence,readModernCapturedBody,createModernFreeServicesPlugin,verifyModernNativePolicyToolchain,writeModernOwnedReceipt,installModernNativeWasmModules,createModernNativeWasmHooks,readModernNativeGraph,inside,leaves,removeOwnedLeaves,sealModernNativeResponseHeaders,nativeResponseIdentities,emitModernFreeServicesSnapshots];
- return "import fs from 'node:fs';\nimport path from 'node:path';\nimport {createHash} from 'node:crypto';\nimport {pathToFileURL} from 'node:url';\nimport {registerHooks} from 'node:module';\nconst MODERN_FREE_CLIENT_TREE="+JSON.stringify(MODERN_FREE_CLIENT_TREE)+";\nconst hash="+hash.toString()+";\nconst hex="+hex.toString()+";\nconst fail="+fail.toString()+";\nconst modernNativeRequiredHeaders="+JSON.stringify(modernNativeRequiredHeaders)+";\nconst modernNativeOptionalHeaders="+JSON.stringify(modernNativeOptionalHeaders)+";\nconst modernNativeVary="+JSON.stringify(modernNativeVary)+";\n"+functions.map(fn=>'export '+fn.toString()).join('\n')+'\n';
+ return "import fs from 'node:fs';\nimport path from 'node:path';\nimport {createHash} from 'node:crypto';\nimport {pathToFileURL} from 'node:url';\nimport {registerHooks} from 'node:module';\nimport {gzipSync,gunzipSync} from 'node:zlib';\nconst MODERN_FREE_CLIENT_TREE="+JSON.stringify(MODERN_FREE_CLIENT_TREE)+";\nconst MODERN_FREE_SOURCE_UPDATE="+JSON.stringify(MODERN_FREE_SOURCE_UPDATE)+";\nconst modernFreeSourceTree="+modernFreeSourceTree.toString()+";\nconst hash="+hash.toString()+";\nconst hex="+hex.toString()+";\nconst safe="+((value)=>typeof value==='string'&&value.length<512&&value.split('/').every(part=>part&&part!=='.'&&part!=='..'&&!part.includes('\\')&&!part.includes(':'))).toString()+";\nconst exact="+exact.toString()+";\nconst fail="+fail.toString()+";\nconst modernNativeRequiredHeaders="+JSON.stringify(modernNativeRequiredHeaders)+";\nconst modernNativeOptionalHeaders="+JSON.stringify(modernNativeOptionalHeaders)+";\nconst modernNativeVary="+JSON.stringify(modernNativeVary)+";\n"+functions.map(fn=>'export '+fn.toString()).join('\n')+'\n'+modernNativeQueryBuildRuntimeSource().slice(modernNativeQueryBuildRuntimeSource().indexOf('export function inspectModernNativePureQueryGraph'));
 }
