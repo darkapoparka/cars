@@ -1,0 +1,114 @@
+--- a/scripts/package-dealer.mjs
++++ b/scripts/package-dealer.mjs
+@@ -218,7 +218,7 @@
+   return `# ${manifest.slug} dealer package\n\nThis repository is a derived deployment package. Canonical dealer source lives under clients/${manifest.slug} in the Cars repository. Read dealer.json and .cars-package.json for identity and provenance. Make source changes in Cars and regenerate the package; do not silently edit generated mounting code or template masters.\n\nAll ${manifest.variants.length} designs share one Vercel project. Preserve retained lockfiles, source layouts, licensing and provenance. Run each app's documented checks and test every mounted entry, inventory, detail, contact and enquiry destination at 390 and 1440 px. Check the design switcher at 320 px, including Escape and focus return. A build is not public-preview proof. Publishing does not authorize outreach.\n`;
+ }
+ 
+-async function prepare({ root = ROOT, source, manifest, sourceCommit, guidance, canonicalFiles, nativeReleases, provider = 'vercel', cloudflareLocks }) {
++async function prepare({ root = ROOT, source, manifest, sourceCommit, guidance, canonicalFiles, nativeReleases, provider = 'vercel', cloudflareLocks, vercelQualification }) {
+   manifest = structuredClone(manifest);
+   validatePackagingManifest(manifest);
+   if (!['vercel', 'cloudflare'].includes(provider)) throw new Error('Unsupported publishing provider');
+@@ -241,8 +241,14 @@
+     const bytes = Buffer.from(content);
+     files.set(name, preserveExtraBytes(name) ? bytes : normalized(bytes));
+   }
++  let qualification;
++  if (!native && vercelQualification !== undefined) throw new Error('Vercel qualified preview requires native source');
+   if (native) {
+-    if (nativeReleases) files = adoptNativeSource(files, baseNativeManifest(manifest), nativeReleases,{root});
++    if (vercelQualification !== undefined) {
++      const { prepareVercelQualifiedSource } = await import('./publishing/vercel-source-qualification.mjs');
++      const prepared = prepareVercelQualifiedSource({files, manifest, sourceCommit, request:vercelQualification, nativeReleases, provider, root});
++      files = prepared.files; qualification = prepared.qualification;
++    } else if (nativeReleases) files = adoptNativeSource(files, baseNativeManifest(manifest), nativeReleases,{root});
+     else { assertNativeAdoption(files, baseNativeManifest(manifest),{root}); files = applyNativeMounts(files, baseNativeManifest(manifest)); assertNativeAdoption(files, baseNativeManifest(manifest),{root}); }
+     assertAppVariant(files, manifest);
+     if (manifest.packaging.version === SIX_PACKAGING_VERSION) {
+@@ -314,7 +320,7 @@
+   sealSixVariantBuild(files, manifest, { provider });
+   const payload = hashes();
+   const payloadDigest = sha256(JSON.stringify(payload));
+-  files.set('.cars-package.json', Buffer.from(json({ schemaVersion: 1, manifest, sourceCommit, packagingVersion: manifest.packaging.version, assetDelivery, payloadDigest, payload })));
++  files.set('.cars-package.json', Buffer.from(json({ schemaVersion: 1, manifest, sourceCommit, packagingVersion: manifest.packaging.version, assetDelivery, payloadDigest, payload, ...(qualification ? {qualification} : {}) })));
+   const digest = sha256(JSON.stringify(hashes()));
+   return { resolvedSource, files, digest, inputDigest, manifestInput, manifest, assetDelivery, packagingVersion: manifest.packaging.version };
+ }
+--- /dev/null
++++ b/scripts/publishing/vercel-source-qualification.mjs
+@@ -0,0 +1,45 @@
++import { createHash } from 'node:crypto';
++import { assertNativeQualification, NATIVE_PACKAGING_VERSION } from '../lib/native-localization.mjs';
++import { baseNativeManifest, APP_PACKAGING_VERSION } from './app-variant.mjs';
++import { applyNativeMounts } from './native-mounts.mjs';
++import { assertVercelQualificationExport } from '../export-dealer.mjs';
++
++const requireStage = (value, message) => { if (!value) throw new Error('Vercel qualified preview: ' + message); };
++const hash = value => createHash('sha256').update(value).digest('hex');
++
++/** Use the existing native-source seal and mount adapters; never grant release acceptance.
++ * Ordinary package/export paths remain separate and still reject provisional sources.
++ */
++export function prepareVercelQualifiedSource({ files, manifest, sourceCommit, request, nativeReleases, provider, root }) {
++  requireStage(provider === 'vercel' && [NATIVE_PACKAGING_VERSION, APP_PACKAGING_VERSION, '5'].includes(manifest.packaging?.version), 'native Vercel packaging is required');
++  requireStage(nativeReleases === undefined, 'approved releases cannot be mixed with a qualification request');
++  requireStage(request?.schemaVersion === 1 && request.kind === 'cars-vercel-qualified-preview-request' && request.reviewed === true, 'an explicit reviewed preview request is required');
++  requireStage(request.provider === 'vercel' && request.production === false && request.nativeApproval === false && request.hostedApproval === false && request.globalReleaseApproval === false, 'a preview request cannot claim production or release approval');
++  requireStage(request.dealer === manifest.slug && request.repository === manifest.repository && request.sourceCommit === sourceCommit && /^[a-f0-9]{40}$/.test(sourceCommit), 'dealer, repository and exact source commit must match');
++  requireStage(typeof request.publicOrigin === 'string' && request.publicOrigin === manifest.shareIdentity?.publicOrigin, 'the registered stable origin must match the dealer');
++  const origin = new URL(request.publicOrigin);
++  requireStage(origin.protocol === 'https:' && !origin.username && !origin.password && origin.pathname === '/' && !origin.search && !origin.hash, 'a plain HTTPS origin is required');
++  requireStage(/^prj_[A-Za-z0-9]+$/.test(request.projectId || ''), 'the existing project ID must be recorded');
++  requireStage(/^codex\/[a-z0-9][a-z0-9/-]*$/.test(request.targetBranch || '') && !request.targetBranch.includes('..') && !request.targetBranch.endsWith('/'), 'the exact codex preview branch is required');
++  const adoptionBytes = files.get('localization/adoption.json');
++  requireStage(Buffer.isBuffer(adoptionBytes), 'the actual source qualification receipt is required');
++  const candidate = JSON.parse(adoptionBytes.toString('utf8'));
++  requireStage(request.sourceAdoptionSha256 === hash(adoptionBytes), 'the request must bind the exact source adoption bytes');
++  const base = baseNativeManifest(manifest);
++  const before = assertNativeQualification(files, base, candidate.context, { root });
++  requireStage(request.nativeInputDigest === before.input.digest && request.nativeInputFiles === before.input.files, 'the request must bind the actual native input');
++  const mounted = applyNativeMounts(files, base);
++  const after = assertNativeQualification(mounted, base, candidate.context, { root });
++  requireStage(after.input.digest === before.input.digest && after.input.files === before.input.files, 'mounting changed the reviewed qualified source; reconcile upstream');
++  const qualification = {
++    schemaVersion: 1, kind: 'cars-vercel-native-source-qualification', provider,
++    dealer: manifest.slug, repository: manifest.repository, publicOrigin: request.publicOrigin,
++    projectId: request.projectId, targetBranch: request.targetBranch, sourceCommit,
++    sourceAdoptionSha256: hash(adoptionBytes), input: before.input, contextDigest: before.contextDigest,
++    requestSha256: hash(JSON.stringify(request)),
++    production: false, nativeApproval: false, hostedApproval: false, globalReleaseApproval: false,
++    pendingNativeChecks: before.pendingNativeChecks
++  };
++  assertVercelQualificationExport({ qualification, sourceCommit, assetDelivery: { provider } }, { branch: request.targetBranch, manifest });
++  return { files: mounted, qualification };
++}
+--- a/scripts/native-source-qualification.test.mjs
++++ b/scripts/native-source-qualification.test.mjs
+@@ -192,3 +192,27 @@
+  assertNativeQualification(filesAt(candidate),manifest,f.context);assert.throws(()=>assertNativeAdoption(filesAt(candidate),manifest),/ordinary publication/);
+  assert.notEqual(finalized.candidateDigest,metadata.candidateDigest);assert.deepEqual(fs.readFileSync(path.join(planned.runDirectory,'review.json')),originalReview);
+ });
++
++// Synthetic factory-stage regression only: never dealer or hosted acceptance evidence.
++test('explicit Vercel qualification packages through the normal factory but cannot be exported as production',async t=>{
++ const f=await fixture(t),originalLock=fs.readFileSync(f.globalLock),planned=cli(planArgs(f,'vercel-qualified-factory'));
++ assert.equal(planned.ready,true);
++ const manifest=JSON.parse(fs.readFileSync(path.join(planned.candidateDirectory,'dealer.json')));
++ manifest.shareIdentity={publicOrigin:'https://fixture-dealer.vercel.app/'};
++ writeJson(path.join(planned.candidateDirectory,'dealer.json'),manifest);
++ const files=filesAt(planned.candidateDirectory),adoptionBytes=files.get('localization/adoption.json'),adoption=JSON.parse(adoptionBytes);
++ const request={schemaVersion:1,kind:'cars-vercel-qualified-preview-request',reviewed:true,provider:'vercel',production:false,nativeApproval:false,hostedApproval:false,globalReleaseApproval:false,dealer:manifest.slug,repository:manifest.repository,sourceCommit:f.context.sourceCommit,projectId:'prj_fixtureonly',publicOrigin:manifest.shareIdentity.publicOrigin,targetBranch:'codex/fixture-qualified-preview',sourceAdoptionSha256:sha(adoptionBytes),nativeInputDigest:adoption.input.digest,nativeInputFiles:adoption.input.files};
++ const options={root:f.carsRoot,source:planned.candidateDirectory,destination:path.join(f.carsRoot,'runtime/qualified-preview-package'),manifest,sourceCommit:f.context.sourceCommit,vercelQualification:request};
++ const {packageDealer}=await import('./package-dealer.mjs');const {assertVercelQualificationExport}=await import('./export-dealer.mjs');
++ const result=await packageDealer(options),meta=JSON.parse(fs.readFileSync(path.join(result.destination,'.cars-package.json')));
++ assert.equal(meta.qualification.production,false);assert.equal(meta.qualification.nativeApproval,false);assert.equal(meta.qualification.hostedApproval,false);assert.equal(meta.qualification.globalReleaseApproval,false);assert.equal(meta.qualification.sourceCommit,f.context.sourceCommit);assert.equal(meta.qualification.sourceAdoptionSha256,sha(adoptionBytes));
++ assertVercelQualificationExport(meta,{branch:request.targetBranch,manifest});
++ for(const branch of ['main','master','refs/heads/main','codex/another-preview'])assert.throws(()=>assertVercelQualificationExport(meta,{branch,manifest}),/exact reviewed preview branch/);
++ for(const patch of [{production:true},{nativeApproval:true},{hostedApproval:true},{globalReleaseApproval:true},{targetBranch:'main'},{targetBranch:'codex/../main'},{dealer:'another-dealer'},{repository:'another-owner/another-repo'},{sourceCommit:'e'.repeat(40)},{publicOrigin:'https://another-dealer.vercel.app/'},{sourceAdoptionSha256:'e'.repeat(64)},{nativeInputDigest:'e'.repeat(64)},{nativeInputFiles:0},{projectId:'not-an-existing-project'}]){
++  await assert.rejects(planDealerPackage({...options,destination:path.join(f.carsRoot,'runtime/rejected-preview'),vercelQualification:{...request,...patch}}));
++ }
++ await assert.rejects(planDealerPackage({...options,destination:path.join(f.carsRoot,'runtime/rejected-mixed'),nativeReleases:f.releases}),/cannot be mixed/);
++ await assert.rejects(planDealerPackage({...options,destination:path.join(f.carsRoot,'runtime/refused-production'),vercelQualification:undefined}),/ordinary publication is refused/);
++ assert.equal(fs.existsSync(path.join(f.carsRoot,'runtime/refused-production')),false);
++ assert.deepEqual(fs.readFileSync(f.globalLock),originalLock);assertNativeQualification(files,manifest,f.context,{root:f.carsRoot});
++});
