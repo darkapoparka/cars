@@ -8,11 +8,12 @@ const encode = v => Buffer.from(JSON.stringify(v,null,2)+'\n');
 const read = (files,name) => {if(!files.has(name))throw Error('Missing branding input: '+name);return Buffer.from(files.get(name)).toString('utf8');};
 const PROFILE_LOGO_CONSUMERS=Object.freeze({'auto-best':'auto-best/src/lib/data/dealer-profile.json',import:'import/src/lib/data/dealer-profile.json',modern:'modern/packages/marketplace-domain/testing/dealer-profile.json'});
 function derivedProfileLogoRows(files,publicBase,originalFiles=files){
- if(!(files instanceof Map)||!(originalFiles instanceof Map)||!/^\/dealer-brand\/v2-[a-f0-9]{16}$/.test(publicBase))throw Error('Exact final profile logo pack required');
+ if(!(files instanceof Map)||!(originalFiles instanceof Map))throw Error('Exact final profile logo pack required');
  const rows=[];
  for(const [key,name]of Object.entries(PROFILE_LOGO_CONSUMERS)){
   if(!files.has(name))continue;const before=Buffer.from(files.get(name)),profile=JSON.parse(before.toString('utf8'));
   if(profile.logoContract===undefined||profile.logoContract===null)continue;
+  if(typeof publicBase!=='string'||!/^\/dealer-brand\/v2-[a-f0-9]{16}$/.test(publicBase))throw Error('Exact final profile logo pack required');
   const original=JSON.parse(read(originalFiles,name)),assets=profile.logoContract?.assets;
   if(!original.logoContract?.assets||!profile.business||!assets||Array.isArray(assets))throw Error('Malformed derived profile logo contract: '+name);
   const bindings={};for(const [surface,tone]of [['onLight','on-light'],['onDark','on-dark'],['onAccent','on-accent']]){
