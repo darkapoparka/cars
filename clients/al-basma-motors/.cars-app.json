@@ -3,17 +3,17 @@
   "dealer": "al-basma-motors",
   "template": {
     "repository": "darkapoparka/cars",
-    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
     "path": "templates/app",
-    "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
-    "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+    "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+    "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
   },
-  "appDigest": "6a1a6050c8fd9a8e5ba80630306116c2c71408983f7a1981bff743adda84c301",
+  "appDigest": "0e82abebcb3efdc14764293f252704ab27246b34b770da5bccc4e63dcc0c9866",
   "provenance": {
     "schemaVersion": 1,
     "dealer": "al-basma-motors",
     "profile": "auto-best/src/lib/data/dealer-profile.json",
-    "profileSha256": "a92586337b931d0c1d4e5b87b45ce498161821e7e4924012dcfc98901ac834d0",
+    "profileSha256": "202529a3a06b9ce65006c50e594c1eccd46c726d45e82844348f9081aad04120",
     "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
     "vehicles": 10,
     "currency": "AED",
@@ -271,13 +271,133 @@
         "sha256": "a2560c0db6633c65f933bf58e47449564ea64dd3d4cd0b3f4edc116c5d4ffa8b",
         "role": "vehicle"
       }
-    ]
+    ],
+    "mileageFacts": [
+      {
+        "slug": "lexus-ct200h-2018-1",
+        "sourceValue": 168000,
+        "sourceUnit": "km",
+        "canonicalKm": 168000
+      },
+      {
+        "slug": "lexus-is300-2023-2",
+        "sourceValue": 40000,
+        "sourceUnit": "km",
+        "canonicalKm": 40000
+      },
+      {
+        "slug": "lexus-rc-f-2020-3",
+        "sourceValue": 140000,
+        "sourceUnit": "km",
+        "canonicalKm": 140000
+      },
+      {
+        "slug": "lexus-is350-2024-4",
+        "sourceValue": 151000,
+        "sourceUnit": "km",
+        "canonicalKm": 151000
+      },
+      {
+        "slug": "lexus-gs250-2015-5",
+        "sourceValue": 52000,
+        "sourceUnit": "km",
+        "canonicalKm": 52000
+      },
+      {
+        "slug": "lexus-rc350-2021-6",
+        "sourceValue": 120000,
+        "sourceUnit": "km",
+        "canonicalKm": 120000
+      },
+      {
+        "slug": "lexus-es350-2023-7",
+        "sourceValue": 77000,
+        "sourceUnit": "km",
+        "canonicalKm": 77000
+      },
+      {
+        "slug": "lexus-lx570-2016-8",
+        "sourceValue": 228000,
+        "sourceUnit": "km",
+        "canonicalKm": 228000
+      },
+      {
+        "slug": "lexus-tx350-2024-9",
+        "sourceValue": 53000,
+        "sourceUnit": "km",
+        "canonicalKm": 53000
+      },
+      {
+        "slug": "lexus-rx350-2024-10",
+        "sourceValue": 12000,
+        "sourceUnit": "km",
+        "canonicalKm": 12000
+      }
+    ],
+    "inventoryNoticePreservation": {
+      "schemaVersion": 1,
+      "kind": "cars-current-app-inventory-notice-preservation",
+      "dealer": "al-basma-motors",
+      "baseline": {
+        "commit": "bf6303bbde4268c649efb91df2b04ad3240b347b",
+        "tree": "7094a2b2cfe73e49701819ca8ac983468106cf7a"
+      },
+      "path": "app/lib/dealer.json",
+      "reviewSha256": "1d6e1b52e46258562a193209ac9ff6886c0ed5036c9a2378f963cdf7cecf4ee6",
+      "currentConfigSha256": "830dbf8adb325a97f8252cab97e21ca996835fd0dcc07dc66c40e69d3bab1283",
+      "currentNoticeSha256": "930e2f71ca0269d56eb42579409ae630e1d8802e7af4a34d32c0accaa0bf2d6a",
+      "profileSha256": "202529a3a06b9ce65006c50e594c1eccd46c726d45e82844348f9081aad04120",
+      "unmodifiedTargetConfigSha256": "b63e53c502eecf9cd90acd3e900095b52961609bba745aee97d315962f2674a0",
+      "targetConfigSha256": "9b3a76c1105b86c8b0a293b9ee31c056e35bfcefac44dcaf9cc61157eeb917c4",
+      "targetSources": {
+        "auto-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/auto-best",
+          "digest": "dcbc59990928884006652677d3529020df3844029993895a71e5f6818ba7363c",
+          "tree": "5fb7a2164775050a47c1183371622295dbf63725"
+        },
+        "modern": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/modern",
+          "digest": "ba263aac8f1863d133807d3e1bf3597d125cf315a7e0deba3f6e419b52434c25",
+          "tree": "3974380670eb388bb16182f94ade33be6d87b1c1"
+        },
+        "import": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/import",
+          "digest": "f98a0934cdcc5adbda393c14c02eb2adc0175344ab2ac3f913afe4b0603366e5",
+          "tree": "6afc6901e2f95967fb7c72e9f75525d4d6fbf086"
+        },
+        "app": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/app",
+          "digest": "bf92f987f29ccd6bbed2d3498a7f7541064671bd764a5ed7f4608f5fbde01aa1",
+          "tree": "37b9c40167f0e173601b0979dc70a388bb4a3f76"
+        },
+        "mobile": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/mobile",
+          "digest": "4e858bd9dbd3ef5b52cd904c4ed97bbfdc0f4cfe02b5a3840580f38026b867a0",
+          "tree": "2b02829e157071e305bfb2dff10ef18e85c8a35e"
+        },
+        "karento-best": {
+          "repository": "darkapoparka/cars",
+          "revision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+          "path": "templates/karento-best",
+          "digest": "83056967764a686f3737d74b86c5db51c1385a50184853f50ec4ade80c1dd44f",
+          "tree": "5f6eec8efb2f9e99819f7f0c2f743d18fff7b134"
+        }
+      },
+      "allOtherConfigFieldsUnchanged": true,
+      "sourceFactsUnchanged": true
+    }
   },
-  "baseDeployment": {
-    "id": "dpl_7sc1gJXVU7iUJWEvYe5Xp5xLoBi6",
-    "url": "https://cars-albasmamotors.vercel.app/",
-    "checkedAt": "2026-09-28T02:25:28.287Z"
-  },
-  "baseReceiptSha256": "0423a31c5582b7690914b721677d13cc74c02f3a9ea465607f4d0411f1231758",
-  "refreshedAt": "2026-09-30T10:34:08.508Z"
+  "needsDealerQA": true,
+  "readyToPublish": false,
+  "refreshedAt": "2026-10-12T21:44:09.852Z"
 }

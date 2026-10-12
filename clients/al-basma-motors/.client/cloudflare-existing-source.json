@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-basma-motors",
+  "kind": "personalized-source-candidate-not-an-approved-release",
+  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
+  "candidateSourceDigest": "02f85992c5376da996ad5555b1bbba7d73236750b6c494c721f8e1cb15603dcf",
+  "qualificationContextPath": ".client/native-qualification-context.json",
+  "qualificationContextSha256": "4240c49f1a5305b0e135ff86217643e6b9fcee2b0f0a7393e35a19287146a62f",
+  "qualificationLockPath": ".client/native-qualification-lock.json",
+  "qualificationLockSha256": "514a658fc544d6d26ea3bc70618d6659a9866be3292135b92d13a5aabfb8cdf0",
+  "sourceDeltaReview": {
+    "reference": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
+    "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975",
+    "reviewedAt": "2026-10-11T21:04:02.173Z"
+  },
+  "nativeApproval": false,
+  "hostedApproval": false
+}

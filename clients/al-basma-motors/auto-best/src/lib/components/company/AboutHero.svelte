@@ -5,53 +5,52 @@
 
   import { resolve } from '$app/paths';
   import { brand } from '$config/brand';
+  import { leadSite } from '$config/lead-site';
   import Icon from '$components/ui/Icon.svelte';
   import DesktopHeroScene from '$components/ui/DesktopHeroScene.svelte';
-  import SocialBrandIcon from './SocialBrandIcon.svelte';
-
-  const socialProfiles = [
-    { name: 'instagram', label: 'Instagram', href: brand.instagramUrl },
-    { name: 'facebook', label: 'Facebook', href: brand.facebookUrl },
-    { name: 'youtube', label: 'YouTube', href: brand.youtubeUrl }
-  ] as const;
+  import HeroLocation from '$components/ui/HeroLocation.svelte';
+  import DesktopSocialLinks from './DesktopSocialLinks.svelte';
 </script>
 
-<section class="dn-about-hero dn-route-hero dn-route-hero--studio dn-route-hero--light" aria-labelledby="about-title">
+<section class="dn-about-hero dn-information-hero dn-route-hero dn-route-hero--studio dn-route-hero--campaign dn-route-hero--company" aria-labelledby="about-title">
   <DesktopHeroScene scene="about" />
+  <picture class="dn-about-hero__showroom" aria-hidden="true">
+    <source media="(max-width: 991px)" srcset={leadSite.artwork.routeHero.colored.showroom} />
+    <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" width="1537" height="1023" fetchpriority="high" decoding="async" />
+  </picture>
   <div class="container dn-about-hero__content dn-route-hero__layout">
     <div class="dn-about-hero__copy dn-route-hero__copy">
-      <h1 id="about-title">{i18n.t("m_b4b580a9ad8c")}</h1>
-      <p class="dn-about-hero__lead">{i18n.t("m_b9634bb91bba", { p0: i18n.dealer('city') })}</p>
+      <span class="dn-company-hero__eyebrow">{i18n.t("m_b4b580a9ad8c")}</span>
+      <h1 id="about-title">
+        <span class="dn-company-hero__title-line">{i18n.t('about.hero.intro')}</span>
+        <span class="dn-company-hero__title-line">{brand.name}</span>
+      </h1>
+      <HeroLocation appearance="subtitle" />
     </div>
-    <a class="dn-about-button dn-about-button--primary dn-route-hero__control" href={i18n.href(resolve('/listing-grid'))}>
+    <a class="dn-about-button dn-about-button--primary dn-route-hero__control" href={i18n.href(resolve('/cars'))}>
       <span>{i18n.t("m_9304497d3f4b")}</span>
       <Icon name="arrow-right" size={18} strokeWidth={1.8} />
     </a>
-    {#if socialProfiles.some(profile => profile.href)}
-    <nav class="dn-about-socials" aria-label={i18n.t("m_3931afa2068d")}>
-      <span>{i18n.t("m_9200ee75efd0")}</span>
-      <div class="dn-about-socials__links dn-social-profile-links">
-        {#each socialProfiles.filter(profile => profile.href) as profile (profile.name)}
-          <a class="dn-social-profile-link" href={i18n.href(profile.href)} target="_blank" rel="noopener noreferrer" aria-label={i18n.t("m_c0b8af66cd54", { p0: profile.label })}>
-            <SocialBrandIcon name={profile.name} size={28} />
-          </a>
-        {/each}
-      </div>
-    </nav>
-    {/if}
+    <DesktopSocialLinks hero onDark />
   </div>
 </section>
 
 <style>
-  .dn-about-socials { display: flex; flex-direction: column; align-items: center; gap: 10px; align-self: center; }
-  .dn-about-socials > span { color: #c9cbd0; font-size: var(--dn-text-meta); line-height: var(--dn-leading-body); }
-  .dn-about-socials__links { display: flex; gap: 16px; }
-  .dn-about-socials a { display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; border: 1px solid #686c73; border-radius: 50%; color: #fff; }
-  .dn-about-socials a:hover { background: #fff; border-color: #fff; color: #1d1f23; }
-  .dn-about-socials a:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
-  @media (min-width: 992px) {
-    .dn-about-hero :global(.dn-desktop-hero-scene) { filter: grayscale(1); }
-    .dn-about-socials { position: absolute; top: calc(var(--dn-route-hero-control-top) + 68px); left: 0; width: 100%; gap: 12px; }
-    .dn-about-socials > span { color: var(--dn-ink); }
+  .dn-about-hero__showroom { display: none; }
+
+  @media (max-width: 991px) {
+    .dn-about-hero__showroom { display: block; width: min(calc(100% - var(--dn-space-6)), 360px); margin-inline: auto; pointer-events: none; }
+    .dn-about-hero__showroom img {
+      display: block;
+      width: 100%;
+      height: auto;
+      mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent), linear-gradient(to bottom, transparent, #000 10%, #000 82%, transparent);
+      mask-composite: intersect;
+    }
   }
+
+  @media (max-width: 767px) {
+    .dn-about-hero__showroom { width: min(calc(100% - var(--dn-space-6)), 320px); }
+  }
+
 </style>
