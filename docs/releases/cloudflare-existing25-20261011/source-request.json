@@ -1,45 +1,8 @@
 {
   "schemaVersion": 1,
-  "dealers": [
-    "priselci"
-  ],
-  "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
-  "approvedParentLockDigest": "ecdfaf9599fbcbeadebc24de3b9aa1c7615a9a49e29d338e5e9a23427d405e26",
-  "inputs": {
-    "priselci": {
-      "candidateLock": {
-        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/qualification-lock.json",
-        "sha256": "37b9b5262ccee1129081a1c89ea7ad88f9b25156f10f5880b4a2d708492cfb01"
-      },
-      "qualification": {
-        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/qualification-context.json",
-        "sha256": "1ad4b86583d78e5aa6cd6f776fb3c6b9ea743453b5ee2d9e7cbd008fcdabed35"
-      },
-      "sourceDeltaReview": {
-        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
-        "sha256": "cbdd14d8bc3d18a10c028134e33b47225a4fe2a52951b527b08f33cb55581975"
-      },
-      "branding": {
-        "path": "docs/releases/cloudflare-existing25-20261011/branding-review.json",
-        "sha256": "715a3afe70511b3bd17f38c2c9fbdbf4ce1ac2e3f5daaa6aff421382838fbf10"
-      },
-      "resolutions": {
-        "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-resolutions.json",
-        "sha256": "8196cfd85a58a89cbb97533897cb3e5e56f3966ac94be97c503ebe9d9e68c85c"
-      }
-    }
-  },
-  "logoContractReseal": {
-    "schemaVersion": 1,
-    "kind": "cars-existing-source-derived-logo-reseal",
-    "sourceTree": "9b5ad1a83b3442a4f1453169517195afb6fe5a4b",
-    "sourceReceipt": {
-      "path": "docs/releases/cloudflare-existing25-20261011/pilot-logo-reseal/prior-source-preparation-receipt.json",
-      "sha256": "1e2b48b5b5115239173c95a535e98498c6df7945a76b6cdfcaaacd1a68bd27a4"
-    }
-  },
-  "producerCommit": "ac1fc03aebff71a9c65a0f3a4598d301d7583c26",
-  "requestedAt": "2026-10-12 00:57:12 UTC",
-  "purpose": "Continue the reviewed pilot using existing raster bytes and maintained derived-profile logo seals",
-  "previousFailedBuildRunId": 38188027462
+  "mode": "new-approved",
+  "newSourceRequest": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/wave01-request.json",
+    "sha256": "6d5ed8fe31627bc27b29abcaf0c4492a5db5e9a53d468210492f50cc9e0dd140"
+  }
 }

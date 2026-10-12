@@ -5,22 +5,23 @@ import path from 'node:path';
 import {createRequire} from 'node:module';
 import {pathToFileURL} from 'node:url';
 import {ROOT,POLICY,git,json,sha256,inside,filesAt,gitFiles,resolveIdentity} from './lib/workflow.mjs';
-import {assertMainCheckout,planNewClient,createNewClient} from './new-client.mjs';
+import {assertMainCheckout,planNewClient,createNewClient,readNewClientQualification} from './new-client.mjs';
 import {normalizeDealerLocale} from './lib/dealer-locale.mjs';
-import {parseCatalogJson,assertNativeAdoption,ADOPTION_FILE} from './lib/native-localization.mjs';
+import {parseCatalogJson,assertNativeAdoption,assertNativeQualification,validateTemplateQualification,ADOPTION_FILE} from './lib/native-localization.mjs';
 import {loadDealerProfile} from './lib/client-refresh-normalize.mjs';
 import {applyRefreshAdapter} from './lib/client-refresh-adapters.mjs';
 import {retainDealerVariantAssets,applyExtendedRefreshAdapter,sealExtendedVariant} from './lib/client-refresh-six.mjs';
 import {prepareAppDealer,sealAppDealerSource} from './lib/app-dealer-adapter.mjs';
 import {baseNativeManifest,assertAppVariant} from './publishing/app-variant.mjs';
 import {assertExtendedVariantSources} from './publishing/six-variant.mjs';
-import {adoptNativeSource} from './publishing/native-mounts.mjs';
+import {adoptNativeSource,adoptNativeQualification} from './publishing/native-mounts.mjs';
 import {applyLeadBranding,assertLeadBranding} from './publishing/lead-branding.mjs';
 import {resolveShareIdentity,publicOrigin} from './publishing/dealer-share.mjs';
 import {collectSource,packageRetainsPath} from './package-dealer.mjs';
 import {regenerateDealerCatalogs} from './dealer-updates/update-dealer-template.mjs';
 import {readPinnedTemplateTree} from './dealer-updates/pinned-template-source.mjs';
-import {SOURCE_CAMPAIGN,readBrandingInputs,bindPreparedShareLogo,gitObjectId,gitTreeId} from './prepare-existing-fleet-source.mjs';
+import {SOURCE_CAMPAIGN,readBrandingInputs,bindPreparedShareLogo,gitObjectId,gitTreeId,sourceQualificationFiles} from './prepare-existing-fleet-source.mjs';
+import {QUALIFICATION_LOCK_PATH} from './build-existing-fleet-cloudflare.mjs';
 import {artifactInventory} from './lib/uk-cloudflare-artifacts.mjs';
 
 export const NEW_SOURCE_KIND='cars-new-dealer-source-proposal';
@@ -42,7 +43,8 @@ const inputPin=(row,prefix)=>assert(row&&same(Object.keys(row).sort(),['path','s
 const sourceEqual=(a,b)=>['repository','revision','path','tree','digest'].every(k=>a?.[k]===b?.[k]);
 function assertSixSources(sources){assert(same(Object.keys(sources??{}).sort(),[...NEW_SOURCE_FAMILIES].sort()),'All six exact source locators required');for(const key of NEW_SOURCE_FAMILIES){const s=sources[key];assert(s&&same(Object.keys(s).sort(),['digest','path','repository','revision','tree'])&&s.repository==='darkapoparka/cars'&&s.path==='templates/'+key&&hex40(s.revision)&&hex40(s.tree)&&hex64(s.digest),'Exact Cars template locator required: '+key);}}
 const creatorMetadata=n=>NEW_SOURCE_FAMILIES.some(k=>n===k+'/AGENTS.md'||n===k+'/.template/source-manifest.json');
-const proposalRetains=n=>packageRetainsPath(n)||creatorMetadata(n);
+const qualificationMarkers=new Set(['.client/cloudflare-existing-source.json','.client/native-qualification-context.json',QUALIFICATION_LOCK_PATH]);
+const proposalRetains=n=>packageRetainsPath(n)||creatorMetadata(n)||qualificationMarkers.has(n);
 export function validateNewSourceRaster(bytes,filename){
  assert(Buffer.isBuffer(bytes)&&bytes.length>=12&&bytes.length<=25*1024**2,'Bounded raster bytes required');const ext=path.extname(filename).toLowerCase();
  assert((ext==='.png'&&bytes.subarray(0,8).toString('hex')==='89504e470d0a1a0a')||(['.jpg','.jpeg'].includes(ext)&&bytes.subarray(0,3).toString('hex')==='ffd8ff')||(ext==='.webp'&&bytes.toString('ascii',0,4)==='RIFF'&&bytes.toString('ascii',8,12)==='WEBP'),'Stock raster bytes do not match the reviewed file extension');return bytes;
@@ -60,8 +62,16 @@ export function readNewSourceInput(root,row,{maxBytes=2*1024**2,prefix=NEW_SOURC
  inputPin(row,prefix);const input=physicalInput(root,row.path,maxBytes);assert(sha256(input.bytes)===row.sha256,'Source input bytes differ from the reviewed pin');return input;
 }
 
-export function validateNewSourceRequest(request,{registry,clientIndex,occupiedSlugs=[],lock,lockSha256,registrySha256,clientIndexSha256}){
- keys(request,['schemaVersion','kind','mode','reviewed','reviewedAt','sourceRevision','approvedLockSha256','registrySha256','clientIndexSha256','dealers'],'new source request');
+export function readNewSourceQualification(root,request,dealer){
+ if(request.qualification===undefined)return null;
+ const q=request.qualification;keys(q,['candidateLock','contexts'],'new source qualification');inputPin(q.candidateLock,NEW_SOURCE_INPUT_ROOT);
+ assert(q.contexts&&same(Object.keys(q.contexts).sort(),request.dealers.map(r=>r.slug).sort()),'Exactly one qualification context pin per new dealer required');
+ inputPin(q.contexts[dealer],NEW_SOURCE_INPUT_ROOT+'/'+dealer);
+ return readNewClientQualification(root,{candidateLock:q.candidateLock,qualification:q.contexts[dealer]},dealer);
+}
+
+export function validateNewSourceRequest(request,{registry,clientIndex,occupiedSlugs=[],lock,lockSha256,registrySha256,clientIndexSha256,root=ROOT}){
+ keys(request,['schemaVersion','kind','mode','reviewed','reviewedAt','sourceRevision','approvedLockSha256','registrySha256','clientIndexSha256','dealers','qualification'],'new source request');
  assert(request.schemaVersion===1&&request.kind===NEW_SOURCE_REQUEST_KIND&&request.mode==='new-approved'&&request.reviewed===true&&date(request.reviewedAt)&&hex40(request.sourceRevision),'Explicit reviewed new-approved source request required');
  assert(hex64(request.approvedLockSha256)&&request.approvedLockSha256===lockSha256&&request.registrySha256===registrySha256&&request.clientIndexSha256===clientIndexSha256&&hex64(registrySha256)&&hex64(clientIndexSha256),'Reviewed lock/registry/client index bytes changed');
  assert(lock?.schemaVersion===1&&lock.exportPolicy===POLICY&&Array.isArray(registry?.dealers)&&Array.isArray(clientIndex?.projects),'Canonical lock and identity inventories required');
@@ -69,17 +79,19 @@ export function validateNewSourceRequest(request,{registry,clientIndex,occupiedS
  const identities=[...registry.dealers,...clientIndex.projects,...(clientIndex.campaignCandidatesWithoutFolders??[]),...occupiedSlugs.map(s=>({slug:s}))];
  const seen={slug:new Set(),dealerId:new Set(),repository:new Set(),workerName:new Set()};
  for(const row of request.dealers){
-  keys(row,['slug','dealerId','repository','sourceOwnership','preset','workerName','publicOrigin','identityReview','sourceReleases','inputs','media'],'new dealer');
+  keys(row,['slug','dealerId','repository','sourceOwnership','preset','workerName','publicOrigin','identityReview','sourceReleases','inputs','media','copyReview'],'new dealer');
   assert(slug(row.slug)&&typeof row.dealerId==='string'&&/^[a-z0-9][a-z0-9-]{0,127}$/.test(row.dealerId)&&/^darkapoparka\/[a-z0-9][a-z0-9.-]{0,99}$/.test(row.repository??'')&&row.repository!=='darkapoparka/cars'&&row.sourceOwnership==='cars-canonical'&&['standard','import'].includes(row.preset),'Only absent Cars-owned canonical dealer identities are supported');
   assert(slug(row.workerName)&&row.publicOrigin==='https://'+row.workerName+'.darkapoparka1.workers.dev'&&publicOrigin(row.publicOrigin)===row.publicOrigin,'Exact proposed Worker/public origin required');
   for(const field of Object.keys(seen)){const value=field==='repository'?row[field].toLowerCase():norm(row[field]);assert(value&&!seen[field].has(value),'Duplicate new dealer '+field);seen[field].add(value);}
   const existing=identities.some(d=>[d.slug,...(d.aliases??[])].some(v=>norm(v)===norm(row.slug))||[d.id,d.dealerId,d.researchId,d.leadId].some(v=>v&&norm(v)===norm(row.dealerId))||d.repository?.toLowerCase()===row.repository.toLowerCase());
   assert(!existing&&!Object.keys(registry.aliases??{}).some(a=>norm(a)===norm(row.slug)),'Existing, branch, research or independent identity requires its own source mode');
-  const prefix=NEW_SOURCE_INPUT_ROOT+'/'+row.slug;inputPin(row.identityReview,prefix);
+  const prefix=NEW_SOURCE_INPUT_ROOT+'/'+row.slug;inputPin(row.identityReview,prefix);if(row.copyReview)inputPin(row.copyReview,prefix);
   assert(same(Object.keys(row.inputs??{}).sort(),['branding','facts','locale','stock']),'Exact facts/stock/locale/branding pins required');for(const pin of Object.values(row.inputs))inputPin(pin,prefix);
   assert(same(Object.keys(row.sourceReleases??{}).sort(),[...NEW_SOURCE_FAMILIES].sort()),'All six exact approved template sources required');
-  for(const key of NEW_SOURCE_FAMILIES){const selected=row.sourceReleases[key],release=lock.templates?.[key];
-   assert(release?.status==='approved'&&release.exportPolicy===POLICY&&selected?.repository==='darkapoparka/cars'&&selected.path==='templates/'+key&&hex40(selected.revision)&&hex40(selected.tree)&&hex64(selected.digest)&&same(Object.keys(selected).sort(),['digest','path','repository','revision','tree']),'Latest reviewed approved Cars source required: '+key);
+  const qualified=readNewSourceQualification(root,request,row.slug),selectedLock=qualified?.lock??lock;
+  for(const key of NEW_SOURCE_FAMILIES){const selected=row.sourceReleases[key],release=selectedLock.templates?.[key];
+   if(qualified){assert(qualified.context.sourceCommit===request.sourceRevision,'Qualification source revision differs from the request');validateTemplateQualification(key,release,qualified.context,{root});}
+   assert(release?.status===(qualified?'qualification':'approved')&&release.exportPolicy===POLICY&&selected?.repository==='darkapoparka/cars'&&selected.path==='templates/'+key&&hex40(selected.revision)&&hex40(selected.tree)&&hex64(selected.digest)&&same(Object.keys(selected).sort(),['digest','path','repository','revision','tree']),'Latest reviewed approved Cars source required: '+key);
    assert(release.repository===selected.repository&&release.commit===selected.revision&&release.snapshotPath===selected.path&&release.digest===selected.digest&&sourceEqual(release.source,selected),'Requested source differs from the approved lock: '+key);
   }
   assert(Array.isArray(row.media)&&row.media.length>0&&row.media.length<=400,'Bounded pinned local stock media required');const destinations=new Set(),paths=new Set();let total=0;
@@ -88,6 +100,20 @@ export function validateNewSourceRequest(request,{registry,clientIndex,occupiedS
   }assert(total<=256*1024**2,'Stock media exceeds the per-dealer 256 MiB source budget');
  }
  return request;
+}
+
+export function validateNewSourceCopyReview(review,dealer,stock){
+ keys(review,['schemaVersion','kind','dealer','reviewed','reviewedAt','stockSha256','descriptions'],'new source display copy');
+ assert(review.schemaVersion===1&&review.kind==='cars-new-source-reviewed-companion-copy'&&review.dealer===dealer.slug&&review.reviewed===true&&date(review.reviewedAt)&&review.stockSha256===dealer.inputs.stock.sha256,'Reviewed copy must bind the exact dealer stock input');
+ assert(Array.isArray(review.descriptions)&&review.descriptions.length===stock.records.length&&review.descriptions.length>0,'Complete exact source description rows required');
+ for(let i=0;i<stock.records.length;i++){const source=stock.records[i],row=review.descriptions[i];keys(row,['sourceId','sourceDescription','en','bg'],'display description');assert(row.sourceId===source.id&&row.sourceDescription===source.description&&['en','bg'].every(locale=>typeof row[locale]==='string'&&row[locale].trim()&&row[locale].length<=10000),'Reviewed description source or display copy differs');}
+ return review;
+}
+export function newSourceReviewedCopy(profile,review){
+ if(!review)return undefined;
+ assert(profile.listings.length===review.descriptions.length,'Normalized listing count differs from reviewed copy');
+ const out={};for(let i=0;i<profile.listings.length;i++){const listing=profile.listings[i],copy=review.descriptions[i];assert(listing.sourceId===copy.sourceId&&listing.description===copy.sourceDescription&&!Object.hasOwn(out,listing.slug),'Normalized description or listing identity changed');out[listing.slug]={sourceDescription:copy.sourceDescription,en:{description:copy.en,imageAlts:listing.images.map(image=>image.alt)},bg:{description:copy.bg,imageAlts:listing.images.map(image=>image.alt)}};}
+ return out;
 }
 
 export function validateNewDealerFacts({dealer,facts,stock,locale,identityReview}){
@@ -172,10 +198,12 @@ export async function prepareNewDealerSource({root=ROOT,requestFile,dealer:reque
  assert(typeof requestFile==='string'&&safe(requestFile)&&requestFile.startsWith(NEW_SOURCE_INPUT_ROOT+'/')&&requestFile.endsWith('.json'),'Bounded committed new source request path required');
  const requestInput=physicalInput(root,requestFile,2*1024**2),request=readJson(requestInput.bytes);
  const rawLock=physicalInput(root,'templates.lock.json',4*1024**2).bytes,rawRegistry=physicalInput(root,'docs/DEPLOYMENT-INVENTORY.json',32*1024**2).bytes,rawIndex=physicalInput(root,'clients/index.json',4*1024**2).bytes,lock=readJson(rawLock),registry=readJson(rawRegistry),clientIndex=readJson(rawIndex);
- const occupiedSlugs=fs.readdirSync(inside(root,'clients',{mustExist:true}));validateNewSourceRequest(request,{registry,clientIndex,occupiedSlugs,lock,lockSha256:sha256(rawLock),registrySha256:sha256(rawRegistry),clientIndexSha256:sha256(rawIndex)});
- const row=request.dealers.find(r=>r.slug===requestedDealer);assert(row,'Dealer is outside the exact reviewed request');assert(!resolveIdentity(root,row.slug,row.dealerId).exists,'Dealer identity is already occupied');
- const inputs=Object.fromEntries(Object.entries({...row.inputs,identityReview:row.identityReview}).map(([k,p])=>{const input=readNewSourceInput(root,p,{prefix:NEW_SOURCE_INPUT_ROOT+'/'+row.slug,maxBytes:k==='locale'?16384:2*1024**2});return [k,{...input,value:readJson(input.bytes)}];}));
+ const occupiedSlugs=fs.readdirSync(inside(root,'clients',{mustExist:true}));validateNewSourceRequest(request,{registry,clientIndex,occupiedSlugs,lock,lockSha256:sha256(rawLock),registrySha256:sha256(rawRegistry),clientIndexSha256:sha256(rawIndex),root});
+ const row=request.dealers.find(r=>r.slug===requestedDealer);assert(row,'Dealer is outside the exact reviewed request');
+ const qualified=readNewSourceQualification(root,request,row.slug),selectedLock=qualified?.lock??lock,sourceQualification=qualified?{candidateLock:request.qualification.candidateLock,qualification:request.qualification.contexts[row.slug]}:null;assert(!resolveIdentity(root,row.slug,row.dealerId).exists,'Dealer identity is already occupied');
+ const inputs=Object.fromEntries(Object.entries({...row.inputs,identityReview:row.identityReview,...(row.copyReview?{copyReview:row.copyReview}: {})}).map(([k,p])=>{const input=readNewSourceInput(root,p,{prefix:NEW_SOURCE_INPUT_ROOT+'/'+row.slug,maxBytes:k==='locale'?16384:2*1024**2});return [k,{...input,value:readJson(input.bytes)}];}));
  validateNewDealerFacts({dealer:row,facts:inputs.facts.value,stock:inputs.stock.value,locale:inputs.locale.value,identityReview:inputs.identityReview.value});
+ const copyReview=inputs.copyReview?validateNewSourceCopyReview(inputs.copyReview.value,row,inputs.stock.value):null;
  const media=row.media.map(p=>{const input=readNewSourceInput(root,{path:p.path,sha256:p.sha256},{prefix:NEW_SOURCE_INPUT_ROOT+'/'+row.slug,maxBytes:25*1024**2});assert(input.bytes.length===p.bytes,'Media byte count differs');validateNewSourceRaster(input.bytes,p.destination);return {...p,...input};});
  const brandingRecord=inputs.branding.value,brandingRows=[brandingRecord.master,brandingRecord.mark,...Object.values(brandingRecord.surfaces??{})].filter(Boolean),brandingBytes=new Map();
  for(const p of brandingRows){const input=readNewSourceInput(root,{path:p.path,sha256:p.sha256},{prefix:NEW_SOURCE_INPUT_ROOT+'/'+row.slug,maxBytes:25*1024**2});assert(input.bytes.subarray(0,8).toString('hex')==='89504e470d0a1a0a','Reviewed logo must contain PNG bytes');brandingBytes.set(p.path,input.bytes);}
@@ -183,10 +211,10 @@ export async function prepareNewDealerSource({root=ROOT,requestFile,dealer:reque
  const branchAbsence=originBranchAbsence(root,row.slug,checkout.head);
  assert(!git(root,['diff','--name-only','HEAD','--',...orchestrationPaths]),'Commit reviewed source orchestration inputs before dealer creation');
  assert(git(root,['merge-base','--is-ancestor',request.sourceRevision,checkout.head],{allowFailure:true})!==null,'Reviewed source revision must be published on canonical main');
- for(const [name,bytes]of [[requestFile,requestInput.bytes],['templates.lock.json',rawLock],['docs/DEPLOYMENT-INVENTORY.json',rawRegistry],['clients/index.json',rawIndex],...Object.entries({...row.inputs,identityReview:row.identityReview}).map(([k,p])=>[p.path,inputs[k].bytes]),...media.map(p=>[p.path,p.bytes]),...brandingBytes])committed(root,name,bytes,checkout.head);
- const plan=planNewClient({root,client:row.slug,dealerId:row.dealerId,repository:row.repository,preset:row.preset,designSet:'six',localeConfig:inputs.locale.value});assert(plan.checkout.head===checkout.head&&NEW_SOURCE_FAMILIES.every(k=>sourceEqual(plan.manifest.templateSources[k],row.sourceReleases[k])),'Maintained creator source/checkout differs from reviewed request');
+ for(const [name,bytes]of [[requestFile,requestInput.bytes],['templates.lock.json',rawLock],['docs/DEPLOYMENT-INVENTORY.json',rawRegistry],['clients/index.json',rawIndex],...Object.entries({...row.inputs,identityReview:row.identityReview,...(row.copyReview?{copyReview:row.copyReview}: {})}).map(([k,p])=>[p.path,inputs[k].bytes]),...media.map(p=>[p.path,p.bytes]),...brandingBytes])committed(root,name,bytes,checkout.head);
+ const plan=planNewClient({root,client:row.slug,dealerId:row.dealerId,repository:row.repository,preset:row.preset,designSet:'six',localeConfig:inputs.locale.value,...(sourceQualification?{sourceQualification}: {})});assert(plan.checkout.head===checkout.head&&NEW_SOURCE_FAMILIES.every(k=>sourceEqual(plan.manifest.templateSources[k],row.sourceReleases[k])),'Maintained creator source/checkout differs from reviewed request');
  const baseline={commit:checkout.head,rootTree:git(root,['rev-parse',checkout.head+'^{tree}'])};assert(!git(root,['ls-tree',checkout.head,'--','clients/'+row.slug]),'Canonical dealer source already exists at the publication baseline');
- const readOnly={schemaVersion:1,kind:NEW_SOURCE_KIND,mode:'new-approved',dealer:row.slug,repository:row.repository,canonicalSourceRepository:'darkapoparka/cars',baseCommit:baseline.commit,sourceRevision:request.sourceRevision,approvedLockSha256:request.approvedLockSha256,sourceReleases:row.sourceReleases,branchAbsence,applications:6,write:false,published:false,hostedApproval:false,state:'reviewed-inputs-awaiting-source-creation',newerDevelopment:plan.plans.filter(p=>p.updateAvailable).map(p=>({key:p.template,developmentHead:p.developmentHead,developmentTree:p.developmentTree}))};
+ const readOnly={schemaVersion:1,kind:NEW_SOURCE_KIND,mode:'new-approved',dealer:row.slug,repository:row.repository,canonicalSourceRepository:'darkapoparka/cars',baseCommit:baseline.commit,sourceRevision:request.sourceRevision,approvedLockSha256:request.approvedLockSha256,sourceReleases:row.sourceReleases,branchAbsence,applications:6,write:false,published:false,hostedApproval:false,state:'reviewed-inputs-awaiting-source-creation',...(sourceQualification?{sourceQualification,qualificationOnly:true,nativeApproval:false,globalReleaseApproval:false}: {}),newerDevelopment:plan.plans.filter(p=>p.updateAvailable).map(p=>({key:p.template,developmentHead:p.developmentHead,developmentTree:p.developmentTree}))};
  if(!write)return readOnly;
  assert(path.resolve(toolPackage)===inside(root,'runtime/source-preparation-tools/package.json',{mustExist:true}),'Use the bounded maintained source raster toolchain');
  const area=inside(root,'runtime/new-dealer-source/'+ci.runId+'-'+ci.attempt+'/'+row.slug);assert(!fs.existsSync(area),'Source proposal attempt already exists; inspect retained output before retrying');
@@ -201,24 +229,27 @@ export async function prepareNewDealerSource({root=ROOT,requestFile,dealer:reque
   for(const [name,bytes]of stage)writeNew(inside(directory,name),bytes);
   const manifest=json(path.join(directory,'dealer.json'));manifest.extraAssets=['dealer-stock','dealer-brand','branding','assets'];manifest.cloudflare={workerPrefix:row.workerName};manifest.shareIdentity={name:inputs.facts.value.business.name,publicOrigin:row.publicOrigin,description:[inputs.facts.value.business.previewNotice,inputs.facts.value.business.inventoryNotice].join(' '),logo:{sourcePath:'dealer-brand/logo-on-light.png',sha256:sha256(branding.reviewedSurfaces.surfaces.onLight.png)}};
   fs.writeFileSync(path.join(directory,'dealer.json'),encode(manifest));const profile=loadDealerProfile(directory,row.slug);assert(profile.sourceCount===profile.listings.length&&profile.listings.length===inputs.stock.value.records.length&&profile.stockKind===inputs.stock.value.kind,'Maintained normalization dropped/changed authoritative stock');
-  const changes={};for(const {key}of manifest.variants.slice(0,3)){const assets=new Map();retainDealerVariantAssets(assets,key,profile,directory);writeMap(directory,assets);const candidate=inside(directory,key,{mustExist:true});changes[key]=applyRefreshAdapter({key,oldVariant:candidate,candidate,profile});}
+  const reviewedCopy=newSourceReviewedCopy(profile,copyReview);
+  const changes={};for(const {key}of manifest.variants.slice(0,3)){const assets=new Map();retainDealerVariantAssets(assets,key,profile,directory);writeMap(directory,assets);const candidate=inside(directory,key,{mustExist:true});changes[key]=applyRefreshAdapter({key,oldVariant:candidate,candidate,profile,...(['modern','import'].includes(key)&&reviewedCopy?{reviewedModernCopy:reviewedCopy}: {})});}
   let files=await collectSource(directory,{...manifest,extraAssets:manifest.extraAssets.filter(p=>!['branding','assets'].includes(p))}),before=new Map(files);const app=await prepareAppDealer(directory,manifest,{appFiles:new Map([...files].filter(([n])=>n.startsWith('app/')).map(([n,b])=>[n.slice(4),b]))});for(const [name,bytes]of app.files)files.set('app/'+name,bytes);
   const adaptations={};for(const key of ['mobile','karento-best'])adaptations[key]=applyExtendedRefreshAdapter({files,key,profile,client:directory});writeMap(directory,files,before);
+  for(const {key}of manifest.variants){const name=path.join(directory,key,'.client/project.json'),metadata=json(name);fs.writeFileSync(name,encode({...metadata,state:'personalized-needs-build',readyToPublish:false,publicUrl:null,hosting:{provider:'cloudflare',status:'not-deployed'},qa:{desktop:false,mobile:false,identity:false,contactPath:false}}));}
   await regenerateDealerCatalogs(directory,root,manifest.variants.map(v=>v.key));files=await collectSource(directory,{...manifest,extraAssets:manifest.extraAssets.filter(p=>!['branding','assets'].includes(p))});before=new Map(files);
   const templates=new Map(),readTemplate=(locator,name,optional)=>{const key=locator.path.slice('templates/'.length),id=key+'@'+locator.revision;if(!templates.has(id))templates.set(id,readPinnedTemplateTree({key,repositoryPath:root,source:locator}).tree);const bytes=templates.get(id).get(name);if(!bytes&&optional)return null;assert(bytes,'Missing approved template palette input');return bytes.toString('utf8');};
   const brand=await applyLeadBranding(files,manifest,{...branding,sharp,readTemplate});bindPreparedShareLogo(files,manifest,brand);resolveShareIdentity(files,manifest);
-  files=adoptNativeSource(files,baseNativeManifest(manifest),lock.templates,{root});sealAppDealerSource({files,manifest,provenance:app.provenance});for(const key of ['mobile','karento-best'])sealExtendedVariant({files,key,manifest,profile,adaptation:adaptations[key]});
-  assertNativeAdoption(files,baseNativeManifest(manifest),{root});assertLeadBranding(files,manifest);assertAppVariant(files,manifest);assertExtendedVariantSources(files,manifest);files.set('dealer.json',encode(manifest));writeMap(directory,files,before);
+  files=qualified?adoptNativeQualification(files,baseNativeManifest(manifest),selectedLock.templates,qualified.context,{root}):adoptNativeSource(files,baseNativeManifest(manifest),lock.templates,{root});sealAppDealerSource({files,manifest,provenance:app.provenance});for(const key of ['mobile','karento-best'])sealExtendedVariant({files,key,manifest,profile,adaptation:adaptations[key]});
+  if(qualified)assertNativeQualification(files,baseNativeManifest(manifest),qualified.context,{root});else assertNativeAdoption(files,baseNativeManifest(manifest),{root});assertLeadBranding(files,manifest);assertAppVariant(files,manifest);assertExtendedVariantSources(files,manifest);files.set('dealer.json',encode(manifest));
+  if(qualified){const candidateSourceDigest=sha256(JSON.stringify([...files].filter(([name])=>!qualificationMarkers.has(name)).sort(([a],[b])=>a.localeCompare(b,'en')).map(([name,bytes])=>[name,sha256(bytes)])));for(const [name,bytes]of sourceQualificationFiles({manifest,qualificationBytes:qualified.qualificationBytes,qualificationLockBytes:qualified.candidateLockBytes,sourceRevision:request.sourceRevision,candidateSourceDigest,root}))files.set(name,bytes);}
+  writeMap(directory,files,before);
   for(const [name,bytes]of stage.slice(0,3))assert(fs.readFileSync(path.join(directory,name)).equals(bytes),'Authoritative source facts changed during personalization');
-  for(const {key}of manifest.variants){const name=path.join(directory,key,'.client/project.json'),metadata=json(name);fs.writeFileSync(name,encode({...metadata,state:'personalized-needs-build',readyToPublish:false,publicUrl:null,hosting:{provider:'cloudflare',status:'not-deployed'},qa:{desktop:false,mobile:false,identity:false,contactPath:false}}));}
-  const stable=assertMainCheckout(root);assert(stable.head===baseline.commit&&sha256(fs.readFileSync(path.join(root,'templates.lock.json')))===request.approvedLockSha256,'Canonical main or approved lock changed; preserve candidate and review again');
+  const stable=assertMainCheckout(root);if(qualified){const current=readNewSourceQualification(root,request,row.slug);assert(current.candidateLockBytes.equals(qualified.candidateLockBytes)&&current.qualificationBytes.equals(qualified.qualificationBytes),'Qualification input changed during source creation');}assert(stable.head===baseline.commit&&sha256(fs.readFileSync(path.join(root,'templates.lock.json')))===request.approvedLockSha256,'Canonical main or approved lock changed; preserve candidate and review again');
   assert(originBranchAbsence(root,row.slug,stable.head).digest===branchAbsence.digest,'Origin branch absence lease changed; preserve candidate and review again');
-  for(const [k,p]of Object.entries({...row.inputs,identityReview:row.identityReview}))assert(readNewSourceInput(root,p,{prefix:NEW_SOURCE_INPUT_ROOT+'/'+row.slug,maxBytes:k==='locale'?16384:2*1024**2}).bytes.equals(inputs[k].bytes),'Reviewed input changed during source creation');
+  for(const [k,p]of Object.entries({...row.inputs,identityReview:row.identityReview,...(row.copyReview?{copyReview:row.copyReview}: {})}))assert(readNewSourceInput(root,p,{prefix:NEW_SOURCE_INPUT_ROOT+'/'+row.slug,maxBytes:k==='locale'?16384:2*1024**2}).bytes.equals(inputs[k].bytes),'Reviewed input changed during source creation');
   for(const p of [...media,...brandingRows])readNewSourceInput(root,{path:p.path,sha256:p.sha256},{prefix:NEW_SOURCE_INPUT_ROOT+'/'+row.slug,maxBytes:25*1024**2});
   const canonical=fileMap(directory),modes=new Map(sourceRows.map(r=>[r.path,r.mode]));for(const name of canonical.keys())if(!modes.has(name))modes.set(name,process.platform!=='win32'&&(fs.statSync(path.join(directory,name)).mode&0o111)?'100755':'100644');
   const originalBlobs=new Map(sourceRows.map(r=>[r.blob,r])),reusable=new Map();for(const bytes of canonical.values()){const blob=gitObjectId('blob',bytes),r=originalBlobs.get(blob);if(r&&!reusable.has(blob))reusable.set(blob,{repository:'darkapoparka/cars',revision:r.revision,path:r.sourcePath,blob,sha256:sha256(bytes),bytes:bytes.length});}const proposal=createNewSourceProposal({dealer:row.slug,baseCommit:baseline.commit,baseRootTree:baseline.rootTree,sourceReleases:row.sourceReleases,files:canonical,modes,reusableBlobs:reusable});
   const output=path.join(area,'output');writeNew(path.join(output,'source-patch.json'),encode(proposal.patch));for(const [digest,blob]of proposal.blobs)writeNew(path.join(output,'blobs',digest+'.json'),encode(blob));
-  const receipt={...readOnly,write:true,state:'personalized-source-proposal-needs-build-and-hosted-review',baseRootTree:baseline.rootTree,preparedTree:proposal.patch.preparedTree,request:{path:requestFile,sha256:sha256(requestInput.bytes)},inputs:row.inputs,identityReview:row.identityReview,creationReceiptSha256:sha256(fs.readFileSync(creation.receipt)),sourcePaths:proposal.patch.entries.length,reusedGitBlobs:proposal.patch.reusedGitBlobs.length,uniqueBlobBytes:proposal.patch.uniqueBlobBytes,patchSha256:sha256(encode(proposal.patch)),branding:brand,nativeAdoptionSha256:sha256(files.get(ADOPTION_FILE)),personalizationChanges:changes,authoritativeFactsUnchanged:true,reviewed:false,published:false,buildApproval:false,hostedApproval:false,privatePublishingMirror:{repository:row.repository,state:'not-published-by-source-preparation'},createdAt:new Date().toISOString()};writeNew(path.join(output,'source-preparation-receipt.json'),encode(receipt));artifactInventory(output,{kind:NEW_SOURCE_KIND,dealer:row.slug,status:'passed'});return {dealer:row.slug,output,preparedTree:receipt.preparedTree,sourcePaths:receipt.sourcePaths,uniqueBlobBytes:receipt.uniqueBlobBytes,published:false,hostedApproval:false};
+  const receipt={...readOnly,write:true,state:'personalized-source-proposal-needs-build-and-hosted-review',baseRootTree:baseline.rootTree,preparedTree:proposal.patch.preparedTree,request:{path:requestFile,sha256:sha256(requestInput.bytes)},inputs:row.inputs,identityReview:row.identityReview,creationReceiptSha256:sha256(fs.readFileSync(creation.receipt)),sourcePaths:proposal.patch.entries.length,reusedGitBlobs:proposal.patch.reusedGitBlobs.length,uniqueBlobBytes:proposal.patch.uniqueBlobBytes,patchSha256:sha256(encode(proposal.patch)),branding:brand,nativeAdoptionSha256:sha256(files.get(ADOPTION_FILE)),...(qualified?{nativeQualification:{contextFileSha256:sha256(qualified.qualificationBytes),qualificationLockSha256:sha256(qualified.candidateLockBytes),receiptSha256:sha256(files.get(ADOPTION_FILE)),nativeApproval:false,hostedApproval:false,globalReleaseApproval:false}}: {}),personalizationChanges:changes,authoritativeFactsUnchanged:true,reviewed:false,published:false,buildApproval:false,hostedApproval:false,privatePublishingMirror:{repository:row.repository,state:'not-published-by-source-preparation'},createdAt:new Date().toISOString()};writeNew(path.join(output,'source-preparation-receipt.json'),encode(receipt));artifactInventory(output,{kind:NEW_SOURCE_KIND,dealer:row.slug,status:'passed'});return {dealer:row.slug,output,preparedTree:receipt.preparedTree,sourcePaths:receipt.sourcePaths,uniqueBlobBytes:receipt.uniqueBlobBytes,published:false,hostedApproval:false};
  }catch(error){writeNew(path.join(area,'failure.json'),encode({kind:NEW_SOURCE_KIND,dealer:row.slug,error:error.message,canonicalCandidate:creation?.clientRoot??null,retained:true,published:false,hostedApproval:false,failedAt:new Date().toISOString()}));throw error;}
 }
 

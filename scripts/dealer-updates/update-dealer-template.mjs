@@ -373,6 +373,31 @@ export function applyReviewedFactualConsumerResolutions({plan,original,oldBases,
   plan.factualConsumerResolutions=proof;return proof;
 }
 
+export function preserveReviewedAppInventoryNotice({app,currentBytes,profileBytes,review,manifest,baseline,targetSources}) {
+  if(review==null)return null;
+  const exact=(v,keys)=>v&&typeof v==='object'&&!Array.isArray(v)&&JSON.stringify(Object.keys(v).sort())===JSON.stringify([...keys].sort());
+  const equal=(a,b)=>JSON.stringify(a)===JSON.stringify(b),hex=v=>/^[a-f0-9]{64}$/.test(v??'');
+  if(!exact(review.baseline,['commit','tree'])||!Object.values(review.baseline).every(v=>/^[a-f0-9]{40}$/.test(v??''))||!exact(review.targetSources,['auto-best','modern','import','app','mobile','karento-best']))throw Error('Exact canonical App notice baseline and six target sources required');
+  if(!exact(review,['schemaVersion','kind','dealer','baseline','path','currentConfigSha256','currentNoticeSha256','profileSha256','unmodifiedTargetConfigSha256','targetSources','reviewed','reviewedBy'])||review.schemaVersion!==1||review.kind!=='cars-current-app-inventory-notice-preservation'||review.reviewed!==true||typeof review.reviewedBy!=='string'||!review.reviewedBy.trim()||review.dealer!==manifest.slug||review.path!=='app/lib/dealer.json'||!equal(review.baseline,baseline)||!equal(review.targetSources,targetSources)||!['currentConfigSha256','currentNoticeSha256','profileSha256','unmodifiedTargetConfigSha256'].every(k=>hex(review[k])))throw Error('Exact reviewed App notice identity, baseline, target pins and byte leases required');
+  const clean=b=>Buffer.isBuffer(b)&&b.length>0&&b.length<=2*1024**2&&!b.includes(0)&&Buffer.from(b.toString('utf8')).equals(b);
+  if(!clean(currentBytes)||!clean(profileBytes)||sha256(currentBytes)!==review.currentConfigSha256||sha256(profileBytes)!==review.profileSha256||!(app.files instanceof Map))throw Error('Reviewed App notice source/profile bytes changed');
+  const current=JSON.parse(currentBytes.toString('utf8')),profile=JSON.parse(profileBytes.toString('utf8')),targetBytes=app.files.get('lib/dealer.json');
+  if(current.mode!=='dealer'||current.id!==manifest.slug||profile.slug!==manifest.slug||!clean(targetBytes)||sha256(targetBytes)!==review.unmodifiedTargetConfigSha256||!equal(JSON.parse(targetBytes.toString('utf8')),app.config)||app.config.mode!=='dealer'||app.config.id!==manifest.slug||!app.provenance||app.provenance.profileSha256!==review.profileSha256)throw Error('Reviewed App notice current/generated dealer identity or provenance changed');
+  const notice=current.inventoryNotice;
+  if(typeof notice!=='string'||!notice.trim()||Buffer.byteLength(notice,'utf8')>1024||notice.includes('\0')||sha256(Buffer.from(notice,'utf8'))!==review.currentNoticeSha256)throw Error('Exact current concise App notice required');
+  if(!Array.isArray(profile.listings)||profile.listings.some(row=>(row.mediaKind||row.raw?.mediaKind)==='generated_category_illustration')&&!/illustrat/i.test(notice))throw Error('Current notice must preserve any required illustrated-image disclosure');
+  // Preserve one existing presentation string before factual target comparison; all facts and generated controls remain exact.
+  const config={...app.config,inventoryNotice:notice},after=Buffer.from(JSON.stringify(config,null,2)+'\n');
+  const proof={schemaVersion:1,kind:review.kind,dealer:manifest.slug,baseline:structuredClone(baseline),path:review.path,reviewSha256:sha256(Buffer.from(JSON.stringify(review))),currentConfigSha256:review.currentConfigSha256,currentNoticeSha256:review.currentNoticeSha256,profileSha256:review.profileSha256,unmodifiedTargetConfigSha256:review.unmodifiedTargetConfigSha256,targetConfigSha256:sha256(after),targetSources:structuredClone(targetSources),allOtherConfigFieldsUnchanged:true,sourceFactsUnchanged:true};
+  app.config=config;app.files.set('lib/dealer.json',after);app.provenance={...app.provenance,inventoryNoticePreservation:proof};return proof;
+}
+
+function readAppInventoryNoticeReview(bytes) {
+  const review=bytes?JSON.parse(bytes.toString('utf8').replace(/^\uFEFF/,'')).appInventoryNoticePreservation??null:null;
+  if(review!=null&&(!review||typeof review!=='object'||Array.isArray(review)))throw Error('App notice review must be an exact object');
+  return review;
+}
+
 function readFactualConsumerReview(bytes) {
   return bytes?JSON.parse(bytes.toString('utf8').replace(/^\uFEFF/,'')).factualConsumerResolutions??null:null;
 }
@@ -512,13 +537,14 @@ export function loadModernCopyReview({carsRoot,dealerRoot,dealer,pin}) {
 }
 
 /** Explicit factual refresh uses fresh pinned target trees, never a twice-personalized candidate. */
-export async function personalizeFactualTargetBases({pins,newBases,dealerRoot,manifest,modernCopyReview=null}) {
+export async function personalizeFactualTargetBases({pins,newBases,dealerRoot,manifest,modernCopyReview=null,appInventoryNoticeReview=null,carsRoot}) {
   const keys=['auto-best','modern','import','app','mobile','karento-best'];
   if(JSON.stringify(Object.keys(pins).sort())!==JSON.stringify([...keys].sort()) || manifest.packaging?.version!=='5')throw new Error('Factual refresh requires all six qualified target families');
-  return personalizePinnedTargetBases({pins,newBases,dealerRoot,manifest,profile:loadDealerProfile(dealerRoot,manifest.slug),modernCopyReview});
+  if(appInventoryNoticeReview!=null){if(!carsRoot)throw Error('Canonical root required for reviewed App notice');factualConsumerBaseline({review:appInventoryNoticeReview,carsRoot,dealerRoot,dealer:manifest.slug});}
+  return personalizePinnedTargetBases({pins,newBases,dealerRoot,manifest,profile:loadDealerProfile(dealerRoot,manifest.slug),modernCopyReview,appInventoryNoticeReview});
 }
 
-async function personalizePinnedTargetBases({pins,newBases,dealerRoot,manifest,profile,modernCopyReview=null}) {
+async function personalizePinnedTargetBases({pins,newBases,dealerRoot,manifest,profile,modernCopyReview=null,appInventoryNoticeReview=null}) {
   const keys=['auto-best','modern','import','app','mobile','karento-best'];
   const consumerPaths=new Set(),adaptations={};
   if(modernCopyReview)assertReviewedModernCopy({profile,value:modernCopyReview.value});
@@ -551,6 +577,7 @@ async function personalizePinnedTargetBases({pins,newBases,dealerRoot,manifest,p
     return fs.readFileSync(path.join(dealerRoot,name));
   };
   const app=await prepareAppDealer(dealerRoot,manifest,{readFile,appFiles:newBases.app});
+  const appNoticeProof=appInventoryNoticeReview!=null?preserveReviewedAppInventoryNotice({app,currentBytes:fs.readFileSync(path.join(dealerRoot,'app/lib/dealer.json')),profileBytes:readFile('auto-best/src/lib/data/dealer-profile.json'),review:appInventoryNoticeReview,manifest,baseline:appInventoryNoticeReview.baseline,targetSources:Object.fromEntries(keys.map(key=>[key,renderPins(pins[key].targetSource)]))}):null;
   for(const [name,bytes]of app.files){generated.set('app/'+name,bytes);consumerPaths.add('app/'+name);}
   const beforeExtended=new Map(generated);
   for(const key of ['mobile','karento-best'])adaptations[key]=applyExtendedRefreshAdapter({files:generated,key,profile,client:dealerRoot});
@@ -558,7 +585,7 @@ async function personalizePinnedTargetBases({pins,newBases,dealerRoot,manifest,p
   const split=splitPrefixedTrees(generated,keys);for(const key of keys)newBases[key]=split[key];
   if(keys.some(key=>![...consumerPaths].some(name=>name.startsWith(key+'/'))))throw new Error('Every factual target family needs exact consumer proof');
   return {adaptations,appProvenance:app.provenance,proof:{schemaVersion:1,stage:'preservation-merge-before-native-catalogs-and-branding',mode:'current-facts-from-pinned-six-targets',dealer:manifest.slug,profileSha256:sha256(JSON.stringify(profile)),
-    targetSources:Object.fromEntries(keys.map(key=>[key,renderPins(pins[key].targetSource)])),consumerPaths:[...consumerPaths].sort(),...(modernCopyReview?{modernCopyReview:{path:modernCopyReview.path,sha256:modernCopyReview.sha256,modernInputRowsSha256:modernCopyReview.value.modernInputRowsSha256}}:{})}};
+    targetSources:Object.fromEntries(keys.map(key=>[key,renderPins(pins[key].targetSource)])),consumerPaths:[...consumerPaths].sort(),...(appNoticeProof?{appInventoryNoticePreservation:appNoticeProof}:{}),...(modernCopyReview?{modernCopyReview:{path:modernCopyReview.path,sha256:modernCopyReview.sha256,modernInputRowsSha256:modernCopyReview.value.modernInputRowsSha256}}:{})}};
 }
 
 /** A reviewed dealer resolution cannot retain stale facts and receive a new profile seal. */
@@ -869,7 +896,11 @@ async function validatePinnedBaseEvidence(metadata, manifest, lock, paths) {
   const refreshFacts=metadata.selection?.refreshFacts===true;assertFactualRefreshAdmission({enabled:refreshFacts,designSet:metadata.selection?.designSet,selectedKeys:metadata.selection?.selectedKeys,qualification:metadata.qualification?.context,manifest});
   if(metadata.modernCopyReview&&(!refreshFacts||!metadata.selection?.templatePalette||metadata.registeredAdoption))throw new Error('Saved Modern copy review requires ordinary six-family factual source preparation');
   const modernCopyReview=metadata.modernCopyReview?loadModernCopyReview({carsRoot:metadata.carsRoot,dealerRoot:metadata.dealerRoot,dealer:metadata.dealerSlug,pin:metadata.modernCopyReview}):null;
-  const factual=refreshFacts?await personalizeFactualTargetBases({pins:metadata.pins,newBases,dealerRoot:metadata.dealerRoot,manifest:metadata.targetManifest,modernCopyReview}):null;
+  const noticeResolutionBytes=metadata.resolutionsSha256?fs.readFileSync(path.join(metadata.runDirectory,'resolutions.json')):null;
+  if(noticeResolutionBytes&&sha256(noticeResolutionBytes)!==metadata.resolutionsSha256)throw Error('Reviewed App notice resolution artifact changed');
+  const appInventoryNoticeReview=readAppInventoryNoticeReview(noticeResolutionBytes);
+  if(appInventoryNoticeReview!=null&&(!refreshFacts||!metadata.selection?.templatePalette||metadata.registeredAdoption))throw Error('Saved App notice review requires ordinary qualified six-family factual preparation');
+  const factual=refreshFacts?await personalizeFactualTargetBases({pins:metadata.pins,newBases,dealerRoot:metadata.dealerRoot,manifest:metadata.targetManifest,modernCopyReview,appInventoryNoticeReview,carsRoot:metadata.carsRoot}):null;
   const extendedAdaptations=factual?.adaptations??await personalizeAddedBases({pins:metadata.pins,newBases,dealerRoot:metadata.dealerRoot,manifest});
   const targetManifest = metadata.targetManifest;
   validatePackagingManifest(targetManifest);
@@ -982,6 +1013,8 @@ async function runPlan(values) {
   const registeredConsumerReview=resolutionBytes?JSON.parse(resolutionBytes.toString('utf8').replace(/^\uFEFF/,'')).registeredConsumerResolutions??null:null;
   if(registeredConsumerReview&&!registeredAdoption)throw new Error('Reviewed consumer resolutions are registered-only');
   const factualConsumerReview=readFactualConsumerReview(resolutionBytes);
+  const appInventoryNoticeReview=readAppInventoryNoticeReview(resolutionBytes);
+  if(appInventoryNoticeReview!=null&&(!refreshFacts||values['template-palette']!==true||registeredAdoption||!qualification))throw Error('Reviewed App notice requires ordinary qualified six-family factual preparation and native template palettes');
   if(factualConsumerReview&&(!refreshFacts||registeredAdoption||values['template-palette']!==true))throw new Error('Reviewed factual consumers require ordinary --refresh-facts and --template-palette');
   const paths = repositoryPaths(carsRoot, templateRoot);
   validateRepositoryPaths(pins, paths);
@@ -1016,7 +1049,7 @@ async function runPlan(values) {
   }
   const templatePalette=values['template-palette'] === true;
   const templatePaletteConfigs=pinnedPaletteConfigs(newBases,pins,templatePalette);
-  const factual=refreshFacts?await personalizeFactualTargetBases({pins,newBases,dealerRoot,manifest:targetManifest,modernCopyReview}):null;
+  const factual=refreshFacts?await personalizeFactualTargetBases({pins,newBases,dealerRoot,manifest:targetManifest,modernCopyReview,appInventoryNoticeReview,carsRoot}):null;
   const extendedAdaptations=factual?.adaptations??await personalizeAddedBases({pins,newBases,dealerRoot,manifest,registeredAdoption});
 
   const adapted = await adaptPinnedBases({ keys: Object.keys(pins), oldBases, newBases, manifest, targetManifest,registeredAdoption });

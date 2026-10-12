@@ -269,7 +269,7 @@ export function nativeReleaseReadiness(variants, releases, options) {
 export function validateNativeQualificationContext(context, {dealer} = {}) {
   if (context?.schemaVersion !== 1 || context.kind !== 'cars-native-source-qualification-context' ||
       !/^[a-z0-9][a-z0-9-]{0,95}$/.test(context.id || '') || !/^[a-z0-9][a-z0-9-]{0,63}$/.test(context.dealer || '') ||
-      (dealer && context.dealer !== dealer) || context.scope !== 'existing-dealer-pilot' || context.reviewed !== true ||
+      (dealer && context.dealer !== dealer) || !['existing-dealer-pilot', 'new-dealer-source-proposal'].includes(context.scope) || context.reviewed !== true ||
       !Number.isFinite(Date.parse(context.reviewedAt)) || !commitPattern.test(context.sourceCommit || '') ||
       context.nativeApproval !== false || context.hostedApproval !== false || context.globalReleaseApproval !== false ||
       !hashPattern.test(context.approvedLockSha256 || '') || !hashPattern.test(context.candidateLockSha256 || '')) {

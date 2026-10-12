@@ -5,9 +5,10 @@ import path from 'node:path';
 import os from 'node:os';
 import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
+import {nativeInputDigest} from './lib/native-localization.mjs';
 import {sha256,POLICY} from './lib/workflow.mjs';
 import {gitObjectId,gitTreeId} from './prepare-existing-fleet-source.mjs';
-import {NEW_SOURCE_INPUT_ROOT,NEW_SOURCE_REQUEST_KIND,NEW_SOURCE_FAMILIES,validateNewSourceRequest,validateNewDealerFacts,readNewSourceInput,validateNewSourceRaster,assertNewSourceCiContext,validateNewSourceBranchAbsence,createNewSourceProposal,verifyNewSourceProposal,prepareNewDealerSource} from './prepare-new-dealer-source.mjs';
+import {NEW_SOURCE_INPUT_ROOT,NEW_SOURCE_REQUEST_KIND,NEW_SOURCE_FAMILIES,validateNewSourceCopyReview,newSourceReviewedCopy,validateNewSourceRequest,validateNewDealerFacts,readNewSourceInput,validateNewSourceRaster,assertNewSourceCiContext,validateNewSourceBranchAbsence,createNewSourceProposal,verifyNewSourceProposal,prepareNewDealerSource} from './prepare-new-dealer-source.mjs';
 
 const revision='a'.repeat(40),digest='b'.repeat(64),tree='c'.repeat(40),clone=v=>structuredClone(v),enc=v=>Buffer.from(JSON.stringify(v)+'\n');
 function fixture(){
@@ -81,4 +82,30 @@ test('target in the final preserved branch and unchanged folder bounds still rej
  assert.throws(()=>validateNewSourceBranchAbsence(many),/lease/);
  const perBranch=branchCapacityFixture(139);perBranch.branches[138].clients=Array.from({length:4097},(_,i)=>'unrelated-'+i);
  assert.throws(()=>validateNewSourceBranchAbsence(perBranch),/Invalid/);
+});
+
+test('dated companion copy binds exact stock bytes, source identity and native image alts without changing stock facts',()=>{
+ const f=fixture(),stock={records:[{id:'source-1',sourceId:'source-1',description:'Датирана извадка от публикувана обява.'}]};
+ const review={schemaVersion:1,kind:'cars-new-source-reviewed-companion-copy',dealer:f.dealer.slug,reviewed:true,
+   reviewedAt:'2026-10-12T00:00:00Z',stockSha256:f.dealer.inputs.stock.sha256,
+   descriptions:[{sourceId:'source-1',sourceDescription:stock.records[0].description,en:'Dated sample; confirm availability directly.',bg:stock.records[0].description}]};
+ const before=JSON.stringify(stock);validateNewSourceCopyReview(review,f.dealer,stock);
+ const profile={listings:[{slug:'native-slug',sourceId:'source-1',description:stock.records[0].description,images:[{alt:'Original vehicle image'}]}]};
+ const copy=newSourceReviewedCopy(profile,review);assert.equal(copy['native-slug'].en.description,review.descriptions[0].en);
+ assert.deepEqual(copy['native-slug'].bg.imageAlts,['Original vehicle image']);assert.equal(JSON.stringify(stock),before);
+ for(const changed of [{...review,stockSha256:'9'.repeat(64)},{...review,descriptions:[{...review.descriptions[0],sourceId:'other'}]},{...review,unknown:true}])
+   assert.throws(()=>validateNewSourceCopyReview(changed,f.dealer,stock));
+ assert.throws(()=>newSourceReviewedCopy({listings:[{...profile.listings[0],sourceId:'other'}]},review),/identity changed/);
+ assert.equal(newSourceReviewedCopy(profile,null),undefined);
+});
+
+test('personalized creator metadata is finalized before native receipt sealing',()=>{
+ const manifest={variants:[{key:'app'}]},before=new Map([['app/.client/project.json',Buffer.from('{"state":"needs-personalization"}')]]);
+ const oldDigest=nativeInputDigest(before,manifest).digest;
+ before.set('app/.client/project.json',Buffer.from('{"state":"personalized-needs-build","readyToPublish":false}'));
+ assert.notEqual(nativeInputDigest(before,manifest).digest,oldDigest,'native receipt binds creator metadata too');
+ const source=fs.readFileSync(fileURLToPath(new URL('./prepare-new-dealer-source.mjs',import.meta.url)),'utf8');
+ const finalized=source.indexOf("state:'personalized-needs-build'"),collect=source.indexOf('await regenerateDealerCatalogs(directory,root,manifest.variants.map(v=>v.key))'),seal=source.indexOf('files=qualified?adoptNativeQualification');
+ assert(finalized>=0&&finalized<collect&&collect<seal,'actual source producer collects final metadata before either native seal');
+ assert.equal(source.lastIndexOf("state:'personalized-needs-build'"),finalized,'no later metadata rewrite invalidates the seal');
 });

@@ -50,11 +50,12 @@ export async function resolveSourceRequest(request,{root=ROOT,leads,registry}={}
  assert(request?.schemaVersion===1&&same(Object.keys(request).sort(),['mode','newSourceRequest','schemaVersion']),'Exact new-approved source envelope required');
  const p=request.newSourceRequest;
  assert(p&&same(Object.keys(p).sort(),['path','sha256'])&&safeName(p.path)&&p.path.startsWith(SOURCE_CAMPAIGN+'/new-source/')&&p.path.endsWith('.json')&&hex64(p.sha256),'Exact bounded nested source request pin required');
- const {readNewSourceInput,validateNewSourceRequest}=await import('./prepare-new-dealer-source.mjs');
+ const {readNewSourceInput,validateNewSourceRequest,readNewSourceQualification}=await import('./prepare-new-dealer-source.mjs');
  const nested=strictJson(readNewSourceInput(root,p).bytes),lockBytes=fs.readFileSync(path.join(root,'templates.lock.json')),registryBytes=fs.readFileSync(path.join(root,'docs/DEPLOYMENT-INVENTORY.json')),indexBytes=fs.readFileSync(path.join(root,'clients/index.json'));
  const inventory=strictJson(registryBytes),index=strictJson(indexBytes),lock=strictJson(lockBytes),occupiedSlugs=git(root,['ls-tree','-z','--name-only','HEAD:clients'],{encoding:null}).toString('utf8').split('\0').filter(Boolean);
- validateNewSourceRequest(nested,{registry:inventory,clientIndex:index,occupiedSlugs,lock,lockSha256:sha256(lockBytes),registrySha256:sha256(registryBytes),clientIndexSha256:sha256(indexBytes)});
- return {mode,dealers:nested.dealers.map(r=>r.slug),requestFile:p.path,nested,lock};
+ validateNewSourceRequest(nested,{registry:inventory,clientIndex:index,occupiedSlugs,lock,lockSha256:sha256(lockBytes),registrySha256:sha256(registryBytes),clientIndexSha256:sha256(indexBytes),root});
+ const qualified=readNewSourceQualification(root,nested,nested.dealers[0].slug);
+ return {mode,dealers:nested.dealers.map(r=>r.slug),requestFile:p.path,nested,lock:qualified?.lock??lock};
 }
 export async function sourceMatrix(request,options={}){
  const resolved=await resolveSourceRequest(request,options);
@@ -63,18 +64,19 @@ export async function sourceMatrix(request,options={}){
   const receipt=resolved.receipts.find(r=>r.dealer===slug),paths=[...Object.values(request.inputs[slug]).map(p=>p.path),receipt.personalization.path,'clients/index.json','templates.lock.json'];
   assert(paths.every(p=>safeName(p)&&/^[a-zA-Z0-9._/-]+$/.test(p)),'Registered source sparse paths must be exact literals');const sourceInputs=[...new Set(paths)].sort().map(p=>'/'+p).join('\n');assert(Buffer.byteLength(sourceInputs)<=32768,'Registered input matrix exceeds its bound');return {slug,mode:resolved.mode,sourceInputs};
  })};assert(Buffer.byteLength(JSON.stringify(matrix))<=450*1024,'Registered source matrix exceeds the bounded CI output limit');return matrix;}
- const {readNewSourceInput}=await import('./prepare-new-dealer-source.mjs');
+ const {readNewSourceInput,readNewSourceQualification}=await import('./prepare-new-dealer-source.mjs');
  const matrix={include:resolved.nested.dealers.map(row=>{
   const prefix=SOURCE_CAMPAIGN+'/new-source/'+row.slug,branding=strictJson(readNewSourceInput(options.root??ROOT,row.inputs.branding,{prefix}).bytes);
-  const inputPaths=[resolved.requestFile,...Object.values(row.inputs).map(p=>p.path),row.identityReview.path,...row.media.map(p=>p.path)];
+  const inputPaths=[...(resolved.nested.qualification?[resolved.nested.qualification.candidateLock.path,resolved.nested.qualification.contexts[row.slug].path]:[]),...(row.copyReview?[row.copyReview.path]:[]),resolved.requestFile,...Object.values(row.inputs).map(p=>p.path),row.identityReview.path,...row.media.map(p=>p.path)];
   for(const p of [branding.master,branding.mark,...Object.values(branding.surfaces??{})].filter(Boolean)){
    assert(safeName(p.path)&&p.path.startsWith(prefix+'/')&&hex64(p.sha256),'Exact bounded creator branding pin required');inputPaths.push(p.path);
   }
   assert(inputPaths.length<=430,'New source sparse input inventory exceeds its bound');
   const evidence=[];for(const key of Object.keys(row.sourceReleases)){
-   const qa=resolved.lock.templates[key].qa;if(qa?.evidence){assert(safeName(qa.evidence)&&qa.evidence.startsWith('docs/releases/')&&qa.evidence.endsWith('.json'),'Bounded approved template evidence path required');evidence.push(qa.evidence);}
+   const release=resolved.lock.templates[key],qa=release.qualification?.sourceQA?.approvedRelease?.qa??release.qa;if(qa?.evidence){assert(safeName(qa.evidence)&&qa.evidence.startsWith('docs/releases/')&&qa.evidence.endsWith('.json'),'Bounded approved template evidence path required');evidence.push(qa.evidence);}
    const deployment=qa?.nativeLocalization?.deployment;for(const name of ['artifactManifest','singleWorkerReceipt','deploymentReceipt','hostedReceipt'])if(deployment?.[name]){const p=deployment[name];assert(safeName(p.reference)&&p.reference.startsWith('docs/releases/')&&p.reference.endsWith('.json')&&hex64(p.sha256),'Bounded approved native proof pin required');evidence.push(p.reference);}
   }
+  if(resolved.nested.qualification){const qualified=readNewSourceQualification(options.root??ROOT,resolved.nested,row.slug);evidence.push(qualified.context.sourceDeltaReview.reference);}
   const paths=[...new Set(['catalog.json','workspace.json','clients/index.json',...Object.keys(row.sourceReleases).map(k=>'templates/'+k+'/package.json'),...evidence,...inputPaths])].sort();
   assert(paths.every(p=>safeName(p)&&/^[a-zA-Z0-9._/-]+$/.test(p)),'Source sparse paths must be exact literals without pattern metacharacters');const sourceInputs=paths.map(p=>'/'+p).join('\n');
   assert(Buffer.byteLength(sourceInputs)<=32768,'Per-dealer sparse input list exceeds the matrix byte limit');return {slug:row.slug,mode:resolved.mode,sourceInputs};

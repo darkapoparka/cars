@@ -3,13 +3,14 @@ import path from 'node:path';
 import { copySource } from './copy-source.mjs';
 import { verifyTemplate, selectedTemplateSource, templateDevelopmentState } from './template-release.mjs';
 import { materializeTemplateSource } from './lib/template-source.mjs';
-import { ROOT, POLICY, args, json, inside, fingerprint, resolveIdentity, validateManifest, excluded } from './lib/workflow.mjs';
+import { ROOT, POLICY, args, json, inside, fingerprint, sha256, git, resolveIdentity, validateManifest, excluded } from './lib/workflow.mjs';
 import { dealerGuidance, variantCommands } from './lib/dealer-guidance.mjs';
 import { gitRead, repositoryIdentity } from './workspace-doctor.mjs';
 import { normalizeDealerLocale, readDealerLocale } from './lib/dealer-locale.mjs';
-import { nativeContract, validateNativeRelease } from './lib/native-localization.mjs';
+import { nativeContract, validateNativeRelease, validateNativeQualificationContext, validateTemplateQualification, parseCatalogJson } from './lib/native-localization.mjs';
 import { planSixDesignSelection } from './lib/six-design-release.mjs';
 import { baseNativeManifest } from './publishing/app-variant.mjs';
+import { readPinnedTemplateTree } from './dealer-updates/pinned-template-source.mjs';
 
 // Verify this checkout, not every other repository's unrelated unfinished work.
 export function assertMainCheckout(root, { readGit = gitRead, platform = process.platform } = {}) {
@@ -26,11 +27,41 @@ export function assertMainCheckout(root, { readGit = gitRead, platform = process
   return { head, remoteHead, checkedAt: new Date().toISOString() };
 }
 
-export function planNewClient({ root = ROOT, client, repository, preset = 'standard', templates, dealerId = null, designSet = null, localeConfig = null, readGit = gitRead }) {
+/** Exact committed qualification pins are an explicit source-only opt-in.
+ * The global approved lock and ordinary new-client path remain authoritative. */
+export function readNewClientQualification(root, pins, dealer) {
+  if (!pins || JSON.stringify(Object.keys(pins).sort()) !== '["candidateLock","qualification"]') throw new Error('Exact candidate lock and qualification pins required');
+  const read = pin => {
+    if (!pin || JSON.stringify(Object.keys(pin).sort()) !== '["path","sha256"]' || !/^docs\/releases\/[a-zA-Z0-9._/-]+\.json$/.test(pin.path || '') || pin.path.split('/').some(p=>p==='.'||p==='..') || !/^[a-f0-9]{64}$/.test(pin.sha256 || '')) throw new Error('Bounded qualification input pin required');
+    const file=inside(root,pin.path,{mustExist:true});let ancestor=fs.realpathSync(root);
+    for(const component of pin.path.split('/')){ancestor=path.join(ancestor,component);if(fs.lstatSync(ancestor).isSymbolicLink())throw new Error('Qualification input must be a physical file');}
+    const stat=fs.statSync(file);if(!stat.isFile()||stat.size<=0||stat.size>2*1024**2)throw new Error('Bounded qualification bytes required');
+    const bytes=fs.readFileSync(file);if(sha256(bytes)!==pin.sha256)throw new Error('Qualification input bytes changed');
+    const blob=git(root,['rev-parse','HEAD:'+pin.path]);if(!/^[a-f0-9]{40}$/.test(blob)||git(root,['hash-object','--stdin'],{input:bytes})!==blob)throw new Error('Qualification inputs must be exact committed source');
+    return {bytes,value:parseCatalogJson(new TextDecoder('utf-8',{fatal:true}).decode(bytes))};
+  };
+  const candidate=read(pins.candidateLock),qualified=read(pins.qualification),context=validateNativeQualificationContext(qualified.value,{dealer});
+  if(context.scope!=='new-dealer-source-proposal')throw new Error('New-client requires a new-dealer source qualification scope');
+  if(context.candidateLockSha256!==pins.candidateLock.sha256||context.approvedLockSha256!==sha256(fs.readFileSync(path.join(root,'templates.lock.json'))))throw new Error('Qualification candidate or approved parent lock changed');
+  if(candidate.value.schemaVersion!==1||candidate.value.exportPolicy!==POLICY||!candidate.value.templates)throw new Error('Invalid candidate source lock');
+  read({path:context.sourceDeltaReview.reference,sha256:context.sourceDeltaReview.sha256});
+  return {lock:candidate.value,context,candidateLockBytes:candidate.bytes,qualificationBytes:qualified.bytes};
+}
+export function verifyNewClientRelease(root,key,qualification=null) {
+  if(qualification===null)return verifyTemplate(root,key);
+  const release=qualification.lock.templates[key];validateTemplateQualification(key,release,qualification.context,{root});
+  if(release.exportPolicy!==POLICY||git(root,['merge-base','--is-ancestor',release.source.revision,'HEAD'],{allowFailure:true})===null||git(root,['rev-parse',release.source.revision+':'+release.source.path])!==release.source.tree)throw new Error(key+': qualification source tree/revision changed');
+  readPinnedTemplateTree({key,repositoryPath:root,source:release.source,expectedDigest:release.digest});
+  inside(root,release.snapshotPath,{mustExist:true});return release;
+}
+
+export function planNewClient({ root = ROOT, client, repository, preset = 'standard', templates, dealerId = null, designSet = null, localeConfig = null, sourceQualification = null, readGit = gitRead }) {
   root = fs.realpathSync(root);
   if (!['standard', 'import'].includes(preset)) throw new Error('Use --preset standard or import.');
   if (designSet !== null && designSet !== 'six') throw new Error('Use --design-set six for the explicit six-family release.');
   const six = designSet === 'six';
+  if(sourceQualification!==null&&!six)throw new Error('Source qualification requires the explicit six-design creator');
+  const qualification=sourceQualification===null?null:readNewClientQualification(root,sourceQualification,client);
   if (six && localeConfig === null) throw new Error('Six-design creation requires an explicit --locale-config.');
   if (!six && localeConfig !== null) throw new Error('Use --design-set six for native locale creation; legacy version 1 cannot adopt this contract.');
   if (resolveIdentity(root, client, dealerId).exists) throw new Error('Existing dealer identity: continue its canonical source; do not clone a duplicate.');
@@ -57,7 +88,7 @@ export function planNewClient({ root = ROOT, client, repository, preset = 'stand
   const clientRoot = inside(root, 'clients/' + client);
   if (fs.existsSync(clientRoot)) throw new Error('Client destination is occupied: ' + clientRoot);
   const plans = selected.map(template => {
-    const release = verifyTemplate(root, template.key);
+    const release = verifyNewClientRelease(root, template.key, qualification);
     const source = selectedTemplateSource(release);
     const expectedPath = 'templates/' + template.key;
     const carsSource = release.source?.repository === 'darkapoparka/cars' && source.path === expectedPath;
@@ -68,16 +99,16 @@ export function planNewClient({ root = ROOT, client, repository, preset = 'stand
     const developmentHead = readGit(root, ['ls-remote', '--exit-code', 'https://github.com/' + source.repository + '.git', 'refs/heads/main']).split(/\s+/)[0];
     if (!/^[a-f0-9]{40}$/.test(developmentHead)) throw new Error('Cannot verify current upstream main: ' + template.key);
     const development = templateDevelopmentState(root, template.key, release, developmentHead, { readGit });
-    return { template: template.key, release, sourceRef: source, source: inside(root, expectedPath, { mustExist: true }), destination: path.join(clientRoot, template.key), homes: template.homes, ...development, releasePolicy: 'latest-reviewed-release; newer development is not silently promoted' };
+    return { template: template.key, release, sourceRef: source, source: inside(root, expectedPath, { mustExist: true }), destination: path.join(clientRoot, template.key), homes: template.homes, ...development, releasePolicy: qualification?'reviewed-source-qualification; native and hosted approval pending':'latest-reviewed-release; newer development is not silently promoted' };
   });
   manifest.templateRevisions = Object.fromEntries(plans.map(p => [p.template, p.sourceRef.revision]));
   manifest.templateSources = Object.fromEntries(plans.map(p => [p.template, p.sourceRef]));
   if (six) {
     const base = baseNativeManifest(manifest);
     nativeContract(base);
-    for (const { key } of base.variants) validateNativeRelease(key, plans.find(p => p.template === key).release,{root});
+    for (const { key } of base.variants) {const release=plans.find(p=>p.template===key).release;if(qualification)validateTemplateQualification(key,release,qualification.context,{root});else validateNativeRelease(key,release,{root});}
   }
-  return { root, client, dealerId, clientRoot, manifest, checkout, plans, state: 'needs-personalization' };
+  return { root, client, dealerId, clientRoot, manifest, checkout, plans, state: 'needs-personalization', ...(qualification?{sourceQualification,qualificationOnly:true,nativeApproval:false,hostedApproval:false}: {}) };
 }
 
 function creationGuidance(plan, variant = null) {
@@ -93,6 +124,7 @@ function creationGuidance(plan, variant = null) {
 
 export async function createNewClient(plan, { readGit = gitRead, copy = copySource } = {}) {
   const { root, clientRoot, client, manifest, plans } = plan;
+  const qualification=plan.sourceQualification?readNewClientQualification(root,plan.sourceQualification,client):null;
   if (path.resolve(clientRoot) !== inside(root, 'clients/' + client) || manifest.slug !== client) throw new Error('Invalid canonical client plan.');
   validateManifest(manifest);
   if (manifest.packaging.version === '5') nativeContract(baseNativeManifest(manifest));
@@ -116,7 +148,7 @@ export async function createNewClient(plan, { readGit = gitRead, copy = copySour
     }
     fs.writeFileSync(path.join(stagedClient, 'AGENTS.md'), creationGuidance(plan));
     for (const item of plans) {
-      if (JSON.stringify(verifyTemplate(root, item.template)) !== JSON.stringify(item.release)) throw new Error('Template release changed after planning: ' + item.template);
+      if (JSON.stringify(verifyNewClientRelease(root, item.template, qualification===null?null:readNewClientQualification(root,plan.sourceQualification,client))) !== JSON.stringify(item.release)) throw new Error('Template release changed after planning: ' + item.template);
       const destination = path.join(stagedClient, item.template);
       await materializeTemplateSource({ root, key: item.template, release: item.release, source: item.sourceRef, destination, copy });
       if (fingerprint(destination).digest !== item.release.digest) throw new Error('Copied source differs from the approved release: ' + item.template);
@@ -132,7 +164,7 @@ export async function createNewClient(plan, { readGit = gitRead, copy = copySour
     fs.writeFileSync(path.join(stagedClient, 'CLIENT.md'), `# ${client}\n\nStatus: needs personalization, not ready for outreach.\n\nUse one sourced fact/inventory/approved raster-logo pack across all ${designs} apps. Preserve template heroes, banners, layout and interactions. Record unknown facts. Follow docs/WORKFLOW.md and docs/LEAD-PUBLISHING.md in Cars.\n\n${manifest.variants.length} applications, one canonical dealer folder, one publishing repository on main and one shared Admin demo link. Hosting requires a qualified publisher and separate hosted evidence. No CRM/provider record or adoption/personalization receipt was created by this helper.\n`);
     if (assertMainCheckout(root, { readGit }).head !== plan.checkout.head) throw new Error('Cars main changed during copying; the staged candidate is preserved, not installed.');
     for (const item of plans) {
-      if (JSON.stringify(verifyTemplate(root, item.template)) !== JSON.stringify(item.release) || fingerprint(path.join(stagedClient, item.template)).digest !== item.release.digest) throw new Error('Source or copied candidate changed during creation: ' + item.template);
+      if (JSON.stringify(verifyNewClientRelease(root, item.template, qualification===null?null:readNewClientQualification(root,plan.sourceQualification,client))) !== JSON.stringify(item.release) || fingerprint(path.join(stagedClient, item.template)).digest !== item.release.digest) throw new Error('Source or copied candidate changed during creation: ' + item.template);
     }
     if (resolveIdentity(root, client, plan.dealerId).exists) throw new Error('Dealer destination appeared during copying; existing work was not overwritten.');
     inside(root, 'clients/' + client); // Recheck ancestor links before installation.
