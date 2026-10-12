@@ -118,9 +118,12 @@ export function installModernNativeResponseCapture({packageRoot,mount,sourceTree
  // delegation, and restore global fetch only while we still own that slot.
  const restore=()=>{if(state.closed)return;state.closed=true;state.active=false;if(scope.fetch===observedFetch)scope.fetch=originalFetch;if(state.exitRegistered){process.removeListener('exit',onExit);state.exitRegistered=false;}};
  const onExit=()=>{try{reportModernNativeDiscovery(packageRoot,mount,sourceTree);}catch(error){console.error('[cars-modern-native-discovery] diagnostic unavailable: '+error.message);}finally{restore();}};
- const record=async(response,locale,kind,pathname)=>{
+ const record=async(response,locale,kind,request)=>{
+  const url=new URL(request.url),pathname=url.pathname;
   const bytes=await readModernCapturedBody(response.clone()),headers=Object.fromEntries(response.headers);
-  const value={schemaVersion:1,kind:'cars-modern-official-prerender-response',sourceTree,graphSha256:state.graphSha256,pathname,locale,representation:kind,status:response.status,bytes:bytes.length,sha256:hash(bytes),headers};
+  const bodyPath='.cars-modern-native-body-'+locale+'-'+kind+'.'+kind;
+  fs.writeFileSync(inside(packageRoot,bodyPath),bytes,{flag:'wx'});
+  const value={schemaVersion:2,kind:'cars-modern-original-handler-response',sourceTree,graphSha256:state.graphSha256,pathname,locale,representation:kind,status:response.status,bytes:bytes.length,sha256:hash(bytes),body:{path:bodyPath,bytes:bytes.length,sha256:hash(bytes)},request:{method:request.method,pathname,search:url.search,rsc:request.headers.get('RSC')==='1',loopback:url.protocol==='http:'&&url.hostname==='127.0.0.1'&&Boolean(url.port),prerenderSecretPresent:request.headers.has('x-vinext-prerender-secret'),personalizedHeaders:['cookie','authorization','x-cars-country','x-vercel-ip-country','cf-ipcountry'].some(name=>request.headers.has(name))},headers};
   fs.writeFileSync(inside(packageRoot,'.cars-modern-native-response-'+locale+'-'+kind+'.json'),JSON.stringify(value,null,2)+'\n',{flag:'wx'});
  };
  async function observedFetch(input,init){
@@ -130,11 +133,11 @@ export function installModernNativeResponseCapture({packageRoot,mount,sourceTree
   if(!capture)return originalFetch(input,init);
   try{
    if(seen.has(locale)||['cookie','authorization','x-cars-country','x-vercel-ip-country','cf-ipcountry'].some(name=>request.headers.has(name)))fail('unexpected canonical build request context');seen.add(locale);
-   const response=await originalFetch(input,init);await record(response,locale,'html',url.pathname);
+   const response=await originalFetch(input,init);await record(response,locale,'html',request);
    // The official driver normally extracts Flight from its HTML. Ask its same
    // live handler for canonical RSC metadata and require the emitted bytes join.
    if(response.status===200){const rscUrl=new URL(url);rscUrl.search='?_rsc=';const headers=new Headers(request.headers);headers.set('RSC','1');headers.set('Accept','text/x-component');
-    const rsc=await originalFetch(new Request(rscUrl,{method:'GET',headers,redirect:'manual'}));await record(rsc,locale,'rsc',url.pathname);await rsc.body?.cancel();}
+    const rscRequest=new Request(rscUrl,{method:'GET',headers,redirect:'manual'}),rsc=await originalFetch(rscRequest);await record(rsc,locale,'rsc',rscRequest);await rsc.body?.cancel();}
    if(seen.size===2){reportModernNativeDiscovery(packageRoot,mount,sourceTree);restore();}return response;
   }catch(error){restore();throw error;}
  }
@@ -307,7 +310,11 @@ export async function emitModernFreeServicesSnapshots({packageRoot,target}){
   if(!wanted.includes(pathname)||seen.has(pathname)||row.router!=='app'||row.route!=='/:locale/services'||row.fallback||row.notFound||row.redirectProps||(row.responseStatus!==undefined&&row.responseStatus!==200)||row.revalidate!==false)fail('extra or noncanonical successful prerender route');
   seen.add(pathname);allowedFiles.push(pathname.slice(1)+'.html',pathname.slice(1)+'.rsc');
  }
- if(wanted.some(name=>!seen.has(name)))fail('exact EN/BG Services pair missing');
+ const officialStaticAccepted=wanted.every(name=>seen.has(name)),serviceRows=index.routes.filter(row=>row.route==='/:locale/services');
+ if(!officialStaticAccepted){
+  if(wanted.some(name=>seen.has(name))||serviceRows.length!==2||serviceRows.some(row=>row.status!=='skipped'||row.reason!=='dynamic'||(row.path!==undefined&&!wanted.includes(row.path))||(row.router!==undefined&&row.router!=='app')||row.fallback||row.notFound||row.redirectProps))fail('exact EN/BG Services dynamic skip pair missing');
+  const concrete=serviceRows.flatMap(row=>row.path===undefined?[]:[row.path]);if(new Set(concrete).size!==concrete.length)fail('duplicate Services dynamic skip');
+ }else if(serviceRows.length!==2)fail('extra Services prerender rows');
  const actual=leaves(prerender).sort();if(JSON.stringify(actual)!==JSON.stringify(allowedFiles.sort()))fail('extra/missing official prerender product');
  if(fs.existsSync(inside(client,'_vinext/static-cache')))fail('unreviewed framework static cache');
  const graph={};let rscGraph;for(const env of ['rsc','ssr','client']){
@@ -316,19 +323,25 @@ export async function emitModernFreeServicesSnapshots({packageRoot,target}){
   if(env!=='client'){const scan=readModernNativeGraph(packageRoot,env,'scan'),scanPath=target.root+'/dist/server/cars-native-graph-scan-'+env+'.json';fs.writeFileSync(inside(packageRoot,scanPath),scan.bytes,{flag:'wx'});graph[env].scan={path:scanPath,bytes:scan.bytes.length,sha256:hash(scan.bytes),chunks:scan.value.rows.length,phase:'scan'};}
  }
  const resolver=inside(server,'cars-native-preferences.js'),resolverBytes=fs.readFileSync(resolver);if(!resolverBytes.toString().includes('resolveCarsNativePreferences'))fail('compiled pure resolver export missing');
- const policyReceipts=[],routes=[],products=[];let identities=null;
+ const policyReceipts=[],routes=[],products=[],captureProducts=[];let identities=null;
  const wasm=installModernNativeWasmModules({packageRoot,graph:rscGraph,mount:contract.mount,sourceTree:contract.sourceTree,purpose:'compiled-policy-admission'});
  try {
  const producer=await import(pathToFileURL(resolver).href+'?cars-policy='+hash(resolverBytes));if(typeof producer.resolveCarsNativeResponsePolicy!=='function'||!Array.isArray(producer.VINEXT_INTERNAL_HEADERS))fail('same native graph response policy export missing');
  for(const pathname of wanted){
   const locale=pathname.split('/')[1],route={locale,pathname:target.base+pathname},security=await producer.resolveCarsNativeResponsePolicy(locale);
   for(const kind of ['html','rsc']){
-   const bytes=fs.readFileSync(inside(prerender,pathname.slice(1)+'.'+kind));if(bytes.length<1||bytes.length>2*1024*1024)fail('unbounded native '+kind);if(kind==='html'&&bytes.toString().split('<script type="application/json" id="cars-modern-native-preferences">null</script>').length!==2)fail('actual native HTML bootstrap slot differs');
    const capturePath='.cars-modern-native-response-'+locale+'-'+kind+'.json',captureBytes=fs.readFileSync(inside(packageRoot,capturePath)),capture=JSON.parse(captureBytes);
-   if(capture.schemaVersion!==1||capture.kind!=='cars-modern-official-prerender-response'||capture.sourceTree!==contract.sourceTree||capture.graphSha256!==graph.rsc.sha256||capture.pathname!==route.pathname||capture.locale!==locale||capture.representation!==kind||capture.status!==200||capture.bytes!==bytes.length||capture.sha256!==hash(bytes))fail('actual canonical native '+kind+' headers/body do not join emitted snapshot');
+   const bodyPath='.cars-modern-native-body-'+locale+'-'+kind+'.'+kind,bodyFile=inside(packageRoot,bodyPath),stat=fs.lstatSync(bodyFile);if(!stat.isFile()||stat.isSymbolicLink()||fs.realpathSync(bodyFile)!==bodyFile||stat.size<1||stat.size>2*1024*1024)fail('unbounded original native '+kind+' body');
+   const bytes=fs.readFileSync(bodyFile),expectedRequest={method:'GET',pathname:route.pathname,search:kind==='rsc'?'?_rsc=':'',rsc:kind==='rsc',loopback:true,prerenderSecretPresent:true,personalizedHeaders:false};
+   if(capture.schemaVersion!==2||capture.kind!=='cars-modern-original-handler-response'||capture.sourceTree!==contract.sourceTree||capture.graphSha256!==graph.rsc.sha256||capture.pathname!==route.pathname||capture.locale!==locale||capture.representation!==kind||capture.status!==200||capture.bytes!==bytes.length||capture.sha256!==hash(bytes)||JSON.stringify(capture.body)!==JSON.stringify({path:bodyPath,bytes:bytes.length,sha256:hash(bytes)})||JSON.stringify(capture.request)!==JSON.stringify(expectedRequest))fail('actual canonical native '+kind+' headers/body do not join emitted snapshot');
+   if(officialStaticAccepted){if(!fs.readFileSync(inside(prerender,pathname.slice(1)+'.'+kind)).equals(bytes))fail('actual canonical native '+kind+' headers/body do not join emitted snapshot');}
+   else if(typeof capture.headers?.['cache-control']!=='string'||!capture.headers['cache-control'].toLowerCase().split(',').some(value=>value.trim()==='no-store'))fail('original handler capture requires native no-store');
+   if(kind==='html'&&bytes.toString().split('<script type="application/json" id="cars-modern-native-preferences">null</script>').length!==2)fail('actual native HTML bootstrap slot differs');
    const sealed=sealModernNativeResponseHeaders(capture.headers,security,{locale,kind,pathname:route.pathname,internalHeaderNames:producer.VINEXT_INTERNAL_HEADERS});
    if(kind==='rsc'){const next=nativeResponseIdentities(sealed.headers);if(identities&&JSON.stringify(identities)!==JSON.stringify(next))fail('canonical native RSC identities differ');identities=next;}
-   policyReceipts.push({locale,representation:kind,captureSha256:hash(captureBytes),captureBytes:captureBytes.length,capture,omitted:sealed.omitted,headers:sealed.headers});
+   const retainedCapture=target.root+'/dist/server/cars-native-capture-'+locale+'-'+kind+'.json',retainedBody=target.root+'/dist/server/cars-native-body-'+locale+'.'+kind;
+   captureProducts.push({path:retainedCapture,bytes:captureBytes},{path:retainedBody,bytes});
+   policyReceipts.push({locale,representation:kind,captureSha256:hash(captureBytes),captureBytes:captureBytes.length,capture,captureReceipt:{path:retainedCapture,bytes:captureBytes.length,sha256:hash(captureBytes)},body:{path:retainedBody,bytes:bytes.length,sha256:hash(bytes)},omitted:sealed.omitted,headers:sealed.headers});
    const sha256=hash(bytes),relative='_cars/private/modern/'+sha256+'.'+kind;route[kind]={path:'/'+relative,bytes:bytes.length,sha256,headers:sealed.headers};products.push({relative,bytes});
   }routes.push(route);
  }
@@ -341,9 +354,12 @@ export async function emitModernFreeServicesSnapshots({packageRoot,target}){
  const prerenderWasmBytes=fs.readFileSync(inside(packageRoot,'.cars-modern-native-wasm-prerender.json')),prerenderWasm=JSON.parse(prerenderWasmBytes);
  if(prerenderWasm.kind!=='cars-modern-native-node-wasm-module-contract'||prerenderWasm.purpose!=='official-prerender'||prerenderWasm.sourceTree!==contract.sourceTree||prerenderWasm.mount!==target.base||prerenderWasm.graphSha256!==graph.rsc.sha256||JSON.stringify(prerenderWasm.rows)!==JSON.stringify(wasm.receipt.rows))fail('both native WASM process authorities must join final graph');
  const wasmPath=target.root+'/dist/server/cars-native-node-wasm.json',wasmBytes=Buffer.from(JSON.stringify({schemaVersion:1,kind:'cars-modern-native-node-wasm-proof',prerender:{bytes:prerenderWasmBytes.length,sha256:hash(prerenderWasmBytes),receipt:prerenderWasm},compiledPolicy:{...wasm.receipt,loadedUrls:wasm.loaded(),hookRestored:true},emittedWasmBytesUnchanged:true},null,2)+'\n');fs.writeFileSync(inside(packageRoot,wasmPath),wasmBytes,{flag:'wx'});
+ const retainedIndexPath=target.root+'/dist/server/cars-native-prerender-index.json';fs.writeFileSync(inside(packageRoot,retainedIndexPath),indexBytes,{flag:'wx'});
+ for(const product of captureProducts)fs.writeFileSync(inside(packageRoot,product.path),product.bytes,{flag:'wx'});
  for(const {relative,bytes}of products){const dest=inside(client,relative);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,bytes,{flag:'wx'});}
  fs.writeFileSync(inside(packageRoot,policyPath),policyBytes,{flag:'wx'});fs.writeFileSync(inside(server,'cars-free-services.json'),manifestBytes,{flag:'wx'});
- const receipt={...contract,schemaVersion:2,kind:'cars-modern-free-services-compiled-experiment',buildId:index.buildId,nativePrerenderIndexSha256:hash(indexBytes),discardedGenerated404:seen.has('/404'),emitted:routes,responsePolicy,manifest:{path:target.root+'/dist/server/cars-free-services.json',bytes:manifestBytes.length,sha256:hash(manifestBytes)},nativeResponsePolicy:{path:policyPath,bytes:policyBytes.length,sha256:hash(policyBytes),callableVerified:true,actualRscBodyJoinVerified:true},nativeNodeWasm:{path:wasmPath,bytes:wasmBytes.length,sha256:hash(wasmBytes)},resolver:{path:target.root+'/dist/server/cars-native-preferences.js',bytes:resolverBytes.length,sha256:hash(resolverBytes),callableVerified:false},graph,originalClientSourceTreeUnchanged:true,queryCache:false,nativeApproved:false,hostedApproved:false,freeCpuQualified:false};
+ const snapshotProvenance={method:officialStaticAccepted?'official-prerender-byte-join':'original-handler-no-store-capture',officialStaticAccepted,officialIndex:{path:retainedIndexPath,bytes:indexBytes.length,sha256:hash(indexBytes)},services:serviceRows};
+ const receipt={...contract,schemaVersion:2,kind:'cars-modern-free-services-compiled-experiment',buildId:index.buildId,nativePrerenderIndexSha256:hash(indexBytes),snapshotProvenance,discardedGenerated404:seen.has('/404'),emitted:routes,responsePolicy,manifest:{path:target.root+'/dist/server/cars-free-services.json',bytes:manifestBytes.length,sha256:hash(manifestBytes)},nativeResponsePolicy:{path:policyPath,bytes:policyBytes.length,sha256:hash(policyBytes),callableVerified:true,actualRscBodyJoinVerified:true},nativeNodeWasm:{path:wasmPath,bytes:wasmBytes.length,sha256:hash(wasmBytes)},resolver:{path:target.root+'/dist/server/cars-native-preferences.js',bytes:resolverBytes.length,sha256:hash(resolverBytes),callableVerified:false},graph,originalClientSourceTreeUnchanged:true,queryCache:false,nativeApproved:false,hostedApproved:false,freeCpuQualified:false};
  fs.writeFileSync(inside(server,'cars-free-services-build.json'),JSON.stringify(receipt,null,2)+'\n',{flag:'wx'});
  removeOwnedLeaves(prerender,actual);fs.unlinkSync(indexPath);
  return {manifestPath:target.root+'/dist/server/cars-free-services.json',resolverPath:target.root+'/dist/server/cars-native-preferences.js',receiptPath:target.root+'/dist/server/cars-free-services-build.json'};
