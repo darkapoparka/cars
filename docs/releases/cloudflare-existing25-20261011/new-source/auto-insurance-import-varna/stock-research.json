@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-public-stock-research-not-production-input",
+  "dealer": "auto-insurance-import-varna",
+  "observedAt": "2026-10-12T10:44:17.708Z",
+  "sourceUrl": "https://insautoimport.mobile.bg/",
+  "profileAdvertCount": 5,
+  "profileCountIsAvailability": false,
+  "sampledAdvertUrls": [
+    "https://insautoimport.mobile.bg/obiava-11791558893903721-mercedes-benz-eqs-450-4matic",
+    "https://insautoimport.mobile.bg/obiava-21790966008459045-mercedes-benz-gl-350-bluetec",
+    "https://insautoimport.mobile.bg/obiava-21785841411507875-mercedes-benz-gle-350",
+    "https://insautoimport.mobile.bg/obiava-21786115138978380-hyundai-santa-fe-2-4",
+    "https://insautoimport.mobile.bg/obiava-21785839373489976-bmw-x2-28i-m-pack"
+  ],
+  "rawPriceLabels": [
+    "35 999 €",
+    "15 400 €",
+    "19 999 €",
+    "16 500 €",
+    "17 100 €"
+  ],
+  "retainedFirstAdvertExcerpt": "1 - 5 от общо 5 обяви на \"Auto Insurance Import\" - Автомобили и Джипове Mercedes-Benz EQS 450+ 4Matic 35 999 € Цената е с включено ДДС обл. Варна, гр. Варна юни 2023 г. 70 000 км Бял Електрически 120 kWh Автоматична Седан Закупен от Мерцедес представител в Ню Йорк! Автомобилът пътува към България и ще бъде наличен в началото на 2027 година! Един собственик, чиста история и валидна международна гаранция на батерията! Обявената цена е с включен технотест, готов за регистрация в България! Особености - 360 camera \\ Задна камера, 4(5) Врати,",
+  "partsIgnored": null,
+  "availabilityConfirmed": false,
+  "mediaReusePermission": "unknown",
+  "sourcePhotosFetched": false,
+  "selectedCreationStockMode": "illustrative-not-dealer-stock",
+  "nextInput": "Use approved template illustrative vehicle assets with same honest demo disclosure across all six. Do not republish these dealer advert photos or claim these prices/availability in demo inventory.",
+  "productionStockReady": false
+}
