@@ -3,33 +3,52 @@
   "mode": "new-approved",
   "sourceRevision": "b1f0f5609c7c249cfd0649c122849ff2cbb8dfde",
   "dealers": [
-    "auto-insurance-import-varna"
+    "part-mag-cars-varna",
+    "kalo-0404-varna"
   ],
   "newSources": [
     {
-      "slug": "auto-insurance-import-varna",
+      "slug": "part-mag-cars-varna",
       "preparation": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/source-preparation.json",
-        "sha256": "21da96346759caa46ef648678155d95c077bbd884717d73a07d932272de964ba"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/part-mag-cars-varna/source-preparation.json",
+        "sha256": "73690574c1303d5600edfbd8a4792b07c0a84c5e47316dd6a9a2aa8a73b32c3a"
       },
       "proposal": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/source-proposal.json",
-        "sha256": "371cfaa4724cbe03d000925db02d84f515e79638cd3456adddc1a646f08c2a46"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/part-mag-cars-varna/source-proposal.json",
+        "sha256": "3cccef6691208a74bb04bd59e9f4f78359477eaaee64ad1bc121103958903b78"
       },
       "inputMapping": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/input-mapping.json",
-        "sha256": "e4fd0bc837455bd673d86c5a425732af4c9fc1fab9bc8d550f9a32240314a79b"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/part-mag-cars-varna/input-mapping.json",
+        "sha256": "d6d74c31325e977a3b0e22293adefd89e0a871c16077ccfdf1d6a4e2a4329afe"
       },
       "publication": {
-        "path": "docs/releases/cloudflare-existing25-20261011/new-source/auto-insurance-import-varna/source-publication.json",
-        "sha256": "a24b8c8fc8815a24a7d9773036f5ce2ca5f0370a6620e7562c57900f86ab97a1"
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/part-mag-cars-varna/source-publication.json",
+        "sha256": "fb33bc787e61b003e10732dd60bd33c72f922a4290cf1aac71d564835c8c08e8"
+      }
+    },
+    {
+      "slug": "kalo-0404-varna",
+      "preparation": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/source-preparation.json",
+        "sha256": "68ce3af45447ccda1b3830c60b6d5f5f8d4580b8446a153cc6e94da3471299b9"
+      },
+      "proposal": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/source-proposal.json",
+        "sha256": "08429b4a65172e3ee8141519e1ec5635bf618412ee4ddb1729f60b2208005428"
+      },
+      "inputMapping": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/input-mapping.json",
+        "sha256": "731a6a35a222224a73cf8451796b78b14bbe89e84115a6471d0000e322bfe22a"
+      },
+      "publication": {
+        "path": "docs/releases/cloudflare-existing25-20261011/new-source/kalo-0404-varna/source-publication.json",
+        "sha256": "400ccc018ab4b1b166e54fc724287b50f09a05158861434578dbf189230bffa5"
       }
     }
   ],
   "composition": {
     "reviewed": true,
-    "reviewedAt": "2026-10-13T03:22:45.023Z",
-    "reviewScope": "Build original published Auto Insurance Import six designs plus internal router without repeated generation/intake. Original reviewed stock, raster logos, identity and six native source pins remain unchanged. Batch4 owns qualified singleton upload and live acceptance. Retry only after publishing the three exact original provenance inputs; failed run38340673977 compiled no applications."
-  },
-  "attempt": 2
+    "reviewedAt": "2026-10-13T05:47:06.180Z",
+    "reviewScope": "Compile the two original retained PartMag/Kalo six-app trees from source38321269783, not regenerated inputs. Original source pins, native palettes, factual contacts/stock and transparent raster logos remain unchanged. All34 mapped input byte hashes checked; six omitted original research/identity records restored before first native dispatch. Batch4 retains private publishing and exact-granted Worker upload; capacity must be refreshed before any provider write."
+  }
 }

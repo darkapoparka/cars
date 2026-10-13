@@ -1458,6 +1458,18 @@
       "dealerId": "auto-insurance-import-varna",
       "repository": "darkapoparka/cars-auto-insurance-import-varna",
       "path": "clients/auto-insurance-import-varna"
+    },
+    {
+      "slug": "part-mag-cars-varna",
+      "dealerId": "part-mag-cars-varna",
+      "repository": "darkapoparka/cars-part-mag-cars-varna",
+      "path": "clients/part-mag-cars-varna"
+    },
+    {
+      "slug": "kalo-0404-varna",
+      "dealerId": "kalo-0404-varna",
+      "repository": "darkapoparka/cars-kalo-0404-varna",
+      "path": "clients/kalo-0404-varna"
     }
   ],
   "campaignCandidatesWithoutFolders": [

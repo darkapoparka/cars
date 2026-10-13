@@ -349,6 +349,22 @@
       "sourceMode": "new-approved",
       "workerName": "cars-auto-insurance-import-varna",
       "publicOrigin": "https://cars-auto-insurance-import-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "part-mag-cars-varna",
+      "dealerId": "part-mag-cars-varna",
+      "proposedRepository": "darkapoparka/cars-part-mag-cars-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-part-mag-cars-varna",
+      "publicOrigin": "https://cars-part-mag-cars-varna.darkapoparka1.workers.dev"
+    },
+    {
+      "slug": "kalo-0404-varna",
+      "dealerId": "kalo-0404-varna",
+      "proposedRepository": "darkapoparka/cars-kalo-0404-varna",
+      "sourceMode": "new-approved",
+      "workerName": "cars-kalo-0404-varna",
+      "publicOrigin": "https://cars-kalo-0404-varna.darkapoparka1.workers.dev"
     }
   ],
   "workerIdentities": {
