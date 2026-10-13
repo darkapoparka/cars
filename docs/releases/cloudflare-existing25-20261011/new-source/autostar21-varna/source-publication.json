@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T15:46:26.710Z",
+  "dealer": "autostar21-varna",
+  "dealerId": "autostar21-varna",
+  "repository": "darkapoparka/cars-autostar21-varna",
+  "sourceOwnership": "cars-canonical",
+  "request": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/parallel-batch3-remaining23-request.json",
+    "sha256": "dca5e42beb2e14ac556d1fb116d8d5097f07e399225e291969698924ca8f6a1b"
+  },
+  "proposal": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/original-proposal-38359785390-1.json",
+    "sha256": "9ac6d19175769f0ccf693f1edbfe5d883887d130b4066f74f8a9cbccb04634f7"
+  },
+  "preparation": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/original-preparation-38359785390-1.json",
+    "sha256": "10bcd2aefc163aa6a70f5892f480a1f59b99dcc1e5c5df4c67bcfe9358849f04"
+  },
+  "inputMapping": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/autostar21-varna/original-inputMapping-38359785390-1.json",
+    "sha256": "4db00a6706f2c146faa0c636c1521376372de002cad1b8e8509803b0824bd9e1"
+  },
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "b7c0789d0d5ca6c980d204af79b863cd389f04de",
+    "sourceTree": "4988e872bbad1f92ac24ea51493b5d778186a703",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-13T15:40:48.586Z",
+    "evidence": "https://github.com/darkapoparka/cars/commit/b7c0789d0d5ca6c980d204af79b863cd389f04de"
+  }
+}

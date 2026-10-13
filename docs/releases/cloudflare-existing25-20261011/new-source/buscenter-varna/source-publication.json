@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T15:46:26.710Z",
+  "dealer": "buscenter-varna",
+  "dealerId": "buscenter-varna",
+  "repository": "darkapoparka/cars-buscenter-varna",
+  "sourceOwnership": "cars-canonical",
+  "request": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/parallel-batch3-remaining23-request.json",
+    "sha256": "dca5e42beb2e14ac556d1fb116d8d5097f07e399225e291969698924ca8f6a1b"
+  },
+  "proposal": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/buscenter-varna/original-proposal-38359785390-1.json",
+    "sha256": "75514558b478c358f118997108c3c1a14f9e83b2054d3ee6a5f2795b93a5cbb1"
+  },
+  "preparation": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/buscenter-varna/original-preparation-38359785390-1.json",
+    "sha256": "4891551e497ea0d8f8b6b3845212b6ef662a454a7490586ab5d6c8bc832a6a64"
+  },
+  "inputMapping": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/buscenter-varna/original-inputMapping-38359785390-1.json",
+    "sha256": "9cf95deadffbca82da1fa5ecca27fcdcbc68e808316f1f44e582ed7549b1b30f"
+  },
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "b7c0789d0d5ca6c980d204af79b863cd389f04de",
+    "sourceTree": "47388802fbcbb2c6fe6b27cc350a455ca5119aab",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-13T15:40:48.586Z",
+    "evidence": "https://github.com/darkapoparka/cars/commit/b7c0789d0d5ca6c980d204af79b863cd389f04de"
+  }
+}

@@ -18183,6 +18183,1110 @@
         "provider": "cloudflare",
         "configuredPublicOrigin": "https://cars-watt-a-car-varna.darkapoparka1.workers.dev"
       }
+    },
+    {
+      "slug": "am-varna-varna",
+      "dealerId": "am-varna-varna",
+      "repository": "darkapoparka/cars-am-varna-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-am-varna-varna",
+        "publicOrigin": "https://cars-am-varna-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-am-varna-varna.darkapoparka1.workers.dev"
+      }
+    },
+    {
+      "slug": "tonyem4m-varna",
+      "dealerId": "tonyem4m-varna",
+      "repository": "darkapoparka/cars-tonyem4m-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-tonyem4m-varna",
+        "publicOrigin": "https://cars-tonyem4m-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-tonyem4m-varna.darkapoparka1.workers.dev"
+      }
+    },
+    {
+      "slug": "mladost2-varna",
+      "dealerId": "mladost2-varna",
+      "repository": "darkapoparka/cars-mladost2-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-mladost2-varna",
+        "publicOrigin": "https://cars-mladost2-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-mladost2-varna.darkapoparka1.workers.dev"
+      }
+    },
+    {
+      "slug": "richicar-varna",
+      "dealerId": "richicar-varna",
+      "repository": "darkapoparka/cars-richicar-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-richicar-varna",
+        "publicOrigin": "https://cars-richicar-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-richicar-varna.darkapoparka1.workers.dev"
+      }
+    },
+    {
+      "slug": "lionauto1-varna",
+      "dealerId": "lionauto1-varna",
+      "repository": "darkapoparka/cars-lionauto1-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-lionauto1-varna",
+        "publicOrigin": "https://cars-lionauto1-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-lionauto1-varna.darkapoparka1.workers.dev"
+      }
+    },
+    {
+      "slug": "elexiscars-varna",
+      "dealerId": "elexiscars-varna",
+      "repository": "darkapoparka/cars-elexiscars-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-elexiscars-varna",
+        "publicOrigin": "https://cars-elexiscars-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-elexiscars-varna.darkapoparka1.workers.dev"
+      }
+    },
+    {
+      "slug": "electricauto-varna",
+      "dealerId": "electricauto-varna",
+      "repository": "darkapoparka/cars-electricauto-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-electricauto-varna",
+        "publicOrigin": "https://cars-electricauto-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-electricauto-varna.darkapoparka1.workers.dev"
+      }
+    },
+    {
+      "slug": "varnacarexpress-varna",
+      "dealerId": "varnacarexpress-varna",
+      "repository": "darkapoparka/cars-varnacarexpress-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-varnacarexpress-varna",
+        "publicOrigin": "https://cars-varnacarexpress-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-varnacarexpress-varna.darkapoparka1.workers.dev"
+      }
+    },
+    {
+      "slug": "garage24-varna",
+      "dealerId": "garage24-varna",
+      "repository": "darkapoparka/cars-garage24-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-garage24-varna",
+        "publicOrigin": "https://cars-garage24-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-garage24-varna.darkapoparka1.workers.dev"
+      }
+    },
+    {
+      "slug": "kris-varna",
+      "dealerId": "kris-varna",
+      "repository": "darkapoparka/cars-kris-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-kris-varna",
+        "publicOrigin": "https://cars-kris-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-kris-varna.darkapoparka1.workers.dev"
+      }
+    },
+    {
+      "slug": "buscenter-varna",
+      "dealerId": "buscenter-varna",
+      "repository": "darkapoparka/cars-buscenter-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-buscenter-varna",
+        "publicOrigin": "https://cars-buscenter-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-buscenter-varna.darkapoparka1.workers.dev"
+      }
+    },
+    {
+      "slug": "focus1-varna",
+      "dealerId": "focus1-varna",
+      "repository": "darkapoparka/cars-focus1-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-focus1-varna",
+        "publicOrigin": "https://cars-focus1-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-focus1-varna.darkapoparka1.workers.dev"
+      }
+    },
+    {
+      "slug": "autostar21-varna",
+      "dealerId": "autostar21-varna",
+      "repository": "darkapoparka/cars-autostar21-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-autostar21-varna",
+        "publicOrigin": "https://cars-autostar21-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-autostar21-varna.darkapoparka1.workers.dev"
+      }
+    },
+    {
+      "slug": "abcbulgaria-varna",
+      "dealerId": "abcbulgaria-varna",
+      "repository": "darkapoparka/cars-abcbulgaria-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-abcbulgaria-varna",
+        "publicOrigin": "https://cars-abcbulgaria-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-abcbulgaria-varna.darkapoparka1.workers.dev"
+      }
+    },
+    {
+      "slug": "grand-auto-varna",
+      "dealerId": "grand-auto-varna",
+      "repository": "darkapoparka/cars-grand-auto-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-grand-auto-varna",
+        "publicOrigin": "https://cars-grand-auto-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-grand-auto-varna.darkapoparka1.workers.dev"
+      }
+    },
+    {
+      "slug": "mgauto-varna",
+      "dealerId": "mgauto-varna",
+      "repository": "darkapoparka/cars-mgauto-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-mgauto-varna",
+        "publicOrigin": "https://cars-mgauto-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-mgauto-varna.darkapoparka1.workers.dev"
+      }
+    },
+    {
+      "slug": "bora-car-varna",
+      "dealerId": "bora-car-varna",
+      "repository": "darkapoparka/cars-bora-car-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-bora-car-varna",
+        "publicOrigin": "https://cars-bora-car-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-bora-car-varna.darkapoparka1.workers.dev"
+      }
+    },
+    {
+      "slug": "bavaro-varna",
+      "dealerId": "bavaro-varna",
+      "repository": "darkapoparka/cars-bavaro-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-bavaro-varna",
+        "publicOrigin": "https://cars-bavaro-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-bavaro-varna.darkapoparka1.workers.dev"
+      }
+    },
+    {
+      "slug": "wildivaka-varna",
+      "dealerId": "wildivaka-varna",
+      "repository": "darkapoparka/cars-wildivaka-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-wildivaka-varna",
+        "publicOrigin": "https://cars-wildivaka-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-wildivaka-varna.darkapoparka1.workers.dev"
+      }
+    },
+    {
+      "slug": "triumf-varna",
+      "dealerId": "triumf-varna",
+      "repository": "darkapoparka/cars-triumf-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-triumf-varna",
+        "publicOrigin": "https://cars-triumf-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-triumf-varna.darkapoparka1.workers.dev"
+      }
+    },
+    {
+      "slug": "unitrade-varna",
+      "dealerId": "unitrade-varna",
+      "repository": "darkapoparka/cars-unitrade-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-unitrade-varna",
+        "publicOrigin": "https://cars-unitrade-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-unitrade-varna.darkapoparka1.workers.dev"
+      }
+    },
+    {
+      "slug": "autojo-di-varna",
+      "dealerId": "autojo-di-varna",
+      "repository": "darkapoparka/cars-autojo-di-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-autojo-di-varna",
+        "publicOrigin": "https://cars-autojo-di-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-autojo-di-varna.darkapoparka1.workers.dev"
+      }
+    },
+    {
+      "slug": "specialcarood-varna",
+      "dealerId": "specialcarood-varna",
+      "repository": "darkapoparka/cars-specialcarood-varna",
+      "sourceOwnership": "cars-canonical",
+      "canonicalSourceRepository": "darkapoparka/cars",
+      "variants": [
+        {
+          "key": "auto-best",
+          "entry": "/",
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2"
+        },
+        {
+          "key": "import",
+          "entry": "/variant-3/",
+          "base": "/variant-3"
+        },
+        {
+          "key": "app",
+          "entry": "/variant-4/",
+          "base": "/variant-4"
+        },
+        {
+          "key": "mobile",
+          "entry": "/variant-5/",
+          "base": "/variant-5"
+        },
+        {
+          "key": "karento-best",
+          "entry": "/variant-6/",
+          "base": "/variant-6"
+        }
+      ],
+      "cloudflare": {
+        "workerName": "cars-specialcarood-varna",
+        "publicOrigin": "https://cars-specialcarood-varna.darkapoparka1.workers.dev"
+      },
+      "delivery": {
+        "state": "not-deployed",
+        "provider": "cloudflare",
+        "configuredPublicOrigin": "https://cars-specialcarood-varna.darkapoparka1.workers.dev"
+      }
     }
   ],
   "campaignCandidatesWithoutFolders": [

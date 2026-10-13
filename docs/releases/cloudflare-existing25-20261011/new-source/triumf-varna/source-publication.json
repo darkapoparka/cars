@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-source-publication",
+  "reviewed": true,
+  "reviewedAt": "2026-10-13T15:46:26.710Z",
+  "dealer": "triumf-varna",
+  "dealerId": "triumf-varna",
+  "repository": "darkapoparka/cars-triumf-varna",
+  "sourceOwnership": "cars-canonical",
+  "request": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/parallel-batch3-remaining23-request.json",
+    "sha256": "dca5e42beb2e14ac556d1fb116d8d5097f07e399225e291969698924ca8f6a1b"
+  },
+  "proposal": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/original-proposal-38359785390-1.json",
+    "sha256": "c52ee08746698c1983c380dda383ffb334b49fb6ef48d598fc779f2dd9a1d3c3"
+  },
+  "preparation": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/original-preparation-38359785390-1.json",
+    "sha256": "67247d881e276d7a35713f23d8e89b52a1bd42dbec2799d97eb9719077fa85ea"
+  },
+  "inputMapping": {
+    "path": "docs/releases/cloudflare-existing25-20261011/new-source/triumf-varna/original-inputMapping-38359785390-1.json",
+    "sha256": "a550f1bc9a52a2e368fa3fafb851d46e033680e2f73e2ed9333936ee11179e99"
+  },
+  "sourcePublication": {
+    "repository": "darkapoparka/cars",
+    "commit": "b7c0789d0d5ca6c980d204af79b863cd389f04de",
+    "sourceTree": "670338a1e9dda7e4bb7041b6b953b82dd7e23124",
+    "ref": "refs/heads/main",
+    "publishedAt": "2026-10-13T15:40:48.586Z",
+    "evidence": "https://github.com/darkapoparka/cars/commit/b7c0789d0d5ca6c980d204af79b863cd389f04de"
+  }
+}
