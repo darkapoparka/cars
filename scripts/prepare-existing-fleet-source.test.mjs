@@ -150,11 +150,11 @@ test('new envelope rejects physical aliases, duplicate JSON keys, inventory drif
  f.write('docs/DEPLOYMENT-INVENTORY.json',{...f.registry,aliases:{[f.slug]:'preserved'}});await assert.rejects(()=>resolveSourceRequest(f.request,{root:f.root}),/bytes changed/);f.write('docs/DEPLOYMENT-INVENTORY.json',f.registry);
  const branding=f.write(f.prefix+'/branding.json',{master:{path:f.prefix+'/*.png',sha256:'d'.repeat(64)}}),nested=structuredClone(f.nested);nested.dealers[0].inputs.branding=branding;const request={...f.request,newSourceRequest:f.write(f.request.newSourceRequest.path,nested)};await assert.rejects(()=>sourceMatrix(request,{root:f.root}),/exact literals/);
 });
-test('legacy source matrix remains unchanged and new bootstrap rejects detached, shallow, stale and credentialed CI',async()=>{
+test('legacy source matrix remains unchanged and new bootstrap pins the event and rejects detached, shallow and credentialed CI',async()=>{
  const slug='priselci',request={schemaVersion:1,sourceRevision:'a'.repeat(40),approvedParentLockDigest:'b'.repeat(64),dealers:[slug],inputs:{[slug]:Object.fromEntries(['candidateLock','qualification','sourceDeltaReview','branding'].map(k=>[k,{path:SOURCE_CAMPAIGN+'/'+k+'.json',sha256:'c'.repeat(64)}]))}},leads=[{slug,proposedRepository:'darkapoparka/cars-priselci'}],registry={dealers:[{slug,repository:leads[0].proposedRepository}]};
  assert.equal(sourceRequestMode(request),'existing-migration');assert.deepEqual(await sourceMatrix(request,{leads,registry}),{include:[{slug}]});assert.deepEqual(await sourceMatrix({...request,mode:'existing-migration'},{leads,registry}),{include:[{slug}]});
  const env={GITHUB_ACTIONS:'true',GITHUB_EVENT_NAME:'push',GITHUB_REPOSITORY:'darkapoparka/cars',GITHUB_REF:'refs/heads/main',GITHUB_SHA:'a'.repeat(40),GITHUB_RUN_ID:'123',GITHUB_RUN_ATTEMPT:'1'},responses={'rev-parse HEAD':env.GITHUB_SHA,'remote get-url origin':'https://github.com/darkapoparka/cars.git','branch --show-current':'main','rev-parse --is-shallow-repository':'false','ls-remote --exit-code origin refs/heads/main':env.GITHUB_SHA+'\trefs/heads/main'},checkCi=options=>sourceCiContext({...options,platform:'linux',version:'v26.10.0'}),readGit=(_root,args)=>responses[args.join(' ')];
- assert.equal(assertNewSourceBootstrap({env,readGit,checkCi}).commit,env.GITHUB_SHA);for(const [key,value]of [['branch --show-current',''],['rev-parse --is-shallow-repository','true'],['ls-remote --exit-code origin refs/heads/main','b'.repeat(40)]])assert.throws(()=>assertNewSourceBootstrap({env,readGit:(_r,args)=>args.join(' ')===key?value:readGit(_r,args),checkCi}),/actual main|event SHA/);assert.throws(()=>assertNewSourceBootstrap({env:{...env,CF_API_TOKEN:'fixture-only'},readGit,checkCi}),/credentials/);
+ assert.equal(assertNewSourceBootstrap({env,readGit,checkCi}).commit,env.GITHUB_SHA);for(const [key,value]of [['branch --show-current',''],['rev-parse --is-shallow-repository','true']])assert.throws(()=>assertNewSourceBootstrap({env,readGit:(_r,args)=>args.join(' ')===key?value:readGit(_r,args),checkCi}),/actual main|event SHA/);assert.throws(()=>assertNewSourceBootstrap({env:{...env,CF_API_TOKEN:'fixture-only'},readGit,checkCi}),/credentials/);
 });
 test('source and build workflows establish history before work and end read authentication before uploads',()=>{
  const source=fs.readFileSync(new URL('../.github/workflows/existing-fleet-source.yml',import.meta.url),'utf8'),build=fs.readFileSync(new URL('../.github/workflows/existing-fleet-cloudflare.yml',import.meta.url),'utf8'),prepare=source.split('  prepare_source:')[1],compile=build.split('  compile:')[1].split('  delivery_artifacts:')[0],plan=build.split('  compile:')[0];
@@ -184,3 +184,9 @@ test('registered adoption is an explicit envelope and cannot forge preserved mou
  assert.deepEqual(newSourceQualificationCheckoutPins({}),[]);
  assert.equal(sha256(readNewSourceInput(sparse,candidateLock,{prefix}).bytes),candidateLock.sha256);
  });
+
+test('immutable bootstrap does not reject unrelated main publication or perform a duplicate live-main check',()=>{
+ const env={GITHUB_ACTIONS:'true',GITHUB_EVENT_NAME:'push',GITHUB_REPOSITORY:'darkapoparka/cars',GITHUB_REF:'refs/heads/main',GITHUB_SHA:'a'.repeat(40),GITHUB_RUN_ID:'123',GITHUB_RUN_ATTEMPT:'1'};
+ const readGit=(_root,args)=>{if(args[0]==='ls-remote')throw Error('bootstrap must delegate live input leases');return {'rev-parse HEAD':env.GITHUB_SHA,'remote get-url origin':'https://github.com/darkapoparka/cars.git','branch --show-current':'main','rev-parse --is-shallow-repository':'false'}[args.join(' ')];};
+ assert.equal(assertNewSourceBootstrap({env,readGit,checkCi:o=>sourceCiContext({...o,platform:'linux',version:'v26.10.0'})}).commit,env.GITHUB_SHA);
+});

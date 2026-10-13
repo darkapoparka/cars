@@ -273,3 +273,25 @@ test('new and existing source qualifications both retain false approval and reje
  assert.throws(()=>validateNativeQualificationContext(f.context,{dealer:'another-dealer'}),/not native release approval/);
  for(const field of ['nativeApproval','hostedApproval','globalReleaseApproval'])assert.throws(()=>validateNativeQualificationContext({...f.context,[field]:true}),/not native release approval/);
 });
+
+test('immutable source creator allows only an actual published event and keeps ordinary local creation strict',t=>{
+ const f=fixture(t),head='a'.repeat(40),remote='b'.repeat(40),env={GITHUB_ACTIONS:'true',GITHUB_EVENT_NAME:'push',GITHUB_REPOSITORY:'darkapoparka/cars',GITHUB_REF:'refs/heads/main',GITHUB_SHA:head,GITHUB_RUN_ID:'123',GITHUB_RUN_ATTEMPT:'1'};
+ let current=remote;const calls=[];
+ const readGit=(_r,args)=>{calls.push(args);const op=args.join(' ');if(op==='rev-parse HEAD')return head;if(op==='rev-parse --is-shallow-repository')return 'false';if(args[0]==='ls-remote')return current+'\trefs/heads/main';if(args[0]==='merge-base')return head;if(args[0]==='cat-file')return '';return f.readGit(_r,args);};
+ const options={readGit,env,platform:'linux',eventCommit:head};
+ const proof=assertMainCheckout(f.root,options);assert.equal(proof.head,head);assert.equal(proof.remoteHead,remote);assert.equal(proof.eventCommit,head);
+ current='c'.repeat(40);assert.equal(assertMainCheckout(f.root,options).head,head);assert.equal(assertMainCheckout(f.root,options).remoteHead,current);
+ assert.throws(()=>assertMainCheckout(f.root,{...options,eventCommit:null}),/not synchronized/);
+ for(const altered of [{GITHUB_ACTIONS:'false'},{GITHUB_SHA:remote},{GITHUB_REF:'refs/heads/other'},{GITHUB_EVENT_NAME:'workflow_dispatch'},{GITHUB_REPOSITORY:'other/cars'},{GITHUB_RUN_ID:'0'},{GITHUB_RUN_ATTEMPT:'0'}])assert.throws(()=>assertMainCheckout(f.root,{...options,env:{...env,...altered}}),/actual complete/);
+ assert.throws(()=>assertMainCheckout(f.root,{...options,platform:'win32'}));
+ assert.throws(()=>assertMainCheckout(f.root,{...options,env:{...env,CF_API_TOKEN:'fixture-only'}}),/credentials/);
+ assert.throws(()=>assertMainCheckout(f.root,{...options,readGit:(r,a)=>a[0]==='merge-base'?remote:readGit(r,a)}),/ancestor/);
+ assert.throws(()=>assertMainCheckout(f.root,{...options,readGit:(r,a)=>a.join(' ')==='rev-parse HEAD'?remote:readGit(r,a)}),/actual complete/);
+ assert(!calls.some(a=>['switch','checkout','reset','update-ref','push'].includes(a[0])));
+});
+test('immutable creator missing remote metadata fetch is exact and does not move checkout or refs',t=>{
+ const f=fixture(t),head='a'.repeat(40),remote='b'.repeat(40),calls=[],env={GITHUB_ACTIONS:'true',GITHUB_EVENT_NAME:'push',GITHUB_REPOSITORY:'darkapoparka/cars',GITHUB_REF:'refs/heads/main',GITHUB_SHA:head,GITHUB_RUN_ID:'123',GITHUB_RUN_ATTEMPT:'1'};
+ const readGit=(r,a)=>{calls.push(a);if(a[0]==='cat-file')throw Error('missing exact commit');if(a[0]==='fetch')return '';if(a[0]==='merge-base')return head;if(a[0]==='ls-remote')return remote+'\trefs/heads/main';if(a.join(' ')==='rev-parse --is-shallow-repository')return 'false';return f.readGit(r,a);};
+ assert.equal(assertMainCheckout(f.root,{readGit,platform:'linux',env,eventCommit:head}).remoteHead,remote);
+ const fetch=calls.find(a=>a[0]==='fetch');assert.deepEqual(fetch,['fetch','--no-tags','--no-auto-maintenance','--no-write-fetch-head','--no-recurse-submodules','--refmap=','--filter=blob:none','origin',remote]);
+});

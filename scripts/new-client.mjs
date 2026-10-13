@@ -13,7 +13,7 @@ import { baseNativeManifest } from './publishing/app-variant.mjs';
 import { readPinnedTemplateTree } from './dealer-updates/pinned-template-source.mjs';
 
 // Verify this checkout, not every other repository's unrelated unfinished work.
-export function assertMainCheckout(root, { readGit = gitRead, platform = process.platform } = {}) {
+export function assertMainCheckout(root, { readGit = gitRead, platform = process.platform, env = process.env, eventCommit = null } = {}) {
   const config = json(path.join(root, 'workspace.json'));
   const declared = config.machinePaths?.[platform];
   if (platform === 'win32' && !declared) throw new Error('Missing canonical Windows checkout in workspace.json; resolve the registered Cars source before creating a dealer.');
@@ -23,6 +23,28 @@ export function assertMainCheckout(root, { readGit = gitRead, platform = process
   if (readGit(root, ['branch', '--show-current']) !== 'main') throw new Error('New dealers must be created on main; do not create a branch or worktree.');
   const head = readGit(root, ['rev-parse', 'HEAD']);
   const remoteHead = readGit(root, ['ls-remote', '--exit-code', 'origin', 'refs/heads/main']).split(/\s+/)[0];
+  if (eventCommit !== null) {
+    // Only the immutable Actions source proposal opts in. Ordinary local
+    // creation still requires synchronized main; no caller may fake remoteHead.
+    if (platform !== 'linux' || env.GITHUB_ACTIONS !== 'true' || env.GITHUB_EVENT_NAME !== 'push' ||
+        env.GITHUB_REPOSITORY !== 'darkapoparka/cars' || env.GITHUB_REF !== 'refs/heads/main' ||
+        !/^[a-f0-9]{40}$/.test(eventCommit) || head !== eventCommit || env.GITHUB_SHA !== eventCommit ||
+        !/^[1-9][0-9]*$/.test(env.GITHUB_RUN_ID ?? '') || !/^[1-9][0-9]*$/.test(env.GITHUB_RUN_ATTEMPT ?? '') ||
+        readGit(root, ['rev-parse', '--is-shallow-repository']) !== 'false')
+      throw new Error('Immutable source event requires the actual complete canonical main push checkout');
+    if (Object.entries(env).some(([key,value]) => value && /^(?:CLOUDFLARE|CF)_(?:API_(?:TOKEN|KEY)|TOKEN)$|^WRANGLER_(?:API_TOKEN|TOKEN)$/.test(key)))
+      throw new Error('Provider credentials cannot enter immutable source preparation');
+    if (!/^[a-f0-9]{40}$/.test(remoteHead)) throw new Error('Current origin main is not an exact commit');
+    if (head !== remoteHead) {
+      let present = true;
+      try { readGit(root, ['cat-file', '-e', remoteHead + '^{commit}']); } catch { present = false; }
+      if (!present) readGit(root, ['fetch', '--no-tags', '--no-auto-maintenance', '--no-write-fetch-head',
+        '--no-recurse-submodules', '--refmap=', '--filter=blob:none', 'origin', remoteHead]);
+      if (readGit(root, ['merge-base', head, remoteHead]) !== head)
+        throw new Error('Immutable source event is not an ancestor of current origin main');
+    }
+    return { head, remoteHead, eventCommit, checkedAt: new Date().toISOString() };
+  }
   if (!/^[a-f0-9]{40}$/.test(remoteHead) || head !== remoteHead) throw new Error('Cars main is not synchronized with GitHub. Preserve local work, reconcile/push main, then retry in this same checkout.');
   return { head, remoteHead, checkedAt: new Date().toISOString() };
 }
@@ -55,7 +77,7 @@ export function verifyNewClientRelease(root,key,qualification=null) {
   inside(root,release.snapshotPath,{mustExist:true});return release;
 }
 
-export function planNewClient({ root = ROOT, client, repository, preset = 'standard', templates, dealerId = null, designSet = null, localeConfig = null, sourceQualification = null, readGit = gitRead }) {
+export function planNewClient({ root = ROOT, client, repository, preset = 'standard', templates, dealerId = null, designSet = null, localeConfig = null, sourceQualification = null, eventCommit = null, readGit = gitRead }) {
   root = fs.realpathSync(root);
   if (!['standard', 'import'].includes(preset)) throw new Error('Use --preset standard or import.');
   if (designSet !== null && designSet !== 'six') throw new Error('Use --design-set six for the explicit six-family release.');
@@ -80,7 +102,7 @@ export function planNewClient({ root = ROOT, client, repository, preset = 'stand
   const registryPath = path.join(root, 'docs/DEPLOYMENT-INVENTORY.json');
   const existingRepository = fs.existsSync(registryPath) && json(registryPath).dealers?.find(d => d.repository?.toLowerCase() === manifest.repository.toLowerCase());
   if (existingRepository) throw new Error('Publishing repository already belongs to ' + existingRepository.slug + '; reuse its canonical dealer.');
-  const checkout = assertMainCheckout(root, { readGit });
+  const checkout = assertMainCheckout(root, { readGit, eventCommit });
   const inputs = ['templates.lock.json', 'catalog.json', 'workspace.json', 'scripts/new-client.mjs', 'scripts/copy-source.mjs', 'scripts/template-release.mjs', 'scripts/lib/workflow.mjs', 'scripts/lib/template-source.mjs', 'scripts/lib/dealer-guidance.mjs', 'scripts/workspace-doctor.mjs'];
   if (six) inputs.push('scripts/lib/dealer-locale.mjs', 'scripts/lib/native-localization.mjs', 'scripts/lib/five-design-release.mjs', 'scripts/lib/six-design-release.mjs', 'scripts/publishing/app-variant.mjs');
   const changed = readGit(root, ['diff', '--name-only', 'HEAD', '--', ...inputs]);
@@ -135,7 +157,7 @@ export async function createNewClient(plan, { readGit = gitRead, copy = copySour
   fs.writeFileSync(path.join(lockPath, 'owner.json'), JSON.stringify({ pid: process.pid, client, startedAt: new Date().toISOString() }));
   let staging;
   try {
-    if (assertMainCheckout(root, { readGit }).head !== plan.checkout.head) throw new Error('Cars main advanced after planning; regenerate the plan.');
+    if (assertMainCheckout(root, { readGit, eventCommit: plan.checkout.eventCommit ?? null }).head !== plan.checkout.head) throw new Error('Cars main advanced after planning; regenerate the plan.');
     if (resolveIdentity(root, client, plan.dealerId).exists) throw new Error('Dealer identity appeared after planning; no copy will be installed.');
     const parent = inside(root, 'runtime/new-clients'); fs.mkdirSync(parent, { recursive: true });
     staging = fs.mkdtempSync(path.join(parent, client + '-'));
@@ -162,7 +184,7 @@ export async function createNewClient(plan, { readGit = gitRead, copy = copySour
     }
     const designs = manifest.variants.length === 6 ? 'six' : 'three';
     fs.writeFileSync(path.join(stagedClient, 'CLIENT.md'), `# ${client}\n\nStatus: needs personalization, not ready for outreach.\n\nUse one sourced fact/inventory/approved raster-logo pack across all ${designs} apps. Preserve template heroes, banners, layout and interactions. Record unknown facts. Follow docs/WORKFLOW.md and docs/LEAD-PUBLISHING.md in Cars.\n\n${manifest.variants.length} applications, one canonical dealer folder, one publishing repository on main and one shared Admin demo link. Hosting requires a qualified publisher and separate hosted evidence. No CRM/provider record or adoption/personalization receipt was created by this helper.\n`);
-    if (assertMainCheckout(root, { readGit }).head !== plan.checkout.head) throw new Error('Cars main changed during copying; the staged candidate is preserved, not installed.');
+    if (assertMainCheckout(root, { readGit, eventCommit: plan.checkout.eventCommit ?? null }).head !== plan.checkout.head) throw new Error('Cars main changed during copying; the staged candidate is preserved, not installed.');
     for (const item of plans) {
       if (JSON.stringify(verifyNewClientRelease(root, item.template, qualification===null?null:readNewClientQualification(root,plan.sourceQualification,client))) !== JSON.stringify(item.release) || fingerprint(path.join(stagedClient, item.template)).digest !== item.release.digest) throw new Error('Source or copied candidate changed during creation: ' + item.template);
     }

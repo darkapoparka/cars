@@ -136,7 +136,7 @@ export function validateNewDealerFacts({dealer,facts,stock,locale,identityReview
 }
 
 export function assertNewSourceCiContext({env,checkout,platform=process.platform}){
- assert(hex40(checkout?.head)&&checkout.head===checkout.remoteHead,'Actual synchronized main checkout is required');
+ assert(hex40(checkout?.head)&&hex40(checkout.remoteHead)&&(checkout.head===checkout.remoteHead||(env.GITHUB_ACTIONS==='true'&&checkout.eventCommit===checkout.head)),'Actual synchronized main or verified immutable event checkout is required');
  if(env.GITHUB_ACTIONS!=='true')return {commit:checkout.head,runId:'local-'+Date.now(),attempt:'1'};
  assert(platform==='linux'&&env.GITHUB_EVENT_NAME==='push'&&env.GITHUB_REPOSITORY==='darkapoparka/cars'&&env.GITHUB_REF==='refs/heads/main'&&hex40(env.GITHUB_SHA)&&checkout.head===env.GITHUB_SHA&&/^[1-9][0-9]{0,14}$/.test(env.GITHUB_RUN_ID??'')&&/^[1-9][0-9]{0,5}$/.test(env.GITHUB_RUN_ATTEMPT??''),'Source CI needs real canonical main at the unchanged event SHA');
  assert(!Object.entries(env).some(([key,value])=>value&&/^(?:CLOUDFLARE|CF)_(?:API_(?:TOKEN|KEY)|TOKEN)$|^WRANGLER_(?:API_TOKEN|TOKEN)$/.test(key)),'Provider credentials cannot enter source preparation');
@@ -150,10 +150,10 @@ export function validateNewSourceBranchAbsence({dealer,mainCommit,branches}){
  const absence='normalized-dealer-folder-absent-on-current-origin-branches';
  return {digest:sha256(JSON.stringify([...branches].sort((a,b)=>a.ref.localeCompare(b.ref)))),branches:branches.length,absence,leaseDigest:sha256(JSON.stringify({dealer:norm(dealer),mainCommit,absence}))};
 }
-function originBranchAbsence(root,dealer,mainCommit){
+function originBranchAbsence(root,dealer,eventCommit){
  const metadataEnv={GIT_NO_LAZY_FETCH:'1'},heads=git(root,['ls-remote','--heads','origin']).split('\n').filter(Boolean);assert(heads.length>0&&heads.length<=256,'Origin branch inventory exceeds bounded source review');
  const refs=new Set(),advertised=heads.map(line=>{const [commit,ref,...extra]=line.split(/\s+/);assert(!extra.length&&hex40(commit)&&typeof ref==='string'&&/^refs\/heads\/[^\s\u0000-\u001f:]+$/.test(ref)&&!refs.has(ref),'Exact unique origin branch head required');refs.add(ref);return {commit,ref};});
- assert(advertised.some(r=>r.ref==='refs/heads/main'&&r.commit===mainCommit),'Current main branch lease differs');
+ const mainCommit=advertised.find(r=>r.ref==='refs/heads/main')?.commit;assert(hex40(mainCommit),'Current main branch lease differs');
  const metadataPresent=commit=>{
   if(git(root,['cat-file','-e',commit+'^{commit}'],{env:metadataEnv,allowFailure:true})===null)return false;
   const entry=git(root,['ls-tree',commit,'--','clients'],{env:metadataEnv,allowFailure:true});
@@ -167,9 +167,44 @@ function originBranchAbsence(root,dealer,mainCommit){
   // the index or the worktree. blob:none retains only commit/tree metadata.
   git(root,['fetch','--no-tags','--no-auto-maintenance','--no-write-fetch-head','--no-recurse-submodules','--refmap=','--filter=blob:none','--refetch','origin',...missing],{env:metadataEnv});
  }
+ assert(git(root,['merge-base',eventCommit,mainCommit])===eventCommit,'Immutable source event is no longer published on current main');
  const branches=advertised.map(({commit,ref})=>{assert(metadataPresent(commit),'Origin branch metadata hydration failed: '+ref+' '+commit);
   const clientEntry=git(root,['ls-tree',commit,'--','clients'],{env:metadataEnv}),clients=[];if(clientEntry){assert(/^040000 tree [a-f0-9]{40}\tclients$/.test(clientEntry),'Unreviewed branch clients source type');const names=git(root,['ls-tree','-z',commit+':clients'],{env:metadataEnv,encoding:null}).toString('utf8').split('\0').filter(Boolean);for(const row of names){const at=row.indexOf('\t'),name=row.slice(at+1),type=row.slice(0,at).split(' ')[1];assert(at>0&&['blob','tree','commit'].includes(type),'Invalid branch source entry');if(type!=='blob')clients.push(name);}}
-  return {ref,commit,clients};});return validateNewSourceBranchAbsence({dealer,mainCommit,branches});
+  return {ref,commit,clients};});return {...validateNewSourceBranchAbsence({dealer,mainCommit,branches}),mainCommit,eventCommit};
+}
+
+
+/** Current identity checks are row-scoped. Unrelated admissions may change the
+ * registry/index blobs; a collision with this dealer still fails closed. */
+export function assertCurrentNewSourceIdentity(row, registry, clientIndex) {
+ assert(row&&slug(row.slug)&&Array.isArray(registry?.dealers)&&Array.isArray(clientIndex?.projects),'Current identity inventories are required');
+ const identities=[...registry.dealers,...clientIndex.projects,...(clientIndex.campaignCandidatesWithoutFolders??[])];
+ const conflict=identities.some(d=>[d.slug,...(d.aliases??[])].some(v=>norm(v)===norm(row.slug))||
+  [d.id,d.dealerId,d.researchId,d.leadId].some(v=>v&&norm(v)===norm(row.dealerId))||
+  d.repository?.toLowerCase()===row.repository.toLowerCase()||
+  [d.workerName,d.cloudflare?.workerName,d.cloudflare?.workerPrefix,d.hostingIdentity?.cloudflare?.workerName].some(v=>v&&v===row.workerName)||
+  [d.publicOrigin,d.cloudflare?.publicOrigin,d.delivery?.url,d.delivery?.configuredPublicOrigin,d.hostingIdentity?.cloudflare?.publicOrigin].some(v=>v&&v.replace(/\/$/,'')===row.publicOrigin));
+ assert(!conflict&&!Object.keys(registry.aliases??{}).some(a=>norm(a)===norm(row.slug)),'Current dealer identity/Worker collision requires its own source mode');
+ return {dealer:row.slug,absence:'current-registry-and-index-identity-absent'};
+}
+/** Original request and facts stay bound to the event. Only the selected row's
+ * committed inputs are compared with current main, never the whole main tree. */
+export function newSourceCurrentLeasePaths(request, requestFile, row, brandingRows, qualified) {
+ const paths=[requestFile,'templates.lock.json','catalog.json','workspace.json',
+  ...Object.values(row.inputs).map(p=>p.path),row.identityReview.path,...(row.copyReview?[row.copyReview.path]:[]),
+  ...row.media.map(p=>p.path),...brandingRows.map(p=>p.path)];
+ if(request.qualification)paths.push(request.qualification.candidateLock.path,request.qualification.contexts[row.slug].path,qualified.context.sourceDeltaReview.reference);
+ assert(paths.length<=450&&paths.every(safe),'Bounded current source input lease required');return [...new Set(paths)].sort();
+}
+export function assertCurrentNewSourceInputs({root,eventCommit,mainCommit,row,paths,readGit=git}) {
+ assert(hex40(eventCommit)&&hex40(mainCommit)&&Array.isArray(paths)&&paths.length>0&&paths.length<=450&&paths.every(safe),'Exact immutable/current input lease required');
+ const proof=[];
+ for(const name of paths){const before=readGit(root,['rev-parse',eventCommit+':'+name]),current=readGit(root,['rev-parse',mainCommit+':'+name]);
+  assert(hex40(before)&&before===current,'Current reviewed source input changed: '+name);proof.push([name,before]);}
+ const load=(name,max)=>{const bytes=readGit(root,['cat-file','blob',mainCommit+':'+name],{encoding:null});assert(Buffer.isBuffer(bytes)&&bytes.length>0&&bytes.length<=max,'Bounded current identity bytes required');return {bytes,value:readJson(bytes)};};
+ const registry=load('docs/DEPLOYMENT-INVENTORY.json',32*1024**2),index=load('clients/index.json',4*1024**2);
+ const identity=assertCurrentNewSourceIdentity(row,registry.value,index.value);
+ return {eventCommit,mainCommit,paths:proof.length,inputDigest:sha256(JSON.stringify(proof)),registrySha256:sha256(registry.bytes),clientIndexSha256:sha256(index.bytes),...identity};
 }
 
 /** Addition-only Git proposal: reuse immutable canonical blobs; retain each new
@@ -222,14 +257,16 @@ export async function prepareNewDealerSource({root=ROOT,requestFile,dealer:reque
  const media=row.media.map(p=>{const input=readNewSourceInput(root,{path:p.path,sha256:p.sha256},{prefix:NEW_SOURCE_INPUT_ROOT+'/'+row.slug,maxBytes:25*1024**2});assert(input.bytes.length===p.bytes,'Media byte count differs');validateNewSourceRaster(input.bytes,p.destination);return {...p,...input};});
  const brandingRecord=inputs.branding.value,brandingRows=[brandingRecord.master,brandingRecord.mark,...Object.values(brandingRecord.surfaces??{})].filter(Boolean),brandingBytes=new Map();
  for(const p of brandingRows){const input=readNewSourceInput(root,{path:p.path,sha256:p.sha256},{prefix:NEW_SOURCE_INPUT_ROOT+'/'+row.slug,maxBytes:25*1024**2});assert(input.bytes.subarray(0,8).toString('hex')==='89504e470d0a1a0a','Reviewed logo must contain PNG bytes');brandingBytes.set(p.path,input.bytes);}
- const branding=readBrandingInputs(root,brandingRecord,row.slug),checkout=assertMainCheckout(root),ci=assertNewSourceCiContext({env,checkout});
+ const branding=readBrandingInputs(root,brandingRecord,row.slug),checkout=assertMainCheckout(root,{eventCommit:env.GITHUB_ACTIONS==='true'?env.GITHUB_SHA:null,env}),ci=assertNewSourceCiContext({env,checkout});
  const branchAbsence=originBranchAbsence(root,row.slug,checkout.head);
+ const leasePaths=newSourceCurrentLeasePaths(request,requestFile,row,brandingRows,qualified);
+ const currentInputLease=assertCurrentNewSourceInputs({root,eventCommit:checkout.head,mainCommit:branchAbsence.mainCommit,row,paths:leasePaths});
  assert(!git(root,['diff','--name-only','HEAD','--',...orchestrationPaths]),'Commit reviewed source orchestration inputs before dealer creation');
  assert(git(root,['merge-base','--is-ancestor',request.sourceRevision,checkout.head],{allowFailure:true})!==null,'Reviewed source revision must be published on canonical main');
  for(const [name,bytes]of [[requestFile,requestInput.bytes],['templates.lock.json',rawLock],['docs/DEPLOYMENT-INVENTORY.json',rawRegistry],['clients/index.json',rawIndex],...Object.entries({...row.inputs,identityReview:row.identityReview,...(row.copyReview?{copyReview:row.copyReview}: {})}).map(([k,p])=>[p.path,inputs[k].bytes]),...media.map(p=>[p.path,p.bytes]),...brandingBytes])committed(root,name,bytes,checkout.head);
- const plan=planNewClient({root,client:row.slug,dealerId:row.dealerId,repository:row.repository,preset:row.preset,designSet:'six',localeConfig:inputs.locale.value,...(sourceQualification?{sourceQualification}: {})});assert(plan.checkout.head===checkout.head&&NEW_SOURCE_FAMILIES.every(k=>sourceEqual(plan.manifest.templateSources[k],row.sourceReleases[k])),'Maintained creator source/checkout differs from reviewed request');
+ const plan=planNewClient({root,client:row.slug,dealerId:row.dealerId,repository:row.repository,preset:row.preset,designSet:'six',localeConfig:inputs.locale.value,eventCommit:checkout.eventCommit??null,...(sourceQualification?{sourceQualification}: {})});assert(plan.checkout.head===checkout.head&&NEW_SOURCE_FAMILIES.every(k=>sourceEqual(plan.manifest.templateSources[k],row.sourceReleases[k])),'Maintained creator source/checkout differs from reviewed request');
  const baseline={commit:checkout.head,rootTree:git(root,['rev-parse',checkout.head+'^{tree}'])};assert(!git(root,['ls-tree',checkout.head,'--','clients/'+row.slug]),'Canonical dealer source already exists at the publication baseline');
- const readOnly={schemaVersion:1,kind:NEW_SOURCE_KIND,mode:'new-approved',dealer:row.slug,repository:row.repository,canonicalSourceRepository:'darkapoparka/cars',baseCommit:baseline.commit,sourceRevision:request.sourceRevision,approvedLockSha256:request.approvedLockSha256,sourceReleases:row.sourceReleases,branchAbsence,applications:6,write:false,published:false,hostedApproval:false,state:'reviewed-inputs-awaiting-source-creation',...(sourceQualification?{sourceQualification,qualificationOnly:true,nativeApproval:false,globalReleaseApproval:false}: {}),newerDevelopment:plan.plans.filter(p=>p.updateAvailable).map(p=>({key:p.template,developmentHead:p.developmentHead,developmentTree:p.developmentTree}))};
+ const readOnly={schemaVersion:1,kind:NEW_SOURCE_KIND,mode:'new-approved',dealer:row.slug,repository:row.repository,canonicalSourceRepository:'darkapoparka/cars',baseCommit:baseline.commit,sourceRevision:request.sourceRevision,approvedLockSha256:request.approvedLockSha256,sourceReleases:row.sourceReleases,branchAbsence,currentInputLease,applications:6,write:false,published:false,hostedApproval:false,state:'reviewed-inputs-awaiting-source-creation',...(sourceQualification?{sourceQualification,qualificationOnly:true,nativeApproval:false,globalReleaseApproval:false}: {}),newerDevelopment:plan.plans.filter(p=>p.updateAvailable).map(p=>({key:p.template,developmentHead:p.developmentHead,developmentTree:p.developmentTree}))};
  if(!write)return readOnly;
  assert(path.resolve(toolPackage)===inside(root,'runtime/source-preparation-tools/package.json',{mustExist:true}),'Use the bounded maintained source raster toolchain');
  const area=inside(root,'runtime/new-dealer-source/'+ci.runId+'-'+ci.attempt+'/'+row.slug);assert(!fs.existsSync(area),'Source proposal attempt already exists; inspect retained output before retrying');
@@ -257,14 +294,16 @@ export async function prepareNewDealerSource({root=ROOT,requestFile,dealer:reque
   if(qualified){const candidateSourceDigest=sha256(JSON.stringify([...files].filter(([name])=>!qualificationMarkers.has(name)).sort(([a],[b])=>a.localeCompare(b,'en')).map(([name,bytes])=>[name,sha256(bytes)])));for(const [name,bytes]of sourceQualificationFiles({manifest,qualificationBytes:qualified.qualificationBytes,qualificationLockBytes:qualified.candidateLockBytes,sourceRevision:request.sourceRevision,candidateSourceDigest,root}))files.set(name,bytes);}
   writeMap(directory,files,before);
   for(const [name,bytes]of stage.slice(0,3))assert(fs.readFileSync(path.join(directory,name)).equals(bytes),'Authoritative source facts changed during personalization');
-  const stable=assertMainCheckout(root);if(qualified){const current=readNewSourceQualification(root,request,row.slug);assert(current.candidateLockBytes.equals(qualified.candidateLockBytes)&&current.qualificationBytes.equals(qualified.qualificationBytes),'Qualification input changed during source creation');}assert(stable.head===baseline.commit&&sha256(fs.readFileSync(path.join(root,'templates.lock.json')))===request.approvedLockSha256,'Canonical main or approved lock changed; preserve candidate and review again');
-  assert(originBranchAbsence(root,row.slug,stable.head).leaseDigest===branchAbsence.leaseDigest,'Origin branch absence lease changed; preserve candidate and review again');
+  const stable=assertMainCheckout(root,{eventCommit:checkout.eventCommit??null,env});if(qualified){const current=readNewSourceQualification(root,request,row.slug);assert(current.candidateLockBytes.equals(qualified.candidateLockBytes)&&current.qualificationBytes.equals(qualified.qualificationBytes),'Qualification input changed during source creation');}assert(stable.head===baseline.commit&&sha256(fs.readFileSync(path.join(root,'templates.lock.json')))===request.approvedLockSha256,'Canonical main or approved lock changed; preserve candidate and review again');
+  const finalBranchAbsence=originBranchAbsence(root,row.slug,stable.head);
+  const finalInputLease=assertCurrentNewSourceInputs({root,eventCommit:stable.head,mainCommit:finalBranchAbsence.mainCommit,row,paths:leasePaths});
+  assert(finalInputLease.inputDigest===currentInputLease.inputDigest,'Reviewed row input lease changed; preserve candidate');
   for(const [k,p]of Object.entries({...row.inputs,identityReview:row.identityReview,...(row.copyReview?{copyReview:row.copyReview}: {})}))assert(readNewSourceInput(root,p,{prefix:NEW_SOURCE_INPUT_ROOT+'/'+row.slug,maxBytes:k==='locale'?16384:2*1024**2}).bytes.equals(inputs[k].bytes),'Reviewed input changed during source creation');
   for(const p of [...media,...brandingRows])readNewSourceInput(root,{path:p.path,sha256:p.sha256},{prefix:NEW_SOURCE_INPUT_ROOT+'/'+row.slug,maxBytes:25*1024**2});
   const canonical=fileMap(directory),modes=new Map(sourceRows.map(r=>[r.path,r.mode]));for(const name of canonical.keys())if(!modes.has(name))modes.set(name,process.platform!=='win32'&&(fs.statSync(path.join(directory,name)).mode&0o111)?'100755':'100644');
   const originalBlobs=new Map(sourceRows.map(r=>[r.blob,r])),reusable=new Map();for(const bytes of canonical.values()){const blob=gitObjectId('blob',bytes),r=originalBlobs.get(blob);if(r&&!reusable.has(blob))reusable.set(blob,{repository:'darkapoparka/cars',revision:r.revision,path:r.sourcePath,blob,sha256:sha256(bytes),bytes:bytes.length});}const proposal=createNewSourceProposal({dealer:row.slug,baseCommit:baseline.commit,baseRootTree:baseline.rootTree,sourceReleases:row.sourceReleases,files:canonical,modes,reusableBlobs:reusable});
   const output=path.join(area,'output');writeNew(path.join(output,'source-patch.json'),encode(proposal.patch));for(const [digest,blob]of proposal.blobs)writeNew(path.join(output,'blobs',digest+'.json'),encode(blob));
-  const receipt={...readOnly,write:true,state:'personalized-source-proposal-needs-build-and-hosted-review',baseRootTree:baseline.rootTree,preparedTree:proposal.patch.preparedTree,request:{path:requestFile,sha256:sha256(requestInput.bytes)},inputs:row.inputs,identityReview:row.identityReview,creationReceiptSha256:sha256(fs.readFileSync(creation.receipt)),sourcePaths:proposal.patch.entries.length,reusedGitBlobs:proposal.patch.reusedGitBlobs.length,uniqueBlobBytes:proposal.patch.uniqueBlobBytes,patchSha256:sha256(encode(proposal.patch)),branding:brand,nativeAdoptionSha256:sha256(files.get(ADOPTION_FILE)),...(qualified?{nativeQualification:{contextFileSha256:sha256(qualified.qualificationBytes),qualificationLockSha256:sha256(qualified.candidateLockBytes),receiptSha256:sha256(files.get(ADOPTION_FILE)),nativeApproval:false,hostedApproval:false,globalReleaseApproval:false}}: {}),personalizationChanges:changes,authoritativeFactsUnchanged:true,reviewed:false,published:false,buildApproval:false,hostedApproval:false,privatePublishingMirror:{repository:row.repository,state:'not-published-by-source-preparation'},createdAt:new Date().toISOString()};writeNew(path.join(output,'source-preparation-receipt.json'),encode(receipt));artifactInventory(output,{kind:NEW_SOURCE_KIND,dealer:row.slug,status:'passed'});return {dealer:row.slug,output,preparedTree:receipt.preparedTree,sourcePaths:receipt.sourcePaths,uniqueBlobBytes:receipt.uniqueBlobBytes,published:false,hostedApproval:false};
+  const receipt={...readOnly,finalBranchAbsence,finalInputLease,write:true,state:'personalized-source-proposal-needs-build-and-hosted-review',baseRootTree:baseline.rootTree,preparedTree:proposal.patch.preparedTree,request:{path:requestFile,sha256:sha256(requestInput.bytes)},inputs:row.inputs,identityReview:row.identityReview,creationReceiptSha256:sha256(fs.readFileSync(creation.receipt)),sourcePaths:proposal.patch.entries.length,reusedGitBlobs:proposal.patch.reusedGitBlobs.length,uniqueBlobBytes:proposal.patch.uniqueBlobBytes,patchSha256:sha256(encode(proposal.patch)),branding:brand,nativeAdoptionSha256:sha256(files.get(ADOPTION_FILE)),...(qualified?{nativeQualification:{contextFileSha256:sha256(qualified.qualificationBytes),qualificationLockSha256:sha256(qualified.candidateLockBytes),receiptSha256:sha256(files.get(ADOPTION_FILE)),nativeApproval:false,hostedApproval:false,globalReleaseApproval:false}}: {}),personalizationChanges:changes,authoritativeFactsUnchanged:true,reviewed:false,published:false,buildApproval:false,hostedApproval:false,privatePublishingMirror:{repository:row.repository,state:'not-published-by-source-preparation'},createdAt:new Date().toISOString()};writeNew(path.join(output,'source-preparation-receipt.json'),encode(receipt));artifactInventory(output,{kind:NEW_SOURCE_KIND,dealer:row.slug,status:'passed'});return {dealer:row.slug,output,preparedTree:receipt.preparedTree,sourcePaths:receipt.sourcePaths,uniqueBlobBytes:receipt.uniqueBlobBytes,published:false,hostedApproval:false};
  }catch(error){writeNew(path.join(area,'failure.json'),encode({kind:NEW_SOURCE_KIND,dealer:row.slug,error:error.message,canonicalCandidate:creation?.clientRoot??null,retained:true,published:false,hostedApproval:false,failedAt:new Date().toISOString()}));throw error;}
 }
 

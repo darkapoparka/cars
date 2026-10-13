@@ -91,8 +91,10 @@ export async function sourceMatrix(request,options={}){
 export function assertNewSourceBootstrap({root=ROOT,env=process.env,readGit=git,checkCi=sourceCiContext}={}){
  const ci=checkCi({root,env,readGit});
  assert(readGit(root,['branch','--show-current'])==='main'&&readGit(root,['rev-parse','--is-shallow-repository'])==='false','New source CI requires actual main and complete historical commit objects');
- const remote=readGit(root,['ls-remote','--exit-code','origin','refs/heads/main']).split(/\s+/)[0];
- assert(remote===ci.commit,'New source event SHA no longer equals synchronized origin main');return ci;
+ // Keep the event checkout immutable. The maintained creator checks current
+ // origin ancestry, and the source preparer checks current row/input leases.
+ // A later unrelated main publication is not a different source input.
+ return ci;
 }
 export async function prepareFleetSource(options={}){
  const root=options.root??ROOT,request=options.request??strictJson(fs.readFileSync(path.join(root,SOURCE_CAMPAIGN,'source-request.json')));

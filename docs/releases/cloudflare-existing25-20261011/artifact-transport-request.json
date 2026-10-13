@@ -2,21 +2,21 @@
   "schemaVersion": 1,
   "kind": "cars-fleet-artifact-transport-request",
   "reviewed": true,
-  "reviewedAt": "2026-10-13T05:30:06.632Z",
+  "reviewedAt": "2026-10-13T06:53:40.041Z",
   "source": {
     "repository": "darkapoparka/cars",
     "workflowPath": ".github/workflows/qualified-private-source-export.yml",
-    "runId": 38342298043,
+    "runId": 38355305379,
     "runAttempt": 1,
-    "headSha": "0bfeae20203bec97b802f72c9d80878aa3ac6914",
+    "headSha": "fae042f745242eef336c160c06d7349c47906ce9",
     "event": "push",
     "ref": "refs/heads/main"
   },
   "artifact": {
-    "id": 11787640915,
-    "name": "private-source-package-auto-insurance-import-varna-38342298043-1",
-    "sizeInBytes": 908234055,
-    "sha256": "f15534074d266c882aa8e37e8669bfa402e9e3b6b8f6d7323cc214585d51ac56"
+    "id": 11792961611,
+    "name": "private-source-package-part-mag-cars-varna-38355305379-1",
+    "sizeInBytes": 908018209,
+    "sha256": "46befd8c50847eda31df0e23e9d977d2ddcb6075cecfbb800a6551fd8d04995b"
   },
   "chunkSizeBytes": 209715200
 }

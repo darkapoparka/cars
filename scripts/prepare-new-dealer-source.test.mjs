@@ -11,7 +11,7 @@ import {buildModernDealerInventoryCopy} from './lib/modern-dealer-inventory-copy
 import {nativeInputDigest} from './lib/native-localization.mjs';
 import {sha256,POLICY} from './lib/workflow.mjs';
 import {gitObjectId,gitTreeId} from './prepare-existing-fleet-source.mjs';
-import {NEW_SOURCE_INPUT_ROOT,NEW_SOURCE_REQUEST_KIND,NEW_SOURCE_FAMILIES,validateNewSourceCopyReview,newSourceReviewedCopy,validateNewSourceRequest,validateNewDealerFacts,readNewSourceInput,validateNewSourceRaster,assertNewSourceCiContext,validateNewSourceBranchAbsence,createNewSourceProposal,verifyNewSourceProposal,prepareNewDealerSource} from './prepare-new-dealer-source.mjs';
+import {NEW_SOURCE_INPUT_ROOT,NEW_SOURCE_REQUEST_KIND,NEW_SOURCE_FAMILIES,validateNewSourceCopyReview,newSourceReviewedCopy,validateNewSourceRequest,validateNewDealerFacts,readNewSourceInput,validateNewSourceRaster,assertNewSourceCiContext,validateNewSourceBranchAbsence,createNewSourceProposal,verifyNewSourceProposal,prepareNewDealerSource,assertCurrentNewSourceIdentity,newSourceCurrentLeasePaths,assertCurrentNewSourceInputs} from './prepare-new-dealer-source.mjs';
 
 const revision='a'.repeat(40),digest='b'.repeat(64),tree='c'.repeat(40),clone=v=>structuredClone(v),enc=v=>Buffer.from(JSON.stringify(v)+'\n');
 function fixture(){
@@ -123,4 +123,33 @@ test('personalized creator metadata is finalized before native receipt sealing',
  const finalized=source.indexOf("state:'personalized-needs-build'"),collect=source.indexOf('await regenerateDealerCatalogs(directory,root,manifest.variants.map(v=>v.key))'),seal=source.indexOf('files=qualified?adoptNativeQualification');
  assert(finalized>=0&&finalized<collect&&collect<seal,'actual source producer collects final metadata before either native seal');
  assert.equal(source.lastIndexOf("state:'personalized-needs-build'"),finalized,'no later metadata rewrite invalidates the seal');
+});
+
+test('current identity lease permits unrelated registry admissions but rejects the selected dealer aliases and Worker',()=>{
+ const row={slug:'new-sourced-cars',dealerId:'dealer-new',repository:'darkapoparka/cars-new-sourced-cars',workerName:'cars-new-sourced-cars',publicOrigin:'https://cars-new-sourced-cars.darkapoparka1.workers.dev'};
+ const registry={dealers:[{slug:'unrelated',repository:'darkapoparka/other'}]},index={projects:[],campaignCandidatesWithoutFolders:[]};
+ assert.equal(assertCurrentNewSourceIdentity(row,registry,index).dealer,row.slug);
+ for(const collision of [{slug:'NewSourcedCars'},{aliases:['new-sourced-cars']},{id:row.dealerId},{dealerId:row.dealerId},{researchId:row.dealerId},{leadId:row.dealerId},{repository:row.repository.toUpperCase()},{workerName:row.workerName},{cloudflare:{workerName:row.workerName}},{cloudflare:{workerPrefix:row.workerName}},{cloudflare:{publicOrigin:row.publicOrigin}},{hostingIdentity:{cloudflare:{workerName:row.workerName}}},{delivery:{configuredPublicOrigin:row.publicOrigin}},{publicOrigin:row.publicOrigin+'/'}]){
+  assert.throws(()=>assertCurrentNewSourceIdentity(row,{dealers:[...registry.dealers,collision]},index),/collision/);
+  assert.throws(()=>assertCurrentNewSourceIdentity(row,registry,{projects:[collision]}),/collision/);
+ }
+ assert.throws(()=>assertCurrentNewSourceIdentity(row,{...registry,aliases:{NewSourcedCars:'other'}},index),/collision/);
+ assert.throws(()=>assertCurrentNewSourceIdentity(row,registry,{projects:[],campaignCandidatesWithoutFolders:[{slug:row.slug}]}),/collision/);
+});
+test('current source lease compares exact selected inputs while unrelated registry/index blobs may advance',()=>{
+ const eventCommit='a'.repeat(40),mainCommit='b'.repeat(40),blob='c'.repeat(40),row={slug:'new-sourced-cars',dealerId:'new-id',repository:'darkapoparka/cars-new',workerName:'cars-new',publicOrigin:'https://cars-new.darkapoparka1.workers.dev'},paths=['templates.lock.json','docs/releases/row/facts.json'];
+ let registry={dealers:[]},index={projects:[]};const readGit=(_r,args)=>args[0]==='rev-parse'?blob:Buffer.from(JSON.stringify(args.at(-1).endsWith('clients/index.json')?index:registry));
+ const args={eventCommit,mainCommit,row,paths,readGit},first=assertCurrentNewSourceInputs(args);
+ registry={dealers:[{slug:'other',repository:'darkapoparka/other'}]};index={projects:[{slug:'second-other'}]};const next=assertCurrentNewSourceInputs(args);
+ assert.equal(first.inputDigest,next.inputDigest);assert.notEqual(first.registrySha256,next.registrySha256);assert.notEqual(first.clientIndexSha256,next.clientIndexSha256);
+ assert.equal(next.eventCommit,eventCommit);assert.equal(next.mainCommit,mainCommit);
+ assert.throws(()=>assertCurrentNewSourceInputs({...args,readGit:(r,a)=>a[0]==='rev-parse'&&a[1]===mainCommit+':'+paths[1]?'d'.repeat(40):readGit(r,a)}),/input changed/);
+ assert.throws(()=>assertCurrentNewSourceInputs({...args,paths:['../escape']}),/Exact immutable/);
+ registry={dealers:[{slug:row.slug}]};assert.throws(()=>assertCurrentNewSourceInputs(args),/collision/);
+});
+test('current row input lease preserves qualification, stock, logo and copy pins without scanning other dealer pins',()=>{
+ const row={slug:'a',inputs:{facts:{path:'facts.json'},stock:{path:'stock.json'},locale:{path:'locale.json'},branding:{path:'branding.json'}},identityReview:{path:'identity.json'},copyReview:{path:'copy.json'},media:[{path:'image.png'}]},request={qualification:{candidateLock:{path:'candidate.json'},contexts:{a:{path:'a-context.json'},other:{path:'other-context.json'}}}},qualified={context:{sourceDeltaReview:{reference:'delta.json'}}};
+ const paths=newSourceCurrentLeasePaths(request,'request.json',row,[{path:'light.png'},{path:'dark.png'}],qualified);
+ for(const name of ['request.json','templates.lock.json','catalog.json','workspace.json','facts.json','stock.json','locale.json','branding.json','identity.json','copy.json','image.png','light.png','dark.png','candidate.json','a-context.json','delta.json'])assert(paths.includes(name));
+ assert(!paths.includes('other-context.json'));assert.equal(paths.length,16);
 });
