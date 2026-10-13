@@ -183,9 +183,9 @@ test('registered WebP asset view preserves an independently authenticated origin
 });
 
 
-test('registered source declares only authenticated asset containers and the exact PNG alias',t=>{
+test('registered source declares only materialized share-identity roots and preserves the PNG alias view',t=>{
  const f=fixture(t),p=f.plan(),target=registeredAdoptionTarget(p,f.pins);
- assert.deepEqual(target.extraAssets,['branding','dealer']);
+ assert.deepEqual(target.extraAssets,['dealer']);
  assert.equal(target.shareIdentity.logo.sourcePath,'dealer/logo.png');
  const run=path.join(f.root,'runtime','asset-container-pilot');fs.mkdirSync(run);
  const view=materializeRegisteredAssetView(p,{runDirectory:run});
@@ -201,4 +201,15 @@ test('registered WebP source declares its real container without inventing PNG o
  const view=materializeRegisteredAssetView(p,{runDirectory:run});
  for(const root of target.extraAssets)assert(fs.statSync(path.join(view,root)).isDirectory());
  assert.equal(fs.existsSync(path.join(view,'branding')),false);assert.equal(fs.existsSync(path.join(view,'dealer-brand')),false);
+});
+
+
+test('per-variant stock media does not become a nonexistent shared source directory',t=>{
+ const f=fixture(t);const media=f.personalization.media.find(x=>x.publicPath!==f.personalization.facts.business.logo);assert(media);
+ const previous=media.publicPath;media.publicPath='/inventory/photo.webp';for(const item of f.personalization.stock.listings)item.images=item.images.map(x=>x===previous?media.publicPath:x);
+ f.receipt.personalization.sha256=sha256(enc(f.personalization));const plan=f.plan(),target=registeredAdoptionTarget(plan,f.pins);
+ assert.deepEqual(target.extraAssets,['dealer']);assert.equal(target.extraAssets.includes('inventory'),false);
+ const run=path.join(f.root,'runtime','variant-stock-view');fs.mkdirSync(run);const view=materializeRegisteredAssetView(plan,{runDirectory:run});
+ assert(fs.readFileSync(path.join(view,'inventory/photo.webp')).equals(f.baseline.files.get(media.sourcePath)));
+ assert.equal(target.shareIdentity.logo.sourcePath,'dealer/logo.png');assertRegisteredAdoptionPlan(plan);
 });
