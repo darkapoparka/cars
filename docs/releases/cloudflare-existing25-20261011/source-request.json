@@ -20,7 +20,7 @@
     "kapitol-varna": {
       "adoption": {
         "path": "docs/releases/cloudflare-existing25-20261011/registered-source/kapitol-varna/reviewed-public-adoption.json",
-        "sha256": "1b3ce6d1c17c56b2815fe767732a5f128ffc10396380d46031392ea1626b724e"
+        "sha256": "7fbe980b74bbb5aa5469de65e4804d19b81ec590f19ce49292ae1bd7a2be0361"
       },
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/registered-source/additional-new25-historical-qualification-lock.json",
@@ -46,7 +46,7 @@
     "chernomore-varna": {
       "adoption": {
         "path": "docs/releases/cloudflare-existing25-20261011/registered-source/chernomore-varna/reviewed-public-adoption.json",
-        "sha256": "4577a66e7d1bf703bfaec78baf3c53e242ece675beaa279660c2c473be1dbb80"
+        "sha256": "f75573c48684fa7978953e403f8258ca8686f2528bc6ff87f261003ce520e3d1"
       },
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/registered-source/additional-new25-historical-qualification-lock.json",
@@ -72,7 +72,7 @@
     "exclusive-auto-varna": {
       "adoption": {
         "path": "docs/releases/cloudflare-existing25-20261011/registered-source/exclusive-auto-varna/adoption.json",
-        "sha256": "c58bf3814c6ad58f54b1df056c87c1b724c8dbf0b66ac86b3ca87f6ddc9c0707"
+        "sha256": "e79a809b9c947c61538d938ca12d62fa4296cea5d979096c30ee8068f28f85fe"
       },
       "candidateLock": {
         "path": "docs/releases/cloudflare-existing25-20261011/registered-source/exclusive-auto-varna/qualification-lock.json",
@@ -98,15 +98,15 @@
     "avtoborsa-mania": {
       "adoption": {
         "path": "docs/releases/cloudflare-existing25-20261011/registered-source/avtoborsa-mania/reviewed-public-adoption.json",
-        "sha256": "b910442608171dde6a948e8bfac73109d5d1ba12a8265a98dccc48fad760d401"
+        "sha256": "ffd9ada7bfd8add97958061fa74aa1fc2359d160fa9b0041786445a8a9f7378c"
       },
       "candidateLock": {
-        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-qualification-lock.json",
-        "sha256": "1bb60d4b895366e954c613701d20aa9c54982b7395a6ec1593661cd45be62351"
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/avtoborsa-mania/qualification-lock.json",
+        "sha256": "94f1fd50092671ce568b5f7872d91ae3233403a3079a40ce6190f0d47f095cd5"
       },
       "qualification": {
         "path": "docs/releases/cloudflare-existing25-20261011/registered-source/avtoborsa-mania/qualification-context.json",
-        "sha256": "a2f11b7ce16be02f01dae39ad368c726ff2ee5c01dd3ae1a27f078074d47be2c"
+        "sha256": "85a6f9bd169c248b91aecea08eb20ff019657e9021b94e19bf703ad8b3fd6b08"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
@@ -124,15 +124,15 @@
     "extra-car-sm": {
       "adoption": {
         "path": "docs/releases/cloudflare-existing25-20261011/registered-source/extra-car-sm/reviewed-public-adoption.json",
-        "sha256": "c9766ed9fba571b06174f20d17562ad954d6d72dc3ca314dfedab83f16bb30d8"
+        "sha256": "0cacbb0d7a5aa6011f286683b022cec65819122cc5899af2ec72e57878761d69"
       },
       "candidateLock": {
-        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-qualification-lock.json",
-        "sha256": "1bb60d4b895366e954c613701d20aa9c54982b7395a6ec1593661cd45be62351"
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/extra-car-sm/qualification-lock.json",
+        "sha256": "688c0b18c9de145fe02831590b42f9062fb20e56921a89a45e6a8c08e52417e8"
       },
       "qualification": {
         "path": "docs/releases/cloudflare-existing25-20261011/registered-source/extra-car-sm/qualification-context.json",
-        "sha256": "43be43ad8007b6206717f6f36ea9b1a3b7a235eca39607f06a1c206775f01bf4"
+        "sha256": "42758c1cf55e5f0387ffab6a979d0db3ef52acb43a9845002cdafd6f91c663a0"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
@@ -150,15 +150,15 @@
     "sprint-auto-varna": {
       "adoption": {
         "path": "docs/releases/cloudflare-existing25-20261011/registered-source/sprint-auto-varna/reviewed-public-adoption.json",
-        "sha256": "5233e11e11bb0ef009f3e9ed527ca155fcbb6f322c08cbd81b47690efcc4501a"
+        "sha256": "7eed91f83ad9d2c8a067db5d7dfc85935ec89f57986102afaa8286ef6d3b4c83"
       },
       "candidateLock": {
-        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-qualification-lock.json",
-        "sha256": "1bb60d4b895366e954c613701d20aa9c54982b7395a6ec1593661cd45be62351"
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/sprint-auto-varna/qualification-lock.json",
+        "sha256": "6b0cdff2d587b1237315ce148721abdc6cbd167e175f585fe9d59ec860de477c"
       },
       "qualification": {
         "path": "docs/releases/cloudflare-existing25-20261011/registered-source/sprint-auto-varna/qualification-context.json",
-        "sha256": "e607a73d7ca760076779964fca73ed9684eb079347c70574526a1940094d9b88"
+        "sha256": "169e510982bf5c47fc723171d8fd5c97a54d6a67c8a95361fa4db7455a727297"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
@@ -176,15 +176,15 @@
     "evrocar-varna-09": {
       "adoption": {
         "path": "docs/releases/cloudflare-existing25-20261011/registered-source/evrocar-varna-09/reviewed-public-adoption.json",
-        "sha256": "31bb9b9a06a51687cf7061b95ecbe4296c92bf03355169049f06da969d1e77bf"
+        "sha256": "3759f74993decb387a0a9c1edc52ad35e322c320b4486ea505227870f8f4c67f"
       },
       "candidateLock": {
-        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-qualification-lock.json",
-        "sha256": "1bb60d4b895366e954c613701d20aa9c54982b7395a6ec1593661cd45be62351"
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/evrocar-varna-09/qualification-lock.json",
+        "sha256": "0b6e65f5421fa1e4b6552a549e1ae637a0d47c92fcbabaf7e95a62ed511d1f84"
       },
       "qualification": {
         "path": "docs/releases/cloudflare-existing25-20261011/registered-source/evrocar-varna-09/qualification-context.json",
-        "sha256": "6dcc689e6f2379f662b96e5481eddc1f7909f08cb72e7b94d3b8ae7cad4fb6c9"
+        "sha256": "ca834a26f73c8fca141d202920b1453863951a7861b3d73965872efeb7407512"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
@@ -202,15 +202,15 @@
     "prestige-varna": {
       "adoption": {
         "path": "docs/releases/cloudflare-existing25-20261011/registered-source/prestige-varna/reviewed-public-adoption.json",
-        "sha256": "ee7954aa8ab2ba8da1422a9729a90a755de79bf6d034a952e50b62255acc5912"
+        "sha256": "5aec8addf7c5c37af00d9853cdb2cd755fb465f4b0174e573ee597cc0aeb74a7"
       },
       "candidateLock": {
-        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-qualification-lock.json",
-        "sha256": "1bb60d4b895366e954c613701d20aa9c54982b7395a6ec1593661cd45be62351"
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/prestige-varna/qualification-lock.json",
+        "sha256": "376848240eb1c57f35eb3dc58b624781de28ac941b0e4c918fab8ab9351ba87d"
       },
       "qualification": {
         "path": "docs/releases/cloudflare-existing25-20261011/registered-source/prestige-varna/qualification-context.json",
-        "sha256": "5a08f365d1dd3858135eeeab8b5d65d43d06f3ba0e264aaa93b8159355066f24"
+        "sha256": "7a9053f23f587a124c196f7683a09c1f1fe3069864cf5adde51bd8176ffed20f"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
@@ -228,15 +228,15 @@
     "rqs-auto-team": {
       "adoption": {
         "path": "docs/releases/cloudflare-existing25-20261011/registered-source/rqs-auto-team/reviewed-public-adoption.json",
-        "sha256": "6d522c2be332ee5df5d1c931e2ee914a404e920a8c7b460e0f3de29fa3e1b2af"
+        "sha256": "584de8bd7caf126751a81f5181d7c99d48b1353601d26c4ee57a551f82040e44"
       },
       "candidateLock": {
-        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-qualification-lock.json",
-        "sha256": "1bb60d4b895366e954c613701d20aa9c54982b7395a6ec1593661cd45be62351"
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/rqs-auto-team/qualification-lock.json",
+        "sha256": "cff948e487fd21acc392407bc225cc7924617426a30cf955e20c08d7ab3e6825"
       },
       "qualification": {
         "path": "docs/releases/cloudflare-existing25-20261011/registered-source/rqs-auto-team/qualification-context.json",
-        "sha256": "c6425524a67b2ad0bea93d161069c33ca6f274ad38f9f14596776b2ce214c538"
+        "sha256": "326c61dd8d3d234d99dbff92ca6ee94c6ad8c2a54b1527e90981d79c0e29e379"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
@@ -254,15 +254,15 @@
     "sunny-varna": {
       "adoption": {
         "path": "docs/releases/cloudflare-existing25-20261011/registered-source/sunny-varna/reviewed-public-adoption.json",
-        "sha256": "f82bffc707e2c96d730da0fd1074e10fe199f2b4c1034c0bf1d22aaa58521e69"
+        "sha256": "ece60980433274a3cbd2e194c3a60d47135788d35ba4e96d95fd714df8fdf114"
       },
       "candidateLock": {
-        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-qualification-lock.json",
-        "sha256": "1bb60d4b895366e954c613701d20aa9c54982b7395a6ec1593661cd45be62351"
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/sunny-varna/qualification-lock.json",
+        "sha256": "b68b52ece7b68b9e393fd1d62ff9c3025819ff576c664a71336318b549c558f3"
       },
       "qualification": {
         "path": "docs/releases/cloudflare-existing25-20261011/registered-source/sunny-varna/qualification-context.json",
-        "sha256": "1cec1bedd013dbc72c0c19653e8652ec1625d7ddfe688e8f5e982d5d4baae2c8"
+        "sha256": "f27af3fb84107c5ae85095261b6e5db2270d5ec5762e9d49c3b45c780494fd9e"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",
@@ -280,15 +280,15 @@
     "europa-varna": {
       "adoption": {
         "path": "docs/releases/cloudflare-existing25-20261011/registered-source/europa-varna/reviewed-public-adoption.json",
-        "sha256": "14af343fb639528348bc7c7c5a03918501df5f78b17b0d5ece7c35a0eca7ef4f"
+        "sha256": "5260b9f9dd46fed2f0729c267f70987a42a2d34b29fc093abcf80c007a9a506e"
       },
       "candidateLock": {
-        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/parallel-retained-eight-qualification-lock.json",
-        "sha256": "1bb60d4b895366e954c613701d20aa9c54982b7395a6ec1593661cd45be62351"
+        "path": "docs/releases/cloudflare-existing25-20261011/registered-source/europa-varna/qualification-lock.json",
+        "sha256": "842a092ead0a5c09ca8380e064f6da5344b572ee14759ce599c1dd6c3a23fd5e"
       },
       "qualification": {
         "path": "docs/releases/cloudflare-existing25-20261011/registered-source/europa-varna/qualification-context.json",
-        "sha256": "3a606d18f4a12172c329a77df0ca70110a96914f9966a89414b9d3b1570b1d63"
+        "sha256": "032616393dafbdd01190670020ce6ab5c13e17af8cb1efcdc4652b8f47152c36"
       },
       "sourceDeltaReview": {
         "path": "docs/releases/cloudflare-existing25-20261011/signature-successor/source-delta-review.json",

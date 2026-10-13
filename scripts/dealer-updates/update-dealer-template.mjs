@@ -557,7 +557,7 @@ export async function personalizeFactualTargetBases({pins,newBases,dealerRoot,ma
 async function personalizePinnedTargetBases({pins,newBases,dealerRoot,manifest,profile,modernCopyReview=null,appInventoryNoticeReview=null}) {
   const keys=['auto-best','modern','import','app','mobile','karento-best'];
   const consumerPaths=new Set(),adaptations={};
-  if(modernCopyReview)assertReviewedModernCopy({profile,value:modernCopyReview.value});
+  if(modernCopyReview&&!profile.reviewedModernCopy)assertReviewedModernCopy({profile,value:modernCopyReview.value});
   const note=(before,after,prefix='')=>{
     for(const name of new Set([...before.keys(),...after.keys()])) {
       const prior=before.get(name),next=after.get(name);
@@ -648,7 +648,7 @@ export async function deriveRegisteredConsumerTargets({registeredAdoption,assetV
   const keys=['auto-best','modern','import','app','mobile','karento-best'];
   if(keys.some(key=>!(newBases?.[key] instanceof Map))||JSON.stringify(Object.keys(newBases).sort())!==JSON.stringify([...keys].sort()))throw new Error('Registered resolution requires exact six mounted targets');
   const personalizedBases=Object.fromEntries(keys.map(key=>[key,new Map(newBases[key])])),pins=Object.fromEntries(keys.map(key=>[key,{targetSource:manifest.templateSources[key]}]));
-  await personalizePinnedTargetBases({pins,newBases:personalizedBases,dealerRoot:assetView,manifest,profile:registeredAdoption.profile});
+  await personalizePinnedTargetBases({pins,newBases:personalizedBases,dealerRoot:assetView,manifest,profile:registeredAdoption.profile,modernCopyReview:registeredAdoption.profile.reviewedModernCopy?{value:{reviewedCopy:registeredAdoption.profile.reviewedModernCopy}}:null});
   assertRegisteredAssetView(registeredAdoption,assetView);return personalizedBases;
 }
 
@@ -689,7 +689,7 @@ export async function personalizeRegisteredCandidate({registeredAdoption,assetVi
   for(const key of ['auto-best','modern','import']){
     const assets=new Map();retainDealerVariantAssets(assets,key,profile,assetView);
     const before=readDirectoryTree(candidateDirectory),after=new Map([...before,...assets]);writeDirectoryTreeChanges(candidateDirectory,before,after,assetPool);
-    applyRefreshAdapter({key,oldVariant:path.join(assetView,key),candidate:path.join(candidateDirectory,key),profile});
+    applyRefreshAdapter({key,oldVariant:path.join(assetView,key),candidate:path.join(candidateDirectory,key),profile,...(['modern','import'].includes(key)&&profile.reviewedModernCopy?{reviewedModernCopy:profile.reviewedModernCopy}:{})});
   }
   const before=readDirectoryTree(candidateDirectory),files=new Map(before),appFiles=new Map([...files].filter(([name])=>name.startsWith('app/')).map(([name,bytes])=>[name.slice(4),bytes]));
   const readFile=name=>{const bytes=files.get(name);if(!bytes){const error=Error('Missing reviewed candidate input: '+name);error.code='ENOENT';throw error;}return bytes;};
@@ -1265,3 +1265,4 @@ if (path.resolve(process.argv[1] || '') === fileURLToPath(import.meta.url)) {
     process.exitCode = 1;
   }
 }
+

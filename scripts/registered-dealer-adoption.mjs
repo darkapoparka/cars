@@ -6,6 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {ROOT,git,sha256,inside,filesAt,validateManifest} from './lib/workflow.mjs';
 import {createHash} from 'node:crypto';
+import {validateRegisteredModernDisplayCopy} from './lib/registered-modern-display-copy.mjs';
 import {normalizeDealerLocale} from './lib/dealer-locale.mjs';
 import {refreshNormalizeInternals,originalListingIdRecorded,originalListingSourceRecorded,assertRegisteredDemoDisclosures,normalizeRegisteredListings,normalizeRegisteredBusiness} from './lib/client-refresh-normalize.mjs';
 import {planSixDesignSelection} from './lib/six-design-release.mjs';
@@ -99,7 +100,7 @@ function validateTemplateDemo(input,{root,readGit,baseline}){
 
 /** Validate derived facts against retained evidence; no original fact is replaced. */
 export function validateRegisteredPersonalization(input,{dealer,identity,baseline,root=ROOT,readGit=git}){
- keys(input,['schemaVersion','kind','dealer','reviewed','reviewedAt','facts','stock','locale','sourceEvidence','media',...(input.publishedBranding?['publishedBranding']:[]),...(input.publishedInputs?['publishedInputs']:[])],'derived inputs');
+ keys(input,['schemaVersion','kind','dealer','reviewed','reviewedAt','facts','stock','locale','sourceEvidence','media',...(input.publishedBranding?['publishedBranding']:[]),...(input.publishedInputs?['publishedInputs']:[]),...(input.modernDisplayCopy?['modernDisplayCopy']:[])],'derived inputs');
  assert(input.schemaVersion===1&&input.kind==='cars-registered-dealer-derived-inputs'&&input.dealer===dealer&&input.reviewed===true&&dated(input.reviewedAt),'reviewed derived input required');
  assert(Array.isArray(input.sourceEvidence)&&input.sourceEvidence.length>0&&input.sourceEvidence.length<=50,'preserved factual evidence required');
  for(const p of input.sourceEvidence){assert(!p.path?.startsWith('auto-best/')&&!p.path?.startsWith('modern/'),'proof must survive the upgraded families unchanged');originalBytes(baseline,p);}
@@ -161,6 +162,7 @@ export function planRegisteredClientAdoption({receipt,receiptBytes,personalizati
  const assets=Object.fromEntries(['onLight','onDark','onAccent'].map(name=>{const p=name==='onLight'?business.logo:name==='onDark'?business.logoDark||business.logo:business.logo;return[name,{publicPath:p,sha256:media.get(p)?.sha256}];}));
  const manifest=validateManifest({schemaVersion:1,slug:dealer,dealerId:receipt.identity.dealerId,repository:receipt.identity.repository,defaultBranch:'main',variants:structuredClone(REGISTERED_TRIO),extraAssets:[],packaging:{version:'1'},templateRevisions:Object.fromEntries(sourceKeys.map(k=>[k,receipt.templateSources[k].revision])),templateSources:structuredClone(receipt.templateSources),localization:structuredClone(locale)});
  const profile={schemaVersion:1,slug:dealer,business,listings,rawFacts,sourceCount:listings.length,stockKind:personalization.stock.kind,logoContract:{assets}};
+ if(personalization.modernDisplayCopy)profile.reviewedModernCopy=validateRegisteredModernDisplayCopy(personalization.modernDisplayCopy,profile);
  for(const name of materializedFiles.keys())assert(!baseline.files.has(name),'reviewed input materialization destination is occupied');
  const plan={dealer,manifest,profile,identity:structuredClone(receipt.identity),receipt:structuredClone(receipt),receiptSha256:sha256(receiptBytes),personalizationSha256:sha256(personalizationBytes),baseline:{commit:baseline.commit,tree:baseline.tree},files:new Map([[REGISTERED_ADOPTION_FILE,receiptBytes],[REGISTERED_PROFILE_FILE,personalizationBytes],...materializedFiles]),write:false,published:false,nativeApproval:false,hostedApproval:false,globalReleaseApproval:false};
  plans.set(plan,{root,source,assetBytes,outputFiles:new Map([...plan.files].map(([name,bytes])=>[name,sha256(bytes)])),demoLockSha256:personalization.stock.mode==='template-demo'?sha256(fs.readFileSync(path.join(root,'templates.lock.json'))):null,manifest:JSON.stringify(manifest),profile:JSON.stringify(profile),identity:JSON.stringify(plan.identity),receipt:JSON.stringify(plan.receipt),receiptSha256:plan.receiptSha256,profileSha256:plan.personalizationSha256,lease:JSON.stringify(plan.baseline),files:new Map([...baseline.files].map(([name,bytes])=>[name,sha256(bytes)]))});return plan;
@@ -218,3 +220,4 @@ export function registeredAdoptionTarget(plan,pins){assertRegisteredAdoptionPlan
 }
 
 export function assertRegisteredMountOwnership(manifest,baseline,plan){assertRegisteredAdoptionPlan(plan,{dealerRoot:plans.get(plan)?.source});assert(!baseline.files.has('dealer.json')&&baseline.commit===plan.baseline.commit&&baseline.tree===plan.baseline.tree&&manifest.slug===plan.dealer&&manifest.repository===plan.identity.repository&&same(manifest.variants,planSixDesignSelection(plan.manifest.variants).variants),'prepared mounts differ from reviewed registered adoption');return {baseCommit:baseline.commit,baseTree:baseline.tree,adoptionReceiptSha256:plan.receiptSha256,initialSelection:true,previousPublicRoutes:false,variants:manifest.variants};}
+

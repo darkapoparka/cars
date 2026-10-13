@@ -339,5 +339,49 @@
         "destination": "dealer-stock/11779358576885782-2.webp"
       }
     ]
+  },
+  "modernDisplayCopy": {
+    "schemaVersion": 1,
+    "kind": "cars-registered-modern-display-copy",
+    "dealer": "chernomore-varna",
+    "reviewed": true,
+    "reviewedAt": "2026-10-13T18:37:03.621Z",
+    "inputRowsSha256": "e1fc13c58b30c6ed58272a30d673ce3cbb93853255138e23134208d27cabbbce",
+    "reviewedCopy": {
+      "chernomore-varna-21771946973449498": {
+        "sourceDescription": "Audi Q8 50 TDI S-Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "en": {
+          "description": "Audi Q8 50 TDI S-Line from a dated public listing. Confirm condition, price and availability directly with the dealership.",
+          "imageAlts": [
+            "Audi Q8 50 TDI S-Line",
+            "Audi Q8 50 TDI S-Line"
+          ]
+        },
+        "bg": {
+          "description": "Audi Q8 50 TDI S-Line от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "imageAlts": [
+            "Audi Q8 50 TDI S-Line",
+            "Audi Q8 50 TDI S-Line"
+          ]
+        }
+      },
+      "chernomore-varna-11779358576885782": {
+        "sourceDescription": "Audi A5 Sportback 2.0 TFSI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+        "en": {
+          "description": "Audi A5 Sportback 2.0 TFSI quattro from a dated public listing. Confirm condition, price and availability directly with the dealership.",
+          "imageAlts": [
+            "Audi A5 Sportback 2.0 TFSI quattro",
+            "Audi A5 Sportback 2.0 TFSI quattro"
+          ]
+        },
+        "bg": {
+          "description": "Audi A5 Sportback 2.0 TFSI quattro от датирана публична обява. Потвърдете състоянието, цената и наличността директно с автокъщата.",
+          "imageAlts": [
+            "Audi A5 Sportback 2.0 TFSI quattro",
+            "Audi A5 Sportback 2.0 TFSI quattro"
+          ]
+        }
+      }
+    }
   }
 }

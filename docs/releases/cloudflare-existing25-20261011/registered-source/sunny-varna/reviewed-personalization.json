@@ -646,5 +646,120 @@
     "path": "docs/releases/cloudflare-existing25-20261011/branding-inputs52/sunny-varna/branding.json",
     "sha256": "f3b3761aacc500e73a8c1eee61428457256eb943e39238757f2c0f9d069add16",
     "sourceCommit": "27378380ee5d7341012da90e821426b3756f9a1e"
+  },
+  "modernDisplayCopy": {
+    "schemaVersion": 1,
+    "kind": "cars-registered-modern-display-copy",
+    "dealer": "sunny-varna",
+    "reviewed": true,
+    "reviewedAt": "2026-10-13T18:37:03.621Z",
+    "inputRowsSha256": "da24a89ffadc1a3af36799547d96198c8f19778961dd75010a64eedd82bc8823",
+    "reviewedCopy": {
+      "audi-2024-template-demo-auto-best-1": {
+        "sourceDescription": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+        "en": {
+          "description": "Illustrative template vehicles, not this dealership’s stock.",
+          "imageAlts": [
+            "Audi RS 6 Avant"
+          ]
+        },
+        "bg": {
+          "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата.",
+          "imageAlts": [
+            "Audi RS 6 Avant"
+          ]
+        }
+      },
+      "mercedes-benz-2021-template-demo-auto-best-2": {
+        "sourceDescription": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+        "en": {
+          "description": "Illustrative template vehicles, not this dealership’s stock.",
+          "imageAlts": [
+            "Mercedes-Benz GLE Coupé"
+          ]
+        },
+        "bg": {
+          "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата.",
+          "imageAlts": [
+            "Mercedes-Benz GLE Coupé"
+          ]
+        }
+      },
+      "audi-2021-template-demo-auto-best-3": {
+        "sourceDescription": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+        "en": {
+          "description": "Illustrative template vehicles, not this dealership’s stock.",
+          "imageAlts": [
+            "Audi RS Q8"
+          ]
+        },
+        "bg": {
+          "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата.",
+          "imageAlts": [
+            "Audi RS Q8"
+          ]
+        }
+      },
+      "bmw-2021-template-demo-auto-best-4": {
+        "sourceDescription": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+        "en": {
+          "description": "Illustrative template vehicles, not this dealership’s stock.",
+          "imageAlts": [
+            "BMW X6 M Sport"
+          ]
+        },
+        "bg": {
+          "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата.",
+          "imageAlts": [
+            "BMW X6 M Sport"
+          ]
+        }
+      },
+      "mercedes-benz-2020-template-demo-auto-best-6": {
+        "sourceDescription": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+        "en": {
+          "description": "Illustrative template vehicles, not this dealership’s stock.",
+          "imageAlts": [
+            "Mercedes-AMG GT 4-Door"
+          ]
+        },
+        "bg": {
+          "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата.",
+          "imageAlts": [
+            "Mercedes-AMG GT 4-Door"
+          ]
+        }
+      },
+      "bmw-2020-template-demo-auto-best-7": {
+        "sourceDescription": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+        "en": {
+          "description": "Illustrative template vehicles, not this dealership’s stock.",
+          "imageAlts": [
+            "BMW X6 xDrive"
+          ]
+        },
+        "bg": {
+          "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата.",
+          "imageAlts": [
+            "BMW X6 xDrive"
+          ]
+        }
+      },
+      "mercedes-benz-2023-template-demo-auto-best-8": {
+        "sourceDescription": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата. Illustrative template vehicles, not this dealership’s stock.",
+        "en": {
+          "description": "Illustrative template vehicles, not this dealership’s stock.",
+          "imageAlts": [
+            "Mercedes-AMG GT Coupé"
+          ]
+        },
+        "bg": {
+          "description": "Демонстрационни автомобили от шаблона, а не наличност на автокъщата.",
+          "imageAlts": [
+            "Mercedes-AMG GT Coupé"
+          ]
+        }
+      }
+    }
   }
 }
