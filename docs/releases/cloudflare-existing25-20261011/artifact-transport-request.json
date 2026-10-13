@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "kind": "cars-fleet-artifact-transport-request",
   "reviewed": true,
-  "reviewedAt": "2026-10-13T06:53:40.041Z",
+  "reviewedAt": "2026-10-13T07:01:14.235Z",
   "source": {
     "repository": "darkapoparka/cars",
     "workflowPath": ".github/workflows/qualified-private-source-export.yml",
@@ -13,10 +13,10 @@
     "ref": "refs/heads/main"
   },
   "artifact": {
-    "id": 11792961611,
-    "name": "private-source-package-part-mag-cars-varna-38355305379-1",
-    "sizeInBytes": 908018209,
-    "sha256": "46befd8c50847eda31df0e23e9d977d2ddcb6075cecfbb800a6551fd8d04995b"
+    "id": 11792307895,
+    "name": "private-source-package-kalo-0404-varna-38355305379-1",
+    "sizeInBytes": 908203899,
+    "sha256": "a20f19f31895462aa553186f0fc62ffff9d8094b10d64297a737c203af420f97"
   },
   "chunkSizeBytes": 209715200
 }

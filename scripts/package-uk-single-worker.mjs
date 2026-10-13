@@ -1,3 +1,4 @@
+import {assertComponentReuseProof,componentAssemblyIdentity,componentSourceDigest} from './lib/fleet-component-repairs.mjs';
 // One public origin and one Worker per dealer. Provider-only composition of six verified builds.
 // Each Next/Vite application receives its own framework global registry; this is not a security sandbox.
 import fs from 'node:fs';import path from 'node:path';import {createHash} from 'node:crypto';import {gzipSync} from 'node:zlib';
@@ -89,7 +90,7 @@ export function inspectModernFreeStaticExperiment(inspected,modernMount){
  assert(!entry.deploy.compiledFiles.some(row=>row.path.startsWith(entry.deploy.assetPath+'/_vinext/static-cache/')),'Unscoped native static cache is not allowed');
  return plan;
 }
-export function inspectSingleWorkerInputs({inputs,expectedDealer}){
+export function inspectSingleWorkerInputs({inputs,expectedDealer,componentReuse=null}){
  assert(typeof expectedDealer==='string'&&/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(expectedDealer),'Exact dealer required');
  assert(inputs&&canonical(Object.keys(inputs).sort())===canonical([...KEYS].sort()),'Exactly six compiled designs and one router required');
  const inspected={};let inputKind;
@@ -107,11 +108,13 @@ export function inspectSingleWorkerInputs({inputs,expectedDealer}){
    validateSourceReleases(deploy.sourceReleases,key);
    const source=JSON.parse(fs.readFileSync(path.join(directory,'receipts/source.json'),'utf8')),build=JSON.parse(fs.readFileSync(path.join(directory,'receipts/build.json'),'utf8'));
    assert(source.schemaVersion===1&&source.dealer===expectedDealer&&source.key===key&&source.originalSourceUnchanged===true&&['sourceCommit','sourceTree','inputDigest','sourceReleases'].every(field=>canonical(source[field])===canonical(deploy[field])),'Existing-fleet source receipt differs '+key);
+   if(componentReuse){assert(componentReuse.members?.[key]&&componentReuse.members[key].familySourceDigest===componentSourceDigest(source.targetBeforeDependencies,key),'Component source receipt differs from proven family bytes: '+key);if(componentReuse.members[key].mode==='rebuilt')assert(canonical(source.componentRepair)===canonical(componentReuse.sourceRepairs),'New compile did not carry the exact source repairs: '+key);}
    assert(build.schemaVersion===1&&build.status==='passed'&&build.dealer===expectedDealer&&build.key===key&&build.compiled===true&&build.dryRun===true&&['sourceCommit','workerName','compiledDigest'].every(field=>build[field]===deploy[field])&&['runId','attempt'].every(field=>String(build[field])===String(deploy[field])),'Existing-fleet build receipt differs '+key);
   }
   inspected[key]={directory,inventory,deploy};
  }
- const identity=inspected.router.deploy,fields=inputKind==='uk'?['sourceCommit','packageTree','packageDigest','payloadDigest','publicOrigin','runId','attempt']:['sourceCommit','sourceTree','inputDigest','sourceReleases','accountId','publicOrigin','runId','attempt'];
+ if(componentReuse){assert(inputKind==='existing-fleet','Component reuse excludes unrelated UK package identities');assertComponentReuseProof(componentReuse,Object.fromEntries(Object.entries(inspected).map(([key,value])=>[key,value.deploy])));for(const[key,value]of Object.entries(inspected))assert(value.inventory.digest===componentReuse.members[key].artifactDigest,'Component inventory differs from reuse proof: '+key);}
+ const identity=componentAssemblyIdentity(inspected.router.deploy,componentReuse),fields=inputKind==='uk'?['sourceCommit','packageTree','packageDigest','payloadDigest','publicOrigin','runId','attempt']:componentReuse?['sourceTree','inputDigest','sourceReleases','accountId','publicOrigin']:['sourceCommit','sourceTree','inputDigest','sourceReleases','accountId','publicOrigin','runId','attempt'];
  assert(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(identity.workerName??''),'Exact public Worker name required');
  const origin=new URL(identity.publicOrigin);assert(origin.protocol==='https:'&&!origin.username&&!origin.password&&!origin.search&&!origin.hash&&origin.pathname==='/'&&origin.hostname.startsWith(identity.workerName+'.')&&origin.hostname.endsWith('.workers.dev'),'Public origin differs from Worker identity');
  for(const [key,{deploy}] of Object.entries(inspected)){
@@ -120,10 +123,10 @@ export function inspectSingleWorkerInputs({inputs,expectedDealer}){
  }
  return {inspected,identity,inputKind};
 }
-export function packageUkSingleWorker({inputs,destination,expectedDealer,esbuild}){
+export function packageUkSingleWorker({inputs,destination,expectedDealer,esbuild,componentReuse=null}){
  assert(!fs.existsSync(destination),'Exact dealer and a fresh derived destination required');
  assert(esbuild&&typeof esbuild.transformSync==='function','Reviewed existing esbuild required');
- const {inspected,identity,inputKind}=inspectSingleWorkerInputs({inputs,expectedDealer});
+ const {inspected,identity,inputKind}=inspectSingleWorkerInputs({inputs,expectedDealer,componentReuse});
  const routerSource=fs.readFileSync(path.join(inspected.router.directory,inspected.router.deploy.mainPath),'utf8'),routerPlan=routerSource.match(/export default createDealerRouter\((\{[\s\S]*\})\);\s*$/);
  assert(routerPlan,'Frozen six-design router is required for provider mount mapping');
  const variants=JSON.parse(routerPlan[1]).variants;assertSixDesignSelection(variants);
@@ -155,6 +158,6 @@ export function packageUkSingleWorker({inputs,destination,expectedDealer,esbuild
  const files=walk(base).map(name=>{const b=fs.readFileSync(path.join(base,name));return {path:name,bytes:b.length,sha256:hash(b)};}),server=files.filter(f=>f.path.startsWith('server/')),serverBytes=server.reduce((s,f)=>s+f.bytes,0),assetFiles=files.filter(f=>f.path.startsWith('public/')).length;
  assert(serverBytes<64*1024**2,'Actual server exceeds the current 64 MiB Worker limit');assert(assetFiles<20000,'Actual static-asset count exceeds Workers Free allowance');assert(files.filter(f=>f.path.startsWith('public/')).every(f=>f.bytes<=25*1024**2),'A static asset exceeds 25 MiB');
  const sourceIdentity=inputKind==='uk'?{packageTree:identity.packageTree,packageDigest:identity.packageDigest,payloadDigest:identity.payloadDigest}:{sourceTree:identity.sourceTree,inputDigest:identity.inputDigest,sourceReleases:identity.sourceReleases,accountId:identity.accountId};
- const receipt={schemaVersion:1,type:inputKind==='uk'?'cars-uk-single-worker-provider-package':'cars-existing-fleet-single-worker-provider-package',dealer:expectedDealer,sourceCommit:identity.sourceCommit,...sourceIdentity,runId:identity.runId,attempt:identity.attempt,publicOrigin:identity.publicOrigin,workerName:identity.workerName,applicationCount:6,workerCount:1,composition:{inProcess:KEYS.filter(k=>k!=='router'),serviceBindings:[]},excludedAssetMetadata:{paths:['.vite/**','.assetsignore','vinext-client-entry-manifest.json'],reason:'Per-build tooling manifests are not mounted public application assets; actual client entry filenames remain embedded in each unchanged client bundle and server asset map.'},frameworkGlobalScopes:['modern','app','mobile'],serverBytes,compressedBytes:server.reduce((s,f)=>s+gzipSync(fs.readFileSync(path.join(base,f.path))).length,0),assetFiles,esbuildVersion:esbuild.version,changes,files,outputDigest:hash(JSON.stringify(files)),artifacts:Object.fromEntries(Object.entries(inspected).map(([k,v])=>[k,{digest:v.inventory.digest,compiledDigest:v.deploy.compiledDigest}])),sourceApplicationBytesChanged:false,compiledApplicationBytesChanged:true,hostedVerified:false};
+ const receipt={schemaVersion:1,type:inputKind==='uk'?'cars-uk-single-worker-provider-package':'cars-existing-fleet-single-worker-provider-package',dealer:expectedDealer,sourceCommit:identity.sourceCommit,...sourceIdentity,runId:identity.runId,attempt:identity.attempt,publicOrigin:identity.publicOrigin,workerName:identity.workerName,applicationCount:6,workerCount:1,composition:{inProcess:KEYS.filter(k=>k!=='router'),serviceBindings:[]},excludedAssetMetadata:{paths:['.vite/**','.assetsignore','vinext-client-entry-manifest.json'],reason:'Per-build tooling manifests are not mounted public application assets; actual client entry filenames remain embedded in each unchanged client bundle and server asset map.'},frameworkGlobalScopes:['modern','app','mobile'],serverBytes,compressedBytes:server.reduce((s,f)=>s+gzipSync(fs.readFileSync(path.join(base,f.path))).length,0),assetFiles,esbuildVersion:esbuild.version,changes,files,outputDigest:hash(JSON.stringify(files)),artifacts:Object.fromEntries(Object.entries(inspected).map(([k,v])=>[k,{digest:v.inventory.digest,compiledDigest:v.deploy.compiledDigest}])),sourceApplicationBytesChanged:false,compiledApplicationBytesChanged:true,hostedVerified:false,...(componentReuse?{componentReuse,reviewedDerivedSourceRepairs:componentReuse.sourceRepairs}:{} )};
  fs.writeFileSync(base+'/single-worker-receipt.json',JSON.stringify(receipt,null,2)+'\n');return receipt;
 }

@@ -92,7 +92,7 @@ export function planDealerSingleWorker({client,inputsFile,out,root=ROOT,registry
  }
  if(new Set(Object.values(inputs)).size!==COMPOSITION_KEYS.length)throw Error('Compiled input directories must be distinct');
  if(typeof inspect!=='function')throw Error('Reviewed composer input inspection is unavailable');
- const {inspected,identity,inputKind}=inspect({inputs,expectedDealer:client});
+ const {inspected,identity,inputKind}=inspect({inputs,expectedDealer:client,componentReuse:review.componentReuse??null});
  if(identity.workerName!==registered.workerName||identity.publicOrigin!==registered.publicOrigin)throw Error('Compiled public Worker/origin differs from reviewed identity');
  for(const key of COMPOSITION_KEYS) {
   const {inventory,deploy}=inspected[key],pin=review.inputs[key];
@@ -112,7 +112,7 @@ export function planDealerSingleWorker({client,inputsFile,out,root=ROOT,registry
   if(gitRead(checkout,['rev-parse',identity.sourceCommit+'^{commit}'])!==identity.sourceCommit)throw Error('Independent source commit must exist in its own repository');
   if(inputKind==='existing-fleet'&&gitRead(checkout,['rev-parse',identity.sourceCommit+'^{tree}'])!==identity.sourceTree)throw Error('Independent compiled source tree differs from its own repository');
  }
- const publicPlan={schemaVersion:1,type:'cars-dealer-single-worker-proposal',client,repository:registered.record.repository,sourceRepository,sourceCommit:identity.sourceCommit,inputKind,sourceIdentity:inputKind==='existing-fleet'?{sourceTree:identity.sourceTree,inputDigest:identity.inputDigest,sourceReleases:identity.sourceReleases}:{packageTree:identity.packageTree,packageDigest:identity.packageDigest,payloadDigest:identity.payloadDigest},reviewed:review.reviewed,reviewedAt:review.reviewedAt||null,reviewFile:inputFile,reviewSha256:sha256(fs.readFileSync(inputFile)),destination,publicOrigin:identity.publicOrigin,workerName:identity.workerName,variants:review.variants,applicationCount:6,workerCount:1,serviceBindings:[],independentSource:independent,artifacts:Object.fromEntries(COMPOSITION_KEYS.map(k=>[k,{directory:inputs[k],artifactDigest:inspected[k].inventory.digest,compiledDigest:inspected[k].deploy.compiledDigest}])),readyToCompose:review.reviewed,compositionWritten:false,builds:0,deployments:0,hostedVerified:false};
+ const publicPlan={schemaVersion:1,type:'cars-dealer-single-worker-proposal',client,repository:registered.record.repository,sourceRepository,sourceCommit:identity.sourceCommit,inputKind,sourceIdentity:inputKind==='existing-fleet'?{sourceTree:identity.sourceTree,inputDigest:identity.inputDigest,sourceReleases:identity.sourceReleases}:{packageTree:identity.packageTree,packageDigest:identity.packageDigest,payloadDigest:identity.payloadDigest},reviewed:review.reviewed,reviewedAt:review.reviewedAt||null,reviewFile:inputFile,reviewSha256:sha256(fs.readFileSync(inputFile)),destination,publicOrigin:identity.publicOrigin,workerName:identity.workerName,variants:review.variants,applicationCount:6,workerCount:1,serviceBindings:[],independentSource:independent,artifacts:Object.fromEntries(COMPOSITION_KEYS.map(k=>[k,{directory:inputs[k],artifactDigest:inspected[k].inventory.digest,compiledDigest:inspected[k].deploy.compiledDigest}])),...(review.componentReuse?{componentReuse:review.componentReuse}:{}),readyToCompose:review.reviewed,compositionWritten:false,builds:0,deployments:0,hostedVerified:false};
  return {plan:publicPlan,inputs};
 }
 
@@ -122,7 +122,7 @@ export function runDealerSingleWorker({client,inputsFile,out,write=false,root=RO
  if(!plan.readyToCompose)throw Error('Composition requires an explicit dated review of these exact inputs');
  const esbuild=resolveEsbuild(root);
  if(fs.existsSync(plan.destination)||sha256(fs.readFileSync(plan.reviewFile))!==plan.reviewSha256)throw Error('Review or fresh output changed before composition');
- const receipt=compose({inputs,destination:plan.destination,expectedDealer:client,esbuild});
+ const receipt=compose({inputs,destination:plan.destination,expectedDealer:client,esbuild,componentReuse:plan.componentReuse??null});
  for(const key of COMPOSITION_KEYS)if(receipt.artifacts?.[key]?.digest!==plan.artifacts[key].artifactDigest||receipt.artifacts?.[key]?.compiledDigest!==plan.artifacts[key].compiledDigest)throw Error('Composed output differs from reviewed input; retained output requires inspection');
  if(receipt.workerName!==plan.workerName||receipt.publicOrigin!==plan.publicOrigin||receipt.sourceCommit!==plan.sourceCommit||receipt.workerCount!==1)throw Error('Composed identity differs; retained output requires inspection');
  const result={...plan,type:'cars-dealer-single-worker-composition',compositionWritten:true,receipt:'single-worker-receipt.json',outputDigest:receipt.outputDigest,serverBytes:receipt.serverBytes,compressedBytes:receipt.compressedBytes,assetFiles:receipt.assetFiles,esbuildVersion:receipt.esbuildVersion};

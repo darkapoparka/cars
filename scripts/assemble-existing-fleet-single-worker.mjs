@@ -12,7 +12,8 @@ import {COMPOSITION_KEYS,registeredCompositionIdentity,reviewedRouterVariants,ru
 import {inspectSingleWorkerInputs,singleWorkerSource} from './package-uk-single-worker.mjs';
 import {validateModernStaticManifest} from './lib/modern-free-static-runtime.mjs';
 import {collectSource} from './package-dealer.mjs';
-import {buildMatrix,selectedDealer} from './build-existing-fleet-cloudflare.mjs';
+import {buildMatrix,selectedDealer,prepareExistingFleetSourcePackage} from './build-existing-fleet-cloudflare.mjs';
+import {componentRepairRow,componentArtifactName,verifyOriginalComponentMetadata,createComponentReuseProof,assertComponentReuseProof} from './lib/fleet-component-repairs.mjs';
 
 export const SINGLETON_KIND='existing-fleet-cloudflare-single-worker';
 export const SINGLETON_ACCOUNT='cb0007f242077bd759331f096eb75531';
@@ -89,6 +90,13 @@ export function validateFleetSingleton({inventory,receipt,review,delivery,config
   delivery.compiled===true&&delivery.dryRun===true&&delivery.credentialsIncluded===false&&delivery.deploymentPerformed===false&&delivery.hostedVerified===false&&delivery.ownerAccepted===false&&
   delivery.node==='v'+SINGLETON_TOOLCHAIN.node&&delivery.wranglerVersion===SINGLETON_TOOLCHAIN.wrangler&&delivery.esbuildVersion===SINGLETON_TOOLCHAIN.esbuild&&receipt.esbuildVersion===SINGLETON_TOOLCHAIN.esbuild,
   'Singleton delivery receipt differs');
+ const reuse=receipt.componentReuse??null;
+ assert(canonical(review.componentReuse??null)===canonical(reuse)&&canonical(delivery.componentReuse??null)===canonical(reuse),'Singleton component lineage differs across receipts');
+ if(reuse){
+  assert(reuse.dealer===receipt.dealer&&reuse.assembly.sourceCommit===receipt.sourceCommit&&String(reuse.assembly.runId)===String(receipt.runId)&&String(reuse.assembly.attempt)===String(receipt.attempt)&&canonical(receipt.reviewedDerivedSourceRepairs)===canonical(reuse.sourceRepairs),'Singleton repaired source/assembly identity differs');
+  assertComponentReuseProof(reuse,Object.fromEntries(COMPOSITION_KEYS.map(key=>[key,{...reuse.members[key],sourceTree:receipt.sourceTree,inputDigest:receipt.inputDigest}])));
+  for(const key of COMPOSITION_KEYS)assert(receipt.artifacts[key].digest===reuse.members[key].artifactDigest&&receipt.artifacts[key].compiledDigest===reuse.members[key].compiledDigest,'Singleton original/rebuilt artifact lineage differs: '+key);
+ }
  const rows=receipt.files;assert(Array.isArray(rows)&&sha256(JSON.stringify(rows))===receipt.outputDigest,'Singleton output digest differs');
  const derived=inventory.files.filter(r=>!['single-worker-receipt.json','dealer-composition-review.json','delivery-receipt.json'].includes(r.path));
  assert(canonical(derived)===canonical(rows),'Singleton output inventory differs');
@@ -127,19 +135,26 @@ export async function sourceIdentityForCi(root,slug,sourceCommit,readGit=git) {
  return {sourceCommit,sourceTree:readGit(root,['rev-parse',sourceCommit+':clients/'+slug]),inputDigest:sha256(JSON.stringify(rows)),sourceReleases:manifest.templateSources};
 }
 
-export function nativeInputDirectories(inputRoot,slug,runId,attempt) {
+export function nativeInputDirectories(inputRoot,slug,runId,attempt,repair=null) {
+ if(repair){
+  const fresh=repair.rebuild.map(key=>componentArtifactName(slug,key,runId,attempt)),actual=fs.readdirSync(inputRoot).sort();
+  assert(canonical(actual)===canonical([...fresh,'original'].sort()),'Only changed current artifacts and the original donor directory are permitted');
+  const originalRoot=inside(inputRoot,'original',{mustExist:true}),oldNames=COMPOSITION_KEYS.map(key=>componentArtifactName(slug,key,repair.original.runId,repair.original.attempt));
+  assert(canonical(fs.readdirSync(originalRoot).sort())===canonical([...oldNames].sort()),'Exactly seven unchanged original artifact directories required');
+  return Object.fromEntries(COMPOSITION_KEYS.map(key=>[key,inside(repair.rebuild.includes(key)?inputRoot:originalRoot,componentArtifactName(slug,key,repair.rebuild.includes(key)?runId:repair.original.runId,repair.rebuild.includes(key)?attempt:repair.original.attempt),{mustExist:true})]));
+ }
  const expected=COMPOSITION_KEYS.map(key=>'existing-cf-'+slug+'-'+key+'-'+runId+'-'+attempt),actual=fs.readdirSync(inputRoot).sort();
  assert(canonical(actual)===canonical([...expected].sort()),'Exactly seven current run/attempt artifact directories are required');
  return Object.fromEntries(COMPOSITION_KEYS.map((key,i)=>[key,inside(inputRoot,expected[i],{mustExist:true})]));
 }
 
-export function createCiCompositionReview({slug,inputs,inspected,identity,request,registry,sourceIdentity}) {
+export function createCiCompositionReview({slug,inputs,inspected,identity,request,registry,sourceIdentity,componentReuse=null}) {
  assert(request.composition?.reviewed===true&&Number.isFinite(Date.parse(request.composition.reviewedAt)),'Explicit dated source/composition review is required');
  validateCiSourceIdentity(identity,sourceIdentity);
  const record=registry.dealers?.find(r=>r.slug===slug),variants=reviewedRouterVariants(inputs.router,inspected.router.deploy);
  const review={schemaVersion:1,client:slug,repository:record?.repository,sourceRepository:'darkapoparka/cars',reviewed:true,reviewedAt:request.composition.reviewedAt,
   reviewScope:'Exact committed source and CI provider composition; hosting/owner acceptance are separate',publicOrigin:identity.publicOrigin,workerName:identity.workerName,variants,
-  inputs:Object.fromEntries(COMPOSITION_KEYS.map(k=>[k,{directory:inputs[k],artifactDigest:inspected[k].inventory.digest,compiledDigest:inspected[k].deploy.compiledDigest}]))};
+  inputs:Object.fromEntries(COMPOSITION_KEYS.map(k=>[k,{directory:inputs[k],artifactDigest:inspected[k].inventory.digest,compiledDigest:inspected[k].deploy.compiledDigest}])),...(componentReuse?{componentReuse}:{} )};
  registeredCompositionIdentity(registry,slug,review);
  assert(record?.sourceOwnership!=='independent-repository','Independent dealer requires own reviewed CI source');
  return review;
@@ -156,13 +171,30 @@ export function dryRunSingleton({directory,toolPackage,logDirectory}) {
  return {wranglerVersion:wrangler.version,esbuildVersion:esbuild.version,dryRun:true};
 }
 
+export async function verifiedOriginalMetadata(row,{token=process.env.GH_TOKEN,fetchImpl=fetch}={}) {
+ assert(typeof token==='string'&&token.length>0,'Read-only original Actions metadata authentication required');
+ const get=async suffix=>{const response=await fetchImpl('https://api.github.com/repos/darkapoparka/cars/actions/runs/'+row.original.runId+suffix,{headers:{Authorization:'Bearer '+token,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'},signal:AbortSignal.timeout(30000)});assert(response.ok,'Original Actions metadata HTTP '+response.status);return response.json();};
+ const [run,artifacts]=await Promise.all([get(''),get('/artifacts?per_page=100')]);
+ return verifyOriginalComponentMetadata(row,run,artifacts);
+}
+
 export async function assembleFleetCi({slug,inputRoot,destination,toolPackage,root=ROOT,env=process.env,registry=json(path.join(root,'docs/DEPLOYMENT-INVENTORY.json')),
  request=json(path.join(root,'docs/releases/cloudflare-existing25-20261011/build-request.json')),leads=json(path.join(root,'docs/releases/cloudflare-existing25-20261011/selection.json')).leads,
- ciCheck=assertCiContext,sourceIdentity=sourceIdentityForCi,compose=runDealerSingleWorker,dryRun=dryRunSingleton}={}) {
+ ciCheck=assertCiContext,sourceIdentity=sourceIdentityForCi,compose=runDealerSingleWorker,dryRun=dryRunSingleton,prepareSource=prepareExistingFleetSourcePackage,originalMetadata=verifiedOriginalMetadata}={}) {
  const context=ciCheck({env,root});buildMatrix(request,leads,registry);assert(request.dealers.includes(slug),'Dealer is outside the bounded request');selectedDealer(slug,leads,registry);
- const inputs=nativeInputDirectories(inputRoot,slug,context.runId,context.attempt),{inspected,identity,inputKind}=inspectSingleWorkerInputs({inputs,expectedDealer:slug});
+ const repair=componentRepairRow(request,slug),inputs=nativeInputDirectories(inputRoot,slug,context.runId,context.attempt,repair);
+ let componentReuse=null;
+ if(repair){
+  const proofArea=inside(root,'runtime/existing-fleet-component-proof/'+context.runId+'-'+context.attempt+'/'+slug);
+  assert(!fs.existsSync(proofArea),'Existing component source proof must be preserved, not repeated');fs.mkdirSync(path.join(proofArea,'receipts'),{recursive:true});
+  const metadata=await originalMetadata(repair),prepared=await prepareSource(slug,'router',context.sourceCommit,proofArea,request);
+  const members=Object.fromEntries(COMPOSITION_KEYS.map(key=>{const directory=inputs[key];return[key,{deploy:json(inside(directory,'deploy.json',{mustExist:true})),source:json(inside(directory,'receipts/source.json',{mustExist:true})),inventory:json(inside(directory,'artifact-manifest.json',{mustExist:true}))}];}));
+  componentReuse=createComponentReuseProof({request,slug,context,prepared:prepared.provenance,inputs:members,originalMetadata:metadata});
+  writeJson(path.join(proofArea,'component-reuse-proof.json'),componentReuse);
+ }
+ const {inspected,identity,inputKind}=inspectSingleWorkerInputs({inputs,expectedDealer:slug,componentReuse});
  assert(inputKind==='existing-fleet'&&String(identity.runId)===String(context.runId)&&String(identity.attempt)===String(context.attempt)&&identity.accountId===SINGLETON_ACCOUNT,'Foreign CI artifact kind/account/run/attempt');
- const expected=await sourceIdentity(root,slug,context.sourceCommit),review=createCiCompositionReview({slug,inputs,inspected,identity,request,registry,sourceIdentity:expected});
+ const expected=await sourceIdentity(root,slug,context.sourceCommit),review=createCiCompositionReview({slug,inputs,inspected,identity,request,registry,sourceIdentity:expected,componentReuse});
  const runtime=inside(root,'runtime',{mustExist:true}),out=inside(runtime,path.relative(runtime,path.resolve(destination)));
  const area=path.dirname(out);fs.mkdirSync(area,{recursive:true});const inputsFile=path.join(area,'composition-review.json');
  fs.writeFileSync(inputsFile,JSON.stringify(review,null,2)+'\n',{flag:'wx'});
@@ -172,7 +204,7 @@ export async function assembleFleetCi({slug,inputRoot,destination,toolPackage,ro
  const delivery={schemaVersion:1,kind:SINGLETON_KIND,status:'passed',dealer:slug,repository:review.repository,sourceRepository:review.sourceRepository,
   accountId:SINGLETON_ACCOUNT,workerName:identity.workerName,publicOrigin:identity.publicOrigin,...expected,runId:context.runId,attempt:context.attempt,
   artifactName:singletonArtifactName(slug,context.runId,context.attempt),inputs:receipt.artifacts,outputDigest:receipt.outputDigest,node:process.version,...tool,
-  compiled:true,credentialsIncluded:false,deploymentPerformed:false,hostedVerified:false,ownerAccepted:false};
+  compiled:true,credentialsIncluded:false,deploymentPerformed:false,hostedVerified:false,ownerAccepted:false,...(componentReuse?{componentReuse}:{} )};
  writeJson(path.join(out,'delivery-receipt.json'),delivery);
  artifactInventory(out,{kind:SINGLETON_KIND,dealer:slug,status:'passed'});const sealed=verifyFleetSingletonDirectory(out);
  return {dealer:slug,workerName:identity.workerName,workerCount:1,applicationCount:6,serviceBindings:[],artifactName:delivery.artifactName,artifactDigest:sealed.inventory.digest,
